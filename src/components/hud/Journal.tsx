@@ -62,6 +62,8 @@ export const Journal: React.FC = () => {
                   playModalCloseSound();
                 }}
                 className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"
+                title="Close Journal"
+                aria-label="Close Journal"
               >
                 <GameIcon name="close" size={20} color="#FFFFFF" />
               </button>
@@ -73,6 +75,7 @@ export const Journal: React.FC = () => {
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
+                    title={tab.label}
                     onClick={() => {
                       setActiveTab(tab.id);
                       playClickSound();

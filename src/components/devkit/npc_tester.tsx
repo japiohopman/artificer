@@ -241,6 +241,7 @@ export const NPCTester: React.FC = () => {
                 <GameIcon name="search" className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={16} />
                 <input 
                   type="text"
+                  title="Filter NPC Profiles"
                   placeholder="Filter_NPC_Profiles (Name or Index)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

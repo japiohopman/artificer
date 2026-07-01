@@ -1,6 +1,3 @@
-let's do something about this errors 
-
-
 [{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/AssetExplorer.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
@@ -32,627 +29,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'prev' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 776,
+	"startLineNumber": 777,
 	"startColumn": 20,
-	"endLineNumber": 776,
+	"endLineNumber": 777,
 	"endColumn": 24,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 826,
-	"startColumn": 16,
-	"endLineNumber": 826,
-	"endColumn": 22,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1244,
-	"startColumn": 46,
-	"endLineNumber": 1244,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1255,
-	"startColumn": 44,
-	"endLineNumber": 1255,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1288,
-	"startColumn": 34,
-	"endLineNumber": 1288,
-	"endColumn": 42,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1315,
-	"startColumn": 36,
-	"endLineNumber": 1315,
-	"endColumn": 41,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1321,
-	"startColumn": 34,
-	"endLineNumber": 1321,
-	"endColumn": 39,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1329,
-	"startColumn": 34,
-	"endLineNumber": 1329,
-	"endColumn": 39,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1339,
-	"startColumn": 38,
-	"endLineNumber": 1339,
-	"endColumn": 43,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1364,
-	"startColumn": 38,
-	"endLineNumber": 1364,
-	"endColumn": 43,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1404,
-	"startColumn": 44,
-	"endLineNumber": 1404,
-	"endColumn": 49,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1409,
-	"startColumn": 44,
-	"endLineNumber": 1409,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1414,
-	"startColumn": 44,
-	"endLineNumber": 1414,
-	"endColumn": 50,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1431,
-	"startColumn": 44,
-	"endLineNumber": 1431,
-	"endColumn": 49,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1436,
-	"startColumn": 44,
-	"endLineNumber": 1436,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1441,
-	"startColumn": 44,
-	"endLineNumber": 1441,
-	"endColumn": 50,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1458,
-	"startColumn": 44,
-	"endLineNumber": 1458,
-	"endColumn": 49,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1463,
-	"startColumn": 44,
-	"endLineNumber": 1463,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1468,
-	"startColumn": 44,
-	"endLineNumber": 1468,
-	"endColumn": 50,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1485,
-	"startColumn": 44,
-	"endLineNumber": 1485,
-	"endColumn": 49,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1490,
-	"startColumn": 44,
-	"endLineNumber": 1490,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1495,
-	"startColumn": 44,
-	"endLineNumber": 1495,
-	"endColumn": 50,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1512,
-	"startColumn": 44,
-	"endLineNumber": 1512,
-	"endColumn": 49,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1517,
-	"startColumn": 44,
-	"endLineNumber": 1517,
-	"endColumn": 52,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1522,
-	"startColumn": 44,
-	"endLineNumber": 1522,
-	"endColumn": 50,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1537,
-	"startColumn": 30,
-	"endLineNumber": 1537,
-	"endColumn": 36,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1551,
-	"startColumn": 32,
-	"endLineNumber": 1551,
-	"endColumn": 38,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1610,
-	"startColumn": 34,
-	"endLineNumber": 1610,
-	"endColumn": 39,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1638,
-	"startColumn": 30,
-	"endLineNumber": 1638,
-	"endColumn": 36,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -661,11 +42,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'd' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1672,
+	"startLineNumber": 1708,
 	"startColumn": 65,
-	"endLineNumber": 1672,
+	"endLineNumber": 1708,
 	"endColumn": 66,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -674,11 +55,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'drop' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1672,
+	"startLineNumber": 1708,
 	"startColumn": 98,
-	"endLineNumber": 1672,
+	"endLineNumber": 1708,
 	"endColumn": 102,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -687,33 +68,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'i' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1672,
+	"startLineNumber": 1708,
 	"startColumn": 104,
-	"endLineNumber": 1672,
+	"endLineNumber": 1708,
 	"endColumn": 105,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1699,
-	"startColumn": 38,
-	"endLineNumber": 1699,
-	"endColumn": 44,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -722,11 +81,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'd' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1701,
+	"startLineNumber": 1739,
 	"startColumn": 96,
-	"endLineNumber": 1701,
+	"endLineNumber": 1739,
 	"endColumn": 97,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -735,11 +94,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'd' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1743,
+	"startLineNumber": 1784,
 	"startColumn": 65,
-	"endLineNumber": 1743,
+	"endLineNumber": 1784,
 	"endColumn": 66,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -748,11 +107,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'drop' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1743,
+	"startLineNumber": 1784,
 	"startColumn": 98,
-	"endLineNumber": 1743,
+	"endLineNumber": 1784,
 	"endColumn": 102,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -761,55 +120,11 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'i' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1743,
+	"startLineNumber": 1784,
 	"startColumn": 104,
-	"endLineNumber": 1743,
+	"endLineNumber": 1784,
 	"endColumn": 105,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1745,
-	"startColumn": 38,
-	"endLineNumber": 1745,
-	"endColumn": 44,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1783,
-	"startColumn": 38,
-	"endLineNumber": 1783,
-	"endColumn": 44,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
@@ -818,61 +133,16 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Parameter 'd' implicitly has an 'any' type.",
 	"source": "ts",
-	"startLineNumber": 1785,
+	"startLineNumber": 1829,
 	"startColumn": 96,
-	"endLineNumber": 1785,
+	"endLineNumber": 1829,
 	"endColumn": 97,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1816,
-	"startColumn": 36,
-	"endLineNumber": 1816,
-	"endColumn": 42,
-	"modelVersionId": 9,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 2009,
-	"startColumn": 32,
-	"endLineNumber": 2009,
-	"endColumn": 38,
-	"modelVersionId": 9,
+	"modelVersionId": 10,
 	"origin": "extHost1"
 }]
 
-
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/enemy-image_generator.tsx",
+	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/FlagManager.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
 		"value": "axe/forms",
@@ -887,33 +157,33 @@ let's do something about this errors
 	"severity": 8,
 	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 175,
-	"startColumn": 12,
-	"endLineNumber": 175,
-	"endColumn": 17,
-	"modelVersionId": 1,
+	"startLineNumber": 66,
+	"startColumn": 18,
+	"endLineNumber": 66,
+	"endColumn": 23,
+	"modelVersionId": 31,
 	"origin": "extHost1"
 },{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/enemy-image_generator.tsx",
+	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/FlagManager.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "axe/forms",
+		"value": "axe/name-role-value",
 		"target": {
 			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
+			"path": "/rules/axe/4.10/button-name",
 			"scheme": "https",
 			"authority": "dequeuniversity.com",
 			"query": "application=axeAPI"
 		}
 	},
 	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
+	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 194,
-	"startColumn": 12,
-	"endLineNumber": 194,
-	"endColumn": 18,
-	"modelVersionId": 1,
+	"startLineNumber": 73,
+	"startColumn": 16,
+	"endLineNumber": 73,
+	"endColumn": 22,
+	"modelVersionId": 31,
 	"origin": "extHost1"
 }]
 
@@ -987,465 +257,173 @@ let's do something about this errors
 
 [{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
+	"owner": "typescript",
+	"code": "7006",
 	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 676,
-	"startColumn": 20,
-	"endLineNumber": 676,
-	"endColumn": 23,
-	"modelVersionId": 1,
+	"message": "Parameter 'item' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 493,
+	"startColumn": 25,
+	"endLineNumber": 493,
+	"endColumn": 29,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
+	"owner": "typescript",
+	"code": "7006",
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 683,
-	"startColumn": 16,
-	"endLineNumber": 683,
-	"endColumn": 22,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 770,
+	"message": "Parameter 'item' implicitly has an 'any' type.",
+	"source": "ts",
+	"startLineNumber": 494,
 	"startColumn": 27,
-	"endLineNumber": 770,
-	"endColumn": 30,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 776,
-	"startColumn": 30,
-	"endLineNumber": 776,
-	"endColumn": 33,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 782,
-	"startColumn": 27,
-	"endLineNumber": 782,
-	"endColumn": 30,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 865,
-	"startColumn": 33,
-	"endLineNumber": 865,
-	"endColumn": 39,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 881,
-	"startColumn": 33,
-	"endLineNumber": 881,
-	"endColumn": 39,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 926,
-	"startColumn": 32,
-	"endLineNumber": 926,
-	"endColumn": 37,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 963,
-	"startColumn": 29,
-	"endLineNumber": 963,
-	"endColumn": 35,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1011,
-	"startColumn": 26,
-	"endLineNumber": 1011,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1024,
-	"startColumn": 26,
-	"endLineNumber": 1024,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1037,
-	"startColumn": 26,
-	"endLineNumber": 1037,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1050,
-	"startColumn": 26,
-	"endLineNumber": 1050,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1067,
-	"startColumn": 26,
-	"endLineNumber": 1067,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1083,
-	"startColumn": 26,
-	"endLineNumber": 1083,
+	"endLineNumber": 494,
 	"endColumn": 31,
-	"modelVersionId": 1,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type 'Character' is not assignable to parameter of type 'SetStateAction<Partial<NPCProfile>>'.\n  Type 'Character' is not assignable to type 'Partial<NPCProfile>'.\n    Types of property 'traits' are incompatible.\n      Type '{ name: string; index: string; desc: string; trait_specific?: any; }[]' is not assignable to type 'string[]'.\n        Type '{ name: string; index: string; desc: string; trait_specific?: any; }' is not assignable to type 'string'.",
+	"source": "ts",
+	"startLineNumber": 669,
+	"startColumn": 28,
+	"endLineNumber": 669,
+	"endColumn": 32,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "axe/name-role-value",
+		"value": "axe/forms",
 		"target": {
 			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
+			"path": "/rules/axe/4.10/select-name",
 			"scheme": "https",
 			"authority": "dequeuniversity.com",
 			"query": "application=axeAPI"
 		}
 	},
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
+	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1144,
-	"startColumn": 30,
-	"endLineNumber": 1144,
-	"endColumn": 36,
-	"modelVersionId": 1,
+	"startLineNumber": 872,
+	"startColumn": 33,
+	"endLineNumber": 872,
+	"endColumn": 39,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "axe/name-role-value",
+		"value": "axe/forms",
 		"target": {
 			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
+			"path": "/rules/axe/4.10/select-name",
 			"scheme": "https",
 			"authority": "dequeuniversity.com",
 			"query": "application=axeAPI"
 		}
 	},
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
+	"message": "Select element must have an accessible name: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1160,
-	"startColumn": 34,
-	"endLineNumber": 1160,
-	"endColumn": 40,
-	"modelVersionId": 1,
+	"startLineNumber": 888,
+	"startColumn": 33,
+	"endLineNumber": 888,
+	"endColumn": 39,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "axe/name-role-value",
+		"value": "axe/forms",
 		"target": {
 			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
+			"path": "/rules/axe/4.10/label",
 			"scheme": "https",
 			"authority": "dequeuniversity.com",
 			"query": "application=axeAPI"
 		}
 	},
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
+	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1189,
-	"startColumn": 36,
-	"endLineNumber": 1189,
-	"endColumn": 42,
-	"modelVersionId": 1,
+	"startLineNumber": 933,
+	"startColumn": 32,
+	"endLineNumber": 933,
+	"endColumn": 37,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
+	"owner": "typescript",
+	"code": "2322",
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1205,
-	"startColumn": 40,
-	"endLineNumber": 1205,
-	"endColumn": 46,
-	"modelVersionId": 1,
+	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
+	"source": "ts",
+	"startLineNumber": 1031,
+	"startColumn": 226,
+	"endLineNumber": 1031,
+	"endColumn": 231,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
+	"owner": "typescript",
+	"code": "2322",
 	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1441,
-	"startColumn": 38,
-	"endLineNumber": 1441,
-	"endColumn": 41,
-	"modelVersionId": 1,
+	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
+	"source": "ts",
+	"startLineNumber": 1045,
+	"startColumn": 223,
+	"endLineNumber": 1045,
+	"endColumn": 228,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
+	"owner": "typescript",
+	"code": "2322",
 	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 1461,
-	"startColumn": 37,
-	"endLineNumber": 1461,
-	"endColumn": 43,
-	"modelVersionId": 1,
+	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
+	"source": "ts",
+	"startLineNumber": 1059,
+	"startColumn": 235,
+	"endLineNumber": 1059,
+	"endColumn": 240,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
+	"source": "ts",
+	"startLineNumber": 1073,
+	"startColumn": 233,
+	"endLineNumber": 1073,
+	"endColumn": 238,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
+	"source": "ts",
+	"startLineNumber": 1093,
+	"startColumn": 168,
+	"endLineNumber": 1093,
+	"endColumn": 173,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
@@ -1462,11 +440,11 @@ let's do something about this errors
 	"severity": 4,
 	"message": "CSS inline styles should not be used, move styles to an external CSS file",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 910,
+	"startLineNumber": 917,
 	"startColumn": 36,
-	"endLineNumber": 910,
+	"endLineNumber": 917,
 	"endColumn": 42,
-	"modelVersionId": 1,
+	"modelVersionId": 3,
 	"origin": "extHost1"
 }]
 
@@ -1540,75 +518,6 @@ let's do something about this errors
 }]
 
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/Journal.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 59,
-	"startColumn": 16,
-	"endLineNumber": 59,
-	"endColumn": 22,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/Journal.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 39,
-	"startColumn": 12,
-	"endLineNumber": 39,
-	"endColumn": 15,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/NotificationWindow.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 127,
-	"startColumn": 16,
-	"endLineNumber": 127,
-	"endColumn": 22,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
 	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
 	"owner": "typescript",
 	"code": "2882",
@@ -1619,7 +528,99 @@ let's do something about this errors
 	"startColumn": 8,
 	"endLineNumber": 3,
 	"endColumn": 34,
-	"modelVersionId": 55,
+	"modelVersionId": 56,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 93,
+	"startColumn": 12,
+	"endLineNumber": 93,
+	"endColumn": 18,
+	"modelVersionId": 51,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 126,
+	"startColumn": 26,
+	"endLineNumber": 126,
+	"endColumn": 32,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 129,
+	"startColumn": 26,
+	"endLineNumber": 129,
+	"endColumn": 32,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 132,
+	"startColumn": 26,
+	"endLineNumber": 132,
+	"endColumn": 32,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 }]
 
@@ -1711,25 +712,248 @@ let's do something about this errors
 	"endColumn": 19,
 	"modelVersionId": 5,
 	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @theme",
+	"source": "css",
+	"startLineNumber": 19,
+	"startColumn": 1,
+	"endLineNumber": 19,
+	"endColumn": 7,
+	"modelVersionId": 2,
+	"origin": "extHost1"
 },{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/tsconfig.json",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 54,
+	"startColumn": 5,
+	"endLineNumber": 54,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 72,
+	"startColumn": 5,
+	"endLineNumber": 72,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 75,
+	"startColumn": 5,
+	"endLineNumber": 75,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "typescript-config/consistent-casing",
+		"value": "compat-api/css",
 		"target": {
 			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-typescript-config/consistent-casing/",
+			"path": "/docs/Web/CSS/scrollbar-width",
 			"scheme": "https",
-			"authority": "webhint.io"
+			"authority": "developer.mozilla.org"
 		}
 	},
 	"severity": 4,
-	"message": "The compiler option \"forceConsistentCasingInFileNames\" should be enabled to reduce issues when working with different OSes.",
+	"message": "'scrollbar-width' is not supported by Chrome < 121, Safari, Safari on iOS, Samsung Internet.",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 2,
-	"startColumn": 4,
-	"endLineNumber": 2,
-	"endColumn": 19,
-	"modelVersionId": 5,
+	"startLineNumber": 83,
+	"startColumn": 5,
+	"endLineNumber": 83,
+	"endColumn": 20,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 142,
+	"startColumn": 5,
+	"endLineNumber": 142,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 160,
+	"startColumn": 5,
+	"endLineNumber": 160,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 163,
+	"startColumn": 5,
+	"endLineNumber": 163,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 166,
+	"startColumn": 5,
+	"endLineNumber": 166,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 169,
+	"startColumn": 5,
+	"endLineNumber": 169,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 172,
+	"startColumn": 5,
+	"endLineNumber": 172,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 175,
+	"startColumn": 5,
+	"endLineNumber": 175,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 178,
+	"startColumn": 5,
+	"endLineNumber": 178,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 181,
+	"startColumn": 5,
+	"endLineNumber": 181,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 184,
+	"startColumn": 5,
+	"endLineNumber": 184,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 187,
+	"startColumn": 5,
+	"endLineNumber": 187,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 190,
+	"startColumn": 5,
+	"endLineNumber": 190,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"owner": "_generated_diagnostic_collection_name_#12",
+	"code": "unknownAtRules",
+	"severity": 4,
+	"message": "Unknown at rule @apply",
+	"source": "css",
+	"startLineNumber": 193,
+	"startColumn": 5,
+	"endLineNumber": 193,
+	"endColumn": 11,
+	"modelVersionId": 2,
 	"origin": "extHost1"
 }]
