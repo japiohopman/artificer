@@ -178,6 +178,8 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
             value={selectedLevel} 
             onChange={(e) => setSelectedLevel(parseInt(e.target.value))}
             className="w-full accent-dragon-red"
+            title="Level / Experience range"
+            aria-label="Level / Experience range"
           />
           <div className="flex justify-between text-[8px] font-bold text-dragon-red">
             <span>LEVEL 1</span>
