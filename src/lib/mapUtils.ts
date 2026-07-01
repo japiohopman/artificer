@@ -122,7 +122,7 @@ export const getRegionAt = (protoX: number, protoY: number): string => {
     if (!polygonCache[id]) {
       polygonCache[id] = parseSVGPath(path);
     }
-    
+
     if (isPointInPolygon(point, polygonCache[id])) {
       return id;
     }

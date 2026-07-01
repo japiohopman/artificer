@@ -39,6 +39,6 @@ To ensure scalability and performance, the global state is partitioned into spec
 
 ## 🛡️ Mechanical Integrity
 The application follows a "State-First" philosophy:
-- **UI as a Projection**: Components only reflect what is in the stores. 
+- **UI as a Projection**: Components only reflect what is in the stores.
 - **Validation**: Stores enforce game rules (e.g., movement range, spell slot availability) before committing changes.
 - **AI as an Actor**: The LLM acts through tool calls that are subject to the same validation as user clicks.

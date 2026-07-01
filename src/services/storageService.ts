@@ -376,7 +376,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     return url;
   }
   
-  if (url && url.startsWith('data/character_save/')) {
+  if (url && url.startsWith('public/data/character_save/')) {
     return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${url}?t=${timestamp}`;
   }
 

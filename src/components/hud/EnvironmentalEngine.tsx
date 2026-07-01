@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { useWorldStore } from '../../store/useWorldStore';
 
 export const EnvironmentalEngine: React.FC = () => {
-  const { 
-    advanceTime, 
-    updateEnvironment, 
-    isNight, 
+  const {
+    advanceTime,
+    updateEnvironment,
+    isNight,
     weather,
     isTraveling,
     isFastForwarding

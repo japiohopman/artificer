@@ -213,8 +213,8 @@ export const CharacterPanel: React.FC = () => {
                       onClick={() => setActiveCharacter(char.id)}
                       className={cn(
                         "w-full flex items-center gap-4 p-3 rounded-lg border transition-all text-left",
-                        activeCharacterId === char.id 
-                          ? "bg-dragon-red/10 border-dragon-red shadow-sm" 
+                        activeCharacterId === char.id
+                          ? "bg-dragon-red/10 border-dragon-red shadow-sm"
                           : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
                       )}
                     >
@@ -233,8 +233,8 @@ export const CharacterPanel: React.FC = () => {
                           <span className="text-[8px] font-bold text-parchment-400 uppercase">Lvl {char.level || 1} {char.class}</span>
                         </div>
                         <div className="w-full h-1.5 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10">
-                          <div 
-                            className="h-full bg-dragon-red" 
+                          <div
+                            className="h-full bg-dragon-red"
                             style={{ width: `${(char.hp / char.maxHp) * 100}%` }}
                           />
                         </div>

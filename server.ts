@@ -50,7 +50,7 @@ async function startServer() {
   // Helper: Validate Path Allowlist
   const allowedPathPrefixes = [
     'public/assets/atlas/',
-    'data/character_save/'
+    'public/data/character_save/'
   ];
 
   function isPathAllowed(filePath: any): boolean {
@@ -354,7 +354,7 @@ async function startServer() {
 
   // API: AI Proxy (Google Gemini)
   app.post("/api/ai/generate-content", async (req, res) => {
-    const { model, contents, config } = req.body;
+    const { model, contents, config, tools } = req.body;
     const apiKey = process.env.GEMINI_API_KEY;
 
     console.log(`[AI Proxy] Generating content with model: ${model}`);
@@ -366,7 +366,11 @@ async function startServer() {
 
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
-      const genModel = genAI.getGenerativeModel({ model, generationConfig: config });
+      const genModel = genAI.getGenerativeModel({
+        model,
+        generationConfig: config,
+        tools: tools
+      });
       
       // The SDK expects { contents: [...] } or just the array depending on how it's called.
       // We'll normalize it here.

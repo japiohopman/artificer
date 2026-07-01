@@ -367,6 +367,22 @@ class AtlasService {
     );
   }
 
+  async loadEnemy(index: string): Promise<any | null> {
+    const slug = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
+    const hyphenSlug = index.toLowerCase().replace(/[\s_]/g, '-').replace(/'/g, '');
+
+    const paths = [
+      `/assets/atlas/enemies/json/${slug}.json`,
+      `/assets/atlas/enemies/json/${hyphenSlug}.json`
+    ];
+
+    for (const p of paths) {
+      const data = await this.fetchAtlasData(p);
+      if (data) return data;
+    }
+    return null;
+  }
+
   async loadLevelData(className: string, level: number): Promise<any | null> {
     const slug = className.toLowerCase().replace(/\s+/g, '_');
     const hyphenSlug = className.toLowerCase().replace(/\s+/g, '-');

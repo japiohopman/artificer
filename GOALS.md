@@ -14,7 +14,7 @@ Artificer is evolving from an immersive digital grimoire into a **complete AI-po
 
 ## 3. Architectural Goals
 *   **Service-Oriented Core**: Decouple UI from game logic. Services (AI, Atlas, Storage) should handle the "heavy lifting."
-*   **Reactive State Management**: Expand the Zustand store to handle complex campaign states, including temporal progression and faction standings.
+*   **Reactive State Management**: Global state is sliced into specialized stores (`useWorldStore`, `useGameStore`, etc.) to handle complex campaign states, temporal progression, and tactical combat.
 *   **Proxy-Based Persistence**: Continue using the server-side proxy to bridge the frontend with GitHub (for data) and AI models, ensuring security and CORS compliance.
 
 ## 4. AI Dungeon Master Requirements
@@ -31,23 +31,23 @@ The AI DM must operate with full contextual awareness of:
 
 ## 6. Character Management Requirements
 *   **Full Lifecycle Support**: From procedural generation (Character Creator) to level-up progression (LevelUpOverlay).
-*   **Inventory V2 Unification**: Transition all characters to the registry/slot-based inventory system to support complex tactical interactions (equipping, weight, containers).
+*   **Inventory V2 Unification**: Character items are managed via a registry/slot-based system supporting containers, equipment slots, and weight calculation.
 *   **Condition Tracking**: Mechanical implementation of D&D 5.5e conditions and their effects on stats.
 
 ## 7. World Simulation Requirements
-*   **Time Progression**: A system-clock that tracks days, months, and eras, affecting NPC behavior and world events.
+*   **Time Progression**: A temporal engine tracks minutes, days, and months (Calendar of Harptos), affecting environmental cycles.
 *   **Faction & Reputation**: Numeric and qualitative tracking of how the world perceives the party.
 *   **Economic Simulation**: Regional pricing for equipment and materials based on local supply and events.
 
 ## 8. Combat System Requirements
-Transition from "Card Simulator" to a **Tactical Battle Interface**:
-*   **Grid-Based Movement**: Top-down maps with token management and collision.
-*   **Automation**: turn management, initiative tracking, and NPC combat logic.
-*   **Spatial Analysis**: Line-of-sight calculations and AOE targeting (cones, spheres, lines).
+The **Tactical Battle Interface** provides spatial resolution for encounters:
+*   **Grid-Based Movement**: 12x8 grid with token management, range validation (Chebyshev distance), and collision.
+*   **Automation**: Turn management, initiative tracking, and monster spawning.
+*   **Spatial Analysis**: (Upcoming) Line-of-sight calculations and AOE targeting (cones, spheres, lines).
 
 ## 9. Dice System Requirements
 *   **Advanced Parser**: Handle complex roll strings (e.g., `2d6 + 4 [fire] + 1d4 [poison]`).
-*   **Visual Fidelity**: 3D dice animation support integrated with the current overlay.
+*   **Visual Fidelity**: 3D dice physics engine integrated with a theme-consistent parchment overlay.
 *   **Roll Validation**: Ensure rolls are tied to specific character actions or skill checks for auditability.
 
 ## 10. Asset Generation Requirements
@@ -77,8 +77,8 @@ The AI DM is prohibited from altering game state directly through text. It must 
 
 ## 15. Future Roadmap
 1.  **Phase 1: Inventory Unification**: Complete (Migration to Inventory V2).
-2.  **Phase 2: World State & Tactical Foundations**: In Progress (World State, Map, Journal complete; Grid/Initiative pending).
-3.  **Phase 3: AI DM Integration**: Connect the LLM to the system's tool-calls.
+2.  **Phase 2: World State & Tactical Foundations**: Complete (World State, Tiled Map, Discovery, Journal, and Grid-Based Movement v1).
+3.  **Phase 3: AI DM Integration**: (Active) Connecting the LLM to the system's tool-calls.
 4.  **Phase 4: Global Simulation**: Roll out faction systems and economic simulation.
 
 ## 16. Technical Debt & Refactoring Recommendations
@@ -87,7 +87,7 @@ The AI DM is prohibited from altering game state directly through text. It must 
 *   **Service Hardening**: Improve error handling in `storageService.ts` for GitHub API rate limits.
 
 ## 17. Missing Systems Analysis (this is in progress)
-*   **Map System**: Currently missing a way to link locations in the Atlas to interactive battle maps.
+*   **Map System**: Integration of region-aware tactical maps is complete; fog-of-war/discovery logic implemented.
 *   **Soundscape Engine**: `soundService.ts` is robust but needs better integration with AI narration (e.g., AI requesting background music shifts).
 
 ## 18. Success Criteria

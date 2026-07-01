@@ -15,8 +15,8 @@ interface CombatAction {
 }
 
 export const ActionPanel: React.FC = () => {
-  const { 
-    setGameMode, 
+  const {
+    setGameMode,
     setIsAdvancedRollerOpen,
     setIsTargeting,
     setTargetingAction,
@@ -25,7 +25,7 @@ export const ActionPanel: React.FC = () => {
   } = useUIStore();
   const { addLog, nextTurn } = useGameStore();
   const { activeCharacterId, characters } = useCharacterStore();
-  
+
   const activeChar = characters.find(c => c.id === activeCharacterId);
 
   const actions: CombatAction[] = [
@@ -58,7 +58,7 @@ export const ActionPanel: React.FC = () => {
         <div className="flex-1 grid grid-cols-3 md:grid-cols-6 gap-3">
           {actions.map((action) => {
             const isActive = targetingAction?.id === action.id;
-            
+
             return (
               <motion.button
                 key={action.id}
@@ -89,6 +89,17 @@ export const ActionPanel: React.FC = () => {
                   } else if (action.id === 'spells') {
                     setIsAdvancedRollerOpen(true);
                   } else if (action.id === 'defend') {
+                    // Normalize player ID to 'player' to match initiative order and AI targeting
+                    const actorId = 'player';
+                    useGameStore.setState(state => ({
+                      combatState: {
+                        ...state.combatState,
+                        activeConditions: {
+                          ...state.combatState.activeConditions,
+                          [actorId]: [...(state.combatState.activeConditions[actorId] || []), 'defending']
+                        }
+                      }
+                    }));
                     addLog(`${activeChar?.name || 'Player'} adopts a defensive stance! (+2 AC until next turn)`, 'success');
                     nextTurn();
                   } else if (action.id === 'items') {

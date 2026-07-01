@@ -539,23 +539,23 @@ export function generateNPC(partial: any): any {
 export async function processLevelUp(character: any): Promise<any> {
   const oldLevel = character.level || 0;
   const newLevel = getLevelFromXP(character.xp || 0);
-  
+
   if (newLevel <= oldLevel) return null;
-  
+
   const results = [];
   let updatedCharacter = { ...character };
-  
+
   for (let lvl = oldLevel + 1; lvl <= newLevel; lvl++) {
     const classInfo = CLASS_DATA[character.class] || CLASS_DATA['Fighter'];
     const hpIncrease = Math.floor(classInfo.hitDie / 2) + 1 + getModifier(character.stats.con || 10);
-    
+
     updatedCharacter = {
       ...updatedCharacter,
       level: lvl,
       hp: (updatedCharacter.hp || 10) + hpIncrease,
       maxHp: (updatedCharacter.maxHp || 10) + hpIncrease
     };
-    
+
     results.push({
       newLevel: lvl,
       hpIncrease,
@@ -563,6 +563,6 @@ export async function processLevelUp(character: any): Promise<any> {
       hasASI: lvl % 4 === 0
     });
   }
-  
+
   return { updatedCharacter, results };
 }

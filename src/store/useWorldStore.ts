@@ -248,14 +248,14 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     // Update current region based on party location
     const px = state.partyLocation?.coordinates?.x ?? state.partyLocation?.position?.[0] ?? 0;
     const py = state.partyLocation?.coordinates?.y ?? state.partyLocation?.position?.[1] ?? 0;
-    
-    const hasMoved = !state.lastProcessedCoords || 
-                     state.lastProcessedCoords.x !== px || 
+
+    const hasMoved = !state.lastProcessedCoords ||
+                     state.lastProcessedCoords.x !== px ||
                      state.lastProcessedCoords.y !== py;
 
     if (hasMoved) {
       const newRegionId = getRegionAt(px, py);
-      set({ 
+      set({
         currentRegion: newRegionId,
         lastProcessedCoords: { x: px, y: py }
       });
@@ -264,19 +264,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
       if (state.isTraveling && state.isFastForwarding) {
         // 0.5% chance per movement update to trigger an encounter
         if (Math.random() < 0.005) {
-          set({ 
+          set({
             isFastForwarding: false,
           });
-          
+
           const gameStore = useGameStore.getState();
           const uiStore = useUIStore.getState();
-          
+
           gameStore.addLog("Travel interrupted by a potential encounter!", "warning");
           uiStore.setChatExpanded(true);
-          
+
           // Sound effect trigger (placeholder for sound orchestrator)
           // useAudioStore.getState().playSound('encounter_alert');
-          
+
           // If on land, maybe trigger a small chance of immediate combat
           if (state.currentRegion !== 'water' && Math.random() < 0.3) {
              uiStore.setGameMode('combat');
@@ -357,16 +357,26 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           currentSpeedMph *= 0.5;
         }
 
-        // Terrain Penalty: Water reduces speed significantly unless we have a boat
+        // Terrain Penalty
         if (state.currentRegion === 'water') {
-           const hasBoat = (invState.partyVehicles || []).some((v: any) => 
-             v.type?.toLowerCase().includes('boat') || 
-             v.type?.toLowerCase().includes('ship') || 
+           const hasBoat = (invState.partyVehicles || []).some((v: any) =>
+             v.type?.toLowerCase().includes('boat') ||
+             v.type?.toLowerCase().includes('ship') ||
              v.name?.toLowerCase().includes('boat')
            );
-           
+
            if (!hasBoat) {
              currentSpeedMph *= 0.1; // 10% speed (swimming/wading)
+           } else {
+             currentSpeedMph *= 1.2; // Boats are faster than walking
+           }
+        } else {
+           // Regional Land Penalties
+           const region = state.currentRegion?.toLowerCase() || '';
+           if (region.includes('mountain') || region.includes('high_forest')) {
+             currentSpeedMph *= 0.5; // Difficult terrain
+           } else if (region.includes('marsh') || region.includes('swamp') || region.includes('wood')) {
+             currentSpeedMph *= 0.7; // Moderate difficulty
            }
         }
 

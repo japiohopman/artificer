@@ -120,7 +120,7 @@ export const WorldPanel: React.FC = () => {
 
               <div className="grid grid-cols-1 gap-3">
                 {combatState.monsters.map((monster) => (
-                  <button 
+                  <button
                     key={monster.id}
                     onClick={() => {
                       setFocusedItem(monster);
@@ -141,8 +141,8 @@ export const WorldPanel: React.FC = () => {
                         <span className="text-[9px] font-bold text-dragon-red/60 uppercase">{monster.hp}/{monster.maxHp} HP</span>
                       </div>
                       <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-dragon-red transition-all duration-500" 
+                        <div
+                          className="h-full bg-dragon-red transition-all duration-500"
                           style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }}
                         />
                       </div>

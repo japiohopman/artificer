@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { useUIStore } from './useUIStore';
+import * as combatUtils from '../lib/combatUtils';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -21,18 +23,33 @@ export interface CoinFlipState {
   };
 }
 
+export interface TacticalCell {
+  x: number;
+  y: number;
+  type: 'floor' | 'wall' | 'door';
+  isOpen?: boolean;
+  explored?: boolean;
+}
+
+export interface CombatMonster {
+  id: string;
+  name: string;
+  type: string;
+  hp: number;
+  maxHp: number;
+  x: number;
+  y: number;
+  imageUrl?: string;
+  awareness: 'idle' | 'alert' | 'combat';
+  viewDirection: number; // 0:N, 1:E, 2:S, 3:W
+  perception: number;
+  speed: number; // in cells
+  lastKnownPlayerPos?: { x: number; y: number };
+}
+
 export interface CombatState {
   playerPos: { x: number; y: number };
-  monsters: Array<{
-    id: string;
-    name: string;
-    type: string;
-    hp: number;
-    maxHp: number;
-    x: number;
-    y: number;
-    imageUrl?: string;
-  }>;
+  monsters: CombatMonster[];
   initiativeOrder: Array<{
     id: string;
     name: string;
@@ -40,6 +57,8 @@ export interface CombatState {
     isPlayer?: boolean;
   }>;
   activeTurnIndex: number;
+  grid: TacticalCell[][];
+  victoryXp: number;
 }
 
 export interface LogEntry {
@@ -76,7 +95,9 @@ interface GameState {
   coinFlipState: CoinFlipState;
 
   // Combat
-  combatState: CombatState;
+  combatState: CombatState & {
+    activeConditions: Record<string, string[]>; // id -> list of conditions
+  };
 
   // Actions
   setCurrentNPC: (npc: any | null) => void;
@@ -111,12 +132,33 @@ interface GameState {
   // Combat Actions
   setPlayerPos: (x: number, y: number) => void;
   updateMonsterHp: (id: string, hp: number) => void;
-  addMonsterToCombat: (monster: any) => void;
+  addMonsterToCombat: (monster: any, x?: number, y?: number) => void;
+  spawnMonster: (index: string, x?: number, y?: number) => Promise<void>;
   removeMonsterFromCombat: (id: string) => void;
+  toggleDoor: (x: number, y: number) => void;
+  completeCombat: (victory: boolean) => Promise<void>;
   nextTurn: () => void;
-  startCombat: () => void;
+  startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
 }
+
+const initializeGrid = (width: number, height: number): TacticalCell[][] => {
+  const grid: TacticalCell[][] = [];
+  for (let y = 0; y < height; y++) {
+    const row: TacticalCell[] = [];
+    for (let x = 0; x < width; x++) {
+      let type: 'floor' | 'wall' | 'door' = 'floor';
+
+      // Simple room layout
+      if (x === 5 && y !== 3) type = 'wall';
+      if (x === 5 && y === 3) type = 'door';
+
+      row.push({ x, y, type, isOpen: type === 'door' ? false : undefined, explored: false });
+    }
+    grid.push(row);
+  }
+  return grid;
+};
 
 export const useGameStore = create<GameState>((set, get) => ({
   currentNPC: null,
@@ -146,16 +188,12 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   combatState: {
     playerPos: { x: 2, y: 2 },
-    monsters: [
-      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
-      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
-    ],
-    initiativeOrder: [
-      { id: 'player', name: 'Hero', value: 20, isPlayer: true },
-      { id: 'm2', name: 'Worg', value: 15 },
-      { id: 'm1', name: 'Goblin Scout', value: 12 }
-    ],
-    activeTurnIndex: 0
+    monsters: [],
+    initiativeOrder: [],
+    activeTurnIndex: 0,
+    grid: initializeGrid(12, 8),
+    victoryXp: 500,
+    activeConditions: {}
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -272,17 +310,22 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  addMonsterToCombat: (monster) => set((state) => {
+  addMonsterToCombat: (monster, targetX, targetY) => set((state) => {
     const id = `m-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-    // Find an empty spot
-    const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
-    let x = 8, y = 2;
-    while (occupiedPositions.has(`${x},${y}`)) {
-      y++;
-      if (y > 6) { y = 2; x++; }
+
+    let x = targetX ?? 8;
+    let y = targetY ?? 2;
+
+    if (targetX === undefined || targetY === undefined) {
+      // Find an empty spot
+      const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
+      while (occupiedPositions.has(`${x},${y}`)) {
+        y++;
+        if (y > 6) { y = 2; x++; }
+      }
     }
 
-    const newMonster = {
+    const newMonster: CombatMonster = {
       id,
       name: monster.name,
       type: monster.type || 'monster',
@@ -290,7 +333,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       maxHp: monster.hit_points || 10,
       x,
       y,
-      imageUrl: monster.imageUrl
+      imageUrl: monster.imageUrl,
+      awareness: 'idle',
+      viewDirection: 3,
+      perception: 10,
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
     };
 
     return {
@@ -301,6 +348,15 @@ export const useGameStore = create<GameState>((set, get) => ({
     };
   }),
 
+  spawnMonster: async (index, x, y) => {
+    const { atlasService } = await import('../services/atlasService');
+    const monsterData = await atlasService.loadEnemy(index);
+    if (monsterData) {
+      get().addMonsterToCombat(monsterData, x, y);
+      get().addLog(`A ${monsterData.name} appears!`, 'warning');
+    }
+  },
+
   removeMonsterFromCombat: (id) => set((state) => ({
     combatState: {
       ...state.combatState,
@@ -309,17 +365,168 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   })),
 
-  nextTurn: () => set((state) => ({
-    combatState: {
-      ...state.combatState,
-      activeTurnIndex: (state.combatState.activeTurnIndex + 1) % state.combatState.initiativeOrder.length
+  toggleDoor: (x, y) => set((state) => {
+    const newGrid = [...state.combatState.grid];
+    if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
+      newGrid[y] = [...newGrid[y]];
+      newGrid[y][x] = { ...newGrid[y][x], isOpen: !newGrid[y][x].isOpen };
     }
-  })),
+    return {
+      combatState: {
+        ...state.combatState,
+        grid: newGrid
+      }
+    };
+  }),
 
-  startCombat: () => {
+  completeCombat: async (victory) => {
+    const { combatState, addLog } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { characters, addXp } = useCharacterStore.getState();
+
+    if (victory) {
+      addLog(`Victory! The party earns ${combatState.victoryXp} XP.`, 'success');
+      for (const char of characters) {
+        if (!char.isNpc) {
+          await addXp(char.id, combatState.victoryXp);
+        }
+      }
+    } else {
+      addLog("The party has been defeated...", 'error');
+    }
+
+    useUIStore.getState().setGameMode('exploration');
+  },
+
+  nextTurn: () => {
+    const { combatState, addLog, resolveCombatAction } = get();
+    const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
+    const nextActor = combatState.initiativeOrder[nextIndex];
+
+    set((state) => {
+      const newConditions = { ...state.combatState.activeConditions };
+      // Clear conditions for the actor starting their turn
+      if (newConditions[nextActor.id]) {
+        delete newConditions[nextActor.id];
+      }
+
+      return {
+        combatState: {
+          ...state.combatState,
+          activeTurnIndex: nextIndex,
+          activeConditions: newConditions
+        }
+      };
+    });
+
+    // Advanced Monster AI
+    if (!nextActor.isPlayer) {
+      setTimeout(async () => {
+        const { combatState: currentCombatState } = get();
+        const currentMonster = currentCombatState.monsters.find(m => m.id === nextActor.id);
+        if (!currentMonster) {
+          get().nextTurn();
+          return;
+        }
+
+        const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
+        const playerPos = currentCombatState.playerPos;
+
+        let updatedMonster = { ...currentMonster };
+        let stateChanged = false;
+
+        // 1. Awareness Check
+        if (updatedMonster.awareness !== 'combat') {
+          const hasLoS = checkLoS(updatedMonster, playerPos, currentCombatState.grid);
+          const inCone = isInViewCone(updatedMonster, playerPos);
+
+          if (hasLoS && inCone) {
+            updatedMonster.awareness = 'combat';
+            addLog(`${updatedMonster.name} spotted you!`, 'warning');
+            stateChanged = true;
+          } else if (hasLoS && getDistance(updatedMonster, playerPos) <= 3) {
+             // Passive perception check (simplified: close proximity = alert)
+             updatedMonster.awareness = 'alert';
+             updatedMonster.lastKnownPlayerPos = { ...playerPos };
+             stateChanged = true;
+          }
+        }
+
+        // 2. State-based Action
+        const monsterSpeed = updatedMonster.speed || 6;
+        if (updatedMonster.awareness === 'combat') {
+          const dist = getDistance(updatedMonster, playerPos);
+          if (dist <= 1) {
+            await resolveCombatAction(
+              updatedMonster,
+              { id: 'player', name: 'Hero' },
+              { name: 'Claw/Bite', attack_bonus: 4, damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] }
+            );
+          } else {
+            const path = findPath(updatedMonster, playerPos, currentCombatState.grid);
+            if (path && path.length > 1) {
+              // Move up to speed, but stop before overlapping the player
+              const moveSteps = Math.min(path.length - 1, monsterSpeed);
+              const moveTarget = path[moveSteps - 1];
+
+              updatedMonster.x = moveTarget.x;
+              updatedMonster.y = moveTarget.y;
+
+              // Update view direction based on movement
+              const firstStep = path[0];
+              if (firstStep.x > currentMonster.x) updatedMonster.viewDirection = 1;
+              else if (firstStep.x < currentMonster.x) updatedMonster.viewDirection = 3;
+              else if (firstStep.y > currentMonster.y) updatedMonster.viewDirection = 2;
+              else if (firstStep.y < currentMonster.y) updatedMonster.viewDirection = 0;
+              stateChanged = true;
+            }
+          }
+        } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
+          const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid);
+          if (path && path.length > 0) {
+            const moveSteps = Math.min(path.length, monsterSpeed);
+            const moveTarget = path[moveSteps - 1];
+            updatedMonster.x = moveTarget.x;
+            updatedMonster.y = moveTarget.y;
+            stateChanged = true;
+            if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
+               updatedMonster.awareness = 'idle';
+               updatedMonster.lastKnownPlayerPos = undefined;
+            }
+          }
+        } else {
+          // Idle patrol (very simple: rotate)
+          updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
+          stateChanged = true;
+        }
+
+        if (stateChanged) {
+          set(state => ({
+            combatState: {
+              ...state.combatState,
+              monsters: state.combatState.monsters.map(m => m.id === nextActor.id ? updatedMonster : m)
+            }
+          }));
+        }
+
+        setTimeout(() => get().nextTurn(), 1000);
+      }, 1000);
+    }
+  },
+
+  startCombat: async () => {
     const { combatState } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { characters } = useCharacterStore.getState();
+    const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+
     const order = [
-      { id: 'player', name: 'Hero', value: Math.floor(Math.random() * 20) + 1 + 3, isPlayer: true },
+      ...activeParty.map((c: any) => ({
+        id: c.id,
+        name: c.name,
+        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
+        isPlayer: true
+      })),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
@@ -340,22 +547,27 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
     const { modifyHp } = useCharacterStore.getState();
-    
+
     // 1. Roll to Hit
     const attackBonus = action.attack_bonus || 0;
     const toHitNotation = `1d20+${attackBonus}`;
-    
+
     addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
-    
+
     // We'll use a simulated 3D roll for the hit
     await rollDice3D(toHitNotation, `Attack: ${action.name}`);
-    
+
     const d20 = Math.floor(Math.random() * 20) + 1;
     const totalHit = d20 + attackBonus;
-    
+
     // Get target AC
     let targetAC = 10;
-    if (Array.isArray(target.armor_class)) {
+    const { combatState } = get();
+
+    if (target.id === 'player') {
+       // Ideally we'd get this from useCharacterStore, but for now use default + condition
+       targetAC = 15;
+    } else if (Array.isArray(target.armor_class)) {
       targetAC = target.armor_class[0]?.value || 10;
     } else if (typeof target.armor_class === 'number') {
       targetAC = target.armor_class;
@@ -363,26 +575,32 @@ export const useGameStore = create<GameState>((set, get) => ({
       targetAC = target.armor_class.base;
     }
 
+    // Apply conditions (e.g., Defending +2 AC)
+    if (combatState.activeConditions[target.id]?.includes('defending')) {
+      targetAC += 2;
+      addLog(`${target.name} is defending! AC is now ${targetAC}.`, 'info');
+    }
+
     const isCrit = d20 === 20;
     const isHit = isCrit || totalHit >= targetAC;
 
     if (isHit) {
       addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
-      
+
       // 2. Roll Damage
       const damageInfo = action.damage?.[0];
       const damageDice = damageInfo?.damage_dice || '1d6';
       const damageType = damageInfo?.damage_type?.name || 'slashing';
-      
+
       // Double dice for crits (simplified)
       const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
-      
+
       // We'll use rollBackground for damage to not overlap 3D dice too much
       const { diceService } = await import('../dice_roller/diceService');
       const damageRoll = diceService.rollBackground(finalDice, 'Damage');
-      
+
       addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
-      
+
       // 3. Update HP
       if (target.id === 'player' || target.id === 'slot1') {
         const targetId = target.id === 'player' ? activeCharacterId : target.id;
@@ -394,7 +612,13 @@ export const useGameStore = create<GameState>((set, get) => ({
         if (newHp <= 0) {
           addLog(`${target.name} has been defeated!`, 'success');
           // Delay removal for visual feedback
-          setTimeout(() => removeMonsterFromCombat(target.id), 1000);
+          setTimeout(() => {
+            removeMonsterFromCombat(target.id);
+            const { combatState: latestState } = get();
+            if (latestState.monsters.length === 0) {
+              get().completeCombat(true);
+            }
+          }, 1000);
         }
       }
     } else {
