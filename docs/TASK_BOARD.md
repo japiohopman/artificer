@@ -40,20 +40,21 @@
 - [ ] Size budgets for assets (WEBP/PNG < 1MB).
 - [ ] Lazy-load assets per game screen.
 - [ ] Create thumbnail variants for inventory/shop UI.
-- [ ] Documentation updates: `ASSETS.md`, `README.md` for modules.
+- [x] Documentation updates: `ASSETS.md`, `README.md` for modules.
 
 ## Phase 2: World State & Tactical Foundations
 - [x] **System Documentation (Architecture First)**
   - [x] Define Party State & World State schemas.
   - [x] Design Travel, Time, and Weather systems.
   - [x] Blueprint World Panel Architecture & Data Flow.
+  - [x] Deep-dive documentation for Phase 2 systems (Travel, Combat, Stores).
 - [x] **Store Slicing (Infrastructure)**
   - [x] Refactor `useStore.ts` into specialized slices (`useUIStore`, `useAtlasStore`, `useGameStore`).
   - [x] Migrate global state to appropriate slices.
 - [x] **World State Module**
   - [x] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
   - [x] Create Environmental Engine for dynamic weather.
-  - [x] Setup Location Awareness (SVG Region detection).
+  - [x] Implement Discovery system (Explored Areas registry).
   - [ ] Setup Faction & World Flags system.
 - [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
@@ -68,13 +69,12 @@
   - [x] Interactive spatial interface (Leaflet-like).
   - [x] High-resolution Pyramid Tile system (`/tiles/faerun`).
   - [x] Dynamic Icons & Zoom-dependent visibility.
-  - [x] Party Travel & Movement Interpolation (Fast-forward mode).
-  - [ ] Fog of War (Pathing persistence).
-- [/] Tactical Combat Engine
-  - [x] Grid-Based Movement & Interactive Actions.
-  - [x] Initiative Tracker & Turn Sequencing.
-  - [ ] Combat Resolution Logic (To-Hit/Damage).
-  - [ ] AI Combat Logic.
+  - [x] Party Travel & Movement Interpolation.
+  - [x] Fog of War (Pathing persistence/Explored areas).
+- [x] **Tactical Combat Engine**
+  - [x] Grid-Based Movement & Collision.
+  - [x] Initiative Tracker & Turn Sequence UI.
+  - [ ] AI Combat Logic (Tool calls).
 - [ ] **Economic & Trade Module**
   - [ ] Regional Pricing & Merchant Inventory rotation.
 - [ ] **Soundscape Orchestrator**
