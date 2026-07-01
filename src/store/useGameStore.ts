@@ -21,6 +21,27 @@ export interface CoinFlipState {
   };
 }
 
+export interface CombatState {
+  playerPos: { x: number; y: number };
+  monsters: Array<{
+    id: string;
+    name: string;
+    type: string;
+    hp: number;
+    maxHp: number;
+    x: number;
+    y: number;
+    imageUrl?: string;
+  }>;
+  initiativeOrder: Array<{
+    id: string;
+    name: string;
+    value: number;
+    isPlayer?: boolean;
+  }>;
+  activeTurnIndex: number;
+}
+
 export interface LogEntry {
   id: string;
   message: string;
@@ -54,6 +75,9 @@ interface GameState {
   // Coin Flip
   coinFlipState: CoinFlipState;
 
+  // Combat
+  combatState: CombatState;
+
   // Actions
   setCurrentNPC: (npc: any | null) => void;
   setEmotion: (emotion: string) => void;
@@ -83,6 +107,15 @@ interface GameState {
   // Coin Flip Actions
   startCoinFlip: (prediction: 'heads' | 'tails') => void;
   resetCoinFlip: () => void;
+
+  // Combat Actions
+  setPlayerPos: (x: number, y: number) => void;
+  updateMonsterHp: (id: string, hp: number) => void;
+  addMonsterToCombat: (monster: any) => void;
+  removeMonsterFromCombat: (id: string) => void;
+  nextTurn: () => void;
+  startCombat: () => void;
+  resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
 }
 
 export const useGameStore = create<GameState>((set, get) => ({
@@ -109,6 +142,20 @@ export const useGameStore = create<GameState>((set, get) => ({
     prediction: null,
     result: null,
     score: { user: 0, cpu: 0 }
+  },
+
+  combatState: {
+    playerPos: { x: 2, y: 2 },
+    monsters: [
+      { id: 'm1', name: 'Goblin Scout', type: 'goblin', hp: 7, maxHp: 7, x: 5, y: 3 },
+      { id: 'm2', name: 'Worg', type: 'worg', hp: 26, maxHp: 26, x: 6, y: 5 }
+    ],
+    initiativeOrder: [
+      { id: 'player', name: 'Hero', value: 20, isPlayer: true },
+      { id: 'm2', name: 'Worg', value: 15 },
+      { id: 'm1', name: 'Goblin Scout', value: 12 }
+    ],
+    activeTurnIndex: 0
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -210,6 +257,150 @@ export const useGameStore = create<GameState>((set, get) => ({
           result: null
       }
   })),
+
+  setPlayerPos: (x, y) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      playerPos: { x, y }
+    }
+  })),
+
+  updateMonsterHp: (id, hp) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      monsters: state.combatState.monsters.map(m => m.id === id ? { ...m, hp: Math.max(0, hp) } : m)
+    }
+  })),
+
+  addMonsterToCombat: (monster) => set((state) => {
+    const id = `m-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
+    // Find an empty spot
+    const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
+    let x = 8, y = 2;
+    while (occupiedPositions.has(`${x},${y}`)) {
+      y++;
+      if (y > 6) { y = 2; x++; }
+    }
+
+    const newMonster = {
+      id,
+      name: monster.name,
+      type: monster.type || 'monster',
+      hp: monster.hit_points || 10,
+      maxHp: monster.hit_points || 10,
+      x,
+      y,
+      imageUrl: monster.imageUrl
+    };
+
+    return {
+      combatState: {
+        ...state.combatState,
+        monsters: [...state.combatState.monsters, newMonster]
+      }
+    };
+  }),
+
+  removeMonsterFromCombat: (id) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      monsters: state.combatState.monsters.filter(m => m.id !== id),
+      initiativeOrder: state.combatState.initiativeOrder.filter(i => i.id !== id)
+    }
+  })),
+
+  nextTurn: () => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      activeTurnIndex: (state.combatState.activeTurnIndex + 1) % state.combatState.initiativeOrder.length
+    }
+  })),
+
+  startCombat: () => {
+    const { combatState } = get();
+    const order = [
+      { id: 'player', name: 'Hero', value: Math.floor(Math.random() * 20) + 1 + 3, isPlayer: true },
+      ...combatState.monsters.map(m => ({
+        id: m.id,
+        name: m.name,
+        value: Math.floor(Math.random() * 20) + 1 + 1
+      }))
+    ].sort((a, b) => b.value - a.value);
+
+    set((state) => ({
+      combatState: {
+        ...state.combatState,
+        initiativeOrder: order,
+        activeTurnIndex: 0
+      }
+    }));
+  },
+
+  resolveCombatAction: async (actor, target, action) => {
+    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
+    const { useCharacterStore } = await import('./useCharacterStore');
+    const { modifyHp } = useCharacterStore.getState();
+    
+    // 1. Roll to Hit
+    const attackBonus = action.attack_bonus || 0;
+    const toHitNotation = `1d20+${attackBonus}`;
+    
+    addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
+    
+    // We'll use a simulated 3D roll for the hit
+    await rollDice3D(toHitNotation, `Attack: ${action.name}`);
+    
+    const d20 = Math.floor(Math.random() * 20) + 1;
+    const totalHit = d20 + attackBonus;
+    
+    // Get target AC
+    let targetAC = 10;
+    if (Array.isArray(target.armor_class)) {
+      targetAC = target.armor_class[0]?.value || 10;
+    } else if (typeof target.armor_class === 'number') {
+      targetAC = target.armor_class;
+    } else if (target.armor_class?.base) {
+      targetAC = target.armor_class.base;
+    }
+
+    const isCrit = d20 === 20;
+    const isHit = isCrit || totalHit >= targetAC;
+
+    if (isHit) {
+      addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
+      
+      // 2. Roll Damage
+      const damageInfo = action.damage?.[0];
+      const damageDice = damageInfo?.damage_dice || '1d6';
+      const damageType = damageInfo?.damage_type?.name || 'slashing';
+      
+      // Double dice for crits (simplified)
+      const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
+      
+      // We'll use rollBackground for damage to not overlap 3D dice too much
+      const { diceService } = await import('../dice_roller/diceService');
+      const damageRoll = diceService.rollBackground(finalDice, 'Damage');
+      
+      addLog(`${target.name} takes ${damageRoll.total} ${damageType} damage.`, 'error');
+      
+      // 3. Update HP
+      if (target.id === 'player' || target.id === 'slot1') {
+        const targetId = target.id === 'player' ? activeCharacterId : target.id;
+        modifyHp(targetId, -damageRoll.total);
+      } else {
+        const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
+        const newHp = currentHp - damageRoll.total;
+        updateMonsterHp(target.id, newHp);
+        if (newHp <= 0) {
+          addLog(`${target.name} has been defeated!`, 'success');
+          // Delay removal for visual feedback
+          setTimeout(() => removeMonsterFromCombat(target.id), 1000);
+        }
+      }
+    } else {
+      addLog(`MISS! (${totalHit} vs AC ${targetAC})`, 'warning');
+    }
+  },
 
   setIsGameStarted: (isGameStarted) => set({ isGameStarted }),
 

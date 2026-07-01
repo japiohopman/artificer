@@ -4,29 +4,42 @@ The **Travel System** governs movement across the Sword Coast, translating dista
 
 ## 🧩 Mechanics
 
-### 1. Movement Logic
-- **Action-Based**: Travel is initiated as a group action.
-- **Time Cost**: Calculated based on distance (miles) and Travel Mode.
-    - *Walking*: 3 miles/hour (Standard), 4 miles/hour (Fast), 2 miles/hour (Slow/Stealth).
-    - *Mounts/Vehicles*: Multipliers based on `transport.json` data.
-- **Terrain Modifiers**: Mountains, wetlands, and forests apply speed penalties (e.g., x0.5 speed).
+### 1. Movement Logic (The Environmental Engine)
+Travel is driven by the `EnvironmentalEngine` and managed within `useWorldStore.ts`.
 
-### 2. Travel Modes
-- **Normal**: Standard pace, normal Perception.
-- **Fast**: -5 penalty to Passive Perception, higher risk of exhaustion.
-- **Stealth**: Half speed, enables Stealth checks against random encounters.
+- **Coordinate System**: The world map uses a custom "Proto Unit" coordinate system (4763 x 3185 units).
+- **Scale Transformation**: 4000 miles in-game width corresponds to 4763 Proto Units (Approx 1.19 units per mile).
+- **Speed Calculation**:
+    - **Base Pace**: 3.0 mph (D&D Standard).
+    - **Overburdened**: Speed is reduced by **50%** if the party's total weight exceeds their collective capacity.
+    - **Mounts/Vehicles**: Having horses or carts grants a **+50%** speed bonus.
+    - **Terrain Penalty**: Moving through "Water" regions reduces speed to **10%** (swimming/wading) unless the party possesses a boat or ship.
 
-### 3. The Travel Loop
-1.  **Set Destination**: Choose a discovered marker or known settlement.
-2.  **Calculate Path**: System determines distance and ETA.
-3.  **Consumption**: Deduct rations and water per day of travel.
-4.  **Progression**: Advance `gameTime`.
-5.  **Encounter Check**: Random rolls for events/combats based on region danger level.
+### 2. Fast-Forward Travel
+When travel is initiated, the system can enter a `isFastForwarding` state.
+- **Tick Rate**: Game time advances by **10 minutes** every **2 seconds** of real time.
+- **Visuals**: The party marker (glowing gold) interpolates between the origin and destination along a straight line or calculated path.
 
-### 4. Fast Travel
-- Supported only between "High-Value Nodes" (Major Cities) or via magical means (Teleportation Circles).
-- Consumes gold or spell slots instead of rations/time.
+### 3. Random Encounters
+During movement updates, the system performs an encounter check.
+- **Probability**: 0.5% chance per movement update.
+- **Trigger**: When an encounter occurs, `isFastForwarding` is reset to `false`.
+- **Interruption**: The Chat Hub UI automatically expands, and a notification log is generated.
+- **Combat**: In land regions, there is a 30% chance that an encounter immediately transitions the game into `combat` mode.
+
+### 4. Discovery System
+As the party travels, the area around their current coordinates is automatically marked as "explored" in the `exploredAreas` registry.
+- **Discovery Radius**: 200 units.
+- **Persistence**: Explored areas are used to clear "Fog of War" on the map.
 
 ## 🗺️ Leaflet Integration
-- Visualizes the party marker moving along established `road.json` paths or as the crow flies across wilderness.
-- Dynamic pathfinding using Atlas spatial data.
+- **Coordinate Mapping**: The system translates high-resolution pixel coordinates from Leaflet into the Proto Unit system for movement calculations.
+- **Party Marker**: A custom Leaflet DivIcon that pulses and tracks the `partyLocation` state.
+- **Pathing**: Visualized as a dashed polyline connecting `travelOrigin` to `destination`.
+
+## 🔄 Technical Data Flow
+1.  **Initiation**: `startTravel(destination)` updates `travelOrigin` and `destination`.
+2.  **Tick**: `updateEnvironment()` calculates the distance traveled since the last tick based on speed and time passed.
+3.  **Update**: `partyLocation` is updated with the new interpolated coordinates.
+4.  **Discovery**: `exploreArea()` is called for the new position.
+5.  **Completion**: When `travelProgress` reaches 1.0, travel is stopped and `partyLocation` is snapped to the destination.

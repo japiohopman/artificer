@@ -7,11 +7,11 @@ import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
-import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive } from 'lucide-react';
+import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 
-type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics';
+type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
 
 export const CharacterPanel: React.FC = () => {
   const { 
@@ -77,6 +77,7 @@ export const CharacterPanel: React.FC = () => {
   };
 
   const tabs = [
+    { id: 'party', icon: Users, label: 'Party' },
     { id: 'equipment', icon: Shield, label: 'Equipment' },
     { id: 'inventory', icon: Package, label: 'Inventory' },
     { id: 'stats', icon: BarChart3, label: 'Stats' },
@@ -204,6 +205,48 @@ export const CharacterPanel: React.FC = () => {
                 />
               )}
               {activeTab === 'stats' && <CharacterStats />}
+              {activeTab === 'party' && (
+                <div className="space-y-4">
+                  {characters.map(char => (
+                    <button
+                      key={char.id}
+                      onClick={() => setActiveCharacter(char.id)}
+                      className={cn(
+                        "w-full flex items-center gap-4 p-3 rounded-lg border transition-all text-left",
+                        activeCharacterId === char.id 
+                          ? "bg-dragon-red/10 border-dragon-red shadow-sm" 
+                          : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
+                      )}
+                    >
+                      <div className="w-12 h-12 rounded-lg border-2 border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0">
+                        {char.avatarUrl ? (
+                          <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
+                            <Users size={20} />
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex justify-between items-center mb-1">
+                          <p className="text-[11px] font-black text-dragon-darkRed uppercase truncate">{char.name}</p>
+                          <span className="text-[8px] font-bold text-parchment-400 uppercase">Lvl {char.level || 1} {char.class}</span>
+                        </div>
+                        <div className="w-full h-1.5 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10">
+                          <div 
+                            className="h-full bg-dragon-red" 
+                            style={{ width: `${(char.hp / char.maxHp) * 100}%` }}
+                          />
+                        </div>
+                        <div className="flex justify-between mt-1">
+                           <span className="text-[7px] font-bold text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
+                           {activeCharacterId === char.id && <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
               {activeTab === 'logistics' && (
                 <LogisticsManifest 
                   onTransportRequest={() => {

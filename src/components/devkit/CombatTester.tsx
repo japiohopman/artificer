@@ -16,7 +16,7 @@ export const CombatTester: React.FC = () => {
 
   const {
     activeCards, addToPreview, removeFromPreview, clearPreview,
-    addLog
+    addLog, combatState, addMonsterToCombat, removeMonsterFromCombat
   } = useGameStore();
   
   const { characters, restoreSlots, restoreActionEconomy, updateCharacter } = useCharacterStore();
@@ -36,8 +36,8 @@ export const CombatTester: React.FC = () => {
     try {
       const data = await fetchMonsterData(index);
       if (data) {
-        addToPreview(data);
-        addLog(`Added ${data.name} to combat board`, 'info');
+        addMonsterToCombat(data);
+        addLog(`Added ${data.name} to tactical combat`, 'info');
         playSuccessSound();
       }
     } catch (error) {
@@ -174,28 +174,28 @@ export const CombatTester: React.FC = () => {
             <div className="space-y-2">
               <label className="text-[8px] font-black text-white/20 uppercase tracking-[0.2em]">Enemy Manifestations</label>
               <AnimatePresence initial={false}>
-                {activeCards.length === 0 ? (
+                {combatState.monsters.length === 0 ? (
                   <div className="py-8 text-center border-2 border-dashed border-white/5 rounded-xl text-white/10 italic text-[10px] uppercase">
                     No enemies on tactical board
                   </div>
                 ) : (
-                  activeCards.map((monster, idx) => (
+                  combatState.monsters.map((monster) => (
                     <motion.div 
-                      key={`${monster.index}-${idx}`}
+                      key={monster.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 20 }}
                       className="p-3 bg-red-500/5 border border-red-500/20 rounded-xl flex items-center gap-3 group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-black/40 border border-white/10 overflow-hidden shrink-0">
-                        {monster.imageUrl && <img src={normalizeImageUrl(monster.imageUrl, 'enemies', monster.index)} className="w-full h-full object-cover" />}
+                        {monster.imageUrl && <img src={monster.imageUrl} className="w-full h-full object-cover" />}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-[12px] font-black text-white uppercase truncate">{monster.name}</div>
-                        <div className="text-[8px] font-bold text-red-500/60 uppercase tracking-widest">CR {monster.challenge_rating} • {monster.type}</div>
+                        <div className="text-[8px] font-bold text-red-500/60 uppercase tracking-widest">HP {monster.hp}/{monster.maxHp} • {monster.type}</div>
                       </div>
                       <button 
-                        onClick={() => removeFromPreview(idx)}
+                        onClick={() => removeMonsterFromCombat(monster.id)}
                         className="p-2 text-white/10 hover:text-red-500 transition-all opacity-0 group-hover:opacity-100"
                       >
                         <GameIcon name="trash" size={14} />

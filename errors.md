@@ -1,607 +1,5 @@
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/AssetExplorer.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 60,
-	"startColumn": 14,
-	"endLineNumber": 60,
-	"endColumn": 20,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'prev' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 777,
-	"startColumn": 20,
-	"endLineNumber": 777,
-	"endColumn": 24,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'd' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1708,
-	"startColumn": 65,
-	"endLineNumber": 1708,
-	"endColumn": 66,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'drop' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1708,
-	"startColumn": 98,
-	"endLineNumber": 1708,
-	"endColumn": 102,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'i' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1708,
-	"startColumn": 104,
-	"endLineNumber": 1708,
-	"endColumn": 105,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'd' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1739,
-	"startColumn": 96,
-	"endLineNumber": 1739,
-	"endColumn": 97,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'd' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1784,
-	"startColumn": 65,
-	"endLineNumber": 1784,
-	"endColumn": 66,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'drop' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1784,
-	"startColumn": 98,
-	"endLineNumber": 1784,
-	"endColumn": 102,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'i' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1784,
-	"startColumn": 104,
-	"endLineNumber": 1784,
-	"endColumn": 105,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/DevKit.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'd' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 1829,
-	"startColumn": 96,
-	"endLineNumber": 1829,
-	"endColumn": 97,
-	"modelVersionId": 10,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/FlagManager.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 66,
-	"startColumn": 18,
-	"endLineNumber": 66,
-	"endColumn": 23,
-	"modelVersionId": 31,
-	"origin": "extHost1"
-},{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/FlagManager.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 73,
-	"startColumn": 16,
-	"endLineNumber": 73,
-	"endColumn": 22,
-	"modelVersionId": 31,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 167,
-	"startColumn": 20,
-	"endLineNumber": 167,
-	"endColumn": 26,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 207,
-	"startColumn": 22,
-	"endLineNumber": 207,
-	"endColumn": 27,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/Jane.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 216,
-	"startColumn": 22,
-	"endLineNumber": 216,
-	"endColumn": 27,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'item' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 493,
-	"startColumn": 25,
-	"endLineNumber": 493,
-	"endColumn": 29,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "7006",
-	"severity": 8,
-	"message": "Parameter 'item' implicitly has an 'any' type.",
-	"source": "ts",
-	"startLineNumber": 494,
-	"startColumn": 27,
-	"endLineNumber": 494,
-	"endColumn": 31,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2345",
-	"severity": 8,
-	"message": "Argument of type 'Character' is not assignable to parameter of type 'SetStateAction<Partial<NPCProfile>>'.\n  Type 'Character' is not assignable to type 'Partial<NPCProfile>'.\n    Types of property 'traits' are incompatible.\n      Type '{ name: string; index: string; desc: string; trait_specific?: any; }[]' is not assignable to type 'string[]'.\n        Type '{ name: string; index: string; desc: string; trait_specific?: any; }' is not assignable to type 'string'.",
-	"source": "ts",
-	"startLineNumber": 669,
-	"startColumn": 28,
-	"endLineNumber": 669,
-	"endColumn": 32,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 872,
-	"startColumn": 33,
-	"endLineNumber": 872,
-	"endColumn": 39,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/select-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Select element must have an accessible name: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 888,
-	"startColumn": 33,
-	"endLineNumber": 888,
-	"endColumn": 39,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/forms",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/label",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Form elements must have labels: Element has no title attribute Element has no placeholder attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 933,
-	"startColumn": 32,
-	"endLineNumber": 933,
-	"endColumn": 37,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
-	"source": "ts",
-	"startLineNumber": 1031,
-	"startColumn": 226,
-	"endLineNumber": 1031,
-	"endColumn": 231,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
-	"source": "ts",
-	"startLineNumber": 1045,
-	"startColumn": 223,
-	"endLineNumber": 1045,
-	"endColumn": 228,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
-	"source": "ts",
-	"startLineNumber": 1059,
-	"startColumn": 235,
-	"endLineNumber": 1059,
-	"endColumn": 240,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
-	"source": "ts",
-	"startLineNumber": 1073,
-	"startColumn": 233,
-	"endLineNumber": 1073,
-	"endColumn": 238,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "typescript",
-	"code": "2322",
-	"severity": 8,
-	"message": "Type '{ name: string; size: number; className: string; onClick: () => void; title: string; }' is not assignable to type 'IntrinsicAttributes & GameIconProps'.\n  Property 'title' does not exist on type 'IntrinsicAttributes & GameIconProps'.",
-	"source": "ts",
-	"startLineNumber": 1093,
-	"startColumn": 168,
-	"endLineNumber": 1093,
-	"endColumn": 173,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/npc_generator.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 917,
-	"startColumn": 36,
-	"endLineNumber": 917,
-	"endColumn": 42,
-	"modelVersionId": 3,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/chat/ChatInput.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 40,
-	"startColumn": 12,
-	"endLineNumber": 40,
-	"endColumn": 18,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/CombatGrid.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/text-alternatives",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/image-alt",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Images must have alternative text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 68,
-	"startColumn": 20,
-	"endLineNumber": 68,
-	"endColumn": 23,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/CombatGrid.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "no-inline-styles",
-		"target": {
-			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
-			"scheme": "https",
-			"authority": "webhint.io"
-		}
-	},
-	"severity": 4,
-	"message": "CSS inline styles should not be used, move styles to an external CSS file",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 16,
-	"startColumn": 8,
-	"endLineNumber": 16,
-	"endColumn": 11,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldMap.tsx",
-	"owner": "typescript",
-	"code": "2882",
-	"severity": 8,
-	"message": "Cannot find module or type declarations for side-effect import of 'leaflet/dist/leaflet.css'.",
-	"source": "ts",
-	"startLineNumber": 3,
-	"startColumn": 8,
-	"endLineNumber": 3,
-	"endColumn": 34,
-	"modelVersionId": 56,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/WorldPanel.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 93,
-	"startColumn": 12,
-	"endLineNumber": 93,
-	"endColumn": 18,
-	"modelVersionId": 51,
-	"origin": "extHost1"
-}]
-
-[{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 126,
-	"startColumn": 26,
-	"endLineNumber": 126,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 129,
-	"startColumn": 26,
-	"endLineNumber": 129,
-	"endColumn": 32,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/paperScissorRock.tsx",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
 		"value": "axe/name-role-value",
@@ -617,10 +15,424 @@
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
 	"startLineNumber": 132,
-	"startColumn": 26,
+	"startColumn": 14,
 	"endLineNumber": 132,
-	"endColumn": 32,
+	"endColumn": 20,
 	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 161,
+	"startColumn": 23,
+	"endLineNumber": 161,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 174,
+	"startColumn": 23,
+	"endLineNumber": 174,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 191,
+	"startColumn": 23,
+	"endLineNumber": 191,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 205,
+	"startColumn": 23,
+	"endLineNumber": 205,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 219,
+	"startColumn": 23,
+	"endLineNumber": 219,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/bookreader/BookFocus.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 235,
+	"startColumn": 23,
+	"endLineNumber": 235,
+	"endColumn": 26,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterPanel.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 102,
+	"startColumn": 16,
+	"endLineNumber": 102,
+	"endColumn": 22,
+	"modelVersionId": 4,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterPanel.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 117,
+	"startColumn": 14,
+	"endLineNumber": 117,
+	"endColumn": 20,
+	"modelVersionId": 4,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterPanel.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 133,
+	"startColumn": 14,
+	"endLineNumber": 133,
+	"endColumn": 20,
+	"modelVersionId": 4,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterPanel.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 236,
+	"startColumn": 28,
+	"endLineNumber": 236,
+	"endColumn": 31,
+	"modelVersionId": 4,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/FullInventoryMenu.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 59,
+	"startColumn": 10,
+	"endLineNumber": 59,
+	"endColumn": 16,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
+
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/ItemActionCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 81,
+	"startColumn": 10,
+	"endLineNumber": 81,
+	"endColumn": 16,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
+
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/CombatTester.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/text-alternatives",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/image-alt",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Images must have alternative text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 155,
+	"startColumn": 22,
+	"endLineNumber": 155,
+	"endColumn": 25,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/CombatTester.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/text-alternatives",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/image-alt",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Images must have alternative text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 191,
+	"startColumn": 47,
+	"endLineNumber": 191,
+	"endColumn": 50,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/CombatTester.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 197,
+	"startColumn": 24,
+	"endLineNumber": 197,
+	"endColumn": 30,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/devkit/CombatTester.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 161,
+	"startColumn": 26,
+	"endLineNumber": 161,
+	"endColumn": 29,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/ActionView.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "axe/name-role-value",
+		"target": {
+			"$mid": 1,
+			"path": "/rules/axe/4.10/button-name",
+			"scheme": "https",
+			"authority": "dequeuniversity.com",
+			"query": "application=axeAPI"
+		}
+	},
+	"severity": 8,
+	"message": "Buttons must have discernible text: Element has no title attribute",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 69,
+	"startColumn": 14,
+	"endLineNumber": 69,
+	"endColumn": 20,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/hud/game/ActionView.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 69,
+	"startColumn": 14,
+	"endLineNumber": 69,
+	"endColumn": 20,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+}]
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/lib/characterUtils.ts",
+	"owner": "typescript",
+	"code": "2322",
+	"severity": 8,
+	"message": "Type '`${string}-${string}-${string}-${string}-${string}`' is not assignable to type 'null'.",
+	"source": "ts",
+	"startLineNumber": 445,
+	"startColumn": 9,
+	"endLineNumber": 445,
+	"endColumn": 20,
+	"modelVersionId": 2,
 	"origin": "extHost1"
 }]
 
@@ -640,33 +452,11 @@
 	"severity": 8,
 	"message": "Buttons must have discernible text: Element has no title attribute",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 125,
-	"startColumn": 20,
-	"endLineNumber": 125,
-	"endColumn": 26,
-	"modelVersionId": 1,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
-	"owner": "_generated_diagnostic_collection_name_#0",
-	"code": {
-		"value": "axe/name-role-value",
-		"target": {
-			"$mid": 1,
-			"path": "/rules/axe/4.10/button-name",
-			"scheme": "https",
-			"authority": "dequeuniversity.com",
-			"query": "application=axeAPI"
-		}
-	},
-	"severity": 8,
-	"message": "Buttons must have discernible text: Element has no title attribute",
-	"source": "Microsoft Edge Tools",
-	"startLineNumber": 242,
+	"startLineNumber": 246,
 	"startColumn": 21,
-	"endLineNumber": 242,
+	"endLineNumber": 246,
 	"endColumn": 27,
-	"modelVersionId": 1,
+	"modelVersionId": 4,
 	"origin": "extHost1"
 },{
 	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/ui/PartyLogistics.tsx",
@@ -683,277 +473,395 @@
 	"severity": 4,
 	"message": "CSS inline styles should not be used, move styles to an external CSS file",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 216,
+	"startLineNumber": 220,
 	"startColumn": 15,
-	"endLineNumber": 216,
+	"endLineNumber": 220,
 	"endColumn": 18,
-	"modelVersionId": 1,
+	"modelVersionId": 4,
 	"origin": "extHost1"
 }]
 
 [{
-	"resource": "/c:/Users/japie/OneDrive/Documents/GitHub/artificer/tsconfig.json",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "typescript-config/strict",
+		"value": "no-inline-styles",
 		"target": {
 			"$mid": 1,
-			"path": "/docs/user-guide/hints/hint-typescript-config/strict/",
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
 			"scheme": "https",
 			"authority": "webhint.io"
 		}
 	},
-	"severity": 8,
-	"message": "The compiler option \"strict\" should be enabled to reduce type errors.",
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 2,
-	"startColumn": 4,
-	"endLineNumber": 2,
-	"endColumn": 19,
-	"modelVersionId": 5,
+	"startLineNumber": 52,
+	"startColumn": 8,
+	"endLineNumber": 52,
+	"endColumn": 12,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 180,
+	"startColumn": 6,
+	"endLineNumber": 180,
+	"endColumn": 9,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 276,
+	"startColumn": 10,
+	"endLineNumber": 276,
+	"endColumn": 13,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 290,
+	"startColumn": 10,
+	"endLineNumber": 290,
+	"endColumn": 12,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 300,
+	"startColumn": 10,
+	"endLineNumber": 300,
+	"endColumn": 13,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 329,
+	"startColumn": 12,
+	"endLineNumber": 329,
+	"endColumn": 15,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 333,
+	"startColumn": 14,
+	"endLineNumber": 333,
+	"endColumn": 18,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 334,
+	"startColumn": 14,
+	"endLineNumber": 334,
+	"endColumn": 18,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 376,
+	"startColumn": 10,
+	"endLineNumber": 376,
+	"endColumn": 13,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/atlas/MonsterCard.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 432,
+	"startColumn": 8,
+	"endLineNumber": 432,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+}]
+
+
+[{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterCreator.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 628,
+	"startColumn": 8,
+	"endLineNumber": 628,
+	"endColumn": 11,
+	"modelVersionId": 2,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterCreator.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 994,
+	"startColumn": 30,
+	"endLineNumber": 994,
+	"endColumn": 34,
+	"modelVersionId": 2,
 	"origin": "extHost1"
 }]
 
 [{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @theme",
-	"source": "css",
-	"startLineNumber": 19,
-	"startColumn": 1,
-	"endLineNumber": 19,
-	"endColumn": 7,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 54,
-	"startColumn": 5,
-	"endLineNumber": 54,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 72,
-	"startColumn": 5,
-	"endLineNumber": 72,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 75,
-	"startColumn": 5,
-	"endLineNumber": 75,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
 	"owner": "_generated_diagnostic_collection_name_#0",
 	"code": {
-		"value": "compat-api/css",
+		"value": "no-inline-styles",
 		"target": {
 			"$mid": 1,
-			"path": "/docs/Web/CSS/scrollbar-width",
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
 			"scheme": "https",
-			"authority": "developer.mozilla.org"
+			"authority": "webhint.io"
 		}
 	},
 	"severity": 4,
-	"message": "'scrollbar-width' is not supported by Chrome < 121, Safari, Safari on iOS, Samsung Internet.",
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
 	"source": "Microsoft Edge Tools",
-	"startLineNumber": 83,
-	"startColumn": 5,
-	"endLineNumber": 83,
-	"endColumn": 20,
-	"modelVersionId": 2,
+	"startLineNumber": 153,
+	"startColumn": 38,
+	"endLineNumber": 153,
+	"endColumn": 41,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 },{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
 	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 142,
-	"startColumn": 5,
-	"endLineNumber": 142,
-	"endColumn": 11,
-	"modelVersionId": 2,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 156,
+	"startColumn": 38,
+	"endLineNumber": 156,
+	"endColumn": 41,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 },{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
 	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 159,
+	"startColumn": 38,
+	"endLineNumber": 159,
+	"endColumn": 41,
+	"modelVersionId": 1,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
+	"severity": 4,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
 	"startLineNumber": 160,
-	"startColumn": 5,
+	"startColumn": 38,
 	"endLineNumber": 160,
-	"endColumn": 11,
-	"modelVersionId": 2,
+	"endColumn": 41,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 },{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
 	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 163,
-	"startColumn": 5,
-	"endLineNumber": 163,
-	"endColumn": 11,
-	"modelVersionId": 2,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 161,
+	"startColumn": 38,
+	"endLineNumber": 161,
+	"endColumn": 41,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 },{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
+	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/minigames/CoinFlip.tsx",
+	"owner": "_generated_diagnostic_collection_name_#0",
+	"code": {
+		"value": "no-inline-styles",
+		"target": {
+			"$mid": 1,
+			"path": "/docs/user-guide/hints/hint-no-inline-styles/",
+			"scheme": "https",
+			"authority": "webhint.io"
+		}
+	},
 	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 166,
-	"startColumn": 5,
-	"endLineNumber": 166,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 169,
-	"startColumn": 5,
-	"endLineNumber": 169,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 172,
-	"startColumn": 5,
-	"endLineNumber": 172,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 175,
-	"startColumn": 5,
-	"endLineNumber": 175,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 178,
-	"startColumn": 5,
-	"endLineNumber": 178,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 181,
-	"startColumn": 5,
-	"endLineNumber": 181,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 184,
-	"startColumn": 5,
-	"endLineNumber": 184,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 187,
-	"startColumn": 5,
-	"endLineNumber": 187,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 190,
-	"startColumn": 5,
-	"endLineNumber": 190,
-	"endColumn": 11,
-	"modelVersionId": 2,
-	"origin": "extHost1"
-},{
-	"resource": "/C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/index.css",
-	"owner": "_generated_diagnostic_collection_name_#12",
-	"code": "unknownAtRules",
-	"severity": 4,
-	"message": "Unknown at rule @apply",
-	"source": "css",
-	"startLineNumber": 193,
-	"startColumn": 5,
-	"endLineNumber": 193,
-	"endColumn": 11,
-	"modelVersionId": 2,
+	"message": "CSS inline styles should not be used, move styles to an external CSS file",
+	"source": "Microsoft Edge Tools",
+	"startLineNumber": 162,
+	"startColumn": 38,
+	"endLineNumber": 162,
+	"endColumn": 41,
+	"modelVersionId": 1,
 	"origin": "extHost1"
 }]

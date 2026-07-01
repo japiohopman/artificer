@@ -41,6 +41,22 @@ async function safeJson(res: Response): Promise<any> {
 }
 
 export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/enemies_categories/index.json');
+    if (localRes.ok) {
+      const fileList = await localRes.json();
+      if (Array.isArray(fileList)) {
+        const categories = await Promise.all(
+          fileList.map(async (f: any) => {
+            const res = await fetch(`/assets/atlas/enemies_categories/json/${f.index}.json`);
+            return res.ok ? await res.json() : null;
+          })
+        );
+        return categories.filter(c => c !== null);
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -67,6 +83,19 @@ export async function fetchMonsterCategories(): Promise<{ name: string; index: s
 }
 
 export async function fetchMonsterCategoryMapping(): Promise<Record<string, string>> {
+  try {
+    const categories = await fetchMonsterCategories();
+    const mapping: Record<string, string> = {};
+    categories.forEach(data => {
+      if (data && data.monsters && data.name) {
+        data.monsters.forEach((item: any) => {
+          mapping[item.index] = data.name;
+        });
+      }
+    });
+    if (Object.keys(mapping).length > 0) return mapping;
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -111,7 +140,8 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
       const data = await localRes.json();
       if (Array.isArray(data)) {
         return data.map((item: any) => ({
-          name: item.name,
+          ...item,
+          name: item.name || item.index.replace(/_/g, ' '),
           path: item.json_path || `public/assets/atlas/enemies/json/${item.index}.json`,
           index: item.index
         }));
@@ -217,7 +247,7 @@ export async function fetchMonsterData(index: string): Promise<any> {
 
   return {
     ...normalized,
-    imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url, 'enemies', index)
+    imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index)
   };
 }
 

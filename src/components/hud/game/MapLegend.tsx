@@ -17,7 +17,11 @@ export const ATLAS_CATEGORIES: LegendCategory[] = [
   { id: 'poi', label: 'Points of Interest', icon: 'poi', color: '#4169E1' },
   { id: 'mountains', label: 'Hills & Mountains', icon: 'mountains', color: '#2F4F4F' },
   { id: 'forest', label: 'Forests', icon: 'forest', color: '#228B22' },
-  { id: 'waters', label: 'Water Features', icon: 'waters', color: '#1E90FF' },
+  { id: 'seas_oceans', label: 'Seas & Oceans', icon: 'sea', color: '#1E90FF' },
+  { id: 'rivers', label: 'Rivers & Flows', icon: 'waters', color: '#1E90FF' },
+  { id: 'lakes', label: 'Lakes & Ponds', icon: 'lake', color: '#1E90FF' },
+  { id: 'bays', label: 'Bays & Inlets', icon: 'waters', color: '#1E90FF' },
+  { id: 'coasts', label: 'Coasts & Reefs', icon: 'coast', color: '#1E90FF' },
   { id: 'islands', label: 'Islands', icon: 'islands', color: '#FFD700' },
   { id: 'roads', label: 'Roads & Trails', icon: 'roads', color: '#696969' },
   { id: 'graveyard', label: 'Cemeteries', icon: 'graveyard', color: '#696969' },
@@ -35,18 +39,18 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
         let isVisible = false;
         let zoomReq = 0;
 
-        if (cat.id === 'city') {
+        if (cat.id === 'city' || cat.id === 'seas_oceans') {
           isVisible = true;
           zoomReq = 0;
-        } else if (['mountains', 'forest', 'waters', 'islands', 'roads'].includes(cat.id)) {
-          isVisible = currentZoom >= 4;
-          zoomReq = 4;
-        } else if (['village', 'castle'].includes(cat.id)) {
-          isVisible = currentZoom >= 5; // T3 in WorldMap is Zoom 5+ for settlements
-          zoomReq = 5;
+        } else if (['mountains', 'forest', 'rivers', 'lakes', 'bays', 'coasts', 'islands'].includes(cat.id)) {
+          isVisible = currentZoom >= 2.5;
+          zoomReq = 2.5;
+        } else if (['village', 'castle', 'roads'].includes(cat.id)) {
+          isVisible = currentZoom >= 3.5;
+          zoomReq = 3.5;
         } else if (['ruins', 'poi', 'graveyard'].includes(cat.id)) {
-          isVisible = currentZoom >= 6;
-          zoomReq = 6;
+          isVisible = currentZoom >= 5;
+          zoomReq = 5;
         }
 
         return (

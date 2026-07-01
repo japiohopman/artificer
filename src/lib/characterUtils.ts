@@ -442,13 +442,13 @@ export function generateNPC(partial: any): any {
       const v2SlotId = SLOT_MAP[slotHint] || slotHint;
       const slot = v2Equipment.slots.find(s => s.id === v2SlotId);
       if (slot && !slot.itemId) {
-        slot.itemId = id;
+        (slot as any).itemId = id;
         return;
       }
     }
 
     const bagSlot = v2Backpack.slots.find(s => s.itemId === null);
-    if (bagSlot) bagSlot.itemId = id;
+    if (bagSlot) (bagSlot as any).itemId = id;
   };
 
   const repo = "japiohopman/artificer";
@@ -534,4 +534,35 @@ export function generateNPC(partial: any): any {
     isRecruitable: true,
     dataPath: `${githubBase}public/assets/atlas/character/npc_character_profiles/json/${npcIndex}.json`
   };
+}
+
+export async function processLevelUp(character: any): Promise<any> {
+  const oldLevel = character.level || 0;
+  const newLevel = getLevelFromXP(character.xp || 0);
+  
+  if (newLevel <= oldLevel) return null;
+  
+  const results = [];
+  let updatedCharacter = { ...character };
+  
+  for (let lvl = oldLevel + 1; lvl <= newLevel; lvl++) {
+    const classInfo = CLASS_DATA[character.class] || CLASS_DATA['Fighter'];
+    const hpIncrease = Math.floor(classInfo.hitDie / 2) + 1 + getModifier(character.stats.con || 10);
+    
+    updatedCharacter = {
+      ...updatedCharacter,
+      level: lvl,
+      hp: (updatedCharacter.hp || 10) + hpIncrease,
+      maxHp: (updatedCharacter.maxHp || 10) + hpIncrease
+    };
+    
+    results.push({
+      newLevel: lvl,
+      hpIncrease,
+      newFeatures: [],
+      hasASI: lvl % 4 === 0
+    });
+  }
+  
+  return { updatedCharacter, results };
 }

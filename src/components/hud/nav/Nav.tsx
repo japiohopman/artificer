@@ -1,5 +1,6 @@
 import React from 'react';
 import { useWorldStore } from '../../../store/useWorldStore';
+import { REGION_NAMES } from '../../../data/regions';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useUIStore } from '../../../store/useUIStore';
@@ -36,7 +37,8 @@ export const Nav: React.FC = () => {
   const {
     currentLocation,
     gameTime,
-    isNight
+    isNight,
+    currentRegion
   } = useWorldStore();
 
   const {
@@ -119,7 +121,7 @@ export const Nav: React.FC = () => {
   ];
 
   return (
-    <nav className="h-16 w-full px-6 flex items-center justify-between relative overflow-hidden pointer-events-auto bg-parchment-100/80 backdrop-blur-md rounded-xl border-2 border-dragon-gold shadow-lg bg-paper-texture">
+    <nav className="h-16 w-full px-6 flex items-center justify-between relative overflow-hidden pointer-events-auto bg-parchment-100 border-b-2 border-dragon-gold shadow-lg bg-paper-texture">
       {/* Visual Accents */}
       <div className="absolute inset-x-0 bottom-0 h-1 bg-dragon-red/20" />
       <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-dragon-red/5 to-transparent pointer-events-none" />
@@ -150,12 +152,22 @@ export const Nav: React.FC = () => {
 
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-             <div className="w-1.5 h-1.5 rounded-full bg-dragon-red shadow-[0_0_8px_rgba(139,0,0,0.8)]" />
-             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">Position_Verified</span>
+             <div className={cn(
+               "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
+               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
+             )} />
+             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
+               {currentRegion === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
+             </span>
           </div>
-          <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-             {currentLocation?.name || 'Unknown Region'}
-          </span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
+               {currentLocation?.name || REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Unknown Region'}
+            </span>
+            {currentRegion === 'water' && (
+              <span className="text-[8px] font-black text-blue-600 uppercase tracking-tighter">[High Seas]</span>
+            )}
+          </div>
         </div>
       </div>
 
@@ -192,31 +204,8 @@ export const Nav: React.FC = () => {
         )}
       </div>
 
-      {/* Right Section: Hero Status + Stats */}
+      {/* Right Section: Action Controls */}
       <div className="flex items-center gap-6 z-10 w-1/3 justify-end">
-        {activeChar && (
-          <div className="flex items-center gap-4 px-4 py-1.5 bg-parchment-200/50 border-2 border-dragon-gold/30 rounded-lg shadow-inner">
-             <div className="flex flex-col items-end">
-                <span className="text-[8px] font-black text-dragon-darkRed/40 uppercase tracking-tighter">Lvl {activeChar.level || 1} {activeChar.class || 'Hero'}</span>
-                <div className="w-24 h-1.5 bg-parchment-300 rounded-full mt-1 overflow-hidden border border-dragon-gold/10">
-                   <div 
-                      className="h-full bg-dragon-red shadow-[0_0_8px_rgba(139,0,0,0.8)]" 
-                      style={{ width: `${(activeChar.hp / activeChar.maxHp) * 100}%` }}
-                   />
-                </div>
-             </div>
-             <div className="w-8 h-8 rounded border-2 border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shadow-sm">
-                {activeChar.avatarUrl ? (
-                  <img src={activeChar.avatarUrl} alt="Hero" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
-                    <GameIcon name="user" size={16} />
-                  </div>
-                )}
-             </div>
-          </div>
-        )}
-
         <div className="flex items-center gap-2">
           <div className="h-8 w-px bg-dragon-gold/20 mx-1" />
           {rightActions.map(action => (

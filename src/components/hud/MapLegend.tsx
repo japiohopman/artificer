@@ -9,10 +9,10 @@ export const MapLegend: React.FC = () => {
 
   const tiers = [
     { level: 'Tier 0', label: 'Metropolis', zoom: 'Z0+', description: 'Major hubs and legendary cities.' },
-    { level: 'Tier 1', label: 'Major Towns', zoom: 'Z2+', description: 'Significant settlements and trade ports.' },
-    { level: 'Tier 2', label: 'Strongholds', zoom: 'Z4+', description: 'Fortresses, keeps, and mountain peaks.' },
-    { level: 'Tier 3', label: 'Landmarks', zoom: 'Z5.5+', description: 'Dungeons, ruins, and points of interest.' },
-    { level: 'Tier 4', label: 'Discovery', zoom: 'Z6.5+', description: 'Roads, small shrines, and local geography.' }
+    { level: 'Tier 1', label: 'Geography', zoom: 'Z2.5+', description: 'Nature, terrain features, and waters.' },
+    { level: 'Tier 2', label: 'Civilization', zoom: 'Z3.5+', description: 'Towns, keeps, and trade roads.' },
+    { level: 'Tier 3', label: 'Landmarks', zoom: 'Z5+', description: 'Dungeons, ruins, and points of interest.' },
+    { level: 'Tier 4', label: 'Discovery', zoom: 'Z6+', description: 'Local geography and minor POIs.' }
   ];
 
   const categories = [
@@ -23,7 +23,11 @@ export const MapLegend: React.FC = () => {
     { id: 'ruins', label: 'Ruins', icon: 'ruins', color: '#8B4513' },
     { id: 'mountains', label: 'Peaks', icon: 'mountains', color: CategoryIcons.mountain.color },
     { id: 'forest', label: 'Woods', icon: 'forest', color: CategoryIcons.forest.color },
-    { id: 'waters', label: 'Waters', icon: 'waters', color: CategoryIcons.wetlands.color }
+    { id: 'seas_oceans', label: 'Seas', icon: 'sea', color: CategoryIcons.sea.color },
+    { id: 'rivers', label: 'Rivers', icon: 'waters', color: '#1E90FF' },
+    { id: 'lakes', label: 'Lakes', icon: 'lake', color: CategoryIcons.lake.color },
+    { id: 'bays', label: 'Bays', icon: 'waters', color: '#1E90FF' },
+    { id: 'coasts', label: 'Coasts', icon: 'coast', color: '#1E90FF' }
   ];
 
   return (

@@ -2,6 +2,8 @@ import React from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { FirstPersonView } from '../view/FirstPersonView';
+import { CombatGrid } from './CombatGrid';
+import { ActionPanel } from './ActionPanel';
 import { GameIcon } from '../../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../../atlas/DraggableCard';
@@ -11,6 +13,7 @@ import { Rest } from './Rest';
 export const ActionView: React.FC = () => {
   const { 
     currentView, 
+    gameMode,
     isEditingSubMap, 
   } = useUIStore();
 
@@ -19,6 +22,16 @@ export const ActionView: React.FC = () => {
     clearPreview, 
     removeFromPreview 
   } = useGameStore();
+
+  if (gameMode === 'combat') {
+    return (
+      <div className="w-full h-full flex flex-col">
+        <div className="flex-1 relative min-h-0 border-2 border-dragon-gold shadow-2xl overflow-hidden">
+          <CombatGrid />
+        </div>
+      </div>
+    );
+  }
 
   if (currentView === 'campfire') {
     return <Rest />;
@@ -76,8 +89,8 @@ export const ActionView: React.FC = () => {
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden relative items-center pointer-events-auto">
       {/* Visuals - Core Scene Content */}
-      <div className="w-full h-full max-w-5xl flex flex-col p-2">
-        <div className="flex-1 bg-parchment-100 rounded-lg overflow-hidden shadow-2xl relative border-2 border-dragon-gold bg-paper-texture">
+      <div className="w-full h-full max-w-5xl flex flex-col">
+        <div className="flex-1 bg-parchment-100 overflow-hidden shadow-2xl relative border-2 border-dragon-gold bg-paper-texture">
           <FirstPersonView />
           {/* Internal Overlay Vignette */}
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.5)] z-10" />

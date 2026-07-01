@@ -14,7 +14,7 @@ interface UIState {
   isJournalOpen: boolean;
   isWorldPanelOpen: boolean;
   isCharacterPanelOpen: boolean;
-  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics';
+  activeCharacterTab: 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
   dynamicNavButtons: any[]; 
   isAdvancedRollerOpen: boolean;
   chatExpanded: boolean;
@@ -30,6 +30,10 @@ interface UIState {
   isCharacterCreatorOpen: boolean;
   isCharacterSpellbookOpen: boolean;
   searchQuery: string;
+
+  // Targeting State
+  isTargeting: boolean;
+  targetingAction: any | null;
   
   // Focus View
   focusedItem: any | null;
@@ -50,7 +54,7 @@ interface UIState {
   setIsJournalOpen: (isOpen: boolean) => void;
   setIsWorldPanelOpen: (isOpen: boolean) => void;
   setIsCharacterPanelOpen: (isOpen: boolean) => void;
-  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics') => void;
+  setActiveCharacterTab: (tab: 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party') => void;
   setDynamicNavButtons: (buttons: any[]) => void;
   setIsAdvancedRollerOpen: (isOpen: boolean) => void;
   setChatExpanded: (expanded: boolean) => void;
@@ -69,6 +73,8 @@ interface UIState {
   setIsTransportProfileOpen: (isOpen: boolean) => void;
   setIsCharacterCreatorOpen: (isOpen: boolean) => void;
   setIsCharacterSpellbookOpen: (isOpen: boolean) => void;
+  setIsTargeting: (isTargeting: boolean) => void;
+  setTargetingAction: (action: any | null) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
@@ -97,6 +103,9 @@ export const useUIStore = create<UIState>((set) => ({
   isCharacterCreatorOpen: false,
   isCharacterSpellbookOpen: false,
   searchQuery: '',
+
+  isTargeting: false,
+  targetingAction: null,
   
   focusedItem: null,
   inspectingItem: null,
@@ -131,4 +140,6 @@ export const useUIStore = create<UIState>((set) => ({
   setIsTransportProfileOpen: (isTransportProfileOpen) => set({ isTransportProfileOpen }),
   setIsCharacterCreatorOpen: (isCharacterCreatorOpen) => set({ isCharacterCreatorOpen }),
   setIsCharacterSpellbookOpen: (isCharacterSpellbookOpen) => set({ isCharacterSpellbookOpen }),
+  setIsTargeting: (isTargeting) => set({ isTargeting }),
+  setTargetingAction: (targetingAction) => set({ targetingAction }),
 }));

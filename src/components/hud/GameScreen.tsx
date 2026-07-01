@@ -19,12 +19,14 @@ export const GameScreen: React.FC = () => {
   const { 
     chatExpanded,
     setChatExpanded,
-    isEditingSubMap
+    isEditingSubMap,
+    gameMode
   } = useUIStore();
 
   const {
     activeCards,
-    removeFromPreview
+    removeFromPreview,
+    combatState
   } = useGameStore();
 
   const { currentNPC, emotion } = useCharacterStore();
@@ -50,17 +52,17 @@ export const GameScreen: React.FC = () => {
       <motion.div 
         initial={false}
         animate={{ 
-          y: chatExpanded ? 0 : -1000,
-          opacity: chatExpanded ? 1 : 0,
-          scale: chatExpanded ? 1 : 0.9
+          y: (chatExpanded || gameMode === 'combat') ? 0 : -1000,
+          opacity: (chatExpanded || gameMode === 'combat') ? 1 : 0,
+          scale: (chatExpanded || gameMode === 'combat') ? 1 : 0.9
         }}
         transition={{ type: 'spring', damping: 30, stiffness: 120 }}
         className={cn(
-          "absolute inset-x-0 top-0 bottom-[100px] z-10 flex flex-col px-4 items-center",
-          chatExpanded ? "pointer-events-auto" : "pointer-events-none"
+          "absolute inset-x-0 top-0 bottom-[64px] z-10 flex flex-col items-center",
+          (chatExpanded || gameMode === 'combat') ? "pointer-events-auto" : "pointer-events-none"
         )}
       >
-        <div className="w-full h-full max-w-5xl mt-8">
+        <div className="w-full h-full max-w-5xl">
             <ActionView />
         </div>
       </motion.div>
@@ -97,7 +99,7 @@ export const GameScreen: React.FC = () => {
 
       {/* 4. Chat Panel Layer (Bottom) */}
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
-        <div className="w-full max-w-5xl px-4 pb-4 pointer-events-auto relative">
+        <div className="w-full pointer-events-auto relative">
            {/* Toggle Icon */}
            <div className="absolute -top-10 right-6 z-50 pointer-events-none">
             <button 
@@ -118,7 +120,13 @@ export const GameScreen: React.FC = () => {
 
       {/* 5. Simulator Cards Layer - Highest Priority interactive content */}
       <div className="absolute inset-0 z-[100] pointer-events-none">
-        {activeCards.map((monster: any, idx: number) => (
+        {activeCards.filter(card => {
+          // If in combat mode, don't show cards for monsters that are already in the combat state
+          if (gameMode === 'combat') {
+            return !combatState.monsters.some(m => m.id === card.id || m.name === card.name);
+          }
+          return true;
+        }).map((monster: any, idx: number) => (
           <div key={`${monster.index || idx}-${idx}`} className="relative pointer-events-auto">
             <ErrorBoundary name="SimCard" fallback={<div className="w-[380px] h-[500px] bg-red-100/50 border-2 border-red-200 rounded-xl flex items-center justify-center italic text-red-500">Entity Distorted</div>}>
               <DraggableCard 
@@ -143,8 +151,8 @@ export const GameScreen: React.FC = () => {
       </div>
 
       {/* 6. TOP: Stationary Notifications */}
-      <div className="absolute top-0 inset-x-0 z-[200] px-4 pointer-events-none">
-        <div className="max-w-5xl mx-auto pointer-events-auto mt-4">
+      <div className="absolute top-0 inset-x-0 z-[200] pointer-events-none">
+        <div className="max-w-5xl mx-auto pointer-events-auto mt-2">
           <NotificationWindow />
         </div>
       </div>

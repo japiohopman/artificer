@@ -8,7 +8,7 @@ import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorl
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
-import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
+import { REGION_METADATA, REGION_PATH_REGISTRY, REGION_NAMES } from '../../data/regions';
 
 const CATEGORY_TIERS = [
   { zoom: 0, categories: ['cities', 'waters'] },
@@ -215,6 +215,7 @@ const MapInvalidator = () => {
 
 export const WorldMap: React.FC = () => {
   const partyLocation = useWorldStore(state => state.partyLocation);
+  const currentRegion = useWorldStore(state => state.currentRegion);
   const savedLocations = useWorldStore(state => state.savedLocations);
   const inspectedLocation = useWorldStore(state => state.inspectedLocation);
   const setInspectedLocation = useWorldStore(state => state.setInspectedLocation);
@@ -477,14 +478,14 @@ export const WorldMap: React.FC = () => {
             icon={L.divIcon({
               html: `
                 <div class="relative">
-                  <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
-                  <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
+                  <div class="absolute inset-0 ${currentRegion === 'water' ? 'bg-cyan-500/40' : (isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40')} blur-md rounded-full animate-pulse scale-150"></div>
+                  <div class="relative ${currentRegion === 'water' ? 'bg-cyan-600' : (isTraveling ? 'bg-dragon-gold' : 'bg-blue-600')} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
                     ${isTraveling ? `
-                      <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
+                      <div class="absolute inset-0 animate-ping ${currentRegion === 'water' ? 'bg-cyan-400' : 'bg-dragon-gold'} rounded-full opacity-75"></div>
                     ` : ''}
                   </div>
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
-                    ${isTraveling ? 'Traveling...' : 'Party'}
+                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${currentRegion === 'water' ? 'bg-cyan-900 border-cyan-400' : (isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400')} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
+                    ${isTraveling ? (currentRegion === 'water' ? 'Sailing...' : 'Traveling...') : (REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Party')}
                   </div>
                 </div>
               `,
@@ -551,10 +552,6 @@ export const WorldMap: React.FC = () => {
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
-      {/* Map Legend */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] max-w-[90%]">
-        <MapLegend currentZoom={currentZoom} />
-      </div>
       
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">
