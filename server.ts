@@ -50,7 +50,7 @@ async function startServer() {
   // Helper: Validate Path Allowlist
   const allowedPathPrefixes = [
     'public/assets/atlas/',
-    'data/character_save/'
+    'public/data/character_save/'
   ];
 
   function isPathAllowed(filePath: any): boolean {

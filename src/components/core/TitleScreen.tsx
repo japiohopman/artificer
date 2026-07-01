@@ -189,14 +189,14 @@ export const TitleScreen: React.FC = () => {
                   <div className="w-12 h-12 bg-black/40 rounded-sm border border-white/5 overflow-hidden shrink-0">
                     {char && (
                       <img 
-                        src={char.avatarUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data/character_save/images/slot${index + 1}/slot${index + 1}_avatar.webp?t=${Date.now()}`} 
+                        src={char.avatarUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_avatar.webp?t=${Date.now()}`}
                         className="w-full h-full object-cover" 
                         alt="" 
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           const slotId = char.id || `slot${index + 1}`;
                           if (!target.src.includes('raw.githubusercontent.com')) {
-                            target.src = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data/character_save/images/${slotId}/${slotId}_avatar.webp?t=${Date.now()}`;
+                            target.src = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/${slotId}/${slotId}_avatar.webp?t=${Date.now()}`;
                           } else {
                             target.src = `https://picsum.photos/seed/${slotId}/100/100`;
                           }

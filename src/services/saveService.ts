@@ -4,7 +4,7 @@ import { Character } from '../store/useCharacterStore';
 export const saveService = {
   async saveCharacter(character: Character, slot?: number): Promise<boolean> {
     const id = slot ? `slot${slot}` : (character.id || `char_${Date.now()}`);
-    const path = `data/character_save/json/${id}.json`;
+    const path = `public/data/character_save/json/${id}.json`;
     
     // Normalize and sanitize for storage if needed
     const dataToSave = {
@@ -18,7 +18,7 @@ export const saveService = {
 
   async saveCharacterImage(id: string, base64: string, type: 'portrait' | 'avatar' | 'matrix'): Promise<string | null> {
     const filename = `${id}_${type}.webp`;
-    const path = `data/character_save/images/${id}/${filename}`;
+    const path = `public/data/character_save/images/${id}/${filename}`;
     
     // Clean base64 if it includes the data:image/... prefix
     let cleanBase64 = base64;
@@ -28,18 +28,18 @@ export const saveService = {
     
     const success = await commitFile(path, cleanBase64, true);
     if (success) {
-      return `data/character_save/images/${id}/${filename}`;
+      return `public/data/character_save/images/${id}/${filename}`;
     }
     return null;
   },
 
   async deleteCharacter(id: string): Promise<boolean> {
-    const jsonPath = `data/character_save/json/${id}.json`;
+    const jsonPath = `public/data/character_save/json/${id}.json`;
     return await deleteFile(jsonPath, `Delete character: ${id}`);
   },
 
   async loadCharacters(): Promise<Character[]> {
-    const githubUrl = `https://api.github.com/repos/${REPO}/contents/data/character_save/json?ref=${BRANCH}&t=${Date.now()}`;
+    const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/data/character_save/json?ref=${BRANCH}&t=${Date.now()}`;
     const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
     
     let files = [];
