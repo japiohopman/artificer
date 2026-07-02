@@ -12,9 +12,9 @@ import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
   { zoom: 0, categories: ['cities', 'seas_oceans'] },
-  { zoom: 2.5, categories: ['mountains', 'forest', 'islands', 'wetlands', 'plains_grasslands', 'rivers', 'lakes', 'bays', 'coasts'] },
-  { zoom: 3.5, categories: ['fortresses_keeps', 'roads_trails', 'towns_settlements'] },
-  { zoom: 5, categories: ['ruins', 'poi'] }
+  { zoom: 2.0, categories: ['mountains', 'forest', 'islands', 'wetlands', 'plains_grasslands', 'rivers', 'lakes', 'bays', 'coasts'] },
+  { zoom: 3.0, categories: ['fortresses_keeps', 'roads_trails', 'towns_settlements'] },
+  { zoom: 4.5, categories: ['ruins', 'poi'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -80,7 +80,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
         </svg>
       </div>
     `,
-    className: 'custom-map-marker',
+    className: `custom-map-marker atlas-marker-${catKey}`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],
     popupAnchor: [0, -16]
@@ -344,21 +344,25 @@ export const WorldMap: React.FC = () => {
 
       // Tier 0: Major Cities & Oceans (Always visible at any zoom)
       const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
-      if (majorCities.includes(name) && (cat.includes('city') || cat.includes('cities'))) return true;
+      const isMajorCity = majorCities.includes(name);
+      if (isMajorCity) return true;
       if (cat.includes('seas_oceans') || cat.includes('sea') || cat.includes('ocean')) return true;
 
-      // Tier 1 (Nature, Geography & Waters) - Zoom 2.5+
-      if (currentZoom >= 2.5) {
+      // Tier 1 (Nature, Geography & Waters) - Zoom 2.0+
+      if (currentZoom >= 2.0) {
         if (cat.includes('river') || cat.includes('lake') || cat.includes('bay') || cat.includes('coast') || 
-            cat.includes('mountain') || cat.includes('peaks') || cat.includes('forest') || cat.includes('wood') ||
+            cat.includes('mountain') || cat.includes('peak') || cat.includes('hill') || cat.includes('forest') || cat.includes('wood') ||
             cat.includes('island') || cat.includes('swamp') || cat.includes('wetland') || 
             cat.includes('plains') || cat.includes('grassland') || cat.includes('desert') || cat.includes('arctic')) {
           return true;
         }
+
+        // Show all cities at Zoom 2.0+
+        if (cat.includes('city') || cat.includes('cities') || cat.includes('metropolis')) return true;
       }
 
-      // Tier 2 (Civilization - Keeps, Settlements, Roads) - Zoom 3.5+
-      if (currentZoom >= 3.5) {
+      // Tier 2 (Civilization - Keeps, Settlements, Roads) - Zoom 3.0+
+      if (currentZoom >= 3.0) {
         if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower') ||
             cat.includes('road') || cat.includes('trail') ||
             cat.includes('town') || cat.includes('settlement') || cat.includes('village')) {
@@ -366,19 +370,19 @@ export const WorldMap: React.FC = () => {
         }
       }
 
-      // Tier 3 (Ruins & POIs) - Zoom 5+
-      if (currentZoom >= 5) {
+      // Tier 3 (Ruins & POIs) - Zoom 4.5+
+      if (currentZoom >= 4.5) {
         if (cat.includes('ruin') || cat.includes('poi') || cat.includes('landmark') || 
             cat.includes('temple') || cat.includes('shrine') || cat.includes('graveyard') || cat.includes('dungeon') || cat.includes('cave')) {
           return true;
         }
       }
 
-      // Tier 4 (Everything else) - Zoom 6+
-      if (currentZoom >= 6) return true;
+      // Tier 4 (Everything else) - Zoom 5.5+
+      if (currentZoom >= 5.5) return true;
 
       return false;
-    }).slice(0, 150);
+    }).slice(0, 800);
   }, [savedLocations, currentZoom, currentBounds, getPosition]);
 
   // Debug count
