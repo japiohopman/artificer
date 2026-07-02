@@ -1,0 +1,189 @@
+[
+  {
+    "categoryId": "coasts",
+    "position": [
+      3333.3,
+      86.26
+    ],
+    "popup": {
+      "title": "Coast of Pearls",
+      "description": "The coastal range west of the [[Kethid]] swamp and south of the [[Conaluil Plain]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/coast_of_pearls/coast_of_pearls.json",
+        "label": "Coast of Pearls"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/coast_of_pearls/coast_of_pearls.webp"
+    },
+    "id": "coast_of_pearls"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      2665,
+      1195.5
+    ],
+    "popup": {
+      "title": "Shipwreck Neck",
+      "description": "The eastern neck of the [[Lake of Steam]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/shipwreck_neck/shipwreck_neck.json",
+        "label": "Shipwreck Neck"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/shipwreck_neck/shipwreck_neck.webp"
+    },
+    "id": "shipwreck_neck"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      2503.95,
+      1101.29
+    ],
+    "popup": {
+      "title": "Raging Reef",
+      "description": "A reef in the [[Lake of Steam]] between the cities of [[Derlusk]] and [[Yhep]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/raging_reef/raging_reef.json",
+        "label": "Raging Reef"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/raging_reef/raging_reef.webp"
+    },
+    "id": "raging_reef"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      2144.3,
+      2081.36
+    ],
+    "popup": {
+      "title": "The Neck",
+      "description": "The canal between the [[Dragonmere]] and the [[Sea of Fallen Stars]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/the_neck/the_neck.json",
+        "label": "The Neck"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/the_neck/the_neck.webp"
+    },
+    "id": "the_neck"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      1940.25,
+      2015.25
+    ],
+    "popup": {
+      "title": "Castaway Coast",
+      "description": "A section of coastline along the [[Dragonmere]] between the towns of [[Pros]] and [[Teziir]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/castaway_coast/castaway_coast.json",
+        "label": "Castaway Coast"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/castaway_coast/castaway_coast.webp"
+    },
+    "id": "castaway_coast"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      2026,
+      2036.75
+    ],
+    "popup": {
+      "title": "The Skeleton Shore",
+      "description": "The coastline along the [[Dragonmere]] that stretched from [[Teziir]] in the west all the way to [[Westgate]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/the_skeleton_shore/the_skeleton_shore.json",
+        "label": "The Skeleton Shore"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/the_skeleton_shore/the_skeleton_shore.webp"
+    },
+    "id": "the_skeleton_shore"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      1676.19,
+      465.62
+    ],
+    "popup": {
+      "title": "Tashtan Coast",
+      "description": "The coastline in [[Tashalar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/tashtan_coast/tashtan_coast.json",
+        "label": "Tashtan Coast"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/tashtan_coast/tashtan_coast.webp"
+    },
+    "id": "tashtan_coast"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      2933.5,
+      1891
+    ],
+    "popup": {
+      "title": "Demonreef",
+      "description": "A dangerous reef of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/demonreef/demonreef.json",
+        "label": "Demonreef"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/demonreef/demonreef.webp"
+    },
+    "id": "demonreef"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      3448.55,
+      2025.86
+    ],
+    "popup": {
+      "title": "Bright Shore",
+      "description": "The bay also known as the '''Bright Bay'''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/bright_shore/bright_shore.json",
+        "label": "Bright Shore"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/bright_shore/bright_shore.webp"
+    },
+    "id": "bright_shore"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      1835.64,
+      2598.97
+    ],
+    "popup": {
+      "title": "Shoal of Thirst",
+      "description": "Later filled with cold water, becoming the '''Shadow Sea'''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/shoal_of_thirst/shoal_of_thirst.json",
+        "label": "Shoal of Thirst"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/shoal_of_thirst/shoal_of_thirst.webp"
+    },
+    "id": "shoal_of_thirst"
+  },
+  {
+    "categoryId": "coasts",
+    "position": [
+      234.87,
+      1647.87
+    ],
+    "popup": {
+      "title": "Ossian Reefs",
+      "description": "A coral reef formation found off the coast of the isle of [[Moray]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/coasts/ossian_reefs/ossian_reefs.json",
+        "label": "Ossian Reefs"
+      },
+      "image": "/assets/atlas/world/toril/faerun/coasts/ossian_reefs/ossian_reefs.webp"
+    },
+    "id": "ossian_reefs"
+  }
+]

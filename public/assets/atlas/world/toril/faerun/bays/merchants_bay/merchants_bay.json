@@ -1,0 +1,14 @@
+{
+  "id": "merchants_bay",
+  "name": "merchants_bay",
+  "type": "bays",
+  "parent": "bays",
+  "title": "Merchant's Bay",
+  "description": "The bay at the mouth of [[Alandor River]].",
+  "image": "merchants_bay.webp",
+  "coordinates": {
+    "lat": 1102.25,
+    "lng": 1661
+  },
+  "categoryId": "bays"
+}

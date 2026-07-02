@@ -1,0 +1,903 @@
+[
+  {
+    "categoryId": "bays",
+    "position": [
+      3297.94,
+      1809.56
+    ],
+    "popup": {
+      "title": "Bay of Chessenta",
+      "description": "A large bay in the southern [[Sea of Fallen Stars]]. On its shores stood settkments of [[Soorenar]], [[Mordulkin]], and [[Luthcheq]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_chessenta/bay_of_chessenta.json",
+        "label": "Bay of Chessenta"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_chessenta/bay_of_chessenta.webp"
+    },
+    "id": "bay_of_chessenta"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      4386.39,
+      841.58
+    ],
+    "popup": {
+      "title": "Bay of Kings",
+      "description": "The bay on the [[Great Sea]] that offered natural protection for the city of [[Klionna]], sheltering many of their warships and fishing boats from the fierce winter storms.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_kings/bay_of_kings.json",
+        "label": "Bay of Kings"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_kings/bay_of_kings.webp"
+    },
+    "id": "bay_of_kings"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3735.05,
+      371.37
+    ],
+    "popup": {
+      "title": "Melanith Bay",
+      "description": "The bay named for Queen [[Melanith]], who ruled [[Dambrath]] during the 11{{th}} century [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/melanith_bay/melanith_bay.json",
+        "label": "Melanith Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/melanith_bay/melanith_bay.webp"
+    },
+    "id": "melanith_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3534.76,
+      178.26
+    ],
+    "popup": {
+      "title": "Bay of Dancing Dolphins",
+      "description": "A large bay in [[Dambrath]], over 300 miles long, named after the pods of [[dolphin]]s that would elaborately play in a coordinated dance every day at dusk.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_dancing_dolphins/bay_of_dancing_dolphins.json",
+        "label": "Bay of Dancing Dolphins"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_dancing_dolphins/bay_of_dancing_dolphins.webp"
+    },
+    "id": "bay_of_dancing_dolphins"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2294.56,
+      623.78
+    ],
+    "popup": {
+      "title": "Talar Bay",
+      "description": "The bay in the [[Shining Sea]] on which the city of [[Sheirtalar]] was built.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/talar_bay/talar_bay.json",
+        "label": "Talar Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/talar_bay/talar_bay.webp"
+    },
+    "id": "talar_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2703.91,
+      75.17
+    ],
+    "popup": {
+      "title": "Bay of Azuth",
+      "description": "A bay located in southeast [[Halruaa]] along the [[Great Sea]] with its calm sheltered waters easily fished by locals.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_azuth/bay_of_azuth.json",
+        "label": "Bay of Azuth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_azuth/bay_of_azuth.webp"
+    },
+    "id": "bay_of_azuth"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2287.48,
+      28
+    ],
+    "popup": {
+      "title": "Bay of Taertal",
+      "description": "A bay that offered natural shelter to its numerous settlements and abundant population of [[date palm]]s used in the construction of ''[[Halruaan skyships]]''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_taertal/bay_of_taertal.json",
+        "label": "Bay of Taertal"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_taertal/bay_of_taertal.webp"
+    },
+    "id": "bay_of_taertal"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2473.99,
+      45.38
+    ],
+    "popup": {
+      "title": "Bay of Halruaa",
+      "description": "The bay that opened up the central portion of southern [[Halruaa]] to the [[Great Sea]] and connected with the [[Halagard Channel]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_halruaa/bay_of_halruaa.json",
+        "label": "Bay of Halruaa"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_halruaa/bay_of_halruaa.webp"
+    },
+    "id": "bay_of_halruaa"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2295.84,
+      750.41
+    ],
+    "popup": {
+      "title": "Ormpur Bay",
+      "description": "The bay on which the city of [[Ormpur]] was built.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/ormpur_bay/ormpur_bay.json",
+        "label": "Ormpur Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/ormpur_bay/ormpur_bay.webp"
+    },
+    "id": "ormpur_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1953.76,
+      999.17
+    ],
+    "popup": {
+      "title": "Bezrim Bay",
+      "description": "A small inlet wedged between the [[Narrows Trail]] to the west with the island of [[Felmer's Keep]] and a small peninsula from the mainland in the east.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bezrim_bay/bezrim_bay.json",
+        "label": "Bezrim Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bezrim_bay/bezrim_bay.webp"
+    },
+    "id": "bezrim_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3114.45,
+      2556.54
+    ],
+    "popup": {
+      "title": "Traders Bay",
+      "description": "The only interior waterway in [[Impiltur]] that had a reputation as a wretched hive of scum and villainy, granting it a colloquial name '''Traitor's Bay'''. It consisted of the western body of water called [[Bluefang Water]] and [[The Old Water]] to the east.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/traders_bay/traders_bay.json",
+        "label": "Traders Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/traders_bay/traders_bay.webp"
+    },
+    "id": "traders_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3180.91,
+      2149.25
+    ],
+    "popup": {
+      "title": "Corth Cove",
+      "description": "A cove of sandy beaches with an ancient craggy rock at its center, visited by [[merfolk]] if old tales were to be believed.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/corth_cove/corth_cove.json",
+        "label": "Corth Cove"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/corth_cove/corth_cove.webp"
+    },
+    "id": "corth_cove"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1440.02,
+      1627.05
+    ],
+    "popup": {
+      "title": "Akarav's Bay",
+      "description": "The northernmost bay of the [[Lake Esmel]] in [[Amn]] famed for its mineral springs that kept its waters warm and rejuvinating.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/akaravs_bay/akaravs_bay.json",
+        "label": "Akarav's Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/akaravs_bay/akaravs_bay.webp"
+    },
+    "id": "akaravs_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1075.25,
+      1452
+    ],
+    "popup": {
+      "title": "Tarseth Bay",
+      "description": "The bay on the [[Sea of Swords]] where [[Murann]] was built.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/tarseth_bay/tarseth_bay.json",
+        "label": "Tarseth Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/tarseth_bay/tarseth_bay.webp"
+    },
+    "id": "tarseth_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1102.25,
+      1661
+    ],
+    "popup": {
+      "title": "Merchant's Bay",
+      "description": "The bay at the mouth of [[Alandor River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/merchants_bay/merchants_bay.json",
+        "label": "Merchant's Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/merchants_bay/merchants_bay.webp"
+    },
+    "id": "merchants_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1152,
+      1326.5
+    ],
+    "popup": {
+      "title": "Firedrake Bay",
+      "description": "The scenic bay located between the [[Tethyr Peninsula|Tethyr]] and the [[Starspire Peninsula]]s, the habitat of [[star lobster]]s and the eponymous [[fire drake]]s on its southern shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/firedrake_bay/firedrake_bay.json",
+        "label": "Firedrake Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/firedrake_bay/firedrake_bay.webp"
+    },
+    "id": "firedrake_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1215.51,
+      1215.16
+    ],
+    "popup": {
+      "title": "Bay of Bormul",
+      "description": "The bay on the southern side of the [[Starspire Peninsula]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_bormul/bay_of_bormul.json",
+        "label": "Bay of Bormul"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_bormul/bay_of_bormul.webp"
+    },
+    "id": "bay_of_bormul"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1022.25,
+      1932.49
+    ],
+    "popup": {
+      "title": "Borlyth Bay",
+      "description": "A small bay with rocky shores named after the monster-infested village of [[Borlyth]] on its northern shore.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/borlyth_bay/borlyth_bay.json",
+        "label": "Borlyth Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/borlyth_bay/borlyth_bay.webp"
+    },
+    "id": "borlyth_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1001.56,
+      1908.87
+    ],
+    "popup": {
+      "title": "Cloak Bay",
+      "description": "Also known as '''Raetheless'' among the [[Fair Folk]], one of the two bays just south of the [[Cloakwood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/cloak_bay/cloak_bay.json",
+        "label": "Cloak Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/cloak_bay/cloak_bay.webp"
+    },
+    "id": "cloak_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2442.75,
+      1989.75
+    ],
+    "popup": {
+      "title": "Starmantle Bay",
+      "description": "The bay that stretched from [[Starmantle]] to the east.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/starmantle_bay/starmantle_bay.json",
+        "label": "Starmantle Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/starmantle_bay/starmantle_bay.webp"
+    },
+    "id": "starmantle_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2472.5,
+      1550
+    ],
+    "popup": {
+      "title": "Churning Bay",
+      "description": "The violent gulf on the Vilhon Reach, where the city of [[Hlondeth]] was founded.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/churning_bay/churning_bay.json",
+        "label": "Churning Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/churning_bay/churning_bay.webp"
+    },
+    "id": "churning_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2392.75,
+      2789.75
+    ],
+    "popup": {
+      "title": "Bay of Phlan",
+      "description": "The bay on the [[Stojanow]] river where the city-state of [[Phlan]] stood.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_phlan/bay_of_phlan.json",
+        "label": "Bay of Phlan"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_phlan/bay_of_phlan.webp"
+    },
+    "id": "bay_of_phlan"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2553.75,
+      2322.75
+    ],
+    "popup": {
+      "title": "Yhauntan Bay",
+      "description": "The bay where the city of [[Yhaunn]] stood, between the [[Dragon Reach]] and the [[Sea of Fallen Stars]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/yhauntan_bay/yhauntan_bay.json",
+        "label": "Yhauntan Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/yhauntan_bay/yhauntan_bay.webp"
+    },
+    "id": "yhauntan_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2367.5,
+      2774.25
+    ],
+    "popup": {
+      "title": "Stormy Bay",
+      "description": "A broad inlet that formed along the northern coast of the [[Moonsea]], within which was a secluded isle that housed a small fishing village and a hidden camp of pirate slavers.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/stormy_bay/stormy_bay.json",
+        "label": "Stormy Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/stormy_bay/stormy_bay.webp"
+    },
+    "id": "stormy_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      972.27,
+      42.07
+    ],
+    "popup": {
+      "title": "Bay of Omgar",
+      "description": "A bay bordered by the [[Snout of Omgar]] peninsula.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_omgar/bay_of_omgar.json",
+        "label": "Bay of Omgar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_omgar/bay_of_omgar.webp"
+    },
+    "id": "bay_of_omgar"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      989.94,
+      98.99
+    ],
+    "popup": {
+      "title": "Samar Bay",
+      "description": "A smaller bay in the [[Bay of Omgar]], where  [[Samargol]]'s docks were built.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/samar_bay/samar_bay.json",
+        "label": "Samar Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/samar_bay/samar_bay.webp"
+    },
+    "id": "samar_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      819,
+      186.5
+    ],
+    "popup": {
+      "title": "Snapping Turtle Bay",
+      "description": "A bay of note on the [[Wild Coast]] of [[Chult]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/snapping_turtle_bay/snapping_turtle_bay.json",
+        "label": "Snapping Turtle Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/snapping_turtle_bay/snapping_turtle_bay.webp"
+    },
+    "id": "snapping_turtle_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1077,
+      49
+    ],
+    "popup": {
+      "title": "Rassatan Bay",
+      "description": "The bay at the foothills of the [[City of Gilded Pearls]], rich with golden [[pearl]]s and [[oyster]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/rassatan_bay/rassatan_bay.json",
+        "label": "Rassatan Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/rassatan_bay/rassatan_bay.webp"
+    },
+    "id": "rassatan_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2455.5,
+      2233.5
+    ],
+    "popup": {
+      "title": "Selgaunt Bay",
+      "description": "The bay of [[Selgaunt]] where the [[Sea of Fallen Stars]] touched the city, and the [[River Arkhen]] drained into the sea.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/selgaunt_bay/selgaunt_bay.json",
+        "label": "Selgaunt Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/selgaunt_bay/selgaunt_bay.webp"
+    },
+    "id": "selgaunt_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      732.91,
+      827.66
+    ],
+    "popup": {
+      "title": "Bay of Chult",
+      "description": "A bay fed by the Rivers [[Soshenstar]] and [[Tiryki]] and the location of [[Port Nyanzaru]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_chult/bay_of_chult.json",
+        "label": "Bay of Chult"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_chult/bay_of_chult.webp"
+    },
+    "id": "bay_of_chult"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      478,
+      487.5
+    ],
+    "popup": {
+      "title": "Jahaka Bay",
+      "description": "A coastal inlet fed by the [[River Tath]] tha spanned 20 miles across and twice that distance inland.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/jahaka_bay/jahaka_bay.json",
+        "label": "Jahaka Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/jahaka_bay/jahaka_bay.webp"
+    },
+    "id": "jahaka_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      956,
+      603.86
+    ],
+    "popup": {
+      "title": "Refuge Bay",
+      "description": "A large bay in [[Chult]] that began south of [[Port Castigliar]], stretch to [[Ishau]] and was bordered by the [[Dawn Warrior]] island to the east.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/refuge_bay/refuge_bay.json",
+        "label": "Refuge Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/refuge_bay/refuge_bay.webp"
+    },
+    "id": "refuge_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      863.5,
+      668
+    ],
+    "popup": {
+      "title": "Kitcher's Inlet",
+      "description": "A minor inlet on the northern edge of the greater [[Refuge Bay]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/kitchers_inlet/kitchers_inlet.json",
+        "label": "Kitcher's Inlet"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/kitchers_inlet/kitchers_inlet.webp"
+    },
+    "id": "kitchers_inlet"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      504.87,
+      298.39
+    ],
+    "popup": {
+      "title": "Shilku Bay",
+      "description": "A bay of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/shilku_bay/shilku_bay.json",
+        "label": "Shilku Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/shilku_bay/shilku_bay.webp"
+    },
+    "id": "shilku_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      2600.03,
+      2559.37
+    ],
+    "popup": {
+      "title": "Mirrormoss Bay",
+      "description": "Also known as '''Neirthoura''', the large bay at the northernmost end of the [[Dragon Reach]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/mirrormoss_bay/mirrormoss_bay.json",
+        "label": "Mirrormoss Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/mirrormoss_bay/mirrormoss_bay.webp"
+    },
+    "id": "mirrormoss_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3100.75,
+      2617.5
+    ],
+    "popup": {
+      "title": "Buzzard Beak Harbor",
+      "description": "A small bay guarded by [[Ilmwatch]]; its ownership shared between [[Damara]] and [[Impiltur]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/buzzard_beak_harbor/buzzard_beak_harbor.json",
+        "label": "Buzzard Beak Harbor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/buzzard_beak_harbor/buzzard_beak_harbor.webp"
+    },
+    "id": "buzzard_beak_harbor"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      958.5,
+      1484.75
+    ],
+    "popup": {
+      "title": "Acoval's Cove",
+      "description": "A cove famed for its rich [[pearll]] harvest.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/acovals_cove/acovals_cove.json",
+        "label": "Acoval's Cove"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/acovals_cove/acovals_cove.webp"
+    },
+    "id": "acovals_cove"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      871.25,
+      1353.25
+    ],
+    "popup": {
+      "title": "Dragon's Teeth Lagoon",
+      "description": "The peaceful body of water between the \"jaws\" of the [[Dragon's Head Peninsula]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/dragons_teeth_lagoon/dragons_teeth_lagoon.json",
+        "label": "Dragon's Teeth Lagoon"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/dragons_teeth_lagoon/dragons_teeth_lagoon.webp"
+    },
+    "id": "dragons_teeth_lagoon"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      356.25,
+      1818.5
+    ],
+    "popup": {
+      "title": "Iron Bay",
+      "description": "Sometimes called '''Iron Keep Bay''', the best natural harbor available to the [[northmen]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/iron_bay/iron_bay.json",
+        "label": "Iron Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/iron_bay/iron_bay.webp"
+    },
+    "id": "iron_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      399.5,
+      1740
+    ],
+    "popup": {
+      "title": "Codsbay",
+      "description": "A small bay on the northern coast of the island of [[Gwynneth]] within the kingdom of [[Oman]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/codsbay/codsbay.json",
+        "label": "Codsbay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/codsbay/codsbay.webp"
+    },
+    "id": "codsbay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      452.54,
+      2003.05
+    ],
+    "popup": {
+      "title": "Salmon Bay",
+      "description": "Also called the '''Firth of Helmsgate''', a prominent bay in northern [[Gnarhelm]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/salmon_bay/salmon_bay.json",
+        "label": "Salmon Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/salmon_bay/salmon_bay.webp"
+    },
+    "id": "salmon_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1094.6,
+      1215.16
+    ],
+    "popup": {
+      "title": "Sallokessir's Cove",
+      "description": "A cove of note on the western end of [[The Starspur]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/sallokessirs_cove/sallokessirs_cove.json",
+        "label": "Sallokessir's Cove"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/sallokessirs_cove/sallokessirs_cove.webp"
+    },
+    "id": "sallokessirs_cove"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      1195.01,
+      1234.96
+    ],
+    "popup": {
+      "title": "Lagoon of the Trollspears",
+      "description": "A sheltered lagoon of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/lagoon_of_the_trollspears/lagoon_of_the_trollspears.json",
+        "label": "Lagoon of the Trollspears"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/lagoon_of_the_trollspears/lagoon_of_the_trollspears.webp"
+    },
+    "id": "lagoon_of_the_trollspears"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      516.54,
+      1911.13
+    ],
+    "popup": {
+      "title": "Whitefish Bay",
+      "description": "A prominent bay located on the island of [[Alaron]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/whitefish_bay/whitefish_bay.json",
+        "label": "Whitefish Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/whitefish_bay/whitefish_bay.webp"
+    },
+    "id": "whitefish_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3116.57,
+      2008.18
+    ],
+    "popup": {
+      "title": "Bay of the Mer-she",
+      "description": "The bay location of [[Delthuntle]], named after an environmentalist [[merfolk]] ruler active in the late 13{{th}} and 14{{th}} centuries [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_the_mer_she/bay_of_the_mer_she.json",
+        "label": "Bay of the Mer-she"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_the_mer_she/bay_of_the_mer_she.webp"
+    },
+    "id": "bay_of_the_mer_she"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3178.79,
+      2016.66
+    ],
+    "popup": {
+      "title": "Netharn Bay",
+      "description": "A bay with its jagged shores called the [[Gull Cliffs]] on the [[Gull Cape]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/netharn_bay/netharn_bay.json",
+        "label": "Netharn Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/netharn_bay/netharn_bay.webp"
+    },
+    "id": "netharn_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3306.5,
+      2032
+    ],
+    "popup": {
+      "title": "Rathgarl's Bay",
+      "description": "A bay named after a retired amorous adventurer who settled on its beaches in the [[1320 DR|1320s DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/rathgarls_bay/rathgarls_bay.json",
+        "label": "Rathgarl's Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/rathgarls_bay/rathgarls_bay.webp"
+    },
+    "id": "rathgarls_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3385.98,
+      2031.87
+    ],
+    "popup": {
+      "title": "Laothlan Bay",
+      "description": "The sheltered bay on which the city of [[Laothkund]] stood.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/laothlan_bay/laothlan_bay.json",
+        "label": "Laothlan Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/laothlan_bay/laothlan_bay.webp"
+    },
+    "id": "laothlan_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      3410.5,
+      2030.5
+    ],
+    "popup": {
+      "title": "Aryll Bay",
+      "description": "The bay named after a small clearwater stream that emptied into it.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/aryll_bay/aryll_bay.json",
+        "label": "Aryll Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/aryll_bay/aryll_bay.webp"
+    },
+    "id": "aryll_bay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      277.75,
+      1855.5
+    ],
+    "popup": {
+      "title": "Bay of Norland",
+      "description": "A prominent bay that created a safe passage in the middle for ships while also helping to protect the bay from storms.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_norland/bay_of_norland.json",
+        "label": "Bay of Norland"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_norland/bay_of_norland.webp"
+    },
+    "id": "bay_of_norland"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      538.12,
+      1617.62
+    ],
+    "popup": {
+      "title": "Kingsbay",
+      "description": "A natural bay located between the islands of [[Snowdown]] and [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/kingsbay/kingsbay.json",
+        "label": "Kingsbay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/kingsbay/kingsbay.webp"
+    },
+    "id": "kingsbay"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      463.86,
+      2714.93
+    ],
+    "popup": {
+      "title": "Bay of Mists",
+      "description": "The natural harbor where the city of [[Neverwinter]] was built.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/bay_of_mists/bay_of_mists.json",
+        "label": "Bay of Mists"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/bay_of_mists/bay_of_mists.webp"
+    },
+    "id": "bay_of_mists"
+  },
+  {
+    "categoryId": "bays",
+    "position": [
+      397.39,
+      2850.7
+    ],
+    "popup": {
+      "title": "Mirar Bay",
+      "description": "Or '''Mirarmouth Bay''', with its name derived from the [[River Mirar]], that flowed into the [[Trackless Sea]] through [[Luskan]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/bays/mirar_bay/mirar_bay.json",
+        "label": "Mirar Bay"
+      },
+      "image": "/assets/atlas/world/toril/faerun/bays/mirar_bay/mirar_bay.webp"
+    },
+    "id": "mirar_bay"
+  }
+]

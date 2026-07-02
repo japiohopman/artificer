@@ -1,0 +1,14 @@
+{
+  "id": "tun_river",
+  "name": "tun_river",
+  "type": "rivers",
+  "parent": "rivers",
+  "title": "Tun River",
+  "description": "An expansive waterway surrounded by the floodplains unsuitable for farmland.",
+  "image": "tun_river.webp",
+  "coordinates": {
+    "lat": 1727,
+    "lng": 2139
+  },
+  "categoryId": "rivers"
+}

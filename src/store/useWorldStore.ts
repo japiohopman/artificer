@@ -1,9 +1,6 @@
 import { create } from 'zustand';
 import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
-import { useGameStore } from './useGameStore';
-import { useUIStore } from './useUIStore';
-import { getRegionAt } from '../lib/mapUtils';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
 
@@ -37,8 +34,13 @@ export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   points_of_interest: { icon: 'points_of_interest', color: '#4169E1' },
   ruins: { icon: 'ruins', color: '#8B4513' },
   waters: { icon: 'waters', color: '#1E90FF' },
+  rivers: { icon: 'waters', color: '#1E90FF' },
+  lakes: { icon: 'lake', color: '#1E90FF' },
   lake: { icon: 'lake', color: '#1E90FF' },
+  seas_oceans: { icon: 'sea', color: '#1E90FF' },
   sea: { icon: 'sea', color: '#1E90FF' },
+  bays: { icon: 'waters', color: '#1E90FF' },
+  coasts: { icon: 'coast', color: '#1E90FF' },
   islands: { icon: 'islands', color: '#FFD700' },
   roads: { icon: 'roads', color: '#696969' },
   trails: { icon: 'trails', color: '#696969' },
@@ -62,9 +64,7 @@ export interface WorldState {
 
   // Environmental Engine
   weather: WeatherType;
-  region: string; // The active region name (friendly)
-  currentRegion: string; // The region ID from SVG detection
-  isFastForwarding: boolean;
+  region: string;
 
   // Location State
   currentLocation: SavedLocation | null;
@@ -83,14 +83,11 @@ export interface WorldState {
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;
-  lastProcessedCoords: { x: number; y: number } | null;
 
   // Actions
   advanceTime: (minutes: number) => void;
   setWeather: (weather: WeatherType) => void;
   setRegion: (region: string) => void;
-  setFastForwarding: (isFastForwarding: boolean) => void;
-  interruptTravel: () => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
   setCurrentLocation: (location: SavedLocation) => void;
@@ -119,8 +116,6 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   weather: 'Sunny',
   region: 'Sword Coast',
-  currentRegion: 'west_faerun',
-  isFastForwarding: false,
 
   currentLocation: null,
   inspectedLocation: null,
@@ -145,26 +140,19 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   ],
 
   worldFlags: {},
-  lastProcessedCoords: null,
 
   startTravel: (destination) => set((state) => ({ 
     travelOrigin: state.partyLocation,
     destination, 
     isTraveling: true, 
-    travelProgress: 0,
-    isFastForwarding: true // Auto-enable FF when starting travel
+    travelProgress: 0 
   })),
 
   stopTravel: () => set({ 
     isTraveling: false, 
     destination: null, 
-    travelProgress: 0,
-    isFastForwarding: false
+    travelProgress: 0 
   }),
-
-  setFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
-
-  interruptTravel: () => set({ isFastForwarding: false }),
 
   advanceTime: (minutes) => set((state) => {
     let newTime = state.gameTime + minutes;
@@ -201,12 +189,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   setWeather: (weather) => set({ weather }),
   setRegion: (region) => set({ region }),
-  setPartyLocation: (partyLocation) => {
-    const x = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
-    const y = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
-    const currentRegion = getRegionAt(x, y);
-    set({ partyLocation, currentRegion });
-  },
+  setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
   setCurrentLocation: (currentLocation) => set({ currentLocation }),
   setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
@@ -245,47 +228,6 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   updateEnvironment: (minutesPassed = 1) => {
     const state = get();
     
-    // Update current region based on party location
-    const px = state.partyLocation?.coordinates?.x ?? state.partyLocation?.position?.[0] ?? 0;
-    const py = state.partyLocation?.coordinates?.y ?? state.partyLocation?.position?.[1] ?? 0;
-
-    const hasMoved = !state.lastProcessedCoords ||
-                     state.lastProcessedCoords.x !== px ||
-                     state.lastProcessedCoords.y !== py;
-
-    if (hasMoved) {
-      const newRegionId = getRegionAt(px, py);
-      set({
-        currentRegion: newRegionId,
-        lastProcessedCoords: { x: px, y: py }
-      });
-
-      // Handle Random Encounters during movement
-      if (state.isTraveling && state.isFastForwarding) {
-        // 0.5% chance per movement update to trigger an encounter
-        if (Math.random() < 0.005) {
-          set({
-            isFastForwarding: false,
-          });
-
-          const gameStore = useGameStore.getState();
-          const uiStore = useUIStore.getState();
-
-          gameStore.addLog("Travel interrupted by a potential encounter!", "warning");
-          uiStore.setChatExpanded(true);
-
-          // Sound effect trigger (placeholder for sound orchestrator)
-          // useAudioStore.getState().playSound('encounter_alert');
-
-          // If on land, maybe trigger a small chance of immediate combat
-          if (state.currentRegion !== 'water' && Math.random() < 0.3) {
-             uiStore.setGameMode('combat');
-             gameStore.addLog("Ambush! Roll for initiative!", "error");
-          }
-        }
-      }
-    }
-
     // 1% chance per game hour to change weather (approx 0.016% per minute)
     if (Math.random() < (0.01 * (minutesPassed / 60))) {
       const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
@@ -335,7 +277,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         const characterWeights = characters.reduce((acc: number, char: any) => {
           let personalWeight = 0;
           if (char.saveVersion === 2 && char.items) {
-            personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0) as number;
+            personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
           } else {
             const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
             const backpackWeight = (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
@@ -355,29 +297,6 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         // Weight Penalty: Overburdened reduces speed by 50%
         if (totalWeight > totalCapacity) {
           currentSpeedMph *= 0.5;
-        }
-
-        // Terrain Penalty
-        if (state.currentRegion === 'water') {
-           const hasBoat = (invState.partyVehicles || []).some((v: any) =>
-             v.type?.toLowerCase().includes('boat') ||
-             v.type?.toLowerCase().includes('ship') ||
-             v.name?.toLowerCase().includes('boat')
-           );
-
-           if (!hasBoat) {
-             currentSpeedMph *= 0.1; // 10% speed (swimming/wading)
-           } else {
-             currentSpeedMph *= 1.2; // Boats are faster than walking
-           }
-        } else {
-           // Regional Land Penalties
-           const region = state.currentRegion?.toLowerCase() || '';
-           if (region.includes('mountain') || region.includes('high_forest')) {
-             currentSpeedMph *= 0.5; // Difficult terrain
-           } else if (region.includes('marsh') || region.includes('swamp') || region.includes('wood')) {
-             currentSpeedMph *= 0.7; // Moderate difficulty
-           }
         }
 
         // Vehicle Speed Bonus: If we have at least one horse/vehicle, increase base speed
@@ -405,8 +324,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           isTraveling: false,
           destination: null,
           travelOrigin: null,
-          travelProgress: 0,
-          isFastForwarding: false
+          travelProgress: 0
         });
       } else {
         const currentX = x1 + (x2 - x1) * newProgress;

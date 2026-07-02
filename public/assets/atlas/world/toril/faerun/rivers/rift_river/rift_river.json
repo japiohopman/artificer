@@ -1,0 +1,14 @@
+{
+  "id": "rift_river",
+  "name": "rift_river",
+  "type": "rivers",
+  "parent": "rivers",
+  "title": "Rift River",
+  "description": "The southern river that emptied into the [[Riftlake]].",
+  "image": "rift_river.webp",
+  "coordinates": {
+    "lat": 3531.29,
+    "lng": 838.62
+  },
+  "categoryId": "rivers"
+}

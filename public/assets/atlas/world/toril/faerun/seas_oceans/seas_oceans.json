@@ -1,0 +1,682 @@
+[
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      220.5,
+      3112
+    ],
+    "popup": {
+      "title": "Sea of Moving Ice",
+      "description": "A collection of icebergs and frost-covered isles that floated in the waters of [[northwest Faer\u00fbn]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moving_ice/sea_of_moving_ice.json",
+        "label": "Sea of Moving Ice"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moving_ice/sea_of_moving_ice.webp"
+    },
+    "id": "sea_of_moving_ice"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2841.5,
+      1878.99
+    ],
+    "popup": {
+      "title": "Farshore Straits",
+      "description": "A thin marine passage between the island of [[Iligh\u00f4n]] and the [[Vilhon Reach]] mainland.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/farshore_straits/farshore_straits.json",
+        "label": "Farshore Straits"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/farshore_straits/farshore_straits.webp"
+    },
+    "id": "farshore_straits"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2899.02,
+      1902.08
+    ],
+    "popup": {
+      "title": "Strait of Silvanus",
+      "description": "The marine passage through the [[Eyes of Silvanus]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_silvanus/strait_of_silvanus.json",
+        "label": "Strait of Silvanus"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_silvanus/strait_of_silvanus.webp"
+    },
+    "id": "strait_of_silvanus"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2946.02,
+      1907.08
+    ],
+    "popup": {
+      "title": "Paddle Straits",
+      "description": "A narrow marine passage between the isle of [[Wavecrest]] and the land of the [[Vilhon Reach]].\n",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/paddle_straits/paddle_straits.json",
+        "label": "Paddle Straits"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/paddle_straits/paddle_straits.webp"
+    },
+    "id": "paddle_straits"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3742.6,
+      1701.91
+    ],
+    "popup": {
+      "title": "Alamber Sea",
+      "description": "The '''Sahuagin Sea''' \u2013 the primary trade avenue between the nations of [[Mulhorand]], [[Unther]], and [[Thay]] and neutral territory.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/alamber_sea/alamber_sea.json",
+        "label": "Alamber Sea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/alamber_sea/alamber_sea.webp"
+    },
+    "id": "alamber_sea"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      4437.94,
+      2559.78
+    ],
+    "popup": {
+      "title": "Nixie Deep",
+      "description": "A small region of the [[Lake of Mists]] offshore from [[Almorel], past the [[Breaker's Rocks]] in the eastern reaches of the [[Lake of Mists]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/nixie_deep/nixie_deep.json",
+        "label": "Nixie Deep"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/nixie_deep/nixie_deep.webp"
+    },
+    "id": "nixie_deep"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2478.4,
+      118.07
+    ],
+    "popup": {
+      "title": "Halagard Channel",
+      "description": "The waterway that connected [[Lake Halruaa]] with the [[Great Sea]].\n",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/halagard_channel/halagard_channel.json",
+        "label": "Halagard Channel"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/halagard_channel/halagard_channel.webp"
+    },
+    "id": "halagard_channel"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      1851.1,
+      473.88
+    ],
+    "popup": {
+      "title": "Dolphingulf",
+      "description": "A bay in the [[Chultan Peninsula]] between the realms of [[Lapaliiya]] and the [[Tashalar]] known for its abundant pods of [[dolphin]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/dolphingulf/dolphingulf.json",
+        "label": "Dolphingulf"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/dolphingulf/dolphingulf.webp"
+    },
+    "id": "dolphingulf"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      1850.41,
+      240.1
+    ],
+    "popup": {
+      "title": "Lapal Sea",
+      "description": "A prominent freshwater lake at the heart of the [[Chultan Peninsula]], connected with the [[Great Sea]] at the [[Lapalgulph]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/lapal_sea/lapal_sea.json",
+        "label": "Lapal Sea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/lapal_sea/lapal_sea.webp"
+    },
+    "id": "lapal_sea"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      1387,
+      636
+    ],
+    "popup": {
+      "title": "Shining Sea",
+      "description": "One of the great seas of [[Faer\u00fbn]] that stretched from the coastline of [[Chult]] in the south to the shoreline of [[Calimshan]] in the north.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/shining_sea/shining_sea.json",
+        "label": "Shining Sea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/shining_sea/shining_sea.webp"
+    },
+    "id": "shining_sea"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3440.5,
+      1967
+    ],
+    "popup": {
+      "title": "Wizards' Reach",
+      "description": "The stretch of the [[Inner Sea]] that laid between [[Chessenta]] and [[Aglarond]], and to the broad plain on the Aglarondan peninsula that stretched between the Inner Sea and the [[Yuirwood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/wizards_reach/wizards_reach.json",
+        "label": "Wizards' Reach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/wizards_reach/wizards_reach.webp"
+    },
+    "id": "wizards_reach"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3337.19,
+      2240.11
+    ],
+    "popup": {
+      "title": "Sea of Dlurg",
+      "description": "The sea between the nations of [[Thesk]] and [[Aglarond]], connected to the large [[Sea of Fallen Stars]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_dlurg/sea_of_dlurg.json",
+        "label": "Sea of Dlurg"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_dlurg/sea_of_dlurg.webp"
+    },
+    "id": "sea_of_dlurg"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3019.34,
+      2303.04
+    ],
+    "popup": {
+      "title": "Sea of Fallen Stars",
+      "description": "Or the '''Inner Sea''', the largest inland body of water in [[Faer\u00fbn]], home to many types of aquatic life, including kingdoms of [[dragon turtle]]s, [[aquatic elves]], [[merfolk]], and [[sahuagin]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_fallen_stars/sea_of_fallen_stars.json",
+        "label": "Sea of Fallen Stars"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_fallen_stars/sea_of_fallen_stars.webp"
+    },
+    "id": "sea_of_fallen_stars"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3149.5,
+      2516.5
+    ],
+    "popup": {
+      "title": "Easting Reach",
+      "description": "A calm and wide expanse of water at the northeast edge of the [[Sea of Fallen Stars]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/easting_reach/easting_reach.json",
+        "label": "Easting Reach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/easting_reach/easting_reach.webp"
+    },
+    "id": "easting_reach"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      821.65,
+      1647.55
+    ],
+    "popup": {
+      "title": "Sea of Swords",
+      "description": "A region of the [[Trackless Sea]] that separated the western coast of [[Faer\u00fbn]] from the [[Nelanther Isles]] and the [[Moonshae Isles]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_swords/sea_of_swords.json",
+        "label": "Sea of Swords"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_swords/sea_of_swords.webp"
+    },
+    "id": "sea_of_swords"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2104.5,
+      1525.5
+    ],
+    "popup": {
+      "title": "Deepwash",
+      "description": "The largest freshwater lake in the [[Vilhon Reach]], filled by tributaries from the [[Cloven Mountains]] and the [[Deepwing Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/deepwash/deepwash.json",
+        "label": "Deepwash"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepwash/deepwash.webp"
+    },
+    "id": "deepwash"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      1004.47,
+      1838.93
+    ],
+    "popup": {
+      "title": "Racewind Passage",
+      "description": "The strait between [[Thelve]], [[Askalet]] and the [[Sword Coast]] mainland that was known for its swift winds during the day and wet fog at night.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/racewind_passage/racewind_passage.json",
+        "label": "Racewind Passage"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/racewind_passage/racewind_passage.webp"
+    },
+    "id": "racewind_passage"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      986.17,
+      1855.39
+    ],
+    "popup": {
+      "title": "Cauldron of the Reach",
+      "description": "The cartographic name given to the hazardous waters between the isle of [[Thelve]] and the trio of islands known as the [[Crab Reach]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/cauldron_of_the_reach/cauldron_of_the_reach.json",
+        "label": "Cauldron of the Reach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/cauldron_of_the_reach/cauldron_of_the_reach.webp"
+    },
+    "id": "cauldron_of_the_reach"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      1472.19,
+      2242.94
+    ],
+    "popup": {
+      "title": "River Reaching",
+      "description": "The waterway that began in the [[Sunset Mountains]], flowed through the [[Skull Gorge]], entered the [[Reaching Woods]], and finally emerged to pour into the [[River Chionthar]] near [[Scornubel]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/river_reaching/river_reaching.json",
+        "label": "River Reaching"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/river_reaching/river_reaching.webp"
+    },
+    "id": "river_reaching"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      751.65,
+      2453.83
+    ],
+    "popup": {
+      "title": "Ardeep River",
+      "description": "The river that originated in the [[Ardeep Forest]] and flowed to the [[Sea of Swords]], where it forked into three branches forming a small delta.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/ardeep_river/ardeep_river.json",
+        "label": "Ardeep River"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/ardeep_river/ardeep_river.webp"
+    },
+    "id": "ardeep_river"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2693.25,
+      2068.75
+    ],
+    "popup": {
+      "title": "Jaws Strait",
+      "description": "Or simply '''The Jaws''', a small straight found within the [[Pirate Isles]], near the islands of [[Teltar]] and [[Sarr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/jaws_strait/jaws_strait.json",
+        "label": "Jaws Strait"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/jaws_strait/jaws_strait.webp"
+    },
+    "id": "jaws_strait"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2494,
+      2738
+    ],
+    "popup": {
+      "title": "Moonsea",
+      "description": "Also known as the '''Dragon Sea''', a deep [[amethyst]]-colored natural lake just north of [[Cormanthor]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/moonsea/moonsea.json",
+        "label": "Moonsea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/moonsea/moonsea.webp"
+    },
+    "id": "moonsea"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2599.5,
+      2497.75
+    ],
+    "popup": {
+      "title": "Dragon Reach",
+      "description": "The northwestern fjord of the [[Sea of Fallen Stars]] that stretched between [[the Vast]] and the [[Dalelands]]; the location of [[Selu'Maraar]] kingdom of [[aquatic elves]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/dragon_reach/dragon_reach.json",
+        "label": "Dragon Reach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/dragon_reach/dragon_reach.webp"
+    },
+    "id": "dragon_reach"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2326.75,
+      2908.75
+    ],
+    "popup": {
+      "title": "Lake Longreach",
+      "description": "A closed lake found in the [[Moonsea North]], fed from three streams that flowed down from the nearby mountains, the [[Telstang Brook]], [[Naed Creek]], and [[Razack's Tears]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/lake_longreach/lake_longreach.json",
+        "label": "Lake Longreach"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/lake_longreach/lake_longreach.webp"
+    },
+    "id": "lake_longreach"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      370.52,
+      1003.03
+    ],
+    "popup": {
+      "title": "Gulf of Lath",
+      "description": "A narrow gulf cut into [[Lantan]] for roughly 75\u202fmiles (120\u202fkilometers), running northeast into the island.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/gulf_of_lath/gulf_of_lath.json",
+        "label": "Gulf of Lath"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/gulf_of_lath/gulf_of_lath.webp"
+    },
+    "id": "gulf_of_lath"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3129,
+      2682.25
+    ],
+    "popup": {
+      "title": "Even's Gulf",
+      "description": "The gulf that crowned [[Easting Reach]]'s northernmost end.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/evens_gulf/evens_gulf.json",
+        "label": "Even's Gulf"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/evens_gulf/evens_gulf.webp"
+    },
+    "id": "evens_gulf"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      359,
+      1542.5
+    ],
+    "popup": {
+      "title": "Lotan's Abyss",
+      "description": "A body of water of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/lotans_abyss/lotans_abyss.json",
+        "label": "Lotan's Abyss"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/lotans_abyss/lotans_abyss.webp"
+    },
+    "id": "lotans_abyss"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      168,
+      895
+    ],
+    "popup": {
+      "title": "Trackless Sea",
+      "description": "The ocean also known as the '''Trackless Ocean''', or '''Taylola''' on the continent of [[Maztica]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_sea/trackless_sea.json",
+        "label": "Trackless Sea"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_sea/trackless_sea.webp"
+    },
+    "id": "trackless_sea"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      346,
+      2037
+    ],
+    "popup": {
+      "title": "Northwind Strait",
+      "description": "A channel that connected the [[Trackless Sea]] with the [[Sea of Moonshae]] in the [[Moonshae Isles]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/northwind_strait/northwind_strait.json",
+        "label": "Northwind Strait"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/northwind_strait/northwind_strait.webp"
+    },
+    "id": "northwind_strait"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      760.13,
+      1309.56
+    ],
+    "popup": {
+      "title": "Asavir's Channel",
+      "description": "The often-sailed channel between the [[Nelanther Isles]] and the [[Tethyr Peninsula]], marked by two [[Sea Towers]] on its northern and southern ends.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/asavirs_channel/asavirs_channel.json",
+        "label": "Asavir's Channel"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/asavirs_channel/asavirs_channel.webp"
+    },
+    "id": "asavirs_channel"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      406,
+      1769.25
+    ],
+    "popup": {
+      "title": "Strait of Oman",
+      "description": "A narrow channel of the [[Sea of Moonshae]] that separated the islands of [[Oman's Isle]] and [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_oman/strait_of_oman.json",
+        "label": "Strait of Oman"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_oman/strait_of_oman.webp"
+    },
+    "id": "strait_of_oman"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      547.3,
+      1931.1
+    ],
+    "popup": {
+      "title": "Deepvale",
+      "description": "A body of water of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/deepvale/deepvale.json",
+        "label": "Deepvale"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepvale/deepvale.webp"
+    },
+    "id": "deepvale"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3513.96,
+      2027.62
+    ],
+    "popup": {
+      "title": "Grayseas",
+      "description": "The mouth of [[River Lapendrar]]m known for its color due to the inky-black silt washed from upriver.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/grayseas/grayseas.json",
+        "label": "Grayseas"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/grayseas/grayseas.webp"
+    },
+    "id": "grayseas"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      313,
+      1620.75
+    ],
+    "popup": {
+      "title": "Strait of the Leviathan",
+      "description": "The strait between the islands of [[Moray]] and [[Gwynneth]], named after a legendary aquatic child of [[Chauntea]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_the_leviathan/strait_of_the_leviathan.json",
+        "label": "Strait of the Leviathan"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_the_leviathan/strait_of_the_leviathan.webp"
+    },
+    "id": "strait_of_the_leviathan"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      341.53,
+      1930.4
+    ],
+    "popup": {
+      "title": "Sea of Moonshae",
+      "description": "The sea at the center of the [[Moonshae Isles]] and part of the [[Sea of Swords]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moonshae/sea_of_moonshae.json",
+        "label": "Sea of Moonshae"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moonshae/sea_of_moonshae.webp"
+    },
+    "id": "sea_of_moonshae"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      2682.05,
+      3103.84
+    ],
+    "popup": {
+      "title": "Sea of Frozen Tears",
+      "description": "Also known as the '''Sea of Tears''' or the '''Lake of Tears''' \u2013 a lake on the border between [[Alpuk]] and [[Vaasa]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_frozen_tears/sea_of_frozen_tears.json",
+        "label": "Sea of Frozen Tears"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_frozen_tears/sea_of_frozen_tears.webp"
+    },
+    "id": "sea_of_frozen_tears"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      406.5,
+      1682.12
+    ],
+    "popup": {
+      "title": "Deepglen Stream",
+      "description": "A river that began its run in the eastern section of the [[Black Moutains]], moved southeast through the [[Deepglen]] and into the [[Shee Pool]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/deepglen_stream/deepglen_stream.json",
+        "label": "Deepglen Stream"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepglen_stream/deepglen_stream.webp"
+    },
+    "id": "deepglen_stream"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      406,
+      1896.5
+    ],
+    "popup": {
+      "title": "Prince's Sound",
+      "description": "A body of water of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/princes_sound/princes_sound.json",
+        "label": "Prince's Sound"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/princes_sound/princes_sound.webp"
+    },
+    "id": "princes_sound"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      3096.06,
+      1899.28
+    ],
+    "popup": {
+      "title": "Pythan Trench",
+      "description": "A trench of note in the [[Inner Sea]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/pythan_trench/pythan_trench.json",
+        "label": "Pythan Trench"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/pythan_trench/pythan_trench.webp"
+    },
+    "id": "pythan_trench"
+  },
+  {
+    "categoryId": "seas_oceans",
+    "position": [
+      233.75,
+      1732.75
+    ],
+    "popup": {
+      "title": "Trackless Strait",
+      "description": "A channel of the [[Trackless Sea]] that separated the islands of [[Moray]] and [[Norland]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_strait/trackless_strait.json",
+        "label": "Trackless Strait"
+      },
+      "image": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_strait/trackless_strait.webp"
+    },
+    "id": "trackless_strait"
+  }
+]

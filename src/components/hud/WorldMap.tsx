@@ -8,11 +8,11 @@ import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorl
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
-import { REGION_METADATA, REGION_PATH_REGISTRY, REGION_NAMES } from '../../data/regions';
+import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
 const CATEGORY_TIERS = [
-  { zoom: 0, categories: ['cities', 'waters'] },
-  { zoom: 2.5, categories: ['mountains', 'forest', 'islands', 'wetlands', 'plains_grasslands'] },
+  { zoom: 0, categories: ['cities', 'seas_oceans'] },
+  { zoom: 2.5, categories: ['mountains', 'forest', 'islands', 'wetlands', 'plains_grasslands', 'rivers', 'lakes', 'bays', 'coasts'] },
   { zoom: 3.5, categories: ['fortresses_keeps', 'roads_trails', 'towns_settlements'] },
   { zoom: 5, categories: ['ruins', 'poi'] }
 ];
@@ -31,7 +31,12 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   else if (cat.includes('fortress') || cat.includes('castle') || cat.includes('keep')) catKey = 'castle';
   else if (cat.includes('forest') || cat.includes('wood')) catKey = 'forest';
   else if (cat.includes('mountain') || cat.includes('peak') || cat.includes('hill')) catKey = 'mountains';
-  else if (cat.includes('lake') || cat.includes('water') || cat.includes('sea') || cat.includes('wetland') || cat.includes('river')) catKey = 'waters';
+  else if (cat.includes('river')) catKey = 'rivers';
+  else if (cat.includes('lake')) catKey = 'lakes';
+  else if (cat.includes('sea') || cat.includes('ocean') || cat.includes('deep')) catKey = 'seas_oceans';
+  else if (cat.includes('bay') || cat.includes('inlet') || cat.includes('firth')) catKey = 'bays';
+  else if (cat.includes('coast') || cat.includes('shore') || cat.includes('beach') || cat.includes('reef')) catKey = 'coasts';
+  else if (cat.includes('water') || cat.includes('wetland')) catKey = 'waters';
   else if (cat.includes('island')) catKey = 'islands';
   else if (cat.includes('temple') || cat.includes('shrine')) catKey = 'temples';
   else if (cat.includes('road') || cat.includes('trail')) catKey = 'roads';
@@ -215,7 +220,6 @@ const MapInvalidator = () => {
 
 export const WorldMap: React.FC = () => {
   const partyLocation = useWorldStore(state => state.partyLocation);
-  const currentRegion = useWorldStore(state => state.currentRegion);
   const savedLocations = useWorldStore(state => state.savedLocations);
   const inspectedLocation = useWorldStore(state => state.inspectedLocation);
   const setInspectedLocation = useWorldStore(state => state.setInspectedLocation);
@@ -338,44 +342,40 @@ export const WorldMap: React.FC = () => {
       const cat = loc.category?.toLowerCase() || '';
       const name = (loc.name || loc.popup?.title || '').toLowerCase();
 
-      // Tier 0: Major Cities (Always visible at any zoom)
+      // Tier 0: Major Cities & Oceans (Always visible at any zoom)
       const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
       if (majorCities.includes(name) && (cat.includes('city') || cat.includes('cities'))) return true;
+      if (cat.includes('seas_oceans') || cat.includes('sea') || cat.includes('ocean')) return true;
 
-      // Tier 1 (Nature/Water) - Zoom 2.5+ (Documentation suggests water icons appear deep zoom, but let's show them early-ish)
+      // Tier 1 (Nature, Geography & Waters) - Zoom 2.5+
       if (currentZoom >= 2.5) {
-        if (cat.includes('water') || cat.includes('lake') || cat.includes('sea') || cat.includes('island')) {
+        if (cat.includes('river') || cat.includes('lake') || cat.includes('bay') || cat.includes('coast') || 
+            cat.includes('mountain') || cat.includes('peaks') || cat.includes('forest') || cat.includes('wood') ||
+            cat.includes('island') || cat.includes('swamp') || cat.includes('wetland') || 
+            cat.includes('plains') || cat.includes('grassland') || cat.includes('desert') || cat.includes('arctic')) {
           return true;
         }
       }
 
-      // Tier 2 (Terrain/Geography) - Zoom 3.5+
+      // Tier 2 (Civilization - Keeps, Settlements, Roads) - Zoom 3.5+
       if (currentZoom >= 3.5) {
-        if (cat.includes('mountain') || cat.includes('peaks') || cat.includes('forest') || 
-            cat.includes('swamp') || cat.includes('wetland') || cat.includes('plains') || cat.includes('grassland')) {
-          return true;
-        }
-      }
-
-      // Tier 3 (Civilization - Cities, Keeps, Settlements, Roads) - Zoom 4.5+
-      if (currentZoom >= 4.5) {
-        if (cat.includes('city') || cat.includes('cities') || 
-            cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower') ||
+        if (cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower') ||
             cat.includes('road') || cat.includes('trail') ||
             cat.includes('town') || cat.includes('settlement') || cat.includes('village')) {
           return true;
         }
       }
 
-      // Tier 4 (Ruins & POIs) - Zoom 5.5+
-      if (currentZoom >= 5.5) {
-        if (cat.includes('ruin') || cat.includes('poi') || cat.includes('landmark') || cat.includes('temple') || cat.includes('shrine') || cat.includes('graveyard')) {
+      // Tier 3 (Ruins & POIs) - Zoom 5+
+      if (currentZoom >= 5) {
+        if (cat.includes('ruin') || cat.includes('poi') || cat.includes('landmark') || 
+            cat.includes('temple') || cat.includes('shrine') || cat.includes('graveyard') || cat.includes('dungeon') || cat.includes('cave')) {
           return true;
         }
       }
 
-      // Tier 5 (Everything else) - Zoom 6.5+
-      if (currentZoom >= 6.5) return true;
+      // Tier 4 (Everything else) - Zoom 6+
+      if (currentZoom >= 6) return true;
 
       return false;
     }).slice(0, 150);
@@ -478,14 +478,14 @@ export const WorldMap: React.FC = () => {
             icon={L.divIcon({
               html: `
                 <div class="relative">
-                  <div class="absolute inset-0 ${currentRegion === 'water' ? 'bg-cyan-500/40' : (isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40')} blur-md rounded-full animate-pulse scale-150"></div>
-                  <div class="relative ${currentRegion === 'water' ? 'bg-cyan-600' : (isTraveling ? 'bg-dragon-gold' : 'bg-blue-600')} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
+                  <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
+                  <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
                     ${isTraveling ? `
-                      <div class="absolute inset-0 animate-ping ${currentRegion === 'water' ? 'bg-cyan-400' : 'bg-dragon-gold'} rounded-full opacity-75"></div>
+                      <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
                     ` : ''}
                   </div>
-                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${currentRegion === 'water' ? 'bg-cyan-900 border-cyan-400' : (isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400')} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
-                    ${isTraveling ? (currentRegion === 'water' ? 'Sailing...' : 'Traveling...') : (REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Party')}
+                  <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
+                    ${isTraveling ? 'Traveling...' : 'Party'}
                   </div>
                 </div>
               `,
@@ -512,12 +512,14 @@ export const WorldMap: React.FC = () => {
           const position = getPosition(loc);
           if (!position) return null;
           const isInspected = inspectedLocation?.id === loc.id;
+          const cat = loc.category?.toLowerCase() || '';
+          const isOcean = cat.includes('seas_oceans') || cat.includes('sea') || cat.includes('ocean');
 
           return (
             <Marker 
               key={loc.id}
               position={position}
-              icon={createCustomIcon(loc.category, isInspected)}
+              icon={isOcean ? L.divIcon({ className: 'bg-transparent border-none', html: '' }) : createCustomIcon(loc.category, isInspected)}
               eventHandlers={{
                 click: () => {
                   setInspectedLocation(loc);
@@ -526,12 +528,15 @@ export const WorldMap: React.FC = () => {
               }}
             >
                <Tooltip 
-                 direction="top" 
-                 offset={[0, -15]} 
+                 direction="center" 
+                 offset={[0, 0]} 
                  opacity={1} 
-                 className="map-tooltip"
+                 permanent={isOcean}
+                 className={isOcean ? "bg-transparent border-none shadow-none !bg-none" : "map-tooltip"}
                >
-                 <span className="font-header font-bold text-[10px] uppercase tracking-tight">{loc.name}</span>
+                 <span className={`font-header font-bold uppercase tracking-[0.2em] ${isOcean ? 'text-blue-900/60 text-lg italic mix-blend-multiply pointer-events-none' : 'text-[10px] tracking-tight'}`}>
+                   {loc.name}
+                 </span>
                </Tooltip>
                <Popup className="fantasy-popup">
                   <div className="font-header font-bold text-dragon-red border-b border-dragon-gold/30 pb-1 mb-1">{loc.name}</div>
@@ -552,6 +557,10 @@ export const WorldMap: React.FC = () => {
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
+      {/* Map Legend */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[1000] max-w-[90%]">
+        <MapLegend currentZoom={currentZoom} />
+      </div>
       
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2">

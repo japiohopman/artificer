@@ -1,0 +1,2739 @@
+[
+  {
+    "categoryId": "lakes",
+    "position": [
+      3047,
+      1618
+    ],
+    "popup": {
+      "title": "Akanamere",
+      "description": "The large freshwater lake, located in the [[Akanal]] peninsula, between the [[Akanapeaks]] to the north and the [[Maerthwatch]] to the south. The [[Blade Kingdoms]] sat on the lake's north-western shores, and a kingdom of friendly [[nixie]]s inhabited its depts.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/akanamere/akanamere.json",
+        "label": "Akanamere"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/akanamere/akanamere.webp"
+    },
+    "id": "akanamere"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2545.92,
+      1348.09
+    ],
+    "popup": {
+      "title": "Nagawater",
+      "description": "The large, freshwater lake located in [[Sespech]] and named after a large population of [[water naga]]s that lived in the southern part of the lake.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/nagawater/nagawater.json",
+        "label": "Nagawater"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/nagawater/nagawater.webp"
+    },
+    "id": "nagawater"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3503.6,
+      1626.4
+    ],
+    "popup": {
+      "title": "Methmere",
+      "description": "Also known as '''Lake Meth''' \u2013 a lake in the frontier between the nations of [[Chessenta]] and ]]Unther]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/methmere/methmere.json",
+        "label": "Methmere"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/methmere/methmere.webp"
+    },
+    "id": "methmere"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4004.5,
+      1250.07
+    ],
+    "popup": {
+      "title": "Lake of Salt",
+      "description": "Or '''Azulduth''' \u2013 a shallow body of water, fed by the [[River of Swords]]. It was surrounded by partially-looted [[Sauroid]] ruins, many of which extended deep under the earth and were primarily inhabited by [[yuan-ti]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_salt/lake_of_salt.json",
+        "label": "Lake of Salt"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_salt/lake_of_salt.webp"
+    },
+    "id": "lake_of_salt"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3461.28,
+      905.8
+    ],
+    "popup": {
+      "title": "Riftlake",
+      "description": "The large body of water in the middle of the [[Great Rift]], fed from the north by the [[River Shaar]] and from the south by the [[Rift River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/riftlake/riftlake.json",
+        "label": "Riftlake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/riftlake/riftlake.webp"
+    },
+    "id": "riftlake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4156.32,
+      1062.49
+    ],
+    "popup": {
+      "title": "Bloodlake",
+      "description": "A small lake south of the [[Sharawood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/bloodlake/bloodlake.json",
+        "label": "Bloodlake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/bloodlake/bloodlake.webp"
+    },
+    "id": "bloodlake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4299.38,
+      2539.57
+    ],
+    "popup": {
+      "title": "Lake of Mists",
+      "description": "The second largest freshwater lake in the [[Endless Waste]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_mists/lake_of_mists.json",
+        "label": "Lake of Mists"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_mists/lake_of_mists.webp"
+    },
+    "id": "lake_of_mists"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4669.53,
+      1073.46
+    ],
+    "popup": {
+      "title": "Golden Water",
+      "description": "A bay located in the center of the [[Shining Lands]] and connected to the [[Great Sea]] through a narrow channel on its southern side.  The waters of this bay possessed a high mineral content, literally making them shine in the sunlight.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/golden_water/golden_water.json",
+        "label": "Golden Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/golden_water/golden_water.webp"
+    },
+    "id": "golden_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4736.69,
+      1028.96
+    ],
+    "popup": {
+      "title": "The Throat",
+      "description": "A small bay in northern [[Var]], a natural shelter for several notable towns, including Var's capital city [[Pyratar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_throat/the_throat.json",
+        "label": "The Throat"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_throat/the_throat.webp"
+    },
+    "id": "the_throat"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4087.39,
+      681.08
+    ],
+    "popup": {
+      "title": "Luirenstrand",
+      "description": "Better known as the '''Hambone Bay''', a bay and coastline in the [[Great Sea]] that formed one of the borders of [[Luiren]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/luirenstrand/luirenstrand.json",
+        "label": "Luirenstrand"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/luirenstrand/luirenstrand.webp"
+    },
+    "id": "luirenstrand"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3563.19,
+      485.9
+    ],
+    "popup": {
+      "title": "Beastburn Lake",
+      "description": "A small body of water found in northern [[Dambrath]], where the [[River Ammath]] began its flow.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/beastburn_lake/beastburn_lake.json",
+        "label": "Beastburn Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/beastburn_lake/beastburn_lake.webp"
+    },
+    "id": "beastburn_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3164.96,
+      338.11
+    ],
+    "popup": {
+      "title": "Dolphin's Climb",
+      "description": "The river that flowed from the southwestern range of the [[Gnollwatch Mountains]], past the city of [[Herath]], and into the [[Bay of Dancing Dolphins]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/dolphins_climb/dolphins_climb.json",
+        "label": "Dolphin's Climb"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/dolphins_climb/dolphins_climb.webp"
+    },
+    "id": "dolphins_climb"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2736.48,
+      775.81
+    ],
+    "popup": {
+      "title": "Lake Lhespen",
+      "description": "A medium-sized lake found amid the sprawling plains of the [[Shaar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_lhespen/lake_lhespen.json",
+        "label": "Lake Lhespen"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_lhespen/lake_lhespen.webp"
+    },
+    "id": "lake_lhespen"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2761.96,
+      234.58
+    ],
+    "popup": {
+      "title": "Lake Maeru",
+      "description": "A small body of water found in eastern [[Halruaa]] at the foot of the [[Muaraghal Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_maeru/lake_maeru.json",
+        "label": "Lake Maeru"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_maeru/lake_maeru.webp"
+    },
+    "id": "lake_maeru"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2515.99,
+      173.38
+    ],
+    "popup": {
+      "title": "Lake Halruaa",
+      "description": "The lake that dominated the center of the [[Halruaa]]n landscape, filled by the Rivers Halar, Maeru, and Aluar.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_halruaa/lake_halruaa.json",
+        "label": "Lake Halruaa"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_halruaa/lake_halruaa.webp"
+    },
+    "id": "lake_halruaa"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2515.53,
+      394.91
+    ],
+    "popup": {
+      "title": "High Aluar",
+      "description": "A waterway that originated in the [[Lhairghal Mountains]], flowing southeast where it merged with the [[River Aluar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/high_aluar/high_aluar.json",
+        "label": "High Aluar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/high_aluar/high_aluar.webp"
+    },
+    "id": "high_aluar"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2078.18,
+      903.33
+    ],
+    "popup": {
+      "title": "Talagath's Gauntlet",
+      "description": "Also known as the '''Straits of Suldophur''' or the '''Strait of Storms''' \u2013 a small strait that connected the [[Lake of Steam]] and the [[Shining Sea]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/talagaths_gauntlet/talagaths_gauntlet.json",
+        "label": "Talagath's Gauntlet"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/talagaths_gauntlet/talagaths_gauntlet.webp"
+    },
+    "id": "talagaths_gauntlet"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2240.42,
+      813.09
+    ],
+    "popup": {
+      "title": "Scelptarmouth",
+      "description": "The mouth of the [[River Scelptar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/scelptarmouth/scelptarmouth.json",
+        "label": "Scelptarmouth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/scelptarmouth/scelptarmouth.webp"
+    },
+    "id": "scelptarmouth"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1799.73,
+      82.32
+    ],
+    "popup": {
+      "title": "Lapalgulph",
+      "description": "A natural bay connected to the [[Lapal Sea]] via the [[River Lapar]], guarded by a monstrous [[dragon turtle]] paid by the [[yuan-ti]] of [[House Jennestas]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lapalgulph/lapalgulph.json",
+        "label": "Lapalgulph"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lapalgulph/lapalgulph.webp"
+    },
+    "id": "lapalgulph"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1373.1,
+      64.53
+    ],
+    "popup": {
+      "title": "Thingulph",
+      "description": "A part of the [[Guthland]], the wide \"mouth\" of the large bay that dominated the center of [[Thindol]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/thingulph/thingulph.json",
+        "label": "Thingulph"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/thingulph/thingulph.webp"
+    },
+    "id": "thingulph"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2252.13,
+      1269.25
+    ],
+    "popup": {
+      "title": "Thornwash",
+      "description": "A 150\u202fmi (240\u202fkm)-long waterway that flowed down from the [[Cloven Mountains]] and emptied into the [[Lake of Steam]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/thornwash/thornwash.json",
+        "label": "Thornwash"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/thornwash/thornwash.webp"
+    },
+    "id": "thornwash"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2120.52,
+      1049.77
+    ],
+    "popup": {
+      "title": "Lake of Steam",
+      "description": "Also known as the '''Arnaden''', an inland sea connected to the [[Shining Sea]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_steam/lake_of_steam.json",
+        "label": "Lake of Steam"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_steam/lake_of_steam.webp"
+    },
+    "id": "lake_of_steam"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1059.5,
+      1270
+    ],
+    "popup": {
+      "title": "Gullet",
+      "description": "The perilous straight that separated [[The Tusks]], full of obtruding sea rocks \u2013 one of the most dangerous areas of the [[Sword Coast]] for marine traversal.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/gullet/gullet.json",
+        "label": "Gullet"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/gullet/gullet.webp"
+    },
+    "id": "gullet"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2009.5,
+      733.5
+    ],
+    "popup": {
+      "title": "Aumrauth",
+      "description": "A realm of [[aquatic elves]] located in the [[Shining Sea]] and stretching from the island of [[Tharsult]] to the mouth of the [[River Scelptar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/aumrauth/aumrauth.json",
+        "label": "Aumrauth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/aumrauth/aumrauth.webp"
+    },
+    "id": "aumrauth"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3919.13,
+      2362.44
+    ],
+    "popup": {
+      "title": "Lake Thaylambar",
+      "description": "The largest freshwater lake in all of [[Thay]], cold as a slaver's heart, and inhabited by huge herds of [[dragon turtle]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_thaylambar/lake_thaylambar.json",
+        "label": "Lake Thaylambar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_thaylambar/lake_thaylambar.webp"
+    },
+    "id": "lake_thaylambar"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3606.95,
+      2276.17
+    ],
+    "popup": {
+      "title": "Lake Umber",
+      "description": "A freshwater lake at the base of the [[First Escarpment]] between [[Thay]] and [[Aglarond]], fed by glaciers of [[Thaymount]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_umber/lake_umber.json",
+        "label": "Lake Umber"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_umber/lake_umber.webp"
+    },
+    "id": "lake_umber"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4642.15,
+      2945.8
+    ],
+    "popup": {
+      "title": "Yal Tengri",
+      "description": "'''The Great Ice Sea''', was an arm of the ocean that covered the north pole of [[Toril]] with all sorts of cold-loving creatures found in its waters.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/yal_tengri/yal_tengri.json",
+        "label": "Yal Tengri"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/yal_tengri/yal_tengri.webp"
+    },
+    "id": "yal_tengri"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3788.5,
+      2623
+    ],
+    "popup": {
+      "title": "Lake Mulsantir",
+      "description": "A lake connected to [[Lake Ashane]] via the wide [[River Mulsantir]] with its waters patrolled by [[Rashemi]] ''[[witchboats]]''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_mulsantir/lake_mulsantir.json",
+        "label": "Lake Mulsantir"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_mulsantir/lake_mulsantir.webp"
+    },
+    "id": "lake_mulsantir"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1553.75,
+      1730.25
+    ],
+    "popup": {
+      "title": "Vudlur",
+      "description": "One of the watercourses of the [[Esmelflow]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/vudlur/vudlur.json",
+        "label": "Vudlur"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/vudlur/vudlur.webp"
+    },
+    "id": "vudlur"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1480.68,
+      1693.52
+    ],
+    "popup": {
+      "title": "Splendarrllur",
+      "description": "Also known as the '''Shining River''' among the [[shield dwarves]]) was one of the three greatest rivers of [[Amn]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/splendarrllur/splendarrllur.json",
+        "label": "Splendarrllur"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/splendarrllur/splendarrllur.webp"
+    },
+    "id": "splendarrllur"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1438.25,
+      1594.52
+    ],
+    "popup": {
+      "title": "Lake Esmel",
+      "description": "A famous lake in [[Amn]], the largest freshwater lake in the [[Lands of Intrigue]] with the \"Monster of the Lake\" residing in its depths.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_esmel/lake_esmel.json",
+        "label": "Lake Esmel"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_esmel/lake_esmel.webp"
+    },
+    "id": "lake_esmel"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1498,
+      1596.29
+    ],
+    "popup": {
+      "title": "Shimmalshyr",
+      "description": "A river that fed [[Lake Esmel]]'s southeast.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/shimmalshyr/shimmalshyr.json",
+        "label": "Shimmalshyr"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/shimmalshyr/shimmalshyr.webp"
+    },
+    "id": "shimmalshyr"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1473.25,
+      1547.85
+    ],
+    "popup": {
+      "title": "Hyrzashyr",
+      "description": "A short river in [[Amn]] that fed [[Lake Esmel]] from the south, named during the existence of  the [[halfling]] kingdom of [[Meiritin]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/hyrzashyr/hyrzashyr.json",
+        "label": "Hyrzashyr"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/hyrzashyr/hyrzashyr.webp"
+    },
+    "id": "hyrzashyr"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1304.5,
+      1708.25
+    ],
+    "popup": {
+      "title": "Lake Weng",
+      "description": "A freshwater lake originally called the '''Lake of Amin'''. It was surrounded by small villages and fed by two rivers, eventually emptying into the [[Alandor River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_weng/lake_weng.json",
+        "label": "Lake Weng"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_weng/lake_weng.webp"
+    },
+    "id": "lake_weng"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1346.33,
+      1692.46
+    ],
+    "popup": {
+      "title": "Wengwater",
+      "description": "A dangerously fast tributary of [[Lake Weng]] filled with deadly rapids.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/wengwater/wengwater.json",
+        "label": "Wengwater"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/wengwater/wengwater.webp"
+    },
+    "id": "wengwater"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      901,
+      1264
+    ],
+    "popup": {
+      "title": "The Race",
+      "description": "A tract of water located off the southern edge of the [[Tethyr Peninsula]] in [[West Faer\u00fbn]] with merchant ships that sailed it being under the protection of the [[Calimshan]] navy.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_race/the_race.json",
+        "label": "The Race"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_race/the_race.webp"
+    },
+    "id": "the_race"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1480.32,
+      1330.06
+    ],
+    "popup": {
+      "title": "Nebulae Pool",
+      "description": "Or the '''Pool of Stars'' \u2013 a peaceful forest lake on the northwestern end of the [[Swanmay's Glade]]. A lone [[swanmay]] once lived on the lake but was belied gone or dead by the late 14{{th}} century [[DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/nebulae_pool/nebulae_pool.json",
+        "label": "Nebulae Pool"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/nebulae_pool/nebulae_pool.webp"
+    },
+    "id": "nebulae_pool"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1537.25,
+      1305.31
+    ],
+    "popup": {
+      "title": "Calathalureenteir",
+      "description": "The forest river that crossed [[Swanmay's Glade]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/calathalureenteir/calathalureenteir.json",
+        "label": "Calathalureenteir"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/calathalureenteir/calathalureenteir.webp"
+    },
+    "id": "calathalureenteir"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1909,
+      1664
+    ],
+    "popup": {
+      "title": "Impresk Lake",
+      "description": "An ice-cold lake in [[Erlkazar]] fed by a large number of rivers and streams.<br/><br/>'''Note: This map shows the incorrect geography of the region. Please refer to 2{{nd}} edition maps.'''",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/impresk_lake/impresk_lake.json",
+        "label": "Impresk Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/impresk_lake/impresk_lake.webp"
+    },
+    "id": "impresk_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1694.5,
+      1731
+    ],
+    "popup": {
+      "title": "Khalleshyr",
+      "description": "One of the rivers of the [[Esmelflow]] and a major tributary of the [[Amstel River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/khalleshyr/khalleshyr.json",
+        "label": "Khalleshyr"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/khalleshyr/khalleshyr.webp"
+    },
+    "id": "khalleshyr"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1941,
+      1926.25
+    ],
+    "popup": {
+      "title": "Lake of Snows",
+      "description": "A placid lake situated in the eastern reaches of the [[Giant's Run Mountains]], overlooked by [[Mount Dodild]] and the [[Breakback Pass]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_snows/lake_of_snows.json",
+        "label": "Lake of Snows"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_snows/lake_of_snows.webp"
+    },
+    "id": "lake_of_snows"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1964.34,
+      1609.02
+    ],
+    "popup": {
+      "title": "Shalane Lake",
+      "description": "The northwestern narrow part of the [[Deepwash]] connected to the [[Impresk Lake]] via the [[Shalane River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/shalane_lake/shalane_lake.json",
+        "label": "Shalane Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/shalane_lake/shalane_lake.webp"
+    },
+    "id": "shalane_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2204.75,
+      2380.12
+    ],
+    "popup": {
+      "title": "Lake Sember",
+      "description": "A medium-sized freshwater lake and the location of [[Hyaline]], an ancient [[sea elf]] city and the [[Crystalline Towers]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_sember/lake_sember.json",
+        "label": "Lake Sember"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_sember/lake_sember.webp"
+    },
+    "id": "lake_sember"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1984.25,
+      2234.5
+    ],
+    "popup": {
+      "title": "Wyvernwater",
+      "description": "The star-shaped freshwater lake at the center of [[Cormyr]], connected to the [[Dragonmere]] via the [[Wyvernflow]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/wyvernwater/wyvernwater.json",
+        "label": "Wyvernwater"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/wyvernwater/wyvernwater.webp"
+    },
+    "id": "wyvernwater"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2151,
+      2348.5
+    ],
+    "popup": {
+      "title": "Lake Eredruie",
+      "description": "An exceptionally beautiful pool fed by the [[Glaemril]] river, protected by the [[moon elves]] of [[Bristar]].{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_eredruie/lake_eredruie.json",
+        "label": "Lake Eredruie"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_eredruie/lake_eredruie.webp"
+    },
+    "id": "lake_eredruie"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1959.39,
+      2066.87
+    ],
+    "popup": {
+      "title": "Dragonmere",
+      "description": "Or the '''Lake of Dragons''', a large saltwater lake connected to the [[Sea of Fallen Stars]] with its shores belonging to [[Cormyr]], [[Sembia]], and the [[Dragon Coast]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/dragonmere/dragonmere.json",
+        "label": "Dragonmere"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/dragonmere/dragonmere.webp"
+    },
+    "id": "dragonmere"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1883.55,
+      2288.72
+    ],
+    "popup": {
+      "title": "The Warm Waterfall",
+      "description": "The waterfall that birthed [[Starwater]]s western tributary.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_warm_waterfall/the_warm_waterfall.json",
+        "label": "The Warm Waterfall"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_warm_waterfall/the_warm_waterfall.webp"
+    },
+    "id": "the_warm_waterfall"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1829.81,
+      2196.98
+    ],
+    "popup": {
+      "title": "Plungepool",
+      "description": "A pond of note in the [[King's Forest]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/plungepool/plungepool.json",
+        "label": "Plungepool"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/plungepool/plungepool.webp"
+    },
+    "id": "plungepool"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2142.25,
+      2005.5
+    ],
+    "popup": {
+      "title": "Redwater Lake",
+      "description": "The lake that was fed by the [[Lake of the Snake]] by means of the [[River Reddan]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/redwater_lake/redwater_lake.json",
+        "label": "Redwater Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/redwater_lake/redwater_lake.webp"
+    },
+    "id": "redwater_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2010.25,
+      1953.5
+    ],
+    "popup": {
+      "title": "Lake of the Snake",
+      "description": "A small lake on the [[Dragon Coast]], south of the [[Horse Prairie]] and east of the [[Giant's Run]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_snake/lake_of_the_snake.json",
+        "label": "Lake of the Snake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_snake/lake_of_the_snake.webp"
+    },
+    "id": "lake_of_the_snake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2096.92,
+      1916.25
+    ],
+    "popup": {
+      "title": "Lake of the Long Arm",
+      "description": "A vast lake found in the [[Dragon Coast]] region with the [[Shou]] nation of [[Nathlan]] located on its souther shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_long_arm/lake_of_the_long_arm.json",
+        "label": "Lake of the Long Arm"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_long_arm/lake_of_the_long_arm.webp"
+    },
+    "id": "lake_of_the_long_arm"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1052,
+      2119.25
+    ],
+    "popup": {
+      "title": "Winding Water",
+      "description": "The river that flowed from several tributaries as far away as the [[Marsh of Chelimber]], and eventually flowed into the [[Sea of Swords]] south of the [[Troll Hills]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/winding_water/winding_water.json",
+        "label": "Winding Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/winding_water/winding_water.webp"
+    },
+    "id": "winding_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1642.25,
+      2295.97
+    ],
+    "popup": {
+      "title": "Misty Stair",
+      "description": "Waterfalls that birthed [[River Reaching]] in the [[Sunset Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/misty_stair/misty_stair.json",
+        "label": "Misty Stair"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/misty_stair/misty_stair.webp"
+    },
+    "id": "misty_stair"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1195.25,
+      2500.5
+    ],
+    "popup": {
+      "title": "Highstar Lake",
+      "description": "A legendary body of water located in the [[Delimbiyr Vale]], known for many mystifying appearances and mysterious disappearances.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/highstar_lake/highstar_lake.json",
+        "label": "Highstar Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/highstar_lake/highstar_lake.webp"
+    },
+    "id": "highstar_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1313.25,
+      2640
+    ],
+    "popup": {
+      "title": "Whitewater",
+      "description": "One of the three tributaries of the [[Loagrann River]] that cascaded from the northern part of the [[Greypeak Mountains]].{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/whitewater/whitewater.json",
+        "label": "Whitewater"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/whitewater/whitewater.webp"
+    },
+    "id": "whitewater"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2278.12,
+      1920.32
+    ],
+    "popup": {
+      "title": "Lightless Lake",
+      "description": "Also known as the '''Moonmere''', the lake that hid the [[Fane of Shadows]] dedicated to [[Shar]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lightless_lake/lightless_lake.json",
+        "label": "Lightless Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lightless_lake/lightless_lake.webp"
+    },
+    "id": "lightless_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1957.12,
+      2254.62
+    ],
+    "popup": {
+      "title": "Arabel Springs",
+      "description": "The source of the [[River Arabel]], located in the hills just southeast of [[Arabel]] city.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/arabel_springs/arabel_springs.json",
+        "label": "Arabel Springs"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/arabel_springs/arabel_springs.webp"
+    },
+    "id": "arabel_springs"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2677.1,
+      1823.27
+    ],
+    "popup": {
+      "title": "Lake of Drifting Stars",
+      "description": "A freshwater lake and a popular rendezvous spot for lovers who sought a romantic encounter during the [[Feast of the Moon]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_drifting_stars/lake_of_drifting_stars.json",
+        "label": "Lake of Drifting Stars"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_drifting_stars/lake_of_drifting_stars.webp"
+    },
+    "id": "lake_of_drifting_stars"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2657.75,
+      1878.25
+    ],
+    "popup": {
+      "title": "Evenstar Lake",
+      "description": "The lake fed by the [[Alaoreum River]] in the [[Evenstar Vale]], surrounded by dense forests.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/evenstar_lake/evenstar_lake.json",
+        "label": "Evenstar Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/evenstar_lake/evenstar_lake.webp"
+    },
+    "id": "evenstar_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2361.03,
+      2824.36
+    ],
+    "popup": {
+      "title": "Stojanow",
+      "description": "Also known as the '''Barren River''', used to transport ore and minerals from the [[Dragonspines]] to the cities of [[Phlan]] and from there \u2013 to [[Melvaunt]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/stojanow/stojanow.json",
+        "label": "Stojanow"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/stojanow/stojanow.webp"
+    },
+    "id": "stojanow"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      728.49,
+      2440.4
+    ],
+    "popup": {
+      "title": "Selpir",
+      "description": "A slow and quiet creek that forked from the [[Ardeep River]] and the [[South Ardeep River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/selpir/selpir.json",
+        "label": "Selpir"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/selpir/selpir.webp"
+    },
+    "id": "selpir"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2051.25,
+      2500.62
+    ],
+    "popup": {
+      "title": "Lake Melishar",
+      "description": "A clear, cool lake in the middle of the [[Spiderhaunt Wood]] with the [[Nature's Inn]] perched on its shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_melishar/lake_melishar.json",
+        "label": "Lake Melishar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_melishar/lake_melishar.webp"
+    },
+    "id": "lake_melishar"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2497.5,
+      2809.51
+    ],
+    "popup": {
+      "title": "Lake Thentar",
+      "description": "A small lake from where the [[River Thent]] originated.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_thentar/lake_thentar.json",
+        "label": "Lake Thentar"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_thentar/lake_thentar.webp"
+    },
+    "id": "lake_thentar"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2720.94,
+      2116.54
+    ],
+    "popup": {
+      "title": "The Bowl",
+      "description": "An open area of the deep sea found in the center of the [[Pirate Isles]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_bowl/the_bowl.json",
+        "label": "The Bowl"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_bowl/the_bowl.webp"
+    },
+    "id": "the_bowl"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2738.97,
+      2145.36
+    ],
+    "popup": {
+      "title": "The Windrace",
+      "description": "A prominent strait that stretched roughly from the [[Bowl]] in the south to [[Alphar Isle]] in the north.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_windrace/the_windrace.json",
+        "label": "The Windrace"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_windrace/the_windrace.webp"
+    },
+    "id": "the_windrace"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2770.37,
+      2168.5
+    ],
+    "popup": {
+      "title": "The Spoon",
+      "description": "A small strait found within the [[Pirate Isles]] situated in the east and northeast region; it ran along the southern edge of the [[Alphar Isle]] and the eastern shore of [[Ilthan]] and bordered [[the Bowl]] to the south. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_spoon/the_spoon.json",
+        "label": "The Spoon"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_spoon/the_spoon.webp"
+    },
+    "id": "the_spoon"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2554.5,
+      2642.25
+    ],
+    "popup": {
+      "title": "Duathamper",
+      "description": "Also known as the '''Elvenflow''', one of two major rivers running through [[Cormanthor]], deep and wide waterway spanned by three black [[granite]] bridges. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/duathamper/duathamper.json",
+        "label": "Duathamper"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/duathamper/duathamper.webp"
+    },
+    "id": "duathamper"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2319,
+      2400.5
+    ],
+    "popup": {
+      "title": "Pool of Yeven",
+      "description": "A small lake found within the [[Yevenwood]] in [[Battledale]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/pool_of_yeven/pool_of_yeven.json",
+        "label": "Pool of Yeven"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/pool_of_yeven/pool_of_yeven.webp"
+    },
+    "id": "pool_of_yeven"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2254,
+      2350
+    ],
+    "popup": {
+      "title": "Glaemril",
+      "description": "Also known as the '''Deeping Stream''', a small river that started in the southern spur of the woods of [[Cormanthor]] at [[Lake Eredruie]] and flowed into the [[River Ashaba]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/glaemril/glaemril.json",
+        "label": "Glaemril"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/glaemril/glaemril.webp"
+    },
+    "id": "glaemril"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1717.91,
+      2339.81
+    ],
+    "popup": {
+      "title": "The Tunwash",
+      "description": "A minor waterway that drained into the [[Marsh of Tun]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_tunwash/the_tunwash.json",
+        "label": "The Tunwash"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_tunwash/the_tunwash.webp"
+    },
+    "id": "the_tunwash"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1853.25,
+      2347
+    ],
+    "popup": {
+      "title": "Teerac",
+      "description": "A body of water of note in the [[Stonelands]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/teerac/teerac.json",
+        "label": "Teerac"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/teerac/teerac.webp"
+    },
+    "id": "teerac"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2008.53,
+      2581.82
+    ],
+    "popup": {
+      "title": "Lake Miir",
+      "description": "The lake where cities of [[Helvara]] stood with its waters inhabited by [[blue-scaled brench]] and [[spicy crabfin]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_miir/lake_miir.json",
+        "label": "Lake Miir"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_miir/lake_miir.webp"
+    },
+    "id": "lake_miir"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1302.13,
+      2890.29
+    ],
+    "popup": {
+      "title": "The Talons",
+      "description": "The forked tributaries of the [[River Delimbiyr]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_talons/the_talons.json",
+        "label": "The Talons"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_talons/the_talons.webp"
+    },
+    "id": "the_talons"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1043.25,
+      2635.25
+    ],
+    "popup": {
+      "title": "The Sisters",
+      "description": "A set of waterfalls running over cliffs south of the [[Star Mounts]]; seeing the [[moon]] rise over the Sisters and glimpse a [[unicorn]] atop a cliff was considered a blessing of good fortune from the goddess [[Mielikki]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_sisters/the_sisters.json",
+        "label": "The Sisters"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_sisters/the_sisters.webp"
+    },
+    "id": "the_sisters"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1023.53,
+      2582.35
+    ],
+    "popup": {
+      "title": "North Fork",
+      "description": "A shorter tributary of the [[Unicorn Run]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/north_fork/north_fork.json",
+        "label": "North Fork"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/north_fork/north_fork.webp"
+    },
+    "id": "north_fork"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1311.32,
+      2917.87
+    ],
+    "popup": {
+      "title": "Starsilver",
+      "description": "A tributary of the river [[Delimbiyr]] and one of [[The Talons]], on which [[Myth Glaurach]], the City of Scrolls once stood.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/starsilver/starsilver.json",
+        "label": "Starsilver"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/starsilver/starsilver.webp"
+    },
+    "id": "starsilver"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2010.65,
+      358.5
+    ],
+    "popup": {
+      "title": "Lake Lemas",
+      "description": "A jungle lake connected to the [[Lapal Sea]] via the [[River Lemas]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_lemas/lake_lemas.json",
+        "label": "Lake Lemas"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_lemas/lake_lemas.webp"
+    },
+    "id": "lake_lemas"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      791.6,
+      438.4
+    ],
+    "popup": {
+      "title": "Lake Luo",
+      "description": "An alkaline lake located in the [[Valley of Embers]] that fed the [[River Olung]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_luo/lake_luo.json",
+        "label": "Lake Luo"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_luo/lake_luo.webp"
+    },
+    "id": "lake_luo"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      690.48,
+      191.27
+    ],
+    "popup": {
+      "title": "The Cauldron",
+      "description": "A bay located on the southern coast of [[Chult]], bordering the [[Land of Ash and Smoke]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_cauldron/the_cauldron.json",
+        "label": "The Cauldron"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_cauldron/the_cauldron.webp"
+    },
+    "id": "the_cauldron"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      469.87,
+      887.06
+    ],
+    "popup": {
+      "title": "The Suj-lan",
+      "description": "A deep bay on the isle of [[Suj]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_suj_lan/the_suj_lan.json",
+        "label": "The Suj-lan"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_suj_lan/the_suj_lan.webp"
+    },
+    "id": "the_suj_lan"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      424.5,
+      2966
+    ],
+    "popup": {
+      "title": "Ice Lakes",
+      "description": "A group of frigid lakes in [[northwest Faer\u00fbn]] including: [[Derthym]], [[Belardym]], [[Rarghraum]], [[Loroloth]], and [[Antaerth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/ice_lakes/ice_lakes.json",
+        "label": "Ice Lakes"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/ice_lakes/ice_lakes.webp"
+    },
+    "id": "ice_lakes"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      287.79,
+      3039.85
+    ],
+    "popup": {
+      "title": "Lac Dinneshere",
+      "description": "One of the three great lakes of [[Icewind Dale]] inhabited by the [[knucklehead trout]] and mysterious and elusive [[aquatic elves]], last seen in [[1281 DR]]. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lac_dinneshere/lac_dinneshere.json",
+        "label": "Lac Dinneshere"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lac_dinneshere/lac_dinneshere.webp"
+    },
+    "id": "lac_dinneshere"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      273.29,
+      3045.15
+    ],
+    "popup": {
+      "title": "Maer Dualdon",
+      "description": "The largest of the three in the region, with deep azure waters, the location of the barbarian [[Burial Isle]]. Its shores were settled by four out of ten [[Ten-Towns]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/maer_dualdon/maer_dualdon.json",
+        "label": "Maer Dualdon"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/maer_dualdon/maer_dualdon.webp"
+    },
+    "id": "maer_dualdon"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      285,
+      3026.5
+    ],
+    "popup": {
+      "title": "Redwaters",
+      "description": "Also known as '''Dellon-lune''', one of the three great lakes of [[Icewind Dale]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/redwaters/redwaters.json",
+        "label": "Redwaters"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/redwaters/redwaters.webp"
+    },
+    "id": "redwaters"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3190.46,
+      2247.89
+    ],
+    "popup": {
+      "title": "South Fang",
+      "description": "The easternmost part of the [[Easting Reach]], south of [[Cape Dragonfang]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/south_fang/south_fang.json",
+        "label": "South Fang"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/south_fang/south_fang.webp"
+    },
+    "id": "south_fang"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3069.5,
+      2555.25
+    ],
+    "popup": {
+      "title": "The Old Water",
+      "description": "Sometimes called '''Cold Water,'''  a large frigid lake located downstream beyond [[Bluefang Water]], along the [[Great Imphras River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_old_water/the_old_water.json",
+        "label": "The Old Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_old_water/the_old_water.webp"
+    },
+    "id": "the_old_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3002.02,
+      2597.55
+    ],
+    "popup": {
+      "title": "Bluefang Water",
+      "description": "A large cold lake found in northeastern [[Impiltur]] that sat downstream where the [[River Icehilt]] joined the [[Great Imphras River]], just northwest of the [[Herald's Road]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/bluefang_water/bluefang_water.json",
+        "label": "Bluefang Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/bluefang_water/bluefang_water.webp"
+    },
+    "id": "bluefang_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2868.02,
+      2667.91
+    ],
+    "popup": {
+      "title": "Lake Icemelt",
+      "description": "A cold mountain lake near the [[High Pass]] south of the Earthwood.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_icemelt/lake_icemelt.json",
+        "label": "Lake Icemelt"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_icemelt/lake_icemelt.webp"
+    },
+    "id": "lake_icemelt"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3647,
+      3120
+    ],
+    "popup": {
+      "title": "Luirbrech",
+      "description": "A lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/luirbrech/luirbrech.json",
+        "label": "Luirbrech"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/luirbrech/luirbrech.webp"
+    },
+    "id": "luirbrech"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3411.5,
+      3037.5
+    ],
+    "popup": {
+      "title": "Lake Mereth",
+      "description": "The westernmost lake of the [[Teardrops]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_mereth/lake_mereth.json",
+        "label": "Lake Mereth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_mereth/lake_mereth.webp"
+    },
+    "id": "lake_mereth"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3551,
+      3052.5
+    ],
+    "popup": {
+      "title": "Lake Muirenon",
+      "description": "The largest of the [[Teardrops]] lakes in [[Narfell]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_muirenon/lake_muirenon.json",
+        "label": "Lake Muirenon"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_muirenon/lake_muirenon.webp"
+    },
+    "id": "lake_muirenon"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3538,
+      3006
+    ],
+    "popup": {
+      "title": "Huta Lake",
+      "description": "One of the smaller lakes forming the [[Teardrops]] in [[Narfell]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/huta_lake/huta_lake.json",
+        "label": "Huta Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/huta_lake/huta_lake.webp"
+    },
+    "id": "huta_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3587.5,
+      3045
+    ],
+    "popup": {
+      "title": "Lake Musker",
+      "description": "One of the lakes of the [[Teardrops]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_musker/lake_musker.json",
+        "label": "Lake Musker"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_musker/lake_musker.webp"
+    },
+    "id": "lake_musker"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3631.5,
+      2829
+    ],
+    "popup": {
+      "title": "Lake Ashane",
+      "description": "Also known as the ''' Lake of Tears''', a large, glacial lake that formed the western border of [[Rashemen]], known for its smell of red [[juniper]] berries.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_ashane/lake_ashane.json",
+        "label": "Lake Ashane"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_ashane/lake_ashane.webp"
+    },
+    "id": "lake_ashane"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3768.87,
+      2715.64
+    ],
+    "popup": {
+      "title": "Lake Tirulag",
+      "description": "An ice-cold lake that provided great natural resources and cultural significance for [[Rashemen]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_tirulag/lake_tirulag.json",
+        "label": "Lake Tirulag"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_tirulag/lake_tirulag.webp"
+    },
+    "id": "lake_tirulag"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3319.51,
+      2539.92
+    ],
+    "popup": {
+      "title": "Lake Flam",
+      "description": "A small forest lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_flam/lake_flam.json",
+        "label": "Lake Flam"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_flam/lake_flam.webp"
+    },
+    "id": "lake_flam"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3559.92,
+      2642.45
+    ],
+    "popup": {
+      "title": "Lake Murthil",
+      "description": "A lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_murthil/lake_murthil.json",
+        "label": "Lake Murthil"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_murthil/lake_murthil.webp"
+    },
+    "id": "lake_murthil"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3268.95,
+      3019.69
+    ],
+    "popup": {
+      "title": "Icelace Lake",
+      "description": "A huge frigid lake in [[Narfell]] that was created from runoff from the [[Great Glacier]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/icelace_lake/icelace_lake.json",
+        "label": "Icelace Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/icelace_lake/icelace_lake.webp"
+    },
+    "id": "icelace_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2941.91,
+      2966.66
+    ],
+    "popup": {
+      "title": "Galena Snake",
+      "description": "A winding river that flowed down the [[Galena Mountains]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/galena_snake/galena_snake.json",
+        "label": "Galena Snake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/galena_snake/galena_snake.webp"
+    },
+    "id": "galena_snake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2942.97,
+      2845.04
+    ],
+    "popup": {
+      "title": "Lake Mogador",
+      "description": "A crucial central location in [[Damara]] for both commercial and political reasons.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_mogador/lake_mogador.json",
+        "label": "Lake Mogador"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_mogador/lake_mogador.webp"
+    },
+    "id": "lake_mogador"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2572.1,
+      3123.29
+    ],
+    "popup": {
+      "title": "Mirror Lake",
+      "description": "An icemelt lake northwest of [[Vaasa]], fed by the [[River Pelauvir]] and the source of the [[Beaumaris River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/mirror_lake/mirror_lake.json",
+        "label": "Mirror Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/mirror_lake/mirror_lake.webp"
+    },
+    "id": "mirror_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2767.43,
+      2884.99
+    ],
+    "popup": {
+      "title": "Lake Midai",
+      "description": "A small but vital freshwater lake within the [[Bloodstone Pass]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_midai/lake_midai.json",
+        "label": "Lake Midai"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_midai/lake_midai.webp"
+    },
+    "id": "lake_midai"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      314.66,
+      3089.34
+    ],
+    "popup": {
+      "title": "Evermelt",
+      "description": "A subterranean hot spring found within a cave at the base of the [[Reghed Glacier]], a holy place to the [[Reghedmen]] [[barbarian]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/evermelt/evermelt.json",
+        "label": "Evermelt"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/evermelt/evermelt.webp"
+    },
+    "id": "evermelt"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2466.5,
+      2834.25
+    ],
+    "popup": {
+      "title": "Bloodmuck",
+      "description": "A lake in the land of [[Thar]], the source of a short winding [[Tormel River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/bloodmuck/bloodmuck.json",
+        "label": "Bloodmuck"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/bloodmuck/bloodmuck.webp"
+    },
+    "id": "bloodmuck"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2365.8,
+      2670.03
+    ],
+    "popup": {
+      "title": "Ghost Lake",
+      "description": "A lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/ghost_lake/ghost_lake.json",
+        "label": "Ghost Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/ghost_lake/ghost_lake.webp"
+    },
+    "id": "ghost_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2289.25,
+      2900.9
+    ],
+    "popup": {
+      "title": "Razack's Tears",
+      "description": "A long stream that flowed north from the [[Dragonspines]], wound across [[the Ride]] before turning northeast and joining with [[Telstang Brook]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/razacks_tears/razacks_tears.json",
+        "label": "Razack's Tears"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/razacks_tears/razacks_tears.webp"
+    },
+    "id": "razacks_tears"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2182.5,
+      2815.25
+    ],
+    "popup": {
+      "title": "Lake Maltorus",
+      "description": "A late in the center of the plains situated between the [[White Peaks]] and the [[Dragonspine Mountains]], fed by the waters of the [[Stoneshoulder Creek]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_maltorus/lake_maltorus.json",
+        "label": "Lake Maltorus"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_maltorus/lake_maltorus.webp"
+    },
+    "id": "lake_maltorus"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2195.78,
+      2342.37
+    ],
+    "popup": {
+      "title": "Lake Marjahon",
+      "description": "A small lake where the [[Solbudar River]] ended.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_marjahon/lake_marjahon.json",
+        "label": "Lake Marjahon"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_marjahon/lake_marjahon.webp"
+    },
+    "id": "lake_marjahon"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      483.37,
+      2049.5
+    ],
+    "popup": {
+      "title": "Lake of the Leech",
+      "description": "A small freshwater lake that touched the northern edge of [[Leechhome]], the only major swamp in [[Gnarhelm]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_leech/lake_of_the_leech.json",
+        "label": "Lake of the Leech"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_leech/lake_of_the_leech.webp"
+    },
+    "id": "lake_of_the_leech"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      508.62,
+      2014.87
+    ],
+    "popup": {
+      "title": "Lake Sunder",
+      "description": "A freshwater lake located in northern [[Gnarhelm]], with the [[Farfair River]] entering its southwest shore and exiting to the sea on the northeast shore.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_sunder/lake_sunder.json",
+        "label": "Lake Sunder"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_sunder/lake_sunder.webp"
+    },
+    "id": "lake_sunder"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2232.87,
+      2409.75
+    ],
+    "popup": {
+      "title": "Magglerak's Lake",
+      "description": "A tiny forest lake, fed by a stream that emptied into [[Lake Sember]], named after the [[seahag]] named [[Magglerak]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/maggleraks_lake/maggleraks_lake.json",
+        "label": "Magglerak's Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/maggleraks_lake/maggleraks_lake.webp"
+    },
+    "id": "maggleraks_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      475.7,
+      2007.65
+    ],
+    "popup": {
+      "title": "Lac Sielya",
+      "description": "A small freshwater lake of none.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lac_sielya/lac_sielya.json",
+        "label": "Lac Sielya"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lac_sielya/lac_sielya.webp"
+    },
+    "id": "lac_sielya"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      469.69,
+      1952.32
+    ],
+    "popup": {
+      "title": "The Vasty Drink",
+      "description": "A large freshwater lake that flowed northward to empty into the [[Salmon Bay]] via a small river, with a ''[[moonwell]]'' located in a small forest along the lake's southwest shore.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_vasty_drink/the_vasty_drink.json",
+        "label": "The Vasty Drink"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_vasty_drink/the_vasty_drink.webp"
+    },
+    "id": "the_vasty_drink"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      522.72,
+      1989.62
+    ],
+    "popup": {
+      "title": "Lisloch",
+      "description": "A freshwater lake that abutted the [[Lisbunt Mountains]] on its southern and western shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lisloch/lisloch.json",
+        "label": "Lisloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lisloch/lisloch.webp"
+    },
+    "id": "lisloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      418.43,
+      1943.83
+    ],
+    "popup": {
+      "title": "Lake Otta",
+      "description": "A small freshwater lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_otta/lake_otta.json",
+        "label": "Lake Otta"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_otta/lake_otta.webp"
+    },
+    "id": "lake_otta"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      433.81,
+      1898.4
+    ],
+    "popup": {
+      "title": "Hughloch",
+      "description": "A small freshwater lake located south of [[Hardangheight]], part of the [[Ironflow]] as it swept down from the mountains into the sea.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/hughloch/hughloch.json",
+        "label": "Hughloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/hughloch/hughloch.webp"
+    },
+    "id": "hughloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2563.08,
+      2838.85
+    ],
+    "popup": {
+      "title": "Lake Hul",
+      "description": "A small lake along the [[Winterspear River]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_hul/lake_hul.json",
+        "label": "Lake Hul"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_hul/lake_hul.webp"
+    },
+    "id": "lake_hul"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2680.75,
+      3034.75
+    ],
+    "popup": {
+      "title": "Hot Springs",
+      "description": "Hot-spring pools of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/hot_springs/hot_springs.json",
+        "label": "Hot Springs"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/hot_springs/hot_springs.webp"
+    },
+    "id": "hot_springs"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2820.64,
+      3097.12
+    ],
+    "popup": {
+      "title": "Taak Lake",
+      "description": "A small, fresh-water lake in [[Alpuk]] north of the [[Cold Lands]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/taak_lake/taak_lake.json",
+        "label": "Taak Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/taak_lake/taak_lake.webp"
+    },
+    "id": "taak_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      552.95,
+      1721.98
+    ],
+    "popup": {
+      "title": "Llewellyn Harbor",
+      "description": "A small natural bay, the location of the town of [[Llewellyn]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/llewellyn_harbor/llewellyn_harbor.json",
+        "label": "Llewellyn Harbor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/llewellyn_harbor/llewellyn_harbor.webp"
+    },
+    "id": "llewellyn_harbor"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      535.81,
+      1691.57
+    ],
+    "popup": {
+      "title": "Straight of Alaron",
+      "description": "A body of water of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/straight_of_alaron/straight_of_alaron.json",
+        "label": "Straight of Alaron"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/straight_of_alaron/straight_of_alaron.webp"
+    },
+    "id": "straight_of_alaron"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      466.16,
+      1717.38
+    ],
+    "popup": {
+      "title": "Firloch",
+      "description": "A lake was located near the center of the [[Winterglen]] just north of [[Citadel Umbra]] in northeast [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/firloch/firloch.json",
+        "label": "Firloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/firloch/firloch.webp"
+    },
+    "id": "firloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3215.56,
+      2000.05
+    ],
+    "popup": {
+      "title": "Temezzer's End",
+      "description": "A small and shallow bay named after a minor [[Chessenta]]n lord, whose ship, the ''[[Bright Faring]]'' met its end here ''circa'' [[1286 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/temezzers_end/temezzers_end.json",
+        "label": "Temezzer's End"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/temezzers_end/temezzers_end.webp"
+    },
+    "id": "temezzers_end"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3348.5,
+      2024.44
+    ],
+    "popup": {
+      "title": "The Wash",
+      "description": "A peaceful shallow bay named after its rhythmic waves rolling over the shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_wash/the_wash.json",
+        "label": "The Wash"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_wash/the_wash.webp"
+    },
+    "id": "the_wash"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3406.75,
+      2047.5
+    ],
+    "popup": {
+      "title": "Aryllswater",
+      "description": "A small clearwater stream named after a [[half-elven]] [[sorceress]] that lived there until [[127 DR]].{{approx}}",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/aryllswater/aryllswater.json",
+        "label": "Aryllswater"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/aryllswater/aryllswater.webp"
+    },
+    "id": "aryllswater"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2575.45,
+      1001.08
+    ],
+    "popup": {
+      "title": "Lammatar's Water",
+      "description": "A waterway of note in the [[Duskwood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lammatars_water/lammatars_water.json",
+        "label": "Lammatar's Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lammatars_water/lammatars_water.webp"
+    },
+    "id": "lammatars_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2193.79,
+      819
+    ],
+    "popup": {
+      "title": "Caldarth",
+      "description": "Also known as the '''River Racing''', a waterway of two major tributaries in the south of [[Jundarwood]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/caldarth/caldarth.json",
+        "label": "Caldarth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/caldarth/caldarth.webp"
+    },
+    "id": "caldarth"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4646.04,
+      1274.91
+    ],
+    "popup": {
+      "title": "Lake Ragheb",
+      "description": "The small but deep lake at the heart of the oasis and the town of [[Ragheb]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_ragheb/lake_ragheb.json",
+        "label": "Lake Ragheb"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_ragheb/lake_ragheb.webp"
+    },
+    "id": "lake_ragheb"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      440.37,
+      1655.25
+    ],
+    "popup": {
+      "title": "Myrloch",
+      "description": "A large freshwater lake.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/myrloch/myrloch.json",
+        "label": "Myrloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/myrloch/myrloch.webp"
+    },
+    "id": "myrloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      374.5,
+      1569.5
+    ],
+    "popup": {
+      "title": "Corwell Firth",
+      "description": "An inlet of the [[Trackless Sea]] located off the island of [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/corwell_firth/corwell_firth.json",
+        "label": "Corwell Firth"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/corwell_firth/corwell_firth.webp"
+    },
+    "id": "corwell_firth"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2667.56,
+      1232.84
+    ],
+    "popup": {
+      "title": "The Canal",
+      "description": "The artificial canal between the [[Lake of Steam]] and the [[Nagaflow]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_canal/the_canal.json",
+        "label": "The Canal"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_canal/the_canal.webp"
+    },
+    "id": "the_canal"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2616.64,
+      3014.74
+    ],
+    "popup": {
+      "title": "Moloth Caldera",
+      "description": "A large bog lake in the [[Bottomless Bogs]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/moloth_caldera/moloth_caldera.json",
+        "label": "Moloth Caldera"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/moloth_caldera/moloth_caldera.webp"
+    },
+    "id": "moloth_caldera"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2626.9,
+      3043.38
+    ],
+    "popup": {
+      "title": "Lake Throm",
+      "description": "A large bog lake in the [[Bottomless Bogs]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lake_throm/lake_throm.json",
+        "label": "Lake Throm"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lake_throm/lake_throm.webp"
+    },
+    "id": "lake_throm"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1678.14,
+      2302.33
+    ],
+    "popup": {
+      "title": "Lilac Pond",
+      "description": "Or '''Lilac Lake''', a small [[poison]]-filled pond with lightly yellowed waters, surrounded by blackened dead earth.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lilac_pond/lilac_pond.json",
+        "label": "Lilac Pond"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lilac_pond/lilac_pond.webp"
+    },
+    "id": "lilac_pond"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1673.72,
+      2283.77
+    ],
+    "popup": {
+      "title": "Doff's Lake",
+      "description": "A serene, clear lake willed with [[pike]], [[bream]], [[loach]], and [[minnow]]s. ",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/doffs_lake/doffs_lake.json",
+        "label": "Doff's Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/doffs_lake/doffs_lake.webp"
+    },
+    "id": "doffs_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1578.24,
+      2377.74
+    ],
+    "popup": {
+      "title": "Pond of Tears",
+      "description": "A small pond near the middle of the [[Battle of Bones]], said to had been filled with the tears from the dead and dying soldiers who perished at the Battle of Bones in [[1090 DR]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/pond_of_tears/pond_of_tears.json",
+        "label": "Pond of Tears"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/pond_of_tears/pond_of_tears.webp"
+    },
+    "id": "pond_of_tears"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      468.12,
+      1588
+    ],
+    "popup": {
+      "title": "Corwell Harbor",
+      "description": "A narrow bay harborage in the [[Corwell Firth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/corwell_harbor/corwell_harbor.json",
+        "label": "Corwell Harbor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/corwell_harbor/corwell_harbor.webp"
+    },
+    "id": "corwell_harbor"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      493.37,
+      1545
+    ],
+    "popup": {
+      "title": "Pirates' Caves",
+      "description": "Pirates' caves and coves of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/pirates_caves/pirates_caves.json",
+        "label": "Pirates' Caves"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/pirates_caves/pirates_caves.webp"
+    },
+    "id": "pirates_caves"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      544,
+      1552.5
+    ],
+    "popup": {
+      "title": "T\u00edr faoi Thoinn",
+      "description": "An underwater territory said to be the domain of [[Deep Sashelas]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/tir_faoi_thoinn/tir_faoi_thoinn.json",
+        "label": "T\u00edr faoi Thoinn"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/tir_faoi_thoinn/tir_faoi_thoinn.webp"
+    },
+    "id": "tir_faoi_thoinn"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      593.62,
+      1636.25
+    ],
+    "popup": {
+      "title": "Harloch",
+      "description": "The largest lake located on the island of [[Snowdown]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/harloch/harloch.json",
+        "label": "Harloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/harloch/harloch.webp"
+    },
+    "id": "harloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      582.5,
+      1648.5
+    ],
+    "popup": {
+      "title": "Mal Sul",
+      "description": "A small lake found in the north-central part of the island with a ''[[moonwell]]'' in a forest on its shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/mal_sul/mal_sul.json",
+        "label": "Mal Sul"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/mal_sul/mal_sul.webp"
+    },
+    "id": "mal_sul"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      575.75,
+      1661.87
+    ],
+    "popup": {
+      "title": "Mal Feargal",
+      "description": "The northernmost and smallest of the [[Snowdown]] lakes.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/mal_feargal/mal_feargal.json",
+        "label": "Mal Feargal"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/mal_feargal/mal_feargal.webp"
+    },
+    "id": "mal_feargal"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      456,
+      1675.5
+    ],
+    "popup": {
+      "title": "Mal Tarbat",
+      "description": "A small lake found on the island of [[Gwynneth]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/mal_tarbat/mal_tarbat.json",
+        "label": "Mal Tarbat"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/mal_tarbat/mal_tarbat.webp"
+    },
+    "id": "mal_tarbat"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      418.75,
+      1685.25
+    ],
+    "popup": {
+      "title": "Shee Pool",
+      "description": "A small lake near the center of [[Myrloch Vale]] with a ''[[moonwell]]'' on its northern shores.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/shee_pool/shee_pool.json",
+        "label": "Shee Pool"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/shee_pool/shee_pool.webp"
+    },
+    "id": "shee_pool"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      325.44,
+      1454.16
+    ],
+    "popup": {
+      "title": "Underwater Realm of the Wizard",
+      "description": "A body of water of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/underwater_realm_of_the_wizard/underwater_realm_of_the_wizard.json",
+        "label": "Underwater Realm of the Wizard"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/underwater_realm_of_the_wizard/underwater_realm_of_the_wizard.webp"
+    },
+    "id": "underwater_realm_of_the_wizard"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      230.25,
+      1927.5
+    ],
+    "popup": {
+      "title": "Norfen Lake",
+      "description": "The only freshwater body of water located on the island of [[Norland]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/norfen_lake/norfen_lake.json",
+        "label": "Norfen Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/norfen_lake/norfen_lake.webp"
+    },
+    "id": "norfen_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3686.75,
+      2702.5
+    ],
+    "popup": {
+      "title": "Wells of Lurue",
+      "description": "An ancient rocky glade of pools, waterfalls, and springs, rich with spirits, once home to large sacred beasts that served [[Lurue]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/wells_of_lurue/wells_of_lurue.json",
+        "label": "Wells of Lurue"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/wells_of_lurue/wells_of_lurue.webp"
+    },
+    "id": "wells_of_lurue"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3178.44,
+      1855.09
+    ],
+    "popup": {
+      "title": "Blibdoolpoolp's Nest",
+      "description": "A reef of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/blibdoolpoolps_nest/blibdoolpoolps_nest.json",
+        "label": "Blibdoolpoolp's Nest"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/blibdoolpoolps_nest/blibdoolpoolps_nest.webp"
+    },
+    "id": "blibdoolpoolps_nest"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      413.3,
+      1670.36
+    ],
+    "popup": {
+      "title": "Mal Tamesis",
+      "description": "A lake in the [[Myloch Vale]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/mal_tamesis/mal_tamesis.json",
+        "label": "Mal Tamesis"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/mal_tamesis/mal_tamesis.webp"
+    },
+    "id": "mal_tamesis"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      272.62,
+      1678.5
+    ],
+    "popup": {
+      "title": "Lac Dynnegall",
+      "description": "The only freshwater lake found on the isle of [[Moray]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/lac_dynnegall/lac_dynnegall.json",
+        "label": "Lac Dynnegall"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/lac_dynnegall/lac_dynnegall.webp"
+    },
+    "id": "lac_dynnegall"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3411.43,
+      1887.62
+    ],
+    "popup": {
+      "title": "Akadi's Dance",
+      "description": "A wide bay of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/akadis_dance/akadis_dance.json",
+        "label": "Akadi's Dance"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/akadis_dance/akadis_dance.webp"
+    },
+    "id": "akadis_dance"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      3487.8,
+      1715.44
+    ],
+    "popup": {
+      "title": "Jede Pond",
+      "description": "A large pond of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/jede_pond/jede_pond.json",
+        "label": "Jede Pond"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/jede_pond/jede_pond.webp"
+    },
+    "id": "jede_pond"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      889.25,
+      2400
+    ],
+    "popup": {
+      "title": "Star Lake",
+      "description": "A tiny lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/star_lake/star_lake.json",
+        "label": "Star Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/star_lake/star_lake.webp"
+    },
+    "id": "star_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      888.5,
+      2417.25
+    ],
+    "popup": {
+      "title": "Curstlake",
+      "description": "A tiny lake of note.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/curstlake/curstlake.json",
+        "label": "Curstlake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/curstlake/curstlake.webp"
+    },
+    "id": "curstlake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      801.87,
+      2423.62
+    ],
+    "popup": {
+      "title": "Shimmer Lake",
+      "description": "A tiny lake connected to the [[Delimbiyr River]] by a small stream.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/shimmer_lake/shimmer_lake.json",
+        "label": "Shimmer Lake"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/shimmer_lake/shimmer_lake.webp"
+    },
+    "id": "shimmer_lake"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1006.75,
+      3032.25
+    ],
+    "popup": {
+      "title": "Starfall Pool",
+      "description": "A secluded glade in the [[Moonwood]], named after the tiny pond near its center, made famous throughout [[Luruar]] by the ''[[Ballad of Starfall Pool]]''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/starfall_pool/starfall_pool.json",
+        "label": "Starfall Pool"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/starfall_pool/starfall_pool.webp"
+    },
+    "id": "starfall_pool"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4656.65,
+      1908.12
+    ],
+    "popup": {
+      "title": "Gbor Nor",
+      "description": "Also known as the '''Sea of Semphar''' or the '''Brightstar Lake'''.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/gbor_nor/gbor_nor.json",
+        "label": "Gbor Nor"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/gbor_nor/gbor_nor.webp"
+    },
+    "id": "gbor_nor"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      4683,
+      1770
+    ],
+    "popup": {
+      "title": "Semphar Water",
+      "description": "A large lake connected to [[Gbor Nor]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/semphar_water/semphar_water.json",
+        "label": "Semphar Water"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/semphar_water/semphar_water.webp"
+    },
+    "id": "semphar_water"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1911,
+      2898.5
+    ],
+    "popup": {
+      "title": "The Throat",
+      "description": "A sinkhole or crater in [[Anauroch]] at the end of the [[River of Gems]], which the river emptied into.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/the_throat_2/the_throat_2.json",
+        "label": "The Throat"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/the_throat_2/the_throat_2.webp"
+    },
+    "id": "the_throat_2"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      2003.5,
+      3182.5
+    ],
+    "popup": {
+      "title": "Llashloch",
+      "description": "'''The Lake of Ice''' \u2013 a large glacial rift, said to resemble a bent human arm and inhabited by [[white-skinned octopus]]es and [[snow cloaker]]s.",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/llashloch/llashloch.json",
+        "label": "Llashloch"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/llashloch/llashloch.webp"
+    },
+    "id": "llashloch"
+  },
+  {
+    "categoryId": "lakes",
+    "position": [
+      1134.55,
+      2916.46
+    ],
+    "popup": {
+      "title": "Staunt Pools",
+      "description": "A succession of deep holes located in the [[River Rauvin]] to the west of [[Jalanthar]] and the lair of a freshwater [[giant squid]].",
+      "link": {
+        "url": "/assets/atlas/world/toril/faerun/lakes/staunt_pools/staunt_pools.json",
+        "label": "Staunt Pools"
+      },
+      "image": "/assets/atlas/world/toril/faerun/lakes/staunt_pools/staunt_pools.webp"
+    },
+    "id": "staunt_pools"
+  }
+]

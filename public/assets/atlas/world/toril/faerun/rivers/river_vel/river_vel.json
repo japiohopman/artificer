@@ -1,0 +1,14 @@
+{
+  "id": "river_vel",
+  "name": "river_vel",
+  "type": "rivers",
+  "parent": "rivers",
+  "title": "River Vel",
+  "description": "A waterway of note.",
+  "image": "river_vel.webp",
+  "coordinates": {
+    "lat": 3215.21,
+    "lng": 2138.99
+  },
+  "categoryId": "rivers"
+}

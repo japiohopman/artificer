@@ -1,0 +1,14 @@
+{
+  "id": "easting_river",
+  "name": "easting_river",
+  "type": "rivers",
+  "parent": "rivers",
+  "title": "Easting River",
+  "description": "The river that fed [[Even's Gulf]]'s northernmost point.",
+  "image": "easting_river.webp",
+  "coordinates": {
+    "lat": 3125.41,
+    "lng": 2750.99
+  },
+  "categoryId": "rivers"
+}
