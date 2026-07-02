@@ -64,7 +64,8 @@ export interface WorldState {
 
   // Environmental Engine
   weather: WeatherType;
-  region: string;
+  currentRegion: string;
+  isFastForwarding: boolean;
 
   // Location State
   currentLocation: SavedLocation | null;
@@ -88,6 +89,7 @@ export interface WorldState {
   advanceTime: (minutes: number) => void;
   setWeather: (weather: WeatherType) => void;
   setRegion: (region: string) => void;
+  setIsFastForwarding: (isFastForwarding: boolean) => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
   setCurrentLocation: (location: SavedLocation) => void;
@@ -115,7 +117,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   gameTime: 480, // 8:00 AM
 
   weather: 'Sunny',
-  region: 'Sword Coast',
+  currentRegion: 'Sword Coast',
+  isFastForwarding: false,
 
   currentLocation: null,
   inspectedLocation: null,
@@ -188,7 +191,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   }),
 
   setWeather: (weather) => set({ weather }),
-  setRegion: (region) => set({ region }),
+  setRegion: (currentRegion) => set({ currentRegion }),
+  setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
   setCurrentLocation: (currentLocation) => set({ currentLocation }),
