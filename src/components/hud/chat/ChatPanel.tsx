@@ -11,9 +11,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ActionPanel } from '../game/ActionPanel';
 import { MapLegend } from '../game/MapLegend';
 import { GameIcon } from '../../../game_icons';
-import { ActionPanel } from '../game/ActionPanel';
-import { MapLegend } from '../game/MapLegend';
-import { GameIcon } from '../../../game_icons';
 
 interface ChatMessage {
   role: 'user' | 'npc' | 'system';
@@ -27,12 +24,10 @@ interface ChatPanelProps {
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => {
   const { getActiveBackground, isNight, currentLocation } = useWorldStore();
-  const { getActiveBackground, isNight, currentLocation } = useWorldStore();
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
   const { setChatExpanded, gameMode } = useUIStore();
   const { messages: history, isThinking } = useChatStore();
-  const { setChatExpanded, gameMode } = useUIStore();
 
   const bgUrl = getActiveBackground();
   
@@ -96,7 +91,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
 
   return (
     <div className="flex flex-col w-full overflow-hidden relative transition-all duration-500 bg-parchment-100 border-t-2 border-dragon-gold shadow-2xl pointer-events-none bg-paper-texture min-h-[64px]">
-    <div className="flex flex-col w-full overflow-hidden relative transition-all duration-500 bg-parchment-100 border-t-2 border-dragon-gold shadow-2xl pointer-events-none bg-paper-texture min-h-[64px]">
       {/* Dynamic Background Layer - only for history area */}
       <AnimatePresence>
         {bgUrl && !isCollapsed && (
@@ -121,18 +115,14 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
       </AnimatePresence>
 
       <div className="flex flex-col relative z-10 justify-end pointer-events-none h-full">
-      <div className="flex flex-col relative z-10 justify-end pointer-events-none h-full">
         <AnimatePresence mode="popLayout">
           {!isCollapsed && (
             <motion.div 
               key="expanded-content"
-              key="expanded-content"
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: gameMode === 'combat' ? 'auto' : '30vh', opacity: 1 }}
               animate={{ height: gameMode === 'combat' ? 'auto' : '30vh', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ type: 'spring', damping: 30, stiffness: 180 }}
-              className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20 flex flex-col"
               className="overflow-hidden pointer-events-auto bg-transparent border-b border-dragon-gold/20 flex flex-col"
             >
               {gameMode === 'combat' ? (
@@ -179,43 +169,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                    </div>
                 </div>
               )}
-              {gameMode === 'combat' ? (
-                <div className="p-0">
-                  <ActionPanel />
-                </div>
-              ) : (
-                <div className="flex flex-col h-full">
-                   {/* Map/Exploration Hub Extras */}
-                   <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10">
-                      <div className="flex items-center gap-4">
-                        <div className="flex flex-col">
-                          <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Active_Domain</span>
-                          <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
-                            {currentLocation?.name || 'The Wilds'}
-                          </span>
-                        </div>
-                        <div className="h-8 w-px bg-dragon-gold/20" />
-                        <MapLegend currentZoom={4} />
-                      </div>
-                      
-                      <div className="flex items-center gap-2">
-                        <div className="relative group">
-                          <input 
-                            type="text" 
-                            placeholder="Search Atlas..." 
-                            className="bg-parchment-200 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[10px] font-bold text-dragon-red placeholder:text-dragon-red/30 focus:border-dragon-gold outline-none w-48 transition-all"
-                          />
-                          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40">
-                             <GameIcon name="search" size={12} />
-                          </div>
-                        </div>
-                      </div>
-                   </div>
-                   <div className="flex-1 overflow-hidden">
-                     <ChatHistory history={history} />
-                   </div>
-                </div>
-              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -238,31 +191,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 <span className="text-[9px] font-black uppercase tracking-widest text-dragon-red">Combat_Engagement</span>
              </div>
              <button
-               onClick={() => setChatExpanded(true)}
-               className="bg-dragon-red text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded shadow-lg animate-bounce"
-             >
-               Open Command Matrix
-             </button>
-          </div>
-        )}
-        {gameMode !== 'combat' && (
-          <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
-            <ChatInput 
-              message={message} 
-              setMessage={setMessage} 
-              onSend={handleSend} 
-              placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
-            />
-          </div>
-        )}
-
-        {gameMode === 'combat' && isCollapsed && (
-          <div className="p-2 flex items-center justify-center gap-4 pointer-events-auto">
-             <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-dragon-red animate-pulse" />
-                <span className="text-[9px] font-black uppercase tracking-widest text-dragon-red">Combat_Engagement</span>
-             </div>
-             <button 
                onClick={() => setChatExpanded(true)}
                className="bg-dragon-red text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded shadow-lg animate-bounce"
              >
