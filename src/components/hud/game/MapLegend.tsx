@@ -39,18 +39,24 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
         let isVisible = false;
         let zoomReq = 0;
 
-        if (cat.id === 'city' || cat.id === 'seas_oceans') {
-          isVisible = true;
-          zoomReq = 0;
+        if (cat.id === 'seas_oceans') {
+          isVisible = currentZoom >= 1;
+          zoomReq = 1;
         } else if (['mountains', 'forest', 'rivers', 'lakes', 'bays', 'coasts', 'islands'].includes(cat.id)) {
-          isVisible = currentZoom >= 2.5;
-          zoomReq = 2.5;
-        } else if (['village', 'castle', 'roads'].includes(cat.id)) {
-          isVisible = currentZoom >= 3.5;
-          zoomReq = 3.5;
-        } else if (['ruins', 'poi', 'graveyard'].includes(cat.id)) {
+          isVisible = currentZoom >= 2;
+          zoomReq = 2;
+        } else if (cat.id === 'city') {
+          isVisible = currentZoom >= 3;
+          zoomReq = 3;
+        } else if (['village', 'castle'].includes(cat.id)) {
+          isVisible = currentZoom >= 4;
+          zoomReq = 4;
+        } else if (['ruins', 'poi'].includes(cat.id)) {
           isVisible = currentZoom >= 5;
           zoomReq = 5;
+        } else if (['roads', 'graveyard'].includes(cat.id)) {
+          isVisible = currentZoom >= 6;
+          zoomReq = 6;
         }
 
         return (

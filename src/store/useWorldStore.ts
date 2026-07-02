@@ -49,10 +49,16 @@ export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   graveyard: { icon: 'graveyard', color: '#696969' },
   desert: { icon: 'desert', color: '#EDC9AF' },
   deserts: { icon: 'deserts', color: '#EDC9AF' },
+  deserts_wastelands: { icon: 'deserts', color: '#EDC9AF' },
   grassland: { icon: 'grassland', color: '#7CFC00' },
   plains: { icon: 'plains', color: '#7CFC00' },
+  plains_grasslands: { icon: 'plains', color: '#7CFC00' },
   arctic: { icon: 'arctic', color: '#F0FFFF' },
-  glaciers_tundras: { icon: 'glaciers_tundras', color: '#F0FFFF' }
+  glaciers_tundras: { icon: 'glaciers_tundras', color: '#F0FFFF' },
+  oases: { icon: 'waters', color: '#1E90FF' },
+  underdark: { icon: 'dungeon', color: '#4B0082' },
+  sub_regions: { icon: 'landmark', color: '#D4AF37' },
+  continents: { icon: 'landmark', color: '#D4AF37' }
 };
 
 export interface WorldState {
@@ -65,6 +71,7 @@ export interface WorldState {
   // Environmental Engine
   weather: WeatherType;
   currentRegion: string;
+  mapZoom: number;
   isFastForwarding: boolean;
 
   // Location State
@@ -89,6 +96,7 @@ export interface WorldState {
   advanceTime: (minutes: number) => void;
   setWeather: (weather: WeatherType) => void;
   setRegion: (region: string) => void;
+  setMapZoom: (zoom: number) => void;
   setIsFastForwarding: (isFastForwarding: boolean) => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
@@ -118,6 +126,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   weather: 'Sunny',
   currentRegion: 'Sword Coast',
+  mapZoom: 2,
   isFastForwarding: false,
 
   currentLocation: null,
@@ -129,7 +138,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     name: "Baldur's Gate",
     category: 'city',
     coordinates: { x: 955, y: 1592 }, // Initial starting position in proto units
-    zoom: 4
+    zoom: 0
   },
   partySubLocation: null,
   travelOrigin: null,
@@ -192,6 +201,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   setWeather: (weather) => set({ weather }),
   setRegion: (currentRegion) => set({ currentRegion }),
+  setMapZoom: (mapZoom) => set({ mapZoom }),
   setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),

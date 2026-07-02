@@ -201,3 +201,28 @@
 .leaflet-bottom.leaflet-left {
   display: none !important;
 }
+
+.map-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  pointer-events: none !important;
+}
+
+.map-tooltip span {
+  text-shadow: 
+    -1.5px -1.5px 0 #000,
+     1.5px -1.5px 0 #000,
+    -1.5px  1.5px 0 #000,
+     1.5px  1.5px 0 #000,
+     0 0 8px rgba(0,0,0,0.9),
+     0 0 12px rgba(0,0,0,0.6);
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.atlas-marker-seas_oceans span {
+  text-shadow: none;
+}
