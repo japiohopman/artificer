@@ -9,15 +9,34 @@
   "image": "faerun.webp",
   "thumbnail": "faerun_thumb.webp",
   "banner": "faerun_banner.webp",
-  "tags": ["continent", "surface", "toril"],
-  "children": ["heartlands", "sword_coast", "the_north", "internal_lands", "south_faerun"],
+  "tags": [
+    "continent",
+    "surface",
+    "toril"
+  ],
+  "children": [
+    "heartlands",
+    "sword_coast",
+    "the_north",
+    "internal_lands",
+    "south_faerun"
+  ],
   "coordinates": {
     "lat": 0,
     "lng": 0
   },
   "metadata": {
-    "primary_races": ["Humans", "Elves", "Dwarves", "Halflings", "Gnomes"],
-    "major_pantheons": ["Faerûnian Pantheon"],
+    "primary_races": [
+      "Humans",
+      "Elves",
+      "Dwarves",
+      "Halflings",
+      "Gnomes"
+    ],
+    "major_pantheons": [
+      "Faerûnian Pantheon"
+    ],
     "climate": "Temperate to Arctic"
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/faerun.md"
 }

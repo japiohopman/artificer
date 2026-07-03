@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "River Specie",
-  "description": "The westernmost river in [[Amn]] \u2013 an important source of [[gold]].",
+  "description": "The westernmost river in [[Amn]] – an important source of [[gold]].",
   "image": "river_specie.webp",
   "coordinates": {
     "lat": 1153.99,
     "lng": 1559.52
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/river_specie.md"
 }

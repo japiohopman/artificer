@@ -4,11 +4,12 @@
   "type": "lakes",
   "parent": "lakes",
   "title": "Llashloch",
-  "description": "'''The Lake of Ice''' \u2013 a large glacial rift, said to resemble a bent human arm and inhabited by [[white-skinned octopus]]es and [[snow cloaker]]s.",
+  "description": "'''The Lake of Ice''' – a large glacial rift, said to resemble a bent human arm and inhabited by [[white-skinned octopus]]es and [[snow cloaker]]s.",
   "image": "llashloch.webp",
   "coordinates": {
     "lat": 2003.5,
     "lng": 3182.5
   },
-  "categoryId": "lakes"
+  "categoryId": "lakes",
+  "lore": "/assets/atlas/lore/locations/llashloch.md"
 }

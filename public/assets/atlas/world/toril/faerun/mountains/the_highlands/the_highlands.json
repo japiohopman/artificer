@@ -4,10 +4,11 @@
   "type": "mountain_range",
   "parent": "mountain",
   "title": "The Highlands",
-  "description": "A mountain range located on the island of [[Gwynneth]] stretching for over 75\u202fmiles (120\u202fkilometers) and forming most of the southern border of [[Myrloch Vale]].",
+  "description": "A mountain range located on the island of [[Gwynneth]] stretching for over 75 miles (120 kilometers) and forming most of the southern border of [[Myrloch Vale]].",
   "image": "the_highlands.webp",
   "coordinates": {
     "lat": 410.12,
     "lng": 1624.04
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/the_highlands.md"
 }

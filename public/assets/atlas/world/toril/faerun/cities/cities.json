@@ -34,7 +34,8 @@
         "17"
       ]
     },
-    "id": "luskan"
+    "id": "luskan",
+    "lore": "/assets/atlas/lore/locations/luskan.md"
   },
   {
     "categoryId": "cities",
@@ -51,7 +52,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/neverwinter/neverwinter.webp"
     },
-    "id": "neverwinter"
+    "id": "neverwinter",
+    "lore": "/assets/atlas/lore/locations/neverwinter.md"
   },
   {
     "categoryId": "cities",
@@ -68,7 +70,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/waterdeep/waterdeep.webp"
     },
-    "id": "waterdeep"
+    "id": "waterdeep",
+    "lore": "/assets/atlas/lore/locations/waterdeep.md"
   },
   {
     "categoryId": "cities",
@@ -85,7 +88,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/reth/reth.webp"
     },
-    "id": "reth"
+    "id": "reth",
+    "lore": "/assets/atlas/lore/locations/reth.md"
   },
   {
     "categoryId": "cities",
@@ -102,7 +106,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hlath/hlath.webp"
     },
-    "id": "hlath"
+    "id": "hlath",
+    "lore": "/assets/atlas/lore/locations/hlath.md"
   },
   {
     "categoryId": "cities",
@@ -119,7 +124,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sapra/sapra.webp"
     },
-    "id": "sapra"
+    "id": "sapra",
+    "lore": "/assets/atlas/lore/locations/sapra.md"
   },
   {
     "categoryId": "cities",
@@ -136,7 +142,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/iljak/iljak.webp"
     },
-    "id": "iljak"
+    "id": "iljak",
+    "lore": "/assets/atlas/lore/locations/iljak.md"
   },
   {
     "categoryId": "cities",
@@ -153,7 +160,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/shamph/shamph.webp"
     },
-    "id": "shamph"
+    "id": "shamph",
+    "lore": "/assets/atlas/lore/locations/shamph.md"
   },
   {
     "categoryId": "cities",
@@ -170,7 +178,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/arrabar/arrabar.webp"
     },
-    "id": "arrabar"
+    "id": "arrabar",
+    "lore": "/assets/atlas/lore/locations/arrabar.md"
   },
   {
     "categoryId": "cities",
@@ -187,7 +196,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mimph/mimph.webp"
     },
-    "id": "mimph"
+    "id": "mimph",
+    "lore": "/assets/atlas/lore/locations/mimph.md"
   },
   {
     "categoryId": "cities",
@@ -204,7 +214,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nimpeth/nimpeth.webp"
     },
-    "id": "nimpeth"
+    "id": "nimpeth",
+    "lore": "/assets/atlas/lore/locations/nimpeth.md"
   },
   {
     "categoryId": "cities",
@@ -221,7 +232,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ormpetarr/ormpetarr.webp"
     },
-    "id": "ormpetarr"
+    "id": "ormpetarr",
+    "lore": "/assets/atlas/lore/locations/ormpetarr.md"
   },
   {
     "categoryId": "cities",
@@ -238,7 +250,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/innarlith/innarlith.webp"
     },
-    "id": "innarlith"
+    "id": "innarlith",
+    "lore": "/assets/atlas/lore/locations/innarlith.md"
   },
   {
     "categoryId": "cities",
@@ -255,7 +268,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/akanax/akanax.webp"
     },
-    "id": "akanax"
+    "id": "akanax",
+    "lore": "/assets/atlas/lore/locations/akanax.md"
   },
   {
     "categoryId": "cities",
@@ -272,7 +286,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/heptios/heptios.webp"
     },
-    "id": "heptios"
+    "id": "heptios",
+    "lore": "/assets/atlas/lore/locations/heptios.md"
   },
   {
     "categoryId": "cities",
@@ -289,7 +304,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/luthcheq/luthcheq.webp"
     },
-    "id": "luthcheq"
+    "id": "luthcheq",
+    "lore": "/assets/atlas/lore/locations/luthcheq.md"
   },
   {
     "categoryId": "cities",
@@ -306,7 +322,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/cimbar/cimbar.webp"
     },
-    "id": "cimbar"
+    "id": "cimbar",
+    "lore": "/assets/atlas/lore/locations/cimbar.md"
   },
   {
     "categoryId": "cities",
@@ -323,7 +340,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/airspur/airspur.webp"
     },
-    "id": "airspur"
+    "id": "airspur",
+    "lore": "/assets/atlas/lore/locations/airspur.md"
   },
   {
     "categoryId": "cities",
@@ -340,7 +358,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/soorenar/soorenar.webp"
     },
-    "id": "soorenar"
+    "id": "soorenar",
+    "lore": "/assets/atlas/lore/locations/soorenar.md"
   },
   {
     "categoryId": "cities",
@@ -357,7 +376,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/messemprar/messemprar.webp"
     },
-    "id": "messemprar"
+    "id": "messemprar",
+    "lore": "/assets/atlas/lore/locations/messemprar.md"
   },
   {
     "categoryId": "cities",
@@ -374,7 +394,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/unthalass/unthalass.webp"
     },
-    "id": "unthalass"
+    "id": "unthalass",
+    "lore": "/assets/atlas/lore/locations/unthalass.md"
   },
   {
     "categoryId": "cities",
@@ -391,7 +412,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/gheldaneth/gheldaneth.webp"
     },
-    "id": "gheldaneth"
+    "id": "gheldaneth",
+    "lore": "/assets/atlas/lore/locations/gheldaneth.md"
   },
   {
     "categoryId": "cities",
@@ -408,7 +430,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/aleaxtis/aleaxtis.webp"
     },
-    "id": "aleaxtis"
+    "id": "aleaxtis",
+    "lore": "/assets/atlas/lore/locations/aleaxtis.md"
   },
   {
     "categoryId": "cities",
@@ -425,7 +448,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hilbrand/hilbrand.webp"
     },
-    "id": "hilbrand"
+    "id": "hilbrand",
+    "lore": "/assets/atlas/lore/locations/hilbrand.md"
   },
   {
     "categoryId": "cities",
@@ -442,7 +466,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/murbant/murbant.webp"
     },
-    "id": "murbant"
+    "id": "murbant",
+    "lore": "/assets/atlas/lore/locations/murbant.md"
   },
   {
     "categoryId": "cities",
@@ -459,7 +484,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/neldorild/neldorild.webp"
     },
-    "id": "neldorild"
+    "id": "neldorild",
+    "lore": "/assets/atlas/lore/locations/neldorild.md"
   },
   {
     "categoryId": "cities",
@@ -476,7 +502,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/surbroar/surbroar.webp"
     },
-    "id": "surbroar"
+    "id": "surbroar",
+    "lore": "/assets/atlas/lore/locations/surbroar.md"
   },
   {
     "categoryId": "cities",
@@ -493,7 +520,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/jhalhoran/jhalhoran.webp"
     },
-    "id": "jhalhoran"
+    "id": "jhalhoran",
+    "lore": "/assets/atlas/lore/locations/jhalhoran.md"
   },
   {
     "categoryId": "cities",
@@ -510,7 +538,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mishtan/mishtan.webp"
     },
-    "id": "mishtan"
+    "id": "mishtan",
+    "lore": "/assets/atlas/lore/locations/mishtan.md"
   },
   {
     "categoryId": "cities",
@@ -527,7 +556,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/skuld/skuld.webp"
     },
-    "id": "skuld"
+    "id": "skuld",
+    "lore": "/assets/atlas/lore/locations/skuld.md"
   },
   {
     "categoryId": "cities",
@@ -544,7 +574,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/maerlar/maerlar.webp"
     },
-    "id": "maerlar"
+    "id": "maerlar",
+    "lore": "/assets/atlas/lore/locations/maerlar.md"
   },
   {
     "categoryId": "cities",
@@ -561,7 +592,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/kholtar/kholtar.webp"
     },
-    "id": "kholtar"
+    "id": "kholtar",
+    "lore": "/assets/atlas/lore/locations/kholtar.md"
   },
   {
     "categoryId": "cities",
@@ -578,7 +610,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/delthuntle/delthuntle.webp"
     },
-    "id": "delthuntle"
+    "id": "delthuntle",
+    "lore": "/assets/atlas/lore/locations/delthuntle.md"
   },
   {
     "categoryId": "cities",
@@ -595,7 +628,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/laothkund/laothkund.webp"
     },
-    "id": "laothkund"
+    "id": "laothkund",
+    "lore": "/assets/atlas/lore/locations/laothkund.md"
   },
   {
     "categoryId": "cities",
@@ -612,7 +646,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/escalant/escalant.webp"
     },
-    "id": "escalant"
+    "id": "escalant",
+    "lore": "/assets/atlas/lore/locations/escalant.md"
   },
   {
     "categoryId": "cities",
@@ -629,7 +664,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/thasselen/thasselen.webp"
     },
-    "id": "thasselen"
+    "id": "thasselen",
+    "lore": "/assets/atlas/lore/locations/thasselen.md"
   },
   {
     "categoryId": "cities",
@@ -646,7 +682,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/bezantur/bezantur.webp"
     },
-    "id": "bezantur"
+    "id": "bezantur",
+    "lore": "/assets/atlas/lore/locations/bezantur.md"
   },
   {
     "categoryId": "cities",
@@ -663,7 +700,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sultim/sultim.webp"
     },
-    "id": "sultim"
+    "id": "sultim",
+    "lore": "/assets/atlas/lore/locations/sultim.md"
   },
   {
     "categoryId": "cities",
@@ -680,7 +718,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/murghyr/murghyr.webp"
     },
-    "id": "murghyr"
+    "id": "murghyr",
+    "lore": "/assets/atlas/lore/locations/murghyr.md"
   },
   {
     "categoryId": "cities",
@@ -697,7 +736,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/almorel/almorel.webp"
     },
-    "id": "almorel"
+    "id": "almorel",
+    "lore": "/assets/atlas/lore/locations/almorel.md"
   },
   {
     "categoryId": "cities",
@@ -714,7 +754,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/turelve/turelve.webp"
     },
-    "id": "turelve"
+    "id": "turelve",
+    "lore": "/assets/atlas/lore/locations/turelve.md"
   },
   {
     "categoryId": "cities",
@@ -731,7 +772,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sezilinta/sezilinta.webp"
     },
-    "id": "sezilinta"
+    "id": "sezilinta",
+    "lore": "/assets/atlas/lore/locations/sezilinta.md"
   },
   {
     "categoryId": "cities",
@@ -748,7 +790,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/assur/assur.webp"
     },
-    "id": "assur"
+    "id": "assur",
+    "lore": "/assets/atlas/lore/locations/assur.md"
   },
   {
     "categoryId": "cities",
@@ -765,7 +808,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/vaelan/vaelan.webp"
     },
-    "id": "vaelan"
+    "id": "vaelan",
+    "lore": "/assets/atlas/lore/locations/vaelan.md"
   },
   {
     "categoryId": "cities",
@@ -782,7 +826,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ormpe/ormpe.webp"
     },
-    "id": "ormpe"
+    "id": "ormpe",
+    "lore": "/assets/atlas/lore/locations/ormpe.md"
   },
   {
     "categoryId": "cities",
@@ -799,7 +844,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/pyratar/pyratar.webp"
     },
-    "id": "pyratar"
+    "id": "pyratar",
+    "lore": "/assets/atlas/lore/locations/pyratar.md"
   },
   {
     "categoryId": "cities",
@@ -816,7 +862,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/chavyondat/chavyondat.webp"
     },
-    "id": "chavyondat"
+    "id": "chavyondat",
+    "lore": "/assets/atlas/lore/locations/chavyondat.md"
   },
   {
     "categoryId": "cities",
@@ -833,7 +880,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/fasruil/fasruil.webp"
     },
-    "id": "fasruil"
+    "id": "fasruil",
+    "lore": "/assets/atlas/lore/locations/fasruil.md"
   },
   {
     "categoryId": "cities",
@@ -850,7 +898,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/beluir/beluir.webp"
     },
-    "id": "beluir"
+    "id": "beluir",
+    "lore": "/assets/atlas/lore/locations/beluir.md"
   },
   {
     "categoryId": "cities",
@@ -867,7 +916,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/chethel/chethel.webp"
     },
-    "id": "chethel"
+    "id": "chethel",
+    "lore": "/assets/atlas/lore/locations/chethel.md"
   },
   {
     "categoryId": "cities",
@@ -884,7 +934,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/krenadir/krenadir.webp"
     },
-    "id": "krenadir"
+    "id": "krenadir",
+    "lore": "/assets/atlas/lore/locations/krenadir.md"
   },
   {
     "categoryId": "cities",
@@ -901,7 +952,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/delzimmer/delzimmer.webp"
     },
-    "id": "delzimmer"
+    "id": "delzimmer",
+    "lore": "/assets/atlas/lore/locations/delzimmer.md"
   },
   {
     "categoryId": "cities",
@@ -918,7 +970,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hazuth/hazuth.webp"
     },
-    "id": "hazuth"
+    "id": "hazuth",
+    "lore": "/assets/atlas/lore/locations/hazuth.md"
   },
   {
     "categoryId": "cities",
@@ -935,7 +988,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ammathtar/ammathtar.webp"
     },
-    "id": "ammathtar"
+    "id": "ammathtar",
+    "lore": "/assets/atlas/lore/locations/ammathtar.md"
   },
   {
     "categoryId": "cities",
@@ -952,7 +1006,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/luenath/luenath.webp"
     },
-    "id": "luenath"
+    "id": "luenath",
+    "lore": "/assets/atlas/lore/locations/luenath.md"
   },
   {
     "categoryId": "cities",
@@ -969,7 +1024,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/herath/herath.webp"
     },
-    "id": "herath"
+    "id": "herath",
+    "lore": "/assets/atlas/lore/locations/herath.md"
   },
   {
     "categoryId": "cities",
@@ -986,7 +1042,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/prastuil/prastuil.webp"
     },
-    "id": "prastuil"
+    "id": "prastuil",
+    "lore": "/assets/atlas/lore/locations/prastuil.md"
   },
   {
     "categoryId": "cities",
@@ -1003,7 +1060,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hethar/hethar.webp"
     },
-    "id": "hethar"
+    "id": "hethar",
+    "lore": "/assets/atlas/lore/locations/hethar.md"
   },
   {
     "categoryId": "cities",
@@ -1020,7 +1078,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/cathyr/cathyr.webp"
     },
-    "id": "cathyr"
+    "id": "cathyr",
+    "lore": "/assets/atlas/lore/locations/cathyr.md"
   },
   {
     "categoryId": "cities",
@@ -1037,7 +1096,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/kormul/kormul.webp"
     },
-    "id": "kormul"
+    "id": "kormul",
+    "lore": "/assets/atlas/lore/locations/kormul.md"
   },
   {
     "categoryId": "cities",
@@ -1054,7 +1114,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/uzurr/uzurr.webp"
     },
-    "id": "uzurr"
+    "id": "uzurr",
+    "lore": "/assets/atlas/lore/locations/uzurr.md"
   },
   {
     "categoryId": "cities",
@@ -1071,7 +1132,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/maeruhal/maeruhal.webp"
     },
-    "id": "maeruhal"
+    "id": "maeruhal",
+    "lore": "/assets/atlas/lore/locations/maeruhal.md"
   },
   {
     "categoryId": "cities",
@@ -1088,7 +1150,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/aluarim/aluarim.webp"
     },
-    "id": "aluarim"
+    "id": "aluarim",
+    "lore": "/assets/atlas/lore/locations/aluarim.md"
   },
   {
     "categoryId": "cities",
@@ -1105,7 +1168,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/galdel/galdel.webp"
     },
-    "id": "galdel"
+    "id": "galdel",
+    "lore": "/assets/atlas/lore/locations/galdel.md"
   },
   {
     "categoryId": "cities",
@@ -1122,7 +1186,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/zalazuu/zalazuu.webp"
     },
-    "id": "zalazuu"
+    "id": "zalazuu",
+    "lore": "/assets/atlas/lore/locations/zalazuu.md"
   },
   {
     "categoryId": "cities",
@@ -1139,7 +1204,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/halarahh/halarahh.webp"
     },
-    "id": "halarahh"
+    "id": "halarahh",
+    "lore": "/assets/atlas/lore/locations/halarahh.md"
   },
   {
     "categoryId": "cities",
@@ -1156,7 +1222,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/khaerbaal/khaerbaal.webp"
     },
-    "id": "khaerbaal"
+    "id": "khaerbaal",
+    "lore": "/assets/atlas/lore/locations/khaerbaal.md"
   },
   {
     "categoryId": "cities",
@@ -1173,7 +1240,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/halagard/halagard.webp"
     },
-    "id": "halagard"
+    "id": "halagard",
+    "lore": "/assets/atlas/lore/locations/halagard.md"
   },
   {
     "categoryId": "cities",
@@ -1190,7 +1258,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mhairhetel/mhairhetel.webp"
     },
-    "id": "mhairhetel"
+    "id": "mhairhetel",
+    "lore": "/assets/atlas/lore/locations/mhairhetel.md"
   },
   {
     "categoryId": "cities",
@@ -1207,7 +1276,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/yallasch/yallasch.webp"
     },
-    "id": "yallasch"
+    "id": "yallasch",
+    "lore": "/assets/atlas/lore/locations/yallasch.md"
   },
   {
     "categoryId": "cities",
@@ -1224,7 +1294,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ormpur/ormpur.webp"
     },
-    "id": "ormpur"
+    "id": "ormpur",
+    "lore": "/assets/atlas/lore/locations/ormpur.md"
   },
   {
     "categoryId": "cities",
@@ -1241,7 +1312,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sheirtalar/sheirtalar.webp"
     },
-    "id": "sheirtalar"
+    "id": "sheirtalar",
+    "lore": "/assets/atlas/lore/locations/sheirtalar.md"
   },
   {
     "categoryId": "cities",
@@ -1258,7 +1330,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sheirlantar/sheirlantar.webp"
     },
-    "id": "sheirlantar"
+    "id": "sheirlantar",
+    "lore": "/assets/atlas/lore/locations/sheirlantar.md"
   },
   {
     "categoryId": "cities",
@@ -1275,7 +1348,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/lushpool/lushpool.webp"
     },
-    "id": "lushpool"
+    "id": "lushpool",
+    "lore": "/assets/atlas/lore/locations/lushpool.md"
   },
   {
     "categoryId": "cities",
@@ -1292,7 +1366,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ithmong/ithmong.webp"
     },
-    "id": "ithmong"
+    "id": "ithmong",
+    "lore": "/assets/atlas/lore/locations/ithmong.md"
   },
   {
     "categoryId": "cities",
@@ -1309,7 +1384,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sammaresh/sammaresh.webp"
     },
-    "id": "sammaresh"
+    "id": "sammaresh",
+    "lore": "/assets/atlas/lore/locations/sammaresh.md"
   },
   {
     "categoryId": "cities",
@@ -1326,7 +1402,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tashluta/tashluta.webp"
     },
-    "id": "tashluta"
+    "id": "tashluta",
+    "lore": "/assets/atlas/lore/locations/tashluta.md"
   },
   {
     "categoryId": "cities",
@@ -1343,7 +1420,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/derlusk/derlusk.webp"
     },
-    "id": "derlusk"
+    "id": "derlusk",
+    "lore": "/assets/atlas/lore/locations/derlusk.md"
   },
   {
     "categoryId": "cities",
@@ -1360,7 +1438,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ankhapur/ankhapur.webp"
     },
-    "id": "ankhapur"
+    "id": "ankhapur",
+    "lore": "/assets/atlas/lore/locations/ankhapur.md"
   },
   {
     "categoryId": "cities",
@@ -1377,7 +1456,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/saelmur/saelmur.webp"
     },
-    "id": "saelmur"
+    "id": "saelmur",
+    "lore": "/assets/atlas/lore/locations/saelmur.md"
   },
   {
     "categoryId": "cities",
@@ -1394,7 +1474,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mintar/mintar.webp"
     },
-    "id": "mintar"
+    "id": "mintar",
+    "lore": "/assets/atlas/lore/locations/mintar.md"
   },
   {
     "categoryId": "cities",
@@ -1411,7 +1492,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tulmon/tulmon.webp"
     },
-    "id": "tulmon"
+    "id": "tulmon",
+    "lore": "/assets/atlas/lore/locations/tulmon.md"
   },
   {
     "categoryId": "cities",
@@ -1428,7 +1510,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/yeshpek/yeshpek.webp"
     },
-    "id": "yeshpek"
+    "id": "yeshpek",
+    "lore": "/assets/atlas/lore/locations/yeshpek.md"
   },
   {
     "categoryId": "cities",
@@ -1445,7 +1528,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/torich/torich.webp"
     },
-    "id": "torich"
+    "id": "torich",
+    "lore": "/assets/atlas/lore/locations/torich.md"
   },
   {
     "categoryId": "cities",
@@ -1462,7 +1546,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/almraiven/almraiven.webp"
     },
-    "id": "almraiven"
+    "id": "almraiven",
+    "lore": "/assets/atlas/lore/locations/almraiven.md"
   },
   {
     "categoryId": "cities",
@@ -1479,7 +1564,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/volothamp/volothamp.webp"
     },
-    "id": "volothamp"
+    "id": "volothamp",
+    "lore": "/assets/atlas/lore/locations/volothamp.md"
   },
   {
     "categoryId": "cities",
@@ -1496,7 +1582,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/saradush/saradush.webp"
     },
-    "id": "saradush"
+    "id": "saradush",
+    "lore": "/assets/atlas/lore/locations/saradush.md"
   },
   {
     "categoryId": "cities",
@@ -1513,7 +1600,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/schamedar/schamedar.webp"
     },
-    "id": "schamedar"
+    "id": "schamedar",
+    "lore": "/assets/atlas/lore/locations/schamedar.md"
   },
   {
     "categoryId": "cities",
@@ -1530,7 +1618,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/manshaka/manshaka.webp"
     },
-    "id": "manshaka"
+    "id": "manshaka",
+    "lore": "/assets/atlas/lore/locations/manshaka.md"
   },
   {
     "categoryId": "cities",
@@ -1547,7 +1636,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/keltar/keltar.webp"
     },
-    "id": "keltar"
+    "id": "keltar",
+    "lore": "/assets/atlas/lore/locations/keltar.md"
   },
   {
     "categoryId": "cities",
@@ -1564,7 +1654,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/calimport/calimport.webp"
     },
-    "id": "calimport"
+    "id": "calimport",
+    "lore": "/assets/atlas/lore/locations/calimport.md"
   },
   {
     "categoryId": "cities",
@@ -1581,7 +1672,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/memnon/memnon.webp"
     },
-    "id": "memnon"
+    "id": "memnon",
+    "lore": "/assets/atlas/lore/locations/memnon.md"
   },
   {
     "categoryId": "cities",
@@ -1598,7 +1690,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/myratma/myratma.webp"
     },
-    "id": "myratma"
+    "id": "myratma",
+    "lore": "/assets/atlas/lore/locations/myratma.md"
   },
   {
     "categoryId": "cities",
@@ -1615,7 +1708,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/pyarados/pyarados.webp"
     },
-    "id": "pyarados"
+    "id": "pyarados",
+    "lore": "/assets/atlas/lore/locations/pyarados.md"
   },
   {
     "categoryId": "cities",
@@ -1632,7 +1726,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tyraturos/tyraturos.webp"
     },
-    "id": "tyraturos"
+    "id": "tyraturos",
+    "lore": "/assets/atlas/lore/locations/tyraturos.md"
   },
   {
     "categoryId": "cities",
@@ -1649,7 +1744,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nethjet/nethjet.webp"
     },
-    "id": "nethjet"
+    "id": "nethjet",
+    "lore": "/assets/atlas/lore/locations/nethjet.md"
   },
   {
     "categoryId": "cities",
@@ -1666,7 +1762,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/eltabbar/eltabbar.webp"
     },
-    "id": "eltabbar"
+    "id": "eltabbar",
+    "lore": "/assets/atlas/lore/locations/eltabbar.md"
   },
   {
     "categoryId": "cities",
@@ -1683,7 +1780,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/surthay/surthay.webp"
     },
-    "id": "surthay"
+    "id": "surthay",
+    "lore": "/assets/atlas/lore/locations/surthay.md"
   },
   {
     "categoryId": "cities",
@@ -1700,7 +1798,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mulsantir/mulsantir.webp"
     },
-    "id": "mulsantir"
+    "id": "mulsantir",
+    "lore": "/assets/atlas/lore/locations/mulsantir.md"
   },
   {
     "categoryId": "cities",
@@ -1717,7 +1816,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/phsant/phsant.webp"
     },
-    "id": "phsant"
+    "id": "phsant",
+    "lore": "/assets/atlas/lore/locations/phsant.md"
   },
   {
     "categoryId": "cities",
@@ -1734,7 +1834,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/phent/phent.webp"
     },
-    "id": "phent"
+    "id": "phent",
+    "lore": "/assets/atlas/lore/locations/phent.md"
   },
   {
     "categoryId": "cities",
@@ -1751,7 +1852,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nyth/nyth.webp"
     },
-    "id": "nyth"
+    "id": "nyth",
+    "lore": "/assets/atlas/lore/locations/nyth.md"
   },
   {
     "categoryId": "cities",
@@ -1768,7 +1870,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/thassalra/thassalra.webp"
     },
-    "id": "thassalra"
+    "id": "thassalra",
+    "lore": "/assets/atlas/lore/locations/thassalra.md"
   },
   {
     "categoryId": "cities",
@@ -1785,7 +1888,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/culmaster/culmaster.webp"
     },
-    "id": "culmaster"
+    "id": "culmaster",
+    "lore": "/assets/atlas/lore/locations/culmaster.md"
   },
   {
     "categoryId": "cities",
@@ -1802,7 +1906,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/milvarune/milvarune.webp"
     },
-    "id": "milvarune"
+    "id": "milvarune",
+    "lore": "/assets/atlas/lore/locations/milvarune.md"
   },
   {
     "categoryId": "cities",
@@ -1819,7 +1924,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nethentir/nethentir.webp"
     },
-    "id": "nethentir"
+    "id": "nethentir",
+    "lore": "/assets/atlas/lore/locations/nethentir.md"
   },
   {
     "categoryId": "cities",
@@ -1836,7 +1942,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/telflamm/telflamm.webp"
     },
-    "id": "telflamm"
+    "id": "telflamm",
+    "lore": "/assets/atlas/lore/locations/telflamm.md"
   },
   {
     "categoryId": "cities",
@@ -1853,7 +1960,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sarshel/sarshel.webp"
     },
-    "id": "sarshel"
+    "id": "sarshel",
+    "lore": "/assets/atlas/lore/locations/sarshel.md"
   },
   {
     "categoryId": "cities",
@@ -1870,7 +1978,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/dilpur/dilpur.webp"
     },
-    "id": "dilpur"
+    "id": "dilpur",
+    "lore": "/assets/atlas/lore/locations/dilpur.md"
   },
   {
     "categoryId": "cities",
@@ -1887,7 +1996,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hlammach/hlammach.webp"
     },
-    "id": "hlammach"
+    "id": "hlammach",
+    "lore": "/assets/atlas/lore/locations/hlammach.md"
   },
   {
     "categoryId": "cities",
@@ -1904,7 +2014,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/lyrabar/lyrabar.webp"
     },
-    "id": "lyrabar"
+    "id": "lyrabar",
+    "lore": "/assets/atlas/lore/locations/lyrabar.md"
   },
   {
     "categoryId": "cities",
@@ -1921,7 +2032,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/spandeliyon/spandeliyon.webp"
     },
-    "id": "spandeliyon"
+    "id": "spandeliyon",
+    "lore": "/assets/atlas/lore/locations/spandeliyon.md"
   },
   {
     "categoryId": "cities",
@@ -1938,7 +2050,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/veltalar/veltalar.webp"
     },
-    "id": "veltalar"
+    "id": "veltalar",
+    "lore": "/assets/atlas/lore/locations/veltalar.md"
   },
   {
     "categoryId": "cities",
@@ -1955,7 +2068,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/furthinghome/furthinghome.webp"
     },
-    "id": "furthinghome"
+    "id": "furthinghome",
+    "lore": "/assets/atlas/lore/locations/furthinghome.md"
   },
   {
     "categoryId": "cities",
@@ -1972,7 +2086,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/relkaths_foot/relkaths_foot.webp"
     },
-    "id": "relkaths_foot"
+    "id": "relkaths_foot",
+    "lore": "/assets/atlas/lore/locations/relkaths_foot.md"
   },
   {
     "categoryId": "cities",
@@ -1989,7 +2104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/riatavin/riatavin.webp"
     },
-    "id": "riatavin"
+    "id": "riatavin",
+    "lore": "/assets/atlas/lore/locations/riatavin.md"
   },
   {
     "categoryId": "cities",
@@ -2006,7 +2122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/eshpurta/eshpurta.webp"
     },
-    "id": "eshpurta"
+    "id": "eshpurta",
+    "lore": "/assets/atlas/lore/locations/eshpurta.md"
   },
   {
     "categoryId": "cities",
@@ -2023,7 +2140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/keczulla/keczulla.webp"
     },
-    "id": "keczulla"
+    "id": "keczulla",
+    "lore": "/assets/atlas/lore/locations/keczulla.md"
   },
   {
     "categoryId": "cities",
@@ -2040,7 +2158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/amnwater/amnwater.webp"
     },
-    "id": "amnwater"
+    "id": "amnwater",
+    "lore": "/assets/atlas/lore/locations/amnwater.md"
   },
   {
     "categoryId": "cities",
@@ -2057,7 +2176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/esmeltaran/esmeltaran.webp"
     },
-    "id": "esmeltaran"
+    "id": "esmeltaran",
+    "lore": "/assets/atlas/lore/locations/esmeltaran.md"
   },
   {
     "categoryId": "cities",
@@ -2074,7 +2194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/crimmor/crimmor.webp"
     },
-    "id": "crimmor"
+    "id": "crimmor",
+    "lore": "/assets/atlas/lore/locations/crimmor.md"
   },
   {
     "categoryId": "cities",
@@ -2091,7 +2212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/purskul/purskul.webp"
     },
-    "id": "purskul"
+    "id": "purskul",
+    "lore": "/assets/atlas/lore/locations/purskul.md"
   },
   {
     "categoryId": "cities",
@@ -2108,7 +2230,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/murann/murann.webp"
     },
-    "id": "murann"
+    "id": "murann",
+    "lore": "/assets/atlas/lore/locations/murann.md"
   },
   {
     "categoryId": "cities",
@@ -2125,7 +2248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/silverymoon/silverymoon.webp"
     },
-    "id": "silverymoon"
+    "id": "silverymoon",
+    "lore": "/assets/atlas/lore/locations/silverymoon.md"
   },
   {
     "categoryId": "cities",
@@ -2142,7 +2266,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/baldurs_gate/baldurs_gate.webp"
     },
-    "id": "baldurs_gate"
+    "id": "baldurs_gate",
+    "lore": "/assets/atlas/lore/locations/baldurs_gate.md"
   },
   {
     "categoryId": "cities",
@@ -2159,7 +2284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/athkatla/athkatla.webp"
     },
-    "id": "athkatla"
+    "id": "athkatla",
+    "lore": "/assets/atlas/lore/locations/athkatla.md"
   },
   {
     "categoryId": "cities",
@@ -2176,7 +2302,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/zazesspur/zazesspur.webp"
     },
-    "id": "zazesspur"
+    "id": "zazesspur",
+    "lore": "/assets/atlas/lore/locations/zazesspur.md"
   },
   {
     "categoryId": "cities",
@@ -2193,7 +2320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/suldanessellar/suldanessellar.webp"
     },
-    "id": "suldanessellar"
+    "id": "suldanessellar",
+    "lore": "/assets/atlas/lore/locations/suldanessellar.md"
   },
   {
     "categoryId": "cities",
@@ -2210,7 +2338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/assam/assam.webp"
     },
-    "id": "assam"
+    "id": "assam",
+    "lore": "/assets/atlas/lore/locations/assam.md"
   },
   {
     "categoryId": "cities",
@@ -2227,7 +2356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/lheshayl/lheshayl.webp"
     },
-    "id": "lheshayl"
+    "id": "lheshayl",
+    "lore": "/assets/atlas/lore/locations/lheshayl.md"
   },
   {
     "categoryId": "cities",
@@ -2244,7 +2374,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ormath/ormath.webp"
     },
-    "id": "ormath"
+    "id": "ormath",
+    "lore": "/assets/atlas/lore/locations/ormath.md"
   },
   {
     "categoryId": "cities",
@@ -2261,7 +2392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/llorbauth/llorbauth.webp"
     },
-    "id": "llorbauth"
+    "id": "llorbauth",
+    "lore": "/assets/atlas/lore/locations/llorbauth.md"
   },
   {
     "categoryId": "cities",
@@ -2278,7 +2410,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/duhlnarim/duhlnarim.webp"
     },
-    "id": "duhlnarim"
+    "id": "duhlnarim",
+    "lore": "/assets/atlas/lore/locations/duhlnarim.md"
   },
   {
     "categoryId": "cities",
@@ -2295,7 +2428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/surkh/surkh.webp"
     },
-    "id": "surkh"
+    "id": "surkh",
+    "lore": "/assets/atlas/lore/locations/surkh.md"
   },
   {
     "categoryId": "cities",
@@ -2312,7 +2446,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/wheloon/wheloon.webp"
     },
-    "id": "wheloon"
+    "id": "wheloon",
+    "lore": "/assets/atlas/lore/locations/wheloon.md"
   },
   {
     "categoryId": "cities",
@@ -2329,7 +2464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/daerlun/daerlun.webp"
     },
-    "id": "daerlun"
+    "id": "daerlun",
+    "lore": "/assets/atlas/lore/locations/daerlun.md"
   },
   {
     "categoryId": "cities",
@@ -2346,7 +2482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/urmlaspyr/urmlaspyr.webp"
     },
-    "id": "urmlaspyr"
+    "id": "urmlaspyr",
+    "lore": "/assets/atlas/lore/locations/urmlaspyr.md"
   },
   {
     "categoryId": "cities",
@@ -2363,7 +2500,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/lachom/lachom.webp"
     },
-    "id": "lachom"
+    "id": "lachom",
+    "lore": "/assets/atlas/lore/locations/lachom.md"
   },
   {
     "categoryId": "cities",
@@ -2380,7 +2518,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/berdusk/berdusk.webp"
     },
-    "id": "berdusk"
+    "id": "berdusk",
+    "lore": "/assets/atlas/lore/locations/berdusk.md"
   },
   {
     "categoryId": "cities",
@@ -2397,7 +2536,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/archenbridge/archenbridge.webp"
     },
-    "id": "archenbridge"
+    "id": "archenbridge",
+    "lore": "/assets/atlas/lore/locations/archenbridge.md"
   },
   {
     "categoryId": "cities",
@@ -2414,7 +2554,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/marsember/marsember.webp"
     },
-    "id": "marsember"
+    "id": "marsember",
+    "lore": "/assets/atlas/lore/locations/marsember.md"
   },
   {
     "categoryId": "cities",
@@ -2431,7 +2572,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/suzail/suzail.webp"
     },
-    "id": "suzail"
+    "id": "suzail",
+    "lore": "/assets/atlas/lore/locations/suzail.md"
   },
   {
     "categoryId": "cities",
@@ -2448,7 +2590,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/westgate/westgate.webp"
     },
-    "id": "westgate"
+    "id": "westgate",
+    "lore": "/assets/atlas/lore/locations/westgate.md"
   },
   {
     "categoryId": "cities",
@@ -2465,7 +2608,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/teziir/teziir.webp"
     },
-    "id": "teziir"
+    "id": "teziir",
+    "lore": "/assets/atlas/lore/locations/teziir.md"
   },
   {
     "categoryId": "cities",
@@ -2482,7 +2626,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/elversult/elversult.webp"
     },
-    "id": "elversult"
+    "id": "elversult",
+    "lore": "/assets/atlas/lore/locations/elversult.md"
   },
   {
     "categoryId": "cities",
@@ -2499,7 +2644,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/proskur/proskur.webp"
     },
-    "id": "proskur"
+    "id": "proskur",
+    "lore": "/assets/atlas/lore/locations/proskur.md"
   },
   {
     "categoryId": "cities",
@@ -2516,7 +2662,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/arabel/arabel.webp"
     },
-    "id": "arabel"
+    "id": "arabel",
+    "lore": "/assets/atlas/lore/locations/arabel.md"
   },
   {
     "categoryId": "cities",
@@ -2533,7 +2680,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/telvanlu/telvanlu.webp"
     },
-    "id": "telvanlu"
+    "id": "telvanlu",
+    "lore": "/assets/atlas/lore/locations/telvanlu.md"
   },
   {
     "categoryId": "cities",
@@ -2550,7 +2698,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/iriaebor/iriaebor.webp"
     },
-    "id": "iriaebor"
+    "id": "iriaebor",
+    "lore": "/assets/atlas/lore/locations/iriaebor.md"
   },
   {
     "categoryId": "cities",
@@ -2567,7 +2716,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/elturel/elturel.webp"
     },
-    "id": "elturel"
+    "id": "elturel",
+    "lore": "/assets/atlas/lore/locations/elturel.md"
   },
   {
     "categoryId": "cities",
@@ -2584,7 +2734,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hills_edge/hills_edge.webp"
     },
-    "id": "hills_edge"
+    "id": "hills_edge",
+    "lore": "/assets/atlas/lore/locations/hills_edge.md"
   },
   {
     "categoryId": "cities",
@@ -2601,7 +2752,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/evereska/evereska.webp"
     },
-    "id": "evereska"
+    "id": "evereska",
+    "lore": "/assets/atlas/lore/locations/evereska.md"
   },
   {
     "categoryId": "cities",
@@ -2618,7 +2770,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/loudwater/loudwater.webp"
     },
-    "id": "loudwater"
+    "id": "loudwater",
+    "lore": "/assets/atlas/lore/locations/loudwater.md"
   },
   {
     "categoryId": "cities",
@@ -2635,7 +2788,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nathlekh/nathlekh.webp"
     },
-    "id": "nathlekh"
+    "id": "nathlekh",
+    "lore": "/assets/atlas/lore/locations/nathlekh.md"
   },
   {
     "categoryId": "cities",
@@ -2652,7 +2806,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/cedarsproke/cedarsproke.webp"
     },
-    "id": "cedarsproke"
+    "id": "cedarsproke",
+    "lore": "/assets/atlas/lore/locations/cedarsproke.md"
   },
   {
     "categoryId": "cities",
@@ -2669,7 +2824,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nleeth/nleeth.webp"
     },
-    "id": "nleeth"
+    "id": "nleeth",
+    "lore": "/assets/atlas/lore/locations/nleeth.md"
   },
   {
     "categoryId": "cities",
@@ -2686,7 +2842,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/amah/amah.webp"
     },
-    "id": "amah"
+    "id": "amah",
+    "lore": "/assets/atlas/lore/locations/amah.md"
   },
   {
     "categoryId": "cities",
@@ -2703,7 +2860,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hlondeth/hlondeth.webp"
     },
-    "id": "hlondeth"
+    "id": "hlondeth",
+    "lore": "/assets/atlas/lore/locations/hlondeth.md"
   },
   {
     "categoryId": "cities",
@@ -2720,7 +2878,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/scornubel/scornubel.webp"
     },
-    "id": "scornubel"
+    "id": "scornubel",
+    "lore": "/assets/atlas/lore/locations/scornubel.md"
   },
   {
     "categoryId": "cities",
@@ -2737,7 +2896,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/alaghon/alaghon.webp"
     },
-    "id": "alaghon"
+    "id": "alaghon",
+    "lore": "/assets/atlas/lore/locations/alaghon.md"
   },
   {
     "categoryId": "cities",
@@ -2754,7 +2914,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/anaxadren/anaxadren.webp"
     },
-    "id": "anaxadren"
+    "id": "anaxadren",
+    "lore": "/assets/atlas/lore/locations/anaxadren.md"
   },
   {
     "categoryId": "cities",
@@ -2771,7 +2932,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/xyladren/xyladren.webp"
     },
-    "id": "xyladren"
+    "id": "xyladren",
+    "lore": "/assets/atlas/lore/locations/xyladren.md"
   },
   {
     "categoryId": "cities",
@@ -2788,7 +2950,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/xedras/xedras.webp"
     },
-    "id": "xedras"
+    "id": "xedras",
+    "lore": "/assets/atlas/lore/locations/xedras.md"
   },
   {
     "categoryId": "cities",
@@ -2805,7 +2968,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/berydren/berydren.webp"
     },
-    "id": "berydren"
+    "id": "berydren",
+    "lore": "/assets/atlas/lore/locations/berydren.md"
   },
   {
     "categoryId": "cities",
@@ -2822,7 +2986,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/xorhun/xorhun.webp"
     },
-    "id": "xorhun"
+    "id": "xorhun",
+    "lore": "/assets/atlas/lore/locations/xorhun.md"
   },
   {
     "categoryId": "cities",
@@ -2839,7 +3004,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/nonthal/nonthal.webp"
     },
-    "id": "nonthal"
+    "id": "nonthal",
+    "lore": "/assets/atlas/lore/locations/nonthal.md"
   },
   {
     "categoryId": "cities",
@@ -2856,7 +3022,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/urbeth/urbeth.webp"
     },
-    "id": "urbeth"
+    "id": "urbeth",
+    "lore": "/assets/atlas/lore/locations/urbeth.md"
   },
   {
     "categoryId": "cities",
@@ -2873,7 +3040,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hillsfar/hillsfar.webp"
     },
-    "id": "hillsfar"
+    "id": "hillsfar",
+    "lore": "/assets/atlas/lore/locations/hillsfar.md"
   },
   {
     "categoryId": "cities",
@@ -2890,7 +3058,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mulmaster/mulmaster.webp"
     },
-    "id": "mulmaster"
+    "id": "mulmaster",
+    "lore": "/assets/atlas/lore/locations/mulmaster.md"
   },
   {
     "categoryId": "cities",
@@ -2907,7 +3076,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/phlan/phlan.webp"
     },
-    "id": "phlan"
+    "id": "phlan",
+    "lore": "/assets/atlas/lore/locations/phlan.md"
   },
   {
     "categoryId": "cities",
@@ -2924,7 +3094,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/thentia/thentia.webp"
     },
-    "id": "thentia"
+    "id": "thentia",
+    "lore": "/assets/atlas/lore/locations/thentia.md"
   },
   {
     "categoryId": "cities",
@@ -2941,7 +3112,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/melvaunt/melvaunt.webp"
     },
-    "id": "melvaunt"
+    "id": "melvaunt",
+    "lore": "/assets/atlas/lore/locations/melvaunt.md"
   },
   {
     "categoryId": "cities",
@@ -2958,7 +3130,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/yhaunn/yhaunn.webp"
     },
-    "id": "yhaunn"
+    "id": "yhaunn",
+    "lore": "/assets/atlas/lore/locations/yhaunn.md"
   },
   {
     "categoryId": "cities",
@@ -2975,7 +3148,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/immurks_hold/immurks_hold.webp"
     },
-    "id": "immurks_hold"
+    "id": "immurks_hold",
+    "lore": "/assets/atlas/lore/locations/immurks_hold.md"
   },
   {
     "categoryId": "cities",
@@ -2992,7 +3166,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/myth_nantar/myth_nantar.webp"
     },
-    "id": "myth_nantar"
+    "id": "myth_nantar",
+    "lore": "/assets/atlas/lore/locations/myth_nantar.md"
   },
   {
     "categoryId": "cities",
@@ -3009,7 +3184,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/procampur/procampur.webp"
     },
-    "id": "procampur"
+    "id": "procampur",
+    "lore": "/assets/atlas/lore/locations/procampur.md"
   },
   {
     "categoryId": "cities",
@@ -3026,7 +3202,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tsurlagol/tsurlagol.webp"
     },
-    "id": "tsurlagol"
+    "id": "tsurlagol",
+    "lore": "/assets/atlas/lore/locations/tsurlagol.md"
   },
   {
     "categoryId": "cities",
@@ -3043,7 +3220,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ravens_bluff/ravens_bluff.webp"
     },
-    "id": "ravens_bluff"
+    "id": "ravens_bluff",
+    "lore": "/assets/atlas/lore/locations/ravens_bluff.md"
   },
   {
     "categoryId": "cities",
@@ -3060,7 +3238,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hulburg/hulburg.webp"
     },
-    "id": "hulburg"
+    "id": "hulburg",
+    "lore": "/assets/atlas/lore/locations/hulburg.md"
   },
   {
     "categoryId": "cities",
@@ -3077,7 +3256,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ordulin/ordulin.webp"
     },
-    "id": "ordulin"
+    "id": "ordulin",
+    "lore": "/assets/atlas/lore/locations/ordulin.md"
   },
   {
     "categoryId": "cities",
@@ -3094,7 +3274,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/calaunt/calaunt.webp"
     },
-    "id": "calaunt"
+    "id": "calaunt",
+    "lore": "/assets/atlas/lore/locations/calaunt.md"
   },
   {
     "categoryId": "cities",
@@ -3111,7 +3292,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tantras/tantras.webp"
     },
-    "id": "tantras"
+    "id": "tantras",
+    "lore": "/assets/atlas/lore/locations/tantras.md"
   },
   {
     "categoryId": "cities",
@@ -3128,7 +3310,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/selgaunt/selgaunt.webp"
     },
-    "id": "selgaunt"
+    "id": "selgaunt",
+    "lore": "/assets/atlas/lore/locations/selgaunt.md"
   },
   {
     "categoryId": "cities",
@@ -3145,7 +3328,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/saerloon/saerloon.webp"
     },
-    "id": "saerloon"
+    "id": "saerloon",
+    "lore": "/assets/atlas/lore/locations/saerloon.md"
   },
   {
     "categoryId": "cities",
@@ -3162,7 +3346,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sundabar/sundabar.webp"
     },
-    "id": "sundabar"
+    "id": "sundabar",
+    "lore": "/assets/atlas/lore/locations/sundabar.md"
   },
   {
     "categoryId": "cities",
@@ -3179,7 +3364,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/samargol/samargol.webp"
     },
-    "id": "samargol"
+    "id": "samargol",
+    "lore": "/assets/atlas/lore/locations/samargol.md"
   },
   {
     "categoryId": "cities",
@@ -3196,7 +3382,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/taruin/taruin.webp"
     },
-    "id": "taruin"
+    "id": "taruin",
+    "lore": "/assets/atlas/lore/locations/taruin.md"
   },
   {
     "categoryId": "cities",
@@ -3213,7 +3400,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/rassatan/rassatan.webp"
     },
-    "id": "rassatan"
+    "id": "rassatan",
+    "lore": "/assets/atlas/lore/locations/rassatan.md"
   },
   {
     "categoryId": "cities",
@@ -3230,7 +3418,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/narubel/narubel.webp"
     },
-    "id": "narubel"
+    "id": "narubel",
+    "lore": "/assets/atlas/lore/locations/narubel.md"
   },
   {
     "categoryId": "cities",
@@ -3247,7 +3436,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/delselar/delselar.webp"
     },
-    "id": "delselar"
+    "id": "delselar",
+    "lore": "/assets/atlas/lore/locations/delselar.md"
   },
   {
     "categoryId": "cities",
@@ -3264,7 +3454,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/lundeth/lundeth.webp"
     },
-    "id": "lundeth"
+    "id": "lundeth",
+    "lore": "/assets/atlas/lore/locations/lundeth.md"
   },
   {
     "categoryId": "cities",
@@ -3281,7 +3472,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/thindar/thindar.webp"
     },
-    "id": "thindar"
+    "id": "thindar",
+    "lore": "/assets/atlas/lore/locations/thindar.md"
   },
   {
     "categoryId": "cities",
@@ -3298,7 +3490,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/gurdeth/gurdeth.webp"
     },
-    "id": "gurdeth"
+    "id": "gurdeth",
+    "lore": "/assets/atlas/lore/locations/gurdeth.md"
   },
   {
     "categoryId": "cities",
@@ -3315,7 +3508,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/everlund/everlund.webp"
     },
-    "id": "everlund"
+    "id": "everlund",
+    "lore": "/assets/atlas/lore/locations/everlund.md"
   },
   {
     "categoryId": "cities",
@@ -3332,7 +3526,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/menzoberranzan/menzoberranzan.webp"
     },
-    "id": "menzoberranzan"
+    "id": "menzoberranzan",
+    "lore": "/assets/atlas/lore/locations/menzoberranzan.md"
   },
   {
     "categoryId": "cities",
@@ -3349,7 +3544,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/yartar/yartar.webp"
     },
-    "id": "yartar"
+    "id": "yartar",
+    "lore": "/assets/atlas/lore/locations/yartar.md"
   },
   {
     "categoryId": "cities",
@@ -3366,7 +3562,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/port_nyanzaru/port_nyanzaru.webp"
     },
-    "id": "port_nyanzaru"
+    "id": "port_nyanzaru",
+    "lore": "/assets/atlas/lore/locations/port_nyanzaru.md"
   },
   {
     "categoryId": "cities",
@@ -3383,7 +3580,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mezro/mezro.webp"
     },
-    "id": "mezro"
+    "id": "mezro",
+    "lore": "/assets/atlas/lore/locations/mezro.md"
   },
   {
     "categoryId": "cities",
@@ -3400,7 +3598,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sszuraassnee/sszuraassnee.webp"
     },
-    "id": "sszuraassnee"
+    "id": "sszuraassnee",
+    "lore": "/assets/atlas/lore/locations/sszuraassnee.md"
   },
   {
     "categoryId": "cities",
@@ -3417,7 +3616,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ssessethenaa/ssessethenaa.webp"
     },
-    "id": "ssessethenaa"
+    "id": "ssessethenaa",
+    "lore": "/assets/atlas/lore/locations/ssessethenaa.md"
   },
   {
     "categoryId": "cities",
@@ -3434,7 +3634,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sskhanaja/sskhanaja.webp"
     },
-    "id": "sskhanaja"
+    "id": "sskhanaja",
+    "lore": "/assets/atlas/lore/locations/sskhanaja.md"
   },
   {
     "categoryId": "cities",
@@ -3451,7 +3652,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tsenviilyq/tsenviilyq.webp"
     },
-    "id": "tsenviilyq"
+    "id": "tsenviilyq",
+    "lore": "/assets/atlas/lore/locations/tsenviilyq.md"
   },
   {
     "categoryId": "cities",
@@ -3468,7 +3670,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/anchoril/anchoril.webp"
     },
-    "id": "anchoril"
+    "id": "anchoril",
+    "lore": "/assets/atlas/lore/locations/anchoril.md"
   },
   {
     "categoryId": "cities",
@@ -3485,7 +3688,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/illul/illul.webp"
     },
-    "id": "illul"
+    "id": "illul",
+    "lore": "/assets/atlas/lore/locations/illul.md"
   },
   {
     "categoryId": "cities",
@@ -3502,7 +3706,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sambar/sambar.webp"
     },
-    "id": "sambar"
+    "id": "sambar",
+    "lore": "/assets/atlas/lore/locations/sambar.md"
   },
   {
     "categoryId": "cities",
@@ -3519,7 +3724,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sundrah/sundrah.webp"
     },
-    "id": "sundrah"
+    "id": "sundrah",
+    "lore": "/assets/atlas/lore/locations/sundrah.md"
   },
   {
     "categoryId": "cities",
@@ -3536,7 +3742,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/gauntlgrym/gauntlgrym.webp"
     },
-    "id": "gauntlgrym"
+    "id": "gauntlgrym",
+    "lore": "/assets/atlas/lore/locations/gauntlgrym.md"
   },
   {
     "categoryId": "cities",
@@ -3553,7 +3760,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tupaal/tupaal.webp"
     },
-    "id": "tupaal"
+    "id": "tupaal",
+    "lore": "/assets/atlas/lore/locations/tupaal.md"
   },
   {
     "categoryId": "cities",
@@ -3570,7 +3778,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/orilidren/orilidren.webp"
     },
-    "id": "orilidren"
+    "id": "orilidren",
+    "lore": "/assets/atlas/lore/locations/orilidren.md"
   },
   {
     "categoryId": "cities",
@@ -3587,7 +3796,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/thuridru/thuridru.webp"
     },
-    "id": "thuridru"
+    "id": "thuridru",
+    "lore": "/assets/atlas/lore/locations/thuridru.md"
   },
   {
     "categoryId": "cities",
@@ -3604,7 +3814,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/grand_tor_arcanal/grand_tor_arcanal.webp"
     },
-    "id": "grand_tor_arcanal"
+    "id": "grand_tor_arcanal",
+    "lore": "/assets/atlas/lore/locations/grand_tor_arcanal.md"
   },
   {
     "categoryId": "cities",
@@ -3621,7 +3832,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/pumanath/pumanath.webp"
     },
-    "id": "pumanath"
+    "id": "pumanath",
+    "lore": "/assets/atlas/lore/locations/pumanath.md"
   },
   {
     "categoryId": "cities",
@@ -3638,7 +3850,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/ahlorsath/ahlorsath.webp"
     },
-    "id": "ahlorsath"
+    "id": "ahlorsath",
+    "lore": "/assets/atlas/lore/locations/ahlorsath.md"
   },
   {
     "categoryId": "cities",
@@ -3655,7 +3868,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/vuuvaxath/vuuvaxath.webp"
     },
-    "id": "vuuvaxath"
+    "id": "vuuvaxath",
+    "lore": "/assets/atlas/lore/locations/vuuvaxath.md"
   },
   {
     "categoryId": "cities",
@@ -3672,7 +3886,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/usrath/usrath.webp"
     },
-    "id": "usrath"
+    "id": "usrath",
+    "lore": "/assets/atlas/lore/locations/usrath.md"
   },
   {
     "categoryId": "cities",
@@ -3689,7 +3904,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/usholm/usholm.webp"
     },
-    "id": "usholm"
+    "id": "usholm",
+    "lore": "/assets/atlas/lore/locations/usholm.md"
   },
   {
     "categoryId": "cities",
@@ -3706,7 +3922,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/mulptan/mulptan.webp"
     },
-    "id": "mulptan"
+    "id": "mulptan",
+    "lore": "/assets/atlas/lore/locations/mulptan.md"
   },
   {
     "categoryId": "cities",
@@ -3723,7 +3940,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/immilmar/immilmar.webp"
     },
-    "id": "immilmar"
+    "id": "immilmar",
+    "lore": "/assets/atlas/lore/locations/immilmar.md"
   },
   {
     "categoryId": "cities",
@@ -3740,7 +3958,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/bildoobaris/bildoobaris.webp"
     },
-    "id": "bildoobaris"
+    "id": "bildoobaris",
+    "lore": "/assets/atlas/lore/locations/bildoobaris.md"
   },
   {
     "categoryId": "cities",
@@ -3757,7 +3976,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/helgabal/helgabal.webp"
     },
-    "id": "helgabal"
+    "id": "helgabal",
+    "lore": "/assets/atlas/lore/locations/helgabal.md"
   },
   {
     "categoryId": "cities",
@@ -3774,7 +3994,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/trailsend/trailsend.webp"
     },
-    "id": "trailsend"
+    "id": "trailsend",
+    "lore": "/assets/atlas/lore/locations/trailsend.md"
   },
   {
     "categoryId": "cities",
@@ -3791,7 +4012,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/praka/praka.webp"
     },
-    "id": "praka"
+    "id": "praka",
+    "lore": "/assets/atlas/lore/locations/praka.md"
   },
   {
     "categoryId": "cities",
@@ -3808,7 +4030,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/velen/velen.webp"
     },
-    "id": "velen"
+    "id": "velen",
+    "lore": "/assets/atlas/lore/locations/velen.md"
   },
   {
     "categoryId": "cities",
@@ -3825,7 +4048,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/darromar/darromar.webp"
     },
-    "id": "darromar"
+    "id": "darromar",
+    "lore": "/assets/atlas/lore/locations/darromar.md"
   },
   {
     "categoryId": "cities",
@@ -3842,7 +4066,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/erebos/erebos.webp"
     },
-    "id": "erebos"
+    "id": "erebos",
+    "lore": "/assets/atlas/lore/locations/erebos.md"
   },
   {
     "categoryId": "cities",
@@ -3859,7 +4084,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/hammerstaad/hammerstaad.webp"
     },
-    "id": "hammerstaad"
+    "id": "hammerstaad",
+    "lore": "/assets/atlas/lore/locations/hammerstaad.md"
   },
   {
     "categoryId": "cities",
@@ -3876,7 +4102,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/gnarhelm/gnarhelm.webp"
     },
-    "id": "gnarhelm"
+    "id": "gnarhelm",
+    "lore": "/assets/atlas/lore/locations/gnarhelm.md"
   },
   {
     "categoryId": "cities",
@@ -3893,7 +4120,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/caer_callidyrr/caer_callidyrr.webp"
     },
-    "id": "caer_callidyrr"
+    "id": "caer_callidyrr",
+    "lore": "/assets/atlas/lore/locations/caer_callidyrr.md"
   },
   {
     "categoryId": "cities",
@@ -3910,7 +4138,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/darmshall/darmshall.webp"
     },
-    "id": "darmshall"
+    "id": "darmshall",
+    "lore": "/assets/atlas/lore/locations/darmshall.md"
   },
   {
     "categoryId": "cities",
@@ -3927,7 +4156,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/palischuk/palischuk.webp"
     },
-    "id": "palischuk"
+    "id": "palischuk",
+    "lore": "/assets/atlas/lore/locations/palischuk.md"
   },
   {
     "categoryId": "cities",
@@ -3944,7 +4174,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/telos_city/telos_city.webp"
     },
-    "id": "telos_city"
+    "id": "telos_city",
+    "lore": "/assets/atlas/lore/locations/telos_city.md"
   },
   {
     "categoryId": "cities",
@@ -3961,7 +4192,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/kressilacc/kressilacc.webp"
     },
-    "id": "kressilacc"
+    "id": "kressilacc",
+    "lore": "/assets/atlas/lore/locations/kressilacc.md"
   },
   {
     "categoryId": "cities",
@@ -3978,7 +4210,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/blackalblade/blackalblade.webp"
     },
-    "id": "blackalblade"
+    "id": "blackalblade",
+    "lore": "/assets/atlas/lore/locations/blackalblade.md"
   },
   {
     "categoryId": "cities",
@@ -3995,7 +4228,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/oeble/oeble.webp"
     },
-    "id": "oeble"
+    "id": "oeble",
+    "lore": "/assets/atlas/lore/locations/oeble.md"
   },
   {
     "categoryId": "cities",
@@ -4012,7 +4246,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/tirumala/tirumala.webp"
     },
-    "id": "tirumala"
+    "id": "tirumala",
+    "lore": "/assets/atlas/lore/locations/tirumala.md"
   },
   {
     "categoryId": "cities",
@@ -4029,7 +4264,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/underhome/underhome.webp"
     },
-    "id": "underhome"
+    "id": "underhome",
+    "lore": "/assets/atlas/lore/locations/underhome.md"
   },
   {
     "categoryId": "cities",
@@ -4046,7 +4282,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/rogarsheim/rogarsheim.webp"
     },
-    "id": "rogarsheim"
+    "id": "rogarsheim",
+    "lore": "/assets/atlas/lore/locations/rogarsheim.md"
   },
   {
     "categoryId": "cities",
@@ -4063,7 +4300,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/caer_corwell/caer_corwell.webp"
     },
-    "id": "caer_corwell"
+    "id": "caer_corwell",
+    "lore": "/assets/atlas/lore/locations/caer_corwell.md"
   },
   {
     "categoryId": "cities",
@@ -4080,7 +4318,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/sorath_nu_sum/sorath_nu_sum.webp"
     },
-    "id": "sorath_nu_sum"
+    "id": "sorath_nu_sum",
+    "lore": "/assets/atlas/lore/locations/sorath_nu_sum.md"
   },
   {
     "categoryId": "cities",
@@ -4097,7 +4336,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/caer_westphal/caer_westphal.webp"
     },
-    "id": "caer_westphal"
+    "id": "caer_westphal",
+    "lore": "/assets/atlas/lore/locations/caer_westphal.md"
   },
   {
     "categoryId": "cities",
@@ -4114,7 +4354,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/synnoria/synnoria.webp"
     },
-    "id": "synnoria"
+    "id": "synnoria",
+    "lore": "/assets/atlas/lore/locations/synnoria.md"
   },
   {
     "categoryId": "cities",
@@ -4131,7 +4372,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/usholm_2/usholm_2.webp"
     },
-    "id": "usholm_2"
+    "id": "usholm_2",
+    "lore": "/assets/atlas/lore/locations/usholm_2.md"
   },
   {
     "categoryId": "cities",
@@ -4148,7 +4390,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/karador/karador.webp"
     },
-    "id": "karador"
+    "id": "karador",
+    "lore": "/assets/atlas/lore/locations/karador.md"
   },
   {
     "categoryId": "cities",
@@ -4165,7 +4408,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/anhaurz/anhaurz.webp"
     },
-    "id": "anhaurz"
+    "id": "anhaurz",
+    "lore": "/assets/atlas/lore/locations/anhaurz.md"
   },
   {
     "categoryId": "cities",
@@ -4182,7 +4426,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/djerad_thymar/djerad_thymar.webp"
     },
-    "id": "djerad_thymar"
+    "id": "djerad_thymar",
+    "lore": "/assets/atlas/lore/locations/djerad_thymar.md"
   },
   {
     "categoryId": "cities",
@@ -4199,7 +4444,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/skalnaedyr/skalnaedyr.webp"
     },
-    "id": "skalnaedyr"
+    "id": "skalnaedyr",
+    "lore": "/assets/atlas/lore/locations/skalnaedyr.md"
   },
   {
     "categoryId": "cities",
@@ -4216,7 +4462,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/port_ghaast/port_ghaast.webp"
     },
-    "id": "port_ghaast"
+    "id": "port_ghaast",
+    "lore": "/assets/atlas/lore/locations/port_ghaast.md"
   },
   {
     "categoryId": "cities",
@@ -4233,7 +4480,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/zindalankh/zindalankh.webp"
     },
-    "id": "zindalankh"
+    "id": "zindalankh",
+    "lore": "/assets/atlas/lore/locations/zindalankh.md"
   },
   {
     "categoryId": "cities",
@@ -4250,7 +4498,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/dhaztanar_the_crystal_towered/dhaztanar_the_crystal_towered.webp"
     },
-    "id": "dhaztanar_the_crystal_towered"
+    "id": "dhaztanar_the_crystal_towered",
+    "lore": "/assets/atlas/lore/locations/dhaztanar_the_crystal_towered.md"
   },
   {
     "categoryId": "cities",
@@ -4267,6 +4516,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/cities/semlithol/semlithol.webp"
     },
-    "id": "semlithol"
+    "id": "semlithol",
+    "lore": "/assets/atlas/lore/locations/semlithol.md"
   }
 ]

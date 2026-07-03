@@ -4,11 +4,12 @@
   "type": "seas_oceans",
   "parent": "seas_oceans",
   "title": "Sea of Moving Ice",
-  "description": "A collection of icebergs and frost-covered isles that floated in the waters of [[northwest Faer\u00fbn]].",
+  "description": "A collection of icebergs and frost-covered isles that floated in the waters of [[northwest Faerûn]].",
   "image": "sea_of_moving_ice.webp",
   "coordinates": {
     "lat": 220.5,
     "lng": 3112
   },
-  "categoryId": "seas_oceans"
+  "categoryId": "seas_oceans",
+  "lore": "/assets/atlas/lore/locations/sea_of_moving_ice.md"
 }

@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "Hawkwing's Brook",
-  "description": "Also known as '''Banshee's Brook''' or '''Tethir Brook''' \u2013 a tributary of the [[Sulduskoon River]] that flowed down through [[County Uluran]].",
+  "description": "Also known as '''Banshee's Brook''' or '''Tethir Brook''' – a tributary of the [[Sulduskoon River]] that flowed down through [[County Uluran]].",
   "image": "hawkwings_brook.webp",
   "coordinates": {
     "lat": 1364.5,
     "lng": 1244
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/hawkwings_brook.md"
 }

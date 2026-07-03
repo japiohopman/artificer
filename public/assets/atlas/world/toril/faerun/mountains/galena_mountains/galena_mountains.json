@@ -4,10 +4,11 @@
   "type": "mountain_range",
   "parent": "mountain",
   "title": "Galena Mountains",
-  "description": "A massive and forbidding mountain range that formed a natural border around [[Vaasa]] in [[Northeast Faer\u00fbn]].",
+  "description": "A massive and forbidding mountain range that formed a natural border around [[Vaasa]] in [[Northeast Faerûn]].",
   "image": "galena_mountains.webp",
   "coordinates": {
     "lat": 2546,
     "lng": 2936.5
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/galena_mountains.md"
 }

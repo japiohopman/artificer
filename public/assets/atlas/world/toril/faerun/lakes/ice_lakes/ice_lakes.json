@@ -4,11 +4,12 @@
   "type": "lakes",
   "parent": "lakes",
   "title": "Ice Lakes",
-  "description": "A group of frigid lakes in [[northwest Faer\u00fbn]] including: [[Derthym]], [[Belardym]], [[Rarghraum]], [[Loroloth]], and [[Antaerth]].",
+  "description": "A group of frigid lakes in [[northwest Faerûn]] including: [[Derthym]], [[Belardym]], [[Rarghraum]], [[Loroloth]], and [[Antaerth]].",
   "image": "ice_lakes.webp",
   "coordinates": {
     "lat": 424.5,
     "lng": 2966
   },
-  "categoryId": "lakes"
+  "categoryId": "lakes",
+  "lore": "/assets/atlas/lore/locations/ice_lakes.md"
 }

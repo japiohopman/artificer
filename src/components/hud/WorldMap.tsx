@@ -103,20 +103,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   });
 };
 
-const ChangeView = ({ center, zoom }: { center: [number, number], zoom: number }) => {
-  const map = useMap();
-  const lastTarget = React.useRef<string>("");
 
-  React.useEffect(() => {
-    if (!center) return;
-    const targetKey = `${center[0].toFixed(4)},${center[1].toFixed(4)},${zoom}`;
-    if (lastTarget.current !== targetKey) {
-      map.setView(center, zoom, { animate: true, duration: 1.5 });
-      lastTarget.current = targetKey;
-    }
-  }, [center, zoom, map]);
-  return null;
-};
 
 const MapEvents = ({
   onZoomChange,
@@ -309,9 +296,7 @@ export const WorldMap: React.FC = () => {
   const initialZoom = 4;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
-  const center = React.useMemo((): [number, number] => 
-    currentZoom === 4 ? [mapHeight/2, mapWidth/2] : (partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2])
-  , [partyLocation, getPosition, mapHeight, mapWidth, currentZoom]);
+
 
   // Sync global zoom
   React.useEffect(() => {
@@ -338,6 +323,10 @@ export const WorldMap: React.FC = () => {
               try {
                 const response = await fetch(`/assets/atlas/world/toril/faerun/${category}/${category}.json`);
                 if (response.ok && isMounted) {
+                  const contentType = response.headers.get('content-type');
+                  if (!contentType || !contentType.includes('application/json')) {
+                    throw new Error(`Expected JSON but got ${contentType}`);
+                  }
                   const data = await response.json();
                   const rawLocations = data.locations || data || [];
                   if (Array.isArray(rawLocations)) {
@@ -505,7 +494,7 @@ export const WorldMap: React.FC = () => {
           </SVGOverlay>
         )}
 
-        <ChangeView center={center} zoom={currentZoom} />
+
         <MapEvents
           onZoomChange={React.useCallback((z: number) => setCurrentZoom(z), [])}
           onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
@@ -636,6 +625,19 @@ export const WorldMap: React.FC = () => {
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 items-end">
         <div className="flex flex-col gap-1 mb-2">
+           <button 
+             onClick={() => {
+               if (partyLocation && mapRef.current) {
+                 const pos = getPosition(partyLocation);
+                 if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 5), { animate: true, duration: 1.5 });
+               }
+             }}
+             className="w-10 h-10 bg-parchment-100 border-2 border-blue-500 text-blue-600 font-black text-xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto"
+             title="Locate Party"
+             aria-label="Locate Party"
+           >
+             ◎
+           </button>
            <button 
              onClick={() => mapRef.current?.zoomIn()}
              className="w-10 h-10 bg-parchment-100 border-2 border-dragon-gold text-dragon-red font-black text-xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto"

@@ -4,11 +4,12 @@
   "type": "seas_oceans",
   "parent": "seas_oceans",
   "title": "Sea of Swords",
-  "description": "A region of the [[Trackless Sea]] that separated the western coast of [[Faer\u00fbn]] from the [[Nelanther Isles]] and the [[Moonshae Isles]].",
+  "description": "A region of the [[Trackless Sea]] that separated the western coast of [[Faerûn]] from the [[Nelanther Isles]] and the [[Moonshae Isles]].",
   "image": "sea_of_swords.webp",
   "coordinates": {
     "lat": 821.65,
     "lng": 1647.55
   },
-  "categoryId": "seas_oceans"
+  "categoryId": "seas_oceans",
+  "lore": "/assets/atlas/lore/locations/sea_of_swords.md"
 }

@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useMap } from 'react-leaflet';
-import L from 'leaflet';
+import React from 'react';
+import { SVGOverlay } from 'react-leaflet';
 import { useWorldStore } from '../../../store/useWorldStore';
 
 interface FogOfWarProps {
@@ -11,82 +10,54 @@ interface FogOfWarProps {
 }
 
 export const FogOfWar: React.FC<FogOfWarProps> = ({ mapHeight, mapWidth, protoHeight, protoWidth }) => {
-  const map = useMap();
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const exploredAreas = useWorldStore(state => state.exploredAreas);
   
   // Coordinate Rescaling (Match WorldMap.tsx logic)
+  // Note: SVGOverlay uses Cartesian coordinates: [0, 0] is top-left, [mapWidth, mapHeight] is bottom-right.
   const getMapCoords = (x: number, y: number): [number, number] => {
     const px = (x / protoWidth) * mapWidth;
     const py = (1 - (y / protoHeight)) * mapHeight;
-    return [py, px];
+    return [px, py]; // [x, y] for SVG attributes cx, cy
   };
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const renderFog = () => {
-      const size = map.getSize();
-      canvas.width = size.x;
-      canvas.height = size.y;
-
-      // 1. Fill with semi-transparent shroud
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.75)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // 2. Clear explored areas
-      ctx.globalCompositeOperation = 'destination-out';
-
-      exploredAreas.forEach(area => {
-        const [lat, lng] = getMapCoords(area.x, area.y);
-        const point = map.latLngToContainerPoint([lat, lng]);
-        
-        // Scale radius based on zoom? 
-        // Or keep it fixed in world units and translate to pixels.
-        // Let's assume the radius is in "proto units" or similar.
-        // We need to convert the radius to screen pixels.
-        
-        // To get radius in pixels:
-        const center = L.latLng(lat, lng);
-        const edge = L.latLng(lat, lng + area.radius * (mapWidth / protoWidth));
-        const p1 = map.latLngToContainerPoint(center);
-        const p2 = map.latLngToContainerPoint(edge);
-        const radiusPx = Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
-
-        const gradient = ctx.createRadialGradient(
-          point.x, point.y, 0,
-          point.x, point.y, radiusPx
-        );
-        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-        gradient.addColorStop(0.6, 'rgba(255, 255, 255, 0.8)');
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(point.x, point.y, radiusPx, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      ctx.globalCompositeOperation = 'source-over';
-    };
-
-    map.on('move zoom viewreset', renderFog);
-    renderFog();
-
-    return () => {
-      map.off('move zoom viewreset', renderFog);
-    };
-  }, [map, exploredAreas, mapHeight, mapWidth, protoHeight, protoWidth]);
-
   return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 z-[450] pointer-events-none opacity-90 transition-opacity duration-1000"
-      style={{ mixBlendMode: 'multiply' }}
-    />
+    <SVGOverlay bounds={[[0, 0], [mapHeight, mapWidth]]} zIndex={450}>
+      <defs>
+        <filter id="fog-blur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="150" />
+        </filter>
+        <mask id="fog-mask">
+          {/* White fills the mask, meaning fully visible fog */}
+          <rect x="0" y="0" width={mapWidth} height={mapHeight} fill="white" />
+          {/* Black circles cut holes in the mask, revealing the map underneath */}
+          {exploredAreas.map((area, index) => {
+            const [px, py] = getMapCoords(area.x, area.y);
+            const radius = area.radius * (mapWidth / protoWidth);
+            return (
+              <circle 
+                key={index}
+                cx={px} 
+                cy={py} 
+                r={radius} 
+                fill="black" 
+                filter="url(#fog-blur)"
+              />
+            );
+          })}
+        </mask>
+        <pattern id="fog-pattern" patternUnits="userSpaceOnUse" width="512" height="512">
+          <image href="/assets/images/ui/map_fog_cloud.webp" x="0" y="0" width="512" height="512" preserveAspectRatio="none" />
+        </pattern>
+      </defs>
+      <rect 
+        x="0" 
+        y="0" 
+        width={mapWidth} 
+        height={mapHeight} 
+        fill="url(#fog-pattern)" 
+        mask="url(#fog-mask)"
+        style={{ mixBlendMode: 'multiply', opacity: 0.85, pointerEvents: 'none' }}
+      />
+    </SVGOverlay>
   );
 };

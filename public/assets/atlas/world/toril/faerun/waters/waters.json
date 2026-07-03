@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/akanamere/akanamere.webp"
     },
-    "id": "akanamere"
+    "id": "akanamere",
+    "lore": "/assets/atlas/lore/locations/akanamere.md"
   },
   {
     "categoryId": "waters",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trevi_river/trevi_river.webp"
     },
-    "id": "trevi_river"
+    "id": "trevi_river",
+    "lore": "/assets/atlas/lore/locations/trevi_river.md"
   },
   {
     "categoryId": "waters",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_moving_ice/sea_of_moving_ice.webp"
     },
-    "id": "sea_of_moving_ice"
+    "id": "sea_of_moving_ice",
+    "lore": "/assets/atlas/lore/locations/sea_of_moving_ice.md"
   },
   {
     "categoryId": "waters",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_nun/river_nun.webp"
     },
-    "id": "river_nun"
+    "id": "river_nun",
+    "lore": "/assets/atlas/lore/locations/river_nun.md"
   },
   {
     "categoryId": "waters",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/farshore_straits/farshore_straits.webp"
     },
-    "id": "farshore_straits"
+    "id": "farshore_straits",
+    "lore": "/assets/atlas/lore/locations/farshore_straits.md"
   },
   {
     "categoryId": "waters",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/strait_of_silvanus/strait_of_silvanus.webp"
     },
-    "id": "strait_of_silvanus"
+    "id": "strait_of_silvanus",
+    "lore": "/assets/atlas/lore/locations/strait_of_silvanus.md"
   },
   {
     "categoryId": "waters",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/paddle_straits/paddle_straits.webp"
     },
-    "id": "paddle_straits"
+    "id": "paddle_straits",
+    "lore": "/assets/atlas/lore/locations/paddle_straits.md"
   },
   {
     "categoryId": "waters",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_arran/river_arran.webp"
     },
-    "id": "river_arran"
+    "id": "river_arran",
+    "lore": "/assets/atlas/lore/locations/river_arran.md"
   },
   {
     "categoryId": "waters",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/nagaflow/nagaflow.webp"
     },
-    "id": "nagaflow"
+    "id": "nagaflow",
+    "lore": "/assets/atlas/lore/locations/nagaflow.md"
   },
   {
     "categoryId": "waters",
@@ -167,7 +176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wintercloak_river/wintercloak_river.webp"
     },
-    "id": "wintercloak_river"
+    "id": "wintercloak_river",
+    "lore": "/assets/atlas/lore/locations/wintercloak_river.md"
   },
   {
     "categoryId": "waters",
@@ -184,7 +194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/nagawater/nagawater.webp"
     },
-    "id": "nagawater"
+    "id": "nagawater",
+    "lore": "/assets/atlas/lore/locations/nagawater.md"
   },
   {
     "categoryId": "waters",
@@ -201,7 +212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_akax/river_akax.webp"
     },
-    "id": "river_akax"
+    "id": "river_akax",
+    "lore": "/assets/atlas/lore/locations/river_akax.md"
   },
   {
     "categoryId": "waters",
@@ -218,7 +230,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_chessenta/bay_of_chessenta.webp"
     },
-    "id": "bay_of_chessenta"
+    "id": "bay_of_chessenta",
+    "lore": "/assets/atlas/lore/locations/bay_of_chessenta.md"
   },
   {
     "categoryId": "waters",
@@ -235,7 +248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_heptios/river_heptios.webp"
     },
-    "id": "river_heptios"
+    "id": "river_heptios",
+    "lore": "/assets/atlas/lore/locations/river_heptios.md"
   },
   {
     "categoryId": "waters",
@@ -252,7 +266,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/barren_river/barren_river.webp"
     },
-    "id": "barren_river"
+    "id": "barren_river",
+    "lore": "/assets/atlas/lore/locations/barren_river.md"
   },
   {
     "categoryId": "waters",
@@ -269,7 +284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/adder_river/adder_river.webp"
     },
-    "id": "adder_river"
+    "id": "adder_river",
+    "lore": "/assets/atlas/lore/locations/adder_river.md"
   },
   {
     "categoryId": "waters",
@@ -286,7 +302,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/winding_river/winding_river.webp"
     },
-    "id": "winding_river"
+    "id": "winding_river",
+    "lore": "/assets/atlas/lore/locations/winding_river.md"
   },
   {
     "categoryId": "waters",
@@ -303,7 +320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_metals/river_of_metals.webp"
     },
-    "id": "river_of_metals"
+    "id": "river_of_metals",
+    "lore": "/assets/atlas/lore/locations/river_of_metals.md"
   },
   {
     "categoryId": "waters",
@@ -320,7 +338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/methmere/methmere.webp"
     },
-    "id": "methmere"
+    "id": "methmere",
+    "lore": "/assets/atlas/lore/locations/methmere.md"
   },
   {
     "categoryId": "waters",
@@ -337,7 +356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_alamber/river_alamber.webp"
     },
-    "id": "river_alamber"
+    "id": "river_alamber",
+    "lore": "/assets/atlas/lore/locations/river_alamber.md"
   },
   {
     "categoryId": "waters",
@@ -354,7 +374,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_angol/river_angol.webp"
     },
-    "id": "river_angol"
+    "id": "river_angol",
+    "lore": "/assets/atlas/lore/locations/river_angol.md"
   },
   {
     "categoryId": "waters",
@@ -371,7 +392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_swords/river_of_swords.webp"
     },
-    "id": "river_of_swords"
+    "id": "river_of_swords",
+    "lore": "/assets/atlas/lore/locations/river_of_swords.md"
   },
   {
     "categoryId": "waters",
@@ -388,7 +410,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/alamber_sea/alamber_sea.webp"
     },
-    "id": "alamber_sea"
+    "id": "alamber_sea",
+    "lore": "/assets/atlas/lore/locations/alamber_sea.md"
   },
   {
     "categoryId": "waters",
@@ -405,7 +428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_salt/lake_of_salt.webp"
     },
-    "id": "lake_of_salt"
+    "id": "lake_of_salt",
+    "lore": "/assets/atlas/lore/locations/lake_of_salt.md"
   },
   {
     "categoryId": "waters",
@@ -422,7 +446,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_shadows/river_of_shadows.webp"
     },
-    "id": "river_of_shadows"
+    "id": "river_of_shadows",
+    "lore": "/assets/atlas/lore/locations/river_of_shadows.md"
   },
   {
     "categoryId": "waters",
@@ -439,7 +464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_spears/river_of_spears.webp"
     },
-    "id": "river_of_spears"
+    "id": "river_of_spears",
+    "lore": "/assets/atlas/lore/locations/river_of_spears.md"
   },
   {
     "categoryId": "waters",
@@ -456,7 +482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_sarren/river_sarren.webp"
     },
-    "id": "river_sarren"
+    "id": "river_sarren",
+    "lore": "/assets/atlas/lore/locations/river_sarren.md"
   },
   {
     "categoryId": "waters",
@@ -473,7 +500,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/riftlake/riftlake.webp"
     },
-    "id": "riftlake"
+    "id": "riftlake",
+    "lore": "/assets/atlas/lore/locations/riftlake.md"
   },
   {
     "categoryId": "waters",
@@ -490,7 +518,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bloodlake/bloodlake.webp"
     },
-    "id": "bloodlake"
+    "id": "bloodlake",
+    "lore": "/assets/atlas/lore/locations/bloodlake.md"
   },
   {
     "categoryId": "waters",
@@ -507,7 +536,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/rift_river/rift_river.webp"
     },
-    "id": "rift_river"
+    "id": "rift_river",
+    "lore": "/assets/atlas/lore/locations/rift_river.md"
   },
   {
     "categoryId": "waters",
@@ -524,7 +554,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_thazarim/river_thazarim.webp"
     },
-    "id": "river_thazarim"
+    "id": "river_thazarim",
+    "lore": "/assets/atlas/lore/locations/river_thazarim.md"
   },
   {
     "categoryId": "waters",
@@ -541,7 +572,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_murghol/river_murghol.webp"
     },
-    "id": "river_murghol"
+    "id": "river_murghol",
+    "lore": "/assets/atlas/lore/locations/river_murghol.md"
   },
   {
     "categoryId": "waters",
@@ -558,7 +590,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_rauthenflow/river_rauthenflow.webp"
     },
-    "id": "river_rauthenflow"
+    "id": "river_rauthenflow",
+    "lore": "/assets/atlas/lore/locations/river_rauthenflow.md"
   },
   {
     "categoryId": "waters",
@@ -575,7 +608,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/clearflow_river/clearflow_river.webp"
     },
-    "id": "clearflow_river"
+    "id": "clearflow_river",
+    "lore": "/assets/atlas/lore/locations/clearflow_river.md"
   },
   {
     "categoryId": "waters",
@@ -592,7 +626,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/nixie_deep/nixie_deep.webp"
     },
-    "id": "nixie_deep"
+    "id": "nixie_deep",
+    "lore": "/assets/atlas/lore/locations/nixie_deep.md"
   },
   {
     "categoryId": "waters",
@@ -609,7 +644,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_mists/lake_of_mists.webp"
     },
-    "id": "lake_of_mists"
+    "id": "lake_of_mists",
+    "lore": "/assets/atlas/lore/locations/lake_of_mists.md"
   },
   {
     "categoryId": "waters",
@@ -626,7 +662,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ghaast/river_ghaast.webp"
     },
-    "id": "river_ghaast"
+    "id": "river_ghaast",
+    "lore": "/assets/atlas/lore/locations/river_ghaast.md"
   },
   {
     "categoryId": "waters",
@@ -643,7 +680,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/liontongue_river/liontongue_river.webp"
     },
-    "id": "liontongue_river"
+    "id": "liontongue_river",
+    "lore": "/assets/atlas/lore/locations/liontongue_river.md"
   },
   {
     "categoryId": "waters",
@@ -660,7 +698,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/golden_water/golden_water.webp"
     },
-    "id": "golden_water"
+    "id": "golden_water",
+    "lore": "/assets/atlas/lore/locations/golden_water.md"
   },
   {
     "categoryId": "waters",
@@ -677,7 +716,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_throat/the_throat.webp"
     },
-    "id": "the_throat"
+    "id": "the_throat",
+    "lore": "/assets/atlas/lore/locations/the_throat.md"
   },
   {
     "categoryId": "waters",
@@ -694,7 +734,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_gundar/river_gundar.webp"
     },
-    "id": "river_gundar"
+    "id": "river_gundar",
+    "lore": "/assets/atlas/lore/locations/river_gundar.md"
   },
   {
     "categoryId": "waters",
@@ -711,7 +752,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_kings/bay_of_kings.webp"
     },
-    "id": "bay_of_kings"
+    "id": "bay_of_kings",
+    "lore": "/assets/atlas/lore/locations/bay_of_kings.md"
   },
   {
     "categoryId": "waters",
@@ -728,7 +770,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_madras/river_madras.webp"
     },
-    "id": "river_madras"
+    "id": "river_madras",
+    "lore": "/assets/atlas/lore/locations/river_madras.md"
   },
   {
     "categoryId": "waters",
@@ -745,7 +788,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/luirenstrand/luirenstrand.webp"
     },
-    "id": "luirenstrand"
+    "id": "luirenstrand",
+    "lore": "/assets/atlas/lore/locations/luirenstrand.md"
   },
   {
     "categoryId": "waters",
@@ -762,7 +806,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tamthew/river_tamthew.webp"
     },
-    "id": "river_tamthew"
+    "id": "river_tamthew",
+    "lore": "/assets/atlas/lore/locations/river_tamthew.md"
   },
   {
     "categoryId": "waters",
@@ -779,7 +824,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ammath/river_ammath.webp"
     },
-    "id": "river_ammath"
+    "id": "river_ammath",
+    "lore": "/assets/atlas/lore/locations/river_ammath.md"
   },
   {
     "categoryId": "waters",
@@ -796,7 +842,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/melanith_bay/melanith_bay.webp"
     },
-    "id": "melanith_bay"
+    "id": "melanith_bay",
+    "lore": "/assets/atlas/lore/locations/melanith_bay.md"
   },
   {
     "categoryId": "waters",
@@ -813,7 +860,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/beastburn_lake/beastburn_lake.webp"
     },
-    "id": "beastburn_lake"
+    "id": "beastburn_lake",
+    "lore": "/assets/atlas/lore/locations/beastburn_lake.md"
   },
   {
     "categoryId": "waters",
@@ -830,7 +878,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_caraguir/river_caraguir.webp"
     },
-    "id": "river_caraguir"
+    "id": "river_caraguir",
+    "lore": "/assets/atlas/lore/locations/river_caraguir.md"
   },
   {
     "categoryId": "waters",
@@ -847,7 +896,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dolphins_climb/dolphins_climb.webp"
     },
-    "id": "dolphins_climb"
+    "id": "dolphins_climb",
+    "lore": "/assets/atlas/lore/locations/dolphins_climb.md"
   },
   {
     "categoryId": "waters",
@@ -864,7 +914,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_dambron/river_dambron.webp"
     },
-    "id": "river_dambron"
+    "id": "river_dambron",
+    "lore": "/assets/atlas/lore/locations/river_dambron.md"
   },
   {
     "categoryId": "waters",
@@ -881,7 +932,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_dancing_dolphins/bay_of_dancing_dolphins.webp"
     },
-    "id": "bay_of_dancing_dolphins"
+    "id": "bay_of_dancing_dolphins",
+    "lore": "/assets/atlas/lore/locations/bay_of_dancing_dolphins.md"
   },
   {
     "categoryId": "waters",
@@ -898,7 +950,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/coast_of_pearls/coast_of_pearls.webp"
     },
-    "id": "coast_of_pearls"
+    "id": "coast_of_pearls",
+    "lore": "/assets/atlas/lore/locations/coast_of_pearls.md"
   },
   {
     "categoryId": "waters",
@@ -915,7 +968,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_shaar/river_shaar.webp"
     },
-    "id": "river_shaar"
+    "id": "river_shaar",
+    "lore": "/assets/atlas/lore/locations/river_shaar.md"
   },
   {
     "categoryId": "waters",
@@ -932,7 +986,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_channath/river_channath.webp"
     },
-    "id": "river_channath"
+    "id": "river_channath",
+    "lore": "/assets/atlas/lore/locations/river_channath.md"
   },
   {
     "categoryId": "waters",
@@ -949,7 +1004,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_lhespen/lake_lhespen.webp"
     },
-    "id": "lake_lhespen"
+    "id": "lake_lhespen",
+    "lore": "/assets/atlas/lore/locations/lake_lhespen.md"
   },
   {
     "categoryId": "waters",
@@ -966,7 +1022,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_talar/river_talar.webp"
     },
-    "id": "river_talar"
+    "id": "river_talar",
+    "lore": "/assets/atlas/lore/locations/river_talar.md"
   },
   {
     "categoryId": "waters",
@@ -983,7 +1040,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/talar_bay/talar_bay.webp"
     },
-    "id": "talar_bay"
+    "id": "talar_bay",
+    "lore": "/assets/atlas/lore/locations/talar_bay.md"
   },
   {
     "categoryId": "waters",
@@ -1000,7 +1058,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_azuth/bay_of_azuth.webp"
     },
-    "id": "bay_of_azuth"
+    "id": "bay_of_azuth",
+    "lore": "/assets/atlas/lore/locations/bay_of_azuth.md"
   },
   {
     "categoryId": "waters",
@@ -1017,7 +1076,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_maeru/lake_maeru.webp"
     },
-    "id": "lake_maeru"
+    "id": "lake_maeru",
+    "lore": "/assets/atlas/lore/locations/lake_maeru.md"
   },
   {
     "categoryId": "waters",
@@ -1034,7 +1094,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_maeru/river_maeru.webp"
     },
-    "id": "river_maeru"
+    "id": "river_maeru",
+    "lore": "/assets/atlas/lore/locations/river_maeru.md"
   },
   {
     "categoryId": "waters",
@@ -1051,7 +1112,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_halruaa/lake_halruaa.webp"
     },
-    "id": "lake_halruaa"
+    "id": "lake_halruaa",
+    "lore": "/assets/atlas/lore/locations/lake_halruaa.md"
   },
   {
     "categoryId": "waters",
@@ -1068,7 +1130,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_aluar/river_aluar.webp"
     },
-    "id": "river_aluar"
+    "id": "river_aluar",
+    "lore": "/assets/atlas/lore/locations/river_aluar.md"
   },
   {
     "categoryId": "waters",
@@ -1085,7 +1148,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/high_aluar/high_aluar.webp"
     },
-    "id": "high_aluar"
+    "id": "high_aluar",
+    "lore": "/assets/atlas/lore/locations/high_aluar.md"
   },
   {
     "categoryId": "waters",
@@ -1102,7 +1166,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_halar/river_halar.webp"
     },
-    "id": "river_halar"
+    "id": "river_halar",
+    "lore": "/assets/atlas/lore/locations/river_halar.md"
   },
   {
     "categoryId": "waters",
@@ -1119,7 +1184,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_taertal/bay_of_taertal.webp"
     },
-    "id": "bay_of_taertal"
+    "id": "bay_of_taertal",
+    "lore": "/assets/atlas/lore/locations/bay_of_taertal.md"
   },
   {
     "categoryId": "waters",
@@ -1136,7 +1202,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ghalagar/river_ghalagar.webp"
     },
-    "id": "river_ghalagar"
+    "id": "river_ghalagar",
+    "lore": "/assets/atlas/lore/locations/river_ghalagar.md"
   },
   {
     "categoryId": "waters",
@@ -1153,7 +1220,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/halagard_channel/halagard_channel.webp"
     },
-    "id": "halagard_channel"
+    "id": "halagard_channel",
+    "lore": "/assets/atlas/lore/locations/halagard_channel.md"
   },
   {
     "categoryId": "waters",
@@ -1170,7 +1238,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_halruaa/bay_of_halruaa.webp"
     },
-    "id": "bay_of_halruaa"
+    "id": "bay_of_halruaa",
+    "lore": "/assets/atlas/lore/locations/bay_of_halruaa.md"
   },
   {
     "categoryId": "waters",
@@ -1187,7 +1256,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/talagaths_gauntlet/talagaths_gauntlet.webp"
     },
-    "id": "talagaths_gauntlet"
+    "id": "talagaths_gauntlet",
+    "lore": "/assets/atlas/lore/locations/talagaths_gauntlet.md"
   },
   {
     "categoryId": "waters",
@@ -1204,7 +1274,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dolphingulf/dolphingulf.webp"
     },
-    "id": "dolphingulf"
+    "id": "dolphingulf",
+    "lore": "/assets/atlas/lore/locations/dolphingulf.md"
   },
   {
     "categoryId": "waters",
@@ -1221,7 +1292,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_amarast/river_amarast.webp"
     },
-    "id": "river_amarast"
+    "id": "river_amarast",
+    "lore": "/assets/atlas/lore/locations/river_amarast.md"
   },
   {
     "categoryId": "waters",
@@ -1238,7 +1310,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lapal_sea/lapal_sea.webp"
     },
-    "id": "lapal_sea"
+    "id": "lapal_sea",
+    "lore": "/assets/atlas/lore/locations/lapal_sea.md"
   },
   {
     "categoryId": "waters",
@@ -1255,7 +1328,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_scelptar/river_scelptar.webp"
     },
-    "id": "river_scelptar"
+    "id": "river_scelptar",
+    "lore": "/assets/atlas/lore/locations/river_scelptar.md"
   },
   {
     "categoryId": "waters",
@@ -1272,7 +1346,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/scelptarmouth/scelptarmouth.webp"
     },
-    "id": "scelptarmouth"
+    "id": "scelptarmouth",
+    "lore": "/assets/atlas/lore/locations/scelptarmouth.md"
   },
   {
     "categoryId": "waters",
@@ -1289,7 +1364,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_rith/river_rith.webp"
     },
-    "id": "river_rith"
+    "id": "river_rith",
+    "lore": "/assets/atlas/lore/locations/river_rith.md"
   },
   {
     "categoryId": "waters",
@@ -1306,7 +1382,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lapalgulph/lapalgulph.webp"
     },
-    "id": "lapalgulph"
+    "id": "lapalgulph",
+    "lore": "/assets/atlas/lore/locations/lapalgulph.md"
   },
   {
     "categoryId": "waters",
@@ -1323,7 +1400,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lapar/river_lapar.webp"
     },
-    "id": "river_lapar"
+    "id": "river_lapar",
+    "lore": "/assets/atlas/lore/locations/river_lapar.md"
   },
   {
     "categoryId": "waters",
@@ -1340,7 +1418,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_chun/river_chun.webp"
     },
-    "id": "river_chun"
+    "id": "river_chun",
+    "lore": "/assets/atlas/lore/locations/river_chun.md"
   },
   {
     "categoryId": "waters",
@@ -1357,7 +1436,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_dolsel/river_dolsel.webp"
     },
-    "id": "river_dolsel"
+    "id": "river_dolsel",
+    "lore": "/assets/atlas/lore/locations/river_dolsel.md"
   },
   {
     "categoryId": "waters",
@@ -1374,7 +1454,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/thingulph/thingulph.webp"
     },
-    "id": "thingulph"
+    "id": "thingulph",
+    "lore": "/assets/atlas/lore/locations/thingulph.md"
   },
   {
     "categoryId": "waters",
@@ -1391,7 +1472,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_guth/river_guth.webp"
     },
-    "id": "river_guth"
+    "id": "river_guth",
+    "lore": "/assets/atlas/lore/locations/river_guth.md"
   },
   {
     "categoryId": "waters",
@@ -1408,7 +1490,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ormpur_bay/ormpur_bay.webp"
     },
-    "id": "ormpur_bay"
+    "id": "ormpur_bay",
+    "lore": "/assets/atlas/lore/locations/ormpur_bay.md"
   },
   {
     "categoryId": "waters",
@@ -1425,7 +1508,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shipwreck_neck/shipwreck_neck.webp"
     },
-    "id": "shipwreck_neck"
+    "id": "shipwreck_neck",
+    "lore": "/assets/atlas/lore/locations/shipwreck_neck.md"
   },
   {
     "categoryId": "waters",
@@ -1442,7 +1526,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/raging_reef/raging_reef.webp"
     },
-    "id": "raging_reef"
+    "id": "raging_reef",
+    "lore": "/assets/atlas/lore/locations/raging_reef.md"
   },
   {
     "categoryId": "waters",
@@ -1459,7 +1544,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ankhapur/river_ankhapur.webp"
     },
-    "id": "river_ankhapur"
+    "id": "river_ankhapur",
+    "lore": "/assets/atlas/lore/locations/river_ankhapur.md"
   },
   {
     "categoryId": "waters",
@@ -1476,7 +1562,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/thornwash/thornwash.webp"
     },
-    "id": "thornwash"
+    "id": "thornwash",
+    "lore": "/assets/atlas/lore/locations/thornwash.md"
   },
   {
     "categoryId": "waters",
@@ -1493,7 +1580,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_steam/lake_of_steam.webp"
     },
-    "id": "lake_of_steam"
+    "id": "lake_of_steam",
+    "lore": "/assets/atlas/lore/locations/lake_of_steam.md"
   },
   {
     "categoryId": "waters",
@@ -1510,7 +1598,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_mintar/river_mintar.webp"
     },
-    "id": "river_mintar"
+    "id": "river_mintar",
+    "lore": "/assets/atlas/lore/locations/river_mintar.md"
   },
   {
     "categoryId": "waters",
@@ -1527,7 +1616,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bezrim_bay/bezrim_bay.webp"
     },
-    "id": "bezrim_bay"
+    "id": "bezrim_bay",
+    "lore": "/assets/atlas/lore/locations/bezrim_bay.md"
   },
   {
     "categoryId": "waters",
@@ -1544,7 +1634,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/maridflow/maridflow.webp"
     },
-    "id": "maridflow"
+    "id": "maridflow",
+    "lore": "/assets/atlas/lore/locations/maridflow.md"
   },
   {
     "categoryId": "waters",
@@ -1561,7 +1652,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/azure_falls/azure_falls.webp"
     },
-    "id": "azure_falls"
+    "id": "azure_falls",
+    "lore": "/assets/atlas/lore/locations/azure_falls.md"
   },
   {
     "categoryId": "waters",
@@ -1578,7 +1670,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/volomir_river/volomir_river.webp"
     },
-    "id": "volomir_river"
+    "id": "volomir_river",
+    "lore": "/assets/atlas/lore/locations/volomir_river.md"
   },
   {
     "categoryId": "waters",
@@ -1595,7 +1688,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/quag_river/quag_river.webp"
     },
-    "id": "quag_river"
+    "id": "quag_river",
+    "lore": "/assets/atlas/lore/locations/quag_river.md"
   },
   {
     "categoryId": "waters",
@@ -1612,7 +1706,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_ice/river_of_ice.webp"
     },
-    "id": "river_of_ice"
+    "id": "river_of_ice",
+    "lore": "/assets/atlas/lore/locations/river_of_ice.md"
   },
   {
     "categoryId": "waters",
@@ -1629,7 +1724,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/two_falls_river/two_falls_river.webp"
     },
-    "id": "two_falls_river"
+    "id": "two_falls_river",
+    "lore": "/assets/atlas/lore/locations/two_falls_river.md"
   },
   {
     "categoryId": "waters",
@@ -1646,7 +1742,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bottle_falls/bottle_falls.webp"
     },
-    "id": "bottle_falls"
+    "id": "bottle_falls",
+    "lore": "/assets/atlas/lore/locations/bottle_falls.md"
   },
   {
     "categoryId": "waters",
@@ -1663,7 +1760,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bakkals_creek/bakkals_creek.webp"
     },
-    "id": "bakkals_creek"
+    "id": "bakkals_creek",
+    "lore": "/assets/atlas/lore/locations/bakkals_creek.md"
   },
   {
     "categoryId": "waters",
@@ -1680,7 +1778,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/calim_river/calim_river.webp"
     },
-    "id": "calim_river"
+    "id": "calim_river",
+    "lore": "/assets/atlas/lore/locations/calim_river.md"
   },
   {
     "categoryId": "waters",
@@ -1697,7 +1796,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/gullet/gullet.webp"
     },
-    "id": "gullet"
+    "id": "gullet",
+    "lore": "/assets/atlas/lore/locations/gullet.md"
   },
   {
     "categoryId": "waters",
@@ -1714,7 +1814,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shining_sea/shining_sea.webp"
     },
-    "id": "shining_sea"
+    "id": "shining_sea",
+    "lore": "/assets/atlas/lore/locations/shining_sea.md"
   },
   {
     "categoryId": "waters",
@@ -1731,7 +1832,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/aumrauth/aumrauth.webp"
     },
-    "id": "aumrauth"
+    "id": "aumrauth",
+    "lore": "/assets/atlas/lore/locations/aumrauth.md"
   },
   {
     "categoryId": "waters",
@@ -1748,7 +1850,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/red_river/red_river.webp"
     },
-    "id": "red_river"
+    "id": "red_river",
+    "lore": "/assets/atlas/lore/locations/red_river.md"
   },
   {
     "categoryId": "waters",
@@ -1765,7 +1868,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ith/river_ith.webp"
     },
-    "id": "river_ith"
+    "id": "river_ith",
+    "lore": "/assets/atlas/lore/locations/river_ith.md"
   },
   {
     "categoryId": "waters",
@@ -1782,7 +1886,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_agis/river_agis.webp"
     },
-    "id": "river_agis"
+    "id": "river_agis",
+    "lore": "/assets/atlas/lore/locations/river_agis.md"
   },
   {
     "categoryId": "waters",
@@ -1799,7 +1904,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wizards_reach/wizards_reach.webp"
     },
-    "id": "wizards_reach"
+    "id": "wizards_reach",
+    "lore": "/assets/atlas/lore/locations/wizards_reach.md"
   },
   {
     "categoryId": "waters",
@@ -1816,7 +1922,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_the_dawn/river_of_the_dawn.webp"
     },
-    "id": "river_of_the_dawn"
+    "id": "river_of_the_dawn",
+    "lore": "/assets/atlas/lore/locations/river_of_the_dawn.md"
   },
   {
     "categoryId": "waters",
@@ -1833,7 +1940,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_thaylambar/lake_thaylambar.webp"
     },
-    "id": "lake_thaylambar"
+    "id": "lake_thaylambar",
+    "lore": "/assets/atlas/lore/locations/lake_thaylambar.md"
   },
   {
     "categoryId": "waters",
@@ -1850,7 +1958,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_eltar/river_eltar.webp"
     },
-    "id": "river_eltar"
+    "id": "river_eltar",
+    "lore": "/assets/atlas/lore/locations/river_eltar.md"
   },
   {
     "categoryId": "waters",
@@ -1867,7 +1976,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/surag_river/surag_river.webp"
     },
-    "id": "surag_river"
+    "id": "surag_river",
+    "lore": "/assets/atlas/lore/locations/surag_river.md"
   },
   {
     "categoryId": "waters",
@@ -1884,7 +1994,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_thay/river_thay.webp"
     },
-    "id": "river_thay"
+    "id": "river_thay",
+    "lore": "/assets/atlas/lore/locations/river_thay.md"
   },
   {
     "categoryId": "waters",
@@ -1901,7 +2012,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_gauros/river_gauros.webp"
     },
-    "id": "river_gauros"
+    "id": "river_gauros",
+    "lore": "/assets/atlas/lore/locations/river_gauros.md"
   },
   {
     "categoryId": "waters",
@@ -1918,7 +2030,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_mulsantir/river_mulsantir.webp"
     },
-    "id": "river_mulsantir"
+    "id": "river_mulsantir",
+    "lore": "/assets/atlas/lore/locations/river_mulsantir.md"
   },
   {
     "categoryId": "waters",
@@ -1935,7 +2048,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lapendrar/river_lapendrar.webp"
     },
-    "id": "river_lapendrar"
+    "id": "river_lapendrar",
+    "lore": "/assets/atlas/lore/locations/river_lapendrar.md"
   },
   {
     "categoryId": "waters",
@@ -1952,7 +2066,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_umber/lake_umber.webp"
     },
-    "id": "lake_umber"
+    "id": "lake_umber",
+    "lore": "/assets/atlas/lore/locations/lake_umber.md"
   },
   {
     "categoryId": "waters",
@@ -1969,7 +2084,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_umber/river_umber.webp"
     },
-    "id": "river_umber"
+    "id": "river_umber",
+    "lore": "/assets/atlas/lore/locations/river_umber.md"
   },
   {
     "categoryId": "waters",
@@ -1986,7 +2102,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/yal_tengri/yal_tengri.webp"
     },
-    "id": "yal_tengri"
+    "id": "yal_tengri",
+    "lore": "/assets/atlas/lore/locations/yal_tengri.md"
   },
   {
     "categoryId": "waters",
@@ -2003,7 +2120,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_mulsantir/lake_mulsantir.webp"
     },
-    "id": "lake_mulsantir"
+    "id": "lake_mulsantir",
+    "lore": "/assets/atlas/lore/locations/lake_mulsantir.md"
   },
   {
     "categoryId": "waters",
@@ -2020,7 +2138,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_sur/river_sur.webp"
     },
-    "id": "river_sur"
+    "id": "river_sur",
+    "lore": "/assets/atlas/lore/locations/river_sur.md"
   },
   {
     "categoryId": "waters",
@@ -2037,7 +2156,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_flam/river_flam.webp"
     },
-    "id": "river_flam"
+    "id": "river_flam",
+    "lore": "/assets/atlas/lore/locations/river_flam.md"
   },
   {
     "categoryId": "waters",
@@ -2054,7 +2174,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_eth/river_eth.webp"
     },
-    "id": "river_eth"
+    "id": "river_eth",
+    "lore": "/assets/atlas/lore/locations/river_eth.md"
   },
   {
     "categoryId": "waters",
@@ -2071,7 +2192,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_dlurg/sea_of_dlurg.webp"
     },
-    "id": "sea_of_dlurg"
+    "id": "sea_of_dlurg",
+    "lore": "/assets/atlas/lore/locations/sea_of_dlurg.md"
   },
   {
     "categoryId": "waters",
@@ -2088,7 +2210,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_fallen_stars/sea_of_fallen_stars.webp"
     },
-    "id": "sea_of_fallen_stars"
+    "id": "sea_of_fallen_stars",
+    "lore": "/assets/atlas/lore/locations/sea_of_fallen_stars.md"
   },
   {
     "categoryId": "waters",
@@ -2105,7 +2228,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/easting_reach/easting_reach.webp"
     },
-    "id": "easting_reach"
+    "id": "easting_reach",
+    "lore": "/assets/atlas/lore/locations/easting_reach.md"
   },
   {
     "categoryId": "waters",
@@ -2122,7 +2246,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/traders_bay/traders_bay.webp"
     },
-    "id": "traders_bay"
+    "id": "traders_bay",
+    "lore": "/assets/atlas/lore/locations/traders_bay.md"
   },
   {
     "categoryId": "waters",
@@ -2139,7 +2264,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/corth_cove/corth_cove.webp"
     },
-    "id": "corth_cove"
+    "id": "corth_cove",
+    "lore": "/assets/atlas/lore/locations/corth_cove.md"
   },
   {
     "categoryId": "waters",
@@ -2156,7 +2282,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/delimbiyr_river/delimbiyr_river.webp"
     },
-    "id": "delimbiyr_river"
+    "id": "delimbiyr_river",
+    "lore": "/assets/atlas/lore/locations/delimbiyr_river.md"
   },
   {
     "categoryId": "waters",
@@ -2173,7 +2300,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/amstel_river/amstel_river.webp"
     },
-    "id": "amstel_river"
+    "id": "amstel_river",
+    "lore": "/assets/atlas/lore/locations/amstel_river.md"
   },
   {
     "categoryId": "waters",
@@ -2190,7 +2318,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/vudlur/vudlur.webp"
     },
-    "id": "vudlur"
+    "id": "vudlur",
+    "lore": "/assets/atlas/lore/locations/vudlur.md"
   },
   {
     "categoryId": "waters",
@@ -2207,7 +2336,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/golden_creek/golden_creek.webp"
     },
-    "id": "golden_creek"
+    "id": "golden_creek",
+    "lore": "/assets/atlas/lore/locations/golden_creek.md"
   },
   {
     "categoryId": "waters",
@@ -2224,7 +2354,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trifin_creek/trifin_creek.webp"
     },
-    "id": "trifin_creek"
+    "id": "trifin_creek",
+    "lore": "/assets/atlas/lore/locations/trifin_creek.md"
   },
   {
     "categoryId": "waters",
@@ -2241,7 +2372,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_rimril/river_rimril.webp"
     },
-    "id": "river_rimril"
+    "id": "river_rimril",
+    "lore": "/assets/atlas/lore/locations/river_rimril.md"
   },
   {
     "categoryId": "waters",
@@ -2258,7 +2390,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/green_goddess_falls/green_goddess_falls.webp"
     },
-    "id": "green_goddess_falls"
+    "id": "green_goddess_falls",
+    "lore": "/assets/atlas/lore/locations/green_goddess_falls.md"
   },
   {
     "categoryId": "waters",
@@ -2275,7 +2408,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/splendarrllur/splendarrllur.webp"
     },
-    "id": "splendarrllur"
+    "id": "splendarrllur",
+    "lore": "/assets/atlas/lore/locations/splendarrllur.md"
   },
   {
     "categoryId": "waters",
@@ -2292,7 +2426,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/akaravs_bay/akaravs_bay.webp"
     },
-    "id": "akaravs_bay"
+    "id": "akaravs_bay",
+    "lore": "/assets/atlas/lore/locations/akaravs_bay.md"
   },
   {
     "categoryId": "waters",
@@ -2309,7 +2444,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_esmel/lake_esmel.webp"
     },
-    "id": "lake_esmel"
+    "id": "lake_esmel",
+    "lore": "/assets/atlas/lore/locations/lake_esmel.md"
   },
   {
     "categoryId": "waters",
@@ -2326,7 +2462,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_esmel/river_esmel.webp"
     },
-    "id": "river_esmel"
+    "id": "river_esmel",
+    "lore": "/assets/atlas/lore/locations/river_esmel.md"
   },
   {
     "categoryId": "waters",
@@ -2343,7 +2480,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shimmalshyr/shimmalshyr.webp"
     },
-    "id": "shimmalshyr"
+    "id": "shimmalshyr",
+    "lore": "/assets/atlas/lore/locations/shimmalshyr.md"
   },
   {
     "categoryId": "waters",
@@ -2360,7 +2498,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/hyrzashyr/hyrzashyr.webp"
     },
-    "id": "hyrzashyr"
+    "id": "hyrzashyr",
+    "lore": "/assets/atlas/lore/locations/hyrzashyr.md"
   },
   {
     "categoryId": "waters",
@@ -2377,7 +2516,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_weng/lake_weng.webp"
     },
-    "id": "lake_weng"
+    "id": "lake_weng",
+    "lore": "/assets/atlas/lore/locations/lake_weng.md"
   },
   {
     "categoryId": "waters",
@@ -2394,7 +2534,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/alandor_river/alandor_river.webp"
     },
-    "id": "alandor_river"
+    "id": "alandor_river",
+    "lore": "/assets/atlas/lore/locations/alandor_river.md"
   },
   {
     "categoryId": "waters",
@@ -2411,7 +2552,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/amnurflow/amnurflow.webp"
     },
-    "id": "amnurflow"
+    "id": "amnurflow",
+    "lore": "/assets/atlas/lore/locations/amnurflow.md"
   },
   {
     "categoryId": "waters",
@@ -2428,7 +2570,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/comassur_creek/comassur_creek.webp"
     },
-    "id": "comassur_creek"
+    "id": "comassur_creek",
+    "lore": "/assets/atlas/lore/locations/comassur_creek.md"
   },
   {
     "categoryId": "waters",
@@ -2445,7 +2588,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/rashturiver/rashturiver.webp"
     },
-    "id": "rashturiver"
+    "id": "rashturiver",
+    "lore": "/assets/atlas/lore/locations/rashturiver.md"
   },
   {
     "categoryId": "waters",
@@ -2462,7 +2606,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wengwater/wengwater.webp"
     },
-    "id": "wengwater"
+    "id": "wengwater",
+    "lore": "/assets/atlas/lore/locations/wengwater.md"
   },
   {
     "categoryId": "waters",
@@ -2479,7 +2624,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tarseth_bay/tarseth_bay.webp"
     },
-    "id": "tarseth_bay"
+    "id": "tarseth_bay",
+    "lore": "/assets/atlas/lore/locations/tarseth_bay.md"
   },
   {
     "categoryId": "waters",
@@ -2496,7 +2642,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_chionthar/river_chionthar.webp"
     },
-    "id": "river_chionthar"
+    "id": "river_chionthar",
+    "lore": "/assets/atlas/lore/locations/river_chionthar.md"
   },
   {
     "categoryId": "waters",
@@ -2513,7 +2660,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_swords/sea_of_swords.webp"
     },
-    "id": "sea_of_swords"
+    "id": "sea_of_swords",
+    "lore": "/assets/atlas/lore/locations/sea_of_swords.md"
   },
   {
     "categoryId": "waters",
@@ -2530,7 +2678,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_specie/river_specie.webp"
     },
-    "id": "river_specie"
+    "id": "river_specie",
+    "lore": "/assets/atlas/lore/locations/river_specie.md"
   },
   {
     "categoryId": "waters",
@@ -2547,7 +2696,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/imnestream/imnestream.webp"
     },
-    "id": "imnestream"
+    "id": "imnestream",
+    "lore": "/assets/atlas/lore/locations/imnestream.md"
   },
   {
     "categoryId": "waters",
@@ -2564,7 +2714,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/merchants_bay/merchants_bay.webp"
     },
-    "id": "merchants_bay"
+    "id": "merchants_bay",
+    "lore": "/assets/atlas/lore/locations/merchants_bay.md"
   },
   {
     "categoryId": "waters",
@@ -2581,7 +2732,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/firedrake_bay/firedrake_bay.webp"
     },
-    "id": "firedrake_bay"
+    "id": "firedrake_bay",
+    "lore": "/assets/atlas/lore/locations/firedrake_bay.md"
   },
   {
     "categoryId": "waters",
@@ -2598,7 +2750,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_race/the_race.webp"
     },
-    "id": "the_race"
+    "id": "the_race",
+    "lore": "/assets/atlas/lore/locations/the_race.md"
   },
   {
     "categoryId": "waters",
@@ -2615,7 +2768,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_bormul/bay_of_bormul.webp"
     },
-    "id": "bay_of_bormul"
+    "id": "bay_of_bormul",
+    "lore": "/assets/atlas/lore/locations/bay_of_bormul.md"
   },
   {
     "categoryId": "waters",
@@ -2632,7 +2786,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/hawkwings_brook/hawkwings_brook.webp"
     },
-    "id": "hawkwings_brook"
+    "id": "hawkwings_brook",
+    "lore": "/assets/atlas/lore/locations/hawkwings_brook.md"
   },
   {
     "categoryId": "waters",
@@ -2649,7 +2804,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sulduskoon_river/sulduskoon_river.webp"
     },
-    "id": "sulduskoon_river"
+    "id": "sulduskoon_river",
+    "lore": "/assets/atlas/lore/locations/sulduskoon_river.md"
   },
   {
     "categoryId": "waters",
@@ -2666,7 +2822,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/nebulae_pool/nebulae_pool.webp"
     },
-    "id": "nebulae_pool"
+    "id": "nebulae_pool",
+    "lore": "/assets/atlas/lore/locations/nebulae_pool.md"
   },
   {
     "categoryId": "waters",
@@ -2683,7 +2840,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/calathalureenteir/calathalureenteir.webp"
     },
-    "id": "calathalureenteir"
+    "id": "calathalureenteir",
+    "lore": "/assets/atlas/lore/locations/calathalureenteir.md"
   },
   {
     "categoryId": "waters",
@@ -2700,7 +2858,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_valashar/river_valashar.webp"
     },
-    "id": "river_valashar"
+    "id": "river_valashar",
+    "lore": "/assets/atlas/lore/locations/river_valashar.md"
   },
   {
     "categoryId": "waters",
@@ -2717,7 +2876,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shining_stream/shining_stream.webp"
     },
-    "id": "shining_stream"
+    "id": "shining_stream",
+    "lore": "/assets/atlas/lore/locations/shining_stream.md"
   },
   {
     "categoryId": "waters",
@@ -2734,7 +2894,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/swimstar_creek/swimstar_creek.webp"
     },
-    "id": "swimstar_creek"
+    "id": "swimstar_creek",
+    "lore": "/assets/atlas/lore/locations/swimstar_creek.md"
   },
   {
     "categoryId": "waters",
@@ -2751,7 +2912,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/impresk_lake/impresk_lake.webp"
     },
-    "id": "impresk_lake"
+    "id": "impresk_lake",
+    "lore": "/assets/atlas/lore/locations/impresk_lake.md"
   },
   {
     "categoryId": "waters",
@@ -2768,7 +2930,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/khalleshyr/khalleshyr.webp"
     },
-    "id": "khalleshyr"
+    "id": "khalleshyr",
+    "lore": "/assets/atlas/lore/locations/khalleshyr.md"
   },
   {
     "categoryId": "waters",
@@ -2785,7 +2948,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trollstooth_run/trollstooth_run.webp"
     },
-    "id": "trollstooth_run"
+    "id": "trollstooth_run",
+    "lore": "/assets/atlas/lore/locations/trollstooth_run.md"
   },
   {
     "categoryId": "waters",
@@ -2802,7 +2966,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/fireflow/fireflow.webp"
     },
-    "id": "fireflow"
+    "id": "fireflow",
+    "lore": "/assets/atlas/lore/locations/fireflow.md"
   },
   {
     "categoryId": "waters",
@@ -2819,7 +2984,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/gaping_face_cascade/gaping_face_cascade.webp"
     },
-    "id": "gaping_face_cascade"
+    "id": "gaping_face_cascade",
+    "lore": "/assets/atlas/lore/locations/gaping_face_cascade.md"
   },
   {
     "categoryId": "waters",
@@ -2836,7 +3002,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shalane_river/shalane_river.webp"
     },
-    "id": "shalane_river"
+    "id": "shalane_river",
+    "lore": "/assets/atlas/lore/locations/shalane_river.md"
   },
   {
     "categoryId": "waters",
@@ -2853,7 +3020,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_snows/lake_of_snows.webp"
     },
-    "id": "lake_of_snows"
+    "id": "lake_of_snows",
+    "lore": "/assets/atlas/lore/locations/lake_of_snows.md"
   },
   {
     "categoryId": "waters",
@@ -2870,7 +3038,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wet_river/wet_river.webp"
     },
-    "id": "wet_river"
+    "id": "wet_river",
+    "lore": "/assets/atlas/lore/locations/wet_river.md"
   },
   {
     "categoryId": "waters",
@@ -2887,7 +3056,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shalane_lake/shalane_lake.webp"
     },
-    "id": "shalane_lake"
+    "id": "shalane_lake",
+    "lore": "/assets/atlas/lore/locations/shalane_lake.md"
   },
   {
     "categoryId": "waters",
@@ -2904,7 +3074,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/deepwash/deepwash.webp"
     },
-    "id": "deepwash"
+    "id": "deepwash",
+    "lore": "/assets/atlas/lore/locations/deepwash.md"
   },
   {
     "categoryId": "waters",
@@ -2921,7 +3092,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tun_river/tun_river.webp"
     },
-    "id": "tun_river"
+    "id": "tun_river",
+    "lore": "/assets/atlas/lore/locations/tun_river.md"
   },
   {
     "categoryId": "waters",
@@ -2938,7 +3110,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/falls_of_tumbling_stars/falls_of_tumbling_stars.webp"
     },
-    "id": "falls_of_tumbling_stars"
+    "id": "falls_of_tumbling_stars",
+    "lore": "/assets/atlas/lore/locations/falls_of_tumbling_stars.md"
   },
   {
     "categoryId": "waters",
@@ -2955,7 +3128,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_sember/lake_sember.webp"
     },
-    "id": "lake_sember"
+    "id": "lake_sember",
+    "lore": "/assets/atlas/lore/locations/lake_sember.md"
   },
   {
     "categoryId": "waters",
@@ -2972,7 +3146,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/immerflow/immerflow.webp"
     },
-    "id": "immerflow"
+    "id": "immerflow",
+    "lore": "/assets/atlas/lore/locations/immerflow.md"
   },
   {
     "categoryId": "waters",
@@ -2989,7 +3164,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/thunder_river/thunder_river.webp"
     },
-    "id": "thunder_river"
+    "id": "thunder_river",
+    "lore": "/assets/atlas/lore/locations/thunder_river.md"
   },
   {
     "categoryId": "waters",
@@ -3006,7 +3182,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wyvernwater/wyvernwater.webp"
     },
-    "id": "wyvernwater"
+    "id": "wyvernwater",
+    "lore": "/assets/atlas/lore/locations/wyvernwater.md"
   },
   {
     "categoryId": "waters",
@@ -3023,7 +3200,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wyvernflow/wyvernflow.webp"
     },
-    "id": "wyvernflow"
+    "id": "wyvernflow",
+    "lore": "/assets/atlas/lore/locations/wyvernflow.md"
   },
   {
     "categoryId": "waters",
@@ -3040,7 +3218,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/darkflow_river/darkflow_river.webp"
     },
-    "id": "darkflow_river"
+    "id": "darkflow_river",
+    "lore": "/assets/atlas/lore/locations/darkflow_river.md"
   },
   {
     "categoryId": "waters",
@@ -3057,7 +3236,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_neck/the_neck.webp"
     },
-    "id": "the_neck"
+    "id": "the_neck",
+    "lore": "/assets/atlas/lore/locations/the_neck.md"
   },
   {
     "categoryId": "waters",
@@ -3074,7 +3254,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_thunn/river_thunn.webp"
     },
-    "id": "river_thunn"
+    "id": "river_thunn",
+    "lore": "/assets/atlas/lore/locations/river_thunn.md"
   },
   {
     "categoryId": "waters",
@@ -3091,7 +3272,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/skoonds_run/skoonds_run.webp"
     },
-    "id": "skoonds_run"
+    "id": "skoonds_run",
+    "lore": "/assets/atlas/lore/locations/skoonds_run.md"
   },
   {
     "categoryId": "waters",
@@ -3108,7 +3290,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/racewind_passage/racewind_passage.webp"
     },
-    "id": "racewind_passage"
+    "id": "racewind_passage",
+    "lore": "/assets/atlas/lore/locations/racewind_passage.md"
   },
   {
     "categoryId": "waters",
@@ -3125,7 +3308,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/cauldron_of_the_reach/cauldron_of_the_reach.webp"
     },
-    "id": "cauldron_of_the_reach"
+    "id": "cauldron_of_the_reach",
+    "lore": "/assets/atlas/lore/locations/cauldron_of_the_reach.md"
   },
   {
     "categoryId": "waters",
@@ -3142,7 +3326,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/borlyth_bay/borlyth_bay.webp"
     },
-    "id": "borlyth_bay"
+    "id": "borlyth_bay",
+    "lore": "/assets/atlas/lore/locations/borlyth_bay.md"
   },
   {
     "categoryId": "waters",
@@ -3159,7 +3344,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/cloak_bay/cloak_bay.webp"
     },
-    "id": "cloak_bay"
+    "id": "cloak_bay",
+    "lore": "/assets/atlas/lore/locations/cloak_bay.md"
   },
   {
     "categoryId": "waters",
@@ -3176,7 +3362,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_eredruie/lake_eredruie.webp"
     },
-    "id": "lake_eredruie"
+    "id": "lake_eredruie",
+    "lore": "/assets/atlas/lore/locations/lake_eredruie.md"
   },
   {
     "categoryId": "waters",
@@ -3193,7 +3380,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_arkhen/river_arkhen.webp"
     },
-    "id": "river_arkhen"
+    "id": "river_arkhen",
+    "lore": "/assets/atlas/lore/locations/river_arkhen.md"
   },
   {
     "categoryId": "waters",
@@ -3210,7 +3398,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/arkhen_falls/arkhen_falls.webp"
     },
-    "id": "arkhen_falls"
+    "id": "arkhen_falls",
+    "lore": "/assets/atlas/lore/locations/arkhen_falls.md"
   },
   {
     "categoryId": "waters",
@@ -3227,7 +3416,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/starwater_river/starwater_river.webp"
     },
-    "id": "starwater_river"
+    "id": "starwater_river",
+    "lore": "/assets/atlas/lore/locations/starwater_river.md"
   },
   {
     "categoryId": "waters",
@@ -3244,7 +3434,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dragonmere/dragonmere.webp"
     },
-    "id": "dragonmere"
+    "id": "dragonmere",
+    "lore": "/assets/atlas/lore/locations/dragonmere.md"
   },
   {
     "categoryId": "waters",
@@ -3261,7 +3452,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_arabel/river_arabel.webp"
     },
-    "id": "river_arabel"
+    "id": "river_arabel",
+    "lore": "/assets/atlas/lore/locations/river_arabel.md"
   },
   {
     "categoryId": "waters",
@@ -3278,7 +3470,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_warm_waterfall/the_warm_waterfall.webp"
     },
-    "id": "the_warm_waterfall"
+    "id": "the_warm_waterfall",
+    "lore": "/assets/atlas/lore/locations/the_warm_waterfall.md"
   },
   {
     "categoryId": "waters",
@@ -3295,7 +3488,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/plungepool/plungepool.webp"
     },
-    "id": "plungepool"
+    "id": "plungepool",
+    "lore": "/assets/atlas/lore/locations/plungepool.md"
   },
   {
     "categoryId": "waters",
@@ -3312,7 +3506,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_sharragh/river_sharragh.webp"
     },
-    "id": "river_sharragh"
+    "id": "river_sharragh",
+    "lore": "/assets/atlas/lore/locations/river_sharragh.md"
   },
   {
     "categoryId": "waters",
@@ -3329,7 +3524,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/redwater_lake/redwater_lake.webp"
     },
-    "id": "redwater_lake"
+    "id": "redwater_lake",
+    "lore": "/assets/atlas/lore/locations/redwater_lake.md"
   },
   {
     "categoryId": "waters",
@@ -3346,7 +3542,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_the_snake/lake_of_the_snake.webp"
     },
-    "id": "lake_of_the_snake"
+    "id": "lake_of_the_snake",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_snake.md"
   },
   {
     "categoryId": "waters",
@@ -3363,7 +3560,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_reddan/river_reddan.webp"
     },
-    "id": "river_reddan"
+    "id": "river_reddan",
+    "lore": "/assets/atlas/lore/locations/river_reddan.md"
   },
   {
     "categoryId": "waters",
@@ -3380,7 +3578,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lurlar/river_lurlar.webp"
     },
-    "id": "river_lurlar"
+    "id": "river_lurlar",
+    "lore": "/assets/atlas/lore/locations/river_lurlar.md"
   },
   {
     "categoryId": "waters",
@@ -3397,7 +3596,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_the_long_arm/lake_of_the_long_arm.webp"
     },
-    "id": "lake_of_the_long_arm"
+    "id": "lake_of_the_long_arm",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_long_arm.md"
   },
   {
     "categoryId": "waters",
@@ -3414,7 +3614,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/castaway_coast/castaway_coast.webp"
     },
-    "id": "castaway_coast"
+    "id": "castaway_coast",
+    "lore": "/assets/atlas/lore/locations/castaway_coast.md"
   },
   {
     "categoryId": "waters",
@@ -3431,7 +3632,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_skeleton_shore/the_skeleton_shore.webp"
     },
-    "id": "the_skeleton_shore"
+    "id": "the_skeleton_shore",
+    "lore": "/assets/atlas/lore/locations/the_skeleton_shore.md"
   },
   {
     "categoryId": "waters",
@@ -3448,7 +3650,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/winding_water/winding_water.webp"
     },
-    "id": "winding_water"
+    "id": "winding_water",
+    "lore": "/assets/atlas/lore/locations/winding_water.md"
   },
   {
     "categoryId": "waters",
@@ -3465,7 +3668,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/misty_stair/misty_stair.webp"
     },
-    "id": "misty_stair"
+    "id": "misty_stair",
+    "lore": "/assets/atlas/lore/locations/misty_stair.md"
   },
   {
     "categoryId": "waters",
@@ -3482,7 +3686,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/serpents_tail_stream/serpents_tail_stream.webp"
     },
-    "id": "serpents_tail_stream"
+    "id": "serpents_tail_stream",
+    "lore": "/assets/atlas/lore/locations/serpents_tail_stream.md"
   },
   {
     "categoryId": "waters",
@@ -3499,7 +3704,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_reaching/river_reaching.webp"
     },
-    "id": "river_reaching"
+    "id": "river_reaching",
+    "lore": "/assets/atlas/lore/locations/river_reaching.md"
   },
   {
     "categoryId": "waters",
@@ -3516,7 +3722,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/highstar_lake/highstar_lake.webp"
     },
-    "id": "highstar_lake"
+    "id": "highstar_lake",
+    "lore": "/assets/atlas/lore/locations/highstar_lake.md"
   },
   {
     "categoryId": "waters",
@@ -3533,7 +3740,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/hark_river/hark_river.webp"
     },
-    "id": "hark_river"
+    "id": "hark_river",
+    "lore": "/assets/atlas/lore/locations/hark_river.md"
   },
   {
     "categoryId": "waters",
@@ -3550,7 +3758,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/grayflow/grayflow.webp"
     },
-    "id": "grayflow"
+    "id": "grayflow",
+    "lore": "/assets/atlas/lore/locations/grayflow.md"
   },
   {
     "categoryId": "waters",
@@ -3567,7 +3776,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/loagrann_river/loagrann_river.webp"
     },
-    "id": "loagrann_river"
+    "id": "loagrann_river",
+    "lore": "/assets/atlas/lore/locations/loagrann_river.md"
   },
   {
     "categoryId": "waters",
@@ -3584,7 +3794,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/skull_creek/skull_creek.webp"
     },
-    "id": "skull_creek"
+    "id": "skull_creek",
+    "lore": "/assets/atlas/lore/locations/skull_creek.md"
   },
   {
     "categoryId": "waters",
@@ -3601,7 +3812,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/whitewater/whitewater.webp"
     },
-    "id": "whitewater"
+    "id": "whitewater",
+    "lore": "/assets/atlas/lore/locations/whitewater.md"
   },
   {
     "categoryId": "waters",
@@ -3618,7 +3830,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/heartblood_river/heartblood_river.webp"
     },
-    "id": "heartblood_river"
+    "id": "heartblood_river",
+    "lore": "/assets/atlas/lore/locations/heartblood_river.md"
   },
   {
     "categoryId": "waters",
@@ -3635,7 +3848,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shining_falls/shining_falls.webp"
     },
-    "id": "shining_falls"
+    "id": "shining_falls",
+    "lore": "/assets/atlas/lore/locations/shining_falls.md"
   },
   {
     "categoryId": "waters",
@@ -3652,7 +3866,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mistwater_river/mistwater_river.webp"
     },
-    "id": "mistwater_river"
+    "id": "mistwater_river",
+    "lore": "/assets/atlas/lore/locations/mistwater_river.md"
   },
   {
     "categoryId": "waters",
@@ -3669,7 +3884,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/kirinar_stream/kirinar_stream.webp"
     },
-    "id": "kirinar_stream"
+    "id": "kirinar_stream",
+    "lore": "/assets/atlas/lore/locations/kirinar_stream.md"
   },
   {
     "categoryId": "waters",
@@ -3686,7 +3902,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/evenbrook/evenbrook.webp"
     },
-    "id": "evenbrook"
+    "id": "evenbrook",
+    "lore": "/assets/atlas/lore/locations/evenbrook.md"
   },
   {
     "categoryId": "waters",
@@ -3703,7 +3920,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/starmantle_bay/starmantle_bay.webp"
     },
-    "id": "starmantle_bay"
+    "id": "starmantle_bay",
+    "lore": "/assets/atlas/lore/locations/starmantle_bay.md"
   },
   {
     "categoryId": "waters",
@@ -3720,7 +3938,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/cedar_river/cedar_river.webp"
     },
-    "id": "cedar_river"
+    "id": "cedar_river",
+    "lore": "/assets/atlas/lore/locations/cedar_river.md"
   },
   {
     "categoryId": "waters",
@@ -3737,7 +3956,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/south_cedar_river/south_cedar_river.webp"
     },
-    "id": "south_cedar_river"
+    "id": "south_cedar_river",
+    "lore": "/assets/atlas/lore/locations/south_cedar_river.md"
   },
   {
     "categoryId": "waters",
@@ -3754,7 +3974,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/north_cedar_river/north_cedar_river.webp"
     },
-    "id": "north_cedar_river"
+    "id": "north_cedar_river",
+    "lore": "/assets/atlas/lore/locations/north_cedar_river.md"
   },
   {
     "categoryId": "waters",
@@ -3771,7 +3992,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/churning_bay/churning_bay.webp"
     },
-    "id": "churning_bay"
+    "id": "churning_bay",
+    "lore": "/assets/atlas/lore/locations/churning_bay.md"
   },
   {
     "categoryId": "waters",
@@ -3788,7 +4010,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lightless_lake/lightless_lake.webp"
     },
-    "id": "lightless_lake"
+    "id": "lightless_lake",
+    "lore": "/assets/atlas/lore/locations/lightless_lake.md"
   },
   {
     "categoryId": "waters",
@@ -3805,7 +4028,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/arabel_springs/arabel_springs.webp"
     },
-    "id": "arabel_springs"
+    "id": "arabel_springs",
+    "lore": "/assets/atlas/lore/locations/arabel_springs.md"
   },
   {
     "categoryId": "waters",
@@ -3822,7 +4046,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_drifting_stars/lake_of_drifting_stars.webp"
     },
-    "id": "lake_of_drifting_stars"
+    "id": "lake_of_drifting_stars",
+    "lore": "/assets/atlas/lore/locations/lake_of_drifting_stars.md"
   },
   {
     "categoryId": "waters",
@@ -3839,7 +4064,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/alaoreum_river/alaoreum_river.webp"
     },
-    "id": "alaoreum_river"
+    "id": "alaoreum_river",
+    "lore": "/assets/atlas/lore/locations/alaoreum_river.md"
   },
   {
     "categoryId": "waters",
@@ -3856,7 +4082,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/evenstar_lake/evenstar_lake.webp"
     },
-    "id": "evenstar_lake"
+    "id": "evenstar_lake",
+    "lore": "/assets/atlas/lore/locations/evenstar_lake.md"
   },
   {
     "categoryId": "waters",
@@ -3873,7 +4100,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lis/river_lis.webp"
     },
-    "id": "river_lis"
+    "id": "river_lis",
+    "lore": "/assets/atlas/lore/locations/river_lis.md"
   },
   {
     "categoryId": "waters",
@@ -3890,7 +4118,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_phlan/bay_of_phlan.webp"
     },
-    "id": "bay_of_phlan"
+    "id": "bay_of_phlan",
+    "lore": "/assets/atlas/lore/locations/bay_of_phlan.md"
   },
   {
     "categoryId": "waters",
@@ -3907,7 +4136,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/stojanow/stojanow.webp"
     },
-    "id": "stojanow"
+    "id": "stojanow",
+    "lore": "/assets/atlas/lore/locations/stojanow.md"
   },
   {
     "categoryId": "waters",
@@ -3924,7 +4154,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ardeep_river/ardeep_river.webp"
     },
-    "id": "ardeep_river"
+    "id": "ardeep_river",
+    "lore": "/assets/atlas/lore/locations/ardeep_river.md"
   },
   {
     "categoryId": "waters",
@@ -3941,7 +4172,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/selpir/selpir.webp"
     },
-    "id": "selpir"
+    "id": "selpir",
+    "lore": "/assets/atlas/lore/locations/selpir.md"
   },
   {
     "categoryId": "waters",
@@ -3958,7 +4190,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/yhauntan_bay/yhauntan_bay.webp"
     },
-    "id": "yhauntan_bay"
+    "id": "yhauntan_bay",
+    "lore": "/assets/atlas/lore/locations/yhauntan_bay.md"
   },
   {
     "categoryId": "waters",
@@ -3975,7 +4208,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_dalton/river_dalton.webp"
     },
-    "id": "river_dalton"
+    "id": "river_dalton",
+    "lore": "/assets/atlas/lore/locations/river_dalton.md"
   },
   {
     "categoryId": "waters",
@@ -3992,7 +4226,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/stormy_bay/stormy_bay.webp"
     },
-    "id": "stormy_bay"
+    "id": "stormy_bay",
+    "lore": "/assets/atlas/lore/locations/stormy_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4009,7 +4244,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_melishar/lake_melishar.webp"
     },
-    "id": "lake_melishar"
+    "id": "lake_melishar",
+    "lore": "/assets/atlas/lore/locations/lake_melishar.md"
   },
   {
     "categoryId": "waters",
@@ -4026,7 +4262,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_dessarin/river_dessarin.webp"
     },
-    "id": "river_dessarin"
+    "id": "river_dessarin",
+    "lore": "/assets/atlas/lore/locations/river_dessarin.md"
   },
   {
     "categoryId": "waters",
@@ -4043,7 +4280,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dancing_falls/dancing_falls.webp"
     },
-    "id": "dancing_falls"
+    "id": "dancing_falls",
+    "lore": "/assets/atlas/lore/locations/dancing_falls.md"
   },
   {
     "categoryId": "waters",
@@ -4060,7 +4298,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/gaustars_creek/gaustars_creek.webp"
     },
-    "id": "gaustars_creek"
+    "id": "gaustars_creek",
+    "lore": "/assets/atlas/lore/locations/gaustars_creek.md"
   },
   {
     "categoryId": "waters",
@@ -4077,7 +4316,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tormel_river/tormel_river.webp"
     },
-    "id": "tormel_river"
+    "id": "tormel_river",
+    "lore": "/assets/atlas/lore/locations/tormel_river.md"
   },
   {
     "categoryId": "waters",
@@ -4094,7 +4334,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_thent/river_thent.webp"
     },
-    "id": "river_thent"
+    "id": "river_thent",
+    "lore": "/assets/atlas/lore/locations/river_thent.md"
   },
   {
     "categoryId": "waters",
@@ -4111,7 +4352,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_thentar/lake_thentar.webp"
     },
-    "id": "lake_thentar"
+    "id": "lake_thentar",
+    "lore": "/assets/atlas/lore/locations/lake_thentar.md"
   },
   {
     "categoryId": "waters",
@@ -4128,7 +4370,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/jaws_strait/jaws_strait.webp"
     },
-    "id": "jaws_strait"
+    "id": "jaws_strait",
+    "lore": "/assets/atlas/lore/locations/jaws_strait.md"
   },
   {
     "categoryId": "waters",
@@ -4145,7 +4388,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_bowl/the_bowl.webp"
     },
-    "id": "the_bowl"
+    "id": "the_bowl",
+    "lore": "/assets/atlas/lore/locations/the_bowl.md"
   },
   {
     "categoryId": "waters",
@@ -4162,7 +4406,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_windrace/the_windrace.webp"
     },
-    "id": "the_windrace"
+    "id": "the_windrace",
+    "lore": "/assets/atlas/lore/locations/the_windrace.md"
   },
   {
     "categoryId": "waters",
@@ -4179,7 +4424,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_spoon/the_spoon.webp"
     },
-    "id": "the_spoon"
+    "id": "the_spoon",
+    "lore": "/assets/atlas/lore/locations/the_spoon.md"
   },
   {
     "categoryId": "waters",
@@ -4196,7 +4442,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/moonsea/moonsea.webp"
     },
-    "id": "moonsea"
+    "id": "moonsea",
+    "lore": "/assets/atlas/lore/locations/moonsea.md"
   },
   {
     "categoryId": "waters",
@@ -4213,7 +4460,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dragon_reach/dragon_reach.webp"
     },
-    "id": "dragon_reach"
+    "id": "dragon_reach",
+    "lore": "/assets/atlas/lore/locations/dragon_reach.md"
   },
   {
     "categoryId": "waters",
@@ -4230,7 +4478,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/winterspear_river/winterspear_river.webp"
     },
-    "id": "winterspear_river"
+    "id": "winterspear_river",
+    "lore": "/assets/atlas/lore/locations/winterspear_river.md"
   },
   {
     "categoryId": "waters",
@@ -4247,7 +4496,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trank_river/trank_river.webp"
     },
-    "id": "trank_river"
+    "id": "trank_river",
+    "lore": "/assets/atlas/lore/locations/trank_river.md"
   },
   {
     "categoryId": "waters",
@@ -4264,7 +4514,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/duathamper/duathamper.webp"
     },
-    "id": "duathamper"
+    "id": "duathamper",
+    "lore": "/assets/atlas/lore/locations/duathamper.md"
   },
   {
     "categoryId": "waters",
@@ -4281,7 +4532,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/fire_river/fire_river.webp"
     },
-    "id": "fire_river"
+    "id": "fire_river",
+    "lore": "/assets/atlas/lore/locations/fire_river.md"
   },
   {
     "categoryId": "waters",
@@ -4298,7 +4550,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_vesper/river_vesper.webp"
     },
-    "id": "river_vesper"
+    "id": "river_vesper",
+    "lore": "/assets/atlas/lore/locations/river_vesper.md"
   },
   {
     "categoryId": "waters",
@@ -4315,7 +4568,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dragon_falls_waterfall/dragon_falls_waterfall.webp"
     },
-    "id": "dragon_falls_waterfall"
+    "id": "dragon_falls_waterfall",
+    "lore": "/assets/atlas/lore/locations/dragon_falls_waterfall.md"
   },
   {
     "categoryId": "waters",
@@ -4332,7 +4586,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tesh/river_tesh.webp"
     },
-    "id": "river_tesh"
+    "id": "river_tesh",
+    "lore": "/assets/atlas/lore/locations/river_tesh.md"
   },
   {
     "categoryId": "waters",
@@ -4349,7 +4604,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ashaba/river_ashaba.webp"
     },
-    "id": "river_ashaba"
+    "id": "river_ashaba",
+    "lore": "/assets/atlas/lore/locations/river_ashaba.md"
   },
   {
     "categoryId": "waters",
@@ -4366,7 +4622,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/pool_of_yeven/pool_of_yeven.webp"
     },
-    "id": "pool_of_yeven"
+    "id": "pool_of_yeven",
+    "lore": "/assets/atlas/lore/locations/pool_of_yeven.md"
   },
   {
     "categoryId": "waters",
@@ -4383,7 +4640,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/semberflow/semberflow.webp"
     },
-    "id": "semberflow"
+    "id": "semberflow",
+    "lore": "/assets/atlas/lore/locations/semberflow.md"
   },
   {
     "categoryId": "waters",
@@ -4400,7 +4658,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/glaemril/glaemril.webp"
     },
-    "id": "glaemril"
+    "id": "glaemril",
+    "lore": "/assets/atlas/lore/locations/glaemril.md"
   },
   {
     "categoryId": "waters",
@@ -4417,7 +4676,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/feather_falls/feather_falls.webp"
     },
-    "id": "feather_falls"
+    "id": "feather_falls",
+    "lore": "/assets/atlas/lore/locations/feather_falls.md"
   },
   {
     "categoryId": "waters",
@@ -4434,7 +4694,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/white_river/white_river.webp"
     },
-    "id": "white_river"
+    "id": "white_river",
+    "lore": "/assets/atlas/lore/locations/white_river.md"
   },
   {
     "categoryId": "waters",
@@ -4451,7 +4712,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_tunwash/the_tunwash.webp"
     },
-    "id": "the_tunwash"
+    "id": "the_tunwash",
+    "lore": "/assets/atlas/lore/locations/the_tunwash.md"
   },
   {
     "categoryId": "waters",
@@ -4468,7 +4730,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/teerac/teerac.webp"
     },
-    "id": "teerac"
+    "id": "teerac",
+    "lore": "/assets/atlas/lore/locations/teerac.md"
   },
   {
     "categoryId": "waters",
@@ -4485,7 +4748,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_miir/lake_miir.webp"
     },
-    "id": "lake_miir"
+    "id": "lake_miir",
+    "lore": "/assets/atlas/lore/locations/lake_miir.md"
   },
   {
     "categoryId": "waters",
@@ -4502,7 +4766,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_redrun/river_redrun.webp"
     },
-    "id": "river_redrun"
+    "id": "river_redrun",
+    "lore": "/assets/atlas/lore/locations/river_redrun.md"
   },
   {
     "categoryId": "waters",
@@ -4519,7 +4784,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_rauvin/river_rauvin.webp"
     },
-    "id": "river_rauvin"
+    "id": "river_rauvin",
+    "lore": "/assets/atlas/lore/locations/river_rauvin.md"
   },
   {
     "categoryId": "waters",
@@ -4536,7 +4802,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dead_orc_river/dead_orc_river.webp"
     },
-    "id": "dead_orc_river"
+    "id": "dead_orc_river",
+    "lore": "/assets/atlas/lore/locations/dead_orc_river.md"
   },
   {
     "categoryId": "waters",
@@ -4553,7 +4820,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/falls_of_ixce/falls_of_ixce.webp"
     },
-    "id": "falls_of_ixce"
+    "id": "falls_of_ixce",
+    "lore": "/assets/atlas/lore/locations/falls_of_ixce.md"
   },
   {
     "categoryId": "waters",
@@ -4570,7 +4838,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_longreach/lake_longreach.webp"
     },
-    "id": "lake_longreach"
+    "id": "lake_longreach",
+    "lore": "/assets/atlas/lore/locations/lake_longreach.md"
   },
   {
     "categoryId": "waters",
@@ -4587,7 +4856,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/naed_creek/naed_creek.webp"
     },
-    "id": "naed_creek"
+    "id": "naed_creek",
+    "lore": "/assets/atlas/lore/locations/naed_creek.md"
   },
   {
     "categoryId": "waters",
@@ -4604,7 +4874,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/telstang_brook/telstang_brook.webp"
     },
-    "id": "telstang_brook"
+    "id": "telstang_brook",
+    "lore": "/assets/atlas/lore/locations/telstang_brook.md"
   },
   {
     "categoryId": "waters",
@@ -4621,7 +4892,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_samar/river_samar.webp"
     },
-    "id": "river_samar"
+    "id": "river_samar",
+    "lore": "/assets/atlas/lore/locations/river_samar.md"
   },
   {
     "categoryId": "waters",
@@ -4638,7 +4910,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_omgar/bay_of_omgar.webp"
     },
-    "id": "bay_of_omgar"
+    "id": "bay_of_omgar",
+    "lore": "/assets/atlas/lore/locations/bay_of_omgar.md"
   },
   {
     "categoryId": "waters",
@@ -4655,7 +4928,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/samar_bay/samar_bay.webp"
     },
-    "id": "samar_bay"
+    "id": "samar_bay",
+    "lore": "/assets/atlas/lore/locations/samar_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4672,7 +4946,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/snapping_turtle_bay/snapping_turtle_bay.webp"
     },
-    "id": "snapping_turtle_bay"
+    "id": "snapping_turtle_bay",
+    "lore": "/assets/atlas/lore/locations/snapping_turtle_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4689,7 +4964,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_gur/river_gur.webp"
     },
-    "id": "river_gur"
+    "id": "river_gur",
+    "lore": "/assets/atlas/lore/locations/river_gur.md"
   },
   {
     "categoryId": "waters",
@@ -4706,7 +4982,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/rassatan_bay/rassatan_bay.webp"
     },
-    "id": "rassatan_bay"
+    "id": "rassatan_bay",
+    "lore": "/assets/atlas/lore/locations/rassatan_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4723,7 +5000,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tching/river_tching.webp"
     },
-    "id": "river_tching"
+    "id": "river_tching",
+    "lore": "/assets/atlas/lore/locations/river_tching.md"
   },
   {
     "categoryId": "waters",
@@ -4740,7 +5018,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_salban/river_salban.webp"
     },
-    "id": "river_salban"
+    "id": "river_salban",
+    "lore": "/assets/atlas/lore/locations/river_salban.md"
   },
   {
     "categoryId": "waters",
@@ -4757,7 +5036,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/salban_falls/salban_falls.webp"
     },
-    "id": "salban_falls"
+    "id": "salban_falls",
+    "lore": "/assets/atlas/lore/locations/salban_falls.md"
   },
   {
     "categoryId": "waters",
@@ -4774,7 +5054,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/selgaunt_bay/selgaunt_bay.webp"
     },
-    "id": "selgaunt_bay"
+    "id": "selgaunt_bay",
+    "lore": "/assets/atlas/lore/locations/selgaunt_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4791,7 +5072,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_chult/bay_of_chult.webp"
     },
-    "id": "bay_of_chult"
+    "id": "bay_of_chult",
+    "lore": "/assets/atlas/lore/locations/bay_of_chult.md"
   },
   {
     "categoryId": "waters",
@@ -4808,7 +5090,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/jahaka_bay/jahaka_bay.webp"
     },
-    "id": "jahaka_bay"
+    "id": "jahaka_bay",
+    "lore": "/assets/atlas/lore/locations/jahaka_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4825,7 +5108,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/refuge_bay/refuge_bay.webp"
     },
-    "id": "refuge_bay"
+    "id": "refuge_bay",
+    "lore": "/assets/atlas/lore/locations/refuge_bay.md"
   },
   {
     "categoryId": "waters",
@@ -4842,7 +5126,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_talons/the_talons.webp"
     },
-    "id": "the_talons"
+    "id": "the_talons",
+    "lore": "/assets/atlas/lore/locations/the_talons.md"
   },
   {
     "categoryId": "waters",
@@ -4859,7 +5144,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/striding_giant_rapids/striding_giant_rapids.webp"
     },
-    "id": "striding_giant_rapids"
+    "id": "striding_giant_rapids",
+    "lore": "/assets/atlas/lore/locations/striding_giant_rapids.md"
   },
   {
     "categoryId": "waters",
@@ -4876,7 +5162,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_laughingflow/the_laughingflow.webp"
     },
-    "id": "the_laughingflow"
+    "id": "the_laughingflow",
+    "lore": "/assets/atlas/lore/locations/the_laughingflow.md"
   },
   {
     "categoryId": "waters",
@@ -4893,7 +5180,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/unicorn_run/unicorn_run.webp"
     },
-    "id": "unicorn_run"
+    "id": "unicorn_run",
+    "lore": "/assets/atlas/lore/locations/unicorn_run.md"
   },
   {
     "categoryId": "waters",
@@ -4910,7 +5198,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_sisters/the_sisters.webp"
     },
-    "id": "the_sisters"
+    "id": "the_sisters",
+    "lore": "/assets/atlas/lore/locations/the_sisters.md"
   },
   {
     "categoryId": "waters",
@@ -4927,7 +5216,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/north_fork/north_fork.webp"
     },
-    "id": "north_fork"
+    "id": "north_fork",
+    "lore": "/assets/atlas/lore/locations/north_fork.md"
   },
   {
     "categoryId": "waters",
@@ -4944,7 +5234,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/starsilver/starsilver.webp"
     },
-    "id": "starsilver"
+    "id": "starsilver",
+    "lore": "/assets/atlas/lore/locations/starsilver.md"
   },
   {
     "categoryId": "waters",
@@ -4961,7 +5252,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_mhair/river_mhair.webp"
     },
-    "id": "river_mhair"
+    "id": "river_mhair",
+    "lore": "/assets/atlas/lore/locations/river_mhair.md"
   },
   {
     "categoryId": "waters",
@@ -4978,7 +5270,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lemas/river_lemas.webp"
     },
-    "id": "river_lemas"
+    "id": "river_lemas",
+    "lore": "/assets/atlas/lore/locations/river_lemas.md"
   },
   {
     "categoryId": "waters",
@@ -4995,7 +5288,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_lemas/lake_lemas.webp"
     },
-    "id": "lake_lemas"
+    "id": "lake_lemas",
+    "lore": "/assets/atlas/lore/locations/lake_lemas.md"
   },
   {
     "categoryId": "waters",
@@ -5012,7 +5306,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tharynd/river_tharynd.webp"
     },
-    "id": "river_tharynd"
+    "id": "river_tharynd",
+    "lore": "/assets/atlas/lore/locations/river_tharynd.md"
   },
   {
     "categoryId": "waters",
@@ -5029,7 +5324,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tashtan_coast/tashtan_coast.webp"
     },
-    "id": "tashtan_coast"
+    "id": "tashtan_coast",
+    "lore": "/assets/atlas/lore/locations/tashtan_coast.md"
   },
   {
     "categoryId": "waters",
@@ -5046,7 +5342,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_lundeth/river_lundeth.webp"
     },
-    "id": "river_lundeth"
+    "id": "river_lundeth",
+    "lore": "/assets/atlas/lore/locations/river_lundeth.md"
   },
   {
     "categoryId": "waters",
@@ -5063,7 +5360,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_luo/lake_luo.webp"
     },
-    "id": "lake_luo"
+    "id": "lake_luo",
+    "lore": "/assets/atlas/lore/locations/lake_luo.md"
   },
   {
     "categoryId": "waters",
@@ -5080,7 +5378,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/horn_stream/horn_stream.webp"
     },
-    "id": "horn_stream"
+    "id": "horn_stream",
+    "lore": "/assets/atlas/lore/locations/horn_stream.md"
   },
   {
     "categoryId": "waters",
@@ -5097,7 +5396,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_mirar/river_mirar.webp"
     },
-    "id": "river_mirar"
+    "id": "river_mirar",
+    "lore": "/assets/atlas/lore/locations/river_mirar.md"
   },
   {
     "categoryId": "waters",
@@ -5114,7 +5414,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_soshenstar/river_soshenstar.webp"
     },
-    "id": "river_soshenstar"
+    "id": "river_soshenstar",
+    "lore": "/assets/atlas/lore/locations/river_soshenstar.md"
   },
   {
     "categoryId": "waters",
@@ -5131,7 +5432,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tiryki/river_tiryki.webp"
     },
-    "id": "river_tiryki"
+    "id": "river_tiryki",
+    "lore": "/assets/atlas/lore/locations/river_tiryki.md"
   },
   {
     "categoryId": "waters",
@@ -5148,7 +5450,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/kitchers_inlet/kitchers_inlet.webp"
     },
-    "id": "kitchers_inlet"
+    "id": "kitchers_inlet",
+    "lore": "/assets/atlas/lore/locations/kitchers_inlet.md"
   },
   {
     "categoryId": "waters",
@@ -5165,7 +5468,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_olung/river_olung.webp"
     },
-    "id": "river_olung"
+    "id": "river_olung",
+    "lore": "/assets/atlas/lore/locations/river_olung.md"
   },
   {
     "categoryId": "waters",
@@ -5182,7 +5486,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_cauldron/the_cauldron.webp"
     },
-    "id": "the_cauldron"
+    "id": "the_cauldron",
+    "lore": "/assets/atlas/lore/locations/the_cauldron.md"
   },
   {
     "categoryId": "waters",
@@ -5199,7 +5504,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shilku_bay/shilku_bay.webp"
     },
-    "id": "shilku_bay"
+    "id": "shilku_bay",
+    "lore": "/assets/atlas/lore/locations/shilku_bay.md"
   },
   {
     "categoryId": "waters",
@@ -5216,7 +5522,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_catherine/river_catherine.webp"
     },
-    "id": "river_catherine"
+    "id": "river_catherine",
+    "lore": "/assets/atlas/lore/locations/river_catherine.md"
   },
   {
     "categoryId": "waters",
@@ -5233,7 +5540,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/black_raven_river/black_raven_river.webp"
     },
-    "id": "black_raven_river"
+    "id": "black_raven_river",
+    "lore": "/assets/atlas/lore/locations/black_raven_river.md"
   },
   {
     "categoryId": "waters",
@@ -5250,7 +5558,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_suj_lan/the_suj_lan.webp"
     },
-    "id": "the_suj_lan"
+    "id": "the_suj_lan",
+    "lore": "/assets/atlas/lore/locations/the_suj_lan.md"
   },
   {
     "categoryId": "waters",
@@ -5267,7 +5576,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_sambar_run/the_sambar_run.webp"
     },
-    "id": "the_sambar_run"
+    "id": "the_sambar_run",
+    "lore": "/assets/atlas/lore/locations/the_sambar_run.md"
   },
   {
     "categoryId": "waters",
@@ -5284,7 +5594,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/gulf_of_lath/gulf_of_lath.webp"
     },
-    "id": "gulf_of_lath"
+    "id": "gulf_of_lath",
+    "lore": "/assets/atlas/lore/locations/gulf_of_lath.md"
   },
   {
     "categoryId": "waters",
@@ -5301,7 +5612,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ice_lakes/ice_lakes.webp"
     },
-    "id": "ice_lakes"
+    "id": "ice_lakes",
+    "lore": "/assets/atlas/lore/locations/ice_lakes.md"
   },
   {
     "categoryId": "waters",
@@ -5318,7 +5630,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shaengarne_river/shaengarne_river.webp"
     },
-    "id": "shaengarne_river"
+    "id": "shaengarne_river",
+    "lore": "/assets/atlas/lore/locations/shaengarne_river.md"
   },
   {
     "categoryId": "waters",
@@ -5335,7 +5648,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/iceflow/iceflow.webp"
     },
-    "id": "iceflow"
+    "id": "iceflow",
+    "lore": "/assets/atlas/lore/locations/iceflow.md"
   },
   {
     "categoryId": "waters",
@@ -5352,7 +5666,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lac_dinneshere/lac_dinneshere.webp"
     },
-    "id": "lac_dinneshere"
+    "id": "lac_dinneshere",
+    "lore": "/assets/atlas/lore/locations/lac_dinneshere.md"
   },
   {
     "categoryId": "waters",
@@ -5369,7 +5684,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/maer_dualdon/maer_dualdon.webp"
     },
-    "id": "maer_dualdon"
+    "id": "maer_dualdon",
+    "lore": "/assets/atlas/lore/locations/maer_dualdon.md"
   },
   {
     "categoryId": "waters",
@@ -5386,7 +5702,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/redwaters/redwaters.webp"
     },
-    "id": "redwaters"
+    "id": "redwaters",
+    "lore": "/assets/atlas/lore/locations/redwaters.md"
   },
   {
     "categoryId": "waters",
@@ -5403,7 +5720,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_khedrun/river_khedrun.webp"
     },
-    "id": "river_khedrun"
+    "id": "river_khedrun",
+    "lore": "/assets/atlas/lore/locations/river_khedrun.md"
   },
   {
     "categoryId": "waters",
@@ -5420,7 +5738,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shining_creek/shining_creek.webp"
     },
-    "id": "shining_creek"
+    "id": "shining_creek",
+    "lore": "/assets/atlas/lore/locations/shining_creek.md"
   },
   {
     "categoryId": "waters",
@@ -5437,7 +5756,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/goblintide_river/goblintide_river.webp"
     },
-    "id": "goblintide_river"
+    "id": "goblintide_river",
+    "lore": "/assets/atlas/lore/locations/goblintide_river.md"
   },
   {
     "categoryId": "waters",
@@ -5454,7 +5774,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sixstreams_river/sixstreams_river.webp"
     },
-    "id": "sixstreams_river"
+    "id": "sixstreams_river",
+    "lore": "/assets/atlas/lore/locations/sixstreams_river.md"
   },
   {
     "categoryId": "waters",
@@ -5471,7 +5792,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mirrormoss_bay/mirrormoss_bay.webp"
     },
-    "id": "mirrormoss_bay"
+    "id": "mirrormoss_bay",
+    "lore": "/assets/atlas/lore/locations/mirrormoss_bay.md"
   },
   {
     "categoryId": "waters",
@@ -5488,7 +5810,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/demonreef/demonreef.webp"
     },
-    "id": "demonreef"
+    "id": "demonreef",
+    "lore": "/assets/atlas/lore/locations/demonreef.md"
   },
   {
     "categoryId": "waters",
@@ -5505,7 +5828,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/south_fang/south_fang.webp"
     },
-    "id": "south_fang"
+    "id": "south_fang",
+    "lore": "/assets/atlas/lore/locations/south_fang.md"
   },
   {
     "categoryId": "waters",
@@ -5522,7 +5846,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/evens_gulf/evens_gulf.webp"
     },
-    "id": "evens_gulf"
+    "id": "evens_gulf",
+    "lore": "/assets/atlas/lore/locations/evens_gulf.md"
   },
   {
     "categoryId": "waters",
@@ -5539,7 +5864,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/buzzard_beak_harbor/buzzard_beak_harbor.webp"
     },
-    "id": "buzzard_beak_harbor"
+    "id": "buzzard_beak_harbor",
+    "lore": "/assets/atlas/lore/locations/buzzard_beak_harbor.md"
   },
   {
     "categoryId": "waters",
@@ -5556,7 +5882,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_old_water/the_old_water.webp"
     },
-    "id": "the_old_water"
+    "id": "the_old_water",
+    "lore": "/assets/atlas/lore/locations/the_old_water.md"
   },
   {
     "categoryId": "waters",
@@ -5573,7 +5900,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bluefang_water/bluefang_water.webp"
     },
-    "id": "bluefang_water"
+    "id": "bluefang_water",
+    "lore": "/assets/atlas/lore/locations/bluefang_water.md"
   },
   {
     "categoryId": "waters",
@@ -5590,7 +5918,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/easting_river/easting_river.webp"
     },
-    "id": "easting_river"
+    "id": "easting_river",
+    "lore": "/assets/atlas/lore/locations/easting_river.md"
   },
   {
     "categoryId": "waters",
@@ -5607,7 +5936,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_icemelt/lake_icemelt.webp"
     },
-    "id": "lake_icemelt"
+    "id": "lake_icemelt",
+    "lore": "/assets/atlas/lore/locations/lake_icemelt.md"
   },
   {
     "categoryId": "waters",
@@ -5624,7 +5954,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_icehilt/river_icehilt.webp"
     },
-    "id": "river_icehilt"
+    "id": "river_icehilt",
+    "lore": "/assets/atlas/lore/locations/river_icehilt.md"
   },
   {
     "categoryId": "waters",
@@ -5641,7 +5972,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sidewinder_river/sidewinder_river.webp"
     },
-    "id": "sidewinder_river"
+    "id": "sidewinder_river",
+    "lore": "/assets/atlas/lore/locations/sidewinder_river.md"
   },
   {
     "categoryId": "waters",
@@ -5658,7 +5990,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/great_imphras_river/great_imphras_river.webp"
     },
-    "id": "great_imphras_river"
+    "id": "great_imphras_river",
+    "lore": "/assets/atlas/lore/locations/great_imphras_river.md"
   },
   {
     "categoryId": "waters",
@@ -5675,7 +6008,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/falls_of_erech/falls_of_erech.webp"
     },
-    "id": "falls_of_erech"
+    "id": "falls_of_erech",
+    "lore": "/assets/atlas/lore/locations/falls_of_erech.md"
   },
   {
     "categoryId": "waters",
@@ -5692,7 +6026,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/luirbrech/luirbrech.webp"
     },
-    "id": "luirbrech"
+    "id": "luirbrech",
+    "lore": "/assets/atlas/lore/locations/luirbrech.md"
   },
   {
     "categoryId": "waters",
@@ -5709,7 +6044,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_mereth/lake_mereth.webp"
     },
-    "id": "lake_mereth"
+    "id": "lake_mereth",
+    "lore": "/assets/atlas/lore/locations/lake_mereth.md"
   },
   {
     "categoryId": "waters",
@@ -5726,7 +6062,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_muirenon/lake_muirenon.webp"
     },
-    "id": "lake_muirenon"
+    "id": "lake_muirenon",
+    "lore": "/assets/atlas/lore/locations/lake_muirenon.md"
   },
   {
     "categoryId": "waters",
@@ -5743,7 +6080,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/huta_lake/huta_lake.webp"
     },
-    "id": "huta_lake"
+    "id": "huta_lake",
+    "lore": "/assets/atlas/lore/locations/huta_lake.md"
   },
   {
     "categoryId": "waters",
@@ -5760,7 +6098,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_musker/lake_musker.webp"
     },
-    "id": "lake_musker"
+    "id": "lake_musker",
+    "lore": "/assets/atlas/lore/locations/lake_musker.md"
   },
   {
     "categoryId": "waters",
@@ -5777,7 +6116,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_ashane/lake_ashane.webp"
     },
-    "id": "lake_ashane"
+    "id": "lake_ashane",
+    "lore": "/assets/atlas/lore/locations/lake_ashane.md"
   },
   {
     "categoryId": "waters",
@@ -5794,7 +6134,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_erech/river_erech.webp"
     },
-    "id": "river_erech"
+    "id": "river_erech",
+    "lore": "/assets/atlas/lore/locations/river_erech.md"
   },
   {
     "categoryId": "waters",
@@ -5811,7 +6152,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/iceborn_river/iceborn_river.webp"
     },
-    "id": "iceborn_river"
+    "id": "iceborn_river",
+    "lore": "/assets/atlas/lore/locations/iceborn_river.md"
   },
   {
     "categoryId": "waters",
@@ -5828,7 +6170,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ashan/river_ashan.webp"
     },
-    "id": "river_ashan"
+    "id": "river_ashan",
+    "lore": "/assets/atlas/lore/locations/river_ashan.md"
   },
   {
     "categoryId": "waters",
@@ -5845,7 +6188,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_rasha/river_rasha.webp"
     },
-    "id": "river_rasha"
+    "id": "river_rasha",
+    "lore": "/assets/atlas/lore/locations/river_rasha.md"
   },
   {
     "categoryId": "waters",
@@ -5862,7 +6206,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_fir/river_fir.webp"
     },
-    "id": "river_fir"
+    "id": "river_fir",
+    "lore": "/assets/atlas/lore/locations/river_fir.md"
   },
   {
     "categoryId": "waters",
@@ -5879,7 +6224,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_tir/river_tir.webp"
     },
-    "id": "river_tir"
+    "id": "river_tir",
+    "lore": "/assets/atlas/lore/locations/river_tir.md"
   },
   {
     "categoryId": "waters",
@@ -5896,7 +6242,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_tirulag/lake_tirulag.webp"
     },
-    "id": "lake_tirulag"
+    "id": "lake_tirulag",
+    "lore": "/assets/atlas/lore/locations/lake_tirulag.md"
   },
   {
     "categoryId": "waters",
@@ -5913,7 +6260,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/forest_blood_river/forest_blood_river.webp"
     },
-    "id": "forest_blood_river"
+    "id": "forest_blood_river",
+    "lore": "/assets/atlas/lore/locations/forest_blood_river.md"
   },
   {
     "categoryId": "waters",
@@ -5930,7 +6278,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lethyrstream/lethyrstream.webp"
     },
-    "id": "lethyrstream"
+    "id": "lethyrstream",
+    "lore": "/assets/atlas/lore/locations/lethyrstream.md"
   },
   {
     "categoryId": "waters",
@@ -5947,7 +6296,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_flam/lake_flam.webp"
     },
-    "id": "lake_flam"
+    "id": "lake_flam",
+    "lore": "/assets/atlas/lore/locations/lake_flam.md"
   },
   {
     "categoryId": "waters",
@@ -5964,7 +6314,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_murthil/lake_murthil.webp"
     },
-    "id": "lake_murthil"
+    "id": "lake_murthil",
+    "lore": "/assets/atlas/lore/locations/lake_murthil.md"
   },
   {
     "categoryId": "waters",
@@ -5981,7 +6332,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_dalestream/the_dalestream.webp"
     },
-    "id": "the_dalestream"
+    "id": "the_dalestream",
+    "lore": "/assets/atlas/lore/locations/the_dalestream.md"
   },
   {
     "categoryId": "waters",
@@ -5998,7 +6350,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/icelace_lake/icelace_lake.webp"
     },
-    "id": "icelace_lake"
+    "id": "icelace_lake",
+    "lore": "/assets/atlas/lore/locations/icelace_lake.md"
   },
   {
     "categoryId": "waters",
@@ -6015,7 +6368,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/galena_snake/galena_snake.webp"
     },
-    "id": "galena_snake"
+    "id": "galena_snake",
+    "lore": "/assets/atlas/lore/locations/galena_snake.md"
   },
   {
     "categoryId": "waters",
@@ -6032,7 +6386,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/icelace_river/icelace_river.webp"
     },
-    "id": "icelace_river"
+    "id": "icelace_river",
+    "lore": "/assets/atlas/lore/locations/icelace_river.md"
   },
   {
     "categoryId": "waters",
@@ -6049,7 +6404,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/goliad_river/goliad_river.webp"
     },
-    "id": "goliad_river"
+    "id": "goliad_river",
+    "lore": "/assets/atlas/lore/locations/goliad_river.md"
   },
   {
     "categoryId": "waters",
@@ -6066,7 +6422,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_mogador/lake_mogador.webp"
     },
-    "id": "lake_mogador"
+    "id": "lake_mogador",
+    "lore": "/assets/atlas/lore/locations/lake_mogador.md"
   },
   {
     "categoryId": "waters",
@@ -6083,7 +6440,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_pelauvir/river_pelauvir.webp"
     },
-    "id": "river_pelauvir"
+    "id": "river_pelauvir",
+    "lore": "/assets/atlas/lore/locations/river_pelauvir.md"
   },
   {
     "categoryId": "waters",
@@ -6100,7 +6458,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/beaumaris_river/beaumaris_river.webp"
     },
-    "id": "beaumaris_river"
+    "id": "beaumaris_river",
+    "lore": "/assets/atlas/lore/locations/beaumaris_river.md"
   },
   {
     "categoryId": "waters",
@@ -6117,7 +6476,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mirror_lake/mirror_lake.webp"
     },
-    "id": "mirror_lake"
+    "id": "mirror_lake",
+    "lore": "/assets/atlas/lore/locations/mirror_lake.md"
   },
   {
     "categoryId": "waters",
@@ -6134,7 +6494,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shattersoul_river/shattersoul_river.webp"
     },
-    "id": "shattersoul_river"
+    "id": "shattersoul_river",
+    "lore": "/assets/atlas/lore/locations/shattersoul_river.md"
   },
   {
     "categoryId": "waters",
@@ -6151,7 +6512,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_midai/lake_midai.webp"
     },
-    "id": "lake_midai"
+    "id": "lake_midai",
+    "lore": "/assets/atlas/lore/locations/lake_midai.md"
   },
   {
     "categoryId": "waters",
@@ -6168,7 +6530,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/crag_creek/crag_creek.webp"
     },
-    "id": "crag_creek"
+    "id": "crag_creek",
+    "lore": "/assets/atlas/lore/locations/crag_creek.md"
   },
   {
     "categoryId": "waters",
@@ -6185,7 +6548,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/evermelt/evermelt.webp"
     },
-    "id": "evermelt"
+    "id": "evermelt",
+    "lore": "/assets/atlas/lore/locations/evermelt.md"
   },
   {
     "categoryId": "waters",
@@ -6202,7 +6566,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ascalhorn_river/ascalhorn_river.webp"
     },
-    "id": "ascalhorn_river"
+    "id": "ascalhorn_river",
+    "lore": "/assets/atlas/lore/locations/ascalhorn_river.md"
   },
   {
     "categoryId": "waters",
@@ -6219,7 +6584,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_lurking_river/the_lurking_river.webp"
     },
-    "id": "the_lurking_river"
+    "id": "the_lurking_river",
+    "lore": "/assets/atlas/lore/locations/the_lurking_river.md"
   },
   {
     "categoryId": "waters",
@@ -6236,7 +6602,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bloodmuck/bloodmuck.webp"
     },
-    "id": "bloodmuck"
+    "id": "bloodmuck",
+    "lore": "/assets/atlas/lore/locations/bloodmuck.md"
   },
   {
     "categoryId": "waters",
@@ -6253,7 +6620,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ghost_lake/ghost_lake.webp"
     },
-    "id": "ghost_lake"
+    "id": "ghost_lake",
+    "lore": "/assets/atlas/lore/locations/ghost_lake.md"
   },
   {
     "categoryId": "waters",
@@ -6270,7 +6638,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_zef/river_zef.webp"
     },
-    "id": "river_zef"
+    "id": "river_zef",
+    "lore": "/assets/atlas/lore/locations/river_zef.md"
   },
   {
     "categoryId": "waters",
@@ -6287,7 +6656,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/crescentflow/crescentflow.webp"
     },
-    "id": "crescentflow"
+    "id": "crescentflow",
+    "lore": "/assets/atlas/lore/locations/crescentflow.md"
   },
   {
     "categoryId": "waters",
@@ -6304,7 +6674,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/amaratha_stream/amaratha_stream.webp"
     },
-    "id": "amaratha_stream"
+    "id": "amaratha_stream",
+    "lore": "/assets/atlas/lore/locations/amaratha_stream.md"
   },
   {
     "categoryId": "waters",
@@ -6321,7 +6692,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/razacks_tears/razacks_tears.webp"
     },
-    "id": "razacks_tears"
+    "id": "razacks_tears",
+    "lore": "/assets/atlas/lore/locations/razacks_tears.md"
   },
   {
     "categoryId": "waters",
@@ -6338,7 +6710,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/stoneshoulder_creek/stoneshoulder_creek.webp"
     },
-    "id": "stoneshoulder_creek"
+    "id": "stoneshoulder_creek",
+    "lore": "/assets/atlas/lore/locations/stoneshoulder_creek.md"
   },
   {
     "categoryId": "waters",
@@ -6355,7 +6728,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_maltorus/lake_maltorus.webp"
     },
-    "id": "lake_maltorus"
+    "id": "lake_maltorus",
+    "lore": "/assets/atlas/lore/locations/lake_maltorus.md"
   },
   {
     "categoryId": "waters",
@@ -6372,7 +6746,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lotans_abyss/lotans_abyss.webp"
     },
-    "id": "lotans_abyss"
+    "id": "lotans_abyss",
+    "lore": "/assets/atlas/lore/locations/lotans_abyss.md"
   },
   {
     "categoryId": "waters",
@@ -6389,7 +6764,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trackless_sea/trackless_sea.webp"
     },
-    "id": "trackless_sea"
+    "id": "trackless_sea",
+    "lore": "/assets/atlas/lore/locations/trackless_sea.md"
   },
   {
     "categoryId": "waters",
@@ -6406,7 +6782,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/northwind_strait/northwind_strait.webp"
     },
-    "id": "northwind_strait"
+    "id": "northwind_strait",
+    "lore": "/assets/atlas/lore/locations/northwind_strait.md"
   },
   {
     "categoryId": "waters",
@@ -6423,7 +6800,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/acovals_cove/acovals_cove.webp"
     },
-    "id": "acovals_cove"
+    "id": "acovals_cove",
+    "lore": "/assets/atlas/lore/locations/acovals_cove.md"
   },
   {
     "categoryId": "waters",
@@ -6440,7 +6818,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/dragons_teeth_lagoon/dragons_teeth_lagoon.webp"
     },
-    "id": "dragons_teeth_lagoon"
+    "id": "dragons_teeth_lagoon",
+    "lore": "/assets/atlas/lore/locations/dragons_teeth_lagoon.md"
   },
   {
     "categoryId": "waters",
@@ -6457,7 +6836,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/asavirs_channel/asavirs_channel.webp"
     },
-    "id": "asavirs_channel"
+    "id": "asavirs_channel",
+    "lore": "/assets/atlas/lore/locations/asavirs_channel.md"
   },
   {
     "categoryId": "waters",
@@ -6474,7 +6854,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/arglander_river/arglander_river.webp"
     },
-    "id": "arglander_river"
+    "id": "arglander_river",
+    "lore": "/assets/atlas/lore/locations/arglander_river.md"
   },
   {
     "categoryId": "waters",
@@ -6491,7 +6872,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/solbudar_river/solbudar_river.webp"
     },
-    "id": "solbudar_river"
+    "id": "solbudar_river",
+    "lore": "/assets/atlas/lore/locations/solbudar_river.md"
   },
   {
     "categoryId": "waters",
@@ -6508,7 +6890,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_marjahon/lake_marjahon.webp"
     },
-    "id": "lake_marjahon"
+    "id": "lake_marjahon",
+    "lore": "/assets/atlas/lore/locations/lake_marjahon.md"
   },
   {
     "categoryId": "waters",
@@ -6525,7 +6908,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ykslarin_river/ykslarin_river.webp"
     },
-    "id": "ykslarin_river"
+    "id": "ykslarin_river",
+    "lore": "/assets/atlas/lore/locations/ykslarin_river.md"
   },
   {
     "categoryId": "waters",
@@ -6542,7 +6926,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/strait_of_oman/strait_of_oman.webp"
     },
-    "id": "strait_of_oman"
+    "id": "strait_of_oman",
+    "lore": "/assets/atlas/lore/locations/strait_of_oman.md"
   },
   {
     "categoryId": "waters",
@@ -6559,7 +6944,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/iron_bay/iron_bay.webp"
     },
-    "id": "iron_bay"
+    "id": "iron_bay",
+    "lore": "/assets/atlas/lore/locations/iron_bay.md"
   },
   {
     "categoryId": "waters",
@@ -6576,7 +6962,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/codsbay/codsbay.webp"
     },
-    "id": "codsbay"
+    "id": "codsbay",
+    "lore": "/assets/atlas/lore/locations/codsbay.md"
   },
   {
     "categoryId": "waters",
@@ -6593,7 +6980,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/codsrun_creek/codsrun_creek.webp"
     },
-    "id": "codsrun_creek"
+    "id": "codsrun_creek",
+    "lore": "/assets/atlas/lore/locations/codsrun_creek.md"
   },
   {
     "categoryId": "waters",
@@ -6610,7 +6998,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/salmon_bay/salmon_bay.webp"
     },
-    "id": "salmon_bay"
+    "id": "salmon_bay",
+    "lore": "/assets/atlas/lore/locations/salmon_bay.md"
   },
   {
     "categoryId": "waters",
@@ -6627,7 +7016,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_of_the_leech/lake_of_the_leech.webp"
     },
-    "id": "lake_of_the_leech"
+    "id": "lake_of_the_leech",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_leech.md"
   },
   {
     "categoryId": "waters",
@@ -6644,7 +7034,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_sunder/lake_sunder.webp"
     },
-    "id": "lake_sunder"
+    "id": "lake_sunder",
+    "lore": "/assets/atlas/lore/locations/lake_sunder.md"
   },
   {
     "categoryId": "waters",
@@ -6661,7 +7052,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/farfair_river/farfair_river.webp"
     },
-    "id": "farfair_river"
+    "id": "farfair_river",
+    "lore": "/assets/atlas/lore/locations/farfair_river.md"
   },
   {
     "categoryId": "waters",
@@ -6678,7 +7070,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/maggleraks_lake/maggleraks_lake.webp"
     },
-    "id": "maggleraks_lake"
+    "id": "maggleraks_lake",
+    "lore": "/assets/atlas/lore/locations/maggleraks_lake.md"
   },
   {
     "categoryId": "waters",
@@ -6695,7 +7088,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_idolflow/the_idolflow.webp"
     },
-    "id": "the_idolflow"
+    "id": "the_idolflow",
+    "lore": "/assets/atlas/lore/locations/the_idolflow.md"
   },
   {
     "categoryId": "waters",
@@ -6712,7 +7106,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/levast_river/levast_river.webp"
     },
-    "id": "levast_river"
+    "id": "levast_river",
+    "lore": "/assets/atlas/lore/locations/levast_river.md"
   },
   {
     "categoryId": "waters",
@@ -6729,7 +7124,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sallokessirs_cove/sallokessirs_cove.webp"
     },
-    "id": "sallokessirs_cove"
+    "id": "sallokessirs_cove",
+    "lore": "/assets/atlas/lore/locations/sallokessirs_cove.md"
   },
   {
     "categoryId": "waters",
@@ -6746,7 +7142,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lagoon_of_the_trollspears/lagoon_of_the_trollspears.webp"
     },
-    "id": "lagoon_of_the_trollspears"
+    "id": "lagoon_of_the_trollspears",
+    "lore": "/assets/atlas/lore/locations/lagoon_of_the_trollspears.md"
   },
   {
     "categoryId": "waters",
@@ -6763,7 +7160,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/plow_creek/plow_creek.webp"
     },
-    "id": "plow_creek"
+    "id": "plow_creek",
+    "lore": "/assets/atlas/lore/locations/plow_creek.md"
   },
   {
     "categoryId": "waters",
@@ -6780,7 +7178,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lac_sielya/lac_sielya.webp"
     },
-    "id": "lac_sielya"
+    "id": "lac_sielya",
+    "lore": "/assets/atlas/lore/locations/lac_sielya.md"
   },
   {
     "categoryId": "waters",
@@ -6797,7 +7196,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_vasty_drink/the_vasty_drink.webp"
     },
-    "id": "the_vasty_drink"
+    "id": "the_vasty_drink",
+    "lore": "/assets/atlas/lore/locations/the_vasty_drink.md"
   },
   {
     "categoryId": "waters",
@@ -6814,7 +7214,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lisloch/lisloch.webp"
     },
-    "id": "lisloch"
+    "id": "lisloch",
+    "lore": "/assets/atlas/lore/locations/lisloch.md"
   },
   {
     "categoryId": "waters",
@@ -6831,7 +7232,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_otta/lake_otta.webp"
     },
-    "id": "lake_otta"
+    "id": "lake_otta",
+    "lore": "/assets/atlas/lore/locations/lake_otta.md"
   },
   {
     "categoryId": "waters",
@@ -6848,7 +7250,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/whitefish_bay/whitefish_bay.webp"
     },
-    "id": "whitefish_bay"
+    "id": "whitefish_bay",
+    "lore": "/assets/atlas/lore/locations/whitefish_bay.md"
   },
   {
     "categoryId": "waters",
@@ -6865,7 +7268,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/deepvale/deepvale.webp"
     },
-    "id": "deepvale"
+    "id": "deepvale",
+    "lore": "/assets/atlas/lore/locations/deepvale.md"
   },
   {
     "categoryId": "waters",
@@ -6882,7 +7286,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_ironflow/the_ironflow.webp"
     },
-    "id": "the_ironflow"
+    "id": "the_ironflow",
+    "lore": "/assets/atlas/lore/locations/the_ironflow.md"
   },
   {
     "categoryId": "waters",
@@ -6899,7 +7304,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/hughloch/hughloch.webp"
     },
-    "id": "hughloch"
+    "id": "hughloch",
+    "lore": "/assets/atlas/lore/locations/hughloch.md"
   },
   {
     "categoryId": "waters",
@@ -6916,7 +7322,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/swanmay_river/swanmay_river.webp"
     },
-    "id": "swanmay_river"
+    "id": "swanmay_river",
+    "lore": "/assets/atlas/lore/locations/swanmay_river.md"
   },
   {
     "categoryId": "waters",
@@ -6933,7 +7340,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_hul/lake_hul.webp"
     },
-    "id": "lake_hul"
+    "id": "lake_hul",
+    "lore": "/assets/atlas/lore/locations/lake_hul.md"
   },
   {
     "categoryId": "waters",
@@ -6950,7 +7358,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/hot_springs/hot_springs.webp"
     },
-    "id": "hot_springs"
+    "id": "hot_springs",
+    "lore": "/assets/atlas/lore/locations/hot_springs.md"
   },
   {
     "categoryId": "waters",
@@ -6967,7 +7376,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/taak_lake/taak_lake.webp"
     },
-    "id": "taak_lake"
+    "id": "taak_lake",
+    "lore": "/assets/atlas/lore/locations/taak_lake.md"
   },
   {
     "categoryId": "waters",
@@ -6984,7 +7394,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/utaak_stream/utaak_stream.webp"
     },
-    "id": "utaak_stream"
+    "id": "utaak_stream",
+    "lore": "/assets/atlas/lore/locations/utaak_stream.md"
   },
   {
     "categoryId": "waters",
@@ -7001,7 +7412,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/semek_river/semek_river.webp"
     },
-    "id": "semek_river"
+    "id": "semek_river",
+    "lore": "/assets/atlas/lore/locations/semek_river.md"
   },
   {
     "categoryId": "waters",
@@ -7018,7 +7430,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_greenborn/river_greenborn.webp"
     },
-    "id": "river_greenborn"
+    "id": "river_greenborn",
+    "lore": "/assets/atlas/lore/locations/river_greenborn.md"
   },
   {
     "categoryId": "waters",
@@ -7035,7 +7448,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_vel/river_vel.webp"
     },
-    "id": "river_vel"
+    "id": "river_vel",
+    "lore": "/assets/atlas/lore/locations/river_vel.md"
   },
   {
     "categoryId": "waters",
@@ -7052,7 +7466,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_orl/river_orl.webp"
     },
-    "id": "river_orl"
+    "id": "river_orl",
+    "lore": "/assets/atlas/lore/locations/river_orl.md"
   },
   {
     "categoryId": "waters",
@@ -7069,7 +7484,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_yuir/river_yuir.webp"
     },
-    "id": "river_yuir"
+    "id": "river_yuir",
+    "lore": "/assets/atlas/lore/locations/river_yuir.md"
   },
   {
     "categoryId": "waters",
@@ -7086,7 +7502,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/cold_river/cold_river.webp"
     },
-    "id": "cold_river"
+    "id": "cold_river",
+    "lore": "/assets/atlas/lore/locations/cold_river.md"
   },
   {
     "categoryId": "waters",
@@ -7103,7 +7520,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_til/river_til.webp"
     },
-    "id": "river_til"
+    "id": "river_til",
+    "lore": "/assets/atlas/lore/locations/river_til.md"
   },
   {
     "categoryId": "waters",
@@ -7120,7 +7538,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_task/river_task.webp"
     },
-    "id": "river_task"
+    "id": "river_task",
+    "lore": "/assets/atlas/lore/locations/river_task.md"
   },
   {
     "categoryId": "waters",
@@ -7137,7 +7556,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/llewellyn_harbor/llewellyn_harbor.webp"
     },
-    "id": "llewellyn_harbor"
+    "id": "llewellyn_harbor",
+    "lore": "/assets/atlas/lore/locations/llewellyn_harbor.md"
   },
   {
     "categoryId": "waters",
@@ -7154,7 +7574,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/straight_of_alaron/straight_of_alaron.webp"
     },
-    "id": "straight_of_alaron"
+    "id": "straight_of_alaron",
+    "lore": "/assets/atlas/lore/locations/straight_of_alaron.md"
   },
   {
     "categoryId": "waters",
@@ -7171,7 +7592,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_starth/river_starth.webp"
     },
-    "id": "river_starth"
+    "id": "river_starth",
+    "lore": "/assets/atlas/lore/locations/river_starth.md"
   },
   {
     "categoryId": "waters",
@@ -7188,7 +7610,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/firloch/firloch.webp"
     },
-    "id": "firloch"
+    "id": "firloch",
+    "lore": "/assets/atlas/lore/locations/firloch.md"
   },
   {
     "categoryId": "waters",
@@ -7205,7 +7628,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_the_mer_she/bay_of_the_mer_she.webp"
     },
-    "id": "bay_of_the_mer_she"
+    "id": "bay_of_the_mer_she",
+    "lore": "/assets/atlas/lore/locations/bay_of_the_mer_she.md"
   },
   {
     "categoryId": "waters",
@@ -7222,7 +7646,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/netharn_bay/netharn_bay.webp"
     },
-    "id": "netharn_bay"
+    "id": "netharn_bay",
+    "lore": "/assets/atlas/lore/locations/netharn_bay.md"
   },
   {
     "categoryId": "waters",
@@ -7239,7 +7664,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/temezzers_end/temezzers_end.webp"
     },
-    "id": "temezzers_end"
+    "id": "temezzers_end",
+    "lore": "/assets/atlas/lore/locations/temezzers_end.md"
   },
   {
     "categoryId": "waters",
@@ -7256,7 +7682,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/rathgarls_bay/rathgarls_bay.webp"
     },
-    "id": "rathgarls_bay"
+    "id": "rathgarls_bay",
+    "lore": "/assets/atlas/lore/locations/rathgarls_bay.md"
   },
   {
     "categoryId": "waters",
@@ -7273,7 +7700,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_wash/the_wash.webp"
     },
-    "id": "the_wash"
+    "id": "the_wash",
+    "lore": "/assets/atlas/lore/locations/the_wash.md"
   },
   {
     "categoryId": "waters",
@@ -7290,7 +7718,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/laothlan_bay/laothlan_bay.webp"
     },
-    "id": "laothlan_bay"
+    "id": "laothlan_bay",
+    "lore": "/assets/atlas/lore/locations/laothlan_bay.md"
   },
   {
     "categoryId": "waters",
@@ -7307,7 +7736,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/aryll_bay/aryll_bay.webp"
     },
-    "id": "aryll_bay"
+    "id": "aryll_bay",
+    "lore": "/assets/atlas/lore/locations/aryll_bay.md"
   },
   {
     "categoryId": "waters",
@@ -7324,7 +7754,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/aryllswater/aryllswater.webp"
     },
-    "id": "aryllswater"
+    "id": "aryllswater",
+    "lore": "/assets/atlas/lore/locations/aryllswater.md"
   },
   {
     "categoryId": "waters",
@@ -7341,7 +7772,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bright_shore/bright_shore.webp"
     },
-    "id": "bright_shore"
+    "id": "bright_shore",
+    "lore": "/assets/atlas/lore/locations/bright_shore.md"
   },
   {
     "categoryId": "waters",
@@ -7358,7 +7790,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/grayseas/grayseas.webp"
     },
-    "id": "grayseas"
+    "id": "grayseas",
+    "lore": "/assets/atlas/lore/locations/grayseas.md"
   },
   {
     "categoryId": "waters",
@@ -7375,7 +7808,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/west_dusking_river/west_dusking_river.webp"
     },
-    "id": "west_dusking_river"
+    "id": "west_dusking_river",
+    "lore": "/assets/atlas/lore/locations/west_dusking_river.md"
   },
   {
     "categoryId": "waters",
@@ -7392,7 +7826,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lammatars_water/lammatars_water.webp"
     },
-    "id": "lammatars_water"
+    "id": "lammatars_water",
+    "lore": "/assets/atlas/lore/locations/lammatars_water.md"
   },
   {
     "categoryId": "waters",
@@ -7409,7 +7844,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_glarth/river_glarth.webp"
     },
-    "id": "river_glarth"
+    "id": "river_glarth",
+    "lore": "/assets/atlas/lore/locations/river_glarth.md"
   },
   {
     "categoryId": "waters",
@@ -7426,7 +7862,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ranraths_run/ranraths_run.webp"
     },
-    "id": "ranraths_run"
+    "id": "ranraths_run",
+    "lore": "/assets/atlas/lore/locations/ranraths_run.md"
   },
   {
     "categoryId": "waters",
@@ -7443,7 +7880,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_sarradra/river_sarradra.webp"
     },
-    "id": "river_sarradra"
+    "id": "river_sarradra",
+    "lore": "/assets/atlas/lore/locations/river_sarradra.md"
   },
   {
     "categoryId": "waters",
@@ -7460,7 +7898,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/caldarth/caldarth.webp"
     },
-    "id": "caldarth"
+    "id": "caldarth",
+    "lore": "/assets/atlas/lore/locations/caldarth.md"
   },
   {
     "categoryId": "waters",
@@ -7477,7 +7916,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_balaerit/river_balaerit.webp"
     },
-    "id": "river_balaerit"
+    "id": "river_balaerit",
+    "lore": "/assets/atlas/lore/locations/river_balaerit.md"
   },
   {
     "categoryId": "waters",
@@ -7494,7 +7934,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/falling_rock_river/falling_rock_river.webp"
     },
-    "id": "falling_rock_river"
+    "id": "falling_rock_river",
+    "lore": "/assets/atlas/lore/locations/falling_rock_river.md"
   },
   {
     "categoryId": "waters",
@@ -7511,7 +7952,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/whisper_run/whisper_run.webp"
     },
-    "id": "whisper_run"
+    "id": "whisper_run",
+    "lore": "/assets/atlas/lore/locations/whisper_run.md"
   },
   {
     "categoryId": "waters",
@@ -7528,7 +7970,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/zarcels_run/zarcels_run.webp"
     },
-    "id": "zarcels_run"
+    "id": "zarcels_run",
+    "lore": "/assets/atlas/lore/locations/zarcels_run.md"
   },
   {
     "categoryId": "waters",
@@ -7545,7 +7988,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/stormwind_river/stormwind_river.webp"
     },
-    "id": "stormwind_river"
+    "id": "stormwind_river",
+    "lore": "/assets/atlas/lore/locations/stormwind_river.md"
   },
   {
     "categoryId": "waters",
@@ -7562,7 +8006,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/waevendusk_river/waevendusk_river.webp"
     },
-    "id": "waevendusk_river"
+    "id": "waevendusk_river",
+    "lore": "/assets/atlas/lore/locations/waevendusk_river.md"
   },
   {
     "categoryId": "waters",
@@ -7579,7 +8024,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/xammandas_stream/xammandas_stream.webp"
     },
-    "id": "xammandas_stream"
+    "id": "xammandas_stream",
+    "lore": "/assets/atlas/lore/locations/xammandas_stream.md"
   },
   {
     "categoryId": "waters",
@@ -7596,7 +8042,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tumblestone_river/tumblestone_river.webp"
     },
-    "id": "tumblestone_river"
+    "id": "tumblestone_river",
+    "lore": "/assets/atlas/lore/locations/tumblestone_river.md"
   },
   {
     "categoryId": "waters",
@@ -7613,7 +8060,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/blue_sword_river/blue_sword_river.webp"
     },
-    "id": "blue_sword_river"
+    "id": "blue_sword_river",
+    "lore": "/assets/atlas/lore/locations/blue_sword_river.md"
   },
   {
     "categoryId": "waters",
@@ -7630,7 +8078,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_ragheb/lake_ragheb.webp"
     },
-    "id": "lake_ragheb"
+    "id": "lake_ragheb",
+    "lore": "/assets/atlas/lore/locations/lake_ragheb.md"
   },
   {
     "categoryId": "waters",
@@ -7647,7 +8096,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_norland/bay_of_norland.webp"
     },
-    "id": "bay_of_norland"
+    "id": "bay_of_norland",
+    "lore": "/assets/atlas/lore/locations/bay_of_norland.md"
   },
   {
     "categoryId": "waters",
@@ -7664,7 +8114,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/strait_of_the_leviathan/strait_of_the_leviathan.webp"
     },
-    "id": "strait_of_the_leviathan"
+    "id": "strait_of_the_leviathan",
+    "lore": "/assets/atlas/lore/locations/strait_of_the_leviathan.md"
   },
   {
     "categoryId": "waters",
@@ -7681,7 +8132,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/myrloch/myrloch.webp"
     },
-    "id": "myrloch"
+    "id": "myrloch",
+    "lore": "/assets/atlas/lore/locations/myrloch.md"
   },
   {
     "categoryId": "waters",
@@ -7698,7 +8150,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/corwell_firth/corwell_firth.webp"
     },
-    "id": "corwell_firth"
+    "id": "corwell_firth",
+    "lore": "/assets/atlas/lore/locations/corwell_firth.md"
   },
   {
     "categoryId": "waters",
@@ -7715,7 +8168,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_moonshae/sea_of_moonshae.webp"
     },
-    "id": "sea_of_moonshae"
+    "id": "sea_of_moonshae",
+    "lore": "/assets/atlas/lore/locations/sea_of_moonshae.md"
   },
   {
     "categoryId": "waters",
@@ -7732,7 +8186,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_canal/the_canal.webp"
     },
-    "id": "the_canal"
+    "id": "the_canal",
+    "lore": "/assets/atlas/lore/locations/the_canal.md"
   },
   {
     "categoryId": "waters",
@@ -7749,7 +8204,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sugar_falls/sugar_falls.webp"
     },
-    "id": "sugar_falls"
+    "id": "sugar_falls",
+    "lore": "/assets/atlas/lore/locations/sugar_falls.md"
   },
   {
     "categoryId": "waters",
@@ -7766,7 +8222,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/saeraethras_stream/saeraethras_stream.webp"
     },
-    "id": "saeraethras_stream"
+    "id": "saeraethras_stream",
+    "lore": "/assets/atlas/lore/locations/saeraethras_stream.md"
   },
   {
     "categoryId": "waters",
@@ -7783,7 +8240,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/moloth_caldera/moloth_caldera.webp"
     },
-    "id": "moloth_caldera"
+    "id": "moloth_caldera",
+    "lore": "/assets/atlas/lore/locations/moloth_caldera.md"
   },
   {
     "categoryId": "waters",
@@ -7800,7 +8258,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lake_throm/lake_throm.webp"
     },
-    "id": "lake_throm"
+    "id": "lake_throm",
+    "lore": "/assets/atlas/lore/locations/lake_throm.md"
   },
   {
     "categoryId": "waters",
@@ -7817,7 +8276,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/sea_of_frozen_tears/sea_of_frozen_tears.webp"
     },
-    "id": "sea_of_frozen_tears"
+    "id": "sea_of_frozen_tears",
+    "lore": "/assets/atlas/lore/locations/sea_of_frozen_tears.md"
   },
   {
     "categoryId": "waters",
@@ -7834,7 +8294,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lilac_pond/lilac_pond.webp"
     },
-    "id": "lilac_pond"
+    "id": "lilac_pond",
+    "lore": "/assets/atlas/lore/locations/lilac_pond.md"
   },
   {
     "categoryId": "waters",
@@ -7851,7 +8312,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/doffs_lake/doffs_lake.webp"
     },
-    "id": "doffs_lake"
+    "id": "doffs_lake",
+    "lore": "/assets/atlas/lore/locations/doffs_lake.md"
   },
   {
     "categoryId": "waters",
@@ -7868,7 +8330,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/pond_of_tears/pond_of_tears.webp"
     },
-    "id": "pond_of_tears"
+    "id": "pond_of_tears",
+    "lore": "/assets/atlas/lore/locations/pond_of_tears.md"
   },
   {
     "categoryId": "waters",
@@ -7885,7 +8348,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/corwell_harbor/corwell_harbor.webp"
     },
-    "id": "corwell_harbor"
+    "id": "corwell_harbor",
+    "lore": "/assets/atlas/lore/locations/corwell_harbor.md"
   },
   {
     "categoryId": "waters",
@@ -7902,7 +8366,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/pirates_caves/pirates_caves.webp"
     },
-    "id": "pirates_caves"
+    "id": "pirates_caves",
+    "lore": "/assets/atlas/lore/locations/pirates_caves.md"
   },
   {
     "categoryId": "waters",
@@ -7919,7 +8384,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/kingsbay/kingsbay.webp"
     },
-    "id": "kingsbay"
+    "id": "kingsbay",
+    "lore": "/assets/atlas/lore/locations/kingsbay.md"
   },
   {
     "categoryId": "waters",
@@ -7936,7 +8402,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/tir_faoi_thoinn/tir_faoi_thoinn.webp"
     },
-    "id": "tir_faoi_thoinn"
+    "id": "tir_faoi_thoinn",
+    "lore": "/assets/atlas/lore/locations/tir_faoi_thoinn.md"
   },
   {
     "categoryId": "waters",
@@ -7953,7 +8420,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/harloch/harloch.webp"
     },
-    "id": "harloch"
+    "id": "harloch",
+    "lore": "/assets/atlas/lore/locations/harloch.md"
   },
   {
     "categoryId": "waters",
@@ -7970,7 +8438,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mal_sul/mal_sul.webp"
     },
-    "id": "mal_sul"
+    "id": "mal_sul",
+    "lore": "/assets/atlas/lore/locations/mal_sul.md"
   },
   {
     "categoryId": "waters",
@@ -7987,7 +8456,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mal_feargal/mal_feargal.webp"
     },
-    "id": "mal_feargal"
+    "id": "mal_feargal",
+    "lore": "/assets/atlas/lore/locations/mal_feargal.md"
   },
   {
     "categoryId": "waters",
@@ -8004,7 +8474,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/neverwinter_river/neverwinter_river.webp"
     },
-    "id": "neverwinter_river"
+    "id": "neverwinter_river",
+    "lore": "/assets/atlas/lore/locations/neverwinter_river.md"
   },
   {
     "categoryId": "waters",
@@ -8021,7 +8492,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/bay_of_mists/bay_of_mists.webp"
     },
-    "id": "bay_of_mists"
+    "id": "bay_of_mists",
+    "lore": "/assets/atlas/lore/locations/bay_of_mists.md"
   },
   {
     "categoryId": "waters",
@@ -8038,7 +8510,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mirar_bay/mirar_bay.webp"
     },
-    "id": "mirar_bay"
+    "id": "mirar_bay",
+    "lore": "/assets/atlas/lore/locations/mirar_bay.md"
   },
   {
     "categoryId": "waters",
@@ -8055,7 +8528,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mal_tarbat/mal_tarbat.webp"
     },
-    "id": "mal_tarbat"
+    "id": "mal_tarbat",
+    "lore": "/assets/atlas/lore/locations/mal_tarbat.md"
   },
   {
     "categoryId": "waters",
@@ -8072,7 +8546,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shee_pool/shee_pool.webp"
     },
-    "id": "shee_pool"
+    "id": "shee_pool",
+    "lore": "/assets/atlas/lore/locations/shee_pool.md"
   },
   {
     "categoryId": "waters",
@@ -8089,7 +8564,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/deepglen_stream/deepglen_stream.webp"
     },
-    "id": "deepglen_stream"
+    "id": "deepglen_stream",
+    "lore": "/assets/atlas/lore/locations/deepglen_stream.md"
   },
   {
     "categoryId": "waters",
@@ -8106,7 +8582,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/underwater_realm_of_the_wizard/underwater_realm_of_the_wizard.webp"
     },
-    "id": "underwater_realm_of_the_wizard"
+    "id": "underwater_realm_of_the_wizard",
+    "lore": "/assets/atlas/lore/locations/underwater_realm_of_the_wizard.md"
   },
   {
     "categoryId": "waters",
@@ -8123,7 +8600,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/princes_sound/princes_sound.webp"
     },
-    "id": "princes_sound"
+    "id": "princes_sound",
+    "lore": "/assets/atlas/lore/locations/princes_sound.md"
   },
   {
     "categoryId": "waters",
@@ -8140,7 +8618,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/norfen_lake/norfen_lake.webp"
     },
-    "id": "norfen_lake"
+    "id": "norfen_lake",
+    "lore": "/assets/atlas/lore/locations/norfen_lake.md"
   },
   {
     "categoryId": "waters",
@@ -8157,7 +8636,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_ing/river_ing.webp"
     },
-    "id": "river_ing"
+    "id": "river_ing",
+    "lore": "/assets/atlas/lore/locations/river_ing.md"
   },
   {
     "categoryId": "waters",
@@ -8174,7 +8654,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shoal_of_thirst/shoal_of_thirst.webp"
     },
-    "id": "shoal_of_thirst"
+    "id": "shoal_of_thirst",
+    "lore": "/assets/atlas/lore/locations/shoal_of_thirst.md"
   },
   {
     "categoryId": "waters",
@@ -8191,7 +8672,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/wells_of_lurue/wells_of_lurue.webp"
     },
-    "id": "wells_of_lurue"
+    "id": "wells_of_lurue",
+    "lore": "/assets/atlas/lore/locations/wells_of_lurue.md"
   },
   {
     "categoryId": "waters",
@@ -8208,7 +8690,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/blibdoolpoolps_nest/blibdoolpoolps_nest.webp"
     },
-    "id": "blibdoolpoolps_nest"
+    "id": "blibdoolpoolps_nest",
+    "lore": "/assets/atlas/lore/locations/blibdoolpoolps_nest.md"
   },
   {
     "categoryId": "waters",
@@ -8225,7 +8708,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/pythan_trench/pythan_trench.webp"
     },
-    "id": "pythan_trench"
+    "id": "pythan_trench",
+    "lore": "/assets/atlas/lore/locations/pythan_trench.md"
   },
   {
     "categoryId": "waters",
@@ -8242,7 +8726,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lesser_eth_river/lesser_eth_river.webp"
     },
-    "id": "lesser_eth_river"
+    "id": "lesser_eth_river",
+    "lore": "/assets/atlas/lore/locations/lesser_eth_river.md"
   },
   {
     "categoryId": "waters",
@@ -8259,7 +8744,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/mal_tamesis/mal_tamesis.webp"
     },
-    "id": "mal_tamesis"
+    "id": "mal_tamesis",
+    "lore": "/assets/atlas/lore/locations/mal_tamesis.md"
   },
   {
     "categoryId": "waters",
@@ -8276,7 +8762,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/trackless_strait/trackless_strait.webp"
     },
-    "id": "trackless_strait"
+    "id": "trackless_strait",
+    "lore": "/assets/atlas/lore/locations/trackless_strait.md"
   },
   {
     "categoryId": "waters",
@@ -8293,7 +8780,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ossian_reefs/ossian_reefs.webp"
     },
-    "id": "ossian_reefs"
+    "id": "ossian_reefs",
+    "lore": "/assets/atlas/lore/locations/ossian_reefs.md"
   },
   {
     "categoryId": "waters",
@@ -8310,7 +8798,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/lac_dynnegall/lac_dynnegall.webp"
     },
-    "id": "lac_dynnegall"
+    "id": "lac_dynnegall",
+    "lore": "/assets/atlas/lore/locations/lac_dynnegall.md"
   },
   {
     "categoryId": "waters",
@@ -8327,7 +8816,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shannyth_river/shannyth_river.webp"
     },
-    "id": "shannyth_river"
+    "id": "shannyth_river",
+    "lore": "/assets/atlas/lore/locations/shannyth_river.md"
   },
   {
     "categoryId": "waters",
@@ -8344,7 +8834,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/akadis_dance/akadis_dance.webp"
     },
-    "id": "akadis_dance"
+    "id": "akadis_dance",
+    "lore": "/assets/atlas/lore/locations/akadis_dance.md"
   },
   {
     "categoryId": "waters",
@@ -8361,7 +8852,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/jede_pond/jede_pond.webp"
     },
-    "id": "jede_pond"
+    "id": "jede_pond",
+    "lore": "/assets/atlas/lore/locations/jede_pond.md"
   },
   {
     "categoryId": "waters",
@@ -8378,7 +8870,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/ashenflow_river/ashenflow_river.webp"
     },
-    "id": "ashenflow_river"
+    "id": "ashenflow_river",
+    "lore": "/assets/atlas/lore/locations/ashenflow_river.md"
   },
   {
     "categoryId": "waters",
@@ -8395,7 +8888,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_methflow/the_methflow.webp"
     },
-    "id": "the_methflow"
+    "id": "the_methflow",
+    "lore": "/assets/atlas/lore/locations/the_methflow.md"
   },
   {
     "categoryId": "waters",
@@ -8412,7 +8906,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/star_lake/star_lake.webp"
     },
-    "id": "star_lake"
+    "id": "star_lake",
+    "lore": "/assets/atlas/lore/locations/star_lake.md"
   },
   {
     "categoryId": "waters",
@@ -8429,7 +8924,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/curstlake/curstlake.webp"
     },
-    "id": "curstlake"
+    "id": "curstlake",
+    "lore": "/assets/atlas/lore/locations/curstlake.md"
   },
   {
     "categoryId": "waters",
@@ -8446,7 +8942,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/shimmer_lake/shimmer_lake.webp"
     },
-    "id": "shimmer_lake"
+    "id": "shimmer_lake",
+    "lore": "/assets/atlas/lore/locations/shimmer_lake.md"
   },
   {
     "categoryId": "waters",
@@ -8463,7 +8960,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/starfall_pool/starfall_pool.webp"
     },
-    "id": "starfall_pool"
+    "id": "starfall_pool",
+    "lore": "/assets/atlas/lore/locations/starfall_pool.md"
   },
   {
     "categoryId": "waters",
@@ -8480,7 +8978,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/gbor_nor/gbor_nor.webp"
     },
-    "id": "gbor_nor"
+    "id": "gbor_nor",
+    "lore": "/assets/atlas/lore/locations/gbor_nor.md"
   },
   {
     "categoryId": "waters",
@@ -8497,7 +8996,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/semphar_water/semphar_water.webp"
     },
-    "id": "semphar_water"
+    "id": "semphar_water",
+    "lore": "/assets/atlas/lore/locations/semphar_water.md"
   },
   {
     "categoryId": "waters",
@@ -8514,7 +9014,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/the_throat_2/the_throat_2.webp"
     },
-    "id": "the_throat_2"
+    "id": "the_throat_2",
+    "lore": "/assets/atlas/lore/locations/the_throat_2.md"
   },
   {
     "categoryId": "waters",
@@ -8531,7 +9032,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/river_of_gems/river_of_gems.webp"
     },
-    "id": "river_of_gems"
+    "id": "river_of_gems",
+    "lore": "/assets/atlas/lore/locations/river_of_gems.md"
   },
   {
     "categoryId": "waters",
@@ -8548,7 +9050,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/llashloch/llashloch.webp"
     },
-    "id": "llashloch"
+    "id": "llashloch",
+    "lore": "/assets/atlas/lore/locations/llashloch.md"
   },
   {
     "categoryId": "waters",
@@ -8565,7 +9068,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/harmun_rapids/harmun_rapids.webp"
     },
-    "id": "harmun_rapids"
+    "id": "harmun_rapids",
+    "lore": "/assets/atlas/lore/locations/harmun_rapids.md"
   },
   {
     "categoryId": "waters",
@@ -8582,7 +9086,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/staunt_pools/staunt_pools.webp"
     },
-    "id": "staunt_pools"
+    "id": "staunt_pools",
+    "lore": "/assets/atlas/lore/locations/staunt_pools.md"
   },
   {
     "categoryId": "waters",
@@ -8599,6 +9104,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/waters/icespear_river/icespear_river.webp"
     },
-    "id": "icespear_river"
+    "id": "icespear_river",
+    "lore": "/assets/atlas/lore/locations/icespear_river.md"
   }
 ]

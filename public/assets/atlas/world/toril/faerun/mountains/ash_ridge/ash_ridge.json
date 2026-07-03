@@ -4,10 +4,11 @@
   "type": "mountain",
   "parent": "mountain",
   "title": "Ash Ridge",
-  "description": "A dangerous mountain ridge, part of the [[Thunderhoof Pass\u200e]] that led towards the [[Old Owl Well]].",
+  "description": "A dangerous mountain ridge, part of the [[Thunderhoof Pass‎]] that led towards the [[Old Owl Well]].",
   "image": "ash_ridge.webp",
   "coordinates": {
     "lat": 622.72,
     "lng": 2654.79
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/ash_ridge.md"
 }

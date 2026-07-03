@@ -7,6 +7,7 @@ import { useInventoryStore } from '../../store/useInventoryStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import ReactMarkdown from 'react-markdown';
 
 export const WorldPanel: React.FC = () => {
   const { 
@@ -43,13 +44,44 @@ export const WorldPanel: React.FC = () => {
   const { characters } = useCharacterStore();
   const { combatState } = useGameStore();
 
-  const travelStats = React.useMemo(() => {
-    if (!isTraveling || !destination || !partyLocation) return null;
+  const [showTravelJournal, setShowTravelJournal] = React.useState(false);
+  const [loreContent, setLoreContent] = React.useState<string | null>(null);
+
+  // Fetch lore markdown
+  React.useEffect(() => {
+    let isMounted = true;
+    const fetchLore = async () => {
+      if ((displayLocation as any)?.lore) {
+        try {
+          const res = await fetch((displayLocation as any).lore);
+          if (res.ok) {
+            const text = await res.text();
+            if (text.trim().toLowerCase().startsWith('<!doctype html>') || text.trim().toLowerCase().startsWith('<html')) {
+              if (isMounted) setLoreContent(null);
+            } else {
+              if (isMounted) setLoreContent(text);
+            }
+          } else {
+            if (isMounted) setLoreContent(null);
+          }
+        } catch (e) {
+          if (isMounted) setLoreContent(null);
+        }
+      } else {
+        if (isMounted) setLoreContent(null);
+      }
+    };
+    fetchLore();
+    return () => { isMounted = false; };
+  }, [(displayLocation as any)?.lore, displayLocation?.id]);
+
+  const calcTravelStats = React.useCallback((dest: any) => {
+    if (!dest || !partyLocation) return null;
 
     const x1 = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
     const y1 = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
-    const x2 = destination.coordinates?.x ?? destination.position?.[0] ?? 0;
-    const y2 = destination.coordinates?.y ?? destination.position?.[1] ?? 0;
+    const x2 = dest.coordinates?.x ?? dest.position?.[0] ?? 0;
+    const y2 = dest.coordinates?.y ?? dest.position?.[1] ?? 0;
     
     const dx = x2 - x1;
     const dy = y2 - y1;
@@ -77,13 +109,22 @@ export const WorldPanel: React.FC = () => {
     const hoursRemaining = milesRemaining / speedMph;
     const minsRemaining = Math.round(hoursRemaining * 60);
 
+    const rationsNeeded = Math.ceil(hoursRemaining / 24) * partyStats.memberCount;
+    const waterNeeded = Math.ceil(hoursRemaining / 24) * partyStats.memberCount;
+
     return {
       speed: speedMph,
       miles: milesRemaining,
       eta: minsRemaining,
-      isOverburdened: totalWeight > totalCapacity
+      isOverburdened: totalWeight > totalCapacity,
+      rationsNeeded,
+      waterNeeded,
+      vehicles: partyVehicles || []
     };
-  }, [isTraveling, destination, partyLocation, partyInventory, characters, partyStats, partyVehicles]);
+  }, [partyLocation, partyInventory, characters, partyStats, partyVehicles]);
+
+  const travelStats = React.useMemo(() => isTraveling ? calcTravelStats(destination) : null, [isTraveling, destination, calcTravelStats]);
+  const preTravelStats = React.useMemo(() => showTravelJournal ? calcTravelStats(displayLocation) : null, [showTravelJournal, displayLocation, calcTravelStats]);
 
   return (
     <div
@@ -227,9 +268,15 @@ export const WorldPanel: React.FC = () => {
                   </div>
                </div>
                <div className="p-4 bg-white/40 backdrop-blur-sm border-t border-dragon-red/5">
-                 <p className="text-xs text-parchment-800 italic leading-relaxed font-serif">
-                   {displayLocation?.description || 'The horizon stretches infinitely, a canvas of primal forces awaiting the touch of a pathfinder.'}
-                 </p>
+                 {loreContent ? (
+                   <div className="text-xs text-parchment-800 italic leading-relaxed font-serif markdown-content space-y-2">
+                     <ReactMarkdown>{loreContent}</ReactMarkdown>
+                   </div>
+                 ) : (
+                   <p className="text-xs text-parchment-800 italic leading-relaxed font-serif">
+                     {displayLocation?.description || 'The horizon stretches infinitely, a canvas of primal forces awaiting the touch of a pathfinder.'}
+                   </p>
+                 )}
                  
                  {displayLocation?.region && (
                    <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
@@ -244,11 +291,11 @@ export const WorldPanel: React.FC = () => {
                       {!isTraveling ? (
                         <button 
                           id="set-course-btn"
-                          onClick={() => startTravel(displayLocation)}
+                          onClick={() => setShowTravelJournal(true)}
                           className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
                         >
                           <GameIcon name="compass" size={14} color="#FFFFFF" />
-                          Set Course
+                          Plan Expedition
                         </button>
                       ) : destination?.id === displayLocation.id ? (
                         <button 
@@ -259,6 +306,58 @@ export const WorldPanel: React.FC = () => {
                           Abort Travel
                         </button>
                       ) : null}
+                   </div>
+                 )}
+
+                 {/* Pre-travel Journal Overlay */}
+                 {showTravelJournal && preTravelStats && (
+                   <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm pointer-events-auto">
+                     <div className="bg-parchment-100 w-full max-w-sm rounded border-2 border-dragon-gold shadow-2xl p-6 relative bg-paper-texture">
+                       <button onClick={() => setShowTravelJournal(false)} className="absolute top-4 right-4 text-dragon-red/60 hover:text-dragon-red"><GameIcon name="close" size={20} /></button>
+                       <h3 className="font-header text-xl text-dragon-red font-black uppercase tracking-widest border-b-2 border-dragon-red/20 pb-2 mb-4">Expedition Journal</h3>
+                       <p className="text-sm text-parchment-800 font-serif mb-4 italic">Preparation for the journey to <strong className="text-dragon-darkRed">{displayLocation?.name}</strong>.</p>
+                       
+                       <div className="space-y-4 mb-6">
+                         <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
+                           <span className="text-xs uppercase font-black text-parchment-500">Distance</span>
+                           <span className="text-sm font-bold text-dragon-darkRed">{preTravelStats.miles.toFixed(1)} miles</span>
+                         </div>
+                         <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
+                           <span className="text-xs uppercase font-black text-parchment-500">Est. Time</span>
+                           <span className="text-sm font-bold text-dragon-darkRed">
+                             {preTravelStats.eta > 1440 
+                               ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h` 
+                               : preTravelStats.eta > 60 ? `${Math.floor(preTravelStats.eta / 60)}h ${preTravelStats.eta % 60}m` : `${preTravelStats.eta}m`}
+                           </span>
+                         </div>
+                         <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
+                           <span className="text-xs uppercase font-black text-parchment-500">Pace / Status</span>
+                           <span className={cn("text-sm font-bold", preTravelStats.isOverburdened ? "text-red-500" : "text-green-700")}>
+                             {preTravelStats.speed.toFixed(1)} mph {preTravelStats.isOverburdened && '(Overburdened)'}
+                           </span>
+                         </div>
+                         <div className="bg-white/40 p-3 rounded border border-dragon-red/10 space-y-2">
+                           <h4 className="text-[10px] font-black uppercase text-dragon-red">Required Provisions (Est.)</h4>
+                           <div className="flex justify-between text-xs font-serif text-parchment-800">
+                             <span>Rations:</span> <strong>{preTravelStats.rationsNeeded} units</strong>
+                           </div>
+                           <div className="flex justify-between text-xs font-serif text-parchment-800">
+                             <span>Water:</span> <strong>{preTravelStats.waterNeeded} skins</strong>
+                           </div>
+                         </div>
+                         {preTravelStats.vehicles.length > 0 && (
+                           <div className="bg-white/40 p-3 rounded border border-dragon-red/10">
+                             <h4 className="text-[10px] font-black uppercase text-dragon-red mb-1">Active Vehicles</h4>
+                             <p className="text-xs font-serif text-parchment-800">{preTravelStats.vehicles.map((v: any) => v.name).join(', ')}</p>
+                           </div>
+                         )}
+                       </div>
+
+                       <div className="flex gap-3">
+                         <button onClick={() => setShowTravelJournal(false)} className="flex-1 py-2 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-xs uppercase tracking-widest rounded border border-dragon-red/20 transition-all">Cancel</button>
+                         <button onClick={() => { setShowTravelJournal(false); startTravel(displayLocation); }} className="flex-1 py-2 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border border-dragon-gold transition-all shadow-md">Embark</button>
+                       </div>
+                     </div>
                    </div>
                  )}
                </div>
@@ -358,14 +457,63 @@ export const WorldPanel: React.FC = () => {
             </div>
           </div>
 
-          {/* Regional Resources / Lore Hooks (Placeholder for future data) */}
-          <div className="pt-4 border-t-2 border-dragon-red/5">
-             <div className="p-4 bg-dragon-gold/5 rounded border border-dragon-gold/20">
-                <span className="text-[8px] font-black text-dragon-gold/60 uppercase tracking-widest block mb-2">Cartographer's Note</span>
-                <p className="text-[10px] text-parchment-600 leading-relaxed italic">
-                  The Atlas synchronizes with identified landmarks. Move into range of settlements or ruins to expand the manifest.
-                </p>
-             </div>
+          {/* Dynamic Lore System / Schema Driven Rendering */}
+          <div className="space-y-2">
+             {displayLocation && Object.entries({
+               history: 'History & Lore',
+               government: 'Government',
+               ruler: 'Ruler',
+               population: 'Population',
+               economy: 'Economy & Trade',
+               climate: 'Climate',
+               biome: 'Biome',
+               dominant_trees: 'Flora',
+               wildlife: 'Wildlife',
+               dangers: 'Dangers',
+               factions: 'Factions',
+               religion: 'Religion',
+               services: 'Services',
+               inventory: 'Inventory',
+               prices: 'Local Prices',
+               opening_hours: 'Opening Hours',
+               reputation: 'Reputation',
+               quests: 'Rumors & Quests',
+               notes: 'Notes',
+               districts: 'Districts',
+               owner: 'Owner'
+             }).map(([key, title]) => {
+               const data = (displayLocation as any)[key] || (displayLocation as any)[key.replace('_', ' ')] || (displayLocation as any)[key.replace('_', '')];
+               if (!data || (Array.isArray(data) && data.length === 0) || (typeof data === 'object' && Object.keys(data).length === 0)) return null;
+               
+               return (
+                 <div key={key} className="pt-4 border-t-2 border-dragon-red/5">
+                   <h4 className="text-[10px] font-black uppercase tracking-widest text-dragon-red mb-2 flex items-center gap-2">
+                     <GameIcon name="scroll" size={12} color="#8B0000" />
+                     {title}
+                   </h4>
+                   {typeof data === 'string' ? (
+                     <p className="text-xs text-parchment-800 leading-relaxed font-serif whitespace-pre-wrap">{data}</p>
+                   ) : Array.isArray(data) ? (
+                     <ul className="list-disc pl-4 text-xs text-parchment-800 space-y-1 font-serif">
+                       {data.map((item, idx) => (
+                         <li key={idx}>{typeof item === 'string' ? item : JSON.stringify(item)}</li>
+                       ))}
+                     </ul>
+                   ) : typeof data === 'object' ? (
+                     <div className="space-y-1">
+                       {Object.entries(data).map(([k, v]) => (
+                         <div key={k} className="flex gap-2 text-xs text-parchment-800 font-serif">
+                           <span className="font-bold capitalize">{k.replace(/_/g, ' ')}:</span>
+                           <span>{typeof v === 'string' ? v : JSON.stringify(v)}</span>
+                         </div>
+                       ))}
+                     </div>
+                   ) : (
+                     <p className="text-xs text-parchment-800 font-serif">{String(data)}</p>
+                   )}
+                 </div>
+               );
+             })}
           </div>
         </div>
       </div>

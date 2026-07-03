@@ -4,10 +4,11 @@
   "type": "hills",
   "parent": "mountain",
   "title": "Forlorn Hills",
-  "description": "A hilly region in [[northwest Faer\u00fbn]], once the center of the ancient [[shield dwarven]] kingdom of [[Dardath]].",
+  "description": "A hilly region in [[northwest Faerûn]], once the center of the ancient [[shield dwarven]] kingdom of [[Dardath]].",
   "image": "forlorn_hills.webp",
   "coordinates": {
     "lat": 896,
     "lng": 2502
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/forlorn_hills.md"
 }

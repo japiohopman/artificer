@@ -7,14 +7,15 @@
     ],
     "popup": {
       "title": "Sea of Moving Ice",
-      "description": "A collection of icebergs and frost-covered isles that floated in the waters of [[northwest Faer\u00fbn]].",
+      "description": "A collection of icebergs and frost-covered isles that floated in the waters of [[northwest Faerûn]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moving_ice/sea_of_moving_ice.json",
         "label": "Sea of Moving Ice"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moving_ice/sea_of_moving_ice.webp"
     },
-    "id": "sea_of_moving_ice"
+    "id": "sea_of_moving_ice",
+    "lore": "/assets/atlas/lore/locations/sea_of_moving_ice.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -24,14 +25,15 @@
     ],
     "popup": {
       "title": "Farshore Straits",
-      "description": "A thin marine passage between the island of [[Iligh\u00f4n]] and the [[Vilhon Reach]] mainland.",
+      "description": "A thin marine passage between the island of [[Ilighôn]] and the [[Vilhon Reach]] mainland.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/farshore_straits/farshore_straits.json",
         "label": "Farshore Straits"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/farshore_straits/farshore_straits.webp"
     },
-    "id": "farshore_straits"
+    "id": "farshore_straits",
+    "lore": "/assets/atlas/lore/locations/farshore_straits.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_silvanus/strait_of_silvanus.webp"
     },
-    "id": "strait_of_silvanus"
+    "id": "strait_of_silvanus",
+    "lore": "/assets/atlas/lore/locations/strait_of_silvanus.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/paddle_straits/paddle_straits.webp"
     },
-    "id": "paddle_straits"
+    "id": "paddle_straits",
+    "lore": "/assets/atlas/lore/locations/paddle_straits.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -75,14 +79,15 @@
     ],
     "popup": {
       "title": "Alamber Sea",
-      "description": "The '''Sahuagin Sea''' \u2013 the primary trade avenue between the nations of [[Mulhorand]], [[Unther]], and [[Thay]] and neutral territory.",
+      "description": "The '''Sahuagin Sea''' – the primary trade avenue between the nations of [[Mulhorand]], [[Unther]], and [[Thay]] and neutral territory.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/alamber_sea/alamber_sea.json",
         "label": "Alamber Sea"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/alamber_sea/alamber_sea.webp"
     },
-    "id": "alamber_sea"
+    "id": "alamber_sea",
+    "lore": "/assets/atlas/lore/locations/alamber_sea.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/nixie_deep/nixie_deep.webp"
     },
-    "id": "nixie_deep"
+    "id": "nixie_deep",
+    "lore": "/assets/atlas/lore/locations/nixie_deep.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/halagard_channel/halagard_channel.webp"
     },
-    "id": "halagard_channel"
+    "id": "halagard_channel",
+    "lore": "/assets/atlas/lore/locations/halagard_channel.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/dolphingulf/dolphingulf.webp"
     },
-    "id": "dolphingulf"
+    "id": "dolphingulf",
+    "lore": "/assets/atlas/lore/locations/dolphingulf.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/lapal_sea/lapal_sea.webp"
     },
-    "id": "lapal_sea"
+    "id": "lapal_sea",
+    "lore": "/assets/atlas/lore/locations/lapal_sea.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -160,14 +169,15 @@
     ],
     "popup": {
       "title": "Shining Sea",
-      "description": "One of the great seas of [[Faer\u00fbn]] that stretched from the coastline of [[Chult]] in the south to the shoreline of [[Calimshan]] in the north.",
+      "description": "One of the great seas of [[Faerûn]] that stretched from the coastline of [[Chult]] in the south to the shoreline of [[Calimshan]] in the north.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/shining_sea/shining_sea.json",
         "label": "Shining Sea"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/shining_sea/shining_sea.webp"
     },
-    "id": "shining_sea"
+    "id": "shining_sea",
+    "lore": "/assets/atlas/lore/locations/shining_sea.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -184,7 +194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/wizards_reach/wizards_reach.webp"
     },
-    "id": "wizards_reach"
+    "id": "wizards_reach",
+    "lore": "/assets/atlas/lore/locations/wizards_reach.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -201,7 +212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_dlurg/sea_of_dlurg.webp"
     },
-    "id": "sea_of_dlurg"
+    "id": "sea_of_dlurg",
+    "lore": "/assets/atlas/lore/locations/sea_of_dlurg.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -211,14 +223,15 @@
     ],
     "popup": {
       "title": "Sea of Fallen Stars",
-      "description": "Or the '''Inner Sea''', the largest inland body of water in [[Faer\u00fbn]], home to many types of aquatic life, including kingdoms of [[dragon turtle]]s, [[aquatic elves]], [[merfolk]], and [[sahuagin]].",
+      "description": "Or the '''Inner Sea''', the largest inland body of water in [[Faerûn]], home to many types of aquatic life, including kingdoms of [[dragon turtle]]s, [[aquatic elves]], [[merfolk]], and [[sahuagin]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_fallen_stars/sea_of_fallen_stars.json",
         "label": "Sea of Fallen Stars"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_fallen_stars/sea_of_fallen_stars.webp"
     },
-    "id": "sea_of_fallen_stars"
+    "id": "sea_of_fallen_stars",
+    "lore": "/assets/atlas/lore/locations/sea_of_fallen_stars.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -235,7 +248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/easting_reach/easting_reach.webp"
     },
-    "id": "easting_reach"
+    "id": "easting_reach",
+    "lore": "/assets/atlas/lore/locations/easting_reach.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -245,14 +259,15 @@
     ],
     "popup": {
       "title": "Sea of Swords",
-      "description": "A region of the [[Trackless Sea]] that separated the western coast of [[Faer\u00fbn]] from the [[Nelanther Isles]] and the [[Moonshae Isles]].",
+      "description": "A region of the [[Trackless Sea]] that separated the western coast of [[Faerûn]] from the [[Nelanther Isles]] and the [[Moonshae Isles]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_swords/sea_of_swords.json",
         "label": "Sea of Swords"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_swords/sea_of_swords.webp"
     },
-    "id": "sea_of_swords"
+    "id": "sea_of_swords",
+    "lore": "/assets/atlas/lore/locations/sea_of_swords.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -269,7 +284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepwash/deepwash.webp"
     },
-    "id": "deepwash"
+    "id": "deepwash",
+    "lore": "/assets/atlas/lore/locations/deepwash.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -286,7 +302,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/racewind_passage/racewind_passage.webp"
     },
-    "id": "racewind_passage"
+    "id": "racewind_passage",
+    "lore": "/assets/atlas/lore/locations/racewind_passage.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -303,7 +320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/cauldron_of_the_reach/cauldron_of_the_reach.webp"
     },
-    "id": "cauldron_of_the_reach"
+    "id": "cauldron_of_the_reach",
+    "lore": "/assets/atlas/lore/locations/cauldron_of_the_reach.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -320,7 +338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/river_reaching/river_reaching.webp"
     },
-    "id": "river_reaching"
+    "id": "river_reaching",
+    "lore": "/assets/atlas/lore/locations/river_reaching.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -337,7 +356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/ardeep_river/ardeep_river.webp"
     },
-    "id": "ardeep_river"
+    "id": "ardeep_river",
+    "lore": "/assets/atlas/lore/locations/ardeep_river.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -354,7 +374,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/jaws_strait/jaws_strait.webp"
     },
-    "id": "jaws_strait"
+    "id": "jaws_strait",
+    "lore": "/assets/atlas/lore/locations/jaws_strait.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -371,7 +392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/moonsea/moonsea.webp"
     },
-    "id": "moonsea"
+    "id": "moonsea",
+    "lore": "/assets/atlas/lore/locations/moonsea.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -388,7 +410,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/dragon_reach/dragon_reach.webp"
     },
-    "id": "dragon_reach"
+    "id": "dragon_reach",
+    "lore": "/assets/atlas/lore/locations/dragon_reach.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -405,7 +428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/lake_longreach/lake_longreach.webp"
     },
-    "id": "lake_longreach"
+    "id": "lake_longreach",
+    "lore": "/assets/atlas/lore/locations/lake_longreach.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -415,14 +439,15 @@
     ],
     "popup": {
       "title": "Gulf of Lath",
-      "description": "A narrow gulf cut into [[Lantan]] for roughly 75\u202fmiles (120\u202fkilometers), running northeast into the island.",
+      "description": "A narrow gulf cut into [[Lantan]] for roughly 75 miles (120 kilometers), running northeast into the island.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/gulf_of_lath/gulf_of_lath.json",
         "label": "Gulf of Lath"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/gulf_of_lath/gulf_of_lath.webp"
     },
-    "id": "gulf_of_lath"
+    "id": "gulf_of_lath",
+    "lore": "/assets/atlas/lore/locations/gulf_of_lath.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -439,7 +464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/evens_gulf/evens_gulf.webp"
     },
-    "id": "evens_gulf"
+    "id": "evens_gulf",
+    "lore": "/assets/atlas/lore/locations/evens_gulf.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -456,7 +482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/lotans_abyss/lotans_abyss.webp"
     },
-    "id": "lotans_abyss"
+    "id": "lotans_abyss",
+    "lore": "/assets/atlas/lore/locations/lotans_abyss.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -473,7 +500,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_sea/trackless_sea.webp"
     },
-    "id": "trackless_sea"
+    "id": "trackless_sea",
+    "lore": "/assets/atlas/lore/locations/trackless_sea.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -490,7 +518,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/northwind_strait/northwind_strait.webp"
     },
-    "id": "northwind_strait"
+    "id": "northwind_strait",
+    "lore": "/assets/atlas/lore/locations/northwind_strait.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -507,7 +536,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/asavirs_channel/asavirs_channel.webp"
     },
-    "id": "asavirs_channel"
+    "id": "asavirs_channel",
+    "lore": "/assets/atlas/lore/locations/asavirs_channel.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -524,7 +554,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_oman/strait_of_oman.webp"
     },
-    "id": "strait_of_oman"
+    "id": "strait_of_oman",
+    "lore": "/assets/atlas/lore/locations/strait_of_oman.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -541,7 +572,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepvale/deepvale.webp"
     },
-    "id": "deepvale"
+    "id": "deepvale",
+    "lore": "/assets/atlas/lore/locations/deepvale.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -558,7 +590,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/grayseas/grayseas.webp"
     },
-    "id": "grayseas"
+    "id": "grayseas",
+    "lore": "/assets/atlas/lore/locations/grayseas.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -575,7 +608,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/strait_of_the_leviathan/strait_of_the_leviathan.webp"
     },
-    "id": "strait_of_the_leviathan"
+    "id": "strait_of_the_leviathan",
+    "lore": "/assets/atlas/lore/locations/strait_of_the_leviathan.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -592,7 +626,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_moonshae/sea_of_moonshae.webp"
     },
-    "id": "sea_of_moonshae"
+    "id": "sea_of_moonshae",
+    "lore": "/assets/atlas/lore/locations/sea_of_moonshae.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -602,14 +637,15 @@
     ],
     "popup": {
       "title": "Sea of Frozen Tears",
-      "description": "Also known as the '''Sea of Tears''' or the '''Lake of Tears''' \u2013 a lake on the border between [[Alpuk]] and [[Vaasa]].",
+      "description": "Also known as the '''Sea of Tears''' or the '''Lake of Tears''' – a lake on the border between [[Alpuk]] and [[Vaasa]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_frozen_tears/sea_of_frozen_tears.json",
         "label": "Sea of Frozen Tears"
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/sea_of_frozen_tears/sea_of_frozen_tears.webp"
     },
-    "id": "sea_of_frozen_tears"
+    "id": "sea_of_frozen_tears",
+    "lore": "/assets/atlas/lore/locations/sea_of_frozen_tears.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -626,7 +662,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/deepglen_stream/deepglen_stream.webp"
     },
-    "id": "deepglen_stream"
+    "id": "deepglen_stream",
+    "lore": "/assets/atlas/lore/locations/deepglen_stream.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -643,7 +680,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/princes_sound/princes_sound.webp"
     },
-    "id": "princes_sound"
+    "id": "princes_sound",
+    "lore": "/assets/atlas/lore/locations/princes_sound.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -660,7 +698,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/pythan_trench/pythan_trench.webp"
     },
-    "id": "pythan_trench"
+    "id": "pythan_trench",
+    "lore": "/assets/atlas/lore/locations/pythan_trench.md"
   },
   {
     "categoryId": "seas_oceans",
@@ -677,6 +716,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/seas_oceans/trackless_strait/trackless_strait.webp"
     },
-    "id": "trackless_strait"
+    "id": "trackless_strait",
+    "lore": "/assets/atlas/lore/locations/trackless_strait.md"
   }
 ]

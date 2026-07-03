@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/coast_of_pearls/coast_of_pearls.webp"
     },
-    "id": "coast_of_pearls"
+    "id": "coast_of_pearls",
+    "lore": "/assets/atlas/lore/locations/coast_of_pearls.md"
   },
   {
     "categoryId": "coasts",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/shipwreck_neck/shipwreck_neck.webp"
     },
-    "id": "shipwreck_neck"
+    "id": "shipwreck_neck",
+    "lore": "/assets/atlas/lore/locations/shipwreck_neck.md"
   },
   {
     "categoryId": "coasts",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/raging_reef/raging_reef.webp"
     },
-    "id": "raging_reef"
+    "id": "raging_reef",
+    "lore": "/assets/atlas/lore/locations/raging_reef.md"
   },
   {
     "categoryId": "coasts",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/the_neck/the_neck.webp"
     },
-    "id": "the_neck"
+    "id": "the_neck",
+    "lore": "/assets/atlas/lore/locations/the_neck.md"
   },
   {
     "categoryId": "coasts",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/castaway_coast/castaway_coast.webp"
     },
-    "id": "castaway_coast"
+    "id": "castaway_coast",
+    "lore": "/assets/atlas/lore/locations/castaway_coast.md"
   },
   {
     "categoryId": "coasts",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/the_skeleton_shore/the_skeleton_shore.webp"
     },
-    "id": "the_skeleton_shore"
+    "id": "the_skeleton_shore",
+    "lore": "/assets/atlas/lore/locations/the_skeleton_shore.md"
   },
   {
     "categoryId": "coasts",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/tashtan_coast/tashtan_coast.webp"
     },
-    "id": "tashtan_coast"
+    "id": "tashtan_coast",
+    "lore": "/assets/atlas/lore/locations/tashtan_coast.md"
   },
   {
     "categoryId": "coasts",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/demonreef/demonreef.webp"
     },
-    "id": "demonreef"
+    "id": "demonreef",
+    "lore": "/assets/atlas/lore/locations/demonreef.md"
   },
   {
     "categoryId": "coasts",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/bright_shore/bright_shore.webp"
     },
-    "id": "bright_shore"
+    "id": "bright_shore",
+    "lore": "/assets/atlas/lore/locations/bright_shore.md"
   },
   {
     "categoryId": "coasts",
@@ -167,7 +176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/shoal_of_thirst/shoal_of_thirst.webp"
     },
-    "id": "shoal_of_thirst"
+    "id": "shoal_of_thirst",
+    "lore": "/assets/atlas/lore/locations/shoal_of_thirst.md"
   },
   {
     "categoryId": "coasts",
@@ -184,6 +194,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/coasts/ossian_reefs/ossian_reefs.webp"
     },
-    "id": "ossian_reefs"
+    "id": "ossian_reefs",
+    "lore": "/assets/atlas/lore/locations/ossian_reefs.md"
   }
 ]

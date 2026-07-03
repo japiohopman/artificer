@@ -4,11 +4,12 @@
   "type": "seas_oceans",
   "parent": "seas_oceans",
   "title": "Shining Sea",
-  "description": "One of the great seas of [[Faer\u00fbn]] that stretched from the coastline of [[Chult]] in the south to the shoreline of [[Calimshan]] in the north.",
+  "description": "One of the great seas of [[Faerûn]] that stretched from the coastline of [[Chult]] in the south to the shoreline of [[Calimshan]] in the north.",
   "image": "shining_sea.webp",
   "coordinates": {
     "lat": 1387,
     "lng": 636
   },
-  "categoryId": "seas_oceans"
+  "categoryId": "seas_oceans",
+  "lore": "/assets/atlas/lore/locations/shining_sea.md"
 }

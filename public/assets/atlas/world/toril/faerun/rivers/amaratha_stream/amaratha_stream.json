@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "Amaratha Stream",
-  "description": "A body of water that flowed south from the [[White Peaks]], named after [[amaratha]], a variety of light green jewel unique to [[Faer\u00fbn]].",
+  "description": "A body of water that flowed south from the [[White Peaks]], named after [[amaratha]], a variety of light green jewel unique to [[Faerûn]].",
   "image": "amaratha_stream.webp",
   "coordinates": {
     "lat": 2220.66,
     "lng": 2928.48
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/amaratha_stream.md"
 }

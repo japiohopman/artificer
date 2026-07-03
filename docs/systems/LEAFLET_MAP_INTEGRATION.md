@@ -42,5 +42,10 @@ Coordinates from the legacy prototype (4763 x 3185) are rescaled to the high-res
 
 The map uses a Top-Down coordinate system (0,0 is Top-Left) to match the standard tile generation output. This is achieved via `L.Transformation(1/128, 0, 1/128, 0)`, which scales the high-resolution pixels to the 256px tile space at Zoom 0.
 
+> [!CAUTION]
+> **CRITICAL: `scaleFactorValue` MUST BE EXACTLY 128.**
+> Do NOT change the `scaleFactorValue` to attempt to resize the map or make it fit the screen. The value `128` is derived directly from the tile generator (which used a 32768x32768 virtual canvas for Zoom 7 where tiles are 1-to-1 with pixels). Changing this value will completely break the alignment between the map markers/bounds and the underlying tile images, causing the map to render "too small" or offset compared to the markers.
+> If you need the map to appear larger on screen by default, change the `initialZoom` instead.
+
 ### Invalidation & Layout
 The map automatically calls `invalidateSize()` during sidebar/panel transitions (Character Panel, Inventory, World Panel) to ensure the viewport remains accurate when the UI layout changes.

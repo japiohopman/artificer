@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "The Laughingflow",
-  "description": "Also known as the '''Trollflow'' in [[Nesm\u00e9]], a tributary of the [[River Surbrin]].",
+  "description": "Also known as the '''Trollflow'' in [[Nesmé]], a tributary of the [[River Surbrin]].",
   "image": "the_laughingflow.webp",
   "coordinates": {
     "lat": 871.15,
     "lng": 2888.88
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/the_laughingflow.md"
 }

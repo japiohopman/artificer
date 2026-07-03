@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "River Tamthew",
-  "description": "Also known as the '''Lluirflow''', a small, approximately 100\u202fmiles (160\u202fkilometers), river found in southern [[Luiren]] in the [[Shining South]].",
+  "description": "Also known as the '''Lluirflow''', a small, approximately 100 miles (160 kilometers), river found in southern [[Luiren]] in the [[Shining South]].",
   "image": "river_tamthew.webp",
   "coordinates": {
     "lat": 3814.2,
     "lng": 471.77
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/river_tamthew.md"
 }

@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/akanamere/akanamere.webp"
     },
-    "id": "akanamere"
+    "id": "akanamere",
+    "lore": "/assets/atlas/lore/locations/akanamere.md"
   },
   {
     "categoryId": "lakes",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/nagawater/nagawater.webp"
     },
-    "id": "nagawater"
+    "id": "nagawater",
+    "lore": "/assets/atlas/lore/locations/nagawater.md"
   },
   {
     "categoryId": "lakes",
@@ -41,14 +43,15 @@
     ],
     "popup": {
       "title": "Methmere",
-      "description": "Also known as '''Lake Meth''' \u2013 a lake in the frontier between the nations of [[Chessenta]] and ]]Unther]].",
+      "description": "Also known as '''Lake Meth''' – a lake in the frontier between the nations of [[Chessenta]] and ]]Unther]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/methmere/methmere.json",
         "label": "Methmere"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/methmere/methmere.webp"
     },
-    "id": "methmere"
+    "id": "methmere",
+    "lore": "/assets/atlas/lore/locations/methmere.md"
   },
   {
     "categoryId": "lakes",
@@ -58,14 +61,15 @@
     ],
     "popup": {
       "title": "Lake of Salt",
-      "description": "Or '''Azulduth''' \u2013 a shallow body of water, fed by the [[River of Swords]]. It was surrounded by partially-looted [[Sauroid]] ruins, many of which extended deep under the earth and were primarily inhabited by [[yuan-ti]].",
+      "description": "Or '''Azulduth''' – a shallow body of water, fed by the [[River of Swords]]. It was surrounded by partially-looted [[Sauroid]] ruins, many of which extended deep under the earth and were primarily inhabited by [[yuan-ti]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/lake_of_salt/lake_of_salt.json",
         "label": "Lake of Salt"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_salt/lake_of_salt.webp"
     },
-    "id": "lake_of_salt"
+    "id": "lake_of_salt",
+    "lore": "/assets/atlas/lore/locations/lake_of_salt.md"
   },
   {
     "categoryId": "lakes",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/riftlake/riftlake.webp"
     },
-    "id": "riftlake"
+    "id": "riftlake",
+    "lore": "/assets/atlas/lore/locations/riftlake.md"
   },
   {
     "categoryId": "lakes",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/bloodlake/bloodlake.webp"
     },
-    "id": "bloodlake"
+    "id": "bloodlake",
+    "lore": "/assets/atlas/lore/locations/bloodlake.md"
   },
   {
     "categoryId": "lakes",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_mists/lake_of_mists.webp"
     },
-    "id": "lake_of_mists"
+    "id": "lake_of_mists",
+    "lore": "/assets/atlas/lore/locations/lake_of_mists.md"
   },
   {
     "categoryId": "lakes",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/golden_water/golden_water.webp"
     },
-    "id": "golden_water"
+    "id": "golden_water",
+    "lore": "/assets/atlas/lore/locations/golden_water.md"
   },
   {
     "categoryId": "lakes",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_throat/the_throat.webp"
     },
-    "id": "the_throat"
+    "id": "the_throat",
+    "lore": "/assets/atlas/lore/locations/the_throat.md"
   },
   {
     "categoryId": "lakes",
@@ -167,7 +176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/luirenstrand/luirenstrand.webp"
     },
-    "id": "luirenstrand"
+    "id": "luirenstrand",
+    "lore": "/assets/atlas/lore/locations/luirenstrand.md"
   },
   {
     "categoryId": "lakes",
@@ -184,7 +194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/beastburn_lake/beastburn_lake.webp"
     },
-    "id": "beastburn_lake"
+    "id": "beastburn_lake",
+    "lore": "/assets/atlas/lore/locations/beastburn_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -201,7 +212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/dolphins_climb/dolphins_climb.webp"
     },
-    "id": "dolphins_climb"
+    "id": "dolphins_climb",
+    "lore": "/assets/atlas/lore/locations/dolphins_climb.md"
   },
   {
     "categoryId": "lakes",
@@ -218,7 +230,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_lhespen/lake_lhespen.webp"
     },
-    "id": "lake_lhespen"
+    "id": "lake_lhespen",
+    "lore": "/assets/atlas/lore/locations/lake_lhespen.md"
   },
   {
     "categoryId": "lakes",
@@ -235,7 +248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_maeru/lake_maeru.webp"
     },
-    "id": "lake_maeru"
+    "id": "lake_maeru",
+    "lore": "/assets/atlas/lore/locations/lake_maeru.md"
   },
   {
     "categoryId": "lakes",
@@ -252,7 +266,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_halruaa/lake_halruaa.webp"
     },
-    "id": "lake_halruaa"
+    "id": "lake_halruaa",
+    "lore": "/assets/atlas/lore/locations/lake_halruaa.md"
   },
   {
     "categoryId": "lakes",
@@ -269,7 +284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/high_aluar/high_aluar.webp"
     },
-    "id": "high_aluar"
+    "id": "high_aluar",
+    "lore": "/assets/atlas/lore/locations/high_aluar.md"
   },
   {
     "categoryId": "lakes",
@@ -279,14 +295,15 @@
     ],
     "popup": {
       "title": "Talagath's Gauntlet",
-      "description": "Also known as the '''Straits of Suldophur''' or the '''Strait of Storms''' \u2013 a small strait that connected the [[Lake of Steam]] and the [[Shining Sea]].",
+      "description": "Also known as the '''Straits of Suldophur''' or the '''Strait of Storms''' – a small strait that connected the [[Lake of Steam]] and the [[Shining Sea]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/talagaths_gauntlet/talagaths_gauntlet.json",
         "label": "Talagath's Gauntlet"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/talagaths_gauntlet/talagaths_gauntlet.webp"
     },
-    "id": "talagaths_gauntlet"
+    "id": "talagaths_gauntlet",
+    "lore": "/assets/atlas/lore/locations/talagaths_gauntlet.md"
   },
   {
     "categoryId": "lakes",
@@ -303,7 +320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/scelptarmouth/scelptarmouth.webp"
     },
-    "id": "scelptarmouth"
+    "id": "scelptarmouth",
+    "lore": "/assets/atlas/lore/locations/scelptarmouth.md"
   },
   {
     "categoryId": "lakes",
@@ -320,7 +338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lapalgulph/lapalgulph.webp"
     },
-    "id": "lapalgulph"
+    "id": "lapalgulph",
+    "lore": "/assets/atlas/lore/locations/lapalgulph.md"
   },
   {
     "categoryId": "lakes",
@@ -337,7 +356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/thingulph/thingulph.webp"
     },
-    "id": "thingulph"
+    "id": "thingulph",
+    "lore": "/assets/atlas/lore/locations/thingulph.md"
   },
   {
     "categoryId": "lakes",
@@ -347,14 +367,15 @@
     ],
     "popup": {
       "title": "Thornwash",
-      "description": "A 150\u202fmi (240\u202fkm)-long waterway that flowed down from the [[Cloven Mountains]] and emptied into the [[Lake of Steam]].",
+      "description": "A 150 mi (240 km)-long waterway that flowed down from the [[Cloven Mountains]] and emptied into the [[Lake of Steam]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/thornwash/thornwash.json",
         "label": "Thornwash"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/thornwash/thornwash.webp"
     },
-    "id": "thornwash"
+    "id": "thornwash",
+    "lore": "/assets/atlas/lore/locations/thornwash.md"
   },
   {
     "categoryId": "lakes",
@@ -371,7 +392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_steam/lake_of_steam.webp"
     },
-    "id": "lake_of_steam"
+    "id": "lake_of_steam",
+    "lore": "/assets/atlas/lore/locations/lake_of_steam.md"
   },
   {
     "categoryId": "lakes",
@@ -381,14 +403,15 @@
     ],
     "popup": {
       "title": "Gullet",
-      "description": "The perilous straight that separated [[The Tusks]], full of obtruding sea rocks \u2013 one of the most dangerous areas of the [[Sword Coast]] for marine traversal.",
+      "description": "The perilous straight that separated [[The Tusks]], full of obtruding sea rocks – one of the most dangerous areas of the [[Sword Coast]] for marine traversal.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/gullet/gullet.json",
         "label": "Gullet"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/gullet/gullet.webp"
     },
-    "id": "gullet"
+    "id": "gullet",
+    "lore": "/assets/atlas/lore/locations/gullet.md"
   },
   {
     "categoryId": "lakes",
@@ -405,7 +428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/aumrauth/aumrauth.webp"
     },
-    "id": "aumrauth"
+    "id": "aumrauth",
+    "lore": "/assets/atlas/lore/locations/aumrauth.md"
   },
   {
     "categoryId": "lakes",
@@ -422,7 +446,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_thaylambar/lake_thaylambar.webp"
     },
-    "id": "lake_thaylambar"
+    "id": "lake_thaylambar",
+    "lore": "/assets/atlas/lore/locations/lake_thaylambar.md"
   },
   {
     "categoryId": "lakes",
@@ -439,7 +464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_umber/lake_umber.webp"
     },
-    "id": "lake_umber"
+    "id": "lake_umber",
+    "lore": "/assets/atlas/lore/locations/lake_umber.md"
   },
   {
     "categoryId": "lakes",
@@ -456,7 +482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/yal_tengri/yal_tengri.webp"
     },
-    "id": "yal_tengri"
+    "id": "yal_tengri",
+    "lore": "/assets/atlas/lore/locations/yal_tengri.md"
   },
   {
     "categoryId": "lakes",
@@ -473,7 +500,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_mulsantir/lake_mulsantir.webp"
     },
-    "id": "lake_mulsantir"
+    "id": "lake_mulsantir",
+    "lore": "/assets/atlas/lore/locations/lake_mulsantir.md"
   },
   {
     "categoryId": "lakes",
@@ -490,7 +518,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/vudlur/vudlur.webp"
     },
-    "id": "vudlur"
+    "id": "vudlur",
+    "lore": "/assets/atlas/lore/locations/vudlur.md"
   },
   {
     "categoryId": "lakes",
@@ -507,7 +536,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/splendarrllur/splendarrllur.webp"
     },
-    "id": "splendarrllur"
+    "id": "splendarrllur",
+    "lore": "/assets/atlas/lore/locations/splendarrllur.md"
   },
   {
     "categoryId": "lakes",
@@ -524,7 +554,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_esmel/lake_esmel.webp"
     },
-    "id": "lake_esmel"
+    "id": "lake_esmel",
+    "lore": "/assets/atlas/lore/locations/lake_esmel.md"
   },
   {
     "categoryId": "lakes",
@@ -541,7 +572,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/shimmalshyr/shimmalshyr.webp"
     },
-    "id": "shimmalshyr"
+    "id": "shimmalshyr",
+    "lore": "/assets/atlas/lore/locations/shimmalshyr.md"
   },
   {
     "categoryId": "lakes",
@@ -558,7 +590,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/hyrzashyr/hyrzashyr.webp"
     },
-    "id": "hyrzashyr"
+    "id": "hyrzashyr",
+    "lore": "/assets/atlas/lore/locations/hyrzashyr.md"
   },
   {
     "categoryId": "lakes",
@@ -575,7 +608,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_weng/lake_weng.webp"
     },
-    "id": "lake_weng"
+    "id": "lake_weng",
+    "lore": "/assets/atlas/lore/locations/lake_weng.md"
   },
   {
     "categoryId": "lakes",
@@ -592,7 +626,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/wengwater/wengwater.webp"
     },
-    "id": "wengwater"
+    "id": "wengwater",
+    "lore": "/assets/atlas/lore/locations/wengwater.md"
   },
   {
     "categoryId": "lakes",
@@ -602,14 +637,15 @@
     ],
     "popup": {
       "title": "The Race",
-      "description": "A tract of water located off the southern edge of the [[Tethyr Peninsula]] in [[West Faer\u00fbn]] with merchant ships that sailed it being under the protection of the [[Calimshan]] navy.",
+      "description": "A tract of water located off the southern edge of the [[Tethyr Peninsula]] in [[West Faerûn]] with merchant ships that sailed it being under the protection of the [[Calimshan]] navy.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/the_race/the_race.json",
         "label": "The Race"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_race/the_race.webp"
     },
-    "id": "the_race"
+    "id": "the_race",
+    "lore": "/assets/atlas/lore/locations/the_race.md"
   },
   {
     "categoryId": "lakes",
@@ -619,14 +655,15 @@
     ],
     "popup": {
       "title": "Nebulae Pool",
-      "description": "Or the '''Pool of Stars'' \u2013 a peaceful forest lake on the northwestern end of the [[Swanmay's Glade]]. A lone [[swanmay]] once lived on the lake but was belied gone or dead by the late 14{{th}} century [[DR]].",
+      "description": "Or the '''Pool of Stars'' – a peaceful forest lake on the northwestern end of the [[Swanmay's Glade]]. A lone [[swanmay]] once lived on the lake but was belied gone or dead by the late 14{{th}} century [[DR]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/nebulae_pool/nebulae_pool.json",
         "label": "Nebulae Pool"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/nebulae_pool/nebulae_pool.webp"
     },
-    "id": "nebulae_pool"
+    "id": "nebulae_pool",
+    "lore": "/assets/atlas/lore/locations/nebulae_pool.md"
   },
   {
     "categoryId": "lakes",
@@ -643,7 +680,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/calathalureenteir/calathalureenteir.webp"
     },
-    "id": "calathalureenteir"
+    "id": "calathalureenteir",
+    "lore": "/assets/atlas/lore/locations/calathalureenteir.md"
   },
   {
     "categoryId": "lakes",
@@ -660,7 +698,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/impresk_lake/impresk_lake.webp"
     },
-    "id": "impresk_lake"
+    "id": "impresk_lake",
+    "lore": "/assets/atlas/lore/locations/impresk_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -677,7 +716,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/khalleshyr/khalleshyr.webp"
     },
-    "id": "khalleshyr"
+    "id": "khalleshyr",
+    "lore": "/assets/atlas/lore/locations/khalleshyr.md"
   },
   {
     "categoryId": "lakes",
@@ -694,7 +734,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_snows/lake_of_snows.webp"
     },
-    "id": "lake_of_snows"
+    "id": "lake_of_snows",
+    "lore": "/assets/atlas/lore/locations/lake_of_snows.md"
   },
   {
     "categoryId": "lakes",
@@ -711,7 +752,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/shalane_lake/shalane_lake.webp"
     },
-    "id": "shalane_lake"
+    "id": "shalane_lake",
+    "lore": "/assets/atlas/lore/locations/shalane_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -728,7 +770,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_sember/lake_sember.webp"
     },
-    "id": "lake_sember"
+    "id": "lake_sember",
+    "lore": "/assets/atlas/lore/locations/lake_sember.md"
   },
   {
     "categoryId": "lakes",
@@ -745,7 +788,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/wyvernwater/wyvernwater.webp"
     },
-    "id": "wyvernwater"
+    "id": "wyvernwater",
+    "lore": "/assets/atlas/lore/locations/wyvernwater.md"
   },
   {
     "categoryId": "lakes",
@@ -762,7 +806,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_eredruie/lake_eredruie.webp"
     },
-    "id": "lake_eredruie"
+    "id": "lake_eredruie",
+    "lore": "/assets/atlas/lore/locations/lake_eredruie.md"
   },
   {
     "categoryId": "lakes",
@@ -779,7 +824,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/dragonmere/dragonmere.webp"
     },
-    "id": "dragonmere"
+    "id": "dragonmere",
+    "lore": "/assets/atlas/lore/locations/dragonmere.md"
   },
   {
     "categoryId": "lakes",
@@ -796,7 +842,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_warm_waterfall/the_warm_waterfall.webp"
     },
-    "id": "the_warm_waterfall"
+    "id": "the_warm_waterfall",
+    "lore": "/assets/atlas/lore/locations/the_warm_waterfall.md"
   },
   {
     "categoryId": "lakes",
@@ -813,7 +860,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/plungepool/plungepool.webp"
     },
-    "id": "plungepool"
+    "id": "plungepool",
+    "lore": "/assets/atlas/lore/locations/plungepool.md"
   },
   {
     "categoryId": "lakes",
@@ -830,7 +878,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/redwater_lake/redwater_lake.webp"
     },
-    "id": "redwater_lake"
+    "id": "redwater_lake",
+    "lore": "/assets/atlas/lore/locations/redwater_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -847,7 +896,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_snake/lake_of_the_snake.webp"
     },
-    "id": "lake_of_the_snake"
+    "id": "lake_of_the_snake",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_snake.md"
   },
   {
     "categoryId": "lakes",
@@ -864,7 +914,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_long_arm/lake_of_the_long_arm.webp"
     },
-    "id": "lake_of_the_long_arm"
+    "id": "lake_of_the_long_arm",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_long_arm.md"
   },
   {
     "categoryId": "lakes",
@@ -881,7 +932,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/winding_water/winding_water.webp"
     },
-    "id": "winding_water"
+    "id": "winding_water",
+    "lore": "/assets/atlas/lore/locations/winding_water.md"
   },
   {
     "categoryId": "lakes",
@@ -898,7 +950,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/misty_stair/misty_stair.webp"
     },
-    "id": "misty_stair"
+    "id": "misty_stair",
+    "lore": "/assets/atlas/lore/locations/misty_stair.md"
   },
   {
     "categoryId": "lakes",
@@ -915,7 +968,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/highstar_lake/highstar_lake.webp"
     },
-    "id": "highstar_lake"
+    "id": "highstar_lake",
+    "lore": "/assets/atlas/lore/locations/highstar_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -932,7 +986,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/whitewater/whitewater.webp"
     },
-    "id": "whitewater"
+    "id": "whitewater",
+    "lore": "/assets/atlas/lore/locations/whitewater.md"
   },
   {
     "categoryId": "lakes",
@@ -949,7 +1004,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lightless_lake/lightless_lake.webp"
     },
-    "id": "lightless_lake"
+    "id": "lightless_lake",
+    "lore": "/assets/atlas/lore/locations/lightless_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -966,7 +1022,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/arabel_springs/arabel_springs.webp"
     },
-    "id": "arabel_springs"
+    "id": "arabel_springs",
+    "lore": "/assets/atlas/lore/locations/arabel_springs.md"
   },
   {
     "categoryId": "lakes",
@@ -983,7 +1040,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_drifting_stars/lake_of_drifting_stars.webp"
     },
-    "id": "lake_of_drifting_stars"
+    "id": "lake_of_drifting_stars",
+    "lore": "/assets/atlas/lore/locations/lake_of_drifting_stars.md"
   },
   {
     "categoryId": "lakes",
@@ -1000,7 +1058,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/evenstar_lake/evenstar_lake.webp"
     },
-    "id": "evenstar_lake"
+    "id": "evenstar_lake",
+    "lore": "/assets/atlas/lore/locations/evenstar_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1010,14 +1069,15 @@
     ],
     "popup": {
       "title": "Stojanow",
-      "description": "Also known as the '''Barren River''', used to transport ore and minerals from the [[Dragonspines]] to the cities of [[Phlan]] and from there \u2013 to [[Melvaunt]].",
+      "description": "Also known as the '''Barren River''', used to transport ore and minerals from the [[Dragonspines]] to the cities of [[Phlan]] and from there – to [[Melvaunt]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/stojanow/stojanow.json",
         "label": "Stojanow"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/stojanow/stojanow.webp"
     },
-    "id": "stojanow"
+    "id": "stojanow",
+    "lore": "/assets/atlas/lore/locations/stojanow.md"
   },
   {
     "categoryId": "lakes",
@@ -1034,7 +1094,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/selpir/selpir.webp"
     },
-    "id": "selpir"
+    "id": "selpir",
+    "lore": "/assets/atlas/lore/locations/selpir.md"
   },
   {
     "categoryId": "lakes",
@@ -1051,7 +1112,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_melishar/lake_melishar.webp"
     },
-    "id": "lake_melishar"
+    "id": "lake_melishar",
+    "lore": "/assets/atlas/lore/locations/lake_melishar.md"
   },
   {
     "categoryId": "lakes",
@@ -1068,7 +1130,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_thentar/lake_thentar.webp"
     },
-    "id": "lake_thentar"
+    "id": "lake_thentar",
+    "lore": "/assets/atlas/lore/locations/lake_thentar.md"
   },
   {
     "categoryId": "lakes",
@@ -1085,7 +1148,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_bowl/the_bowl.webp"
     },
-    "id": "the_bowl"
+    "id": "the_bowl",
+    "lore": "/assets/atlas/lore/locations/the_bowl.md"
   },
   {
     "categoryId": "lakes",
@@ -1102,7 +1166,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_windrace/the_windrace.webp"
     },
-    "id": "the_windrace"
+    "id": "the_windrace",
+    "lore": "/assets/atlas/lore/locations/the_windrace.md"
   },
   {
     "categoryId": "lakes",
@@ -1119,7 +1184,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_spoon/the_spoon.webp"
     },
-    "id": "the_spoon"
+    "id": "the_spoon",
+    "lore": "/assets/atlas/lore/locations/the_spoon.md"
   },
   {
     "categoryId": "lakes",
@@ -1136,7 +1202,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/duathamper/duathamper.webp"
     },
-    "id": "duathamper"
+    "id": "duathamper",
+    "lore": "/assets/atlas/lore/locations/duathamper.md"
   },
   {
     "categoryId": "lakes",
@@ -1153,7 +1220,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/pool_of_yeven/pool_of_yeven.webp"
     },
-    "id": "pool_of_yeven"
+    "id": "pool_of_yeven",
+    "lore": "/assets/atlas/lore/locations/pool_of_yeven.md"
   },
   {
     "categoryId": "lakes",
@@ -1170,7 +1238,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/glaemril/glaemril.webp"
     },
-    "id": "glaemril"
+    "id": "glaemril",
+    "lore": "/assets/atlas/lore/locations/glaemril.md"
   },
   {
     "categoryId": "lakes",
@@ -1187,7 +1256,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_tunwash/the_tunwash.webp"
     },
-    "id": "the_tunwash"
+    "id": "the_tunwash",
+    "lore": "/assets/atlas/lore/locations/the_tunwash.md"
   },
   {
     "categoryId": "lakes",
@@ -1204,7 +1274,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/teerac/teerac.webp"
     },
-    "id": "teerac"
+    "id": "teerac",
+    "lore": "/assets/atlas/lore/locations/teerac.md"
   },
   {
     "categoryId": "lakes",
@@ -1221,7 +1292,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_miir/lake_miir.webp"
     },
-    "id": "lake_miir"
+    "id": "lake_miir",
+    "lore": "/assets/atlas/lore/locations/lake_miir.md"
   },
   {
     "categoryId": "lakes",
@@ -1238,7 +1310,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_talons/the_talons.webp"
     },
-    "id": "the_talons"
+    "id": "the_talons",
+    "lore": "/assets/atlas/lore/locations/the_talons.md"
   },
   {
     "categoryId": "lakes",
@@ -1255,7 +1328,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_sisters/the_sisters.webp"
     },
-    "id": "the_sisters"
+    "id": "the_sisters",
+    "lore": "/assets/atlas/lore/locations/the_sisters.md"
   },
   {
     "categoryId": "lakes",
@@ -1272,7 +1346,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/north_fork/north_fork.webp"
     },
-    "id": "north_fork"
+    "id": "north_fork",
+    "lore": "/assets/atlas/lore/locations/north_fork.md"
   },
   {
     "categoryId": "lakes",
@@ -1289,7 +1364,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/starsilver/starsilver.webp"
     },
-    "id": "starsilver"
+    "id": "starsilver",
+    "lore": "/assets/atlas/lore/locations/starsilver.md"
   },
   {
     "categoryId": "lakes",
@@ -1306,7 +1382,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_lemas/lake_lemas.webp"
     },
-    "id": "lake_lemas"
+    "id": "lake_lemas",
+    "lore": "/assets/atlas/lore/locations/lake_lemas.md"
   },
   {
     "categoryId": "lakes",
@@ -1323,7 +1400,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_luo/lake_luo.webp"
     },
-    "id": "lake_luo"
+    "id": "lake_luo",
+    "lore": "/assets/atlas/lore/locations/lake_luo.md"
   },
   {
     "categoryId": "lakes",
@@ -1340,7 +1418,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_cauldron/the_cauldron.webp"
     },
-    "id": "the_cauldron"
+    "id": "the_cauldron",
+    "lore": "/assets/atlas/lore/locations/the_cauldron.md"
   },
   {
     "categoryId": "lakes",
@@ -1357,7 +1436,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_suj_lan/the_suj_lan.webp"
     },
-    "id": "the_suj_lan"
+    "id": "the_suj_lan",
+    "lore": "/assets/atlas/lore/locations/the_suj_lan.md"
   },
   {
     "categoryId": "lakes",
@@ -1367,14 +1447,15 @@
     ],
     "popup": {
       "title": "Ice Lakes",
-      "description": "A group of frigid lakes in [[northwest Faer\u00fbn]] including: [[Derthym]], [[Belardym]], [[Rarghraum]], [[Loroloth]], and [[Antaerth]].",
+      "description": "A group of frigid lakes in [[northwest Faerûn]] including: [[Derthym]], [[Belardym]], [[Rarghraum]], [[Loroloth]], and [[Antaerth]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/ice_lakes/ice_lakes.json",
         "label": "Ice Lakes"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/ice_lakes/ice_lakes.webp"
     },
-    "id": "ice_lakes"
+    "id": "ice_lakes",
+    "lore": "/assets/atlas/lore/locations/ice_lakes.md"
   },
   {
     "categoryId": "lakes",
@@ -1391,7 +1472,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lac_dinneshere/lac_dinneshere.webp"
     },
-    "id": "lac_dinneshere"
+    "id": "lac_dinneshere",
+    "lore": "/assets/atlas/lore/locations/lac_dinneshere.md"
   },
   {
     "categoryId": "lakes",
@@ -1408,7 +1490,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/maer_dualdon/maer_dualdon.webp"
     },
-    "id": "maer_dualdon"
+    "id": "maer_dualdon",
+    "lore": "/assets/atlas/lore/locations/maer_dualdon.md"
   },
   {
     "categoryId": "lakes",
@@ -1425,7 +1508,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/redwaters/redwaters.webp"
     },
-    "id": "redwaters"
+    "id": "redwaters",
+    "lore": "/assets/atlas/lore/locations/redwaters.md"
   },
   {
     "categoryId": "lakes",
@@ -1442,7 +1526,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/south_fang/south_fang.webp"
     },
-    "id": "south_fang"
+    "id": "south_fang",
+    "lore": "/assets/atlas/lore/locations/south_fang.md"
   },
   {
     "categoryId": "lakes",
@@ -1459,7 +1544,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_old_water/the_old_water.webp"
     },
-    "id": "the_old_water"
+    "id": "the_old_water",
+    "lore": "/assets/atlas/lore/locations/the_old_water.md"
   },
   {
     "categoryId": "lakes",
@@ -1476,7 +1562,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/bluefang_water/bluefang_water.webp"
     },
-    "id": "bluefang_water"
+    "id": "bluefang_water",
+    "lore": "/assets/atlas/lore/locations/bluefang_water.md"
   },
   {
     "categoryId": "lakes",
@@ -1493,7 +1580,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_icemelt/lake_icemelt.webp"
     },
-    "id": "lake_icemelt"
+    "id": "lake_icemelt",
+    "lore": "/assets/atlas/lore/locations/lake_icemelt.md"
   },
   {
     "categoryId": "lakes",
@@ -1510,7 +1598,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/luirbrech/luirbrech.webp"
     },
-    "id": "luirbrech"
+    "id": "luirbrech",
+    "lore": "/assets/atlas/lore/locations/luirbrech.md"
   },
   {
     "categoryId": "lakes",
@@ -1527,7 +1616,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_mereth/lake_mereth.webp"
     },
-    "id": "lake_mereth"
+    "id": "lake_mereth",
+    "lore": "/assets/atlas/lore/locations/lake_mereth.md"
   },
   {
     "categoryId": "lakes",
@@ -1544,7 +1634,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_muirenon/lake_muirenon.webp"
     },
-    "id": "lake_muirenon"
+    "id": "lake_muirenon",
+    "lore": "/assets/atlas/lore/locations/lake_muirenon.md"
   },
   {
     "categoryId": "lakes",
@@ -1561,7 +1652,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/huta_lake/huta_lake.webp"
     },
-    "id": "huta_lake"
+    "id": "huta_lake",
+    "lore": "/assets/atlas/lore/locations/huta_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1578,7 +1670,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_musker/lake_musker.webp"
     },
-    "id": "lake_musker"
+    "id": "lake_musker",
+    "lore": "/assets/atlas/lore/locations/lake_musker.md"
   },
   {
     "categoryId": "lakes",
@@ -1595,7 +1688,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_ashane/lake_ashane.webp"
     },
-    "id": "lake_ashane"
+    "id": "lake_ashane",
+    "lore": "/assets/atlas/lore/locations/lake_ashane.md"
   },
   {
     "categoryId": "lakes",
@@ -1612,7 +1706,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_tirulag/lake_tirulag.webp"
     },
-    "id": "lake_tirulag"
+    "id": "lake_tirulag",
+    "lore": "/assets/atlas/lore/locations/lake_tirulag.md"
   },
   {
     "categoryId": "lakes",
@@ -1629,7 +1724,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_flam/lake_flam.webp"
     },
-    "id": "lake_flam"
+    "id": "lake_flam",
+    "lore": "/assets/atlas/lore/locations/lake_flam.md"
   },
   {
     "categoryId": "lakes",
@@ -1646,7 +1742,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_murthil/lake_murthil.webp"
     },
-    "id": "lake_murthil"
+    "id": "lake_murthil",
+    "lore": "/assets/atlas/lore/locations/lake_murthil.md"
   },
   {
     "categoryId": "lakes",
@@ -1663,7 +1760,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/icelace_lake/icelace_lake.webp"
     },
-    "id": "icelace_lake"
+    "id": "icelace_lake",
+    "lore": "/assets/atlas/lore/locations/icelace_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1680,7 +1778,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/galena_snake/galena_snake.webp"
     },
-    "id": "galena_snake"
+    "id": "galena_snake",
+    "lore": "/assets/atlas/lore/locations/galena_snake.md"
   },
   {
     "categoryId": "lakes",
@@ -1697,7 +1796,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_mogador/lake_mogador.webp"
     },
-    "id": "lake_mogador"
+    "id": "lake_mogador",
+    "lore": "/assets/atlas/lore/locations/lake_mogador.md"
   },
   {
     "categoryId": "lakes",
@@ -1714,7 +1814,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/mirror_lake/mirror_lake.webp"
     },
-    "id": "mirror_lake"
+    "id": "mirror_lake",
+    "lore": "/assets/atlas/lore/locations/mirror_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1731,7 +1832,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_midai/lake_midai.webp"
     },
-    "id": "lake_midai"
+    "id": "lake_midai",
+    "lore": "/assets/atlas/lore/locations/lake_midai.md"
   },
   {
     "categoryId": "lakes",
@@ -1748,7 +1850,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/evermelt/evermelt.webp"
     },
-    "id": "evermelt"
+    "id": "evermelt",
+    "lore": "/assets/atlas/lore/locations/evermelt.md"
   },
   {
     "categoryId": "lakes",
@@ -1765,7 +1868,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/bloodmuck/bloodmuck.webp"
     },
-    "id": "bloodmuck"
+    "id": "bloodmuck",
+    "lore": "/assets/atlas/lore/locations/bloodmuck.md"
   },
   {
     "categoryId": "lakes",
@@ -1782,7 +1886,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/ghost_lake/ghost_lake.webp"
     },
-    "id": "ghost_lake"
+    "id": "ghost_lake",
+    "lore": "/assets/atlas/lore/locations/ghost_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1799,7 +1904,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/razacks_tears/razacks_tears.webp"
     },
-    "id": "razacks_tears"
+    "id": "razacks_tears",
+    "lore": "/assets/atlas/lore/locations/razacks_tears.md"
   },
   {
     "categoryId": "lakes",
@@ -1816,7 +1922,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_maltorus/lake_maltorus.webp"
     },
-    "id": "lake_maltorus"
+    "id": "lake_maltorus",
+    "lore": "/assets/atlas/lore/locations/lake_maltorus.md"
   },
   {
     "categoryId": "lakes",
@@ -1833,7 +1940,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_marjahon/lake_marjahon.webp"
     },
-    "id": "lake_marjahon"
+    "id": "lake_marjahon",
+    "lore": "/assets/atlas/lore/locations/lake_marjahon.md"
   },
   {
     "categoryId": "lakes",
@@ -1850,7 +1958,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_of_the_leech/lake_of_the_leech.webp"
     },
-    "id": "lake_of_the_leech"
+    "id": "lake_of_the_leech",
+    "lore": "/assets/atlas/lore/locations/lake_of_the_leech.md"
   },
   {
     "categoryId": "lakes",
@@ -1867,7 +1976,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_sunder/lake_sunder.webp"
     },
-    "id": "lake_sunder"
+    "id": "lake_sunder",
+    "lore": "/assets/atlas/lore/locations/lake_sunder.md"
   },
   {
     "categoryId": "lakes",
@@ -1884,7 +1994,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/maggleraks_lake/maggleraks_lake.webp"
     },
-    "id": "maggleraks_lake"
+    "id": "maggleraks_lake",
+    "lore": "/assets/atlas/lore/locations/maggleraks_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -1901,7 +2012,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lac_sielya/lac_sielya.webp"
     },
-    "id": "lac_sielya"
+    "id": "lac_sielya",
+    "lore": "/assets/atlas/lore/locations/lac_sielya.md"
   },
   {
     "categoryId": "lakes",
@@ -1918,7 +2030,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_vasty_drink/the_vasty_drink.webp"
     },
-    "id": "the_vasty_drink"
+    "id": "the_vasty_drink",
+    "lore": "/assets/atlas/lore/locations/the_vasty_drink.md"
   },
   {
     "categoryId": "lakes",
@@ -1935,7 +2048,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lisloch/lisloch.webp"
     },
-    "id": "lisloch"
+    "id": "lisloch",
+    "lore": "/assets/atlas/lore/locations/lisloch.md"
   },
   {
     "categoryId": "lakes",
@@ -1952,7 +2066,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_otta/lake_otta.webp"
     },
-    "id": "lake_otta"
+    "id": "lake_otta",
+    "lore": "/assets/atlas/lore/locations/lake_otta.md"
   },
   {
     "categoryId": "lakes",
@@ -1969,7 +2084,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/hughloch/hughloch.webp"
     },
-    "id": "hughloch"
+    "id": "hughloch",
+    "lore": "/assets/atlas/lore/locations/hughloch.md"
   },
   {
     "categoryId": "lakes",
@@ -1986,7 +2102,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_hul/lake_hul.webp"
     },
-    "id": "lake_hul"
+    "id": "lake_hul",
+    "lore": "/assets/atlas/lore/locations/lake_hul.md"
   },
   {
     "categoryId": "lakes",
@@ -2003,7 +2120,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/hot_springs/hot_springs.webp"
     },
-    "id": "hot_springs"
+    "id": "hot_springs",
+    "lore": "/assets/atlas/lore/locations/hot_springs.md"
   },
   {
     "categoryId": "lakes",
@@ -2020,7 +2138,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/taak_lake/taak_lake.webp"
     },
-    "id": "taak_lake"
+    "id": "taak_lake",
+    "lore": "/assets/atlas/lore/locations/taak_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -2037,7 +2156,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/llewellyn_harbor/llewellyn_harbor.webp"
     },
-    "id": "llewellyn_harbor"
+    "id": "llewellyn_harbor",
+    "lore": "/assets/atlas/lore/locations/llewellyn_harbor.md"
   },
   {
     "categoryId": "lakes",
@@ -2054,7 +2174,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/straight_of_alaron/straight_of_alaron.webp"
     },
-    "id": "straight_of_alaron"
+    "id": "straight_of_alaron",
+    "lore": "/assets/atlas/lore/locations/straight_of_alaron.md"
   },
   {
     "categoryId": "lakes",
@@ -2071,7 +2192,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/firloch/firloch.webp"
     },
-    "id": "firloch"
+    "id": "firloch",
+    "lore": "/assets/atlas/lore/locations/firloch.md"
   },
   {
     "categoryId": "lakes",
@@ -2088,7 +2210,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/temezzers_end/temezzers_end.webp"
     },
-    "id": "temezzers_end"
+    "id": "temezzers_end",
+    "lore": "/assets/atlas/lore/locations/temezzers_end.md"
   },
   {
     "categoryId": "lakes",
@@ -2105,7 +2228,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_wash/the_wash.webp"
     },
-    "id": "the_wash"
+    "id": "the_wash",
+    "lore": "/assets/atlas/lore/locations/the_wash.md"
   },
   {
     "categoryId": "lakes",
@@ -2122,7 +2246,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/aryllswater/aryllswater.webp"
     },
-    "id": "aryllswater"
+    "id": "aryllswater",
+    "lore": "/assets/atlas/lore/locations/aryllswater.md"
   },
   {
     "categoryId": "lakes",
@@ -2139,7 +2264,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lammatars_water/lammatars_water.webp"
     },
-    "id": "lammatars_water"
+    "id": "lammatars_water",
+    "lore": "/assets/atlas/lore/locations/lammatars_water.md"
   },
   {
     "categoryId": "lakes",
@@ -2156,7 +2282,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/caldarth/caldarth.webp"
     },
-    "id": "caldarth"
+    "id": "caldarth",
+    "lore": "/assets/atlas/lore/locations/caldarth.md"
   },
   {
     "categoryId": "lakes",
@@ -2173,7 +2300,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_ragheb/lake_ragheb.webp"
     },
-    "id": "lake_ragheb"
+    "id": "lake_ragheb",
+    "lore": "/assets/atlas/lore/locations/lake_ragheb.md"
   },
   {
     "categoryId": "lakes",
@@ -2190,7 +2318,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/myrloch/myrloch.webp"
     },
-    "id": "myrloch"
+    "id": "myrloch",
+    "lore": "/assets/atlas/lore/locations/myrloch.md"
   },
   {
     "categoryId": "lakes",
@@ -2207,7 +2336,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/corwell_firth/corwell_firth.webp"
     },
-    "id": "corwell_firth"
+    "id": "corwell_firth",
+    "lore": "/assets/atlas/lore/locations/corwell_firth.md"
   },
   {
     "categoryId": "lakes",
@@ -2224,7 +2354,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_canal/the_canal.webp"
     },
-    "id": "the_canal"
+    "id": "the_canal",
+    "lore": "/assets/atlas/lore/locations/the_canal.md"
   },
   {
     "categoryId": "lakes",
@@ -2241,7 +2372,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/moloth_caldera/moloth_caldera.webp"
     },
-    "id": "moloth_caldera"
+    "id": "moloth_caldera",
+    "lore": "/assets/atlas/lore/locations/moloth_caldera.md"
   },
   {
     "categoryId": "lakes",
@@ -2258,7 +2390,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lake_throm/lake_throm.webp"
     },
-    "id": "lake_throm"
+    "id": "lake_throm",
+    "lore": "/assets/atlas/lore/locations/lake_throm.md"
   },
   {
     "categoryId": "lakes",
@@ -2275,7 +2408,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lilac_pond/lilac_pond.webp"
     },
-    "id": "lilac_pond"
+    "id": "lilac_pond",
+    "lore": "/assets/atlas/lore/locations/lilac_pond.md"
   },
   {
     "categoryId": "lakes",
@@ -2292,7 +2426,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/doffs_lake/doffs_lake.webp"
     },
-    "id": "doffs_lake"
+    "id": "doffs_lake",
+    "lore": "/assets/atlas/lore/locations/doffs_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -2309,7 +2444,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/pond_of_tears/pond_of_tears.webp"
     },
-    "id": "pond_of_tears"
+    "id": "pond_of_tears",
+    "lore": "/assets/atlas/lore/locations/pond_of_tears.md"
   },
   {
     "categoryId": "lakes",
@@ -2326,7 +2462,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/corwell_harbor/corwell_harbor.webp"
     },
-    "id": "corwell_harbor"
+    "id": "corwell_harbor",
+    "lore": "/assets/atlas/lore/locations/corwell_harbor.md"
   },
   {
     "categoryId": "lakes",
@@ -2343,7 +2480,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/pirates_caves/pirates_caves.webp"
     },
-    "id": "pirates_caves"
+    "id": "pirates_caves",
+    "lore": "/assets/atlas/lore/locations/pirates_caves.md"
   },
   {
     "categoryId": "lakes",
@@ -2352,15 +2490,16 @@
       1552.5
     ],
     "popup": {
-      "title": "T\u00edr faoi Thoinn",
+      "title": "Tír faoi Thoinn",
       "description": "An underwater territory said to be the domain of [[Deep Sashelas]].",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/tir_faoi_thoinn/tir_faoi_thoinn.json",
-        "label": "T\u00edr faoi Thoinn"
+        "label": "Tír faoi Thoinn"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/tir_faoi_thoinn/tir_faoi_thoinn.webp"
     },
-    "id": "tir_faoi_thoinn"
+    "id": "tir_faoi_thoinn",
+    "lore": "/assets/atlas/lore/locations/tir_faoi_thoinn.md"
   },
   {
     "categoryId": "lakes",
@@ -2377,7 +2516,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/harloch/harloch.webp"
     },
-    "id": "harloch"
+    "id": "harloch",
+    "lore": "/assets/atlas/lore/locations/harloch.md"
   },
   {
     "categoryId": "lakes",
@@ -2394,7 +2534,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/mal_sul/mal_sul.webp"
     },
-    "id": "mal_sul"
+    "id": "mal_sul",
+    "lore": "/assets/atlas/lore/locations/mal_sul.md"
   },
   {
     "categoryId": "lakes",
@@ -2411,7 +2552,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/mal_feargal/mal_feargal.webp"
     },
-    "id": "mal_feargal"
+    "id": "mal_feargal",
+    "lore": "/assets/atlas/lore/locations/mal_feargal.md"
   },
   {
     "categoryId": "lakes",
@@ -2428,7 +2570,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/mal_tarbat/mal_tarbat.webp"
     },
-    "id": "mal_tarbat"
+    "id": "mal_tarbat",
+    "lore": "/assets/atlas/lore/locations/mal_tarbat.md"
   },
   {
     "categoryId": "lakes",
@@ -2445,7 +2588,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/shee_pool/shee_pool.webp"
     },
-    "id": "shee_pool"
+    "id": "shee_pool",
+    "lore": "/assets/atlas/lore/locations/shee_pool.md"
   },
   {
     "categoryId": "lakes",
@@ -2462,7 +2606,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/underwater_realm_of_the_wizard/underwater_realm_of_the_wizard.webp"
     },
-    "id": "underwater_realm_of_the_wizard"
+    "id": "underwater_realm_of_the_wizard",
+    "lore": "/assets/atlas/lore/locations/underwater_realm_of_the_wizard.md"
   },
   {
     "categoryId": "lakes",
@@ -2479,7 +2624,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/norfen_lake/norfen_lake.webp"
     },
-    "id": "norfen_lake"
+    "id": "norfen_lake",
+    "lore": "/assets/atlas/lore/locations/norfen_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -2496,7 +2642,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/wells_of_lurue/wells_of_lurue.webp"
     },
-    "id": "wells_of_lurue"
+    "id": "wells_of_lurue",
+    "lore": "/assets/atlas/lore/locations/wells_of_lurue.md"
   },
   {
     "categoryId": "lakes",
@@ -2513,7 +2660,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/blibdoolpoolps_nest/blibdoolpoolps_nest.webp"
     },
-    "id": "blibdoolpoolps_nest"
+    "id": "blibdoolpoolps_nest",
+    "lore": "/assets/atlas/lore/locations/blibdoolpoolps_nest.md"
   },
   {
     "categoryId": "lakes",
@@ -2530,7 +2678,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/mal_tamesis/mal_tamesis.webp"
     },
-    "id": "mal_tamesis"
+    "id": "mal_tamesis",
+    "lore": "/assets/atlas/lore/locations/mal_tamesis.md"
   },
   {
     "categoryId": "lakes",
@@ -2547,7 +2696,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/lac_dynnegall/lac_dynnegall.webp"
     },
-    "id": "lac_dynnegall"
+    "id": "lac_dynnegall",
+    "lore": "/assets/atlas/lore/locations/lac_dynnegall.md"
   },
   {
     "categoryId": "lakes",
@@ -2564,7 +2714,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/akadis_dance/akadis_dance.webp"
     },
-    "id": "akadis_dance"
+    "id": "akadis_dance",
+    "lore": "/assets/atlas/lore/locations/akadis_dance.md"
   },
   {
     "categoryId": "lakes",
@@ -2581,7 +2732,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/jede_pond/jede_pond.webp"
     },
-    "id": "jede_pond"
+    "id": "jede_pond",
+    "lore": "/assets/atlas/lore/locations/jede_pond.md"
   },
   {
     "categoryId": "lakes",
@@ -2598,7 +2750,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/star_lake/star_lake.webp"
     },
-    "id": "star_lake"
+    "id": "star_lake",
+    "lore": "/assets/atlas/lore/locations/star_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -2615,7 +2768,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/curstlake/curstlake.webp"
     },
-    "id": "curstlake"
+    "id": "curstlake",
+    "lore": "/assets/atlas/lore/locations/curstlake.md"
   },
   {
     "categoryId": "lakes",
@@ -2632,7 +2786,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/shimmer_lake/shimmer_lake.webp"
     },
-    "id": "shimmer_lake"
+    "id": "shimmer_lake",
+    "lore": "/assets/atlas/lore/locations/shimmer_lake.md"
   },
   {
     "categoryId": "lakes",
@@ -2649,7 +2804,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/starfall_pool/starfall_pool.webp"
     },
-    "id": "starfall_pool"
+    "id": "starfall_pool",
+    "lore": "/assets/atlas/lore/locations/starfall_pool.md"
   },
   {
     "categoryId": "lakes",
@@ -2666,7 +2822,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/gbor_nor/gbor_nor.webp"
     },
-    "id": "gbor_nor"
+    "id": "gbor_nor",
+    "lore": "/assets/atlas/lore/locations/gbor_nor.md"
   },
   {
     "categoryId": "lakes",
@@ -2683,7 +2840,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/semphar_water/semphar_water.webp"
     },
-    "id": "semphar_water"
+    "id": "semphar_water",
+    "lore": "/assets/atlas/lore/locations/semphar_water.md"
   },
   {
     "categoryId": "lakes",
@@ -2700,7 +2858,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/the_throat_2/the_throat_2.webp"
     },
-    "id": "the_throat_2"
+    "id": "the_throat_2",
+    "lore": "/assets/atlas/lore/locations/the_throat_2.md"
   },
   {
     "categoryId": "lakes",
@@ -2710,14 +2869,15 @@
     ],
     "popup": {
       "title": "Llashloch",
-      "description": "'''The Lake of Ice''' \u2013 a large glacial rift, said to resemble a bent human arm and inhabited by [[white-skinned octopus]]es and [[snow cloaker]]s.",
+      "description": "'''The Lake of Ice''' – a large glacial rift, said to resemble a bent human arm and inhabited by [[white-skinned octopus]]es and [[snow cloaker]]s.",
       "link": {
         "url": "/assets/atlas/world/toril/faerun/lakes/llashloch/llashloch.json",
         "label": "Llashloch"
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/llashloch/llashloch.webp"
     },
-    "id": "llashloch"
+    "id": "llashloch",
+    "lore": "/assets/atlas/lore/locations/llashloch.md"
   },
   {
     "categoryId": "lakes",
@@ -2734,6 +2894,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/lakes/staunt_pools/staunt_pools.webp"
     },
-    "id": "staunt_pools"
+    "id": "staunt_pools",
+    "lore": "/assets/atlas/lore/locations/staunt_pools.md"
   }
 ]

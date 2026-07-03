@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/reghed_glacier/reghed_glacier.webp"
     },
-    "id": "reghed_glacier"
+    "id": "reghed_glacier",
+    "lore": "/assets/atlas/lore/locations/reghed_glacier.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_white_worm/glacier_of_the_white_worm.webp"
     },
-    "id": "glacier_of_the_white_worm"
+    "id": "glacier_of_the_white_worm",
+    "lore": "/assets/atlas/lore/locations/glacier_of_the_white_worm.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/cold_run/cold_run.webp"
     },
-    "id": "cold_run"
+    "id": "cold_run",
+    "lore": "/assets/atlas/lore/locations/cold_run.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/fields_of_slaughter/fields_of_slaughter.webp"
     },
-    "id": "fields_of_slaughter"
+    "id": "fields_of_slaughter",
+    "lore": "/assets/atlas/lore/locations/fields_of_slaughter.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/high_ice/high_ice.webp"
     },
-    "id": "high_ice"
+    "id": "high_ice",
+    "lore": "/assets/atlas/lore/locations/high_ice.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/wyrms_tooth_glacier/wyrms_tooth_glacier.webp"
     },
-    "id": "wyrms_tooth_glacier"
+    "id": "wyrms_tooth_glacier",
+    "lore": "/assets/atlas/lore/locations/wyrms_tooth_glacier.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/the_great_glacier/the_great_glacier.webp"
     },
-    "id": "the_great_glacier"
+    "id": "the_great_glacier",
+    "lore": "/assets/atlas/lore/locations/the_great_glacier.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/glacier_of_the_silver_blades/glacier_of_the_silver_blades.webp"
     },
-    "id": "glacier_of_the_silver_blades"
+    "id": "glacier_of_the_silver_blades",
+    "lore": "/assets/atlas/lore/locations/glacier_of_the_silver_blades.md"
   },
   {
     "categoryId": "glaciers_tundras",
@@ -150,6 +158,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/glaciers_tundras/cold_vale/cold_vale.webp"
     },
-    "id": "cold_vale"
+    "id": "cold_vale",
+    "lore": "/assets/atlas/lore/locations/cold_vale.md"
   }
 ]

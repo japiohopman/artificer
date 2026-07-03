@@ -4,11 +4,12 @@
   "type": "lakes",
   "parent": "lakes",
   "title": "Stojanow",
-  "description": "Also known as the '''Barren River''', used to transport ore and minerals from the [[Dragonspines]] to the cities of [[Phlan]] and from there \u2013 to [[Melvaunt]].",
+  "description": "Also known as the '''Barren River''', used to transport ore and minerals from the [[Dragonspines]] to the cities of [[Phlan]] and from there – to [[Melvaunt]].",
   "image": "stojanow.webp",
   "coordinates": {
     "lat": 2361.03,
     "lng": 2824.36
   },
-  "categoryId": "lakes"
+  "categoryId": "lakes",
+  "lore": "/assets/atlas/lore/locations/stojanow.md"
 }

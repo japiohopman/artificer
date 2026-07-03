@@ -4,11 +4,12 @@
   "type": "lakes",
   "parent": "lakes",
   "title": "Methmere",
-  "description": "Also known as '''Lake Meth''' \u2013 a lake in the frontier between the nations of [[Chessenta]] and ]]Unther]].",
+  "description": "Also known as '''Lake Meth''' – a lake in the frontier between the nations of [[Chessenta]] and ]]Unther]].",
   "image": "methmere.webp",
   "coordinates": {
     "lat": 3503.6,
     "lng": 1626.4
   },
-  "categoryId": "lakes"
+  "categoryId": "lakes",
+  "lore": "/assets/atlas/lore/locations/methmere.md"
 }

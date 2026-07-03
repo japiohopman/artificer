@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "River Gundar",
-  "description": "A 200\u202fmiles (320,000\u202fmeters) long river in [[Estagund]].",
+  "description": "A 200 miles (320,000 meters) long river in [[Estagund]].",
   "image": "river_gundar.webp",
   "coordinates": {
     "lat": 4341.95,
     "lng": 995.02
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/river_gundar.md"
 }

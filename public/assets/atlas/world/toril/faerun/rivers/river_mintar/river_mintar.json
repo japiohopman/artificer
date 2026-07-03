@@ -4,11 +4,12 @@
   "type": "rivers",
   "parent": "rivers",
   "title": "River Mintar",
-  "description": "A small waterway that originated within the western region of the [[Thornwood]], flowed south and west for 200\u202fmiles (320\u202fkilometers), before emptying into the [[Lake of Steam]].",
+  "description": "A small waterway that originated within the western region of the [[Thornwood]], flowed south and west for 200 miles (320 kilometers), before emptying into the [[Lake of Steam]].",
   "image": "river_mintar.webp",
   "coordinates": {
     "lat": 2013.2,
     "lng": 1188.41
   },
-  "categoryId": "rivers"
+  "categoryId": "rivers",
+  "lore": "/assets/atlas/lore/locations/river_mintar.md"
 }

@@ -4,11 +4,12 @@
   "type": "seas_oceans",
   "parent": "seas_oceans",
   "title": "Alamber Sea",
-  "description": "The '''Sahuagin Sea''' \u2013 the primary trade avenue between the nations of [[Mulhorand]], [[Unther]], and [[Thay]] and neutral territory.",
+  "description": "The '''Sahuagin Sea''' – the primary trade avenue between the nations of [[Mulhorand]], [[Unther]], and [[Thay]] and neutral territory.",
   "image": "alamber_sea.webp",
   "coordinates": {
     "lat": 3742.6,
     "lng": 1701.91
   },
-  "categoryId": "seas_oceans"
+  "categoryId": "seas_oceans",
+  "lore": "/assets/atlas/lore/locations/alamber_sea.md"
 }

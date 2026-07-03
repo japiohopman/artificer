@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/black_ash_plain/black_ash_plain.webp"
     },
-    "id": "black_ash_plain"
+    "id": "black_ash_plain",
+    "lore": "/assets/atlas/lore/locations/black_ash_plain.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/plains_of_purple_dust/plains_of_purple_dust.webp"
     },
-    "id": "plains_of_purple_dust"
+    "id": "plains_of_purple_dust",
+    "lore": "/assets/atlas/lore/locations/plains_of_purple_dust.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/raurin/raurin.webp"
     },
-    "id": "raurin"
+    "id": "raurin",
+    "lore": "/assets/atlas/lore/locations/raurin.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/bandit_wastes/bandit_wastes.webp"
     },
-    "id": "bandit_wastes"
+    "id": "bandit_wastes",
+    "lore": "/assets/atlas/lore/locations/bandit_wastes.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/calim_desert/calim_desert.webp"
     },
-    "id": "calim_desert"
+    "id": "calim_desert",
+    "lore": "/assets/atlas/lore/locations/calim_desert.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/teshyllal_wastes/teshyllal_wastes.webp"
     },
-    "id": "teshyllal_wastes"
+    "id": "teshyllal_wastes",
+    "lore": "/assets/atlas/lore/locations/teshyllal_wastes.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/hordelands/hordelands.webp"
     },
-    "id": "hordelands"
+    "id": "hordelands",
+    "lore": "/assets/atlas/lore/locations/hordelands.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/singing_sands/singing_sands.webp"
     },
-    "id": "singing_sands"
+    "id": "singing_sands",
+    "lore": "/assets/atlas/lore/locations/singing_sands.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/stonelands/stonelands.webp"
     },
-    "id": "stonelands"
+    "id": "stonelands",
+    "lore": "/assets/atlas/lore/locations/stonelands.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -167,7 +176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/anauroch/anauroch.webp"
     },
-    "id": "anauroch"
+    "id": "anauroch",
+    "lore": "/assets/atlas/lore/locations/anauroch.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -184,7 +194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_cold_field/the_cold_field.webp"
     },
-    "id": "the_cold_field"
+    "id": "the_cold_field",
+    "lore": "/assets/atlas/lore/locations/the_cold_field.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -201,7 +212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_burn/the_burn.webp"
     },
-    "id": "the_burn"
+    "id": "the_burn",
+    "lore": "/assets/atlas/lore/locations/the_burn.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -218,7 +230,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_quarter_of_emptiness/the_quarter_of_emptiness.webp"
     },
-    "id": "the_quarter_of_emptiness"
+    "id": "the_quarter_of_emptiness",
+    "lore": "/assets/atlas/lore/locations/the_quarter_of_emptiness.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -235,7 +248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/moanders_footstep/moanders_footstep.webp"
     },
-    "id": "moanders_footstep"
+    "id": "moanders_footstep",
+    "lore": "/assets/atlas/lore/locations/moanders_footstep.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -252,7 +266,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/tortured_land/tortured_land.webp"
     },
-    "id": "tortured_land"
+    "id": "tortured_land",
+    "lore": "/assets/atlas/lore/locations/tortured_land.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -269,7 +284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/nsi_wastes/nsi_wastes.webp"
     },
-    "id": "nsi_wastes"
+    "id": "nsi_wastes",
+    "lore": "/assets/atlas/lore/locations/nsi_wastes.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -286,7 +302,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_fallen_lands/the_fallen_lands.webp"
     },
-    "id": "the_fallen_lands"
+    "id": "the_fallen_lands",
+    "lore": "/assets/atlas/lore/locations/the_fallen_lands.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -303,7 +320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_embers/valley_of_embers.webp"
     },
-    "id": "valley_of_embers"
+    "id": "valley_of_embers",
+    "lore": "/assets/atlas/lore/locations/valley_of_embers.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -320,7 +338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/valley_of_lost_honor/valley_of_lost_honor.webp"
     },
-    "id": "valley_of_lost_honor"
+    "id": "valley_of_lost_honor",
+    "lore": "/assets/atlas/lore/locations/valley_of_lost_honor.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -337,7 +356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/land_of_ash_and_smoke/land_of_ash_and_smoke.webp"
     },
-    "id": "land_of_ash_and_smoke"
+    "id": "land_of_ash_and_smoke",
+    "lore": "/assets/atlas/lore/locations/land_of_ash_and_smoke.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -354,7 +374,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/blackfeather_barrens/blackfeather_barrens.webp"
     },
-    "id": "blackfeather_barrens"
+    "id": "blackfeather_barrens",
+    "lore": "/assets/atlas/lore/locations/blackfeather_barrens.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -371,7 +392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/cinnabar_wastes/cinnabar_wastes.webp"
     },
-    "id": "cinnabar_wastes"
+    "id": "cinnabar_wastes",
+    "lore": "/assets/atlas/lore/locations/cinnabar_wastes.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -388,7 +410,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/atars_looking_glass/atars_looking_glass.webp"
     },
-    "id": "atars_looking_glass"
+    "id": "atars_looking_glass",
+    "lore": "/assets/atlas/lore/locations/atars_looking_glass.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -405,7 +428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/bowl_of_loneliness/bowl_of_loneliness.webp"
     },
-    "id": "bowl_of_loneliness"
+    "id": "bowl_of_loneliness",
+    "lore": "/assets/atlas/lore/locations/bowl_of_loneliness.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -422,7 +446,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_saiyaddar/the_saiyaddar.webp"
     },
-    "id": "the_saiyaddar"
+    "id": "the_saiyaddar",
+    "lore": "/assets/atlas/lore/locations/the_saiyaddar.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -439,7 +464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_sword/the_sword.webp"
     },
-    "id": "the_sword"
+    "id": "the_sword",
+    "lore": "/assets/atlas/lore/locations/the_sword.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -456,7 +482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/hills_of_scent/hills_of_scent.webp"
     },
-    "id": "hills_of_scent"
+    "id": "hills_of_scent",
+    "lore": "/assets/atlas/lore/locations/hills_of_scent.md"
   },
   {
     "categoryId": "deserts_wastelands",
@@ -473,6 +500,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/deserts_wastelands/the_plain_of_standing_stones/the_plain_of_standing_stones.webp"
     },
-    "id": "the_plain_of_standing_stones"
+    "id": "the_plain_of_standing_stones",
+    "lore": "/assets/atlas/lore/locations/the_plain_of_standing_stones.md"
   }
 ]

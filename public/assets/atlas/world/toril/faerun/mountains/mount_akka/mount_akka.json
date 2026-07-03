@@ -4,10 +4,11 @@
   "type": "mountain",
   "parent": "mountain",
   "title": "Mount Akka",
-  "description": "A prominent mountain in the [[Alpuk]] region up to 1,000\u202ffeet (300\u202fmeters) in elevation.",
+  "description": "A prominent mountain in the [[Alpuk]] region up to 1,000 feet (300 meters) in elevation.",
   "image": "mount_akka.webp",
   "coordinates": {
     "lat": 2753.12,
     "lng": 3137.07
-  }
+  },
+  "lore": "/assets/atlas/lore/locations/mount_akka.md"
 }

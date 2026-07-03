@@ -14,7 +14,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/wavecrest/wavecrest.webp"
     },
-    "id": "wavecrest"
+    "id": "wavecrest",
+    "lore": "/assets/atlas/lore/locations/wavecrest.md"
   },
   {
     "categoryId": "islands",
@@ -31,7 +32,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ilighon/ilighon.webp"
     },
-    "id": "ilighon"
+    "id": "ilighon",
+    "lore": "/assets/atlas/lore/locations/ilighon.md"
   },
   {
     "categoryId": "islands",
@@ -48,7 +50,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ixinos/ixinos.webp"
     },
-    "id": "ixinos"
+    "id": "ixinos",
+    "lore": "/assets/atlas/lore/locations/ixinos.md"
   },
   {
     "categoryId": "islands",
@@ -65,7 +68,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/alaor/alaor.webp"
     },
-    "id": "alaor"
+    "id": "alaor",
+    "lore": "/assets/atlas/lore/locations/alaor.md"
   },
   {
     "categoryId": "islands",
@@ -82,7 +86,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ship_of_the_gods/ship_of_the_gods.webp"
     },
-    "id": "ship_of_the_gods"
+    "id": "ship_of_the_gods",
+    "lore": "/assets/atlas/lore/locations/ship_of_the_gods.md"
   },
   {
     "categoryId": "islands",
@@ -99,7 +104,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/vathal/vathal.webp"
     },
-    "id": "vathal"
+    "id": "vathal",
+    "lore": "/assets/atlas/lore/locations/vathal.md"
   },
   {
     "categoryId": "islands",
@@ -116,7 +122,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/mordyr/mordyr.webp"
     },
-    "id": "mordyr"
+    "id": "mordyr",
+    "lore": "/assets/atlas/lore/locations/mordyr.md"
   },
   {
     "categoryId": "islands",
@@ -133,7 +140,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/naarlith/naarlith.webp"
     },
-    "id": "naarlith"
+    "id": "naarlith",
+    "lore": "/assets/atlas/lore/locations/naarlith.md"
   },
   {
     "categoryId": "islands",
@@ -150,7 +158,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/white_rocks/white_rocks.webp"
     },
-    "id": "white_rocks"
+    "id": "white_rocks",
+    "lore": "/assets/atlas/lore/locations/white_rocks.md"
   },
   {
     "categoryId": "islands",
@@ -167,7 +176,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/isle_of_quelthiir/isle_of_quelthiir.webp"
     },
-    "id": "isle_of_quelthiir"
+    "id": "isle_of_quelthiir",
+    "lore": "/assets/atlas/lore/locations/isle_of_quelthiir.md"
   },
   {
     "categoryId": "islands",
@@ -184,7 +194,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/talagath/talagath.webp"
     },
-    "id": "talagath"
+    "id": "talagath",
+    "lore": "/assets/atlas/lore/locations/talagath.md"
   },
   {
     "categoryId": "islands",
@@ -201,7 +212,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/stormwall/stormwall.webp"
     },
-    "id": "stormwall"
+    "id": "stormwall",
+    "lore": "/assets/atlas/lore/locations/stormwall.md"
   },
   {
     "categoryId": "islands",
@@ -218,7 +230,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/arnrock/arnrock.webp"
     },
-    "id": "arnrock"
+    "id": "arnrock",
+    "lore": "/assets/atlas/lore/locations/arnrock.md"
   },
   {
     "categoryId": "islands",
@@ -235,7 +248,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/felmers_keep/felmers_keep.webp"
     },
-    "id": "felmers_keep"
+    "id": "felmers_keep",
+    "lore": "/assets/atlas/lore/locations/felmers_keep.md"
   },
   {
     "categoryId": "islands",
@@ -252,7 +266,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/olodel/olodel.webp"
     },
-    "id": "olodel"
+    "id": "olodel",
+    "lore": "/assets/atlas/lore/locations/olodel.md"
   },
   {
     "categoryId": "islands",
@@ -269,7 +284,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/narruth/narruth.webp"
     },
-    "id": "narruth"
+    "id": "narruth",
+    "lore": "/assets/atlas/lore/locations/narruth.md"
   },
   {
     "categoryId": "islands",
@@ -286,7 +302,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/nykkar_the_isle_of_memory/nykkar_the_isle_of_memory.webp"
     },
-    "id": "nykkar_the_isle_of_memory"
+    "id": "nykkar_the_isle_of_memory",
+    "lore": "/assets/atlas/lore/locations/nykkar_the_isle_of_memory.md"
   },
   {
     "categoryId": "islands",
@@ -303,7 +320,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/singing_rocks/singing_rocks.webp"
     },
-    "id": "singing_rocks"
+    "id": "singing_rocks",
+    "lore": "/assets/atlas/lore/locations/singing_rocks.md"
   },
   {
     "categoryId": "islands",
@@ -320,7 +338,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/iyritrastrul/iyritrastrul.webp"
     },
-    "id": "iyritrastrul"
+    "id": "iyritrastrul",
+    "lore": "/assets/atlas/lore/locations/iyritrastrul.md"
   },
   {
     "categoryId": "islands",
@@ -337,7 +356,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/borammur/borammur.webp"
     },
-    "id": "borammur"
+    "id": "borammur",
+    "lore": "/assets/atlas/lore/locations/borammur.md"
   },
   {
     "categoryId": "islands",
@@ -354,7 +374,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/isle_of_the_circle/isle_of_the_circle.webp"
     },
-    "id": "isle_of_the_circle"
+    "id": "isle_of_the_circle",
+    "lore": "/assets/atlas/lore/locations/isle_of_the_circle.md"
   },
   {
     "categoryId": "islands",
@@ -371,7 +392,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/thelve/thelve.webp"
     },
-    "id": "thelve"
+    "id": "thelve",
+    "lore": "/assets/atlas/lore/locations/thelve.md"
   },
   {
     "categoryId": "islands",
@@ -388,7 +410,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/arthoum/arthoum.webp"
     },
-    "id": "arthoum"
+    "id": "arthoum",
+    "lore": "/assets/atlas/lore/locations/arthoum.md"
   },
   {
     "categoryId": "islands",
@@ -405,7 +428,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/nairns_tomb/nairns_tomb.webp"
     },
-    "id": "nairns_tomb"
+    "id": "nairns_tomb",
+    "lore": "/assets/atlas/lore/locations/nairns_tomb.md"
   },
   {
     "categoryId": "islands",
@@ -422,7 +446,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/askalet/askalet.webp"
     },
-    "id": "askalet"
+    "id": "askalet",
+    "lore": "/assets/atlas/lore/locations/askalet.md"
   },
   {
     "categoryId": "islands",
@@ -439,7 +464,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sklorn/sklorn.webp"
     },
-    "id": "sklorn"
+    "id": "sklorn",
+    "lore": "/assets/atlas/lore/locations/sklorn.md"
   },
   {
     "categoryId": "islands",
@@ -456,7 +482,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/unglur/unglur.webp"
     },
-    "id": "unglur"
+    "id": "unglur",
+    "lore": "/assets/atlas/lore/locations/unglur.md"
   },
   {
     "categoryId": "islands",
@@ -473,7 +500,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/raerest/raerest.webp"
     },
-    "id": "raerest"
+    "id": "raerest",
+    "lore": "/assets/atlas/lore/locations/raerest.md"
   },
   {
     "categoryId": "islands",
@@ -490,7 +518,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/hunters_isle/hunters_isle.webp"
     },
-    "id": "hunters_isle"
+    "id": "hunters_isle",
+    "lore": "/assets/atlas/lore/locations/hunters_isle.md"
   },
   {
     "categoryId": "islands",
@@ -507,7 +536,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/storna/storna.webp"
     },
-    "id": "storna"
+    "id": "storna",
+    "lore": "/assets/atlas/lore/locations/storna.md"
   },
   {
     "categoryId": "islands",
@@ -524,7 +554,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/whamite_isles/whamite_isles.webp"
     },
-    "id": "whamite_isles"
+    "id": "whamite_isles",
+    "lore": "/assets/atlas/lore/locations/whamite_isles.md"
   },
   {
     "categoryId": "islands",
@@ -541,7 +572,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/wayrock/wayrock.webp"
     },
-    "id": "wayrock"
+    "id": "wayrock",
+    "lore": "/assets/atlas/lore/locations/wayrock.md"
   },
   {
     "categoryId": "islands",
@@ -558,7 +590,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/prespur/prespur.webp"
     },
-    "id": "prespur"
+    "id": "prespur",
+    "lore": "/assets/atlas/lore/locations/prespur.md"
   },
   {
     "categoryId": "islands",
@@ -575,7 +608,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/orlumbor/orlumbor.webp"
     },
-    "id": "orlumbor"
+    "id": "orlumbor",
+    "lore": "/assets/atlas/lore/locations/orlumbor.md"
   },
   {
     "categoryId": "islands",
@@ -592,7 +626,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/tharsult/tharsult.webp"
     },
-    "id": "tharsult"
+    "id": "tharsult",
+    "lore": "/assets/atlas/lore/locations/tharsult.md"
   },
   {
     "categoryId": "islands",
@@ -609,7 +644,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sorcerers_isle/sorcerers_isle.webp"
     },
-    "id": "sorcerers_isle"
+    "id": "sorcerers_isle",
+    "lore": "/assets/atlas/lore/locations/sorcerers_isle.md"
   },
   {
     "categoryId": "islands",
@@ -626,7 +662,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/dragonisle/dragonisle.webp"
     },
-    "id": "dragonisle"
+    "id": "dragonisle",
+    "lore": "/assets/atlas/lore/locations/dragonisle.md"
   },
   {
     "categoryId": "islands",
@@ -643,7 +680,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ulgars_isle/ulgars_isle.webp"
     },
-    "id": "ulgars_isle"
+    "id": "ulgars_isle",
+    "lore": "/assets/atlas/lore/locations/ulgars_isle.md"
   },
   {
     "categoryId": "islands",
@@ -660,7 +698,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/fang_rocks/fang_rocks.webp"
     },
-    "id": "fang_rocks"
+    "id": "fang_rocks",
+    "lore": "/assets/atlas/lore/locations/fang_rocks.md"
   },
   {
     "categoryId": "islands",
@@ -677,7 +716,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/hawks_isle/hawks_isle.webp"
     },
-    "id": "hawks_isle"
+    "id": "hawks_isle",
+    "lore": "/assets/atlas/lore/locations/hawks_isle.md"
   },
   {
     "categoryId": "islands",
@@ -694,7 +734,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/kelthann/kelthann.webp"
     },
-    "id": "kelthann"
+    "id": "kelthann",
+    "lore": "/assets/atlas/lore/locations/kelthann.md"
   },
   {
     "categoryId": "islands",
@@ -711,7 +752,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/mirg_isle/mirg_isle.webp"
     },
-    "id": "mirg_isle"
+    "id": "mirg_isle",
+    "lore": "/assets/atlas/lore/locations/mirg_isle.md"
   },
   {
     "categoryId": "islands",
@@ -728,7 +770,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/telfar/telfar.webp"
     },
-    "id": "telfar"
+    "id": "telfar",
+    "lore": "/assets/atlas/lore/locations/telfar.md"
   },
   {
     "categoryId": "islands",
@@ -745,7 +788,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sarr/sarr.webp"
     },
-    "id": "sarr"
+    "id": "sarr",
+    "lore": "/assets/atlas/lore/locations/sarr.md"
   },
   {
     "categoryId": "islands",
@@ -762,7 +806,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sumbar/sumbar.webp"
     },
-    "id": "sumbar"
+    "id": "sumbar",
+    "lore": "/assets/atlas/lore/locations/sumbar.md"
   },
   {
     "categoryId": "islands",
@@ -779,7 +824,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/lith/lith.webp"
     },
-    "id": "lith"
+    "id": "lith",
+    "lore": "/assets/atlas/lore/locations/lith.md"
   },
   {
     "categoryId": "islands",
@@ -796,7 +842,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/lurath/lurath.webp"
     },
-    "id": "lurath"
+    "id": "lurath",
+    "lore": "/assets/atlas/lore/locations/lurath.md"
   },
   {
     "categoryId": "islands",
@@ -813,7 +860,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ilthan/ilthan.webp"
     },
-    "id": "ilthan"
+    "id": "ilthan",
+    "lore": "/assets/atlas/lore/locations/ilthan.md"
   },
   {
     "categoryId": "islands",
@@ -830,7 +878,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/alphar_isle/alphar_isle.webp"
     },
-    "id": "alphar_isle"
+    "id": "alphar_isle",
+    "lore": "/assets/atlas/lore/locations/alphar_isle.md"
   },
   {
     "categoryId": "islands",
@@ -847,7 +896,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/bulta/bulta.webp"
     },
-    "id": "bulta"
+    "id": "bulta",
+    "lore": "/assets/atlas/lore/locations/bulta.md"
   },
   {
     "categoryId": "islands",
@@ -864,7 +914,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/oresk/oresk.webp"
     },
-    "id": "oresk"
+    "id": "oresk",
+    "lore": "/assets/atlas/lore/locations/oresk.md"
   },
   {
     "categoryId": "islands",
@@ -881,7 +932,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/paldir/paldir.webp"
     },
-    "id": "paldir"
+    "id": "paldir",
+    "lore": "/assets/atlas/lore/locations/paldir.md"
   },
   {
     "categoryId": "islands",
@@ -898,7 +950,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/tan/tan.webp"
     },
-    "id": "tan"
+    "id": "tan",
+    "lore": "/assets/atlas/lore/locations/tan.md"
   },
   {
     "categoryId": "islands",
@@ -915,7 +968,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sylkiir/sylkiir.webp"
     },
-    "id": "sylkiir"
+    "id": "sylkiir",
+    "lore": "/assets/atlas/lore/locations/sylkiir.md"
   },
   {
     "categoryId": "islands",
@@ -932,7 +986,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/lone_rock/lone_rock.webp"
     },
-    "id": "lone_rock"
+    "id": "lone_rock",
+    "lore": "/assets/atlas/lore/locations/lone_rock.md"
   },
   {
     "categoryId": "islands",
@@ -949,7 +1004,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sauros_island/sauros_island.webp"
     },
-    "id": "sauros_island"
+    "id": "sauros_island",
+    "lore": "/assets/atlas/lore/locations/sauros_island.md"
   },
   {
     "categoryId": "islands",
@@ -966,7 +1022,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/isle_of_moas/isle_of_moas.webp"
     },
-    "id": "isle_of_moas"
+    "id": "isle_of_moas",
+    "lore": "/assets/atlas/lore/locations/isle_of_moas.md"
   },
   {
     "categoryId": "islands",
@@ -983,7 +1040,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/the_dawn_warrior/the_dawn_warrior.webp"
     },
-    "id": "the_dawn_warrior"
+    "id": "the_dawn_warrior",
+    "lore": "/assets/atlas/lore/locations/the_dawn_warrior.md"
   },
   {
     "categoryId": "islands",
@@ -1000,7 +1058,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/umbarra/umbarra.webp"
     },
-    "id": "umbarra"
+    "id": "umbarra",
+    "lore": "/assets/atlas/lore/locations/umbarra.md"
   },
   {
     "categoryId": "islands",
@@ -1017,7 +1076,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/mother_of_mists/mother_of_mists.webp"
     },
-    "id": "mother_of_mists"
+    "id": "mother_of_mists",
+    "lore": "/assets/atlas/lore/locations/mother_of_mists.md"
   },
   {
     "categoryId": "islands",
@@ -1034,7 +1094,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ssan/ssan.webp"
     },
-    "id": "ssan"
+    "id": "ssan",
+    "lore": "/assets/atlas/lore/locations/ssan.md"
   },
   {
     "categoryId": "islands",
@@ -1051,7 +1112,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/suj/suj.webp"
     },
-    "id": "suj"
+    "id": "suj",
+    "lore": "/assets/atlas/lore/locations/suj.md"
   },
   {
     "categoryId": "islands",
@@ -1068,7 +1130,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/lantan/lantan.webp"
     },
-    "id": "lantan"
+    "id": "lantan",
+    "lore": "/assets/atlas/lore/locations/lantan.md"
   },
   {
     "categoryId": "islands",
@@ -1085,7 +1148,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/orlil/orlil.webp"
     },
-    "id": "orlil"
+    "id": "orlil",
+    "lore": "/assets/atlas/lore/locations/orlil.md"
   },
   {
     "categoryId": "islands",
@@ -1102,7 +1166,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/the_icepeak/the_icepeak.webp"
     },
-    "id": "the_icepeak"
+    "id": "the_icepeak",
+    "lore": "/assets/atlas/lore/locations/the_icepeak.md"
   },
   {
     "categoryId": "islands",
@@ -1119,7 +1184,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/altarn/altarn.webp"
     },
-    "id": "altarn"
+    "id": "altarn",
+    "lore": "/assets/atlas/lore/locations/altarn.md"
   },
   {
     "categoryId": "islands",
@@ -1136,7 +1202,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/brokenshores/brokenshores.webp"
     },
-    "id": "brokenshores"
+    "id": "brokenshores",
+    "lore": "/assets/atlas/lore/locations/brokenshores.md"
   },
   {
     "categoryId": "islands",
@@ -1153,7 +1220,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/gundarlun_island/gundarlun_island.webp"
     },
-    "id": "gundarlun_island"
+    "id": "gundarlun_island",
+    "lore": "/assets/atlas/lore/locations/gundarlun_island.md"
   },
   {
     "categoryId": "islands",
@@ -1170,7 +1238,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/purple_rocks/purple_rocks.webp"
     },
-    "id": "purple_rocks"
+    "id": "purple_rocks",
+    "lore": "/assets/atlas/lore/locations/purple_rocks.md"
   },
   {
     "categoryId": "islands",
@@ -1187,7 +1256,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/whalebones/whalebones.webp"
     },
-    "id": "whalebones"
+    "id": "whalebones",
+    "lore": "/assets/atlas/lore/locations/whalebones.md"
   },
   {
     "categoryId": "islands",
@@ -1204,7 +1274,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ioma/ioma.webp"
     },
-    "id": "ioma"
+    "id": "ioma",
+    "lore": "/assets/atlas/lore/locations/ioma.md"
   },
   {
     "categoryId": "islands",
@@ -1221,7 +1292,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/skaug/skaug.webp"
     },
-    "id": "skaug"
+    "id": "skaug",
+    "lore": "/assets/atlas/lore/locations/skaug.md"
   },
   {
     "categoryId": "islands",
@@ -1238,7 +1310,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ruathym/ruathym.webp"
     },
-    "id": "ruathym"
+    "id": "ruathym",
+    "lore": "/assets/atlas/lore/locations/ruathym.md"
   },
   {
     "categoryId": "islands",
@@ -1255,7 +1328,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/dennik/dennik.webp"
     },
-    "id": "dennik"
+    "id": "dennik",
+    "lore": "/assets/atlas/lore/locations/dennik.md"
   },
   {
     "categoryId": "islands",
@@ -1272,7 +1346,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/dragonshome/dragonshome.webp"
     },
-    "id": "dragonshome"
+    "id": "dragonshome",
+    "lore": "/assets/atlas/lore/locations/dragonshome.md"
   },
   {
     "categoryId": "islands",
@@ -1289,7 +1364,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/nerth/nerth.webp"
     },
-    "id": "nerth"
+    "id": "nerth",
+    "lore": "/assets/atlas/lore/locations/nerth.md"
   },
   {
     "categoryId": "islands",
@@ -1306,7 +1382,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/the_whales_flukes/the_whales_flukes.webp"
     },
-    "id": "the_whales_flukes"
+    "id": "the_whales_flukes",
+    "lore": "/assets/atlas/lore/locations/the_whales_flukes.md"
   },
   {
     "categoryId": "islands",
@@ -1323,7 +1400,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/mintarn/mintarn.webp"
     },
-    "id": "mintarn"
+    "id": "mintarn",
+    "lore": "/assets/atlas/lore/locations/mintarn.md"
   },
   {
     "categoryId": "islands",
@@ -1340,7 +1418,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/flamsterd/flamsterd.webp"
     },
-    "id": "flamsterd"
+    "id": "flamsterd",
+    "lore": "/assets/atlas/lore/locations/flamsterd.md"
   },
   {
     "categoryId": "islands",
@@ -1357,7 +1436,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/carcathen/carcathen.webp"
     },
-    "id": "carcathen"
+    "id": "carcathen",
+    "lore": "/assets/atlas/lore/locations/carcathen.md"
   },
   {
     "categoryId": "islands",
@@ -1374,7 +1454,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/pandira/pandira.webp"
     },
-    "id": "pandira"
+    "id": "pandira",
+    "lore": "/assets/atlas/lore/locations/pandira.md"
   },
   {
     "categoryId": "islands",
@@ -1391,7 +1472,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/tetris/tetris.webp"
     },
-    "id": "tetris"
+    "id": "tetris",
+    "lore": "/assets/atlas/lore/locations/tetris.md"
   },
   {
     "categoryId": "islands",
@@ -1408,7 +1490,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/island_of_viledel/island_of_viledel.webp"
     },
-    "id": "island_of_viledel"
+    "id": "island_of_viledel",
+    "lore": "/assets/atlas/lore/locations/island_of_viledel.md"
   },
   {
     "categoryId": "islands",
@@ -1425,7 +1508,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/jacaman/jacaman.webp"
     },
-    "id": "jacaman"
+    "id": "jacaman",
+    "lore": "/assets/atlas/lore/locations/jacaman.md"
   },
   {
     "categoryId": "islands",
@@ -1442,7 +1526,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/rabins_reef/rabins_reef.webp"
     },
-    "id": "rabins_reef"
+    "id": "rabins_reef",
+    "lore": "/assets/atlas/lore/locations/rabins_reef.md"
   },
   {
     "categoryId": "islands",
@@ -1459,7 +1544,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ventris/ventris.webp"
     },
-    "id": "ventris"
+    "id": "ventris",
+    "lore": "/assets/atlas/lore/locations/ventris.md"
   },
   {
     "categoryId": "islands",
@@ -1476,7 +1562,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/chawdik/chawdik.webp"
     },
-    "id": "chawdik"
+    "id": "chawdik",
+    "lore": "/assets/atlas/lore/locations/chawdik.md"
   },
   {
     "categoryId": "islands",
@@ -1493,7 +1580,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/highport/highport.webp"
     },
-    "id": "highport"
+    "id": "highport",
+    "lore": "/assets/atlas/lore/locations/highport.md"
   },
   {
     "categoryId": "islands",
@@ -1510,7 +1598,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/caftenor/caftenor.webp"
     },
-    "id": "caftenor"
+    "id": "caftenor",
+    "lore": "/assets/atlas/lore/locations/caftenor.md"
   },
   {
     "categoryId": "islands",
@@ -1527,7 +1616,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/barrets_quay/barrets_quay.webp"
     },
-    "id": "barrets_quay"
+    "id": "barrets_quay",
+    "lore": "/assets/atlas/lore/locations/barrets_quay.md"
   },
   {
     "categoryId": "islands",
@@ -1544,7 +1634,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/finback/finback.webp"
     },
-    "id": "finback"
+    "id": "finback",
+    "lore": "/assets/atlas/lore/locations/finback.md"
   },
   {
     "categoryId": "islands",
@@ -1561,7 +1652,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/skadaurak_island/skadaurak_island.webp"
     },
-    "id": "skadaurak_island"
+    "id": "skadaurak_island",
+    "lore": "/assets/atlas/lore/locations/skadaurak_island.md"
   },
   {
     "categoryId": "islands",
@@ -1578,7 +1670,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/graygruun/graygruun.webp"
     },
-    "id": "graygruun"
+    "id": "graygruun",
+    "lore": "/assets/atlas/lore/locations/graygruun.md"
   },
   {
     "categoryId": "islands",
@@ -1595,7 +1688,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/llorgh/llorgh.webp"
     },
-    "id": "llorgh"
+    "id": "llorgh",
+    "lore": "/assets/atlas/lore/locations/llorgh.md"
   },
   {
     "categoryId": "islands",
@@ -1612,7 +1706,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/irphong/irphong.webp"
     },
-    "id": "irphong"
+    "id": "irphong",
+    "lore": "/assets/atlas/lore/locations/irphong.md"
   },
   {
     "categoryId": "islands",
@@ -1629,7 +1724,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/nemessor/nemessor.webp"
     },
-    "id": "nemessor"
+    "id": "nemessor",
+    "lore": "/assets/atlas/lore/locations/nemessor.md"
   },
   {
     "categoryId": "islands",
@@ -1646,7 +1742,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/canthrell/canthrell.webp"
     },
-    "id": "canthrell"
+    "id": "canthrell",
+    "lore": "/assets/atlas/lore/locations/canthrell.md"
   },
   {
     "categoryId": "islands",
@@ -1663,7 +1760,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/giantspine/giantspine.webp"
     },
-    "id": "giantspine"
+    "id": "giantspine",
+    "lore": "/assets/atlas/lore/locations/giantspine.md"
   },
   {
     "categoryId": "islands",
@@ -1680,7 +1778,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/omans_isle/omans_isle.webp"
     },
-    "id": "omans_isle"
+    "id": "omans_isle",
+    "lore": "/assets/atlas/lore/locations/omans_isle.md"
   },
   {
     "categoryId": "islands",
@@ -1697,7 +1796,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/toaridge_at_the_suns_setting/toaridge_at_the_suns_setting.webp"
     },
-    "id": "toaridge_at_the_suns_setting"
+    "id": "toaridge_at_the_suns_setting",
+    "lore": "/assets/atlas/lore/locations/toaridge_at_the_suns_setting.md"
   },
   {
     "categoryId": "islands",
@@ -1714,7 +1814,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/the_rookery/the_rookery.webp"
     },
-    "id": "the_rookery"
+    "id": "the_rookery",
+    "lore": "/assets/atlas/lore/locations/the_rookery.md"
   },
   {
     "categoryId": "islands",
@@ -1731,7 +1832,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/hook_isle/hook_isle.webp"
     },
-    "id": "hook_isle"
+    "id": "hook_isle",
+    "lore": "/assets/atlas/lore/locations/hook_isle.md"
   },
   {
     "categoryId": "islands",
@@ -1748,7 +1850,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/thordentor/thordentor.webp"
     },
-    "id": "thordentor"
+    "id": "thordentor",
+    "lore": "/assets/atlas/lore/locations/thordentor.md"
   },
   {
     "categoryId": "islands",
@@ -1765,7 +1868,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/amarune/amarune.webp"
     },
-    "id": "amarune"
+    "id": "amarune",
+    "lore": "/assets/atlas/lore/locations/amarune.md"
   },
   {
     "categoryId": "islands",
@@ -1782,7 +1886,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/alaron/alaron.webp"
     },
-    "id": "alaron"
+    "id": "alaron",
+    "lore": "/assets/atlas/lore/locations/alaron.md"
   },
   {
     "categoryId": "islands",
@@ -1799,7 +1904,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/island_of_solstice/island_of_solstice.webp"
     },
-    "id": "island_of_solstice"
+    "id": "island_of_solstice",
+    "lore": "/assets/atlas/lore/locations/island_of_solstice.md"
   },
   {
     "categoryId": "islands",
@@ -1816,7 +1922,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/norland/norland.webp"
     },
-    "id": "norland"
+    "id": "norland",
+    "lore": "/assets/atlas/lore/locations/norland.md"
   },
   {
     "categoryId": "islands",
@@ -1833,7 +1940,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/moray/moray.webp"
     },
-    "id": "moray"
+    "id": "moray",
+    "lore": "/assets/atlas/lore/locations/moray.md"
   },
   {
     "categoryId": "islands",
@@ -1850,7 +1958,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/gwynneth/gwynneth.webp"
     },
-    "id": "gwynneth"
+    "id": "gwynneth",
+    "lore": "/assets/atlas/lore/locations/gwynneth.md"
   },
   {
     "categoryId": "islands",
@@ -1867,7 +1976,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/forgotten_island/forgotten_island.webp"
     },
-    "id": "forgotten_island"
+    "id": "forgotten_island",
+    "lore": "/assets/atlas/lore/locations/forgotten_island.md"
   },
   {
     "categoryId": "islands",
@@ -1884,7 +1994,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/tuern/tuern.webp"
     },
-    "id": "tuern"
+    "id": "tuern",
+    "lore": "/assets/atlas/lore/locations/tuern.md"
   },
   {
     "categoryId": "islands",
@@ -1901,7 +2012,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/island_of_coral/island_of_coral.webp"
     },
-    "id": "island_of_coral"
+    "id": "island_of_coral",
+    "lore": "/assets/atlas/lore/locations/island_of_coral.md"
   },
   {
     "categoryId": "islands",
@@ -1918,7 +2030,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/snowdown/snowdown.webp"
     },
-    "id": "snowdown"
+    "id": "snowdown",
+    "lore": "/assets/atlas/lore/locations/snowdown.md"
   },
   {
     "categoryId": "islands",
@@ -1935,7 +2048,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/umukek/umukek.webp"
     },
-    "id": "umukek"
+    "id": "umukek",
+    "lore": "/assets/atlas/lore/locations/umukek.md"
   },
   {
     "categoryId": "islands",
@@ -1952,7 +2066,8 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/ghevden/ghevden.webp"
     },
-    "id": "ghevden"
+    "id": "ghevden",
+    "lore": "/assets/atlas/lore/locations/ghevden.md"
   },
   {
     "categoryId": "islands",
@@ -1969,6 +2084,7 @@
       },
       "image": "/assets/atlas/world/toril/faerun/islands/sunset_isle/sunset_isle.webp"
     },
-    "id": "sunset_isle"
+    "id": "sunset_isle",
+    "lore": "/assets/atlas/lore/locations/sunset_isle.md"
   }
 ]

@@ -4,11 +4,12 @@
   "type": "seas_oceans",
   "parent": "seas_oceans",
   "title": "Gulf of Lath",
-  "description": "A narrow gulf cut into [[Lantan]] for roughly 75\u202fmiles (120\u202fkilometers), running northeast into the island.",
+  "description": "A narrow gulf cut into [[Lantan]] for roughly 75 miles (120 kilometers), running northeast into the island.",
   "image": "gulf_of_lath.webp",
   "coordinates": {
     "lat": 370.52,
     "lng": 1003.03
   },
-  "categoryId": "seas_oceans"
+  "categoryId": "seas_oceans",
+  "lore": "/assets/atlas/lore/locations/gulf_of_lath.md"
 }
