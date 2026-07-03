@@ -808,3 +808,6 @@ Empty sections are never rendered.
 Both WorldPanel.tsx and CharacterPanel.tsx exclusively use the project's centralized icon system (src/assets/icons/index.ts).
 There are no remaining imports from lucide-react, react-icons, or any other external icon library in these components.
 The panel is fully documented in docs/ui/WORLD_PANEL.md as the reference implementation for all future atlas and lore UI development.
+
+highly needed features for map navigation dedicated pan button. a dedicated center on player/party token. now whan we change zoom level it happens and this is game braking I asume this is in the src/components/hud/game/FogOfWar.tsx logic
+we need to rethink the src/components/hud/game/FogOfWar.tsx and considder using this public/assets/images/ui/map_fog_cloud.webp" 512x512 a cloud with no background we can stack.
