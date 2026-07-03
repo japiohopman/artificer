@@ -77,6 +77,8 @@ export const ActionView: React.FC = () => {
               onClick={() => removeFromPreview(idx)}
               className="absolute top-0 right-0 z-[60] bg-red-500 text-white p-1 rounded-full shadow-lg hover:bg-red-600 transition-colors"
               style={{ transform: `translate(${100 + (idx * 40) + 360}px, ${100 + (idx * 40) - 10}px)` }}
+              title="Remove Card"
+              aria-label="Remove Card"
             >
               <GameIcon name="close" size={12} color="currentColor" />
             </button>

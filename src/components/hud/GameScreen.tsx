@@ -38,6 +38,18 @@ export const GameScreen: React.FC = () => {
 
   return (
     <div className="flex-1 relative flex flex-col overflow-hidden">
+      {/* 0. Combat transition Overlay */}
+      <AnimatePresence>
+        {gameMode === 'combat' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-[60] pointer-events-none bg-dragon-darkRed/20 backdrop-blur-[2px]"
+          />
+        )}
+      </AnimatePresence>
+
       {/* 1. Background Map Layer (Leaflet) */}
       <motion.div 
         animate={{ 

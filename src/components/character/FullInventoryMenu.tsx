@@ -59,6 +59,8 @@ export const FullInventoryMenu: React.FC = () => {
         <button 
           onClick={() => setIsInventoryMenuOpen(false)}
           className="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-dragon-red hover:rotate-90 transition-all flex items-center justify-center border border-white/20 group"
+          title="Close Inventory Menu"
+          aria-label="Close Inventory Menu"
         >
           <GameIcon name="close" size={24} color="currentColor" />
         </button>
