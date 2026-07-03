@@ -1,6 +1,8 @@
 # Artificer Task Board
 
 ## Critical
+- [] check priorety1.md for map update refinment in main/priority1.md
+- [] check and fix errors in the main/errors.md
 - [x] Create asset validation script.
   - Check all JSON parseable.
   - Index matches filename.
