@@ -26,12 +26,12 @@ export const HUD: React.FC = () => {
     setIsInventoryOpen
   } = useInventoryStore();
 
-  const { setSavedLocations } = useWorldStore();
+  const { resetAtlas } = useWorldStore();
 
   React.useEffect(() => {
-    // Initial cleanup if needed
-    setSavedLocations([]);
-  }, [setSavedLocations]);
+    // Initial cleanup of atlas data and loaded categories to prevent stale states
+    resetAtlas();
+  }, [resetAtlas]);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">

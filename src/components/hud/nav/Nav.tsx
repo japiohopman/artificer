@@ -38,7 +38,7 @@ export const Nav: React.FC = () => {
     currentLocation,
     gameTime,
     isNight,
-    currentRegion
+    region
   } = useWorldStore();
 
   const {
@@ -154,24 +154,24 @@ export const Nav: React.FC = () => {
           <div className="flex items-center gap-2">
              <div className={cn(
                "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
-               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
+               region === 'water' ? "bg-blue-500" : "bg-dragon-red"
              )} />
              <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
-               {currentRegion === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
+               {region === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
              </span>
              <div className={cn(
                "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
-               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
+               region === 'water' ? "bg-blue-500" : "bg-dragon-red"
              )} />
              <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
-               {currentRegion === 'water' ? 'Sea' : 'Land'} Region
+               {region === 'water' ? 'Sea' : 'Land'} Region
              </span>
           </div>
           <div className="flex items-baseline gap-2">
             <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-               {currentLocation?.name || REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Unknown Region'}
+               {currentLocation?.name || REGION_NAMES[region as keyof typeof REGION_NAMES] || 'Unknown Region'}
             </span>
-            {currentRegion === 'water' && (
+            {region === 'water' && (
               <span className="text-[8px] font-black text-blue-600 uppercase tracking-tighter">[High Seas]</span>
             )}
           </div>

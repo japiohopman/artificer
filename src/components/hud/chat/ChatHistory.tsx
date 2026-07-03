@@ -20,7 +20,11 @@ export const ChatHistory: React.FC<ChatHistoryProps> = ({ history }) => {
 
   useEffect(() => {
     if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: 'smooth' });
+      // Small delay to ensure layout is settled
+      const timer = setTimeout(() => {
+        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return () => clearTimeout(timer);
     }
   }, [history, isThinking]);
 

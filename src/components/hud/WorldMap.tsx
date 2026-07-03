@@ -11,12 +11,24 @@ import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 
+/**
+ * MAP ZOOM SYSTEM SPECIFICATION (0-6)
+ * Level 0 (Leaflet 3): World Overview. 4000 Miles. Regions only.
+ * Level 1 (Leaflet 4): Major Oceans and Seas.
+ * Level 2 (Leaflet 5): Major Terrain (Forests, Plains, Mountains, Wetlands, Deserts, Islands, Oases).
+ * Level 3 (Leaflet 6): Major Cities.
+ * Level 4 (Leaflet 7): Towns, Villages, Settlements, Keeps, Fortresses.
+ * Level 5 (Leaflet 8): Smaller locations.
+ * Level 6 (Leaflet 9): Ruins, POIs, Hidden landmarks.
+ */
 const CATEGORY_TIERS = [
-  { zoom: 0, categories: ['seas_oceans', 'regions', 'cities', 'mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands'] },
-  { zoom: 2, categories: ['rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
-  { zoom: 3, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
-  { zoom: 4, categories: ['ruins', 'poi', 'landmarks', 'temples', 'shrines'] },
-  { zoom: 5, categories: ['roads_trails', 'graveyards', 'dungeons', 'caves'] }
+  { zoom: 3, categories: ['regions'] },
+  { zoom: 4, categories: ['seas_oceans'] },
+  { zoom: 5, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
+  { zoom: 6, categories: ['cities'] },
+  { zoom: 7, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
+  { zoom: 8, categories: ['landmarks', 'temples', 'shrines'] },
+  { zoom: 9, categories: ['ruins', 'poi', 'graveyards', 'dungeons', 'caves', 'roads_trails'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -43,9 +55,10 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   else if (cat.includes('temple') || cat.includes('shrine')) catKey = 'temples';
   else if (cat.includes('road') || cat.includes('trail')) catKey = 'roads';
   else if (cat.includes('poi') || cat.includes('point_of_interest')) catKey = 'poi';
-  else if (cat.includes('swamp') || cat.includes('marsh') || cat.includes('wetland')) catKey = 'wetlands';
+  else if (cat.includes('swamp') || cat.includes('marsh') || cat.includes('wetland')) catKey = 'swamp';
   else if (cat.includes('grassland') || cat.includes('plains') || cat.includes('field') || cat.includes('grass')) catKey = 'grassland';
-  else if (cat.includes('desert') || cat.includes('oasis') || cat.includes('waste')) catKey = 'desert';
+  else if (cat.includes('oasis')) catKey = 'waters';
+  else if (cat.includes('desert') || cat.includes('waste')) catKey = 'desert';
   else if (cat.includes('arctic') || cat.includes('glacier') || cat.includes('tundra')) catKey = 'arctic';
   else if (cat.includes('coast') || cat.includes('beach') || cat.includes('bay') || cat.includes('port')) catKey = 'waters';
   
@@ -222,6 +235,7 @@ const MapInvalidator = () => {
 };
 
 export const WorldMap: React.FC = () => {
+  const resetAtlas = useWorldStore(state => state.resetAtlas);
   const partyLocation = useWorldStore(state => state.partyLocation);
   const savedLocations = useWorldStore(state => state.savedLocations);
   const inspectedLocation = useWorldStore(state => state.inspectedLocation);
@@ -229,6 +243,11 @@ export const WorldMap: React.FC = () => {
   const addSavedLocations = useWorldStore(state => state.addSavedLocations);
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
+
+  // Reset atlas on mount to ensure clean state and fresh loading
+  React.useEffect(() => {
+    resetAtlas();
+  }, [resetAtlas]);
   const isTraveling = useWorldStore(state => state.isTraveling);
   const destination = useWorldStore(state => state.destination);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
@@ -240,7 +259,7 @@ export const WorldMap: React.FC = () => {
   // Faerun Tile configuration (from metadata.json)
   const mapWidth = 21620;
   const mapHeight = 14461;
-  const maxZoom = 7;
+  const maxZoom = 9;
 
   // Prototype coordinate system was approx 4763 x 3185
   const protoWidth = 4763;
@@ -249,8 +268,9 @@ export const WorldMap: React.FC = () => {
   // Define full bounds in pixel space
   const bounds: L.LatLngBoundsExpression = [[0, 0], [mapHeight, mapWidth]];
   
-  // Scale factor 16 means zoom 0 will be 21620 / 16 = 1351px wide
-  const scaleFactorValue = 16;
+  // Scale factor 84.453125 ensures zoom 0 = 256px (1 tile)
+  // 21620 / 256 = 84.453125
+  const scaleFactorValue = 84.453125;
 
   // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
@@ -287,17 +307,24 @@ export const WorldMap: React.FC = () => {
     return [py, px];
   }, [rescaleX, rescaleY]);
 
-  const center = React.useMemo((): [number, number] => 
-    partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2]
-  , [partyLocation, getPosition, mapHeight, mapWidth]);
-  
-  const initialZoom = partyLocation?.zoom ?? 0;
+  const initialZoom = 3;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
+
+  const center = React.useMemo((): [number, number] => 
+    currentZoom === 3 ? [mapHeight/2, mapWidth/2] : (partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2])
+  , [partyLocation, getPosition, mapHeight, mapWidth, currentZoom]);
 
   // Sync global zoom
   React.useEffect(() => {
     setMapZoom(currentZoom);
   }, [currentZoom, setMapZoom]);
+
+  // Keep state in sync with partyLocation zoom changes
+  React.useEffect(() => {
+    if (partyLocation?.zoom) {
+      setCurrentZoom(partyLocation.zoom);
+    }
+  }, [partyLocation?.zoom]);
 
   // Progressive Data Loading
   React.useEffect(() => {
@@ -318,7 +345,7 @@ export const WorldMap: React.FC = () => {
                     const normalized = rawLocations.map((l: any) => ({
                       ...l,
                       name: l.name || l.popup?.title || l.id?.replace(/_/g, ' '),
-                      category: l.category || l.categoryId || category,
+                      category: l.category || l.categoryId || l.type || category,
                       id: l.id || (l.name || l.popup?.title)?.toLowerCase().replace(/\s+/g, '_')
                     }));
                     addSavedLocations(normalized as SavedLocation[]);
@@ -334,72 +361,66 @@ export const WorldMap: React.FC = () => {
     };
     loadTiers();
     return () => { isMounted = false; };
-  }, [currentZoom]); // Removed function deps to prevent excessive re-runs
+  }, [currentZoom, addLoadedCategory, addSavedLocations, isCategoryLoaded]);
 
   // Filtering logic for zoom levels to reduce clutter and optimize performance
   const visibleLocations = React.useMemo(() => {
-    const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+    const majorCities = ["baldur's gate", "waterdeep", "neverwinter", "luskan", "athkatla", "calimport", "suzail", "zhentil keep"];
     
     return savedLocations.filter(loc => {
       const position = getPosition(loc);
       if (!position) return false;
       
-      // Viewport filtering
-      if (currentBounds && !currentBounds.contains(L.latLng(position[0], position[1]))) {
-        return false;
-      }
-
-      const cat = loc.category?.toLowerCase() || '';
+      const cat = (loc.category || loc.categoryId || (loc as any).type || '').toLowerCase();
       const name = (loc.name || loc.popup?.title || '').toLowerCase();
 
-      const isMajorCity = majorCities.includes(name);
+      // Robust matching helper
+      const matches = (keywords: string[]) => keywords.some(k => cat.includes(k));
 
-      // Level 0: Regions (Handled by SVGOverlay)
-      
-      // Level 0: Global Features, Seas, Regions, Major Cities, Major Terrain
-      if (currentZoom >= 0) {
-        if (cat.includes('seas_oceans') || cat.includes('sea') || cat.includes('ocean') || cat.includes('region') || cat.includes('continent')) return true;
-        if (isMajorCity) return true;
-        if (cat.includes('city') || cat.includes('cities') || cat.includes('metropolis')) return true;
-        if (cat.includes('mountain') || cat.includes('peak') || cat.includes('hill') || 
-            cat.includes('forest') || cat.includes('wood') ||
-            cat.includes('island') || cat.includes('desert') || cat.includes('wasteland') ||
-            cat.includes('glacier') || cat.includes('tundra') || cat.includes('oasis') ||
-            cat.includes('plains') || cat.includes('grassland') || cat.includes('wetland') || cat.includes('swamp')) {
-          return true;
-        }
+      // Level 1: Oceans (Zoom 4+)
+      if (matches(['sea', 'ocean', 'deep', 'seas_oceans'])) {
+        return currentZoom >= 4;
       }
 
-      // Level 2: Water Features & Sub-regions
-      if (currentZoom >= 2) {
-        if (cat.includes('river') || cat.includes('lake') || cat.includes('bay') || cat.includes('coast') || cat.includes('sub_region')) {
-          return true;
-        }
+      // Level 2: Major Terrain (Zoom 5+)
+      if (matches([
+        'mountain', 'peak', 'hill', 'forest', 'wood', 'island', 'desert', 'waste', 
+        'glacier', 'tundra', 'oasis', 'oases', 'plain', 'grassland', 'wetland', 
+        'swamp', 'marsh', 'river', 'lake', 'bay', 'coast', 'mountains', 'islands', 
+        'deserts_wastelands', 'glaciers_tundras', 'plains_grasslands', 'rivers', 
+        'lakes', 'bays', 'coasts'
+      ])) {
+        return currentZoom >= 5;
       }
 
-      // Level 3: Towns & Settlements & Underdark
-      if (currentZoom >= 3) {
-        if (cat.includes('town') || cat.includes('settlement') || cat.includes('village') ||
-            cat.includes('fortress') || cat.includes('keep') || cat.includes('castle') || cat.includes('tower') ||
-            cat.includes('underdark')) {
-          return true;
-        }
+      // Level 3: Major Cities (Zoom 6+)
+      if (matches(['city', 'cities', 'metropolis'])) {
+        return currentZoom >= 6;
       }
 
-      // Level 5: POIs, Ruins, Dungeons
-      if (currentZoom >= 5) {
-        if (cat.includes('ruin') || cat.includes('poi') || cat.includes('landmark') || 
-            cat.includes('temple') || cat.includes('shrine') || cat.includes('dungeon') || cat.includes('cave')) {
-          return true;
-        }
+      // Level 4: Towns & Settlements (Zoom 7+)
+      if (matches([
+        'town', 'towns', 'settlement', 'settlements', 'village', 'fortress', 
+        'fortresses', 'keep', 'keeps', 'castle', 'tower', 'towns_settlements', 
+        'fortresses_keeps'
+      ])) {
+        return currentZoom >= 7;
       }
 
-      // Level 6: Roads, Trails, Everything else
-      if (currentZoom >= 6) {
-        return true;
+      // Level 5: Landmarks & Smaller Locations (Zoom 8+)
+      if (matches(['landmark', 'temple', 'shrine'])) {
+        return currentZoom >= 8;
       }
 
-      return false;
+      // Level 6: POIs, Ruins, Dungeons (Zoom 9+)
+      if (matches([
+        'ruin', 'poi', 'point_of_interest', 'dungeon', 'cave', 'graveyard', 
+        'road', 'trail', 'points_of_interest', 'roads_trails'
+      ])) {
+        return currentZoom >= 9;
+      }
+
+      return currentZoom >= 9;
     })
     .sort((a, b) => {
       const aName = (a.name || a.popup?.title || '').toLowerCase();
@@ -428,10 +449,10 @@ export const WorldMap: React.FC = () => {
   return (
     <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
       <MapContainer 
-        center={center as L.LatLngExpression} 
-        zoom={initialZoom} 
+        center={[mapHeight/2, mapWidth/2]} 
+        zoom={3} 
         crs={faerunCRS}
-        minZoom={0}
+        minZoom={3}
         maxZoom={maxZoom}
         maxBounds={bounds}
         maxBoundsViscosity={1.0}
@@ -443,8 +464,9 @@ export const WorldMap: React.FC = () => {
         <MapInvalidator />
         <TileLayer
           url="/tiles/faerun/{z}/{x}/{y}.png"
-          minZoom={0}
+          minZoom={3}
           maxZoom={maxZoom}
+          maxNativeZoom={7}
           noWrap={true}
           tileSize={256}
         />
@@ -456,8 +478,8 @@ export const WorldMap: React.FC = () => {
           protoWidth={protoWidth} 
         />
 
-        {/* Regional SVG Overlay - Only visible at high level overview */}
-        {currentZoom < 3 && (
+        {/* Regional SVG Overlay - Only visible at high level overview (Level 0) */}
+        {currentZoom === 3 && (
           <SVGOverlay bounds={bounds} attributes={{ viewBox: "0 0 1600 1070" }}>
             {Object.entries(REGION_PATH_REGISTRY).map(([id, path]) => (
               <path
@@ -486,7 +508,7 @@ export const WorldMap: React.FC = () => {
           </SVGOverlay>
         )}
 
-        <ChangeView center={center} zoom={initialZoom} />
+        <ChangeView center={center} zoom={currentZoom} />
         <MapEvents
           onZoomChange={React.useCallback((z: number) => setCurrentZoom(z), [])}
           onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
@@ -509,7 +531,7 @@ export const WorldMap: React.FC = () => {
         
         {partyLocation && (
           <Marker 
-            position={getPosition(partyLocation) || center as L.LatLngExpression}
+            position={getPosition(partyLocation) || [mapHeight/2, mapWidth/2] as L.LatLngExpression}
             zIndexOffset={2000}
             icon={L.divIcon({
               html: `
@@ -556,8 +578,8 @@ export const WorldMap: React.FC = () => {
           const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
           const isMajorCity = majorCities.includes(name);
 
-          // Labels are permanent for Oceans (Zoom 1+) and Cities (Zoom 3+)
-          const isPermanent = (isOcean && currentZoom >= 1) || isMajorCity || (isCity && currentZoom >= 3);
+          // Labels are permanent for Oceans (Level 1+) and Cities (Level 3+)
+          const isPermanent = (isOcean && currentZoom >= 4) || isMajorCity || (isCity && currentZoom >= 6);
 
           let zIndex = 100;
           if (isMajorCity) zIndex = 5000;
@@ -571,7 +593,7 @@ export const WorldMap: React.FC = () => {
               key={loc.id}
               position={position}
               zIndexOffset={zIndex}
-              icon={isOcean ? L.divIcon({ className: 'bg-transparent border-none', html: '' }) : createCustomIcon(loc.category || loc.categoryId, isInspected)}
+              icon={isOcean ? L.divIcon({ className: 'bg-transparent border-none', html: '' }) : createCustomIcon(loc.category || loc.categoryId || (loc as any).type || 'landmark', isInspected)}
               eventHandlers={{
                 click: () => {
                   setInspectedLocation(loc);
@@ -635,9 +657,9 @@ export const WorldMap: React.FC = () => {
         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col min-w-[100px] pointer-events-auto">
           <div className="text-[9px] text-center font-black text-dragon-red border-b border-dragon-gold/20 mb-1 pb-1 uppercase tracking-widest">Map Scale</div>
           <div className="text-center font-header font-black text-xl text-dragon-red">
-            {Math.round(4000 / Math.pow(2, currentZoom))} <span className="text-xs">Miles</span>
+            {Math.round(4000 / Math.pow(2, currentZoom - 3))} <span className="text-xs">Miles</span>
           </div>
-          <div className="text-[7px] text-center font-bold text-dragon-red/40 uppercase mt-1">Level {Math.round(currentZoom)}</div>
+          <div className="text-[7px] text-center font-bold text-dragon-red/40 uppercase mt-1">Level {Math.max(0, Math.round(currentZoom - 3))}</div>
         </div>
       </div>
     </div>

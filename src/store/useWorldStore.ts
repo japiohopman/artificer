@@ -56,7 +56,6 @@ export const CategoryIcons: Record<string, { icon: string, color: string }> = {
   arctic: { icon: 'arctic', color: '#F0FFFF' },
   glaciers_tundras: { icon: 'glaciers_tundras', color: '#F0FFFF' },
   oases: { icon: 'waters', color: '#1E90FF' },
-  underdark: { icon: 'dungeon', color: '#4B0082' },
   sub_regions: { icon: 'landmark', color: '#D4AF37' },
   continents: { icon: 'landmark', color: '#D4AF37' }
 };
@@ -111,6 +110,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
+  resetAtlas: () => void;
   exploreArea: (x: number, y: number, radius: number) => void;
   updateEnvironment: (minutesPassed?: number) => void;
   getCalendarDate: () => string;
@@ -138,7 +138,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     name: "Baldur's Gate",
     category: 'city',
     coordinates: { x: 955, y: 1592 }, // Initial starting position in proto units
-    zoom: 0
+    zoom: 3
   },
   partySubLocation: null,
   travelOrigin: null,
@@ -226,6 +226,11 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
+
+  resetAtlas: () => set({
+    savedLocations: [],
+    loadedCategories: []
+  }),
 
   exploreArea: (x, y, radius) => set((state) => {
     // Check if we already have a point very close to this to avoid array bloating

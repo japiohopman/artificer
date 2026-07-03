@@ -23,6 +23,8 @@ export const ATLAS_CATEGORIES: LegendCategory[] = [
   { id: 'bays', label: 'Bays & Inlets', icon: 'waters', color: '#1E90FF' },
   { id: 'coasts', label: 'Coasts & Reefs', icon: 'coast', color: '#1E90FF' },
   { id: 'islands', label: 'Islands', icon: 'islands', color: '#FFD700' },
+  { id: 'landmark', label: 'Landmarks', icon: 'landmark', color: '#4169E1' },
+  { id: 'temple', label: 'Temples & Shrines', icon: 'temples', color: '#4169E1' },
   { id: 'roads', label: 'Roads & Trails', icon: 'roads', color: '#696969' },
   { id: 'graveyard', label: 'Cemeteries', icon: 'graveyard', color: '#696969' },
 ];
@@ -33,29 +35,29 @@ interface MapLegendProps {
 
 export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
   return (
-    <div className="flex flex-row items-center gap-2 overflow-x-auto no-scrollbar py-2 px-3 bg-black/40 backdrop-blur-md rounded-lg border border-white/10 shadow-2xl">
+    <div className="flex flex-row items-center gap-2 overflow-x-auto no-scrollbar py-2 px-3 bg-black/40 backdrop-blur-md rounded-lg border border-dragon-gold/30 shadow-2xl">
       {ATLAS_CATEGORIES.map((cat) => {
         // Synchronized with WorldMap.tsx tiers
         let isVisible = false;
         let zoomReq = 0;
 
         if (cat.id === 'seas_oceans') {
-          isVisible = currentZoom >= 1;
+          isVisible = currentZoom >= 4;
           zoomReq = 1;
         } else if (['mountains', 'forest', 'rivers', 'lakes', 'bays', 'coasts', 'islands'].includes(cat.id)) {
-          isVisible = currentZoom >= 2;
+          isVisible = currentZoom >= 5;
           zoomReq = 2;
         } else if (cat.id === 'city') {
-          isVisible = currentZoom >= 3;
+          isVisible = currentZoom >= 6;
           zoomReq = 3;
         } else if (['village', 'castle'].includes(cat.id)) {
-          isVisible = currentZoom >= 4;
+          isVisible = currentZoom >= 7;
           zoomReq = 4;
-        } else if (['ruins', 'poi'].includes(cat.id)) {
-          isVisible = currentZoom >= 5;
+        } else if (['landmark', 'temple'].includes(cat.id)) {
+          isVisible = currentZoom >= 8;
           zoomReq = 5;
-        } else if (['roads', 'graveyard'].includes(cat.id)) {
-          isVisible = currentZoom >= 6;
+        } else if (['ruins', 'poi', 'roads', 'graveyard'].includes(cat.id)) {
+          isVisible = currentZoom >= 9;
           zoomReq = 6;
         }
 
@@ -77,7 +79,7 @@ export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
             
             {/* Tooltip */}
             <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-parchment-900 text-parchment-100 text-[9px] font-bold uppercase tracking-widest rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-[2000] border border-dragon-gold/30 shadow-xl">
-              {cat.label} {!isVisible && `(Requires Zoom ${zoomReq})`}
+              {cat.label} {!isVisible && `(Requires Level ${zoomReq})`}
             </div>
           </div>
         );

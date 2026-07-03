@@ -24,7 +24,7 @@ export const narratorService = {
           time: `${worldStore.gameTime} on ${worldStore.gameDay} of ${worldStore.gameMonth}`,
           weather: worldStore.weather,
           location: worldStore.currentLocation?.name,
-          region: worldStore.currentRegion
+          region: worldStore.region
         },
         party: {
           active_char: activeChar ? {
