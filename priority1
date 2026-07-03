@@ -538,3 +538,273 @@ The chat panel acts as a contextual HUD container.
 Notification and chat panels visually merge into one HUD.
 The map frame has a thicker, more immersive fantasy atlas appearance.
 All behavior is documented under docs/ to serve as the single source of truth.
+
+WorldPanel.tsx Refactor & Dynamic Lore System
+Goal
+
+WorldPanel.tsx should become the universal information panel for the entire Atlas system.
+
+Instead of being designed around a single location type, it must dynamically render information for every atlas object regardless of its schema.
+
+The panel should automatically adapt to the selected object without requiring a unique component for every location type.
+
+Supported Atlas Objects
+
+The World Panel must support displaying information for all atlas objects, including but not limited to:
+
+World
+Continents
+Nations
+Regions
+Sub Regions
+Cities
+Districts
+Settlements
+Villages
+Hamlets
+Roads
+Rivers
+Forests
+Mountains
+Swamps
+Wetlands
+Deserts
+Islands
+Oceans
+Seas
+Lakes
+Dungeons
+Ruins
+Landmarks
+Points of Interest
+Shrines
+Temples
+Shops
+Taverns
+Guilds
+Castles
+Keeps
+Sewers
+Interior Maps
+
+The panel should not assume any fixed data structure.
+
+Schema Driven Rendering
+
+Every atlas object already has its own schema.
+
+Examples:
+
+public/assets/atlas/schemas/
+
+forest.schema.json
+city.schema.json
+region.schema.json
+road.schema.json
+settlement.schema.json
+shop.schema.json
+...
+
+Every schema contains different fields.
+
+For example:
+
+A forest contains
+
+biome
+dominant trees
+wildlife
+dangers
+
+A road contains
+
+start
+destination
+distance
+patrol status
+
+A city contains
+
+districts
+ruler
+government
+population
+economy
+factions
+
+A shop contains
+
+owner
+inventory
+opening hours
+services
+prices
+
+The panel must inspect the loaded object and render only the fields that exist.
+
+No hardcoded city layout.
+
+No hardcoded forest layout.
+
+No large switch statements.
+
+Dynamic Sections
+
+Instead of fixed components, the panel should generate sections automatically.
+
+Example
+
+Overview
+
+Description
+
+History
+
+Government
+
+Population
+
+Economy
+
+Travel
+
+Climate
+
+Wildlife
+
+Factions
+
+Religion
+
+Services
+
+Inventory
+
+Quests
+
+Related Locations
+
+Notes
+
+Only sections containing data should be rendered.
+
+Empty sections should never appear.
+
+Shop Support
+
+The World Panel should fully support shops.
+
+When selecting a shop, the panel should display information such as:
+
+owner
+shop type
+inventory
+available services
+prices
+opening hours
+reputation
+associated faction
+dialogue hooks
+
+The panel should become the foundation for future shop interactions.
+
+Future Extensibility
+
+The renderer should be schema-driven.
+
+Adding a new atlas object should require only:
+
+creating a schema
+creating the JSON data
+
+The World Panel should automatically support the new object without requiring additional UI code.
+
+Icon System
+
+Do not use:
+
+react-icons
+lucide-react
+Hero Icons
+Font Awesome
+
+The project already has a centralized icon system.
+
+All icons must be imported from:
+
+src/assets/icons/index.ts
+
+This keeps the visual style consistent throughout the application.
+
+Existing Components
+
+The following components should be updated to use the centralized icon system.
+
+WorldPanel.tsx
+
+Replace every icon import with the project's icon library.
+
+CharacterPanel.tsx
+
+Currently uses:
+
+lucide-react
+
+Replace every icon with the equivalent icon from:
+
+src/assets/icons/index.ts
+
+After this refactor there should be no remaining imports from lucide-react or react-icons inside either component.
+
+UI Requirements
+
+The World Panel should:
+
+support scrolling
+support large lore entries
+support images
+support shop information
+support related locations
+support future interactive widgets
+remain responsive on all supported resolutions
+
+The layout should gracefully expand when objects contain additional information.
+
+Performance
+
+The panel should only render the currently selected atlas object.
+
+Avoid loading unnecessary lore or related data until it is requested.
+
+Large lore entries should be lazily rendered where appropriate.
+
+Documentation
+
+After implementation, create documentation under:
+
+docs/ui/WORLD_PANEL.md
+
+The documentation should describe:
+
+the schema-driven rendering architecture
+supported atlas object types
+how new schemas are added
+dynamic section generation
+shop support
+icon usage guidelines
+performance considerations
+extension guidelines
+
+This document should become the canonical reference for future World Panel development.
+
+Acceptance Criteria
+
+The implementation is complete when:
+
+WorldPanel.tsx can render any atlas object using its associated schema without requiring object-specific UI code.
+Only fields present in the selected object's schema are displayed.
+Shops are fully supported, including inventory and service information.
+Empty sections are never rendered.
+Both WorldPanel.tsx and CharacterPanel.tsx exclusively use the project's centralized icon system (src/assets/icons/index.ts).
+There are no remaining imports from lucide-react, react-icons, or any other external icon library in these components.
+The panel is fully documented in docs/ui/WORLD_PANEL.md as the reference implementation for all future atlas and lore UI development.
