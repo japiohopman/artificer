@@ -96,12 +96,62 @@ public/assets/atlas/lore/locations/
 
 Used for
 
-villages
-towns
-ruins
-caves
-shrines
-Major Cities
+faerun location list 
+
+alaron.md
+amphail.md
+baldurs_gate.md
+boareskyr_bridge.md
+candelkeep.md
+citadel_adbar.md
+citadel_falbarr.md
+daggerford.md
+darkhold.md
+dragonspear_castle.md
+elturgard.md
+evereska.md
+evermeet.md
+field_of_the_dead.md
+ford_tamal.md
+gundarlun.md
+gwynneth.md
+hartsvale.md
+helms_hold.md
+high_forest.md
+high_moor.md
+ironmaster.md
+island_kindoms.md
+korinn_archipeiago.md
+lantan.md
+longsaddle.md
+mintarn.md
+mirabar.md
+misty_forest.md
+mithral_hall.md
+moray.md
+nelanther.md
+neverwinter.md
+nimbral.md
+norland.md
+northlander_isles.md
+omans_isles.md
+orlumbor.md
+orogoth.md
+purple_rock.md
+rhymanthiin.md
+ruathym.md
+secomber.md
+silverymoon.md
+skadaurak.md
+snowdown.md
+sundabar.md
+the_moonshaes.md
+thornhold.md
+trollcrawls.md
+tuenr.md
+waterdeep.md
+whalebones.md
+yartar.md
 
 Cities contain significantly more information.
 
@@ -134,6 +184,36 @@ Nation lore lives in
 public/assets/atlas/lore/sub_regions/
 
 This should automatically load when viewing a nation or region.
+
+list = 
+
+
+aglarond.md
+amn.md
+calimshan.md
+chessenta.md
+chult.md
+cormyr.md
+dambrath.md
+elfharrow.md
+halruaa.md
+impiltur.md
+luiren.md
+mulhorand.md
+rashemen.md
+sembia.md
+tethyr.md
+thay.md
+the_cold_lands.md
+the_dalelands.md
+the_hordelands.md
+the_lake_of_steam.md
+the_moonsea.md
+thesk.md
+tymanther.md
+unther.md
+
+and should still be liked to the public/assets/atlas/world/toril/faerun/sub_regions/[index]/[index.json] 
 
 Leaflet Integration
 
