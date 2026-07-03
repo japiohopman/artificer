@@ -134,11 +134,11 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   currentSubLocation: null,
   currentShop: null,
   partyLocation: {
-    id: 'baldurs_gate',
-    name: "Baldur's Gate",
-    category: 'city',
-    coordinates: { x: 955, y: 1592 }, // Initial starting position in proto units
-    zoom: 3
+    id: 'test_location',
+    name: "Sword Coast Road",
+    category: 'landmark',
+    coordinates: { x: 758.8, y: 2463.6 },
+    zoom: 6
   },
   partySubLocation: null,
   travelOrigin: null,
@@ -147,9 +147,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   travelProgress: 0,
   savedLocations: [],
   loadedCategories: [],
-  exploredAreas: [
-    { x: 955, y: 1592, radius: 250 } // Initialize with Baldur's Gate
-  ],
+  exploredAreas: [],
 
   worldFlags: {},
 

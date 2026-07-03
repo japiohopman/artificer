@@ -242,6 +242,7 @@ export const WorldMap: React.FC = () => {
   const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
+  const [renderedCount, setRenderedCount] = React.useState(0);
   
   // Faerun Tile configuration (from metadata.json)
   const mapWidth = 21620;
@@ -355,9 +356,17 @@ export const WorldMap: React.FC = () => {
   const visibleLocations = React.useMemo(() => {
     const majorCities = ["baldur's gate", "waterdeep", "neverwinter", "luskan", "athkatla", "calimport", "suzail", "zhentil keep"];
     
+    // We pad the bounds slightly so markers don't pop-in visibly at the exact edge
+    const paddedBounds = currentBounds ? currentBounds.pad(0.5) : null;
+
     return savedLocations.filter(loc => {
       const position = getPosition(loc);
       if (!position) return false;
+
+      // CULLING: Only render markers that are currently visible within the padded viewport
+      if (paddedBounds && !paddedBounds.contains(L.latLng(position[0], position[1]))) {
+        return false;
+      }
       
       const cat = (loc.category || loc.categoryId || (loc as any).type || '').toLowerCase();
       const name = (loc.name || loc.popup?.title || '').toLowerCase();
@@ -411,20 +420,35 @@ export const WorldMap: React.FC = () => {
       return currentZoom >= 9;
     })
     .sort((a, b) => {
-      const aName = (a.name || a.popup?.title || '').toLowerCase();
-      const bName = (b.name || b.popup?.title || '').toLowerCase();
-      const aIsMajor = majorCities.includes(aName) ? 1 : 0;
-      const bIsMajor = majorCities.includes(bName) ? 1 : 0;
-      if (aIsMajor !== bIsMajor) return bIsMajor - aIsMajor;
+      const catA = (a.category || a.categoryId || (a as any).type || '').toLowerCase();
+      const catB = (b.category || b.categoryId || (b as any).type || '').toLowerCase();
+      
+      const getPriority = (c: string) => {
+        if (['poi', 'ruin', 'dungeon', 'cave', 'graveyard', 'landmark', 'temple', 'shrine'].some(k => c.includes(k))) return 1;
+        if (['keep', 'fortress', 'castle', 'tower', 'town', 'settlement', 'village'].some(k => c.includes(k))) return 2;
+        if (['city', 'metropolis'].some(k => c.includes(k))) return 3;
+        return 4;
+      };
 
-      const aIsCity = (a.category || '').toLowerCase().includes('city') ? 1 : 0;
-      const bIsCity = (b.category || '').toLowerCase().includes('city') ? 1 : 0;
-      if (aIsCity !== bIsCity) return bIsCity - aIsCity;
-
-      return 0;
+      return getPriority(catA) - getPriority(catB);
     })
     .slice(0, 2000);
   }, [savedLocations, currentZoom, currentBounds, getPosition]);
+
+  // Progressive rendering to prevent browser lockup
+  React.useEffect(() => {
+    setRenderedCount(25); // Initial chunk
+    const interval = setInterval(() => {
+      setRenderedCount(prev => {
+        if (prev >= visibleLocations.length) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev + 25; // Render markers in small batches per frame
+      });
+    }, 16);
+    return () => clearInterval(interval);
+  }, [visibleLocations]);
 
   // Debug count
   React.useEffect(() => {
@@ -552,7 +576,7 @@ export const WorldMap: React.FC = () => {
           />
         )}
 
-        {visibleLocations.map((loc) => {
+        {visibleLocations.slice(0, renderedCount).map((loc) => {
           const position = getPosition(loc);
           if (!position) return null;
           const isInspected = inspectedLocation?.id === loc.id;

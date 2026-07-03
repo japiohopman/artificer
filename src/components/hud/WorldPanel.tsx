@@ -8,6 +8,13 @@ import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
+import { createPortal } from 'react-dom';
+
+class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
+  constructor(props: any) { super(props); this.state = { hasError: false }; }
+  static getDerivedStateFromError() { return { hasError: true }; }
+  render() { return this.state.hasError ? this.props.fallback : this.props.children; }
+}
 
 export const WorldPanel: React.FC = () => {
   const { 
@@ -270,7 +277,9 @@ export const WorldPanel: React.FC = () => {
                <div className="p-4 bg-white/40 backdrop-blur-sm border-t border-dragon-red/5">
                  {loreContent ? (
                    <div className="text-xs text-parchment-800 italic leading-relaxed font-serif markdown-content space-y-2">
-                     <ReactMarkdown>{loreContent}</ReactMarkdown>
+                     <MarkdownErrorBoundary fallback={<p>{loreContent}</p>}>
+                       <ReactMarkdown>{loreContent}</ReactMarkdown>
+                     </MarkdownErrorBoundary>
                    </div>
                  ) : (
                    <p className="text-xs text-parchment-800 italic leading-relaxed font-serif">
@@ -310,7 +319,7 @@ export const WorldPanel: React.FC = () => {
                  )}
 
                  {/* Pre-travel Journal Overlay */}
-                 {showTravelJournal && preTravelStats && (
+                 {showTravelJournal && preTravelStats && createPortal(
                    <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm pointer-events-auto">
                      <div className="bg-parchment-100 w-full max-w-sm rounded border-2 border-dragon-gold shadow-2xl p-6 relative bg-paper-texture">
                        <button onClick={() => setShowTravelJournal(false)} className="absolute top-4 right-4 text-dragon-red/60 hover:text-dragon-red"><GameIcon name="close" size={20} /></button>
@@ -358,7 +367,8 @@ export const WorldPanel: React.FC = () => {
                          <button onClick={() => { setShowTravelJournal(false); startTravel(displayLocation); }} className="flex-1 py-2 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border border-dragon-gold transition-all shadow-md">Embark</button>
                        </div>
                      </div>
-                   </div>
+                   </div>,
+                   document.body
                  )}
                </div>
             </div>
@@ -411,51 +421,21 @@ export const WorldPanel: React.FC = () => {
                   </div>
                </div>
                
-               <div className="flex justify-center pt-1">
+               <div className="flex justify-center items-center pt-1 gap-2">
                   <span className="text-[8px] font-black text-white/30 uppercase tracking-[0.2em]">
                     {travelStats.miles.toFixed(1)} Miles Remaining
                   </span>
+                  <button 
+                    onClick={() => useWorldStore.getState().setIsFastForwarding(!useWorldStore.getState().isFastForwarding)}
+                    className={cn("text-[8px] px-2 py-0.5 rounded border uppercase font-black transition-colors", useWorldStore.getState().isFastForwarding ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold" : "border-white/30 text-white/50 hover:text-white")}
+                  >
+                    {useWorldStore.getState().isFastForwarding ? 'Normal Pace' : 'Fast Forward'}
+                  </button>
                </div>
             </div>
           )}
 
-          {/* Points of Interest / Sublocations */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dragon-red/20 to-dragon-red/20" />
-              <div className="flex items-center gap-2">
-                <GameIcon name="compass" size={14} color="#8B0000" />
-                <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Sites_of_Interest</h3>
-              </div>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-dragon-red/20 to-dragon-red/20" />
-            </div>
 
-            <div className="grid grid-cols-1 gap-3">
-              {savedLocations.length > 0 ? savedLocations.map((loc, index) => (
-                <button 
-                  key={`${loc.id}-${index}`}
-                  onClick={() => useWorldStore.getState().setInspectedLocation(loc)}
-                  className="group flex items-center gap-4 p-3 bg-white/20 hover:bg-dragon-red/5 border border-dragon-red/5 hover:border-dragon-red/20 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
-                >
-                  <div className="w-10 h-10 rounded bg-parchment-100 flex items-center justify-center border border-dragon-red/10 group-hover:bg-dragon-red group-hover:border-dragon-gold transition-all duration-300 shadow-inner">
-                    <GameIcon name={loc.category?.toLowerCase() || "city"} size={20} color="currentColor" className="text-dragon-red group-hover:text-white transition-colors" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-[11px] font-black text-parchment-900 uppercase tracking-tight truncate group-hover:text-dragon-darkRed transition-colors">{loc.name}</p>
-                    <p className="text-[8px] text-dragon-red/40 group-hover:text-dragon-red/60 uppercase font-black tracking-widest mt-0.5">{loc.category || 'Location'}</p>
-                  </div>
-                  <GameIcon name="chevron_right" size={12} color="#8B0000" className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                </button>
-              )) : (
-                <div className="p-8 border-2 border-dashed border-dragon-red/10 rounded-lg text-center bg-black/5">
-                  <div className="w-12 h-12 rounded-full bg-parchment-200 flex items-center justify-center mx-auto mb-3 opacity-20">
-                     <GameIcon name="map" size={24} color="#8B0000" />
-                  </div>
-                  <p className="text-[10px] uppercase font-black tracking-[0.2em] text-parchment-400">No mapped anomalies</p>
-                </div>
-              )}
-            </div>
-          </div>
 
           {/* Dynamic Lore System / Schema Driven Rendering */}
           <div className="space-y-2">
