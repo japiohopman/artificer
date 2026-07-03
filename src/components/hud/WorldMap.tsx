@@ -268,9 +268,8 @@ export const WorldMap: React.FC = () => {
   // Define full bounds in pixel space
   const bounds: L.LatLngBoundsExpression = [[0, 0], [mapHeight, mapWidth]];
   
-  // Scale factor 84.453125 ensures zoom 0 = 256px (1 tile)
-  // 21620 / 256 = 84.453125
-  const scaleFactorValue = 84.453125;
+  // Scale factor 128 ensures correct tile coordinate mapping for a 32768x32768 projection
+  const scaleFactorValue = 128;
 
   // Custom CRS for Faerun to handle tile coordinate system correctly
   const faerunCRS = React.useMemo(() => L.extend({}, L.CRS.Simple, {
@@ -307,11 +306,11 @@ export const WorldMap: React.FC = () => {
     return [py, px];
   }, [rescaleX, rescaleY]);
 
-  const initialZoom = 3;
+  const initialZoom = 4;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
 
   const center = React.useMemo((): [number, number] => 
-    currentZoom === 3 ? [mapHeight/2, mapWidth/2] : (partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2])
+    currentZoom === 4 ? [mapHeight/2, mapWidth/2] : (partyLocation ? getPosition(partyLocation) || [mapHeight/2, mapWidth/2] : [mapHeight/2, mapWidth/2])
   , [partyLocation, getPosition, mapHeight, mapWidth, currentZoom]);
 
   // Sync global zoom
@@ -454,8 +453,6 @@ export const WorldMap: React.FC = () => {
         crs={faerunCRS}
         minZoom={3}
         maxZoom={maxZoom}
-        maxBounds={bounds}
-        maxBoundsViscosity={1.0}
         scrollWheelZoom={true}
         className="w-full h-full grayscale-[0.1] contrast-[1.05] brightness-[0.95]"
         zoomControl={false}
