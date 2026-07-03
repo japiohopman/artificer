@@ -10,6 +10,7 @@ import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
+import { GameIcon } from '../../game_icons';
 
 /**
  * MAP ZOOM SYSTEM SPECIFICATION (0-6)
@@ -22,13 +23,13 @@ import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
  * Level 6 (Leaflet 9): Ruins, POIs, Hidden landmarks.
  */
 const CATEGORY_TIERS = [
-  { zoom: 3, categories: ['regions'] },
-  { zoom: 4, categories: ['seas_oceans'] },
-  { zoom: 5, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
-  { zoom: 6, categories: ['cities'] },
-  { zoom: 7, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
-  { zoom: 8, categories: ['landmarks', 'temples', 'shrines'] },
-  { zoom: 9, categories: ['ruins', 'poi', 'graveyards', 'dungeons', 'caves', 'roads_trails'] }
+  { zoom: 3, miles: 4001, categories: ['regions'] },
+  { zoom: 4, miles: 2001, categories: ['seas_oceans'] },
+  { zoom: 5, miles: 1001, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
+  { zoom: 6, miles: 501, categories: ['cities'] },
+  { zoom: 7, miles: 251, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
+  { zoom: 8, miles: 130, categories: ['landmarks', 'temples', 'shrines'] },
+  { zoom: 9, miles: 70, categories: ['ruins', 'poi', 'graveyards', 'dungeons', 'caves', 'roads_trails'] }
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -139,64 +140,6 @@ const MapEvents = ({
   return null;
 };
 
-const PartyMarker = ({ 
-  getPosition, 
-  center 
-}: { 
-  getPosition: (loc: any) => [number, number] | null,
-  center: [number, number]
-}) => {
-  const map = useMap();
-  const partyLocation = useWorldStore(state => state.partyLocation);
-  const isTraveling = useWorldStore(state => state.isTraveling);
-  const setInspectedLocation = useWorldStore(state => state.setInspectedLocation);
-  const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
-
-  const pos = React.useMemo(() => getPosition(partyLocation) || center, [partyLocation, getPosition, center]);
-  
-  // We use a standard Marker but we'll add a CSS transition to its icon container
-  // via a global style or by targeting the specific class.
-  // However, for TRULY smooth movement that survives Leaflet's zoom/pan, 
-  // we can use a custom Leaflet component or just a really good transition.
-
-  return (
-    <Marker 
-      position={pos as L.LatLngExpression}
-      zIndexOffset={2000}
-      icon={L.divIcon({
-        html: `
-          <div class="relative party-token-container">
-            <div class="absolute inset-0 ${isTraveling ? 'bg-dragon-gold/40' : 'bg-blue-500/40'} blur-md rounded-full animate-pulse scale-150"></div>
-            <div class="relative ${isTraveling ? 'bg-dragon-gold' : 'bg-blue-600'} border-2 border-white w-4 h-4 rounded-full shadow-lg transition-colors duration-1000">
-              ${isTraveling ? `
-                <div class="absolute inset-0 animate-ping bg-dragon-gold rounded-full opacity-75"></div>
-              ` : ''}
-            </div>
-            <div class="absolute -top-8 left-1/2 -translate-x-1/2 ${isTraveling ? 'bg-dragon-darkRed border-dragon-gold' : 'bg-blue-900 border-blue-400'} text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
-              ${isTraveling ? 'Traveling...' : 'Party'}
-            </div>
-          </div>
-        `,
-        className: 'party-marker-smooth',
-        iconSize: [16, 16],
-        iconAnchor: [8, 8]
-      })}
-      eventHandlers={{
-        click: () => {
-          setInspectedLocation({
-            id: 'party-pos',
-            name: "Party Position",
-            category: "Active Campaign",
-            description: "Your group is currently located here, navigating the vast reaches of the Sword Coast.",
-            image: null
-          });
-          setIsWorldPanelOpen(true);
-        }
-      }}
-    />
-  );
-};
-
 const MapInvalidator = () => {
   const map = useMap();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
@@ -222,6 +165,7 @@ const MapInvalidator = () => {
 };
 
 export const WorldMap: React.FC = () => {
+  const { isMapPanEnabled, setIsMapPanEnabled, setIsWorldPanelOpen, searchQuery } = useUIStore();
   const resetAtlas = useWorldStore(state => state.resetAtlas);
   const partyLocation = useWorldStore(state => state.partyLocation);
   const savedLocations = useWorldStore(state => state.savedLocations);
@@ -235,11 +179,11 @@ export const WorldMap: React.FC = () => {
   React.useEffect(() => {
     resetAtlas();
   }, [resetAtlas]);
+
   const isTraveling = useWorldStore(state => state.isTraveling);
   const destination = useWorldStore(state => state.destination);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
   
-  const setIsWorldPanelOpen = useUIStore(state => state.setIsWorldPanelOpen);
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   const [renderedCount, setRenderedCount] = React.useState(0);
@@ -292,12 +236,11 @@ export const WorldMap: React.FC = () => {
     const py = (1 - (y / protoHeight)) * mapHeight;
 
     return [py, px];
-  }, [rescaleX, rescaleY]);
+  }, [rescaleX, rescaleY, mapHeight, protoHeight]);
 
   const initialZoom = 4;
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
-
-
+  const currentMiles = React.useMemo(() => 4000 / Math.pow(2, currentZoom - 3), [currentZoom]);
 
   // Sync global zoom
   React.useEffect(() => {
@@ -354,8 +297,6 @@ export const WorldMap: React.FC = () => {
 
   // Filtering logic for zoom levels to reduce clutter and optimize performance
   const visibleLocations = React.useMemo(() => {
-    const majorCities = ["baldur's gate", "waterdeep", "neverwinter", "luskan", "athkatla", "calimport", "suzail", "zhentil keep"];
-    
     // We pad the bounds slightly so markers don't pop-in visibly at the exact edge
     const paddedBounds = currentBounds ? currentBounds.pad(0.5) : null;
 
@@ -363,61 +304,41 @@ export const WorldMap: React.FC = () => {
       const position = getPosition(loc);
       if (!position) return false;
 
+      const name = (loc.name || loc.popup?.title || '').toLowerCase();
+      const cat = (loc.category || loc.categoryId || (loc as any).type || '').toLowerCase();
+
+      // SEARCH OVERRIDE: Show matches regardless of zoom or bounds (for navigation)
+      const isSearchMatch = searchQuery && searchQuery.length > 2 && (
+        name.includes(searchQuery.toLowerCase()) ||
+        cat.includes(searchQuery.toLowerCase())
+      );
+
       // CULLING: Only render markers that are currently visible within the padded viewport
-      if (paddedBounds && !paddedBounds.contains(L.latLng(position[0], position[1]))) {
+      if (!isSearchMatch && paddedBounds && !paddedBounds.contains(L.latLng(position[0], position[1]))) {
         return false;
       }
-      
-      const cat = (loc.category || loc.categoryId || (loc as any).type || '').toLowerCase();
-      const name = (loc.name || loc.popup?.title || '').toLowerCase();
 
-      // Robust matching helper
-      const matches = (keywords: string[]) => keywords.some(k => cat.includes(k));
+      if (isSearchMatch) return true;
 
-      // Level 1: Oceans (Zoom 4+)
-      if (matches(['sea', 'ocean', 'deep', 'seas_oceans'])) {
-        return currentZoom >= 4;
+      // 1. Category-based exclusion for world map (items that should ONLY be on submaps)
+      const cityOnlyCategories = [
+        'shop', 'tavern', 'inn', 'house', 'building', 'sewer', 'library', 'guild',
+        'blacksmith', 'market', 'district', 'ward'
+      ];
+      if (cityOnlyCategories.includes(cat)) return false;
+
+      // 2. Tier-based visibility (referencing CATEGORY_TIERS)
+      // We find the tier where this category first appears
+      const tier = CATEGORY_TIERS.find(t =>
+        t.categories.some(c => cat.includes(c) || c.includes(cat))
+      );
+
+      if (tier) {
+        return currentMiles <= tier.miles;
       }
 
-      // Level 2: Major Terrain (Zoom 5+)
-      if (matches([
-        'mountain', 'peak', 'hill', 'forest', 'wood', 'island', 'desert', 'waste', 
-        'glacier', 'tundra', 'oasis', 'oases', 'plain', 'grassland', 'wetland', 
-        'swamp', 'marsh', 'river', 'lake', 'bay', 'coast', 'mountains', 'islands', 
-        'deserts_wastelands', 'glaciers_tundras', 'plains_grasslands', 'rivers', 
-        'lakes', 'bays', 'coasts'
-      ])) {
-        return currentZoom >= 5;
-      }
-
-      // Level 3: Major Cities (Zoom 6+)
-      if (matches(['city', 'cities', 'metropolis'])) {
-        return currentZoom >= 6;
-      }
-
-      // Level 4: Towns & Settlements (Zoom 7+)
-      if (matches([
-        'town', 'towns', 'settlement', 'settlements', 'village', 'fortress', 
-        'fortresses', 'keep', 'keeps', 'castle', 'tower', 'towns_settlements', 
-        'fortresses_keeps'
-      ])) {
-        return currentZoom >= 7;
-      }
-
-      // Level 5: Landmarks & Smaller Locations (Zoom 8+)
-      if (matches(['landmark', 'temple', 'shrine'])) {
-        return currentZoom >= 8;
-      }
-
-      // Level 6: POIs, Ruins, Dungeons (Zoom 9+)
-      if (matches([
-        'ruin', 'poi', 'point_of_interest', 'dungeon', 'cave', 'graveyard', 
-        'road', 'trail', 'points_of_interest', 'roads_trails'
-      ])) {
-        return currentZoom >= 9;
-      }
-
-      return currentZoom >= 9;
+      // Default fallback for small zoom
+      return currentMiles <= 50;
     })
     .sort((a, b) => {
       const catA = (a.category || a.categoryId || (a as any).type || '').toLowerCase();
@@ -433,7 +354,7 @@ export const WorldMap: React.FC = () => {
       return getPriority(catA) - getPriority(catB);
     })
     .slice(0, 2000);
-  }, [savedLocations, currentZoom, currentBounds, getPosition]);
+  }, [savedLocations, currentMiles, currentBounds, getPosition]);
 
   // Progressive rendering to prevent browser lockup
   React.useEffect(() => {
@@ -450,23 +371,22 @@ export const WorldMap: React.FC = () => {
     return () => clearInterval(interval);
   }, [visibleLocations]);
 
-  // Debug count
-  React.useEffect(() => {
-    if (savedLocations.length > 0) {
-      const pos = getPosition(savedLocations[0]);
-      console.log(`Z: ${currentZoom}, Total: ${savedLocations.length}, Visible: ${visibleLocations.length}, Bounds: ${currentBounds?.toBBoxString()}, SamplePos: ${pos}`);
-    }
-  }, [visibleLocations.length, currentZoom, savedLocations, currentBounds, getPosition]);
-
   return (
-    <div className="w-full h-full bg-[#0F1115] overflow-hidden relative font-body">
+    <div className={cn(
+      "w-full h-full bg-[#0F1115] relative font-body fantasy-atlas-frame overflow-hidden",
+      isMapPanEnabled ? "cursor-grab active:cursor-grabbing" : "cursor-default"
+    )}>
+      <div className="absolute inset-0 z-[500] pointer-events-none fantasy-atlas-glow rounded-xl" />
+
       <MapContainer 
         center={[mapHeight/2, mapWidth/2]} 
-        zoom={3} 
+        zoom={initialZoom}
         crs={faerunCRS}
         minZoom={3}
         maxZoom={maxZoom}
         scrollWheelZoom={true}
+        dragging={isMapPanEnabled}
+        doubleClickZoom={isMapPanEnabled}
         className="w-full h-full grayscale-[0.1] contrast-[1.05] brightness-[0.95]"
         zoomControl={false}
         attributionControl={false}
@@ -588,8 +508,8 @@ export const WorldMap: React.FC = () => {
           const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
           const isMajorCity = majorCities.includes(name);
 
-          // Labels are permanent for Oceans (Level 1+) and Cities (Level 3+)
-          const isPermanent = (isOcean && currentZoom >= 4) || isMajorCity || (isCity && currentZoom >= 6);
+          // Labels are permanent for Oceans (2000 miles or less) and Cities (500 miles or less)
+          const isPermanent = (isOcean && currentMiles <= 2000) || isMajorCity || (isCity && currentMiles <= 500);
 
           let zIndex = 100;
           if (isMajorCity) zIndex = 5000;
@@ -644,8 +564,6 @@ export const WorldMap: React.FC = () => {
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
-      {/* Map Legend - Removed from here, moved to ChatPanel */}
-      
       {/* Zoom Controls */}
       <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 items-end">
         <div className="flex flex-col gap-1 mb-2">
@@ -653,14 +571,14 @@ export const WorldMap: React.FC = () => {
              onClick={() => {
                if (partyLocation && mapRef.current) {
                  const pos = getPosition(partyLocation);
-                 if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 5), { animate: true, duration: 1.5 });
+                 if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 6), { animate: true, duration: 1.5 });
                }
              }}
-             className="w-10 h-10 bg-parchment-100 border-2 border-blue-500 text-blue-600 font-black text-xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto"
+             className="w-12 h-12 bg-parchment-100 border-2 border-blue-500 text-blue-600 font-black text-2xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto mb-2"
              title="Locate Party"
              aria-label="Locate Party"
            >
-             ◎
+             <GameIcon name="party_stats" size={24} />
            </button>
            <button 
              onClick={() => mapRef.current?.zoomIn()}
@@ -676,11 +594,24 @@ export const WorldMap: React.FC = () => {
            >
              −
            </button>
+           <button
+             onClick={() => setIsMapPanEnabled(!isMapPanEnabled)}
+             className={cn(
+               "w-10 h-10 border-2 font-black text-xl flex items-center justify-center rounded shadow-lg transition-all active:scale-95 pointer-events-auto",
+               isMapPanEnabled
+                 ? "bg-dragon-red border-dragon-gold text-white"
+                 : "bg-parchment-100 border-dragon-gold text-dragon-red hover:bg-parchment-200"
+             )}
+             title={isMapPanEnabled ? "Lock Map Pan" : "Unlock Map Pan"}
+             aria-label={isMapPanEnabled ? "Lock Map Pan" : "Unlock Map Pan"}
+           >
+             <GameIcon name="move" size={18} />
+           </button>
         </div>
         <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col min-w-[100px] pointer-events-auto">
           <div className="text-[9px] text-center font-black text-dragon-red border-b border-dragon-gold/20 mb-1 pb-1 uppercase tracking-widest">Map Scale</div>
           <div className="text-center font-header font-black text-xl text-dragon-red">
-            {Math.round(4000 / Math.pow(2, currentZoom - 3))} <span className="text-xs">Miles</span>
+            {Math.round(currentMiles)} <span className="text-xs">Miles</span>
           </div>
           <div className="text-[7px] text-center font-bold text-dragon-red/40 uppercase mt-1">Level {Math.max(0, Math.round(currentZoom - 3))}</div>
         </div>

@@ -5,6 +5,7 @@ import { useWorldStore } from '../../store/useWorldStore';
 import { useGameStore } from '../../store/useGameStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useJournalStore } from '../../store/useJournalStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
@@ -50,6 +51,7 @@ export const WorldPanel: React.FC = () => {
   const { partyVehicles, partyInventory, partyStats } = useInventoryStore();
   const { characters } = useCharacterStore();
   const { combatState } = useGameStore();
+  const { unlockLore, unlockedLore } = useJournalStore();
 
   const [showTravelJournal, setShowTravelJournal] = React.useState(false);
   const [loreContent, setLoreContent] = React.useState<string | null>(null);
@@ -296,7 +298,21 @@ export const WorldPanel: React.FC = () => {
 
                  {/* Travel Button */}
                  {displayLocation && displayLocation.id !== partyLocation?.id && (
-                   <div className="mt-6">
+                   <div className="mt-6 space-y-3">
+                     {(displayLocation as any).lore && (
+                       <button
+                         onClick={() => {
+                           const lorePath = (displayLocation as any).lore;
+                           unlockLore(lorePath);
+                           setIsWorldPanelOpen(false);
+                           useUIStore.getState().setIsJournalOpen(true);
+                         }}
+                         className="w-full py-2 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-xs uppercase tracking-widest rounded border border-dragon-gold transition-all flex items-center justify-center gap-2"
+                       >
+                         <GameIcon name="lore" size={14} color="#8B0000" />
+                         Open Lore Codex
+                       </button>
+                     )}
                       {!isTraveling ? (
                         <button 
                           id="set-course-btn"

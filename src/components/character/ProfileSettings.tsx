@@ -75,16 +75,39 @@ export const ProfileSettings: React.FC<ProfileSettingsProps> = ({ onClose }) => 
     <div className="flex flex-col flex-1 h-full bg-parchment-50 overflow-hidden p-8">
        <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-widest">Profile Configuration</h2>
-          <button onClick={onClose} className="p-2 hover:bg-dragon-red/10 rounded-full transition-all text-parchment-400 hover:text-dragon-red"><GameIcon name="close" size={24} /></button>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-dragon-red/10 rounded-full transition-all text-parchment-400 hover:text-dragon-red"
+            title="Close Profile Settings"
+            aria-label="Close Profile Settings"
+          >
+            <GameIcon name="close" size={24} />
+          </button>
        </div>
        <div className="space-y-6">
           <div className="space-y-2">
-             <label className="text-[10px] font-black uppercase text-dragon-red tracking-widest">Display Identity</label>
-             <input type="text" value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="w-full p-4 bg-white border border-dragon-red/10 rounded-sm focus:outline-none focus:border-dragon-red transition-all" />
+             <label htmlFor="displayName" className="text-[10px] font-black uppercase text-dragon-red tracking-widest">Display Identity</label>
+             <input
+               id="displayName"
+               type="text"
+               value={displayName}
+               onChange={(e) => setDisplayName(e.target.value)}
+               className="w-full p-4 bg-white border border-dragon-red/10 rounded-sm focus:outline-none focus:border-dragon-red transition-all"
+               title="Display Identity"
+               placeholder="Enter display name"
+             />
           </div>
           <div className="space-y-2">
-             <label className="text-[10px] font-black uppercase text-dragon-red tracking-widest">Chronicle (Bio)</label>
-             <textarea value={bio} onChange={(e) => setBio(e.target.value)} rows={4} className="w-full p-4 bg-white border border-dragon-red/10 rounded-sm focus:outline-none focus:border-dragon-red transition-all resize-none" />
+             <label htmlFor="bio" className="text-[10px] font-black uppercase text-dragon-red tracking-widest">Chronicle (Bio)</label>
+             <textarea
+               id="bio"
+               value={bio}
+               onChange={(e) => setBio(e.target.value)}
+               rows={4}
+               className="w-full p-4 bg-white border border-dragon-red/10 rounded-sm focus:outline-none focus:border-dragon-red transition-all resize-none"
+               title="Chronicle (Bio)"
+               placeholder="Write your bio"
+             />
           </div>
           <div className="flex justify-end gap-4 mt-8">
              <button onClick={onClose} className="px-6 py-3 border border-dragon-red/20 rounded-sm font-black text-[10px] uppercase tracking-widest hover:bg-parchment-100 transition-all">Discard</button>

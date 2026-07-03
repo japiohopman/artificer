@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Elan ITC Std';
-  src: url('https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/font/Elan%20ITC%20Std%20Black.otf') format('opentype');
+  src: url('/assets/atlas/font/Elan ITC Std Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Elvish';
-  src: url('https://raw.githubusercontent.com/japiohopman/artificer/main/public/assets/atlas/languages/Elvish-Regular.ttf') format('truetype');
+  src: url('/assets/atlas/languages/Elvish-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -227,4 +227,35 @@
 
 .atlas-marker-seas_oceans span {
   text-shadow: none;
+}
+
+.fantasy-atlas-frame {
+  box-shadow:
+    inset 0 0 0 1px rgba(212, 175, 55, 0.3),
+    inset 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.fantasy-atlas-glow {
+  background: radial-gradient(circle at center, transparent 30%, rgba(139, 0, 0, 0.05) 70%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.fantasy-popup .leaflet-popup-content-wrapper {
+  background: #fdfaf3 !important;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png") !important;
+  border: 2px solid #d4af37 !important;
+  border-radius: 4px !important;
+  color: #523b23 !important;
+  font-family: "Crimson Text", serif !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.fantasy-popup .leaflet-popup-tip {
+  background: #d4af37 !important;
+}
+
+.combat-grid-bg {
+  background-color: #0c0a09;
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(139, 0, 0, 0.15) 1px, transparent 0);
+  background-size: 60px 60px;
 }

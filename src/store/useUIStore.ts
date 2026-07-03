@@ -21,6 +21,7 @@ interface UIState {
   isEditingSubMap: boolean;
   isInsideSubMap: boolean;
   isMapLegendOpen: boolean;
+  isMapPanEnabled: boolean;
   selectedDiceTheme: string;
   selectedDiceColor: string;
   
@@ -62,6 +63,7 @@ interface UIState {
   setIsEditingSubMap: (isEditing: boolean) => void;
   setIsInsideSubMap: (isInside: boolean) => void;
   setIsMapLegendOpen: (isOpen: boolean) => void;
+  setIsMapPanEnabled: (isEnabled: boolean) => void;
   setSelectedDiceTheme: (theme: string) => void;
   setSelectedDiceColor: (color: string) => void;
   
@@ -97,6 +99,7 @@ export const useUIStore = create<UIState>((set) => ({
   isEditingSubMap: false,
   isInsideSubMap: false,
   isMapLegendOpen: false,
+  isMapPanEnabled: true,
   selectedDiceTheme: 'default',
   selectedDiceColor: '#8b0000',
 
@@ -133,6 +136,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsEditingSubMap: (isEditingSubMap) => set({ isEditingSubMap }),
   setIsInsideSubMap: (isInsideSubMap) => set({ isInsideSubMap }),
   setIsMapLegendOpen: (isMapLegendOpen) => set({ isMapLegendOpen }),
+  setIsMapPanEnabled: (isMapPanEnabled) => set({ isMapPanEnabled }),
   setSelectedDiceTheme: (selectedDiceTheme) => set({ selectedDiceTheme }),
   setSelectedDiceColor: (selectedDiceColor) => set({ selectedDiceColor }),
 
