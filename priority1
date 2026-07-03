@@ -1,0 +1,460 @@
+Priority 1 — Correct Map Hierarchy
+
+Currently the world map attempts to load every marker available (shrines, temples, graveyards, etc.).
+
+This is incorrect.
+
+Those locations belong to city maps or submaps.
+
+World Map should only display
+Continents
+Nations
+Regions
+Major rivers
+Oceans
+Major terrain
+Major cities (depending on zoom)
+
+Never:
+
+Shrines
+Temples
+Graveyards
+Taverns
+Shops
+Houses
+Sewers
+Buildings
+Dungeons
+
+These belong to submaps.
+
+City Hierarchy
+
+Example:
+
+public/assets/atlas/world/toril/faerun/cities/waterdeep/
+
+Contains
+
+waterdeep.json
+waterdeep.webp
+
+layers/
+    districts/
+    walls/
+    canals/
+
+submaps/
+    sewers/
+    docks/
+    castle/
+
+Example sewer map
+
+waterdeep_map_sewers.webp
+
+must be loaded only after entering the sewer submap.
+
+Never on the Faerûn map.
+
+Location JSON Structure
+
+Each location JSON becomes the entry point.
+
+Example
+
+waterdeep.json
+
+contains references to
+
+surface map
+
+available layers
+
+available submaps
+
+available lore
+
+available markers
+
+Submaps are located in
+
+public/assets/atlas/world/toril/faerun/cities/waterdeep/sublocations/
+
+These should automatically register when entering the parent city.
+
+Lore Integration
+
+The lore system should follow the exact same hierarchy as the map.
+
+Standard Locations
+
+Default lore location
+
+public/assets/atlas/lore/locations/
+
+Used for
+
+villages
+towns
+ruins
+caves
+shrines
+Major Cities
+
+Cities contain significantly more information.
+
+Before implementation inspect
+
+public/assets/atlas/lore/
+
+to discover additional lore types.
+
+City lore may include
+
+history
+factions
+districts
+politics
+economy
+rulers
+guilds
+NPC references
+quests
+religion
+landmarks
+
+The system should support these extra fields.
+
+Nations & Sub Regions
+
+Nation lore lives in
+
+public/assets/atlas/lore/sub_regions/
+
+This should automatically load when viewing a nation or region.
+
+Leaflet Integration
+
+Update
+
+docs/systems/LEAFLET_MAP_INTEGRATION.md
+
+The calibration must support
+
+world maps
+regional maps
+city maps
+submaps
+layered maps
+
+Each map should define
+
+bounds
+
+native resolution
+
+tile size
+
+max zoom
+
+min zoom
+
+available layers
+
+available submaps
+
+projection
+
+miles represented
+Map Scale
+
+Remove the current artificial zoom level system.
+
+Instead use real world scale.
+
+The Faerûn map is approximately
+
+4000 miles
+
+The UI should expose distance rather than "Zoom Level".
+
+Example
+
+4000 mi
+
+2000 mi
+
+1000 mi
+
+500 mi
+
+250 mi
+
+100 mi
+
+50 mi
+
+The visible layers depend on visible miles instead of arbitrary zoom numbers.
+
+This makes future maps automatically compatible.
+
+Layer Visibility Rules
+
+Instead of zoom levels, use map scale.
+
+4000 miles
+
+World overview
+
+Show
+
+Region boundaries (SVG)
+Nation borders
+Coastlines
+
+Nothing else.
+
+2000 miles
+
+Reveal
+
+Oceans
+Seas
+
+Only
+
+Shining Sea
+Trackless Sea
+Sea of Fallen Stars
+Sea of Moving Ice
+Sword Coast Sea
+1000 miles
+
+Reveal terrain
+
+forests
+plains
+mountains
+wetlands
+deserts
+islands
+oases
+500 miles
+
+Reveal
+
+Major cities
+
+250 miles
+
+Reveal
+
+towns
+villages
+settlements
+keeps
+fortresses
+100 miles
+
+Reveal
+
+Minor settlements.
+
+50 miles
+
+Reveal everything
+
+ruins
+shrines
+POIs
+hidden landmarks
+
+If entering a city,
+
+switch to the city map.
+
+Rendering Bugs
+
+Current broken layers
+
+Plains
+Forests
+Wetlands
+Mountains
+Oases
+Islands
+Cities
+
+Currently working
+
+Water
+Settlements
+Ruins
+POIs
+
+Investigate before continuing.
+
+No new features should be added until every existing layer renders correctly.
+
+Legend System
+
+There should only be one legend.
+
+Current implementation has two.
+
+This must be removed.
+
+Desired Behaviour
+
+When
+
+world map is open
+
+and
+
+chat panel is collapsed
+
+the legend occupies the chat panel area.
+
+The legend behaves exactly like the Dice button.
+
+Requirements
+
+dedicated Legend icon
+toggle open/close
+never behind NotificationWindow
+never overlap UI
+responsive
+Chat Panel Behaviour
+
+The chat panel should become a reusable HUD container instead of only displaying chat.
+
+Depending on game state it can host different interfaces.
+
+Examples
+
+Map Open
+
+Display
+
+search
+legend
+filters
+location information
+
+instead of chat history.
+
+Combat
+
+Replace chat with
+
+actionPanel.tsx
+
+The chat is hidden during combat.
+
+If scripted dialogue occurs,
+
+the chat automatically opens.
+
+Exploration
+
+Display
+
+chat
+quest updates
+NPC dialogue
+
+This keeps the HUD much cleaner.
+
+Notification Window
+
+NotificationWindow should become another HUD module.
+
+When side panels are open
+
+the Notification Window
+
+and
+
+Chat Panel
+
+should connect seamlessly.
+
+No visible margins.
+
+No floating cards.
+
+Everything should feel like one continuous carved HUD.
+
+Reference
+
+docs/screenshots/hud_map_interface.png
+
+The goal is a single connected interface.
+
+Map Frame Styling
+
+The current boxed border around the parchment map is too thin and too rectangular.
+
+Desired appearance
+
+thicker parchment edge
+irregular organic border
+carved atlas appearance
+similar to screenshot 3
+
+Investigate whether this can be achieved using
+
+SVG masks
+CSS mask-image
+alpha border textures
+layered frame images
+
+The frame should look like an old fantasy atlas instead of a modern rectangle.
+
+Documentation
+
+After implementation create documentation under
+
+docs/
+
+Include
+
+map hierarchy
+world → city → submap architecture
+layer system
+rendering order
+Leaflet calibration
+lore loading
+city lore
+nation lore
+submap registration
+layer visibility by map scale
+legend behaviour
+HUD behaviour
+chat panel modes
+frame styling
+SVG overlay usage
+future extension guidelines
+
+This documentation becomes the canonical reference for future map development.
+
+Acceptance Criteria
+
+The implementation is complete when:
+
+World map only loads world-level markers.
+City maps load only city-specific markers.
+Submaps load only their own data.
+Lore follows the same hierarchy as the maps.
+Leaflet calibration works for every map type.
+Rendering bugs are fixed.
+Scale is expressed in miles instead of abstract zoom levels.
+Layer visibility changes automatically based on map scale.
+There is only one legend.
+The chat panel acts as a contextual HUD container.
+Notification and chat panels visually merge into one HUD.
+The map frame has a thicker, more immersive fantasy atlas appearance.
+All behavior is documented under docs/ to serve as the single source of truth.
