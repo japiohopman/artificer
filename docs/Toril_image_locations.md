@@ -15,10 +15,11 @@ The generator parses JSON files following the `city.schema.json` or `sub_region.
 - *Other world categories (wetlands, forests, etc.)*
 
 ### Output Assets
-Generated images must be stored in:
-- `public/assets/images/world/[category]/[slug]/`
-- Banners: `public/assets/images/world/[category]/[slug]/banner.webp`
-- Locations: `public/assets/images/world/[category]/[slug]/day.webp` and `night.webp`
+Generated images must be stored alongside their JSON definitions or in a structured asset tree:
+- Images: `public/assets/atlas/world/[category]/[slug]/[slug].webp`
+- Lore (Markdown): `public/assets/atlas/lore/locations/[slug].md`
+
+The locations JSON files include a `"lore"` key pointing to their respective `.md` file, and an `"image"` key pointing to their `.webp` location image.
 
 ## 3. Image Specifications
 
@@ -27,13 +28,12 @@ Generated images must be stored in:
 - **Layout**: Divided into 2 horizontal rows, evenly divided.
   - **Top Row**: Day version of the location.
   - **Bottom Row**: Night version of the location.
-- **Requirement**: The banner must be a single 16:9 image containing both states for UI flexibility.
+- **Requirement**: The banner must be a single 16:9 image containing both states for UI flexibility. The `WorldPanel` component shifts the background position based on the game's time of day (day/night).
 
-### B. Location Images
-- **Aspect Ratio**: 3:2
-- **Quantity**: 2 separate images.
-  - `day.webp`: Day version.
-  - `night.webp`: Night version.
+### B. Sub-Maps and Layers (Work in Progress)
+- Sub maps and layers (such as sewers or building interiors) are placed in the same directory (e.g., `waterdeep_map.webp` and `waterdeep_map_sewers.webp`).
+- Entries and exits are defined by detection areas (large boxes) on the map.
+- Extremely large maps (like Waterdeep) may utilize a tiling system for higher resolution, though this requires high-res base assets.
 
 ## 4. Prompt Engineering Logic
 
@@ -46,22 +46,18 @@ The app must ingest the following fields from the location JSON (e.g., `baldurs_
 - `wiki`: Summarized lore for atmosphere.
 - `tags`: (e.g., `["city", "metropolis", "port"]`) - Direct prompt keywords.
 
-### Style Injection (The "Skills" Style)
-The app must use the established style used in the `skills/` directory:
+### Style Injection
+The app must use the established style:
 - **Art Style**: Cinematic, high-fidelity digital painting, Baldur's Gate 3 / Classic D&D style, gritty texture, atmospheric lighting.
 - **Composition**: Epic wide-angle landscape, centered for 3:2, panoramic for 16:9 rows.
 
-### External Content Support
-If the `description` or `wiki` fields contain a `https://forgottenrealms.fandom.com/wiki/` URL, the generator should use this to pull extra descriptive content to ensure canonical accuracy in the prompt.
-
-## 5. User-Friendly Features
-
-The app must include the following controls:
-- **Re-roll**: Ability to re-generate just one of the 3 images (Banner, Day, or Night) if the result is unsatisfactory.
-- **Prompt Editor**: Users must be able to see and rework the generated image prompt before execution.
-- **Auto-Fill**: Button to scan the current location's wiki link for supplemental prompt data.
+## 5. D&D Markdown Styling
+Location lore (from the `.md` files) is dynamically rendered in the `WorldPanel` using a custom D&D styling system:
+- **H1 & H2**: Dark red (`#8B0000`), uppercase, tracking-widest.
+- **HR**: Yellow/Gold (`#D4AF37`) separating borders.
+- **Text**: Dark parchment text, serif font, italicized blockquotes with gold borders.
 
 ## 6. Technical Instructions for Copilot
 - **API**: Use the "Nano Banana" service (configured in the sandbox environment).
-- **Paths**: Ensure all images are saved to `public/assets/images/world/` subdirectories matching the atlas structure.
+- **Paths**: Ensure all images are saved to `public/assets/atlas/world/` subdirectories matching the atlas structure.
 - **Format**: All outputs must be `.webp`.

@@ -42,6 +42,8 @@ export const WorldPanel: React.FC = () => {
 
   const displayLocation = inspectedLocation || currentLocation;
 
+  const isNight = gameTime < 360 || gameTime >= 1080;
+
   const formatTime = (minutes: number) => {
     const hours = Math.floor(minutes / 60) % 24;
     const mins = minutes % 60;
@@ -140,18 +142,39 @@ export const WorldPanel: React.FC = () => {
       className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture"
     >
       <div className="w-80 h-full flex flex-col shrink-0">
-        <div className="p-6 border-b-2 border-dragon-red bg-parchment-100/80 backdrop-blur-sm flex items-center justify-between shadow-sm">
-          <div className="flex flex-col">
-            <span className="text-[8px] font-black text-dragon-red/60 uppercase tracking-[0.3em] leading-none mb-1">Cartographic</span>
-            <h2 className="text-2xl font-header text-dragon-red uppercase tracking-widest leading-none">World Atlas</h2>
+        <div 
+          className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden"
+        >
+          {displayLocation?.image ? (
+            <div 
+              className="absolute inset-0 z-0 bg-cover bg-no-repeat transition-all duration-1000"
+              style={{
+                backgroundImage: `url(${displayLocation.image})`,
+                backgroundSize: '100% 200%',
+                backgroundPosition: isNight ? 'bottom center' : 'top center'
+              }}
+            />
+          ) : (
+            <div className="absolute inset-0 z-0 bg-parchment-100/80 backdrop-blur-sm" />
+          )}
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
+
+          <div className="relative z-20 flex flex-col">
+            <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-none mb-1 drop-shadow-md">
+              {displayLocation ? displayLocation.category || 'Location' : 'Cartographic'}
+            </span>
+            <h2 className="text-2xl font-header text-white uppercase tracking-widest leading-none drop-shadow-lg">
+              {displayLocation ? displayLocation.name : 'World Atlas'}
+            </h2>
           </div>
           <button 
             onClick={() => setIsWorldPanelOpen(false)}
-            className="p-2 hover:bg-dragon-red/10 rounded-full transition-all active:scale-95 group"
+            className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group relative z-20"
             title="Close World Panel"
             aria-label="Close World Panel"
           >
-            <GameIcon name="chevron_left" size={24} color="#8B0000" className="group-hover:-translate-x-1 transition-transform" />
+            <GameIcon name="chevron_left" size={24} color="#FFFFFF" className="group-hover:-translate-x-1 transition-transform drop-shadow-md" />
           </button>
         </div>
 
@@ -230,34 +253,25 @@ export const WorldPanel: React.FC = () => {
               "bg-white/30 border rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-500",
               inspectedLocation ? "border-blue-500/50 shadow-blue-500/10" : "border-dragon-red/10"
             )}>
-               <div className="h-40 bg-parchment-300 relative group">
-                  {displayLocation?.image ? (
-                    <img src={displayLocation.image} className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[2000ms]" alt="" />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-parchment-200 to-parchment-400">
-                      <GameIcon name="city" size={64} className="opacity-10" />
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-4">
-                    <p className="text-white font-header text-xl font-black leading-tight uppercase tracking-wide drop-shadow-lg">{displayLocation?.name || 'The Wilds'}</p>
-                    <div className="flex items-center gap-2 mt-1">
-                       <div className={cn(
-                         "w-1.5 h-1.5 rounded-full animate-pulse",
-                         inspectedLocation ? "bg-blue-400" : "bg-dragon-gold"
-                       )} />
-                       <p className={cn(
-                         "text-[9px] uppercase font-black tracking-widest",
-                         inspectedLocation ? "text-blue-400" : "text-dragon-gold"
-                       )}>{displayLocation?.category || 'Uncharted Territory'}</p>
-                    </div>
-                  </div>
-               </div>
-               <div className="p-4 bg-white/40 backdrop-blur-sm border-t border-dragon-red/5">
+               <div className="p-4 bg-white/40 backdrop-blur-sm">
                  {loreContent ? (
                    <div className="text-xs text-parchment-800 italic leading-relaxed font-serif markdown-content space-y-2">
                      <MarkdownErrorBoundary fallback={<p>{loreContent}</p>}>
-                       <ReactMarkdown>{loreContent}</ReactMarkdown>
+                       <ReactMarkdown
+                         components={{
+                           h1: ({node, ...props}) => <h1 className="text-2xl font-black text-dragon-red uppercase tracking-widest mt-6 mb-4" {...props} />,
+                           h2: ({node, ...props}) => <h2 className="text-xl font-bold text-dragon-red uppercase tracking-wider mt-5 mb-3" {...props} />,
+                           h3: ({node, ...props}) => <h3 className="text-lg font-bold text-dragon-darkRed mt-4 mb-2" {...props} />,
+                           hr: ({node, ...props}) => <hr className="border-t-2 border-dragon-gold my-6 shadow-sm" {...props} />,
+                           p: ({node, ...props}) => <p className="mb-4 text-parchment-900 leading-relaxed font-serif" {...props} />,
+                           strong: ({node, ...props}) => <strong className="font-bold text-dragon-darkRed" {...props} />,
+                           ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-4 text-parchment-900 space-y-1" {...props} />,
+                           ol: ({node, ...props}) => <ol className="list-decimal pl-6 mb-4 text-parchment-900 space-y-1" {...props} />,
+                           blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-dragon-gold pl-4 py-1 italic bg-dragon-gold/10 text-parchment-800 my-4" {...props} />,
+                         }}
+                       >
+                         {loreContent}
+                       </ReactMarkdown>
                      </MarkdownErrorBoundary>
                    </div>
                  ) : (
