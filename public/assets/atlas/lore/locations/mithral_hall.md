@@ -1,4 +1,4 @@
-##Mithral Hall
+## Mithral Hall
 
 The ancestral home of Clan Battlehammer, Mithra!
 Hall was a place of great potential wealth when it was

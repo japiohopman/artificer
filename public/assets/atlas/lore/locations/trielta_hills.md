@@ -1,4 +1,4 @@
-##Trielta Hills
+## Trielta Hills
 
 In the rolling terrain of the Trielta Hills, scattered with
 small settlements of gnomes and halflings, life seems
@@ -46,7 +46,7 @@ the local halfling sheriff and the sma ll band of militia he
 put together to track the band, and to do so quickly, rescuing the captives. I've been welcomed in this area ever
 since, and have gotten to know the goodly folk here well. 
 
-###RURAL SETTLEMENTS 
+### RURAL SETTLEMENTS 
 
 Most of the outlying settlements in the Trielta Hills
 consist of a dozen or two dozen ha lfling or gnome fa milies, living in homes molded gently into rolling hills.

@@ -1,4 +1,4 @@
-##Evereska
+## Evereska
 
 I would be remiss if I didn't mention Evereska, but I will
 be brief for I have no desire to publish all its secrets. I
@@ -9,7 +9,7 @@ I make mention of my home, though, I will discuss the
 meeting-ground that is the closest most outsiders will
 ever get to fair Evereska: the Halfway Inn. 
 
-###THE HALFWAY INN
+### THE HALFWAY INN
 Evereska lies hidden in the Greycloaks. Our paths to
 it are secret, cloaked by natural features and magical
 guise. No significant human settlement stands within a
@@ -46,7 +46,7 @@ meet with any of us, that is the purpose the Halfway
 Inn fulfills. 
 
 
-###THE REFUGE IN THE HILLS
+### THE REFUGE IN THE HILLS
 When I rest at the end of the day and retreat into reverie,
 I do not revisit the wonders of ancient ruins and majestic creatures I have seen on my wanderings. At those
 times, I recall the Evereska I wandered as a youth, when

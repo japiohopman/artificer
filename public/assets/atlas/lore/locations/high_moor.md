@@ -1,4 +1,4 @@
-##High Moor
+## High Moor
 
 The High Moor was once a place much like the High
 Forest or the nearby Misty Forest, but during the Crown

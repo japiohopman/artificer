@@ -116,50 +116,9 @@ export const GameScreen: React.FC = () => {
 
       {/* 4. Legend & Chat Overlay Layer */}
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
-        {/* Map Legend Overlay */}
-        <AnimatePresence>
-          {isMapLegendOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 50, scale: 0.9 }}
-              className="mb-4 pointer-events-auto z-[300]"
-            >
-              <MapLegend currentZoom={mapZoom} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Map Legend Overlay Removed (moved to ChatPanel) */}
 
         <div className="w-full pointer-events-auto relative">
-           {/* Control Hub (Buttons) */}
-           <div className="absolute -top-12 right-6 z-50 pointer-events-none flex items-center gap-3">
-            {/* Legend Toggle */}
-            <button 
-              onClick={() => setIsMapLegendOpen(!isMapLegendOpen)}
-              className={cn(
-                "pointer-events-auto w-10 h-10 flex items-center justify-center rounded-full border-2 transition-all shadow-xl cursor-pointer active:scale-90",
-                isMapLegendOpen 
-                  ? "bg-dragon-gold border-dragon-red text-dragon-darkRed" 
-                  : "bg-parchment-200 border-dragon-gold text-dragon-red hover:bg-parchment-300"
-              )}
-              title="Toggle Map Legend"
-              aria-label="Toggle Map Legend"
-            >
-              <GameIcon name="map" size={18} />
-            </button>
-
-            {/* Chat Toggle */}
-            <button 
-              onClick={() => setChatExpanded(!chatExpanded)}
-              className="pointer-events-auto w-10 h-10 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer group active:scale-90"
-              title={chatExpanded ? "Collapse Chat" : "Expand Chat"}
-              aria-label={chatExpanded ? "Collapse Chat" : "Expand Chat"}
-            >
-              <div className="transition-transform duration-300">
-                {chatExpanded ? <GameIcon name="chevron_down" size={16} /> : <GameIcon name="chevron_up" size={16} className="animate-bounce" />}
-              </div>
-            </button>
-          </div>
 
            <ChatPanel isCollapsed={!chatExpanded} />
         </div>

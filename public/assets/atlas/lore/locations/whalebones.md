@@ -1,4 +1,4 @@
-##whalebones
+## whalebones
 
 The tiny outcrops that make up the Whalebones are so
 numerous it's impossible to accurately chart them all.

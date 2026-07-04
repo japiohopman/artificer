@@ -1,4 +1,4 @@
-##Lantan
+## Lantan
 
 I had not visited Lantan for over a year when it happened, but the way most tell it, when magic failed utterly
 in this place, all the stored smokepowder and magical

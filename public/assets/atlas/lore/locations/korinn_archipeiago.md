@@ -1,4 +1,4 @@
-##Korinn Archipeiago
+## Korinn Archipeiago
 
 The Korinn Archipelago is dozens of rocky, rainy,
 and windswept islands populated mostly by Northlanders, who herd sheep, fish the nearby waters, and

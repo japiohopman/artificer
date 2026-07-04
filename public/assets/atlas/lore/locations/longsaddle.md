@@ -1,4 +1,4 @@
-##Longsaddle
+## Longsaddle
 
 The hamlet of Longsaddle is little more than a row of
 buildings on either side of the Long Road, halfway along

@@ -28,7 +28,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   const { getActiveBackground, isNight, currentLocation, mapZoom } = useWorldStore();
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
-  const { setChatExpanded, gameMode, isWorldPanelOpen, searchQuery, setSearchQuery } = useUIStore();
+  const { setChatExpanded, gameMode, isWorldPanelOpen, isMapLegendOpen, searchQuery, setSearchQuery } = useUIStore();
   const { messages: history, isThinking } = useChatStore();
   const { unlockedLore, unlockLore } = useJournalStore();
 
@@ -132,7 +132,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 <div className="p-0">
                   <ActionPanel />
                 </div>
-              ) : isWorldPanelOpen && !isCollapsed ? (
+              ) : isMapLegendOpen && !isCollapsed ? (
                 <div className="flex flex-col h-full">
                    <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10 relative">
                       <div className="flex items-center gap-4 min-w-0 flex-1">
@@ -249,7 +249,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
           </div>
         )}
 
-        {gameMode !== 'combat' && isWorldPanelOpen && isCollapsed && (
+        {gameMode !== 'combat' && isMapLegendOpen && isCollapsed && (
           <div className="px-6 py-2 flex items-center gap-4 pointer-events-auto overflow-x-auto no-scrollbar">
             <div className="flex flex-col shrink-0">
               <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Atlas_Legend</span>

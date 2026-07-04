@@ -1,4 +1,4 @@
-##Uthgardt Lands
+## Uthgardt Lands
 
 When I was newly departed from my homeland and first
 found my way to the North, I encountered a band of Uthgardt nomads on the trail-a part of the Elk tribe, led by
@@ -130,7 +130,7 @@ a fierce love of life and its simple pleasures. Demonstrate an outlook complemen
 might make of you a comrade. Show fear or contempt,
 and they will respond with quick violence. 
 
-###THE PEOPLE OF UTHGAR
+### THE PEOPLE OF UTHGAR
 
 The Uthgardt trace their origins back to the mighty
 hero Uthgar, a warrior without compare. During my

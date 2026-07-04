@@ -274,7 +274,9 @@ export const WorldMap: React.FC = () => {
                       ...l,
                       name: l.name || l.popup?.title || l.id?.replace(/_/g, ' '),
                       category: l.category || l.categoryId || l.type || category,
-                      id: l.id || (l.name || l.popup?.title)?.toLowerCase().replace(/\s+/g, '_')
+                      id: l.id || (l.name || l.popup?.title)?.toLowerCase().replace(/\s+/g, '_'),
+                      image: l.image || l.popup?.image || null,
+                      banner: l.banner || l.popup?.banner || null
                     }));
                     addSavedLocations(normalized as SavedLocation[]);
                   }

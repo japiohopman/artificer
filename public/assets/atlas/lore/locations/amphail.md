@@ -1,4 +1,4 @@
-##Amphail
+## Amphail
 
 Named for its founder, a former warlord of Waterdeep,
 the small town of Amphail is home to just over seven

@@ -1,4 +1,5 @@
-##Waterdeep
+## Waterdeep
+---
 
 Rising from the shores of its deep harbor to ring the
 great mountain standing tall out of the Sea of Swords

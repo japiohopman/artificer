@@ -3,6 +3,8 @@ import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { GameIcon } from '../../../game_icons';
 
+import { cn } from '../../../lib/utils';
+
 interface ChatInputProps {
   message: string;
   setMessage: (msg: string) => void;
@@ -11,7 +13,7 @@ interface ChatInputProps {
 }
 
 export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSend, placeholder }) => {
-  const { isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded } = useUIStore();
+  const { isAdvancedRollerOpen, setIsAdvancedRollerOpen, chatExpanded, setChatExpanded, isMapLegendOpen, setIsMapLegendOpen } = useUIStore();
   const { isDiceReady } = useGameStore();
 
   return (
@@ -27,7 +29,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
           title="Toggle Advanced Roller"
           aria-label="Toggle Advanced Roller"
         >
-          <GameIcon name="dice" size={16} />
+          <GameIcon name="dice_roll" size={16} />
         </button>
 
         <div className="relative flex-1 flex items-center">
@@ -46,8 +48,30 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
             title="Send Message"
             aria-label="Send Message"
           >
-            <GameIcon name="send" size={14} />
+            <GameIcon name="sent" size={14} />
           </button>
+        </div>
+
+        <div className="flex flex-col gap-2 shrink-0 ml-1">
+           <button
+             onClick={() => setIsMapLegendOpen(!isMapLegendOpen)}
+             className={cn(
+                "pointer-events-auto w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all shadow-xl cursor-pointer active:scale-90",
+                isMapLegendOpen 
+                  ? "bg-dragon-gold border-dragon-red text-dragon-darkRed" 
+                  : "bg-parchment-200 border-dragon-gold text-dragon-red hover:bg-parchment-300"
+              )}
+             title="Toggle Map Legend"
+           >
+              <GameIcon name="legend" size={16} />
+           </button>
+           <button
+             onClick={() => setChatExpanded(!chatExpanded)}
+             className="pointer-events-auto w-8 h-8 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer active:scale-90"
+             title={chatExpanded ? "Collapse Chat" : "Expand Chat"}
+           >
+              <GameIcon name="chat_interface" size={14} />
+           </button>
         </div>
       </div>
     </div>

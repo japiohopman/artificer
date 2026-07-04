@@ -1,4 +1,4 @@
-##Yartar
+## Yartar
 
 Situated in the fork where the Rivers Surbrin and Dessarin join near the Evermoor Way, Yartar is a fortified
 town that, were it not for its own petty, internal squabbles, might wield more influence among its fellows

@@ -35,7 +35,7 @@ interface MapLegendProps {
 
 export const MapLegend: React.FC<MapLegendProps> = ({ currentZoom }) => {
   return (
-    <div className="flex flex-row items-center gap-2 overflow-x-auto no-scrollbar py-2 px-3 bg-black/40 backdrop-blur-md rounded-lg border border-dragon-gold/30 shadow-2xl">
+    <div className="flex flex-wrap items-center justify-center gap-2 py-2 px-3 bg-black/40 backdrop-blur-md rounded-lg border border-dragon-gold/30 shadow-2xl max-w-2xl">
       {ATLAS_CATEGORIES.map((cat) => {
         // Synchronized with WorldMap.tsx tiers
         let isVisible = false;

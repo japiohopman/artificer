@@ -1,4 +1,4 @@
-##Elturgard
+## Elturgard
 
 Ah Elturgard! If any place in the world exemplifies
 humanity's potential for greatness, it is this nascent
@@ -96,7 +96,7 @@ matters of importance to the nation. Though it has many
 paladins and clerics in its ranks, outside assistance is
 essential to the continued defense of the realm. 
 
-###THE COMPANION
+### THE COMPANION
 The second sun that sits directly above Elturel burns
 night and day. This orb is commonly called the Companion, but some ascribe it to one deity or another. Where
 the natural sun journeys across the sky and disappears
@@ -113,7 +113,7 @@ It might be fa irly said that every land touched by its light
 is now under "Elturel's Shield," but such claims raise
 hackles among Elturgard's neighbors
 
-###THE CREED RESOLUTE
+### THE CREED RESOLUTE
 With no clear sign of the source of the Companion and
 so many faithful arriving in Elturgard each day, the first
 High Observer brought together a cadre of paladins and
@@ -141,7 +141,7 @@ lives in defense of their people, and the folk of Elturgard
 know it. Disrespect the Creed, and it isn't the Creed's
 wrath you face, but that of the local citizenry. 
 
-###ELTUREL
+### ELTUREL
 Elturel is a city on a hill. It stands overlooking the River
 Chionthar, constantly illuminated by the Companion.
 A major location along the trade route through the
@@ -178,7 +178,7 @@ those who would engage in thievery must be especially
 careful and shrewd to succeed. 
 
 
-###OTHER COMMUNITIES
+### OTHER COMMUNITIES
 A few other major settlements of note are located within
 the borders of Elturgard. I describe three of them
 briefly here.

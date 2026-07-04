@@ -1,4 +1,4 @@
-##Najara
+## Najara
 
 Gone are the days when the tales of a kingdom of serpents were rumor and hearsay, stories concocted by
 adventurers and travelers who strayed far off the path
@@ -85,7 +85,7 @@ protect them against the vigilance of others until they
 are ready to put their plans, whatever they may be,
 into fruition.
 
-###THE COURT OF THE SERPENT KING
+### THE COURT OF THE SERPENT KING
 I was imprisoned in Ss'khanaja, a mostly subterranean
 city on the Winding Water, where gathers the court of
 Kingjarant.
@@ -124,7 +124,7 @@ the vestiges of the ancient serpent deity once worshiped at Ss'thar'tiss'ssun, l
 though at court they frequently lurk in the background,
 simply watching. 
 
-###SERPENT HILLS
+### SERPENT HILLS
 The Serpent Hills is a desolate region of red clay hills
 and deep, treacherous ravines, featuring stretches of
 rough, ridged land surrounding tall mesas. Only scrub
@@ -144,7 +144,7 @@ settlements inside the large underground chambers
 connected by the tunnels, excavations many centuries in age.
 
 
-###MARSH OF CHELIMBER
+### MARSH OF CHELIMBER
 I didn't have occasion to travel to Chelimber before my
 "sojourn" with the Narajan court, but I did ask Dhosun
 about the place. It was through those questions that
@@ -158,7 +158,7 @@ Chelimber is solidly within the grasp of Najara today.
 Though each tribe of lizardfolk is dominated by a chieftain from among their kind, each of those leaders has
 sworn fealty to the King of Najara. 
 
-###FOREST OF WYRMS
+### FOREST OF WYRMS
 In the end, it was through the Forest of Wyrms that I
 fled Najara, though Dhosun advised me against doing
 so. Ultimately, I chose it for the same reason he tried

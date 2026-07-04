@@ -1,4 +1,4 @@
-##Hardbuckler
+## Hardbuckler
 
 At the southern edge of the hills lies the walled settlement of Hardbuckler. It is a town of mostly gnomes, with
 the occasional human, halfling, or ha lf-elf among their

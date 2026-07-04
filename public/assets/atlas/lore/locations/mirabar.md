@@ -1,4 +1,4 @@
-##Mirabar
+## Mirabar
 
 Mirabar is a human city that rests atop dwarven caverns. On the surface, humans dominate the population,
 with some dwarves mixed in, and a handful of gnomes

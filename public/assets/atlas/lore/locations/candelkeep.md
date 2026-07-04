@@ -1,4 +1,4 @@
-##Candlekeep
+## Candlekeep
 
 The great keep never fails to take my breath away: it
 stands on a volcanic crag a hundred or so feet from the
@@ -31,7 +31,7 @@ access to and from the outside world. The route extends
 from Beregost, leagues away, and winds a lonely path
 out on the peninsula where Candlekeep stands. 
 
-###THE GREAT LIBRARY
+### THE GREAT LIBRARY
 Candlekeep is the largest repository of lore and writings
 in all the Rea lms (although my scholarly kin in Evereska
 don't like being reminded of that). It was once the home
@@ -118,7 +118,7 @@ bath, and sleeping quarters, and arranges for each to
 meet a monk who will help to plan and then supervise
 the seeker's visit to the library. 
 
-###THE COURT OF AIR
+### THE COURT OF AIR
 
 
 The Court of Air is aptly named. This cobbled courtyard
@@ -161,7 +161,7 @@ towers and having bridges to more distant ones, the
 chambers that guests can reach in the necessariums
 don't allow access to the rest of the keep. 
 
-###WITHIN THE KEEP
+### WITHIN THE KEEP
 
 
 Unfortunately, the foregoing is the extent of the information I have about the interior of Candlekeep. My
@@ -188,7 +188,7 @@ the great fortification to survive entire seasons- if not
 years- of siege. 
 
 
-###THE AVOWED
+### THE AVOWED
 
 
 The monks of Candlekeep are all cloistered scholars.
@@ -276,7 +276,7 @@ such places isn't enough of a reward, some Avowed are
 empowered to offer inducements such as procedures for creating magic items and written copies of rare spells to
 sweeten the deal. 
 
-###SERVICES
+### SERVICES
 
 
 Those who come to Candlekeep are permitted to remain

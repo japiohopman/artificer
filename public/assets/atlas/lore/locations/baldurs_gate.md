@@ -1,4 +1,4 @@
-##Baldur's gate
+## Baldur's gate
 
 On the Coast Way, some forty miles upstream along the
 River Chionthar from the Sword Coast, lies the bustling
@@ -61,7 +61,7 @@ outsiders to identify a clear leader of the group, but in no
 small measure to the shameful lack of effort on the part
 of the rulers of the city to protect its people. 
 
-###Upper city
+### Upper city
 
 The Upper City of Baldur's Gate is the enclosed haven
 of the city's nobility- the patriars. Sitting atop their hill,
@@ -98,7 +98,7 @@ a patriar must use Baldur's Gate to pass between the
 Upper and Lower Cities. Bear this in mind when trying
 to sneak from one part of the city to the next.
 
-###Lower City
+### Lower City
 
 Hard against the harbor lies the Lower City, where
 stone, slate-roofed houses stand (sometimes unsteadily),
@@ -127,7 +127,7 @@ Bloomridge district has a number of such homes, and
 some of the patriars grumble that these merchants are
 growing too comfortable with their new status. 
 
-###Outer City
+### Outer City
 
 Outside the walls, there are no laws barring construction or settlement, and so those who are too poor to
 reside within the city or to purchase property have

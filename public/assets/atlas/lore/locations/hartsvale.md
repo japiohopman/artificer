@@ -1,4 +1,4 @@
-##Hartsvale
+## Hartsvale
 
 I have been to Hartsvale only once, and found it surpassingly beautiful each time. Its wonders a re wild
 and untamed, with even the so-called civilization of
@@ -74,7 +74,7 @@ Hall. Fell beasts aplenty make their lairs in out-of-theway places across the va
 often come down out of the mountains. 
 
 
-###CASTLE HARTWICK AND STAGWICK
+### CASTLE HARTWICK AND STAGWICK
 
 
 Between two branches of the Clear Whirl River lies
@@ -87,7 +87,7 @@ merchants. Perhaps a third of the merchants who journey to Hartsvale choose to u
 the fiefdoms of the ea rls, who pay more to encourage
 this behavior.
 
-###THE OGRES
+### THE OGRES
 
 For reasons I can't fathom, Harstvale and its surrounding mountain ranges host many tribes of
 ogres- indeed, not mere family groups, but whole

@@ -1,4 +1,4 @@
-##Ford Tamal
+## Ford Tamal
 
 For many years, a ruined keep on the southern bank
 dubbed Bridgefort served as the campground for caravans passing over the bridge. Whether going north or

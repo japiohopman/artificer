@@ -1,4 +1,4 @@
-##Citadel Adbar
+## Citadel Adbar
 
 In the extreme north of FaerO.n, near the Cold Wood,
 lie the Ice Mountains. There, in the bitter cold, stands
@@ -87,7 +87,7 @@ Like the rest of Citadel Adbar, this gate has never been
 breached. Mention the idea of that happening to an
 Adbarran dwarf, if you're looking to get a laugh. 
 
-###DENIZENS OF DARKHOLD
+### DENIZENS OF DARKHOLD
 I didn't see the Pereghost during my visit, so I can't
 confirm anything about the man. But the seneschal
 and everyone else with whom I conversed spoke of

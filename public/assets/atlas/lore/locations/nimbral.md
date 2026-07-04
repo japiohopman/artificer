@@ -1,4 +1,4 @@
-##Nimbral
+## Nimbral
 
 Ever seen an island simply disappear? That is, supposedly, what happened to Nimbral at about the time Lantan drowned, or so they say. Four ship captains of
 my acquaintance claim to have seen it one moment, and

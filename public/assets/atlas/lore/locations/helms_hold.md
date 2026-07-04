@@ -1,4 +1,4 @@
-##Helms Hold
+## Helms Hold
 
 Helm's Hold has stood as a place of watchfulness and
 protection for generations. Ever since its foundation by
@@ -28,7 +28,7 @@ from the very crypts of the temple, and tentacled, jelly-skinned things whose or
 the aid of adventurers from nearby Neverwinter, all
 were defeated and Helm's Hold at last cleansed. 
 
-###ORDER OF THE GILDED EYE
+### ORDER OF THE GILDED EYE
 Among those stalwarts who saved Helm's Hold was a
 member of the Order of the Gauntlet. This man was
 Javen Tarmikos, and seeing the horrors unleashed on
@@ -83,7 +83,7 @@ the Gilded Eye controls Helm's Hold now. If you hide
 evil in your heart, or if there is the whiff of something
 otherworldly about you, ride on. You'll find no sanctuary there.
 
-###PLACES AND PEOPLE OF THE HOLD
+### PLACES AND PEOPLE OF THE HOLD
 Helm's Hold is still a relatively small settlement: a
 handful of streets that encircle a central marketplace,
 with sturdy stone-and-timber embankment walls all

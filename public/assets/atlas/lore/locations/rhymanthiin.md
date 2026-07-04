@@ -1,6 +1,6 @@
-##Rhymanthiin
+## Rhymanthiin
 
-###HIDDEN CITY OF HOPE
+### HIDDEN CITY OF HOPE
 Stories persist that Faer'tel'miir, an ancient city of
 Miyeritar, was restored by High Magic sometime in the
 last century- perhaps even before the Spellplague- up

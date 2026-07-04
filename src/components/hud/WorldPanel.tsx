@@ -145,11 +145,11 @@ export const WorldPanel: React.FC = () => {
         <div 
           className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden"
         >
-          {displayLocation?.image ? (
+          {(displayLocation?.image || displayLocation?.banner) ? (
             <div 
-              className="absolute inset-0 z-0 bg-cover bg-no-repeat transition-all duration-1000"
+              className="absolute inset-0 z-0 bg-no-repeat transition-all duration-1000"
               style={{
-                backgroundImage: `url(${displayLocation.image})`,
+                backgroundImage: `url(${displayLocation.image || displayLocation.banner})`,
                 backgroundSize: '100% 200%',
                 backgroundPosition: isNight ? 'bottom center' : 'top center'
               }}
@@ -376,77 +376,6 @@ export const WorldPanel: React.FC = () => {
                      </div>
                    </div>,
                    document.body
-                 )}
-               </div>
-            </div>
-          </div>
-
-          {/* Travel Status Widget */}
-          {isTraveling && destination && travelStats && (
-            <div className="bg-dragon-darkRed text-white p-4 rounded border-2 border-dragon-gold shadow-xl space-y-3 animate-in fade-in slide-in-from-top-2">
-               <div className="flex items-center justify-between">
-                  <span className="text-[9px] font-black uppercase tracking-[0.2em] text-dragon-gold">Expedition Progress</span>
-                  <div className="flex items-center gap-2">
-                     <div className="w-2 h-2 rounded-full bg-dragon-gold animate-ping" />
-                     <span className="text-[9px] font-black uppercase tracking-widest">En_Route</span>
-                  </div>
-               </div>
-               
-               <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] font-header uppercase">
-                     <span className="opacity-60">To:</span>
-                     <span className="font-bold text-dragon-gold">{destination.name}</span>
-                  </div>
-                  <div className="w-full h-2 bg-black/40 rounded-full overflow-hidden border border-white/5">
-                     <motion.div 
-                        initial={false}
-                        animate={{ width: `${travelProgress * 100}%` }}
-                        className="h-full bg-dragon-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]" 
-                     />
-                  </div>
-                  <div className="flex justify-between text-[8px] font-black uppercase tracking-tighter opacity-40">
-                     <span>Origin</span>
-                     <span>{Math.round(travelProgress * 100)}% Complete</span>
-                     <span>Arrival</span>
-                  </div>
-               </div>
-
-               <div className="grid grid-cols-2 gap-2 pt-2 border-t border-white/10">
-                  <div className="flex flex-col">
-                    <span className="text-[7px] uppercase font-black text-white/40">Speed</span>
-                    <span className={cn("text-[10px] font-bold", travelStats.isOverburdened ? "text-red-400" : "text-white")}>
-                      {travelStats.speed.toFixed(1)} mph
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-end">
-                    <span className="text-[7px] uppercase font-black text-white/40">Est. Arrival</span>
-                    <span className="text-[10px] font-bold text-dragon-gold">
-                      {travelStats.eta > 60 
-                        ? `${Math.floor(travelStats.eta / 60)}h ${travelStats.eta % 60}m` 
-                        : `${travelStats.eta}m`}
-                    </span>
-                  </div>
-               </div>
-               
-               <div className="flex justify-center items-center pt-1 gap-2">
-                  <span className="text-[8px] font-black text-white/30 uppercase tracking-[0.2em]">
-                    {travelStats.miles.toFixed(1)} Miles Remaining
-                  </span>
-                  <button 
-                    onClick={() => useWorldStore.getState().setIsFastForwarding(!useWorldStore.getState().isFastForwarding)}
-                    className={cn("text-[8px] px-2 py-0.5 rounded border uppercase font-black transition-colors", useWorldStore.getState().isFastForwarding ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold" : "border-white/30 text-white/50 hover:text-white")}
-                  >
-                    {useWorldStore.getState().isFastForwarding ? 'Normal Pace' : 'Fast Forward'}
-                  </button>
-               </div>
-            </div>
-          )}
-
-
-
-          {/* Dynamic Lore System / Schema Driven Rendering */}
-          <div className="space-y-2">
-             {displayLocation && Object.entries({
                history: 'History & Lore',
                government: 'Government',
                ruler: 'Ruler',
@@ -499,10 +428,34 @@ export const WorldPanel: React.FC = () => {
                      <p className="text-xs text-parchment-800 font-serif">{String(data)}</p>
                    )}
                  </div>
-               );
-             })}
+                 Enter Location
+               </button>
+             ) : (
+               !isTraveling ? (
+                 <button 
+                   id="set-course-btn"
+                   onClick={() => setShowTravelJournal(true)}
+                   className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
+                 >
+                   <GameIcon name="compass" size={14} color="#FFFFFF" />
+                   Plan Expedition
+                 </button>
+               ) : destination?.id === displayLocation.id ? (
+                 <button 
+                   onClick={() => stopTravel()}
+                   className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
+                 >
+                   <GameIcon name="close" size={14} color="#FFFFFF" />
+                   Abort Travel
+                 </button>
+               ) : (
+                  <div className="text-center text-xs font-bold text-dragon-red/60 uppercase">
+                    Traveling to {destination?.name}...
+                  </div>
+               )
+             )}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
