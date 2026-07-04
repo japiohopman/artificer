@@ -8,6 +8,7 @@ Skill Agent / Jules Agent
 
 ## Architecture
 ### Registry/Slot Pattern
+![Inventory Registry](../screenshots/49.png)
 - **Item Registry**: A character's save contains a `Record<string, ItemInstance>` of every unique item they own.
 - **Containers**: Objects (Backpacks, Chests) that contain a list of `InventorySlot` objects.
 - **Slots**: Refer to an `itemId` from the Registry.

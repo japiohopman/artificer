@@ -23,6 +23,10 @@ A "Ritual Arena" game for social interactions or minor wagers.
     - Tracks score and displays narrative results (e.g., "Agreement Secured").
 - **Integration**: Managed via `rpsState` in `useGameStore.ts`.
 
+### 3. Three-Dragon Ante
+A strategic card game played in taverns across Faerûn.
+![Three-Dragon Ante](../screenshots/screenshot_three_dragon_ante.png)
+
 ## State Management (`useGameStore.ts`)
 
 ### `coinFlipState`

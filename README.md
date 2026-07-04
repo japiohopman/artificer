@@ -23,6 +23,10 @@ Arcane Codex is forged and maintained by a specialized collective of AI agents, 
 ## ✨ Key Features
 
 - **🛡️ Character Creator & Vault**: A guided pipeline for forging legendary heroes, complete with attribute rolling, visual manifestation, and secure storage via Firebase.
+  <div align="center">
+    <img width="400" alt="Character Creation" src="docs/screenshots/7.png" />
+    <img width="400" alt="Character Stats" src="docs/screenshots/3.png" />
+  </div>
 - **🗺️ Interactive World Atlas**: A high-resolution, Leaflet-powered spatial interface for Faerûn, featuring 7 zoom levels, dynamic visibility tiers, and regional exploration.
 - **🎒 Inventory v2 (Registry-Based)**: A sophisticated inventory system utilizing a Registry/Slot pattern. It supports complex equipment rules, containers (backpacks, chests), and drag-and-drop logistics via `dnd-kit`.
 - **📜 Campaign Journal**: A central repository for the party's journey, including a diary, quest log (Main/Side/Tasks), bestiary, and lore codex.
