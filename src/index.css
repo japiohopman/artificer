@@ -192,6 +192,15 @@
   .markdown-body em {
     @apply italic;
   }
+  .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    @apply text-dragon-red font-header mt-4 mb-2;
+  }
+  .markdown-content hr {
+    @apply border-dragon-gold my-4 border-t-2;
+  }
+  .markdown-content p, .markdown-content li {
+    @apply text-parchment-900;
+  }
 }
 
 .party-marker-smooth {

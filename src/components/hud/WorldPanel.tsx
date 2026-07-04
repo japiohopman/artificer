@@ -201,30 +201,7 @@ export const WorldPanel: React.FC = () => {
             </div>
           )}
 
-          {/* Time & Date */}
-          <div className="bg-white/40 border border-dragon-gold/20 rounded shadow-inner p-5 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-2 opacity-5 group-hover:opacity-10 transition-opacity">
-               <GameIcon name="compass" size={64} color="#8B0000" />
-            </div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-dragon-red/5 flex items-center justify-center border border-dragon-red/10">
-                  <GameIcon name="compass" size={16} color="#8B0000" />
-                </div>
-                <span className="text-[10px] font-black uppercase text-dragon-red/60 tracking-[0.2em]">Temporal Node</span>
-              </div>
-              <div className="flex justify-between items-end">
-                <div className="flex flex-col">
-                   <span className="text-4xl font-header font-black text-dragon-darkRed leading-none tabular-nums">{formatTime(gameTime)}</span>
-                   <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest mt-1">Solar Cycle Progression</span>
-                </div>
-                <div className="flex flex-col items-end">
-                   <span className="text-xl font-header font-bold text-dragon-red leading-none">Day {gameDay}</span>
-                   <span className="text-[8px] font-black text-parchment-300 uppercase tracking-tighter">Era_Chronicle</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           {/* Current Location */}
           <div className="space-y-4">

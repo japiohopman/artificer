@@ -21,16 +21,17 @@ export const TemporalWidget: React.FC = () => {
     return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
   };
 
-  const getWeatherIcon = (type: WeatherType): GameIconName => {
+  const getWeatherIconUrl = (type: WeatherType): string => {
+    let slug = 'clear-day';
     switch (type) {
-      case 'Sunny': return 'tarot_19_the_sun';
-      case 'Rainy': return 'waters';
-      case 'Cloudy': return 'city'; 
-      case 'Stormy': return 'attack';
-      case 'Snowy': return 'arctic';
-      case 'Foggy': return 'package';
-      default: return 'star';
+      case 'Sunny': slug = 'clear-day'; break;
+      case 'Rainy': slug = 'rain'; break;
+      case 'Cloudy': slug = 'cloudy'; break; 
+      case 'Stormy': slug = 'thunderstorms'; break;
+      case 'Snowy': slug = 'snow'; break;
+      case 'Foggy': slug = 'fog'; break;
     }
+    return `https://cdn.jsdelivr.net/npm/@meteocons/svg/fill/${slug}.svg`;
   };
 
   return (
@@ -43,7 +44,11 @@ export const TemporalWidget: React.FC = () => {
             animate={{ rotate: isNight() ? 180 : 0 }}
             transition={{ type: 'spring', damping: 20 }}
           >
-            <GameIcon name={isNight() ? "tarot_18_the_moon" : "tarot_19_the_sun"} size={14} className="text-dragon-red" />
+            <img 
+              src={`https://cdn.jsdelivr.net/npm/@meteocons/svg/fill/${isNight() ? 'clear-night' : 'clear-day'}.svg`} 
+              alt={isNight() ? "Night" : "Day"} 
+              className="w-5 h-5 opacity-90 drop-shadow-sm" 
+            />
           </motion.div>
           <span className="text-lg font-mono text-dragon-darkRed tracking-[0.1em] font-black tabular-nums">
             {formatTime(gameTime)}
@@ -65,7 +70,7 @@ export const TemporalWidget: React.FC = () => {
       <div className="flex flex-col items-center border-l border-dragon-gold/20 pl-4">
         <span className="text-[8px] font-black text-dragon-darkRed/40 uppercase tracking-[0.2em] mb-0.5">Weather</span>
         <div className="flex items-center gap-1">
-          <GameIcon name={getWeatherIcon(weather)} size={12} className="text-dragon-red/60" />
+          <img src={getWeatherIconUrl(weather)} alt={weather} className="w-5 h-5 opacity-80" />
           <span className="text-[10px] font-bold text-dragon-darkRed/80 uppercase">{weather}</span>
         </div>
       </div>

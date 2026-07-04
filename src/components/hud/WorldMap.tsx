@@ -121,8 +121,9 @@ const MapEvents = ({
     onMapInstance(map);
     if (map) {
       onBoundsChange(map.getBounds());
+      onZoomChange(map.getZoom());
     }
-  }, [map, onMapInstance, onBoundsChange]);
+  }, [map, onMapInstance, onBoundsChange, onZoomChange]);
 
   useMapEvents({
     click: () => {
@@ -304,12 +305,7 @@ export const WorldMap: React.FC = () => {
     setMapZoom(currentZoom);
   }, [currentZoom, setMapZoom]);
 
-  // Keep state in sync with partyLocation zoom changes
-  React.useEffect(() => {
-    if (partyLocation?.zoom) {
-      setCurrentZoom(partyLocation.zoom);
-    }
-  }, [partyLocation?.zoom]);
+
 
   // Progressive Data Loading
   React.useEffect(() => {
