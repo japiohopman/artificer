@@ -5,6 +5,7 @@ The **Tactical Combat Engine** provides a grid-based interface for resolving enc
 ## 🧩 Spatial Mechanics
 
 ### 1. The Tactical Grid (`CombatGrid.tsx`)
+![Tactical Overlay](../screenshots/tactical_overlay.png)
 - **Dimensions**: 12 x 8 grid.
 - **Scale**: 1 Square = 5 Feet (60px in the UI).
 - **Coordinate System**: `[x, y]` integer-based grid.

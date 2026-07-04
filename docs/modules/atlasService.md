@@ -12,6 +12,7 @@ Jules Agent
 - Local `/public/assets/atlas` directory
 
 ## Architecture
+![Map Interface](../screenshots/hud_map_interface.png)
 1. **Local Resolution**: Attempts to fetch from `/assets/atlas/...` first.
 2. **Path Normalization**: Handles naming inconsistencies (e.g., `_` vs `-`).
 3. **Remote Proxy**: Falls back to GitHub Raw via `server.ts` proxy.

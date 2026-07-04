@@ -52,6 +52,8 @@ Displays all unlocked lore, sourced from Markdown files in `public/assets/atlas/
 ## 🎨 UI & Layout
 The Journal is designed to feel like an authentic D&D campaign journal.
 
+![Journal Interface](../screenshots/hud_chat_interface.png)
+
 ### Typography
 - **Diary Style**: Decorative fantasy fonts (e.g., *Cinzel*, *Cormorant Garamond*, *Uncial Antiqua*) for day titles, chapters, and summaries.
 - **Quest Log**: Highly legible UI fonts for missions, tasks, and status information to ensure quick scannability.
