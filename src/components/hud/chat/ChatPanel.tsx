@@ -4,12 +4,14 @@ import { useGameStore } from '../../../store/useGameStore';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore, Emotion } from '../../../store/useCharacterStore';
 import { useChatStore } from '../../../store/useChatStore';
+import { useJournalStore } from '../../../store/useJournalStore';
 import { narratorService } from '../../../services/narratorService';
 import { ChatHistory } from './ChatHistory';
 import { ChatInput } from './ChatInput';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../../lib/utils';
 import { ActionPanel } from '../game/ActionPanel';
+import { MapLegend } from '../game/MapLegend';
 import { GameIcon } from '../../../game_icons';
 
 interface ChatMessage {
@@ -26,8 +28,9 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   const { getActiveBackground, isNight, currentLocation, mapZoom } = useWorldStore();
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
-  const { setChatExpanded, gameMode } = useUIStore();
+  const { setChatExpanded, gameMode, isWorldPanelOpen, searchQuery, setSearchQuery } = useUIStore();
   const { messages: history, isThinking } = useChatStore();
+  const { unlockedLore, unlockLore } = useJournalStore();
 
   const bgUrl = getActiveBackground();
   
@@ -129,6 +132,46 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 <div className="p-0">
                   <ActionPanel />
                 </div>
+              ) : isWorldPanelOpen && !isCollapsed ? (
+                <div className="flex flex-col h-full">
+                   <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10 relative">
+                      <div className="flex items-center gap-4 min-w-0 flex-1">
+                        <div className="flex flex-col">
+                          <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Map_Overlay</span>
+                          <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
+                            {currentLocation?.name || 'World Atlas'}
+                          </span>
+                        </div>
+                        <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
+                        <div className="flex-1 overflow-x-auto no-scrollbar pr-4">
+                          <MapLegend currentZoom={mapZoom} />
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <div className="relative group">
+                          <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search Atlas..."
+                            className="bg-parchment-200 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[10px] font-bold text-dragon-red placeholder:text-dragon-red/30 focus:border-dragon-gold outline-none w-48 transition-all"
+                          />
+                          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40 flex items-center gap-1">
+                             {searchQuery && (
+                               <button onClick={() => setSearchQuery('')} className="hover:text-dragon-red transition-colors">
+                                 <GameIcon name="close" size={10} />
+                               </button>
+                             )}
+                             <GameIcon name="search" size={12} />
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                   <div className="flex-1 overflow-hidden">
+                     <ChatHistory history={history} />
+                   </div>
+                </div>
               ) : (
                 <div className="flex flex-col h-full">
                    {/* Map/Exploration Hub Extras */}
@@ -154,10 +197,17 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                         <div className="relative group">
                           <input
                             type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Search Atlas..."
                             className="bg-parchment-200 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[10px] font-bold text-dragon-red placeholder:text-dragon-red/30 focus:border-dragon-gold outline-none w-48 transition-all"
                           />
-                          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40">
+                          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40 flex items-center gap-1">
+                             {searchQuery && (
+                               <button onClick={() => setSearchQuery('')} className="hover:text-dragon-red transition-colors">
+                                 <GameIcon name="close" size={10} />
+                               </button>
+                             )}
                              <GameIcon name="search" size={12} />
                           </div>
                         </div>
@@ -196,6 +246,19 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
              >
                Open Command Matrix
              </button>
+          </div>
+        )}
+
+        {gameMode !== 'combat' && isWorldPanelOpen && isCollapsed && (
+          <div className="px-6 py-2 flex items-center gap-4 pointer-events-auto overflow-x-auto no-scrollbar">
+            <div className="flex flex-col shrink-0">
+              <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Atlas_Legend</span>
+              <span className="text-[10px] font-header font-black text-dragon-red uppercase tracking-widest">
+                {currentLocation?.name || 'World Map'}
+              </span>
+            </div>
+            <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
+            <MapLegend currentZoom={mapZoom} />
           </div>
         )}
       </div>

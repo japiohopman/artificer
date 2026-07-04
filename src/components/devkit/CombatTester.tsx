@@ -152,7 +152,12 @@ export const CombatTester: React.FC = () => {
               {characters.map(char => (
                 <div key={char.id} className="p-3 bg-blue-500/5 border border-blue-500/20 rounded-xl flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-black/40 border border-white/10 overflow-hidden shrink-0">
-                    <img src={char.avatarUrl || char.imageUrl} className="w-full h-full object-cover" />
+                    <img
+                      src={char.avatarUrl || char.imageUrl}
+                      className="w-full h-full object-cover"
+                      alt={char.name}
+                      title={char.name}
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-[12px] font-black text-white uppercase truncate">{char.name}</div>
@@ -188,7 +193,14 @@ export const CombatTester: React.FC = () => {
                       className="p-3 bg-red-500/5 border border-red-500/20 rounded-xl flex items-center gap-3 group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-black/40 border border-white/10 overflow-hidden shrink-0">
-                        {monster.imageUrl && <img src={monster.imageUrl} className="w-full h-full object-cover" />}
+                        {monster.imageUrl && (
+                          <img
+                            src={monster.imageUrl}
+                            className="w-full h-full object-cover"
+                            alt={monster.name}
+                            title={monster.name}
+                          />
+                        )}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="text-[12px] font-black text-white uppercase truncate">{monster.name}</div>

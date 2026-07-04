@@ -2,6 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useGameStore } from '../../../store/useGameStore';
 import { useUIStore } from '../../../store/useUIStore';
+import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
@@ -10,6 +11,7 @@ import { checkLoS, findPath, getDistance } from '../../../lib/combatUtils';
 export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction, toggleDoor } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
+  const { partyLocation, weather, gameTime } = useWorldStore();
   const { isTargeting, targetingAction, setIsTargeting, setTargetingAction } = useUIStore();
   
   const activeChar = characters.find(c => c.id === activeCharacterId);
@@ -133,8 +135,46 @@ export const CombatGrid: React.FC = () => {
     return cells;
   }, [isTargeting, targetingAction, playerPos, grid]);
 
+  const isNight = gameTime < 360 || gameTime > 1200;
+  const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
+
+  // Dynamic Background selection based on location
+  const getDynamicBg = () => {
+    if (terrain.includes('forest') || terrain.includes('wood')) return 'bg-[#0a0f0a]';
+    if (terrain.includes('mountain') || terrain.includes('peak')) return 'bg-[#1a1a1c]';
+    if (terrain.includes('dungeon') || terrain.includes('cave') || terrain.includes('underdark')) return 'bg-[#050505]';
+    if (terrain.includes('water') || terrain.includes('sea') || terrain.includes('lake')) return 'bg-[#080c14]';
+    if (terrain.includes('desert') || terrain.includes('waste')) return 'bg-[#1c1612]';
+    return 'bg-stone-950';
+  };
+
   return (
-    <div className="w-full h-full relative bg-stone-950 overflow-hidden flex items-center justify-center font-body">
+    <div className={cn(
+      "w-full h-full relative overflow-hidden flex items-center justify-center font-body transition-colors duration-1000",
+      getDynamicBg()
+    )}>
+      {/* Region Specific Texture Overlay */}
+      <div className={cn(
+        "absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay",
+        terrain.includes('forest') ? "bg-[radial-gradient(circle_at_center,_#228B22_0%,_transparent_70%)]" :
+        terrain.includes('mountain') ? "bg-[radial-gradient(circle_at_center,_#444_0%,_transparent_70%)]" :
+        "bg-transparent"
+      )} />
+
+      {/* Atmospheric Effects */}
+      {weather === 'Rainy' && (
+        <div className="absolute inset-0 z-50 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/rain.png')] animate-[pulse_2s_infinite]" />
+      )}
+      {weather === 'Foggy' && (
+        <div className="absolute inset-0 z-50 pointer-events-none opacity-40 bg-white/5 blur-3xl animate-pulse" />
+      )}
+
+      {/* Lighting Layer */}
+      <div className={cn(
+        "absolute inset-0 z-[60] pointer-events-none transition-opacity duration-1000",
+        isNight ? "bg-blue-950/30" : "bg-orange-500/5 opacity-10"
+      )} />
+
       {/* Tactical Background Grid */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"

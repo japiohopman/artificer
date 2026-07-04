@@ -102,6 +102,8 @@ export const CharacterPanel: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as CharacterTab)}
+                title={tab.label}
+                aria-label={tab.label}
                 className={cn(
                   "flex-1 flex flex-col items-center py-3 px-1 transition-all relative border-r border-parchment-300 last:border-r-0",
                   activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
@@ -116,6 +118,8 @@ export const CharacterPanel: React.FC = () => {
           <div className="bg-white/40 border-b border-parchment-300 py-2 px-2 flex items-center justify-between">
             <button 
               onClick={prevCharacter}
+              title="Previous Character"
+              aria-label="Previous Character"
               className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
             >
               <ChevronLeft size={16} />
@@ -132,6 +136,8 @@ export const CharacterPanel: React.FC = () => {
 
             <button 
               onClick={nextCharacter}
+              title="Next Character"
+              aria-label="Next Character"
               className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
             >
               <ChevronRight size={16} />
