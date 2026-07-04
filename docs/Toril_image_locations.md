@@ -15,11 +15,10 @@ The generator parses JSON files following the `city.schema.json` or `sub_region.
 - *Other world categories (wetlands, forests, etc.)*
 
 ### Output Assets
-Generated images must be stored alongside their JSON definitions or in a structured asset tree:
-- Images: `public/assets/atlas/world/[category]/[slug]/[slug].webp`
-- Lore (Markdown): `public/assets/atlas/lore/locations/[slug].md`
-
-The locations JSON files include a `"lore"` key pointing to their respective `.md` file, and an `"image"` key pointing to their `.webp` location image.
+Generated images must be stored in:
+- `public/assets/images/world/[category]/[slug]/`
+- Banners: `public/assets/images/world/[category]/[slug]/banner.webp`
+- Locations: `public/assets/images/world/[category]/[slug]/[slug].webp`
 
 ## 3. Image Specifications
 
@@ -46,8 +45,8 @@ The app must ingest the following fields from the location JSON (e.g., `baldurs_
 - `wiki`: Summarized lore for atmosphere.
 - `tags`: (e.g., `["city", "metropolis", "port"]`) - Direct prompt keywords.
 
-### Style Injection
-The app must use the established style:
+### Style Injection (The "Skills" Style)
+The app must use the established style used in the `skills/` directory:
 - **Art Style**: Cinematic, high-fidelity digital painting, Baldur's Gate 3 / Classic D&D style, gritty texture, atmospheric lighting.
 - **Composition**: Epic wide-angle landscape, centered for 3:2, panoramic for 16:9 rows.
 
@@ -59,5 +58,5 @@ Location lore (from the `.md` files) is dynamically rendered in the `WorldPanel`
 
 ## 6. Technical Instructions for Copilot
 - **API**: Use the "Nano Banana" service (configured in the sandbox environment).
-- **Paths**: Ensure all images are saved to `public/assets/atlas/world/` subdirectories matching the atlas structure.
+- **Paths**: Ensure all images are saved to `public/assets/atlas/world/toril/faerun/[type]/[index]/[index].webp` subdirectories matching the atlas structure.
 - **Format**: All outputs must be `.webp`.
