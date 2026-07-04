@@ -18,7 +18,7 @@ The generator parses JSON files following the `city.schema.json` or `sub_region.
 Generated images must be stored in:
 - `public/assets/images/world/[category]/[slug]/`
 - Banners: `public/assets/images/world/[category]/[slug]/banner.webp`
-- Locations: `public/assets/images/world/[category]/[slug]/day.webp` and `night.webp`
+- Locations: `public/assets/images/world/[category]/[slug]/[slug].webp`
 
 ## 3. Image Specifications
 
@@ -34,17 +34,6 @@ Generated images must be stored in:
 - **Quantity**: 2 separate images.
   - `day.webp`: Day version.
   - `night.webp`: Night version.
-
-## 4. Prompt Engineering Logic
-
-### Data Extraction
-The app must ingest the following fields from the location JSON (e.g., `baldurs_gate.json`):
-- `type`: (e.g., "metropolis") - Defines the scale and density.
-- `parent`: (e.g., "cities") - Defines the category context.
-- `title`: (e.g., "Baldur's Gate: Metropolis of the Coast") - The formal descriptor.
-- `description`: Detailed visual context (may contain wiki links).
-- `wiki`: Summarized lore for atmosphere.
-- `tags`: (e.g., `["city", "metropolis", "port"]`) - Direct prompt keywords.
 
 ### Style Injection (The "Skills" Style)
 The app must use the established style used in the `skills/` directory:
@@ -63,5 +52,5 @@ The app must include the following controls:
 
 ## 6. Technical Instructions for Copilot
 - **API**: Use the "Nano Banana" service (configured in the sandbox environment).
-- **Paths**: Ensure all images are saved to `public/assets/images/world/` subdirectories matching the atlas structure.
+- **Paths**: Ensure all images are saved to `public/assets/atlas/world/toril/faerun/[type]/[index]/[index].webp` subdirectories matching the atlas structure.
 - **Format**: All outputs must be `.webp`.
