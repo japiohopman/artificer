@@ -79,6 +79,12 @@ export interface Character {
   matrixUrl?: string;
   dataPath?: string;
   conditions?: string[];
+  inspiration?: boolean;
+  deathSaves?: {
+    successes: number;
+    failures: number;
+  };
+  alliesAndOrganizations?: string;
   actionEconomy?: {
     actions: { current: number; max: number };
     bonusActions: { current: number; max: number };
@@ -158,6 +164,9 @@ interface CharacterState {
   restoreActionEconomy: (characterId: string, isLongRest?: boolean) => void;
   useActionSurge: (characterId: string) => void;
   modifyHp: (characterId: string, amount: number) => void;
+  toggleInspiration: (characterId: string) => void;
+  updateDeathSaves: (characterId: string, successes: number, failures: number) => void;
+  updateAlliesAndOrganizations: (characterId: string, text: string) => void;
   
   addCharacter: (char: Character) => void;
   updateCharacter: (id: string, updates: Partial<Character>) => void;
@@ -417,6 +426,24 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       const newHp = Math.min(char.maxHp, Math.max(0, char.hp + amount));
       return { ...char, hp: newHp };
     })
+  })),
+
+  toggleInspiration: (characterId) => set((state) => ({
+    characters: state.characters.map(char =>
+      char.id === characterId ? { ...char, inspiration: !char.inspiration } : char
+    )
+  })),
+
+  updateDeathSaves: (characterId, successes, failures) => set((state) => ({
+    characters: state.characters.map(char =>
+      char.id === characterId ? { ...char, deathSaves: { successes, failures } } : char
+    )
+  })),
+
+  updateAlliesAndOrganizations: (characterId, alliesAndOrganizations) => set((state) => ({
+    characters: state.characters.map(char =>
+      char.id === characterId ? { ...char, alliesAndOrganizations } : char
+    )
   })),
 
   addCharacter: (char) => set((state) => ({ 
