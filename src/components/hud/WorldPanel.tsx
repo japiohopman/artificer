@@ -22,7 +22,6 @@ export const WorldPanel: React.FC = () => {
     setIsWorldPanelOpen,
     gameMode,
     setIsMonsterProfileOpen,
-    focusedItem,
     setFocusedItem
   } = useUIStore();
 
@@ -132,11 +131,10 @@ export const WorldPanel: React.FC = () => {
       {/* HEADER: Sticky */}
       <div className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden shrink-0">
         {(displayLocation?.image || displayLocation?.banner) ? (
-          <div
           <div 
             className="absolute inset-0 z-0 bg-no-repeat transition-all duration-1000"
             style={{
-              backgroundImage: `url(${displayLocation.image || displayLocation.banner})`,
+              backgroundImage: `url(${displayLocation?.image || displayLocation?.banner})`,
               backgroundSize: '100% 200%',
               backgroundPosition: isNight ? 'bottom center' : 'top center'
             }}
@@ -147,9 +145,6 @@ export const WorldPanel: React.FC = () => {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
 
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-
         <div className="relative z-20 flex flex-col">
           <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-none mb-1 drop-shadow-md">
             {displayLocation ? displayLocation.category || 'Location' : 'Cartographic'}
@@ -158,7 +153,7 @@ export const WorldPanel: React.FC = () => {
             {displayLocation ? displayLocation.name : 'World Atlas'}
           </h2>
         </div>
-        <button
+
         <button 
           onClick={() => setIsWorldPanelOpen(false)}
           className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group relative z-20"
@@ -228,7 +223,6 @@ export const WorldPanel: React.FC = () => {
                 {inspectedLocation ? 'Inspecting_Landmark' : 'Active_Domain'}
               </h3>
               {inspectedLocation && (
-                <button
                 <button 
                   onClick={() => useWorldStore.getState().setInspectedLocation(null)}
                   className="ml-2 text-[8px] bg-dragon-red/10 hover:bg-dragon-red/20 text-dragon-red px-2 py-0.5 rounded-full transition-colors font-black uppercase tracking-tighter"
@@ -273,21 +267,13 @@ export const WorldPanel: React.FC = () => {
              {displayLocation?.region && (
                <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
                   <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest">Regional Cluster</span>
-                  <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation.region}</span>
-               </div>
-             )}
-
-             
-             {displayLocation?.region && (
-               <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
-                  <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest">Regional Cluster</span>
-                  <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation.region}</span>
+                  <span className="text-[10px] font-bold text-dragon-red uppercase">{displayLocation?.region}</span>
                </div>
              )}
 
              {/* Metadata Schema Fields */}
              <div className="mt-6 space-y-4">
-                {Object.entries({
+                {displayLocation && Object.entries({
                    history: 'History & Lore',
                    government: 'Government',
                    ruler: 'Ruler',
@@ -309,7 +295,6 @@ export const WorldPanel: React.FC = () => {
                   const data = (displayLocation as any)[key];
                   if (!data || (Array.isArray(data) && data.length === 0) || (typeof data === 'object' && Object.keys(data).length === 0)) return null;
 
-                  
                   return (
                     <div key={key} className="pt-4 border-t border-dragon-red/5">
                       <h4 className="text-[10px] font-black uppercase tracking-widest text-dragon-red mb-2 flex items-center gap-2">
@@ -347,7 +332,6 @@ export const WorldPanel: React.FC = () => {
         {displayLocation && (
           <div className="space-y-3">
              {isAtDestination ? (
-               <button
                <button 
                  onClick={() => console.log("Enter Location triggered")}
                  className="w-full py-4 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-[0.2em] text-sm rounded shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 border-2 border-dragon-gold/50 animate-in fade-in zoom-in-95"
@@ -358,7 +342,6 @@ export const WorldPanel: React.FC = () => {
              ) : (
                <>
                  {!isTraveling ? (
-                   <button
                    <button 
                      onClick={() => setShowTravelJournal(true)}
                      className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
@@ -367,7 +350,6 @@ export const WorldPanel: React.FC = () => {
                      Plan Expedition
                    </button>
                  ) : destination?.id === displayLocation.id ? (
-                   <button
                    <button 
                      onClick={() => stopTravel()}
                      className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
@@ -399,7 +381,7 @@ export const WorldPanel: React.FC = () => {
                </button>
              )}
           </div>
-        </div>
+        )}
       </div>
 
       {/* Pre-travel Journal Overlay */}
@@ -410,7 +392,6 @@ export const WorldPanel: React.FC = () => {
             <h3 className="font-header text-xl text-dragon-red font-black uppercase tracking-widest border-b-2 border-dragon-red/20 pb-2 mb-4">Expedition Journal</h3>
             <p className="text-sm text-parchment-800 font-serif mb-4 italic">Preparation for the journey to <strong className="text-dragon-darkRed">{displayLocation?.name}</strong>.</p>
 
-            
             <div className="space-y-4 mb-6">
               <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
                 <span className="text-xs uppercase font-black text-parchment-500">Distance</span>
@@ -419,8 +400,6 @@ export const WorldPanel: React.FC = () => {
               <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
                 <span className="text-xs uppercase font-black text-parchment-500">Est. Time</span>
                 <span className="text-sm font-bold text-dragon-darkRed">
-                  {preTravelStats.eta > 1440
-                    ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h`
                   {preTravelStats.eta > 1440 
                     ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h` 
                     : preTravelStats.eta > 60 ? `${Math.floor(preTravelStats.eta / 60)}h ${preTravelStats.eta % 60}m` : `${preTravelStats.eta}m`}

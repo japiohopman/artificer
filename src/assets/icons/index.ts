@@ -25,10 +25,6 @@ import { TAROT_ICONS } from './tarot';
 import { EQUIPMENT_DOLL } from './equipment_doll';
 import { MINIGAME as MINI_GAME_ICONS } from './minigame';
 
-/**
- * @deprecated Use tactical imports from specific icon files instead of ALL_ICONS
- * to reduce bundle size.
- */
 export const ALL_ICONS = {
   ...UI_ICONS,
   ...ATTACK_ICONS,
