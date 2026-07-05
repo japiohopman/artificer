@@ -13,7 +13,8 @@ export const CombatGrid: React.FC = () => {
   const { characters, activeCharacterId } = useCharacterStore();
   const { partyLocation, weather, gameTime } = useWorldStore();
   const { isTargeting, targetingAction, setIsTargeting, setTargetingAction } = useUIStore();
-  
+  const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
+
   const activeChar = characters.find(c => c.id === activeCharacterId);
   const { playerPos, monsters, initiativeOrder, activeTurnIndex, grid } = combatState;
 
@@ -41,6 +42,26 @@ export const CombatGrid: React.FC = () => {
 
     if (isTargeting) {
       // Logic for targeting specific actions
+      if (targetingAction?.targetType === 'sphere') {
+        const radius = targetingAction.radius || 0;
+        const targets = monsters.filter(m => {
+          const dx = Math.abs(m.x - x);
+          const dy = Math.abs(m.y - y);
+          return Math.max(dx, dy) <= radius;
+        });
+
+        targets.forEach(monster => {
+          resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
+        });
+
+        const { consumeAction } = useCharacterStore.getState();
+        consumeAction(activeCharacterId, 'actions');
+
+        setIsTargeting(false);
+        setTargetingAction(null);
+        return;
+      }
+
       if (targetingAction?.id === 'move') {
         const path = findPath(playerPos, { x, y }, grid);
 
@@ -92,12 +113,13 @@ export const CombatGrid: React.FC = () => {
 
   const handleMonsterClick = (monster: any) => {
     if (isTargeting) {
-      if (targetingAction?.id === 'attack') {
+      if (targetingAction?.id === 'attack' || targetingAction?.id === 'spells') {
         const dx = Math.abs(monster.x - playerPos.x);
         const dy = Math.abs(monster.y - playerPos.y);
         const distance = Math.max(dx, dy);
+        const range = targetingAction.range || 1;
 
-        if (distance <= 1) { // Melee range
+        if (distance <= range) {
           resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
 
           const { consumeAction } = useCharacterStore.getState();
@@ -132,14 +154,14 @@ export const CombatGrid: React.FC = () => {
     if (!isTargeting || !targetingAction) return new Set<string>();
 
     const cells = new Set<string>();
-    const range = targetingAction.id === 'move' ? 6 : (targetingAction.id === 'attack' ? 1 : (targetingAction.id === 'items' ? 4 : 0));
+    const range = targetingAction.range || 0;
 
     for (let x = playerPos.x - range; x <= playerPos.x + range; x++) {
       for (let y = playerPos.y - range; y <= playerPos.y + range; y++) {
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
           if (targetingAction.id === 'move') {
             const path = findPath(playerPos, { x, y }, grid);
-            if (!path || path.length > 6) continue;
+            if (!path || path.length > range) continue;
           }
           cells.add(`${x},${y}`);
         }
@@ -316,10 +338,15 @@ export const CombatGrid: React.FC = () => {
                 <div
                   key={`${x}-${y}`}
                   onClick={() => handleCellClick(x, y)}
+                  onMouseEnter={() => setHoveredCell({ x, y })}
+                  onMouseLeave={() => setHoveredCell(null)}
                   className={cn(
                     "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
                     !isVisible && "brightness-[0.2] saturate-50",
                     isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
+                    isTargeting && targetingAction?.targetType === 'sphere' && hoveredCell && 
+                      Math.max(Math.abs(x - hoveredCell.x), Math.abs(y - hoveredCell.y)) <= (targetingAction.radius || 0) &&
+                      "bg-dragon-red/30 border-dragon-red/50",
                     type === 'wall' && "bg-stone-800",
                     type === 'door' && "bg-amber-900/40"
                   )}

@@ -12,6 +12,9 @@ interface CombatAction {
   icon: GameIconName;
   color: string;
   description: string;
+  range?: number;
+  targetType?: 'single' | 'sphere';
+  radius?: number;
 }
 
 export const ActionPanel: React.FC = () => {
@@ -29,11 +32,11 @@ export const ActionPanel: React.FC = () => {
   const activeChar = characters.find(c => c.id === activeCharacterId);
 
   const actions: CombatAction[] = [
-    { id: 'attack', label: 'Attack', icon: 'melee', color: 'bg-dragon-red', description: 'Strike with your equipped weapon.' },
-    { id: 'move', label: 'Move', icon: 'footsteps', color: 'bg-blue-600', description: 'Change position on the grid.' },
+    { id: 'attack', label: 'Attack', icon: 'melee', color: 'bg-dragon-red', description: 'Strike with your equipped weapon.', range: 1 },
+    { id: 'move', label: 'Move', icon: 'footsteps', color: 'bg-blue-600', description: 'Change position on the grid.', range: 6 },
     { id: 'skills', label: 'Skills', icon: 'skill', color: 'bg-emerald-600', description: 'Use specialized class abilities.' },
-    { id: 'spells', label: 'Spells', icon: 'magic_effect', color: 'bg-purple-600', description: 'Cast an incantation from your repertoire.' },
-    { id: 'items', label: 'Items', icon: 'package', color: 'bg-amber-600', description: 'Use a consumable or interact with gear.' },
+    { id: 'spells', label: 'Spells', icon: 'magic_effect', color: 'bg-purple-600', description: 'Cast an incantation from your repertoire.', range: 12, targetType: 'sphere', radius: 2 },
+    { id: 'items', label: 'Items', icon: 'package', color: 'bg-amber-600', description: 'Use a consumable or interact with gear.', range: 4 },
     { id: 'defend', label: 'Defend', icon: 'shield', color: 'bg-slate-600', description: 'Adopt a defensive stance for protection.' },
   ];
 

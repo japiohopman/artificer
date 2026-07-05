@@ -132,11 +132,8 @@ export const WorldPanel: React.FC = () => {
       {/* HEADER: Sticky */}
       <div className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden shrink-0">
         {(displayLocation?.image || displayLocation?.banner) ? (
-<<<<<<< Updated upstream
           <div
-=======
           <div 
->>>>>>> Stashed changes
             className="absolute inset-0 z-0 bg-no-repeat transition-all duration-1000"
             style={{
               backgroundImage: `url(${displayLocation.image || displayLocation.banner})`,
@@ -147,15 +144,12 @@ export const WorldPanel: React.FC = () => {
         ) : (
           <div className="absolute inset-0 z-0 bg-parchment-100/80 backdrop-blur-sm" />
         )}
-<<<<<<< Updated upstream
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
 
-=======
         
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
 
->>>>>>> Stashed changes
         <div className="relative z-20 flex flex-col">
           <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-none mb-1 drop-shadow-md">
             {displayLocation ? displayLocation.category || 'Location' : 'Cartographic'}
@@ -164,11 +158,8 @@ export const WorldPanel: React.FC = () => {
             {displayLocation ? displayLocation.name : 'World Atlas'}
           </h2>
         </div>
-<<<<<<< Updated upstream
         <button
-=======
         <button 
->>>>>>> Stashed changes
           onClick={() => setIsWorldPanelOpen(false)}
           className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group relative z-20"
           title="Close World Panel"
@@ -237,11 +228,8 @@ export const WorldPanel: React.FC = () => {
                 {inspectedLocation ? 'Inspecting_Landmark' : 'Active_Domain'}
               </h3>
               {inspectedLocation && (
-<<<<<<< Updated upstream
                 <button
-=======
                 <button 
->>>>>>> Stashed changes
                   onClick={() => useWorldStore.getState().setInspectedLocation(null)}
                   className="ml-2 text-[8px] bg-dragon-red/10 hover:bg-dragon-red/20 text-dragon-red px-2 py-0.5 rounded-full transition-colors font-black uppercase tracking-tighter"
                 >
@@ -281,7 +269,6 @@ export const WorldPanel: React.FC = () => {
                  {displayLocation?.description || 'The horizon stretches infinitely, a canvas of primal forces awaiting the touch of a pathfinder.'}
                </p>
              )}
-<<<<<<< Updated upstream
 
              {displayLocation?.region && (
                <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
@@ -290,7 +277,6 @@ export const WorldPanel: React.FC = () => {
                </div>
              )}
 
-=======
              
              {displayLocation?.region && (
                <div className="mt-4 pt-4 border-t border-dragon-red/5 flex items-center justify-between">
@@ -299,7 +285,6 @@ export const WorldPanel: React.FC = () => {
                </div>
              )}
 
->>>>>>> Stashed changes
              {/* Metadata Schema Fields */}
              <div className="mt-6 space-y-4">
                 {Object.entries({
@@ -323,11 +308,8 @@ export const WorldPanel: React.FC = () => {
                 }).map(([key, title]) => {
                   const data = (displayLocation as any)[key];
                   if (!data || (Array.isArray(data) && data.length === 0) || (typeof data === 'object' && Object.keys(data).length === 0)) return null;
-<<<<<<< Updated upstream
 
-=======
                   
->>>>>>> Stashed changes
                   return (
                     <div key={key} className="pt-4 border-t border-dragon-red/5">
                       <h4 className="text-[10px] font-black uppercase tracking-widest text-dragon-red mb-2 flex items-center gap-2">
@@ -365,11 +347,8 @@ export const WorldPanel: React.FC = () => {
         {displayLocation && (
           <div className="space-y-3">
              {isAtDestination ? (
-<<<<<<< Updated upstream
                <button
-=======
                <button 
->>>>>>> Stashed changes
                  onClick={() => console.log("Enter Location triggered")}
                  className="w-full py-4 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-[0.2em] text-sm rounded shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 border-2 border-dragon-gold/50 animate-in fade-in zoom-in-95"
                >
@@ -379,11 +358,8 @@ export const WorldPanel: React.FC = () => {
              ) : (
                <>
                  {!isTraveling ? (
-<<<<<<< Updated upstream
                    <button
-=======
                    <button 
->>>>>>> Stashed changes
                      onClick={() => setShowTravelJournal(true)}
                      className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
                    >
@@ -391,11 +367,8 @@ export const WorldPanel: React.FC = () => {
                      Plan Expedition
                    </button>
                  ) : destination?.id === displayLocation.id ? (
-<<<<<<< Updated upstream
                    <button
-=======
                    <button 
->>>>>>> Stashed changes
                      onClick={() => stopTravel()}
                      className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
                    >
@@ -436,11 +409,8 @@ export const WorldPanel: React.FC = () => {
             <button onClick={() => setShowTravelJournal(false)} className="absolute top-4 right-4 text-dragon-red/60 hover:text-dragon-red"><GameIcon name="close" size={20} /></button>
             <h3 className="font-header text-xl text-dragon-red font-black uppercase tracking-widest border-b-2 border-dragon-red/20 pb-2 mb-4">Expedition Journal</h3>
             <p className="text-sm text-parchment-800 font-serif mb-4 italic">Preparation for the journey to <strong className="text-dragon-darkRed">{displayLocation?.name}</strong>.</p>
-<<<<<<< Updated upstream
 
-=======
             
->>>>>>> Stashed changes
             <div className="space-y-4 mb-6">
               <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
                 <span className="text-xs uppercase font-black text-parchment-500">Distance</span>
@@ -449,13 +419,10 @@ export const WorldPanel: React.FC = () => {
               <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
                 <span className="text-xs uppercase font-black text-parchment-500">Est. Time</span>
                 <span className="text-sm font-bold text-dragon-darkRed">
-<<<<<<< Updated upstream
                   {preTravelStats.eta > 1440
                     ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h`
-=======
                   {preTravelStats.eta > 1440 
                     ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h` 
->>>>>>> Stashed changes
                     : preTravelStats.eta > 60 ? `${Math.floor(preTravelStats.eta / 60)}h ${preTravelStats.eta % 60}m` : `${preTravelStats.eta}m`}
                 </span>
               </div>

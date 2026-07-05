@@ -457,13 +457,19 @@ export const useGameStore = create<GameState>((set, get) => ({
 
         // 2. State-based Action
         const monsterSpeed = updatedMonster.speed || 6;
+        const attackRange = updatedMonster.type === 'archer' ? 6 : (updatedMonster.type === 'mage' ? 12 : 1);
+        
         if (updatedMonster.awareness === 'combat') {
           const dist = getDistance(updatedMonster, playerPos);
-          if (dist <= 1) {
+          if (dist <= attackRange) {
             await resolveCombatAction(
               updatedMonster,
               { id: 'player', name: 'Hero' },
-              { name: 'Claw/Bite', attack_bonus: 4, damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] }
+              { 
+                name: updatedMonster.type === 'archer' ? 'Longbow' : (updatedMonster.type === 'mage' ? 'Fire Bolt' : 'Claw/Bite'), 
+                attack_bonus: 4, 
+                damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] 
+              }
             );
           } else {
             const path = findPath(updatedMonster, playerPos, currentCombatState.grid);
