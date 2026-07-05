@@ -1,45 +1,56 @@
 {
-  "higher_level": [],
-  "index": "grease",
-  "name": "grease",
+  "index": "geas",
+  "name": "geas",
   "desc": [
-    "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.",
-    "When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone."
+    "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.",
+    "You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
+    "You can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 7th or 8th level, the duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the spells mentioned above."
   ],
   "range": "60 feet",
   "components": [
-    "V",
-    "S",
-    "M"
+    "V"
   ],
-  "material": "A bit of pork rind or butter.",
   "ritual": false,
-  "duration": "1 minute",
+  "duration": "30 days",
   "concentration": false,
-  "casting_time": "1 action",
-  "level": 1,
+  "casting_time": "1 minute",
+  "level": 5,
   "dc": {
     "dc_type": {
-      "index": "dex",
-      "name": "dex",
-      "url": "/assets/atlas/ability_scores/json/dex.json"
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
     },
     "dc_success": "none"
   },
-  "area_of_effect": {
-    "type": "cube",
-    "size": 10
-  },
   "school": {
-    "index": "conjuration",
-    "name": "conjuration",
-    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+    "index": "enchantment",
+    "name": "enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
   },
   "classes": [
     {
-      "index": "artificer",
-      "name": "artificer",
-      "url": "/assets/atlas/class/json/artificer.json"
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "cleric",
+      "name": "cleric",
+      "url": "/assets/atlas/class/json/cleric.json"
+    },
+    {
+      "index": "druid",
+      "name": "druid",
+      "url": "/assets/atlas/class/json/druid.json"
+    },
+    {
+      "index": "paladin",
+      "name": "paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
     },
     {
       "index": "wizard",
@@ -54,9 +65,9 @@
       "url": "/assets/atlas/subclasses/json/lore.json"
     }
   ],
-  "url": "/assets/atlas/spell/json/grease.json",
+  "url": "/assets/atlas/spell/json/geas.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/json/images/grease.webp",
-  "sprite_index": 15,
-  "sprite_sheet": "/assets/atlas/spell/json/sprites/spell_sheet6.webp"
+  "image": "/assets/atlas/spell/images/geas.webp",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/spell/sprites/spell_sheet6.webp"
 }

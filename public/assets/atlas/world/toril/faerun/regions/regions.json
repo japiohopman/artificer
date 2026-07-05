@@ -1,0 +1,221 @@
+[
+  {
+    "id": "east_faerun",
+    "name": "East Faerûn",
+    "world": "totil",
+    "type": "region",
+    "continent": "fearun",
+    "region": "east_faerun",
+    "title": "East Faerûn: The Old Empires",
+    "description": "East Faerûn is a land of ancient history, god-kings, and hidden wonders. It encompasses the remnants of empires like Mulhorand and Unther, where tradition and ancient laws still hold sway.",
+    "wiki": "The Old Empires of the East were once ruled by manifestations of the gods themselves. Though their glory has faded, the influence of ancient magic and divine presence is still palpable. To the north lies the mysterious land of Thay, ruled by the Red Wizards, and to the south, the vast deserts leading towards further reaches of Toril.",
+    "image": "https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80",
+    "tags": [
+      "region",
+      "faerun",
+      "east",
+      "ancient",
+      "magic"
+    ],
+    "metadata": {
+      "prominent_nations": [
+        "Mulhorand",
+        "Thay",
+        "Aglarond"
+      ],
+      "landscape": "Deserts, fertile river basins, high plateaus",
+      "economy": "Magic items, ancient artifacts, grain"
+    },
+    "focal_point": [
+      7918,
+      18361
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/east_faerun.md"
+  },
+  {
+    "id": "interior_faerun",
+    "name": "Interior Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "interior_faerun",
+    "title": "The Heartland Crossroads: Interior Faerûn",
+    "description": "Interior Faerûn consists of the wild and diverse lands bordering the Sea of Fallen Stars and the eastern reaches of the Heartlands. It is a region of ancient ruins, hidden valleys, and independent city-states.",
+    "wiki": "Interior Faerûn is often defined by its proximity to the Inner Sea. It includes the Vilhon Reach, the Dragon Coast, and the Vast. It is a melting pot of cultures where the influence of the Great Sea meets the traditions of the mainland nations. Magic runs deep in the earth here, often manifesting in unpredictable ways.",
+    "image": "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=800&q=80",
+    "tags": [
+      "region",
+      "faerun",
+      "interior",
+      "crossroads"
+    ],
+    "metadata": {
+      "prominent_locations": [
+        "The Vilhon Reach",
+        "The Dragon Coast"
+      ],
+      "landscape": "Steppes, plateau, inland seas",
+      "economy": "Agriculture, mercenaries, exotic trade"
+    },
+    "focal_point": [
+      7846,
+      10095
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/interior_faerun.md"
+  },
+  {
+    "id": "north_faerun",
+    "name": "North Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "north_faerun",
+    "title": "The Crown of the North: North Faerûn",
+    "description": "North Faerûn encompasses the central northern reaches of the continent, including the Silver Marches and the Moonsea region.",
+    "wiki": "This is a region of powerful city-states and ancient dwarven kingdoms. The Silver Marches, centered on Silverymoon, are a bastion of hope and civilization in the wild North. Further east, the Moonsea is a place of dark power and intense competition between states like Zhentil Keep and Hillsfar. It is a land of constant struggle and ancient magic.",
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "tags": [
+      "region",
+      "faerun",
+      "north",
+      "magic",
+      "fortresses"
+    ],
+    "metadata": {
+      "prominent_cities": [
+        "Silverymoon",
+        "Zhentil Keep",
+        "Mulmaster"
+      ],
+      "landscape": "Dense pine forests, snow-capped peaks, inland seas",
+      "economy": "Magical research, smelting, shipping"
+    },
+    "focal_point": [
+      13004,
+      8947
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/north_faerun.md"
+  },
+  {
+    "id": "northeast_faerun",
+    "name": "Northeast Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "northeast_faerun",
+    "description": "Northeast Faerûn, also known as the Cold Lands, includes the rugged kingdoms of Damara and Vaasa, as well as the vast plains of Narfell. It is a region of ancient magic and stark beauty.",
+    "focal_point": [
+      13004,
+      17707
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/northeast_faerun.md"
+  },
+  {
+    "id": "northwest_faerun",
+    "name": "Northwest Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "northwest_faerun",
+    "description": "Northwest Faerûn is a region of rugged wilderness, ancient forests, and powerful city-states like Waterdeep. It is often referred to as 'The North' and is known for its cold climate and untamed lands.",
+    "focal_point": [
+      13076,
+      4044
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/northwest_faerun.md"
+  },
+  {
+    "id": "south_faerun",
+    "name": "South Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "south_faerun",
+    "description": "South Faerûn is a land of warmth and mystery, featuring the magocratic realm of Halruaa, the halfling homeland of Luiren, and the diverse Border Kingdoms along the Shining Sea.",
+    "focal_point": [
+      2211,
+      12810
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/south_faerun.md"
+  },
+  {
+    "id": "southeast_faerun",
+    "name": "Southeast Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "southeast_faerun",
+    "description": "Southeast Faerûn is a land of ancient empires and exotic trade. It includes the lands surrounding the Sea of Fallen Stars and the eastern reaches of the Great Rift.",
+    "focal_point": [
+      3192,
+      17380
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/southeast_faerun.md"
+  },
+  {
+    "id": "southwest_faerun",
+    "name": "Southwest Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "southwest_faerun",
+    "title": "Southwest Faerûn: Lands of Adventure",
+    "description": "Southwest Faerûn is a region of ancient empires, lush jungles, and treacherous coastlines. It includes the merchant-ruled lands of Amn, the war-torn kingdom of Tethyr, and the exotic Chultan Peninsula.",
+    "wiki": "Southwest Faerûn is dominated by several distinct sub-regions. The Lands of Intrigue (Amn, Tethyr, Calimshan) are known for their wealth and political maneuvering. Further south lies Chult, a primal wilderness filled with dinosaurs and abandoned cities of gold. The region is a hotspot for explorers and fortune-seekers.",
+    "image": "https://images.unsplash.com/photo-1534346501103-625ca4e50257?auto=format&fit=crop&w=800&q=80",
+    "tags": [
+      "region",
+      "faerun",
+      "southwest",
+      "intrigue",
+      "jungle"
+    ],
+    "metadata": {
+      "prominent_nations": [
+        "Amn",
+        "Tethyr",
+        "Calimshan"
+      ],
+      "landscape": "Deserts, jungles, coastal plains",
+      "economy": "Mercantilism, gems, spices"
+    },
+    "focal_point": [
+      976,
+      6060
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/southwest_faerun.md"
+  },
+  {
+    "id": "west_faerun",
+    "name": "West Faerûn",
+    "world": "totil",
+    "continent": "fearun",
+    "region": "west_faerun",
+    "title": "West Faerûn: The Heartlands",
+    "description": "West Faerûn, also known as the Heartlands, is the central core of the continent. It stretches from the Sword Coast in the west to the Sea of Fallen Stars in the east. This region is a tapestry of powerful kingdoms, ancient forests, and bustling trade routes.",
+    "wiki": "The Heartlands is a broad geographic term for the central regions of Faerûn. It includes major powers like Cormyr and Sembia, as well as the Dalelands and the Western Heartlands. The region is known for its diverse cultures, rich history, and significant impact on the geopolitics of the continent. It is often seen as the cradle of civilization in northern Faerûn.",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "tags": [
+      "region",
+      "faerun",
+      "core",
+      "heartlands"
+    ],
+    "metadata": {
+      "prominent_nations": [
+        "Cormyr",
+        "Sembia",
+        "The Dalelands"
+      ],
+      "landscape": "Rolling hills, fertile plains, dense forests",
+      "economy": "Intense trade, agriculture, manufacturing"
+    },
+    "focal_point": [
+      7991,
+      6550
+    ],
+    "zoom": 4,
+    "lore": "/assets/atlas/lore/locations/west_faerun.md"
+  }
+]

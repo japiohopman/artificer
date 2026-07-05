@@ -6,7 +6,11 @@ import { CONDITION_ICONS } from './conditions';
 import { CREATURE_TYPE_ICONS } from './creatures';
 import { DICE_ICONS } from './dice';
 import { CHARACTER_ICONS } from './character';
+<<<<<<< Updated upstream
 import { CURRENCY_ICONS as POUCH_ICONS } from './currency';
+=======
+import { CURRENCY_ICONS } from './currency';
+>>>>>>> Stashed changes
 import { MATERIALS_ICONS } from './materials';
 import { WORLD_ATLAS_ICONS } from './world_atlas';
 import { abilityScoreIcons as ABILITY_SCORE_ICONS } from './ability_score';
@@ -38,7 +42,7 @@ export const ALL_ICONS = {
   ...CREATURE_TYPE_ICONS,
   ...DICE_ICONS,
   ...CHARACTER_ICONS,
-  ...POUCH_ICONS,
+  ...CURRENCY_ICONS,
   ...EDITOR_ICONS,
   ...WORLD_ATLAS_ICONS,
   ...ABILITY_SCORE_ICONS,
@@ -67,7 +71,7 @@ export {
   CREATURE_TYPE_ICONS,
   DICE_ICONS,
   CHARACTER_ICONS,
-  POUCH_ICONS,
+  CURRENCY_ICONS,
   EDITOR_ICONS,
   WORLD_ATLAS_ICONS,
   ABILITY_SCORE_ICONS,

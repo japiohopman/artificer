@@ -93,7 +93,7 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
       </div>
 
       {/* Image / Illustration */}
-      <div className="relative h-40 w-full bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
+      <div className="relative aspect-square h-40 mx-auto bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
         {spell.imageUrl || spell.index ? (
           <div className="absolute inset-0 flex items-center justify-center p-2">
              <ChromaKeyImage 

@@ -1976,17 +1976,20 @@
     "json_path": "/assets/atlas/spell/json/gate.json"
   },
   {
-    "index": "grease",
-    "name": "grease",
-    "level": 1,
-    "school": "conjuration",
+    "index": "geas",
+    "name": "geas",
+    "level": 5,
+    "school": "enchantment",
     "classes": [
-      "artificer",
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
       "wizard"
     ],
-    "casting_time": "1 action",
+    "casting_time": "1 minute",
     "range": "60 feet",
-    "duration": "1 minute",
+    "duration": "30 days",
     "json_path": "/assets/atlas/spell/json/geas.json"
   },
   {
@@ -2074,19 +2077,17 @@
     "json_path": "/assets/atlas/spell/json/goodberry.json"
   },
   {
-    "index": "glyph_of_warding",
-    "name": "glyph of warding",
-    "level": 3,
-    "school": "abjuration",
+    "index": "grease",
+    "name": "grease",
+    "level": 1,
+    "school": "conjuration",
     "classes": [
       "artificer",
-      "bard",
-      "cleric",
       "wizard"
     ],
-    "casting_time": "1 hour",
-    "range": "Touch",
-    "duration": "Until dispelled",
+    "casting_time": "1 action",
+    "range": "60 feet",
+    "duration": "1 minute",
     "json_path": "/assets/atlas/spell/json/grease.json"
   },
   {
