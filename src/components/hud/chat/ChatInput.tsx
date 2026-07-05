@@ -52,25 +52,33 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
           </button>
         </div>
 
-        <div className="flex flex-col gap-2 shrink-0 ml-1">
+        {/* Action Controls Column */}
+        <div className="flex flex-col gap-1.5 shrink-0 ml-1">
            <button
              onClick={() => setIsMapLegendOpen(!isMapLegendOpen)}
              className={cn(
-                "pointer-events-auto w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all shadow-xl cursor-pointer active:scale-90",
+                "pointer-events-auto w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all shadow-md cursor-pointer active:scale-90",
                 isMapLegendOpen 
                   ? "bg-dragon-gold border-dragon-red text-dragon-darkRed" 
-                  : "bg-parchment-200 border-dragon-gold text-dragon-red hover:bg-parchment-300"
+                  : "bg-parchment-200 border-dragon-gold/40 text-dragon-red hover:bg-parchment-300"
               )}
              title="Toggle Map Legend"
+             aria-label="Toggle Map Legend"
            >
-              <GameIcon name="legend" size={16} />
+              <GameIcon name="legend" size={14} />
            </button>
            <button
              onClick={() => setChatExpanded(!chatExpanded)}
-             className="pointer-events-auto w-8 h-8 flex items-center justify-center bg-dragon-red hover:bg-dragon-darkRed text-white rounded-full border-2 border-dragon-gold transition-all shadow-xl cursor-pointer active:scale-90"
+             className={cn(
+                "pointer-events-auto w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all shadow-md cursor-pointer active:scale-90",
+                chatExpanded
+                  ? "bg-dragon-red border-dragon-gold text-white"
+                  : "bg-parchment-200 border-dragon-gold/40 text-dragon-red hover:bg-parchment-300"
+             )}
              title={chatExpanded ? "Collapse Chat" : "Expand Chat"}
+             aria-label={chatExpanded ? "Collapse Chat" : "Expand Chat"}
            >
-              <GameIcon name="chat_interface" size={14} />
+              <GameIcon name="chat_interface" size={12} />
            </button>
         </div>
       </div>

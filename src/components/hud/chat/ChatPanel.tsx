@@ -143,7 +143,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                           </span>
                         </div>
                         <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
-                        <div className="flex-1 overflow-x-auto no-scrollbar pr-4">
+                        <div className="flex-1 pr-4">
                           <MapLegend currentZoom={mapZoom} />
                         </div>
                       </div>
@@ -250,7 +250,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
         )}
 
         {gameMode !== 'combat' && isMapLegendOpen && isCollapsed && (
-          <div className="px-6 py-2 flex items-center gap-4 pointer-events-auto overflow-x-auto no-scrollbar">
+          <div className="px-6 py-2 flex items-center gap-4 pointer-events-auto">
             <div className="flex flex-col shrink-0">
               <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Atlas_Legend</span>
               <span className="text-[10px] font-header font-black text-dragon-red uppercase tracking-widest">
@@ -258,7 +258,9 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
               </span>
             </div>
             <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
-            <MapLegend currentZoom={mapZoom} />
+            <div className="flex-1">
+               <MapLegend currentZoom={mapZoom} />
+            </div>
           </div>
         )}
       </div>

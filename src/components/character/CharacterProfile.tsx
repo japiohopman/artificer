@@ -30,6 +30,7 @@ import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE } fro
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon , getAttackIcon } from '../../lib/atlasUtils';
+import { calculateCurrencyWeight, formatMoney } from '../../lib/currencyUtils';
 
 const SpellListRow: React.FC<{ 
   spell: any; 
@@ -100,7 +101,8 @@ export const CharacterProfile: React.FC = () => {
     deleteCharacter,
     castSpell,
     restoreSlots,
-    updateCharacter
+    updateCharacter,
+    consolidateMoney
   } = useCharacterStore();
 
   const {
@@ -180,9 +182,7 @@ export const CharacterProfile: React.FC = () => {
     const equippedWeight = Object.values(character.inventory || {}).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
     const backpackWeight = (character.backpack || []).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
     
-    const money = character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
-    const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
-    const moneyWeight = totalCoins * (partyStats?.currencyWeightPerCoin || 0.02);
+    const moneyWeight = calculateCurrencyWeight(character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
 
     return equippedWeight + backpackWeight + moneyWeight;
   };
@@ -1069,8 +1069,21 @@ export const CharacterProfile: React.FC = () => {
                         {/* Inventory Stats */}
                         <div className="p-4 bg-white/40 rounded border border-dragon-red/5 space-y-3">
                            <div className="flex justify-between items-center px-2 py-1.5 rounded bg-dragon-red/5">
-                              <span className="text-[7px] font-black uppercase text-dragon-red/60 tracking-widest">Load_Factor</span>
-                              <span className="text-[10px] font-black text-dragon-darkRed leading-none">{totalCharacterWeight.toFixed(2)} / {derived.weightCapacity} lbs</span>
+                              <div className="flex flex-col">
+                                <span className="text-[7px] font-black uppercase text-dragon-red/60 tracking-widest">Load_Factor</span>
+                                <span className="text-[10px] font-black text-dragon-darkRed leading-none">{totalCharacterWeight.toFixed(2)} / {derived.weightCapacity} lbs</span>
+                              </div>
+                              <button
+                                onClick={() => {
+                                  consolidateMoney(character.id);
+                                  soundService.playEffect('UI_CLICK_LIGHT');
+                                }}
+                                className="flex items-center gap-1.5 px-2 py-1 bg-dragon-red/10 hover:bg-dragon-red/20 rounded border border-dragon-red/20 text-[8px] font-black text-dragon-red uppercase tracking-widest transition-all"
+                                title="Consolidate loose change into higher denominations"
+                              >
+                                <GameIcon name="coins" size={10} color="currentColor" />
+                                Consolidate
+                              </button>
                            </div>
                           <div className="grid grid-cols-5 gap-1.5">
                               <CurrencyPin type="PP" value={character.money?.pp || 0} color="#38BDF8" />
@@ -1078,6 +1091,9 @@ export const CharacterProfile: React.FC = () => {
                               <CurrencyPin type="EP" value={character.money?.ep || 0} color="#D946EF" pulse />
                               <CurrencyPin type="SP" value={character.money?.sp || 0} color="#71717A" />
                               <CurrencyPin type="CP" value={character.money?.cp || 0} color="#92400E" />
+                           </div>
+                           <div className="text-[7px] font-bold text-parchment-400 uppercase tracking-widest text-center">
+                              Total Wealth: {formatMoney(character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 })}
                            </div>
                         </div>
                      </div>
