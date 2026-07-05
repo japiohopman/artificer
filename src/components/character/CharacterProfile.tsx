@@ -453,14 +453,15 @@ export const CharacterProfile: React.FC = () => {
                           <div className="w-px h-12 bg-dragon-red/10" />
 
                           {/* Inspiration */}
-                          <button 
+<button
                             onClick={() => toggleInspiration(character.id)}
                             className="flex flex-col items-center gap-1 group relative"
                           >
                              <div className={cn(
                                "w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500",
-                               character.inspiration 
-                                 ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110" 
+character.inspiration
+  ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110"
+  : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
                                  : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
                              )}>
                                 <GameIcon name="star" size={20} color={character.inspiration ? "#8B0000" : "currentColor"} />
@@ -1294,7 +1295,7 @@ export const CharacterProfile: React.FC = () => {
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Allies & Organizations</h3>
                           </div>
                           <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[150px]">
-                             <textarea 
+<textarea
                                className="w-full h-full bg-transparent border-none focus:ring-0 text-[11px] leading-relaxed text-parchment-800 font-serif italic resize-none"
                                placeholder="Record known allies, factions, and organizations here..."
                                value={character.alliesAndOrganizations || ""}

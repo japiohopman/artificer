@@ -429,19 +429,19 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   })),
 
   toggleInspiration: (characterId) => set((state) => ({
-    characters: state.characters.map(char => 
+characters: state.characters.map(char =>
       char.id === characterId ? { ...char, inspiration: !char.inspiration } : char
     )
   })),
 
   updateDeathSaves: (characterId, successes, failures) => set((state) => ({
-    characters: state.characters.map(char => 
+characters: state.characters.map(char =>
       char.id === characterId ? { ...char, deathSaves: { successes, failures } } : char
     )
   })),
 
   updateAlliesAndOrganizations: (characterId, alliesAndOrganizations) => set((state) => ({
-    characters: state.characters.map(char => 
+characters: state.characters.map(char =>
       char.id === characterId ? { ...char, alliesAndOrganizations } : char
     )
   })),

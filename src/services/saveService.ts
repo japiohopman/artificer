@@ -124,7 +124,6 @@ export const saveService = {
       .map(char => {
         const id = char.id;
         const isSlot = id.startsWith('slot');
-        
         // Provide defaults for slot characters if missing
         const avatarPath = char.avatarUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_avatar.webp` : undefined);
         const imagePath = char.imageUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_portrait.webp` : undefined);
