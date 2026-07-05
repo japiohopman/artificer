@@ -102,7 +102,10 @@ export const CharacterProfile: React.FC = () => {
     castSpell,
     restoreSlots,
     updateCharacter,
-    consolidateMoney
+    consolidateMoney,
+    toggleInspiration,
+    updateDeathSaves,
+    updateAlliesAndOrganizations
   } = useCharacterStore();
 
   const {
@@ -444,6 +447,67 @@ export const CharacterProfile: React.FC = () => {
                              <div className="flex flex-col leading-none">
                                 <span className="font-header text-4xl font-black text-dragon-darkRed">{derived.speed}</span>
                                 <span className="text-[10px] font-sans text-parchment-400 uppercase tracking-widest font-black uppercase">SPEED FT</span>
+                             </div>
+                          </div>
+
+                          <div className="w-px h-12 bg-dragon-red/10" />
+
+                          {/* Inspiration */}
+                          <button 
+                            onClick={() => toggleInspiration(character.id)}
+                            className="flex flex-col items-center gap-1 group relative"
+                          >
+                             <div className={cn(
+                               "w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500",
+                               character.inspiration 
+                                 ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110" 
+                                 : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
+                             )}>
+                                <GameIcon name="star" size={20} color={character.inspiration ? "#8B0000" : "currentColor"} />
+                             </div>
+                             <span className={cn(
+                               "text-[8px] font-black uppercase tracking-widest transition-colors",
+                               character.inspiration ? "text-dragon-gold" : "text-parchment-400"
+                             )}>Inspiration</span>
+                          </button>
+
+                          <div className="w-px h-12 bg-dragon-red/10" />
+
+                          {/* Death Saves */}
+                          <div className="flex flex-col gap-2">
+                             <div className="flex items-center gap-2">
+                                <span className="text-[7px] font-black text-parchment-400 uppercase tracking-tighter w-12 text-right">Success</span>
+                                <div className="flex gap-1.5">
+                                   {[1, 2, 3].map(i => (
+                                      <button
+                                        key={`success-${i}`}
+                                        onClick={() => updateDeathSaves(character.id, i === character.deathSaves?.successes ? i - 1 : i, character.deathSaves?.failures || 0)}
+                                        className={cn(
+                                          "w-3 h-3 rounded-full border transition-all",
+                                          i <= (character.deathSaves?.successes || 0)
+                                            ? "bg-emerald-500 border-emerald-600 shadow-[0_0_8px_rgba(16,185,129,0.4)]"
+                                            : "bg-black/5 border-dragon-red/10"
+                                        )}
+                                      />
+                                   ))}
+                                </div>
+                             </div>
+                             <div className="flex items-center gap-2">
+                                <span className="text-[7px] font-black text-parchment-400 uppercase tracking-tighter w-12 text-right">Failure</span>
+                                <div className="flex gap-1.5">
+                                   {[1, 2, 3].map(i => (
+                                      <button
+                                        key={`failure-${i}`}
+                                        onClick={() => updateDeathSaves(character.id, character.deathSaves?.successes || 0, i === character.deathSaves?.failures ? i - 1 : i)}
+                                        className={cn(
+                                          "w-3 h-3 rounded-full border transition-all",
+                                          i <= (character.deathSaves?.failures || 0)
+                                            ? "bg-dragon-red border-dragon-darkRed shadow-[0_0_8px_rgba(139,0,0,0.4)]"
+                                            : "bg-black/5 border-dragon-red/10"
+                                        )}
+                                      />
+                                   ))}
+                                </div>
                              </div>
                           </div>
                           
@@ -1211,15 +1275,32 @@ export const CharacterProfile: React.FC = () => {
                         </div>
                      </div>
 
-                     <div>
-                        <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
-                          <GameIcon name="scroll" size={14} color="#8B0000" />
-                          <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Backstory</h3>
+                     <div className="space-y-8">
+                        <div>
+                          <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
+                            <GameIcon name="scroll" size={14} color="#8B0000" />
+                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Backstory</h3>
+                          </div>
+                          <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[300px]">
+                            <p className="text-[11px] leading-relaxed text-parchment-800 font-serif whitespace-pre-wrap italic">
+                              {character.backstory || 'Historical record: UNAVAILABLE.'}
+                            </p>
+                          </div>
                         </div>
-                        <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[400px]">
-                          <p className="text-[11px] leading-relaxed text-parchment-800 font-serif whitespace-pre-wrap italic">
-                            {character.backstory || 'Historical record: UNAVAILABLE.'}
-                          </p>
+
+                        <div>
+                          <div className="flex items-center gap-2 pb-1 border-b border-dragon-red/20 mb-3">
+                            <GameIcon name="users" size={14} color="#8B0000" />
+                            <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Allies & Organizations</h3>
+                          </div>
+                          <div className="bg-white/40 p-6 rounded border border-dragon-red/5 min-h-[150px]">
+                             <textarea 
+                               className="w-full h-full bg-transparent border-none focus:ring-0 text-[11px] leading-relaxed text-parchment-800 font-serif italic resize-none"
+                               placeholder="Record known allies, factions, and organizations here..."
+                               value={character.alliesAndOrganizations || ""}
+                               onChange={(e) => updateAlliesAndOrganizations(character.id, e.target.value)}
+                             />
+                          </div>
                         </div>
                      </div>
                    </div>

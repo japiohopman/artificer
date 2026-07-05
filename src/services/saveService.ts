@@ -66,11 +66,7 @@ export const saveService = {
             if (rawRes.ok) {
               const data = await rawRes.json();
               if (data) {
-                const id = f.name.replace('.json', '');
-                data.id = id;
-                if (data.avatarUrl) data.avatarUrl = normalizeImageUrl(data.avatarUrl, 'character', id);
-                if (data.imageUrl) data.imageUrl = normalizeImageUrl(data.imageUrl, 'character', id);
-                if (data.matrixUrl) data.matrixUrl = normalizeImageUrl(data.matrixUrl, 'character', id);
+                data.id = f.name.replace('.json', '');
               }
               return data;
             }
@@ -125,6 +121,22 @@ export const saveService = {
     });
 
     return characters
+      .map(char => {
+        const id = char.id;
+        const isSlot = id.startsWith('slot');
+        
+        // Provide defaults for slot characters if missing
+        const avatarPath = char.avatarUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_avatar.webp` : undefined);
+        const imagePath = char.imageUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_portrait.webp` : undefined);
+        const matrixPath = char.matrixUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_matrix.webp` : undefined);
+
+        return {
+          ...char,
+          avatarUrl: avatarPath ? normalizeImageUrl(avatarPath, 'character', id) : undefined,
+          imageUrl: imagePath ? normalizeImageUrl(imagePath, 'character', id) : undefined,
+          matrixUrl: matrixPath ? normalizeImageUrl(matrixPath, 'character', id) : undefined
+        };
+      })
       .sort((a, b) => new Date(b.lastSaved || 0).getTime() - new Date(a.lastSaved || 0).getTime());
   }
 };
