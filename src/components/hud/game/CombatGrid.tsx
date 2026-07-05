@@ -196,19 +196,6 @@ export const CombatGrid: React.FC = () => {
         "bg-transparent"
       )} />
 
-      {/* Atmospheric Effects */}
-      {weather === 'Rainy' && (
-        <div className="absolute inset-0 z-50 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/rain.png')] animate-[pulse_2s_infinite]" />
-      )}
-      {weather === 'Foggy' && (
-        <div className="absolute inset-0 z-50 pointer-events-none opacity-40 bg-white/5 blur-3xl animate-pulse" />
-      )}
-
-      {/* Lighting Layer */}
-      <div className={cn(
-        "absolute inset-0 z-[60] pointer-events-none transition-opacity duration-1000",
-        isNight ? "bg-blue-950/30" : "bg-orange-500/5 opacity-10"
-      )} />
 
       {/* Tactical Background Grid - Moved inside draggable container */}
       
@@ -299,8 +286,8 @@ export const CombatGrid: React.FC = () => {
         <motion.div
           drag
           dragMomentum={false}
-          initial={{ x: -100, y: -100 }} // Start slightly offset to show it's a large map
-          className="relative border-2 border-white/5 shadow-2xl z-10 cursor-grab active:cursor-grabbing"
+          initial={{ x: 0, y: 0 }}
+          className="relative border-2 border-white/5 shadow-2xl z-[70] cursor-grab active:cursor-grabbing"
           style={{
             width: gridWidth * cellSize,
             height: gridHeight * cellSize,
@@ -373,7 +360,7 @@ export const CombatGrid: React.FC = () => {
                x: playerPos.x * cellSize,
                y: playerPos.y * cellSize
              }}
-             className="absolute p-1 z-[40]"
+             className="absolute p-1 z-[100]"
              style={{ width: cellSize, height: cellSize }}
            >
               <div className={cn(
@@ -427,7 +414,7 @@ export const CombatGrid: React.FC = () => {
                   }}
                   exit={{ scale: 0, opacity: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className="absolute p-2 z-30"
+                  className="absolute p-2 z-[90]"
                   style={{ width: cellSize, height: cellSize }}
                   onClick={(e) => {
                     e.stopPropagation();
