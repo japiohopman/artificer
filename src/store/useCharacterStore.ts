@@ -166,6 +166,8 @@ interface CharacterState {
   loadCharacters: () => Promise<void>;
   loadLeveledData: (classIndex: string, levels: number[]) => Promise<void>;
   deleteCharacter: (id: string) => Promise<boolean>;
+  modifyMoney: (characterId: string, amount: Partial<import('../lib/currencyUtils').Money>, mode: 'add' | 'subtract') => boolean;
+  consolidateMoney: (characterId: string) => void;
 }
 
 export const useCharacterStore = create<CharacterState>((set, get) => ({
@@ -498,5 +500,42 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       console.error("Error deleting character:", e);
       return false;
     }
+  },
+
+  modifyMoney: (characterId, amount, mode) => {
+    const { characters } = get();
+    const char = characters.find(c => c.id === characterId);
+    if (!char) return false;
+
+    import('../lib/currencyUtils').then(({ toTotalCopper, fromCopper }) => {
+      const currentTotal = toTotalCopper(char.money);
+      const changeTotal = toTotalCopper(amount);
+
+      if (mode === 'subtract' && currentTotal < changeTotal) return;
+
+      const newTotal = mode === 'add' ? currentTotal + changeTotal : currentTotal - changeTotal;
+      const newMoney = fromCopper(newTotal);
+
+      set((state) => ({
+        characters: state.characters.map(c => c.id === characterId ? { ...c, money: newMoney } : c)
+      }));
+    });
+
+    return true;
+  },
+
+  consolidateMoney: (characterId) => {
+    const { characters } = get();
+    const char = characters.find(c => c.id === characterId);
+    if (!char) return;
+
+    import('../lib/currencyUtils').then(({ toTotalCopper, fromCopper }) => {
+      const total = toTotalCopper(char.money);
+      const consolidated = fromCopper(total);
+
+      set((state) => ({
+        characters: state.characters.map(c => c.id === characterId ? { ...c, money: consolidated } : c)
+      }));
+    });
   },
 }));

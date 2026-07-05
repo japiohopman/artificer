@@ -6,6 +6,7 @@ import { useAtlasStore } from '../../store/useAtlasStore';
 import { GameIcon } from '../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
+import { calculateCurrencyWeight } from '../../lib/currencyUtils';
 
 export const LogisticsManifest: React.FC<{ onTransportRequest?: () => void }> = ({ onTransportRequest }) => {
   const { partyStats, updatePartyStats, partyInventory, partyVehicles, addVehicle, removeVehicle } = useInventoryStore();
@@ -43,9 +44,7 @@ export const LogisticsManifest: React.FC<{ onTransportRequest?: () => void }> = 
           personalWeight = equippedWeight + backpackWeight;
        }
 
-       const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
-       const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
-       const moneyWeight = totalCoins * (partyStats.currencyWeightPerCoin || 0.02);
+       const moneyWeight = calculateCurrencyWeight(char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
 
        return acc + personalWeight + moneyWeight;
     }, 0);
@@ -187,9 +186,7 @@ export const PartyLogistics: React.FC = () => {
           personalWeight = equippedWeight + backpackWeight;
        }
 
-       const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
-       const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
-       const moneyWeight = totalCoins * (partyStats.currencyWeightPerCoin || 0.02);
+       const moneyWeight = calculateCurrencyWeight(char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
 
        return acc + personalWeight + moneyWeight;
     }, 0);
