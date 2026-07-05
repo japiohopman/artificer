@@ -1,13 +1,13 @@
-App.tsx:22  GET http://localhost:3000/src/components/character/CharacterProfile.tsx?t=1783252297929 net::ERR_ABORTED 404 (Not Found)
+App.tsx:22  GET http://localhost:3000/src/components/character/CharacterProfile.tsx net::ERR_ABORTED 404 (Not Found)
 
 (.venv) PS C:\Users\japie\OneDrive\Documents\GitHub\artificer> npm run dev
 
 > react-example@0.0.0 dev
 > tsx server.ts
 
-[dotenv@17.3.1] injecting env (5) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[dotenv@17.3.1] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
 Server running on http://localhost:3000
-14:05:40 [vite] (client) Pre-transform error: Transform failed with 1 error:
+14:31:24 [vite] (client) Pre-transform error: Transform failed with 1 error:
 
 [PARSE_ERROR] Expected `,` or `)` but found `:`
      ╭─[ src/components/character/CharacterProfile.tsx:465:34 ]
@@ -23,7 +23,7 @@ Server running on http://localhost:3000
 
   Plugin: vite:oxc
   File: C:/Users/japie/OneDrive/Documents/GitHub/artificer/src/components/character/CharacterProfile.tsx
-14:05:52 [vite] Internal server error: Transform failed with 1 error:
+14:31:26 [vite] Internal server error: Transform failed with 1 error:
 
 [PARSE_ERROR] Expected `,` or `)` but found `:`
      ╭─[ src/components/character/CharacterProfile.tsx:465:34 ]
@@ -44,3 +44,4 @@ Server running on http://localhost:3000
       at EnvironmentPluginContainer.transform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:30387:51)
       at async loadAndTransform (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24646:26)
       at async viteTransformMiddleware (C:\Users\japie\OneDrive\Documents\GitHub\artificer\node_modules\vite\dist\node\chunks\node.js:24440:20)
+
