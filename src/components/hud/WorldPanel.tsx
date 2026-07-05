@@ -23,6 +23,7 @@ export const WorldPanel: React.FC = () => {
     setIsWorldPanelOpen,
     gameMode,
     setIsMonsterProfileOpen,
+    focusedItem,
     setFocusedItem
   } = useUIStore();
 
@@ -179,14 +180,69 @@ export const WorldPanel: React.FC = () => {
         </div>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
-          {/* Active Combat Monsters */}
-          {gameMode === 'combat' && combatState.monsters.length > 0 && (
-            <div className="space-y-4 animate-in fade-in slide-in-from-left-4">
+          {/* Active Combat Monsters / Enemy Panel */}
+          {gameMode === 'combat' && (
+            <div className="space-y-6 animate-in fade-in slide-in-from-left-4">
+              {/* Focused/Selected Enemy Detail */}
+              {focusedItem && combatState.monsters.some(m => m.id === focusedItem.id) && (
+                 <div className="bg-dragon-darkRed/5 border-2 border-dragon-red/20 rounded-xl overflow-hidden shadow-inner">
+                    <div className="bg-dragon-darkRed/10 p-3 border-b border-dragon-red/20 flex items-center justify-between">
+                       <span className="text-[9px] font-black text-dragon-red uppercase tracking-widest">Threat Analysis</span>
+                       <div className="w-2 h-2 rounded-full bg-dragon-red animate-pulse" />
+                    </div>
+                    <div className="p-4 flex flex-col items-center text-center">
+                       <div className="w-24 h-24 rounded-full border-4 border-dragon-red/30 shadow-xl overflow-hidden bg-white mb-3">
+                          {focusedItem.imageUrl ? (
+                             <img src={focusedItem.imageUrl} className="w-full h-full object-cover" alt={focusedItem.name} />
+                          ) : (
+                             <div className="w-full h-full flex items-center justify-center text-dragon-red/20">
+                                <GameIcon name="identity" size={48} />
+                             </div>
+                          )}
+                       </div>
+                       <h4 className="text-lg font-header font-black text-dragon-darkRed uppercase tracking-widest leading-tight">{focusedItem.name}</h4>
+                       <p className="text-[10px] font-bold text-dragon-red/60 uppercase mb-4">{focusedItem.type || 'Monstrosity'}</p>
+
+                       <div className="w-full space-y-3">
+                          <div className="flex justify-between items-center px-1">
+                             <span className="text-[9px] font-black text-parchment-500 uppercase">Vitality</span>
+                             <span className="text-[10px] font-black text-dragon-red">{focusedItem.hp} / {focusedItem.maxHp} HP</span>
+                          </div>
+                          <div className="w-full h-2.5 bg-parchment-300 rounded-full overflow-hidden border border-black/5">
+                             <motion.div
+                               initial={{ width: 0 }}
+                               animate={{ width: `${(focusedItem.hp / focusedItem.maxHp) * 100}%` }}
+                               className="h-full bg-gradient-to-r from-dragon-red to-red-500"
+                             />
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-2 pt-2">
+                             <div className="bg-white/40 p-2 rounded border border-dragon-red/10">
+                                <div className="text-[7px] font-black text-parchment-400 uppercase">Protection</div>
+                                <div className="text-xs font-bold text-dragon-darkRed">AC {focusedItem.armor_class?.[0]?.value || focusedItem.armor_class || 12}</div>
+                             </div>
+                             <div className="bg-white/40 p-2 rounded border border-dragon-red/10">
+                                <div className="text-[7px] font-black text-parchment-400 uppercase">Mobility</div>
+                                <div className="text-xs font-bold text-dragon-darkRed">{focusedItem.speed || 30}ft</div>
+                             </div>
+                          </div>
+                       </div>
+
+                       <button
+                         onClick={() => setIsMonsterProfileOpen(true)}
+                         className="mt-6 w-full py-2 bg-dragon-red hover:bg-dragon-darkRed text-white text-[9px] font-black uppercase tracking-[0.2em] rounded transition-all shadow-lg"
+                       >
+                          Open Codex Entry
+                       </button>
+                    </div>
+                 </div>
+              )}
+
               <div className="flex items-center gap-3">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dragon-red/20 to-dragon-red/20" />
                 <div className="flex items-center gap-2">
                   <GameIcon name="identity" size={14} color="#8B0000" />
-                  <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Active_Threats</h3>
+                  <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Field_Presence</h3>
                 </div>
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent via-dragon-red/20 to-dragon-red/20" />
               </div>
@@ -197,9 +253,13 @@ export const WorldPanel: React.FC = () => {
                     key={monster.id}
                     onClick={() => {
                       setFocusedItem(monster);
-                      setIsMonsterProfileOpen(true);
                     }}
-                    className="group flex items-center gap-4 p-3 bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
+                    className={cn(
+                       "group flex items-center gap-4 p-3 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]",
+                       focusedItem?.id === monster.id
+                         ? "bg-red-100/80 border-2 border-dragon-red"
+                         : "bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30"
+                    )}
                   >
                     <div className="w-10 h-10 rounded border-2 border-dragon-red/20 overflow-hidden bg-white flex items-center justify-center shrink-0 group-hover:border-dragon-red transition-colors">
                       {monster.imageUrl ? (
@@ -376,86 +436,83 @@ export const WorldPanel: React.FC = () => {
                      </div>
                    </div>,
                    document.body
-               history: 'History & Lore',
-               government: 'Government',
-               ruler: 'Ruler',
-               population: 'Population',
-               economy: 'Economy & Trade',
-               climate: 'Climate',
-               biome: 'Biome',
-               dominant_trees: 'Flora',
-               wildlife: 'Wildlife',
-               dangers: 'Dangers',
-               factions: 'Factions',
-               religion: 'Religion',
-               services: 'Services',
-               inventory: 'Inventory',
-               prices: 'Local Prices',
-               opening_hours: 'Opening Hours',
-               reputation: 'Reputation',
-               quests: 'Rumors & Quests',
-               notes: 'Notes',
-               districts: 'Districts',
-               owner: 'Owner'
-             }).map(([key, title]) => {
-               const data = (displayLocation as any)[key] || (displayLocation as any)[key.replace('_', ' ')] || (displayLocation as any)[key.replace('_', '')];
-               if (!data || (Array.isArray(data) && data.length === 0) || (typeof data === 'object' && Object.keys(data).length === 0)) return null;
-               
-               return (
-                 <div key={key} className="pt-4 border-t-2 border-dragon-red/5">
-                   <h4 className="text-[10px] font-black uppercase tracking-widest text-dragon-red mb-2 flex items-center gap-2">
-                     <GameIcon name="scroll" size={12} color="#8B0000" />
-                     {title}
-                   </h4>
-                   {typeof data === 'string' ? (
-                     <p className="text-xs text-parchment-800 leading-relaxed font-serif whitespace-pre-wrap">{data}</p>
-                   ) : Array.isArray(data) ? (
-                     <ul className="list-disc pl-4 text-xs text-parchment-800 space-y-1 font-serif">
-                       {data.map((item, idx) => (
-                         <li key={idx}>{typeof item === 'string' ? item : JSON.stringify(item)}</li>
-                       ))}
-                     </ul>
-                   ) : typeof data === 'object' ? (
-                     <div className="space-y-1">
-                       {Object.entries(data).map(([k, v]) => (
-                         <div key={k} className="flex gap-2 text-xs text-parchment-800 font-serif">
-                           <span className="font-bold capitalize">{k.replace(/_/g, ' ')}:</span>
-                           <span>{typeof v === 'string' ? v : JSON.stringify(v)}</span>
-                         </div>
-                       ))}
-                     </div>
-                   ) : (
-                     <p className="text-xs text-parchment-800 font-serif">{String(data)}</p>
+                 )}
+
+                 {/* Location Metadata */}
+                 <div className="mt-6 space-y-4">
+                   {Object.entries({
+                     history: 'History & Lore',
+                     government: 'Government',
+                     ruler: 'Ruler',
+                     population: 'Population',
+                     economy: 'Economy & Trade',
+                     climate: 'Climate',
+                     biome: 'Biome',
+                     dominant_trees: 'Flora',
+                     wildlife: 'Wildlife',
+                     dangers: 'Dangers',
+                     factions: 'Factions',
+                     religion: 'Religion',
+                     services: 'Services',
+                     inventory: 'Inventory',
+                     prices: 'Local Prices',
+                     opening_hours: 'Opening Hours',
+                     reputation: 'Reputation',
+                     quests: 'Rumors & Quests',
+                     notes: 'Notes',
+                     districts: 'Districts',
+                     owner: 'Owner'
+                   }).map(([key, title]) => {
+                     const data = (displayLocation as any)[key] || (displayLocation as any)[key.replace('_', ' ')] || (displayLocation as any)[key.replace('_', '')];
+                     if (!data || (Array.isArray(data) && data.length === 0) || (typeof data === 'object' && Object.keys(data).length === 0)) return null;
+
+                     return (
+                       <div key={key} className="pt-4 border-t-2 border-dragon-red/5">
+                         <h4 className="text-[10px] font-black uppercase tracking-widest text-dragon-red mb-2 flex items-center gap-2">
+                           <GameIcon name="scroll" size={12} color="#8B0000" />
+                           {title}
+                         </h4>
+                         {typeof data === 'string' ? (
+                           <p className="text-xs text-parchment-800 leading-relaxed font-serif whitespace-pre-wrap">{data}</p>
+                         ) : Array.isArray(data) ? (
+                           <ul className="list-disc pl-4 text-xs text-parchment-800 space-y-1 font-serif">
+                             {data.map((item: any, idx: number) => (
+                               <li key={idx}>{typeof item === 'string' ? item : JSON.stringify(item)}</li>
+                             ))}
+                           </ul>
+                         ) : typeof data === 'object' ? (
+                           <div className="space-y-1">
+                             {Object.entries(data).map(([k, v]) => (
+                               <div key={k} className="flex gap-2 text-xs text-parchment-800 font-serif">
+                                 <span className="font-bold capitalize">{k.replace(/_/g, ' ')}:</span>
+                                 <span>{typeof v === 'string' ? v : JSON.stringify(v)}</span>
+                               </div>
+                             ))}
+                           </div>
+                         ) : (
+                           <p className="text-xs text-parchment-800 font-serif">{String(data)}</p>
+                         )}
+                       </div>
+                     );
+                   })}
+
+                   {/* Enter SubMap Button */}
+                   {(displayLocation as any)?.map && (
+                     <button
+                       onClick={() => {
+                         useUIStore.getState().setIsInsideSubMap(true);
+                       }}
+                       className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20 mt-4"
+                     >
+                       <GameIcon name="city" size={14} color="#FFFFFF" />
+                       Enter Location
+                     </button>
                    )}
                  </div>
-                 Enter Location
-               </button>
-             ) : (
-               !isTraveling ? (
-                 <button 
-                   id="set-course-btn"
-                   onClick={() => setShowTravelJournal(true)}
-                   className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
-                 >
-                   <GameIcon name="compass" size={14} color="#FFFFFF" />
-                   Plan Expedition
-                 </button>
-               ) : destination?.id === displayLocation.id ? (
-                 <button 
-                   onClick={() => stopTravel()}
-                   className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
-                 >
-                   <GameIcon name="close" size={14} color="#FFFFFF" />
-                   Abort Travel
-                 </button>
-               ) : (
-                  <div className="text-center text-xs font-bold text-dragon-red/60 uppercase">
-                    Traveling to {destination?.name}...
-                  </div>
-               )
-             )}
+               </div>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

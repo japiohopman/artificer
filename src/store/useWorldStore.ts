@@ -10,6 +10,7 @@ export interface SavedLocation {
   category: string;
   description?: string;
   image?: string | null;
+  banner?: string | null;
   region?: string;
   coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;

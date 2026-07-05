@@ -23,7 +23,7 @@ export const ActionView: React.FC = () => {
     removeFromPreview 
   } = useGameStore();
 
-  if (gameMode === 'combat') {
+  if (gameMode === 'combat' || currentView === 'grid') {
     return (
       <div className="w-full h-full flex flex-col">
         <div className="flex-1 relative min-h-0 border-2 border-dragon-gold shadow-2xl overflow-hidden">
