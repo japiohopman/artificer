@@ -191,7 +191,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     monsters: [],
     initiativeOrder: [],
     activeTurnIndex: 0,
-    grid: initializeGrid(12, 8),
+    grid: initializeGrid(32, 20),
     victoryXp: 500,
     activeConditions: {}
   },
@@ -370,6 +370,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
       newGrid[y] = [...newGrid[y]];
       newGrid[y][x] = { ...newGrid[y][x], isOpen: !newGrid[y][x].isOpen };
+
+      // Mark as explored if player opens it
+      newGrid[y][x].explored = true;
     }
     return {
       combatState: {

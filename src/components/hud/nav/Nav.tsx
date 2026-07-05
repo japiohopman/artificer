@@ -60,6 +60,17 @@ export const Nav: React.FC = () => {
 
   const leftActions: NavAction[] = [
     {
+      id: 'grid-view',
+      icon: 'panel',
+      label: 'Tactical',
+      onClick: () => {
+        const { currentView, setCurrentView } = useUIStore.getState();
+        setCurrentView(currentView === 'grid' ? 'world' : 'grid');
+      },
+      isActive: useUIStore.getState().currentView === 'grid',
+      shortcut: 'G'
+    },
+    {
       id: 'world-panel',
       icon: 'city',
       label: 'Atlas',
@@ -133,6 +144,8 @@ export const Nav: React.FC = () => {
             <button 
               key={action.id}
               onClick={action.onClick}
+              title={action.label}
+              aria-label={action.label}
               className={cn(
                 "w-10 h-10 rounded border-2 transition-all flex items-center justify-center relative group shadow-sm",
                 action.isActive 
@@ -220,6 +233,8 @@ export const Nav: React.FC = () => {
               key={action.id}
               id={action.id}
               onClick={action.onClick}
+              title={action.label}
+              aria-label={action.label}
               className={cn(
                 "w-10 h-10 rounded border-2 transition-all flex items-center justify-center relative group shadow-sm",
                 action.isActive 

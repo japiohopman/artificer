@@ -19,12 +19,24 @@ export const HUD: React.FC = () => {
     isCharacterPanelOpen, 
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
+    gameMode,
+    setActiveCharacterTab
   } = useUIStore();
 
   const {
     isInventoryOpen,
     setIsInventoryOpen
   } = useInventoryStore();
+
+  // Auto-configure sidebars for Combat Mode
+  React.useEffect(() => {
+    if (gameMode === 'combat') {
+      setIsWorldPanelOpen(true);
+      setIsCharacterPanelOpen(true);
+      setIsInventoryOpen(true);
+      setActiveCharacterTab('party');
+    }
+  }, [gameMode, setIsWorldPanelOpen, setIsCharacterPanelOpen, setIsInventoryOpen, setActiveCharacterTab]);
 
   const { resetAtlas } = useWorldStore();
 

@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../../../store/useGameStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useWorldStore } from '../../../store/useWorldStore';
@@ -19,8 +19,8 @@ export const CombatGrid: React.FC = () => {
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
-  const gridWidth = 12;
-  const gridHeight = 8;
+  const gridWidth = grid[0]?.length || 32;
+  const gridHeight = grid.length || 20;
 
   const handleCellClick = (x: number, y: number) => {
     const cell = grid[y][x];
@@ -40,6 +40,7 @@ export const CombatGrid: React.FC = () => {
     }
 
     if (isTargeting) {
+      // Logic for targeting specific actions
       if (targetingAction?.id === 'move') {
         const path = findPath(playerPos, { x, y }, grid);
 
@@ -65,15 +66,27 @@ export const CombatGrid: React.FC = () => {
       return;
     }
 
-    // Default movement if not explicitly targeting
+    // Default movement logic
+    const { gameMode } = useUIStore.getState();
     const path = findPath(playerPos, { x, y }, grid);
-    if (path && path.length > 0 && path.length <= 6) {
-      setPlayerPos(x, y);
-      addLog(`Moved to position (${x}, ${y})`, 'info');
-      const { consumeMovement } = useCharacterStore.getState();
-      consumeMovement(activeCharacterId, path.length * 5);
-    } else if (path && path.length > 6) {
-      addLog("That position is too far!", 'warning');
+
+    if (path && path.length > 0) {
+      const isCombat = gameMode === 'combat';
+      const moveLimit = 6; // 30ft
+
+      if (!isCombat || path.length <= moveLimit) {
+        setPlayerPos(x, y);
+        addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
+
+        if (isCombat) {
+          const { consumeMovement } = useCharacterStore.getState();
+          consumeMovement(activeCharacterId, path.length * 5);
+        }
+      } else {
+        addLog("That position is too far for a single turn!", 'warning');
+      }
+    } else if (path === null && cell.type !== 'wall') {
+      addLog("Path is blocked!", 'warning');
     }
   };
 
@@ -113,7 +126,7 @@ export const CombatGrid: React.FC = () => {
       }
     }
     return visible;
-  }, [playerPos, grid]);
+  }, [playerPos, grid, gridHeight, gridWidth]);
 
   const validTargetCells = useMemo(() => {
     if (!isTargeting || !targetingAction) return new Set<string>();
@@ -133,7 +146,7 @@ export const CombatGrid: React.FC = () => {
       }
     }
     return cells;
-  }, [isTargeting, targetingAction, playerPos, grid]);
+  }, [isTargeting, targetingAction, playerPos, grid, gridWidth, gridHeight]);
 
   const isNight = gameTime < 360 || gameTime > 1200;
   const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
@@ -175,80 +188,116 @@ export const CombatGrid: React.FC = () => {
         isNight ? "bg-blue-950/30" : "bg-orange-500/5 opacity-10"
       )} />
 
-      {/* Tactical Background Grid */}
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, #444 1px, transparent 1px),
-            linear-gradient(to bottom, #444 1px, transparent 1px)
-          `,
-          backgroundSize: `${cellSize}px ${cellSize}px`,
-          width: '100%',
-          height: '100%'
-        }}
-      />
+      {/* Tactical Background Grid - Moved inside draggable container */}
       
-      {/* Placeholder content for the tactical overlay */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center border-4 border-dragon-gold/20 m-4 rounded-3xl">
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center pointer-events-none">
-          <div className="flex items-center gap-3 mb-2 justify-center">
-            <div className="w-12 h-1 bg-dragon-red" />
-            <h2 className="font-header text-3xl text-white uppercase tracking-[0.4em]">Tactical Overlay</h2>
-            <div className="w-12 h-1 bg-dragon-red" />
-          </div>
-          <p className="text-[10px] font-black text-white/40 uppercase tracking-[0.2em]">Combat Matrix Initialized - Waiting for Turn Sequence</p>
-        </div>
+      {/* Container for the tactical overlay */}
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center border-4 border-dragon-gold/20 rounded-3xl overflow-hidden bg-stone-950/40">
 
-        {/* Initiative Tracker */}
-        <div className="absolute top-24 right-8 flex flex-col gap-3 z-30">
-           <div className="text-[9px] font-black text-dragon-gold uppercase tracking-widest text-right mb-1">Initiative Order</div>
-           {initiativeOrder.map((entry, idx) => {
-             const isActive = idx === activeTurnIndex;
-             return (
-               <motion.div
-                key={entry.id}
-                animate={{ scale: isActive ? 1.1 : 1, x: isActive ? -10 : 0 }}
-                className={cn(
-                  "flex items-center gap-3 bg-black/60 backdrop-blur-md p-2 rounded border transition-all cursor-pointer",
-                  isActive ? "border-dragon-gold shadow-[0_0_15px_rgba(212,175,55,0.3)]" : "border-white/10 opacity-60"
-                )}
-               >
-                  <div className={cn(
-                    "w-8 h-8 rounded-full border-2 overflow-hidden flex items-center justify-center",
-                    entry.isPlayer ? "border-blue-500 bg-blue-900/40" : "border-dragon-red bg-red-900/40"
-                  )}>
-                     <GameIcon name={entry.isPlayer ? "user" : "identity"} size={14} color="currentColor" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-white uppercase truncate w-24">{entry.name}</span>
-                    <span className="text-[8px] font-bold text-dragon-gold uppercase tracking-tighter">Initiative: {entry.value}</span>
-                  </div>
-                  {isActive && (
-                    <div className="w-2 h-2 rounded-full bg-dragon-gold animate-pulse shadow-[0_0_8px_#D4AF37]" />
+        {/* Initiative Bar (Horizontal Top) */}
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-[100] bg-black/60 backdrop-blur-xl p-2 rounded-full border border-dragon-gold/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+           <div className="px-4 border-r border-white/10 mr-2">
+             <div className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-tight">Turn</div>
+             <div className="text-[11px] font-black text-white uppercase leading-tight tracking-wider">Order</div>
+           </div>
+
+           <div className="flex items-center gap-4 px-2 py-1 overflow-x-auto no-scrollbar max-w-[60vw]">
+             {initiativeOrder.map((entry, idx) => {
+               const isActive = idx === activeTurnIndex;
+               // Attempt to find character avatar if it's a player
+               const char = characters.find(c => c.id === entry.id || c.name === entry.name);
+               const avatar = char?.avatarUrl;
+
+               return (
+                 <motion.div
+                  key={entry.id}
+                  initial={false}
+                  animate={{
+                    scale: isActive ? 1.2 : 1,
+                    opacity: isActive ? 1 : 0.6,
+                  }}
+                  className={cn(
+                    "flex flex-col items-center relative transition-all duration-500",
+                    isActive ? "z-10" : "z-0"
                   )}
-               </motion.div>
-             );
-           })}
+                 >
+                    <div className={cn(
+                      "w-12 h-12 rounded-full border-2 overflow-hidden flex items-center justify-center bg-stone-900 shadow-xl",
+                      entry.isPlayer ? "border-blue-500" : "border-dragon-red",
+                      isActive ? "border-dragon-gold ring-4 ring-dragon-gold/30 shadow-dragon-gold/20" : "border-white/10"
+                    )}>
+                       {avatar ? (
+                         <img src={avatar} className="w-full h-full object-cover" alt={entry.name} />
+                       ) : (
+                         <GameIcon name={entry.isPlayer ? "user" : "identity"} size={20} color={entry.isPlayer ? "#3B82F6" : "#DC2626"} />
+                       )}
+                    </div>
+
+                    {/* Active Indicator */}
+                    <AnimatePresence>
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          className="absolute -bottom-6 flex flex-col items-center"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-dragon-gold animate-pulse shadow-[0_0_8px_#D4AF37]" />
+                          <div className="text-[7px] font-black text-dragon-gold uppercase tracking-tighter whitespace-nowrap bg-black/80 px-1.5 py-0.5 rounded border border-dragon-gold/20 mt-1">Current Turn</div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Turn Number Badge */}
+                    <div className={cn(
+                      "absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black border-2 transition-colors",
+                      isActive ? "bg-dragon-gold text-stone-950 border-stone-950" : "bg-stone-800 text-white/40 border-white/10"
+                    )}>
+                      {idx + 1}
+                    </div>
+                 </motion.div>
+               );
+             })}
+
+             {initiativeOrder.length === 0 && (
+                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest px-8">Waiting for Initiative...</div>
+             )}
+           </div>
 
            <button
              onClick={startCombat}
-             className="px-4 py-2 bg-stone-800 text-parchment-400 text-[8px] font-black uppercase rounded border border-white/10 hover:bg-stone-700 transition-all"
+             title="Reroll Initiative"
+             className="ml-2 w-10 h-10 bg-stone-800 hover:bg-stone-700 text-dragon-gold hover:text-white rounded-full border border-white/10 transition-all flex items-center justify-center shadow-lg active:scale-90"
            >
-             Reroll Initiative
+             <GameIcon name="dice" size={16} color="currentColor" />
            </button>
         </div>
 
 
-        {/* Unit Tokens Container */}
-        <div
-          className="relative border-2 border-white/5 shadow-2xl z-10"
+        {/* Unit Tokens Container - Draggable */}
+        <motion.div
+          drag
+          dragMomentum={false}
+          initial={{ x: -100, y: -100 }} // Start slightly offset to show it's a large map
+          className="relative border-2 border-white/5 shadow-2xl z-10 cursor-grab active:cursor-grabbing"
           style={{
             width: gridWidth * cellSize,
             height: gridHeight * cellSize,
             backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 100%)'
           }}
         >
+          {/* Tactical Background Grid Pattern */}
+          <div
+            className="absolute inset-0 opacity-20 pointer-events-none"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, #444 1px, transparent 1px),
+                linear-gradient(to bottom, #444 1px, transparent 1px)
+              `,
+              backgroundSize: `${cellSize}px ${cellSize}px`,
+              width: '100%',
+              height: '100%'
+            }}
+          />
           {/* Interactive Grid Overlay - Now perfectly aligned with token container */}
           <div
             className="absolute inset-0 z-20"
@@ -297,21 +346,35 @@ export const CombatGrid: React.FC = () => {
                x: playerPos.x * cellSize,
                y: playerPos.y * cellSize
              }}
-             className="absolute p-2"
+             className="absolute p-1 z-[40]"
              style={{ width: cellSize, height: cellSize }}
            >
-              <div className="w-full h-full rounded-full border-2 border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] bg-blue-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform">
+              <div className={cn(
+                "w-full h-full rounded-full border-2 border-blue-500 bg-blue-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform relative shadow-[0_0_20px_rgba(59,130,246,0.4)]",
+                initiativeOrder[activeTurnIndex]?.id === activeCharacterId && "border-dragon-gold ring-4 ring-dragon-gold/40 animate-[pulse_2s_infinite]"
+              )}>
                 {activeChar?.avatarUrl ? (
                   <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar.name} />
                 ) : (
                   <GameIcon name="user" size={24} color="#FFF" />
                 )}
-                {/* Movement Range Pulse */}
-                <div className="absolute inset-0 border border-blue-400/30 rounded-full animate-ping pointer-events-none" />
+
+                {/* Status Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent pointer-events-none" />
+
+                {/* Active Turn Glow */}
+                {initiativeOrder[activeTurnIndex]?.id === activeCharacterId && (
+                  <div className="absolute inset-0 border-2 border-dragon-gold rounded-full animate-pulse shadow-[inset_0_0_10px_#D4AF37]" />
+                )}
               </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-blue-400 uppercase whitespace-nowrap z-20">
+
+              {/* Character Name Label */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/95 text-white text-[7px] font-black px-2 py-0.5 rounded-full border border-blue-400/50 uppercase whitespace-nowrap z-20 shadow-lg tracking-tighter">
                 {activeChar?.name || 'Player'}
               </div>
+
+              {/* Movement Range Pulse */}
+              <div className="absolute inset-0 border-2 border-blue-400/30 rounded-full animate-ping pointer-events-none" />
            </motion.div>
 
            {/* Monster Tokens */}
@@ -356,8 +419,9 @@ export const CombatGrid: React.FC = () => {
                     )}
 
                     <div className={cn(
-                      "w-full h-full rounded-full border-2 shadow-[0_0_15px_rgba(220,38,38,0.5)] bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform",
+                      "w-full h-full rounded-full border-2 bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform relative shadow-[0_0_15px_rgba(220,38,38,0.3)]",
                       canTarget ? "border-dragon-gold ring-4 ring-dragon-gold/40 animate-pulse" : "border-dragon-red",
+                      initiativeOrder[activeTurnIndex]?.id === monster.id ? "border-dragon-gold ring-4 ring-dragon-gold/40" : "",
                       monster.awareness === 'idle' ? "opacity-60" : "opacity-100"
                     )}>
                       {monster.imageUrl ? (
@@ -367,21 +431,26 @@ export const CombatGrid: React.FC = () => {
                       )}
 
                       {/* Health Bar Overlay */}
-                      <div className="absolute top-0 left-0 w-full h-1 bg-black/60">
+                      <div className="absolute bottom-0 left-0 w-full h-2 bg-black/60 border-t border-white/10">
                         <div
-                          className="h-full bg-dragon-red transition-all duration-300"
+                          className="h-full bg-gradient-to-r from-dragon-red to-red-500 transition-all duration-300"
                           style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }}
                         />
                       </div>
+
+                      {/* Active Turn Glow */}
+                      {initiativeOrder[activeTurnIndex]?.id === monster.id && (
+                        <div className="absolute inset-0 border-2 border-dragon-gold rounded-full animate-pulse shadow-[inset_0_0_10px_#D4AF37]" />
+                      )}
                     </div>
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/90 text-white text-[7px] font-black px-1.5 py-0.5 rounded border border-dragon-red/50 uppercase whitespace-nowrap z-20">
-                      {monster.name} ({monster.hp}/{monster.maxHp})
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/95 text-white text-[7px] font-black px-2 py-0.5 rounded-full border border-dragon-red/50 uppercase whitespace-nowrap z-20 shadow-lg tracking-tighter">
+                      {monster.name}
                     </div>
                  </motion.div>
                );
              })}
            </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
       
       {/* HUD Vignette */}

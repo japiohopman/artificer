@@ -22,6 +22,7 @@ export const WorldPanel: React.FC = () => {
     setIsWorldPanelOpen,
     gameMode,
     setIsMonsterProfileOpen,
+    focusedItem,
     setFocusedItem
   } = useUIStore();
 
@@ -380,7 +381,7 @@ export const WorldPanel: React.FC = () => {
                </button>
              )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* Pre-travel Journal Overlay */}
