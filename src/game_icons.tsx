@@ -27,15 +27,17 @@ interface GameIconProps extends React.SVGAttributes<SVGElement> {
 }
 
 export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, className, size, width, height, color = "currentColor", fallbackName, title, ...props }) => {
-  let path = directPath || (name ? GAME_ICONS[name as GameIconName] : undefined);
+  let pathEntry = directPath || (name ? GAME_ICONS[name as GameIconName] : undefined);
   
-  if (!path && fallbackName) {
-    path = GAME_ICONS[fallbackName as GameIconName];
+  if (!pathEntry && fallbackName) {
+    pathEntry = GAME_ICONS[fallbackName as GameIconName];
   }
 
-  if (!path) {
+  if (!pathEntry) {
     return null;
   }
+
+  const path = typeof pathEntry === 'string' ? pathEntry : pathEntry.path;
 
   const w = width || size || 24;
   const h = height || size || 24;
