@@ -17,10 +17,17 @@ Travel is driven by the `EnvironmentalEngine` and managed within `useWorldStore.
 
 ### 2. Fast-Forward Travel
 When travel is initiated, the system can enter a `isFastForwarding` state.
-- **Tick Rate**: Game time advances by **10 minutes** every **2 seconds** of real time.
-- **Visuals**: The party marker (glowing gold) interpolates between the origin and destination along a straight line or calculated path.
+- **Tick Rate**: Accelerated time progression.
+- **Visuals**: The party marker (glowing gold) interpolates between the origin and destination.
 
-### 3. Random Encounters
+### 3. Skip Travel (Instant Transition)
+Single-player convenience feature to bypass the real-time wait.
+- **Loading Screen**: Triggers a global `LoadingScreen` with rotating game art.
+- **Time Advance**: Instantly advances game time by the total estimated travel duration.
+- **Resting**: Automatically accounts for resting/sleep requirements if travel spans multiple days.
+- **Repositioning**: Instantly teleports the party marker to the destination.
+
+### 4. Random Encounters
 During movement updates, the system performs an encounter check.
 - **Probability**: 0.5% chance per movement update.
 - **Trigger**: When an encounter occurs, `isFastForwarding` is reset to `false`.

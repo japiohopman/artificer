@@ -24,6 +24,11 @@ interface UIState {
   isMapPanEnabled: boolean;
   selectedDiceTheme: string;
   selectedDiceColor: string;
+
+  // Loading State
+  isLoading: boolean;
+  loadingMessage: string;
+  loadingArt: string | null;
   
   // App UI State
   isProfileMenuOpen: boolean;
@@ -66,6 +71,7 @@ interface UIState {
   setIsMapPanEnabled: (isEnabled: boolean) => void;
   setSelectedDiceTheme: (theme: string) => void;
   setSelectedDiceColor: (color: string) => void;
+  setIsLoading: (isLoading: boolean, message?: string, art?: string) => void;
   
   setSearchQuery: (query: string) => void;
   setGameMode: (mode: 'exploration' | 'combat') => void;
@@ -103,6 +109,10 @@ export const useUIStore = create<UIState>((set) => ({
   selectedDiceTheme: 'default',
   selectedDiceColor: '#8b0000',
 
+  isLoading: false,
+  loadingMessage: 'Loading...',
+  loadingArt: null,
+
   isProfileMenuOpen: false,
   isMonsterProfileOpen: false,
   isTransportProfileOpen: false,
@@ -139,6 +149,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsMapPanEnabled: (isMapPanEnabled) => set({ isMapPanEnabled }),
   setSelectedDiceTheme: (selectedDiceTheme) => set({ selectedDiceTheme }),
   setSelectedDiceColor: (selectedDiceColor) => set({ selectedDiceColor }),
+  setIsLoading: (isLoading, message = 'Loading...', art = undefined) => set({ isLoading, loadingMessage: message, loadingArt: art || null }),
 
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setFocusedItem: (focusedItem) => set({ focusedItem }),

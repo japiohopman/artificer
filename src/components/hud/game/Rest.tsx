@@ -4,45 +4,25 @@ import { useUIStore } from '../../../store/useUIStore';
 import { useWorldStore } from '../../../store/useWorldStore';
 import { GameIcon } from '../../../game_icons';
 
-const CAMPFIRE_IMAGE = 'https://gen.krea.ai/images/24562ed5-d072-4af4-936f-9d2d513503b5.png';
+const CAMPFIRE_IMAGE = '/assets/ui/campfire.png';
 
 export const Rest: React.FC = () => {
-  const { setCurrentView } = useUIStore();
+  const { setCurrentView, setIsLoading } = useUIStore();
   const { gameTime, gameDay, advanceTime } = useWorldStore();
   const [isResting, setIsResting] = useState(false);
   const [restType, setRestType] = useState<'short' | 'long' | null>(null);
 
   const handleRest = async (hours: number, type: 'short' | 'long') => {
-    setIsResting(true);
     setRestType(type);
+    setIsLoading(true, type === 'short' ? 'Taking a Short Rest...' : 'Taking a Long Rest...', CAMPFIRE_IMAGE);
 
-    // Simulate resting animation duration
-    const animationDuration = 3000;
-    const start = Date.now();
+    // Artificial delay for atmosphere
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-    const animateTime = () => {
-      const now = Date.now();
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / animationDuration, 1);
-
-      // In a real game we might want to advance time incrementally for visual effect
-      // But for now we just do a smooth transition at the end or split it.
-      
-      if (progress < 1) {
-        requestAnimationFrame(animateTime);
-      } else {
-        finishRest(hours);
-      }
-    };
-
-    requestAnimationFrame(animateTime);
-  };
-
-  const finishRest = async (hours: number) => {
     const minutes = hours * 60;
     advanceTime(minutes);
     
-    setIsResting(false);
+    setIsLoading(false);
     setRestType(null);
   };
 
@@ -70,7 +50,7 @@ export const Rest: React.FC = () => {
       </div>
 
       <AnimatePresence>
-        {!isResting ? (
+        {!isResting && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -129,33 +109,6 @@ export const Rest: React.FC = () => {
               >
                 Return to Atlas
               </button>
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="z-30 flex flex-col items-center gap-6"
-          >
-            <div className="relative">
-              <motion.div 
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="w-32 h-32 border-2 border-dashed border-amber-500/20 rounded-full"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <GameIcon name="loading" size={40} className="text-amber-500 animate-spin" />
-              </div>
-            </div>
-            
-            <div className="text-center space-y-2">
-              <h3 className="text-2xl font-serif text-white italic tracking-wide">
-                {restType === 'short' ? 'Brief Respite...' : 'Drifting into Slumber...'}
-              </h3>
-              <p className="text-amber-500/60 text-[10px] font-black uppercase tracking-[0.5em] animate-pulse">
-                Time is Ebbing
-              </p>
             </div>
           </motion.div>
         )}
