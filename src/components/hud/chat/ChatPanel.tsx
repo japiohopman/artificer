@@ -224,7 +224,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
         </AnimatePresence>
         
         {gameMode !== 'combat' && (
-          <div className="shrink-0 p-3 bg-parchment-100/95 backdrop-blur-xl border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
+          <div className="shrink-0 p-3 bg-parchment-100/95 border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
             <ChatInput
               message={message}
               setMessage={setMessage}

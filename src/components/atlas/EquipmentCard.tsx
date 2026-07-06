@@ -17,7 +17,7 @@ import { normalizeImageUrl, playSuccessSound } from '../../services/storageServi
 
 import { extractBookPages } from '../../lib/bookUtils';
 
-const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";
+const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
 
 interface EquipmentCardProps {
   equipment: any;
@@ -126,7 +126,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
       className
     )}
     style={{
-      backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+      backgroundImage: `url('/assets/ui/old_paper.webp')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
@@ -404,7 +404,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           )}
         </div>
 
-        <div className="mt-auto pt-1 border-t border-dragon-gold/10 flex justify-between items-center bg-parchment-100/80 backdrop-blur-sm">
+        <div className="mt-auto pt-1 border-t border-dragon-gold/10 flex justify-between items-center bg-parchment-100/80">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1 text-parchment-600">
               <GameIcon name="coins" size={10} color="#D97706" />
@@ -493,7 +493,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/60"
         />
         <motion.div
            initial={{ scale: 0.9, opacity: 0, y: 20 }}

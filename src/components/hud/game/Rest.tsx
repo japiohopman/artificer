@@ -14,10 +14,10 @@ export const Rest: React.FC = () => {
 
   const handleRest = async (hours: number, type: 'short' | 'long') => {
     setRestType(type);
-    setIsLoading(true, type === 'short' ? 'Taking a Short Rest...' : 'Taking a Long Rest...', CAMPFIRE_IMAGE);
+    setIsLoading(true, type === 'short' ? 'Taking a Short Rest...' : 'Taking a Long Rest...');
 
     // Artificial delay for atmosphere
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2500));
 
     const minutes = hours * 60;
     advanceTime(minutes);
@@ -72,7 +72,7 @@ export const Rest: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               <button
                 onClick={() => handleRest(3, 'short')}
-                className="group relative flex flex-col items-center gap-4 p-8 bg-parchment-50/10 backdrop-blur-xl border border-white/10 rounded hover:bg-parchment-50/20 transition-all hover:border-dragon-red/50 hover:-translate-y-1"
+                className="group relative flex flex-col items-center gap-4 p-8 bg-parchment-50/10 border border-white/10 rounded hover:bg-parchment-50/20 transition-all hover:border-dragon-red/50 hover:-translate-y-1"
               >
                 <div className="p-4 bg-dragon-red/20 rounded text-dragon-red group-hover:scale-110 transition-transform">
                   <GameIcon name="coffee" size={32} />
@@ -85,7 +85,7 @@ export const Rest: React.FC = () => {
 
               <button
                 onClick={() => handleRest(8, 'long')}
-                className="group relative flex flex-col items-center gap-4 p-8 bg-parchment-50/10 backdrop-blur-xl border border-white/10 rounded hover:bg-parchment-50/20 transition-all hover:border-dragon-red/50 hover:-translate-y-1"
+                className="group relative flex flex-col items-center gap-4 p-8 bg-parchment-50/10 border border-white/10 rounded hover:bg-parchment-50/20 transition-all hover:border-dragon-red/50 hover:-translate-y-1"
               >
                 <div className="p-4 bg-dragon-red/20 rounded text-dragon-gold group-hover:scale-110 transition-transform">
                   <GameIcon name="bed" size={32} />

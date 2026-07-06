@@ -4,7 +4,7 @@ import { commitFile } from '../../services/storageService';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { GameIcon } from '../../game_icons';
 
-const ITEM_BACKGROUND = "https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp";
+const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
 
 interface EquipmentImageGeneratorProps {
   itemName: string;

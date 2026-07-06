@@ -33,13 +33,13 @@ export const Journal: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8 bg-black/60 backdrop-blur-md"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8 bg-black/60"
         >
           {/* Main Journal Container */}
           <div 
             className="w-full max-w-6xl h-[85vh] bg-parchment-100 rounded-lg shadow-2xl border-[12px] border-dragon-darkRed flex flex-col relative overflow-hidden"
             style={{
-              backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+              backgroundImage: `url('/assets/ui/old_paper.webp')`,
               backgroundSize: 'cover'
             }}
           >

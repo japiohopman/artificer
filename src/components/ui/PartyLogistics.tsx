@@ -231,7 +231,7 @@ export const PartyLogistics: React.FC = () => {
                exit={{ opacity: 0, scale: 0.9, y: 20 }}
                className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-xl bg-parchment-100 rounded-lg shadow-2xl border-[8px] border-dragon-darkRed overflow-hidden z-[7000] flex flex-col"
                style={{
-                 backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+                 backgroundImage: `url('/assets/ui/old_paper.webp')`,
                  backgroundSize: 'cover'
                }}
              >

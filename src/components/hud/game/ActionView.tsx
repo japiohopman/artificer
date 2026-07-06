@@ -43,7 +43,7 @@ export const ActionView: React.FC = () => {
         <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
         
         <div className="absolute top-4 left-4 z-30 flex flex-col gap-2">
-          <div className="bg-white/80 backdrop-blur-md p-4 rounded-xl border border-parchment-300 shadow-xl">
+          <div className="bg-white/80 p-4 rounded-xl border border-parchment-300 shadow-xl">
             <h4 className="font-header text-lg text-dragon-darkRed uppercase tracking-widest">Combat Simulator</h4>
             <p className="text-[10px] text-parchment-600 font-bold uppercase">Drag cards to organize your collection</p>
             <div className="mt-4 flex gap-2">

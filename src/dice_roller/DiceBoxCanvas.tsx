@@ -12,6 +12,10 @@ export const DiceBoxCanvas: React.FC = () => {
 
   useEffect(() => {
     if (containerRef.current) {
+      // Ensure we don't have multiple canvases
+      const existingCanvas = containerRef.current.querySelector('canvas');
+      if (existingCanvas) return;
+
       diceService.init('#dice-box-container').then(() => {
         setIsDiceReady(true);
         // Force initial resize

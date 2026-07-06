@@ -40,7 +40,7 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
       className
     )}
     style={{
-      backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+      backgroundImage: `url('/assets/ui/old_paper.webp')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>

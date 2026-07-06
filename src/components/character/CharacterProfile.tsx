@@ -320,7 +320,7 @@ export const CharacterProfile: React.FC = () => {
         className="w-full max-w-5xl h-[90vh] rounded border-2 border-dragon-red/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] relative flex flex-col overflow-hidden font-sans"
         style={{
           ...getAlignmentBackgroundStyle(character.alignment),
-          backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+          backgroundImage: `url('/assets/ui/old_paper.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -1607,7 +1607,7 @@ const DroppableSlotWrapper: React.FC<{
         )}
       >
         <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none">
-          <img src="https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1775921630292-back_item_slug.webp" alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <img src="/assets/ui/back_item_slug.webp" alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </div>
         {item ? (
            <ChromaKeyImage src={item.imageUrl} alt={item.name} className="h-[90%] w-auto object-contain mx-auto p-0.5" />

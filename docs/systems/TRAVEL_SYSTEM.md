@@ -39,6 +39,14 @@ As the party travels, the area around their current coordinates is automatically
 - **Discovery Radius**: 200 units.
 - **Persistence**: Explored areas are used to clear "Fog of War" on the map.
 
+## 🧩 Components
+
+### 1. `Travel.tsx`
+A standalone component (`src/components/core/Travel.tsx`) that handles the travel UI:
+- **Preparation View**: Calculates distance, ETA, and provision requirements (rations/water) based on D&D 5e rules and party capacity.
+- **Active Travel View**: Shows progress bar and provides "Fast Forward", "Skip Travel", and "Abort" controls.
+- **Integration**: Nested within the `WorldPanel.tsx` footer via a portal-driven modal.
+
 ## 🗺️ Leaflet Integration
 - **Coordinate Mapping**: The system translates high-resolution pixel coordinates from Leaflet into the Proto Unit system for movement calculations.
 - **Party Marker**: A custom Leaflet DivIcon that pulses and tracks the `partyLocation` state.

@@ -405,7 +405,7 @@ export const LevelUpOverlay: React.FC = () => {
           exit={{ scale: 1.1, opacity: 0 }}
           className="relative w-full max-w-5xl rounded shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] overflow-visible"
           style={{
-            backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+            backgroundImage: `url('/assets/ui/old_paper.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

@@ -45,7 +45,7 @@ export const GameScreen: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-[60] pointer-events-none bg-dragon-darkRed/20 backdrop-blur-[2px]"
+            className="absolute inset-0 z-[60] pointer-events-none bg-dragon-darkRed/10"
           />
         )}
       </AnimatePresence>

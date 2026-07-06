@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="Arcane Codex Banner" src="https://gen.krea.ai/images/6b7a7ea2-3bbc-4526-918c-c92a8969c8c9.png" />
+<img width="1200" height="475" alt="Arcane Codex Banner" src="/assets/ui/arcane_codex_banner.png" />
 </div>
 
 # 📜 Arcane Codex

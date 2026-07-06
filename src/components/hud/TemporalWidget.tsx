@@ -35,7 +35,7 @@ export const TemporalWidget: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center gap-4 bg-parchment-200/50 backdrop-blur-md px-4 py-2 rounded-lg border-2 border-dragon-gold/30 shadow-inner group transition-all hover:bg-parchment-200/80">
+    <div className="flex items-center gap-4 bg-parchment-200/50 px-4 py-2 rounded-lg border-2 border-dragon-gold/30 shadow-inner group transition-all hover:bg-parchment-200/80">
       {/* Time Display */}
       <div className="flex flex-col items-center border-r border-dragon-gold/20 pr-4">
         <span className="text-[8px] font-black text-dragon-darkRed/40 uppercase tracking-[0.2em] mb-0.5">Time</span>

@@ -152,14 +152,14 @@ export const NPCDisplay: React.FC<NPCDisplayProps> = ({ species, emotion, name, 
                   }}
                 />
                 {isSaving && (
-                  <div className="absolute top-4 right-4 z-30 bg-black/60 backdrop-blur-md border border-emerald-500/30 px-3 py-1.5 flex items-center space-x-2 rounded-md">
+                  <div className="absolute top-4 right-4 z-30 bg-black/60 border border-emerald-500/30 px-3 py-1.5 flex items-center space-x-2 rounded-md">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                     <span className="text-[9px] font-mono uppercase tracking-widest text-emerald-400">Saving...</span>
                   </div>
                 )}
               </div>
             ) : (isError || !portraitUrl) && onGenerate ? (
-              <div className="w-full h-full flex flex-col items-center justify-center space-y-4 bg-black/40 backdrop-blur-sm rounded-t-md p-8 text-center border border-white/5">
+              <div className="w-full h-full flex flex-col items-center justify-center space-y-4 bg-black/40 rounded-t-md p-8 text-center border border-white/5">
                 <GameIcon name="shield_alert" className="text-amber-500/60" size={24} />
                 <p className="text-white/40 text-[9px] uppercase tracking-widest leading-relaxed">
                   Portrait data missing.<br/>Generate from description?

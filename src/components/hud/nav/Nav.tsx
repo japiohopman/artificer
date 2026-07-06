@@ -196,7 +196,7 @@ export const Nav: React.FC = () => {
         <TemporalWidget />
         
         {dynamicNavButtons.length > 0 && (
-          <div className="flex items-center gap-4 bg-parchment-200/50 backdrop-blur-md px-4 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
+          <div className="flex items-center gap-4 bg-parchment-200/50 px-4 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
             <AnimatePresence mode="popLayout">
               {dynamicNavButtons.map((action: NavAction) => (
                 <motion.button

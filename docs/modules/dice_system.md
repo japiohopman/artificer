@@ -28,6 +28,7 @@ Jules Agent
 ### Dice Logic (diceService.ts)
 - `diceService.roll3D(notation, label, theme)`: Triggers a 3D roll with an optional theme. Standard themes are located in `public/assets/dice-box/themes/`.
 - `diceService.rollBackground(notation, label)`: Logical roll without animation.
+- **Path Resolution**: The service uses `window.location.origin` to provide absolute paths to the `ammo.wasm` worker, fixing rendering issues in diverse hosting environments.
 
 ### Store Integration (useStore.ts)
 - `rollDice3D(notation, label, theme)`: Triggers a 3D roll and updates the `recentRolls` state.

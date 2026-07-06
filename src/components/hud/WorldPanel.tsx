@@ -139,7 +139,7 @@ export const WorldPanel: React.FC = () => {
             }}
           />
         ) : (
-          <div className="absolute inset-0 z-0 bg-parchment-100/80 backdrop-blur-sm" />
+          <div className="absolute inset-0 z-0 bg-parchment-100/80" />
         )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
@@ -234,7 +234,7 @@ export const WorldPanel: React.FC = () => {
           </div>
 
           <div className={cn(
-            "bg-white/30 border rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 p-4 bg-white/40 backdrop-blur-sm",
+            "bg-white/30 border rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 p-4 bg-white/40",
             inspectedLocation ? "border-blue-500/50 shadow-blue-500/10" : "border-dragon-red/10"
           )}>
              {loreContent ? (
@@ -327,7 +327,7 @@ export const WorldPanel: React.FC = () => {
       </div>
 
       {/* FOOTER: Sticky */}
-      <div className="p-4 bg-parchment-100/95 backdrop-blur-md border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
+      <div className="p-4 bg-parchment-100/95 border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
         {displayLocation && (
           <div className="space-y-3">
              {isAtDestination ? (
@@ -385,7 +385,7 @@ export const WorldPanel: React.FC = () => {
 
       {/* Travel Module Overlay */}
       {showTravelJournal && createPortal(
-        <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm pointer-events-auto">
+        <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 pointer-events-auto">
           <Travel
             destination={displayLocation}
             onClose={() => setShowTravelJournal(false)}

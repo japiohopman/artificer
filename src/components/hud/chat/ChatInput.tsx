@@ -17,7 +17,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, onSen
   const { isDiceReady } = useGameStore();
 
   return (
-    <div className="p-3 bg-parchment-100/40 border-t border-dragon-gold/10 backdrop-blur-xl">
+    <div className="p-3 bg-parchment-100/40 border-t border-dragon-gold/10">
       <div className="relative flex items-center gap-2 group">
         <button
           onClick={() => setIsAdvancedRollerOpen(!isAdvancedRollerOpen)}

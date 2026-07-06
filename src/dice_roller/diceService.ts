@@ -51,7 +51,8 @@ class DiceService {
         this.initialized = false;
         
         // Use local assets from the public directory
-        const ASSET_PATH = "/assets/dice-box/";
+        // Use window.location.origin to ensure absolute path for workers
+        const ASSET_PATH = `${window.location.origin}/assets/dice-box/`;
         
         this.diceBox = new DiceBox({
           container: selector,

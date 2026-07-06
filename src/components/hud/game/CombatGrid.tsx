@@ -203,7 +203,7 @@ export const CombatGrid: React.FC = () => {
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center border-4 border-dragon-gold/20 rounded-3xl overflow-hidden bg-stone-950/40">
 
         {/* Initiative Bar (Horizontal Top) */}
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-[100] bg-black/60 backdrop-blur-xl p-2 rounded-full border border-dragon-gold/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-[100] bg-black/60 p-2 rounded-full border border-dragon-gold/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
            <div className="px-4 border-r border-white/10 mr-2">
              <div className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-tight">Turn</div>
              <div className="text-[11px] font-black text-white uppercase leading-tight tracking-wider">Order</div>

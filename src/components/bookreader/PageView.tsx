@@ -41,9 +41,9 @@ export interface PageData {
 }
 
 const COVERS = {
-    FRONT_SPRITE_BOOK: "https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Fapp-uploads.krea.ai%2F9678081a-d6a5-4cb1-8e01-1019733c1706%2F1764947885074-book_covers.webp",
-    FRONT_SPRITE_LEGACY: "https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Fgen.krea.ai%2Fimages%2F7c155055-027b-4320-b745-ba801ba3bf67.png",
-    BACK_SPRITE: "https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Fapp-uploads.krea.ai%2F9678081a-d6a5-4cb1-8e01-1019733c1706%2F1764947885074-book_covers.webp"
+    FRONT_SPRITE_BOOK: "/assets/ui/book_covers.webp",
+    FRONT_SPRITE_LEGACY: "/assets/ui/book_legacy.png",
+    BACK_SPRITE: "/assets/ui/book_covers.webp"
 };
 
 

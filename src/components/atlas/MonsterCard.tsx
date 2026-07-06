@@ -20,7 +20,7 @@ interface MonsterCardProps {
   className?: string;
 }
 
-const DEFAULT_BACKGROUND = "https://gen.krea.ai/images/9079fcd7-8bb1-4246-971f-1fca07e6034d.png";
+const DEFAULT_BACKGROUND = "/assets/ui/monster_card_back.png";
 
 const SafeValue = ({ value, fallback = '?' }: { value: any; fallback?: string }) => {
   if (value === null || value === undefined) return <>{fallback}</>;
@@ -185,7 +185,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       )}
       style={{ 
         borderColor: themeColor,
-        backgroundImage: `url('https://app-uploads.krea.ai/5ee072e5-3e9c-48b1-afb5-8e28691f52f0/1776054260573-old_paper.webp')`,
+        backgroundImage: `url('/assets/ui/old_paper.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

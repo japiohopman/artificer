@@ -73,7 +73,7 @@ export const NotificationWindow: React.FC = () => {
   );
 
   return (
-    <div className="w-full h-10 flex items-center justify-between px-4 overflow-hidden relative rounded-md border border-white/10 transition-all bg-stone-950/80 backdrop-blur-xl shadow-lg pointer-events-none">
+    <div className="w-full h-10 flex items-center justify-between px-4 overflow-hidden relative rounded-md border border-white/10 transition-all bg-stone-950/80 shadow-lg pointer-events-none">
       <div className="absolute left-0 top-2 bottom-2 w-1 bg-red-600 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.5)]" />
       
       <div className="relative z-10 flex items-center gap-4 w-full pointer-events-none">
