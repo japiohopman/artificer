@@ -15,6 +15,7 @@ import { playModalOpenSound, playModalCloseSound } from './services/storageServi
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
 import { DiceRollOverlay } from './dice_roller/DiceRollOverlay';
 import { AdvancedRoller } from './components/dice/DiceRollerPanel';
+import { LoadingScreen } from './components/core/LoadingScreen';
 import { AnimatePresence } from 'motion/react';
 
 // Global Overlays
@@ -133,6 +134,7 @@ export default function App() {
       <DiceRollOverlay />
       <DiceBoxCanvas />
       <AdvancedRoller />
+      <LoadingScreen />
     </div>
   );
 }

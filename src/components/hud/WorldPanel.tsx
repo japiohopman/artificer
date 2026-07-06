@@ -9,6 +9,7 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
 import { createPortal } from 'react-dom';
+import { Travel } from '../core/Travel';
 
 class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
   constructor(props: any) { super(props); this.state = { hasError: false }; }
@@ -121,8 +122,6 @@ export const WorldPanel: React.FC = () => {
       vehicles: partyVehicles || []
     };
   }, [partyLocation, partyInventory, characters, partyStats, partyVehicles]);
-
-  const preTravelStats = React.useMemo(() => showTravelJournal ? calcTravelStats(displayLocation) : null, [showTravelJournal, displayLocation, calcTravelStats]);
 
   const isAtDestination = partyLocation?.id === displayLocation?.id;
 
@@ -384,49 +383,13 @@ export const WorldPanel: React.FC = () => {
         )}
       </div>
 
-      {/* Pre-travel Journal Overlay */}
-      {showTravelJournal && preTravelStats && createPortal(
+      {/* Travel Module Overlay */}
+      {showTravelJournal && createPortal(
         <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm pointer-events-auto">
-          <div className="bg-parchment-100 w-full max-w-sm rounded border-2 border-dragon-gold shadow-2xl p-6 relative bg-paper-texture">
-            <button onClick={() => setShowTravelJournal(false)} className="absolute top-4 right-4 text-dragon-red/60 hover:text-dragon-red"><GameIcon name="close" size={20} /></button>
-            <h3 className="font-header text-xl text-dragon-red font-black uppercase tracking-widest border-b-2 border-dragon-red/20 pb-2 mb-4">Expedition Journal</h3>
-            <p className="text-sm text-parchment-800 font-serif mb-4 italic">Preparation for the journey to <strong className="text-dragon-darkRed">{displayLocation?.name}</strong>.</p>
-
-            <div className="space-y-4 mb-6">
-              <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
-                <span className="text-xs uppercase font-black text-parchment-500">Distance</span>
-                <span className="text-sm font-bold text-dragon-darkRed">{preTravelStats.miles.toFixed(1)} miles</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
-                <span className="text-xs uppercase font-black text-parchment-500">Est. Time</span>
-                <span className="text-sm font-bold text-dragon-darkRed">
-                  {preTravelStats.eta > 1440 
-                    ? `${Math.floor(preTravelStats.eta / 1440)}d ${Math.floor((preTravelStats.eta % 1440)/60)}h` 
-                    : preTravelStats.eta > 60 ? `${Math.floor(preTravelStats.eta / 60)}h ${preTravelStats.eta % 60}m` : `${preTravelStats.eta}m`}
-                </span>
-              </div>
-              <div className="flex justify-between items-center border-b border-dragon-red/10 pb-2">
-                <span className="text-xs uppercase font-black text-parchment-500">Pace / Status</span>
-                <span className={cn("text-sm font-bold", preTravelStats.isOverburdened ? "text-red-500" : "text-green-700")}>
-                  {preTravelStats.speed.toFixed(1)} mph {preTravelStats.isOverburdened && '(Overburdened)'}
-                </span>
-              </div>
-              <div className="bg-white/40 p-3 rounded border border-dragon-red/10 space-y-2">
-                <h4 className="text-[10px] font-black uppercase text-dragon-red">Required Provisions (Est.)</h4>
-                <div className="flex justify-between text-xs font-serif text-parchment-800">
-                  <span>Rations:</span> <strong>{preTravelStats.rationsNeeded} units</strong>
-                </div>
-                <div className="flex justify-between text-xs font-serif text-parchment-800">
-                  <span>Water:</span> <strong>{preTravelStats.waterNeeded} skins</strong>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-3">
-              <button onClick={() => setShowTravelJournal(false)} className="flex-1 py-2 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-xs uppercase tracking-widest rounded border border-dragon-red/20 transition-all">Cancel</button>
-              <button onClick={() => { setShowTravelJournal(false); startTravel(displayLocation); }} className="flex-1 py-2 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border border-dragon-gold transition-all shadow-md">Embark</button>
-            </div>
-          </div>
+          <Travel
+            destination={displayLocation}
+            onClose={() => setShowTravelJournal(false)}
+          />
         </div>,
         document.body
       )}

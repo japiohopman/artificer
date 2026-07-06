@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
+import { useUIStore } from './useUIStore';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
 
@@ -107,6 +108,7 @@ export interface WorldState {
   setWorldFlag: (flag: string, value: any) => void;
   startTravel: (destination: any) => void;
   stopTravel: () => void;
+  skipTravel: () => Promise<void>;
   setSavedLocations: (locations: SavedLocation[]) => void;
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
@@ -164,6 +166,75 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     destination: null, 
     travelProgress: 0 
   }),
+
+  skipTravel: async () => {
+    const state = get();
+    if (!state.isTraveling || !state.destination || !state.travelOrigin) return;
+
+    const { setIsLoading } = useUIStore.getState();
+    setIsLoading(true, `Traveling to ${state.destination.name}...`);
+
+    // Calculate total time needed
+    const x1 = state.travelOrigin.coordinates?.x ?? state.travelOrigin.position?.[0] ?? 0;
+    const y1 = state.travelOrigin.coordinates?.y ?? state.travelOrigin.position?.[1] ?? 0;
+    const x2 = state.destination.coordinates?.x ?? state.destination.position?.[0] ?? 0;
+    const y2 = state.destination.coordinates?.y ?? state.destination.position?.[1] ?? 0;
+    const totalDistProto = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    const PROTO_UNITS_PER_MILE = 4763 / 4000;
+    const totalDistMiles = totalDistProto / PROTO_UNITS_PER_MILE;
+
+    // Estimate speed (simplified average)
+    let speedMph = 3.0;
+    try {
+      const invState = useInventoryStore.getState();
+      if (invState.partyVehicles && invState.partyVehicles.length > 0) speedMph *= 1.5;
+    } catch(e) {}
+
+    const totalHours = totalDistMiles / speedMph;
+    const remainingHours = totalHours * (1 - state.travelProgress);
+    const totalMinutesToAdvance = Math.round(remainingHours * 60);
+
+    // Artificial delay for loading feel
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // Advanced time handling to account for resting every night
+    // Each day has 24 hours (1440 minutes)
+    // We assume travel happens for 16 hours and rest for 8 hours
+    // But since advanceTime handles the calendar, we just need to ensure
+    // we consume rations for each day passed.
+
+    const daysPassed = Math.floor((state.gameTime + totalMinutesToAdvance) / 1440) - Math.floor(state.gameTime / 1440);
+
+    if (daysPassed > 0) {
+      const invState = useInventoryStore.getState();
+      const { characters } = useCharacterStore.getState();
+      const rationsToConsume = daysPassed * characters.length;
+
+      // Attempt to consume rations from party inventory
+      const rationItem = invState.partyInventory.find(i => i.index === 'rations' || i.name?.toLowerCase() === 'rations');
+      if (rationItem) {
+        const newQuantity = Math.max(0, (rationItem.quantity || 1) - rationsToConsume);
+        useInventoryStore.setState({
+          partyInventory: invState.partyInventory.map(i =>
+            (i.index === 'rations' || i.name?.toLowerCase() === 'rations') ? { ...i, quantity: newQuantity } : i
+          ).filter(i => i.quantity > 0 || i.id !== rationItem.id)
+        });
+        console.log(`[SkipTravel] ${daysPassed} days passed. Consumed ${rationsToConsume} rations.`);
+      }
+    }
+
+    state.advanceTime(totalMinutesToAdvance);
+
+    set({
+      partyLocation: state.destination,
+      isTraveling: false,
+      destination: null,
+      travelOrigin: null,
+      travelProgress: 0
+    });
+
+    setIsLoading(false);
+  },
 
   advanceTime: (minutes) => set((state) => {
     let newTime = state.gameTime + minutes;

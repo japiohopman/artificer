@@ -459,9 +459,8 @@ export const CharacterProfile: React.FC = () => {
                           >
                              <div className={cn(
                                "w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500",
-character.inspiration
-  ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110"
-  : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
+                               character.inspiration
+                                 ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110"
                                  : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
                              )}>
                                 <GameIcon name="star" size={20} color={character.inspiration ? "#8B0000" : "currentColor"} />
