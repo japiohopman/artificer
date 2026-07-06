@@ -1,10 +1,17 @@
 from playwright.sync_api import sync_playwright
 import time
+import os
 
 def generate_screenshots():
+    # Ensure target directory exists
+    target_dir = "docs/screenshots"
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context(viewport={'width': 1920, 'height': 1080})
+        # Use a taller viewport to ensure the full profile is captured
+        context = browser.new_context(viewport={'width': 1920, 'height': 2000})
         page = context.new_page()
 
         print("Navigating to Artificer...")
@@ -21,48 +28,53 @@ def generate_screenshots():
 
             # Click Continue Adventure
             print("Clicking Continue Adventure...")
-            # Click by finding the button element that contains the text
             page.click("button:has-text('CONTINUE ADVENTURE')")
 
             # Wait for the loading screen to disappear and main UI to show
             print("Waiting for main UI...")
-            # Increased timeout and checking for common UI elements
             page.wait_for_selector("button[title='Atlas'], .fantasy-atlas-frame", timeout=90000)
             print("Main UI detected!")
             time.sleep(10) # Heavy buffer for all map tiles
 
-            # 1. Wide Map
-            page.screenshot(path="verification/promo_world_map_wide.png")
-
-            # 2. World Panel
-            print("Capturing World Panel...")
+            # 1. Wide Map with Side Panels
+            print("Capturing Map with Side Panels...")
+            # Open Atlas (Left Panel)
             page.click("button[title='Atlas']")
-            time.sleep(3)
-            page.screenshot(path="verification/promo_world_panel.png")
+            # Open Hero (Right Panel)
+            page.click("button[title='Hero']")
+            time.sleep(5)
+            page.screenshot(path=f"{target_dir}/promo_world_map_with_panels.png")
 
-            # 3. Character Profile
+            # 2. Character Profile Full (Modal)
             print("Capturing Character Profile...")
-            # Use keyboard shortcut
             page.keyboard.press("i")
             time.sleep(5)
-            page.screenshot(path="verification/promo_character_profile.png")
+            # Take a screenshot of the whole page (modal should be centered)
+            page.screenshot(path=f"{target_dir}/promo_character_profile_full.png", full_page=True)
+            # Explicitly close with Escape
             page.keyboard.press("Escape")
             time.sleep(2)
 
-            # 4. Zoomed + Legend
-            print("Capturing Zoomed + Legend...")
-            # Re-open if Atlas closed it? No, Atlas is a sidebar.
-            for _ in range(4):
-                page.click("button[title='Zoom In']")
-                time.sleep(0.5)
-
-            page.click("button[title='Toggle Map Legend']")
+            # 3. Journal
+            print("Capturing Journal...")
+            page.keyboard.press("Alt+j")
             time.sleep(3)
-            page.screenshot(path="verification/promo_map_zoomed_legend.png")
+            page.screenshot(path=f"{target_dir}/promo_journal.png")
+            # Explicitly close with Escape
+            page.keyboard.press("Escape")
+            time.sleep(2)
+
+            # 4. Dice Roller
+            print("Capturing Dice Roller...")
+            # We need to ensure chat is expanded or at least not blocked
+            # Using force=True if it's intercepted, though it shouldn't be if Journal is closed
+            page.click("button[title='Toggle Advanced Roller']", force=True)
+            time.sleep(3)
+            page.screenshot(path=f"{target_dir}/promo_dice_roller.png")
 
         except Exception as e:
             print(f"Error: {e}")
-            page.screenshot(path="verification/error_debug_final.png")
+            page.screenshot(path=f"{target_dir}/error_debug_final.png")
         finally:
             browser.close()
 
