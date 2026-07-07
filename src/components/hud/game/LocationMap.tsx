@@ -7,6 +7,7 @@ import { useWorldStore, CategoryIcons } from '../../../store/useWorldStore';
 import { WORLD_ATLAS_ICONS } from '../../../assets/icons/world_atlas';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
+import { Entrance } from './Entrance';
 
 // Helper to create custom markers (Sync with WorldMap.tsx)
 const createCustomIcon = (category: string, isInspected: boolean = false) => {
@@ -63,6 +64,8 @@ export const LocationMap: React.FC = () => {
   const { setIsInsideSubMap } = useUIStore();
   const [subLocations, setSubLocations] = React.useState<any[]>([]);
   const [activeLayer, setActiveLayer] = React.useState<string | null>(null);
+  const [activeCategories, setActiveCategories] = React.useState<string[]>([]);
+  const [allCategories, setAllCategories] = React.useState<string[]>([]);
 
   const mapRef = React.useRef<L.Map | null>(null);
 
@@ -72,12 +75,19 @@ export const LocationMap: React.FC = () => {
 
     const loadSubLocations = async () => {
       try {
+        const files = currentLocation.sub_location_files || [];
+        const cats = files.map(f => f.split('/').pop() || '');
+        setAllCategories(cats);
+        setActiveCategories(cats); // Default all on
+
         const allData = await Promise.all(
-          (currentLocation.sub_location_files || []).map(async (file: string) => {
+          files.map(async (file: string) => {
             const res = await fetch(file);
             if (res.ok) {
               const data = await res.json();
-              return Array.isArray(data) ? data : data.locations || [];
+              const locations = Array.isArray(data) ? data : data.locations || data.sub_locations || [];
+              const catName = file.split('/').pop() || '';
+              return locations.map((l: any) => ({ ...l, _categoryFile: catName }));
             }
             return [];
           })
@@ -117,7 +127,7 @@ export const LocationMap: React.FC = () => {
           zIndex={1}
         />
 
-        {subLocations.map((loc, idx) => {
+        {subLocations.filter(loc => activeCategories.includes(loc._categoryFile)).map((loc, idx) => {
           const pos = loc.position || [loc.coordinates?.lat || 0, loc.coordinates?.lng || 0];
           const isBottomLeft = currentLocation.origin === 'bottom-left';
           const height = Array.isArray(bounds) && Array.isArray(bounds[1]) ? (bounds[1][0] as number) : 3000;
@@ -152,7 +162,7 @@ export const LocationMap: React.FC = () => {
       </MapContainer>
 
       {/* Local HUD Controls */}
-      <div className="absolute top-6 left-6 z-[1000] flex flex-col gap-2">
+      <div className="absolute top-6 left-6 z-[1000] flex flex-col gap-6">
          <button
            onClick={() => setIsInsideSubMap(false)}
            className="px-4 py-2 bg-dragon-red text-white font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 shadow-lg flex items-center gap-2 hover:bg-dragon-darkRed transition-all"
@@ -189,6 +199,16 @@ export const LocationMap: React.FC = () => {
              </button>
            </div>
          )}
+
+         <Entrance
+           categories={allCategories}
+           activeCategories={activeCategories}
+           onToggleCategory={(cat) => {
+             setActiveCategories(prev =>
+               prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
+             );
+           }}
+         />
       </div>
 
       <div className="absolute bottom-6 right-6 z-[1000]">
