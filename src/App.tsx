@@ -27,6 +27,7 @@ import { CharacterCreator } from './components/character/CharacterCreator';
 import { LevelUpOverlay } from './components/character/LevelUpOverlay';
 import { useBookStore } from './store/useBookStore';
 
+// Unified Loading Screen Implementation
 export default function App() {
   const { 
     isDevKitOpen, setIsDevKitOpen, explorerTab,
