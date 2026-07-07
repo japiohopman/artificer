@@ -22,22 +22,23 @@ export const TitleScreen: React.FC = () => {
 
   const {
     setIsCharacterCreatorOpen,
+    setIsLoading,
   } = useUIStore();
 
   const { setIsGameStarted } = useGameStore();
 
   const { isMusicPlaying } = useAudioStore();
 
-  const [hasLoaded, setHasLoaded] = useState(false);
   const [selectedSlotIndex, setSelectedSlotIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const init = async () => {
+      setIsLoading(true, "Decrypting Save Data...");
       await loadCharacters();
-      setHasLoaded(true);
+      setIsLoading(false);
     };
     init();
-  }, [loadCharacters]);
+  }, [loadCharacters, setIsLoading]);
 
   const handleStartInteraction = () => {
     // Only play if not already playing - prevents overlaps on multiple clicks
@@ -48,6 +49,7 @@ export const TitleScreen: React.FC = () => {
 
   const handleNewGame = () => {
     playClickSound();
+    setIsLoading(true, "Entering Realm...");
     setIsCharacterCreatorOpen(true);
     setIsGameStarted(true);
     // Already playing startup music from interaction, but ensure playlist is correct
@@ -58,6 +60,7 @@ export const TitleScreen: React.FC = () => {
     const selectedChar = selectedSlotIndex !== null ? mainCharacterSlots[selectedSlotIndex] : (mainCharacterSlots.find(c => c !== null) || null);
     
     if (selectedChar) {
+      setIsLoading(true, "Entering Realm...");
       setMainCharacter(selectedChar);
       setActiveCharacter(selectedChar.id);
       playSuccessSound();
@@ -66,15 +69,6 @@ export const TitleScreen: React.FC = () => {
       soundService.playMusic('game');
     }
   };
-
-  if (!hasLoaded && isLoadingSaves) {
-    return (
-      <div className="fixed inset-0 bg-[#0a0a0a] flex items-center justify-center flex-col gap-4 z-[100]">
-        <GameIcon name="loading" size={48} color="#8B0000" className="animate-spin" />
-        <p className="font-header text-parchment-400 uppercase tracking-widest animate-pulse">Decrypting Save Data...</p>
-      </div>
-    );
-  }
 
   const hasAnySaves = mainCharacterSlots.some(s => s !== null);
 

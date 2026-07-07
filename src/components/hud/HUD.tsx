@@ -18,7 +18,8 @@ export const HUD: React.FC = () => {
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
     gameMode,
-    setActiveCharacterTab
+    setActiveCharacterTab,
+    setIsLoading
   } = useUIStore();
 
   const {
@@ -41,7 +42,14 @@ export const HUD: React.FC = () => {
   React.useEffect(() => {
     // Initial cleanup of atlas data and loaded categories to prevent stale states
     resetAtlas();
-  }, [resetAtlas]);
+    
+    // Dismiss the loading screen after a short delay to ensure components are ready
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, [resetAtlas, setIsLoading]);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">

@@ -656,6 +656,15 @@ export const useGameStore = create<GameState>((set, get) => ({
     import('../dice_roller/diceService').then(({ diceService }) => {
       const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
       const result = diceService.rollBackground(notation, label);
+
+      const rollDetails = result.rolls
+        .filter(r => r.valid !== false)
+        .map(r => r.result)
+        .join(' + ');
+      const modStr = result.modifier !== 0 ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}` : '';
+      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
+      get().addLog(`${label}: ${result.notation} ${detailStr} = ${result.total}`, 'info');
+
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
@@ -681,7 +690,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         : '';
         
       const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      const message = `${label}: ${notation} ${detailStr} = ${result.total}`;
+      const message = `${label}: ${result.notation} ${detailStr} = ${result.total}`;
       
       get().addLog(message, 'info');
 

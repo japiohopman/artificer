@@ -1,6 +1,14 @@
 import DiceBox from "@3d-dice/dice-box";
-import { DiceRoller } from "@3d-dice/dice-roller-parser";
-import DiceParser from "@3d-dice/dice-parser-interface";
+import * as DiceRollerParser from "@3d-dice/dice-roller-parser";
+import DiceParserInterface from "@3d-dice/dice-parser-interface";
+
+// Handle potential CJS/ESM interop issues for dice-roller-parser
+const DiceRoller = (DiceRollerParser as any).DiceRoller || 
+                   (DiceRollerParser as any).default?.DiceRoller || 
+                   (DiceRollerParser as any).default;
+
+// Handle potential CJS/ESM interop issues for dice-parser-interface
+const DiceParser = (DiceParserInterface as any).default || DiceParserInterface;
 
 export interface DiceResult {
   id: string;
@@ -18,8 +26,8 @@ export interface DiceResult {
 
 class DiceService {
   private diceBox: any;
-  private roller: DiceRoller;
-  private parser: DiceParser;
+  private roller: any;
+  private parser: any;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
 
@@ -133,28 +141,21 @@ class DiceService {
       
       // Use DiceParser to parse notation for dice-box if it's complex
       let results;
-      const isComplex = notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/) || (notation.match(/d/g) || []).length > 1;
-      
-      if (isComplex) {
-         try {
-           const parsedNotation = this.parser.parseNotation(notation);
-           results = await this.diceBox.roll(parsedNotation, rollOptions);
-         } catch (e) {
-           console.warn("[DiceService] Parser failed for notation, trying raw notation:", notation, e);
-           results = await this.diceBox.roll(notation, rollOptions);
-         }
+      if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
+         const parsedNotation = this.parser.parseNotation(notation);
+         results = await this.diceBox.roll(parsedNotation, rollOptions);
       } else {
          results = await this.diceBox.roll(notation, rollOptions);
       }
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
+        console.warn("[DiceService] No results from 3D roll, falling back.");
         return this.rollBackground(notation, label);
       }
 
-      // If we used the parser, we should use parseFinalResults to get the total and individual rolls
+      // Use the parser to get the final computed result object
       const finalResults = this.parser.parseFinalResults(results);
-      
       const rolls = this.extractRolls(finalResults);
       
       // Calculate modifier
