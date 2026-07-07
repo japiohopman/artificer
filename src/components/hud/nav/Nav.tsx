@@ -97,11 +97,11 @@ export const Nav: React.FC = () => {
       icon: 'party_stats',
       label: 'Hero',
       onClick: () => {
-        if (isCharacterPanelOpen && activeCharacterTab === 'equipment') {
+        if (isCharacterPanelOpen && activeCharacterTab !== 'logistics') {
           setIsCharacterPanelOpen(false);
           setIsInventoryOpen(false);
         } else {
-          setActiveCharacterTab('equipment');
+          setActiveCharacterTab('party');
           setIsCharacterPanelOpen(true);
           setIsInventoryOpen(true);
         }

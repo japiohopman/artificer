@@ -20,6 +20,8 @@ export const WorldPanel: React.FC = () => {
   const { 
     isWorldPanelOpen, 
     setIsWorldPanelOpen,
+    isInsideSubMap,
+    setIsInsideSubMap,
     gameMode,
     setIsMonsterProfileOpen,
     setFocusedItem
@@ -234,6 +236,7 @@ export const WorldPanel: React.FC = () => {
                    ruler: 'Ruler',
                    population: 'Population',
                    economy: 'Economy & Trade',
+                   metadata: 'Metadata',
                    climate: 'Climate',
                    biome: 'Biome',
                    wildlife: 'Wildlife',
@@ -286,10 +289,35 @@ export const WorldPanel: React.FC = () => {
       <div className="bg-parchment-100/95 border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
         {displayLocation && (
           <div className="flex flex-col">
-            <Travel
-              destination={displayLocation}
-              isMinimized={!isTravelExpanded}
-            />
+            {!isInsideSubMap ? (
+              <Travel
+                destination={displayLocation}
+                isMinimized={!isTravelExpanded}
+              />
+            ) : (
+              <div className="p-4 bg-parchment-100/90 flex flex-col gap-3">
+                 <div className="flex items-center justify-between border-b border-dragon-red/10 pb-2">
+                    <div className="flex items-center gap-2">
+                       <GameIcon name="city" size={14} color="#8B0000" />
+                       <span className="text-[9px] font-black uppercase text-dragon-red tracking-widest">Active Settlement</span>
+                    </div>
+                    <button
+                      onClick={() => setIsInsideSubMap(false)}
+                      className="text-[9px] font-black text-dragon-red hover:underline uppercase tracking-tighter"
+                    >
+                      Return to Atlas
+                    </button>
+                 </div>
+
+                 <button
+                   onClick={() => setIsInsideSubMap(false)}
+                   className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
+                 >
+                   <GameIcon name="chevron_left" size={14} color="#FFFFFF" />
+                   Exit Location
+                 </button>
+              </div>
+            )}
 
             {(displayLocation as any).lore && (
               <div className="p-4 pt-0">

@@ -5,6 +5,7 @@ import { useGameStore } from '../../store/useGameStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useWorldStore } from '../../store/useWorldStore';
 import { WorldMap } from './WorldMap';
+import { LocationMap } from './game/LocationMap';
 import { NPCDisplay } from './NPCDisplay';
 import { ChatPanel } from './chat/ChatPanel';
 import { NotificationWindow } from './NotificationWindow';
@@ -22,6 +23,7 @@ export const GameScreen: React.FC = () => {
     chatExpanded,
     setChatExpanded,
     isEditingSubMap,
+    isInsideSubMap,
     gameMode,
     isMapLegendOpen,
     setIsMapLegendOpen
@@ -65,7 +67,30 @@ export const GameScreen: React.FC = () => {
         {gameMode === 'combat' ? (
           <div className="w-full h-full bg-stone-950" />
         ) : (
-          <WorldMap />
+          <AnimatePresence mode="wait">
+            {isInsideSubMap ? (
+              <motion.div
+                key="location-map"
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                className="w-full h-full"
+              >
+                <LocationMap />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="world-map"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="w-full h-full"
+              >
+                <WorldMap />
+              </motion.div>
+            )}
+          </AnimatePresence>
         )}
       </motion.div>
 
