@@ -86,12 +86,14 @@ class DiceService {
         this.initialized = true;
 
         // Force a resize calculation
-        if (typeof this.diceBox.resize === 'function') {
+        if (this.diceBox && typeof this.diceBox.resize === 'function') {
           this.diceBox.resize();
         }
       } catch (error) {
         console.error("[DiceService] Failed to initialize DiceBox:", error);
         this.initPromise = null;
+        // Keep initialized as false
+        this.initialized = false;
         throw error;
       }
     })();
@@ -110,12 +112,14 @@ class DiceService {
       soundService.playEffect('DICE_ROLL');
     });
 
-    if (!this.initialized && this.initPromise) {
+    // Wait for initialization if it's in progress
+    if (this.initPromise) {
       await this.initPromise;
     }
 
     if (!this.initialized) {
-      throw new Error("DiceBox not initialized.");
+      console.warn("[DiceService] DiceBox not initialized, falling back to background roll.");
+      return this.rollBackground(notation, label);
     }
 
     try {
@@ -172,22 +176,32 @@ class DiceService {
       
       // If it's a die node, it contains the individual rolls
       if (node.type === "die" && node.rolls) {
+        const sides = node.sides?.value ?? node.sides ?? 20;
         node.rolls.forEach((r: any) => {
-          rolls.push({ die: node.sides.value || node.sides, result: r.value, valid: r.valid !== false });
+          rolls.push({ die: sides, result: r.value, valid: r.valid !== false });
         });
       } 
       // Some versions of the parser might have 'roll' nodes directly
       else if (node.type === "roll") {
-        rolls.push({ die: node.die, result: node.value, valid: node.valid !== false });
+        rolls.push({ die: node.die ?? 20, result: node.value, valid: node.valid !== false });
       }
       // Recursive cases for expressions/groups
       if (node.ops) {
-        node.ops.forEach(walk);
+        if (Array.isArray(node.ops)) {
+            node.ops.forEach(walk);
+        } else {
+            walk(node.ops);
+        }
       }
       if (node.left) walk(node.left);
       if (node.right) walk(node.right);
       if (node.head) walk(node.head);
-      if (node.tails) node.tails.forEach((t: any) => walk(t[1]));
+      if (node.tails && Array.isArray(node.tails)) {
+        node.tails.forEach((t: any) => {
+            if (Array.isArray(t) && t[1]) walk(t[1]);
+            else walk(t);
+        });
+      }
     };
     walk(parsedResult);
     return rolls;

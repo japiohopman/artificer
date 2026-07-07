@@ -25,7 +25,11 @@ class SoundEngine {
   }
 
   private getUrl(path: string): string {
-    return `${GITHUB_RAW_BASE}${path}`;
+    // Check if path exists locally first (in public folder)
+    // Actually, in the browser, /assets/... will resolve to localhost:3000/assets/...
+    // If it's a relative path starting with /, it should be fine.
+    // However, GITHUB_RAW_BASE is used here.
+    return path.startsWith('/') ? path : `${GITHUB_RAW_BASE}${path}`;
   }
 
   playMusic(playlistOverride?: 'startup' | 'game') {
@@ -158,7 +162,7 @@ class SoundEngine {
       case 'UI_BACK_EXIT': path = '/assets/sounds/system/ui_modal_close.mp3'; break;
       case 'UI_MODAL_OPEN': path = '/assets/sounds/system/ui_modal_open.mp3'; break;
       case 'UI_ERROR': path = '/assets/sounds/system/feedback_error.mp3'; break;
-      case 'DICE_ROLL': path = '/assets/sounds/sfx/dice_roll.mp3'; break;
+      case 'DICE_ROLL': path = '/assets/sounds/sfx/d20_dice_roll.wav'; break;
       case 'EQUIP_ARMOR': path = '/assets/sounds/sfx/equip_armor.mp3'; break;
       case 'EQUIP_WEAPON': path = '/assets/sounds/sfx/equip_weapon.mp3'; break;
       case 'UI_ITEM_PLACE': path = '/assets/sounds/system/ui/ui_item_place.wav'; break;
