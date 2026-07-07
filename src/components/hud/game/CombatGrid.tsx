@@ -32,33 +32,23 @@ const GridCell = memo(({
       onMouseEnter={() => onMouseEnter(x, y)}
       onMouseLeave={onMouseLeave}
       className={cn(
-        "w-full h-full cursor-crosshair transition-colors duration-150 border border-white/5 flex items-center justify-center relative overflow-hidden",
-        !isVisible && "opacity-40 saturate-50",
-        isTargeting && inRange ? "bg-blue-500/10" : "hover:bg-white/5",
-        isHoveredTarget && "bg-dragon-red/15 border-dragon-red/40",
-        type === 'wall' && "bg-stone-900/40",
-        type === 'door' && "bg-amber-950/20"
+        "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
+        !isVisible && "brightness-[0.2] saturate-50",
+        isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
+        isHoveredTarget && "bg-dragon-red/30 border-dragon-red/50",
+        type === 'wall' && "bg-stone-800",
+        type === 'door' && "bg-amber-900/40"
       )}
     >
-      <div className={cn(
-        "absolute inset-[1px] rounded-[2px] transition-colors duration-150",
-        isTargeting && inRange ? "border border-blue-400/20" : "border-transparent",
-        isHoveredTarget && "border border-dragon-red/20"
-      )} />
       {type === 'door' && (
-        <div className="absolute inset-2 rounded border border-amber-700/40 bg-amber-900/20 flex items-center justify-center">
-          <GameIcon
-            name={isOpen ? "package" : "lock"}
-            size={16}
-            color={isOpen ? "#D4AF37" : "#8B0000"}
-          />
-        </div>
+        <GameIcon
+          name={isOpen ? "package" : "lock"}
+          size={24}
+          color={isOpen ? "#D4AF37" : "#8B0000"}
+        />
       )}
       {type === 'wall' && isVisible && (
-        <>
-          <div className="absolute inset-1 rounded-sm border border-white/10 opacity-20" />
-          <div className="absolute inset-[28%] border-t border-white/10 rotate-45 opacity-20" />
-        </>
+        <div className="absolute inset-1 border border-white/10 opacity-20" />
       )}
     </div>
   );
@@ -357,8 +347,8 @@ export const CombatGrid: React.FC = () => {
             className="absolute inset-0 opacity-20 pointer-events-none"
             style={{
               backgroundImage: `
-                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)
+                linear-gradient(to right, #444 1px, transparent 1px),
+                linear-gradient(to bottom, #444 1px, transparent 1px)
               `,
               backgroundSize: `${cellSize}px ${cellSize}px`,
               width: '100%',
@@ -411,8 +401,8 @@ export const CombatGrid: React.FC = () => {
              style={{ width: cellSize, height: cellSize }}
            >
               <div className={cn(
-                "w-full h-full rounded-full border-2 border-blue-500 bg-blue-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-105 transition-transform relative shadow-[0_0_12px_rgba(59,130,246,0.25)]",
-                initiativeOrder[activeTurnIndex]?.id === activeCharacterId && "border-dragon-gold shadow-[0_0_16px_rgba(212,175,55,0.35)]"
+                "w-full h-full rounded-full border-2 border-blue-500 bg-blue-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform relative shadow-[0_0_20px_rgba(59,130,246,0.4)]",
+                initiativeOrder[activeTurnIndex]?.id === activeCharacterId && "border-dragon-gold ring-4 ring-dragon-gold/40 animate-[pulse_2s_infinite]"
               )}>
                 {activeChar?.avatarUrl ? (
                   <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar.name} />
@@ -425,7 +415,7 @@ export const CombatGrid: React.FC = () => {
 
                 {/* Active Turn Glow */}
                 {initiativeOrder[activeTurnIndex]?.id === activeCharacterId && (
-                  <div className="absolute inset-0 border border-dragon-gold/80 rounded-full shadow-[inset_0_0_10px_rgba(212,175,55,0.2)]" />
+                  <div className="absolute inset-0 border-2 border-dragon-gold rounded-full animate-pulse shadow-[inset_0_0_10px_#D4AF37]" />
                 )}
               </div>
 
@@ -435,7 +425,7 @@ export const CombatGrid: React.FC = () => {
               </div>
 
               {/* Movement Range Pulse */}
-              <div className="absolute inset-0 border border-blue-400/20 rounded-full pointer-events-none" />
+              <div className="absolute inset-0 border-2 border-blue-400/30 rounded-full animate-ping pointer-events-none" />
            </motion.div>
 
            {/* Monster Tokens */}
@@ -471,34 +461,25 @@ export const CombatGrid: React.FC = () => {
                     {/* View Cone indicator for non-combat monsters */}
                     {monster.awareness !== 'combat' && (
                       <div
-                        className="absolute inset-0 bg-dragon-red/10 rounded-full pointer-events-none"
+                        className="absolute inset-0 bg-dragon-red/10 rounded-full animate-pulse pointer-events-none"
                         style={{
                           transform: `rotate(${monster.viewDirection * 90}deg) scaleY(2) translateY(-25%)`,
-                          opacity: 0.2
+                          opacity: 0.3
                         }}
                       />
                     )}
 
                     <div className={cn(
-                      "w-full h-full rounded-full border-2 bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-105 transition-transform relative shadow-[0_0_10px_rgba(220,38,38,0.2)]",
-                      canTarget ? "border-dragon-gold shadow-[0_0_12px_rgba(212,175,55,0.25)]" : "border-dragon-red",
-                      initiativeOrder[activeTurnIndex]?.id === monster.id ? "border-dragon-gold shadow-[0_0_12px_rgba(212,175,55,0.25)]" : "",
+                      "w-full h-full rounded-full border-2 bg-red-900/80 flex items-center justify-center overflow-hidden group cursor-pointer hover:scale-110 transition-transform relative shadow-[0_0_15px_rgba(220,38,38,0.3)]",
+                      canTarget ? "border-dragon-gold ring-4 ring-dragon-gold/40 animate-pulse" : "border-dragon-red",
+                      initiativeOrder[activeTurnIndex]?.id === monster.id ? "border-dragon-gold ring-4 ring-dragon-gold/40" : "",
                       monster.awareness === 'idle' ? "opacity-60" : "opacity-100"
                     )}>
-                      <div
-                        className="absolute inset-0 rounded-full"
-                        style={{
-                          background: `linear-gradient(135deg, ${monster.name ? '#' + Array.from(monster.name).reduce((acc, char) => acc + char.charCodeAt(0), 0).toString(16).slice(0, 6) : '7c2d12'}, #3f1d1d)`
-                        }}
-                      />
-                      <span className="relative z-10 text-[9px] font-black uppercase tracking-[0.2em] text-white/90">
-                        {monster.name
-                          .split(/\s+/)
-                          .slice(0, 2)
-                          .map((part) => part[0] || '')
-                          .join('')
-                          .toUpperCase() || 'M'}
-                      </span>
+                      {monster.imageUrl ? (
+                        <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
+                      ) : (
+                        <GameIcon name="identity" size={24} color="#FFF" />
+                      )}
 
                       {/* Health Bar Overlay */}
                       <div className="absolute bottom-0 left-0 w-full h-2 bg-black/60 border-t border-white/10">
@@ -510,7 +491,7 @@ export const CombatGrid: React.FC = () => {
 
                       {/* Active Turn Glow */}
                       {initiativeOrder[activeTurnIndex]?.id === monster.id && (
-                        <div className="absolute inset-0 border border-dragon-gold/80 rounded-full shadow-[inset_0_0_10px_rgba(212,175,55,0.2)]" />
+                        <div className="absolute inset-0 border-2 border-dragon-gold rounded-full animate-pulse shadow-[inset_0_0_10px_#D4AF37]" />
                       )}
                     </div>
                     <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/95 text-white text-[7px] font-black px-2 py-0.5 rounded-full border border-dragon-red/50 uppercase whitespace-nowrap z-20 shadow-lg tracking-tighter">
