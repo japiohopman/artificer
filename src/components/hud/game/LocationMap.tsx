@@ -102,14 +102,20 @@ export const LocationMap: React.FC = () => {
 
   if (!currentLocation?.map) return null;
 
-  const bounds: L.LatLngBoundsExpression = (currentLocation.bounds as any) || [[0, 0], [1000, 1000]];
+  const rawBounds = currentLocation.bounds || [[0, 0], [1000, 1000]];
+  // Handle xy order from wiki/json: [[xMin, yMin], [xMax, yMax]] -> Leaflet [[yMin, xMin], [yMax, xMax]]
+  const bounds: L.LatLngBoundsExpression = [
+    [rawBounds[0][1], rawBounds[0][0]],
+    [rawBounds[1][1], rawBounds[1][0]]
+  ];
+
   const mapUrl = activeLayer || currentLocation.map || '';
 
   return (
     <div className="w-full h-full bg-[#0F1115] relative font-body overflow-hidden border-4 border-dragon-gold shadow-inner">
       <MapContainer
         key={`${currentLocation.id}-${mapUrl}`}
-        center={[0, 0]}
+        center={[ (bounds as any)[1][0] / 2, (bounds as any)[1][1] / 2 ]}
         zoom={0}
         crs={L.CRS.Simple}
         className="w-full h-full bg-stone-900"
@@ -128,14 +134,23 @@ export const LocationMap: React.FC = () => {
         />
 
         {subLocations.filter(loc => activeCategories.includes(loc._categoryFile)).map((loc, idx) => {
-          const pos = loc.position || [loc.coordinates?.lat || 0, loc.coordinates?.lng || 0];
-          const isBottomLeft = currentLocation.origin === 'bottom-left';
-          const height = Array.isArray(bounds) && Array.isArray(bounds[1]) ? (bounds[1][0] as number) : 3000;
+          let x = 0, y = 0;
+          if (loc.position) {
+            x = loc.position[0];
+            y = loc.position[1];
+          } else if (loc.coordinates) {
+            x = loc.coordinates.lng || loc.coordinates.x || 0;
+            y = loc.coordinates.lat || loc.coordinates.y || 0;
+          }
 
-          // If origin is bottom-left, invert Y (pos[1])
-          const latLng: L.LatLngExpression = isBottomLeft
-            ? [height - pos[1], pos[0]]
-            : [pos[1], pos[0]];
+          const isTopLeft = currentLocation.origin === 'top-left';
+          const yMax = (bounds as any)[1][0];
+
+          // Leaflet [y, x] where y increases upwards (lat).
+          // If origin is top-left, we must invert y.
+          const latLng: L.LatLngExpression = isTopLeft
+            ? [yMax - y, x]
+            : [y, x];
 
           const isInspected = inspectedLocation?.id === loc.id;
 
