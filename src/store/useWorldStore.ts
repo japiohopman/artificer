@@ -117,6 +117,7 @@ export interface WorldState {
   addSavedLocations: (locations: SavedLocation[]) => void;
   addLoadedCategory: (category: string) => void;
   isCategoryLoaded: (category: string) => boolean;
+  fetchDetailedLocation: (location: any) => Promise<SavedLocation>;
   resetAtlas: () => void;
   exploreArea: (x: number, y: number, radius: number) => void;
   updateEnvironment: (minutesPassed?: number) => void;
@@ -300,6 +301,26 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   })),
 
   isCategoryLoaded: (category) => get().loadedCategories.includes(category),
+
+  fetchDetailedLocation: async (location: any) => {
+    const url = location.popup?.link?.url || location.link?.url;
+    if (!url) return location;
+
+    try {
+      const res = await fetch(url);
+      if (res.ok) {
+        const detail = await res.json();
+        const merged = { ...location, ...detail };
+        // Ensure name and id are preserved if missing in detail
+        merged.name = merged.name || location.name;
+        merged.id = merged.id || location.id;
+        return merged;
+      }
+    } catch (e) {
+      console.error("Failed to fetch detailed location data", e);
+    }
+    return location;
+  },
 
   resetAtlas: () => set({
     savedLocations: [],
