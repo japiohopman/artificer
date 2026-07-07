@@ -9,6 +9,7 @@ import { LocationMap } from './game/LocationMap';
 import { NPCDisplay } from './NPCDisplay';
 import { ChatPanel } from './chat/ChatPanel';
 import { NotificationWindow } from './NotificationWindow';
+import { MapNavigation } from './game/MapNavigation';
 import { MapLegend } from './game/MapLegend';
 import { Rest } from './game/Rest';
 import { DraggableCard } from '../atlas/DraggableCard';
@@ -145,7 +146,10 @@ export const GameScreen: React.FC = () => {
       </div>
 
       {/* 4. Legend & Chat Overlay Layer */}
-      <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
+      <div className={cn(
+        "absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none",
+        gameMode === 'combat' && "z-[60]"
+      )}>
         <div className="w-full max-w-5xl px-4 pb-2 flex justify-start">
            <AdvancedRoller />
         </div>
@@ -187,8 +191,16 @@ export const GameScreen: React.FC = () => {
         ))}
       </div>
 
+      {/* 7. Floating Map Controls */}
+      <div className="absolute top-20 right-6 z-[100] pointer-events-none">
+        <MapNavigation />
+      </div>
+
       {/* 6. TOP: Stationary Notifications */}
-      <div className="absolute top-0 inset-x-0 z-[200] pointer-events-none">
+      <div className={cn(
+        "absolute top-0 inset-x-0 z-[200] pointer-events-none",
+        gameMode === 'combat' && "z-[70]"
+      )}>
         <div className="max-w-5xl mx-auto pointer-events-auto mt-2">
           <NotificationWindow />
         </div>

@@ -201,6 +201,21 @@
   .markdown-content p, .markdown-content li {
     @apply text-parchment-900;
   }
+
+  .parchment-edge-mask {
+    mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+    clip-path: polygon(
+      0% 10px, 10px 10px, 10px 0%, 
+      calc(100% - 10px) 0%, calc(100% - 10px) 10px, 100% 10px, 
+      100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 
+      10px 100%, 10px calc(100% - 10px), 0% calc(100% - 10px)
+    );
+  }
+
+  .seamless-hud-unit {
+    @apply border-2 border-dragon-gold shadow-[0_0_15px_rgba(0,0,0,0.5)] bg-parchment-100;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  }
 }
 
 .party-marker-smooth {

@@ -8,6 +8,7 @@ import { WORLD_ATLAS_ICONS } from '../../../assets/icons/world_atlas';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { Entrance } from './Entrance';
+import { MapNavigation } from './MapNavigation';
 
 // Helper to create custom markers (Sync with WorldMap.tsx)
 const createCustomIcon = (category: string, isInspected: boolean = false) => {
@@ -240,11 +241,20 @@ export const LocationMap: React.FC = () => {
          />
       </div>
 
-      <div className="absolute bottom-6 right-6 z-[1000]">
-        <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col items-center">
+      <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 items-end">
+        <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col items-center mb-2">
            <span className="text-[9px] font-black text-dragon-red uppercase mb-1">Local Topography</span>
            <h3 className="font-header text-xl text-dragon-darkRed uppercase">{currentLocation.name}</h3>
         </div>
+        
+        <MapNavigation 
+          onCenterParty={() => {
+            if (mapRef.current) mapRef.current.fitBounds(bounds);
+          }}
+          onZoomIn={() => mapRef.current?.zoomIn()}
+          onZoomOut={() => mapRef.current?.zoomOut()}
+          zoomLevel={mapRef.current?.getZoom()}
+        />
       </div>
     </div>
   );

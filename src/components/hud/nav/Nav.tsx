@@ -46,7 +46,7 @@ export const Nav: React.FC = () => {
         setCurrentView(currentView === 'grid' ? 'world' : 'grid');
       },
       isActive: useUIStore.getState().currentView === 'grid',
-      shortcut: 'G'
+      shortcut: 'Shift+G'
     },
     {
       id: 'world-panel',

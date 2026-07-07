@@ -72,7 +72,7 @@ export const WorldPanel: React.FC = () => {
   }, [(displayLocation as any)?.lore, displayLocation?.id]);
 
   return (
-    <div className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl">
+    <div className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl carved-hud-border">
       {/* HEADER: Sticky */}
       <div className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden shrink-0">
         {(displayLocation?.image || displayLocation?.banner) ? (

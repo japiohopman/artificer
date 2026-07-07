@@ -22,6 +22,7 @@ interface UIState {
   isInsideSubMap: boolean;
   isMapLegendOpen: boolean;
   isMapPanEnabled: boolean;
+  isGridVisible: boolean;
   selectedDiceTheme: string;
   selectedDiceColor: string;
 
@@ -69,6 +70,7 @@ interface UIState {
   setIsInsideSubMap: (isInside: boolean) => void;
   setIsMapLegendOpen: (isOpen: boolean) => void;
   setIsMapPanEnabled: (isEnabled: boolean) => void;
+  setIsGridVisible: (isVisible: boolean) => void;
   setSelectedDiceTheme: (theme: string) => void;
   setSelectedDiceColor: (color: string) => void;
   setIsLoading: (isLoading: boolean, message?: string, art?: string) => void;
@@ -106,6 +108,7 @@ export const useUIStore = create<UIState>((set) => ({
   isInsideSubMap: false,
   isMapLegendOpen: false,
   isMapPanEnabled: true,
+  isGridVisible: true,
   selectedDiceTheme: 'default',
   selectedDiceColor: '#8b0000',
 
@@ -147,6 +150,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsInsideSubMap: (isInsideSubMap) => set({ isInsideSubMap }),
   setIsMapLegendOpen: (isMapLegendOpen) => set({ isMapLegendOpen }),
   setIsMapPanEnabled: (isMapPanEnabled) => set({ isMapPanEnabled }),
+  setIsGridVisible: (isGridVisible) => set({ isGridVisible }),
   setSelectedDiceTheme: (selectedDiceTheme) => set({ selectedDiceTheme }),
   setSelectedDiceColor: (selectedDiceColor) => set({ selectedDiceColor }),
   setIsLoading: (isLoading, message = 'Loading...', art = undefined) => set({ isLoading, loadingMessage: message, loadingArt: art || null }),

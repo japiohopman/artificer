@@ -9,6 +9,7 @@ import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorl
 import { WORLD_ATLAS_ICONS } from '../../assets/icons/world_atlas';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
+import { MapNavigation } from './game/MapNavigation';
 import { REGION_METADATA, REGION_PATH_REGISTRY } from '../../data/regions';
 import { GameIcon } from '../../game_icons';
 
@@ -562,58 +563,20 @@ export const WorldMap: React.FC = () => {
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
       
-      {/* Zoom Controls */}
-      <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 items-end">
-        <div className="flex flex-col gap-1 mb-2">
-           <button 
-             onClick={() => {
-               if (partyLocation && mapRef.current) {
-                 const pos = getPosition(partyLocation);
-                 if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 6), { animate: true, duration: 1.5 });
-               }
-             }}
-             className="w-12 h-12 bg-parchment-100 border-2 border-blue-500 text-blue-600 font-black text-2xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto mb-2"
-             title="Locate Party"
-             aria-label="Locate Party"
-           >
-             <GameIcon name="party_stats" size={24} />
-           </button>
-           <button 
-             onClick={() => mapRef.current?.zoomIn()}
-             className="w-10 h-10 bg-parchment-100 border-2 border-dragon-gold text-dragon-red font-black text-xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto"
-             title="Zoom In"
-           >
-             +
-           </button>
-           <button 
-             onClick={() => mapRef.current?.zoomOut()}
-             className="w-10 h-10 bg-parchment-100 border-2 border-dragon-gold text-dragon-red font-black text-xl flex items-center justify-center rounded shadow-lg hover:bg-parchment-200 active:scale-95 pointer-events-auto"
-             title="Zoom Out"
-           >
-             −
-           </button>
-           <button
-             onClick={() => setIsMapPanEnabled(!isMapPanEnabled)}
-             className={cn(
-               "w-10 h-10 border-2 font-black text-xl flex items-center justify-center rounded shadow-lg transition-all active:scale-95 pointer-events-auto",
-               isMapPanEnabled
-                 ? "bg-dragon-red border-dragon-gold text-white"
-                 : "bg-parchment-100 border-dragon-gold text-dragon-red hover:bg-parchment-200"
-             )}
-             title={isMapPanEnabled ? "Lock Map Pan" : "Unlock Map Pan"}
-             aria-label={isMapPanEnabled ? "Lock Map Pan" : "Unlock Map Pan"}
-           >
-             <GameIcon name="move" size={18} />
-           </button>
-        </div>
-        <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col min-w-[100px] pointer-events-auto">
-          <div className="text-[9px] text-center font-black text-dragon-red border-b border-dragon-gold/20 mb-1 pb-1 uppercase tracking-widest">Map Scale</div>
-          <div className="text-center font-header font-black text-xl text-dragon-red">
-            {Math.round(currentMiles)} <span className="text-xs">Miles</span>
-          </div>
-          <div className="text-[7px] text-center font-bold text-dragon-red/40 uppercase mt-1">Level {Math.max(0, Math.round(currentZoom - 3))}</div>
-        </div>
-      </div>
+      {/* Map Navigation Controls */}
+      <MapNavigation 
+        className="absolute bottom-6 right-6 z-[1000]"
+        onCenterParty={() => {
+          if (partyLocation && mapRef.current) {
+            const pos = getPosition(partyLocation);
+            if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 6), { animate: true, duration: 1.5 });
+          }
+        }}
+        onZoomIn={() => mapRef.current?.zoomIn()}
+        onZoomOut={() => mapRef.current?.zoomOut()}
+        currentMiles={currentMiles}
+        zoomLevel={currentZoom}
+      />
     </div>
   );
 };
