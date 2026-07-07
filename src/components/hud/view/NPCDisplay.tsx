@@ -147,7 +147,7 @@ export const NPCDisplay: React.FC<NPCDisplayProps> = ({ species, emotion, name, 
                     backgroundPosition: isMatrix ? `${posX}% ${posY}%` : 'center bottom',
                     backgroundRepeat: 'no-repeat',
                     filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.5)) contrast(1.1) brightness(1.05)',
-                    transform: isMatrix ? 'scale(0.85)' : 'none',
+                    transform: isMatrix ? 'scale(1.2)' : 'none',
                     transformOrigin: 'bottom center',
                   }}
                 />
