@@ -15,7 +15,11 @@ export interface SavedLocation {
   region?: string;
   coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;
+  map?: string;
+  origin?: 'bottom-left' | 'top-left';
   subLocations?: any[];
+  sub_location_files?: string[];
+  bounds?: [[number, number], [number, number]];
   popup?: { title: string };
   categoryId?: string;
 }

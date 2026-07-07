@@ -57,6 +57,7 @@ export const HUD: React.FC = () => {
       <div className="flex-1 flex flex-row overflow-hidden relative">
         {/* 2. Left Aside: World Panel */}
         <motion.aside
+          initial={false}
           animate={{ width: isWorldPanelOpen ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full bg-parchment-50 border-r-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
@@ -73,6 +74,7 @@ export const HUD: React.FC = () => {
 
         {/* 4. Right Aside: Character Panel */}
         <motion.aside
+          initial={false}
           animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full bg-parchment-50 border-l-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
