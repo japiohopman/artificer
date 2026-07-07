@@ -16,66 +16,127 @@ export const getDistance = (a: Point, b: Point): number => {
 /**
  * A* Pathfinding algorithm for the tactical grid.
  * Treats 'wall' and closed 'door' as impassable.
+ * Optimized with indexed arrays and reduced allocations.
  */
 export const findPath = (start: Point, end: Point, grid: TacticalCell[][]): Point[] | null => {
   const width = grid[0].length;
   const height = grid.length;
+  const size = width * height;
 
-  const openSet: Point[] = [start];
-  const cameFrom = new Map<string, Point>();
-  const gScore = new Map<string, number>();
-  const fScore = new Map<string, number>();
+  const getIdx = (p: Point) => p.y * width + p.x;
+  const fromIdx = (idx: number): Point => ({ x: idx % width, y: Math.floor(idx / width) });
 
-  const pointToString = (p: Point) => `${p.x},${p.y}`;
+  const dists = new Float32Array(size).fill(Infinity);
+  const parents = new Int32Array(size).fill(-1);
+  const startIdx = getIdx(start);
+  const endIdx = getIdx(end);
 
-  gScore.set(pointToString(start), 0);
-  fScore.set(pointToString(start), getDistance(start, end));
+  dists[startIdx] = 0;
+  const openSet = [startIdx];
 
   while (openSet.length > 0) {
-    // Get point with lowest fScore
-    openSet.sort((a, b) => (fScore.get(pointToString(a)) || Infinity) - (fScore.get(pointToString(b)) || Infinity));
-    const current = openSet.shift()!;
+    let bestI = 0;
+    let minF = Infinity;
 
-    if (current.x === end.x && current.y === end.y) {
+    for (let i = 0; i < openSet.length; i++) {
+      const idx = openSet[i];
+      const p = fromIdx(idx);
+      const f = dists[idx] + getDistance(p, end);
+      if (f < minF) {
+        minF = f;
+        bestI = i;
+      }
+    }
+
+    const currentIdx = openSet.splice(bestI, 1)[0];
+
+    if (currentIdx === endIdx) {
       const path: Point[] = [];
-      let temp = current;
-      while (cameFrom.has(pointToString(temp))) {
-        path.push(temp);
-        temp = cameFrom.get(pointToString(temp))!;
+      let curr = currentIdx;
+      while (parents[curr] !== -1) {
+        path.push(fromIdx(curr));
+        curr = parents[curr];
       }
       return path.reverse();
     }
 
-    // Neighbors (8 directions)
+    const cx = currentIdx % width;
+    const cy = Math.floor(currentIdx / width);
+
     for (let dx = -1; dx <= 1; dx++) {
       for (let dy = -1; dy <= 1; dy++) {
         if (dx === 0 && dy === 0) continue;
+        const nx = cx + dx;
+        const ny = cy + dy;
 
-        const neighbor = { x: current.x + dx, y: current.y + dy };
+        if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
+        
+        const cell = grid[ny][nx];
+        if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
 
-        if (neighbor.x < 0 || neighbor.x >= width || neighbor.y < 0 || neighbor.y >= height) continue;
+        const nIdx = ny * width + nx;
+        const newDist = dists[currentIdx] + 1;
 
-        const cell = grid[neighbor.y][neighbor.x];
-        const isImpassable = cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen);
-
-        if (isImpassable) continue;
-
-        const tentativeGScore = (gScore.get(pointToString(current)) || 0) + 1;
-
-        if (tentativeGScore < (gScore.get(pointToString(neighbor)) || Infinity)) {
-          cameFrom.set(pointToString(neighbor), current);
-          gScore.set(pointToString(neighbor), tentativeGScore);
-          fScore.set(pointToString(neighbor), tentativeGScore + getDistance(neighbor, end));
-
-          if (!openSet.some(p => p.x === neighbor.x && p.y === neighbor.y)) {
-            openSet.push(neighbor);
+        if (newDist < dists[nIdx]) {
+          parents[nIdx] = currentIdx;
+          dists[nIdx] = newDist;
+          if (!openSet.includes(nIdx)) {
+            openSet.push(nIdx);
           }
         }
       }
     }
   }
 
-  return null; // No path found
+  return null;
+};
+
+/**
+ * Calculates all reachable cells within a range using Dijkstra/BFS.
+ * Returns a Set of "x,y" strings.
+ */
+export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][]): Set<string> => {
+  const width = grid[0].length;
+  const height = grid.length;
+  const size = width * height;
+  
+  const reachable = new Set<string>();
+  const dists = new Float32Array(size).fill(Infinity);
+  const startIdx = start.y * width + start.x;
+  dists[startIdx] = 0;
+  
+  const queue = [startIdx];
+  
+  while (queue.length > 0) {
+    const currentIdx = queue.shift()!;
+    const d = dists[currentIdx];
+    
+    const cx = currentIdx % width;
+    const cy = Math.floor(currentIdx / width);
+    reachable.add(`${cx},${cy}`);
+
+    if (d >= range) continue;
+
+    for (let dx = -1; dx <= 1; dx++) {
+      for (let dy = -1; dy <= 1; dy++) {
+        if (dx === 0 && dy === 0) continue;
+        const nx = cx + dx;
+        const ny = cy + dy;
+
+        if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
+        const cell = grid[ny][nx];
+        if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+
+        const nIdx = ny * width + nx;
+        const newDist = d + 1;
+        if (newDist < dists[nIdx]) {
+          dists[nIdx] = newDist;
+          queue.push(nIdx);
+        }
+      }
+    }
+  }
+  return reachable;
 };
 
 /**

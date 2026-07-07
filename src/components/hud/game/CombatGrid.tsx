@@ -6,7 +6,7 @@ import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
-import { checkLoS, findPath, getDistance } from '../../../lib/combatUtils';
+import { checkLoS, findPath, getDistance, getReachableCells } from '../../../lib/combatUtils';
 
 export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
@@ -44,17 +44,19 @@ export const CombatGrid: React.FC = () => {
   // Memoize valid target cells
   const validTargetCells = useMemo(() => {
     if (!isTargeting || !targetingAction) return new Set<string>();
-    const cells = new Set<string>();
     const range = targetingAction.range || 0;
 
+    if (targetingAction.id === 'move') {
+      return getReachableCells(playerPos, range, grid);
+    }
+
+    const cells = new Set<string>();
     for (let x = playerPos.x - range; x <= playerPos.x + range; x++) {
       for (let y = playerPos.y - range; y <= playerPos.y + range; y++) {
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-          if (targetingAction.id === 'move') {
-            const path = findPath(playerPos, { x, y }, grid);
-            if (!path || path.length > range) continue;
+          if (getDistance(playerPos, { x, y }) <= range) {
+            cells.add(`${x},${y}`);
           }
-          cells.add(`${x},${y}`);
         }
       }
     }

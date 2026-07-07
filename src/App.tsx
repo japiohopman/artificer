@@ -46,12 +46,14 @@ export default function App() {
   const activeBook = registeredBooks.find(b => b.id === activeBookId);
 
   useEffect(() => {
-    // Initial data load
+    // Initial data load - execute only on mount
     const { loadAllLists } = useAtlasStore.getState();
     const { loadCharacters } = useCharacterStore.getState();
     loadCharacters();
     loadAllLists();
+  }, []);
 
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Don't trigger shortcuts if user is typing in an input or textarea
       const target = e.target as HTMLElement;
@@ -61,16 +63,18 @@ export default function App() {
 
       if (e.shiftKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
-        const nextState = !isDevKitOpen;
-        setIsDevKitOpen(nextState);
+        const { isDevKitOpen: currentDevKitOpen, setIsDevKitOpen: setDevKitOpen } = useUIStore.getState();
+        const nextState = !currentDevKitOpen;
+        setDevKitOpen(nextState);
         if (nextState) playModalOpenSound();
         else playModalCloseSound();
       }
 
       if (e.altKey && e.key.toLowerCase() === 'j') {
         e.preventDefault();
-        const nextState = !isJournalOpen;
-        setIsJournalOpen(nextState);
+        const { isJournalOpen: currentJournalOpen, setIsJournalOpen: setJournalOpen } = useUIStore.getState();
+        const nextState = !currentJournalOpen;
+        setJournalOpen(nextState);
         if (nextState) playModalOpenSound();
         else playModalCloseSound();
       }
@@ -90,7 +94,7 @@ export default function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isDevKitOpen]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-black overflow-hidden relative">
