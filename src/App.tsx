@@ -13,7 +13,6 @@ import { useCharacterStore } from './store/useCharacterStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
-import { DiceRollOverlay } from './dice_roller/DiceRollOverlay';
 import { LoadingScreen } from './components/core/LoadingScreen';
 import { AnimatePresence } from 'motion/react';
 
@@ -130,7 +129,6 @@ export default function App() {
       />
       
       {/* Global Dice Layer */}
-      <DiceRollOverlay />
       <DiceBoxCanvas />
       <LoadingScreen />
     </div>

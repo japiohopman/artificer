@@ -22,8 +22,8 @@ export const NotificationWindow: React.FC = () => {
   
   const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
 
-  // Always show the last log to keep the window active as requested
-  const recentLogs = logs.length > 0 ? logs[logs.length - 1] : null;
+  // Always show the newest log to keep the window active as requested
+  const recentLogs = logs.length > 0 ? logs[0] : null;
 
   const categoryIcon = currentLocation ? CategoryIcons[currentLocation.category]?.icon : null;
   const categoryColor = currentLocation ? CategoryIcons[currentLocation.category]?.color : 'currentColor';

@@ -133,9 +133,16 @@ class DiceService {
       
       // Use DiceParser to parse notation for dice-box if it's complex
       let results;
-      if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
-         const parsedNotation = this.parser.parseNotation(notation);
-         results = await this.diceBox.roll(parsedNotation, rollOptions);
+      const isComplex = notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/) || (notation.match(/d/g) || []).length > 1;
+      
+      if (isComplex) {
+         try {
+           const parsedNotation = this.parser.parseNotation(notation);
+           results = await this.diceBox.roll(parsedNotation, rollOptions);
+         } catch (e) {
+           console.warn("[DiceService] Parser failed for notation, trying raw notation:", notation, e);
+           results = await this.diceBox.roll(notation, rollOptions);
+         }
       } else {
          results = await this.diceBox.roll(notation, rollOptions);
       }

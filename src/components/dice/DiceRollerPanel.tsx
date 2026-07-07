@@ -51,19 +51,26 @@ export const AdvancedRoller: React.FC = () => {
   const clearNotation = () => setNotation('');
 
   return (
-    <div className="w-full bg-parchment-100/95 border-t border-dragon-gold/50 p-4 space-y-4 animate-in slide-in-from-bottom-4 duration-300">
+    <div className="w-80 bg-parchment-100/95 border-2 border-dragon-gold rounded-md p-4 space-y-4 shadow-2xl pointer-events-auto bg-paper-texture overflow-hidden relative group">
+      {/* Decorative Border */}
+      <div className="absolute inset-0 border-[4px] border-dragon-gold/10 pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-dragon-red shadow-[0_0_8px_rgba(220,38,38,0.5)]" />
+
       <div className="relative z-10">
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex flex-col">
-            <span className="text-[8px] font-black uppercase text-dragon-red tracking-[0.3em] leading-none mb-1">DICE CHAMBER</span>
-            <h3 className="text-sm font-header font-black text-dragon-red uppercase tracking-wider">Advanced Roller</h3>
+        <div className="flex justify-between items-center mb-4 border-b border-dragon-red/10 pb-2">
+          <div className="flex items-center gap-2">
+            <GameIcon name="dice" size={16} color="#8B0000" />
+            <div className="flex flex-col">
+              <span className="text-[8px] font-black uppercase text-dragon-red tracking-[0.3em] leading-none mb-1">DICE CHAMBER</span>
+              <h3 className="text-sm font-header font-black text-dragon-red uppercase tracking-wider">Advanced Roller</h3>
+            </div>
           </div>
           <button
             onClick={() => setIsAdvancedRollerOpen(false)}
             className="p-1 hover:bg-dragon-red/10 rounded-full text-dragon-red/40 hover:text-dragon-red transition-all"
             title="Close Roller"
           >
-              <GameIcon name="close" size={14} />
+              <GameIcon name="chevron_left" size={18} />
           </button>
         </div>
 

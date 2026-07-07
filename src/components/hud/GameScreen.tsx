@@ -15,6 +15,7 @@ import { DraggableCard } from '../atlas/DraggableCard';
 import { ErrorBoundary } from '../core/ErrorBoundary';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { AdvancedRoller } from '../dice/DiceRollerPanel';
 
 import { ActionView } from './game/ActionView';
 
@@ -145,10 +146,11 @@ export const GameScreen: React.FC = () => {
 
       {/* 4. Legend & Chat Overlay Layer */}
       <div className="absolute inset-x-0 bottom-0 z-40 flex flex-col items-center pointer-events-none">
-        {/* Map Legend Overlay Removed (moved to ChatPanel) */}
+        <div className="w-full max-w-5xl px-4 pb-2 flex justify-start">
+           <AdvancedRoller />
+        </div>
 
         <div className="w-full pointer-events-auto relative">
-
            <ChatPanel isCollapsed={!chatExpanded} />
         </div>
       </div>
