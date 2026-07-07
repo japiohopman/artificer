@@ -1,5 +1,6 @@
 import DiceBox from "@3d-dice/dice-box";
 import { DiceRoller } from "@3d-dice/dice-roller-parser";
+import DiceParser from "@3d-dice/dice-parser-interface";
 
 export interface DiceResult {
   id: string;
@@ -18,12 +19,14 @@ export interface DiceResult {
 class DiceService {
   private diceBox: any;
   private roller: DiceRoller;
+  private parser: DiceParser;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
 
   constructor() {
     // Some versions of dice-roller-parser require a random callback
     this.roller = new DiceRoller();
+    this.parser = new DiceParser();
   }
 
   async init(containerArg: string | HTMLElement): Promise<void> {
@@ -123,37 +126,34 @@ class DiceService {
         rollOptions.themeColor = color;
       }
       
-      const results = await this.diceBox.roll(notation, rollOptions);
+      // Use DiceParser to parse notation for dice-box if it's complex
+      let results;
+      if (notation.includes('+') || notation.includes('-') || notation.match(/[a-z]{2}\d+/)) {
+         const parsedNotation = this.parser.parseNotation(notation);
+         results = await this.diceBox.roll(parsedNotation, rollOptions);
+      } else {
+         results = await this.diceBox.roll(notation, rollOptions);
+      }
 
       // If results are empty or invalid, fallback
       if (!results || results.length === 0) {
         return this.rollBackground(notation, label);
       }
 
-      // Calculate total manually and extract modifier
-      let rollTotal = 0;
-      const rolls = results.map((r: any) => {
-        rollTotal += r.value;
-        return {
-          die: r.sides,
-          result: r.value,
-          valid: true
-        };
-      });
-
-      // Simple regex to extract modifier from notation if total doesn't match sum of rolls
-      let modifier = 0;
-      const modMatch = notation.match(/([+-]\s*\d+)\s*$/);
-      if (modMatch) {
-        modifier = parseInt(modMatch[1].replace(/\s+/g, ''));
-      }
+      // If we used the parser, we should use parseFinalResults to get the total and individual rolls
+      const finalResults = this.parser.parseFinalResults(results);
       
-      const total = rollTotal + modifier;
+      const rolls = this.extractRolls(finalResults);
+      
+      // Calculate modifier
+      let rollSum = 0;
+      rolls.filter(r => r.valid !== false).forEach(r => rollSum += r.result);
+      const modifier = finalResults.value - rollSum;
 
       return {
         id: crypto.randomUUID(),
         notation,
-        total,
+        total: finalResults.value,
         label,
         rolls,
         modifier,
@@ -169,14 +169,25 @@ class DiceService {
     const rolls: any[] = [];
     const walk = (node: any) => {
       if (!node) return;
-      if (node.type === "die") {
-        rolls.push({ die: node.sides, result: node.value, valid: true });
-      } else if (node.ops) {
-        node.ops.forEach(walk);
-      } else if (node.left) {
-        walk(node.left);
-        walk(node.right);
+      
+      // If it's a die node, it contains the individual rolls
+      if (node.type === "die" && node.rolls) {
+        node.rolls.forEach((r: any) => {
+          rolls.push({ die: node.sides.value || node.sides, result: r.value, valid: r.valid !== false });
+        });
+      } 
+      // Some versions of the parser might have 'roll' nodes directly
+      else if (node.type === "roll") {
+        rolls.push({ die: node.die, result: node.value, valid: node.valid !== false });
       }
+      // Recursive cases for expressions/groups
+      if (node.ops) {
+        node.ops.forEach(walk);
+      }
+      if (node.left) walk(node.left);
+      if (node.right) walk(node.right);
+      if (node.head) walk(node.head);
+      if (node.tails) node.tails.forEach((t: any) => walk(t[1]));
     };
     walk(parsedResult);
     return rolls;

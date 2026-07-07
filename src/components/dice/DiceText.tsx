@@ -32,8 +32,13 @@ export const DiceText: React.FC<DiceTextProps> = ({ children, iconSize = 10, cla
   const processString = (text: string) => {
     // Regex matches dice patterns (including modifiers like +5, kh1, etc) OR any of our damage types
     const types = Object.keys(DAMAGE_TYPE_CONFIG).join('|');
-    // Improved dice regex to capture modifiers: \d*d\d+(?:[+-]\d+|[a-z]{2}\d+)*
-    const combinedRegex = new RegExp(`(\\d*d\\d+(?:[+-]\\d+|[a-z]{2}\\d+)*|\\b(?:${types})\\b)`, 'gi');
+    
+    // Improved dice regex to capture modifiers and compound notations like 1d20+1d4
+    // We match individual dice components and common operators
+    const dicePart = `\\d*d\\d+(?:[a-z]{2}\\d+)*`;
+    const fullDiceRegex = `(?:${dicePart})(?:\\s*[+-]\\s*(?:${dicePart}|\\d+))*`;
+    
+    const combinedRegex = new RegExp(`(${fullDiceRegex}|\\b(?:${types})\\b)`, 'gi');
     
     const parts = text.split(combinedRegex);
     

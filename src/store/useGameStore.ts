@@ -664,12 +664,27 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   rollDice3D: async (notation, label, theme, color) => {
     const { diceService } = await import('../dice_roller/diceService');
-    // For theme/color, we might need a reference to useUIStore but can pass defaults for now
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
     
     try {
       const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
+      
+      // Create detailed log message
+      const rollDetails = result.rolls
+        .filter(r => r.valid !== false)
+        .map(r => r.result)
+        .join(' + ');
+      
+      const modStr = result.modifier !== 0 
+        ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}`
+        : '';
+        
+      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
+      const message = `${label}: ${notation} ${detailStr} = ${result.total}`;
+      
+      get().addLog(message, 'info');
+
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
@@ -679,7 +694,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         diceService.clear();
       }, 5000);
     } catch (error) {
-      console.error("3D Roll failed, falling back to background", error);
+      console.error("Roll failed", error);
       const result = diceService.rollBackground(notation, label);
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 

@@ -9,6 +9,7 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
 import { Travel } from './game/Travel';
+import { AdvancedRoller } from '../dice/DiceRollerPanel';
 
 class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
   constructor(props: any) { super(props); this.state = { hasError: false }; }
@@ -285,10 +286,11 @@ export const WorldPanel: React.FC = () => {
         </div>
       </div>
 
-      {/* FOOTER: Travel Widget */}
+      {/* FOOTER: Travel & Dice Widgets */}
       <div className="bg-parchment-100/95 border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
         {displayLocation && (
           <div className="flex flex-col">
+            <AdvancedRoller />
             {!isInsideSubMap ? (
               <Travel
                 destination={displayLocation}
