@@ -622,7 +622,7 @@ export const CharacterCreator: React.FC = () => {
   if (!isCharacterCreatorOpen) return null;
 
   return (
-    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4 backdrop-blur-xl">
+    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
       <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch" style={{
@@ -631,7 +631,7 @@ export const CharacterCreator: React.FC = () => {
         backgroundPosition: 'center'
       }}>
         {/* Header */}
-        <div className="h-12 bg-white/20 backdrop-blur-sm border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
+        <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
           <div className="flex items-center gap-2">
             <div className="p-1 bg-dragon-red/5 text-dragon-red border border-dragon-red/10 rounded-sm">
               {(() => {
@@ -726,7 +726,7 @@ export const CharacterCreator: React.FC = () => {
         </div>
 
         {/* Footer Navigation */}
-        <div id="creator-footer" className="h-16 bg-white/20 backdrop-blur-sm border-t border-dragon-red/20 flex items-center justify-between px-6 shrink-0">
+        <div id="creator-footer" className="h-16 bg-white/20 border-t border-dragon-red/20 flex items-center justify-between px-6 shrink-0">
            <button 
              onClick={prevStep}
              className="flex items-center gap-1.5 px-4 py-2 border border-parchment-300 rounded-sm font-black text-[9px] text-parchment-500 uppercase tracking-widest hover:bg-parchment-100 transition-all"

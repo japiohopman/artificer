@@ -124,7 +124,7 @@ export const BookFocus: React.FC<BookFocusProps> = ({ book, onOpen, onClose }) =
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-stone-950/95 backdrop-blur-2xl z-0"
+            className="absolute inset-0 bg-stone-950/95 z-0"
             onClick={onClose}
         />
 

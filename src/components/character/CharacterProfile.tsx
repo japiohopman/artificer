@@ -217,7 +217,7 @@ export const CharacterProfile: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/80 backdrop-blur-2xl z-[5000] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6"
+      className="fixed inset-0 bg-black/80 z-[5000] overflow-hidden flex flex-col items-center justify-center p-4 md:p-6"
     >
       {/* Close/Back Navigation */}
       <div className="absolute top-6 inset-x-6 flex justify-between items-center z-[5001] pointer-events-none">
@@ -343,7 +343,7 @@ export const CharacterProfile: React.FC = () => {
         )}
         
         {/* Tab Selector (Fixed at the top) */}
-        <div className="shrink-0 flex items-center bg-parchment-50/40 backdrop-blur-md border-b border-dragon-red/10 px-6 z-40">
+        <div className="shrink-0 flex items-center bg-parchment-50/40 border-b border-dragon-red/10 px-6 z-40">
            {['stats', 'equipment', 'bio', 'spells'].map((tab) => (
              <button
                key={tab}
@@ -453,15 +453,13 @@ export const CharacterProfile: React.FC = () => {
                           <div className="w-px h-12 bg-dragon-red/10" />
 
                           {/* Inspiration */}
-<button
+                          <button
                             onClick={() => toggleInspiration(character.id)}
                             className="flex flex-col items-center gap-1 group relative"
                           >
                              <div className={cn(
                                "w-10 h-10 rounded-full border-2 flex items-center justify-center transition-all duration-500",
-                               character.inspiration
-                                 ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110"
-                                 : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
+                               character.inspiration ? "bg-dragon-gold border-dragon-gold shadow-[0_0_15px_#D4AF37] scale-110" : "bg-black/5 border-dragon-red/20 opacity-40 hover:opacity-100"
                              )}>
                                 <GameIcon name="star" size={20} color={character.inspiration ? "#8B0000" : "currentColor"} />
                              </div>

@@ -124,7 +124,7 @@ export const BookReader: React.FC<BookReaderProps> = ({
 
   const containerClasses = inline 
     ? cn("relative w-full h-full flex items-center justify-center p-4 select-none", className)
-    : cn("fixed inset-0 z-[15000] flex items-center justify-center bg-stone-950/90 backdrop-blur-xl p-4 md:p-8 select-none", className);
+    : cn("fixed inset-0 z-[15000] flex items-center justify-center bg-stone-950/90 p-4 md:p-8 select-none", className);
 
   return (
     <motion.div 
@@ -136,7 +136,7 @@ export const BookReader: React.FC<BookReaderProps> = ({
       {/* HUD / Overlay Controls */}
       <div className={cn(
           "absolute top-0 left-0 right-0 h-16 px-6 flex items-center justify-between z-[12000] pointer-events-none transition-colors",
-          !inline && "bg-stone-900/10 backdrop-blur-md border-b border-white/5",
+          !inline && "bg-stone-900/10 border-b border-white/5",
           inline && "opacity-60 h-auto p-2"
       )}>
         <div className="flex items-center gap-6 pointer-events-auto">

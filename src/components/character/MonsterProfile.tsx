@@ -35,7 +35,7 @@ export const MonsterProfile: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/90 backdrop-blur-2xl z-[5000] flex flex-col items-center justify-center p-4 md:p-8 overflow-hidden"
+      className="fixed inset-0 bg-black/90 z-[5000] flex flex-col items-center justify-center p-4 md:p-8 overflow-hidden"
     >
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
@@ -74,7 +74,7 @@ export const MonsterProfile: React.FC = () => {
                </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 space-y-4">
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10 space-y-4">
                <div className="flex justify-between items-center pb-3 border-b border-white/10">
                   <span className="text-[10px] font-black text-white/40 uppercase tracking-widest">Challenge Rating</span>
                   <span className="text-2xl font-header font-black text-dragon-gold">{monster.challenge_rating || "???"}</span>
@@ -91,7 +91,7 @@ export const MonsterProfile: React.FC = () => {
          </div>
 
          {/* Right: Technical Readout */}
-         <div className="flex-1 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden flex flex-col">
+         <div className="flex-1 bg-white/5 rounded-2xl border border-white/10 overflow-hidden flex flex-col">
             <div className="p-6 border-b border-white/10 flex items-center justify-between">
                <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-dragon-red/20 flex items-center justify-center border border-dragon-red/30">

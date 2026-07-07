@@ -38,7 +38,7 @@ const RollNotification: React.FC<{ roll: any }> = ({ roll }) => {
       initial={{ opacity: 0, x: 20, scale: 0.8 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
-      className="bg-parchment-50 border border-dragon-red/30 p-3 rounded-lg shadow-xl relative overflow-hidden flex items-center gap-4 min-w-[180px] pointer-events-auto backdrop-blur-sm"
+      className="bg-parchment-50 border border-dragon-red/30 p-3 rounded-lg shadow-xl relative overflow-hidden flex items-center gap-4 min-w-[180px] pointer-events-auto"
     >
       <div className={cn(
         "w-12 h-12 rounded-lg flex flex-col items-center justify-center shrink-0 border-2 transition-all",

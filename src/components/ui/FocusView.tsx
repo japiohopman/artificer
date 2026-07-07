@@ -81,7 +81,7 @@ export const FocusView: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center overflow-hidden"
+          className="fixed inset-0 z-[9999] bg-black/95 flex flex-col items-center justify-center overflow-hidden"
           onClick={() => setFocusedItem(null)}
         >
           {/* Close Button */}
@@ -177,7 +177,7 @@ export const FocusView: React.FC = () => {
 
           {/* Minimal Footer for Stats */}
           <div 
-            className="w-full h-24 flex-none border-t border-white/5 bg-black/20 backdrop-blur-sm flex items-center justify-center gap-16 relative z-[105]"
+            className="w-full h-24 flex-none border-t border-white/5 bg-black/20 flex items-center justify-center gap-16 relative z-[105]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center gap-3 group">

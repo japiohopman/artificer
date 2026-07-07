@@ -147,7 +147,7 @@ export default function PaperScissorRock({ isArena = false }: PaperScissorRockPr
                     <motion.div
                         initial={{ scale: 0, y: 20 }}
                         animate={{ scale: 1, y: 0 }}
-                        className="bg-black/60 backdrop-blur-xl px-6 py-2 rounded-full border border-white/10 shadow-2xl"
+                        className="bg-black/60 px-6 py-2 rounded-full border border-white/10 shadow-2xl"
                     >
                         <span className="text-white font-black tracking-[0.2em] uppercase text-[10px] flex items-center gap-3">
                            <Sparkles size={12} className="text-indigo-400 animate-pulse" />

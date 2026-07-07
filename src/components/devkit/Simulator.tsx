@@ -69,7 +69,7 @@ export const Simulator: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
          {/* Progression Sim */}
-         <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 space-y-6">
+         <div className="bg-white/5 rounded-2xl p-8 border border-white/10 space-y-6">
             <div className="flex items-center gap-3">
                <GameIcon name="lightning" size={24} color="#D4AF37" />
                <h3 className="font-header text-xl text-white uppercase tracking-widest">Progression Engine</h3>
