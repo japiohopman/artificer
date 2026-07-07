@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useWorldStore } from '../../store/useWorldStore';
@@ -28,7 +28,7 @@ export const HUD: React.FC = () => {
   } = useInventoryStore();
 
   // Auto-configure sidebars for Combat Mode
-  React.useEffect(() => {
+  useEffect(() => {
     if (gameMode === 'combat') {
       setIsWorldPanelOpen(true);
       setIsCharacterPanelOpen(true);
@@ -39,15 +39,15 @@ export const HUD: React.FC = () => {
 
   const { resetAtlas } = useWorldStore();
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Initial cleanup of atlas data and loaded categories to prevent stale states
     resetAtlas();
-    
+
     // Dismiss the loading screen after a short delay to ensure components are ready
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
   }, [resetAtlas, setIsLoading]);
 
@@ -68,9 +68,9 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: isWorldPanelOpen ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full bg-parchment-50 border-r-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
+          className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-l-0"
         >
-          <div className="w-80 h-full flex flex-col">
+          <div className="w-80 h-full flex flex-col parchment-edge-mask">
             <WorldPanel />
           </div>
         </motion.aside>
@@ -85,9 +85,9 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full bg-parchment-50 border-l-2 border-dragon-gold z-[1000] relative flex flex-col shrink-0 shadow-xl overflow-hidden"
+          className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-r-0"
         >
-          <div className="w-80 h-full flex flex-col overflow-hidden">
+          <div className="w-80 h-full flex flex-col overflow-hidden parchment-edge-mask">
              <CharacterPanel />
           </div>
         </motion.aside>

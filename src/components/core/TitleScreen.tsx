@@ -34,8 +34,11 @@ export const TitleScreen: React.FC = () => {
   useEffect(() => {
     const init = async () => {
       setIsLoading(true, "Decrypting Save Data...");
-      await loadCharacters();
-      setIsLoading(false);
+      try {
+        await loadCharacters();
+      } finally {
+        setIsLoading(false);
+      }
     };
     init();
   }, [loadCharacters, setIsLoading]);

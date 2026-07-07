@@ -27,6 +27,7 @@ import { CharacterCreator } from './components/character/CharacterCreator';
 import { LevelUpOverlay } from './components/character/LevelUpOverlay';
 import { useBookStore } from './store/useBookStore';
 
+// Unified Loading Screen Implementation
 export default function App() {
   const { 
     isDevKitOpen, setIsDevKitOpen, explorerTab,
@@ -73,6 +74,18 @@ export default function App() {
         if (nextState) playModalOpenSound();
         else playModalCloseSound();
       }
+
+      if (e.key.toLowerCase() === 'g' && !e.ctrlKey && !e.altKey && !e.metaKey) {
+        e.preventDefault();
+        const { isGridVisible, setIsGridVisible, currentView, setCurrentView } = useUIStore.getState();
+        if (e.shiftKey) {
+          // Shift+G: Toggle between World and Grid view
+          setCurrentView(currentView === 'grid' ? 'world' : 'grid');
+        } else {
+          // G: Toggle Grid lines visibility
+          setIsGridVisible(!isGridVisible);
+        }
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -86,14 +99,14 @@ export default function App() {
       ) : (
         <>
           <HUD />
-          
+
           {/* Global Overlays Layer */}
           <AnimatePresence>
             {isBookOpen && activeBook && (
-              <BookReader 
-                isOpen={true} 
-                onClose={closeBook} 
-                book={activeBook} 
+              <BookReader
+                isOpen={true}
+                onClose={closeBook}
+                book={activeBook}
                 className="z-[15000]"
               />
             )}
@@ -101,13 +114,13 @@ export default function App() {
 
           <AnimatePresence>
             {isCharacterSpellbookOpen && (
-              <SpellbookReader 
-                isOpen={true} 
-                onClose={() => setIsCharacterSpellbookOpen(false)} 
+              <SpellbookReader
+                isOpen={true}
+                onClose={() => setIsCharacterSpellbookOpen(false)}
               />
             )}
           </AnimatePresence>
-          
+
           <FullInventoryMenu />
           <AnimatePresence>
             {isProfileMenuOpen && <CharacterProfile />}
@@ -118,8 +131,8 @@ export default function App() {
           <LevelUpOverlay />
 
           {/* DevKit Modal */}
-          <DevKit 
-            isOpen={isDevKitOpen} 
+          <DevKit
+            isOpen={isDevKitOpen}
             onClose={() => setIsDevKitOpen(false)}
             initialMonster={selectedItem}
             currentExplorerTab={explorerTab}
