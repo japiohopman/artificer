@@ -52,7 +52,7 @@ export const DiceBoxCanvas: React.FC = () => {
     <div 
       id="dice-box-container"
       ref={containerRef}
-      className="fixed inset-0 z-[21000] border-2 border-transparent block visible opacity-100 w-screen h-screen overflow-hidden pointer-events-none"
+      className="fixed inset-0 z-[100000] border-2 border-transparent block visible opacity-100 w-screen h-screen overflow-hidden pointer-events-none"
     >
       <style>
         {`

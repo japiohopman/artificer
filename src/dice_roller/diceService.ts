@@ -59,6 +59,7 @@ class DiceService {
         this.diceBox = new DiceBox({
           container: selector,
           assetPath: ASSET_PATH,
+          origin: window.location.origin,
           theme: "default",
           offscreen: false,
           scale: 6,
