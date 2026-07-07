@@ -14,19 +14,26 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   const cat = category?.toLowerCase() || '';
   let catKey = cat;
 
-  if (cat.includes('shop') || cat.includes('market') || cat.includes('blacksmith')) catKey = 'waters'; // Use generic or specialized
-  else if (cat.includes('tavern') || cat.includes('inn')) catKey = 'village';
+  // Refined mapping for specialized atlas icons
+  if (cat.includes('shop')) catKey = 'shops';
+  else if (cat.includes('tavern')) catKey = 'taverns';
+  else if (cat.includes('inn')) catKey = 'inns';
   else if (cat.includes('temple') || cat.includes('shrine')) catKey = 'temples';
-  else if (cat.includes('district') || cat.includes('ward')) catKey = 'city';
-  else if (cat.includes('sewer')) catKey = 'dungeon';
+  else if (cat.includes('district') || cat.includes('ward')) catKey = 'districts';
+  else if (cat.includes('sewer')) catKey = 'sewer_entrens';
+  else if (cat.includes('estate') || cat.includes('villa')) catKey = 'estates';
+  else if (cat.includes('point_of_interest') || cat.includes('poi')) catKey = 'points_of_interest';
+  else if (cat.includes('landmark')) catKey = 'landmarks';
+  else if (cat.includes('dock') || cat.includes('harbor')) catKey = 'docks';
+  else if (cat.includes('gate')) catKey = 'gates';
 
   const config = CategoryIcons[catKey] ||
                  CategoryIcons[catKey.replace(/ies$/, 'y')] ||
                  CategoryIcons[catKey.replace(/s$/, '')] ||
                  CategoryIcons[catKey + 's'] ||
-                 { icon: 'landmark', color: '#D4AF37' };
+                 { icon: WORLD_ATLAS_ICONS[catKey as keyof typeof WORLD_ATLAS_ICONS] ? catKey : 'landmark', color: '#D4AF37' };
 
-  const iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
+  const iconKey = (WORLD_ATLAS_ICONS[config.icon as keyof typeof WORLD_ATLAS_ICONS] ? config.icon : 'landmark') as keyof typeof WORLD_ATLAS_ICONS;
   const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark;
 
   const scaleClass = isInspected ? 'scale-125' : 'group-hover:scale-110';
@@ -143,14 +150,21 @@ export const LocationMap: React.FC = () => {
             y = loc.coordinates.lat || loc.coordinates.y || 0;
           }
 
-          const isTopLeft = currentLocation.origin === 'top-left';
+          // Leaflet Simple CRS with positive bounds [[0,0], [yMax, xMax]]:
+          // [0, 0] is BOTTOM-LEFT.
+          // y increases UPWARDS.
+
+          // Leaflet Simple CRS projects [lat, lng] to [y, x] where y increases UPWARDS (North).
+          // Most map coordinate systems (Wiki, Graphics) use TOP-LEFT origin (y increases Downwards).
+
+          const isBottomLeft = currentLocation.origin === 'bottom-left';
           const yMax = (bounds as any)[1][0];
 
-          // Leaflet [y, x] where y increases upwards (lat).
-          // If origin is top-left, we must invert y.
-          const latLng: L.LatLngExpression = isTopLeft
-            ? [yMax - y, x]
-            : [y, x];
+          // If JSON origin is bottom-left, y already increases North, so we use it directly.
+          // If JSON origin is top-left (default), we must invert Y for Leaflet: [yMax - y, x].
+          const latLng: L.LatLngExpression = isBottomLeft
+            ? [y, x]
+            : [yMax - y, x];
 
           const isInspected = inspectedLocation?.id === loc.id;
 
