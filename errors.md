@@ -114,3 +114,23 @@ diceService.ts:102:17
     js React
     __require2 chunk-2TUXWMP5.js:15
     <anonymous> react-dom_client.js:20192
+
+    [DiceBoxCanvas] Init failed: Error: DiceBox initialization timed out after 30s
+    initPromise diceService.ts:85
+    setTimeout handler*init/initTimeout< diceService.ts:85
+    initPromise diceService.ts:84
+    init diceService.ts:108
+    DiceBoxCanvas DiceBoxCanvas.tsx:22
+    React 17
+    performWorkUntilDeadline scheduler.development.js:45
+    js scheduler.development.js:223
+    js scheduler.development.js:364
+    __require2 chunk-2TUXWMP5.js:15
+    js index.js:6
+    __require2 chunk-2TUXWMP5.js:15
+    React 2
+    __require2 chunk-2TUXWMP5.js:15
+    js React
+    __require2 chunk-2TUXWMP5.js:15
+    <anonymous> react-dom_client.js:20192
+DiceBoxCanvas.tsx:34:17

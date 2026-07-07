@@ -14,6 +14,7 @@ export const CombatGrid: React.FC = () => {
   const { partyLocation } = useWorldStore();
   const { isTargeting, targetingAction, setIsTargeting, setTargetingAction, isGridVisible, setIsGridVisible } = useUIStore();
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
+  const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const activeChar = characters.find(c => c.id === activeCharacterId);
@@ -26,18 +27,19 @@ export const CombatGrid: React.FC = () => {
 
   const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
 
-  // Memoize visible cells
+  // Memoize visible cells (updates dynamically during drag)
   const visibleCells = useMemo(() => {
     const visible = new Set<string>();
+    const center = draggedPos || playerPos;
     for (let y = 0; y < gridHeight; y++) {
       for (let x = 0; x < gridWidth; x++) {
-        if (checkLoS(playerPos, { x, y }, grid)) {
+        if (checkLoS(center, { x, y }, grid)) {
           visible.add(`${x},${y}`);
         }
       }
     }
     return visible;
-  }, [playerPos, grid, gridHeight, gridWidth]);
+  }, [playerPos, draggedPos, grid, gridHeight, gridWidth]);
 
   // Memoize valid target cells
   const validTargetCells = useMemo(() => {
@@ -69,20 +71,32 @@ export const CombatGrid: React.FC = () => {
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // 1. Draw Grid Lines (if visible)
+    // 1. Draw Grid Lines (Selective Grid Mode)
     if (isGridVisible) {
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.strokeStyle = 'rgba(212, 175, 55, 0.2)'; // Dragon Gold
       ctx.lineWidth = 1;
-      ctx.beginPath();
-      for (let x = 0; x <= gridWidth; x++) {
-        ctx.moveTo(x * cellSize, 0);
-        ctx.lineTo(x * cellSize, gridHeight * cellSize);
-      }
-      for (let y = 0; y <= gridHeight; y++) {
-        ctx.moveTo(0, y * cellSize);
-        ctx.lineTo(gridWidth * cellSize, y * cellSize);
-      }
-      ctx.stroke();
+
+      const drawGridAround = (center: {x: number, y: number}, radius: number) => {
+        const startX = Math.max(0, center.x - radius);
+        const endX = Math.min(gridWidth, center.x + radius);
+        const startY = Math.max(0, center.y - radius);
+        const endY = Math.min(gridHeight, center.y + radius);
+
+        ctx.beginPath();
+        for (let x = startX; x <= endX; x++) {
+          ctx.moveTo(x * cellSize, startY * cellSize);
+          ctx.lineTo(x * cellSize, endY * cellSize);
+        }
+        for (let y = startY; y <= endY; y++) {
+          ctx.moveTo(startX * cellSize, y * cellSize);
+          ctx.lineTo(endX * cellSize, y * cellSize);
+        }
+        ctx.stroke();
+      };
+
+      // Draw around active position and hover
+      drawGridAround(draggedPos || playerPos, 5);
+      if (hoveredCell) drawGridAround(hoveredCell, 2);
     }
 
     // 2. Draw Walls and Base Terrain
@@ -122,7 +136,26 @@ export const CombatGrid: React.FC = () => {
       });
     }
 
-    // 4. Draw Targeted Sphere
+    // 4. Threat Range (on monster hover)
+    const hoveredMonster = monsters.find(m => m.x === hoveredCell?.x && m.y === hoveredCell?.y);
+    if (hoveredMonster && visibleCells.has(`${hoveredMonster.x},${hoveredMonster.y}`)) {
+      ctx.fillStyle = 'rgba(220, 38, 38, 0.1)';
+      ctx.strokeStyle = 'rgba(220, 38, 38, 0.3)';
+      const threatRange = 6; // Assume 30ft for now
+      for (let dy = -threatRange; dy <= threatRange; dy++) {
+        for (let dx = -threatRange; dx <= threatRange; dx++) {
+          const tx = hoveredMonster.x + dx;
+          const ty = hoveredMonster.y + dy;
+          if (tx >= 0 && tx < gridWidth && ty >= 0 && ty < gridHeight) {
+            if (getDistance(hoveredMonster, { x: tx, y: ty }) <= threatRange) {
+              ctx.fillRect(tx * cellSize, ty * cellSize, cellSize, cellSize);
+            }
+          }
+        }
+      }
+    }
+
+    // 5. Draw Targeted Sphere
     if (isTargeting && targetingAction?.targetType === 'sphere' && hoveredCell) {
       const radius = targetingAction.radius || 0;
       ctx.fillStyle = 'rgba(220, 38, 38, 0.2)';
@@ -139,7 +172,7 @@ export const CombatGrid: React.FC = () => {
       }
     }
 
-  }, [grid, isGridVisible, visibleCells, isTargeting, targetingAction, validTargetCells, hoveredCell, gridWidth, gridHeight]);
+  }, [grid, isGridVisible, visibleCells, isTargeting, targetingAction, validTargetCells, hoveredCell, gridWidth, gridHeight, monsters]);
 
   const handleInteraction = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
@@ -246,10 +279,18 @@ export const CombatGrid: React.FC = () => {
     }
   };
 
+  const rulerPath = useMemo(() => {
+    const target = hoveredCell || draggedPos;
+    if (!target) return null;
+    return findPath(playerPos, target, grid);
+  }, [playerPos, hoveredCell, draggedPos, grid]);
+
   const rulerDistance = useMemo(() => {
-    if (!hoveredCell) return null;
-    return getDistance(playerPos, hoveredCell) * 5; // 5ft per cell
-  }, [playerPos, hoveredCell]);
+    const target = hoveredCell || draggedPos;
+    if (!target) return null;
+    const dist = rulerPath ? rulerPath.length : getDistance(playerPos, target);
+    return dist * 5; // 5ft per cell
+  }, [playerPos, hoveredCell, draggedPos, rulerPath]);
 
   return (
     <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-stone-950 font-body">
@@ -296,8 +337,49 @@ export const CombatGrid: React.FC = () => {
           <div className="absolute inset-0 pointer-events-none z-20">
              {/* Player Token */}
              <motion.div 
-               animate={{ x: playerPos.x * cellSize, y: playerPos.y * cellSize }}
-               className="absolute p-1"
+               drag
+               dragMomentum={false}
+               dragElastic={0.1}
+               onDrag={(_, info) => {
+                 const rect = canvasRef.current?.getBoundingClientRect();
+                 if (rect) {
+                   const x = Math.floor((info.point.x - rect.left) / cellSize);
+                   const y = Math.floor((info.point.y - rect.top) / cellSize);
+                   if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                     if (draggedPos?.x !== x || draggedPos?.y !== y) {
+                       setDraggedPos({ x, y });
+                     }
+                   }
+                 }
+               }}
+               onDragEnd={(_, info) => {
+                 const rect = canvasRef.current?.getBoundingClientRect();
+                 if (rect) {
+                    const x = Math.floor((info.point.x - rect.left) / cellSize);
+                    const y = Math.floor((info.point.y - rect.top) / cellSize);
+                    if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                      // Trigger move logic
+                      const { gameMode } = useUIStore.getState();
+                      const path = findPath(playerPos, { x, y }, grid);
+                      if (path && path.length > 0) {
+                        const isCombat = gameMode === 'combat';
+                        if (!isCombat || path.length <= 6) {
+                          setPlayerPos(x, y);
+                          addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
+                          if (isCombat) {
+                            const { consumeMovement } = useCharacterStore.getState();
+                            consumeMovement(activeCharacterId, path.length * 5);
+                          }
+                        } else {
+                          addLog("That position is too far!", 'warning');
+                        }
+                      }
+                    }
+                 }
+                 setDraggedPos(null);
+               }}
+               animate={draggedPos ? {} : { x: playerPos.x * cellSize, y: playerPos.y * cellSize }}
+               className="absolute p-1 pointer-events-auto cursor-grab active:cursor-grabbing z-[100]"
                style={{ width: cellSize, height: cellSize }}
              >
                 <div className="w-full h-full rounded-full border-2 border-blue-500 bg-blue-900/80 flex items-center justify-center overflow-hidden relative shadow-[0_0_20px_rgba(59,130,246,0.4)]">
@@ -307,7 +389,7 @@ export const CombatGrid: React.FC = () => {
                     <GameIcon name="user" size={24} color="#FFF" />
                   )}
                 </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/95 text-white text-[7px] font-black px-2 py-0.5 rounded-full border border-blue-400/50 uppercase whitespace-nowrap shadow-lg">
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/95 text-white text-[8px] font-elan px-2 py-0.5 rounded-sm border border-blue-400/50 uppercase whitespace-nowrap shadow-lg tracking-wider">
                   {activeChar?.name || 'Player'}
                 </div>
              </motion.div>
@@ -352,7 +434,7 @@ export const CombatGrid: React.FC = () => {
                           <div className="h-full bg-dragon-red" style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }} />
                         </div>
                       </div>
-                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/95 text-white text-[7px] font-black px-2 py-0.5 rounded-full border border-dragon-red/50 uppercase whitespace-nowrap shadow-lg">
+                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/95 text-white text-[8px] font-elan px-2 py-0.5 rounded-sm border border-dragon-red/50 uppercase whitespace-nowrap shadow-lg tracking-wider">
                         {monster.name}
                       </div>
                    </motion.div>
@@ -362,32 +444,43 @@ export const CombatGrid: React.FC = () => {
           </div>
 
           {/* Ruler and Distance Tooltip */}
-          {hoveredCell && (
+          {(hoveredCell || draggedPos) && (
             <>
               <div 
                 className="absolute pointer-events-none z-[120] flex flex-col items-center"
                 style={{
-                  left: hoveredCell.x * cellSize + cellSize / 2,
-                  top: hoveredCell.y * cellSize - 40,
+                  left: (hoveredCell || draggedPos)!.x * cellSize + cellSize / 2,
+                  top: (hoveredCell || draggedPos)!.y * cellSize - 40,
                   transform: 'translateX(-50%)'
                 }}
               >
-                <div className="bg-stone-900/90 border border-dragon-gold px-2 py-1 rounded text-[10px] font-black text-dragon-gold shadow-xl flex items-center gap-2">
-                  <GameIcon name="footsteps" size={12} color="#D4AF37" />
-                  {rulerDistance} ft
+                <div className="bg-stone-900/95 border-2 border-dragon-gold/50 px-3 py-1.5 rounded-sm text-[11px] font-elan text-dragon-gold shadow-[0_0_15px_rgba(0,0,0,0.5)] flex items-center gap-2 backdrop-blur-sm before:absolute before:inset-0 before:bg-[url('/assets/images/ui/parchment_texture.webp')] before:opacity-10 before:pointer-events-none">
+                  <GameIcon name="footsteps" size={14} color="#D4AF37" />
+                  <span className="tracking-widest uppercase">{rulerDistance} ft</span>
                 </div>
               </div>
               <svg className="absolute inset-0 z-[110] pointer-events-none w-full h-full overflow-visible">
-                <line
-                  x1={playerPos.x * cellSize + cellSize / 2}
-                  y1={playerPos.y * cellSize + cellSize / 2}
-                  x2={hoveredCell.x * cellSize + cellSize / 2}
-                  y2={hoveredCell.y * cellSize + cellSize / 2}
-                  stroke="#D4AF37"
-                  strokeWidth="2"
-                  strokeDasharray="4 4"
-                  opacity="0.4"
-                />
+                {rulerPath ? (
+                  <polyline
+                    points={`${playerPos.x * cellSize + cellSize / 2},${playerPos.y * cellSize + cellSize / 2} ${rulerPath.map(p => `${p.x * cellSize + cellSize / 2},${p.y * cellSize + cellSize / 2}`).join(' ')}`}
+                    fill="none"
+                    stroke="#D4AF37"
+                    strokeWidth="3"
+                    strokeDasharray="6 3"
+                    opacity="0.6"
+                  />
+                ) : (
+                  <line
+                    x1={playerPos.x * cellSize + cellSize / 2}
+                    y1={playerPos.y * cellSize + cellSize / 2}
+                    x2={(hoveredCell || draggedPos)!.x * cellSize + cellSize / 2}
+                    y2={(hoveredCell || draggedPos)!.y * cellSize + cellSize / 2}
+                    stroke="#D4AF37"
+                    strokeWidth="2"
+                    strokeDasharray="4 4"
+                    opacity="0.4"
+                  />
+                )}
               </svg>
             </>
           )}

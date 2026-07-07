@@ -35,6 +35,10 @@ async function safeJson(res: Response): Promise<any> {
       }
     }
   } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      // Silently ignore abort errors as they are expected during navigation or rapid updates
+      return null;
+    }
     console.error("Failed to parse JSON response:", e);
     return null;
   }

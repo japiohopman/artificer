@@ -65,5 +65,13 @@
     "tsx": "^4.22.4",
     "typescript": "~5.8.2",
     "vite": "^6.4.3"
+  },
+  "allowScripts": {
+    "@3d-dice/dice-box@1.1.4": true,
+    "@firebase/util@1.15.1": true,
+    "@google/genai@1.52.0": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.25.12": true,
+    "protobufjs@7.6.5": true
   }
 }
