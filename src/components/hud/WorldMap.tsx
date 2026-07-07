@@ -24,9 +24,9 @@ import { GameIcon } from '../../game_icons';
  */
 const CATEGORY_TIERS = [
   { zoom: 3, miles: 4001, categories: ['regions'] },
-  { zoom: 4, miles: 2001, categories: ['seas_oceans'] },
+  { zoom: 4, miles: 2001, categories: ['seas_oceans', 'cities'] },
   { zoom: 5, miles: 1001, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
-  { zoom: 6, miles: 501, categories: ['cities'] },
+  { zoom: 6, miles: 501, categories: [] },
   { zoom: 7, miles: 251, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
   { zoom: 8, miles: 130, categories: ['landmarks', 'temples', 'shrines'] },
   { zoom: 9, miles: 70, categories: ['ruins', 'poi', 'graveyards', 'dungeons', 'caves', 'roads_trails'] }
@@ -176,11 +176,6 @@ export const WorldMap: React.FC = () => {
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
 
-  // Reset atlas on mount to ensure clean state and fresh loading
-  React.useEffect(() => {
-    resetAtlas();
-  }, [resetAtlas]);
-
   const isTraveling = useWorldStore(state => state.isTraveling);
   const destination = useWorldStore(state => state.destination);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
@@ -258,8 +253,6 @@ export const WorldMap: React.FC = () => {
         if (currentZoom >= tier.zoom) {
           for (const category of tier.categories) {
             if (!isCategoryLoaded(category)) {
-              // Mark as loaded immediately to prevent parallel duplicate loads
-              addLoadedCategory(category);
               try {
                 const response = await fetch(`/assets/atlas/world/toril/faerun/${category}/${category}.json`);
                 if (response.ok && isMounted) {
@@ -279,6 +272,7 @@ export const WorldMap: React.FC = () => {
                       banner: l.banner || l.popup?.banner || null
                     }));
                     addSavedLocations(normalized as SavedLocation[]);
+                    addLoadedCategory(category);
                   }
                 }
               } catch (e) {
@@ -326,6 +320,12 @@ export const WorldMap: React.FC = () => {
       if (cityOnlyCategories.includes(cat)) return false;
 
       // 2. Tier-based visibility (referencing CATEGORY_TIERS)
+      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+      if (cat.includes('city') || cat.includes('metropolis')) {
+         if (majorCities.includes(name)) return true; // Major cities always visible once loaded
+         return currentMiles <= 2000; // Minor cities visible at 2000 miles (Zoom Level 4)
+      }
+
       // We find the tier where this category first appears
       const tier = CATEGORY_TIERS.find(t =>
         t.categories.some(c => cat.includes(c) || c.includes(cat))

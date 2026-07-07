@@ -24,6 +24,7 @@ export const Travel: React.FC<TravelProps> = ({ destination, onClose, isMinimize
     travelProgress,
     currentLocation,
     setCurrentLocation,
+    fetchDetailedLocation,
     gameTime
   } = useWorldStore();
 
@@ -123,8 +124,9 @@ export const Travel: React.FC<TravelProps> = ({ destination, onClose, isMinimize
           </p>
           <div className="grid grid-cols-2 gap-2">
             <button
-              onClick={() => {
-                setCurrentLocation(destination);
+              onClick={async () => {
+                const detailed = await fetchDetailedLocation(destination);
+                setCurrentLocation(detailed);
                 setIsInsideSubMap(true);
               }}
               className="py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
