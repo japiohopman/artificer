@@ -79,54 +79,56 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isDevKitOpen]);
 
-  if (!isGameStarted) {
-    return <TitleScreen />;
-  }
-
   return (
     <div className="min-h-screen bg-black overflow-hidden relative">
-      <HUD />
-      
-      {/* Global Overlays Layer */}
-      <AnimatePresence>
-        {isBookOpen && activeBook && (
-          <BookReader 
-            isOpen={true} 
-            onClose={closeBook} 
-            book={activeBook} 
-            className="z-[15000]"
-          />
-        )}
-      </AnimatePresence>
+      {!isGameStarted ? (
+        <TitleScreen />
+      ) : (
+        <>
+          <HUD />
 
-      <AnimatePresence>
-        {isCharacterSpellbookOpen && (
-          <SpellbookReader 
-            isOpen={true} 
-            onClose={() => setIsCharacterSpellbookOpen(false)} 
-          />
-        )}
-      </AnimatePresence>
-      
-      <FullInventoryMenu />
-      <AnimatePresence>
-        {isProfileMenuOpen && <CharacterProfile />}
-      </AnimatePresence>
-      <MonsterProfile />
-      <TransportProfile />
-      <CharacterCreator />
-      <LevelUpOverlay />
+          {/* Global Overlays Layer */}
+          <AnimatePresence>
+            {isBookOpen && activeBook && (
+              <BookReader
+                isOpen={true}
+                onClose={closeBook}
+                book={activeBook}
+                className="z-[15000]"
+              />
+            )}
+          </AnimatePresence>
 
-      {/* DevKit Modal */}
-      <DevKit 
-        isOpen={isDevKitOpen} 
-        onClose={() => setIsDevKitOpen(false)}
-        initialMonster={selectedItem}
-        currentExplorerTab={explorerTab}
-        onMonsterUpdated={(m) => {
-          updateSelectedItem(m);
-        }}
-      />
+          <AnimatePresence>
+            {isCharacterSpellbookOpen && (
+              <SpellbookReader
+                isOpen={true}
+                onClose={() => setIsCharacterSpellbookOpen(false)}
+              />
+            )}
+          </AnimatePresence>
+
+          <FullInventoryMenu />
+          <AnimatePresence>
+            {isProfileMenuOpen && <CharacterProfile />}
+          </AnimatePresence>
+          <MonsterProfile />
+          <TransportProfile />
+          <CharacterCreator />
+          <LevelUpOverlay />
+
+          {/* DevKit Modal */}
+          <DevKit
+            isOpen={isDevKitOpen}
+            onClose={() => setIsDevKitOpen(false)}
+            initialMonster={selectedItem}
+            currentExplorerTab={explorerTab}
+            onMonsterUpdated={(m) => {
+              updateSelectedItem(m);
+            }}
+          />
+        </>
+      )}
       
       {/* Global Dice Layer */}
       <DiceBoxCanvas />

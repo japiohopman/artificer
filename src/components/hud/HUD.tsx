@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useWorldStore } from '../../store/useWorldStore';
@@ -18,7 +18,8 @@ export const HUD: React.FC = () => {
     setIsWorldPanelOpen,
     setIsCharacterPanelOpen,
     gameMode,
-    setActiveCharacterTab
+    setActiveCharacterTab,
+    setIsLoading
   } = useUIStore();
 
   const {
@@ -27,7 +28,7 @@ export const HUD: React.FC = () => {
   } = useInventoryStore();
 
   // Auto-configure sidebars for Combat Mode
-  React.useEffect(() => {
+  useEffect(() => {
     if (gameMode === 'combat') {
       setIsWorldPanelOpen(true);
       setIsCharacterPanelOpen(true);
@@ -38,10 +39,17 @@ export const HUD: React.FC = () => {
 
   const { resetAtlas } = useWorldStore();
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Initial cleanup of atlas data and loaded categories to prevent stale states
     resetAtlas();
-  }, [resetAtlas]);
+
+    // Dismiss the loading screen after a short delay to ensure components are ready
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [resetAtlas, setIsLoading]);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">
