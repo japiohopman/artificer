@@ -4,443 +4,504 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 18,
-    "dex": 16,
-    "con": 13,
-    "int": 13,
-    "wis": 12,
-    "cha": 9
+    "str": 16,
+    "dex": 13,
+    "con": 15,
+    "int": 15,
+    "wis": 14,
+    "cha": 13
   },
   "proficiencies": [
-    "Skill: Athletics",
+    "skill: perception",
+    "longswords",
+    "shortswords",
+    "shortbows",
+    "longbows",
+    "Skill: Acrobatics",
     "Skill: Perception",
-    "Dice Set",
+    "Navigator'S Tools",
     "light armor",
     "medium armor",
     "shields",
-    "simple weapons",
-    "martial weapons",
-    "saving throw: str",
-    "saving throw: con",
-    "Saving Throw: str",
-    "Saving Throw: con"
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
-    ""
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "fey ancestry",
+      "index": "fey_ancestry",
+      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            {
+              "name": "Saving Throws against being charmed",
+              "condition": {
+                "index": "charmed",
+                "name": "charmed",
+                "url": "/assets/atlas/conditions/json/charmed.json"
+              }
+            }
+          ],
+          "immunity": [
+            {
+              "name": "magic sleep"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "trance",
+      "index": "trance",
+      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+    },
+    {
+      "name": "keen senses",
+      "index": "keen_senses",
+      "desc": "You have proficiency in the Perception skill."
+    },
+    {
+      "name": "elf weapon training",
+      "index": "elf_weapon_training",
+      "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+    },
+    {
+      "name": "high elf cantrip",
+      "index": "high_elf_cantrip",
+      "desc": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it.",
+      "trait_specific": {
+        "spellcasting_ability": {
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/int.json"
+        },
+        "spell_options": {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "light",
+                  "name": "light",
+                  "url": "/assets/atlas/spell/json/light.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "mage_hand",
+                  "name": "mage hand",
+                  "url": "/assets/atlas/spell/json/mage_hand.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "mending",
+                  "name": "mending",
+                  "url": "/assets/atlas/spell/json/mending.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "message",
+                  "name": "message",
+                  "url": "/assets/atlas/spell/json/message.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "minor_illusion",
+                  "name": "minor illusion",
+                  "url": "/assets/atlas/spell/json/minor_illusion.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "acid_splash",
+                  "name": "acid splash",
+                  "url": "/assets/atlas/spell/json/acid_splash.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "prestidigitation",
+                  "name": "prestidigitation",
+                  "url": "/assets/atlas/spell/json/prestidigitation.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "ray_of_frost",
+                  "name": "ray of frost",
+                  "url": "/assets/atlas/spell/json/ray_of_frost.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "shocking_grasp",
+                  "name": "shocking grasp",
+                  "url": "/assets/atlas/spell/json/shocking_grasp.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "true_strike",
+                  "name": "true strike",
+                  "url": "/assets/atlas/spell/json/true_strike.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "chill_touch",
+                  "name": "chill touch",
+                  "url": "/assets/atlas/spell/json/chill_touch.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "dancing_lights",
+                  "name": "dancing lights",
+                  "url": "/assets/atlas/spell/json/dancing_lights.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fire_bolt",
+                  "name": "fire bolt",
+                  "url": "/assets/atlas/spell/json/fire_bolt.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "poison_spray",
+                  "name": "poison spray",
+                  "url": "/assets/atlas/spell/json/poison_spray.json"
+                }
+              }
+            ]
+          },
+          "type": "spell"
+        }
+      }
+    },
+    {
+      "name": "extra language",
+      "index": "extra_language",
+      "desc": "You can speak, read, and write one extra language of your choice."
+    }
   ],
   "features": [
     {
-      "name": "draconic ancestry",
-      "index": "draconic_ancestry",
-      "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
-      "source": "Species"
-    },
-    {
-      "name": "breath weapon",
-      "index": "breath_weapon",
-      "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest.",
-      "source": "Species"
-    },
-    {
-      "name": "damage resistance",
-      "index": "damage_resistance",
-      "desc": "You have resistance to the damage type associated with your draconic ancestry.",
-      "source": "Species"
-    },
-    {
-      "index": "rage",
+      "index": "spellcasting_druid",
       "class": {
-        "index": "barbarian",
-        "name": "barbarian",
-        "url": "/assets/atlas/class/json/barbarian.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "rage",
+      "name": "spellcasting: druid",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:",
-        "- You have advantage on Strength checks and Strength saving throws.",
-        "- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
-        "- You have Resistance to bludgeoning, piercing, and slashing damage.",
-        "If you are able to cast Spells, you can't cast them or concentrate on them while raging.",
-        "Your rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.",
-        "Once you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th."
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
       ],
-      "url": "/assets/atlas/features/json/rage.json",
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/rage.webp",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
       "feature_specific": {
-        "special_action": "bonus_action",
-        "passive_modifiers": {
-          "advantage": [
-            "strength_checks",
-            "strength_saving_throws"
-          ],
-          "resistance": [
-            "bludgeoning",
-            "piercing",
-            "slashing"
-          ],
-          "damage_bonus": 2
-        },
-        "usage": {
-          "type": "long_rest"
-        },
-        "duration": "1 minute"
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        }
       },
       "source": "Class"
     },
     {
-      "index": "barbarian_unarmored_defense",
+      "index": "druidic",
       "class": {
-        "index": "barbarian",
-        "name": "barbarian",
-        "url": "/assets/atlas/class/json/barbarian.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "unarmored defense",
+      "name": "druidic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
       ],
-      "url": "/assets/atlas/features/json/barbarian_unarmored_defense.json",
+      "url": "/assets/atlas/features/json/druidic.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/barbarian_unarmored_defense.webp",
-      "feature_specific": {
-        "passive_modifiers": {
-          "ac_set": "10 + dexterity_modifier + constitution_modifier"
-        }
-      },
+      "image": "/assets/atlas/features/images/druidic.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
-  "flaws": [
-    ""
-  ],
-  "ideals": [
-    ""
-  ],
-  "bonds": [
-    ""
-  ],
-  "inventory": {
-    "main-hand": {
-      "id": "spear_k5v4dhf7h",
-      "index": "spear",
-      "name": "Spear",
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 10,
+    "pp": 0
+  },
+  "appearance": {
+    "hairColor": "Forest Green",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Pale Silver",
+    "skinColor": "#8FBC8F",
+    "height": "5'10\"",
+    "weight": "160 lbs",
+    "size": "Medium",
+    "specialFeatures": [
+      "Nature Tattoos"
+    ]
+  },
+  "items": {
+    "leather_armor_nk1arlfte": {
+      "id": "leather_armor_nk1arlfte",
+      "template": "leather_armor",
       "quantity": 1,
-      "weight": 3,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/spear.json",
-      "image_url": "public/assets/atlas/equipment/images/spear.webp",
-      "imageUrl": "/assets/atlas/equipment/images/spear.webp",
-      "desc": [],
-      "special": [],
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/weapon"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 5
-      },
-      "properties": [
-        {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "/assets/atlas/weapon_properties/thrown"
-        },
-        {
-          "index": "versatile",
-          "name": "versatile",
-          "url": "/assets/atlas/weapon_properties/versatile"
-        },
-        {
-          "index": "monk",
-          "name": "monk",
-          "url": "/assets/atlas/weapon_properties/monk"
-        }
-      ],
-      "throw_range": {
-        "normal": 20,
-        "long": 60
-      },
-      "two_handed_damage": {
-        "damage_dice": "1d8",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "updated_at": "2026-04-28T13:23:58.298Z",
-      "contents": [],
-      "image": "/assets/atlas/equipment/images/spear.webp",
-      "sprite_index": 4,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.0webp",
-      "background_type": "land_forest",
-      "category": "Simple Weapons",
-      "slot": "main-hand",
-      "last_updated": "28-4-2026",
-      "kind": "weapon",
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "main_hand_slot": "Spear"
+      "addedAt": 1783458352957,
+      "kind": "armor"
     },
-    "clothes": {
-      "id": "clothes_travelers_e8yko9c13",
-      "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
+    "explorers_pack_nrubqry6l": {
+      "id": "explorers_pack_nrubqry6l",
+      "template": "explorers_pack",
       "quantity": 1,
-      "weight": 4,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
-      "desc": [],
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "updated_at": "2025-10-24T20:42:12.926Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
-      "sprite_index": 12,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-      "kind": "ring",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "slot": "clothes",
-      "clothes_slot": "Clothes Traveler'S"
+      "addedAt": 1783458352958,
+      "kind": "equipment_pack"
+    },
+    "backpack_iyeug4m5w": {
+      "id": "backpack_iyeug4m5w",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1783458353207,
+      "kind": "container"
+    },
+    "bedroll_pf1w9t7ub": {
+      "id": "bedroll_pf1w9t7ub",
+      "template": "bedroll",
+      "quantity": 1,
+      "addedAt": 1783458353277,
+      "kind": "adventuring_gear"
+    },
+    "mess_kit_sz4qb7h83": {
+      "id": "mess_kit_sz4qb7h83",
+      "template": "mess_kit",
+      "quantity": 1,
+      "addedAt": 1783458353360,
+      "kind": "adventuring_gear"
+    },
+    "tinderbox_lpqh0n0as": {
+      "id": "tinderbox_lpqh0n0as",
+      "template": "tinderbox",
+      "quantity": 1,
+      "addedAt": 1783458353408,
+      "kind": "adventuring_gear"
+    },
+    "torch_sudm5r39v": {
+      "id": "torch_sudm5r39v",
+      "template": "torch",
+      "quantity": 10,
+      "addedAt": 1783458353459,
+      "kind": "light_source"
+    },
+    "rations_1_day_drwzrjd8a": {
+      "id": "rations_1_day_drwzrjd8a",
+      "template": "rations_1_day",
+      "quantity": 10,
+      "addedAt": 1783458353507,
+      "kind": "consumable"
+    },
+    "waterskin_sw18fqno4": {
+      "id": "waterskin_sw18fqno4",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1783458353555,
+      "kind": "adventuring_gear"
+    },
+    "rope_hempen_50_feet_z9mrkwlwx": {
+      "id": "rope_hempen_50_feet_z9mrkwlwx",
+      "template": "rope_hempen_50_feet",
+      "quantity": 1,
+      "addedAt": 1783458353853,
+      "kind": "adventuring_gear"
+    },
+    "sickle_i88bfd3bg": {
+      "id": "sickle_i88bfd3bg",
+      "template": "sickle",
+      "quantity": 1,
+      "addedAt": 1783458371969,
+      "kind": "weapon"
+    },
+    "club_s2xu8pz6t": {
+      "id": "club_s2xu8pz6t",
+      "template": "club",
+      "quantity": 1,
+      "addedAt": 1783458378691,
+      "kind": "weapon"
+    },
+    "totem_x2tnqi1vq": {
+      "id": "totem_x2tnqi1vq",
+      "template": "totem",
+      "quantity": 1,
+      "addedAt": 1783458385793,
+      "kind": "adventuring_gear"
     }
   },
-  "backpack": [
-    {
-      "id": "dice_set_lcowxeg15",
-      "index": "dice_set",
-      "name": "Dice Set",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dice_set.json",
-      "image_url": "public/assets/atlas/equipment/images/dice_set.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dice_set.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "tools",
-        "name": "tools",
-        "url": "/assets/atlas/equipment_categories/tools"
-      },
-      "tool_category": "Gaming Sets",
-      "cost": {
-        "quantity": 1,
-        "unit": "sp"
-      },
-      "desc": [
-        "Carved from the calcified knuckles of a gambler who cheated death, these dice feel unnaturally cold and pulse with the faint, rhythmic heartbeat of a soul forever trapped in the roll. Each face is stained with dried arterial spray, ensuring that every time they tumble, the odds are weighted by a desperate, lingering malice."
-      ],
-      "updated_at": "2026-04-11T16:15:01.192Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/dice_set.webp",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.0webp",
-      "category": "Gaming Sets",
-      "last_updated": "11-4-2026",
-      "kind": "tool",
-      "equipSlots": [
-        "tool_1",
-        "tool_2",
-        "tool_3"
+  "containers": {
+    "backpack_new_character": {
+      "id": "backpack_new_character",
+      "type": "backpack",
+      "ownerId": "new_character",
+      "slots": [
+        {
+          "id": "bag_0",
+          "itemId": "backpack_iyeug4m5w"
+        },
+        {
+          "id": "bag_1",
+          "itemId": "bedroll_pf1w9t7ub"
+        },
+        {
+          "id": "bag_2",
+          "itemId": "mess_kit_sz4qb7h83"
+        },
+        {
+          "id": "bag_3",
+          "itemId": "tinderbox_lpqh0n0as"
+        },
+        {
+          "id": "bag_4",
+          "itemId": "torch_sudm5r39v"
+        },
+        {
+          "id": "bag_5",
+          "itemId": "rations_1_day_drwzrjd8a"
+        },
+        {
+          "id": "bag_6",
+          "itemId": "waterskin_sw18fqno4"
+        },
+        {
+          "id": "bag_7",
+          "itemId": "rope_hempen_50_feet_z9mrkwlwx"
+        },
+        {
+          "id": "bag_8",
+          "itemId": "explorers_pack_nrubqry6l"
+        },
+        {
+          "id": "bag_9",
+          "itemId": "sickle_ah9bhbuyw"
+        },
+        {
+          "id": "bag_10",
+          "itemId": "club_s2xu8pz6t"
+        },
+        {
+          "id": "bag_11",
+          "itemId": "club_w5oo6zc4s"
+        },
+        {
+          "id": "bag_12",
+          "itemId": "totem_x2tnqi1vq"
+        },
+        {
+          "id": "bag_13",
+          "itemId": "totem_fzylnjl7o"
+        },
+        {
+          "id": "bag_14",
+          "itemId": null
+        },
+        {
+          "id": "bag_15",
+          "itemId": null
+        },
+        {
+          "id": "bag_16",
+          "itemId": null
+        },
+        {
+          "id": "bag_17",
+          "itemId": null
+        },
+        {
+          "id": "bag_18",
+          "itemId": null
+        },
+        {
+          "id": "bag_19",
+          "itemId": null
+        },
+        {
+          "id": "bag_20",
+          "itemId": null
+        },
+        {
+          "id": "bag_21",
+          "itemId": null
+        },
+        {
+          "id": "bag_22",
+          "itemId": null
+        },
+        {
+          "id": "bag_23",
+          "itemId": null
+        }
       ]
-    },
-    {
-      "id": "lantern_hooded_ufoi201vx",
-      "index": "lantern_hooded",
-      "name": "Lantern Hooded",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/lantern_hooded.json",
-      "image_url": "public/assets/atlas/equipment/images/lantern_hooded.webp",
-      "imageUrl": "/assets/atlas/equipment/images/lantern_hooded.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 5,
-        "unit": "gp"
-      },
-      "desc": [
-        "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius."
-      ],
-      "updated_at": "2025-10-24T20:42:12.926Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/lantern_hooded.webp",
-      "sprite_index": 22,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp",
-      "kind": "ring",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
-    },
-    {
-      "id": "manacles_4kb4cjrkx",
-      "index": "manacles",
-      "name": "Manacles",
-      "quantity": 1,
-      "weight": 6,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/manacles.json",
-      "image_url": "public/assets/atlas/equipment/images/manacles.webp",
-      "imageUrl": "/assets/atlas/equipment/images/manacles.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "desc": [
-        "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.",
-        "Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points."
-      ],
-      "updated_at": "2025-10-24T20:42:12.926Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/manacles.webp",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
-      "kind": "ring",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
-    },
-    {
-      "id": "quiver_b04yaxpmu",
-      "index": "quiver",
-      "name": "Quiver",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "desc": [
-        "A quiver can hold up to 20 arrows."
-      ],
-      "updated_at": "2026-04-25T10:04:06.285Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/quiver.webp",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
-      "background_type": "land_forest",
-      "last_updated": "25-4-2026",
-      "kind": "ring",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
-    },
-    {
-      "id": "gold_cw378l115",
-      "index": "gold",
-      "name": "Gold",
-      "quantity": 12,
-      "weight": 0.02,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "equipment_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-      },
-      "cost": "",
-      "desc": [
-        "The standard unit of currency in the game."
-      ],
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "last_updated": "21-5-2026",
-      "updated_at": "2026-05-21T01:11:21.699Z",
-      "kind": "currency"
     }
-  ],
+  },
   "equipment": {
     "containerId": "equipment_slot1",
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "javelin_m5r33ykjb"
+        "itemId": "sickle_i88bfd3bg"
       },
       {
         "id": "off_hand",
@@ -456,7 +517,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_nk1arlfte"
       },
       {
         "id": "clothes",
@@ -556,232 +617,363 @@
       }
     ]
   },
-  "containers": {
-    "backpack_new_character": {
-      "id": "backpack_new_character",
-      "type": "backpack",
-      "ownerId": "new_character",
-      "slots": [
-        {
-          "id": "bag_0",
-          "itemId": "backpack_cpot7239f"
-        },
-        {
-          "id": "bag_1",
-          "itemId": "bedroll_kriu5ju64"
-        },
-        {
-          "id": "bag_2",
-          "itemId": "mess_kit_0yiba4k5s"
-        },
-        {
-          "id": "bag_3",
-          "itemId": "tinderbox_1ctqm1qbp"
-        },
-        {
-          "id": "bag_4",
-          "itemId": "torch_u9erpbvi9"
-        },
-        {
-          "id": "bag_5",
-          "itemId": "rations_1_day_f75fiikb6"
-        },
-        {
-          "id": "bag_6",
-          "itemId": "waterskin_mjel1re0d"
-        },
-        {
-          "id": "bag_7",
-          "itemId": "rope_hempen_50_feet_a9ec6q820"
-        },
-        {
-          "id": "bag_8",
-          "itemId": "explorers_pack_b9c98yjdd"
-        },
-        {
-          "id": "bag_9",
-          "itemId": "shortbow_29l94c0oi"
-        },
-        {
-          "id": "bag_10",
-          "itemId": "shortbow_tkyz832kh"
-        },
-        {
-          "id": "bag_11",
-          "itemId": "shortsword_wb9gcfygw"
-        },
-        {
-          "id": "bag_12",
-          "itemId": "shortsword_cu6zflhz6"
-        },
-        {
-          "id": "bag_13",
-          "itemId": null
-        },
-        {
-          "id": "bag_14",
-          "itemId": null
-        },
-        {
-          "id": "bag_15",
-          "itemId": null
-        },
-        {
-          "id": "bag_16",
-          "itemId": null
-        },
-        {
-          "id": "bag_17",
-          "itemId": null
-        },
-        {
-          "id": "bag_18",
-          "itemId": null
-        },
-        {
-          "id": "bag_19",
-          "itemId": null
-        },
-        {
-          "id": "bag_20",
-          "itemId": null
-        },
-        {
-          "id": "bag_21",
-          "itemId": null
-        },
-        {
-          "id": "bag_22",
-          "itemId": null
-        },
-        {
-          "id": "bag_23",
-          "itemId": null
-        }
+  "backpack": [
+    {
+      "id": "navigators_tools_bfnovgpjv",
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "tools",
+        "name": "tools",
+        "url": "/assets/atlas/equipment_categories/tools"
+      },
+      "tool_category": "Other Tools",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "desc": [
+        "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
+      ],
+      "updated_at": "2026-04-12T08:04:43.633Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/navigators_tools.webp",
+      "sprite_index": 18,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
+      "category": "Other Tools",
+      "last_updated": "12-4-2026",
+      "kind": "tool",
+      "equipSlots": [
+        "tool_1",
+        "tool_2",
+        "tool_3"
       ]
+    },
+    {
+      "id": "rope_silk_50_feet_cucv7fkmc",
+      "index": "rope_silk_50_feet",
+      "name": "Rope Silk 50 Feet",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/rope_silk_50_feet.json",
+      "image_url": "public/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 10,
+        "unit": "gp"
+      },
+      "desc": [
+        "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+      ],
+      "updated_at": "2026-05-04T17:12:21.931Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/rope_silk_50_feet.webp",
+      "sprite_index": 1,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "background_type": "land_forest",
+      "category": "Adventuring Gear",
+      "last_updated": "4-5-2026",
+      "kind": "adventuring_gear",
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ]
+    },
+    {
+      "id": "gold_f0uahvhif",
+      "index": "gold",
+      "name": "Gold",
+      "quantity": 10,
+      "weight": 0.02,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "equipment_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
+      },
+      "cost": "",
+      "desc": [
+        "The standard unit of currency in the game."
+      ],
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "last_updated": "21-5-2026",
+      "updated_at": "2026-05-21T01:11:21.699Z",
+      "kind": "currency"
+    }
+  ],
+  "inventory": {
+    "main-hand": {
+      "id": "dagger_334rfdn2v",
+      "index": "dagger",
+      "name": "Dagger",
+      "quantity": 1,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/weapon"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "range": {
+        "normal": 5
+      },
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "/assets/atlas/weapon_properties/finesse"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/light"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "/assets/atlas/weapon_properties/thrown"
+        },
+        {
+          "index": "monk",
+          "name": "monk",
+          "url": "/assets/atlas/weapon_properties/monk"
+        }
+      ],
+      "throw_range": {
+        "normal": 20,
+        "long": 60
+      },
+      "updated_at": "2026-04-28T13:26:26.921Z",
+      "contents": [],
+      "image": "/assets/atlas/equipment/images/dagger.webp",
+      "sprite_index": 23,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "background_type": "land_forest",
+      "slot": "main-hand",
+      "category": "Simple Melee Weapons",
+      "last_updated": "28-4-2026",
+      "kind": "weapon",
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "main_hand_slot": "Dagger"
+    },
+    "clothes": {
+      "id": "clothes_travelers_o4m93puiw",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "desc": [],
+      "special": [],
+      "equipment_category": {
+        "index": "adventuring_gear",
+        "name": "adventuring gear",
+        "url": "/assets/atlas/equipment_categories/adventuring_gear"
+      },
+      "gear_category": {
+        "index": "standard_gear",
+        "name": "standard gear",
+        "url": "/assets/atlas/equipment_categories/standard_gear"
+      },
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "updated_at": "2026-06-29T04:35:43.351Z",
+      "contents": [],
+      "properties": [],
+      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
+      "sprite_index": 12,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
+      "kind": "clothing",
+      "clothing_type": "traveler",
+      "equipSlots": [
+        "clothes"
+      ],
+      "background_type": "land_forest",
+      "last_updated": "29-6-2026",
+      "slot": "clothes",
+      "clothes_slot": "Clothes Traveler'S"
     }
   },
-  "money": {
-    "cp": 0,
-    "sp": 0,
-    "ep": 0,
-    "gp": 10,
-    "pp": 0
-  },
-  "appearance": {
-    "hairColor": "Raven Black",
-    "hairStyle": "Short",
-    "bodyType": "Medium",
-    "eyeColor": "Brown",
-    "skinColor": "#ffdbac",
-    "height": "5'10\"",
-    "weight": "160 lbs",
-    "size": "Medium",
-    "specialFeatures": []
-  },
-  "items": {
-    "explorers_pack_b9c98yjdd": {
-      "id": "explorers_pack_b9c98yjdd",
-      "template": "explorers_pack",
-      "quantity": 1,
-      "addedAt": 1781142431831,
-      "kind": "equipment_pack"
+  "knownSpells": [
+    {
+      "index": "druidcraft",
+      "name": "druidcraft",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/druidcraft.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fdruidcraft.webp%3Ft%3D1783458392247"
     },
-    "backpack_cpot7239f": {
-      "id": "backpack_cpot7239f",
-      "template": "backpack",
-      "quantity": 1,
-      "addedAt": 1781142432020,
-      "kind": "container"
+    {
+      "index": "guidance",
+      "name": "guidance",
+      "level": 0,
+      "school": "divination",
+      "classes": [
+        "artificer",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/guidance.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fguidance.webp%3Ft%3D1783458392247"
     },
-    "bedroll_kriu5ju64": {
-      "id": "bedroll_kriu5ju64",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1781142432211,
-      "kind": "ring"
+    {
+      "index": "shillelagh",
+      "name": "shillelagh",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "druid"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "Touch",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/shillelagh.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fshillelagh.webp%3Ft%3D1783458392247"
     },
-    "mess_kit_0yiba4k5s": {
-      "id": "mess_kit_0yiba4k5s",
-      "template": "mess_kit",
-      "quantity": 1,
-      "addedAt": 1781142432395,
-      "kind": "ring"
+    {
+      "index": "charm_person",
+      "name": "charm person",
+      "level": 1,
+      "school": "enchantment",
+      "classes": [
+        "bard",
+        "druid",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/charm_person.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcharm-person.webp%3Ft%3D1783458392247"
     },
-    "tinderbox_1ctqm1qbp": {
-      "id": "tinderbox_1ctqm1qbp",
-      "template": "tinderbox",
-      "quantity": 1,
-      "addedAt": 1781142432576,
-      "kind": "ring"
+    {
+      "index": "detect_poison_and_disease",
+      "name": "detect poison and disease",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/detect_poison_and_disease.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fdetect-poison-and-disease.webp%3Ft%3D1783458392247"
     },
-    "torch_u9erpbvi9": {
-      "id": "torch_u9erpbvi9",
-      "template": "torch",
-      "quantity": 10,
-      "addedAt": 1781142432755,
-      "kind": "ring"
-    },
-    "rations_1_day_f75fiikb6": {
-      "id": "rations_1_day_f75fiikb6",
-      "template": "rations_1_day",
-      "quantity": 10,
-      "addedAt": 1781142432932,
-      "kind": "consumable"
-    },
-    "waterskin_mjel1re0d": {
-      "id": "waterskin_mjel1re0d",
-      "template": "waterskin",
-      "quantity": 1,
-      "addedAt": 1781142433125,
-      "kind": "ring"
-    },
-    "rope_hempen_50_feet_a9ec6q820": {
-      "id": "rope_hempen_50_feet_a9ec6q820",
-      "template": "rope_hempen_50_feet",
-      "quantity": 1,
-      "addedAt": 1781142433331,
-      "kind": "ring"
-    },
-    "javelin_m5r33ykjb": {
-      "id": "javelin_m5r33ykjb",
-      "template": "javelin",
-      "quantity": 4,
-      "addedAt": 1781142433331,
-      "kind": "weapon"
-    },
-    "shortbow_tkyz832kh": {
-      "id": "shortbow_tkyz832kh",
-      "template": "shortbow",
-      "quantity": 1,
-      "addedAt": 1781142461673,
-      "kind": "weapon"
-    },
-    "shortsword_wb9gcfygw": {
-      "id": "shortsword_wb9gcfygw",
-      "template": "shortsword",
-      "quantity": 1,
-      "addedAt": 1781142470756,
-      "kind": "weapon"
+    {
+      "index": "fog_cloud",
+      "name": "fog cloud",
+      "level": 1,
+      "school": "conjuration",
+      "classes": [
+        "druid",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Up to 1 hour",
+      "json_path": "/assets/atlas/spell/json/fog_cloud.json",
+      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Ffog-cloud.webp%3Ft%3D1783458392247"
     }
-  },
-  "knownSpells": [],
+  ],
   "languages": [
     "common",
-    "draconic"
+    "elvish"
   ],
-  "preparedSpells": [],
-  "spellSlots": {},
+  "preparedSpells": [
+    "druidcraft",
+    "guidance",
+    "shillelagh",
+    "charm_person",
+    "detect_poison_and_disease",
+    "fog_cloud"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {},
-  "race": "dragonborn",
-  "class": "barbarian",
-  "spellcastingAbility": "cha",
-  "background": "guard",
-  "backstory": "He was once a sentinel of the High Peak, a dragonborn of brass scales and iron discipline who served as a sworn protector of the Sun-Touched Gates. For decades, his life was defined by the rhythmic clatter of the watch and the unwavering code of the Guard, a duty he performed with a stoicism that bordered on the divine. Yet, that life ended in a night of ash and betrayal when the citadel fell not to an invading army, but to an inner rot he had failed to see. As the flames consumed his kin and his station, the calm, measured breath of a soldier was replaced by a blistering, primal heat that surged from the depths of his draconic heart. He survived the slaughter by surrendering to a white-hot fury he never knew he possessed, carving a path through the ruin with a broken halberd and a voice that had forgotten how to speak in anything but a roar.\n\nStripped of his rank and his very identity, he abandoned his name to the embers of the gatehouse, believing himself unworthy of a title while those he was sworn to protect lay in the dust. He now wanders the borderlands as a nameless exile, his once-polished plate armor replaced by heavy furs and the scarred trophies of his survival. He did not choose the path of the barbarian; the path chose him when the structured world of law and order crumbled into chaos. His rage is not a lack of control, but a concentrated manifestation of his grief and his singular ideal: that no one else shall fall while he still draws breath. He is a shield that has forgotten its handle, a guardian who finds solace only in the visceral clarity of battle where the complexities of politics are replaced by the simple, brutal necessity of the strike.\n\nDriven by a flickering hope for redemption and the shadow of a bond he cannot let go—a promise made to a dying commander to find the architect of the citadel's betrayal—he moves toward the horizon. He seeks not gold or glory, but a weight to balance the scales of his soul and a reason to reclaim the name he cast aside. Until that day, he remains a ghost in tarnished brass, a silent sentinel who watches over the weak from the fringes of civilization. He is haunted by the flaw of his own perceived failure, a warrior who fears that if his rage ever truly cools, there will be nothing left of the dragon beneath the skin but cold, hollow stone.",
-  "alignment": "lawful_evil",
-  "name": "monio",
+  "race": "elf",
+  "subrace": "high_elf",
+  "class": "druid",
+  "spellcastingAbility": "wis",
+  "background": "sailor",
+  "alignment": "neutral_good",
+  "name": "koop",
   "id": "slot1",
-  "hp": 7,
-  "maxHp": 7,
-  "lastSaved": "2026-06-11T01:49:46.234Z"
+  "hp": 6,
+  "maxHp": 6,
+  "lastSaved": "2026-07-07T21:08:20.982Z"
 }
