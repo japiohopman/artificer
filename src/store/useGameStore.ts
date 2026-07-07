@@ -403,6 +403,10 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   nextTurn: () => {
     const { combatState, addLog, resolveCombatAction } = get();
+    if (combatState.initiativeOrder.length === 0) {
+      addLog("No one is in the initiative order!", "warning");
+      return;
+    }
     const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
     const nextActor = combatState.initiativeOrder[nextIndex];
 

@@ -357,10 +357,13 @@ export const WorldPanel: React.FC = () => {
                      Abort Travel
                    </button>
                  ) : (
-                    <div className="text-center p-3 bg-dragon-red/5 rounded border border-dragon-red/10">
-                      <p className="text-[9px] font-black text-dragon-red/40 uppercase tracking-widest mb-1">En Route</p>
+                    <button 
+                      onClick={() => setShowTravelJournal(true)}
+                      className="w-full text-center p-3 bg-dragon-red/5 hover:bg-dragon-red/10 rounded border border-dragon-red/10 transition-all group"
+                    >
+                      <p className="text-[9px] font-black text-dragon-red/40 uppercase tracking-widest mb-1 group-hover:text-dragon-red/60 transition-colors">En Route (View Journal)</p>
                       <p className="text-xs font-bold text-dragon-red truncate">To {destination?.name}</p>
-                    </div>
+                    </button>
                  )}
                </>
              )}

@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../../../store/useGameStore';
 import { useUIStore } from '../../../store/useUIStore';
@@ -7,6 +7,54 @@ import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { checkLoS, findPath, getDistance } from '../../../lib/combatUtils';
+
+interface GridCellProps {
+  x: number;
+  y: number;
+  type: 'floor' | 'wall' | 'door';
+  isOpen?: boolean;
+  inRange: boolean;
+  isVisible: boolean;
+  isHoveredTarget: boolean;
+  isTargeting: boolean;
+  onClick: (x: number, y: number) => void;
+  onMouseEnter: (x: number, y: number) => void;
+  onMouseLeave: () => void;
+}
+
+const GridCell = memo(({ 
+  x, y, type, isOpen, inRange, isVisible, isHoveredTarget, isTargeting,
+  onClick, onMouseEnter, onMouseLeave 
+}: GridCellProps) => {
+  return (
+    <div
+      onClick={() => onClick(x, y)}
+      onMouseEnter={() => onMouseEnter(x, y)}
+      onMouseLeave={onMouseLeave}
+      className={cn(
+        "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
+        !isVisible && "brightness-[0.2] saturate-50",
+        isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
+        isHoveredTarget && "bg-dragon-red/30 border-dragon-red/50",
+        type === 'wall' && "bg-stone-800",
+        type === 'door' && "bg-amber-900/40"
+      )}
+    >
+      {type === 'door' && (
+        <GameIcon
+          name={isOpen ? "package" : "lock"}
+          size={24}
+          color={isOpen ? "#D4AF37" : "#8B0000"}
+        />
+      )}
+      {type === 'wall' && isVisible && (
+        <div className="absolute inset-1 border border-white/10 opacity-20" />
+      )}
+    </div>
+  );
+});
+
+GridCell.displayName = 'GridCell';
 
 export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction, toggleDoor } = useGameStore();
@@ -23,7 +71,7 @@ export const CombatGrid: React.FC = () => {
   const gridWidth = grid[0]?.length || 32;
   const gridHeight = grid.length || 20;
 
-  const handleCellClick = (x: number, y: number) => {
+  const handleCellClick = React.useCallback((x: number, y: number) => {
     const cell = grid[y][x];
 
     // Interaction check for doors
@@ -109,7 +157,7 @@ export const CombatGrid: React.FC = () => {
     } else if (path === null && cell.type !== 'wall') {
       addLog("Path is blocked!", 'warning');
     }
-  };
+  }, [grid, playerPos, isTargeting, targetingAction, monsters, activeChar, activeCharacterId, resolveCombatAction, setPlayerPos, addLog]);
 
   const handleMonsterClick = (monster: any) => {
     if (isTargeting) {
@@ -316,39 +364,28 @@ export const CombatGrid: React.FC = () => {
               gridTemplateRows: `repeat(${gridHeight}, ${cellSize}px)`,
             }}
           >
-            {grid.flat().map((cell, i) => {
+            {grid.flat().map((cell) => {
               const { x, y, type, isOpen } = cell;
               const inRange = validTargetCells.has(`${x},${y}`);
               const isVisible = visibleCells.has(`${x},${y}`);
+              const isHoveredTarget = !!(isTargeting && targetingAction?.targetType === 'sphere' && hoveredCell && 
+                      Math.max(Math.abs(x - hoveredCell.x), Math.abs(y - hoveredCell.y)) <= (targetingAction.radius || 0));
 
               return (
-                <div
+                <GridCell
                   key={`${x}-${y}`}
-                  onClick={() => handleCellClick(x, y)}
-                  onMouseEnter={() => setHoveredCell({ x, y })}
+                  x={x}
+                  y={y}
+                  type={type}
+                  isOpen={isOpen}
+                  inRange={inRange}
+                  isVisible={isVisible}
+                  isHoveredTarget={isHoveredTarget}
+                  isTargeting={isTargeting}
+                  onClick={handleCellClick}
+                  onMouseEnter={setHoveredCell}
                   onMouseLeave={() => setHoveredCell(null)}
-                  className={cn(
-                    "w-full h-full cursor-crosshair transition-all border border-white/5 flex items-center justify-center relative",
-                    !isVisible && "brightness-[0.2] saturate-50",
-                    isTargeting && inRange ? "bg-blue-500/20 hover:bg-blue-500/40" : "hover:bg-white/5",
-                    isTargeting && targetingAction?.targetType === 'sphere' && hoveredCell && 
-                      Math.max(Math.abs(x - hoveredCell.x), Math.abs(y - hoveredCell.y)) <= (targetingAction.radius || 0) &&
-                      "bg-dragon-red/30 border-dragon-red/50",
-                    type === 'wall' && "bg-stone-800",
-                    type === 'door' && "bg-amber-900/40"
-                  )}
-                >
-                  {type === 'door' && (
-                    <GameIcon
-                      name={isOpen ? "package" : "lock"}
-                      size={24}
-                      color={isOpen ? "#D4AF37" : "#8B0000"}
-                    />
-                  )}
-                  {type === 'wall' && isVisible && (
-                    <div className="absolute inset-1 border border-white/10 opacity-20" />
-                  )}
-                </div>
+                />
               );
             })}
           </div>
