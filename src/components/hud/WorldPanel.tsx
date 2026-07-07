@@ -8,8 +8,7 @@ import { useJournalStore } from '../../store/useJournalStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
-import { createPortal } from 'react-dom';
-import { Travel } from '../core/Travel';
+import { Travel } from './game/Travel';
 
 class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
   constructor(props: any) { super(props); this.state = { hasError: false }; }
@@ -30,22 +29,15 @@ export const WorldPanel: React.FC = () => {
     currentLocation,
     inspectedLocation,
     gameTime,
-    partyLocation,
-    isTraveling,
-    destination,
-    startTravel,
-    stopTravel
   } = useWorldStore();
 
   const displayLocation = inspectedLocation || currentLocation;
   const isNight = gameTime < 360 || gameTime >= 1080;
 
-  const { partyVehicles, partyInventory, partyStats } = useInventoryStore();
-  const { characters } = useCharacterStore();
   const { combatState } = useGameStore();
   const { unlockLore } = useJournalStore();
 
-  const [showTravelJournal, setShowTravelJournal] = React.useState(false);
+  const [isTravelExpanded, setIsTravelExpanded] = React.useState(true);
   const [loreContent, setLoreContent] = React.useState<string | null>(null);
 
   // Fetch lore markdown
@@ -76,55 +68,6 @@ export const WorldPanel: React.FC = () => {
     return () => { isMounted = false; };
   }, [(displayLocation as any)?.lore, displayLocation?.id]);
 
-  const calcTravelStats = React.useCallback((dest: any) => {
-    if (!dest || !partyLocation) return null;
-
-    const x1 = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
-    const y1 = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
-    const x2 = dest.coordinates?.x ?? dest.position?.[0] ?? 0;
-    const y2 = dest.coordinates?.y ?? dest.position?.[1] ?? 0;
-    
-    const dx = x2 - x1;
-    const dy = y2 - y1;
-    const distProto = Math.sqrt(dx * dx + dy * dy);
-    const milesRemaining = distProto / (4763 / 4000);
-
-    let speedMph = 3.0;
-    
-    const parseWeight = (weight: any): number => {
-      if (!weight) return 0;
-      if (typeof weight === 'number') return weight;
-      const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
-      return weightMatch ? parseFloat(weightMatch[0]) : 0;
-    };
-    const calculateItemWeight = (item: any): number => parseWeight(item.weight) * (item.quantity || 1);
-    const totalWeight = (partyInventory || []).reduce((acc, item) => acc + calculateItemWeight(item), 0) + 
-                       characters.reduce((acc, char) => acc + (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0), 0);
-    const totalCapacity = (Math.max(partyStats.memberCount, characters.length, 1) * partyStats.baseCapacityPerMember) + 
-                          partyStats.vehicleCapacityBonus + (partyVehicles || []).reduce((acc, v) => acc + (v.capacity || 0), 0);
-
-    if (totalWeight > totalCapacity) speedMph *= 0.5;
-    if (partyVehicles && partyVehicles.length > 0) speedMph *= 1.5;
-
-    const hoursRemaining = milesRemaining / speedMph;
-    const minsRemaining = Math.round(hoursRemaining * 60);
-
-    const rationsNeeded = Math.ceil(hoursRemaining / 24) * partyStats.memberCount;
-    const waterNeeded = Math.ceil(hoursRemaining / 24) * partyStats.memberCount;
-
-    return {
-      speed: speedMph,
-      miles: milesRemaining,
-      eta: minsRemaining,
-      isOverburdened: totalWeight > totalCapacity,
-      rationsNeeded,
-      waterNeeded,
-      vehicles: partyVehicles || []
-    };
-  }, [partyLocation, partyInventory, characters, partyStats, partyVehicles]);
-
-  const isAtDestination = partyLocation?.id === displayLocation?.id;
-
   return (
     <div className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl">
       {/* HEADER: Sticky */}
@@ -153,14 +96,27 @@ export const WorldPanel: React.FC = () => {
           </h2>
         </div>
 
-        <button 
-          onClick={() => setIsWorldPanelOpen(false)}
-          className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group relative z-20"
-          title="Close World Panel"
-          aria-label="Close World Panel"
-        >
-          <GameIcon name="chevron_left" size={24} color="#FFFFFF" className="group-hover:-translate-x-1 transition-transform drop-shadow-md" />
-        </button>
+        <div className="flex gap-2 relative z-20">
+          <button
+            onClick={() => setIsTravelExpanded(!isTravelExpanded)}
+            className={cn(
+              "p-2 rounded-full transition-all active:scale-95 group",
+              isTravelExpanded ? "bg-dragon-red/20 text-white" : "hover:bg-white/10 text-white/60"
+            )}
+            title={isTravelExpanded ? "Minimize Travel" : "Expand Travel"}
+          >
+            <GameIcon name="compass" size={20} color="currentColor" className="group-hover:rotate-12 transition-transform" />
+          </button>
+
+          <button
+            onClick={() => setIsWorldPanelOpen(false)}
+            className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group"
+            title="Close World Panel"
+            aria-label="Close World Panel"
+          >
+            <GameIcon name="chevron_left" size={24} color="#FFFFFF" className="group-hover:-translate-x-1 transition-transform drop-shadow-md" />
+          </button>
+        </div>
       </div>
 
       {/* CONTENT: Scrollable */}
@@ -326,76 +282,34 @@ export const WorldPanel: React.FC = () => {
         </div>
       </div>
 
-      {/* FOOTER: Sticky */}
-      <div className="p-4 bg-parchment-100/95 border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
+      {/* FOOTER: Travel Widget */}
+      <div className="bg-parchment-100/95 border-t-2 border-dragon-gold shadow-[0_-4px_12px_rgba(0,0,0,0.1)] shrink-0 z-30">
         {displayLocation && (
-          <div className="space-y-3">
-             {isAtDestination ? (
-               <button 
-                 onClick={() => console.log("Enter Location triggered")}
-                 className="w-full py-4 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-[0.2em] text-sm rounded shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 border-2 border-dragon-gold/50 animate-in fade-in zoom-in-95"
-               >
-                 <GameIcon name="advance" size={20} color="#FFFFFF" />
-                 Enter Location
-               </button>
-             ) : (
-               <>
-                 {!isTraveling ? (
-                   <button 
-                     onClick={() => setShowTravelJournal(true)}
-                     className="w-full py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-dragon-gold/30"
-                   >
-                     <GameIcon name="compass" size={14} color="#FFFFFF" />
-                     Plan Expedition
-                   </button>
-                 ) : destination?.id === displayLocation.id ? (
-                   <button 
-                     onClick={() => stopTravel()}
-                     className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-header font-black uppercase tracking-widest text-xs rounded shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 border-2 border-white/20"
-                   >
-                     <GameIcon name="close" size={14} color="#FFFFFF" />
-                     Abort Travel
-                   </button>
-                 ) : (
-                    <button 
-                      onClick={() => setShowTravelJournal(true)}
-                      className="w-full text-center p-3 bg-dragon-red/5 hover:bg-dragon-red/10 rounded border border-dragon-red/10 transition-all group"
-                    >
-                      <p className="text-[9px] font-black text-dragon-red/40 uppercase tracking-widest mb-1 group-hover:text-dragon-red/60 transition-colors">En Route (View Journal)</p>
-                      <p className="text-xs font-bold text-dragon-red truncate">To {destination?.name}</p>
-                    </button>
-                 )}
-               </>
-             )}
+          <div className="flex flex-col">
+            <Travel
+              destination={displayLocation}
+              isMinimized={!isTravelExpanded}
+            />
 
-             {(displayLocation as any).lore && (
-               <button
-                 onClick={() => {
-                   const lorePath = (displayLocation as any).lore;
-                   unlockLore(lorePath);
-                   setIsWorldPanelOpen(false);
-                   useUIStore.getState().setIsJournalOpen(true);
-                 }}
-                 className="w-full py-2 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-[10px] uppercase tracking-widest rounded border border-dragon-gold/30 transition-all flex items-center justify-center gap-2"
-               >
-                 <GameIcon name="lore" size={12} color="#8B0000" />
-                 Open Lore Codex
-               </button>
-             )}
+            {(displayLocation as any).lore && (
+              <div className="p-4 pt-0">
+                <button
+                  onClick={() => {
+                    const lorePath = (displayLocation as any).lore;
+                    unlockLore(lorePath);
+                    setIsWorldPanelOpen(false);
+                    useUIStore.getState().setIsJournalOpen(true);
+                  }}
+                  className="w-full py-2 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-[10px] uppercase tracking-widest rounded border border-dragon-gold/30 transition-all flex items-center justify-center gap-2"
+                >
+                  <GameIcon name="lore" size={12} color="#8B0000" />
+                  Open Lore Codex
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
-
-      {/* Travel Module Overlay */}
-      {showTravelJournal && createPortal(
-        <div className="fixed inset-0 z-[6000] flex items-center justify-center p-4 bg-black/60 pointer-events-auto">
-          <Travel
-            destination={displayLocation}
-            onClose={() => setShowTravelJournal(false)}
-          />
-        </div>,
-        document.body
-      )}
     </div>
   );
 };

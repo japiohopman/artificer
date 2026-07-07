@@ -57,9 +57,9 @@ const GridCell = memo(({
 GridCell.displayName = 'GridCell';
 
 export const CombatGrid: React.FC = () => {
-  const { combatState, setPlayerPos, addLog, startCombat, resolveCombatAction, toggleDoor } = useGameStore();
+  const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
-  const { partyLocation, weather, gameTime } = useWorldStore();
+  const { partyLocation, gameTime } = useWorldStore();
   const { isTargeting, targetingAction, setIsTargeting, setTargetingAction } = useUIStore();
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
 
@@ -157,7 +157,7 @@ export const CombatGrid: React.FC = () => {
     } else if (path === null && cell.type !== 'wall') {
       addLog("Path is blocked!", 'warning');
     }
-  }, [grid, playerPos, isTargeting, targetingAction, monsters, activeChar, activeCharacterId, resolveCombatAction, setPlayerPos, addLog]);
+  }, [grid, playerPos, isTargeting, targetingAction, monsters, activeChar, activeCharacterId, resolveCombatAction, setPlayerPos, addLog, toggleDoor]);
 
   const handleMonsterClick = (monster: any) => {
     if (isTargeting) {
@@ -218,7 +218,6 @@ export const CombatGrid: React.FC = () => {
     return cells;
   }, [isTargeting, targetingAction, playerPos, grid, gridWidth, gridHeight]);
 
-  const isNight = gameTime < 360 || gameTime > 1200;
   const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
 
   // Dynamic Background selection based on location
@@ -249,86 +248,6 @@ export const CombatGrid: React.FC = () => {
       
       {/* Container for the tactical overlay */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center border-4 border-dragon-gold/20 rounded-3xl overflow-hidden bg-stone-950/40">
-
-        {/* Initiative Bar (Horizontal Top) */}
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-[100] bg-black/60 p-2 rounded-full border border-dragon-gold/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-           <div className="px-4 border-r border-white/10 mr-2">
-             <div className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-tight">Turn</div>
-             <div className="text-[11px] font-black text-white uppercase leading-tight tracking-wider">Order</div>
-           </div>
-
-           <div className="flex items-center gap-4 px-2 py-1 overflow-x-auto no-scrollbar max-w-[60vw]">
-             {initiativeOrder.map((entry, idx) => {
-               const isActive = idx === activeTurnIndex;
-               // Attempt to find character avatar if it's a player
-               const char = characters.find(c => c.id === entry.id || c.name === entry.name);
-               const avatar = char?.avatarUrl;
-
-               return (
-                 <motion.div
-                  key={entry.id}
-                  initial={false}
-                  animate={{
-                    scale: isActive ? 1.2 : 1,
-                    opacity: isActive ? 1 : 0.6,
-                  }}
-                  className={cn(
-                    "flex flex-col items-center relative transition-all duration-500",
-                    isActive ? "z-10" : "z-0"
-                  )}
-                 >
-                    <div className={cn(
-                      "w-12 h-12 rounded-full border-2 overflow-hidden flex items-center justify-center bg-stone-900 shadow-xl",
-                      entry.isPlayer ? "border-blue-500" : "border-dragon-red",
-                      isActive ? "border-dragon-gold ring-4 ring-dragon-gold/30 shadow-dragon-gold/20" : "border-white/10"
-                    )}>
-                       {avatar ? (
-                         <img src={avatar} className="w-full h-full object-cover" alt={entry.name} />
-                       ) : (
-                         <GameIcon name={entry.isPlayer ? "user" : "identity"} size={20} color={entry.isPlayer ? "#3B82F6" : "#DC2626"} />
-                       )}
-                    </div>
-
-                    {/* Active Indicator */}
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          className="absolute -bottom-6 flex flex-col items-center"
-                        >
-                          <div className="w-2 h-2 rounded-full bg-dragon-gold animate-pulse shadow-[0_0_8px_#D4AF37]" />
-                          <div className="text-[7px] font-black text-dragon-gold uppercase tracking-tighter whitespace-nowrap bg-black/80 px-1.5 py-0.5 rounded border border-dragon-gold/20 mt-1">Current Turn</div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    {/* Turn Number Badge */}
-                    <div className={cn(
-                      "absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-black border-2 transition-colors",
-                      isActive ? "bg-dragon-gold text-stone-950 border-stone-950" : "bg-stone-800 text-white/40 border-white/10"
-                    )}>
-                      {idx + 1}
-                    </div>
-                 </motion.div>
-               );
-             })}
-
-             {initiativeOrder.length === 0 && (
-                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest px-8">Waiting for Initiative...</div>
-             )}
-           </div>
-
-           <button
-             onClick={startCombat}
-             title="Reroll Initiative"
-             className="ml-2 w-10 h-10 bg-stone-800 hover:bg-stone-700 text-dragon-gold hover:text-white rounded-full border border-white/10 transition-all flex items-center justify-center shadow-lg active:scale-90"
-           >
-             <GameIcon name="dice" size={16} color="currentColor" />
-           </button>
-        </div>
-
 
         {/* Unit Tokens Container - Draggable */}
         <motion.div
@@ -383,7 +302,7 @@ export const CombatGrid: React.FC = () => {
                   isHoveredTarget={isHoveredTarget}
                   isTargeting={isTargeting}
                   onClick={handleCellClick}
-                  onMouseEnter={setHoveredCell}
+                  onMouseEnter={(x, y) => setHoveredCell({ x, y })}
                   onMouseLeave={() => setHoveredCell(null)}
                 />
               );
