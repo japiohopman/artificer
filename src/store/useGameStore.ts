@@ -59,6 +59,7 @@ export interface CombatState {
   activeTurnIndex: number;
   grid: TacticalCell[][];
   victoryXp: number;
+  aiTurnTimer: ReturnType<typeof setTimeout> | null;
 }
 
 export interface LogEntry {
@@ -193,6 +194,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     activeTurnIndex: 0,
     grid: initializeGrid(32, 20),
     victoryXp: 500,
+    aiTurnTimer: null,
     activeConditions: {}
   },
 
@@ -325,15 +327,20 @@ export const useGameStore = create<GameState>((set, get) => ({
       }
     }
 
+    const normalizedImageUrl = typeof monster.imageUrl === 'string' &&
+      (monster.imageUrl.startsWith('/assets') || monster.imageUrl.startsWith('data:') || monster.imageUrl.startsWith('public/'))
+      ? monster.imageUrl
+      : undefined;
+
     const newMonster: CombatMonster = {
       id,
-      name: monster.name,
+      name: monster.name || 'Unknown Enemy',
       type: monster.type || 'monster',
-      hp: monster.hit_points || 10,
-      maxHp: monster.hit_points || 10,
+      hp: monster.hit_points || monster.hp || 10,
+      maxHp: monster.hit_points || monster.maxHp || monster.hp || 10,
       x,
       y,
-      imageUrl: monster.imageUrl,
+      imageUrl: normalizedImageUrl,
       awareness: 'idle',
       viewDirection: 3,
       perception: 10,
@@ -351,10 +358,25 @@ export const useGameStore = create<GameState>((set, get) => ({
   spawnMonster: async (index, x, y) => {
     const { atlasService } = await import('../services/atlasService');
     const monsterData = await atlasService.loadEnemy(index);
+
     if (monsterData) {
-      get().addMonsterToCombat(monsterData, x, y);
+      get().addMonsterToCombat({
+        ...monsterData,
+        imageUrl: undefined
+      }, x, y);
       get().addLog(`A ${monsterData.name} appears!`, 'warning');
+      return;
     }
+
+    get().addMonsterToCombat({
+      name: index.replace(/[_-]+/g, ' ').replace(/\b\w/g, (letter: string) => letter.toUpperCase()),
+      type: 'monster',
+      hit_points: 12,
+      hp: 12,
+      maxHp: 12,
+      imageUrl: undefined
+    }, x, y);
+    get().addLog(`A ${index.replace(/[_-]+/g, ' ')} appears!`, 'warning');
   },
 
   removeMonsterFromCombat: (id) => set((state) => ({
@@ -387,6 +409,17 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { useCharacterStore } = await import('./useCharacterStore');
     const { characters, addXp } = useCharacterStore.getState();
 
+    if (combatState.aiTurnTimer) {
+      clearTimeout(combatState.aiTurnTimer);
+    }
+
+    set((state) => ({
+      combatState: {
+        ...state.combatState,
+        aiTurnTimer: null
+      }
+    }));
+
     if (victory) {
       addLog(`Victory! The party earns ${combatState.victoryXp} XP.`, 'success');
       for (const char of characters) {
@@ -407,6 +440,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       addLog("No one is in the initiative order!", "warning");
       return;
     }
+
+    if (combatState.aiTurnTimer) {
+      clearTimeout(combatState.aiTurnTimer);
+    }
+
     const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
     const nextActor = combatState.initiativeOrder[nextIndex];
 
@@ -421,14 +459,15 @@ export const useGameStore = create<GameState>((set, get) => ({
         combatState: {
           ...state.combatState,
           activeTurnIndex: nextIndex,
-          activeConditions: newConditions
+          activeConditions: newConditions,
+          aiTurnTimer: null
         }
       };
     });
 
     // Advanced Monster AI
     if (!nextActor.isPlayer) {
-      setTimeout(async () => {
+      const timerId = setTimeout(async () => {
         const { combatState: currentCombatState } = get();
         const currentMonster = currentCombatState.monsters.find(m => m.id === nextActor.id);
         if (!currentMonster) {
@@ -522,13 +561,30 @@ export const useGameStore = create<GameState>((set, get) => ({
           }));
         }
 
-        setTimeout(() => get().nextTurn(), 1000);
+        const followUpTimerId = setTimeout(() => get().nextTurn(), 1000);
+        set((state) => ({
+          combatState: {
+            ...state.combatState,
+            aiTurnTimer: followUpTimerId
+          }
+        }));
       }, 1000);
+
+      set((state) => ({
+        combatState: {
+          ...state.combatState,
+          aiTurnTimer: timerId
+        }
+      }));
     }
   },
 
   startCombat: async () => {
     const { combatState } = get();
+    if (combatState.aiTurnTimer) {
+      clearTimeout(combatState.aiTurnTimer);
+    }
+
     const { useCharacterStore } = await import('./useCharacterStore');
     const { characters } = useCharacterStore.getState();
     const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
@@ -551,7 +607,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       combatState: {
         ...state.combatState,
         initiativeOrder: order,
-        activeTurnIndex: 0
+        activeTurnIndex: 0,
+        aiTurnTimer: null
       }
     }));
   },

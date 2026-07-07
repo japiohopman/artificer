@@ -62,7 +62,11 @@ export const GameScreen: React.FC = () => {
           chatExpanded ? "pointer-events-none" : "pointer-events-auto"
         )}
       >
-        <WorldMap />
+        {gameMode === 'combat' ? (
+          <div className="w-full h-full bg-stone-950" />
+        ) : (
+          <WorldMap />
+        )}
       </motion.div>
 
       {/* 2. Main Game View (ActionView/Simulator/FirstPerson) - Slides up when chat is closed */}
