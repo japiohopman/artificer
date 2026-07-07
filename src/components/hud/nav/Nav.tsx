@@ -1,7 +1,5 @@
 import React from 'react';
 import { useWorldStore } from '../../../store/useWorldStore';
-import { REGION_NAMES } from '../../../data/regions';
-import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
@@ -35,28 +33,8 @@ export const Nav: React.FC = () => {
   } = useUIStore();
 
   const {
-    currentLocation,
-    gameTime,
-    isNight,
-    currentRegion
-  } = useWorldStore();
-
-  const {
-    activeCharacterId,
-    characters
-  } = useCharacterStore();
-
-  const {
     setIsInventoryOpen
   } = useInventoryStore();
-
-  const activeChar = characters.find(c => c.id === activeCharacterId);
-
-  const formatTime = (minutes: number) => {
-    const hours = Math.floor(minutes / 60) % 24;
-    const mins = minutes % 60;
-    return `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
-  };
 
   const leftActions: NavAction[] = [
     {
@@ -104,10 +82,11 @@ export const Nav: React.FC = () => {
       onClick: () => {
         if (isCharacterPanelOpen && activeCharacterTab === 'logistics') {
           setIsCharacterPanelOpen(false);
+          setIsInventoryOpen(false);
         } else {
           setActiveCharacterTab('logistics');
           setIsCharacterPanelOpen(true);
-          setIsInventoryOpen(true); // CharacterPanel visibility is tied to isInventoryOpen in CharacterPanel.tsx
+          setIsInventoryOpen(true);
         }
       },
       isActive: isCharacterPanelOpen && activeCharacterTab === 'logistics',
@@ -120,6 +99,7 @@ export const Nav: React.FC = () => {
       onClick: () => {
         if (isCharacterPanelOpen && activeCharacterTab === 'equipment') {
           setIsCharacterPanelOpen(false);
+          setIsInventoryOpen(false);
         } else {
           setActiveCharacterTab('equipment');
           setIsCharacterPanelOpen(true);
@@ -137,7 +117,7 @@ export const Nav: React.FC = () => {
       <div className="absolute inset-x-0 bottom-0 h-1 bg-dragon-red/20" />
       <div className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-dragon-red/5 to-transparent pointer-events-none" />
 
-      {/* Left Section: Side Toggle + Location */}
+      {/* Left Section: Side Toggle Actions */}
       <div className="flex items-center gap-6 z-10 w-1/3">
         <div className="flex gap-2">
           {leftActions.map(action => (
@@ -161,33 +141,6 @@ export const Nav: React.FC = () => {
               )}
             </button>
           ))}
-        </div>
-
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2">
-             <div className={cn(
-               "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
-               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
-             )} />
-             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
-               {currentRegion === 'water' ? 'Offshore_Tracking' : 'Position_Verified'}
-             </span>
-             <div className={cn(
-               "w-1.5 h-1.5 rounded-full shadow-[0_0_8px_rgba(139,0,0,0.8)]",
-               currentRegion === 'water' ? "bg-blue-500" : "bg-dragon-red"
-             )} />
-             <span className="text-[9px] font-black uppercase text-dragon-darkRed/60 tracking-[0.3em]">
-               {currentRegion === 'water' ? 'Sea' : 'Land'} Region
-             </span>
-          </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-sm font-header font-black text-dragon-red uppercase tracking-widest mt-0.5 truncate">
-               {currentLocation?.name || REGION_NAMES[currentRegion as keyof typeof REGION_NAMES] || 'Unknown Region'}
-            </span>
-            {currentRegion === 'water' && (
-              <span className="text-[8px] font-black text-blue-600 uppercase tracking-tighter">[High Seas]</span>
-            )}
-          </div>
         </div>
       </div>
 
