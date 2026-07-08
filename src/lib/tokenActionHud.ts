@@ -11,6 +11,7 @@ export interface ActionHudAction {
   targetType?: 'single' | 'sphere';
   radius?: number;
   category: string;
+  actionType?: 'actions' | 'bonusActions' | 'reactions' | 'movement' | 'objectInteractions';
   data?: any;
 }
 
@@ -31,7 +32,8 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
     color: 'bg-dragon-red',
     description: 'Strike with your equipped weapon.',
     range: 1,
-    category: 'Standard'
+    category: 'Standard',
+    actionType: 'actions'
   });
 
   actions.push({
@@ -41,7 +43,8 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
     color: 'bg-blue-600',
     description: 'Change position on the grid.',
     range: 6,
-    category: 'Standard'
+    category: 'Standard',
+    actionType: 'movement'
   });
 
   // 2. Class-Specific Skills / Features
@@ -54,7 +57,8 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
         icon: 'skill',
         color: 'bg-emerald-600',
         description: feature.desc || 'Special ability.',
-        category: 'Skills'
+        category: 'Skills',
+        actionType: 'actions' // Default to action for now
       });
     });
   }
@@ -63,6 +67,9 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
   if (character.knownSpells) {
     character.knownSpells.forEach(spell => {
       const isAoe = spell.area_of_effect !== undefined;
+      const isBonus = spell.casting_time?.toLowerCase().includes('bonus action');
+      const isReaction = spell.casting_time?.toLowerCase().includes('reaction');
+      
       actions.push({
         id: `spell-${spell.index}`,
         name: spell.name,
@@ -73,6 +80,7 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
         targetType: isAoe ? 'sphere' : 'single',
         radius: isAoe ? 2 : undefined,
         category: 'Spells',
+        actionType: isReaction ? 'reactions' : (isBonus ? 'bonusActions' : 'actions'),
         data: spell
       });
     });
@@ -105,7 +113,8 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
     icon: 'shield',
     color: 'bg-slate-600',
     description: 'Adopt a defensive stance (+2 AC).',
-    category: 'Utility'
+    category: 'Utility',
+    actionType: 'actions'
   });
 
   return actions;

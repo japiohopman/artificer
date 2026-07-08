@@ -44,6 +44,25 @@ export const ActionPanel: React.FC = () => {
       return;
     }
 
+    // Check action economy
+    if (action.actionType && activeChar?.actionEconomy) {
+      const remaining = activeChar.actionEconomy[action.actionType].current;
+      if (remaining <= 0) {
+        addLog(`You don't have enough ${action.actionType.replace('bonusActions', 'bonus actions')}!`, 'error');
+        return;
+      }
+    }
+
+    // Check spell slots
+    if (action.category === 'Spells' && action.data?.level > 0 && activeChar?.spellSlots) {
+      const level = action.data.level;
+      const slots = activeChar.spellSlots[level.toString()];
+      if (!slots || slots.current <= 0) {
+        addLog(`You don't have any level ${level} spell slots remaining!`, 'error');
+        return;
+      }
+    }
+
     addLog(`Action selected: ${action.name}`, 'info');
 
     if (action.id === 'attack') {
@@ -63,6 +82,8 @@ export const ActionPanel: React.FC = () => {
       setTargetingAction({ ...action });
       addLog(`Casting ${action.name}. Select target.`, 'info');
     } else if (action.id === 'defend') {
+      const { consumeAction } = useCharacterStore.getState();
+      consumeAction(activeCharacterId, 'actions');
       const actorId = activeCharacterId || 'player';
       useGameStore.setState(state => ({
         combatState: {
@@ -93,6 +114,28 @@ export const ActionPanel: React.FC = () => {
           <div className="w-2 h-2 rounded-full bg-dragon-red animate-pulse" />
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 font-elan">Tactical Action Matrix</span>
         </div>
+        
+        {/* Action Economy Tracker */}
+        {activeChar?.actionEconomy && (
+          <div className="flex items-center gap-4 bg-black/40 px-4 py-1 rounded-full border border-white/5">
+            <div className="flex items-center gap-1.5" title="Actions">
+              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.actions.current > 0 ? "bg-green-500" : "bg-red-500")} />
+              <span className="text-[8px] font-bold text-white/60 uppercase">ACT: {activeChar.actionEconomy.actions.current}</span>
+            </div>
+            <div className="flex items-center gap-1.5" title="Bonus Actions">
+              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.bonusActions.current > 0 ? "bg-blue-500" : "bg-red-500")} />
+              <span className="text-[8px] font-bold text-white/60 uppercase">BNS: {activeChar.actionEconomy.bonusActions.current}</span>
+            </div>
+            <div className="flex items-center gap-1.5" title="Reactions">
+              <div className={cn("w-1.5 h-1.5 rounded-full", activeChar.actionEconomy.reactions.current > 0 ? "bg-purple-500" : "bg-red-500")} />
+              <span className="text-[8px] font-bold text-white/60 uppercase">REA: {activeChar.actionEconomy.reactions.current}</span>
+            </div>
+            <div className="flex items-center gap-1.5" title="Movement">
+              <span className="text-[8px] font-bold text-white/60 uppercase">MOV: {activeChar.actionEconomy.movement.current}ft</span>
+            </div>
+          </div>
+        )}
+
         <div className="flex items-center gap-4">
            {activeChar && (
               <div className="flex items-center gap-2 px-3 py-0.5 bg-dragon-gold/10 border border-dragon-gold/20 rounded-full">
@@ -143,6 +186,31 @@ export const ActionPanel: React.FC = () => {
                 </div>
              </div>
            ))}
+
+           {/* Spell Slots */}
+           {activeChar?.spellSlots && Object.keys(activeChar.spellSlots).length > 0 && (
+             <div className="flex flex-col gap-3 pl-8 border-l border-white/10">
+               <span className="text-[8px] font-black text-white/20 uppercase tracking-[0.3em] border-b border-white/5 pb-1">Spell_Slots</span>
+               <div className="flex gap-2">
+                  {Object.entries(activeChar.spellSlots).map(([lvl, slot]: [string, any]) => (
+                    <div key={lvl} className="flex flex-col items-center gap-1">
+                      <div className="flex gap-0.5">
+                        {Array.from({ length: slot.max }).map((_, i) => (
+                          <div 
+                            key={i} 
+                            className={cn(
+                              "w-1.5 h-3 rounded-sm border border-purple-500/30",
+                              i < slot.current ? "bg-purple-500 shadow-[0_0_5px_rgba(168,85,247,0.5)]" : "bg-black/40"
+                            )} 
+                          />
+                        ))}
+                      </div>
+                      <span className="text-[7px] font-black text-purple-400/60 uppercase tracking-tighter">L{lvl}</span>
+                    </div>
+                  ))}
+               </div>
+             </div>
+           )}
 
            {/* Turn Controls */}
            <div className="ml-auto flex items-center pl-8 border-l border-white/10">

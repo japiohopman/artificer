@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useWorldStore } from '../../store/useWorldStore';
+import { useGameStore } from '../../store/useGameStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
 import { CharacterPanel } from '../character/CharacterPanel';
@@ -34,6 +35,10 @@ export const HUD: React.FC = () => {
       setIsCharacterPanelOpen(true);
       setIsInventoryOpen(true);
       setActiveCharacterTab('party');
+      
+      // Auto-start initiative
+      const { startCombat } = useGameStore.getState();
+      startCombat();
     }
   }, [gameMode, setIsWorldPanelOpen, setIsCharacterPanelOpen, setIsInventoryOpen, setActiveCharacterTab]);
 

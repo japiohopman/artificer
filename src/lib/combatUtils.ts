@@ -14,11 +14,42 @@ export const getDistance = (a: Point, b: Point): number => {
 };
 
 /**
+ * Checks if a cell or area is occupied by a monster or player.
+ */
+export const isCellOccupied = (x: number, y: number, currentPos: Point, monsters: CombatMonster[], playerPos: Point, size: 'Medium' | 'Large' = 'Medium'): boolean => {
+  const footprint = size === 'Large' ? 2 : 1;
+  
+  for (let fy = 0; fy < footprint; fy++) {
+    for (let fx = 0; fx < footprint; fx++) {
+      const tx = x + fx;
+      const ty = y + fy;
+
+      // Check player collision
+      if (tx === playerPos.x && ty === playerPos.y) {
+        if (currentPos.x !== playerPos.x || currentPos.y !== playerPos.y) return true;
+      }
+
+      // Check monster collision
+      for (const m of monsters) {
+        if (currentPos.x === m.x && currentPos.y === m.y) continue; // Skip self
+
+        const mFootprint = m.size === 'Large' ? 2 : 1;
+        if (tx >= m.x && tx < m.x + mFootprint && ty >= m.y && ty < m.y + mFootprint) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
+};
+
+/**
  * A* Pathfinding algorithm for the tactical grid.
- * Treats 'wall' and closed 'door' as impassable.
+ * Treats 'wall', closed 'door', and occupied cells as impassable.
  * Optimized with indexed arrays and reduced allocations.
  */
-export const findPath = (start: Point, end: Point, grid: TacticalCell[][]): Point[] | null => {
+export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monsters: CombatMonster[] = [], playerPos: Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Point[] | null => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -73,6 +104,24 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][]): Poin
         
         const cell = grid[ny][nx];
         if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+        
+        // Footprint check for larger creatures
+        const footprint = creatureSize === 'Large' ? 2 : 1;
+        let areaBlocked = false;
+        for (let fy = 0; fy < footprint; fy++) {
+          for (let fx = 0; fx < footprint; fx++) {
+            const tx = nx + fx;
+            const ty = ny + fy;
+            if (tx >= width || ty >= height) { areaBlocked = true; break; }
+            const tCell = grid[ty][tx];
+            if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+          }
+          if (areaBlocked) break;
+        }
+        if (areaBlocked) continue;
+
+        // Collision check (only if not at the destination, to allow targeting)
+        if (!(nx === end.x && ny === end.y) && isCellOccupied(nx, ny, start, monsters, playerPos, creatureSize)) continue;
 
         const nIdx = ny * width + nx;
         const newDist = dists[currentIdx] + 1;
@@ -95,7 +144,7 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][]): Poin
  * Calculates all reachable cells within a range using Dijkstra/BFS.
  * Returns a Set of "x,y" strings.
  */
-export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][]): Set<string> => {
+export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][], monsters: CombatMonster[] = [], playerPos: Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Set<string> => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -126,6 +175,24 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
         if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
         const cell = grid[ny][nx];
         if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+
+        // Footprint check for larger creatures
+        const footprint = creatureSize === 'Large' ? 2 : 1;
+        let areaBlocked = false;
+        for (let fy = 0; fy < footprint; fy++) {
+          for (let fx = 0; fx < footprint; fx++) {
+            const tx = nx + fx;
+            const ty = ny + fy;
+            if (tx >= width || ty >= height) { areaBlocked = true; break; }
+            const tCell = grid[ty][tx];
+            if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+          }
+          if (areaBlocked) break;
+        }
+        if (areaBlocked) continue;
+
+        // Collision check
+        if (isCellOccupied(nx, ny, start, monsters, playerPos, creatureSize)) continue;
 
         const nIdx = ny * width + nx;
         const newDist = d + 1;

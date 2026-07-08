@@ -16,6 +16,7 @@ export interface SavedLocation {
   coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;
   map?: string;
+  position?: [number, number];
   origin?: 'bottom-left' | 'top-left';
   subLocations?: any[];
   sub_location_files?: string[];
@@ -280,7 +281,16 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
-  setCurrentLocation: (currentLocation) => set({ currentLocation }),
+  setCurrentLocation: (currentLocation) => set((state) => ({ 
+    currentLocation,
+    partyLocation: {
+      ...state.partyLocation,
+      id: currentLocation.id,
+      name: currentLocation.name,
+      coordinates: currentLocation.coordinates,
+      position: currentLocation.position || (currentLocation.coordinates ? [currentLocation.coordinates.x || currentLocation.coordinates.lng, currentLocation.coordinates.y || currentLocation.coordinates.lat] : undefined)
+    }
+  })),
   setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
   setCurrentSubLocation: (currentSubLocation) => set({ currentSubLocation }),
   setCurrentShop: (currentShop) => set({ currentShop }),
@@ -448,7 +458,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           travelProgress: newProgress,
           partyLocation: {
             ...state.partyLocation,
-            coordinates: { x: currentX, y: currentY }
+            coordinates: { x: currentX, y: currentY },
+            position: [currentX, currentY] // Ensure position is also updated for WorldMap rendering
           }
         });
 

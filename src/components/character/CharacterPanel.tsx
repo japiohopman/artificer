@@ -7,7 +7,7 @@ import { EquipmentDoll } from './EquipmentDoll';
 import { Inventory } from './Inventory';
 import { CharacterStats } from './CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
-import { GameIcon } from '../../game_icons';
+import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 
@@ -77,11 +77,11 @@ export const CharacterPanel: React.FC = () => {
   };
 
   const tabs = [
-    { id: 'party', icon: 'party_stats' as const, label: 'Party' },
-    { id: 'equipment', icon: 'shield' as const, label: 'Equipment' },
-    { id: 'inventory', icon: 'package' as const, label: 'Inventory' },
-    { id: 'stats', icon: 'scroll' as const, label: 'Stats' },
-    { id: 'logistics', icon: 'truck' as const, label: 'Logistics' }
+    { id: 'party', icon: Users, label: 'Party' },
+    { id: 'equipment', icon: Shield, label: 'Equipment' },
+    { id: 'inventory', icon: Package, label: 'Inventory' },
+    { id: 'stats', icon: BarChart3, label: 'Stats' },
+    { id: 'logistics', icon: Archive, label: 'Logistics' }
   ];
 
   const activeTabLabel = tabs.find(t => t.id === activeTab)?.label;
@@ -94,7 +94,7 @@ export const CharacterPanel: React.FC = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 400, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="w-80 bg-parchment-50/50 border-l border-parchment-300 flex flex-col z-10 carved-hud-border"
+          className="w-80 bg-parchment-50/50 border-l border-parchment-300 flex flex-col z-10"
         >
           {/* Tabs */}
           <div className="flex border-b border-parchment-300 bg-parchment-100/50">
@@ -109,7 +109,7 @@ export const CharacterPanel: React.FC = () => {
                   activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
                 )}
               >
-                <GameIcon name={tab.icon} size={18} />
+                <tab.icon size={18} />
               </button>
             ))}
           </div>
@@ -122,7 +122,7 @@ export const CharacterPanel: React.FC = () => {
               aria-label="Previous Character"
               className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
             >
-              <GameIcon name="chevron_left" size={16} />
+              <ChevronLeft size={16} />
             </button>
             
             <div className="text-center flex-1">
@@ -140,7 +140,7 @@ export const CharacterPanel: React.FC = () => {
               aria-label="Next Character"
               className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
             >
-              <GameIcon name="chevron_right" size={16} />
+              <ChevronRight size={16} />
             </button>
           </div>
 
@@ -176,7 +176,7 @@ export const CharacterPanel: React.FC = () => {
                   
                   <div className="bg-dragon-red/5 p-3 rounded-lg border border-dragon-red/10 text-center space-y-2">
                     <div className="flex items-center justify-center gap-2 text-dragon-red">
-                      <GameIcon name="scroll" size={12} />
+                      <Info size={12} />
                       <p className="text-[9px] font-bold uppercase tracking-wider">
                         {focusedItem?._type === 'equipment' 
                           ? `Equip ${focusedItem.name}`
@@ -229,7 +229,7 @@ export const CharacterPanel: React.FC = () => {
                           <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
                         ) : (
                           <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
-                            <GameIcon name="party_stats" size={20} />
+                            <Users size={20} />
                           </div>
                         )}
                       </div>
@@ -246,8 +246,34 @@ export const CharacterPanel: React.FC = () => {
                         </div>
                         <div className="flex justify-between mt-1">
                            <span className="text-[7px] font-bold text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
-                           {activeCharacterId === char.id && <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>}
+                           <div className="flex gap-2">
+                             {char.actionEconomy && (
+                               <div className="flex gap-1">
+                                 <div className={cn("w-1 h-1 rounded-full", char.actionEconomy.actions.current > 0 ? "bg-green-500" : "bg-red-500")} title="Action" />
+                                 <div className={cn("w-1 h-1 rounded-full", char.actionEconomy.bonusActions.current > 0 ? "bg-blue-500" : "bg-red-500")} title="Bonus Action" />
+                                 <div className={cn("w-1 h-1 rounded-full", char.actionEconomy.reactions.current > 0 ? "bg-purple-500" : "bg-red-500")} title="Reaction" />
+                               </div>
+                             )}
+                             {activeCharacterId === char.id && <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>}
+                           </div>
                         </div>
+                        {char.spellSlots && Object.keys(char.spellSlots).length > 0 && (
+                          <div className="flex gap-1 mt-1">
+                            {Object.entries(char.spellSlots).map(([lvl, slot]: [string, any]) => (
+                              <div key={lvl} className="flex gap-0.5">
+                                {Array.from({ length: slot.max }).map((_, i) => (
+                                  <div 
+                                    key={i} 
+                                    className={cn(
+                                      "w-1 h-1.5 rounded-sm",
+                                      i < slot.current ? "bg-purple-500" : "bg-parchment-300"
+                                    )} 
+                                  />
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </button>
                   ))}

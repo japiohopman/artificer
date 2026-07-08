@@ -12,7 +12,10 @@ export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
   const { characters, activeCharacterId } = useCharacterStore();
   const { partyLocation } = useWorldStore();
-  const { isTargeting, targetingAction, setIsTargeting, setTargetingAction, isGridVisible, setIsGridVisible } = useUIStore();
+  const { 
+    isTargeting, targetingAction, setIsTargeting, setTargetingAction, isGridVisible, setIsGridVisible,
+    setFocusedItem, setIsMonsterProfileOpen
+  } = useUIStore();
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
 
@@ -47,7 +50,7 @@ export const CombatGrid: React.FC = () => {
     const range = targetingAction.range || 0;
 
     if (targetingAction.id === 'move') {
-      return getReachableCells(playerPos, range, grid);
+      return getReachableCells(playerPos, range, grid, monsters, playerPos);
     }
 
     const cells = new Set<string>();
@@ -78,12 +81,13 @@ export const CombatGrid: React.FC = () => {
       ctx.strokeStyle = 'rgba(212, 175, 55, 0.2)'; // Dragon Gold
       ctx.lineWidth = 1;
 
-      const drawGridAround = (center: {x: number, y: number}, radius: number) => {
+      const drawGridAround = (center: {x: number, y: number}, radius: number, alpha: number = 0.2) => {
         const startX = Math.max(0, center.x - radius);
         const endX = Math.min(gridWidth, center.x + radius);
         const startY = Math.max(0, center.y - radius);
         const endY = Math.min(gridHeight, center.y + radius);
 
+        ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`;
         ctx.beginPath();
         for (let x = startX; x <= endX; x++) {
           ctx.moveTo(x * cellSize, startY * cellSize);
@@ -96,9 +100,14 @@ export const CombatGrid: React.FC = () => {
         ctx.stroke();
       };
 
-      // Draw around active position and hover
-      drawGridAround(draggedPos || playerPos, 5);
-      if (hoveredCell) drawGridAround(hoveredCell, 2);
+      // Selective grid: only around tokens or when dragging
+      monsters.forEach(m => {
+        if (visibleCells.has(`${m.x},${m.y}`)) {
+          drawGridAround(m, 2, 0.1);
+        }
+      });
+      drawGridAround(draggedPos || playerPos, 4, 0.3);
+      if (hoveredCell) drawGridAround(hoveredCell, 1, 0.2);
     }
 
     // 2. Draw Walls and Base Terrain
@@ -205,9 +214,15 @@ export const CombatGrid: React.FC = () => {
       if (targetingAction?.targetType === 'sphere') {
         const radius = targetingAction.radius || 0;
         const targets = monsters.filter(m => {
-          const dx = Math.abs(m.x - x);
-          const dy = Math.abs(m.y - y);
-          return Math.max(dx, dy) <= radius;
+          const mFootprint = m.size === 'Large' ? 2 : 1;
+          for (let fy = 0; fy < mFootprint; fy++) {
+            for (let fx = 0; fx < mFootprint; fx++) {
+              const dx = Math.abs((m.x + fx) - x);
+              const dy = Math.abs((m.y + fy) - y);
+              if (Math.max(dx, dy) <= radius) return true;
+            }
+          }
+          return false;
         });
 
         targets.forEach(monster => {
@@ -215,7 +230,7 @@ export const CombatGrid: React.FC = () => {
         });
 
         const { consumeAction } = useCharacterStore.getState();
-        consumeAction(activeCharacterId, 'actions');
+        consumeAction(activeCharacterId, targetingAction.actionType || 'actions');
 
         setIsTargeting(false);
         setTargetingAction(null);
@@ -223,9 +238,10 @@ export const CombatGrid: React.FC = () => {
       }
 
       if (targetingAction?.id === 'move') {
-        const path = findPath(playerPos, { x, y }, grid);
+        const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
+        const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
 
-        if (path && path.length <= 6) {
+        if (path && path.length * 5 <= maxMove) {
           setPlayerPos(x, y);
           addLog(`Moved to position (${x}, ${y})`, 'info');
 
@@ -245,7 +261,7 @@ export const CombatGrid: React.FC = () => {
 
     // Default movement logic
     const { gameMode } = useUIStore.getState();
-    const path = findPath(playerPos, { x, y }, grid);
+    const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
 
     if (path && path.length > 0) {
       const isCombat = gameMode === 'combat';
@@ -284,8 +300,8 @@ export const CombatGrid: React.FC = () => {
   const rulerPath = useMemo(() => {
     const target = hoveredCell || draggedPos;
     if (!target) return null;
-    return findPath(playerPos, target, grid);
-  }, [playerPos, hoveredCell, draggedPos, grid]);
+    return findPath(playerPos, target, grid, monsters, playerPos);
+  }, [playerPos, hoveredCell, draggedPos, grid, monsters]);
 
   const rulerDistance = useMemo(() => {
     const target = hoveredCell || draggedPos;
@@ -296,6 +312,10 @@ export const CombatGrid: React.FC = () => {
 
   return (
     <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-stone-950 font-body">
+      {/* Antique Atlas Background */}
+      <div className="absolute inset-0 bg-[#0f0e0c] opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 bg-[url('/assets/images/ui/parchment_texture.webp')] opacity-20 pointer-events-none mix-blend-overlay" />
+      
       {/* Background Ambience Layers */}
       <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay bg-[url('/assets/images/ui/map_fog_cloud.webp')] bg-repeat animate-[pulse_8s_infinite]" />
       
@@ -321,7 +341,7 @@ export const CombatGrid: React.FC = () => {
         <motion.div
           drag
           dragMomentum={false}
-          className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-white/5"
+          className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
           style={{ width: gridWidth * cellSize, height: gridHeight * cellSize }}
         >
           {/* Main Tactical Canvas */}
@@ -362,10 +382,11 @@ export const CombatGrid: React.FC = () => {
                     if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                       // Trigger move logic
                       const { gameMode } = useUIStore.getState();
-                      const path = findPath(playerPos, { x, y }, grid);
+                      const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
                       if (path && path.length > 0) {
                         const isCombat = gameMode === 'combat';
-                        if (!isCombat || path.length <= 6) {
+                      const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
+                      if (!isCombat || path.length * 5 <= maxMove) {
                           setPlayerPos(x, y);
                           addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
                           if (isCombat) {
@@ -402,6 +423,7 @@ export const CombatGrid: React.FC = () => {
                  const isVisible = visibleCells.has(`${monster.x},${monster.y}`);
                  if (!isVisible) return null;
 
+                 const mSize = monster.size === 'Large' ? 2 : 1;
                  return (
                    <motion.div
                     key={monster.id}
@@ -409,20 +431,25 @@ export const CombatGrid: React.FC = () => {
                     animate={{ scale: 1, opacity: 1, x: monster.x * cellSize, y: monster.y * cellSize }}
                     exit={{ scale: 0, opacity: 0 }}
                     className="absolute p-2 pointer-events-auto cursor-pointer"
-                    style={{ width: cellSize, height: cellSize }}
-                    onClick={(e) => {
+                    style={{ width: cellSize * mSize, height: cellSize * mSize }}
+                     onClick={async (e) => {
                       e.stopPropagation();
                       if (isTargeting) {
                         const dist = getDistance(playerPos, { x: monster.x, y: monster.y });
                         if (dist <= (targetingAction?.range || 1)) {
                           resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
                           const { consumeAction } = useCharacterStore.getState();
-                          consumeAction(activeCharacterId, 'actions');
+                          consumeAction(activeCharacterId, targetingAction?.actionType || 'actions');
                           setIsTargeting(false);
                           setTargetingAction(null);
                         } else {
                           addLog("Target out of range!", "warning");
                         }
+                      } else {
+                        const { fetchMonsterData } = await import('../../../services/storageService');
+                        const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
+                        setFocusedItem(fullData || monster);
+                        setIsMonsterProfileOpen(true);
                       }
                     }}
                    >
@@ -462,27 +489,22 @@ export const CombatGrid: React.FC = () => {
                 </div>
               </div>
               <svg className="absolute inset-0 z-[110] pointer-events-none w-full h-full overflow-visible">
-                {rulerPath ? (
-                  <polyline
-                    points={`${playerPos.x * cellSize + cellSize / 2},${playerPos.y * cellSize + cellSize / 2} ${rulerPath.map(p => `${p.x * cellSize + cellSize / 2},${p.y * cellSize + cellSize / 2}`).join(' ')}`}
-                    fill="none"
-                    stroke="#D4AF37"
-                    strokeWidth="3"
-                    strokeDasharray="6 3"
-                    opacity="0.6"
-                  />
-                ) : (
-                  <line
-                    x1={playerPos.x * cellSize + cellSize / 2}
-                    y1={playerPos.y * cellSize + cellSize / 2}
-                    x2={(hoveredCell || draggedPos)!.x * cellSize + cellSize / 2}
-                    y2={(hoveredCell || draggedPos)!.y * cellSize + cellSize / 2}
-                    stroke="#D4AF37"
-                    strokeWidth="2"
-                    strokeDasharray="4 4"
-                    opacity="0.4"
-                  />
-                )}
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orientation="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+                  </marker>
+                </defs>
+                <line
+                  x1={playerPos.x * cellSize + cellSize / 2}
+                  y1={playerPos.y * cellSize + cellSize / 2}
+                  x2={(hoveredCell || draggedPos)!.x * cellSize + cellSize / 2}
+                  y2={(hoveredCell || draggedPos)!.y * cellSize + cellSize / 2}
+                  stroke="#D4AF37"
+                  strokeWidth="3"
+                  strokeDasharray="6 3"
+                  opacity="0.6"
+                  markerEnd="url(#arrowhead)"
+                />
               </svg>
             </>
           )}

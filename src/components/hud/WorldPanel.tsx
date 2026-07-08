@@ -72,7 +72,7 @@ export const WorldPanel: React.FC = () => {
   }, [(displayLocation as any)?.lore, displayLocation?.id]);
 
   return (
-    <div className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl carved-hud-border">
+    <div className="h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl">
       {/* HEADER: Sticky */}
       <div className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden shrink-0">
         {(displayLocation?.image || displayLocation?.banner) ? (
@@ -140,8 +140,10 @@ export const WorldPanel: React.FC = () => {
               {combatState.monsters.map((monster) => (
                 <button
                   key={monster.id}
-                  onClick={() => {
-                    setFocusedItem(monster);
+                  onClick={async () => {
+                    const { fetchMonsterData } = await import('../../services/storageService');
+                    const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
+                    setFocusedItem(fullData || monster);
                     setIsMonsterProfileOpen(true);
                   }}
                   className="group flex items-center gap-4 p-3 bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"

@@ -44,6 +44,7 @@ export interface CombatMonster {
   viewDirection: number; // 0:N, 1:E, 2:S, 3:W
   perception: number;
   speed: number; // in cells
+  size?: 'Medium' | 'Large';
   lastKnownPlayerPos?: { x: number; y: number };
 }
 
@@ -337,7 +338,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       awareness: 'idle',
       viewDirection: 3,
       perception: 10,
-      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6,
+      size: (monster.size === 'Large' || monster.size === 'Huge' || monster.size === 'Gargantuan') ? 'Large' : 'Medium'
     };
 
     return {
@@ -528,24 +530,38 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   startCombat: async () => {
-    const { combatState } = get();
+    const { combatState, addLog } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
-    const { characters } = useCharacterStore.getState();
+    const { characters, restoreActionEconomy } = useCharacterStore.getState();
     const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
 
+    addLog("Rolling initiative...", "info");
+
     const order = [
-      ...activeParty.map((c: any) => ({
-        id: c.id,
-        name: c.name,
-        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
-        isPlayer: true
-      })),
+      ...activeParty.map((c: any) => {
+        const dexMod = Math.floor((c.stats.dex - 10) / 2) || 0;
+        const roll = Math.floor(Math.random() * 20) + 1;
+        
+        // Restore action economy for all party members at combat start
+        restoreActionEconomy(c.id);
+
+        return {
+          id: c.id,
+          name: c.name,
+          value: roll + dexMod,
+          isPlayer: true
+        };
+      }),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
         value: Math.floor(Math.random() * 20) + 1 + 1
       }))
     ].sort((a, b) => b.value - a.value);
+
+    order.forEach(entry => {
+      addLog(`${entry.name} rolled ${entry.value} for initiative.`, "info");
+    });
 
     set((state) => ({
       combatState: {
@@ -554,6 +570,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         activeTurnIndex: 0
       }
     }));
+
+    addLog(`Combat started! ${order[0].name} goes first.`, "success");
   },
 
   resolveCombatAction: async (actor, target, action) => {
@@ -561,8 +579,37 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { useCharacterStore } = await import('./useCharacterStore');
     const { modifyHp } = useCharacterStore.getState();
 
+    // Determine attack bonus and damage from action data (stat blocks)
+    let attackBonus = action.attack_bonus || 0;
+    let damageDice = '1d6';
+    let damageType = 'slashing';
+
+    if (action.data) {
+      // Spell data
+      if (action.category === 'Spells') {
+        // Find damage in spell.damage
+        const spellDamage = action.data.damage;
+        if (spellDamage && spellDamage.damage_at_slot_level) {
+          const level = action.data.level || 1;
+          damageDice = spellDamage.damage_at_slot_level[level.toString()] || damageDice;
+        }
+        damageType = spellDamage?.damage_type?.name || damageType;
+      } 
+      // Monster action data
+      else {
+        attackBonus = action.data.attack_bonus || attackBonus;
+        const monsterDamage = action.data.damage?.[0];
+        if (monsterDamage) {
+          damageDice = monsterDamage.damage_dice || damageDice;
+          damageType = monsterDamage.damage_type?.name || damageType;
+        }
+      }
+    } else if (action.damage?.[0]) {
+       damageDice = action.damage[0].damage_dice || damageDice;
+       damageType = action.damage[0].damage_type?.name || damageType;
+    }
+
     // 1. Roll to Hit
-    const attackBonus = action.attack_bonus || 0;
     const toHitNotation = `1d20+${attackBonus}`;
 
     addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
@@ -601,10 +648,6 @@ export const useGameStore = create<GameState>((set, get) => ({
       addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
 
       // 2. Roll Damage
-      const damageInfo = action.damage?.[0];
-      const damageDice = damageInfo?.damage_dice || '1d6';
-      const damageType = damageInfo?.damage_type?.name || 'slashing';
-
       // Double dice for crits (simplified)
       const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
 
@@ -656,15 +699,6 @@ export const useGameStore = create<GameState>((set, get) => ({
     import('../dice_roller/diceService').then(({ diceService }) => {
       const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
       const result = diceService.rollBackground(notation, label);
-
-      const rollDetails = result.rolls
-        .filter(r => r.valid !== false)
-        .map(r => r.result)
-        .join(' + ');
-      const modStr = result.modifier !== 0 ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}` : '';
-      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      get().addLog(`${label}: ${result.notation} ${detailStr} = ${result.total}`, 'info');
-
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
@@ -690,7 +724,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         : '';
         
       const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      const message = `${label}: ${result.notation} ${detailStr} = ${result.total}`;
+      const message = `${label}: ${notation} ${detailStr} = ${result.total}`;
       
       get().addLog(message, 'info');
 
