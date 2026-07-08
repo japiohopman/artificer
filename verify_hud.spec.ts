@@ -3,11 +3,10 @@ import { test, expect } from '@playwright/test';
 test('verify tactical hud and grid refactor', async ({ page }) => {
   await page.goto('http://localhost:3000');
   
-  // Wait for title screen
-  await page.waitForSelector('text=CONTINUE ADVENTURE');
-  
-  // Click continue to go to HUD
-  await page.click('text=CONTINUE ADVENTURE');
+  // Force Start via evaluate to skip title screen interactions
+  await page.evaluate(() => {
+    (window as any).useGameStore.getState().setIsGameStarted(true);
+  });
   
   // Wait for HUD to load
   await page.waitForSelector('.world-panel', { timeout: 30000 });

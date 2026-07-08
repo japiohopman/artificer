@@ -52,5 +52,29 @@ export const SOUND_MANIFEST: Record<string, ArcaneEffect> = {
       pattern: "living",
       duration: 5000
     }
+  },
+  "heavy_thunder_low_rumble_rain": {
+    sound: "/assets/sounds/sfx/heavy_thunder_low_rumble_rain.wav",
+    layer: 11 // Weather
+  },
+  "metallic_slot_in_lock": {
+    sound: "/assets/sounds/sfx/metallic_slot_in_lock.wav",
+    layer: 8 // UI Feedback
+  },
+  "heavy_steel_armor_fastening": {
+    sound: "/assets/sounds/sfx/heavy_steel_armor_fastening.wav",
+    layer: 7 // Equipment SFX
+  },
+  "echoing_cave_drips": {
+    sound: "/assets/sounds/ambient/echoing_cave_drips.wav",
+    layer: 3 // Environment
+  },
+  "paper_rustle_map_journal": {
+    sound: "/assets/sounds/ambient/paper_rustle_map_journal.wav",
+    layer: 8 // UI Feedback
+  },
+  "heavy_wooden_door_creak": {
+    sound: "/assets/sounds/ambient/heavy_wooden_door_creak.wav",
+    layer: 3 // Environment
   }
 };
