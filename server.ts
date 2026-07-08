@@ -486,6 +486,12 @@ async function startServer() {
 
   app.get("/api/audio/history/:id/audio", async (req, res) => {
     const { id } = req.params;
+
+    // Sanitize ID to prevent SSRF or path traversal
+    if (!id || !/^[a-zA-Z0-9_-]+$/.test(id)) {
+      return res.status(400).json({ error: "Invalid history item ID" });
+    }
+
     const accountIndex = parseInt(req.query.accountIndex as string || "0");
     const apiKey = getElevenLabsKey(accountIndex);
 
@@ -494,7 +500,7 @@ async function startServer() {
         return res.status(500).json({ error: "Missing ElevenLabs API key" });
       }
 
-      const response = await fetch(`https://api.elevenlabs.io/v1/history/${id}/audio`, {
+      const response = await fetch(`https://api.elevenlabs.io/v1/history/${encodeURIComponent(id)}/audio`, {
         headers: { "xi-api-key": apiKey }
       });
 
