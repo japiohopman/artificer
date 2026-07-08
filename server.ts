@@ -498,6 +498,38 @@ async function startServer() {
     }
   });
 
+  app.get("/api/audio/list", async (req, res) => {
+    const baseDir = path.join(process.cwd(), "public/assets/sounds");
+
+    async function getFiles(dir: string, category: string = ""): Promise<any[]> {
+      const entries = await fs.readdir(dir, { withFileTypes: true });
+      const files = await Promise.all(entries.map(async (entry) => {
+        const fullPath = path.join(dir, entry.name);
+        const relCategory = category ? `${category}/${entry.name}` : entry.name;
+
+        if (entry.isDirectory()) {
+          return getFiles(fullPath, entry.name);
+        } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
+          return {
+            name: entry.name,
+            category: category || "uncategorized",
+            path: `/assets/sounds/${category ? category + "/" : ""}${entry.name}`
+          };
+        }
+        return [];
+      }));
+      return files.flat();
+    }
+
+    try {
+      const allFiles = await getFiles(baseDir);
+      res.json(allFiles);
+    } catch (error) {
+      console.error("Error listing audio files:", error);
+      res.status(500).json({ error: "Failed to list audio files" });
+    }
+  });
+
   app.post("/api/ai/optimize-sound-prompt", async (req, res) => {
     const { prompt, category } = req.body;
     const apiKey = process.env.GEMINI_API_KEY;
