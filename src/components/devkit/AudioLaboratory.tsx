@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GameIcon } from '../../game_icons';
-import { SOUND_MANIFEST } from '../../services/audio/audioManifest';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { playClickSound, playSuccessSound } from '../../services/storageService';
 import { motion, AnimatePresence } from 'motion/react';
