@@ -66,7 +66,9 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'monsters' | 'materials' | 'equipment' | 'backgrounds' | 'npcs' | 'test' | 'combat' | 'simulator' | 'jane' | 'codex' | 'world' | 'flags'>('monsters');
+  const [activeTab, setActiveTab] = useState<'codex' | 'world' | 'flags' | 'generators' | 'testers'>('codex');
+  const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'jane' | 'backgrounds'>('npcs');
+  const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
   const [editingCharId, setEditingCharId] = useState<string | null>(null);
@@ -93,12 +95,12 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   const [selectedMonsterCategory, setSelectedMonsterCategory] = useState<string>('beast');
 
   useEffect(() => {
-    if (editingItem && activeTab === 'monsters' && editingItem.name) {
+    if (editingItem && activeGenerator === 'monsters' && editingItem.name) {
       setCustomWikiUrl(getPredictedWikiUrl(editingItem.name));
     } else {
       setCustomWikiUrl('');
     }
-  }, [editingItem?.name, activeTab]);
+  }, [editingItem?.name, activeGenerator]);
 
   const safeString = (val: any): string => {
     if (val === null || val === undefined) return "";
@@ -267,25 +269,27 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       
       // Context-aware tab selection
       if (initialMonster) {
+        setActiveTab('generators');
         // Check if it's monster or item
         if (initialMonster.challenge_rating !== undefined || initialMonster.type) {
-          setActiveTab('monsters');
+          setActiveGenerator('monsters');
         } else if (initialMonster.material_category) {
-          setActiveTab('materials');
+          setActiveGenerator('materials');
         } else {
-          setActiveTab('equipment');
+          setActiveGenerator('equipment');
         }
       } else if (currentExplorerTab) {
-        if (currentExplorerTab === 'enemies') setActiveTab('monsters');
-        else if (currentExplorerTab === 'materials') setActiveTab('materials');
-        else setActiveTab('equipment');
+        setActiveTab('generators');
+        if (currentExplorerTab === 'enemies') setActiveGenerator('monsters');
+        else if (currentExplorerTab === 'materials') setActiveGenerator('materials');
+        else setActiveGenerator('equipment');
       }
     }
   }, [isOpen]);
 
   useEffect(() => {
     setSelectedCategory(null);
-  }, [activeTab]);
+  }, [activeTab, activeGenerator]);
 
   // Update editing item when initialMonster changes
   useEffect(() => {
@@ -305,17 +309,17 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     
     // 1. Check current item
     let currentList: any[] = [];
-    if (activeTab === 'monsters') currentList = monstersList;
-    else if (activeTab === 'materials') currentList = materialsList;
-    else if (activeTab === 'equipment') {
+    if (activeGenerator === 'monsters') currentList = monstersList;
+    else if (activeGenerator === 'materials') currentList = materialsList;
+    else if (activeGenerator === 'equipment') {
       // Use original equipment list to check for physical file presence
       currentList = useAtlasStore.getState().equipmentList;
     }
 
     const jsonExists = currentList.some(m => m.index === item.index);
     const wikiExists = !!item.lore || !!item.wikiData || !!item.desc;
-    const bgExists = activeTab === 'monsters' ? !!item.background_type : true;
-    const xpExists = activeTab === 'monsters' ? (item.xp !== undefined && item.xp > 0) : true;
+    const bgExists = activeGenerator === 'monsters' ? !!item.background_type : true;
+    const xpExists = activeGenerator === 'monsters' ? (item.xp !== undefined && item.xp > 0) : true;
 
     setChecklist(prev => ({
       ...prev,
@@ -351,8 +355,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     if (!editingItem) return;
     setIsChecking(true);
     try {
-      const category = activeTab === 'materials' ? 'Materials' : (editingItem.category || 'Equipment');
-      const subCategory = activeTab === 'materials' ? editingItem.material_sub_category : undefined;
+      const category = activeGenerator === 'materials' ? 'Materials' : (editingItem.category || 'Equipment');
+      const subCategory = activeGenerator === 'materials' ? editingItem.material_sub_category : undefined;
       const desc = await generateItemDescription(editingItem.name || '', category, subCategory);
       if (desc) {
         updateField('desc', [desc]);
@@ -391,7 +395,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       const wikiUrl = customWikiUrl || `https://forgottenrealms.fandom.com/wiki/${editingItem.name?.replace(/\s+/g, '_')}`;
       setCustomWikiUrl(wikiUrl);
       
-      if (activeTab === 'monsters') {
+      if (activeGenerator === 'monsters') {
         const result = await scrapeMonsterWiki(editingItem.name || '', wikiUrl);
         if (result) {
           updateField('lore', result.lore);
@@ -421,8 +425,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     if (!editingItem) return;
     setIsChecking(true);
     try {
-      const category = activeTab === 'monsters' ? 'monsters' : 
-                      activeTab === 'materials' ? 'materials' : 'equipment';
+      const category = activeGenerator === 'monsters' ? 'monsters' : 
+                      activeGenerator === 'materials' ? 'materials' : 'equipment';
       const newPrompt = await generateVisualPrompt(editingItem, category);
       if (newPrompt) {
         setPrompt(newPrompt);
@@ -684,12 +688,12 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       const dateStr = `${now.getDate()}-${now.getMonth() + 1}-${now.getFullYear()}`;
       const index = editingItem.index;
       
-      let category = activeTab === 'monsters' ? 'enemies' : 
-                     activeTab === 'materials' ? 'crafting' : 
-                     activeTab === 'equipment' ? 'equipment' : '';
+      let category = activeGenerator === 'monsters' ? 'enemies' : 
+                     activeGenerator === 'materials' ? 'crafting' : 
+                     activeGenerator === 'equipment' ? 'equipment' : '';
       
       // Check if it's a magic item (Wondrous Items category or non-common rarity)
-      if (activeTab === 'equipment' && 
+      if (activeGenerator === 'equipment' && 
           (String(editingItem.category).toLowerCase().includes('wondrous') || 
            (editingItem.rarity && editingItem.rarity !== 'Common'))) {
         category = 'magic_items';
@@ -722,7 +726,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
       // Split Lore Logic for Monsters
       let lorePath: string | null = null;
-      if (activeTab === 'monsters' && (editingItem.lore || editingItem.wikiData)) {
+      if (activeGenerator === 'monsters' && (editingItem.lore || editingItem.wikiData)) {
         lorePath = `/assets/atlas/enemies/enemies_wiki/${index}.json`;
         
         const wikiDataToSave = {
@@ -755,7 +759,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       }
 
       // 3. Update Category if it's a monster
-      if (activeTab === 'monsters' && selectedMonsterCategory) {
+      if (activeGenerator === 'monsters' && selectedMonsterCategory) {
         await updateMonsterCategory(selectedMonsterCategory, index, editingItem.name);
       }
       
@@ -763,7 +767,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       setItemDataMap(prev => ({ ...prev, [itemToSave.index!]: itemToSave }));
       onMonsterUpdated(itemToSave);
       playSuccessSound();
-      alert(`${activeTab.slice(0, -1)} asset successfully baked to repository!`);
+      alert(`${activeGenerator.slice(0, -1)} asset successfully baked to repository!`);
     } catch (err) {
       console.error(err);
       playFailSound();
@@ -842,18 +846,11 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
           {/* Secondary Header: Tab Manager */}
           <div className="bg-[#1e1e1e] flex items-center border-b border-white/5 overflow-x-auto scrollbar-none">
             {[
-              { id: 'monsters', icon: (props: any) => <GameIcon name="identity" {...props} />, label: 'ENEMIES' },
-              { id: 'materials', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'MATERIALS' },
-              { id: 'equipment', icon: (props: any) => <GameIcon name="package" {...props} />, label: 'EQUIPMENT' },
-              { id: 'npcs', icon: (props: any) => <GameIcon name="avatar" {...props} />, label: 'NPCS' },
-              { id: 'test', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTER' },
-              { id: 'combat', icon: (props: any) => <GameIcon name="attack" {...props} />, label: 'COMBAT' },
-              { id: 'simulator', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'SIMULATOR' },
-              { id: 'jane', icon: (props: any) => <GameIcon name="map" {...props} />, label: 'JANE' },
-              { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
               { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
+              { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
               { id: 'flags', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'FLAGS' },
-              { id: 'backgrounds', icon: (props: any) => <GameIcon name="image" {...props} />, label: 'HABITATS' }
+              { id: 'generators', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'GENERATORS' },
+              { id: 'testers', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTERS' }
             ].map(tab => (
               <button 
                 key={tab.id}
@@ -877,19 +874,51 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
             ))}
           </div>
 
+          {/* Sub-Header for Generators or Testers */}
+          {(activeTab === 'generators' || activeTab === 'testers') && (
+            <div className="bg-[#161616] flex items-center border-b border-white/5 px-4 h-10 gap-6">
+               {activeTab === 'generators' ? (
+                 <>
+                   {[
+                     { id: 'npcs', label: 'NPC' },
+                     { id: 'monsters', label: 'Enemy' },
+                     { id: 'materials', label: 'Material' },
+                     { id: 'equipment', label: 'Equipment' },
+                     { id: 'jane', label: 'Jane (World)' },
+                     { id: 'backgrounds', label: 'Habitat' }
+                   ].map(gen => (
+                     <button
+                       key={gen.id}
+                       onClick={() => { setActiveGenerator(gen.id as any); playClickSound(); }}
+                       className={`text-[9px] font-black uppercase tracking-tighter transition-all ${activeGenerator === gen.id ? 'text-dragon-red underline underline-offset-4' : 'text-white/20 hover:text-white/40'}`}
+                     >
+                       {gen.label}
+                     </button>
+                   ))}
+                 </>
+               ) : (
+                 <>
+                   {[
+                     { id: 'npcs', label: 'NPC Slots' },
+                     { id: 'combat', label: 'Tactical Combat' },
+                     { id: 'simulator', label: 'Simulator' }
+                   ].map(test => (
+                     <button
+                       key={test.id}
+                       onClick={() => { setActiveTester(test.id as any); playClickSound(); }}
+                       className={`text-[9px] font-black uppercase tracking-tighter transition-all ${activeTester === test.id ? 'text-dragon-red underline underline-offset-4' : 'text-white/20 hover:text-white/40'}`}
+                     >
+                       {test.label}
+                     </button>
+                   ))}
+                 </>
+               )}
+            </div>
+          )}
+
           {/* Main Space */}
           <div className="flex-1 flex overflow-hidden">
-            {activeTab === 'npcs' ? (
-              <NPCGenerator onSave={() => loadAllLists()} />
-            ) : activeTab === 'test' ? (
-              <NPCTester />
-            ) : activeTab === 'combat' ? (
-              <CombatTester />
-            ) : activeTab === 'simulator' ? (
-              <Simulator />
-            ) : activeTab === 'jane' ? (
-              <Jane />
-            ) : activeTab === 'codex' ? (
+            {activeTab === 'codex' ? (
               <AssetExplorer />
             ) : activeTab === 'world' ? (
               <WorldExplorer />
@@ -899,7 +928,17 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                     <FlagManager />
                  </div>
               </div>
-            ) : activeTab !== 'backgrounds' ? (
+            ) : activeTab === 'testers' ? (
+              <>
+                {activeTester === 'npcs' && <NPCTester />}
+                {activeTester === 'combat' && <CombatTester />}
+                {activeTester === 'simulator' && <Simulator />}
+              </>
+            ) : activeTab === 'generators' && activeGenerator === 'npcs' ? (
+              <NPCGenerator onSave={() => loadAllLists()} />
+            ) : activeTab === 'generators' && activeGenerator === 'jane' ? (
+              <Jane />
+            ) : activeTab === 'generators' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
                 <div className="w-64 border-r border-white/5 flex flex-col bg-[#1e1e1e]">
@@ -919,7 +958,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">
-                          {(activeTab === 'equipment' || activeTab === 'materials') && selectedCategory ? 'Current Scope' : 'Root Selection'}
+                          {(activeGenerator === 'equipment' || activeGenerator === 'materials') && selectedCategory ? 'Current Scope' : 'Root Selection'}
                         </label>
                         <div className="flex items-center gap-2">
                           <button 
@@ -928,7 +967,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 name: 'New Entity',
                                 index: 'new-entity',
                                 size: 'Medium',
-                                type: activeTab === 'monsters' ? 'Humanoid' : 'Misc',
+                                type: activeGenerator === 'monsters' ? 'Humanoid' : 'Misc',
                                 stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
                                 rarity: 'Common',
                                 challenge_rating: '1',
@@ -944,7 +983,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           >
                             + NEW
                           </button>
-                          {(activeTab === 'equipment' || activeTab === 'materials') && selectedCategory && (
+                          {(activeGenerator === 'equipment' || activeGenerator === 'materials') && selectedCategory && (
                             <button 
                               onClick={() => setSelectedCategory(null)}
                               className="text-[9px] font-bold text-dragon-red uppercase tracking-widest hover:text-white transition-colors"
@@ -956,18 +995,18 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                         </div>
                       </div>
                       <div className="grid grid-cols-1 gap-px bg-white/5 rounded overflow-hidden">
-                          {(activeTab === 'monsters' ? monstersList : 
-                            activeTab === 'materials' && !selectedCategory ? storeMaterialCategories :
-                            activeTab === 'materials' && selectedCategory ? (storeMaterialCategories.find(c => c.index === selectedCategory)?.materials || []) :
-                            activeTab === 'equipment' && !selectedCategory ? storeEquipmentCategories :
-                            activeTab === 'equipment' && selectedCategory ? (storeEquipmentCategories.find(c => c.index === selectedCategory)?.equipment || []) :
+                          {(activeGenerator === 'monsters' ? monstersList : 
+                            activeGenerator === 'materials' && !selectedCategory ? storeMaterialCategories :
+                            activeGenerator === 'materials' && selectedCategory ? (storeMaterialCategories.find(c => c.index === selectedCategory)?.materials || []) :
+                            activeGenerator === 'equipment' && !selectedCategory ? storeEquipmentCategories :
+                            activeGenerator === 'equipment' && selectedCategory ? (storeEquipmentCategories.find(c => c.index === selectedCategory)?.equipment || []) :
                             []).map((mOrIndex, i) => {
                               // Resolve item if it's an index
                               let m = mOrIndex;
                               if (typeof mOrIndex === 'string') {
-                                if (activeTab === 'equipment') {
+                                if (activeGenerator === 'equipment') {
                                   m = equipmentList.find(e => e.index === mOrIndex) || { index: mOrIndex, name: mOrIndex };
-                                } else if (activeTab === 'materials') {
+                                } else if (activeGenerator === 'materials') {
                                   m = materialsList.find(e => e.index === mOrIndex) || { index: mOrIndex, name: mOrIndex };
                                 }
                               }
@@ -979,23 +1018,23 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                 key={`${m.index}-${i}`}
                                 title={safeString(m.name)}
                                 onClick={async () => {
-                                  if ((activeTab === 'equipment' || activeTab === 'materials') && !selectedCategory) {
+                                  if ((activeGenerator === 'equipment' || activeGenerator === 'materials') && !selectedCategory) {
                                     setSelectedCategory(m.index);
                                     return;
                                   }
 
                                   let data = itemDataMap[m.index];
                                   if (!data) {
-                                    if (activeTab === 'monsters') data = await fetchMonsterData(m.index);
-                                    else if (activeTab === 'materials') data = await fetchMaterialData(m.index);
-                                    else if (activeTab === 'equipment') data = await fetchEquipmentData(m.index);
+                                    if (activeGenerator === 'monsters') data = await fetchMonsterData(m.index);
+                                    else if (activeGenerator === 'materials') data = await fetchMaterialData(m.index);
+                                    else if (activeGenerator === 'equipment') data = await fetchEquipmentData(m.index);
                                     
                                     if (data) {
-                                      if (activeTab === 'equipment' && !data.category) {
+                                      if (activeGenerator === 'equipment' && !data.category) {
                                         const mapping = useAtlasStore.getState().equipmentCategoryMapping;
                                         if (mapping[m.index]) data.category = mapping[m.index];
                                       }
-                                      if (activeTab === 'materials' && !data.category) {
+                                      if (activeGenerator === 'materials' && !data.category) {
                                         const mapping = useAtlasStore.getState().materialCategoryMapping;
                                         if (mapping[m.index]) data.category = mapping[m.index];
                                       }
@@ -1028,7 +1067,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                     </span>
                                   )}
                                 </div>
-                                {(activeTab === 'equipment' || activeTab === 'materials') && !selectedCategory && (
+                                {(activeGenerator === 'equipment' || activeGenerator === 'materials') && !selectedCategory && (
                                   <span className="text-[9px] opacity-40 ml-auto">{m.totalAssets || (m.equipment?.length || m.materials?.length || 0)}</span>
                                 )}
                               </button>
@@ -1086,7 +1125,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                         {checklist[step.key as keyof typeof checklist] ? (
                           <span className="text-green-500 font-bold">[OK]</span>
                         ) : (
-                          <span className="text-dragon-red animate-pulse cursor-pointer hover:underline" onClick={step.key === 'jsonExists' ? handleSave : step.key === 'wikiExists' ? (activeTab === 'monsters' ? scrapeWiki : generateDescription) : step.key === 'promptReady' ? generatePrompt : undefined}>[FIX]</span>
+                          <span className="text-dragon-red animate-pulse cursor-pointer hover:underline" onClick={step.key === 'jsonExists' ? handleSave : step.key === 'wikiExists' ? (activeGenerator === 'monsters' ? scrapeWiki : generateDescription) : step.key === 'promptReady' ? generatePrompt : undefined}>[FIX]</span>
                         )}
                       </div>
                     ))}
@@ -1102,8 +1141,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                       <div className="p-4 border-b border-white/5 flex items-center justify-between bg-black/20">
                         <div className="flex items-center gap-4">
                           <div className="p-2 bg-dragon-red/10 rounded border border-dragon-red/20 text-dragon-red">
-                            {activeTab === 'monsters' ? <GameIcon name="identity" size={16} color="currentColor" /> : 
-                             activeTab === 'materials' ? <GameIcon name="magic_effect" size={16} color="currentColor" /> :
+                            {activeGenerator === 'monsters' ? <GameIcon name="identity" size={16} color="currentColor" /> : 
+                             activeGenerator === 'materials' ? <GameIcon name="magic_effect" size={16} color="currentColor" /> :
                              <GameIcon name="package" size={16} color="currentColor" />}
                           </div>
                           <div>
@@ -1218,7 +1257,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                         </div>
 
                         {/* Lore Binder Section */}
-                        {activeTab === 'monsters' && (
+                        {activeGenerator === 'monsters' && (
                           <div className="space-y-4 pt-6 border-t border-white/5">
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-2 text-dragon-red">
@@ -1329,7 +1368,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           </div>
                         )}
 
-                        {activeTab === 'monsters' && (
+                        {activeGenerator === 'monsters' && (
                           <div className="space-y-6 pt-6 border-t border-white/5 bg-black/5 p-4 rounded-lg">
                             <div className="flex items-center gap-2 text-dragon-red">
                                <GameIcon name="adjust" size={16} color="currentColor" />
@@ -1575,7 +1614,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             </select>
                           </div>
 
-                          {activeTab === 'monsters' && (
+                          {activeGenerator === 'monsters' && (
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Target Category</label>
                               <select 
@@ -1591,7 +1630,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             </div>
                           )}
 
-                          {activeTab !== 'monsters' && (
+                          {activeGenerator !== 'monsters' && (
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Asset_Tier [0-3]</label>
                               <div className="flex gap-1">
@@ -1635,7 +1674,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             </div>
                           )}
 
-                          {activeTab === 'monsters' && (
+                          {activeGenerator === 'monsters' && (
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">XP_VALUE</label>
                               <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
@@ -1651,7 +1690,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                             </div>
                           )}
 
-                          {activeTab !== 'monsters' && (
+                          {activeGenerator !== 'monsters' && (
                             <div className="space-y-1.5">
                               <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Material_Cost</label>
                               <div className="flex items-center bg-white/5 border border-white/10 rounded overflow-hidden">
@@ -1685,7 +1724,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           </div>
                         </div>
 
-                        {activeTab === 'monsters' ? (
+                        {activeGenerator === 'monsters' ? (
                           <div className="grid grid-cols-2 gap-6 pb-6 border-b border-white/5">
                             {/* Monster Parts Section */}
                             <div className="space-y-3">
@@ -1866,14 +1905,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                     className="w-full bg-white/5 border border-white/10 p-2 text-[11px] text-white/80 rounded focus:outline-none focus:border-dragon-red/50 transition-colors"
                                   >
                                     <option value="" className="bg-[#1a1a1a]">UNASSIGNED</option>
-                                    {(activeTab === 'equipment' ? equipmentCategories : materialCategories).map(cat => (
+                                    {(activeGenerator === 'equipment' ? equipmentCategories : materialCategories).map(cat => (
                                       <option key={cat} value={cat} className="bg-[#1a1a1a]">{cat.toUpperCase()}</option>
                                     ))}
                                   </select>
                                 </div>
                               </div>
 
-                              {activeTab === 'equipment' && (
+                              {activeGenerator === 'equipment' && (
                                 <div className="space-y-1.5">
                                   <div className="flex items-center justify-between">
                                     <label className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">Socket_Slots</label>
@@ -1983,7 +2022,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                               <GameIcon name="package" size={12} color="currentColor" /> Visualization_Engine
                             </label>
                             <div className="bg-black/20 border border-white/5 rounded-xl p-6">
-                              {activeTab === 'monsters' && (
+                              {activeGenerator === 'monsters' && (
                                 <EnemyImageGenerator 
                                   monsterName={editingItem.name || ''}
                                   monsterType={editingItem.type || ''}
@@ -1998,7 +2037,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   }}
                                 />
                               )}
-                              {activeTab === 'equipment' && (
+                              {activeGenerator === 'equipment' && (
                                 <EquipmentImageGenerator 
                                   itemName={editingItem.name || ''}
                                   itemType={editingItem.category || editingItem.type || ''}
@@ -2009,7 +2048,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   }}
                                 />
                               )}
-                              {activeTab === 'materials' && (
+                              {activeGenerator === 'materials' && (
                                 <MaterialImageGenerator 
                                   itemName={editingItem.name || ''}
                                   itemType={editingItem.material_sub_category || editingItem.category || ''}

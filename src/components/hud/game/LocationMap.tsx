@@ -110,12 +110,14 @@ export const LocationMap: React.FC = () => {
 
   if (!currentLocation?.map) return null;
 
-  const rawBounds = currentLocation.bounds || [[0, 0], [1000, 1000]];
-  // Handle xy order from wiki/json: [[xMin, yMin], [xMax, yMax]] -> Leaflet [[yMin, xMin], [yMax, xMax]]
-  const bounds: L.LatLngBoundsExpression = [
-    [rawBounds[0][1], rawBounds[0][0]],
-    [rawBounds[1][1], rawBounds[1][0]]
-  ];
+  const bounds: L.LatLngBoundsExpression = React.useMemo(() => {
+    const rawBounds = currentLocation.bounds || [[0, 0], [1000, 1000]];
+    // Handle xy order from wiki/json: [[xMin, yMin], [xMax, yMax]] -> Leaflet [[yMin, xMin], [yMax, xMax]]
+    return [
+      [rawBounds[0][1], rawBounds[0][0]],
+      [rawBounds[1][1], rawBounds[1][0]]
+    ];
+  }, [currentLocation.bounds]);
 
   const mapUrl = activeLayer || currentLocation.map || '';
 

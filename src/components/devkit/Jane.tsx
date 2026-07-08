@@ -15,6 +15,13 @@ interface WorldLocation {
   image?: string;
   tags: string[];
   metadata: Record<string, string>;
+  region?: string;
+  sub_region?: string;
+  continent?: string;
+  world?: string;
+  plain?: string;
+  geography?: string;
+  history?: string;
   [key: string]: any;
 }
 
@@ -29,7 +36,17 @@ export const Jane: React.FC = () => {
     description: '',
     coordinates: { lat: 0, lng: 0 },
     tags: [],
-    metadata: {},
+    metadata: {
+      government: '',
+      military: '',
+      population: '',
+      organizations: '',
+      trade: ''
+    },
+    region: 'Sword Coast',
+    continent: 'Faerun',
+    world: 'Toril',
+    plain: 'Prime Material'
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
@@ -233,10 +250,80 @@ export const Jane: React.FC = () => {
                 <textarea
                   value={location.description}
                   onChange={(e) => setLocation({ ...location, description: e.target.value })}
-                  rows={6}
+                  rows={4}
                   placeholder="Describe the atmosphere, architecture, and mood..."
                   title="Location Description"
                   className="w-full bg-white/5 border border-white/10 p-4 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all resize-none leading-relaxed"
+                />
+              </div>
+
+              {/* Advanced Metadata (Aligning with city.schema.json) */}
+              <div className="grid grid-cols-2 gap-6 p-4 bg-white/5 rounded-2xl border border-white/10">
+                 <div className="space-y-4">
+                    <div className="space-y-2">
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">Government</label>
+                       <input 
+                         type="text" 
+                         value={location.metadata?.government || ''} 
+                         onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, government: e.target.value } })}
+                         className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded"
+                       />
+                    </div>
+                    <div className="space-y-2">
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">Population</label>
+                       <input 
+                         type="text" 
+                         value={location.metadata?.population || ''} 
+                         onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, population: e.target.value } })}
+                         className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded"
+                       />
+                    </div>
+                 </div>
+                 <div className="space-y-4">
+                    <div className="space-y-2">
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">Major Organizations</label>
+                       <input 
+                         type="text" 
+                         value={location.metadata?.organizations || ''} 
+                         onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, organizations: e.target.value } })}
+                         className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded"
+                       />
+                    </div>
+                    <div className="space-y-2">
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">Trade & Economy</label>
+                       <input 
+                         type="text" 
+                         value={location.metadata?.trade || ''} 
+                         onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, trade: e.target.value } })}
+                         className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded"
+                       />
+                    </div>
+                 </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4">
+                 {['region', 'continent', 'world'].map(key => (
+                    <div key={key} className="space-y-2">
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">{key}</label>
+                       <input 
+                         type="text" 
+                         value={(location as any)[key] || ''} 
+                         onChange={(e) => setLocation({ ...location, [key]: e.target.value })}
+                         className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded"
+                       />
+                    </div>
+                 ))}
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-[10px] font-black text-white/20 uppercase tracking-widest">Historical Lore (Markdown)</label>
+                <textarea
+                  value={location.history || ''}
+                  onChange={(e) => setLocation({ ...location, history: e.target.value })}
+                  rows={4}
+                  placeholder="Record the chronicles of this place..."
+                  title="Location History"
+                  className="w-full bg-white/5 border border-white/10 p-4 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all resize-none font-serif leading-relaxed"
                 />
               </div>
             </div>

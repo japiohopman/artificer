@@ -44,8 +44,16 @@ export interface CombatMonster {
   viewDirection: number; // 0:N, 1:E, 2:S, 3:W
   perception: number;
   speed: number; // in cells
-  size?: 'Medium' | 'Large';
   lastKnownPlayerPos?: { x: number; y: number };
+  stats?: {
+    str: number;
+    dex: number;
+    con: number;
+    int: number;
+    wis: number;
+    cha: number;
+  };
+  armor_class?: any;
 }
 
 export interface CombatState {
@@ -338,8 +346,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       awareness: 'idle',
       viewDirection: 3,
       perception: 10,
-      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6,
-      size: (monster.size === 'Large' || monster.size === 'Huge' || monster.size === 'Gargantuan') ? 'Large' : 'Medium'
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
     };
 
     return {
@@ -530,38 +537,25 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   startCombat: async () => {
-    const { combatState, addLog } = get();
+    const { combatState } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
-    const { characters, restoreActionEconomy } = useCharacterStore.getState();
+    const { characters } = useCharacterStore.getState();
     const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
 
-    addLog("Rolling initiative...", "info");
-
+    // Roll initiative for everyone
     const order = [
-      ...activeParty.map((c: any) => {
-        const dexMod = Math.floor((c.stats.dex - 10) / 2) || 0;
-        const roll = Math.floor(Math.random() * 20) + 1;
-        
-        // Restore action economy for all party members at combat start
-        restoreActionEconomy(c.id);
-
-        return {
-          id: c.id,
-          name: c.name,
-          value: roll + dexMod,
-          isPlayer: true
-        };
-      }),
+      ...activeParty.map((c: any) => ({
+        id: c.id,
+        name: c.name,
+        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
+        isPlayer: true
+      })),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
-        value: Math.floor(Math.random() * 20) + 1 + 1
+        value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0)
       }))
     ].sort((a, b) => b.value - a.value);
-
-    order.forEach(entry => {
-      addLog(`${entry.name} rolled ${entry.value} for initiative.`, "info");
-    });
 
     set((state) => ({
       combatState: {
@@ -570,8 +564,6 @@ export const useGameStore = create<GameState>((set, get) => ({
         activeTurnIndex: 0
       }
     }));
-
-    addLog(`Combat started! ${order[0].name} goes first.`, "success");
   },
 
   resolveCombatAction: async (actor, target, action) => {
@@ -579,37 +571,8 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { useCharacterStore } = await import('./useCharacterStore');
     const { modifyHp } = useCharacterStore.getState();
 
-    // Determine attack bonus and damage from action data (stat blocks)
-    let attackBonus = action.attack_bonus || 0;
-    let damageDice = '1d6';
-    let damageType = 'slashing';
-
-    if (action.data) {
-      // Spell data
-      if (action.category === 'Spells') {
-        // Find damage in spell.damage
-        const spellDamage = action.data.damage;
-        if (spellDamage && spellDamage.damage_at_slot_level) {
-          const level = action.data.level || 1;
-          damageDice = spellDamage.damage_at_slot_level[level.toString()] || damageDice;
-        }
-        damageType = spellDamage?.damage_type?.name || damageType;
-      } 
-      // Monster action data
-      else {
-        attackBonus = action.data.attack_bonus || attackBonus;
-        const monsterDamage = action.data.damage?.[0];
-        if (monsterDamage) {
-          damageDice = monsterDamage.damage_dice || damageDice;
-          damageType = monsterDamage.damage_type?.name || damageType;
-        }
-      }
-    } else if (action.damage?.[0]) {
-       damageDice = action.damage[0].damage_dice || damageDice;
-       damageType = action.damage[0].damage_type?.name || damageType;
-    }
-
     // 1. Roll to Hit
+    const attackBonus = action.attack_bonus || 0;
     const toHitNotation = `1d20+${attackBonus}`;
 
     addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
@@ -620,19 +583,26 @@ export const useGameStore = create<GameState>((set, get) => ({
     const d20 = Math.floor(Math.random() * 20) + 1;
     const totalHit = d20 + attackBonus;
 
-    // Get target AC
+    // Get target AC from Atlas-compatible data
     let targetAC = 10;
     const { combatState } = get();
 
     if (target.id === 'player') {
-       // Ideally we'd get this from useCharacterStore, but for now use default + condition
-       targetAC = 15;
-    } else if (Array.isArray(target.armor_class)) {
-      targetAC = target.armor_class[0]?.value || 10;
-    } else if (typeof target.armor_class === 'number') {
-      targetAC = target.armor_class;
-    } else if (target.armor_class?.base) {
-      targetAC = target.armor_class.base;
+       // Fetch target character's AC calculation from character store
+       const targetChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId);
+       targetAC = (targetChar as any)?.stats?.ac || (targetChar as any)?.ac || 10;
+    } else if (target.armor_class !== undefined) {
+      if (Array.isArray(target.armor_class)) {
+        targetAC = target.armor_class[0]?.value || 10;
+      } else if (typeof target.armor_class === 'number') {
+        targetAC = target.armor_class;
+      } else if (target.armor_class?.base) {
+        targetAC = target.armor_class.base;
+      } else {
+        targetAC = target.armor_class;
+      }
+    } else if (target.stats?.dex) {
+       targetAC = 10 + Math.floor((target.stats.dex - 10) / 2);
     }
 
     // Apply conditions (e.g., Defending +2 AC)
@@ -648,6 +618,10 @@ export const useGameStore = create<GameState>((set, get) => ({
       addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
 
       // 2. Roll Damage
+      const damageInfo = action.damage?.[0];
+      const damageDice = damageInfo?.damage_dice || '1d6';
+      const damageType = damageInfo?.damage_type?.name || 'slashing';
+
       // Double dice for crits (simplified)
       const finalDice = isCrit ? damageDice.replace(/(\d+)d/, (match: string, num: string) => `${parseInt(num) * 2}d`) : damageDice;
 
@@ -699,6 +673,15 @@ export const useGameStore = create<GameState>((set, get) => ({
     import('../dice_roller/diceService').then(({ diceService }) => {
       const notation = `1d${dieType}${modifier >= 0 ? '+' : ''}${modifier !== 0 ? modifier : ''}`;
       const result = diceService.rollBackground(notation, label);
+
+      const rollDetails = result.rolls
+        .filter(r => r.valid !== false)
+        .map(r => r.result)
+        .join(' + ');
+      const modStr = result.modifier !== 0 ? ` ${result.modifier > 0 ? '+' : ''} ${result.modifier}` : '';
+      const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
+      get().addLog(`${label}: ${result.notation} ${detailStr} = ${result.total}`, 'info');
+
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
@@ -724,7 +707,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         : '';
         
       const detailStr = rollDetails ? `(${rollDetails}${modStr})` : '';
-      const message = `${label}: ${notation} ${detailStr} = ${result.total}`;
+      const message = `${label}: ${result.notation} ${detailStr} = ${result.total}`;
       
       get().addLog(message, 'info');
 

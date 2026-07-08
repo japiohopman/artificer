@@ -4,18 +4,44 @@ import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 
-export const MapNavigation: React.FC = () => {
+interface MapNavigationProps {
+  className?: string;
+  onCenterParty?: () => void;
+  onZoomIn?: () => void;
+  onZoomOut?: () => void;
+  currentMiles?: number;
+  zoomLevel?: number;
+}
+
+export const MapNavigation: React.FC<MapNavigationProps> = ({ 
+  className, 
+  onCenterParty, 
+  onZoomIn, 
+  onZoomOut,
+  currentMiles,
+  zoomLevel
+}) => {
   const { mapZoom, setMapZoom } = useWorldStore();
   const { isMapPanEnabled, setIsMapPanEnabled } = useUIStore();
 
   const handleLocateParty = () => {
-    // This is handled by WorldMap.tsx watching for a specific state if needed, 
-    // or we can just reset zoom for now as a 'locate'
-    setMapZoom(3);
+    if (onCenterParty) {
+      onCenterParty();
+    } else {
+      setMapZoom(3);
+    }
   };
 
   return (
-    <div className="flex flex-col gap-2 p-2 bg-parchment-100/90 border-2 border-dragon-gold shadow-xl rounded-lg pointer-events-auto seamless-hud-unit">
+    <div className={cn(
+      "flex flex-col gap-2 p-2 bg-parchment-100/90 border-2 border-dragon-gold shadow-xl rounded-lg pointer-events-auto seamless-hud-unit",
+      className
+    )}>
+      {currentMiles !== undefined && (
+        <div className="px-2 py-1 bg-dragon-red/5 border-b border-dragon-gold/20 mb-1">
+           <span className="text-[8px] font-black text-dragon-red uppercase block text-center tracking-tighter">{Math.round(currentMiles)} Mi</span>
+        </div>
+      )}
       <button
         onClick={handleLocateParty}
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
@@ -27,14 +53,14 @@ export const MapNavigation: React.FC = () => {
       <div className="h-px bg-dragon-gold/20 mx-1" />
 
       <button
-        onClick={() => setMapZoom(Math.min(mapZoom + 1, 5))}
+        onClick={() => onZoomIn ? onZoomIn() : setMapZoom(Math.min(mapZoom + 1, 9))}
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
         title="Zoom In"
       >
         <GameIcon name="plus" size={18} />
       </button>
       <button
-        onClick={() => setMapZoom(Math.max(mapZoom - 1, 1))}
+        onClick={() => onZoomOut ? onZoomOut() : setMapZoom(Math.max(mapZoom - 1, 3))}
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
         title="Zoom Out"
       >

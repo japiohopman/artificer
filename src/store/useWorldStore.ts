@@ -3,7 +3,7 @@ import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
 import { useUIStore } from './useUIStore';
 
-export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy';
+export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy' | 'Blizzard' | 'Heatwave' | 'Hail' | 'Eerie' | 'Mystic';
 
 export interface SavedLocation {
   id: string;
@@ -16,7 +16,6 @@ export interface SavedLocation {
   coordinates?: { x?: number; y?: number; lat?: number; lng?: number };
   overlayMapUrl?: string;
   map?: string;
-  position?: [number, number];
   origin?: 'bottom-left' | 'top-left';
   subLocations?: any[];
   sub_location_files?: string[];
@@ -73,6 +72,7 @@ export interface WorldState {
   gameMonth: number;
   gameDay: number;
   gameTime: number; // minutes from midnight
+  temperature: number; // in Celsius or Fahrenheit, let's assume Celsius for now
 
   // Environmental Engine
   weather: WeatherType;
@@ -101,6 +101,7 @@ export interface WorldState {
   // Actions
   advanceTime: (minutes: number) => void;
   setWeather: (weather: WeatherType) => void;
+  setTemperature: (temp: number) => void;
   setRegion: (region: string) => void;
   setMapZoom: (zoom: number) => void;
   setIsFastForwarding: (isFastForwarding: boolean) => void;
@@ -132,6 +133,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   gameMonth: 1,
   gameDay: 1,
   gameTime: 480, // 8:00 AM
+  temperature: 18,
 
   weather: 'Sunny',
   currentRegion: 'Sword Coast',
@@ -276,21 +278,13 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   }),
 
   setWeather: (weather) => set({ weather }),
+  setTemperature: (temperature) => set({ temperature }),
   setRegion: (currentRegion) => set({ currentRegion }),
   setMapZoom: (mapZoom) => set({ mapZoom }),
   setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
-  setCurrentLocation: (currentLocation) => set((state) => ({ 
-    currentLocation,
-    partyLocation: {
-      ...state.partyLocation,
-      id: currentLocation.id,
-      name: currentLocation.name,
-      coordinates: currentLocation.coordinates,
-      position: currentLocation.position || (currentLocation.coordinates ? [currentLocation.coordinates.x || currentLocation.coordinates.lng, currentLocation.coordinates.y || currentLocation.coordinates.lat] : undefined)
-    }
-  })),
+  setCurrentLocation: (currentLocation) => set({ currentLocation }),
   setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
   setCurrentSubLocation: (currentSubLocation) => set({ currentSubLocation }),
   setCurrentShop: (currentShop) => set({ currentShop }),
@@ -354,10 +348,28 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     
     // 1% chance per game hour to change weather (approx 0.016% per minute)
     if (Math.random() < (0.01 * (minutesPassed / 60))) {
-      const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy'];
+      const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy', 'Blizzard', 'Heatwave', 'Hail', 'Eerie', 'Mystic'];
       const newWeather = weathers[Math.floor(Math.random() * weathers.length)];
       set({ weather: newWeather });
     }
+
+    // Dynamic Temperature Calculation
+    // Base temperature ranges from 10 to 25 based on time of day (coolest at 4 AM, warmest at 4 PM)
+    const hours = state.gameTime / 60;
+    const timeFactor = Math.sin((hours - 10) * Math.PI / 12); // -1 to 1
+    let newTemp = 18 + (timeFactor * 7);
+
+    // Weather impact
+    if (state.weather === 'Rainy') newTemp -= 3;
+    if (state.weather === 'Stormy') newTemp -= 5;
+    if (state.weather === 'Snowy') newTemp -= 15;
+    if (state.weather === 'Cloudy') newTemp -= 2;
+    if (state.weather === 'Foggy') newTemp -= 4;
+
+    // Small random fluctuation
+    newTemp += (Math.random() - 0.5) * 0.5;
+
+    set({ temperature: Math.round(newTemp * 10) / 10 });
 
     // Handle Movement
     if (state.isTraveling && state.destination && state.travelOrigin) {
@@ -458,8 +470,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
           travelProgress: newProgress,
           partyLocation: {
             ...state.partyLocation,
-            coordinates: { x: currentX, y: currentY },
-            position: [currentX, currentY] // Ensure position is also updated for WorldMap rendering
+            coordinates: { x: currentX, y: currentY }
           }
         });
 
