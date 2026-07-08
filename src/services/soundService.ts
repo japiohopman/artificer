@@ -26,6 +26,8 @@ class SoundEngine {
   }
 
   private getUrl(path: string): string {
+    if (path.startsWith('http')) return path;
+    
     // Check if path exists locally first (in public folder)
     // Actually, in the browser, /assets/... will resolve to localhost:3000/assets/...
     // If it's a relative path starting with /, it should be fine.

@@ -18,7 +18,14 @@ async function startServer() {
   app.use(express.json({ limit: '10mb' }));
 
   // Helper: Set correct MIME types for WASM and other assets
-  express.static.mime.define({ 'application/wasm': ['wasm'] });
+  express.static.mime.define({ 
+    'application/wasm': ['wasm'],
+    'audio/mpeg': ['mp3'],
+    'audio/wav': ['wav'],
+    'audio/ogg': ['ogg'],
+    'audio/aac': ['aac'],
+    'audio/flac': ['flac']
+  });
 
   // Serve static assets from public folder
   app.use(express.static(path.join(process.cwd(), 'public')));
@@ -166,24 +173,38 @@ async function startServer() {
         return res.status(fetchRes.status).json({ error: fetchRes.statusText });
       }
 
-      // If it's an image, pipe it
+      // If it's an image or audio, pipe it as binary
       const contentType = fetchRes.headers.get('content-type');
       const urlWithoutQuery = url.split('?')[0].toLowerCase();
       const isImage = contentType?.startsWith('image/') || 
                       urlWithoutQuery.match(/\.(webp|png|jpg|jpeg|gif|svg|avif)$/) ||
                       url.toLowerCase().match(/wiki_image|images/i);
+      const isAudio = contentType?.startsWith('audio/') ||
+                      urlWithoutQuery.match(/\.(mp3|wav|ogg|m4a|aac|flac)$/);
 
-      if (isImage) {
+      if (isImage || isAudio) {
         // Prioritize extensions if content-type is generic or missing
-        let targetContentType = contentType || 'image/webp';
-        if (urlWithoutQuery.endsWith('.webp')) targetContentType = 'image/webp';
-        else if (urlWithoutQuery.endsWith('.png')) targetContentType = 'image/png';
-        else if (urlWithoutQuery.endsWith('.jpg') || urlWithoutQuery.endsWith('.jpeg')) targetContentType = 'image/jpeg';
-        else if (urlWithoutQuery.endsWith('.svg')) targetContentType = 'image/svg+xml';
-        else if (urlWithoutQuery.endsWith('.avif')) targetContentType = 'image/avif';
+        let targetContentType = contentType;
         
-        res.setHeader('Content-Type', targetContentType);
-        // Add cache headers for images
+        if (isImage) {
+          targetContentType = targetContentType || 'image/webp';
+          if (urlWithoutQuery.endsWith('.webp')) targetContentType = 'image/webp';
+          else if (urlWithoutQuery.endsWith('.png')) targetContentType = 'image/png';
+          else if (urlWithoutQuery.endsWith('.jpg') || urlWithoutQuery.endsWith('.jpeg')) targetContentType = 'image/jpeg';
+          else if (urlWithoutQuery.endsWith('.svg')) targetContentType = 'image/svg+xml';
+          else if (urlWithoutQuery.endsWith('.avif')) targetContentType = 'image/avif';
+        } else if (isAudio) {
+          targetContentType = targetContentType || 'audio/mpeg';
+          if (urlWithoutQuery.endsWith('.mp3')) targetContentType = 'audio/mpeg';
+          else if (urlWithoutQuery.endsWith('.wav')) targetContentType = 'audio/wav';
+          else if (urlWithoutQuery.endsWith('.ogg')) targetContentType = 'audio/ogg';
+          else if (urlWithoutQuery.endsWith('.m4a')) targetContentType = 'audio/mp4';
+          else if (urlWithoutQuery.endsWith('.aac')) targetContentType = 'audio/aac';
+          else if (urlWithoutQuery.endsWith('.flac')) targetContentType = 'audio/flac';
+        }
+        
+        res.setHeader('Content-Type', targetContentType!);
+        // Add cache headers
         res.setHeader('Cache-Control', 'public, max-age=3600');
         
         const buffer = await fetchRes.arrayBuffer();
