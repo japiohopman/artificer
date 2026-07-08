@@ -459,6 +459,58 @@ async function startServer() {
     }
   });
 
+  app.get("/api/audio/history", async (req, res) => {
+    try {
+      const accountIndex = parseInt(req.query.accountIndex as string || "0");
+      const apiKey = getElevenLabsKey(accountIndex);
+
+      if (!apiKey) {
+        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+      }
+
+      const response = await fetch("https://api.elevenlabs.io/v1/history", {
+        headers: { "xi-api-key": apiKey }
+      });
+
+      if (!response.ok) {
+        return res.status(response.status).json({ error: "Failed to fetch history" });
+      }
+
+      const data = await response.json();
+      res.json(data);
+    } catch (error: any) {
+      console.error("[ElevenLabs] History fetch error:", error.message);
+      res.status(500).json({ error: "Internal server error during history fetch" });
+    }
+  });
+
+  app.get("/api/audio/history/:id/audio", async (req, res) => {
+    const { id } = req.params;
+    const accountIndex = parseInt(req.query.accountIndex as string || "0");
+    const apiKey = getElevenLabsKey(accountIndex);
+
+    try {
+      if (!apiKey) {
+        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+      }
+
+      const response = await fetch(`https://api.elevenlabs.io/v1/history/${id}/audio`, {
+        headers: { "xi-api-key": apiKey }
+      });
+
+      if (!response.ok) {
+        return res.status(response.status).json({ error: "Failed to fetch history audio" });
+      }
+
+      const buffer = await response.arrayBuffer();
+      res.setHeader("Content-Type", "audio/mpeg");
+      res.send(Buffer.from(buffer));
+    } catch (error: any) {
+      console.error("[ElevenLabs] History audio fetch error:", error.message);
+      res.status(500).json({ error: "Internal server error during history audio fetch" });
+    }
+  });
+
   app.post("/api/audio/generate-sfx", async (req, res) => {
     try {
       const { text, duration_seconds, prompt_influence, loop, accountIndex } = req.body;
