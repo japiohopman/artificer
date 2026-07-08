@@ -1,14 +1,25 @@
 # ⚔️ Tactical Combat Engine
 
-The **Tactical Combat Engine** provides a grid-based interface for resolving encounters within Faerûn. It translates the abstract stats in the Atlas (Enemies, Spells, Weapons) into spatial actions.
+The **Tactical Combat Engine** provides a grid-based interface for resolving encounters within Faerûn. Inspired by the [Aedif Tactical Grid](https://github.com/Aedif/tactical-grid), this system is being fully translated into React (TSX) to align with the Artificer architecture. It translates the abstract stats in the Atlas (Enemies, Spells, Weapons) into spatial actions.
+
+## ⚙️ Data Integrity
+- **Mandate**: All combat logic, including monster stats, ability effects, and equipment modifiers, must strictly utilize data from the `public/assets/atlas/` directory. Direct manual overrides in code are prohibited to ensure schema-driven consistency.
+
+## 🚧 Implementation Status
+- **Current State**: Initial TSX translation of the tactical grid is functional but incomplete. Core movement and initiative tracking are implemented.
+- **Pending**: Full feature parity with the reference implementation, advanced LoS, and deeper integration with atlas-driven monster abilities.
 
 ## 🧩 Spatial Mechanics
 
 ### 1. The Tactical Grid (`CombatGrid.tsx`)
 ![Tactical Overlay](../screenshots/tactical_overlay.png)
-- **Dimensions**: 12 x 8 grid.
+- **Dimensions**: 32 x 20 grid (640 total cells).
 - **Scale**: 1 Square = 5 Feet (60px in the UI).
 - **Coordinate System**: `[x, y]` integer-based grid.
+- **Rendering Engine**: Hybrid HTML5 Canvas + React.
+    - **Canvas**: Handles grid lines, terrain, walls, doors, and selective highlights (Selective Grid Mode).
+    - **React**: Manages token overlays, animations (Framer Motion), and drag-and-drop interactions.
+- **Selective Grid Mode**: To maintain immersion, the full grid is only rendered in a radius around the active character or the cursor.
 - **Unit Representation**:
     - **Players**: Circular tokens with avatar images or user icons, highlighted with a blue border and movement pulse.
     - **Monsters**: Circular tokens with monster images or identity icons, highlighted with a "Dragon Red" border.
@@ -28,11 +39,12 @@ The **Tactical Combat Engine** provides a grid-based interface for resolving enc
 ### 4. AI Awareness & Perception
 Monsters operate on a state machine driven by spatial awareness:
 - **Awareness States**:
-    - `idle`: Standard patrol/waiting.
+    - `idle`: Standard patrol/waiting. Standard rotation-based search.
     - `alert`: Searching for the player (usually triggered by sound or moving to the `lastKnownPlayerPos`).
     - `combat`: Actively engaging the player.
 - **View Cones**: Monsters have a 90-degree field of vision based on their `viewDirection` (N, E, S, W).
-- **Detection**: Entering a monster's view cone while in LoS triggers immediate combat. High proximity may trigger an `alert` state even outside the view cone.
+- **Detection**: Entering a monster's view cone while in LoS triggers immediate combat. High proximity (radius <= 3) triggers an `alert` state even outside the view cone.
+- **Threat Range**: Hovering over a monster reveals its potential movement and attack range (Red highlight).
 
 ### 5. Initiative System
 Combatants are organized into an **Initiative Queue**.

@@ -5,12 +5,15 @@ The **Weather System** provides atmospheric immersion and mechanical challenges 
 ## 🧩 Weather Simulation
 
 ### 1. Weather Types
+Increased weather variety is required to enhance immersion. The following base types and their variations will be implemented:
 - `Sunny`: Standard visibility and movement.
 - `Cloudy`: Normal mechanics, atmospheric change.
 - `Rainy`: Disadvantage on long-range attacks/Perception. Fires may be extinguished.
 - `Stormy`: Dangerous travel. Risk of lightning. Severe disadvantage on spatial checks.
 - `Snowy`: Difficult terrain. Cold hazards.
 - `Foggy`: Heavily obscured. Navigation checks required to avoid getting lost.
+
+**Iconography**: Use [Meteocons Fill Style](https://meteocons.com/icons/?style=fill) for all weather representations to ensure a high-fidelity visual experience.
 
 ### 2. Regional Patterns
 Weather is not global; it is filtered by the `region` in `WorldState`.

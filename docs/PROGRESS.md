@@ -23,7 +23,7 @@ We have completed the core infrastructure of Phase 2 and are now refining the si
 - [x] **Temporal Engine**: Implemented Calendar of Harptos and 24-hour clock.
 - [x] **Environmental Engine**: Dynamic weather cycles and region-aware movement penalties.
 - [x] **Travel System**: Automated pathing, speed calculation, and discovery logic.
-- [x] **Tactical Combat (v1)**: Grid-based movement (12x8), initiative tracking, and monster spawning.
+- [x] **Tactical Combat (v1)**: Grid-based movement (32x20), initiative tracking, and monster spawning.
 - [x] **Journal Module**: Campaign diary, quest log, and bestiary implementation.
 
 ### Phase 3: AI DM Integration
@@ -38,6 +38,7 @@ We have completed the core infrastructure of Phase 2 and are now refining the si
 ---
 
 ## 🏆 Recent Milestones
+- **2025-03-24**: Tactical Combat & 3D Physics Optimization. Enhanced CombatGrid with HTML5 Canvas rendering for better performance. Resolved 3D Dice Box initialization and physics engine loading issues (AMMO.WASM).
 - **2025-03-10**: Documentation Refresh. Synchronized all system docs with Phase 2 implementation. Documented Minigames and Store Slicing architecture.
 - **2025-02-26**: Completed World Map Migration. Implemented high-resolution pyramid tiles, custom coordinate scaling, and zoom-based marker visibility system.
 - **2025-02-24**: Transitioned to Phase 2. Initiated Store Slicing with `useWorldStore.ts`.
@@ -49,4 +50,4 @@ We have completed the core infrastructure of Phase 2 and are now refining the si
 2. **NPC Memory**: Implementing the relationship and interaction history system.
 3. **Soundscape**: Orchestrating mood-based audio transitions based on the environment.
 
-*Last Updated: 2025-03-10*
+*Last Updated: 2025-03-24*

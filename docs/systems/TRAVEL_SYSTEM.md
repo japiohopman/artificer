@@ -24,6 +24,7 @@ When travel is initiated, the system can enter a `isFastForwarding` state.
 Single-player convenience feature to bypass the real-time wait.
 - **Loading Screen**: Triggers a global `LoadingScreen` with rotating game art.
 - **Time Advance**: Instantly advances game time by the total estimated travel duration.
+- **Ration Consumption**: Automatically calculates and subtracts required rations (days passed * characters) from the party inventory.
 - **Resting**: Automatically accounts for resting/sleep requirements if travel spans multiple days.
 - **Repositioning**: Instantly teleports the party marker to the destination.
 
@@ -42,7 +43,7 @@ As the party travels, the area around their current coordinates is automatically
 ## 🧩 Components
 
 ### 1. `Travel.tsx`
-A standalone component (`src/components/core/Travel.tsx`) that handles the travel UI:
+A standalone component (`src/components/hud/game/Travel.tsx`) that handles the travel UI:
 - **Preparation View**: Calculates distance, ETA, and provision requirements (rations/water) based on D&D 5e rules and party capacity.
 - **Active Travel View**: Shows progress bar and provides "Fast Forward", "Skip Travel", and "Abort" controls.
 - **Integration**: Nested within the `WorldPanel.tsx` footer via a portal-driven modal.

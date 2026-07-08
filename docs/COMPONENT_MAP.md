@@ -41,7 +41,10 @@ Components related to character management and the save system.
 Heads-Up Display components for the active game session.
 - **`chat/`**: AI Chat interface and history.
 - **`game/`**: Game-state specific views like `ActionView` and `Rest`.
-- **`game/CombatGrid.tsx`**: Tactical grid overlay for turn-based combat.
+- **`game/CombatGrid.tsx`**: Tactical grid overlay for turn-based combat (32x20 grid).
+- **`game/Travel.tsx`**: Expedition management widget with FF/Skip logic.
+- **`game/LocationMap.tsx`**: Detailed sub-map renderer using `ImageOverlay`.
+- **`game/MapLegend.tsx`**: Dynamic legend that responds to map zoom tiers.
 - **`view/`**: World visualization components like `FirstPersonView` and `NPCDisplay`.
 - **`WorldMap.tsx`**: Interactive high-resolution tiled map system for Faerûn and Toril.
 - **`journal/`**: Components for the Campaign Journal, Quest Log, and Bestiary.

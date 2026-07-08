@@ -16,6 +16,14 @@ Icons are grouped by their functional role in the game:
 
 - **UI_ICONS (`ui.ts`)**: General interface elements (navigation, controls, common status indicators). Merged from former Core, Logistics, and Navigation maps.
 - **WORLD_ATLAS_ICONS (`world_atlas.ts`)**: Locations, regions, and landmarks for the world map and discovery systems. Recently expanded with more settlement and terrain types.
+- **ATTACK_ICONS (`attacks.ts`)**: Weapons and natural attack types.
+- **DAMAGE_TYPE_ICONS (`damage_types.ts`)**: D&D 5e damage types (Fire, Cold, Necrotic, etc.).
+- **CONDITION_ICONS (`conditions.ts`)**: Status effects and conditions.
+- **DICE_ICONS (`dice.ts`)**: Polyhedral dice representations.
+- **CHARACTER_ICONS (`character.ts`)**: Character-related UI elements.
+- **CURRENCY_ICONS (`currency.ts`)**: Coins and wealth icons (Aliased as `POUCH_ICONS`).
+- **ABILITY_SCORE_ICONS (`ability_score.ts`)**: Strength, Dexterity, etc.
+- **SKILL_ICONS (`skill.ts`)**: D&D skills.
 - **EDITOR_ICONS (`editor.ts`)**: Icons specific to internal tools, editors, and development utilities (formerly `DEVKIT_ICONS`).
 - **BOOK_READER_ICONS (`book_reader.ts`)**: Controls and indicators for the in-game book reading experience.
 - **TAROT_ICONS (`tarot.ts`)**: Illustrations for the tarot/divination system.

@@ -1,8 +1,13 @@
 # Artificer Task Board
 
 ## Critical
-- [] check priorety1.md for map update refinment in main/priority1.md
-- [] check and fix errors in the main/errors.md
+- [x] check priorety1.md for map update refinment in main/priority1.md
+- [ ] Implement Temperature system in `useWorldStore.ts`.
+- [ ] Integrate Meteocons icon library for Time and Weather.
+- [ ] Reorganize Dev Kit (Inspectors, Generators, Testers grouping).
+- [ ] Align Jane module with JSON schemas and existing atlas lore.
+- [ ] Complete TSX translation of Tactical Combat Grid (Aedif inspiration).
+- [ ] check and fix errors in the main/errors.md
 - [x] Create asset validation script.
   - Check all JSON parseable.
   - Index matches filename.
@@ -11,7 +16,7 @@
   - No GitHub raw URLs in runtime JSON.
 - [x] Fix equipment path issues (e.g., `longsword.json`, `backpack.json`, `burglars_pack.json`).
 - [x] Establish canonical asset paths (use `/assets/atlas/...` for runtime).
-- [ ] Normalize references to other JSON records (ID-only + generated index).
+- [x] Normalize references to other JSON records (ID-only + generated index).
 - [x] **Icon Optimization and Tactical Loading**
   - [x] Audit `src/assets/icons/` for duplicates and placeholders.
   - [x] Consolidate core/common icons into `core.ts`.
@@ -57,7 +62,7 @@
   - [x] Implement Temporal Progression (`gameYear`, `gameMonth`, `gameDay`, `gameTime`).
   - [x] Create Environmental Engine for dynamic weather.
   - [x] Implement Discovery system (Explored Areas registry).
-  - [ ] Setup Faction & World Flags system.
+  - [x] Setup Faction & World Flags system.
 - [x] **Journal & Persistence**
   - [x] Document Journal specifications (`docs/modules/journal.md`).
   - [x] Implement `Journal.tsx` component.
@@ -78,7 +83,7 @@
   - [x] Initiative Tracker & Turn Sequence UI.
   - [x] Exploration Mechanics (Interactive Doors, LoS, Fog of War).
   - [x] AI Awareness State Machine (View Cones, Perception, Search).
-  - [ ] AI Combat Logic (Tool calls for Narrator integration).
+  - [x] AI Combat Logic (Tool calls for Narrator integration).
 - [ ] **Economic & Trade Module**
   - [ ] Regional Pricing & Merchant Inventory rotation.
 - [ ] **Soundscape Orchestrator**

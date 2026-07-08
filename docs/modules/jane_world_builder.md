@@ -13,11 +13,13 @@ Jane Agent (World Builder)
 - `city.schema.json` & `sub_region.schema.json`: For structural validation.
 
 ## Architecture
-The module follows a "Bake-to-Reality" pattern:
+The module follows a "Bake-to-Reality" pattern, with a mandatory requirement for structural integrity and data alignment.
+
 1. **Definition**: The agent or user defines a location's metadata.
 2. **Synthesis**: The AI generates rich Markdown descriptions and atmospheric images.
-3. **Validation**: The data is validated against the appropriate JSON schema.
-4. **Persistence**: The validated data and generated assets are committed to the repository via the `/api/commit` proxy.
+3. **Lore Alignment**: (Mandatory) Newly generated lore must be cross-referenced with existing atlas data to prevent narrative contradictions and duplicate entries.
+4. **Validation**: (Mandatory) Every location must pass strict JSON schema validation (e.g., `city.schema.json`) before it can be persisted.
+5. **Persistence**: The validated data and generated assets are committed to the repository via the `/api/commit` proxy.
 
 ## API / Endpoints
 - `POST /api/commit`: Commits JSON data and Base64 images to the specified path.

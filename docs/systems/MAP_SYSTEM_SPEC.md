@@ -5,19 +5,19 @@ The map implements a 7-tier zoom system (User Levels 0-6). These are mapped to L
 
 | User Level | Leaflet Zoom | Scale (Miles) | Visibility Focus |
 |------------|--------------|---------------|------------------|
-| 0          | 3            | 4000          | World Overview (Regions Only) |
-| 1          | 4            | 2000          | Oceans & Seas |
-| 2          | 5            | 1000          | Major Terrain (Forests, Mountains, Plains) |
-| 3          | 6            | 500           | Major Cities |
-| 4          | 7            | 250           | Towns, Settlements, Keeps |
-| 5          | 8            | 125           | Landmarks, Temples, Shrines |
-| 6          | 9            | 62.5          | Ruins, POIs, Dungeons, Hidden Sites |
+| 0          | 3            | 4001          | World Overview (Regions Only) |
+| 1          | 4            | 2001          | Oceans & Seas, Cities (Major) |
+| 2          | 5            | 1001          | Major Terrain (Forests, Mountains, Plains, etc.) |
+| 3          | 6            | 501           | Detailed Regions |
+| 4          | 7            | 251           | Towns, Settlements, Keeps, Fortresses |
+| 5          | 8            | 130           | Landmarks, Temples, Shrines |
+| 6          | 9            | 70            | Ruins, POIs, Dungeons, Hidden Sites, Roads |
 
 ## Coordinate System
 - **Source:** Faerûn High-Res Map (21620 x 14461 pixels).
-- **Transformation:** `L.Transformation(1/84.45, 0, 1/84.45, 0)`.
+- **Transformation:** `L.Transformation(1/128, 0, 1/128, 0)`.
 - **Mapping:** 1 native pixel = 1 LatLng unit.
-- **Scale:** 84.45 LatLng units = 1 tile (256px) at Zoom 0 (Leaflet Zoom 0, but our map starts at Zoom 3).
+- **Scale:** 128 LatLng units = 1 tile (256px) at Zoom 0 (Leaflet Zoom 0).
 - **Geographic Scale:** 4763 Proto Units = 4000 Miles.
 
 ## Data Loading (Progressive Loader)
@@ -29,7 +29,7 @@ Atlas data is loaded progressively based on the current zoom level to optimize p
 ## Layer Visibility Rules
 - **Oceans:** Visible at User Level 1+ (Leaflet 4+). Labels are permanent and styled as blue italicized text.
 - **Terrain:** Visible at User Level 2+ (Leaflet 5+). Includes Forests, Mountains, Plains, Wetlands, Oases, etc.
-- **Cities:** Visible at User Level 3+ (Leaflet 6+). Labels are permanent for Major Cities.
+- **Major Cities:** Visible once loaded. Permanent labels at User Level 3+ (Leaflet 6+).
 - **Towns/Settlements:** Visible at User Level 4+ (Leaflet 7+).
 - **Landmarks:** Visible at User Level 5+ (Leaflet 8+).
 - **POIs/Ruins:** Visible only at maximum zoom (User Level 6 / Leaflet 9).

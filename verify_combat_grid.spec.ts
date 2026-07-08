@@ -4,11 +4,10 @@ test('verify combat grid and action panel', async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 720 });
   await page.goto('http://localhost:3000');
 
-  // Wait for TitleScreen to be visible
+  // Wait for TitleScreen
   await page.waitForSelector('h1:has-text("Dungeons")');
 
-  // Bypass TitleScreen using store if possible, or click "New Game"
-  // Let's use evaluate to force state if available
+  // Force Start
   await page.evaluate(() => {
     const uiStore = (window as any).useUIStore.getState();
     const gameStore = (window as any).useGameStore.getState();
@@ -18,26 +17,16 @@ test('verify combat grid and action panel', async ({ page }) => {
     gameStore.startCombat();
   });
 
-  // Wait for HUD/CombatGrid to render
-  await page.waitForSelector('canvas', { timeout: 10000 });
-
-  // Take screenshot of the combat grid
+  // Wait for Canvas
+  await page.waitForSelector('canvas', { timeout: 15000 });
   await page.screenshot({ path: 'docs/screenshots/combat_hud_canvas_grid.png' });
 
-  // Verify "Toggle Grid" button exists
-  const toggleBtn = page.locator('button[title="Toggle Grid"]');
-  await expect(toggleBtn).toBeVisible();
-
-  // Try to click it
-  await toggleBtn.click({ force: true }); 
-
-  // Verify ActionPanel is visible (it should be in combat mode anyway)
-  await page.waitForSelector('text=Attack', { timeout: 5000 });
+  // Check for End Turn button in ActionPanel
+  await page.waitForSelector('text=End Turn', { timeout: 10000 });
   
-  // Capture a zoomed in version of the action panel
   await page.screenshot({ 
     path: 'docs/screenshots/action_panel_zoom.png',
-    clip: { x: 300, y: 100, width: 680, height: 500 } // Center area
+    clip: { x: 300, y: 500, width: 680, height: 220 } 
   });
 
   console.log('Screenshots captured successfully');

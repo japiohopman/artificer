@@ -20,6 +20,8 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
 - [Journal](./modules/journal.md) - Campaign Journal & Codex.
 - [Minigames](./modules/minigames.md) - Interactive social mechanics.
+- [World Panel](./ui/WORLD_PANEL.md) - Dynamic location information.
+- [DM Kit](./ui/DEV_KIT.md) - Development and Master tools.
 
 ## 🤖 Agents
 - [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.

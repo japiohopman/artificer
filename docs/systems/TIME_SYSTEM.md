@@ -22,11 +22,17 @@ The **Time System** is the heartbeat of Artificer, ensuring mechanical consisten
 ## 🌑 Day/Night Cycle
 - **Logic**: `isNight()` utility in `useWorldStore.ts`.
     - Default: Night = `gameTime < 360` (6 AM) or `gameTime > 1200` (8 PM).
+- **Visualization**: Use [Meteocons Time Icons](https://meteocons.com/icons/?style=fill&category=time) to represent temporal progression.
 - **Impacts**:
     - Shop availability (most shops close at night).
     - NPC behavior (taverns get busier, streets get quieter).
     - Mechanical disadvantage on Perception checks without Darkvision.
     - Encounter tables (more dangerous creatures at night).
+
+## 🌡️ Temperature System
+- **Requirement**: Integrate a dynamic temperature system within the Temporal Progression node.
+- **Visualization**: Use [Meteocons Thermometer Icons](https://meteocons.com/icons/?style=fill&category=thermometer) to indicate regional and temporal temperature fluctuations.
+- **Logic**: Influenced by the current season, time of day, and active weather patterns.
 
 ## 🛠️ Implementation
 - Centralized in `useWorldStore.ts`.

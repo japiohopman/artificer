@@ -25,7 +25,7 @@ This registry tracks all non-code assets used in the project, including sounds, 
 ## Icons
 - **Location**: `src/assets/icons/`
 - **Category Files**: 
-  - `core.ts`: System UI, navigation, and core combat icons.
+  - `ui.ts`: System UI, navigation, and core combat icons.
   - `equipment.ts`: Item category icons.
   - `attacks.ts`: Weapon and natural attack icons.
   - `feats.ts`, `features.ts`, `traits.ts`: Character ability icons.
