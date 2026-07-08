@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GameIcon } from '../../game_icons';
-import { SOUND_MANIFEST } from '../../services/audio/audioManifest';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { playClickSound, playSuccessSound } from '../../services/storageService';
 import { motion, AnimatePresence } from 'motion/react';
@@ -9,6 +8,8 @@ import { LAYER_NAMES } from '../../types/audio';
 
 export const AudioLaboratory: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'explorer' | 'forge' | 'requester'>('explorer');
+  const [audioFiles, setAudioFiles] = useState<any[]>([]);
+  const [isLoadingFiles, setIsLoadingFiles] = useState(false);
   const [requestData, setRequestData] = useState({
     assetName: '',
     description: '',
@@ -29,12 +30,30 @@ export const AudioLaboratory: React.FC = () => {
 
   const { hueState } = useAudioStore();
 
-  const handleTriggerSound = (id: string) => {
-    const entry = SOUND_MANIFEST[id];
-    if (entry) {
-      audioEngine.play(entry.sound, entry.layer);
-      playClickSound();
+  useEffect(() => {
+    if (activeTab === 'explorer') {
+      fetchAudioFiles();
     }
+  }, [activeTab]);
+
+  const fetchAudioFiles = async () => {
+    setIsLoadingFiles(true);
+    try {
+      const res = await fetch('/api/audio/list');
+      if (res.ok) {
+        const data = await res.json();
+        setAudioFiles(data);
+      }
+    } catch (err) {
+      console.error("Failed to fetch audio files:", err);
+    } finally {
+      setIsLoadingFiles(false);
+    }
+  };
+
+  const handleTriggerSound = (path: string) => {
+    audioEngine.play(path, 6); // Play on SFX layer
+    playClickSound();
   };
 
   const handleSubmitRequest = async () => {
@@ -93,37 +112,49 @@ export const AudioLaboratory: React.FC = () => {
               exit={{ opacity: 0, x: 10 }}
               className="space-y-6"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {Object.entries(SOUND_MANIFEST).map(([id, entry]) => (
-                  <div key={id} className="bg-black/30 border border-white/5 rounded-lg p-4 group hover:border-purple-500/30 transition-all">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <div className="text-[10px] text-purple-400 font-bold uppercase tracking-tighter mb-1">{LAYER_NAMES[entry.layer]}</div>
-                        <div className="text-sm font-bold text-white uppercase tracking-tight">{id.replace(/_/g, ' ')}</div>
-                      </div>
-                      <button 
-                        onClick={() => handleTriggerSound(id)}
-                        className="p-2 bg-purple-600/20 text-purple-400 rounded-full hover:bg-purple-600 hover:text-white transition-all shadow-lg group-hover:scale-110"
-                      >
-                        <GameIcon name="play" size={14} />
-                      </button>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-[10px] text-white/20 font-mono">
-                        <GameIcon name="save_data" size={10} />
-                        <span className="truncate">{entry.sound}</span>
-                      </div>
-                      {entry.lighting && (
-                        <div className="flex items-center gap-2 text-[10px] text-amber-500/60 font-bold uppercase tracking-widest">
-                          <GameIcon name="magic_effect" size={10} />
-                          <span>Lighting: {entry.lighting.pattern} ({entry.lighting.duration}ms)</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
+              <div className="flex items-center justify-between">
+                <div className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]">Direct_Asset_Bridge // public/assets/sounds/</div>
+                <button
+                  onClick={fetchAudioFiles}
+                  className="p-2 text-white/20 hover:text-purple-400 transition-colors"
+                  title="Refresh File List"
+                >
+                  <GameIcon name="refresh" size={14} className={isLoadingFiles ? 'animate-spin' : ''} />
+                </button>
               </div>
+
+              {isLoadingFiles ? (
+                <div className="py-20 flex flex-col items-center justify-center gap-4 opacity-20">
+                  <div className="w-12 h-12 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Scanning Repositories...</span>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {audioFiles.map((file, idx) => (
+                    <div key={`${file.path}-${idx}`} className="bg-black/30 border border-white/5 rounded-lg p-4 group hover:border-purple-500/30 transition-all">
+                      <div className="flex justify-between items-start mb-3">
+                        <div>
+                          <div className="text-[10px] text-purple-400 font-bold uppercase tracking-tighter mb-1">{file.category.replace(/_/g, ' ')}</div>
+                          <div className="text-sm font-bold text-white uppercase tracking-tight truncate max-w-[200px]">{file.name.replace(/\.[^/.]+$/, "").replace(/_/g, ' ')}</div>
+                        </div>
+                        <button
+                          onClick={() => handleTriggerSound(file.path)}
+                          className="p-2 bg-purple-600/20 text-purple-400 rounded-full hover:bg-purple-600 hover:text-white transition-all shadow-lg group-hover:scale-110"
+                        >
+                          <GameIcon name="play" size={14} />
+                        </button>
+                      </div>
+
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-[10px] text-white/20 font-mono">
+                          <GameIcon name="save_data" size={10} />
+                          <span className="truncate">{file.path}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
               
               <div className="mt-12 p-6 bg-black/40 border border-purple-500/10 rounded-xl">
                  <h3 className="text-xs font-bold text-white/40 uppercase tracking-[0.2em] mb-4">Diagnostics & Status</h3>
@@ -143,8 +174,8 @@ export const AudioLaboratory: React.FC = () => {
                        </div>
                     </div>
                     <div className="space-y-1">
-                       <span className="text-[9px] text-white/20 uppercase font-black">Manifest_Size</span>
-                       <div className="text-white/60 font-bold text-[10px]">{Object.keys(SOUND_MANIFEST).length} ASSETS_LOADED</div>
+                       <span className="text-[9px] text-white/20 uppercase font-black">Live_Repository_Size</span>
+                       <div className="text-white/60 font-bold text-[10px]">{audioFiles.length} FILES_DETECTED</div>
                     </div>
                  </div>
               </div>
