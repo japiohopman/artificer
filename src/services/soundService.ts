@@ -1,11 +1,12 @@
 import { AudioLayer } from '../types/audio';
 import { useAudioStore } from '../store/useAudioStore';
+import { audioEngine } from './audio/audioEngine';
+import { SOUND_MANIFEST } from './audio/audioManifest';
 
 const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/japiohopman/artificer/main/public";
 
 class SoundEngine {
   private layers: Map<AudioLayer, HTMLAudioElement> = new Map();
-  private effects: Map<string, HTMLAudioElement> = new Map();
   private masterVolume: number = 1.0;
   private currentMusicIndex: number = 0;
   private playlists = {
@@ -110,6 +111,7 @@ class SoundEngine {
         audio.volume = volume * this.masterVolume;
       }
     }
+    audioEngine.updateVolumes();
   }
 
   updateLayerMute(layerId: AudioLayer, isMuted: boolean) {
@@ -127,6 +129,7 @@ class SoundEngine {
         }
       }
     }
+    audioEngine.updateVolumes();
   }
 
   updateLayerSolo(layerId: AudioLayer, isSolo: boolean) {
@@ -142,6 +145,7 @@ class SoundEngine {
         audio.volume = state.isMuted ? 0 : state.volume * this.masterVolume;
       }
     });
+    audioEngine.updateVolumes();
   }
 
   stopAll() {
@@ -150,10 +154,23 @@ class SoundEngine {
       audio.currentTime = 0;
     });
     this.layers.clear();
+    audioEngine.stopAll();
   }
 
   playEffect(effect: string) {
     if (typeof window === 'undefined') return;
+
+    // Check manifest first
+    if (SOUND_MANIFEST[effect]) {
+      const manifestEntry = SOUND_MANIFEST[effect];
+      audioEngine.play(this.getUrl(manifestEntry.sound), manifestEntry.layer);
+      
+      // Handle lighting if applicable
+      if (manifestEntry.lighting) {
+        this.triggerLightingEffect(manifestEntry.lighting);
+      }
+      return;
+    }
 
     let path = "";
     switch (effect) {
@@ -175,11 +192,17 @@ class SoundEngine {
       default: path = '/assets/sounds/system/ui_menu_select.mp3';
     }
 
-    const audio = new Audio(this.getUrl(path));
-    // Use UI layer volume (Layer 8)
-    const uiLayer = useAudioStore.getState().layerStates[8];
-    audio.volume = uiLayer.isMuted ? 0 : uiLayer.volume * this.masterVolume;
-    audio.play().catch(e => console.warn("Effect playback failed", e.message));
+    audioEngine.play(this.getUrl(path), 8); // Default to UI layer 8
+  }
+
+  private triggerLightingEffect(lighting: any) {
+    const { hueState, setHueState } = useAudioStore.getState();
+    if (!hueState.connected || !hueState.enabled) return;
+
+    console.log("[SoundEngine] Triggering lighting effect:", lighting);
+    // Bridging to existing hue system if available, or just logging for now
+    setHueState({ isSyncing: true });
+    setTimeout(() => setHueState({ isSyncing: false }), lighting.duration || 1000);
   }
 }
 

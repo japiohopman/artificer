@@ -1,7 +1,7 @@
 Building Module
 
 ## Purpose
-The World Building module, spearheaded by the **Jane Agent**, is responsible for the procedural and manual creation of the physical environment in Artificer. This includes cities, settlements, roads, landmarks, and interior locations like shops.
+The World Building module, spearheaded by the **Jane Agent**, is responsible for the procedural and manual creation of the physical environment in Artificer. This includes **all location types** defined in the atlas: cities, settlements, roads, forests, mountains, waters, wetlands, regions, and interior locations like shops.
 
 ## Owner
 Jane Agent (World Builder)
@@ -10,16 +10,16 @@ Jane Agent (World Builder)
 - `atlasService.ts`: For fetching existing world data and schemas.
 - `server.ts` (Commit Proxy): For persisting data to the repository.
 - Google Gemini API: For generating descriptions and location images.
-- `city.schema.json` & `sub_region.schema.json`: For structural validation.
+- **Universal Schemas**: Adheres to all location-based schemas in `public/assets/atlas/schemas/` (e.g., `city.schema.json`, `forest.schema.json`, `mountain.schema.json`, etc.).
 
 ## Architecture
-The module follows a "Bake-to-Reality" pattern, with a mandatory requirement for structural integrity and data alignment.
+The module follows a "Bake-to-Reality" pattern, with a mandatory requirement for structural integrity and data alignment across all geographic scales.
 
-1. **Definition**: The agent or user defines a location's metadata.
+1. **Definition**: The agent or user defines a location's metadata, selecting the appropriate schema type (City, Road, POI, etc.).
 2. **Synthesis**: The AI generates rich Markdown descriptions and atmospheric images.
 3. **Lore Alignment**: (Mandatory) Newly generated lore must be cross-referenced with existing atlas data to prevent narrative contradictions and duplicate entries.
-4. **Validation**: (Mandatory) Every location must pass strict JSON schema validation (e.g., `city.schema.json`) before it can be persisted.
-5. **Persistence**: The validated data and generated assets are committed to the repository via the `/api/commit` proxy.
+4. **Validation**: (Mandatory) Every location must pass strict JSON schema validation relevant to its type before it can be persisted.
+5. **Persistence**: The validated data and generated assets are committed to the repository via the `/api/commit` proxy. Locations are saved in their respective type-specific directory (e.g., `forests/`, `mountains/`).
 
 ## API / Endpoints
 - `POST /api/commit`: Commits JSON data and Base64 images to the specified path.

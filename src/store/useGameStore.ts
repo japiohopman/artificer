@@ -567,9 +567,11 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   resolveCombatAction: async (actor, target, action) => {
-    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
+    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
-    const { modifyHp } = useCharacterStore.getState();
+    const charStore = useCharacterStore.getState();
+    const activeCharacterId = charStore.activeCharacterId;
+    const { modifyHp } = charStore;
 
     // 1. Roll to Hit
     const attackBonus = action.attack_bonus || 0;
@@ -587,9 +589,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     let targetAC = 10;
     const { combatState } = get();
 
-    if (target.id === 'player') {
+    if (target.id === 'player' || target === 'player') {
        // Fetch target character's AC calculation from character store
-       const targetChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId);
+       const targetChar = charStore.characters.find(c => c.id === activeCharacterId);
        targetAC = (targetChar as any)?.stats?.ac || (targetChar as any)?.ac || 10;
     } else if (target.armor_class !== undefined) {
       if (Array.isArray(target.armor_class)) {

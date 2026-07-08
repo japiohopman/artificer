@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDAndD } from '@fortawesome/free-brands-svg-icons';
 import { playClickSound, playSuccessSound, REPO, BRANCH } from '../../services/storageService';
 import { soundService } from '../../services/soundService';
 import { useCharacterStore } from '../../store/useCharacterStore';
@@ -123,15 +121,10 @@ export const TitleScreen: React.FC = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/40" />
           </div>
           <h1 className="text-7xl font-elan font-black text-dragon-red tracking-tighter uppercase leading-none mb-4 flex items-center justify-center">
-            <span className="ml-[-6px]">Dungeons</span>
-            <FontAwesomeIcon 
-              icon={faDAndD} 
-              className="text-[1.1em] drop-shadow-[0_0_15px_rgba(139,0,0,0.5)] relative z-10 ml-[-3px] mr-[-11px] mb-[16px] pb-0" 
-            />
-            <span>Dragons</span>
+            <span>Arcane Codex</span>
           </h1>
           <p className="text-dragon-gold font-header uppercase tracking-[0.4em] text-xs">
-            The Arcane Forge & Database
+            GM Toolkit & Campaign Database
           </p>
         </motion.div>
 
@@ -142,7 +135,7 @@ export const TitleScreen: React.FC = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="space-y-4"
           >
-            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">New Game</h2>
+            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">New Campaign</h2>
             <button
               onClick={handleNewGame}
               className="w-full group relative overflow-hidden bg-dragon-red py-8 rounded-sm border border-dragon-red/50 shadow-[0_0_30px_rgba(139,0,0,0.3)] transition-all hover:scale-[1.02] active:scale-95"
@@ -150,7 +143,7 @@ export const TitleScreen: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
               <div className="relative flex items-center justify-center gap-4 text-white">
                 <GameIcon name="plus" size={24} color="#FFFFFF" />
-                <span className="text-2xl font-header font-black uppercase tracking-widest">New Game</span>
+                <span className="text-2xl font-header font-black uppercase tracking-widest">New Campaign</span>
               </div>
             </button>
             <p className="text-[10px] text-parchment-500 opacity-60 text-center px-8">
@@ -164,7 +157,7 @@ export const TitleScreen: React.FC = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="space-y-4"
           >
-            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">Continue Adventure</h2>
+            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">Continue Campaign</h2>
             
             <div className="grid grid-cols-1 gap-3">
               {mainCharacterSlots.map((char, index) => (
@@ -224,7 +217,7 @@ export const TitleScreen: React.FC = () => {
             >
               <div className="relative flex items-center justify-center gap-4 text-dragon-gold">
                 <GameIcon name="play" size={20} color="#D4AF37" />
-                <span className="text-sm font-header font-black uppercase tracking-[0.2em]">Continue Adventure</span>
+                <span className="text-sm font-header font-black uppercase tracking-[0.2em]">Continue Campaign</span>
               </div>
             </button>
           </motion.div>

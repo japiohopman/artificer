@@ -10,7 +10,7 @@ import { useUIStore } from './store/useUIStore';
 import { useAtlasStore } from './store/useAtlasStore';
 import { useGameStore } from './store/useGameStore';
 import { useCharacterStore } from './store/useCharacterStore';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
 import { LoadingScreen } from './components/core/LoadingScreen';
@@ -26,9 +26,31 @@ import { TransportProfile } from './components/character/TransportProfile';
 import { CharacterCreator } from './components/character/CharacterCreator';
 import { LevelUpOverlay } from './components/character/LevelUpOverlay';
 import { useBookStore } from './store/useBookStore';
+import { SupportSite } from './components/marketing/SupportSite';
+
+export default function App() {
+  const [showPrototype, setShowPrototype] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const params = new URLSearchParams(window.location.search);
+    return params.get('app') === '1' || window.location.hash === '#app';
+  });
+
+  if (!showPrototype) {
+    return (
+      <SupportSite
+        onEnterApp={() => {
+          window.history.replaceState(null, '', '#app');
+          setShowPrototype(true);
+        }}
+      />
+    );
+  }
+
+  return <GameExperience />;
+}
 
 // Unified Loading Screen Implementation
-export default function App() {
+function GameExperience() {
   const { 
     isDevKitOpen, setIsDevKitOpen, explorerTab,
     isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen, isJournalOpen, setIsJournalOpen

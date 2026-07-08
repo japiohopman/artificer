@@ -13,15 +13,21 @@ Increased weather variety is required to enhance immersion. The following base t
 - `Snowy`: Difficult terrain. Cold hazards.
 - `Foggy`: Heavily obscured. Navigation checks required to avoid getting lost.
 
-**Iconography**: Use [Meteocons Fill Style](https://meteocons.com/icons/?style=fill) for all weather representations to ensure a high-fidelity visual experience.
+**Iconography**: Uses **Meteocons** SVG icons (Fill style) via `https://cdn.jsdelivr.net/npm/@meteocons/svg/fill/` for all weather, time-of-day, and temperature representations.
 
-### 2. Regional Patterns
+### 2. Temperature System
+The world tracks dynamic temperature (`Celsius`), influenced by:
+- **Time of Day**: Coolest at 4 AM, warmest at 4 PM (sine-wave cycle).
+- **Weather**: Rain, Storms, and Snow provide significant cooling factors.
+- **Random Fluctuation**: Small minute-by-minute variances to simulate realism.
+
+### 3. Regional Patterns
 Weather is not global; it is filtered by the `region` in `WorldState`.
 - **The North**: Higher probability of `Snowy` and `Stormy`.
 - **Sword Coast South**: Higher probability of `Rainy` and `Sunny`.
 - **Underdark**: Static "Eerie Calm" or "Magic Fog" (Time-independent).
 
-### 3. Gameplay Impact
+### 4. Gameplay Impact
 - **Travel Speed**: Storms or Heavy Snow can reduce travel speed by 50%.
 - **Combat**: Weather affects AOE spells (e.g., *Fog Cloud* is redundant in `Foggy` weather).
 - **Audio**: Sunny (The Bard) layers environmental SFX based on the current weather.
