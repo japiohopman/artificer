@@ -8,17 +8,17 @@ This file tracks the status and health of all audio assets in the Artificer proj
 - `/npc_voice/`: Character dialogue and vocalizations.
 - `/weather/`: Global weather layers (Rain, Thunder, Wind).
 
-## 🎵 Asset Inventory (Manifest-Synchronized)
+## 🎵 Asset Inventory
 
 | Category | Asset Name | Status | Location | Version | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **SFX** | fireball | Stored | `/assets/sounds/sfx/fireball.mp3` | 1.0 | Ported from sound_kit |
-| **SFX** | thunderwave | Stored | `/assets/sounds/sfx/thunderwave.mp3` | 1.0 | Ported from sound_kit |
-| **Weather** | weather_thunder | Stored | `/assets/sounds/weather/weather_thunder.mp3` | 1.0 | Ported from sound_kit |
-| **Weather** | rain_loop | Stored | `/assets/sounds/weather/rain_loop.mp3` | 1.0 | Ported from sound_kit |
-| **Ambient** | Fireball Hum | Stored | `sfx/fireball.mp3` | 1.0 | Paired with Fireball spell |
+| **Ambient** | Fireball Hum | Stored | `sfx/fireball.mp3` | 1.0 | Manifest ID: `fireball` |
+| **Ambient** | Thunderwave | Stored | `sfx/thunderwave.mp3` | 1.0 | Manifest ID: `thunderwave` |
 | **Ambient** | Underdark Pulse | Missing | `ambient/underdark_loop.wav` | - | Required for Underdark environment |
+| **Weather** | Rain Loop | Stored | `weather/rain_loop.mp3` | 1.0 | Manifest ID: `rain_loop` |
+| **Weather** | Thunder Flash | Stored | `weather/weather_thunder.mp3` | 1.0 | Manifest ID: `weather_thunder` |
+| **SFX** | Steel Clang | Stored | `sfx/steel_clang.wav` | 1.1 | |
 | **NPC Voice** | Tavern Barkeep | Missing | `npc_voice/barkeep_greet.wav` | - | High priority for Tavern encounter |
 
 ---
-*Last updated by Sunny on 2026-06-08 (System Integration Update)*
+*Last updated by Sunny on 2026-06-08*

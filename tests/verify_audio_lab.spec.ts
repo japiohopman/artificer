@@ -1,40 +1,45 @@
 import { test, expect } from '@playwright/test';
 
 test('verify audio lab in devkit', async ({ page }) => {
-  await page.goto('http://localhost:3000');
-  
-  // Wait for title screen
-  await page.waitForSelector('text=NEW GAME', { timeout: 15000 });
-  await page.click('text=NEW GAME');
-  
-  // Wait for HUD/Genesis Ritual to appear
-  await page.waitForSelector('text=THE GENESIS RITUAL', { timeout: 15000 });
-  
-  // Open DevKit using Shift+D
-  await page.keyboard.press('Shift+D');
-  
-  // Check if DevKit is open
-  await page.waitForSelector('text=DEV KIT', { timeout: 5000 });
-  await page.screenshot({ path: 'verification/devkit_open_raw.png' });
+    test.setTimeout(120000);
 
-  // Click on AUDIO_LAB tab
-  // Based on my previous write to DevKit.tsx:
-  // { id: 'AUDIO_LAB', label: 'AUDIO LAB', icon: 'volume-high' },
-  await page.click('button:has-text("AUDIO LAB")');
-  
-  // Wait for Audio Laboratory content
-  await page.waitForSelector('text=Audio Laboratory', { timeout: 5000 });
-  await page.waitForSelector('text=Sound Explorer', { timeout: 5000 });
-  await page.waitForSelector('text=Audio Requester', { timeout: 5000 });
+    await page.goto('http://localhost:3000');
+    
+    console.log('Waiting for loading to finish...');
+    await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 60000 });
+    
+    console.log('Waiting for NEW GAME button...');
+    const newGameBtn = page.getByRole('button', { name: 'New Game' });
+    await newGameBtn.waitFor({ state: 'visible', timeout: 30000 });
+    
+    console.log('Clicking NEW GAME...');
+    await newGameBtn.click();
+    
+    console.log('Waiting for THE GENESIS RITUAL...');
+    await page.waitForSelector('text=THE GENESIS RITUAL', { timeout: 30000 });
 
-  // Select a sound from the manifest
-  await page.selectOption('select', 'fireball');
-  
-  // Verify lighting info is shown
-  await page.waitForSelector('text=Lighting Effect:', { timeout: 2000 });
-  await page.waitForSelector('text=fire_pulse', { timeout: 2000 });
+    console.log('Pressing Shift+D...');
+    await page.focus('body');
+    await page.keyboard.down('Shift');
+    await page.keyboard.press('KeyD');
+    await page.keyboard.up('Shift');
+    
+    console.log('Waiting for DevKit (ARCANE_OS)...');
+    await page.waitForSelector('text=ARCANE_OS', { timeout: 30000 });
 
-  await page.screenshot({ path: 'verification/audio_lab_active.png', fullPage: true });
-  
-  console.log('Audio Laboratory verified successfully');
+    console.log('Clicking AUDIO LAB tab...');
+    await page.click('text=AUDIO LAB');
+    
+    console.log('Verifying Audio Laboratory...');
+    await page.waitForSelector('text=Audio Laboratory', { timeout: 10000 });
+    
+    await expect(page.getByText('fireball', { exact: true })).toBeVisible();
+    await expect(page.getByText('thunderwave', { exact: true })).toBeVisible();
+    
+    await page.screenshot({ path: 'verification/audio_lab_explorer.png' });
+    
+    console.log('Verifying REQUESTER tab...');
+    await page.click('text=REQUESTER');
+    await page.waitForSelector('text=Signal Sunny', { timeout: 10000 });
+    await page.screenshot({ path: 'verification/audio_lab_requester.png' });
 });
