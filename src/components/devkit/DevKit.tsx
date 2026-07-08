@@ -30,6 +30,7 @@ import { NPCTester } from './npc_tester';
 import { CombatTester } from './CombatTester';
 import { Simulator } from './Simulator';
 import { Jane } from './Jane';
+import { AudioLaboratory } from './AudioLaboratory';
 
 import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';
@@ -66,7 +67,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'codex' | 'world' | 'flags' | 'generators' | 'testers'>('codex');
+  const [activeTab, setActiveTab] = useState<'codex' | 'world' | 'flags' | 'generators' | 'testers' | 'audio'>('codex');
   const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'jane' | 'backgrounds'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -849,6 +850,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
               { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
               { id: 'flags', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'FLAGS' },
+              { id: 'audio', icon: (props: any) => <GameIcon name="music" {...props} />, label: 'AUDIO_LAB' },
               { id: 'generators', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'GENERATORS' },
               { id: 'testers', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTERS' }
             ].map(tab => (
@@ -922,6 +924,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <AssetExplorer />
             ) : activeTab === 'world' ? (
               <WorldExplorer />
+            ) : activeTab === 'audio' ? (
+              <AudioLaboratory />
             ) : activeTab === 'flags' ? (
               <div className="flex-1 p-8">
                  <div className="max-w-2xl mx-auto h-full">
