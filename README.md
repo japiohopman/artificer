@@ -110,3 +110,6 @@ Arcane Codex implements strict validation schemas for all game assets and charac
 ---
 
 *Forged by the Lorekeepers of Artificer.*
+
+
+https://japiohopman.github.io/artificer_site_promo/ deze moet nog goed delinkt worden promo site
