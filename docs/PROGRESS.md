@@ -47,8 +47,7 @@ We have completed the core infrastructure of Phase 2 and are now refining the si
 
 ## 🎯 Current Focus
 1. **AI Integration**: Refining tool definitions for the DM to interact with the new World State and Combat systems.
-2. **Environmental Realism**: Completed integration of the Temperature system and high-fidelity Meteocons SVG icons.
-3. **Jane World Builder**: Expanded the Jane module to support all geographic schemas (Forests, Mountains, Regions, etc.) with a dynamic metadata editor.
-4. **NPC Memory**: Implementing the relationship and interaction history system.
+2. **NPC Memory**: Implementing the relationship and interaction history system.
+3. **Soundscape**: Orchestrating mood-based audio transitions based on the environment.
 
 *Last Updated: 2025-03-24*

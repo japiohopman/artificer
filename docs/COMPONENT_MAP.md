@@ -67,4 +67,6 @@ Audio management UI.
 ## 📁 `devkit/`
 Developer-only tools for content creation and testing.
 - **`DevKit.tsx`**: Main developer panel.
-- **`npc_generator.tsx`**, `enemy-image_generator.tsx`, etc.: Specialized tools for generating Atlas data.
+- **`DevKit.tsx`**: Central developer hub, grouped into Inspectors, Generators, and Testers.
+- **`Jane.tsx`**: Universal World Builder supporting diverse geographic schemas and dynamic metadata.
+- **`CombatTester.tsx`**: Sandbox for testing Tactical Combat Engine mechanics.

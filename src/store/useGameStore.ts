@@ -342,11 +342,20 @@ export const useGameStore = create<GameState>((set, get) => ({
       maxHp: monster.hit_points || 10,
       x,
       y,
-      imageUrl: monster.imageUrl,
+      imageUrl: monster.imageUrl || monster.image,
       awareness: 'idle',
       viewDirection: 3,
-      perception: 10,
-      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6
+      perception: monster.senses?.passive_perception || 10,
+      speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6,
+      stats: {
+        str: monster.strength || 10,
+        dex: monster.dexterity || 10,
+        con: monster.constitution || 10,
+        int: monster.intelligence || 10,
+        wis: monster.wisdom || 10,
+        cha: monster.charisma || 10
+      },
+      armor_class: monster.armor_class
     };
 
     return {
@@ -537,17 +546,22 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   startCombat: async () => {
-    const { combatState } = get();
+    const { combatState, addLog } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
-    const { characters } = useCharacterStore.getState();
-    const activeParty = characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+    const charStore = useCharacterStore.getState();
+    const activeParty = charStore.characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+
+    if (activeParty.length === 0) {
+      addLog("Cannot start combat without active party members!", "error");
+      return;
+    }
 
     // Roll initiative for everyone
     const order = [
       ...activeParty.map((c: any) => ({
         id: c.id,
         name: c.name,
-        value: Math.floor(Math.random() * 20) + 1 + (Math.floor((c.stats.dex - 10) / 2) || 0),
+        value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
         isPlayer: true
       })),
       ...combatState.monsters.map(m => ({
@@ -567,11 +581,9 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   resolveCombatAction: async (actor, target, action) => {
-    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat } = get();
+    const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const { useCharacterStore } = await import('./useCharacterStore');
-    const charStore = useCharacterStore.getState();
-    const activeCharacterId = charStore.activeCharacterId;
-    const { modifyHp } = charStore;
+    const { modifyHp } = useCharacterStore.getState();
 
     // 1. Roll to Hit
     const attackBonus = action.attack_bonus || 0;
@@ -589,9 +601,9 @@ export const useGameStore = create<GameState>((set, get) => ({
     let targetAC = 10;
     const { combatState } = get();
 
-    if (target.id === 'player' || target === 'player') {
+    if (target.id === 'player') {
        // Fetch target character's AC calculation from character store
-       const targetChar = charStore.characters.find(c => c.id === activeCharacterId);
+       const targetChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId);
        targetAC = (targetChar as any)?.stats?.ac || (targetChar as any)?.ac || 10;
     } else if (target.armor_class !== undefined) {
       if (Array.isArray(target.armor_class)) {

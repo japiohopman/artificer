@@ -30,13 +30,10 @@ The **Time System** is the heartbeat of Artificer, ensuring mechanical consisten
     - Encounter tables (more dangerous creatures at night).
 
 ## 🌡️ Temperature System
-- **Implementation**: A dynamic temperature system is integrated within the `updateEnvironment` tick in `useWorldStore.ts`.
-- **Visualization**: The `TemporalWidget.tsx` uses [Meteocons Thermometer Icons](https://meteocons.com/icons/?style=fill&category=thermometer) to indicate regional and temporal temperature fluctuations.
-- **Logic**: 
-  - **Diurnal Cycle**: Base temperature follows a sine wave, coolest at 4 AM and warmest at 4 PM.
-  - **Weather Modifiers**: Rain (-3°C), Storms (-5°C), and Snow (-15°C) apply cooling offsets.
-  - **Entropy**: Small random fluctuations (±0.25°C) are added each minute for realism.
+- **Requirement**: Integrate a dynamic temperature system within the Temporal Progression node.
+- **Visualization**: Use [Meteocons Thermometer Icons](https://meteocons.com/icons/?style=fill&category=thermometer) to indicate regional and temporal temperature fluctuations.
+- **Logic**: Influenced by the current season, time of day, and active weather patterns.
 
 ## 🛠️ Implementation
 - Centralized in `useWorldStore.ts`.
-- Subscribed to by the `TemporalWidget.tsx` in the HUD.
+- Subscribed to by the `Clock.tsx` sub-component in the World Panel.

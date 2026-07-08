@@ -32,11 +32,18 @@ export const Jane: React.FC = () => {
     id: '',
     name: '',
     type: 'settlement',
+    category: 'settlement',
     title: '',
     description: '',
     coordinates: { lat: 0, lng: 0 },
     tags: [],
-    metadata: {},
+    metadata: {
+      government: '',
+      population: '',
+      economy: '',
+      religion: '',
+      factions: ''
+    },
     region: 'Sword Coast',
     continent: 'Faerun',
     world: 'Toril',
@@ -46,6 +53,7 @@ export const Jane: React.FC = () => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isBaking, setIsBaking] = useState(false);
   const [activeTab, setActiveTab] = useState<'editor' | 'preview' | 'json'>('editor');
+  const [newMetaKey, setNewMetaKey] = useState('');
 
   useEffect(() => {
     loadAllLists();
@@ -60,21 +68,18 @@ export const Jane: React.FC = () => {
     setIsBaking(true);
     try {
       // Determine path based on type
-      let typeFolder = 'poi';
-      switch (location.type) {
-        case 'city': typeFolder = 'cities'; break;
-        case 'settlement': typeFolder = 'towns_settlements'; break;
-        case 'road': typeFolder = 'roads_trails'; break;
-        case 'forest': typeFolder = 'forests'; break;
-        case 'mountain': typeFolder = 'mountains'; break;
-        case 'water': typeFolder = 'waters'; break;
-        case 'wetland': typeFolder = 'wetlands'; break;
-        case 'region': typeFolder = 'regions'; break;
-        case 'sub_region': typeFolder = 'sub_regions'; break;
-        case 'shop': typeFolder = 'shops'; break;
-      }
-
-      const path = `public/assets/atlas/world/toril/faerun/${typeFolder}/${location.id}/${location.id}.json`;
+      let path = `public/assets/atlas/world/toril/faerun/`;
+      const type = location.type || 'poi';
+      
+      if (type === 'city') path += `cities/${location.id}/${location.id}.json`;
+      else if (type === 'town' || type === 'village' || type === 'settlement') path += `towns_settlements/${location.id}/${location.id}.json`;
+      else if (type === 'forest') path += `forests/${location.id}/${location.id}.json`;
+      else if (type === 'mountain' || type === 'mountains') path += `mountains/${location.id}/${location.id}.json`;
+      else if (type === 'wetland' || type === 'wetlands') path += `wetlands/${location.id}/${location.id}.json`;
+      else if (type === 'water' || type === 'lake' || type === 'river' || type === 'sea') path += `waters/${location.id}/${location.id}.json`;
+      else if (type === 'road' || type === 'trail') path += `roads_trails/${location.id}/${location.id}.json`;
+      else if (type === 'region') path += `regions/${location.id}/${location.id}.json`;
+      else path += `poi/${location.id}.json`;
 
       const success = await commitFile(path, JSON.stringify(location, null, 2));
       if (success) {
@@ -185,22 +190,21 @@ export const Jane: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[10px] font-black text-white/20 uppercase tracking-widest">Type (Schema)</label>
+                  <label className="text-[10px] font-black text-white/20 uppercase tracking-widest">Type / Category</label>
                   <select
                     value={location.type}
-                    onChange={(e) => setLocation({ ...location, type: e.target.value })}
+                    onChange={(e) => setLocation({ ...location, type: e.target.value, category: e.target.value })}
                     title="Location Type"
                     className="w-full bg-white/5 border border-white/10 p-3 text-sm text-white rounded-xl focus:border-dragon-red/50 outline-none transition-all"
                   >
                     <option value="city">City</option>
-                    <option value="settlement">Settlement</option>
-                    <option value="road">Road/Trail</option>
+                    <option value="settlement">Settlement/Town/Village</option>
                     <option value="forest">Forest</option>
-                    <option value="mountain">Mountain</option>
-                    <option value="water">Water/Body</option>
-                    <option value="wetland">Wetland/Swamp</option>
-                    <option value="region">Region</option>
-                    <option value="sub_region">Sub-Region</option>
+                    <option value="mountain">Mountain/Range</option>
+                    <option value="wetland">Wetland/Swamp/Marsh</option>
+                    <option value="water">Water (Lake/River/Sea)</option>
+                    <option value="road">Road/Trail</option>
+                    <option value="region">Geographic Region</option>
                     <option value="poi">Point of Interest</option>
                     <option value="shop">Shop/Building</option>
                   </select>
@@ -268,49 +272,58 @@ export const Jane: React.FC = () => {
               </div>
 
               {/* Dynamic Metadata Editor */}
-              <div className="space-y-4 p-6 bg-white/5 rounded-2xl border border-white/10">
-                <div className="flex items-center justify-between">
-                  <label className="text-[10px] font-black text-white/20 uppercase tracking-widest">Metadata_Properties (Schema_Aligned)</label>
-                  <button 
-                    onClick={() => {
-                      const key = prompt("Enter metadata key:");
-                      if (key) setLocation({ ...location, metadata: { ...location.metadata, [key]: "" } });
-                    }}
-                    className="text-[10px] text-dragon-red hover:text-red-400 font-bold uppercase transition-all"
-                  >
-                    + Add Property
-                  </button>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {Object.entries(location.metadata || {}).map(([key, value]) => (
-                    <div key={key} className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <label className="text-[9px] font-bold text-white/40 uppercase">{key}</label>
-                        <button 
-                          onClick={() => {
-                            const newMetadata = { ...location.metadata };
-                            delete newMetadata[key];
-                            setLocation({ ...location, metadata: newMetadata });
-                          }}
-                          className="text-[8px] text-white/20 hover:text-red-500"
-                        >
-                          ✕
-                        </button>
+              <div className="space-y-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+                 <div className="flex items-center justify-between">
+                    <label className="text-[10px] font-black text-white/20 uppercase tracking-widest">Dynamic_Metadata</label>
+                    <div className="flex gap-2">
+                       <input 
+                         type="text" 
+                         value={newMetaKey}
+                         onChange={(e) => setNewMetaKey(e.target.value)}
+                         placeholder="New key (e.g. Flora)"
+                         className="bg-black/40 border border-white/5 p-1.5 text-[10px] text-white rounded outline-none focus:border-dragon-red/30"
+                       />
+                       <button 
+                         onClick={() => {
+                           if (!newMetaKey) return;
+                           setLocation({
+                             ...location,
+                             metadata: { ...location.metadata!, [newMetaKey.toLowerCase()]: '' }
+                           });
+                           setNewMetaKey('');
+                         }}
+                         className="bg-dragon-red/20 hover:bg-dragon-red/40 text-dragon-red p-1.5 rounded transition-colors"
+                       >
+                         <GameIcon name="add" size={12} />
+                       </button>
+                    </div>
+                 </div>
+                 
+                 <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(location.metadata || {}).map(([key, value]) => (
+                      <div key={key} className="space-y-1">
+                        <div className="flex justify-between items-center px-1">
+                          <label className="text-[9px] font-black text-white/40 uppercase tracking-tighter">{key}</label>
+                          <button 
+                            onClick={() => {
+                              const newMeta = { ...location.metadata };
+                              delete newMeta[key];
+                              setLocation({ ...location, metadata: newMeta });
+                            }}
+                            className="text-white/10 hover:text-dragon-red transition-colors"
+                          >
+                             <GameIcon name="close" size={10} />
+                          </button>
+                        </div>
+                        <input 
+                          type="text" 
+                          value={value} 
+                          onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, [key]: e.target.value } })}
+                          className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded focus:border-white/20 outline-none"
+                        />
                       </div>
-                      <input 
-                        type="text" 
-                        value={value as string} 
-                        onChange={(e) => setLocation({ ...location, metadata: { ...location.metadata!, [key]: e.target.value } })}
-                        className="w-full bg-black/40 border border-white/5 p-2 text-xs text-white rounded focus:border-dragon-red/30 outline-none transition-all"
-                      />
-                    </div>
-                  ))}
-                  {Object.keys(location.metadata || {}).length === 0 && (
-                    <div className="col-span-2 py-4 text-center text-[10px] text-white/20 italic">
-                      No metadata properties defined. Use schema-specific keys like 'population', 'peaks', 'flora', etc.
-                    </div>
-                  )}
-                </div>
+                    ))}
+                 </div>
               </div>
 
               <div className="grid grid-cols-3 gap-4">

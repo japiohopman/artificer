@@ -27,16 +27,9 @@ export const AudioLaboratory: React.FC = () => {
   const handleSubmitRequest = async () => {
     if (!requestData.assetName || !requestData.description) return;
     
-    // In a real scenario, we'd use commitFile to append to AUDIO_REQUESTS.md
-    // For now, we'll log it and simulate success
     console.log("[AudioLab] Submitting request:", requestData);
     
-    const date = new Date().toISOString().split('T')[0];
-    const newRow = `| ${date} | User | ${requestData.assetName} | ${requestData.description} | ${requestData.priority} | Pending |`;
-    
-    // This is a placeholder for actual file append logic
-    // We'll need a service method to append to a file safely
-    
+    // Placeholder for actual file append logic
     playSuccessSound();
     setRequestData({ assetName: '', description: '', priority: 'Medium' });
     alert("Audio request queued for Sunny!");
