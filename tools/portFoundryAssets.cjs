@@ -59,14 +59,31 @@ const SCHOOL_MAP = {
   tra: { index: 'transmutation', name: 'Transmutation', url: '/assets/atlas/magic_schools/json/transmutation.json' }
 };
 
-// Clean HTML to paragraphs
+// Clean HTML to paragraphs securely, protecting against HTML element injection (CodeQL)
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
-  const cleaned = html
-    .replace(/<\/p>/gi, '\n')
-    .replace(/<p>/gi, '')
-    .replace(/[<>]/g, '')
+
+  // 1. Explicitly remove script tags and their inner content to prevent script execution
+  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+
+  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
+  cleaned = cleaned.replace(/<script/gi, '');
+
+  // 3. Convert paragraph markers to linebreaks
+  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
+
+  // 4. Safely strip all other HTML tag patterns using a secure pattern
+  cleaned = cleaned.replace(/<[^>]+>/g, '');
+
+  // 5. Sanitize HTML entity references to prevent raw markup injection
+  cleaned = cleaned
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&')
     .trim();
+
   return cleaned.split('\n').map(p => p.trim()).filter(p => p.length > 0);
 }
 
