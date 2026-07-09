@@ -65,7 +65,7 @@ function cleanHtmlToParagraphs(html) {
   const cleaned = html
     .replace(/<\/p>/gi, '\n')
     .replace(/<p>/gi, '')
-    .replace(/<[^>]*>/g, '')
+    .replace(/[<>]/g, '')
     .trim();
   return cleaned.split('\n').map(p => p.trim()).filter(p => p.length > 0);
 }
