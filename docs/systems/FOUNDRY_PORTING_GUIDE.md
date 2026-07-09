@@ -1,325 +1,214 @@
-# 📐 Foundry VTT Porting & Integration Guide: Tactical Grid & D&D 5e
+# 📦 Foundry VTT to Artificer Porting Guide
 
-This document serves as an architectural blueprint, comparison, and practical implementation guide for porting industry-standard virtual tabletop (VTT) mechanics from **Foundry Virtual Tabletop (Foundry VTT)** and **Aedif's Tactical Grid** into the **Artificer** React/Zustand-based framework.
-
-It covers architectural paradigms, data schema mapping, spatial math, and provides ready-to-use **TSX / Zustand** code blueprints to enhance our `CombatGrid.tsx` with high-fidelity, skeuomorphic, and automated tabletop behaviors.
+This document serves as the architectural specification and implementation guide for porting, aligning, and migrating game system data (Actors, Items, Spells, Rules, and Classes) from the Foundry Virtual Tabletop (VTT) **Dungeons & Dragons Fifth Edition Game System (v6.0.x)** to the **Artificer** local ecosystem database (`/public/assets/atlas/`).
 
 ---
 
-## 🏛️ 1. Architectural Philosophy Comparison
+## 🎯 Purpose and Goals
 
-| Paradigm | Foundry VTT Architecture | Artificer Architecture | Porting Strategy (The "Why" and "How") |
+Foundry VTT's `dnd5e-6.0.x` is a highly mature, community-standardized game system implementing the Fifth Edition System Reference Document (SRD 5.1 & SRD 5.2). Its codebase provides complete, structured definitions for standard monsters, weapons, armor, spells, classes, and mechanics.
+
+By aligning Artificer's schema definitions and asset pipelines with Foundry VTT's system:
+1. **Rule Parity**: Ensure absolute mechanical alignment with 5e rules.
+2. **Data Enrichment**: Streamline the creation/porting of missing spells, items, and monster definitions using parsed YAML sources.
+3. **Reference Standard**: Establish a direct translation key between Foundry's nested actor/item/spell properties and Artificer's schema-compliant JSON representations.
+
+---
+
+## 📂 Source and Target Directories
+
+Foundry's unpacked YAML data files and Artificer's target JSON asset folders are structured as follows:
+
+| Asset Category | Foundry VTT Source (`dnd5e-6.0.x/packs/_source/`) | Artificer Target (`public/assets/atlas/`) | Schema |
 | :--- | :--- | :--- | :--- |
-| **Rendering Engine** | **HTML5 Canvas + PIXI.js (WebGL)**<br>Everything (grid, tokens, lighting, templates) is a PIXI DisplayObject. Highly performant for thousands of tokens, but high complexity. | **Hybrid HTML5 Canvas + React (DOM)**<br>Canvas handles heavy static background tasks (grid lines, walls, Fog of War, selective masks). React handles dynamic tokens (`motion.div`) and UI HUD elements. | **Keep the Hybrid Approach**.<br>Use Canvas for high-performance calculations and overlays (like selective grid lighting and range circles), while keeping tokens reactive in React/Zustand. |
-| **State & Event Flow** | **Global Hooks Pub-Sub (`Hooks.on`)**<br>Decoupled systems and community modules hook into global events (e.g., `hoverToken`, `combatStart`). | **Zustand Reactive State Stores**<br>Specialized, centralized stores (`useGameStore`, `useCharacterStore`, `useUIStore`) govern the reactive visual state of the sandbox. | **Encapsulate Hook Logic in Zustand Actions**.<br>Instead of dynamic callback registration, write direct handlers in our Zustand stores that trigger React state changes. |
-| **Modularity & Loading** | **Runtime Manifest ESM Loading**<br>Loads modules on-the-fly using `module.json` metadata and system-level JavaScript classes. | **Compile-Time Static Imports**<br>All subsystems, assets, and layouts are bundled at compile-time, ensuring strict type-safety and bundle optimization. | **Static Registry Pattern**.<br>Compile-time type-safety ensures that our AI DM and combat grid do not suffer from runtime dependency conflicts or broken paths. |
+| **Monsters / NPCs** | `monsters/` / `actors24/` (YAML) | `enemies/json/` | `enemy.schema.json` |
+| **Weapons / Gear** | `items/` / `equipment24/` (YAML) | `equipment/json/` | `weapon.schema.json` / `armor.schema.json` / `equipment.schema.json` |
+| **Spells** | `spells/` / `spells24/` (YAML) | `spell/json/` | `spell.schema.json` |
+| **Rule Wiki / Docs** | `rules/` / `content24/` (YAML) | `mechanic/rule_sections/json/` | `proficiency.schema.json` etc. |
 
 ---
 
-## ⚔️ 2. Deep Dive: Tactical Grid Mechanics (`tactical-grid-main`)
+## 🧠 Schema & Data Mapping Specifications
 
-We analyzed the `tactical-grid-main` source files (`tactical-grid.js`, `rangeHighlighter.js`, `calculator.js`) to extract three crucial mechanics:
+### 1. Actor (NPC / Monster) to Enemy Mapping
 
-### A. Weapon & Spell Range Highlighting
-*   **How Foundry does it**: `RangeHighlighter.js` evaluates equipped weapons or cast activities on a token. It parses fields like `item.system.range.value` (short range) and `item.system.range.long` (long range). It caches the calculated grid offset lists (`_cachedRangeOffsets`) to prevent expensive distance calculations during mouse movement.
-*   **The Math**: It checks the actor's flags (e.g., `Spell Sniper` to double range, `Sharpshooter` to ignore long range disadvantage) and draws concentric colored ring overlays.
+Foundry's YAML Actor files (e.g., `bandit.yml`, `acolyte.yml`) are mapped to Artificer's `enemy.schema.json`:
 
-### B. Precision Distance Measurement & Ruler (The 5-10-5 Rule)
-*   **How Foundry does it**: D&D 5e rules dictate that diagonal movement does not cost a flat 5 feet. Instead:
-    *   The 1st diagonal costs **5 ft**.
-    *   The 2nd diagonal costs **10 ft** (total 15 ft).
-    *   The 3rd diagonal costs **5 ft** (total 20 ft).
-    *   And so on.
-*   **The Math**:
-    $$\text{Distance} = (\max(dx, dy) + \lfloor \min(dx, dy) / 2 \rfloor) \times 5 \text{ ft}$$
-    This is also known as the **D&D 5e diagonal rule** (or alternative Chebyshev distance approximation). It is essential for combat grid integrity.
+| Artificer Target Field | Source Foundry Path | Transformation / Logic |
+| :--- | :--- | :--- |
+| `index` | `_id` or lowercased `name` | Slugify/lowercase and replace spaces with underscores. |
+| `name` | `name` | Direct string copy. |
+| `desc` | `system.details.biography.value` | Clean HTML tags, strip wrapper elements, output description text. |
+| `size` | `system.traits.size` | Map `tiny` ➔ `Tiny`, `sm` ➔ `Small`, `med` ➔ `Medium`, `lg` ➔ `Large`, `huge` ➔ `Huge`, `grg` ➔ `Gargantuan`. |
+| `type` | `system.details.type.value` | Direct string copy (e.g., `humanoid`, `beast`). |
+| `subtype` | `system.details.type.subtype` | Direct copy (default to `"any race"` or empty string if null). |
+| `alignment` | `system.details.alignment` | Direct string copy (e.g., `"Any Non-Lawful"`). |
+| `strength` | `system.abilities.str.value` | Integer representation. |
+| `dexterity` | `system.abilities.dex.value` | Integer representation. |
+| `constitution` | `system.abilities.con.value` | Integer representation. |
+| `intelligence` | `system.abilities.int.value` | Integer representation. |
+| `wisdom` | `system.abilities.wis.value` | Integer representation. |
+| `charisma` | `system.abilities.cha.value` | Integer representation. |
+| `stats` | `system.abilities.*.value` | Nested object matching individual ability scores. |
+| `hit_points` | `system.attributes.hp.max` | Integer. |
+| `hit_dice` | `system.attributes.hp.formula` | Extract dice notation (e.g., `"2d8"` from `"2d8 + 2"`). |
+| `hit_points_roll` | `system.attributes.hp.formula` | Complete HP formula string (e.g., `"2d8 + 2"`). |
+| `armor_class` | `system.attributes.ac.flat` / `.calc` | If flat is null, calculate based on Dexterity + base/armor values (e.g. `[ { "type": "dex", "value": 10 + dexMod } ]`). |
+| `speed` | `system.attributes.movement` | Convert nested object to string-based map (e.g., `{ "walk": "30 ft." }`). |
+| `senses` | `system.attributes.senses` | Extract fields like `darkvision`, calculation of `passive_perception` based on Wisdom mod + proficiency. |
+| `challenge_rating` | `system.details.cr` | Map challenge rating float/fraction (e.g., `0.125` ➔ `0.125` or `1/8`). |
+| `proficiency_bonus` | Calculated from CR | Standard D&D 5e progression table (+2 to +9 based on CR thresholds). |
+| `xp` | Calculated from CR | Standard D&D 5e XP by CR values table (e.g., CR 1/8 ➔ 25 XP, CR 1 ➔ 200 XP). |
+| `damage_resistances` | `system.traits.dr.value` | Array of damage types (e.g., `["fire", "poison"]`). |
+| `damage_immunities` | `system.traits.di.value` | Array of damage types. |
+| `damage_vulnerabilities`| `system.traits.dv.value` | Array of damage types. |
+| `condition_immunities` | `system.traits.ci.value` | Array of condition strings (e.g., `["charmed", "frightened"]`). |
+| `languages` | `system.traits.languages.custom` | Combine standard language codes with custom text overrides. |
 
-### C. Selective Grid Display (Masking)
-*   **How Foundry does it**: Uses a custom mask container (`GridMaskContainer`) that applies a WebGL blend mode (`PIXI.BLEND_MODES.ADD`). It only renders grid lines in a designated radius around hovered or controlled tokens, fading out into the darkness.
-*   **Why we need it**: This preserves the antique, skeuomorphic "carved antique atlas" theme by hiding grid lines except where tactical measurement is currently occurring.
-
----
-
-## 📋 3. Schema Harmonization: Atlas vs. Foundry D&D 5e
-
-To make our AI Dungeon Master and automated enemies completely standard-compliant, we can harmonize our `public/assets/atlas/` JSON models with standard Foundry schemas:
-
-### A. Character & Monster Schema Alignment
-
-```json
-{
-  "name": "Goblin",
-  "size": "Small",
-  "type": "humanoid",
-  "stats": {
-    "str": 8, "dex": 14, "con": 10, "int": 10, "wis": 8, "cha": 8
-  },
-  "hp": {
-    "value": 7,
-    "max": 7
-  },
-  "ac": {
-    "value": 15
-  },
-  "actions": [
-    {
-      "name": "Scimitar",
-      "actionType": "mwak", 
-      "range": {
-        "value": 5,
-        "units": "ft",
-        "reach": 5
-      },
-      "damage": {
-        "parts": [["1d6 + 2", "slashing"]]
-      }
-    }
-  ]
-}
-```
-*Key Foundry terms we adopt:*
-*   `mwak` / `rwak`: Melee Weapon Attack / Ranged Weapon Attack.
-*   `msak` / `rsak`: Melee Spell Attack / Ranged Spell Attack.
-*   `parts`: Damage dice and type breakdown.
+#### Parsing Actions and Special Abilities from Actors:
+Foundry Actors contain a nested list of item definitions under the `items` array. These must be parsed and distributed:
+1. **Special Abilities**: `type: "feat"` with an activation type other than action/bonus action (or passive properties like *Magic Resistance* or *Pack Tactics*) are mapped into the `special_abilities` list.
+2. **Actions**: `type: "weapon"` or `type: "feat"` with `system.activities.*` defined as attacks are mapped into the `actions` array:
+   - Action Name: Item `name`.
+   - Description: Parse `system.description.value` or custom chat templates.
+   - Attack Bonus: Calculate based on active attribute modifier + proficiency bonus + magical bonus.
+   - Damage Dice & Type: Extract from `system.damage.base` or activity definitions (e.g. `1d6` slashing).
 
 ---
 
-## 🛠️ 4. Concrete React (TSX) & Zustand Implementation Blueprints
+### 2. Item to Equipment Mapping
 
-Below are complete, production-ready code blocks designed to be ported directly into the **Artificer** codebase to implement Foundry-style range highlighting and precision rulers.
+Foundry VTT Items of types `weapon`, `equipment`, `consumable`, `tool`, `loot`, `container` map directly to Artificer's unified `equipment.schema.json` with kind-specific subclasses:
 
-### Blueprint A: The Precision Distance & Coordinate Store (`useCombatGridStore.ts`)
-This store manages active weapon range indicators, current drag coordinates, grid visibility thresholds, and diagonal calculations.
-
-```typescript
-import { create } from 'zustand';
-
-export interface GridPos {
-  x: number;
-  y: number;
-}
-
-export interface RangeIndicator {
-  range: number;      // e.g., 5 for melee, 30 for short range
-  longRange?: number; // e.g., 120 for long range
-  color: string;      // RGBA color string
-}
-
-interface CombatGridState {
-  // Measurement state
-  dragStart: GridPos | null;
-  dragCurrent: GridPos | null;
-  hoveredCell: GridPos | null;
-  
-  // Tactical Range Overlays
-  activeRanges: RangeIndicator[];
-  isSelectiveGrid: boolean;
-  gridFadeRadius: number; // radius in cells (e.g. 4)
-
-  // Actions
-  setHoveredCell: (pos: GridPos | null) => void;
-  setDragState: (start: GridPos | null, current: GridPos | null) => void;
-  setActiveRanges: (ranges: RangeIndicator[]) => void;
-  toggleSelectiveGrid: () => void;
-  
-  // Mathematical utility
-  calculateDiagonalDistance: (start: GridPos, end: GridPos) => number;
-}
-
-export const useCombatGridStore = create<CombatGridState>((set, get) => ({
-  dragStart: null,
-  dragCurrent: null,
-  hoveredCell: null,
-  activeRanges: [],
-  isSelectiveGrid: true,
-  gridFadeRadius: 4,
-
-  setHoveredCell: (pos) => set({ hoveredCell: pos }),
-  
-  setDragState: (start, current) => set({ dragStart: start, dragCurrent: current }),
-  
-  setActiveRanges: (ranges) => set({ activeRanges: ranges }),
-  
-  toggleSelectiveGrid: () => set((state) => ({ isSelectiveGrid: !state.isSelectiveGrid })),
-
-  /**
-   * Calculates distance using the D&D 5e (5-10-5) diagonal movement rule.
-   */
-  calculateDiagonalDistance: (start, end) => {
-    const dx = Math.abs(end.x - start.x);
-    const dy = Math.abs(end.y - start.y);
-    
-    const maxDelta = Math.max(dx, dy);
-    const minDelta = Math.min(dx, dy);
-    
-    // Every second diagonal counts as double cost (10ft instead of 5ft)
-    const diagonals = minDelta;
-    const straights = maxDelta - minDelta;
-    
-    const diagonalFeet = Math.floor(diagonals / 2) * 10 + (diagonals % 2) * 5;
-    const straightFeet = straights * 5;
-    
-    return diagonalFeet + straightFeet;
-  }
-}));
+```yaml
+# Foundry VTT Item Structure
+_id: fbC0Mg1a73wdFbqO
+name: Scimitar
+type: weapon
+img: icons/weapons/swords/scimitar-leather.webp
+system:
+  description:
+    value: "<p>A curved, single-edged sword...</p>"
+  quantity: 1
+  weight: 3
+  price:
+    value: 25
+    denomination: gp
+  type:
+    value: martialM
+    baseItem: scimitar
+  damage:
+    base:
+      number: 1
+      denomination: 6
+      types: ["slashing"]
+  properties: ["fin", "lgt"]
 ```
 
+#### Mapping Logic:
+1. **`index`**: Slugified/lowercased `fbC0Mg1a73wdFbqO` or `scimitar`.
+2. **`name`**: `"Scimitar"`.
+3. **`kind`**: Derived from Foundry `type` (e.g. `weapon` ➔ `"weapon"`, `equipment` ➔ `"armor"` or `"clothing"` based on armor type, `consumable` ➔ `"consumable"`).
+4. **`cost`**:
+   ```json
+   "cost": {
+     "quantity": 25,
+     "unit": "gp"
+   }
+   ```
+5. **`weight`**: `system.weight.value` (converted to number).
+6. **`desc`**: Extract paragraphs from `system.description.value` into a string array.
+7. **`equipSlots`**: Map based on weapon type/armor type (e.g., martial/simple melee weapons ➔ `["main_hand"]`, armor ➔ `["chest"]`, rings ➔ `["ring_1", "ring_2"]`).
+8. **Weapon-Specific Fields (`weapon.schema.json`)**:
+   - `weapon_category`: `"Simple"` or `"Martial"`.
+   - `weapon_range`: `"Melee"` or `"Ranged"` based on properties (`"thr"` / `"amm"`).
+   - `damage`:
+     ```json
+     "damage": {
+       "damage_dice": "1d6",
+       "damage_type": {
+         "index": "slashing",
+         "name": "slashing",
+         "url": "/assets/atlas/damage_types/json/slashing.json"
+       }
+     }
+     ```
+   - `range`: Extract normal/long from `system.range`.
+
 ---
 
-### Blueprint B: Upgrading `CombatGrid.tsx` with Precision Canvas Renderers
+### 3. Spell to Spell Mapping
 
-By adding these dedicated rendering modules to `CombatGrid.tsx`, we draw crisp concentric circles, 5-10-5 highlighted paths, and implement the stunning **Selective Grid Masking** seen in Foundry VTT.
+Foundry Spells are mapped directly to Artificer's `spell.schema.json`:
 
-```typescript
-// Insert these rendering functions inside your Canvas useEffect hook in CombatGrid.tsx
+| Artificer Target Field | Source Foundry Path | Transformation / Logic |
+| :--- | :--- | :--- |
+| `index` | `_id` or lowercased `name` | Slugify/lowercase. |
+| `name` | `name` | Direct copy. |
+| `desc` | `system.description.value` | Array of text strings (paragraphs cleaned of HTML tags). |
+| `level` | `system.level` | Integer (0 for cantrip, 1-9 for spell levels). |
+| `school` | `system.school` | Map single letters (e.g., `abj` ➔ `"abjuration"`, `con` ➔ `"conjuration"`, `div` ➔ `"divination"`, `evo` ➔ `"evocation"`, `ill` ➔ `"illusion"`, `nec` ➔ `"necromancy"`, `tra` ➔ `"transmutation"`, `enc` ➔ `"enchantment"`). Create the standardized Artificer school object. |
+| `components` | `system.properties` | Array containing subsets of `"V"`, `"S"`, `"M"` based on spell properties. |
+| `material` | `system.materials.value` | Material component requirements string. |
+| `ritual` | `system.properties` | Boolean (checks if `"rit"` is in properties list). |
+| `concentration` | `system.properties` | Boolean (checks if `"con"` is in properties list). |
+| `duration` | `system.duration.value` + `units` | Human readable string (e.g., `"1 Minute"`, `"Instantaneous"`). |
+| `casting_time` | `system.activation.value` + `type` | Human readable string (e.g., `"1 action"`, `"1 bonus action"`). |
+| `range` | `system.range.value` + `units` | Human readable string (e.g., `"Self"`, `"60 feet"`). |
+| `damage` | `system.damage` / activities | Convert damage formulae to level-based/slot-based maps. |
 
-/**
- * 1. Draw Concentric Range Indicators (Melee Reach, Weapon Short Range, Long Range)
- */
-const drawConcentricRanges = (
-  ctx: CanvasRenderingContext2D,
-  center: { x: number; y: number },
-  ranges: RangeIndicator[],
-  cellSize: number
-) => {
-  if (ranges.length === 0) return;
+---
 
-  // Render from longest to shortest to ensure proper layered overlapping
-  const sortedRanges = [...ranges].sort((a, b) => (b.longRange || b.range) - (a.longRange || a.range));
+## 🎨 Asset & Image Preservation Architecture
 
-  sortedRanges.forEach((r) => {
-    const drawCircle = (radiusFeet: number, strokeColor: string, fillColor: string) => {
-      const radiusPixels = (radiusFeet / 5) * cellSize;
-      const cx = center.x * cellSize + cellSize / 2;
-      const cy = center.y * cellSize + cellSize / 2;
+> ⚠️ **CRITICAL REQUIREMENT:** The Artificer repository contains a highly developed and customized set of local media assets, hand-made sprites, sprite sheets, sprite indices, and high-resolution icons.
 
-      ctx.beginPath();
-      ctx.arc(cx, cy, radiusPixels, 0, 2 * Math.PI);
-      ctx.fillStyle = fillColor;
-      ctx.fill();
-      ctx.strokeStyle = strokeColor;
-      ctx.lineWidth = 2;
-      ctx.setLineDash([6, 4]); // Dashed rings for skeuomorphic "blueprint" feel
-      ctx.stroke();
-      ctx.setLineDash([]); // Reset line dash
-    };
+To prevent overwriting manually adjusted layouts, hand-crafted sprites, and sprite maps:
+- The porting tool (**`portFoundryAssets.cjs`**) implements a **smart-merge algorithm**.
+- If a target JSON database record already exists locally under `public/assets/atlas/`, the tool reads the existing file first.
+- The tool preserves the following critical media fields:
+  - `image` (legacy fallback path)
+  - `imageUrl` / `image` (canonical WebP/PNG path)
+  - `sprite_sheet` (sprite sheet texture link)
+  - `sprite_index` (the exact cell index on the grid sheet)
+- Only mechanical descriptions, abilities, rules, and raw statistical values are imported from the raw YAML source.
 
-    // Draw Long Range (if specified)
-    if (r.longRange) {
-      drawCircle(r.longRange, 'rgba(239, 68, 68, 0.4)', 'rgba(239, 68, 68, 0.05)'); // Red dashed
-    }
-    // Draw Optimal/Short Range
-    drawCircle(r.range, r.color, r.color.replace(/[\d\.]+\)$/, '0.15)')); // Solid accent
-  });
-};
+---
 
-/**
- * 2. Draw Precision Selective Grid (Immersion Mode)
- */
-const drawSelectiveGridMask = (
-  ctx: CanvasRenderingContext2D,
-  center: { x: number; y: number },
-  gridWidth: number,
-  gridHeight: number,
-  cellSize: number,
-  fadeRadiusCells: number
-) => {
-  ctx.save();
-  
-  // Create circular radial gradient around active character to fade the grid out beautifully
-  const cx = center.x * cellSize + cellSize / 2;
-  const cy = center.y * cellSize + cellSize / 2;
-  const outerRadius = fadeRadiusCells * cellSize;
-  
-  const gradient = ctx.createRadialGradient(cx, cy, cellSize, cx, cy, outerRadius);
-  gradient.addColorStop(0, 'rgba(212, 175, 55, 0.35)'); // Dragon Gold bright close
-  gradient.addColorStop(0.7, 'rgba(212, 175, 55, 0.15)'); // Soft glow
-  gradient.addColorStop(1, 'rgba(0, 0, 0, 0)'); // Fades into darkness
+## 🔄 The Data Porting & Transformation Pipeline
 
-  ctx.strokeStyle = gradient;
-  ctx.lineWidth = 1;
+To automate the import of massive D&D reference files without introducing human syntax errors, the project provides a targeted script located in `/tools/portFoundryAssets.cjs`.
 
-  ctx.beginPath();
-  // Render grid lines restricted to the fade boundary
-  const startX = Math.max(0, center.x - fadeRadiusCells);
-  const endX = Math.min(gridWidth, center.x + fadeRadiusCells);
-  const startY = Math.max(0, center.y - fadeRadiusCells);
-  const endY = Math.min(gridHeight, center.y + fadeRadiusCells);
-
-  for (let x = startX; x <= endX; x++) {
-    ctx.moveTo(x * cellSize, startY * cellSize);
-    ctx.lineTo(x * cellSize, endY * cellSize);
-  }
-  for (let y = startY; y <= endY; y++) {
-    ctx.moveTo(startX * cellSize, y * cellSize);
-    ctx.lineTo(endX * cellSize, y * cellSize);
-  }
-  ctx.stroke();
-  ctx.restore();
-};
-
-/**
- * 3. Draw 5-10-5 Rule Path Highlights
- * Highlight each grid square on the path with a sequential movement value
- */
-const drawPathDistanceBreakdown = (
-  ctx: CanvasRenderingContext2D,
-  path: { x: number; y: number }[],
-  cellSize: number
-) => {
-  if (!path || path.length < 2) return;
-
-  let cumulativeDistance = 0;
-  
-  for (let i = 1; i < path.length; i++) {
-    const prev = path[i - 1];
-    const curr = path[i];
-    
-    const dx = Math.abs(curr.x - prev.x);
-    const dy = Math.abs(curr.y - prev.y);
-    
-    // Diagonal step is index-dependent for 5-10-5
-    const isDiagonal = dx > 0 && dy > 0;
-    if (isDiagonal) {
-      // Determine if this is an odd or even diagonal step in the current path sequence
-      const diagonalCount = path.slice(0, i + 1).filter((node, idx) => {
-        if (idx === 0) return false;
-        const pNode = path[idx - 1];
-        return Math.abs(node.x - pNode.x) > 0 && Math.abs(node.y - pNode.y) > 0;
-      }).length;
-
-      cumulativeDistance += (diagonalCount % 2 === 0) ? 10 : 5;
-    } else {
-      cumulativeDistance += 5;
-    }
-
-    // Draw green/gold tinted footstep block on canvas
-    ctx.fillStyle = 'rgba(212, 175, 55, 0.15)';
-    ctx.fillRect(curr.x * cellSize + 2, curr.y * cellSize + 2, cellSize - 4, cellSize - 4);
-    
-    // Render micro numeric distance label directly inside the grid square
-    ctx.fillStyle = '#D4AF37';
-    ctx.font = 'bold 10px "font-elan", serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(`${cumulativeDistance}ft`, curr.x * cellSize + cellSize / 2, curr.y * cellSize + cellSize / 2);
-  }
-};
+### Step-by-Step Porting Pipeline:
+```
+[Foundry YAML pack] ➔ [YAML to JS Object Parsing] ➔ [Check for existing Local Asset File] ➔ [Preserve custom Local Sprite Sheets / Images] ➔ [Sanitize HTML to Markdown/Text] ➔ [Validate with JSON Schema] ➔ [Write JSON to /public/assets/atlas/]
 ```
 
----
-
-## 🎯 5. Immediate Action & Implementation Plan
-
-To adopt these industry-proven VTT standards into the Artificer Sandbox, the developer should follow these incremental steps:
-
-1.  **Introduce the `useCombatGridStore`**: Create `src/store/useCombatGridStore.ts` to host reactive measurements, active range filters, and the 5-10-5 diagonal engine.
-2.  **Integrate equipped item ranges**: Hook up `useCharacterStore` with `useCombatGridStore` so that when a character is selected, their equipped weapon's ranges (`mwak` / `rwak`) dynamically register as range ring overlays.
-3.  **Upgrade `CombatGrid.tsx` Canvas loop**: 
-    - Inject the selective radial gold grid mask.
-    - Render concentric weapon range overlays dynamically.
-    - Override the basic Chebyshev/Euclidean visual line overlay with the D&D 5-10-5 custom diagonal path.
-4.  **Enrich the Bestiary JSON files**: Align `/public/assets/atlas/monsters/` JSON schemas to support direct `.system.range.value` structures for seamless AI DM spatial ability execution.
+### Key Sanitize Rules:
+1. **HTML Parsing**: Parse HTML description texts (like `system.description.value`) to strip complex wrappers, table classes, and nested system variables while keeping simple standard tags or formatting as markdown or plain string paragraphs.
+2. **References Normalization**: References to other entities must use the canonical pathing:
+   - Spell references: `/assets/atlas/spell/json/<spell_index>.json`
+   - Skill references: `/assets/atlas/skills/json/<skill_index>.json`
+   - Damage types: `/assets/atlas/damage_types/json/<type>.json`
+3. **JSON Structure Validation**: Output files must be run through validation tests to ensure no broken reference paths or missing mandatory fields.
 
 ---
-*This guide bridges standard VTT physics with custom React architecture, delivering an elite, immersive single-player tactical simulator.*
+
+## 🛠️ Verification & Quality Assurance
+
+Once data is imported or mapped, run the following verification checks:
+
+1. **Asset Validation**:
+   Run the central asset validator to verify schema matching, reference checking, and ensure zero duplicate keys exist:
+   ```bash
+   npm run validate:assets
+   ```
+
+2. **Codebase Compilation**:
+   Ensure no TypeScript compilation or structural asset loading fails:
+   ```bash
+   npm run lint
+   ```
+
+3. **Check Output Assets**:
+   Inspect newly generated asset JSONs in `/public/assets/atlas/` to confirm that all nested properties (such as AC structures, speeds, and action rolls) are populated correctly.
