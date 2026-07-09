@@ -34,6 +34,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [Crafting System](./systems/CRAFTING_SYSTEM.md) - Materials and Recipes.
 - [Audio Registry](./systems/AUDIO_REGISTRY.md) - Complete index of audio assets.
 - [Asset Registry](./ASSET_REGISTRY.md) - Tracking sounds, sprites, and models.
+- [Foundry Porting Guide](./systems/FOUNDRY_PORTING_GUIDE.md) - 📦 **Mapping and transforming dnd5e 6.0.x VTT assets.**
 
 ### Phase 2 Architecture
 - [Party State](./systems/PARTY_STATE.md)
