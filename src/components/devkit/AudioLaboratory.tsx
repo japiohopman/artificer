@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GameIcon } from '../../game_icons';
-import { SOUND_MANIFEST } from '../../services/audio/audioManifest';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { playClickSound, playSuccessSound } from '../../services/storageService';
 import { motion, AnimatePresence } from 'motion/react';
@@ -94,7 +93,7 @@ export const AudioLaboratory: React.FC = () => {
           >
             SFX_FORGE
           </button>
-          <button 
+          <button
             onClick={() => { setActiveTab('requester'); playClickSound(); }}
             className={`px-4 py-1 text-[10px] font-bold rounded transition-all ${activeTab === 'requester' ? 'bg-purple-600 text-white' : 'text-white/40 hover:text-white/60'}`}
           >
@@ -115,7 +114,7 @@ export const AudioLaboratory: React.FC = () => {
             >
               <div className="flex items-center justify-between">
                 <div className="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]">Direct_Asset_Bridge // public/assets/sounds/</div>
-                <button 
+                <button
                   onClick={fetchAudioFiles}
                   className="p-2 text-white/20 hover:text-purple-400 transition-colors"
                   title="Refresh File List"
@@ -138,14 +137,15 @@ export const AudioLaboratory: React.FC = () => {
                           <div className="text-[10px] text-purple-400 font-bold uppercase tracking-tighter mb-1">{file.category.replace(/_/g, ' ')}</div>
                           <div className="text-sm font-bold text-white uppercase tracking-tight truncate max-w-[200px]">{file.name.replace(/\.[^/.]+$/, "").replace(/_/g, ' ')}</div>
                         </div>
-                        <button 
+                        <button
                           onClick={() => handleTriggerSound(file.path)}
                           className="p-2 bg-purple-600/20 text-purple-400 rounded-full hover:bg-purple-600 hover:text-white transition-all shadow-lg group-hover:scale-110"
                         >
                           <GameIcon name="play" size={14} />
                         </button>
                       </div>
-                      
+
+
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-[10px] text-white/20 font-mono">
                           <GameIcon name="save_data" size={10} />
@@ -182,7 +182,7 @@ export const AudioLaboratory: React.FC = () => {
               </div>
             </motion.div>
           ) : activeTab === 'forge' ? (
-            <motion.div 
+            <motion.div
               key="forge"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -195,8 +195,7 @@ export const AudioLaboratory: React.FC = () => {
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Asset_Identifier</label>
-                      <input 
-                        type="text" 
+                      <input
                         value={assetName}
                         onChange={(e) => setAssetName(e.target.value)}
                         placeholder="e.g. Arcane_Impact_Heavy"
@@ -206,7 +205,7 @@ export const AudioLaboratory: React.FC = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Synthesis_Instruction</label>
-                    <button 
+                    <button
                       onClick={async () => {
                         if (!forgePrompt) return;
                         setIsOptimizing(true);
@@ -232,15 +231,15 @@ export const AudioLaboratory: React.FC = () => {
                       {isOptimizing ? 'Optimizing...' : 'AI_Optimize'}
                     </button>
                   </div>
-                  <textarea 
+                  <textarea
                     value={forgePrompt}
                     onChange={(e) => setForgePrompt(e.target.value)}
                     placeholder="Describe the sonic essence (e.g. 'Heavy iron gate creaking slowly in a damp stone corridor')..."
                     className="w-full h-48 bg-black/40 border border-white/10 p-4 text-sm text-white/80 rounded-xl focus:outline-none focus:border-purple-500/50 transition-all leading-relaxed custom-scrollbar font-mono italic"
                   />
-                  
+
                   <div className="grid grid-cols-2 gap-4">
-                    <button 
+                    <button
                       onClick={async () => {
                         setIsGenerating(true);
                         playClickSound();
@@ -255,9 +254,9 @@ export const AudioLaboratory: React.FC = () => {
                               accountIndex
                             })
                           });
-                          
+
                           if (!res.ok) throw new Error("Generation failed");
-                          
+
                           const blob = await res.blob();
                           setGeneratedBlob(blob);
                           const url = URL.createObjectURL(blob);
@@ -278,7 +277,7 @@ export const AudioLaboratory: React.FC = () => {
                     </button>
 
                     {previewUrl && (
-                      <button 
+                      <button
                         onClick={() => {
                           const audio = new Audio(previewUrl);
                           audio.play();
@@ -304,7 +303,7 @@ export const AudioLaboratory: React.FC = () => {
                         <div className="text-[11px] text-emerald-500/80 font-mono">ready_for_deployment.wav</div>
                       </div>
                     </div>
-                    <button 
+                    <button
                       onClick={async () => {
                         if (!generatedBlob || !assetName) {
                           alert("Please specify an Asset Name before deploying.");
@@ -319,7 +318,8 @@ export const AudioLaboratory: React.FC = () => {
                             const base64data = (reader.result as string).split(',')[1];
                             const safeName = assetName.toLowerCase().replace(/\s+/g, '_');
                             const path = `public/assets/sounds/sfx/${safeName}.wav`;
-                            
+
+
                             const res = await fetch("/api/commit", {
                               method: "POST",
                               headers: { "Content-Type": "application/json" },
@@ -330,7 +330,8 @@ export const AudioLaboratory: React.FC = () => {
                                 message: `Bake generated SFX: ${assetName}`
                               })
                             });
-                            
+
+
                             if (res.ok) {
                               playSuccessSound();
                               alert(`SFX '${assetName}' successfully baked to repository!`);
@@ -371,7 +372,7 @@ export const AudioLaboratory: React.FC = () => {
                       <label className="text-[9px] font-bold text-white/30 uppercase tracking-widest">Duration</label>
                       <span className="text-[10px] font-mono text-purple-400 font-bold">{duration}s</span>
                     </div>
-                    <input 
+                    <input
                       type="range" min="1" max="22" step="1"
                       value={duration}
                       onChange={(e) => setDuration(parseInt(e.target.value))}
@@ -380,7 +381,7 @@ export const AudioLaboratory: React.FC = () => {
                   </div>
 
                   {/* Loop Toggle */}
-                  <button 
+                  <button
                     onClick={() => { setIsLoop(!isLoop); playClickSound(); }}
                     className={`w-full flex items-center justify-between p-4 rounded-xl border transition-all ${isLoop ? 'bg-purple-600/10 border-purple-500/50 text-white' : 'bg-white/5 border-white/10 text-white/40'}`}
                   >
