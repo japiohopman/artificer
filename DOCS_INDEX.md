@@ -14,6 +14,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Crafting System](./docs/systems/CRAFTING_SYSTEM.md)** - ⚒️ **Material and Recipe Architecture.**
 - **[Quest System](./docs/systems/QUEST_SYSTEM.md)** - ⚔️ **Quest and Mission Architecture.**
 - **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** - 🎭 **Narrator vs. Engine Architecture.**
+- **[Foundry VTT Porting Guide](./docs/systems/FOUNDRY_PORTING_GUIDE.md)** - 📐 **VTT System Mapping, 5-10-5 Spatial Math, and TSX/Zustand Blueprints.**
 - **[Dice & Chat](./docs/modules/dice_system.md)** - 3D Dice and AI Chat documentation.
 - **[Icon System](./docs/modules/icons.md)** - 🎨 **Custom Icon Mapping and Architecture.**
 - **[Deep Dive Report](./docs/reports/DEEP_DIVE_RAPPORT.md)** - Analysis of Classes, Leveling, and Character Creation.

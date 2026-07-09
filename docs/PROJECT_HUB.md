@@ -46,6 +46,7 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [World Panel Architecture](./systems/WORLD_PANEL_ARCHITECTURE.md)
 - [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md)
 - [Tactical Combat Engine](./systems/TACTICAL_COMBAT_ENGINE.md)
+- [Foundry VTT Porting Guide](./systems/FOUNDRY_PORTING_GUIDE.md)
 - [Data Flow](./systems/DATA_FLOW.md)
 
 ## 📂 Directories

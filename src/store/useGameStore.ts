@@ -54,6 +54,7 @@ export interface CombatMonster {
     cha: number;
   };
   armor_class?: any;
+  size?: 'Medium' | 'Large';
 }
 
 export interface CombatState {
