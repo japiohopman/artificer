@@ -212,6 +212,22 @@ function mapActor(sourceData, targetPath) {
   // Load existing data for image and custom content preservation
   const preserved = getPreservedData(targetPath) || {};
 
+  // Check for dynamic token image in public/assets/atlas/enemies/tokens/
+  let enemyImage = preserved.image;
+  if (!enemyImage) {
+    const tokenExtensions = ['webp', 'png', 'jpg', 'jpeg'];
+    for (const ext of tokenExtensions) {
+      const tokenPath = path.join(__dirname, `../public/assets/atlas/enemies/tokens/${index}.${ext}`);
+      if (fs.existsSync(tokenPath)) {
+        enemyImage = `/assets/atlas/enemies/tokens/${index}.${ext}`;
+        break;
+      }
+    }
+  }
+  if (!enemyImage) {
+    enemyImage = `/assets/atlas/enemies/${index}.webp`;
+  }
+
   return {
     index,
     name: name.toLowerCase(),
@@ -255,7 +271,7 @@ function mapActor(sourceData, targetPath) {
     actions,
     legendary_actions: [],
     reactions: [],
-    image: preserved.image || `/assets/atlas/enemies/${index}.webp`,
+    image: enemyImage,
     url: `/assets/atlas/enemies/json/${index}.json`,
     updated_at: new Date().toISOString(),
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
