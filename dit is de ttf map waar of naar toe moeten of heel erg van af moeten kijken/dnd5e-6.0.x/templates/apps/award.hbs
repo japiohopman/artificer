@@ -1,0 +1,37 @@
+<section>
+    <div class="distribution">
+        <span>{{ localize "DND5E.Award.Distribution.Split" }}</span>
+        <slide-toggle name="each" {{ checked each }}></slide-toggle>
+        <span>{{ localize "DND5E.Award.Distribution.Each" }}</span>
+    </div>
+    {{#unless hideXP}}
+    <label class="xp currency-style">
+        <span class="roboto-upper">{{ localize "DND5E.ExperiencePoints.Label" }}</span>
+        {{ numberInput xp name="xp" class="uninput" min=0 step=1 }}
+    </label>
+    {{/unless}}
+    <section class="currency">
+        {{#each currency}}
+        <label>
+            <i class="currency {{ @key }}" data-tooltip aria-label="{{ label }}"></i>
+            {{ numberInput value name=(concat "amount." @key) class="uninput" min=0 step=1 }}
+        </label>
+        {{/each}}
+    </section>
+    <div class="destinations">
+        {{#if noPrimaryParty}}
+        <p class="no-primary-party">{{ localize "DND5E.Award.NoPrimaryParty" }}</p>
+        {{/if}}
+        {{#each destinations}}
+        <label>
+            <dnd5e-checkbox name="destination.{{ doc.id }}" {{ checked checked }}></dnd5e-checkbox>
+            {{{ icon }}} {{ doc.name }}
+        </label>
+        {{else}}
+        <p class="no-destinations">{{ localize "DND5E.Award.NoDestinations" }}</p>
+        {{/each}}
+    </div>
+    <button type="submit" name="transfer" disabled>
+        <i class="fa-solid fa-trophy" inert></i> {{ localize "DND5E.Award.Action" }}
+    </button>
+</section>

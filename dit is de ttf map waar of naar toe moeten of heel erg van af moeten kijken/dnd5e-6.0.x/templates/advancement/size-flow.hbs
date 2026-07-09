@@ -1,0 +1,8 @@
+<div>
+    {{~#if size}}
+    <fieldset>
+        <legend>{{ localize "DND5E.ADVANCEMENT.Size.Action.SelectSize" }}</legend>
+        {{ formField size.field name="size" value=size.value options=size.options }}
+    </fieldset>
+    {{/if~}}
+</div>

@@ -1,0 +1,197 @@
+_id: dmgElvenChain000
+name: Elven Chain
+type: equipment
+folder: 1kn4uV4dTVVduLjA
+img: icons/equipment/back/mantle-collared-green.webp
+system:
+  activities:
+    xYoWU4qlUirrjy0k:
+      type: enchant
+      name: Elven Chain
+      _id: xYoWU4qlUirrjy0k
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description: {}
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: nrk34InFS4POIYtq
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+      range:
+        override: false
+      target:
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+      enchant: {}
+      restrictions:
+        allowMagical: false
+        categories: []
+        properties: []
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  description:
+    value: >-
+      <p><em>Armor
+      (@UUID[Compendium.dnd5e.equipment24.Item.phbarmChainMail0]{Chain Mail} or
+      @UUID[Compendium.dnd5e.equipment24.Item.phbarmChainShirt]{Chain Shirt}),
+      Rare</em></p><p>You gain a +1 bonus to Armor Class while you wear this
+      armor. You are considered trained with this armor even if you lack
+      training with Medium or Heavy
+      armor.</p><p>@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE
+      cite=false caption=false classes="hide-in-embed"]</p>
+    chat: ''
+  identifier: elven-chain
+  source:
+    revision: 1
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  identified: true
+  unidentified:
+    description: ''
+  container: null
+  quantity: 1
+  weight:
+    value: 0
+    units: lb
+  price:
+    value: 4000
+    denomination: gp
+  rarity: rare
+  attunement: ''
+  attuned: false
+  equipped: false
+  armor:
+    value: 16
+    magicalBonus: 1
+    dex: 0
+  cover: null
+  crewed: false
+  hp:
+    value: null
+    max: null
+    dt: null
+    conditions: ''
+  type:
+    value: ''
+    baseItem: ''
+  properties:
+    - mgc
+  strength: 13
+  proficient: 1
+effects:
+  - type: enchantment
+    name: Elven Chain
+    img: systems/dnd5e/icons/spell-tiers/spell3.webp
+    disabled: true
+    _id: nrk34InFS4POIYtq
+    system:
+      changes:
+        - key: name
+          value: Elven {}
+          priority: null
+          type: override
+          phase: initial
+          _id: bg8KERuvHUvf5rKO
+        - key: system.rarity
+          value: rare
+          priority: null
+          type: override
+          phase: initial
+          _id: H3pEPerEzOh69ARb
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgElvenChain000
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: nyIKeBhypdQku1i8
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: U2GabSJQEOWdnah3
+        - key: system.proficient
+          value: 1
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: 7nweS1WEQQzxt6Ud
+        - key: system.armor.magicalBonus
+          value: 1
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: yfCSICftF6YF32jU
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1730307869141
+      modifiedTime: 1783544095422
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgElvenChain000.nrk34InFS4POIYtq'
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1727883376108
+  modifiedTime: 1783544095422
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 800000
+ownership:
+  default: 0
+_key: '!items!dmgElvenChain000'

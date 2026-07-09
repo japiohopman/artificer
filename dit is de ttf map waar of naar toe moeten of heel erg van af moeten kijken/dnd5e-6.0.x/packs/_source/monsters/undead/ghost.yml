@@ -1,0 +1,1490 @@
+_id: qoFEjfrANBdrCP6m
+name: Ghost
+type: npc
+img: null
+system:
+  abilities:
+    str:
+      value: 7
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    dex:
+      value: 13
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    con:
+      value: 10
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    int:
+      value: 10
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    wis:
+      value: 12
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    cha:
+      value: 17
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+  attributes:
+    ac:
+      flat: 11
+      calc: natural
+      formula: ''
+    hp:
+      value: 45
+      max: 45
+      temp: null
+      tempmax: 0
+      formula: 10d8
+    init:
+      ability: ''
+      bonus: '0'
+      roll:
+        min: null
+        max: null
+        mode: 0
+    movement:
+      burrow: 0
+      climb: 0
+      fly: 40
+      swim: 0
+      walk: 0
+      units: ft
+      hover: true
+    attunement:
+      max: 3
+    senses:
+      darkvision: 60
+      blindsight: 0
+      tremorsense: 0
+      truesight: 0
+      units: ft
+      special: ''
+    spellcasting: ''
+    exhaustion: 0
+    concentration:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      bonuses:
+        save: ''
+      limit: 1
+    hd:
+      spent: 0
+    death:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      success: 0
+      failure: 0
+  details:
+    biography:
+      value: ''
+      public: ''
+    alignment: Any Alignment
+    race: null
+    type:
+      value: undead
+      subtype: ''
+      swarm: ''
+      custom: ''
+    environment: ''
+    cr: 4
+    spellLevel: 0
+    ideal: ''
+    bond: ''
+    flaw: ''
+  traits:
+    size: med
+    di:
+      value:
+        - cold
+        - necrotic
+        - poison
+      bypasses: []
+      custom: ''
+    dr:
+      value:
+        - acid
+        - bludgeoning
+        - fire
+        - lightning
+        - piercing
+        - slashing
+        - thunder
+      bypasses:
+        - mgc
+      custom: ''
+    dv:
+      value: []
+      bypasses: []
+      custom: ''
+    ci:
+      value:
+        - charmed
+        - exhaustion
+        - frightened
+        - grappled
+        - paralyzed
+        - petrified
+        - poisoned
+        - prone
+        - restrained
+      custom: ''
+    languages:
+      value: []
+      custom: any languages it knew in life
+    dm:
+      amount: {}
+      bypasses: []
+  currency:
+    pp: 0
+    gp: 0
+    ep: 0
+    sp: 0
+    cp: 0
+  skills:
+    acr:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ani:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    arc:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ath:
+      value: 0
+      ability: str
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    dec:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    his:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ins:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    itm:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    inv:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    med:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    nat:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prc:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prf:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    per:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    rel:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    slt:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ste:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    sur:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+  spells:
+    spell1:
+      value: 0
+      override: null
+    spell2:
+      value: 0
+      override: null
+    spell3:
+      value: 0
+      override: null
+    spell4:
+      value: 0
+      override: null
+    spell5:
+      value: 0
+      override: null
+    spell6:
+      value: 0
+      override: null
+    spell7:
+      value: 0
+      override: null
+    spell8:
+      value: 0
+      override: null
+    spell9:
+      value: 0
+      override: null
+    pact:
+      value: 0
+      override: null
+  bonuses:
+    mwak:
+      attack: ''
+      damage: ''
+    rwak:
+      attack: ''
+      damage: ''
+    msak:
+      attack: ''
+      damage: ''
+    rsak:
+      attack: ''
+      damage: ''
+    abilities:
+      check: ''
+      save: ''
+      skill: ''
+    spell:
+      dc: ''
+  resources:
+    legact:
+      value: 0
+      max: 0
+    legres:
+      value: 0
+      max: 0
+    lair:
+      value: false
+      initiative: null
+  tools: {}
+  source:
+    custom: ''
+    book: ''
+    page: ''
+    license: CC-BY-4.0
+    revision: 1
+    rules: '2014'
+prototypeToken:
+  name: Ghost
+  displayName: 20
+  actorLink: false
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  disposition: -1
+  displayBars: 20
+  bar1:
+    attribute: attributes.hp
+  bar2:
+    attribute: null
+  flags: {}
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+    negative: false
+    priority: 0
+  texture:
+    src: null
+    tint: '#ffffff'
+    scaleX: 1
+    scaleY: 1
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  sight:
+    angle: 360
+    enabled: false
+    range: 60
+    brightness: 0
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  detectionModes: {}
+  appendNumber: false
+  prependAdjective: false
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  depth: 1
+items:
+  - _id: tjrDz1IWVcjF7PMl
+    name: Ethereal Sight
+    type: feat
+    img: icons/magic/perception/eye-tendrils-web-purple.webp
+    system:
+      description:
+        value: >-
+          <p>The [[lookup @name lowercase]]{monster} can see 60 feet into the
+          Ethereal Plane when it is on the Material Plane, and vice versa.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities: {}
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: ethereal-sight
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.We6R4thWKYDRYlEc
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781836868420
+      modifiedTime: 1781836870960
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.tjrDz1IWVcjF7PMl'
+  - _id: wdOqdYfLb2Nu1Uud
+    name: Withering Touch
+    type: weapon
+    img: icons/magic/unholy/strike-hand-glow-pink.webp
+    system:
+      description:
+        value: <p>[[/attack extended]]. [[/damage extended]].</p>
+        chat: >-
+          <p>The [[lookup @name]]{monster} attacks with its [[lookup
+          @item.name]].</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      quantity: 1
+      weight:
+        value: 0
+        units: lb
+      price:
+        value: 0
+        denomination: gp
+      attunement: ''
+      equipped: true
+      rarity: ''
+      identified: true
+      cover: null
+      range:
+        value: null
+        long: null
+        units: ft
+        reach: null
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      damage:
+        versatile:
+          number: null
+          denomination: null
+          bonus: ''
+          types: []
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+        base:
+          number: 4
+          denomination: 6
+          bonus: ''
+          types:
+            - necrotic
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+      armor:
+        value: 10
+      hp:
+        value: 0
+        max: 0
+        dt: null
+        conditions: ''
+      properties: []
+      proficient: 1
+      unidentified:
+        description: ''
+      type:
+        value: natural
+        baseItem: ''
+      container: null
+      crewed: false
+      activities:
+        dnd5eactivity000:
+          _id: dnd5eactivity000
+          type: attack
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+          duration:
+            concentration: false
+            value: ''
+            units: ''
+            special: ''
+            override: false
+          effects: []
+          range:
+            value: '5'
+            units: ft
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ''
+            affects:
+              count: ''
+              type: ''
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          attack:
+            ability: cha
+            bonus: ''
+            critical:
+              threshold: null
+            flat: false
+            type:
+              value: melee
+              classification: weapon
+          damage:
+            critical:
+              bonus: ''
+            includeBase: true
+            parts: []
+          sort: 0
+      attuned: false
+      ammunition: {}
+      magicalBonus: null
+      identifier: withering-touch
+      mastery: ''
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781838326360
+      modifiedTime: 1781838326360
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.wdOqdYfLb2Nu1Uud'
+  - _id: WyxVuCp4iU10bA7m
+    name: Etherealness
+    type: feat
+    img: icons/magic/unholy/silhouette-robe-evil-glow.webp
+    system:
+      description:
+        value: >-
+          <p>The [[lookup @name lowercase]]{monster} enters the Ethereal Plane
+          from the Material Plane, or vice versa. It is visible on the Material
+          Plane while it is in the Border Ethereal, and vice versa, yet it can't
+          affect or be affected by anything on the other plane.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties: []
+      activities:
+        1Kkk4J5Cgu508gfn:
+          type: utility
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects: []
+          range:
+            units: self
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: ''
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          roll:
+            formula: ''
+            name: ''
+            prompt: false
+            visible: false
+          sort: 100000
+          name: Traverse Planes
+          img: ''
+          flags: {}
+          visibility:
+            identifier: ''
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+          _id: 1Kkk4J5Cgu508gfn
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: etherealness
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.rDoNJnKdY47x8MD4
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781836895680
+      modifiedTime: 1781836920569
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.WyxVuCp4iU10bA7m'
+  - _id: lOzkFHeXCdO2FB9X
+    name: Horrifying Visage
+    type: feat
+    img: icons/magic/death/skull-energy-light-purple.webp
+    system:
+      description:
+        value: >-
+          <p>Each non-undead creature within [[lookup @target.template.size
+          activity=LYjmuZ7QyGDPVBoT]] feet of the [[lookup @name
+          lowercase]]{monster} that can see it must succeed on a DC 13 Wisdom
+          saving throw or be &amp;reference[frightened] for [[lookup
+          @labels.duration activity=LYjmuZ7QyGDPVBoT]]. If the save fails by 5
+          or more, the target also ages [[/r 1d4 * 10 #Years aged.]]{1d4 x 10}
+          years.</p><p>A frightened target can repeat the saving throw at the
+          end of each of its turns, ending the frightened condition on itself on
+          a success. If a target's saving throw is successful or the effect ends
+          for it, the target is immune to this [[lookup @name
+          lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.
+          The aging effect can be reversed with a
+          @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater
+          restoration} spell, but only within 24 hours of it occurring.</p>
+        chat: >-
+          <p>Each non-undead creature within [[lookup @target.template.size
+          activity=LYjmuZ7QyGDPVBoT]] feet of the [[lookup @name]]{monster} that
+          can see it must succeed make a Wisdom saving throw. A target can
+          repeat the saving throw at the end of each of its turns, ending the
+          condition on itself on a success.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties: []
+      activities:
+        LYjmuZ7QyGDPVBoT:
+          type: save
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: '1'
+            units: minute
+            special: ''
+            override: false
+          effects:
+            - _id: TJfxWRiNLIW3idZ6
+              onSave: false
+              level:
+                min: null
+                max: null
+            - _id: YpGPsEF1EFARwjc1
+              level: {}
+              onSave: false
+          range:
+            units: self
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: radius
+              size: '60'
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: creature
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          damage:
+            onSave: none
+            parts: []
+          save:
+            ability:
+              - wis
+            dc:
+              calculation: ''
+              formula: '13'
+            visible: true
+            bonus: ''
+          sort: 100000
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: LYjmuZ7QyGDPVBoT
+          name: Horrify Creatures
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: horrifying-visage
+    effects:
+      - name: Horrified
+        img: icons/magic/death/skull-energy-light-purple.webp
+        origin: Compendium.dnd5e.monsters.Actor.qoFEjfrANBdrCP6m.Item.lOzkFHeXCdO2FB9X
+        transfer: false
+        _id: TJfxWRiNLIW3idZ6
+        type: base
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: 1
+          units: minutes
+          expiry: turnStart
+          expired: false
+        description: >-
+          <p>You are &amp;reference[frightened apply=false] for the
+          duration.</p><p>You can repeat the saving throw at the end of each of
+          your turns, ending the effect on yourself on a success.</p>
+        tint: '#ffffff'
+        statuses:
+          - frightened
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781836989947
+          modifiedTime: 1781837039845
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!qoFEjfrANBdrCP6m.lOzkFHeXCdO2FB9X.TJfxWRiNLIW3idZ6
+      - name: Fear-Induced Aging
+        img: icons/magic/death/bones-crossed-gray.webp
+        origin: Compendium.dnd5e.monsters.Actor.qoFEjfrANBdrCP6m.Item.lOzkFHeXCdO2FB9X
+        transfer: false
+        _id: YpGPsEF1EFARwjc1
+        type: base
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: 24
+          units: hours
+          expiry: turnStart
+          expired: false
+        description: >-
+          <p>You have been aged. This aging effect can be reversed with a
+          @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater
+          restoration} spell, but only within 24 hours of it
+          occurring.</p><p>After this effect ends, the aging can no longer be
+          revered.</p>
+        tint: '#ffffff'
+        statuses: []
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781837132012
+          modifiedTime: 1783369099032
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!qoFEjfrANBdrCP6m.lOzkFHeXCdO2FB9X.YpGPsEF1EFARwjc1
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.lBN86BToCJgkakL3
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781836928815
+      modifiedTime: 1783369092758
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.lOzkFHeXCdO2FB9X'
+  - _id: UF0mfYsgI4ay6mzv
+    name: Possession
+    type: feat
+    img: icons/magic/control/fear-fright-monster-grin-purple-blue.webp
+    system:
+      description:
+        value: >-
+          <p>One humanoid that the [[lookup @name lowercase]]{monster} can see
+          within [[lookup @labels.description.range activity=WcBEt039Ueelll14]]
+          of it must succeed on a [[/save activity=WcBEt039Ueelll14]] saving
+          throw or be possessed by the [[lookup @name lowercase]]{monster}; the
+          [[lookup @name lowercase]]{monster} then disappears, and the target is
+          &amp;reference[incapacitated] and loses control of its body. The
+          [[lookup @name lowercase]]{monster} now controls the body but doesn't
+          deprive the target of awareness.</p><p>The [[lookup @name
+          lowercase]]{monster} can't be targeted by any attack, spell, or other
+          effect, except ones that turn undead, and it retains its alignment,
+          Intelligence, Wisdom, Charisma, and immunity to being
+          &amp;reference[charmed apply=false] and &amp;reference[frightened
+          apply=false]. It otherwise uses the possessed target's statistics, but
+          doesn't gain access to the target's knowledge, class features, or
+          proficiencies. The possession lasts until the body drops to 0 hit
+          points, the [[lookup @name lowercase]]{monster} ends it as a bonus
+          action, or the [[lookup @name lowercase]]{monster} is turned or forced
+          out by an effect like the
+          @UUID[Compendium.dnd5e.spells.Item.TkJ8Wtg1L7TZtspm]{dispel evil and
+          good} spell. When the possession ends, the [[lookup @name
+          lowercase]]{monster} reappears in an unoccupied space within 5 feet of
+          the body. The target is immune to this [[lookup @name
+          lowercase]]{monster}'s [[lookup @item.name]] for 24 hours after
+          succeeding on the saving throw or after the possession
+          ends.</p><section id="secret-pRRBgjuEtpd4ZBdt"
+          class="secret"><p><strong>Foundry Note</strong></p><p>The active
+          effect applied by the <em><strong>"Possess Creature"
+          </strong></em>activity sets the target's mental statistics to the
+          [[lookup @name lowercase]]{monster}'s and gives them immunity to the
+          charmed and frightened conditions in order to represent the [[lookup
+          @name lowercase]]{monster} possessing the target.</p></section>
+        chat: >-
+          <p>One humanoid that the [[lookup @name]]{monster} can see within
+          [[lookup @labels.description.range activity=WcBEt039Ueelll14]] of it
+          must make a Charisma saving throw.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: '1'
+        recovery:
+          - period: recharge
+            formula: '6'
+            type: recoverAll
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties: []
+      activities:
+        WcBEt039Ueelll14:
+          type: save
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets:
+              - type: itemUses
+                value: '1'
+                target: ''
+                scaling: {}
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: spec
+            special: ''
+            override: false
+          effects:
+            - _id: aOay2ytam3lTBVj4
+              level: {}
+              onSave: false
+          range:
+            value: '5'
+            units: ft
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: '1'
+              type: creature
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          damage:
+            onSave: none
+            parts: []
+          save:
+            ability:
+              - cha
+            dc:
+              calculation: ''
+              formula: '13'
+            visible: true
+            bonus: ''
+          sort: 100000
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: WcBEt039Ueelll14
+          name: Possess Creature
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: possession
+    effects:
+      - name: Possessed
+        img: icons/magic/control/fear-fright-monster-grin-purple-blue.webp
+        origin: Compendium.dnd5e.monsters.Actor.qoFEjfrANBdrCP6m.Item.UF0mfYsgI4ay6mzv
+        transfer: false
+        _id: aOay2ytam3lTBVj4
+        type: base
+        system:
+          changes:
+            - key: system.abilities.int.value
+              type: override
+              value: 10
+              phase: initial
+              priority: null
+            - key: system.abilities.wis.value
+              type: override
+              value: 12
+              phase: initial
+              priority: null
+            - key: system.abilities.cha.value
+              type: override
+              value: 17
+              phase: initial
+              priority: null
+            - key: system.traits.ci.value
+              type: add
+              value: charmed
+              phase: initial
+              priority: null
+            - key: system.traits.ci.value
+              type: add
+              value: frightened
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You have been possessed by the ghost. You are
+          &amp;reference[incapacitated apply=false] and lose control of your
+          body. The ghost now controls your body but doesn't deprive you of
+          awareness.</p><p>The ghost can't be targeted by any attack, spell, or
+          other effect, except ones that turn undead, and it retains its
+          alignment, Intelligence, Wisdom, Charisma, and immunity to being
+          &amp;reference[charmed apply=false] and &amp;reference[frightened
+          apply=false]. It otherwise uses your statistics, but doesn't gain
+          access to your knowledge, class features, or proficiencies. The
+          possession lasts until your body drops to 0 hit points, the ghost ends
+          it as a bonus action, or the ghost is turned or forced out by an
+          effect like the
+          @UUID[Compendium.dnd5e.spells.Item.TkJ8Wtg1L7TZtspm]{dispel evil and
+          good} spell.</p><p>When the possession ends, the ghost reappears in an
+          unoccupied space within 5 feet of your body.</p>
+        tint: '#ffffff'
+        statuses:
+          - incapacitated
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781837421828
+          modifiedTime: 1783369116468
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!qoFEjfrANBdrCP6m.UF0mfYsgI4ay6mzv.aOay2ytam3lTBVj4
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.NI3FPb5jQsePdlVl
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781837361476
+      modifiedTime: 1783369109695
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.UF0mfYsgI4ay6mzv'
+  - _id: utXD2LZwh5ZRDhYM
+    name: Incorporeal Movement
+    type: feat
+    img: icons/creatures/magical/spirit-undead-ghost-purple.webp
+    system:
+      description:
+        value: >-
+          <p>The [[lookup @name lowercase]]{monster} can move through other
+          creatures and objects as if they were &amp;reference[difficult
+          terrain].</p><p>It takes [[/damage average]] damage if it ends its
+          turn inside an object.</p>
+        chat: >-
+          <p>The [[lookup @name]]{monster} can move through other creatures and
+          objects as if they were &amp;reference[difficult terrain].</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities:
+        EMsG8gJaIafZVjS5:
+          type: damage
+          activation:
+            type: special
+            value: null
+            condition: >-
+              When the [[lookup @name lowercase]]{monster} ends their turn
+              inside an object.
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects: []
+          range:
+            units: self
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: self
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          damage:
+            critical:
+              allow: false
+              bonus: ''
+            parts:
+              - custom:
+                  enabled: false
+                  formula: ''
+                number: 1
+                denomination: 10
+                bonus: ''
+                types:
+                  - force
+                scaling:
+                  number: 1
+          sort: 100000
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: EMsG8gJaIafZVjS5
+          name: End Turn in Object Damage
+      enchant: {}
+      prerequisites:
+        level: null
+        items: []
+        repeatable: false
+      identifier: incorporeal-movement
+      advancement: {}
+      crewed: false
+    effects:
+      - name: Incorporeal Movement
+        img: icons/creatures/magical/spirit-undead-ghost-purple.webp
+        origin: Compendium.dnd5e.monsters.Actor.ET4PEVEiNJLU4f7c.Item.idILnIUj76QH9v8w
+        type: base
+        _id: T4RyC3NMej3wwUfZ
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You can move through other creatures and objects as if they were
+          &amp;reference[difficult terrain].</p>
+        tint: '#ffffff'
+        transfer: true
+        statuses:
+          - ethereal
+        showIcon: 0
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781836852323
+          modifiedTime: 1781836852323
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!qoFEjfrANBdrCP6m.utXD2LZwh5ZRDhYM.T4RyC3NMej3wwUfZ
+    folder: null
+    sort: 56250
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsters.Actor.ET4PEVEiNJLU4f7c.Item.idILnIUj76QH9v8w
+      duplicateSource: Item.zK1tAqzwB9vwiK6w
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781836852323
+      modifiedTime: 1781836852323
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!qoFEjfrANBdrCP6m.utXD2LZwh5ZRDhYM'
+effects: []
+folder: FsvtTiIRh93utaoh
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  coreVersion: '14.361'
+  systemId: dnd5e
+  systemVersion: 4.0.0
+  createdTime: 1726171260703
+  modifiedTime: 1726171450649
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!actors!qoFEjfrANBdrCP6m'

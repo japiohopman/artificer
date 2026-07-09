@@ -1,0 +1,1046 @@
+_id: fqbFYtbtkrL53FOC
+name: Gray Ooze
+type: npc
+img: null
+system:
+  abilities:
+    str:
+      value: 12
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    dex:
+      value: 6
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    con:
+      value: 16
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    int:
+      value: 1
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    wis:
+      value: 6
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    cha:
+      value: 2
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+  attributes:
+    ac:
+      flat: 8
+      calc: natural
+      formula: ''
+    hp:
+      value: 22
+      max: 22
+      temp: 0
+      tempmax: 0
+      formula: 3d8 + 9
+    init:
+      ability: ''
+      bonus: '0'
+      roll:
+        min: null
+        max: null
+        mode: 0
+    movement:
+      burrow: 0
+      climb: 10
+      fly: 0
+      swim: 0
+      walk: 10
+      units: ft
+      hover: false
+    attunement:
+      max: 3
+    senses:
+      darkvision: 0
+      blindsight: 60
+      tremorsense: 0
+      truesight: 0
+      units: ft
+      special: Blind beyond this radius
+    spellcasting: ''
+    exhaustion: 0
+    concentration:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      bonuses:
+        save: ''
+      limit: 1
+    hd:
+      spent: 0
+    death:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      success: 0
+      failure: 0
+  details:
+    biography:
+      value: ''
+      public: ''
+    alignment: Unaligned
+    race: null
+    type:
+      value: ooze
+      subtype: ''
+      swarm: ''
+      custom: ''
+    environment: Underdark
+    cr: 0.5
+    spellLevel: 0
+    ideal: ''
+    bond: ''
+    flaw: ''
+  traits:
+    size: med
+    di:
+      value: []
+      bypasses: []
+      custom: ''
+    dr:
+      value:
+        - acid
+        - cold
+        - fire
+      bypasses: []
+      custom: ''
+    dv:
+      value: []
+      bypasses: []
+      custom: ''
+    ci:
+      value:
+        - blinded
+        - charmed
+        - deafened
+        - frightened
+        - prone
+        - exhaustion
+      custom: ''
+    languages:
+      value: []
+      custom: ''
+    dm:
+      amount: {}
+      bypasses: []
+  currency:
+    pp: 0
+    gp: 0
+    ep: 0
+    sp: 0
+    cp: 0
+  skills:
+    acr:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ani:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    arc:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ath:
+      value: 0
+      ability: str
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    dec:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    his:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ins:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    itm:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    inv:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    med:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    nat:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prc:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prf:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    per:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    rel:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    slt:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ste:
+      value: 2
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    sur:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+  spells:
+    spell1:
+      value: 0
+      override: null
+    spell2:
+      value: 0
+      override: null
+    spell3:
+      value: 0
+      override: null
+    spell4:
+      value: 0
+      override: null
+    spell5:
+      value: 0
+      override: null
+    spell6:
+      value: 0
+      override: null
+    spell7:
+      value: 0
+      override: null
+    spell8:
+      value: 0
+      override: null
+    spell9:
+      value: 0
+      override: null
+    pact:
+      value: 0
+      override: null
+    spell0:
+      value: 0
+      override: null
+  bonuses:
+    mwak:
+      attack: ''
+      damage: ''
+    rwak:
+      attack: ''
+      damage: ''
+    msak:
+      attack: ''
+      damage: ''
+    rsak:
+      attack: ''
+      damage: ''
+    abilities:
+      check: ''
+      save: ''
+      skill: ''
+    spell:
+      dc: ''
+  resources:
+    legact:
+      value: 0
+      max: 0
+    legres:
+      value: 0
+      max: 0
+    lair:
+      value: false
+      initiative: null
+  tools: {}
+  source:
+    custom: ''
+    book: ''
+    page: ''
+    license: CC-BY-4.0
+    revision: 1
+    rules: '2014'
+prototypeToken:
+  name: Gray Ooze
+  displayName: 20
+  actorLink: false
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  disposition: -1
+  displayBars: 20
+  bar1:
+    attribute: attributes.hp
+  bar2:
+    attribute: null
+  flags: {}
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+    color: null
+    negative: false
+    priority: 0
+  texture:
+    src: null
+    tint: '#ffffff'
+    scaleX: 1
+    scaleY: 1
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  sight:
+    angle: 360
+    enabled: false
+    range: 60
+    brightness: 1
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  detectionModes: {}
+  appendNumber: false
+  prependAdjective: false
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  depth: 1
+items:
+  - _id: uSay5J2sf9zXsabi
+    name: Corrode Metal
+    type: feat
+    img: icons/commodities/stone/ore-chunk-magma-brown.webp
+    system:
+      description:
+        value: >-
+          <p>Any nonmagical weapon made of metal that hits the [[lookup @name
+          lowercase]]{monster} corrodes. After dealing damage, the weapon takes
+          a permanent and cumulative -1 penalty to damage rolls.</p><p>If its
+          penalty drops to -5, the weapon is destroyed. Nonmagical ammunition
+          made of metal that hits the [[lookup @name lowercase]]{monster} is
+          destroyed after dealing damage. The [[lookup @name
+          lowercase]]{monster} can eat through 2-inch-thick, nonmagical metal in
+          1 round.</p><section id="secret-3w7p9RfuLKPgT6FQ"
+          class="secret"><p><strong>Foundry Note</strong></p><p>You can apply
+          the
+          @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi.ActiveEffect.Khdj386syEL9V9OA]{Corroded
+          Weapon} enchantment to a weapon, granting it a cumulative -1 penalty
+          to damage rolls each time the enchantment is applied.</p></section>
+        chat: <p>The [[lookup @name]]{monster} corrodes metal.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities:
+        Z1i5TNU9VGpSizu1:
+          type: utility
+          name: Corrode Weapon
+          img: ''
+          sort: 0
+          activation:
+            type: special
+            override: false
+            condition: >-
+              When a nonmagicial weapon made of metal hits the [[lookup @name
+              lowercase]]{monster}.
+          consumption:
+            scaling:
+              allowed: false
+            spellSlot: true
+            targets: []
+          description:
+            value: >-
+              <p>Any nonmagical weapon made of metal that hits the [[lookup
+              @name lowercase]]{monster} corrodes. After dealing damage, the
+              weapon takes a permanent and cumulative -1 penalty to damage
+              rolls.</p><p>If its penalty drops to -5, the weapon is destroyed.
+              Nonmagical ammunition made of metal that hits the [[lookup @name
+              lowercase]]{monster} is destroyed after dealing damage. The
+              [[lookup @name lowercase]]{monster} can eat through 2-inch-thick,
+              nonmagical metal in 1
+              round.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi.ActiveEffect.Khdj386syEL9V9OA]{Corroded
+              Weapon}</p>
+            chatFlavor: ''
+          duration:
+            units: inst
+            concentration: false
+            override: false
+          effects: []
+          flags: {}
+          range:
+            units: touch
+            override: false
+            special: ''
+          target:
+            template:
+              contiguous: false
+              stationary: false
+              units: ft
+              type: ''
+            affects:
+              choice: false
+              type: object
+              special: ''
+              count: '1'
+            override: false
+            prompt: true
+          uses:
+            spent: 0
+            recovery: []
+            max: ''
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          roll:
+            prompt: false
+            visible: false
+            name: ''
+            formula: ''
+          _id: Z1i5TNU9VGpSizu1
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: corrode-metal
+    effects:
+      - name: Corroded Weapon
+        img: icons/commodities/stone/ore-chunk-magma-brown.webp
+        origin: Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi
+        type: enchantment
+        _id: Khdj386syEL9V9OA
+        system:
+          changes:
+            - key: flags.world.corrode-weapon-penalty
+              type: add
+              value: 1
+              phase: initial
+              priority: null
+            - key: system.damage.bonus
+              type: add
+              value: -1
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>This weapon has been corroded, taking a permanent and cumulative -1
+          penalty to damage rolls. If its penalty drops to -5, the weapon is
+          destroyed.</p>
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781907491069
+          modifiedTime: 1783367966197
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!fqbFYtbtkrL53FOC.uSay5J2sf9zXsabi.Khdj386syEL9V9OA
+    folder: null
+    sort: 300000
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.0z5v1BfMqQl5Z7UW
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781907406767
+      modifiedTime: 1781909308838
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!fqbFYtbtkrL53FOC.uSay5J2sf9zXsabi'
+  - _id: NDZ02JVZWMbzRGGJ
+    name: False Appearance
+    type: feat
+    img: icons/creatures/slimes/bubbling-purple.webp
+    system:
+      description:
+        value: >-
+          <p>While the [[lookup @name lowercase]]{monster} remains motionless,
+          it is indistinguishable from an oily pool or wet rock.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities: {}
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: false-appearance
+    effects: []
+    folder: null
+    sort: 400000
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.kyVgQNSa12loxVvr
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781907799049
+      modifiedTime: 1781907829876
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!fqbFYtbtkrL53FOC.NDZ02JVZWMbzRGGJ'
+  - _id: KO4qRywgiEQ3F004
+    name: Pseudopod
+    type: weapon
+    img: icons/creatures/slimes/slime-movement-dripping-pseudopods-green.webp
+    system:
+      description:
+        value: >-
+          <p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is
+          wearing nonmagical metal armor, its armor is partly corroded and takes
+          a permanent and cumulative -1 penalty to the AC it offers. The armor
+          is destroyed if the penalty reduces its AC to 10.</p><section
+          id="secret-8JkOh4DLk4cb3dhN" class="secret"><p><strong>Foundry
+          Note</strong></p><p>You can apply the
+          @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004.ActiveEffect.SiRqKDm2qerReaj8]{Corroded
+          Armor} enchantment to a suit of armor, granting it a cumulative -1 to
+          the AC it offers each time the enchantment is applied.</p></section>
+        chat: >-
+          <p>The [[lookup @name lowercase]]{monster} attacks with its [[lookup
+          @item.name]]. If the target is wearing nonmagical metal armor, its
+          armor is partly corroded and takes a permanent and cumulative -1
+          penalty to the AC it offers.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      quantity: 1
+      weight:
+        value: 0
+        units: lb
+      price:
+        value: 0
+        denomination: gp
+      attunement: ''
+      equipped: true
+      rarity: ''
+      identified: true
+      cover: null
+      range:
+        value: null
+        long: null
+        units: ft
+        reach: null
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      damage:
+        versatile:
+          number: null
+          denomination: null
+          bonus: ''
+          types: []
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+        base:
+          number: 1
+          denomination: 6
+          bonus: ''
+          types:
+            - bludgeoning
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+      armor:
+        value: 10
+      hp:
+        value: 0
+        max: 0
+        dt: null
+        conditions: ''
+      properties: []
+      proficient: null
+      unidentified:
+        description: ''
+      type:
+        value: natural
+        baseItem: ''
+      container: null
+      crewed: false
+      activities:
+        doxmMopUdGtorvDy:
+          type: attack
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: >-
+              <p>[[/attack extended]]. [[/damage extended]].</p><p>If the target
+              is wearing nonmagical metal armor, its armor is partly corroded
+              and takes a permanent and cumulative -1 penalty to the AC it
+              offers. The armor is destroyed if the penalty reduces its AC to
+              10.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004.ActiveEffect.SiRqKDm2qerReaj8]{Corroded
+              Armor}</p>
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects: []
+          range:
+            value: '5'
+            units: ft
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: ''
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          attack:
+            ability: ''
+            bonus: ''
+            critical:
+              threshold: null
+            flat: false
+            type:
+              value: ''
+              classification: ''
+          damage:
+            critical:
+              bonus: ''
+            includeBase: true
+            parts:
+              - custom:
+                  enabled: false
+                  formula: ''
+                number: 2
+                denomination: 6
+                bonus: ''
+                types:
+                  - acid
+                scaling:
+                  number: 1
+          sort: 100000
+          name: ''
+          img: ''
+          flags: {}
+          visibility:
+            identifier: ''
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+          _id: doxmMopUdGtorvDy
+      attuned: false
+      ammunition: {}
+      magicalBonus: null
+      identifier: pseudopod
+      mastery: ''
+    effects:
+      - name: Corroded Armor
+        img: icons/equipment/chest/breastplate-collared-leather-brown.webp
+        origin: Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004
+        type: enchantment
+        _id: SiRqKDm2qerReaj8
+        system:
+          changes:
+            - key: flags.world.corroded-armor-penalty
+              type: add
+              value: 1
+              phase: initial
+              priority: null
+            - key: system.armor.value
+              type: add
+              value: -1
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>This armor has been corroded, taking a permanent and cumulative -1
+          penalty to the AC it offers. The armor is destroyed if the penalty
+          reduces its AC to 10.</p>
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781907939398
+          modifiedTime: 1783367884059
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!fqbFYtbtkrL53FOC.KO4qRywgiEQ3F004.SiRqKDm2qerReaj8
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781908046481
+      modifiedTime: 1783367939491
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!fqbFYtbtkrL53FOC.KO4qRywgiEQ3F004'
+  - _id: JVq3dfBRcON0kWKz
+    name: Amorphous
+    type: feat
+    img: icons/creatures/slimes/slime-movement-swirling-blue.webp
+    system:
+      description:
+        value: >-
+          <p>The [[lookup @name lowercase]]{monster} can move through a space as
+          narrow as 1 inch wide without
+          &amp;reference[squeezing]{Squeezing}.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities: {}
+      enchant: {}
+      prerequisites:
+        level: null
+        items: []
+        repeatable: false
+      identifier: amorphous
+      advancement: {}
+      crewed: false
+    effects: []
+    folder: null
+    sort: 200000
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.Na7qo8robmcacNZI
+      duplicateSource: Item.SH8rYorZ9zbgpEka
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781907797947
+      modifiedTime: 1781907799049
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!fqbFYtbtkrL53FOC.JVq3dfBRcON0kWKz'
+effects: []
+folder: spz6Dws3tO6Qs5Mh
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  coreVersion: '14.361'
+  systemId: dnd5e
+  systemVersion: 4.0.0
+  createdTime: 1726171246789
+  modifiedTime: 1726171447655
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!actors!fqbFYtbtkrL53FOC'

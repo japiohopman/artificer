@@ -1,0 +1,122 @@
+_id: dmgPeriaptOfProo
+name: Periapt of Proof against Poison
+type: equipment
+folder: U4xmShLy19Ry54zl
+img: icons/equipment/neck/necklace-hook-brown.webp
+system:
+  activities: {}
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  description:
+    value: >-
+      <p><em>Wondrous Item, Rare (Requires Attunement)</em></p><p>This delicate
+      silver chain has a brilliant-cut black gem pendant. While you wear it, you
+      have Immunity to the &amp;Reference[Poisoned apply=false] condition and
+      Poison damage.</p>
+    chat: ''
+  identifier: periapt-of-proof-against-poison
+  source:
+    revision: 1
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  identified: true
+  unidentified:
+    description: ''
+  container: null
+  quantity: 1
+  weight:
+    value: 0
+    units: lb
+  price:
+    value: 4000
+    denomination: gp
+  rarity: rare
+  attunement: required
+  attuned: false
+  equipped: false
+  armor:
+    value: null
+    magicalBonus: null
+    dex: null
+  cover: null
+  crewed: false
+  hp:
+    value: null
+    max: null
+    dt: null
+    conditions: ''
+  type:
+    value: wondrous
+    baseItem: ''
+  properties:
+    - mgc
+  strength: null
+  proficient: null
+effects:
+  - name: Protected Against Poison
+    img: icons/magic/defensive/shield-barrier-flaming-diamond-acid.webp
+    _id: 4gvBhVBKAHuIetno
+    type: base
+    system:
+      changes:
+        - key: system.traits.di.value
+          value: poison
+          priority: null
+          type: add
+          phase: initial
+          _id: hbu88WbH3F98zMo4
+        - key: system.traits.ci.value
+          value: poisoned
+          priority: null
+          type: add
+          phase: initial
+          _id: xLmY8uvmMYxTRDkT
+      magical: true
+    disabled: false
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1730688482111
+      modifiedTime: 1783544097201
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgPeriaptOfProo.4gvBhVBKAHuIetno'
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1727883376108
+  modifiedTime: 1783544097201
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 24700000
+ownership:
+  default: 0
+_key: '!items!dmgPeriaptOfProo'

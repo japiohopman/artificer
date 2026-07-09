@@ -8,6 +8,30 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 dotenv.config();
 
+function sanitizeEnvValue(val: string | undefined): string {
+  if (!val) return "";
+  let clean = val.trim();
+  if ((clean.startsWith('"') && clean.endsWith('"')) || (clean.startsWith("'") && clean.endsWith("'"))) {
+    clean = clean.slice(1, -1);
+  }
+  return clean.trim();
+}
+
+const ELEVENLABS_KEYS = [
+  sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY),
+  sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
+  sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
+];
+
+function getElevenLabsKey(accountIndex: number = 0) {
+  const key = ELEVENLABS_KEYS[accountIndex];
+  if (!key || key.length < 10) {
+    const fallbackIdx = ELEVENLABS_KEYS.findIndex(k => k && k.length > 10);
+    return fallbackIdx !== -1 ? ELEVENLABS_KEYS[fallbackIdx] : "";
+  }
+  return key;
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -57,7 +81,8 @@ async function startServer() {
   // Helper: Validate Path Allowlist
   const allowedPathPrefixes = [
     'public/assets/atlas/',
-    'public/data/character_save/'
+    'public/data/character_save/',
+    'docs/missing_assets/'
   ];
 
   function isPathAllowed(filePath: any): boolean {
@@ -145,6 +170,27 @@ async function startServer() {
     } catch (error) {
       console.error("Server Error during fetch proxy:", error);
       res.status(500).json({ error: "Internal server error during GitHub fetch." });
+    }
+  });
+
+  // API: Read Local File (for reading from allowed path prefixes)
+  app.get("/api/local-file", async (req, res) => {
+    const { path: filePath } = req.query;
+    if (!filePath || typeof filePath !== 'string') {
+      return res.status(400).json({ error: "Path parameter is required." });
+    }
+
+    if (!isPathAllowed(filePath)) {
+      return res.status(403).json({ error: "Path not allowed." });
+    }
+
+    try {
+      const fullPath = path.join(process.cwd(), filePath);
+      const content = await fs.readFile(fullPath, 'utf-8');
+      res.send(content);
+    } catch (error: any) {
+      console.error("Server Error during local file read:", error);
+      res.status(500).json({ error: error.message || "Failed to read local file." });
     }
   });
 
@@ -432,6 +478,79 @@ async function startServer() {
     } catch (error: any) {
       console.error("[AI Proxy] Server Error during AI generate-image:", error);
       res.status(500).json({ error: error.message || "Internal server error during AI image generation." });
+    }
+  });
+
+  app.post("/api/audio/generate-sfx", async (req, res) => {
+    try {
+      const { text, duration_seconds, prompt_influence, loop, accountIndex } = req.body;
+      const apiKey = getElevenLabsKey(accountIndex);
+
+      if (!apiKey) {
+        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+      }
+
+      const response = await fetch("https://api.elevenlabs.io/v1/sound-generation", {
+        method: "POST",
+        headers: {
+          "xi-api-key": apiKey,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          text,
+          duration_seconds: duration_seconds || 5,
+          prompt_influence: prompt_influence || 0.3,
+          model_id: "eleven_text_to_sound_v2",
+          loop: loop || false
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("ElevenLabs SFX Error:", errorText);
+        return res.status(response.status).json({ error: "ElevenLabs API error", detail: errorText });
+      }
+
+      const buffer = await response.arrayBuffer();
+      res.setHeader("Content-Type", "audio/wav");
+      res.send(Buffer.from(buffer));
+    } catch (error: any) {
+      console.error("SFX generation error:", error);
+      res.status(500).json({ error: "Internal server error during SFX generation." });
+    }
+  });
+
+  app.post("/api/ai/optimize-sound-prompt", async (req, res) => {
+    const { prompt, category } = req.body;
+    const apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "Gemini API key missing." });
+    }
+
+    try {
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const genModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+      const promptText = `You are an Audio Engineering specialist. Your task is to optimize a descriptive sound prompt for the ElevenLabs Text-to-Sound model.
+
+      Original Description: "${prompt}"
+      Target Category: "${category || 'sfx'}"
+
+      Requirements:
+      - Use technical audio terminology (e.g., frequency range, reverb characteristics, spatial positioning, dynamic range).
+      - Emphasize textures and sonic details.
+      - Keep it concise but highly descriptive for an AI model.
+      - Return ONLY the optimized prompt string.`;
+
+      const result = await genModel.generateContent(promptText);
+      const response = await result.response;
+      const optimizedPrompt = response.text().trim();
+
+      res.json({ optimizedPrompt });
+    } catch (error: any) {
+      console.error("Optimization error:", error);
+      res.status(500).json({ error: "Failed to optimize prompt." });
     }
   });
 

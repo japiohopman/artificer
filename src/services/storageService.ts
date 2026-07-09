@@ -1367,3 +1367,31 @@ export async function fetchWikiAsset(path: string): Promise<any> {
 export function formatPathName(name: string): string {
   return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
+
+export async function fetchMissingAssets(category: 'enemy' | 'equipment' | 'magic_items' | 'materials' | 'spells'): Promise<string[]> {
+  const categoryMap = {
+    enemy: 'missing_enemy_list.md',
+    equipment: 'missing_equipment_list.md',
+    magic_items: 'missing_magic_items_list.md',
+    materials: 'missing_materials_list.md',
+    spells: 'missing_spells_list.md'
+  };
+
+  const filename = categoryMap[category];
+  if (!filename) return [];
+
+  const path = `docs/missing_assets/${filename}`;
+  try {
+    const res = await fetch(`/api/local-file?path=${encodeURIComponent(path)}`);
+    if (res.ok) {
+      const content = await res.text();
+      return content
+        .split('\n')
+        .map(line => line.trim())
+        .filter(line => line && !line.startsWith('#')); // Filter empty lines and comments
+    }
+  } catch (e) {
+    console.error(`Failed to fetch missing assets for ${category}:`, e);
+  }
+  return [];
+}

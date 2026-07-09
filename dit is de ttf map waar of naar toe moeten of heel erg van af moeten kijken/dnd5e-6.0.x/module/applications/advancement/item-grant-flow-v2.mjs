@@ -1,0 +1,72 @@
+import AdvancementFlow from "./advancement-flow-v2.mjs";
+
+const { StringField } = foundry.data.fields;
+
+/**
+ * Inline application that presents the player with a list of items to be added.
+ */
+export default class ItemGrantFlow extends AdvancementFlow {
+
+  /** @override */
+  static PARTS = {
+    ...super.PARTS,
+    content: {
+      template: "systems/dnd5e/templates/advancement/item-grant-flow-v2.hbs"
+    }
+  };
+
+  /* -------------------------------------------- */
+  /*  Rendering                                   */
+  /* -------------------------------------------- */
+
+  /** @override */
+  async _prepareContentContext(context, options) {
+    context.abilities = this.getSelectAbilities();
+    context.optional = this.advancement.configuration.optional;
+
+    const config = this.advancement.configuration;
+    const checked = new Set(Object.values(this.advancement.value.added ?? {}));
+    context.items = config.items.map(i => {
+      let item = fromUuidSync(i.uuid);
+      if ( !item ) return null;
+      const { name, img } = item;
+      return {
+        name, img,
+        checked: checked.has(i.uuid),
+        optional: config.optional || i.optional,
+        uuid: i.uuid
+      };
+    }, []).filter(_ => _);
+
+    return context;
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Get the context information for selected spell abilities.
+   * @returns {object}
+   */
+  getSelectAbilities() {
+    const config = this.advancement.configuration;
+    return config.spell?.ability.size > 1 ? {
+      field: new StringField({ required: true, blank: false, label: _loc("DND5E.SpellAbility") }),
+      options: config.spell.ability.map(value => ({ value, label: CONFIG.DND5E.abilities[value]?.label })),
+      value: this.advancement.value.ability
+    } : null;
+  }
+
+  /* -------------------------------------------- */
+  /*  Form Handling                               */
+  /* -------------------------------------------- */
+
+  /** @override */
+  async _handleForm(event, form, formData) {
+    if ( event.target?.name === "ability" ) {
+      await this.advancement.apply(this.level, { ability: event.target.value });
+    } else if ( event.target?.tagName === "DND5E-CHECKBOX" ) {
+      if ( event.target.checked ) await this.advancement.apply(this.level, { selected: [event.target.name] });
+      else await this.advancement.reverse(this.level, { uuid: event.target.name });
+    }
+  }
+}

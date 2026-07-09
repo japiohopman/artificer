@@ -1,0 +1,78 @@
+<section class="tab {{ tab.cssClass }}" data-tab="{{ tab.id }}" data-group="{{ tab.group }}">
+    {{!-- Spellcasting --}}
+    <section class="top">
+        {{#each spellcasting}}
+        <div class="spellcasting card {{#if primary}}primary{{/if}}" data-ability="{{ ability.ability }}">
+            <div class="header">
+                <h3>{{ label }}</h3>
+                {{#if @root.isNPC}}
+                {{#if (and @root.editable noSpellcaster)}}
+                <select name="system.attributes.spellcasting">
+                    {{ selectOptions @root.CONFIG.abilities selected=ability.ability labelAttr="label" blank="" }}
+                </select>
+                {{else}}
+                <span class="spellcasting-ability subtitle">{{ ability.label }}</span>
+                {{/if}}
+                {{else}}
+                <button type="button" class="radio-button" data-action="setSpellcastingAbility"
+                        data-tooltip="DND5E.SpellAbilitySet" aria-pressed="{{#if primary}}true{{else}}false{{/if}}"
+                        aria-label="{{ localize "DND5E.SpellAbilitySet" }}"></button>
+                {{/if}}
+            </div>
+            <div class="info">
+                <div class="ability">
+                    <span class="label">{{ localize "DND5E.Ability" }}</span>
+                    <span class="value">{{ dnd5e-formatModifier ability.mod }}</span>
+                </div>
+                <div class="attack">
+                    <span class="label">{{ localize "DND5E.Attack" }}</span>
+                    <span class="value">{{ dnd5e-formatModifier attack }}</span>
+                </div>
+                <div class="save">
+                    <span class="label">{{ localize "DND5E.SpellDC" }}</span>
+                    <span class="value">{{ save }}</span>
+                </div>
+                {{#if (or preparation.value preparation.max)}}
+                <div class="prepared">
+                    <span class="label">{{ localize "DND5E.Prepared" }}</span>
+                    <span class="value {{#if preparation.max}}max-preparations{{/if}}">
+                        <span class="count">{{ preparation.value }}</span>
+                        {{#if preparation.max}}
+                        <span class="separator">&sol;</span>
+                        <span class="max">{{ preparation.max }}</span>
+                        {{/if}}
+                    </span>
+                </div>
+                {{/if}}
+                {{#if @root.isNPC}}
+                <div class="level">
+                    <span class="label">{{ localize "DND5E.Level" }}</span>
+                    {{#if (and @root.editable noSpellcaster)}}
+                    {{ numberInput @root.system.attributes.spell.level name="system.attributes.spell.level" min=0 step=1
+                                placeholder="—" }}
+                    {{else}}
+                    <span class="value">{{ level }}</span>
+                    {{/if}}
+                </div>
+                <div class="concentration" data-ability="concentration">
+                    <a class="label saving-throw {{ @root.rollableClass }}" data-action="roll"
+                       data-type="ability">{{ localize "DND5E.Concentration" }}</a>
+                    {{#if @root.editable}}
+                    <button type="button" class="config-button unbutton" data-action="showConfiguration"
+                            data-config="ability" data-tooltip="{{ tooltip }}" aria-label="{{ tooltip }}">
+                        <i class="fas fa-cog" inert></i>
+                    </button>
+                    {{else}}
+                    <span class="value">{{ dnd5e-formatModifier concentration.mod }}</span>
+                    {{/if}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </section>
+
+    {{!-- Spells --}}
+    {{> "systems/dnd5e/templates/inventory/inventory.hbs" keepEmpty=true }}
+
+</section>

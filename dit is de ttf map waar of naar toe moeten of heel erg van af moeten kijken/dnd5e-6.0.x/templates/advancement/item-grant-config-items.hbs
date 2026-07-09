@@ -1,0 +1,50 @@
+<fieldset class="card items table">
+    <legend>{{ localize "DND5E.ADVANCEMENT.ItemGrant.FIELDS.items.label" }}</legend>
+    <div class="header">
+        <div class="item-optional">{{ localize "DND5E.ADVANCEMENT.ItemGrant.FIELDS.optional.label" }}</div>
+        <div class="item-name name-header">{{ localize "DOCUMENT.Item" }}</div>
+        <div class="item-controls">
+            {{#if @root.editable}}
+            {{#with (ifThen @root.manualSort "SIDEBAR.SortModeManual" "SIDEBAR.SortModeAlpha") as |label|}}
+            <button type="button" class="unbutton control-button sorting-mode" data-action="sort"
+                    data-tooltip aria-label="{{ localize label }}">
+                <i class="fa-solid fa-arrow-down-{{ ifThen @root.manualSort 'short-wide' 'a-z'}}" inert></i>
+            </button>
+            {{/with}}
+            {{/if}}
+        </div>
+    </div>
+    <ol class="items-list unlist">
+        {{#each items}}
+        <li class="item flexrow" data-item-uuid="{{ data.uuid }}">
+            <div class="item-optional">
+                {{ formInput fields.optional name=(concat "configuration.items." @index ".optional") value=data.optional
+                             input=@root.inputs.createCheckboxInput }}
+            </div>
+            <div class="item-name">
+                {{{ dnd5e-linkForUuid data.uuid renderBroken=true }}}
+                <input type="hidden" name="configuration.items.{{ @index }}.sort" value="{{ data.sort }}">
+                <input type="hidden" name="configuration.items.{{ @index }}.uuid" value="{{ data.uuid }}">
+            </div>
+            <div class="item-controls flexrow">
+                {{#if @root.editable}}
+                <button type="button" class="unbutton control-button" data-action="deleteItem"
+                        data-tooltip aria-label="{{ localize 'DND5E.ItemDelete' }}">
+                    <i class="fas fa-trash" inert></i>
+                </button>
+                {{#if @root.manualSort}}
+                <div class="drag-bar draggable"><i class="fa-solid fa-grip-lines-vertical" inert></i></div>
+                {{/if}}
+                {{/if}}
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+
+    <div class="form-group">
+        {{#if showContainerWarning}}
+        <p class="hint centered warning">{{ localize "DND5E.ADVANCEMENT.ItemGrant.Warning.Container" }}</p>
+        {{/if}}
+        <p class="hint drop-area">{{ localize "DND5E.ADVANCEMENT.ItemGrant.DropHint" }}</p>
+    </div>
+</fieldset>

@@ -1,0 +1,155 @@
+name: Barkskin
+system:
+  description:
+    value: >-
+      <p>You touch a willing creature. Until the spell ends, the target's skin
+      assumes a bark-like appearance, and the target has an Armor Class of 17 if
+      its AC is lower than that.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  activation:
+    type: bonus
+    condition: ''
+    value: null
+  duration:
+    value: '1'
+    units: hour
+  target:
+    affects:
+      type: willing
+      count: '1'
+      choice: false
+      special: ''
+    template:
+      units: ''
+      contiguous: false
+      type: ''
+  range:
+    units: touch
+    special: ''
+  uses:
+    max: ''
+    recovery: []
+    spent: 0
+  level: 2
+  school: trs
+  properties:
+    - vocal
+    - somatic
+    - material
+  materials:
+    value: a handful of bark
+    consumed: false
+    cost: 0
+    supply: 0
+  preparation:
+    mode: prepared
+    prepared: false
+  activities:
+    dnd5eactivity000:
+      _id: dnd5eactivity000
+      type: utility
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        override: false
+      effects:
+        - _id: Vq0t8ts0lfPoGx6U
+      range:
+        override: false
+      target:
+        prompt: true
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+      roll:
+        formula: ''
+        name: ''
+        prompt: false
+        visible: false
+      uses:
+        spent: 0
+        recovery: []
+      sort: 0
+  identifier: barkskin
+_id: phbsplBarkskin00
+type: spell
+img: icons/magic/nature/thorns-hand-glow-green.webp
+effects:
+  - _id: Vq0t8ts0lfPoGx6U
+    flags: {}
+    disabled: false
+    duration:
+      value: 3600
+      units: seconds
+      expiry: turnStart
+      expired: false
+    origin: Compendium.dnd5e.spells24.Item.phbsplBarkskin00
+    tint: '#ffffff'
+    transfer: false
+    name: Bark-like Skin
+    description: ''
+    statuses: []
+    _stats:
+      compendiumSource: >-
+        Compendium.dnd5e.spells.Item.JPwIEfgUPVebr5AH.ActiveEffect.uM6rgctYpcbCVSkn
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1783543974084
+      modifiedTime: 1783543974084
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    img: icons/magic/nature/barrier-shield-wood-vines.webp
+    type: base
+    system:
+      changes:
+        - key: system.attributes.ac.min
+          value: 17
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: NgckdM4c0E3PWGpq
+      magical: true
+    sort: 0
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbsplBarkskin00.Vq0t8ts0lfPoGx6U'
+folder: 3SjcO2acsFnWegp4
+sort: 5100000
+ownership:
+  default: 0
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1724425942865
+  modifiedTime: 1783543974084
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!items!phbsplBarkskin00'

@@ -1,0 +1,67 @@
+<div class="standard-form">
+    {{#if showImprovement}}
+    <ul class="ability-scores unlist {{#if lockImprovement}}disabled{{/if}}">
+        {{#unless staticIncrease}}
+        <label>
+            {{#if lockImprovement}}
+            {{ localize "DND5E.ADVANCEMENT.AbilityScoreImprovement.LockedHint" }}
+            {{else}}
+            {{ pointsRemaining }}
+            {{#if advancement.configuration.cap}}<p class="cap">{{ pointCap }}</p>{{/if}}
+            {{/if}}
+        </label>
+        {{/unless}}
+        {{#each abilities}}
+        {{> "systems/dnd5e/templates/advancement/parts/advancement-ability-score-control.hbs" this
+            canAdjust=(not @root.staticIncrease) }}
+        {{/each}}
+    </ul>
+    {{/if}}
+
+    {{#if advancement.allowFeat}}
+    <div class="feat-section flexcol">
+        {{#if showImprovement}}<h3>{{ localize "DND5E.Feature.Feat.Label" }}</h3>{{/if}}
+
+        {{#with recommendation}}
+        <div class="pill-lg {{#if locked}}locked{{/if}}" data-uuid="{{ uuid }}">
+            <img class="gold-icon" data-action="viewItem" src="{{ img }}" alt="{{ name }}">
+            <div class="name-stacked">
+                <div class="title">{{ localize name }}</div>
+            </div>
+            <dnd5e-checkbox class="item-control" name="recommendation-selected" {{ checked checked }}
+                            {{ disabled locked }}></dnd5e-checkbox>
+        </div>
+        {{/with}}
+
+        {{#if showASIFeat}}
+        <div class="pill-lg {{#if lockImprovement}}locked{{/if}}">
+            <img class="gold-icon" src="icons/skills/melee/weapons-crossed-swords-white-blue.webp"
+                 alt="{{ localize 'DND5E.ADVANCEMENT.AbilityScoreImprovement.Feat.ASIName' }}">
+            <div class="name-stacked">
+                <div class="title">{{ localize "DND5E.ADVANCEMENT.AbilityScoreImprovement.Feat.ASIName" }}</div>
+            </div>
+            <dnd5e-checkbox class="item-control" name="asi-selected" {{ checked isASI }}
+                            {{ disabled lockImprovement }}></dnd5e-checkbox>
+        </div>
+        {{/if}}
+
+        {{#if showBrowseButton}}
+        <div class="pill-lg {{#unless feat}}roboto-upper empty{{/unless}}"
+             {{~#if feat}} data-uuid="{{ feat.uuid }}"{{else}} data-action="browse"{{/if}}>
+            {{#if feat}}
+            <img class="gold-icon" data-action="viewItem" src="{{ feat.img }}" alt="{{ feat.name }}">
+            <div class="name-stacked">
+                <div class="title">{{ feat.name }}</div>
+            </div>
+            <button type="button" class="unbutton control-button item-control" data-action="deleteItem"
+                    data-tooltip aria-label="{{ localize 'DND5E.ItemDelete' }}">
+                <i class="fas fa-trash" inert></i>
+            </button>
+            {{else}}
+            {{ localize "DND5E.ADVANCEMENT.AbilityScoreImprovement.Action.Select" }}
+            {{/if}}
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+</div>

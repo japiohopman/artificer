@@ -1,0 +1,196 @@
+_id: mmAnimateTrees00
+name: Animate Trees
+type: feat
+img: icons/magic/nature/tree-animated-smile.webp
+system:
+  activities:
+    EceTNjzjKWdrMNAy:
+      type: summon
+      _id: EceTNjzjKWdrMNAy
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '1'
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: lPONVotWP8yhuuWe
+      range:
+        override: false
+        value: '60'
+        units: ft
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: '2'
+          type: object
+          special: Trees it can see within range
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      bonuses:
+        ac: ''
+        hd: ''
+        hp: ''
+        attackDamage: ''
+        saveDamage: ''
+        healing: ''
+      creatureSizes: []
+      creatureTypes: []
+      match:
+        attacks: false
+        proficiency: false
+        saves: false
+        ability: ''
+      profiles:
+        - count: ''
+          name: ''
+          _id: R3AvTxxLAejLL93j
+          uuid: Compendium.dnd5e.actors24.Actor.mmTreant00000000
+          level:
+            min: null
+            max: null
+      summon:
+        prompt: true
+        identifier: ''
+        mode: ''
+      name: ''
+      img: ''
+      appliedEffects:
+        - lPONVotWP8yhuuWe
+  uses:
+    spent: 0
+    recovery:
+      - period: day
+        type: recoverAll
+    max: '1'
+  description:
+    value: >-
+      <p>The [[lookup @name]]{monster} magically animates up to two trees it can
+      see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of
+      itself. Each tree uses the <strong>Treant</strong> stat block, except it
+      has Intelligence and Charisma scores of 1, it can't speak, and it lacks
+      this action. The tree takes its turn immediately after the treant on the
+      same initiative count, and it obeys the treant. A tree remains animate for
+      1 day or until it dies, the treant dies, or it is more than 120 feet from
+      the treant. The tree then takes root if possible.</p>
+    chat: ''
+  identifier: animate-trees
+  source:
+    revision: 1
+    rules: '2024'
+  advancement: []
+  cover: null
+  crewed: false
+  enchant: {}
+  prerequisites:
+    level: null
+    repeatable: false
+  properties: []
+  requirements: ''
+  type:
+    value: monster
+    subtype: ''
+effects:
+  - name: Animate Trees
+    img: icons/magic/nature/tree-animated-smile.webp
+    origin: Item.mmAnimateTrees00
+    transfer: false
+    _id: lPONVotWP8yhuuWe
+    type: base
+    system:
+      changes:
+        - key: system.abilities.cha.value
+          value: 1
+          priority: null
+          type: override
+          phase: initial
+          _id: lJqih26Sp0jOv9F4
+        - key: system.abilities.int.value
+          value: 1
+          priority: null
+          type: override
+          phase: initial
+          _id: 33Nb8pskCq2qUAIW
+        - key: system.traits.languages.value
+          value: {}
+          priority: null
+          type: override
+          phase: initial
+          _id: ak920hmuHUsC8iUk
+        - key: system.traits.languages.custom
+          value: Can't speak
+          priority: null
+          type: add
+          phase: initial
+          _id: fk0JzYeI4w6dTPDZ
+    disabled: false
+    duration:
+      value: 86400
+      units: seconds
+      expiry: turnStart
+      expired: false
+    description: >-
+      <p>The tree has Intelligence and Charisma scores of 1, can't speak, and
+      lacks the Animate Trees action.</p>
+    tint: '#ffffff'
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1783544085041
+      modifiedTime: 1783544085041
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!mmAnimateTrees00.lPONVotWP8yhuuWe'
+folder: 4T18pEvubPMQLzvD
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.3.6
+  createdTime: 1741124037758
+  modifiedTime: 1783544085041
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 150000
+ownership:
+  default: 0
+_key: '!items!mmAnimateTrees00'

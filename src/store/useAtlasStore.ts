@@ -32,6 +32,7 @@ interface AtlasState {
   selectedItem: any | null;
   isLoadingItem: boolean;
   searchQuery: string;
+  missingAssets: Record<string, string[]>;
 
   // Actions
   setSearchQuery: (query: string) => void;
@@ -39,6 +40,7 @@ interface AtlasState {
   loadAllLists: () => Promise<void>;
   selectItem: (index: string, tab: ExplorerTab) => Promise<void>;
   updateSelectedItem: (item: any) => void;
+  loadMissingAssets: () => Promise<void>;
 }
 
 export const useAtlasStore = create<AtlasState>((set, get) => ({
@@ -63,6 +65,7 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
   selectedItem: null,
   isLoadingItem: false,
   searchQuery: '',
+  missingAssets: {},
 
   setSearchQuery: (searchQuery) => set({ searchQuery }),
 
@@ -355,5 +358,20 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
   updateSelectedItem: (item) => {
     set({ selectedItem: item });
     get().loadAllLists();
+  },
+
+  loadMissingAssets: async () => {
+    const { fetchMissingAssets } = await import('../services/storageService');
+    const categories: ('enemy' | 'equipment' | 'magic_items' | 'materials' | 'spells')[] = 
+      ['enemy', 'equipment', 'magic_items', 'materials', 'spells'];
+    
+    const results = await Promise.all(categories.map(cat => fetchMissingAssets(cat)));
+    const missingAssets: Record<string, string[]> = {};
+    
+    categories.forEach((cat, i) => {
+      missingAssets[cat] = results[i];
+    });
+    
+    set({ missingAssets });
   }
 }));

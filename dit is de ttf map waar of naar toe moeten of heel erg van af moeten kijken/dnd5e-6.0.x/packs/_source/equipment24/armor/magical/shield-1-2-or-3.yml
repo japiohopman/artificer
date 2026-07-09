@@ -1,0 +1,369 @@
+name: Shield, +1, +2, or +3
+system:
+  description:
+    value: >-
+      <p><em>Armor
+      (@UUID[Compendium.dnd5e.equipment24.Item.phbarmShield0000]{Shield}),
+      Uncommon (+1), Rare (+2), or Very Rare (+3)</em></p><p>While holding this
+      Shield, you have a bonus to Armor Class determined by the Shield's rarity,
+      in addition to the Shield's normal bonus to
+      AC.</p><p>@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE
+      cite=false caption=false classes="hide-in-embed"]</p>
+    chat: ''
+  price:
+    value: 0
+    denomination: gp
+  activities:
+    8OMLJZkQlqV212k3:
+      type: enchant
+      name: Shield, +1, +2, or +3
+      _id: 8OMLJZkQlqV212k3
+      sort: 0
+      activation:
+        type: action
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: 9X6TAHEQJAzN96cl
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+        - _id: 86wCNLX808Ta78E8
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+        - _id: wLuGENzFYPzafiq7
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: ''
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      enchant:
+        identifier: ''
+      restrictions:
+        allowMagical: false
+        categories: []
+        properties: []
+        type: ''
+      img: ''
+      appliedEffects:
+        - 9X6TAHEQJAzN96cl
+        - 86wCNLX808Ta78E8
+        - wLuGENzFYPzafiq7
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  identifier: shield-1-2-or-3
+  source:
+    revision: 1
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  identified: true
+  unidentified:
+    description: ''
+  container: null
+  quantity: 1
+  weight:
+    value: 0
+    units: lb
+  rarity: ''
+  attunement: ''
+  attuned: false
+  equipped: false
+  armor:
+    value: null
+    magicalBonus: null
+    dex: null
+  cover: null
+  crewed: false
+  hp:
+    value: null
+    max: null
+    dt: null
+    conditions: ''
+  type:
+    value: shield
+    baseItem: ''
+  properties:
+    - mgc
+  strength: null
+  proficient: null
+_id: dmgShield12or300
+type: equipment
+img: icons/equipment/shield/buckler-wooden-boss-glowing-blue.webp
+effects:
+  - type: enchantment
+    name: Shield +1
+    img: systems/dnd5e/icons/spell-tiers/spell2.webp
+    disabled: true
+    _id: 9X6TAHEQJAzN96cl
+    system:
+      changes:
+        - key: name
+          value: '{} +1'
+          priority: null
+          type: override
+          phase: initial
+          _id: Y0DxRmhwh7X2ZhW1
+        - key: system.rarity
+          value: uncommon
+          priority: null
+          type: override
+          phase: initial
+          _id: vwW5lcgG9mTyrqKj
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: Eciza4cyF9YESp3z
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: RYf6KWRoK7cdvE4D
+        - key: system.armor.magicalBonus
+          value: 1
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: j73GA63GdWGimZaJ
+        - key: system.price.value
+          value: 400
+          priority: null
+          type: add
+          phase: initial
+          _id: S3Xnvlopm59aZcdm
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1730939965233
+      modifiedTime: 1783544098277
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgShield12or300.9X6TAHEQJAzN96cl'
+  - type: enchantment
+    name: Shield +2
+    img: systems/dnd5e/icons/spell-tiers/spell3.webp
+    disabled: true
+    system:
+      changes:
+        - key: name
+          value: '{} +2'
+          priority: null
+          type: override
+          phase: initial
+          _id: b2UnG9hZYVq34oNo
+        - key: system.rarity
+          value: rare
+          priority: null
+          type: override
+          phase: initial
+          _id: KhEAUMchpPWmPQK1
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: NaigOPHuXoalYToU
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: jBdLGDnPlSQhr2iP
+        - key: system.armor.magicalBonus
+          value: 2
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: WX3K2ZWEBbUeHmB4
+        - key: system.price.value
+          value: 4000
+          priority: null
+          type: add
+          phase: initial
+          _id: tmxmFqYsaqvxSv7D
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1730940252204
+      modifiedTime: 1783544098278
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _id: 86wCNLX808Ta78E8
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgShield12or300.86wCNLX808Ta78E8'
+  - type: enchantment
+    name: Shield +3
+    img: systems/dnd5e/icons/spell-tiers/spell4.webp
+    disabled: true
+    system:
+      changes:
+        - key: name
+          value: '{} +3'
+          priority: null
+          type: override
+          phase: initial
+          _id: EZXj4vgI2wJDp1TQ
+        - key: system.rarity
+          value: veryRare
+          priority: null
+          type: override
+          phase: initial
+          _id: M1TF9oQJptVf2I5u
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: CJ4iL1OUThZGdKSy
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: fGhME19gVPZRALUz
+        - key: system.armor.magicalBonus
+          value: 3
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: y50Z0uNg7LoPjY0g
+        - key: system.price.value
+          value: 40000
+          priority: null
+          type: add
+          phase: initial
+          _id: QlQDpePnJFua5XxC
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1730940254609
+      modifiedTime: 1783544098278
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _id: wLuGENzFYPzafiq7
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgShield12or300.wLuGENzFYPzafiq7'
+folder: 1kn4uV4dTVVduLjA
+sort: -187500
+ownership:
+  default: 0
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1730931870171
+  modifiedTime: 1783544098277
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!items!dmgShield12or300'

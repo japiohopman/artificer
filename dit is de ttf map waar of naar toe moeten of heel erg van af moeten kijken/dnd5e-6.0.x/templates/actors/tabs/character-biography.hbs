@@ -1,0 +1,56 @@
+<section class="tab {{ tab.cssClass }}" data-tab="{{ tab.id }}" data-group="{{ tab.group }}">
+
+    {{!-- Characteristics --}}
+    <div class="top">
+        <ul class="unlist characteristics">
+            {{#each characteristics}}
+            <li>
+                <label>
+                    <span class="roboto-upper label">{{ localize label }}</span>
+                    {{#if @root.editable}}
+                    <input type="text" name="{{ name }}" value="{{ source }}">
+                    {{else}}
+                    <span class="value">{{ value }}</span>
+                    {{/if}}
+                </label>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    {{!-- Ideals, Bonds, Flaws, Personality Traits, & Appearance --}}
+    <div class="middle">
+        <div class="left">
+            {{~> "dnd5e.biography-textbox" name="system.details.ideal" value=system.details.ideal label="DND5E.Ideals"
+                icon="fas fa-seedling" class="textbox-half" ~}}
+            {{~> "dnd5e.biography-textbox" name="system.details.bond" value=system.details.bond label="DND5E.Bonds"
+                icon="fas fa-link" class="textbox-half" ~}}
+            {{~> "dnd5e.biography-textbox" name="system.details.flaw" value=system.details.flaw label="DND5E.Flaws"
+                icon="fas fa-heart-crack" class="textbox-half" ~}}
+        </div>
+        <div class="right">
+            {{~> "dnd5e.biography-textbox" name="system.details.trait" value=system.details.trait
+                label="DND5E.PersonalityTraits" icon="fas fa-puzzle-piece" class="textbox-half" ~}}
+            {{~> "dnd5e.biography-textbox" name="system.details.appearance" value=system.details.appearance
+                label="DND5E.Appearance" icon="fas fa-image-portrait" class="textbox-half" ~}}
+        </div>
+    </div>
+
+    {{!-- Biography --}}
+    <div class="bottom" data-target="system.details.biography.value">
+        <h3 class="icon">
+            <i class="fas fa-feather"></i>
+            <dnd5e-icon src="systems/dnd5e/icons/svg/ink-pot.svg"></dnd5e-icon>
+            <span class="roboto-upper">{{ localize "DND5E.Biography" }}</span>
+        </h3>
+        {{#if editable}}
+        <prose-mirror name="system.details.biography.value" value="{{ source.details.biography.value }}"
+                      document-uuid="{{ actor.uuid }}"></prose-mirror>
+        {{else}}
+        <div class="editor">
+            <div class="editor-content">{{{ enriched.value }}}</div>
+        </div>
+        {{/if}}
+    </div>
+
+</section>

@@ -1,0 +1,15 @@
+<section class="flexcol">
+    <div class="note info">
+        {{ localize (ifThen isGroup "DND5E.REST.Short.Hint.Group" "DND5E.REST.Short.Hint.Normal") }}
+    </div>
+
+    {{> "dnd5e.formlist" formSections }}
+
+    {{#if hitDice}}
+    {{> "systems/dnd5e/templates/actors/rest/parts/hit-dice.hbs" }}
+    {{/if}}
+
+    {{#if request}}
+    {{> "systems/dnd5e/templates/actors/rest/parts/rest-request.hbs" }}
+    {{/if}}
+</section>

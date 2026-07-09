@@ -8,6 +8,7 @@ import { TitleScreen } from './components/core/TitleScreen';
 import { DevKit } from './components/devkit/DevKit';
 import { useUIStore } from './store/useUIStore';
 import { useAtlasStore } from './store/useAtlasStore';
+import { useWorldStore } from './store/useWorldStore';
 import { useGameStore } from './store/useGameStore';
 import { useCharacterStore } from './store/useCharacterStore';
 import { useEffect } from 'react';
@@ -35,6 +36,7 @@ export default function App() {
   } = useUIStore();
   const { isGameStarted } = useGameStore();
   const { updateSelectedItem, selectedItem } = useAtlasStore();
+  const { inspectedLocation, currentLocation } = useWorldStore();
 
   const {
     books: registeredBooks,
@@ -139,6 +141,7 @@ export default function App() {
             isOpen={isDevKitOpen}
             onClose={() => setIsDevKitOpen(false)}
             initialMonster={selectedItem}
+            initialLocation={inspectedLocation || currentLocation}
             currentExplorerTab={explorerTab}
             onMonsterUpdated={(m) => {
               updateSelectedItem(m);

@@ -1,0 +1,1173 @@
+_id: 8MD1vRBTcgSXXk3u
+name: Magmin
+type: npc
+img: null
+system:
+  abilities:
+    str:
+      value: 7
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    dex:
+      value: 15
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    con:
+      value: 12
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    int:
+      value: 8
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    wis:
+      value: 11
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    cha:
+      value: 10
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+  attributes:
+    ac:
+      flat: 14
+      calc: natural
+      formula: ''
+    hp:
+      value: 9
+      max: 9
+      temp: null
+      tempmax: null
+      formula: 2d6 + 2
+    init:
+      ability: ''
+      bonus: '0'
+      roll:
+        min: null
+        max: null
+        mode: 0
+    movement:
+      burrow: 0
+      climb: 0
+      fly: 0
+      swim: 0
+      walk: 30
+      units: ft
+      hover: false
+    attunement:
+      max: 3
+    senses:
+      darkvision: 60
+      blindsight: 0
+      tremorsense: 0
+      truesight: 0
+      units: ft
+      special: ''
+    spellcasting: ''
+    exhaustion: 0
+    concentration:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      bonuses:
+        save: ''
+      limit: 1
+    hd:
+      spent: 0
+    death:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      success: 0
+      failure: 0
+  details:
+    biography:
+      value: ''
+      public: ''
+    alignment: Chaotic Neutral
+    race: null
+    type:
+      value: elemental
+      subtype: ''
+      swarm: ''
+      custom: ''
+    environment: ''
+    cr: 0.5
+    spellLevel: 0
+    ideal: ''
+    bond: ''
+    flaw: ''
+  traits:
+    size: sm
+    di:
+      value:
+        - fire
+      bypasses: []
+      custom: ''
+    dr:
+      value:
+        - bludgeoning
+        - piercing
+        - slashing
+      bypasses:
+        - mgc
+      custom: ''
+    dv:
+      value: []
+      bypasses: []
+      custom: ''
+    ci:
+      value: []
+      custom: ''
+    languages:
+      value:
+        - ignan
+      custom: ''
+    dm:
+      amount: {}
+      bypasses: []
+  currency:
+    pp: 0
+    gp: 0
+    ep: 0
+    sp: 0
+    cp: 0
+  skills:
+    acr:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ani:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    arc:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ath:
+      value: 0
+      ability: str
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    dec:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    his:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ins:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    itm:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    inv:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    med:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    nat:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prc:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prf:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    per:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    rel:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    slt:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ste:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    sur:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+  spells:
+    spell1:
+      value: 0
+      override: null
+    spell2:
+      value: 0
+      override: null
+    spell3:
+      value: 0
+      override: null
+    spell4:
+      value: 0
+      override: null
+    spell5:
+      value: 0
+      override: null
+    spell6:
+      value: 0
+      override: null
+    spell7:
+      value: 0
+      override: null
+    spell8:
+      value: 0
+      override: null
+    spell9:
+      value: 0
+      override: null
+    pact:
+      value: 0
+      override: null
+  bonuses:
+    mwak:
+      attack: ''
+      damage: ''
+    rwak:
+      attack: ''
+      damage: ''
+    msak:
+      attack: ''
+      damage: ''
+    rsak:
+      attack: ''
+      damage: ''
+    abilities:
+      check: ''
+      save: ''
+      skill: ''
+    spell:
+      dc: ''
+  resources:
+    legact:
+      value: 0
+      max: 0
+    legres:
+      value: 0
+      max: 0
+    lair:
+      value: false
+      initiative: null
+  tools: {}
+  source:
+    custom: ''
+    book: ''
+    page: ''
+    license: CC-BY-4.0
+    revision: 1
+    rules: '2014'
+prototypeToken:
+  name: Magmin
+  displayName: 20
+  actorLink: false
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  disposition: -1
+  displayBars: 20
+  bar1:
+    attribute: attributes.hp
+  bar2:
+    attribute: null
+  flags: {}
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    color: null
+    attenuation: 0.5
+    negative: false
+    priority: 0
+  texture:
+    src: null
+    tint: '#ffffff'
+    scaleX: 1
+    scaleY: 1
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  sight:
+    angle: 360
+    enabled: false
+    range: 60
+    brightness: 0
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  detectionModes: {}
+  appendNumber: false
+  prependAdjective: false
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 1
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  depth: 1
+items:
+  - _id: 0xdLfPJEHYwh8MIT
+    name: Death Burst
+    type: feat
+    img: icons/magic/fire/barrier-shield-explosion-yellow.webp
+    system:
+      description:
+        value: >-
+          <p>When the [[lookup @name]]{monster} dies, it explodes in a burst of
+          fire and magma. Each creature within [[lookup @target.template.size
+          activity=A8WwxhIVtPyXk0DI]] feet of it must make a [[/save]] saving
+          throw, taking [[/damage average]] damage on a failed save, or half as
+          much damage on a successful one. Flammable objects that aren't being
+          worn or carried in that area are ignited.</p>
+        chat: >-
+          <p>When the [[lookup @name]]{monster} dies, it explodes in a burst of
+          fire and magma. Each creature within [[lookup @target.template.size
+          activity=A8WwxhIVtPyXk0DI]] feet of it must make a Dexterity saving
+          throw. Flammable objects that aren't being worn or carried in that
+          area are ignited.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities:
+        A8WwxhIVtPyXk0DI:
+          type: save
+          activation:
+            type: special
+            value: null
+            condition: When the [[lookup @name lowercase]]{monster} dies.
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects: []
+          range:
+            units: self
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: radius
+              size: '10'
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: creature
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          damage:
+            onSave: half
+            parts:
+              - custom:
+                  enabled: false
+                  formula: ''
+                number: 2
+                denomination: 6
+                bonus: ''
+                types:
+                  - fire
+                scaling:
+                  number: 1
+          save:
+            ability:
+              - dex
+            dc:
+              calculation: ''
+              formula: '11'
+            visible: true
+            bonus: ''
+          sort: 100000
+          name: Explode
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: A8WwxhIVtPyXk0DI
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: death-burst
+    effects: []
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.net3yBKQoxl8bZ4r
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781814931647
+      modifiedTime: 1781819536702
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!8MD1vRBTcgSXXk3u.0xdLfPJEHYwh8MIT'
+  - _id: rlA41r2MlaqmVjvf
+    name: Ignited Illumination
+    type: feat
+    img: icons/magic/fire/flame-burning-campfire-orange.webp
+    system:
+      description:
+        value: >-
+          <p>As a bonus action, the [[lookup @name lowercase]]{monster} can set
+          itself ablaze or extinguish its flames. While ablaze, the magmin sheds
+          &amp;reference[bright light] in a 10-foot radius and
+          &amp;reference[dim light] for an additional 10 ft.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      type:
+        value: ''
+        subtype: ''
+      requirements: ''
+      properties: []
+      activities:
+        y0nBhuvbLEpW7yZg:
+          type: enchant
+          name: Ignite Self
+          _id: y0nBhuvbLEpW7yZg
+          img: ''
+          sort: 100000
+          activation:
+            type: bonus
+            override: false
+            condition: ''
+          consumption:
+            scaling:
+              allowed: false
+            spellSlot: true
+            targets: []
+          description:
+            value: ''
+            chatFlavor: ''
+          duration:
+            units: inst
+            concentration: false
+            override: false
+          effects:
+            - _id: JmovxBTPt2lOxVUC
+              level:
+                min: null
+                max: null
+              riders:
+                activity: []
+                effect:
+                  - Mu9xm262V8kL7QPt
+                item: []
+          flags: {}
+          range:
+            units: self
+            override: false
+            special: ''
+          target:
+            template:
+              contiguous: false
+              stationary: false
+              units: ft
+              type: ''
+            affects:
+              choice: false
+              type: self
+              special: ''
+            override: false
+            prompt: true
+          uses:
+            spent: 0
+            recovery: []
+            max: ''
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          enchant:
+            self: true
+          restrictions:
+            allowMagical: true
+            categories: []
+            properties: []
+            type: ''
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: ignited-illumination
+    effects:
+      - type: enchantment
+        name: Ablaze
+        img: icons/magic/fire/flame-burning-campfire-orange.webp
+        disabled: true
+        _id: JmovxBTPt2lOxVUC
+        system:
+          changes:
+            - key: system.activities.y0nBhuvbLEpW7yZg.name
+              type: override
+              value: Extinguish Self
+              phase: initial
+              priority: null
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: <p>You have ignited yourself.</p>
+        origin: null
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781815383396
+          modifiedTime: 1781815640073
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!8MD1vRBTcgSXXk3u.rlA41r2MlaqmVjvf.JmovxBTPt2lOxVUC
+      - name: Ignited Illumination
+        img: icons/magic/fire/flame-burning-campfire-orange.webp
+        origin: Compendium.dnd5e.monsters.Actor.8MD1vRBTcgSXXk3u.Item.rlA41r2MlaqmVjvf
+        type: base
+        _id: Mu9xm262V8kL7QPt
+        system:
+          changes:
+            - key: token.light.dim
+              type: add
+              value: 20
+              phase: initial
+              priority: null
+            - key: token.light.bright
+              type: add
+              value: 10
+              phase: initial
+              priority: null
+            - key: token.light.color
+              type: override
+              value: '#601806'
+              phase: initial
+              priority: null
+            - key: token.light.animation.type
+              type: override
+              value: flame
+              phase: initial
+              priority: null
+            - key: token.light.animation.speed
+              type: override
+              value: 1
+              phase: initial
+              priority: null
+            - key: token.light.animation.intensity
+              type: override
+              value: 2
+              phase: initial
+              priority: null
+            - key: token.light.attenuation
+              type: override
+              value: 0.6
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You have ignited yourself ablaze. While ablaze, you shed
+          &amp;reference[bright light] in a 10-foot radius and
+          &amp;reference[dim light] for an additional 10 feet.</p>
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        showIcon: 0
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781815432406
+          modifiedTime: 1781816372808
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!8MD1vRBTcgSXXk3u.rlA41r2MlaqmVjvf.Mu9xm262V8kL7QPt
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags:
+      dnd5e:
+        riders:
+          effect:
+            - Mu9xm262V8kL7QPt
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.Uvy7vla2EhYSfTl0
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781815342797
+      modifiedTime: 1781815630047
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!8MD1vRBTcgSXXk3u.rlA41r2MlaqmVjvf'
+  - _id: th3hfRWQ3PT9f3Gs
+    name: Touch
+    type: weapon
+    img: icons/magic/fire/flame-burning-earth-yellow.webp
+    system:
+      description:
+        value: "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature or a flammable object, it ignites. Until\_a creature\_takes an action to\_douse the fire,\_the\_target takes [[/damage average activity=OuZcepCj3KXR6GNq]] damage at\_the\_end of each of its \_turns.</p>"
+        chat: >-
+          <p>The [[lookup @name]]{monster} attacks with its [[lookup
+          @item.name]]. If the target is a creature or a flammable object, it
+          ignites. Until a target takes an action to douse the fire, the target
+          takes fire <em>damage</em> at the end of each of its turns.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      quantity: 1
+      weight:
+        value: 0
+        units: lb
+      price:
+        value: 0
+        denomination: gp
+      attunement: ''
+      equipped: true
+      rarity: ''
+      identified: true
+      cover: null
+      range:
+        value: null
+        long: null
+        units: ft
+        reach: null
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      damage:
+        versatile:
+          number: null
+          denomination: null
+          bonus: ''
+          types: []
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+        base:
+          number: 2
+          denomination: 6
+          bonus: ''
+          types:
+            - fire
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+      armor:
+        value: 10
+      hp:
+        value: 0
+        max: 0
+        dt: null
+        conditions: ''
+      properties: []
+      proficient: 1
+      unidentified:
+        description: ''
+      type:
+        value: natural
+        baseItem: ''
+      container: null
+      crewed: false
+      activities:
+        YskO6RC8JaTt3EqY:
+          type: attack
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects:
+            - _id: 7lyAOWMBqtXvPMQ3
+              level: {}
+          range:
+            value: '5'
+            units: ft
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: ''
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          attack:
+            ability: none
+            bonus: '2'
+            critical:
+              threshold: null
+            flat: false
+            type:
+              value: ''
+              classification: ''
+          damage:
+            critical:
+              bonus: ''
+            includeBase: true
+            parts: []
+          sort: 100000
+          name: ''
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: YskO6RC8JaTt3EqY
+        OuZcepCj3KXR6GNq:
+          type: damage
+          sort: 300000
+          activation:
+            type: special
+            override: false
+            condition: >-
+              When a creature the [[lookup @name lowercase]]{monster} has set on
+              fire starts their turn.
+          consumption:
+            scaling:
+              allowed: false
+            spellSlot: true
+            targets: []
+          description:
+            chatFlavor: ''
+            value: "<p>Until\_a creature\_takes an action to\_douse the fire,\_the\_target takes [[/damage average activity=OuZcepCj3KXR6GNq]] damage at\_the\_end of each of its \_turns.</p>"
+          duration:
+            units: inst
+            concentration: false
+            override: false
+          effects: []
+          range:
+            units: spec
+            override: true
+            special: ''
+          target:
+            template:
+              contiguous: false
+              units: ft
+              type: ''
+              stationary: false
+            affects:
+              choice: false
+              type: creature
+              count: '1'
+              special: ''
+            override: false
+            prompt: true
+          uses:
+            spent: 0
+            recovery: []
+            max: ''
+          damage:
+            critical:
+              allow: false
+            parts:
+              - custom:
+                  enabled: false
+                  formula: ''
+                number: 1
+                denomination: 6
+                bonus: ''
+                types:
+                  - fire
+                scaling:
+                  number: 1
+          name: Start of Turn Burning Damage
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: OuZcepCj3KXR6GNq
+      attuned: false
+      ammunition: {}
+      magicalBonus: null
+      identifier: touch
+      mastery: ''
+    effects:
+      - name: On Fire
+        img: icons/magic/fire/flame-burning-skull-orange.webp
+        origin: Compendium.dnd5e.monsters.Actor.8MD1vRBTcgSXXk3u.Item.th3hfRWQ3PT9f3Gs
+        transfer: false
+        _id: 7lyAOWMBqtXvPMQ3
+        type: base
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You are on fire. Until someone takes an action to douse the fire,
+          you take [[/damage average 1d6 fire]] damage at the start of each of
+          your turns.</p>
+        tint: '#ffffff'
+        statuses: []
+        showIcon: 2
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781815039200
+          modifiedTime: 1781815049123
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: >-
+            Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau.Item.yud1cnEVQ9KxbmWc.ActiveEffect.JaPKJu7WX0QierHn
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!8MD1vRBTcgSXXk3u.th3hfRWQ3PT9f3Gs.7lyAOWMBqtXvPMQ3
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781815004166
+      modifiedTime: 1781815328293
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!8MD1vRBTcgSXXk3u.th3hfRWQ3PT9f3Gs'
+effects: []
+folder: IB448xVSBvtqitzs
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  coreVersion: '14.361'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1726171207472
+  modifiedTime: 1745108041798
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!actors!8MD1vRBTcgSXXk3u'

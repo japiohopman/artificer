@@ -1,0 +1,136 @@
+import ActivitySheet from "./activity-sheet.mjs";
+
+/**
+ * Sheet for the enchant activity.
+ */
+export default class EnchantSheet extends ActivitySheet {
+
+  /** @inheritDoc */
+  static DEFAULT_OPTIONS = {
+    classes: ["enchant-activity"]
+  };
+
+  /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  static PARTS = {
+    ...super.PARTS,
+    effect: {
+      template: "systems/dnd5e/templates/activity/enchant-effect.hbs",
+      templates: [
+        "systems/dnd5e/templates/activity/parts/activity-effects.hbs",
+        "systems/dnd5e/templates/activity/parts/activity-effect-level-limit.hbs",
+        "systems/dnd5e/templates/activity/parts/enchant-effect-settings.hbs",
+        "systems/dnd5e/templates/activity/parts/enchant-restrictions.hbs"
+      ]
+    }
+  };
+
+  /* -------------------------------------------- */
+
+  /** @override */
+  tabGroups = {
+    sheet: "identity",
+    activation: "time",
+    effect: "enchantments"
+  };
+
+  /* -------------------------------------------- */
+  /*  Rendering                                   */
+  /* -------------------------------------------- */
+
+  /** @override */
+  _prepareAppliedEffectContext(context, effect) {
+    effect.activityOptions = this.item.system.activities
+      .filter(a => a.id !== this.activity.id)
+      .map(a => ({ value: a.id, label: a.name, selected: effect.data.riders.activity.has(a.id) }));
+    effect.additionalSettings = "systems/dnd5e/templates/activity/parts/enchant-effect-settings.hbs";
+    effect.effectOptions = this.item.effects
+      .filter(e => e.type === "base")
+      .map(e => ({ value: e.id, label: e.name, selected: effect.data.riders.effect.has(e.id) }));
+    return effect;
+  }
+
+  /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  async _prepareEffectContext(context, options) {
+    context = await super._prepareEffectContext(context, options);
+
+    context.enchantmentLabels = {
+      add: "DND5E.ENCHANT.Enchantment.Action.Create",
+      delete: "DND5E.ENCHANT.Enchantment.Action.Delete",
+      dissociate: "DND5E.ENCHANT.Enchantment.Action.Dissociate",
+      empty: "DND5E.ENCHANT.Enchantment.Empty",
+      legend: "DND5E.ENCHANT.FIELDS.enchant.label"
+    };
+
+    const enchantableTypes = this.activity.enchantableTypes;
+    context.typeOptions = [
+      { value: "", label: _loc("DND5E.ENCHANT.FIELDS.restrictions.type.Any"), rule: true },
+      ...Object.keys(CONFIG.Item.dataModels)
+        .filter(t => enchantableTypes.has(t))
+        .map(value => ({ value, label: _loc(CONFIG.Item.typeLabels[value]) }))
+    ];
+    context.isTypePhysical = !context.source.restrictions.type
+      || !!CONFIG.Item.dataModels[context.source.restrictions.type]?.schema.has("quantity");
+
+    const type = context.source.restrictions.type;
+    const typeDataModel = CONFIG.Item.dataModels[type];
+    if ( typeDataModel ) context.categoryOptions = Object.entries(typeDataModel.itemCategories ?? {})
+      .map(([value, config]) => ({ value, label: foundry.utils.getType(config) === "string" ? config : config.label }));
+
+    context.propertyOptions = (CONFIG.DND5E.validProperties[type] ?? [])
+      .map(value => ({ value, label: CONFIG.DND5E.itemProperties[value]?.label ?? value }));
+
+    return context;
+  }
+
+  /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  async _prepareIdentityContext(context, options) {
+    context = await super._prepareIdentityContext(context, options);
+    context.behaviorFields.unshift({
+      field: context.fields.enchant.fields.self,
+      value: context.source.enchant.self,
+      input: context.inputs.createCheckboxInput
+    });
+    return context;
+  }
+
+  /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  _getTabs() {
+    const tabs = super._getTabs();
+    tabs.effect.label = "DND5E.ENCHANT.SECTIONS.Enchanting";
+    tabs.effect.icon = "fa-solid fa-wand-sparkles";
+    tabs.effect.tabs = this._markTabs({
+      enchantments: {
+        id: "enchantments", group: "effect", icon: "fa-solid fa-star",
+        label: "DND5E.ENCHANT.SECTIONS.Enchantments"
+      },
+      restrictions: {
+        id: "restrictions", group: "effect", icon: "fa-solid fa-ban",
+        label: "DND5E.ENCHANT.SECTIONS.Restrictions"
+      }
+    });
+    return tabs;
+  }
+
+  /* -------------------------------------------- */
+  /*  Event Listeners and Handlers                */
+  /* -------------------------------------------- */
+
+  /** @override */
+  _addEffectData() {
+    const { name, img } = this.activity._source;
+    return {
+      type: "enchantment",
+      name: name || this.item.name,
+      img: img || this.item.img,
+      disabled: true
+    };
+  }
+}

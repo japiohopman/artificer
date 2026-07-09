@@ -1,0 +1,99 @@
+_id: phbrgeSecondstor
+name: Second-Story Work
+type: feat
+folder: dnKXgPPMNF5Jbw2T
+img: icons/environment/settlement/stone-stairs.webp
+system:
+  description:
+    value: >-
+      <p>You've trained to get into especially hard-to-reach places, granting
+      you these benefits.</p><p><strong>Climber.</strong> You gain a Climb Speed
+      equal to your Speed.</p><p><strong>Jumper.</strong> You can determine your
+      &amp;Reference[Jumping]{jump} distance using your Dexterity rather than
+      your Strength.</p><section class="secret"
+      id="secret-7BCLTkAFUjinYhJw"><p><strong>Foundry Note</strong></p><p>This
+      feature does not automatically add the Climb Speed and will have to be
+      added manually.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+    license: CC-BY-4.0
+    book: ''
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ''
+  prerequisites:
+    level: 3
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: second-story-work
+effects:
+  - name: Second-Story Work
+    img: icons/environment/settlement/stone-stairs.webp
+    origin: Compendium.dnd5e.classes24.Item.phbrgeSecondstor
+    _id: qPdh1z9RMd6oBcoj
+    type: base
+    system:
+      changes:
+        - key: system.attributes.movement.climb
+          value: '@attributes.movement.speed'
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: vnUh9ixjuVAI47bg
+    disabled: false
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1768932179578
+      modifiedTime: 1783544103257
+      lastModifiedBy: dnd5ebuilder0000
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbrgeSecondstor.qPdh1z9RMd6oBcoj'
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1735866560489
+  modifiedTime: 1783544103257
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 0
+ownership:
+  default: 0
+_key: '!items!phbrgeSecondstor'

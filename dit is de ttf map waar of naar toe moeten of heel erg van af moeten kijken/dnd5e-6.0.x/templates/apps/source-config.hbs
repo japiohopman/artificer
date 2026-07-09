@@ -1,0 +1,30 @@
+<fieldset>
+    <legend>{{ localize "DND5E.SOURCE.FIELDS.source.label" }}</legend>
+    <div class="form-group">
+        <label>{{ localize "DND5E.SOURCE.FIELDS.source.book.label" }}</label>
+        <div class="form-fields">
+            <input type="text" name="system.source.book" value="{{ source.book }}" list="{{ partId }}-books"
+                   placeholder="{{ data.bookPlaceholder }}">
+            <datalist id="{{ partId }}-books">
+                {{ selectOptions CONFIG.sourceBooks }}
+            </datalist>
+        </div>
+    </div>
+    {{ formField fields.page value=source.page }}
+    {{ formField fields.custom value=source.custom }}
+    {{ formField fields.license value=source.license }}
+    <hr>
+    {{ formField fields.rules value=source.rules options=rulesVersions }}
+    {{#if identifier}}
+    {{ formField identifier.field value=identifier.value placeholder=identifier.placeholder localize=true }}
+    {{/if}}
+    {{ formField fields.revision value=source.revision }}
+    {{#if sourceAnchor}}
+    <div class="form-group">
+        <label>{{ localize "DND5E.SOURCE.FIELDS.source.uuid.label" }}</label>
+        <div class="source-uuid form-fields">
+            {{{ sourceAnchor }}}
+        </div>
+    </div>
+    {{/if}}
+</fieldset>

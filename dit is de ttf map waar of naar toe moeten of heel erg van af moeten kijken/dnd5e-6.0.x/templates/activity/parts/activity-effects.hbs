@@ -1,0 +1,64 @@
+<fieldset>
+    <legend>
+        <span>{{ localize (ifThen labels.legend labels.legend "DND5E.ACTIVITY.FIELDS.effects.label") }}</span>
+        <button type="button" class="unbutton control-button" data-action="addEffect"
+                data-tooltip aria-label="{{ localize (ifThen labels.add labels.add 'DND5E.EFFECT.Action.CreateEffect') }}">
+            <i class="fas fa-plus" inert></i>
+        </button>
+    </legend>
+    {{#if effects.fields.length}}
+    {{> "dnd5e.fieldlist" effects.fields }}
+    {{/if}}
+    <multi-select name="appliedLocalEffects" class="hidden-tags">{{ selectOptions allEffects }}</multi-select>
+    <ul class="separated-list effects-list flexcol unlist">
+        {{#each appliedEffects}}
+        <li data-index="{{ @index }}" data-profile-id="{{ data._id }}" data-effect-id="{{ effect.id }}"
+            data-expand-id="effects.{{ data._id }}">
+            {{> ".effect" labels=../labels }}
+        </li>
+        {{else}}
+        <li class="empty">
+            {{{ localize (ifThen labels.empty labels.empty "DND5E.EFFECT.Empty") }}}
+        </li>
+        {{/each}}
+    </ul>
+    {{#unless (eq remote false)}}
+    <document-tags name="appliedRemoteEffects" class="hidden-tags drop-area" type="ActiveEffect"
+                   data-drop-hint="{{ localize (ifThen labels.drop labels.drop "DND5E.EFFECT.DropHint") }}"></document-tags>
+    {{/unless}}
+</fieldset>
+
+{{#*inline ".effect"}}
+<div class="details flexrow">
+    {{ dnd5e-icon effect.img alt=effect.name classes="gold-icon" }}
+    {{{ contentLink }}}
+    <div class="list-controls flexrow">
+        <button type="button" class="unbutton control-button" data-action="dissociateEffect" data-tooltip
+                aria-label="{{ localize (ifThen labels.dissociate labels.dissociate 'DND5E.EFFECT.Action.DissociateEffect') }}">
+            <i class="fa-solid fa-minus" inert></i>
+        </button>
+        {{#unless data.uuid}}
+        <button type="button" class="unbutton control-button" data-action="deleteEffect" data-tooltip
+                aria-label="{{ localize (ifThen labels.delete labels.delete 'DND5E.EFFECT.Action.DeleteEffect') }}">
+            <i class="fa-solid fa-trash" inert></i>
+        </button>
+        {{/unless}}
+    </div>
+</div>
+<input type="hidden" name="{{ prefix }}_id" value="{{ data._id }}">
+<input type="hidden" name="{{ prefix }}uuid" value="{{ data.uuid }}">
+{{#if additionalSettings}}
+<div class="additional-tray collapsible {{ collapsed }}" data-action="toggleCollapsed">
+    <label class="roboto-upper">
+        <i class="fa-solid fa-gears" inert></i>
+        <span>{{ localize "DND5E.AdditionalSettings" }}</span>
+        <i class="fa-solid fa-caret-down" inert></i>
+    </label>
+    <div class="collapsible-content">
+        <div class="wrapper">
+            {{> (lookup . "additionalSettings") }}
+        </div>
+    </div>
+</div>
+{{/if}}
+{{/inline}}

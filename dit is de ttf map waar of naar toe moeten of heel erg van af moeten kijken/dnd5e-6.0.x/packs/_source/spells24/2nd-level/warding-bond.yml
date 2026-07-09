@@ -1,0 +1,248 @@
+name: Warding Bond
+system:
+  description:
+    value: >-
+      <p>You touch another creature that is willing and create a mystic
+      connection between you and the target until the spell ends. While the
+      target is within 60 feet of you, it gains a +1 bonus to AC and saving
+      throws, and it has &amp;Reference[damageresistance]{Resistance} to all
+      damage. Also, each time it takes damage, you take the same amount of
+      damage.</p><p>The spell ends if you drop to 0 Hit Points or if you and the
+      target become separated by more than 60 feet. It also ends if the spell is
+      cast again on either of the connected creatures.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  activation:
+    type: action
+    condition: ''
+    value: null
+  duration:
+    value: '1'
+    units: hour
+  target:
+    affects:
+      type: willing
+      count: '1'
+      choice: false
+    template:
+      units: ''
+      contiguous: false
+  range:
+    units: touch
+  uses:
+    max: ''
+    recovery: []
+    spent: 0
+  level: 2
+  school: abj
+  properties:
+    - vocal
+    - somatic
+    - material
+  materials:
+    value: >-
+      a pair of platinum rings worth 50+ GP each, which you and the target must
+      wear for the duration
+    consumed: false
+    cost: 0
+    supply: 0
+  preparation:
+    mode: prepared
+    prepared: false
+  activities:
+    dnd5eactivity000:
+      _id: dnd5eactivity000
+      type: utility
+      activation:
+        type: action
+        value: null
+        override: false
+      consumption:
+        targets: []
+        scaling:
+          allowed: false
+          max: ''
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        override: false
+      effects:
+        - _id: HRfwqQtKmhNzaGX8
+      range:
+        override: false
+      target:
+        prompt: true
+        template:
+          contiguous: false
+          units: ft
+        affects:
+          choice: false
+        override: false
+      roll:
+        formula: ''
+        name: ''
+        prompt: false
+        visible: false
+      uses:
+        spent: 0
+        recovery: []
+      sort: 0
+  identifier: warding-bond
+_id: phbsplWardingBon
+type: spell
+img: icons/magic/movement/abstract-ribbons-red-orange.webp
+effects:
+  - name: Bonded
+    origin: Compendium.dnd5e.spells24.Item.phbsplWardingBon
+    duration:
+      value: 3600
+      units: seconds
+      expiry: turnStart
+      expired: false
+    disabled: false
+    flags: {}
+    img: icons/equipment/finger/ring-band-engraved-scrolls-silver.webp
+    _id: HRfwqQtKmhNzaGX8
+    type: base
+    system:
+      changes:
+        - key: system.traits.dr.value
+          value: acid
+          priority: null
+          type: add
+          phase: initial
+          _id: VVgPiCQAYflLHpou
+        - key: system.traits.dr.value
+          value: bludgeoning
+          priority: null
+          type: add
+          phase: initial
+          _id: BRV7GbvaCm9V7vh2
+        - key: system.traits.dr.value
+          value: cold
+          priority: null
+          type: add
+          phase: initial
+          _id: LvfdKMOZBMQbPkmH
+        - key: system.traits.dr.value
+          value: fire
+          priority: null
+          type: add
+          phase: initial
+          _id: 6fZiuEDp2rTvKZhx
+        - key: system.traits.dr.value
+          value: force
+          priority: null
+          type: add
+          phase: initial
+          _id: Ouklfi92eWMfy29G
+        - key: system.traits.dr.value
+          value: lightning
+          priority: null
+          type: add
+          phase: initial
+          _id: ik7Xq9iuF6epGUA5
+        - key: system.traits.dr.value
+          value: necrotic
+          priority: null
+          type: add
+          phase: initial
+          _id: pPSOf2zEPXhrnXCx
+        - key: system.traits.dr.value
+          value: piercing
+          priority: null
+          type: add
+          phase: initial
+          _id: 3ScJTNKJR7QPJXva
+        - key: system.traits.dr.value
+          value: poison
+          priority: null
+          type: add
+          phase: initial
+          _id: AhSWO71rJ3r4BVfp
+        - key: system.traits.dr.value
+          value: psychic
+          priority: null
+          type: add
+          phase: initial
+          _id: 3KpteEOSDGKXPafI
+        - key: system.traits.dr.value
+          value: radiant
+          priority: null
+          type: add
+          phase: initial
+          _id: gihdycJu2zxZaFGp
+        - key: system.traits.dr.value
+          value: slashing
+          priority: null
+          type: add
+          phase: initial
+          _id: lyoX2g7lCPehr3vk
+        - key: system.traits.dr.value
+          value: thunder
+          priority: null
+          type: add
+          phase: initial
+          _id: cBQ1xOn0fQ3fW4Rb
+        - key: system.attributes.ac.bonus
+          value: 1
+          priority: null
+          type: add
+          phase: initial
+          _id: PBrwY6ZJkQV34ZPh
+        - key: system.bonuses.abilities.save
+          value: 1
+          priority: null
+          type: add
+          phase: initial
+          _id: YTGMxZaSscEvQH28
+      magical: true
+    description: >-
+      <p>While the target is within 60 feet of you, it gains a +1 bonus to AC
+      and saving throws, and it has Resistance to all damage. Also, each time it
+      takes damage, you take the same amount of damage.</p><p>The spell ends if
+      you drop to 0 Hit Points or if you and the target become separated by more
+      than 60 feet. It also ends if the spell is cast again on either of the
+      connected creatures.</p>
+    tint: '#ffffff'
+    transfer: false
+    statuses: []
+    sort: 0
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1783543977587
+      modifiedTime: 1783543977587
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbsplWardingBon.HRfwqQtKmhNzaGX8'
+folder: 3SjcO2acsFnWegp4
+sort: 112500
+ownership:
+  default: 0
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1724425977406
+  modifiedTime: 1783543977587
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!items!phbsplWardingBon'

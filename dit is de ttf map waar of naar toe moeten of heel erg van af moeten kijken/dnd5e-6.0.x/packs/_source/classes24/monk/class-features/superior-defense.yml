@@ -1,0 +1,212 @@
+_id: phbmnkSuperiorDe
+name: Superior Defense
+type: feat
+folder: kK77WX8hVJHRQRda
+img: icons/magic/defensive/shield-barrier-blue.webp
+system:
+  description:
+    value: >-
+      <p>At the start of your turn, you can expend 3 Focus Points to bolster
+      yourself against harm for 1 minute or until you have the Incapacitated
+      condition. During that time, you have Resistance to all damage except
+      Force damage.</p><section id="secret-jojCvqn1dDjsyTzI"
+      class="secret"><p><strong>Foundry Note</strong></p><p>This feature will
+      expend 3 Focus Points and includes an Active Effect which will apply the
+      relevant Resistances.</p></section>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+    license: CC-BY-4.0
+    book: ''
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: ki
+  prerequisites:
+    level: 18
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities:
+    tED3Z5V5ZlCkyzWU:
+      type: utility
+      _id: tED3Z5V5ZlCkyzWU
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: At the start of your turn
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets:
+          - type: itemUses
+            value: '3'
+            target: Compendium.dnd5e.classes24.Item.phbmnkMonksFocus
+            scaling: {}
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: zAtnsWRpAcTIkjpz
+      range:
+        override: false
+        units: self
+        special: ''
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: self
+        override: false
+        prompt: false
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      sort: 0
+      roll:
+        prompt: false
+        visible: false
+        name: ''
+        formula: ''
+      name: ''
+  enchant: {}
+  identifier: superior-defense
+effects:
+  - name: Superior Defense
+    img: systems/dnd5e/icons/svg/items/feature.svg
+    origin: Compendium.dnd5e.classes24.Item.phbmnkSuperiorDe
+    transfer: false
+    _id: zAtnsWRpAcTIkjpz
+    type: base
+    system:
+      changes:
+        - key: system.traits.dr.value
+          value: acid
+          priority: null
+          type: add
+          phase: initial
+          _id: 0SpF8C2Il1jfl1S7
+        - key: system.traits.dr.value
+          value: bludgeoning
+          priority: null
+          type: add
+          phase: initial
+          _id: DCS8TDE3lsibJ6X0
+        - key: system.traits.dr.value
+          value: cold
+          priority: null
+          type: add
+          phase: initial
+          _id: rSNaVHlqptKVYBaS
+        - key: system.traits.dr.value
+          value: fire
+          priority: null
+          type: add
+          phase: initial
+          _id: HY6mBo5wwMfsprR0
+        - key: system.traits.dr.value
+          value: lightning
+          priority: null
+          type: add
+          phase: initial
+          _id: GgD9yPK7YzbNmUxi
+        - key: system.traits.dr.value
+          value: necrotic
+          priority: null
+          type: add
+          phase: initial
+          _id: I6wPPNbLkaRz8xKI
+        - key: system.traits.dr.value
+          value: piercing
+          priority: null
+          type: add
+          phase: initial
+          _id: 94FQYiMaWbxCo7Ma
+        - key: system.traits.dr.value
+          value: poison
+          priority: null
+          type: add
+          phase: initial
+          _id: ssCnvYbSq9sy0lOs
+        - key: system.traits.dr.value
+          value: psychic
+          priority: null
+          type: add
+          phase: initial
+          _id: XmTGxpyNC0qbEvi2
+        - key: system.traits.dr.value
+          value: radiant
+          priority: null
+          type: add
+          phase: initial
+          _id: Dt5sLKB23tBmwtpi
+        - key: system.traits.dr.value
+          value: slashing
+          priority: null
+          type: add
+          phase: initial
+          _id: WNAAi1m4jXAw8RPT
+        - key: system.traits.dr.value
+          value: thunder
+          priority: null
+          type: add
+          phase: initial
+          _id: N2HoYpmILIFTXleh
+    disabled: false
+    duration:
+      value: 60
+      units: seconds
+      expiry: turnStart
+      expired: false
+    description: ''
+    tint: '#ffffff'
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1783544102846
+      modifiedTime: 1783544102846
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbmnkSuperiorDe.zAtnsWRpAcTIkjpz'
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1735866307724
+  modifiedTime: 1783544102846
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 1700000
+ownership:
+  default: 0
+_key: '!items!phbmnkSuperiorDe'

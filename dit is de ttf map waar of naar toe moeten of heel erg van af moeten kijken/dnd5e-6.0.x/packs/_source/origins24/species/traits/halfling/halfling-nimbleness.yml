@@ -1,0 +1,92 @@
+_id: phbsptHalflingNi
+name: Halfling Nimbleness
+type: feat
+img: icons/skills/movement/figure-running-gray.webp
+system:
+  activities: {}
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  description:
+    value: >-
+      <p>You can move through the space of any creature that is a size larger
+      than you, but you can't stop in the same space.</p>
+    chat: ''
+  source:
+    revision: 1
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  enchant: {}
+  type:
+    value: race
+    subtype: ''
+  prerequisites:
+    level: null
+    repeatable: false
+  properties: []
+  requirements: Halfling
+  identifier: halfling-nimbleness
+effects:
+  - name: Halfling Nimbleness
+    img: icons/skills/movement/figure-running-gray.webp
+    origin: Compendium.dnd5e.origins24.Item.phbsptHalflingNi
+    _id: HtNoV5usxEadPbqp
+    type: base
+    system:
+      changes:
+        - key: flags.dnd5e.halflingNimbleness
+          value: true
+          priority: null
+          type: override
+          phase: initial
+          _id: oovW2jHgMjcQUfqh
+    disabled: false
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1762280399491
+      modifiedTime: 1783544081952
+      lastModifiedBy: dnd5ebuilder0000
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbsptHalflingNi.HtNoV5usxEadPbqp'
+folder: zVLJosGQ7viZqH14
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1735866704040
+  modifiedTime: 1783544081952
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 0
+ownership:
+  default: 0
+_key: '!items!phbsptHalflingNi'

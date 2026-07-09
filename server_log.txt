@@ -2,5 +2,12 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+ElevenLabs Keys Configured: 0 accounts active.
 Server running on http://localhost:3000
+3:47:56 PM [vite] (client) page reload server.ts
+3:47:56 PM [vite] (client) page reload server_log.txt
+3:49:21 PM [vite] (client) page reload server.ts
+3:49:21 PM [vite] (client) page reload server_log.txt
+3:49:31 PM [vite] (client) page reload server.ts
+3:49:31 PM [vite] (client) page reload server_log.txt

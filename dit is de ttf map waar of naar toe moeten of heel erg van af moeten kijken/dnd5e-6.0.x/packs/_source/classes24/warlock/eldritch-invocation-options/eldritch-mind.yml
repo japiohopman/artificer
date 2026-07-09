@@ -1,0 +1,93 @@
+_id: phbinvEldritchMi
+name: Eldritch Mind
+type: feat
+img: icons/magic/unholy/silhouette-robe-evil-power.webp
+system:
+  description:
+    value: >-
+      <p>You have Advantage on Constitution saving throws that you make to
+      maintain Concentration.</p>
+    chat: ''
+  source:
+    custom: ''
+    rules: '2024'
+    revision: 1
+    license: CC-BY-4.0
+    book: ''
+  uses:
+    max: ''
+    spent: 0
+    recovery: []
+  type:
+    value: class
+    subtype: eldritchInvocation
+  prerequisites:
+    level: null
+    repeatable: false
+  properties: []
+  requirements: ''
+  activities: {}
+  enchant: {}
+  identifier: eldritch-mind
+effects:
+  - name: Eldritch Mind
+    img: icons/magic/unholy/silhouette-robe-evil-power.webp
+    origin: Compendium.dnd5e.classes24.Item.phbinvEldritchMi
+    _id: yiLpNgz92fezlhAG
+    type: base
+    system:
+      changes:
+        - key: system.attributes.concentration.roll.mode
+          value: 1
+          priority: null
+          type: add
+          phase: initial
+          _id: et5CQsIQNwcc0PiZ
+    disabled: false
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags:
+      dnd5e:
+        riders:
+          statuses: []
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      exportSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1768927362062
+      modifiedTime: 1783544102208
+      lastModifiedBy: dnd5ebuilder0000
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!phbinvEldritchMi.yiLpNgz92fezlhAG'
+folder: BjeMHiqnKNWkWhox
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1735866281378
+  modifiedTime: 1783544102208
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+sort: 0
+ownership:
+  default: 0
+_key: '!items!phbinvEldritchMi'

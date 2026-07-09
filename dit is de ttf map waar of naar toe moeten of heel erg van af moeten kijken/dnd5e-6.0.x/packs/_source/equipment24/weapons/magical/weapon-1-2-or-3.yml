@@ -1,0 +1,408 @@
+name: Weapon, +1, +2, or +3
+system:
+  description:
+    value: >-
+      <p><em>Weapon (Any Simple or Martial), Uncommon (+1), Rare (+2), or Very
+      Rare (+3)</em></p><p>You have a bonus to attack rolls and damage rolls
+      made with this magic weapon. The bonus is determined by the weapon's
+      rarity.</p><p>@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE
+      cite=false caption=false classes="hide-in-embed"]</p>
+    chat: ''
+  price:
+    value: 0
+    denomination: gp
+  activities:
+    RNQnNjtCW9GpQk5M:
+      type: enchant
+      name: Weapon, +1, +2, or +3
+      _id: RNQnNjtCW9GpQk5M
+      sort: 0
+      activation:
+        type: ''
+        value: null
+        override: false
+        condition: ''
+      consumption:
+        scaling:
+          allowed: false
+        spellSlot: true
+        targets: []
+      description:
+        chatFlavor: ''
+      duration:
+        units: inst
+        concentration: false
+        override: false
+      effects:
+        - _id: 8Fd1n2gyqFB5lLKd
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+        - _id: mYkdLd1Ym0LZHNtF
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+        - _id: rg5pxhmtyQXBw86a
+          level:
+            min: null
+            max: null
+          riders:
+            activity: []
+            effect: []
+            item: []
+      range:
+        override: false
+      target:
+        template:
+          contiguous: false
+          units: ft
+          type: ''
+        affects:
+          choice: false
+          count: ''
+          type: ''
+        override: false
+        prompt: true
+      uses:
+        spent: 0
+        recovery: []
+        max: ''
+      enchant:
+        identifier: ''
+      restrictions:
+        allowMagical: false
+        categories: []
+        properties: []
+        type: ''
+      img: ''
+      appliedEffects:
+        - 8Fd1n2gyqFB5lLKd
+        - mYkdLd1Ym0LZHNtF
+        - rg5pxhmtyQXBw86a
+  uses:
+    spent: 0
+    recovery: []
+    max: ''
+  identifier: weapon-1-2-or-3
+  source:
+    revision: 1
+    rules: '2024'
+    license: CC-BY-4.0
+    book: ''
+  identified: true
+  unidentified:
+    description: ''
+  container: null
+  quantity: 1
+  weight:
+    value: 0
+    units: lb
+  rarity: ''
+  attunement: ''
+  attuned: false
+  equipped: false
+  armor:
+    value: null
+  cover: null
+  crewed: false
+  hp:
+    value: null
+    max: null
+    dt: null
+    conditions: ''
+  type:
+    value: ''
+    baseItem: ''
+  ammunition: {}
+  damage:
+    base:
+      number: null
+      denomination: 0
+      types: []
+      custom:
+        enabled: false
+      scaling:
+        number: 1
+      bonus: ''
+    versatile:
+      number: null
+      denomination: null
+      types: []
+      custom:
+        enabled: false
+      scaling:
+        number: 1
+  magicalBonus: null
+  properties:
+    - mgc
+  proficient: null
+  range:
+    value: null
+    long: null
+    reach: null
+    units: ft
+  mastery: ''
+_id: dmgWeapon12or300
+type: weapon
+folder: kie870i5kr7yuxO8
+img: icons/weapons/swords/greatsword-crossguard-engraved-green.webp
+effects:
+  - type: enchantment
+    name: Weapon +1
+    img: systems/dnd5e/icons/spell-tiers/spell2.webp
+    disabled: true
+    _id: 8Fd1n2gyqFB5lLKd
+    system:
+      changes:
+        - key: name
+          value: '{} +1'
+          priority: null
+          type: override
+          phase: initial
+          _id: ifiF6poacSm9N80r
+        - key: system.magicalBonus
+          value: 1
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: rYHTmNmWxd6LpahZ
+        - key: system.rarity
+          value: uncommon
+          priority: null
+          type: override
+          phase: initial
+          _id: ASyPoD9X2b3Zcch7
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: 6ZTU4BQOw36K7Gs4
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: JhIxmjfMM6CVSgMU
+        - key: system.price.value
+          value: 400
+          priority: null
+          type: add
+          phase: initial
+          _id: VVCcBLuITZ2cT82B
+        - key: system.price.denomination
+          value: gp
+          priority: null
+          type: override
+          phase: initial
+          _id: viDmkC5cgezDJF3K
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1729788344848
+      modifiedTime: 1783544099459
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgWeapon12or300.8Fd1n2gyqFB5lLKd'
+  - type: enchantment
+    name: Weapon +2
+    img: systems/dnd5e/icons/spell-tiers/spell3.webp
+    disabled: true
+    system:
+      changes:
+        - key: name
+          value: '{} +2'
+          priority: null
+          type: override
+          phase: initial
+          _id: 146otMRhNKRfvL8h
+        - key: system.magicalBonus
+          value: 2
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: x5yFhBdjbTR1SlU7
+        - key: system.rarity
+          value: rare
+          priority: null
+          type: override
+          phase: initial
+          _id: CM7x4qyr2s0XkMuW
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: G92aRCwVYNcTCd71
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: 2EnGqkwTV6Sd0Qqk
+        - key: system.price.value
+          value: 4000
+          priority: null
+          type: add
+          phase: initial
+          _id: 9mExWzi64DcCReu2
+        - key: system.price.denomination
+          value: gp
+          priority: null
+          type: override
+          phase: initial
+          _id: DVzy1tB78nJvXvS8
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: >-
+        Compendium.dnd5e.equipment24.Item.dmgWeapon12or300.ActiveEffect.8Fd1n2gyqFB5lLKd
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1729802216001
+      modifiedTime: 1783544099459
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _id: mYkdLd1Ym0LZHNtF
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgWeapon12or300.mYkdLd1Ym0LZHNtF'
+  - type: enchantment
+    name: Weapon +3
+    img: systems/dnd5e/icons/spell-tiers/spell4.webp
+    disabled: true
+    system:
+      changes:
+        - key: name
+          value: '{} +3'
+          priority: null
+          type: override
+          phase: initial
+          _id: OD07DgAdqqTbaRJ3
+        - key: system.magicalBonus
+          value: 3
+          priority: null
+          type: upgrade
+          phase: initial
+          _id: N85ilwB4de1qHesN
+        - key: system.rarity
+          value: veryRare
+          priority: null
+          type: override
+          phase: initial
+          _id: KJo6pWme6ELyjvYZ
+        - key: system.description.value
+          value: >-
+            {}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300
+            caption=false]</p>
+          priority: null
+          type: override
+          phase: initial
+          _id: aoHoh9W1I67UAODn
+        - key: system.properties
+          value: mgc
+          priority: null
+          type: add
+          phase: initial
+          _id: 59baMOgaRdrVrEMn
+        - key: system.price.value
+          value: 40000
+          priority: null
+          type: add
+          phase: initial
+          _id: pl7QsamiVdjSgy1Q
+        - key: system.price.denomination
+          value: gp
+          priority: null
+          type: override
+          phase: initial
+          _id: oBSKb47ZpQ2Jztnw
+    duration:
+      value: null
+      units: seconds
+      expiry: null
+      expired: false
+    description: ''
+    origin: null
+    tint: '#ffffff'
+    transfer: true
+    statuses: []
+    sort: 0
+    flags: {}
+    _stats:
+      compendiumSource: >-
+        Compendium.dnd5e.equipment24.Item.dmgWeapon12or300.ActiveEffect.8Fd1n2gyqFB5lLKd
+      duplicateSource: null
+      coreVersion: '14.364'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1729802234500
+      modifiedTime: 1783544099459
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _id: rg5pxhmtyQXBw86a
+    start: null
+    showIcon: 1
+    folder: null
+    _key: '!items.effects!dmgWeapon12or300.rg5pxhmtyQXBw86a'
+sort: 0
+ownership:
+  default: 0
+flags:
+  dnd5e:
+    riders:
+      activity: []
+      effect: []
+_stats:
+  duplicateSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 4.4.0
+  createdTime: 1729788236164
+  modifiedTime: 1783544099458
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!items!dmgWeapon12or300'

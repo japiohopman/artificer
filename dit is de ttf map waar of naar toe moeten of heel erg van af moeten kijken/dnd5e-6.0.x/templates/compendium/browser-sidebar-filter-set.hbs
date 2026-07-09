@@ -1,0 +1,29 @@
+<div class="filter filter-set collapsible {{~#if (eq expanded false)}} collapsed{{/if}}"
+     data-expand-id="{{ expandId }}" data-filter-id="{{ key }}">
+    <div class="filter-header">
+        <label data-action="toggleCollapsed">
+            <span class="roboto-upper">{{ localize label }}</span>
+            <i class="fa-solid fa-caret-down" inert></i>
+        </label>
+    </div>
+    <div class="collapsible-content">
+        <div class="wrapper">
+            {{~#if config.blank}}
+            <span class="filter-choice">
+                <filter-state name="additional.{{ key }}._blank" value="{{ value._blank }}"
+                              id="{{ @root.partId }}-additional-{{ key }}-_blank"
+                              {{ disabled locked._blank }}></filter-state>
+                <label for="{{ @root.partId }}-additional-{{ key }}-_blank">{{ localize config.blank }}</label>
+            </span>
+            {{/if~}}
+            {{~#each config.choices}}
+            <span class="filter-choice">
+                <filter-state name="additional.{{ ../key }}.{{ @key }}" value="{{ lookup ../value @key }}"
+                              id="{{ @root.partId }}-additional-{{ ../key }}-{{ @key }}"
+                              {{ disabled (lookup ../locked @key) }}></filter-state>
+                <label for="{{ @root.partId }}-additional-{{ ../key }}-{{ @key }}">{{ ifThen label label this }}</label>
+            </span>
+            {{/each~}}
+        </div>
+    </div>
+</div>

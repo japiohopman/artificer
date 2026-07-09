@@ -1,0 +1,61 @@
+_id: dmgShortCompartm
+name: Short Compartment
+type: container
+flags: {}
+img: icons/containers/bags/pouch-leather-gold-tan.webp
+system:
+  description:
+    value: >-
+      <p>The short compartment can hold up to 60 Arrows, Bolts, or similar
+      objects.</p>
+    chat: ''
+  identifier: short-compartment
+  source:
+    revision: 1
+    rules: '2024'
+  identified: true
+  unidentified:
+    description: ''
+  container: dmgQuiverOfEhlon
+  quantity: 1
+  weight:
+    value: 0
+    units: lb
+  price:
+    value: 0
+    denomination: gp
+  rarity: ''
+  attunement: ''
+  attuned: false
+  equipped: false
+  currency:
+    pp: 0
+    gp: 0
+    ep: 0
+    sp: 0
+    cp: 0
+  properties:
+    - weightlessContents
+  capacity:
+    count: 60
+    volume:
+      value: null
+      units: cubicFoot
+    weight:
+      value: null
+      units: lb
+effects: []
+folder: CXJsbhXV9uLcWcfH
+_stats:
+  duplicateSource: null
+  exportSource: null
+  coreVersion: '14.364'
+  systemId: dnd5e
+  systemVersion: 6.0.0
+  createdTime: 1783544098348
+  modifiedTime: 1783544098348
+  lastModifiedBy: dnd5ebuilder0000
+sort: 725000
+ownership:
+  default: 0
+_key: '!items!dmgShortCompartm'

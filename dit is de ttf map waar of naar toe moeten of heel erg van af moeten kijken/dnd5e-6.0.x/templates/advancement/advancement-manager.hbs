@@ -1,0 +1,28 @@
+<div class="flexcol">
+    <div class="step {{ flowClasses }}">
+        <template id="{{ flowId }}"></template>
+    </div>
+    <nav class="flexrow">
+        {{#if steps.hasPrevious}}
+        <button type="button" data-action="previous">
+            <i class="fas fa-angle-double-left" inert></i>
+            {{ localize "DND5E.ADVANCEMENT.Manager.Action.PreviousStep" }}
+        </button>
+        <button type="button" data-action="restart">
+            <i class="fas fa-undo" inert></i>
+            {{ localize "DND5E.ADVANCEMENT.Manager.Action.Restart" }}
+        </button>
+        {{/if}}
+        {{#if steps.hasNext}}
+        <button type="button" data-action="next">
+            <i class="fas fa-angle-double-right" inert></i>
+            {{ localize "DND5E.ADVANCEMENT.Manager.Action.NextStep" }}
+        </button>
+        {{else}}
+        <button type="button" data-action="complete">
+            <i class="fas fa-check" inert></i>
+            {{ localize "DND5E.ADVANCEMENT.Manager.Action.Complete" }}
+        </button>
+        {{/if}}
+    </nav>
+</div>

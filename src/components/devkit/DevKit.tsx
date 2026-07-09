@@ -42,17 +42,18 @@ interface DevKitProps {
   onClose: () => void;
   onMonsterUpdated: (monster: any) => void;
   initialMonster?: any | null;
+  initialLocation?: any | null;
   currentExplorerTab?: string;
 }
 
-export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdated, initialMonster, currentExplorerTab }) => {
+export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdated, initialMonster, initialLocation, currentExplorerTab }) => {
   const [isMixerOpen, setIsMixerOpen] = useState(false);
   const { characters } = useCharacterStore();
   
   const {
     monstersList, materialsList, equipmentList, 
     equipmentCategories: storeEquipmentCategories, materialCategories: storeMaterialCategories,
-    loadAllLists
+    loadAllLists, loadMissingAssets, missingAssets
   } = useAtlasStore();
 
   const { 
@@ -266,6 +267,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   useEffect(() => {
     if (isOpen) {
       loadAllLists();
+      loadMissingAssets();
       setSelectedCategory(null);
       
       // Context-aware tab selection
@@ -279,6 +281,9 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
         } else {
           setActiveGenerator('equipment');
         }
+      } else if (initialLocation) {
+        setActiveTab('generators');
+        setActiveGenerator('jane');
       } else if (currentExplorerTab) {
         setActiveTab('generators');
         if (currentExplorerTab === 'enemies') setActiveGenerator('monsters');
@@ -287,6 +292,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       }
     }
   }, [isOpen]);
+
+  // Handle updates to initialLocation while open
+  useEffect(() => {
+    if (isOpen && initialLocation) {
+      setActiveTab('generators');
+      setActiveGenerator('jane');
+    }
+  }, [initialLocation, isOpen]);
 
   useEffect(() => {
     setSelectedCategory(null);
@@ -322,6 +335,15 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     const bgExists = activeGenerator === 'monsters' ? !!item.background_type : true;
     const xpExists = activeGenerator === 'monsters' ? (item.xp !== undefined && item.xp > 0) : true;
 
+    const missingCategory = activeGenerator === 'monsters' ? 'enemy' : 
+                          (activeGenerator === 'materials' ? 'materials' : 
+                          (item.rarity && item.rarity !== 'Common' ? 'magic_items' : 'equipment'));
+    
+    const isMissing = missingAssets[missingCategory]?.some(a => 
+      a.toLowerCase().includes(item.index.toLowerCase()) || 
+      (item.name && a.toLowerCase().includes(item.name.toLowerCase()))
+    );
+
     setChecklist(prev => ({
       ...prev,
       jsonExists,
@@ -329,7 +351,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       promptReady: !!prompt,
       imageGenerated: !!item.imageUrl,
       bgReady: bgExists,
-      xpReady: xpExists
+      xpReady: xpExists,
+      isMissingAsset: !!isMissing
     }));
 
     // 2. Check all tiers if applicable
@@ -941,7 +964,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
             ) : activeTab === 'generators' && activeGenerator === 'npcs' ? (
               <NPCGenerator onSave={() => loadAllLists()} />
             ) : activeTab === 'generators' && activeGenerator === 'jane' ? (
-              <Jane />
+              <Jane initialData={initialLocation} />
             ) : activeTab === 'generators' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
@@ -1119,14 +1142,21 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                       { key: 'wikiExists', label: 'MD_WIKI', id: 2 },
                       { key: 'promptReady', label: 'AI_PRMPT', id: 3 },
                       { key: 'imageGenerated', label: 'GEN_IMG', id: 4 },
-                      { key: 'bgReady', label: 'BG_STAT', id: 5 }
+                      { key: 'bgReady', label: 'BG_STAT', id: 5 },
+                      { key: 'isMissingAsset', label: 'MISSING', id: 6 }
                     ].map(step => (
                       <div key={step.id} className="flex items-center justify-between text-[10px]">
                         <div className="flex items-center gap-2">
                           <div className={`w-1.5 h-1.5 rounded-full ${checklist[step.key as keyof typeof checklist] ? 'bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]' : 'bg-white/10'}`} />
                           <span className={`${checklist[step.key as keyof typeof checklist] ? 'text-white/80' : 'text-white/20'}`}>{step.label}</span>
                         </div>
-                        {checklist[step.key as keyof typeof checklist] ? (
+                        {step.key === 'isMissingAsset' ? (
+                          checklist[step.key as keyof typeof checklist] ? (
+                            <span className="text-dragon-red font-bold animate-pulse">[MISSING]</span>
+                          ) : (
+                            <span className="text-green-500 font-bold">[OK]</span>
+                          )
+                        ) : checklist[step.key as keyof typeof checklist] ? (
                           <span className="text-green-500 font-bold">[OK]</span>
                         ) : (
                           <span className="text-dragon-red animate-pulse cursor-pointer hover:underline" onClick={step.key === 'jsonExists' ? handleSave : step.key === 'wikiExists' ? (activeGenerator === 'monsters' ? scrapeWiki : generateDescription) : step.key === 'promptReady' ? generatePrompt : undefined}>[FIX]</span>

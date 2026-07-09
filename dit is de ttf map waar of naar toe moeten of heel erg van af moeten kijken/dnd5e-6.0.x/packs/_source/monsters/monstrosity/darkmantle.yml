@@ -1,0 +1,1213 @@
+_id: g7FSu2oU4YHPgWNA
+name: Darkmantle
+type: npc
+img: null
+system:
+  abilities:
+    str:
+      value: 16
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    dex:
+      value: 12
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    con:
+      value: 13
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    int:
+      value: 2
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    wis:
+      value: 10
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+    cha:
+      value: 5
+      proficient: 0
+      bonuses:
+        check: ''
+        save: ''
+      max: null
+  attributes:
+    ac:
+      flat: 11
+      calc: natural
+      formula: ''
+    hp:
+      value: 22
+      max: 22
+      temp: 0
+      tempmax: 0
+      formula: 5d6 + 5
+    init:
+      ability: ''
+      bonus: '0'
+      roll:
+        min: null
+        max: null
+        mode: 0
+    movement:
+      burrow: 0
+      climb: 0
+      fly: 30
+      swim: 0
+      walk: 10
+      units: ft
+      hover: false
+    attunement:
+      max: 3
+    senses:
+      darkvision: 0
+      blindsight: 60
+      tremorsense: 0
+      truesight: 0
+      units: ft
+      special: ''
+    spellcasting: ''
+    exhaustion: 0
+    concentration:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      bonuses:
+        save: ''
+      limit: 1
+    hd:
+      spent: 0
+    death:
+      ability: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+      success: 0
+      failure: 0
+  details:
+    biography:
+      value: ''
+      public: ''
+    alignment: Unaligned
+    race: null
+    type:
+      value: monstrosity
+      subtype: ''
+      swarm: ''
+      custom: ''
+    environment: Underdark
+    cr: 0.5
+    spellLevel: 0
+    ideal: ''
+    bond: ''
+    flaw: ''
+  traits:
+    size: sm
+    di:
+      value: []
+      bypasses: []
+      custom: ''
+    dr:
+      value: []
+      bypasses: []
+      custom: ''
+    dv:
+      value: []
+      bypasses: []
+      custom: ''
+    ci:
+      value: []
+      custom: ''
+    languages:
+      value: []
+      custom: ''
+    dm:
+      amount: {}
+      bypasses: []
+  currency:
+    pp: 0
+    gp: 0
+    ep: 0
+    sp: 0
+    cp: 0
+  skills:
+    acr:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ani:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    arc:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ath:
+      value: 0
+      ability: str
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    dec:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    his:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ins:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    itm:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    inv:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    med:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    nat:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prc:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    prf:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    per:
+      value: 0
+      ability: cha
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    rel:
+      value: 0
+      ability: int
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    slt:
+      value: 0
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    ste:
+      value: 1
+      ability: dex
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+    sur:
+      value: 0
+      ability: wis
+      bonuses:
+        check: ''
+        passive: ''
+      roll:
+        min: null
+        max: null
+        mode: 0
+  spells:
+    spell1:
+      value: 0
+      override: null
+    spell2:
+      value: 0
+      override: null
+    spell3:
+      value: 0
+      override: null
+    spell4:
+      value: 0
+      override: null
+    spell5:
+      value: 0
+      override: null
+    spell6:
+      value: 0
+      override: null
+    spell7:
+      value: 0
+      override: null
+    spell8:
+      value: 0
+      override: null
+    spell9:
+      value: 0
+      override: null
+    pact:
+      value: 0
+      override: null
+    spell0:
+      value: 0
+      override: null
+  bonuses:
+    mwak:
+      attack: ''
+      damage: ''
+    rwak:
+      attack: ''
+      damage: ''
+    msak:
+      attack: ''
+      damage: ''
+    rsak:
+      attack: ''
+      damage: ''
+    abilities:
+      check: ''
+      save: ''
+      skill: ''
+    spell:
+      dc: ''
+  resources:
+    legact:
+      value: 0
+      max: 0
+    legres:
+      value: 0
+      max: 0
+    lair:
+      value: false
+      initiative: null
+  tools: {}
+  source:
+    custom: ''
+    book: ''
+    page: ''
+    license: CC-BY-4.0
+    revision: 1
+    rules: '2014'
+prototypeToken:
+  name: Darkmantle
+  displayName: 20
+  actorLink: false
+  width: 1
+  height: 1
+  lockRotation: false
+  rotation: 0
+  disposition: -1
+  displayBars: 20
+  bar1:
+    attribute: attributes.hp
+  bar2:
+    attribute: null
+  flags: {}
+  randomImg: false
+  alpha: 1
+  light:
+    alpha: 1
+    angle: 360
+    bright: 0
+    coloration: 1
+    dim: 0
+    luminosity: 0.5
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    animation:
+      speed: 5
+      intensity: 5
+      type: null
+      reverse: false
+    darkness:
+      min: 0
+      max: 1
+    attenuation: 0.5
+    color: null
+    negative: false
+    priority: 0
+  texture:
+    src: null
+    tint: '#ffffff'
+    scaleX: 1
+    scaleY: 1
+    anchorX: 0.5
+    anchorY: 0.5
+    fit: contain
+    alphaThreshold: 0.75
+  sight:
+    angle: 360
+    enabled: false
+    range: 60
+    brightness: 1
+    visionMode: basic
+    color: null
+    attenuation: 0.1
+    saturation: 0
+    contrast: 0
+  detectionModes:
+    blindsight:
+      range: null
+      enabled: false
+  appendNumber: false
+  prependAdjective: false
+  occludable:
+    radius: 0
+  ring:
+    enabled: false
+    colors:
+      ring: null
+      background: null
+    effects: 0
+    subject:
+      scale: 1
+      texture: null
+  turnMarker:
+    mode: 1
+    animation: null
+    src: null
+    disposition: false
+  movementAction: null
+  depth: 1
+items:
+  - _id: k24xxFfPtUCahddE
+    name: False Appearance
+    type: feat
+    img: icons/commodities/stone/geode-raw-beige.webp
+    system:
+      description:
+        value: >-
+          <p>While the [[lookup @name lowercase]]{monster} remains motionless,
+          it is indistinguishable from a cave formation such as a stalactite or
+          stalagmite.</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities: {}
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: false-appearance
+    effects: []
+    folder: null
+    sort: 150000
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.kyVgQNSa12loxVvr
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781879696271
+      modifiedTime: 1781882216348
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!g7FSu2oU4YHPgWNA.k24xxFfPtUCahddE'
+  - _id: DA34sS4nWGc4OTwm
+    name: Crush
+    type: weapon
+    img: icons/commodities/cloth/cloth-patterned-pink.webp
+    system:
+      description:
+        value: >-
+          <p>[[/attack extended]]. [[/damage extended]].</p><p>The [[lookup
+          @name lowercase]]{monster} attaches to the target. If the target is
+          Medium or smaller and the [[lookup @name lowercase]]{monster} has
+          advantage on the attack roll, it attaches by engulfing the target's
+          head, and the target is also &amp;reference[blinded] and unable to
+          &amp;reference[suffocating]{Breathe} while the [[lookup @name
+          lowercase]]{monster} is attached in this way.</p><p>While attached to
+          the target, the [[lookup @name lowercase]]{monster} can attack no
+          other creature except the target but has advantage on its attack
+          rolls. The [[lookup @name lowercase]]{monster}'s speed also becomes 0,
+          it can't benefit from any bonus to its speed, and it moves with the
+          target.</p><p>A creature can detach the [[lookup @name
+          lowercase]]{monster} by making a successful [[/check
+          activity=D6cM30tTL0VfB4x1]] check as an action. On its turn, the
+          [[lookup @name lowercase]]{monster} can detach itself from the target
+          by using 5 feet of movement.</p>
+        chat: >-
+          <p>The darkmantle attacks with its Crush. The darkmantle attaches to
+          the target. While attached to the target, the darkmantle can attack no
+          other creature except the target but has advantage on its attack
+          rolls. A creature can detach the darkmantle by making a successful
+          Strength check as an action.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      quantity: 1
+      weight:
+        value: 0
+        units: lb
+      price:
+        value: 0
+        denomination: gp
+      attunement: ''
+      equipped: true
+      rarity: ''
+      identified: true
+      cover: null
+      range:
+        value: null
+        long: null
+        units: ft
+        reach: null
+      uses:
+        max: ''
+        recovery: []
+        spent: 0
+      damage:
+        versatile:
+          number: null
+          denomination: null
+          bonus: ''
+          types: []
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+        base:
+          number: 1
+          denomination: 6
+          bonus: ''
+          types:
+            - bludgeoning
+          custom:
+            enabled: false
+            formula: ''
+          scaling:
+            mode: ''
+            number: null
+            formula: ''
+      armor:
+        value: 10
+      hp:
+        value: 0
+        max: 0
+        dt: null
+        conditions: ''
+      properties: []
+      proficient: null
+      unidentified:
+        description: ''
+      type:
+        value: natural
+        baseItem: ''
+      container: null
+      crewed: false
+      activities:
+        D6cM30tTL0VfB4x1:
+          type: check
+          name: Detach Check
+          _id: D6cM30tTL0VfB4x1
+          img: ''
+          sort: 100000
+          activation:
+            type: special
+            override: false
+            condition: >-
+              When a creature takes an action to attempt to detach the [[lookup
+              @name lowercase]]{monster}.
+          consumption:
+            scaling:
+              allowed: false
+            spellSlot: true
+            targets: []
+          description:
+            value: ''
+            chatFlavor: ''
+          duration:
+            units: inst
+            concentration: false
+            override: false
+          effects: []
+          flags: {}
+          range:
+            units: self
+            override: false
+          target:
+            template:
+              contiguous: false
+              stationary: false
+              units: ft
+              type: ''
+            affects:
+              choice: false
+              type: creature
+              count: '1'
+              special: ''
+            override: false
+            prompt: true
+          uses:
+            spent: 0
+            recovery: []
+            max: ''
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          check:
+            associated: []
+            dc:
+              calculation: ''
+              formula: '13'
+            visible: true
+            ability: str
+            bonus: ''
+        KFNGR58n5ldVeUSx:
+          type: attack
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets: []
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: false
+            value: ''
+            units: inst
+            special: ''
+            override: false
+          effects:
+            - _id: HPUIkvf8o8N94Vdg
+              level:
+                min: null
+                max: null
+            - _id: cIH8ZoWvqThECHNn
+              level: {}
+          range:
+            value: '5'
+            units: ft
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: ''
+              size: ''
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: ''
+              choice: false
+              special: ''
+            prompt: true
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          attack:
+            ability: ''
+            bonus: ''
+            critical:
+              threshold: null
+            flat: false
+            type:
+              value: ''
+              classification: ''
+          damage:
+            critical:
+              bonus: ''
+            includeBase: true
+            parts: []
+          sort: -100000
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: false
+            identifier: ''
+          _id: KFNGR58n5ldVeUSx
+          name: ''
+      attuned: false
+      ammunition: {}
+      magicalBonus: null
+      identifier: crush
+      mastery: ''
+    effects:
+      - name: Attached Darkmantle
+        img: icons/environment/creatures/bug-worm-spiked.webp
+        origin: Compendium.dnd5e.monsters.Actor.g7FSu2oU4YHPgWNA.Item.DA34sS4nWGc4OTwm
+        transfer: false
+        _id: HPUIkvf8o8N94Vdg
+        type: base
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You have a darkmantle attached to you. While attached, the
+          darkmantle can attack no other creature except for you but has
+          advantage on its attack rolls. The darkmantle's speed becomes 0, it
+          can't benefit from any bonuses to its speed, and it moves with
+          you.</p><p>A creature can detach the darkmantle from you by making a
+          successful [[/check 13 str]] check as an action.</p>
+        tint: '#ffffff'
+        statuses: []
+        showIcon: 2
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781881625078
+          modifiedTime: 1781881942750
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!g7FSu2oU4YHPgWNA.DA34sS4nWGc4OTwm.HPUIkvf8o8N94Vdg
+      - name: Head-Attached Darkmantle
+        img: icons/creatures/fish/fish-man-eye-green.webp
+        origin: Compendium.dnd5e.monsters.Actor.g7FSu2oU4YHPgWNA.Item.DA34sS4nWGc4OTwm
+        transfer: false
+        type: base
+        system:
+          changes: []
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You have a darkmantle attached to your head, engulfing it and
+          causing you to be &amp;reference[blinded apply=false] and unable to
+          &amp;reference[suffocating]{Breathe} while the darkmantle is attached
+          in this way.</p><p>While attached, the darkmantle can attack no other
+          creature except for you but has advantage on its attack rolls. The
+          darkmantle's speed becomes 0, it can't benefit from any bonuses to its
+          speed, and it moves with you.</p><p>A creature can detach the
+          darkmantle from you by making a successful [[/check 13 str]] check as
+          an action.</p>
+        tint: '#ffffff'
+        statuses:
+          - blinded
+          - suffocation
+        showIcon: 2
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781881784711
+          modifiedTime: 1781881962349
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _id: cIH8ZoWvqThECHNn
+        _key: >-
+          !actors.items.effects!g7FSu2oU4YHPgWNA.DA34sS4nWGc4OTwm.cIH8ZoWvqThECHNn
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: null
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781881529708
+      modifiedTime: 1781881974961
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!g7FSu2oU4YHPgWNA.DA34sS4nWGc4OTwm'
+  - _id: qzSE2ZiVMLKsWF4F
+    name: Darkness Aura
+    type: feat
+    img: icons/magic/unholy/orb-rays-blue.webp
+    system:
+      description:
+        value: >-
+          <p>A [[lookup @labels.description.template activity=QwLySmRaYcAPebjO]]
+          of magical &amp;reference[darkness] extends out from the [[lookup
+          @name lowercase]]{monster}, moves with it, and spreads around corners.
+          The darkness lasts as long as the [[lookup @name lowercase]]{monster}
+          maintains concentration, up to [[lookup @labels.duration
+          activity=QwLySmRaYcAPebjO]] (as if concentrating on a
+          spell).</p><p>&amp;reference[Darkvision] can't penetrate this
+          darkness, and no natural light can illuminate it. If any of the
+          darkness overlaps with an area of light created by a spell of 2nd
+          level or lower, the spell creating the light is dispelled.</p>
+        chat: >-
+          <p>A [[lookup @labels.description.template activity=QwLySmRaYcAPebjO]]
+          of magical &amp;reference[darkness] extends out from the darkmantle,
+          moves with it, and spreads around corners. &amp;reference[Darkvision]
+          can't penetrate this darkness, and no natural light can illuminate
+          it.</p>
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: '1'
+        recovery:
+          - period: day
+            type: recoverAll
+        spent: 0
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - mgc
+      activities:
+        QwLySmRaYcAPebjO:
+          type: utility
+          activation:
+            type: action
+            value: 1
+            condition: ''
+            override: false
+          consumption:
+            targets:
+              - type: itemUses
+                value: '1'
+                target: ''
+                scaling: {}
+            scaling:
+              allowed: false
+              max: ''
+            spellSlot: true
+          description:
+            chatFlavor: ''
+            value: ''
+          duration:
+            concentration: true
+            value: '10'
+            units: minute
+            special: ''
+            override: false
+          effects:
+            - _id: K7defwMS9ndoqgVV
+              level:
+                min: null
+                max: null
+          range:
+            units: self
+            special: ''
+            override: false
+          target:
+            template:
+              count: ''
+              contiguous: false
+              type: radius
+              size: '15'
+              width: ''
+              height: ''
+              units: ft
+              stationary: false
+            affects:
+              count: ''
+              type: self
+              choice: false
+              special: ''
+            prompt: false
+            override: false
+          uses:
+            spent: 0
+            max: ''
+            recovery: []
+          roll:
+            formula: ''
+            name: ''
+            prompt: false
+            visible: false
+          sort: 100000
+          img: ''
+          flags: {}
+          visibility:
+            level:
+              min: null
+              max: null
+            requireAttunement: false
+            requireIdentification: false
+            requireMagic: true
+            identifier: ''
+          _id: QwLySmRaYcAPebjO
+          name: Exude Darkness
+      enchant: {}
+      prerequisites:
+        level: null
+      identifier: darkness-aura
+    effects:
+      - name: Darkness Aura
+        img: icons/magic/unholy/orb-rays-blue.webp
+        origin: Compendium.dnd5e.monsters.Actor.g7FSu2oU4YHPgWNA.Item.qzSE2ZiVMLKsWF4F
+        transfer: false
+        _id: K7defwMS9ndoqgVV
+        type: base
+        system:
+          changes:
+            - key: token.light.dim
+              type: upgrade
+              value: 15
+              phase: initial
+              priority: null
+            - key: token.light.negative
+              type: override
+              value: true
+              phase: initial
+              priority: null
+            - key: token.light.animation.type
+              type: override
+              value: magicalGloom
+              phase: initial
+              priority: null
+            - key: token.light.animation.intensity
+              type: override
+              value: 3
+              phase: initial
+              priority: null
+            - key: token.light.animation.intensity
+              type: override
+              value: 3
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: 10
+          units: minutes
+          expiry: turnStart
+          expired: false
+        description: >-
+          <p>A 15-foot radius of magical &amp;reference[darkness] extends out
+          from you, moves with you, and spreads around corners. The darkness
+          lasts as long as you maintain concentration, up to the full duration
+          (as if concentrating on a spell).</p><p>&amp;reference[Darkvision]
+          can't penetrate this darkness, and no natural light can illuminate it.
+          If any of the darkness overlaps with an area of light created by a
+          spell of 2nd level or lower, the spell creating the light is
+          dispelled.</p>
+        tint: '#ffffff'
+        statuses: []
+        showIcon: 2
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781879788202
+          modifiedTime: 1781881236836
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!g7FSu2oU4YHPgWNA.qzSE2ZiVMLKsWF4F.K7defwMS9ndoqgVV
+    folder: null
+    sort: 0
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsterfeatures.jhAU6pb5GvbjwTX7
+      duplicateSource: null
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781879743566
+      modifiedTime: 1781882053015
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!g7FSu2oU4YHPgWNA.qzSE2ZiVMLKsWF4F'
+  - _id: gFd9Tb3nIqKyHGxm
+    name: Echolocation
+    type: feat
+    img: icons/magic/sonic/projectile-sound-rings-wave.webp
+    system:
+      description:
+        value: >-
+          <p>The [[lookup @name lowercase]]{monster} can't use its
+          &amp;reference[blindsight] while &amp;reference[deafened apply=false].</p>
+        chat: ''
+      source:
+        custom: ''
+        book: ''
+        page: ''
+        license: CC-BY-4.0
+        rules: '2014'
+        revision: 1
+      uses:
+        max: ''
+        spent: 0
+        recovery: []
+      type:
+        value: monster
+        subtype: ''
+      requirements: ''
+      properties:
+        - trait
+      activities: {}
+      enchant: {}
+      prerequisites:
+        level: null
+        items: []
+        repeatable: false
+      identifier: echolocation
+      advancement: {}
+      crewed: false
+    effects:
+      - name: Echolocation
+        img: icons/magic/sonic/projectile-sound-rings-wave.webp
+        origin: Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy.Item.xL1zgEf89s0xSVlW
+        type: base
+        _id: sRd5qKTprNF6ciPZ
+        system:
+          changes:
+            - key: system.attributes.senses.blindsight
+              type: multiply
+              value: 1 - @statuses.deafened
+              phase: initial
+              priority: null
+        disabled: false
+        start: null
+        duration:
+          value: null
+          units: seconds
+          expiry: null
+          expired: false
+        description: >-
+          <p>You can't use your &amp;reference[blindsight] while
+          &amp;reference[deafened apply=false].</p>
+        tint: '#ffffff'
+        transfer: true
+        statuses: []
+        showIcon: 1
+        folder: null
+        sort: 0
+        flags:
+          dnd5e:
+            riders:
+              statuses: []
+        _stats:
+          coreVersion: '14.361'
+          systemId: dnd5e
+          systemVersion: 6.0.0
+          createdTime: 1781879691267
+          modifiedTime: 1781879691267
+          lastModifiedBy: dnd5ebuilder0000
+          compendiumSource: null
+          duplicateSource: null
+          exportSource: null
+        _key: >-
+          !actors.items.effects!g7FSu2oU4YHPgWNA.gFd9Tb3nIqKyHGxm.sRd5qKTprNF6ciPZ
+    folder: UIqfXYMLB6oOsW3Z
+    sort: 50000
+    ownership:
+      default: 0
+    flags: {}
+    _stats:
+      compendiumSource: Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy.Item.xL1zgEf89s0xSVlW
+      duplicateSource: Item.86fHD4XOS0KMm51D
+      coreVersion: '14.361'
+      systemId: dnd5e
+      systemVersion: 6.0.0
+      createdTime: 1781879691267
+      modifiedTime: 1783367201854
+      lastModifiedBy: dnd5ebuilder0000
+      exportSource: null
+    _key: '!actors.items!g7FSu2oU4YHPgWNA.gFd9Tb3nIqKyHGxm'
+effects: []
+folder: MMKVDW6XI98WdIVu
+sort: 0
+ownership:
+  default: 0
+flags: {}
+_stats:
+  duplicateSource: null
+  coreVersion: '14.361'
+  systemId: dnd5e
+  systemVersion: 4.0.0
+  createdTime: 1726171247356
+  modifiedTime: 1781881465505
+  lastModifiedBy: dnd5ebuilder0000
+  exportSource: null
+_key: '!actors!g7FSu2oU4YHPgWNA'

@@ -1,0 +1,80 @@
+import { formatCR, simplifyBonus } from "../../utils.mjs";
+import ActivityUsageDialog from "./activity-usage-dialog.mjs";
+
+const { StringField } = foundry.data.fields;
+
+/**
+ * @import { ActivityRollData } from "../../documents/_types.mjs";
+ */
+
+/**
+ * Dialog for configuring the usage of the transform activity.
+ */
+export default class TransformUsageDialog extends ActivityUsageDialog {
+
+  /** @inheritDoc */
+  static PARTS = {
+    ...super.PARTS,
+    creation: {
+      template: "systems/dnd5e/templates/activity/transform-usage-creation.hbs"
+    }
+  };
+
+  /* -------------------------------------------- */
+  /*  Rendering                                   */
+  /* -------------------------------------------- */
+
+  /** @inheritDoc */
+  async _prepareCreationContext(context, options) {
+    context = await super._prepareCreationContext(context, options);
+
+    const profiles = this.activity.availableProfiles;
+    if ( this._shouldDisplay("create.transform") && (profiles.length > 1) ) {
+      const rollData = this.activity.getRollData();
+      let options = profiles.map(profile => ({
+        value: profile._id, label: this.getProfileLabel(profile, rollData)
+      }));
+      if ( (this.activity.transform.mode === "form") && this.activity.transform.formless ) options.unshift({
+        value: "", label: _loc("DND5E.TRANSFORM.NoForm"), rule: true
+      });
+      context.hasCreation = true;
+      context.transformFields = [{
+        field: new StringField({
+          required: true, blank: false, label: _loc("DND5E.TRANSFORM.Profile.Label")
+        }),
+        name: "transform.profile",
+        value: this.config.transform?.profile,
+        options
+      }];
+    } else if ( profiles.length ) {
+      context.transformProfile = profiles[0]._id;
+    }
+
+    return context;
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Determine the label for a profile in the ability use dialog.
+   * @param {EffectApplicationData|TransformProfile} profile  Profile for which to generate the label.
+   * @param {ActivityRollData} rollData                       Roll data used to prepare the count.
+   * @returns {string}
+   */
+  getProfileLabel(profile, rollData) {
+    if ( profile.name ) return profile.name;
+    switch ( this.activity.transform.mode ) {
+      case "cr":
+        const cr = simplifyBonus(profile.cr, rollData);
+        return _loc("DND5E.TRANSFORM.Profile.ChallengeRatingLabel", { cr: formatCR(cr) });
+      case "form":
+        const effect = profile.getEffect();
+        if ( effect ) return effect.name;
+        break;
+      default:
+        const doc = fromUuidSync(profile.uuid);
+        if ( doc ) return doc.name;
+    }
+    return "—";
+  }
+}

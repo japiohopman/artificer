@@ -25,7 +25,11 @@ interface WorldLocation {
   [key: string]: any;
 }
 
-export const Jane: React.FC = () => {
+interface JaneProps {
+  initialData?: any;
+}
+
+export const Jane: React.FC<JaneProps> = ({ initialData }) => {
   const { loadAllLists } = useAtlasStore();
 
   const [location, setLocation] = useState<Partial<WorldLocation>>({
@@ -58,6 +62,26 @@ export const Jane: React.FC = () => {
   useEffect(() => {
     loadAllLists();
   }, []);
+
+  useEffect(() => {
+    if (initialData) {
+      setLocation(prev => ({
+        ...prev,
+        id: initialData.id || prev.id,
+        name: initialData.name || prev.name,
+        type: initialData.type || initialData.category || prev.type,
+        category: initialData.category || initialData.type || prev.category,
+        title: initialData.title || prev.title,
+        description: initialData.description || prev.description,
+        coordinates: initialData.coordinates || prev.coordinates,
+        region: initialData.region || prev.region,
+        metadata: {
+          ...prev.metadata,
+          ...(initialData.metadata || {})
+        }
+      }));
+    }
+  }, [initialData]);
 
   const handleBake = async () => {
     if (!location.id || !location.name) {
