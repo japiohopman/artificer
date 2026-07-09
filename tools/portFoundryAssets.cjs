@@ -146,6 +146,31 @@ function getPreservedData(targetPath) {
   return null;
 }
 
+// Recursive search for token image
+function findTokenImage(baseDir, filenameNoExt) {
+  if (!fs.existsSync(baseDir)) return null;
+  const files = fs.readdirSync(baseDir);
+  for (const file of files) {
+    const fullPath = path.join(baseDir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      const found = findTokenImage(fullPath, filenameNoExt);
+      if (found) return found;
+    } else {
+      const ext = path.extname(file).toLowerCase();
+      if (['.webp', '.png', '.jpg', '.jpeg'].includes(ext)) {
+        const name = path.basename(file, ext).toLowerCase();
+        if (name === filenameNoExt.toLowerCase()) {
+          // Return relative path for web
+          const relative = path.relative(path.join(__dirname, '../public'), fullPath);
+          return '/' + relative.replace(/\\/g, '/');
+        }
+      }
+    }
+  }
+  return null;
+}
+
 // Map a single actor/monster to Artificer enemy JSON
 function mapActor(sourceData, targetPath) {
   const system = sourceData.system || {};
@@ -171,6 +196,7 @@ function mapActor(sourceData, targetPath) {
   const alignment = system.details?.alignment || 'any alignment';
 
   const cr = parseChallengeRating(system.details?.cr);
+  const proficiencyBonus = getProficiencyBonusByCR(cr);
 
   // Map embedded items to actions & special abilities
   const actions = [];
@@ -180,21 +206,28 @@ function mapActor(sourceData, targetPath) {
     sourceData.items.forEach(item => {
       const isWeapon = item.type === 'weapon';
       const isFeat = item.type === 'feat';
-      const itemDesc = cleanHtmlToParagraphs(item.system?.description?.value).join(' ');
+      const itemSystem = item.system || {};
+      const itemDesc = cleanHtmlToParagraphs(itemSystem.description?.value).join(' ');
 
-      if (isWeapon || (isFeat && item.system?.activities)) {
+      if (isWeapon || (isFeat && itemSystem.activities)) {
+        // Calculate attack bonus
+        let attackBonus = 0;
+        const abilityKey = itemSystem.ability || (isWeapon ? 'str' : 'int');
+        const abilityMod = Math.floor(((stats[abilityKey] || 10) - 10) / 2);
+        attackBonus = abilityMod + proficiencyBonus + (parseInt(itemSystem.attackBonus) || 0) + (itemSystem.magicalBonus || 0);
+
         actions.push({
           name: item.name.toLowerCase(),
           desc: itemDesc || `${name} attacks with its ${item.name}.`,
-          attack_bonus: item.system?.magicalBonus || 0,
-          damage: item.system?.damage?.base ? [
+          attack_bonus: attackBonus,
+          damage: itemSystem.damage?.base ? [
             {
               damage_type: {
-                index: item.system.damage.base.types?.[0] || 'bludgeoning',
-                name: item.system.damage.base.types?.[0] || 'bludgeoning',
-                url: `/assets/atlas/damage_types/json/${item.system.damage.base.types?.[0] || 'bludgeoning'}.json`
+                index: itemSystem.damage.base.types?.[0] || 'bludgeoning',
+                name: itemSystem.damage.base.types?.[0] || 'bludgeoning',
+                url: `/assets/atlas/damage_types/json/${itemSystem.damage.base.types?.[0] || 'bludgeoning'}.json`
               },
-              damage_dice: `${item.system.damage.base.number || 1}d${item.system.damage.base.denomination || 4}`
+              damage_dice: `${itemSystem.damage.base.number || 1}d${itemSystem.damage.base.denomination || 4}${abilityMod !== 0 ? (abilityMod > 0 ? '+' + abilityMod : abilityMod) : ''}`
             }
           ] : [],
           actions: []
@@ -215,19 +248,19 @@ function mapActor(sourceData, targetPath) {
   // Check for dynamic token image in public/assets/atlas/enemies/tokens/
   let enemyImage = preserved.image;
   if (!enemyImage) {
-    const tokenExtensions = ['webp', 'png', 'jpg', 'jpeg'];
-    for (const ext of tokenExtensions) {
-      const tokenPath = path.join(__dirname, `../public/assets/atlas/enemies/tokens/${index}.${ext}`);
-      if (fs.existsSync(tokenPath)) {
-        enemyImage = `/assets/atlas/enemies/tokens/${index}.${ext}`;
-        break;
-      }
-    }
+    const tokensDir = path.join(__dirname, '../public/assets/atlas/enemies/tokens');
+    // Try by name first, then by index
+    enemyImage = findTokenImage(tokensDir, name.replace(/\s+/g, '')) || findTokenImage(tokensDir, index);
   }
+  
   if (!enemyImage) {
     enemyImage = `/assets/atlas/enemies/${index}.webp`;
   }
 
+  // Improved AC calculation
+  let finalAc = ac.value || (10 + Math.floor((stats.dex - 10) / 2));
+  if (ac.flat) finalAc = ac.flat;
+  
   return {
     index,
     name: name.toLowerCase(),
@@ -238,8 +271,8 @@ function mapActor(sourceData, targetPath) {
     alignment,
     armor_class: [
       {
-        type: ac.calc || 'dex',
-        value: ac.value || (10 + Math.floor((stats.dex - 10) / 2))
+        type: ac.calc || (ac.flat ? 'flat' : 'dex'),
+        value: finalAc
       }
     ],
     hit_points: hp.value || hp.max || 10,

@@ -1,0 +1,110 @@
+{
+  "index": "nzthq6whlhcdu3te",
+  "name": "gorgon",
+  "desc": "Gorgon is a CR 5 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 11,
+  "constitution": 18,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 20,
+    "dex": 11,
+    "con": 18,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "petrified"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "trampling charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a creature and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.nZthq6WHLhcdu3te.Item.7DSbBzpS1e9lYxZx]{gore} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one attack with its [[/item .O8oahxePfpHFYohz]]{hooves} against it as a bonus action.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d12+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "petrifying breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales petrifying gas in a [[lookup @labels.description.template activity=I95hdnCSX03wF7Er]]. Each creature in that area must succeed on a [[/save]] saving throw. On a failed save, a target begins to turn to stone and is &reference[restrained]. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is &reference[petrified] until freed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell or other magic.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Gorgon.webp",
+  "url": "/assets/atlas/enemies/json/nzthq6whlhcdu3te.json",
+  "updated_at": "2026-07-09T11:33:15.372Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,124 @@
+{
+  "index": "igbdqa3iuksurcuy",
+  "name": "duergar",
+  "desc": "Duergar is a CR 1 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Dwarf",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 26,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8 + 4",
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 14,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 9,
+  "stats": {
+    "str": 14,
+    "dex": 11,
+    "con": 14,
+    "int": 11,
+    "wis": 10,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "poison"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "duergar resilience",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against poison, spells, and illusions, as well as to resist being &reference[charmed apply=false] or &reference[paralyzed apply=false].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "enlarge",
+      "desc": "For [[lookup @labels.duration activity=Zf6mfw7MGBJxkegq]], the [[lookup @name lowercase]]{monster} magically increases in size, along with anything it is wearing or carrying. While enlarged, the [[lookup @name lowercase]]{monster} is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the [[lookup @name lowercase]]{monster} lacks the room to become Large, it attains the maximum size possible in the space available.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} magically turns &reference[invisible] until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to [[lookup @labels.duration activity=1wj57M6m7yuqQhtN]] (as if concentrating on a spell).",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "war pick",
+      "desc": "[[/attack extended]]. [[/damage 1d8 + @abilities.str.mod piercing average extended]], or [[/damage 2d8 + @abilities.str.mod piercing average]] damage while enlarged.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "javelin",
+      "desc": "[[/attack extended]]. [[/damage 1d6 + @abilities.str.mod piercing average extended]], or [[/damage 2d6 + @abilities.str.mod piercing average]] damage while enlarged.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Duergar.webp",
+  "url": "/assets/atlas/enemies/json/igbdqa3iuksurcuy.json",
+  "updated_at": "2026-07-09T11:33:15.167Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

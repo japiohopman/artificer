@@ -1,0 +1,108 @@
+{
+  "index": "cqq6pxqa5wxznom3",
+  "name": "harpy",
+  "desc": "Harpy is a CR 1 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 38,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 7",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 12,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 13,
+  "stats": {
+    "str": 12,
+    "dex": 13,
+    "con": 12,
+    "int": 7,
+    "wis": 10,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .WqD5jsrWCeNHoD9O]]{claws} and one with its [[/item .ywVQhULZvd4Jn51c]]{club}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "club",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "luring song",
+      "desc": "The [[lookup @name lowercase]]{monster} sings a magical melody. Every humanoid and giant within [[lookup @target.template.size activity=SStRaAbx3AgLlBAU]] feet of the [[lookup @name lowercase]]{monster} that can hear the song must succeed on a [[/save activity=SStRaAbx3AgLlBAU]] saving throw or be &reference[charmed] until the song ends. The [[lookup @name lowercase]]{monster} must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false]. While charmed by the [[lookup @name lowercase]]{monster}, a target is &reference[incapacitated] and ignores the songs of other harpies. If the charmed target is more than 5 feet away from the [[lookup @name lowercase]]{monster}, the target must move on its turn toward the [[lookup @name lowercase]]{monster} by the most direct route, trying to get within 5 feet. It doesn't avoid &reference[opportunity attacks], but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the [[lookup @name lowercase]]{monster}, the target can repeat the saving throw. A charmed target can also repeat the saving throw at the end of each of its turns. If the saving throw is successful, the effect ends on it. A target that successfully saves is immune to this [[lookup @name lowercase]]{monster}'s song for the next 24 hours.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Harpy.webp",
+  "url": "/assets/atlas/enemies/json/cqq6pxqa5wxznom3.json",
+  "updated_at": "2026-07-09T11:33:15.403Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

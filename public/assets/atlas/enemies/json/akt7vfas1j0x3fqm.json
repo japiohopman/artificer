@@ -1,0 +1,129 @@
+{
+  "index": "akt7vfas1j0x3fqm",
+  "name": "ettercap",
+  "desc": "Ettercap is a CR 2 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 44,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 14,
+    "dex": 15,
+    "con": 13,
+    "int": 7,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .qpUx52QbFUCSPSln]]{bite} and one with its [[/item .T8XMTiCIOQP4dYEp]]{claws}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save activity=ujb7xiAX4hUtM8fe]] saving throw or be &reference[poisoned] for [[lookup @labels.duration activity=ujb7xiAX4hUtM8fe]]. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webbing.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web sense",
+      "desc": "While in contact with a web, the [[lookup @name lowercase]]{monster} knows the exact location of any other creature in contact with the same web.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web",
+      "desc": "Ranged Weapon Attack: [[/attack]], range 30/60 ft., one Large or smaller creature. Hit: The creature is &Reference[restrained] by webbing. As an action, the restrained target can make a [[/check activity=aELnqvc37WaAm0IG]] check, escaping from the webbing on a success. The effect ends if the webbing is destroyed. The webbing has AC 10, 5 hit points, is vulnerable to fire damage and immune to bludgeoning damage.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Ettercap.webp",
+  "url": "/assets/atlas/enemies/json/akt7vfas1j0x3fqm.json",
+  "updated_at": "2026-07-09T11:33:15.367Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

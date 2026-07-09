@@ -1,0 +1,92 @@
+{
+  "index": "c9xdgstjry9huaxq",
+  "name": "giant sea horse",
+  "desc": "Giant Sea Horse is a CR 0.5 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 12,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "stats": {
+    "str": 12,
+    "dex": 15,
+    "con": 11,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.c9XDGsTJRy9HUaxQ.Item.tTZCmbeeSHXXFZGJ]{ram} attack on the same turn, the target takes an extra [[/damage average activity=fQJO3rGN8hBWzvpN]] damage. If the target is a creature, it must succeed on a [[/save activity=fQJO3rGN8hBWzvpN]] saving throw or be knocked &reference[prone].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantSeaHorse.webp",
+  "url": "/assets/atlas/enemies/json/c9xdgstjry9huaxq.json",
+  "updated_at": "2026-07-09T11:33:14.144Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

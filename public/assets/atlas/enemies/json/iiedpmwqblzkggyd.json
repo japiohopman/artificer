@@ -1,0 +1,104 @@
+{
+  "index": "iiedpmwqblzkggyd",
+  "name": "azer",
+  "desc": "Azer is a CR 2 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Lawful Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 13,
+  "charisma": 10,
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 15,
+    "int": 12,
+    "wis": 13,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "heated body",
+      "desc": "A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within 5 feet of it takes [[/damage average]] damage.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "heated weapons",
+      "desc": "When the [[lookup @name lowercase]]{monster} hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds &reference[bright light] in a 10-foot radius and &reference[dim light] for an additional 10 feet.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "warhammer",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] if used with two hands to make a melee attack.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Azer.webp",
+  "url": "/assets/atlas/enemies/json/iiedpmwqblzkggyd.json",
+  "updated_at": "2026-07-09T11:33:14.818Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,129 @@
+{
+  "index": "qzylwdx7lj5d1wfd",
+  "name": "roper",
+  "desc": "Roper is a CR 5 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 93,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10 + 33",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 18,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 7,
+  "wisdom": 16,
+  "charisma": 6,
+  "stats": {
+    "str": 18,
+    "dex": 8,
+    "con": 17,
+    "int": 7,
+    "wis": 16,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name monster]]{monster} remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "grasping tendrils",
+      "desc": "The [[lookup @name lowercase]]{monster} can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the [[lookup @name lowercase]]{monster}, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a [[/check]] check against it.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tendril",
+      "desc": "[[/attack extended]]. Hit: The target is &Reference[grappled] (escape DC 15). Until the grapple ends, the target is &Reference[restrained] and has disadvantage on Strength checks and Strength saving throws , and the [[lookup @name lowercase]]{monster} can't use the same [[lookup @item.name]] on another target.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "reel",
+      "desc": "The [[lookup @name lowercase]]{monster} pulls each creature &reference[grappled apply=false] by it up to 25 feet straight toward it.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes four attacks with its [[/item .bTiw89tDx64zTqDk]]{tendrils}, uses [[/item .iGuyFLbKazqPCcXY]]{reel}, and makes one attack with its [[/item .mBRjMwEitGrPDm5I]]{bite}.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Roper.webp",
+  "url": "/assets/atlas/enemies/json/qzylwdx7lj5d1wfd.json",
+  "updated_at": "2026-07-09T11:33:15.500Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

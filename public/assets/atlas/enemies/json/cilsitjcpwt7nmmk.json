@@ -1,0 +1,99 @@
+{
+  "index": "cilsitjcpwt7nmmk",
+  "name": "killer whale",
+  "desc": "Killer Whale is a CR 3 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 90,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 19,
+    "dex": 10,
+    "con": 13,
+    "int": 3,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hold breath",
+      "desc": "The [[lookup @name lowercase]]{monster} can hold its breath for 30 minutes.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "5d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "echolocation",
+      "desc": "The [[lookup @name lowercase]]{monster} can't use its &reference[blindsight] while &reference[deafened apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/KillerWhale.webp",
+  "url": "/assets/atlas/enemies/json/cilsitjcpwt7nmmk.json",
+  "updated_at": "2026-07-09T11:33:14.177Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

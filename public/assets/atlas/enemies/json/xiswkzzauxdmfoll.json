@@ -1,0 +1,93 @@
+{
+  "index": "xiswkzzauxdmfoll",
+  "name": "avatar of death",
+  "desc": "Avatar of Death is a CR 0 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 16,
+  "charisma": 16,
+  "stats": {
+    "str": 16,
+    "dex": 16,
+    "con": 16,
+    "int": 16,
+    "wis": 16,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "unconscious"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "All languages known to its summoner",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "turn immunity",
+      "desc": "The [[lookup @name lowercase]]{monster} is immune to features that turn undead.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "reaping scythe",
+      "desc": "The avatar sweeps its spectral scythe through a creature within [[lookup @labels.description.range activity=bt778cosuDVj9HQu]] of it, dealing [[/damage average]] damage.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "incorporeal movement",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &reference[difficult terrain]. It takes [[/damage average]] damage if it ends its turn inside an object.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/xiswkzzauxdmfoll.webp",
+  "url": "/assets/atlas/enemies/json/xiswkzzauxdmfoll.json",
+  "updated_at": "2026-07-09T11:33:15.686Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

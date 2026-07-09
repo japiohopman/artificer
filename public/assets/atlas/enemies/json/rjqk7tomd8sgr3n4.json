@@ -1,0 +1,92 @@
+{
+  "index": "rjqk7tomd8sgr3n4",
+  "name": "giant goat",
+  "desc": "Giant Goat is a CR 0.5 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 6,
+  "stats": {
+    "str": 17,
+    "dex": 11,
+    "con": 12,
+    "int": 3,
+    "wis": 12,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sure-footed",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Strength and Dexterity saving throws made against effects that would knock it &reference[prone apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{ram} attack on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantGoat.webp",
+  "url": "/assets/atlas/enemies/json/rjqk7tomd8sgr3n4.json",
+  "updated_at": "2026-07-09T11:33:14.114Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,112 @@
+{
+  "index": "pcz0qjig6bhpffp9",
+  "name": "swarm of bats",
+  "desc": "Swarm of Bats is a CR 0.25 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "stats": {
+    "str": 5,
+    "dex": 15,
+    "con": 10,
+    "int": 2,
+    "wis": 12,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: [[/attack]], 0 ft., one creature in the [[lookup @name lowercase]]{swarm}'s space. Hit: [[/damage 2d4 piercing average]] damage, or [[/damage 1d4 piercing average]] damage if the [[lookup @name lowercase]]{swarm} has half of its hit points or fewer.",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d4-3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "swarm",
+      "desc": "The [[lookup @name lowercase]]{swarm} can occupy another creature's space and vice versa, and the [[lookup @name lowercase]]{swarm} can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "echolocation",
+      "desc": "The [[lookup @name lowercase]]{swarm} can't use its &reference[blindsight] while &reference[deafened apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing",
+      "desc": "The [[lookup @name lowercase]]{swarm} has advantage on Wisdom (Perception) checks that rely on hearing.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/pcz0qjig6bhpffp9.webp",
+  "url": "/assets/atlas/enemies/json/pcz0qjig6bhpffp9.json",
+  "updated_at": "2026-07-09T11:33:14.251Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

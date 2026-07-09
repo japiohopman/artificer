@@ -1,0 +1,141 @@
+{
+  "index": "yoqhbf8wsx0jh9fu",
+  "name": "clay golem",
+  "desc": "Clay Golem is a CR 9 construct.",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 133,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10 + 56",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 20,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 3,
+  "wisdom": 8,
+  "charisma": 1,
+  "stats": {
+    "str": 20,
+    "dex": 9,
+    "con": 18,
+    "int": 3,
+    "wis": 8,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid",
+    "bludgeoning",
+    "piercing",
+    "poison",
+    "psychic",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "Understands the languages of its creator but can't speak",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or have its hit point maximum reduced by an amount equal to the damage taken. The target dies if this attack reduces its hit point maximum to 0. The reduction lasts until removed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell or other magic.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "haste",
+      "desc": "Until the end of its next turn, the [[lookup @name lowercase]]{creature} magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its @UUID[Compendium.dnd5e.monsters.Actor.YOqhbf8WsX0jH9Fu.Item.vEEJei0CNaNbfQ2w]{Slam} attack as a bonus action.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "berserk",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} starts its turn with 60 hit points or fewer, roll a [[/r d6]]. On a 6, the [[lookup @name lowercase]]{monster} goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]]{monster} attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]]{monster} attacks an object, with preference for an object smaller than itself. Once the [[lookup @name lowercase]]{monster} goes berserk, it continues to do so until it is destroyed or regains all its hit points.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} is immune to any spell or effect that would alter its form.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "acid absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .vEEJei0CNaNbfQ2w]]{Slam} attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/ClayGolem.webp",
+  "url": "/assets/atlas/enemies/json/yoqhbf8wsx0jh9fu.json",
+  "updated_at": "2026-07-09T11:33:14.418Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

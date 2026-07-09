@@ -1,0 +1,116 @@
+{
+  "index": "kz2fw9xb5ccvxlx4",
+  "name": "dretch",
+  "desc": "Dretch is a CR 0.25 fiend.",
+  "size": "Small",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 18,
+  "hit_dice": "4d6",
+  "hit_points_roll": "4d6 + 4",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 11,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 5,
+  "wisdom": 8,
+  "charisma": 3,
+  "stats": {
+    "str": 11,
+    "dex": 11,
+    "con": 12,
+    "int": 5,
+    "wis": 8,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "Telepathy 60 ft. (works only with creatures that understand Abyssal)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The dretch makes two attacks: one with its [[/item .2So9DIMKKgeGHVru]]{bite} and one with its [[/item .5fa9Rdzy2YYpkAgS]]{claws}.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fetid cloud",
+      "desc": "A [[lookup @labels.description.template activity=UmjK0kfobgLTjdOu]] of disgusting green gas extends out from the [[lookup @name lowercase]]{monster}. The gas spreads around corners, and its area is &reference[lightly obscured]. It lasts for [[lookup @labels.duration activity=UmjK0kfobgLTjdOu]] or until a strong wind disperses it. Any creature that starts its turn in that area must succeed on a [[/save]] saving throw or be &Reference[poisoned] until the start of its next turn. While poisoned in this way, the target can take either an action or a bonus action on its turn, not both, and can't take reactions.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Dretch.webp",
+  "url": "/assets/atlas/enemies/json/kz2fw9xb5ccvxlx4.json",
+  "updated_at": "2026-07-09T11:33:14.951Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,92 @@
+{
+  "index": "y8sru8ks2lcrgsaf",
+  "name": "goat",
+  "desc": "Goat is a CR 0 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 10
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 10,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 12,
+    "dex": 10,
+    "con": 11,
+    "int": 2,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{ram} attack on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ram",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sure-footed",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Strength and Dexterity saving throws made against effects that would knock it &reference[prone apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Goat.webp",
+  "url": "/assets/atlas/enemies/json/y8sru8ks2lcrgsaf.json",
+  "updated_at": "2026-07-09T11:33:14.165Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

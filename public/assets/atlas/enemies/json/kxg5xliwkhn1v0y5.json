@@ -1,0 +1,112 @@
+{
+  "index": "kxg5xliwkhn1v0y5",
+  "name": "swarm of quippers",
+  "desc": "Swarm of Quippers is a CR 1 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 28,
+  "hit_dice": "8d8 - 8",
+  "hit_points_roll": "8d8 - 8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 16,
+  "constitution": 9,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 2,
+  "stats": {
+    "str": 13,
+    "dex": 16,
+    "con": 9,
+    "int": 1,
+    "wis": 7,
+    "cha": 2
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "blood frenzy",
+      "desc": "The [[lookup @name lowercase]]{swarm} has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swarm",
+      "desc": "The [[lookup @name lowercase]]{swarm} can occupy another creature's space and vice versa, and the [[lookup @name lowercase]]{swarm} can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{swarm} can breathe only underwater.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: [[/attack]], 0 ft., one creature in the [[lookup @name lowercase]]{swarm}'s space. Hit: [[/damage 4d6 piercing average]] damage, or [[/damage 2d6 piercing average]] damage if the [[lookup @name lowercase]]{swarm} has half of its hit points or fewer.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d4+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/kxg5xliwkhn1v0y5.webp",
+  "url": "/assets/atlas/enemies/json/kxg5xliwkhn1v0y5.json",
+  "updated_at": "2026-07-09T11:33:14.301Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

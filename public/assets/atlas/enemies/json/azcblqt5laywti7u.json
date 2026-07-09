@@ -1,0 +1,87 @@
+{
+  "index": "azcblqt5laywti7u",
+  "name": "brass dragon wyrmling",
+  "desc": "Brass Dragon Wyrmling is a CR 1 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8 + 3",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 13,
+  "stats": {
+    "str": 15,
+    "dex": 10,
+    "con": 13,
+    "int": 10,
+    "wis": 11,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Fire Breath. The [[lookup @name lowercase]]{monster} exhales fire in an [[lookup @labels.description.template activity=NBdXGRF1vahbq4p8]]. Each creature in that line must make a [[/save activity=NBdXGRF1vahbq4p8]] saving throw, taking [[/damage average activity=NBdXGRF1vahbq4p8]] damage on a failed save, or half as much damage on a successful one. Sleep Breath. The [[lookup @name lowercase]]{monster} exhales sleep gas in a [[lookup @labels.description.template activity=O02zuaLvAqtmgutQ]]. Each creature in that area must succeed on a [[/save activity=O02zuaLvAqtmgutQ]] saving throw or fall &Reference[unconscious] for [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/BrassDragonWyrmling.webp",
+  "url": "/assets/atlas/enemies/json/azcblqt5laywti7u.json",
+  "updated_at": "2026-07-09T11:33:14.719Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

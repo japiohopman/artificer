@@ -1,0 +1,114 @@
+{
+  "index": "pupo4h4dcxigf0fy",
+  "name": "specter",
+  "desc": "Specter is a CR 1 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 1,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 1,
+    "dex": 14,
+    "con": 11,
+    "int": 10,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing",
+    "thunder"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Understands all languages it knew in life but can't speak",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "incorporeal movement",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &reference[difficult terrain]. It takes [[/damage average]] damage if it ends its turn inside an object.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "life drain",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+      "attack_bonus": -3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "3d6-5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Specter.webp",
+  "url": "/assets/atlas/enemies/json/pupo4h4dcxigf0fy.json",
+  "updated_at": "2026-07-09T11:33:15.764Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,135 @@
+{
+  "index": "7trhrxukntphpyca",
+  "name": "werewolf",
+  "desc": "Werewolf is a CR 3 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Human, Shapechanger",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "(can't speak in wolf form)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite (wolf or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a humanoid, it must succeed on a [[/save]] saving throw or be cursed with werewolf lycanthropy.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack (humanoid or hybrid form only)",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .tWfR8uJNnQxpXgDw]]{bite} and one with its [[/item .36H4LGNMMEYS1Irm]]{claws} or [[/item .TiKtAuqd6urQ45Ds]]{spear}.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spear (humanoid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] if used with two hands to make a melee attack.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws (hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shapechanger",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Werewolf.webp",
+  "url": "/assets/atlas/enemies/json/7trhrxukntphpyca.json",
+  "updated_at": "2026-07-09T11:33:15.295Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

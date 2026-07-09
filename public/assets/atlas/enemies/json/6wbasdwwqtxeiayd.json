@@ -1,0 +1,143 @@
+{
+  "index": "6wbasdwwqtxeiayd",
+  "name": "gynosphinx",
+  "desc": "Gynosphinx is a CR 11 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Lawful Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 18,
+  "wisdom": 18,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 18,
+    "wis": 18,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "psychic"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Sphinx",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spellcasting",
+      "desc": "The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared: Cantrips (at will): [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion}, [[/item .udsLtG0BugXHR2JQ]]{prestidigitation} 1st level (4 slots): [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .3OZnNhunvRtPOQmH]]{identify}, [[/item .z1mx84ONwkXKUZd7]]{shield} 2nd level (3 slots): [[/item .S7VbUetIfVT7B6Eq]]{darkness}, [[/item .SleYkHovQ8NagmeV]]{locate object}, [[/item .zMAWdyc8UVb37BK4]]{suggestion} 3rd level (3 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .XZhdgVK3cLoxNCQl]]{remove curse}, [[/item .gopnZvS0c2jD5FP8]]{tongues} 4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .tEpDmYZNGc9f5OhJ]]{greater invisibility} 5th level (1 slot): [[/item .W4Qx5z0id6da0vqg]]{legend lore}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .gVFZXBtgx450yiH7]]{claw} attacks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .gVFZXBtgx450yiH7]]{claw} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cast a spell",
+      "desc": "The [[lookup @name lowercase]]{monster} casts a spell from its list of prepared spells, using a spell slot as normal.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "inscrutable",
+      "desc": "The [[lookup @name monster]]{monster} is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the [[lookup @name monster]]{monster}'s intentions or sincerity have disadvantage.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=uklF2NbFqnNyuHOp]] to an unoccupied space it can see.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Gynosphinx.webp",
+  "url": "/assets/atlas/enemies/json/6wbasdwwqtxeiayd.json",
+  "updated_at": "2026-07-09T11:33:15.398Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

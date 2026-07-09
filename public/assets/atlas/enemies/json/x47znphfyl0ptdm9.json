@@ -1,0 +1,117 @@
+{
+  "index": "x47znphfyl0ptdm9",
+  "name": "behir",
+  "desc": "Behir is a CR 11 monstrosity.",
+  "size": "Huge",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 168,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12 + 64",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 23,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 14,
+  "charisma": 12,
+  "stats": {
+    "str": 23,
+    "dex": 16,
+    "con": 18,
+    "int": 7,
+    "wis": 14,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The behir makes two attacks: one with its [[/item .4fNbTxkAFYHxDdJX]]{bite} and one to [[/item .GCUh42hMUnKtxx8j]]{constrict}.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "constrict",
+      "desc": "Melee Weapon Attack: [[/attack]], reach 5 ft., one Large or smaller creature. [[/damage extended]]. The target is &Reference[grappled] (escape DC 16) if the [[lookup @name lowercase]]{monster} isn't already constricting a creature, and the target is &reference[restrained] until this grapple ends.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "The behir exhales a [[lookup @labels.description.template activity=iG0MT0sZv95VBmZK]] of lightning. Each creature in that line must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .4fNbTxkAFYHxDdJX]]{Bite} attack against a Medium or smaller target it is &reference[grappling]. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is &reference[blinded] and &reference[restrained], it has &reference[total cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and it takes [[/damage average activity=JiBTCgEtAZs60k7R]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. A [[lookup @name lowercase]]{monster} can have only one creature swallowed at a time. If the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from the swallowed creature, the [[lookup @name lowercase]]{monster} must succeed on a [[/save activity=2pCVkETAYg7qALRu]] saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 feet of the [[lookup @name lowercase]]{monster}. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 feet of movement, exiting &reference[prone].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Behir.webp",
+  "url": "/assets/atlas/enemies/json/x47znphfyl0ptdm9.json",
+  "updated_at": "2026-07-09T11:33:15.325Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

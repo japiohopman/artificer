@@ -1,0 +1,98 @@
+{
+  "index": "xfqmboth892xsncx",
+  "name": "swarm of poisonous snakes",
+  "desc": "Swarm of Poisonous Snakes is a CR 2 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 36,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 8,
+    "dex": 18,
+    "con": 11,
+    "int": 1,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "swarm",
+      "desc": "The [[lookup @name lowercase]]{swarm} can occupy another creature's space and vice versa, and the [[lookup @name lowercase]]{swarm} can move through any opening large enough for a Tiny snake. The swarm can't regain hit points or gain temporary hit points.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: [[/attack]], 0 ft., one creature in the [[lookup @name lowercase]]{swarm}'s space. Hit: [[/damage 2d6 piercing average]] damage, or [[/damage 1d6 piercing average]] damage if the [[lookup @name lowercase]]{swarm} has half of its hit points or fewer. The target must make a [[/save]] saving throw, taking [[/damage average activity=tT3v0krnAO2hA0hs]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d4-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/xfqmboth892xsncx.webp",
+  "url": "/assets/atlas/enemies/json/xfqmboth892xsncx.json",
+  "updated_at": "2026-07-09T11:33:14.290Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

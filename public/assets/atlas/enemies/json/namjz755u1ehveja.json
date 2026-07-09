@@ -1,0 +1,122 @@
+{
+  "index": "namjz755u1ehveja",
+  "name": "water elemental",
+  "desc": "Water Elemental is a CR 5 elemental.",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 48",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 18,
+    "int": 5,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "freeze",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes cold damage, it partially freezes; its speed is reduced by 20 feet until the end of its next turn.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water form",
+      "desc": "The [[lookup @name lowercase]]{monster} can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without &reference[squeezing]{Squeezing}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The elemental makes two [[/item .7xDGPsWicxgP6feT]]{slam} attacks.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "whelm",
+      "desc": "Each creature in the [[lookup @name lowercase]]{monster}'s space must make a [[/save activity=wNdhnTTQQLAgCSv9]] saving throw. On a failure, a target takes [[/damage average activity=wNdhnTTQQLAgCSv9]] damage. If it is Large or smaller, it is also &Reference[grappled] (escape DC 14). Until this grapple ends, the target is &Reference[restrained] and unable to &reference[suffocating]{Breathe} unless it can breathe water. If the saving throw is successful, the target is pushed out of the [[lookup @name lowercase]]{monster}'s space.The [[lookup @name lowercase]]{monster} can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the [[lookup @name lowercase]]{monster}'s turns, each target grappled by it takes [[/damage average activity=3Ed1FjdlOVvPPqS8]] damage. A creature within 5 feet of the [[lookup @name lowercase]]{monster} can pull a creature or object out of it by taking an action to make a [[/check activity=QoSOLmJfjlxffpld]] check and succeeding.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/WaterElemental.webp",
+  "url": "/assets/atlas/enemies/json/namjz755u1ehveja.json",
+  "updated_at": "2026-07-09T11:33:14.871Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

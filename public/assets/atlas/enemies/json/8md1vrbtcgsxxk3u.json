@@ -1,0 +1,98 @@
+{
+  "index": "8md1vrbtcgsxxk3u",
+  "name": "magmin",
+  "desc": "Magmin is a CR 0.5 elemental.",
+  "size": "Small",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Chaotic Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 8,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 7,
+    "dex": 15,
+    "con": 12,
+    "int": 8,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "death burst",
+      "desc": "When the [[lookup @name]]{monster} dies, it explodes in a burst of fire and magma. Each creature within [[lookup @target.template.size activity=A8WwxhIVtPyXk0DI]] feet of it must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ignited illumination",
+      "desc": "As a bonus action, the [[lookup @name lowercase]]{monster} can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds &reference[bright light] in a 10-foot radius and &reference[dim light] for an additional 10 ft.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "touch",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes [[/damage average activity=OuZcepCj3KXR6GNq]] damage at the end of each of its  turns.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "2d6-2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Magmin.webp",
+  "url": "/assets/atlas/enemies/json/8md1vrbtcgsxxk3u.json",
+  "updated_at": "2026-07-09T11:33:14.859Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

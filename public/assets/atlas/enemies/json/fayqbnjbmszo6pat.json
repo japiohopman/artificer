@@ -1,0 +1,108 @@
+{
+  "index": "fayqbnjbmszo6pat",
+  "name": "tiger",
+  "desc": "Tiger is a CR 1 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 37,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10 + 10",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 14,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 14,
+    "int": 3,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "pounce",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a creature and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &Reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one [[/item .YypXtXEL61FqWYOP]]{bite} attack against it as a bonus action.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Tiger.webp",
+  "url": "/assets/atlas/enemies/json/fayqbnjbmszo6pat.json",
+  "updated_at": "2026-07-09T11:33:14.343Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

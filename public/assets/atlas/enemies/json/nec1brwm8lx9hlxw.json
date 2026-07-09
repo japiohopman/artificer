@@ -1,0 +1,149 @@
+{
+  "index": "nec1brwm8lx9hlxw",
+  "name": "androsphinx",
+  "desc": "Androsphinx is a CR 17 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Lawful Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 199,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10 + 95",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 22,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 18,
+  "charisma": 23,
+  "stats": {
+    "str": 22,
+    "dex": 10,
+    "con": 20,
+    "int": 16,
+    "wis": 18,
+    "cha": 23
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "psychic",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Sphinx",
+  "challenge_rating": 17,
+  "proficiency_bonus": 6,
+  "xp": 18000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "inscrutable",
+      "desc": "The [[lookup @name monster]]{monster} is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the [[lookup @name monster]]{monster}'s intentions or sincerity have disadvantage.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared: Cantrips (at will): [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .8zT7njvqbpXs4Cel]]{spare the dying}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy} 1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic} 2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .CylBa7jR8DSbo8Z3]]{zone of truth} 3rd level (3 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .gopnZvS0c2jD5FP8]]{tongues} 4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .da0a1t2FqaTjRZGT]]{freedom of movement} 5th level (2 slots): [[/item .5e1xTohkzqFqbYH4]]{flame strike}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration} 6th level (1 slot): [[/item .mgFqi0ev8f7Ut19y]]{heroes' feast}",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The sphinx makes two [[/item .yotsIj19d5spOVGb]]{claw} attacks.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "roar",
+      "desc": "The [[lookup @name lowercase]]{monster} emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within [[lookup @target.template.size activity=YEy36H064rrzAAxY]] feet of the [[lookup @name lowercase]]{monster} and able to hear the roar must make a saving throw. First Roar. Each creature that fails a [[/save activity=YEy36H064rrzAAxY]] saving throw is &Reference[frightened] for [[lookup @labels.duration activity=YEy36H064rrzAAxY]]. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Second Roar. Each creature that fails a [[/save activity=bw7Ol7mkkyDDH3LD]] saving throw is &Reference[deafened] and &reference[frightened] for [[lookup @labels.duration activity=bw7Ol7mkkyDDH3LD]]. A frightened creature is &Reference[paralyzed] and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Third Roar. Each creature makes a [[/save activity=euc6EMlISPKQtmY5]] saving throw. On a failed save, a creature takes [[/damage average activity=euc6EMlISPKQtmY5]] damage and is knocked &Reference[prone]{prone}. On a successful save, the creature takes half as much damage and isn't knocked prone.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .yotsIj19d5spOVGb]]{claw} attack.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cast a spell",
+      "desc": "The [[lookup @name lowercase]]{monster} casts a spell from its list of prepared spells, using a spell slot as normal.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=nfaYtrEmylWmLluh]] to an unoccupied space it can see.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Androsphinx.webp",
+  "url": "/assets/atlas/enemies/json/nec1brwm8lx9hlxw.json",
+  "updated_at": "2026-07-09T11:33:15.311Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

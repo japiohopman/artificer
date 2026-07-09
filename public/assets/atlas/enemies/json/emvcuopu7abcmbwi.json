@@ -1,0 +1,124 @@
+{
+  "index": "emvcuopu7abcmbwi",
+  "name": "assassin",
+  "desc": "Assassin is a CR 8 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Any non-good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 78,
+  "hit_dice": "12d8",
+  "hit_points_roll": "12d8 + 24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 13,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 11,
+    "dex": 16,
+    "con": 14,
+    "int": 13,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "poison"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any two languages",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "assassinate",
+      "desc": "During its first turn, the [[lookup @name lowercase]]{monster} has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the [[lookup @name lowercase]]{monster} scores against a &reference[surprise]{Surprised} creature is a critical hit.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "evasion",
+      "desc": "If the [[lookup @name lowercase]]{monster} is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the [[lookup @name lowercase]]{monster} instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sneak attack",
+      "desc": "Once per turn, the [[lookup @name lowercase]]{monster} deals an extra [[/damage average]] damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the [[lookup @name lowercase]]{monster} that isn't &reference[incapacitated apply=false] and the [[lookup @name lowercase]]{monster} doesn't have disadvantage on the attack roll.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The assassin makes two [[/item .Kbg12IJ0YW79vP06]]{shortsword} attacks.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save activity=K4WCmn76MTQNDMpO]] saving throw, taking [[/damage activity=K4WCmn76MTQNDMpO]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "light crossbow",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save activity=1veeOGXOGCLeTwbO]] saving throw, taking [[/damage activity=1veeOGXOGCLeTwbO]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Assassin.webp",
+  "url": "/assets/atlas/enemies/json/emvcuopu7abcmbwi.json",
+  "updated_at": "2026-07-09T11:33:15.116Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

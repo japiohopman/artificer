@@ -1,0 +1,113 @@
+{
+  "index": "8exsfcar5lbhdo7u",
+  "name": "guardian naga",
+  "desc": "Guardian Naga is a CR 10 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 127,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10 + 45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 19,
+  "charisma": 18,
+  "stats": {
+    "str": 19,
+    "dex": 18,
+    "con": 16,
+    "int": 16,
+    "wis": 19,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "rejuvenation",
+      "desc": "If it dies, the [[lookup @name lowercase]]{monster} returns to life in 1d6 days and regains all its hit points. Only a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell can prevent this trait from functioning.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared: Cantrips (at will): [[/item .kjmjY0zlE6IEiQVL]]{mending}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy} 1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .jZ6JNykRtdQ90MOo]]{shield of faith} 2nd level (3 slots): [[/item .3MYDjS6k9IYL0aTj]]{calm emotions}, [[/item .3Lo9boi7P2ro6QV4]]{hold person} 3rd level (3 slots): [[/item .pO4zGe5LmFIYqJiL]]{bestow curse}, [[/item .cg50KpBkBdPK6vPL]]{clairvoyance} 4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .da0a1t2FqaTjRZGT]]{freedom of movement} 5th level (2 slots): [[/item .5e1xTohkzqFqbYH4]]{flame strike}, [[/item .JQyigMNPiDnGI18b]]{geas} 6th level (1 slot): [[/item .XzkJpE6XpZfKjODD]]{true seeing}",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=Z2wqSwuJDKaRy2TA]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spit poison",
+      "desc": "[[/attack extended]]. Hit: The target must make a [[/save]] saving throw, taking [[/damage average]] on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/GuardianNaga.webp",
+  "url": "/assets/atlas/enemies/json/8exsfcar5lbhdo7u.json",
+  "updated_at": "2026-07-09T11:33:15.388Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

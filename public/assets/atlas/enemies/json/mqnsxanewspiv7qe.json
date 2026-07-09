@@ -1,0 +1,85 @@
+{
+  "index": "mqnsxanewspiv7qe",
+  "name": "mage",
+  "desc": "Mage is a CR 6 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 40,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 9,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 11,
+  "stats": {
+    "str": 9,
+    "dex": 14,
+    "con": 11,
+    "int": 17,
+    "wis": 12,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any four languages",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spellcasting",
+      "desc": "The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared: Cantrip (at will): [[/item .EOmsUcFQJTfG2oio]]{fire bolt}, [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .udsLtG0BugXHR2JQ]]{prestidigitation} 1st level (4 slots): [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .CKZTpZlxj7hjjo2H]]{mage armor}, [[/item .41JIhpDyM9Anm7cs]]{magic missile}, [[/item .z1mx84ONwkXKUZd7]]{shield} 2nd level (3 slots): [[/item .wqfAVANuQonNBgnL]]{misty step}, [[/item .zMAWdyc8UVb37BK4]]{suggestion} 3rd level (3 slots): [[/item .Ek45cBpVXvJdv1Qy]]{counterspell}, [[/item .ztgcdrWPshKRpFd0]]{fireball}, [[/item .yfbK8gZqESlaoY5t]]{fly} 4th level (3 slots): [[/item .tEpDmYZNGc9f5OhJ]]{greater invisibility}, [[/item .WN2LWEljYU6QqnRH]]{ice storm} 5th level (1 slots): [[/item .RpKjTlYASrfqUPVA]]{cone of cold}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Mage.webp",
+  "url": "/assets/atlas/enemies/json/mqnsxanewspiv7qe.json",
+  "updated_at": "2026-07-09T11:33:15.224Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

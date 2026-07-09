@@ -1,0 +1,148 @@
+{
+  "index": "1zzrqps9jzdlzgqi",
+  "name": "ice devil",
+  "desc": "Ice Devil is a CR 14 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 180,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10 + 76",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 21,
+    "dex": 14,
+    "con": 18,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "cold",
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "wall of ice",
+      "desc": "The [[lookup @name lowercase]]{monster} magically forms an opaque wall of ice on a solid surface it can see within [[lookup @labels.description.range activity=epHS9JFnK0K3AOh0]] of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter. When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is &reference[incapacitated apply=false]. The creature then makes a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. The wall lasts for [[lookup @labels.duration activity=epHS9JFnK0K3AOh0]] or until the [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false] or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a [[/save activity=qJljbNLNFhF1xbDV]] saving throw, taking [[/damage activity=qJljbNLNFhF1xbDV average]] damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The devil makes three attacks: one with its [[/item .DV4KS0OE541vGOtI]]{bite}, one with its [[/item .E6iXljYXLdQyfk1l]]{claws}, and one with its [[/item .AQ551xglVn90BdwU]]{tail}.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/IceDevil.webp",
+  "url": "/assets/atlas/enemies/json/1zzrqps9jzdlzgqi.json",
+  "updated_at": "2026-07-09T11:33:14.977Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

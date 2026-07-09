@@ -1,0 +1,168 @@
+{
+  "index": "cgm3ivyttcsyxjzo",
+  "name": "adult blue dragon",
+  "desc": "Adult Blue Dragon is a CR 16 dragon.",
+  "size": "Huge",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 225,
+  "hit_dice": "18d12",
+  "hit_points_roll": "18d12 + 108",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 25,
+  "dexterity": 10,
+  "constitution": 23,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 19,
+  "stats": {
+    "str": 25,
+    "dex": 10,
+    "con": 23,
+    "int": 16,
+    "wis": 15,
+    "cha": 19
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .xWSOEwthNmDecfQ8]]{Frightful Presence}. It then makes three attacks: one with its [[/item .tz3vYeFf3GLouPGC]]{bite} and two with its [[/item .kYySllKlNPBsT7Ho]]{claws}.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "Each creature of the [[lookup @name lowercase]]{monster}'s choice that is within [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] of the dragon and aware of it must succeed on a [[/save]] saving throw or become &Reference[frightened] for [[lookup @labels.duration activity=2VOmvThI0bGdUsMt]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales lightning in a [[lookup @labels.description.template activity=GSQtl90Opu6WzZk4]]. Each creature in that line must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "detect",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a Wisdom (Perception) check.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a [[/item .tPZA3sUmzXN6euE9]]{tail} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wing attack",
+      "desc": "The [[lookup @name lowercase]]{monster} beats its wings. Each creature within [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or take [[/damage average]] damage and be knocked &Reference[prone]. The [[lookup @name lowercase]]{monster} can then fly up to half its flying speed.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/cgm3ivyttcsyxjzo.webp",
+  "url": "/assets/atlas/enemies/json/cgm3ivyttcsyxjzo.json",
+  "updated_at": "2026-07-09T11:33:14.484Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

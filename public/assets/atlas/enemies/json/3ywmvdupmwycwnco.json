@@ -1,0 +1,108 @@
+{
+  "index": "3ywmvdupmwycwnco",
+  "name": "giant crocodile",
+  "desc": "Giant Crocodile is a CR 5 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "9d12",
+  "hit_points_roll": "9d12 + 27",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 21,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 21,
+    "dex": 9,
+    "con": 17,
+    "int": 2,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hold breath",
+      "desc": "The [[lookup @name lowercase]]{monster} can hold its breath for 30 minutes.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .u7eurp95tuW3tYGl]]{bite} and one with its [[/item .VkCVMF2SvsuYWWYg]]{tail}.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &Reference[grappled] (escape DC 16). Until this grapple ends, the target is restrained, and the crocodile can't bite another target.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantCrocodile.webp",
+  "url": "/assets/atlas/enemies/json/3ywmvdupmwycwnco.json",
+  "updated_at": "2026-07-09T11:33:14.092Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

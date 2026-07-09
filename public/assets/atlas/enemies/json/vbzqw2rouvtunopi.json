@@ -1,0 +1,95 @@
+{
+  "index": "vbzqw2rouvtunopi",
+  "name": "remorhaz",
+  "desc": "Remorhaz is a CR 11 monstrosity.",
+  "size": "Huge",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 195,
+  "hit_dice": "17d12",
+  "hit_points_roll": "17d12 + 85",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 24,
+  "dexterity": 13,
+  "constitution": 21,
+  "intelligence": 4,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 24,
+    "dex": 13,
+    "con": 21,
+    "int": 4,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold",
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it is &reference[grappled] (escape DC 17). Until this grapple ends, the target is &reference[restrained], and the [[lookup @name lowercase]]{monster} can't [[lookup @item.name]] another target.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "6d10+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heated body",
+      "desc": "A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within 5 feet of it takes [[/damage average]] damage.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one @UUID[Compendium.dnd5e.monsters.Actor.VBzqw2rOUvTuNOPI.Item.Qcgc4zckQ7c1Ky8t]{Bite} attack against a Medium or smaller creature it is &reference[grappling]. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is &reference[blinded] and &reference[restrained], it has &reference[total cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and it takes [[/damage activity=uTz7h3Og3Q3YACla average]] damage at the start of each of the remorhaz's turns.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Remorhaz.webp",
+  "url": "/assets/atlas/enemies/json/vbzqw2rouvtunopi.json",
+  "updated_at": "2026-07-09T11:33:15.488Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

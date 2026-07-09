@@ -1,0 +1,85 @@
+{
+  "index": "wcsjbl25uiusyqwn",
+  "name": "ankheg",
+  "desc": "Ankheg is a CR 2 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 17,
+    "dex": 11,
+    "con": 13,
+    "int": 1,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a Large or smaller creature, it is &reference[grappled] (escape DC 13). Until this grapple ends, the [[lookup @name lowercase]]{monster} can [[lookup @item.name lowercase]] only the grappled creature and has advantage on attack rolls to do so.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "acid spray",
+      "desc": "The ankheg spits acid in a [[lookup @labels.description.template activity=A4waeKIjLnBIJs9i]], provided that it has no creature &reference[grappled apply=false]. Each creature in that line must make a [[/save activity=A4waeKIjLnBIJs9i]] saving throw, taking [[/damage average activity=A4waeKIjLnBIJs9i]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Ankheg.webp",
+  "url": "/assets/atlas/enemies/json/wcsjbl25uiusyqwn.json",
+  "updated_at": "2026-07-09T11:33:15.315Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

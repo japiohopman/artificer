@@ -1,0 +1,168 @@
+{
+  "index": "7vswgicsimfs4zts",
+  "name": "adult brass dragon",
+  "desc": "Adult Brass Dragon is a CR 13 dragon.",
+  "size": "Huge",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 172,
+  "hit_dice": "15d12",
+  "hit_points_roll": "15d12 + 75",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "stats": {
+    "str": 23,
+    "dex": 10,
+    "con": 21,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .XyhdTtNxXj219dlP]]{Frightful Presence}. It then makes three attacks: one with its [[/item .Rr34cx78OgioMSHH]]{bite} and two with its [[/item .Gx6DVWF7D9lzZjse]]{claws}.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "Each creature of the [[lookup @name lowercase]]{monster}'s choice that is within [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] of the dragon and aware of it must succeed on a [[/save]] saving throw or become &Reference[frightened] for [[lookup @labels.duration activity=2VOmvThI0bGdUsMt]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Fire Breath. The [[lookup @name lowercase]]{monster} exhales fire in an [[lookup @labels.description.template activity=NBdXGRF1vahbq4p8]]. Each creature in that line must make a [[/save activity=NBdXGRF1vahbq4p8]] saving throw, taking [[/damage average activity=NBdXGRF1vahbq4p8]] damage on a failed save, or half as much damage on a successful one. Sleep Breath. The [[lookup @name lowercase]]{monster} exhales sleep gas in a [[lookup @labels.description.template activity=O02zuaLvAqtmgutQ]]. Each creature in that area must succeed on a [[/save activity=O02zuaLvAqtmgutQ]] saving throw or fall &Reference[unconscious] for [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "detect",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a Wisdom (Perception) check.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a [[/item .wpjVwZ9oJcl07bYG]]{tail} attack.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wing attack",
+      "desc": "The [[lookup @name lowercase]]{monster} beats its wings. Each creature within [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or take [[/damage average]] damage and be knocked &Reference[prone]. The [[lookup @name lowercase]]{monster} can then fly up to half its flying speed.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/7vswgicsimfs4zts.webp",
+  "url": "/assets/atlas/enemies/json/7vswgicsimfs4zts.json",
+  "updated_at": "2026-07-09T11:33:14.499Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

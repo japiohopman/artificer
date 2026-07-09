@@ -1,0 +1,175 @@
+{
+  "index": "atithyyxthuzbpbn",
+  "name": "ancient white dragon",
+  "desc": "Ancient White Dragon is a CR 20 dragon.",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 333,
+  "hit_dice": "18d20",
+  "hit_points_roll": "18d20+144",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 26,
+  "dexterity": 10,
+  "constitution": 26,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 14,
+  "stats": {
+    "str": 26,
+    "dex": 10,
+    "con": 26,
+    "int": 10,
+    "wis": 13,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .DeqgPZF8smOMxmVH]]{Frightful Presence}. It then makes three attacks: one with its [[/item .NB88hf8oRtLwBolX]]{bite} and two with its [[/item .Cz5xqvQ50f5zxuNY]]{claws}.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "ice walk",
+      "desc": "The [[lookup @name lowercase]]{monster} can move across and climb icy surfaces without needing to make an ability check. Additionally, &reference[difficult terrain] composed of ice or snow doesn't cost it extra movement.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "Each creature of the [[lookup @name lowercase]]{monster}'s choice that is within [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] of the dragon and aware of it must succeed on a [[/save]] saving throw or become &Reference[frightened] for [[lookup @labels.duration activity=2VOmvThI0bGdUsMt]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "detect",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a Wisdom (Perception) check.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a [[/item .qxKOBs4I2CLSeCJY]]{tail} attack.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wing attack",
+      "desc": "The [[lookup @name lowercase]]{monster} beats its wings. Each creature within [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or take [[/damage average]] damage and be knocked &Reference[prone]. The [[lookup @name lowercase]]{monster} can then fly up to half its flying speed.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "cold breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales an icy blast of hail in a [[lookup @labels.description.template activity=UF4fJlhyYiLM7XeM]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/atithyyxthuzbpbn.webp",
+  "url": "/assets/atlas/enemies/json/atithyyxthuzbpbn.json",
+  "updated_at": "2026-07-09T11:33:14.710Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

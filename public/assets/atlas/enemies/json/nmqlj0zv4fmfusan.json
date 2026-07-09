@@ -1,0 +1,117 @@
+{
+  "index": "nmqlj0zv4fmfusan",
+  "name": "young bronze dragon",
+  "desc": "Young Bronze Dragon is a CR 8 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 142,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10 + 60",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 19,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "stats": {
+    "str": 21,
+    "dex": 10,
+    "con": 19,
+    "int": 14,
+    "wis": 13,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .22lf3TLPObmD4s6h]]{bite} and two with its [[/item .LGFPSpA0pvVpj3cF]]{claws}.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Lightning Breath. The [[lookup @name lowercase]]{monster} exhales lightning in a [[lookup @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Each creature in that line must make a [[/save activity=w2CftR6CLr5PZ7zY]] saving throw, taking [[/damage average activity=w2CftR6CLr5PZ7zY]] damage on a failed save, or half as much damage on a successful one. Repulsion Breath. The [[lookup @name lowercase]]{monster} exhales repulsion energy in a [[lookup @labels.description.template activity=YElWYv6C5UfhAu48]]. Each creature in that area must succeed on a [[/save activity=YElWYv6C5UfhAu48]] saving throw. On a failed save, the creature is pushed 60 feet away from the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungBronzeDragon.webp",
+  "url": "/assets/atlas/enemies/json/nmqlj0zv4fmfusan.json",
+  "updated_at": "2026-07-09T11:33:14.773Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

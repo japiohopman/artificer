@@ -1,0 +1,90 @@
+{
+  "index": "zqtczftv9zotjncu",
+  "name": "homunculus",
+  "desc": "Homunculus is a CR 0 construct.",
+  "size": "Tiny",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 4,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 4,
+    "dex": 15,
+    "con": 11,
+    "int": 10,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Understands the languages of its creator but cannot speak",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or be &Reference[poisoned] for [[lookup @labels.duration activity=aNFKGc5wFnOQijNd]]. If the saving throw fails by 5 or more, the target is instead poisoned for 5 ([[/r 1d10]]) minutes and &Reference[unconscious] while poisoned in this way.",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "telepathic bond",
+      "desc": "While the [[lookup @name lowercase]]{monster} is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/zqtczftv9zotjncu.webp",
+  "url": "/assets/atlas/enemies/json/zqtczftv9zotjncu.json",
+  "updated_at": "2026-07-09T11:33:14.435Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

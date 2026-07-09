@@ -1,0 +1,184 @@
+{
+  "index": "loyt73eajojbdxav",
+  "name": "solar",
+  "desc": "Solar is a CR 21 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 21
+    }
+  ],
+  "hit_points": 243,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10 + 144",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 26,
+  "dexterity": 22,
+  "constitution": 26,
+  "intelligence": 25,
+  "wisdom": 25,
+  "charisma": 30,
+  "stats": {
+    "str": 26,
+    "dex": 22,
+    "con": 26,
+    "int": 25,
+    "wis": 25,
+    "cha": 30
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "radiant",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 17
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "flying sword",
+      "desc": "The [[lookup @name lowercase]]{monster} releases its greatsword to hover magically in an unoccupied space within 5 feet of it. If the [[lookup @name lowercase]]{monster} can see the sword, the [[lookup @name lowercase]]{monster} can mentally command it as a bonus action to fly up to 50 feet and either make one attack against a target or return to the [[lookup @name lowercase]]{monster}'s hands. If the hovering sword is targeted by any effect, the [[lookup @name lowercase]]{monster} is considered to be holding it. The hovering sword falls if the [[lookup @name lowercase]]{monster} dies. Foundry Note Enchant the [[lookup @name lowercase]]{monster} greatsword using the activity on this feature, granting it a \"Command Sword\" activity that can be used as a bonus action.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The solar's spell casting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components: At will: [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .1N8dDMMgZ1h1YJ3B]]{invisibility} (self only) 3/day each: [[/item .dLJhxDfeyOsc3zsY]]{blade barrier}, [[/item .TkJ8Wtg1L7TZtspm]]{dispel evil and good}, [[/item .jhhT9PsHy5A7EojO]]{resurrection} 1/day each: [[/item .d54VDyFulD9xxY7J]]{commune}, [[/item .ZPd73HtKF3At11jh]]{control weather}",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .QssrfCioglFdfd8I]]{greatsword} attacks.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "greatsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "slaying longbow",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature that has 100 hit points or fewer, it must succeed on a [[/save]] saving throw or die.",
+      "attack_bonus": 15,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=ceqRWRMK1a37epib]] to an unoccupied space it can see.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "searing burst",
+      "desc": "The [[lookup @name lowercase]]{monster} emits magical, divine energy. Each creature of its choice in a [[lookup @labels.description.template activity=QE8HFlW0jsWaWwdx]] must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "blinding gaze",
+      "desc": "The [[lookup @name lowercase]]{monster} targets [[lookup @labels.description.affects activity=fOKbYw2p3tXhOyn2]] it can see within [[lookup @labels.description.range activity=fOKbYw2p3tXhOyn2]] of it. If the target can see it, the target must succeed on a [[/save]] saving throw or be &Reference[blinded apply=false] until magic such as @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{Lesser Restoration} spell removes the blindness.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine awareness",
+      "desc": "The [[lookup @name lowercase]]{monster} knows if it hears a lie.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "angelic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical. When the [[lookup @name lowercase]]{monster} hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "healing touch",
+      "desc": "The [[lookup @name lowercase]]{monster} touches another creature. The target magically regains [[/heal average]] and is freed from any curse, disease, poison, &reference[blinded apply=false]{Blindness}, or &reference[deafened apply=false]{Deafness}.",
+      "attack_bonus": 14,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Solar.webp",
+  "url": "/assets/atlas/enemies/json/loyt73eajojbdxav.json",
+  "updated_at": "2026-07-09T11:33:14.395Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

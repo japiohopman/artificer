@@ -1,0 +1,85 @@
+{
+  "index": "kupbxdn1xmheeopk",
+  "name": "merfolk",
+  "desc": "Merfolk is a CR 0.125 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Merfolk",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 10,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 12,
+  "stats": {
+    "str": 10,
+    "dex": 13,
+    "con": 12,
+    "int": 11,
+    "wis": 11,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spear",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] damage if used with two hands to make a melee attack.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Merfolk.webp",
+  "url": "/assets/atlas/enemies/json/kupbxdn1xmheeopk.json",
+  "updated_at": "2026-07-09T11:33:15.228Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,169 @@
+{
+  "index": "ufw8m3jhzhkxuegm",
+  "name": "mummy lord",
+  "desc": "Mummy Lord is a CR 15 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8 + 39",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 18,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 11,
+  "wisdom": 18,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 10,
+    "con": 17,
+    "int": 11,
+    "wis": 18,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "necrotic",
+    "piercing",
+    "poison",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "blinding dust",
+      "desc": "Blinding dust and sand swirls magically around the [[lookup @name lowercase]]{monster}. Each creature within [[lookup @target.template.size activity=zlgs7Urb6F9nnlIA]] feet of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or be &reference[blinded] until the end of the creature's next turn.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "blasphemous word",
+      "desc": "The [[lookup @name lowercse]]{monster} utters a blasphemous word. Each non-undead creature within [[lookup @target.template.size activity=UR3pJCZj7UbuHzg2]] feet of the [[lookup @name lowercase]]{monster} that can hear the magical utterance must succeed on a [[/save]] saving throw or be &reference[stunned] until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "channel negative energy",
+      "desc": "The [[lookup @name lowercase]]{monster} magically unleashes negative energy. Creatures within [[lookup @target.template.size activity=9ewBziURGwIvgPUb]] feet of the [[lookup @name lowercase]]{monster}, including ones behind barriers and around corners, can't regain hit points until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "A destroyed [[lookup @name lowercase]]{monster} gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the [[lookup @name lowercase]]{monster}'s heart.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared: Cantrips (at will): [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy} 1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .7buEm5KhI5lP8m1z]]{guiding bolt}, [[/item .jZ6JNykRtdQ90MOo]]{shield of faith} 2nd level (3 slots): [[/item .3Lo9boi7P2ro6QV4]]{hold person}, [[/item .5VhqFROQYjr1P9lp]]{silence}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon} 3rd level (3 slots): [[/item .oyE5nVppa5mde5gT]]{animate dead}, [[/item .15Fa6q1nH27XfbR8]]{dispel magic} 4th level (3 slots): [[/item .XqzXSKNR75ZdYTA9]]{divination}, [[/item .TgHsuhNasPbhu8MO]]{guardian of faith} 5th level (2 slots): [[/item .CjIq8Ed7bu3vVwT1]]{contagion}, [[/item .OVikYmSdHliAG2YD]]{insect plague} 6th level (1 slot): [[/item .tMH6Ivn4GmE1naMj]]{harm}",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .GSbdcVdjyBwAmgk9]]{Dreadful Glare} and makes one attack with its [[/item .5VmCO7pd2vpSCpq2]]{rotting fist}.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one attack with its [[/item .5VmCO7pd2vpSCpq2]]{Rotting Fist} or uses its [[/item .GSbdcVdjyBwAmgk9]]{Dreadful Glare}.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "whirlwind of sand",
+      "desc": "The [[lookup @name lowercase]]{monster} magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the [[lookup @name lowercase]]{monster} is immune to all damage, and it can't be &reference[grappled apply=false], &reference[petrified apply=false], knocked &reference[prone apply=false], &reference[restrained apply=false], or &reference[stunned apply=false]. Equipment worn or carried by the [[lookup @name lowercase]]{monster} remain in its possession.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rotting fist",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{Remove Curse} spell or other magic.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dreadful glare",
+      "desc": "The [[lookup @name lowercase]]{monster} targets [[lookup @labels.description.affects activity=vBP1Ivo8gjkv4DVp]] it can see within [[lookup @labels.description.range activity=vBP1Ivo8gjkv4DVp]] of it. If the target can see the [[lookup @name lowercase]]{monster}, it must succeed on a [[/save]] saving throw against this magic or become &reference[frightened] until the end of the [[lookup @name lowercase]]{monster}'s next turn. If the target fails the saving throw by 5 or more, it is also &reference[paralyzed] for the same duration. A target that succeeds on the saving throw is immune to the [[lookup @item.name]] of all [[lookup @name lowercase]]{monster}s for the next 24 hours.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/MummyLord.webp",
+  "url": "/assets/atlas/enemies/json/ufw8m3jhzhkxuegm.json",
+  "updated_at": "2026-07-09T11:33:15.734Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,115 @@
+{
+  "index": "zhafrncwcz17dmlc",
+  "name": "troll",
+  "desc": "Troll is a CR 5 giant.",
+  "size": "Large",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 84,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10 + 40",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 13,
+  "constitution": 20,
+  "intelligence": 7,
+  "wisdom": 9,
+  "charisma": 7,
+  "stats": {
+    "str": 18,
+    "dex": 13,
+    "con": 20,
+    "int": 7,
+    "wis": 9,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .R7DpgLP3aFNmAgOc]]{bite} and two with its [[/item .ahGwFmyt6nItUOAK]]{claws}.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "regeneration",
+      "desc": "The [[lookup @name lowercase]] regains [[/healing]] at the start of its turn. If the [[lookup @name lowercase]]{monster} takes acid or fire damage, this trait doesn't function at the start of the [[lookup @name lowercase]]{monster}'s next turn. The [[lookup @name lowercase]]{monster} dies only if it starts its turn with 0 hit points and doesn't regenerate.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/Troll.webp",
+  "url": "/assets/atlas/enemies/json/zhafrncwcz17dmlc.json",
+  "updated_at": "2026-07-09T11:33:15.088Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

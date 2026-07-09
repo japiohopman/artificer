@@ -1,0 +1,111 @@
+{
+  "index": "eormaxuv5v3nwsql",
+  "name": "animated armor",
+  "desc": "Animated Armor is a CR 1 construct.",
+  "size": "Medium",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 33,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 6",
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 14,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "stats": {
+    "str": 14,
+    "dex": 11,
+    "con": 13,
+    "int": 1,
+    "wis": 3,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 6
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false] while in the area of an @UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{Antimagic Field}. If targeted by @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dispel Magic}, the [[lookup @name lowercase]]{monster} must succeed on a Constitution saving throw against the caster's spell save DC or fall &reference[unconscious] for 1 minute.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from a normal suit of armor.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .vUqKQJ1GGWbKg6cX]]{melee} attacks.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/AnimatedArmor.webp",
+  "url": "/assets/atlas/enemies/json/eormaxuv5v3nwsql.json",
+  "updated_at": "2026-07-09T11:33:14.414Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,122 @@
+{
+  "index": "hjherrzafciffvla",
+  "name": "lion",
+  "desc": "Lion is a CR 1 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 26,
+  "hit_dice": "4d10",
+  "hit_points_roll": "4d10 + 4",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 13,
+    "int": 3,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "running leap",
+      "desc": "With a 10-foot running start, the [[lookup @name lowercase]]{monster} can &reference[long jump] up to 25 feet.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a creature and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.hjhERRzafCiFFVLA.Item.CHIayoaCAZj0GBkM]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &Reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one [[/item .gKj1TlVfDhLp5WIk]]{bite} attack against it as a bonus action.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Lion.webp",
+  "url": "/assets/atlas/enemies/json/hjherrzafciffvla.json",
+  "updated_at": "2026-07-09T11:33:14.180Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

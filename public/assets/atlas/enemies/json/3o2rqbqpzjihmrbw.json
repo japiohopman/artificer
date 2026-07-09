@@ -1,0 +1,132 @@
+{
+  "index": "3o2rqbqpzjihmrbw",
+  "name": "erinyes",
+  "desc": "Erinyes is a CR 12 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 153,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8 + 72",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 14,
+  "wisdom": 14,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 16,
+    "con": 18,
+    "int": 14,
+    "wis": 14,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hellish weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] damage if used with two hands.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or be &Reference[poisoned]. The poison lasts until it is removed by the @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{Lesser Restoration} spell or similar magic.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "The [[lookup @name lowercase]]{monster} adds 4 to its AC against one melee attack that would hit it. To do so, the [[lookup @name lowercase]]{monster} must see the attacker and be wielding a melee weapon.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Erinyes.webp",
+  "url": "/assets/atlas/enemies/json/3o2rqbqpzjihmrbw.json",
+  "updated_at": "2026-07-09T11:33:14.956Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

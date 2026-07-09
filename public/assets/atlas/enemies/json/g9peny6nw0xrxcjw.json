@@ -1,0 +1,177 @@
+{
+  "index": "g9peny6nw0xrxcjw",
+  "name": "unicorn",
+  "desc": "Unicorn is a CR 5 celestial.",
+  "size": "Large",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 67,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10 + 18",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 11,
+  "wisdom": 17,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 11,
+    "wis": 17,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Horn} attack on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &reference[prone].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The unicorn's innate spellcasting ability is Charisma (spell save DC 14). The unicorn can innately cast the following spells, requiring no components: At will: [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .SbSvZKkJASyk8jKo]]{druidcraft}, [[/item .pRMvmknwLf2tdMTj]]{pass without trace} 1/day each: [[/item .3MYDjS6k9IYL0aTj]]{calm emotions}, [[/item .TkJ8Wtg1L7TZtspm]]{dispel evil and good}, [[/item .gMrWeG8fMDPRFiVe]]{entangle}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .f7m44y4TqYYcunMj]]{hooves} and one with its [[/item .ORrGdhTLKLTKK3BH]]{horn}.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "horn",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports itself and up to [[lookup @labels.description.affects activity=8owft3XymVhz240J]] it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to [[lookup @labels.description.range activity=8owft3XymVhz240J]] away.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "The unicorn makes one attack with its [[/item .f7m44y4TqYYcunMj]]{hooves}.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shimmering shield",
+      "desc": "The [[lookup @name lowercase]]{monster} creates a shimmering, magical field around itself or another creature it can see within [[lookup @labels.description.range activity=dnd5eactivity000]] of it. The target gains a +2 bonus to AC until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "heal self",
+      "desc": "The [[lookup @name lowercase]]{monster} magically regains [[/healing average]].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "healing touch",
+      "desc": "The [[lookup @name lowercase]]{monster} touches another creature. The target magically regains [[/heal average]]. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Unicorn.webp",
+  "url": "/assets/atlas/enemies/json/g9peny6nw0xrxcjw.json",
+  "updated_at": "2026-07-09T11:33:14.402Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,110 @@
+{
+  "index": "eykrfv85dqjockmc",
+  "name": "young silver dragon",
+  "desc": "Young Silver Dragon is a CR 9 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 168,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 80",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 19,
+  "stats": {
+    "str": 23,
+    "dex": 10,
+    "con": 21,
+    "int": 14,
+    "wis": 11,
+    "cha": 19
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .qsfDO6B4wLP1UeKS]]{bite} and two with its [[/item .GvAgPChKDJLm64Za]]{claws}.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Cold Breath. The [[lookup @name lowercase]]{monster} exhales an icy blast in a [[lookup @labels.description.template activity=9gMvqjbgKK42uyzr]]. Each creature in that area must make a [[/save activity=U5F5qe2Hu0r0yHmk]] saving throw, taking [[/damage average activity=U5F5qe2Hu0r0yHmk]] damage on a failed save, or half as much damage on a successful one. Paralyzing Breath. The [[lookup @name lowercase]]{monster} exhales paralyzing gas in a [[lookup @labels.description.template activity=9gMvqjbgKK42uyzr]]. Each creature in that area must succeed on a [[/save activity=9gMvqjbgKK42uyzr]] saving throw or be paralyzed for [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungSilverDragon.webp",
+  "url": "/assets/atlas/enemies/json/eykrfv85dqjockmc.json",
+  "updated_at": "2026-07-09T11:33:14.791Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

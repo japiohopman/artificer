@@ -1,0 +1,133 @@
+{
+  "index": "ijsfyedqsuwqxwnn",
+  "name": "dragon turtle",
+  "desc": "Dragon Turtle is a CR 17 dragon.",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 341,
+  "hit_dice": "22d20",
+  "hit_points_roll": "22d20 + 110",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 25,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 12,
+  "stats": {
+    "str": 25,
+    "dex": 10,
+    "con": 20,
+    "int": 10,
+    "wis": 12,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "fire"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 17,
+  "proficiency_bonus": 6,
+  "xp": 18000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .7QJr0VCtVk2wtZ78]]{bite} and two with its [[/item .P4joxK4BwyYsPfJv]]{claws}. It can make one [[/item .zNDI1LvLKZ9Hi2Ew]]{tail} attack in place of its two claw attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d12+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or be pushed up to 10 feet away from the dragon turtle and knocked &Reference[prone].",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d12+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "steam breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales scalding steam in a [[lookup @labels.description.template activity=4P1o1KZZ4sUzsAOu]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. Being underwater doesn't grant resistance against this damage.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/ijsfyedqsuwqxwnn.webp",
+  "url": "/assets/atlas/enemies/json/ijsfyedqsuwqxwnn.json",
+  "updated_at": "2026-07-09T11:33:14.736Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

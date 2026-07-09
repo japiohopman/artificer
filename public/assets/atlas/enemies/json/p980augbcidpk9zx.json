@@ -1,0 +1,108 @@
+{
+  "index": "p980augbcidpk9zx",
+  "name": "roc",
+  "desc": "Roc is a CR 11 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 248,
+  "hit_dice": "16d20",
+  "hit_points_roll": "16d20 + 80",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 28,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 10,
+  "charisma": 9,
+  "stats": {
+    "str": 28,
+    "dex": 10,
+    "con": 20,
+    "int": 3,
+    "wis": 10,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "beak",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d8+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .PZWkwOa8C0Y2tSCR]]{beak} and one with its [[/item .XMiiDwLIMYWFqxyv]]{talons}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &reference[grappled] (escape DC 19). Until this grapple ends, the target is &reference[restrained], and the [[lookup @name lowercase]]{monster} can't use its [[lookup @item.name lowercase]] on another target.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d6+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen sight",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Roc.webp",
+  "url": "/assets/atlas/enemies/json/p980augbcidpk9zx.json",
+  "updated_at": "2026-07-09T11:33:15.494Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

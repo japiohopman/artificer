@@ -1,0 +1,103 @@
+{
+  "index": "eqjua3z3181rssfu",
+  "name": "flying sword",
+  "desc": "Flying Sword is a CR 0.25 construct.",
+  "size": "Small",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 17,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 12,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 5,
+  "charisma": 1,
+  "stats": {
+    "str": 12,
+    "dex": 15,
+    "con": 11,
+    "int": 1,
+    "wis": 5,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 7
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless and isn't flying, it is indistinguishable from a normal sword.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false] while in the area of an @UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{Antimagic Field}. If targeted by @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dispel Magic}, the [[lookup @name lowercase]]{monster} must succeed on a Constitution saving throw against the caster's spell save DC or fall &reference[unconscious] for 1 minute.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/FlyingSword.webp",
+  "url": "/assets/atlas/enemies/json/eqjua3z3181rssfu.json",
+  "updated_at": "2026-07-09T11:33:14.425Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

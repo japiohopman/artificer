@@ -1,0 +1,94 @@
+{
+  "index": "nasohu9kbkgeniwb",
+  "name": "gold dragon wyrmling",
+  "desc": "Gold Dragon Wyrmling is a CR 3 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 60,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 17,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 16,
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 17,
+    "int": 14,
+    "wis": 11,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Fire Breath. The [[lookup @name lowercase]]{monster} exhales fire in a [[lookup @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Each creature in that area must make a [[/save activity=o8fOmWWIqCYwGu3C]] saving throw, taking [[/damage average activity=o8fOmWWIqCYwGu3C]] damage on a failed save, or half as much damage on a successful one. Weakening Breath. The [[lookup @name lowercase]]{monster} exhales gas in a [[lookup @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Each creature in that area must succeed on a [[/save activity=J4QhEMZOdsyIy2D6]] saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/GoldDragonWyrmling.webp",
+  "url": "/assets/atlas/enemies/json/nasohu9kbkgeniwb.json",
+  "updated_at": "2026-07-09T11:33:14.739Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

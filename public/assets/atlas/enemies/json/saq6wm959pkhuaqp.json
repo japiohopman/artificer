@@ -1,0 +1,113 @@
+{
+  "index": "saq6wm959pkhuaqp",
+  "name": "green hag",
+  "desc": "Green Hag is a CR 3 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 82,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8 + 33",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 14,
+  "stats": {
+    "str": 18,
+    "dex": 12,
+    "con": 16,
+    "int": 13,
+    "wis": 14,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components: At will: [[/item .CAxSzHWizrafT033]]{dancing lights}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion}, [[/item .cdrYKaFi98YWaBMw]]{vicious mockery}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mimicry",
+      "desc": "The [[lookup @name lowercase]]{monster} can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful [[/check]] check.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "illusory appearance",
+      "desc": "The [[lookup @name lowercase]]{monster} covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the [[lookup @name lowercase]]{monster} takes a bonus action to end it or if she dies. The changes wrought by this effect fail to hold up to physical inspection. For example, the [[lookup @name lowercase]]{monster} could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a [[/check activity=kV9ZxzkLNTRogVW9]] check to discern that the [[lookup @name lowercase]]{monster} is disguised.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisible passage",
+      "desc": "The [[lookup @name lowercase]]{monster} magically turns &reference[invisible] until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/GreenHag.webp",
+  "url": "/assets/atlas/enemies/json/saq6wm959pkhuaqp.json",
+  "updated_at": "2026-07-09T11:33:14.898Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

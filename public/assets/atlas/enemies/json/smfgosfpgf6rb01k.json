@@ -1,0 +1,85 @@
+{
+  "index": "smfgosfpgf6rb01k",
+  "name": "flying snake",
+  "desc": "Flying Snake is a CR 0.125 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 4,
+  "dexterity": 18,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "stats": {
+    "str": 4,
+    "dex": 18,
+    "con": 11,
+    "int": 2,
+    "wis": 12,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "flyby",
+      "desc": "The [[lookup @name lowercase]]{monster} doesn't provoke &reference[opportunity attacks] when it flies out of an enemy's reach.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/FlyingSnake.webp",
+  "url": "/assets/atlas/enemies/json/smfgosfpgf6rb01k.json",
+  "updated_at": "2026-07-09T11:33:14.069Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

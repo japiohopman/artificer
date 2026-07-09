@@ -1,0 +1,122 @@
+{
+  "index": "qgcqyzbvl4bwzi4e",
+  "name": "shadow",
+  "desc": "Shadow is a CR 0.5 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8 + 3",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 13,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 6,
+    "dex": 14,
+    "con": 13,
+    "int": 6,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "radiant"
+  ],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing",
+    "thunder"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch wide without &reference[squeezing]{Squeezing}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shadow stealth",
+      "desc": "While in &reference[dim light] or &reference[darkness], the [[lookup @name lowercase]]{monster} can take the &reference[Hide] action as a bonus action.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "strength drain",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target's Strength score is reduced by [[/r 1d4]]. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest. If a non-evil humanoid dies from this attack, a new @UUID[Compendium.dnd5e.monsters.Actor.QGcQYZbVl4bWzi4E]{shadow} rises from the corpse 1d4 hours later.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "2d6-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Shadow.webp",
+  "url": "/assets/atlas/enemies/json/qgcqyzbvl4bwzi4e.json",
+  "updated_at": "2026-07-09T11:33:15.752Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

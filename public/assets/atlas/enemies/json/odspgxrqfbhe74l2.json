@@ -1,0 +1,114 @@
+{
+  "index": "odspgxrqfbhe74l2",
+  "name": "invisible stalker",
+  "desc": "Invisible Stalker is a CR 6 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 104,
+  "hit_dice": "16d8",
+  "hit_points_roll": "16d8 + 32",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 16,
+  "dexterity": 19,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 15,
+  "charisma": 11,
+  "stats": {
+    "str": 16,
+    "dex": 19,
+    "con": 14,
+    "int": 10,
+    "wis": 15,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "understands Common but doesn't speak it",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "faultless tracker",
+      "desc": "The [[lookup @name lowercase]]{monster} is given a quarry by its summoner. The [[lookup @name lowercase]]{monster} knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The [[lookup @name lowercase]]{monster} also knows the location of its summoner.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} is &reference[invisible apply=false].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .rpKiEPQVeOZTLwjf]]{slam} attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/InvisibleStalker.webp",
+  "url": "/assets/atlas/enemies/json/odspgxrqfbhe74l2.json",
+  "updated_at": "2026-07-09T11:33:14.852Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

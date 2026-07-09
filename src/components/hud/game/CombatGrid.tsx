@@ -7,6 +7,7 @@ import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { checkLoS, findPath, getDistance, getReachableCells } from '../../../lib/combatUtils';
+import { Token } from './Token';
 
 export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
@@ -148,17 +149,36 @@ export const CombatGrid: React.FC = () => {
     }
 
     // 4. Threat Range (on monster hover)
-    const hoveredMonster = monsters.find(m => m.x === hoveredCell?.x && m.y === hoveredCell?.y);
+    const hoveredMonster = monsters.find(m => {
+      const mFootprint = m.size === 'Large' ? 2 : 1;
+      return hoveredCell && 
+             hoveredCell.x >= m.x && hoveredCell.x < m.x + mFootprint && 
+             hoveredCell.y >= m.y && hoveredCell.y < m.y + mFootprint;
+    });
+
     if (hoveredMonster && visibleCells.has(`${hoveredMonster.x},${hoveredMonster.y}`)) {
       ctx.fillStyle = 'rgba(220, 38, 38, 0.1)';
       ctx.strokeStyle = 'rgba(220, 38, 38, 0.3)';
-      const threatRange = 6; // Assume 30ft for now
-      for (let dy = -threatRange; dy <= threatRange; dy++) {
-        for (let dx = -threatRange; dx <= threatRange; dx++) {
+      
+      // Calculate threat range based on monster speed or default to 30ft (6 cells)
+      const threatRange = hoveredMonster.speed || 6;
+      const mFootprint = hoveredMonster.size === 'Large' ? 2 : 1;
+
+      for (let dy = -threatRange; dy <= threatRange + mFootprint - 1; dy++) {
+        for (let dx = -threatRange; dx <= threatRange + mFootprint - 1; dx++) {
           const tx = hoveredMonster.x + dx;
           const ty = hoveredMonster.y + dy;
           if (tx >= 0 && tx < gridWidth && ty >= 0 && ty < gridHeight) {
-            if (getDistance(hoveredMonster, { x: tx, y: ty }) <= threatRange) {
+            // Check distance from any cell of the monster's footprint
+            let minDist = Infinity;
+            for (let fy = 0; fy < mFootprint; fy++) {
+              for (let fx = 0; fx < mFootprint; fx++) {
+                const dist = getDistance({ x: hoveredMonster.x + fx, y: hoveredMonster.y + fy }, { x: tx, y: ty });
+                if (dist < minDist) minDist = dist;
+              }
+            }
+            
+            if (minDist <= threatRange) {
               ctx.fillRect(tx * cellSize, ty * cellSize, cellSize, cellSize);
             }
           }
@@ -355,38 +375,42 @@ export const CombatGrid: React.FC = () => {
             className="absolute inset-0 z-10 cursor-crosshair"
           />
 
-          {/* Tokens Layer (Still React for animations/interactions) */}
+          {/* Tokens Layer */}
           <div className="absolute inset-0 pointer-events-none z-20">
              {/* Player Token */}
-             <motion.div 
-               drag
-               dragMomentum={false}
-               dragElastic={0.1}
-               onDrag={(_, info) => {
-                 const rect = canvasRef.current?.getBoundingClientRect();
-                 if (rect) {
-                   const x = Math.floor((info.point.x - rect.left) / cellSize);
-                   const y = Math.floor((info.point.y - rect.top) / cellSize);
-                   if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                     if (draggedPos?.x !== x || draggedPos?.y !== y) {
-                       setDraggedPos({ x, y });
-                     }
-                   }
-                 }
-               }}
-               onDragEnd={(_, info) => {
-                 const rect = canvasRef.current?.getBoundingClientRect();
-                 if (rect) {
+             <Token
+                id={activeCharacterId || 'player'}
+                name={activeChar?.name || 'Player'}
+                imageUrl={activeChar?.avatarUrl}
+                x={playerPos.x}
+                y={playerPos.y}
+                cellSize={cellSize}
+                isPlayer
+                draggedPos={draggedPos}
+                onDrag={(_, info) => {
+                  const rect = canvasRef.current?.getBoundingClientRect();
+                  if (rect) {
                     const x = Math.floor((info.point.x - rect.left) / cellSize);
                     const y = Math.floor((info.point.y - rect.top) / cellSize);
                     if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                      // Trigger move logic
+                      if (draggedPos?.x !== x || draggedPos?.y !== y) {
+                        setDraggedPos({ x, y });
+                      }
+                    }
+                  }
+                }}
+                onDragEnd={(_, info) => {
+                  const rect = canvasRef.current?.getBoundingClientRect();
+                  if (rect) {
+                    const x = Math.floor((info.point.x - rect.left) / cellSize);
+                    const y = Math.floor((info.point.y - rect.top) / cellSize);
+                    if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                       const { gameMode } = useUIStore.getState();
                       const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
                       if (path && path.length > 0) {
                         const isCombat = gameMode === 'combat';
-                      const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
-                      if (!isCombat || path.length * 5 <= maxMove) {
+                        const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
+                        if (!isCombat || path.length * 5 <= maxMove) {
                           setPlayerPos(x, y);
                           addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
                           if (isCombat) {
@@ -398,24 +422,10 @@ export const CombatGrid: React.FC = () => {
                         }
                       }
                     }
-                 }
-                 setDraggedPos(null);
-               }}
-               animate={draggedPos ? {} : { x: playerPos.x * cellSize, y: playerPos.y * cellSize }}
-               className="absolute p-1 pointer-events-auto cursor-grab active:cursor-grabbing z-[100]"
-               style={{ width: cellSize, height: cellSize }}
-             >
-                <div className="w-full h-full rounded-full border-2 border-blue-500 bg-blue-900/80 flex items-center justify-center overflow-hidden relative shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                  {activeChar?.avatarUrl ? (
-                    <img src={activeChar.avatarUrl} className="w-full h-full object-cover" alt={activeChar.name} />
-                  ) : (
-                    <GameIcon name="user" size={24} color="#FFF" />
-                  )}
-                </div>
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-blue-900/95 text-white text-[8px] font-elan px-2 py-0.5 rounded-sm border border-blue-400/50 uppercase whitespace-nowrap shadow-lg tracking-wider">
-                  {activeChar?.name || 'Player'}
-                </div>
-             </motion.div>
+                  }
+                  setDraggedPos(null);
+                }}
+             />
 
              {/* Monster Tokens */}
              <AnimatePresence>
@@ -423,16 +433,21 @@ export const CombatGrid: React.FC = () => {
                  const isVisible = visibleCells.has(`${monster.x},${monster.y}`);
                  if (!isVisible) return null;
 
-                 const mSize = monster.size === 'Large' ? 2 : 1;
                  return (
-                   <motion.div
+                   <Token
                     key={monster.id}
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1, x: monster.x * cellSize, y: monster.y * cellSize }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    className="absolute p-2 pointer-events-auto cursor-pointer"
-                    style={{ width: cellSize * mSize, height: cellSize * mSize }}
-                     onClick={async (e) => {
+                    id={monster.id}
+                    name={monster.name}
+                    imageUrl={monster.imageUrl}
+                    hp={monster.hp}
+                    maxHp={monster.maxHp}
+                    x={monster.x}
+                    y={monster.y}
+                    cellSize={cellSize}
+                    size={monster.size}
+                    isTargeting={isTargeting}
+                    isHovered={hoveredCell?.x === monster.x && hoveredCell?.y === monster.y}
+                    onClick={async (e) => {
                       e.stopPropagation();
                       if (isTargeting) {
                         const dist = getDistance(playerPos, { x: monster.x, y: monster.y });
@@ -452,21 +467,7 @@ export const CombatGrid: React.FC = () => {
                         setIsMonsterProfileOpen(true);
                       }
                     }}
-                   >
-                      <div className="w-full h-full rounded-full border-2 border-dragon-red bg-red-900/80 flex items-center justify-center overflow-hidden relative shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-                        {monster.imageUrl ? (
-                          <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
-                        ) : (
-                          <GameIcon name="identity" size={24} color="#FFF" />
-                        )}
-                        <div className="absolute bottom-0 left-0 w-full h-1 bg-black/60">
-                          <div className="h-full bg-dragon-red" style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }} />
-                        </div>
-                      </div>
-                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-dragon-darkRed/95 text-white text-[8px] font-elan px-2 py-0.5 rounded-sm border border-dragon-red/50 uppercase whitespace-nowrap shadow-lg tracking-wider">
-                        {monster.name}
-                      </div>
-                   </motion.div>
+                   />
                  );
                })}
              </AnimatePresence>

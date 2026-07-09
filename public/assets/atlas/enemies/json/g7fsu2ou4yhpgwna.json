@@ -1,0 +1,99 @@
+{
+  "index": "g7fsu2ou4yhpgwna",
+  "name": "darkmantle",
+  "desc": "Darkmantle is a CR 0.5 monstrosity.",
+  "size": "Small",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6 + 5",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "crush",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The [[lookup @name lowercase]]{monster} attaches to the target. If the target is Medium or smaller and the [[lookup @name lowercase]]{monster} has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also &reference[blinded] and unable to &reference[suffocating]{Breathe} while the [[lookup @name lowercase]]{monster} is attached in this way. While attached to the target, the [[lookup @name lowercase]]{monster} can attack no other creature except the target but has advantage on its attack rolls. The [[lookup @name lowercase]]{monster}'s speed also becomes 0, it can't benefit from any bonus to its speed, and it moves with the target. A creature can detach the [[lookup @name lowercase]]{monster} by making a successful [[/check activity=D6cM30tTL0VfB4x1]] check as an action. On its turn, the [[lookup @name lowercase]]{monster} can detach itself from the target by using 5 feet of movement.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "darkness aura",
+      "desc": "A [[lookup @labels.description.template activity=QwLySmRaYcAPebjO]] of magical &reference[darkness] extends out from the [[lookup @name lowercase]]{monster}, moves with it, and spreads around corners. The darkness lasts as long as the [[lookup @name lowercase]]{monster} maintains concentration, up to [[lookup @labels.duration activity=QwLySmRaYcAPebjO]] (as if concentrating on a spell). &reference[Darkvision] can't penetrate this darkness, and no natural light can illuminate it. If any of the darkness overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "echolocation",
+      "desc": "The [[lookup @name lowercase]]{monster} can't use its &reference[blindsight] while &reference[deafened apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Darkmantle.webp",
+  "url": "/assets/atlas/enemies/json/g7fsu2ou4yhpgwna.json",
+  "updated_at": "2026-07-09T11:33:15.348Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

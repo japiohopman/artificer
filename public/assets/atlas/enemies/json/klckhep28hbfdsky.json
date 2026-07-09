@@ -1,0 +1,115 @@
+{
+  "index": "klckhep28hbfdsky",
+  "name": "ettin",
+  "desc": "Ettin is a CR 4 giant.",
+  "size": "Large",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10 + 30",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 21,
+    "dex": 8,
+    "con": 17,
+    "int": 6,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "two heads",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks and on saving throws against being &reference[blinded apply=false], &reference[charmed apply=false], &reference[deafened apply=false], &reference[frightened apply=false], &reference[stunned apply=false], and knocked &reference[unconscious apply=false].",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wakeful",
+      "desc": "When one of the [[lookup @name lowercase]]{monster}'s heads is asleep, its other head is awake.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .T1QQrbvnvnM73eIe]]{battleaxe} and one with its [[/item .5ri5zr7IJKsaZNF7]]{morningstar}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "battleaxe",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "morningstar",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/Ettin.webp",
+  "url": "/assets/atlas/enemies/json/klckhep28hbfdsky.json",
+  "updated_at": "2026-07-09T11:33:15.054Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

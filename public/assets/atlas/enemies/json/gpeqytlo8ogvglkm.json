@@ -1,0 +1,101 @@
+{
+  "index": "gpeqytlo8ogvglkm",
+  "name": "grimlock",
+  "desc": "Grimlock is a CR 0.25 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Grimlock",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 9,
+  "wisdom": 8,
+  "charisma": 6,
+  "stats": {
+    "str": 16,
+    "dex": 12,
+    "con": 12,
+    "int": 9,
+    "wis": 8,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "blinded"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "blind senses",
+      "desc": "The [[lookup @name lowercase]]{monster} can't use its &reference[blindsight] while &reference[deafened apply=false] and unable to smell.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spiked bone club",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "stone camouflage",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Dexterity (Stealth) checks made to &reference[hide] in rocky terrain.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Grimlock.webp",
+  "url": "/assets/atlas/enemies/json/gpeqytlo8ogvglkm.json",
+  "updated_at": "2026-07-09T11:33:15.184Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

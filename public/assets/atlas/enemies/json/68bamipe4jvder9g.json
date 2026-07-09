@@ -1,0 +1,127 @@
+{
+  "index": "68bamipe4jvder9g",
+  "name": "storm giant",
+  "desc": "Storm Giant is a CR 13 giant.",
+  "size": "Huge",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 230,
+  "hit_dice": "20d12",
+  "hit_points_roll": "20d12 + 100",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 29,
+  "dexterity": 14,
+  "constitution": 20,
+  "intelligence": 16,
+  "wisdom": 18,
+  "charisma": 18,
+  "stats": {
+    "str": 29,
+    "dex": 14,
+    "con": 20,
+    "int": 16,
+    "wis": 18,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "greatsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "6d6+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The giant's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components: At will: [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .pub0OWVEB71XQx1n]]{feather fall}, [[/item .MRxldJd6C4bsBo3O]]{levitate}, [[/item .Bnn9Nzajixvow9xi]]{light} 3/day each: [[/item .ZPd73HtKF3At11jh]]{control weather}, [[/item .13uVuBQP6VaiSPvC]]{water breathing}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The giant makes two [[/item .iwN0z7f5LF9AAbRJ]]{greatsword} attacks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d12+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "lightning strike",
+      "desc": "The [[lookup @name lowercase]]{monster} hurls a magical lightning bolt at a point it can see within [[lookup @labels.description.range activity=Y2GMAvtp4yB0QcvH]] of it. Each creature within [[lookup @target.template.size activity=Y2GMAvtp4yB0QcvH]] feet of that point must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/StormGiant.webp",
+  "url": "/assets/atlas/enemies/json/68bamipe4jvder9g.json",
+  "updated_at": "2026-07-09T11:33:15.084Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,136 @@
+{
+  "index": "hpuo3weiwrqnql0d",
+  "name": "cloaker",
+  "desc": "Cloaker is a CR 8 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Chaotic Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 78,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 12",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 13,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 12,
+    "int": 13,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]], and if the target is Large or smaller, the cloaker attaches to it. If the [[lookup @name lowercase]]{monster} has advantage against the target, the [[lookup @name lowercase]]{monster} attaches to the target's head, and the target is &Reference[blinded] and unable to &Reference[suffocation apply=false]{Breathe} while the [[lookup @name lowercase]]{monster} is attached. While attached, the [[lookup @name lowercase]]{monster} can make this attack only against the target and has advantage on the attack roll. The [[lookup @name lowercase]]{monster} can detach itself by spending 5 feet of its movement. A creature, including the target, can take its action to detach the cloaker by succeeding on a [[/check]] check.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "damage transfer",
+      "desc": "While attached to a creature, the [[lookup @name lowercase]]{monster} takes only half the damage dealt to it (rounded down) and that creature takes the other half.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless without its underside exposed, it is indistinguishable from a dark leather cloak.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "light sensitivity",
+      "desc": "While in &reference[bright light], the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The cloaker makes two attacks: one with its [[/item .afXMbT7smRaCJbhc]]{bite} and one with its [[/item .ZRvdvg8n7pQdJ1Mj]]{tail}.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "moan",
+      "desc": "Each creature within 60 feet of the [[lookup @name lowercase]]{monster} that can hear its moan and that isn't an aberration must succeed on a [[/save]] saving throw or become &Reference[frightened] until the end of the [[lookup @name lowercase]]{monster}'s next turn. If a creature's saving throw is successful, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "phantasms",
+      "desc": "The [[lookup @name lowercase]]{monster} magically creates three illusory duplicates of itself if it isn't in &reference[bright light]. The duplicates move with it and mimic its actions, shifting position so as to make it impossible to track which [[lookup @name lowercase]]{monster} is the real one. If the [[lookup @name lowercase]]{monster} is ever in an area of bright light, the duplicates disappear. Whenever any creature targets the [[lookup @name lowercase]]{monster} with an attack or a harmful spell while a duplicate remains, that creature rolls randomly to determine whether it targets the cloaker or one of the duplicates. A creature is unaffected by this magical effect if it can't see or if it relies on senses other than sight. A duplicate has the [[lookup @name lowercase]]{monster}'s AC and uses its saving throws. If an attack hits a duplicate, or if a duplicate fails a saving throw against an effect that deals damage, the duplicate disappears.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Cloaker.webp",
+  "url": "/assets/atlas/enemies/json/hpuo3weiwrqnql0d.json",
+  "updated_at": "2026-07-09T11:33:13.966Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

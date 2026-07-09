@@ -1,0 +1,85 @@
+{
+  "index": "hqj2yxtgwt64v3lj",
+  "name": "basilisk",
+  "desc": "Basilisk is a CR 3 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 16",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 7,
+  "stats": {
+    "str": 16,
+    "dex": 8,
+    "con": 15,
+    "int": 2,
+    "wis": 8,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "petrifying gaze",
+      "desc": "If a creature starts its turn within 30 feet of the [[lookup @name lowercase]]{monster} and the two of them can see each other, the [[lookup @name lowercase]]{monster} can force the creature to make a [[/save]] saving throw if the [[lookup @name lowercase]]{monster} isn't &reference[incapacitated apply=false]. On a failed save, the creature magically begins to turn to stone and is &reference[restrained]. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is &reference[petrified] until freed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell or other magic. A creature that isn't &reference[surprise]{Surprised} can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the [[lookup @name lowercase]]{monster} until the start of its next turn, when it can avert its eyes again. If it looks at the [[lookup @name lowercase]]{monster} in the meantime, it must immediately make the save. If the [[lookup @name lowercase]]{monster} sees its reflection within 30 feet of it in &reference[bright light], it mistakes itself for a rival and targets itself with its gaze.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Basilisk.webp",
+  "url": "/assets/atlas/enemies/json/hqj2yxtgwt64v3lj.json",
+  "updated_at": "2026-07-09T11:33:15.320Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

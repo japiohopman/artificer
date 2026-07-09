@@ -1,0 +1,133 @@
+{
+  "index": "6oc29m5uzzzb0pk3",
+  "name": "vrock",
+  "desc": "Vrock is a CR 6 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 104,
+  "hit_dice": "11d10",
+  "hit_points_roll": "11d10 + 44",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 18,
+  "intelligence": 8,
+  "wisdom": 13,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 18,
+    "int": 8,
+    "wis": 13,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .JwAFMjU7vHDDL2Ib]]{beak} and one with its [[/item .H5JJE8uS39dTI3Vg]]{talons}.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beak",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spores",
+      "desc": "A [[lookup @labels.description.template activity=6NlNH6h0uxCCjmPL]] cloud of toxic spores extends out from the vrock. The spores spread around corners. Each creature in that area must succeed on a [[/save]] saving throw or become &Reference[poisoned]. While poisoned in this way, a target takes [[/damage average]] damage at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Emptying a vial of @UUID[Compendium.dnd5e.equipment24.Item.nshr9PBVyB03T7wB]{Holy Water} on the target also ends the effect on it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "stunning screech",
+      "desc": "The [[lookup @name lowercase]]{monster} emits a horrific screech. Each creature within 20 feet of it that can hear it and that isn't a demon must succeed on a [[/save]] saving throw or be &reference[stunned] until the end of the [[lookup @name lowercase]]{monster}'s next turn .",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Vrock.webp",
+  "url": "/assets/atlas/enemies/json/6oc29m5uzzzb0pk3.json",
+  "updated_at": "2026-07-09T11:33:15.036Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

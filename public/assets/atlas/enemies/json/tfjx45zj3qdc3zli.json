@@ -1,0 +1,112 @@
+{
+  "index": "tfjx45zj3qdc3zli",
+  "name": "grick",
+  "desc": "Grick is a CR 2 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 5,
+  "stats": {
+    "str": 14,
+    "dex": 14,
+    "con": 11,
+    "int": 3,
+    "wis": 14,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one attack with its [[/item .tkVlxJxg4LBVJvuX]]{tentacles}. If that attack hits, the [[lookup @name lowercase]]{monster} can make one [[/item .AGLjE9RSCjg1vQ6R]]{beak} attack against the same target.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tentacles",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "beak",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "stone camouflage",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Dexterity (Stealth) checks made to &reference[hide] in rocky terrain.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Grick.webp",
+  "url": "/assets/atlas/enemies/json/tfjx45zj3qdc3zli.json",
+  "updated_at": "2026-07-09T11:33:15.376Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

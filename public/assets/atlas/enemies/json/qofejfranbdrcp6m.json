@@ -1,0 +1,135 @@
+{
+  "index": "qofejfranbdrcp6m",
+  "name": "ghost",
+  "desc": "Ghost is a CR 4 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 13,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 17,
+  "stats": {
+    "str": 7,
+    "dex": 13,
+    "con": 10,
+    "int": 10,
+    "wis": 12,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "bludgeoning",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing",
+    "thunder"
+  ],
+  "damage_immunities": [
+    "cold",
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any languages it knew in life",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ethereal sight",
+      "desc": "The [[lookup @name lowercase]]{monster} can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "withering touch",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "4d6-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "etherealness",
+      "desc": "The [[lookup @name lowercase]]{monster} enters the Ethereal Plane from the Material Plane, or vice versa. It is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "horrifying visage",
+      "desc": "Each non-undead creature within [[lookup @target.template.size activity=LYjmuZ7QyGDPVBoT]] feet of the [[lookup @name lowercase]]{monster} that can see it must succeed on a DC 13 Wisdom saving throw or be &reference[frightened] for [[lookup @labels.duration activity=LYjmuZ7QyGDPVBoT]]. If the save fails by 5 or more, the target also ages [[/r 1d4 * 10 #Years aged.]]{1d4 x 10} years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours. The aging effect can be reversed with a @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell, but only within 24 hours of it occurring.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "possession",
+      "desc": "One humanoid that the [[lookup @name lowercase]]{monster} can see within [[lookup @labels.description.range activity=WcBEt039Ueelll14]] of it must succeed on a [[/save activity=WcBEt039Ueelll14]] saving throw or be possessed by the [[lookup @name lowercase]]{monster}; the [[lookup @name lowercase]]{monster} then disappears, and the target is &reference[incapacitated] and loses control of its body. The [[lookup @name lowercase]]{monster} now controls the body but doesn't deprive the target of awareness. The [[lookup @name lowercase]]{monster} can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being &reference[charmed apply=false] and &reference[frightened apply=false]. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies. The possession lasts until the body drops to 0 hit points, the [[lookup @name lowercase]]{monster} ends it as a bonus action, or the [[lookup @name lowercase]]{monster} is turned or forced out by an effect like the @UUID[Compendium.dnd5e.spells.Item.TkJ8Wtg1L7TZtspm]{dispel evil and good} spell. When the possession ends, the [[lookup @name lowercase]]{monster} reappears in an unoccupied space within 5 feet of the body. The target is immune to this [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for 24 hours after succeeding on the saving throw or after the possession ends. Foundry Note The active effect applied by the \"Possess Creature\" activity sets the target's mental statistics to the [[lookup @name lowercase]]{monster}'s and gives them immunity to the charmed and frightened conditions in order to represent the [[lookup @name lowercase]]{monster} possessing the target.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "incorporeal movement",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &reference[difficult terrain]. It takes [[/damage average]] damage if it ends its turn inside an object.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Ghost.webp",
+  "url": "/assets/atlas/enemies/json/qofejfranbdrcp6m.json",
+  "updated_at": "2026-07-09T11:33:15.698Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

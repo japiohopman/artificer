@@ -1,0 +1,103 @@
+{
+  "index": "45z5kogzehawx1ey",
+  "name": "fire giant",
+  "desc": "Fire Giant is a CR 9 giant.",
+  "size": "Huge",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 9
+    }
+  ],
+  "hit_points": 162,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12 + 78",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 25,
+  "dexterity": 9,
+  "constitution": 23,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "stats": {
+    "str": 25,
+    "dex": 9,
+    "con": 23,
+    "int": 10,
+    "wis": 14,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .c8b8jy3sM3Z8gxm0]]{greatsword} attacks.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "greatsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "6d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d10+7"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/FireGiant.webp",
+  "url": "/assets/atlas/enemies/json/45z5kogzehawx1ey.json",
+  "updated_at": "2026-07-09T11:33:15.057Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

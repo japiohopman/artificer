@@ -1,0 +1,133 @@
+{
+  "index": "rug5jmnknnznbaq9",
+  "name": "nalfeshnee",
+  "desc": "Nalfeshnee is a CR 13 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 184,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 96",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 19,
+  "wisdom": 12,
+  "charisma": 15,
+  "stats": {
+    "str": 21,
+    "dex": 10,
+    "con": 22,
+    "int": 19,
+    "wis": 12,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Telepathy 120 ft.",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} uses [[/item .RFPDYIhkmBW2B47S]]{Horror Nimbus} if it can. It then makes three attacks: one with its [[/item .524dkWbpWUJKFaj2]]{bite} and two with its [[/item .xhKo80CbyA57Kl1l]]{claws}.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "5d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "3d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "horror nimbus",
+      "desc": "The [[lookup @name lowercase]]{monster} magically emits scintillating, multicolored light. Each creature within 15 feet of the [[lookup @name lowercase]]{monster} that can see the light must succeed on a [[/save]] saving throw or be &Reference[frightened] for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=ceqRWRMK1a37epib]] to an unoccupied space it can see.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Nalfeshnee.webp",
+  "url": "/assets/atlas/enemies/json/rug5jmnknnznbaq9.json",
+  "updated_at": "2026-07-09T11:33:14.993Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

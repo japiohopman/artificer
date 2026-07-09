@@ -1,0 +1,145 @@
+{
+  "index": "uz8nrrenwyz4qnf6",
+  "name": "balor",
+  "desc": "Balor is a CR 19 fiend.",
+  "size": "Huge",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 262,
+  "hit_dice": "21d12",
+  "hit_points_roll": "21d12 + 126",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 26,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 20,
+  "wisdom": 16,
+  "charisma": 22,
+  "stats": {
+    "str": 26,
+    "dex": 15,
+    "con": 22,
+    "int": 20,
+    "wis": 16,
+    "cha": 22
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "lightning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 19,
+  "proficiency_bonus": 6,
+  "xp": 22000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "death throes",
+      "desc": "When the [[lookup @name lowercase]]{monster} dies, it explodes, and each creature within 30 feet of it must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]{monster}'s weapons.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fire aura",
+      "desc": "At the start of each of the [[lookup @name lowercase]]{monster}'s turns, each creature within [[lookup @labels.description.range activity=t0DzL3PUekMarxZX]] of it takes [[/damage average]] damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within [[lookup @labels.description.range activity=QoYDB21VZPDbFEuo]] of it takes [[/damage average activity=QoYDB21VZPDbFEuo]] damage.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .6ZAh5TkiXwQMUfDB]]{longsword} and one with its [[/item .1oGgJQB1ItqyKoZ5]]{whip}.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=dnd5eactivity000]] to an unoccupied space it can see.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the [[lookup @name lowercase]]{monster} scores a critical hit, it rolls damage dice three times, instead of twice.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "3d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "whip",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or be pulled up to 25 feet toward the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 11,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Balor.webp",
+  "url": "/assets/atlas/enemies/json/uz8nrrenwyz4qnf6.json",
+  "updated_at": "2026-07-09T11:33:14.922Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}
