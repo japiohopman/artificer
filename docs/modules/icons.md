@@ -1,75 +1,76 @@
-# Icon System Documentation
+# Solo SVG Icon System Documentation
 
 ## Overview
-The Artificer project uses a custom, path-based icon system designed for maximum flexibility, performance, and thematic consistency. Unlike traditional libraries (e.g., Lucide or FontAwesome), we store raw SVG path data in TypeScript constants. This allows for easy tree-shaking, minimal bundle size, and full control over styling through standard SVG attributes.
+The Artificer project utilizes a state-of-the-art, high-performance **Solo SVG Icon System**. Instead of storing raw SVG paths in legacy TypeScript files, all icons are managed as standard, standalone `.svg` files located in the `public/assets/icons/svg/` directory.
+
+This architecture offers major benefits:
+1. **Thematic Clarity**: Icons are organized cleanly in semantic folders (e.g., `ui`, `actions`, `statuses`, `items`).
+2. **Dynamic Autodiscovery**: New icons are registered automatically when dropped into the appropriate folder, without editing constant definitions.
+3. **Multi-path & Animation Support**: Icons support full SVG features, including multi-paths, gradients, colors, custom viewBox configurations, and CSS animations.
+4. **Rich Metadata**: Custom `data-*` attributes inside SVG files provide instant localization and tooling integration (labels, descriptions, usage).
 
 ## Architecture
-The icon system is located in `src/assets/icons/`. It is organized into categorized files to ensure maintainability and clear ownership of icon sets.
 
-### Directory Structure
-- `src/assets/icons/index.ts`: The central registry that aggregates and exports all icon maps.
-- `src/assets/icons/*.ts`: Categorized icon map files (e.g., `ui.ts`, `features.ts`, `equipment.ts`).
-- `src/game_icons.tsx`: The primary `GameIcon` React component used to render icons throughout the application.
+All icons reside in the public assets directory:
+- **Registry**: `public/assets/icons/index.ts`
+- **Solo SVGs**: `public/assets/icons/svg/`
+- **UI Component**: `src/game_icons.tsx`
+
+### Automatic Registries
+The central registry at `public/assets/icons/index.ts` uses Vite's fast build-time glob import:
+```ts
+const svgModules = import.meta.glob('/public/assets/icons/svg/**/*.svg', { query: '?raw', eager: true });
+```
+Vite loads all `.svg` files inside the directory, parses their XML content on build, extracts attributes (viewBox, custom datasets), and exposes them as structured `IconDefinition` instances.
 
 ## Icon Categories
-Icons are grouped by their functional role in the game:
+Subdirectories inside `public/assets/icons/svg/` correspond to standard categories used across game subsystems:
 
-- **UI_ICONS (`ui.ts`)**: General interface elements (navigation, controls, common status indicators). Merged from former Core, Logistics, and Navigation maps.
-- **WORLD_ATLAS_ICONS (`world_atlas.ts`)**: Locations, regions, and landmarks for the world map and discovery systems. Recently expanded with more settlement and terrain types.
-- **ATTACK_ICONS (`attacks.ts`)**: Weapons and natural attack types.
-- **DAMAGE_TYPE_ICONS (`damage_types.ts`)**: D&D 5e damage types (Fire, Cold, Necrotic, etc.).
-- **CONDITION_ICONS (`conditions.ts`)**: Status effects and conditions.
-- **DICE_ICONS (`dice.ts`)**: Polyhedral dice representations.
-- **CHARACTER_ICONS (`character.ts`)**: Character-related UI elements.
-- **CURRENCY_ICONS (`currency.ts`)**: Coins and wealth icons (Aliased as `POUCH_ICONS`).
-- **ABILITY_SCORE_ICONS (`ability_score.ts`)**: Strength, Dexterity, etc.
-- **SKILL_ICONS (`skill.ts`)**: D&D skills.
-- **EDITOR_ICONS (`editor.ts`)**: Icons specific to internal tools, editors, and development utilities (formerly `DEVKIT_ICONS`).
-- **BOOK_READER_ICONS (`book_reader.ts`)**: Controls and indicators for the in-game book reading experience.
-- **TAROT_ICONS (`tarot.ts`)**: Illustrations for the tarot/divination system.
-- **EQUIPMENT_DOLL (`equipment_doll.ts`)**: Slot indicators for the character equipment interface (Head, Chest, Boots, etc.).
-- **MATERIALS (`materials.ts`)**: Categorized icons for crafting materials and resources.
-- **SUBCLASS_ICONS (`subclasses.ts`)**: Unique identifiers for character archetypes.
-- **ACTION_ICONS (`actions.ts`)**: Combat and exploration actions (Attack, Dash, Hide, etc.).
-- **FEATURE_ICONS (`features.ts`)**: Class features, racial traits, and special abilities.
-- **EQUIPMENT_ICONS (`equipment.ts`)**: Weapons, armor, and adventuring gear.
-- **STAT_COMPARISON_ICONS (`stat_comparison.ts`)**: Indicators for value changes (improvement/reduction).
+- **ui/**: Core navigational elements, window controls, and interface states (e.g., `chevron_left`, `close`, `save`, `plus`).
+- **action/**: Core combat and exploration actions (e.g., `dodge`, `dash`, `hide`, `jump`).
+- **actors/**: Creature types and identifiers (e.g., `beast`, `dragon`, `humanoid`).
+- **damage/**: D&D 5e damage types (e.g., `fire`, `cold`, `lightning`).
+- **statuses/**: Status conditions and ailments (e.g., `burning`, `poisoned`, `stunned`).
+- **dice/**: Polyhedral dice representations.
+- **items/**: Weapons, armor, and adventuring gear.
+- **schools/**: Arcane schools of magic (e.g., `abjuration`, `evocation`).
+- **tarot/**: Tarot-based arcana and divination cards.
+- **equipment_doll/**: Indicators for equipment slot layout.
 
 ## How to Use Icons
 
-### Standard Usage
-Use the `GameIcon` component with the `name` prop:
+### The GameIcon Component
+Render any icon using the centralized `<GameIcon>` component:
 
 ```tsx
-import { GameIcon } from '@/game_icons';
+import { GameIcon } from '@/src/game_icons';
 
-// Simple usage
+// Simple rendering by name
 <GameIcon name="save" size={24} color="#8B0000" />
 
-// Within a button
-<button>
-  <GameIcon name="plus" size={16} />
-  <span>Add Item</span>
-</button>
+// Title / Tooltip support
+<GameIcon name="chevron_left" size={16} title="Back to previous page" />
 ```
 
-### Adding New Icons
-1.  **Identify the Category**: Choose the appropriate file in `src/assets/icons/`.
-2.  **Add the Key**: Add a new key to the exported constant with an empty string or the SVG path data.
-    ```ts
-    export const UI_ICONS = {
-      // ... existing icons
-      new_icon_key: "M...", // SVG path data here
-    };
-    ```
-3.  **Update the Registry**: If you created a *new* category file, you must import and export it in `src/assets/icons/index.ts`.
+### Dynamic categories & direct imports
+For custom rendering engines (e.g. World Maps, Tactical Grids), categorized indices can be imported directly:
 
-## Guiding Principles
-- **Avoid Duplication**: Check if a similar icon already exists in `UI_ICONS` or other categories before adding a new one.
-- **Path Data Only**: We do not use React Icon components (like those from `lucide-react`) directly in the game systems to maintain a consistent "Parchment & Dragonstone" aesthetic.
-- **Semantic Naming**: Name icon keys based on their *meaning* or *function* (e.g., `magic_effect`, `range`, `panel`) rather than their visual appearance (e.g., `sparkles`, `target`, `layout`).
-- **No Generic Names**: Avoid abstract or cryptic names like `zap`, `bot`, `activity`, or `knowledge`. Use descriptive names like `energy`, `identity`, `vitality`, or `lore`.
-- **Consistency**: Features and variants should share icons where appropriate. Avoid redundant class-specific prefixes or level-based suffixes if the icon is functionally identical.
+```tsx
+import { WORLD_ATLAS_ICONS, UI_ICONS } from '@/public/assets/icons';
 
-## Performance
-By importing specific icon maps directly (e.g., `import { UI_ICONS } from '@/assets/icons/ui'`), Vite can tree-shake unused icons from the final build. Avoid using `ALL_ICONS` in production components.
+const path = WORLD_ATLAS_ICONS['settlement']?.path;
+```
+
+## Adding New Icons
+To add a new icon, simply:
+1. Identify its folder under `public/assets/icons/svg/` (e.g. `public/assets/icons/svg/ui/`).
+2. Save your SVG file inside the folder (e.g., `my_new_icon.svg`).
+3. Embed optional semantic data attributes into your SVG tag:
+   ```xml
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" 
+        data-label="My New Icon" 
+        data-description="Custom system control icon.">
+     <path d="M..." />
+   </svg>
+   ```
+4. Use it directly in React with `<GameIcon name="my_new_icon" />`. It is automatically rewired, bundled, and made available!

@@ -1,12 +1,47 @@
-import { IconCategory, IconDefinition, FolderNode, FileNode } from '../../types';
+export interface IconDefinition {
+  path?: string;
+  label: string;
+  description: string;
+  rawHtml?: string;
+  viewBox?: string;
+  usage?: string;
+  usedIn?: string;
+  rotate?: number;
+  animation?: any;
+  color?: string;
+}
 
-// Process and parse dynamically imported SVGs
-const svgModules = (import.meta as any).glob('/src/assets/icons/svg/**/*.svg', { query: '?raw', eager: true });
+export interface IconCategory {
+  id: string;
+  name: string;
+  file: string;
+  icons: Record<string, IconDefinition>;
+  description?: string;
+  isComplete?: boolean;
+}
+
+export interface FolderNode {
+  type: 'folder';
+  name: string;
+  path: string;
+  children: (FolderNode | FileNode)[];
+}
+
+export interface FileNode {
+  type: 'file';
+  name: string;
+  iconId: string;
+  path: string;
+  fullPath: string;
+}
+
+// Process and parse dynamically imported SVGs from public
+const svgModules = (import.meta as any).glob('/public/assets/icons/svg/**/*.svg', { query: '?raw', eager: true });
 
 const DYNAMIC_SVGS: Record<string, IconDefinition> = {};
 const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {};
 
-// Map folder names in src/assets/icons/svg/<folder>/ to standard category IDs
+// Map folder names in public/assets/icons/svg/<folder>/ to standard category IDs
 const FOLDER_TO_CATEGORY: Record<string, string> = {
   abilities: 'ability_score',
   action: 'actions',
@@ -162,7 +197,7 @@ ICON_CATEGORIES.forEach(cat => {
   }
 });
 
-// Auto-register any new category folders under src/assets/icons/svg/
+// Auto-register any new category folders under public/assets/icons/svg/
 Object.entries(SVG_CATEGORIES).forEach(([catId, icons]) => {
   const existingCat = ICON_CATEGORIES.find(c => c.id === catId);
   if (!existingCat) {
@@ -184,6 +219,33 @@ Object.entries(SVG_CATEGORIES).forEach(([catId, icons]) => {
 
 export const ALL_ICONS = DYNAMIC_SVGS;
 
+// Explicit exports for backward compatibility
+export const WORLD_ATLAS_ICONS = SVG_CATEGORIES['world_atlas'] || {};
+export const UI_ICONS = SVG_CATEGORIES['ui'] || {};
+export const ATTACK_ICONS = SVG_CATEGORIES['attacks'] || {};
+export const EQUIPMENT_ICONS = SVG_CATEGORIES['equipment'] || {};
+export const DAMAGE_TYPE_ICONS = SVG_CATEGORIES['damage_types'] || {};
+export const CONDITION_ICONS = SVG_CATEGORIES['conditions'] || {};
+export const CREATURE_TYPE_ICONS = SVG_CATEGORIES['creatures'] || {};
+export const DICE_ICONS = SVG_CATEGORIES['dice'] || {};
+export const CHARACTER_ICONS = SVG_CATEGORIES['character'] || {};
+export const CURRENCY_ICONS = SVG_CATEGORIES['currency'] || {};
+export const EDITOR_ICONS = SVG_CATEGORIES['editor'] || {};
+export const ABILITY_SCORE_ICONS = SVG_CATEGORIES['ability_score'] || {};
+export const SKILL_ICONS = SVG_CATEGORIES['skill'] || {};
+export const FEAT_ICONS = SVG_CATEGORIES['feats'] || {};
+export const FEATURE_ICONS = SVG_CATEGORIES['features'] || {};
+export const TRAIT_ICONS = SVG_CATEGORIES['traits'] || {};
+export const MAGIC_SCHOOL_ICONS = SVG_CATEGORIES['magic_schools'] || {};
+export const ACTION_ICONS = SVG_CATEGORIES['actions'] || {};
+export const SUBCLASS_ICONS = SVG_CATEGORIES['subclasses'] || {};
+export const STAT_COMPARISON_ICONS = SVG_CATEGORIES['stat_comparison'] || {};
+export const MATERIALS_ICONS = SVG_CATEGORIES['materials'] || {};
+export const MUSICAL_INSTRUMENT_ICONS = SVG_CATEGORIES['musical_instruments'] || {};
+export const BOOK_READER_ICONS = SVG_CATEGORIES['book_reader'] || {};
+export const EQUIPMENT_DOLL = SVG_CATEGORIES['equipment_doll'] || {};
+export const MINI_GAME_ICONS = SVG_CATEGORIES['minigame'] || {};
+
 // Construct the filesystem directory explorer tree dynamically from svgModules
 const rootNode: FolderNode = {
   type: 'folder',
@@ -193,7 +255,7 @@ const rootNode: FolderNode = {
 };
 
 Object.keys(svgModules).forEach((filePath) => {
-  const prefix = '/src/assets/icons/svg/';
+  const prefix = '/public/assets/icons/svg/';
   const index = filePath.indexOf(prefix);
   if (index === -1) return;
 
@@ -216,7 +278,7 @@ Object.keys(svgModules).forEach((filePath) => {
       });
     } else {
       let dirNode = currentNode.children.find(
-        (child) => child.type === 'folder' && child.name === segment
+        (child: FolderNode | FileNode) => child.type === 'folder' && child.name === segment
       ) as FolderNode;
       if (!dirNode) {
         dirNode = {
@@ -234,15 +296,15 @@ Object.keys(svgModules).forEach((filePath) => {
 
 // Helper function to recursively sort folders first, then files alphabetically
 function sortTree(node: FolderNode) {
-  node.children.sort((a, b) => {
+  node.children.sort((a: FolderNode | FileNode, b: FolderNode | FileNode) => {
     if (a.type !== b.type) {
       return a.type === 'folder' ? -1 : 1;
     }
     return a.name.localeCompare(b.name);
   });
-  node.children.forEach((child) => {
+  node.children.forEach((child: FolderNode | FileNode) => {
     if (child.type === 'folder') {
-      sortTree(child);
+      sortTree(child as FolderNode);
     }
   });
 }
