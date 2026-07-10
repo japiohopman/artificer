@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { getEnemyArtworkUrl } from '../../services/storageService';
 
 export const EnemyStats: React.FC = () => {
   const { focusedItem: enemy } = useUIStore();
@@ -23,7 +24,7 @@ export const EnemyStats: React.FC = () => {
       <div className="bg-stone-900/40 rounded-xl border border-white/5 overflow-hidden">
          <div className="h-48 relative overflow-hidden group">
             <img 
-              src={enemy.imageUrl || 'https://picsum.photos/seed/enemy/400/600'} 
+              src={getEnemyArtworkUrl(enemy) || 'https://picsum.photos/seed/enemy/400/600'}
               className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110" 
               alt={enemy.name}
             />

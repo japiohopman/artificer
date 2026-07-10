@@ -8,7 +8,7 @@ import { cn } from '../../lib/utils';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { DiceText } from '../dice/DiceText';
-import { normalizeImageUrl } from '../../services/storageService';
+import { normalizeImageUrl, getEnemyArtworkUrl } from '../../services/storageService';
 
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
@@ -60,7 +60,7 @@ export const MonsterProfile: React.FC = () => {
          <div className="lg:w-1/3 flex flex-col gap-6">
             <div className="aspect-[3/4] bg-dragon-red/5 rounded-2xl border border-dragon-red/10 relative overflow-hidden group">
                <ChromaKeyImage 
-                src={normalizeImageUrl(monster.imageUrl, 'monsters', monster.index)} 
+                src={getEnemyArtworkUrl(monster)}
                 alt={monster.name}
                 className="w-full h-full object-contain relative z-10 transition-transform duration-1000 group-hover:scale-105"
                />

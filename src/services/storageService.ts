@@ -336,6 +336,28 @@ export async function fetchMagicItemData(index: string): Promise<any> {
   }
 }
 
+export function getEnemyArtworkUrl(enemy: any): string {
+  if (!enemy) return '';
+  const url = enemy.imageUrl || enemy.image || '';
+  const isToken = typeof url === 'string' && (
+    url.includes('/tokens/') ||
+    url.includes('/enemies/tokens/') ||
+    url.includes('%2Ftokens%2F') ||
+    url.includes('%2Fenemies%2Ftokens%2F')
+  );
+
+  if (isToken && enemy.name) {
+    const slug = enemy.name.toLowerCase()
+      .replace(/[^a-z0-9]/g, '_')
+      .replace(/_+/g, '_')
+      .trim()
+      .replace(/^_+|_+$/g, '');
+    return `/assets/atlas/enemies/images/${slug}.webp`;
+  }
+
+  return normalizeImageUrl(url, 'enemies', enemy.index || enemy.name);
+}
+
 export function normalizeImageUrl(url: string | undefined, category: string, index: string): string {
   const timestamp = Date.now();
   let finalUrl = "";
