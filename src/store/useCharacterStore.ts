@@ -469,11 +469,27 @@ characters: state.characters.map(char =>
         else if (id === 'slot3') slots[2] = c;
       });
 
-      set({ 
-        mainCharacterSlots: slots,
+      // Ensure every loaded character has a populated actionEconomy state
+      const processedChars = chars.map(char => {
+        if (!char.actionEconomy) {
+          char.actionEconomy = {
+            actions: { current: 1, max: 1 },
+            bonusActions: { current: 1, max: 1 },
+            reactions: { current: 1, max: 1 },
+            movement: { current: 30, max: 30 },
+            objectInteractions: { current: 1, max: 1 }
+          };
+        }
+        return char;
       });
 
-      for (const char of chars) {
+      set({ 
+        mainCharacterSlots: slots,
+        characters: processedChars,
+        activeCharacterId: get().activeCharacterId || (processedChars[0]?.id || '')
+      });
+
+      for (const char of processedChars) {
           if (char && char.level > 0) {
               const levels = Array.from({ length: char.level }, (_, i) => i + 1);
               await get().loadLeveledData(char.class, levels);
