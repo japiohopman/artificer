@@ -2,8 +2,89 @@
 
 @font-face {
   font-family: 'Elan ITC Std';
-  src: url('/assets/atlas/font/Elan ITC Std Black.otf') format('opentype');
+  src: url('/assets/fonts/elan-ITC/Elan ITC Std Black.otf') format('opentype');
   font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Local Roboto Font Families */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/roboto-condensed/RobotoCondensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/roboto-condensed/RobotoCondensed-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/roboto-condensed/RobotoCondensed-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/roboto-condensed/RobotoCondensed-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/assets/fonts/roboto-slab/RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('/assets/fonts/roboto-slab/RobotoSlab-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -32,6 +113,9 @@
   --font-bodoni-sc: "Bodoni Moda SC", serif;
   --font-stix: "STIX Two Text", serif;
   --font-elvish: "Elvish", cursive;
+  --font-roboto: "Roboto", sans-serif;
+  --font-roboto-condensed: "Roboto Condensed", sans-serif;
+  --font-roboto-slab: "Roboto Slab", serif;
 
   --color-parchment-50: #fdfaf3;
   --color-parchment-100: #f9f4e8;
@@ -135,6 +219,18 @@
   .font-stix {
     font-family: var(--font-stix);
     font-optical-sizing: auto;
+  }
+
+  .font-roboto {
+    font-family: var(--font-roboto);
+  }
+
+  .font-roboto-condensed {
+    font-family: var(--font-roboto-condensed);
+  }
+
+  .font-roboto-slab {
+    font-family: var(--font-roboto-slab);
   }
 
   /* Markdown Styles */
