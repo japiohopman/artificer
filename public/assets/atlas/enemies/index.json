@@ -1,5 +1,610 @@
 [
   {
+    "index": "0m8qydn52qw9zzom",
+    "name": "gargoyle",
+    "type": "elemental",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 52,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Gargoyle.webp",
+    "json_path": "/assets/atlas/enemies/json/0m8qydn52qw9zzom.json"
+  },
+  {
+    "index": "13k3xk2a3wwxvkld",
+    "name": "spy",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 1,
+    "hit_points": 27,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Spy.webp",
+    "json_path": "/assets/atlas/enemies/json/13k3xk2a3wwxvkld.json"
+  },
+  {
+    "index": "1cwfyaacm5f0l4y3",
+    "name": "merrow",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Merrow.webp",
+    "json_path": "/assets/atlas/enemies/json/1cwfyaacm5f0l4y3.json"
+  },
+  {
+    "index": "1es45odwg3pcrkzv",
+    "name": "bulette",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 94,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Bulette.webp",
+    "json_path": "/assets/atlas/enemies/json/1es45odwg3pcrkzv.json"
+  },
+  {
+    "index": "1oqbxozi5btlb2me",
+    "name": "drider",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 6,
+    "hit_points": 123,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Drider.webp",
+    "json_path": "/assets/atlas/enemies/json/1oqbxozi5btlb2me.json"
+  },
+  {
+    "index": "1vabsmufoy6jpj14",
+    "name": "drow",
+    "type": "humanoid",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Drow.webp",
+    "json_path": "/assets/atlas/enemies/json/1vabsmufoy6jpj14.json"
+  },
+  {
+    "index": "1zzrqps9jzdlzgqi",
+    "name": "ice devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 14,
+    "hit_points": 180,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/IceDevil.webp",
+    "json_path": "/assets/atlas/enemies/json/1zzrqps9jzdlzgqi.json"
+  },
+  {
+    "index": "28gu50htg8kp7uiz",
+    "name": "spider",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Spider.webp",
+    "json_path": "/assets/atlas/enemies/json/28gu50htg8kp7uiz.json"
+  },
+  {
+    "index": "2mznheozwexaybv1",
+    "name": "xorn",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 73,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Xorn.webp",
+    "json_path": "/assets/atlas/enemies/json/2mznheozwexaybv1.json"
+  },
+  {
+    "index": "35y64peffdvqs0ra",
+    "name": "ancient bronze dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 22,
+    "hit_points": 444,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/35y64peffdvqs0ra.webp",
+    "json_path": "/assets/atlas/enemies/json/35y64peffdvqs0ra.json"
+  },
+  {
+    "index": "3fzqvyqhxxcxra2o",
+    "name": "gelatinous cube",
+    "type": "ooze",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 84,
+    "armor_class": 6,
+    "imageUrl": "/assets/atlas/enemies/tokens/ooze/GelatinousCube.webp",
+    "json_path": "/assets/atlas/enemies/json/3fzqvyqhxxcxra2o.json"
+  },
+  {
+    "index": "3o2rqbqpzjihmrbw",
+    "name": "erinyes",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 12,
+    "hit_points": 153,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Erinyes.webp",
+    "json_path": "/assets/atlas/enemies/json/3o2rqbqpzjihmrbw.json"
+  },
+  {
+    "index": "3uiursokd3kdzrw3",
+    "name": "adult white dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 13,
+    "hit_points": 200,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/3uiursokd3kdzrw3.webp",
+    "json_path": "/assets/atlas/enemies/json/3uiursokd3kdzrw3.json"
+  },
+  {
+    "index": "3uunbgig2yf1zpxm",
+    "name": "octopus",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 3,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Octopus.webp",
+    "json_path": "/assets/atlas/enemies/json/3uunbgig2yf1zpxm.json"
+  },
+  {
+    "index": "3ywmvdupmwycwnco",
+    "name": "giant crocodile",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 85,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantCrocodile.webp",
+    "json_path": "/assets/atlas/enemies/json/3ywmvdupmwycwnco.json"
+  },
+  {
+    "index": "45z5kogzehawx1ey",
+    "name": "fire giant",
+    "type": "giant",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 9,
+    "hit_points": 162,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/FireGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/45z5kogzehawx1ey.json"
+  },
+  {
+    "index": "4eodjbmplpnngvr7",
+    "name": "deer",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 4,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Deer.webp",
+    "json_path": "/assets/atlas/enemies/json/4eodjbmplpnngvr7.json"
+  },
+  {
+    "index": "4oezzguygjcszom9",
+    "name": "plesiosaurus",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 68,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Plesiosaurus.webp",
+    "json_path": "/assets/atlas/enemies/json/4oezzguygjcszom9.json"
+  },
+  {
+    "index": "4tl0s2snaljkodii",
+    "name": "giant wasp",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 13,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantWasp.webp",
+    "json_path": "/assets/atlas/enemies/json/4tl0s2snaljkodii.json"
+  },
+  {
+    "index": "4udpeenefszk9ntb",
+    "name": "swarm of spiders",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/4udpeenefszk9ntb.webp",
+    "json_path": "/assets/atlas/enemies/json/4udpeenefszk9ntb.json"
+  },
+  {
+    "index": "4zluht4xmb7gdpfk",
+    "name": "giant vulture",
+    "type": "beast",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 1,
+    "hit_points": 22,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantVulture.webp",
+    "json_path": "/assets/atlas/enemies/json/4zluht4xmb7gdpfk.json"
+  },
+  {
+    "index": "55pkbskg5ibzgrgr",
+    "name": "elk",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Elk.webp",
+    "json_path": "/assets/atlas/enemies/json/55pkbskg5ibzgrgr.json"
+  },
+  {
+    "index": "57doflgrqx16aroc",
+    "name": "lizardfolk",
+    "type": "humanoid",
+    "alignment": "Neutral",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Lizardfolk.webp",
+    "json_path": "/assets/atlas/enemies/json/57doflgrqx16aroc.json"
+  },
+  {
+    "index": "5kznnwzz6hrfkuwf",
+    "name": "centaur",
+    "type": "monstrosity",
+    "alignment": "Neutral Good",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Centaur.webp",
+    "json_path": "/assets/atlas/enemies/json/5kznnwzz6hrfkuwf.json"
+  },
+  {
+    "index": "5ngbctimeenuc1p1",
+    "name": "kobold",
+    "type": "humanoid",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0.125,
+    "hit_points": 5,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Kobold.webp",
+    "json_path": "/assets/atlas/enemies/json/5ngbctimeenuc1p1.json"
+  },
+  {
+    "index": "5p1vgazqwoilwzqf",
+    "name": "djinni",
+    "type": "elemental",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 11,
+    "hit_points": 161,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Djinni.webp",
+    "json_path": "/assets/atlas/enemies/json/5p1vgazqwoilwzqf.json"
+  },
+  {
+    "index": "5sgvghqbswgwrwsf",
+    "name": "nightmare",
+    "type": "fiend",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 3,
+    "hit_points": 68,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Nightmare.webp",
+    "json_path": "/assets/atlas/enemies/json/5sgvghqbswgwrwsf.json"
+  },
+  {
+    "index": "5tmstvmurpvtmnr3",
+    "name": "half-red dragon veteran",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 5,
+    "hit_points": 65,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/5tmstvmurpvtmnr3.webp",
+    "json_path": "/assets/atlas/enemies/json/5tmstvmurpvtmnr3.json"
+  },
+  {
+    "index": "5tsd0woze1l5i3ej",
+    "name": "fey",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/5tsd0woze1l5i3ej.webp",
+    "json_path": "/assets/atlas/enemies/json/5tsd0woze1l5i3ej.json"
+  },
+  {
+    "index": "68bamipe4jvder9g",
+    "name": "storm giant",
+    "type": "giant",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 13,
+    "hit_points": 230,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/StormGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/68bamipe4jvder9g.json"
+  },
+  {
+    "index": "6oc29m5uzzzb0pk3",
+    "name": "vrock",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 6,
+    "hit_points": 104,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Vrock.webp",
+    "json_path": "/assets/atlas/enemies/json/6oc29m5uzzzb0pk3.json"
+  },
+  {
+    "index": "6qnt52lztzblggw8",
+    "name": "hobgoblin",
+    "type": "humanoid",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Hobgoblin.webp",
+    "json_path": "/assets/atlas/enemies/json/6qnt52lztzblggw8.json"
+  },
+  {
+    "index": "6wbasdwwqtxeiayd",
+    "name": "gynosphinx",
+    "type": "monstrosity",
+    "alignment": "Lawful Neutral",
+    "challenge_rating": 11,
+    "hit_points": 136,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Gynosphinx.webp",
+    "json_path": "/assets/atlas/enemies/json/6wbasdwwqtxeiayd.json"
+  },
+  {
+    "index": "7198sihjpjf8g0cg",
+    "name": "wyvern",
+    "type": "dragon",
+    "alignment": "Unaligned",
+    "challenge_rating": 6,
+    "hit_points": 110,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/Wyvern.webp",
+    "json_path": "/assets/atlas/enemies/json/7198sihjpjf8g0cg.json"
+  },
+  {
+    "index": "7emuvyceasn7sfl0",
+    "name": "violet fungus",
+    "type": "plant",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 18,
+    "armor_class": 5,
+    "imageUrl": "/assets/atlas/enemies/tokens/plant/VioletFungus.webp",
+    "json_path": "/assets/atlas/enemies/json/7emuvyceasn7sfl0.json"
+  },
+  {
+    "index": "7kj5vjnp0fjrdu6t",
+    "name": "warhorse skeleton",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/thumbs/undead/WarhorseSkeleton.webp",
+    "json_path": "/assets/atlas/enemies/json/7kj5vjnp0fjrdu6t.json"
+  },
+  {
+    "index": "7trhrxukntphpyca",
+    "name": "werewolf",
+    "type": "humanoid",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 3,
+    "hit_points": 58,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Werewolf.webp",
+    "json_path": "/assets/atlas/enemies/json/7trhrxukntphpyca.json"
+  },
+  {
+    "index": "7vswgicsimfs4zts",
+    "name": "adult brass dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 13,
+    "hit_points": 172,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/7vswgicsimfs4zts.webp",
+    "json_path": "/assets/atlas/enemies/json/7vswgicsimfs4zts.json"
+  },
+  {
+    "index": "85ahd1jeo9b3poaq",
+    "name": "young green dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 8,
+    "hit_points": 136,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungGreenDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/85ahd1jeo9b3poaq.json"
+  },
+  {
+    "index": "89dam0oezivxn75y",
+    "name": "summons",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/89dam0oezivxn75y.webp",
+    "json_path": "/assets/atlas/enemies/json/89dam0oezivxn75y.json"
+  },
+  {
+    "index": "8actkp5qabpfoqxm",
+    "name": "crocodile",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 19,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Crocodile.webp",
+    "json_path": "/assets/atlas/enemies/json/8actkp5qabpfoqxm.json"
+  },
+  {
+    "index": "8exsfcar5lbhdo7u",
+    "name": "guardian naga",
+    "type": "monstrosity",
+    "alignment": "Lawful Good",
+    "challenge_rating": 10,
+    "hit_points": 127,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/GuardianNaga.webp",
+    "json_path": "/assets/atlas/enemies/json/8exsfcar5lbhdo7u.json"
+  },
+  {
+    "index": "8ihbbjkaoftpbi73",
+    "name": "swarm of rats",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 24,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/8ihbbjkaoftpbi73.webp",
+    "json_path": "/assets/atlas/enemies/json/8ihbbjkaoftpbi73.json"
+  },
+  {
+    "index": "8ksvpqzyzius93ko",
+    "name": "will-o'-wisp",
+    "type": "undead",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 22,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/8ksvpqzyzius93ko.webp",
+    "json_path": "/assets/atlas/enemies/json/8ksvpqzyzius93ko.json"
+  },
+  {
+    "index": "8md1vrbtcgsxxk3u",
+    "name": "magmin",
+    "type": "elemental",
+    "alignment": "Chaotic Neutral",
+    "challenge_rating": 0.5,
+    "hit_points": 9,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Magmin.webp",
+    "json_path": "/assets/atlas/enemies/json/8md1vrbtcgsxxk3u.json"
+  },
+  {
+    "index": "8mul8xisavjw9bnw",
+    "name": "giant ape",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 7,
+    "hit_points": 157,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantApe.webp",
+    "json_path": "/assets/atlas/enemies/json/8mul8xisavjw9bnw.json"
+  },
+  {
+    "index": "8px2jhwuptnnrbvx",
+    "name": "gibbering mouther",
+    "type": "aberration",
+    "alignment": "Neutral",
+    "challenge_rating": 2,
+    "hit_points": 67,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/aberration/GibberingMouther.webp",
+    "json_path": "/assets/atlas/enemies/json/8px2jhwuptnnrbvx.json"
+  },
+  {
+    "index": "8rguhb31vvjunzu1",
+    "name": "crab",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 2,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/8rguhb31vvjunzu1.webp",
+    "json_path": "/assets/atlas/enemies/json/8rguhb31vvjunzu1.json"
+  },
+  {
+    "index": "8smql75hljhuseau",
+    "name": "fire elemental",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 102,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/FireElemental.webp",
+    "json_path": "/assets/atlas/enemies/json/8smql75hljhuseau.json"
+  },
+  {
+    "index": "8vxxqebvn54rph81",
+    "name": "giant weasel",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 9,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantWeasel.webp",
+    "json_path": "/assets/atlas/enemies/json/8vxxqebvn54rph81.json"
+  },
+  {
+    "index": "8xhujxymnlqd7lf6",
+    "name": "satyr",
+    "type": "fey",
+    "alignment": "Chaotic Neutral",
+    "challenge_rating": 0.5,
+    "hit_points": 31,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/Satyr.webp",
+    "json_path": "/assets/atlas/enemies/json/8xhujxymnlqd7lf6.json"
+  },
+  {
+    "index": "9bhor8k5d2dkhaf3",
+    "name": "giant eagle",
+    "type": "beast",
+    "alignment": "Neutral Good",
+    "challenge_rating": 1,
+    "hit_points": 26,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantEagle.webp",
+    "json_path": "/assets/atlas/enemies/json/9bhor8k5d2dkhaf3.json"
+  },
+  {
+    "index": "9g4n9sjyh8ql46to",
+    "name": "hill giant",
+    "type": "giant",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 5,
+    "hit_points": 105,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/HillGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/9g4n9sjyh8ql46to.json"
+  },
+  {
+    "index": "9ggqbmakxraotz7s",
+    "name": "bearded devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/BeardedDevil.webp",
+    "json_path": "/assets/atlas/enemies/json/9ggqbmakxraotz7s.json"
+  },
+  {
+    "index": "aaqfehpivbhmwz6j",
+    "name": "giant hyena",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 45,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantHyena.webp",
+    "json_path": "/assets/atlas/enemies/json/aaqfehpivbhmwz6j.json"
+  },
+  {
     "index": "aboleth",
     "name": "aboleth",
     "type": "aberration",
@@ -132,6 +737,17 @@
     "json_path": "/assets/atlas/enemies/json/adult_white_dragon.json"
   },
   {
+    "index": "aijndqmurwxdxusl",
+    "name": "panther",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Panther.webp",
+    "json_path": "/assets/atlas/enemies/json/aijndqmurwxdxusl.json"
+  },
+  {
     "index": "air_elemental",
     "name": "air elemental",
     "type": "elemental",
@@ -141,6 +757,28 @@
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/air_elemental.webp",
     "json_path": "/assets/atlas/enemies/json/air_elemental.json"
+  },
+  {
+    "index": "ajijw7k957ajjcn6",
+    "name": "blood hawk",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 7,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/BloodHawk.webp",
+    "json_path": "/assets/atlas/enemies/json/ajijw7k957ajjcn6.json"
+  },
+  {
+    "index": "akt7vfas1j0x3fqm",
+    "name": "ettercap",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 2,
+    "hit_points": 44,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Ettercap.webp",
+    "json_path": "/assets/atlas/enemies/json/akt7vfas1j0x3fqm.json"
   },
   {
     "index": "ancient_black_dragon",
@@ -290,11 +928,33 @@
     "name": "annihilator",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 6,
+    "challenge_rating": "6",
     "hit_points": 114,
     "armor_class": 16,
     "imageUrl": "/assets/atlas/enemies/images/annihilator.webp",
     "json_path": "/assets/atlas/enemies/json/annihilator.json"
+  },
+  {
+    "index": "anseln7hwup97grf",
+    "name": "bone devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 9,
+    "hit_points": 142,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/BoneDevil.webp",
+    "json_path": "/assets/atlas/enemies/json/anseln7hwup97grf.json"
+  },
+  {
+    "index": "aojvmk1ichxnxqzp",
+    "name": "giant crab",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 13,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantCrab.webp",
+    "json_path": "/assets/atlas/enemies/json/aojvmk1ichxnxqzp.json"
   },
   {
     "index": "ape",
@@ -330,6 +990,28 @@
     "json_path": "/assets/atlas/enemies/json/assassin.json"
   },
   {
+    "index": "atithyyxthuzbpbn",
+    "name": "ancient white dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 20,
+    "hit_points": 333,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/atithyyxthuzbpbn.webp",
+    "json_path": "/assets/atlas/enemies/json/atithyyxthuzbpbn.json"
+  },
+  {
+    "index": "aw2wmqgiatxe2imi",
+    "name": "cloud giant",
+    "type": "giant",
+    "alignment": "Neutral Good Evil(50%) or Neutral Evil(50%)",
+    "challenge_rating": 9,
+    "hit_points": 200,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/CloudGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/aw2wmqgiatxe2imi.json"
+  },
+  {
     "index": "awakened_shrub",
     "name": "awakened shrub",
     "type": "plant",
@@ -363,6 +1045,28 @@
     "json_path": "/assets/atlas/enemies/json/axe_beak.json"
   },
   {
+    "index": "ayvniektyrooe83p",
+    "name": "copper dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 1,
+    "hit_points": 22,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/CopperDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/ayvniektyrooe83p.json"
+  },
+  {
+    "index": "azcblqt5laywti7u",
+    "name": "brass dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 1,
+    "hit_points": 16,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/BrassDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/azcblqt5laywti7u.json"
+  },
+  {
     "index": "azer",
     "name": "azer",
     "type": "elemental",
@@ -372,6 +1076,17 @@
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/azer.webp",
     "json_path": "/assets/atlas/enemies/json/azer.json"
+  },
+  {
+    "index": "b7lbor1aahnzs4a6",
+    "name": "archmage",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 12,
+    "hit_points": 99,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Archmage.webp",
+    "json_path": "/assets/atlas/enemies/json/b7lbor1aahnzs4a6.json"
   },
   {
     "index": "baboon",
@@ -429,11 +1144,22 @@
     "json_path": "/assets/atlas/enemies/json/bandit_captain.json"
   },
   {
+    "index": "banhjkdmcegbuwye",
+    "name": "air elemental",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 90,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/banhjkdmcegbuwye.webp",
+    "json_path": "/assets/atlas/enemies/json/banhjkdmcegbuwye.json"
+  },
+  {
     "index": "barbed_devil",
     "name": "barbed devil",
     "type": "fiend",
     "alignment": "lawful evil",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 110,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/barbed_devil.webp",
@@ -444,7 +1170,7 @@
     "name": "basilisk",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 52,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/basilisk.webp",
@@ -462,6 +1188,28 @@
     "json_path": "/assets/atlas/enemies/json/bat.json"
   },
   {
+    "index": "bat6ld8qjzetpycl",
+    "name": "spirit naga",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 8,
+    "hit_points": 75,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/SpiritNaga.webp",
+    "json_path": "/assets/atlas/enemies/json/bat6ld8qjzetpycl.json"
+  },
+  {
+    "index": "bcapsjdihy5wktpt",
+    "name": "young black dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 7,
+    "hit_points": 127,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungBlackDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/bcapsjdihy5wktpt.json"
+  },
+  {
     "index": "bearded_devil",
     "name": "bearded devil",
     "type": "fiend",
@@ -477,7 +1225,7 @@
     "name": "behir",
     "type": "monstrosity",
     "alignment": "neutral evil",
-    "challenge_rating": 11,
+    "challenge_rating": "11",
     "hit_points": 168,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/behir.webp",
@@ -488,7 +1236,7 @@
     "name": "beholder",
     "type": "aberration",
     "alignment": "lawful evil",
-    "challenge_rating": 13,
+    "challenge_rating": "13",
     "hit_points": 180,
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/images/beholder.webp",
@@ -499,11 +1247,22 @@
     "name": "berserker",
     "type": "humanoid",
     "alignment": "any chaotic alignment",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 67,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/berserker.webp",
     "json_path": "/assets/atlas/enemies/json/berserker.json"
+  },
+  {
+    "index": "bfh29vieogzi240e",
+    "name": "lich",
+    "type": "undead",
+    "alignment": "Any Evil Alignment",
+    "challenge_rating": 21,
+    "hit_points": 135,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Lich.webp",
+    "json_path": "/assets/atlas/enemies/json/bfh29vieogzi240e.json"
   },
   {
     "index": "black_bear",
@@ -565,7 +1324,7 @@
     "name": "blue dragon wyrmling",
     "type": "dragon",
     "alignment": "lawful evil",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 52,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/blue_dragon_wyrmling.webp",
@@ -609,7 +1368,7 @@
     "name": "bronze dragon wyrmling",
     "type": "dragon",
     "alignment": "lawful good",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 32,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/bronze_dragon_wyrmling.webp",
@@ -625,6 +1384,28 @@
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/brown_bear.webp",
     "json_path": "/assets/atlas/enemies/json/brown_bear.json"
+  },
+  {
+    "index": "btqz2q4jjvqn8w5w",
+    "name": "unseen servant",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/btqz2q4jjvqn8w5w.webp",
+    "json_path": "/assets/atlas/enemies/json/btqz2q4jjvqn8w5w.json"
+  },
+  {
+    "index": "bucfq7ihaxx75vai",
+    "name": "dust mephit",
+    "type": "elemental",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 17,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/DustMephit.webp",
+    "json_path": "/assets/atlas/enemies/json/bucfq7ihaxx75vai.json"
   },
   {
     "index": "bugbear",
@@ -649,6 +1430,50 @@
     "json_path": "/assets/atlas/enemies/json/bulette.json"
   },
   {
+    "index": "bupo3e9x5ptx6xet",
+    "name": "draft horse",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 19,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/DraftHorse.webp",
+    "json_path": "/assets/atlas/enemies/json/bupo3e9x5ptx6xet.json"
+  },
+  {
+    "index": "buxe6ddk5mw7kxe6",
+    "name": "frost giant",
+    "type": "giant",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 8,
+    "hit_points": 138,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/FrostGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/buxe6ddk5mw7kxe6.json"
+  },
+  {
+    "index": "bwtkdzavdnhisgp4",
+    "name": "quasit",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 1,
+    "hit_points": 7,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Quasit.webp",
+    "json_path": "/assets/atlas/enemies/json/bwtkdzavdnhisgp4.json"
+  },
+  {
+    "index": "c9xdgstjry9huaxq",
+    "name": "giant sea horse",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 16,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantSeaHorse.webp",
+    "json_path": "/assets/atlas/enemies/json/c9xdgstjry9huaxq.json"
+  },
+  {
     "index": "camel",
     "name": "camel",
     "type": "beast",
@@ -671,6 +1496,17 @@
     "json_path": "/assets/atlas/enemies/json/cat.json"
   },
   {
+    "index": "cdr1jtzev26bp5ym",
+    "name": "hyena",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 5,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Hyena.webp",
+    "json_path": "/assets/atlas/enemies/json/cdr1jtzev26bp5ym.json"
+  },
+  {
     "index": "centaur",
     "name": "centaur",
     "type": "monstrosity",
@@ -680,6 +1516,17 @@
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/centaur.webp",
     "json_path": "/assets/atlas/enemies/json/centaur.json"
+  },
+  {
+    "index": "cgm3ivyttcsyxjzo",
+    "name": "adult blue dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 16,
+    "hit_points": 225,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/cgm3ivyttcsyxjzo.webp",
+    "json_path": "/assets/atlas/enemies/json/cgm3ivyttcsyxjzo.json"
   },
   {
     "index": "chain_devil",
@@ -693,6 +1540,17 @@
     "json_path": "/assets/atlas/enemies/json/chain_devil.json"
   },
   {
+    "index": "cheujiyrvm9x0vit",
+    "name": "acolyte",
+    "type": "humanoid",
+    "alignment": "Any",
+    "challenge_rating": 0.25,
+    "hit_points": 9,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Acolyte.webp",
+    "json_path": "/assets/atlas/enemies/json/cheujiyrvm9x0vit.json"
+  },
+  {
     "index": "chimera",
     "name": "chimera",
     "type": "monstrosity",
@@ -704,6 +1562,17 @@
     "json_path": "/assets/atlas/enemies/json/chimera.json"
   },
   {
+    "index": "chmylff3thtzhvyb",
+    "name": "aberration",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/chmylff3thtzhvyb.webp",
+    "json_path": "/assets/atlas/enemies/json/chmylff3thtzhvyb.json"
+  },
+  {
     "index": "chuul",
     "name": "chuul",
     "type": "aberration",
@@ -713,6 +1582,39 @@
     "armor_class": 16,
     "imageUrl": "/assets/atlas/enemies/chuul.webp",
     "json_path": "/assets/atlas/enemies/json/chuul.json"
+  },
+  {
+    "index": "cilsitjcpwt7nmmk",
+    "name": "killer whale",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 3,
+    "hit_points": 90,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/KillerWhale.webp",
+    "json_path": "/assets/atlas/enemies/json/cilsitjcpwt7nmmk.json"
+  },
+  {
+    "index": "cjgy1zywuoo6henr",
+    "name": "giant badger",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantBadger.webp",
+    "json_path": "/assets/atlas/enemies/json/cjgy1zywuoo6henr.json"
+  },
+  {
+    "index": "ckof3vqrnjfnzidu",
+    "name": "ancient gold dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 24,
+    "hit_points": 546,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/ckof3vqrnjfnzidu.webp",
+    "json_path": "/assets/atlas/enemies/json/ckof3vqrnjfnzidu.json"
   },
   {
     "index": "clay_golem",
@@ -785,7 +1687,7 @@
     "name": "copper dragon wyrmling",
     "type": "dragon",
     "alignment": "chaotic good",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 22,
     "armor_class": 16,
     "imageUrl": "/assets/atlas/enemies/images/copper_dragon_wyrmling.webp",
@@ -803,6 +1705,17 @@
     "json_path": "/assets/atlas/enemies/json/couatl.json"
   },
   {
+    "index": "cqq6pxqa5wxznom3",
+    "name": "harpy",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 1,
+    "hit_points": 38,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Harpy.webp",
+    "json_path": "/assets/atlas/enemies/json/cqq6pxqa5wxznom3.json"
+  },
+  {
     "index": "crab",
     "name": "crab",
     "type": "beast",
@@ -812,6 +1725,17 @@
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/crab.webp",
     "json_path": "/assets/atlas/enemies/json/crab.json"
+  },
+  {
+    "index": "crnujhtbkdzjczsh",
+    "name": "wererat",
+    "type": "humanoid",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 2,
+    "hit_points": 33,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Wererat.webp",
+    "json_path": "/assets/atlas/enemies/json/crnujhtbkdzjczsh.json"
   },
   {
     "index": "crocodile",
@@ -847,6 +1771,61 @@
     "json_path": "/assets/atlas/enemies/json/cultist.json"
   },
   {
+    "index": "cy3a0rsnmplzozam",
+    "name": "thug",
+    "type": "humanoid",
+    "alignment": "Any non-good alignment",
+    "challenge_rating": 0.5,
+    "hit_points": 32,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Thug.webp",
+    "json_path": "/assets/atlas/enemies/json/cy3a0rsnmplzozam.json"
+  },
+  {
+    "index": "d0prpsgsaordadec",
+    "name": "owl",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Owl.webp",
+    "json_path": "/assets/atlas/enemies/json/d0prpsgsaordadec.json"
+  },
+  {
+    "index": "d5rwvixmffrdyyxt",
+    "name": "poisonous snake",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 2,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/PoisonousSnake.webp",
+    "json_path": "/assets/atlas/enemies/json/d5rwvixmffrdyyxt.json"
+  },
+  {
+    "index": "d5uqyd1entrjamto",
+    "name": "knight",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Knight.webp",
+    "json_path": "/assets/atlas/enemies/json/d5uqyd1entrjamto.json"
+  },
+  {
+    "index": "d5wjgwkskeut8hxa",
+    "name": "black bear",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/BlackBear.webp",
+    "json_path": "/assets/atlas/enemies/json/d5wjgwkskeut8hxa.json"
+  },
+  {
     "index": "darkmantle",
     "name": "darkmantle",
     "type": "monstrosity",
@@ -858,11 +1837,22 @@
     "json_path": "/assets/atlas/enemies/json/darkmantle.json"
   },
   {
+    "index": "ddo9ldcdtnhkfshp",
+    "name": "vampire",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 13,
+    "hit_points": 144,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Vampire.webp",
+    "json_path": "/assets/atlas/enemies/json/ddo9ldcdtnhkfshp.json"
+  },
+  {
     "index": "death_dog",
     "name": "death dog",
     "type": "monstrosity",
     "alignment": "neutral evil",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 39,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/death_dog.webp",
@@ -922,6 +1912,17 @@
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/djinni.webp",
     "json_path": "/assets/atlas/enemies/json/djinni.json"
+  },
+  {
+    "index": "dlqiesmsfsxijd5c",
+    "name": "imp",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 1,
+    "hit_points": 10,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Imp.webp",
+    "json_path": "/assets/atlas/enemies/json/dlqiesmsfsxijd5c.json"
   },
   {
     "index": "doppelganger",
@@ -1034,6 +2035,39 @@
     "json_path": "/assets/atlas/enemies/json/dust_mephit.json"
   },
   {
+    "index": "dzzfmg8liblgwi76",
+    "name": "swarm of beetles",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/dzzfmg8liblgwi76.webp",
+    "json_path": "/assets/atlas/enemies/json/dzzfmg8liblgwi76.json"
+  },
+  {
+    "index": "e5iqxsjo7yseddsh",
+    "name": "triceratops",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 95,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Triceratops.webp",
+    "json_path": "/assets/atlas/enemies/json/e5iqxsjo7yseddsh.json"
+  },
+  {
+    "index": "e9cvdpdg5dfepvjs",
+    "name": "guard",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Guard.webp",
+    "json_path": "/assets/atlas/enemies/json/e9cvdpdg5dfepvjs.json"
+  },
+  {
     "index": "eagle",
     "name": "eagle",
     "type": "beast",
@@ -1049,11 +2083,22 @@
     "name": "earth elemental",
     "type": "elemental",
     "alignment": "neutral",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 126,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/earth_elemental.webp",
     "json_path": "/assets/atlas/enemies/json/earth_elemental.json"
+  },
+  {
+    "index": "ec3lhsnv1zru7qaq",
+    "name": "hezrou",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 8,
+    "hit_points": 136,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Hezrou.webp",
+    "json_path": "/assets/atlas/enemies/json/ec3lhsnv1zru7qaq.json"
   },
   {
     "index": "efreeti",
@@ -1065,6 +2110,61 @@
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/efreeti.webp",
     "json_path": "/assets/atlas/enemies/json/efreeti.json"
+  },
+  {
+    "index": "egssdybqolcelb0j",
+    "name": "marilith",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 16,
+    "hit_points": 189,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Marilith.webp",
+    "json_path": "/assets/atlas/enemies/json/egssdybqolcelb0j.json"
+  },
+  {
+    "index": "ei8w6xjzczickox9",
+    "name": "eagle",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 3,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Eagle.webp",
+    "json_path": "/assets/atlas/enemies/json/ei8w6xjzczickox9.json"
+  },
+  {
+    "index": "eigaw1dwvppywluh",
+    "name": "pegasus",
+    "type": "celestial",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 2,
+    "hit_points": 59,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Pegasus.webp",
+    "json_path": "/assets/atlas/enemies/json/eigaw1dwvppywluh.json"
+  },
+  {
+    "index": "eigowktkebc9guzx",
+    "name": "ogre",
+    "type": "giant",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 59,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/Ogre.webp",
+    "json_path": "/assets/atlas/enemies/json/eigowktkebc9guzx.json"
+  },
+  {
+    "index": "eiifqzwygi71r2yl",
+    "name": "medusa",
+    "type": "monstrosity",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 6,
+    "hit_points": 127,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Medusa.webp",
+    "json_path": "/assets/atlas/enemies/json/eiifqzwygi71r2yl.json"
   },
   {
     "index": "elephant",
@@ -1089,6 +2189,50 @@
     "json_path": "/assets/atlas/enemies/json/elk.json"
   },
   {
+    "index": "emvcuopu7abcmbwi",
+    "name": "assassin",
+    "type": "humanoid",
+    "alignment": "Any non-good",
+    "challenge_rating": 8,
+    "hit_points": 78,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Assassin.webp",
+    "json_path": "/assets/atlas/enemies/json/emvcuopu7abcmbwi.json"
+  },
+  {
+    "index": "eormaxuv5v3nwsql",
+    "name": "animated armor",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 33,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/AnimatedArmor.webp",
+    "json_path": "/assets/atlas/enemies/json/eormaxuv5v3nwsql.json"
+  },
+  {
+    "index": "epyl7qifm5pq6w6b",
+    "name": "cockatrice",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 27,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Cockatrice.webp",
+    "json_path": "/assets/atlas/enemies/json/epyl7qifm5pq6w6b.json"
+  },
+  {
+    "index": "eqjua3z3181rssfu",
+    "name": "flying sword",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 17,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/FlyingSword.webp",
+    "json_path": "/assets/atlas/enemies/json/eqjua3z3181rssfu.json"
+  },
+  {
     "index": "erinyes",
     "name": "erinyes",
     "type": "fiend",
@@ -1100,11 +2244,33 @@
     "json_path": "/assets/atlas/enemies/json/erinyes.json"
   },
   {
+    "index": "esem3fgufskjzvuc",
+    "name": "ice mephit",
+    "type": "elemental",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 21,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/IceMephit.webp",
+    "json_path": "/assets/atlas/enemies/json/esem3fgufskjzvuc.json"
+  },
+  {
+    "index": "et4peveinjlu4f7c",
+    "name": "wraith",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 5,
+    "hit_points": 67,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Wraith.webp",
+    "json_path": "/assets/atlas/enemies/json/et4peveinjlu4f7c.json"
+  },
+  {
     "index": "ettercap",
     "name": "ettercap",
     "type": "monstrosity",
     "alignment": "neutral evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 44,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/ettercap.webp",
@@ -1120,6 +2286,83 @@
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/ettin.webp",
     "json_path": "/assets/atlas/enemies/json/ettin.json"
+  },
+  {
+    "index": "eyiqz3rfl25fejy5",
+    "name": "dire wolf",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 37,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/DireWolf.webp",
+    "json_path": "/assets/atlas/enemies/json/eyiqz3rfl25fejy5.json"
+  },
+  {
+    "index": "eykrfv85dqjockmc",
+    "name": "young silver dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 9,
+    "hit_points": 168,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungSilverDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/eykrfv85dqjockmc.json"
+  },
+  {
+    "index": "ezgiprhxa2d7uyb3",
+    "name": "frog",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Frog.webp",
+    "json_path": "/assets/atlas/enemies/json/ezgiprhxa2d7uyb3.json"
+  },
+  {
+    "index": "f0yilx4xkkt4dxky",
+    "name": "reef shark",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/ReefShark.webp",
+    "json_path": "/assets/atlas/enemies/json/f0yilx4xkkt4dxky.json"
+  },
+  {
+    "index": "f6hakropicbrmsd1",
+    "name": "rug of smothering",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 33,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/RugOfSmothering.webp",
+    "json_path": "/assets/atlas/enemies/json/f6hakropicbrmsd1.json"
+  },
+  {
+    "index": "f9jbhbfwucry2eda",
+    "name": "giant wolf spider",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 11,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantWolfSpider.webp",
+    "json_path": "/assets/atlas/enemies/json/f9jbhbfwucry2eda.json"
+  },
+  {
+    "index": "fayqbnjbmszo6pat",
+    "name": "tiger",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 37,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Tiger.webp",
+    "json_path": "/assets/atlas/enemies/json/fayqbnjbmszo6pat.json"
   },
   {
     "index": "fire_elemental",
@@ -1142,6 +2385,28 @@
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/fire_giant.webp",
     "json_path": "/assets/atlas/enemies/json/fire_giant.json"
+  },
+  {
+    "index": "fkcntbvpomd7mipf",
+    "name": "pseudodragon",
+    "type": "dragon",
+    "alignment": "Neutral Good",
+    "challenge_rating": 0.25,
+    "hit_points": 7,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/Pseudodragon.webp",
+    "json_path": "/assets/atlas/enemies/json/fkcntbvpomd7mipf.json"
+  },
+  {
+    "index": "fkj8z8zi2jtlchh9",
+    "name": "vulture",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 5,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Vulture.webp",
+    "json_path": "/assets/atlas/enemies/json/fkj8z8zi2jtlchh9.json"
   },
   {
     "index": "flesh_golem",
@@ -1177,6 +2442,39 @@
     "json_path": "/assets/atlas/enemies/json/flying_sword.json"
   },
   {
+    "index": "fnkpnfips62lqou4",
+    "name": "hawk",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Hawk.webp",
+    "json_path": "/assets/atlas/enemies/json/fnkpnfips62lqou4.json"
+  },
+  {
+    "index": "fqbfytbtkrl53foc",
+    "name": "gray ooze",
+    "type": "ooze",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 8,
+    "imageUrl": "/assets/atlas/enemies/tokens/ooze/GrayOoze.webp",
+    "json_path": "/assets/atlas/enemies/json/fqbfytbtkrl53foc.json"
+  },
+  {
+    "index": "fqmfuzzsh73d0nrd",
+    "name": "camel",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 15,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Camel.webp",
+    "json_path": "/assets/atlas/enemies/json/fqmfuzzsh73d0nrd.json"
+  },
+  {
     "index": "frog",
     "name": "frog",
     "type": "beast",
@@ -1199,15 +2497,114 @@
     "json_path": "/assets/atlas/enemies/json/frost_giant.json"
   },
   {
+    "index": "fspruaidog4tvrgb",
+    "name": "gladiator",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 5,
+    "hit_points": 112,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Gladiator.webp",
+    "json_path": "/assets/atlas/enemies/json/fspruaidog4tvrgb.json"
+  },
+  {
+    "index": "fsvttiirh93utaoh",
+    "name": "undead",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/fsvttiirh93utaoh.webp",
+    "json_path": "/assets/atlas/enemies/json/fsvttiirh93utaoh.json"
+  },
+  {
+    "index": "fwsdiq9szsdibaa8",
+    "name": "sea horse",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/SeaHorse.webp",
+    "json_path": "/assets/atlas/enemies/json/fwsdiq9szsdibaa8.json"
+  },
+  {
+    "index": "fzvz6xl3u9gol9ju",
+    "name": "young brass dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 6,
+    "hit_points": 110,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungBrassDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/fzvz6xl3u9gol9ju.json"
+  },
+  {
+    "index": "g40zn6xmye6bss94",
+    "name": "swarm of ravens",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 24,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/g40zn6xmye6bss94.webp",
+    "json_path": "/assets/atlas/enemies/json/g40zn6xmye6bss94.json"
+  },
+  {
+    "index": "g7fsu2ou4yhpgwna",
+    "name": "darkmantle",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Darkmantle.webp",
+    "json_path": "/assets/atlas/enemies/json/g7fsu2ou4yhpgwna.json"
+  },
+  {
+    "index": "g8dmtgw2tibpzcmk",
+    "name": "beast",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/g8dmtgw2tibpzcmk.webp",
+    "json_path": "/assets/atlas/enemies/json/g8dmtgw2tibpzcmk.json"
+  },
+  {
+    "index": "g9peny6nw0xrxcjw",
+    "name": "unicorn",
+    "type": "celestial",
+    "alignment": "Lawful Good",
+    "challenge_rating": 5,
+    "hit_points": 67,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Unicorn.webp",
+    "json_path": "/assets/atlas/enemies/json/g9peny6nw0xrxcjw.json"
+  },
+  {
     "index": "gargoyle",
     "name": "gargoyle",
     "type": "elemental",
     "alignment": "chaotic evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 52,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/gargoyle.webp",
     "json_path": "/assets/atlas/enemies/json/gargoyle.json"
+  },
+  {
+    "index": "gastr7dfzjlmgi2j",
+    "name": "awakened shrub",
+    "type": "plant",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/plant/AwakenedShrub.webp",
+    "json_path": "/assets/atlas/enemies/json/gastr7dfzjlmgi2j.json"
   },
   {
     "index": "gelatinous_cube",
@@ -1219,6 +2616,39 @@
     "armor_class": 6,
     "imageUrl": "/assets/atlas/enemies/images/gelatinous_cube.webp",
     "json_path": "/assets/atlas/enemies/json/gelatinous_cube.json"
+  },
+  {
+    "index": "gem2f7hvvghtk3h4",
+    "name": "adult silver dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 16,
+    "hit_points": 243,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/gem2f7hvvghtk3h4.webp",
+    "json_path": "/assets/atlas/enemies/json/gem2f7hvvghtk3h4.json"
+  },
+  {
+    "index": "gf9qbhdmafvftxcv",
+    "name": "ancient silver dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 23,
+    "hit_points": 487,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/gf9qbhdmafvftxcv.webp",
+    "json_path": "/assets/atlas/enemies/json/gf9qbhdmafvftxcv.json"
+  },
+  {
+    "index": "ggelev411iq5yijs",
+    "name": "shambling mound",
+    "type": "plant",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 136,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/plant/ShamblingMound.webp",
+    "json_path": "/assets/atlas/enemies/json/ggelev411iq5yijs.json"
   },
   {
     "index": "ghast",
@@ -1313,7 +2743,7 @@
     "name": "giant constrictor snake",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 60,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/giant_constrictor_snake.webp",
@@ -1324,7 +2754,7 @@
     "name": "giant crab",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.125,
+    "challenge_rating": "0.125",
     "hit_points": 13,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/giant_crab.webp",
@@ -1346,7 +2776,7 @@
     "name": "giant eagle",
     "type": "beast",
     "alignment": "neutral good",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 26,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/giant_eagle.webp",
@@ -1357,7 +2787,7 @@
     "name": "giant elk",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 42,
     "armor_class": 14,
     "imageUrl": "/assets/atlas/enemies/images/giant_elk.webp",
@@ -1368,7 +2798,7 @@
     "name": "giant fire beetle",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 4,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/giant_fire_beetle.webp",
@@ -1390,7 +2820,7 @@
     "name": "giant goat",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 19,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/giant_goat.webp",
@@ -1412,7 +2842,7 @@
     "name": "giant lizard",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 19,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/giant_lizard.webp",
@@ -1434,7 +2864,7 @@
     "name": "giant owl",
     "type": "beast",
     "alignment": "neutral",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 19,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/giant_owl.webp",
@@ -1445,7 +2875,7 @@
     "name": "giant poisonous snake",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 11,
     "armor_class": 14,
     "imageUrl": "/assets/atlas/enemies/images/giant_poisonous_snake.webp",
@@ -1478,7 +2908,7 @@
     "name": "giant scorpion",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 52,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/giant_scorpion.webp",
@@ -1489,7 +2919,7 @@
     "name": "giant sea horse",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 16,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/giant_sea_horse.webp",
@@ -1522,7 +2952,7 @@
     "name": "giant toad",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 39,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/giant_toad.webp",
@@ -1533,7 +2963,7 @@
     "name": "giant vulture",
     "type": "beast",
     "alignment": "neutral evil",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 22,
     "armor_class": 10,
     "imageUrl": "/assets/atlas/enemies/images/giant_vulture.webp",
@@ -1544,7 +2974,7 @@
     "name": "giant wasp",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 13,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/giant_wasp.webp",
@@ -1555,7 +2985,7 @@
     "name": "giant weasel",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.125,
+    "challenge_rating": "0.125",
     "hit_points": 9,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/giant_weasel.webp",
@@ -1566,7 +2996,7 @@
     "name": "giant wolf spider",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 11,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/giant_wolf_spider.webp",
@@ -1584,6 +3014,17 @@
     "json_path": "/assets/atlas/enemies/json/gibbering_mouther.json"
   },
   {
+    "index": "gkrtimnajzicvfwz",
+    "name": "stirge",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 2,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Stirge.webp",
+    "json_path": "/assets/atlas/enemies/json/gkrtimnajzicvfwz.json"
+  },
+  {
     "index": "glabrezu",
     "name": "glabrezu",
     "type": "fiend",
@@ -1595,11 +3036,22 @@
     "json_path": "/assets/atlas/enemies/json/glabrezu.json"
   },
   {
+    "index": "glacgcgip6yjbjgc",
+    "name": "noble",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 0.125,
+    "hit_points": 9,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Noble.webp",
+    "json_path": "/assets/atlas/enemies/json/glacgcgip6yjbjgc.json"
+  },
+  {
     "index": "gladiator",
     "name": "gladiator",
     "type": "humanoid",
     "alignment": "any alignment",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 112,
     "armor_class": 16,
     "imageUrl": "/assets/atlas/enemies/images/gladiator.webp",
@@ -1610,7 +3062,7 @@
     "name": "gnoll",
     "type": "humanoid",
     "alignment": "chaotic evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 22,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/gnoll.webp",
@@ -1621,7 +3073,7 @@
     "name": "goat",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 4,
     "armor_class": 10,
     "imageUrl": "/assets/atlas/enemies/images/goat.webp",
@@ -1661,11 +3113,33 @@
     "json_path": "/assets/atlas/enemies/json/gorgon.json"
   },
   {
+    "index": "gp8jmsdugrxulod2",
+    "name": "adult green dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 15,
+    "hit_points": 207,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/gp8jmsdugrxulod2.webp",
+    "json_path": "/assets/atlas/enemies/json/gp8jmsdugrxulod2.json"
+  },
+  {
+    "index": "gpeqytlo8ogvglkm",
+    "name": "grimlock",
+    "type": "humanoid",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Grimlock.webp",
+    "json_path": "/assets/atlas/enemies/json/gpeqytlo8ogvglkm.json"
+  },
+  {
     "index": "gray_ooze",
     "name": "gray ooze",
     "type": "ooze",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 22,
     "armor_class": 8,
     "imageUrl": "/assets/atlas/enemies/images/gray_ooze.webp",
@@ -1676,7 +3150,7 @@
     "name": "green dragon wyrmling",
     "type": "dragon",
     "alignment": "lawful evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 38,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/green_dragon_wyrmling.webp",
@@ -1698,7 +3172,7 @@
     "name": "grick",
     "type": "monstrosity",
     "alignment": "neutral",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 27,
     "armor_class": 14,
     "imageUrl": "/assets/atlas/enemies/images/grick.webp",
@@ -1720,7 +3194,7 @@
     "name": "grimlock",
     "type": "humanoid",
     "alignment": "neutral evil",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 11,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/grimlock.webp",
@@ -1731,10 +3205,10 @@
     "name": "guard",
     "type": "humanoid",
     "alignment": "any alignment",
-    "challenge_rating": 0.125,
+    "challenge_rating": "0.125",
     "hit_points": 11,
     "armor_class": 16,
-    "imageUrl": "/assets/atlas/enemies/guard.webp",
+    "imageUrl": "/assets/atlas/enemies/images/guard.webp",
     "json_path": "/assets/atlas/enemies/json/guard.json"
   },
   {
@@ -1749,6 +3223,17 @@
     "json_path": "/assets/atlas/enemies/json/guardian_naga.json"
   },
   {
+    "index": "gxgivrx5gbvtifif",
+    "name": "giant scorpion",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantScorpion.webp",
+    "json_path": "/assets/atlas/enemies/json/gxgivrx5gbvtifif.json"
+  },
+  {
     "index": "gynosphinx",
     "name": "gynosphinx",
     "type": "monstrosity",
@@ -1758,6 +3243,28 @@
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/gynosphinx.webp",
     "json_path": "/assets/atlas/enemies/json/gynosphinx.json"
+  },
+  {
+    "index": "h052eiiumrwjum65",
+    "name": "griffon",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 59,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Griffon.webp",
+    "json_path": "/assets/atlas/enemies/json/h052eiiumrwjum65.json"
+  },
+  {
+    "index": "h98aupfomepccibp",
+    "name": "iron golem",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 16,
+    "hit_points": 210,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/IronGolem.webp",
+    "json_path": "/assets/atlas/enemies/json/h98aupfomepccibp.json"
   },
   {
     "index": "half_red_dragon_veteran",
@@ -1793,6 +3300,28 @@
     "json_path": "/assets/atlas/enemies/json/hawk.json"
   },
   {
+    "index": "hb49mcovbxwwekwq",
+    "name": "orc",
+    "type": "humanoid",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 15,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Orc.webp",
+    "json_path": "/assets/atlas/enemies/json/hb49mcovbxwwekwq.json"
+  },
+  {
+    "index": "hb6pjvdcnymllp8v",
+    "name": "polar bear",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 42,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/PolarBear.webp",
+    "json_path": "/assets/atlas/enemies/json/hb6pjvdcnymllp8v.json"
+  },
+  {
     "index": "hell_hound",
     "name": "hell hound",
     "type": "fiend",
@@ -1815,11 +3344,22 @@
     "json_path": "/assets/atlas/enemies/json/hezrou.json"
   },
   {
+    "index": "hif83rd3zvw4egfi",
+    "name": "cat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 2,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/hif83rd3zvw4egfi.webp",
+    "json_path": "/assets/atlas/enemies/json/hif83rd3zvw4egfi.json"
+  },
+  {
     "index": "hill_giant",
     "name": "hill giant",
     "type": "giant",
     "alignment": "chaotic evil",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 105,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/hill_giant.webp",
@@ -1837,11 +3377,55 @@
     "json_path": "/assets/atlas/enemies/json/hippogriff.json"
   },
   {
+    "index": "hjherrzafciffvla",
+    "name": "lion",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 26,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Lion.webp",
+    "json_path": "/assets/atlas/enemies/json/hjherrzafciffvla.json"
+  },
+  {
+    "index": "hlddcpm4cwptj3ka",
+    "name": "tyrannosaurus rex",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 8,
+    "hit_points": 136,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/TyrannosaurusRex.webp",
+    "json_path": "/assets/atlas/enemies/json/hlddcpm4cwptj3ka.json"
+  },
+  {
+    "index": "hm4o2fgpzsdbxjlq",
+    "name": "flesh golem",
+    "type": "construct",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 93,
+    "armor_class": 9,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/FleshGolem.webp",
+    "json_path": "/assets/atlas/enemies/json/hm4o2fgpzsdbxjlq.json"
+  },
+  {
+    "index": "hn8fflezscgt7azz",
+    "name": "giant centipede",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 4,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantCentipede.webp",
+    "json_path": "/assets/atlas/enemies/json/hn8fflezscgt7azz.json"
+  },
+  {
     "index": "hobgoblin",
     "name": "hobgoblin",
     "type": "humanoid",
     "alignment": "lawful evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 11,
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/images/hobgoblin.webp",
@@ -1863,29 +3447,84 @@
     "name": "horned devil",
     "type": "fiend",
     "alignment": "lawful evil",
-    "challenge_rating": 11,
+    "challenge_rating": "11",
     "hit_points": 178,
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/images/horned_devil.webp",
     "json_path": "/assets/atlas/enemies/json/horned_devil.json"
   },
   {
+    "index": "hpuo3weiwrqnql0d",
+    "name": "cloaker",
+    "type": "aberration",
+    "alignment": "Chaotic Neutral",
+    "challenge_rating": 8,
+    "hit_points": 78,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/aberration/Cloaker.webp",
+    "json_path": "/assets/atlas/enemies/json/hpuo3weiwrqnql0d.json"
+  },
+  {
+    "index": "hqj2yxtgwt64v3lj",
+    "name": "basilisk",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Basilisk.webp",
+    "json_path": "/assets/atlas/enemies/json/hqj2yxtgwt64v3lj.json"
+  },
+  {
+    "index": "hqt3qiahnb1odb40",
+    "name": "giant elk",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 42,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantElk.webp",
+    "json_path": "/assets/atlas/enemies/json/hqt3qiahnb1odb40.json"
+  },
+  {
     "index": "hunter_shark",
     "name": "hunter shark",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 45,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/hunter_shark.webp",
     "json_path": "/assets/atlas/enemies/json/hunter_shark.json"
   },
   {
+    "index": "hx240pg5r5qpret3",
+    "name": "mimic",
+    "type": "monstrosity",
+    "alignment": "Neutral",
+    "challenge_rating": 2,
+    "hit_points": 58,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Mimic.webp",
+    "json_path": "/assets/atlas/enemies/json/hx240pg5r5qpret3.json"
+  },
+  {
+    "index": "hy9ptpo5xl2tfkcj",
+    "name": "bronze dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 2,
+    "hit_points": 32,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/BronzeDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/hy9ptpo5xl2tfkcj.json"
+  },
+  {
     "index": "hydra",
     "name": "hydra",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 8,
+    "challenge_rating": "8",
     "hit_points": 172,
     "armor_class": 15,
     "imageUrl": "/assets/atlas/enemies/images/hydra.webp",
@@ -1896,11 +3535,33 @@
     "name": "hyena",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 5,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/hyena.webp",
     "json_path": "/assets/atlas/enemies/json/hyena.json"
+  },
+  {
+    "index": "i2x01hzojvn4nujf",
+    "name": "lizard",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 2,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Lizard.webp",
+    "json_path": "/assets/atlas/enemies/json/i2x01hzojvn4nujf.json"
+  },
+  {
+    "index": "ib448xvsbvtqitzs",
+    "name": "elemental",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/ib448xvsbvtqitzs.webp",
+    "json_path": "/assets/atlas/enemies/json/ib448xvsbvtqitzs.json"
   },
   {
     "index": "ice_devil",
@@ -1918,11 +3579,55 @@
     "name": "ice mephit",
     "type": "elemental",
     "alignment": "neutral evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 21,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/ice_mephit.webp",
     "json_path": "/assets/atlas/enemies/json/ice_mephit.json"
+  },
+  {
+    "index": "igbdqa3iuksurcuy",
+    "name": "duergar",
+    "type": "humanoid",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 1,
+    "hit_points": 26,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Duergar.webp",
+    "json_path": "/assets/atlas/enemies/json/igbdqa3iuksurcuy.json"
+  },
+  {
+    "index": "ihj5tkm6hrgxuawp",
+    "name": "arcane hand",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/ihj5tkm6hrgxuawp.webp",
+    "json_path": "/assets/atlas/enemies/json/ihj5tkm6hrgxuawp.json"
+  },
+  {
+    "index": "iiedpmwqblzkggyd",
+    "name": "azer",
+    "type": "elemental",
+    "alignment": "Lawful Neutral",
+    "challenge_rating": 2,
+    "hit_points": 39,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Azer.webp",
+    "json_path": "/assets/atlas/enemies/json/iiedpmwqblzkggyd.json"
+  },
+  {
+    "index": "ijsfyedqsuwqxwnn",
+    "name": "dragon turtle",
+    "type": "dragon",
+    "alignment": "Neutral",
+    "challenge_rating": 17,
+    "hit_points": 341,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/ijsfyedqsuwqxwnn.webp",
+    "json_path": "/assets/atlas/enemies/json/ijsfyedqsuwqxwnn.json"
   },
   {
     "index": "imp",
@@ -1951,7 +3656,7 @@
     "name": "invisible stalker",
     "type": "elemental",
     "alignment": "neutral",
-    "challenge_rating": 6,
+    "challenge_rating": "6",
     "hit_points": 104,
     "armor_class": 14,
     "imageUrl": "/assets/atlas/enemies/images/invisible_stalker.webp",
@@ -1969,15 +3674,224 @@
     "json_path": "/assets/atlas/enemies/json/iron_golem.json"
   },
   {
+    "index": "irz834sqaxrihtsg",
+    "name": "adult copper dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 14,
+    "hit_points": 184,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/irz834sqaxrihtsg.webp",
+    "json_path": "/assets/atlas/enemies/json/irz834sqaxrihtsg.json"
+  },
+  {
+    "index": "iscl4q82ivnyelzc",
+    "name": "hell hound",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 3,
+    "hit_points": 45,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/HellHound.webp",
+    "json_path": "/assets/atlas/enemies/json/iscl4q82ivnyelzc.json"
+  },
+  {
+    "index": "ixo5shumxy4i9qyd",
+    "name": "giant toad",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 39,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantToad.webp",
+    "json_path": "/assets/atlas/enemies/json/ixo5shumxy4i9qyd.json"
+  },
+  {
+    "index": "iyiybe5t2admevum",
+    "name": "ghast",
+    "type": "undead",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 36,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Ghast.webp",
+    "json_path": "/assets/atlas/enemies/json/iyiybe5t2admevum.json"
+  },
+  {
+    "index": "izmbiahqqpzpo0cx",
+    "name": "black dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 33,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/BlackDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/izmbiahqqpzpo0cx.json"
+  },
+  {
+    "index": "j1qvpd8povcpaqx4",
+    "name": "silver dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/SilverDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/j1qvpd8povcpaqx4.json"
+  },
+  {
+    "index": "j8xjog4dxb8wkhtv",
+    "name": "veteran",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 3,
+    "hit_points": 58,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Veteran.webp",
+    "json_path": "/assets/atlas/enemies/json/j8xjog4dxb8wkhtv.json"
+  },
+  {
+    "index": "j9hgsazodgjrnl9b",
+    "name": "wereboar",
+    "type": "humanoid",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 4,
+    "hit_points": 78,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Wereboar.webp",
+    "json_path": "/assets/atlas/enemies/json/j9hgsazodgjrnl9b.json"
+  },
+  {
     "index": "jackal",
     "name": "jackal",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 3,
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/jackal.webp",
     "json_path": "/assets/atlas/enemies/json/jackal.json"
+  },
+  {
+    "index": "jczblj6lqtw0epxe",
+    "name": "otyugh",
+    "type": "aberration",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 114,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/aberration/Otyugh.webp",
+    "json_path": "/assets/atlas/enemies/json/jczblj6lqtw0epxe.json"
+  },
+  {
+    "index": "jlphabnmtabb5dp1",
+    "name": "elephant",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 4,
+    "hit_points": 76,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Elephant.webp",
+    "json_path": "/assets/atlas/enemies/json/jlphabnmtabb5dp1.json"
+  },
+  {
+    "index": "jnmhqtwkwayvkh37",
+    "name": "dancing lights (medium)",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/jnmhqtwkwayvkh37.webp",
+    "json_path": "/assets/atlas/enemies/json/jnmhqtwkwayvkh37.json"
+  },
+  {
+    "index": "joane6m0my6ujf4e",
+    "name": "blink dog",
+    "type": "fey",
+    "alignment": "Lawful Good",
+    "challenge_rating": 0.25,
+    "hit_points": 22,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/BlinkDog.webp",
+    "json_path": "/assets/atlas/enemies/json/joane6m0my6ujf4e.json"
+  },
+  {
+    "index": "jw8bxggombx1s6tf",
+    "name": "baboon",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 3,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Baboon.webp",
+    "json_path": "/assets/atlas/enemies/json/jw8bxggombx1s6tf.json"
+  },
+  {
+    "index": "k15yl8jmb5ipircc",
+    "name": "druid",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 2,
+    "hit_points": 27,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Druid.webp",
+    "json_path": "/assets/atlas/enemies/json/k15yl8jmb5ipircc.json"
+  },
+  {
+    "index": "k4vsslhqbbahudhy",
+    "name": "hydra",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 8,
+    "hit_points": 172,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Hydra.webp",
+    "json_path": "/assets/atlas/enemies/json/k4vsslhqbbahudhy.json"
+  },
+  {
+    "index": "k5ckmpofkpuootis",
+    "name": "ape",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 19,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Ape.webp",
+    "json_path": "/assets/atlas/enemies/json/k5ckmpofkpuootis.json"
+  },
+  {
+    "index": "kc4tyoolarhajp18",
+    "name": "swarm of centipedes",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/kc4tyoolarhajp18.webp",
+    "json_path": "/assets/atlas/enemies/json/kc4tyoolarhajp18.json"
+  },
+  {
+    "index": "kcvt4fdovjbuz3t0",
+    "name": "tarrasque",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 30,
+    "hit_points": 676,
+    "armor_class": 25,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Tarrasque.webp",
+    "json_path": "/assets/atlas/enemies/json/kcvt4fdovjbuz3t0.json"
+  },
+  {
+    "index": "kh6zruiuokqcolrh",
+    "name": "green dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 2,
+    "hit_points": 38,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/GreenDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/kh6zruiuokqcolrh.json"
   },
   {
     "index": "killer_whale",
@@ -1989,6 +3903,17 @@
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/killer_whale.webp",
     "json_path": "/assets/atlas/enemies/json/killer_whale.json"
+  },
+  {
+    "index": "klckhep28hbfdsky",
+    "name": "ettin",
+    "type": "giant",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 4,
+    "hit_points": 85,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/Ettin.webp",
+    "json_path": "/assets/atlas/enemies/json/klckhep28hbfdsky.json"
   },
   {
     "index": "knight",
@@ -2013,6 +3938,28 @@
     "json_path": "/assets/atlas/enemies/json/kobold.json"
   },
   {
+    "index": "kohvwl5ru9xbr8jb",
+    "name": "dryad",
+    "type": "fey",
+    "alignment": "Neutral",
+    "challenge_rating": 1,
+    "hit_points": 22,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/Dryad.webp",
+    "json_path": "/assets/atlas/enemies/json/kohvwl5ru9xbr8jb.json"
+  },
+  {
+    "index": "kr6r8bhsehacpfz8",
+    "name": "chimera",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 6,
+    "hit_points": 114,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Chimera.webp",
+    "json_path": "/assets/atlas/enemies/json/kr6r8bhsehacpfz8.json"
+  },
+  {
     "index": "kraken",
     "name": "kraken",
     "type": "monstrosity",
@@ -2022,6 +3969,105 @@
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/images/kraken.webp",
     "json_path": "/assets/atlas/enemies/json/kraken.json"
+  },
+  {
+    "index": "ksai2kronl4g4jpo",
+    "name": "giant frog",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 18,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantFrog.webp",
+    "json_path": "/assets/atlas/enemies/json/ksai2kronl4g4jpo.json"
+  },
+  {
+    "index": "ktm6iv9i5l1mwudk",
+    "name": "chain devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 8,
+    "hit_points": 85,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/ChainDevil.webp",
+    "json_path": "/assets/atlas/enemies/json/ktm6iv9i5l1mwudk.json"
+  },
+  {
+    "index": "kupbxdn1xmheeopk",
+    "name": "merfolk",
+    "type": "humanoid",
+    "alignment": "Neutral",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Merfolk.webp",
+    "json_path": "/assets/atlas/enemies/json/kupbxdn1xmheeopk.json"
+  },
+  {
+    "index": "kvg37nlpcacazjct",
+    "name": "kraken",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 23,
+    "hit_points": 472,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/kvg37nlpcacazjct.webp",
+    "json_path": "/assets/atlas/enemies/json/kvg37nlpcacazjct.json"
+  },
+  {
+    "index": "kxg5xliwkhn1v0y5",
+    "name": "swarm of quippers",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 28,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/kxg5xliwkhn1v0y5.webp",
+    "json_path": "/assets/atlas/enemies/json/kxg5xliwkhn1v0y5.json"
+  },
+  {
+    "index": "ky8fajtnvvoit8yt",
+    "name": "plant",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/ky8fajtnvvoit8yt.webp",
+    "json_path": "/assets/atlas/enemies/json/ky8fajtnvvoit8yt.json"
+  },
+  {
+    "index": "kz1t6xexvwodpyb2",
+    "name": "berserker",
+    "type": "humanoid",
+    "alignment": "Any Chaotic",
+    "challenge_rating": 2,
+    "hit_points": 67,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Berserker.webp",
+    "json_path": "/assets/atlas/enemies/json/kz1t6xexvwodpyb2.json"
+  },
+  {
+    "index": "kz2fw9xb5ccvxlx4",
+    "name": "dretch",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 18,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Dretch.webp",
+    "json_path": "/assets/atlas/enemies/json/kz2fw9xb5ccvxlx4.json"
+  },
+  {
+    "index": "l1w8ybkinmscfj3f",
+    "name": "oni",
+    "type": "giant",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 7,
+    "hit_points": 110,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/Oni.webp",
+    "json_path": "/assets/atlas/enemies/json/l1w8ybkinmscfj3f.json"
   },
   {
     "index": "lamia",
@@ -2090,6 +4136,105 @@
     "json_path": "/assets/atlas/enemies/json/lizardfolk.json"
   },
   {
+    "index": "llsg0hi4eglrlq4o",
+    "name": "phase spider",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 3,
+    "hit_points": 32,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/PhaseSpider.webp",
+    "json_path": "/assets/atlas/enemies/json/llsg0hi4eglrlq4o.json"
+  },
+  {
+    "index": "loyt73eajojbdxav",
+    "name": "solar",
+    "type": "celestial",
+    "alignment": "Lawful Good",
+    "challenge_rating": 21,
+    "hit_points": 243,
+    "armor_class": 21,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Solar.webp",
+    "json_path": "/assets/atlas/enemies/json/loyt73eajojbdxav.json"
+  },
+  {
+    "index": "lpdx5yllwci0ndzx",
+    "name": "raven",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Raven.webp",
+    "json_path": "/assets/atlas/enemies/json/lpdx5yllwci0ndzx.json"
+  },
+  {
+    "index": "ltomfutbrkri0pj5",
+    "name": "efreeti",
+    "type": "elemental",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 11,
+    "hit_points": 200,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Efreeti.webp",
+    "json_path": "/assets/atlas/enemies/json/ltomfutbrkri0pj5.json"
+  },
+  {
+    "index": "lynbfmjdbh4nlrzz",
+    "name": "sahuagin",
+    "type": "humanoid",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Sahuagin.webp",
+    "json_path": "/assets/atlas/enemies/json/lynbfmjdbh4nlrzz.json"
+  },
+  {
+    "index": "lzr4lhnmysf89s4q",
+    "name": "boar",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Boar.webp",
+    "json_path": "/assets/atlas/enemies/json/lzr4lhnmysf89s4q.json"
+  },
+  {
+    "index": "m4ex4mu5ihcr3tmf",
+    "name": "adult black dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 14,
+    "hit_points": 195,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/m4ex4mu5ihcr3tmf.webp",
+    "json_path": "/assets/atlas/enemies/json/m4ex4mu5ihcr3tmf.json"
+  },
+  {
+    "index": "m4h3hjambnmh09s9",
+    "name": "deva",
+    "type": "celestial",
+    "alignment": "Lawful Good",
+    "challenge_rating": 10,
+    "hit_points": 136,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Deva.webp",
+    "json_path": "/assets/atlas/enemies/json/m4h3hjambnmh09s9.json"
+  },
+  {
+    "index": "madgs8pwmvyyfof1",
+    "name": "horned devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 11,
+    "hit_points": 178,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/HornedDevil.webp",
+    "json_path": "/assets/atlas/enemies/json/madgs8pwmvyyfof1.json"
+  },
+  {
     "index": "mage",
     "name": "mage",
     "type": "humanoid",
@@ -2105,7 +4250,7 @@
     "name": "magma mephit",
     "type": "elemental",
     "alignment": "neutral evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 22,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/magma_mephit.webp",
@@ -2127,7 +4272,7 @@
     "name": "mammoth",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 6,
+    "challenge_rating": "6",
     "hit_points": 126,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/mammoth.webp",
@@ -2138,11 +4283,22 @@
     "name": "manticore",
     "type": "monstrosity",
     "alignment": "lawful evil",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 68,
     "armor_class": 14,
     "imageUrl": "/assets/atlas/enemies/images/manticore.webp",
     "json_path": "/assets/atlas/enemies/json/manticore.json"
+  },
+  {
+    "index": "maocgf5vkqwhmgvi",
+    "name": "manticore",
+    "type": "monstrosity",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 3,
+    "hit_points": 68,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Manticore.webp",
+    "json_path": "/assets/atlas/enemies/json/maocgf5vkqwhmgvi.json"
   },
   {
     "index": "marilith",
@@ -2244,6 +4400,72 @@
     "json_path": "/assets/atlas/enemies/json/minotaur_skeleton.json"
   },
   {
+    "index": "miyraihwm9it1in8",
+    "name": "mammoth",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 6,
+    "hit_points": 126,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Mammoth.webp",
+    "json_path": "/assets/atlas/enemies/json/miyraihwm9it1in8.json"
+  },
+  {
+    "index": "mmkvdw6xi98wdivu",
+    "name": "monstrosity",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/mmkvdw6xi98wdivu.webp",
+    "json_path": "/assets/atlas/enemies/json/mmkvdw6xi98wdivu.json"
+  },
+  {
+    "index": "mnijwxpmhwr7yyfc",
+    "name": "young blue dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 9,
+    "hit_points": 152,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungBlueDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/mnijwxpmhwr7yyfc.json"
+  },
+  {
+    "index": "mnol59noofyatakq",
+    "name": "lamia",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 4,
+    "hit_points": 97,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Lamia.webp",
+    "json_path": "/assets/atlas/enemies/json/mnol59noofyatakq.json"
+  },
+  {
+    "index": "mo382d2sxtaiuuc5",
+    "name": "adult gold dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 17,
+    "hit_points": 256,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/mo382d2sxtaiuuc5.webp",
+    "json_path": "/assets/atlas/enemies/json/mo382d2sxtaiuuc5.json"
+  },
+  {
+    "index": "mqnsxanewspiv7qe",
+    "name": "mage",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 6,
+    "hit_points": 40,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Mage.webp",
+    "json_path": "/assets/atlas/enemies/json/mqnsxanewspiv7qe.json"
+  },
+  {
     "index": "mule",
     "name": "mule",
     "type": "beast",
@@ -2277,6 +4499,39 @@
     "json_path": "/assets/atlas/enemies/json/mummy_lord.json"
   },
   {
+    "index": "mupbndojer09blao",
+    "name": "sprite",
+    "type": "fey",
+    "alignment": "Neutral Good",
+    "challenge_rating": 0.25,
+    "hit_points": 2,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/Sprite.webp",
+    "json_path": "/assets/atlas/enemies/json/mupbndojer09blao.json"
+  },
+  {
+    "index": "mwbrphckoz6olxmv",
+    "name": "doppelganger",
+    "type": "monstrosity",
+    "alignment": "Neutral",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Doppelganger.webp",
+    "json_path": "/assets/atlas/enemies/json/mwbrphckoz6olxmv.json"
+  },
+  {
+    "index": "mwlwllkxh8juuxol",
+    "name": "giant shark",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 126,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantShark.webp",
+    "json_path": "/assets/atlas/enemies/json/mwlwllkxh8juuxol.json"
+  },
+  {
     "index": "myconid-sprout",
     "name": "Myconid Sprout",
     "type": "plant",
@@ -2288,6 +4543,50 @@
     "json_path": "/assets/atlas/enemies/json/myconid-sprout.json"
   },
   {
+    "index": "mzycpivobs918qgz",
+    "name": "jackal",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 3,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Jackal.webp",
+    "json_path": "/assets/atlas/enemies/json/mzycpivobs918qgz.json"
+  },
+  {
+    "index": "n4tev7invukyzvin",
+    "name": "bandit",
+    "type": "humanoid",
+    "alignment": "Any Non-Lawful",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Bandit.webp",
+    "json_path": "/assets/atlas/enemies/json/n4tev7invukyzvin.json"
+  },
+  {
+    "index": "naisfponngucseyw",
+    "name": "zombie",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 22,
+    "armor_class": 8,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Zombie.webp",
+    "json_path": "/assets/atlas/enemies/json/naisfponngucseyw.json"
+  },
+  {
+    "index": "najtprihlr6buswe",
+    "name": "blue dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 3,
+    "hit_points": 52,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/BlueDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/najtprihlr6buswe.json"
+  },
+  {
     "index": "nalfeshnee",
     "name": "nalfeshnee",
     "type": "fiend",
@@ -2297,6 +4596,50 @@
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/images/nalfeshnee.webp",
     "json_path": "/assets/atlas/enemies/json/nalfeshnee.json"
+  },
+  {
+    "index": "namjz755u1ehveja",
+    "name": "water elemental",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 114,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/WaterElemental.webp",
+    "json_path": "/assets/atlas/enemies/json/namjz755u1ehveja.json"
+  },
+  {
+    "index": "nasohu9kbkgeniwb",
+    "name": "gold dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 3,
+    "hit_points": 60,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/GoldDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/nasohu9kbkgeniwb.json"
+  },
+  {
+    "index": "nb6wugvqeoqtsqku",
+    "name": "treant",
+    "type": "plant",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 9,
+    "hit_points": 138,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/plant/Treant.webp",
+    "json_path": "/assets/atlas/enemies/json/nb6wugvqeoqtsqku.json"
+  },
+  {
+    "index": "nec1brwm8lx9hlxw",
+    "name": "androsphinx",
+    "type": "monstrosity",
+    "alignment": "Lawful Neutral",
+    "challenge_rating": 17,
+    "hit_points": 199,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Androsphinx.webp",
+    "json_path": "/assets/atlas/enemies/json/nec1brwm8lx9hlxw.json"
   },
   {
     "index": "night_hag",
@@ -2321,6 +4664,28 @@
     "json_path": "/assets/atlas/enemies/json/nightmare.json"
   },
   {
+    "index": "nkycgj9wxeazkyyz",
+    "name": "quipper",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Quipper.webp",
+    "json_path": "/assets/atlas/enemies/json/nkycgj9wxeazkyyz.json"
+  },
+  {
+    "index": "nmqlj0zv4fmfusan",
+    "name": "young bronze dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 8,
+    "hit_points": 142,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungBronzeDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/nmqlj0zv4fmfusan.json"
+  },
+  {
     "index": "noble",
     "name": "noble",
     "type": "humanoid",
@@ -2332,11 +4697,88 @@
     "json_path": "/assets/atlas/enemies/json/noble.json"
   },
   {
+    "index": "npvwe1feohyeqabp",
+    "name": "giant constrictor snake",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 60,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantConstrictorSnake.webp",
+    "json_path": "/assets/atlas/enemies/json/npvwe1feohyeqabp.json"
+  },
+  {
+    "index": "nrepw9g94bsb9sil",
+    "name": "tribal warrior",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/TribalWarrior.webp",
+    "json_path": "/assets/atlas/enemies/json/nrepw9g94bsb9sil.json"
+  },
+  {
+    "index": "nu8gn8la8dct8sdb",
+    "name": "skeleton",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Skeleton.webp",
+    "json_path": "/assets/atlas/enemies/json/nu8gn8la8dct8sdb.json"
+  },
+  {
+    "index": "nwqpeeamxac3frft",
+    "name": "black pudding",
+    "type": "ooze",
+    "alignment": "Unaligned",
+    "challenge_rating": 4,
+    "hit_points": 85,
+    "armor_class": 7,
+    "imageUrl": "/assets/atlas/enemies/tokens/ooze/BlackPudding.webp",
+    "json_path": "/assets/atlas/enemies/json/nwqpeeamxac3frft.json"
+  },
+  {
+    "index": "nzthq6whlhcdu3te",
+    "name": "gorgon",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 5,
+    "hit_points": 114,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Gorgon.webp",
+    "json_path": "/assets/atlas/enemies/json/nzthq6whlhcdu3te.json"
+  },
+  {
+    "index": "o3abqi55ir1du1xa",
+    "name": "scout",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 0.5,
+    "hit_points": 16,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Scout.webp",
+    "json_path": "/assets/atlas/enemies/json/o3abqi55ir1du1xa.json"
+  },
+  {
+    "index": "obujqllpsmljiznl",
+    "name": "ghoul",
+    "type": "undead",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 1,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Ghoul.webp",
+    "json_path": "/assets/atlas/enemies/json/obujqllpsmljiznl.json"
+  },
+  {
     "index": "ochre_jelly",
     "name": "ochre jelly",
     "type": "ooze",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 45,
     "armor_class": 8,
     "imageUrl": "/assets/atlas/enemies/images/ochre_jelly.webp",
@@ -2352,6 +4794,28 @@
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/octopus.webp",
     "json_path": "/assets/atlas/enemies/json/octopus.json"
+  },
+  {
+    "index": "odspgxrqfbhe74l2",
+    "name": "invisible stalker",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 6,
+    "hit_points": 104,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/InvisibleStalker.webp",
+    "json_path": "/assets/atlas/enemies/json/odspgxrqfbhe74l2.json"
+  },
+  {
+    "index": "ogphf4scvoai87tu",
+    "name": "glabrezu",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 9,
+    "hit_points": 157,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Glabrezu.webp",
+    "json_path": "/assets/atlas/enemies/json/ogphf4scvoai87tu.json"
   },
   {
     "index": "ogre",
@@ -2376,6 +4840,28 @@
     "json_path": "/assets/atlas/enemies/json/ogre_zombie.json"
   },
   {
+    "index": "ojcob9x2bpsbkww5",
+    "name": "magma mephit",
+    "type": "elemental",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/MagmaMephit.webp",
+    "json_path": "/assets/atlas/enemies/json/ojcob9x2bpsbkww5.json"
+  },
+  {
+    "index": "omcdpbob69escxem",
+    "name": "brown bear",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 34,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/BrownBear.webp",
+    "json_path": "/assets/atlas/enemies/json/omcdpbob69escxem.json"
+  },
+  {
     "index": "oni",
     "name": "oni",
     "type": "giant",
@@ -2385,6 +4871,39 @@
     "armor_class": 16,
     "imageUrl": "/assets/atlas/enemies/images/oni.webp",
     "json_path": "/assets/atlas/enemies/json/oni.json"
+  },
+  {
+    "index": "oqqybzomedfn5afd",
+    "name": "sea hag",
+    "type": "fey",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 52,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/SeaHag.webp",
+    "json_path": "/assets/atlas/enemies/json/oqqybzomedfn5afd.json"
+  },
+  {
+    "index": "oqvord924obypdcc",
+    "name": "badger",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 3,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Badger.webp",
+    "json_path": "/assets/atlas/enemies/json/oqvord924obypdcc.json"
+  },
+  {
+    "index": "orbno5ohoozzlcor",
+    "name": "werebear",
+    "type": "humanoid",
+    "alignment": "Neutral Good",
+    "challenge_rating": 5,
+    "hit_points": 135,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Werebear.webp",
+    "json_path": "/assets/atlas/enemies/json/orbno5ohoozzlcor.json"
   },
   {
     "index": "orc",
@@ -2413,7 +4932,7 @@
     "name": "owl",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 11,
     "imageUrl": "/assets/atlas/enemies/images/owl.webp",
@@ -2424,11 +4943,55 @@
     "name": "owlbear",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 59,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/images/owlbear.webp",
     "json_path": "/assets/atlas/enemies/json/owlbear.json"
+  },
+  {
+    "index": "p1ykvdd1in7xxwwy",
+    "name": "fiend",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/p1ykvdd1in7xxwwy.webp",
+    "json_path": "/assets/atlas/enemies/json/p1ykvdd1in7xxwwy.json"
+  },
+  {
+    "index": "p6qc8jb3pneh0tie",
+    "name": "chuul",
+    "type": "aberration",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 4,
+    "hit_points": 93,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/aberration/Chuul.webp",
+    "json_path": "/assets/atlas/enemies/json/p6qc8jb3pneh0tie.json"
+  },
+  {
+    "index": "p980augbcidpk9zx",
+    "name": "roc",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 11,
+    "hit_points": 248,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Roc.webp",
+    "json_path": "/assets/atlas/enemies/json/p980augbcidpk9zx.json"
+  },
+  {
+    "index": "p9xnr820uazboivn",
+    "name": "giant octopus",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 52,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantOctopus.webp",
+    "json_path": "/assets/atlas/enemies/json/p9xnr820uazboivn.json"
   },
   {
     "index": "panther",
@@ -2442,6 +5005,39 @@
     "json_path": "/assets/atlas/enemies/json/panther.json"
   },
   {
+    "index": "pauindr7nvpsw9ng",
+    "name": "ancient brass dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 20,
+    "hit_points": 297,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/pauindr7nvpsw9ng.webp",
+    "json_path": "/assets/atlas/enemies/json/pauindr7nvpsw9ng.json"
+  },
+  {
+    "index": "pcy5iejezfrcg9a0",
+    "name": "celestial",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/pcy5iejezfrcg9a0.webp",
+    "json_path": "/assets/atlas/enemies/json/pcy5iejezfrcg9a0.json"
+  },
+  {
+    "index": "pcz0qjig6bhpffp9",
+    "name": "swarm of bats",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/pcz0qjig6bhpffp9.webp",
+    "json_path": "/assets/atlas/enemies/json/pcz0qjig6bhpffp9.json"
+  },
+  {
     "index": "pegasus",
     "name": "pegasus",
     "type": "celestial",
@@ -2453,15 +5049,48 @@
     "json_path": "/assets/atlas/enemies/json/pegasus.json"
   },
   {
+    "index": "peyqiq8dyb21xia3",
+    "name": "humanoid",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/peyqiq8dyb21xia3.webp",
+    "json_path": "/assets/atlas/enemies/json/peyqiq8dyb21xia3.json"
+  },
+  {
+    "index": "ph78nbdvoaszab61",
+    "name": "death dog",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 1,
+    "hit_points": 39,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/DeathDog.webp",
+    "json_path": "/assets/atlas/enemies/json/ph78nbdvoaszab61.json"
+  },
+  {
     "index": "phase_spider",
     "name": "phase spider",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 32,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/phase_spider.webp",
+    "imageUrl": "/assets/atlas/enemies/images/phase_spider.webp",
     "json_path": "/assets/atlas/enemies/json/phase_spider.json"
+  },
+  {
+    "index": "pho4j98zk2p4knyc",
+    "name": "pony",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Pony.webp",
+    "json_path": "/assets/atlas/enemies/json/pho4j98zk2p4knyc.json"
   },
   {
     "index": "phthisic",
@@ -2501,21 +5130,43 @@
     "name": "plesiosaurus",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 68,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/plesiosaurus.webp",
+    "imageUrl": "/assets/atlas/enemies/images/plesiosaurus.webp",
     "json_path": "/assets/atlas/enemies/json/plesiosaurus.json"
+  },
+  {
+    "index": "plzsh4da517tn73e",
+    "name": "giant lizard",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 19,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantLizard.webp",
+    "json_path": "/assets/atlas/enemies/json/plzsh4da517tn73e.json"
+  },
+  {
+    "index": "pneksr74iaz5djwz",
+    "name": "dragon",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/pneksr74iaz5djwz.webp",
+    "json_path": "/assets/atlas/enemies/json/pneksr74iaz5djwz.json"
   },
   {
     "index": "poisonous_snake",
     "name": "poisonous snake",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.125,
+    "challenge_rating": "0.125",
     "hit_points": 2,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/poisonous_snake.webp",
+    "imageUrl": "/assets/atlas/enemies/images/poisonous_snake.webp",
     "json_path": "/assets/atlas/enemies/json/poisonous_snake.json"
   },
   {
@@ -2534,11 +5185,33 @@
     "name": "pony",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.125,
+    "challenge_rating": "0.125",
     "hit_points": 11,
     "armor_class": 10,
-    "imageUrl": "/assets/atlas/enemies/pony.webp",
+    "imageUrl": "/assets/atlas/enemies/images/pony.webp",
     "json_path": "/assets/atlas/enemies/json/pony.json"
+  },
+  {
+    "index": "popqu4unr27za0jf",
+    "name": "minotaur",
+    "type": "monstrosity",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 3,
+    "hit_points": 76,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Minotaur.webp",
+    "json_path": "/assets/atlas/enemies/json/popqu4unr27za0jf.json"
+  },
+  {
+    "index": "pozquptnlzw8epox",
+    "name": "rat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Rat.webp",
+    "json_path": "/assets/atlas/enemies/json/pozquptnlzw8epox.json"
   },
   {
     "index": "priest",
@@ -2563,6 +5236,39 @@
     "json_path": "/assets/atlas/enemies/json/pseudodragon.json"
   },
   {
+    "index": "ptots52hphx596cz",
+    "name": "purple worm",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 15,
+    "hit_points": 247,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/ptots52hphx596cz.webp",
+    "json_path": "/assets/atlas/enemies/json/ptots52hphx596cz.json"
+  },
+  {
+    "index": "pucbjwwbrvmweiod",
+    "name": "construct",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/pucbjwwbrvmweiod.webp",
+    "json_path": "/assets/atlas/enemies/json/pucbjwwbrvmweiod.json"
+  },
+  {
+    "index": "pupo4h4dcxigf0fy",
+    "name": "specter",
+    "type": "undead",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 1,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Specter.webp",
+    "json_path": "/assets/atlas/enemies/json/pupo4h4dcxigf0fy.json"
+  },
+  {
     "index": "purple_worm",
     "name": "purple worm",
     "type": "monstrosity",
@@ -2572,6 +5278,116 @@
     "armor_class": 18,
     "imageUrl": "/assets/atlas/enemies/purple_worm.webp",
     "json_path": "/assets/atlas/enemies/json/purple_worm.json"
+  },
+  {
+    "index": "pvd5wrdyo7icjps1",
+    "name": "priest",
+    "type": "humanoid",
+    "alignment": "Any Alignment",
+    "challenge_rating": 2,
+    "hit_points": 27,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Priest.webp",
+    "json_path": "/assets/atlas/enemies/json/pvd5wrdyo7icjps1.json"
+  },
+  {
+    "index": "q1yjieit6rk8fckn",
+    "name": "giant rat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 7,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantRat.webp",
+    "json_path": "/assets/atlas/enemies/json/q1yjieit6rk8fckn.json"
+  },
+  {
+    "index": "qav2dvmiuimqccsy",
+    "name": "bat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Bat.webp",
+    "json_path": "/assets/atlas/enemies/json/qav2dvmiuimqccsy.json"
+  },
+  {
+    "index": "qgcqyzbvl4bwzi4e",
+    "name": "shadow",
+    "type": "undead",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 16,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Shadow.webp",
+    "json_path": "/assets/atlas/enemies/json/qgcqyzbvl4bwzi4e.json"
+  },
+  {
+    "index": "qklna1lkmmjpxuwg",
+    "name": "cultist",
+    "type": "humanoid",
+    "alignment": "Any Non-Good Alignment",
+    "challenge_rating": 0.125,
+    "hit_points": 9,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Cultist.webp",
+    "json_path": "/assets/atlas/enemies/json/qklna1lkmmjpxuwg.json"
+  },
+  {
+    "index": "qndfhy3jokcfhg3d",
+    "name": "ancient black dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 21,
+    "hit_points": 367,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/qndfhy3jokcfhg3d.webp",
+    "json_path": "/assets/atlas/enemies/json/qndfhy3jokcfhg3d.json"
+  },
+  {
+    "index": "qofejfranbdrcp6m",
+    "name": "ghost",
+    "type": "undead",
+    "alignment": "Any Alignment",
+    "challenge_rating": 4,
+    "hit_points": 45,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Ghost.webp",
+    "json_path": "/assets/atlas/enemies/json/qofejfranbdrcp6m.json"
+  },
+  {
+    "index": "qrasjndc7sgj7xzg",
+    "name": "young red dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 10,
+    "hit_points": 178,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungRedDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/qrasjndc7sgj7xzg.json"
+  },
+  {
+    "index": "qsytpah5wkofj1zt",
+    "name": "young gold dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 10,
+    "hit_points": 178,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungGoldDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/qsytpah5wkofj1zt.json"
+  },
+  {
+    "index": "qtjairf0h18brhem",
+    "name": "bugbear",
+    "type": "humanoid",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 1,
+    "hit_points": 27,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Bugbear.webp",
+    "json_path": "/assets/atlas/enemies/json/qtjairf0h18brhem.json"
   },
   {
     "index": "quasit",
@@ -2596,6 +5412,50 @@
     "json_path": "/assets/atlas/enemies/json/quipper.json"
   },
   {
+    "index": "qw8cbwg7ghca4cw6",
+    "name": "young copper dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 7,
+    "hit_points": 119,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungCopperDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/qw8cbwg7ghca4cw6.json"
+  },
+  {
+    "index": "qxzmsrtheodqo8l2",
+    "name": "rakshasa",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 13,
+    "hit_points": 110,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Rakshasa.webp",
+    "json_path": "/assets/atlas/enemies/json/qxzmsrtheodqo8l2.json"
+  },
+  {
+    "index": "qzylwdx7lj5d1wfd",
+    "name": "roper",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 5,
+    "hit_points": 93,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Roper.webp",
+    "json_path": "/assets/atlas/enemies/json/qzylwdx7lj5d1wfd.json"
+  },
+  {
+    "index": "r2gpy9bhrmmwzwkh",
+    "name": "gnoll",
+    "type": "humanoid",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Gnoll.webp",
+    "json_path": "/assets/atlas/enemies/json/r2gpy9bhrmmwzwkh.json"
+  },
+  {
     "index": "rakshasa",
     "name": "rakshasa",
     "type": "fiend",
@@ -2611,10 +5471,10 @@
     "name": "rat",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 10,
-    "imageUrl": "/assets/atlas/enemies/rat.webp",
+    "imageUrl": "/assets/atlas/enemies/images/rat.webp",
     "json_path": "/assets/atlas/enemies/json/rat.json"
   },
   {
@@ -2622,21 +5482,54 @@
     "name": "raven",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/raven.webp",
+    "imageUrl": "/assets/atlas/enemies/images/raven.webp",
     "json_path": "/assets/atlas/enemies/json/raven.json"
+  },
+  {
+    "index": "rb7ojt822wio52qy",
+    "name": "bandit captain",
+    "type": "humanoid",
+    "alignment": "Any Non-Lawful Alignment",
+    "challenge_rating": 2,
+    "hit_points": 65,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/BanditCaptain.webp",
+    "json_path": "/assets/atlas/enemies/json/rb7ojt822wio52qy.json"
+  },
+  {
+    "index": "rbyp54px2d0ql4qk",
+    "name": "wight",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 3,
+    "hit_points": 45,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Wight.webp",
+    "json_path": "/assets/atlas/enemies/json/rbyp54px2d0ql4qk.json"
+  },
+  {
+    "index": "rcv5y7iwlfnxkinx",
+    "name": "pit fiend",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 20,
+    "hit_points": 300,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/PitFiend.webp",
+    "json_path": "/assets/atlas/enemies/json/rcv5y7iwlfnxkinx.json"
   },
   {
     "index": "red_dragon_wyrmling",
     "name": "red dragon wyrmling",
     "type": "dragon",
     "alignment": "chaotic evil",
-    "challenge_rating": 4,
+    "challenge_rating": "4",
     "hit_points": 75,
     "armor_class": 17,
-    "imageUrl": "/assets/atlas/enemies/red_dragon_wyrmling.webp",
+    "imageUrl": "/assets/atlas/enemies/images/red_dragon_wyrmling.webp",
     "json_path": "/assets/atlas/enemies/json/red_dragon_wyrmling.json"
   },
   {
@@ -2644,10 +5537,10 @@
     "name": "reef shark",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 22,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/reef_shark.webp",
+    "imageUrl": "/assets/atlas/enemies/images/reef_shark.webp",
     "json_path": "/assets/atlas/enemies/json/reef_shark.json"
   },
   {
@@ -2655,21 +5548,32 @@
     "name": "remorhaz",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 11,
+    "challenge_rating": "11",
     "hit_points": 195,
     "armor_class": 17,
-    "imageUrl": "/assets/atlas/enemies/remorhaz.webp",
+    "imageUrl": "/assets/atlas/enemies/images/remorhaz.webp",
     "json_path": "/assets/atlas/enemies/json/remorhaz.json"
+  },
+  {
+    "index": "renlfmdt2xlbcf4x",
+    "name": "ogre zombie",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 2,
+    "hit_points": 85,
+    "armor_class": 8,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/OgreZombie.webp",
+    "json_path": "/assets/atlas/enemies/json/renlfmdt2xlbcf4x.json"
   },
   {
     "index": "rhinoceros",
     "name": "rhinoceros",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 45,
     "armor_class": 11,
-    "imageUrl": "/assets/atlas/enemies/rhinoceros.webp",
+    "imageUrl": "/assets/atlas/enemies/images/rhinoceros.webp",
     "json_path": "/assets/atlas/enemies/json/rhinoceros.json"
   },
   {
@@ -2677,11 +5581,33 @@
     "name": "riding horse",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 13,
     "armor_class": 10,
-    "imageUrl": "/assets/atlas/enemies/riding_horse.webp",
+    "imageUrl": "/assets/atlas/enemies/images/riding_horse.webp",
     "json_path": "/assets/atlas/enemies/json/riding_horse.json"
+  },
+  {
+    "index": "rjqk7tomd8sgr3n4",
+    "name": "giant goat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantGoat.webp",
+    "json_path": "/assets/atlas/enemies/json/rjqk7tomd8sgr3n4.json"
+  },
+  {
+    "index": "rll22hyeah3ljhdi",
+    "name": "giant fly",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/rll22hyeah3ljhdi.webp",
+    "json_path": "/assets/atlas/enemies/json/rll22hyeah3ljhdi.json"
   },
   {
     "index": "roc",
@@ -2699,11 +5625,22 @@
     "name": "roper",
     "type": "monstrosity",
     "alignment": "neutral evil",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 93,
     "armor_class": 20,
-    "imageUrl": "/assets/atlas/enemies/roper.webp",
+    "imageUrl": "/assets/atlas/enemies/images/roper.webp",
     "json_path": "/assets/atlas/enemies/json/roper.json"
+  },
+  {
+    "index": "rug5jmnknnznbaq9",
+    "name": "nalfeshnee",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 13,
+    "hit_points": 184,
+    "armor_class": 18,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Nalfeshnee.webp",
+    "json_path": "/assets/atlas/enemies/json/rug5jmnknnznbaq9.json"
   },
   {
     "index": "rug_of_smothering",
@@ -2721,21 +5658,43 @@
     "name": "rust monster",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 27,
     "armor_class": 14,
-    "imageUrl": "/assets/atlas/enemies/rust_monster.webp",
+    "imageUrl": "/assets/atlas/enemies/images/rust_monster.webp",
     "json_path": "/assets/atlas/enemies/json/rust_monster.json"
+  },
+  {
+    "index": "rz8utunft87bsafr",
+    "name": "riding horse",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/RidingHorse.webp",
+    "json_path": "/assets/atlas/enemies/json/rz8utunft87bsafr.json"
+  },
+  {
+    "index": "s0zdrv6lbnwwaz9e",
+    "name": "swarm of insects",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/s0zdrv6lbnwwaz9e.webp",
+    "json_path": "/assets/atlas/enemies/json/s0zdrv6lbnwwaz9e.json"
   },
   {
     "index": "saber_toothed_tiger",
     "name": "saber_toothed tiger",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 52,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/saber_toothed_tiger.webp",
+    "imageUrl": "/assets/atlas/enemies/images/saber_toothed_tiger.webp",
     "json_path": "/assets/atlas/enemies/json/saber_toothed_tiger.json"
   },
   {
@@ -2743,10 +5702,10 @@
     "name": "sahuagin",
     "type": "humanoid",
     "alignment": "lawful evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 22,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/sahuagin.webp",
+    "imageUrl": "/assets/atlas/enemies/images/sahuagin.webp",
     "json_path": "/assets/atlas/enemies/json/sahuagin.json"
   },
   {
@@ -2761,6 +5720,28 @@
     "json_path": "/assets/atlas/enemies/json/salamander.json"
   },
   {
+    "index": "sapylzj9ptz40wjr",
+    "name": "earth elemental",
+    "type": "elemental",
+    "alignment": "Neutral",
+    "challenge_rating": 5,
+    "hit_points": 126,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/EarthElemental.webp",
+    "json_path": "/assets/atlas/enemies/json/sapylzj9ptz40wjr.json"
+  },
+  {
+    "index": "saq6wm959pkhuaqp",
+    "name": "green hag",
+    "type": "fey",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 3,
+    "hit_points": 82,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/fey/GreenHag.webp",
+    "json_path": "/assets/atlas/enemies/json/saq6wm959pkhuaqp.json"
+  },
+  {
     "index": "satyr",
     "name": "satyr",
     "type": "fey",
@@ -2772,14 +5753,25 @@
     "json_path": "/assets/atlas/enemies/json/satyr.json"
   },
   {
+    "index": "sbce2bsa6opts5m4",
+    "name": "rhinoceros",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Rhinoceros.webp",
+    "json_path": "/assets/atlas/enemies/json/sbce2bsa6opts5m4.json"
+  },
+  {
     "index": "scorpion",
     "name": "scorpion",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 11,
-    "imageUrl": "/assets/atlas/enemies/scorpion.webp",
+    "imageUrl": "/assets/atlas/enemies/images/scorpion.webp",
     "json_path": "/assets/atlas/enemies/json/scorpion.json"
   },
   {
@@ -2787,10 +5779,10 @@
     "name": "scout",
     "type": "humanoid",
     "alignment": "any alignment",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 16,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/scout.webp",
+    "imageUrl": "/assets/atlas/enemies/images/scout.webp",
     "json_path": "/assets/atlas/enemies/json/scout.json"
   },
   {
@@ -2849,6 +5841,17 @@
     "json_path": "/assets/atlas/enemies/json/shambling_mound.json"
   },
   {
+    "index": "shhhte7b92pefcwb",
+    "name": "aboleth",
+    "type": "aberration",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 10,
+    "hit_points": 135,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/aberration/Aboleth.webp",
+    "json_path": "/assets/atlas/enemies/json/shhhte7b92pefcwb.json"
+  },
+  {
     "index": "shield_guardian",
     "name": "shield guardian",
     "type": "construct",
@@ -2871,14 +5874,25 @@
     "json_path": "/assets/atlas/enemies/json/shrieker.json"
   },
   {
+    "index": "sibueaj4uvdaih6p",
+    "name": "hunter shark",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/HunterShark.webp",
+    "json_path": "/assets/atlas/enemies/json/sibueaj4uvdaih6p.json"
+  },
+  {
     "index": "silver_dragon_wyrmling",
     "name": "silver dragon wyrmling",
     "type": "dragon",
     "alignment": "lawful good",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 45,
     "armor_class": 17,
-    "imageUrl": "/assets/atlas/enemies/silver_dragon_wyrmling.webp",
+    "imageUrl": "/assets/atlas/enemies/images/silver_dragon_wyrmling.webp",
     "json_path": "/assets/atlas/enemies/json/silver_dragon_wyrmling.json"
   },
   {
@@ -2886,11 +5900,66 @@
     "name": "skeleton",
     "type": "undead",
     "alignment": "lawful evil",
-    "challenge_rating": 0.25,
+    "challenge_rating": "0.25",
     "hit_points": 13,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/skeleton.webp",
+    "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fenemies%2Fimages%2Fskeleton.webp%3Ft%3D1782843161175",
     "json_path": "/assets/atlas/enemies/json/skeleton.json"
+  },
+  {
+    "index": "sldpiuazf8lujjqy",
+    "name": "barbed devil",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 5,
+    "hit_points": 110,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/sldpiuazf8lujjqy.webp",
+    "json_path": "/assets/atlas/enemies/json/sldpiuazf8lujjqy.json"
+  },
+  {
+    "index": "smfgosfpgf6rb01k",
+    "name": "flying snake",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 5,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/FlyingSnake.webp",
+    "json_path": "/assets/atlas/enemies/json/smfgosfpgf6rb01k.json"
+  },
+  {
+    "index": "snt0jnvsngutsj4m",
+    "name": "ancient blue dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 23,
+    "hit_points": 481,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/snt0jnvsngutsj4m.webp",
+    "json_path": "/assets/atlas/enemies/json/snt0jnvsngutsj4m.json"
+  },
+  {
+    "index": "soin81nwijhrvxfk",
+    "name": "stone giant",
+    "type": "giant",
+    "alignment": "Neutral",
+    "challenge_rating": 7,
+    "hit_points": 126,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/StoneGiant.webp",
+    "json_path": "/assets/atlas/enemies/json/soin81nwijhrvxfk.json"
+  },
+  {
+    "index": "sok7l5zjqkxtvgll",
+    "name": "giant bat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 22,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantBat.webp",
+    "json_path": "/assets/atlas/enemies/json/sok7l5zjqkxtvgll.json"
   },
   {
     "index": "solar",
@@ -2959,6 +6028,39 @@
     "json_path": "/assets/atlas/enemies/json/spy.json"
   },
   {
+    "index": "spz6dws3to6qs5mh",
+    "name": "ooze",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/spz6dws3to6qs5mh.webp",
+    "json_path": "/assets/atlas/enemies/json/spz6dws3to6qs5mh.json"
+  },
+  {
+    "index": "sqzruj8lt2kgjbbq",
+    "name": "commoner",
+    "type": "humanoid",
+    "alignment": "Any",
+    "challenge_rating": 0,
+    "hit_points": 4,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Commoner.webp",
+    "json_path": "/assets/atlas/enemies/json/sqzruj8lt2kgjbbq.json"
+  },
+  {
+    "index": "ssucaf2fieoddfa3",
+    "name": "giant boar",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 42,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantBoar.webp",
+    "json_path": "/assets/atlas/enemies/json/ssucaf2fieoddfa3.json"
+  },
+  {
     "index": "steam_mephit",
     "name": "steam mephit",
     "type": "elemental",
@@ -2985,10 +6087,10 @@
     "name": "stone giant",
     "type": "giant",
     "alignment": "neutral",
-    "challenge_rating": 7,
+    "challenge_rating": "7",
     "hit_points": 126,
     "armor_class": 17,
-    "imageUrl": "/assets/atlas/enemies/stone_giant.webp",
+    "imageUrl": "/assets/atlas/enemies/images/stone_giant.webp",
     "json_path": "/assets/atlas/enemies/json/stone_giant.json"
   },
   {
@@ -3135,15 +6237,92 @@
     "json_path": "/assets/atlas/enemies/json/swarm_of_wasps.json"
   },
   {
+    "index": "sxxvwalbnuzbymp3",
+    "name": "axe beak",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/AxeBeak.webp",
+    "json_path": "/assets/atlas/enemies/json/sxxvwalbnuzbymp3.json"
+  },
+  {
+    "index": "t1xztdcguvmbsq8d",
+    "name": "warhorse",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Warhorse.webp",
+    "json_path": "/assets/atlas/enemies/json/t1xztdcguvmbsq8d.json"
+  },
+  {
+    "index": "t2pexqe84zcibaxz",
+    "name": "hippogriff",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 19,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Hippogriff.webp",
+    "json_path": "/assets/atlas/enemies/json/t2pexqe84zcibaxz.json"
+  },
+  {
+    "index": "t8wyd7ak07x7xpx8",
+    "name": "mummy",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 3,
+    "hit_points": 58,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/Mummy.webp",
+    "json_path": "/assets/atlas/enemies/json/t8wyd7ak07x7xpx8.json"
+  },
+  {
+    "index": "tac7eq0axjco0nml",
+    "name": "arcane sword",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tac7eq0axjco0nml.webp",
+    "json_path": "/assets/atlas/enemies/json/tac7eq0axjco0nml.json"
+  },
+  {
+    "index": "tak6nqmgqz0y8gt7",
+    "name": "shrieker",
+    "type": "plant",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 13,
+    "armor_class": 5,
+    "imageUrl": "/assets/atlas/enemies/tokens/plant/Shrieker.webp",
+    "json_path": "/assets/atlas/enemies/json/tak6nqmgqz0y8gt7.json"
+  },
+  {
     "index": "tarrasque",
     "name": "tarrasque",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 30,
+    "challenge_rating": "30",
     "hit_points": 676,
     "armor_class": 25,
-    "imageUrl": "/assets/atlas/enemies/tarrasque.webp",
+    "imageUrl": "/assets/atlas/enemies/images/tarrasque.webp",
     "json_path": "/assets/atlas/enemies/json/tarrasque.json"
+  },
+  {
+    "index": "tfjx45zj3qdc3zli",
+    "name": "grick",
+    "type": "monstrosity",
+    "alignment": "Neutral",
+    "challenge_rating": 2,
+    "hit_points": 27,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Grick.webp",
+    "json_path": "/assets/atlas/enemies/json/tfjx45zj3qdc3zli.json"
   },
   {
     "index": "thug",
@@ -3179,11 +6358,22 @@
     "json_path": "/assets/atlas/enemies/json/tiger.json"
   },
   {
+    "index": "tjwqogi3a4ual7lc",
+    "name": "goblin",
+    "type": "humanoid",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 7,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Goblin.webp",
+    "json_path": "/assets/atlas/enemies/json/tjwqogi3a4ual7lc.json"
+  },
+  {
     "index": "tomb_tapper",
     "name": "tomb tapper",
     "type": "construct",
     "alignment": "lawful neutral",
-    "challenge_rating": 10,
+    "challenge_rating": "10",
     "hit_points": 195,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/tomb_tapper.webp",
@@ -3234,6 +6424,39 @@
     "json_path": "/assets/atlas/enemies/json/troll.json"
   },
   {
+    "index": "tubco7kaq4w0soxs",
+    "name": "lemure",
+    "type": "fiend",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 0,
+    "hit_points": 13,
+    "armor_class": 7,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Lemure.webp",
+    "json_path": "/assets/atlas/enemies/json/tubco7kaq4w0soxs.json"
+  },
+  {
+    "index": "tuhyepq9gazmtyc0",
+    "name": "arcane eye",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tuhyepq9gazmtyc0.webp",
+    "json_path": "/assets/atlas/enemies/json/tuhyepq9gazmtyc0.json"
+  },
+  {
+    "index": "tyfqixcjt0waakmc",
+    "name": "cult fanatic",
+    "type": "humanoid",
+    "alignment": "Any Non-Good",
+    "challenge_rating": 2,
+    "hit_points": 33,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/CultFanatic.webp",
+    "json_path": "/assets/atlas/enemies/json/tyfqixcjt0waakmc.json"
+  },
+  {
     "index": "tyrannosaurus_rex",
     "name": "tyrannosaurus rex",
     "type": "beast",
@@ -3245,6 +6468,50 @@
     "json_path": "/assets/atlas/enemies/json/tyrannosaurus_rex.json"
   },
   {
+    "index": "tyyoifu9tegletvi",
+    "name": "saber-toothed tiger",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 52,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tyyoifu9tegletvi.webp",
+    "json_path": "/assets/atlas/enemies/json/tyyoifu9tegletvi.json"
+  },
+  {
+    "index": "u0fwdplsomtxgnn1",
+    "name": "ancient copper dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Good",
+    "challenge_rating": 21,
+    "hit_points": 350,
+    "armor_class": 21,
+    "imageUrl": "/assets/atlas/enemies/u0fwdplsomtxgnn1.webp",
+    "json_path": "/assets/atlas/enemies/json/u0fwdplsomtxgnn1.json"
+  },
+  {
+    "index": "u1uqfhutp5eekkjm",
+    "name": "young white dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 6,
+    "hit_points": 133,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/YoungWhiteDragon.webp",
+    "json_path": "/assets/atlas/enemies/json/u1uqfhutp5eekkjm.json"
+  },
+  {
+    "index": "ufw8m3jhzhkxuegm",
+    "name": "mummy lord",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 15,
+    "hit_points": 97,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/MummyLord.webp",
+    "json_path": "/assets/atlas/enemies/json/ufw8m3jhzhkxuegm.json"
+  },
+  {
     "index": "unicorn",
     "name": "unicorn",
     "type": "celestial",
@@ -3254,6 +6521,83 @@
     "armor_class": 12,
     "imageUrl": "/assets/atlas/enemies/images/unicorn.webp",
     "json_path": "/assets/atlas/enemies/json/unicorn.json"
+  },
+  {
+    "index": "ur2gwlfhmfwg7reh",
+    "name": "awakened tree",
+    "type": "plant",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 59,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/ur2gwlfhmfwg7reh.webp",
+    "json_path": "/assets/atlas/enemies/json/ur2gwlfhmfwg7reh.json"
+  },
+  {
+    "index": "urxp9o9n7dvdh9nl",
+    "name": "dancing lights (tiny)",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/urxp9o9n7dvdh9nl.webp",
+    "json_path": "/assets/atlas/enemies/json/urxp9o9n7dvdh9nl.json"
+  },
+  {
+    "index": "uthhot7qfzfeiuue",
+    "name": "steam mephit",
+    "type": "elemental",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.25,
+    "hit_points": 21,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/SteamMephit.webp",
+    "json_path": "/assets/atlas/enemies/json/uthhot7qfzfeiuue.json"
+  },
+  {
+    "index": "utukdtah1dkfpwwe",
+    "name": "constrictor snake",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 13,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/ConstrictorSnake.webp",
+    "json_path": "/assets/atlas/enemies/json/utukdtah1dkfpwwe.json"
+  },
+  {
+    "index": "uz8nrrenwyz4qnf6",
+    "name": "balor",
+    "type": "fiend",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 19,
+    "hit_points": 262,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/Balor.webp",
+    "json_path": "/assets/atlas/enemies/json/uz8nrrenwyz4qnf6.json"
+  },
+  {
+    "index": "v8gfgdeluefqdrqg",
+    "name": "giant",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/v8gfgdeluefqdrqg.webp",
+    "json_path": "/assets/atlas/enemies/json/v8gfgdeluefqdrqg.json"
+  },
+  {
+    "index": "v99woosujjugcunf",
+    "name": "giant spider",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 1,
+    "hit_points": 26,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantSpider.webp",
+    "json_path": "/assets/atlas/enemies/json/v99woosujjugcunf.json"
   },
   {
     "index": "vampire_bat",
@@ -3282,10 +6626,10 @@
     "name": "vampire spawn",
     "type": "undead",
     "alignment": "neutral evil",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 82,
     "armor_class": 15,
-    "imageUrl": "/assets/atlas/enemies/vampire_spawn.webp",
+    "imageUrl": "/assets/atlas/enemies/images/vampire_spawn.webp",
     "json_path": "/assets/atlas/enemies/json/vampire_spawn.json"
   },
   {
@@ -3300,6 +6644,50 @@
     "json_path": "/assets/atlas/enemies/json/vampire_vampire.json"
   },
   {
+    "index": "vbkp2rgqkvmccous",
+    "name": "worg",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0.5,
+    "hit_points": 26,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Worg.webp",
+    "json_path": "/assets/atlas/enemies/json/vbkp2rgqkvmccous.json"
+  },
+  {
+    "index": "vbzqw2rouvtunopi",
+    "name": "remorhaz",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 11,
+    "hit_points": 195,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Remorhaz.webp",
+    "json_path": "/assets/atlas/enemies/json/vbzqw2rouvtunopi.json"
+  },
+  {
+    "index": "vc2tagiuq4yinjbf",
+    "name": "white dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 2,
+    "hit_points": 32,
+    "armor_class": 16,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/WhiteDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/vc2tagiuq4yinjbf.json"
+  },
+  {
+    "index": "vcug0z3mro8kfdu0",
+    "name": "adult bronze dragon",
+    "type": "dragon",
+    "alignment": "Lawful Good",
+    "challenge_rating": 15,
+    "hit_points": 212,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/vcug0z3mro8kfdu0.webp",
+    "json_path": "/assets/atlas/enemies/json/vcug0z3mro8kfdu0.json"
+  },
+  {
     "index": "veteran",
     "name": "veteran",
     "type": "humanoid",
@@ -3309,6 +6697,17 @@
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/veteran.webp",
     "json_path": "/assets/atlas/enemies/json/veteran.json"
+  },
+  {
+    "index": "vfefrlf2fogf2hil",
+    "name": "ancient red dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 24,
+    "hit_points": 546,
+    "armor_class": 22,
+    "imageUrl": "/assets/atlas/enemies/vfefrlf2fogf2hil.webp",
+    "json_path": "/assets/atlas/enemies/json/vfefrlf2fogf2hil.json"
   },
   {
     "index": "violet_fungus",
@@ -3322,11 +6721,33 @@
     "json_path": "/assets/atlas/enemies/json/violet_fungus.json"
   },
   {
+    "index": "vk7uhvkj5b26gath",
+    "name": "mule",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 11,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Mule.webp",
+    "json_path": "/assets/atlas/enemies/json/vk7uhvkj5b26gath.json"
+  },
+  {
+    "index": "vmdyzdjqac8vdncy",
+    "name": "succubus/incubus",
+    "type": "fiend",
+    "alignment": "neutral evil",
+    "challenge_rating": 4,
+    "hit_points": 66,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/vmdyzdjqac8vdncy.webp",
+    "json_path": "/assets/atlas/enemies/json/vmdyzdjqac8vdncy.json"
+  },
+  {
     "index": "vodyanoi",
     "name": "vodyanoi",
     "type": "monstrosity",
     "alignment": "unaligned",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 114,
     "armor_class": 17,
     "imageUrl": "/assets/atlas/enemies/images/vodyanoi.webp",
@@ -3353,6 +6774,17 @@
     "armor_class": 10,
     "imageUrl": "/assets/atlas/enemies/images/vulture.webp",
     "json_path": "/assets/atlas/enemies/json/vulture.json"
+  },
+  {
+    "index": "vvxly3ue0i3yggrb",
+    "name": "giant owl",
+    "type": "beast",
+    "alignment": "Neutral",
+    "challenge_rating": 0.25,
+    "hit_points": 19,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantOwl.webp",
+    "json_path": "/assets/atlas/enemies/json/vvxly3ue0i3yggrb.json"
   },
   {
     "index": "warhorse",
@@ -3388,14 +6820,25 @@
     "json_path": "/assets/atlas/enemies/json/water_elemental.json"
   },
   {
+    "index": "wcsjbl25uiusyqwn",
+    "name": "ankheg",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 39,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Ankheg.webp",
+    "json_path": "/assets/atlas/enemies/json/wcsjbl25uiusyqwn.json"
+  },
+  {
     "index": "weasel",
     "name": "weasel",
     "type": "beast",
     "alignment": "unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/weasel.webp",
+    "imageUrl": "/assets/atlas/enemies/images/weasel.webp",
     "json_path": "/assets/atlas/enemies/json/weasel.json"
   },
   {
@@ -3406,7 +6849,7 @@
     "challenge_rating": "5",
     "hit_points": 135,
     "armor_class": 10,
-    "imageUrl": null,
+    "imageUrl": "/assets/atlas/enemies/images/werebear-human.webp",
     "json_path": "/assets/atlas/enemies/json/werebear-human.json"
   },
   {
@@ -3447,10 +6890,10 @@
     "name": "wereboar, boar form",
     "type": "humanoid",
     "alignment": "neutral evil",
-    "challenge_rating": 4,
+    "challenge_rating": "4",
     "hit_points": 78,
     "armor_class": 11,
-    "imageUrl": "/assets/atlas/enemies/wereboar_boar.webp",
+    "imageUrl": "/assets/atlas/enemies/images/wereboar_boar.webp",
     "json_path": "/assets/atlas/enemies/json/wereboar_boar.json"
   },
   {
@@ -3458,10 +6901,10 @@
     "name": "wereboar, human form",
     "type": "humanoid",
     "alignment": "neutral evil",
-    "challenge_rating": 4,
+    "challenge_rating": "4",
     "hit_points": 78,
     "armor_class": 10,
-    "imageUrl": "/assets/atlas/enemies/wereboar_human.webp",
+    "imageUrl": "/assets/atlas/enemies/images/wereboar_human.webp",
     "json_path": "/assets/atlas/enemies/json/wereboar_human.json"
   },
   {
@@ -3469,10 +6912,10 @@
     "name": "wereboar, hybrid form",
     "type": "humanoid",
     "alignment": "neutral evil",
-    "challenge_rating": 4,
+    "challenge_rating": "4",
     "hit_points": 78,
     "armor_class": 11,
-    "imageUrl": "/assets/atlas/enemies/wereboar_hybrid.webp",
+    "imageUrl": "/assets/atlas/enemies/images/wereboar_hybrid.webp",
     "json_path": "/assets/atlas/enemies/json/wereboar_hybrid.json"
   },
   {
@@ -3480,10 +6923,10 @@
     "name": "wererat, human form",
     "type": "humanoid",
     "alignment": "lawful evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 33,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/wererat_human.webp",
+    "imageUrl": "/assets/atlas/enemies/images/wererat_human.webp",
     "json_path": "/assets/atlas/enemies/json/wererat_human.json"
   },
   {
@@ -3513,10 +6956,10 @@
     "name": "weretiger, human form",
     "type": "humanoid",
     "alignment": "neutral",
-    "challenge_rating": 4,
+    "challenge_rating": "4",
     "hit_points": 120,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/weretiger_human.webp",
+    "imageUrl": "/assets/atlas/enemies/images/weretiger_human.webp",
     "json_path": "/assets/atlas/enemies/json/weretiger_human.json"
   },
   {
@@ -3546,10 +6989,10 @@
     "name": "werewolf, human form",
     "type": "humanoid",
     "alignment": "chaotic evil",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 58,
     "armor_class": 11,
-    "imageUrl": "/assets/atlas/enemies/werewolf_human.webp",
+    "imageUrl": "/assets/atlas/enemies/images/werewolf_human.webp",
     "json_path": "/assets/atlas/enemies/json/werewolf_human.json"
   },
   {
@@ -3557,10 +7000,10 @@
     "name": "werewolf, hybrid form",
     "type": "humanoid",
     "alignment": "chaotic evil",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 58,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/werewolf_hybrid.webp",
+    "imageUrl": "/assets/atlas/enemies/images/werewolf_hybrid.webp",
     "json_path": "/assets/atlas/enemies/json/werewolf_hybrid.json"
   },
   {
@@ -3568,10 +7011,10 @@
     "name": "werewolf, wolf form",
     "type": "humanoid",
     "alignment": "chaotic evil",
-    "challenge_rating": 3,
+    "challenge_rating": "3",
     "hit_points": 58,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/werewolf_wolf.webp",
+    "imageUrl": "/assets/atlas/enemies/images/werewolf_wolf.webp",
     "json_path": "/assets/atlas/enemies/json/werewolf_wolf.json"
   },
   {
@@ -3619,6 +7062,28 @@
     "json_path": "/assets/atlas/enemies/json/winter_wolf.json"
   },
   {
+    "index": "wjsxqbhu28d64lwt",
+    "name": "rust monster",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 27,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/RustMonster.webp",
+    "json_path": "/assets/atlas/enemies/json/wjsxqbhu28d64lwt.json"
+  },
+  {
+    "index": "wodeackcyvhgldun",
+    "name": "weasel",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Weasel.webp",
+    "json_path": "/assets/atlas/enemies/json/wodeackcyvhgldun.json"
+  },
+  {
     "index": "wolf",
     "name": "wolf",
     "type": "beast",
@@ -3634,10 +7099,10 @@
     "name": "worg",
     "type": "monstrosity",
     "alignment": "neutral evil",
-    "challenge_rating": 0.5,
+    "challenge_rating": "0.5",
     "hit_points": 26,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/worg.webp",
+    "imageUrl": "/assets/atlas/enemies/images/worg.webp",
     "json_path": "/assets/atlas/enemies/json/worg.json"
   },
   {
@@ -3663,6 +7128,61 @@
     "json_path": "/assets/atlas/enemies/json/wyvern.json"
   },
   {
+    "index": "x47znphfyl0ptdm9",
+    "name": "behir",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 11,
+    "hit_points": 168,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Behir.webp",
+    "json_path": "/assets/atlas/enemies/json/x47znphfyl0ptdm9.json"
+  },
+  {
+    "index": "xbhg7dos3tkg9jwz",
+    "name": "ochre jelly",
+    "type": "ooze",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 45,
+    "armor_class": 8,
+    "imageUrl": "/assets/atlas/enemies/tokens/ooze/OchreJelly.webp",
+    "json_path": "/assets/atlas/enemies/json/xbhg7dos3tkg9jwz.json"
+  },
+  {
+    "index": "xebybleokdgl3mrr",
+    "name": "planetar",
+    "type": "celestial",
+    "alignment": "Lawful Good",
+    "challenge_rating": 16,
+    "hit_points": 200,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Planetar.webp",
+    "json_path": "/assets/atlas/enemies/json/xebybleokdgl3mrr.json"
+  },
+  {
+    "index": "xfqmboth892xsncx",
+    "name": "swarm of poisonous snakes",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 2,
+    "hit_points": 36,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/xfqmboth892xsncx.webp",
+    "json_path": "/assets/atlas/enemies/json/xfqmboth892xsncx.json"
+  },
+  {
+    "index": "xiswkzzauxdmfoll",
+    "name": "avatar of death",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 20,
+    "imageUrl": "/assets/atlas/enemies/xiswkzzauxdmfoll.webp",
+    "json_path": "/assets/atlas/enemies/json/xiswkzzauxdmfoll.json"
+  },
+  {
     "index": "xorn",
     "name": "xorn",
     "type": "elemental",
@@ -3672,6 +7192,83 @@
     "armor_class": 19,
     "imageUrl": "/assets/atlas/enemies/images/xorn.webp",
     "json_path": "/assets/atlas/enemies/json/xorn.json"
+  },
+  {
+    "index": "xple5bvgj42uggdd",
+    "name": "minotaur skeleton",
+    "type": "undead",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 2,
+    "hit_points": 67,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/MinotaurSkeleton.webp",
+    "json_path": "/assets/atlas/enemies/json/xple5bvgj42uggdd.json"
+  },
+  {
+    "index": "xvh2uokv1bh03gih",
+    "name": "night hag",
+    "type": "fiend",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 5,
+    "hit_points": 112,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/fiend/NightHag.webp",
+    "json_path": "/assets/atlas/enemies/json/xvh2uokv1bh03gih.json"
+  },
+  {
+    "index": "y0vxqvf7w2p38fk2",
+    "name": "scorpion",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 1,
+    "armor_class": 11,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Scorpion.webp",
+    "json_path": "/assets/atlas/enemies/json/y0vxqvf7w2p38fk2.json"
+  },
+  {
+    "index": "y8sru8ks2lcrgsaf",
+    "name": "goat",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 4,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Goat.webp",
+    "json_path": "/assets/atlas/enemies/json/y8sru8ks2lcrgsaf.json"
+  },
+  {
+    "index": "yawtes8u2fcfzzzh",
+    "name": "wolf",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 11,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Wolf.webp",
+    "json_path": "/assets/atlas/enemies/json/yawtes8u2fcfzzzh.json"
+  },
+  {
+    "index": "ygth874etxuckmaf",
+    "name": "winter wolf",
+    "type": "monstrosity",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 3,
+    "hit_points": 75,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/WinterWolf.webp",
+    "json_path": "/assets/atlas/enemies/json/ygth874etxuckmaf.json"
+  },
+  {
+    "index": "yoqhbf8wsx0jh9fu",
+    "name": "clay golem",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 9,
+    "hit_points": 133,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/ClayGolem.webp",
+    "json_path": "/assets/atlas/enemies/json/yoqhbf8wsx0jh9fu.json"
   },
   {
     "index": "young_black_dragon",
@@ -3784,6 +7381,149 @@
     "json_path": "/assets/atlas/enemies/json/young_white_dragon.json"
   },
   {
+    "index": "ytpl2c3no4son2ua",
+    "name": "mastiff",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 5,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/Mastiff.webp",
+    "json_path": "/assets/atlas/enemies/json/ytpl2c3no4son2ua.json"
+  },
+  {
+    "index": "yuaprnengdfdng8p",
+    "name": "swarm of wasps",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.5,
+    "hit_points": 22,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/yuaprnengdfdng8p.webp",
+    "json_path": "/assets/atlas/enemies/json/yuaprnengdfdng8p.json"
+  },
+  {
+    "index": "yvnpvjibpq2mp3xa",
+    "name": "salamander",
+    "type": "elemental",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 5,
+    "hit_points": 90,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Salamander.webp",
+    "json_path": "/assets/atlas/enemies/json/yvnpvjibpq2mp3xa.json"
+  },
+  {
+    "index": "z0giav3bjxtjufjm",
+    "name": "giant fire beetle",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0,
+    "hit_points": 4,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantFireBeetle.webp",
+    "json_path": "/assets/atlas/enemies/json/z0giav3bjxtjufjm.json"
+  },
+  {
+    "index": "z0zvgciugizwcuxj",
+    "name": "giant rat (diseased)",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.125,
+    "hit_points": 7,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/z0zvgciugizwcuxj.webp",
+    "json_path": "/assets/atlas/enemies/json/z0zvgciugizwcuxj.json"
+  },
+  {
+    "index": "z3gsixhhwyahjfbt",
+    "name": "stone golem",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 10,
+    "hit_points": 178,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/StoneGolem.webp",
+    "json_path": "/assets/atlas/enemies/json/z3gsixhhwyahjfbt.json"
+  },
+  {
+    "index": "z85esgs2gvwj46qe",
+    "name": "shield guardian",
+    "type": "construct",
+    "alignment": "Unaligned",
+    "challenge_rating": 7,
+    "hit_points": 142,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/construct/ShieldGuardian.webp",
+    "json_path": "/assets/atlas/enemies/json/z85esgs2gvwj46qe.json"
+  },
+  {
+    "index": "zap1h91t4fzbrqr5",
+    "name": "couatl",
+    "type": "celestial",
+    "alignment": "Lawful Good",
+    "challenge_rating": 4,
+    "hit_points": 97,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Couatl.webp",
+    "json_path": "/assets/atlas/enemies/json/zap1h91t4fzbrqr5.json"
+  },
+  {
+    "index": "zgwkii3voe4ahcnd",
+    "name": "red dragon wyrmling",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 4,
+    "hit_points": 75,
+    "armor_class": 17,
+    "imageUrl": "/assets/atlas/enemies/tokens/dragon/RedDragonWyrmling.webp",
+    "json_path": "/assets/atlas/enemies/json/zgwkii3voe4ahcnd.json"
+  },
+  {
+    "index": "zhafrncwcz17dmlc",
+    "name": "troll",
+    "type": "giant",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 5,
+    "hit_points": 84,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/giant/Troll.webp",
+    "json_path": "/assets/atlas/enemies/json/zhafrncwcz17dmlc.json"
+  },
+  {
+    "index": "zir3nanf0mwz5ahq",
+    "name": "weretiger",
+    "type": "humanoid",
+    "alignment": "Neutral",
+    "challenge_rating": 4,
+    "hit_points": 120,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Weretiger.webp",
+    "json_path": "/assets/atlas/enemies/json/zir3nanf0mwz5ahq.json"
+  },
+  {
+    "index": "zjqjcrwkdmc59tnx",
+    "name": "ancient green dragon",
+    "type": "dragon",
+    "alignment": "Lawful Evil",
+    "challenge_rating": 22,
+    "hit_points": 385,
+    "armor_class": 21,
+    "imageUrl": "/assets/atlas/enemies/zjqjcrwkdmc59tnx.webp",
+    "json_path": "/assets/atlas/enemies/json/zjqjcrwkdmc59tnx.json"
+  },
+  {
+    "index": "zm1p6loyswmiijn9",
+    "name": "deep gnome",
+    "type": "humanoid",
+    "alignment": "Neutral Good",
+    "challenge_rating": 0.5,
+    "hit_points": 16,
+    "armor_class": 12,
+    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/DeepGnome.webp",
+    "json_path": "/assets/atlas/enemies/json/zm1p6loyswmiijn9.json"
+  },
+  {
     "index": "zombie",
     "name": "zombie",
     "type": "undead",
@@ -3793,5 +7533,71 @@
     "armor_class": 8,
     "imageUrl": "/assets/atlas/enemies/zombie.webp",
     "json_path": "/assets/atlas/enemies/json/zombie.json"
+  },
+  {
+    "index": "zpazb7i8aly32vwv",
+    "name": "vampire spawn",
+    "type": "undead",
+    "alignment": "Neutral Evil",
+    "challenge_rating": 5,
+    "hit_points": 82,
+    "armor_class": 15,
+    "imageUrl": "/assets/atlas/enemies/tokens/undead/VampireSpawn.webp",
+    "json_path": "/assets/atlas/enemies/json/zpazb7i8aly32vwv.json"
+  },
+  {
+    "index": "zqtczftv9zotjncu",
+    "name": "homunculus",
+    "type": "construct",
+    "alignment": "Neutral",
+    "challenge_rating": 0,
+    "hit_points": 5,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/zqtczftv9zotjncu.webp",
+    "json_path": "/assets/atlas/enemies/json/zqtczftv9zotjncu.json"
+  },
+  {
+    "index": "zw39de2zi3txvyc9",
+    "name": "giant poisonous snake",
+    "type": "beast",
+    "alignment": "Unaligned",
+    "challenge_rating": 0.25,
+    "hit_points": 11,
+    "armor_class": 14,
+    "imageUrl": "/assets/atlas/enemies/tokens/beast/GiantPoisonousSnake.webp",
+    "json_path": "/assets/atlas/enemies/json/zw39de2zi3txvyc9.json"
+  },
+  {
+    "index": "zwt2wjwo7ctm2631",
+    "name": "mage hand",
+    "type": "humanoid",
+    "alignment": "any alignment",
+    "challenge_rating": 0,
+    "hit_points": 10,
+    "armor_class": 10,
+    "imageUrl": "/assets/atlas/enemies/zwt2wjwo7ctm2631.webp",
+    "json_path": "/assets/atlas/enemies/json/zwt2wjwo7ctm2631.json"
+  },
+  {
+    "index": "zy3w5mg7fjssenf6",
+    "name": "owlbear",
+    "type": "monstrosity",
+    "alignment": "Unaligned",
+    "challenge_rating": 3,
+    "hit_points": 59,
+    "armor_class": 13,
+    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Owlbear.webp",
+    "json_path": "/assets/atlas/enemies/json/zy3w5mg7fjssenf6.json"
+  },
+  {
+    "index": "zyiboozzd0ndao2s",
+    "name": "adult red dragon",
+    "type": "dragon",
+    "alignment": "Chaotic Evil",
+    "challenge_rating": 17,
+    "hit_points": 256,
+    "armor_class": 19,
+    "imageUrl": "/assets/atlas/enemies/zyiboozzd0ndao2s.webp",
+    "json_path": "/assets/atlas/enemies/json/zyiboozzd0ndao2s.json"
   }
 ]
