@@ -6,7 +6,7 @@ import { useWorldStore } from '../../../store/useWorldStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
-import { checkLoS, findPath, getDistance, getReachableCells } from '../../../lib/combatUtils';
+import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } from '../../../lib/combatUtils';
 import { Token } from './Token';
 import { TokenActionHUD } from './TokenActionHUD';
 
@@ -250,8 +250,11 @@ export const CombatGrid: React.FC = () => {
           resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
         });
 
-        const { consumeAction } = useCharacterStore.getState();
+        const { consumeAction, castSpell } = useCharacterStore.getState();
         consumeAction(activeCharacterId, targetingAction.actionType || 'actions');
+        if (targetingAction.category === 'Spells' && targetingAction.data?.level !== undefined) {
+          castSpell(targetingAction.id, targetingAction.data.level);
+        }
 
         setIsTargeting(false);
         setTargetingAction(null);
@@ -259,6 +262,10 @@ export const CombatGrid: React.FC = () => {
       }
 
       if (targetingAction?.id === 'move') {
+        if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
+          addLog("That position is already occupied!", 'warning');
+          return;
+        }
         const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
         const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
 
@@ -281,6 +288,10 @@ export const CombatGrid: React.FC = () => {
     }
 
     // Default movement logic
+    if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
+      addLog("That position is already occupied!", 'warning');
+      return;
+    }
     const { gameMode } = useUIStore.getState();
     const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
 
@@ -421,6 +432,11 @@ export const CombatGrid: React.FC = () => {
                     const x = Math.floor((info.point.x - rect.left) / cellSize);
                     const y = Math.floor((info.point.y - rect.top) / cellSize);
                     if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                      if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
+                        addLog("That position is already occupied!", 'warning');
+                        setDraggedPos(null);
+                        return;
+                      }
                       const { gameMode } = useUIStore.getState();
                       const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
                       if (path && path.length > 0) {
@@ -469,8 +485,11 @@ export const CombatGrid: React.FC = () => {
                         const dist = getDistance(playerPos, { x: monster.x, y: monster.y });
                         if (dist <= (targetingAction?.range || 1)) {
                           resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
-                          const { consumeAction } = useCharacterStore.getState();
+                          const { consumeAction, castSpell } = useCharacterStore.getState();
                           consumeAction(activeCharacterId, targetingAction?.actionType || 'actions');
+                          if (targetingAction?.category === 'Spells' && targetingAction.data?.level !== undefined) {
+                            castSpell(targetingAction.id, targetingAction.data.level);
+                          }
                           setIsTargeting(false);
                           setTargetingAction(null);
                         } else {
