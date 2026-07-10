@@ -7,9 +7,34 @@ export interface IconDefinition {
   usage?: string;
   usedIn?: string;
   rotate?: number;
-  animation?: any;
+  animation?: 'spin' | 'pulse' | 'bounce' | string;
   color?: string;
 }
+
+export interface IconCategory {
+  id: string;
+  name: string;
+  file: string;
+  icons: Record<string, IconDefinition>;
+  description: string;
+  isComplete?: boolean;
+}
+
+export interface FileNode {
+  type: 'file';
+  name: string;
+  iconId: string;
+  path: string;
+  fullPath: string;
+}
+
+export interface FolderNode {
+  type: 'folder';
+  name: string;
+  path: string;
+  children: Array<FolderNode | FileNode>;
+}
+
 
 export interface IconCategory {
   id: string;
