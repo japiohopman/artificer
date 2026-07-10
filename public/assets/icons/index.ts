@@ -1,4 +1,39 @@
-import { IconCategory, IconDefinition, FolderNode, FileNode } from '../../types';
+export interface IconDefinition {
+  path: string;
+  label: string;
+  description: string;
+  rawHtml: string;
+  viewBox: string;
+  usage?: string;
+  usedIn?: string;
+  rotate?: number;
+  animation?: 'spin' | 'pulse' | 'bounce' | string;
+  color?: string;
+}
+
+export interface IconCategory {
+  id: string;
+  name: string;
+  file: string;
+  icons: Record<string, IconDefinition>;
+  description: string;
+  isComplete?: boolean;
+}
+
+export interface FileNode {
+  type: 'file';
+  name: string;
+  iconId: string;
+  path: string;
+  fullPath: string;
+}
+
+export interface FolderNode {
+  type: 'folder';
+  name: string;
+  path: string;
+  children: Array<FolderNode | FileNode>;
+}
 
 // Process and parse dynamically imported SVGs
 const svgModules = (import.meta as any).glob('/src/assets/icons/svg/**/*.svg', { query: '?raw', eager: true });
@@ -216,7 +251,7 @@ Object.keys(svgModules).forEach((filePath) => {
       });
     } else {
       let dirNode = currentNode.children.find(
-        (child) => child.type === 'folder' && child.name === segment
+        (child: FolderNode | FileNode) => child.type === 'folder' && child.name === segment
       ) as FolderNode;
       if (!dirNode) {
         dirNode = {
@@ -234,15 +269,15 @@ Object.keys(svgModules).forEach((filePath) => {
 
 // Helper function to recursively sort folders first, then files alphabetically
 function sortTree(node: FolderNode) {
-  node.children.sort((a, b) => {
+  node.children.sort((a: FolderNode | FileNode, b: FolderNode | FileNode) => {
     if (a.type !== b.type) {
       return a.type === 'folder' ? -1 : 1;
     }
     return a.name.localeCompare(b.name);
   });
-  node.children.forEach((child) => {
+  node.children.forEach((child: FolderNode | FileNode) => {
     if (child.type === 'folder') {
-      sortTree(child);
+      sortTree(child as FolderNode);
     }
   });
 }

@@ -44,7 +44,12 @@ export const Token: React.FC<TokenProps> = ({
 }) => {
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
-  const isTopDownToken = imageUrl && (imageUrl.includes('/tokens/') || imageUrl.includes('/enemies/tokens/'));
+  const isTopDownToken = imageUrl && (
+    imageUrl.includes('/tokens/') ||
+    imageUrl.includes('/enemies/tokens/') ||
+    imageUrl.includes('%2Ftokens%2F') ||
+    imageUrl.includes('%2Fenemies%2Ftokens%2F')
+  );
 
   return (
     <motion.div
