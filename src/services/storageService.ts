@@ -340,6 +340,12 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   const timestamp = Date.now();
   let finalUrl = "";
 
+  // Support 2024 class assets and official illustrations by mapping from /assets/atlas/ui/official/classes/ to /assets/ui/official/classes/
+  if (url && typeof url === 'string') {
+    url = url.replace(/\/assets\/atlas\/ui\/official\/classes\//gi, '/assets/ui/official/classes/');
+    url = url.replace(/assets\/atlas\/ui\/official\/classes\//gi, 'assets/ui/official/classes/');
+  }
+
   // Normalize category names to folder names
   const categoryToFolder: Record<string, string> = {
     'enemy': 'enemies',
