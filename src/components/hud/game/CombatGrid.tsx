@@ -8,6 +8,7 @@ import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { checkLoS, findPath, getDistance, getReachableCells } from '../../../lib/combatUtils';
 import { Token } from './Token';
+import { TokenActionHUD } from './TokenActionHUD';
 
 export const CombatGrid: React.FC = () => {
   const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
@@ -15,7 +16,7 @@ export const CombatGrid: React.FC = () => {
   const { partyLocation } = useWorldStore();
   const { 
     isTargeting, targetingAction, setIsTargeting, setTargetingAction, isGridVisible, setIsGridVisible,
-    setFocusedItem, setIsMonsterProfileOpen
+    setFocusedItem, setIsMonsterProfileOpen, gameMode
   } = useUIStore();
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
@@ -362,7 +363,13 @@ export const CombatGrid: React.FC = () => {
           drag
           dragMomentum={false}
           className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
-          style={{ width: gridWidth * cellSize, height: gridHeight * cellSize }}
+          style={{ 
+            width: gridWidth * cellSize, 
+            height: gridHeight * cellSize,
+            backgroundImage: combatState.combatMapBackground ? `url(${combatState.combatMapBackground.startsWith('http') || combatState.combatMapBackground.startsWith('/') ? combatState.combatMapBackground : `/assets/atlas/combat/combat_map_terrain/${combatState.combatMapBackground}`})` : undefined,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
         >
           {/* Main Tactical Canvas */}
           <canvas
@@ -377,6 +384,15 @@ export const CombatGrid: React.FC = () => {
 
           {/* Tokens Layer */}
           <div className="absolute inset-0 pointer-events-none z-20">
+             {/* Floating Token Action HUD (Roll20-style overlay around/above player token) */}
+             {gameMode === 'combat' && !isTargeting && !draggedPos && (
+               <TokenActionHUD
+                 x={playerPos.x}
+                 y={playerPos.y}
+                 cellSize={cellSize}
+               />
+             )}
+
              {/* Player Token */}
              <Token
                 id={activeCharacterId || 'player'}

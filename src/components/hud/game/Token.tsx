@@ -44,6 +44,7 @@ export const Token: React.FC<TokenProps> = ({
 }) => {
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
+  const isTopDownToken = imageUrl && (imageUrl.includes('/tokens/') || imageUrl.includes('/enemies/tokens/'));
 
   return (
     <motion.div
@@ -65,22 +66,37 @@ export const Token: React.FC<TokenProps> = ({
       style={{ width: cellSize * mSize, height: cellSize * mSize }}
     >
       <div className={cn(
-        "w-full h-full rounded-full border-2 flex items-center justify-center overflow-hidden relative shadow-xl transition-all duration-300",
-        isPlayer 
-          ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
-          : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]",
+        "w-full h-full relative transition-all duration-300 flex items-center justify-center",
+        isTopDownToken 
+          ? "bg-transparent shadow-none" 
+          : cn(
+              "rounded-full border-2 overflow-hidden shadow-xl",
+              isPlayer 
+                ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
+                : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
+            ),
         isTargeting && !isPlayer && "ring-4 ring-dragon-gold animate-pulse scale-110",
         isHovered && "scale-105 brightness-110"
       )}>
         {imageUrl ? (
-          <img src={imageUrl} className="w-full h-full object-cover" alt={name} />
+          <img 
+            src={imageUrl} 
+            className={cn(
+              "w-full h-full transition-all",
+              isTopDownToken ? "object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.7)]" : "object-cover"
+            )} 
+            alt={name} 
+          />
         ) : (
           <GameIcon name={isPlayer ? "user" : "identity"} size={24 * mSize} color="#FFF" />
         )}
 
         {/* Health Bar */}
         {healthPercent !== null && (
-          <div className="absolute bottom-0 left-0 w-full h-1.5 bg-black/60">
+          <div className={cn(
+            "absolute bottom-0 left-0 w-full h-1.5 bg-black/60",
+            isTopDownToken && "bottom-1 px-1 rounded-sm overflow-hidden"
+          )}>
             <motion.div 
               initial={{ width: 0 }}
               animate={{ width: `${healthPercent}%` }}

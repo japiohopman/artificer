@@ -2,12 +2,612 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
-ElevenLabs Keys Configured: 0 accounts active.
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
 Server running on http://localhost:3000
-3:47:56 PM [vite] (client) page reload server.ts
-3:47:56 PM [vite] (client) page reload server_log.txt
-3:49:21 PM [vite] (client) page reload server.ts
-3:49:21 PM [vite] (client) page reload server_log.txt
-3:49:31 PM [vite] (client) page reload server.ts
-3:49:31 PM [vite] (client) page reload server_log.txt
+7:29:47 AM [vite] (client) hmr update /src/components/hud/game/CombatGrid.tsx, /src/index.css
+7:29:47 AM [vite] (client) page reload server_log.txt
+7:37:18 AM [vite] (client) page reload tests/verify_audio_lab.spec.ts
+7:37:18 AM [vite] (client) page reload server_log.txt
+7:37:22 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+7:37:22 AM [vite] (client) page reload server_log.txt
+7:42:50 AM [vite] (client) hmr update /src/components/hud/game/ActionView.tsx, /src/index.css
+7:42:50 AM [vite] (client) page reload server_log.txt
+7:47:00 AM [vite] (client) hmr update /src/components/hud/chat/ChatPanel.tsx, /src/index.css
+7:47:00 AM [vite] (client) page reload server_log.txt
+7:47:07 AM [vite] (client) hmr update /src/components/hud/game/ActionPanel.tsx, /src/index.css
+7:47:07 AM [vite] (client) page reload server_log.txt
+7:49:14 AM [vite] (client) hmr update /src/components/hud/chat/ChatPanel.tsx, /src/index.css
+7:49:14 AM [vite] (client) page reload server_log.txt
+7:52:11 AM [vite] (client) hmr update /src/components/hud/game/TokenActionHUD.tsx, /src/index.css
+7:52:11 AM [vite] (client) page reload server_log.txt
+7:52:16 AM [vite] (client) page reload tests/verify_audio_lab.spec.ts
+7:52:16 AM [vite] (client) page reload server_log.txt
+7:52:21 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+7:52:21 AM [vite] (client) page reload server_log.txt
+7:55:38 AM [vite] (client) page reload tests/verify_audio_lab.spec.ts
+7:55:38 AM [vite] (client) page reload server_log.txt
+7:55:42 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+7:55:42 AM [vite] (client) page reload server_log.txt
+7:57:07 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+7:57:07 AM [vite] (client) page reload server_log.txt
+8:02:24 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:02:24 AM [vite] (client) page reload server_log.txt
+8:04:09 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:04:09 AM [vite] (client) page reload server_log.txt
+8:05:20 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:05:20 AM [vite] (client) page reload server_log.txt
+8:07:17 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:07:17 AM [vite] (client) page reload server_log.txt
+8:09:34 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:09:34 AM [vite] (client) page reload server_log.txt
+8:13:35 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+8:13:35 AM [vite] (client) page reload server_log.txt
+8:16:12 AM [vite] (client) page reload src/main.tsx
+8:16:12 AM [vite] (client) page reload server_log.txt
+9:24:24 AM [vite] (client) page reload src/services/storageService.ts
+9:24:24 AM [vite] (client) page reload server_log.txt
+9:28:40 AM [vite] (client) page reload src/store/useGameStore.ts
+9:28:40 AM [vite] (client) page reload server_log.txt
+9:28:55 AM [vite] (client) hmr update /src/components/hud/game/CombatGrid.tsx, /src/index.css
+9:28:55 AM [vite] (client) page reload server_log.txt
+9:32:44 AM [vite] (client) hmr update /src/components/devkit/CombatTester.tsx, /src/index.css
+9:32:44 AM [vite] (client) page reload server_log.txt
+9:34:06 AM [vite] (client) hmr update /src/components/devkit/CombatTester.tsx, /src/index.css
+9:34:06 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:35:40 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:35:46 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:35:46 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:35:48 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:35:54 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:35:54 AM [vite] (client) page reload server_log.txt
+9:35:54 AM [vite] (client) page reload server_log.txt
+9:35:55 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:35:59 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:00 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:36:04 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:04 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:11 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:36:11 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:36:15 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:36:16 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:17 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:20 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:36:24 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:36:25 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:36:28 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:31 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:33 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:36:36 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:45:17 AM [vite] (client) hmr update /src/components/hud/game/Token.tsx, /src/index.css
+9:45:17 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:54:50 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:54:51 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:54:54 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:54:55 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:54:59 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:00 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:00 AM [vite] (client) page reload server_log.txt
+9:55:00 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:03 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:04 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:07 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:08 AM [vite] (client) page reload server_log.txt
+9:55:08 AM [vite] (client) page reload server_log.txt
+9:55:08 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:11 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:14 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:15 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:17 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:20 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:23 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+9:55:24 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:27 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:28 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:31 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:32 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:35 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:36 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:39 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:41 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:42 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:45 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:46 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:48 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:51 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:53 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:55:56 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:55:59 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:02 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:05 AM [vite] (client) page reload server_log.txt
+9:56:05 AM [vite] (client) page reload server_log.txt
+9:56:05 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:06 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:09 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:10 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:13 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:14 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:17 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:18 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:21 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:22 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:25 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+9:56:26 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:28 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:30 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:33 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:36 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:38 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:40 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:42 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:44 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot1/slot1_avatar.webp, use /data/character_save/images/slot1/slot1_avatar.webp.
+9:56:46 AM [vite] (client) page reload server_log.txt
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot2/slot2_avatar.webp, use /data/character_save/images/slot2/slot2_avatar.webp.
+Files in the public directory are served at the root path.
+Instead of /public/data/character_save/images/slot3/slot3_avatar.webp, use /data/character_save/images/slot3/slot3_avatar.webp.

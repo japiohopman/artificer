@@ -69,6 +69,7 @@ export interface CombatState {
   activeTurnIndex: number;
   grid: TacticalCell[][];
   victoryXp: number;
+  combatMapBackground?: string | null;
 }
 
 export interface LogEntry {
@@ -150,6 +151,7 @@ interface GameState {
   nextTurn: () => void;
   startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
+  setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
 
 const initializeGrid = (width: number, height: number): TacticalCell[][] => {
@@ -203,7 +205,8 @@ export const useGameStore = create<GameState>((set, get) => ({
     activeTurnIndex: 0,
     grid: initializeGrid(32, 20),
     victoryXp: 500,
-    activeConditions: {}
+    activeConditions: {},
+    combatMapBackground: 'fay_forest.png'
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -310,6 +313,13 @@ export const useGameStore = create<GameState>((set, get) => ({
     combatState: {
       ...state.combatState,
       playerPos: { x, y }
+    }
+  })),
+
+  setCombatMapBackground: (combatMapBackground) => set((state) => ({
+    combatState: {
+      ...state.combatState,
+      combatMapBackground
     }
   })),
 

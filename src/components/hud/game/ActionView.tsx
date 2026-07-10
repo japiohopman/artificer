@@ -3,7 +3,6 @@ import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { FirstPersonView } from '../view/FirstPersonView';
 import { CombatGrid } from './CombatGrid';
-import { ActionPanel } from './ActionPanel';
 import { GameIcon } from '../../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../../atlas/DraggableCard';
@@ -29,11 +28,6 @@ export const ActionView: React.FC = () => {
         <div className="flex-1 relative min-h-0 border-2 border-dragon-gold shadow-2xl overflow-hidden">
           <CombatGrid />
         </div>
-        {gameMode === 'combat' && (
-          <div className="h-[180px] w-full shrink-0">
-             <ActionPanel />
-          </div>
-        )}
       </div>
     );
   }

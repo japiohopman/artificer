@@ -16,7 +16,8 @@ export const CombatTester: React.FC = () => {
 
   const {
     activeCards, addToPreview, removeFromPreview, clearPreview,
-    addLog, combatState, addMonsterToCombat, removeMonsterFromCombat
+    addLog, combatState, addMonsterToCombat, removeMonsterFromCombat,
+    setCombatMapBackground
   } = useGameStore();
   
   const { characters, restoreSlots, restoreActionEconomy, updateCharacter } = useCharacterStore();
@@ -24,6 +25,15 @@ export const CombatTester: React.FC = () => {
   
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const terrainMaps = [
+    { name: 'Fey Forest', file: 'fay_forest.png' },
+    { name: 'Dungeon Crypt', file: 'dungeon1.png' },
+    { name: 'Frozen Tundra', file: 'ice1.png' },
+    { name: 'Temple Ruins', file: 'map_1766910770741.png' },
+    { name: 'Abyssal Chasm', file: 'map_1766911166076.png' },
+    { name: 'Forgotten Oasis', file: 'map_1766911325908.png' }
+  ];
 
   useEffect(() => {
     if (monstersList.length === 0) {
@@ -114,6 +124,23 @@ export const CombatTester: React.FC = () => {
             >
               Combat
             </button>
+          </div>
+          <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+            <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Terrain:</span>
+            <select
+              value={combatState.combatMapBackground || 'fay_forest.png'}
+              onChange={(e) => {
+                setCombatMapBackground(e.target.value);
+                playClickSound();
+              }}
+              className="bg-transparent text-white text-[10px] font-bold focus:outline-none cursor-pointer uppercase tracking-widest"
+            >
+              {terrainMaps.map(t => (
+                <option key={t.file} value={t.file} className="bg-stone-900 text-white text-xs">
+                  {t.name}
+                </option>
+              ))}
+            </select>
           </div>
           <button 
             onClick={handleFullRestore}
@@ -244,7 +271,15 @@ export const CombatTester: React.FC = () => {
                    className="group bg-white/[0.03] border border-white/5 rounded-xl p-4 hover:bg-red-500/10 hover:border-red-500/40 transition-all flex items-center gap-4 text-left"
                  >
                     <div className="w-12 h-12 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden">
-                       <GameIcon name="identity" size={24} className="text-white/10 group-hover:text-red-500/40 transition-colors" />
+                      {(monster as any).imageUrl ? (
+                        <img 
+                          src={normalizeImageUrl((monster as any).imageUrl, 'enemies', monster.index)} 
+                          alt={monster.name} 
+                          className="w-full h-full object-cover" 
+                        />
+                      ) : (
+                        <GameIcon name="identity" size={24} className="text-white/10 group-hover:text-red-500/40 transition-colors" />
+                      )}
                     </div>
                     <div className="flex-1 min-w-0">
                        <div className="text-[13px] font-black text-white uppercase truncate tracking-tight">{monster.name}</div>
