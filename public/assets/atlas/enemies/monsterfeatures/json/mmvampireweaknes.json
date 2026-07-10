@@ -1,0 +1,13 @@
+{
+  "index": "mmvampireweaknes",
+  "name": "vampire weakness",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} has these weaknesses:\nForbiddance. The [[lookup @name lowercase]]{monster} can't enter a residence without an invitation from an occupant.\nRunning Water. The [[lookup @name lowercase]]{monster} takes 20 Acid damage if it ends its turn in running water.\nStake to the Heart. The [[lookup @name lowercase]]{monster} is destroyed if a weapon that deals Piercing damage is driven into the [[lookup @name lowercase]]{monster}'s heart while the [[lookup @name lowercase]]{monster} has the Incapacitated condition.\nSunlight. The [[lookup @name lowercase]]{monster} takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has Disadvantage on attack rolls and ability checks.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/sundries/survival/stake-rough-heavy-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmvampireweaknes.json",
+  "updated_at": "2026-07-10T05:56:36.996Z"
+}

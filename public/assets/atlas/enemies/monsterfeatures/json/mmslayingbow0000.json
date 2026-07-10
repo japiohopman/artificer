@@ -1,0 +1,19 @@
+{
+  "index": "mmslayingbow0000",
+  "name": "slaying bow",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=C7BMf8hIfCjxRSWC]], one [[lookup @target.affects.type activity=C7BMf8hIfCjxRSWC]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=C7BMf8hIfCjxRSWC]] [[lookup @range.units activity=C7BMf8hIfCjxRSWC]]. Failure: If the [[lookup @target.affects.type activity=C7BMf8hIfCjxRSWC]] has 100 Hit Points or fewer, it dies. It otherwise takes [[/damage average]] damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 21,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "600 ft",
+  "image": "icons/magic/light/projectile-halo-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmslayingbow0000.json",
+  "updated_at": "2026-07-10T05:56:36.844Z"
+}

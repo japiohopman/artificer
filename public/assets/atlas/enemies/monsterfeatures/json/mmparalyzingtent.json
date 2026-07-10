@@ -1,0 +1,19 @@
+{
+  "index": "mmparalyzingtent",
+  "name": "paralyzing tentacles",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=p157Iqz8s0M0VilW]], one [[lookup @target.affects.type activity=p157Iqz8s0M0VilW]] the [[lookup @name lowercase]]{monster} can see within [[lookup @target.template.size activity=p157Iqz8s0M0VilW]] feet.\nFailure: The target has the &Reference[Poisoned apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=p157Iqz8s0M0VilW]] [[lookup @duration.units activity=p157Iqz8s0M0VilW]], it succeeds automatically. While Poisoned, the target has the &Reference[Paralyzed apply=false] condition.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/creatures/tentacles/tentacles-thing-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmparalyzingtent.json",
+  "updated_at": "2026-07-10T05:56:36.829Z"
+}

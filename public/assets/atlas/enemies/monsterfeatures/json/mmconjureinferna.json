@@ -1,0 +1,19 @@
+{
+  "index": "mmconjureinferna",
+  "name": "conjure infernal chain",
+  "type": "feat",
+  "desc": "The devil conjures a fiery chain to bind a creature.\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=9vCVJrzUZL0ra4w2]], [[lookup @target.affects.labels.statblock activity=9vCVJrzUZL0ra4w2]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=9vCVJrzUZL0ra4w2]] feet.\nFailure: [[/damage average]] damage, and the target has the &Reference[Restrained apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn, at which point the chain disappears. If the target is Large or smaller, the devil moves the target up to 30 feet straight toward itself.\nSuccess: The chain disappears.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot line",
+  "image": "icons/tools/fasteners/chain-brass-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmconjureinferna.json",
+  "updated_at": "2026-07-10T05:56:36.795Z"
+}

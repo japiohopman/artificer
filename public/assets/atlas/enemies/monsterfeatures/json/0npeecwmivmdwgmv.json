@@ -1,0 +1,13 @@
+{
+  "index": "0npeecwmivmdwgmv",
+  "name": "damage transfer",
+  "type": "feat",
+  "desc": "While attached to a creature, the [[lookup @name lowercase]]{monster} takes only half the damage dealt to it (rounded down) and that creature takes the other half.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/strike-ice-blades.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/0npeecwmivmdwgmv.json",
+  "updated_at": "2026-07-10T05:56:36.671Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "mmcreatespecter0",
+  "name": "create specter",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} targets a Humanoid corpse within [[lookup @range.value activity=ypIQdXr13u7LATUP]] feet of itself that has been dead for no longer than 1 minute. The target's spirit rises as a @UUID[Compendium.dnd5e.actors24.Actor.mmSpecter0000000]{Specter} in the space of its corpse or in the nearest unoccupied space. The specter is under the [[lookup @name lowercase]]{monster}'s control. The [[lookup @name lowercase]]{monster} can have no more than seven specters under its control at a time.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "10 ft",
+  "image": "icons/magic/death/undead-skeleton-lich-armor.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcreatespecter0.json",
+  "updated_at": "2026-07-10T05:56:36.798Z"
+}

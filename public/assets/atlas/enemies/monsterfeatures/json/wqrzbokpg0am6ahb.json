@@ -1,0 +1,26 @@
+{
+  "index": "wqrzbokpg0am6ahb",
+  "name": "charge",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage.\nIf the target is a creature, it must succeed on a  DC 11 Strength saving throw or be knocked prone.\nIf the [[lookup @name lowercase]]{monster} moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes extra slashing damage. If the target is a creature, it must make a Strength saving throw or be knocked prone.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 11,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "20 ft",
+  "image": "icons/creatures/mammals/ox-bull-horned-glowing-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/wqrzbokpg0am6ahb.json",
+  "updated_at": "2026-07-10T05:56:36.663Z"
+}

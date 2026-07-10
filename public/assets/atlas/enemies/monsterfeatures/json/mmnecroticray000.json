@@ -1,0 +1,22 @@
+{
+  "index": "mmnecroticray000",
+  "name": "necrotic ray",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "6d6",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/unholy/beam-impact-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmnecroticray000.json",
+  "updated_at": "2026-07-10T05:56:36.906Z"
+}

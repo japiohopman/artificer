@@ -1,0 +1,19 @@
+{
+  "index": "mmvileappearance",
+  "name": "vile appearance",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=FR0ETDHBas1Z5LfF]], any [[lookup @target.affects.special activity=FR0ETDHBas1Z5LfF]] that starts its turn within [[lookup @range.value activity=FR0ETDHBas1Z5LfF]] feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}'s true form.\nFailure: The target has the &Reference[Frightened apply=false] condition until the start of its next turn.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s Horrific Appearance for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/control/fear-fright-monster-purple-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmvileappearance.json",
+  "updated_at": "2026-07-10T05:56:36.996Z"
+}

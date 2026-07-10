@@ -1,0 +1,19 @@
+{
+  "index": "mmfling000000000",
+  "name": "fling",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} throws a [[lookup @target.affects.special activity=E7YKnUIWsavrnNzK]] Grappled by it to a space it can see within [[lookup @range.value activity=E7YKnUIWsavrnNzK]] feet of itself [[lookup @range.special activity=E7YKnUIWsavrnNzK]].\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=E7YKnUIWsavrnNzK]], the creature thrown and each creature in the destination space.\nFailure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/movement/trail-streak-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfling000000000.json",
+  "updated_at": "2026-07-10T05:56:36.812Z"
+}

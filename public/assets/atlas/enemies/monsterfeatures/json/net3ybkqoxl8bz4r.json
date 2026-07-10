@@ -1,0 +1,20 @@
+{
+  "index": "net3ybkqoxl8bz4r",
+  "name": "death burst",
+  "type": "feat",
+  "desc": "When the [[lookup @name lowercase]]{monster} dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.\nWhen the [[lookup @name lowercase]]{monster} dies, it explodes in a burst of dust. Each creature within 5 ft. of it must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 10,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "5 ft",
+  "image": "icons/magic/light/explosion-star-glow-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/net3ybkqoxl8bz4r.json",
+  "updated_at": "2026-07-10T05:56:36.674Z"
+}

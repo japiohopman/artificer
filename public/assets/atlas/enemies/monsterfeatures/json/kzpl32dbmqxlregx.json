@@ -1,0 +1,30 @@
+{
+  "index": "kzpl32dbmqxlregx",
+  "name": "acid spray",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled.\nEach creature in that line must make a  DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.\nthe [[lookup @name lowercase]]{monster} spits acid in a line that is 30 ft. long and 5 ft. wide. Each creature in that line must make a Dexterity saving throw.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "30-foot line",
+  "image": "icons/magic/acid/projectile-smoke-glowing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/kzpl32dbmqxlregx.json",
+  "updated_at": "2026-07-10T05:56:36.626Z"
+}

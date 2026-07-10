@@ -1,0 +1,26 @@
+{
+  "index": "5oyruoi92fxtolts",
+  "name": "searing burst",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a  DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.\nthe [[lookup @name lowercase]]{monster} emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a Dexterity saving throw.",
+  "damage": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 23,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/magic/light/explosion-star-glow-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/5oyruoi92fxtolts.json",
+  "updated_at": "2026-07-10T05:56:36.744Z"
+}

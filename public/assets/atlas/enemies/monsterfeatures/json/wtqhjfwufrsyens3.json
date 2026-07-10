@@ -1,0 +1,26 @@
+{
+  "index": "wtqhjfwufrsyens3",
+  "name": "third roar",
+  "type": "feat",
+  "desc": "Each creature makes a  DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.",
+  "damage": [
+    {
+      "damage_dice": "8d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/wtqhjfwufrsyens3.json",
+  "updated_at": "2026-07-10T05:56:36.763Z"
+}

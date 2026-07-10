@@ -1,0 +1,13 @@
+{
+  "index": "plbui1fcqusleqyi",
+  "name": "reflective carapace",
+  "type": "feat",
+  "desc": "Any time the [[lookup @name lowercase]]{monster} is targeted by a magic missile spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1 to 5, the [[lookup @name lowercase]]{monster} is unaffected.\nOn a 6, the [[lookup @name lowercase]]{monster} is unaffected, and the effect is reflected back at the caster as though it originated from the [[lookup @name lowercase]]{monster}, turning the caster into the target.\nthe [[lookup @name lowercase]]{monster} is unaffected, and the effect is reflected back at the caster as though it originated from the [[lookup @name lowercase]]{monster}, turning the caster into the target.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/defensive/shield-barrier-flaming-pentagon-purple-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/plbui1fcqusleqyi.json",
+  "updated_at": "2026-07-10T05:56:36.737Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "0z5v1bfmqql5z7uw",
+  "name": "corrode metal",
+  "type": "feat",
+  "desc": "Any nonmagical weapon made of metal that hits the [[lookup @details.type.config.label lowercase]]{monster} corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls.\nIf its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the [[lookup @details.type.config.label lowercase]]{monster} is destroyed after dealing damage. The [[lookup @details.type.config.label lowercase]]{monster} can eat through 2-inch-thick, nonmagical metal in 1 round.\nThe [[lookup @details.type.config.label lowercase]]{monster} corrodes metal.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/earth/orb-stone-smoke-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/0z5v1bfmqql5z7uw.json",
+  "updated_at": "2026-07-10T05:56:36.668Z"
+}

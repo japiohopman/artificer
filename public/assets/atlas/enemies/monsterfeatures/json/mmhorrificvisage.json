@@ -1,0 +1,19 @@
+{
+  "index": "mmhorrificvisage",
+  "name": "horrific visage",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=v8KiqUloIE5eocSu]], each creature in a [[lookup @target.template.size activity=v8KiqUloIE5eocSu]]-foot Cone that can see the [[lookup @name lowercase]]{monster} and isn't an Undead. Failure: [[/damage average]] damage, and the target has the &Reference[Frightened apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Horrifying Visage for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "60-foot cone",
+  "image": "icons/magic/death/skull-energy-light-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmhorrificvisage.json",
+  "updated_at": "2026-07-10T05:56:36.815Z"
+}

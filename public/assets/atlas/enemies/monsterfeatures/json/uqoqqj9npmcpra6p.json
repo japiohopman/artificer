@@ -1,0 +1,22 @@
+{
+  "index": "uqoqqj9npmcpra6p",
+  "name": "hellish weapons",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster}'s weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).\nthe [[lookup @name lowercase]]{monster}'s weapon attacks are magical and deal extra poison damage on a hit (included in the attacks).",
+  "damage": [
+    {
+      "damage_dice": "3d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/axes/axe-battle-eyes-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/uqoqqj9npmcpra6p.json",
+  "updated_at": "2026-07-10T05:56:36.703Z"
+}

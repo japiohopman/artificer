@@ -1,0 +1,22 @@
+{
+  "index": "mmumbraldagger00",
+  "name": "umbral dagger",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is reduced to 0 Hit Points by this attack, the target becomes Stable but has the &Reference[Poisoned apply=false] condition for 1 hour. While it has the Poisoned condition, the target has the &Reference[Paralyzed apply=false] condition.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "20 ft",
+  "image": "icons/weapons/daggers/dagger-magical-glowing-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmumbraldagger00.json",
+  "updated_at": "2026-07-10T05:56:36.936Z"
+}

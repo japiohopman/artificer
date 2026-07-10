@@ -1,0 +1,22 @@
+{
+  "index": "mmcursedtouch000",
+  "name": "cursed touch",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target gains no benefit from finishing a Short or Long Rest.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-claw-fire-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcursedtouch000.json",
+  "updated_at": "2026-07-10T05:56:36.880Z"
+}

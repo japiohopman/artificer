@@ -1,0 +1,19 @@
+{
+  "index": "mmunnervinggaze0",
+  "name": "unnerving gaze",
+  "type": "feat",
+  "desc": "Trigger: A [[lookup @target.affects.type activity=btp6NZvx465nxWTF]] the [[lookup @name lowercase]]{monster} can see starts its turn within [[lookup @target.template.size activity=btp6NZvx465nxWTF]] feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}.\nResponse—Wisdom Saving Throw: DC [[lookup @save.dc.value activity=btp6NZvx465nxWTF]], the triggering [[lookup @target.affects.type activity=btp6NZvx465nxWTF]].\nFailure: The target has the &Reference[Frightened apply=false] condition until the end of its turn.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s Unnerving Gaze for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot radius",
+  "image": "icons/magic/perception/eye-slit-red-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmunnervinggaze0.json",
+  "updated_at": "2026-07-10T05:56:36.857Z"
+}

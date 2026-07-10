@@ -1,0 +1,19 @@
+{
+  "index": "mmtrample0000000",
+  "name": "trample",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=QckCIpsC3BdEHycI]], [[lookup @target.affects.labels.statblock activity=QckCIpsC3BdEHycI]] within [[lookup @range.value activity=QckCIpsC3BdEHycI]] feet that has the Prone condition.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/creatures/abilities/paw-print-pair-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtrample0000000.json",
+  "updated_at": "2026-07-10T05:56:36.854Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmburninghammer0",
+  "name": "burning hammer",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmburninghammer0.json",
+  "updated_at": "2026-07-10T05:56:36.874Z"
+}

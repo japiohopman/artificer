@@ -1,0 +1,13 @@
+{
+  "index": "mmfireabsorption",
+  "name": "fire absorption",
+  "type": "feat",
+  "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to Fire damage, it regains a number of Hit Points equal to the Fire damage dealt.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/flame-burning-earth-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfireabsorption.json",
+  "updated_at": "2026-07-10T05:56:36.972Z"
+}

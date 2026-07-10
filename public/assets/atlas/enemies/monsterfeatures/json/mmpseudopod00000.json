@@ -1,0 +1,22 @@
+{
+  "index": "mmpseudopod00000",
+  "name": "pseudopod",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "3d10",
+      "damage_type": {
+        "index": "force",
+        "name": "force",
+        "url": "/assets/atlas/damage_types/json/force.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-movement-pseudopods-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpseudopod00000.json",
+  "updated_at": "2026-07-10T05:56:36.913Z"
+}

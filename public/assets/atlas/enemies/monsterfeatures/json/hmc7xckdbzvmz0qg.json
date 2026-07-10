@@ -1,0 +1,13 @@
+{
+  "index": "hmc7xckdbzvmz0qg",
+  "name": "misty escape",
+  "type": "feat",
+  "desc": "When it drops to 0 hit points outside its resting place, the [[lookup @name lowercase]]{monster} transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.\nWhile it has 0 hit points in mist form, it can't revert to its [[lookup @name lowercase]]{monster} form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its [[lookup @name lowercase]]{monster} form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.\nA slain [[lookup @name lowercase]]{monster} transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/air/fog-gas-smoke-swirling-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/hmc7xckdbzvmz0qg.json",
+  "updated_at": "2026-07-10T05:56:36.721Z"
+}

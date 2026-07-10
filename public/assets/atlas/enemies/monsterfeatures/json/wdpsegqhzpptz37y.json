@@ -1,0 +1,22 @@
+{
+  "index": "wdpsegqhzpptz37y",
+  "name": "bite",
+  "type": "weapon",
+  "desc": "Melee Weapon Attack: +11 to hit, reach 10 ft., one target. Hit: 17 (2d10 + 6) piercing damage.\nthe [[lookup @name lowercase]]{monster} attacks with its Bite.",
+  "damage": [
+    {
+      "damage_dice": "2d10+6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "10 ft",
+  "image": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/wdpsegqhzpptz37y.json",
+  "updated_at": "2026-07-10T05:56:36.651Z"
+}

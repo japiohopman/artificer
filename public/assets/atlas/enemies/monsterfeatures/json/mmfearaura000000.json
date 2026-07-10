@@ -1,0 +1,19 @@
+{
+  "index": "mmfearaura000000",
+  "name": "fear aura",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} emanates an aura in a [[lookup @target.template.size activity=oT8238p9jXwVy76c]]-foot Emanation while it doesn't have the Incapacitated condition.\nWisdom Saving Throw: DC [[lookup @save.dc.value activity=oT8238p9jXwVy76c]], [[lookup @target.affects.special activity=oT8238p9jXwVy76c]].\nFailure: The target has the &Reference[Frightened apply=false] condition until the start of its next turn.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s aura for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "20-foot radius",
+  "image": "icons/creatures/unholy/demon-horned-winged-laughing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfearaura000000.json",
+  "updated_at": "2026-07-10T05:56:36.972Z"
+}

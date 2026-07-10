@@ -1,0 +1,22 @@
+{
+  "index": "mmbeaks000000000",
+  "name": "beaks",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=3m1SLqBeMGQF3UaQ]] if [[lookup @activation.condition activity=3m1SLqBeMGQF3UaQ]]",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/birds/corvid-call-sound-glowing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbeaks000000000.json",
+  "updated_at": "2026-07-10T05:56:36.867Z"
+}

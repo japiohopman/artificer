@@ -1,0 +1,13 @@
+{
+  "index": "mmriposte0000000",
+  "name": "riposte",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name lowercase]]{monster} is hit by a melee attack roll while holding a weapon.\nResponse: The [[lookup @name lowercase]]{monster} adds 3 to its AC against that attack, possibly causing it to miss. On a miss, the [[lookup @name lowercase]]{monster} makes one Rapier attack against the triggering creature if within range.\nFoundry Note\nThis feature also provides an Active Effect (AE) that will modify this creature's Armor Class when you utilize the reaction. You can enable the AE in the effects tab of the character sheet.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/skills/melee/swords-parry-block-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmriposte0000000.json",
+  "updated_at": "2026-07-10T05:56:36.840Z"
+}

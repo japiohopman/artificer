@@ -1,0 +1,25 @@
+{
+  "index": "dm2g9huphzbzrvnm",
+  "name": "children of the night",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the [[lookup @name lowercase]]{monster} can call 3d6 wolves instead.\nThe called creatures arrive in 1d4 rounds, acting as allies of the [[lookup @name lowercase]]{monster} and obeying its spoken commands. The beasts remain for 1 hour, until the [[lookup @name lowercase]]{monster} dies, or until the [[lookup @name lowercase]]{monster} dismisses them as a bonus action.\nthe [[lookup @name lowercase]]{monster} magically calls swarms of bats or rats. While outdoors, the [[lookup @name lowercase]]{monster} can call wolves instead.",
+  "damage": [
+    {
+      "damage_dice": "2d4",
+      "damage_type": {
+        "index": "swarms",
+        "name": "swarms",
+        "url": "/assets/atlas/damage_types/json/swarms.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/death/skull-trio-badge-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/dm2g9huphzbzrvnm.json",
+  "updated_at": "2026-07-10T05:56:36.664Z"
+}

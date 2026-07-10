@@ -1,0 +1,22 @@
+{
+  "index": "mmreflectivecara",
+  "name": "reflective carapace",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} is targeted by a @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile} spell or a spell that requires a ranged attack roll, roll [[/r 1d6]].\nOn a 1–5, the [[lookup @name lowercase]]{monster} is unaffected.\nOn a 6, the [[lookup @name lowercase]]{monster} is unaffected and reflects the spell, turning the caster into the target.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/biological/shell-tan.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmreflectivecara.json",
+  "updated_at": "2026-07-10T05:56:36.986Z"
+}

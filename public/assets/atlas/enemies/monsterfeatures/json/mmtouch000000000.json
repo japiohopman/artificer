@@ -1,0 +1,22 @@
+{
+  "index": "mmtouch000000000",
+  "name": "touch",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature or a flammable object that isn't being worn or carried, it starts burning.",
+  "damage": [
+    {
+      "damage_dice": "2d4",
+      "damage_type": {
+        "index": "fire",
+        "name": "fire",
+        "url": "/assets/atlas/damage_types/json/fire.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/flame-burning-hand-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtouch000000000.json",
+  "updated_at": "2026-07-10T05:56:36.934Z"
+}

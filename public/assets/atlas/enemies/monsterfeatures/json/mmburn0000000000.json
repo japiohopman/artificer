@@ -1,0 +1,22 @@
+{
+  "index": "mmburn0000000000",
+  "name": "burn",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature or a flammable object, it starts &Reference[burning].",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "fire",
+        "name": "fire",
+        "url": "/assets/atlas/damage_types/json/fire.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/blast-jet-stream-splash.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmburn0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.873Z"
+}

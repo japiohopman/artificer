@@ -1,0 +1,22 @@
+{
+  "index": "mmscare000000000",
+  "name": "scare",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=L6pjs2RafI3pF8b3]], one creature within [[lookup @range.value activity=L6pjs2RafI3pF8b3]] feet.\nFailure: The target has the &Reference[Frightened apply=false] condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "20 ft",
+  "image": "icons/magic/control/fear-fright-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmscare000000000.json",
+  "updated_at": "2026-07-10T05:56:36.842Z"
+}

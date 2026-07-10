@@ -1,0 +1,22 @@
+{
+  "index": "0yugss8e8elhlryb",
+  "name": "fire form",
+  "type": "feat",
+  "desc": "The [[lookup @details.type.config.label lowercase]]{monster} can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the [[lookup @details.type.config.label lowercase]]{monster} or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage.\nIn addition, the [[lookup @details.type.config.label lowercase]]{monster} can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.\nA creature that touches the [[lookup @details.type.config.label lowercase]]{monster} or hits it with a melee attack while within 5 ft. of it takes fire damage. In addition, the [[lookup @details.type.config.label lowercase]]{monster} can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes fire damage and catches fire; until someone takes an action to douse the fire, the creature takes fire damage at the start of each of its turns.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/earth/lava-explosion-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/0yugss8e8elhlryb.json",
+  "updated_at": "2026-07-10T05:56:36.692Z"
+}

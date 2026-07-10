@@ -1,0 +1,19 @@
+{
+  "index": "mmparalyzingbrea",
+  "name": "paralyzing breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=r4MGqEq5U9aaseBh]], each [[lookup @target.affects.type activity=r4MGqEq5U9aaseBh]] in a [[lookup @target.template.size activity=r4MGqEq5U9aaseBh]]-foot Cone.\nFirst Failure: The target has the &Reference[Incapacitated apply=false] condition until the end of its next turn, when it repeats the save.\nSecond Failure: The target has the &Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "15-foot cone",
+  "image": "icons/magic/unholy/energy-smoke-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmparalyzingbrea.json",
+  "updated_at": "2026-07-10T05:56:36.828Z"
+}

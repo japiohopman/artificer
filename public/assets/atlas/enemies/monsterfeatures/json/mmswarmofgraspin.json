@@ -1,0 +1,22 @@
+{
+  "index": "mmswarmofgraspin",
+  "name": "swarm of grasping hands",
+  "type": "weapon",
+  "desc": "[[/attack extended activity=rO8NirkWF6w9GXTc]]. [[/damage average extended activity=rO8NirkWF6w9GXTc]], or [[/damage average activity=hzeHzcSKHC4AvIJQ]] damage if the swarm is &Reference[Bloodied apply=false]. If the target is a Medium or smaller creature, it has the &Reference[Prone apply=false] condition.",
+  "damage": [
+    {
+      "damage_dice": "4d8",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/death/hand-withered-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmswarmofgraspin.json",
+  "updated_at": "2026-07-10T05:56:36.927Z"
+}

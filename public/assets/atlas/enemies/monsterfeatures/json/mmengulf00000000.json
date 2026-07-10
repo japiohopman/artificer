@@ -1,0 +1,19 @@
+{
+  "index": "mmengulf00000000",
+  "name": "engulf",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} moves up to its Speed and can move through the spaces of Huge or smaller creatures and objects.\nStrength Saving Throw: DC [[lookup @save.dc.value activity=5o0Bh8PQaojx5XMx]], each creature or object whose space the [[lookup @name lowercase]]{monster} enters for the first time during this move.\nFailure: The target is engulfed. While engulfed, a target has &Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and when the [[lookup @name lowercase]]{monster} moves, the engulfed target moves with it. A nonmagical object is destroyed after spending 1 minute engulfed.\nWhile engulfed, a creature takes [[/damage average activity=Exfa4q7O4SvXjGt7]] damage at the start of each of its turns, is &Reference[Suffocating]{suffocating}, has the &Reference[Restrained apply=long] condition, and repeats the save at the end of each of its turns. An engulfed creature that is reduced to 0 Hit Points dissolves into ash, which is ejected into the Astral Sea.\nSuccess: The target escapes and enters the nearest unoccupied space.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 23,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-face-skull-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmengulf00000000.json",
+  "updated_at": "2026-07-10T05:56:36.807Z"
+}

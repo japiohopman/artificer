@@ -1,0 +1,13 @@
+{
+  "index": "mmwaterbreathing",
+  "name": "water breathing",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater. It can hold its breath for {duration} outside water.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/fish/fish-bluefin-yellow-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwaterbreathing.json",
+  "updated_at": "2026-07-10T05:56:36.997Z"
+}

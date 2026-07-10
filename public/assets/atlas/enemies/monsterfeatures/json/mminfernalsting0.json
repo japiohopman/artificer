@@ -1,0 +1,22 @@
+{
+  "index": "mminfernalsting0",
+  "name": "infernal sting",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. While Poisoned, the target can't regain Hit Points.",
+  "damage": [
+    {
+      "damage_dice": "2d10",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/biological/stinger-insect-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mminfernalsting0.json",
+  "updated_at": "2026-07-10T05:56:36.904Z"
+}

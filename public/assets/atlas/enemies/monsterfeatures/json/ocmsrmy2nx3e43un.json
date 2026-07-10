@@ -1,0 +1,30 @@
+{
+  "index": "ocmsrmy2nx3e43un",
+  "name": "whirlwind",
+  "type": "feat",
+  "desc": "Each creature in the [[lookup @details.type.config.label lowercase]]{monster}'s space must make a  DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the [[lookup @details.type.config.label lowercase]]{monster} in a random direction and knocked prone.\nIf a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a  DC 13 Dexterity saving throw or take the same damage and be knocked prone. If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone.\nEach creature in the [[lookup @details.type.config.label lowercase]]{monster}'s space must make a Strength saving throw. On a failure, a target is flung up 20 feet away from the [[lookup @details.type.config.label lowercase]]{monster} in a random direction and knocked prone. If the target is thrown at another creature, that creature must make a Dexterity saving throw or take the same damage and be knocked prone.",
+  "damage": [
+    {
+      "damage_dice": "3d8+2",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "4"
+  },
+  "range": null,
+  "image": "icons/magic/air/wind-tornado-cyclone-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ocmsrmy2nx3e43un.json",
+  "updated_at": "2026-07-10T05:56:36.776Z"
+}

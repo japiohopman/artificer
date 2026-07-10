@@ -1,0 +1,13 @@
+{
+  "index": "mmtreestride0000",
+  "name": "tree stride",
+  "type": "feat",
+  "desc": "If within [[lookup @range.value activity=8av8Lh1jNLCrOJny]] feet of a [[lookup @range.special activity=8av8Lh1jNLCrOJny]], the [[lookup @name lowercase]]{monster} teleports to an unoccupied space within [[lookup @range.value activity=8av8Lh1jNLCrOJny]] feet of a second [[lookup @target.affects.special activity=8av8Lh1jNLCrOJny]] that is within 60 feet of the previous tree.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/nature/tree-spirit-glow-black-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtreestride0000.json",
+  "updated_at": "2026-07-10T05:56:36.856Z"
+}

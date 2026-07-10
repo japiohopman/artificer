@@ -1,0 +1,22 @@
+{
+  "index": "mmclaws000000000",
+  "name": "claws",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]), and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+  "damage": [
+    {
+      "damage_dice": "2d4",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/claws/claw-curved-jagged-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmclaws000000000.json",
+  "updated_at": "2026-07-10T05:56:36.878Z"
+}

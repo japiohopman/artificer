@@ -1,0 +1,19 @@
+{
+  "index": "mmdrainingkiss00",
+  "name": "draining kiss",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=kFyuof0SS3nohP0f]], one [[lookup @target.affects.type activity=kFyuof0SS3nohP0f]] Charmed by the [[lookup @name lowercase]]{monster} within [[lookup @range.value activity=kFyuof0SS3nohP0f]] feet.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.\nFailure or Success: The target's Hit Point maximum decreases by an amount equal to the damage taken.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdrainingkiss00.json",
+  "updated_at": "2026-07-10T05:56:36.806Z"
+}

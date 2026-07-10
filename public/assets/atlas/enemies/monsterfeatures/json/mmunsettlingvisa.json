@@ -1,0 +1,23 @@
+{
+  "index": "mmunsettlingvisa",
+  "name": "unsettling visage",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=USxIbGZPLvfPnnoI]], each [[lookup @target.affects.type activity=USxIbGZPLvfPnnoI]] in a [[lookup @target.template.size activity=USxIbGZPLvfPnnoI]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} that can see the [[lookup @name lowercase]]{monster}.\nFailure: The target has the &Reference[Frightened apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=USxIbGZPLvfPnnoI]] [[lookup @duration.units activity=USxIbGZPLvfPnnoI]], it succeeds automatically.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "15-foot radius",
+  "image": "icons/magic/control/silhouette-hold-change-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmunsettlingvisa.json",
+  "updated_at": "2026-07-10T05:56:36.858Z"
+}

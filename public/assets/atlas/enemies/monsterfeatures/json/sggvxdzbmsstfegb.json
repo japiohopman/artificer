@@ -1,0 +1,17 @@
+{
+  "index": "sggvxdzbmsstfegb",
+  "name": "fey charm",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]]{monster}, it must succeed on a DC 14 Wisdom saving throw or be magically charmed.\nThe charmed creature regards the [[lookup @name lowercase]]{monster} as a trusted friend to be heeded and protected. Although the target isn't under the [[lookup @name lowercase]]{monster}'s control, it takes the [[lookup @name lowercase]]{monster}'s requests or actions in the most favorable way it can.Each time the [[lookup @name lowercase]]{monster} or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the [[lookup @name lowercase]]{monster} dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the [[lookup @name lowercase]]{monster}'s Fey Charm for the next 24 hours. the [[lookup @name lowercase]]{monster} can have no more than one humanoid and up to three beasts charmed at a time.\nthe [[lookup @name lowercase]]{monster} targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]]{monster}, it must make a Wisdom saving throw. Each time the [[lookup @name lowercase]]{monster} or its allies do anything harmful to the target, it can repeat the saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 14,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/consumables/plants/leaf-veins-glowing-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/sggvxdzbmsstfegb.json",
+  "updated_at": "2026-07-10T05:56:36.690Z"
+}

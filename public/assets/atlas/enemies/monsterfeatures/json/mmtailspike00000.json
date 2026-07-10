@@ -1,0 +1,22 @@
+{
+  "index": "mmtailspike00000",
+  "name": "tail spike",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d8",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "100 ft",
+  "image": "icons/commodities/biological/tentacle-thorned-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtailspike00000.json",
+  "updated_at": "2026-07-10T05:56:36.927Z"
+}

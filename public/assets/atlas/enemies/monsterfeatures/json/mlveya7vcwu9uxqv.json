@@ -1,0 +1,17 @@
+{
+  "index": "mlveya7vcwu9uxqv",
+  "name": "fear aura",
+  "type": "feat",
+  "desc": "Any creature hostile to the [[lookup @name lowercase]]{monster} that starts its turn within 20 feet of the [[lookup @name lowercase]]{monster} must make a DC 21 Wisdom saving throw, unless the [[lookup @name lowercase]]{monster} is incapacitated. On a failed save, the creature is frightened until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the [[lookup @name lowercase]]{monster}'s Fear Aura for the next 24 hours.\nAny creature hostile to the [[lookup @name lowercase]]{monster} that starts its turn within 20 feet of the [[lookup @name lowercase]]{monster} must make a Wisdom saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 21,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "20-foot radius",
+  "image": "icons/magic/water/elemental-water.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mlveya7vcwu9uxqv.json",
+  "updated_at": "2026-07-10T05:56:36.688Z"
+}

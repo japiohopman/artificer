@@ -1,0 +1,22 @@
+{
+  "index": "mmundeadrestorat",
+  "name": "undead restoration",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} is destroyed before it atones for its evil, it gains a new body in [[/r 1d10]] days, reviving with all its Hit Points. The new body appears in a location significant to the [[lookup @name lowercase]]{monster}.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/death/hand-dirt-undead-zombie.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmundeadrestorat.json",
+  "updated_at": "2026-07-10T05:56:36.995Z"
+}

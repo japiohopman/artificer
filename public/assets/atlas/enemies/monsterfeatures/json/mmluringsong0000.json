@@ -1,0 +1,19 @@
+{
+  "index": "mmluringsong0000",
+  "name": "luring song",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} sings a magical melody, which lasts until the [[lookup @name lowercase]]{monster}'s Concentration ends on it.\nWisdom Saving Throw: DC [[lookup @save.dc.value activity=dxxqZP7Vo01te3QB]], each [[lookup @target.affects.special activity=dxxqZP7Vo01te3QB]] in a [[lookup @target.template.size activity=dxxqZP7Vo01te3QB]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} when the song starts.\nFailure: The target has the &Reference[Charmed apply=false] condition until the song ends and repeats the save at the end of each of its turns. While Charmed, the target has the &Reference[Incapacitated apply=false] condition and ignores the Luring Song of other harpies.\nIf the target is more than 5 feet from the [[lookup @name lowercase]]{monster}, the target moves on its turn toward the [[lookup @name lowercase]]{monster} by the most direct route, trying to get within 5 feet of the [[lookup @name lowercase]]{monster}. It doesn't avoid &Reference[OpportunityAttacks]; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the [[lookup @name lowercase]]{monster}, the target repeats the save.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s Luring Song for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "300-foot radius",
+  "image": "icons/skills/trades/music-singing-voice-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmluringsong0000.json",
+  "updated_at": "2026-07-10T05:56:36.823Z"
+}

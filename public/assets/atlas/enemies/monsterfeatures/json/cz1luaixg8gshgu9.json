@@ -1,0 +1,22 @@
+{
+  "index": "cz1luaixg8gshgu9",
+  "name": "angelic weapons",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster}'s weapon attacks are magical. When the [[lookup @name lowercase]]{monster} hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack).\nthe [[lookup @name lowercase]]{monster}'s weapon attacks are magical. When the [[lookup @name lowercase]]{monster} hits with any weapon, the weapon deals extra radiant damage (included in the attack).",
+  "damage": [
+    {
+      "damage_dice": "4d8",
+      "damage_type": {
+        "index": "radiant",
+        "name": "radiant",
+        "url": "/assets/atlas/damage_types/json/radiant.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/cz1luaixg8gshgu9.json",
+  "updated_at": "2026-07-10T05:56:36.633Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "mmspellcasting00",
+  "name": "spellcasting",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts one of the following spells, requiring no {type} components and using {ability} as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]):\nAt Will: {spell}\n{count}/Day Each: {spell}",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/symbols/circled-gem-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmspellcasting00.json",
+  "updated_at": "2026-07-10T05:56:36.847Z"
+}

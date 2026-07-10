@@ -1,0 +1,16 @@
+{
+  "index": "yshgyidij4slpyzf",
+  "name": "horrific appearance",
+  "type": "feat",
+  "desc": "Any humanoid that starts its turn within 30 feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}'s true form must make a DC 11 Wisdom saving throw. On a failed save, the creature is frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success.\nIf a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s Horrific Appearance for the next 24 hours. Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the [[lookup @name lowercase]]{monster}.\nAny humanoid that starts its turn within 30 feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}'s true form must make a Wisdom saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30-foot radius",
+  "image": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/yshgyidij4slpyzf.json",
+  "updated_at": "2026-07-10T05:56:36.705Z"
+}

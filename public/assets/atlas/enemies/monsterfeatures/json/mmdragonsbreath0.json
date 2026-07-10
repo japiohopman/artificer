@@ -1,0 +1,23 @@
+{
+  "index": "mmdragonsbreath0",
+  "name": "dragon's breath",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=YfxQb5tcONgLb2nD]], each [[lookup @target.affects.type activity=YfxQb5tcONgLb2nD]] in a [[lookup @target.template.size activity=YfxQb5tcONgLb2nD]]-foot Cone.\nFailure: [[/damage average]] damage of the type chosen for the Draconic Origin trait.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot cone",
+  "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdragonsbreath0.json",
+  "updated_at": "2026-07-10T05:56:36.805Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "mmprotection0000",
+  "name": "protection",
+  "type": "feat",
+  "desc": "Trigger: An attack roll hits the wearer of the [[lookup @name lowercase]]{monster}'s amulet while the wearer is within 5 feet of the [[lookup @name lowercase]]{monster}.\nResponse: The wearer gains a +5 bonus to AC, including against the triggering attack and possibly causing it to miss, until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmprotection0000.json",
+  "updated_at": "2026-07-10T05:56:36.834Z"
+}

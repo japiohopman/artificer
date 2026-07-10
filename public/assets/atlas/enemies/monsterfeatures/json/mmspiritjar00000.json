@@ -1,0 +1,22 @@
+{
+  "index": "mmspiritjar00000",
+  "name": "spirit jar",
+  "type": "feat",
+  "desc": "If destroyed, the [[lookup @name lowercase]]{monster} reforms in [[/r 1d10]] days if it has a spirit jar, reviving with all its Hit Points. The new body appears in an unoccupied space within the [[lookup @name lowercase]]{monster}'s lair.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/consumables/drinks/clay-jar-glowing-orange-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmspiritjar00000.json",
+  "updated_at": "2026-07-10T05:56:36.990Z"
+}

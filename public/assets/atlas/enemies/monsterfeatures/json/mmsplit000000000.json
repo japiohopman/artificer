@@ -1,0 +1,13 @@
+{
+  "index": "mmsplit000000000",
+  "name": "split",
+  "type": "feat",
+  "desc": "Trigger: While the [[lookup @name lowercase]]{monster} [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]]\nResponse: The [[lookup @name lowercase]]{monster} splits into two new [[lookup @name capitalize]]{monster}. Each new [[lookup @name lowercase]]{monster} is one size smaller than the original [[lookup @name lowercase]]{monster} and acts on its Initiative. The original [[lookup @name lowercase]]{monster}'s Hit Points are divided evenly between the new [[lookup @name lowercase]]{monster}s (round down).",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-movement-pseudopod-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmsplit000000000.json",
+  "updated_at": "2026-07-10T05:56:36.848Z"
+}

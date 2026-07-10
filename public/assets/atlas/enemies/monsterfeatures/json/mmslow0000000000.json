@@ -1,0 +1,17 @@
+{
+  "index": "mmslow0000000000",
+  "name": "slow",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{Slow} spell, requiring no spell components and using Constitution as the spellcasting ability (spell save DC 17).",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmslow0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.846Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmbeard000000000",
+  "name": "beard",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Until this poison ends, the target can't regain Hit Points.",
+  "damage": [
+    {
+      "damage_dice": "1d8",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/materials/hair-braid-gold.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbeard000000000.json",
+  "updated_at": "2026-07-10T05:56:36.868Z"
+}

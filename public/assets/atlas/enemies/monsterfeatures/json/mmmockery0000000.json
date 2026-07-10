@@ -1,0 +1,19 @@
+{
+  "index": "mmmockery0000000",
+  "name": "mockery",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], [[lookup @target.affects.labels.statblock activity=s5CMus4LOXBkt1Wn]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] feet. Failure: [[/damage average]] damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "90 ft",
+  "image": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmockery0000000.json",
+  "updated_at": "2026-07-10T05:56:36.825Z"
+}

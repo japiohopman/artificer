@@ -1,0 +1,13 @@
+{
+  "index": "mmenchantingbow0",
+  "name": "enchanting bow",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Charmed apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "40 ft",
+  "image": "icons/weapons/bows/shortbow-recurve-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmenchantingbow0.json",
+  "updated_at": "2026-07-10T05:56:36.885Z"
+}

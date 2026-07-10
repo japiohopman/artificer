@@ -1,0 +1,16 @@
+{
+  "index": "mmmistystep00000",
+  "name": "misty step",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Misty Step}, requiring no spell components and using the same spellcasting ability as Spellcasting.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 2,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/lightning/orb-ball-spiral-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmistystep00000.json",
+  "updated_at": "2026-07-10T05:56:36.824Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmradianthorn000",
+  "name": "radiant horn",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "radiant",
+        "name": "radiant",
+        "url": "/assets/atlas/damage_types/json/radiant.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/mammals/unicorn-horned-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmradianthorn000.json",
+  "updated_at": "2026-07-10T05:56:36.914Z"
+}

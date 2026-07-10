@@ -1,0 +1,22 @@
+{
+  "index": "mmparalyzingtouc",
+  "name": "paralyzing touch",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Paralyzed apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "cold",
+        "name": "cold",
+        "url": "/assets/atlas/damage_types/json/cold.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/death/hand-withered-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmparalyzingtouc.json",
+  "updated_at": "2026-07-10T05:56:36.909Z"
+}

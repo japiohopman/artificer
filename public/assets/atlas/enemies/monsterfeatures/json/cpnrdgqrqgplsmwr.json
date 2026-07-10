@@ -1,0 +1,17 @@
+{
+  "index": "cpnrdgqrqgplsmwr",
+  "name": "frightening gaze",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a  DC 18 Wisdom saving throw against this magic or become grappled for 1 minute. The grappled target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the [[lookup @name lowercase]]{monster}'s gaze for the next 24 hours.\nthe [[lookup @name lowercase]]{monster} fixes its gaze on one creature it can see within 10 feet of it. The target must make a Wisdom saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "10 ft",
+  "image": "icons/magic/perception/silhouette-stealth-shadow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/cpnrdgqrqgplsmwr.json",
+  "updated_at": "2026-07-10T05:56:36.696Z"
+}

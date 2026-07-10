@@ -1,0 +1,23 @@
+{
+  "index": "mmpetrifyingbrea",
+  "name": "petrifying breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=reU3RXAk0MdPmKCl]], each [[lookup @target.affects.type activity=reU3RXAk0MdPmKCl]] in a [[lookup @target.template.size activity=reU3RXAk0MdPmKCl]]-foot Cone.\nFirst Failure: The target has the &Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success.\nSecond Failure: The target has the &Reference[Petrified apply=false] condition instead of the Restrained condition.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot cone",
+  "image": "icons/magic/defensive/armor-stone-skin.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpetrifyingbrea.json",
+  "updated_at": "2026-07-10T05:56:36.830Z"
+}

@@ -1,0 +1,17 @@
+{
+  "index": "xwj2gpqtxngs0j2l",
+  "name": "blasphemous word",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} utters a blasphemous word. Each non-[[lookup @details.type.config.label lowercase]]{monster} creature within 10 feet of the [[lookup @name lowercase]]{monster} that can hear the magical utterance must succeed on a  DC 16 Constitution saving throw or be stunned until the end of the [[lookup @name lowercase]]{monster}'s next turn.\nthe [[lookup @name lowercase]]{monster} utters a blasphemous word. Each non-[[lookup @details.type.config.label lowercase]]{monster} creature within 10 feet of the [[lookup @name lowercase]]{monster} that can hear the magical utterance must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 16,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/magic/air/wind-vortex-swirl-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/xwj2gpqtxngs0j2l.json",
+  "updated_at": "2026-07-10T05:56:36.652Z"
+}

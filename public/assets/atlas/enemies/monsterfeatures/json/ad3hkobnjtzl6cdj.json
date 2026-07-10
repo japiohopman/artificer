@@ -1,0 +1,20 @@
+{
+  "index": "ad3hkobnjtzl6cdj",
+  "name": "stunning screech",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} emits a horrific screech. Each creature within 20 feet of it that can hear it and that isn't a [[lookup @details.type.config.label lowercase]]{monster} must succeed on a DC 14 Constitution saving throw or be stunned until the end of the [[lookup @name lowercase]]{monster}'s next turn .\nthe [[lookup @name lowercase]]{monster} emits a horrific screech. Each creature within 20 feet of it that can hear it and that isn't a [[lookup @details.type.config.label lowercase]]{monster} must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 14,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "20 ft",
+  "image": "icons/skills/toxins/cup-goblet-poisoned-spilled.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ad3hkobnjtzl6cdj.json",
+  "updated_at": "2026-07-10T05:56:36.757Z"
+}

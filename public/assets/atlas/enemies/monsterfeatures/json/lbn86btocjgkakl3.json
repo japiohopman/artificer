@@ -1,0 +1,26 @@
+{
+  "index": "lbn86btocjgkakl3",
+  "name": "horrifying visage",
+  "type": "feat",
+  "desc": "Each non-[[lookup @details.type.config.label lowercase]]{monster} creature within 60 ft. of the [[lookup @name lowercase]]{monster} that can see it must succeed on a  DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 x 10 years.\nA frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this [[lookup @name lowercase]]{monster}'s Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.\nEach non-[[lookup @details.type.config.label lowercase]]{monster} creature within 60 ft. of the [[lookup @name lowercase]]{monster} that can see it must succeed make a Wisdom saving throw. A target can repeat the saving throw at the end of each of its turns, ending the condition on itself on a success.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "x",
+        "name": "x",
+        "url": "/assets/atlas/damage_types/json/x.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60-foot radius",
+  "image": "icons/magic/death/projectile-skull-fire-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/lbn86btocjgkakl3.json",
+  "updated_at": "2026-07-10T05:56:36.705Z"
+}

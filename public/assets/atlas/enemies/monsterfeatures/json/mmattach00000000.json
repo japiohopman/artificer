@@ -1,0 +1,22 @@
+{
+  "index": "mmattach00000000",
+  "name": "attach",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, the [[lookup @name lowercase]]{monster} attaches to it. While the [[lookup @name lowercase]]{monster} is attached, the target has the &Reference[Blinded apply=false] condition, and the [[lookup @name lowercase]]{monster} can't make Bite attacks against other targets. In addition, the [[lookup @name lowercase]]{monster} halves the damage it takes (round down), and the target takes the same amount of damage.\nThe [[lookup @name lowercase]]{monster} can detach itself by spending 5 feet of movement. The target or a creature within [[lookup @range.value activity=6iLqAufAeEqDOlGs]] feet of it can take an action to try to detach the [[lookup @name lowercase]]{monster}, doing so by succeeding on a DC [[lookup @check.dc.value activity=6iLqAufAeEqDOlGs]] Strength (Athletics) check.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/control/orb-web-hold.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmattach00000000.json",
+  "updated_at": "2026-07-10T05:56:36.866Z"
+}

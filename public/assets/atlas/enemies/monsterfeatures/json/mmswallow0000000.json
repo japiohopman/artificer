@@ -1,0 +1,19 @@
+{
+  "index": "mmswallow0000000",
+  "name": "swallow",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] by the [[lookup @name lowercase]]{monster} (the [[lookup @name lowercase]]{monster} can have only one creature swallowed at a time).\nFailure: The [[lookup @name lowercase]]{monster} swallows the target, which is no longer Grappled. While swallowed, a creature has the &Reference[Blinded apply=false] and &Reference[Restrained apply=false] conditions, has &Reference[Total Cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and takes [[/damage average activity=zrWNjO9mkbN28spL]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns.\nIf the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from the swallowed creature, the [[lookup @name lowercase]]{monster} must succeed on a [[/save format=long activity=rGeGukkm2t2fXsoy]] at the end of that turn or regurgitate the creature, which falls in a space within [[lookup @range.value activity=rGeGukkm2t2fXsoy]] [[lookup @range.units activity=rGeGukkm2t2fXsoy]]. of the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer Restrained and can escape from the corpse by using 15 feet of movement, exiting Prone.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/creatures/abilities/mouth-teeth-rows-needles-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmswallow0000000.json",
+  "updated_at": "2026-07-10T05:56:36.851Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "jcfhlacfwswnt7ud",
+  "name": "rejuvenation",
+  "type": "feat",
+  "desc": "If it dies, the [[lookup @name lowercase]]{monster} returns to life in 1d6 days and regains all its hit points.\nOnly a wish spell can prevent this trait from functioning.\nIf it dies, the [[lookup @name lowercase]]{monster} returns to life in 1d6 days and regains all its hit points.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "days",
+        "name": "days",
+        "url": "/assets/atlas/damage_types/json/days.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/control/debuff-energy-hold-levitate-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/jcfhlacfwswnt7ud.json",
+  "updated_at": "2026-07-10T05:56:36.739Z"
+}

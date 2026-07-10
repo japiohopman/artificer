@@ -1,0 +1,17 @@
+{
+  "index": "mmwarcry00000000",
+  "name": "war cry",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} or one [[lookup @target.affects.type activity=uN0VTW2Fqig7YAs9]] of its choice that can see or hear it gains [[/healing average temp]] and has Advantage on attack rolls until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwarcry00000000.json",
+  "updated_at": "2026-07-10T05:56:36.860Z"
+}

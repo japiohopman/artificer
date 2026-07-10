@@ -1,0 +1,22 @@
+{
+  "index": "mmlightningbreat",
+  "name": "lightning breath",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=LpjgVwftzGNMgTUJ]], each [[lookup @target.affects.type activity=LpjgVwftzGNMgTUJ]] in a [[lookup @target.template.size activity=LpjgVwftzGNMgTUJ]]-foot-long, [[lookup @target.template.width activity=LpjgVwftzGNMgTUJ]]-foot-wide [[lookup @target.template.type capitalize activity=LpjgVwftzGNMgTUJ]].\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot line (width 5 ft.)",
+  "image": "icons/magic/lightning/bolt-strike-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmlightningbreat.json",
+  "updated_at": "2026-07-10T05:56:36.821Z"
+}

@@ -1,0 +1,16 @@
+{
+  "index": "t0ojypolkebppync",
+  "name": "phantasms",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically creates three illusory duplicates of itself if it isn't in bright light. The duplicates move with it and mimic its actions, shifting position so as to make it impossible to track which [[lookup @name lowercase]]{monster} is the real one. If the [[lookup @name lowercase]]{monster} is ever in an area of bright light, the duplicates disappear.\nWhenever any creature targets the [[lookup @name lowercase]]{monster} with an attack or a harmful spell while a duplicate remains, that creature rolls randomly to determine whether it targets the [[lookup @name lowercase]]{monster} or one of the duplicates. A creature is unaffected by this magical effect if it can't see or if it relies on senses other than sight.\nA duplicate has the [[lookup @name lowercase]]{monster}'s AC and uses its saving throws. If an attack hits a duplicate, or if a duplicate fails a saving throw against an effect that deals damage, the duplicate disappears.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": null,
+  "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/t0ojypolkebppync.json",
+  "updated_at": "2026-07-10T05:56:36.731Z"
+}

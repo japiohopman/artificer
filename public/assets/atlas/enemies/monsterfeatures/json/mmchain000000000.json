@@ -1,0 +1,22 @@
+{
+  "index": "mmchain000000000",
+  "name": "chain",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two chains, and it has the &Reference[Restrained apply=false] condition until the grapple ends.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/tools/fasteners/chain-steel-grey.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmchain000000000.json",
+  "updated_at": "2026-07-10T05:56:36.875Z"
+}

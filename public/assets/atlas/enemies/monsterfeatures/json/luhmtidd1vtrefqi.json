@@ -1,0 +1,22 @@
+{
+  "index": "luhmtidd1vtrefqi",
+  "name": "incorporeal movement",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were difficult terrain.\nIt takes 5 (1d10) force damage if it ends its turn inside an object.\nthe [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were difficult terrain.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/air/air-wave-gust-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/luhmtidd1vtrefqi.json",
+  "updated_at": "2026-07-10T05:56:36.709Z"
+}

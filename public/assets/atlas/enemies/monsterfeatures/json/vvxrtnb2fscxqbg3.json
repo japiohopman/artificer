@@ -1,0 +1,16 @@
+{
+  "index": "vvxrtnb2fscxqbg3",
+  "name": "moan",
+  "type": "feat",
+  "desc": "Each creature within 60 feet of the [[lookup @name lowercase]]{monster} that can hear its moan and that isn't an [[lookup @details.type.config.label lowercase]]{monster} must succeed on a  DC 13 Wisdom saving throw or become frightened until the end of the [[lookup @name lowercase]]{monster}'s next turn.\nIf a creature's saving throw is successful, the creature is immune to the [[lookup @name lowercase]]{monster}'s moan for the next 24 hours.\nEach creature within 60 feet of the [[lookup @name lowercase]]{monster} that can hear its moan and that isn't an [[lookup @details.type.config.label lowercase]]{monster} must make a Wisdom saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/death/projectile-skull-flaming-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/vvxrtnb2fscxqbg3.json",
+  "updated_at": "2026-07-10T05:56:36.722Z"
+}

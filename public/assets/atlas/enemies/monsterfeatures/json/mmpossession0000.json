@@ -1,0 +1,19 @@
+{
+  "index": "mmpossession0000",
+  "name": "possession",
+  "type": "feat",
+  "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=7gmNBVjwuYTyANMe]], one [[lookup @target.affects.special activity=7gmNBVjwuYTyANMe]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=7gmNBVjwuYTyANMe]] feet.\nFailure: The target is possessed by the [[lookup @name lowercase]]{monster}; the [[lookup @name lowercase]]{monster} disappears, and the target has the &Reference[Incapacitated apply=false] condition and loses control of its body. The [[lookup @name lowercase]]{monster} now controls the body, but the target retains awareness. The [[lookup @name lowercase]]{monster} can't be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The [[lookup @name lowercase]]{monster}'s game statistics are the same, except it uses the possessed target's Speed, as well as the target's Strength, Dexterity, and Constitution modifiers.\nThe possession lasts until the body drops to 0 Hit Points or the [[lookup @name lowercase]]{monster} leaves as a Bonus Action. When the possession ends, the [[lookup @name lowercase]]{monster} appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost's Possession for 24 hours.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s Possession for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/death/skull-energy-light-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpossession0000.json",
+  "updated_at": "2026-07-10T05:56:36.833Z"
+}

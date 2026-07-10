@@ -1,0 +1,22 @@
+{
+  "index": "mmicespear000000",
+  "name": "ice spear",
+  "type": "weapon",
+  "desc": "[[/attack extended]].\nHit: [[/damage average]] damage. Until the end of its next turn, the target can't take a &Reference[Bonus Action] or &Reference[Reaction], its Speed decreases by 10 feet, and it can move or take one action on its turn, not both.\nHit or Miss: The spear magically returns to the [[lookup @name lowercase]]{monster}'s hand immediately after a ranged attack.",
+  "damage": [
+    {
+      "damage_dice": "2d8",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/water/projectile-arrow-water-ice-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmicespear000000.json",
+  "updated_at": "2026-07-10T05:56:36.903Z"
+}

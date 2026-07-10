@@ -1,0 +1,16 @@
+{
+  "index": "6ej6jlwh8rydezlb",
+  "name": "animate chains",
+  "type": "feat",
+  "desc": "Up to four chains the [[lookup @details.type.config.label lowercase]]{monster} can see within 60 feet of it magically sprout razor-edged barbs and animate under the [[lookup @details.type.config.label lowercase]]{monster}'s control, provided that the chains aren't being worn or carried.\nEach animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the [[lookup @details.type.config.label lowercase]]{monster} uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the [[lookup @details.type.config.label lowercase]]{monster} is incapacitated or dies.\nUp to four chains the [[lookup @details.type.config.label lowercase]]{monster} can see within 60 feet of it magically sprout razor-edged barbs and animate under the [[lookup @details.type.config.label lowercase]]{monster}'s control, provided that the chains aren't being worn or carried.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": "60 ft",
+  "image": "icons/equipment/neck/choker-chain-thin-gold.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/6ej6jlwh8rydezlb.json",
+  "updated_at": "2026-07-10T05:56:36.635Z"
+}

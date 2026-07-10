@@ -1,0 +1,23 @@
+{
+  "index": "mmweb00000000000",
+  "name": "web",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=6iMoUgxwYlvfKTXr]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=6iMoUgxwYlvfKTXr]] feet.\nFailure: The target has the &Reference[Restrained apply=false] condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "60 ft",
+  "image": "icons/creatures/webs/web-thin-pruple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmweb00000000000.json",
+  "updated_at": "2026-07-10T05:56:36.862Z"
+}

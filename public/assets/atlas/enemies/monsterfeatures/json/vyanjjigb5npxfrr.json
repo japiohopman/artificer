@@ -1,0 +1,13 @@
+{
+  "index": "vyanjjigb5npxfrr",
+  "name": "undead fortitude",
+  "type": "feat",
+  "desc": "If damage reduces the [[lookup @name lowercase]]{monster} to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the [[lookup @name lowercase]]{monster} drops to 1 hit point instead.\nIf damage reduces the [[lookup @name lowercase]]{monster} to 0 hit points, it must make a Constitution saving throw.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/acid/pouring-gas-smoke-liquid.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/vyanjjigb5npxfrr.json",
+  "updated_at": "2026-07-10T05:56:36.768Z"
+}

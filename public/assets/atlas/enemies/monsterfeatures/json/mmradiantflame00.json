@@ -1,0 +1,22 @@
+{
+  "index": "mmradiantflame00",
+  "name": "radiant flame",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "radiant",
+        "name": "radiant",
+        "url": "/assets/atlas/damage_types/json/radiant.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/fire/blast-jet-stream-embers-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmradiantflame00.json",
+  "updated_at": "2026-07-10T05:56:36.914Z"
+}

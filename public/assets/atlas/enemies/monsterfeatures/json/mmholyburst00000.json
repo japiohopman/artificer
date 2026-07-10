@@ -1,0 +1,19 @@
+{
+  "index": "mmholyburst00000",
+  "name": "holy burst",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=HrgMO1rsQla47fff]], each [[lookup @target.affects.type activity=HrgMO1rsQla47fff]] in a [[lookup @target.template.size activity=HrgMO1rsQla47fff]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=HrgMO1rsQla47fff]] feet. Failure: [[/damage average]] damage. Success: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 20,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "20-foot sphere",
+  "image": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmholyburst00000.json",
+  "updated_at": "2026-07-10T05:56:36.815Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "ljty3nl1cp9go4et",
+  "name": "fire aura",
+  "type": "feat",
+  "desc": "At the start of each of the [[lookup @name lowercase]]{monster}'s turns, each creature within 5 feet of it takes 10 (3d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite.\nA creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.\nAt the start of each of the [[lookup @name lowercase]]{monster}'s turns, each creature within 5 feet of it takes fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within 5 feet of it takes fire damage.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/magic/air/fog-gas-smoke-swirling-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ljty3nl1cp9go4et.json",
+  "updated_at": "2026-07-10T05:56:36.691Z"
+}

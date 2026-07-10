@@ -1,0 +1,22 @@
+{
+  "index": "mmgore0000000000",
+  "name": "gore",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage extended average]]. If the target is a [[lookup @target.affects.special activity=iBenqFiBu40bUxkH]] creature and the [[lookup @name lowercase]]{monster} moved {NN}+ feet straight toward it immediately before the hit, the target takes an extra [[/damage 2d8 average type=piercing]] damage and has the &Reference[Prone apply=false] condition.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/wounds/bone-broken-tooth-fang-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmgore0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.895Z"
+}

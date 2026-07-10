@@ -1,0 +1,21 @@
+{
+  "index": "ni3fpb5jqsepdlvl",
+  "name": "possession",
+  "type": "feat",
+  "desc": "One humanoid that the [[lookup @name lowercase]]{monster} can see within 5 ft. of it must succeed on a  DC 13 Charisma saving throw or be possessed by the [[lookup @name lowercase]]{monster}; the [[lookup @name lowercase]]{monster} then disappears, and the target is incapacitated and loses control of its body. the [[lookup @name lowercase]]{monster} now controls the body but doesn't deprive the target of awareness.\nthe [[lookup @name lowercase]]{monster} can't be targeted by any attack, spell, or other effect, except ones that turn [[lookup @details.type.config.label lowercase]]{monster}, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being charmed and frightened. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.The possession lasts until the body drops to 0 hit points, the [[lookup @name lowercase]]{monster} ends it as a bonus action, or the [[lookup @name lowercase]]{monster} is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the [[lookup @name lowercase]]{monster} reappears in an unoccupied space within 5 ft. of the body. The target is immune to this [[lookup @name lowercase]]{monster}'s Possession for 24 hours after succeeding on the saving throw or after the possession ends.\nOne humanoid that the [[lookup @name lowercase]]{monster} can see within 5 ft. of it must make a Charisma saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "cha",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "5 ft",
+  "image": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ni3fpb5jqsepdlvl.json",
+  "updated_at": "2026-07-10T05:56:36.732Z"
+}

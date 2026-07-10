@@ -1,0 +1,17 @@
+{
+  "index": "biascppnsaavkzij",
+  "name": "paralyzing breath",
+  "type": "feat",
+  "desc": "**Paralyzing Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales paralyzing gas in a 60-foot cone. Each creature in that area must succeed on a  DC 20 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nThe [[lookup @details.type.config.label lowercase]]{monster} exhales paralyzing gas in a 60-foot cone. Each creature in that area must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 20,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60-foot cone",
+  "image": "icons/magic/acid/projectile-smoke-glowing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/biascppnsaavkzij.json",
+  "updated_at": "2026-07-10T05:56:36.727Z"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "mmnoxiousmiasma0",
+  "name": "noxious miasma",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], each [[lookup @target.affects.type activity=Blm8nddvCOH69bL8]] in a [[lookup @target.template.size activity=Blm8nddvCOH69bL8]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Blm8nddvCOH69bL8]] feet.\nFailure: [[/damage average]] damage, and the target takes a −2 penalty to AC until the end of its next turn.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "20-foot sphere",
+  "image": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmnoxiousmiasma0.json",
+  "updated_at": "2026-07-10T05:56:36.949Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "qmgbv7osnxqwldhr",
+  "name": "barbed hide",
+  "type": "feat",
+  "desc": "At the start of each of its turns, the [[lookup @name lowercase]]{monster} deals 5 (1d10) piercing damage to any creature grappling it.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/wounds/injury-pain-impaled-hand-blood.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/qmgbv7osnxqwldhr.json",
+  "updated_at": "2026-07-10T05:56:36.641Z"
+}

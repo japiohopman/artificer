@@ -1,0 +1,22 @@
+{
+  "index": "mmtailstinger000",
+  "name": "tail stinger",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/biological/stinger-insect-grey.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtailstinger000.json",
+  "updated_at": "2026-07-10T05:56:36.928Z"
+}

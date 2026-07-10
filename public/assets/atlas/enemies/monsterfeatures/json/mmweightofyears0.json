@@ -1,0 +1,28 @@
+{
+  "index": "mmweightofyears0",
+  "name": "weight of years",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=xZul1ImCP658OBv3]], one [[lookup @target.affects.type activity=xZul1ImCP658OBv3]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=xZul1ImCP658OBv3]] feet. Failure: The target gains 1 &Reference[Exhaustion apply=false] level. While the target has any Exhaustion levels, it appears [[/r 3d10]] years older. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [
+    {
+      "damage_dice": "3d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 16,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/death/hand-withered-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmweightofyears0.json",
+  "updated_at": "2026-07-10T05:56:36.955Z"
+}

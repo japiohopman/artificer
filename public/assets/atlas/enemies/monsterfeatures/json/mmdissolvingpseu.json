@@ -1,0 +1,22 @@
+{
+  "index": "mmdissolvingpseu",
+  "name": "dissolving pseudopod",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. Nonmagical armor worn by the target takes a -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Mending} spell on the armor.",
+  "damage": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "acid",
+        "name": "acid",
+        "url": "/assets/atlas/damage_types/json/acid.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-movement-dripping-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdissolvingpseu.json",
+  "updated_at": "2026-07-10T05:56:36.882Z"
+}

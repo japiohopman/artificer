@@ -1,0 +1,17 @@
+{
+  "index": "mqavpliarakzpnxb",
+  "name": "pounce",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone.\nIf the target is prone, the [[lookup @name lowercase]]{monster} can make one bite attack against it as a bonus action.\nIf the [[lookup @name lowercase]]{monster} moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must make a Strength saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "20 ft",
+  "image": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mqavpliarakzpnxb.json",
+  "updated_at": "2026-07-10T05:56:36.733Z"
+}

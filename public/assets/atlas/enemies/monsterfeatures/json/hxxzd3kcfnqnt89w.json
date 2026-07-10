@@ -1,0 +1,22 @@
+{
+  "index": "hxxzd3kcfnqnt89w",
+  "name": "fling",
+  "type": "feat",
+  "desc": "One Large or smaller object held or creature grappled by the [[lookup @name lowercase]]{monster} is thrown up to 60 feet in a random direction and knocked prone.\nIf a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a  DC 18 Dexterity saving throw or take the same damage and be knocked prone.\nOne Large or smaller object held or creature grappled by the [[lookup @name lowercase]]{monster} is thrown up to 60 feet in a random direction and knocked prone. If the target is thrown at another creature, that creature must make a Dexterity saving throw or take the same damage and be knocked prone.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/webs/webthin-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/hxxzd3kcfnqnt89w.json",
+  "updated_at": "2026-07-10T05:56:36.693Z"
+}

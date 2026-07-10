@@ -1,0 +1,23 @@
+{
+  "index": "mmhorrornimbus00",
+  "name": "horror nimbus",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=GP5MnIyXCVZ4ZMTQ]], each [[lookup @target.affects.type activity=GP5MnIyXCVZ4ZMTQ]] in a [[lookup @target.template.size activity=GP5MnIyXCVZ4ZMTQ]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: [[/damage average]] damage, and the target has the &Reference[Frightened apply=false] condition for [[lookup @duration.value activity=GP5MnIyXCVZ4ZMTQ]] [[lookup @duration.units activity=GP5MnIyXCVZ4ZMTQ]], until it takes damage, or until it ends its turn with the [[lookup @name lowercase]]{monster} out of line of sight.\nSuccess: The target is immune to this [[lookup @name lowercase]]{monster}'s Horror Nimbus for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "15-foot radius",
+  "image": "icons/magic/unholy/hand-claw-fire-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmhorrornimbus00.json",
+  "updated_at": "2026-07-10T05:56:36.816Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmdevilishclaw00",
+  "name": "devilish claw",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "4d8",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-claw-glow-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdevilishclaw00.json",
+  "updated_at": "2026-07-10T05:56:36.881Z"
+}

@@ -1,0 +1,23 @@
+{
+  "index": "mmdeflectmissile",
+  "name": "deflect missile",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name lowercase]]{monster} is [[lookup @activation.condition activity=9T8cNbSBVACrrmRI]].\nResponse: The [[lookup @name lowercase]]{monster} reduces the damage it takes from the attack by [[/healing average]], and if that damage is reduced to 0, the [[lookup @name lowercase]]{monster} can redirect some of the attack's force.\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=x0MjUmnv2OPAbm6y]], one [[lookup @target.affects.type activity=x0MjUmnv2OPAbm6y]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=x0MjUmnv2OPAbm6y]] feet.\nFailure: [[/damage average]] damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "60 ft",
+  "image": "icons/magic/light/beam-impact-deflect-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdeflectmissile.json",
+  "updated_at": "2026-07-10T05:56:36.803Z"
+}

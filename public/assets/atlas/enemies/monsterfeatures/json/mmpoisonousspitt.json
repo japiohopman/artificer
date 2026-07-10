@@ -1,0 +1,28 @@
+{
+  "index": "mmpoisonousspitt",
+  "name": "poisonous spittle",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=r4plP8QiJxzFZZO7]], [[lookup @target.affects.labels.statblock activity=r4plP8QiJxzFZZO7]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=r4plP8QiJxzFZZO7]] feet. Failure: 31 (7d8) Poison damage, and the target has the &Reference[Blinded apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Success: Half damage only.",
+  "damage": [
+    {
+      "damage_dice": "7d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 16,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/acid/dissolve-drip-droplet-smoke.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpoisonousspitt.json",
+  "updated_at": "2026-07-10T05:56:36.833Z"
+}

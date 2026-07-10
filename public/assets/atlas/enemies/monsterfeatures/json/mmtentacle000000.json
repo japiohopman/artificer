@@ -1,0 +1,22 @@
+{
+  "index": "mmtentacle000000",
+  "name": "tentacle",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a {size} or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of {count} tentacles.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtentacle000000.json",
+  "updated_at": "2026-07-10T05:56:36.930Z"
+}

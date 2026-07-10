@@ -1,0 +1,30 @@
+{
+  "index": "4uuuukjattixrzgp",
+  "name": "steam breath",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} exhales scalding steam in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 52 (15d6) fire damage on a failed save, or half as much damage on a successful one.\nBeing underwater doesn't grant resistance against this damage.\nthe [[lookup @name lowercase]]{monster} exhales scalding steam in a 60-foot cone. Each creature in that area must make a Constitution saving throw.",
+  "damage": [
+    {
+      "damage_dice": "15d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "60-foot cone",
+  "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/4uuuukjattixrzgp.json",
+  "updated_at": "2026-07-10T05:56:36.755Z"
+}

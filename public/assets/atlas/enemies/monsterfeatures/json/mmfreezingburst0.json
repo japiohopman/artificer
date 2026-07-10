@@ -1,0 +1,19 @@
+{
+  "index": "mmfreezingburst0",
+  "name": "freezing burst",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=U2i9u4ELjeLQfePP]], each [[lookup @target.affects.type activity=U2i9u4ELjeLQfePP]] in a [[lookup @target.template.size activity=U2i9u4ELjeLQfePP]]-foot-radius Sphere centered on a point the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=U2i9u4ELjeLQfePP]] feet.\nFailure: [[/damage average]] damage, and the target's Speed is 0 until the end of the target's next turn.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot sphere",
+  "image": "icons/magic/water/projectile-ice-chunk-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfreezingburst0.json",
+  "updated_at": "2026-07-10T05:56:36.944Z"
+}

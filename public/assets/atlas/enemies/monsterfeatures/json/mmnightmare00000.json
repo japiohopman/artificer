@@ -1,0 +1,23 @@
+{
+  "index": "mmnightmare00000",
+  "name": "nightmare",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=Y9H9ImnMcffBZlH3]], one [[lookup @target.affects.type activity=Y9H9ImnMcffBZlH3]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Y9H9ImnMcffBZlH3]] feet. Failure: If the target has 20 Hit Points or fewer, it has the &Reference[Unconscious apply=false] condition for [[lookup @duration.value activity=Y9H9ImnMcffBZlH3]] [[lookup @duration.units activity=Y9H9ImnMcffBZlH3]], until it takes damage, or until a creature within 5 feet of it takes an action to wake it. Otherwise, the target takes [[/damage average]] damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "60 ft",
+  "image": "icons/magic/control/fear-fright-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmnightmare00000.json",
+  "updated_at": "2026-07-10T05:56:36.827Z"
+}

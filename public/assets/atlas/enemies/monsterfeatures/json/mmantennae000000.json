@@ -1,0 +1,16 @@
+{
+  "index": "mmantennae000000",
+  "name": "antennae",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} targets one [[lookup @target.affects.special activity=dcSC7EuknnM0uoqY]] object—armor or a weapon—worn or carried by a creature within [[lookup @range.value activity=dcSC7EuknnM0uoqY]] feet of itself. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=dcSC7EuknnM0uoqY]], the creature with the object. Failure: The object takes a -1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches -5. The penalty can be removed by casting the @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000] spell on the armor or weapon.\nFoundry Note\nThis feature also provides a Damaged Enchantment effect that will modify the targeted object. Due to the fact that the equipment penalty can be applied multiple times, the enchantment needs to be dragged from this item's Effects tab onto the target Item's sheet.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [],
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/commodities/materials/feather-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmantennae000000.json",
+  "updated_at": "2026-07-10T05:56:36.780Z"
+}

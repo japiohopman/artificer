@@ -1,0 +1,22 @@
+{
+  "index": "mmeldritchburst0",
+  "name": "eldritch burst",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "4d12",
+      "damage_type": {
+        "index": "force",
+        "name": "force",
+        "url": "/assets/atlas/damage_types/json/force.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/lightning/barrier-shield-crackling-orb-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmeldritchburst0.json",
+  "updated_at": "2026-07-10T05:56:36.884Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "zg0rzmanckjqipax",
+  "name": "martial advantage",
+  "type": "feat",
+  "desc": "Once per turn, the [[lookup @name lowercase]]{monster} can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the [[lookup @name lowercase]]{monster} that isn't incapacitated.\nOnce per turn, the [[lookup @name lowercase]]{monster} can deal extra damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the [[lookup @name lowercase]]{monster} that isn't incapacitated.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/weapons-crossed-swords-yellow-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/zg0rzmanckjqipax.json",
+  "updated_at": "2026-07-10T05:56:36.721Z"
+}

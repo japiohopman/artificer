@@ -1,0 +1,22 @@
+{
+  "index": "9ukshqfua73duqst",
+  "name": "sneak attack",
+  "type": "feat",
+  "desc": "Once per turn.\nthe [[lookup @name lowercase]]{monster} deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the [[lookup @name lowercase]]{monster} that isn't incapacitated and the [[lookup @name lowercase]]{monster} doesn't have disadvantage on the attack roll.",
+  "damage": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/9ukshqfua73duqst.json",
+  "updated_at": "2026-07-10T05:56:36.750Z"
+}

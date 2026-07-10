@@ -1,0 +1,19 @@
+{
+  "index": "mmrepulsionbreat",
+  "name": "repulsion breath",
+  "type": "feat",
+  "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], each [[lookup @target.affects.type activity=zuf9EEVj4nI1joaH]] in a [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]]-foot Cone.\nFailure: The target is pushed up to 30 feet straight away from the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot cone",
+  "image": "icons/magic/light/beam-explosion-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmrepulsionbreat.json",
+  "updated_at": "2026-07-10T05:56:36.839Z"
+}

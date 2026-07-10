@@ -1,0 +1,13 @@
+{
+  "index": "mmcovenmagic0000",
+  "name": "coven magic",
+  "type": "feat",
+  "desc": "While within 30 feet of at least two hag allies, the [[lookup @name lowercase]]{monster} can cast one of the following spells, requiring no Material components, using the spell's normal casting time, and using Intelligence as the spellcasting ability (spell save DC [[lookup @abilities.int.dc]]): @UUID[Compendium.dnd5e.spells24.Item.phbsplAugury0000]{Augury}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{Find Familiar}, @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{Identify}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLocateObje]{Locate Object}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Scrying}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplUnseenServ]{Unseen Servant}. The [[lookup @name lowercase]]{monster} must finish a Long Rest before using this trait to cast that spell again.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/toxins/cauldron-bubbles-overflow-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcovenmagic0000.json",
+  "updated_at": "2026-07-10T05:56:36.966Z"
+}

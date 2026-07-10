@@ -1,0 +1,22 @@
+{
+  "index": "mmpincer00000000",
+  "name": "pincer",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Large or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from one of two pincers.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/claws/claw-pincer-grey.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpincer00000000.json",
+  "updated_at": "2026-07-10T05:56:36.911Z"
+}

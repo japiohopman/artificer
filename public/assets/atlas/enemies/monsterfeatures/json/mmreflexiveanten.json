@@ -1,0 +1,13 @@
+{
+  "index": "mmreflexiveanten",
+  "name": "reflexive antennae",
+  "type": "feat",
+  "desc": "Trigger: An attack roll hits the [[lookup @name lowercase]]{monster}. Response: The [[lookup @name lowercase]]{monster} uses Antennae.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/biological/antenna-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmreflexiveanten.json",
+  "updated_at": "2026-07-10T05:56:36.838Z"
+}

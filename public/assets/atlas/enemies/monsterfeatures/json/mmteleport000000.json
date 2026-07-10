@@ -1,0 +1,13 @@
+{
+  "index": "mmteleport000000",
+  "name": "teleport",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=dnoRMdFzhUUku26D]] feet to an unoccupied space it can see.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmteleport000000.json",
+  "updated_at": "2026-07-10T05:56:36.853Z"
+}

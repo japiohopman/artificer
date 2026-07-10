@@ -1,0 +1,23 @@
+{
+  "index": "mmtramplingcharg",
+  "name": "trampling charge",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} moves up to its Speed without provoking &Reference[OpportunityAttacks] and can move through the spaces of [[lookup @target.affects.special activity=FG9rAj3Q8UTxbGLF]]. Each [[lookup @target.affects.type activity=FG9rAj3Q8UTxbGLF]] whose space the [[lookup @name lowercase]]{monster} enters is targeted once by the following effect.\nStrength Saving Throw: DC [[lookup @save.dc.value activity=FG9rAj3Q8UTxbGLF]].\nFailure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/magic/earth/projectile-stone-landslide.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtramplingcharg.json",
+  "updated_at": "2026-07-10T05:56:36.855Z"
+}

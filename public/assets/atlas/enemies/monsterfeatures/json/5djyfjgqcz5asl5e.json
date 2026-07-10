@@ -1,0 +1,22 @@
+{
+  "index": "5djyfjgqcz5asl5e",
+  "name": "surprise attack",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/elemental-water.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/5djyfjgqcz5asl5e.json",
+  "updated_at": "2026-07-10T05:56:36.758Z"
+}

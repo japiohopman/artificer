@@ -1,0 +1,22 @@
+{
+  "index": "mmflyingsword000",
+  "name": "flying sword",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. Hit or Miss: The sword magically returns to the [[lookup @name lowercase]]{monster}'s hand or hovers within 5 feet of the [[lookup @name lowercase]]{monster} immediately after a ranged attack.",
+  "damage": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/skills/melee/strike-sword-slashing-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmflyingsword000.json",
+  "updated_at": "2026-07-10T05:56:36.892Z"
+}

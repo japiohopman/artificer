@@ -1,0 +1,22 @@
+{
+  "index": "mmfetidcloud0000",
+  "name": "fetid cloud",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=vRnhmBCQqIwIlfS4]], each creature in a [[lookup @target.template.size activity=vRnhmBCQqIwIlfS4]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: The target has the &Reference[Poisoned apply=false] condition until the end of its next turn. While Poisoned, the creature can take either an action or a Bonus Action on its turn, not both, and it can't take Reactions.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "10-foot radius",
+  "image": "icons/magic/air/fog-gas-smoke-dense-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfetidcloud0000.json",
+  "updated_at": "2026-07-10T05:56:36.810Z"
+}

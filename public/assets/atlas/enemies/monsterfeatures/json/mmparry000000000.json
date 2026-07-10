@@ -1,0 +1,13 @@
+{
+  "index": "mmparry000000000",
+  "name": "parry",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name lowercase]]{monster} is [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. Response: The [[lookup @name lowercase]]{monster} adds [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] to its AC against that attack, possibly causing it to miss.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/swords-parry-block-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmparry000000000.json",
+  "updated_at": "2026-07-10T05:56:36.829Z"
+}

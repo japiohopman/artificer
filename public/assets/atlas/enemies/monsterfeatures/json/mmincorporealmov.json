@@ -1,0 +1,22 @@
+{
+  "index": "mmincorporealmov",
+  "name": "incorporeal movement",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} can move through other creatures and objects as if they were &Reference[Difficult Terrain]. It takes [[/damage 1d10 average type=force]] damage if it ends its turn inside an object.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "average",
+        "name": "average",
+        "url": "/assets/atlas/damage_types/json/average.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/death/undead-ghost-scream-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmincorporealmov.json",
+  "updated_at": "2026-07-10T05:56:36.977Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "yhcr3vlkmtinelj2",
+  "name": "shield",
+  "type": "feat",
+  "desc": "When a creature makes an Attack against the wearer of the [[lookup @name lowercase]]{monster}'s Amulet, the [[lookup @name lowercase]]{monster} grants a +2 bonus to the wearer's AC if the [[lookup @name lowercase]]{monster} is within 5 feet of the wearer.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/equipment/shield/oval-wooden-boss-steel.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/yhcr3vlkmtinelj2.json",
+  "updated_at": "2026-07-10T05:56:36.747Z"
+}

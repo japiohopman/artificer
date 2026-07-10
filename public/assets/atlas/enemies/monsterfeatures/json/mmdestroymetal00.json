@@ -1,0 +1,13 @@
+{
+  "index": "mmdestroymetal00",
+  "name": "destroy metal",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} [[lookup @range.special activity=GDJtelEYYTgc9jwr]] within [[lookup @range.value activity=GDJtelEYYTgc9jwr]] feet of itself [[lookup @target.affects.special activity=GDJtelEYYTgc9jwr]]. The touch destroys a [[lookup @target.template.size activity=GDJtelEYYTgc9jwr]]-[[lookup @target.template.units activity=GDJtelEYYTgc9jwr]] [[lookup @target.template.type capitalize activity=GDJtelEYYTgc9jwr]] of the [[lookup @target.affects.type activity=GDJtelEYYTgc9jwr]].",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "1-foot cube",
+  "image": "icons/tools/smithing/furnace-fire-metal-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdestroymetal00.json",
+  "updated_at": "2026-07-10T05:56:36.803Z"
+}

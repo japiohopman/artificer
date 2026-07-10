@@ -1,0 +1,17 @@
+{
+  "index": "zrderbe0lmbwygwn",
+  "name": "repulsion breath",
+  "type": "feat",
+  "desc": "**Repulsion Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a  DC 19 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the [[lookup @details.type.config.label lowercase]]{monster}.\nThe [[lookup @details.type.config.label lowercase]]{monster} exhales repulsion energy in a 30-foot cone. Each creature in that area must make a Strength saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 19,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30-foot cone",
+  "image": "icons/magic/air/air-wave-gust-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/zrderbe0lmbwygwn.json",
+  "updated_at": "2026-07-10T05:56:36.740Z"
+}

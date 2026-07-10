@@ -1,0 +1,17 @@
+{
+  "index": "bpwxjvma7mfvq7i6",
+  "name": "rock catching",
+  "type": "feat",
+  "desc": "If a rock or similar object is hurled at the [[lookup @details.type.config.label lowercase]]{monster}, the [[lookup @details.type.config.label lowercase]]{monster} can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.\nIf a rock or similar object is hurled at the [[lookup @details.type.config.label lowercase]]{monster}, the [[lookup @details.type.config.label lowercase]]{monster} can catch the missile and take no bludgeoning damage from it.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 10,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/unarmed-punch-fist.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/bpwxjvma7mfvq7i6.json",
+  "updated_at": "2026-07-10T05:56:36.742Z"
+}

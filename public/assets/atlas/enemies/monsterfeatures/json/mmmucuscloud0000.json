@@ -1,0 +1,19 @@
+{
+  "index": "mmmucuscloud0000",
+  "name": "mucus cloud",
+  "type": "feat",
+  "desc": "While underwater, the [[lookup @name lowercase]]{monster} is surrounded by mucus.\nConstitution Saving Throw: DC 14, each [[lookup @target.affects.type activity=clFFG8uDBSFzxIo8]] in a [[lookup @target.template.size activity=clFFG8uDBSFzxIo8]]-[[lookup @target.template.units activity=clFFG8uDBSFzxIo8]] Emanation originating from the [[lookup @name lowercase]]{monster} at the end of the [[lookup @name lowercase]]{monster}'s turn. Failure: The target is cursed. Until the curse ends, the target's skin becomes slimy, the target can breathe air and water, and it can't regain Hit Points unless it is underwater.\nWhile the cursed creature is outside a body of water, the creature takes [[/damage average activity=JrxCVyCOsBAMVZS7]] damage at the end of every 10 minutes unless moisture is applied to its skin before those minutes have passed.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 14,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/magic/acid/dissolve-pool-bubbles.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmucuscloud0000.json",
+  "updated_at": "2026-07-10T05:56:36.983Z"
+}

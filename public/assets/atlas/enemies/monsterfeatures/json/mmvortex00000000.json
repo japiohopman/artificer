@@ -1,0 +1,19 @@
+{
+  "index": "mmvortex00000000",
+  "name": "vortex",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=cZy0VYbCVY8aRB4z]], one [[lookup @target.affects.special activity=cZy0VYbCVY8aRB4z]] in the [[lookup @name lowercase]]{monster}'s space. Failure: [[/damage average activity=cZy0VYbCVY8aRB4z]] damage, and the target has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Until the grapple ends, the target can't cast spells with a Verbal component and takes [[/damage average activity=kDz92inkRCjGrPiz]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 14,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "0 ft",
+  "image": "icons/magic/air/wind-vortex-swirl-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmvortex00000000.json",
+  "updated_at": "2026-07-10T05:56:36.860Z"
+}

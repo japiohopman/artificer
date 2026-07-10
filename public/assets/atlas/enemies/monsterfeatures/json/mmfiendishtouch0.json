@@ -1,0 +1,22 @@
+{
+  "index": "mmfiendishtouch0",
+  "name": "fiendish touch",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d10",
+      "damage_type": {
+        "index": "psychic",
+        "name": "psychic",
+        "url": "/assets/atlas/damage_types/json/psychic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-grasping-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfiendishtouch0.json",
+  "updated_at": "2026-07-10T05:56:36.886Z"
+}

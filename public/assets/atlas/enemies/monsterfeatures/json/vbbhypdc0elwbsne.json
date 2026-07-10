@@ -1,0 +1,25 @@
+{
+  "index": "vbbhypdc0elwbsne",
+  "name": "nightmare haunting",
+  "type": "feat",
+  "desc": "While on the Ethereal Plane, the [[lookup @name lowercase]]{monster} magically touches a sleeping humanoid on the Material Plane. A protection from evil and good spell cast on the target prevents this contact, as does a magic circle.\nAs long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the greater restoration spell or similar magic.\nWhile on the Ethereal Plane, the [[lookup @name lowercase]]{monster} magically touches a sleeping humanoid on the Material Plane. As long as the contact persists, the target has dreadful visions.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/commodities/tech/smoke-bomb-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/vbbhypdc0elwbsne.json",
+  "updated_at": "2026-07-10T05:56:36.725Z"
+}

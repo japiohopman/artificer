@@ -1,0 +1,17 @@
+{
+  "index": "mmhellfirespellc",
+  "name": "hellfire spellcasting",
+  "type": "feat",
+  "desc": "The pit fiend casts @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball} (level 5 version) twice, requiring no Material components and using Charisma as the spellcasting ability (spell save DC [[lookup @abilities.cha.dc]]).. It can replace one Fireball with @UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{Hold Monster} (level 7 version) or @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofFire]{Wall of Fire}.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "4"
+  },
+  "range": null,
+  "image": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmhellfirespellc.json",
+  "updated_at": "2026-07-10T05:56:36.814Z"
+}

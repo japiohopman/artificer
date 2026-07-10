@@ -1,0 +1,13 @@
+{
+  "index": "mmwhirlwindofsan",
+  "name": "whirlwind of sand",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name lowercase]]{monster} is hit by an attack roll. Response: The [[lookup @name lowercase]]{monster} adds 2 to its AC against the attack, possibly causing the attack to miss, and the [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=EsBmMUQMO4b0g6Yw]] [[lookup @range.units activity=EsBmMUQMO4b0g6Yw]]. [[lookup @target.affects.special activity=EsBmMUQMO4b0g6Yw]]. Each creature of its choice that it can see within [[lookup @target.template.size activity=EsBmMUQMO4b0g6Yw]] [[lookup @target.template.units activity=EsBmMUQMO4b0g6Yw]]. of its destination space has the &Reference[Blinded apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "5-foot circle",
+  "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwhirlwindofsan.json",
+  "updated_at": "2026-07-10T05:56:36.864Z"
+}

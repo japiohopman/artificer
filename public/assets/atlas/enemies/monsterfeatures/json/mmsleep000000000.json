@@ -1,0 +1,16 @@
+{
+  "index": "mmsleep000000000",
+  "name": "sleep",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000] spell, requiring no spell components and using Charisma as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/control/hypnosis-mesmerism-pendulum.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmsleep000000000.json",
+  "updated_at": "2026-07-10T05:56:36.845Z"
+}

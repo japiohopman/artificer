@@ -1,0 +1,13 @@
+{
+  "index": "mmadhesive000000",
+  "name": "adhesive (object form only)",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} adheres to anything that touches it. A Huge or smaller creature adhered to the [[lookup @name lowercase]]{monster} has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]). Ability checks made to escape this grapple have Disadvantage.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-movement-pseudopods-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmadhesive000000.json",
+  "updated_at": "2026-07-10T05:56:36.957Z"
+}

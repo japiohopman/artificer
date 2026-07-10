@@ -1,0 +1,19 @@
+{
+  "index": "mmheartsight0000",
+  "name": "heart sight",
+  "type": "feat",
+  "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=NqVrZShDV1L3zBA3]], one [[lookup @target.affects.type activity=NqVrZShDV1L3zBA3]] within [[lookup @range.value activity=NqVrZShDV1L3zBA3]] feet the [[lookup @name lowercase]]{monster} can see (Celestials, Fiends, and Undead automatically fail the save).\nFailure: The [[lookup @name lowercase]]{monster} knows the target's emotions and alignment.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "cha"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/life/heart-shadow-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmheartsight0000.json",
+  "updated_at": "2026-07-10T05:56:36.814Z"
+}

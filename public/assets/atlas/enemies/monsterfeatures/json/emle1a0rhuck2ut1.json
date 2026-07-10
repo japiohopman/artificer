@@ -1,0 +1,26 @@
+{
+  "index": "emle1a0rhuck2ut1",
+  "name": "death throes",
+  "type": "feat",
+  "desc": "When the [[lookup @name lowercase]]{monster} dies, it explodes, and each creature within 30 feet of it must make a  DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one.\nThe explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]{monster}'s weapons.\nWhen the [[lookup @name lowercase]]{monster} dies, it explodes, and each creature within 30 feet of it must make a Dexterity saving throw. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]{monster}'s weapons.",
+  "damage": [
+    {
+      "damage_dice": "20d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 20,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30-foot radius",
+  "image": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/emle1a0rhuck2ut1.json",
+  "updated_at": "2026-07-10T05:56:36.676Z"
+}

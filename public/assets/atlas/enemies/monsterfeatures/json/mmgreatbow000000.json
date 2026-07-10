@@ -1,0 +1,22 @@
+{
+  "index": "mmgreatbow000000",
+  "name": "great bow",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target's Speed decreases by 10 feet until the end of its next turn.",
+  "damage": [
+    {
+      "damage_dice": "2d10",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "150 ft",
+  "image": "icons/weapons/bows/shortbow-recurve-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmgreatbow000000.json",
+  "updated_at": "2026-07-10T05:56:36.899Z"
+}
