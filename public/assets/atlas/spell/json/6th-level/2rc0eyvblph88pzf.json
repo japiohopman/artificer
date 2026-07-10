@@ -1,0 +1,33 @@
+{
+  "index": "2rc0eyvblph88pzf",
+  "name": "sunbeam",
+  "desc": [
+    "A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-long line. Each creature in the line must make a Constitution saving throw. On a failed save, a creature takes 6d8 radiant damage and is Blinded until your next turn. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw.",
+    "You can create a new line of radiance as your action on any turn until the spell ends.",
+    "For the Duration, a mote of brilliant radiance shines in your hand. It sheds bright light in a 30-foot radius and dim light for an additional 30 feet. This light is sunlight."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A magnifying glass",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/6th-level/2rc0eyvblph88pzf.json",
+  "image": "/assets/atlas/spell/images/2rc0eyvblph88pzf.webp",
+  "updated_at": "2026-07-10T15:34:53.198Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

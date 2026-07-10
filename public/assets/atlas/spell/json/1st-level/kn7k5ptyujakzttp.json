@@ -1,0 +1,30 @@
+{
+  "index": "kn7k5ptyujakzttp",
+  "name": "purify food and drink",
+  "desc": [
+    "All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease."
+  ],
+  "range": "10 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/kn7k5ptyujakzttp.json",
+  "image": "/assets/atlas/spell/images/kn7k5ptyujakzttp.webp",
+  "updated_at": "2026-07-10T15:34:53.057Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

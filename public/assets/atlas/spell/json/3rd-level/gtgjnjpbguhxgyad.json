@@ -1,0 +1,32 @@
+{
+  "index": "gtgjnjpbguhxgyad",
+  "name": "sending",
+  "desc": [
+    "You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
+    "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
+  ],
+  "range": "Self any",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A short piece of fine copper wire",
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/gtgjnjpbguhxgyad.json",
+  "image": "/assets/atlas/spell/images/gtgjnjpbguhxgyad.webp",
+  "updated_at": "2026-07-10T15:34:53.127Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,32 @@
+{
+  "index": "ltdnwofvjnljiina",
+  "name": "arcane sword",
+  "desc": [
+    "You create a sword-shaped plane of force that hovers within range. It lasts for the Duration.",
+    "When the sword appears, you make a melee spell Attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a Bonus Action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this Attack against the same target or a different one."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/ltdnwofvjnljiina.json",
+  "image": "/assets/atlas/spell/images/ltdnwofvjnljiina.webp",
+  "updated_at": "2026-07-10T15:34:53.204Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

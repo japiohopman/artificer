@@ -1,0 +1,32 @@
+{
+  "index": "1n8ddmmgz1h1yj3b",
+  "name": "invisibility",
+  "desc": [
+    "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person. The spell ends for a target that attacks or casts a spell.",
+    "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "An eyelash encased in gum arabic",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/1n8ddmmgz1h1yj3b.json",
+  "image": "/assets/atlas/spell/images/1n8ddmmgz1h1yj3b.webp",
+  "updated_at": "2026-07-10T15:34:53.088Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

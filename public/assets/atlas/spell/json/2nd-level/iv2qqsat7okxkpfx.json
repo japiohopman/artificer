@@ -1,0 +1,31 @@
+{
+  "index": "iv2qqsat7okxkpfx",
+  "name": "locate animals or plants",
+  "desc": [
+    "Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A bit of fur from a bloodhound",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/iv2qqsat7okxkpfx.json",
+  "image": "/assets/atlas/spell/images/iv2qqsat7okxkpfx.webp",
+  "updated_at": "2026-07-10T15:34:53.091Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

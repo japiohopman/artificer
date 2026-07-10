@@ -1,0 +1,31 @@
+{
+  "index": "ge3saet9zptdyaol",
+  "name": "heroism",
+  "desc": [
+    "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being &reference[Frightened apply=false] and gains Temporary Hit Points equal to your Spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/ge3saet9zptdyaol.json",
+  "image": "/assets/atlas/spell/images/ge3saet9zptdyaol.webp",
+  "updated_at": "2026-07-10T15:34:53.047Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

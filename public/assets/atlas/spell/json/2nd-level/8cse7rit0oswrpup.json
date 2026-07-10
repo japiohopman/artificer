@@ -1,0 +1,32 @@
+{
+  "index": "8cse7rit0oswrpup",
+  "name": "arcane lock",
+  "desc": [
+    "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.",
+    "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Gold dust worth at least 25 gp, which the spell consumes.",
+  "ritual": false,
+  "duration": "Instantaneous disp",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/8cse7rit0oswrpup.json",
+  "image": "/assets/atlas/spell/images/8cse7rit0oswrpup.webp",
+  "updated_at": "2026-07-10T15:34:53.069Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

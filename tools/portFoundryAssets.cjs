@@ -122,11 +122,28 @@ function getProficiencyBonusByCR(cr) {
   return 9;
 }
 
+// Get spell level directory name
+function getSpellLevelDirName(level) {
+  const lvl = parseInt(level);
+  if (isNaN(lvl) || lvl === 0) return 'cantrip';
+  if (lvl === 1) return '1st-level';
+  if (lvl === 2) return '2nd-level';
+  if (lvl === 3) return '3rd-level';
+  return `${lvl}th-level`;
+}
+
 // Load and preserve existing data for smart merge
-function getPreservedData(targetPath) {
+function getPreservedData(targetPath, fallbackPath) {
+  let finalPath = null;
   if (fs.existsSync(targetPath)) {
+    finalPath = targetPath;
+  } else if (fallbackPath && fs.existsSync(fallbackPath)) {
+    finalPath = fallbackPath;
+  }
+
+  if (finalPath) {
     try {
-      const content = fs.readFileSync(targetPath, 'utf8');
+      const content = fs.readFileSync(finalPath, 'utf8');
       const parsed = JSON.parse(content);
       return {
         image: parsed.image,
@@ -140,7 +157,7 @@ function getPreservedData(targetPath) {
         last_updated: parsed.last_updated
       };
     } catch (e) {
-      console.warn(`Could not parse existing asset at ${targetPath} for smart merge: ${e.message}`);
+      console.warn(`Could not parse existing asset at ${finalPath} for smart merge: ${e.message}`);
     }
   }
   return null;
@@ -318,7 +335,7 @@ function mapActor(sourceData, targetPath) {
 }
 
 // Map a single spell to Artificer spell JSON
-function mapSpell(sourceData, targetPath) {
+function mapSpell(sourceData, targetPath, fallbackPath) {
   const system = sourceData.system || {};
   const name = sourceData.name || 'Unnamed Spell';
   const index = sourceData._id ? sourceData._id.toLowerCase() : name.toLowerCase().replace(/[^a-z0-9]/g, '_');
@@ -332,7 +349,10 @@ function mapSpell(sourceData, targetPath) {
   if (properties.includes('somatic')) components.push('S');
   if (properties.includes('material')) components.push('M');
 
-  const preserved = getPreservedData(targetPath) || {};
+  const preserved = getPreservedData(targetPath, fallbackPath) || {};
+
+  const level = system.level || 0;
+  const levelDir = getSpellLevelDirName(level);
 
   return {
     index,
@@ -345,11 +365,11 @@ function mapSpell(sourceData, targetPath) {
     duration: `${system.duration?.value || 'Instantaneous'} ${system.duration?.units || ''}`.trim(),
     concentration: properties.includes('con'),
     casting_time: `${system.activation?.value || 1} ${system.activation?.type || 'action'}`.trim(),
-    level: system.level || 0,
+    level,
     school,
     classes: [],
     subclasses: [],
-    url: `/assets/atlas/spell/json/${index}.json`,
+    url: `/assets/atlas/spell/json/${levelDir}/${index}.json`,
     image: preserved.image || `/assets/atlas/spell/images/${index}.webp`,
     updated_at: new Date().toISOString(),
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
@@ -425,15 +445,36 @@ function portCategory(type) {
           const parsed = yaml.load(fileContent);
 
           const indexName = parsed._id ? parsed._id.toLowerCase() : parsed.name.toLowerCase().replace(/[^a-z0-9]/g, '_');
-          const targetPath = path.join(config.target, `${indexName}.json`);
+          let targetPath = path.join(config.target, `${indexName}.json`);
+          let fallbackPath = null;
+
+          if (type === 'spells') {
+            const level = parsed.system?.level || 0;
+            const levelDir = getSpellLevelDirName(level);
+            const subDir = path.join(config.target, levelDir);
+            if (!fs.existsSync(subDir)) {
+              fs.mkdirSync(subDir, { recursive: true });
+            }
+            fallbackPath = targetPath;
+            targetPath = path.join(subDir, `${indexName}.json`);
+          }
 
           let output = null;
           if (type === 'actors') output = mapActor(parsed, targetPath);
-          else if (type === 'spells') output = mapSpell(parsed, targetPath);
+          else if (type === 'spells') output = mapSpell(parsed, targetPath, fallbackPath);
           else if (type === 'items') output = mapItem(parsed, targetPath);
 
           if (output) {
             fs.writeFileSync(targetPath, JSON.stringify(output, null, 2), 'utf8');
+            
+            // Delete the old flat JSON file if we successfully wrote the new nested one
+            if (type === 'spells' && fallbackPath && fs.existsSync(fallbackPath) && fallbackPath !== targetPath) {
+              try {
+                fs.unlinkSync(fallbackPath);
+              } catch (delErr) {
+                console.warn(`Could not delete old flat spell file ${fallbackPath}: ${delErr.message}`);
+              }
+            }
             count++;
           }
         } catch (err) {

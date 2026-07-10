@@ -1,0 +1,31 @@
+{
+  "index": "zrtc23ttoj0jph2h",
+  "name": "jump",
+  "desc": [
+    "You touch a creature. The creature's &reference[jumping]{jump} distance is tripled until the spell ends."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A grasshopper's hind leg",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/zrtc23ttoj0jph2h.json",
+  "image": "/assets/atlas/spell/images/zrtc23ttoj0jph2h.webp",
+  "updated_at": "2026-07-10T15:34:53.053Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

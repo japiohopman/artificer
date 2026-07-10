@@ -1,0 +1,29 @@
+{
+  "index": "wqfavanuqonnbgnl",
+  "name": "misty step",
+  "desc": [
+    "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
+  ],
+  "range": "Self self",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 2,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/wqfavanuqonnbgnl.json",
+  "image": "/assets/atlas/spell/images/wqfavanuqonnbgnl.webp",
+  "updated_at": "2026-07-10T15:34:53.094Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

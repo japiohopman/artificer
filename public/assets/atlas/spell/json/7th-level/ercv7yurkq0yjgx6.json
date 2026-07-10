@@ -1,0 +1,33 @@
+{
+  "index": "ercv7yurkq0yjgx6",
+  "name": "reverse gravity",
+  "desc": [
+    "This spell reverses gravity in a 50-foot-radius, 100-foot high Cylinder centered on a point within range. All creatures and Objects that aren't somehow anchored to the ground in the area fall upward and reach the top of the area when you cast this spell. A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall.",
+    "If some solid object (such as a ceiling) is encountered in this fall, Falling Objects and creatures strike it just as they would during a normal downward fall. If an object or creature reaches the top of the area without striking anything, it remains there, oscillating slightly, for the Duration.",
+    "At the end of the Duration, affected Objects and creatures fall back down."
+  ],
+  "range": "100 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A lodestone and iron fillings",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/ercv7yurkq0yjgx6.json",
+  "image": "/assets/atlas/spell/images/ercv7yurkq0yjgx6.webp",
+  "updated_at": "2026-07-10T15:34:53.213Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

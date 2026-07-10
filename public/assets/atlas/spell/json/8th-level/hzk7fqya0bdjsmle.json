@@ -1,0 +1,33 @@
+{
+  "index": "hzk7fqya0bdjsmle",
+  "name": "sunburst",
+  "desc": [
+    "Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 12d6 radiant damage and is Blinded for 1 minute. On a successful save, it takes half as much damage and isn't blinded by this spell. Undead and oozes have disadvantage on this saving throw.",
+    "A creature Blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
+    "This spell dispels any Darkness in its area that was created by a spell."
+  ],
+  "range": "150 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Fire and a piece of sunstone",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/hzk7fqya0bdjsmle.json",
+  "image": "/assets/atlas/spell/images/hzk7fqya0bdjsmle.webp",
+  "updated_at": "2026-07-10T15:34:53.226Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

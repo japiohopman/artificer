@@ -1,0 +1,32 @@
+{
+  "index": "hdoenzjuj5wplq7b",
+  "name": "animal friendship",
+  "desc": [
+    "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be &reference[charmed apply=false] by you for the spell's duration. If you or one of your companions harms the target, the spell ends.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A morsel of food.",
+  "ritual": false,
+  "duration": "24 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/hdoenzjuj5wplq7b.json",
+  "image": "/assets/atlas/spell/images/hdoenzjuj5wplq7b.webp",
+  "updated_at": "2026-07-10T15:34:53.001Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,30 @@
+{
+  "index": "j8ntlxooj3gakf8i",
+  "name": "protection from energy",
+  "desc": [
+    "For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/j8ntlxooj3gakf8i.json",
+  "image": "/assets/atlas/spell/images/j8ntlxooj3gakf8i.webp",
+  "updated_at": "2026-07-10T15:34:53.126Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

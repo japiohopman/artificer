@@ -1,0 +1,30 @@
+{
+  "index": "al1f8fvyltnzubku",
+  "name": "speak with animals",
+  "desc": [
+    "You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/al1f8fvyltnzubku.json",
+  "image": "/assets/atlas/spell/images/al1f8fvyltnzubku.webp",
+  "updated_at": "2026-07-10T15:34:53.062Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

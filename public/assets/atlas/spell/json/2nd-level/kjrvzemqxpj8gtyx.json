@@ -1,0 +1,31 @@
+{
+  "index": "kjrvzemqxpj8gtyx",
+  "name": "spider climb",
+  "desc": [
+    "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A drop of bitumen and a spider",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/kjrvzemqxpj8gtyx.json",
+  "image": "/assets/atlas/spell/images/kjrvzemqxpj8gtyx.webp",
+  "updated_at": "2026-07-10T15:34:53.102Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

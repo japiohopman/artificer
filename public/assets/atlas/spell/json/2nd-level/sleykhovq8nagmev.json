@@ -1,0 +1,33 @@
+{
+  "index": "sleykhovq8nagmev",
+  "name": "locate object",
+  "desc": [
+    "Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
+    "The spell can locate a specific object known to you, as long as you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
+    "This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A forked twig",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/sleykhovq8nagmev.json",
+  "image": "/assets/atlas/spell/images/sleykhovq8nagmev.webp",
+  "updated_at": "2026-07-10T15:34:53.091Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

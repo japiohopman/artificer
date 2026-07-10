@@ -1,0 +1,29 @@
+{
+  "index": "1rzxkzzkqooioxpj",
+  "name": "glibness",
+  "desc": [
+    "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
+  ],
+  "range": "Self self",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/1rzxkzzkqooioxpj.json",
+  "image": "/assets/atlas/spell/images/1rzxkzzkqooioxpj.webp",
+  "updated_at": "2026-07-10T15:34:53.223Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,34 @@
+{
+  "index": "t1vpzlam7lezjtoj",
+  "name": "divine word",
+  "desc": [
+    "You utter a divine word, imbued with the power that shaped the world at the dawn of Creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points:",
+    "50 Hit Points or fewer: Deafened for 1 minute",
+    "40 Hit Points or fewer: Deafened and Blinded for 10 minutes",
+    "30 Hit Points or fewer: Blinded, Deafened, and Stunned for 1 Hour",
+    "20 Hit Points or fewer: killed instantly",
+    "Regardless of its current Hit Points, a Celestial, an elemental, a fey, or a fiend that fails its save is forced back to its plane of Origin (if it isn't there already) and can't return to your current plane for 24 hours by any means short of a wish spell."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 7,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/t1vpzlam7lezjtoj.json",
+  "image": "/assets/atlas/spell/images/t1vpzlam7lezjtoj.webp",
+  "updated_at": "2026-07-10T15:34:53.206Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

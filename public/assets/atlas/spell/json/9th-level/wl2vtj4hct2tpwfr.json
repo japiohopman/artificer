@@ -1,0 +1,30 @@
+{
+  "index": "wl2vtj4hct2tpwfr",
+  "name": "weird",
+  "desc": [
+    "Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a Wisdom saving throw. On a failed save, a creature becomes Frightened for the Duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the end of each of the Frightened creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature."
+  ],
+  "range": "120 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 9,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/9th-level/wl2vtj4hct2tpwfr.json",
+  "image": "/assets/atlas/spell/images/wl2vtj4hct2tpwfr.webp",
+  "updated_at": "2026-07-10T15:34:53.235Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

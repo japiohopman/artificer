@@ -1,0 +1,31 @@
+{
+  "index": "ghxtfe7sgcbgf1q8",
+  "name": "detect magic",
+  "desc": [
+    "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.",
+    "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/ghxtfe7sgcbgf1q8.json",
+  "image": "/assets/atlas/spell/images/ghxtfe7sgcbgf1q8.webp",
+  "updated_at": "2026-07-10T15:34:53.028Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

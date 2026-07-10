@@ -1,0 +1,31 @@
+{
+  "index": "n9pjztdsawqxjvrl",
+  "name": "sacred flame",
+  "desc": [
+    "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from &reference[cover] for this saving throw.",
+    "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/n9pjztdsawqxjvrl.json",
+  "image": "/assets/atlas/spell/images/n9pjztdsawqxjvrl.webp",
+  "updated_at": "2026-07-10T15:34:53.246Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

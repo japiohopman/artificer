@@ -1,0 +1,31 @@
+{
+  "index": "rembjfeokosj3o79",
+  "name": "stoneskin",
+  "desc": [
+    "This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Diamond dust worth 100 gp, which the spell consumes",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/rembjfeokosj3o79.json",
+  "image": "/assets/atlas/spell/images/rembjfeokosj3o79.webp",
+  "updated_at": "2026-07-10T15:34:53.157Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,30 @@
+{
+  "index": "zpgohqjrir6myq3u",
+  "name": "expeditious retreat",
+  "desc": [
+    "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the &reference[Dash] action."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/zpgohqjrir6myq3u.json",
+  "image": "/assets/atlas/spell/images/zpgohqjrir6myq3u.webp",
+  "updated_at": "2026-07-10T15:34:53.034Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

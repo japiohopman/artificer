@@ -1,0 +1,32 @@
+{
+  "index": "gmrweg8fmdprfive",
+  "name": "entangle",
+  "desc": [
+    "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the Duration, these Plants turn the ground in the area into &reference[difficult terrain].",
+    "A creature in the area when you cast the spell must succeed on a Strength saving throw or be &Reference[Restrained] by the entangling Plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.",
+    "When the spell ends, the conjured Plants wilt away."
+  ],
+  "range": "90 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/gmrweg8fmdprfive.json",
+  "image": "/assets/atlas/spell/images/gmrweg8fmdprfive.webp",
+  "updated_at": "2026-07-10T15:34:53.033Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

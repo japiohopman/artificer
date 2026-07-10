@@ -1,0 +1,33 @@
+{
+  "index": "ccdulivutynqvkgv",
+  "name": "unseen servant",
+  "desc": [
+    "This spell creates an &Reference[Invisible apply=false], mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.",
+    "Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.",
+    "If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A bit of string and of wood",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/ccdulivutynqvkgv.json",
+  "image": "/assets/atlas/spell/images/ccdulivutynqvkgv.webp",
+  "updated_at": "2026-07-10T15:34:53.064Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

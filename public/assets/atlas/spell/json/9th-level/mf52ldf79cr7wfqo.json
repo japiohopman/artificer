@@ -1,0 +1,31 @@
+{
+  "index": "mf52ldf79cr7wfqo",
+  "name": "meteor swarm",
+  "desc": [
+    "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 20d6 fire damage and 20d6 bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.",
+    "The spell damages objects in the area and ignites flammable objects that aren't being worn or carried."
+  ],
+  "range": "1 mi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 9,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/9th-level/mf52ldf79cr7wfqo.json",
+  "image": "/assets/atlas/spell/images/mf52ldf79cr7wfqo.webp",
+  "updated_at": "2026-07-10T15:34:53.230Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

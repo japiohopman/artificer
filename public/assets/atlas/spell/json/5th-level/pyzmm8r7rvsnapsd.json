@@ -1,0 +1,31 @@
+{
+  "index": "pyzmm8r7rvsnapsd",
+  "name": "mass cure wounds",
+  "desc": [
+    "A wave of Healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 3d8 + your Spellcasting ability modifier. This spell has no effect on Undead or constructs.",
+    "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the Healing increases by 1d8 for each slot level above 5th."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/pyzmm8r7rvsnapsd.json",
+  "image": "/assets/atlas/spell/images/pyzmm8r7rvsnapsd.webp",
+  "updated_at": "2026-07-10T15:34:53.174Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

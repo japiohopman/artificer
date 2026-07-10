@@ -1,0 +1,31 @@
+{
+  "index": "maxm77cduu8dgirq",
+  "name": "protection from poison",
+  "desc": [
+    "You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.",
+    "For the duration, the target has advantage on saving throws against being &Reference[poisoned], and it has resistance to poison damage."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/maxm77cduu8dgirq.json",
+  "image": "/assets/atlas/spell/images/maxm77cduu8dgirq.webp",
+  "updated_at": "2026-07-10T15:34:53.097Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

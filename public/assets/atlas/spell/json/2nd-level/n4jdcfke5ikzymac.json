@@ -1,0 +1,32 @@
+{
+  "index": "n4jdcfke5ikzymac",
+  "name": "gentle repose",
+  "desc": [
+    "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
+    "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration",
+  "ritual": false,
+  "duration": "10 day",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/n4jdcfke5ikzymac.json",
+  "image": "/assets/atlas/spell/images/n4jdcfke5ikzymac.webp",
+  "updated_at": "2026-07-10T15:34:53.086Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

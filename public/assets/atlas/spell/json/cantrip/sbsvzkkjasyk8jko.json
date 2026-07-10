@@ -1,0 +1,34 @@
+{
+  "index": "sbsvzkkjasyk8jko",
+  "name": "druidcraft",
+  "desc": [
+    "Whispering to the spirits of Nature, you create one of the following Effects within range:",
+    "You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.",
+    "You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.",
+    "You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.",
+    "You instantly light or snuff out a Candle, a torch, or a small campfire."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/sbsvzkkjasyk8jko.json",
+  "image": "/assets/atlas/spell/images/sbsvzkkjasyk8jko.webp",
+  "updated_at": "2026-07-10T15:34:53.238Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

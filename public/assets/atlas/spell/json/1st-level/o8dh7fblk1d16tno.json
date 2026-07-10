@@ -1,0 +1,30 @@
+{
+  "index": "o8dh7fblk1d16tno",
+  "name": "healing word",
+  "desc": [
+    "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/o8dh7fblk1d16tno.json",
+  "image": "/assets/atlas/spell/images/o8dh7fblk1d16tno.webp",
+  "updated_at": "2026-07-10T15:34:53.045Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

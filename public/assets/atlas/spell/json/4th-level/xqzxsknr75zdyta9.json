@@ -1,0 +1,33 @@
+{
+  "index": "xqzxsknr75zdyta9",
+  "name": "divination",
+  "desc": [
+    "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.",
+    "The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
+    "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Incense and a sacrificial offering appropiate to your religion, together worth at least 25gp, which the spell consumes",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/xqzxsknr75zdyta9.json",
+  "image": "/assets/atlas/spell/images/xqzxsknr75zdyta9.webp",
+  "updated_at": "2026-07-10T15:34:53.145Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

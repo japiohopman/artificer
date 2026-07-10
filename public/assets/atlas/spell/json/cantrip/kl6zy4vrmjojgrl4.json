@@ -1,0 +1,28 @@
+{
+  "index": "kl6zy4vrmjojgrl4",
+  "name": "9th level",
+  "desc": [],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/kl6zy4vrmjojgrl4.json",
+  "image": "/assets/atlas/spell/images/kl6zy4vrmjojgrl4.webp",
+  "updated_at": "2026-07-10T15:34:53.226Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

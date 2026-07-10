@@ -1,0 +1,32 @@
+{
+  "index": "4dsvfvty2zij3k4k",
+  "name": "comprehend languages",
+  "desc": [
+    "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
+    "This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of soot and salt",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/4dsvfvty2zij3k4k.json",
+  "image": "/assets/atlas/spell/images/4dsvfvty2zij3k4k.webp",
+  "updated_at": "2026-07-10T15:34:53.018Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,33 @@
+{
+  "index": "pybg5mnc3lkerh4y",
+  "name": "blight",
+  "desc": [
+    "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs.",
+    "If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.",
+    "If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw, it simply withers and dies.",
+    "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/pybg5mnc3lkerh4y.json",
+  "image": "/assets/atlas/spell/images/pybg5mnc3lkerh4y.webp",
+  "updated_at": "2026-07-10T15:34:53.139Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

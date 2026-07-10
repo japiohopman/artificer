@@ -1,0 +1,31 @@
+{
+  "index": "hpvzm8yjo91k6qdg",
+  "name": "finger of death",
+  "desc": [
+    "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one.",
+    "A humanoid killed by this spell rises at the start of your next turn as a Zombie that is permanently under your command, following your verbal orders to the best of its ability."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/hpvzm8yjo91k6qdg.json",
+  "image": "/assets/atlas/spell/images/hpvzm8yjo91k6qdg.webp",
+  "updated_at": "2026-07-10T15:34:53.207Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,32 @@
+{
+  "index": "da0a1t2fqatjrzgt",
+  "name": "freedom of movement",
+  "desc": [
+    "You touch a willing creature. For the Duration, the target's Movement is unaffected by difficult terrain, and Spells and other magical Effects can neither reduce the target's speed nor cause the target to be Paralyzed or Restrained.",
+    "The target can also spend 5 feet of Movement to automatically escape from nonmagical restraints, such as Manacles or a creature that has it Grappled. Finally, being Underwater imposes no penalties on the target's movement or attacks."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A leather strap, bound around the arm or a similar appendage",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/da0a1t2fqatjrzgt.json",
+  "image": "/assets/atlas/spell/images/da0a1t2fqatjrzgt.webp",
+  "updated_at": "2026-07-10T15:34:53.148Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,30 @@
+{
+  "index": "nqbdwkvofcgzt4yu",
+  "name": "faerie fire",
+  "desc": [
+    "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed &reference[dim light] in a 10-foot radius.",
+    "Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being &reference[invisible apply=false]."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/nqbdwkvofcgzt4yu.json",
+  "image": "/assets/atlas/spell/images/nqbdwkvofcgzt4yu.webp",
+  "updated_at": "2026-07-10T15:34:53.036Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

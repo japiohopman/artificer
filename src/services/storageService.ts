@@ -336,28 +336,6 @@ export async function fetchMagicItemData(index: string): Promise<any> {
   }
 }
 
-export function getEnemyArtworkUrl(enemy: any): string {
-  if (!enemy) return '';
-  const url = enemy.imageUrl || enemy.image || '';
-  const isToken = typeof url === 'string' && (
-    url.includes('/tokens/') ||
-    url.includes('/enemies/tokens/') ||
-    url.includes('%2Ftokens%2F') ||
-    url.includes('%2Fenemies%2Ftokens%2F')
-  );
-
-  if (isToken && enemy.name) {
-    const slug = enemy.name.toLowerCase()
-      .replace(/[^a-z0-9]/g, '_')
-      .replace(/_+/g, '_')
-      .trim()
-      .replace(/^_+|_+$/g, '');
-    return `/assets/atlas/enemies/images/${slug}.webp`;
-  }
-
-  return normalizeImageUrl(url, 'enemies', enemy.index || enemy.name);
-}
-
 export function normalizeImageUrl(url: string | undefined, category: string, index: string): string {
   const timestamp = Date.now();
   let finalUrl = "";
@@ -950,16 +928,51 @@ export async function fetchDamageTypeData(index: string): Promise<any> {
 }
 
 export async function fetchSpellData(index: string): Promise<any> {
-  // Try local first
+  let resolvedPath: string | null = null;
+
+  // Try resolving path from local index first
   try {
-    const res = await fetch(`/assets/atlas/spell/json/${index}.json`);
+    const indexRes = await fetch('/assets/atlas/spell/index.json');
+    if (indexRes.ok) {
+      const spellIndex = await indexRes.json();
+      const entry = spellIndex.find((s: any) => s.index === index);
+      if (entry && entry.json_path) {
+        resolvedPath = entry.json_path;
+      }
+    }
+  } catch (e) {}
+
+  // If not found in index, attempt direct subdirectories via iterative fallback
+  if (!resolvedPath) {
+    const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
+    for (const lvl of levels) {
+      try {
+        const checkRes = await fetch(`/assets/atlas/spell/json/${lvl}/${index}.json`, { method: 'HEAD' });
+        if (checkRes.ok) {
+          resolvedPath = `/assets/atlas/spell/json/${lvl}/${index}.json`;
+          break;
+        }
+      } catch (e) {}
+    }
+  }
+
+  // Fallback to legacy path if still unresolved
+  if (!resolvedPath) {
+    resolvedPath = `/assets/atlas/spell/json/${index}.json`;
+  }
+
+  // Fetch local spell data
+  try {
+    const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
       return { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index) };
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${index}.json?t=${Date.now()}`;
+  // Construct GitHub raw path
+  const subpath = resolvedPath.replace(/^\/?assets\/atlas\/spell\/json\//, '').replace(/^\/?public\/assets\/atlas\/spell\/json\//, '');
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${subpath}?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -988,6 +1001,19 @@ export async function fetchSpellList(): Promise<any[]> {
           imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
         }));
       }
+    }
+  } catch (e) {}
+
+  // Try to load index from GitHub raw first before calling GitHub Contents API
+  const githubIndexUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/index.json?t=${Date.now()}`;
+  try {
+    const res = await fetch(`/api/raw?url=${encodeURIComponent(githubIndexUrl)}`);
+    const data = await safeJson(res);
+    if (data && Array.isArray(data)) {
+      return data.map((s: any) => ({
+        ...s,
+        imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
+      }));
     }
   } catch (e) {}
 

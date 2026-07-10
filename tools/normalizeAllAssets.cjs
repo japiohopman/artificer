@@ -3,6 +3,23 @@ const path = require('path');
 
 const BASE_DIR = path.join(__dirname, '../public/assets/atlas');
 
+const SPELL_INDEX_FILE = path.join(__dirname, '../public/assets/atlas/spell/index.json');
+let spellPathMap = {};
+if (fs.existsSync(SPELL_INDEX_FILE)) {
+  try {
+    const indexData = JSON.parse(fs.readFileSync(SPELL_INDEX_FILE, 'utf8'));
+    if (Array.isArray(indexData)) {
+      indexData.forEach(spell => {
+        if (spell.index && spell.json_path) {
+          spellPathMap[spell.index.toLowerCase()] = spell.json_path;
+        }
+      });
+    }
+  } catch (e) {
+    console.warn('Failed to load spell index for path normalization:', e.message);
+  }
+}
+
 const EQUIPMENT_SLOT_MAP = {
   'weapon': ['main_hand', 'off_hand'],
   'armor': ['chest'],
@@ -139,6 +156,28 @@ function normalizePath(val) {
   newVal = newVal.replace(/\/json\/(.*)\.webp$/, '/wiki_image/$1.webp');
   if (newVal.includes('/equipment/') && newVal.endsWith('.webp')) {
       newVal = newVal.replace('/json/', '/images/');
+  }
+
+  // Fix double json/json/ and resolve nested spell paths
+  if (newVal.includes('/spell/json/')) {
+    newVal = newVal.replace(/\/json\/json\//g, '/json/');
+    const spellMatch = newVal.match(/\/spell\/json\/(?:[^\/]+\/)?([^\/]+)\.json$/);
+    if (spellMatch) {
+      const spellIdx = spellMatch[1].toLowerCase();
+      if (spellPathMap[spellIdx]) {
+        newVal = spellPathMap[spellIdx];
+      }
+    }
+  }
+
+  // Ensure spell images are located in spell/images and hyphens are converted to underscores
+  if (newVal.includes('/spell/') && newVal.endsWith('.webp')) {
+    newVal = newVal.replace('/json/', '/images/');
+    if (newVal.includes('/spell/images/')) {
+      const parts = newVal.split('/spell/images/');
+      const filename = parts[1].replace(/-/g, '_');
+      newVal = parts[0] + '/spell/images/' + filename;
+    }
   }
 
   return newVal;

@@ -1,0 +1,33 @@
+{
+  "index": "7p9iuwrswfgfyqo2",
+  "name": "alarm",
+  "desc": [
+    "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.",
+    "A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.",
+    "An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A tiny bell and a piece of fine silver wire.",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/7p9iuwrswfgfyqo2.json",
+  "image": "/assets/atlas/spell/images/7p9iuwrswfgfyqo2.webp",
+  "updated_at": "2026-07-10T15:34:52.996Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

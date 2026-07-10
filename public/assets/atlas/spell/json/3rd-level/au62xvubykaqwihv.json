@@ -1,0 +1,31 @@
+{
+  "index": "au62xvubykaqwihv",
+  "name": "nondetection",
+  "desc": [
+    "For the Duration, you hide a target that you touch from Divination magic. The target can be a willing creature or a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any divination magic or perceived through magical Scrying sensors."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of diamond dust worth 25 gp sprinkled over the target, which the spell consumes",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/au62xvubykaqwihv.json",
+  "image": "/assets/atlas/spell/images/au62xvubykaqwihv.webp",
+  "updated_at": "2026-07-10T15:34:53.124Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,30 @@
+{
+  "index": "f0gsg0sjzsioacwv",
+  "name": "lesser restoration",
+  "desc": [
+    "You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/f0gsg0sjzsioacwv.json",
+  "image": "/assets/atlas/spell/images/f0gsg0sjzsioacwv.webp",
+  "updated_at": "2026-07-10T15:34:53.090Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

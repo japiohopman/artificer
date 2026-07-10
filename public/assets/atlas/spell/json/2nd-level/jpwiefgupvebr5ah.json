@@ -1,0 +1,31 @@
+{
+  "index": "jpwiefgupvebr5ah",
+  "name": "barkskin",
+  "desc": [
+    "You touch a willing creature. Until the spell ends, the target's skin has a rough, bark-like appearance, and the target's AC can't be less than 16, regardless of what kind of armor it is wearing."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A handful of oak bark",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/jpwiefgupvebr5ah.json",
+  "image": "/assets/atlas/spell/images/jpwiefgupvebr5ah.webp",
+  "updated_at": "2026-07-10T15:34:53.072Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

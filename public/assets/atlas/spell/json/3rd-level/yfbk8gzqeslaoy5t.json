@@ -1,0 +1,32 @@
+{
+  "index": "yfbk8gzqeslaoy5t",
+  "name": "fly",
+  "desc": [
+    "You touch a willing creature. The target gains a flying speed of 60 feet for the Duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.",
+    "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A wing feather from any bird",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/yfbk8gzqeslaoy5t.json",
+  "image": "/assets/atlas/spell/images/yfbk8gzqeslaoy5t.webp",
+  "updated_at": "2026-07-10T15:34:53.117Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

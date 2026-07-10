@@ -1,0 +1,31 @@
+{
+  "index": "odhlkbxlnvvlonw1",
+  "name": "ray of enfeeblement",
+  "desc": [
+    "A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.",
+    "At the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/odhlkbxlnvvlonw1.json",
+  "image": "/assets/atlas/spell/images/odhlkbxlnvvlonw1.webp",
+  "updated_at": "2026-07-10T15:34:53.098Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

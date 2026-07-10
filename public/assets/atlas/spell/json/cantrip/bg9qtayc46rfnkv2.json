@@ -1,0 +1,28 @@
+{
+  "index": "bg9qtayc46rfnkv2",
+  "name": "5th level",
+  "desc": [],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/bg9qtayc46rfnkv2.json",
+  "image": "/assets/atlas/spell/images/bg9qtayc46rfnkv2.webp",
+  "updated_at": "2026-07-10T15:34:53.158Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,32 @@
+{
+  "index": "kjmjy0zle6ieiqvl",
+  "name": "mending",
+  "desc": [
+    "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
+    "This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Two lodestones",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/kjmjy0zle6ieiqvl.json",
+  "image": "/assets/atlas/spell/images/kjmjy0zle6ieiqvl.webp",
+  "updated_at": "2026-07-10T15:34:53.242Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

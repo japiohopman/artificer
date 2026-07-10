@@ -1,0 +1,32 @@
+{
+  "index": "b0pnicc52o6g8hi8",
+  "name": "longstrider",
+  "desc": [
+    "You touch a creature. The target's speed increases by 10 feet until the spell ends.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of dirt",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/b0pnicc52o6g8hi8.json",
+  "image": "/assets/atlas/spell/images/b0pnicc52o6g8hi8.webp",
+  "updated_at": "2026-07-10T15:34:53.053Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

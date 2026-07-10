@@ -1,0 +1,31 @@
+{
+  "index": "g2u9pyfqwqayg9oi",
+  "name": "poison spray",
+  "desc": [
+    "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.",
+    "This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+  ],
+  "range": "10 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/g2u9pyfqwqayg9oi.json",
+  "image": "/assets/atlas/spell/images/g2u9pyfqwqayg9oi.webp",
+  "updated_at": "2026-07-10T15:34:53.244Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}
