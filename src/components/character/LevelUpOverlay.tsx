@@ -64,9 +64,27 @@ export const LevelUpOverlay: React.FC = () => {
   const [animationsComplete, setAnimationsComplete] = useState(false);
   const [expandedMainFeatures, setExpandedMainFeatures] = useState<any[]>([]);
   const [subclassFeatures, setSubclassFeatures] = useState<any[]>([]);
+
+  // Fast HP Rolling states
+  const [hpMethod, setHpMethod] = useState<'fixed' | 'roll'>('fixed');
+  const [rolledHpValue, setRolledHpValue] = useState<number | null>(null);
   
   const character = characters.find(c => c.id === levelUpResult?.characterId);
   const proficiencyBonus = Math.floor(2 + ((levelUpResult?.newLevel || 1) - 1) / 4);
+
+  // Calculated HP Increase (Fixed / Average method)
+  const conModifier = Math.floor(((tempStats.con || (character ? character.stats?.con : 10) || 10) - 10) / 2);
+  const classHitDie = character ? (character.stats?.hitDie || 8) : 8; // fallback to 8
+  const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
+  const rolledHpGain = rolledHpValue !== null ? Math.max(1, rolledHpValue + conModifier) : fixedHpGain;
+  const finalHpGain = hpMethod === 'roll' ? rolledHpGain : fixedHpGain;
+
+  const handleRollHp = () => {
+    // Generate fast pseudo-random roll matching character class hit die size
+    const roll = Math.floor(Math.random() * classHitDie) + 1;
+    setRolledHpValue(roll);
+    soundService.playEffect('DICE_ROLL');
+  };
 
   useEffect(() => {
     if (levelUpResult && character) {
@@ -78,6 +96,8 @@ export const LevelUpOverlay: React.FC = () => {
       setAnimationsComplete(false);
       setExpandedMainFeatures([]);
       setSubclassFeatures([]);
+      setHpMethod('fixed');
+      setRolledHpValue(null);
       
       // Load full feature data for main features
       const loadMainFeatures = async () => {
@@ -214,9 +234,20 @@ export const LevelUpOverlay: React.FC = () => {
       if (selections.length < limit) return;
     }
 
+    // Apply custom rolled or average HP calculations instead of hardcoded levels
+    const oldMaxHp = character.maxHp || character.hp || 10;
+    const oldHp = character.hp || 10;
+
+    // Check old stats and levelup increments
+    const baseHpDifference = finalHpGain - levelUpResult.hpIncrease;
+
     if (levelUpResult.hasASI) {
       updateCharacterStats(character.id, tempStats);
     }
+
+    // Adjust HP inside updateCharacter as well to respect roll modifications
+    const finalCalculatedMaxHp = oldMaxHp + baseHpDifference;
+    const finalCalculatedHp = oldHp + baseHpDifference;
 
     const currentChoices = JSON.parse(JSON.stringify(character.choices || {}));
     const newFeatures = [...(character.features || [])];
@@ -263,7 +294,9 @@ export const LevelUpOverlay: React.FC = () => {
 
     const updateData: any = { 
       choices: currentChoices,
-      features: newFeatures
+      features: newFeatures,
+      hp: finalCalculatedHp,
+      maxHp: finalCalculatedMaxHp
     };
     
     if (currentChoices['subclass']) {
@@ -486,50 +519,106 @@ export const LevelUpOverlay: React.FC = () => {
                        </div>
                     </div>
 
-                    {/* Core Attribute Gains */}
-                    <div className="grid grid-cols-2 gap-6">
-                      <motion.div 
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.4 }}
-                        className="bg-black/5 p-5 rounded-sm text-center relative group overflow-hidden flex flex-col items-center"
-                      >
-                         <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-3 block">Vitality Matrix</span>
-                         <div className="flex items-center justify-center gap-4">
-                            <div className="flex flex-col items-end">
-                               <span className="text-[10px] font-bold text-parchment-400 line-through opacity-50">{character.maxHp - levelUpResult.hpIncrease}</span>
-                               <span className="text-3xl font-header font-black text-dragon-red leading-none">
-                                  {character.maxHp}
-                               </span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                               <motion.div
-                                 animate={{ x: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
-                                 transition={{ duration: 1.5, repeat: Infinity }}
-                               >
-                                 <GameIcon name="energy" size={14} color="#D4AF37" />
-                               </motion.div>
-                               <span className="text-[10px] font-black text-dragon-gold">+{levelUpResult.hpIncrease}</span>
-                            </div>
-                            <GameIcon name="hp" size={32} color="#8B0000" className="drop-shadow-smAlpha" />
+                    {/* Fast HP Rolling Section & Core Attribute Gains */}
+                    <div className="flex flex-col gap-6">
+                      {/* Segmented HP Decision Controller */}
+                      <div className="bg-black/10 p-4 rounded-sm border border-dragon-gold/10 space-y-3">
+                         <div className="flex items-center justify-between">
+                            <span className="text-[10px] font-black text-parchment-400 uppercase tracking-[0.2em]">HP Evolution Path</span>
+                            <span className="text-[9px] font-black text-dragon-gold uppercase tracking-[0.15em]">{hpMethod === 'roll' ? 'Chaotic Roll' : 'Standard Fixed'}</span>
                          </div>
-                      </motion.div>
+                         <div className="grid grid-cols-2 gap-2">
+                            <button
+                              onClick={() => { setHpMethod('fixed'); setRolledHpValue(null); }}
+                              className={cn(
+                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
+                                hpMethod === 'fixed'
+                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
+                                  : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
+                              )}
+                            >
+                               Standard (Avg)
+                            </button>
+                            <button
+                              onClick={() => { setHpMethod('roll'); }}
+                              className={cn(
+                                "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
+                                hpMethod === 'roll'
+                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
+                                  : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
+                              )}
+                            >
+                               Roll (1d{classHitDie})
+                            </button>
+                         </div>
 
-                      <motion.div 
-                        initial={{ x: 20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="bg-black/10 p-5 rounded-sm text-center relative group overflow-hidden"
-                      >
-                         <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-2 block">Task Proficiency</span>
-                         <div className="flex items-center justify-center gap-3">
-                            <GameIcon name="award" size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
-                            <span className="text-3xl font-header font-black text-dragon-darkRed">
-                               +{Math.floor(2 + (levelUpResult.newLevel - 1) / 4)}
-                            </span>
-                         </div>
-                         <span className="text-[8px] font-bold text-dragon-gold/60 uppercase tracking-widest mt-1">Tier Advancement</span>
-                      </motion.div>
+                         {hpMethod === 'roll' && (
+                            <div className="pt-2 flex flex-col items-center justify-center gap-2 border-t border-dragon-gold/10">
+                               {rolledHpValue !== null ? (
+                                  <div className="text-center">
+                                     <span className="text-[9px] font-black text-parchment-400 uppercase tracking-widest block">ROLLED VALUE</span>
+                                     <span className="text-4xl font-header font-black text-dragon-gold leading-none tabular-nums animate-scaleIn">
+                                        {rolledHpValue} <span className="text-lg text-parchment-400 font-medium font-body">+ {conModifier} Con = +{rolledHpGain} HP</span>
+                                     </span>
+                                  </div>
+                               ) : (
+                                  <span className="text-[10px] font-bold text-parchment-500 italic block py-1">Awaiting active roll seed...</span>
+                                )}
+                                <button
+                                  onClick={handleRollHp}
+                                  className="w-full py-2 bg-dragon-red hover:bg-dragon-darkRed text-white rounded-sm text-[10px] font-black uppercase tracking-widest shadow-md flex items-center justify-center gap-2 active:scale-95 transition-all"
+                                >
+                                   <GameIcon name="dice" size={14} />
+                                   {rolledHpValue !== null ? 'Re-roll HP' : 'Roll HP Matrix'}
+                                </button>
+                            </div>
+                         )}
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-6">
+                        <motion.div
+                          initial={{ x: -20, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: 0.4 }}
+                          className="bg-black/5 p-5 rounded-sm text-center relative group overflow-hidden flex flex-col items-center"
+                        >
+                           <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-3 block">Vitality Matrix</span>
+                           <div className="flex items-center justify-center gap-4">
+                              <div className="flex flex-col items-end">
+                                 <span className="text-[10px] font-bold text-parchment-400 line-through opacity-50">{(character.maxHp || 10) - levelUpResult.hpIncrease}</span>
+                                 <span className="text-3xl font-header font-black text-dragon-red leading-none">
+                                    {(character.maxHp || 10) + (finalHpGain - levelUpResult.hpIncrease)}
+                                 </span>
+                              </div>
+                              <div className="flex flex-col items-center">
+                                 <motion.div
+                                   animate={{ x: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
+                                   transition={{ duration: 1.5, repeat: Infinity }}
+                                 >
+                                   <GameIcon name="energy" size={14} color="#D4AF37" />
+                                 </motion.div>
+                                 <span className="text-[10px] font-black text-dragon-gold">+{finalHpGain}</span>
+                              </div>
+                              <GameIcon name="hp" size={32} color="#8B0000" className="drop-shadow-smAlpha" />
+                           </div>
+                        </motion.div>
+
+                        <motion.div
+                          initial={{ x: 20, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: 0.5 }}
+                          className="bg-black/10 p-5 rounded-sm text-center relative group overflow-hidden"
+                        >
+                           <span className="text-[9px] font-black text-parchment-400 uppercase tracking-[0.2em] mb-2 block">Task Proficiency</span>
+                           <div className="flex items-center justify-center gap-3">
+                              <GameIcon name="award" size={24} color="#D4AF37" className="drop-shadow-smAlpha" />
+                              <span className="text-3xl font-header font-black text-dragon-darkRed">
+                                 +{Math.floor(2 + (levelUpResult.newLevel - 1) / 4)}
+                              </span>
+                           </div>
+                           <span className="text-[8px] font-bold text-dragon-gold/60 uppercase tracking-widest mt-1">Tier Advancement</span>
+                        </motion.div>
+                      </div>
                     </div>
 
                     {/* Spell Slots Advancement */}
