@@ -3,6 +3,7 @@ import { diceService } from './diceService';
 import { useUIStore } from '../store/useUIStore';
 import { useGameStore } from '../store/useGameStore';
 import { useInventoryStore } from '../store/useInventoryStore';
+import { cn } from '../lib/utils';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);

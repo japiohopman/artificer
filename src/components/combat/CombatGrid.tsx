@@ -363,7 +363,7 @@ export const CombatGrid: React.FC = () => {
   const rulerPath = useMemo(() => {
     const target = hoveredCell || draggedPos;
     if (!target) return null;
-    const activeTokenCoordinates = draggedMonsterId 
+const activeTokenCoordinates = draggedMonsterId
       ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
       : activeTokenPos;
     return findPath(activeTokenCoordinates, target, grid, monsters, playerPos);
@@ -372,7 +372,7 @@ export const CombatGrid: React.FC = () => {
   const rulerDistance = useMemo(() => {
     const target = hoveredCell || draggedPos;
     if (!target) return null;
-    const activeTokenCoordinates = draggedMonsterId 
+const activeTokenCoordinates = draggedMonsterId
       ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
       : activeTokenPos;
     const dist = rulerPath ? rulerPath.length : getDistance(activeTokenCoordinates, target);

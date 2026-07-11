@@ -237,7 +237,6 @@ export const LevelUpOverlay: React.FC = () => {
     // Apply custom rolled or average HP calculations instead of hardcoded levels
     const oldMaxHp = character.maxHp || character.hp || 10;
     const oldHp = character.hp || 10;
-    
     // Check old stats and levelup increments
     const baseHpDifference = finalHpGain - levelUpResult.hpIncrease;
 
@@ -532,8 +531,9 @@ export const LevelUpOverlay: React.FC = () => {
                               onClick={() => { setHpMethod('fixed'); setRolledHpValue(null); }}
                               className={cn(
                                 "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-                                hpMethod === 'fixed' 
-                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold" 
+hpMethod === 'fixed'
+                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
+
                                   : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
                               )}
                             >
@@ -543,8 +543,9 @@ export const LevelUpOverlay: React.FC = () => {
                               onClick={() => { setHpMethod('roll'); }}
                               className={cn(
                                 "py-2 px-3 rounded-sm border-2 text-[10px] font-black uppercase tracking-wider transition-all",
-                                hpMethod === 'roll' 
-                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold" 
+hpMethod === 'roll'
+                                  ? "bg-dragon-darkRed text-dragon-gold border-dragon-gold"
+
                                   : "bg-white/40 text-parchment-600 border-dragon-gold/10 hover:border-dragon-gold/40"
                               )}
                             >
@@ -576,7 +577,7 @@ export const LevelUpOverlay: React.FC = () => {
                       </div>
 
                       <div className="grid grid-cols-2 gap-6">
-                        <motion.div 
+<motion.div
                           initial={{ x: -20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ delay: 0.4 }}
@@ -603,7 +604,7 @@ export const LevelUpOverlay: React.FC = () => {
                            </div>
                         </motion.div>
 
-                        <motion.div 
+<motion.div
                           initial={{ x: 20, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           transition={{ delay: 0.5 }}

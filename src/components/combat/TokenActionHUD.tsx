@@ -28,11 +28,10 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
 
   // Find whose turn it actually is in the initiative order
   const activeTurnActor = combatState.initiativeOrder[combatState.activeTurnIndex];
-  
+
   // Find character or ally data depending on active turn actor
   const activeChar = useMemo(() => {
     if (!activeTurnActor) return characters.find(c => c.id === activeCharacterId) || null;
-    
     // If it is a monster/summon in the combatState
     const monster = combatState.monsters.find(m => m.id === activeTurnActor.id);
     if (monster) {
@@ -76,7 +75,6 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
         }
       } as any;
     }
-    
     return characters.find(c => c.id === activeTurnActor.id) || characters.find(c => c.id === activeCharacterId) || null;
   }, [activeTurnActor, characters, activeCharacterId, combatState.monsters]);
 
