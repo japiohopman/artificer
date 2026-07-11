@@ -1,5 +1,5 @@
 import React from 'react';
-import { ALL_ICONS } from '../public/assets/icons';
+import { ALL_ICONS } from './assets/icons';
 
 /**
  * Game Icons Registry
@@ -39,24 +39,26 @@ export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, clas
   const w = width || size || 24;
   const h = height || size || 24;
 
+  const entry = pathEntry as any;
+
   // Support for the new solo SVG raw HTML content
-  if (typeof pathEntry === 'object' && pathEntry.rawHtml) {
+  if (typeof entry === 'object' && entry && entry.rawHtml) {
     return (
       <svg
-        viewBox={pathEntry.viewBox || "0 0 512 512"}
+        viewBox={entry.viewBox || "0 0 512 512"}
         width={w}
         height={h}
         fill={color}
         className={className}
         xmlns="http://www.w3.org/2000/svg"
-        dangerouslySetInnerHTML={{ __html: (title ? `<title>${title}</title>` : '') + pathEntry.rawHtml }}
+        dangerouslySetInnerHTML={{ __html: (title ? `<title>${title}</title>` : '') + entry.rawHtml }}
         {...props}
       />
     );
   }
 
   // Backward compatibility with legacy string path formats
-  const path = typeof pathEntry === 'string' ? pathEntry : pathEntry.path;
+  const path = typeof entry === 'string' ? entry : entry.path;
 
   return (
     <svg 
