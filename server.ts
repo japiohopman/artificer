@@ -646,9 +646,16 @@ async function startServer() {
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
+    const force = process.argv.includes("--force") || process.argv.includes("-f");
+    if (force) {
+      console.log("[Server] Force flag detected. Instructing Vite to rebuild dependency cache...");
+    }
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
+      optimizeDeps: {
+        force: force
+      }
     });
     app.use(vite.middlewares);
   } else {
