@@ -5,6 +5,7 @@ import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore } from '../../store/useWorldStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { GameIcon } from '../../game_icons';
+import { soundService } from '../../services/soundService';
 import { cn } from '../../lib/utils';
 import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } from './combatUtils';
 import { Token } from './Token';
@@ -61,6 +62,20 @@ export const CombatGrid: React.FC = () => {
     }
     return playerPos;
   }, [activeTurnActor, monsters, pcPositions, playerPos]);
+
+  // Check if it's currently a player or ally's turn
+  const isPlayerOrAllyTurn = useMemo(() => {
+    if (gameMode !== 'combat') return true; // Show in exploration mode
+    if (!activeTurnActor) return true;
+    return !!(activeTurnActor.isPlayer || activeTurnActor.isAlly);
+  }, [gameMode, activeTurnActor]);
+
+  // Determine if we should render the pathfinder line and distance ruler
+  const showRuler = useMemo(() => {
+    if (gameMode !== 'combat') return true; // Show in exploration
+    if (!isPlayerOrAllyTurn) return false;  // Never show on enemy turn
+    return isTargeting;                     // In combat, only show when actively targeting
+  }, [gameMode, isPlayerOrAllyTurn, isTargeting]);
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
@@ -271,13 +286,19 @@ export const CombatGrid: React.FC = () => {
     if (x < 0 || x >= gridWidth || y < 0 || y >= gridHeight) return;
 
     const cell = grid[y][x];
+    const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
 
     // Interaction check for doors
     if (cell.type === 'door') {
-      const dist = getDistance(playerPos, { x, y });
+      const dist = getDistance(activePcPos, { x, y });
       if (dist <= 1) {
         toggleDoor(x, y);
         addLog(`${cell.isOpen ? 'Closed' : 'Opened'} the door.`, 'info');
+        if (cell.isOpen) {
+          soundService.playEffect('DOOR_CLOSE');
+        } else {
+          soundService.playEffect('DOOR_OPEN');
+        }
         const { consumeAction } = useCharacterStore.getState();
         consumeAction(activeCharacterId, 'objectInteractions');
       } else {
@@ -285,8 +306,6 @@ export const CombatGrid: React.FC = () => {
       }
       return;
     }
-
-    const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
 
     if (isTargeting) {
       if (targetingAction?.targetType === 'sphere') {
@@ -654,7 +673,7 @@ const activeTokenCoordinates = draggedMonsterId
           </div>
 
           {/* Ruler and Distance Tooltip */}
-          {(hoveredCell || draggedPos) && (
+          {showRuler && (hoveredCell || draggedPos) && (
             <>
               <div 
                 className="absolute pointer-events-none z-[120] flex flex-col items-center"
