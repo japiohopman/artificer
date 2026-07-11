@@ -6,6 +6,7 @@ import { GenerateSfx } from "./generate_sfx";
 import { SpectralManipulation } from "./SoundEventEditor";
 import { SoundExplorer } from "./SoundExplorer";
 import { QuestBoard } from "./QuestBoard";
+import { CommunicationBridge } from "./CommunicationBridge";
 import { LampCard } from "./LampCard";
 import { LampControls } from "./LampControls";
 import { useHueStore } from "../../../store/useHueStore";
@@ -27,12 +28,13 @@ interface SoundStudioProps {
   onGenerateAudio: (data: { prompt: string; category: string; filename: string; isLoop: boolean; duration: number; accountIndex?: number }) => Promise<void>;
 }
 
-type SoundStudioTab = "voice" | "sfx" | "events" | "quests" | "lamps";
+type SoundStudioTab = "voice" | "sfx" | "events" | "quests" | "bridge" | "lamps";
 
 const TABS: { id: SoundStudioTab; label: string; icon: any }[] = [
   { id: "voice", label: "Voice", icon: Mic },
   { id: "sfx", label: "SFX", icon: Music },
   { id: "quests", label: "Quests", icon: ScrollText },
+  { id: "bridge", label: "Bridge", icon: Network },
   { id: "events", label: "Events", icon: FileJson },
   { id: "lamps", label: "Lamps", icon: Lightbulb }
 ];
@@ -47,7 +49,7 @@ export function SoundStudio({
   onGenerateVoice,
   onGenerateAudio
 }: SoundStudioProps) {
-  const [activeTab, setActiveTab] = useState<SoundStudioTab>("sfx");
+  const [activeTab, setActiveTab] = useState<SoundStudioTab>("bridge");
   const { lights, triggerHue } = useHueStore();
   const [selectedLightId, setSelectedLightId] = useState<string | null>(null);
 
@@ -122,6 +124,7 @@ export function SoundStudio({
             )}
             {activeTab === "quests" && <QuestBoard />}
             {activeTab === "events" && <SpectralManipulation />}
+            {activeTab === "bridge" && <CommunicationBridge onGenerateAudio={onGenerateAudio} />}
             {activeTab === "lamps" && (
                 <div className="h-full flex flex-col p-6 space-y-6">
                     {selectedLight ? (

@@ -503,13 +503,19 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   return finalUrl;
 }
 
+export function getEnemyArtworkUrl(enemy: any): string {
+  if (!enemy) return "";
+  const index = enemy.index || enemy.id || enemy.name || "";
+  const imageUrl = enemy.imageUrl || enemy.image || enemy.avatarUrl || "";
+  return normalizeImageUrl(imageUrl, 'enemies', index);
+}
+
 export async function deleteFile(path: string, message?: string): Promise<boolean> {
   try {
     const res = await fetch('/api/delete', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ path, message })
-    });
+      body: JSON.stringify({ path, message }) })
 
     if (!res.ok) {
       const error = await res.json();
