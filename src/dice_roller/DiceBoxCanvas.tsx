@@ -3,6 +3,7 @@ import { diceService } from './diceService';
 import { useUIStore } from '../store/useUIStore';
 import { useGameStore } from '../store/useGameStore';
 import { useInventoryStore } from '../store/useInventoryStore';
+import { cn } from '../lib/utils';
 
 export const DiceBoxCanvas: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,16 +52,21 @@ export const DiceBoxCanvas: React.FC = () => {
     return () => clearTimeout(timeout);
   }, [isWorldPanelOpen, isCharacterPanelOpen, isInventoryOpen]);
 
+  const isRolling3D = useGameStore(state => state.isRolling3D);
+
   return (
     <div 
       id="dice-box-container"
       ref={containerRef}
-      className="fixed inset-0 z-[100000] border-2 border-transparent block visible opacity-100 w-screen h-screen overflow-hidden pointer-events-none"
+      className={cn(
+        "fixed inset-0 z-[100000] border-2 border-transparent w-screen h-screen overflow-hidden pointer-events-none",
+        isRolling3D ? "block visible opacity-100" : "hidden invisible opacity-0"
+      )}
     >
       <style>
         {`
           #dice-box-container canvas {
-            display: block !important;
+            display: ${isRolling3D ? 'block' : 'none'} !important;
             width: 100vw !important;
             height: 100vh !important;
             pointer-events: none !important;

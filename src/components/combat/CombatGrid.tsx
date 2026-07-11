@@ -38,6 +38,24 @@ export const CombatGrid: React.FC = () => {
   const activeChar = characters.find(c => c.id === activeCharacterId);
   const { playerPos, monsters, grid } = combatState;
 
+  // Track dragging for both player and individual summon/allied monsters
+  const [draggedMonsterId, setDraggedMonsterId] = useState<string | null>(null);
+
+  // Find whose turn it currently is in the initiative order
+  const activeTurnActor = useMemo(() => {
+    if (combatState.initiativeOrder.length === 0) return null;
+    return combatState.initiativeOrder[combatState.activeTurnIndex];
+  }, [combatState.initiativeOrder, combatState.activeTurnIndex]);
+
+  // Coordinates of the currently active turn token (either player or summon/ally)
+  const activeTokenPos = useMemo(() => {
+    if (activeTurnActor && !activeTurnActor.isPlayer) {
+      const monster = monsters.find(m => m.id === activeTurnActor.id);
+      if (monster) return { x: monster.x, y: monster.y };
+    }
+    return playerPos;
+  }, [activeTurnActor, monsters, playerPos]);
+
   // Grid constants
   const cellSize = 60; // 60px = 5ft
   const gridWidth = grid[0]?.length || 32;
@@ -345,15 +363,21 @@ export const CombatGrid: React.FC = () => {
   const rulerPath = useMemo(() => {
     const target = hoveredCell || draggedPos;
     if (!target) return null;
-    return findPath(playerPos, target, grid, monsters, playerPos);
-  }, [playerPos, hoveredCell, draggedPos, grid, monsters]);
+    const activeTokenCoordinates = draggedMonsterId
+      ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
+      : activeTokenPos;
+    return findPath(activeTokenCoordinates, target, grid, monsters, playerPos);
+  }, [activeTokenPos, hoveredCell, draggedPos, grid, monsters, draggedMonsterId, playerPos]);
 
   const rulerDistance = useMemo(() => {
     const target = hoveredCell || draggedPos;
     if (!target) return null;
-    const dist = rulerPath ? rulerPath.length : getDistance(playerPos, target);
+    const activeTokenCoordinates = draggedMonsterId
+      ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
+      : activeTokenPos;
+    const dist = rulerPath ? rulerPath.length : getDistance(activeTokenCoordinates, target);
     return dist * 5; // 5ft per cell
-  }, [playerPos, hoveredCell, draggedPos, rulerPath]);
+  }, [activeTokenPos, hoveredCell, draggedPos, rulerPath, draggedMonsterId, playerPos]);
 
   return (
     <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-stone-950 font-body">
@@ -408,11 +432,11 @@ export const CombatGrid: React.FC = () => {
 
           {/* Tokens Layer */}
           <div className="absolute inset-0 pointer-events-none z-20">
-             {/* Floating Token Action HUD (Roll20-style overlay around/above player token) */}
-             {gameMode === 'combat' && !isTargeting && !draggedPos && (
+             {/* Floating Token Action HUD (Roll20-style overlay around/above player or allied summon token) */}
+             {gameMode === 'combat' && !isTargeting && !draggedPos && !draggedMonsterId && (
                <TokenActionHUD
-                 x={playerPos.x}
-                 y={playerPos.y}
+                 x={activeTokenPos.x}
+                 y={activeTokenPos.y}
                  cellSize={cellSize}
                />
              )}
@@ -426,6 +450,7 @@ export const CombatGrid: React.FC = () => {
                 y={playerPos.y}
                 cellSize={cellSize}
                 isPlayer
+                isActive={activeTurnActor?.isPlayer && !activeTurnActor.id.startsWith('m-')}
                 draggedPos={draggedPos}
                 onDrag={(_, info) => {
                   const rect = canvasRef.current?.getBoundingClientRect();
@@ -472,11 +497,13 @@ export const CombatGrid: React.FC = () => {
                 }}
              />
 
-             {/* Monster Tokens */}
+             {/* Monster & Allied Summon Tokens */}
              <AnimatePresence>
                {monsters.map((monster) => {
                  const isVisible = visibleCells.has(`${monster.x},${monster.y}`);
                  if (!isVisible) return null;
+
+                 const isMonsterActive = activeTurnActor?.id === monster.id;
 
                  return (
                    <Token
@@ -490,8 +517,55 @@ export const CombatGrid: React.FC = () => {
                     y={monster.y}
                     cellSize={cellSize}
                     size={monster.size}
+                    isAlly={monster.isAlly}
+                    isActive={isMonsterActive}
                     isTargeting={isTargeting}
                     isHovered={hoveredCell?.x === monster.x && hoveredCell?.y === monster.y}
+                    draggedPos={draggedMonsterId === monster.id ? draggedPos : null}
+                    onDrag={(_, info) => {
+                      if (!monster.isAlly) return;
+                      setDraggedMonsterId(monster.id);
+                      const rect = canvasRef.current?.getBoundingClientRect();
+                      if (rect) {
+                        const x = Math.floor((info.point.x - rect.left) / cellSize);
+                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                          if (draggedPos?.x !== x || draggedPos?.y !== y) {
+                            setDraggedPos({ x, y });
+                          }
+                        }
+                      }
+                    }}
+                    onDragEnd={(_, info) => {
+                      if (!monster.isAlly) return;
+                      const rect = canvasRef.current?.getBoundingClientRect();
+                      if (rect) {
+                        const x = Math.floor((info.point.x - rect.left) / cellSize);
+                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                          const originalPos = { x: monster.x, y: monster.y };
+                          if (isCellOccupied(x, y, originalPos, monsters, playerPos, monster.size || 'Medium')) {
+                            addLog("That position is already occupied!", 'warning');
+                            setDraggedPos(null);
+                            setDraggedMonsterId(null);
+                            return;
+                          }
+                          const path = findPath(originalPos, { x, y }, grid, monsters, playerPos, monster.size || 'Medium');
+                          if (path && path.length > 0) {
+                            // Move summon/allied monster
+                            useGameStore.setState(state => ({
+                              combatState: {
+                                ...state.combatState,
+                                monsters: state.combatState.monsters.map(m => m.id === monster.id ? { ...m, x, y } : m)
+                              }
+                            }));
+                            addLog(`Ally ${monster.name} moved to (${x}, ${y})`, 'info');
+                          }
+                        }
+                      }
+                      setDraggedPos(null);
+                      setDraggedMonsterId(null);
+                    }}
                     onClick={async (e) => {
                       e.stopPropagation();
                       if (isTargeting) {
@@ -544,8 +618,8 @@ export const CombatGrid: React.FC = () => {
                   </marker>
                 </defs>
                 <line
-                  x1={playerPos.x * cellSize + cellSize / 2}
-                  y1={playerPos.y * cellSize + cellSize / 2}
+                  x1={(draggedMonsterId ? (monsters.find(m => m.id === draggedMonsterId)?.x ?? playerPos.x) : activeTokenPos.x) * cellSize + cellSize / 2}
+                  y1={(draggedMonsterId ? (monsters.find(m => m.id === draggedMonsterId)?.y ?? playerPos.y) : activeTokenPos.y) * cellSize + cellSize / 2}
                   x2={(hoveredCell || draggedPos)!.x * cellSize + cellSize / 2}
                   y2={(hoveredCell || draggedPos)!.y * cellSize + cellSize / 2}
                   stroke="#D4AF37"
