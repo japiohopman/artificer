@@ -24,8 +24,61 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const { activeCharacterId, characters, consumeAction } = useCharacterStore();
   const [isSpellsDropdownOpen, setIsSpellsDropdownOpen] = useState(false);
 
-  const activeChar = characters.find(c => c.id === activeCharacterId);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Find whose turn it actually is in the initiative order
+  const activeTurnActor = combatState.initiativeOrder[combatState.activeTurnIndex];
+  
+  // Find character or ally data depending on active turn actor
+  const activeChar = useMemo(() => {
+    if (!activeTurnActor) return characters.find(c => c.id === activeCharacterId) || null;
+    
+    // If it is a monster/summon in the combatState
+    const monster = combatState.monsters.find(m => m.id === activeTurnActor.id);
+    if (monster) {
+      // Mock a Character interface structure for the summon/ally to generate its available actions
+      return {
+        id: monster.id,
+        name: monster.name,
+        class: monster.type || 'Ally',
+        race: 'Summon',
+        gender: 'Male' as const,
+        level: 1,
+        xp: 0,
+        alignment: 'Neutral',
+        background: 'Summoned',
+        stats: monster.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
+        proficiencies: [],
+        traits: [],
+        features: [],
+        flaws: [],
+        ideals: [],
+        bonds: [],
+        backstory: '',
+        languages: [],
+        appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
+        inventory: {},
+        backpack: [],
+        knownSpells: [],
+        preparedSpells: [],
+        spellSlots: {},
+        choices: {},
+        hp: monster.hp,
+        maxHp: monster.maxHp,
+        money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
+        // Setup action economy for summon/ally
+        actionEconomy: {
+          actions: { current: 1, max: 1 },
+          bonusActions: { current: 1, max: 1 },
+          reactions: { current: 1, max: 1 },
+          movement: { current: 30, max: 30 },
+          objectInteractions: { current: 1, max: 1 }
+        }
+      } as any;
+    }
+    
+    return characters.find(c => c.id === activeTurnActor.id) || characters.find(c => c.id === activeCharacterId) || null;
+  }, [activeTurnActor, characters, activeCharacterId, combatState.monsters]);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -96,8 +149,12 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
       setTargetingAction({ ...action });
       addLog(`Casting ${action.name}. Select target.`, 'info');
     } else if (action.id === 'defend') {
-      consumeAction(activeCharacterId, 'actions');
-      const actorId = activeCharacterId || 'player';
+      if (activeChar && activeChar.isNpc) {
+         // Do not consume store character actions for a mock ally/summon character object
+      } else {
+         consumeAction(activeCharacterId, 'actions');
+      }
+      const actorId = activeChar?.id || activeCharacterId || 'player';
       useGameStore.setState(state => ({
         combatState: {
           ...state.combatState,
@@ -112,7 +169,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     }
   };
 
-  // Check if it's currently this character's turn
+  // Check if it's currently this character's or friendly ally's turn
   const isMyTurn = useMemo(() => {
     if (combatState.initiativeOrder.length === 0) return true;
     const currentActor = combatState.initiativeOrder[combatState.activeTurnIndex];

@@ -40,7 +40,8 @@ export const Token: React.FC<TokenProps> = ({
   onClick,
   onDrag,
   onDragEnd,
-  draggedPos
+  draggedPos,
+  isAlly = false
 }) => {
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
@@ -51,13 +52,15 @@ export const Token: React.FC<TokenProps> = ({
     imageUrl.includes('%2Fenemies%2Ftokens%2F')
   );
 
+  const isDraggable = isPlayer || isAlly;
+
   return (
     <motion.div
       key={id}
       layoutId={id}
       initial={false}
       animate={draggedPos ? {} : { x: x * cellSize, y: y * cellSize }}
-      drag={isPlayer}
+      drag={isDraggable}
       dragMomentum={false}
       dragElastic={0.1}
       onDrag={onDrag}
@@ -65,7 +68,7 @@ export const Token: React.FC<TokenProps> = ({
       onClick={onClick}
       className={cn(
         "absolute p-1 pointer-events-auto",
-        isPlayer ? "cursor-grab active:cursor-grabbing z-[100]" : "cursor-pointer z-20",
+        isDraggable ? "cursor-grab active:cursor-grabbing z-[100]" : "cursor-pointer z-20",
         isActive && "z-[110]"
       )}
       style={{ width: cellSize * mSize, height: cellSize * mSize }}
@@ -78,7 +81,9 @@ export const Token: React.FC<TokenProps> = ({
               "rounded-full border-2 overflow-hidden shadow-xl",
               isPlayer 
                 ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
-                : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
+                : (isAlly 
+                    ? "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]" 
+                    : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]")
             ),
         isTargeting && !isPlayer && "ring-4 ring-dragon-gold animate-pulse scale-110",
         isHovered && "scale-105 brightness-110"
@@ -119,7 +124,9 @@ export const Token: React.FC<TokenProps> = ({
         "absolute -bottom-4 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-sm border uppercase whitespace-nowrap shadow-lg tracking-wider text-[8px] font-elan transition-colors",
         isPlayer 
           ? "bg-blue-900/95 text-white border-blue-400/50" 
-          : "bg-dragon-darkRed/95 text-white border-dragon-red/50"
+          : (isAlly 
+              ? "bg-emerald-900/95 text-white border-emerald-400/50" 
+              : "bg-dragon-darkRed/95 text-white border-dragon-red/50")
       )}>
         {name}
       </div>

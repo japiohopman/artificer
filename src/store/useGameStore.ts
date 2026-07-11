@@ -55,6 +55,7 @@ export interface CombatMonster {
   };
   armor_class?: any;
   size?: 'Medium' | 'Large';
+  isAlly?: boolean;
 }
 
 export interface CombatState {
@@ -94,6 +95,7 @@ interface GameState {
 
   // Dice History
   isDiceReady: boolean;
+  isRolling3D: boolean;
   recentRolls: any[];
 
   // Game flow
@@ -125,6 +127,7 @@ interface GameState {
   removeRoll: (id: string) => void;
   clearRoll: () => void;
   setIsDiceReady: (isReady: boolean) => void;
+  setIsRolling3D: (isRolling: boolean) => void;
 
   // Simulator Actions
   addToPreview: (item: any) => void;
@@ -180,6 +183,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   logs: [],
   activeCards: [],
   isDiceReady: false,
+  isRolling3D: false,
   recentRolls: [],
   isGameStarted: false,
 
@@ -366,7 +370,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         wis: monster.wisdom || 10,
         cha: monster.charisma || 10
       },
-      armor_class: monster.armor_class
+      armor_class: monster.armor_class,
+      isAlly: monster.isAlly || false
     };
 
     return {
@@ -455,8 +460,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       };
     });
 
-    // Advanced Monster AI
-    if (!nextActor.isPlayer) {
+    // Advanced Monster AI (Only for hostile/non-ally monsters)
+    const nextMonster = combatState.monsters.find(m => m.id === nextActor.id);
+    const isHostileMonster = !nextActor.isPlayer && (!nextMonster || !nextMonster.isAlly);
+
+    if (isHostileMonster) {
       setTimeout(async () => {
         const { combatState: currentCombatState } = get();
         const currentMonster = currentCombatState.monsters.find(m => m.id === nextActor.id);
@@ -578,7 +586,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
-        value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0)
+        value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
+        isPlayer: m.isAlly || false // Treat allies/summons as player-controlled in the turn order
       }))
     ].sort((a, b) => b.value - a.value);
 
@@ -718,6 +727,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
     
+    set({ isRolling3D: true });
     try {
       const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
       
@@ -743,9 +753,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       // Auto-clear 3D dice after a delay
       setTimeout(() => {
         diceService.clear();
+        set({ isRolling3D: false });
       }, 5000);
     } catch (error) {
       console.error("Roll failed", error);
+      set({ isRolling3D: false });
       const result = diceService.rollBackground(notation, label);
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
@@ -765,6 +777,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   setIsDiceReady: (isDiceReady) => set({ isDiceReady }),
+  setIsRolling3D: (isRolling3D) => set({ isRolling3D }),
 
   addToPreview: (item) => set((state) => ({ 
     activeCards: [...state.activeCards, { ...item }]

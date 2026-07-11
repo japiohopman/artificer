@@ -7,6 +7,24 @@ import { soundService } from './soundService';
 export const REPO = process.env.GITHUB_REPO || "japiohopman/artificer";
 export const BRANCH = process.env.GITHUB_BRANCH || "main";
 
+// Schema caches to prevent redundant local / proxy network waterfalls
+const monsterCache: Record<string, any> = {};
+const materialCache: Record<string, any> = {};
+const equipmentCache: Record<string, any> = {};
+const magicItemCache: Record<string, any> = {};
+const spellCache: Record<string, any> = {};
+const backgroundCache: Record<string, any> = {};
+let monsterCategoriesCache: any[] | null = null;
+let monsterMappingCache: Record<string, string> | null = null;
+let materialCategoriesCache: any[] | null = null;
+let materialMappingCache: Record<string, string> | null = null;
+let equipmentCategoriesCache: any[] | null = null;
+let equipmentMappingCache: Record<string, string> | null = null;
+let materialsListCache: any[] | null = null;
+let equipmentListCache: any[] | null = null;
+let magicItemListCache: any[] | null = null;
+let spellListCache: any[] | null = null;
+
 async function safeJson(res: Response): Promise<any> {
   if (!res.ok) return null;
   try {
@@ -45,6 +63,7 @@ async function safeJson(res: Response): Promise<any> {
 }
 
 export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {
+  if (monsterCategoriesCache) return monsterCategoriesCache;
   try {
     const localRes = await fetch('/assets/atlas/enemies_categories/index.json');
     if (localRes.ok) {
@@ -56,7 +75,9 @@ export async function fetchMonsterCategories(): Promise<{ name: string; index: s
             return res.ok ? await res.json() : null;
           })
         );
-        return categories.filter(c => c !== null);
+        const filtered = categories.filter(c => c !== null);
+        monsterCategoriesCache = filtered;
+        return filtered;
       }
     }
   } catch (e) {}
@@ -87,6 +108,7 @@ export async function fetchMonsterCategories(): Promise<{ name: string; index: s
 }
 
 export async function fetchMonsterCategoryMapping(): Promise<Record<string, string>> {
+  if (monsterMappingCache) return monsterMappingCache;
   try {
     const categories = await fetchMonsterCategories();
     const mapping: Record<string, string> = {};
@@ -97,7 +119,10 @@ export async function fetchMonsterCategoryMapping(): Promise<Record<string, stri
         });
       }
     });
-    if (Object.keys(mapping).length > 0) return mapping;
+    if (Object.keys(mapping).length > 0) {
+      monsterMappingCache = mapping;
+      return mapping;
+    }
   } catch (e) {}
 
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies_categories/json?ref=${BRANCH}`;
@@ -177,6 +202,7 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
 }
 
 export async function fetchMonsterData(index: string): Promise<any> {
+  if (monsterCache[index]) return monsterCache[index];
   // Try local first
   const localUrl = `/assets/atlas/enemies/json/${index}.json`;
   let data: any = null;
@@ -249,19 +275,24 @@ export async function fetchMonsterData(index: string): Promise<any> {
      } catch(e) {}
   }
 
-  return {
+  const finalResult = {
     ...normalized,
     imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index)
   };
+  monsterCache[index] = finalResult;
+  return finalResult;
 }
 
 export async function fetchMaterialData(index: string): Promise<any> {
+  if (materialCache[index]) return materialCache[index];
   // Local first
   try {
     const res = await fetch(`/assets/atlas/crafting/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      return { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index) };
+      materialCache[index] = finalResult;
+      return finalResult;
     }
   } catch (e) {}
 
@@ -283,12 +314,15 @@ export async function fetchMaterialData(index: string): Promise<any> {
 }
 
 export async function fetchEquipmentData(index: string): Promise<any> {
+  if (equipmentCache[index]) return equipmentCache[index];
   // Local first
   try {
     const res = await fetch(`/assets/atlas/equipment/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      return { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index) };
+      equipmentCache[index] = finalResult;
+      return finalResult;
     }
   } catch (e) {}
 
@@ -310,12 +344,15 @@ export async function fetchEquipmentData(index: string): Promise<any> {
 }
 
 export async function fetchMagicItemData(index: string): Promise<any> {
+  if (magicItemCache[index]) return magicItemCache[index];
   // Local first
   try {
     const res = await fetch(`/assets/atlas/magic_items/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      return { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index) };
+      magicItemCache[index] = finalResult;
+      return finalResult;
     }
   } catch (e) {}
 
@@ -686,16 +723,19 @@ export async function fetchNPCData(index: string): Promise<any> {
 }
 
 export async function fetchMaterialsList(): Promise<{ name: string; index: string }[]> {
+  if (materialsListCache) return materialsListCache;
   try {
     // Try local index first (if it exists, though materials index might be different)
     const localRes = await fetch('/assets/atlas/materials/index.json');
     if (localRes.ok) {
        const data = await localRes.json();
        if (Array.isArray(data)) {
-         return data.map((item: any) => ({
+         const list = data.map((item: any) => ({
            name: item.name || item.index.replace(/_/g, ' '),
            index: item.index
          }));
+         materialsListCache = list;
+         return list;
        }
     }
   } catch(e) {}
@@ -720,16 +760,19 @@ export async function fetchMaterialsList(): Promise<{ name: string; index: strin
 }
 
 export async function fetchEquipmentList(): Promise<{ name: string; index: string }[]> {
+  if (equipmentListCache) return equipmentListCache;
   try {
     // Try local index first
     const localRes = await fetch('/assets/atlas/equipment/index.json');
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
-        return data.map((item: any) => ({
+        const list = data.map((item: any) => ({
           name: item.name || item.index.replace(/_/g, ' '),
           index: item.index
         }));
+        equipmentListCache = list;
+        return list;
       }
     }
   } catch (e) {}
@@ -754,15 +797,18 @@ export async function fetchEquipmentList(): Promise<{ name: string; index: strin
 }
 
 export async function fetchMagicItemList(): Promise<{ name: string; index: string }[]> {
+  if (magicItemListCache) return magicItemListCache;
   try {
     const localRes = await fetch('/assets/atlas/magic_items/index.json');
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
-        return data.map((item: any) => ({
+        const list = data.map((item: any) => ({
           name: item.name || item.index.replace(/_/g, ' '),
           index: item.index
         }));
+        magicItemListCache = list;
+        return list;
       }
     }
   } catch (e) {}
@@ -787,6 +833,7 @@ export async function fetchMagicItemList(): Promise<{ name: string; index: strin
 }
 
 export async function fetchEquipmentCategories(): Promise<{ name: string; index: string; equipment: any[] }[]> {
+  if (equipmentCategoriesCache) return equipmentCategoriesCache;
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -813,6 +860,7 @@ export async function fetchEquipmentCategories(): Promise<{ name: string; index:
 }
 
 export async function fetchEquipmentCategoryMapping(): Promise<Record<string, string>> {
+  if (equipmentMappingCache) return equipmentMappingCache;
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -846,6 +894,7 @@ export async function fetchEquipmentCategoryMapping(): Promise<Record<string, st
 }
 
 export async function fetchMaterialCategories(): Promise<{ name: string; index: string; materials: any[] }[]> {
+  if (materialCategoriesCache) return materialCategoriesCache;
   try {
     const localRes = await fetch('/assets/atlas/materials_categories/index.json');
     if (localRes.ok) {
@@ -857,7 +906,9 @@ export async function fetchMaterialCategories(): Promise<{ name: string; index: 
             return res.ok ? await res.json() : null;
           })
         );
-        return categories.filter(c => c !== null);
+        const filtered = categories.filter(c => c !== null);
+        materialCategoriesCache = filtered;
+        return filtered;
       }
     }
   } catch (e) {}
@@ -888,6 +939,7 @@ export async function fetchMaterialCategories(): Promise<{ name: string; index: 
 }
 
 export async function fetchMaterialCategoryMapping(): Promise<Record<string, string>> {
+  if (materialMappingCache) return materialMappingCache;
   const categories = await fetchMaterialCategories();
   const mapping: Record<string, string> = {};
   categories.forEach(cat => {
@@ -897,6 +949,7 @@ export async function fetchMaterialCategoryMapping(): Promise<Record<string, str
       });
     }
   });
+  materialMappingCache = mapping;
   return mapping;
 }
 
@@ -934,6 +987,7 @@ export async function fetchDamageTypeData(index: string): Promise<any> {
 }
 
 export async function fetchSpellData(index: string): Promise<any> {
+  if (spellCache[index]) return spellCache[index];
   let resolvedPath: string | null = null;
 
   // Try resolving path from local index first
@@ -972,7 +1026,9 @@ export async function fetchSpellData(index: string): Promise<any> {
     const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
-      return { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index) };
+      spellCache[index] = finalResult;
+      return finalResult;
     }
   } catch (e) {}
 
@@ -996,16 +1052,19 @@ export async function fetchSpellData(index: string): Promise<any> {
 }
 
 export async function fetchSpellList(): Promise<any[]> {
+  if (spellListCache) return spellListCache;
   try {
     // Try local index first
     const localRes = await fetch('/assets/atlas/spell/index.json');
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
-        return data.map((s: any) => ({
+        const list = data.map((s: any) => ({
           ...s,
           imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
         }));
+        spellListCache = list;
+        return list;
       }
     }
   } catch (e) {}
@@ -1235,12 +1294,15 @@ export async function fetchBackgroundsList(): Promise<{ name: string; index: str
 }
 
 export async function fetchBackgroundData(index: string): Promise<any> {
+  if (backgroundCache[index]) return backgroundCache[index];
   // Local first
   try {
     const res = await fetch(`/assets/atlas/backgrounds/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      return data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'backgrounds', index) } : null;
+      const finalResult = data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'backgrounds', index) } : null;
+      if (finalResult) backgroundCache[index] = finalResult;
+      return finalResult;
     }
   } catch (e) {}
 
