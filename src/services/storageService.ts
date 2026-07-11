@@ -62,6 +62,60 @@ async function safeJson(res: Response): Promise<any> {
   }
 }
 
+export async function fetchRecruitNPCList(): Promise<{ name: string; path: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/characters/recruit_npc/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((f: any) => ({
+          name: f.name || f.index.replace(/_/g, ' '),
+          path: f.path || `/assets/atlas/characters/recruit_npc/${f.index}.json`,
+          index: f.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/characters/recruit_npc?ref=${BRANCH}&t=${Date.now()}`;
+  const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
+
+  try {
+    const res = await fetch(url);
+    const files = await safeJson(res);
+    if (!files || !Array.isArray(files)) return [];
+    return files
+      .filter((f: any) => f.name.endsWith('.json'))
+      .map((f: any) => ({
+        name: f.name.replace('.json', '').replace(/_/g, ' '),
+        path: f.path,
+        index: f.name.replace('.json', '')
+      }));
+  } catch (e) {
+    console.error("Error fetching Recruit NPC list:", e);
+    return [];
+  }
+}
+
+export async function fetchRecruitNPCData(index: string): Promise<any> {
+  // Try local first
+  try {
+    const res = await fetch(`/assets/atlas/characters/recruit_npc/${index}.json`);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (e) {}
+
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/characters/recruit_npc/${index}.json?t=${Date.now()}`;
+  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  try {
+    const res = await fetch(url);
+    return await safeJson(res);
+  } catch (e) {
+    return null;
+  }
+}
+
 export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {
   if (monsterCategoriesCache) return monsterCategoriesCache;
   try {
