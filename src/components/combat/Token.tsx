@@ -14,6 +14,7 @@ export interface TokenProps {
   cellSize: number;
   size?: 'Medium' | 'Large';
   isPlayer?: boolean;
+  isAlly?: boolean;
   isActive?: boolean;
   isTargeting?: boolean;
   isHovered?: boolean;
@@ -34,14 +35,14 @@ export const Token: React.FC<TokenProps> = ({
   cellSize,
   size = 'Medium',
   isPlayer = false,
+  isAlly = false,
   isActive = false,
   isTargeting = false,
   isHovered = false,
   onClick,
   onDrag,
   onDragEnd,
-  draggedPos,
-  isAlly = false
+  draggedPos
 }) => {
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
@@ -53,6 +54,14 @@ export const Token: React.FC<TokenProps> = ({
   );
 
   const isDraggable = isPlayer || isAlly;
+
+  // Compute borders and background styles cleanly without heavy nesting
+  let tokenBorderBgStyle = "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]";
+  if (isPlayer) {
+    tokenBorderBgStyle = "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]";
+  } else if (isAlly) {
+    tokenBorderBgStyle = "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]";
+  }
 
   return (
     <motion.div
@@ -79,11 +88,13 @@ export const Token: React.FC<TokenProps> = ({
           ? "bg-transparent shadow-none" 
           : cn(
               "rounded-full border-2 overflow-hidden shadow-xl",
+tokenBorderBgStyle ?? (
               isPlayer 
                 ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
                 : isAlly
                     ? "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
                     : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
+            )
             ),
         isTargeting && !isPlayer && "ring-4 ring-dragon-gold animate-pulse scale-110",
         isHovered && "scale-105 brightness-110"

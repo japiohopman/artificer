@@ -1,0 +1,1017 @@
+{
+  "id": "4Jsv5vYaJ1atUEDV",
+  "saveVersion": 2,
+  "name": "Zanna (Gnome Wizard)",
+  "class": "Wizard",
+  "race": "Rock Gnome",
+  "gender": "Female",
+  "level": 1,
+  "xp": 0,
+  "alignment": "Chaotic Good",
+  "background": "Scholar",
+  "stats": {
+    "str": 8,
+    "dex": 12,
+    "con": 15,
+    "int": 17,
+    "wis": 13,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "traits": [],
+  "features": [],
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
+  "backstory": "Always interested in tinkering, Zanna set out for adventure in order to find more spells for her spellbook, and perhaps one day create some of her own.",
+  "appearance": {
+    "hairColor": "Brown",
+    "hairStyle": "Short",
+    "bodyType": "Medium",
+    "eyeColor": "Blue",
+    "skinColor": "#ffdbac"
+  },
+  "inventory": {},
+  "backpack": [
+    {
+      "id": "tinderbox-lm10vw22w",
+      "name": "Tinderbox",
+      "index": "tinderbox",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/tinderbox.json"
+    },
+    {
+      "id": "waterskin-9gm3uoiek",
+      "name": "Waterskin",
+      "index": "waterskin",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/waterskin.json"
+    },
+    {
+      "id": "torch-st7scg3ab",
+      "name": "Torch",
+      "index": "torch",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 10,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/torch.json"
+    },
+    {
+      "id": "small-knife-m6lyd554a",
+      "name": "Small Knife",
+      "index": "small-knife",
+      "_type": "equipment",
+      "weight": 0.5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/small-knife.json"
+    },
+    {
+      "id": "ink-pen-t5vhcs32p",
+      "name": "Ink Pen",
+      "index": "ink-pen",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/ink-pen.json"
+    },
+    {
+      "id": "robes-trpnnj7ye",
+      "name": "Robes",
+      "index": "robes",
+      "_type": "equipment",
+      "weight": 4,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/robes.json"
+    },
+    {
+      "id": "rations-67225e8a7",
+      "name": "Rations",
+      "index": "rations",
+      "_type": "equipment",
+      "weight": 2,
+      "quantity": 10,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/rations.json"
+    },
+    {
+      "id": "pouch-njdfrniye",
+      "name": "Pouch",
+      "index": "pouch",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/pouch.json"
+    },
+    {
+      "id": "parchment-rrqfsubw0",
+      "name": "Parchment",
+      "index": "parchment",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/parchment.json"
+    },
+    {
+      "id": "book-of-lore-5v4oo9l6g",
+      "name": "Book of Lore",
+      "index": "book-of-lore",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/book-of-lore.json"
+    },
+    {
+      "id": "bedroll-14lo4ll73",
+      "name": "Bedroll",
+      "index": "bedroll",
+      "_type": "equipment",
+      "weight": 7,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/bedroll.json"
+    },
+    {
+      "id": "backpack-xjtgv4fji",
+      "name": "Backpack",
+      "index": "backpack",
+      "_type": "equipment",
+      "weight": 5,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json"
+    },
+    {
+      "id": "spellbook-mirnkt9jc",
+      "name": "Spellbook",
+      "index": "spellbook",
+      "_type": "equipment",
+      "weight": 3,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/spellbook.json"
+    },
+    {
+      "id": "hempen-rope-50-ft-ethmujhyw",
+      "name": "Hempen Rope (50 ft.)",
+      "index": "hempen-rope-50-ft",
+      "_type": "equipment",
+      "weight": 10,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/hempen-rope-50-ft.json"
+    },
+    {
+      "id": "ink-bottle-8iksxbl10",
+      "name": "Ink Bottle",
+      "index": "ink-bottle",
+      "_type": "equipment",
+      "weight": 0.06,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/ink-bottle.json"
+    },
+    {
+      "id": "mess-kit-9gszkyv1h",
+      "name": "Mess Kit",
+      "index": "mess-kit",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/mess-kit.json"
+    },
+    {
+      "id": "component-pouch-ry8le4h0e",
+      "name": "Component Pouch",
+      "index": "component-pouch",
+      "_type": "equipment",
+      "weight": 2,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/component-pouch.json"
+    },
+    {
+      "id": "quarterstaff-o7nv60j0c",
+      "name": "Quarterstaff",
+      "index": "quarterstaff",
+      "_type": "equipment",
+      "weight": 4,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/quarterstaff.json"
+    },
+    {
+      "id": "magic-missile-6u8m06z9z",
+      "name": "Magic Missile",
+      "index": "magic-missile",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/magic-missile.json"
+    },
+    {
+      "id": "alarm-8fwqk3nsh",
+      "name": "Alarm",
+      "index": "alarm",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/alarm.json"
+    },
+    {
+      "id": "light-bsnt0i027",
+      "name": "Light",
+      "index": "light",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/light.json"
+    },
+    {
+      "id": "mage-armor-h5a4444no",
+      "name": "Mage Armor",
+      "index": "mage-armor",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/mage-armor.json"
+    },
+    {
+      "id": "fire-bolt-jkdl4u6dx",
+      "name": "Fire Bolt",
+      "index": "fire-bolt",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/fire-bolt.json"
+    },
+    {
+      "id": "find-familiar-zm7onrc6k",
+      "name": "Find Familiar",
+      "index": "find-familiar",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/find-familiar.json"
+    },
+    {
+      "id": "sleep-mtczz0nng",
+      "name": "Sleep",
+      "index": "sleep",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/sleep.json"
+    },
+    {
+      "id": "mage-hand-tb4v16bc1",
+      "name": "Mage Hand",
+      "index": "mage-hand",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/mage-hand.json"
+    },
+    {
+      "id": "shield-otqurkuww",
+      "name": "Shield",
+      "index": "shield",
+      "_type": "equipment",
+      "weight": 1,
+      "quantity": 1,
+      "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/shield.json"
+    }
+  ],
+  "items": {
+    "33691c27-4a08-4c35-8b46-a1aaef5fb8b4": {
+      "id": "33691c27-4a08-4c35-8b46-a1aaef5fb8b4",
+      "template": "tinderbox",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "d42d2a4c-5264-43ca-8eb6-282ead0e211d": {
+      "id": "d42d2a4c-5264-43ca-8eb6-282ead0e211d",
+      "template": "waterskin",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "7f058d29-723d-421c-a87d-31876d22bd48": {
+      "id": "7f058d29-723d-421c-a87d-31876d22bd48",
+      "template": "torch",
+      "quantity": 10,
+      "addedAt": 1783795298200
+    },
+    "0bf2b7b0-161b-4a3d-b573-7591e844b2ef": {
+      "id": "0bf2b7b0-161b-4a3d-b573-7591e844b2ef",
+      "template": "small-knife",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "cf8fbf23-4443-4c96-9f0c-0ec885dca7ee": {
+      "id": "cf8fbf23-4443-4c96-9f0c-0ec885dca7ee",
+      "template": "ink-pen",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "41f097b3-bcf5-4c87-a1b4-d1efa33d232a": {
+      "id": "41f097b3-bcf5-4c87-a1b4-d1efa33d232a",
+      "template": "robes",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "9a6ec5ca-ab3c-4ce6-898d-c94018a631ba": {
+      "id": "9a6ec5ca-ab3c-4ce6-898d-c94018a631ba",
+      "template": "rations",
+      "quantity": 10,
+      "addedAt": 1783795298200
+    },
+    "11455d01-8261-49d3-a0aa-474a54984747": {
+      "id": "11455d01-8261-49d3-a0aa-474a54984747",
+      "template": "pouch",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "5981ea6e-c9a6-4bc4-8cb7-673ea1c10441": {
+      "id": "5981ea6e-c9a6-4bc4-8cb7-673ea1c10441",
+      "template": "parchment",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "b19309ef-9336-4a6d-99ba-80b36ef4ecfc": {
+      "id": "b19309ef-9336-4a6d-99ba-80b36ef4ecfc",
+      "template": "book-of-lore",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "ab330813-8e12-4588-9730-ec3302d0be40": {
+      "id": "ab330813-8e12-4588-9730-ec3302d0be40",
+      "template": "bedroll",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "76ce8ae4-1e81-4384-af2b-39e87054f69b": {
+      "id": "76ce8ae4-1e81-4384-af2b-39e87054f69b",
+      "template": "backpack",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "001111f5-925f-4a61-8b62-b19c347d1369": {
+      "id": "001111f5-925f-4a61-8b62-b19c347d1369",
+      "template": "spellbook",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "45ffbf22-046b-4955-9000-e6c86dcc1e99": {
+      "id": "45ffbf22-046b-4955-9000-e6c86dcc1e99",
+      "template": "hempen-rope-50-ft",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "1e4f3fe2-c68b-40fd-8387-e3db3e97359a": {
+      "id": "1e4f3fe2-c68b-40fd-8387-e3db3e97359a",
+      "template": "ink-bottle",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "4723fb18-edb0-4b7d-8ed8-08a0529c6fcb": {
+      "id": "4723fb18-edb0-4b7d-8ed8-08a0529c6fcb",
+      "template": "mess-kit",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "4ccb3288-4605-4ed9-940b-e2f651400346": {
+      "id": "4ccb3288-4605-4ed9-940b-e2f651400346",
+      "template": "component-pouch",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "9a74f3dd-32af-40c4-a3f9-5d6c22afcf2e": {
+      "id": "9a74f3dd-32af-40c4-a3f9-5d6c22afcf2e",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "b69c71a3-3817-49e8-a42d-8dba2ed1c654": {
+      "id": "b69c71a3-3817-49e8-a42d-8dba2ed1c654",
+      "template": "magic-missile",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "fd15a002-a3d5-4ebe-83fd-12b3531f87a1": {
+      "id": "fd15a002-a3d5-4ebe-83fd-12b3531f87a1",
+      "template": "alarm",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "6337ad5d-57ed-40fc-a774-16069494a190": {
+      "id": "6337ad5d-57ed-40fc-a774-16069494a190",
+      "template": "light",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "adc3eb38-a8f9-470f-afc8-1e7851fee6df": {
+      "id": "adc3eb38-a8f9-470f-afc8-1e7851fee6df",
+      "template": "mage-armor",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "f7f63432-8974-4bfb-8cd7-37a010105317": {
+      "id": "f7f63432-8974-4bfb-8cd7-37a010105317",
+      "template": "fire-bolt",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "1953ad51-2e3e-4f22-bec9-84be6525dde0": {
+      "id": "1953ad51-2e3e-4f22-bec9-84be6525dde0",
+      "template": "find-familiar",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "09d14082-79bd-4780-8620-31d2dbd733a0": {
+      "id": "09d14082-79bd-4780-8620-31d2dbd733a0",
+      "template": "sleep",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "2c5b2fbf-3418-4177-bbcb-48b9e5bb432a": {
+      "id": "2c5b2fbf-3418-4177-bbcb-48b9e5bb432a",
+      "template": "mage-hand",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    },
+    "464c87ed-c8ef-424a-8e96-ac5ec9eb5c81": {
+      "id": "464c87ed-c8ef-424a-8e96-ac5ec9eb5c81",
+      "template": "shield",
+      "quantity": 1,
+      "addedAt": 1783795298200
+    }
+  },
+  "containers": {
+    "backpack_4Jsv5vYaJ1atUEDV": {
+      "id": "backpack_4Jsv5vYaJ1atUEDV",
+      "name": "Backpack",
+      "type": "backpack",
+      "slots": [
+        {
+          "id": "slot_0",
+          "itemId": "33691c27-4a08-4c35-8b46-a1aaef5fb8b4"
+        },
+        {
+          "id": "slot_1",
+          "itemId": "d42d2a4c-5264-43ca-8eb6-282ead0e211d"
+        },
+        {
+          "id": "slot_2",
+          "itemId": "7f058d29-723d-421c-a87d-31876d22bd48"
+        },
+        {
+          "id": "slot_3",
+          "itemId": "0bf2b7b0-161b-4a3d-b573-7591e844b2ef"
+        },
+        {
+          "id": "slot_4",
+          "itemId": "cf8fbf23-4443-4c96-9f0c-0ec885dca7ee"
+        },
+        {
+          "id": "slot_5",
+          "itemId": "41f097b3-bcf5-4c87-a1b4-d1efa33d232a"
+        },
+        {
+          "id": "slot_6",
+          "itemId": "9a6ec5ca-ab3c-4ce6-898d-c94018a631ba"
+        },
+        {
+          "id": "slot_7",
+          "itemId": "11455d01-8261-49d3-a0aa-474a54984747"
+        },
+        {
+          "id": "slot_8",
+          "itemId": "5981ea6e-c9a6-4bc4-8cb7-673ea1c10441"
+        },
+        {
+          "id": "slot_9",
+          "itemId": "b19309ef-9336-4a6d-99ba-80b36ef4ecfc"
+        },
+        {
+          "id": "slot_10",
+          "itemId": "ab330813-8e12-4588-9730-ec3302d0be40"
+        },
+        {
+          "id": "slot_11",
+          "itemId": "76ce8ae4-1e81-4384-af2b-39e87054f69b"
+        },
+        {
+          "id": "slot_12",
+          "itemId": "001111f5-925f-4a61-8b62-b19c347d1369"
+        },
+        {
+          "id": "slot_13",
+          "itemId": "45ffbf22-046b-4955-9000-e6c86dcc1e99"
+        },
+        {
+          "id": "slot_14",
+          "itemId": "1e4f3fe2-c68b-40fd-8387-e3db3e97359a"
+        },
+        {
+          "id": "slot_15",
+          "itemId": "4723fb18-edb0-4b7d-8ed8-08a0529c6fcb"
+        },
+        {
+          "id": "slot_16",
+          "itemId": "4ccb3288-4605-4ed9-940b-e2f651400346"
+        },
+        {
+          "id": "slot_17",
+          "itemId": "9a74f3dd-32af-40c4-a3f9-5d6c22afcf2e"
+        },
+        {
+          "id": "slot_18",
+          "itemId": "b69c71a3-3817-49e8-a42d-8dba2ed1c654"
+        },
+        {
+          "id": "slot_19",
+          "itemId": "fd15a002-a3d5-4ebe-83fd-12b3531f87a1"
+        },
+        {
+          "id": "slot_20",
+          "itemId": "6337ad5d-57ed-40fc-a774-16069494a190"
+        },
+        {
+          "id": "slot_21",
+          "itemId": "adc3eb38-a8f9-470f-afc8-1e7851fee6df"
+        },
+        {
+          "id": "slot_22",
+          "itemId": "f7f63432-8974-4bfb-8cd7-37a010105317"
+        },
+        {
+          "id": "slot_23",
+          "itemId": "1953ad51-2e3e-4f22-bec9-84be6525dde0"
+        },
+        {
+          "id": "slot_24",
+          "itemId": "09d14082-79bd-4780-8620-31d2dbd733a0"
+        },
+        {
+          "id": "slot_25",
+          "itemId": "2c5b2fbf-3418-4177-bbcb-48b9e5bb432a"
+        },
+        {
+          "id": "slot_26",
+          "itemId": "464c87ed-c8ef-424a-8e96-ac5ec9eb5c81"
+        },
+        {
+          "id": "slot_27",
+          "itemId": null
+        },
+        {
+          "id": "slot_28",
+          "itemId": null
+        },
+        {
+          "id": "slot_29",
+          "itemId": null
+        },
+        {
+          "id": "slot_30",
+          "itemId": null
+        },
+        {
+          "id": "slot_31",
+          "itemId": null
+        },
+        {
+          "id": "slot_32",
+          "itemId": null
+        },
+        {
+          "id": "slot_33",
+          "itemId": null
+        },
+        {
+          "id": "slot_34",
+          "itemId": null
+        },
+        {
+          "id": "slot_35",
+          "itemId": null
+        },
+        {
+          "id": "slot_36",
+          "itemId": null
+        },
+        {
+          "id": "slot_37",
+          "itemId": null
+        },
+        {
+          "id": "slot_38",
+          "itemId": null
+        },
+        {
+          "id": "slot_39",
+          "itemId": null
+        },
+        {
+          "id": "slot_40",
+          "itemId": null
+        },
+        {
+          "id": "slot_41",
+          "itemId": null
+        },
+        {
+          "id": "slot_42",
+          "itemId": null
+        },
+        {
+          "id": "slot_43",
+          "itemId": null
+        },
+        {
+          "id": "slot_44",
+          "itemId": null
+        },
+        {
+          "id": "slot_45",
+          "itemId": null
+        },
+        {
+          "id": "slot_46",
+          "itemId": null
+        },
+        {
+          "id": "slot_47",
+          "itemId": null
+        },
+        {
+          "id": "slot_48",
+          "itemId": null
+        },
+        {
+          "id": "slot_49",
+          "itemId": null
+        },
+        {
+          "id": "slot_50",
+          "itemId": null
+        },
+        {
+          "id": "slot_51",
+          "itemId": null
+        },
+        {
+          "id": "slot_52",
+          "itemId": null
+        },
+        {
+          "id": "slot_53",
+          "itemId": null
+        },
+        {
+          "id": "slot_54",
+          "itemId": null
+        },
+        {
+          "id": "slot_55",
+          "itemId": null
+        },
+        {
+          "id": "slot_56",
+          "itemId": null
+        },
+        {
+          "id": "slot_57",
+          "itemId": null
+        },
+        {
+          "id": "slot_58",
+          "itemId": null
+        },
+        {
+          "id": "slot_59",
+          "itemId": null
+        },
+        {
+          "id": "slot_60",
+          "itemId": null
+        },
+        {
+          "id": "slot_61",
+          "itemId": null
+        },
+        {
+          "id": "slot_62",
+          "itemId": null
+        },
+        {
+          "id": "slot_63",
+          "itemId": null
+        },
+        {
+          "id": "slot_64",
+          "itemId": null
+        },
+        {
+          "id": "slot_65",
+          "itemId": null
+        },
+        {
+          "id": "slot_66",
+          "itemId": null
+        },
+        {
+          "id": "slot_67",
+          "itemId": null
+        },
+        {
+          "id": "slot_68",
+          "itemId": null
+        },
+        {
+          "id": "slot_69",
+          "itemId": null
+        },
+        {
+          "id": "slot_70",
+          "itemId": null
+        },
+        {
+          "id": "slot_71",
+          "itemId": null
+        },
+        {
+          "id": "slot_72",
+          "itemId": null
+        },
+        {
+          "id": "slot_73",
+          "itemId": null
+        },
+        {
+          "id": "slot_74",
+          "itemId": null
+        },
+        {
+          "id": "slot_75",
+          "itemId": null
+        },
+        {
+          "id": "slot_76",
+          "itemId": null
+        },
+        {
+          "id": "slot_77",
+          "itemId": null
+        },
+        {
+          "id": "slot_78",
+          "itemId": null
+        },
+        {
+          "id": "slot_79",
+          "itemId": null
+        },
+        {
+          "id": "slot_80",
+          "itemId": null
+        },
+        {
+          "id": "slot_81",
+          "itemId": null
+        },
+        {
+          "id": "slot_82",
+          "itemId": null
+        },
+        {
+          "id": "slot_83",
+          "itemId": null
+        },
+        {
+          "id": "slot_84",
+          "itemId": null
+        },
+        {
+          "id": "slot_85",
+          "itemId": null
+        },
+        {
+          "id": "slot_86",
+          "itemId": null
+        },
+        {
+          "id": "slot_87",
+          "itemId": null
+        },
+        {
+          "id": "slot_88",
+          "itemId": null
+        },
+        {
+          "id": "slot_89",
+          "itemId": null
+        },
+        {
+          "id": "slot_90",
+          "itemId": null
+        },
+        {
+          "id": "slot_91",
+          "itemId": null
+        },
+        {
+          "id": "slot_92",
+          "itemId": null
+        },
+        {
+          "id": "slot_93",
+          "itemId": null
+        },
+        {
+          "id": "slot_94",
+          "itemId": null
+        },
+        {
+          "id": "slot_95",
+          "itemId": null
+        },
+        {
+          "id": "slot_96",
+          "itemId": null
+        },
+        {
+          "id": "slot_97",
+          "itemId": null
+        },
+        {
+          "id": "slot_98",
+          "itemId": null
+        },
+        {
+          "id": "slot_99",
+          "itemId": null
+        },
+        {
+          "id": "slot_100",
+          "itemId": null
+        },
+        {
+          "id": "slot_101",
+          "itemId": null
+        },
+        {
+          "id": "slot_102",
+          "itemId": null
+        },
+        {
+          "id": "slot_103",
+          "itemId": null
+        },
+        {
+          "id": "slot_104",
+          "itemId": null
+        },
+        {
+          "id": "slot_105",
+          "itemId": null
+        },
+        {
+          "id": "slot_106",
+          "itemId": null
+        },
+        {
+          "id": "slot_107",
+          "itemId": null
+        },
+        {
+          "id": "slot_108",
+          "itemId": null
+        },
+        {
+          "id": "slot_109",
+          "itemId": null
+        },
+        {
+          "id": "slot_110",
+          "itemId": null
+        },
+        {
+          "id": "slot_111",
+          "itemId": null
+        },
+        {
+          "id": "slot_112",
+          "itemId": null
+        },
+        {
+          "id": "slot_113",
+          "itemId": null
+        },
+        {
+          "id": "slot_114",
+          "itemId": null
+        },
+        {
+          "id": "slot_115",
+          "itemId": null
+        },
+        {
+          "id": "slot_116",
+          "itemId": null
+        },
+        {
+          "id": "slot_117",
+          "itemId": null
+        },
+        {
+          "id": "slot_118",
+          "itemId": null
+        },
+        {
+          "id": "slot_119",
+          "itemId": null
+        }
+      ]
+    }
+  },
+  "equipment": {
+    "containerId": "equipment_4Jsv5vYaJ1atUEDV",
+    "slots": [
+      {
+        "id": "head",
+        "itemId": null
+      },
+      {
+        "id": "neck",
+        "itemId": null
+      },
+      {
+        "id": "chest",
+        "itemId": null
+      },
+      {
+        "id": "back",
+        "itemId": null
+      },
+      {
+        "id": "waist",
+        "itemId": null
+      },
+      {
+        "id": "main_hand",
+        "itemId": null
+      },
+      {
+        "id": "off_hand",
+        "itemId": null
+      },
+      {
+        "id": "hands",
+        "itemId": null
+      },
+      {
+        "id": "legs",
+        "itemId": null
+      },
+      {
+        "id": "feet",
+        "itemId": null
+      },
+      {
+        "id": "ring_1",
+        "itemId": null
+      },
+      {
+        "id": "ring_2",
+        "itemId": null
+      },
+      {
+        "id": "focus",
+        "itemId": null
+      },
+      {
+        "id": "tool",
+        "itemId": null
+      },
+      {
+        "id": "extra",
+        "itemId": null
+      },
+      {
+        "id": "ammo",
+        "itemId": null
+      }
+    ]
+  },
+  "spells": [],
+  "choices": {},
+  "hp": 8,
+  "maxHp": 8,
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "gp": 50,
+    "pp": 0
+  },
+  "isNpc": true,
+  "isRecruitable": true,
+  "avatarUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "imageUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/characters/recruit_npc/4Jsv5vYaJ1atUEDV.json"
+}
