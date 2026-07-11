@@ -33,7 +33,7 @@
   },
   "inventory": {
     "main-hand": {
-      "id": "handaxe-gxf7xe6px",
+      "id": "handaxe-4b2lnyy83",
       "name": "Handaxe",
       "index": "handaxe",
       "_type": "equipment",
@@ -43,7 +43,7 @@
       "slot": "main-hand"
     },
     "chest": {
-      "id": "chain-mail-htpqgbb78",
+      "id": "chain-mail-mp7ytbyub",
       "name": "Chain Mail",
       "index": "chain-mail",
       "_type": "equipment",
@@ -53,7 +53,7 @@
       "slot": "chest"
     },
     "off-hand": {
-      "id": "shield-4hg07hffy",
+      "id": "shield-vvykofzwe",
       "name": "Shield",
       "index": "shield",
       "_type": "equipment",
@@ -65,7 +65,7 @@
   },
   "backpack": [
     {
-      "id": "hammer-ac7rnkc18",
+      "id": "hammer-q3xp1ttyh",
       "name": "Hammer",
       "index": "hammer",
       "_type": "equipment",
@@ -74,7 +74,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/hammer.json"
     },
     {
-      "id": "tinderbox-6716liy4d",
+      "id": "tinderbox-0y3mv9ze1",
       "name": "Tinderbox",
       "index": "tinderbox",
       "_type": "equipment",
@@ -83,7 +83,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/tinderbox.json"
     },
     {
-      "id": "waterskin-gprvn91am",
+      "id": "waterskin-8x4ghv2s0",
       "name": "Waterskin",
       "index": "waterskin",
       "_type": "equipment",
@@ -92,7 +92,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/waterskin.json"
     },
     {
-      "id": "torch-4kscdbe9e",
+      "id": "torch-bss9sxpit",
       "name": "Torch",
       "index": "torch",
       "_type": "equipment",
@@ -101,7 +101,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/torch.json"
     },
     {
-      "id": "arrow-nhrkgwg33",
+      "id": "arrow-3bkl9vvrg",
       "name": "Arrow",
       "index": "arrow",
       "_type": "equipment",
@@ -110,7 +110,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/arrow.json"
     },
     {
-      "id": "quiver-7zy0809ho",
+      "id": "quiver-gj3b4fi8h",
       "name": "Quiver",
       "index": "quiver",
       "_type": "equipment",
@@ -119,7 +119,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/quiver.json"
     },
     {
-      "id": "rations-f0dw6l48c",
+      "id": "rations-tj544qpxf",
       "name": "Rations",
       "index": "rations",
       "_type": "equipment",
@@ -128,7 +128,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/rations.json"
     },
     {
-      "id": "pouch-cm9yfrzdw",
+      "id": "pouch-1qex60s9h",
       "name": "Pouch",
       "index": "pouch",
       "_type": "equipment",
@@ -137,7 +137,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/pouch.json"
     },
     {
-      "id": "crowbar-ko4o1iffu",
+      "id": "crowbar-czemblskj",
       "name": "Crowbar",
       "index": "crowbar",
       "_type": "equipment",
@@ -146,7 +146,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/crowbar.json"
     },
     {
-      "id": "bedroll-qprmxoy1a",
+      "id": "bedroll-t7mxqdj3l",
       "name": "Bedroll",
       "index": "bedroll",
       "_type": "equipment",
@@ -155,7 +155,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/bedroll.json"
     },
     {
-      "id": "backpack-bz1lrk3kl",
+      "id": "backpack-606fc7fff",
       "name": "Backpack",
       "index": "backpack",
       "_type": "equipment",
@@ -164,7 +164,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json"
     },
     {
-      "id": "piton-id3a0o4nl",
+      "id": "piton-1c4dxbxtl",
       "name": "Piton",
       "index": "piton",
       "_type": "equipment",
@@ -173,7 +173,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/piton.json"
     },
     {
-      "id": "hempen-rope-50-ft-tijdqwpwo",
+      "id": "hempen-rope-50-ft-uhnvhcycn",
       "name": "Hempen Rope (50 ft.)",
       "index": "hempen-rope-50-ft",
       "_type": "equipment",
@@ -182,7 +182,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/hempen-rope-50-ft.json"
     },
     {
-      "id": "mess-kit-ugwgvqzrq",
+      "id": "mess-kit-40cn5vb5x",
       "name": "Mess Kit",
       "index": "mess-kit",
       "_type": "equipment",
@@ -191,7 +191,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/mess-kit.json"
     },
     {
-      "id": "horn-7ggqo4dra",
+      "id": "horn-ybgijjmg8",
       "name": "Horn",
       "index": "horn",
       "_type": "equipment",
@@ -201,125 +201,125 @@
     }
   ],
   "items": {
-    "369ae10b-21af-473f-af52-8a187bcd7e11": {
-      "id": "369ae10b-21af-473f-af52-8a187bcd7e11",
+    "8851f60c-b170-4c3f-b30d-16a233e7f2e3": {
+      "id": "8851f60c-b170-4c3f-b30d-16a233e7f2e3",
       "template": "longsword",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "fa9ac8ee-e0cf-43cc-935b-45b2df5c7a5d": {
-      "id": "fa9ac8ee-e0cf-43cc-935b-45b2df5c7a5d",
+    "03666718-d87e-48df-bae8-b47be1fb69c7": {
+      "id": "03666718-d87e-48df-bae8-b47be1fb69c7",
       "template": "hammer",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "c9062fde-c14c-4a93-a3e2-fc72ace7476e": {
-      "id": "c9062fde-c14c-4a93-a3e2-fc72ace7476e",
+    "291d5cb7-9013-4ded-b615-052358aeef26": {
+      "id": "291d5cb7-9013-4ded-b615-052358aeef26",
       "template": "tinderbox",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "ecd0559d-e329-4d1d-97ae-e04fcb3db212": {
-      "id": "ecd0559d-e329-4d1d-97ae-e04fcb3db212",
+    "45fa69aa-1314-480a-b849-a8428a0b11a9": {
+      "id": "45fa69aa-1314-480a-b849-a8428a0b11a9",
       "template": "waterskin",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "9d78f1bc-a203-4ce6-8ea6-e5ec08159e9a": {
-      "id": "9d78f1bc-a203-4ce6-8ea6-e5ec08159e9a",
+    "98ea1df2-ea2e-419f-a00b-523853034662": {
+      "id": "98ea1df2-ea2e-419f-a00b-523853034662",
       "template": "torch",
       "quantity": 10,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "09f47c85-20a2-4173-92ce-ced3e719fb4b": {
-      "id": "09f47c85-20a2-4173-92ce-ced3e719fb4b",
+    "3c156c4a-ba6f-4d4e-8d62-e5fca02b2067": {
+      "id": "3c156c4a-ba6f-4d4e-8d62-e5fca02b2067",
       "template": "arrow",
       "quantity": 20,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "e741e191-1976-4044-b226-0df15d58944d": {
-      "id": "e741e191-1976-4044-b226-0df15d58944d",
+    "b1f335dd-80d3-452b-81b7-cf075cd7e19e": {
+      "id": "b1f335dd-80d3-452b-81b7-cf075cd7e19e",
       "template": "longbow",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "b388e5e5-1682-4bcd-a363-f6102e00e06e": {
-      "id": "b388e5e5-1682-4bcd-a363-f6102e00e06e",
+    "3dee87ba-b930-4c7e-9804-7a7b507ad9e9": {
+      "id": "3dee87ba-b930-4c7e-9804-7a7b507ad9e9",
       "template": "quiver",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "3bfdd60d-f643-4254-8dff-72683418f11a": {
-      "id": "3bfdd60d-f643-4254-8dff-72683418f11a",
+    "4fdfdaad-7c77-4da8-a039-d9674abecd29": {
+      "id": "4fdfdaad-7c77-4da8-a039-d9674abecd29",
       "template": "rations",
       "quantity": 10,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "59064967-fd0f-49d5-be11-9f013287aa55": {
-      "id": "59064967-fd0f-49d5-be11-9f013287aa55",
+    "2904fe62-eaf2-4e08-937f-fed4c6eaab8a": {
+      "id": "2904fe62-eaf2-4e08-937f-fed4c6eaab8a",
       "template": "pouch",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "3b098a17-520a-4402-8ff9-95014bd5b262": {
-      "id": "3b098a17-520a-4402-8ff9-95014bd5b262",
+    "2582c161-5f84-4b64-9575-89c5bc0a4bd9": {
+      "id": "2582c161-5f84-4b64-9575-89c5bc0a4bd9",
       "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "1e7d2181-0079-427c-b8bb-84d7c72e2beb": {
-      "id": "1e7d2181-0079-427c-b8bb-84d7c72e2beb",
+    "f3914ad3-2254-4cee-b684-0aaac1f7b24b": {
+      "id": "f3914ad3-2254-4cee-b684-0aaac1f7b24b",
       "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "7a746f7a-3830-4292-86e6-041ece3fb99e": {
-      "id": "7a746f7a-3830-4292-86e6-041ece3fb99e",
+    "5b58d876-d4cb-43e3-acf0-743a0f08e4c9": {
+      "id": "5b58d876-d4cb-43e3-acf0-743a0f08e4c9",
       "template": "backpack",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "3a5e7e8a-40f7-46c2-a80d-9888733af919": {
-      "id": "3a5e7e8a-40f7-46c2-a80d-9888733af919",
+    "93757972-8356-49e2-9508-b6c569e897fd": {
+      "id": "93757972-8356-49e2-9508-b6c569e897fd",
       "template": "piton",
       "quantity": 10,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "8464d84c-7a41-4858-92b1-66fdd7a29f34": {
-      "id": "8464d84c-7a41-4858-92b1-66fdd7a29f34",
+    "ec07ffae-5769-46f9-8e86-c701dc7af0f6": {
+      "id": "ec07ffae-5769-46f9-8e86-c701dc7af0f6",
       "template": "hempen-rope-50-ft",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "61e67aa2-6f3c-4365-bfa6-78440a074a5f": {
-      "id": "61e67aa2-6f3c-4365-bfa6-78440a074a5f",
+    "722e374a-d2ac-470f-b659-1d0ab0cfb080": {
+      "id": "722e374a-d2ac-470f-b659-1d0ab0cfb080",
       "template": "mess-kit",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "9b295d67-5ef0-4d93-b301-f25ee242b395": {
-      "id": "9b295d67-5ef0-4d93-b301-f25ee242b395",
+    "768625b2-5fa8-4a40-ad2a-ee7ccdb8511d": {
+      "id": "768625b2-5fa8-4a40-ad2a-ee7ccdb8511d",
       "template": "horn",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "520af551-ddae-4d0b-b71d-05daf64dbf3d": {
-      "id": "520af551-ddae-4d0b-b71d-05daf64dbf3d",
+    "c8b55b50-8a2b-492e-b145-595e8083bd3f": {
+      "id": "c8b55b50-8a2b-492e-b145-595e8083bd3f",
       "template": "handaxe",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "a9ebec88-0682-46dd-ade7-58ee12fd622c": {
-      "id": "a9ebec88-0682-46dd-ade7-58ee12fd622c",
+    "ae020276-41b1-4507-bddc-e166ae30f4ac": {
+      "id": "ae020276-41b1-4507-bddc-e166ae30f4ac",
       "template": "chain-mail",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     },
-    "870726fc-d069-4aa2-899f-b4d11e1234f0": {
-      "id": "870726fc-d069-4aa2-899f-b4d11e1234f0",
+    "447e1b77-8a3b-452b-8148-e208e9ec1f80": {
+      "id": "447e1b77-8a3b-452b-8148-e208e9ec1f80",
       "template": "shield",
       "quantity": 1,
-      "addedAt": 1783793291656
+      "addedAt": 1783794603704
     }
   },
   "containers": {
@@ -330,63 +330,63 @@
       "slots": [
         {
           "id": "slot_0",
-          "itemId": "fa9ac8ee-e0cf-43cc-935b-45b2df5c7a5d"
+          "itemId": "03666718-d87e-48df-bae8-b47be1fb69c7"
         },
         {
           "id": "slot_1",
-          "itemId": "c9062fde-c14c-4a93-a3e2-fc72ace7476e"
+          "itemId": "291d5cb7-9013-4ded-b615-052358aeef26"
         },
         {
           "id": "slot_2",
-          "itemId": "ecd0559d-e329-4d1d-97ae-e04fcb3db212"
+          "itemId": "45fa69aa-1314-480a-b849-a8428a0b11a9"
         },
         {
           "id": "slot_3",
-          "itemId": "9d78f1bc-a203-4ce6-8ea6-e5ec08159e9a"
+          "itemId": "98ea1df2-ea2e-419f-a00b-523853034662"
         },
         {
           "id": "slot_4",
-          "itemId": "09f47c85-20a2-4173-92ce-ced3e719fb4b"
+          "itemId": "3c156c4a-ba6f-4d4e-8d62-e5fca02b2067"
         },
         {
           "id": "slot_5",
-          "itemId": "b388e5e5-1682-4bcd-a363-f6102e00e06e"
+          "itemId": "3dee87ba-b930-4c7e-9804-7a7b507ad9e9"
         },
         {
           "id": "slot_6",
-          "itemId": "3bfdd60d-f643-4254-8dff-72683418f11a"
+          "itemId": "4fdfdaad-7c77-4da8-a039-d9674abecd29"
         },
         {
           "id": "slot_7",
-          "itemId": "59064967-fd0f-49d5-be11-9f013287aa55"
+          "itemId": "2904fe62-eaf2-4e08-937f-fed4c6eaab8a"
         },
         {
           "id": "slot_8",
-          "itemId": "3b098a17-520a-4402-8ff9-95014bd5b262"
+          "itemId": "2582c161-5f84-4b64-9575-89c5bc0a4bd9"
         },
         {
           "id": "slot_9",
-          "itemId": "1e7d2181-0079-427c-b8bb-84d7c72e2beb"
+          "itemId": "f3914ad3-2254-4cee-b684-0aaac1f7b24b"
         },
         {
           "id": "slot_10",
-          "itemId": "7a746f7a-3830-4292-86e6-041ece3fb99e"
+          "itemId": "5b58d876-d4cb-43e3-acf0-743a0f08e4c9"
         },
         {
           "id": "slot_11",
-          "itemId": "3a5e7e8a-40f7-46c2-a80d-9888733af919"
+          "itemId": "93757972-8356-49e2-9508-b6c569e897fd"
         },
         {
           "id": "slot_12",
-          "itemId": "8464d84c-7a41-4858-92b1-66fdd7a29f34"
+          "itemId": "ec07ffae-5769-46f9-8e86-c701dc7af0f6"
         },
         {
           "id": "slot_13",
-          "itemId": "61e67aa2-6f3c-4365-bfa6-78440a074a5f"
+          "itemId": "722e374a-d2ac-470f-b659-1d0ab0cfb080"
         },
         {
           "id": "slot_14",
-          "itemId": "9b295d67-5ef0-4d93-b301-f25ee242b395"
+          "itemId": "768625b2-5fa8-4a40-ad2a-ee7ccdb8511d"
         },
         {
           "id": "slot_15",
@@ -824,7 +824,7 @@
       },
       {
         "id": "chest",
-        "itemId": "a9ebec88-0682-46dd-ade7-58ee12fd622c"
+        "itemId": "ae020276-41b1-4507-bddc-e166ae30f4ac"
       },
       {
         "id": "back",
@@ -836,11 +836,11 @@
       },
       {
         "id": "main_hand",
-        "itemId": "520af551-ddae-4d0b-b71d-05daf64dbf3d"
+        "itemId": "c8b55b50-8a2b-492e-b145-595e8083bd3f"
       },
       {
         "id": "off_hand",
-        "itemId": "870726fc-d069-4aa2-899f-b4d11e1234f0"
+        "itemId": "447e1b77-8a3b-452b-8148-e208e9ec1f80"
       },
       {
         "id": "hands",

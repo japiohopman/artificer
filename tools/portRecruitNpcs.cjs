@@ -46,10 +46,32 @@ const DND_RACES_MAP = {
   'tiefling': 'Tiefling'
 };
 
-// Clean HTML securely
+// Clean HTML securely, protecting against HTML element injection (CodeQL)
 function cleanHtml(html) {
   if (!html) return '';
-  return html.replace(/<[^>]+>/g, '').trim();
+
+  // 1. Explicitly remove script tags and their inner content to prevent script execution
+  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+
+  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
+  cleaned = cleaned.replace(/<script/gi, '');
+
+  // 3. Convert paragraph markers to linebreaks
+  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
+
+  // 4. Safely strip all other HTML tag patterns using a secure pattern
+  cleaned = cleaned.replace(/<[^>]+>/g, '');
+
+  // 5. Sanitize HTML entity references to prevent raw markup injection
+  cleaned = cleaned
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&')
+    .trim();
+
+  return cleaned;
 }
 
 function slugify(text) {

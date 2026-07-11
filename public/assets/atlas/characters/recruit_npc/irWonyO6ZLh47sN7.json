@@ -33,7 +33,7 @@
   },
   "inventory": {
     "main-hand": {
-      "id": "handaxe-m2x4l1rcs",
+      "id": "handaxe-4mh4t2rwq",
       "name": "Handaxe",
       "index": "handaxe",
       "_type": "equipment",
@@ -45,7 +45,7 @@
   },
   "backpack": [
     {
-      "id": "tinderbox-ugcjam60x",
+      "id": "tinderbox-5cvqg5ol7",
       "name": "Tinderbox",
       "index": "tinderbox",
       "_type": "equipment",
@@ -54,7 +54,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/tinderbox.json"
     },
     {
-      "id": "waterskin-rlmq8mzh8",
+      "id": "waterskin-97gmz0gc4",
       "name": "Waterskin",
       "index": "waterskin",
       "_type": "equipment",
@@ -63,7 +63,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/waterskin.json"
     },
     {
-      "id": "torch-7qb5ulm4s",
+      "id": "torch-qlfg46qo2",
       "name": "Torch",
       "index": "torch",
       "_type": "equipment",
@@ -72,7 +72,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/torch.json"
     },
     {
-      "id": "rations-ji81xopox",
+      "id": "rations-kdhxq6lkb",
       "name": "Rations",
       "index": "rations",
       "_type": "equipment",
@@ -81,7 +81,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/rations.json"
     },
     {
-      "id": "bedroll-qyjfo2r2m",
+      "id": "bedroll-azx6lw0ug",
       "name": "Bedroll",
       "index": "bedroll",
       "_type": "equipment",
@@ -90,7 +90,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/bedroll.json"
     },
     {
-      "id": "backpack-ucdco75oe",
+      "id": "backpack-3e88p7kgu",
       "name": "Backpack",
       "index": "backpack",
       "_type": "equipment",
@@ -99,7 +99,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json"
     },
     {
-      "id": "hempen-rope-50-ft-iy9nmbqd7",
+      "id": "hempen-rope-50-ft-1pqyjo5xj",
       "name": "Hempen Rope (50 ft.)",
       "index": "hempen-rope-50-ft",
       "_type": "equipment",
@@ -108,7 +108,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/hempen-rope-50-ft.json"
     },
     {
-      "id": "mess-kit-818t2tpla",
+      "id": "mess-kit-hxkciwgxm",
       "name": "Mess Kit",
       "index": "mess-kit",
       "_type": "equipment",
@@ -118,71 +118,71 @@
     }
   ],
   "items": {
-    "51bf235d-34e6-4402-826b-1447750cfaff": {
-      "id": "51bf235d-34e6-4402-826b-1447750cfaff",
+    "15a34095-4ab0-4177-8e83-2050ab221148": {
+      "id": "15a34095-4ab0-4177-8e83-2050ab221148",
       "template": "tinderbox",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "ba36146a-ee27-4f9d-807c-d7f0bdd3efb9": {
-      "id": "ba36146a-ee27-4f9d-807c-d7f0bdd3efb9",
+    "2c3a7c58-3bbc-44cc-8f8d-eb83d8a27702": {
+      "id": "2c3a7c58-3bbc-44cc-8f8d-eb83d8a27702",
       "template": "waterskin",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "b01c6775-f938-4657-a92a-b7c669ecf532": {
-      "id": "b01c6775-f938-4657-a92a-b7c669ecf532",
+    "0aaf9f41-4222-4f57-b886-bbdf6756f74c": {
+      "id": "0aaf9f41-4222-4f57-b886-bbdf6756f74c",
       "template": "greataxe",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "7b2b73db-2180-4e0f-89b8-525f0e9f151e": {
-      "id": "7b2b73db-2180-4e0f-89b8-525f0e9f151e",
+    "80cc173a-b10e-455b-96d8-af64095f4ea0": {
+      "id": "80cc173a-b10e-455b-96d8-af64095f4ea0",
       "template": "torch",
       "quantity": 10,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "c8331bb4-c8ef-42a2-ae89-64fcb7d0c039": {
-      "id": "c8331bb4-c8ef-42a2-ae89-64fcb7d0c039",
+    "61d224b0-40ad-43c2-a885-4b00ff9dc96d": {
+      "id": "61d224b0-40ad-43c2-a885-4b00ff9dc96d",
       "template": "rations",
       "quantity": 10,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "22270cfd-24ac-4d17-9aae-01c37f2d03e3": {
-      "id": "22270cfd-24ac-4d17-9aae-01c37f2d03e3",
+    "b96634ec-e8cb-48e3-aae0-af03c8a7c39f": {
+      "id": "b96634ec-e8cb-48e3-aae0-af03c8a7c39f",
       "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "dadfb2a6-67f2-4a10-aa41-f52b68c4a0f6": {
-      "id": "dadfb2a6-67f2-4a10-aa41-f52b68c4a0f6",
+    "b9edcb15-f501-433f-a9d6-c45cb5f7dd55": {
+      "id": "b9edcb15-f501-433f-a9d6-c45cb5f7dd55",
       "template": "javelin",
       "quantity": 5,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "f55f88ac-6241-4fdb-b187-1e2ffae15b3d": {
-      "id": "f55f88ac-6241-4fdb-b187-1e2ffae15b3d",
+    "b3e30a36-4e7a-4170-882d-9c27f716becd": {
+      "id": "b3e30a36-4e7a-4170-882d-9c27f716becd",
       "template": "backpack",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "cd74122e-38cc-4121-b025-f2603b3d68e4": {
-      "id": "cd74122e-38cc-4121-b025-f2603b3d68e4",
+    "b74b96cd-2687-4575-bd7a-2aabae0517e6": {
+      "id": "b74b96cd-2687-4575-bd7a-2aabae0517e6",
       "template": "hempen-rope-50-ft",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "94bcbd67-faf9-484d-a7ad-f88c3f8b894c": {
-      "id": "94bcbd67-faf9-484d-a7ad-f88c3f8b894c",
+    "c62b76e4-5e43-4226-ace3-be55af749d2f": {
+      "id": "c62b76e4-5e43-4226-ace3-be55af749d2f",
       "template": "mess-kit",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     },
-    "9f5a8829-46f4-4426-985a-d71ca125df39": {
-      "id": "9f5a8829-46f4-4426-985a-d71ca125df39",
+    "a5a9e179-6527-43c6-9b1b-bf8b175f1069": {
+      "id": "a5a9e179-6527-43c6-9b1b-bf8b175f1069",
       "template": "handaxe",
       "quantity": 1,
-      "addedAt": 1783793291599
+      "addedAt": 1783794603636
     }
   },
   "containers": {
@@ -193,35 +193,35 @@
       "slots": [
         {
           "id": "slot_0",
-          "itemId": "51bf235d-34e6-4402-826b-1447750cfaff"
+          "itemId": "15a34095-4ab0-4177-8e83-2050ab221148"
         },
         {
           "id": "slot_1",
-          "itemId": "ba36146a-ee27-4f9d-807c-d7f0bdd3efb9"
+          "itemId": "2c3a7c58-3bbc-44cc-8f8d-eb83d8a27702"
         },
         {
           "id": "slot_2",
-          "itemId": "7b2b73db-2180-4e0f-89b8-525f0e9f151e"
+          "itemId": "80cc173a-b10e-455b-96d8-af64095f4ea0"
         },
         {
           "id": "slot_3",
-          "itemId": "c8331bb4-c8ef-42a2-ae89-64fcb7d0c039"
+          "itemId": "61d224b0-40ad-43c2-a885-4b00ff9dc96d"
         },
         {
           "id": "slot_4",
-          "itemId": "22270cfd-24ac-4d17-9aae-01c37f2d03e3"
+          "itemId": "b96634ec-e8cb-48e3-aae0-af03c8a7c39f"
         },
         {
           "id": "slot_5",
-          "itemId": "f55f88ac-6241-4fdb-b187-1e2ffae15b3d"
+          "itemId": "b3e30a36-4e7a-4170-882d-9c27f716becd"
         },
         {
           "id": "slot_6",
-          "itemId": "cd74122e-38cc-4121-b025-f2603b3d68e4"
+          "itemId": "b74b96cd-2687-4575-bd7a-2aabae0517e6"
         },
         {
           "id": "slot_7",
-          "itemId": "94bcbd67-faf9-484d-a7ad-f88c3f8b894c"
+          "itemId": "c62b76e4-5e43-4226-ace3-be55af749d2f"
         },
         {
           "id": "slot_8",
@@ -699,7 +699,7 @@
       },
       {
         "id": "main_hand",
-        "itemId": "9f5a8829-46f4-4426-985a-d71ca125df39"
+        "itemId": "a5a9e179-6527-43c6-9b1b-bf8b175f1069"
       },
       {
         "id": "off_hand",
