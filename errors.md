@@ -1187,3 +1187,863 @@ Error:   Failed to scan for dependencies from entries:
 08:56:10 [vite] (client) hmr update /src/components/hud/game/LocationMap.tsx, /src/index.css
 08:56:10 [vite] (client) page reload src/components/minigames/CoinFlip.tsx
 08:56:10 [vite] (client) page reload src/components/minigames/paperScissorRock.tsx
+
+GET
+http://localhost:3000/
+[HTTP/1.1 200 OK 222ms]
+
+GET
+https://fonts.googleapis.com/css2?family=Anton&family=Bitcount+Grid+Double:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Handjet:wght,ELSH@100..900,2&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quintessential&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap
+[HTTP/3 200 OK 0ms]
+
+GET
+http://localhost:3000/@vite/client
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/src/main.tsx
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/@react-refresh
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/react.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/App.tsx
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/src/index.css
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/components/core/FirebaseProvider.tsx
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/store/useCharacterStore.ts
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/store/useUIStore.ts
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/store/useGameStore.ts
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/store/useChatStore.ts
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/src/store/useWorldStore.ts
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/node_modules/vite/dist/client/env.mjs
+[HTTP/1.1 304 Not Modified 14ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-F73QCPJP.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-2TUXWMP5.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+[vite] connecting... client:789:9
+GET
+http://localhost:3000/src/components/hud/HUD.tsx
+[HTTP/1.1 304 Not Modified 193ms]
+
+GET
+http://localhost:3000/src/components/core/TitleScreen.tsx
+[HTTP/1.1 304 Not Modified 179ms]
+
+GET
+http://localhost:3000/src/components/devkit/DevKit.tsx
+[HTTP/1.1 304 Not Modified 180ms]
+
+GET
+http://localhost:3000/src/store/useAtlasStore.ts
+[HTTP/1.1 304 Not Modified 182ms]
+
+GET
+http://localhost:3000/src/services/storageService.ts
+[HTTP/1.1 304 Not Modified 183ms]
+
+GET
+http://localhost:3000/src/dice_roller/DiceBoxCanvas.tsx
+[HTTP/1.1 304 Not Modified 187ms]
+
+GET
+http://localhost:3000/src/components/core/LoadingScreen.tsx
+[HTTP/1.1 304 Not Modified 172ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/motion_react.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/components/bookreader/BookReader.tsx
+[HTTP/1.1 304 Not Modified 172ms]
+
+GET
+http://localhost:3000/src/components/character/SpellbookReader.tsx
+[HTTP/1.1 304 Not Modified 172ms]
+
+GET
+http://localhost:3000/src/components/character/FullInventoryMenu.tsx
+[HTTP/1.1 304 Not Modified 174ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterProfile.tsx
+[HTTP/1.1 304 Not Modified 173ms]
+
+GET
+http://localhost:3000/src/components/character/MonsterProfile.tsx
+[HTTP/1.1 304 Not Modified 174ms]
+
+GET
+http://localhost:3000/src/components/character/TransportProfile.tsx
+[HTTP/1.1 304 Not Modified 237ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator.tsx
+[HTTP/1.1 304 Not Modified 66ms]
+
+GET
+http://localhost:3000/src/components/character/LevelUpOverlay.tsx
+[HTTP/1.1 304 Not Modified 66ms]
+
+GET
+http://localhost:3000/src/store/useBookStore.ts
+[HTTP/1.1 304 Not Modified 68ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/firebase_auth.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/firebase_firestore.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/lib/firebase.ts
+[HTTP/1.1 304 Not Modified 68ms]
+
+GET
+http://localhost:3000/src/store/useAuthStore.ts
+[HTTP/1.1 304 Not Modified 69ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/zustand.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/lib/combatUtils.ts
+[HTTP/1.1 304 Not Modified 24ms]
+
+GET
+http://localhost:3000/src/store/useInventoryStore.ts
+[HTTP/1.1 304 Not Modified 17ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-3XYMS4SN.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+ws://localhost:24678/?token=fU4gn0OU6JKK
+[HTTP/1.1 101 Switching Protocols 25ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-CXP6WFUZ.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-SKZZMX5M.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+[vite] connected. client:912:15
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-D2XLQKTU.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@fortawesome_react-fontawesome.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@fortawesome_free-brands-svg-icons.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/services/soundService.ts
+[HTTP/1.1 304 Not Modified 34ms]
+
+GET
+http://localhost:3000/src/store/useAudioStore.ts
+[HTTP/1.1 304 Not Modified 39ms]
+
+GET
+http://localhost:3000/src/game_icons.tsx
+[HTTP/1.1 304 Not Modified 45ms]
+
+GET
+http://localhost:3000/src/components/hud/WorldPanel.tsx
+[HTTP/1.1 304 Not Modified 41ms]
+
+GET
+http://localhost:3000/src/components/hud/GameScreen.tsx
+[HTTP/1.1 304 Not Modified 37ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterPanel.tsx
+[HTTP/1.1 304 Not Modified 41ms]
+
+GET
+http://localhost:3000/src/components/hud/Journal.tsx
+[HTTP/1.1 304 Not Modified 35ms]
+
+GET
+http://localhost:3000/src/components/hud/nav/Nav.tsx
+[HTTP/1.1 304 Not Modified 38ms]
+
+GET
+http://localhost:3000/src/components/hud/EnvironmentalEngine.tsx
+[HTTP/1.1 304 Not Modified 1364ms]
+
+GET
+http://localhost:3000/src/lib/utils.ts
+[HTTP/1.1 304 Not Modified 1318ms]
+
+GET
+http://localhost:3000/src/components/bookreader/PageView.tsx
+[HTTP/1.1 304 Not Modified 1317ms]
+
+GET
+http://localhost:3000/src/dice_roller/diceService.ts
+[HTTP/1.1 304 Not Modified 1318ms]
+
+GET
+http://localhost:3000/src/services/ai/monsterService.ts
+[HTTP/1.1 304 Not Modified 1292ms]
+
+GET
+http://localhost:3000/src/services/ai/itemService.ts
+[HTTP/1.1 304 Not Modified 1285ms]
+
+GET
+http://localhost:3000/src/services/ai/imageService.ts
+[HTTP/1.1 304 Not Modified 1240ms]
+
+GET
+http://localhost:3000/src/components/devkit/enemy-image_generator.tsx
+[HTTP/1.1 304 Not Modified 1275ms]
+
+GET
+http://localhost:3000/src/components/devkit/equipment-image_generator.tsx
+[HTTP/1.1 304 Not Modified 1275ms]
+
+GET
+http://localhost:3000/src/components/devkit/material-image_generator.tsx
+[HTTP/1.1 304 Not Modified 1276ms]
+
+GET
+http://localhost:3000/src/services/ai/npcService.ts
+[HTTP/1.1 304 Not Modified 1276ms]
+
+GET
+http://localhost:3000/src/lib/npcGeneratorUtils.ts
+[HTTP/1.1 304 Not Modified 1276ms]
+
+GET
+http://localhost:3000/src/services/atlasService.ts
+[HTTP/1.1 304 Not Modified 1276ms]
+
+GET
+http://localhost:3000/src/components/devkit/npc_generator.tsx
+[HTTP/1.1 304 Not Modified 1346ms]
+
+GET
+http://localhost:3000/src/components/devkit/npc_tester.tsx
+[HTTP/1.1 304 Not Modified 1345ms]
+
+GET
+http://localhost:3000/src/components/devkit/CombatTester.tsx
+[HTTP/1.1 304 Not Modified 1356ms]
+
+GET
+http://localhost:3000/src/components/devkit/Simulator.tsx
+[HTTP/1.1 304 Not Modified 1357ms]
+
+GET
+http://localhost:3000/src/components/devkit/Jane.tsx
+[HTTP/1.1 304 Not Modified 1353ms]
+
+GET
+http://localhost:3000/src/components/audio/Mixer.tsx
+[HTTP/1.1 304 Not Modified 1352ms]
+
+GET
+http://localhost:3000/src/components/devkit/AssetExplorer.tsx
+[HTTP/1.1 304 Not Modified 1647ms]
+
+GET
+http://localhost:3000/src/components/devkit/WorldExplorer.tsx
+[HTTP/1.1 304 Not Modified 1642ms]
+
+GET
+http://localhost:3000/src/components/devkit/FlagManager.tsx
+[HTTP/1.1 304 Not Modified 1641ms]
+
+GET
+http://localhost:3000/src/components/devkit/AudioLaboratory.tsx
+[HTTP/1.1 304 Not Modified 1632ms]
+
+GET
+http://localhost:3000/src/lib/statCalculations.ts
+[HTTP/1.1 304 Not Modified 1633ms]
+
+GET
+http://localhost:3000/src/components/character/Inventory.tsx
+[HTTP/1.1 304 Not Modified 1622ms]
+
+GET
+http://localhost:3000/src/components/character/PartyInventory.tsx
+[HTTP/1.1 304 Not Modified 1765ms]
+
+GET
+http://localhost:3000/src/components/ui/ChromaKeyImage.tsx
+[HTTP/1.1 304 Not Modified 1766ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/react-markdown.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/remark-gfm.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/components/dice/DiceText.tsx
+[HTTP/1.1 304 Not Modified 1695ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@dnd-kit_core.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@dnd-kit_sortable.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@dnd-kit_utilities.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/lucide-react.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/components/character/EquipmentDoll.tsx
+[HTTP/1.1 304 Not Modified 1701ms]
+
+GET
+http://localhost:3000/src/components/atlas/EquipmentCard.tsx
+[HTTP/1.1 304 Not Modified 1702ms]
+
+GET
+http://localhost:3000/src/lib/equipmentConstants.ts
+[HTTP/1.1 304 Not Modified 1704ms]
+
+GET
+http://localhost:3000/src/lib/colors.ts
+[HTTP/1.1 304 Not Modified 1741ms]
+
+GET
+http://localhost:3000/src/lib/atlasUtils.ts
+[HTTP/1.1 304 Not Modified 1742ms]
+
+GET
+http://localhost:3000/src/lib/currencyUtils.ts
+[HTTP/1.1 304 Not Modified 1742ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/firebase_app.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/firebase_storage.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/firebase-applet-config.json?import
+[HTTP/1.1 304 Not Modified 1739ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/WelcomeStep.tsx
+[HTTP/1.1 304 Not Modified 1739ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/SelectionStep.tsx
+[HTTP/1.1 304 Not Modified 1740ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/SpellsStep.tsx
+[HTTP/1.1 304 Not Modified 1784ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/EquipmentStep.tsx
+[HTTP/1.1 304 Not Modified 1780ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/ChoicesStep.tsx
+[HTTP/1.1 304 Not Modified 1780ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/StatsStep.tsx
+[HTTP/1.1 304 Not Modified 1783ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/SkillsStep.tsx
+[HTTP/1.1 304 Not Modified 1788ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/AppearanceStep.tsx
+[HTTP/1.1 304 Not Modified 1787ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/IdentityStep.tsx
+[HTTP/1.1 304 Not Modified 1799ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/ReviewStep.tsx
+[HTTP/1.1 304 Not Modified 1804ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/SlotStep.tsx
+[HTTP/1.1 304 Not Modified 1821ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterCreator/BackstoryStep.tsx
+[HTTP/1.1 304 Not Modified 1824ms]
+
+GET
+http://localhost:3000/src/services/saveService.ts
+[HTTP/1.1 304 Not Modified 1824ms]
+
+GET
+http://localhost:3000/src/lib/fontLoader.ts
+[HTTP/1.1 304 Not Modified 1826ms]
+
+GET
+http://localhost:3000/src/lib/itemPacks.ts
+[HTTP/1.1 304 Not Modified 1842ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-JO5CP42X.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-6BY3CDWF.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-WLB7R6ZN.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-GT2H5WNP.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-2GWC7C6F.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/services/audio/audioEngine.ts
+[HTTP/1.1 304 Not Modified 1441ms]
+
+GET
+http://localhost:3000/src/services/audio/audioManifest.ts
+[HTTP/1.1 304 Not Modified 1422ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-P6RJ62LD.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/assets/icons/index.ts
+[HTTP/1.1 304 Not Modified 1264ms]
+
+GET
+http://localhost:3000/src/components/character/CharacterStats.tsx
+[HTTP/1.1 304 Not Modified 1158ms]
+
+GET
+http://localhost:3000/src/components/ui/PartyLogistics.tsx
+[HTTP/1.1 304 Not Modified 1158ms]
+
+GET
+http://localhost:3000/src/store/useJournalStore.ts
+[HTTP/1.1 304 Not Modified 1266ms]
+
+GET
+http://localhost:3000/src/components/hud/game/Travel.tsx
+[HTTP/1.1 304 Not Modified 1266ms]
+
+GET
+http://localhost:3000/src/components/dice/DiceRollerPanel.tsx
+[HTTP/1.1 304 Not Modified 1267ms]
+
+GET
+http://localhost:3000/src/components/hud/WorldMap.tsx
+[HTTP/1.1 304 Not Modified 1266ms]
+
+GET
+http://localhost:3000/src/components/hud/game/LocationMap.tsx
+[HTTP/1.1 304 Not Modified 1261ms]
+
+GET
+http://localhost:3000/src/components/hud/NPCDisplay.tsx
+[HTTP/1.1 304 Not Modified 1262ms]
+
+GET
+http://localhost:3000/src/components/hud/chat/ChatPanel.tsx
+[HTTP/1.1 304 Not Modified 1266ms]
+
+GET
+http://localhost:3000/src/components/hud/NotificationWindow.tsx
+[HTTP/1.1 304 Not Modified 1265ms]
+
+GET
+http://localhost:3000/src/components/hud/game/MapNavigation.tsx
+[HTTP/1.1 304 Not Modified 1266ms]
+
+GET
+http://localhost:3000/src/components/atlas/DraggableCard.tsx
+[HTTP/1.1 304 Not Modified 1252ms]
+
+GET
+http://localhost:3000/src/components/core/ErrorBoundary.tsx
+[HTTP/1.1 304 Not Modified 1222ms]
+
+GET
+http://localhost:3000/src/components/hud/game/ActionView.tsx
+[HTTP/1.1 304 Not Modified 1237ms]
+
+GET
+http://localhost:3000/src/components/hud/journal/DiaryTab.tsx
+[HTTP/1.1 304 Not Modified 1250ms]
+
+GET
+http://localhost:3000/src/components/hud/journal/QuestTab.tsx
+[HTTP/1.1 304 Not Modified 1250ms]
+
+GET
+http://localhost:3000/src/components/hud/journal/BestiaryTab.tsx
+[HTTP/1.1 304 Not Modified 1249ms]
+
+GET
+http://localhost:3000/src/components/hud/journal/LoreTab.tsx
+[HTTP/1.1 304 Not Modified 1262ms]
+
+GET
+http://localhost:3000/src/components/hud/TemporalWidget.tsx
+[HTTP/1.1 304 Not Modified 1263ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/clsx.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/tailwind-merge.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@3d-dice_dice-box.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@3d-dice_dice-roller-parser.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/@3d-dice_dice-parser-interface.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/rehype-raw.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/services/ai/config.ts
+[HTTP/1.1 304 Not Modified 559ms]
+
+GET
+http://localhost:3000/src/types/inventory.ts
+[HTTP/1.1 304 Not Modified 977ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-CTIQSCVC.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-5EZQ5JFA.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/lib/characterPipeline.ts
+[HTTP/1.1 304 Not Modified 862ms]
+
+GET
+http://localhost:3000/src/lib/npcChoiceResolver.ts
+[HTTP/1.1 304 Not Modified 860ms]
+
+GET
+http://localhost:3000/src/types/audio.ts
+[HTTP/1.1 304 Not Modified 913ms]
+
+GET
+http://localhost:3000/src/data/regions.ts
+[HTTP/1.1 304 Not Modified 568ms]
+
+GET
+http://localhost:3000/src/components/atlas/MonsterCard.tsx
+[HTTP/1.1 304 Not Modified 736ms]
+
+GET
+http://localhost:3000/src/components/atlas/MaterialCard.tsx
+[HTTP/1.1 304 Not Modified 737ms]
+
+GET
+http://localhost:3000/src/components/atlas/SpellCard.tsx
+[HTTP/1.1 304 Not Modified 734ms]
+
+GET
+http://localhost:3000/src/components/character/DraggableInventoryItem.tsx
+[HTTP/1.1 304 Not Modified 251ms]
+
+GET
+http://localhost:3000/src/lib/bookUtils.ts
+[HTTP/1.1 304 Not Modified 170ms]
+
+GET
+http://localhost:3000/src/lib/inventoryUtils.ts
+[HTTP/1.1 304 Not Modified 84ms]
+
+GET
+http://localhost:3000/src/assets/icons/ui.ts
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/assets/icons/attacks.ts
+[HTTP/1.1 304 Not Modified 3ms]
+
+GET
+http://localhost:3000/src/assets/icons/equipment.ts
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/assets/icons/damage_types.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/conditions.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/creatures.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/dice.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/character.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/currency.ts
+[HTTP/1.1 304 Not Modified 9ms]
+
+GET
+http://localhost:3000/src/assets/icons/materials.ts
+[HTTP/1.1 304 Not Modified 5ms]
+
+GET
+http://localhost:3000/src/assets/icons/world_atlas.ts
+[HTTP/1.1 304 Not Modified 9ms]
+
+GET
+http://localhost:3000/src/assets/icons/ability_score.ts
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/assets/icons/skill.ts
+[HTTP/1.1 304 Not Modified 9ms]
+
+GET
+http://localhost:3000/src/assets/icons/feats.ts
+[HTTP/1.1 304 Not Modified 12ms]
+
+GET
+http://localhost:3000/src/assets/icons/features.ts
+[HTTP/1.1 304 Not Modified 9ms]
+
+GET
+http://localhost:3000/src/assets/icons/traits.ts
+[HTTP/1.1 304 Not Modified 7ms]
+
+GET
+http://localhost:3000/src/assets/icons/magic_schools.ts
+[HTTP/1.1 304 Not Modified 10ms]
+
+GET
+http://localhost:3000/src/assets/icons/actions.ts
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/assets/icons/subclasses.ts
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/assets/icons/stat_comparison.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/assets/icons/editor.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/assets/icons/musical_instruments.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/assets/icons/book_reader.ts
+[HTTP/1.1 304 Not Modified 5ms]
+
+GET
+http://localhost:3000/src/assets/icons/tarot.ts
+[HTTP/1.1 304 Not Modified 5ms]
+
+GET
+http://localhost:3000/src/assets/icons/equipment_doll.ts
+[HTTP/1.1 304 Not Modified 7ms]
+
+GET
+http://localhost:3000/src/assets/icons/minigame.ts
+[HTTP/1.1 304 Not Modified 5ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/howler.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/react-leaflet.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/leaflet.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/node_modules/leaflet/dist/leaflet.css
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/components/hud/game/Entrance.tsx
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/services/narratorService.ts
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/components/hud/chat/ChatHistory.tsx
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/src/components/hud/chat/ChatInput.tsx
+[HTTP/1.1 304 Not Modified 3ms]
+
+GET
+http://localhost:3000/src/components/hud/game/MapLegend.tsx
+[HTTP/1.1 304 Not Modified 4ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/framer-motion.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/components/hud/game/FogOfWar.tsx
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/components/hud/view/FirstPersonView.tsx
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/components/hud/game/CombatGrid.tsx
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/components/hud/game/Rest.tsx
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/services/magicService.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/lib/dataUtils.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/node_modules/.vite/deps/chunk-A2646ZNO.js?v=b4062b16
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/src/components/hud/view/NPCDisplay.tsx
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/lib/npcUtils.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+GET
+http://localhost:3000/src/components/hud/game/Token.tsx
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/components/hud/game/TokenActionHUD.tsx
+[HTTP/1.1 304 Not Modified 2ms]
+
+GET
+http://localhost:3000/src/lib/tokenActionHud.ts
+[HTTP/1.1 304 Not Modified 1ms]
+
+Uncaught SyntaxError: The requested module 'http://localhost:3000/src/services/storageService.ts' doesn't provide an export named: 'getEnemyArtworkUrl' MonsterProfile.tsx:9:10
+GET
+http://localhost:3000/favicon-96x96.png
+[HTTP/1.1 200 OK 0ms]
+
+GET
+http://localhost:3000/favicon.svg
+[HTTP/1.1 200 OK 0ms]
+
