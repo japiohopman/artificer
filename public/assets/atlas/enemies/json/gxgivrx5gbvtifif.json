@@ -1,0 +1,101 @@
+{
+  "index": "gxgivrx5gbvtifif",
+  "name": "giant scorpion",
+  "desc": "Giant Scorpion is a CR 3 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10 + 14",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 3,
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 15,
+    "int": 1,
+    "wis": 9,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: two with its [[/item .OJ2b64O3e1nni21W]]{claws} and one with its [[/item .q6uVUHWyzht5OpwV]]{sting}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &Reference[grappled] (escape DC 12). The [[lookup @name lowercase]]{monster} has two [[lookup @item.name lowercase]]s, each of which can grapple only one target.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=GR0Tw9glqMrDk8Uh]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantScorpion.webp",
+  "url": "/assets/atlas/enemies/json/gxgivrx5gbvtifif.json",
+  "updated_at": "2026-07-09T11:33:14.141Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

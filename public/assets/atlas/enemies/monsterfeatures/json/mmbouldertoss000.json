@@ -1,0 +1,22 @@
+{
+  "index": "mmbouldertoss000",
+  "name": "boulder toss",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} hurls a boulder at a point it can see within [[lookup @range.value activity=jpC3fk7LJlhH4CDr]] feet.\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=jpC3fk7LJlhH4CDr]], each creature in a [[lookup @target.template.size activity=jpC3fk7LJlhH4CDr]]-foot-radius Sphere centered on that point.\nFailure: [[/damage average]]. If the target is a Large or smaller creature, it has the &Reference[Prone] condition.\nSuccess: Half damage only.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "5-foot sphere",
+  "image": "icons/commodities/stone/boulder-black.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbouldertoss000.json",
+  "updated_at": "2026-07-10T05:56:36.788Z"
+}

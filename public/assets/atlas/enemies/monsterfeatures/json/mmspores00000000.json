@@ -1,0 +1,23 @@
+{
+  "index": "mmspores00000000",
+  "name": "spores",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]], each creature in a [[lookup @target.template.size activity=voqQeTnihpy3BTFf]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: The target has the &Reference[Poisoned apply=false] condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. While Poisoned, the target takes [[/damage average activity=ukZveNVmvvtwbDj0]] at the start of each of its turns. Emptying a flask of Holy Water on the target ends the effect early.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "20-foot radius",
+  "image": "icons/magic/air/fog-gas-smoke-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmspores00000000.json",
+  "updated_at": "2026-07-10T05:56:36.849Z"
+}

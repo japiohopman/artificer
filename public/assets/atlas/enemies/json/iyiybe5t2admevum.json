@@ -1,0 +1,116 @@
+{
+  "index": "iyiybe5t2admevum",
+  "name": "ghast",
+  "desc": "Ghast is a CR 2 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 36,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 10,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 8,
+  "stats": {
+    "str": 16,
+    "dex": 17,
+    "con": 10,
+    "int": 11,
+    "wis": 10,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "stench",
+      "desc": "Any creature that starts its turn within [[lookup @target.template.size activity=6e3MrenfD7Q2nBLE]] feet of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or be &reference[poisoned] until the start of its next turn. On a successful saving throw, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for 24 hours.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "turn defiance",
+      "desc": "The [[lookup @name lowercase]]{monster} and any @UUID[Compendium.dnd5e.monsters.Actor.OBujQLLPSmlJiZnL]{ghouls} within 30 feet of it have advantage on saving throws against effects that turn undead.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature other than an undead, it must succeed on a [[/save activity=GKEI5W17dgV81huq]] saving throw or be &reference[paralyzed] for [[lookup @labels.duration activity=GKEI5W17dgV81huq]]. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Ghast.webp",
+  "url": "/assets/atlas/enemies/json/iyiybe5t2admevum.json",
+  "updated_at": "2026-07-09T11:33:15.692Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

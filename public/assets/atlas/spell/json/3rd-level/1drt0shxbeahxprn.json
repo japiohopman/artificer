@@ -1,0 +1,32 @@
+{
+  "index": "1drt0shxbeahxprn",
+  "name": "conjure animals",
+  "desc": [
+    "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:",
+    "One beast of challenge rating 2 or lowerTwo beasts of challenge rating 1 or lowerFour beasts of challenge rating 1/2 or lowerEight beasts of challenge rating 1/4 or lowerEach beast is also considered fey, and it disappears when it drops to 0 hit points or when the spell ends.The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
+    "Higher Levels. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level, and four times as many with a 9th-level slot."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/1drt0shxbeahxprn.json",
+  "image": "/assets/atlas/spell/images/1drt0shxbeahxprn.webp",
+  "updated_at": "2026-07-10T15:34:53.112Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

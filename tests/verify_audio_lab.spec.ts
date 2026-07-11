@@ -33,8 +33,8 @@ test('verify audio lab in devkit', async ({ page }) => {
     console.log('Verifying Audio Laboratory...');
     await page.waitForSelector('text=Audio Laboratory', { timeout: 10000 });
     
-    await expect(page.getByText('fireball', { exact: true })).toBeVisible();
-    await expect(page.getByText('thunderwave', { exact: true })).toBeVisible();
+    await expect(page.locator('text=explosion_large.wav')).toBeVisible();
+    await expect(page.locator('text=thunder.wav')).toBeVisible();
     
     await page.screenshot({ path: 'verification/audio_lab_explorer.png' });
     

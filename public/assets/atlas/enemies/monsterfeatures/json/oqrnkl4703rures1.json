@@ -1,0 +1,22 @@
+{
+  "index": "oqrnkl4703rures1",
+  "name": "shriek",
+  "type": "feat",
+  "desc": "When bright light or a creature is within 30 feet of the [[lookup @name lowercase]]{monster}, it emits a shriek audible within 300 feet of it. the [[lookup @name lowercase]]{monster} continues to shriek until the disturbance moves out of range and for 1d4 of the [[lookup @name lowercase]]{monster}'s turns afterward\nWhen bright light or a creature is within 30 feet of the [[lookup @name lowercase]]{monster}, it emits a shriek audible within 300 feet of it.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "of",
+        "name": "of",
+        "url": "/assets/atlas/damage_types/json/of.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/oqrnkl4703rures1.json",
+  "updated_at": "2026-07-10T05:56:36.748Z"
+}

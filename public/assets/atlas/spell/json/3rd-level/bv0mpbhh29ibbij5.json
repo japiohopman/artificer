@@ -1,0 +1,30 @@
+{
+  "index": "bv0mpbhh29ibbij5",
+  "name": "create food and water",
+  "desc": [
+    "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/bv0mpbhh29ibbij5.json",
+  "image": "/assets/atlas/spell/images/bv0mpbhh29ibbij5.webp",
+  "updated_at": "2026-07-10T15:34:53.114Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

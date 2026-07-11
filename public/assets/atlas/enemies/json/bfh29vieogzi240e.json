@@ -1,0 +1,156 @@
+{
+  "index": "bfh29vieogzi240e",
+  "name": "lich",
+  "desc": "Lich is a CR 21 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Any Evil Alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8 + 54",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 20,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 11,
+    "dex": 16,
+    "con": 16,
+    "int": 20,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning",
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "poison",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "exhaustion",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "5 other languages",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 21000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "cantrip",
+      "desc": "The [[lookup @name lowercase]]{monster} casts a cantrip.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "paralyzing touch",
+      "desc": "The [[lookup @name lowercase]]{monster} uses its [[/item .KDSrdpdFPDKnh80y]]{Paralyzing Touch}.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightening gaze",
+      "desc": "The [[lookup @name lowercase]]{monster} fixes its gaze on [[lookup @labels.description.affects activity=wmTdXl8uA71bwJeN]] it can see within [[lookup @labels.description.range activity=wmTdXl8uA71bwJeN]] of it. The target must succeed on a [[/save activity=wmTdXl8uA71bwJeN]] saving throw against this magic or become &reference[frightened] for [[lookup @labels.duration activity=wmTdXl8uA71bwJeN]]. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "disrupt life",
+      "desc": "Each non-undead creature within [[lookup @target.template.size activity=Ro8ltLqMQLl16Qey]] feet of the [[lookup @name lowercase]]{monster} must make a [[/save]] saving throw against this magic, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "If it has a phylactery, a destroyed [[lookup @name lowercase]]{monster} gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared: Cantrips (at will): [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .udsLtG0BugXHR2JQ]]{prestidigitation}, [[/item .ctW81uiX56xZR2c5]]{ray of frost} 1st level (4 slots): [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .41JIhpDyM9Anm7cs]]{magic missile}, [[/item .z1mx84ONwkXKUZd7]]{shield}, [[/item .WTbOQBsarsL1LuXJ]]{thunderwave} 2nd level (3 slots): [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .1N8dDMMgZ1h1YJ3B]]{invisibility}, [[/item .4H6YgYdKgnX6ZQ8M]]{acid arrow}, [[/item .X4c8xCkmF8U9HUMz]]{mirror image} 3rd level (3 slots): [[/item .oyE5nVppa5mde5gT]]{animate dead}, [[/item .Ek45cBpVXvJdv1Qy]]{counterspell}, [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .ztgcdrWPshKRpFd0]]{fireball} 4th level (3 slots): [[/item .pybg5MNc3lkerH4Y]]{blight}, [[/item .A4RsPuSvB9wFtz1j]]{dimension door} 5th level (3 slots): [[/item .LkvI11Uue774QBKZ]]{cloudkill}, [[/item .fVbCxFRaORalHB20]]{scrying} 6th level (1 slot): [[/item .HBHbOGKNVVprSlwn]]{disintegrate}, [[/item .WmQpxfjZwF3MGUby]]{globe of invulnerability} 7th level (1 slot): [[/item .HPvZm8YJO91k6Qdg]]{finger of death}, [[/item .J6Jpw5XzB5aTeqnz]]{plane shift} 8th level (1 slot): [[/item .eEpy1ONlXumKS1mp]]{dominate monster}, [[/item .35j2QIMmIk6aEdxj]]{power word stun} 9th level (1 slot): [[/item .dmvaMLFWFtv0qx0S]]{power word kill}",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "paralyzing touch",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save activity=ViiNmmo2Hd9uvmFG]] saving throw or be &Reference[paralyzed] for [[lookup @labels.duration activity=ViiNmmo2Hd9uvmFG]]. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "cold",
+            "url": "/assets/atlas/damage_types/json/cold.json"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "turn resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against any effect that turns undead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Lich.webp",
+  "url": "/assets/atlas/enemies/json/bfh29vieogzi240e.json",
+  "updated_at": "2026-07-09T11:33:15.718Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

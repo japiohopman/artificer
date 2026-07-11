@@ -1,0 +1,19 @@
+{
+  "index": "mmdreadfulglare0",
+  "name": "dreadful glare",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=8LmlZfevSQkOxGSN]], one [[lookup @target.affects.type activity=8LmlZfevSQkOxGSN]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=8LmlZfevSQkOxGSN]] feet. Failure: The target has the &Reference[Frightened apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Dreadful Glare for 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/perception/eye-slit-red-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdreadfulglare0.json",
+  "updated_at": "2026-07-10T05:56:36.806Z"
+}

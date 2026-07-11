@@ -1,0 +1,22 @@
+{
+  "index": "mmdrainingswipe0",
+  "name": "draining swipe",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target's Strength score decreases by [[/r 1d4]]. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a @UUID[Compendium.dnd5e.actors24.Actor.mmShadow00000000]{Shadow} rises from the corpse [[/r 1d4]] hours later.\nFoundry Note\nThis feature provides an Active Effect in the Effects Tab to modify the target PC's Strength Score. Since this Strength reduction can be applied multiple times, the GM must drag the Active Effect in this item's Effect tab onto the PC's character sheet. From there, the GM must navigate to the Effects tab on the PC's sheet to modify the Effect Value preceded by the negative symbol, e.g., -3. Presently, it is set at -1.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-claw-fire-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdrainingswipe0.json",
+  "updated_at": "2026-07-10T05:56:36.883Z"
+}

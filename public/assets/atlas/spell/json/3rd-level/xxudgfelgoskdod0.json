@@ -1,0 +1,32 @@
+{
+  "index": "xxudgfelgoskdod0",
+  "name": "fear",
+  "desc": [
+    "You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become &Reference[Frightened] for the duration.",
+    "While Frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A white feather or the heart of a hen.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/xxudgfelgoskdod0.json",
+  "image": "/assets/atlas/spell/images/xxudgfelgoskdod0.webp",
+  "updated_at": "2026-07-10T15:34:53.116Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

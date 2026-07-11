@@ -1,0 +1,13 @@
+{
+  "index": "mmsoulbag0000000",
+  "name": "soul bag",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} has a soul bag. While holding or carrying the bag, the [[lookup @name lowercase]]{monster} can use its Nightmare Haunting action.\nThe bag has AC 15, HP 20, and Resistance to all damage. The bag turns to dust if reduced to 0 Hit Points. If the bag is destroyed, any souls the bag is holding are released. The [[lookup @name lowercase]]{monster} can create a new bag after 7 days.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/containers/bags/sack-twisted-skull-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmsoulbag0000000.json",
+  "updated_at": "2026-07-10T05:56:36.989Z"
+}

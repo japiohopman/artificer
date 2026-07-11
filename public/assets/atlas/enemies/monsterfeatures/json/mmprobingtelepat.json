@@ -1,0 +1,13 @@
+{
+  "index": "mmprobingtelepat",
+  "name": "probing telepathy",
+  "type": "feat",
+  "desc": "If a creature the [[lookup @name lowercase]]{monster} can see communicates telepathically with the [[lookup @name lowercase]]{monster}, the [[lookup @name lowercase]]{monster} learns the creature's greatest desires.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmprobingtelepat.json",
+  "updated_at": "2026-07-10T05:56:36.985Z"
+}

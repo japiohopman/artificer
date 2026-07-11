@@ -1,0 +1,16 @@
+{
+  "index": "mmanimatetrees00",
+  "name": "animate trees",
+  "type": "feat",
+  "desc": "The [[lookup @name]]{monster} magically animates up to two trees it can see within [[lookup @range.value activity=EceTNjzjKWdrMNAy]] feet of itself. Each tree uses the Treant stat block, except it has Intelligence and Charisma scores of 1, it can't speak, and it lacks this action. The tree takes its turn immediately after the treant on the same initiative count, and it obeys the treant. A tree remains animate for 1 day or until it dies, the treant dies, or it is more than 120 feet from the treant. The tree then takes root if possible.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "60 ft",
+  "image": "icons/magic/nature/tree-animated-smile.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmanimatetrees00.json",
+  "updated_at": "2026-07-10T05:56:36.778Z"
+}

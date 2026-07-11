@@ -1,0 +1,31 @@
+{
+  "index": "j8s49rea8b1640zi",
+  "name": "holy aura",
+  "desc": [
+    "Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all Saving Throws, and other creatures have disadvantage on Attack rolls against them until the spell ends. In addition, when a fiend or an Undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be Blinded until the spell ends."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/j8s49rea8b1640zi.json",
+  "image": "/assets/atlas/spell/images/j8s49rea8b1640zi.webp",
+  "updated_at": "2026-07-10T15:34:53.223Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

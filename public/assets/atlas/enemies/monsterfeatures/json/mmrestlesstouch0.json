@@ -1,0 +1,22 @@
+{
+  "index": "mmrestlesstouch0",
+  "name": "restless touch",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target is cursed for 24 hours or until the [[lookup @name lowercase]]{monster} dies. Until the curse ends, the target gains no benefit from finishing Short Rests.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "psychic",
+        "name": "psychic",
+        "url": "/assets/atlas/damage_types/json/psychic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/biological/hand-clawed-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmrestlesstouch0.json",
+  "updated_at": "2026-07-10T05:56:36.917Z"
+}

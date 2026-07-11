@@ -1,0 +1,108 @@
+{
+  "index": "rb7ojt822wio52qy",
+  "name": "bandit captain",
+  "desc": "Bandit Captain is a CR 2 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Non-Lawful Alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 13
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 14,
+  "stats": {
+    "str": 15,
+    "dex": 16,
+    "con": 14,
+    "int": 14,
+    "wis": 11,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three melee attacks: two with its [[/item .tSPkVJScEndipsFU]]{scimitar} and one with its [[/item .mBUKIzY6aUW5Fnlm]]{dagger}. Or the [[lookup @name lowercase]]{monster} makes two ranged attacks with its daggers.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "The [[lookup @name lowercase]]{monster} adds 2 to its AC against one melee attack that would hit it. To do so, the [[lookup @name lowercase]]{monster} must see the attacker and be wielding a melee weapon.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/BanditCaptain.webp",
+  "url": "/assets/atlas/enemies/json/rb7ojt822wio52qy.json",
+  "updated_at": "2026-07-09T11:33:15.121Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

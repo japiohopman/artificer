@@ -1,0 +1,31 @@
+{
+  "index": "j3uildys7miofmtj",
+  "name": "fire storm",
+  "desc": [
+    "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one.",
+    "The fire damages Objects in the area and ignites flammable Objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell."
+  ],
+  "range": "150 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/j3uildys7miofmtj.json",
+  "image": "/assets/atlas/spell/images/j3uildys7miofmtj.webp",
+  "updated_at": "2026-07-10T15:34:53.207Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

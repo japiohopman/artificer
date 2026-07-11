@@ -1,0 +1,22 @@
+{
+  "index": "of2dtsnpwmhr52o7",
+  "name": "reaping scythe",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} sweeps its spectral scythe through a creature within 5 feet of it, dealing 7 (1d8 + 3) slashing damage plus 4 (1d8) necrotic damage.\nthe [[lookup @name lowercase]]{monster} sweeps its spectral scythe through a creature within 5 feet of it.",
+  "damage": [
+    {
+      "damage_dice": "1d8+3",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/skills/melee/strike-scythe-fire-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/of2dtsnpwmhr52o7.json",
+  "updated_at": "2026-07-10T05:56:36.736Z"
+}

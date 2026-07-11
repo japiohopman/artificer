@@ -1,0 +1,115 @@
+{
+  "index": "aw2wmqgiatxe2imi",
+  "name": "cloud giant",
+  "desc": "Cloud Giant is a CR 9 giant.",
+  "size": "Huge",
+  "type": "giant",
+  "subtype": "any race",
+  "alignment": "Neutral Good Evil(50%) or Neutral Evil(50%)",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 200,
+  "hit_dice": "16d12",
+  "hit_points_roll": "16d12 + 96",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 16,
+  "stats": {
+    "str": 27,
+    "dex": 10,
+    "con": 22,
+    "int": 12,
+    "wis": 16,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components: At will: [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .IBJmWjzbQGu7M4UX]]{fog cloud}, [[/item .Bnn9Nzajixvow9xi]]{light} 3/day each: [[/item .pub0OWVEB71XQx1n]]{feather fall}, [[/item .yfbK8gZqESlaoY5t]]{fly}, [[/item .wqfAVANuQonNBgnL]]{misty step}, [[/item .HQfd7jJyULIoGxrZ]]{telekinesis} 1/day each: [[/item .ZPd73HtKF3At11jh]]{control weather}, [[/item .2IWiZAJtOGDoKjiz]]{gaseous form}",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .Jr0CfxY8xuFT6hoa]]{morningstar} attacks.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "morningstar",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d10+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/giant/CloudGiant.webp",
+  "url": "/assets/atlas/enemies/json/aw2wmqgiatxe2imi.json",
+  "updated_at": "2026-07-09T11:33:15.050Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

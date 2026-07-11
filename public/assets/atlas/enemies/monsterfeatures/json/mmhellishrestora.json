@@ -1,0 +1,22 @@
+{
+  "index": "mmhellishrestora",
+  "name": "hellish restoration",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} dies in the Nine Hells, it revives with all its Hit Points in [[/r 1d10]] days unless it is killed by a creature under the effects of a @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless} spell or its remains are sprinkled with Holy Water.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/unholy/demon-fire-imp.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmhellishrestora.json",
+  "updated_at": "2026-07-10T05:56:36.976Z"
+}

@@ -1,0 +1,126 @@
+{
+  "index": "hx240pg5r5qpret3",
+  "name": "mimic",
+  "desc": "Mimic is a CR 2 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "Shapechanger",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8 + 18",
+  "speed": {
+    "walk": "15 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 5,
+  "wisdom": 13,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 15,
+    "int": 5,
+    "wis": 13,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [
+    "prone"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shapechanger",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "adhesive (object form only)",
+      "desc": "The mimic[[lookup @name lowercase]]{monster} adheres to anything that touches it. A Huge or smaller creature adhered to the [[lookup @name lowercase]]{monster} is also &reference[grappled] by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance (object form only)",
+      "desc": "While the mimic remains motionless, it is indistinguishable from an ordinary object.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "grappler",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on attack rolls against any creature &reference[grappled apply=false] by it.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the mimic is in object form, the target is subjected to its @UUID[Compendium.dnd5e.monsters.Actor.hx240PG5r5qpRet3.Item.aPL8wE2ARwh9JFeX]{Adhesive} trait.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Mimic.webp",
+  "url": "/assets/atlas/enemies/json/hx240pg5r5qpret3.json",
+  "updated_at": "2026-07-09T11:33:15.456Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

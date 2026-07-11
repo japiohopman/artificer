@@ -1,0 +1,32 @@
+{
+  "index": "7e3qxf10hlndedr6",
+  "name": "false life",
+  "desc": [
+    "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 Temporary Hit Points for the Duration.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional Temporary Hit Points for each slot level above 1st."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small amount of alcohol or distilled spirits",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/7e3qxf10hlndedr6.json",
+  "image": "/assets/atlas/spell/images/7e3qxf10hlndedr6.webp",
+  "updated_at": "2026-07-10T15:34:53.037Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

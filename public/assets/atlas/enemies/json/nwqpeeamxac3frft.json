@@ -1,0 +1,118 @@
+{
+  "index": "nwqpeeamxac3frft",
+  "name": "black pudding",
+  "desc": "Black Pudding is a CR 4 ooze.",
+  "size": "Large",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 7
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10 + 30",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 16,
+  "dexterity": 5,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "stats": {
+    "str": 16,
+    "dex": 5,
+    "con": 16,
+    "int": 1,
+    "wis": 6,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid",
+    "cold",
+    "lightning",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "prone",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch wide without &reference[squeezing]{Squeezing}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "corrosive form",
+      "desc": "A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within 5 feet of it takes [[/damage average]] damage. Any nonmagical weapon made of metal or wood that hits the [[lookup @name lowercase]]{monster} corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round. Foundry Note You can apply the @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.wvlDMuDDdk7peoPa.ActiveEffect.dodLAz6LZ0KlsabM]{Corroded Weapon} enchantment to a weapon, granting it a cumulative -1 penalty to damage rolls each time the enchantment is applied.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage extended]]. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10. Foundry Note You can apply the @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.v6ZspnPr8G5hApkL.ActiveEffect.4U4SIb01ypbc6lzv]{Corroded Armor} enchantment to a suit of armor, granting it a cumulative -1 to the AC it offers each time the enchantment is applied.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "split",
+      "desc": "When a [[lookup @name lowercase]]{monster} that is Medium or larger is subjected to lightning or slashing damage, it splits into two new [[lookup @name lowercase]]{monster}s if it has at least 10 Hit Points. Each new pudding has Hit Points equal to half the original [[lookup @name lowercase]]{monster}'s, rounded down. New [[lookup @name lowercase]]{monster}s are one size smaller than the original [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/BlackPudding.webp",
+  "url": "/assets/atlas/enemies/json/nwqpeeamxac3frft.json",
+  "updated_at": "2026-07-09T11:33:15.542Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

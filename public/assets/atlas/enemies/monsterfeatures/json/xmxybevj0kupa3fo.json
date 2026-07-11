@@ -1,0 +1,21 @@
+{
+  "index": "xmxybevj0kupa3fo",
+  "name": "petrifying breath",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a  DC 13 Constitution saving throw.\nOn a failed save, a target begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the greater restoration spell or other magic.\nthe [[lookup @name lowercase]]{monster} exhales petrifying gas in a 30-foot cone. Each creature in that area must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot cone",
+  "image": "icons/magic/air/fog-gas-smoke-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/xmxybevj0kupa3fo.json",
+  "updated_at": "2026-07-10T05:56:36.729Z"
+}

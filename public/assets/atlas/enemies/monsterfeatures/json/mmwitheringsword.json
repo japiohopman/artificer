@@ -1,0 +1,22 @@
+{
+  "index": "mmwitheringsword",
+  "name": "withering sword",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d8",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwitheringsword.json",
+  "updated_at": "2026-07-10T05:56:36.939Z"
+}

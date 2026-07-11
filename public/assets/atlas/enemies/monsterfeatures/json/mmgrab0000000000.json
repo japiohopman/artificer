@@ -1,0 +1,22 @@
+{
+  "index": "mmgrab0000000000",
+  "name": "grab",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]).",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-claw-glow-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmgrab0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.898Z"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "mmlightningstrik",
+  "name": "lightning strike",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=v39JwGqgfaKiA4vc]], one [[lookup @target.affects.type activity=v39JwGqgfaKiA4vc]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=v39JwGqgfaKiA4vc]] feet. Failure: [[/damage average]] damage. Success:Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/lightning/bolt-strike-blue-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmlightningstrik.json",
+  "updated_at": "2026-07-10T05:56:36.822Z"
+}

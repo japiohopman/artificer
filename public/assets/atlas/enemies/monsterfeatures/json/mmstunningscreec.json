@@ -1,0 +1,22 @@
+{
+  "index": "mmstunningscreec",
+  "name": "stunning screech",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=eoIikvnPayaj02oN]], each creature in a [[lookup @target.template.size activity=eoIikvnPayaj02oN]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} (demons succeed automatically).\nFailure: [[/damage average]] damage, and the target has the &Reference[Stunned apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "20-foot radius",
+  "image": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmstunningscreec.json",
+  "updated_at": "2026-07-10T05:56:36.850Z"
+}

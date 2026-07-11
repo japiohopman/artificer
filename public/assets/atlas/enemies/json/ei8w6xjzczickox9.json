@@ -1,0 +1,85 @@
+{
+  "index": "ei8w6xjzczickox9",
+  "name": "eagle",
+  "desc": "Eagle is a CR 0 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 3,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 2,
+  "wisdom": 14,
+  "charisma": 7,
+  "stats": {
+    "str": 6,
+    "dex": 15,
+    "con": 10,
+    "int": 2,
+    "wis": 14,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen sight",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Eagle.webp",
+  "url": "/assets/atlas/enemies/json/ei8w6xjzczickox9.json",
+  "updated_at": "2026-07-09T11:33:14.061Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

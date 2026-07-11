@@ -1,0 +1,126 @@
+{
+  "index": "5tmstvmurpvtmnr3",
+  "name": "half-red dragon veteran",
+  "desc": "Half-Red Dragon Veteran is a CR 5 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Human",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 65,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 20",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "fire"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .93eWZ75LncoC5U8d]]{longsword} attacks. If it has a [[/item .pl7hO2z20EnTaPZt]]{shortsword} drawn, it can also make a shortsword attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] damage if used with two hands.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "heavy crossbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales fire in a [[lookup @labels.description.template activity=dN04D22jj4eo1ERu]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/5tmstvmurpvtmnr3.webp",
+  "url": "/assets/atlas/enemies/json/5tmstvmurpvtmnr3.json",
+  "updated_at": "2026-07-09T11:33:15.199Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

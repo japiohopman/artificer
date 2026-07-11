@@ -1,0 +1,22 @@
+{
+  "index": "mmblindingbreath",
+  "name": "blinding breath",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=soAO2jRWos8FsxeU]], each creature in a [[lookup @target.template.size activity=soAO2jRWos8FsxeU]]-foot Cone. Failure: The target has the &Reference[Blinded apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "15-foot cone",
+  "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmblindingbreath.json",
+  "updated_at": "2026-07-10T05:56:36.786Z"
+}

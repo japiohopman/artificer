@@ -1,0 +1,22 @@
+{
+  "index": "ah5ncm30tp8tpq24",
+  "name": "swallow",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is blinded and restrained, it has total cover against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and it takes 21 (6d6) acid damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. A [[lookup @name lowercase]]{monster} can have only one creature swallowed at a time.\nIf the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from the swallowed creature, the [[lookup @name lowercase]]{monster} must succeed on a  DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 ft. of the [[lookup @name lowercase]]{monster}. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 ft. of movement, exiting prone.\nthe [[lookup @name lowercase]]{monster} attacks with its Swallow.",
+  "damage": [
+    {
+      "damage_dice": "6d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/abilities/mouth-teeth-tongue-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ah5ncm30tp8tpq24.json",
+  "updated_at": "2026-07-10T05:56:36.759Z"
+}

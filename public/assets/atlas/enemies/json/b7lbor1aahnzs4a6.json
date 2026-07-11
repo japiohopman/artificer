@@ -1,0 +1,92 @@
+{
+  "index": "b7lbor1aahnzs4a6",
+  "name": "archmage",
+  "desc": "Archmage is a CR 12 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 99,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8 + 18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 20,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 12,
+    "int": 20,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "(Any 6 Languages)",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spellcasting",
+      "desc": "The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast [[/item .A3q2gTNqG6fvNGrv]]{disguise self} and [[/item .1N8dDMMgZ1h1YJ3B]]{invisibility} at will and has the following wizard spells prepared: Cantrips (at will): [[/item .EOmsUcFQJTfG2oio]]{fire bolt}, [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .udsLtG0BugXHR2JQ]]{prestidigitation}, [[/item .XvbiNhNqXXIFisIy]]{shocking grasp} 1st level (4 slots): [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .3OZnNhunvRtPOQmH]]{identify}, [[/item .CKZTpZlxj7hjjo2H]]{mage armor}*, [[/item .41JIhpDyM9Anm7cs]]{magic missile} 2nd level (3 slots): [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .X4c8xCkmF8U9HUMz]]{mirror image}, [[/item .wqfAVANuQonNBgnL]]{misty step} 3rd level (3 slots): [[/item .Ek45cBpVXvJdv1Qy]]{counterspell},[[/item .yfbK8gZqESlaoY5t]]{fly}, [[/item .IyikgTEOTv701jgQ]]{lightning bolt} 4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .avD5XUtkBPQQR97c]]{fire shield}, [[/item .ReMbjfeOKoSj3O79]]{stoneskin}* 5th level (3 slots): [[/item .RpKjTlYASrfqUPVA]]{cone of cold}, [[/item .fVbCxFRaORalHB20]]{scrying}, [[/item .o9ZCvuD2B1OTcubb]]{wall of force} 6th level (1 slot): [[/item .WmQpxfjZwF3MGUby]]{globe of invulnerability} 7th level (1 slot): [[/item .L4J89JXqbKs6puEV]]{teleport} 8th level (1 slot): [[/item .bllEWfm9xfEKynhv]]{mind blank}* 9th level (1 slot): [[/item .JYuRBwxpoFhXduvD]]{time stop}* *-The archmage casts these spells on itself before combat.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Archmage.webp",
+  "url": "/assets/atlas/enemies/json/b7lbor1aahnzs4a6.json",
+  "updated_at": "2026-07-09T11:33:15.112Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

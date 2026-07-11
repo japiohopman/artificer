@@ -1,0 +1,19 @@
+{
+  "index": "mmtentacleslam00",
+  "name": "tentacle slam",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=VC2iSwNPNaZ7M2bT]], [[lookup @target.affects.special activity=VC2iSwNPNaZ7M2bT]] by the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Stunned apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. Success: Half damage only.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 14,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "0 ft",
+  "image": "icons/creatures/tentacles/tentacles-thing-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtentacleslam00.json",
+  "updated_at": "2026-07-10T05:56:36.853Z"
+}

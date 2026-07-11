@@ -1,0 +1,99 @@
+{
+  "index": "wjsxqbhu28d64lwt",
+  "name": "rust monster",
+  "desc": "Rust Monster is a CR 0.5 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 5",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 13,
+    "dex": 12,
+    "con": 13,
+    "int": 2,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "iron scent",
+      "desc": "The [[lookup @name lowercase]]{monster} can pinpoint, by scent, the location of ferrous metal within 30 feet of it.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rust metal",
+      "desc": "Any nonmagical weapon made of metal that hits the [[lookup @name lowercase]]{monster} corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the [[lookup @name lowercase]]{monster} is destroyed after dealing damage. Foundry Note You can apply the @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Rusted Weapon} enchantment to a weapon, granting it a cumulative -1 penalty to damage rolls each time the enchantment is applied.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "antennae",
+      "desc": "The [[lookup @name lowercase]]{monster} corrodes a nonmagical ferrous metal object it can see within [[lookup @labels.description.range activity=4kalmKCyvd5GxuYh]] of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a [[/save]] saving throw to avoid the [[lookup @name lowercase]]{monster}'s touch. If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt]{Rust Metal} trait. Foundry Note You can apply the @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Rusted Weapon} or @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.yxwZ9AtLMKZ61sTz.ActiveEffect.pbQsiyOC531v0z64]{Rusted Armor} enchantment to a weapon or armor, granting it a cumulative -1 penalty to damage rolls or the AC it offers each time the enchantment is applied.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/RustMonster.webp",
+  "url": "/assets/atlas/enemies/json/wjsxqbhu28d64lwt.json",
+  "updated_at": "2026-07-09T11:33:15.505Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

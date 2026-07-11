@@ -1,0 +1,126 @@
+{
+  "index": "ogphf4scvoai87tu",
+  "name": "glabrezu",
+  "desc": "Glabrezu is a CR 9 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Demon",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 157,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10 + 75",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 15,
+  "constitution": 21,
+  "intelligence": 19,
+  "wisdom": 17,
+  "charisma": 16,
+  "stats": {
+    "str": 20,
+    "dex": 15,
+    "con": 21,
+    "int": 19,
+    "wis": 17,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The glabrezu's spellcasting ability is Intelligence (spell save DC 16). The glabrezu can innately cast the following spells, requiring no material components: At will: [[/item .S7VbUetIfVT7B6Eq]]{darkness}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .15Fa6q1nH27XfbR8]]{dispel magic} 1/day each: [[/item .9hQXdMSmerkTsHDe]]{confusion}, [[/item .yfbK8gZqESlaoY5t]]{fly}, [[/item .35j2QIMmIk6aEdxj]]{power word stun}",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes four attacks: two with its [[/item .pEUD99mri5iDNGH7]]{pincers} and two with its [[/item .VGFZM2Zvp0NT5Yb9]]{fists}. Alternatively, it makes two attacks with its pincers and casts one spell.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pincer",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a Medium or smaller creature, it is &reference[grappled] (escape DC 15). The [[lookup @name lowercase]]{monster} has two [[lookup @item.name lowercase]]s, each of which can grapple only one target.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fist",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Glabrezu.webp",
+  "url": "/assets/atlas/enemies/json/ogphf4scvoai87tu.json",
+  "updated_at": "2026-07-09T11:33:14.961Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

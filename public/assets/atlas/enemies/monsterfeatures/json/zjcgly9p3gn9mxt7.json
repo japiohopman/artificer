@@ -1,0 +1,29 @@
+{
+  "index": "zjcgly9p3gn9mxt7",
+  "name": "acid breath",
+  "type": "feat",
+  "desc": "The [[lookup @details.type.config.label lowercase]]{monster} exhales acid in a 60-foot line that is 5 feet wide.\nEach creature in that line must make a  DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.\nThe [[lookup @details.type.config.label lowercase]]{monster} exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a Dexterity saving throw.",
+  "damage": [
+    {
+      "damage_dice": "12d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "60-foot line",
+  "image": "icons/magic/acid/projectile-smoke-glowing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/zjcgly9p3gn9mxt7.json",
+  "updated_at": "2026-07-10T05:56:36.624Z"
+}

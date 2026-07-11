@@ -1,0 +1,31 @@
+{
+  "index": "p6f1ppkpd9bcb742",
+  "name": "compulsion",
+  "desc": [
+    "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take any action before it moves. After moving in this way, it can make another Wisdom save to try to end the effect.",
+    "A target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/p6f1ppkpd9bcb742.json",
+  "image": "/assets/atlas/spell/images/p6f1ppkpd9bcb742.webp",
+  "updated_at": "2026-07-10T15:34:53.140Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

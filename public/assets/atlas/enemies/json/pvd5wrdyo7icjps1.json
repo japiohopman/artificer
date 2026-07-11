@@ -1,0 +1,92 @@
+{
+  "index": "pvd5wrdyo7icjps1",
+  "name": "priest",
+  "desc": "Priest is a CR 2 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 13,
+  "stats": {
+    "str": 10,
+    "dex": 10,
+    "con": 12,
+    "int": 13,
+    "wis": 16,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster} is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared: Cantrip (at will): [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy} 1st level (4 slots): [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .7buEm5KhI5lP8m1z]]{guiding bolt}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary} 2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon} 3rd level (2 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .uCud2s4TjMfjiXUb]]{spirit guardians}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "divine eminence",
+      "desc": "As a bonus action, the [[lookup @name lowercase]]{monster} can expend a spell slot to cause its melee weapon attacks to magically deal an extra [[/damage]] damage to a target on a hit. This benefit lasts until the end of the turn. If the [[lookup @name lowercase]]{monster} expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mace",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Priest.webp",
+  "url": "/assets/atlas/enemies/json/pvd5wrdyo7icjps1.json",
+  "updated_at": "2026-07-09T11:33:15.242Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

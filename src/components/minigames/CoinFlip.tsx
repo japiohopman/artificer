@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CircleDollarSign, Sparkles, Target, Trophy } from 'lucide-react';
-import { GameIcon } from '@/src/game_icons';
-import { useGameStore } from '@/src/store/useGameStore';
+import { GameIcon } from '../../game_icons';
+import { useGameStore } from '../../store/useGameStore';
 
 interface CoinFlipProps {
   isArena?: boolean;

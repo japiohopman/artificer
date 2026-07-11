@@ -1,0 +1,22 @@
+{
+  "index": "mmram00000000000",
+  "name": "ram",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a [[lookup @target.affects.special activity=z58sUDUmqxECJgT3]] creature, it has the &Reference[Prone apply=false] condition.",
+  "damage": [
+    {
+      "damage_dice": "1d12",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmram00000000000.json",
+  "updated_at": "2026-07-10T05:56:36.916Z"
+}

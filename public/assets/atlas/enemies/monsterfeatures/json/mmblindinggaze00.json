@@ -1,0 +1,18 @@
+{
+  "index": "mmblindinggaze00",
+  "name": "blinding gaze",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=B6xM8C2pABIb5o7y]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=B6xM8C2pABIb5o7y]] feet. Failure: The target has the &Reference[Blinded apply=false] condition for 1 minute. Failure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/light/beam-horizon-strike-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmblindinggaze00.json",
+  "updated_at": "2026-07-10T05:56:36.786Z"
+}

@@ -1,0 +1,32 @@
+{
+  "index": "iczokbgv1jimpncv",
+  "name": "message",
+  "desc": [
+    "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
+    "You can cast this spell through solid Objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings."
+  ],
+  "range": "120 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A short piece of copper wire",
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/iczokbgv1jimpncv.json",
+  "image": "/assets/atlas/spell/images/iczokbgv1jimpncv.webp",
+  "updated_at": "2026-07-10T15:34:53.242Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

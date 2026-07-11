@@ -1,0 +1,28 @@
+{
+  "index": "mmweakeningbreat",
+  "name": "weakening breath",
+  "type": "feat",
+  "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=EGZ4bS4HpJkfNG9s]], each creature that isn't currently affected by this breath in a [[lookup @target.template.size activity=EGZ4bS4HpJkfNG9s]]-foot Cone.\nFailure: The target has Disadvantage on Strength-based D20 Tests and subtracts 3 ([[/r 1d6]]) from its damage rolls. It repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=EGZ4bS4HpJkfNG9s]] minute, it succeeds automatically.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot cone",
+  "image": "icons/magic/fire/beam-strike-whip-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmweakeningbreat.json",
+  "updated_at": "2026-07-10T05:56:36.861Z"
+}

@@ -1,0 +1,171 @@
+{
+  "index": "rcv5y7iwlfnxkinx",
+  "name": "pit fiend",
+  "desc": "Pit Fiend is a CR 20 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 300,
+  "hit_dice": "24d10",
+  "hit_points_roll": "24d10 + 168",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 26,
+  "dexterity": 14,
+  "constitution": 24,
+  "intelligence": 22,
+  "wisdom": 18,
+  "charisma": 24,
+  "stats": {
+    "str": 26,
+    "dex": 14,
+    "con": 24,
+    "int": 22,
+    "wis": 18,
+    "cha": 24
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fear aura",
+      "desc": "Any creature hostile to the [[lookup @name lowercase]]{monster} that starts its turn within [[lookup @labels.description.range activity=2EPr5relqpSLmasf]] of the [[lookup @name lowercase]]{monster} must make a [[/save]] saving throw, unless the [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false]. On a failed save, the creature is &Reference[frightened] until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster}'s spellcasting ability is Charisma (spell save DC 21). The [[lookup @name lowercase]]{monster} can innately cast the following spells, requiring no material components: At will: [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .ztgcdrWPshKRpFd0]]{fireball} 3/day each: [[/item .l9Ju5KE7bbn3WpTm]]{hold monster}, [[/item .X3DrXgxjwI2dvkD6]]{wall of fire}",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes four attacks: one with its [[/item .GjIQl7UOQUtsrj2v]]{bite}, one with its [[/item .RkuPEGbAXHhxfNWJ]]{claw}, one with its [[/item .gpjBebqxqbQA35st]]{mace}, and one with its [[/item .Gh1DbMpJiaTlTwWp]]{tail}.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or become &reference[poisoned]. While poisoned in this way, the target can't regain hit points, and it takes [[/damage average activity=JtAxEJ6yXykPXhDf]] damage at the start of each of its turns. The poisoned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "mace",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d10+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 12,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/PitFiend.webp",
+  "url": "/assets/atlas/enemies/json/rcv5y7iwlfnxkinx.json",
+  "updated_at": "2026-07-09T11:33:15.008Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

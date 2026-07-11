@@ -1,0 +1,32 @@
+{
+  "index": "9gygkrl6qftse6fw",
+  "name": "spike growth",
+  "desc": [
+    "The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the Duration. When a creature moves into or within the area, it takes 2d4 piercing damage for every 5 feet it travels.",
+    "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it."
+  ],
+  "range": "150 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Seven sharp thorns or seven small twigs, each sharpened to a point",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/9gygkrl6qftse6fw.json",
+  "image": "/assets/atlas/spell/images/9gygkrl6qftse6fw.webp",
+  "updated_at": "2026-07-10T15:34:53.102Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

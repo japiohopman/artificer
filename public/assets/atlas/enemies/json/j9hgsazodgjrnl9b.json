@@ -1,0 +1,126 @@
+{
+  "index": "j9hgsazodgjrnl9b",
+  "name": "wereboar",
+  "desc": "Wereboar is a CR 4 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Human, Shapechanger",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 78,
+  "hit_dice": "12d8",
+  "hit_points_roll": "12d8 + 24",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 8,
+  "stats": {
+    "str": 17,
+    "dex": 10,
+    "con": 15,
+    "int": 10,
+    "wis": 11,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "(can't speak in boar form)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge (boar or hybrid form only)",
+      "desc": "If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack (humanoid or hybrid form only)",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, only one of which can be with its [[/item .3TD2NpdjIDJxeLl9]]{tusks}.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "relentless",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shapechanger",
+      "desc": "The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tusks (boar or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a humanoid, it must succeed on a [[/save]] saving throw or be cursed with wereboar lycanthropy.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "maul (humanoid or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Wereboar.webp",
+  "url": "/assets/atlas/enemies/json/j9hgsazodgjrnl9b.json",
+  "updated_at": "2026-07-09T11:33:15.278Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmbalefulcommand",
+  "name": "baleful command",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=SzU2lwdbqgoFMuBM]], each [[lookup @target.affects.type activity=SzU2lwdbqgoFMuBM]] in a [[lookup @target.template.size activity=SzU2lwdbqgoFMuBM]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: [[/damage average]] damage, and the target has the &Reference[Frightened apply=false] and &Reference[Incapacitated apply=false] conditions until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot radius",
+  "image": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbalefulcommand.json",
+  "updated_at": "2026-07-10T05:56:36.783Z"
+}

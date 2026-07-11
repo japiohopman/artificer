@@ -1,0 +1,22 @@
+{
+  "index": "mmacidspray00000",
+  "name": "acid spray",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=20GU2JBM5zJfNPD1]], [[lookup @labels.description.affects activity=20GU2JBM5zJfNPD1]] in a [[lookup @labels.description.template activity=20GU2JBM5zJfNPD1]]. Failure: [[/damage average]] damage. Success: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "30-foot line (width 5 ft.)",
+  "image": "icons/magic/acid/projectile-needles-salvo-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmacidspray00000.json",
+  "updated_at": "2026-07-10T05:56:36.777Z"
+}

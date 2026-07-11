@@ -1,0 +1,17 @@
+{
+  "index": "wkin7wtex8ebbjtv",
+  "name": "petrifying gaze",
+  "type": "feat",
+  "desc": "If a creature starts its turn within 30 ft. of the [[lookup @name lowercase]]{monster} and the two of them can see each other, the [[lookup @name lowercase]]{monster} can force the creature to make a DC 12 Constitution saving throw if the [[lookup @name lowercase]]{monster} isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.\nA creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the [[lookup @name lowercase]]{monster} until the start of its next turn, when it can avert its eyes again. If it looks at the [[lookup @name lowercase]]{monster} in the meantime, it must immediately make the save. If the [[lookup @name lowercase]]{monster} sees its reflection within 30 ft. of it in bright light, it mistakes itself for a rival and targets itself with its gaze.\nthe [[lookup @name lowercase]]{monster} can force the creature to make a Constitution saving throw. It must repeat the saving throw at the end of its next turn. A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the [[lookup @name lowercase]]{monster} until the start of its next turn, when it can avert its eyes again. If it looks at the [[lookup @name lowercase]]{monster} in the meantime, it must immediately make the save.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 12,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/wkin7wtex8ebbjtv.json",
+  "updated_at": "2026-07-10T05:56:36.730Z"
+}

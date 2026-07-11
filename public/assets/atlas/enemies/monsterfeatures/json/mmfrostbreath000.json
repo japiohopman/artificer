@@ -1,0 +1,23 @@
+{
+  "index": "mmfrostbreath000",
+  "name": "frost breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=ChLJgxjftTSMSRHe]], each [[lookup @target.affects.type activity=ChLJgxjftTSMSRHe]] in a [[lookup @target.template.size activity=ChLJgxjftTSMSRHe]]-foot Cone. Failure: [[/damage average]] damage. Success: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 10,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "15-foot cone",
+  "image": "icons/magic/light/beam-rays-blue-large.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfrostbreath000.json",
+  "updated_at": "2026-07-10T05:56:36.813Z"
+}

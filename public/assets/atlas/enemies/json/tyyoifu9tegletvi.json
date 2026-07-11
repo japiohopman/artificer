@@ -1,0 +1,108 @@
+{
+  "index": "tyyoifu9tegletvi",
+  "name": "saber-toothed tiger",
+  "desc": "Saber-Toothed Tiger is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10 + 14",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "stats": {
+    "str": 18,
+    "dex": 14,
+    "con": 15,
+    "int": 3,
+    "wis": 12,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a creature and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &Reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one [[/item .npiswgaiGzupcEmw]]{bite} attack against it as a bonus action.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tyyoifu9tegletvi.webp",
+  "url": "/assets/atlas/enemies/json/tyyoifu9tegletvi.json",
+  "updated_at": "2026-07-09T11:33:14.232Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmtentacles00000",
+  "name": "tentacles",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, it has the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) from all four tentacles.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/tentacles/tentacles-suctioncups-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtentacles00000.json",
+  "updated_at": "2026-07-10T05:56:36.931Z"
+}

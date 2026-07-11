@@ -1,0 +1,101 @@
+{
+  "index": "iscl4q82ivnyelzc",
+  "name": "hell hound",
+  "desc": "Hell Hound is a CR 3 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 14",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 17,
+  "dexterity": 12,
+  "constitution": 14,
+  "intelligence": 6,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 17,
+    "dex": 12,
+    "con": 14,
+    "int": 6,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "understands Infernal but can't speak it",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales fire in a [[lookup @labels.description.template activity=B2tJnjd8wmeEa8rj]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/HellHound.webp",
+  "url": "/assets/atlas/enemies/json/iscl4q82ivnyelzc.json",
+  "updated_at": "2026-07-09T11:33:14.964Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

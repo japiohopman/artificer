@@ -1,0 +1,31 @@
+{
+  "index": "sgjrf8qqv97ccwm4",
+  "name": "magic weapon",
+  "desc": [
+    "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to Attack rolls and Damage Rolls.",
+    "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/sgjrf8qqv97ccwm4.json",
+  "image": "/assets/atlas/spell/images/sgjrf8qqv97ccwm4.webp",
+  "updated_at": "2026-07-10T15:34:53.093Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

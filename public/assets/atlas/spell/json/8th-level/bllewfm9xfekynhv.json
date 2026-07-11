@@ -1,0 +1,30 @@
+{
+  "index": "bllewfm9xfekynhv",
+  "name": "mind blank",
+  "desc": [
+    "Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, Divination Spells, and the Charmed condition. The spell even foils Wish spells and Spells or Effects of similar power used to affect the target's mind or to gain information about the target."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "24 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/bllewfm9xfekynhv.json",
+  "image": "/assets/atlas/spell/images/bllewfm9xfekynhv.webp",
+  "updated_at": "2026-07-10T15:34:53.225Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,85 @@
+{
+  "index": "k15yl8jmb5ipircc",
+  "name": "druid",
+  "desc": "Druid is a CR 2 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 12,
+  "wisdom": 15,
+  "charisma": 11,
+  "stats": {
+    "str": 10,
+    "dex": 12,
+    "con": 13,
+    "int": 12,
+    "wis": 15,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spellcasting",
+      "desc": "The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared: Cantrips (at will): [[/item .SbSvZKkJASyk8jKo]]{druidcraft}, [[/item .eCPQuQkIabFKTl9u]]{produce flame}, [[/item .VzgFzcmocr1X1cp4]]{shillelagh} 1st level (4 slots): [[/item .gMrWeG8fMDPRFiVe]]{entangle}, [[/item .B0pnIcc52O6G8hi8]]{longstrider}, [[/item .aL1F8fvYLtNzUbKu]]{speak with animals}, [[/item .WTbOQBsarsL1LuXJ]]{thunderwave} 2nd level (3 slots): [[/item .X8w9EzYLGc4vQ1H2]]{animal messenger}, [[/item .JPwIEfgUPVebr5AH]]{barkskin}",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "quarterstaff",
+      "desc": "[[/attack extended]]. [[/damage extended]] or [[/damage twoHanded]] if wielded with two hands. With @UUID[.udSiVp4nSrGBSvG1]{shillelagh}, [[/attack extended activity=hQCHzLhxJpg6id19]]. [[/damage extended activity=hQCHzLhxJpg6id19]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Druid.webp",
+  "url": "/assets/atlas/enemies/json/k15yl8jmb5ipircc.json",
+  "updated_at": "2026-07-09T11:33:15.162Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

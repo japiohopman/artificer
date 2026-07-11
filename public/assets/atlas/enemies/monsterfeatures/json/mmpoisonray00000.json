@@ -1,0 +1,22 @@
+{
+  "index": "mmpoisonray00000",
+  "name": "poison ray",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "2d8",
+      "damage_type": {
+        "index": "poison",
+        "name": "poison",
+        "url": "/assets/atlas/damage_types/json/poison.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "150 ft",
+  "image": "icons/magic/light/beam-rays-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpoisonray00000.json",
+  "updated_at": "2026-07-10T05:56:36.912Z"
+}

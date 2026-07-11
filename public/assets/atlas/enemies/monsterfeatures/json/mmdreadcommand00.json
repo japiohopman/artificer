@@ -1,0 +1,13 @@
+{
+  "index": "mmdreadcommand00",
+  "name": "dread command",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{Command} (level 2 version), using the same spellcasting ability as Spellcasting. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdreadcommand00.json",
+  "updated_at": "2026-07-10T05:56:36.943Z"
+}

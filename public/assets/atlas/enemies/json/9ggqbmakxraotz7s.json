@@ -1,0 +1,132 @@
+{
+  "index": "9ggqbmakxraotz7s",
+  "name": "bearded devil",
+  "desc": "Bearded Devil is a CR 3 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 16",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 15,
+  "constitution": 15,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 11,
+  "stats": {
+    "str": 16,
+    "dex": 15,
+    "con": 15,
+    "int": 9,
+    "wis": 11,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "steadfast",
+      "desc": "The [[lookup @name lowercase]]{monster} can't be &reference[frightened apply=false] while it can see an allied creature within 30 feet of it.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "beard",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or be &Reference[poisoned] for [[lookup @labels.duration activity=otXVZOYTWnkMPkxs]]. While poisoned in this way, the target can't regain hit points. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "glaive",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature other than an undead or a construct, it must succeed on a [[/save]] saving throw or lose 5 (1d10) hit points at the start of each of its turns due to an infernal wound. Each time the [[lookup @name lowercase]]{monster} hits the wounded target with this attack, the damage dealt by the wound increases by 5 (1d10). Any creature can take an action to stanch the wound with a successful [[/check 12 wis med]] check. The wound also closes if the target receives magical healing.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .ndwCjJFBLTujojCl]]{beard} and one with its [[/item .RgZ4lGrNf9AaIyrG]]{glaive}.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/BeardedDevil.webp",
+  "url": "/assets/atlas/enemies/json/9ggqbmakxraotz7s.json",
+  "updated_at": "2026-07-09T11:33:14.938Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -340,6 +340,20 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   const timestamp = Date.now();
   let finalUrl = "";
 
+  const isLocalhost = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1' || 
+    window.location.hostname.startsWith('192.168.') ||
+    window.location.hostname.startsWith('10.') ||
+    window.location.hostname.endsWith('.gitpod.io')
+  );
+
+  // Support 2024 class assets and official illustrations by mapping from /assets/atlas/ui/official/classes/ to /assets/ui/official/classes/
+  if (url && typeof url === 'string') {
+    url = url.replace(/\/assets\/atlas\/ui\/official\/classes\//gi, '/assets/ui/official/classes/');
+    url = url.replace(/assets\/atlas\/ui\/official\/classes\//gi, 'assets/ui/official/classes/');
+  }
+
   // Normalize category names to folder names
   const categoryToFolder: Record<string, string> = {
     'enemy': 'enemies',
@@ -381,6 +395,9 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   }
   
   if (url && url.startsWith('public/data/character_save/')) {
+    if (isLocalhost) {
+      return `/${url}`;
+    }
     return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${url}?t=${timestamp}`;
   }
 
@@ -392,15 +409,31 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     // We try both underscore and hyphen versions if guessing
     if (folder === 'npc_character_profiles' || folder === 'npc_profiles') {
       const actualCategory = 'character/npc_character_profiles';
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${actualCategory}/images/${underscoreIndex}/${underscoreIndex}_portrait.webp`;
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/${actualCategory}/images/${underscoreIndex}/${underscoreIndex}_portrait.webp`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${actualCategory}/images/${underscoreIndex}/${underscoreIndex}_portrait.webp`;
+      }
     } else if (wikiImageCategories.includes(folder)) {
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/wiki_image/${ddbIndex}.webp`;
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/${folder}/wiki_image/${ddbIndex}.webp`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/wiki_image/${ddbIndex}.webp`;
+      }
     } else if (categoriesWithImagesFolder.includes(folder)) {
       // Prefer underscore for equipment/materials as they often match filenames
       const filename = (folder === 'equipment' || folder === 'materials' || folder === 'transport') ? underscoreIndex : ddbIndex;
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/images/${filename}.webp`;
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/${folder}/images/${filename}.webp`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/images/${filename}.webp`;
+      }
     } else {
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/${ddbIndex}.webp`;
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/${folder}/${ddbIndex}.webp`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/${ddbIndex}.webp`;
+      }
     }
   } else if (url && url.startsWith('data:image/')) {
     return url;
@@ -418,13 +451,17 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     const atlasIndex = pathParts.indexOf('atlas');
     const pathCategory = atlasIndex !== -1 ? pathParts[atlasIndex + 1] : folder;
     
-    if (categoriesWithImages.includes(pathCategory) && cleanUrl.includes(`/atlas/${pathCategory}/`) && !cleanUrl.includes(`/atlas/${pathCategory}/images/`)) {
+    if (categoriesWithImages.includes(pathCategory) && cleanUrl.includes(`/atlas/${pathCategory}/`) && !cleanUrl.includes(`/atlas/${pathCategory}/images/`) && !cleanUrl.includes(`/atlas/${pathCategory}/tokens/`)) {
       cleanUrl = cleanUrl.replace(`/atlas/${pathCategory}/`, `/atlas/${pathCategory}/images/`);
     } else if (wikiImageCategories.includes(pathCategory) && cleanUrl.includes(`/atlas/${pathCategory}/`) && !cleanUrl.includes(`/atlas/${pathCategory}/wiki_image/`)) {
       cleanUrl = cleanUrl.replace(`/atlas/${pathCategory}/`, `/atlas/${pathCategory}/wiki_image/`);
     }
     
-    finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${cleanUrl}`;
+    if (isLocalhost) {
+      finalUrl = cleanUrl;
+    } else {
+      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${cleanUrl}`;
+    }
   } else if (url && url.includes('github.com') && (url.includes('/blob/') || url.includes('/tree/'))) {
     finalUrl = url.replace('github.com', 'raw.githubusercontent.com')
                   .replace('/blob/', '/')
@@ -434,14 +471,22 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     // Simple filename or relative path from JSON
     const cleanPath = url.startsWith('/') ? url : '/' + url;
     if (cleanPath.includes('/atlas/')) {
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets${cleanPath.substring(cleanPath.indexOf('/atlas/'))}`;
+      if (isLocalhost) {
+        finalUrl = `/assets${cleanPath.substring(cleanPath.indexOf('/atlas/'))}`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets${cleanPath.substring(cleanPath.indexOf('/atlas/'))}`;
+      }
     } else {
       const wikiImageCategories = ['class', 'species', 'subraces', 'backgrounds'];
       const isWiki = wikiImageCategories.includes(folder);
       const subfolder = isWiki ? 'wiki_image' : 'images';
       
       const filename = url.includes('.') ? url : url + '.webp';
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/${subfolder}/${filename}`;
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/${folder}/${subfolder}/${filename}`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/${folder}/${subfolder}/${filename}`;
+      }
     }
   } else {
     finalUrl = url || "";
@@ -883,16 +928,51 @@ export async function fetchDamageTypeData(index: string): Promise<any> {
 }
 
 export async function fetchSpellData(index: string): Promise<any> {
-  // Try local first
+  let resolvedPath: string | null = null;
+
+  // Try resolving path from local index first
   try {
-    const res = await fetch(`/assets/atlas/spell/json/${index}.json`);
+    const indexRes = await fetch('/assets/atlas/spell/index.json');
+    if (indexRes.ok) {
+      const spellIndex = await indexRes.json();
+      const entry = spellIndex.find((s: any) => s.index === index);
+      if (entry && entry.json_path) {
+        resolvedPath = entry.json_path;
+      }
+    }
+  } catch (e) {}
+
+  // If not found in index, attempt direct subdirectories via iterative fallback
+  if (!resolvedPath) {
+    const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
+    for (const lvl of levels) {
+      try {
+        const checkRes = await fetch(`/assets/atlas/spell/json/${lvl}/${index}.json`, { method: 'HEAD' });
+        if (checkRes.ok) {
+          resolvedPath = `/assets/atlas/spell/json/${lvl}/${index}.json`;
+          break;
+        }
+      } catch (e) {}
+    }
+  }
+
+  // Fallback to legacy path if still unresolved
+  if (!resolvedPath) {
+    resolvedPath = `/assets/atlas/spell/json/${index}.json`;
+  }
+
+  // Fetch local spell data
+  try {
+    const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
       return { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index) };
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${index}.json?t=${Date.now()}`;
+  // Construct GitHub raw path
+  const subpath = resolvedPath.replace(/^\/?assets\/atlas\/spell\/json\//, '').replace(/^\/?public\/assets\/atlas\/spell\/json\//, '');
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${subpath}?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -921,6 +1001,19 @@ export async function fetchSpellList(): Promise<any[]> {
           imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
         }));
       }
+    }
+  } catch (e) {}
+
+  // Try to load index from GitHub raw first before calling GitHub Contents API
+  const githubIndexUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/index.json?t=${Date.now()}`;
+  try {
+    const res = await fetch(`/api/raw?url=${encodeURIComponent(githubIndexUrl)}`);
+    const data = await safeJson(res);
+    if (data && Array.isArray(data)) {
+      return data.map((s: any) => ({
+        ...s,
+        imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
+      }));
     }
   } catch (e) {}
 

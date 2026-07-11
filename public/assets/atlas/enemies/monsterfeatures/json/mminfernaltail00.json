@@ -1,0 +1,19 @@
+{
+  "index": "mminfernaltail00",
+  "name": "infernal tail",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=tJYeyUk3iPYJq9xM]], one [[lookup @target.affects.type activity=tJYeyUk3iPYJq9xM]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=tJYeyUk3iPYJq9xM]] [[lookup @range.units activity=tJYeyUk3iPYJq9xM]].\nFailure: [[/damage average activity=tJYeyUk3iPYJq9xM]] damage, and the target receives an infernal wound if it doesn't have one. While wounded, the target loses [[/damage average activity=zZfCQ0IeJZCjPLzE]] Hit Points at the start of each of its turns. The wound closes after [[lookup @duration.value activity=tJYeyUk3iPYJq9xM]] [[lookup @duration.units activity=tJYeyUk3iPYJq9xM]], after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a [[/check dc=17 ability=wis skill=med format=long]].",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "10 ft",
+  "image": "icons/creatures/abilities/tail-strike-bone-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mminfernaltail00.json",
+  "updated_at": "2026-07-10T05:56:36.818Z"
+}

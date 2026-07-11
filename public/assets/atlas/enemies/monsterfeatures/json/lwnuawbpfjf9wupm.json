@@ -1,0 +1,17 @@
+{
+  "index": "lwnuawbpfjf9wupm",
+  "name": "second roar",
+  "type": "feat",
+  "desc": "Each creature that fails a  DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/lwnuawbpfjf9wupm.json",
+  "updated_at": "2026-07-10T05:56:36.744Z"
+}

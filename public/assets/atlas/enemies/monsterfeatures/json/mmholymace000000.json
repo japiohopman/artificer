@@ -1,0 +1,22 @@
+{
+  "index": "mmholymace000000",
+  "name": "holy mace",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/maces/mace-flanged-steel.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmholymace000000.json",
+  "updated_at": "2026-07-10T05:56:36.901Z"
+}

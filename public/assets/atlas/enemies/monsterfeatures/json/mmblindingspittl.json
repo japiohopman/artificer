@@ -1,0 +1,22 @@
+{
+  "index": "mmblindingspittl",
+  "name": "blinding spittle",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=JfU8KFZkAJxWtrhk]], each creature in a [[lookup @target.template.size activity=JfU8KFZkAJxWtrhk]]-foot-radius Sphere centered on a point within [[lookup @range.value activity=JfU8KFZkAJxWtrhk]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Blinded apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "10-foot sphere",
+  "image": "icons/magic/light/projectile-smoke-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmblindingspittl.json",
+  "updated_at": "2026-07-10T05:56:36.787Z"
+}

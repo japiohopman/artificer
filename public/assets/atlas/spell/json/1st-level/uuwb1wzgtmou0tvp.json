@@ -1,0 +1,31 @@
+{
+  "index": "uuwb1wzgtmou0tvp",
+  "name": "cure wounds",
+  "desc": [
+    "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/uuwb1wzgtmou0tvp.json",
+  "image": "/assets/atlas/spell/images/uuwb1wzgtmou0tvp.webp",
+  "updated_at": "2026-07-10T15:34:53.022Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

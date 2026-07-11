@@ -1,0 +1,32 @@
+{
+  "index": "pv04y1ixowiom6bp",
+  "name": "incendiary cloud",
+  "desc": [
+    "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius Sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the Duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.",
+    "When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
+    "The cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns."
+  ],
+  "range": "150 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/pv04y1ixowiom6bp.json",
+  "image": "/assets/atlas/spell/images/pv04y1ixowiom6bp.webp",
+  "updated_at": "2026-07-10T15:34:53.224Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

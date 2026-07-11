@@ -1,0 +1,26 @@
+{
+  "index": "eh80lkzhieojp8fi",
+  "name": "engulf",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the [[lookup @name lowercase]]{monster} enters a creature's space, the creature must make a DC 12 Dexterity saving throw.On a successful save, the creature can choose to be pushed 5 feet back or to the side of the [[lookup @name lowercase]]{monster}. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.\nOn a failed save, the [[lookup @name lowercase]]{monster} enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. When the [[lookup @name lowercase]]{monster} moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the [[lookup @name lowercase]]{monster}.\nWhenever the [[lookup @name lowercase]]{monster} enters a creature's space, the creature must make a Dexterity saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the [[lookup @name lowercase]]{monster}. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 12,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/pseudopod-swirl-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/eh80lkzhieojp8fi.json",
+  "updated_at": "2026-07-10T05:56:36.683Z"
+}

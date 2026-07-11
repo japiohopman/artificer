@@ -1,0 +1,13 @@
+{
+  "index": "mmshimmeringshie",
+  "name": "shimmering shield",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} targets itself or one [[lookup @target.affects.type activity=sl8NoPhB0e5z6jmK]] it can see within [[lookup @range.value activity=sl8NoPhB0e5z6jmK]] feet of itself. The target gains [[/healing average temp]], and its AC increases by 2 until the end of the [[lookup @name lowercase]]{monster}'s' next turn. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmshimmeringshie.json",
+  "updated_at": "2026-07-10T05:56:36.952Z"
+}

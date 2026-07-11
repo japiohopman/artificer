@@ -1,0 +1,92 @@
+{
+  "index": "f0yilx4xkkt4dxky",
+  "name": "reef shark",
+  "desc": "Reef Shark is a CR 0.5 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8 + 4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 14,
+    "dex": 13,
+    "con": 13,
+    "int": 1,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water breathing",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe only underwater.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/ReefShark.webp",
+  "url": "/assets/atlas/enemies/json/f0yilx4xkkt4dxky.json",
+  "updated_at": "2026-07-09T11:33:14.216Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

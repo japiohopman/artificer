@@ -1,0 +1,26 @@
+{
+  "index": "kcujvqixzi3app5a",
+  "name": "breath weapons",
+  "type": "feat",
+  "desc": "(NOTE: THIS SHOULD BE USED ONLY IF THE CREATURE HAS MORE THAN ONE TYPE OF BREATH WEAPON, AND CONTAINS THE CHARGES FOR THOSE BREATH WEAPONS. EACH BREATH WEAPON ITSELF SHOULD ALSO BE ADDED.)\nThe [[lookup @details.type.config.label lowercase]]{monster} uses one of the following breath weapons.\n**Fire Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales fire in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 45 (13d6) fire damage on a failed save, or half as much damage on a successful one.\n**Sleep Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales sleep gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.\nThe [[lookup @details.type.config.label lowercase]]{monster} breathes in!",
+  "damage": [
+    {
+      "damage_dice": "13d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/kcujvqixzi3app5a.json",
+  "updated_at": "2026-07-10T05:56:36.659Z"
+}

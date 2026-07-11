@@ -1,0 +1,19 @@
+{
+  "index": "mmentanglingrope",
+  "name": "entangling rope",
+  "type": "feat",
+  "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=n8nEah4vbrEPphNF]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=n8nEah4vbrEPphNF]] feet. Failure: [[/damage average]] damage, and the target has the &Reference[Restrained apply=false] condition until the rope is destroyed, the [[lookup @name lowercase]]{monster} uses a Bonus Action to release the target, or the [[lookup @name lowercase]]{monster} uses Entangling Rope again.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/control/debuff-chains-ropes-net-red-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmentanglingrope.json",
+  "updated_at": "2026-07-10T05:56:36.808Z"
+}

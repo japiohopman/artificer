@@ -1,0 +1,101 @@
+{
+  "index": "5sgvghqbswgwrwsf",
+  "name": "nightmare",
+  "desc": "Nightmare is a CR 3 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 68,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10 + 24",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 15,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "understands Abyssal, Common, and Infernal but can't speak",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "confer fire resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} can grant resistance to fire damage to anyone riding it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds &reference[bright light] in a 10-foot radius and &reference[dim light] for an additional 10 feet.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "ethereal stride",
+      "desc": "The [[lookup @name lowercase]]{monster} and up to [[lookup @labels.description.affects activity=g0q1v5S5s6ZLTZcz]] within [[lookup @labels.description.range activity=g0q1v5S5s6ZLTZcz]] of it magically enter the Ethereal Plane from the Material Plane, or vice versa.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Nightmare.webp",
+  "url": "/assets/atlas/enemies/json/5sgvghqbswgwrwsf.json",
+  "updated_at": "2026-07-09T11:33:15.002Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

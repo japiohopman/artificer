@@ -1,0 +1,37 @@
+{
+  "index": "kgew3sdr39c6g8ny",
+  "name": "conjure minor elementals",
+  "desc": [
+    "You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:",
+    "One elemental of challenge rating 2 or lower",
+    "Two elementals of challenge rating 1 or lower",
+    "Four elementals of challenge rating 1/2 or lower",
+    "Eight elementals of challenge rating 1/4 or lower.",
+    "An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.",
+    "The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.",
+    "Higher Levels. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
+  ],
+  "range": "90 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 4,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/kgew3sdr39c6g8ny.json",
+  "image": "/assets/atlas/spell/images/kgew3sdr39c6g8ny.webp",
+  "updated_at": "2026-07-10T15:34:53.141Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

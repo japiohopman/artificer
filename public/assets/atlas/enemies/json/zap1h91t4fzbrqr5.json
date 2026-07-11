@@ -1,0 +1,129 @@
+{
+  "index": "zap1h91t4fzbrqr5",
+  "name": "couatl",
+  "desc": "Couatl is a CR 4 celestial.",
+  "size": "Medium",
+  "type": "celestial",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8 + 39",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 20,
+  "constitution": 17,
+  "intelligence": 18,
+  "wisdom": 20,
+  "charisma": 18,
+  "stats": {
+    "str": 16,
+    "dex": 20,
+    "con": 17,
+    "int": 18,
+    "wis": 20,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant"
+  ],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "psychic",
+    "slashing"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 15
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or be &Reference[poisoned apply=false] for 24 hours. Until this poison ends, the target is &Reference[unconscious apply=false]. Another creature can use an action to shake the target awake.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "constrict",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is grappled (escape [[/check]]). Until this grapple ends, the target is restrained, and the [[lookup @name lowercase]]{monster} can't constrict another target.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "change shape",
+      "desc": "The couatl magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the couatl's choice). In a new form, the couatl retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and other actions are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks. If the new form has a bite attack, the couatl can use its bite in that form.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The [[lookup @name lowercase]]{monster}'s spellcasting ability is Charisma (spell save DC [[lookup @abilities.cha.dc]]). It can innately cast the following spells, requiring only verbal components: At will: [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .ppWAAEul0QHtm4er]]{detect thoughts} 3/day each: [[/item .8dzaICjGy6mTUaUr]]{bless}, [[/item .BV0mpbHh29IbbIj5]]{create food and water}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .MAxM77CDUu8dgIRQ]]{protection from poison}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}, [[/item .z1mx84ONwkXKUZd7]]{shield} 1/day each: [[/item .kSPRpeIx3w3nihrF]]{dream}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration}, [[/item .fVbCxFRaORalHB20]]{scrying}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shielded mind",
+      "desc": "The [[lookup @name lowercase]]{monster} is immune to scrying and to any effect that would sense its emotions, read its thoughts, or detect its location.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/celestial/Couatl.webp",
+  "url": "/assets/atlas/enemies/json/zap1h91t4fzbrqr5.json",
+  "updated_at": "2026-07-09T11:33:14.376Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

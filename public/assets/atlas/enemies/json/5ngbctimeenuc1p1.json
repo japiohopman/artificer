@@ -1,0 +1,108 @@
+{
+  "index": "5ngbctimeenuc1p1",
+  "name": "kobold",
+  "desc": "Kobold is a CR 0.125 humanoid.",
+  "size": "Small",
+  "type": "humanoid",
+  "subtype": "Kobold",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "2d6 - 2",
+  "hit_points_roll": "2d6 - 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 9,
+  "intelligence": 8,
+  "wisdom": 7,
+  "charisma": 8,
+  "stats": {
+    "str": 7,
+    "dex": 15,
+    "con": 9,
+    "int": 8,
+    "wis": 7,
+    "cha": 8
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sling",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Kobold.webp",
+  "url": "/assets/atlas/enemies/json/5ngbctimeenuc1p1.json",
+  "updated_at": "2026-07-09T11:33:15.212Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

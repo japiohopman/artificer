@@ -1,0 +1,33 @@
+{
+  "index": "2yhxecrrbadzdr5m",
+  "name": "heat metal",
+  "desc": [
+    "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 2d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.",
+    "If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn.",
+    "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A piece of iron and a flame.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/2yhxecrrbadzdr5m.json",
+  "image": "/assets/atlas/spell/images/2yhxecrrbadzdr5m.webp",
+  "updated_at": "2026-07-10T15:34:53.087Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

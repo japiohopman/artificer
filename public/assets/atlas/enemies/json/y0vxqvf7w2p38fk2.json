@@ -1,0 +1,78 @@
+{
+  "index": "y0vxqvf7w2p38fk2",
+  "name": "scorpion",
+  "desc": "Scorpion is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4 - 1",
+  "hit_points_roll": "1d4 - 1",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 2,
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 8,
+    "int": 1,
+    "wis": 8,
+    "cha": 2
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "sting",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=b0UbkEkjgaqHm8tR]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Scorpion.webp",
+  "url": "/assets/atlas/enemies/json/y0vxqvf7w2p38fk2.json",
+  "updated_at": "2026-07-09T11:33:14.234Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,109 @@
+{
+  "index": "5p1vgazqwoilwzqf",
+  "name": "djinni",
+  "desc": "Djinni is a CR 11 elemental.",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 161,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10 + 84",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 21,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 15,
+  "wisdom": 16,
+  "charisma": 20,
+  "stats": {
+    "str": 21,
+    "dex": 15,
+    "con": 22,
+    "int": 15,
+    "wis": 16,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "elemental demise",
+      "desc": "If the [[lookup @name lowercase]]{monster} dies, its body disintegrates into a warm breeze, leaving behind only equipment the [[lookup @name lowercase]]{monster} was wearing or carrying.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The djinni's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells, requiring no material components: At will: [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .WTbOQBsarsL1LuXJ]]{thunderwave} 3/day each: [[/item .BV0mpbHh29IbbIj5]]{create food and water} (can create wine instead of water), [[/item .gopnZvS0c2jD5FP8]]{tongues}, [[/item .8PJAsHmbu6UgDHC0]]{wind walk} 1/day each: conjure elemental (air elemental only), [[/item .lnaGnxMzpYnbw1uU]]{creation}, [[/item .2IWiZAJtOGDoKjiz]]{gaseous form}, [[/item .1N8dDMMgZ1h1YJ3B]]{invisibility}, [[/item .nslx2nT3p4lNkmdp]]{major image}, [[/item .J6Jpw5XzB5aTeqnz]]{plane shift}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .DGP7lnAJT1cv8SA4]]{scimitar} attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "scimitar",
+      "desc": "[[/attack extended]]. [[/damage extended]] (djinni's choice).",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "create whirlwind",
+      "desc": "A [[lookup @labels.description.template activity=5QSOnuuVfbhaFcH4]] of swirling air magically forms on a point the djinni can see within [[lookup @labels.description.range activity=5QSOnuuVfbhaFcH4]] of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a [[/save]] saving throw or be restrained by it. The djinni can move the whirlwind up to [[lookup @labels.description.range activity=gtStP2vVpkp7MMw5]] as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it. A creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a [[/check activity=LlBHDTeLFiSXeSPL]] check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Djinni.webp",
+  "url": "/assets/atlas/enemies/json/5p1vgazqwoilwzqf.json",
+  "updated_at": "2026-07-09T11:33:14.824Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

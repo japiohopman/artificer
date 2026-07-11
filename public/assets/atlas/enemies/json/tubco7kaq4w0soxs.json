@@ -1,0 +1,101 @@
+{
+  "index": "tubco7kaq4w0soxs",
+  "name": "lemure",
+  "desc": "Lemure is a CR 0 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 7
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "15 ft."
+  },
+  "strength": 10,
+  "dexterity": 5,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 11,
+  "charisma": 3,
+  "stats": {
+    "str": 10,
+    "dex": 5,
+    "con": 11,
+    "int": 1,
+    "wis": 11,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Cannot Speak",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hellish rejuvenation",
+      "desc": "A [[lookup @name lowercase]]{monster} that dies in the Nine Hells sometimes comes back to comes back to life with all its hit points in [[/r 1d10 #Days until the lemure revives.]] days unless it is killed by a good-aligned creature with a @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless} spell cast on that creature or its remains are sprinkled with @UUID[Compendium.dnd5e.equipment24.Item.nshr9PBVyB03T7wB]{Holy Water}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fist",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Lemure.webp",
+  "url": "/assets/atlas/enemies/json/tubco7kaq4w0soxs.json",
+  "updated_at": "2026-07-09T11:33:14.984Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,16 @@
+{
+  "index": "8fx2klwybakeygzs",
+  "name": "relentless",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead. Recharges on a short or long rest.\nIf the [[lookup @name lowercase]]{monster} takes damage that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": null,
+  "image": "icons/magic/water/heart-ice-freeze.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/8fx2klwybakeygzs.json",
+  "updated_at": "2026-07-10T05:56:36.739Z"
+}

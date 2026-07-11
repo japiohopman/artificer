@@ -1,0 +1,78 @@
+{
+  "index": "plzsh4da517tn73e",
+  "name": "giant lizard",
+  "desc": "Giant Lizard is a CR 0.25 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 15,
+    "dex": 12,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantLizard.webp",
+  "url": "/assets/atlas/enemies/json/plzsh4da517tn73e.json",
+  "updated_at": "2026-07-09T11:33:14.119Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,17 @@
+{
+  "index": "1xef2vmmpw7qyffo",
+  "name": "create whirlwind",
+  "type": "feat",
+  "desc": "A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the [[lookup @name lowercase]]{monster} can see within 120 feet of it. The whirlwind lasts as long as the [[lookup @name lowercase]]{monster} maintains concentration (as if concentrating on a spell).\nAny creature but the [[lookup @name lowercase]]{monster} that enters the whirlwind must succeed on a DC 18 Strength saving throw or be restrained by it. the [[lookup @name lowercase]]{monster} can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the [[lookup @name lowercase]]{monster} loses sight of it.\nA creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.\nA 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the [[lookup @name lowercase]]{monster} can see within 120 feet of it. Any creature but the [[lookup @name lowercase]]{monster} that enters the whirlwind must make a Strength saving throw or be restrained by it. the [[lookup @name lowercase]]{monster} can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. A creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/magic/air/wind-tornado-cyclone-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/1xef2vmmpw7qyffo.json",
+  "updated_at": "2026-07-10T05:56:36.670Z"
+}

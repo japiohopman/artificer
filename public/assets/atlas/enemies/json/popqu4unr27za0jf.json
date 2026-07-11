@@ -1,0 +1,115 @@
+{
+  "index": "popqu4unr27za0jf",
+  "name": "minotaur",
+  "desc": "Minotaur is a CR 3 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 76,
+  "hit_dice": "9d10",
+  "hit_points_roll": "9d10 + 27",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 16,
+  "charisma": 9,
+  "stats": {
+    "str": 18,
+    "dex": 11,
+    "con": 16,
+    "int": 6,
+    "wis": 16,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 10 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf.Item.zTqVT0QztTuMOv0e]{Gore} attack on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be pushed up to 10 feet away and knocked &reference[prone].",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "labyrinthine recall",
+      "desc": "The [[lookup @name lowercase]]{monster} can perfectly recall any path it has traveled.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "greataxe",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "reckless",
+      "desc": "At the start of its turn, the [[lookup @name lowercase]]{monster} can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Minotaur.webp",
+  "url": "/assets/atlas/enemies/json/popqu4unr27za0jf.json",
+  "updated_at": "2026-07-09T11:33:15.461Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

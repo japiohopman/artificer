@@ -1,0 +1,115 @@
+{
+  "index": "13k3xk2a3wwxvkld",
+  "name": "spy",
+  "desc": "Spy is a CR 1 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 10,
+    "dex": 15,
+    "con": 10,
+    "int": 12,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any two",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "cunning action",
+      "desc": "On each of its turns, the [[lookup @name lowercase]]{monster} can use a bonus action to take the &reference[dash], &reference[disengage], or &reference[hide] action.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The spy makes two melee attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hand crossbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sneak attack",
+      "desc": "Once per turn, the [[lookup @name lowercase]]{monster} deals an extra [[/damage average]] damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the [[lookup @name lowercase]]{monster} that isn't &reference[incapacitated apply=false] and the [[lookup @name lowercase]]{monster} doesn't have disadvantage on the attack roll.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Spy.webp",
+  "url": "/assets/atlas/enemies/json/13k3xk2a3wwxvkld.json",
+  "updated_at": "2026-07-09T11:33:15.255Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,61 @@
+{
+  "index": "rll22hyeah3ljhdi",
+  "name": "giant fly",
+  "desc": "Giant Fly is a CR 0 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 3",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 14,
+    "dex": 13,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/rll22hyeah3ljhdi.webp",
+  "url": "/assets/atlas/enemies/json/rll22hyeah3ljhdi.json",
+  "updated_at": "2026-07-09T11:33:14.109Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

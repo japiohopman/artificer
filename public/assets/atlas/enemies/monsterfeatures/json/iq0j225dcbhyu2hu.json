@@ -1,0 +1,25 @@
+{
+  "index": "iq0j225dcbhyu2hu",
+  "name": "draining kiss",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} kisses a creature charmed by it or a willing creature. The target must make a DC 15 Constitution saving throw against this magic, taking 32 (5d10 + 5) psychic damage on a failed save, or half as much damage on a successful one.\nThe target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.\nThe target must make a Constitution saving throw against this magic.",
+  "damage": [
+    {
+      "damage_dice": "5d10+5",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "con",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/air/wind-vortex-swirl-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/iq0j225dcbhyu2hu.json",
+  "updated_at": "2026-07-10T05:56:36.680Z"
+}

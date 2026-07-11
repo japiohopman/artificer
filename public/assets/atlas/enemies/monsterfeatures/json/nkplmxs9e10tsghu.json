@@ -1,0 +1,17 @@
+{
+  "index": "nkplmxs9e10tsghu",
+  "name": "tentacles",
+  "type": "feat",
+  "desc": "One creature grappled by the [[lookup @name lowercase]]{monster} must succeed on a  DC 13 Constitution saving throw or be poisoned for 1 minute.\nUntil this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nOne creature grappled by the [[lookup @name lowercase]]{monster} must make a Constitution saving throw. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/tentacles/tentacles-thing-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/nkplmxs9e10tsghu.json",
+  "updated_at": "2026-07-10T05:56:36.763Z"
+}

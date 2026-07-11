@@ -1,0 +1,87 @@
+{
+  "index": "vc2tagiuq4yinjbf",
+  "name": "white dragon wyrmling",
+  "desc": "White Dragon Wyrmling is a CR 2 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 10,
+  "constitution": 14,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 14,
+    "dex": 10,
+    "con": 14,
+    "int": 5,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "cold breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales an icy blast of hail in a [[lookup @labels.description.template activity=UF4fJlhyYiLM7XeM]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": -1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/WhiteDragonWyrmling.webp",
+  "url": "/assets/atlas/enemies/json/vc2tagiuq4yinjbf.json",
+  "updated_at": "2026-07-09T11:33:14.754Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

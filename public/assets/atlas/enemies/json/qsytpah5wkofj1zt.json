@@ -1,0 +1,117 @@
+{
+  "index": "qsytpah5wkofj1zt",
+  "name": "young gold dragon",
+  "desc": "Young Gold Dragon is a CR 10 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10 + 85",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 21,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 20,
+  "stats": {
+    "str": 23,
+    "dex": 14,
+    "con": 21,
+    "int": 16,
+    "wis": 13,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .IiZoBYBEjE5gGjeD]]{bite} and two with its [[/item .qRuJSlOzJITBzcjv]]{claws}.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Fire Breath. The [[lookup @name lowercase]]{monster} exhales fire in a [[lookup @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Each creature in that area must make a [[/save activity=o8fOmWWIqCYwGu3C]] saving throw, taking [[/damage average activity=o8fOmWWIqCYwGu3C]] damage on a failed save, or half as much damage on a successful one. Weakening Breath. The [[lookup @name lowercase]]{monster} exhales gas in a [[lookup @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Each creature in that area must succeed on a [[/save activity=J4QhEMZOdsyIy2D6]] saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 7,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungGoldDragon.webp",
+  "url": "/assets/atlas/enemies/json/qsytpah5wkofj1zt.json",
+  "updated_at": "2026-07-09T11:33:14.780Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmflamewhip00000",
+  "name": "flame whip",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Huge or smaller creature, the [[lookup @name lowercase]]{monster} pulls the target up to 25 feet straight toward itself, and the target has the &Reference[Prone apply=false] condition.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "force",
+        "name": "force",
+        "url": "/assets/atlas/damage_types/json/force.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/misc/whip-red-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmflamewhip00000.json",
+  "updated_at": "2026-07-10T05:56:36.891Z"
+}

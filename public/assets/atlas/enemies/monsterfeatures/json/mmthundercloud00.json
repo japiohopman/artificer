@@ -1,0 +1,22 @@
+{
+  "index": "mmthundercloud00",
+  "name": "thundercloud",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "thunder",
+        "name": "thunder",
+        "url": "/assets/atlas/damage_types/json/thunder.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "240 ft",
+  "image": "icons/magic/lightning/bolt-strike-creature-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmthundercloud00.json",
+  "updated_at": "2026-07-10T05:56:36.933Z"
+}

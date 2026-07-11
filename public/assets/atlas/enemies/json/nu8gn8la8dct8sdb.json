@@ -1,0 +1,101 @@
+{
+  "index": "nu8gn8la8dct8sdb",
+  "name": "skeleton",
+  "desc": "Skeleton is a CR 0.25 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 15,
+  "intelligence": 6,
+  "wisdom": 8,
+  "charisma": 5,
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 15,
+    "int": 6,
+    "wis": 8,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "Understands all languages it knew in life but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shortbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Skeleton.webp",
+  "url": "/assets/atlas/enemies/json/nu8gn8la8dct8sdb.json",
+  "updated_at": "2026-07-09T11:33:15.758Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

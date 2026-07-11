@@ -1,0 +1,33 @@
+{
+  "index": "lwtuqkkuqdmamoe0",
+  "name": "color spray",
+  "desc": [
+    "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring &reference[unconscious apply=false] creatures and creatures that can't see).",
+    "Starting with the creature that has the lowest current hit points, each creature affected by this spell is &reference[blinded] until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
+    "Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of powder or sand that is colored red, yellow, and blue.",
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/lwtuqkkuqdmamoe0.json",
+  "image": "/assets/atlas/spell/images/lwtuqkkuqdmamoe0.webp",
+  "updated_at": "2026-07-10T15:34:53.014Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

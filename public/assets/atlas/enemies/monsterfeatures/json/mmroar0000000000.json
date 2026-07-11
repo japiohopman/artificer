@@ -1,0 +1,21 @@
+{
+  "index": "mmroar0000000000",
+  "name": "roar",
+  "type": "feat",
+  "desc": "The sphinx emits a magical roar. Whenever it roars, the roar has a different effect, as detailed below (the sequence resets when it takes a Long Rest):\nFirst Roar. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=Igeu89TALGlNPXDg]], each enemy in a [[lookup @target.template.size activity=Igeu89TALGlNPXDg]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Frightened apply=false] condition for [[lookup @duration.value activity=Igeu89TALGlNPXDg]] [[lookup @duration.units activity=Igeu89TALGlNPXDg]].\nSecond Roar. Wisdom Saving Throw: DC [[lookup @save.dc.value activity=uFTndQPvULZVHT9R]], each [[lookup @target.affects.type activity=uFTndQPvULZVHT9R]] in a [[lookup @target.template.size activity=uFTndQPvULZVHT9R]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Paralyzed apply=false] condition, and it repeats the save at the end of each of its turns, ending the effect on itself on a success. After [[lookup @duration.value activity=uFTndQPvULZVHT9R]] [[lookup @duration.units activity=uFTndQPvULZVHT9R]], it succeeds automatically.\nThird Roar. Constitution Saving Throw: DC [[lookup @save.dc.value activity=Td8ArIMDfxWDLbE9]], each [[lookup @target.affects.type activity=Td8ArIMDfxWDLbE9]] in a [[lookup @target.template.size activity=Td8ArIMDfxWDLbE9]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Prone apply=false] condition. Success: [[lookup @damage.onSave capitalize activity=Td8ArIMDfxWDLbE9]] damage only.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "type": "long_rest"
+  },
+  "range": "500-foot radius",
+  "image": "icons/creatures/abilities/lion-roar-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmroar0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.841Z"
+}

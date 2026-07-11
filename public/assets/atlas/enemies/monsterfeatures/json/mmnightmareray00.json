@@ -1,0 +1,22 @@
+{
+  "index": "mmnightmareray00",
+  "name": "nightmare ray",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Frightened apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "psychic",
+        "name": "psychic",
+        "url": "/assets/atlas/damage_types/json/psychic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/unholy/energy-smoke-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmnightmareray00.json",
+  "updated_at": "2026-07-10T05:56:36.907Z"
+}

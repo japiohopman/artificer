@@ -1,0 +1,28 @@
+{
+  "index": "0pdesvxqkd55voh2",
+  "name": "6th level",
+  "desc": [],
+  "range": "Self",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/0pdesvxqkd55voh2.json",
+  "image": "/assets/atlas/spell/images/0pdesvxqkd55voh2.webp",
+  "updated_at": "2026-07-10T15:34:53.183Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,115 @@
+{
+  "index": "1vabsmufoy6jpj14",
+  "name": "drow",
+  "desc": "Drow is a CR 0.25 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Elf",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 11,
+  "wisdom": 11,
+  "charisma": 12,
+  "stats": {
+    "str": 10,
+    "dex": 14,
+    "con": 10,
+    "int": 11,
+    "wis": 11,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fey ancestry",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against being &reference[charmed apply=false], and magic can't put the [[lookup @name lowercase]]{monster} to sleep.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components: At will: [[/item .CAxSzHWizrafT033]]{dancing lights} 1/day each: [[/item .S7VbUetIfVT7B6Eq]]{darkness}, [[/item .nqBDWkVOfcGZt4YU]]{faerie fire}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shortsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hand crossbow",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save activity=k2VWbxuUXUpfkpoz]] saving throw or be &Reference[poisoned] for 1 hour. If the saving throw fails by 5 or more, the target is also &Reference[unconscious] while poisoned in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Drow.webp",
+  "url": "/assets/atlas/enemies/json/1vabsmufoy6jpj14.json",
+  "updated_at": "2026-07-09T11:33:15.156Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

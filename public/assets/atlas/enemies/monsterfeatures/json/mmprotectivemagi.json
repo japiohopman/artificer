@@ -1,0 +1,16 @@
+{
+  "index": "mmprotectivemagi",
+  "name": "protective magic",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Counterspell} or @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Shield} in response to the spell's trigger, using the same spellcasting ability as Spellcasting.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 3,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmprotectivemagi.json",
+  "updated_at": "2026-07-10T05:56:36.834Z"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmrend0000000000",
+  "name": "rend",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/shield-damaged-broken-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmrend0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.916Z"
+}

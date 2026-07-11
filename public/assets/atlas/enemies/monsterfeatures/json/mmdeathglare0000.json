@@ -1,0 +1,23 @@
+{
+  "index": "mmdeathglare0000",
+  "name": "death glare",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=3uA75vqvubgY300I]], [[lookup @target.affects.special activity=3uA75vqvubgY300I]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=3uA75vqvubgY300I]] feet.\nFailure: If the target has 20 Hit Points or fewer, it drops to 0 Hit Points. Otherwise, the target takes [[/damage average]] damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30 ft",
+  "image": "icons/magic/death/skull-energy-light-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdeathglare0000.json",
+  "updated_at": "2026-07-10T05:56:36.802Z"
+}

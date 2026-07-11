@@ -1,0 +1,116 @@
+{
+  "index": "dlqiesmsfsxijd5c",
+  "name": "imp",
+  "desc": "Imp is a CR 1 fiend.",
+  "size": "Tiny",
+  "type": "fiend",
+  "subtype": "Devil, Shapechanger",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "3d4",
+  "hit_points_roll": "3d4 + 3",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 6,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 6,
+    "dex": 17,
+    "con": 13,
+    "int": 11,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shapechanger",
+      "desc": "The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sting (bite in beast form)",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make on a [[/save]] saving throw, taking [[/damage average activity=hUmRNvmmpY5rJfVE]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} magically turns &reference[invisible] until it attacks or until its concentration ends (as if concentrating on a spell). Any equipment the [[lookup @name lowercase]]{monster} wears or carries is invisible with it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Imp.webp",
+  "url": "/assets/atlas/enemies/json/dlqiesmsfsxijd5c.json",
+  "updated_at": "2026-07-09T11:33:14.981Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

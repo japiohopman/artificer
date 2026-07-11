@@ -1,0 +1,23 @@
+{
+  "index": "mmthunderousbell",
+  "name": "thunderous bellow",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=RWBqtTjGSlEgQWCl]], [[lookup @target.affects.special activity=RWBqtTjGSlEgQWCl]] in a [[lookup @target.template.size activity=RWBqtTjGSlEgQWCl]]-[[lookup @target.template.units activity=RWBqtTjGSlEgQWCl]]. [[lookup @target.template.type capitalize activity=RWBqtTjGSlEgQWCl]].\nFailure: [[/damage average]] damage, and the target has the &Reference[Deafened apply=false] and &Reference[Frightened apply=false] conditions until the end of its next turn.\nSuccess: Half damage only.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 27,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "150-foot cone",
+  "image": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmthunderousbell.json",
+  "updated_at": "2026-07-10T05:56:36.854Z"
+}

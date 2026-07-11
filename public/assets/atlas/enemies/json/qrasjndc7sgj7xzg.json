@@ -1,0 +1,110 @@
+{
+  "index": "qrasjndc7sgj7xzg",
+  "name": "young red dragon",
+  "desc": "Young Red Dragon is a CR 10 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10 + 85",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 19,
+  "stats": {
+    "str": 23,
+    "dex": 10,
+    "con": 21,
+    "int": 14,
+    "wis": 11,
+    "cha": 19
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .KuuOPjJ1YeTtjGbN]]{bite} and two with its [[/item .3UHmbpT3v3FTlplI]]{claws}.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales fire in a [[lookup @labels.description.template activity=dN04D22jj4eo1ERu]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungRedDragon.webp",
+  "url": "/assets/atlas/enemies/json/qrasjndc7sgj7xzg.json",
+  "updated_at": "2026-07-09T11:33:14.787Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,141 @@
+{
+  "index": "madgs8pwmvyyfof1",
+  "name": "horned devil",
+  "desc": "Horned Devil is a CR 11 fiend.",
+  "size": "Large",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10 + 85",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 22,
+  "dexterity": 17,
+  "constitution": 21,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 17,
+  "stats": {
+    "str": 22,
+    "dex": 17,
+    "con": 21,
+    "int": 12,
+    "wis": 16,
+    "cha": 17
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fork",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature other than an undead or a construct, it must succeed on a [[/save]] saving throw or lose 10 (3d6) hit points at the start of each of its turns due to an infernal wound. Each time the devil hits the wounded target with this attack, the damage dealt by the wound increases by 10 (3d6). Any creature can take an action to stanch the wound with a successful [[/check 12 wis med]] check. The wound also closes if the target receives magical healing.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three melee attacks: two with its [[/item .g8r9DZeHyfNzerHP]]{fork} and one with its [[/item .VpvOoT7mbR0XNZiL]]{tail}. It can use [[/item .GFYzWSyeuW9O4a0I]]{Hurl Flame} in place of any melee attack.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "hurl flame",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "4d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/HornedDevil.webp",
+  "url": "/assets/atlas/enemies/json/madgs8pwmvyyfof1.json",
+  "updated_at": "2026-07-09T11:33:14.973Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

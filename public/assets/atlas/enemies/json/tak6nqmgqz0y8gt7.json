@@ -1,0 +1,80 @@
+{
+  "index": "tak6nqmgqz0y8gt7",
+  "name": "shrieker",
+  "desc": "Shrieker is a CR 0 plant.",
+  "size": "Medium",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 5
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 1,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "stats": {
+    "str": 1,
+    "dex": 1,
+    "con": 10,
+    "int": 1,
+    "wis": 3,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "blinded",
+    "deafened",
+    "frightened"
+  ],
+  "senses": {
+    "passive_perception": 6
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shriek",
+      "desc": "When &reference[bright light] or a creature is within [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] of the [[lookup @name lowercase]]{monster}, it emits a shriek audible within 300 feet of it. The [[lookup @name lowercase]]{monster} continues to shriek until the disturbance moves out of range and for 1d4 of the [[lookup @name lowercase]]{monster}'s turns afterward.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from an ordinary fungus.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/plant/Shrieker.webp",
+  "url": "/assets/atlas/enemies/json/tak6nqmgqz0y8gt7.json",
+  "updated_at": "2026-07-09T11:33:15.586Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

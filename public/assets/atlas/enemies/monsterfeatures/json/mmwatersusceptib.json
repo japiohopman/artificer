@@ -1,0 +1,22 @@
+{
+  "index": "mmwatersusceptib",
+  "name": "water susceptibility",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} takes 3 (1d6) Cold damage damage for every 5 feet the [[lookup @name lowercase]]{monster} moves in water or for every gallon of water splashed on it.\nFoundry Note\nScaling is configured to roll the correct number of dice based on the distance traveled through water. 1 is default for 5 feet, 2 is for 10 feet, and so forth.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/orb-water-bubbles-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwatersusceptib.json",
+  "updated_at": "2026-07-10T05:56:36.998Z"
+}

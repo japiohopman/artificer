@@ -1,0 +1,106 @@
+{
+  "index": "oqqybzomedfn5afd",
+  "name": "sea hag",
+  "desc": "Sea Hag is a CR 2 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 21",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 16,
+  "intelligence": 12,
+  "wisdom": 12,
+  "charisma": 13,
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 16,
+    "int": 12,
+    "wis": 12,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "horrific appearance",
+      "desc": "Any humanoid that starts its turn within [[lookup @target.template.size activity=krnijW9ix8K2d3wp]] feet of the [[lookup @name lowercase]]{monster} and can see the [[lookup @name lowercase]]{monster}'s true form must make a [[/save]] saving throw. On a failed save, the creature is &Reference[frightened] for [[lookup @labels.duration activity=krnijW9ix8K2d3wp]]. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the [[lookup @name lowercase]]{monster} is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours. Unless the target is &reference[surprise]{Surprised} or the revelation of the [[lookup @name lowercase]]{monster}'s true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "death glare",
+      "desc": "The [[lookup @name lowercase]]{monster} targets one &reference[frightened apply=false] creature she can see within [[lookup @labels.description.range activity=bkCJcO9MdO88ON0n]] of her. If the target can see the [[lookup @name lowercase]]{monster}, it must succeed on a [[/save]] saving throw against this magic or drop to 0 hit points.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illusory appearance",
+      "desc": "The [[lookup @name lowercase]]{monster} covers herself and anything she is wearing or carrying with a magical illusion that makes her look like an ugly creature of her general size and humanoid shape. The effect ends if the [[lookup @name lowercase]]{monster} takes a bonus action to end it or if she dies. The changes wrought by this effect fail to hold up to physical inspection. For example, the [[lookup @name lowercase]]{monster} could appear to have no claws, but someone touching her hand might feel the claws. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a [[/check activity=qwatGWOoJRpKLNtR]] check to discern that the [[lookup @name lowercase]]{monster} is disguised.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/SeaHag.webp",
+  "url": "/assets/atlas/enemies/json/oqqybzomedfn5afd.json",
+  "updated_at": "2026-07-09T11:33:14.905Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

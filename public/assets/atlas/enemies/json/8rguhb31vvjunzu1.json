@@ -1,0 +1,85 @@
+{
+  "index": "8rguhb31vvjunzu1",
+  "name": "crab",
+  "desc": "Crab is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 2,
+  "stats": {
+    "str": 2,
+    "dex": 11,
+    "con": 10,
+    "int": 1,
+    "wis": 8,
+    "cha": 2
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/8rguhb31vvjunzu1.webp",
+  "url": "/assets/atlas/enemies/json/8rguhb31vvjunzu1.json",
+  "updated_at": "2026-07-09T11:33:14.049Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,125 @@
+{
+  "index": "2mznheozwexaybv1",
+  "name": "xorn",
+  "desc": "Xorn is a CR 5 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 73,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 42",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 17,
+    "dex": 10,
+    "con": 22,
+    "int": 11,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "earth glide",
+      "desc": "The [[lookup @name lowercase]]{monster} can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three [[/item .LRjB7lk0aa4TOd16]]{claw} attacks and one [[/item .ODAa1IROPs40MUI2]]{bite} attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "stone camouflage",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Dexterity (Stealth) checks made to &reference[hide] in rocky terrain.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "treasure sense",
+      "desc": "The [[lookup @name lowercase]]{monster} can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 feet of it.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Xorn.webp",
+  "url": "/assets/atlas/enemies/json/2mznheozwexaybv1.json",
+  "updated_at": "2026-07-09T11:33:14.875Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

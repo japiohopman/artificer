@@ -1,0 +1,17 @@
+{
+  "index": "ospht7ja5llvua6e",
+  "name": "stench",
+  "type": "feat",
+  "desc": "Any creature that starts its turn within 5 ft. of the [[lookup @name lowercase]]{monster} must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the [[lookup @name lowercase]]{monster}'s Stench for 24 hours.\nAny creature that starts its turn within 5 ft. of the [[lookup @name lowercase]]{monster} must succeed on a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 10,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/commodities/tech/smoke-bomb-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ospht7ja5llvua6e.json",
+  "updated_at": "2026-07-10T05:56:36.755Z"
+}

@@ -1,0 +1,117 @@
+{
+  "index": "bcapsjdihy5wktpt",
+  "name": "young black dragon",
+  "desc": "Young Black Dragon is a CR 7 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 127,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10 + 45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 17,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 14,
+    "con": 17,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .TMquJwGqWpgp9SJd]]{bite} and two with its [[/item .gy0FMKec2tea9YI1]]{claws}.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "acid breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales acid in a [[lookup @labels.description.template activity=KkzK6MGHKa5GCAwQ]]. Each creature in that line must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungBlackDragon.webp",
+  "url": "/assets/atlas/enemies/json/bcapsjdihy5wktpt.json",
+  "updated_at": "2026-07-09T11:33:14.761Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,38 @@
+{
+  "index": "9eozdbimvkxbeoyz",
+  "name": "enhance ability",
+  "desc": [
+    "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.",
+    "Bear's Endurance. The target has advantage on Constitution Checks. It also gains 2d6 Temporary Hit Points, which are lost when the spell ends.",
+    "Bull's Strength. The target has advantage on Strength Checks, and his or her carrying capacity doubles.",
+    "Cat's Grace. The target has advantage on Dexterity Checks. It also doesn't take damage from Falling 20 feet or less if it isn't Incapacitated.",
+    "Eagle's Splendor. The target has advantage on Charisma Checks.",
+    "Fox's Cunning. The target has advantage on Intelligence Checks.",
+    "Owl's Wisdom. The target has advantage on Wisdom Checks.",
+    "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Fur or a feather from a beast",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/9eozdbimvkxbeoyz.json",
+  "image": "/assets/atlas/spell/images/9eozdbimvkxbeoyz.webp",
+  "updated_at": "2026-07-10T15:34:53.081Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

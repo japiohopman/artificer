@@ -1,0 +1,99 @@
+{
+  "index": "28gu50htg8kp7uiz",
+  "name": "spider",
+  "desc": "Spider is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4 - 1",
+  "hit_points_roll": "1d4 - 1",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 2,
+  "dexterity": 14,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 2,
+  "stats": {
+    "str": 2,
+    "dex": 14,
+    "con": 8,
+    "int": 1,
+    "wis": 10,
+    "cha": 2
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or take [[/damage average activity=gJp39jB1DO0Q5LPK]] damage.",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "web sense",
+      "desc": "While in contact with a web, the [[lookup @name lowercase]]{monster} knows the exact location of any other creature in contact with the same web.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webbing.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Spider.webp",
+  "url": "/assets/atlas/enemies/json/28gu50htg8kp7uiz.json",
+  "updated_at": "2026-07-09T11:33:14.239Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

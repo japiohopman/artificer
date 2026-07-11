@@ -1,0 +1,22 @@
+{
+  "index": "mmberserk0000000",
+  "name": "berserk",
+  "type": "feat",
+  "desc": "Whenever the [[lookup @name lowercase]]{monster} starts its turn &Reference[Bloodied], roll [[/r 1d6]]. On a 6, the [[lookup @name lowercase]]{monster} goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]]{monster} attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]]{monster} attacks an object. Once the [[lookup @name lowercase]]{monster} goes berserk, it remains so until it is destroyed or it is no longer Bloodied.\nThe [[lookup @name lowercase]]{monster}'s creator, if within [[lookup @range.value activity=tnkOsrSwEElO2kZM]] feet of the berserk [[lookup @name lowercase]]{monster}, can try to calm it by taking an action to make a [[/check ability=cha skill=per dc=@abilities.str.dc]] DC 15 Charisma (Persuasion) check; the golem must be able to hear its creator. If this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still Bloodied.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmberserk0000000.json",
+  "updated_at": "2026-07-10T05:56:36.962Z"
+}

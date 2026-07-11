@@ -1,0 +1,140 @@
+{
+  "index": "hm4o2fgpzsdbxjlq",
+  "name": "flesh golem",
+  "desc": "Flesh Golem is a CR 5 construct.",
+  "size": "Medium",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 9
+    }
+  ],
+  "hit_points": 93,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8 + 44",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 19,
+    "dex": 9,
+    "con": 18,
+    "int": 6,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "lightning",
+    "piercing",
+    "poison",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "aversion of fire",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .mjn0iMGrjGTOn42w]]{slam} attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic weapons",
+      "desc": "The [[lookup @name lowercase]]{monster}'s weapon attacks are magical.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "lightning absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "immutable form",
+      "desc": "The [[lookup @name lowercase]]{monster} is immune to any spell or effect that would alter its form.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "berserk",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} starts its turn with 60 hit points or fewer, roll a [[/r d6]]. On a 6, the [[lookup @name lowercase]]{monster} goes berserk. On each of its turns while berserk, the [[lookup @name lowercase]]{monster} attacks the nearest creature it can see. If no creature is near enough to move to and attack, the [[lookup @name lowercase]]{monster} attacks an object, with preference for an object smaller than itself. Once the [[lookup @name lowercase]]{monster} goes berserk, it continues to do so until it is destroyed or regains all its hit points.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/FleshGolem.webp",
+  "url": "/assets/atlas/enemies/json/hm4o2fgpzsdbxjlq.json",
+  "updated_at": "2026-07-09T11:33:14.422Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

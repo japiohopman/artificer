@@ -1,0 +1,127 @@
+{
+  "index": "nb6wugvqeoqtsqku",
+  "name": "treant",
+  "desc": "Treant is a CR 9 plant.",
+  "size": "Huge",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 138,
+  "hit_dice": "12d12",
+  "hit_points_roll": "12d12 + 60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 23,
+  "dexterity": 8,
+  "constitution": 21,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 12,
+  "stats": {
+    "str": 23,
+    "dex": 8,
+    "con": 21,
+    "int": 12,
+    "wis": 16,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "animate trees",
+      "desc": "The [[lookup @name lowercase]]{monster} magically animates one or two trees it can see within [[lookup @labels.description.range activity=1SrLlYGeLgzdmSwc]] of it. These trees have the same statistics as a [[lookup @name lowercase]]{monster}, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the @UUID[Compendium.dnd5e.monsters.Actor.NB6wUgVqeOQtsQKu.Item.lisZZTaupqInGEi1]{slam} action option. An animated tree acts as an ally of the [[lookup @name lowercase]]{monster}. The tree remains animate for [[lookup @labels.duration activity=1SrLlYGeLgzdmSwc]] or until it dies; until the [[lookup @name lowercase]]{monster} dies or is more than 120 feet from the tree; or until the [[lookup @name lowercase]]{monster} takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from a normal tree.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .lisZZTaupqInGEi1]]{slam} attacks.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The [[lookup @name lowercase]]{monster} deals double damage to objects and structures.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/plant/Treant.webp",
+  "url": "/assets/atlas/enemies/json/nb6wugvqeoqtsqku.json",
+  "updated_at": "2026-07-09T11:33:15.591Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

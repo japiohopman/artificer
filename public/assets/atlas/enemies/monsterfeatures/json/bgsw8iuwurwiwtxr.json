@@ -1,0 +1,26 @@
+{
+  "index": "bgsw8iuwurwiwtxr",
+  "name": "fire breath",
+  "type": "feat",
+  "desc": "**Fire Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales fire in an 60-foot line that is 5 feet wide. Each creature in that line must make a  DC 18 Dexterity saving throw, taking 45 (13d6) fire damage on a failed save, or half as much damage on a successful one.\nThe [[lookup @details.type.config.label lowercase]]{monster} exhales fire in an 60-foot line that is 5 feet wide. Each creature in that line must make a Dexterity saving throw.",
+  "damage": [
+    {
+      "damage_dice": "13d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "dex",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60-foot line",
+  "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/bgsw8iuwurwiwtxr.json",
+  "updated_at": "2026-07-10T05:56:36.692Z"
+}

@@ -1,0 +1,152 @@
+{
+  "index": "1oqbxozi5btlb2me",
+  "name": "drider",
+  "desc": "Drider is a CR 6 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 19
+    }
+  ],
+  "hit_points": 123,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 52",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 12,
+  "stats": {
+    "str": 16,
+    "dex": 16,
+    "con": 18,
+    "int": 13,
+    "wis": 14,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The drider's innate spellcasting ability is Wisdom (spell save DC 13). The drider can innately cast the following spells, requiring no material components: At will: [[/item .CAxSzHWizrafT033]]{dancing lights} 1/day each: [[/item .S7VbUetIfVT7B6Eq]]{darkness}, [[/item .nqBDWkVOfcGZt4YU]]{faerie fire}",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks, either with its [[/item .xqwxVn28J0zx8Y7H]]{longsword} or its [[/item .3XAtYmmaED1rxaaE]]{longbow}. It can replace one of those attacks with a [[/item .rUvv8Vnh7XbqbCLd]]{bite} attack.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] damage if used with two hands.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fey ancestry",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against being &reference[charmed apply=false], and magic can't put the [[lookup @name lowercase]]{monster} to sleep.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webbing.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Drider.webp",
+  "url": "/assets/atlas/enemies/json/1oqbxozi5btlb2me.json",
+  "updated_at": "2026-07-09T11:33:15.362Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

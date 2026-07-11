@@ -1,0 +1,118 @@
+{
+  "index": "0m8qydn52qw9zzom",
+  "name": "gargoyle",
+  "desc": "Gargoyle is a CR 2 elemental.",
+  "size": "Medium",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8 + 21",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 11,
+  "charisma": 7,
+  "stats": {
+    "str": 15,
+    "dex": 11,
+    "con": 16,
+    "int": 6,
+    "wis": 11,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "exhaustion",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motion less, it is indistinguishable from an inanimate statue.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .A6GBvah75Y7fGjc5]]{bite} and one with its [[/item .ipJwA0j2zfzmq5GW]]{claws}.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/Gargoyle.webp",
+  "url": "/assets/atlas/enemies/json/0m8qydn52qw9zzom.json",
+  "updated_at": "2026-07-09T11:33:14.845Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

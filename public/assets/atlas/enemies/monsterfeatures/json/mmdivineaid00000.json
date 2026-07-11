@@ -1,0 +1,16 @@
+{
+  "index": "mmdivineaid00000",
+  "name": "divine aid",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dispel Magic}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHealingWor]{Healing Word}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration}, using the same spellcasting ability as Spellcasting.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 3,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/life/cross-beam-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdivineaid00000.json",
+  "updated_at": "2026-07-10T05:56:36.804Z"
+}

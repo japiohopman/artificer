@@ -1,0 +1,148 @@
+{
+  "index": "sldpiuazf8lujjqy",
+  "name": "barbed devil",
+  "desc": "Barbed Devil is a CR 5 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 110,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8 + 52",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 14,
+  "stats": {
+    "str": 16,
+    "dex": 17,
+    "con": 18,
+    "int": 12,
+    "wis": 14,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "barbed hide",
+      "desc": "At the start of each of its turns, the [[lookup @name lowercase]]{monster} deals [[/damage average]] damage to any creature &reference[grappling] it.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three melee attacks: one with its [[/item .mlWql992zSZ6hvl6]]{tail} and two with its [[/item .pya9jchjLkwMedEr]]{claws}. Alternatively, it can use [[/item .syCZDlwGoyT1GvJv]]{Hurl Flame} twice.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "hurl flame",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a flammable object that isn't being worn or carried, it also catches fire.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "3d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/sldpiuazf8lujjqy.webp",
+  "url": "/assets/atlas/enemies/json/sldpiuazf8lujjqy.json",
+  "updated_at": "2026-07-09T11:33:14.934Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,20 @@
+{
+  "index": "gqrkcfwxhhmwrp2q",
+  "name": "scare",
+  "type": "feat",
+  "desc": "One creature of the [[lookup @name lowercase]]{monster}'s choice within 20 ft. of it must succeed on a  DC 10 Wisdom saving throw or be frightened for 1 minute.\nThe target can repeat the saving throw at the end of each of its turns, with disadvantage if the [[lookup @name lowercase]]{monster} is within line of sight, ending the effect on itself on a success.\nOne creature of the [[lookup @name lowercase]]{monster}'s choice within 20 ft. of it must make a Wisdom saving throw. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the [[lookup @name lowercase]]{monster} is within line of sight, ending the effect on itself on a success.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 10,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "20 ft",
+  "image": "icons/creatures/unholy/demon-winged-cyclops-drooling.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/gqrkcfwxhhmwrp2q.json",
+  "updated_at": "2026-07-10T05:56:36.743Z"
+}

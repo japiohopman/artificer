@@ -1,0 +1,31 @@
+{
+  "index": "ctw81uix56xzr2c5",
+  "name": "ray of frost",
+  "desc": [
+    "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
+    "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/ctw81uix56xzr2c5.json",
+  "image": "/assets/atlas/spell/images/ctw81uix56xzr2c5.webp",
+  "updated_at": "2026-07-10T15:34:53.245Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

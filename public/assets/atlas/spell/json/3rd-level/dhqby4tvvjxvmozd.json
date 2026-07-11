@@ -1,0 +1,33 @@
+{
+  "index": "dhqby4tvvjxvmozd",
+  "name": "sleet storm",
+  "desc": [
+    "Until the spell ends, freezing rain and sleet fall in a 20-foot-tall cylinder with a 40-foot radius centered on a point you choose within range. The area is heavily obscured, and exposed flames in the area are doused.",
+    "The ground in the area is covered with slick ice, making it difficult terrain. When a creature enters the spell's area for the first time on a turn or starts its turn there, it must make a Dexterity saving throw. On a failed save, it falls Prone.",
+    "If a creature is concentrating in the spell's area, the creature must make a successful Constitution saving throw against your spell save DC or lose concentration."
+  ],
+  "range": "150 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of dust and a few drops of water.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/dhqby4tvvjxvmozd.json",
+  "image": "/assets/atlas/spell/images/dhqby4tvvjxvmozd.webp",
+  "updated_at": "2026-07-10T15:34:53.128Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,85 @@
+{
+  "index": "aojvmk1ichxnxqzp",
+  "name": "giant crab",
+  "desc": "Giant Crab is a CR 0.125 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 3,
+  "stats": {
+    "str": 13,
+    "dex": 15,
+    "con": 11,
+    "int": 1,
+    "wis": 9,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &Reference[grappled] (escape DC 11). The [[lookup @name lowercase]]{monster} has two [[lookup @item.name lowercase]]s, each of which can grapple only one target.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantCrab.webp",
+  "url": "/assets/atlas/enemies/json/aojvmk1ichxnxqzp.json",
+  "updated_at": "2026-07-09T11:33:14.089Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

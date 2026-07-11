@@ -1,0 +1,122 @@
+{
+  "index": "fspruaidog4tvrgb",
+  "name": "gladiator",
+  "desc": "Gladiator is a CR 5 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 112,
+  "hit_dice": "15d8",
+  "hit_points_roll": "15d8 + 45",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 15,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 12,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "brave",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against being &reference[Frightened apply=false].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three melee attacks or two ranged attacks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spear",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "shield bash",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a Medium or smaller creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d4+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "brute",
+      "desc": "A melee weapon deals one extra die of its damage when the [[lookup @name lowercase]]{monster} hits with it (included in the attack).",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "The [[lookup @name lowercase]]{monster} adds 3 to its AC against one melee attack that would hit it. To do so, the [[lookup @name lowercase]]{monster} must see the attacker and be wielding a melee weapon.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Gladiator.webp",
+  "url": "/assets/atlas/enemies/json/fspruaidog4tvrgb.json",
+  "updated_at": "2026-07-09T11:33:15.172Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

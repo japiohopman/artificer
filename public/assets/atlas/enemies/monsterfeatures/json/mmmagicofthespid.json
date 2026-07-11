@@ -1,0 +1,17 @@
+{
+  "index": "mmmagicofthespid",
+  "name": "magic of the spider queen",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Darkness}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Faerie Fire}, or @UUID[Compendium.dnd5e.spells24.Item.phbsplWeb0000000]{Web}, requiring no Material components and using Wisdom as the spellcasting ability (spell save DC [[lookup @attributes.spell.dc]]).",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/magic/light/hand-sparks-glow-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmagicofthespid.json",
+  "updated_at": "2026-07-10T05:56:36.823Z"
+}

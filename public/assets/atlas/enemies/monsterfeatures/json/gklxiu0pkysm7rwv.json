@@ -1,0 +1,22 @@
+{
+  "index": "gklxiu0pkysm7rwv",
+  "name": "heal self",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically regains 11 (2d8+2) hit points.",
+  "damage": [
+    {
+      "damage_dice": "2d8+2",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/life/ankh-gold-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/gklxiu0pkysm7rwv.json",
+  "updated_at": "2026-07-10T05:56:36.700Z"
+}

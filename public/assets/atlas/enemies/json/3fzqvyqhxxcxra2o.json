@@ -1,0 +1,106 @@
+{
+  "index": "3fzqvyqhxxcxra2o",
+  "name": "gelatinous cube",
+  "desc": "Gelatinous Cube is a CR 2 ooze.",
+  "size": "Large",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 6
+    }
+  ],
+  "hit_points": 84,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10 + 40",
+  "speed": {
+    "walk": "15 ft."
+  },
+  "strength": 14,
+  "dexterity": 3,
+  "constitution": 20,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "stats": {
+    "str": 14,
+    "dex": 3,
+    "con": 20,
+    "int": 1,
+    "wis": 6,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "prone",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ooze cube",
+      "desc": "The [[lookup @name lowercase]]{monster} takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's @UUID[Compendium.dnd5e.monsters.Actor.3fzQVYQhXxCXRa2o.Item.6PuULfBzy5vpBSFI]{Engulf} and has disadvantage on the saving throw. Creatures inside the [[lookup @name lowercase]]{monster} can be seen but have &reference[total cover]. A creature within 5 feet of the [[lookup @name lowercase]]{monster} can take an action to pull a creature or object out of the [[lookup @name lowercase]]{monster}. Doing so requires a successful [[/check]] check, and the creature making the attempt takes [[/damage average]] damage. The [[lookup @name lowercase]]{monster} can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "transparent",
+      "desc": "Even when the [[lookup @name lowercase]]{monster} is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the [[lookup @name lowercase]]{monster}'s space while unaware of the [[lookup @name lowercase]]{monster} is &reference[surprise]{Surprised} by the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "acid",
+            "url": "/assets/atlas/damage_types/json/acid.json"
+          },
+          "damage_dice": "3d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "engulf",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the [[lookup @name lowercase]]{monster} enters a creature's space, the creature must make a [[/save activity=nGINyQKTsYq10OA0]] saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the [[lookup @name lowercase]]{monster}. A creature that chooses not to be pushed suffers the consequences of a failed saving throw. On a failed save, the [[lookup @name lowercase]]{monster} enters the creature's space, and the creature takes [[/damage average activity=nGINyQKTsYq10OA0]] damage and is engulfed. The engulfed creature can't &reference[suffocating]{Breathe}, is &reference[restrained], and takes [[/damage average activity=sDRiVB3bhk4S5XZI]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. When the [[lookup @name lowercase]]{monster} moves, the engulfed creature moves with it. An engulfed creature can try to escape by taking an action to make a [[/check activity=LMPyxWOrUotM7OLs]] check. On a success, the creature escapes and enters a space of its choice within 5 feet of the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/GelatinousCube.webp",
+  "url": "/assets/atlas/enemies/json/3fzqvyqhxxcxra2o.json",
+  "updated_at": "2026-07-09T11:33:15.547Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

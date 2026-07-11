@@ -1,0 +1,20 @@
+{
+  "index": "bdnjs1sqi2pdarh8",
+  "name": "stone golem - slow",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} targets one or more creatures it can see within 10 ft. of it. Each target must make a DC 17 Wisdom saving throw against this magic.\nOn a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\nthe [[lookup @name lowercase]]{monster} targets one or more creatures it can see within 10 ft. of it. Each target must make a Wisdom saving throw against this magic. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "10 ft",
+  "image": "icons/tools/navigation/watch-simple-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/bdnjs1sqi2pdarh8.json",
+  "updated_at": "2026-07-10T05:56:36.756Z"
+}

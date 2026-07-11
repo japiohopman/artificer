@@ -186,7 +186,7 @@ export const TitleScreen: React.FC = () => {
                   <div className="w-12 h-12 bg-black/40 rounded-sm border border-white/5 overflow-hidden shrink-0">
                     {char && (
                       <img 
-                        src={char.avatarUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_avatar.webp?t=${Date.now()}`}
+                        src={char.avatarUrl || `/data/character_save/images/slot${index + 1}/slot${index + 1}_avatar.webp?t=${Date.now()}`}
                         className="w-full h-full object-cover" 
                         alt="" 
                         onError={(e) => {

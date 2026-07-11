@@ -1,0 +1,26 @@
+{
+  "index": "hmoozrxolmmv91xm",
+  "name": "mucous cloud",
+  "type": "feat",
+  "desc": "While underwater, the [[lookup @name lowercase]]{monster} is surrounded by transformative mucus. A creature that touches the [[lookup @name lowercase]]{monster} or that hits it with a melee attack while within 5 ft. of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.\nWhile underwater, the [[lookup @name lowercase]]{monster} is surrounded by transformative mucus. A creature that touches the [[lookup @name lowercase]]{monster} or that hits it with a melee attack while within 5 ft. of it must make a Constitution saving throw.",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "hours",
+        "name": "hours",
+        "url": "/assets/atlas/damage_types/json/hours.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 14,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/water/bubbles-air-water-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/hmoozrxolmmv91xm.json",
+  "updated_at": "2026-07-10T05:56:36.723Z"
+}

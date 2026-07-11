@@ -1,0 +1,127 @@
+{
+  "index": "zpazb7i8aly32vwv",
+  "name": "vampire spawn",
+  "desc": "Vampire Spawn is a CR 5 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 82,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8 + 33",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 12,
+  "stats": {
+    "str": 16,
+    "dex": 16,
+    "con": 16,
+    "int": 11,
+    "wis": 10,
+    "cha": 12
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "necrotic",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "Melee Weapon Attack: [[/attack]], 5 ft., one willing creature, or a creature that is &reference[grappled apply=false] by the [[lookup @name lowercase]]{monster}, &reference[incapacitated apply=false], or &reference[restrained apply=false]. [[/damage extended]]. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the [[lookup @name lowercase]]{monster} regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]]. Instead of dealing damage, the [[lookup @name lowercase]]{monster} can &reference[grapple] the target (escape DC 13).",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The vampire makes two attacks, only one of which can be a [[/item .HebvJc2NqYvdR79s]]{bite} attack.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "regeneration",
+      "desc": "The [[lookup @name lowercase]]{monster} regains [[/healing]] at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the [[lookup @name lowercase]]{monster} takes radiant damage or damage from @UUID[Compendium.dnd5e.equipment24.Item.nshr9PBVyB03T7wB]{Holy Water}, this trait doesn't function at the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vampire weaknesses",
+      "desc": "The vampire has the following flaws: Forbiddance. The [[lookup @name lowercase]]{monster} can't enter a residence without an invitation from one of the occupants. Harmed by Running Water. The [[lookup @name lowercase]]{monster} takes [[/damage activity=zTY3HiiTYj5yJ7Io]] damage when it ends its turn in running water. Stake to the Heart. The [[lookup @name lowercase]]{monster} is destroyed if a piercing weapon made of wood is driven into its heart while it is &reference[incapacitated apply=false] in its resting place. Sunlight Hypersensitivity. The [[lookup @name lowercase]]{monster} takes [[/damage activity=3lO6XvaimPKCB5te]] damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/VampireSpawn.webp",
+  "url": "/assets/atlas/enemies/json/zpazb7i8aly32vwv.json",
+  "updated_at": "2026-07-09T11:33:15.770Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

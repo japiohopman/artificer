@@ -1,0 +1,16 @@
+{
+  "index": "mmunicornsblessi",
+  "name": "unicorn's blessing",
+  "type": "feat",
+  "desc": "The [[lookup @name]]{monster} touches another creature with its horn and casts @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} or @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Lesser Restoration} on that creature, using the same spellcasting ability as Spellcasting.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 3,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/life/heart-area-circle-red-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmunicornsblessi.json",
+  "updated_at": "2026-07-10T05:56:36.856Z"
+}

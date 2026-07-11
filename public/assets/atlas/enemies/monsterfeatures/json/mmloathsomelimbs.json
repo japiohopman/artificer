@@ -1,0 +1,16 @@
+{
+  "index": "mmloathsomelimbs",
+  "name": "loathsome limbs",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} ends any turn Bloodied and took 15+ Slashing damage during that turn, one of the [[lookup @name lowercase]]{monster}l's limbs is severed, falls into the [[lookup @name lowercase]]{monster}'s space, and becomes a @UUID[Compendium.dnd5e.actors24.Actor.mmTrollLimb00000]{Troll Limb}. The limb acts immediately after the [[lookup @name lowercase]]{monster}'s turn. The [[lookup @name lowercase]]{monster} has 1 &Reference[Exhaustion apply=false] level for each missing limb, and it grows replacement limbs the next time it regains Hit Points.\nFoundry Note\nThis feature provides an Active Effect condition in the character sheet's Effects tab to enable each level of Exhaustion. Since the condition can be applied multiple times, the GM must manually manage the level of Exhaustion. There is an active effect available for each level of exhaustion.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 4,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/magic/death/hand-withered-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmloathsomelimbs.json",
+  "updated_at": "2026-07-10T05:56:36.981Z"
+}

@@ -1,0 +1,108 @@
+{
+  "index": "cy3a0rsnmplzozam",
+  "name": "thug",
+  "desc": "Thug is a CR 0.5 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Any non-good alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 10
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "stats": {
+    "str": 15,
+    "dex": 11,
+    "con": 14,
+    "int": 10,
+    "wis": 10,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .6gRu9IFFkvxesFfK]]{melee} attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "heavy crossbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "mace",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Thug.webp",
+  "url": "/assets/atlas/enemies/json/cy3a0rsnmplzozam.json",
+  "updated_at": "2026-07-09T11:33:15.259Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

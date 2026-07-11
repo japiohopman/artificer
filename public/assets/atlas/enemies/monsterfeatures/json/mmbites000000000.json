@@ -1,0 +1,22 @@
+{
+  "index": "mmbites000000000",
+  "name": "bites",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], or [[/damage average activity=3Yo83eZUNwX51AcE]] if [[lookup @activation.condition activity=3Yo83eZUNwX51AcE]]",
+  "damage": [
+    {
+      "damage_dice": "2d4",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/abilities/mouth-teeth-rows-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbites000000000.json",
+  "updated_at": "2026-07-10T05:56:36.869Z"
+}

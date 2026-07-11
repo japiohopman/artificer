@@ -1,0 +1,119 @@
+{
+  "index": "85ahd1jeo9b3poaq",
+  "name": "young green dragon",
+  "desc": "Young Green Dragon is a CR 8 dragon.",
+  "size": "Large",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 18
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 12,
+  "constitution": 17,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 15,
+  "stats": {
+    "str": 19,
+    "dex": 12,
+    "con": 17,
+    "int": 16,
+    "wis": 13,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes three attacks: one with its [[/item .0Ob35HZxhSF7p2ys]]{bite} and two with its [[/item .WvvHslcDhMq7MD1s]]{claws}.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "poison breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales poisonous gas in a [[lookup @labels.description.template activity=MiNhGAqISi8NVtZa]]. Each creature in that area must make a [[/save]] saving throw, taking [[/damage average]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/YoungGreenDragon.webp",
+  "url": "/assets/atlas/enemies/json/85ahd1jeo9b3poaq.json",
+  "updated_at": "2026-07-09T11:33:14.784Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

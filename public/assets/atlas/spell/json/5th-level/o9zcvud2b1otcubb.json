@@ -1,0 +1,32 @@
+{
+  "index": "o9zcvud2b1otcubb",
+  "name": "wall of force",
+  "desc": [
+    "An invisible wall of force springs into existence at a point you choose within range. The wall appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a sphere with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick. It lasts for the Duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (your choice which side).",
+    "Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by Dispel Magic. A Disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane, blocking ethereal travel through the wall."
+  ],
+  "range": "120 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of powder made by crushing clear gemstone",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/o9zcvud2b1otcubb.json",
+  "image": "/assets/atlas/spell/images/o9zcvud2b1otcubb.webp",
+  "updated_at": "2026-07-10T15:34:53.182Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

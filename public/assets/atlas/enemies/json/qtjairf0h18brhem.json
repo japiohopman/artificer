@@ -1,0 +1,108 @@
+{
+  "index": "qtjairf0h18brhem",
+  "name": "bugbear",
+  "desc": "Bugbear is a CR 1 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 13,
+  "intelligence": 8,
+  "wisdom": 11,
+  "charisma": 9,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 13,
+    "int": 8,
+    "wis": 11,
+    "cha": 9
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "morningstar",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "surprise attack",
+      "desc": "If the [[lookup @name lowercase]]{monster} &reference[surprise]{Surprises} a creature and hits it with an attack during the first round of combat, the target takes an extra [[/damage average]] from the attack.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "brute",
+      "desc": "A melee weapon deals one extra die of its damage when the [[lookup @name lowercase]]{monster} hits with it (included in the attack).",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "javelin",
+      "desc": "[[/attack extended]]. [[/damage extended]] in melee or [[/damage 1d6 + 2 piercing average]] at range.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Bugbear.webp",
+  "url": "/assets/atlas/enemies/json/qtjairf0h18brhem.json",
+  "updated_at": "2026-07-09T11:33:15.133Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

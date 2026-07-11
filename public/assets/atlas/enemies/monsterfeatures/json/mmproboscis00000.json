@@ -1,0 +1,22 @@
+{
+  "index": "mmproboscis00000",
+  "name": "proboscis",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, its Hit Point maximum decreases by an amount equal to the Necrotic damage taken.",
+  "damage": [
+    {
+      "damage_dice": "4d6",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/bones/tooth-spiked-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmproboscis00000.json",
+  "updated_at": "2026-07-10T05:56:36.912Z"
+}

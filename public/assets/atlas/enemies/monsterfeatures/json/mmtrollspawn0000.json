@@ -1,0 +1,22 @@
+{
+  "index": "mmtrollspawn0000",
+  "name": "troll spawn",
+  "type": "feat",
+  "desc": "The limb uncannily has the same senses as a whole [[lookup @name lowercase]]{monster}. If the limb isn't destroyed within 24 hours, roll [[/r 1d12#On a 12, the limb turns into a troll]]{roll 1d12}. On a 12, the limb turns into a @UUID[Compendium.dnd5e.actors24.Actor.mmTroll000000000]{Troll}. Otherwise, the limb withers away.",
+  "damage": [
+    {
+      "damage_dice": "1d12",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/unholy/hand-claw-fog-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtrollspawn0000.json",
+  "updated_at": "2026-07-10T05:56:36.994Z"
+}

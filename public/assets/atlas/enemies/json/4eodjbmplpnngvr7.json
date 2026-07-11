@@ -1,0 +1,78 @@
+{
+  "index": "4eodjbmplpnngvr7",
+  "name": "deer",
+  "desc": "Deer is a CR 0 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 14,
+  "charisma": 5,
+  "stats": {
+    "str": 11,
+    "dex": 16,
+    "con": 11,
+    "int": 2,
+    "wis": 14,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Deer.webp",
+  "url": "/assets/atlas/enemies/json/4eodjbmplpnngvr7.json",
+  "updated_at": "2026-07-09T11:33:14.054Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

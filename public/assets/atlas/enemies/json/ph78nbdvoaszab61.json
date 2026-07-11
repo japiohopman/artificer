@@ -1,0 +1,92 @@
+{
+  "index": "ph78nbdvoaszab61",
+  "name": "death dog",
+  "desc": "Death Dog is a CR 1 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 12",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 3,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 3,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save activity=7RkSJfzdID9Ccqmn]] saving throw against disease or become &Reference[poisoned] until the disease is cured. Every 24 hours that elapse, the creature must repeat the saving throw, reducing its hit point maximum by 5 (1d10) on a failure. This reduction lasts until the disease is cured. The creature dies if the disease reduces its hit point maximum to 0.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .TKV9mS1lvqMAyCaB]]{bite} attacks.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "two-headed",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks and on saving throws against being &reference[blinded apply=false], &reference[charmed apply=false], &reference[deafened apply=false], &reference[frightened apply=false], &reference[stunned apply=false], and knocked &reference[unconscious apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/DeathDog.webp",
+  "url": "/assets/atlas/enemies/json/ph78nbdvoaszab61.json",
+  "updated_at": "2026-07-09T11:33:15.352Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

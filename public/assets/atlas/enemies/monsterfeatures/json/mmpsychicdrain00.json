@@ -1,0 +1,13 @@
+{
+  "index": "mmpsychicdrain00",
+  "name": "psychic drain",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} has at least one creature Charmed or Grappled, it uses Consume Memories and regains [[/healing average]].",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/control/silhouette-aura-energy.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpsychicdrain00.json",
+  "updated_at": "2026-07-10T05:56:36.950Z"
+}

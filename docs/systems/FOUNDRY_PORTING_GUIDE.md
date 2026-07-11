@@ -173,6 +173,13 @@ To prevent overwriting manually adjusted layouts, hand-crafted sprites, and spri
   - `sprite_index` (the exact cell index on the grid sheet)
 - Only mechanical descriptions, abilities, rules, and raw statistical values are imported from the raw YAML source.
 
+### 🪙 Automated Enemy Token Bindings
+
+To leverage newly added high-quality token images uploaded to `/public/assets/atlas/enemies/tokens/` (supporting formats such as `.webp`, `.png`, `.jpg`, and `.jpeg`):
+1. During the Actor mapping step, the migration tool dynamically scans the `/public/assets/atlas/enemies/tokens/` directory.
+2. If it finds a token asset matching the enemy's slugified index (e.g., `acolyte.webp` or `bandit.png`), the tool automatically sets `/assets/atlas/enemies/tokens/<index>.<extension>` as the canonical `image` value.
+3. This ensures seamless visual integration of professional tokens onto the tactical grid and HUD elements without requiring manual file path stitching.
+
 ---
 
 ## 🔄 The Data Porting & Transformation Pipeline

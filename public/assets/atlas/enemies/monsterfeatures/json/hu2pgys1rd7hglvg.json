@@ -1,0 +1,21 @@
+{
+  "index": "hu2pgys1rd7hglvg",
+  "name": "horror nimbus",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically emits scintillating, multicolored light. Each creature within 15 feet of the [[lookup @name lowercase]]{monster} that can see the light must succeed on a DC 15 Wisdom saving throw or be frightened for 1 minute.\nA creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s Horror Nimbus for the next 24 hours.\nA creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s Horror Nimbus for the next 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "dc_value": 15,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "15-foot radius",
+  "image": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/hu2pgys1rd7hglvg.json",
+  "updated_at": "2026-07-10T05:56:36.706Z"
+}

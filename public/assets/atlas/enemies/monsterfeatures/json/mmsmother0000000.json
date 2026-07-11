@@ -1,0 +1,22 @@
+{
+  "index": "mmsmother0000000",
+  "name": "smother",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a Medium or smaller creature, the [[lookup @name lowercase]]{monster} can give it the &Reference[Grappled apply=false] condition (escape DC [[lookup @skills.ath.passive]]) instead of dealing damage. Until the grapple ends, the target has the &Reference[Blinded apply=false] and &Reference[Restrained apply=false] conditions, is &Reference[Suffocating]{suffocating}, and takes [[/damage average]] damage at the start of each of its turns. [[lookup @name lowercase]]{monster} rug can smother only one creature at a time.\nWhile grappling the target, the [[lookup @name lowercase]]{monster} can't take this action, the [[lookup @name lowercase]]{monster} halves the damage it takes (round down), and the target takes the same amount of damage.",
+  "damage": [
+    {
+      "damage_dice": "2d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmsmother0000000.json",
+  "updated_at": "2026-07-10T05:56:36.924Z"
+}

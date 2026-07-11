@@ -1,0 +1,13 @@
+{
+  "index": "mmredirectattack",
+  "name": "redirect attack",
+  "type": "feat",
+  "desc": "Trigger: A creature the [[lookup @name lowercase]]{monster} can see makes an attack roll against it.\nResponse: The [[lookup @name lowercase]]{monster} chooses [[lookup @target.affects.special activity=pIlCmuPw8YUqAISY]] within [[lookup @range.value activity=pIlCmuPw8YUqAISY]] feet of itself. The [[lookup @name lowercase]]{monster} and that [[lookup @target.affects.type activity=pIlCmuPw8YUqAISY]] swap places, and the [[lookup @target.affects.type activity=pIlCmuPw8YUqAISY]] becomes the target of the attack instead.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmredirectattack.json",
+  "updated_at": "2026-07-10T05:56:36.837Z"
+}

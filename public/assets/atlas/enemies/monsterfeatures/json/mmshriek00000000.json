@@ -1,0 +1,13 @@
+{
+  "index": "mmshriek00000000",
+  "name": "shriek",
+  "type": "feat",
+  "desc": "Trigger: A [[lookup @target.affects.type activity=Tlv3gcYk5KfdtV7c]] or a source of Bright Light moves within [[lookup @range.value activity=Tlv3gcYk5KfdtV7c]] feet of the [[lookup @name lowercase]]{monster}. Response: The [[lookup @name lowercase]]{monster} emits a shriek audible within [[lookup @target.template.size activity=Tlv3gcYk5KfdtV7c]] feet of itself for [[lookup @duration.value activity=Tlv3gcYk5KfdtV7c]] minute or until the [[lookup @name lowercase]]{monster} dies.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "300-foot circle",
+  "image": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmshriek00000000.json",
+  "updated_at": "2026-07-10T05:56:36.844Z"
+}

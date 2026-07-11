@@ -1,0 +1,13 @@
+{
+  "index": "mmmagicrope00000",
+  "name": "magic rope",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} has a magic rope. While bearing it, the [[lookup @name lowercase]]{monster} can use the Entangling Rope action. The rope has AC 20, HP 90, and Immunity to Poison and Psychic damage. The rope turns to dust if reduced to 0 Hit Points, if it is 5+ feet away from the [[lookup @name lowercase]]{monster} for 1 hour or more, or if the [[lookup @name lowercase]]{monster} dies. If the rope is damaged or destroyed, the [[lookup @name lowercase]]{monster} can fully restore it when finishing a Short or Long Rest.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/sundries/survival/rope-wrapped-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmagicrope00000.json",
+  "updated_at": "2026-07-10T05:56:36.982Z"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "mmcoldgale000000",
+  "name": "cold gale",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=pVs8BTVDNh54CZ0a]], each creature in a [[lookup @target.template.size activity=pVs8BTVDNh54CZ0a]]-foot-long, [[lookup @target.template.width activity=pVs8BTVDNh54CZ0a]]-foot-wide Line.\nFailure: [[/damage average]] damage, and the target is pushed up to 30 feet straight away from the [[lookup @name lowercase]]{monster}.\nSuccess: Half damage only.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60-foot line (width 10 ft.)",
+  "image": "icons/magic/water/projectile-icecicle-glowing.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcoldgale000000.json",
+  "updated_at": "2026-07-10T05:56:36.941Z"
+}

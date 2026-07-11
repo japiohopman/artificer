@@ -1,0 +1,115 @@
+{
+  "index": "mnol59noofyatakq",
+  "name": "lamia",
+  "desc": "Lamia is a CR 4 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 97,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10 + 26",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 14,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 16,
+    "dex": 13,
+    "con": 15,
+    "int": 14,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components: At will: [[/item .72qxug7ywesnINin]]{disguise self} (any humanoid form), [[/item .nslx2nT3p4lNkmdp]]{major image} 3/day each: [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .X4c8xCkmF8U9HUMz]]{mirror image}, [[/item .fVbCxFRaORalHB20]]{scrying}, [[/item .zMAWdyc8UVb37BK4]]{suggestion} 1/day: [[/item .JQyigMNPiDnGI18b]]{geas}",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks: one with its [[/item .lqr5NeudKmKQfSpZ]]{claws} and one with its [[/item .jMTZfqYRB58CwXyw]]{dagger} or [[/item .cd8MN5gJkmUn1RTE]]{Intoxicating Touch}.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "intoxicating touch",
+      "desc": "[[/attack extended]]. Hit: The target is magically cursed for 1 hour. Until the curse ends, the target has disadvantage on Wisdom saving throws and all ability checks.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Lamia.webp",
+  "url": "/assets/atlas/enemies/json/mnol59noofyatakq.json",
+  "updated_at": "2026-07-09T11:33:15.434Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

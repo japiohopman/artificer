@@ -1,0 +1,78 @@
+{
+  "index": "zw39de2zi3txvyc9",
+  "name": "giant poisonous snake",
+  "desc": "Giant Poisonous Snake is a CR 0.25 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 18,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 10,
+    "dex": 18,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=S1TZRRMFWCsEQWHy]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantPoisonousSnake.webp",
+  "url": "/assets/atlas/enemies/json/zw39de2zi3txvyc9.json",
+  "updated_at": "2026-07-09T11:33:14.126Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

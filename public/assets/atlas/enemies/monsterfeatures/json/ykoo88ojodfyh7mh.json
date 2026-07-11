@@ -1,0 +1,16 @@
+{
+  "index": "ykoo88ojodfyh7mh",
+  "name": "charm",
+  "type": "feat",
+  "desc": "One humanoid the [[lookup @name lowercase]]{monster} can see within 30 feet of it must make a Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the [[lookup @name lowercase]]{monster}'s verbal or telepathic commands.\nIf the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this [[lookup @name lowercase]]{monster}'s Charm for the next 24 hours. the [[lookup @name lowercase]]{monster} can have only one target charmed at a time. If it charms another, the effect on the previous target ends.\nOne humanoid the [[lookup @name lowercase]]{monster} can see within 30 feet of it must make a Wisdom saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "wis",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/air/wind-tornado-spiral-pink-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ykoo88ojodfyh7mh.json",
+  "updated_at": "2026-07-10T05:56:36.664Z"
+}

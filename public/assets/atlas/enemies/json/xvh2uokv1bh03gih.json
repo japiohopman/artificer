@@ -1,0 +1,121 @@
+{
+  "index": "xvh2uokv1bh03gih",
+  "name": "night hag",
+  "desc": "Night Hag is a CR 5 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 112,
+  "hit_dice": "15d8",
+  "hit_points_roll": "15d8 + 45",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 16,
+    "int": 16,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "fire",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components: At will: [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .41JIhpDyM9Anm7cs]]{magic missile} 2/day each: plane shift (self only), [[/item .ODhLKBxLnvvLOnw1]]{ray of enfeeblement}, [[/item .KhwiSi9fwVfUPtku]]{sleep}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws (hag form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "change shape",
+      "desc": "The [[lookup @name lowercase]]{monster} magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "etherealness",
+      "desc": "The [[lookup @name lowercase]]{monster} magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the [[lookup @name lowercase]]{monster} must have a heartstone in her possession.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "nightmare haunting",
+      "desc": "While on the Ethereal Plane, the [[lookup @name lowercase]]{monster} magically touches a sleeping humanoid on the Material Plane. A @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]{Protection from Evil and Good} spell cast on the target prevents this contact, as does a @UUID[Compendium.dnd5e.spells.Item.y8A4HfTwd93ypdEz]{Magic Circle}. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell or similar magic.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/NightHag.webp",
+  "url": "/assets/atlas/enemies/json/xvh2uokv1bh03gih.json",
+  "updated_at": "2026-07-09T11:33:14.998Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

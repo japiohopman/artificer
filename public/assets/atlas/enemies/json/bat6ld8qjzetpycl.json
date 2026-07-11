@@ -1,0 +1,97 @@
+{
+  "index": "bat6ld8qjzetpycl",
+  "name": "spirit naga",
+  "desc": "Spirit Naga is a CR 8 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Chaotic Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 75,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10 + 20",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 18,
+  "dexterity": 17,
+  "constitution": 14,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 16,
+  "stats": {
+    "str": 18,
+    "dex": 17,
+    "con": 14,
+    "int": 16,
+    "wis": 15,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save activity=q1kzQBmcMwK6GGVz]] saving throw, taking [[/damage average activity=q1kzQBmcMwK6GGVz]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared: Cantrips (at will): [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion}, [[/item .ctW81uiX56xZR2c5]]{ray of frost} 1st level (4 slots): [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .KhwiSi9fwVfUPtku]]{sleep} 2nd level (3 slots): [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .3Lo9boi7P2ro6QV4]]{hold person} 3rd level (3 slots): [[/item .IyikgTEOTv701jgQ]]{lightning bolt}, [[/item .13uVuBQP6VaiSPvC]]{water breathing} 4th level (3 slots): [[/item .pybg5MNc3lkerH4Y]]{blight}, [[/item .A4RsPuSvB9wFtz1j]]{dimension door} 5th level (2 slots): [[/item .91Sw6vOIaO7U8DvM]]{dominate person}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "rejuvenation",
+      "desc": "If it dies, the [[lookup @name lowercase]]{monster} returns to life in 1d6 days and regains all its hit points. Only a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell can prevent this trait from functioning.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/SpiritNaga.webp",
+  "url": "/assets/atlas/enemies/json/bat6ld8qjzetpycl.json",
+  "updated_at": "2026-07-09T11:33:15.513Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "mmdominatemind00",
+  "name": "dominate mind",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=zdXAMnjaOcsVmLZP]], one [[lookup @target.affects.type activity=zdXAMnjaOcsVmLZP]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=zdXAMnjaOcsVmLZP]] feet.\nFailure: The target has the &Reference[Charmed apply=false] condition until the [[lookup @name lowercase]]{monster} dies or is on a different plane of existence from the target. While Charmed, the target acts as an ally to the [[lookup @name lowercase]]{monster} and is under its control while within [[lookup @target.template.size activity=zdXAMnjaOcsVmLZP]] feet of it. In addition, the [[lookup @name lowercase]]{monster} and the target can communicate telepathically with each other over any distance.\nThe target repeats the save whenever it takes damage as well as after every 24 hours it spends at least 1 mile away from the [[lookup @name lowercase]]{monster}, ending the effect on itself on a success.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 16,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 2,
+    "type": "per_day"
+  },
+  "range": "60-foot radius",
+  "image": "icons/magic/control/hypnosis-mesmerism-watch.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdominatemind00.json",
+  "updated_at": "2026-07-10T05:56:36.805Z"
+}

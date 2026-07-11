@@ -1,0 +1,99 @@
+{
+  "index": "ihj5tkm6hrgxuawp",
+  "name": "arcane hand",
+  "desc": "Arcane Hand is a CR 0 humanoid.",
+  "size": "Large",
+  "type": "humanoid",
+  "subtype": "any race",
+  "alignment": "any alignment",
+  "armor_class": [
+    {
+      "type": "flat",
+      "value": 20
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 26,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 26,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "clenched fist",
+      "desc": "The hand strikes one creature or object within 5 feet of it. Make a melee spell Attack for the hand using your game Statistics. On a hit, the target takes 4d8 force damage.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "force",
+            "name": "force",
+            "url": "/assets/atlas/damage_types/json/force.json"
+          },
+          "damage_dice": "1d4+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "forceful hand",
+      "desc": "The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's [[/check strength]] contested by the [[/skill strength athletics]] check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your Spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "grasping hand",
+      "desc": "The hand attempts to grapple a Huge or smaller creature within 5 feet of it. You use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have advantage on the check. While the hand is Grappling the target, you can use a Bonus Action to have the hand crush it. When you do so, the target takes bludgeoning damage equal to 2d6 + your Spellcasting ability modifier.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "interposing hand",
+      "desc": "The hand interposes itself between you and a creature you choose until you give the hand a different command. The hand moves to stay between you and the target, providing you with half cover against the target. The target can't move through the hand's space if its Strength score is less than or equal to the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move toward you through the hand's space, but that space is difficult terrain for the target.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/ihj5tkm6hrgxuawp.webp",
+  "url": "/assets/atlas/enemies/json/ihj5tkm6hrgxuawp.json",
+  "updated_at": "2026-07-09T11:33:15.623Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "mmmoan0000000000",
+  "name": "moan",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=Mng39fcFDc4I1AzY]], each [[lookup @target.affects.type activity=Mng39fcFDc4I1AzY]] in a [[lookup @target.template.size activity=Mng39fcFDc4I1AzY]]-[[lookup @target.template.units activity=Mng39fcFDc4I1AzY]]. Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: The target has the &Reference[Frightened apply=false] condition until the end of the [[lookup @name lowercase]]{monster}'s next turn. Success: The target is immune to this [[lookup @name lowercase]]{monster}'s Moan for the next 24 hours.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 13,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "60-foot radius",
+  "image": "icons/magic/control/fear-fright-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmoan0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.825Z"
+}

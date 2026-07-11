@@ -1,0 +1,33 @@
+{
+  "index": "jbxsyxxsotzbf9i0",
+  "name": "spiritual weapon",
+  "desc": [
+    "You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.",
+    "As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.",
+    "The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell's effect resemble that weapon.",
+    "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/jbxsyxxsotzbf9i0.json",
+  "image": "/assets/atlas/spell/images/jbxsyxxsotzbf9i0.webp",
+  "updated_at": "2026-07-10T15:34:53.103Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

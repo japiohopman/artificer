@@ -1,0 +1,214 @@
+{
+  "index": "kcvt4fdovjbuz3t0",
+  "name": "tarrasque",
+  "desc": "Tarrasque is a CR 30 monstrosity.",
+  "size": "Gargantuan",
+  "type": "monstrosity",
+  "subtype": "Titan",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 25
+    }
+  ],
+  "hit_points": 676,
+  "hit_dice": "33d20",
+  "hit_points_roll": "33d20 + 330",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 30,
+  "dexterity": 11,
+  "constitution": 30,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 11,
+  "stats": {
+    "str": 30,
+    "dex": 11,
+    "con": 30,
+    "int": 3,
+    "wis": 11,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "fire",
+    "piercing",
+    "poison",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "paralyzed",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 30,
+  "proficiency_bonus": 9,
+  "xp": 30000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "reflective carapace",
+      "desc": "Any time the [[lookup @name lowercase]]{monster} is targeted by a @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{magic missile} spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1 to 5, the [[lookup @name lowercase]]{monster} is unaffected. On a 6, the [[lookup @name lowercase]]{monster} is unaffected, and the effect is reflected back at the caster as though it originated from the [[lookup @name lowercase]]{monster}, turning the caster into the target.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .WGGtJeKC6RjDyMC2]]{Frightful Presence}. It then makes five attacks: one with its [[/item .suUr7bJqBqE7xk2F]]{bite}, two with its [[/item .7DRko62ztr6FjZLA]]{claws}, one with its [[/item .E1RZdzEY2qnG2jLn]]{horns}, and one with its [[/item .Lo4LU9FBxez1Nzqm]]{tail}. It can use its [[/item .7ycN6rrAEJQP3ZOs]]{Swallow} instead of its bite.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it is &reference[grappled] (escape DC 20). Until this grapple ends, the target is &reference[restrained], and the [[lookup @name lowercase]]{monster} can't [[lookup @item.name lowercase]] another target.",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d12+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "4d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "horns",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "4d10+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &reference[prone].",
+      "attack_bonus": 19,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "4d6+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .7DRko62ztr6FjZLA]]{claw} attack or [[/item .Lo4LU9FBxez1Nzqm]]{tail} attack.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "move",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to half its speed.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "chomp",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .suUr7bJqBqE7xk2F]]{bite} attack or uses its [[/item .7ycN6rrAEJQP3ZOs]]{Swallow}.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "siege monster",
+      "desc": "The [[lookup @details.type.config.label lowercase]]{monster} deals double damage to objects and structures.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "Each creature of the [[lookup @name lowercase]]{monster}'s choice that is within [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] of the [[lookup @name lowercase]]{monster} and aware of it must succeed on a [[/save]] saving throw or become &Reference[frightened] for [[lookup @labels.duration activity=2VOmvThI0bGdUsMt]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .suUr7bJqBqE7xk2F]]{Bite} attack against a Medium or smaller target it is &reference[grappling]. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is &reference[blinded] and &reference[restrained], it has &reference[total cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and it takes [[/damage average activity=JiBTCgEtAZs60k7R]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. A [[lookup @name lowercase]]{monster} can have only one creature swallowed at a time. If the [[lookup @name lowercase]]{monster} takes 30 damage or more on a single turn from the swallowed creature, the [[lookup @name lowercase]]{monster} must succeed on a [[/save activity=2pCVkETAYg7qALRu]] saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 feet of the [[lookup @name lowercase]]{monster}. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 feet of movement, exiting &reference[prone].",
+      "attack_bonus": 5,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Tarrasque.webp",
+  "url": "/assets/atlas/enemies/json/kcvt4fdovjbuz3t0.json",
+  "updated_at": "2026-07-09T11:33:15.520Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

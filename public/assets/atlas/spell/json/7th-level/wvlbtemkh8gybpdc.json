@@ -1,0 +1,33 @@
+{
+  "index": "wvlbtemkh8gybpdc",
+  "name": "sequester",
+  "desc": [
+    "By means of this spell, a willing creature or an object can be hidden away, safe from detection for the Duration. When you cast the spell and touch the target, it becomes Invisible and can't be targeted by divination spells or perceived through Scrying sensors created by Divination Spells.",
+    "If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older.",
+    "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the Tarrasque awakens.\" This spell also ends if the target takes any damage."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A powder composed of diamond, emerald, ruby, and sapphire dust worth at least 5,000 gp, which the spell consumes",
+  "ritual": false,
+  "duration": "Instantaneous disp",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/7th-level/wvlbtemkh8gybpdc.json",
+  "image": "/assets/atlas/spell/images/wvlbtemkh8gybpdc.webp",
+  "updated_at": "2026-07-10T15:34:53.213Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

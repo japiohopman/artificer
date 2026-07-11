@@ -1,0 +1,99 @@
+{
+  "index": "llsg0hi4eglrlq4o",
+  "name": "phase spider",
+  "desc": "Phase Spider is a CR 3 monstrosity.",
+  "size": "Large",
+  "type": "monstrosity",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10 + 5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 6,
+  "stats": {
+    "str": 15,
+    "dex": 15,
+    "con": 12,
+    "int": 6,
+    "wis": 10,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ethereal jaunt",
+      "desc": "As a bonus action, the [[lookup @name lowercase]]{monster} can magically shift from the Material Plane to the Ethereal Plane, or vice versa.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=8tRw363NqNSEX3gA]] damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but &Reference[poisoned] for [[lookup @labels.duration activity=8tRw363NqNSEX3gA]], even after regaining hit points, and is &Reference[paralyzed] while poisoned in this way.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webbing.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/PhaseSpider.webp",
+  "url": "/assets/atlas/enemies/json/llsg0hi4eglrlq4o.json",
+  "updated_at": "2026-07-09T11:33:15.470Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

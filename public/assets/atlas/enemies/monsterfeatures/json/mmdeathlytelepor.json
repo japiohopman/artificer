@@ -1,0 +1,13 @@
+{
+  "index": "mmdeathlytelepor",
+  "name": "deathly teleport",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=zvj61Na7MlcIN2xw]] [[lookup @range.units activity=zvj61Na7MlcIN2xw]]. [[lookup @range.special activity=zvj61Na7MlcIN2xw]], and each [[lookup @target.affects.type activity=zvj61Na7MlcIN2xw]] within [[lookup @target.template.size activity=zvj61Na7MlcIN2xw]] [[lookup @target.template.units activity=zvj61Na7MlcIN2xw]]. of the space it left takes [[/damage average]] damage.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "10-foot circle",
+  "image": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdeathlytelepor.json",
+  "updated_at": "2026-07-10T05:56:36.942Z"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "mmdeathburst0000",
+  "name": "death burst",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} explodes [[lookup @activation.condition activity=1SfqWSp7RSyHgG4b]]. Dexterity Saving Throw: DC [[lookup @save.dc.value activity=1SfqWSp7RSyHgG4b]], each [[lookup @target.affects.type activity=1SfqWSp7RSyHgG4b]] in a [[lookup @target.template.size activity=1SfqWSp7RSyHgG4b]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/magic/death/skull-humanoid-white-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdeathburst0000.json",
+  "updated_at": "2026-07-10T05:56:36.966Z"
+}

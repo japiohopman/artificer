@@ -1,0 +1,94 @@
+{
+  "index": "hy9ptpo5xl2tfkcj",
+  "name": "bronze dragon wyrmling",
+  "desc": "Bronze Dragon Wyrmling is a CR 2 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8 + 10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "stats": {
+    "str": 17,
+    "dex": 10,
+    "con": 15,
+    "int": 12,
+    "wis": 11,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Lightning Breath. The [[lookup @name lowercase]]{monster} exhales lightning in a [[lookup @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Each creature in that line must make a [[/save activity=w2CftR6CLr5PZ7zY]] saving throw, taking [[/damage average activity=w2CftR6CLr5PZ7zY]] damage on a failed save, or half as much damage on a successful one. Repulsion Breath. The [[lookup @name lowercase]]{monster} exhales repulsion energy in a [[lookup @labels.description.template activity=YElWYv6C5UfhAu48]]. Each creature in that area must succeed on a [[/save activity=YElWYv6C5UfhAu48]] saving throw. On a failed save, the creature is pushed 60 feet away from the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/BronzeDragonWyrmling.webp",
+  "url": "/assets/atlas/enemies/json/hy9ptpo5xl2tfkcj.json",
+  "updated_at": "2026-07-09T11:33:14.722Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

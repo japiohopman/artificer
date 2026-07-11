@@ -1,0 +1,16 @@
+{
+  "index": "mmburstofingenui",
+  "name": "burst of ingenuity",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name]]{monster} or another creature within [[lookup @range.value activity=AyYipNx3cFaXA0LU]] feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 2,
+    "type": "per_day"
+  },
+  "range": "30 ft",
+  "image": "icons/magic/light/orb-lightbulb-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmburstofingenui.json",
+  "updated_at": "2026-07-10T05:56:36.789Z"
+}

@@ -1,0 +1,99 @@
+{
+  "index": "f9jbhbfwucry2eda",
+  "name": "giant wolf spider",
+  "desc": "Giant Wolf Spider is a CR 0.25 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8 + 2",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 16,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 4,
+  "stats": {
+    "str": 12,
+    "dex": 16,
+    "con": 13,
+    "int": 3,
+    "wis": 12,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must make a [[/save]] saving throw, taking [[/damage average activity=RDbtJIrHQobdffi4]] damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but &reference[poisoned] for [[lookup @labels.duration activity=RDbtJIrHQobdffi4]], even after regaining hit points, and is &reference[paralyzed apply=false] while poisoned in this way.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web sense",
+      "desc": "While in contact with a web, the [[lookup @name lowercase]]{monster} knows the exact location of any other creature in contact with the same web.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "web walker",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores movement restrictions caused by webbing.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantWolfSpider.webp",
+  "url": "/assets/atlas/enemies/json/f9jbhbfwucry2eda.json",
+  "updated_at": "2026-07-09T11:33:14.163Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

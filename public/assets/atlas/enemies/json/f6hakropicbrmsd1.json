@@ -1,0 +1,110 @@
+{
+  "index": "f6hakropicbrmsd1",
+  "name": "rug of smothering",
+  "desc": "Rug of Smothering is a CR 2 construct.",
+  "size": "Large",
+  "type": "construct",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 33,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 17,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "stats": {
+    "str": 17,
+    "dex": 14,
+    "con": 10,
+    "int": 1,
+    "wis": 3,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "paralyzed",
+    "petrified",
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 6
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "damage transfer",
+      "desc": "While it is &reference[grappling]{Grappling} a creature, the [[lookup @name lowercase]]{monster} takes only half the damage dealt to it, and the creature &reference[grappled apply=false] by the [[lookup @name lowercase]]{monster} takes the other half.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from a normal rug.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "smother",
+      "desc": "Melee Weapon Attack: [[/attack]], reach 5 ft., one Medium or smaller creature. Hit: The creature is &Reference[grappled] (escape DC 13). Until this grapple ends, the target is &reference[restrained apply=false], &reference[blinded apply=false], and at risk of &reference[suffocation apply=false]{Suffocating}, and the [[lookup @name lowercase]]{monster} can't smother another target. In addition, at the start of each of the target's turns, the target takes [[/damage average]] damage.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "antimagic susceptibility",
+      "desc": "The [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false] while in the area of an @UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{Antimagic Field}. If targeted by @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dispel Magic}, the [[lookup @name lowercase]]{monster} must succeed on a Constitution saving throw against the caster's spell save DC or fall &reference[unconscious] for 1 minute.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/construct/RugOfSmothering.webp",
+  "url": "/assets/atlas/enemies/json/f6hakropicbrmsd1.json",
+  "updated_at": "2026-07-09T11:33:14.442Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

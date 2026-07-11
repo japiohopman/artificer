@@ -1,0 +1,35 @@
+{
+  "index": "hqfd7jjyuliogxrz",
+  "name": "telekinesis",
+  "desc": [
+    "You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell, and as your action each round for the Duration, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round, or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.",
+    "Creature. You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is Restrained in your telekinetic grip. A creature lifted upward is suspended in mid-air.",
+    "On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest.",
+    "Object. You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell.",
+    "If the object is worn or carried by a creature, you must make an ability check with your Spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.",
+    "You can exert fine control on Objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/hqfd7jjyuliogxrz.json",
+  "image": "/assets/atlas/spell/images/hqfd7jjyuliogxrz.webp",
+  "updated_at": "2026-07-10T15:34:53.180Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

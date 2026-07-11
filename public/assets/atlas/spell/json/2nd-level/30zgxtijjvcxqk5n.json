@@ -1,0 +1,30 @@
+{
+  "index": "30zgxtijjvcxqk5n",
+  "name": "enthrall",
+  "desc": [
+    "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be Charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are Incapacitated or can no longer speak."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/30zgxtijjvcxqk5n.json",
+  "image": "/assets/atlas/spell/images/30zgxtijjvcxqk5n.webp",
+  "updated_at": "2026-07-10T15:34:53.082Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

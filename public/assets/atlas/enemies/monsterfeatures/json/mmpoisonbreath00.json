@@ -1,0 +1,23 @@
+{
+  "index": "mmpoisonbreath00",
+  "name": "poison breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=lnabW9bM51HoluPp]], each creature in a [[lookup @target.template.size activity=lnabW9bM51HoluPp]]-foot [[lookup @target.template.type capitalize activity=lnabW9bM51HoluPp]].\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "15-foot cone",
+  "image": "icons/magic/light/beam-rays-green-large.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpoisonbreath00.json",
+  "updated_at": "2026-07-10T05:56:36.832Z"
+}

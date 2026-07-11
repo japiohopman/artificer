@@ -1,0 +1,108 @@
+{
+  "index": "mupbndojer09blao",
+  "name": "sprite",
+  "desc": "Sprite is a CR 0.25 fey.",
+  "size": "Tiny",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 14
+    }
+  ],
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 3,
+  "dexterity": 18,
+  "constitution": 10,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 3,
+    "dex": 18,
+    "con": 10,
+    "int": 14,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shortbow",
+      "desc": "[[/attack extended]]. [[/damage extended]], and the target must succeed on a [[/save]] saving throw or become &Reference[poisoned] for [[lookup @labels.duration activity=vMfBrhdjnxaKy0Wn]]. If its saving throw result is 5 or lower, the poisoned target falls &Reference[unconscious] for the same duration, or until it takes damage or another creature takes an action to shake it awake.",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "invisibility",
+      "desc": "The [[lookup @name lowercase]]{monster} magically turns &reference[invisible] until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the [[lookup @name lowercase]]{monster} wears or carries is invisible with it.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "heart sight",
+      "desc": "The [[lookup @name lowercase]]{monster} touches a creature and magically knows the creature's current emotional state. If the target fails a [[/save]] saving throw, the [[lookup @name lowercase]]{monster} also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/Sprite.webp",
+  "url": "/assets/atlas/enemies/json/mupbndojer09blao.json",
+  "updated_at": "2026-07-09T11:33:14.909Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

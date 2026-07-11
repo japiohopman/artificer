@@ -1,0 +1,23 @@
+{
+  "index": "mmwhirlwind00000",
+  "name": "whirlwind",
+  "type": "feat",
+  "desc": "Strength Saving Throw: DC [[lookup @save.dc.value activity=GQzr4EMMm6kkZVdC]], each Medium or smaller [[lookup @target.affects.type activity=GQzr4EMMm6kkZVdC]] in the [[lookup @name lowercase]]{monster}'s space. Failure: [[/damage average]] damage, and the target is pushed up to 20 feet straight away from the [[lookup @name lowercase]]{monster} and has the &Reference[Prone apply=false] condition. Success: Half damage only.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "str"
+    ],
+    "dc_value": 13,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "4"
+  },
+  "range": "0 ft",
+  "image": "icons/magic/air/wind-tornado-wall-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmwhirlwind00000.json",
+  "updated_at": "2026-07-10T05:56:36.864Z"
+}

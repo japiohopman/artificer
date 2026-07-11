@@ -1,0 +1,13 @@
+{
+  "index": "mmlightningabsor",
+  "name": "lightning absorption",
+  "type": "feat",
+  "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/lightning/barrier-shield-orb-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmlightningabsor.json",
+  "updated_at": "2026-07-10T05:56:36.980Z"
+}

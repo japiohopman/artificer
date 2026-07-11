@@ -1,0 +1,92 @@
+{
+  "index": "ssucaf2fieoddfa3",
+  "name": "giant boar",
+  "desc": "Giant Boar is a CR 2 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 42,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10 + 15",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 16,
+  "intelligence": 2,
+  "wisdom": 7,
+  "charisma": 5,
+  "stats": {
+    "str": 17,
+    "dex": 10,
+    "con": 16,
+    "int": 2,
+    "wis": 7,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a target and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.SsuCaF2fIEoDdFA3.Item.zHwaxxXcDz8AE8Bj]{tusk} attack on the same turn, the target takes an extra [[/damage average]] damage. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "relentless",
+      "desc": "If the [[lookup @name lowercase]]{monster} takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tusk",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantBoar.webp",
+  "url": "/assets/atlas/enemies/json/ssucaf2fieoddfa3.json",
+  "updated_at": "2026-07-09T11:33:14.082Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

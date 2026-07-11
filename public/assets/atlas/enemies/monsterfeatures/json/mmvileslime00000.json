@@ -1,0 +1,22 @@
+{
+  "index": "mmvileslime00000",
+  "name": "vile slime",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "poison",
+        "name": "poison",
+        "url": "/assets/atlas/damage_types/json/poison.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/slimes/slime-movement-splashing-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmvileslime00000.json",
+  "updated_at": "2026-07-10T05:56:36.937Z"
+}

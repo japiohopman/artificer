@@ -1,0 +1,89 @@
+{
+  "index": "naisfponngucseyw",
+  "name": "zombie",
+  "desc": "Zombie is a CR 0.25 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 8
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8 + 9",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 13,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 6,
+  "charisma": 5,
+  "stats": {
+    "str": 13,
+    "dex": 6,
+    "con": 16,
+    "int": 3,
+    "wis": 6,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "understands the languages it knew in life but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "undead fortitude",
+      "desc": "If damage reduces the [[lookup @name lowercase]]{monster} to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the [[lookup @name lowercase]]{monster} drops to 1 hit point instead.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Zombie.webp",
+  "url": "/assets/atlas/enemies/json/naisfponngucseyw.json",
+  "updated_at": "2026-07-09T11:33:15.815Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

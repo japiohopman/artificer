@@ -1,0 +1,23 @@
+{
+  "index": "mmcacophony00000",
+  "name": "cacophony",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=pyvvXqoxJsjkkP38]], one creature in the [[lookup @name lowercase]]{monster}'s space. Failure: The target has the &Reference[Deafened apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn. While Deafened, the target also has Disadvantage on ability checks and attack rolls.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "6"
+  },
+  "range": "0 self",
+  "image": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcacophony00000.json",
+  "updated_at": "2026-07-10T05:56:36.791Z"
+}

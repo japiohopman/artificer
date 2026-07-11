@@ -1,0 +1,13 @@
+{
+  "index": "mmaquaticcharge0",
+  "name": "aquatic charge",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} swims up to its Swim Speed straight toward an enemy it can see.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "@attributes.movement.swim ft",
+  "image": "icons/magic/water/projectile-ice-orb-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmaquaticcharge0.json",
+  "updated_at": "2026-07-10T05:56:36.780Z"
+}

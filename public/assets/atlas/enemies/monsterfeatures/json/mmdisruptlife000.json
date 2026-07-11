@@ -1,0 +1,19 @@
+{
+  "index": "mmdisruptlife000",
+  "name": "disrupt life",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=qSz7l1czwIc5j9gP]], each [[lookup @target.affects.type activity=qSz7l1czwIc5j9gP]] that isn't an Undead in a [[lookup @target.template.size activity=qSz7l1czwIc5j9gP]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "20-foot radius",
+  "image": "icons/magic/life/heart-broken-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdisruptlife000.json",
+  "updated_at": "2026-07-10T05:56:36.942Z"
+}

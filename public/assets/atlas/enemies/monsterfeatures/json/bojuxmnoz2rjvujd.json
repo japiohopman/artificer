@@ -1,0 +1,16 @@
+{
+  "index": "bojuxmnoz2rjvujd",
+  "name": "ink cloud",
+  "type": "feat",
+  "desc": "A 20-foot-radius cloud of ink extends all around the [[lookup @name lowercase]]{monster} if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the [[lookup @name lowercase]]{monster} can use the Dash action as a bonus action. Recharges after a Short or Long Rest.\nA 20-foot-radius cloud of ink extends all around the [[lookup @name lowercase]]{monster} if it is underwater.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": "20-foot radius",
+  "image": "icons/magic/unholy/orb-swirling-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/bojuxmnoz2rjvujd.json",
+  "updated_at": "2026-07-10T05:56:36.709Z"
+}

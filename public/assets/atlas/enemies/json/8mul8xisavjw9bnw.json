@@ -1,0 +1,101 @@
+{
+  "index": "8mul8xisavjw9bnw",
+  "name": "giant ape",
+  "desc": "Giant Ape is a CR 7 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 157,
+  "hit_dice": "15d12",
+  "hit_points_roll": "15d12 + 60",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 23,
+    "dex": 14,
+    "con": 18,
+    "int": 7,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .N86NeUNsfvruyJGq]]{fist} attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "fist",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "rock",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "7d6+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantApe.webp",
+  "url": "/assets/atlas/enemies/json/8mul8xisavjw9bnw.json",
+  "updated_at": "2026-07-09T11:33:14.074Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

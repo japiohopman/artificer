@@ -1,0 +1,33 @@
+{
+  "index": "twld4plcltv7xh7j",
+  "name": "stinking cloud",
+  "desc": [
+    "You create a 20-foot-radius sphere of yellow, nauseating gas centered on a point within range. The cloud spreads around corners, and its area is heavily obscured. The cloud lingers in the air for the duration.",
+    "Each creature that is completely within the cloud at the start of its turn must make a Constitution saving throw against poison. On a failed save, the creature spends its action that turn retching and reeling. Creatures that don't need to breathe or are immune to poison automatically succeed on this saving throw.",
+    "A moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds. A strong wind (at least 20 miles per hour) disperses it after 1 round."
+  ],
+  "range": "90 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A rotten egg or several skunk cabbage leaves",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/twld4plcltv7xh7j.json",
+  "image": "/assets/atlas/spell/images/twld4plcltv7xh7j.webp",
+  "updated_at": "2026-07-10T15:34:53.132Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

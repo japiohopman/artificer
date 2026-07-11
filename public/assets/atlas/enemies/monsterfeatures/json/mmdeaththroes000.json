@@ -1,0 +1,19 @@
+{
+  "index": "mmdeaththroes000",
+  "name": "death throes",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} explodes when it dies.\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=jTq2czA8KQITUK4c]], each creature in a [[lookup @target.template.size activity=jTq2czA8KQITUK4c]]-foot Emanation originating from the [[lookup @name lowercase]]{monster}.\nFailure: [[/damage average]] damage.\nFailure or Success: If the [[lookup @name lowercase]]{monster} dies outside the Abyss, it gains a new body instantly, reviving with all its Hit Points somewhere in the Abyss.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "30-foot radius",
+  "image": "icons/magic/death/skeleton-skull-soul-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmdeaththroes000.json",
+  "updated_at": "2026-07-10T05:56:36.967Z"
+}

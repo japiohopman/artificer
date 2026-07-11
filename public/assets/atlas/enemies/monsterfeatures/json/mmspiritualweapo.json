@@ -1,0 +1,16 @@
+{
+  "index": "mmspiritualweapo",
+  "name": "spiritual weapon",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} casts the @UUID[Compendium.dnd5e.spells24.Item.phbsplSpiritualW]{Spiritual Weapon} spell, using the same spellcasting ability as Spellcasting.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 2,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/weapons/axes/axe-double-gold.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmspiritualweapo.json",
+  "updated_at": "2026-07-10T05:56:36.847Z"
+}

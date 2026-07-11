@@ -1,0 +1,85 @@
+{
+  "index": "glacgcgip6yjbjgc",
+  "name": "noble",
+  "desc": "Noble is a CR 0.125 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Alignment",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 11
+    }
+  ],
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 12,
+  "wisdom": 14,
+  "charisma": 16,
+  "stats": {
+    "str": 11,
+    "dex": 12,
+    "con": 11,
+    "int": 12,
+    "wis": 14,
+    "cha": 16
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any two languages",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "rapier",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "parry",
+      "desc": "The [[lookup @name lowercase]]{monster} adds 2 to its AC against one melee attack that would hit it. To do so, the [[lookup @name lowercase]]{monster} must see the attacker and be wielding a melee weapon.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Noble.webp",
+  "url": "/assets/atlas/enemies/json/glacgcgip6yjbjgc.json",
+  "updated_at": "2026-07-09T11:33:15.232Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

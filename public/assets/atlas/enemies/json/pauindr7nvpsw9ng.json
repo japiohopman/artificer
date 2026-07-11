@@ -1,0 +1,175 @@
+{
+  "index": "pauindr7nvpsw9ng",
+  "name": "ancient brass dragon",
+  "desc": "Ancient Brass Dragon is a CR 20 dragon.",
+  "size": "Gargantuan",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 20
+    }
+  ],
+  "hit_points": 297,
+  "hit_dice": "17d20",
+  "hit_points_roll": "17d20+119",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 27,
+  "dexterity": 10,
+  "constitution": 25,
+  "intelligence": 16,
+  "wisdom": 15,
+  "charisma": 19,
+  "stats": {
+    "str": 27,
+    "dex": 10,
+    "con": 25,
+    "int": 16,
+    "wis": 15,
+    "cha": 19
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its [[/item .aK8gzRFcKnL7yzcH]]{Frightful Presence}. It then makes three attacks: one with its [[/item .M8QrGIl4ESY4kh6A]]{bite} and two with its [[/item .Iy1UXphRvuXgybrn]]{claws}.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d10+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "change shape",
+      "desc": "The [[lookup @name lowercase]]{monster} magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the [[lookup @name lowercase]]{monster}'s choice). In a new form, the [[lookup @name lowercase]]{monster} retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Fire Breath. The [[lookup @name lowercase]]{monster} exhales fire in an [[lookup @labels.description.template activity=NBdXGRF1vahbq4p8]]. Each creature in that line must make a [[/save activity=NBdXGRF1vahbq4p8]] saving throw, taking [[/damage average activity=NBdXGRF1vahbq4p8]] damage on a failed save, or half as much damage on a successful one. Sleep Breath. The [[lookup @name lowercase]]{monster} exhales sleep gas in a [[lookup @labels.description.template activity=O02zuaLvAqtmgutQ]]. Each creature in that area must succeed on a [[/save activity=O02zuaLvAqtmgutQ]] saving throw or fall &Reference[unconscious] for [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "frightful presence",
+      "desc": "Each creature of the [[lookup @name lowercase]]{monster}'s choice that is within [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] of the dragon and aware of it must succeed on a [[/save]] saving throw or become &Reference[frightened] for [[lookup @labels.duration activity=2VOmvThI0bGdUsMt]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the [[lookup @name lowercase]]{monster}'s [[lookup @item.name]] for the next 24 hours.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "detect",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a Wisdom (Perception) check.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail attack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a [[/item .ZTkCj3bm1xkpbnkY]]{tail} attack.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "wing attack",
+      "desc": "The [[lookup @name lowercase]]{monster} beats its wings. Each creature within [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] of the [[lookup @name lowercase]]{monster} must succeed on a [[/save]] saving throw or take [[/damage average]] damage and be knocked &Reference[prone]. The [[lookup @name lowercase]]{monster} can then fly up to half its flying speed.",
+      "attack_bonus": 9,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/pauindr7nvpsw9ng.webp",
+  "url": "/assets/atlas/enemies/json/pauindr7nvpsw9ng.json",
+  "updated_at": "2026-07-09T11:33:14.625Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

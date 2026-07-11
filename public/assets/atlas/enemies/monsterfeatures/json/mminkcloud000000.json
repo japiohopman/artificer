@@ -1,0 +1,13 @@
+{
+  "index": "mminkcloud000000",
+  "name": "ink cloud",
+  "type": "feat",
+  "desc": "Trigger: The [[lookup @name lowercase]]{monster} takes damage while underwater.\nResponse: The [[lookup @name lowercase]]{monster} releases ink that fills a [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]]-foot Cube centered on itself, and the [[lookup @name lowercase]]{monster} moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "10-foot cube",
+  "image": "icons/magic/air/fog-gas-smoke-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mminkcloud000000.json",
+  "updated_at": "2026-07-10T05:56:36.819Z"
+}

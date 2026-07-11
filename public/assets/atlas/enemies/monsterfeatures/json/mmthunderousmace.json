@@ -1,0 +1,22 @@
+{
+  "index": "mmthunderousmace",
+  "name": "thunderous mace",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "3d8",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/maces/mace-flanged-steel.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmthunderousmace.json",
+  "updated_at": "2026-07-10T05:56:36.933Z"
+}

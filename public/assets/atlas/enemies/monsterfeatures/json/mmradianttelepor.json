@@ -1,0 +1,19 @@
+{
+  "index": "mmradianttelepor",
+  "name": "radiant teleport",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} teleports up to [[lookup @range.value activity=HtsFBK1PYKjvy9mn]] feet to an unoccupied space it can see.\nDexterity Saving Throw: DC [[lookup @save.dc.value activity=HtsFBK1PYKjvy9mn]], each creature in a [[lookup @target.template.size activity=HtsFBK1PYKjvy9mn]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} at its destination space.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 25,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmradianttelepor.json",
+  "updated_at": "2026-07-10T05:56:36.951Z"
+}

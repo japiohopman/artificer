@@ -1,0 +1,190 @@
+{
+  "index": "ddo9ldcdtnhkfshp",
+  "name": "vampire",
+  "desc": "Vampire is a CR 13 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "Shapechanger",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 144,
+  "hit_dice": "17d8",
+  "hit_points_roll": "17d8 + 68",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 18,
+    "dex": 18,
+    "con": 18,
+    "int": 17,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "necrotic",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shapechanger",
+      "desc": "If the [[lookup @name lowercase]]{monster} isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form. While in bat form, the [[lookup @name lowercase]]{monster} can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies. While in mist form, the [[lookup @name lowercase]]{monster} can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without &reference[squeezing]{Squeezing}, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "misty escape",
+      "desc": "When it drops to 0 hit points outside its resting place, the [[lookup @name lowercase]]{monster} transforms into a cloud of mist (as in the @UUID[Compendium.dnd5e.monsters.Actor.DDO9lDCDtNHkfShP.Item.BqG5guVa93LaOAn1]{Shapechanger} trait) instead of falling &reference[unconscious apply=false], provided that it isn't in sunlight or running water. If it can't transform, it is destroyed. While it has 0 hit points in mist form, it can't revert to its [[lookup @name lowercase]]{monster} form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its [[lookup @name lowercase]]{monster} form. It is then &reference[paralyzed] until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack (vampire form only)",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks, only one of which can be a @UUID[Compendium.dnd5e.monsters.Actor.DDO9lDCDtNHkfShP.Item.uqHuj7Pjf2sjny21]{bite} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "unarmed strike (vampire form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]]. Instead of dealing damage, the [[lookup @name lowercase]}{monster} can &reference[grapple] the target (escape DC 18).",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "bite (bat or vampire form only)",
+      "desc": "Melee Weapon Attack: [[/attack]], 5 ft., one willing creature, or a creature that is &reference[grappled apply=false] by the [[lookup @name lowercase]]{monster}, &reference[incapacitated apply=false], or &reference[restrained apply=false]. [[/damage extended]]. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the [[lookup @name lowercase]]{monster} regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a @UUID[Compendium.dnd5e.monsters.Actor.zpaZb7I8alY32vWV]{vampire spawn} under the [[lookup @name lowercase]]{monster}'s control.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "charm",
+      "desc": "The [[lookup @name lowercase]]{monster} targets one humanoid it can see within [[lookup @labels.description.range activity=kzseXOAXwSg10knT]] of it. If the target can see the [[lookup @name lowercase]]{monster}, the target must succeed on a [[/save]] saving throw against this magic or be &reference[charmed] by the [[lookup @name lowercase]]{monster}. The charmed target regards the [[lookup @name lowercase]]{monster} as a trusted friend to be heeded and protected. Although the target isn't under the [[lookup @name lowercase]]{monster}'s control, it takes the [[lookup @name lowercase]]{monster}'s requests or actions in the most favorable way it can, and it is a willing target for the [[lookup @name lowercase]]{monster}'s @UUID[Compendium.dnd5e.monsters.Actor.DDO9lDCDtNHkfShP.Item.uqHuj7Pjf2sjny21]{bite} attack. Each time the [[lookup @name lowercase]]{monster} or the [[lookup @name lowercase]]{monster}'s companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the [[lookup @name lowercase]]{monster} is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "children of the night",
+      "desc": "The [[lookup @name lowercase]]{monster} magically calls 2d4 @UUID[Compendium.dnd5e.monsters.Actor.PcZ0QjIG6bHpffp9]{Swarms of Bats} or @UUID[Compendium.dnd5e.monsters.Actor.8ihbbjkaOFTPbI73]{Rats}, provided that the sun isn't up. While outdoors, the [[lookup @name lowercase]]{monster} can call 3d6 @UUID[Compendium.dnd5e.monsters.Actor.yawTeS8u2FCfzzZH]{Wolves} instead. The called creatures arrive in 1d4 rounds, acting as allies of the [[lookup @name lowercase]]{monster} and obeying its spoken commands. The beasts remain for [[lookup @labels.duration activity=MEMqdbvq8fIu4T89]], until the [[lookup @name lowercase]]{monster} dies, or until the [[lookup @name lowercase]]{monster} dismisses them as a bonus action.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "move",
+      "desc": "The [[lookup @name lowercase]]{monster} moves up to its speed without provoking &reference[opportunity attacks].",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "unarmed strike",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .jYBYvv9EF1UnOvqZ]]{unarmed strike}.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a [[/item .uqHuj7Pjf2sjny21]]{bite} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary resistance",
+      "desc": "If the [[lookup @name lowercase]]{monster} fails a saving throw, it can choose to succeed instead.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "regeneration",
+      "desc": "The [[lookup @name lowercase]]{monster} regains [[/healing]] at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the [[lookup @name lowercase]]{monster} takes radiant damage or damage from @UUID[Compendium.dnd5e.equipment24.Item.nshr9PBVyB03T7wB]{Holy Water}, this trait doesn't function at the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "vampire weaknesses",
+      "desc": "The vampire has the following flaws: Forbiddance. The [[lookup @name lowercase]]{monster} can't enter a residence without an invitation from one of the occupants. Harmed by Running Water. The [[lookup @name lowercase]]{monster} takes [[/damage activity=zTY3HiiTYj5yJ7Io]] damage when it ends its turn in running water. Stake to the Heart. The [[lookup @name lowercase]]{monster} is destroyed if a piercing weapon made of wood is driven into its heart while it is &reference[incapacitated apply=false] in its resting place. Sunlight Hypersensitivity. The [[lookup @name lowercase]]{monster} takes [[/damage activity=3lO6XvaimPKCB5te]] damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Vampire.webp",
+  "url": "/assets/atlas/enemies/json/ddo9ldcdtnhkfshp.json",
+  "updated_at": "2026-07-09T11:33:15.780Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -3,9 +3,8 @@ import { ALL_ICONS } from './assets/icons';
 
 /**
  * Game Icons Registry
- * Categorized icons are imported from ./assets/icons
- * To add a new icon, add a placeholder string in the appropriate category file.
- * Using 512x512 viewport paths for custom game icons.
+ * Categorized icons are dynamically loaded from the new solo-SVG architecture
+ * in public/assets/icons/svg/.
  * 
  * NOTE: Prefer importing specific icons/categories directly in components
  * to support tree-shaking and reduce bundle size.
@@ -37,10 +36,29 @@ export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, clas
     return null;
   }
 
-  const path = typeof pathEntry === 'string' ? pathEntry : pathEntry.path;
-
   const w = width || size || 24;
   const h = height || size || 24;
+
+  const entry = pathEntry as any;
+
+  // Support for the new solo SVG raw HTML content
+  if (typeof entry === 'object' && entry && entry.rawHtml) {
+    return (
+      <svg
+        viewBox={entry.viewBox || "0 0 512 512"}
+        width={w}
+        height={h}
+        fill={color}
+        className={className}
+        xmlns="http://www.w3.org/2000/svg"
+        dangerouslySetInnerHTML={{ __html: (title ? `<title>${title}</title>` : '') + entry.rawHtml }}
+        {...props}
+      />
+    );
+  }
+
+  // Backward compatibility with legacy string path formats
+  const path = typeof entry === 'string' ? entry : entry.path;
 
   return (
     <svg 

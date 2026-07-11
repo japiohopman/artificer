@@ -1,0 +1,85 @@
+{
+  "index": "7kj5vjnp0fjrdu6t",
+  "name": "warhorse skeleton",
+  "desc": "Warhorse Skeleton is a CR 0.5 undead.",
+  "size": "Large",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10 + 6",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 5,
+  "stats": {
+    "str": 18,
+    "dex": 12,
+    "con": 15,
+    "int": 2,
+    "wis": 8,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "bludgeoning"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/thumbs/undead/WarhorseSkeleton.webp",
+  "url": "/assets/atlas/enemies/json/7kj5vjnp0fjrdu6t.json",
+  "updated_at": "2026-07-09T11:33:15.785Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

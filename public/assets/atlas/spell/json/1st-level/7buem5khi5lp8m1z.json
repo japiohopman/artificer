@@ -1,0 +1,31 @@
+{
+  "index": "7buem5khi5lp8m1z",
+  "name": "guiding bolt",
+  "desc": [
+    "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.",
+    "Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+  ],
+  "range": "120 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 round",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/7buem5khi5lp8m1z.json",
+  "image": "/assets/atlas/spell/images/7buem5khi5lp8m1z.webp",
+  "updated_at": "2026-07-10T15:34:53.045Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

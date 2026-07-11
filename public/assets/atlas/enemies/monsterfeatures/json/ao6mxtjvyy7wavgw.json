@@ -1,0 +1,16 @@
+{
+  "index": "ao6mxtjvyy7wavgw",
+  "name": "blinding dust",
+  "type": "feat",
+  "desc": "Blinding dust and sand swirls magically around the [[lookup @name lowercase]]{monster}. Each creature within 5 feet of the [[lookup @name lowercase]]{monster} must succeed on a  DC 16 Constitution saving throw or be blinded until the end of the creature's next turn.\nBlinding dust and sand swirls magically around the [[lookup @name lowercase]]{monster}. Each creature within 5 feet of the [[lookup @name lowercase]]{monster} must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5-foot radius",
+  "image": "icons/magic/fire/barrier-wall-explosion-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ao6mxtjvyy7wavgw.json",
+  "updated_at": "2026-07-10T05:56:36.655Z"
+}

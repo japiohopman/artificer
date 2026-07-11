@@ -1,0 +1,32 @@
+{
+  "index": "l9ju5ke7bbn3wptm",
+  "name": "hold monster",
+  "desc": [
+    "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be &Reference[Paralyzed] for the Duration. This spell has no effect on Undead. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.",
+    "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them."
+  ],
+  "range": "90 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small, straight piece of iron",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/l9ju5ke7bbn3wptm.json",
+  "image": "/assets/atlas/spell/images/l9ju5ke7bbn3wptm.webp",
+  "updated_at": "2026-07-10T15:34:53.172Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

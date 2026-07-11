@@ -1,0 +1,85 @@
+{
+  "index": "ytpl2c3no4son2ua",
+  "name": "mastiff",
+  "desc": "Mastiff is a CR 0.125 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 5,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8 + 1",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 13,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 13,
+    "dex": 14,
+    "con": 12,
+    "int": 3,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or be knocked &Reference[prone].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Mastiff.webp",
+  "url": "/assets/atlas/enemies/json/ytpl2c3no4son2ua.json",
+  "updated_at": "2026-07-09T11:33:14.187Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

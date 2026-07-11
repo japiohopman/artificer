@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Sparkles } from 'lucide-react';
-import { GameIcon } from '@/src/game_icons';
-import { useGameStore } from '@/src/store/useGameStore';
+import { GameIcon } from '../../game_icons';
+import { useGameStore } from '../../store/useGameStore';
 
 interface PaperScissorRockProps {
   isArena?: boolean;

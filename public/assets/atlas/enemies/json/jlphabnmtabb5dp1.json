@@ -1,0 +1,101 @@
+{
+  "index": "jlphabnmtabb5dp1",
+  "name": "elephant",
+  "desc": "Elephant is a CR 4 beast.",
+  "size": "Huge",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 76,
+  "hit_dice": "8d12",
+  "hit_points_roll": "8d12 + 24",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 6,
+  "stats": {
+    "str": 22,
+    "dex": 9,
+    "con": 17,
+    "int": 3,
+    "wis": 11,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "gore",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "3d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "stomp",
+      "desc": "Melee Weapon Attack: [[/attack]], reach 5 ft., one prone creature. Hit: [[/damage average]] damage.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "trampling charge",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 20 feet straight toward a creature and then hits it with a @UUID[Compendium.dnd5e.monsters.Actor.jLPhaBnMtAbB5dp1.Item.r6mBkCtL5j6Y6sBr]{gore} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &Reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one [[/item .ZHBbc5K4n6sU17rC]]{stomp} attack against it as a bonus action.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Elephant.webp",
+  "url": "/assets/atlas/enemies/json/jlphabnmtabb5dp1.json",
+  "updated_at": "2026-07-09T11:33:14.064Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

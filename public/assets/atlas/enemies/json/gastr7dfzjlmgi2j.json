@@ -1,0 +1,89 @@
+{
+  "index": "gastr7dfzjlmgi2j",
+  "name": "awakened shrub",
+  "desc": "Awakened Shrub is a CR 0 plant.",
+  "size": "Small",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 9
+    }
+  ],
+  "hit_points": 10,
+  "hit_dice": "3d6",
+  "hit_points_roll": "3d6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 3,
+  "dexterity": 8,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 6,
+  "stats": {
+    "str": 3,
+    "dex": 8,
+    "con": 11,
+    "int": 10,
+    "wis": 10,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "piercing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "one language known by its creator",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "rake",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from a normal shrub.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/plant/AwakenedShrub.webp",
+  "url": "/assets/atlas/enemies/json/gastr7dfzjlmgi2j.json",
+  "updated_at": "2026-07-09T11:33:15.568Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

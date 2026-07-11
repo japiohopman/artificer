@@ -1,0 +1,31 @@
+{
+  "index": "prmvmknwlf2tdmtj",
+  "name": "pass without trace",
+  "desc": [
+    "A veil of shadows and Silence radiates from you, masking you and your companions from detection. For the Duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Ashes from a burned leaf of mistletoe and a sprig of spruce",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/prmvmknwlf2tdmtj.json",
+  "image": "/assets/atlas/spell/images/prmvmknwlf2tdmtj.webp",
+  "updated_at": "2026-07-10T15:34:53.096Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

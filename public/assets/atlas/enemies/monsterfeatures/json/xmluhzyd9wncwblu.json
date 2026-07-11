@@ -1,0 +1,22 @@
+{
+  "index": "xmluhzyd9wncwblu",
+  "name": "hellish rejuvenation",
+  "type": "feat",
+  "desc": "A [[lookup @name lowercase]]{monster} that dies in the Nine Hells sometimes comes back to comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a bless spell cast on that creature or its remains are sprinkled with holy water.\nA [[lookup @name lowercase]]{monster} that dies in the Nine Hells sometimes comes back to life.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "days",
+        "name": "days",
+        "url": "/assets/atlas/damage_types/json/days.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/wounds/anatomy-organ-heart-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/xmluhzyd9wncwblu.json",
+  "updated_at": "2026-07-10T05:56:36.702Z"
+}

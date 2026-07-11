@@ -1,0 +1,99 @@
+{
+  "index": "tyfqixcjt0waakmc",
+  "name": "cult fanatic",
+  "desc": "Cult Fanatic is a CR 2 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Any Race",
+  "alignment": "Any Non-Good",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 33,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 14,
+  "stats": {
+    "str": 11,
+    "dex": 14,
+    "con": 12,
+    "int": 10,
+    "wis": 13,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "dark devotion",
+      "desc": "The [[l;ookup @name lowercase]]{monster} has advantage on saving throws against being &reference[charmed apply=false] or &reference[frightened apply=false].",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spellcasting",
+      "desc": "The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared: Cantrips (at will): [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy} 1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .ksaaTxIbKx2sJfia]]{inflict wounds}, [[/item .jZ6JNykRtdQ90MOo]]{shield of faith} 2nd level (3 slots): [[/item .3Lo9boi7P2ro6QV4]]{hold person}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon}",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two melee attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "dagger",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/CultFanatic.webp",
+  "url": "/assets/atlas/enemies/json/tyfqixcjt0waakmc.json",
+  "updated_at": "2026-07-09T11:33:15.142Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

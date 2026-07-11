@@ -1,0 +1,99 @@
+{
+  "index": "ixo5shumxy4i9qyd",
+  "name": "giant toad",
+  "desc": "Giant Toad is a CR 1 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 39,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 15,
+    "dex": 13,
+    "con": 13,
+    "int": 2,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &Reference[grappled] (escape DC 13). Until this grapple ends, the target is &Reference[restrained], and the [[lookup @name lowercase]]{monster} can't [[lookup @item.name lowercase]] another target.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "swallow",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .lYSWskOMRCVLyWLZ]]{Bite} attack against a Medium or smaller target it is &reference[grappling]. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is &reference[blinded] and &reference[restrained], it has &reference[total cover] against attacks and other effects outside the [[lookup @name lowercase]]{monster}, and it takes [[/damage average activity=hjeShYMsNTvN1QF9]] damage at the start of each of the [[lookup @name lowercase]]{monster}'s turns. The [[lookup @name lowercase]]{monster} can have only one target swallowed at a time. If the [[lookup @name lowercase]]{monster} dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting &reference[prone].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "standing leap",
+      "desc": "The [[lookup @name lowercase]]{monster}'s &reference[long jump] is up to 20 feet and its &reference[high jump] is up to 10 feet, with or without a running start.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantToad.webp",
+  "url": "/assets/atlas/enemies/json/ixo5shumxy4i9qyd.json",
+  "updated_at": "2026-07-09T11:33:14.153Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

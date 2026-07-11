@@ -1,0 +1,16 @@
+{
+  "index": "ivoxckt9448v7ho5",
+  "name": "tail spike regrowth",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} has twenty-four tail spikes. Used spikes regrow when the [[lookup @name lowercase]]{monster} finishes a long rest.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 24,
+    "type": "long_rest"
+  },
+  "range": null,
+  "image": "icons/creatures/mammals/wolf-shadow-black.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/ivoxckt9448v7ho5.json",
+  "updated_at": "2026-07-10T05:56:36.759Z"
+}

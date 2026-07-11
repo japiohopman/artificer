@@ -1,0 +1,22 @@
+{
+  "index": "mmtrashlob000000",
+  "name": "trash lob",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target has the &Reference[Poisoned apply=false] condition until the end of its next turn.",
+  "damage": [
+    {
+      "damage_dice": "2d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/commodities/materials/material-cotton-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmtrashlob000000.json",
+  "updated_at": "2026-07-10T05:56:36.935Z"
+}

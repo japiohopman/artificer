@@ -1,0 +1,13 @@
+{
+  "index": "mmacidabsorption",
+  "name": "acid absorption",
+  "type": "feat",
+  "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to &Reference[Acid] damage, it takes no damage and instead regains a number of Hit Points equal to the Acid damage dealt.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/acid/orb-bubble-smoke-drip.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmacidabsorption.json",
+  "updated_at": "2026-07-10T05:56:36.957Z"
+}

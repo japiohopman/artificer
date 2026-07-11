@@ -1,0 +1,25 @@
+{
+  "index": "r2nm5i77lnsvklvd",
+  "name": "consume life",
+  "type": "feat",
+  "desc": "As a bonus action, the [[lookup @name lowercase]]{monster} can target one creature it can see within 5 ft. of it that has 0 hit points and is still alive.\nThe target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the [[lookup @name lowercase]]{monster} regains 10 (3d6) hit points.\nthe [[lookup @name lowercase]]{monster} can target one creature it can see within 5 ft. The target must succeed on a Constitution saving throw.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "con",
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "5 ft",
+  "image": "icons/magic/life/heart-glowing-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/r2nm5i77lnsvklvd.json",
+  "updated_at": "2026-07-10T05:56:36.668Z"
+}

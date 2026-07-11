@@ -1,0 +1,121 @@
+{
+  "index": "vmdyzdjqac8vdncy",
+  "name": "succubus/incubus",
+  "desc": "Succubus/Incubus is a CR 4 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Shapechanger",
+  "alignment": "neutral evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 66,
+  "hit_dice": "12d8",
+  "hit_points_roll": "12d8 + 12",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 17,
+  "constitution": 13,
+  "intelligence": 15,
+  "wisdom": 12,
+  "charisma": 20,
+  "stats": {
+    "str": 8,
+    "dex": 17,
+    "con": 13,
+    "int": 15,
+    "wis": 12,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "fire",
+    "lightning",
+    "piercing",
+    "poison",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "telepathic bond",
+      "desc": "The [[lookup @name lowercase]]{monster} ignores the range restriction on its telepathy when communicating with a creature it has &reference[charmed apply=false]. The two don't even need to be on the same plane of existence.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shapechanger",
+      "desc": "The [[lookup @details.type.value]]{monster} can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the [[lookup @details.type.value]]{monster} loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw (fiend form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "charm",
+      "desc": "One humanoid the [[lookup @details.type.value]]{monster} can see within [[lookup @labels.description.range activity=ZFCUDfqONxiB5KBa]] of it must make a [[/save]] saving throw or be magically &reference[charmed apply=false] for [[lookup @labels.duration activity=ZFCUDfqONxiB5KBa]]. The charmed target obeys the [[lookup @details.type.value]]{monster}'s verbal or telepathic commands. If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this [[lookup @details.type.value]]{monster}'s [[lookup @item.name]] for the next 24 hours.The [[lookup @details.type.value]]{monster} can have only one target charmed at a time. If it charms another, the effect on the previous target ends.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "draining kiss",
+      "desc": "The [[lookup @details.type.value]]{monster} kisses a &reference[charmed apply=false] charmed by it or a willing creature. The target must make a [[/save activity=hczxJO21CcoyyyO7]] saving throw against this magic, taking [[/damage activity=hczxJO21CcoyyyO7]] damage on a failed save, or half as much damage on a successful one. The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. Foundry Note You can use the \"Maximum Hit Point Damage\" activity to input the amount of damage a creature took from this attack and reduce their hit point maximum by that amount.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "etherealness",
+      "desc": "The [[lookup @details.type.value]]{monster} magically enters the Ethereal Plane from the Material Plane, or vice versa.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/vmdyzdjqac8vdncy.webp",
+  "url": "/assets/atlas/enemies/json/vmdyzdjqac8vdncy.json",
+  "updated_at": "2026-07-09T11:33:15.031Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

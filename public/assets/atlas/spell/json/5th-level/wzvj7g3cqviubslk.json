@@ -1,0 +1,35 @@
+{
+  "index": "wzvj7g3cqviubslk",
+  "name": "greater restoration",
+  "desc": [
+    "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's Exhaustion level by one, or end one of the following Effects on the target:",
+    "One effect that Charmed or Petrified the target",
+    "One curse, including the target's Attunement to a cursed magic item",
+    "Any reduction to one of the target's Ability Scores",
+    "One effect reducing the target's hit point maximum"
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "diamond dust worth at least 100gp, which the spell consumes",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/wzvj7g3cqviubslk.json",
+  "image": "/assets/atlas/spell/images/wzvj7g3cqviubslk.webp",
+  "updated_at": "2026-07-10T15:34:53.171Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,52 @@
+{
+  "index": "zpd73htkf3at11jh",
+  "name": "control weather",
+  "desc": [
+    "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.",
+    "When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.",
+    "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
+    "Conditions",
+    "Clear",
+    "Light clouds",
+    "Overcast or ground fog",
+    "Rain, hail, or snow",
+    "Torrential rain, driving hail, or blizzard",
+    "Temperature",
+    "Unbearable heat",
+    "Hot",
+    "Warm",
+    "Cool",
+    "Cold",
+    "Arctic cold",
+    "Wind",
+    "Calm",
+    "Moderate wind",
+    "Strong wind",
+    "Gale",
+    "Storm"
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Burning incense and bits of earth and wood mixed in water.",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "10 minute",
+  "level": 8,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/8th-level/zpd73htkf3at11jh.json",
+  "image": "/assets/atlas/spell/images/zpd73htkf3at11jh.webp",
+  "updated_at": "2026-07-10T15:34:53.219Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

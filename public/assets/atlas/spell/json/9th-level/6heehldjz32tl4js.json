@@ -1,0 +1,32 @@
+{
+  "index": "6heehldjz32tl4js",
+  "name": "foresight",
+  "desc": [
+    "You touch a willing creature and bestow a limited ability to see into the immediate future. For the Duration, the target can't be surprised and has advantage on Attack rolls, Ability Checks, and Saving Throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
+    "This spell immediately ends if you cast it again before its Duration ends."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A hummingbird feather",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 9,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/9th-level/6heehldjz32tl4js.json",
+  "image": "/assets/atlas/spell/images/6heehldjz32tl4js.webp",
+  "updated_at": "2026-07-10T15:34:53.228Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

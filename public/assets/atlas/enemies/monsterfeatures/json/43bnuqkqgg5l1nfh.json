@@ -1,0 +1,17 @@
+{
+  "index": "43bnuqkqgg5l1nfh",
+  "name": "sleep breath",
+  "type": "feat",
+  "desc": "**Sleep Breath.** The [[lookup @details.type.config.label lowercase]]{monster} exhales sleep gas in a 60-foot cone. Each creature in that area must succeed on a  DC 18 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.\nThe [[lookup @details.type.config.label lowercase]]{monster} exhales sleep gas in a 90-foot cone. Each creature in that area must make a Constitution saving throw.",
+  "damage": [],
+  "dc": {
+    "dc_ability": "con",
+    "dc_value": 18,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "60-foot cone",
+  "image": "icons/magic/perception/third-eye-blue-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/43bnuqkqgg5l1nfh.json",
+  "updated_at": "2026-07-10T05:56:36.749Z"
+}

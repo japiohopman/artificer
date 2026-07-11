@@ -1,0 +1,113 @@
+{
+  "index": "ojcob9x2bpsbkww5",
+  "name": "magma mephit",
+  "desc": "Magma Mephit is a CR 0.5 elemental.",
+  "size": "Small",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6 + 5",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 10,
+  "stats": {
+    "str": 8,
+    "dex": 12,
+    "con": 12,
+    "int": 7,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "cold"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "innate spellcasting",
+      "desc": "The mephit can innately cast [[/item .2yHXEcrRbadZDr5M]]{heat metal} (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "death burst",
+      "desc": "When the [[lookup @name lowercase]]{monster} dies, it explodes in a burst of lava. Each creature within [[lookup @target.template.size activity=UQfpr7NYbryokaPS]] feet of it must make a [[/save activity=UQfpr7NYbryokaPS]] saving throw, taking [[/damage average activity=UQfpr7NYbryokaPS]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "false appearance",
+      "desc": "While the [[lookup @name lowercase]]{monster} remains motionless, it is indistinguishable from an ordinary mound of magma.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "fire breath",
+      "desc": "The [[lookup @name lowercase]]{monster} exhales a [[lookup @labels.description.template activity=9MCs28rlCi6lgvch]] of fire. Each creature in that area must make a [[/save activity=9MCs28rlCi6lgvch]] saving throw, taking [[/damage average activity=9MCs28rlCi6lgvch]] damage on a failed save, or half as much damage on a successful one.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/MagmaMephit.webp",
+  "url": "/assets/atlas/enemies/json/ojcob9x2bpsbkww5.json",
+  "updated_at": "2026-07-09T11:33:14.855Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

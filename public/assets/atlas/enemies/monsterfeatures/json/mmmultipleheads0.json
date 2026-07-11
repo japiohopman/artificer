@@ -1,0 +1,13 @@
+{
+  "index": "mmmultipleheads0",
+  "name": "multiple heads",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} has five heads. Whenever the [[lookup @name lowercase]]{monster} takes 25 damage or more on a single turn, one of its heads dies. The [[lookup @name lowercase]]{monster} dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the [[lookup @name lowercase]]{monster} grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The [[lookup @name lowercase]]{monster} regains 20 Hit Points when it grows new heads.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/abilities/dragon-breath-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmultipleheads0.json",
+  "updated_at": "2026-07-10T05:56:36.983Z"
+}

@@ -1,0 +1,122 @@
+{
+  "index": "8smql75hljhuseau",
+  "name": "fire elemental",
+  "desc": "Fire Elemental is a CR 5 elemental.",
+  "size": "Large",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 102,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 36",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 10,
+  "dexterity": 17,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "stats": {
+    "str": 10,
+    "dex": 17,
+    "con": 16,
+    "int": 6,
+    "wis": 10,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "unconscious",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "fire form",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch wide without &reference[squeezing]{Squeezing}. A creature that touches the [[lookup @name lowercase]]{monster} or hits it with a melee attack while within [[lookup @labels.description.range activity=3xh7g2u2KGcjZSe4]] of it takes [[/damage average]] damage. In addition, the [[lookup @name lowercase]]{monster} can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes [[/damage average]] damage and catches fire; until someone takes an action to douse the fire, the creature takes [[/damage average]] damage at the start of each of its turns.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds &reference[bright light] in a 30-foot radius and &reference[dim light] in an additional 30 feet.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "water susceptibility",
+      "desc": "For every 5 feet the [[lookup @name lowercase]]{monster} moves in water, or for every gallon of water splashed on it, it takes [[/damage]] damage.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The elemental makes two [[/item .fdt2FIirmBRCpRBm]]{touch} attacks.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "touch",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes [[/damage activity=dFEUCLc4Cmb2DETC average]] damage at the start of each of its turns.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "fire",
+            "url": "/assets/atlas/damage_types/json/fire.json"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/FireElemental.webp",
+  "url": "/assets/atlas/enemies/json/8smql75hljhuseau.json",
+  "updated_at": "2026-07-09T11:33:14.842Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

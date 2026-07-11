@@ -1,0 +1,31 @@
+{
+  "index": "13uvubqp6vaispvc",
+  "name": "water breathing",
+  "desc": [
+    "This spell grants up to ten willing creatures you can see within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A short reed or piece of straw",
+  "ritual": false,
+  "duration": "24 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/13uvubqp6vaispvc.json",
+  "image": "/assets/atlas/spell/images/13uvubqp6vaispvc.webp",
+  "updated_at": "2026-07-10T15:34:53.134Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

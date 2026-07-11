@@ -1,0 +1,111 @@
+{
+  "index": "xbhg7dos3tkg9jwz",
+  "name": "ochre jelly",
+  "desc": "Ochre Jelly is a CR 2 ooze.",
+  "size": "Large",
+  "type": "ooze",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 8
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10 + 12",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 15,
+  "dexterity": 6,
+  "constitution": 14,
+  "intelligence": 2,
+  "wisdom": 6,
+  "charisma": 1,
+  "stats": {
+    "str": 15,
+    "dex": 6,
+    "con": 14,
+    "int": 2,
+    "wis": 6,
+    "cha": 1
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid"
+  ],
+  "damage_immunities": [
+    "lightning",
+    "slashing"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "charmed",
+    "deafened",
+    "frightened",
+    "prone",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "pseudopod",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "split",
+      "desc": "When a [[lookup @name lowercase]]{monster} that is Medium or larger is subjected to lightning or slashing damage, it splits into two new [[lookup @name lowercase]]{monster}s if it has at least 10 Hit Points. Each new pudding has Hit Points equal to half the original [[lookup @name lowercase]]{monster}'s, rounded down. New [[lookup @name lowercase]]{monster}s are one size smaller than the original [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "spider climb",
+      "desc": "The [[lookup @name lowercase]]{monster} can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amorphous",
+      "desc": "The [[lookup @name lowercase]]{monster} can move through a space as narrow as 1 inch wide without &reference[squeezing]{Squeezing}.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/ooze/OchreJelly.webp",
+  "url": "/assets/atlas/enemies/json/xbhg7dos3tkg9jwz.json",
+  "updated_at": "2026-07-09T11:33:15.556Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

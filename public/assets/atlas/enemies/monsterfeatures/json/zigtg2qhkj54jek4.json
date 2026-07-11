@@ -1,0 +1,17 @@
+{
+  "index": "zigtg2qhkj54jek4",
+  "name": "haste",
+  "type": "feat",
+  "desc": "Recharge 5-6.\nUntil the end of its next turn, the [[lookup @name lowercase]]{monster} magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use an attack as a bonus action.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/zigtg2qhkj54jek4.json",
+  "updated_at": "2026-07-10T05:56:36.699Z"
+}

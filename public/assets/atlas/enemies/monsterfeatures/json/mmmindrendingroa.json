@@ -1,0 +1,23 @@
+{
+  "index": "mmmindrendingroa",
+  "name": "mind-rending roar",
+  "type": "feat",
+  "desc": "Wisdom Saving Throw: DC [[lookup @save.dc.value activity=zPMfwwIoTFzIrN5H]], each [[lookup @target.affects.type activity=zPMfwwIoTFzIrN5H]] in a [[lookup @target.template.size activity=zPMfwwIoTFzIrN5H]]-[[lookup @target.template.units activity=zPMfwwIoTFzIrN5H]]. Emanation originating from the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage, and the target has the &Reference[Incapacitated apply=false] condition until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "wis"
+    ],
+    "dc_value": 16,
+    "success_type": "none"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "500-foot radius",
+  "image": "icons/skills/wounds/injury-eyes-blood-red-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmindrendingroa.json",
+  "updated_at": "2026-07-10T05:56:36.824Z"
+}

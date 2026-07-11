@@ -1,0 +1,23 @@
+{
+  "index": "mmfirebreath0000",
+  "name": "fire breath",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=bDqgmtLG3zcVuqdi]], each [[lookup @target.affects.type activity=bDqgmtLG3zcVuqdi]] in a [[lookup @target.template.size activity=bDqgmtLG3zcVuqdi]]-foot-long, [[lookup @target.template.width activity=bDqgmtLG3zcVuqdi]]-foot-wide Line.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 11,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "15-foot line (width 5 ft.)",
+  "image": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfirebreath0000.json",
+  "updated_at": "2026-07-10T05:56:36.811Z"
+}

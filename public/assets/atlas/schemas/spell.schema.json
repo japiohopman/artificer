@@ -159,11 +159,11 @@
     },
     "url": {
       "type": "string",
-      "pattern": "^(public/)?assets/atlas/spell/json/.+\\.json$"
+      "pattern": "^\\/?(public/)?assets/atlas/spell/json/.+\\.json$"
     },
     "image": {
       "type": "string",
-      "pattern": "^(public/)?assets/atlas/spell/images/.+\\.webp$"
+      "pattern": "^\\/?(public/)?assets/atlas/spell/images/.+\\.webp$"
     },
     "updated_at": {
       "type": "string",

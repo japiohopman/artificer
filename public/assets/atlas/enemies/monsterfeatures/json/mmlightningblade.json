@@ -1,0 +1,22 @@
+{
+  "index": "mmlightningblade",
+  "name": "lightning blade",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]], and the target can't take &Reference[Reaction] until the start of the [[lookup @name lowercase]]{monster}'s next turn.",
+  "damage": [
+    {
+      "damage_dice": "3d8",
+      "damage_type": {
+        "index": "force",
+        "name": "force",
+        "url": "/assets/atlas/damage_types/json/force.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmlightningblade.json",
+  "updated_at": "2026-07-10T05:56:36.905Z"
+}

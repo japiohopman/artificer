@@ -1,0 +1,19 @@
+{
+  "index": "mmconsumememorie",
+  "name": "consume memories",
+  "type": "feat",
+  "desc": "Intelligence Saving Throw: DC [[lookup @save.dc.value activity=uI3HDQ1grN123Or3]], [[lookup @target.affects.labels.statblock activity=uI3HDQ1grN123Or3]] within [[lookup @range.value activity=uI3HDQ1grN123Or3]] feet. [[lookup @target.affects.special activity=uI3HDQ1grN123Or3]] by the [[lookup @name lowercase]]{monster}. Failure: [[/damage average]] damage. Success: [[lookup @damage.onSave capitalize activity=uI3HDQ1grN123Or3]] damage. Failure or Success: The [[lookup @name lowercase]]{monster} gains the target's memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "int"
+    ],
+    "dc_value": 16,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "30 ft",
+  "image": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmconsumememorie.json",
+  "updated_at": "2026-07-10T05:56:36.797Z"
+}

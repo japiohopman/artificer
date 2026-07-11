@@ -1,0 +1,19 @@
+{
+  "index": "mmpummel00000000",
+  "name": "pummel",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], one creature Grappled by the [[lookup @name lowercase]]{monster}.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/melee/unarmed-punch-fist-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpummel00000000.json",
+  "updated_at": "2026-07-10T05:56:36.835Z"
+}

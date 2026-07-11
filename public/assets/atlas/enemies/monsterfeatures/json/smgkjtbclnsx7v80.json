@@ -1,0 +1,30 @@
+{
+  "index": "smgkjtbclnsx7v80",
+  "name": "whelm",
+  "type": "feat",
+  "desc": "Each creature in the [[lookup @details.type.config.label lowercase]]{monster}'s space must make a  DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water.\nIf the saving throw is successful, the target is pushed out of the [[lookup @details.type.config.label lowercase]]{monster}'s space.The [[lookup @details.type.config.label lowercase]]{monster} can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the [[lookup @details.type.config.label lowercase]]{monster}'s turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the [[lookup @details.type.config.label lowercase]]{monster} can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding.\nEach creature in the [[lookup @details.type.config.label lowercase]]{monster}'s space must make a Strength saving throw. If it is Large or smaller, it is also grappled. Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. A creature within 5 feet of the [[lookup @details.type.config.label lowercase]]{monster} can pull a creature or object out of it by taking an action to make a Strength check and succeeding.",
+  "damage": [
+    {
+      "damage_dice": "2d8+4",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": "str",
+    "dc_value": 14,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "4"
+  },
+  "range": null,
+  "image": "icons/magic/water/vortex-water-whirlpool.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/smgkjtbclnsx7v80.json",
+  "updated_at": "2026-07-10T05:56:36.774Z"
+}

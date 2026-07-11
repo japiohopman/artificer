@@ -59,14 +59,31 @@ const SCHOOL_MAP = {
   tra: { index: 'transmutation', name: 'Transmutation', url: '/assets/atlas/magic_schools/json/transmutation.json' }
 };
 
-// Clean HTML to paragraphs
+// Clean HTML to paragraphs securely, protecting against HTML element injection (CodeQL)
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
-  const cleaned = html
-    .replace(/<\/p>/gi, '\n')
-    .replace(/<p>/gi, '')
-    .replace(/[<>]/g, '')
+
+  // 1. Explicitly remove script tags and their inner content to prevent script execution
+  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+
+  // 2. Explicitly remove any remaining partial or dangling <script tag patterns
+  cleaned = cleaned.replace(/<script/gi, '');
+
+  // 3. Convert paragraph markers to linebreaks
+  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
+
+  // 4. Safely strip all other HTML tag patterns using a secure pattern
+  cleaned = cleaned.replace(/<[^>]+>/g, '');
+
+  // 5. Sanitize HTML entity references to prevent raw markup injection
+  cleaned = cleaned
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&')
     .trim();
+
   return cleaned.split('\n').map(p => p.trim()).filter(p => p.length > 0);
 }
 
@@ -105,11 +122,28 @@ function getProficiencyBonusByCR(cr) {
   return 9;
 }
 
+// Get spell level directory name
+function getSpellLevelDirName(level) {
+  const lvl = parseInt(level);
+  if (isNaN(lvl) || lvl === 0) return 'cantrip';
+  if (lvl === 1) return '1st-level';
+  if (lvl === 2) return '2nd-level';
+  if (lvl === 3) return '3rd-level';
+  return `${lvl}th-level`;
+}
+
 // Load and preserve existing data for smart merge
-function getPreservedData(targetPath) {
+function getPreservedData(targetPath, fallbackPath) {
+  let finalPath = null;
   if (fs.existsSync(targetPath)) {
+    finalPath = targetPath;
+  } else if (fallbackPath && fs.existsSync(fallbackPath)) {
+    finalPath = fallbackPath;
+  }
+
+  if (finalPath) {
     try {
-      const content = fs.readFileSync(targetPath, 'utf8');
+      const content = fs.readFileSync(finalPath, 'utf8');
       const parsed = JSON.parse(content);
       return {
         image: parsed.image,
@@ -123,7 +157,32 @@ function getPreservedData(targetPath) {
         last_updated: parsed.last_updated
       };
     } catch (e) {
-      console.warn(`Could not parse existing asset at ${targetPath} for smart merge: ${e.message}`);
+      console.warn(`Could not parse existing asset at ${finalPath} for smart merge: ${e.message}`);
+    }
+  }
+  return null;
+}
+
+// Recursive search for token image
+function findTokenImage(baseDir, filenameNoExt) {
+  if (!fs.existsSync(baseDir)) return null;
+  const files = fs.readdirSync(baseDir);
+  for (const file of files) {
+    const fullPath = path.join(baseDir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      const found = findTokenImage(fullPath, filenameNoExt);
+      if (found) return found;
+    } else {
+      const ext = path.extname(file).toLowerCase();
+      if (['.webp', '.png', '.jpg', '.jpeg'].includes(ext)) {
+        const name = path.basename(file, ext).toLowerCase();
+        if (name === filenameNoExt.toLowerCase()) {
+          // Return relative path for web
+          const relative = path.relative(path.join(__dirname, '../public'), fullPath);
+          return '/' + relative.replace(/\\/g, '/');
+        }
+      }
     }
   }
   return null;
@@ -154,6 +213,7 @@ function mapActor(sourceData, targetPath) {
   const alignment = system.details?.alignment || 'any alignment';
 
   const cr = parseChallengeRating(system.details?.cr);
+  const proficiencyBonus = getProficiencyBonusByCR(cr);
 
   // Map embedded items to actions & special abilities
   const actions = [];
@@ -163,21 +223,28 @@ function mapActor(sourceData, targetPath) {
     sourceData.items.forEach(item => {
       const isWeapon = item.type === 'weapon';
       const isFeat = item.type === 'feat';
-      const itemDesc = cleanHtmlToParagraphs(item.system?.description?.value).join(' ');
+      const itemSystem = item.system || {};
+      const itemDesc = cleanHtmlToParagraphs(itemSystem.description?.value).join(' ');
 
-      if (isWeapon || (isFeat && item.system?.activities)) {
+      if (isWeapon || (isFeat && itemSystem.activities)) {
+        // Calculate attack bonus
+        let attackBonus = 0;
+        const abilityKey = itemSystem.ability || (isWeapon ? 'str' : 'int');
+        const abilityMod = Math.floor(((stats[abilityKey] || 10) - 10) / 2);
+        attackBonus = abilityMod + proficiencyBonus + (parseInt(itemSystem.attackBonus) || 0) + (itemSystem.magicalBonus || 0);
+
         actions.push({
           name: item.name.toLowerCase(),
           desc: itemDesc || `${name} attacks with its ${item.name}.`,
-          attack_bonus: item.system?.magicalBonus || 0,
-          damage: item.system?.damage?.base ? [
+          attack_bonus: attackBonus,
+          damage: itemSystem.damage?.base ? [
             {
               damage_type: {
-                index: item.system.damage.base.types?.[0] || 'bludgeoning',
-                name: item.system.damage.base.types?.[0] || 'bludgeoning',
-                url: `/assets/atlas/damage_types/json/${item.system.damage.base.types?.[0] || 'bludgeoning'}.json`
+                index: itemSystem.damage.base.types?.[0] || 'bludgeoning',
+                name: itemSystem.damage.base.types?.[0] || 'bludgeoning',
+                url: `/assets/atlas/damage_types/json/${itemSystem.damage.base.types?.[0] || 'bludgeoning'}.json`
               },
-              damage_dice: `${item.system.damage.base.number || 1}d${item.system.damage.base.denomination || 4}`
+              damage_dice: `${itemSystem.damage.base.number || 1}d${itemSystem.damage.base.denomination || 4}${abilityMod !== 0 ? (abilityMod > 0 ? '+' + abilityMod : abilityMod) : ''}`
             }
           ] : [],
           actions: []
@@ -195,6 +262,22 @@ function mapActor(sourceData, targetPath) {
   // Load existing data for image and custom content preservation
   const preserved = getPreservedData(targetPath) || {};
 
+  // Check for dynamic token image in public/assets/atlas/enemies/tokens/
+  let enemyImage = preserved.image;
+  if (!enemyImage) {
+    const tokensDir = path.join(__dirname, '../public/assets/atlas/enemies/tokens');
+    // Try by name first, then by index
+    enemyImage = findTokenImage(tokensDir, name.replace(/\s+/g, '')) || findTokenImage(tokensDir, index);
+  }
+  
+  if (!enemyImage) {
+    enemyImage = `/assets/atlas/enemies/${index}.webp`;
+  }
+
+  // Improved AC calculation
+  let finalAc = ac.value || (10 + Math.floor((stats.dex - 10) / 2));
+  if (ac.flat) finalAc = ac.flat;
+  
   return {
     index,
     name: name.toLowerCase(),
@@ -205,8 +288,8 @@ function mapActor(sourceData, targetPath) {
     alignment,
     armor_class: [
       {
-        type: ac.calc || 'dex',
-        value: ac.value || (10 + Math.floor((stats.dex - 10) / 2))
+        type: ac.calc || (ac.flat ? 'flat' : 'dex'),
+        value: finalAc
       }
     ],
     hit_points: hp.value || hp.max || 10,
@@ -238,7 +321,7 @@ function mapActor(sourceData, targetPath) {
     actions,
     legendary_actions: [],
     reactions: [],
-    image: preserved.image || `/assets/atlas/enemies/${index}.webp`,
+    image: enemyImage,
     url: `/assets/atlas/enemies/json/${index}.json`,
     updated_at: new Date().toISOString(),
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
@@ -252,7 +335,7 @@ function mapActor(sourceData, targetPath) {
 }
 
 // Map a single spell to Artificer spell JSON
-function mapSpell(sourceData, targetPath) {
+function mapSpell(sourceData, targetPath, fallbackPath) {
   const system = sourceData.system || {};
   const name = sourceData.name || 'Unnamed Spell';
   const index = sourceData._id ? sourceData._id.toLowerCase() : name.toLowerCase().replace(/[^a-z0-9]/g, '_');
@@ -266,7 +349,10 @@ function mapSpell(sourceData, targetPath) {
   if (properties.includes('somatic')) components.push('S');
   if (properties.includes('material')) components.push('M');
 
-  const preserved = getPreservedData(targetPath) || {};
+  const preserved = getPreservedData(targetPath, fallbackPath) || {};
+
+  const level = system.level || 0;
+  const levelDir = getSpellLevelDirName(level);
 
   return {
     index,
@@ -279,11 +365,11 @@ function mapSpell(sourceData, targetPath) {
     duration: `${system.duration?.value || 'Instantaneous'} ${system.duration?.units || ''}`.trim(),
     concentration: properties.includes('con'),
     casting_time: `${system.activation?.value || 1} ${system.activation?.type || 'action'}`.trim(),
-    level: system.level || 0,
+    level,
     school,
     classes: [],
     subclasses: [],
-    url: `/assets/atlas/spell/json/${index}.json`,
+    url: `/assets/atlas/spell/json/${levelDir}/${index}.json`,
     image: preserved.image || `/assets/atlas/spell/images/${index}.webp`,
     updated_at: new Date().toISOString(),
     sprite_index: preserved.sprite_index !== undefined ? preserved.sprite_index : 0,
@@ -359,15 +445,36 @@ function portCategory(type) {
           const parsed = yaml.load(fileContent);
 
           const indexName = parsed._id ? parsed._id.toLowerCase() : parsed.name.toLowerCase().replace(/[^a-z0-9]/g, '_');
-          const targetPath = path.join(config.target, `${indexName}.json`);
+          let targetPath = path.join(config.target, `${indexName}.json`);
+          let fallbackPath = null;
+
+          if (type === 'spells') {
+            const level = parsed.system?.level || 0;
+            const levelDir = getSpellLevelDirName(level);
+            const subDir = path.join(config.target, levelDir);
+            if (!fs.existsSync(subDir)) {
+              fs.mkdirSync(subDir, { recursive: true });
+            }
+            fallbackPath = targetPath;
+            targetPath = path.join(subDir, `${indexName}.json`);
+          }
 
           let output = null;
           if (type === 'actors') output = mapActor(parsed, targetPath);
-          else if (type === 'spells') output = mapSpell(parsed, targetPath);
+          else if (type === 'spells') output = mapSpell(parsed, targetPath, fallbackPath);
           else if (type === 'items') output = mapItem(parsed, targetPath);
 
           if (output) {
             fs.writeFileSync(targetPath, JSON.stringify(output, null, 2), 'utf8');
+            
+            // Delete the old flat JSON file if we successfully wrote the new nested one
+            if (type === 'spells' && fallbackPath && fs.existsSync(fallbackPath) && fallbackPath !== targetPath) {
+              try {
+                fs.unlinkSync(fallbackPath);
+              } catch (delErr) {
+                console.warn(`Could not delete old flat spell file ${fallbackPath}: ${delErr.message}`);
+              }
+            }
             count++;
           }
         } catch (err) {

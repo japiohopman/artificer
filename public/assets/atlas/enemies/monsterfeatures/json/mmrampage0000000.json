@@ -1,0 +1,16 @@
+{
+  "index": "mmrampage0000000",
+  "name": "rampage",
+  "type": "feat",
+  "desc": "Immediately after dealing damage to a creature that is already &Reference[Bloodied], the [[lookup @name lowercase]]{monster} moves up to half its Speed, and it makes one {action} attack.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 2,
+    "type": "per_day"
+  },
+  "range": null,
+  "image": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmrampage0000000.json",
+  "updated_at": "2026-07-10T05:56:36.837Z"
+}

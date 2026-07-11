@@ -1,0 +1,32 @@
+{
+  "index": "jqyigmnpidngi18b",
+  "name": "geas",
+  "desc": [
+    "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become &Reference[Charmed] by you for the Duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.",
+    "You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
+    "You can end the spell early by using an action to dismiss it. A Remove Curse, Greater Restoration, or wish spell also ends it.",
+    "At Higher Levels. When you cast this spell using a spell slot of 7th or 8th level, the Duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the Spells mentioned above."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "30 day",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 5,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/jqyigmnpidngi18b.json",
+  "image": "/assets/atlas/spell/images/jqyigmnpidngi18b.webp",
+  "updated_at": "2026-07-10T15:34:53.170Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

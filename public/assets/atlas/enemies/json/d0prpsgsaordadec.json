@@ -1,0 +1,92 @@
+{
+  "index": "d0prpsgsaordadec",
+  "name": "owl",
+  "desc": "Owl is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4 - 1",
+  "hit_points_roll": "1d4 - 1",
+  "speed": {
+    "walk": "5 ft."
+  },
+  "strength": 3,
+  "dexterity": 13,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 7,
+  "stats": {
+    "str": 3,
+    "dex": 13,
+    "con": 8,
+    "int": 2,
+    "wis": 12,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "keen hearing and sight",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or sight.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "talons",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "flyby",
+      "desc": "The [[lookup @name lowercase]]{monster} doesn't provoke &reference[opportunity attacks] when it flies out of an enemy's reach.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Owl.webp",
+  "url": "/assets/atlas/enemies/json/d0prpsgsaordadec.json",
+  "updated_at": "2026-07-09T11:33:14.195Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

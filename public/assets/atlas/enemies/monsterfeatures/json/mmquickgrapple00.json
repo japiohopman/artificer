@@ -1,0 +1,19 @@
+{
+  "index": "mmquickgrapple00",
+  "name": "quick grapple",
+  "type": "feat",
+  "desc": "Dexterity Saving Throw: DC [[lookup @save.dc.value activity=aDWVHpJgsNPPNrDs]], [[lookup @target.affects.special activity=aDWVHpJgsNPPNrDs]] the [[lookup @name lowercase]]{monster} can see within [[lookup @target.template.size activity=aDWVHpJgsNPPNrDs]] [[lookup @target.template.units activity=aDWVHpJgsNPPNrDs]]. Failure: The target has the &Reference[Grappled] condition (escape DC [[lookup @skills.ath.passive]]).",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "dex"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmquickgrapple00.json",
+  "updated_at": "2026-07-10T05:56:36.836Z"
+}

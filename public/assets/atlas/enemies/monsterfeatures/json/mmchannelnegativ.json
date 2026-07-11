@@ -1,0 +1,22 @@
+{
+  "index": "mmchannelnegativ",
+  "name": "channel negative energy",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "6d6",
+      "damage_type": {
+        "index": "necrotic",
+        "name": "necrotic",
+        "url": "/assets/atlas/damage_types/json/necrotic.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/death/hand-undead-skeleton-fire-pink.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmchannelnegativ.json",
+  "updated_at": "2026-07-10T05:56:36.876Z"
+}

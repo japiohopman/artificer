@@ -1,0 +1,31 @@
+{
+  "index": "jz6jnykrtdq90moo",
+  "name": "shield of faith",
+  "desc": [
+    "A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
+  ],
+  "range": "60 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A small parchment with a bit of holy text written on it.",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/jz6jnykrtdq90moo.json",
+  "image": "/assets/atlas/spell/images/jz6jnykrtdq90moo.webp",
+  "updated_at": "2026-07-10T15:34:53.059Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

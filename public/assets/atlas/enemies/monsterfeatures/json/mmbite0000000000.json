@@ -1,0 +1,22 @@
+{
+  "index": "mmbite0000000000",
+  "name": "bite",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "1d4",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/creatures/abilities/fangs-teeth-bite.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbite0000000000.json",
+  "updated_at": "2026-07-10T05:56:36.868Z"
+}

@@ -1,0 +1,34 @@
+{
+  "index": "a3xtao5n2grqiah5",
+  "name": "create or destroy water",
+  "desc": [
+    "You either create or destroy water.",
+    "Create Water. You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.",
+    "Destroy Water. You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.",
+    "Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A drop of water if creating water or a few grains of sand if destroying it.",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/a3xtao5n2grqiah5.json",
+  "image": "/assets/atlas/spell/images/a3xtao5n2grqiah5.webp",
+  "updated_at": "2026-07-10T15:34:53.021Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

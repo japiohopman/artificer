@@ -1,0 +1,32 @@
+{
+  "index": "vtcxmdym6madijzb",
+  "name": "death ward",
+  "desc": [
+    "You touch a creature and grant it a measure of protection from death.",
+    "The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.",
+    "If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/4th-level/vtcxmdym6madijzb.json",
+  "image": "/assets/atlas/spell/images/vtcxmdym6madijzb.webp",
+  "updated_at": "2026-07-10T15:34:53.144Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

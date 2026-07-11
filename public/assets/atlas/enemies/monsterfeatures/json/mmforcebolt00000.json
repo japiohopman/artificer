@@ -1,0 +1,22 @@
+{
+  "index": "mmforcebolt00000",
+  "name": "force bolt",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]].",
+  "damage": [
+    {
+      "damage_dice": "4d10",
+      "damage_type": {
+        "index": "force",
+        "name": "force",
+        "url": "/assets/atlas/damage_types/json/force.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/light/projectile-smoke-blue-light.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmforcebolt00000.json",
+  "updated_at": "2026-07-10T05:56:36.892Z"
+}

@@ -1,0 +1,13 @@
+{
+  "index": "mmmistyescape000",
+  "name": "misty escape",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} drops to 0 Hit Points outside its resting place, the [[lookup @name lowercase]]{monster} uses Shape-Shift to become mist (no action required). If it can't use Shape-Shift, it is destroyed.\nWhile it has 0 Hit Points in mist form, it can't return to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it returns to its vampire form and has the &Reference[Paralyzed apply=false] condition until it regains any Hit Points, and it regains 1 Hit Point after spending 1 hour there.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmmistyescape000.json",
+  "updated_at": "2026-07-10T05:56:36.982Z"
+}

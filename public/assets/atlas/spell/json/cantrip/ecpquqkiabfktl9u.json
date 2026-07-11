@@ -1,0 +1,32 @@
+{
+  "index": "ecpquqkiabfktl9u",
+  "name": "produce flame",
+  "desc": [
+    "A flickering flame appears in your hand. The flame remains there for the Duration and harms neither you nor your Equipment. The flame sheds &reference[bright light] in a 10-foot radius and &reference[dim light] for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.",
+    "You can also Attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell Attack. On a hit, the target takes 1d8 fire damage.",
+    "This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/ecpquqkiabfktl9u.json",
+  "image": "/assets/atlas/spell/images/ecpquqkiabfktl9u.webp",
+  "updated_at": "2026-07-10T15:34:53.245Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

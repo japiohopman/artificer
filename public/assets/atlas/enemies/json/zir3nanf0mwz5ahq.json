@@ -1,0 +1,158 @@
+{
+  "index": "zir3nanf0mwz5ahq",
+  "name": "weretiger",
+  "desc": "Weretiger is a CR 4 humanoid.",
+  "size": "Medium",
+  "type": "humanoid",
+  "subtype": "Human, Shapechanger",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 120,
+  "hit_dice": "16d8",
+  "hit_points_roll": "16d8 + 48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 17,
+    "dex": 15,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "(can't speak in tiger form)",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "shapechanger",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pounce (tiger or hybrid form only)",
+      "desc": "If the [[lookup @name lowercase]]{monster} moves at least 15 feet straight toward a creature and then hits it with a [[/item .HPmjVRKpG08bgohb]]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &Reference[prone]. If the target is prone, the [[lookup @name lowercase]]{monster} can make one [[/item .FOkSL18gU0Sli5ZA]]{bite} attack against it as a bonus action.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack (humanoid or hybrid form only)",
+      "desc": "In humanoid form, the [[lookup @name lowercase]]{monster} makes two [[/item .vtnEGCOptmp2bcqG]]{scimitar} attacks or two [[/item .onmNGMiE4AyvYxDQ]]{longbow} attacks. In hybrid form, it can attack like a humanoid or make two [[/item .HPmjVRKpG08bgohb]]{claw} attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite (tiger or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a humanoid, it must succeed on a [[/save]] saving throw or be cursed with weretiger lycanthropy.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "claw (tiger or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "scimitar (humanoid or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longbow (humanoid or hybrid form only)",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/humanoid/Weretiger.webp",
+  "url": "/assets/atlas/enemies/json/zir3nanf0mwz5ahq.json",
+  "updated_at": "2026-07-09T11:33:15.289Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

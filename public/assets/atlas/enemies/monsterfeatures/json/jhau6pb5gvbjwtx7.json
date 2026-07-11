@@ -1,0 +1,16 @@
+{
+  "index": "jhau6pb5gvbjwtx7",
+  "name": "darkness aura",
+  "type": "feat",
+  "desc": "A 15-foot radius of magical darkness extends out from the [[lookup @name lowercase]]{monster}, moves with it, and spreads around corners. The darkness lasts as long as the [[lookup @name lowercase]]{monster} maintains concentration, up to 10 minutes (as if concentrating on a spell).\nDarkvision can't penetrate this darkness, and no natural light can illuminate it. If any of the darkness overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.\nA 15-foot radius of magical darkness extends out from the [[lookup @name lowercase]]{monster}, moves with it, and spreads around corners. Darkvision can't penetrate this darkness, and no natural light can illuminate it.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "per_day"
+  },
+  "range": "15-foot radius",
+  "image": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/jhau6pb5gvbjwtx7.json",
+  "updated_at": "2026-07-10T05:56:36.672Z"
+}

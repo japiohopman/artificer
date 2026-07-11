@@ -1,0 +1,92 @@
+{
+  "index": "joane6m0my6ujf4e",
+  "name": "blink dog",
+  "desc": "Blink Dog is a CR 0.25 fey.",
+  "size": "Medium",
+  "type": "fey",
+  "subtype": "any race",
+  "alignment": "Lawful Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8 + 4",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 17,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "stats": {
+    "str": 12,
+    "dex": 17,
+    "con": 12,
+    "int": 10,
+    "wis": 13,
+    "cha": 11
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Blink Dog;understands Sylvan but can't speak it",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "teleport",
+      "desc": "The [[lookup @name lowercase]]{monster} magically teleports, along with any equipment it is wearing or carrying, up to [[lookup @labels.description.range activity=SxPANomeaxHZmpVZ]] to an unoccupied space it can see. Before or after teleporting, the [[lookup @name lowercase]]{monster} can make one [[/item .DcZYdK2iycSJzamK]]{Bite} attack.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen hearing and smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on hearing or smell.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fey/BlinkDog.webp",
+  "url": "/assets/atlas/enemies/json/joane6m0my6ujf4e.json",
+  "updated_at": "2026-07-09T11:33:14.887Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

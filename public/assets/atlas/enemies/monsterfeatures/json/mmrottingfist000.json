@@ -1,0 +1,22 @@
+{
+  "index": "mmrottingfist000",
+  "name": "rotting fist",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is cursed. While cursed, the target can't regain Hit Points, its Hit Point maximum doesn't return to normal when finishing a Long Rest, and its Hit Point maximum decreases by [[/r 3d6#HP Max Decrease]]{10 (3d6)} every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 Hit Points by this attack.",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/lightning/claws-unarmed-strike-teal.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmrottingfist000.json",
+  "updated_at": "2026-07-10T05:56:36.919Z"
+}

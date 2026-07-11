@@ -1,0 +1,134 @@
+{
+  "index": "rbyp54px2d0ql4qk",
+  "name": "wight",
+  "desc": "Wight is a CR 3 undead.",
+  "size": "Medium",
+  "type": "undead",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "default",
+      "value": 12
+    }
+  ],
+  "hit_points": 45,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8 + 18",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 15,
+  "stats": {
+    "str": 15,
+    "dex": 14,
+    "con": 16,
+    "int": 10,
+    "wis": 13,
+    "cha": 15
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "necrotic",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .WZ3XGh48UoyAvBhS]]{longsword} attacks or two [[/item .PUYwkzEiKopyM6YL]]{longbow} attacks. It can use its [[/item .NX8cqG6aZMns8wvY]]{Life Drain} in place of one longsword attack.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "longbow",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "longsword",
+      "desc": "[[/attack extended]]. [[/damage extended]], or [[/damage average attackMode=twoHanded]] damage if used with two hands.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "life drain",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain by this attack rises 24 hours later as a @UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{zombie} under the [[lookup @name lowercase]]{monster}'s control, unless the humanoid is restored to life or its body is destroyed. The [[lookup @name lowercase]]{monster} can have no more than twelve zombies under its control at one time.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "necrotic",
+            "url": "/assets/atlas/damage_types/json/necrotic.json"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sunlight sensitivity",
+      "desc": "While in sunlight, the [[lookup @name lowercase]]{monster} has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/undead/Wight.webp",
+  "url": "/assets/atlas/enemies/json/rbyp54px2d0ql4qk.json",
+  "updated_at": "2026-07-09T11:33:15.792Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

@@ -1,0 +1,22 @@
+{
+  "index": "lvrnjqbrv90vh96d",
+  "name": "divine eminence",
+  "type": "feat",
+  "desc": "As a bonus action, the [[lookup @name lowercase]]{monster} can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit.\nThis benefit lasts until the end of the turn. If the [[lookup @name lowercase]]{monster} expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.\nAs a bonus action, the [[lookup @name lowercase]]{monster} can expend a spell slot to cause its melee weapon attacks to magically deal an extra radiant damage to a target on a hit.",
+  "damage": [
+    {
+      "damage_dice": "3d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/symbols/cog-shield-white-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/lvrnjqbrv90vh96d.json",
+  "updated_at": "2026-07-10T05:56:36.680Z"
+}

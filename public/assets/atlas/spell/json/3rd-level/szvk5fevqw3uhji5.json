@@ -1,0 +1,32 @@
+{
+  "index": "szvk5fevqw3uhji5",
+  "name": "haste",
+  "desc": [
+    "Choose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity Saving Throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.",
+    "When the spell ends, the target can't move or take Actions until after its next turn, as a wave of lethargy sweeps over it."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A shaving of licorice root",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/szvk5fevqw3uhji5.json",
+  "image": "/assets/atlas/spell/images/szvk5fevqw3uhji5.webp",
+  "updated_at": "2026-07-10T15:34:53.119Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

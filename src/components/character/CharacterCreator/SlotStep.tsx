@@ -64,7 +64,7 @@ export const SlotStep: React.FC<SlotStepProps> = ({ selectedSlot, onSelect }) =>
                       <div className="w-32 h-32 bg-white rounded-sm border-2 border-dragon-gold/20 overflow-hidden relative shadow-sm group-hover:scale-105 transition-transform">
                         {character ? (
                           <img 
-                            src={character.avatarUrl || `https://raw.githubusercontent.com/japiohopman/artificer/main/public/data/character_save/images/slot${slot}/slot${slot}_avatar.webp`}
+                            src={character.avatarUrl || `/data/character_save/images/slot${slot}/slot${slot}_avatar.webp`}
                             alt={character.name} 
                             className="w-full h-full object-cover"
                             referrerPolicy="no-referrer"

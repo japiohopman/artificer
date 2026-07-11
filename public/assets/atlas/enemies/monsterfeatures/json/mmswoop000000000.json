@@ -1,0 +1,17 @@
+{
+  "index": "mmswoop000000000",
+  "name": "swoop",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} has a creature Grappled, the [[lookup @name lowercase]]{monster} flies up to half its Fly Speed without provoking &Reference[OpportunityAttacks] and drops that creature.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": null,
+  "image": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmswoop000000000.json",
+  "updated_at": "2026-07-10T05:56:36.852Z"
+}

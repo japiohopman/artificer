@@ -1,0 +1,78 @@
+{
+  "index": "rz8utunft87bsafr",
+  "name": "riding horse",
+  "desc": "Riding Horse is a CR 0.25 beast.",
+  "size": "Large",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 10
+    }
+  ],
+  "hit_points": 13,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10 + 2",
+  "speed": {
+    "walk": "60 ft."
+  },
+  "strength": 16,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 7,
+  "stats": {
+    "str": 16,
+    "dex": 10,
+    "con": 12,
+    "int": 2,
+    "wis": 11,
+    "cha": 7
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "hooves",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/RidingHorse.webp",
+  "url": "/assets/atlas/enemies/json/rz8utunft87bsafr.json",
+  "updated_at": "2026-07-09T11:33:14.222Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

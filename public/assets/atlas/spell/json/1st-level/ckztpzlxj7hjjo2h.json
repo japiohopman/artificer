@@ -1,0 +1,31 @@
+{
+  "index": "ckztpzlxj7hjjo2h",
+  "name": "mage armor",
+  "desc": [
+    "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A piece of cured leather",
+  "ritual": false,
+  "duration": "8 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/ckztpzlxj7hjjo2h.json",
+  "image": "/assets/atlas/spell/images/ckztpzlxj7hjjo2h.webp",
+  "updated_at": "2026-07-10T15:34:53.054Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,28 @@
+{
+  "index": "mminfernalglaive",
+  "name": "infernal glaive",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature and doesn't already have an infernal wound, it is subjected to the following effect. Constitution Saving Throw: DC [[lookup @save.dc.value activity=4qy3fKL086OAE1xR]]. Failure: The target receives an infernal wound. While wounded, the target loses [[/damage average activity=IS4utGV80LpDrjvt]] Hit Points at the start of each of its turns. The wound closes after 1 minute, after a spell restores Hit Points to the target, or after the target or a creature within 5 feet of it takes an action to stanch the wound, doing so by succeeding on a [[/check format=long activity=KNWa0TFhANjmQCds]].",
+  "damage": [
+    {
+      "damage_dice": "1d10",
+      "damage_type": {
+        "index": "slashing",
+        "name": "slashing",
+        "url": "/assets/atlas/damage_types/json/slashing.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 12,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/weapons/polearms/glaive-hooked-steel.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mminfernalglaive.json",
+  "updated_at": "2026-07-10T05:56:36.904Z"
+}

@@ -1,0 +1,105 @@
+{
+  "index": "bucfq7ihaxx75vai",
+  "name": "dust mephit",
+  "desc": "Dust Mephit is a CR 0.5 elemental.",
+  "size": "Small",
+  "type": "elemental",
+  "subtype": "any race",
+  "alignment": "Neutral Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 17,
+  "hit_dice": "5d6",
+  "hit_points_roll": "5d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 5,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 10,
+  "stats": {
+    "str": 5,
+    "dex": 14,
+    "con": 10,
+    "int": 9,
+    "wis": 11,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "death burst",
+      "desc": "When the [[lookup @name lowercase]]{monster} dies, it explodes in a burst of dust. Each creature within [[lookup @target.template.size activity=xWXsJ4iFhpxEMroK]] feet of it must then succeed on a [[/save]] saving throw or be &Reference[blinded] for [[lookup @labels.duration activity=xWXsJ4iFhpxEMroK]]. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The mephit can innately cast [[/item .KhwiSi9fwVfUPtku]]{sleep}, requiring no material components. Its innate spellcasting ability is Charisma.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claws",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": -1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d4-3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "blinding breath",
+      "desc": "The mephit exhales a [[lookup @labels.description.template activity=DkJgrFw9xkTp7btO]] of blinding dust. Each creature in that area must succeed on a [[/save]] saving throw or be &reference[blinded] for [[lookup @labels.duration activity=DkJgrFw9xkTp7btO]]. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/elemental/DustMephit.webp",
+  "url": "/assets/atlas/enemies/json/bucfq7ihaxx75vai.json",
+  "updated_at": "2026-07-09T11:33:14.828Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

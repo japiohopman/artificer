@@ -1,0 +1,115 @@
+{
+  "index": "fkcntbvpomd7mipf",
+  "name": "pseudodragon",
+  "desc": "Pseudodragon is a CR 0.25 dragon.",
+  "size": "Tiny",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Neutral Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4+2",
+  "speed": {
+    "walk": "15 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 10,
+  "stats": {
+    "str": 6,
+    "dex": 15,
+    "con": 13,
+    "int": 10,
+    "wis": 12,
+    "cha": 10
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "keen senses",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "limited telepathy",
+      "desc": "The [[lookup @name lowercase]]{monster} can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 feet of it that can understand a language.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "sting",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target must succeed on a [[/save]] saving throw or become &reference[poisoned] for [[lookup @labels.duration activity=hcLz9GILmf8UvyVF]]. If the saving throw fails by 5 or more, the target falls &reference[unconscious] for the same duration, or until it takes damage or another creature uses an action to shake it awake.",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/Pseudodragon.webp",
+  "url": "/assets/atlas/enemies/json/fkcntbvpomd7mipf.json",
+  "updated_at": "2026-07-09T11:33:14.746Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

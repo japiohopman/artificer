@@ -1,0 +1,31 @@
+{
+  "index": "bnn9nzajixvow9xi",
+  "name": "light",
+  "desc": [
+    "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds &reference[bright light] in a 20-foot radius and &reference[dim light] for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.",
+    "If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "M"
+  ],
+  "material": "A firefly or phosphorescent moss.",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/cantrip/bnn9nzajixvow9xi.json",
+  "image": "/assets/atlas/spell/images/bnn9nzajixvow9xi.webp",
+  "updated_at": "2026-07-10T15:34:53.240Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,30 @@
+{
+  "index": "xzhdgvk3cloxncql",
+  "name": "remove curse",
+  "desc": [
+    "At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's Attunement to the object so it can be removed or discarded."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/xzhdgvk3cloxncql.json",
+  "image": "/assets/atlas/spell/images/xzhdgvk3cloxncql.webp",
+  "updated_at": "2026-07-10T15:34:53.126Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

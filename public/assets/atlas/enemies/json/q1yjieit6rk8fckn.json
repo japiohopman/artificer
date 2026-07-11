@@ -1,0 +1,92 @@
+{
+  "index": "q1yjieit6rk8fckn",
+  "name": "giant rat",
+  "desc": "Giant Rat is a CR 0.125 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 12
+    }
+  ],
+  "hit_points": 7,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 4,
+  "stats": {
+    "str": 7,
+    "dex": 15,
+    "con": 11,
+    "int": 2,
+    "wis": 10,
+    "cha": 4
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 0,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d4-2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "pack tactics",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on an attack roll against a creature if at least one of the [[lookup @name lowercase]]{monster}'s allies is within 5 feet of the creature and the ally isn't &reference[incapacitated apply=false].",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantRat.webp",
+  "url": "/assets/atlas/enemies/json/q1yjieit6rk8fckn.json",
+  "updated_at": "2026-07-09T11:33:14.139Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

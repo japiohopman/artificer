@@ -1,0 +1,85 @@
+{
+  "index": "z0giav3bjxtjufjm",
+  "name": "giant fire beetle",
+  "desc": "Giant Fire Beetle is a CR 0 beast.",
+  "size": "Small",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 13
+    }
+  ],
+  "hit_points": 4,
+  "hit_dice": "1d6",
+  "hit_points_roll": "1d6 + 1",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 8,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 1,
+  "wisdom": 7,
+  "charisma": 3,
+  "stats": {
+    "str": 8,
+    "dex": 10,
+    "con": 12,
+    "int": 1,
+    "wis": 7,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 8
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "1d6-1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "illumination",
+      "desc": "The [[lookup @name lowercase]]{monster} sheds &reference[bright light] in a 10-foot radius and &reference[dim light] for an additional 10 feet.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/GiantFireBeetle.webp",
+  "url": "/assets/atlas/enemies/json/z0giav3bjxtjufjm.json",
+  "updated_at": "2026-07-09T11:33:14.099Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

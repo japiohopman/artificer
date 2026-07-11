@@ -1,0 +1,13 @@
+{
+  "index": "j6f0v4guyhrywddt",
+  "name": "animate trees",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a [[lookup @name lowercase]]{monster}, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option.\nAn animated tree acts as an ally of the [[lookup @name lowercase]]{monster}. The tree remains animate for 1 day or until it dies; until the [[lookup @name lowercase]]{monster} dies or is more than 120 feet from the tree; or until the [[lookup @name lowercase]]{monster} takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.\nthe [[lookup @name lowercase]]{monster} magically animates one or two trees it can see within 60 feet of it.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "60 ft",
+  "image": "icons/magic/nature/tree-spirit-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/j6f0v4guyhrywddt.json",
+  "updated_at": "2026-07-10T05:56:36.636Z"
+}

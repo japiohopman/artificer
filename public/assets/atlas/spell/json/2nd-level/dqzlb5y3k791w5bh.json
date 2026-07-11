@@ -1,0 +1,31 @@
+{
+  "index": "dqzlb5y3k791w5bh",
+  "name": "see invisibility",
+  "desc": [
+    "For the duration, you see invisible creatures and objects as if they were visible, and you can see into the Ethereal Plane. Ethereal creatures and objects appear ghostly and translucent."
+  ],
+  "range": "Self self",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A pinch of talc and a small sprinkling of silver powder",
+  "ritual": false,
+  "duration": "1 hour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/dqzlb5y3k791w5bh.json",
+  "image": "/assets/atlas/spell/images/dqzlb5y3k791w5bh.webp",
+  "updated_at": "2026-07-10T15:34:53.100Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

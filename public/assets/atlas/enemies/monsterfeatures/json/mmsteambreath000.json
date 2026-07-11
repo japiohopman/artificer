@@ -1,0 +1,23 @@
+{
+  "index": "mmsteambreath000",
+  "name": "steam breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=5iI1KQRWrdMGh9sy]], each [[lookup @target.affects.type activity=5iI1KQRWrdMGh9sy]] in a [[lookup @target.template.size activity=5iI1KQRWrdMGh9sy]]-foot Cone.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.\nFailure or Success: Being underwater doesn't grant Resistance to this Fire damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 19,
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "60-foot cone",
+  "image": "icons/magic/air/fog-gas-smoke-dense-white.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmsteambreath000.json",
+  "updated_at": "2026-07-10T05:56:36.849Z"
+}

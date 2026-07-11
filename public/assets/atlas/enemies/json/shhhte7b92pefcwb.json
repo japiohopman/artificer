@@ -1,0 +1,157 @@
+{
+  "index": "shhhte7b92pefcwb",
+  "name": "aboleth",
+  "desc": "Aboleth is a CR 10 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 17
+    }
+  ],
+  "hit_points": 135,
+  "hit_dice": "18d10",
+  "hit_points_roll": "18d10 + 36",
+  "speed": {
+    "walk": "10 ft."
+  },
+  "strength": 21,
+  "dexterity": 9,
+  "constitution": 15,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "stats": {
+    "str": 21,
+    "dex": 9,
+    "con": 15,
+    "int": 18,
+    "wis": 15,
+    "cha": 18
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "enslave",
+      "desc": "The [[lookup @name lowercase]]{monster} targets one creature it can see within [[lookup @labels.description.range activity=TgxTvzC6OmS8hIUb]] of it. The target must succeed on a [[/save]] saving throw or be magically &Reference[charmed] by the [[lookup @name lowercase]]{monster} until the [[lookup @name lowercase]]{monster} dies or until it is on a different plane of existence from the target. The charmed target is under the [[lookup @name lowercase]]{monster}'s control and can't take reactions, and the [[lookup @name lowercase]]{monster} and the target can communicate telepathically with each other over any distance. Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the [[lookup @name lowercase]]{monster}.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tail swipe",
+      "desc": "The [[lookup @name lowercase]]{monster} makes one [[/item .FwOZEwx7MPDq8Igu]]{tail} attack.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "psychic drain",
+      "desc": "One creature &reference[charmed apply=false] by the [[lookup @name lowercase]]{monster} takes [[/damage average]] damage, and the [[lookup @name lowercase]]{monster} regains hit points equal to the damage the creature takes.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "mucous cloud",
+      "desc": "While underwater, the [[lookup @name lowercase]]{monster} is surrounded by transformative mucus. A creature that touches the [[lookup @name lowercase]]{monster} or that hits it with a melee attack while within 5 ft. of it must make a [[/save]] saving throw. On a failure, the creature is diseased for [[/r 1d4]] hours. The diseased creature can breathe only underwater.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "probing telepathy",
+      "desc": "If a creature communicates telepathically with the [[lookup @name lowercase]]{monster}, the [[lookup @name lowercase]]{monster} learns the creature's greatest desires if the [[lookup @name lowercase]]{monster} can see the creature.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "tentacle",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by @UUID[Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1]{Heal} or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes [[/damage average 1d12 acid]] damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tail",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "3d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The aboleth makes three [[/item .sgauK8Lyt8qxsxOH]]{tentacle} attacks.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "legendary actions",
+      "desc": "[[lookup @resources.legact.label]]",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "detect",
+      "desc": "The [[lookup @name lowercase]]{monster} makes a Wisdom (Perception) check.",
+      "attack_bonus": 8,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Aboleth.webp",
+  "url": "/assets/atlas/enemies/json/shhhte7b92pefcwb.json",
+  "updated_at": "2026-07-09T11:33:13.951Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

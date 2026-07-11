@@ -1,0 +1,108 @@
+{
+  "index": "ggelev411iq5yijs",
+  "name": "shambling mound",
+  "desc": "Shambling Mound is a CR 5 plant.",
+  "size": "Large",
+  "type": "plant",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 15
+    }
+  ],
+  "hit_points": 136,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10 + 48",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 18,
+  "dexterity": 8,
+  "constitution": 16,
+  "intelligence": 5,
+  "wisdom": 10,
+  "charisma": 5,
+  "stats": {
+    "str": 18,
+    "dex": 8,
+    "con": 16,
+    "int": 5,
+    "wis": 10,
+    "cha": 5
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire"
+  ],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [
+    "blinded",
+    "deafened",
+    "exhaustion"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "lightning absorption",
+      "desc": "Whenever the [[lookup @name lowercase]]{monster} is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .lOIA9YKQU8xSx7Lj]]{slam} attacks. If both attacks hit a Medium or smaller target, the target is &reference[grappled] escape DC 14, and the [[lookup @name lowercase]]{monster} uses its [[/item .N42BQALoCmeYphD1]]{Engulf} on it.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "engulf",
+      "desc": "The [[lookup @name lowercase]]{monster} engulfs a Medium or smaller creature &reference[grappled apply=false] by it. The engulfed target is &reference[blinded], &reference[restrained], and unable to breathe, and it must succeed on a [[/save activity=qxYtQIpEbpMrFvVe]] saving throw at the start of each of the [[lookup @name lowercase]]{monster}'s turns or take [[/damage average activity=qxYtQIpEbpMrFvVe]] damage. If the [[lookup @name lowercase]]{monster} moves, the engulfed target moves with it. The [[lookup @name lowercase]]{monster} can have only one creature engulfed at a time.",
+      "attack_bonus": 0,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/plant/ShamblingMound.webp",
+  "url": "/assets/atlas/enemies/json/ggelev411iq5yijs.json",
+  "updated_at": "2026-07-09T11:33:15.582Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

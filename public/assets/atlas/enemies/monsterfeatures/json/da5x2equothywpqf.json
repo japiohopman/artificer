@@ -1,0 +1,16 @@
+{
+  "index": "da5x2equothywpqf",
+  "name": "invisibility",
+  "type": "feat",
+  "desc": "the [[lookup @name lowercase]]{monster} magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell).\nthe [[lookup @name lowercase]]{monster} magically turns invisible. Any equipment the [[lookup @name lowercase]]{monster} wears or carries is invisible with it.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": null,
+  "image": "icons/creatures/webs/webthin-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/da5x2equothywpqf.json",
+  "updated_at": "2026-07-10T05:56:36.711Z"
+}

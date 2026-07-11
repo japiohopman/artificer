@@ -1,0 +1,30 @@
+{
+  "index": "zu9d6wobdup8pipt",
+  "name": "beacon of hope",
+  "desc": [
+    "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/zu9d6wobdup8pipt.json",
+  "image": "/assets/atlas/spell/images/zu9d6wobdup8pipt.webp",
+  "updated_at": "2026-07-10T15:34:53.107Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

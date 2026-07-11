@@ -1,0 +1,31 @@
+{
+  "index": "ksaatxibkx2sjfia",
+  "name": "inflict wounds",
+  "desc": [
+    "Make a melee spell Attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.",
+    "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
+  ],
+  "range": "Self touch",
+  "components": [
+    "V",
+    "S"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "Instantaneous inst",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/assets/atlas/magic_schools/json/necromancy.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/ksaatxibkx2sjfia.json",
+  "image": "/assets/atlas/spell/images/ksaatxibkx2sjfia.webp",
+  "updated_at": "2026-07-10T15:34:53.052Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

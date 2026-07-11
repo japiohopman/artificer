@@ -1,0 +1,123 @@
+{
+  "index": "ktm6iv9i5l1mwudk",
+  "name": "chain devil",
+  "desc": "Chain Devil is a CR 8 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "Devil",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 85,
+  "hit_dice": "10d8",
+  "hit_points_roll": "10d8 + 40",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 15,
+  "constitution": 18,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 18,
+    "dex": 15,
+    "con": 18,
+    "int": 11,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "cold",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    "poisoned"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "chain",
+      "desc": "[[/attack extended]]. [[/damage extended]]. The target is &reference[grappled] (escape DC 14) if the [[lookup @name lowercase]]{monster} isn't already grappling a creature. Until this grapple ends, the target is &reference[restrained] and takes [[/damage activity=D2oyIMFCCxoTivHb average]] damage at the start of each of its turns.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "unnerving mask",
+      "desc": "When a creature the [[lookup @name lowercase]]{monster} can see starts its turn within 30 feet of the [[lookup @name lowercase]]{monster}, the [[lookup @name lowercase]]{monster} can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the [[lookup @name lowercase]]{monster}, it must succeed on a [[/save]] saving throw or be &reference[Frightened apply=false] until the end of its turn.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two attacks with its [[/item .9SWi4zPVGsMD5l2Y]]{chains}.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "animate chains",
+      "desc": "Up to four chains the [[lookup @name lowercase]]{monster} can see within [[lookup @labels.description.range activity=kRPVij49Rpa8sFnz]] of it magically sprout razor-edged barbs and animate under the [[lookup @name lowercase]]{monster}'s control, provided that the chains aren't being worn or carried. Each animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the [[lookup @name lowercase]]{monster} uses @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.AGKUD82KJZaMKVRt]{Multiattack} on its turn, it can use each animated chain to make one additional @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.9SWi4zPVGsMD5l2Y]{Chain} attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the [[lookup @name lowercase]]{monster} is &reference[incapacitated apply=false] or dies.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "devil sight",
+      "desc": "Magical &reference[darkness] doesn't impede the [[lookup @name lowercase]]{monster}'s &reference[Darkvision].",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "magic resistance",
+      "desc": "The [[lookup @name lowercase]]{monster} has advantage on saving throws against spells and other magical effects.",
+      "attack_bonus": 3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/ChainDevil.webp",
+  "url": "/assets/atlas/enemies/json/ktm6iv9i5l1mwudk.json",
+  "updated_at": "2026-07-09T11:33:14.947Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

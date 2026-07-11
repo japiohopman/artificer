@@ -1,0 +1,22 @@
+{
+  "index": "mmcoldbreath0000",
+  "name": "cold breath",
+  "type": "feat",
+  "desc": "Constitution Saving Throw: DC [[lookup @save.dc.value activity=8P7hmd3Nron4RAIv]], each [[lookup @target.affects.type activity=8P7hmd3Nron4RAIv]] in a [[lookup @target.template.size activity=8P7hmd3Nron4RAIv]]-foot Cone.\nFailure: [[/damage average]] damage.\nSuccess: Half damage.",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "success_type": "half"
+  },
+  "usage": {
+    "times": 1,
+    "type": "recharge",
+    "recharge_formula": "5"
+  },
+  "range": "30-foot cone",
+  "image": "icons/creatures/abilities/dragon-ice-breath-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmcoldbreath0000.json",
+  "updated_at": "2026-07-10T05:56:36.795Z"
+}

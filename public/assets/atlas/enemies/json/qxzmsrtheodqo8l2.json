@@ -1,0 +1,103 @@
+{
+  "index": "qxzmsrtheodqo8l2",
+  "name": "rakshasa",
+  "desc": "Rakshasa is a CR 13 fiend.",
+  "size": "Medium",
+  "type": "fiend",
+  "subtype": "any race",
+  "alignment": "Lawful Evil",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 110,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8 + 52",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 14,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 20,
+  "stats": {
+    "str": 14,
+    "dex": 17,
+    "con": 18,
+    "int": 13,
+    "wis": 16,
+    "cha": 20
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "limited magic immunity",
+      "desc": "The [[lookup @name lowercase]]{monster} can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "innate spellcasting",
+      "desc": "The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components: At will: [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .A3q2gTNqG6fvNGrv]]{disguise self}, [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion} 3/day each: [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .1N8dDMMgZ1h1YJ3B]]{invisibility}, [[/item .nslx2nT3p4lNkmdp]]{major image}, [[/item .zMAWdyc8UVb37BK4]]{suggestion} 1/day each: [[/item .91Sw6vOIaO7U8DvM]]{dominate person}, [[/item .yfbK8gZqESlaoY5t]]{fly}, [[/item .J6Jpw5XzB5aTeqnz]]{plane shift}, [[/item .XzkJpE6XpZfKjODD]]{true seeing}",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two [[/item .pHBLWUN5VKEjSBh6]]{Claw} attacks.",
+      "attack_bonus": 6,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "claw",
+      "desc": "[[/attack extended]]. [[/damage extended]], and the target is cursed if it is a creature. The magical curse takes effect whenever the target takes a short or long rest, filling the target's thoughts with horrible images and dreams. The cursed target gains no benefit from finishing a short or long rest. The curse lasts until it is lifted by a @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{Remove Curse} spell or similar magic.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "slashing",
+            "url": "/assets/atlas/damage_types/json/slashing.json"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/fiend/Rakshasa.webp",
+  "url": "/assets/atlas/enemies/json/qxzmsrtheodqo8l2.json",
+  "updated_at": "2026-07-09T11:33:15.020Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

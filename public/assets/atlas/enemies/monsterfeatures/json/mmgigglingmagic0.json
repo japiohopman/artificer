@@ -1,0 +1,28 @@
+{
+  "index": "mmgigglingmagic0",
+  "name": "giggling magic",
+  "type": "feat",
+  "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=Ttrajc4RC5Ut7pkj]], [[lookup @target.affects.labels.statblock activity=Ttrajc4RC5Ut7pkj]] the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=Ttrajc4RC5Ut7pkj]] feet.\nFailure: [[/damage average]] damage. Until the end of its next turn, the target rolls [[/r 1d6]] whenever it makes an ability check or attack roll and subtracts the number rolled from the D20 Test.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [
+    {
+      "damage_dice": "1d6",
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "bludgeoning",
+        "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "cha"
+    ],
+    "dc_value": 8,
+    "success_type": "half"
+  },
+  "usage": null,
+  "range": "90 ft",
+  "image": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmgigglingmagic0.json",
+  "updated_at": "2026-07-10T05:56:36.945Z"
+}

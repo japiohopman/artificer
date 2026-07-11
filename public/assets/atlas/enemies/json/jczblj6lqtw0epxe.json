@@ -1,0 +1,115 @@
+{
+  "index": "jczblj6lqtw0epxe",
+  "name": "otyugh",
+  "desc": "Otyugh is a CR 5 aberration.",
+  "size": "Large",
+  "type": "aberration",
+  "subtype": "any race",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10 + 48",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 11,
+  "constitution": 19,
+  "intelligence": 6,
+  "wisdom": 13,
+  "charisma": 6,
+  "stats": {
+    "str": 16,
+    "dex": 11,
+    "con": 19,
+    "int": 6,
+    "wis": 13,
+    "cha": 6
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "Otyugh",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "limited telepathy",
+      "desc": "The [[lookup @name lowercase]]{monster} can magically transmit simple messages and images to any creature within 120 feet of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is a creature, it must succeed on a [[/save]] saving throw against disease or become &Reference[poisoned] until the disease is cured. Every 24 hours that elapse, the target must repeat the saving throw, reducing its hit point maximum by [[/damage maximum 1d10]]{5 (1d10)} on a failure. The disease is cured on a success. The target dies if the disease reduces its hit point maximum to 0. This reduction to the target's hit point maximum lasts until the disease is cured.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tentacle",
+      "desc": "[[/attack extended]]. [[/damage extended]]. If the target is Medium or smaller, it is &Reference[grappled apply=false] (escape DC 13) and &Reference[restrained apply=false] until the grapple ends. The [[lookup @name lowercse]]{monster} has two [[lookup @item.name lowercase]]s, each of which can grapple one target.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "tentacle slam",
+      "desc": "The [[lookup @name lowercase]]{monster} slams creatures &reference[grappled apply=false] by it into each other or a solid surface. Each creature must succeed on a [[/save]] saving throw or take [[/damage average]] damage and be &Reference[stunned apply=false] until the end of the [[lookup @name lowercse]]{monster}'s next turn. On a successful save, the target takes half the bludgeoning damage and isn't stunned.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The otyugh makes three attacks: one with its [[/item .CCawltKiVU4Mup9i]]{bite} and two with its [[/item .BPYsBEkmZMcGYZDh]]{tentacles}.",
+      "attack_bonus": 1,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/aberration/Otyugh.webp",
+  "url": "/assets/atlas/enemies/json/jczblj6lqtw0epxe.json",
+  "updated_at": "2026-07-09T11:33:13.975Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

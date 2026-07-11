@@ -1,0 +1,33 @@
+{
+  "index": "ovikymsdhliag2yd",
+  "name": "insect plague",
+  "desc": [
+    "Swarming, biting locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the Duration, and its area is lightly obscured. The sphere's area is difficult terrain.",
+    "When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.",
+    "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
+  ],
+  "range": "300 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "A few grains of sugar, some kernels of grain, and a smear of fat",
+  "ritual": false,
+  "duration": "10 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/assets/atlas/magic_schools/json/conjuration.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/5th-level/ovikymsdhliag2yd.json",
+  "image": "/assets/atlas/spell/images/ovikymsdhliag2yd.webp",
+  "updated_at": "2026-07-10T15:34:53.173Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

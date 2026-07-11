@@ -1,0 +1,28 @@
+{
+  "index": "mmpetrifyingbite",
+  "name": "petrifying bite",
+  "type": "weapon",
+  "desc": "[[/attack extended]]. [[/damage average extended]]. If the target is a creature, it is subjected to the following effect.\nConstitution Saving Throw: DC [[lookup @save.dc.value activity=udF9lrpAQMvL0b9J]].\nFirst Failure: The target has the &Reference[Restrained apply=false] condition and repeats the save at the end of its next turn if it is still Restrained, ending the effect on itself on a success.\nSecond Failure: The target has the &Reference[Petrified apply=false] condition instead of the Restrained condition.",
+  "damage": [
+    {
+      "damage_dice": "2d8",
+      "damage_type": {
+        "index": "piercing",
+        "name": "piercing",
+        "url": "/assets/atlas/damage_types/json/piercing.json"
+      }
+    }
+  ],
+  "dc": {
+    "dc_ability": [
+      "con"
+    ],
+    "dc_value": 8,
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": null,
+  "image": "icons/magic/defensive/armor-stone-skin.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmpetrifyingbite.json",
+  "updated_at": "2026-07-10T05:56:36.910Z"
+}

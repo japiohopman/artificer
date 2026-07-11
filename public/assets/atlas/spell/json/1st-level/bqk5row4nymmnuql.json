@@ -1,0 +1,32 @@
+{
+  "index": "bqk5row4nymmnuql",
+  "name": "hideous laughter",
+  "desc": [
+    "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming &reference[Incapacitated] and unable to stand up for the Duration. A creature with an Intelligence score of 4 or less isn't affected.",
+    "At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends."
+  ],
+  "range": "30 ft",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Tiny tarts and a feather that is waved in the air",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/assets/atlas/magic_schools/json/enchantment.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/1st-level/bqk5row4nymmnuql.json",
+  "image": "/assets/atlas/spell/images/bqk5row4nymmnuql.webp",
+  "updated_at": "2026-07-10T15:34:53.048Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

@@ -1,0 +1,13 @@
+{
+  "index": "mmworldshakingmo",
+  "name": "world-shaking movement",
+  "type": "feat",
+  "desc": "The [[lookup @name lowercase]]{monster} moves up to its Speed. At the end of this movement, the [[lookup @name lowercase]]{monster} creates an instantaneous shock wave in a [[lookup @target.template.size activity=g4W0ovZxBeUrZKb8]]-[[lookup @target.template.units activity=g4W0ovZxBeUrZKb8]]. Emanation originating from itself. Creatures in that area lose &Reference[Concentration] and, if Medium or smaller, have the &Reference[Prone apply=false] condition. The [[lookup @name lowercase]]{monster} can't take this action again until the start of its next turn.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "60-foot radius",
+  "image": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmworldshakingmo.json",
+  "updated_at": "2026-07-10T05:56:36.955Z"
+}

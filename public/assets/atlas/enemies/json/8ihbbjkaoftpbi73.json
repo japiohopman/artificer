@@ -1,0 +1,105 @@
+{
+  "index": "8ihbbjkaoftpbi73",
+  "name": "swarm of rats",
+  "desc": "Swarm of Rats is a CR 0.25 beast.",
+  "size": "Medium",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 10
+    }
+  ],
+  "hit_points": 24,
+  "hit_dice": "7d8 - 7",
+  "hit_points_roll": "7d8 - 7",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 9,
+  "dexterity": 11,
+  "constitution": 9,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "stats": {
+    "str": 9,
+    "dex": 11,
+    "con": 9,
+    "int": 2,
+    "wis": 10,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning",
+    "piercing",
+    "slashing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed",
+    "frightened",
+    "grappled",
+    "paralyzed",
+    "petrified",
+    "prone",
+    "restrained",
+    "stunned"
+  ],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "swarm",
+      "desc": "The [[lookup @name lowercase]]{swarm} can occupy another creature's space and vice versa, and the [[lookup @name lowercase]]{swarm} can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "keen smell",
+      "desc": "The [[lookup @name lowercase]]{swarm} has advantage on Wisdom (Perception) checks that rely on smell.",
+      "attack_bonus": -2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "bites",
+      "desc": "Melee Weapon Attack: [[/attack]], 0 ft., one creature in the [[lookup @name lowercase]]{swarm}'s space. Hit: [[/damage 2d6 piercing average]] damage, or [[/damage 1d6 piercing average]] damage if the [[lookup @name lowercase]]{swarm} has half of its hit points or fewer.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "2d4-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/8ihbbjkaoftpbi73.webp",
+  "url": "/assets/atlas/enemies/json/8ihbbjkaoftpbi73.json",
+  "updated_at": "2026-07-09T11:33:14.310Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

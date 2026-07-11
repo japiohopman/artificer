@@ -1,0 +1,16 @@
+{
+  "index": "jzgehxcr8pf6fomq",
+  "name": "enlarge",
+  "type": "feat",
+  "desc": "For 1 minute, the [[lookup @name lowercase]]{monster} magically increases in size, along with anything it is wearing or carrying. While enlarged, the [[lookup @name lowercase]]{monster} is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the [[lookup @name lowercase]]{monster} lacks the room to become Large, it attains the maximum size possible in the space available.",
+  "damage": [],
+  "dc": null,
+  "usage": {
+    "times": 1,
+    "type": "short_rest"
+  },
+  "range": null,
+  "image": "icons/magic/control/energy-stream-link-large-blue.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/jzgehxcr8pf6fomq.json",
+  "updated_at": "2026-07-10T05:56:36.684Z"
+}

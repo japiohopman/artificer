@@ -1,0 +1,13 @@
+{
+  "index": "mmevasion0000000",
+  "name": "evasion",
+  "type": "feat",
+  "desc": "If the [[lookup @name lowercase]]{monster} is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the [[lookup @name lowercase]]{monster} instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the Incapacitated condition.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": null,
+  "image": "icons/skills/movement/figure-running-gray.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmevasion0000000.json",
+  "updated_at": "2026-07-10T05:56:36.971Z"
+}

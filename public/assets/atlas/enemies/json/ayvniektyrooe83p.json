@@ -1,0 +1,87 @@
+{
+  "index": "ayvniektyrooe83p",
+  "name": "copper dragon wyrmling",
+  "desc": "Copper Dragon Wyrmling is a CR 1 dragon.",
+  "size": "Medium",
+  "type": "dragon",
+  "subtype": "any race",
+  "alignment": "Chaotic Good",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 16
+    }
+  ],
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8 + 4",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 13,
+  "stats": {
+    "str": 15,
+    "dex": 12,
+    "con": 13,
+    "int": 14,
+    "wis": 11,
+    "cha": 13
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "bite",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "piercing",
+            "url": "/assets/atlas/damage_types/json/piercing.json"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "breath weapons",
+      "desc": "The [[lookup @name lowercase]]{monster} uses one of the following breath weapons. Acid Breath. The [[lookup @name lowercase]]{monster} exhales acid in an [[lookup @labels.description.template activity=zTWpuajI6meBb52D]]. Each creature in that line must make a [[/save activity=zTWpuajI6meBb52D]] saving throw, taking [[/damage average activity=zTWpuajI6meBb52D]] damage on a failed save, or half as much damage on a successful one. Slowing Breath. The [[lookup @name lowercase]]{monster} exhales gas in a [[lookup @labels.description.template activity=zTWpuajI6meBb52D]]. Each creature in that area must succeed on a [[/save activity=CkPMajPOZWWj3gl0]] saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.",
+      "attack_bonus": 4,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/dragon/CopperDragonWyrmling.webp",
+  "url": "/assets/atlas/enemies/json/ayvniektyrooe83p.json",
+  "updated_at": "2026-07-09T11:33:14.725Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

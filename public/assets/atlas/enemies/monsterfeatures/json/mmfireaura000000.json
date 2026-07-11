@@ -1,0 +1,13 @@
+{
+  "index": "mmfireaura000000",
+  "name": "fire aura",
+  "type": "feat",
+  "desc": "At the end of each of the [[lookup @name lowercase]]{monster}'s turns, each [[lookup @target.affects.type activity=15VgJKVXwYBOFSqJ]] of the [[lookup @name lowercase]]{monster}'s choice in a [[lookup @target.template.size activity=15VgJKVXwYBOFSqJ]]-foot Emanation originating from the [[lookup @name lowercase]]{monster} takes [[/damage average]] damage.",
+  "damage": [],
+  "dc": null,
+  "usage": null,
+  "range": "10-foot radius",
+  "image": "icons/magic/fire/barrier-wall-flame-ring-yellow.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmfireaura000000.json",
+  "updated_at": "2026-07-10T05:56:36.973Z"
+}

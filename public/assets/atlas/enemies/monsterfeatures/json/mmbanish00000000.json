@@ -1,0 +1,18 @@
+{
+  "index": "mmbanish00000000",
+  "name": "banish",
+  "type": "feat",
+  "desc": "Charisma Saving Throw: DC [[lookup @save.dc.value activity=kWKwiAYgyeKBLMNJ]], one creature the [[lookup @name lowercase]]{monster} can see within [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] feet.\nFailure: [[/damage average]] damage, and the target has the &Reference[Incapacitated apply=false] condition and is transported to a harmless demiplane until the start of the [[lookup @name lowercase]]{monster}'s next turn, at which point it re­appears in an unoccupied space of the [[lookup @name lowercase]]{monster}'s choice within [[lookup @range.value activity=kWKwiAYgyeKBLMNJ]] feet of the [[lookup @name lowercase]]{monster}.\nFailure or Success: The [[lookup @name lowercase]]{monster} can't take this action again [[lookup @duration.special activity=kWKwiAYgyeKBLMNJ]].",
+  "damage": [],
+  "dc": {
+    "dc_ability": [
+      "cha"
+    ],
+    "success_type": "none"
+  },
+  "usage": null,
+  "range": "120 ft",
+  "image": "icons/magic/unholy/beam-impact-purple.webp",
+  "url": "/assets/atlas/enemies/monsterfeatures/json/mmbanish00000000.json",
+  "updated_at": "2026-07-10T05:56:36.784Z"
+}

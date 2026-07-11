@@ -1,0 +1,31 @@
+{
+  "index": "6g3wloz2u0ebalad",
+  "name": "hypnotic pattern",
+  "desc": [
+    "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes &Reference[charmed] for the duration. While charmed by this spell, the creature is &Reference[incapacitated] and has a speed of 0.",
+    "The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
+  ],
+  "range": "120 ft",
+  "components": [
+    "S",
+    "M"
+  ],
+  "material": "A glowing stick of incense or a crystal vial filled with phosphorescent material.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/assets/atlas/magic_schools/json/illusion.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/3rd-level/6g3wloz2u0ebalad.json",
+  "image": "/assets/atlas/spell/images/6g3wloz2u0ebalad.webp",
+  "updated_at": "2026-07-10T15:34:53.120Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

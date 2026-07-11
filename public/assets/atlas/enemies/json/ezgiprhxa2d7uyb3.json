@@ -1,0 +1,76 @@
+{
+  "index": "ezgiprhxa2d7uyb3",
+  "name": "frog",
+  "desc": "Frog is a CR 0 beast.",
+  "size": "Tiny",
+  "type": "beast",
+  "subtype": "any race",
+  "alignment": "Unaligned",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 11
+    }
+  ],
+  "hit_points": 1,
+  "hit_dice": "1d4 - 1",
+  "hit_points_roll": "1d4 - 1",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 1,
+  "dexterity": 13,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 3,
+  "stats": {
+    "str": 1,
+    "dex": 13,
+    "con": 8,
+    "int": 1,
+    "wis": 8,
+    "cha": 3
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 9
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "standing leap",
+      "desc": "The [[lookup @name lowercase]]{monster}'s &reference[long jump] is up to 10 feet and its &reference[high jump] is up to 5 feet, with or without a running start.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "amphibious",
+      "desc": "The [[lookup @name lowercase]]{monster} can breathe air and water.",
+      "attack_bonus": -3,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/beast/Frog.webp",
+  "url": "/assets/atlas/enemies/json/ezgiprhxa2d7uyb3.json",
+  "updated_at": "2026-07-09T11:33:14.071Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}

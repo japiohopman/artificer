@@ -1,0 +1,30 @@
+{
+  "index": "7uwujj6owiqkeprs",
+  "name": "branding smite",
+  "desc": [
+    "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it's invisible, and the target sheds dim light in a 5-foot radius and can't become invisible until the spell ends.",
+    "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd."
+  ],
+  "range": "Self self",
+  "components": [
+    "V"
+  ],
+  "material": "",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 bonus",
+  "level": 2,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/assets/atlas/magic_schools/json/evocation.json"
+  },
+  "classes": [],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/2nd-level/7uwujj6owiqkeprs.json",
+  "image": "/assets/atlas/spell/images/7uwujj6owiqkeprs.webp",
+  "updated_at": "2026-07-10T15:34:53.076Z",
+  "sprite_index": 0,
+  "sprite_sheet": ""
+}

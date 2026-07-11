@@ -1,0 +1,115 @@
+{
+  "index": "mwbrphckoz6olxmv",
+  "name": "doppelganger",
+  "desc": "Doppelganger is a CR 3 monstrosity.",
+  "size": "Medium",
+  "type": "monstrosity",
+  "subtype": "Shapechanger",
+  "alignment": "Neutral",
+  "armor_class": [
+    {
+      "type": "natural",
+      "value": 14
+    }
+  ],
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8 + 16",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 18,
+  "constitution": 14,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "stats": {
+    "str": 11,
+    "dex": 18,
+    "con": 14,
+    "int": 11,
+    "wis": 12,
+    "cha": 14
+  },
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "charmed"
+  ],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [],
+  "actions": [
+    {
+      "name": "ambusher",
+      "desc": "In the first round of a combat, the [[lookup @name lowercase]]{monster} has advantage on attack rolls against any creature it has &reference[surprise]{Surprised}.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "multiattack",
+      "desc": "The [[lookup @name lowercase]]{monster} makes two melee attacks.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "slam",
+      "desc": "[[/attack extended]]. [[/damage extended]].",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "bludgeoning",
+            "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "read thoughts",
+      "desc": "The [[lookup @name lowercase]]{monster} magically reads the surface thoughts of [[lookup @labels.description.affects activity=2oQ9P8HQppd6D9n8]] within [[lookup @labels.description.range activity=2oQ9P8HQppd6D9n8]] of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the [[lookup @name lowercase]]{monster} can continue reading its thoughts, as long as the [[lookup @name lowercase]]{monster}'s concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the [[lookup @name lowercase]]{monster} has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "shapechanger",
+      "desc": "The [[lookup @name lowercase]]{monster} can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    },
+    {
+      "name": "surprise attack",
+      "desc": "If the [[lookup @name lowercase]]{monster} &reference[surprise]{Surprises} a creature and hits it with an attack during the first round of combat, the target takes an extra [[/damage average]] from the attack.",
+      "attack_bonus": 2,
+      "damage": [],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [],
+  "reactions": [],
+  "image": "/assets/atlas/enemies/tokens/monstrosity/Doppelganger.webp",
+  "url": "/assets/atlas/enemies/json/mwbrphckoz6olxmv.json",
+  "updated_at": "2026-07-09T11:33:15.356Z",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
+  "background_type": "generic",
+  "item_drops": [],
+  "forms": [],
+  "wikiData": null,
+  "last_updated": "7/9/2026"
+}
