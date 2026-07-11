@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { useUIStore } from './useUIStore';
-import * as combatUtils from '../lib/combatUtils';
+import * as combatUtils from '../components/combat/combatUtils';
 
 export interface RpsState {
   status: 'ritual' | 'result';

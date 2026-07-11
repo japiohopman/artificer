@@ -36,30 +36,6 @@ export interface FolderNode {
 }
 
 
-export interface IconCategory {
-  id: string;
-  name: string;
-  file: string;
-  icons: Record<string, IconDefinition>;
-  description?: string;
-  isComplete?: boolean;
-}
-
-export interface FolderNode {
-  type: 'folder';
-  name: string;
-  path: string;
-  children: (FolderNode | FileNode)[];
-}
-
-export interface FileNode {
-  type: 'file';
-  name: string;
-  iconId: string;
-  path: string;
-  fullPath: string;
-}
-
 // Process and parse dynamically imported SVGs from public
 const svgModules = (import.meta as any).glob('/public/assets/icons/svg/**/*.svg', { query: '?raw', eager: true });
 

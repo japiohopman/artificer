@@ -2,7 +2,7 @@ import React from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { FirstPersonView } from '../view/FirstPersonView';
-import { CombatGrid } from './CombatGrid';
+import { CombatGrid } from '../../combat/CombatGrid';
 import { GameIcon } from '../../../game_icons';
 import { motion, AnimatePresence } from 'motion/react';
 import { DraggableCard } from '../../atlas/DraggableCard';

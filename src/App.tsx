@@ -30,20 +30,27 @@ import { useBookStore } from './store/useBookStore';
 
 // Unified Loading Screen Implementation
 export default function App() {
-  const { 
-    isDevKitOpen, setIsDevKitOpen, explorerTab,
-    isCharacterSpellbookOpen, setIsCharacterSpellbookOpen, isProfileMenuOpen, isJournalOpen, setIsJournalOpen
-  } = useUIStore();
-  const { isGameStarted } = useGameStore();
-  const { updateSelectedItem, selectedItem } = useAtlasStore();
-  const { inspectedLocation, currentLocation } = useWorldStore();
+  const isDevKitOpen = useUIStore(state => state.isDevKitOpen);
+  const setIsDevKitOpen = useUIStore(state => state.setIsDevKitOpen);
+  const explorerTab = useUIStore(state => state.explorerTab);
+  const isCharacterSpellbookOpen = useUIStore(state => state.isCharacterSpellbookOpen);
+  const setIsCharacterSpellbookOpen = useUIStore(state => state.setIsCharacterSpellbookOpen);
+  const isProfileMenuOpen = useUIStore(state => state.isProfileMenuOpen);
+  const isJournalOpen = useUIStore(state => state.isJournalOpen);
+  const setIsJournalOpen = useUIStore(state => state.setIsJournalOpen);
+  
+  const isGameStarted = useGameStore(state => state.isGameStarted);
+  
+  const updateSelectedItem = useAtlasStore(state => state.updateSelectedItem);
+  const selectedItem = useAtlasStore(state => state.selectedItem);
+  
+  const inspectedLocation = useWorldStore(state => state.inspectedLocation);
+  const currentLocation = useWorldStore(state => state.currentLocation);
 
-  const {
-    books: registeredBooks,
-    activeBookId,
-    isBookOpen,
-    closeBook
-  } = useBookStore();
+  const registeredBooks = useBookStore(state => state.books);
+  const activeBookId = useBookStore(state => state.activeBookId);
+  const isBookOpen = useBookStore(state => state.isBookOpen);
+  const closeBook = useBookStore(state => state.closeBook);
 
   const activeBook = registeredBooks.find(b => b.id === activeBookId);
 

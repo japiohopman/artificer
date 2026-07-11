@@ -1,5 +1,4 @@
-
-import { TacticalCell, CombatMonster } from '../store/useGameStore';
+import { TacticalCell, CombatMonster } from '../../store/useGameStore';
 
 export interface Point {
   x: number;

@@ -1,23 +1,36 @@
 import React, { useMemo, useState, useRef, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useGameStore } from '../../../store/useGameStore';
-import { useUIStore } from '../../../store/useUIStore';
-import { useWorldStore } from '../../../store/useWorldStore';
-import { useCharacterStore } from '../../../store/useCharacterStore';
-import { GameIcon } from '../../../game_icons';
-import { cn } from '../../../lib/utils';
-import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } from '../../../lib/combatUtils';
+import { useGameStore } from '../../store/useGameStore';
+import { useUIStore } from '../../store/useUIStore';
+import { useWorldStore } from '../../store/useWorldStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
+import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } from './combatUtils';
 import { Token } from './Token';
 import { TokenActionHUD } from './TokenActionHUD';
 
 export const CombatGrid: React.FC = () => {
-  const { combatState, setPlayerPos, addLog, resolveCombatAction, toggleDoor } = useGameStore();
-  const { characters, activeCharacterId } = useCharacterStore();
-  const { partyLocation } = useWorldStore();
-  const { 
-    isTargeting, targetingAction, setIsTargeting, setTargetingAction, isGridVisible, setIsGridVisible,
-    setFocusedItem, setIsMonsterProfileOpen, gameMode
-  } = useUIStore();
+  const combatState = useGameStore(state => state.combatState);
+  const setPlayerPos = useGameStore(state => state.setPlayerPos);
+  const addLog = useGameStore(state => state.addLog);
+  const resolveCombatAction = useGameStore(state => state.resolveCombatAction);
+  const toggleDoor = useGameStore(state => state.toggleDoor);
+
+  const characters = useCharacterStore(state => state.characters);
+  const activeCharacterId = useCharacterStore(state => state.activeCharacterId);
+
+  const partyLocation = useWorldStore(state => state.partyLocation);
+
+  const isTargeting = useUIStore(state => state.isTargeting);
+  const targetingAction = useUIStore(state => state.targetingAction);
+  const setIsTargeting = useUIStore(state => state.setIsTargeting);
+  const setTargetingAction = useUIStore(state => state.setTargetingAction);
+  const isGridVisible = useUIStore(state => state.isGridVisible);
+  const setIsGridVisible = useUIStore(state => state.setIsGridVisible);
+  const setFocusedItem = useUIStore(state => state.setFocusedItem);
+  const setIsMonsterProfileOpen = useUIStore(state => state.setIsMonsterProfileOpen);
+  const gameMode = useUIStore(state => state.gameMode);
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
 
@@ -496,7 +509,7 @@ export const CombatGrid: React.FC = () => {
                           addLog("Target out of range!", "warning");
                         }
                       } else {
-                        const { fetchMonsterData } = await import('../../../services/storageService');
+                        const { fetchMonsterData } = await import('../../services/storageService');
                         const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
                         setFocusedItem(fullData || monster);
                         setIsMonsterProfileOpen(true);

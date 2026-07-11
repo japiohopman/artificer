@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GameIcon } from '../../../game_icons';
-import { cn } from '../../../lib/utils';
+import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
 
 export interface TokenProps {
   id: string;

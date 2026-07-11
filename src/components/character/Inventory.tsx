@@ -56,12 +56,9 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
         <div className="space-y-2">
           {equippedItems.length > 0 ? (
             equippedItems.map(([slot, item]) => (
-              <motion.div
+              <div
                 key={slot}
-                layout
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="bg-dragon-red/5 border border-dragon-red/10 rounded-lg p-1.5 flex items-center gap-2 group"
+                className="animate-in fade-in slide-in-from-left-4 duration-300 bg-dragon-red/5 border border-dragon-red/10 rounded-lg p-1.5 flex items-center gap-2 group"
               >
                 <div className="w-8 aspect-[9/16] bg-black/10 rounded border border-dragon-red/5 overflow-hidden flex-none">
                   <img 
@@ -82,7 +79,7 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
                 >
                   <Trash2 size={12} />
                 </button>
-              </motion.div>
+              </div>
             ))
           ) : (
             <p className="text-[9px] text-parchment-400 italic text-center py-2">No items equipped</p>
@@ -119,16 +116,12 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
         </div>
 
         <div className="space-y-1.5 max-h-[350px] overflow-y-auto custom-scrollbar pr-1.5">
-          <AnimatePresence mode="popLayout">
+          <div className="space-y-1.5">
             {filteredBackpack.length > 0 ? (
               filteredBackpack.map((item, index) => (
-                <motion.div
+                <div
                   key={item.id || index}
-                  layout
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  className="bg-white/40 border border-dragon-red/10 rounded-lg p-2 flex items-center gap-2 group hover:bg-white/60 transition-colors"
+                  className="animate-in fade-in slide-in-from-bottom-2 duration-300 bg-white/40 border border-dragon-red/10 rounded-lg p-2 flex items-center gap-2 group hover:bg-white/60 transition-colors"
                 >
                   <div className="w-10 aspect-[9/16] bg-black/10 rounded border border-dragon-red/5 overflow-hidden flex-none">
                     <img 
@@ -169,7 +162,7 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
                       <Trash2 size={12} />
                     </button>
                   </div>
-                </motion.div>
+                </div>
               ))
             ) : (
               <div className="py-8 text-center space-y-1.5 opacity-30">
@@ -177,7 +170,7 @@ export const Inventory: React.FC<InventoryProps> = ({ onEquipRequest }) => {
                 <p className="text-[9px] font-bold uppercase tracking-widest">Empty</p>
               </div>
             )}
-          </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>

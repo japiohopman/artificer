@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { useUIStore } from '../../../store/useUIStore';
-import { useGameStore } from '../../../store/useGameStore';
-import { useCharacterStore } from '../../../store/useCharacterStore';
-import { GameIcon } from '../../../game_icons';
-import { cn } from '../../../lib/utils';
+import { useUIStore } from '../../store/useUIStore';
+import { useGameStore } from '../../store/useGameStore';
+import { useCharacterStore } from '../../store/useCharacterStore';
+import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { getCharacterActions, ActionHudAction } from '../../../lib/tokenActionHud';
+import { getCharacterActions, ActionHudAction } from '../../lib/tokenActionHud';
 
 interface TokenActionHUDProps {
   x: number;

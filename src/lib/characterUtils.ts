@@ -545,9 +545,21 @@ export async function processLevelUp(character: any): Promise<any> {
   const results = [];
   let updatedCharacter = { ...character };
 
+  const { atlasService } = await import('../services/atlasService');
+
   for (let lvl = oldLevel + 1; lvl <= newLevel; lvl++) {
-    const classInfo = CLASS_DATA[character.class] || CLASS_DATA['Fighter'];
-    const hpIncrease = Math.floor(classInfo.hitDie / 2) + 1 + getModifier(character.stats.con || 10);
+    const classData = await atlasService.loadClass(character.class);
+    const hitDie = classData?.hit_die || 8;
+
+    const levelData = await atlasService.loadLevelData(character.class, lvl);
+    const features = levelData?.features || [];
+    
+    // Check if the level data explicitly gives ability score bonuses, otherwise fallback to % 4 for backwards compatibility
+    const hasASI = levelData?.ability_score_bonuses !== undefined 
+        ? levelData.ability_score_bonuses > 0 
+        : (lvl % 4 === 0);
+
+    const hpIncrease = Math.floor(hitDie / 2) + 1 + getModifier(character.stats.con || 10);
 
     updatedCharacter = {
       ...updatedCharacter,
@@ -559,8 +571,8 @@ export async function processLevelUp(character: any): Promise<any> {
     results.push({
       newLevel: lvl,
       hpIncrease,
-      newFeatures: [],
-      hasASI: lvl % 4 === 0
+      newFeatures: features,
+      hasASI
     });
   }
 
