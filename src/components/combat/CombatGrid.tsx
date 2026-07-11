@@ -36,9 +36,10 @@ export const CombatGrid: React.FC = () => {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const activeChar = characters.find(c => c.id === activeCharacterId);
-  const { playerPos, monsters, grid } = combatState;
+  const { playerPos, pcPositions, monsters, grid } = combatState;
 
-  // Track dragging for both player and individual summon/allied monsters
+  // Track dragging for both player, individual PCs, and individual summon/allied monsters
+  const [draggedPcId, setDraggedPcId] = useState<string | null>(null);
   const [draggedMonsterId, setDraggedMonsterId] = useState<string | null>(null);
 
   // Find whose turn it currently is in the initiative order
@@ -49,12 +50,17 @@ export const CombatGrid: React.FC = () => {
 
   // Coordinates of the currently active turn token (either player or summon/ally)
   const activeTokenPos = useMemo(() => {
-    if (activeTurnActor && !activeTurnActor.isPlayer) {
-      const monster = monsters.find(m => m.id === activeTurnActor.id);
-      if (monster) return { x: monster.x, y: monster.y };
+    if (activeTurnActor) {
+      if (!activeTurnActor.isPlayer) {
+        const monster = monsters.find(m => m.id === activeTurnActor.id);
+        if (monster) return { x: monster.x, y: monster.y };
+      } else {
+        const pcPos = pcPositions?.[activeTurnActor.id];
+        if (pcPos) return { x: pcPos.x, y: pcPos.y };
+      }
     }
     return playerPos;
-  }, [activeTurnActor, monsters, playerPos]);
+  }, [activeTurnActor, monsters, pcPositions, playerPos]);
 
   // Grid constants
   const cellSize = 60; // 60px = 5ft
@@ -66,38 +72,56 @@ export const CombatGrid: React.FC = () => {
   // Memoize visible cells (updates dynamically during drag)
   const visibleCells = useMemo(() => {
     const visible = new Set<string>();
-    const center = draggedPos || playerPos;
-    for (let y = 0; y < gridHeight; y++) {
-      for (let x = 0; x < gridWidth; x++) {
-        if (checkLoS(center, { x, y }, grid)) {
-          visible.add(`${x},${y}`);
+    const activeParty = characters.filter((c: any) => c && c.name !== 'Empty Slot');
+
+    if (activeParty.length > 0) {
+      activeParty.forEach(char => {
+        const pos = pcPositions?.[char.id] || playerPos;
+        const center = (draggedPcId === char.id && draggedPos) ? draggedPos : pos;
+        for (let y = 0; y < gridHeight; y++) {
+          for (let x = 0; x < gridWidth; x++) {
+            if (checkLoS(center, { x, y }, grid)) {
+              visible.add(`${x},${y}`);
+            }
+          }
+        }
+      });
+    } else {
+      const center = draggedPos || playerPos;
+      for (let y = 0; y < gridHeight; y++) {
+        for (let x = 0; x < gridWidth; x++) {
+          if (checkLoS(center, { x, y }, grid)) {
+            visible.add(`${x},${y}`);
+          }
         }
       }
     }
     return visible;
-  }, [playerPos, draggedPos, grid, gridHeight, gridWidth]);
+  }, [playerPos, pcPositions, draggedPos, draggedPcId, grid, gridHeight, gridWidth, characters]);
 
   // Memoize valid target cells
   const validTargetCells = useMemo(() => {
     if (!isTargeting || !targetingAction) return new Set<string>();
     const range = targetingAction.range || 0;
 
+    const actorPos = activeTokenPos;
+
     if (targetingAction.id === 'move') {
-      return getReachableCells(playerPos, range, grid, monsters, playerPos);
+      return getReachableCells(actorPos, range, grid, monsters, actorPos);
     }
 
     const cells = new Set<string>();
-    for (let x = playerPos.x - range; x <= playerPos.x + range; x++) {
-      for (let y = playerPos.y - range; y <= playerPos.y + range; y++) {
+    for (let x = actorPos.x - range; x <= actorPos.x + range; x++) {
+      for (let y = actorPos.y - range; y <= actorPos.y + range; y++) {
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-          if (getDistance(playerPos, { x, y }) <= range) {
+          if (getDistance(actorPos, { x, y }) <= range) {
             cells.add(`${x},${y}`);
           }
         }
       }
     }
     return cells;
-  }, [isTargeting, targetingAction, playerPos, grid, gridWidth, gridHeight]);
+  }, [isTargeting, targetingAction, activeTokenPos, grid, gridWidth, gridHeight, monsters]);
 
   // Canvas drawing effect for grid and highlights
   useEffect(() => {
@@ -262,6 +286,8 @@ export const CombatGrid: React.FC = () => {
       return;
     }
 
+    const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
+
     if (isTargeting) {
       if (targetingAction?.targetType === 'sphere') {
         const radius = targetingAction.radius || 0;
@@ -278,7 +304,7 @@ export const CombatGrid: React.FC = () => {
         });
 
         targets.forEach(monster => {
-          resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
+          resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, monster, targetingAction);
         });
 
         const { consumeAction, castSpell } = useCharacterStore.getState();
@@ -293,15 +319,15 @@ export const CombatGrid: React.FC = () => {
       }
 
       if (targetingAction?.id === 'move') {
-        if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
+        if (isCellOccupied(x, y, activePcPos, monsters, playerPos, 'Medium')) {
           addLog("That position is already occupied!", 'warning');
           return;
         }
-        const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
+        const path = findPath(activePcPos, { x, y }, grid, monsters, playerPos);
         const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
 
         if (path && path.length * 5 <= maxMove) {
-          setPlayerPos(x, y);
+          setPlayerPos(x, y, activeCharacterId);
           addLog(`Moved to position (${x}, ${y})`, 'info');
 
           const { consumeMovement } = useCharacterStore.getState();
@@ -319,19 +345,19 @@ export const CombatGrid: React.FC = () => {
     }
 
     // Default movement logic
-    if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
+    if (isCellOccupied(x, y, activePcPos, monsters, playerPos, 'Medium')) {
       addLog("That position is already occupied!", 'warning');
       return;
     }
     const { gameMode } = useUIStore.getState();
-    const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
+    const path = findPath(activePcPos, { x, y }, grid, monsters, playerPos);
 
     if (path && path.length > 0) {
       const isCombat = gameMode === 'combat';
       const moveLimit = 6; // 30ft
 
       if (!isCombat || path.length <= moveLimit) {
-        setPlayerPos(x, y);
+        setPlayerPos(x, y, activeCharacterId);
         addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
 
         if (isCombat) {
@@ -441,61 +467,83 @@ export const CombatGrid: React.FC = () => {
                />
              )}
 
-             {/* Player Token */}
-             <Token
-                id={activeCharacterId || 'player'}
-                name={activeChar?.name || 'Player'}
-                imageUrl={activeChar?.avatarUrl}
-                x={playerPos.x}
-                y={playerPos.y}
-                cellSize={cellSize}
-                isPlayer
-                isActive={activeTurnActor?.isPlayer && !activeTurnActor.id.startsWith('m-')}
-                draggedPos={draggedPos}
-                onDrag={(_, info) => {
-                  const rect = canvasRef.current?.getBoundingClientRect();
-                  if (rect) {
-                    const x = Math.floor((info.point.x - rect.left) / cellSize);
-                    const y = Math.floor((info.point.y - rect.top) / cellSize);
-                    if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                      if (draggedPos?.x !== x || draggedPos?.y !== y) {
-                        setDraggedPos({ x, y });
-                      }
-                    }
-                  }
-                }}
-                onDragEnd={(_, info) => {
-                  const rect = canvasRef.current?.getBoundingClientRect();
-                  if (rect) {
-                    const x = Math.floor((info.point.x - rect.left) / cellSize);
-                    const y = Math.floor((info.point.y - rect.top) / cellSize);
-                    if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                      if (isCellOccupied(x, y, playerPos, monsters, playerPos, 'Medium')) {
-                        addLog("That position is already occupied!", 'warning');
-                        setDraggedPos(null);
-                        return;
-                      }
-                      const { gameMode } = useUIStore.getState();
-                      const path = findPath(playerPos, { x, y }, grid, monsters, playerPos);
-                      if (path && path.length > 0) {
-                        const isCombat = gameMode === 'combat';
-                        const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
-                        if (!isCombat || path.length * 5 <= maxMove) {
-                          setPlayerPos(x, y);
-                          addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
-                          if (isCombat) {
-                            const { consumeMovement } = useCharacterStore.getState();
-                            consumeMovement(activeCharacterId, path.length * 5);
+             {/* Player Character Tokens */}
+             {characters.filter(char => char && char.name !== 'Empty Slot').map((char) => {
+               const pos = pcPositions?.[char.id] || playerPos;
+               const rot = (pcPositions?.[char.id] as any)?.rotation || 0;
+               const isPcActive = activeTurnActor?.id === char.id;
+
+               return (
+                 <Token
+                    key={char.id}
+                    id={char.id}
+                    name={char.name}
+                    imageUrl={char.avatarUrl || char.imageUrl}
+                    hp={char.hp}
+                    maxHp={char.maxHp}
+                    x={pos.x}
+                    y={pos.y}
+                    rotation={rot}
+                    cellSize={cellSize}
+                    isPlayer
+                    isActive={isPcActive}
+                    draggedPos={draggedPcId === char.id ? draggedPos : null}
+                    onDrag={(_, info) => {
+                      setDraggedPcId(char.id);
+                      const rect = canvasRef.current?.getBoundingClientRect();
+                      if (rect) {
+                        const x = Math.floor((info.point.x - rect.left) / cellSize);
+                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                          if (draggedPos?.x !== x || draggedPos?.y !== y) {
+                            setDraggedPos({ x, y });
                           }
-                        } else {
-                          addLog("That position is too far!", 'warning');
                         }
                       }
-                    }
-                  }
-                  setDraggedPos(null);
-                }}
-             />
+                    }}
+                    onDragEnd={(_, info) => {
+                      const rect = canvasRef.current?.getBoundingClientRect();
+                      if (rect) {
+                        const x = Math.floor((info.point.x - rect.left) / cellSize);
+                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
+                          if (isCellOccupied(x, y, pos, monsters, playerPos, 'Medium')) {
+                            addLog("That position is already occupied!", 'warning');
+                            setDraggedPos(null);
+                            setDraggedPcId(null);
+                            return;
+                          }
+                          const { gameMode } = useUIStore.getState();
+                          const path = findPath(pos, { x, y }, grid, monsters, playerPos);
+                          if (path && path.length > 0) {
+                            const isCombat = gameMode === 'combat';
+                            const maxMove = char?.actionEconomy?.movement?.current || 30;
+                            if (!isCombat || path.length * 5 <= maxMove) {
+                              setPlayerPos(x, y, char.id);
+                              addLog(`${char.name} ${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
+                              if (isCombat) {
+                                const { consumeMovement } = useCharacterStore.getState();
+                                consumeMovement(char.id, path.length * 5);
+                              }
+                            } else {
+                              addLog("That position is too far!", 'warning');
+                            }
+                          }
+                        }
+                      }
+                      setDraggedPos(null);
+                      setDraggedPcId(null);
+                    }}
+                    onClick={async (e) => {
+                      e.stopPropagation();
+                      // Set this character as active
+                      const { setActiveCharacter } = useCharacterStore.getState();
+                      setActiveCharacter(char.id);
+                      addLog(`Selected character: ${char.name}`, 'info');
+                    }}
+                 />
+               );
+             })}
 
              {/* Monster & Allied Summon Tokens */}
              <AnimatePresence>
@@ -504,6 +552,15 @@ export const CombatGrid: React.FC = () => {
                  if (!isVisible) return null;
 
                  const isMonsterActive = activeTurnActor?.id === monster.id;
+
+                 let monsterRot = 0;
+                 if (monster.viewDirection !== undefined) {
+                   if (monster.viewDirection === 0) monsterRot = 180;
+                   else if (monster.viewDirection === 1) monsterRot = 270;
+                   else if (monster.viewDirection === 2) monsterRot = 0;
+                   else if (monster.viewDirection === 3) monsterRot = 90;
+                   else monsterRot = monster.viewDirection;
+                 }
 
                  return (
                    <Token
@@ -515,6 +572,7 @@ export const CombatGrid: React.FC = () => {
                     maxHp={monster.maxHp}
                     x={monster.x}
                     y={monster.y}
+                    rotation={monsterRot}
                     cellSize={cellSize}
                     size={monster.size}
                     isAlly={monster.isAlly}

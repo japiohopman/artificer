@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { useUIStore } from './useUIStore';
+import { useCharacterStore } from './useCharacterStore';
 import * as combatUtils from '../components/combat/combatUtils';
 
 export interface RpsState {
@@ -60,6 +61,7 @@ export interface CombatMonster {
 
 export interface CombatState {
   playerPos: { x: number; y: number };
+  pcPositions?: Record<string, { x: number; y: number; rotation?: number }>;
   monsters: CombatMonster[];
   initiativeOrder: Array<{
     id: string;
@@ -144,7 +146,7 @@ interface GameState {
   resetCoinFlip: () => void;
 
   // Combat Actions
-  setPlayerPos: (x: number, y: number) => void;
+  setPlayerPos: (x: number, y: number, pcId?: string) => void;
   updateMonsterHp: (id: string, hp: number) => void;
   addMonsterToCombat: (monster: any, x?: number, y?: number) => void;
   spawnMonster: (index: string, x?: number, y?: number) => Promise<void>;
@@ -313,12 +315,29 @@ export const useGameStore = create<GameState>((set, get) => ({
       }
   })),
 
-  setPlayerPos: (x, y) => set((state) => ({
-    combatState: {
-      ...state.combatState,
-      playerPos: { x, y }
+  setPlayerPos: (x, y, pcId) => set((state) => {
+    const id = pcId || state.activeCharacterId;
+    const currentPos = state.combatState.pcPositions?.[id] || state.combatState.playerPos;
+    const dx = x - currentPos.x;
+    const dy = y - currentPos.y;
+    let rotation = (currentPos as any).rotation || 0;
+    if (dx !== 0 || dy !== 0) {
+      rotation = Math.atan2(dx, dy) * (180 / Math.PI);
     }
-  })),
+
+    const newPcPositions = {
+      ...(state.combatState.pcPositions || {}),
+      [id]: { x, y, rotation }
+    };
+
+    return {
+      combatState: {
+        ...state.combatState,
+        playerPos: id === state.activeCharacterId ? { x, y } : state.combatState.playerPos,
+        pcPositions: newPcPositions
+      }
+    };
+  }),
 
   setCombatMapBackground: (combatMapBackground) => set((state) => ({
     combatState: {
@@ -418,7 +437,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   completeCombat: async (victory) => {
     const { combatState, addLog } = get();
-    const { useCharacterStore } = await import('./useCharacterStore');
     const { characters, addXp } = useCharacterStore.getState();
 
     if (victory) {
@@ -443,6 +461,13 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
     const nextIndex = (combatState.activeTurnIndex + 1) % combatState.initiativeOrder.length;
     const nextActor = combatState.initiativeOrder[nextIndex];
+
+    // Refresh action economy for player characters on turn start
+    if (nextActor.isPlayer) {
+      const { restoreActionEconomy, setActiveCharacter } = useCharacterStore.getState();
+      restoreActionEconomy(nextActor.id, false);
+      setActiveCharacter(nextActor.id);
+    }
 
     set((state) => {
       const newConditions = { ...state.combatState.activeConditions };
@@ -566,14 +591,21 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   startCombat: async () => {
     const { combatState, addLog } = get();
-    const { useCharacterStore } = await import('./useCharacterStore');
     const charStore = useCharacterStore.getState();
-    const activeParty = charStore.characters.filter((c: any) => !c.isNpc || c.isRecruitable);
+    const activeParty = charStore.characters.filter((c: any) => c && c.name !== 'Empty Slot' && (!c.isNpc || c.isRecruitable));
 
     if (activeParty.length === 0) {
       addLog("Cannot start combat without active party members!", "error");
       return;
     }
+
+    // Initialize individual PC positions
+    const initialPcPositions: Record<string, { x: number; y: number; rotation: number }> = {};
+    activeParty.forEach((c: any, index: number) => {
+      const x = 2 + Math.floor(index / 3);
+      const y = 2 + (index % 3);
+      initialPcPositions[c.id] = { x, y, rotation: 0 };
+    });
 
     // Roll initiative for everyone
     const order = [
@@ -591,19 +623,68 @@ export const useGameStore = create<GameState>((set, get) => ({
       }))
     ].sort((a, b) => b.value - a.value);
 
+    // Reset action economy for everyone at combat start
+    activeParty.forEach((c: any) => {
+      charStore.restoreActionEconomy(c.id, true);
+    });
+
     set((state) => ({
       combatState: {
         ...state.combatState,
         initiativeOrder: order,
-        activeTurnIndex: 0
+        activeTurnIndex: 0,
+        pcPositions: initialPcPositions,
+        playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 }
       }
     }));
   },
 
   resolveCombatAction: async (actor, target, action) => {
     const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
-    const { useCharacterStore } = await import('./useCharacterStore');
     const { modifyHp } = useCharacterStore.getState();
+
+    // Rotate actor to face target
+    const { combatState } = get();
+    const actorX = actor.id === 'player' || combatState.pcPositions?.[actor.id]
+      ? (combatState.pcPositions?.[actor.id]?.x ?? combatState.playerPos.x)
+      : actor.x;
+    const actorY = actor.id === 'player' || combatState.pcPositions?.[actor.id]
+      ? (combatState.pcPositions?.[actor.id]?.y ?? combatState.playerPos.y)
+      : actor.y;
+
+    const targetX = target.id === 'player' || combatState.pcPositions?.[target.id]
+      ? (combatState.pcPositions?.[target.id]?.x ?? combatState.playerPos.x)
+      : target.x;
+    const targetY = target.id === 'player' || combatState.pcPositions?.[target.id]
+      ? (combatState.pcPositions?.[target.id]?.y ?? combatState.playerPos.y)
+      : target.y;
+
+    const dx = targetX - actorX;
+    const dy = targetY - actorY;
+    if (dx !== 0 || dy !== 0) {
+      const rot = Math.atan2(dx, dy) * (180 / Math.PI);
+      if (actor.id === 'player' || combatState.pcPositions?.[actor.id]) {
+        set((state) => ({
+          combatState: {
+            ...state.combatState,
+            pcPositions: {
+              ...(state.combatState.pcPositions || {}),
+              [actor.id]: {
+                ...(state.combatState.pcPositions?.[actor.id] || { x: actorX, y: actorY }),
+                rotation: rot
+              }
+            }
+          }
+        }));
+      } else {
+        set((state) => ({
+          combatState: {
+            ...state.combatState,
+            monsters: state.combatState.monsters.map(m => m.id === actor.id ? { ...m, viewDirection: rot } : m)
+          }
+        }));
+      }
+    }
 
     // 1. Roll to Hit
     const attackBonus = action.attack_bonus || 0;
@@ -619,7 +700,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     // Get target AC from Atlas-compatible data
     let targetAC = 10;
-    const { combatState } = get();
 
     if (target.id === 'player') {
        // Fetch target character's AC calculation from character store

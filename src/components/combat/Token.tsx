@@ -11,6 +11,7 @@ export interface TokenProps {
   maxHp?: number;
   x: number;
   y: number;
+  rotation?: number;
   cellSize: number;
   size?: 'Medium' | 'Large';
   isPlayer?: boolean;
@@ -32,6 +33,7 @@ export const Token: React.FC<TokenProps> = ({
   maxHp,
   x,
   y,
+  rotation = 0,
   cellSize,
   size = 'Medium',
   isPlayer = false,
@@ -100,10 +102,13 @@ export const Token: React.FC<TokenProps> = ({
               "w-full h-full transition-all",
               isTopDownToken ? "object-contain drop-shadow-[0_8px_10px_rgba(0,0,0,0.7)]" : "object-cover"
             )} 
+            style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}
             alt={name} 
           />
         ) : (
-          <GameIcon name={isPlayer ? "user" : "identity"} size={24 * mSize} color="#FFF" />
+          <div style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}>
+            <GameIcon name={isPlayer ? "user" : "identity"} size={24 * mSize} color="#FFF" />
+          </div>
         )}
 
         {/* Health Bar */}
