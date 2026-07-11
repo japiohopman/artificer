@@ -191,6 +191,8 @@ class SoundEngine {
       case 'ITEM_GRAB': path = '/assets/sounds/system/ui/ui_item_grab.wav'; break;
       case 'ITEM_EQUIP': path = '/assets/sounds/system/ui/ui_item_equip.wav'; break;
       case 'LEVEL_UP': path = '/assets/sounds/sfx/sfx_level_up.wav'; break;
+      case 'DOOR_OPEN': path = '/assets/sounds/sfx/door_open.mp3'; break;
+      case 'DOOR_CLOSE': path = '/assets/sounds/sfx/door_close.mp3'; break;
       default: path = '/assets/sounds/system/ui_menu_select.mp3';
     }
 
