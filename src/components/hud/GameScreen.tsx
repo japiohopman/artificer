@@ -107,10 +107,14 @@ export const GameScreen: React.FC = () => {
         transition={{ type: 'spring', damping: 30, stiffness: 120 }}
         className={cn(
           "absolute inset-x-0 top-0 bottom-[64px] z-10 flex flex-col items-center",
+          gameMode === 'combat' && "bottom-0",
           (chatExpanded || gameMode === 'combat') ? "pointer-events-auto" : "pointer-events-none"
         )}
       >
-        <div className="w-full h-full max-w-5xl">
+        <div className={cn(
+          "w-full h-full",
+          gameMode === 'combat' ? "max-w-none" : "max-w-5xl"
+        )}>
             <ActionView />
         </div>
       </motion.div>
@@ -154,9 +158,11 @@ export const GameScreen: React.FC = () => {
            <AdvancedRoller />
         </div>
 
-        <div className="w-full pointer-events-auto relative">
-           <ChatPanel isCollapsed={!chatExpanded} />
-        </div>
+        {gameMode !== 'combat' && (
+          <div className="w-full pointer-events-auto relative">
+             <ChatPanel isCollapsed={!chatExpanded} />
+          </div>
+        )}
       </div>
 
       {/* 5. Simulator Cards Layer - Highest Priority interactive content */}

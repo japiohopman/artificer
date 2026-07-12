@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { useUIStore } from './useUIStore';
 import { useCharacterStore } from './useCharacterStore';
 import * as combatUtils from '../components/combat/combatUtils';
+import { soundService } from '../services/soundService';
 
 export interface RpsState {
   status: 'ritual' | 'result';
@@ -68,6 +69,7 @@ export interface CombatState {
     name: string;
     value: number;
     isPlayer?: boolean;
+    isAlly?: boolean;
   }>;
   activeTurnIndex: number;
   grid: TacticalCell[][];
@@ -692,6 +694,9 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     addLog(`${actor.name} attacks ${target.name} with ${action.name}...`, 'info');
 
+    // Play weapon attack swing sound effect
+    soundService.playEffect('COMBAT_SLASH');
+
     // We'll use a simulated 3D roll for the hit
     await rollDice3D(toHitNotation, `Attack: ${action.name}`);
 
@@ -729,6 +734,8 @@ export const useGameStore = create<GameState>((set, get) => ({
     const isHit = isCrit || totalHit >= targetAC;
 
     if (isHit) {
+      // Play weapon impact hit sound effect
+      soundService.playEffect('COMBAT_HIT');
       addLog(`${isCrit ? 'CRITICAL HIT!' : 'HIT!'} (${totalHit} vs AC ${targetAC})`, isCrit ? 'success' : 'info');
 
       // 2. Roll Damage

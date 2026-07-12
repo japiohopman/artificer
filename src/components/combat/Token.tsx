@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
@@ -50,6 +50,18 @@ export const Token: React.FC<TokenProps> = ({
   actionEconomy,
   spellSlots
 }) => {
+  const [isDamageFlash, setIsDamageFlash] = useState(false);
+  const prevHpRef = useRef(hp);
+
+  useEffect(() => {
+    if (hp !== undefined && prevHpRef.current !== undefined && hp < prevHpRef.current) {
+      setIsDamageFlash(true);
+      const timer = setTimeout(() => setIsDamageFlash(false), 600);
+      return () => clearTimeout(timer);
+    }
+    prevHpRef.current = hp;
+  }, [hp]);
+
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
   const isTopDownToken = imageUrl && (
@@ -179,23 +191,34 @@ export const Token: React.FC<TokenProps> = ({
       style={{ width: cellSize * mSize, height: cellSize * mSize }}
     >
       {renderResourceDots()}
-      <div className={cn(
-        "w-full h-full relative transition-all duration-300 flex items-center justify-center",
-        isTopDownToken 
-          ? "bg-transparent shadow-none" 
-          : cn(
-              "rounded-full border-2 overflow-hidden shadow-xl",
+      <motion.div
+        className={cn(
+          "w-full h-full relative transition-all duration-300 flex items-center justify-center",
+          isTopDownToken
+            ? "bg-transparent shadow-none"
+            : cn(
+                "rounded-full border-2 overflow-hidden shadow-xl",
 tokenBorderBgStyle ?? (
-              isPlayer 
-                ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
-                : isAlly
-                    ? "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
-                    : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
-            )
-            ),
-        isTargeting && !isPlayer && "ring-4 ring-dragon-gold animate-pulse scale-110",
-        isHovered && "scale-105 brightness-110"
-      )}>
+                isPlayer
+                  ? "border-blue-500 bg-blue-900/80 shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+                  : isAlly
+                      ? "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+                      : "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]"
+              )
+              ),
+          isTargeting && !isPlayer && "ring-4 ring-dragon-gold animate-pulse scale-110",
+          isHovered && "scale-105 brightness-110"
+        )}
+        animate={isDamageFlash ? {
+          scale: [1, 1.15, 1],
+          filter: [
+            "none",
+            "drop-shadow(0 0 20px rgb(220,38,38)) brightness(0.6) sepia(1) hue-rotate(-50deg) saturate(8)",
+            "none"
+          ]
+        } : {}}
+        transition={{ duration: 0.5 }}
+      >
         {imageUrl ? (
           <img 
             src={imageUrl} 
@@ -228,7 +251,7 @@ tokenBorderBgStyle ?? (
             />
           </div>
         )}
-      </div>
+      </motion.div>
 
       {/* Name Tag */}
       <div className={cn(

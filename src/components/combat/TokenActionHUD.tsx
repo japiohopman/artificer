@@ -23,6 +23,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const { addLog, nextTurn, combatState } = useGameStore();
   const { activeCharacterId, characters, consumeAction } = useCharacterStore();
   const [isSpellsDropdownOpen, setIsSpellsDropdownOpen] = useState(false);
+  const [isAttacksDropdownOpen, setIsAttacksDropdownOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -83,6 +84,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsSpellsDropdownOpen(false);
+        setIsAttacksDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -91,6 +93,121 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
 
   // Fetch all actions
   const allActions = useMemo(() => getCharacterActions(activeChar || null), [activeChar]);
+
+  // Filter equipped weapons dynamically
+  const characterWeapons = useMemo(() => {
+    if (!activeChar) return [];
+    const list: any[] = [];
+
+    // Check inventory
+    const inventory = activeChar.inventory || {};
+    Object.entries(inventory).forEach(([slot, item]: [string, any]) => {
+      if (item && (
+        item.equipment_category?.index === 'weapon' ||
+        (item._type === 'equipment' && (
+          item.index?.includes('sword') ||
+          item.index?.includes('dagger') ||
+          item.index?.includes('bow') ||
+          item.index?.includes('axe') ||
+          item.index?.includes('mace') ||
+          item.index?.includes('spear') ||
+          item.index?.includes('staff') ||
+          item.index?.includes('club')
+        ))
+      )) {
+        list.push({ ...item, slot });
+      }
+    });
+
+    // Check items (v2 inventory format)
+    const items = activeChar.items || {};
+    Object.values(items).forEach((item: any) => {
+      if (item && (
+        item.equipment_category?.index === 'weapon' ||
+        (item.template && (
+          item.template.includes('Sword') ||
+          item.template.includes('Dagger') ||
+          item.template.includes('Bow') ||
+          item.template.includes('Axe') ||
+          item.template.includes('Mace') ||
+          item.template.includes('Spear') ||
+          item.template.includes('Staff')
+        ))
+      )) {
+        if (!list.some(existing => existing.id === item.id)) {
+          list.push(item);
+        }
+      }
+    });
+
+    return list;
+  }, [activeChar]);
+
+  // Build the list of attacks (Weapons + Unarmed)
+  const attacksList = useMemo(() => {
+    const list: any[] = [];
+    if (!activeChar) return [];
+
+    const stats = activeChar.stats || { str: 10, dex: 10 };
+    const strMod = Math.floor(((stats.str || 10) - 10) / 2);
+    const dexMod = Math.floor(((stats.dex || 10) - 10) / 2);
+
+    characterWeapons.forEach((w: any) => {
+      const isRanged = w.weapon_range === 'Ranged' || w.index?.includes('bow') || w.index?.includes('crossbow') || w.template?.toLowerCase().includes('bow');
+      const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse') || w.template?.toLowerCase().includes('dagger');
+      const abilityMod = (isRanged || (isFinesse && dexMod > strMod)) ? dexMod : strMod;
+
+      const dmgDice = w.damage?.damage_dice || (
+        w.index?.includes('sword') || w.template?.toLowerCase().includes('sword') ? '1d8' :
+        w.index?.includes('dagger') || w.template?.toLowerCase().includes('dagger') ? '1d4' :
+        w.index?.includes('bow') || w.template?.toLowerCase().includes('bow') ? '1d8' : '1d6'
+      );
+
+      const finalDamage = `${dmgDice}${abilityMod >= 0 ? '+' : ''}${abilityMod !== 0 ? abilityMod : ''}`;
+      const range = isRanged ? Math.max(1, Math.round((w.range?.normal || 80) / 5)) : 1;
+
+      list.push({
+        id: `attack-${w.id || w.index || Math.random().toString()}`,
+        name: w.name || w.template || w.customName || "Weapon Strike",
+        damage: finalDamage,
+        range: range,
+        isRanged,
+        attackBonus: 2 + abilityMod,
+        damageType: w.damage?.damage_type?.name || (isRanged ? 'piercing' : 'slashing')
+      });
+    });
+
+    // Unarmed Strike (always available)
+    list.push({
+      id: 'attack-unarmed',
+      name: "Unarmed Strike",
+      damage: `1${strMod >= 0 ? '+' : ''}${strMod !== 0 ? strMod : ''}`,
+      range: 1,
+      isRanged: false,
+      attackBonus: 2 + strMod,
+      damageType: 'bludgeoning'
+    });
+
+    return list;
+  }, [activeChar, characterWeapons]);
+
+  const handleWeaponClick = (attack: any) => {
+    setIsAttacksDropdownOpen(false);
+
+    // Set targeting
+    setTargetingAction({
+      id: attack.id,
+      name: attack.name,
+      icon: attack.isRanged ? 'ranged_attack' : 'melee',
+      range: attack.range,
+      actionType: 'actions',
+      category: 'Standard',
+      attack_bonus: attack.attackBonus,
+      damage: [{ damage_dice: attack.damage, damage_type: { name: attack.damageType } }]
+    });
+    setIsTargeting(true);
+    addLog(`Preparing attack with ${attack.name}... Choose a target on the grid.`, 'info');
+  };
 
   // Extract core action items
   const attackAction = allActions.find(a => a.id === 'attack');
@@ -291,18 +408,55 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
       >
         {/* Quick Attack */}
         {attackAction && (
-          <button
-            onClick={() => handleActionClick(attackAction)}
-            className={cn(
-              "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow hover:scale-110",
-              targetingAction?.id === 'attack' 
-                ? "bg-dragon-red border-dragon-gold text-white" 
-                : "bg-stone-900 border-white/10 text-white hover:border-white/30"
-            )}
-            title="Attack (1 Action)"
-          >
-            <GameIcon name="melee" size={16} />
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setIsAttacksDropdownOpen(!isAttacksDropdownOpen)}
+              className={cn(
+                "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow hover:scale-110",
+                isAttacksDropdownOpen || targetingAction?.id?.startsWith('attack-')
+                  ? "bg-dragon-red border-dragon-gold text-white"
+                  : "bg-stone-900 border-white/10 text-white hover:border-white/30"
+              )}
+              title="Attack with Weapons (1 Action)"
+            >
+              <GameIcon name="melee" size={16} />
+            </button>
+
+            {/* Compact Attacks Dropdown */}
+            <AnimatePresence>
+              {isAttacksDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute bottom-10 left-1/2 -translate-x-1/2 w-48 bg-stone-950 border border-dragon-gold/30 rounded-md shadow-xl p-1 z-50 max-h-48 overflow-y-auto custom-scrollbar"
+                >
+                  <div className="text-[8px] font-black uppercase text-dragon-gold tracking-widest px-2 py-1 border-b border-white/5 mb-1 text-center font-elan">
+                    Weapons & Attacks
+                  </div>
+                  {attacksList.map((atk) => (
+                    <button
+                      key={atk.id}
+                      onClick={() => handleWeaponClick(atk)}
+                      className={cn(
+                        "w-full px-2 py-1.5 text-left rounded text-white/80 hover:text-white hover:bg-stone-900 transition-colors flex flex-col gap-0.5",
+                        targetingAction?.id === atk.id && "text-dragon-gold bg-dragon-gold/10"
+                      )}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <span className="truncate text-[10px] font-serif font-black uppercase tracking-wider">{atk.name}</span>
+                        <span className="text-[8px] text-dragon-gold font-black font-elan">{atk.isRanged ? 'RNG' : 'MEL'}</span>
+                      </div>
+                      <div className="flex items-center justify-between w-full text-[8px] opacity-60">
+                        <span>Range: {atk.range * 5}ft ({atk.range} cells)</span>
+                        <span>Dmg: {atk.damage}</span>
+                      </div>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         )}
 
         {/* Quick Move */}
