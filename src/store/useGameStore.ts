@@ -322,7 +322,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const dy = y - currentPos.y;
     let rotation = (currentPos as any).rotation || 0;
     if (dx !== 0 || dy !== 0) {
-      rotation = Math.atan2(dx, dy) * (180 / Math.PI);
+      rotation = Math.atan2(-dx, dy) * (180 / Math.PI);
     }
 
     const newPcPositions = {
@@ -662,7 +662,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const dx = targetX - actorX;
     const dy = targetY - actorY;
     if (dx !== 0 || dy !== 0) {
-      const rot = Math.atan2(dx, dy) * (180 / Math.PI);
+      const rot = Math.atan2(-dx, dy) * (180 / Math.PI);
       if (actor.id === 'player' || combatState.pcPositions?.[actor.id]) {
         set((state) => ({
           combatState: {

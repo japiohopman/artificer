@@ -137,6 +137,17 @@ files.forEach(file => {
     let maxHp = hpData.value || (hitDie + conMod + (level - 1) * (Math.floor(hitDie / 2) + 1 + conMod));
     if (maxHp <= 0) maxHp = 10;
 
+    // Parse Spell Slots
+    const spellSlots = {};
+    const yamlSpells = system.spells || {};
+    for (let i = 1; i <= 9; i++) {
+      const spellKey = `spell${i}`;
+      const maxSlots = yamlSpells[spellKey]?.value || 0;
+      if (maxSlots > 0) {
+        spellSlots[i.toString()] = { current: maxSlots, max: maxSlots };
+      }
+    }
+
     const alignment = system.details?.alignment || 'True Neutral';
     const biography = cleanHtml(system.details?.biography?.value || '');
 
@@ -269,6 +280,14 @@ files.forEach(file => {
       containers: { [v2Backpack.id]: v2Backpack },
       equipment: v2Equipment,
       spells: [],
+      spellSlots: spellSlots,
+      actionEconomy: {
+        actions: { current: 1, max: 1 },
+        bonusActions: { current: 1, max: 1 },
+        reactions: { current: 1, max: 1 },
+        movement: { current: 30, max: 30 },
+        objectInteractions: { current: 1, max: 1 }
+      },
       choices: {},
       hp: maxHp,
       maxHp: maxHp,
