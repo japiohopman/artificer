@@ -23,6 +23,8 @@ export interface TokenProps {
   onDrag?: (e: any, info: any) => void;
   onDragEnd?: (e: any, info: any) => void;
   draggedPos?: { x: number; y: number } | null;
+  actionEconomy?: any;
+  spellSlots?: any;
 }
 
 export const Token: React.FC<TokenProps> = ({
@@ -44,7 +46,9 @@ export const Token: React.FC<TokenProps> = ({
   onClick,
   onDrag,
   onDragEnd,
-  draggedPos
+  draggedPos,
+  actionEconomy,
+  spellSlots
 }) => {
   const mSize = size === 'Large' ? 2 : 1;
   const healthPercent = hp !== undefined && maxHp !== undefined ? (hp / maxHp) * 100 : null;
@@ -65,6 +69,96 @@ export const Token: React.FC<TokenProps> = ({
     tokenBorderBgStyle = "border-emerald-500 bg-emerald-900/80 shadow-[0_0_20px_rgba(16,185,129,0.4)]";
   }
 
+  const renderResourceDots = () => {
+    const dots: React.ReactNode[] = [];
+
+    // 1. Actions (Green)
+    if (actionEconomy?.actions) {
+      const { current = 0, max = 0 } = actionEconomy.actions;
+      for (let i = 0; i < max; i++) {
+        const isSpent = i >= current;
+        dots.push(
+          <span
+            key={`action-${i}`}
+            className={cn(
+              "w-1 h-1 rounded-full transition-all duration-300",
+              isSpent
+                ? "bg-emerald-950/40 border border-emerald-500/30"
+                : "bg-emerald-400 shadow-[0_0_4px_rgba(52,211,153,0.8)] border border-emerald-300"
+            )}
+            title={`Action ${isSpent ? '(Spent)' : '(Available)'}`}
+          />
+        );
+      }
+    }
+
+    // 2. Bonus Actions (Orange)
+    if (actionEconomy?.bonusActions) {
+      const { current = 0, max = 0 } = actionEconomy.bonusActions;
+      for (let i = 0; i < max; i++) {
+        const isSpent = i >= current;
+        dots.push(
+          <span
+            key={`bonus-${i}`}
+            className={cn(
+              "w-1 h-1 rounded-full transition-all duration-300",
+              isSpent
+                ? "bg-amber-950/40 border border-amber-500/30"
+                : "bg-amber-500 shadow-[0_0_4px_rgba(245,158,11,0.8)] border border-amber-400"
+            )}
+            title={`Bonus Action ${isSpent ? '(Spent)' : '(Available)'}`}
+          />
+        );
+      }
+    }
+
+    // 3. Spell Slots (1-9)
+    if (spellSlots) {
+      const slotColors: Record<number, { fill: string, spentBorder: string, glow: string }> = {
+        1: { fill: 'bg-[rgb(160,224,255)]', spentBorder: 'border-[rgb(160,224,255)]/30', glow: 'shadow-[0_0_4px_rgba(160,224,255,0.8)] border-[rgb(200,240,255)]' },
+        2: { fill: 'bg-[rgb(120,200,255)]', spentBorder: 'border-[rgb(120,200,255)]/30', glow: 'shadow-[0_0_4px_rgba(120,200,255,0.8)] border-[rgb(180,225,255)]' },
+        3: { fill: 'bg-[rgb(90,170,255)]', spentBorder: 'border-[rgb(90,170,255)]/30', glow: 'shadow-[0_0_4px_rgba(90,170,255,0.8)] border-[rgb(150,200,255)]' },
+        4: { fill: 'bg-[rgb(110,130,255)]', spentBorder: 'border-[rgb(110,130,255)]/30', glow: 'shadow-[0_0_4px_rgba(110,130,255,0.8)] border-[rgb(160,180,255)]' },
+        5: { fill: 'bg-[rgb(140,110,255)]', spentBorder: 'border-[rgb(140,110,255)]/30', glow: 'shadow-[0_0_4px_rgba(140,110,255,0.8)] border-[rgb(180,160,255)]' },
+        6: { fill: 'bg-[rgb(170,90,255)]', spentBorder: 'border-[rgb(170,90,255)]/30', glow: 'shadow-[0_0_4px_rgba(170,90,255,0.8)] border-[rgb(200,150,255)]' },
+        7: { fill: 'bg-[rgb(200,60,255)]', spentBorder: 'border-[rgb(200,60,255)]/30', glow: 'shadow-[0_0_4px_rgba(200,60,255,0.8)] border-[rgb(220,120,255)]' },
+        8: { fill: 'bg-[rgb(220,30,255)]', spentBorder: 'border-[rgb(220,30,255)]/30', glow: 'shadow-[0_0_4px_rgba(220,30,255,0.8)] border-[rgb(240,100,255)]' },
+        9: { fill: 'bg-[rgb(240,0,255)]', spentBorder: 'border-[rgb(240,0,255)]/30', glow: 'shadow-[0_0_6px_rgba(240,0,255,0.9)] border-[rgb(255,100,255)]' },
+      };
+
+      for (let level = 1; level <= 9; level++) {
+        const slots = spellSlots[level.toString()];
+        if (slots) {
+          const { current = 0, max = 0 } = slots;
+          for (let i = 0; i < max; i++) {
+            const isSpent = i >= current;
+            const colors = slotColors[level] || slotColors[1];
+            dots.push(
+              <span
+                key={`spell-${level}-${i}`}
+                className={cn(
+                  "w-1 h-1 rounded-full transition-all duration-300",
+                  isSpent
+                    ? `bg-stone-950/60 border ${colors.spentBorder}`
+                    : `${colors.fill} ${colors.glow}`
+                )}
+                title={`Lvl ${level} Spell Slot ${isSpent ? '(Spent)' : '(Available)'}`}
+              />
+            );
+          }
+        }
+      }
+    }
+
+    if (dots.length === 0) return null;
+
+    return (
+      <div className="absolute -top-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-0.5 bg-stone-950/90 border border-white/10 px-1 py-0.5 rounded-full shadow-md z-30">
+        {dots}
+      </div>
+    );
+  };
+
   return (
     <motion.div
       key={id}
@@ -84,6 +178,7 @@ export const Token: React.FC<TokenProps> = ({
       )}
       style={{ width: cellSize * mSize, height: cellSize * mSize }}
     >
+      {renderResourceDots()}
       <div className={cn(
         "w-full h-full relative transition-all duration-300 flex items-center justify-center",
         isTopDownToken 

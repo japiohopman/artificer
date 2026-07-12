@@ -33,7 +33,7 @@
   },
   "inventory": {
     "chest": {
-      "id": "chain-mail-iuvmkwwo4",
+      "id": "chain-mail-aryde4x6r",
       "name": "Chain Mail",
       "index": "chain-mail",
       "_type": "equipment",
@@ -43,7 +43,7 @@
       "slot": "chest"
     },
     "main-hand": {
-      "id": "javelin-yhgpx7o3v",
+      "id": "javelin-wnxjawrsu",
       "name": "Javelin",
       "index": "javelin",
       "_type": "equipment",
@@ -53,7 +53,7 @@
       "slot": "main-hand"
     },
     "off-hand": {
-      "id": "shield-5bsxw75rf",
+      "id": "shield-08tj1yk9s",
       "name": "Shield",
       "index": "shield",
       "_type": "equipment",
@@ -65,7 +65,7 @@
   },
   "backpack": [
     {
-      "id": "love-letter-tpa86lizb",
+      "id": "love-letter-4utbr7p5j",
       "name": "Love Letter",
       "index": "love-letter",
       "_type": "equipment",
@@ -74,7 +74,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/love-letter.json"
     },
     {
-      "id": "tinderbox-hro7lq379",
+      "id": "tinderbox-99c5nmn7j",
       "name": "Tinderbox",
       "index": "tinderbox",
       "_type": "equipment",
@@ -83,7 +83,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/tinderbox.json"
     },
     {
-      "id": "waterskin-gc1mtfek0",
+      "id": "waterskin-dz4oanrtp",
       "name": "Waterskin",
       "index": "waterskin",
       "_type": "equipment",
@@ -92,7 +92,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/waterskin.json"
     },
     {
-      "id": "torch-06rwb8414",
+      "id": "torch-208wfvk3g",
       "name": "Torch",
       "index": "torch",
       "_type": "equipment",
@@ -101,7 +101,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/torch.json"
     },
     {
-      "id": "rations-jarhr3rez",
+      "id": "rations-0013bv7ed",
       "name": "Rations",
       "index": "rations",
       "_type": "equipment",
@@ -110,7 +110,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/rations.json"
     },
     {
-      "id": "bedroll-awwsom9zz",
+      "id": "bedroll-w8jc69mt5",
       "name": "Bedroll",
       "index": "bedroll",
       "_type": "equipment",
@@ -119,7 +119,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/bedroll.json"
     },
     {
-      "id": "backpack-pdyt6ijs2",
+      "id": "backpack-kadkxp1lt",
       "name": "Backpack",
       "index": "backpack",
       "_type": "equipment",
@@ -128,7 +128,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/backpack.json"
     },
     {
-      "id": "smiths-tools-cff00sbde",
+      "id": "smiths-tools-0sqmwov02",
       "name": "Smith's Tools",
       "index": "smiths-tools",
       "_type": "equipment",
@@ -137,7 +137,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/smiths-tools.json"
     },
     {
-      "id": "hempen-rope-50-ft-q4nau565e",
+      "id": "hempen-rope-50-ft-9q5rsvx3m",
       "name": "Hempen Rope (50 ft.)",
       "index": "hempen-rope-50-ft",
       "_type": "equipment",
@@ -146,7 +146,7 @@
       "dataPath": "https://github.com/japiohopman/artificer/blob/main/public/assets/atlas/equipment/json/hempen-rope-50-ft.json"
     },
     {
-      "id": "mess-kit-0xq6harnb",
+      "id": "mess-kit-ik712m8uo",
       "name": "Mess Kit",
       "index": "mess-kit",
       "_type": "equipment",
@@ -156,95 +156,95 @@
     }
   ],
   "items": {
-    "17e77f66-864a-41c1-9dc0-00e8a3f187a1": {
-      "id": "17e77f66-864a-41c1-9dc0-00e8a3f187a1",
+    "b1afa17a-d91b-4f69-8b1b-dc4b896d4161": {
+      "id": "b1afa17a-d91b-4f69-8b1b-dc4b896d4161",
       "template": "amulet-holy-symbol",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "40f9ab83-f1fb-4476-890a-1492e3a924e2": {
-      "id": "40f9ab83-f1fb-4476-890a-1492e3a924e2",
+    "ce84ade3-3cda-4c6e-99ba-55c1e31a78d1": {
+      "id": "ce84ade3-3cda-4c6e-99ba-55c1e31a78d1",
       "template": "love-letter",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "b7f43b92-3a07-49b7-8518-2b8d948c8b7e": {
-      "id": "b7f43b92-3a07-49b7-8518-2b8d948c8b7e",
+    "8d04ad17-bab9-439b-bebe-bfdabe5e0d70": {
+      "id": "8d04ad17-bab9-439b-bebe-bfdabe5e0d70",
       "template": "longsword",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "a1b4c59c-5409-4b12-a62e-f91e0934db22": {
-      "id": "a1b4c59c-5409-4b12-a62e-f91e0934db22",
+    "13c583d0-bfc0-4c8e-ba9d-ff7f07495f38": {
+      "id": "13c583d0-bfc0-4c8e-ba9d-ff7f07495f38",
       "template": "tinderbox",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "d345214a-a062-434c-a09d-8097fbc7ac20": {
-      "id": "d345214a-a062-434c-a09d-8097fbc7ac20",
+    "836737cb-b29d-448d-94a2-9362faa58922": {
+      "id": "836737cb-b29d-448d-94a2-9362faa58922",
       "template": "waterskin",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "3b5e5936-5a56-48d5-b09a-684af2e8e3c7": {
-      "id": "3b5e5936-5a56-48d5-b09a-684af2e8e3c7",
+    "3cf58416-0499-4047-8fdc-791b1b300807": {
+      "id": "3cf58416-0499-4047-8fdc-791b1b300807",
       "template": "torch",
       "quantity": 10,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "61aabd3d-71b5-40fb-b6a2-e7db4e25b7a8": {
-      "id": "61aabd3d-71b5-40fb-b6a2-e7db4e25b7a8",
+    "b9576e88-3005-47bb-9d81-fb708bb975cd": {
+      "id": "b9576e88-3005-47bb-9d81-fb708bb975cd",
       "template": "rations",
       "quantity": 10,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "62376c8c-fa3f-463b-8b18-1d1ab6edb4f2": {
-      "id": "62376c8c-fa3f-463b-8b18-1d1ab6edb4f2",
+    "4d88eb6c-647f-4c64-9fa7-87c982570185": {
+      "id": "4d88eb6c-647f-4c64-9fa7-87c982570185",
       "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "ea121882-9b59-459f-9cf6-c53a377a5ad5": {
-      "id": "ea121882-9b59-459f-9cf6-c53a377a5ad5",
+    "005a44a8-93ce-42ce-b6a9-f5902c001af6": {
+      "id": "005a44a8-93ce-42ce-b6a9-f5902c001af6",
       "template": "javelin",
       "quantity": 5,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "53989ed1-1213-4ac3-a2ac-d98acb518d5c": {
-      "id": "53989ed1-1213-4ac3-a2ac-d98acb518d5c",
+    "4725c2d6-d469-4998-9674-7a961943ace7": {
+      "id": "4725c2d6-d469-4998-9674-7a961943ace7",
       "template": "backpack",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "28eec0c1-aebe-429a-a730-5897443a097f": {
-      "id": "28eec0c1-aebe-429a-a730-5897443a097f",
+    "13e235a7-c364-436a-9490-6f06f2da68e4": {
+      "id": "13e235a7-c364-436a-9490-6f06f2da68e4",
       "template": "smiths-tools",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "b13270df-07bd-4eb3-892b-70aa5b663949": {
-      "id": "b13270df-07bd-4eb3-892b-70aa5b663949",
+    "0818781f-87ad-4c1d-b678-11dae6e5dc06": {
+      "id": "0818781f-87ad-4c1d-b678-11dae6e5dc06",
       "template": "hempen-rope-50-ft",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "43799acd-0f3c-49f6-8036-abc2017754c0": {
-      "id": "43799acd-0f3c-49f6-8036-abc2017754c0",
+    "b9a51a4e-be18-4f68-a1ce-667962bc3a6e": {
+      "id": "b9a51a4e-be18-4f68-a1ce-667962bc3a6e",
       "template": "mess-kit",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572249
     },
-    "9cbd4eff-a530-4cc8-9982-02518c5b8bc3": {
-      "id": "9cbd4eff-a530-4cc8-9982-02518c5b8bc3",
+    "aa513181-0a61-4d00-a2bc-64d02c42337c": {
+      "id": "aa513181-0a61-4d00-a2bc-64d02c42337c",
       "template": "chain-mail",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572250
     },
-    "dc33e6d2-361a-4d7f-8a6c-0efe60679e2b": {
-      "id": "dc33e6d2-361a-4d7f-8a6c-0efe60679e2b",
+    "056dc9bd-a0d5-4a52-8f2a-c9f699198856": {
+      "id": "056dc9bd-a0d5-4a52-8f2a-c9f699198856",
       "template": "shield",
       "quantity": 1,
-      "addedAt": 1783795298080
+      "addedAt": 1783812572250
     }
   },
   "containers": {
@@ -255,43 +255,43 @@
       "slots": [
         {
           "id": "slot_0",
-          "itemId": "40f9ab83-f1fb-4476-890a-1492e3a924e2"
+          "itemId": "ce84ade3-3cda-4c6e-99ba-55c1e31a78d1"
         },
         {
           "id": "slot_1",
-          "itemId": "a1b4c59c-5409-4b12-a62e-f91e0934db22"
+          "itemId": "13c583d0-bfc0-4c8e-ba9d-ff7f07495f38"
         },
         {
           "id": "slot_2",
-          "itemId": "d345214a-a062-434c-a09d-8097fbc7ac20"
+          "itemId": "836737cb-b29d-448d-94a2-9362faa58922"
         },
         {
           "id": "slot_3",
-          "itemId": "3b5e5936-5a56-48d5-b09a-684af2e8e3c7"
+          "itemId": "3cf58416-0499-4047-8fdc-791b1b300807"
         },
         {
           "id": "slot_4",
-          "itemId": "61aabd3d-71b5-40fb-b6a2-e7db4e25b7a8"
+          "itemId": "b9576e88-3005-47bb-9d81-fb708bb975cd"
         },
         {
           "id": "slot_5",
-          "itemId": "62376c8c-fa3f-463b-8b18-1d1ab6edb4f2"
+          "itemId": "4d88eb6c-647f-4c64-9fa7-87c982570185"
         },
         {
           "id": "slot_6",
-          "itemId": "53989ed1-1213-4ac3-a2ac-d98acb518d5c"
+          "itemId": "4725c2d6-d469-4998-9674-7a961943ace7"
         },
         {
           "id": "slot_7",
-          "itemId": "28eec0c1-aebe-429a-a730-5897443a097f"
+          "itemId": "13e235a7-c364-436a-9490-6f06f2da68e4"
         },
         {
           "id": "slot_8",
-          "itemId": "b13270df-07bd-4eb3-892b-70aa5b663949"
+          "itemId": "0818781f-87ad-4c1d-b678-11dae6e5dc06"
         },
         {
           "id": "slot_9",
-          "itemId": "43799acd-0f3c-49f6-8036-abc2017754c0"
+          "itemId": "b9a51a4e-be18-4f68-a1ce-667962bc3a6e"
         },
         {
           "id": "slot_10",
@@ -749,7 +749,7 @@
       },
       {
         "id": "chest",
-        "itemId": "9cbd4eff-a530-4cc8-9982-02518c5b8bc3"
+        "itemId": "aa513181-0a61-4d00-a2bc-64d02c42337c"
       },
       {
         "id": "back",
@@ -761,11 +761,11 @@
       },
       {
         "id": "main_hand",
-        "itemId": "ea121882-9b59-459f-9cf6-c53a377a5ad5"
+        "itemId": "005a44a8-93ce-42ce-b6a9-f5902c001af6"
       },
       {
         "id": "off_hand",
-        "itemId": "dc33e6d2-361a-4d7f-8a6c-0efe60679e2b"
+        "itemId": "056dc9bd-a0d5-4a52-8f2a-c9f699198856"
       },
       {
         "id": "hands",
@@ -806,6 +806,29 @@
     ]
   },
   "spells": [],
+  "spellSlots": {},
+  "actionEconomy": {
+    "actions": {
+      "current": 1,
+      "max": 1
+    },
+    "bonusActions": {
+      "current": 1,
+      "max": 1
+    },
+    "reactions": {
+      "current": 1,
+      "max": 1
+    },
+    "movement": {
+      "current": 30,
+      "max": 30
+    },
+    "objectInteractions": {
+      "current": 1,
+      "max": 1
+    }
+  },
   "choices": {},
   "hp": 12,
   "maxHp": 12,

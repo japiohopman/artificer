@@ -507,6 +507,8 @@ const activeTokenCoordinates = draggedMonsterId
                     isPlayer
                     isActive={isPcActive}
                     draggedPos={draggedPcId === char.id ? draggedPos : null}
+                    actionEconomy={char.actionEconomy}
+                    spellSlots={char.spellSlots}
                     onDrag={(_, info) => {
                       setDraggedPcId(char.id);
                       const rect = canvasRef.current?.getBoundingClientRect();
