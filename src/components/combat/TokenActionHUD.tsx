@@ -288,7 +288,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const isMyTurn = useMemo(() => {
     if (combatState.initiativeOrder.length === 0) return true;
     const currentActor = combatState.initiativeOrder[combatState.activeTurnIndex];
-    return currentActor?.id === activeCharacterId || currentActor?.isPlayer;
+    return currentActor?.id === activeCharacterId;
   }, [combatState.initiativeOrder, combatState.activeTurnIndex, activeCharacterId]);
 
   const renderHudResourceDots = () => {

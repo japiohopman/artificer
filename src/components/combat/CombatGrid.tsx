@@ -11,6 +11,66 @@ import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } fr
 import { Token } from './Token';
 import { TokenActionHUD } from './TokenActionHUD';
 
+// Helper for Area of Effect (AOE) cell calculations (Sphere and Cone shapes)
+const getCellsInAOE = (action: any, origin: { x: number; y: number }, target: { x: number; y: number }) => {
+  const cells = new Set<string>();
+  if (!action) return cells;
+
+  if (action.targetType === 'sphere') {
+    const radius = action.radius || 0;
+    for (let dy = -radius; dy <= radius; dy++) {
+      for (let dx = -radius; dx <= radius; dx++) {
+        if (Math.max(Math.abs(dx), Math.abs(dy)) <= radius) {
+          cells.add(`${target.x + dx},${target.y + dy}`);
+        }
+      }
+    }
+  } else if (action.targetType === 'cone') {
+    const length = action.radius || action.range || 3;
+    const dx = target.x - origin.x;
+    const dy = target.y - origin.y;
+
+    if (dx !== 0 || dy !== 0) {
+      if (Math.abs(dx) >= Math.abs(dy)) {
+        // East or West
+        if (dx > 0) {
+          // East
+          for (let step = 1; step <= length; step++) {
+            for (let perp = -step; perp <= step; perp++) {
+              cells.add(`${origin.x + step},${origin.y + perp}`);
+            }
+          }
+        } else {
+          // West
+          for (let step = 1; step <= length; step++) {
+            for (let perp = -step; perp <= step; perp++) {
+              cells.add(`${origin.x - step},${origin.y + perp}`);
+            }
+          }
+        }
+      } else {
+        // North or South
+        if (dy > 0) {
+          // South
+          for (let step = 1; step <= length; step++) {
+            for (let perp = -step; perp <= step; perp++) {
+              cells.add(`${origin.x + perp},${origin.y + step}`);
+            }
+          }
+        } else {
+          // North
+          for (let step = 1; step <= length; step++) {
+            for (let perp = -step; perp <= step; perp++) {
+              cells.add(`${origin.x + perp},${origin.y - step}`);
+            }
+          }
+        }
+      }
+    }
+  }
+  return cells;
+};
+
 export const CombatGrid: React.FC = () => {
   const combatState = useGameStore(state => state.combatState);
   const setPlayerPos = useGameStore(state => state.setPlayerPos);
@@ -33,8 +93,8 @@ export const CombatGrid: React.FC = () => {
   const setIsMonsterProfileOpen = useUIStore(state => state.setIsMonsterProfileOpen);
   const gameMode = useUIStore(state => state.gameMode);
   const isMapPanEnabled = useUIStore(state => state.isMapPanEnabled);
-  const mapZoom = useWorldStore(state => state.mapZoom);
-  const zoom = useMemo(() => 0.5 + (mapZoom - 3) * 0.25, [mapZoom]);
+  const [localZoom, setLocalZoom] = useState(1.0);
+  const zoom = localZoom;
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
 
@@ -47,12 +107,10 @@ export const CombatGrid: React.FC = () => {
 
     const handleWheelNative = (e: WheelEvent) => {
       e.preventDefault();
-      const { mapZoom, setMapZoom } = useWorldStore.getState();
-      if (e.deltaY < 0) {
-        setMapZoom(Math.min(mapZoom + 1, 9));
-      } else {
-        setMapZoom(Math.max(mapZoom - 1, 3));
-      }
+      setLocalZoom(prev => {
+        const delta = e.deltaY < 0 ? 0.08 : -0.08;
+        return Math.min(Math.max(prev + delta, 0.25), 3.0);
+      });
     };
 
     element.addEventListener('wheel', handleWheelNative, { passive: false });
@@ -303,21 +361,19 @@ export const CombatGrid: React.FC = () => {
       }
     }
 
-    // 5. Draw Targeted Sphere
-    if (isTargeting && targetingAction?.targetType === 'sphere' && hoveredCell) {
-      const radius = targetingAction.radius || 0;
-      ctx.fillStyle = 'rgba(220, 38, 38, 0.2)';
-      ctx.strokeStyle = 'rgba(220, 38, 38, 0.4)';
-      for (let dy = -radius; dy <= radius; dy++) {
-        for (let dx = -radius; dx <= radius; dx++) {
-          const tx = hoveredCell.x + dx;
-          const ty = hoveredCell.y + dy;
-          if (tx >= 0 && tx < gridWidth && ty >= 0 && ty < gridHeight) {
-            ctx.fillRect(tx * cellSize, ty * cellSize, cellSize, cellSize);
-            ctx.strokeRect(tx * cellSize + 1, ty * cellSize + 1, cellSize - 2, cellSize - 2);
-          }
+    // 5. Draw Targeted Area-of-Effect (Sphere / Cone / etc)
+    if (isTargeting && hoveredCell && ['sphere', 'cone'].includes(targetingAction?.targetType)) {
+      const aoeCells = getCellsInAOE(targetingAction, activeTokenPos, hoveredCell);
+      ctx.fillStyle = 'rgba(220, 38, 38, 0.22)';
+      ctx.strokeStyle = 'rgba(220, 38, 38, 0.45)';
+      ctx.lineWidth = 1.5;
+      aoeCells.forEach(cellStr => {
+        const [tx, ty] = cellStr.split(',').map(Number);
+        if (tx >= 0 && tx < gridWidth && ty >= 0 && ty < gridHeight) {
+          ctx.fillRect(tx * cellSize, ty * cellSize, cellSize, cellSize);
+          ctx.strokeRect(tx * cellSize + 1, ty * cellSize + 1, cellSize - 2, cellSize - 2);
         }
-      }
+      });
     }
 
   }, [grid, isGridVisible, visibleCells, isTargeting, targetingAction, validTargetCells, hoveredCell, gridWidth, gridHeight, monsters]);
@@ -356,23 +412,27 @@ export const CombatGrid: React.FC = () => {
     }
 
     if (isTargeting) {
-      if (targetingAction?.targetType === 'sphere') {
-        const radius = targetingAction.radius || 0;
+      if (targetingAction && ['sphere', 'cone'].includes(targetingAction.targetType)) {
+        const aoeCells = getCellsInAOE(targetingAction, activePcPos, { x, y });
         const targets = monsters.filter(m => {
           const mFootprint = m.size === 'Large' ? 2 : 1;
           for (let fy = 0; fy < mFootprint; fy++) {
             for (let fx = 0; fx < mFootprint; fx++) {
-              const dx = Math.abs((m.x + fx) - x);
-              const dy = Math.abs((m.y + fy) - y);
-              if (Math.max(dx, dy) <= radius) return true;
+              if (aoeCells.has(`${m.x + fx},${m.y + fy}`)) {
+                return true;
+              }
             }
           }
           return false;
         });
 
-        targets.forEach(monster => {
-          resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, monster, targetingAction);
-        });
+        if (targets.length > 0) {
+          targets.forEach(monster => {
+            resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, monster, targetingAction);
+          });
+        } else {
+          addLog("AOE spell cast, but no targets were caught in the area.", "info");
+        }
 
         const { consumeAction, castSpell } = useCharacterStore.getState();
         consumeAction(activeCharacterId, targetingAction.actionType || 'actions');
@@ -496,6 +556,27 @@ const activeTokenCoordinates = draggedMonsterId
           title="Toggle Grid"
         >
           <GameIcon name="panel" size={18} />
+        </button>
+        <button
+          onClick={() => setLocalZoom(prev => Math.min(prev + 0.15, 3.0))}
+          className="p-2 rounded border-2 bg-stone-900/80 border-white/20 text-white/60 hover:text-white transition-all shadow-lg pointer-events-auto font-black text-center w-9 h-9 flex items-center justify-center font-elan text-lg"
+          title="Zoom In"
+        >
+          +
+        </button>
+        <button
+          onClick={() => setLocalZoom(prev => Math.max(prev - 0.15, 0.25))}
+          className="p-2 rounded border-2 bg-stone-900/80 border-white/20 text-white/60 hover:text-white transition-all shadow-lg pointer-events-auto font-black text-center w-9 h-9 flex items-center justify-center font-elan text-lg"
+          title="Zoom Out"
+        >
+          -
+        </button>
+        <button
+          onClick={() => setLocalZoom(1.0)}
+          className="p-1 rounded border border-white/10 bg-stone-900/80 text-[9px] text-white/50 hover:text-white transition-all shadow-lg pointer-events-auto uppercase tracking-wider font-bold"
+          title="Reset Zoom"
+        >
+          Reset
         </button>
       </div>
 
@@ -711,9 +792,18 @@ const activeTokenCoordinates = draggedMonsterId
                     onClick={async (e) => {
                       e.stopPropagation();
                       if (isTargeting) {
-                        const dist = getDistance(playerPos, { x: monster.x, y: monster.y });
+                        const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
+                        const mFootprint = monster.size === 'Large' ? 2 : 1;
+                        let dist = Infinity;
+                        for (let fy = 0; fy < mFootprint; fy++) {
+                          for (let fx = 0; fx < mFootprint; fx++) {
+                            const d = getDistance(activePcPos, { x: monster.x + fx, y: monster.y + fy });
+                            if (d < dist) dist = d;
+                          }
+                        }
+
                         if (dist <= (targetingAction?.range || 1)) {
-                          resolveCombatAction({ name: activeChar?.name || 'Player', id: 'player' }, monster, targetingAction);
+                          resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, monster, targetingAction);
                           const { consumeAction, castSpell } = useCharacterStore.getState();
                           consumeAction(activeCharacterId, targetingAction?.actionType || 'actions');
                           if (targetingAction?.category === 'Spells' && targetingAction.data?.level !== undefined) {

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { useUIStore } from '../../store/useUIStore';
 
 export interface TokenProps {
   id: string;
@@ -71,7 +72,9 @@ export const Token: React.FC<TokenProps> = ({
     imageUrl.includes('%2Fenemies%2Ftokens%2F')
   );
 
-  const isDraggable = isPlayer || isAlly;
+  const gameMode = useUIStore(state => state.gameMode);
+  const isCombat = gameMode === 'combat';
+  const isDraggable = (isPlayer || isAlly) && (!isCombat || isActive);
 
   // Compute borders and background styles cleanly without heavy nesting
   let tokenBorderBgStyle = "border-dragon-red bg-red-900/80 shadow-[0_0_15px_rgba(220,38,38,0.3)]";
