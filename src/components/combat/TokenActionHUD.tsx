@@ -176,17 +176,115 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     return currentActor?.id === activeCharacterId || currentActor?.isPlayer;
   }, [combatState.initiativeOrder, combatState.activeTurnIndex, activeCharacterId]);
 
+  const renderHudResourceDots = () => {
+    const dots: React.ReactNode[] = [];
+
+    const actionEconomy = activeChar?.actionEconomy;
+    const spellSlots = activeChar?.spellSlots;
+
+    // 1. Actions (Green)
+    if (actionEconomy?.actions) {
+      const { current = 0, max = 0 } = actionEconomy.actions;
+      for (let i = 0; i < max; i++) {
+        const isSpent = i >= current;
+        dots.push(
+          <div key={`hud-action-${i}`} className="flex flex-col items-center gap-0.5 px-0.5">
+            <span
+              className={cn(
+                "w-2 h-2 rounded-full transition-all duration-300",
+                isSpent
+                  ? "bg-emerald-950/40 border border-emerald-500/30"
+                  : "bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.9)] border border-emerald-300"
+              )}
+            />
+            <span className="text-[6px] text-emerald-400 font-bold font-elan uppercase tracking-tighter">ACT</span>
+          </div>
+        );
+      }
+    }
+
+    // 2. Bonus Actions (Orange)
+    if (actionEconomy?.bonusActions) {
+      const { current = 0, max = 0 } = actionEconomy.bonusActions;
+      for (let i = 0; i < max; i++) {
+        const isSpent = i >= current;
+        dots.push(
+          <div key={`hud-bonus-${i}`} className="flex flex-col items-center gap-0.5 px-0.5">
+            <span
+              className={cn(
+                "w-2 h-2 rounded-full transition-all duration-300",
+                isSpent
+                  ? "bg-amber-950/40 border border-amber-500/30"
+                  : "bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.9)] border border-amber-400"
+              )}
+            />
+            <span className="text-[6px] text-amber-500 font-bold font-elan uppercase tracking-tighter">BON</span>
+          </div>
+        );
+      }
+    }
+
+    // 3. Spell Slots (1-9)
+    if (spellSlots) {
+      const slotColors: Record<number, { fill: string, spentBorder: string, glow: string, text: string }> = {
+        1: { fill: 'bg-[rgb(160,224,255)]', spentBorder: 'border-[rgb(160,224,255)]/30', glow: 'shadow-[0_0_8px_rgba(160,224,255,0.9)] border-[rgb(200,240,255)]', text: 'text-[rgb(160,224,255)]' },
+        2: { fill: 'bg-[rgb(120,200,255)]', spentBorder: 'border-[rgb(120,200,255)]/30', glow: 'shadow-[0_0_8px_rgba(120,200,255,0.9)] border-[rgb(180,225,255)]', text: 'text-[rgb(120,200,255)]' },
+        3: { fill: 'bg-[rgb(90,170,255)]', spentBorder: 'border-[rgb(90,170,255)]/30', glow: 'shadow-[0_0_8px_rgba(90,170,255,0.9)] border-[rgb(150,200,255)]', text: 'text-[rgb(90,170,255)]' },
+        4: { fill: 'bg-[rgb(110,130,255)]', spentBorder: 'border-[rgb(110,130,255)]/30', glow: 'shadow-[0_0_8px_rgba(110,130,255,0.9)] border-[rgb(160,180,255)]', text: 'text-[rgb(110,130,255)]' },
+        5: { fill: 'bg-[rgb(140,110,255)]', spentBorder: 'border-[rgb(140,110,255)]/30', glow: 'shadow-[0_0_8px_rgba(140,110,255,0.9)] border-[rgb(180,160,255)]', text: 'text-[rgb(140,110,255)]' },
+        6: { fill: 'bg-[rgb(170,90,255)]', spentBorder: 'border-[rgb(170,90,255)]/30', glow: 'shadow-[0_0_8px_rgba(170,90,255,0.9)] border-[rgb(200,150,255)]', text: 'text-[rgb(170,90,255)]' },
+        7: { fill: 'bg-[rgb(200,60,255)]', spentBorder: 'border-[rgb(200,60,255)]/30', glow: 'shadow-[0_0_8px_rgba(200,60,255,0.9)] border-[rgb(220,120,255)]', text: 'text-[rgb(200,60,255)]' },
+        8: { fill: 'bg-[rgb(220,30,255)]', spentBorder: 'border-[rgb(220,30,255)]/30', glow: 'shadow-[0_0_8px_rgba(220,30,255,0.9)] border-[rgb(240,100,255)]', text: 'text-[rgb(220,30,255)]' },
+        9: { fill: 'bg-[rgb(240,0,255)]', spentBorder: 'border-[rgb(240,0,255)]/30', glow: 'shadow-[0_0_10px_rgba(240,0,255,1)] border-[rgb(255,100,255)]', text: 'text-[rgb(240,0,255)]' },
+      };
+
+      for (let level = 1; level <= 9; level++) {
+        const slots = spellSlots[level.toString()];
+        if (slots) {
+          const { current = 0, max = 0 } = slots;
+          for (let i = 0; i < max; i++) {
+            const isSpent = i >= current;
+            const colors = slotColors[level] || slotColors[1];
+            dots.push(
+              <div key={`hud-spell-${level}-${i}`} className="flex flex-col items-center gap-0.5 px-0.5">
+                <span
+                  className={cn(
+                    "w-2 h-2 rounded-full transition-all duration-300",
+                    isSpent
+                      ? `bg-stone-900/60 border ${colors.spentBorder}`
+                      : `${colors.fill} ${colors.glow}`
+                  )}
+                />
+                <span className={cn("text-[6px] font-bold font-elan", colors.text)}>L{level}</span>
+              </div>
+            );
+          }
+        }
+      }
+    }
+
+    if (dots.length === 0) return null;
+
+    return (
+      <div className="flex items-center justify-center gap-1.5 px-3 py-1 bg-stone-950/95 border border-dragon-gold/30 rounded-full shadow-inner mb-1.5 pointer-events-auto">
+        {dots}
+      </div>
+    );
+  };
+
   if (!isMyTurn) return null;
 
   return (
     <div 
-      className="absolute pointer-events-none z-[130]"
+      className="absolute pointer-events-none z-[130] flex flex-col items-center"
       style={{
         left: x * cellSize + cellSize / 2,
         top: y * cellSize,
-        transform: 'translate(-50%, -110%)'
+        transform: 'translate(-50%, -120%)'
       }}
     >
+      {renderHudResourceDots()}
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 10 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
