@@ -126,3 +126,36 @@ src/components/combat/
 ### Phase 3: Allied NPCs & Summons (Low Priority)
 - [ ] Map allied minion tokens to owners.
 - [ ] Add basic summon triggers and direction controls to the active character's action HUD.
+
+
+---
+
+## 5. 📄 Mini Game Design Document (GDD): Tactical Overhaul
+
+### Overview
+This mini-GDD outlines core design specs for enhancing our combat mechanics. It addresses layout expansion, interactive zooming, turn sequence restrictions, melee range checks, TokenActionHUD targeting, and Area-of-Effect (AOE) spell templates.
+
+### 📐 Feature Design Checklist & Roadmap
+
+#### 1. Maximize Viewport Screen Space (Layout Optimization)
+- **Goal:** Expand tactical combat grid to take up full available width and height when sidebars are collapsed, matching the Leaflet map mechanics.
+- **Spec:** Remove rigid max-width (`max-w-5xl`) restrictions in combat mode from `GameScreen.tsx`.
+
+#### 2. Interactive Panning and Zooming
+- **Goal:** Enable comfortable mouse scroll-wheel zooming and direct canvas drag-to-pan.
+- **Spec:** Handle wheel events on the canvas wrapper and scale mouse client coordinates by current zoom factor, allowing accurate tile snapping.
+
+#### 3. Target Range Correction (The Melee Bug)
+- **Goal:** Fix the melee range "too far away" bug where distance checks are miscalculated.
+- **Spec:** Use the actual active PC token position (`activeTokenPos`) for weapon/spell range checks rather than the global, legacy `playerPos` (Slot 1).
+
+#### 4. Turn and Token Movement Restrictions
+- **Goal:** Restrict token movement strictly to the actor taking their turn in initiative. Ensure Round 1 initialized active turns correctly assign actions to the initiative winner.
+- **Spec:** Check `activeTurnActor?.id === char.id` inside token move handlers and block dragging/movement if it is not their active turn.
+
+#### 5. Area of Effect (AOE) Targeting Systems
+- **Goal:** Add visual indicators and hit registration for Area-of-Effect zones.
+- **Spec:**
+  - **Sphere (Circle):** Select origin point, highlights all cells within `radius` Chebyshev distance.
+  - **Cone:** Originates from casting PC towards cursor, extending in a 90-degree fan-out (facing North, South, East, West).
+  - Hovering a spell with target type `sphere` or `cone` draws a red hazard boundary. Clicking triggers damage calculation on all tokens captured within the cells.

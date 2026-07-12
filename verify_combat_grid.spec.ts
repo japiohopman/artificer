@@ -17,6 +17,9 @@ test('verify combat grid and action panel', async ({ page }) => {
     gameStore.startCombat();
   });
 
+  // Wait for loading screen to disappear
+  await page.waitForSelector('text=Decrypting Save Data', { state: 'detached', timeout: 30000 });
+
   // Wait for Canvas
   await page.waitForSelector('canvas', { timeout: 15000 });
   await page.screenshot({ path: 'docs/screenshots/combat_hud_canvas_grid.png' });

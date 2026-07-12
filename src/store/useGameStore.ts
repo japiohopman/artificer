@@ -158,6 +158,7 @@ interface GameState {
   nextTurn: () => void;
   startCombat: () => Promise<void>;
   resolveCombatAction: (actor: any, target: any, action: any) => Promise<void>;
+  executeMonsterTurn: (monsterId: string) => Promise<void>;
   setCombatMapBackground: (combatMapBackground: string | null) => void;
 }
 
@@ -456,7 +457,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   nextTurn: () => {
-    const { combatState, addLog, resolveCombatAction } = get();
+    const { combatState, addLog, executeMonsterTurn } = get();
     if (combatState.initiativeOrder.length === 0) {
       addLog("No one is in the initiative order!", "warning");
       return;
@@ -492,103 +493,115 @@ export const useGameStore = create<GameState>((set, get) => ({
     const isHostileMonster = !nextActor.isPlayer && (!nextMonster || !nextMonster.isAlly);
 
     if (isHostileMonster) {
-      setTimeout(async () => {
-        const { combatState: currentCombatState } = get();
-        const currentMonster = currentCombatState.monsters.find(m => m.id === nextActor.id);
-        if (!currentMonster) {
-          get().nextTurn();
-          return;
+      executeMonsterTurn(nextActor.id);
+    }
+  },
+
+  executeMonsterTurn: async (monsterId: string) => {
+    const { combatState, addLog, resolveCombatAction } = get();
+    const currentMonster = combatState.monsters.find(m => m.id === monsterId);
+    if (!currentMonster) {
+      get().nextTurn();
+      return;
+    }
+
+    setTimeout(async () => {
+      // Re-fetch current state inside timeout to ensure we have fresh data
+      const { combatState: currentCombatState } = get();
+      const freshMonster = currentCombatState.monsters.find(m => m.id === monsterId);
+      if (!freshMonster) {
+        get().nextTurn();
+        return;
+      }
+
+      const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
+      const playerPos = currentCombatState.playerPos;
+
+      let updatedMonster = { ...freshMonster };
+      let stateChanged = false;
+
+      // 1. Awareness Check
+      if (updatedMonster.awareness !== 'combat') {
+        const hasLoS = checkLoS(updatedMonster, playerPos, currentCombatState.grid);
+        const inCone = isInViewCone(updatedMonster, playerPos);
+
+        if (hasLoS && inCone) {
+          updatedMonster.awareness = 'combat';
+          addLog(`${updatedMonster.name} spotted you!`, 'warning');
+          stateChanged = true;
+        } else if (hasLoS && getDistance(updatedMonster, playerPos) <= 3) {
+           // Passive perception check (simplified: close proximity = alert)
+           updatedMonster.awareness = 'alert';
+           updatedMonster.lastKnownPlayerPos = { ...playerPos };
+           stateChanged = true;
         }
+      }
 
-        const { checkLoS, isInViewCone, findPath, getDistance } = combatUtils;
-        const playerPos = currentCombatState.playerPos;
+      // 2. State-based Action
+      const monsterSpeed = updatedMonster.speed || 6;
+      const attackRange = updatedMonster.type === 'archer' ? 6 : (updatedMonster.type === 'mage' ? 12 : 1);
 
-        let updatedMonster = { ...currentMonster };
-        let stateChanged = false;
-
-        // 1. Awareness Check
-        if (updatedMonster.awareness !== 'combat') {
-          const hasLoS = checkLoS(updatedMonster, playerPos, currentCombatState.grid);
-          const inCone = isInViewCone(updatedMonster, playerPos);
-
-          if (hasLoS && inCone) {
-            updatedMonster.awareness = 'combat';
-            addLog(`${updatedMonster.name} spotted you!`, 'warning');
-            stateChanged = true;
-          } else if (hasLoS && getDistance(updatedMonster, playerPos) <= 3) {
-             // Passive perception check (simplified: close proximity = alert)
-             updatedMonster.awareness = 'alert';
-             updatedMonster.lastKnownPlayerPos = { ...playerPos };
-             stateChanged = true;
-          }
-        }
-
-        // 2. State-based Action
-        const monsterSpeed = updatedMonster.speed || 6;
-        const attackRange = updatedMonster.type === 'archer' ? 6 : (updatedMonster.type === 'mage' ? 12 : 1);
-        
-        if (updatedMonster.awareness === 'combat') {
-          const dist = getDistance(updatedMonster, playerPos);
-          if (dist <= attackRange) {
-            await resolveCombatAction(
-              updatedMonster,
-              { id: 'player', name: 'Hero' },
-              { 
-                name: updatedMonster.type === 'archer' ? 'Longbow' : (updatedMonster.type === 'mage' ? 'Fire Bolt' : 'Claw/Bite'), 
-                attack_bonus: 4, 
-                damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }] 
-              }
-            );
-          } else {
-            const path = findPath(updatedMonster, playerPos, currentCombatState.grid);
-            if (path && path.length > 1) {
-              // Move up to speed, but stop before overlapping the player
-              const moveSteps = Math.min(path.length - 1, monsterSpeed);
-              const moveTarget = path[moveSteps - 1];
-
-              updatedMonster.x = moveTarget.x;
-              updatedMonster.y = moveTarget.y;
-
-              // Update view direction based on movement
-              const firstStep = path[0];
-              if (firstStep.x > currentMonster.x) updatedMonster.viewDirection = 1;
-              else if (firstStep.x < currentMonster.x) updatedMonster.viewDirection = 3;
-              else if (firstStep.y > currentMonster.y) updatedMonster.viewDirection = 2;
-              else if (firstStep.y < currentMonster.y) updatedMonster.viewDirection = 0;
-              stateChanged = true;
+      if (updatedMonster.awareness === 'combat') {
+        const dist = getDistance(updatedMonster, playerPos);
+        if (dist <= attackRange) {
+          await resolveCombatAction(
+            updatedMonster,
+            { id: 'player', name: 'Hero' },
+            {
+              name: updatedMonster.type === 'archer' ? 'Longbow' : (updatedMonster.type === 'mage' ? 'Fire Bolt' : 'Claw/Bite'),
+              attack_bonus: 4,
+              damage: [{ damage_dice: '1d6+2', damage_type: { name: 'piercing' } }]
             }
-          }
-        } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
-          const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid);
-          if (path && path.length > 0) {
-            const moveSteps = Math.min(path.length, monsterSpeed);
+          );
+        } else {
+          const path = findPath(updatedMonster, playerPos, currentCombatState.grid);
+          if (path && path.length > 1) {
+            // Move up to speed, but stop before overlapping the player
+            const moveSteps = Math.min(path.length - 1, monsterSpeed);
             const moveTarget = path[moveSteps - 1];
+
             updatedMonster.x = moveTarget.x;
             updatedMonster.y = moveTarget.y;
+
+            // Update view direction based on movement
+            const firstStep = path[0];
+            if (firstStep.x > freshMonster.x) updatedMonster.viewDirection = 1;
+            else if (firstStep.x < freshMonster.x) updatedMonster.viewDirection = 3;
+            else if (firstStep.y > freshMonster.y) updatedMonster.viewDirection = 2;
+            else if (firstStep.y < freshMonster.y) updatedMonster.viewDirection = 0;
             stateChanged = true;
-            if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
-               updatedMonster.awareness = 'idle';
-               updatedMonster.lastKnownPlayerPos = undefined;
-            }
           }
-        } else {
-          // Idle patrol (very simple: rotate)
-          updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
+        }
+      } else if (updatedMonster.awareness === 'alert' && updatedMonster.lastKnownPlayerPos) {
+        const path = findPath(updatedMonster, updatedMonster.lastKnownPlayerPos, currentCombatState.grid);
+        if (path && path.length > 0) {
+          const moveSteps = Math.min(path.length, monsterSpeed);
+          const moveTarget = path[moveSteps - 1];
+          updatedMonster.x = moveTarget.x;
+          updatedMonster.y = moveTarget.y;
           stateChanged = true;
+          if (updatedMonster.x === updatedMonster.lastKnownPlayerPos.x && updatedMonster.y === updatedMonster.lastKnownPlayerPos.y) {
+             updatedMonster.awareness = 'idle';
+             updatedMonster.lastKnownPlayerPos = undefined;
+          }
         }
+      } else {
+        // Idle patrol (very simple: rotate)
+        updatedMonster.viewDirection = (updatedMonster.viewDirection + 1) % 4;
+        stateChanged = true;
+      }
 
-        if (stateChanged) {
-          set(state => ({
-            combatState: {
-              ...state.combatState,
-              monsters: state.combatState.monsters.map(m => m.id === nextActor.id ? updatedMonster : m)
-            }
-          }));
-        }
+      if (stateChanged) {
+        set(state => ({
+          combatState: {
+            ...state.combatState,
+            monsters: state.combatState.monsters.map(m => m.id === monsterId ? updatedMonster : m)
+          }
+        }));
+      }
 
-        setTimeout(() => get().nextTurn(), 1000);
-      }, 1000);
-    }
+      setTimeout(() => get().nextTurn(), 1000);
+    }, 1000);
   },
 
   startCombat: async () => {
@@ -630,6 +643,13 @@ export const useGameStore = create<GameState>((set, get) => ({
       charStore.restoreActionEconomy(c.id, true);
     });
 
+    // Set first actor active at Round 1 start
+    const firstActor = order[0];
+    if (firstActor && firstActor.isPlayer) {
+      charStore.setActiveCharacter(firstActor.id);
+      charStore.restoreActionEconomy(firstActor.id, false);
+    }
+
     set((state) => ({
       combatState: {
         ...state.combatState,
@@ -639,6 +659,15 @@ export const useGameStore = create<GameState>((set, get) => ({
         playerPos: initialPcPositions[activeParty[0]?.id] || { x: 2, y: 2 }
       }
     }));
+
+    // If first actor is a hostile monster, immediately kick off their turn execution!
+    if (firstActor) {
+      const firstMonster = combatState.monsters.find(m => m.id === firstActor.id);
+      const isHostileMonster = !firstActor.isPlayer && (!firstMonster || !firstMonster.isAlly);
+      if (isHostileMonster) {
+        get().executeMonsterTurn(firstActor.id);
+      }
+    }
   },
 
   resolveCombatAction: async (actor, target, action) => {
