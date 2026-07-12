@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "The medallion has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13) from it. The medallion regains 1d3 expended charges daily at dawn."
+  ],
+  "special": [],
+  "index": "medallion-of-thoughts",
+  "name": "medallion of thoughts",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "url": "/assets/atlas/equipment/json/14/equipment/medallion-of-thoughts.json",
+  "imageUrl": "/assets/atlas/equipment/images/medallion-of-thoughts.webp",
+  "image": "/assets/atlas/equipment/images/medallion-of-thoughts.webp",
+  "updated_at": "2026-07-12T19:00:13.108Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

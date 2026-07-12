@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "First Command Word. The box unfolds into a @UUID[Compendium.dnd5e.actors24.Actor.phbmobRowboat000]{Rowboat}.",
+    "Second Command Word. The box unfolds into a @UUID[Compendium.dnd5e.actors24.Actor.phbmobKeelboat00]{Keelboat}.",
+    "Third Command Word. The Folding Boat folds back into a box if no creatures are aboard. Any objects in the vessel that can't fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so.",
+    "When the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat.",
+    "Statistics for the Rowboat and Keelboat appear in @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000]{Equipment}. If either vessel is reduced to 0 Hit Points, the Folding Boat is destroyed."
+  ],
+  "special": [],
+  "index": "activate-folding-boat",
+  "name": "activate folding boat",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/containers/folding-boat/activate-folding-boat.json",
+  "imageUrl": "/assets/atlas/equipment/images/activate-folding-boat.webp",
+  "image": "/assets/atlas/equipment/images/activate-folding-boat.webp",
+  "updated_at": "2026-07-12T19:00:24.499Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

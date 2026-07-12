@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "The abacus, also called a counting frame, is a calculating tool."
+  ],
+  "special": [],
+  "index": "abacus",
+  "name": "abacus",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/loot/abacus.json",
+  "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+  "image": "/assets/atlas/equipment/images/abacus.webp",
+  "updated_at": "2026-07-12T19:00:14.466Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
+}

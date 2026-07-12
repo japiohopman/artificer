@@ -1,0 +1,52 @@
+{
+  "desc": [
+    "This light and flexible spear is designed for throwing, but is versatile enough to be used in melee combat as well.",
+    "When you roll a 20 on your attack roll with this magic weapon, your critical hit deals an extra 2d6 damage of the weapon's type."
+  ],
+  "special": [],
+  "index": "vicious-javelin",
+  "name": "vicious javelin",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/weapon/vicious-javelin.json",
+  "imageUrl": "/assets/atlas/equipment/images/vicious-javelin.webp",
+  "image": "/assets/atlas/equipment/images/vicious-javelin.webp",
+  "updated_at": "2026-07-12T19:00:20.828Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 30,
+    "long": 120
+  }
+}

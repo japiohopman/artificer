@@ -1,0 +1,60 @@
+{
+  "desc": [
+    "You gain a +1 bonus to attack and damage rolls made with this magic weapon (maul).",
+    "Giant's Bane (requires attunement)",
+    "You must be wearing a Belt of Giant Strength (any variety) and Gauntlets of Ogre Power to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30.",
+    "When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die.",
+    "The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be stunned until the end of your next turn. The hammer regains 1d4 + 1 expended charges daily at dawn."
+  ],
+  "special": [],
+  "index": "hammer-of-thunderbolts",
+  "name": "hammer of thunderbolts",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/14/weapon/hammer-of-thunderbolts.json",
+  "imageUrl": "/assets/atlas/equipment/images/hammer-of-thunderbolts.webp",
+  "image": "/assets/atlas/equipment/images/hammer-of-thunderbolts.webp",
+  "updated_at": "2026-07-12T19:00:19.100Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/json/heavy.json"
+    },
+    {
+      "index": "two-handed",
+      "name": "two-handed",
+      "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "2d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": 60
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "desc": [
+    "Weapon (Any Simple or Martial), Rare",
+    "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.",
+    "The weapon deals an extra 3d6 damage of the weapon's type if the target is a Dragon.",
+    "@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]"
+  ],
+  "special": [],
+  "index": "dragon-slayer",
+  "name": "dragon slayer",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/dragon-slayer.json",
+  "imageUrl": "/assets/atlas/equipment/images/dragon-slayer.webp",
+  "image": "/assets/atlas/equipment/images/dragon-slayer.webp",
+  "updated_at": "2026-07-12T19:00:27.719Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

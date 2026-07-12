@@ -1,0 +1,36 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "leather-armor",
+  "name": "leather armor",
+  "kind": "armor",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/24/armor/light/leather-armor.json",
+  "imageUrl": "/assets/atlas/equipment/images/leather-armor.webp",
+  "image": "/assets/atlas/equipment/images/leather-armor.webp",
+  "updated_at": "2026-07-12T19:00:23.245Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 11,
+    "dex_bonus": true,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

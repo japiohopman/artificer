@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Far rarer than gold, platinum may either be treated as the pinnacle of wealth, or the vestige of a bygone age that may be met with distrust or envy.",
+    "Unlike gold, platinum is almost exclusively mined underground."
+  ],
+  "special": [],
+  "index": "platinum",
+  "name": "platinum",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 500,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/platinum.json",
+  "imageUrl": "/assets/atlas/equipment/images/platinum.webp",
+  "image": "/assets/atlas/equipment/images/platinum.webp",
+  "updated_at": "2026-07-12T19:00:29.174Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

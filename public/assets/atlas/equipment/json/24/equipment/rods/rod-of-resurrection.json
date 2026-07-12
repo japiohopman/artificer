@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Rod, Legendary (Requires Attunement)",
+    "The rod has 5 charges. While you hold it, you can cast one of the following spells from it: @UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{Heal} (expends 1 charge) or @UUID[Compendium.dnd5e.spells24.Item.phbsplResurrecti]{Resurrection} (expends 5 charges).",
+    "The rod regains 1 expended charge daily at dawn. If you expend the last charge, roll [[/r 1d20]]. On a 1, the rod disappears in a harmless burst of radiance."
+  ],
+  "special": [],
+  "index": "rod-of-resurrection",
+  "name": "rod of resurrection",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/24/equipment/rods/rod-of-resurrection.json",
+  "imageUrl": "/assets/atlas/equipment/images/rod-of-resurrection.webp",
+  "image": "/assets/atlas/equipment/images/rod-of-resurrection.webp",
+  "updated_at": "2026-07-12T19:00:26.539Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

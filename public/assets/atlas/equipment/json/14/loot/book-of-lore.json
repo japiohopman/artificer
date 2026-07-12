@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A book containing historical accounts, information pertaining to a particular field of lore, myth, or legend."
+  ],
+  "special": [],
+  "index": "book-of-lore",
+  "name": "book of lore",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/loot/book-of-lore.json",
+  "imageUrl": "/assets/atlas/equipment/images/book-of-lore.webp",
+  "image": "/assets/atlas/equipment/images/book-of-lore.webp",
+  "updated_at": "2026-07-12T19:00:14.586Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

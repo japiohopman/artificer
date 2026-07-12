@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Rare (Requires Attunement by a Cleric, Druid, or Paladin)",
+    "This necklace has [[/r 1d4 + 2#Magic beads]] magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.",
+    "Six types of magic beads exist. The GM decides the type of each bead on the necklace or determines it randomly by rolling on the table below. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a Bonus Action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.",
+    "@Embed[Compendium.dnd5e.tables24.RollTable.dmgNecklaceOfPra caption=false rollable]",
+    "Foundry Note",
+    "This item includes an activity for each spell with a limited use per dawn. You can remove the activities for the beads that aren't available on this necklace and duplicate ones that are included multiple times before giving it to a player."
+  ],
+  "special": [],
+  "index": "necklace-of-prayer-beads",
+  "name": "necklace of prayer beads",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/necklace-of-prayer-beads.json",
+  "imageUrl": "/assets/atlas/equipment/images/necklace-of-prayer-beads.webp",
+  "image": "/assets/atlas/equipment/images/necklace-of-prayer-beads.webp",
+  "updated_at": "2026-07-12T19:00:26.092Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

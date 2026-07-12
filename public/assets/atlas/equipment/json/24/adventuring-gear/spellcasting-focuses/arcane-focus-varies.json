@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.",
+    "Arcane FocusesFocusWeightCost@UUID[Compendium.dnd5e.equipment24.Item.phbafcCrystal000]{Crystal}1 lb.10 GP@UUID[Compendium.dnd5e.equipment24.Item.phbafcOrb0000000]{Orb}3 lb.20 GP@UUID[Compendium.dnd5e.equipment24.Item.phbafcRod0000000]{Rod}2 lb.10 GP@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{Staff} (also a @UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{Quarterstaff})4 lb.5 GP@UUID[Compendium.dnd5e.equipment24.Item.phbafcWand000000]{Wand}1 lb.10 GP"
+  ],
+  "special": [],
+  "index": "arcane-focus-varies",
+  "name": "arcane focus (varies)",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/spellcasting-focuses/arcane-focus-varies.json",
+  "imageUrl": "/assets/atlas/equipment/images/arcane-focus-varies.webp",
+  "image": "/assets/atlas/equipment/images/arcane-focus-varies.webp",
+  "updated_at": "2026-07-12T19:00:23.010Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

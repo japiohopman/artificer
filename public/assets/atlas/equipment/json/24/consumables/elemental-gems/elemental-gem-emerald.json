@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "See: @UUID[Compendium.dnd5e.equipment24.Item.dmgElementalGem0]",
+    "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, a @UUID[Compendium.dnd5e.actors24.Actor.mmWaterElemental]{Water Elemental} is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action."
+  ],
+  "special": [],
+  "index": "elemental-gem-emerald",
+  "name": "elemental gem (emerald)",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/elemental-gems/elemental-gem-emerald.json",
+  "imageUrl": "/assets/atlas/equipment/images/elemental-gem-emerald.webp",
+  "image": "/assets/atlas/equipment/images/elemental-gem-emerald.webp",
+  "updated_at": "2026-07-12T19:00:23.707Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

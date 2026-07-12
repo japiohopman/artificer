@@ -1,0 +1,64 @@
+{
+  "desc": [
+    "This enormous axe features two twin crescent blades mounted on either side of a tall spiked shaft. Designed to be wielded with two hands and cleave foes in twain."
+  ],
+  "special": [],
+  "index": "greataxe",
+  "name": "greataxe",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "weight": 7,
+  "url": "/assets/atlas/equipment/json/14/weapon/greataxe.json",
+  "imageUrl": "/assets/atlas/equipment/images/greataxe.webp",
+  "image": "/assets/atlas/equipment/images/greataxe.webp",
+  "updated_at": "2026-07-12T19:00:18.944Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/json/heavy.json"
+    },
+    {
+      "index": "two-handed",
+      "name": "two-handed",
+      "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "category": "Martial Melee Weapons",
+  "slot": [
+    "main-hand",
+    "off-hand"
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d12",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

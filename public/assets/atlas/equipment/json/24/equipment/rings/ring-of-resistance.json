@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "@UUID[Compendium.dnd5e.equipment24.Item.dmgsupRingofResi]{Ring}, Rare",
+    "You have Resistance to one damage type while wearing this ring. The gemstone in the ring indicates the type, which the GM chooses or determines randomly by rolling on the following table.",
+    "@Embed[Compendium.dnd5e.tables24.RollTable.dmgRingOfResista rollable caption=false]",
+    "@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]"
+  ],
+  "special": [],
+  "index": "ring-of-resistance",
+  "name": "ring of resistance",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/ring-of-resistance.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-resistance.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-resistance.webp",
+  "updated_at": "2026-07-12T19:00:26.333Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

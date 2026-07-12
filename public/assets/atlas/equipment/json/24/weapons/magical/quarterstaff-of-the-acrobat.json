@@ -1,0 +1,63 @@
+{
+  "desc": [
+    "Weapon (@UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{Quarterstaff}), Very Rare (Requires Attunement)",
+    "You have a +2 bonus to attack rolls and damage rolls made with this magic weapon.",
+    "While holding this weapon, you can cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll Initiative, or you can extinguish the light as a Bonus Action.",
+    "While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for ease of storage) or a 10-foot pole, or reverting it a Quarterstaff; the weapon will elongate only as far as the surrounding space allows.",
+    "In certain forms, the weapon has the following additional properties.",
+    "Acrobatic Assist (Quarterstaff or 10-Foot Pole Forms Only). While holding this weapon, you have Advantage on Dexterity (Acrobatics) checks.",
+    "Attack Deflection (Quarterstaff Form Only). When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining a +5 bonus to your Armor Class against the triggering attack, potentially causing the attack to miss you. You can't use this property again until you finish a Short or Long Rest.",
+    "Ranged Weapon (Quarterstaff Form Only). This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand."
+  ],
+  "special": [],
+  "index": "quarterstaff-of-the-acrobat",
+  "name": "quarterstaff of the acrobat",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/quarterstaff-of-the-acrobat.json",
+  "imageUrl": "/assets/atlas/equipment/images/quarterstaff-of-the-acrobat.webp",
+  "image": "/assets/atlas/equipment/images/quarterstaff-of-the-acrobat.webp",
+  "updated_at": "2026-07-12T19:00:27.923Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    },
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 30,
+    "long": 120
+  }
+}

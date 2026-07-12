@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A blanket to keep you warm at night."
+  ],
+  "special": [],
+  "index": "blanket",
+  "name": "blanket",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/equipment-packs/priests-pack/blanket.json",
+  "imageUrl": "/assets/atlas/equipment/images/blanket.webp",
+  "image": "/assets/atlas/equipment/images/blanket.webp",
+  "updated_at": "2026-07-12T19:00:14.154Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 5,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "slot": [
+    "extra"
+  ]
+}

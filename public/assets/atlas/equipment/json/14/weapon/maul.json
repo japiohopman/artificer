@@ -1,0 +1,63 @@
+{
+  "desc": [
+    "This heavy two-handed mace crushes metal and bone with thunderous force."
+  ],
+  "special": [],
+  "index": "maul",
+  "name": "maul",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/14/weapon/maul.json",
+  "imageUrl": "/assets/atlas/equipment/images/maul.webp",
+  "image": "/assets/atlas/equipment/images/maul.webp",
+  "updated_at": "2026-07-12T19:00:19.756Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/json/heavy.json"
+    },
+    {
+      "index": "two-handed",
+      "name": "two-handed",
+      "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "2d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

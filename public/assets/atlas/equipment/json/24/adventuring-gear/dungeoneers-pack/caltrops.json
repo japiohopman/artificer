@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops."
+  ],
+  "special": [],
+  "index": "caltrops",
+  "name": "caltrops",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/dungeoneers-pack/caltrops.json",
+  "imageUrl": "/assets/atlas/equipment/images/caltrops.webp",
+  "image": "/assets/atlas/equipment/images/caltrops.webp",
+  "updated_at": "2026-07-12T19:00:21.918Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp"
+}

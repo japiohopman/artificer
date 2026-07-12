@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "This spherical talisman serves as a spellcasting focus, helping the practitioner to channel arcane, primal, or divine energies.",
+    "Spellcasting Focus. An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus, using it in place of any material component which does not list a cost."
+  ],
+  "special": [],
+  "index": "orb",
+  "name": "orb",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/spellcasting-focus/orb.json",
+  "imageUrl": "/assets/atlas/equipment/images/orb.webp",
+  "image": "/assets/atlas/equipment/images/orb.webp",
+  "updated_at": "2026-07-12T19:00:16.034Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "category": "Arcane Foci"
+}

@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "See @UUID[Compendium.dnd5e.equipment24.Item.dmgFigurineOfWon]{Figurine of Wondrous Power}",
+    "This polished obsidian horse can become a @UUID[Compendium.dnd5e.actors24.Actor.mmNightmare00000]{Nightmare} for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed.",
+    "The figurine has a [[/r 1d10cs1]]{10 percent chance} each time you use it to ignore your orders, including a command to revert to figurine form. If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form.",
+    "Foundry Note",
+    "This item's limited uses represent the 5 days required before the figurine can be used again."
+  ],
+  "special": [],
+  "index": "obsidian-steed",
+  "name": "obsidian steed",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/figurines/obsidian-steed.json",
+  "imageUrl": "/assets/atlas/equipment/images/obsidian-steed.webp",
+  "image": "/assets/atlas/equipment/images/obsidian-steed.webp",
+  "updated_at": "2026-07-12T19:00:25.359Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

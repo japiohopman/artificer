@@ -1,0 +1,36 @@
+{
+  "desc": [
+    "Ring, Legendary (Requires Attunement)",
+    "Each Ring of Elemental Command is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.",
+    "Every Ring of Elemental Command has the following two properties:",
+    "Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.",
+    "Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the &Reference[Charmed apply=false] condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
+    "Elemental Focus. While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:",
+    "Earth. You know Terran, and you have Resistance to Acid damage. Terrain composed of rubble, rocks, or dirt isn't Difficult Terrain for you. In addition, you can move through solid earth or rock as if those areas were Difficult Terrain without disturbing the matter through which you pass. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied.",
+    "Spellcasting. The ring has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While wearing the ring, you can cast a spell from it. Choose the spell from the list of available spells based on the Elemental Plane the ring is linked to, as shown in the following table. The table indicates how many charges you must expend to cast the spell, which has a save DC of 18.",
+    "Plane",
+    "Spells (Charges)",
+    "Earth",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplEarthquake]{Earthquake} (5 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplStoneShape]{Stone Shape} (2 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplStoneskin0]{Stoneskin} (3 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofSton]{Wall of Stone} (3 charges)"
+  ],
+  "special": [],
+  "index": "earth-ring-of-elemental-command",
+  "name": "earth ring of elemental command",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/earth-ring-of-elemental-command.json",
+  "imageUrl": "/assets/atlas/equipment/images/earth-ring-of-elemental-command.webp",
+  "image": "/assets/atlas/equipment/images/earth-ring-of-elemental-command.webp",
+  "updated_at": "2026-07-12T19:00:26.140Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,34 @@
+{
+  "desc": [
+    "Wand, Rare (Requires Attunement)",
+    "This wand has 7 charges.",
+    "Spells. While holding the wand, you can cast one of the spells (save DC 15) on the following table from it. The table indicates how many charges you must expend to cast the spell.",
+    "Spell",
+    "Charge Cost",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{Command} (\"flee\" or \"grovel\" only)",
+    "1",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Fear} (60-foot Cone)",
+    "3",
+    "Regaining Charges. The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll [[/r 1d20]]. On a 1, the wand crumbles into ashes and is destroyed."
+  ],
+  "special": [],
+  "index": "wand-of-fear",
+  "name": "wand of fear",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/wands/wand-of-fear.json",
+  "imageUrl": "/assets/atlas/equipment/images/wand-of-fear.webp",
+  "image": "/assets/atlas/equipment/images/wand-of-fear.webp",
+  "updated_at": "2026-07-12T19:00:26.709Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

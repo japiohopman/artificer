@@ -1,0 +1,50 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "morningstar",
+  "name": "morningstar",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/24/weapons/martial-melee/morningstar.json",
+  "imageUrl": "/assets/atlas/equipment/images/morningstar.webp",
+  "image": "/assets/atlas/equipment/images/morningstar.webp",
+  "updated_at": "2026-07-12T19:00:28.239Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.webp",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

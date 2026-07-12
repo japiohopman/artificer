@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item",
+    "Your Strength score is 19 while you wear these gauntlets. They have no effect on you if your Strength is already 19 or higher."
+  ],
+  "special": [],
+  "index": "gauntlets-of-ogre-power",
+  "name": "gauntlets of ogre power",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/equipment/gauntlets-of-ogre-power.json",
+  "imageUrl": "/assets/atlas/equipment/images/gauntlets-of-ogre-power.webp",
+  "image": "/assets/atlas/equipment/images/gauntlets-of-ogre-power.webp",
+  "updated_at": "2026-07-12T19:00:12.928Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

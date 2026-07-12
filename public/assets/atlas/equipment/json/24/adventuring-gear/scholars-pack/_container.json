@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A Scholar's Pack contains the following items: @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{Backpack}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBook0000000]{Book}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{Ink}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{Ink Pen}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{Lamp}, 10 flasks of @UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{Oil}, 10 sheets of @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{Parchment}, and @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{Tinderbox}."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "scholar's pack",
+  "kind": "container",
+  "cost": {
+    "quantity": 40,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/scholars-pack/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:22.857Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 30,
+  "capacity_weight": 30
+}

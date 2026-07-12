@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the ring, you can use an action to expend 1 of its charges to cast one of the following spells:",
+    "@UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship} (save DC 13)",
+    "@UUID[Compendium.dnd5e.spells.Item.XXUDGFELgoskdOD0]{Fear} (save DC 13), targeting only beasts that have an Intelligence of 3 or lower",
+    "@UUID[Compendium.dnd5e.spells.Item.aL1F8fvYLtNzUbKu]{Speak with Animals}"
+  ],
+  "special": [],
+  "index": "ring-of-animal-influence",
+  "name": "ring of animal influence",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/ring/ring-of-animal-influence.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-animal-influence.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-animal-influence.webp",
+  "updated_at": "2026-07-12T19:00:15.497Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

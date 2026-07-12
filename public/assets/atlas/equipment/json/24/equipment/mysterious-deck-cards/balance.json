@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "You can increase one of your ability scores by 2, to a maximum of 22, provided you also decrease another one of your ability scores by 2. You can't decrease an ability that has a score of 5 or lower. Alternatively, you can choose not to adjust your ability scores, in which case this card has no effect."
+  ],
+  "special": [],
+  "index": "balance",
+  "name": "balance",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/mysterious-deck-cards/balance.json",
+  "imageUrl": "/assets/atlas/equipment/images/balance.webp",
+  "image": "/assets/atlas/equipment/images/balance.webp",
+  "updated_at": "2026-07-12T19:00:25.767Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A device used to measure the passage of time. It is comprised of two glass bulbs connected vertically by a narrow neck that allows a regulated trickle of sand from the upper bulb to the lower one."
+  ],
+  "special": [],
+  "index": "hourglass",
+  "name": "hourglass",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/loot/hourglass.json",
+  "imageUrl": "/assets/atlas/equipment/images/hourglass.webp",
+  "image": "/assets/atlas/equipment/images/hourglass.webp",
+  "updated_at": "2026-07-12T19:00:14.672Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "slot": [
+    "extra"
+  ]
+}

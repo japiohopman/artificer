@@ -1,0 +1,48 @@
+{
+  "desc": [
+    "Weapon (@UUID[Compendium.dnd5e.equipment24.Item.phbwepGlaive0000]{Glaive}, @UUID[Compendium.dnd5e.equipment24.Item.phbwepGreatsword]{Greatsword}, @UUID[Compendium.dnd5e.equipment24.Item.phbwepLongsword0]{Longsword}, or @UUID[Compendium.dnd5e.equipment24.Item.phbwepScimitar00]{Scimitar}), Very Rare (Requires Attunement)",
+    "When you attack an object with this magic weapon and hit, maximize your weapon damage dice against the target.",
+    "When you attack a creature with this weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 14 Slashing damage and gains 1 &Reference[Exhaustion] level.",
+    "@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]"
+  ],
+  "special": [],
+  "index": "sword-of-sharpness",
+  "name": "sword of sharpness",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/sword-of-sharpness.json",
+  "imageUrl": "/assets/atlas/equipment/images/sword-of-sharpness.webp",
+  "image": "/assets/atlas/equipment/images/sword-of-sharpness.webp",
+  "updated_at": "2026-07-12T19:00:27.946Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

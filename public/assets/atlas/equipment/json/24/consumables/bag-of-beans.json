@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous Item, Rare",
+    "This heavy cloth bag contains 3d4 dry beans when found. The bag weighs half a pound regardless of how many beans it contains and becomes a @UUID[Compendium.dnd5e.equipment24.Item.phbagPouch000000]{nonmagical item} when it no longer contains any beans.",
+    "If you dump one or more beans out of the bag, they explode in a 10-foot-radius Sphere centered on them. All the dumped beans are destroyed in the explosion, and each creature in the Sphere, including you, makes a DC 15 Dexterity saving throw, taking 5d4 Force damage on a failed save or half as much damage on a successful one.",
+    "If you remove a bean from the bag, plant it in dirt or sand, and then water it, the bean disappears as it produces an effect 1 minute later from the ground where it was planted. The GM can choose an effect from the following table or determine it randomly.",
+    "Bag of Beans Effect (click to expand)@Embed[Compendium.dnd5e.tables24.RollTable.dmgBagOfBeansEff rollable caption=false]",
+    "Foundry Note",
+    "Upon obtaining this item, the Count Beans activity can be used to determine the number of dry beans contained within and set this item's number of uses accordingly."
+  ],
+  "special": [],
+  "index": "bag-of-beans",
+  "name": "bag of beans",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/24/consumables/bag-of-beans.json",
+  "imageUrl": "/assets/atlas/equipment/images/bag-of-beans.webp",
+  "image": "/assets/atlas/equipment/images/bag-of-beans.webp",
+  "updated_at": "2026-07-12T19:00:23.583Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "Grain that has been ground by a miller in the next step along the food chain."
+  ],
+  "special": [],
+  "index": "flour",
+  "name": "flour",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 2,
+    "unit": "cp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/flour.json",
+  "imageUrl": "/assets/atlas/equipment/images/flour.webp",
+  "image": "/assets/atlas/equipment/images/flour.webp",
+  "updated_at": "2026-07-12T19:00:29.140Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

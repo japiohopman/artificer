@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "These special tools include the items needed to pursue a craft or trade in cartography.",
+    "Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+  ],
+  "special": [],
+  "index": "cartographers-tools",
+  "name": "cartographer's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/14/tool/cartographers-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/cartographers-tools.webp",
+  "image": "/assets/atlas/equipment/images/cartographers-tools.webp",
+  "updated_at": "2026-07-12T19:00:16.216Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "Wondrous Item, Legendary",
+    "This cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the DM.",
+    "The cube has 3 charges and regains 1d3 expended charges daily at dawn. As a Magic action, you can expend 1 of the cube's charges to cast one of the following spells using the cube.",
+    "Gate. Pressing one side of the cube, you cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGate000000]{Gate}, opening a portal to the plane of existence keyed to that side.",
+    "Plane Shift. Pressing one side of the cube twice, you cast @UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{Plane Shift}, transporting the targets to the plane of existence keyed to that side."
+  ],
+  "special": [],
+  "index": "cubic-gate",
+  "name": "cubic gate",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/24/equipment/cubic-gate.json",
+  "imageUrl": "/assets/atlas/equipment/images/cubic-gate.webp",
+  "image": "/assets/atlas/equipment/images/cubic-gate.webp",
+  "updated_at": "2026-07-12T19:00:25.194Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

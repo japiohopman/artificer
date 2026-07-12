@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A component of a horse's tack that is worn on its head and connected to the reins. It consists of several adjustable leather straps, connecting metal rings, and a mouthpiece called the 'bit' or 'mullen', made of rope, bone, horn, or other hard substance such as bronze, steel, nickel, or wood."
+  ],
+  "special": [],
+  "index": "bit-and-bridle",
+  "name": "bit and bridle",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/equipment/bit-and-bridle.json",
+  "imageUrl": "/assets/atlas/equipment/images/bit-and-bridle.webp",
+  "image": "/assets/atlas/equipment/images/bit-and-bridle.webp",
+  "updated_at": "2026-07-12T19:00:12.763Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

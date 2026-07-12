@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "While wearing this ring, you have advantage on saving throws against any spell that targets only you (not in an area of effect). In addition, if you roll a 20 for the save and the spell is 7th level or lower, the spell has no effect on you and instead targets the caster, using the slot level, spell save DC, attack bonus, and spellcasting ability of the caster."
+  ],
+  "special": [],
+  "index": "ring-of-spell-turning",
+  "name": "ring of spell turning",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/ring/ring-of-spell-turning.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-spell-turning.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-spell-turning.webp",
+  "updated_at": "2026-07-12T19:00:15.734Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

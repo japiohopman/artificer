@@ -1,0 +1,36 @@
+{
+  "desc": [
+    "Ring, Legendary (Requires Attunement)",
+    "Each Ring of Elemental Command is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.",
+    "Every Ring of Elemental Command has the following two properties:",
+    "Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.",
+    "Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the &Reference[Charmed apply=false] condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
+    "Elemental Focus. While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:",
+    "Air. You know Auran, you have Resistance to Lightning damage, and you have a Fly Speed equal to your Speed and can hover.",
+    "Spellcasting. The ring has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While wearing the ring, you can cast a spell from it. Choose the spell from the list of available spells based on the Elemental Plane the ring is linked to, as shown in the following table. The table indicates how many charges you must expend to cast the spell, which has a save DC of 18.",
+    "Plane",
+    "Spells (Charges)",
+    "Air",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplChainLight]{Chain Lightning} (3 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplFeatherFal]{Feather Fall} (0 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Gust of Wind} (2 charges), @UUID[Compendium.dnd5e.spells24.Item.phbsplWindWall00]{Wind Wall} (1 charge)"
+  ],
+  "special": [],
+  "index": "air-ring-of-elemental-command",
+  "name": "air ring of elemental command",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/air-ring-of-elemental-command.json",
+  "imageUrl": "/assets/atlas/equipment/images/air-ring-of-elemental-command.webp",
+  "image": "/assets/atlas/equipment/images/air-ring-of-elemental-command.webp",
+  "updated_at": "2026-07-12T19:00:26.135Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

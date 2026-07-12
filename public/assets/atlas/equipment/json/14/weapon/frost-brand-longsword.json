@@ -1,0 +1,54 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "When you hit with an attack using this magic sword, the target takes an extra 1d6 cold damage. In addition, while you hold the sword, you have resistance to fire damage.",
+    "In freezing temperatures, the blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet.",
+    "When you draw this weapon, you can extinguish all nonmagical flames within 30 feet of you. This property can be used no more than once per hour."
+  ],
+  "special": [],
+  "index": "frost-brand-longsword",
+  "name": "frost brand longsword",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/weapon/frost-brand-longsword.json",
+  "imageUrl": "/assets/atlas/equipment/images/frost-brand-longsword.webp",
+  "image": "/assets/atlas/equipment/images/frost-brand-longsword.webp",
+  "updated_at": "2026-07-12T19:00:18.728Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

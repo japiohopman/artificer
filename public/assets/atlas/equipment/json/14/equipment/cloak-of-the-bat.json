@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "While wearing this cloak, you have advantage on Dexterity (Stealth) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fail to grip the cloak's edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed.",
+    "While wearing the cloak in an area of dim light or darkness, you can use your action to cast @UUID[Compendium.dnd5e.spells.Item.04nMsTWkIFvkbXlY]{Polymorph} on yourself, transforming into a bat. While you are in the form of the bat, you retain your Intelligence, Wisdom, and Charisma scores.",
+    "The cloak can't be used this way again until the next dawn."
+  ],
+  "special": [],
+  "index": "cloak-of-the-bat",
+  "name": "cloak of the bat",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/equipment/cloak-of-the-bat.json",
+  "imageUrl": "/assets/atlas/equipment/images/cloak-of-the-bat.webp",
+  "image": "/assets/atlas/equipment/images/cloak-of-the-bat.webp",
+  "updated_at": "2026-07-12T19:00:12.874Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

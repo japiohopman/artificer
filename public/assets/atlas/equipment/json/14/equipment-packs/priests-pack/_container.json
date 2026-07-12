@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "priest's pack",
+  "kind": "container",
+  "cost": {
+    "quantity": 19,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/equipment-packs/priests-pack/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:14.287Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 30,
+  "capacity_weight": 30
+}

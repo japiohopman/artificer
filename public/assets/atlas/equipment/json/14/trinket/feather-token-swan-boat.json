@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The GM chooses the kind of token or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.OEdr086W61t1DRJo]{Feather Token} table.",
+    "Swan Boat. You can use an action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot- wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. You can use an action while on the boat to command it to move or to turn up to 90 degrees. The boat can carry up to thirty-two Medium or smaller creatures. A Large creature counts as four Medium creatures, while a Huge creature counts as nine. The boat remains for 24 hours and then disappears. You can dismiss the boat as an action."
+  ],
+  "special": [],
+  "index": "feather-token-swan-boat",
+  "name": "feather token swan boat",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/trinket/feather-token-swan-boat.json",
+  "imageUrl": "/assets/atlas/equipment/images/feather-token-swan-boat.webp",
+  "image": "/assets/atlas/equipment/images/feather-token-swan-boat.webp",
+  "updated_at": "2026-07-12T19:00:17.093Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "Armor (@UUID[Compendium.dnd5e.equipment24.Item.phbarmShield0000]{Shield}), Uncommon (+1), Rare (+2), or Very Rare (+3)",
+    "While holding this Shield, you have a bonus to Armor Class determined by the Shield's rarity, in addition to the Shield's normal bonus to AC.",
+    "@Embed[Compendium.dnd5e.content24.JournalEntry.dmgFoundryRefere.JournalEntryPage.Ok4iCgD25ENgoRxE cite=false caption=false classes=\"hide-in-embed\"]"
+  ],
+  "special": [],
+  "index": "shield-1-2-or-3",
+  "name": "shield, +1, +2, or +3",
+  "kind": "shield",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/armor/magical/shield-1-2-or-3.json",
+  "imageUrl": "/assets/atlas/equipment/images/shield-1-2-or-3.webp",
+  "image": "/assets/atlas/equipment/images/shield-1-2-or-3.webp",
+  "updated_at": "2026-07-12T19:00:23.475Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "shield",
+    "name": "shield",
+    "url": "/assets/atlas/equipment_categories/json/shield.json"
+  },
+  "armor_category": "Shield",
+  "armor_class": {
+    "base": 10,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

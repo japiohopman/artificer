@@ -1777,6 +1777,20 @@
     "json_path": "/assets/atlas/equipment/json/lantern_hooded.json"
   },
   {
+    "index": "leatherworkers_tools",
+    "name": "leatherworker's tools",
+    "kind": "tool",
+    "equipment_category": "tools",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 5,
+    "imageUrl": "/assets/atlas/equipment/images/leatherworkers_tools.webp",
+    "json_path": "/assets/atlas/equipment/json/leatherworkers_tools.json"
+  },
+  {
     "index": "leather_armor",
     "name": "leather armor",
     "kind": "armor",
@@ -1803,20 +1817,6 @@
     "weight": 1,
     "imageUrl": "/assets/atlas/equipment/images/leather_pouch.webp",
     "json_path": "/assets/atlas/equipment/json/leather_pouch.json"
-  },
-  {
-    "index": "leatherworkers_tools",
-    "name": "leatherworker's tools",
-    "kind": "tool",
-    "equipment_category": "tools",
-    "rarity": "Common",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
-    "weight": 5,
-    "imageUrl": "/assets/atlas/equipment/images/leatherworkers_tools.webp",
-    "json_path": "/assets/atlas/equipment/json/leatherworkers_tools.json"
   },
   {
     "index": "letter_from_dead_colleague",
@@ -2404,20 +2404,6 @@
     "json_path": "/assets/atlas/equipment/json/playing_card_set.json"
   },
   {
-    "index": "poison_basic_vial",
-    "name": "poison, basic (vial)",
-    "kind": "adventuring_gear",
-    "equipment_category": "adventuring gear",
-    "rarity": "Common",
-    "cost": {
-      "quantity": 100,
-      "unit": "gp"
-    },
-    "weight": 0,
-    "imageUrl": "/assets/atlas/equipment/images/poison_basic_vial.webp",
-    "json_path": "/assets/atlas/equipment/json/poison_basic_vial.json"
-  },
-  {
     "index": "poisoners_kit",
     "name": "poisoner's kit",
     "kind": "adventuring_gear",
@@ -2430,6 +2416,20 @@
     "weight": 2,
     "imageUrl": "/assets/atlas/equipment/images/poisoners_kit.webp",
     "json_path": "/assets/atlas/equipment/json/poisoners_kit.json"
+  },
+  {
+    "index": "poison_basic_vial",
+    "name": "poison, basic (vial)",
+    "kind": "adventuring_gear",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 100,
+      "unit": "gp"
+    },
+    "weight": 0,
+    "imageUrl": "/assets/atlas/equipment/images/poison_basic_vial.webp",
+    "json_path": "/assets/atlas/equipment/json/poison_basic_vial.json"
   },
   {
     "index": "pole_10_foot",
@@ -2459,20 +2459,6 @@
     "json_path": "/assets/atlas/equipment/json/pony.json"
   },
   {
-    "index": "pot_iron",
-    "name": "pot, iron",
-    "kind": "adventuring_gear",
-    "equipment_category": "adventuring gear",
-    "rarity": "Common",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
-    "weight": 10,
-    "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp",
-    "json_path": "/assets/atlas/equipment/json/pot_iron.json"
-  },
-  {
     "index": "potters_tools",
     "name": "potter's tools",
     "kind": "tool",
@@ -2485,6 +2471,20 @@
     "weight": 3,
     "imageUrl": "/assets/atlas/equipment/images/potters_tools.webp",
     "json_path": "/assets/atlas/equipment/json/potters_tools.json"
+  },
+  {
+    "index": "pot_iron",
+    "name": "pot, iron",
+    "kind": "adventuring_gear",
+    "equipment_category": "adventuring gear",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 2,
+      "unit": "gp"
+    },
+    "weight": 10,
+    "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp",
+    "json_path": "/assets/atlas/equipment/json/pot_iron.json"
   },
   {
     "index": "pouch",
@@ -2723,6 +2723,20 @@
     "json_path": "/assets/atlas/equipment/json/sack.json"
   },
   {
+    "index": "saddlebags",
+    "name": "saddlebags",
+    "kind": "adventuring_gear",
+    "equipment_category": "mounts and vehicles",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 4,
+      "unit": "gp"
+    },
+    "weight": 8,
+    "imageUrl": "/assets/atlas/equipment/images/saddlebags.webp",
+    "json_path": "/assets/atlas/equipment/json/saddlebags.json"
+  },
+  {
     "index": "saddle_exotic",
     "name": "saddle, exotic",
     "kind": "adventuring_gear",
@@ -2777,20 +2791,6 @@
     "weight": 25,
     "imageUrl": "/assets/atlas/equipment/images/saddle_riding.webp",
     "json_path": "/assets/atlas/equipment/json/saddle_riding.json"
-  },
-  {
-    "index": "saddlebags",
-    "name": "saddlebags",
-    "kind": "adventuring_gear",
-    "equipment_category": "mounts and vehicles",
-    "rarity": "Common",
-    "cost": {
-      "quantity": 4,
-      "unit": "gp"
-    },
-    "weight": 8,
-    "imageUrl": "/assets/atlas/equipment/images/saddlebags.webp",
-    "json_path": "/assets/atlas/equipment/json/saddlebags.json"
   },
   {
     "index": "sailing_ship",
@@ -3505,20 +3505,6 @@
     "json_path": "/assets/atlas/equipment/json/wand.json"
   },
   {
-    "index": "war_pick",
-    "name": "war pick",
-    "kind": "weapon",
-    "equipment_category": "weapon",
-    "rarity": "Common",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
-    "weight": 2,
-    "imageUrl": "/assets/atlas/equipment/images/war_pick.webp",
-    "json_path": "/assets/atlas/equipment/json/war_pick.json"
-  },
-  {
     "index": "warhammer",
     "name": "warhammer",
     "kind": "weapon",
@@ -3557,6 +3543,20 @@
     },
     "imageUrl": "/assets/atlas/equipment/images/warship.webp",
     "json_path": "/assets/atlas/equipment/json/warship.json"
+  },
+  {
+    "index": "war_pick",
+    "name": "war pick",
+    "kind": "weapon",
+    "equipment_category": "weapon",
+    "rarity": "Common",
+    "cost": {
+      "quantity": 5,
+      "unit": "gp"
+    },
+    "weight": 2,
+    "imageUrl": "/assets/atlas/equipment/images/war_pick.webp",
+    "json_path": "/assets/atlas/equipment/json/war_pick.json"
   },
   {
     "index": "waterskin",
@@ -6509,6 +6509,15 @@
     "json_path": "/assets/atlas/magic_items/json/sovereign_glue.json"
   },
   {
+    "index": "spellguard_shield",
+    "name": "spellguard shield",
+    "kind": "unknown",
+    "equipment_category": "armor",
+    "rarity": "very rare",
+    "imageUrl": "/assets/atlas/magic_items/spellguard_shield.webp",
+    "json_path": "/assets/atlas/magic_items/json/spellguard_shield.json"
+  },
+  {
     "index": "spell_scroll",
     "name": "spell scroll",
     "kind": "unknown",
@@ -6606,15 +6615,6 @@
     "rarity": "common",
     "imageUrl": "/assets/atlas/magic_items/images/spell_scroll_cantrip.webp",
     "json_path": "/assets/atlas/magic_items/json/spell_scroll_cantrip.json"
-  },
-  {
-    "index": "spellguard_shield",
-    "name": "spellguard shield",
-    "kind": "unknown",
-    "equipment_category": "armor",
-    "rarity": "very rare",
-    "imageUrl": "/assets/atlas/magic_items/spellguard_shield.webp",
-    "json_path": "/assets/atlas/magic_items/json/spellguard_shield.json"
   },
   {
     "index": "sphere_of_annihilation",

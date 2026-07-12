@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
+    "You can breathe underwater for 1 hour after drinking this potion."
+  ],
+  "special": [],
+  "index": "potion-of-water-breathing",
+  "name": "potion of water breathing",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-water-breathing.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-water-breathing.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-water-breathing.webp",
+  "updated_at": "2026-07-12T19:00:15.466Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

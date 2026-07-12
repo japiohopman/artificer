@@ -1,0 +1,34 @@
+{
+  "desc": [
+    "Ability: Charisma",
+    "Utilize: Play a known tune (DC 10), or improvise a song (DC 15)"
+  ],
+  "special": [],
+  "index": "horn",
+  "name": "horn",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 3,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/tools/other/musical-instrument/horn.json",
+  "imageUrl": "/assets/atlas/equipment/images/horn.webp",
+  "image": "/assets/atlas/equipment/images/horn.webp",
+  "updated_at": "2026-07-12T19:00:27.303Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "category": "Tools",
+  "slot": [
+    "tool"
+  ]
+}

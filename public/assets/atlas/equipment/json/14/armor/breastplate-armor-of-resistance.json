@@ -1,0 +1,39 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "You have resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.VRqG3F72ebgNHyVR]{Armor of Resistance} table."
+  ],
+  "special": [],
+  "index": "breastplate-armor-of-resistance",
+  "name": "breastplate armor of resistance",
+  "kind": "armor",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 20,
+  "url": "/assets/atlas/equipment/json/14/armor/breastplate-armor-of-resistance.json",
+  "imageUrl": "/assets/atlas/equipment/images/breastplate-armor-of-resistance.webp",
+  "image": "/assets/atlas/equipment/images/breastplate-armor-of-resistance.webp",
+  "updated_at": "2026-07-12T19:00:11.884Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

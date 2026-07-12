@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "You gain proficiency and &Reference[Expertise] in your choice of History, Insight, Intimidation, or Persuasion. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently home to one or more monsters, which must be cleared out before you can claim the keep as yours.",
+    "Foundry Note",
+    "Unlike the other cards from the Deck, this item will not destroy itself upon use in order to serve as a symbol of ownership of the keep."
+  ],
+  "special": [],
+  "index": "throne",
+  "name": "throne",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/mysterious-deck-cards/throne.json",
+  "imageUrl": "/assets/atlas/equipment/images/throne.webp",
+  "image": "/assets/atlas/equipment/images/throne.webp",
+  "updated_at": "2026-07-12T19:00:25.969Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

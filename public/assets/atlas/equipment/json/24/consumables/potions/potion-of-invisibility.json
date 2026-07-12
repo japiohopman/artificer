@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Potion, Rare",
+    "This potion's container looks empty but feels as though it holds liquid. When you drink the potion, you have the &Reference[Invisible apply=false] condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell."
+  ],
+  "special": [],
+  "index": "potion-of-invisibility",
+  "name": "potion of invisibility",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-invisibility.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-invisibility.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-invisibility.webp",
+  "updated_at": "2026-07-12T19:00:24.202Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

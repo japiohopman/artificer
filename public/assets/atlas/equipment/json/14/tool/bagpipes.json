@@ -1,0 +1,33 @@
+{
+  "desc": [
+    "A set of bagpipes to evoke awe, wonder, or fear in your audience.",
+    "If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+  ],
+  "special": [],
+  "index": "bagpipes",
+  "name": "bagpipes",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/14/tool/bagpipes.json",
+  "imageUrl": "/assets/atlas/equipment/images/bagpipes.webp",
+  "image": "/assets/atlas/equipment/images/bagpipes.webp",
+  "updated_at": "2026-07-12T19:00:16.190Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
+  "slot": [
+    "tool"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wondrous Item, Rare (Requires Attunement)",
+    "This cube is about an inch across. Each face has a distinct marking on it. You can press one of those faces, expend the number of charges required for it, and thereby cast the spell associated with it (save DC 17), as shown in the Cube of Force Faces table.",
+    "The cube starts with 10 charges, and it regains 1d6 expended charges daily at dawn.",
+    "Cube of Force FacesSpellCharge Cost@UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Mage Armor}1@UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Shield}1@UUID[Compendium.dnd5e.spells24.Item.phbsplLeomundsTi]{Tiny Hut}3@UUID[Compendium.dnd5e.spells24.Item.phbPrivateSanctu]{Private Sanctum}4@UUID[Compendium.dnd5e.spells24.Item.phbsplOtilukesRe]{Resilient Sphere}4@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{Wall of Force}5"
+  ],
+  "special": [],
+  "index": "cube-of-force",
+  "name": "cube of force",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/cube-of-force.json",
+  "imageUrl": "/assets/atlas/equipment/images/cube-of-force.webp",
+  "image": "/assets/atlas/equipment/images/cube-of-force.webp",
+  "updated_at": "2026-07-12T19:00:25.191Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

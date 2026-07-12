@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wand (requires attunement by a spellcaster)",
+    "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
+    "Spells. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).",
+    "Assisted Escape. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple."
+  ],
+  "special": [],
+  "index": "wand-of-binding",
+  "name": "wand of binding",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/wand/wand-of-binding.json",
+  "imageUrl": "/assets/atlas/equipment/images/wand-of-binding.webp",
+  "image": "/assets/atlas/equipment/images/wand-of-binding.webp",
+  "updated_at": "2026-07-12T19:00:17.767Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

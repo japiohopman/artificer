@@ -1,0 +1,38 @@
+{
+  "desc": [
+    "While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or remove the armor."
+  ],
+  "special": [],
+  "index": "glamoured-studded-leather",
+  "name": "glamoured studded leather",
+  "kind": "armor",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 13,
+  "url": "/assets/atlas/equipment/json/14/armor/glamoured-studded-leather.json",
+  "imageUrl": "/assets/atlas/equipment/images/glamoured-studded-leather.webp",
+  "image": "/assets/atlas/equipment/images/glamoured-studded-leather.webp",
+  "updated_at": "2026-07-12T19:00:11.985Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Light",
+  "armor_class": {
+    "base": 13,
+    "dex_bonus": true,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

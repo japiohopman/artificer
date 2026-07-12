@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch - or anything else with abundant, exposed fuel - takes an action. Lighting any other fire takes 1 minute."
+  ],
+  "special": [],
+  "index": "tinderbox",
+  "name": "tinderbox",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/loot/tinderbox.json",
+  "imageUrl": "/assets/atlas/equipment/images/tinderbox.webp",
+  "image": "/assets/atlas/equipment/images/tinderbox.webp",
+  "updated_at": "2026-07-12T19:00:14.951Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "sprite_index": 16,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "category": "Adventuring Gear"
+}

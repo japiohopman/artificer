@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ability: Intelligence Weight: 3 lb.",
+    "Utilize: Discern what a ceramic object held in the past 24 hours (DC 15)",
+    "Craft: @UUID[Compendium.dnd5e.equipment24.Item.phbagJug00000000]{Jug}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{Lamp}"
+  ],
+  "special": [],
+  "index": "potters-tools",
+  "name": "potter's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/24/tools/artisan/potters-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/potters-tools.webp",
+  "image": "/assets/atlas/equipment/images/potters-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.113Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

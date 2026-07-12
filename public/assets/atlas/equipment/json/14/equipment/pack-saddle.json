@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A type of seat that is fastened to a mount's back, designed to support the rider and affix part of the mount's tack such as stirrups. This type of saddle is suitable for pack mounts."
+  ],
+  "special": [],
+  "index": "pack-saddle",
+  "name": "pack saddle",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 15,
+  "url": "/assets/atlas/equipment/json/14/equipment/pack-saddle.json",
+  "imageUrl": "/assets/atlas/equipment/images/pack-saddle.webp",
+  "image": "/assets/atlas/equipment/images/pack-saddle.webp",
+  "updated_at": "2026-07-12T19:00:13.234Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

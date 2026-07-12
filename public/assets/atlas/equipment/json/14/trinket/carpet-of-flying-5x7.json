@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wondrous item",
+    "You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.",
+    "This carpet is 5 ft. x 7 ft. and has a speed of 40 feet carrying up to 600 lb, or half that speed when carrying up to 1200 lb.",
+    "Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table."
+  ],
+  "special": [],
+  "index": "carpet-of-flying-5x7",
+  "name": "carpet of flying (5x7)",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 10,
+  "url": "/assets/atlas/equipment/json/14/trinket/carpet-of-flying-5x7.json",
+  "imageUrl": "/assets/atlas/equipment/images/carpet-of-flying-5x7.webp",
+  "image": "/assets/atlas/equipment/images/carpet-of-flying-5x7.webp",
+  "updated_at": "2026-07-12T19:00:16.818Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,67 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with shortswords or longswords, you are proficient with the Sun Blade.",
+    "You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra 1d8 radiant damage.",
+    "The sword's luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each."
+  ],
+  "special": [],
+  "index": "sun-blade",
+  "name": "sun blade",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/weapon/sun-blade.json",
+  "imageUrl": "/assets/atlas/equipment/images/sun-blade.webp",
+  "image": "/assets/atlas/equipment/images/sun-blade.webp",
+  "updated_at": "2026-07-12T19:00:20.645Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    },
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/json/finesse.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    }
+  },
+  "two_handed_damage": {
+    "damage_dice": "1d10",
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

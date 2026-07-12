@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Very Rare (Requires Attunement)",
+    "This black or dark-blue robe is embroidered with small white or silver stars. You gain a +1 bonus to saving throws while you wear it.",
+    "Six stars, located on the robe's upper-front portion, are particularly large. While wearing this robe, you can take a Magic action to remove one of the stars and expend it to cast the level 5 version of @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}. Daily at dusk, 1d6 removed stars reappear on the robe.",
+    "While you wear the robe, you can take a Magic action to enter the Astral Plane along with everything you are wearing and carrying. You remain there until you take a Magic action to return to the plane you were on. You reappear in the last space you occupied or, if that space is occupied, the nearest unoccupied space.",
+    "Foundry Note",
+    "The Enter/Exit Astral Plane activity includes a 5 foot measured template that can be used to mark where you exited the Astral Plane for tracking."
+  ],
+  "special": [],
+  "index": "robe-of-stars",
+  "name": "robe of stars",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/robe-of-stars.json",
+  "imageUrl": "/assets/atlas/equipment/images/robe-of-stars.webp",
+  "image": "/assets/atlas/equipment/images/robe-of-stars.webp",
+  "updated_at": "2026-07-12T19:00:26.469Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

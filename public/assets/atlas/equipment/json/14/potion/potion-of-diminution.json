@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.  Shaking the bottle fails to interrupt this process.",
+    "When you drink this potion, you gain the \"reduce\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required)."
+  ],
+  "special": [],
+  "index": "potion-of-diminution",
+  "name": "potion of diminution",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-diminution.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-diminution.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-diminution.webp",
+  "updated_at": "2026-07-12T19:00:15.228Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

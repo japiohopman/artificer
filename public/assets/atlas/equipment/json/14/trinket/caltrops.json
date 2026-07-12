@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "As an action, you can spread a single bag of caltrops to cover a 5-foot-square area. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving and take 1 piercing damage. Until the creature regains at least 1 hit point, its walking speed is reduced by 10 feet. A creature moving through the area at half speed doesn't need to make the saving throw."
+  ],
+  "special": [],
+  "index": "caltrops",
+  "name": "caltrops",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/trinket/caltrops.json",
+  "imageUrl": "/assets/atlas/equipment/images/caltrops.webp",
+  "image": "/assets/atlas/equipment/images/caltrops.webp",
+  "updated_at": "2026-07-12T19:00:16.773Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 17,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp"
+}

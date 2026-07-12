@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes."
+  ],
+  "special": [],
+  "index": "clothes-fine",
+  "name": "clothes, fine",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/clothes-fine.json",
+  "imageUrl": "/assets/atlas/equipment/images/clothes-fine.webp",
+  "image": "/assets/atlas/equipment/images/clothes-fine.webp",
+  "updated_at": "2026-07-12T19:00:21.758Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "While you wear these boots, you can use a bonus action and click the boots' heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect.",
+    "When the boots' property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest."
+  ],
+  "special": [],
+  "index": "boots-of-speed",
+  "name": "boots of speed",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/equipment/boots-of-speed.json",
+  "imageUrl": "/assets/atlas/equipment/images/boots-of-speed.webp",
+  "image": "/assets/atlas/equipment/images/boots-of-speed.webp",
+  "updated_at": "2026-07-12T19:00:12.778Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "A square yard of silk of average quality and weight. Used for all many of items and clothing.",
+    "The finest and most desirable of the common fabrics, silk is also the lightest. Most silks will weigh between 2 and 4 ounces per square yard. The heavier the silk, the higher the quality, more durable, and more opaque in color it is."
+  ],
+  "special": [],
+  "index": "silk",
+  "name": "silk",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 0.2,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/silk.json",
+  "imageUrl": "/assets/atlas/equipment/images/silk.webp",
+  "image": "/assets/atlas/equipment/images/silk.webp",
+  "updated_at": "2026-07-12T19:00:29.249Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

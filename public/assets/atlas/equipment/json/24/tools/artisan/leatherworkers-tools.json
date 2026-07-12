@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ability: Dexterity",
+    "Utilize: Add a design to a leather item (DC 10)",
+    "Craft: @UUID[Compendium.dnd5e.equipment24.Item.phbwepSling00000]{Sling}, @UUID[Compendium.dnd5e.equipment24.Item.phbwepWhip000000]{Whip}, @UUID[Compendium.dnd5e.equipment24.Item.phbarmHideArmor0]{Hide Armor}, @UUID[Compendium.dnd5e.equipment24.Item.phbarmLeatherArm]{Leather Armor}, @UUID[Compendium.dnd5e.equipment24.Item.phbarmStuddedLea]{Studded Leather Armor}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{Backpack}, @UUID[Compendium.dnd5e.items.Item.eJtPBiZtr2pp6ynt]{Crossbow Bolt Case}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaseMaporSc]{Map or Scroll Case}, @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{Parchment}, @UUID[Compendium.dnd5e.equipment24.Item.phbagPouch000000]{Pouch}, @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{Quiver}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{Waterskin}"
+  ],
+  "special": [],
+  "index": "leatherworkers-tools",
+  "name": "leatherworker's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/tools/artisan/leatherworkers-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/leatherworkers-tools.webp",
+  "image": "/assets/atlas/equipment/images/leatherworkers-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.102Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

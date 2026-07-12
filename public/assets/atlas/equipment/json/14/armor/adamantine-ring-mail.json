@@ -1,0 +1,39 @@
+{
+  "desc": [
+    "This armor is reinforced with adamantine, one of the hardest substances in existence.",
+    "While you're wearing it, any critical hit against you becomes a normal hit."
+  ],
+  "special": [],
+  "index": "adamantine-ring-mail",
+  "name": "adamantine ring mail",
+  "kind": "armor",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 40,
+  "url": "/assets/atlas/equipment/json/14/armor/adamantine-ring-mail.json",
+  "imageUrl": "/assets/atlas/equipment/images/adamantine-ring-mail.webp",
+  "image": "/assets/atlas/equipment/images/adamantine-ring-mail.webp",
+  "updated_at": "2026-07-12T19:00:11.832Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Heavy",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

@@ -1,0 +1,48 @@
+{
+  "desc": [
+    "You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to attack a construct.",
+    "When you roll a 20 on an attack roll made with this weapon, the target takes an extra 2d6 bludgeoning damage, or 4d6 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed.",
+    "Foundry Note",
+    "The bonus to attack and damage rolls has been set at the +1. In the instances of hitting a construct, please remember to +2 to both of these results. Additionally, on a hit of 20 against a construct, please use the Other Formula one more time."
+  ],
+  "special": [],
+  "index": "mace-of-smiting",
+  "name": "mace of smiting",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/14/weapon/mace-of-smiting.json",
+  "imageUrl": "/assets/atlas/equipment/images/mace-of-smiting.webp",
+  "image": "/assets/atlas/equipment/images/mace-of-smiting.webp",
+  "updated_at": "2026-07-12T19:00:19.648Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

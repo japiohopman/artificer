@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "The potion's red liquid glimmers when agitated.",
+    "You regain 8d4+8 hit points when you drink this potion."
+  ],
+  "special": [],
+  "index": "potion-of-superior-healing",
+  "name": "potion of superior healing",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-superior-healing.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-superior-healing.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-superior-healing.webp",
+  "updated_at": "2026-07-12T19:00:15.435Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

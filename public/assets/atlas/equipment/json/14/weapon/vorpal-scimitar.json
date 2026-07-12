@@ -1,0 +1,58 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores resistance to slashing damage.",
+    "When you attack a creature that has at least one head with this weapon and roll a 20 on the attack roll, you cut off one of the creature's heads. The creature dies if it can't survive without the lost head. A creature is immune to this effect if it is immune to slashing damage, doesn't have or need a head, has legendary actions, or the GM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 6d8 slashing damage from the hit."
+  ],
+  "special": [],
+  "index": "vorpal-scimitar",
+  "name": "vorpal scimitar",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/weapon/vorpal-scimitar.json",
+  "imageUrl": "/assets/atlas/equipment/images/vorpal-scimitar.webp",
+  "image": "/assets/atlas/equipment/images/vorpal-scimitar.webp",
+  "updated_at": "2026-07-12T19:00:21.134Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/json/finesse.json"
+    },
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/json/light.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Potion, Rarity Varies",
+    "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.",
+    "This potion's transparent liquid has floating in it a sliver of light resembling a giant's fingernail.",
+    "PotionStr.RarityPotion of Giant Strength (@UUID[Compendium.dnd5e.equipment24.Item.dmgHillPotionOfG]{hill})21UncommonPotion of Giant Strength (@UUID[Compendium.dnd5e.equipment24.Item.dmgFrostPotionOf]{frost} or @UUID[Compendium.dnd5e.equipment24.Item.dmgStonePotionOf]{stone})23RarePotion of Giant Strength (@UUID[Compendium.dnd5e.equipment24.Item.dmgFirePotionOfG]{fire})25RarePotion of Giant Strength (@UUID[Compendium.dnd5e.equipment24.Item.dmgCloudPotionOf]{cloud})27Very RarePotion of Giant Strength (@UUID[Compendium.dnd5e.equipment24.Item.dmgStormPotionOf]{storm})29Legendary"
+  ],
+  "special": [],
+  "index": "potion-of-giant-strength",
+  "name": "potion of giant strength",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-giant-strength.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-giant-strength.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-giant-strength.webp",
+  "updated_at": "2026-07-12T19:00:24.178Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

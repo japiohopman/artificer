@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
+  ],
+  "special": [],
+  "index": "book",
+  "name": "book",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/loot/book.json",
+  "imageUrl": "/assets/atlas/equipment/images/book.webp",
+  "image": "/assets/atlas/equipment/images/book.webp",
+  "updated_at": "2026-07-12T19:00:14.600Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 10,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "slot": [
+    "extra"
+  ]
+}

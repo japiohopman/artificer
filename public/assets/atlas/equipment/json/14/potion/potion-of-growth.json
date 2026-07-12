@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts.  Shaking the bottle fails to interrupt this process.",
+    "When you drink this potion, you gain the \"enlarge\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required)."
+  ],
+  "special": [],
+  "index": "potion-of-growth",
+  "name": "potion of growth",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-growth.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-growth.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-growth.webp",
+  "updated_at": "2026-07-12T19:00:15.288Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

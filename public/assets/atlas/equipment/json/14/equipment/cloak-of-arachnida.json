@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "This fine garment is made of black silk interwoven with faint silvery threads. While wearing it, you gain the following benefits:",
+    "You have resistance to poison damage.",
+    "You have a climbing speed equal to your walking speed.",
+    "You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.",
+    "You can't be caught in webs of any sort and can move through webs as if they were difficult terrain.",
+    "You can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.UJJu9c2UvCzVljiP]{Web} spell (save DC 13). The web created by the spell fills twice its normal area. Once used, this property of the cloak can't be used again until the next dawn."
+  ],
+  "special": [],
+  "index": "cloak-of-arachnida",
+  "name": "cloak of arachnida",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/equipment/cloak-of-arachnida.json",
+  "imageUrl": "/assets/atlas/equipment/images/cloak-of-arachnida.webp",
+  "image": "/assets/atlas/equipment/images/cloak-of-arachnida.webp",
+  "updated_at": "2026-07-12T19:00:12.856Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

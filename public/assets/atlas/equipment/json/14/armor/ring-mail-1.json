@@ -1,0 +1,39 @@
+{
+  "desc": [
+    "This armor has been embellished with powerful runes, crafted in sorcerous fires, blessed by a powerful being, or some other event has seen it bequeathed with enhanced protection for the wearer.",
+    "You have a bonus to AC while wearing this armor."
+  ],
+  "special": [],
+  "index": "ring-mail-1",
+  "name": "ring mail +1",
+  "kind": "armor",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 40,
+  "url": "/assets/atlas/equipment/json/14/armor/ring-mail-1.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-mail-1.webp",
+  "image": "/assets/atlas/equipment/images/ring-mail-1.webp",
+  "updated_at": "2026-07-12T19:00:12.204Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Heavy",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

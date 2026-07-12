@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "A square yard of linen of average quality and weight. Used for all many of items and clothing.",
+    "Longer lasting than cotton, its durability and breathability make it particularly valued in warm climtes.",
+    "Different types of linen do exist, with lighter weaves starting at 6 ounces per square yard, and the rest going up to 15 ounces."
+  ],
+  "special": [],
+  "index": "linen",
+  "name": "linen",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 0.6,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/linen.json",
+  "imageUrl": "/assets/atlas/equipment/images/linen.webp",
+  "image": "/assets/atlas/equipment/images/linen.webp",
+  "updated_at": "2026-07-12T19:00:29.159Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "Wondrous item",
+    "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature.",
+    "The creature is friendly to you and your companions. It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions.",
+    "The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.",
+    "Silver Raven. This silver statuette of a raven can become a @UUID[Compendium.dnd5e.monsters.Actor.LPdX5YLlwci0NDZx]{Raven} for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the @UUID[Compendium.dnd5e.spells.Item.X8w9EzYLGc4vQ1H2]{Animal Messenger} spell on it at will."
+  ],
+  "special": [],
+  "index": "figurine-of-wondrous-power-silver-raven",
+  "name": "figurine of wondrous power (silver raven)",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-silver-raven.json",
+  "imageUrl": "/assets/atlas/equipment/images/figurine-of-wondrous-power-silver-raven.webp",
+  "image": "/assets/atlas/equipment/images/figurine-of-wondrous-power-silver-raven.webp",
+  "updated_at": "2026-07-12T19:00:17.216Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

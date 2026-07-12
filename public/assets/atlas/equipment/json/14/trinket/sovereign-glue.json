@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with oil of slipperiness. When found, a container contains 1d6 + 1 ounces.",
+    "One ounce of the glue can cover a 1-foot square surface. The glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of universal solvent or oil of etherealness, or with a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell.",
+    "Foundry Note",
+    "The 7 charges reflect the maximum amount a character can find. Please adjust as required."
+  ],
+  "special": [],
+  "index": "sovereign-glue",
+  "name": "sovereign glue",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 100000,
+    "unit": "gp"
+  },
+  "weight": 0.25,
+  "url": "/assets/atlas/equipment/json/14/trinket/sovereign-glue.json",
+  "imageUrl": "/assets/atlas/equipment/images/sovereign-glue.webp",
+  "image": "/assets/atlas/equipment/images/sovereign-glue.webp",
+  "updated_at": "2026-07-12T19:00:17.613Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

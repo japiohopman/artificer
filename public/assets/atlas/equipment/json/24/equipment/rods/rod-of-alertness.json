@@ -1,0 +1,36 @@
+{
+  "desc": [
+    "Rod, Very Rare (Requires Attunement)",
+    "This rod has the following properties.",
+    "Alertness. While holding the rod, you have Advantage on Wisdom (Perception) checks and on Initiative rolls.",
+    "Spells. While holding the rod, you can cast the following spells from it:",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectEvil]{Detect Evil and Good}",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Detect Magic}",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectPois]{Detect Poison and Disease}",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplSeeInvisib]{See Invisibility}",
+    "Protective Aura. As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to Armor Class and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.",
+    "The rod's head stops glowing and the effect ends after 10 minutes or when a creature takes a Magic action to pull the rod from the ground. Once used, this property can't be used again until the next dawn.",
+    "Foundry Note",
+    "The Plant Rod activity can be used to place a 60 foot template representing the Bright Light radius. It includes an Active Effect which can be applied to the relevant Actors and adds the +1 bonus to AC and Saving Throws."
+  ],
+  "special": [],
+  "index": "rod-of-alertness",
+  "name": "rod of alertness",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/24/equipment/rods/rod-of-alertness.json",
+  "imageUrl": "/assets/atlas/equipment/images/rod-of-alertness.webp",
+  "image": "/assets/atlas/equipment/images/rod-of-alertness.webp",
+  "updated_at": "2026-07-12T19:00:26.523Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

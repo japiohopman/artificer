@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A symbol engraved or carefully inlaid on a shield or some other device representing a deity through which a true believer can call forth their power and in doing so spread the faith.",
+    "Spellcasting Focus. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+  ],
+  "special": [],
+  "index": "emblem",
+  "name": "emblem",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/spellcasting-focus/emblem.json",
+  "imageUrl": "/assets/atlas/equipment/images/emblem.webp",
+  "image": "/assets/atlas/equipment/images/emblem.webp",
+  "updated_at": "2026-07-12T19:00:16.027Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "slot": [
+    "extra"
+  ]
+}

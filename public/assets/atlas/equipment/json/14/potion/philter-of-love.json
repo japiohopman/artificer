@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This potion's rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart.",
+    "The next time you see a creature within 10 minutes after drinking this philter, you become charmed by that creature for 1 hour. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are charmed."
+  ],
+  "special": [],
+  "index": "philter-of-love",
+  "name": "philter of love",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/philter-of-love.json",
+  "imageUrl": "/assets/atlas/equipment/images/philter-of-love.webp",
+  "image": "/assets/atlas/equipment/images/philter-of-love.webp",
+  "updated_at": "2026-07-12T19:00:15.174Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

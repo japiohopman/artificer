@@ -1,0 +1,54 @@
+{
+  "desc": [
+    "Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage.",
+    "Lightning Bolt. When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into a bolt of lightning. This bolt forms a 5-foot-wide Line between you and the target. The target and each other creature in the Line (excluding you) makes a DC 13 Dexterity saving throw, taking 4d6 Lightning damage on a failed save or half as much damage on a successful one. Immediately after dealing this damage, the weapon reappears in your hand. This property can't be used again until the next dawn.",
+    "Foundry Note",
+    "The Attack activity allows you to choose between Lightning and Piercing when rolling damage and will remember your last choice."
+  ],
+  "special": [],
+  "index": "javelin-of-lightning",
+  "name": "javelin of lightning",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 400.5,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/javelin-of-lightning.json",
+  "imageUrl": "/assets/atlas/equipment/images/javelin-of-lightning.webp",
+  "image": "/assets/atlas/equipment/images/javelin-of-lightning.webp",
+  "updated_at": "2026-07-12T19:00:27.854Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "lightning",
+      "name": "lightning",
+      "url": "/assets/atlas/damage_types/json/lightning.json"
+    }
+  },
+  "range": {
+    "normal": 30,
+    "long": 120
+  }
+}

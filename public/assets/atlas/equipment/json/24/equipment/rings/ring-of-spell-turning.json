@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Ring, Legendary (Requires Attunement)",
+    "While wearing this ring, you have Advantage on saving throws against spells. If you succeed on the save for a spell of level 7 or lower, the spell has no effect on you. If that spell targeted only you and didn't create an area of effect, you can take a Reaction to deflect the spell back at the spell's caster; the caster must make a saving throw against the spell using their own spell save DC."
+  ],
+  "special": [],
+  "index": "ring-of-spell-turning",
+  "name": "ring of spell turning",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/ring-of-spell-turning.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-spell-turning.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-spell-turning.webp",
+  "updated_at": "2026-07-12T19:00:26.351Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

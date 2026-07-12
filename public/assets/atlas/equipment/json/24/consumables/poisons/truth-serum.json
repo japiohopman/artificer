@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Ingested Poison",
+    "A creature subjected to Truth Serum must succeed on a DC 11 Constitution saving throw or have the &Reference[Poisoned] condition for 1 hour. The Poisoned creature can't knowingly communicate a lie."
+  ],
+  "special": [],
+  "index": "truth-serum",
+  "name": "truth serum",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 150,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/poisons/truth-serum.json",
+  "imageUrl": "/assets/atlas/equipment/images/truth-serum.webp",
+  "image": "/assets/atlas/equipment/images/truth-serum.webp",
+  "updated_at": "2026-07-12T19:00:24.029Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

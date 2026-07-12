@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "This blue potion bubbles and steams as if boiling.",
+    "For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless} spell (no concentration required)",
+    "Foundry Note",
+    "The Other Formula button can be used to roll the bonus 1d4 received from Bless."
+  ],
+  "special": [],
+  "index": "potion-of-heroism",
+  "name": "potion of heroism",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-heroism.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-heroism.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-heroism.webp",
+  "updated_at": "2026-07-12T19:00:15.301Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

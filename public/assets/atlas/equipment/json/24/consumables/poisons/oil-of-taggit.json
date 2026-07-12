@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Contact Poison",
+    "A creature subjected to Oil of Taggit must succeed on a DC 13 Constitution saving throw or have the &Reference[Poisoned apply=false] condition for 24 hours. The creature also has the &Reference[Unconscious apply=false] condition while Poisoned in this way. It wakes up if it takes damage."
+  ],
+  "special": [],
+  "index": "oil-of-taggit",
+  "name": "oil of taggit",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/poisons/oil-of-taggit.json",
+  "imageUrl": "/assets/atlas/equipment/images/oil-of-taggit.webp",
+  "image": "/assets/atlas/equipment/images/oil-of-taggit.webp",
+  "updated_at": "2026-07-12T19:00:23.945Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

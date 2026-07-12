@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ability: Strength",
+    "Utilize: Pry open a door or container (DC 20)",
+    "Craft: Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, @UUID[Compendium.dnd5e.equipment24.Item.phbagBallBearing]{Ball Bearings}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBucket00000]{Bucket}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{Caltrops}, @UUID[Compendium.dnd5e.equipment24.Item.phbagChain000000]{Chain}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{Crowbar}, @UUID[Compendium.dnd5e.equipment24.Item.phbamoBulletsFir]{Firearm Bullets}, @UUID[Compendium.dnd5e.equipment24.Item.phbagGrapplingHo]{Grappling Hook}, @UUID[Compendium.dnd5e.items.Item.M8xM8BLK4tpUayEE]{Iron Pot}, @UUID[Compendium.dnd5e.equipment24.Item.phbagSpikesIron0]{Iron Spikes}, @UUID[Compendium.dnd5e.equipment24.Item.phbamoBulletsSli]{Sling Bullets}"
+  ],
+  "special": [],
+  "index": "smiths-tools",
+  "name": "smith's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 8,
+  "url": "/assets/atlas/equipment/json/24/tools/artisan/smiths-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/smiths-tools.webp",
+  "image": "/assets/atlas/equipment/images/smiths-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.160Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

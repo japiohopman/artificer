@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Ability: Wisdom",
+    "Utilize: Plot a course (DC 10), or determine position by stargazing (DC 15)"
+  ],
+  "special": [],
+  "index": "navigators-tools",
+  "name": "navigator's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/tools/other/navigators-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/navigators-tools.webp",
+  "image": "/assets/atlas/equipment/images/navigators-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.381Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

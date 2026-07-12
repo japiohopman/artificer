@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.",
+    "When you drink this potion, your Strength score changes to 25 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score."
+  ],
+  "special": [],
+  "index": "potion-of-fire-giant-strength",
+  "name": "potion of fire giant strength",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 2000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-fire-giant-strength.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-fire-giant-strength.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-fire-giant-strength.webp",
+  "updated_at": "2026-07-12T19:00:15.236Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "Whetstone is a sharpening stone. It is used to sharpen the edges of steel tools and implements through grinding and honing."
+  ],
+  "special": [],
+  "index": "whetstone",
+  "name": "whetstone",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/loot/whetstone.json",
+  "imageUrl": "/assets/atlas/equipment/images/whetstone.webp",
+  "image": "/assets/atlas/equipment/images/whetstone.webp",
+  "updated_at": "2026-07-12T19:00:14.980Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 7,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.webp",
+  "category": "Adventuring Gear",
+  "slot": [
+    "extra"
+  ]
+}

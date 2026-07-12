@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "The potion is a plain indescriminate color and smells slightly foul.",
+    "When you drink this potion, you gain resistance to Force type damage for 1 hour.",
+    "For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table."
+  ],
+  "special": [],
+  "index": "potion-of-force-resistance",
+  "name": "potion of force resistance",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/potion-of-force-resistance.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-force-resistance.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-force-resistance.webp",
+  "updated_at": "2026-07-12T19:00:15.254Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

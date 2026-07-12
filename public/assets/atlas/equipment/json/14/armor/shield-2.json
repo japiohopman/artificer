@@ -1,0 +1,38 @@
+{
+  "desc": [
+    "While holding this shield, you have a bonus to AC of +2. This bonus is in addition to the shield's normal bonus to AC."
+  ],
+  "special": [],
+  "index": "shield-2",
+  "name": "shield +2",
+  "kind": "shield",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/14/armor/shield-2.json",
+  "imageUrl": "/assets/atlas/equipment/images/shield-2.webp",
+  "image": "/assets/atlas/equipment/images/shield-2.webp",
+  "updated_at": "2026-07-12T19:00:12.260Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "shield",
+    "name": "shield",
+    "url": "/assets/atlas/equipment_categories/json/shield.json"
+  },
+  "armor_category": "Shield",
+  "armor_class": {
+    "base": 2,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

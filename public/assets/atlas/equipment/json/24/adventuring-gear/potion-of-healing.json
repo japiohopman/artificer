@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points."
+  ],
+  "special": [],
+  "index": "potion-of-healing",
+  "name": "potion of healing",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/potion-of-healing.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-healing.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-healing.webp",
+  "updated_at": "2026-07-12T19:00:22.707Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

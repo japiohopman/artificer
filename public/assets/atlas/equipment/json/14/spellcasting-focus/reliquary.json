@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A tiny box or other container holding a fragment of a precious relic, saint, or other historical figure that dedicated their life to walk the path of a true believer. A deity imbues the bearer of this artifact with the ability to call forth their power and in doing so spread the faith once more.",
+    "Spellcasting Focus. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+  ],
+  "special": [],
+  "index": "reliquary",
+  "name": "reliquary",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/spellcasting-focus/reliquary.json",
+  "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
+  "image": "/assets/atlas/equipment/images/reliquary.webp",
+  "updated_at": "2026-07-12T19:00:16.108Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "slot": [
+    "focus"
+  ]
+}

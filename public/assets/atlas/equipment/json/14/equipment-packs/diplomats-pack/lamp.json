@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil"
+  ],
+  "special": [],
+  "index": "lamp",
+  "name": "lamp",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/equipment-packs/diplomats-pack/lamp.json",
+  "imageUrl": "/assets/atlas/equipment/images/lamp.webp",
+  "image": "/assets/atlas/equipment/images/lamp.webp",
+  "updated_at": "2026-07-12T19:00:13.719Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 19,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.0webp"
+}

@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This item encompasses a wide range of playing card types, both unmarked and marked.",
+    "If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+  ],
+  "special": [],
+  "index": "playing-cards-set",
+  "name": "playing cards set",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/tool/playing-cards-set.json",
+  "imageUrl": "/assets/atlas/equipment/images/playing-cards-set.webp",
+  "image": "/assets/atlas/equipment/images/playing-cards-set.webp",
+  "updated_at": "2026-07-12T19:00:16.479Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

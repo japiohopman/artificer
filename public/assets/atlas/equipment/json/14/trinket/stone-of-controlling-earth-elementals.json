@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous item",
+    "If the stone is touching the ground, you can use an action to speak the stone's command word and summon an @UUID[Compendium.dnd5e.monsters.Actor.sApYLZj9PTZ40wJr]{Earth Elemental}, as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell. The stone can't be used this way again until the next dawn.",
+    "The stone weighs 5 pounds."
+  ],
+  "special": [],
+  "index": "stone-of-controlling-earth-elementals",
+  "name": "stone of controlling earth elementals",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/trinket/stone-of-controlling-earth-elementals.json",
+  "imageUrl": "/assets/atlas/equipment/images/stone-of-controlling-earth-elementals.webp",
+  "image": "/assets/atlas/equipment/images/stone-of-controlling-earth-elementals.webp",
+  "updated_at": "2026-07-12T19:00:17.623Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

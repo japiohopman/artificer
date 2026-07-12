@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+  ],
+  "special": [],
+  "index": "torch",
+  "name": "torch",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 1,
+    "unit": "cp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/equipment-packs/explorers-pack/torch.json",
+  "imageUrl": "/assets/atlas/equipment/images/torch.webp",
+  "image": "/assets/atlas/equipment/images/torch.webp",
+  "updated_at": "2026-07-12T19:00:14.127Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 18,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet9.webp",
+  "slot": [
+    "off-hand"
+  ]
+}

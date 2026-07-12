@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A Burglar's Pack contains the following items: @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{Backpack}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBallBearing]{Ball Bearings}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBell0000000]{Bell}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagCandle00000]{Candles}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{Crowbar}, @UUID[Compendium.dnd5e.items.Item.wjHtGnd05SPdURqE]{Hooded Lantern}, 7 @UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{flasks of Oil}, 5 days of @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{Rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{Rope}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{Tinderbox}, and @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{Waterskin}."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "burglar's pack",
+  "kind": "container",
+  "cost": {
+    "quantity": 16,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/burglars-pack/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:21.692Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 30,
+  "capacity_weight": 30
+}

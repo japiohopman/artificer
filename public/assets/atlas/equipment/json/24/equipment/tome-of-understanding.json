@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Very Rare",
+    "This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom increases by 2, to a maximum of 30. The manual then loses its magic, but regains it in a century.",
+    "Foundry Note",
+    "This item includes 48 max uses for tracking hours read.",
+    "The Read activity includes a scaling value that lets you enter the amount of hours you've read. Once you hit 48 you can use the included Active Effect to increase your Wisdom.",
+    "The Reset Progress activity resets your uses to 0 if you fail to complete the book within 6 days and need to start over."
+  ],
+  "special": [],
+  "index": "tome-of-understanding",
+  "name": "tome of understanding",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/tome-of-understanding.json",
+  "imageUrl": "/assets/atlas/equipment/images/tome-of-understanding.webp",
+  "image": "/assets/atlas/equipment/images/tome-of-understanding.webp",
+  "updated_at": "2026-07-12T19:00:26.692Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

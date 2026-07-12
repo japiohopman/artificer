@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This ammunition is used for all varieties of crossbow and is typically a short metal shaft with a narrow piercing tip. It has been imbued with magic.",
+    "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
+  ],
+  "special": [],
+  "index": "crossbow-bolt-1",
+  "name": "crossbow bolt +1",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.075,
+  "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-1.json",
+  "imageUrl": "/assets/atlas/equipment/images/crossbow-bolt-1.webp",
+  "image": "/assets/atlas/equipment/images/crossbow-bolt-1.webp",
+  "updated_at": "2026-07-12T19:00:11.742Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

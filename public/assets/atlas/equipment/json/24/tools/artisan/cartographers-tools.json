@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ability: Wisdom",
+    "Utilize: Draft a map of a small area (DC 15)",
+    "Craft: @UUID[Compendium.dnd5e.equipment24.Item.phbagMap00000000]{Map}"
+  ],
+  "special": [],
+  "index": "cartographers-tools",
+  "name": "cartographer's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 15,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/24/tools/artisan/cartographers-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/cartographers-tools.webp",
+  "image": "/assets/atlas/equipment/images/cartographers-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.073Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

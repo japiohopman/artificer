@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous Item (requires attunement)",
+    "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors."
+  ],
+  "special": [],
+  "index": "amulet-of-proof-against-detection-and-location",
+  "name": "amulet of proof against detection and location",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/equipment/amulet-of-proof-against-detection-and-location.json",
+  "imageUrl": "/assets/atlas/equipment/images/amulet-of-proof-against-detection-and-location.webp",
+  "image": "/assets/atlas/equipment/images/amulet-of-proof-against-detection-and-location.webp",
+  "updated_at": "2026-07-12T19:00:12.629Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

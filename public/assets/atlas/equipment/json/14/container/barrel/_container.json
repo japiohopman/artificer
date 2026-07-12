@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A barrel can hold 40 gallons of liquid or 4 cubic feet of solids."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "barrel",
+  "kind": "container",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 70,
+  "url": "/assets/atlas/equipment/json/14/container/barrel/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:12.406Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 334,
+  "capacity_weight": 30
+}

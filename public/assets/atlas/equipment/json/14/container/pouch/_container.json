@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch. A pouch can hold up to ⅕ cubic foot or 6 pounds of gear."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "pouch",
+  "kind": "container",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/container/pouch/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:12.551Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 6,
+  "capacity_weight": 30
+}

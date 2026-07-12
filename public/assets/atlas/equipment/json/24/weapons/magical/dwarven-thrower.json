@@ -1,0 +1,57 @@
+{
+  "desc": [
+    "Weapon (@UUID[Compendium.dnd5e.equipment24.Item.phbwepWarhammer0]{Warhammer}), Very Rare (Requires Attunement by a Dwarf or a Creature Attuned to a @UUID[Compendium.dnd5e.equipment24.Item.dmgBeltOfDwarven]{Belt of Dwarvenkind})",
+    "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. It has the Thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra [[/damage 1d8 type=force]] damage, or an extra [[/damage 2d8 type=force]] damage if the target is a Giant. Immediately after hitting or missing, the weapon flies back to your hand."
+  ],
+  "special": [],
+  "index": "dwarven-thrower",
+  "name": "dwarven thrower",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40015,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/dwarven-thrower.json",
+  "imageUrl": "/assets/atlas/equipment/images/dwarven-thrower.webp",
+  "image": "/assets/atlas/equipment/images/dwarven-thrower.webp",
+  "updated_at": "2026-07-12T19:00:27.723Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    },
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 20,
+    "long": 60
+  }
+}

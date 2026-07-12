@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Usually used in conjunction with blocks of incense to perfume the air."
+  ],
+  "special": [],
+  "index": "censer",
+  "name": "censer",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/loot/censer.json",
+  "imageUrl": "/assets/atlas/equipment/images/censer.webp",
+  "image": "/assets/atlas/equipment/images/censer.webp",
+  "updated_at": "2026-07-12T19:00:14.604Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp"
+}

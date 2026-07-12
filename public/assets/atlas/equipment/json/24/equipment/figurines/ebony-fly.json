@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "See @UUID[Compendium.dnd5e.equipment24.Item.dmgFigurineOfWon]{Figurine of Wondrous Power}",
+    "This ebony statuette, carved in the likeness of a horsefly, can become a @UUID[Compendium.dnd5e.actors24.Actor.dmgGiantFly00000]{Giant Fly} for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 days have passed.",
+    "Foundry Note",
+    "This item's limited uses represent the 2 days required before the figurine can be used again."
+  ],
+  "special": [],
+  "index": "ebony-fly",
+  "name": "ebony fly",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/figurines/ebony-fly.json",
+  "imageUrl": "/assets/atlas/equipment/images/ebony-fly.webp",
+  "image": "/assets/atlas/equipment/images/ebony-fly.webp",
+  "updated_at": "2026-07-12T19:00:25.291Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

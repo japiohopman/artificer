@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous Item, Rarity Varies",
+    "This object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The GM chooses the kind of token or determines it randomly by rolling on the Feather Tokens table. The type of token determines its rarity.",
+    "@Embed[Compendium.dnd5e.tables24.RollTable.dmgQuaalsFeather caption=false rollable]"
+  ],
+  "special": [],
+  "index": "feather-token",
+  "name": "feather token",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/feather-token.json",
+  "imageUrl": "/assets/atlas/equipment/images/feather-token.webp",
+  "image": "/assets/atlas/equipment/images/feather-token.webp",
+  "updated_at": "2026-07-12T19:00:23.740Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

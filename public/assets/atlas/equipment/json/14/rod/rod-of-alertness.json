@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "This rod has a flanged head and the following properties.",
+    "Alertness. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.",
+    "Spells. While holding the rod, you can use an action to cast one of the following spells from it: @UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{Detect Poison and Disease}, or @UUID[Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH]{See Invisibility}.",
+    "Protective Aura. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.",
+    "The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground.. This property can't be used again until the next dawn."
+  ],
+  "special": [],
+  "index": "rod-of-alertness",
+  "name": "rod of alertness",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/rod/rod-of-alertness.json",
+  "imageUrl": "/assets/atlas/equipment/images/rod-of-alertness.webp",
+  "image": "/assets/atlas/equipment/images/rod-of-alertness.webp",
+  "updated_at": "2026-07-12T19:00:15.892Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

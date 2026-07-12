@@ -1,0 +1,52 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt."
+  ],
+  "special": [],
+  "index": "rapier-of-life-stealing",
+  "name": "rapier of life stealing",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/weapon/rapier-of-life-stealing.json",
+  "imageUrl": "/assets/atlas/equipment/images/rapier-of-life-stealing.webp",
+  "image": "/assets/atlas/equipment/images/rapier-of-life-stealing.webp",
+  "updated_at": "2026-07-12T19:00:20.183Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/json/finesse.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

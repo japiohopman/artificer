@@ -1,0 +1,54 @@
+{
+  "desc": [
+    "A stout crescent blade mounted on a thick shaft wrapped in a sturdy grip. This axe is large enough to be wielded with two hands and is adorned with a spike upon the back-side of the blade."
+  ],
+  "special": [],
+  "index": "battleaxe",
+  "name": "battleaxe",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/14/weapon/battleaxe.json",
+  "imageUrl": "/assets/atlas/equipment/images/battleaxe.webp",
+  "image": "/assets/atlas/equipment/images/battleaxe.webp",
+  "updated_at": "2026-07-12T19:00:18.190Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "sprite_index": 1,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous Item, Rare",
+    "This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the &Reference[Restrained apply=false] condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target's space) or by using a Bonus Action to repeat the command (causing the rope to coil up in your hand).",
+    "A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you're still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target's space.",
+    "The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
+    "Foundry Note",
+    "The item includes 20 uses for tracking its HP. The Damage Rope activity can be used to apply damage and the Repair Rope activity can be used to restore its HP.",
+    "The Escape activity can be used to send an Athletics and Dexterity check to the chat for the target to roll for their escape."
+  ],
+  "special": [],
+  "index": "rope-of-entanglement",
+  "name": "rope of entanglement",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/equipment/rope-of-entanglement.json",
+  "imageUrl": "/assets/atlas/equipment/images/rope-of-entanglement.webp",
+  "image": "/assets/atlas/equipment/images/rope-of-entanglement.webp",
+  "updated_at": "2026-07-12T19:00:26.565Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

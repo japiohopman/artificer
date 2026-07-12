@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A Pole is 10 feet long. You can use it to touch something up to 10 feet away. If you must make a Strength (Athletics) check as part of a High or Long Jump, you can use the Pole to vault, giving yourself Advantage on the check."
+  ],
+  "special": [],
+  "index": "pole",
+  "name": "pole",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 7,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/pole.json",
+  "imageUrl": "/assets/atlas/equipment/images/pole.webp",
+  "image": "/assets/atlas/equipment/images/pole.webp",
+  "updated_at": "2026-07-12T19:00:22.698Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

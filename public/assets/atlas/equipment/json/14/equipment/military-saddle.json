@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A type of seat that is fastened to a mount's back, designed to support the rider and affix part of the mount's tack such as stirrups.A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted."
+  ],
+  "special": [],
+  "index": "military-saddle",
+  "name": "military saddle",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 20,
+    "unit": "gp"
+  },
+  "weight": 30,
+  "url": "/assets/atlas/equipment/json/14/equipment/military-saddle.json",
+  "imageUrl": "/assets/atlas/equipment/images/military-saddle.webp",
+  "image": "/assets/atlas/equipment/images/military-saddle.webp",
+  "updated_at": "2026-07-12T19:00:13.114Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,39 @@
+{
+  "desc": [
+    "Wondrous Item, Rare",
+    "This backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 200 pounds of material, not exceeding a volume of 25 cubic feet. The central pouch can hold up to 500 pounds of material, not exceeding a volume of 64 cubic feet. The haversack always weighs 5 pounds, regardless of its contents.",
+    "Retrieving an item from the haversack requires a Utilize action or a Bonus Action (your choice). When you reach into the haversack for a specific item, the item is always magically on top.",
+    "If any of its pouches is overloaded, pierced, or torn, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an Artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth unharmed, and the haversack must be put right before it can be used again.",
+    "Each pouch of the haversack holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.",
+    "Placing the haversack inside an extradimensional space created by a @UUID[Compendium.dnd5e.equipment24.Item.dmgBagOfHolding0]{Bag of Holding}, @UUID[Compendium.dnd5e.equipment24.Item.dmgPortableHole0]{Portable Hole}, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "handy haversack",
+  "kind": "container",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/containers/handy-haversack/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:24.612Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": "1 cubic foot/30 pounds",
+  "capacity_weight": {
+    "value": null
+  }
+}

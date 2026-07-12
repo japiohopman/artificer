@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This book contains health and diet tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century."
+  ],
+  "special": [],
+  "index": "manual-of-bodily-health",
+  "name": "manual of bodily health",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/trinket/manual-of-bodily-health.json",
+  "imageUrl": "/assets/atlas/equipment/images/manual-of-bodily-health.webp",
+  "image": "/assets/atlas/equipment/images/manual-of-bodily-health.webp",
+  "updated_at": "2026-07-12T19:00:17.415Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

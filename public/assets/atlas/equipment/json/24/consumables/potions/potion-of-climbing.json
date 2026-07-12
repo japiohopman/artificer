@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "Potion, Common",
+    "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks to climb.",
+    "This potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.",
+    "Foundry Note",
+    "The Climber Active Effect can be used for tracking but can not automate the effects."
+  ],
+  "special": [],
+  "index": "potion-of-climbing",
+  "name": "potion of climbing",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-climbing.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-climbing.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-climbing.webp",
+  "updated_at": "2026-07-12T19:00:24.123Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

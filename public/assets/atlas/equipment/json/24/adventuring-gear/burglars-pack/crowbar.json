@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Using a Crowbar gives you Advantage on Strength checks where the Crowbar's leverage can be applied."
+  ],
+  "special": [],
+  "index": "crowbar",
+  "name": "crowbar",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/burglars-pack/crowbar.json",
+  "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+  "image": "/assets/atlas/equipment/images/crowbar.webp",
+  "updated_at": "2026-07-12T19:00:21.552Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp"
+}

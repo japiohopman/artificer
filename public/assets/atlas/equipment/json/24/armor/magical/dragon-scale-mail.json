@@ -1,0 +1,65 @@
+{
+  "desc": [
+    "Armor (Scale Mail), Very Rare (Requires Attunement)",
+    "Dragon Scale Mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them. Other times, hunters carefully preserve the hide of a dead dragon. In either case, Dragon Scale Mail is highly valued.",
+    "While wearing this armor, you gain a +1 bonus to Armor Class, you have Advantage on saving throws against the breath weapons of Dragons, and you have Resistance to one damage type determined by the kind of dragon that provided the scales (see the accompanying table).",
+    "Additionally, you can focus your senses as a Magic action to discern the distance and direction to the closest dragon within 30 miles of yourself that is of the same type as the armor. This action can't be used again until the next dawn.",
+    "Resistance TableDragon",
+    "Resistance",
+    "Black",
+    "Acid",
+    "Gold",
+    "Fire",
+    "Blue",
+    "Lightning",
+    "Green",
+    "Poison",
+    "Brass",
+    "Fire",
+    "Red",
+    "Fire",
+    "Bronze",
+    "Lightning",
+    "Silver",
+    "Cold",
+    "Copper",
+    "Acid",
+    "White",
+    "Cold",
+    "Foundry Note",
+    "The Select Dragon Type activity can be used to select the type of dragon for this armor. It includes the +1 bonus and an Active Effect that provides the Resistance."
+  ],
+  "special": [],
+  "index": "dragon-scale-mail",
+  "name": "dragon scale mail",
+  "kind": "armor",
+  "cost": {
+    "quantity": 40050,
+    "unit": "gp"
+  },
+  "weight": 45,
+  "url": "/assets/atlas/equipment/json/24/armor/magical/dragon-scale-mail.json",
+  "imageUrl": "/assets/atlas/equipment/images/dragon-scale-mail.webp",
+  "image": "/assets/atlas/equipment/images/dragon-scale-mail.webp",
+  "updated_at": "2026-07-12T19:00:23.409Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

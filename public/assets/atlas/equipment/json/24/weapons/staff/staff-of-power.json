@@ -1,0 +1,75 @@
+{
+  "desc": [
+    "@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{Staff}, Very Rare (Requires Attunement by a Sorcerer, Warlock, or Wizard)",
+    "This staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.",
+    "Spells. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.",
+    "Spell Cost TableSpell",
+    "Charge Cost",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{Cone of Cold}",
+    "5",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball} (level 5 version)",
+    "5",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplGlobeofInv]{Globe of Invulnerability}",
+    "6",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{Hold Monster}",
+    "5",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplLevitate00]{Levitate}",
+    "2",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt} (level 5 version)",
+    "5",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}",
+    "1",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplRayofEnfee]{Ray of Enfeeblement}",
+    "1",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{Wall of Force}",
+    "5",
+    "Regaining Charges. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll [[/r 1d20]]. On a 1, the staff retains its +2 bonus to attack rolls and damage rolls but loses all other properties. On a 20, the staff regains [[/r 1d8 + 2]] charges.",
+    "Retributive Strike. You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage."
+  ],
+  "special": [],
+  "index": "staff-of-power",
+  "name": "staff of power",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/24/weapons/staff/staff-of-power.json",
+  "imageUrl": "/assets/atlas/equipment/images/staff-of-power.webp",
+  "image": "/assets/atlas/equipment/images/staff-of-power.webp",
+  "updated_at": "2026-07-12T19:00:28.939Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

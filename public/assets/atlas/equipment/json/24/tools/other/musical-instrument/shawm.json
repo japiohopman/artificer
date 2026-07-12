@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Ability: Charisma",
+    "Utilize: Play a known tune (DC 10), or improvise a song (DC 15)"
+  ],
+  "special": [],
+  "index": "shawm",
+  "name": "shawm",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/24/tools/other/musical-instrument/shawm.json",
+  "imageUrl": "/assets/atlas/equipment/images/shawm.webp",
+  "image": "/assets/atlas/equipment/images/shawm.webp",
+  "updated_at": "2026-07-12T19:00:27.359Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 15,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp"
+}

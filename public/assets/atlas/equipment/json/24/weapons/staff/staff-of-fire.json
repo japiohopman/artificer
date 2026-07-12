@@ -1,0 +1,54 @@
+{
+  "desc": [
+    "@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{Staff}, Very Rare (Requires Attunement by a Druid, Sorcerer, Warlock, or Wizard)",
+    "You have Resistance to Fire damage while you hold this staff.",
+    "Spells. The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell.",
+    "SpellCharge Cost@UUID[Compendium.dnd5e.spells24.Item.phbsplBurningHan]{Burning Hands}1@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball}3@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofFire]{Wall of Fire}4Regaining Charges. The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll [[/r 1d20]]. On a 1, the staff crumbles into cinders and is destroyed."
+  ],
+  "special": [],
+  "index": "staff-of-fire",
+  "name": "staff of fire",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/24/weapons/staff/staff-of-fire.json",
+  "imageUrl": "/assets/atlas/equipment/images/staff-of-fire.webp",
+  "image": "/assets/atlas/equipment/images/staff-of-fire.webp",
+  "updated_at": "2026-07-12T19:00:28.902Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/weapon_properties/json/versatile.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

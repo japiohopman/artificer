@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This tube holds milky liquid with a strong alcohol smell. You can use an action to pour the contents of the tube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including Sovereign Glue."
+  ],
+  "special": [],
+  "index": "universal-solvent",
+  "name": "universal solvent",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 100000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/trinket/universal-solvent.json",
+  "imageUrl": "/assets/atlas/equipment/images/universal-solvent.webp",
+  "image": "/assets/atlas/equipment/images/universal-solvent.webp",
+  "updated_at": "2026-07-12T19:00:17.701Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

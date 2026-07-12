@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "These crystal lenses fit over the eyes. They have 3 charges. While wearing them, you can expend 1 charge as an action to cast the @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs]{Charm Person} spell (save DC 13) on a humanoid within 30 feet of you, provided that you and the target can see each other. The lenses regain all expended charges daily at dawn."
+  ],
+  "special": [],
+  "index": "eyes-of-charming",
+  "name": "eyes of charming",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "url": "/assets/atlas/equipment/json/14/equipment/eyes-of-charming.json",
+  "imageUrl": "/assets/atlas/equipment/images/eyes-of-charming.webp",
+  "image": "/assets/atlas/equipment/images/eyes-of-charming.webp",
+  "updated_at": "2026-07-12T19:00:12.904Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

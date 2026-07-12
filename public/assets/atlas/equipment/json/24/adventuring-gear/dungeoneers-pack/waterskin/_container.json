@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A Waterskin holds up to 4 pints. If you don't drink sufficient water, you risk &Reference[dehydration]."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "waterskin",
+  "kind": "container",
+  "cost": {
+    "quantity": 2,
+    "unit": "sp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/dungeoneers-pack/waterskin/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:21.983Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 4,
+  "capacity_weight": 30
+}

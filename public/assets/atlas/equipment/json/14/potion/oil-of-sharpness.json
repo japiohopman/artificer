@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This clear, gelatinous oil sparkles with tiny, ultrathin silver shards.",
+    "The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls."
+  ],
+  "special": [],
+  "index": "oil-of-sharpness",
+  "name": "oil of sharpness",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 20000,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/potion/oil-of-sharpness.json",
+  "imageUrl": "/assets/atlas/equipment/images/oil-of-sharpness.webp",
+  "image": "/assets/atlas/equipment/images/oil-of-sharpness.webp",
+  "updated_at": "2026-07-12T19:00:15.068Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

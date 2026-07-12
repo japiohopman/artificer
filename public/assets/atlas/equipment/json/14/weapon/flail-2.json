@@ -1,0 +1,46 @@
+{
+  "desc": [
+    "Whether through demonic blessing, celestial bequeathment, crazed experiment, or skillful craft, this weapon has been enhanced to bring more bloodshed by the bearer.",
+    "You have a bonus to attack and damage rolls made with this magic weapon."
+  ],
+  "special": [],
+  "index": "flail-2",
+  "name": "flail +2",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/weapon/flail-2.json",
+  "imageUrl": "/assets/atlas/equipment/images/flail-2.webp",
+  "image": "/assets/atlas/equipment/images/flail-2.webp",
+  "updated_at": "2026-07-12T19:00:18.667Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

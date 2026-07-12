@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "This item is a complete set of chess pieces and board. The board can also be used for variations of draughts and checkers.",
+    "If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+  ],
+  "special": [],
+  "index": "chess-set",
+  "name": "chess set",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/14/tool/chess-set.json",
+  "imageUrl": "/assets/atlas/equipment/images/chess-set.webp",
+  "image": "/assets/atlas/equipment/images/chess-set.webp",
+  "updated_at": "2026-07-12T19:00:16.220Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

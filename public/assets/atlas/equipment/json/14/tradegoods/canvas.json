@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "A square yard of canvas of average quality and weight. Used for all many of items and clothing.",
+    "Graded from 1 to 12, the lower the number, the better the quality and the heavier the weight. #1 quality canvas weighs around 1.7 pounds per square yard, while the weaker, lighter #12 can weigh only 0.7 pounds."
+  ],
+  "special": [],
+  "index": "canvas",
+  "name": "canvas",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "weight": 1.2,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/canvas.json",
+  "imageUrl": "/assets/atlas/equipment/images/canvas.webp",
+  "image": "/assets/atlas/equipment/images/canvas.webp",
+  "updated_at": "2026-07-12T19:00:29.052Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

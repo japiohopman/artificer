@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "While wearing this hat, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.A3q2gTNqG6fvNGrv]{Disguise Self} spell from it at will. The spell ends if the hat is removed."
+  ],
+  "special": [],
+  "index": "hat-of-disguise",
+  "name": "hat of disguise",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0.1,
+  "url": "/assets/atlas/equipment/json/14/equipment/hat-of-disguise.json",
+  "imageUrl": "/assets/atlas/equipment/images/hat-of-disguise.webp",
+  "image": "/assets/atlas/equipment/images/hat-of-disguise.webp",
+  "updated_at": "2026-07-12T19:00:12.948Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

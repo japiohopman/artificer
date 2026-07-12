@@ -1,0 +1,62 @@
+{
+  "desc": [
+    "A thick shaft of laminated wood is bowed by a taut string capable of launching deadly arrows at long distances.",
+    "When you roll a 20 on your attack roll with this magic weapon, your critical hit deals an extra 2d6 damage of the weapon's type."
+  ],
+  "special": [],
+  "index": "vicious-longbow",
+  "name": "vicious longbow",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/14/weapon/vicious-longbow.json",
+  "imageUrl": "/assets/atlas/equipment/images/vicious-longbow.webp",
+  "image": "/assets/atlas/equipment/images/vicious-longbow.webp",
+  "updated_at": "2026-07-12T19:00:20.845Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "ammunition",
+      "name": "ammunition",
+      "url": "/assets/atlas/weapon_properties/json/ammunition.json"
+    },
+    {
+      "index": "heavy",
+      "name": "heavy",
+      "url": "/assets/atlas/weapon_properties/json/heavy.json"
+    },
+    {
+      "index": "two-handed",
+      "name": "two-handed",
+      "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Ranged",
+  "category_range": "Martial Ranged",
+  "damage": {
+    "damage_dice": "1d8",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 150,
+    "long": 600
+  }
+}

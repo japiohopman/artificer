@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A chest holds 12 cubic feet or 300 pounds of gear."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "chest",
+  "kind": "container",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 25,
+  "url": "/assets/atlas/equipment/json/14/container/chest/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:12.443Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 300,
+  "capacity_weight": 30
+}

@@ -1,0 +1,46 @@
+{
+  "desc": [
+    "Weapon (@UUID[Compendium.dnd5e.equipment24.Item.phbwepMace000000]{Mace}). Rare (Requires Attunement)",
+    "This magic weapon has 3 charges and regains 1d3 expended charges daily at dawn. While holding the weapon, you can take a Magic action and expend 1 charge to release a wave of terror from it. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the &Reference[Frightened apply=false] condition for 1 minute. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't make Opportunity Attacks. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can take the Dodge action. At the end of each of its turns, a creature repeats the save, ending the effect on itself on a success."
+  ],
+  "special": [],
+  "index": "mace-of-terror",
+  "name": "mace of terror",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 4,
+  "url": "/assets/atlas/equipment/json/24/weapons/magical/mace-of-terror.json",
+  "imageUrl": "/assets/atlas/equipment/images/mace-of-terror.webp",
+  "image": "/assets/atlas/equipment/images/mace-of-terror.webp",
+  "updated_at": "2026-07-12T19:00:27.876Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

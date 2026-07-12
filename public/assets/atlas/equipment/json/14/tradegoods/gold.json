@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+    "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+  ],
+  "special": [],
+  "index": "gold",
+  "name": "gold",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 50,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/gold.json",
+  "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+  "image": "/assets/atlas/equipment/images/gold.webp",
+  "updated_at": "2026-07-12T19:00:29.152Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "category": "Standard Gear"
+}

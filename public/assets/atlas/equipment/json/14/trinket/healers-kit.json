@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check."
+  ],
+  "special": [],
+  "index": "healers-kit",
+  "name": "healer's kit",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/trinket/healers-kit.json",
+  "imageUrl": "/assets/atlas/equipment/images/healers-kit.webp",
+  "image": "/assets/atlas/equipment/images/healers-kit.webp",
+  "updated_at": "2026-07-12T19:00:17.245Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

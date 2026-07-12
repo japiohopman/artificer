@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "A creature for large-area farmers, cows require large areas of flat grazing meaning they are not as common as other livestock. However, they live longer, and give far more milk. They are also a source for much more durable leather that is less prone to cracking and is resistant to heat and dirt.",
+    "Depending in the gender and breed, adult cows can weigh between 1,000 and 1,800 pounds."
+  ],
+  "special": [],
+  "index": "cow",
+  "name": "cow",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1400,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/cow.json",
+  "imageUrl": "/assets/atlas/equipment/images/cow.webp",
+  "image": "/assets/atlas/equipment/images/cow.webp",
+  "updated_at": "2026-07-12T19:00:29.137Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,55 @@
+{
+  "desc": [
+    "A shining steel tip to puncture the hardiest of foe's defences, driven in by the force of a galloping steed. Although best suited for mounted combat, the lance can be brought to lethal effect on foot in the right hands.",
+    "Special. You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted."
+  ],
+  "special": [],
+  "index": "lance",
+  "name": "lance",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/14/weapon/lance.json",
+  "imageUrl": "/assets/atlas/equipment/images/lance.webp",
+  "image": "/assets/atlas/equipment/images/lance.webp",
+  "updated_at": "2026-07-12T19:00:19.324Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "/assets/atlas/weapon_properties/json/reach.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "sprite_index": 20,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d12",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

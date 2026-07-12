@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "While you wear this pendant, you stabilize whenever you are dying at the start of your turn. In addition, whenever you roll a Hit Die to regain hit points, double the number of hit points it restores."
+  ],
+  "special": [],
+  "index": "periapt-of-wound-closure",
+  "name": "periapt of wound closure",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "url": "/assets/atlas/equipment/json/14/equipment/periapt-of-wound-closure.json",
+  "imageUrl": "/assets/atlas/equipment/images/periapt-of-wound-closure.webp",
+  "image": "/assets/atlas/equipment/images/periapt-of-wound-closure.webp",
+  "updated_at": "2026-07-12T19:00:13.287Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

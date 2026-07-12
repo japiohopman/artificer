@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wondrous Item, Legendary",
+    "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.",
+    "You can take a Magic action to unfold the Well of Many Worlds and place it on a solid surface, whereupon it forms a two-way, 6-foot-diameter, circular portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads. The portal remains open until a creature within 5 feet of it takes a Magic action to close it by taking hold of the edges of the cloth and folding it up.",
+    "Once the Well of Many Worlds has opened a portal, it can't do so again for [[/r 1d8 # Hours]] hours."
+  ],
+  "special": [],
+  "index": "well-of-many-worlds",
+  "name": "well of many worlds",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/well-of-many-worlds.json",
+  "imageUrl": "/assets/atlas/equipment/images/well-of-many-worlds.webp",
+  "image": "/assets/atlas/equipment/images/well-of-many-worlds.webp",
+  "updated_at": "2026-07-12T19:00:26.880Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

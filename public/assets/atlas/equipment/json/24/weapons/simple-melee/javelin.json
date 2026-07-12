@@ -1,0 +1,54 @@
+{
+  "desc": [
+    "[[/attack extended]]. [[/damage extended]]."
+  ],
+  "special": [],
+  "index": "javelin",
+  "name": "javelin",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 5,
+    "unit": "sp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/weapons/simple-melee/javelin.json",
+  "imageUrl": "/assets/atlas/equipment/images/javelin.webp",
+  "image": "/assets/atlas/equipment/images/javelin.webp",
+  "updated_at": "2026-07-12T19:00:28.644Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet5.webp",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d6",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 30,
+    "long": 120
+  }
+}

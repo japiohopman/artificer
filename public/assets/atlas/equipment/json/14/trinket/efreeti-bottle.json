@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This painted brass bottle weighs 1 pound. When you use an action to remove the stopper, a cloud of thick smoke flows out of the bottle. At the end of your turn, the smoke disappears with a flash of harmless fire, and an @UUID[Compendium.dnd5e.monsters.Actor.LTomFUTBrkRi0Pj5]{Efreeti} appears in an unoccupied space within 30 feet of you.",
+    "The first time the bottle is opened, the GM rolls to determine what happens from the @UUID[Compendium.dnd5e.tables.RollTable.yZMFNfocj5qyVuOC]{Efreeti Bottle} table."
+  ],
+  "special": [],
+  "index": "efreeti-bottle",
+  "name": "efreeti bottle",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/trinket/efreeti-bottle.json",
+  "imageUrl": "/assets/atlas/equipment/images/efreeti-bottle.webp",
+  "image": "/assets/atlas/equipment/images/efreeti-bottle.webp",
+  "updated_at": "2026-07-12T19:00:17.046Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

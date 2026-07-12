@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "A useful creature for small-area farmers and highland dwellers, though not quite as nimble as goats, they have the valuable ability to be sheared every year, giving people a source of clothing, rugs, and throws for beds and chairs. Their larger size also means they are more valuable for slaughter.",
+    "Depending on the breed, adult sheep can range from 100 pounds all the way up to 350 pounds."
+  ],
+  "special": [],
+  "index": "sheep",
+  "name": "sheep",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 225,
+  "url": "/assets/atlas/equipment/json/14/tradegoods/sheep.json",
+  "imageUrl": "/assets/atlas/equipment/images/sheep.webp",
+  "image": "/assets/atlas/equipment/images/sheep.webp",
+  "updated_at": "2026-07-12T19:00:29.245Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

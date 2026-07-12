@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "Usage Requirement: Held",
+    "A @UUID[Compendium.dnd5e.equipment24.Item.phbagHolySymbolV]{Holy Symbol} takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus."
+  ],
+  "special": [],
+  "index": "reliquary",
+  "name": "reliquary",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/spellcasting-focuses/holy-symbol/reliquary.json",
+  "imageUrl": "/assets/atlas/equipment/images/reliquary.webp",
+  "image": "/assets/atlas/equipment/images/reliquary.webp",
+  "updated_at": "2026-07-12T19:00:23.072Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 21,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+  "slot": [
+    "focus"
+  ]
+}

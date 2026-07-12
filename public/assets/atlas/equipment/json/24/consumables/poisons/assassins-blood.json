@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Ingested Poison",
+    "A creature subjected to Assassin's Blood makes a DC 10 Constitution saving throw. On a failed save, the creature takes 6 (1d12) Poison damage and has the &Reference[Poisoned apply=false] condition for 24 hours. On a successful save, the creature takes half as much damage only."
+  ],
+  "special": [],
+  "index": "assassins-blood",
+  "name": "assassin's blood",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 150,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/poisons/assassins-blood.json",
+  "imageUrl": "/assets/atlas/equipment/images/assassins-blood.webp",
+  "image": "/assets/atlas/equipment/images/assassins-blood.webp",
+  "updated_at": "2026-07-12T19:00:23.912Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

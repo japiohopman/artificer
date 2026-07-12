@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement by a cleric, druid, or paladin)",
+    "This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.",
+    "Six types of magic beads exist. The GM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.",
+    "Use the @UUID[Compendium.dnd5e.tables.RollTable.XHTUTUXdyzcPbodw]{Necklace of Prayer Beads} table and refer to the table below for detailed descriptions on each bead",
+    "d20Bead of…SpellGuide Price per Bead (gp)1-6Blessing@UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless}2,0007-12Curing@UUID[Compendium.dnd5e.spells.Item.uUWb1wZgtMou0TVP]{Cure Wounds} (2nd level) or @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{Lesser Restoration}4,00013-16Favor@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration}32,00017-18Smiting@UUID[Compendium.dnd5e.spells.Item.7UwUjJ6owIQkEPrs]{Branding Smite}1,50019Summons@UUID[Compendium.dnd5e.spells.Item.fkREcytuZ8sngWtC]{Planar Ally}128,00020Wind Walking@UUID[Compendium.dnd5e.spells.Item.8PJAsHmbu6UgDHC0]{Wind Walk}96,000Foundry Note",
+    "Each activity uses correspond to the number of beads of that type available, and should be adjusted to match the proper values. The item's uses as a whole track the number of Beads of Curing.",
+    "Additionally, the guide price is a guide only and should be adjusted accordingly to reflect the Dungeon Master's world."
+  ],
+  "special": [],
+  "index": "necklace-of-prayer-beads",
+  "name": "necklace of prayer beads",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "url": "/assets/atlas/equipment/json/14/equipment/necklace-of-prayer-beads.json",
+  "imageUrl": "/assets/atlas/equipment/images/necklace-of-prayer-beads.webp",
+  "image": "/assets/atlas/equipment/images/necklace-of-prayer-beads.webp",
+  "updated_at": "2026-07-12T19:00:13.125Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

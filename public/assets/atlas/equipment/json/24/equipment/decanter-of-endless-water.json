@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Uncommon",
+    "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.",
+    "You can take a Magic action to remove the stopper and issue one of three command words, whereupon an amount of @UUID[Compendium.dnd5e.equipment24.Item.dmgspWaterfresh0]{fresh water} or @UUID[Compendium.dnd5e.equipment24.Item.dmgspWatersalt00]{salt water} (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following command words:",
+    "Splash. The decanter produces 1 gallon of water.",
+    "Fountain. The decanter produces 5 gallons of water.",
+    "Geyser. The decanter produces 30 gallons of water that gushes forth in a Line 30 feet long and 1 foot wide. If you're holding the decanter, you can aim the geyser in one direction (no action required). One creature of your choice in the Line must succeed on a DC 13 Strength saving throw or take 1d4 Bludgeoning damage and have the &Reference[Prone] condition. Instead of a creature, you can target one object in the Line that isn't being worn or carried and that weighs no more than 200 pounds. The object is knocked over by the geyser."
+  ],
+  "special": [],
+  "index": "decanter-of-endless-water",
+  "name": "decanter of endless water",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/equipment/decanter-of-endless-water.json",
+  "imageUrl": "/assets/atlas/equipment/images/decanter-of-endless-water.webp",
+  "image": "/assets/atlas/equipment/images/decanter-of-endless-water.webp",
+  "updated_at": "2026-07-12T19:00:25.202Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

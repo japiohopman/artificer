@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "A placeholder for the non-SRD items introduced on pg. 159, with the d100 table on 160-161."
+  ],
+  "special": [],
+  "index": "trinket",
+  "name": "trinket",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/loot/trinket.json",
+  "imageUrl": "/assets/atlas/equipment/images/trinket.webp",
+  "image": "/assets/atlas/equipment/images/trinket.webp",
+  "updated_at": "2026-07-12T19:00:14.968Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "category": "Standard Gear",
+  "slot": [
+    "extra"
+  ]
+}

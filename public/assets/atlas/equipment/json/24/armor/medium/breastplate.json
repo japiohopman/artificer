@@ -1,0 +1,41 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "breastplate",
+  "name": "breastplate",
+  "kind": "armor",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 20,
+  "url": "/assets/atlas/equipment/json/24/armor/medium/breastplate.json",
+  "imageUrl": "/assets/atlas/equipment/images/breastplate.webp",
+  "image": "/assets/atlas/equipment/images/breastplate.webp",
+  "updated_at": "2026-07-12T19:00:23.503Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 12,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+  "slot": [
+    "chest"
+  ],
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 14,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

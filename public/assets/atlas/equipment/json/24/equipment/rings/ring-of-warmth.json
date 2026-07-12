@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ring, Uncommon (Requires Attunement)",
+    "If you take Cold damage while wearing this ring, the ring reduces the damage you take by [[/r 2d8]].",
+    "In addition, while wearing this ring, you and everything you wear and carry are unharmed by temperatures of 0 degrees Fahrenheit or lower."
+  ],
+  "special": [],
+  "index": "ring-of-warmth",
+  "name": "ring of warmth",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/ring-of-warmth.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-warmth.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-warmth.webp",
+  "updated_at": "2026-07-12T19:00:26.425Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

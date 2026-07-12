@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "An @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{Arcane Focus} is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus."
+  ],
+  "special": [],
+  "index": "crystal",
+  "name": "crystal",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/spellcasting-focuses/arcane-focus/crystal.json",
+  "imageUrl": "/assets/atlas/equipment/images/crystal.webp",
+  "image": "/assets/atlas/equipment/images/crystal.webp",
+  "updated_at": "2026-07-12T19:00:22.967Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 22,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+  "category": "Arcane Foci",
+  "slot": [
+    "focus"
+  ]
+}

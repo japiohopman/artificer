@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.",
+    "You can use an action to unfold and place the Well of Many Worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the GM decides where it leads. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once a Well of Many Worlds has opened a portal, it can't do so again for 1d8 hours."
+  ],
+  "special": [],
+  "index": "well-of-many-worlds",
+  "name": "well of many worlds",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/trinket/well-of-many-worlds.json",
+  "imageUrl": "/assets/atlas/equipment/images/well-of-many-worlds.webp",
+  "image": "/assets/atlas/equipment/images/well-of-many-worlds.webp",
+  "updated_at": "2026-07-12T19:00:17.706Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

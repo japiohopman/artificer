@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A vial can hold up to 4 ounces of liquid."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "vial",
+  "kind": "container",
+  "cost": {
+    "quantity": 1,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/container/vial/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:12.614Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 0.25,
+  "capacity_weight": 30
+}

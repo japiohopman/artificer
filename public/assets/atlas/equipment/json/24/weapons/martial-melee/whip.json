@@ -1,0 +1,61 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "whip",
+  "name": "whip",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/24/weapons/martial-melee/whip.json",
+  "imageUrl": "/assets/atlas/equipment/images/whip.webp",
+  "image": "/assets/atlas/equipment/images/whip.webp",
+  "updated_at": "2026-07-12T19:00:28.505Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/json/finesse.json"
+    },
+    {
+      "index": "reach",
+      "name": "reach",
+      "url": "/assets/atlas/weapon_properties/json/reach.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet10.webp",
+  "category": "Weapon",
+  "slot": [
+    "main-hand"
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Martial",
+  "weapon_range": "Melee",
+  "category_range": "Martial Melee",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "slashing",
+      "name": "slashing",
+      "url": "/assets/atlas/damage_types/json/slashing.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

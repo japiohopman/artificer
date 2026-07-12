@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A book containing prayers and incantations dedicated to a specific power for the faithful to follow."
+  ],
+  "special": [],
+  "index": "prayer-book",
+  "name": "prayer book",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/14/loot/prayer-book.json",
+  "imageUrl": "/assets/atlas/equipment/images/prayer-book.webp",
+  "image": "/assets/atlas/equipment/images/prayer-book.webp",
+  "updated_at": "2026-07-12T19:00:14.767Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

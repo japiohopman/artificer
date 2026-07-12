@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, the other end darts forward to entangle a creature you can see within 20 feet of you. The target must succeed on a DC 15 Dexterity saving throw or become restrained."
+  ],
+  "special": [],
+  "index": "rope-of-entanglement",
+  "name": "rope of entanglement",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/trinket/rope-of-entanglement.json",
+  "imageUrl": "/assets/atlas/equipment/images/rope-of-entanglement.webp",
+  "image": "/assets/atlas/equipment/images/rope-of-entanglement.webp",
+  "updated_at": "2026-07-12T19:00:17.530Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

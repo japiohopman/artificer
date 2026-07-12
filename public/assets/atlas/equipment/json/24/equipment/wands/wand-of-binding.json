@@ -1,0 +1,34 @@
+{
+  "desc": [
+    "Wand, Rare (Requires Attunement)",
+    "This wand has 7 charges.",
+    "Spells. While holding the wand, you can cast one of the spells (save DC 17) on the following table from it. The table indicates how many charges you must expend to cast the spell.",
+    "Spell",
+    "Charge Cost",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{Hold Monster}",
+    "5",
+    "@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldPerson]{Hold Person}",
+    "2",
+    "Regaining Charges. The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll [[/r 1d20]]. On a 1, the wand crumbles into ashes and is destroyed."
+  ],
+  "special": [],
+  "index": "wand-of-binding",
+  "name": "wand of binding",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/wands/wand-of-binding.json",
+  "imageUrl": "/assets/atlas/equipment/images/wand-of-binding.webp",
+  "image": "/assets/atlas/equipment/images/wand-of-binding.webp",
+  "updated_at": "2026-07-12T19:00:26.700Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

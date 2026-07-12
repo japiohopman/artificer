@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage."
+  ],
+  "special": [],
+  "index": "acid-vial",
+  "name": "acid (vial)",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 25,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/potion/acid-vial.json",
+  "imageUrl": "/assets/atlas/equipment/images/acid-vial.webp",
+  "image": "/assets/atlas/equipment/images/acid-vial.webp",
+  "updated_at": "2026-07-12T19:00:15.016Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

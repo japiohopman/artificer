@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "Increase one of your ability scores by 2, to a maximum of 24."
+  ],
+  "special": [],
+  "index": "star",
+  "name": "star",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 0,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/mysterious-deck-cards/star.json",
+  "imageUrl": "/assets/atlas/equipment/images/star.webp",
+  "image": "/assets/atlas/equipment/images/star.webp",
+  "updated_at": "2026-07-12T19:00:25.904Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

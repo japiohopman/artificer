@@ -1,0 +1,54 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "light-hammer",
+  "name": "light hammer",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 2,
+    "unit": "gp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/weapons/simple-melee/light-hammer.json",
+  "imageUrl": "/assets/atlas/equipment/images/light-hammer.webp",
+  "image": "/assets/atlas/equipment/images/light-hammer.webp",
+  "updated_at": "2026-07-12T19:00:28.650Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/json/light.json"
+    },
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 20,
+    "long": 60
+  }
+}

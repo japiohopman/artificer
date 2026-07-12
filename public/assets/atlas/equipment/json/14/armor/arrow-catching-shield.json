@@ -1,0 +1,38 @@
+{
+  "desc": [
+    "You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead."
+  ],
+  "special": [],
+  "index": "arrow-catching-shield",
+  "name": "arrow-catching shield",
+  "kind": "shield",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 6,
+  "url": "/assets/atlas/equipment/json/14/armor/arrow-catching-shield.json",
+  "imageUrl": "/assets/atlas/equipment/images/arrow-catching-shield.webp",
+  "image": "/assets/atlas/equipment/images/arrow-catching-shield.webp",
+  "updated_at": "2026-07-12T19:00:11.864Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "shield",
+    "name": "shield",
+    "url": "/assets/atlas/equipment_categories/json/shield.json"
+  },
+  "armor_category": "Shield",
+  "armor_class": {
+    "base": 2,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

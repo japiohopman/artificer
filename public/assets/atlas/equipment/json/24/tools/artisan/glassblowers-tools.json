@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Ability: Intelligence",
+    "Utilize: Discern what a glass object held in the past 24 hours (DC 15)",
+    "Craft: @UUID[Compendium.dnd5e.items.Item.HZp69hhyNZUUCipF]{Glass Bottle}, @UUID[Compendium.dnd5e.equipment24.Item.phbagMagnifyingG]{Magnifying Glass}, @UUID[Compendium.dnd5e.equipment24.Item.phbagSpyglass100]{Spyglass}, @UUID[Compendium.dnd5e.equipment24.Item.phbagVial0000000]{Vial}"
+  ],
+  "special": [],
+  "index": "glassblowers-tools",
+  "name": "glassblower's tools",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 30,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/tools/artisan/glassblowers-tools.json",
+  "imageUrl": "/assets/atlas/equipment/images/glassblowers-tools.webp",
+  "image": "/assets/atlas/equipment/images/glassblowers-tools.webp",
+  "updated_at": "2026-07-12T19:00:27.095Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

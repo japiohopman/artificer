@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
+  ],
+  "special": [],
+  "index": "arrow",
+  "name": "arrow",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 5,
+    "unit": "cp"
+  },
+  "weight": 0.05,
+  "url": "/assets/atlas/equipment/json/14/ammunition/arrow.json",
+  "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
+  "image": "/assets/atlas/equipment/images/arrow.webp",
+  "updated_at": "2026-07-12T19:00:11.722Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 8,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+  "category": "Ammunition",
+  "slot": [
+    "ammo"
+  ]
+}

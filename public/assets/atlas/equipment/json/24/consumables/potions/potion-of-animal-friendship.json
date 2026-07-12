@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Potion, Uncommon",
+    "When you drink this potion, you can cast the level 3 version of the @UUID[Compendium.dnd5e.spells24.Item.phbsplAnimalFrie]{Animal Friendship} spell (save DC 13).",
+    "Agitating this potion's muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair."
+  ],
+  "special": [],
+  "index": "potion-of-animal-friendship",
+  "name": "potion of animal friendship",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200,
+    "unit": "gp"
+  },
+  "weight": 0.5,
+  "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-animal-friendship.json",
+  "imageUrl": "/assets/atlas/equipment/images/potion-of-animal-friendship.webp",
+  "image": "/assets/atlas/equipment/images/potion-of-animal-friendship.webp",
+  "updated_at": "2026-07-12T19:00:24.085Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "While wearing this ring, you can speak its command word as an action to summon a particular @UUID[Compendium.dnd5e.monsters.Actor.5P1VGAZQwOilwZQf]{Djinni} from the Elemental Plane of Air. The djinni appears in an unoccupied space you choose within 120 feet of you. It remains as long as you concentrate (as if concentrating on a spell), to a maximum of 1 hour, or until it drops to 0 hit points. It then returns to its home plane.",
+    "While summoned, the djinni is friendly to you and your companions. It obeys any commands you give it, no matter what language you use. If you fail to command it, the djinni defends itself against attackers but takes no other actions.",
+    "After the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies."
+  ],
+  "special": [],
+  "index": "ring-of-djinni-summoning",
+  "name": "ring of djinni summoning",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/14/ring/ring-of-djinni-summoning.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-djinni-summoning.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-djinni-summoning.webp",
+  "updated_at": "2026-07-12T19:00:15.532Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

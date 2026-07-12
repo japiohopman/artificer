@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Ring, Legendary (Requires Attunement)",
+    "While wearing this ring, you can take a Magic action to give yourself the &Reference[Invisible] condition. You remain Invisible until the ring is removed or until you take a Bonus Action to become visible again."
+  ],
+  "special": [],
+  "index": "ring-of-invisibility",
+  "name": "ring of invisibility",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/equipment/rings/ring-of-invisibility.json",
+  "imageUrl": "/assets/atlas/equipment/images/ring-of-invisibility.webp",
+  "image": "/assets/atlas/equipment/images/ring-of-invisibility.webp",
+  "updated_at": "2026-07-12T19:00:26.276Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,29 @@
+{
+  "desc": [
+    "Wondrous Item, Very Rare (Requires Attunement)",
+    "This candle's magic is activated when the candle is lit, which requires a Magic action. After burning for 4 hours, the candle is destroyed. You can snuff it out early for use at a later time. Deduct the time it burned in increments of 1 minute from its total burn time.",
+    "While lit, the candle sheds Dim Light in a 30-foot radius. While you are within that light, you have Advantage on D20 Tests. In addition, a Cleric or Druid in the light can cast level 1 spells they have prepared without expending spell slots.",
+    "Alternatively, when you light the candle for the first time, you can cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGate000000]{Gate} with it. Doing so destroys the candle. The portal created by the spell links to a particular Outer Plane chosen by the GM or determined by rolling on the following table.",
+    "@Embed[Compendium.dnd5e.tables24.RollTable.dmgCandleOfInvoc rollable]"
+  ],
+  "special": [],
+  "index": "candle-of-invocation",
+  "name": "candle of invocation",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 20000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/candle-of-invocation.json",
+  "imageUrl": "/assets/atlas/equipment/images/candle-of-invocation.webp",
+  "image": "/assets/atlas/equipment/images/candle-of-invocation.webp",
+  "updated_at": "2026-07-12T19:00:23.648Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

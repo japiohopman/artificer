@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your DM may decide that better locks are available for higher prices."
+  ],
+  "special": [],
+  "index": "lock",
+  "name": "lock",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/trinket/lock.json",
+  "imageUrl": "/assets/atlas/equipment/images/lock.webp",
+  "image": "/assets/atlas/equipment/images/lock.webp",
+  "updated_at": "2026-07-12T19:00:17.398Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
+  "slot": [
+    "extra"
+  ]
+}

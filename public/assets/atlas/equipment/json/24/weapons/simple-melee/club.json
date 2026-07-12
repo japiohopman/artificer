@@ -1,0 +1,55 @@
+{
+  "desc": [],
+  "special": [],
+  "index": "club",
+  "name": "club",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 1,
+    "unit": "sp"
+  },
+  "weight": 2,
+  "url": "/assets/atlas/equipment/json/24/weapons/simple-melee/club.json",
+  "imageUrl": "/assets/atlas/equipment/images/club.webp",
+  "image": "/assets/atlas/equipment/images/club.webp",
+  "updated_at": "2026-07-12T19:00:28.614Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "light",
+      "name": "light",
+      "url": "/assets/atlas/weapon_properties/json/light.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand",
+    "off_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 13,
+  "sprite_sheet": "/assets/atlas/equipment/sprites/equipment_sheet3.0webp",
+  "slot": [
+    "main-hand"
+  ],
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Melee",
+  "category_range": "Simple Melee",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "bludgeoning",
+      "name": "bludgeoning",
+      "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+    }
+  },
+  "range": {
+    "normal": 5,
+    "long": null
+  }
+}

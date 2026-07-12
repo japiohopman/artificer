@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This necklace has 1d6 + 3 beads hanging from it. You can use an action to detach a bead and throw it up to 60 feet away. When it reaches the end of its trajectory, the bead detonates as a 3rd-level @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} spell (save DC 15).",
+    "You can hurl multiple beads, or even the whole necklace, as one action. When you do so, increase the level of the fireball by 1 for each bead beyond the first.",
+    "Foundry Note",
+    "The 9 charges represent the maximum number of beads possible to find; please adjust as required. The Other Formula button can be used to roll the additional damage for extra beads thrown.",
+    "Additionally, here is a price guide depending on the number of beads still remaining. These prices are a guide only and should be adjusted accordingly to reflect the Dungeon Master's world:",
+    "Number of BeadsPrice (gp)830,720715,360676805384041600396024801300"
+  ],
+  "special": [],
+  "index": "necklace-of-fireballs",
+  "name": "necklace of fireballs",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0.01,
+  "url": "/assets/atlas/equipment/json/14/trinket/necklace-of-fireballs.json",
+  "imageUrl": "/assets/atlas/equipment/images/necklace-of-fireballs.webp",
+  "image": "/assets/atlas/equipment/images/necklace-of-fireballs.webp",
+  "updated_at": "2026-07-12T19:00:17.460Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

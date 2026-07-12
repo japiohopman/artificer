@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "Inhaled Poison",
+    "A creature subjected to Essence of Ether must succeed on a DC 15 Constitution saving throw or have the &Reference[Poisoned apply=false] condition for 8 hours. The creature also has the &Reference[Unconscious apply=false] condition while Poisoned in this way. The creature wakes up if it takes damage or if another creature takes an action to shake it awake."
+  ],
+  "special": [],
+  "index": "essence-of-ether",
+  "name": "essence of ether",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 300,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/poisons/essence-of-ether.json",
+  "imageUrl": "/assets/atlas/equipment/images/essence-of-ether.webp",
+  "image": "/assets/atlas/equipment/images/essence-of-ether.webp",
+  "updated_at": "2026-07-12T19:00:23.928Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

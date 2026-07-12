@@ -1,0 +1,57 @@
+{
+  "desc": [
+    "Whether through demonic blessing, celestial bequeathment, crazed experiment, or skillful craft, this weapon has been enhanced to bring more bloodshed by the bearer.",
+    "You have a bonus to attack and damage rolls made with this magic weapon."
+  ],
+  "special": [],
+  "index": "dart-2",
+  "name": "dart +2",
+  "kind": "weapon",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 0.25,
+  "url": "/assets/atlas/equipment/json/14/weapon/dart-2.json",
+  "imageUrl": "/assets/atlas/equipment/images/dart-2.webp",
+  "image": "/assets/atlas/equipment/images/dart-2.webp",
+  "updated_at": "2026-07-12T19:00:18.430Z",
+  "contents": [],
+  "properties": [
+    {
+      "index": "finesse",
+      "name": "finesse",
+      "url": "/assets/atlas/weapon_properties/json/finesse.json"
+    },
+    {
+      "index": "thrown",
+      "name": "thrown",
+      "url": "/assets/atlas/weapon_properties/json/thrown.json"
+    }
+  ],
+  "equipSlots": [
+    "main_hand"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "weapon",
+    "name": "weapon",
+    "url": "/assets/atlas/equipment_categories/json/weapon.json"
+  },
+  "weapon_category": "Simple",
+  "weapon_range": "Ranged",
+  "category_range": "Simple Ranged",
+  "damage": {
+    "damage_dice": "1d4",
+    "damage_type": {
+      "index": "piercing",
+      "name": "piercing",
+      "url": "/assets/atlas/damage_types/json/piercing.json"
+    }
+  },
+  "range": {
+    "normal": 20,
+    "long": 60
+  }
+}

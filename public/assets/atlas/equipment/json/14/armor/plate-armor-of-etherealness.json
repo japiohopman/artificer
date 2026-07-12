@@ -1,0 +1,40 @@
+{
+  "desc": [
+    "(Requires attunement)",
+    "Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body. This particular armor has been inscribed with certain magical runes or other means to imbue power upon it.",
+    "While you're wearing this armor, you can speak its command word as an action to gain the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn."
+  ],
+  "special": [],
+  "index": "plate-armor-of-etherealness",
+  "name": "plate armor of etherealness",
+  "kind": "armor",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 65,
+  "url": "/assets/atlas/equipment/json/14/armor/plate-armor-of-etherealness.json",
+  "imageUrl": "/assets/atlas/equipment/images/plate-armor-of-etherealness.webp",
+  "image": "/assets/atlas/equipment/images/plate-armor-of-etherealness.webp",
+  "updated_at": "2026-07-12T19:00:12.188Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Heavy",
+  "armor_class": {
+    "base": 18,
+    "dex_bonus": false,
+    "max_bonus": null
+  },
+  "str_minimum": 15,
+  "stealth_disadvantage": false
+}

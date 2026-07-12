@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Very Rare",
+    "You can make this carpet hover and fly by taking a Magic action and using the carpet's command word. It moves according to your directions if you are within 30 feet of it.",
+    "Four sizes of Carpet of Flying exist. The GM chooses the size of a given carpet or determines it randomly by rolling on the following table. A carpet can carry up to twice the weight shown on the table, but its Fly Speed is halved if it carries more than its normal capacity.",
+    "@Embed[Compendium.dnd5e.tables24.RollTable.dmgCarpetOfFlyin rollable]",
+    "Foundry Note",
+    "The four provided summoning activities represent the possible sizes of the carpet. When the GM chooses a size, the three activities corresponding to the other sizes should be deleted."
+  ],
+  "special": [],
+  "index": "carpet-of-flying",
+  "name": "carpet of flying",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 5,
+  "url": "/assets/atlas/equipment/json/24/equipment/carpet-of-flying.json",
+  "imageUrl": "/assets/atlas/equipment/images/carpet-of-flying.webp",
+  "image": "/assets/atlas/equipment/images/carpet-of-flying.webp",
+  "updated_at": "2026-07-12T19:00:25.076Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,25 @@
+{
+  "desc": [
+    "A Healer's Kit has ten uses. As a Utilize action, you can expend one of its uses to stabilize an Unconscious creature that has 0 Hit Points without needing to make a Wisdom (Medicine) check."
+  ],
+  "special": [],
+  "index": "healers-kit",
+  "name": "healer's kit",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 5,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/healers-kit.json",
+  "imageUrl": "/assets/atlas/equipment/images/healers-kit.webp",
+  "image": "/assets/atlas/equipment/images/healers-kit.webp",
+  "updated_at": "2026-07-12T19:00:22.422Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

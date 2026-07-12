@@ -1,0 +1,30 @@
+{
+  "desc": [
+    "Wondrous Item, Legendary",
+    "This viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with @UUID[Compendium.dnd5e.equipment24.Item.dmgOilOfSlipperi]{Oil of Slipperiness}. When found, a container contains 1d6 + 1 ounces.",
+    "One ounce of the glue can cover a 1-foot square surface. Applying an ounce of Sovereign Glue takes a Utilize action, and the applied glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of @UUID[Compendium.dnd5e.equipment24.Item.dmgUniversalSolv]{Universal Solvent} or @UUID[Compendium.dnd5e.equipment24.Item.dmgOilOfEthereal]{Oil of Etherealness}, or with a @UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{Wish} spell.",
+    "Foundry Note",
+    "This item includes 7 limited uses. The Determine Ounces activity can be used to determine the number of ounces equivalent to 1d6 + 1.",
+    "The Apply Glue activity allows you to select the number of ounces you're applying."
+  ],
+  "special": [],
+  "index": "sovereign-glue",
+  "name": "sovereign glue",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 100000,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/sovereign-glue.json",
+  "imageUrl": "/assets/atlas/equipment/images/sovereign-glue.webp",
+  "image": "/assets/atlas/equipment/images/sovereign-glue.webp",
+  "updated_at": "2026-07-12T19:00:24.411Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

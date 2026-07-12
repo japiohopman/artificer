@@ -1,0 +1,28 @@
+{
+  "desc": [
+    "Wondrous item, (requires attunement)",
+    "The crystal ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying} spell (save DC 17) with it.",
+    "While Scrying with the Crystal Ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{Suggestion} spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this Suggestion to maintain it during its duration, but it ends if Scrying ends.",
+    "Once used, the Suggestion power of the Crystal Ball can't be used again until the next dawn."
+  ],
+  "special": [],
+  "index": "crystal-ball-of-telepathy",
+  "name": "crystal ball of telepathy",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 200000,
+    "unit": "gp"
+  },
+  "weight": 7,
+  "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-telepathy.json",
+  "imageUrl": "/assets/atlas/equipment/images/crystal-ball-of-telepathy.webp",
+  "image": "/assets/atlas/equipment/images/crystal-ball-of-telepathy.webp",
+  "updated_at": "2026-07-12T19:00:16.931Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

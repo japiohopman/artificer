@@ -1,0 +1,26 @@
+{
+  "desc": [
+    "A Bolt of Slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both Bolts of Dragon Slaying and Bolts of Blue Dragon Slaying. If a creature belonging to the type, race, or group associated with a bolt of slaying takes damage from the bolt, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one.",
+    "Once a Bolt of Slaying deals its extra damage to a creature, it becomes a nonmagical bolt."
+  ],
+  "special": [],
+  "index": "bolt-of-slaying",
+  "name": "bolt of slaying",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 20000,
+    "unit": "gp"
+  },
+  "weight": 0.075,
+  "url": "/assets/atlas/equipment/json/14/ammunition/bolt-of-slaying.json",
+  "imageUrl": "/assets/atlas/equipment/images/bolt-of-slaying.webp",
+  "image": "/assets/atlas/equipment/images/bolt-of-slaying.webp",
+  "updated_at": "2026-07-12T19:00:11.735Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

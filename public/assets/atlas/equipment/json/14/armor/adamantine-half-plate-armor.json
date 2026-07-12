@@ -1,0 +1,39 @@
+{
+  "desc": [
+    "This armor is reinforced with adamantine, one of the hardest substances in existence.",
+    "While you're wearing it, any critical hit against you becomes a normal hit."
+  ],
+  "special": [],
+  "index": "adamantine-half-plate-armor",
+  "name": "adamantine half plate armor",
+  "kind": "armor",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 40,
+  "url": "/assets/atlas/equipment/json/14/armor/adamantine-half-plate-armor.json",
+  "imageUrl": "/assets/atlas/equipment/images/adamantine-half-plate-armor.webp",
+  "image": "/assets/atlas/equipment/images/adamantine-half-plate-armor.webp",
+  "updated_at": "2026-07-12T19:00:11.822Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "chest"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "armor",
+    "name": "armor",
+    "url": "/assets/atlas/equipment_categories/json/armor.json"
+  },
+  "armor_category": "Medium",
+  "armor_class": {
+    "base": 15,
+    "dex_bonus": true,
+    "max_bonus": 2
+  },
+  "str_minimum": 0,
+  "stealth_disadvantage": false
+}

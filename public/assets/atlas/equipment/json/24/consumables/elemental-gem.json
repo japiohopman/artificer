@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous Item, Uncommon",
+    "This gem contains a mote of elemental energy. When you take a Utilize action to break the gem, an elemental is summoned, and the gem ceases to be magical. The elemental appears in an unoccupied space as close to the broken gem as possible, understands your languages, obeys your commands, and takes its turn immediately after you on your Initiative count. The elemental disappears after 1 hour, when it dies, or when you dismiss it as a Bonus Action. The type of gem determines the elemental, as shown in the following table.",
+    "GemSummoned Elemental@UUID[Compendium.dnd5e.equipment24.Item.dmgBlueElemental]{Blue sapphire}@UUID[Compendium.dnd5e.actors24.Actor.mmAirElemental00]{Air Elemental}@UUID[Compendium.dnd5e.equipment24.Item.dmgEmeraldElemen]{Emerald}@UUID[Compendium.dnd5e.actors24.Actor.mmWaterElemental]{Water Elemental}@UUID[Compendium.dnd5e.equipment24.Item.dmgRedElementalG]{Red corundum}@UUID[Compendium.dnd5e.actors24.Actor.mmFireElemental0]{Fire Elemental}@UUID[Compendium.dnd5e.equipment24.Item.dmgYellowElement]{Yellow diamond}@UUID[Compendium.dnd5e.actors24.Actor.mmEarthElemental]{Earth Elemental}"
+  ],
+  "special": [],
+  "index": "elemental-gem",
+  "name": "elemental gem",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 0,
+  "url": "/assets/atlas/equipment/json/24/consumables/elemental-gem.json",
+  "imageUrl": "/assets/atlas/equipment/images/elemental-gem.webp",
+  "image": "/assets/atlas/equipment/images/elemental-gem.webp",
+  "updated_at": "2026-07-12T19:00:23.694Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This robe has cloth patches of various shapes and colors covering it. While wearing the robe, you can use an action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.",
+    "The robe has the following patches:",
+    "x2 Dagger patchesx2 Bullseye lantern (filled and lit) patchesx2 Steel mirror patchesx2 10-foot pole patchesx2 Hempen rope (50 feet, coiled) patchesx2 Sack patchesIn addition, the robe has [[/r 4d4]] other patches. The GM chooses the patches or determines them randomly from the @UUID[Compendium.dnd5e.tables.RollTable.CTGxcd51szehUGBn]{Robe of Useful Items} table.",
+    "Foundry Note",
+    "It is recommended to delete items here as necessary to track patches left.",
+    "The price guide has been calculated at 5 x item for the maximum number of items possible. Please adjust as necessary to reflect the number of patches and the DM's world economy."
+  ],
+  "special": [],
+  "index": "robe-of-useful-items",
+  "name": "robe of useful items",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 400,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/equipment/robe-of-useful-items.json",
+  "imageUrl": "/assets/atlas/equipment/images/robe-of-useful-items.webp",
+  "image": "/assets/atlas/equipment/images/robe-of-useful-items.webp",
+  "updated_at": "2026-07-12T19:00:13.315Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

@@ -1,0 +1,32 @@
+{
+  "desc": [
+    "A Diplomat's Pack contains the following items: @UUID[Compendium.dnd5e.equipment24.Item.phbagChest000000]{Chest}, @UUID[Compendium.dnd5e.items.Item.FqFmdzIBUSxFKKfi]{Fine Clothes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{Ink}, 5 @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{Ink Pens}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{Lamp}, 2 @UUID[Compendium.dnd5e.items.Item.5mIeX824uMklU3xq]{Map or Scroll Cases}, 4 @UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{flasks of Oil}, 5 sheets of @UUID[Compendium.dnd5e.equipment24.Item.phbagPaper000000]{Paper}, 5 sheets of @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{Parchment}, @UUID[Compendium.dnd5e.equipment24.Item.phbagPerfume0000]{Perfume}, and @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{Tinderbox}."
+  ],
+  "special": [],
+  "index": "_container",
+  "name": "diplomat's pack",
+  "kind": "container",
+  "cost": {
+    "quantity": 39,
+    "unit": "gp"
+  },
+  "weight": 25,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/diplomats-pack/_container.json",
+  "imageUrl": "/assets/atlas/equipment/images/_container.webp",
+  "image": "/assets/atlas/equipment/images/_container.webp",
+  "updated_at": "2026-07-12T19:00:21.909Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "back"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic",
+  "equipment_category": {
+    "index": "container",
+    "name": "container",
+    "url": "/assets/atlas/equipment_categories/json/container.json"
+  },
+  "capacity": 360,
+  "capacity_weight": 30
+}

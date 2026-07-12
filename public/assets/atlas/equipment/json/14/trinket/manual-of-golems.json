@@ -1,0 +1,48 @@
+{
+  "desc": [
+    "Wondrous item",
+    "This tome contains information and incantations necessary to make a particular type of golem. The GM chooses the type or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.htMPUPPABjI6fwck]{Manual of Golems} table. Refer to the table below for a detailed description on each golem. To decipher and use the manual, you must be a spellcaster with at least two 5th-level spell slots. A creature that can't use a Manual of Golems and attempts to read it takes 6d6 psychic damage.",
+    "d20",
+    "Golem",
+    "Time",
+    "Cost",
+    "1-5",
+    "@UUID[Compendium.dnd5e.monsters.Actor.YOqhbf8WsX0jH9Fu]{Clay Golem}",
+    "30 days",
+    "65,000 gp",
+    "6-17",
+    "@UUID[Compendium.dnd5e.monsters.Actor.Hm4o2FgPZsdbXjLq]{Flesh Golem}",
+    "60 days",
+    "50,000 gp",
+    "18",
+    "@UUID[Compendium.dnd5e.monsters.Actor.h98AuPfomEPcCibP]{Iron Golem}",
+    "120 days",
+    "100,000 gp",
+    "19-20",
+    "@UUID[Compendium.dnd5e.monsters.Actor.z3gSIXHHWYaHjfBT]{Stone Golem}",
+    "90 days",
+    "80,000 gp",
+    "To create a golem, you must spend the time shown on the table, working without interruption with the manual at hand and resting no more than 8 hours per day. You must also pay the specified cost to purchase supplies.",
+    "Once you finish creating the golem, the book is consumed in eldritch flames. The golem becomes animate when the ashes of the manual are sprinkled on it. It is under your control, and it understands and obeys your spoken commands."
+  ],
+  "special": [],
+  "index": "manual-of-golems",
+  "name": "manual of golems",
+  "kind": "consumable",
+  "cost": {
+    "quantity": 40000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/14/trinket/manual-of-golems.json",
+  "imageUrl": "/assets/atlas/equipment/images/manual-of-golems.webp",
+  "image": "/assets/atlas/equipment/images/manual-of-golems.webp",
+  "updated_at": "2026-07-12T19:00:17.434Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

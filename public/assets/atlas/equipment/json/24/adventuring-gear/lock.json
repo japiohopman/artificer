@@ -1,0 +1,31 @@
+{
+  "desc": [
+    "A Lock comes with a key. Without the key, a creature can use @UUID[Compendium.dnd5e.equipment24.Item.phbtulThievesToo]{Thieves' Tools} to pick this Lock with a successful [[/tool thief dex 15]] check."
+  ],
+  "special": [],
+  "index": "lock",
+  "name": "lock",
+  "kind": "tradegood",
+  "cost": {
+    "quantity": 10,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/24/adventuring-gear/lock.json",
+  "imageUrl": "/assets/atlas/equipment/images/lock.webp",
+  "image": "/assets/atlas/equipment/images/lock.webp",
+  "updated_at": "2026-07-12T19:00:22.556Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "ring_1",
+    "ring_2"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 2,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet6.0webp",
+  "slot": [
+    "extra"
+  ]
+}

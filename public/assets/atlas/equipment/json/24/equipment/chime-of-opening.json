@@ -1,0 +1,27 @@
+{
+  "desc": [
+    "Wondrous Item, Rare",
+    "This hollow metal tube measures about 1 foot long and weighs 1 pound. As a Magic action, you can strike the chime to cast @UUID[Compendium.dnd5e.spells24.Item.phbsplKnock00000]{Knock}. The spell's customary knocking sound is replaced by the clear, ringing tone of the chime, which is audible out to 300 feet.",
+    "The chime can be used 10 times. After the tenth time, it cracks and becomes useless."
+  ],
+  "special": [],
+  "index": "chime-of-opening",
+  "name": "chime of opening",
+  "kind": "equipment",
+  "cost": {
+    "quantity": 4000,
+    "unit": "gp"
+  },
+  "weight": 1,
+  "url": "/assets/atlas/equipment/json/24/equipment/chime-of-opening.json",
+  "imageUrl": "/assets/atlas/equipment/images/chime-of-opening.webp",
+  "image": "/assets/atlas/equipment/images/chime-of-opening.webp",
+  "updated_at": "2026-07-12T19:00:25.106Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "none"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "generic"
+}

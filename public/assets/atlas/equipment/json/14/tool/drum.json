@@ -1,0 +1,34 @@
+{
+  "desc": [
+    "A drum, of any variety, to evoke awe, wonder, or fear in your audience.",
+    "If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+  ],
+  "special": [],
+  "index": "drum",
+  "name": "drum",
+  "kind": "adventuring_gear",
+  "cost": {
+    "quantity": 6,
+    "unit": "gp"
+  },
+  "weight": 3,
+  "url": "/assets/atlas/equipment/json/14/tool/drum.json",
+  "imageUrl": "/assets/atlas/equipment/images/drum.webp",
+  "image": "/assets/atlas/equipment/images/drum.webp",
+  "updated_at": "2026-07-12T19:00:16.250Z",
+  "contents": [],
+  "properties": [],
+  "equipSlots": [
+    "tool_1",
+    "tool_2",
+    "tool_3"
+  ],
+  "last_updated": "12-7-2026",
+  "background_type": "land_forest",
+  "sprite_index": 4,
+  "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet4.webp",
+  "category": "Tools",
+  "slot": [
+    "tool"
+  ]
+}
