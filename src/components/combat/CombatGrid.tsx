@@ -32,10 +32,35 @@ export const CombatGrid: React.FC = () => {
   const setFocusedItem = useUIStore(state => state.setFocusedItem);
   const setIsMonsterProfileOpen = useUIStore(state => state.setIsMonsterProfileOpen);
   const gameMode = useUIStore(state => state.gameMode);
+  const isMapPanEnabled = useUIStore(state => state.isMapPanEnabled);
+  const mapZoom = useWorldStore(state => state.mapZoom);
+  const zoom = useMemo(() => 0.5 + (mapZoom - 3) * 0.25, [mapZoom]);
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const handleWheelNative = (e: WheelEvent) => {
+      e.preventDefault();
+      const { mapZoom, setMapZoom } = useWorldStore.getState();
+      if (e.deltaY < 0) {
+        setMapZoom(Math.min(mapZoom + 1, 9));
+      } else {
+        setMapZoom(Math.max(mapZoom - 1, 3));
+      }
+    };
+
+    element.addEventListener('wheel', handleWheelNative, { passive: false });
+    return () => {
+      element.removeEventListener('wheel', handleWheelNative);
+    };
+  }, []);
+
   const activeChar = characters.find(c => c.id === activeCharacterId);
   const { playerPos, pcPositions, monsters, grid } = combatState;
 
@@ -48,6 +73,27 @@ export const CombatGrid: React.FC = () => {
     if (combatState.initiativeOrder.length === 0) return null;
     return combatState.initiativeOrder[combatState.activeTurnIndex];
   }, [combatState.initiativeOrder, combatState.activeTurnIndex]);
+
+  const [announcement, setAnnouncement] = useState<{ text: string, sub: string, isPlayer: boolean } | null>(null);
+
+  useEffect(() => {
+    if (activeTurnActor) {
+      const isPlayerOrAlly = !!(activeTurnActor.isPlayer || activeTurnActor.isAlly);
+      const text = isPlayerOrAlly ? "Your Turn" : "Enemy Turn";
+      const sub = activeTurnActor.name;
+
+      // Play turn sound
+      if (isPlayerOrAlly) {
+        soundService.playEffect('TURN_PLAYER');
+      } else {
+        soundService.playEffect('TURN_AI');
+      }
+
+      setAnnouncement({ text, sub, isPlayer: isPlayerOrAlly });
+      const timer = setTimeout(() => setAnnouncement(null), 2200);
+      return () => clearTimeout(timer);
+    }
+  }, [activeTurnActor?.id]);
 
   // Coordinates of the currently active turn token (either player or summon/ally)
   const activeTokenPos = useMemo(() => {
@@ -122,7 +168,7 @@ export const CombatGrid: React.FC = () => {
     const actorPos = activeTokenPos;
 
     if (targetingAction.id === 'move') {
-      return getReachableCells(actorPos, range, grid, monsters, actorPos);
+      return getReachableCells(actorPos, range, grid, monsters, pcPositions || playerPos);
     }
 
     const cells = new Set<string>();
@@ -280,8 +326,10 @@ export const CombatGrid: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
-    const x = Math.floor((e.clientX - rect.left) / cellSize);
-    const y = Math.floor((e.clientY - rect.top) / cellSize);
+    const scaleX = rect.width / (gridWidth * cellSize);
+    const scaleY = rect.height / (gridHeight * cellSize);
+    const x = Math.floor(((e.clientX - rect.left) / scaleX) / cellSize);
+    const y = Math.floor(((e.clientY - rect.top) / scaleY) / cellSize);
 
     if (x < 0 || x >= gridWidth || y < 0 || y >= gridHeight) return;
 
@@ -338,15 +386,16 @@ export const CombatGrid: React.FC = () => {
       }
 
       if (targetingAction?.id === 'move') {
-        if (isCellOccupied(x, y, activePcPos, monsters, playerPos, 'Medium')) {
+        if (isCellOccupied(x, y, activePcPos, monsters, pcPositions || playerPos, 'Medium')) {
           addLog("That position is already occupied!", 'warning');
           return;
         }
-        const path = findPath(activePcPos, { x, y }, grid, monsters, playerPos);
+        const path = findPath(activePcPos, { x, y }, grid, monsters, pcPositions || playerPos);
         const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
 
         if (path && path.length * 5 <= maxMove) {
           setPlayerPos(x, y, activeCharacterId);
+          soundService.playEffect('TOKEN_MOVE');
           addLog(`Moved to position (${x}, ${y})`, 'info');
 
           const { consumeMovement } = useCharacterStore.getState();
@@ -364,12 +413,12 @@ export const CombatGrid: React.FC = () => {
     }
 
     // Default movement logic
-    if (isCellOccupied(x, y, activePcPos, monsters, playerPos, 'Medium')) {
+    if (isCellOccupied(x, y, activePcPos, monsters, pcPositions || playerPos, 'Medium')) {
       addLog("That position is already occupied!", 'warning');
       return;
     }
     const { gameMode } = useUIStore.getState();
-    const path = findPath(activePcPos, { x, y }, grid, monsters, playerPos);
+    const path = findPath(activePcPos, { x, y }, grid, monsters, pcPositions || playerPos);
 
     if (path && path.length > 0) {
       const isCombat = gameMode === 'combat';
@@ -377,6 +426,7 @@ export const CombatGrid: React.FC = () => {
 
       if (!isCombat || path.length <= moveLimit) {
         setPlayerPos(x, y, activeCharacterId);
+        soundService.playEffect('TOKEN_MOVE');
         addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
 
         if (isCombat) {
@@ -393,8 +443,10 @@ export const CombatGrid: React.FC = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
-    const x = Math.floor((e.clientX - rect.left) / cellSize);
-    const y = Math.floor((e.clientY - rect.top) / cellSize);
+    const scaleX = rect.width / (gridWidth * cellSize);
+    const scaleY = rect.height / (gridHeight * cellSize);
+    const x = Math.floor(((e.clientX - rect.left) / scaleX) / cellSize);
+    const y = Math.floor(((e.clientY - rect.top) / scaleY) / cellSize);
     
     if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
       if (hoveredCell?.x !== x || hoveredCell?.y !== y) {
@@ -411,8 +463,8 @@ export const CombatGrid: React.FC = () => {
 const activeTokenCoordinates = draggedMonsterId
       ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
       : activeTokenPos;
-    return findPath(activeTokenCoordinates, target, grid, monsters, playerPos);
-  }, [activeTokenPos, hoveredCell, draggedPos, grid, monsters, draggedMonsterId, playerPos]);
+    return findPath(activeTokenCoordinates, target, grid, monsters, pcPositions || playerPos);
+  }, [activeTokenPos, hoveredCell, draggedPos, grid, monsters, draggedMonsterId, pcPositions, playerPos]);
 
   const rulerDistance = useMemo(() => {
     const target = hoveredCell || draggedPos;
@@ -448,15 +500,16 @@ const activeTokenCoordinates = draggedMonsterId
       </div>
 
       {/* Grid Container */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center p-12">
+      <div ref={containerRef} className="relative z-10 w-full h-full flex items-center justify-center p-12 overflow-hidden">
         {/* Carved Frame Overlay */}
         <div className="absolute inset-0 border-[24px] border-dragon-gold/10 pointer-events-none z-[150] shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] rounded-[2.5rem]" />
 
         <motion.div
-          drag
+          drag={isMapPanEnabled}
           dragMomentum={false}
           className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
           style={{ 
+            scale: zoom,
             width: gridWidth * cellSize, 
             height: gridHeight * cellSize,
             backgroundImage: combatState.combatMapBackground ? `url(${combatState.combatMapBackground.startsWith('http') || combatState.combatMapBackground.startsWith('/') ? combatState.combatMapBackground : `/assets/atlas/combat/combat_map_terrain/${combatState.combatMapBackground}`})` : undefined,
@@ -513,8 +566,10 @@ const activeTokenCoordinates = draggedMonsterId
                       setDraggedPcId(char.id);
                       const rect = canvasRef.current?.getBoundingClientRect();
                       if (rect) {
-                        const x = Math.floor((info.point.x - rect.left) / cellSize);
-                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        const scaleX = rect.width / (gridWidth * cellSize);
+                        const scaleY = rect.height / (gridHeight * cellSize);
+                        const x = Math.floor(((info.point.x - rect.left) / scaleX) / cellSize);
+                        const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                           if (draggedPos?.x !== x || draggedPos?.y !== y) {
                             setDraggedPos({ x, y });
@@ -525,22 +580,25 @@ const activeTokenCoordinates = draggedMonsterId
                     onDragEnd={(_, info) => {
                       const rect = canvasRef.current?.getBoundingClientRect();
                       if (rect) {
-                        const x = Math.floor((info.point.x - rect.left) / cellSize);
-                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        const scaleX = rect.width / (gridWidth * cellSize);
+                        const scaleY = rect.height / (gridHeight * cellSize);
+                        const x = Math.floor(((info.point.x - rect.left) / scaleX) / cellSize);
+                        const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                          if (isCellOccupied(x, y, pos, monsters, playerPos, 'Medium')) {
+                          if (isCellOccupied(x, y, pos, monsters, pcPositions || playerPos, 'Medium')) {
                             addLog("That position is already occupied!", 'warning');
                             setDraggedPos(null);
                             setDraggedPcId(null);
                             return;
                           }
                           const { gameMode } = useUIStore.getState();
-                          const path = findPath(pos, { x, y }, grid, monsters, playerPos);
+                          const path = findPath(pos, { x, y }, grid, monsters, pcPositions || playerPos);
                           if (path && path.length > 0) {
                             const isCombat = gameMode === 'combat';
                             const maxMove = char?.actionEconomy?.movement?.current || 30;
                             if (!isCombat || path.length * 5 <= maxMove) {
                               setPlayerPos(x, y, char.id);
+                              soundService.playEffect('TOKEN_MOVE');
                               addLog(`${char.name} ${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
                               if (isCombat) {
                                 const { consumeMovement } = useCharacterStore.getState();
@@ -606,8 +664,10 @@ const activeTokenCoordinates = draggedMonsterId
                       setDraggedMonsterId(monster.id);
                       const rect = canvasRef.current?.getBoundingClientRect();
                       if (rect) {
-                        const x = Math.floor((info.point.x - rect.left) / cellSize);
-                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        const scaleX = rect.width / (gridWidth * cellSize);
+                        const scaleY = rect.height / (gridHeight * cellSize);
+                        const x = Math.floor(((info.point.x - rect.left) / scaleX) / cellSize);
+                        const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                           if (draggedPos?.x !== x || draggedPos?.y !== y) {
                             setDraggedPos({ x, y });
@@ -619,17 +679,19 @@ const activeTokenCoordinates = draggedMonsterId
                       if (!monster.isAlly) return;
                       const rect = canvasRef.current?.getBoundingClientRect();
                       if (rect) {
-                        const x = Math.floor((info.point.x - rect.left) / cellSize);
-                        const y = Math.floor((info.point.y - rect.top) / cellSize);
+                        const scaleX = rect.width / (gridWidth * cellSize);
+                        const scaleY = rect.height / (gridHeight * cellSize);
+                        const x = Math.floor(((info.point.x - rect.left) / scaleX) / cellSize);
+                        const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                           const originalPos = { x: monster.x, y: monster.y };
-                          if (isCellOccupied(x, y, originalPos, monsters, playerPos, monster.size || 'Medium')) {
+                          if (isCellOccupied(x, y, originalPos, monsters, pcPositions || playerPos, monster.size || 'Medium')) {
                             addLog("That position is already occupied!", 'warning');
                             setDraggedPos(null);
                             setDraggedMonsterId(null);
                             return;
                           }
-                          const path = findPath(originalPos, { x, y }, grid, monsters, playerPos, monster.size || 'Medium');
+                          const path = findPath(originalPos, { x, y }, grid, monsters, pcPositions || playerPos, monster.size || 'Medium');
                           if (path && path.length > 0) {
                             // Move summon/allied monster
                             useGameStore.setState(state => ({
@@ -638,6 +700,7 @@ const activeTokenCoordinates = draggedMonsterId
                                 monsters: state.combatState.monsters.map(m => m.id === monster.id ? { ...m, x, y } : m)
                               }
                             }));
+                            soundService.playEffect('TOKEN_MOVE');
                             addLog(`Ally ${monster.name} moved to (${x}, ${y})`, 'info');
                           }
                         }
@@ -715,6 +778,40 @@ const activeTokenCoordinates = draggedMonsterId
       
       {/* HUD Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.8)]" />
+
+      {/* Turn Announcement Overlay */}
+      <AnimatePresence>
+        {announcement && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 z-[1000] pointer-events-none flex flex-col items-center justify-center bg-black/45 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.8, letterSpacing: '0.1em' }}
+              animate={{ scale: 1, letterSpacing: '0.25em' }}
+              exit={{ scale: 1.1 }}
+              transition={{ type: 'spring', damping: 20 }}
+              className={cn(
+                "font-elan text-4xl uppercase font-black text-center drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] mb-2",
+                announcement.isPlayer ? "text-dragon-gold" : "text-dragon-red"
+              )}
+            >
+              {announcement.text}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 0.9, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="font-header text-xl uppercase tracking-widest text-white drop-shadow-md"
+            >
+              {announcement.sub}
+            </motion.div>
+            <div className="w-48 h-0.5 bg-gradient-to-r from-transparent via-dragon-gold to-transparent mt-4 opacity-75 animate-pulse" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -15,17 +15,34 @@ export const getDistance = (a: Point, b: Point): number => {
 /**
  * Checks if a cell or area is occupied by a monster or player.
  */
-export const isCellOccupied = (x: number, y: number, currentPos: Point, monsters: CombatMonster[], playerPos: Point, size: 'Medium' | 'Large' = 'Medium'): boolean => {
+export const isCellOccupied = (
+  x: number,
+  y: number,
+  currentPos: Point,
+  monsters: CombatMonster[],
+  pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 },
+  size: 'Medium' | 'Large' = 'Medium'
+): boolean => {
   const footprint = size === 'Large' ? 2 : 1;
   
+  let pcPoints: Point[] = [];
+  if (Array.isArray(pcPositions)) {
+    pcPoints = pcPositions;
+  } else if (pcPositions && typeof pcPositions === 'object' && 'x' in pcPositions && 'y' in pcPositions) {
+    pcPoints = [pcPositions as Point];
+  } else if (pcPositions && typeof pcPositions === 'object') {
+    pcPoints = Object.values(pcPositions);
+  }
+
   for (let fy = 0; fy < footprint; fy++) {
     for (let fx = 0; fx < footprint; fx++) {
       const tx = x + fx;
       const ty = y + fy;
 
-      // Check player collision
-      if (tx === playerPos.x && ty === playerPos.y) {
-        if (currentPos.x !== playerPos.x || currentPos.y !== playerPos.y) return true;
+      // Check all PC collisions
+      for (const p of pcPoints) {
+        if (p.x === currentPos.x && p.y === currentPos.y) continue; // Skip self
+        if (tx === p.x && ty === p.y) return true;
       }
 
       // Check monster collision
@@ -48,7 +65,7 @@ export const isCellOccupied = (x: number, y: number, currentPos: Point, monsters
  * Treats 'wall', closed 'door', and occupied cells as impassable.
  * Optimized with indexed arrays and reduced allocations.
  */
-export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monsters: CombatMonster[] = [], playerPos: Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Point[] | null => {
+export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Point[] | null => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -120,7 +137,7 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monst
         if (areaBlocked) continue;
 
         // Collision check (only if not at the destination, to allow targeting)
-        if (!(nx === end.x && ny === end.y) && isCellOccupied(nx, ny, start, monsters, playerPos, creatureSize)) continue;
+        if (!(nx === end.x && ny === end.y) && isCellOccupied(nx, ny, start, monsters, pcPositions, creatureSize)) continue;
 
         const nIdx = ny * width + nx;
         const newDist = dists[currentIdx] + 1;
@@ -143,7 +160,7 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monst
  * Calculates all reachable cells within a range using Dijkstra/BFS.
  * Returns a Set of "x,y" strings.
  */
-export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][], monsters: CombatMonster[] = [], playerPos: Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Set<string> => {
+export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Set<string> => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -191,7 +208,7 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
         if (areaBlocked) continue;
 
         // Collision check
-        if (isCellOccupied(nx, ny, start, monsters, playerPos, creatureSize)) continue;
+        if (isCellOccupied(nx, ny, start, monsters, pcPositions, creatureSize)) continue;
 
         const nIdx = ny * width + nx;
         const newDist = d + 1;

@@ -193,6 +193,11 @@ class SoundEngine {
       case 'LEVEL_UP': path = '/assets/sounds/sfx/sfx_level_up.wav'; break;
       case 'DOOR_OPEN': path = '/assets/sounds/sfx/door_open.mp3'; break;
       case 'DOOR_CLOSE': path = '/assets/sounds/sfx/door_close.mp3'; break;
+      case 'COMBAT_HIT': path = '/assets/sounds/sfx/hit_short.wav'; break;
+      case 'COMBAT_SLASH': path = '/assets/sounds/environment/vfx_sword_slash.mp3'; break;
+      case 'TOKEN_MOVE': path = '/assets/sounds/sfx/ui_map_token_move.wav'; break;
+      case 'TURN_PLAYER': path = '/assets/sounds/system/tda_turn_player.mp3'; break;
+      case 'TURN_AI': path = '/assets/sounds/system/tda_turn_ai.mp3'; break;
       default: path = '/assets/sounds/system/ui_menu_select.mp3';
     }
 
