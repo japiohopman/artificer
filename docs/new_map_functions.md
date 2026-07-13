@@ -69,7 +69,7 @@ Momenteel worden onderdelen zoals:
 * layer-buttons;
 * locatie-informatie;
 
-deels vanuit `lore.md` opgebouwd.
+deels vanuit `worldMap.tsx` opgebouwd.
 
 Dat voelt niet als de juiste plek.
 
