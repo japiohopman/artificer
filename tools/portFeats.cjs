@@ -52,14 +52,8 @@ function normalizeIconPath(img) {
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
 
-  // Remove script tags and their content securely
-  let cleaned = html.replace(/<script[\s\S]*?<\/script\s*>/gi, '');
-
-  // Convert paragraph end tags to linebreaks
-  cleaned = cleaned.replace(/<\/p\s*>/gi, '\n');
-
-  // Strip all other HTML tags
-  cleaned = cleaned.replace(/<[^>]*>/g, '');
+  // Remove any HTML tags recursively and securely using a generic regex
+  let cleaned = html.replace(/<[^>]*>/g, '');
 
   // Explicitly remove all angle brackets to prevent any HTML injection
   cleaned = cleaned.replace(/[<>]/g, '');
@@ -115,22 +109,22 @@ function migrateExisting14Feats() {
         fs.unlinkSync(fullPath);
         count++;
       } catch (e) {
-        console.error(`Error migrating 2014 feat ${file}:`, e.message);
+        console.error("Error migrating 2014 feat " + file + ":", e.message);
       }
     }
   });
 
-  console.log(`Successfully migrated ${count} existing feats to json/14/!`);
+  console.log("Successfully migrated " + count + " existing feats to json/14/!");
 }
 
 function port24Feats() {
   const dir = SOURCES.feats24;
   if (!fs.existsSync(dir)) {
-    console.warn(`Source directory for 2024 feats does not exist at: ${dir}`);
+    console.warn("Source directory for 2024 feats does not exist at: " + dir);
     return;
   }
 
-  console.log(`--- Porting 2024 Feats from ${dir} ---`);
+  console.log("--- Porting 2024 Feats from " + dir + " ---");
   let count = 0;
 
   function traverse(currentDir) {
@@ -178,14 +172,14 @@ function port24Feats() {
           fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2) + '\n', 'utf8');
           count++;
         } catch (e) {
-          console.error(`Error porting 2024 feat ${file}:`, e.message);
+          console.error("Error porting 2024 feat " + file + ":", e.message);
         }
       }
     });
   }
 
   traverse(dir);
-  console.log(`Successfully ported ${count} 2024 feats!`);
+  console.log("Successfully ported " + count + " 2024 feats!");
 }
 
 function main() {

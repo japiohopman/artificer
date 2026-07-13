@@ -3,8 +3,7 @@
   "name": "teleport mishap",
   "img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
   "description": [
-    "Mishap damage: [[/damage 3d10 type=force]]",
-    "Off target distance: [[/r 2d12#Miles]]{2d12 miles} [[/r 1d8#Direction]]{Direction}"
+    "Mishap damage: [[/damage 3d10 type=force]]Off target distance: [[/r 2d12#Miles]]{2d12 miles} [[/r 1d8#Direction]]{Direction}"
   ],
   "results": [
     {
@@ -169,5 +168,5 @@
     }
   ],
   "url": "/assets/atlas/tables/json/24/spells/teleport_mishap.json",
-  "updated_at": "2026-07-13T17:36:18.550Z"
+  "updated_at": "2026-07-13T20:16:15.952Z"
 }

@@ -58,14 +58,8 @@ function normalizeIconPath(img) {
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
 
-  // Remove script tags and their content securely
-  let cleaned = html.replace(/<script[\s\S]*?<\/script\s*>/gi, '');
-
-  // Convert paragraph end tags to linebreaks
-  cleaned = cleaned.replace(/<\/p\s*>/gi, '\n');
-
-  // Strip all other HTML tags
-  cleaned = cleaned.replace(/<[^>]*>/g, '');
+  // Remove any HTML tags recursively and securely using a generic regex
+  let cleaned = html.replace(/<[^>]*>/g, '');
 
   // Explicitly remove all angle brackets to prevent any HTML injection
   cleaned = cleaned.replace(/[<>]/g, '');
@@ -116,11 +110,11 @@ function mapTable(parsedYaml, rulesVersion, subfolder, indexName) {
 function portDirectory(sourceConfig) {
   const { dir, rulesVersion } = sourceConfig;
   if (!fs.existsSync(dir)) {
-    console.warn(`Source directory not found: ${dir}. Skipping.`);
+    console.warn("Source directory not found: " + dir + ". Skipping.");
     return;
   }
 
-  console.log(`Porting tables from ${dir} (Rules: ${rulesVersion})...`);
+  console.log("Porting tables from " + dir + " (Rules: " + rulesVersion + ")...");
   let count = 0;
 
   function traverse(currentDir) {
@@ -152,14 +146,14 @@ function portDirectory(sourceConfig) {
           fs.writeFileSync(targetPath, JSON.stringify(mapped, null, 2) + '\n', 'utf8');
           count++;
         } catch (e) {
-          console.error(`Error porting table ${file}:`, e.message);
+          console.error("Error porting table " + file + ":", e.message);
         }
       }
     });
   }
 
   traverse(dir);
-  console.log(`Ported ${count} tables successfully for Rules: ${rulesVersion}!`);
+  console.log("Ported " + count + " tables successfully for Rules: " + rulesVersion + "!");
 }
 
 function main() {
