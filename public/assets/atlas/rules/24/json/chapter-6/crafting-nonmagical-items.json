@@ -1,0 +1,85 @@
+{
+  "index": "crafting-nonmagical-items",
+  "id": "phbCraftingEquip",
+  "name": "Crafting Nonmagical Items",
+  "pages": [
+    {
+      "index": "overview",
+      "id": "IBY1k8SwRJgBSuEK",
+      "name": "Overview",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "To craft a nonmagical item, you need tools, raw materials, and time, each of which is detailed below. If you meet the requirements, you make the item, and you can use it or sell it at its normal price.",
+        "ToolsThis chapter’s @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.MK3tMrY7pZgPQZo8]{Tools} section lists which tools are required to make certain items. The DM assigns required tools for items not listed there.",
+        "You must use the required tool to make an item and have proficiency with that tool. Anyone who helps you must also have proficiency with it.",
+        "Raw MaterialsTo make an item, you need raw materials worth half its purchase cost (round down). For example, you need 750 GP of raw materials to make @UUID[Compendium.dnd5e.equipment24.Item.phbarmPlateArmor]{Plate Armor}, which sells for 1,500 GP. The GM determines whether appropriate raw materials are available.",
+        "TimeTo determine how many days (working 8 hours a day) it takes to make an item, divide its purchase cost in GP by 10 (round a fraction up to a day). For example, you need 5 days to make a @UUID[Compendium.dnd5e.equipment24.Item.phbwepHeavyCross]{Heavy Crossbow}, which sells for 50 GP.",
+        "If an item requires multiple days, the days needn’t be consecutive.",
+        "Characters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants."
+      ],
+      "content_html": "<p>To craft a nonmagical item, you need tools, raw materials, and time, each of which is detailed below. If you meet the requirements, you make the item, and you can use it or sell it at its normal price.</p><h2>Tools</h2><p>This chapter’s @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.MK3tMrY7pZgPQZo8]{Tools} section lists which tools are required to make certain items. The DM assigns required tools for items not listed there.</p><p>You must use the required tool to make an item and have proficiency with that tool. Anyone who helps you must also have proficiency with it.</p><h2>Raw Materials</h2><p>To make an item, you need raw materials worth half its purchase cost (round down). For example, you need 750 GP of raw materials to make @UUID[Compendium.dnd5e.equipment24.Item.phbarmPlateArmor]{Plate Armor}, which sells for 1,500 GP. The GM determines whether appropriate raw materials are available.</p><h2>Time</h2><p>To determine how many days (working 8 hours a day) it takes to make an item, divide its purchase cost in GP by 10 (round a fraction up to a day). For example, you need 5 days to make a @UUID[Compendium.dnd5e.equipment24.Item.phbwepHeavyCross]{Heavy Crossbow}, which sells for 50 GP.</p><p>If an item requires multiple days, the days needn’t be consecutive.</p><p>Characters can combine their efforts to shorten the crafting time. Divide the time needed to create an item by the number of characters working on it. Normally, only one other character can assist you, but the GM might allow more assistants.</p>"
+    },
+    {
+      "index": "brewing-potions-of-healing",
+      "id": "n47iwiqPFPn2zRqX",
+      "name": "Brewing Potions of Healing",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "A character who has proficiency with the @UUID[Compendium.dnd5e.equipment24.Item.phbtulHerbalismK]{Herbalism Kit} can create a @UUID[Compendium.dnd5e.equipment24.Item.phbagPotionofHea]{Potion of Healing}. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work)."
+      ],
+      "content_html": "<p>A character who has proficiency with the @UUID[Compendium.dnd5e.equipment24.Item.phbtulHerbalismK]{Herbalism Kit} can create a @UUID[Compendium.dnd5e.equipment24.Item.phbagPotionofHea]{Potion of Healing}. Doing so requires using that kit and 25 GP of raw material over the course of 1 day (8 hours of work).</p>"
+    },
+    {
+      "index": "scribing-spell-scrolls",
+      "id": "8hAsl8JueZ3GvyS2",
+      "name": "Scribing Spell Scrolls",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "A spellcaster can transfer a spell to a scroll and create a Spell Scroll, using the rules below.",
+        "Time and CostScribing a scroll takes an amount of time and money based on the level of the spell, as shown in the Spell Scroll Costs table. For each day of inscription, you must work for 8 hours. If a scroll requires multiple days, those days needn’t be consecutive.",
+        "Prerequisites for the ScribeTo scribe a scroll, you must have proficiency in the Arcana skill or with @UUID[Compendium.dnd5e.equipment24.Item.phbtulCalligraph] and have the spell prepared on each day of the inscription. You must also have at hand any Material components required by the spell; if the spell consumes its Material components, they are consumed only when you complete the scroll. The scroll’s spell uses your spell save DC and spell attack bonus.",
+        "Easily Make Spell ScrollsIn Foundry you can right click on any spell and select the  Create Scroll option which will allow you to configure the scroll's options like its Level, DC, Save, and Attack Bonus.",
+        "CantripsIf the scribed spell is a cantrip, the version on the scroll works as if the caster were your level.",
+        "Spell Scroll CostsSpell Level",
+        "Time",
+        "Cost",
+        "Cantrip",
+        "1 day",
+        "15 GP",
+        "1",
+        "1 day",
+        "25 GP",
+        "2",
+        "3 days",
+        "100 GP",
+        "3",
+        "5 days",
+        "150 GP",
+        "4",
+        "10 days",
+        "1,000 GP",
+        "5",
+        "25 days",
+        "1,500 GP",
+        "6",
+        "40 days",
+        "10,000 GP",
+        "7",
+        "50 days",
+        "12,500 GP",
+        "8",
+        "60 days",
+        "15,000 GP",
+        "9",
+        "120 days",
+        "50,000 GP"
+      ],
+      "content_html": "<p>A spellcaster can transfer a spell to a scroll and create a <em>Spell Scroll</em>, using the rules below.</p><h2>Time and Cost</h2><p>Scribing a scroll takes an amount of time and money based on the level of the spell, as shown in the Spell Scroll Costs table. For each day of inscription, you must work for 8 hours. If a scroll requires multiple days, those days needn’t be consecutive.</p><h2>Prerequisites for the Scribe</h2><p>To scribe a scroll, you must have proficiency in the Arcana skill or with @UUID[Compendium.dnd5e.equipment24.Item.phbtulCalligraph] and have the spell prepared on each day of the inscription. You must also have at hand any Material components required by the spell; if the spell consumes its Material components, they are consumed only when you complete the scroll. The scroll’s spell uses your spell save DC and spell attack bonus.</p><section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"icons/vtt-512.png\" /></figure><article><h3>Easily Make Spell Scrolls</h3><p>In Foundry you can right click on any spell and select the <span class=\"reference\"><em class=\"fa-solid fa-scroll\"> </em>Create Scroll</span> option which will allow you to configure the scroll's options like its Level, DC, Save, and Attack Bonus.</p></article></section><h2>Cantrips</h2><p>If the scribed spell is a cantrip, the version on the scroll works as if the caster were your level.</p><table><caption>Spell Scroll Costs</caption><thead><tr><th><p>Spell Level</p></th><th><p>Time</p></th><th><p>Cost</p></th></tr></thead><tbody><tr><td><p>Cantrip</p></td><td><p>1 day</p></td><td><p>15 GP</p></td></tr><tr><td><p>1</p></td><td><p>1 day</p></td><td><p>25 GP</p></td></tr><tr><td><p>2</p></td><td><p>3 days</p></td><td><p>100 GP</p></td></tr><tr><td><p>3</p></td><td><p>5 days</p></td><td><p>150 GP</p></td></tr><tr><td><p>4</p></td><td><p>10 days</p></td><td><p>1,000 GP</p></td></tr><tr><td><p>5</p></td><td><p>25 days</p></td><td><p>1,500 GP</p></td></tr><tr><td><p>6</p></td><td><p>40 days</p></td><td><p>10,000 GP</p></td></tr><tr><td><p>7</p></td><td><p>50 days</p></td><td><p>12,500 GP</p></td></tr><tr><td><p>8</p></td><td><p>60 days</p></td><td><p>15,000 GP</p></td></tr><tr><td><p>9</p></td><td><p>120 days</p></td><td><p>50,000 GP</p></td></tr></tbody></table>"
+    }
+  ],
+  "url": "/assets/atlas/rules/24/json/chapter-6/crafting-nonmagical-items.json",
+  "updated_at": "2026-07-13T06:31:43.276Z"
+}

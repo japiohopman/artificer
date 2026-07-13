@@ -1,0 +1,65 @@
+{
+  "index": "character-backgrounds",
+  "id": "phbBackgroundDes",
+  "name": "Character Backgrounds",
+  "pages": [
+    {
+      "index": "overview",
+      "id": "lXqvtf9mIp8RYjFr",
+      "name": "Overview",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "Four backgrounds are presented in this section in alphabetical order:",
+        "@UUID[.7DAvTQlrw7OTsgpX]{Acolyte}@UUID[.PnqnUJNaPQUZPlLR]{Criminal}@UUID[.Vsc9EKUUGboSI6jy]{Sage}@UUID[.l8iMjw1XZgyqWFFf]{Soldier}"
+      ],
+      "content_html": "<p>Four backgrounds are presented in this section in alphabetical order:</p><ul class=\"columns-two\"><li>@UUID[.7DAvTQlrw7OTsgpX]{Acolyte}</li><li>@UUID[.PnqnUJNaPQUZPlLR]{Criminal}</li><li>@UUID[.Vsc9EKUUGboSI6jy]{Sage}</li><li>@UUID[.l8iMjw1XZgyqWFFf]{Soldier}</li></ul>"
+    },
+    {
+      "index": "acolyte",
+      "id": "7DAvTQlrw7OTsgpX",
+      "name": "Acolyte",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.origins24.Item.phbbgAcolyte0000 caption=false]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.origins24.Item.phbbgAcolyte0000 caption=false]</p>"
+    },
+    {
+      "index": "criminal",
+      "id": "PnqnUJNaPQUZPlLR",
+      "name": "Criminal",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.origins24.Item.phbbgCriminal000 caption=false]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.origins24.Item.phbbgCriminal000 caption=false]</p>"
+    },
+    {
+      "index": "sage",
+      "id": "Vsc9EKUUGboSI6jy",
+      "name": "Sage",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.origins24.Item.phbbgSage0000000 caption=false]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.origins24.Item.phbbgSage0000000 caption=false]</p>"
+    },
+    {
+      "index": "soldier",
+      "id": "l8iMjw1XZgyqWFFf",
+      "name": "Soldier",
+      "type": "text",
+      "sort": 0,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.origins24.Item.phbbgSoldier0000 caption=false]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.origins24.Item.phbbgSoldier0000 caption=false]</p>"
+    }
+  ],
+  "url": "/assets/atlas/rules/24/json/chapter-4/character-backgrounds.json",
+  "updated_at": "2026-07-13T06:31:43.270Z"
+}

@@ -1,0 +1,48 @@
+{
+  "index": "sorcerer",
+  "id": "phbSorcerer00000",
+  "name": "Sorcerer",
+  "pages": [
+    {
+      "index": "sorcerer",
+      "id": "fsqRUA4acVXH4I3O",
+      "name": "Sorcerer",
+      "type": "class",
+      "sort": 100000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "draconic-sorcery",
+      "id": "h9Qhn4HyJyAnK5b9",
+      "name": "Draconic Sorcery",
+      "type": "subclass",
+      "sort": 400000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "metamagic-options",
+      "id": "XSkwrMRz9FDvovd1",
+      "name": "Metamagic Options",
+      "type": "text",
+      "sort": 600000,
+      "paragraphs": [
+        "The following options are available to your Metamagic feature. The options are presented in alphabetical order.",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoCarefulSpe]{Careful Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoCarefulSpe inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoDistantSpe]{Distant Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoDistantSpe inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoEmpoweredS]{Empowered Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoEmpoweredS inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoExtendedSp]{Extended Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoExtendedSp inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoHeightened]{Heightened Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoHeightened inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoQuickenedS]{Quickened Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoQuickenedS inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoSeekingSpe]{Seeking Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoSeekingSpe inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoSubtleSpel]{Subtle Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoSubtleSpel inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoTransmuted]{Transmuted Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoTransmuted inline]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbmmoTwinnedSpe]{Twinned Spell}@Embed[Compendium.dnd5e.classes24.Item.phbmmoTwinnedSpe inline]"
+      ],
+      "content_html": "<p>The following options are available to your Metamagic feature. The options are presented in alphabetical order.</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoCarefulSpe]{Careful Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoCarefulSpe inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoDistantSpe]{Distant Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoDistantSpe inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoEmpoweredS]{Empowered Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoEmpoweredS inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoExtendedSp]{Extended Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoExtendedSp inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoHeightened]{Heightened Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoHeightened inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoQuickenedS]{Quickened Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoQuickenedS inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoSeekingSpe]{Seeking Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoSeekingSpe inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoSubtleSpel]{Subtle Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoSubtleSpel inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoTransmuted]{Transmuted Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoTransmuted inline]</p><hr /><h3>@UUID[Compendium.dnd5e.classes24.Item.phbmmoTwinnedSpe]{Twinned Spell}</h3><p>@Embed[Compendium.dnd5e.classes24.Item.phbmmoTwinnedSpe inline]</p><hr />"
+    }
+  ],
+  "url": "/assets/atlas/rules/24/json/chapter-3/sorcerer.json",
+  "updated_at": "2026-07-13T06:31:43.267Z"
+}
