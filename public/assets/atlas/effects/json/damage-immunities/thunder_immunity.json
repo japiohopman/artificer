@@ -1,0 +1,24 @@
+{
+  "index": "thunder_immunity",
+  "name": "thunder immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.di.value",
+      "value": "thunder",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/damage-immunities/thunder_immunity.json",
+  "image": "systems/dnd5e/icons/svg/damage/thunder.svg",
+  "updated_at": "2026-07-12T20:22:54.875Z"
+}

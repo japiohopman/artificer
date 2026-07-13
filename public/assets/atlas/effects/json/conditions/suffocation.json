@@ -1,0 +1,20 @@
+{
+  "index": "suffocation",
+  "name": "suffocation",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "suffocation"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/suffocation.json",
+  "image": "systems/dnd5e/icons/svg/statuses/suffocation.svg",
+  "updated_at": "2026-07-12T20:22:54.862Z"
+}

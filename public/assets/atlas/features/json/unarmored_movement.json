@@ -1,0 +1,19 @@
+{
+  "index": "unarmored_movement",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "name": "unarmored movement",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in the Monk table.",
+    "At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move."
+  ],
+  "url": "/assets/atlas/features/json/unarmored_movement.json",
+  "updated_at": "2026-07-12T20:22:54.643Z",
+  "image": "icons/magic/nature/root-vine-entangle-foot-green.webp",
+  "feature_specific": {}
+}

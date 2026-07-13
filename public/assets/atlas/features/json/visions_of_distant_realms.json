@@ -1,0 +1,18 @@
+{
+  "index": "visions_of_distant_realms",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "visions of distant realms",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.ImlCJQwR1VL40Qem]{Arcane Eye} at will, without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/visions_of_distant_realms.json",
+  "updated_at": "2026-07-12T20:22:54.758Z",
+  "image": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+  "feature_specific": {}
+}

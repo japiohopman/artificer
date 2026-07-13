@@ -1,23 +1,18 @@
 {
   "index": "mindless_rage",
   "class": {
-    "index": "barbarian",
-    "name": "barbarian",
-    "url": "/assets/atlas/class/json/barbarian.json"
-  },
-  "subclass": {
-    "index": "berserker",
-    "name": "berserker",
-    "url": "/assets/atlas/subclasses/json/berserker.json"
+    "index": "path",
+    "name": "path",
+    "url": "/assets/atlas/class/json/path.json"
   },
   "name": "mindless rage",
   "level": 6,
   "prerequisites": [],
   "desc": [
-    "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
+    "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your @UUID[Compendium.dnd5e.classfeatures.Item.VoR0SUrNX5EJVPIO]{Rage}, the effect is suspended for the duration of the rage."
   ],
   "url": "/assets/atlas/features/json/mindless_rage.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.552Z",
   "image": "/assets/atlas/features/images/mindless_rage.webp",
   "feature_specific": {}
 }

@@ -1,0 +1,24 @@
+{
+  "index": "grappled_immunity",
+  "name": "grappled immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.ci.value",
+      "value": "grappled",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/condition-immunities/grappled_immunity.json",
+  "image": "systems/dnd5e/icons/svg/statuses/grappled.svg",
+  "updated_at": "2026-07-12T20:22:54.834Z"
+}

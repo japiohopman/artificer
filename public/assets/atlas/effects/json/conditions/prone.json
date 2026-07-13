@@ -1,0 +1,20 @@
+{
+  "index": "prone",
+  "name": "prone",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "prone"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/prone.json",
+  "image": "systems/dnd5e/icons/svg/statuses/prone.svg",
+  "updated_at": "2026-07-12T20:22:54.859Z"
+}

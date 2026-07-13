@@ -1,0 +1,24 @@
+{
+  "index": "animal_handling_advantage",
+  "name": "animal handling advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.ani.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-advantage/animal_handling_advantage.json",
+  "image": "icons/environment/creatures/horse-brown.webp",
+  "updated_at": "2026-07-12T20:22:54.902Z"
+}

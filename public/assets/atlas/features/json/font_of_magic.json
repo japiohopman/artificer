@@ -10,11 +10,16 @@
   "prerequisites": [],
   "desc": [
     "At 2nd level, you tap into a deep wellspring of magic within yourself. This wellspring is represented by sorcery points, which allow you to create a variety of magical effects.",
-    "Sorcery Points",
-    "You have 2 sorcery points, and you gain more as you reach higher levels, as shown in the Sorcery Points column of the Sorcerer table. You can never have more sorcery points than shown on the table for your level. You regain all spent sorcery points when you finish a long rest."
+    "Sorcery PointsYou have 2 sorcery points, and you gain more as you reach higher levels. Your sorcerer level equals the number of sorcery points you have, so a 4th level sorcerer has 4 sorcery points, a 16th level sorcerer has 16. You can never have more sorcery points than your level dictates.  You regain all spent sorcery points when you finish a long rest.",
+    "Flexible CastingYou can use your sorcery points to gain additional spell slots, or sacrifice spell slots to gain additional sorcery points. You learn other ways to use your sorcery points as you reach higher levels.",
+    "Creating Spell Slots.You can transform unexpended sorcery points into one spell slot as a bonus action on your turn. The Creating Spell Slots table shows the cost of creating a spell slot of a given level. You can create spell slots no higher in level than 5th.",
+    "Any spell slot you create with this feature vanishes when you finish a long rest.",
+    "Creating Spell SlotsSpell Slot LevelSorcery Point Cost1st22nd33rd54th65th7Converting a Spell Slot to Sorcery Points. As a bonus action on your turn, you can expend one spell slot and gain a number of sorcery points equal to the slot's level.",
+    "Foundry Note",
+    "Use this to track all the various uses of sorcery points for the sorcerer."
   ],
   "url": "/assets/atlas/features/json/font_of_magic.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.725Z",
   "image": "/assets/atlas/features/images/font_of_magic.webp",
   "feature_specific": {
     "sorcery_points": "sorcerer_level"

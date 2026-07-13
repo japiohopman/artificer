@@ -12,6 +12,9 @@
     "When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.",
     "Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level."
   ],
+  "url": "/assets/atlas/features/json/arcane_tradition.json",
+  "updated_at": "2026-07-12T20:22:54.779Z",
+  "image": "/assets/atlas/features/images/arcane_tradition.webp",
   "feature_specific": {
     "subfeature_options": {
       "choose": 1,
@@ -86,8 +89,5 @@
         ]
       }
     }
-  },
-  "url": "/assets/atlas/features/json/arcane_tradition.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "/assets/atlas/features/images/arcane_tradition.webp"
+  }
 }

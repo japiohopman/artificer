@@ -1,0 +1,18 @@
+{
+  "index": "armor_of_shadows",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "armor of shadows",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.CKZTpZlxj7hjjo2H]{Mage Armor} on yourself at will, without expending a spell slot or material components."
+  ],
+  "url": "/assets/atlas/features/json/armor_of_shadows.json",
+  "updated_at": "2026-07-12T20:22:54.731Z",
+  "image": "icons/magic/control/control-influence-rally-purple.webp",
+  "feature_specific": {}
+}

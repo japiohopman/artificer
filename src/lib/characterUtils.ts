@@ -547,11 +547,23 @@ export async function processLevelUp(character: any): Promise<any> {
 
   const { atlasService } = await import('../services/atlasService');
 
-  for (let lvl = oldLevel + 1; lvl <= newLevel; lvl++) {
-    const classData = await atlasService.loadClass(character.class);
-    const hitDie = classData?.hit_die || 8;
+  // Load class data once
+  const classData = await atlasService.loadClass(character.class);
+  const hitDie = classData?.hit_die || 8;
 
-    const levelData = await atlasService.loadLevelData(character.class, lvl);
+  // Load all level data in parallel
+  const levelsToLoad: number[] = [];
+  for (let lvl = oldLevel + 1; lvl <= newLevel; lvl++) {
+    levelsToLoad.push(lvl);
+  }
+  
+  const levelDatas = await Promise.all(
+    levelsToLoad.map(lvl => atlasService.loadLevelData(character.class, lvl))
+  );
+
+  for (let i = 0; i < levelsToLoad.length; i++) {
+    const lvl = levelsToLoad[i];
+    const levelData = levelDatas[i];
     const features = levelData?.features || [];
     
     // Check if the level data explicitly gives ability score bonuses, otherwise fallback to % 4 for backwards compatibility

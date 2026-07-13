@@ -9,8 +9,14 @@
   "level": 3,
   "prerequisites": [],
   "desc": [
-    "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice."
+    "At 3rd level, your otherworldly patron bestows a gift upon you for your loyal service. You gain one of the following features of your choice.",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.9dSSa68mIPoX2ezA]{Pact of the Blade}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.Ic1CSjvbWKudVUv9]{Pact of the Chain}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.MYM908WLZ1lVvA1u]{Pact of the Tome}"
   ],
+  "url": "/assets/atlas/features/json/pact_boon.json",
+  "updated_at": "2026-07-12T20:22:54.771Z",
+  "image": "/assets/atlas/features/images/pact_boon.webp",
   "feature_specific": {
     "subfeature_options": {
       "choose": 1,
@@ -46,8 +52,5 @@
       }
     },
     "invocations": []
-  },
-  "url": "/assets/atlas/features/json/pact_boon.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "/assets/atlas/features/images/pact_boon.webp"
+  }
 }

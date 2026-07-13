@@ -1,0 +1,19 @@
+{
+  "index": "expertise",
+  "class": {
+    "index": "rogue",
+    "name": "rogue",
+    "url": "/assets/atlas/class/json/rogue.json"
+  },
+  "name": "expertise",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+    "At 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit."
+  ],
+  "url": "/assets/atlas/features/json/expertise.json",
+  "updated_at": "2026-07-12T20:22:54.695Z",
+  "image": "icons/commodities/tech/cog-bronze.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,24 @@
+{
+  "index": "intelligence_check_advantage",
+  "name": "intelligence check advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.int.check.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-check-advantage/intelligence_check_advantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg",
+  "updated_at": "2026-07-12T20:22:54.789Z"
+}

@@ -1,0 +1,20 @@
+{
+  "index": "grappled",
+  "name": "grappled",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "grappled"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/grappled.json",
+  "image": "systems/dnd5e/icons/svg/statuses/grappled.svg",
+  "updated_at": "2026-07-12T20:22:54.853Z"
+}

@@ -353,18 +353,58 @@ export const useWorldStore = create<WorldState>((set, get) => ({
       set({ weather: newWeather });
     }
 
-    // Dynamic Temperature Calculation
-    // Base temperature ranges from 10 to 25 based on time of day (coolest at 4 AM, warmest at 4 PM)
-    const hours = state.gameTime / 60;
-    const timeFactor = Math.sin((hours - 10) * Math.PI / 12); // -1 to 1
-    let newTemp = 18 + (timeFactor * 7);
+    // Dynamic Temperature Calculation based on Region/Terrain, Season, Time of Day, and Weather
+    const terrain = (state.partyLocation?.category || state.partyLocation?.type || 'land').toLowerCase();
+    
+    let baseTemp = 15; // default temperate land base temp
+    let isUnderground = false;
 
-    // Weather impact
-    if (state.weather === 'Rainy') newTemp -= 3;
-    if (state.weather === 'Stormy') newTemp -= 5;
-    if (state.weather === 'Snowy') newTemp -= 15;
-    if (state.weather === 'Cloudy') newTemp -= 2;
-    if (state.weather === 'Foggy') newTemp -= 4;
+    if (terrain === 'arctic' || terrain === 'glaciers_tundras') {
+      baseTemp = -8;
+    } else if (terrain === 'desert' || terrain === 'deserts' || terrain === 'deserts_wastelands') {
+      baseTemp = 35;
+    } else if (terrain === 'underdark' || terrain === 'dungeon') {
+      baseTemp = 12;
+      isUnderground = true;
+    }
+
+    let newTemp = baseTemp;
+
+    if (!isUnderground) {
+      // 1. Season impact
+      // Hammer (1), Alturiak (2), Nightal (12) are Winter
+      // Ches (3), Tarsakh (4), Mirtul (5) are Spring
+      // Kythorn (6), Flamerule (7), Eleasis (8) are Summer
+      // Eleint (9), Marpenoth (10), Uktar (11) are Autumn
+      const month = state.gameMonth;
+      let seasonOffset = 0;
+      if (month === 12 || month === 1 || month === 2) {
+        seasonOffset = -10;
+      } else if (month === 6 || month === 7 || month === 8) {
+        seasonOffset = 8;
+      } else if (month === 9 || month === 10 || month === 11) {
+        seasonOffset = -2;
+      } // Spring is 0
+
+      // 2. Time of day cycle (coolest at 4 AM, warmest at 4 PM)
+      const hours = state.gameTime / 60;
+      const timeFactor = Math.sin((hours - 10) * Math.PI / 12); // -1 to 1
+      const dailySwing = terrain.includes('desert') ? 12 : 6; // Deserts have larger day/night temperature swings
+      const timeOffset = timeFactor * dailySwing;
+
+      // 3. Weather impact
+      let weatherOffset = 0;
+      if (state.weather === 'Rainy') weatherOffset = -3;
+      else if (state.weather === 'Stormy') weatherOffset = -5;
+      else if (state.weather === 'Snowy') weatherOffset = -8;
+      else if (state.weather === 'Cloudy') weatherOffset = -2;
+      else if (state.weather === 'Foggy') weatherOffset = -4;
+      else if (state.weather === 'Blizzard') weatherOffset = -15;
+      else if (state.weather === 'Heatwave') weatherOffset = 10;
+      else if (state.weather === 'Hail') weatherOffset = -6;
+
+      newTemp = baseTemp + seasonOffset + timeOffset + weatherOffset;
+    }
 
     // Small random fluctuation
     newTemp += (Math.random() - 0.5) * 0.5;

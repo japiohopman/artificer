@@ -1,0 +1,18 @@
+{
+  "index": "mire_the_mind",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "mire the mind",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.yqUDoxk4x0NWG5Bz]{Slow} once using a warlock spell slot. You can't do so again until you finish a long rest."
+  ],
+  "url": "/assets/atlas/features/json/mire_the_mind.json",
+  "updated_at": "2026-07-12T20:22:54.749Z",
+  "image": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "feature_specific": {}
+}

@@ -1,0 +1,18 @@
+{
+  "index": "master_of_myriad_forms",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "master of myriad forms",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.8RTDOt80u8aBv9qx]{Alter Self} at will, without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/master_of_myriad_forms.json",
+  "updated_at": "2026-07-12T20:22:54.747Z",
+  "image": "icons/creatures/abilities/cougar-pounce-stalk-black.webp",
+  "feature_specific": {}
+}

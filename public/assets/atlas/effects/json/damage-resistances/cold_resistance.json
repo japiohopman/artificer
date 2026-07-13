@@ -1,0 +1,24 @@
+{
+  "index": "cold_resistance",
+  "name": "cold resistance",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.dr.value",
+      "value": "cold",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/damage-resistances/cold_resistance.json",
+  "image": "systems/dnd5e/icons/svg/damage/cold.svg",
+  "updated_at": "2026-07-12T20:22:54.878Z"
+}

@@ -1,0 +1,24 @@
+{
+  "index": "silenced_immunity",
+  "name": "silenced immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.ci.value",
+      "value": "silenced",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/condition-immunities/silenced_immunity.json",
+  "image": "systems/dnd5e/icons/svg/statuses/silenced.svg",
+  "updated_at": "2026-07-12T20:22:54.840Z"
+}

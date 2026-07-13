@@ -1,0 +1,20 @@
+{
+  "index": "falling",
+  "name": "falling",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "falling"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/falling.json",
+  "image": "systems/dnd5e/icons/svg/statuses/falling.svg",
+  "updated_at": "2026-07-12T20:22:54.852Z"
+}

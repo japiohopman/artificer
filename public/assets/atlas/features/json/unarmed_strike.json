@@ -1,0 +1,19 @@
+{
+  "index": "unarmed_strike",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "unarmed strike",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "A punch, kick, head-butt, or similar forceful blow (none of which count as weapons). You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes. You can roll your Martial Arts die in place of the normal damage.",
+    "See: @UUID[Compendium.dnd5e.classfeatures.Item.l50hjTxO2r0iecKw]{Martial Arts (Monk)}"
+  ],
+  "url": "/assets/atlas/features/json/unarmed_strike.json",
+  "updated_at": "2026-07-12T20:22:54.641Z",
+  "image": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+  "feature_specific": {}
+}

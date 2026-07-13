@@ -1,0 +1,18 @@
+{
+  "index": "volley",
+  "class": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/class/json/hunter.json"
+  },
+  "name": "volley",
+  "level": 11,
+  "prerequisites": [],
+  "desc": [
+    "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon's range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target."
+  ],
+  "url": "/assets/atlas/features/json/volley.json",
+  "updated_at": "2026-07-12T20:22:54.678Z",
+  "image": "icons/skills/ranged/target-bullseye-arrow-white.webp",
+  "feature_specific": {}
+}

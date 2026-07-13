@@ -1,0 +1,4338 @@
+[
+  {
+    "index": "_folder",
+    "name": "wizard features",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/_folder.json",
+    "image": "/assets/atlas/features/images/_folder.webp"
+  },
+  {
+    "index": "ability_score_improvement",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/ability_score_improvement.json",
+    "image": "icons/skills/melee/weapons-crossed-swords-yellow.webp"
+  },
+  {
+    "index": "action_surge",
+    "name": "action surge",
+    "class": "fighter",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/action_surge.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "action_surge_1_use",
+    "name": "action surge (1 use)",
+    "class": "fighter",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/action_surge_1_use.json",
+    "image": "/assets/atlas/features/images/action_surge_1_use.webp"
+  },
+  {
+    "index": "action_surge_2_uses",
+    "name": "action surge (2 uses)",
+    "class": "fighter",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/action_surge_2_uses.json",
+    "image": "/assets/atlas/features/images/action_surge_2_uses.webp"
+  },
+  {
+    "index": "additional_fighting_style",
+    "name": "additional fighting style",
+    "class": "champion",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/additional_fighting_style.json",
+    "image": "/assets/atlas/features/images/additional_fighting_style.webp"
+  },
+  {
+    "index": "additional_magical_secrets",
+    "name": "additional magical secrets",
+    "class": "college",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/additional_magical_secrets.json",
+    "image": "/assets/atlas/features/images/additional_magical_secrets.webp"
+  },
+  {
+    "index": "agonizing_blast",
+    "name": "agonizing blast",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/agonizing_blast.json",
+    "image": "icons/magic/acid/projectile-stream-bubbles.webp"
+  },
+  {
+    "index": "arcane_charge",
+    "name": "arcane charge",
+    "class": "fighter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/arcane_charge.json",
+    "image": "/assets/atlas/features/images/arcane_charge.webp"
+  },
+  {
+    "index": "arcane_recovery",
+    "name": "arcane recovery",
+    "class": "wizard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/arcane_recovery.json",
+    "image": "/assets/atlas/features/images/arcane_recovery.webp"
+  },
+  {
+    "index": "arcane_tradition",
+    "name": "arcane tradition",
+    "class": "wizard",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/arcane_tradition.json",
+    "image": "/assets/atlas/features/images/arcane_tradition.webp"
+  },
+  {
+    "index": "arcane_tradition_improvement_1",
+    "name": "arcane tradition feature",
+    "class": "wizard",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/arcane_tradition_improvement_1.json",
+    "image": "/assets/atlas/features/images/arcane_tradition_improvement_1.webp"
+  },
+  {
+    "index": "arcane_tradition_improvement_2",
+    "name": "arcane tradition feature",
+    "class": "wizard",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/arcane_tradition_improvement_2.json",
+    "image": "/assets/atlas/features/images/arcane_tradition_improvement_2.webp"
+  },
+  {
+    "index": "arcane_tradition_improvement_3",
+    "name": "arcane tradition feature",
+    "class": "wizard",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/arcane_tradition_improvement_3.json",
+    "image": "/assets/atlas/features/images/arcane_tradition_improvement_3.webp"
+  },
+  {
+    "index": "archdruid",
+    "name": "archdruid",
+    "class": "druid",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/archdruid.json",
+    "image": "/assets/atlas/features/images/archdruid.webp"
+  },
+  {
+    "index": "archery",
+    "name": "archery",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/archery.json",
+    "image": "icons/weapons/bows/shortbow-recurve-yellow.webp"
+  },
+  {
+    "index": "armor_of_shadows",
+    "name": "armor of shadows",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/armor_of_shadows.json",
+    "image": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  {
+    "index": "artificer_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "artificer",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/artificer_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/artificer_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "artificer_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "artificer",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/artificer_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/artificer_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "artificer_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "artificer",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/artificer_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/artificer_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "artificer_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "artificer",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/artificer_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/artificer_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "artificer_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "artificer",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/artificer_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/artificer_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "artificer_specialist",
+    "name": "artificer specialist",
+    "class": "artificer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/artificer_specialist.json",
+    "image": "/assets/atlas/features/images/artificer_specialist.webp"
+  },
+  {
+    "index": "ascendant_step",
+    "name": "ascendant step",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/ascendant_step.json",
+    "image": "icons/magic/light/explosion-beam-impact-silhouette.webp"
+  },
+  {
+    "index": "assassinate",
+    "name": "assassinate",
+    "class": "rogue",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/assassinate.json",
+    "image": "/assets/atlas/features/images/assassinate.webp"
+  },
+  {
+    "index": "aura_improvements",
+    "name": "aura improvements",
+    "class": "paladin",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/aura_improvements.json",
+    "image": "/assets/atlas/features/images/aura_improvements.webp"
+  },
+  {
+    "index": "aura_of_courage",
+    "name": "aura of courage",
+    "class": "paladin",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/aura_of_courage.json",
+    "image": "/assets/atlas/features/images/aura_of_courage.webp"
+  },
+  {
+    "index": "aura_of_devotion",
+    "name": "aura of devotion",
+    "class": "oath",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/aura_of_devotion.json",
+    "image": "/assets/atlas/features/images/aura_of_devotion.webp"
+  },
+  {
+    "index": "aura_of_protection",
+    "name": "aura of protection",
+    "class": "paladin",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/aura_of_protection.json",
+    "image": "/assets/atlas/features/images/aura_of_protection.webp"
+  },
+  {
+    "index": "barbarian_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "barbarian",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/barbarian_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "barbarian_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "barbarian",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/barbarian_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "barbarian_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "barbarian",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/barbarian_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "barbarian_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "barbarian",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/barbarian_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "barbarian_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "barbarian",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/barbarian_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/barbarian_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "barbarian_extra_attack",
+    "name": "extra attack",
+    "class": "barbarian",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/barbarian_extra_attack.json",
+    "image": "/assets/atlas/features/images/barbarian_extra_attack.webp"
+  },
+  {
+    "index": "barbarian_unarmored_defense",
+    "name": "unarmored defense",
+    "class": "barbarian",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/barbarian_unarmored_defense.json",
+    "image": "/assets/atlas/features/images/barbarian_unarmored_defense.webp"
+  },
+  {
+    "index": "bard_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "bard",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/bard_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/bard_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "bard_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "bard",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/bard_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/bard_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "bard_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "bard",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/bard_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/bard_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "bard_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "bard",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/bard_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/bard_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "bard_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "bard",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/bard_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/bard_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "bard_college",
+    "name": "bard college",
+    "class": "bard",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/bard_college.json",
+    "image": "/assets/atlas/features/images/bard_college.webp"
+  },
+  {
+    "index": "bard_college_improvement_1",
+    "name": "bard college feature",
+    "class": "bard",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/bard_college_improvement_1.json",
+    "image": "/assets/atlas/features/images/bard_college_improvement_1.webp"
+  },
+  {
+    "index": "bard_college_improvement_2",
+    "name": "bard college feature",
+    "class": "bard",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/bard_college_improvement_2.json",
+    "image": "/assets/atlas/features/images/bard_college_improvement_2.webp"
+  },
+  {
+    "index": "bard_expertise_1",
+    "name": "expertise",
+    "class": "bard",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/bard_expertise_1.json",
+    "image": "/assets/atlas/features/images/bard_expertise_1.webp"
+  },
+  {
+    "index": "bard_expertise_2",
+    "name": "expertise",
+    "class": "bard",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/bard_expertise_2.json",
+    "image": "/assets/atlas/features/images/bard_expertise_2.webp"
+  },
+  {
+    "index": "bardic_inspiration",
+    "name": "bardic inspiration",
+    "class": "bard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/bardic_inspiration.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "bardic_inspiration_d10",
+    "name": "bardic inspiration (d10)",
+    "class": "bard",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/bardic_inspiration_d10.json",
+    "image": "/assets/atlas/features/images/bardic_inspiration_d10.webp"
+  },
+  {
+    "index": "bardic_inspiration_d12",
+    "name": "bardic inspiration (d12)",
+    "class": "bard",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/bardic_inspiration_d12.json",
+    "image": "/assets/atlas/features/images/bardic_inspiration_d12.webp"
+  },
+  {
+    "index": "bardic_inspiration_d6",
+    "name": "bardic inspiration (d6)",
+    "class": "bard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/bardic_inspiration_d6.json",
+    "image": "/assets/atlas/features/images/bardic_inspiration_d6.webp"
+  },
+  {
+    "index": "bardic_inspiration_d8",
+    "name": "bardic inspiration (d8)",
+    "class": "bard",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/bardic_inspiration_d8.json",
+    "image": "/assets/atlas/features/images/bardic_inspiration_d8.webp"
+  },
+  {
+    "index": "beast_speech",
+    "name": "beast speech",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/beast_speech.json",
+    "image": "icons/creatures/mammals/elk-moose-marked-green.webp"
+  },
+  {
+    "index": "beast_spells",
+    "name": "beast spells",
+    "class": "druid",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/beast_spells.json",
+    "image": "/assets/atlas/features/images/beast_spells.webp"
+  },
+  {
+    "index": "beguiling_influence",
+    "name": "beguiling influence",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/beguiling_influence.json",
+    "image": "icons/commodities/currency/coin-engraved-sun-smile-copper.webp"
+  },
+  {
+    "index": "bewitching_whispers",
+    "name": "bewitching whispers",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/bewitching_whispers.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "blessed_healer",
+    "name": "blessed healer",
+    "class": "life",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/blessed_healer.json",
+    "image": "/assets/atlas/features/images/blessed_healer.webp"
+  },
+  {
+    "index": "blindsense",
+    "name": "blindsense",
+    "class": "rogue",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/blindsense.json",
+    "image": "/assets/atlas/features/images/blindsense.webp"
+  },
+  {
+    "index": "bonus_cantrip",
+    "name": "bonus cantrip",
+    "class": "circle",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/bonus_cantrip.json",
+    "image": "/assets/atlas/features/images/bonus_cantrip.webp"
+  },
+  {
+    "index": "bonus_proficiencies",
+    "name": "bonus proficiencies",
+    "class": "college",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/bonus_proficiencies.json",
+    "image": "/assets/atlas/features/images/bonus_proficiencies.webp"
+  },
+  {
+    "index": "bonus_proficiencies_assassin",
+    "name": "bonus proficiencies",
+    "class": "rogue",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/bonus_proficiencies_assassin.json",
+    "image": "/assets/atlas/features/images/bonus_proficiencies_assassin.webp"
+  },
+  {
+    "index": "bonus_proficiency",
+    "name": "bonus proficiency",
+    "class": "life",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/bonus_proficiency.json",
+    "image": "/assets/atlas/features/images/bonus_proficiency.webp"
+  },
+  {
+    "index": "book_of_ancient_secrets",
+    "name": "book of ancient secrets",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/book_of_ancient_secrets.json",
+    "image": "icons/sundries/books/book-embossed-clasp-gold-brown.webp"
+  },
+  {
+    "index": "brutal_critical",
+    "name": "brutal critical",
+    "class": "barbarian",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/brutal_critical.json",
+    "image": "icons/skills/melee/strike-axe-blood-red.webp"
+  },
+  {
+    "index": "brutal_critical_1_die",
+    "name": "brutal critical (1 die)",
+    "class": "barbarian",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/brutal_critical_1_die.json",
+    "image": "/assets/atlas/features/images/brutal_critical_1_die.webp"
+  },
+  {
+    "index": "brutal_critical_2_dice",
+    "name": "brutal critical (2 dice)",
+    "class": "barbarian",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/brutal_critical_2_dice.json",
+    "image": "/assets/atlas/features/images/brutal_critical_2_dice.webp"
+  },
+  {
+    "index": "brutal_critical_3_dice",
+    "name": "brutal critical (3 dice)",
+    "class": "barbarian",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/brutal_critical_3_dice.json",
+    "image": "/assets/atlas/features/images/brutal_critical_3_dice.webp"
+  },
+  {
+    "index": "bulwark_of_force",
+    "name": "bulwark of force",
+    "class": "fighter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/bulwark_of_force.json",
+    "image": "/assets/atlas/features/images/bulwark_of_force.webp"
+  },
+  {
+    "index": "careful_spell",
+    "name": "careful spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/careful_spell.json",
+    "image": "icons/magic/nature/beam-hand-leaves-green.webp"
+  },
+  {
+    "index": "chains_of_carceri",
+    "name": "chains of carceri",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/chains_of_carceri.json",
+    "image": "icons/skills/melee/strike-flail-spiked-pink.webp"
+  },
+  {
+    "index": "channel_divinity",
+    "name": "channel divinity",
+    "class": "paladin",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/channel_divinity.json",
+    "image": "/assets/atlas/features/images/channel_divinity.webp"
+  },
+  {
+    "index": "channel_divinity_1_rest",
+    "name": "channel divinity (1/rest)",
+    "class": "cleric",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/channel_divinity_1_rest.json",
+    "image": "/assets/atlas/features/images/channel_divinity_1_rest.webp"
+  },
+  {
+    "index": "channel_divinity_2_rest",
+    "name": "channel divinity (2/rest)",
+    "class": "cleric",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/channel_divinity_2_rest.json",
+    "image": "/assets/atlas/features/images/channel_divinity_2_rest.webp"
+  },
+  {
+    "index": "channel_divinity_3_rest",
+    "name": "channel divinity (3/rest)",
+    "class": "cleric",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/channel_divinity_3_rest.json",
+    "image": "/assets/atlas/features/images/channel_divinity_3_rest.webp"
+  },
+  {
+    "index": "channel_divinity_preserve_life",
+    "name": "channel divinity: preserve life",
+    "class": "life",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/channel_divinity_preserve_life.json",
+    "image": "/assets/atlas/features/images/channel_divinity_preserve_life.webp"
+  },
+  {
+    "index": "channel_divinity_sacred_weapon",
+    "name": "channel divinity: sacred weapon",
+    "class": "oath",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/channel_divinity_sacred_weapon.json",
+    "image": "/assets/atlas/features/images/channel_divinity_sacred_weapon.webp"
+  },
+  {
+    "index": "channel_divinity_turn_the_unholy",
+    "name": "channel divinity: turn the unholy",
+    "class": "oath",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/channel_divinity_turn_the_unholy.json",
+    "image": "/assets/atlas/features/images/channel_divinity_turn_the_unholy.webp"
+  },
+  {
+    "index": "channel_divinity_turn_undead",
+    "name": "channel divinity: turn undead",
+    "class": "cleric",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/channel_divinity_turn_undead.json",
+    "image": "/assets/atlas/features/images/channel_divinity_turn_undead.webp"
+  },
+  {
+    "index": "circle_of_the_land",
+    "name": "circle of the land",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land.webp"
+  },
+  {
+    "index": "circle_of_the_land_arctic",
+    "name": "circle of the land: arctic",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_arctic.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_arctic.webp"
+  },
+  {
+    "index": "circle_of_the_land_coast",
+    "name": "circle of the land: coast",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_coast.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_coast.webp"
+  },
+  {
+    "index": "circle_of_the_land_desert",
+    "name": "circle of the land: desert",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_desert.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_desert.webp"
+  },
+  {
+    "index": "circle_of_the_land_forest",
+    "name": "circle of the land: forest",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_forest.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_forest.webp"
+  },
+  {
+    "index": "circle_of_the_land_grassland",
+    "name": "circle of the land: grassland",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_grassland.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_grassland.webp"
+  },
+  {
+    "index": "circle_of_the_land_mountain",
+    "name": "circle of the land: mountain",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_mountain.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_mountain.webp"
+  },
+  {
+    "index": "circle_of_the_land_swamp",
+    "name": "circle of the land: swamp",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/circle_of_the_land_swamp.json",
+    "image": "/assets/atlas/features/images/circle_of_the_land_swamp.webp"
+  },
+  {
+    "index": "circle_spells",
+    "name": "circle spells",
+    "class": "circle",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/circle_spells.json",
+    "image": "icons/magic/water/projectile-ice-teardrop.webp"
+  },
+  {
+    "index": "circle_spells_1",
+    "name": "circle spells",
+    "class": "druid",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/circle_spells_1.json",
+    "image": "/assets/atlas/features/images/circle_spells_1.webp"
+  },
+  {
+    "index": "circle_spells_2",
+    "name": "circle spells",
+    "class": "druid",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/circle_spells_2.json",
+    "image": "/assets/atlas/features/images/circle_spells_2.webp"
+  },
+  {
+    "index": "circle_spells_3",
+    "name": "circle spells",
+    "class": "druid",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/circle_spells_3.json",
+    "image": "/assets/atlas/features/images/circle_spells_3.webp"
+  },
+  {
+    "index": "circle_spells_4",
+    "name": "circle spells",
+    "class": "druid",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/circle_spells_4.json",
+    "image": "/assets/atlas/features/images/circle_spells_4.webp"
+  },
+  {
+    "index": "cleansing_touch",
+    "name": "cleansing touch",
+    "class": "paladin",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/cleansing_touch.json",
+    "image": "/assets/atlas/features/images/cleansing_touch.webp"
+  },
+  {
+    "index": "cleric_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "cleric",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/cleric_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/cleric_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "cleric_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "cleric",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/cleric_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/cleric_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "cleric_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "cleric",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/cleric_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/cleric_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "cleric_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "cleric",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/cleric_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/cleric_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "cleric_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "cleric",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/cleric_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/cleric_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "colossus_slayer",
+    "name": "colossus slayer",
+    "class": "hunter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/colossus_slayer.json",
+    "image": "icons/creatures/magical/construct-iron-stomping-yellow.webp"
+  },
+  {
+    "index": "combat_superiority",
+    "name": "combat superiority",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/combat_superiority.json",
+    "image": "/assets/atlas/features/images/combat_superiority.webp"
+  },
+  {
+    "index": "countercharm",
+    "name": "countercharm",
+    "class": "bard",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/countercharm.json",
+    "image": "/assets/atlas/features/images/countercharm.webp"
+  },
+  {
+    "index": "cunning_action",
+    "name": "cunning action",
+    "class": "rogue",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/cunning_action.json",
+    "image": "/assets/atlas/features/images/cunning_action.webp"
+  },
+  {
+    "index": "cutting_words",
+    "name": "cutting words",
+    "class": "college",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/cutting_words.json",
+    "image": "/assets/atlas/features/images/cutting_words.webp"
+  },
+  {
+    "index": "danger_sense",
+    "name": "danger sense",
+    "class": "barbarian",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/danger_sense.json",
+    "image": "/assets/atlas/features/images/danger_sense.webp"
+  },
+  {
+    "index": "dark_ones_blessing",
+    "name": "dark one's blessing",
+    "class": "the",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dark_ones_blessing.json",
+    "image": "/assets/atlas/features/images/dark_ones_blessing.webp"
+  },
+  {
+    "index": "dark_ones_own_luck",
+    "name": "dark one's own luck",
+    "class": "the",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/dark_ones_own_luck.json",
+    "image": "/assets/atlas/features/images/dark_ones_own_luck.webp"
+  },
+  {
+    "index": "death_strike",
+    "name": "death strike",
+    "class": "rogue",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/death_strike.json",
+    "image": "/assets/atlas/features/images/death_strike.webp"
+  },
+  {
+    "index": "death_strike",
+    "name": "death strike",
+    "class": "rogue",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/death_stroke.json",
+    "image": "/assets/atlas/features/images/death_strike.webp"
+  },
+  {
+    "index": "defense",
+    "name": "defense",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/defense.json",
+    "image": "icons/equipment/shield/heater-stone-orange.webp"
+  },
+  {
+    "index": "defensive_tactics",
+    "name": "defensive tactics",
+    "class": "hunter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/defensive_tactics.json",
+    "image": "/assets/atlas/features/images/defensive_tactics.webp"
+  },
+  {
+    "index": "defensive_tactics_escape_the_horde",
+    "name": "defensive tactics: escape the horde",
+    "class": "ranger",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/defensive_tactics_escape_the_horde.json",
+    "image": "/assets/atlas/features/images/defensive_tactics_escape_the_horde.webp"
+  },
+  {
+    "index": "defensive_tactics_multiattack_defense",
+    "name": "defensive tactics: multiattack defense",
+    "class": "ranger",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/defensive_tactics_multiattack_defense.json",
+    "image": "/assets/atlas/features/images/defensive_tactics_multiattack_defense.webp"
+  },
+  {
+    "index": "defensive_tactics_steel_will",
+    "name": "defensive tactics: steel will",
+    "class": "ranger",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/defensive_tactics_steel_will.json",
+    "image": "/assets/atlas/features/images/defensive_tactics_steel_will.webp"
+  },
+  {
+    "index": "deflect_missiles",
+    "name": "deflect missiles",
+    "class": "monk",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/deflect_missiles.json",
+    "image": "/assets/atlas/features/images/deflect_missiles.webp"
+  },
+  {
+    "index": "destroy_undead",
+    "name": "destroy undead",
+    "class": "cleric",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/destroy_undead.json",
+    "image": "icons/magic/death/skull-horned-worn-fire-blue.webp"
+  },
+  {
+    "index": "destroy_undead_cr_1_2_or_below",
+    "name": "destroy undead (cr 1/2 or below)",
+    "class": "cleric",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/destroy_undead_cr_1_2_or_below.json",
+    "image": "/assets/atlas/features/images/destroy_undead_cr_1_2_or_below.webp"
+  },
+  {
+    "index": "destroy_undead_cr_1_or_below",
+    "name": "destroy undead (cr 1 or below)",
+    "class": "cleric",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/destroy_undead_cr_1_or_below.json",
+    "image": "/assets/atlas/features/images/destroy_undead_cr_1_or_below.webp"
+  },
+  {
+    "index": "destroy_undead_cr_2_or_below",
+    "name": "destroy undead (cr 2 or below)",
+    "class": "cleric",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/destroy_undead_cr_2_or_below.json",
+    "image": "/assets/atlas/features/images/destroy_undead_cr_2_or_below.webp"
+  },
+  {
+    "index": "destroy_undead_cr_3_or_below",
+    "name": "destroy undead (cr 3 or below)",
+    "class": "cleric",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/destroy_undead_cr_3_or_below.json",
+    "image": "/assets/atlas/features/images/destroy_undead_cr_3_or_below.webp"
+  },
+  {
+    "index": "destroy_undead_cr_4_or_below",
+    "name": "destroy undead (cr 4 or below)",
+    "class": "cleric",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/destroy_undead_cr_4_or_below.json",
+    "image": "/assets/atlas/features/images/destroy_undead_cr_4_or_below.webp"
+  },
+  {
+    "index": "devils_sight",
+    "name": "devil's sight",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/devils_sight.json",
+    "image": "icons/magic/perception/silhouette-stealth-shadow.webp"
+  },
+  {
+    "index": "diamond_soul",
+    "name": "diamond soul",
+    "class": "monk",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/diamond_soul.json",
+    "image": "/assets/atlas/features/images/diamond_soul.webp"
+  },
+  {
+    "index": "disciple_of_life",
+    "name": "disciple of life",
+    "class": "life",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/disciple_of_life.json",
+    "image": "/assets/atlas/features/images/disciple_of_life.webp"
+  },
+  {
+    "index": "distant_spell",
+    "name": "distant spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/distant_spell.json",
+    "image": "icons/skills/targeting/target-strike-triple-blue.webp"
+  },
+  {
+    "index": "divine_domain",
+    "name": "divine domain",
+    "class": "cleric",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/divine_domain.json",
+    "image": "/assets/atlas/features/images/divine_domain.webp"
+  },
+  {
+    "index": "divine_domain_improvement_1",
+    "name": "divine domain feature",
+    "class": "cleric",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/divine_domain_improvement_1.json",
+    "image": "/assets/atlas/features/images/divine_domain_improvement_1.webp"
+  },
+  {
+    "index": "divine_domain_improvement_2",
+    "name": "divine domain feature",
+    "class": "cleric",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/divine_domain_improvement_2.json",
+    "image": "/assets/atlas/features/images/divine_domain_improvement_2.webp"
+  },
+  {
+    "index": "divine_domain_improvement_3",
+    "name": "divine domain feature",
+    "class": "cleric",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/divine_domain_improvement_3.json",
+    "image": "/assets/atlas/features/images/divine_domain_improvement_3.webp"
+  },
+  {
+    "index": "divine_domain_improvement_4",
+    "name": "divine domain feature",
+    "class": "cleric",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/divine_domain_improvement_4.json",
+    "image": "/assets/atlas/features/images/divine_domain_improvement_4.webp"
+  },
+  {
+    "index": "divine_health",
+    "name": "divine health",
+    "class": "paladin",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/divine_health.json",
+    "image": "/assets/atlas/features/images/divine_health.webp"
+  },
+  {
+    "index": "divine_intervention",
+    "name": "divine intervention",
+    "class": "cleric",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/divine_intervention.json",
+    "image": "/assets/atlas/features/images/divine_intervention.webp"
+  },
+  {
+    "index": "divine_intervention_improvement",
+    "name": "divine intervention improvement",
+    "class": "cleric",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/divine_intervention_improvement.json",
+    "image": "/assets/atlas/features/images/divine_intervention_improvement.webp"
+  },
+  {
+    "index": "divine_sense",
+    "name": "divine sense",
+    "class": "paladin",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/divine_sense.json",
+    "image": "/assets/atlas/features/images/divine_sense.webp"
+  },
+  {
+    "index": "divine_smite",
+    "name": "divine smite",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/divine_smite.json",
+    "image": "/assets/atlas/features/images/divine_smite.webp"
+  },
+  {
+    "index": "divine_strike",
+    "name": "divine strike",
+    "class": "life",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/divine_strike.json",
+    "image": "/assets/atlas/features/images/divine_strike.webp"
+  },
+  {
+    "index": "domain_spells_1",
+    "name": "domain spells",
+    "class": "cleric",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/domain_spells_1.json",
+    "image": "/assets/atlas/features/images/domain_spells_1.webp"
+  },
+  {
+    "index": "domain_spells_2",
+    "name": "domain spells",
+    "class": "cleric",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/domain_spells_2.json",
+    "image": "/assets/atlas/features/images/domain_spells_2.webp"
+  },
+  {
+    "index": "domain_spells_3",
+    "name": "domain spells",
+    "class": "cleric",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/domain_spells_3.json",
+    "image": "/assets/atlas/features/images/domain_spells_3.webp"
+  },
+  {
+    "index": "domain_spells_4",
+    "name": "domain spells",
+    "class": "cleric",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/domain_spells_4.json",
+    "image": "/assets/atlas/features/images/domain_spells_4.webp"
+  },
+  {
+    "index": "domain_spells_5",
+    "name": "domain spells",
+    "class": "cleric",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/domain_spells_5.json",
+    "image": "/assets/atlas/features/images/domain_spells_5.webp"
+  },
+  {
+    "index": "draconic_presence",
+    "name": "draconic presence",
+    "class": "draconic",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/draconic_presence.json",
+    "image": "/assets/atlas/features/images/draconic_presence.webp"
+  },
+  {
+    "index": "draconic_resilience",
+    "name": "draconic resilience",
+    "class": "draconic",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/draconic_resilience.json",
+    "image": "/assets/atlas/features/images/draconic_resilience.webp"
+  },
+  {
+    "index": "dragon_ancestor",
+    "name": "dragon ancestor",
+    "class": "draconic",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor.webp"
+  },
+  {
+    "index": "dragon_ancestor_black___acid_damage",
+    "name": "dragon ancestor: black _ acid damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_black___acid_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_black___acid_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_blue___lightning_damage",
+    "name": "dragon ancestor: blue _ lightning damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_blue___lightning_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_blue___lightning_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_brass___fire_damage",
+    "name": "dragon ancestor: brass _ fire damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_brass___fire_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_brass___fire_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_bronze___lightning_damage",
+    "name": "dragon ancestor: bronze _ lightning damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_bronze___lightning_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_bronze___lightning_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_copper___acid_damage",
+    "name": "dragon ancestor: copper _ acid damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_copper___acid_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_copper___acid_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_gold___fire_damage",
+    "name": "dragon ancestor: gold _ fire damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_gold___fire_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_gold___fire_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_green___poison_damage",
+    "name": "dragon ancestor: green _ poison damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_green___poison_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_green___poison_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_red___fire_damage",
+    "name": "dragon ancestor: red _ fire damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_red___fire_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_red___fire_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_silver___cold_damage",
+    "name": "dragon ancestor: silver _ cold damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_silver___cold_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_silver___cold_damage.webp"
+  },
+  {
+    "index": "dragon_ancestor_white___cold_damage",
+    "name": "dragon ancestor: white _ cold damage",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dragon_ancestor_white___cold_damage.json",
+    "image": "/assets/atlas/features/images/dragon_ancestor_white___cold_damage.webp"
+  },
+  {
+    "index": "dragon_wings",
+    "name": "dragon wings",
+    "class": "draconic",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/dragon_wings.json",
+    "image": "/assets/atlas/features/images/dragon_wings.webp"
+  },
+  {
+    "index": "dreadful_word",
+    "name": "dreadful word",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/dreadful_word.json",
+    "image": "icons/magic/air/wind-vortex-swirl-blue.webp"
+  },
+  {
+    "index": "druid_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "druid",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/druid_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/druid_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "druid_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "druid",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/druid_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/druid_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "druid_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "druid",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/druid_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/druid_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "druid_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "druid",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/druid_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/druid_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "druid_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "druid",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/druid_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/druid_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "druid_circle",
+    "name": "druid circle",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/druid_circle.json",
+    "image": "/assets/atlas/features/images/druid_circle.webp"
+  },
+  {
+    "index": "druid_circle_improvement_1",
+    "name": "druid circle feature",
+    "class": "druid",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/druid_circle_improvement_1.json",
+    "image": "/assets/atlas/features/images/druid_circle_improvement_1.webp"
+  },
+  {
+    "index": "druid_circle_improvement_2",
+    "name": "druid circle feature",
+    "class": "druid",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/druid_circle_improvement_2.json",
+    "image": "/assets/atlas/features/images/druid_circle_improvement_2.webp"
+  },
+  {
+    "index": "druid_circle_improvement_3",
+    "name": "druid circle feature",
+    "class": "druid",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/druid_circle_improvement_3.json",
+    "image": "/assets/atlas/features/images/druid_circle_improvement_3.webp"
+  },
+  {
+    "index": "druid_lands_stride",
+    "name": "land's stride",
+    "class": "druid",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/druid_lands_stride.json",
+    "image": "/assets/atlas/features/images/druid_lands_stride.webp"
+  },
+  {
+    "index": "druid_timeless_body",
+    "name": "timeless body",
+    "class": "druid",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/druid_timeless_body.json",
+    "image": "/assets/atlas/features/images/druid_timeless_body.webp"
+  },
+  {
+    "index": "druidic",
+    "name": "druidic",
+    "class": "druid",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/druidic.json",
+    "image": "/assets/atlas/features/images/druidic.webp"
+  },
+  {
+    "index": "dueling",
+    "name": "dueling",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/dueling.json",
+    "image": "icons/skills/melee/hand-grip-sword-orange.webp"
+  },
+  {
+    "index": "eldritch_invocation_agonizing_blast",
+    "name": "eldritch invocation: agonizing blast",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_agonizing_blast.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_agonizing_blast.webp"
+  },
+  {
+    "index": "eldritch_invocation_armor_of_shadows",
+    "name": "eldritch invocation: armor of shadows",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_armor_of_shadows.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_armor_of_shadows.webp"
+  },
+  {
+    "index": "eldritch_invocation_ascendant_step",
+    "name": "eldritch invocation: ascendant step",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_ascendant_step.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_ascendant_step.webp"
+  },
+  {
+    "index": "eldritch_invocation_beast_speech",
+    "name": "eldritch invocation: beast speech",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_beast_speech.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_beast_speech.webp"
+  },
+  {
+    "index": "eldritch_invocation_beguiling_influence",
+    "name": "eldritch invocation: beguiling influence",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_beguiling_influence.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_beguiling_influence.webp"
+  },
+  {
+    "index": "eldritch_invocation_bewitching_whispers",
+    "name": "eldritch invocation: bewitching whispers",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_bewitching_whispers.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_bewitching_whispers.webp"
+  },
+  {
+    "index": "eldritch_invocation_book_of_ancient_secrets",
+    "name": "eldritch invocation: book of ancient secrets",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_book_of_ancient_secrets.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_book_of_ancient_secrets.webp"
+  },
+  {
+    "index": "eldritch_invocation_chains_of_carceri",
+    "name": "eldritch invocation: chains of carceri",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_chains_of_carceri.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_chains_of_carceri.webp"
+  },
+  {
+    "index": "eldritch_invocation_devils_sight",
+    "name": "eldritch invocation: devil's sight",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_devils_sight.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_devils_sight.webp"
+  },
+  {
+    "index": "eldritch_invocation_dreadful_word",
+    "name": "eldritch invocation: dreadful word",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_dreadful_word.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_dreadful_word.webp"
+  },
+  {
+    "index": "eldritch_invocation_eldritch_sight",
+    "name": "eldritch invocation: eldritch sight",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_eldritch_sight.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_eldritch_sight.webp"
+  },
+  {
+    "index": "eldritch_invocation_eldritch_spear",
+    "name": "eldritch invocation: eldritch spear",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_eldritch_spear.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_eldritch_spear.webp"
+  },
+  {
+    "index": "eldritch_invocation_eyes_of_the_rune_keeper",
+    "name": "eldritch invocation: eyes of the rune keeper",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_eyes_of_the_rune_keeper.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_eyes_of_the_rune_keeper.webp"
+  },
+  {
+    "index": "eldritch_invocation_fiendish_vigor",
+    "name": "eldritch invocation: fiendish vigor",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_fiendish_vigor.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_fiendish_vigor.webp"
+  },
+  {
+    "index": "eldritch_invocation_gaze_of_two_minds",
+    "name": "eldritch invocation: gaze of two minds",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_gaze_of_two_minds.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_gaze_of_two_minds.webp"
+  },
+  {
+    "index": "eldritch_invocation_lifedrinker",
+    "name": "eldritch invocation: lifedrinker",
+    "class": "warlock",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_lifedrinker.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_lifedrinker.webp"
+  },
+  {
+    "index": "eldritch_invocation_mask_of_many_faces",
+    "name": "eldritch invocation: mask of many faces",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_mask_of_many_faces.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_mask_of_many_faces.webp"
+  },
+  {
+    "index": "eldritch_invocation_master_of_myriad_forms",
+    "name": "eldritch invocation: master of myriad forms",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_master_of_myriad_forms.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_master_of_myriad_forms.webp"
+  },
+  {
+    "index": "eldritch_invocation_minions_of_chaos",
+    "name": "eldritch invocation: minions of chaos",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_minions_of_chaos.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_minions_of_chaos.webp"
+  },
+  {
+    "index": "eldritch_invocation_mire_the_mind",
+    "name": "eldritch invocation: mire the mind",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_mire_the_mind.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_mire_the_mind.webp"
+  },
+  {
+    "index": "eldritch_invocation_misty_visions",
+    "name": "eldritch invocation: misty visions",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_misty_visions.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_misty_visions.webp"
+  },
+  {
+    "index": "eldritch_invocation_one_with_shadows",
+    "name": "eldritch invocation: one with shadows",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_one_with_shadows.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_one_with_shadows.webp"
+  },
+  {
+    "index": "eldritch_invocation_otherworldly_leap",
+    "name": "eldritch invocation: otherworldly leap",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_otherworldly_leap.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_otherworldly_leap.webp"
+  },
+  {
+    "index": "eldritch_invocation_repelling_blast",
+    "name": "eldritch invocation: repelling blast",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_repelling_blast.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_repelling_blast.webp"
+  },
+  {
+    "index": "eldritch_invocation_sculptor_of_flesh",
+    "name": "eldritch invocation: sculptor of flesh",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_sculptor_of_flesh.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_sculptor_of_flesh.webp"
+  },
+  {
+    "index": "eldritch_invocation_sign_of_ill_omen",
+    "name": "eldritch invocation: sign of ill omen",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_sign_of_ill_omen.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_sign_of_ill_omen.webp"
+  },
+  {
+    "index": "eldritch_invocation_thief_of_five_fates",
+    "name": "eldritch invocation: thief of five fates",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_thief_of_five_fates.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_thief_of_five_fates.webp"
+  },
+  {
+    "index": "eldritch_invocation_thirsting_blade",
+    "name": "eldritch invocation: thirsting blade",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_thirsting_blade.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_thirsting_blade.webp"
+  },
+  {
+    "index": "eldritch_invocation_visions_of_distant_realms",
+    "name": "eldritch invocation: visions of distant realms",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_visions_of_distant_realms.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_visions_of_distant_realms.webp"
+  },
+  {
+    "index": "eldritch_invocation_voice_of_the_chain_master",
+    "name": "eldritch invocation: voice of the chain master",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_voice_of_the_chain_master.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_voice_of_the_chain_master.webp"
+  },
+  {
+    "index": "eldritch_invocation_whispers_of_the_grave",
+    "name": "eldritch invocation: whispers of the grave",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_whispers_of_the_grave.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_whispers_of_the_grave.webp"
+  },
+  {
+    "index": "eldritch_invocation_witch_sight",
+    "name": "eldritch invocation: witch sight",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/eldritch_invocation_witch_sight.json",
+    "image": "/assets/atlas/features/images/eldritch_invocation_witch_sight.webp"
+  },
+  {
+    "index": "eldritch_invocations",
+    "name": "eldritch invocations",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_invocations.json",
+    "image": "/assets/atlas/features/images/eldritch_invocations.webp"
+  },
+  {
+    "index": "eldritch_master",
+    "name": "eldritch master",
+    "class": "warlock",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/eldritch_master.json",
+    "image": "/assets/atlas/features/images/eldritch_master.webp"
+  },
+  {
+    "index": "eldritch_sight",
+    "name": "eldritch sight",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_sight.json",
+    "image": "icons/magic/perception/hand-eye-pink.webp"
+  },
+  {
+    "index": "eldritch_spear",
+    "name": "eldritch spear",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eldritch_spear.json",
+    "image": "icons/weapons/ammunition/arrowhead-glowing-blue.webp"
+  },
+  {
+    "index": "eldritch_strike",
+    "name": "eldritch strike",
+    "class": "fighter",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/eldritch_strike.json",
+    "image": "/assets/atlas/features/images/eldritch_strike.webp"
+  },
+  {
+    "index": "elemental_affinity",
+    "name": "elemental affinity",
+    "class": "draconic",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/elemental_affinity.json",
+    "image": "/assets/atlas/features/images/elemental_affinity.webp"
+  },
+  {
+    "index": "elusive",
+    "name": "elusive",
+    "class": "rogue",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/elusive.json",
+    "image": "/assets/atlas/features/images/elusive.webp"
+  },
+  {
+    "index": "empowered_evocation",
+    "name": "empowered evocation",
+    "class": "school",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/empowered_evocation.json",
+    "image": "/assets/atlas/features/images/empowered_evocation.webp"
+  },
+  {
+    "index": "empowered_spell",
+    "name": "empowered spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/empowered_spell.json",
+    "image": "icons/magic/air/wind-tornado-wall-blue.webp"
+  },
+  {
+    "index": "empty_body",
+    "name": "empty body",
+    "class": "monk",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/empty_body.json",
+    "image": "/assets/atlas/features/images/empty_body.webp"
+  },
+  {
+    "index": "escape_the_horde",
+    "name": "escape the horde",
+    "class": "hunter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/escape_the_horde.json",
+    "image": "icons/creatures/mammals/bats-movement-flying-black.webp"
+  },
+  {
+    "index": "evasion",
+    "name": "evasion",
+    "class": "monk",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/evasion.json",
+    "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp"
+  },
+  {
+    "index": "evocation_savant",
+    "name": "evocation savant",
+    "class": "school",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/evocation_savant.json",
+    "image": "/assets/atlas/features/images/evocation_savant.webp"
+  },
+  {
+    "index": "expanded_spell_list",
+    "name": "expanded spell list",
+    "class": "the",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/expanded_spell_list.json",
+    "image": "icons/magic/control/encase-creature-monster-hold.webp"
+  },
+  {
+    "index": "expertise",
+    "name": "expertise",
+    "class": "rogue",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/expertise.json",
+    "image": "icons/commodities/tech/cog-bronze.webp"
+  },
+  {
+    "index": "extended_spell",
+    "name": "extended spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/extended_spell.json",
+    "image": "icons/magic/time/hourglass-yellow-green.webp"
+  },
+  {
+    "index": "extra_attack",
+    "name": "extra attack",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/extra_attack.json",
+    "image": "icons/skills/melee/spear-tips-triple-orange.webp"
+  },
+  {
+    "index": "extra_attack_1",
+    "name": "extra attack",
+    "class": "fighter",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/extra_attack_1.json",
+    "image": "/assets/atlas/features/images/extra_attack_1.webp"
+  },
+  {
+    "index": "extra_attack_2",
+    "name": "extra attack (2)",
+    "class": "fighter",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/extra_attack_2.json",
+    "image": "/assets/atlas/features/images/extra_attack_2.webp"
+  },
+  {
+    "index": "extra_attack_3",
+    "name": "extra attack (3)",
+    "class": "fighter",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/extra_attack_3.json",
+    "image": "/assets/atlas/features/images/extra_attack_3.webp"
+  },
+  {
+    "index": "eyes_of_the_rune_keeper",
+    "name": "eyes of the rune keeper",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/eyes_of_the_rune_keeper.json",
+    "image": "icons/sundries/documents/document-torn-diagram-tan.webp"
+  },
+  {
+    "index": "fast_hands",
+    "name": "fast hands",
+    "class": "thief",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/fast_hands.json",
+    "image": "/assets/atlas/features/images/fast_hands.webp"
+  },
+  {
+    "index": "fast_movement",
+    "name": "fast movement",
+    "class": "barbarian",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/fast_movement.json",
+    "image": "/assets/atlas/features/images/fast_movement.webp"
+  },
+  {
+    "index": "favored_enemy",
+    "name": "favored enemy",
+    "class": "ranger",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/favored_enemy.json",
+    "image": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  {
+    "index": "favored_enemy_1_type",
+    "name": "favored enemy (1 type)",
+    "class": "ranger",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/favored_enemy_1_type.json",
+    "image": "/assets/atlas/features/images/favored_enemy_1_type.webp"
+  },
+  {
+    "index": "favored_enemy_2_types",
+    "name": "favored enemy (2 types)",
+    "class": "ranger",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/favored_enemy_2_types.json",
+    "image": "/assets/atlas/features/images/favored_enemy_2_types.webp"
+  },
+  {
+    "index": "favored_enemy_3_enemies",
+    "name": "favored enemy (3 enemies)",
+    "class": "ranger",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/favored_enemy_3_enemies.json",
+    "image": "/assets/atlas/features/images/favored_enemy_3_enemies.webp"
+  },
+  {
+    "index": "feral_instinct",
+    "name": "feral instinct",
+    "class": "barbarian",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/feral_instinct.json",
+    "image": "/assets/atlas/features/images/feral_instinct.webp"
+  },
+  {
+    "index": "feral_senses",
+    "name": "feral senses",
+    "class": "ranger",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/feral_senses.json",
+    "image": "/assets/atlas/features/images/feral_senses.webp"
+  },
+  {
+    "index": "fiendish_resilience",
+    "name": "fiendish resilience",
+    "class": "the",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/fiendish_resilience.json",
+    "image": "/assets/atlas/features/images/fiendish_resilience.webp"
+  },
+  {
+    "index": "fiendish_vigor",
+    "name": "fiendish vigor",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fiendish_vigor.json",
+    "image": "icons/magic/death/undead-zombie-grave-green.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_6",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_6.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_6.webp"
+  },
+  {
+    "index": "fighter_ability_score_improvement_7",
+    "name": "ability score improvement",
+    "class": "fighter",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/fighter_ability_score_improvement_7.json",
+    "image": "/assets/atlas/features/images/fighter_ability_score_improvement_7.webp"
+  },
+  {
+    "index": "fighter_fighting_style",
+    "name": "fighting style",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style.webp"
+  },
+  {
+    "index": "fighter_fighting_style_archery",
+    "name": "fighting style: archery",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_archery.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_archery.webp"
+  },
+  {
+    "index": "fighter_fighting_style_defense",
+    "name": "fighting style: defense",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_defense.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_defense.webp"
+  },
+  {
+    "index": "fighter_fighting_style_dueling",
+    "name": "fighting style: dueling",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_dueling.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_dueling.webp"
+  },
+  {
+    "index": "fighter_fighting_style_great_weapon_fighting",
+    "name": "fighting style: great weapon fighting",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_great_weapon_fighting.webp"
+  },
+  {
+    "index": "fighter_fighting_style_protection",
+    "name": "fighting style: protection",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_protection.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_protection.webp"
+  },
+  {
+    "index": "fighter_fighting_style_two_weapon_fighting",
+    "name": "fighting style: two_weapon fighting",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json",
+    "image": "/assets/atlas/features/images/fighter_fighting_style_two_weapon_fighting.webp"
+  },
+  {
+    "index": "fighting_style",
+    "name": "fighting style",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fighting_style.json",
+    "image": "icons/skills/melee/weapons-crossed-daggers-orange.webp"
+  },
+  {
+    "index": "fighting_style_defense",
+    "name": "fighting style: defense",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fighting_style_defense.json",
+    "image": "/assets/atlas/features/images/fighting_style_defense.webp"
+  },
+  {
+    "index": "fighting_style_dueling",
+    "name": "fighting style: dueling",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fighting_style_dueling.json",
+    "image": "/assets/atlas/features/images/fighting_style_dueling.webp"
+  },
+  {
+    "index": "fighting_style_great_weapon_fighting",
+    "name": "fighting style: great weapon fighting",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fighting_style_great_weapon_fighting.json",
+    "image": "/assets/atlas/features/images/fighting_style_great_weapon_fighting.webp"
+  },
+  {
+    "index": "fighting_style_protection",
+    "name": "fighting style: protection",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/fighting_style_protection.json",
+    "image": "/assets/atlas/features/images/fighting_style_protection.webp"
+  },
+  {
+    "index": "flash_of_genius",
+    "name": "flash of genius",
+    "class": "artificer",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/flash_of_genius.json",
+    "image": "/assets/atlas/features/images/flash_of_genius.webp"
+  },
+  {
+    "index": "flexible_casting_converting_spell_slot",
+    "name": "flexible casting: converting spell slot",
+    "class": "sorcerer",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/flexible_casting_converting_spell_slot.json",
+    "image": "/assets/atlas/features/images/flexible_casting_converting_spell_slot.webp"
+  },
+  {
+    "index": "flexible_casting_creating_spell_slots",
+    "name": "flexible casting: creating spell slots",
+    "class": "sorcerer",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/flexible_casting_creating_spell_slots.json",
+    "image": "/assets/atlas/features/images/flexible_casting_creating_spell_slots.webp"
+  },
+  {
+    "index": "flurry_of_blows",
+    "name": "flurry of blows",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/flurry_of_blows.json",
+    "image": "/assets/atlas/features/images/flurry_of_blows.webp"
+  },
+  {
+    "index": "foe_slayer",
+    "name": "foe slayer",
+    "class": "ranger",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/foe_slayer.json",
+    "image": "/assets/atlas/features/images/foe_slayer.webp"
+  },
+  {
+    "index": "font_of_inspiration",
+    "name": "font of inspiration",
+    "class": "bard",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/font_of_inspiration.json",
+    "image": "/assets/atlas/features/images/font_of_inspiration.webp"
+  },
+  {
+    "index": "font_of_magic",
+    "name": "font of magic",
+    "class": "sorcerer",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/font_of_magic.json",
+    "image": "/assets/atlas/features/images/font_of_magic.webp"
+  },
+  {
+    "index": "frenzy",
+    "name": "frenzy",
+    "class": "path",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/frenzy.json",
+    "image": "/assets/atlas/features/images/frenzy.webp"
+  },
+  {
+    "index": "gaze_of_two_minds",
+    "name": "gaze of two minds",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/gaze_of_two_minds.json",
+    "image": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  {
+    "index": "giant_killer",
+    "name": "giant killer",
+    "class": "hunter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/giant_killer.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "grappler",
+    "name": "grappler",
+    "class": "str",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/grappler.json",
+    "image": "icons/skills/melee/unarmed-punch-fist.webp"
+  },
+  {
+    "index": "great_weapon_fighting",
+    "name": "great weapon fighting",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/great_weapon_fighting.json",
+    "image": "icons/skills/melee/strike-sword-steel-yellow.webp"
+  },
+  {
+    "index": "guarded_mind",
+    "name": "guarded mind",
+    "class": "fighter",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/guarded_mind.json",
+    "image": "/assets/atlas/features/images/guarded_mind.webp"
+  },
+  {
+    "index": "heightened_spell",
+    "name": "heightened spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/heightened_spell.json",
+    "image": "icons/magic/fire/explosion-mushroom-nuke-orange.webp"
+  },
+  {
+    "index": "heroic_warrior",
+    "name": "heroic warrior",
+    "class": "fighter",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/heroic_warrior.json",
+    "image": "/assets/atlas/features/images/heroic_warrior.webp"
+  },
+  {
+    "index": "hide_in_plain_sight",
+    "name": "hide in plain sight",
+    "class": "ranger",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/hide_in_plain_sight.json",
+    "image": "/assets/atlas/features/images/hide_in_plain_sight.webp"
+  },
+  {
+    "index": "holy_nimbus",
+    "name": "holy nimbus",
+    "class": "oath",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/holy_nimbus.json",
+    "image": "/assets/atlas/features/images/holy_nimbus.webp"
+  },
+  {
+    "index": "horde_breaker",
+    "name": "horde breaker",
+    "class": "hunter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/horde_breaker.json",
+    "image": "icons/magic/fire/explosion-embers-evade-silhouette.webp"
+  },
+  {
+    "index": "hunters_prey",
+    "name": "hunter's prey",
+    "class": "hunter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/hunters_prey.json",
+    "image": "/assets/atlas/features/images/hunters_prey.webp"
+  },
+  {
+    "index": "hunters_prey_colossus_slayer",
+    "name": "hunter's prey: colossus slayer",
+    "class": "ranger",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/hunters_prey_colossus_slayer.json",
+    "image": "/assets/atlas/features/images/hunters_prey_colossus_slayer.webp"
+  },
+  {
+    "index": "hunters_prey_giant_killer",
+    "name": "hunter's prey: giant killer",
+    "class": "ranger",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/hunters_prey_giant_killer.json",
+    "image": "/assets/atlas/features/images/hunters_prey_giant_killer.webp"
+  },
+  {
+    "index": "hunters_prey_horde_breaker",
+    "name": "hunter's prey: horde breaker",
+    "class": "ranger",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/hunters_prey_horde_breaker.json",
+    "image": "/assets/atlas/features/images/hunters_prey_horde_breaker.webp"
+  },
+  {
+    "index": "hurl_through_hell",
+    "name": "hurl through hell",
+    "class": "the",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/hurl_through_hell.json",
+    "image": "/assets/atlas/features/images/hurl_through_hell.webp"
+  },
+  {
+    "index": "impostor",
+    "name": "impostor",
+    "class": "rogue",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/imposter.json",
+    "image": "/assets/atlas/features/images/impostor.webp"
+  },
+  {
+    "index": "impostor",
+    "name": "impostor",
+    "class": "rogue",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/impostor.json",
+    "image": "/assets/atlas/features/images/impostor.webp"
+  },
+  {
+    "index": "improved_combat_superiority",
+    "name": "improved combat superiority",
+    "class": "fighter",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/improved_combat_superiority.json",
+    "image": "/assets/atlas/features/images/improved_combat_superiority.webp"
+  },
+  {
+    "index": "improved_critical",
+    "name": "improved critical",
+    "class": "champion",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/improved_critical.json",
+    "image": "/assets/atlas/features/images/improved_critical.webp"
+  },
+  {
+    "index": "improved_divine_smite",
+    "name": "improved divine smite",
+    "class": "paladin",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/improved_divine_smite.json",
+    "image": "/assets/atlas/features/images/improved_divine_smite.webp"
+  },
+  {
+    "index": "improved_war_magic",
+    "name": "improved war magic",
+    "class": "fighter",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/improved_war_magic.json",
+    "image": "/assets/atlas/features/images/improved_war_magic.webp"
+  },
+  {
+    "index": "indomitable",
+    "name": "indomitable",
+    "class": "fighter",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/indomitable.json",
+    "image": "icons/magic/fire/flame-burning-fist-strike.webp"
+  },
+  {
+    "index": "indomitable_1_use",
+    "name": "indomitable (1 use)",
+    "class": "fighter",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/indomitable_1_use.json",
+    "image": "/assets/atlas/features/images/indomitable_1_use.webp"
+  },
+  {
+    "index": "indomitable_2_uses",
+    "name": "indomitable (2 uses)",
+    "class": "fighter",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/indomitable_2_uses.json",
+    "image": "/assets/atlas/features/images/indomitable_2_uses.webp"
+  },
+  {
+    "index": "indomitable_3_uses",
+    "name": "indomitable (3 uses)",
+    "class": "fighter",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/indomitable_3_uses.json",
+    "image": "/assets/atlas/features/images/indomitable_3_uses.webp"
+  },
+  {
+    "index": "indomitable_might",
+    "name": "indomitable might",
+    "class": "barbarian",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/indomitable_might.json",
+    "image": "/assets/atlas/features/images/indomitable_might.webp"
+  },
+  {
+    "index": "infiltration_expertise",
+    "name": "infiltration expertise",
+    "class": "rogue",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/infiltration_expertise.json",
+    "image": "/assets/atlas/features/images/infiltration_expertise.webp"
+  },
+  {
+    "index": "infuse_item",
+    "name": "infuse item",
+    "class": "artificer",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/infuse_item.json",
+    "image": "/assets/atlas/features/images/infuse_item.webp"
+  },
+  {
+    "index": "intimidating_presence",
+    "name": "intimidating presence",
+    "class": "path",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/intimidating_presence.json",
+    "image": "/assets/atlas/features/images/intimidating_presence.webp"
+  },
+  {
+    "index": "jack_of_all_trades",
+    "name": "jack of all trades",
+    "class": "bard",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/jack_of_all_trades.json",
+    "image": "/assets/atlas/features/images/jack_of_all_trades.webp"
+  },
+  {
+    "index": "ki",
+    "name": "ki",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ki.json",
+    "image": "/assets/atlas/features/images/ki.webp"
+  },
+  {
+    "index": "ki_empowered_strikes",
+    "name": "ki-empowered strikes",
+    "class": "monk",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/ki_empowered_strikes.json",
+    "image": "/assets/atlas/features/images/ki_empowered_strikes.webp"
+  },
+  {
+    "index": "know_your_enemy",
+    "name": "know your enemy",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/know_your_enemy.json",
+    "image": "/assets/atlas/features/images/know_your_enemy.webp"
+  },
+  {
+    "index": "lands_stride",
+    "name": "land's stride",
+    "class": "ranger",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/lands_stride.json",
+    "image": "icons/magic/nature/root-vine-entangle-foot-green.webp"
+  },
+  {
+    "index": "lay_on_hands",
+    "name": "lay on hands",
+    "class": "paladin",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/lay_on_hands.json",
+    "image": "/assets/atlas/features/images/lay_on_hands.webp"
+  },
+  {
+    "index": "lifedrinker",
+    "name": "lifedrinker",
+    "class": "warlock",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/lifedrinker.json",
+    "image": "icons/skills/melee/strike-sword-blood-red.webp"
+  },
+  {
+    "index": "mage_hand_legerdemain",
+    "name": "mage hand legerdemain",
+    "class": "rogue",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/mage_hand_legerdemain.json",
+    "image": "/assets/atlas/features/images/mage_hand_legerdemain.webp"
+  },
+  {
+    "index": "magic_item_adept",
+    "name": "magic item adept",
+    "class": "artificer",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/magic_item_adept.json",
+    "image": "/assets/atlas/features/images/magic_item_adept.webp"
+  },
+  {
+    "index": "magic_item_master",
+    "name": "magic item master",
+    "class": "artificer",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/magic_item_master.json",
+    "image": "/assets/atlas/features/images/magic_item_master.webp"
+  },
+  {
+    "index": "magic_item_savant",
+    "name": "magic item savant",
+    "class": "artificer",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/magic_item_savant.json",
+    "image": "/assets/atlas/features/images/magic_item_savant.webp"
+  },
+  {
+    "index": "magical_ambush",
+    "name": "magical ambush",
+    "class": "rogue",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/magical_ambush.json",
+    "image": "/assets/atlas/features/images/magical_ambush.webp"
+  },
+  {
+    "index": "magical_secrets",
+    "name": "magical secrets",
+    "class": "bard",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/magical_secrets.json",
+    "image": "icons/sundries/documents/document-torn-diagram-tan.webp"
+  },
+  {
+    "index": "magical_secrets_1",
+    "name": "magical secrets",
+    "class": "bard",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/magical_secrets_1.json",
+    "image": "/assets/atlas/features/images/magical_secrets_1.webp"
+  },
+  {
+    "index": "magical_secrets_2",
+    "name": "magical secrets",
+    "class": "bard",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/magical_secrets_2.json",
+    "image": "/assets/atlas/features/images/magical_secrets_2.webp"
+  },
+  {
+    "index": "magical_secrets_3",
+    "name": "magical secrets",
+    "class": "bard",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/magical_secrets_3.json",
+    "image": "/assets/atlas/features/images/magical_secrets_3.webp"
+  },
+  {
+    "index": "magical_tinkering",
+    "name": "magical tinkering",
+    "class": "artificer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/magical_tinkering.json",
+    "image": "/assets/atlas/features/images/magical_tinkering.webp"
+  },
+  {
+    "index": "martial_archetype",
+    "name": "martial archetype",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/martial_archetype.json",
+    "image": "/assets/atlas/features/images/martial_archetype.webp"
+  },
+  {
+    "index": "martial_archetype_improvement_1",
+    "name": "martial archetype feature",
+    "class": "fighter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/martial_archetype_improvement_1.json",
+    "image": "/assets/atlas/features/images/martial_archetype_improvement_1.webp"
+  },
+  {
+    "index": "martial_archetype_improvement_2",
+    "name": "martial archetype feature",
+    "class": "fighter",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/martial_archetype_improvement_2.json",
+    "image": "/assets/atlas/features/images/martial_archetype_improvement_2.webp"
+  },
+  {
+    "index": "martial_archetype_improvement_3",
+    "name": "martial archetype feature",
+    "class": "fighter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/martial_archetype_improvement_3.json",
+    "image": "/assets/atlas/features/images/martial_archetype_improvement_3.webp"
+  },
+  {
+    "index": "martial_archetype_improvement_4",
+    "name": "martial archetype feature",
+    "class": "fighter",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/martial_archetype_improvement_4.json",
+    "image": "/assets/atlas/features/images/martial_archetype_improvement_4.webp"
+  },
+  {
+    "index": "martial_arts",
+    "name": "martial arts",
+    "class": "monk",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/martial_arts.json",
+    "image": "/assets/atlas/features/images/martial_arts.webp"
+  },
+  {
+    "index": "mask_of_many_faces",
+    "name": "mask of many faces",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/mask_of_many_faces.json",
+    "image": "icons/creatures/magical/spirit-undead-masked-blue.webp"
+  },
+  {
+    "index": "master_of_myriad_forms",
+    "name": "master of myriad forms",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/master_of_myriad_forms.json",
+    "image": "icons/creatures/abilities/cougar-pounce-stalk-black.webp"
+  },
+  {
+    "index": "metamagic",
+    "name": "metamagic",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic.json",
+    "image": "icons/magic/unholy/orb-colllecting-energy-green.webp"
+  },
+  {
+    "index": "metamagic_1",
+    "name": "metamagic",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_1.json",
+    "image": "/assets/atlas/features/images/metamagic_1.webp"
+  },
+  {
+    "index": "metamagic_2",
+    "name": "metamagic",
+    "class": "sorcerer",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/metamagic_2.json",
+    "image": "/assets/atlas/features/images/metamagic_2.webp"
+  },
+  {
+    "index": "metamagic_3",
+    "name": "metamagic",
+    "class": "sorcerer",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/metamagic_3.json",
+    "image": "/assets/atlas/features/images/metamagic_3.webp"
+  },
+  {
+    "index": "metamagic_careful_spell",
+    "name": "metamagic: careful spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_careful_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_careful_spell.webp"
+  },
+  {
+    "index": "metamagic_distant_spell",
+    "name": "metamagic: distant spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_distant_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_distant_spell.webp"
+  },
+  {
+    "index": "metamagic_empowered_spell",
+    "name": "metamagic: empowered spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_empowered_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_empowered_spell.webp"
+  },
+  {
+    "index": "metamagic_extended_spell",
+    "name": "metamagic: extended spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_extended_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_extended_spell.webp"
+  },
+  {
+    "index": "metamagic_heightened_spell",
+    "name": "metamagic: heightened spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_heightened_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_heightened_spell.webp"
+  },
+  {
+    "index": "metamagic_quickened_spell",
+    "name": "metamagic: quickened spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_quickened_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_quickened_spell.webp"
+  },
+  {
+    "index": "metamagic_subtle_spell",
+    "name": "metamagic: subtle spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_subtle_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_subtle_spell.webp"
+  },
+  {
+    "index": "metamagic_twinned_spell",
+    "name": "metamagic: twinned spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/metamagic_twinned_spell.json",
+    "image": "/assets/atlas/features/images/metamagic_twinned_spell.webp"
+  },
+  {
+    "index": "mindless_rage",
+    "name": "mindless rage",
+    "class": "path",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/mindless_rage.json",
+    "image": "/assets/atlas/features/images/mindless_rage.webp"
+  },
+  {
+    "index": "minions_of_chaos",
+    "name": "minions of chaos",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/minions_of_chaos.json",
+    "image": "icons/creatures/magical/humanoid-giant-forest-blue.webp"
+  },
+  {
+    "index": "mire_the_mind",
+    "name": "mire the mind",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/mire_the_mind.json",
+    "image": "icons/magic/time/clock-stopwatch-white-blue.webp"
+  },
+  {
+    "index": "misty_visions",
+    "name": "misty visions",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/misty_visions.json",
+    "image": "icons/creatures/webs/web-spider-glowing-purple.webp"
+  },
+  {
+    "index": "monastic_tradition",
+    "name": "monastic tradition",
+    "class": "monk",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/monastic_tradition.json",
+    "image": "/assets/atlas/features/images/monastic_tradition.webp"
+  },
+  {
+    "index": "monastic_tradition_improvement_1",
+    "name": "monastic tradition feature",
+    "class": "monk",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/monastic_tradition_improvement_1.json",
+    "image": "/assets/atlas/features/images/monastic_tradition_improvement_1.webp"
+  },
+  {
+    "index": "monastic_tradition_improvement_2",
+    "name": "monastic tradition feature",
+    "class": "monk",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/monastic_tradition_improvement_2.json",
+    "image": "/assets/atlas/features/images/monastic_tradition_improvement_2.webp"
+  },
+  {
+    "index": "monastic_tradition_improvement_3",
+    "name": "monastic tradition feature",
+    "class": "monk",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/monastic_tradition_improvement_3.json",
+    "image": "/assets/atlas/features/images/monastic_tradition_improvement_3.webp"
+  },
+  {
+    "index": "monk_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "monk",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/monk_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/monk_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "monk_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "monk",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/monk_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/monk_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "monk_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "monk",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/monk_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/monk_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "monk_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "monk",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/monk_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/monk_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "monk_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "monk",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/monk_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/monk_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "monk_evasion",
+    "name": "evasion",
+    "class": "monk",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/monk_evasion.json",
+    "image": "/assets/atlas/features/images/monk_evasion.webp"
+  },
+  {
+    "index": "monk_extra_attack",
+    "name": "extra attack",
+    "class": "monk",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/monk_extra_attack.json",
+    "image": "/assets/atlas/features/images/monk_extra_attack.webp"
+  },
+  {
+    "index": "monk_timeless_body",
+    "name": "timeless body",
+    "class": "monk",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/monk_timeless_body.json",
+    "image": "/assets/atlas/features/images/monk_timeless_body.webp"
+  },
+  {
+    "index": "monk_unarmored_defense",
+    "name": "unarmored defense",
+    "class": "monk",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/monk_unarmored_defense.json",
+    "image": "/assets/atlas/features/images/monk_unarmored_defense.webp"
+  },
+  {
+    "index": "multiattack",
+    "name": "multiattack",
+    "class": "hunter",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/multiattack.json",
+    "image": "/assets/atlas/features/images/multiattack.webp"
+  },
+  {
+    "index": "multiattack_defense",
+    "name": "multiattack defense",
+    "class": "hunter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/multiattack_defense.json",
+    "image": "icons/skills/melee/weapons-crossed-swords-white-blue.webp"
+  },
+  {
+    "index": "multiattack_volley",
+    "name": "multiattack: volley",
+    "class": "ranger",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/multiattack_volley.json",
+    "image": "/assets/atlas/features/images/multiattack_volley.webp"
+  },
+  {
+    "index": "multiattack_whirlwind_attack",
+    "name": "multiattack: whirlwind attack",
+    "class": "ranger",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/multiattack_whirlwind_attack.json",
+    "image": "/assets/atlas/features/images/multiattack_whirlwind_attack.webp"
+  },
+  {
+    "index": "mystic_arcanum",
+    "name": "mystic arcanum",
+    "class": "warlock",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/mystic_arcanum.json",
+    "image": "icons/sundries/books/book-black-grey.webp"
+  },
+  {
+    "index": "mystic_arcanum_6th_level",
+    "name": "mystic arcanum (6th level)",
+    "class": "warlock",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/mystic_arcanum_6th_level.json",
+    "image": "/assets/atlas/features/images/mystic_arcanum_6th_level.webp"
+  },
+  {
+    "index": "mystic_arcanum_7th_level",
+    "name": "mystic arcanum (7th level)",
+    "class": "warlock",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/mystic_arcanum_7th_level.json",
+    "image": "/assets/atlas/features/images/mystic_arcanum_7th_level.webp"
+  },
+  {
+    "index": "mystic_arcanum_8th_level",
+    "name": "mystic arcanum (8th level)",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/mystic_arcanum_8th_level.json",
+    "image": "/assets/atlas/features/images/mystic_arcanum_8th_level.webp"
+  },
+  {
+    "index": "mystic_arcanum_9th_level",
+    "name": "mystic arcanum (9th level)",
+    "class": "warlock",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/mystic_arcanum_9th_level.json",
+    "image": "/assets/atlas/features/images/mystic_arcanum_9th_level.webp"
+  },
+  {
+    "index": "natural_explorer",
+    "name": "natural explorer",
+    "class": "ranger",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/natural_explorer.json",
+    "image": "icons/magic/nature/tree-roots-glow-yellow.webp"
+  },
+  {
+    "index": "natural_explorer_1_terrain_type",
+    "name": "natural explorer (1 terrain type)",
+    "class": "ranger",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
+    "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp"
+  },
+  {
+    "index": "natural_explorer_2_terrain_types",
+    "name": "natural explorer (2 terrain types)",
+    "class": "ranger",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/natural_explorer_2_terrain_types.json",
+    "image": "/assets/atlas/features/images/natural_explorer_2_terrain_types.webp"
+  },
+  {
+    "index": "natural_explorer_3_terrain_types",
+    "name": "natural explorer (3 terrain types)",
+    "class": "ranger",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/natural_explorer_3_terrain_types.json",
+    "image": "/assets/atlas/features/images/natural_explorer_3_terrain_types.webp"
+  },
+  {
+    "index": "natural_recovery",
+    "name": "natural recovery",
+    "class": "circle",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/natural_recovery.json",
+    "image": "/assets/atlas/features/images/natural_recovery.webp"
+  },
+  {
+    "index": "natures_sanctuary",
+    "name": "nature's sanctuary",
+    "class": "circle",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/natures_sanctuary.json",
+    "image": "/assets/atlas/features/images/natures_sanctuary.webp"
+  },
+  {
+    "index": "natures_ward",
+    "name": "nature's ward",
+    "class": "circle",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/natures_ward.json",
+    "image": "/assets/atlas/features/images/natures_ward.webp"
+  },
+  {
+    "index": "oath_spells",
+    "name": "oath spells",
+    "class": "paladin",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/oath_spells.json",
+    "image": "/assets/atlas/features/images/oath_spells.webp"
+  },
+  {
+    "index": "one_with_shadows",
+    "name": "one with shadows",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/one_with_shadows.json",
+    "image": "icons/magic/unholy/silhouette-robe-evil-power.webp"
+  },
+  {
+    "index": "open_hand_technique",
+    "name": "open hand technique",
+    "class": "way",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/open_hand_technique.json",
+    "image": "/assets/atlas/features/images/open_hand_technique.webp"
+  },
+  {
+    "index": "otherworldly_leap",
+    "name": "otherworldly leap",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/otherworldly_leap.json",
+    "image": "icons/magic/light/beam-strike-orange-gold.webp"
+  },
+  {
+    "index": "otherworldly_patron",
+    "name": "otherworldly patron",
+    "class": "warlock",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/otherworldly_patron.json",
+    "image": "/assets/atlas/features/images/otherworldly_patron.webp"
+  },
+  {
+    "index": "otherworldly_patron_improvement_1",
+    "name": "otherworldly patron feature",
+    "class": "warlock",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/otherworldly_patron_improvement_1.json",
+    "image": "/assets/atlas/features/images/otherworldly_patron_improvement_1.webp"
+  },
+  {
+    "index": "otherworldly_patron_improvement_2",
+    "name": "otherworldly patron feature",
+    "class": "warlock",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/otherworldly_patron_improvement_2.json",
+    "image": "/assets/atlas/features/images/otherworldly_patron_improvement_2.webp"
+  },
+  {
+    "index": "otherworldly_patron_improvement_3",
+    "name": "otherworldly patron feature",
+    "class": "warlock",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/otherworldly_patron_improvement_3.json",
+    "image": "/assets/atlas/features/images/otherworldly_patron_improvement_3.webp"
+  },
+  {
+    "index": "overchannel",
+    "name": "overchannel",
+    "class": "school",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/overchannel.json",
+    "image": "/assets/atlas/features/images/overchannel.webp"
+  },
+  {
+    "index": "pact_boon",
+    "name": "pact boon",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/pact_boon.json",
+    "image": "/assets/atlas/features/images/pact_boon.webp"
+  },
+  {
+    "index": "pact_magic",
+    "name": "pact magic",
+    "class": "warlock",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/pact_magic.json",
+    "image": "/assets/atlas/features/images/pact_magic.webp"
+  },
+  {
+    "index": "pact_of_the_blade",
+    "name": "pact of the blade",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/pact_of_the_blade.json",
+    "image": "/assets/atlas/features/images/pact_of_the_blade.webp"
+  },
+  {
+    "index": "pact_of_the_chain",
+    "name": "pact of the chain",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/pact_of_the_chain.json",
+    "image": "/assets/atlas/features/images/pact_of_the_chain.webp"
+  },
+  {
+    "index": "pact_of_the_tome",
+    "name": "pact of the tome",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/pact_of_the_tome.json",
+    "image": "/assets/atlas/features/images/pact_of_the_tome.webp"
+  },
+  {
+    "index": "paladin_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "paladin",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/paladin_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/paladin_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "paladin_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "paladin",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/paladin_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/paladin_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "paladin_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "paladin",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/paladin_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/paladin_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "paladin_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "paladin",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/paladin_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/paladin_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "paladin_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "paladin",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/paladin_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/paladin_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "paladin_extra_attack",
+    "name": "extra attack",
+    "class": "paladin",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/paladin_extra_attack.json",
+    "image": "/assets/atlas/features/images/paladin_extra_attack.webp"
+  },
+  {
+    "index": "paladin_fighting_style",
+    "name": "fighting style",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/paladin_fighting_style.json",
+    "image": "/assets/atlas/features/images/paladin_fighting_style.webp"
+  },
+  {
+    "index": "patient_defense",
+    "name": "patient defense",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/patient_defense.json",
+    "image": "/assets/atlas/features/images/patient_defense.webp"
+  },
+  {
+    "index": "peerless_skill",
+    "name": "peerless skill",
+    "class": "college",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/peerless_skill.json",
+    "image": "/assets/atlas/features/images/peerless_skill.webp"
+  },
+  {
+    "index": "perfect_self",
+    "name": "perfect self",
+    "class": "monk",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/perfect_self.json",
+    "image": "/assets/atlas/features/images/perfect_self.webp"
+  },
+  {
+    "index": "persistent_rage",
+    "name": "persistent rage",
+    "class": "barbarian",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/persistent_rage.json",
+    "image": "/assets/atlas/features/images/persistent_rage.webp"
+  },
+  {
+    "index": "potent_cantrip",
+    "name": "potent cantrip",
+    "class": "school",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/potent_cantrip.json",
+    "image": "/assets/atlas/features/images/potent_cantrip.webp"
+  },
+  {
+    "index": "primal_champion",
+    "name": "primal champion",
+    "class": "barbarian",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/primal_champion.json",
+    "image": "/assets/atlas/features/images/primal_champion.webp"
+  },
+  {
+    "index": "primal_path",
+    "name": "primal path",
+    "class": "barbarian",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/primal_path.json",
+    "image": "/assets/atlas/features/images/primal_path.webp"
+  },
+  {
+    "index": "primal_path_improvement_1",
+    "name": "path feature",
+    "class": "barbarian",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/primal_path_improvement_1.json",
+    "image": "/assets/atlas/features/images/primal_path_improvement_1.webp"
+  },
+  {
+    "index": "primal_path_improvement_2",
+    "name": "path feature",
+    "class": "barbarian",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/primal_path_improvement_2.json",
+    "image": "/assets/atlas/features/images/primal_path_improvement_2.webp"
+  },
+  {
+    "index": "primal_path_improvement_3",
+    "name": "path feature",
+    "class": "barbarian",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/primal_path_improvement_3.json",
+    "image": "/assets/atlas/features/images/primal_path_improvement_3.webp"
+  },
+  {
+    "index": "primeval_awareness",
+    "name": "primeval awareness",
+    "class": "ranger",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/primeval_awareness.json",
+    "image": "/assets/atlas/features/images/primeval_awareness.webp"
+  },
+  {
+    "index": "protection",
+    "name": "protection",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/protection.json",
+    "image": "icons/magic/defensive/shield-barrier-deflect-gold.webp"
+  },
+  {
+    "index": "protective_field",
+    "name": "protective field",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/protective_field.json",
+    "image": "/assets/atlas/features/images/protective_field.webp"
+  },
+  {
+    "index": "psi_powered_leap",
+    "name": "psi-powered leap",
+    "class": "fighter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/psi_powered_leap.json",
+    "image": "/assets/atlas/features/images/psi_powered_leap.webp"
+  },
+  {
+    "index": "psionic_power",
+    "name": "psionic power",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/psionic_power.json",
+    "image": "/assets/atlas/features/images/psionic_power.webp"
+  },
+  {
+    "index": "psionic_strike",
+    "name": "psionic strike",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/psionic_strike.json",
+    "image": "/assets/atlas/features/images/psionic_strike.webp"
+  },
+  {
+    "index": "purity_of_body",
+    "name": "purity of body",
+    "class": "monk",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/purity_of_body.json",
+    "image": "/assets/atlas/features/images/purity_of_body.webp"
+  },
+  {
+    "index": "purity_of_spirit",
+    "name": "purity of spirit",
+    "class": "oath",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/purity_of_spirit.json",
+    "image": "/assets/atlas/features/images/purity_of_spirit.webp"
+  },
+  {
+    "index": "quickened_spell",
+    "name": "quickened spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/quickened_spell.json",
+    "image": "icons/magic/time/clock-stopwatch-white-blue.webp"
+  },
+  {
+    "index": "quivering_palm",
+    "name": "quivering palm",
+    "class": "way",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/quivering_palm.json",
+    "image": "/assets/atlas/features/images/quivering_palm.webp"
+  },
+  {
+    "index": "rage",
+    "name": "rage",
+    "class": "barbarian",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/rage.json",
+    "image": "/assets/atlas/features/images/rage.webp"
+  },
+  {
+    "index": "ranger_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "ranger",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/ranger_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/ranger_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "ranger_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "ranger",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/ranger_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/ranger_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "ranger_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "ranger",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/ranger_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/ranger_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "ranger_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "ranger",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/ranger_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/ranger_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "ranger_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "ranger",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/ranger_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/ranger_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "ranger_archetype",
+    "name": "ranger archetype",
+    "class": "ranger",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/ranger_archetype.json",
+    "image": "/assets/atlas/features/images/ranger_archetype.webp"
+  },
+  {
+    "index": "ranger_archetype_improvement_1",
+    "name": "ranger archetype feature",
+    "class": "ranger",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/ranger_archetype_improvement_1.json",
+    "image": "/assets/atlas/features/images/ranger_archetype_improvement_1.webp"
+  },
+  {
+    "index": "ranger_archetype_improvement_2",
+    "name": "ranger archetype feature",
+    "class": "ranger",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/ranger_archetype_improvement_2.json",
+    "image": "/assets/atlas/features/images/ranger_archetype_improvement_2.webp"
+  },
+  {
+    "index": "ranger_archetype_improvement_3",
+    "name": "ranger archetype feature",
+    "class": "ranger",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/ranger_archetype_improvement_3.json",
+    "image": "/assets/atlas/features/images/ranger_archetype_improvement_3.webp"
+  },
+  {
+    "index": "ranger_extra_attack",
+    "name": "extra attack",
+    "class": "ranger",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/ranger_extra_attack.json",
+    "image": "/assets/atlas/features/images/ranger_extra_attack.webp"
+  },
+  {
+    "index": "ranger_fighting_style",
+    "name": "fighting style",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ranger_fighting_style.json",
+    "image": "/assets/atlas/features/images/ranger_fighting_style.webp"
+  },
+  {
+    "index": "ranger_fighting_style_archery",
+    "name": "fighting style: archery",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ranger_fighting_style_archery.json",
+    "image": "/assets/atlas/features/images/ranger_fighting_style_archery.webp"
+  },
+  {
+    "index": "ranger_fighting_style_defense",
+    "name": "fighting style: defense",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ranger_fighting_style_defense.json",
+    "image": "/assets/atlas/features/images/ranger_fighting_style_defense.webp"
+  },
+  {
+    "index": "ranger_fighting_style_dueling",
+    "name": "fighting style: dueling",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ranger_fighting_style_dueling.json",
+    "image": "/assets/atlas/features/images/ranger_fighting_style_dueling.webp"
+  },
+  {
+    "index": "ranger_fighting_style_two_weapon_fighting",
+    "name": "fighting style: two_weapon fighting",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/ranger_fighting_style_two_weapon_fighting.json",
+    "image": "/assets/atlas/features/images/ranger_fighting_style_two_weapon_fighting.webp"
+  },
+  {
+    "index": "ranger_lands_stride",
+    "name": "land's stride",
+    "class": "ranger",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/ranger_lands_stride.json",
+    "image": "/assets/atlas/features/images/ranger_lands_stride.webp"
+  },
+  {
+    "index": "reckless_attack",
+    "name": "reckless attack",
+    "class": "barbarian",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/reckless_attack.json",
+    "image": "/assets/atlas/features/images/reckless_attack.webp"
+  },
+  {
+    "index": "relentless",
+    "name": "relentless",
+    "class": "fighter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/relentless.json",
+    "image": "/assets/atlas/features/images/relentless.webp"
+  },
+  {
+    "index": "relentless_rage",
+    "name": "relentless rage",
+    "class": "barbarian",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/relentless_rage.json",
+    "image": "/assets/atlas/features/images/relentless_rage.webp"
+  },
+  {
+    "index": "reliable_talent",
+    "name": "reliable talent",
+    "class": "rogue",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/reliable_talent.json",
+    "image": "/assets/atlas/features/images/reliable_talent.webp"
+  },
+  {
+    "index": "remarkable_athlete",
+    "name": "remarkable athlete",
+    "class": "champion",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/remarkable_athlete.json",
+    "image": "/assets/atlas/features/images/remarkable_athlete.webp"
+  },
+  {
+    "index": "repelling_blast",
+    "name": "repelling blast",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/repelling_blast.json",
+    "image": "icons/magic/fire/explosion-embers-evade-silhouette.webp"
+  },
+  {
+    "index": "retaliation",
+    "name": "retaliation",
+    "class": "path",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/retaliation.json",
+    "image": "/assets/atlas/features/images/retaliation.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 10,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "rogue_ability_score_improvement_6",
+    "name": "ability score improvement",
+    "class": "rogue",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/rogue_ability_score_improvement_6.json",
+    "image": "/assets/atlas/features/images/rogue_ability_score_improvement_6.webp"
+  },
+  {
+    "index": "rogue_evasion",
+    "name": "evasion",
+    "class": "rogue",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/rogue_evasion.json",
+    "image": "/assets/atlas/features/images/rogue_evasion.webp"
+  },
+  {
+    "index": "rogue_expertise_1",
+    "name": "expertise",
+    "class": "rogue",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/rogue_expertise_1.json",
+    "image": "/assets/atlas/features/images/rogue_expertise_1.webp"
+  },
+  {
+    "index": "rogue_expertise_2",
+    "name": "expertise",
+    "class": "rogue",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/rogue_expertise_2.json",
+    "image": "/assets/atlas/features/images/rogue_expertise_2.webp"
+  },
+  {
+    "index": "roguish_archetype",
+    "name": "roguish archetype",
+    "class": "rogue",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/roguish_archetype.json",
+    "image": "/assets/atlas/features/images/roguish_archetype.webp"
+  },
+  {
+    "index": "roguish_archetype_improvement_1",
+    "name": "roguish archetype feature",
+    "class": "rogue",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/roguish_archetype_improvement_1.json",
+    "image": "/assets/atlas/features/images/roguish_archetype_improvement_1.webp"
+  },
+  {
+    "index": "roguish_archetype_improvement_2",
+    "name": "roguish archetype feature",
+    "class": "rogue",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/roguish_archetype_improvement_2.json",
+    "image": "/assets/atlas/features/images/roguish_archetype_improvement_2.webp"
+  },
+  {
+    "index": "roguish_archetype_improvement_3",
+    "name": "roguish archetype feature",
+    "class": "rogue",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/roguish_archetype_improvement_3.json",
+    "image": "/assets/atlas/features/images/roguish_archetype_improvement_3.webp"
+  },
+  {
+    "index": "sacred_oath",
+    "name": "sacred oath",
+    "class": "paladin",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/sacred_oath.json",
+    "image": "/assets/atlas/features/images/sacred_oath.webp"
+  },
+  {
+    "index": "sacred_oath_improvement_1",
+    "name": "sacred oath feature",
+    "class": "paladin",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/sacred_oath_improvement_1.json",
+    "image": "/assets/atlas/features/images/sacred_oath_improvement_1.webp"
+  },
+  {
+    "index": "sacred_oath_improvement_2",
+    "name": "sacred oath feature",
+    "class": "paladin",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/sacred_oath_improvement_2.json",
+    "image": "/assets/atlas/features/images/sacred_oath_improvement_2.webp"
+  },
+  {
+    "index": "sacred_oath_improvement_3",
+    "name": "sacred oath feature",
+    "class": "paladin",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/sacred_oath_improvement_3.json",
+    "image": "/assets/atlas/features/images/sacred_oath_improvement_3.webp"
+  },
+  {
+    "index": "sculpt_spells",
+    "name": "sculpt spells",
+    "class": "school",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/sculpt_spells.json",
+    "image": "/assets/atlas/features/images/sculpt_spells.webp"
+  },
+  {
+    "index": "sculptor_of_flesh",
+    "name": "sculptor of flesh",
+    "class": "warlock",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/sculptor_of_flesh.json",
+    "image": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp"
+  },
+  {
+    "index": "second_story_work",
+    "name": "second-story work",
+    "class": "thief",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/second_story_work.json",
+    "image": "/assets/atlas/features/images/second_story_work.webp"
+  },
+  {
+    "index": "second_wind",
+    "name": "second wind",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/second_wind.json",
+    "image": "/assets/atlas/features/images/second_wind.webp"
+  },
+  {
+    "index": "sign_of_ill_omen",
+    "name": "sign of ill omen",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/sign_of_ill_omen.json",
+    "image": "icons/magic/symbols/rune-sigil-black-pink.webp"
+  },
+  {
+    "index": "signature_spell",
+    "name": "signature spell",
+    "class": "wizard",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/signature_spell.json",
+    "image": "/assets/atlas/features/images/signature_spell.webp"
+  },
+  {
+    "index": "signature_spells",
+    "name": "signature spells",
+    "class": "wizard",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/signature_spells.json",
+    "image": "icons/magic/fire/projectile-wave-arrow.webp"
+  },
+  {
+    "index": "slippery_mind",
+    "name": "slippery mind",
+    "class": "rogue",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/slippery_mind.json",
+    "image": "/assets/atlas/features/images/slippery_mind.webp"
+  },
+  {
+    "index": "slow_fall",
+    "name": "slow fall",
+    "class": "monk",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/slow_fall.json",
+    "image": "/assets/atlas/features/images/slow_fall.webp"
+  },
+  {
+    "index": "sneak_attack",
+    "name": "sneak attack",
+    "class": "rogue",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/sneak_attack.json",
+    "image": "/assets/atlas/features/images/sneak_attack.webp"
+  },
+  {
+    "index": "song_of_rest",
+    "name": "song of rest",
+    "class": "bard",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/song_of_rest.json",
+    "image": "icons/magic/life/cross-worn-green.webp"
+  },
+  {
+    "index": "song_of_rest_d10",
+    "name": "song of rest (d10)",
+    "class": "bard",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/song_of_rest_d10.json",
+    "image": "/assets/atlas/features/images/song_of_rest_d10.webp"
+  },
+  {
+    "index": "song_of_rest_d12",
+    "name": "song of rest (d12)",
+    "class": "bard",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/song_of_rest_d12.json",
+    "image": "/assets/atlas/features/images/song_of_rest_d12.webp"
+  },
+  {
+    "index": "song_of_rest_d6",
+    "name": "song of rest (d6)",
+    "class": "bard",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/song_of_rest_d6.json",
+    "image": "/assets/atlas/features/images/song_of_rest_d6.webp"
+  },
+  {
+    "index": "song_of_rest_d8",
+    "name": "song of rest (d8)",
+    "class": "bard",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/song_of_rest_d8.json",
+    "image": "/assets/atlas/features/images/song_of_rest_d8.webp"
+  },
+  {
+    "index": "sorcerer_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "sorcerer",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/sorcerer_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/sorcerer_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "sorcerer_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "sorcerer",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/sorcerer_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/sorcerer_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "sorcerer_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "sorcerer",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/sorcerer_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/sorcerer_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "sorcerer_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "sorcerer",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/sorcerer_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/sorcerer_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "sorcerer_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "sorcerer",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/sorcerer_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/sorcerer_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "sorcerous_origin",
+    "name": "sorcerous origin",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/sorcerous_origin.json",
+    "image": "/assets/atlas/features/images/sorcerous_origin.webp"
+  },
+  {
+    "index": "sorcerous_origin_improvement_1",
+    "name": "sorcerous origin feature",
+    "class": "sorcerer",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/sorcerous_origin_improvement_1.json",
+    "image": "/assets/atlas/features/images/sorcerous_origin_improvement_1.webp"
+  },
+  {
+    "index": "sorcerous_origin_improvement_2",
+    "name": "sorcerous origin feature",
+    "class": "sorcerer",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/sorcerous_origin_improvement_2.json",
+    "image": "/assets/atlas/features/images/sorcerous_origin_improvement_2.webp"
+  },
+  {
+    "index": "sorcerous_origin_improvement_3",
+    "name": "sorcerous origin feature",
+    "class": "sorcerer",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/sorcerous_origin_improvement_3.json",
+    "image": "/assets/atlas/features/images/sorcerous_origin_improvement_3.webp"
+  },
+  {
+    "index": "sorcerous_origins",
+    "name": "sorcerous origins",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/sorcerous_origins.json",
+    "image": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  {
+    "index": "sorcerous_restoration",
+    "name": "sorcerous restoration",
+    "class": "sorcerer",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/sorcerous_restoration.json",
+    "image": "/assets/atlas/features/images/sorcerous_restoration.webp"
+  },
+  {
+    "index": "soul_of_artifice",
+    "name": "soul of artifice",
+    "class": "artificer",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/soul_of_artifice.json",
+    "image": "/assets/atlas/features/images/soul_of_artifice.webp"
+  },
+  {
+    "index": "spell_mastery",
+    "name": "spell mastery",
+    "class": "wizard",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/spell_mastery.json",
+    "image": "/assets/atlas/features/images/spell_mastery.webp"
+  },
+  {
+    "index": "spell_thief",
+    "name": "spell thief",
+    "class": "rogue",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/spell_thief.json",
+    "image": "/assets/atlas/features/images/spell_thief.webp"
+  },
+  {
+    "index": "spellcasting",
+    "name": "spellcasting",
+    "class": "wizard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting.json",
+    "image": "icons/magic/symbols/runes-carved-stone-yellow.webp"
+  },
+  {
+    "index": "spellcasting_arcane_trickster",
+    "name": "spellcasting",
+    "class": "rogue",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/spellcasting_arcane_trickster.json",
+    "image": "/assets/atlas/features/images/spellcasting_arcane_trickster.webp"
+  },
+  {
+    "index": "spellcasting_artificer",
+    "name": "spellcasting: artificer",
+    "class": "artificer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_artificer.json",
+    "image": "/assets/atlas/features/images/spellcasting_artificer.webp"
+  },
+  {
+    "index": "spellcasting_bard",
+    "name": "spellcasting: bard",
+    "class": "bard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_bard.json",
+    "image": "/assets/atlas/features/images/spellcasting_bard.webp"
+  },
+  {
+    "index": "spellcasting_cleric",
+    "name": "spellcasting: cleric",
+    "class": "cleric",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_cleric.json",
+    "image": "/assets/atlas/features/images/spellcasting_cleric.webp"
+  },
+  {
+    "index": "spellcasting_druid",
+    "name": "spellcasting: druid",
+    "class": "druid",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_druid.json",
+    "image": "/assets/atlas/features/images/spellcasting_druid.webp"
+  },
+  {
+    "index": "spellcasting_eldritch_knight",
+    "name": "spellcasting",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/spellcasting_eldritch_knight.json",
+    "image": "/assets/atlas/features/images/spellcasting_eldritch_knight.webp"
+  },
+  {
+    "index": "spellcasting_paladin",
+    "name": "spellcasting: paladin",
+    "class": "paladin",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/spellcasting_paladin.json",
+    "image": "/assets/atlas/features/images/spellcasting_paladin.webp"
+  },
+  {
+    "index": "spellcasting_ranger",
+    "name": "spellcasting: ranger",
+    "class": "ranger",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/spellcasting_ranger.json",
+    "image": "/assets/atlas/features/images/spellcasting_ranger.webp"
+  },
+  {
+    "index": "spellcasting_sorcerer",
+    "name": "spellcasting: sorcerer",
+    "class": "sorcerer",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_sorcerer.json",
+    "image": "/assets/atlas/features/images/spellcasting_sorcerer.webp"
+  },
+  {
+    "index": "spellcasting_wizard",
+    "name": "spellcasting: wizard",
+    "class": "wizard",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/spellcasting_wizard.json",
+    "image": "/assets/atlas/features/images/spellcasting_wizard.webp"
+  },
+  {
+    "index": "stand_against_the_tide",
+    "name": "stand against the tide",
+    "class": "hunter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/stand_against_the_tide.json",
+    "image": "icons/magic/water/pseudopod-teal.webp"
+  },
+  {
+    "index": "steel_will",
+    "name": "steel will",
+    "class": "hunter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/steel_will.json",
+    "image": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  {
+    "index": "step_of_the_wind",
+    "name": "step of the wind",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/step_of_the_wind.json",
+    "image": "/assets/atlas/features/images/step_of_the_wind.webp"
+  },
+  {
+    "index": "stillness_of_mind",
+    "name": "stillness of mind",
+    "class": "monk",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/stillness_of_mind.json",
+    "image": "/assets/atlas/features/images/stillness_of_mind.webp"
+  },
+  {
+    "index": "stroke_of_luck",
+    "name": "stroke of luck",
+    "class": "rogue",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/stroke_of_luck.json",
+    "image": "/assets/atlas/features/images/stroke_of_luck.webp"
+  },
+  {
+    "index": "student_of_war",
+    "name": "student of war",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/student_of_war.json",
+    "image": "/assets/atlas/features/images/student_of_war.webp"
+  },
+  {
+    "index": "stunning_strike",
+    "name": "stunning strike",
+    "class": "monk",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/stunning_strike.json",
+    "image": "/assets/atlas/features/images/stunning_strike.webp"
+  },
+  {
+    "index": "subtle_spell",
+    "name": "subtle spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/subtle_spell.json",
+    "image": "icons/creatures/slimes/slime-movement-swirling-blue.webp"
+  },
+  {
+    "index": "superior_critical",
+    "name": "superior critical",
+    "class": "champion",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/superior_critical.json",
+    "image": "/assets/atlas/features/images/superior_critical.webp"
+  },
+  {
+    "index": "superior_hunters_defense",
+    "name": "superior hunter's defense",
+    "class": "hunter",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/superior_hunters_defense.json",
+    "image": "/assets/atlas/features/images/superior_hunters_defense.webp"
+  },
+  {
+    "index": "superior_hunters_defense_evasion",
+    "name": "superior hunter's defense: evasion",
+    "class": "ranger",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/superior_hunters_defense_evasion.json",
+    "image": "/assets/atlas/features/images/superior_hunters_defense_evasion.webp"
+  },
+  {
+    "index": "superior_hunters_defense_stand_against_the_tide",
+    "name": "superior hunter's defense: stand against the tide",
+    "class": "ranger",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/superior_hunters_defense_stand_against_the_tide.json",
+    "image": "/assets/atlas/features/images/superior_hunters_defense_stand_against_the_tide.webp"
+  },
+  {
+    "index": "superior_hunters_defense_uncanny_dodge",
+    "name": "superior hunter's defense: uncanny dodge",
+    "class": "ranger",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/superior_hunters_defense_uncanny_dodge.json",
+    "image": "/assets/atlas/features/images/superior_hunters_defense_uncanny_dodge.webp"
+  },
+  {
+    "index": "superior_inspiration",
+    "name": "superior inspiration",
+    "class": "bard",
+    "level": 20,
+    "json_path": "/assets/atlas/features/json/superior_inspiration.json",
+    "image": "/assets/atlas/features/images/superior_inspiration.webp"
+  },
+  {
+    "index": "supreme_healing",
+    "name": "supreme healing",
+    "class": "life",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/supreme_healing.json",
+    "image": "/assets/atlas/features/images/supreme_healing.webp"
+  },
+  {
+    "index": "supreme_sneak",
+    "name": "supreme sneak",
+    "class": "thief",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/supreme_sneak.json",
+    "image": "/assets/atlas/features/images/supreme_sneak.webp"
+  },
+  {
+    "index": "survivor",
+    "name": "survivor",
+    "class": "champion",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/survivor.json",
+    "image": "/assets/atlas/features/images/survivor.webp"
+  },
+  {
+    "index": "telekinetic_master",
+    "name": "telekinetic master",
+    "class": "fighter",
+    "level": 18,
+    "json_path": "/assets/atlas/features/json/telekinetic_master.json",
+    "image": "/assets/atlas/features/images/telekinetic_master.webp"
+  },
+  {
+    "index": "telekinetic_movement",
+    "name": "telekinetic movement",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/telekinetic_movement.json",
+    "image": "/assets/atlas/features/images/telekinetic_movement.webp"
+  },
+  {
+    "index": "telekinetic_thrust",
+    "name": "telekinetic thrust",
+    "class": "fighter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/telekinetic_thrust.json",
+    "image": "/assets/atlas/features/images/telekinetic_thrust.webp"
+  },
+  {
+    "index": "the_right_tool_for_the_job",
+    "name": "the right tool for the job",
+    "class": "artificer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/the_right_tool_for_the_job.json",
+    "image": "/assets/atlas/features/images/the_right_tool_for_the_job.webp"
+  },
+  {
+    "index": "thief_of_five_fates",
+    "name": "thief of five fates",
+    "class": "warlock",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/thief_of_five_fates.json",
+    "image": "icons/magic/earth/orb-stone-smoke-teal.webp"
+  },
+  {
+    "index": "thief_s_reflexes",
+    "name": "thief's reflexes",
+    "class": "rogue",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/thief_s_reflexes.json",
+    "image": "/assets/atlas/features/images/thief_s_reflexes.webp"
+  },
+  {
+    "index": "thiefs_reflexes",
+    "name": "thief's reflexes",
+    "class": "thief",
+    "level": 17,
+    "json_path": "/assets/atlas/features/json/thiefs_reflexes.json",
+    "image": "icons/magic/lightning/bolt-strike-beam-purple.webp"
+  },
+  {
+    "index": "thieves_cant",
+    "name": "thieves' cant",
+    "class": "rogue",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/thieves_cant.json",
+    "image": "/assets/atlas/features/images/thieves_cant.webp"
+  },
+  {
+    "index": "thirsting_blade",
+    "name": "thirsting blade",
+    "class": "warlock",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/thirsting_blade.json",
+    "image": "icons/skills/melee/blade-tip-chipped-blood-red.webp"
+  },
+  {
+    "index": "timeless_body",
+    "name": "timeless body",
+    "class": "monk",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/timeless_body.json",
+    "image": "icons/magic/time/clock-stopwatch-white-blue.webp"
+  },
+  {
+    "index": "tongue_of_the_sun_and_moon",
+    "name": "tongue of the sun and moon",
+    "class": "monk",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/tongue_of_the_sun_and_moon.json",
+    "image": "/assets/atlas/features/images/tongue_of_the_sun_and_moon.webp"
+  },
+  {
+    "index": "tool_expertise",
+    "name": "tool expertise",
+    "class": "artificer",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/tool_expertise.json",
+    "image": "/assets/atlas/features/images/tool_expertise.webp"
+  },
+  {
+    "index": "tranquility",
+    "name": "tranquility",
+    "class": "way",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/tranquility.json",
+    "image": "/assets/atlas/features/images/tranquility.webp"
+  },
+  {
+    "index": "twinned_spell",
+    "name": "twinned spell",
+    "class": "sorcerer",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/twinned_spell.json",
+    "image": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  {
+    "index": "two_weapon_fighting",
+    "name": "two-weapon fighting",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/two_weapon_fighting.json",
+    "image": "icons/skills/melee/weapons-crossed-swords-white-blue.webp"
+  },
+  {
+    "index": "unarmed_strike",
+    "name": "unarmed strike",
+    "class": "fighter",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/unarmed_strike.json",
+    "image": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp"
+  },
+  {
+    "index": "unarmored_defense",
+    "name": "unarmored defense",
+    "class": "monk",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/unarmored_defense.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "unarmored_defense_barbarian",
+    "name": "unarmored defense (barbarian)",
+    "class": "barbarian",
+    "level": 1,
+    "json_path": "/assets/atlas/features/json/unarmored_defense_barbarian.json",
+    "image": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  {
+    "index": "unarmored_movement",
+    "name": "unarmored movement",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/unarmored_movement.json",
+    "image": "icons/magic/nature/root-vine-entangle-foot-green.webp"
+  },
+  {
+    "index": "unarmored_movement_1",
+    "name": "unarmored movement",
+    "class": "monk",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/unarmored_movement_1.json",
+    "image": "/assets/atlas/features/images/unarmored_movement_1.webp"
+  },
+  {
+    "index": "unarmored_movement_2",
+    "name": "unarmored movement",
+    "class": "monk",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/unarmored_movement_2.json",
+    "image": "/assets/atlas/features/images/unarmored_movement_2.webp"
+  },
+  {
+    "index": "uncanny_dodge",
+    "name": "uncanny dodge",
+    "class": "rogue",
+    "level": 5,
+    "json_path": "/assets/atlas/features/json/uncanny_dodge.json",
+    "image": "/assets/atlas/features/images/uncanny_dodge.webp"
+  },
+  {
+    "index": "use_magic_device",
+    "name": "use magic device",
+    "class": "thief",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/use_magic_device.json",
+    "image": "/assets/atlas/features/images/use_magic_device.webp"
+  },
+  {
+    "index": "vanish",
+    "name": "vanish",
+    "class": "ranger",
+    "level": 14,
+    "json_path": "/assets/atlas/features/json/vanish.json",
+    "image": "/assets/atlas/features/images/vanish.webp"
+  },
+  {
+    "index": "versatile_trickster",
+    "name": "versatile trickster",
+    "class": "rogue",
+    "level": 13,
+    "json_path": "/assets/atlas/features/json/versatile_trickster.json",
+    "image": "/assets/atlas/features/images/versatile_trickster.webp"
+  },
+  {
+    "index": "visions_of_distant_realms",
+    "name": "visions of distant realms",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/visions_of_distant_realms.json",
+    "image": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  {
+    "index": "voice_of_the_chain_master",
+    "name": "voice of the chain master",
+    "class": "warlock",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/voice_of_the_chain_master.json",
+    "image": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp"
+  },
+  {
+    "index": "volley",
+    "name": "volley",
+    "class": "hunter",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/volley.json",
+    "image": "icons/skills/ranged/target-bullseye-arrow-white.webp"
+  },
+  {
+    "index": "war_magic",
+    "name": "war magic",
+    "class": "fighter",
+    "level": 7,
+    "json_path": "/assets/atlas/features/json/war_magic.json",
+    "image": "/assets/atlas/features/images/war_magic.webp"
+  },
+  {
+    "index": "warlock_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "warlock",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/warlock_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/warlock_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "warlock_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "warlock",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/warlock_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/warlock_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "warlock_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "warlock",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/warlock_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/warlock_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "warlock_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "warlock",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/warlock_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/warlock_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "warlock_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "warlock",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/warlock_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/warlock_ability_score_improvement_5.webp"
+  },
+  {
+    "index": "weapon_bond",
+    "name": "weapon bond",
+    "class": "fighter",
+    "level": 3,
+    "json_path": "/assets/atlas/features/json/weapon_bond.json",
+    "image": "/assets/atlas/features/images/weapon_bond.webp"
+  },
+  {
+    "index": "whirlwind_attack",
+    "name": "whirlwind attack",
+    "class": "hunter",
+    "level": 11,
+    "json_path": "/assets/atlas/features/json/whirlwind_attack.json",
+    "image": "icons/skills/melee/spear-tips-quintuple-orange.webp"
+  },
+  {
+    "index": "whispers_of_the_grave",
+    "name": "whispers of the grave",
+    "class": "warlock",
+    "level": 9,
+    "json_path": "/assets/atlas/features/json/whispers_of_the_grave.json",
+    "image": "icons/magic/death/undead-ghost-scream-teal.webp"
+  },
+  {
+    "index": "wholeness_of_body",
+    "name": "wholeness of body",
+    "class": "way",
+    "level": 6,
+    "json_path": "/assets/atlas/features/json/wholeness_of_body.json",
+    "image": "/assets/atlas/features/images/wholeness_of_body.webp"
+  },
+  {
+    "index": "wild_shape",
+    "name": "wild shape",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/wild_shape.json",
+    "image": "icons/creatures/mammals/elk-moose-marked-green.webp"
+  },
+  {
+    "index": "wild_shape_cr_1_2_or_below_no_flying_speed",
+    "name": "wild shape (cr 1/2 or below, no flying speed)",
+    "class": "druid",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/wild_shape_cr_1_2_or_below_no_flying_speed.json",
+    "image": "/assets/atlas/features/images/wild_shape_cr_1_2_or_below_no_flying_speed.webp"
+  },
+  {
+    "index": "wild_shape_cr_1_4_or_below_no_flying_or_swim_speed",
+    "name": "wild shape (cr 1/4 or below, no flying or swim speed)",
+    "class": "druid",
+    "level": 2,
+    "json_path": "/assets/atlas/features/json/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.json",
+    "image": "/assets/atlas/features/images/wild_shape_cr_1_4_or_below_no_flying_or_swim_speed.webp"
+  },
+  {
+    "index": "wild_shape_cr_1_or_below",
+    "name": "wild shape (cr 1 or below)",
+    "class": "druid",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/wild_shape_cr_1_or_below.json",
+    "image": "/assets/atlas/features/images/wild_shape_cr_1_or_below.webp"
+  },
+  {
+    "index": "witch_sight",
+    "name": "witch sight",
+    "class": "warlock",
+    "level": 15,
+    "json_path": "/assets/atlas/features/json/witch_sight.json",
+    "image": "icons/magic/perception/eye-tendrils-web-purple.webp"
+  },
+  {
+    "index": "wizard_ability_score_improvement_1",
+    "name": "ability score improvement",
+    "class": "wizard",
+    "level": 4,
+    "json_path": "/assets/atlas/features/json/wizard_ability_score_improvement_1.json",
+    "image": "/assets/atlas/features/images/wizard_ability_score_improvement_1.webp"
+  },
+  {
+    "index": "wizard_ability_score_improvement_2",
+    "name": "ability score improvement",
+    "class": "wizard",
+    "level": 8,
+    "json_path": "/assets/atlas/features/json/wizard_ability_score_improvement_2.json",
+    "image": "/assets/atlas/features/images/wizard_ability_score_improvement_2.webp"
+  },
+  {
+    "index": "wizard_ability_score_improvement_3",
+    "name": "ability score improvement",
+    "class": "wizard",
+    "level": 12,
+    "json_path": "/assets/atlas/features/json/wizard_ability_score_improvement_3.json",
+    "image": "/assets/atlas/features/images/wizard_ability_score_improvement_3.webp"
+  },
+  {
+    "index": "wizard_ability_score_improvement_4",
+    "name": "ability score improvement",
+    "class": "wizard",
+    "level": 16,
+    "json_path": "/assets/atlas/features/json/wizard_ability_score_improvement_4.json",
+    "image": "/assets/atlas/features/images/wizard_ability_score_improvement_4.webp"
+  },
+  {
+    "index": "wizard_ability_score_improvement_5",
+    "name": "ability score improvement",
+    "class": "wizard",
+    "level": 19,
+    "json_path": "/assets/atlas/features/json/wizard_ability_score_improvement_5.json",
+    "image": "/assets/atlas/features/images/wizard_ability_score_improvement_5.webp"
+  }
+]

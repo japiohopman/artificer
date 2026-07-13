@@ -1,0 +1,18 @@
+{
+  "index": "escape_the_horde",
+  "class": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/class/json/hunter.json"
+  },
+  "name": "escape the horde",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "Opportunity attacks against you are made with disadvantage."
+  ],
+  "url": "/assets/atlas/features/json/escape_the_horde.json",
+  "updated_at": "2026-07-12T20:22:54.669Z",
+  "image": "icons/creatures/mammals/bats-movement-flying-black.webp",
+  "feature_specific": {}
+}

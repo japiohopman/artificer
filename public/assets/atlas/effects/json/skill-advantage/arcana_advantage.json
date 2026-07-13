@@ -1,0 +1,24 @@
+{
+  "index": "arcana_advantage",
+  "name": "arcana advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.arc.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-advantage/arcana_advantage.json",
+  "image": "icons/sundries/books/book-embossed-jewel-silver-green.webp",
+  "updated_at": "2026-07-12T20:22:54.902Z"
+}

@@ -1,0 +1,24 @@
+{
+  "index": "deafened_immunity",
+  "name": "deafened immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.ci.value",
+      "value": "deafened",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/condition-immunities/deafened_immunity.json",
+  "image": "systems/dnd5e/icons/svg/statuses/deafened.svg",
+  "updated_at": "2026-07-12T20:22:54.828Z"
+}

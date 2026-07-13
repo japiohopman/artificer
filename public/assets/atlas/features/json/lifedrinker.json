@@ -1,0 +1,18 @@
+{
+  "index": "lifedrinker",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "lifedrinker",
+  "level": 12,
+  "prerequisites": [],
+  "desc": [
+    "When you hit a creature with your pact weapon, the creature takes extra necrotic damage equal to your Charisma modifier (minimum 1)."
+  ],
+  "url": "/assets/atlas/features/json/lifedrinker.json",
+  "updated_at": "2026-07-12T20:22:54.745Z",
+  "image": "icons/skills/melee/strike-sword-blood-red.webp",
+  "feature_specific": {}
+}

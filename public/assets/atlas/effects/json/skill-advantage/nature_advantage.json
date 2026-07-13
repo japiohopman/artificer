@@ -1,0 +1,24 @@
+{
+  "index": "nature_advantage",
+  "name": "nature advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.nat.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-advantage/nature_advantage.json",
+  "image": "icons/magic/nature/plant-sprout-snow-green.webp",
+  "updated_at": "2026-07-12T20:22:54.908Z"
+}

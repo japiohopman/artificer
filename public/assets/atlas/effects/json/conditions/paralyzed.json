@@ -1,0 +1,20 @@
+{
+  "index": "paralyzed",
+  "name": "paralyzed",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "paralyzed"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/paralyzed.json",
+  "image": "systems/dnd5e/icons/svg/statuses/paralyzed.svg",
+  "updated_at": "2026-07-12T20:22:54.857Z"
+}

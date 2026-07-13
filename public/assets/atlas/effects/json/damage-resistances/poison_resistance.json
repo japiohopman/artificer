@@ -1,0 +1,24 @@
+{
+  "index": "poison_resistance",
+  "name": "poison resistance",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.dr.value",
+      "value": "poison",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/damage-resistances/poison_resistance.json",
+  "image": "systems/dnd5e/icons/svg/damage/poison.svg",
+  "updated_at": "2026-07-12T20:22:54.884Z"
+}

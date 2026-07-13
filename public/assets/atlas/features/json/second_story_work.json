@@ -1,16 +1,11 @@
 {
   "index": "second_story_work",
   "class": {
-    "index": "rogue",
-    "name": "rogue",
-    "url": "/assets/atlas/class/json/rogue.json"
-  },
-  "subclass": {
     "index": "thief",
     "name": "thief",
-    "url": "/assets/atlas/subclasses/json/thief.json"
+    "url": "/assets/atlas/class/json/thief.json"
   },
-  "name": "second story work",
+  "name": "second-story work",
   "level": 3,
   "prerequisites": [],
   "desc": [
@@ -18,7 +13,7 @@
     "In addition, when you make a running jump, the distance you cover increases by a number of feet equal to your Dexterity modifier."
   ],
   "url": "/assets/atlas/features/json/second_story_work.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.701Z",
   "image": "/assets/atlas/features/images/second_story_work.webp",
   "feature_specific": {
     "passive_modifiers": {

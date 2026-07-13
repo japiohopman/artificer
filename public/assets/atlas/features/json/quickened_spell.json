@@ -1,0 +1,18 @@
+{
+  "index": "quickened_spell",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "quickened spell",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting."
+  ],
+  "url": "/assets/atlas/features/json/quickened_spell.json",
+  "updated_at": "2026-07-12T20:22:54.721Z",
+  "image": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "feature_specific": {}
+}

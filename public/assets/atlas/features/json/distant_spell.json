@@ -1,0 +1,19 @@
+{
+  "index": "distant_spell",
+  "class": {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "name": "distant spell",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.",
+    "When you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/distant_spell.json",
+  "updated_at": "2026-07-12T20:22:54.718Z",
+  "image": "icons/skills/targeting/target-strike-triple-blue.webp",
+  "feature_specific": {}
+}

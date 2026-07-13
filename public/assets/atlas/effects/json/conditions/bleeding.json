@@ -1,0 +1,20 @@
+{
+  "index": "bleeding",
+  "name": "bleeding",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "bleeding"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/bleeding.json",
+  "image": "systems/dnd5e/icons/svg/statuses/bleeding.svg",
+  "updated_at": "2026-07-12T20:22:54.846Z"
+}

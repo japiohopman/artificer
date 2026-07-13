@@ -1,0 +1,24 @@
+{
+  "index": "arcana_disadvantage",
+  "name": "arcana disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.arc.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/arcana_disadvantage.json",
+  "image": "icons/sundries/books/book-embossed-jewel-silver-green.webp",
+  "updated_at": "2026-07-12T20:22:54.919Z"
+}

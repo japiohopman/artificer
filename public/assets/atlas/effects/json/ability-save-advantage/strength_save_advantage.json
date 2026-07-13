@@ -1,0 +1,24 @@
+{
+  "index": "strength_save_advantage",
+  "name": "strength save advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.str.save.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-save-advantage/strength_save_advantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/strength.svg",
+  "updated_at": "2026-07-12T20:22:54.816Z"
+}

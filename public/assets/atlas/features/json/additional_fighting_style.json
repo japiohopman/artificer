@@ -1,23 +1,26 @@
 {
   "index": "additional_fighting_style",
   "class": {
-    "index": "fighter",
-    "name": "fighter",
-    "url": "/assets/atlas/class/json/fighter.json"
-  },
-  "subclass": {
     "index": "champion",
     "name": "champion",
-    "url": "/assets/atlas/subclasses/json/champion.json"
+    "url": "/assets/atlas/class/json/champion.json"
   },
   "name": "additional fighting style",
-  "level": 7,
+  "level": 10,
   "prerequisites": [],
   "desc": [
-    "At 7th level, you can choose a second option from the Fighting Style feature."
+    "Choose a second fighting style class feature from the following:",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.8YwPFv3UAPjWVDNf]{Archery}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.zSlV0O2rQMdoq6pB]{Defense}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.hCop9uJrWhF1QPb4]{Dueling}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.3Nc6u9pyStByuJsm]{Great Weapon Fighting}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.06NVMYf58Z76O85O]{Protection}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.mHcSjcHJ8oZu3hkb]{Two Weapon Fighting}",
+    "The choice must be different to the one made at level 1.",
+    "You can drag your choice from the above onto your character sheet and it will automatically update."
   ],
   "url": "/assets/atlas/features/json/additional_fighting_style.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.608Z",
   "image": "/assets/atlas/features/images/additional_fighting_style.webp",
   "feature_specific": {
     "subfeature_options": {

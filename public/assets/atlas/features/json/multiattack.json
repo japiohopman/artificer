@@ -1,23 +1,21 @@
 {
   "index": "multiattack",
   "class": {
-    "index": "ranger",
-    "name": "ranger",
-    "url": "/assets/atlas/class/json/ranger.json"
-  },
-  "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "/assets/atlas/subclasses/json/hunter.json"
+    "url": "/assets/atlas/class/json/hunter.json"
   },
   "name": "multiattack",
   "level": 11,
   "prerequisites": [],
   "desc": [
     "At 11th level, you gain one of the following features of your choice.",
-    "Volley",
-    "Whirlwind Attack"
+    "@UUID[Compendium.dnd5e.classfeatures.Item.l7W6JB9yWLLLtQKP]{Volley}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.1DY8w3CXeD7PHDXF]{Whirlwind Attack}"
   ],
+  "url": "/assets/atlas/features/json/multiattack.json",
+  "updated_at": "2026-07-12T20:22:54.674Z",
+  "image": "/assets/atlas/features/images/multiattack.webp",
   "feature_specific": {
     "subfeature_options": {
       "choose": 1,
@@ -45,8 +43,5 @@
       }
     },
     "invocations": []
-  },
-  "url": "/assets/atlas/features/json/multiattack.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "/assets/atlas/features/images/multiattack.webp"
+  }
 }

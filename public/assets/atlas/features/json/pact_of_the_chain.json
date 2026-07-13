@@ -9,18 +9,11 @@
   "level": 3,
   "prerequisites": [],
   "desc": [
-    "You learn the find familiar spell and can cast it as a ritual. The spell doesn't count against your number of spells known.",
-    "When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: imp, pseudodragon, quasit, or sprite.",
-    "Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its reaction.",
-    "Your familiar is more cunning than a typical familiar. Its default form can be a reflection of your patron, with imps and quasits tied to the Fiend."
+    "You learn the @UUID[Compendium.dnd5e.spells.Item.JGT5bNqu9REL7Fuz]{Find Familiar} spell and can cast it as a ritual. The spell doesn't count against your number of spells known. When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: @UUID[Compendium.dnd5e.monsters.Actor.dLQiESMsfsXijD5c]{Imp}, pseudodragon, @UUID[Compendium.dnd5e.monsters.Actor.bwtkdzavdNHISgp4]{Quasit}, or @UUID[Compendium.dnd5e.monsters.Actor.MUpBNDoJEr09bLaO]{Sprite}.",
+    "Additionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its reaction."
   ],
-  "parent": {
-    "index": "pact_boon",
-    "name": "pact boon",
-    "url": "/assets/atlas/features/pact_boon.json"
-  },
   "url": "/assets/atlas/features/json/pact_of_the_chain.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.773Z",
   "image": "/assets/atlas/features/images/pact_of_the_chain.webp",
   "feature_specific": {}
 }

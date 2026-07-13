@@ -1,0 +1,18 @@
+{
+  "index": "horde_breaker",
+  "class": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/class/json/hunter.json"
+  },
+  "name": "horde breaker",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon."
+  ],
+  "url": "/assets/atlas/features/json/horde_breaker.json",
+  "updated_at": "2026-07-12T20:22:54.672Z",
+  "image": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "feature_specific": {}
+}

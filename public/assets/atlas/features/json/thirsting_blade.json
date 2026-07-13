@@ -1,0 +1,18 @@
+{
+  "index": "thirsting_blade",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "thirsting blade",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "You can attack with your pact weapon twice, instead of once, whenever you take the Attack action on your turn."
+  ],
+  "url": "/assets/atlas/features/json/thirsting_blade.json",
+  "updated_at": "2026-07-12T20:22:54.757Z",
+  "image": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "feature_specific": {}
+}

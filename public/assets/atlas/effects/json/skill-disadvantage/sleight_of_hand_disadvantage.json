@@ -1,0 +1,24 @@
+{
+  "index": "sleight_of_hand_disadvantage",
+  "name": "sleight of hand disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.slt.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/sleight_of_hand_disadvantage.json",
+  "image": "icons/sundries/gaming/playing-cards.webp",
+  "updated_at": "2026-07-12T20:22:54.930Z"
+}

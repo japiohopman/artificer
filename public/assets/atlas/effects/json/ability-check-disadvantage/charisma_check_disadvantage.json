@@ -1,0 +1,24 @@
+{
+  "index": "charisma_check_disadvantage",
+  "name": "charisma check disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.cha.check.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-check-disadvantage/charisma_check_disadvantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/charisma.svg",
+  "updated_at": "2026-07-12T20:22:54.793Z"
+}

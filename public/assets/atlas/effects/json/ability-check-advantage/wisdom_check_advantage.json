@@ -1,0 +1,24 @@
+{
+  "index": "wisdom_check_advantage",
+  "name": "wisdom check advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.wis.check.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-check-advantage/wisdom_check_advantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg",
+  "updated_at": "2026-07-12T20:22:54.791Z"
+}

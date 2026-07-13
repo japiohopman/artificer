@@ -584,15 +584,15 @@ export const CharacterCreator: React.FC = () => {
         // 1. Save images to GitHub first if they exist in base64/dataURL
         if (newChar.imageUrl?.startsWith('data:')) {
             await saveService.saveCharacterImage(charId, newChar.imageUrl, 'portrait');
-            finalizedChar.imageUrl = `public/data/character_save/images/${charId}/${charId}_portrait.webp`;
+            finalizedChar.imageUrl = `/data/character_save/images/${charId}/${charId}_portrait.webp`;
         }
         if (newChar.avatarUrl?.startsWith('data:')) {
             await saveService.saveCharacterImage(charId, newChar.avatarUrl, 'avatar');
-            finalizedChar.avatarUrl = `public/data/character_save/images/${charId}/${charId}_avatar.webp`;
+            finalizedChar.avatarUrl = `/data/character_save/images/${charId}/${charId}_avatar.webp`;
         }
         if (newChar.matrixUrl?.startsWith('data:')) {
             await saveService.saveCharacterImage(charId, newChar.matrixUrl, 'matrix');
-            finalizedChar.matrixUrl = `public/data/character_save/images/${charId}/${charId}_matrix.webp`;
+            finalizedChar.matrixUrl = `/data/character_save/images/${charId}/${charId}_matrix.webp`;
         }
 
         // 2. Save character JSON to GitHub

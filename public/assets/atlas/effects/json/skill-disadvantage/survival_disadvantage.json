@@ -1,0 +1,24 @@
+{
+  "index": "survival_disadvantage",
+  "name": "survival disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.sur.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/survival_disadvantage.json",
+  "image": "icons/magic/fire/flame-burning-campfire-yellow-blue.webp",
+  "updated_at": "2026-07-12T20:22:54.931Z"
+}

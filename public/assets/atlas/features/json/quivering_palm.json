@@ -1,14 +1,9 @@
 {
   "index": "quivering_palm",
   "class": {
-    "index": "monk",
-    "name": "monk",
-    "url": "/assets/atlas/class/json/monk.json"
-  },
-  "subclass": {
-    "index": "open_hand",
-    "name": "open hand",
-    "url": "/assets/atlas/subclasses/json/open_hand.json"
+    "index": "way",
+    "name": "way",
+    "url": "/assets/atlas/class/json/way.json"
   },
   "name": "quivering palm",
   "level": 17,
@@ -18,7 +13,7 @@
     "You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action."
   ],
   "url": "/assets/atlas/features/json/quivering_palm.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.646Z",
   "image": "/assets/atlas/features/images/quivering_palm.webp",
   "feature_specific": {
     "special_action": "action",

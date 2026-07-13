@@ -9,10 +9,11 @@
   "level": 11,
   "prerequisites": [],
   "desc": [
-    "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite."
+    "By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them.",
+    "Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your @UUID[Compendium.dnd5e.classfeatures.Item.ySMPQ6zNSlvkrl2f]{Divine Smite} with an attack, you add this damage to the extra damage of your Divine Smite."
   ],
   "url": "/assets/atlas/features/json/improved_divine_smite.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.663Z",
   "image": "/assets/atlas/features/images/improved_divine_smite.webp",
   "feature_specific": {
     "passive_modifiers": {

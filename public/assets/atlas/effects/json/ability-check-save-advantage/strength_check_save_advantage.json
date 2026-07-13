@@ -1,0 +1,29 @@
+{
+  "index": "strength_check_save_advantage",
+  "name": "strength check & save advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.str.check.roll.mode",
+      "value": 1,
+      "mode": "add"
+    },
+    {
+      "key": "system.abilities.str.save.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-check-save-advantage/strength_check_save_advantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/strength.svg",
+  "updated_at": "2026-07-12T20:22:54.803Z"
+}

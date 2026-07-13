@@ -1,0 +1,20 @@
+{
+  "index": "diseased",
+  "name": "diseased",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "diseased"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/diseased.json",
+  "image": "systems/dnd5e/icons/svg/statuses/diseased.svg",
+  "updated_at": "2026-07-12T20:22:54.851Z"
+}

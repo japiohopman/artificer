@@ -1,14 +1,9 @@
 {
   "index": "aura_of_devotion",
   "class": {
-    "index": "paladin",
-    "name": "paladin",
-    "url": "/assets/atlas/class/json/paladin.json"
-  },
-  "subclass": {
-    "index": "devotion",
-    "name": "devotion",
-    "url": "/assets/atlas/subclasses/json/devotion.json"
+    "index": "oath",
+    "name": "oath",
+    "url": "/assets/atlas/class/json/oath.json"
   },
   "name": "aura of devotion",
   "level": 7,
@@ -18,7 +13,7 @@
     "At 18th level, the range of this aura increases to 30 feet."
   ],
   "url": "/assets/atlas/features/json/aura_of_devotion.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.651Z",
   "image": "/assets/atlas/features/images/aura_of_devotion.webp",
   "feature_specific": {
     "aura": {

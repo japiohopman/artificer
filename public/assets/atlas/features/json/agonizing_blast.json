@@ -1,0 +1,18 @@
+{
+  "index": "agonizing_blast",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "agonizing blast",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "When you cast @UUID[Compendium.dnd5e.spells.Item.Z9p1vezIn95jw1Yw]{Eldritch Blast}, add your Charisma modifier to the damage it deals on a hit."
+  ],
+  "url": "/assets/atlas/features/json/agonizing_blast.json",
+  "updated_at": "2026-07-12T20:22:54.730Z",
+  "image": "icons/magic/acid/projectile-stream-bubbles.webp",
+  "feature_specific": {}
+}

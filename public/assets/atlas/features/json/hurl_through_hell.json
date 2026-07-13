@@ -1,14 +1,9 @@
 {
   "index": "hurl_through_hell",
   "class": {
-    "index": "warlock",
-    "name": "warlock",
-    "url": "/assets/atlas/class/json/warlock.json"
-  },
-  "subclass": {
-    "index": "fiend",
-    "name": "fiend",
-    "url": "/assets/atlas/subclasses/json/fiend.json"
+    "index": "the",
+    "name": "the",
+    "url": "/assets/atlas/class/json/the.json"
   },
   "name": "hurl through hell",
   "level": 14,
@@ -19,7 +14,7 @@
     "Once you use this feature, you can't use it again until you finish a long rest."
   ],
   "url": "/assets/atlas/features/json/hurl_through_hell.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.766Z",
   "image": "/assets/atlas/features/images/hurl_through_hell.webp",
   "feature_specific": {}
 }

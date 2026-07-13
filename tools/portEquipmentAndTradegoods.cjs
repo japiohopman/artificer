@@ -11,8 +11,8 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 // Paths definitions
-const FOUNDRY_ROOT = path.join(__dirname, 'dit is de ttf map waar of naar toe moeten of heel erg van af moeten kijken/dnd5e-6.0.x');
-const TARGET_ROOT = path.join(__dirname, 'public/assets/atlas/equipment/json');
+const FOUNDRY_ROOT = path.join(__dirname, '../dit is de ttf map waar of naar toe moeten of heel erg van af moeten kijken/dnd5e-6.0.x');
+const TARGET_ROOT = path.join(__dirname, '../public/assets/atlas/equipment/json');
 
 const SOURCES = {
   rules14: {

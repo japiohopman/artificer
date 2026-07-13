@@ -1,0 +1,24 @@
+{
+  "index": "force_resistance",
+  "name": "force resistance",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.dr.value",
+      "value": "force",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/damage-resistances/force_resistance.json",
+  "image": "systems/dnd5e/icons/svg/damage/force.svg",
+  "updated_at": "2026-07-12T20:22:54.880Z"
+}

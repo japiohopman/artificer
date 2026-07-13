@@ -1,0 +1,18 @@
+{
+  "index": "defense",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "defense",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "While you are wearing armor, you gain a +1 bonus to AC"
+  ],
+  "url": "/assets/atlas/features/json/defense.json",
+  "updated_at": "2026-07-12T20:22:54.706Z",
+  "image": "icons/equipment/shield/heater-stone-orange.webp",
+  "feature_specific": {}
+}

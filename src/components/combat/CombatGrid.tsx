@@ -188,7 +188,7 @@ export const CombatGrid: React.FC = () => {
 
   const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
 
-  // Memoize visible cells (updates dynamically during drag)
+  // Memoize visible cells (updates only when positions are committed, preventing drag lag)
   const visibleCells = useMemo(() => {
     const visible = new Set<string>();
     const activeParty = characters.filter((c: any) => c && c.name !== 'Empty Slot');
@@ -196,27 +196,25 @@ export const CombatGrid: React.FC = () => {
     if (activeParty.length > 0) {
       activeParty.forEach(char => {
         const pos = pcPositions?.[char.id] || playerPos;
-        const center = (draggedPcId === char.id && draggedPos) ? draggedPos : pos;
         for (let y = 0; y < gridHeight; y++) {
           for (let x = 0; x < gridWidth; x++) {
-            if (checkLoS(center, { x, y }, grid)) {
+            if (checkLoS(pos, { x, y }, grid)) {
               visible.add(`${x},${y}`);
             }
           }
         }
       });
     } else {
-      const center = draggedPos || playerPos;
       for (let y = 0; y < gridHeight; y++) {
         for (let x = 0; x < gridWidth; x++) {
-          if (checkLoS(center, { x, y }, grid)) {
+          if (checkLoS(playerPos, { x, y }, grid)) {
             visible.add(`${x},${y}`);
           }
         }
       }
     }
     return visible;
-  }, [playerPos, pcPositions, draggedPos, draggedPcId, grid, gridHeight, gridWidth, characters]);
+  }, [playerPos, pcPositions, grid, gridHeight, gridWidth, characters]);
 
   // Memoize valid target cells
   const validTargetCells = useMemo(() => {

@@ -1,0 +1,24 @@
+{
+  "index": "surprised_immunity",
+  "name": "surprised immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.ci.value",
+      "value": "surprised",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/condition-immunities/surprised_immunity.json",
+  "image": "systems/dnd5e/icons/svg/statuses/surprised.svg",
+  "updated_at": "2026-07-12T20:22:54.842Z"
+}

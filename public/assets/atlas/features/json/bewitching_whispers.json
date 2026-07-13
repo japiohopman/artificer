@@ -1,0 +1,18 @@
+{
+  "index": "bewitching_whispers",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "bewitching whispers",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.P6f1PPKPd9BCb742]{Compulsion} once using a warlock spell slot. You can't do so again until you finish a long rest."
+  ],
+  "url": "/assets/atlas/features/json/bewitching_whispers.json",
+  "updated_at": "2026-07-12T20:22:54.736Z",
+  "image": "icons/magic/air/wind-vortex-swirl-purple.webp",
+  "feature_specific": {}
+}

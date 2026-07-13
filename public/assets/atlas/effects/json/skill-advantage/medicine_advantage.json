@@ -1,0 +1,24 @@
+{
+  "index": "medicine_advantage",
+  "name": "medicine advantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.med.roll.mode",
+      "value": 1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-advantage/medicine_advantage.json",
+  "image": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "updated_at": "2026-07-12T20:22:54.908Z"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "misty_visions",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "misty visions",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.BrBZdCCrJRIVg7YX]{Silent Image} at will, without expending a spell slot or material components."
+  ],
+  "url": "/assets/atlas/features/json/misty_visions.json",
+  "updated_at": "2026-07-12T20:22:54.750Z",
+  "image": "icons/creatures/webs/web-spider-glowing-purple.webp",
+  "feature_specific": {}
+}

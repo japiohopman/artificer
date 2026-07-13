@@ -1,0 +1,18 @@
+{
+  "index": "steel_will",
+  "class": {
+    "index": "hunter",
+    "name": "hunter",
+    "url": "/assets/atlas/class/json/hunter.json"
+  },
+  "name": "steel will",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "You have advantage on saving throws against being frightened."
+  ],
+  "url": "/assets/atlas/features/json/steel_will.json",
+  "updated_at": "2026-07-12T20:22:54.676Z",
+  "image": "icons/magic/control/control-influence-rally-purple.webp",
+  "feature_specific": {}
+}

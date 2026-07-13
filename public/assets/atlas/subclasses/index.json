@@ -1,0 +1,184 @@
+[
+  {
+    "index": "arcane_trickster",
+    "name": "arcane trickster",
+    "class": "rogue",
+    "json_path": "/assets/atlas/subclasses/json/arcane_trickster.json",
+    "image": "/assets/atlas/subclasses/arcane_trickster.webp"
+  },
+  {
+    "index": "assassin",
+    "name": "assassin",
+    "class": "rogue",
+    "json_path": "/assets/atlas/subclasses/json/assassin.json",
+    "image": "/assets/atlas/subclasses/assassin.webp"
+  },
+  {
+    "index": "battle_master",
+    "name": "battle master",
+    "class": "fighter",
+    "json_path": "/assets/atlas/subclasses/json/battle_master.json",
+    "image": "/assets/atlas/subclasses/battle_master.webp"
+  },
+  {
+    "index": "berserker",
+    "name": "berserker",
+    "class": "barbarian",
+    "json_path": "/assets/atlas/subclasses/json/berserker.json",
+    "image": "/assets/atlas/subclasses/berserker.webp"
+  },
+  {
+    "index": "champion",
+    "name": "champion",
+    "class": "fighter",
+    "json_path": "/assets/atlas/subclasses/json/champion.json",
+    "image": "/assets/atlas/subclasses/champion.webp"
+  },
+  {
+    "index": "circle_of_the_land",
+    "name": "circle of the land",
+    "class": "druid",
+    "json_path": "/assets/atlas/subclasses/json/circle_of_the_land.json",
+    "image": "icons/environment/wilderness/tree-oak.webp"
+  },
+  {
+    "index": "college_of_lore",
+    "name": "college of lore",
+    "class": "bard",
+    "json_path": "/assets/atlas/subclasses/json/college_of_lore.json",
+    "image": "icons/sundries/books/book-open-brown-black.webp"
+  },
+  {
+    "index": "devotion",
+    "name": "devotion",
+    "class": "paladin",
+    "json_path": "/assets/atlas/subclasses/json/devotion.json",
+    "image": "/assets/atlas/subclasses/devotion.webp"
+  },
+  {
+    "index": "draconic",
+    "name": "draconic",
+    "class": "sorcerer",
+    "json_path": "/assets/atlas/subclasses/json/draconic.json",
+    "image": "/assets/atlas/subclasses/draconic.webp"
+  },
+  {
+    "index": "draconic_bloodline",
+    "name": "draconic bloodline",
+    "class": "sorcerer",
+    "json_path": "/assets/atlas/subclasses/json/draconic_bloodline.json",
+    "image": "icons/creatures/reptiles/dragon-horned-blue.webp"
+  },
+  {
+    "index": "eldritch_knight",
+    "name": "eldritch knight",
+    "class": "fighter",
+    "json_path": "/assets/atlas/subclasses/json/eldritch_knight.json",
+    "image": "/assets/atlas/subclasses/eldritch_knight.webp"
+  },
+  {
+    "index": "evocation",
+    "name": "evocation",
+    "class": "wizard",
+    "json_path": "/assets/atlas/subclasses/json/evocation.json",
+    "image": "/assets/atlas/subclasses/evocation.webp"
+  },
+  {
+    "index": "fiend",
+    "name": "fiend",
+    "class": "warlock",
+    "json_path": "/assets/atlas/subclasses/json/fiend.json",
+    "image": "/assets/atlas/subclasses/fiend.webp"
+  },
+  {
+    "index": "hunter",
+    "name": "hunter",
+    "class": "ranger",
+    "json_path": "/assets/atlas/subclasses/json/hunter.json",
+    "image": "/assets/atlas/subclasses/hunter.webp"
+  },
+  {
+    "index": "land",
+    "name": "land",
+    "class": "druid",
+    "json_path": "/assets/atlas/subclasses/json/land.json",
+    "image": "/assets/atlas/subclasses/land.webp"
+  },
+  {
+    "index": "life",
+    "name": "life",
+    "class": "cleric",
+    "json_path": "/assets/atlas/subclasses/json/life.json",
+    "image": "/assets/atlas/subclasses/life.webp"
+  },
+  {
+    "index": "life_domain",
+    "name": "life domain",
+    "class": "cleric",
+    "json_path": "/assets/atlas/subclasses/json/life_domain.json",
+    "image": "icons/magic/life/cross-yellow-green.webp"
+  },
+  {
+    "index": "lore",
+    "name": "lore",
+    "class": "bard",
+    "json_path": "/assets/atlas/subclasses/json/lore.json",
+    "image": "/assets/atlas/subclasses/lore.webp"
+  },
+  {
+    "index": "oath_of_devotion",
+    "name": "oath of devotion",
+    "class": "paladin",
+    "json_path": "/assets/atlas/subclasses/json/oath_of_devotion.json",
+    "image": "icons/magic/holy/saint-glass-portrait-halo.webp"
+  },
+  {
+    "index": "open_hand",
+    "name": "open hand",
+    "class": "monk",
+    "json_path": "/assets/atlas/subclasses/json/open_hand.json",
+    "image": "/assets/atlas/subclasses/open_hand.webp"
+  },
+  {
+    "index": "path_of_the_berserker",
+    "name": "path of the berserker",
+    "class": "barbarian",
+    "json_path": "/assets/atlas/subclasses/json/path_of_the_berserker.json",
+    "image": "icons/skills/melee/strike-flail-destructive-yellow.webp"
+  },
+  {
+    "index": "psi_warrior",
+    "name": "psi warrior",
+    "class": "fighter",
+    "json_path": "/assets/atlas/subclasses/json/psi_warrior.json",
+    "image": "/assets/atlas/subclasses/psi_warrior.webp"
+  },
+  {
+    "index": "school_of_evocation",
+    "name": "school of evocation",
+    "class": "wizard",
+    "json_path": "/assets/atlas/subclasses/json/school_of_evocation.json",
+    "image": "icons/magic/fire/beam-strike-whip-red.webp"
+  },
+  {
+    "index": "the_fiend",
+    "name": "the fiend",
+    "class": "warlock",
+    "json_path": "/assets/atlas/subclasses/json/the_fiend.json",
+    "image": "icons/magic/control/fear-fright-monster-grin-red-orange.webp"
+  },
+  {
+    "index": "thief",
+    "name": "thief",
+    "class": "rogue",
+    "json_path": "/assets/atlas/subclasses/json/thief.json",
+    "image": "/assets/atlas/subclasses/thief.webp"
+  },
+  {
+    "index": "way_of_the_open_hand",
+    "name": "way of the open hand",
+    "class": "monk",
+    "json_path": "/assets/atlas/subclasses/json/way_of_the_open_hand.json",
+    "image": "icons/skills/social/wave-halt-stop.webp"
+  }
+]

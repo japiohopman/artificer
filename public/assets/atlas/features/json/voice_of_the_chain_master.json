@@ -1,0 +1,18 @@
+{
+  "index": "voice_of_the_chain_master",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "voice of the chain master",
+  "level": 3,
+  "prerequisites": [],
+  "desc": [
+    "You can communicate telepathically with your familiar and perceive through your familiar's senses as long as you are on the same plane of existence. Additionally, while perceiving through your familiar's senses, you can also speak through your familiar in your own voice, even if your familiar is normally incapable of speech."
+  ],
+  "url": "/assets/atlas/features/json/voice_of_the_chain_master.json",
+  "updated_at": "2026-07-12T20:22:54.759Z",
+  "image": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp",
+  "feature_specific": {}
+}

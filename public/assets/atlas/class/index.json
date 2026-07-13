@@ -1,0 +1,86 @@
+[
+  {
+    "index": "barbarian",
+    "name": "barbarian",
+    "hit_die": 12,
+    "json_path": "/assets/atlas/class/json/barbarian.json",
+    "image": "/assets/atlas/ui/official/classes/barbarian.webp"
+  },
+  {
+    "index": "bard",
+    "name": "bard",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/bard.json",
+    "image": "/assets/atlas/ui/official/classes/bard.webp"
+  },
+  {
+    "index": "cleric",
+    "name": "cleric",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/cleric.json",
+    "image": "/assets/atlas/ui/official/classes/cleric.webp"
+  },
+  {
+    "index": "druid",
+    "name": "druid",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/druid.json",
+    "image": "/assets/atlas/ui/official/classes/druid.webp"
+  },
+  {
+    "index": "fighter",
+    "name": "fighter",
+    "hit_die": 10,
+    "json_path": "/assets/atlas/class/json/fighter.json",
+    "image": "/assets/atlas/ui/official/classes/fighter.webp"
+  },
+  {
+    "index": "monk",
+    "name": "monk",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/monk.json",
+    "image": "/assets/atlas/ui/official/classes/monk.webp"
+  },
+  {
+    "index": "paladin",
+    "name": "paladin",
+    "hit_die": 10,
+    "json_path": "/assets/atlas/class/json/paladin.json",
+    "image": "/assets/atlas/ui/official/classes/paladin.webp"
+  },
+  {
+    "index": "ranger",
+    "name": "ranger",
+    "hit_die": 10,
+    "json_path": "/assets/atlas/class/json/ranger.json",
+    "image": "/assets/atlas/ui/official/classes/ranger.webp"
+  },
+  {
+    "index": "rogue",
+    "name": "rogue",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/rogue.json",
+    "image": "/assets/atlas/ui/official/classes/rogue.webp"
+  },
+  {
+    "index": "sorcerer",
+    "name": "sorcerer",
+    "hit_die": 6,
+    "json_path": "/assets/atlas/class/json/sorcerer.json",
+    "image": "/assets/atlas/ui/official/classes/sorcerer.webp"
+  },
+  {
+    "index": "warlock",
+    "name": "warlock",
+    "hit_die": 8,
+    "json_path": "/assets/atlas/class/json/warlock.json",
+    "image": "/assets/atlas/ui/official/classes/warlock.webp"
+  },
+  {
+    "index": "wizard",
+    "name": "wizard",
+    "hit_die": 6,
+    "json_path": "/assets/atlas/class/json/wizard.json",
+    "image": "/assets/atlas/ui/official/classes/wizard.webp"
+  }
+]

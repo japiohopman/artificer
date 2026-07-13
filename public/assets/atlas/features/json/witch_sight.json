@@ -1,0 +1,18 @@
+{
+  "index": "witch_sight",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "witch sight",
+  "level": 15,
+  "prerequisites": [],
+  "desc": [
+    "You can see the true form of any shapechanger or creature concealed by illusion or transmutation magic while the creature is within 30 feet of you and within line of sight."
+  ],
+  "url": "/assets/atlas/features/json/witch_sight.json",
+  "updated_at": "2026-07-12T20:22:54.761Z",
+  "image": "icons/magic/perception/eye-tendrils-web-purple.webp",
+  "feature_specific": {}
+}

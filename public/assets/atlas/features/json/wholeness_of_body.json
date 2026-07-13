@@ -1,14 +1,9 @@
 {
   "index": "wholeness_of_body",
   "class": {
-    "index": "monk",
-    "name": "monk",
-    "url": "/assets/atlas/class/json/monk.json"
-  },
-  "subclass": {
-    "index": "open_hand",
-    "name": "open hand",
-    "url": "/assets/atlas/subclasses/json/open_hand.json"
+    "index": "way",
+    "name": "way",
+    "url": "/assets/atlas/class/json/way.json"
   },
   "name": "wholeness of body",
   "level": 6,
@@ -17,7 +12,7 @@
     "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
   ],
   "url": "/assets/atlas/features/json/wholeness_of_body.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.649Z",
   "image": "/assets/atlas/features/images/wholeness_of_body.webp",
   "feature_specific": {
     "healing": {

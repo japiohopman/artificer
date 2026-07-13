@@ -1,0 +1,22 @@
+{
+  "index": "fighting_style",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "name": "fighting style",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You adopt a particular style of fighting as your specialty. Choose one of the following options from the appropriate class list. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.8YwPFv3UAPjWVDNf]{Archery}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.zSlV0O2rQMdoq6pB]{Defense}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.hCop9uJrWhF1QPb4]{Dueling}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.mHcSjcHJ8oZu3hkb]{Two Weapon Fighting}"
+  ],
+  "url": "/assets/atlas/features/json/fighting_style.json",
+  "updated_at": "2026-07-12T20:22:54.683Z",
+  "image": "icons/skills/melee/weapons-crossed-daggers-orange.webp",
+  "feature_specific": {}
+}

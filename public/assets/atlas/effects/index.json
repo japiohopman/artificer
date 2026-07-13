@@ -1,0 +1,1482 @@
+[
+  {
+    "index": "_folder",
+    "name": "ability check advantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_check_advantage",
+    "name": "charisma check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/charisma_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_check_advantage",
+    "name": "constitution check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/constitution_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_check_advantage",
+    "name": "dexterity check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/dexterity_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "initiative_advantage",
+    "name": "initiative advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/initiative_advantage.json",
+    "image": "systems/dnd5e/icons/svg/action/dash.svg"
+  },
+  {
+    "index": "intelligence_check_advantage",
+    "name": "intelligence check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/intelligence_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_check_advantage",
+    "name": "strength check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/strength_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_check_advantage",
+    "name": "wisdom check advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-advantage/wisdom_check_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "ability check disadvantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_check_disadvantage",
+    "name": "charisma check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/charisma_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_check_disadvantage",
+    "name": "constitution check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/constitution_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_check_disadvantage",
+    "name": "dexterity check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/dexterity_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "initiative_disadvantage",
+    "name": "initiative disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/initiative_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/action/dash.svg"
+  },
+  {
+    "index": "intelligence_check_disadvantage",
+    "name": "intelligence check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/intelligence_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_check_disadvantage",
+    "name": "strength check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/strength_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_check_disadvantage",
+    "name": "wisdom check disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-disadvantage/wisdom_check_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "ability check & save advantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_check_save_advantage",
+    "name": "charisma check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/charisma_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_check_save_advantage",
+    "name": "constitution check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/constitution_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_check_save_advantage",
+    "name": "dexterity check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/dexterity_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "intelligence_check_save_advantage",
+    "name": "intelligence check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/intelligence_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_check_save_advantage",
+    "name": "strength check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/strength_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_check_save_advantage",
+    "name": "wisdom check & save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-advantage/wisdom_check_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "ability check & save disadvantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_check_save_disadvantage",
+    "name": "charisma check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/charisma_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_check_save_disadvantage",
+    "name": "constitution check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/constitution_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_check_save_disadvantage",
+    "name": "dexterity check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/dexterity_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "intelligence_check_save_disadvantage",
+    "name": "intelligence check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/intelligence_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_check_save_disadvantage",
+    "name": "strength check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/strength_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_check_save_disadvantage",
+    "name": "wisdom check & save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-check-save-disadvantage/wisdom_check_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "ability save advantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_save_advantage",
+    "name": "charisma save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/charisma_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_save_advantage",
+    "name": "constitution save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/constitution_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_save_advantage",
+    "name": "dexterity save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/dexterity_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "intelligence_save_advantage",
+    "name": "intelligence save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/intelligence_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_save_advantage",
+    "name": "strength save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/strength_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_save_advantage",
+    "name": "wisdom save advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-advantage/wisdom_save_advantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "ability save disadvantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "charisma_save_disadvantage",
+    "name": "charisma save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/charisma_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/charisma.svg"
+  },
+  {
+    "index": "constitution_save_disadvantage",
+    "name": "constitution save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/constitution_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/constitution.svg"
+  },
+  {
+    "index": "dexterity_save_disadvantage",
+    "name": "dexterity save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/dexterity_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/dexterity.svg"
+  },
+  {
+    "index": "intelligence_save_disadvantage",
+    "name": "intelligence save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/intelligence_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/intelligence.svg"
+  },
+  {
+    "index": "strength_save_disadvantage",
+    "name": "strength save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/strength_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/strength.svg"
+  },
+  {
+    "index": "wisdom_save_disadvantage",
+    "name": "wisdom save disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/ability-save-disadvantage/wisdom_save_disadvantage.json",
+    "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "condition immunities",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "bleeding_immunity",
+    "name": "bleeding immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/bleeding_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/bleeding.svg"
+  },
+  {
+    "index": "blinded_immunity",
+    "name": "blinded immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/blinded_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/blinded.svg"
+  },
+  {
+    "index": "burning_immunity",
+    "name": "burning immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/burning_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/burning.svg"
+  },
+  {
+    "index": "charmed_immunity",
+    "name": "charmed immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/charmed_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/charmed.svg"
+  },
+  {
+    "index": "cursed_immunity",
+    "name": "cursed immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/cursed_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/cursed.svg"
+  },
+  {
+    "index": "deafened_immunity",
+    "name": "deafened immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/deafened_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/deafened.svg"
+  },
+  {
+    "index": "dehydration_immunity",
+    "name": "dehydration immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/dehydration_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/dehydration.svg"
+  },
+  {
+    "index": "diseased_immunity",
+    "name": "diseased immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/diseased_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/diseased.svg"
+  },
+  {
+    "index": "exhaustion_immunity",
+    "name": "exhaustion immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/exhaustion_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/exhaustion.svg"
+  },
+  {
+    "index": "falling_immunity",
+    "name": "falling immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/falling_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/falling.svg"
+  },
+  {
+    "index": "frightened_immunity",
+    "name": "frightened immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/frightened_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/frightened.svg"
+  },
+  {
+    "index": "grappled_immunity",
+    "name": "grappled immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/grappled_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/grappled.svg"
+  },
+  {
+    "index": "incapacitated_immunity",
+    "name": "incapacitated immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/incapacitated_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/incapacitated.svg"
+  },
+  {
+    "index": "invisible_immunity",
+    "name": "invisible immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/invisible_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/invisible.svg"
+  },
+  {
+    "index": "malnutrition_immunity",
+    "name": "malnutrition immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/malnutrition_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/malnutrition.svg"
+  },
+  {
+    "index": "paralyzed_immunity",
+    "name": "paralyzed immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/paralyzed_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/paralyzed.svg"
+  },
+  {
+    "index": "petrified_immunity",
+    "name": "petrified immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/petrified_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/petrified.svg"
+  },
+  {
+    "index": "poisoned_immunity",
+    "name": "poisoned immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/poisoned_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/poisoned.svg"
+  },
+  {
+    "index": "prone_immunity",
+    "name": "prone immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/prone_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/prone.svg"
+  },
+  {
+    "index": "restrained_immunity",
+    "name": "restrained immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/restrained_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/restrained.svg"
+  },
+  {
+    "index": "silenced_immunity",
+    "name": "silenced immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/silenced_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/silenced.svg"
+  },
+  {
+    "index": "stunned_immunity",
+    "name": "stunned immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/stunned_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/stunned.svg"
+  },
+  {
+    "index": "suffocation_immunity",
+    "name": "suffocation immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/suffocation_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/suffocation.svg"
+  },
+  {
+    "index": "surprised_immunity",
+    "name": "surprised immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/surprised_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/surprised.svg"
+  },
+  {
+    "index": "transformed_immunity",
+    "name": "transformed immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/transformed_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/transformed.svg"
+  },
+  {
+    "index": "unconscious_immunity",
+    "name": "unconscious immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/condition-immunities/unconscious_immunity.json",
+    "image": "systems/dnd5e/icons/svg/statuses/unconscious.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "conditions",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "bleeding",
+    "name": "bleeding",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/bleeding.json",
+    "image": "systems/dnd5e/icons/svg/statuses/bleeding.svg"
+  },
+  {
+    "index": "blinded",
+    "name": "blinded",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/blinded.json",
+    "image": "systems/dnd5e/icons/svg/statuses/blinded.svg"
+  },
+  {
+    "index": "burning",
+    "name": "burning",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/burning.json",
+    "image": "systems/dnd5e/icons/svg/statuses/burning.svg"
+  },
+  {
+    "index": "charmed",
+    "name": "charmed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/charmed.json",
+    "image": "systems/dnd5e/icons/svg/statuses/charmed.svg"
+  },
+  {
+    "index": "cursed",
+    "name": "cursed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/cursed.json",
+    "image": "systems/dnd5e/icons/svg/statuses/cursed.svg"
+  },
+  {
+    "index": "deafened",
+    "name": "deafened",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/deafened.json",
+    "image": "systems/dnd5e/icons/svg/statuses/deafened.svg"
+  },
+  {
+    "index": "dehydration",
+    "name": "dehydration",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/dehydration.json",
+    "image": "systems/dnd5e/icons/svg/statuses/dehydration.svg"
+  },
+  {
+    "index": "diseased",
+    "name": "diseased",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/diseased.json",
+    "image": "systems/dnd5e/icons/svg/statuses/diseased.svg"
+  },
+  {
+    "index": "falling",
+    "name": "falling",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/falling.json",
+    "image": "systems/dnd5e/icons/svg/statuses/falling.svg"
+  },
+  {
+    "index": "frightened",
+    "name": "frightened",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/frightened.json",
+    "image": "systems/dnd5e/icons/svg/statuses/frightened.svg"
+  },
+  {
+    "index": "grappled",
+    "name": "grappled",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/grappled.json",
+    "image": "systems/dnd5e/icons/svg/statuses/grappled.svg"
+  },
+  {
+    "index": "incapacitated",
+    "name": "incapacitated",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/incapacitated.json",
+    "image": "systems/dnd5e/icons/svg/statuses/incapacitated.svg"
+  },
+  {
+    "index": "invisible",
+    "name": "invisible",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/invisible.json",
+    "image": "systems/dnd5e/icons/svg/statuses/invisible.svg"
+  },
+  {
+    "index": "malnutrition",
+    "name": "malnutrition",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/malnutrition.json",
+    "image": "systems/dnd5e/icons/svg/statuses/malnutrition.svg"
+  },
+  {
+    "index": "paralyzed",
+    "name": "paralyzed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/paralyzed.json",
+    "image": "systems/dnd5e/icons/svg/statuses/paralyzed.svg"
+  },
+  {
+    "index": "petrified",
+    "name": "petrified",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/petrified.json",
+    "image": "systems/dnd5e/icons/svg/statuses/petrified.svg"
+  },
+  {
+    "index": "poisoned",
+    "name": "poisoned",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/poisoned.json",
+    "image": "systems/dnd5e/icons/svg/statuses/poisoned.svg"
+  },
+  {
+    "index": "prone",
+    "name": "prone",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/prone.json",
+    "image": "systems/dnd5e/icons/svg/statuses/prone.svg"
+  },
+  {
+    "index": "restrained",
+    "name": "restrained",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/restrained.json",
+    "image": "systems/dnd5e/icons/svg/statuses/restrained.svg"
+  },
+  {
+    "index": "silenced",
+    "name": "silenced",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/silenced.json",
+    "image": "systems/dnd5e/icons/svg/statuses/silenced.svg"
+  },
+  {
+    "index": "stunned",
+    "name": "stunned",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/stunned.json",
+    "image": "systems/dnd5e/icons/svg/statuses/stunned.svg"
+  },
+  {
+    "index": "suffocation",
+    "name": "suffocation",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/suffocation.json",
+    "image": "systems/dnd5e/icons/svg/statuses/suffocation.svg"
+  },
+  {
+    "index": "surprised",
+    "name": "surprised",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/surprised.json",
+    "image": "systems/dnd5e/icons/svg/statuses/surprised.svg"
+  },
+  {
+    "index": "transformed",
+    "name": "transformed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/transformed.json",
+    "image": "systems/dnd5e/icons/svg/statuses/transformed.svg"
+  },
+  {
+    "index": "unconscious",
+    "name": "unconscious",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/conditions/unconscious.json",
+    "image": "systems/dnd5e/icons/svg/statuses/unconscious.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "damage immunities",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "acid_immunity",
+    "name": "acid immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/acid_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/acid.svg"
+  },
+  {
+    "index": "bludgeoning_immunity",
+    "name": "bludgeoning immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/bludgeoning_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/bludgeoning.svg"
+  },
+  {
+    "index": "cold_immunity",
+    "name": "cold immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/cold_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/cold.svg"
+  },
+  {
+    "index": "damage_immunity",
+    "name": "damage immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/damage_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/all.svg"
+  },
+  {
+    "index": "fire_immunity",
+    "name": "fire immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/fire_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/fire.svg"
+  },
+  {
+    "index": "force_immunity",
+    "name": "force immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/force_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/force.svg"
+  },
+  {
+    "index": "lightning_immunity",
+    "name": "lightning immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/lightning_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/lightning.svg"
+  },
+  {
+    "index": "necrotic_immunity",
+    "name": "necrotic immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/necrotic_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/necrotic.svg"
+  },
+  {
+    "index": "piercing_immunity",
+    "name": "piercing immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/piercing_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/piercing.svg"
+  },
+  {
+    "index": "poison_immunity",
+    "name": "poison immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/poison_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/poison.svg"
+  },
+  {
+    "index": "psychic_immunity",
+    "name": "psychic immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/psychic_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/psychic.svg"
+  },
+  {
+    "index": "radiant_immunity",
+    "name": "radiant immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/radiant_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/radiant.svg"
+  },
+  {
+    "index": "slashing_immunity",
+    "name": "slashing immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/slashing_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/slashing.svg"
+  },
+  {
+    "index": "thunder_immunity",
+    "name": "thunder immunity",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-immunities/thunder_immunity.json",
+    "image": "systems/dnd5e/icons/svg/damage/thunder.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "damage resistances",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "acid_resistance",
+    "name": "acid resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/acid_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/acid.svg"
+  },
+  {
+    "index": "bludgeoning_resistance",
+    "name": "bludgeoning resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/bludgeoning_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/bludgeoning.svg"
+  },
+  {
+    "index": "cold_resistance",
+    "name": "cold resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/cold_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/cold.svg"
+  },
+  {
+    "index": "damage_resistance",
+    "name": "damage resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/damage_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/all.svg"
+  },
+  {
+    "index": "fire_resistance",
+    "name": "fire resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/fire_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/fire.svg"
+  },
+  {
+    "index": "force_resistance",
+    "name": "force resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/force_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/force.svg"
+  },
+  {
+    "index": "lightning_resistance",
+    "name": "lightning resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/lightning_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/lightning.svg"
+  },
+  {
+    "index": "necrotic_resistance",
+    "name": "necrotic resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/necrotic_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/necrotic.svg"
+  },
+  {
+    "index": "piercing_resistance",
+    "name": "piercing resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/piercing_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/piercing.svg"
+  },
+  {
+    "index": "poison_resistance",
+    "name": "poison resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/poison_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/poison.svg"
+  },
+  {
+    "index": "psychic_resistance",
+    "name": "psychic resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/psychic_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/psychic.svg"
+  },
+  {
+    "index": "radiant_resistance",
+    "name": "radiant resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/radiant_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/radiant.svg"
+  },
+  {
+    "index": "slashing_resistance",
+    "name": "slashing resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/slashing_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/slashing.svg"
+  },
+  {
+    "index": "thunder_resistance",
+    "name": "thunder resistance",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-resistances/thunder_resistance.json",
+    "image": "systems/dnd5e/icons/svg/damage/thunder.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "damage vulnerabilities",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "acid_vulnerability",
+    "name": "acid vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/acid_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/acid.svg"
+  },
+  {
+    "index": "bludgeoning_vulnerability",
+    "name": "bludgeoning vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/bludgeoning_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/bludgeoning.svg"
+  },
+  {
+    "index": "cold_vulnerability",
+    "name": "cold vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/cold_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/cold.svg"
+  },
+  {
+    "index": "damage_vulnerability",
+    "name": "damage vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/damage_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/all.svg"
+  },
+  {
+    "index": "fire_vulnerability",
+    "name": "fire vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/fire_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/fire.svg"
+  },
+  {
+    "index": "force_vulnerability",
+    "name": "force vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/force_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/force.svg"
+  },
+  {
+    "index": "lightning_vulnerability",
+    "name": "lightning vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/lightning_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/lightning.svg"
+  },
+  {
+    "index": "necrotic_vulnerability",
+    "name": "necrotic vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/necrotic_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/necrotic.svg"
+  },
+  {
+    "index": "piercing_vulnerability",
+    "name": "piercing vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/piercing_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/piercing.svg"
+  },
+  {
+    "index": "poison_vulnerability",
+    "name": "poison vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/poison_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/poison.svg"
+  },
+  {
+    "index": "psychic_vulnerability",
+    "name": "psychic vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/psychic_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/psychic.svg"
+  },
+  {
+    "index": "radiant_vulnerability",
+    "name": "radiant vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/radiant_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/radiant.svg"
+  },
+  {
+    "index": "slashing_vulnerability",
+    "name": "slashing vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/slashing_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/slashing.svg"
+  },
+  {
+    "index": "thunder_vulnerability",
+    "name": "thunder vulnerability",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/damage-vulnerabilities/thunder_vulnerability.json",
+    "image": "systems/dnd5e/icons/svg/damage/thunder.svg"
+  },
+  {
+    "index": "_folder",
+    "name": "skill advantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "acrobatics_advantage",
+    "name": "acrobatics advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/acrobatics_advantage.json",
+    "image": "icons/equipment/feet/shoes-simple-leaf-green.webp"
+  },
+  {
+    "index": "animal_handling_advantage",
+    "name": "animal handling advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/animal_handling_advantage.json",
+    "image": "icons/environment/creatures/horse-brown.webp"
+  },
+  {
+    "index": "arcana_advantage",
+    "name": "arcana advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/arcana_advantage.json",
+    "image": "icons/sundries/books/book-embossed-jewel-silver-green.webp"
+  },
+  {
+    "index": "athletics_advantage",
+    "name": "athletics advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/athletics_advantage.json",
+    "image": "icons/magic/control/buff-strength-muscle-damage-orange.webp"
+  },
+  {
+    "index": "deception_advantage",
+    "name": "deception advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/deception_advantage.json",
+    "image": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  {
+    "index": "history_advantage",
+    "name": "history advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/history_advantage.json",
+    "image": "icons/sundries/books/book-embossed-bound-brown.webp"
+  },
+  {
+    "index": "insight_advantage",
+    "name": "insight advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/insight_advantage.json",
+    "image": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp"
+  },
+  {
+    "index": "intimidation_advantage",
+    "name": "intimidation advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/intimidation_advantage.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "investigation_advantage",
+    "name": "investigation advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/investigation_advantage.json",
+    "image": "icons/tools/scribal/magnifying-glass.webp"
+  },
+  {
+    "index": "medicine_advantage",
+    "name": "medicine advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/medicine_advantage.json",
+    "image": "icons/tools/cooking/mortar-herbs-yellow.webp"
+  },
+  {
+    "index": "nature_advantage",
+    "name": "nature advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/nature_advantage.json",
+    "image": "icons/magic/nature/plant-sprout-snow-green.webp"
+  },
+  {
+    "index": "perception_advantage",
+    "name": "perception advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/perception_advantage.json",
+    "image": "icons/magic/perception/eye-ringed-green.webp"
+  },
+  {
+    "index": "performance_advantage",
+    "name": "performance advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/performance_advantage.json",
+    "image": "icons/tools/instruments/lute-gold-brown.webp"
+  },
+  {
+    "index": "persuasion_advantage",
+    "name": "persuasion advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/persuasion_advantage.json",
+    "image": "icons/skills/social/diplomacy-handshake.webp"
+  },
+  {
+    "index": "religion_advantage",
+    "name": "religion advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/religion_advantage.json",
+    "image": "icons/magic/holy/saint-glass-portrait-halo.webp"
+  },
+  {
+    "index": "sleight_of_hand_advantage",
+    "name": "sleight of hand advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/sleight_of_hand_advantage.json",
+    "image": "icons/sundries/gaming/playing-cards.webp"
+  },
+  {
+    "index": "stealth_advantage",
+    "name": "stealth advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/stealth_advantage.json",
+    "image": "icons/magic/perception/shadow-stealth-eyes-purple.webp"
+  },
+  {
+    "index": "survival_advantage",
+    "name": "survival advantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-advantage/survival_advantage.json",
+    "image": "icons/magic/fire/flame-burning-campfire-yellow-blue.webp"
+  },
+  {
+    "index": "_folder",
+    "name": "skill disadvantage",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "acrobatics_disadvantage",
+    "name": "acrobatics disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/acrobatics_disadvantage.json",
+    "image": "icons/equipment/feet/shoes-simple-leaf-green.webp"
+  },
+  {
+    "index": "animal_handling_disadvantage",
+    "name": "animal handling disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/animal_handling_disadvantage.json",
+    "image": "icons/environment/creatures/horse-brown.webp"
+  },
+  {
+    "index": "arcana_disadvantage",
+    "name": "arcana disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/arcana_disadvantage.json",
+    "image": "icons/sundries/books/book-embossed-jewel-silver-green.webp"
+  },
+  {
+    "index": "athletics_disadvantage",
+    "name": "athletics disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/athletics_disadvantage.json",
+    "image": "icons/magic/control/buff-strength-muscle-damage-orange.webp"
+  },
+  {
+    "index": "deception_disadvantage",
+    "name": "deception disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/deception_disadvantage.json",
+    "image": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  {
+    "index": "history_disadvantage",
+    "name": "history disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/history_disadvantage.json",
+    "image": "icons/sundries/books/book-embossed-bound-brown.webp"
+  },
+  {
+    "index": "insight_disadvantage",
+    "name": "insight disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/insight_disadvantage.json",
+    "image": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp"
+  },
+  {
+    "index": "intimidation_disadvantage",
+    "name": "intimidation disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/intimidation_disadvantage.json",
+    "image": "icons/skills/social/intimidation-impressing.webp"
+  },
+  {
+    "index": "investigation_disadvantage",
+    "name": "investigation disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/investigation_disadvantage.json",
+    "image": "icons/tools/scribal/magnifying-glass.webp"
+  },
+  {
+    "index": "medicine_disadvantage",
+    "name": "medicine disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/medicine_disadvantage.json",
+    "image": "icons/tools/cooking/mortar-herbs-yellow.webp"
+  },
+  {
+    "index": "nature_disadvantage",
+    "name": "nature disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/nature_disadvantage.json",
+    "image": "icons/magic/nature/plant-sprout-snow-green.webp"
+  },
+  {
+    "index": "perception_disadvantage",
+    "name": "perception disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/perception_disadvantage.json",
+    "image": "icons/magic/perception/eye-ringed-green.webp"
+  },
+  {
+    "index": "performance_disadvantage",
+    "name": "performance disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/performance_disadvantage.json",
+    "image": "icons/tools/instruments/lute-gold-brown.webp"
+  },
+  {
+    "index": "persuasion_disadvantage",
+    "name": "persuasion disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/persuasion_disadvantage.json",
+    "image": "icons/skills/social/diplomacy-handshake.webp"
+  },
+  {
+    "index": "religion_disadvantage",
+    "name": "religion disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/religion_disadvantage.json",
+    "image": "icons/magic/holy/saint-glass-portrait-halo.webp"
+  },
+  {
+    "index": "sleight_of_hand_disadvantage",
+    "name": "sleight of hand disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/sleight_of_hand_disadvantage.json",
+    "image": "icons/sundries/gaming/playing-cards.webp"
+  },
+  {
+    "index": "stealth_disadvantage",
+    "name": "stealth disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/stealth_disadvantage.json",
+    "image": "icons/magic/perception/shadow-stealth-eyes-purple.webp"
+  },
+  {
+    "index": "survival_disadvantage",
+    "name": "survival disadvantage",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/skill-disadvantage/survival_disadvantage.json",
+    "image": "icons/magic/fire/flame-burning-campfire-yellow-blue.webp"
+  },
+  {
+    "index": "_folder",
+    "name": "speeds",
+    "type": "ActiveEffect",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/speeds/_folder.json",
+    "image": "/assets/atlas/effects/images/_folder.webp"
+  },
+  {
+    "index": "burrow_speed",
+    "name": "burrow speed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/speeds/burrow_speed.json",
+    "image": "icons/svg/burrow.svg"
+  },
+  {
+    "index": "climb_speed",
+    "name": "climb speed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/speeds/climb_speed.json",
+    "image": "icons/svg/mountain.svg"
+  },
+  {
+    "index": "fly_speed",
+    "name": "fly speed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/speeds/fly_speed.json",
+    "image": "icons/svg/wing.svg"
+  },
+  {
+    "index": "swim_speed",
+    "name": "swim speed",
+    "type": "base",
+    "disabled": false,
+    "json_path": "/assets/atlas/effects/json/speeds/swim_speed.json",
+    "image": "icons/svg/whale.svg"
+  }
+]

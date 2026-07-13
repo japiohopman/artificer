@@ -1,0 +1,18 @@
+{
+  "index": "eldritch_sight",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "eldritch sight",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic} at will, without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/eldritch_sight.json",
+  "updated_at": "2026-07-12T20:22:54.741Z",
+  "image": "icons/magic/perception/hand-eye-pink.webp",
+  "feature_specific": {}
+}

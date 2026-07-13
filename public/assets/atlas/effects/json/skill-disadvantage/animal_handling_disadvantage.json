@@ -1,0 +1,24 @@
+{
+  "index": "animal_handling_disadvantage",
+  "name": "animal handling disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.ani.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/animal_handling_disadvantage.json",
+  "image": "icons/environment/creatures/horse-brown.webp",
+  "updated_at": "2026-07-12T20:22:54.918Z"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "lands_stride",
+  "class": {
+    "index": "ranger",
+    "name": "ranger",
+    "url": "/assets/atlas/class/json/ranger.json"
+  },
+  "name": "land's stride",
+  "level": 8,
+  "prerequisites": [],
+  "desc": [
+    "Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
+    "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the @UUID[Compendium.dnd5e.spells.Item.gMrWeG8fMDPRFiVe]{Entangle} spell."
+  ],
+  "url": "/assets/atlas/features/json/lands_stride.json",
+  "updated_at": "2026-07-12T20:22:54.685Z",
+  "image": "icons/magic/nature/root-vine-entangle-foot-green.webp",
+  "feature_specific": {}
+}

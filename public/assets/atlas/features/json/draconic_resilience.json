@@ -1,14 +1,9 @@
 {
   "index": "draconic_resilience",
   "class": {
-    "index": "sorcerer",
-    "name": "sorcerer",
-    "url": "/assets/atlas/class/json/sorcerer.json"
-  },
-  "subclass": {
     "index": "draconic",
     "name": "draconic",
-    "url": "/assets/atlas/subclasses/json/draconic.json"
+    "url": "/assets/atlas/class/json/draconic.json"
   },
   "name": "draconic resilience",
   "level": 1,
@@ -18,7 +13,7 @@
     "Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier."
   ],
   "url": "/assets/atlas/features/json/draconic_resilience.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.712Z",
   "image": "/assets/atlas/features/images/draconic_resilience.webp",
   "feature_specific": {
     "passive_modifiers": {

@@ -1,0 +1,24 @@
+{
+  "index": "unconscious_immunity",
+  "name": "unconscious immunity",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.traits.ci.value",
+      "value": "unconscious",
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/condition-immunities/unconscious_immunity.json",
+  "image": "systems/dnd5e/icons/svg/statuses/unconscious.svg",
+  "updated_at": "2026-07-12T20:22:54.844Z"
+}

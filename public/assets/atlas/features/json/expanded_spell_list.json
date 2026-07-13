@@ -1,0 +1,19 @@
+{
+  "index": "expanded_spell_list",
+  "class": {
+    "index": "the",
+    "name": "the",
+    "url": "/assets/atlas/class/json/the.json"
+  },
+  "name": "expanded spell list",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
+    "Fiend Expanded SpellsSpell LevelSpells1st@UUID[Compendium.dnd5e.spells.Item.5SuJewoa1CRWaj1F]{Burning Hands}, @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command}2nd@UUID[Compendium.dnd5e.spells.Item.zwGsAv6kmwzYGhh3]{Blindness/Deafness}, @UUID[Compendium.dnd5e.spells.Item.7u2obDvuvtZBkTfq]{Scorching Ray}3rd@UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball}, @UUID[Compendium.dnd5e.spells.Item.TwlD4PLcltv7Xh7j]{Stinking Cloud}4th@UUID[Compendium.dnd5e.spells.Item.avD5XUtkBPQQR97c]{Fire Shield}, @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire}5th@UUID[Compendium.dnd5e.spells.Item.5e1xTohkzqFqbYH4]{Flame Strike}, @UUID[Compendium.dnd5e.spells.Item.SLxA9QhrggTz0taU]{Hallow}"
+  ],
+  "url": "/assets/atlas/features/json/expanded_spell_list.json",
+  "updated_at": "2026-07-12T20:22:54.764Z",
+  "image": "icons/magic/control/encase-creature-monster-hold.webp",
+  "feature_specific": {}
+}

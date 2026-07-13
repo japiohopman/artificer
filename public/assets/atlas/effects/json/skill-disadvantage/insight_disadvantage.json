@@ -1,0 +1,24 @@
+{
+  "index": "insight_disadvantage",
+  "name": "insight disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.ins.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/insight_disadvantage.json",
+  "image": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+  "updated_at": "2026-07-12T20:22:54.922Z"
+}

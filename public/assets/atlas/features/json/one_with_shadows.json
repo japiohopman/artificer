@@ -1,0 +1,18 @@
+{
+  "index": "one_with_shadows",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "one with shadows",
+  "level": 5,
+  "prerequisites": [],
+  "desc": [
+    "When you are in an area of dim light or darkness, you can use your action to become invisible until you move or take an action or a reaction."
+  ],
+  "url": "/assets/atlas/features/json/one_with_shadows.json",
+  "updated_at": "2026-07-12T20:22:54.751Z",
+  "image": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+  "feature_specific": {}
+}

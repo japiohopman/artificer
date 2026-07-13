@@ -1,0 +1,24 @@
+{
+  "index": "wisdom_save_disadvantage",
+  "name": "wisdom save disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.wis.save.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-save-disadvantage/wisdom_save_disadvantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/wisdom.svg",
+  "updated_at": "2026-07-12T20:22:54.823Z"
+}

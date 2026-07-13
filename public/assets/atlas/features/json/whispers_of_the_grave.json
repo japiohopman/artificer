@@ -1,0 +1,18 @@
+{
+  "index": "whispers_of_the_grave",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "whispers of the grave",
+  "level": 9,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.I2LUSF5ogc7Bj62e]{Speak with Dead} at will, without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/whispers_of_the_grave.json",
+  "updated_at": "2026-07-12T20:22:54.760Z",
+  "image": "icons/magic/death/undead-ghost-scream-teal.webp",
+  "feature_specific": {}
+}

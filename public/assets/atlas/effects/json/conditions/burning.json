@@ -1,0 +1,20 @@
+{
+  "index": "burning",
+  "name": "burning",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "burning"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/burning.json",
+  "image": "systems/dnd5e/icons/svg/statuses/burning.svg",
+  "updated_at": "2026-07-12T20:22:54.847Z"
+}

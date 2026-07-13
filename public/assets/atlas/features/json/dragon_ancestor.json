@@ -1,22 +1,20 @@
 {
   "index": "dragon_ancestor",
   "class": {
-    "index": "sorcerer",
-    "name": "sorcerer",
-    "url": "/assets/atlas/class/json/sorcerer.json"
-  },
-  "subclass": {
     "index": "draconic",
     "name": "draconic",
-    "url": "/assets/atlas/subclasses/json/draconic.json"
+    "url": "/assets/atlas/class/json/draconic.json"
   },
   "name": "dragon ancestor",
   "level": 1,
   "prerequisites": [],
   "desc": [
     "At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each dragon is used by features you gain later.",
-    "You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
+    "DragonDamage TypeBlackAcidBlueLightningBrassFireBronzeLightningCopperAcidGoldFireGreenPoisonRedFireSilverColdWhiteColdYou can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check."
   ],
+  "url": "/assets/atlas/features/json/dragon_ancestor.json",
+  "updated_at": "2026-07-12T20:22:54.713Z",
+  "image": "/assets/atlas/features/images/dragon_ancestor.webp",
   "feature_specific": {
     "subfeature_options": {
       "choose": 1,
@@ -108,8 +106,5 @@
       }
     },
     "invocations": []
-  },
-  "url": "/assets/atlas/features/json/dragon_ancestor.json",
-  "updated_at": "2025-10-24T20:42:13.151Z",
-  "image": "/assets/atlas/features/images/dragon_ancestor.webp"
+  }
 }

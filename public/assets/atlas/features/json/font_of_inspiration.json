@@ -9,10 +9,12 @@
   "level": 5,
   "prerequisites": [],
   "desc": [
-    "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
+    "Beginning when you reach 5th level, you regain all of your expended uses of @UUID[Compendium.dnd5e.classfeatures.Item.hpLNiGq7y67d2EHA]{Bardic Inspiraton} when you finish a short or long rest.",
+    "Foundry Note",
+    "Bardic Inspiration is set to long rest recovery by default. Please edit to short rest upon reaching this level."
   ],
   "url": "/assets/atlas/features/json/font_of_inspiration.json",
-  "updated_at": "2024-06-19T00:00:00.000Z",
+  "updated_at": "2026-07-12T20:22:54.562Z",
   "image": "/assets/atlas/features/images/font_of_inspiration.webp",
   "feature_specific": {
     "usage": {

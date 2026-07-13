@@ -1,0 +1,24 @@
+{
+  "index": "constitution_save_disadvantage",
+  "name": "constitution save disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.abilities.con.save.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/ability-save-disadvantage/constitution_save_disadvantage.json",
+  "image": "systems/dnd5e/icons/svg/abilities/constitution.svg",
+  "updated_at": "2026-07-12T20:22:54.820Z"
+}

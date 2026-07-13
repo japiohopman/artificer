@@ -1,0 +1,20 @@
+{
+  "index": "silenced",
+  "name": "silenced",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "silenced"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/silenced.json",
+  "image": "systems/dnd5e/icons/svg/statuses/silenced.svg",
+  "updated_at": "2026-07-12T20:22:54.861Z"
+}

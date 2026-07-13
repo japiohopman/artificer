@@ -1,0 +1,20 @@
+{
+  "index": "blinded",
+  "name": "blinded",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "blinded"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/blinded.json",
+  "image": "systems/dnd5e/icons/svg/statuses/blinded.svg",
+  "updated_at": "2026-07-12T20:22:54.847Z"
+}

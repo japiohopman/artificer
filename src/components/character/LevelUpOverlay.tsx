@@ -9,6 +9,7 @@ import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 
 import { calculateMaxSpellSlots } from '../../lib/statCalculations';
+import { CLASS_DATA } from '../../lib/characterUtils';
 
 const Sparkle: React.FC<{ delay: number; x: string; y: string }> = ({ delay, x, y }) => (
   <motion.div
@@ -74,7 +75,7 @@ export const LevelUpOverlay: React.FC = () => {
 
   // Calculated HP Increase (Fixed / Average method)
   const conModifier = Math.floor(((tempStats.con || (character ? character.stats?.con : 10) || 10) - 10) / 2);
-  const classHitDie = character ? (character.stats?.hitDie || 8) : 8; // fallback to 8
+  const classHitDie = character ? (CLASS_DATA[character.class]?.hitDie || 8) : 8; // fallback to 8
   const fixedHpGain = Math.max(1, Math.floor(classHitDie / 2) + 1 + conModifier);
   const rolledHpGain = rolledHpValue !== null ? Math.max(1, rolledHpValue + conModifier) : fixedHpGain;
   const finalHpGain = hpMethod === 'roll' ? rolledHpGain : fixedHpGain;

@@ -1,0 +1,24 @@
+{
+  "index": "investigation_disadvantage",
+  "name": "investigation disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.inv.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/investigation_disadvantage.json",
+  "image": "icons/tools/scribal/magnifying-glass.webp",
+  "updated_at": "2026-07-12T20:22:54.923Z"
+}

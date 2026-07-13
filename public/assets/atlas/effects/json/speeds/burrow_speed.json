@@ -1,0 +1,24 @@
+{
+  "index": "burrow_speed",
+  "name": "burrow speed",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.attributes.movement.burrow",
+      "value": "@attributes.movement.speed",
+      "mode": "upgrade"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/speeds/burrow_speed.json",
+  "image": "icons/svg/burrow.svg",
+  "updated_at": "2026-07-12T20:22:54.933Z"
+}

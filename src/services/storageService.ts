@@ -485,11 +485,13 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     return url;
   }
   
-  if (url && url.startsWith('public/data/character_save/')) {
+  const normalizedPublicUrl = url?.startsWith('/public/data/character_save/') ? url.slice(1) : url;
+  if (normalizedPublicUrl && normalizedPublicUrl.startsWith('public/data/character_save/')) {
+    const localUrl = `/${normalizedPublicUrl.replace(/^public\//, '')}`;
     if (isLocalhost) {
-      return `/${url}`;
+      return localUrl;
     }
-    return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${url}?t=${timestamp}`;
+    return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${normalizedPublicUrl}?t=${timestamp}`;
   }
 
   if (!url) {

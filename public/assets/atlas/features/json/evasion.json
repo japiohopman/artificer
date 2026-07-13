@@ -1,0 +1,18 @@
+{
+  "index": "evasion",
+  "class": {
+    "index": "monk",
+    "name": "monk",
+    "url": "/assets/atlas/class/json/monk.json"
+  },
+  "name": "evasion",
+  "level": 7,
+  "prerequisites": [],
+  "desc": [
+    "At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+  ],
+  "url": "/assets/atlas/features/json/evasion.json",
+  "updated_at": "2026-07-12T20:22:54.694Z",
+  "image": "icons/magic/air/air-wave-gust-smoke-yellow.webp",
+  "feature_specific": {}
+}

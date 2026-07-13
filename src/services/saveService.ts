@@ -28,7 +28,7 @@ export const saveService = {
     
     const success = await commitFile(path, cleanBase64, true);
     if (success) {
-      return `public/data/character_save/images/${id}/${filename}`;
+      return `/data/character_save/images/${id}/${filename}`;
     }
     return null;
   },
@@ -125,9 +125,9 @@ export const saveService = {
         const id = char.id;
         const isSlot = id.startsWith('slot');
         // Provide defaults for slot characters if missing
-        const avatarPath = char.avatarUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_avatar.webp` : undefined);
-        const imagePath = char.imageUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_portrait.webp` : undefined);
-        const matrixPath = char.matrixUrl || (isSlot ? `public/data/character_save/images/${id}/${id}_matrix.webp` : undefined);
+        const avatarPath = char.avatarUrl || (isSlot ? `/data/character_save/images/${id}/${id}_avatar.webp` : undefined);
+        const imagePath = char.imageUrl || (isSlot ? `/data/character_save/images/${id}/${id}_portrait.webp` : undefined);
+        const matrixPath = char.matrixUrl || (isSlot ? `/data/character_save/images/${id}/${id}_matrix.webp` : undefined);
 
         return {
           ...char,

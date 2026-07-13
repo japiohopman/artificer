@@ -1,0 +1,18 @@
+{
+  "index": "beast_speech",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "beast speech",
+  "level": 2,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.aL1F8fvYLtNzUbKu]{Speak with Animals} at will, without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/beast_speech.json",
+  "updated_at": "2026-07-12T20:22:54.734Z",
+  "image": "icons/creatures/mammals/elk-moose-marked-green.webp",
+  "feature_specific": {}
+}

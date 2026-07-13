@@ -1,0 +1,20 @@
+{
+  "index": "cursed",
+  "name": "cursed",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [],
+  "statuses": [
+    "cursed"
+  ],
+  "url": "/assets/atlas/effects/json/conditions/cursed.json",
+  "image": "systems/dnd5e/icons/svg/statuses/cursed.svg",
+  "updated_at": "2026-07-12T20:22:54.849Z"
+}

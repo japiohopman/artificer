@@ -1,0 +1,18 @@
+{
+  "index": "archery",
+  "class": {
+    "index": "fighter",
+    "name": "fighter",
+    "url": "/assets/atlas/class/json/fighter.json"
+  },
+  "name": "archery",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You gain a +2 bonus to attack rolls you make with ranged weapons"
+  ],
+  "url": "/assets/atlas/features/json/archery.json",
+  "updated_at": "2026-07-12T20:22:54.706Z",
+  "image": "icons/weapons/bows/shortbow-recurve-yellow.webp",
+  "feature_specific": {}
+}

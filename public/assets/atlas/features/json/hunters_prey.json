@@ -1,24 +1,22 @@
 {
   "index": "hunters_prey",
   "class": {
-    "index": "ranger",
-    "name": "ranger",
-    "url": "/assets/atlas/class/json/ranger.json"
-  },
-  "subclass": {
     "index": "hunter",
     "name": "hunter",
-    "url": "/assets/atlas/subclasses/json/hunter.json"
+    "url": "/assets/atlas/class/json/hunter.json"
   },
   "name": "hunter's prey",
   "level": 3,
   "prerequisites": [],
   "desc": [
     "At 3rd level, you gain one of the following features of your choice.",
-    "Colossus Slayer",
-    "Giant Killer",
-    "Horde Breaker"
+    "@UUID[Compendium.dnd5e.classfeatures.Item.5gx1O0sxK08awEO9]{Colossus Slayer}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.StfmqK1twVfukpa0]{Giant Killer}",
+    "@UUID[Compendium.dnd5e.classfeatures.Item.C6sHdDGmCMo0cYHd]{Horde Breaker}"
   ],
+  "url": "/assets/atlas/features/json/hunters_prey.json",
+  "updated_at": "2026-07-12T20:22:54.673Z",
+  "image": "/assets/atlas/features/images/hunters_prey.webp",
   "feature_specific": {
     "subfeature_options": {
       "choose": 1,
@@ -54,8 +52,5 @@
       }
     },
     "invocations": []
-  },
-  "url": "/assets/atlas/features/json/hunters_prey.json",
-  "updated_at": "2025-10-24T20:42:13.150Z",
-  "image": "/assets/atlas/features/images/hunters_prey.webp"
+  }
 }

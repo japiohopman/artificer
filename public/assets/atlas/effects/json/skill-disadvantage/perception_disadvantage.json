@@ -1,0 +1,24 @@
+{
+  "index": "perception_disadvantage",
+  "name": "perception disadvantage",
+  "type": "base",
+  "disabled": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": [],
+  "changes": [
+    {
+      "key": "system.skills.prc.roll.mode",
+      "value": -1,
+      "mode": "add"
+    }
+  ],
+  "statuses": [],
+  "url": "/assets/atlas/effects/json/skill-disadvantage/perception_disadvantage.json",
+  "image": "icons/magic/perception/eye-ringed-green.webp",
+  "updated_at": "2026-07-12T20:22:54.926Z"
+}

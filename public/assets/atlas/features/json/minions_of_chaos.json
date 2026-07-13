@@ -1,0 +1,18 @@
+{
+  "index": "minions_of_chaos",
+  "class": {
+    "index": "warlock",
+    "name": "warlock",
+    "url": "/assets/atlas/class/json/warlock.json"
+  },
+  "name": "minions of chaos",
+  "level": 9,
+  "prerequisites": [],
+  "desc": [
+    "You can cast @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} once using a warlock spell slot. You can't do so again until you finish a long rest."
+  ],
+  "url": "/assets/atlas/features/json/minions_of_chaos.json",
+  "updated_at": "2026-07-12T20:22:54.748Z",
+  "image": "icons/creatures/magical/humanoid-giant-forest-blue.webp",
+  "feature_specific": {}
+}
