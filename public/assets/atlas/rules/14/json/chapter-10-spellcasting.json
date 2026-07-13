@@ -1,0 +1,134 @@
+{
+  "index": "chapter-10-spellcasting",
+  "id": "QvPDSUsAiEn3hD8s",
+  "name": "Chapter 10: Spellcasting",
+  "pages": [
+    {
+      "index": "spellcasting",
+      "id": "FX9TS9vmt4dyOoqJ",
+      "name": "Spellcasting",
+      "type": "text",
+      "sort": 100000,
+      "paragraphs": [
+        "Magic permeates fantasy gaming worlds and often appears in the form of a spell.",
+        "This section provides the rules for casting spells. Different character classes have distinctive ways of learning and preparing their spells, and monsters use spells in unique ways. Regardless of its source, a spell follows the rules here."
+      ],
+      "content_html": "<p>Magic permeates fantasy gaming worlds and often appears in the form of a spell.</p>\n<p>This section provides the rules for casting spells. Different character classes have distinctive ways of learning and preparing their spells, and monsters use spells in unique ways. Regardless of its source, a spell follows the rules here.</p>"
+    },
+    {
+      "index": "what-is-a-spell",
+      "id": "evx9TWix4wYU51a5",
+      "name": "What Is a Spell?",
+      "type": "text",
+      "sort": 200000,
+      "paragraphs": [
+        "A spell is a discrete magical effect, a single shaping of the magical energies that suffuse the multiverse into a specific, limited expression. In casting a spell, a character carefully plucks at the invisible strands of raw magic suffusing the world, pins them in place in a particular pattern, sets them vibrating in a specific way, and then releases them to unleash the desired effect—in most cases, all in the span of seconds.",
+        "Spells can be versatile tools, weapons, or protective wards. They can deal damage or undo it, impose or remove conditions (see @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0]{Appendix A: Conditions}), drain life energy away, and restore life to the dead.",
+        "Uncounted thousands of spells have been created over the course of the multiverse's history, and many of them are long forgotten. Some might yet lie recorded in crumbling spellbooks hidden in ancient ruins or trapped in the minds of dead gods. Or they might someday be reinvented by a character who has amassed enough power and wisdom to do so.",
+        "Spell Level@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.A6k5fS0kFqPXTW3v inline]",
+        "Known and Prepared Spells@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.oezg742GlxmEwT85 inline]",
+        "Spell Slots@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.Su6wbb0O9UN4ZDIH inline]",
+        "Casting in Armor@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.z4A8vHSK2pb8YA9X inline]",
+        "Cantrips@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.jZD5mCTnMPJ9jW67 inline]",
+        "Rituals@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.FjWqT5iyJ89kohdA inline]"
+      ],
+      "content_html": "<p>A spell is a discrete magical effect, a single shaping of the magical energies that suffuse the multiverse into a specific, limited expression. In casting a spell, a character carefully plucks at the invisible strands of raw magic suffusing the world, pins them in place in a particular pattern, sets them vibrating in a specific way, and then releases them to unleash the desired effect—in most cases, all in the span of seconds.</p><p>Spells can be versatile tools, weapons, or protective wards. They can deal damage or undo it, impose or remove conditions (see @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0]{Appendix A: Conditions}), drain life energy away, and restore life to the dead.</p><p>Uncounted thousands of spells have been created over the course of the multiverse's history, and many of them are long forgotten. Some might yet lie recorded in crumbling spellbooks hidden in ancient ruins or trapped in the minds of dead gods. Or they might someday be reinvented by a character who has amassed enough power and wisdom to do so.</p><h2>Spell Level</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.A6k5fS0kFqPXTW3v inline]</p><h2>Known and Prepared Spells</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.oezg742GlxmEwT85 inline]</p><h2>Spell Slots</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.Su6wbb0O9UN4ZDIH inline]</p><div class=\"fvtt advice\"><figure class=\"icon\"><img src=\"icons/equipment/chest/robe-layered-red.webp\" class=\"round\" /></figure><article><h4>Casting in Armor</h4><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.z4A8vHSK2pb8YA9X inline]</p></article></div><h2>Cantrips</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.jZD5mCTnMPJ9jW67 inline]</p><h2>Rituals</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.FjWqT5iyJ89kohdA inline]</p>"
+    },
+    {
+      "index": "casting-a-spell",
+      "id": "wre9ECSVuEyJBYhr",
+      "name": "Casting a Spell",
+      "type": "text",
+      "sort": 300000,
+      "paragraphs": [
+        "When a character casts any spell, the same basic rules are followed, regardless of the character’s class or the spell’s effects.",
+        "Each spell description begins with a block of information, including the spell’s name, level, school of magic, casting time, range, components, and duration. The rest of a spell entry describes the spell’s effect.",
+        "Casting Time@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.zRVW8Tvyk6BECjZD inline]",
+        "Range@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.RBYPyE5z5hAZSbH6 inline]",
+        "Components@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.xeHthAF9lxfn2tII inline]",
+        "Duration@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.9mp0SRsptjvJcq1e inline]",
+        "Targets@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.G80AIQr04sxdVpw4 inline]",
+        "Areas of Effect@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.wvtCeGHgnUmh0cuj inline]",
+        "Saving Throws@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.8DajfNll90eeKcmB inline]",
+        "Attack Rolls@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.qAFzmGZKhVvAEUF3 inline]",
+        "Combining Magical Effects@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.TMIN963hG773yZzO inline]",
+        "The Schools of Magic@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.TeF6CKMDRpYpsLd4 inline]"
+      ],
+      "content_html": "<p>When a character casts any spell, the same basic rules are followed, regardless of the character’s class or the spell’s effects.</p><p>Each spell description begins with a block of information, including the spell’s name, level, school of magic, casting time, range, components, and duration. The rest of a spell entry describes the spell’s effect.</p><h2>Casting Time</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.zRVW8Tvyk6BECjZD inline]</p><h2>Range</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.RBYPyE5z5hAZSbH6 inline]</p><h2>Components</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.xeHthAF9lxfn2tII inline]</p><h2>Duration</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.9mp0SRsptjvJcq1e inline]</p><h2>Targets</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.G80AIQr04sxdVpw4 inline]</p><h2>Areas of Effect</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.wvtCeGHgnUmh0cuj inline]</p><h2>Saving Throws</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.8DajfNll90eeKcmB inline]</p><h2>Attack Rolls</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.qAFzmGZKhVvAEUF3 inline]</p><h2>Combining Magical Effects</h2><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.TMIN963hG773yZzO inline]</p><div class=\"fvtt advice\"><figure class=\"icon\"><img src=\"icons/magic/symbols/rune-sigil-black-pink.webp\" class=\"round\" /></figure><article><h4>The Schools of Magic</h4><p>@Embed[Compendium.dnd5e.rules.JournalEntry.NizgRXLNUqtdlC1s.JournalEntryPage.TeF6CKMDRpYpsLd4 inline]</p></article></div>"
+    },
+    {
+      "index": "bard-spells",
+      "id": "ziBzRlrpBm1KVV0j",
+      "name": "Bard Spells",
+      "type": "spells",
+      "sort": 400000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "cleric-spells",
+      "id": "cuG9d7J9fQH9InYT",
+      "name": "Cleric Spells",
+      "type": "spells",
+      "sort": 500000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "druid-spells",
+      "id": "MWiN7ILEO0Vd3zAZ",
+      "name": "Druid Spells",
+      "type": "spells",
+      "sort": 600000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "paladin-spells",
+      "id": "FhucONA0yRZQjMmb",
+      "name": "Paladin Spells",
+      "type": "spells",
+      "sort": 700000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "ranger-spells",
+      "id": "sANq9JMycfSq3A5d",
+      "name": "Ranger Spells",
+      "type": "spells",
+      "sort": 800000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "sorcerer-spells",
+      "id": "PVgly1xB2S2I8GLQ",
+      "name": "Sorcerer Spells",
+      "type": "spells",
+      "sort": 900000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "warlock-spells",
+      "id": "mx4TsSbBIAaAkhQ7",
+      "name": "Warlock Spells",
+      "type": "spells",
+      "sort": 1000000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "wizard-spells",
+      "id": "k7Rs5EyXeA0SFTXD",
+      "name": "Wizard Spells",
+      "type": "spells",
+      "sort": 1100000,
+      "paragraphs": [],
+      "content_html": ""
+    }
+  ],
+  "url": "/assets/atlas/rules/14/json/chapter-10-spellcasting.json",
+  "updated_at": "2026-07-13T06:31:43.146Z"
+}

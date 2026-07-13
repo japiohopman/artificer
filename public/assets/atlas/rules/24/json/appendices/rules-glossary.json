@@ -1,0 +1,2051 @@
+{
+  "index": "rules-glossary",
+  "id": "phbAppendixCRule",
+  "name": "Rules Glossary",
+  "pages": [
+    {
+      "index": "lightly-obscured",
+      "id": "24I7GDO2vVahRan1",
+      "name": "Lightly Obscured",
+      "type": "rule",
+      "sort": 10600000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.MAxtfJyvJV7EpzWN inline] See also &Reference[Dim Light] and @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.MAxtfJyvJV7EpzWN inline] <em>See also</em> &amp;Reference[Dim Light] and @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}.</p>"
+    },
+    {
+      "index": "heavily-obscured",
+      "id": "YkuKTIH2YaYW8lTS",
+      "name": "Heavily Obscured",
+      "type": "rule",
+      "sort": 9200000,
+      "paragraphs": [
+        "You have the &Reference[Blinded] condition while trying to see something in a Heavily Obscured space. See also &Reference[Blinded], &Reference[Darkness], and @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}."
+      ],
+      "content_html": "<p>You have the &amp;Reference[Blinded] condition while trying to see something in a Heavily Obscured space. See also &amp;Reference[Blinded], &amp;Reference[Darkness], and @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}.</p>"
+    },
+    {
+      "index": "bright-light",
+      "id": "whTwAEsEXJJXBOt5",
+      "name": "Bright Light",
+      "type": "rule",
+      "sort": 3300000,
+      "paragraphs": [
+        "Bright Light lets most creatures see normally. Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a specific radius."
+      ],
+      "content_html": "<p><strong>Bright Light</strong> lets most creatures see normally. Even gloomy days provide Bright Light, as do torches, lanterns, fires, and other sources of illumination within a specific radius.</p>"
+    },
+    {
+      "index": "dim-light",
+      "id": "cyCc2YhnD2TrMreG",
+      "name": "Dim Light",
+      "type": "rule",
+      "sort": 7800000,
+      "paragraphs": [
+        "An area with Dim Light is &Reference[Lightly Obscured]. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}."
+      ],
+      "content_html": "<p>An area with Dim Light is &amp;Reference[Lightly Obscured]. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}.</p>"
+    },
+    {
+      "index": "darkness",
+      "id": "UY4RGoKw9rOeazur",
+      "name": "Darkness",
+      "type": "rule",
+      "sort": 7100000,
+      "paragraphs": [
+        "An area of darkness is @UUID[.YkuKTIH2YaYW8lTS]{Heavily Obscured}. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}."
+      ],
+      "content_html": "<p>An area of <strong>darkness</strong> is @UUID[.YkuKTIH2YaYW8lTS]{Heavily Obscured}. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}.</p>"
+    },
+    {
+      "index": "blindsight",
+      "id": "tdtmXZbUIOZGSnKT",
+      "name": "Blindsight",
+      "type": "rule",
+      "sort": 2900000,
+      "paragraphs": [
+        "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn't behind &Reference[Total Cover] even if you have the &Reference[Blinded] condition or are in &Reference[Darkness]. Moreover, in that range, you can see something has the Invisible condition."
+      ],
+      "content_html": "<p>If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn't behind &amp;Reference[Total Cover] even if you have the &amp;Reference[Blinded] condition or are in &amp;Reference[Darkness]. Moreover, in that range, you can see something has the Invisible condition.</p>"
+    },
+    {
+      "index": "darkvision",
+      "id": "7vQ1hLQ5fS6SSUqF",
+      "name": "Darkvision",
+      "type": "rule",
+      "sort": 7200000,
+      "paragraphs": [
+        "If you have Darkvision, you can see in &Reference[Dim Light] within a specified range as if it were Bright Light and in &Reference[Darkness] within that range as if it were Dim Light. You discern colors in that Darkness only as shades of gray. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}."
+      ],
+      "content_html": "<p>If you have Darkvision, you can see in &amp;Reference[Dim Light] within a specified range as if it were Bright Light and in &amp;Reference[Darkness] within that range as if it were Dim Light. You discern colors in that Darkness only as shades of gray. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}.</p>"
+    },
+    {
+      "index": "tremorsense",
+      "id": "r64UrNusMhwJVnxb",
+      "name": "Tremorsense",
+      "type": "rule",
+      "sort": 14800000,
+      "paragraphs": [
+        "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.",
+        "Tremorsense can't detect creatures or objects in the air, and it doesn't count as a form of sight."
+      ],
+      "content_html": "<p>A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.</p><p>Tremorsense can't detect creatures or objects in the air, and it doesn't count as a form of sight.</p>"
+    },
+    {
+      "index": "truesight",
+      "id": "be7g0q1xBAwb8drv",
+      "name": "Truesight",
+      "type": "rule",
+      "sort": 14900000,
+      "paragraphs": [
+        "If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through the following:",
+        "Darkness. You can see in normal and magical @UUID[.UY4RGoKw9rOeazur]{Darkness}.",
+        "Invisibility. You see creatures and objects that have the @UUID[.MQIZ1zRLWRcNOtPN]{Invisible} condition.",
+        "Visual Illusions. Visual illusions appear transparent to you, and you automatically succeed on saving throws against them.",
+        "Transformations. You discern the true form of any creature or object you see that has been transformed by magic.",
+        "Ethereal Plane. You see into the Ethereal Plane."
+      ],
+      "content_html": "<p>If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through the following:</p><p><strong>Darkness.</strong> You can see in normal and magical @UUID[.UY4RGoKw9rOeazur]{Darkness}.</p><p><strong>Invisibility.</strong> You see creatures and objects that have the @UUID[.MQIZ1zRLWRcNOtPN]{Invisible} condition.</p><p><strong>Visual Illusions.</strong> Visual illusions appear transparent to you, and you automatically succeed on saving throws against them.</p><p><strong>Transformations.</strong> You discern the true form of any creature or object you see that has been transformed by magic.</p><p><strong>Ethereal Plane.</strong> You see into the Ethereal Plane.</p>"
+    },
+    {
+      "index": "reaction",
+      "id": "OhSIWaQ61dOp7S8M",
+      "name": "Reaction",
+      "type": "rule",
+      "sort": 12100000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.2VqLyxMyMxgXe2wC inline]",
+        "See also @UUID[.eNvzQabiTqTtfzis]{Opportunity Attacks} and chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbActions000000]{Actions}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.2VqLyxMyMxgXe2wC inline]</p><p><em>See also</em> @UUID[.eNvzQabiTqTtfzis]{Opportunity Attacks} and chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbActions000000]{Actions}.</p>"
+    },
+    {
+      "index": "bonus-action",
+      "id": "EjR3KL7KLTwjWBS0",
+      "name": "Bonus Action",
+      "type": "rule",
+      "sort": 3100000,
+      "paragraphs": [
+        "Various class features, spells, and other abilities let you take an additional action on your turn called a Bonus Action. The @UUID[Compendium.dnd5e.classes24.Item.phbrgeCunningAct]{Cunning Action} feature, for example, allows a Rogue to take a Bonus Action. You can take a Bonus Action only when a special ability, a spell, or another feature of the game states that you can do something as a Bonus Action. You otherwise don’t have a Bonus Action to take.",
+        "You can take only one Bonus Action on your turn, so you must choose which Bonus Action to use if you have more than one available.",
+        "You choose when to take a Bonus Action during your turn unless the Bonus Action’s timing is specified. Anything that deprives you of your ability to take actions also prevents you from taking a Bonus Action."
+      ],
+      "content_html": "<p>Various class features, spells, and other abilities let you take an additional action on your turn called a Bonus Action. The @UUID[Compendium.dnd5e.classes24.Item.phbrgeCunningAct]{Cunning Action} feature, for example, allows a Rogue to take a Bonus Action. You can take a Bonus Action only when a special ability, a spell, or another feature of the game states that you can do something as a Bonus Action. You otherwise don’t have a Bonus Action to take.</p><p>You can take only one Bonus Action on your turn, so you must choose which Bonus Action to use if you have more than one available.</p><p>You choose when to take a Bonus Action during your turn unless the Bonus Action’s timing is specified. Anything that deprives you of your ability to take actions also prevents you from taking a Bonus Action.</p>"
+    },
+    {
+      "index": "action",
+      "id": "SsIXfzS2ZttwAaKj",
+      "name": "Action",
+      "type": "rule",
+      "sort": 300000,
+      "paragraphs": [
+        "On your turn, you can take one action. Choose which action to take from those below or from the special actions provided by your features.",
+        "@UUID[.f4fZHwBvpbpzRyn4]{Attack}",
+        "@UUID[.6l6nBKip4LqB1sCU]{Dash}",
+        "@UUID[.w1AGsemFERfjqWNx]{Disengage}",
+        "@UUID[.3YJIuyCMmuUrfmuX]{Dodge}",
+        "@UUID[.5S8i59qskkd9GGcJ]{Help}",
+        "@UUID[.rqhOsUY4wWa1oHTy]{Hide}",
+        "@UUID[.4V59Q1dlWjNhpJGo]{Influence}",
+        "@UUID[.iIIDUsmSOkL0xNzF]{Magic}",
+        "@UUID[.nI9tN6Oq7fCV7hcA]{Ready}",
+        "@UUID[.ySj4gYZ4ADZoia7R]{Search}",
+        "@UUID[.Nuz0Wx4a4aAPcC34]{Study}",
+        "@UUID[.UDlogfdiT2uYEZz4]{Utilize}"
+      ],
+      "content_html": "<p>On your turn, you can take one action. Choose which action to take from those below or from the special actions provided by your features.</p><ul><li><p>@UUID[.f4fZHwBvpbpzRyn4]{Attack}</p></li><li><p>@UUID[.6l6nBKip4LqB1sCU]{Dash}</p></li><li><p>@UUID[.w1AGsemFERfjqWNx]{Disengage}</p></li><li><p>@UUID[.3YJIuyCMmuUrfmuX]{Dodge}</p></li><li><p>@UUID[.5S8i59qskkd9GGcJ]{Help}</p></li><li><p>@UUID[.rqhOsUY4wWa1oHTy]{Hide}</p></li><li><p>@UUID[.4V59Q1dlWjNhpJGo]{Influence}</p></li><li><p>@UUID[.iIIDUsmSOkL0xNzF]{Magic}</p></li><li><p>@UUID[.nI9tN6Oq7fCV7hcA]{Ready}</p></li><li><p>@UUID[.ySj4gYZ4ADZoia7R]{Search}</p></li><li><p>@UUID[.Nuz0Wx4a4aAPcC34]{Study}</p></li><li><p>@UUID[.UDlogfdiT2uYEZz4]{Utilize}</p></li></ul>"
+    },
+    {
+      "index": "attack",
+      "id": "f4fZHwBvpbpzRyn4",
+      "name": "Attack",
+      "type": "rule",
+      "sort": 400000,
+      "paragraphs": [
+        "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.",
+        "Equipping and Unequipping Weapons. You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don't need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.",
+        "Moving between Attacks. If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks."
+      ],
+      "content_html": "<p>When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.</p><p><em><strong>Equipping and Unequipping Weapons.</strong></em> You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don't need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.</p><p><em><strong>Moving between Attacks.</strong></em> If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.</p>"
+    },
+    {
+      "index": "dash",
+      "id": "6l6nBKip4LqB1sCU",
+      "name": "Dash",
+      "type": "rule",
+      "sort": 500000,
+      "paragraphs": [
+        "When you take the Dash action, you gain extra movement for the current turn. The increase equals your &Reference[Speed] after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.",
+        "If you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it."
+      ],
+      "content_html": "<p>When you take the Dash action, you gain extra movement for the current turn. The increase equals your &amp;Reference[Speed] after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.</p><p>If you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it.</p>"
+    },
+    {
+      "index": "disengage",
+      "id": "w1AGsemFERfjqWNx",
+      "name": "Disengage",
+      "type": "rule",
+      "sort": 600000,
+      "paragraphs": [
+        "If you take the Disengage action, your movement doesn’t provoke &Reference[Opportunity Attacks] for the rest of the current turn."
+      ],
+      "content_html": "<p>If you take the Disengage action, your movement doesn’t provoke &amp;Reference[Opportunity Attacks] for the rest of the current turn.</p>"
+    },
+    {
+      "index": "dodge",
+      "id": "3YJIuyCMmuUrfmuX",
+      "name": "Dodge",
+      "type": "rule",
+      "sort": 700000,
+      "paragraphs": [
+        "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has &Reference[Disadvantage] if you can see the attacker, and you make Dexterity saving throws with &Reference[Advantage].",
+        "You lose these benefits if you have the Incapacitated condition or if your Speed is 0."
+      ],
+      "content_html": "<p>If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has &amp;Reference[Disadvantage] if you can see the attacker, and you make Dexterity saving throws with &amp;Reference[Advantage].</p><p>You lose these benefits if you have the Incapacitated condition or if your Speed is 0.</p>"
+    },
+    {
+      "index": "help",
+      "id": "5S8i59qskkd9GGcJ",
+      "name": "Help",
+      "type": "rule",
+      "sort": 800000,
+      "paragraphs": [
+        "When you take the Help action, you do one of the following.",
+        "Assist an Ability Check. Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has &Reference[Advantage] on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn’t use it before the start of your next turn. The GM has final say on whether your assistance is possible.",
+        "Assist an Attack Roll. You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn."
+      ],
+      "content_html": "<p>When you take the Help action, you do one of the following.</p><p><em><strong>Assist an Ability Check.</strong></em> Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has &amp;Reference[Advantage] on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn’t use it before the start of your next turn. The GM has final say on whether your assistance is possible.</p><p><em><strong>Assist an Attack Roll.</strong></em> You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.</p>"
+    },
+    {
+      "index": "influence",
+      "id": "4V59Q1dlWjNhpJGo",
+      "name": "Influence",
+      "type": "rule",
+      "sort": 1000000,
+      "paragraphs": [
+        "With the Influence action, you urge a monster to do something. Describe or roleplay how you’re communicating with the monster. Are you trying to deceive, intimidate, amuse, or gently persuade? The GM then determines whether the monster feels willing, unwilling, or hesitant due to your interaction; this determination establishes whether an ability check is necessary, as explained below.",
+        "Willing. If your urging aligns with the monster’s desires, no ability check is necessary; the monster fulfills your request in a way it prefers.",
+        "Unwilling. If your urging is repugnant to the monster or counter to its alignment, no ability check is necessary; it doesn’t comply.",
+        "Hesitant. If you urge the monster to do something that it is hesitant to do, you must make an ability check, which is affected by the monster’s attitude: Indifferent, Friendly, or Hostile, each of which is defined in this glossary. The Influence Checks table suggests which ability check to make based on how you’re interacting with the monster. The GM chooses the check, which has a default DC equal to 15 or the monster’s Intelligence score, whichever is higher. On a successful check, the monster does as urged. On a failed check, you must wait 24 hours (or a duration set by the DM) before urging it in the same way again.",
+        "Influence ChecksAbility Check",
+        "Interaction",
+        "[[/check dec]]",
+        "Deceiving a monster that understands you",
+        "[[/check itm]]",
+        "Intimidating a monster",
+        "[[/check prf]]",
+        "Amusing a monster",
+        "[[/check per]]",
+        "Persuading a monster that understands you",
+        "[[/check ani]]",
+        "Gently coaxing a Beast or Monstrosity"
+      ],
+      "content_html": "<p>With the Influence action, you urge a monster to do something. Describe or roleplay how you’re communicating with the monster. Are you trying to deceive, intimidate, amuse, or gently persuade? The GM then determines whether the monster feels willing, unwilling, or hesitant due to your interaction; this determination establishes whether an ability check is necessary, as explained below.</p><p><em><strong>Willing.</strong></em> If your urging aligns with the monster’s desires, no ability check is necessary; the monster fulfills your request in a way it prefers.</p><p><em><strong>Unwilling.</strong></em> If your urging is repugnant to the monster or counter to its alignment, no ability check is necessary; it doesn’t comply.</p><p><em><strong>Hesitant.</strong></em> If you urge the monster to do something that it is hesitant to do, you must make an ability check, which is affected by the monster’s attitude: Indifferent, Friendly, or Hostile, each of which is defined in this glossary. The Influence Checks table suggests which ability check to make based on how you’re interacting with the monster. The GM chooses the check, which has a default DC equal to 15 or the monster’s Intelligence score, whichever is higher. On a successful check, the monster does as urged. On a failed check, you must wait 24 hours (or a duration set by the DM) before urging it in the same way again.</p><table><caption>Influence Checks</caption><thead><tr><th><p>Ability Check</p></th><th><p>Interaction</p></th></tr></thead><tbody><tr><td><p>[[/check dec]]</p></td><td><p>Deceiving a monster that understands you</p></td></tr><tr><td><p>[[/check itm]]</p></td><td><p>Intimidating a monster</p></td></tr><tr><td><p>[[/check prf]]</p></td><td><p>Amusing a monster</p></td></tr><tr><td><p>[[/check per]]</p></td><td><p>Persuading a monster that understands you</p></td></tr><tr><td><p>[[/check ani]]</p></td><td><p>Gently coaxing a Beast or Monstrosity</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "magic",
+      "id": "iIIDUsmSOkL0xNzF",
+      "name": "Magic",
+      "type": "rule",
+      "sort": 1050000,
+      "paragraphs": [
+        "When you take the Magic action, you cast a spell that has a casting time of an action or use a feature or magic item that requires a Magic action to be activated.",
+        "If you cast a spell that has a casting time of 1 minute or longer, you must take the Magic action on each turn of that casting, and you must maintain &Reference[Concentration] while you do so. If your Concentration is broken, the spell fails, but you don’t expend a spell slot."
+      ],
+      "content_html": "<p>When you take the Magic action, you cast a spell that has a casting time of an action or use a feature or magic item that requires a Magic action to be activated.</p><p>If you cast a spell that has a casting time of 1 minute or longer, you must take the Magic action on each turn of that casting, and you must maintain &amp;Reference[Concentration] while you do so. If your Concentration is broken, the spell fails, but you don’t expend a spell slot.</p>"
+    },
+    {
+      "index": "ready",
+      "id": "nI9tN6Oq7fCV7hcA",
+      "name": "Ready",
+      "type": "rule",
+      "sort": 1062500,
+      "paragraphs": [
+        "You take the Ready action to wait for a particular circumstance before you act. To do so, you take this action on your turn, which lets you act by taking a @UUID[.OhSIWaQ61dOp7S8M]{Reaction} before the start of your next turn.",
+        "First, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it. Examples include “If the cultist steps on the trapdoor, I’ll pull the lever that opens it,” and “If the zombie steps next to me, I move away.”",
+        "When the trigger occurs, you can either take your Reaction right after the trigger finishes or ignore the trigger.",
+        "When you Ready a spell, you cast it as normal (expending any resources used to cast it) but hold its energy, which you release with your Reaction when the trigger occurs. To be readied, a spell must have a casting time of an action, and holding on to the spell’s magic requires @UUID[.0a2umg2mJMAzM9Q3]{Concentration}, which you can maintain up to the start of your next turn. If your Concentration is broken, the spell dissipates without taking effect."
+      ],
+      "content_html": "<p>You take the Ready action to wait for a particular circumstance before you act. To do so, you take this action on your turn, which lets you act by taking a @UUID[.OhSIWaQ61dOp7S8M]{Reaction} before the start of your next turn.</p><p>First, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it. Examples include “If the cultist steps on the trapdoor, I’ll pull the lever that opens it,” and “If the zombie steps next to me, I move away.”</p><p>When the trigger occurs, you can either take your Reaction right after the trigger finishes or ignore the trigger.</p><p>When you Ready a spell, you cast it as normal (expending any resources used to cast it) but hold its energy, which you release with your Reaction when the trigger occurs. To be readied, a spell must have a casting time of an action, and holding on to the spell’s magic requires @UUID[.0a2umg2mJMAzM9Q3]{Concentration}, which you can maintain up to the start of your next turn. If your Concentration is broken, the spell dissipates without taking effect.</p>"
+    },
+    {
+      "index": "search",
+      "id": "ySj4gYZ4ADZoia7R",
+      "name": "Search",
+      "type": "rule",
+      "sort": 1065625,
+      "paragraphs": [
+        "When you take the Search action, you make a Wisdom check to discern something that isn’t obvious. The Search table suggests which skills are applicable when you take this action, depending on what you’re trying to detect.",
+        "SearchSkill",
+        "Thing to Detect",
+        "Insight",
+        "Creature’s state of mind",
+        "Medicine",
+        "Creature’s ailment or cause of death",
+        "Perception",
+        "Concealed creature or object",
+        "Survival",
+        "Tracks or food"
+      ],
+      "content_html": "<p>When you take the Search action, you make a Wisdom check to discern something that isn’t obvious. The Search table suggests which skills are applicable when you take this action, depending on what you’re trying to detect.</p><table><caption>Search</caption><thead><tr><th><p>Skill</p></th><th><p>Thing to Detect</p></th></tr></thead><tbody><tr><td><p>Insight</p></td><td><p>Creature’s state of mind</p></td></tr><tr><td><p>Medicine</p></td><td><p>Creature’s ailment or cause of death</p></td></tr><tr><td><p>Perception</p></td><td><p>Concealed creature or object</p></td></tr><tr><td><p>Survival</p></td><td><p>Tracks or food</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "study",
+      "id": "Nuz0Wx4a4aAPcC34",
+      "name": "Study",
+      "type": "rule",
+      "sort": 1066407,
+      "paragraphs": [
+        "When you take the Study action, you make an Intelligence check to study your memory, a book, a clue, or another source of knowledge and call to mind an important piece of information about it.",
+        "The Areas of Knowledge table suggests which skills are applicable to various areas of knowledge.",
+        "Areas of KnowledgeSkill",
+        "Areas",
+        "Arcana",
+        "Spells, magic items, eldritch symbols, magical traditions, planes of existence, and certain creatures (Aberrations, Constructs, Elementals, Fey, and Monstrosities)",
+        "History",
+        "Historic events and people, ancient civilizations, wars, and certain creatures (Giants and Humanoids)",
+        "Investigation",
+        "Traps, ciphers, riddles, and gadgetry",
+        "Nature",
+        "Terrain, flora, weather, and certain creatures (Beasts, Dragons, Oozes, and Plants)",
+        "Religion",
+        "Deities, religious hierarchies and rites, holy symbols, cults, and certain creatures (Celestials, Fiends, and Undead)"
+      ],
+      "content_html": "<p>When you take the Study action, you make an Intelligence check to study your memory, a book, a clue, or another source of knowledge and call to mind an important piece of information about it.</p><p>The Areas of Knowledge table suggests which skills are applicable to various areas of knowledge.</p><table><caption>Areas of Knowledge</caption><thead><tr><th><p>Skill</p></th><th><p>Areas</p></th></tr></thead><tbody><tr><td><p>Arcana</p></td><td><p>Spells, magic items, eldritch symbols, magical traditions, planes of existence, and certain creatures (Aberrations, Constructs, Elementals, Fey, and Monstrosities)</p></td></tr><tr><td><p>History</p></td><td><p>Historic events and people, ancient civilizations, wars, and certain creatures (Giants and Humanoids)</p></td></tr><tr><td><p>Investigation</p></td><td><p>Traps, ciphers, riddles, and gadgetry</p></td></tr><tr><td><p>Nature</p></td><td><p>Terrain, flora, weather, and certain creatures (Beasts, Dragons, Oozes, and Plants)</p></td></tr><tr><td><p>Religion</p></td><td><p>Deities, religious hierarchies and rites, holy symbols, cults, and certain creatures (Celestials, Fiends, and Undead)</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "utilize",
+      "id": "UDlogfdiT2uYEZz4",
+      "name": "Utilize",
+      "type": "rule",
+      "sort": 1067188,
+      "paragraphs": [
+        "You normally interact with an object while doing something else, such as when you draw a sword as part of the @UUID[.f4fZHwBvpbpzRyn4]{Attack} action. When an object requires an action for its use, you take the Utilize action."
+      ],
+      "content_html": "<p>You normally interact with an object while doing something else, such as when you draw a sword as part of the @UUID[.f4fZHwBvpbpzRyn4]{Attack} action. When an object requires an action for its use, you take the Utilize action.</p>"
+    },
+    {
+      "index": "concentration",
+      "id": "0a2umg2mJMAzM9Q3",
+      "name": "Concentration",
+      "type": "rule",
+      "sort": 4300000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.ow58p27ctAnr4VPH inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.ow58p27ctAnr4VPH inline]</p>"
+    },
+    {
+      "index": "hide",
+      "id": "rqhOsUY4wWa1oHTy",
+      "name": "Hide",
+      "type": "rule",
+      "sort": 900000,
+      "paragraphs": [
+        "With the Hide action, you try to conceal yourself. To do so, you must succeed on a [[/check stealth dc=15]] check while you’re @UUID[.YkuKTIH2YaYW8lTS]{Heavily Obscured} or behind &Reference[Three-Quarters Cover] or &Reference[Total Cover], and you must be out of any enemy’s line of sight; if you can see a creature, you can discern whether it can see you.",
+        "On a successful check, you have the &Reference[Invisible] condition while hidden. Make note of your check’s total, which is the DC for a creature to find you with a [[/check prc]] check.",
+        "The condition ends on you immediately after any of the following occurs: you make a sound louder than a whisper, an enemy finds you, you make an attack roll, or you cast a spell with a Verbal component."
+      ],
+      "content_html": "<p>With the Hide action, you try to conceal yourself. To do so, you must succeed on a [[/check stealth dc=15]] check while you’re @UUID[.YkuKTIH2YaYW8lTS]{Heavily Obscured} or behind &amp;Reference[Three-Quarters Cover] or &amp;Reference[Total Cover], and you must be out of any enemy’s line of sight; if you can see a creature, you can discern whether it can see you.</p><p>On a successful check, you have the &amp;Reference[Invisible] condition while hidden. Make note of your check’s total, which is the DC for a creature to find you with a [[/check prc]] check.</p><p>The condition ends on you immediately after any of the following occurs: you make a sound louder than a whisper, an enemy finds you, you make an attack roll, or you cast a spell with a Verbal component.</p>"
+    },
+    {
+      "index": "condition",
+      "id": "UIKLZmiLuENHk1wn",
+      "name": "Condition",
+      "type": "rule",
+      "sort": 4400000,
+      "paragraphs": [
+        "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:",
+        "@UUID[.uDogReMO6QtH6NDw]{Blinded}@UUID[.vLAsIUa0FhZNsyLk]{Charmed}@UUID[.qlRw66tJhk0zLnwq]{Deafened}@UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion}@UUID[.93uaingTESo8N1qL]{Frightened}@UUID[.KbQ1k0OIowtZeQgp]{Grappled}@UUID[.4i3G895hy99piand]{Incapacitated}@UUID[.MQIZ1zRLWRcNOtPN]{Invisible}@UUID[.RnxZoTglPnLc6UPb]{Paralyzed}@UUID[.6vtLuQT9lwZ9N299]{Petrified}@UUID[.HWs8kEojffqwTSJz]{Poisoned}@UUID[.QxCrRcgMdUd3gfzz]{Prone}@UUID[.dqLeGdpHtb8FfcxX]{Restrained}@UUID[.EjbXjvyQAMlDyANI]{Stunned}@UUID[.fZCRaKEJd4KoQCqH]{Unconscious}A condition doesn’t stack with itself; a recipient either has a condition or doesn’t. The &Reference[Exhaustion] condition is an exception to that rule. See also chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbConditions000.JournalEntryPage.BuIBCfux6QYAah3q]{Conditions}."
+      ],
+      "content_html": "<p>A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:</p><ul><li>@UUID[.uDogReMO6QtH6NDw]{Blinded}</li><li>@UUID[.vLAsIUa0FhZNsyLk]{Charmed}</li><li>@UUID[.qlRw66tJhk0zLnwq]{Deafened}</li><li>@UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion}</li><li>@UUID[.93uaingTESo8N1qL]{Frightened}</li><li>@UUID[.KbQ1k0OIowtZeQgp]{Grappled}</li><li>@UUID[.4i3G895hy99piand]{Incapacitated}</li><li>@UUID[.MQIZ1zRLWRcNOtPN]{Invisible}</li><li>@UUID[.RnxZoTglPnLc6UPb]{Paralyzed}</li><li>@UUID[.6vtLuQT9lwZ9N299]{Petrified}</li><li>@UUID[.HWs8kEojffqwTSJz]{Poisoned}</li><li>@UUID[.QxCrRcgMdUd3gfzz]{Prone}</li><li>@UUID[.dqLeGdpHtb8FfcxX]{Restrained}</li><li>@UUID[.EjbXjvyQAMlDyANI]{Stunned}</li><li>@UUID[.fZCRaKEJd4KoQCqH]{Unconscious}</li></ul><p>A condition doesn’t stack with itself; a recipient either has a condition or doesn’t. The &amp;Reference[Exhaustion] condition is an exception to that rule. <em>See also</em> chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbConditions000.JournalEntryPage.BuIBCfux6QYAah3q]{Conditions}.</p>"
+    },
+    {
+      "index": "blinded",
+      "id": "uDogReMO6QtH6NDw",
+      "name": "Blinded",
+      "type": "rule",
+      "sort": 4500000,
+      "paragraphs": [
+        "Can’t See. You can’t see and automatically fail any ability check that requires sight.",
+        "Attacks Affected. Attack rolls against you have Advantage, and your attack rolls have &Reference[Disadvantage]."
+      ],
+      "content_html": "<p><em><strong>Can’t See.</strong></em> You can’t see and automatically fail any ability check that requires sight.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have Advantage, and your attack rolls have &amp;Reference[Disadvantage].</p>"
+    },
+    {
+      "index": "charmed",
+      "id": "vLAsIUa0FhZNsyLk",
+      "name": "Charmed",
+      "type": "rule",
+      "sort": 4600000,
+      "paragraphs": [
+        "While you have the Charmed condition, you experience the following effects.",
+        "Can’t Harm the Charmer. You can’t attack the charmer or target the charmer with damaging abilities or magical effects.",
+        "Social Advantage. The charmer has Advantage on any ability check to interact with you socially."
+      ],
+      "content_html": "<p>While you have the Charmed condition, you experience the following effects.</p><p><em><strong>Can’t Harm the Charmer.</strong></em> You can’t attack the charmer or target the charmer with damaging abilities or magical effects.</p><p><em><strong>Social Advantage.</strong></em> The charmer has Advantage on any ability check to interact with you socially.</p>"
+    },
+    {
+      "index": "deafened",
+      "id": "qlRw66tJhk0zLnwq",
+      "name": "Deafened",
+      "type": "rule",
+      "sort": 4700000,
+      "paragraphs": [
+        "Can’t Hear. You can’t hear and automatically fail any ability check that requires hearing."
+      ],
+      "content_html": "<p><strong>Can’t Hear.</strong> You can’t hear and automatically fail any ability check that requires hearing.</p>"
+    },
+    {
+      "index": "exhaustion",
+      "id": "jSQtPgNm0i4f3Qi3",
+      "name": "Exhaustion",
+      "type": "rule",
+      "sort": 4800000,
+      "paragraphs": [
+        "While you have the Exhaustion condition, you experience the following effects.",
+        "Exhaustion Levels. This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.",
+        "D20 Tests Affected. When you make a &Reference[D20 Test], the roll is reduced by 2 times your Exhaustion level.",
+        "Speed Reduced. Your &Reference[Speed] is reduced by a number of feet equal to 5 times your Exhaustion level.",
+        "Removing Exhaustion Levels. Finishing a &Reference[Long Rest] removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends."
+      ],
+      "content_html": "<p>While you have the Exhaustion condition, you experience the following effects.</p><p><em><strong>Exhaustion Levels.</strong></em> This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.</p><p><em><strong>D20 Tests Affected.</strong></em> When you make a &amp;Reference[D20 Test], the roll is reduced by 2 times your Exhaustion level.</p><p><em><strong>Speed Reduced.</strong></em> Your &amp;Reference[Speed] is reduced by a number of feet equal to 5 times your Exhaustion level.</p><p><em><strong>Removing Exhaustion Levels.</strong></em> Finishing a &amp;Reference[Long Rest] removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.</p>"
+    },
+    {
+      "index": "frightened",
+      "id": "93uaingTESo8N1qL",
+      "name": "Frightened",
+      "type": "rule",
+      "sort": 4900000,
+      "paragraphs": [
+        "While you have the Frightened condition, you experience the following effects.",
+        "Ability Checks and Attacks Affected. You have &Reference[Disadvantage] on ability checks and attack rolls while the source of fear is within line of sight.",
+        "Can’t Approach. You can’t willingly move closer to the source of fear."
+      ],
+      "content_html": "<p>While you have the Frightened condition, you experience the following effects.</p><p><em><strong>Ability Checks and Attacks Affected.</strong></em> You have &amp;Reference[Disadvantage] on ability checks and attack rolls while the source of fear is within line of sight.</p><p><em><strong>Can’t Approach.</strong></em> You can’t willingly move closer to the source of fear.</p>"
+    },
+    {
+      "index": "grappled",
+      "id": "KbQ1k0OIowtZeQgp",
+      "name": "Grappled",
+      "type": "rule",
+      "sort": 5000000,
+      "paragraphs": [
+        "While you have the Grappled condition, you experience the following effects.",
+        "Speed 0. Your Speed is 0 and can’t increase.",
+        "Attacks Affected. You have &Reference[Disadvantage] on attack rolls against any target other than the grappler.",
+        "Movable. The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it."
+      ],
+      "content_html": "<p>While you have the Grappled condition, you experience the following effects.</p><p><em><strong>Speed 0.</strong></em> Your Speed is 0 and can’t increase.</p><p><em><strong>Attacks Affected.</strong></em> You have &amp;Reference[Disadvantage] on attack rolls against any target other than the grappler.</p><p><em><strong>Movable.</strong></em> The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.</p>"
+    },
+    {
+      "index": "incapacitated",
+      "id": "4i3G895hy99piand",
+      "name": "Incapacitated",
+      "type": "rule",
+      "sort": 5100000,
+      "paragraphs": [
+        "While you have the &Reference[incapacitated] condition, you experience the following effects.",
+        "Inactive. You can’t take any @UUID[.SsIXfzS2ZttwAaKj]{action}, @UUID[.EjR3KL7KLTwjWBS0]{Bonus Action}, or @UUID[.OhSIWaQ61dOp7S8M]{Reaction}.",
+        "No Concentration. Your @UUID[.0a2umg2mJMAzM9Q3]{Concentration} is broken.",
+        "Speechless. You can’t speak.",
+        "Surprised. If you’re Incapacitated when you roll Initiative, you have &Reference[Disadvantage] on the roll."
+      ],
+      "content_html": "<p>While you have the &amp;Reference[incapacitated] condition, you experience the following effects.</p><p><em><strong>Inactive.</strong></em> You can’t take any @UUID[.SsIXfzS2ZttwAaKj]{action}, @UUID[.EjR3KL7KLTwjWBS0]{Bonus Action}, or @UUID[.OhSIWaQ61dOp7S8M]{Reaction}.</p><p><em><strong>No Concentration.</strong></em> Your @UUID[.0a2umg2mJMAzM9Q3]{Concentration} is broken.</p><p><em><strong>Speechless.</strong></em> You can’t speak.</p><p><em><strong>Surprised.</strong></em> If you’re Incapacitated when you roll Initiative, you have &amp;Reference[Disadvantage] on the roll.</p>"
+    },
+    {
+      "index": "invisible",
+      "id": "MQIZ1zRLWRcNOtPN",
+      "name": "Invisible",
+      "type": "rule",
+      "sort": 5200000,
+      "paragraphs": [
+        "While you have the Invisible condition, you experience the following effects.",
+        "Surprise. If you’re Invisible when you roll Initiative, you have &Reference[Advantage] on the roll.",
+        "Concealed. You aren’t affected by any effect that requires its target to be seen unless the effect’s creator can somehow see you. Any equipment you are wearing or carrying is also concealed.",
+        "Attacks Affected. Attack rolls against you have &Reference[Disadvantage], and your attack rolls have Advantage. If a creature can somehow see you, you don’t gain this benefit against that creature."
+      ],
+      "content_html": "<p>While you have the Invisible condition, you experience the following effects.</p><p><em><strong>Surprise.</strong></em> If you’re Invisible when you roll Initiative, you have &amp;Reference[Advantage] on the roll.</p><p><em><strong>Concealed.</strong></em> You aren’t affected by any effect that requires its target to be seen unless the effect’s creator can somehow see you. Any equipment you are wearing or carrying is also concealed.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have &amp;Reference[Disadvantage], and your attack rolls have Advantage. If a creature can somehow see you, you don’t gain this benefit against that creature.</p>"
+    },
+    {
+      "index": "paralyzed",
+      "id": "RnxZoTglPnLc6UPb",
+      "name": "Paralyzed",
+      "type": "rule",
+      "sort": 5300000,
+      "paragraphs": [
+        "While you have the Paralyzed condition, you experience the following effects.",
+        "Incapacitated. You have the &Reference[Incapacitated] condition.",
+        "Speed 0. Your Speed is 0 and can’t increase.",
+        "Saving Throws Affected. You automatically fail Strength and Dexterity saving throws.",
+        "Attacks Affected. Attack rolls against you have &Reference[Advantage].",
+        "Automatic Critical Hits. Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you."
+      ],
+      "content_html": "<p>While you have the Paralyzed condition, you experience the following effects.</p><p><em><strong>Incapacitated.</strong></em> You have the &amp;Reference[Incapacitated] condition.</p><p><em><strong>Speed 0.</strong></em> Your Speed is 0 and can’t increase.</p><p><em><strong>Saving Throws Affected.</strong></em> You automatically fail Strength and Dexterity saving throws.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have &amp;Reference[Advantage].</p><p><em><strong>Automatic Critical Hits.</strong></em> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p>"
+    },
+    {
+      "index": "petrified",
+      "id": "6vtLuQT9lwZ9N299",
+      "name": "Petrified",
+      "type": "rule",
+      "sort": 5400000,
+      "paragraphs": [
+        "While you have the Petrified condition, you experience the following effects.",
+        "Turned to Inanimate Substance. You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.",
+        "Incapacitated. You have the &Reference[Incapacitated] condition.",
+        "Speed 0. Your Speed is 0 and can’t increase.",
+        "Attacks Affected. Attack rolls against you have &Reference[Advantage].",
+        "Saving Throws Affected. You automatically fail Strength and Dexterity saving throws.",
+        "Resist Damage. You have &Reference[Resistance] to all damage.",
+        "Poison Immunity. You have Immunity to the &Reference[Poisoned] condition."
+      ],
+      "content_html": "<p>While you have the Petrified condition, you experience the following effects.</p><p><em><strong>Turned to Inanimate Substance.</strong></em> You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.</p><p><em><strong>Incapacitated.</strong></em> You have the &amp;Reference[Incapacitated] condition.</p><p><em><strong>Speed 0.</strong></em> Your Speed is 0 and can’t increase.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have &amp;Reference[Advantage].</p><p><em><strong>Saving Throws Affected.</strong></em> You automatically fail Strength and Dexterity saving throws.</p><p><em><strong>Resist Damage.</strong></em> You have &amp;Reference[Resistance] to all damage.</p><p><em><strong>Poison Immunity.</strong></em> You have Immunity to the &amp;Reference[Poisoned] condition.</p>"
+    },
+    {
+      "index": "poisoned",
+      "id": "HWs8kEojffqwTSJz",
+      "name": "Poisoned",
+      "type": "rule",
+      "sort": 5500000,
+      "paragraphs": [
+        "While you have the Poisoned condition, you experience the following effect.",
+        "Ability Checks and Attacks Affected. You have &Reference[Disadvantage] on attack rolls and ability checks."
+      ],
+      "content_html": "<p>While you have the Poisoned condition, you experience the following effect.</p><p><em><strong>Ability Checks and Attacks Affected.</strong></em> You have &amp;Reference[Disadvantage] on attack rolls and ability checks.</p>"
+    },
+    {
+      "index": "prone",
+      "id": "QxCrRcgMdUd3gfzz",
+      "name": "Prone",
+      "type": "rule",
+      "sort": 5600000,
+      "paragraphs": [
+        "While you have the Prone condition, you experience the following effects.",
+        "Restricted Movement. Your only movement options are to crawl or to spend an amount of movement equal to half your &Reference[Speed] (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.",
+        "Attacks Affected. You have &Reference[Disadvantage] on attack rolls. An attack roll against you has &Reference[Advantage] if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage."
+      ],
+      "content_html": "<p>While you have the Prone condition, you experience the following effects.</p><p><em><strong>Restricted Movement.</strong></em> Your only movement options are to crawl or to spend an amount of movement equal to half your &amp;Reference[Speed] (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.</p><p><em><strong>Attacks Affected.</strong></em> You have &amp;Reference[Disadvantage] on attack rolls. An attack roll against you has &amp;Reference[Advantage] if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.</p>"
+    },
+    {
+      "index": "restrained",
+      "id": "dqLeGdpHtb8FfcxX",
+      "name": "Restrained",
+      "type": "rule",
+      "sort": 5700000,
+      "paragraphs": [
+        "While you have the Restrained condition, you experience the following effects.",
+        "Speed 0. Your &Reference[Speed] is 0 and can’t increase.",
+        "Attacks Affected. Attack rolls against you have Advantage, and your attack rolls have &Reference[Disadvantage].",
+        "Saving Throws Affected. You have Disadvantage on Dexterity saving throws."
+      ],
+      "content_html": "<p>While you have the Restrained condition, you experience the following effects.</p><p><em><strong>Speed 0.</strong></em> Your &amp;Reference[Speed] is 0 and can’t increase.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have Advantage, and your attack rolls have &amp;Reference[Disadvantage].</p><p><em><strong>Saving Throws Affected.</strong></em> You have Disadvantage on Dexterity saving throws.</p>"
+    },
+    {
+      "index": "stunned",
+      "id": "EjbXjvyQAMlDyANI",
+      "name": "Stunned",
+      "type": "rule",
+      "sort": 5800000,
+      "paragraphs": [
+        "When you have the Stunned condition, you experience the following effects.",
+        "Incapacitated. You have the @UUID[.4i3G895hy99piand]{Incapacitated} condition.",
+        "Saving Throws Affected. You automatically fail Strength and Dexterity saving throws.",
+        "Attacks Affected. Attack rolls against you have &Reference[Advantage]."
+      ],
+      "content_html": "<p>When you have the Stunned condition, you experience the following effects.</p><p><em><strong>Incapacitated.</strong></em> You have the @UUID[.4i3G895hy99piand]{Incapacitated} condition.</p><p><em><strong>Saving Throws Affected.</strong></em> You automatically fail Strength and Dexterity saving throws.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have &amp;Reference[Advantage].</p>"
+    },
+    {
+      "index": "unconscious",
+      "id": "fZCRaKEJd4KoQCqH",
+      "name": "Unconscious",
+      "type": "rule",
+      "sort": 5900000,
+      "paragraphs": [
+        "While you have the Unconscious condition, you experience the following effects.",
+        "Inert. You have the &Reference[Incapacitated] and &Reference[Prone] conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.",
+        "Speed 0. Your &Reference[Speed] is 0 and can’t increase.",
+        "Attacks Affected. Attack rolls against you have &Reference[Advantage].",
+        "Saving Throws Affected. You automatically fail Strength and Dexterity saving throws.",
+        "Automatic Critical Hits. Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you."
+      ],
+      "content_html": "<p>While you have the Unconscious condition, you experience the following effects.</p><p><em><strong>Inert.</strong></em> You have the &amp;Reference[Incapacitated] and &amp;Reference[Prone] conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.</p><p><em><strong>Speed 0.</strong></em> Your &amp;Reference[Speed] is 0 and can’t increase.</p><p><em><strong>Attacks Affected.</strong></em> Attack rolls against you have &amp;Reference[Advantage].</p><p><em><strong>Saving Throws Affected.</strong></em> You automatically fail Strength and Dexterity saving throws.</p><p><em><strong>Automatic Critical Hits.</strong></em> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p>"
+    },
+    {
+      "index": "hazard",
+      "id": "5hyEitPd1Kb27fP5",
+      "name": "Hazard",
+      "type": "rule",
+      "sort": 9000000,
+      "paragraphs": [
+        "A hazard is an environmental danger. See also @UUID[.mPBGM1vguT5IPzxT]{Burning}, @UUID[.FZFvLNOX0lHaHZ1k]{Dehydration}, @UUID[.lCwPWK4ODxw2IV1x]{Falling}, @UUID[.earBo4vQPC1ti4g7]{Malnutrition}, and @UUID[.gAvV8TLyS8UGq00x]{Suffocation}."
+      ],
+      "content_html": "<p>A hazard is an environmental danger. See also @UUID[.mPBGM1vguT5IPzxT]{Burning}, @UUID[.FZFvLNOX0lHaHZ1k]{Dehydration}, @UUID[.lCwPWK4ODxw2IV1x]{Falling}, @UUID[.earBo4vQPC1ti4g7]{Malnutrition}, and @UUID[.gAvV8TLyS8UGq00x]{Suffocation}.</p>"
+    },
+    {
+      "index": "burning",
+      "id": "mPBGM1vguT5IPzxT",
+      "name": "Burning",
+      "type": "rule",
+      "sort": 9050000,
+      "paragraphs": [
+        "A burning creature or object takes [[/damage 1d4 type=fire]] damage at the start of each of its turns. As an action, you can extinguish fire on yourself by giving yourself the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition and rolling on the ground. The fire also goes out if it is doused, submerged, or suffocated."
+      ],
+      "content_html": "<p>A burning creature or object takes [[/damage 1d4 type=fire]] damage at the start of each of its turns. As an action, you can extinguish fire on yourself by giving yourself the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition and rolling on the ground. The fire also goes out if it is doused, submerged, or suffocated.</p>"
+    },
+    {
+      "index": "dehydration",
+      "id": "FZFvLNOX0lHaHZ1k",
+      "name": "Dehydration",
+      "type": "rule",
+      "sort": 9075000,
+      "paragraphs": [
+        "A creature requires an amount of water per day based on its size, as shown in the Water Needs per Day table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day’s end. @UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion} caused by dehydration can’t be removed until the creature drinks the full amount of water required for a day.",
+        "Water Needs per DaySize",
+        "Water",
+        "Tiny",
+        "1/4 gallon",
+        "Small",
+        "1 gallon",
+        "Medium",
+        "1 gallon",
+        "Large",
+        "4 gallons",
+        "Huge",
+        "16 gallons",
+        "Gargantuan",
+        "64 gallons"
+      ],
+      "content_html": "<p>A creature requires an amount of water per day based on its size, as shown in the Water Needs per Day table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day’s end. @UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion} caused by dehydration can’t be removed until the creature drinks the full amount of water required for a day.</p><table><caption>Water Needs per Day</caption><thead><tr><th><p>Size</p></th><th><p>Water</p></th></tr></thead><tbody><tr><td><p>Tiny</p></td><td><p>1/4 gallon</p></td></tr><tr><td><p>Small</p></td><td><p>1 gallon</p></td></tr><tr><td><p>Medium</p></td><td><p>1 gallon</p></td></tr><tr><td><p>Large</p></td><td><p>4 gallons</p></td></tr><tr><td><p>Huge</p></td><td><p>16 gallons</p></td></tr><tr><td><p>Gargantuan</p></td><td><p>64 gallons</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "falling",
+      "id": "lCwPWK4ODxw2IV1x",
+      "name": "Falling",
+      "type": "rule",
+      "sort": 9078125,
+      "paragraphs": [
+        "A creature that falls takes [[/damage 1d6 type=bludgeoning]] damage at the end of the fall for every 10 feet it fell, to a maximum of [[/damage 20d6 type=bludgeoning]] damage. When the creature lands, it has the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition unless it avoids taking any damage from the fall.",
+        "A creature that falls into water or another liquid can use its @UUID[.OhSIWaQ61dOp7S8M]{Reaction} to make a [[/check dc=15 ath]] or [[/check dc=15 acr]] check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved."
+      ],
+      "content_html": "<p>A creature that falls takes [[/damage 1d6 type=bludgeoning]] damage at the end of the fall for every 10 feet it fell, to a maximum of [[/damage 20d6 type=bludgeoning]] damage. When the creature lands, it has the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition unless it avoids taking any damage from the fall.</p><p>A creature that falls into water or another liquid can use its @UUID[.OhSIWaQ61dOp7S8M]{Reaction} to make a [[/check dc=15 ath]] or [[/check dc=15 acr]] check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.</p>"
+    },
+    {
+      "index": "malnutrition",
+      "id": "earBo4vQPC1ti4g7",
+      "name": "Malnutrition",
+      "type": "rule",
+      "sort": 9078907,
+      "paragraphs": [
+        "A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table. A creature that eats but consumes less than half the required food for a day must succeed on a [[/save dc=10 con]] saving throw or gain 1 &Reference[exhaustion] level at the day’s end. A creature that eats nothing for 5 days automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food.",
+        "Exhaustion caused by malnutrition can’t be removed until the creature eats the full amount of food required for a day.",
+        "Food Needs per DaySize",
+        "Food",
+        "Size",
+        "Food",
+        "Tiny",
+        "1/4 pound",
+        "Large",
+        "4 pounds",
+        "Small",
+        "1 pound",
+        "Huge",
+        "16 pounds",
+        "Medium",
+        "1 pound",
+        "Gargantuan",
+        "64 pounds"
+      ],
+      "content_html": "<p>A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table. A creature that eats but consumes less than half the required food for a day must succeed on a [[/save dc=10 con]] saving throw or gain 1 &amp;Reference[exhaustion] level at the day’s end. A creature that eats nothing for 5 days automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food.</p><p>Exhaustion caused by malnutrition can’t be removed until the creature eats the full amount of food required for a day.</p><table><caption>Food Needs per Day</caption><thead><tr><th><p>Size</p></th><th><p>Food</p></th><th></th><th><p>Size</p></th><th><p>Food</p></th></tr></thead><tbody><tr><td><p>Tiny</p></td><td><p>1/4 pound</p></td><td></td><td><p>Large</p></td><td><p>4 pounds</p></td></tr><tr><td><p>Small</p></td><td><p>1 pound</p></td><td></td><td><p>Huge</p></td><td><p>16 pounds</p></td></tr><tr><td><p>Medium</p></td><td><p>1 pound</p></td><td></td><td><p>Gargantuan</p></td><td><p>64 pounds</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "suffocation",
+      "id": "gAvV8TLyS8UGq00x",
+      "name": "Suffocation",
+      "type": "rule",
+      "sort": 9079688,
+      "paragraphs": [
+        "A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins. When a creature runs out of breath or is choking, it gains 1 &Reference[Exhaustion] level at the end of each of its turns. When a creature can breathe again, it removes all levels of Exhaustion it gained from suffocating."
+      ],
+      "content_html": "<p>A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins. When a creature runs out of breath or is choking, it gains 1 &amp;Reference[Exhaustion] level at the end of each of its turns. When a creature can breathe again, it removes all levels of Exhaustion it gained from suffocating.</p>"
+    },
+    {
+      "index": "area-of-effect",
+      "id": "On6Sg3vUokAkXBB5",
+      "name": "Area of Effect",
+      "type": "rule",
+      "sort": 1700000,
+      "paragraphs": [
+        "An area of effect has a point of origin, a location from which the effect’s energy erupts. The rules for each shape specify how to position its point of origin. If all straight lines extending from the point of origin to a location in the area of effect are blocked, that location isn’t included in the area of effect. To block a line, an obstruction must provide Total Cover. See also @UUID[.pGXkTaY8kLgqQuDa]{Cover}.",
+        "If the creator of an area of effect places it at an unseen point and an obstruction—such as a wall—is between the creator and that point, the point of origin comes into being on the near side of the obstruction.",
+        "Cone@Embed[.JwK8XOkGSX9xE5Dc inline]",
+        "Cube@Embed[.p5qUBMQO7shfNeCD inline]",
+        "Cylinder@Embed[.i3ijpxEn5LuSO7C0 inline]",
+        "Emanation@Embed[.eSsITWhcNMkoa9WP inline]",
+        "Line@Embed[.T1ln1l6uKkkMuieP inline]",
+        "Sphere@Embed[.LgpZdAOhTnSHGCNa inline]"
+      ],
+      "content_html": "<p>An area of effect has a point of origin, a location from which the effect’s energy erupts. The rules for each shape specify how to position its point of origin. If all straight lines extending from the point of origin to a location in the area of effect are blocked, that location isn’t included in the area of effect. To block a line, an obstruction must provide Total Cover. <em>See also</em> @UUID[.pGXkTaY8kLgqQuDa]{Cover}.</p><p>If the creator of an area of effect places it at an unseen point and an obstruction—such as a wall—is between the creator and that point, the point of origin comes into being on the near side of the obstruction.</p><h3>Cone</h3><p>@Embed[.JwK8XOkGSX9xE5Dc inline]</p><h3>Cube</h3><p>@Embed[.p5qUBMQO7shfNeCD inline]</p><h3>Cylinder</h3><p>@Embed[.i3ijpxEn5LuSO7C0 inline]</p><h3>Emanation</h3><p>@Embed[.eSsITWhcNMkoa9WP inline]</p><h3>Line</h3><p>@Embed[.T1ln1l6uKkkMuieP inline]</p><h3>Sphere</h3><p>@Embed[.LgpZdAOhTnSHGCNa inline]</p>"
+    },
+    {
+      "index": "cone",
+      "id": "JwK8XOkGSX9xE5Dc",
+      "name": "Cone",
+      "type": "rule",
+      "sort": 1800000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.DqqAOr5JnX71OCOw inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.DqqAOr5JnX71OCOw inline]</p>"
+    },
+    {
+      "index": "cube",
+      "id": "p5qUBMQO7shfNeCD",
+      "name": "Cube",
+      "type": "rule",
+      "sort": 1900000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.dRfDIwuaHmUQ06uA inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.dRfDIwuaHmUQ06uA inline]</p>"
+    },
+    {
+      "index": "cylinder",
+      "id": "i3ijpxEn5LuSO7C0",
+      "name": "Cylinder",
+      "type": "rule",
+      "sort": 2000000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.jZFp4R7tXsIqkiG3 inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.jZFp4R7tXsIqkiG3 inline]</p>"
+    },
+    {
+      "index": "emanation",
+      "id": "eSsITWhcNMkoa9WP",
+      "name": "Emanation",
+      "type": "rule",
+      "sort": 2100000,
+      "paragraphs": [
+        "An Emanation is an area of effect that extends in straight lines from a creature or an object in all directions. The effect that creates an Emanation specifies the distance it extends.",
+        "An Emanation moves with the creature or object that is its origin unless it is an instantaneous or a stationary effect.",
+        "An Emanation’s origin (creature or object) isn’t included in the area of effect unless its creator decides otherwise."
+      ],
+      "content_html": "<p>An Emanation is an area of effect that extends in straight lines from a creature or an object in all directions. The effect that creates an Emanation specifies the distance it extends.</p><p>An Emanation moves with the creature or object that is its origin unless it is an instantaneous or a stationary effect.</p><p>An Emanation’s origin (creature or object) isn’t included in the area of effect unless its creator decides otherwise.</p>"
+    },
+    {
+      "index": "line",
+      "id": "T1ln1l6uKkkMuieP",
+      "name": "Line",
+      "type": "rule",
+      "sort": 2200000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.6DOoBgg7okm9gBc6 inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.6DOoBgg7okm9gBc6 inline]</p>"
+    },
+    {
+      "index": "sphere",
+      "id": "LgpZdAOhTnSHGCNa",
+      "name": "Sphere",
+      "type": "rule",
+      "sort": 2300000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.npdEWb2egUPnB5Fa inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.npdEWb2egUPnB5Fa inline]</p>"
+    },
+    {
+      "index": "attitude",
+      "id": "ahMxQJTGDhq08GWQ",
+      "name": "Attitude",
+      "type": "rule",
+      "sort": 2625000,
+      "paragraphs": [
+        "A monster has a starting attitude toward a player character: &Reference[Friendly], &Reference[Hostile], or &Reference[Indifferent]. See also &Reference[Influence]."
+      ],
+      "content_html": "<p>A monster has a starting attitude toward a player character: &amp;Reference[Friendly], &amp;Reference[Hostile], or &amp;Reference[Indifferent]. See also &amp;Reference[Influence].</p>"
+    },
+    {
+      "index": "friendly",
+      "id": "RVcWSqblHIs7SUzn",
+      "name": "Friendly",
+      "type": "rule",
+      "sort": 2631250,
+      "paragraphs": [
+        "A Friendly creature views you favorably. You have Advantage on an ability check to influence a Friendly creature. See also &Reference[Influence]."
+      ],
+      "content_html": "<p>A Friendly creature views you favorably. You have Advantage on an ability check to influence a Friendly creature. <em>See also</em> &amp;Reference[Influence].</p>"
+    },
+    {
+      "index": "hostile",
+      "id": "BNxLbtJofbNGzjsp",
+      "name": "Hostile",
+      "type": "rule",
+      "sort": 2632813,
+      "paragraphs": [
+        "A Hostile creature views you unfavorably. You have Disadvantage on an ability check to influence a Hostile creature. See also &Reference[Influence]."
+      ],
+      "content_html": "<p>A Hostile creature views you unfavorably. You have Disadvantage on an ability check to influence a Hostile creature. <em>See also</em> &amp;Reference[Influence].</p>"
+    },
+    {
+      "index": "indifferent",
+      "id": "eYX5eimGuYhHPoj4",
+      "name": "Indifferent",
+      "type": "rule",
+      "sort": 2634375,
+      "paragraphs": [
+        "An Indifferent creature has no desire to help or hinder you. Indifferent is the default attitude of a monster. See also &Reference[Influence]."
+      ],
+      "content_html": "<p>An Indifferent creature has no desire to help or hinder you. Indifferent is the default attitude of a monster. <em>See also</em> &amp;Reference[Influence].</p>"
+    },
+    {
+      "index": "speed",
+      "id": "NSU7TjeJbJ0vVQaZ",
+      "name": "Speed",
+      "type": "rule",
+      "sort": 13300000,
+      "paragraphs": [
+        "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn. See also @UUID[.a4CjDIEMeSbRaEjA]{Climbing}, @UUID[.zRZl7vdjzjqpazxn]{Crawling}, @UUID[.ozHhbP8JVHCJAx0b]{Flying}, @UUID[.aaJOlRhI1H6vAxt9]{Jumping}, @UUID[.53c9JMqckHagYYB5]{Swimming}.",
+        "Special Speeds. Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed, each of which is defined in this glossary. If you have more than one speed, choose which one to use when you move; you can switch between the speeds during your move. Whenever you switch, subtract the distance already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can’t use the new speed during the current move. For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more.",
+        "Changes to Your Speeds. If an effect increases or decreases your Speed for a time, any special speed you have increases or decreases by an equal amount for the same duration. For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0. Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved."
+      ],
+      "content_html": "<p>A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn. <em>See also</em> @UUID[.a4CjDIEMeSbRaEjA]{Climbing}, @UUID[.zRZl7vdjzjqpazxn]{Crawling}, @UUID[.ozHhbP8JVHCJAx0b]{Flying}, @UUID[.aaJOlRhI1H6vAxt9]{Jumping}, @UUID[.53c9JMqckHagYYB5]{Swimming}.</p><p><em><strong>Special Speeds.</strong></em> Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed, each of which is defined in this glossary. If you have more than one speed, choose which one to use when you move; you can switch between the speeds during your move. Whenever you switch, subtract the distance already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can’t use the new speed during the current move. For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more.</p><p><em><strong>Changes to Your Speeds.</strong></em> If an effect increases or decreases your Speed for a time, any special speed you have increases or decreases by an equal amount for the same duration. For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0. Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved.</p>"
+    },
+    {
+      "index": "difficult-terrain",
+      "id": "9tzB6KQDTIuw1FlZ",
+      "name": "Difficult Terrain",
+      "type": "rule",
+      "sort": 7600000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.6tqz947qO8vPyxvD inline]",
+        "A space is Difficult Terrain if the space contains any of the following or something similar:",
+        "A creature that isn’t Tiny or your ally",
+        "Furniture that is sized for creatures of your size or larger",
+        "Heavy snow, ice, rubble, or undergrowth",
+        "Liquid that’s between shin- and waist-deep",
+        "A narrow opening sized for a creature one size smaller than you",
+        "A slope of 20 degrees or more"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.6tqz947qO8vPyxvD inline]</p><p>A space is Difficult Terrain if the space contains any of the following or something similar:</p><ul><li><p>A creature that isn’t Tiny or your ally</p></li><li><p>Furniture that is sized for creatures of your size or larger</p></li><li><p>Heavy snow, ice, rubble, or undergrowth</p></li><li><p>Liquid that’s between shin- and waist-deep</p></li><li><p>A narrow opening sized for a creature one size smaller than you</p></li><li><p>A slope of 20 degrees or more</p></li></ul>"
+    },
+    {
+      "index": "crawling",
+      "id": "zRZl7vdjzjqpazxn",
+      "name": "Crawling",
+      "type": "rule",
+      "sort": 6100000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.VWG9qe8PUNtS28Pw inline]",
+        "See also @UUID[.NSU7TjeJbJ0vVQaZ]{Speed}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.VWG9qe8PUNtS28Pw inline]</p><p><em>See also</em> @UUID[.NSU7TjeJbJ0vVQaZ]{Speed}.</p>"
+    },
+    {
+      "index": "climbing",
+      "id": "a4CjDIEMeSbRaEjA",
+      "name": "Climbing",
+      "type": "rule",
+      "sort": 4200000,
+      "paragraphs": [
+        "While you’re climbing, each foot of movement costs 1 extra foot (2 extra feet in @UUID[.9tzB6KQDTIuw1FlZ]{Difficult Terrain}). You ignore this extra cost if you have a Climb Speed and use it to climb.",
+        "At the DM’s option, climbing a slippery surface or one with few handholds might require a successful [[/check dc=15 ath]] check."
+      ],
+      "content_html": "<p>While you’re climbing, each foot of movement costs 1 extra foot (2 extra feet in @UUID[.9tzB6KQDTIuw1FlZ]{Difficult Terrain}). You ignore this extra cost if you have a Climb Speed and use it to climb.</p><p>At the DM’s option, climbing a slippery surface or one with few handholds might require a successful [[/check dc=15 ath]] check.</p>"
+    },
+    {
+      "index": "flying",
+      "id": "ozHhbP8JVHCJAx0b",
+      "name": "Flying",
+      "type": "rule",
+      "sort": 8600000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.0B1fxfmw0a48tPsc inline]",
+        "See also &Reference[Falling] and @UUID[.pBcRxpYx5FCVGThO]{Fly Speed}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.0B1fxfmw0a48tPsc inline]</p><p><em>See also</em> &amp;Reference[Falling] and @UUID[.pBcRxpYx5FCVGThO]{Fly Speed}.</p>"
+    },
+    {
+      "index": "jumping",
+      "id": "aaJOlRhI1H6vAxt9",
+      "name": "Jumping",
+      "type": "rule",
+      "sort": 10400000,
+      "paragraphs": [
+        "When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical).",
+        "@Embed[.NcSh8lVwlfk58VAO inline]",
+        "@Embed[.sy6xon5AxuIZV1ca inline]"
+      ],
+      "content_html": "<p>When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical).</p><p>@Embed[.NcSh8lVwlfk58VAO inline]</p><p>@Embed[.sy6xon5AxuIZV1ca inline]</p>"
+    },
+    {
+      "index": "swimming",
+      "id": "53c9JMqckHagYYB5",
+      "name": "Swimming",
+      "type": "rule",
+      "sort": 14300000,
+      "paragraphs": [
+        "While you’re swimming, each foot of movement costs 1 extra foot (2 extra feet in @UUID[.9tzB6KQDTIuw1FlZ]{Difficult Terrain}). You ignore this extra cost if you have a Swim Speed and use it to swim. At the DM’s option, moving any distance in rough water might require a successful [[/check dc=15 ath]] check."
+      ],
+      "content_html": "<p>While you’re swimming, each foot of movement costs 1 extra foot (2 extra feet in @UUID[.9tzB6KQDTIuw1FlZ]{Difficult Terrain}). You ignore this extra cost if you have a Swim Speed and use it to swim. At the DM’s option, moving any distance in rough water might require a successful [[/check dc=15 ath]] check.</p>"
+    },
+    {
+      "index": "hover",
+      "id": "HiJGoeVyu4nhm6a3",
+      "name": "Hover",
+      "type": "rule",
+      "sort": 9800000,
+      "paragraphs": [
+        "Some creatures can hover, as noted in their stat blocks, and some spells and other effects grant the ability to hover. Hovering while flying prevents you from falling in certain circumstances. See also @UUID[.ozHhbP8JVHCJAx0b]{Flying}."
+      ],
+      "content_html": "<p>Some creatures can hover, as noted in their stat blocks, and some spells and other effects grant the ability to hover. Hovering while flying prevents you from falling in certain circumstances. <em>See also </em>@UUID[.ozHhbP8JVHCJAx0b]{Flying}.</p>"
+    },
+    {
+      "index": "ability-check",
+      "id": "XBQqXCoTbvp5Dika",
+      "name": "Ability Check",
+      "type": "rule",
+      "sort": 100000,
+      "paragraphs": [
+        "An ability check is a D20 Test that represents using one of the six abilities—or a specific skill associated with an ability—to overcome a challenge."
+      ],
+      "content_html": "<p>An ability check is a D20 Test that represents using one of the six abilities—or a specific skill associated with an ability—to overcome a challenge.</p>"
+    },
+    {
+      "index": "ability-score-and-modifier",
+      "id": "5MKyFnOiAVifvbuI",
+      "name": "Ability Score and Modifier",
+      "type": "rule",
+      "sort": 200000,
+      "paragraphs": [
+        "A creature has six ability scores—Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma—each of which has a corresponding modifier. Add the modifier when you make a &Reference[D20 Test] with the corresponding ability or when a rule asks you to do so."
+      ],
+      "content_html": "<p>A creature has six ability scores—Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma—each of which has a corresponding modifier. Add the modifier when you make a &amp;Reference[D20 Test] with the corresponding ability or when a rule asks you to do so.</p>"
+    },
+    {
+      "index": "advantage",
+      "id": "lvs9RRDi1UA1Lff8",
+      "name": "Advantage",
+      "type": "rule",
+      "sort": 1300000,
+      "paragraphs": [
+        "If you have Advantage on a @UUID[.nxPH59t3iNtWJxnU]{D20 Test}, roll two d20s, and use the higher roll. A roll can’t be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other."
+      ],
+      "content_html": "<p>If you have Advantage on a @UUID[.nxPH59t3iNtWJxnU]{D20 Test}, roll two d20s, and use the higher roll. A roll can’t be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other.</p>"
+    },
+    {
+      "index": "d20-test",
+      "id": "nxPH59t3iNtWJxnU",
+      "name": "D20 Test",
+      "type": "rule",
+      "sort": 6600000,
+      "paragraphs": [
+        "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The DM determines whether a D20 Test is warranted in a given circumstance. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}."
+      ],
+      "content_html": "<p>D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The DM determines whether a D20 Test is warranted in a given circumstance. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}.</p>"
+    },
+    {
+      "index": "disadvantage",
+      "id": "fFrHBgqKUMY0Nnco",
+      "name": "Disadvantage",
+      "type": "rule",
+      "sort": 7900000,
+      "paragraphs": [
+        "If you have Disadvantage on a &Reference[D20 Test], roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other."
+      ],
+      "content_html": "<p>If you have Disadvantage on a &amp;Reference[D20 Test], roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other.</p>"
+    },
+    {
+      "index": "adventure",
+      "id": "e3DmlL7JEghucu8V",
+      "name": "Adventure",
+      "type": "rule",
+      "sort": 1400000,
+      "paragraphs": [
+        "An adventure is a series of @UUID[.JEinwUMBhr5bP8PP]{encounters}. A story emerges through playing them."
+      ],
+      "content_html": "<p>An adventure is a series of @UUID[.JEinwUMBhr5bP8PP]{encounters}. A story emerges through playing them.</p>"
+    },
+    {
+      "index": "encounter",
+      "id": "JEinwUMBhr5bP8PP",
+      "name": "Encounter",
+      "type": "rule",
+      "sort": 8000000,
+      "paragraphs": [
+        "An encounter is a scene in an adventure that is part of at least one of the game’s three pillars: social interaction, exploration, or combat. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbSocialInterac]{Social Interaction}, @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}, and @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat})."
+      ],
+      "content_html": "<p>An encounter is a scene in an adventure that is part of at least one of the game’s three pillars: social interaction, exploration, or combat. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbSocialInterac]{Social Interaction}, @UUID[Compendium.dnd5e.content24.JournalEntry.phbExploration00]{Exploration}, and @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}).</p>"
+    },
+    {
+      "index": "alignment",
+      "id": "82BB8JUr7qEyo0jN",
+      "name": "Alignment",
+      "type": "rule",
+      "sort": 1500000,
+      "paragraphs": [
+        "A creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral). These factors allow for nine possible combinations, such as Lawful Good and Neutral Evil."
+      ],
+      "content_html": "<p>A creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral). These factors allow for nine possible combinations, such as Lawful Good and Neutral Evil.</p>"
+    },
+    {
+      "index": "ally",
+      "id": "0Hx2Lxtr8a0LPqlV",
+      "name": "Ally",
+      "type": "rule",
+      "sort": 1600000,
+      "paragraphs": [
+        "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally."
+      ],
+      "content_html": "<p>A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.</p>"
+    },
+    {
+      "index": "cover",
+      "id": "pGXkTaY8kLgqQuDa",
+      "name": "Cover",
+      "type": "rule",
+      "sort": 6000000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.W7f7PcRubNUMIq2S inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.W7f7PcRubNUMIq2S inline]</p>"
+    },
+    {
+      "index": "creature",
+      "id": "qt6cd0mBRQhsElwd",
+      "name": "Creature",
+      "type": "rule",
+      "sort": 6200000,
+      "paragraphs": [
+        "Any being in the game, including a player’s character, is a creature. See also @UUID[.H0gs01OOjU1EJBp9]{Creature Type}."
+      ],
+      "content_html": "<p>Any being in the game, including a player’s character, is a creature. <em>See also</em> @UUID[.H0gs01OOjU1EJBp9]{Creature Type}.</p>"
+    },
+    {
+      "index": "creature-type",
+      "id": "H0gs01OOjU1EJBp9",
+      "name": "Creature Type",
+      "type": "rule",
+      "sort": 6300000,
+      "paragraphs": [
+        "Every creature, including every player character, has a tag in the rules that identifies the type of creature it is. Most player characters are of the Humanoid type. These are the game’s creature types:",
+        "Aberration",
+        "Beast",
+        "Celestial",
+        "Construct",
+        "Dragon",
+        "Elemental",
+        "Fey",
+        "Fiend",
+        "Giant",
+        "Humanoid",
+        "Monstrosity",
+        "Ooze",
+        "Plant",
+        "Undead",
+        "The types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways."
+      ],
+      "content_html": "<p>Every creature, including every player character, has a tag in the rules that identifies the type of creature it is. Most player characters are of the Humanoid type. These are the game’s creature types:</p><ul><li><p>Aberration</p></li><li><p>Beast</p></li><li><p>Celestial</p></li><li><p>Construct</p></li><li><p>Dragon</p></li><li><p>Elemental</p></li><li><p>Fey</p></li><li><p>Fiend</p></li><li><p>Giant</p></li><li><p>Humanoid</p></li><li><p>Monstrosity</p></li><li><p>Ooze</p></li><li><p>Plant</p></li><li><p>Undead</p></li></ul><p>The types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways.</p>"
+    },
+    {
+      "index": "critical-hit",
+      "id": "2dMF1Nsw7ysf6X6e",
+      "name": "Critical Hit",
+      "type": "rule",
+      "sort": 6400000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.gFL1VhSEljL1zvje inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.gFL1VhSEljL1zvje inline]</p>"
+    },
+    {
+      "index": "curses",
+      "id": "JLuw5ep1YQkig2T5",
+      "name": "Curses",
+      "type": "rule",
+      "sort": 6500000,
+      "paragraphs": [
+        "Some game effects curse a creature or an object. The effect that confers a curse defines what the curse does. Curses can be removed by the @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse} and @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration} spells or other magic that explicitly ends curses."
+      ],
+      "content_html": "<p>Some game effects curse a creature or an object. The effect that confers a curse defines what the curse does. Curses can be removed by the @UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{Remove Curse} and @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration} spells or other magic that explicitly ends curses.</p>"
+    },
+    {
+      "index": "damage",
+      "id": "eX6eSNKZ3LKGwrVz",
+      "name": "Damage",
+      "type": "rule",
+      "sort": 6700000,
+      "paragraphs": [
+        "Damage represents harm that causes a creature or an object to lose Hit Points."
+      ],
+      "content_html": "<p>Damage represents harm that causes a creature or an object to lose Hit Points.</p>"
+    },
+    {
+      "index": "damage-roll",
+      "id": "HPEbNLJucJDVsnUZ",
+      "name": "Damage Roll",
+      "type": "rule",
+      "sort": 6800000,
+      "paragraphs": [
+        "A damage roll is a die roll, adjusted by any applicable modifiers, that deals damage to a target. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>A damage roll is a die roll, adjusted by any applicable modifiers, that deals damage to a target. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "damage-threshold",
+      "id": "hlPFubXjQG9gnnd5",
+      "name": "Damage Threshold",
+      "type": "rule",
+      "sort": 6900000,
+      "paragraphs": [
+        "A creature or an object that has a damage threshold has Immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes that entire instance of damage. Any damage that fails to meet or exceed the damage threshold is superficial and doesn’t reduce Hit Points. For example, if an object has a damage threshold of 10, the object takes no damage if 9 damage is dealt to it, since that damage fails to exceed the threshold. If the same object is dealt 11 damage, it takes all of that damage."
+      ],
+      "content_html": "<p>A creature or an object that has a damage threshold has Immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes that entire instance of damage. Any damage that fails to meet or exceed the damage threshold is superficial and doesn’t reduce Hit Points. For example, if an object has a damage threshold of 10, the object takes no damage if 9 damage is dealt to it, since that damage fails to exceed the threshold. If the same object is dealt 11 damage, it takes all of that damage.</p>"
+    },
+    {
+      "index": "damage-types",
+      "id": "Za4Q2V2fpuIMkSXH",
+      "name": "Damage Types",
+      "type": "text",
+      "sort": 7000000,
+      "paragraphs": [
+        "Attacks and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as Resistance, rely on the types. The Damage Types table offers examples to help a GM assign a type to a new effect.",
+        "Damage TypesType",
+        "Examples",
+        "Acid",
+        "Corrosive liquids, digestive enzymes",
+        "Bludgeoning",
+        "Blunt objects, constriction, falling",
+        "Cold",
+        "Freezing water, icy blasts",
+        "Fire",
+        "Flames, unbearable heat",
+        "Force",
+        "Pure magical energy",
+        "Lightning",
+        "Electricity",
+        "Necrotic",
+        "Life-draining energy",
+        "Piercing",
+        "Fangs, puncturing objects",
+        "Poison",
+        "Toxic gas, venom",
+        "Psychic",
+        "Mind-rending energy",
+        "Radiant",
+        "Holy energy, searing radiation",
+        "Slashing",
+        "Claws, cutting objects",
+        "Thunder",
+        "Concussive sound"
+      ],
+      "content_html": "<p>Attacks and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as Resistance, rely on the types. The Damage Types table offers examples to help a GM assign a type to a new effect.</p><table><caption>Damage Types</caption><thead><tr><th><p>Type</p></th><th><p>Examples</p></th></tr></thead><tbody><tr><td><p>Acid</p></td><td><p>Corrosive liquids, digestive enzymes</p></td></tr><tr><td><p>Bludgeoning</p></td><td><p>Blunt objects, constriction, falling</p></td></tr><tr><td><p>Cold</p></td><td><p>Freezing water, icy blasts</p></td></tr><tr><td><p>Fire</p></td><td><p>Flames, unbearable heat</p></td></tr><tr><td><p>Force</p></td><td><p>Pure magical energy</p></td></tr><tr><td><p>Lightning</p></td><td><p>Electricity</p></td></tr><tr><td><p>Necrotic</p></td><td><p>Life-draining energy</p></td></tr><tr><td><p>Piercing</p></td><td><p>Fangs, puncturing objects</p></td></tr><tr><td><p>Poison</p></td><td><p>Toxic gas, venom</p></td></tr><tr><td><p>Psychic</p></td><td><p>Mind-rending energy</p></td></tr><tr><td><p>Radiant</p></td><td><p>Holy energy, searing radiation</p></td></tr><tr><td><p>Slashing</p></td><td><p>Claws, cutting objects</p></td></tr><tr><td><p>Thunder</p></td><td><p>Concussive sound</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "death-saving-throw",
+      "id": "VtyVX7M159v6UVqG",
+      "name": "Death Saving Throw",
+      "type": "rule",
+      "sort": 7400000,
+      "paragraphs": [
+        "A player character must make a Death Saving Throw (also called a Death Save) if they start their turn with 0 Hit Points. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>A player character must make a Death Saving Throw (also called a Death Save) if they start their turn with 0 Hit Points. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "dead",
+      "id": "OP0YhS6iOm4yfPIt",
+      "name": "Dead",
+      "type": "rule",
+      "sort": 7300000,
+      "paragraphs": [
+        "A dead creature has no Hit Points and can’t regain them unless it is first revived by magic such as the Raise Dead or Revivify spell. When such a spell is cast, the spirit knows who is casting it and can refuse. The spirit of a dead creature has left the body and departed for the Outer Planes, and reviving the creature requires calling the spirit back.",
+        "If the creature returns to life, the revival effect determines the creature’s current Hit Points. Unless otherwise stated, the creature returns to life with any conditions, magical contagions, or curses that were affecting it at death if the durations of those effects are still ongoing. If the creature died with any @UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion} levels, it returns with 1 fewer level. If the creature had Attunement to one or more magic items, it is no longer attuned to them."
+      ],
+      "content_html": "<p>A dead creature has no Hit Points and can’t regain them unless it is first revived by magic such as the Raise Dead or Revivify spell. When such a spell is cast, the spirit knows who is casting it and can refuse. The spirit of a dead creature has left the body and departed for the Outer Planes, and reviving the creature requires calling the spirit back.</p><p>If the creature returns to life, the revival effect determines the creature’s current Hit Points. Unless otherwise stated, the creature returns to life with any conditions, magical contagions, or curses that were affecting it at death if the durations of those effects are still ongoing. If the creature died with any @UUID[.jSQtPgNm0i4f3Qi3]{Exhaustion} levels, it returns with 1 fewer level. If the creature had Attunement to one or more magic items, it is no longer attuned to them.</p>"
+    },
+    {
+      "index": "difficulty-class",
+      "id": "afnB0KZZk2hKtjv4",
+      "name": "Difficulty Class",
+      "type": "rule",
+      "sort": 7700000,
+      "paragraphs": [
+        "A Difficulty Class (DC) is the target number for an ability check or a saving throw. See also chapter 1",
+        "@UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}."
+      ],
+      "content_html": "<p>A Difficulty Class (DC) is the target number for an ability check or a saving throw. <em>See also</em> chapter 1</p><p>@UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}.</p>"
+    },
+    {
+      "index": "enemy",
+      "id": "L90M4NKEpO6sIkui",
+      "name": "Enemy",
+      "type": "rule",
+      "sort": 8100000,
+      "paragraphs": [
+        "A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or DM."
+      ],
+      "content_html": "<p>A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or DM.</p>"
+    },
+    {
+      "index": "experience-points",
+      "id": "DksBBFbqPY2FCReT",
+      "name": "Experience Points",
+      "type": "rule",
+      "sort": 8200000,
+      "paragraphs": [
+        "As they overcome challenges and complete adventures, characters earn Experience Points (XP), which are awarded by the Game Master. When a character’s XP total crosses certain thresholds, the character’s level increases. The Game Master’s Guide provides guidance on awarding XP.",
+        "See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.Vz5QcYKA74tWkDqy]{Level Advancement}."
+      ],
+      "content_html": "<p>As they overcome challenges and complete adventures, characters earn Experience Points (XP), which are awarded by the Game Master. When a character’s XP total crosses certain thresholds, the character’s level increases. The Game Master’s Guide provides guidance on awarding XP.</p><p><em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.Vz5QcYKA74tWkDqy]{Level Advancement}.</p>"
+    },
+    {
+      "index": "expertise",
+      "id": "69nu4Sk3V5O15GFf",
+      "name": "Expertise",
+      "type": "rule",
+      "sort": 8300000,
+      "paragraphs": [
+        "Expertise is a feature that enhances your use of a skill proficiency. When you make an ability check with a skill proficiency in which you have Expertise, your Proficiency Bonus is doubled for that check unless the bonus is doubled by another feature.",
+        "If you gain Expertise, you gain it in one skill in which you have proficiency. You can’t have Expertise in the same skill proficiency more than once.",
+        "See also chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam]{Proficiency}."
+      ],
+      "content_html": "<p>Expertise is a feature that enhances your use of a skill proficiency. When you make an ability check with a skill proficiency in which you have Expertise, your Proficiency Bonus is doubled for that check unless the bonus is doubled by another feature.</p><p>If you gain Expertise, you gain it in one skill in which you have proficiency. You can’t have Expertise in the same skill proficiency more than once.</p><p><em>See also</em> chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam]{Proficiency}.</p>"
+    },
+    {
+      "index": "fly-speed",
+      "id": "pBcRxpYx5FCVGThO",
+      "name": "Fly Speed",
+      "type": "rule",
+      "sort": 8500000,
+      "paragraphs": [
+        "A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. See also &Reference[Flying] and &Reference[Speed]."
+      ],
+      "content_html": "<p>A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. <em>See also</em> &amp;Reference[Flying] and &amp;Reference[Speed].</p>"
+    },
+    {
+      "index": "burrow-speed",
+      "id": "g7DDgHsdjxZUqGD2",
+      "name": "Burrow Speed",
+      "type": "rule",
+      "sort": 3500000,
+      "paragraphs": [
+        "A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice. The creature can’t burrow through solid rock unless the creature has a trait that allows it to do so."
+      ],
+      "content_html": "<p>A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice. The creature can’t burrow through solid rock unless the creature has a trait that allows it to do so.</p>"
+    },
+    {
+      "index": "climb-speed",
+      "id": "xoQXfwUFahXBoiur",
+      "name": "Climb Speed",
+      "type": "rule",
+      "sort": 4100000,
+      "paragraphs": [
+        "A Climb Speed can be used in place of &reference[Speed] to traverse a vertical surface without expending the extra movement normally associated with climbing."
+      ],
+      "content_html": "<p>A Climb Speed can be used in place of &amp;reference[Speed] to traverse a vertical surface without expending the extra movement normally associated with climbing.</p>"
+    },
+    {
+      "index": "swim-speed",
+      "id": "wDGTuzKQunNrnkC8",
+      "name": "Swim Speed",
+      "type": "rule",
+      "sort": 14200000,
+      "paragraphs": [
+        "A Swim Speed can be used to swim without expending the extra movement normally associated with swimming. See also @UUID[.53c9JMqckHagYYB5]{Swimming} and &Reference[Speed]."
+      ],
+      "content_html": "<p>A Swim Speed can be used to swim without expending the extra movement normally associated with swimming. <em>See also</em> @UUID[.53c9JMqckHagYYB5]{Swimming} and &amp;Reference[Speed].</p>"
+    },
+    {
+      "index": "grappling",
+      "id": "YSLWJcQCP6kzsPql",
+      "name": "Grappling",
+      "type": "rule",
+      "sort": 8900000,
+      "paragraphs": [
+        "A creature can grapple another creature. Characters typically grapple by using an Unarmed Strike. Many monsters have special attacks that allow them to quickly grapple prey. However a grapple is initiated, it follows these rules. See also @UUID[.2Uvc5myrDs18Cf19]{Unarmed Strike} and &Reference[Grappled].",
+        "Grappled Condition. Successfully grappling a creature gives it the Grappled condition.",
+        "One Grapple per Hand. A creature must have a hand free to grapple another creature. Some stat blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part. Whatever part a grappler uses, it can grapple only one creature at a time with that part, and the grappler can’t use that part to target another creature unless it ends the grapple.",
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.2TZKy9YbMN3ZY3h8 inline]"
+      ],
+      "content_html": "<p>A creature can grapple another creature. Characters typically grapple by using an Unarmed Strike. Many monsters have special attacks that allow them to quickly grapple prey. However a grapple is initiated, it follows these rules. <em>See also</em> @UUID[.2Uvc5myrDs18Cf19]{Unarmed Strike} and &amp;Reference[Grappled].</p><p><em><strong>Grappled Condition. </strong></em>Successfully grappling a creature gives it the Grappled condition.</p><p><em><strong>One Grapple per Hand.</strong></em> A creature must have a hand free to grapple another creature. Some stat blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part. Whatever part a grappler uses, it can grapple only one creature at a time with that part, and the grappler can’t use that part to target another creature unless it ends the grapple.</p><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.2TZKy9YbMN3ZY3h8 inline]</p>"
+    },
+    {
+      "index": "unarmed-strike",
+      "id": "2Uvc5myrDs18Cf19",
+      "name": "Unarmed Strike",
+      "type": "rule",
+      "sort": 15000000,
+      "paragraphs": [
+        "Instead of using a weapon to make a melee attack, you can use a punch, kick, head-butt, or similar forceful blow. In game terms, this is an Unarmed Strike—a melee attack that involves you using your body to damage, grapple, or shove a target within 5 feet of you.",
+        "Whenever you use your Unarmed Strike, choose one of the following options for its effect.",
+        "Damage. You make an attack roll against the target. Your bonus to the roll equals your Strength modifier plus your Proficiency Bonus. On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier.",
+        "Grapple. The target must succeed on a Strength or Dexterity saving throw (it chooses which), or it has the @UUID[.KbQ1k0OIowtZeQgp]{Grappled} condition. The DC for the saving throw and any escape attempts equals 8 plus your Strength modifier and Proficiency Bonus. This grapple is possible only if the target is no more than one size larger than you and if you have a hand free to grab it. See also @UUID[.YSLWJcQCP6kzsPql]{Grappling}.",
+        "Shove. The target must succeed on a Strength or Dexterity saving throw (it chooses which), or you either push it 5 feet away or cause it to have the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition. The DC for the saving throw equals 8 plus your Strength modifier and Proficiency Bonus. This shove is possible only if the target is no more than one size larger than you."
+      ],
+      "content_html": "<p>Instead of using a weapon to make a melee attack, you can use a punch, kick, head-butt, or similar forceful blow. In game terms, this is an Unarmed Strike—a melee attack that involves you using your body to damage, grapple, or shove a target within 5 feet of you.</p><p>Whenever you use your Unarmed Strike, choose one of the following options for its effect.</p><p><em><strong>Damage.</strong></em> You make an attack roll against the target. Your bonus to the roll equals your Strength modifier plus your Proficiency Bonus. On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier.</p><p><em><strong>Grapple.</strong></em> The target must succeed on a Strength or Dexterity saving throw (it chooses which), or it has the @UUID[.KbQ1k0OIowtZeQgp]{Grappled} condition. The DC for the saving throw and any escape attempts equals 8 plus your Strength modifier and Proficiency Bonus. This grapple is possible only if the target is no more than one size larger than you and if you have a hand free to grab it. <em>See also</em> @UUID[.YSLWJcQCP6kzsPql]{Grappling}.</p><p><em><strong>Shove.</strong></em> The target must succeed on a Strength or Dexterity saving throw (it chooses which), or you either push it 5 feet away or cause it to have the @UUID[.QxCrRcgMdUd3gfzz]{Prone} condition. The DC for the saving throw equals 8 plus your Strength modifier and Proficiency Bonus. This shove is possible only if the target is no more than one size larger than you.</p>"
+    },
+    {
+      "index": "healing",
+      "id": "fJVuu8cS9oxNWGTC",
+      "name": "Healing",
+      "type": "rule",
+      "sort": 9100000,
+      "paragraphs": [
+        "Healing is how you regain Hit Points. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>Healing is how you regain Hit Points. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "heroic-inspiration",
+      "id": "AQ1oTG7jHy5kZuN9",
+      "name": "Heroic Inspiration",
+      "type": "rule",
+      "sort": 9300000,
+      "paragraphs": [
+        "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.",
+        "If you gain Heroic Inspiration but already have it, it’s lost unless you give it to a player character who lacks it."
+      ],
+      "content_html": "<p>If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.</p><p>If you gain Heroic Inspiration but already have it, it’s lost unless you give it to a player character who lacks it.</p>"
+    },
+    {
+      "index": "hit-points",
+      "id": "sh9GYVdAi8hfH1ru",
+      "name": "Hit Points",
+      "type": "rule",
+      "sort": 9600000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.PFbzoMBviI2DD9QP inline]",
+        "See also @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects} and @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.PFbzoMBviI2DD9QP inline]</p><p><em>See also</em> @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects} and @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "hit-point-dice",
+      "id": "9SzoRkB9GUlofZEB",
+      "name": "Hit Point Dice",
+      "type": "rule",
+      "sort": 9500000,
+      "paragraphs": [
+        "Hit Point Dice, or Hit Dice for short, help determine a player character’s Hit Point maximum, as explained in chapter 2. Most monsters also have Hit Dice. A creature can spend Hit Dice during a @UUID[.wVuNbEADtC16ejAi]{Short Rest} to regain Hit Points."
+      ],
+      "content_html": "<p>Hit Point Dice, or Hit Dice for short, help determine a player character’s Hit Point maximum, as explained in chapter 2. Most monsters also have Hit Dice. A creature can spend Hit Dice during a @UUID[.wVuNbEADtC16ejAi]{Short Rest} to regain Hit Points.</p>"
+    },
+    {
+      "index": "short-rest",
+      "id": "wVuNbEADtC16ejAi",
+      "name": "Short Rest",
+      "type": "rule",
+      "sort": 12900000,
+      "paragraphs": [
+        "A Short Rest is a 1-hour period of downtime, during which a creature does nothing more strenuous than reading, talking, eating, or standing watch. To start a Short Rest, you must have at least 1 Hit Point.",
+        "Benefits of the Rest. When you finish the rest, you gain the following benefits:",
+        "Spend Hit Point Dice. You can spend one or more of your Hit Point Dice to regain Hit Points. For each Hit Point Die you spend in this way, roll the die and add your Constitution modifier to it. You regain Hit Points equal to the total (minimum of 1 Hit Point). You can decide to spend an additional Hit Point Die after each roll.",
+        "Special Feature. Some features are recharged by a Short Rest. If you have such a feature, it recharges in the way specified in its description.",
+        "Interrupting the Rest. A Short Rest is stopped by the following interruptions:",
+        "Rolling InitiativeCasting a spell other than a cantripTaking any damageAn interrupted Short Rest confers no benefits."
+      ],
+      "content_html": "<p>A Short Rest is a 1-hour period of downtime, during which a creature does nothing more strenuous than reading, talking, eating, or standing watch. To start a Short Rest, you must have at least 1 Hit Point.</p><p><em><strong>Benefits of the Rest.</strong></em> When you finish the rest, you gain the following benefits:</p><p><strong>Spend Hit Point Dice.</strong> You can spend one or more of your Hit Point Dice to regain Hit Points. For each Hit Point Die you spend in this way, roll the die and add your Constitution modifier to it. You regain Hit Points equal to the total (minimum of 1 Hit Point). You can decide to spend an additional Hit Point Die after each roll.</p><p><strong>Special Feature.</strong> Some features are recharged by a Short Rest. If you have such a feature, it recharges in the way specified in its description.</p><p><em><strong>Interrupting the Rest.</strong></em> A Short Rest is stopped by the following interruptions:</p><ul><li class=\"Core-Styles_Core-Bulleted\">Rolling Initiative</li><li class=\"Core-Styles_Core-Bulleted\">Casting a spell other than a cantrip</li><li class=\"Core-Styles_Core-Bulleted\">Taking any damage</li></ul><p>An interrupted Short Rest confers no benefits.</p>"
+    },
+    {
+      "index": "long-rest",
+      "id": "NGmwolHLA5ppbIZY",
+      "name": "Long Rest",
+      "type": "rule",
+      "sort": 10800000,
+      "paragraphs": [
+        "A Long Rest is a period of extended downtime—at least 8 hours—available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.",
+        "During sleep, you have the &Reference[Unconscious] condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.",
+        "Benefits of the Rest. To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:",
+        "Regain All HP. You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.",
+        "Ability Scores Restored. If any of your ability scores were reduced, they return to normal.",
+        "Exhaustion Reduced. If you have the &Reference[Exhaustion] condition, its level decreases by 1.",
+        "Special Feature. Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.",
+        "Interrupting the Rest. A Long Rest is stopped by the following interruptions:",
+        "Rolling InitiativeCasting a spell other than a cantripTaking any damage1 hour of walking or other physical exertionIf you rested at least 1 hour before the interruption, you gain the benefits of a @UUID[.wVuNbEADtC16ejAi]{Short Rest}.",
+        "You can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish."
+      ],
+      "content_html": "<p>A Long Rest is a period of extended downtime—at least 8 hours—available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.</p><p>During sleep, you have the &amp;Reference[Unconscious] condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.</p><p><em><strong>Benefits of the Rest.</strong></em> To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:</p><p><strong>Regain All HP.</strong> You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal.</p><p><strong>Ability Scores Restored.</strong> If any of your ability scores were reduced, they return to normal.</p><p><strong>Exhaustion Reduced.</strong> If you have the &amp;Reference[Exhaustion] condition, its level decreases by 1.</p><p><strong>Special Feature.</strong> Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.</p><p><em><strong>Interrupting the Rest.</strong></em> A Long Rest is stopped by the following interruptions:</p><ul><li class=\"Core-Styles_Core-Bulleted\">Rolling Initiative</li><li class=\"Core-Styles_Core-Bulleted\">Casting a spell other than a cantrip</li><li class=\"Core-Styles_Core-Bulleted\">Taking any damage</li><li class=\"Core-Styles_Core-Bulleted\">1 hour of walking or other physical exertion</li></ul><p>If you rested at least 1 hour before the interruption, you gain the benefits of a @UUID[.wVuNbEADtC16ejAi]{Short Rest}.</p><p>You can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.</p>"
+    },
+    {
+      "index": "illusions",
+      "id": "ZJYZERJF2fjKJGoP",
+      "name": "Illusions",
+      "type": "rule",
+      "sort": 9900000,
+      "paragraphs": [
+        "Spells and other effects sometimes create magical illusions. Such an effect defines what the illusion does and which senses or mental faculties it deceives.",
+        "If an illusion manifests in space, the illusion is insubstantial and weightless, yet it seems to be affected by the environment as if the illusion were real unless the effect that created it specifies otherwise. For example, a visual illusion of a creature casts shadows and reflections, and wind appears to affect the illusory creature. Similarly, an audible illusion echoes in an echoey space."
+      ],
+      "content_html": "<p>Spells and other effects sometimes create magical illusions. Such an effect defines what the illusion does and which senses or mental faculties it deceives.</p><p>If an illusion manifests in space, the illusion is insubstantial and weightless, yet it seems to be affected by the environment as if the illusion were real unless the effect that created it specifies otherwise. For example, a visual illusion of a creature casts shadows and reflections, and wind appears to affect the illusory creature. Similarly, an audible illusion echoes in an echoey space.</p>"
+    },
+    {
+      "index": "immunity",
+      "id": "vuK6Tth0DFgU74A6",
+      "name": "Immunity",
+      "type": "rule",
+      "sort": 10000000,
+      "paragraphs": [
+        "If you have Immunity to a damage type or a condition, it doesn’t affect you in any way."
+      ],
+      "content_html": "<p>If you have Immunity to a damage type or a condition, it doesn’t affect you in any way.</p>"
+    },
+    {
+      "index": "improvised-weapons",
+      "id": "Dyw6b9rQIdbkIIQD",
+      "name": "Improvised Weapons",
+      "type": "rule",
+      "sort": 10100000,
+      "paragraphs": [
+        "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it’s wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.",
+        "Proficiency. Don’t add your Proficiency Bonus to attack rolls with an improvised weapon.",
+        "Damage. On a hit, the weapon deals [[/damage 1d4]] damage of a type the GM thinks is appropriate for the object.",
+        "Range. If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.",
+        "Weapon Equivalents. If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules. For example, the GM could treat a table leg as a Club."
+      ],
+      "content_html": "<p>An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it’s wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.</p><p><em><strong>Proficiency.</strong></em> Don’t add your Proficiency Bonus to attack rolls with an improvised weapon.</p><p><em><strong>Damage.</strong></em> On a hit, the weapon deals [[/damage 1d4]] damage of a type the GM thinks is appropriate for the object.</p><p><em><strong>Range.</strong></em> If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.</p><p><em><strong>Weapon Equivalents.</strong></em> If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules. For example, the GM could treat a table leg as a Club.</p>"
+    },
+    {
+      "index": "initiative",
+      "id": "rwZa7b0CHh2n6mmA",
+      "name": "Initiative",
+      "type": "rule",
+      "sort": 10300000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.RcwElV4GAcVXKWxo inline]",
+        "See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.RcwElV4GAcVXKWxo inline]</p><p><em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}.</p>"
+    },
+    {
+      "index": "knocking-out-a-creature",
+      "id": "PjXBMVcEaWuKjder",
+      "name": "Knocking Out a Creature",
+      "type": "rule",
+      "sort": 10500000,
+      "paragraphs": [
+        "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the @UUID[.fZCRaKEJd4KoQCqH]{Unconscious} condition and starts a @UUID[.wVuNbEADtC16ejAi]{Short Rest}.",
+        "The creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful [[/check dc=10 med]] check."
+      ],
+      "content_html": "<p>When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the @UUID[.fZCRaKEJd4KoQCqH]{Unconscious} condition and starts a @UUID[.wVuNbEADtC16ejAi]{Short Rest}.</p><p>The creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful [[/check dc=10 med]] check.</p>"
+    },
+    {
+      "index": "magical-effect",
+      "id": "q4iARGB5cUXXX1Al",
+      "name": "Magical Effect",
+      "type": "rule",
+      "sort": 10900000,
+      "paragraphs": [
+        "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical."
+      ],
+      "content_html": "<p>An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.</p>"
+    },
+    {
+      "index": "monster",
+      "id": "gTBHin4uKrs9cjjW",
+      "name": "Monster",
+      "type": "rule",
+      "sort": 11100000,
+      "paragraphs": [
+        "A monster is a creature controlled by the DM, even if the creature is benevolent. See also @UUID[.qt6cd0mBRQhsElwd]{Creature} and @UUID[.VNSwzt3GIwcM3Iil]{NPC}."
+      ],
+      "content_html": "<p>A monster is a creature controlled by the DM, even if the creature is benevolent. <em>See also</em> @UUID[.qt6cd0mBRQhsElwd]{Creature} and @UUID[.VNSwzt3GIwcM3Iil]{NPC}.</p>"
+    },
+    {
+      "index": "nonplayer-character-npc",
+      "id": "VNSwzt3GIwcM3Iil",
+      "name": "Nonplayer Character (NPC)",
+      "type": "rule",
+      "sort": 11200000,
+      "paragraphs": [
+        "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. See also @UUID[.gTBHin4uKrs9cjjW]{Monster}."
+      ],
+      "content_html": "<p>A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. <em>See also</em> @UUID[.gTBHin4uKrs9cjjW]{Monster}.</p>"
+    },
+    {
+      "index": "object",
+      "id": "PyQgGFRDNLr0DznN",
+      "name": "Object",
+      "type": "rule",
+      "sort": 11300000,
+      "paragraphs": [
+        "An object is a nonliving, distinct thing. Composite things, like buildings, comprise more than one object. See also @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects}."
+      ],
+      "content_html": "<p>An object is a nonliving, distinct thing. Composite things, like buildings, comprise more than one object. <em>See also</em> @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects}.</p>"
+    },
+    {
+      "index": "occupied-space",
+      "id": "3Poomjri6b55DDUC",
+      "name": "Occupied Space",
+      "type": "rule",
+      "sort": 11400000,
+      "paragraphs": [
+        "A space is occupied if a creature is in it or if it is completely filled by objects."
+      ],
+      "content_html": "<p>A space is occupied if a creature is in it or if it is completely filled by objects.</p>"
+    },
+    {
+      "index": "opportunity-attacks",
+      "id": "eNvzQabiTqTtfzis",
+      "name": "Opportunity Attacks",
+      "type": "rule",
+      "sort": 11500000,
+      "paragraphs": [
+        "You can make an Opportunity Attack when a creature that you can see leaves your reach using its action, its Bonus Action, its Reaction, or one of its speeds. To make the Opportunity Attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against the provoking creature. The attack occurs right before the creature leaves your reach. See also chapter @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}."
+      ],
+      "content_html": "<p>You can make an Opportunity Attack when a creature that you can see leaves your reach using its action, its Bonus Action, its Reaction, or one of its speeds. To make the Opportunity Attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against the provoking creature. The attack occurs right before the creature leaves your reach. <em>See also</em> chapter @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}.</p>"
+    },
+    {
+      "index": "passive-perception",
+      "id": "Brc9AnUXBeg0MTX6",
+      "name": "Passive Perception",
+      "type": "rule",
+      "sort": 11600000,
+      "paragraphs": [
+        "Passive Perception is a score that reflects a creature’s general awareness of its surroundings. The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.",
+        "A creature’s Passive Perception equals 10 plus the creature’s Wisdom (Perception) check bonus. If the creature has Advantage on such checks, increase the score by 5. If the creature has &Reference[Disadvantage] on them, decrease the score by 5. For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2). If that character has Advantage on Wisdom (Perception) checks, the score becomes 19."
+      ],
+      "content_html": "<p>Passive Perception is a score that reflects a creature’s general awareness of its surroundings. The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.</p><p>A creature’s Passive Perception equals 10 plus the creature’s Wisdom (Perception) check bonus. If the creature has Advantage on such checks, increase the score by 5. If the creature has &amp;Reference[Disadvantage] on them, decrease the score by 5. For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2). If that character has Advantage on Wisdom (Perception) checks, the score becomes 19.</p>"
+    },
+    {
+      "index": "per-day",
+      "id": "niL3uQqxKnfsgmDI",
+      "name": "Per Day",
+      "type": "rule",
+      "sort": 11700000,
+      "paragraphs": [
+        "If a rule says you can use something a certain number of times per day, that means you must finish a @UUID[.NGmwolHLA5ppbIZY]{Long Rest} to use it again after you run out of uses."
+      ],
+      "content_html": "<p>If a rule says you can use something a certain number of times per day, that means you must finish a @UUID[.NGmwolHLA5ppbIZY]{Long Rest} to use it again after you run out of uses.</p>"
+    },
+    {
+      "index": "player-character",
+      "id": "j4c5BbPA97hDIgoY",
+      "name": "Player Character",
+      "type": "rule",
+      "sort": 11800000,
+      "paragraphs": [
+        "A player character is a character controlled by a player. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar]{chapter 2}."
+      ],
+      "content_html": "<p>A player character is a character controlled by a player. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar]{chapter 2}.</p>"
+    },
+    {
+      "index": "possession",
+      "id": "Hu6UgMgAPFIWjBkN",
+      "name": "Possession",
+      "type": "rule",
+      "sort": 11900000,
+      "paragraphs": [
+        "Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates. Possession can be prevented by the @UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{Protection from Evil and Good} spell and ended by the @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil]{Dispel Evil and Good} spell."
+      ],
+      "content_html": "<p>Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates. Possession can be prevented by the @UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{Protection from Evil and Good} spell and ended by the @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelEvil]{Dispel Evil and Good} spell.</p>"
+    },
+    {
+      "index": "proficiency",
+      "id": "0r3UkdVTPBHa78ea",
+      "name": "Proficiency",
+      "type": "rule",
+      "sort": 12000000,
+      "paragraphs": [
+        "If you have proficiency with something, you can add your Proficiency Bonus to any @UUID[.nxPH59t3iNtWJxnU]{D20 Test} you make using that thing. A creature might have proficiency in a skill or saving throw or with a weapon or tool."
+      ],
+      "content_html": "<p>If you have proficiency with something, you can add your Proficiency Bonus to any @UUID[.nxPH59t3iNtWJxnU]{D20 Test} you make using that thing. A creature might have proficiency in a skill or saving throw or with a weapon or tool.</p>"
+    },
+    {
+      "index": "resistance",
+      "id": "Uk3xhCTvEfx8BN1O",
+      "name": "Resistance",
+      "type": "rule",
+      "sort": 12200000,
+      "paragraphs": [
+        "If you have Resistance to a damage type, damage of that type is halved against you (round down). Resistance is applied only once to an instance of damage. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>If you have Resistance to a damage type, damage of that type is halved against you (round down). Resistance is applied only once to an instance of damage. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "ritual",
+      "id": "q6Bs0h1U9weuUqHk",
+      "name": "Ritual",
+      "type": "rule",
+      "sort": 12300000,
+      "paragraphs": [
+        "If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn’t expend a spell slot, which means the ritual version of a spell can’t be cast at a higher level. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000]{chapter 7}."
+      ],
+      "content_html": "<p>If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn’t expend a spell slot, which means the ritual version of a spell can’t be cast at a higher level. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000]{chapter 7}.</p>"
+    },
+    {
+      "index": "round-down",
+      "id": "Agsv3qZNLTNij9mm",
+      "name": "Round Down",
+      "type": "rule",
+      "sort": 12400000,
+      "paragraphs": [
+        "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up."
+      ],
+      "content_html": "<p>Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.</p>"
+    },
+    {
+      "index": "save",
+      "id": "nteEPAs5mlT6Z0Fl",
+      "name": "Save",
+      "type": "rule",
+      "sort": 12500000,
+      "paragraphs": [
+        "Save is another name for a saving throw. See also @UUID[.Vlri6Mp6grn9wt3g]{Saving Throw}."
+      ],
+      "content_html": "<p>Save is another name for a saving throw. <em>See also</em> @UUID[.Vlri6Mp6grn9wt3g]{Saving Throw}.</p>"
+    },
+    {
+      "index": "saving-throw",
+      "id": "Vlri6Mp6grn9wt3g",
+      "name": "Saving Throw",
+      "type": "rule",
+      "sort": 12600000,
+      "paragraphs": [
+        "A saving throw—also called a save—represents an attempt to avoid or resist a threat. You normally make a saving throw only when a rule requires you to do so, but you can decide to fail the save without rolling. The result of a save is detailed in the effect that allowed it. If a target is forced to make a save and lacks the ability score used by it, the target automatically fails. See also chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}."
+      ],
+      "content_html": "<p>A saving throw—also called a save—represents an attempt to avoid or resist a threat. You normally make a saving throw only when a rule requires you to do so, but you can decide to fail the save without rolling. The result of a save is detailed in the effect that allowed it. If a target is forced to make a save and lacks the ability score used by it, the target automatically fails. <em>See also</em> chapter 1 @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000]{D20 Tests}.</p>"
+    },
+    {
+      "index": "shape-shifting",
+      "id": "SGPAyMHJnd0MZC31",
+      "name": "Shape-Shifting",
+      "type": "rule",
+      "sort": 12800000,
+      "paragraphs": [
+        "If an effect, such as @UUID[Compendium.dnd5e.classes24.Item.phbdrdWildShape0]{Wild Shape} or the @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Polymorph} spell, lets you shape-shift, its description specifies what happens to you. Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die."
+      ],
+      "content_html": "<p>If an effect, such as @UUID[Compendium.dnd5e.classes24.Item.phbdrdWildShape0]{Wild Shape} or the @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Polymorph} spell, lets you shape-shift, its description specifies what happens to you. Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.</p>"
+    },
+    {
+      "index": "simultaneous-effects",
+      "id": "9Otf0bjl7X3tubNv",
+      "name": "Simultaneous Effects",
+      "type": "rule",
+      "sort": 13000000,
+      "paragraphs": [
+        "If two or more things happen at the same time on a turn, the person at the game table—player or DM—whose turn it is decides the order in which those things happen. For example, if two effects occur at the start of a player character’s turn, the player decides which of the effects happens first."
+      ],
+      "content_html": "<p>If two or more things happen at the same time on a turn, the person at the game table—player or DM—whose turn it is decides the order in which those things happen. For example, if two effects occur at the start of a player character’s turn, the player decides which of the effects happens first.</p>"
+    },
+    {
+      "index": "size",
+      "id": "YwNA2I9Rzi4p8kjr",
+      "name": "Size",
+      "type": "rule",
+      "sort": 13100000,
+      "paragraphs": [
+        "A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan. A creature’s size determines how much space the creature occupies in combat. An object’s size affects its Hit Points. See also @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects} and @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}."
+      ],
+      "content_html": "<p>A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan. A creature’s size determines how much space the creature occupies in combat. An object’s size affects its Hit Points. <em>See also</em> @UUID[.RXTLVpAwcGm1qtKf]{Breaking Objects} and @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{Combat}.</p>"
+    },
+    {
+      "index": "skill",
+      "id": "EIknqkxeOWwz7Qk5",
+      "name": "Skill",
+      "type": "rule",
+      "sort": 13200000,
+      "paragraphs": [
+        "A skill is an area of specialization associated with an ability check. If you have proficiency in a skill, you can add your Proficiency Bonus when you make an ability check associated with that skill. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000.JournalEntryPage.zU9fgQbLaVbJvPRX]{Proficiency}"
+      ],
+      "content_html": "<p>A skill is an area of specialization associated with an ability check. If you have proficiency in a skill, you can add your Proficiency Bonus when you make an ability check associated with that skill. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000.JournalEntryPage.zU9fgQbLaVbJvPRX]{Proficiency}</p>"
+    },
+    {
+      "index": "spell",
+      "id": "IiOTDqJ2YtRPmuFE",
+      "name": "Spell",
+      "type": "rule",
+      "sort": 13400000,
+      "paragraphs": [
+        "A spell is a magical effect that has the characteristics described in @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.dWVioXxEGjcPsI9Y]{chapter 7}."
+      ],
+      "content_html": "<p>A spell is a magical effect that has the characteristics described in @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.dWVioXxEGjcPsI9Y]{chapter 7}.</p>"
+    },
+    {
+      "index": "spell-attack",
+      "id": "gxjZq9Df96FZIl6y",
+      "name": "Spell Attack",
+      "type": "rule",
+      "sort": 13500000,
+      "paragraphs": [
+        "A spell attack is an attack roll made as part of a spell or another magical effect. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.iBFe4NyaCUinDoz3]{Casting Spells}."
+      ],
+      "content_html": "<p>A spell attack is an attack roll made as part of a spell or another magical effect. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.iBFe4NyaCUinDoz3]{Casting Spells}.</p>"
+    },
+    {
+      "index": "spellcasting-focus",
+      "id": "AKYkasQ56Pnatfmz",
+      "name": "Spellcasting Focus",
+      "type": "rule",
+      "sort": 13600000,
+      "paragraphs": [
+        "A Spellcasting Focus is an object that certain creatures can use in place of a spell’s Material components if those materials aren’t consumed by the spell and don’t have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.iBFe4NyaCUinDoz3]{Casting Spells}."
+      ],
+      "content_html": "<p>A Spellcasting Focus is an object that certain creatures can use in place of a spell’s Material components if those materials aren’t consumed by the spell and don’t have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.iBFe4NyaCUinDoz3]{Casting Spells}.</p>"
+    },
+    {
+      "index": "stable",
+      "id": "klXWp4c90n7Kt5LB",
+      "name": "Stable",
+      "type": "rule",
+      "sort": 13700000,
+      "paragraphs": [
+        "A creature is Stable if it has 0 Hit Points but isn’t required to make @UUID[.VtyVX7M159v6UVqG]{Death Saving Throws}. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>A creature is Stable if it has 0 Hit Points but isn’t required to make @UUID[.VtyVX7M159v6UVqG]{Death Saving Throws}. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "stat-block",
+      "id": "St3ANvrKOgxECnTn",
+      "name": "Stat Block",
+      "type": "text",
+      "sort": 13800000,
+      "paragraphs": [
+        "A stat block contains the game statistics of a monster. Each stat block includes the following information presented after the monster’s name.",
+        "Size. A monster is Tiny, Small, Medium, Large, Huge, or Gargantuan.",
+        "Creature Type. This entry notes the family of beings a monster belongs to, along with any descriptive tags.",
+        "Alignment. An alignment is suggested for the monster, with the DM determining its actual alignment.",
+        "AC, Initiative, and HP. These entries give the monster’s Armor Class, Initiative, and Hit Points, which are detailed in chapter 1. In parentheses after the Hit Points, the monster’s Hit Point Dice are provided, along with the contribution of its Constitution, if any, to its Hit Points. Following the Initiative modifier is an Initiative score. Some creatures that are created by magic lack Hit Dice and Initiative information.",
+        "Speed. Here the monster’s Speed is provided, along with any special speeds.",
+        "Ability Scores. A table provides the monster’s ability scores, modifiers, and saving throw modifiers, all of which are detailed in @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam.JournalEntryPage.sIPPXW1mYE3O4xdc]{chapter 1}.",
+        "Skills. This entry lists the monster’s skill proficiencies, if any. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000.JournalEntryPage.zU9fgQbLaVbJvPRX]{Proficiency}.",
+        "Resistances and Vulnerabilities. These entries list the monster’s Resistances and Vulnerabilities, if any. See also &Reference[Resistance] and @UUID[.bCU0JHnmZsZf1SHp]{Vulnerability}.",
+        "Immunities. This section lists the monster’s damage and condition Immunities, if any. See also @UUID[.vuK6Tth0DFgU74A6]{Immunity}.",
+        "Gear. If the monster has any equipment that can be given away or retrieved, it’s listed in this entry.",
+        "Senses. This entry lists the monster’s special senses, such as Darkvision, and its Passive Perception. See also @UUID[.Brc9AnUXBeg0MTX6]{Passive Perception}.",
+        "Languages. This entry lists any languages the monster knows.",
+        "CR. Challenge Rating summarizes the threat a monster poses and is detailed in the Monster Manual. The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow. Some creatures that are created by magic have no CR. See also @UUID[.BMoxmXB8pX6bOBus]{Challenge Rating} and @UUID[.DksBBFbqPY2FCReT]{Experience Points}.",
+        "Traits. The monster’s traits, if any, are features that are active at all times or in certain situations.",
+        "Actions. The monster can take these actions in addition to those detailed in this glossary. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbActions000000]{Actions}.",
+        "Bonus Actions. If the monster has Bonus Action options, they are listed in this section.",
+        "Reactions. If the monster can take special Reactions, those are listed in this section.",
+        "Attack Notation. The entry for a monster’s attack starts by identifying whether the attack is a melee or a ranged attack and then provides the attack roll’s bonus, its reach or range, and what happens on a hit. An attack is against one target unless its entry says otherwise.",
+        "Saving Throw Effect Notation. If an effect forces a saving throw, the effect’s entry starts by identifying the kind of saving throw required and then provides the save’s DC, a description of which creatures must make the save, and what happens on a failed or a successful save.",
+        "Damage Notation. A stat block usually provides both a static number and a die expression for each instance of damage. For example, an attack might deal 4 (1d4 + 2) damage on a hit. The GM determines whether you use the static number or the die expression in parentheses; you don’t use both."
+      ],
+      "content_html": "<p>A stat block contains the game statistics of a monster. Each stat block includes the following information presented after the monster’s name.</p><p><em><strong>Size. </strong></em>A monster is Tiny, Small, Medium, Large, Huge, or Gargantuan.</p><p><em><strong>Creature Type. </strong></em>This entry notes the family of beings a monster belongs to, along with any descriptive tags.</p><p><em><strong>Alignment. </strong></em>An alignment is suggested for the monster, with the DM determining its actual alignment.</p><p><em><strong>AC, Initiative, and HP. </strong></em>These entries give the monster’s Armor Class, Initiative, and Hit Points, which are detailed in chapter 1. In parentheses after the Hit Points, the monster’s Hit Point Dice are provided, along with the contribution of its Constitution, if any, to its Hit Points. Following the Initiative modifier is an Initiative score. Some creatures that are created by magic lack Hit Dice and Initiative information.</p><p><em><strong>Speed.</strong></em> Here the monster’s Speed is provided, along with any special speeds.</p><p><em><strong>Ability Scores. </strong></em>A table provides the monster’s ability scores, modifiers, and saving throw modifiers, all of which are detailed in @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam.JournalEntryPage.sIPPXW1mYE3O4xdc]{chapter 1}.</p><p><em><strong>Skills. </strong></em>This entry lists the monster’s skill proficiencies, if any. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbD20Tests00000.JournalEntryPage.zU9fgQbLaVbJvPRX]{Proficiency}.</p><p><em><strong>Resistances and Vulnerabilities. </strong></em>These entries list the monster’s Resistances and Vulnerabilities, if any. <em>See also</em> &amp;Reference[Resistance] and @UUID[.bCU0JHnmZsZf1SHp]{Vulnerability}.</p><p><em><strong>Immunities. </strong></em>This section lists the monster’s damage and condition Immunities, if any. <em>See also</em> @UUID[.vuK6Tth0DFgU74A6]{Immunity}.</p><p><em><strong>Gear.</strong></em> If the monster has any equipment that can be given away or retrieved, it’s listed in this entry.</p><p><em><strong>Senses. </strong></em>This entry lists the monster’s special senses, such as Darkvision, and its Passive Perception. <em>See also</em> @UUID[.Brc9AnUXBeg0MTX6]{Passive Perception}.</p><p><em><strong>Languages.</strong></em> This entry lists any languages the monster knows.</p><p><em><strong>CR.</strong></em> Challenge Rating summarizes the threat a monster poses and is detailed in the <em>Monster Manual</em>. The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow. Some creatures that are created by magic have no CR. <em>See also</em> @UUID[.BMoxmXB8pX6bOBus]{Challenge Rating} and @UUID[.DksBBFbqPY2FCReT]{Experience Points}.</p><p><em><strong>Traits. </strong></em>The monster’s traits, if any, are features that are active at all times or in certain situations.</p><p><em><strong>Actions.</strong></em> The monster can take these actions in addition to those detailed in this glossary. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbActions000000]{Actions}.</p><p><em><strong>Bonus Actions.</strong></em> If the monster has Bonus Action options, they are listed in this section.</p><p><em><strong>Reactions. </strong></em>If the monster can take special Reactions, those are listed in this section.</p><p><em><strong>Attack Notation.</strong></em> The entry for a monster’s attack starts by identifying whether the attack is a melee or a ranged attack and then provides the attack roll’s bonus, its reach or range, and what happens on a hit. An attack is against one target unless its entry says otherwise.</p><p><em><strong>Saving Throw Effect Notation.</strong></em> If an effect forces a saving throw, the effect’s entry starts by identifying the kind of saving throw required and then provides the save’s DC, a description of which creatures must make the save, and what happens on a failed or a successful save.</p><p><em><strong>Damage Notation.</strong></em> A stat block usually provides both a static number and a die expression for each instance of damage. For example, an attack might deal 4 (1d4 + 2) damage on a hit. The GM determines whether you use the static number or the die expression in parentheses; you don’t use both.</p>"
+    },
+    {
+      "index": "surprise",
+      "id": "8gPSPovZD9reqFet",
+      "name": "Surprise",
+      "type": "rule",
+      "sort": 14100000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.YmOt8HderKveA19K inline]",
+        "See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{chapter 1 (Combat)}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.YmOt8HderKveA19K inline]</p><p><em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbCombat0000000]{chapter 1 (Combat)}.</p>"
+    },
+    {
+      "index": "target",
+      "id": "6YfqSe0sucLuGL3j",
+      "name": "Target",
+      "type": "rule",
+      "sort": 14400000,
+      "paragraphs": [
+        "A target is the creature or object targeted by an attack roll, forced to make a saving throw by an effect, or selected to receive the effects of a spell or another phenomenon."
+      ],
+      "content_html": "<p>A target is the creature or object targeted by an attack roll, forced to make a saving throw by an effect, or selected to receive the effects of a spell or another phenomenon.</p>"
+    },
+    {
+      "index": "telepathy",
+      "id": "gMTdiYGmbiwDyymt",
+      "name": "Telepathy",
+      "type": "rule",
+      "sort": 14500000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.geTidcFIYWuUvD2L inline]"
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.geTidcFIYWuUvD2L inline]</p>"
+    },
+    {
+      "index": "teleportation",
+      "id": "uTXM3EuuC8wNemmc",
+      "name": "Teleportation",
+      "type": "rule",
+      "sort": 14600000,
+      "paragraphs": [
+        "Teleportation is a special kind of magical transportation. If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.",
+        "When you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.",
+        "If the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.",
+        "The description of a teleportation effect tells you if you must see the teleportation’s destination."
+      ],
+      "content_html": "<p>Teleportation is a special kind of magical transportation. If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.</p><p>When you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.</p><p>If the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.</p><p>The description of a teleportation effect tells you if you must see the teleportation’s destination.</p>"
+    },
+    {
+      "index": "temporary-hit-points",
+      "id": "qOKtJt8CB2qRaTNA",
+      "name": "Temporary Hit Points",
+      "type": "rule",
+      "sort": 14700000,
+      "paragraphs": [
+        "Temporary Hit Points are granted by certain effects and act as a buffer against losing real @UUID[.sh9GYVdAi8hfH1ru]{Hit Points}. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>Temporary Hit Points are granted by certain effects and act as a buffer against losing real @UUID[.sh9GYVdAi8hfH1ru]{Hit Points}. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "unoccupied-space",
+      "id": "y6TV02fVzqpJBvDt",
+      "name": "Unoccupied Space",
+      "type": "rule",
+      "sort": 15100000,
+      "paragraphs": [
+        "A space is unoccupied if no creatures are in it and it isn’t completely filled by objects."
+      ],
+      "content_html": "<p>A space is unoccupied if no creatures are in it and it isn’t completely filled by objects.</p>"
+    },
+    {
+      "index": "vulnerability",
+      "id": "bCU0JHnmZsZf1SHp",
+      "name": "Vulnerability",
+      "type": "rule",
+      "sort": 15300000,
+      "paragraphs": [
+        "If you have Vulnerability to a damage type, damage of that type is doubled against you. Vulnerability is applied only once to an instance of damage. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}."
+      ],
+      "content_html": "<p>If you have Vulnerability to a damage type, damage of that type is doubled against you. Vulnerability is applied only once to an instance of damage. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbDamageAndHeal]{Damage and Healing}.</p>"
+    },
+    {
+      "index": "weapon",
+      "id": "dSMhNOxGIJglsjnX",
+      "name": "Weapon",
+      "type": "rule",
+      "sort": 15400000,
+      "paragraphs": [
+        "A weapon is an object that is in the Simple or Martial weapon category. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.dWQ2ZTLOuKr3PMAx]{Weapons}."
+      ],
+      "content_html": "<p>A weapon is an object that is in the Simple or Martial weapon category. <em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.dWQ2ZTLOuKr3PMAx]{Weapons}.</p>"
+    },
+    {
+      "index": "weapon-attack",
+      "id": "P2NwvmLhmPGu7iQB",
+      "name": "Weapon Attack",
+      "type": "rule",
+      "sort": 15500000,
+      "paragraphs": [
+        "A weapon attack is an attack roll made with a weapon. See also @UUID[.dSMhNOxGIJglsjnX]{Weapon}."
+      ],
+      "content_html": "<p>A weapon attack is an attack roll made with a weapon. See also @UUID[.dSMhNOxGIJglsjnX]{Weapon}.</p>"
+    },
+    {
+      "index": "glossary-conventions",
+      "id": "FvDonO0qOQWp1RIw",
+      "name": "Glossary Conventions",
+      "type": "text",
+      "sort": 8800000,
+      "paragraphs": [
+        "“You.” The game’s rules—in this glossary and elsewhere—often talk about something happening to you in the game world. That “you” refers to the creature or object that the rule applies to in a particular moment of play. For example, the “you” in the Prone condition is a creature that currently has that condition.",
+        "No Obsolete Terms. The glossary contains definitions of current rules terms only. If you’re looking for a term from an earlier version of the fifth edition rules, consult the index.",
+        "Abbreviations. The abbreviations listed below appear in this glossary and elsewhere in the rules.",
+        "AbbreviationMeaningACArmor ClassCConcentrationCEChaotic EvilCGChaotic GoodCha.CharismaCNChaotic NeutralCon.ConstitutionCPCopper Piece(s)CRChallenge RatingDCDifficulty ClassDex.DexterityDMDungeon MasterEPElectrum Piece(s)GPGold Piece(s)HPHit Point(s)Int.IntelligenceLELawful EvilLGLawful GoodLNLawful NeutralMMaterial componentNNeutralNENeutral EvilNGNeutral GoodNPCNonplayer characterPBProficiency BonusPPPlatinum Piece(s)RRitualSSomatic componentSPSilver Piece(s)Str.StrengthVVerbal componentWis.WisdomXPExperience Point(s)"
+      ],
+      "content_html": "<p><strong>“You.”</strong> The game’s rules—in this glossary and elsewhere—often talk about something happening to you in the game world. That “you” refers to the creature or object that the rule applies to in a particular moment of play. For example, the “you” in the Prone condition is a creature that currently has that condition.</p><p><strong>No Obsolete Terms.</strong> The glossary contains definitions of current rules terms only. If you’re looking for a term from an earlier version of the fifth edition rules, consult the index.</p><p><strong>Abbreviations.</strong> The abbreviations listed below appear in this glossary and elsewhere in the rules.</p><table><thead><tr><th>Abbreviation</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>AC</strong></td><td>Armor Class</td></tr><tr><td><strong>C</strong></td><td>Concentration</td></tr><tr><td><strong>CE</strong></td><td>Chaotic Evil</td></tr><tr><td><strong>CG</strong></td><td>Chaotic Good</td></tr><tr><td><strong>Cha.</strong></td><td>Charisma</td></tr><tr><td><strong>CN</strong></td><td>Chaotic Neutral</td></tr><tr><td><strong>Con.</strong></td><td>Constitution</td></tr><tr><td><strong>CP</strong></td><td>Copper Piece(s)</td></tr><tr><td><strong>CR</strong></td><td>Challenge Rating</td></tr><tr><td><strong>DC</strong></td><td>Difficulty Class</td></tr><tr><td><strong>Dex.</strong></td><td>Dexterity</td></tr><tr><td><strong>DM</strong></td><td>Dungeon Master</td></tr><tr><td><strong>EP</strong></td><td>Electrum Piece(s)</td></tr><tr><td><strong>GP</strong></td><td>Gold Piece(s)</td></tr><tr><td><strong>HP</strong></td><td>Hit Point(s)</td></tr><tr><td><strong>Int.</strong></td><td>Intelligence</td></tr><tr><td><strong>LE</strong></td><td>Lawful Evil</td></tr><tr><td><strong>LG</strong></td><td>Lawful Good</td></tr><tr><td><strong>LN</strong></td><td>Lawful Neutral</td></tr><tr><td><strong>M</strong></td><td>Material component</td></tr><tr><td><strong>N</strong></td><td>Neutral</td></tr><tr><td><strong>NE</strong></td><td>Neutral Evil</td></tr><tr><td><strong>NG</strong></td><td>Neutral Good</td></tr><tr><td><strong>NPC</strong></td><td>Nonplayer character</td></tr><tr><td><strong>PB</strong></td><td>Proficiency Bonus</td></tr><tr><td><strong>PP</strong></td><td>Platinum Piece(s)</td></tr><tr><td><strong>R</strong></td><td>Ritual</td></tr><tr><td><strong>S</strong></td><td>Somatic component</td></tr><tr><td><strong>SP</strong></td><td>Silver Piece(s)</td></tr><tr><td><strong>Str.</strong></td><td>Strength</td></tr><tr><td><strong>V</strong></td><td>Verbal component</td></tr><tr><td><strong>Wis.</strong></td><td>Wisdom</td></tr><tr><td><strong>XP</strong></td><td>Experience Point(s)</td></tr></tbody></table>"
+    },
+    {
+      "index": "carrying-capacity",
+      "id": "xk9KqsS54w8EpbZn",
+      "name": "Carrying Capacity",
+      "type": "rule",
+      "sort": 3800000,
+      "paragraphs": [
+        "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the Carrying Capacity table. The table also shows the maximum weight you can drag, lift, or push.",
+        "While dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.",
+        "Carrying CapacityCreature Size",
+        "Carry",
+        "Drag/Lift/Push",
+        "Tiny",
+        "Strength x 7.5 lb.",
+        "Strength x 15 lb.",
+        "Small/Medium",
+        "Strength x 15 lb.",
+        "Strength x 30 lb.",
+        "Large",
+        "Strength x 30 lb.",
+        "Strength x 60 lb.",
+        "Huge",
+        "Strength x 60 lb.",
+        "Strength x 120 lb.",
+        "Gargantuan",
+        "Strength x 120 lb.",
+        "Strength x 240 lb."
+      ],
+      "content_html": "<p>Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the Carrying Capacity table. The table also shows the maximum weight you can drag, lift, or push.</p><p>While dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.</p><table><caption>Carrying Capacity</caption><thead><tr><td><p>Creature Size</p></td><td><p>Carry</p></td><td><p>Drag/Lift/Push</p></td></tr></thead><tbody><tr><td><p>Tiny</p></td><td><p>Strength x 7.5 lb.</p></td><td><p>Strength x 15 lb.</p></td></tr><tr><td><p>Small/Medium</p></td><td><p>Strength x 15 lb.</p></td><td><p>Strength x 30 lb.</p></td></tr><tr><td><p>Large</p></td><td><p>Strength x 30 lb.</p></td><td><p>Strength x 60 lb.</p></td></tr><tr><td><p>Huge</p></td><td><p>Strength x 60 lb.</p></td><td><p>Strength x 120 lb.</p></td></tr><tr><td><p>Gargantuan</p></td><td><p>Strength x 120 lb.</p></td><td><p>Strength x 240 lb.</p></td></tr></tbody></table>"
+    },
+    {
+      "index": "long-jump",
+      "id": "NcSh8lVwlfk58VAO",
+      "name": "Long Jump",
+      "type": "rule",
+      "sort": 10425000,
+      "paragraphs": [
+        "When you make a Long Jump, you leap horizontally a number of feet up to your Strength score if you move at least 10 feet immediately before the jump. When you make a standing Long Jump, you can leap only half that distance. Either way, each foot you jump costs a foot of movement.",
+        "If you land in &Reference[difficult-terrain], you must succeed on a [[/check 10 acr]] check or have the &Reference[Prone] condition.",
+        "This Long Jump rule assumes that the height of the jump doesn’t matter, such as a jump across a stream or chasm. At your DM’s option, you must succeed on a [[/check 10 ath]] check to clear a low obstacle (no taller than a quarter of the jump’s distance), such as a hedge or low wall. Otherwise, you hit the obstacle."
+      ],
+      "content_html": "<p>When you make a Long Jump, you leap horizontally a number of feet up to your Strength score if you move at least 10 feet immediately before the jump. When you make a standing Long Jump, you can leap only half that distance. Either way, each foot you jump costs a foot of movement.</p><p>If you land in &amp;Reference[difficult-terrain], you must succeed on a [[/check 10 acr]] check or have the &amp;Reference[Prone] condition.</p><p>This Long Jump rule assumes that the height of the jump doesn’t matter, such as a jump across a stream or chasm. At your DM’s option, you must succeed on a [[/check 10 ath]] check to clear a low obstacle (no taller than a quarter of the jump’s distance), such as a hedge or low wall. Otherwise, you hit the obstacle.</p>"
+    },
+    {
+      "index": "high-jump",
+      "id": "sy6xon5AxuIZV1ca",
+      "name": "High Jump",
+      "type": "rule",
+      "sort": 10412500,
+      "paragraphs": [
+        "When you make a High Jump, you leap into the air a number of feet equal to 3 plus your Strength modifier (minimum of 0 feet) if you move at least 10 feet on foot immediately before the jump. When you make a standing High Jump, you can jump only half that distance. Either way, each foot of the jump costs a foot of movement.",
+        "You can extend your arms half your height above yourself during the jump. Thus, you can reach a distance equal to the height of the jump plus 1½ times your height."
+      ],
+      "content_html": "<p>When you make a High Jump, you leap into the air a number of feet equal to 3 plus your Strength modifier (minimum of 0 feet) if you move at least 10 feet on foot immediately before the jump. When you make a standing High Jump, you can jump only half that distance. Either way, each foot of the jump costs a foot of movement.</p><p>You can extend your arms half your height above yourself during the jump. Thus, you can reach a distance equal to the height of the jump plus 1½ times your height.</p>"
+    },
+    {
+      "index": "cantrip",
+      "id": "3RRDH9XNKf1LHgWl",
+      "name": "Cantrip",
+      "type": "rule",
+      "sort": 3700000,
+      "paragraphs": [
+        "@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.jZD5mCTnMPJ9jW67 inline]",
+        "See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000]{chapter 7}."
+      ],
+      "content_html": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixDRule.JournalEntryPage.jZD5mCTnMPJ9jW67 inline]</p><p><em>See also</em> @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000]{chapter 7}.</p>"
+    },
+    {
+      "index": "attack-roll",
+      "id": "W8uJrd1D8NeOuawp",
+      "name": "Attack Roll",
+      "type": "rule",
+      "sort": 2600000,
+      "paragraphs": [
+        "An attack roll is a &Reference[D20 Test] that represents making an attack with a weapon, an Unarmed Strike, or a spell."
+      ],
+      "content_html": "<p>An attack roll is a &amp;Reference[D20 Test] that represents making an attack with a weapon, an Unarmed Strike, or a spell.</p>"
+    },
+    {
+      "index": "armor-training",
+      "id": "HBCtsDayuQfxwqV9",
+      "name": "Armor Training",
+      "type": "rule",
+      "sort": 2500000,
+      "paragraphs": [
+        "Armor training allows you to use armor of a certain category without the following drawbacks. If you wear Light, Medium, or Heavy armor and lack training with it, you have &Reference[disadvantage] on any &Reference[D20 Test] that involves Strength or Dexterity, and you can’t cast spells. If you use a Shield and lack training with it, you don’t gain its AC bonus. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.flJnTPWIwTrAzqTi]{Armor}."
+      ],
+      "content_html": "<p>Armor training allows you to use armor of a certain category without the following drawbacks. If you wear Light, Medium, or Heavy armor and lack training with it, you have &amp;Reference[disadvantage] on any &amp;Reference[D20 Test] that involves Strength or Dexterity, and you can’t cast spells. If you use a Shield and lack training with it, you don’t gain its AC bonus. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbEquipment0000.JournalEntryPage.flJnTPWIwTrAzqTi]{Armor}.</p>"
+    },
+    {
+      "index": "armor-class",
+      "id": "IL73rq9BlQowdon7",
+      "name": "Armor Class",
+      "type": "rule",
+      "sort": 2400000,
+      "paragraphs": [
+        "An Armor Class (AC) is the target number for an attack roll. AC represents how difficult it is to hit a target.",
+        "Your base AC calculation is 10 plus your Dexterity modifier. If a rule gives you another base AC calculation, you choose which calculation to use; you can’t use more than one. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam]{Attack Roll}."
+      ],
+      "content_html": "<p>An Armor Class (AC) is the target number for an attack roll. AC represents how difficult it is to hit a target.</p><p>Your base AC calculation is 10 plus your Dexterity modifier. If a rule gives you another base AC calculation, you choose which calculation to use; you can’t use more than one. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbPlayingTheGam]{Attack Roll}.</p>"
+    },
+    {
+      "index": "attunement",
+      "id": "CpD1zLLviYjS9FBX",
+      "name": "Attunement",
+      "type": "rule",
+      "sort": 2800000,
+      "paragraphs": [
+        "Some magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. A creature can have Attunement with no more than three magic items at a time. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbMagicItems000]{Magic Items}."
+      ],
+      "content_html": "<p>Some magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. A creature can have Attunement with no more than three magic items at a time. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbMagicItems000]{Magic Items}.</p>"
+    },
+    {
+      "index": "bloodied",
+      "id": "shZaSIlFPpHufPFn",
+      "name": "Bloodied",
+      "type": "rule",
+      "sort": 3000000,
+      "paragraphs": [
+        "A creature is Bloodied while it has half its Hit Points or fewer remaining."
+      ],
+      "content_html": "<p>A creature is Bloodied while it has half its Hit Points or fewer remaining.</p>"
+    },
+    {
+      "index": "breaking-objects",
+      "id": "RXTLVpAwcGm1qtKf",
+      "name": "Breaking Objects",
+      "type": "rule",
+      "sort": 3200000,
+      "paragraphs": [
+        "Objects can be harmed by attacks and by some spells, using the rules below. If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the @UUID[.f4fZHwBvpbpzRyn4]{Attack} or @UUID[.UDlogfdiT2uYEZz4]{Utilize} action.",
+        "Armor Class. The Object Armor Class table suggests ACs for various substances.",
+        "Object Armor ClassAC",
+        "Substance",
+        "11",
+        "Cloth, paper, rope",
+        "13",
+        "Crystal, glass, ice",
+        "15",
+        "Wood",
+        "17",
+        "Stone",
+        "19",
+        "Iron, steel",
+        "21",
+        "Mithral",
+        "23",
+        "Adamantine",
+        "Hit Points. An object is destroyed when it has 0 Hit Points. The Object Hit Points table suggests Hit Points for fragile and resilient objects that are Large or smaller. To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section’s Hit Points separately. The GM determines whether destroying part of an object causes the whole thing to collapse.",
+        "Object Hit PointsSize",
+        "Fragile",
+        "Resilient",
+        "Tiny (bottle, lock)",
+        "2 (1d4)",
+        "5 ([[/r 2d4]])",
+        "Small (chest, lute)",
+        "3 (1d6)",
+        "10 ([[/r 3d6]])",
+        "Medium (barrel, chandelier)",
+        "4 (1d8)",
+        "18 ([[/r 4d8]])",
+        "Large (cart, dining table)",
+        "5 (1d10)",
+        "27 ([[/r 5d10]])",
+        "Damage Types and Objects. Objects have Immunity to Poison and Psychic damage. The GM might decide that some damage types are more or less effective against an object. For example, Bludgeoning damage works well for smashing things but not for cutting. Paper or cloth objects might have Vulnerability to Fire damage.",
+        "No Ability Scores. An object lacks ability scores unless a rule assigns scores to the object. Without ability scores, an object can’t make ability checks, and it fails all saving throws."
+      ],
+      "content_html": "<p>Objects can be harmed by attacks and by some spells, using the rules below. If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the @UUID[.f4fZHwBvpbpzRyn4]{Attack} or @UUID[.UDlogfdiT2uYEZz4]{Utilize} action.</p><p><em><strong>Armor Class.</strong></em> The Object Armor Class table suggests ACs for various substances.</p><table><caption>Object Armor Class</caption><thead><tr><th><p>AC</p></th><th><p>Substance</p></th></tr></thead><tbody><tr><td><p>11</p></td><td><p>Cloth, paper, rope</p></td></tr><tr><td><p>13</p></td><td><p>Crystal, glass, ice</p></td></tr><tr><td><p>15</p></td><td><p>Wood</p></td></tr><tr><td><p>17</p></td><td><p>Stone</p></td></tr><tr><td><p>19</p></td><td><p>Iron, steel</p></td></tr><tr><td><p>21</p></td><td><p>Mithral</p></td></tr><tr><td><p>23</p></td><td><p>Adamantine</p></td></tr></tbody></table><p><em><strong>Hit Points.</strong></em> An object is destroyed when it has 0 Hit Points. The Object Hit Points table suggests Hit Points for fragile and resilient objects that are Large or smaller. To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section’s Hit Points separately. The GM determines whether destroying part of an object causes the whole thing to collapse.</p><table><caption>Object Hit Points</caption><thead><tr><th><p>Size</p></th><th><p>Fragile</p></th><th><p>Resilient</p></th></tr></thead><tbody><tr><td><p>Tiny (bottle, lock)</p></td><td><p>2 (1d4)</p></td><td><p>5 ([[/r 2d4]])</p></td></tr><tr><td><p>Small (chest, lute)</p></td><td><p>3 (1d6)</p></td><td><p>10 ([[/r 3d6]])</p></td></tr><tr><td><p>Medium (barrel, chandelier)</p></td><td><p>4 (1d8)</p></td><td><p>18 ([[/r 4d8]])</p></td></tr><tr><td><p>Large (cart, dining table)</p></td><td><p>5 (1d10)</p></td><td><p>27 ([[/r 5d10]])</p></td></tr></tbody></table><p><em><strong>Damage Types and Objects.</strong></em> Objects have Immunity to Poison and Psychic damage. The GM might decide that some damage types are more or less effective against an object. For example, Bludgeoning damage works well for smashing things but not for cutting. Paper or cloth objects might have Vulnerability to Fire damage.</p><p><em><strong>No Ability Scores.</strong></em> An object lacks ability scores unless a rule assigns scores to the object. Without ability scores, an object can’t make ability checks, and it fails all saving throws.</p>"
+    },
+    {
+      "index": "campaign",
+      "id": "jxgi4EtQj7G0LkD9",
+      "name": "Campaign",
+      "type": "rule",
+      "sort": 3600000,
+      "paragraphs": [
+        "A campaign is a series of adventures. See also @UUID[.e3DmlL7JEghucu8V]{Adventure}."
+      ],
+      "content_html": "<p>A campaign is a series of adventures. See also @UUID[.e3DmlL7JEghucu8V]{Adventure}.</p>"
+    },
+    {
+      "index": "challenge-rating",
+      "id": "BMoxmXB8pX6bOBus",
+      "name": "Challenge Rating",
+      "type": "rule",
+      "sort": 3900000,
+      "paragraphs": [
+        "Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters. Compare a monster’s CR to the characters’ level. If the CR is higher, the monster is likely a danger. If the CR is lower, the monster likely poses little threat. But circumstances and the number of player characters can significantly alter how threatening a monster is in actual play. The Game Master’s Guide provides guidance to the GM on using CR while planning potential combat encounters. See also @UUID[.St3ANvrKOgxECnTn]{Stat Block}."
+      ],
+      "content_html": "<p>Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters. Compare a monster’s CR to the characters’ level. If the CR is higher, the monster is likely a danger. If the CR is lower, the monster likely poses little threat. But circumstances and the number of player characters can significantly alter how threatening a monster is in actual play. The Game Master’s Guide provides guidance to the GM on using CR while planning potential combat encounters. See also @UUID[.St3ANvrKOgxECnTn]{Stat Block}.</p>"
+    },
+    {
+      "index": "character-sheet",
+      "id": "hTXYRfVTvcL9LYiB",
+      "name": "Character Sheet",
+      "type": "rule",
+      "sort": 4000000,
+      "paragraphs": [
+        "A character sheet is a paper or digital record that you use to track your character’s information. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar]{chapter 2}."
+      ],
+      "content_html": "<p>A character sheet is a paper or digital record that you use to track your character’s information. See also @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar]{chapter 2}.</p>"
+    }
+  ],
+  "url": "/assets/atlas/rules/24/json/appendices/rules-glossary.json",
+  "updated_at": "2026-07-13T06:31:43.242Z"
+}

@@ -1,0 +1,65 @@
+{
+  "index": "warlock",
+  "id": "phbWarlock000000",
+  "name": "Warlock",
+  "pages": [
+    {
+      "index": "warlock",
+      "id": "znue6EaGDDXgeQb0",
+      "name": "Warlock",
+      "type": "class",
+      "sort": 100000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "fiend-patron",
+      "id": "4km6CWhHArWi0klF",
+      "name": "Fiend Patron",
+      "type": "subclass",
+      "sort": 400000,
+      "paragraphs": [],
+      "content_html": ""
+    },
+    {
+      "index": "eldritch-invocation-options",
+      "id": "FA4hxx49eazhISIt",
+      "name": "Eldritch Invocation Options",
+      "type": "text",
+      "sort": 600000,
+      "paragraphs": [
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvAgonizingB]{Agonizing Blast}@Embed[Compendium.dnd5e.classes24.Item.phbinvAgonizingB cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvArmorofSha]{Armor of Shadows}@Embed[Compendium.dnd5e.classes24.Item.phbinvArmorofSha cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvAscendantS]{Ascendant Step}@Embed[Compendium.dnd5e.classes24.Item.phbinvAscendantS cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvDevilsSigh]{Devil's Sight}@Embed[Compendium.dnd5e.classes24.Item.phbinvDevilsSigh cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvDevouringB]{Devouring Blade}@Embed[Compendium.dnd5e.classes24.Item.phbinvDevouringB cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchMi]{Eldritch Mind}@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchMi cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchSm]{Eldritch Smite}@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchSm cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchSp]{Eldritch Spear}@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchSp cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvFiendishVi]{Fiendish Vigor}@Embed[Compendium.dnd5e.classes24.Item.phbinvFiendishVi cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvGazeofTwoM]{Gaze of Two Minds}@Embed[Compendium.dnd5e.classes24.Item.phbinvGazeofTwoM cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvGiftoftheD]{Gift of the Depths}@Embed[Compendium.dnd5e.classes24.Item.phbinvGiftoftheD cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvGiftoftheP]{Gift of the Protectors}@Embed[Compendium.dnd5e.classes24.Item.phbinvGiftoftheP cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvInvestment]{Investment of the Chain Master}@Embed[Compendium.dnd5e.classes24.Item.phbinvInvestment cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvLessonsoft]{Lessons of the First Ones}@Embed[Compendium.dnd5e.classes24.Item.phbinvLessonsoft cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvLifedrinke]{Lifedrinker}@Embed[Compendium.dnd5e.classes24.Item.phbinvLifedrinke cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvMaskofMany]{Mask of Many Faces}@Embed[Compendium.dnd5e.classes24.Item.phbinvMaskofMany cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvMasterofMy]{Master of Myriad Forms}@Embed[Compendium.dnd5e.classes24.Item.phbinvMasterofMy cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvMistyVisio]{Misty Visions}@Embed[Compendium.dnd5e.classes24.Item.phbinvMistyVisio cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvOnewithSha]{One with Shadows}@Embed[Compendium.dnd5e.classes24.Item.phbinvOnewithSha cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvOtherworld]{Otherworldly Leap}@Embed[Compendium.dnd5e.classes24.Item.phbinvOtherworld cite=false caption=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvPactBlade0]{Pact of the Blade}@Embed[Compendium.dnd5e.classes24.Item.phbinvPactBlade0 caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvPactChain0]{Pact of the Chain}@Embed[Compendium.dnd5e.classes24.Item.phbinvPactChain0 caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pact of the Tome}@Embed[Compendium.dnd5e.classes24.Item.phbinvPactTome00 caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvRepellingB]{Repelling Blast}@Embed[Compendium.dnd5e.classes24.Item.phbinvRepellingB caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvThirstingB]{Thirsting Blade}@Embed[Compendium.dnd5e.classes24.Item.phbinvThirstingB caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvVisionsOfD]{Visions of Distant Realms}@Embed[Compendium.dnd5e.classes24.Item.phbinvVisionsOfD caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvWhispersOf]{Whispers of the Grave}@Embed[Compendium.dnd5e.classes24.Item.phbinvWhispersOf caption=false cite=false]",
+        "@UUID[Compendium.dnd5e.classes24.Item.phbinvWitchSight]{Witch Sight}@Embed[Compendium.dnd5e.classes24.Item.phbinvWitchSight caption=false cite=false]"
+      ],
+      "content_html": "<div class=\"hide-secrets\"><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvAgonizingB]{Agonizing Blast}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvAgonizingB cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvArmorofSha]{Armor of Shadows}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvArmorofSha cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvAscendantS]{Ascendant Step}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvAscendantS cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvDevilsSigh]{Devil's Sight}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvDevilsSigh cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvDevouringB]{Devouring Blade}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvDevouringB cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchMi]{Eldritch Mind}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchMi cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchSm]{Eldritch Smite}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchSm cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvEldritchSp]{Eldritch Spear}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvEldritchSp cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvFiendishVi]{Fiendish Vigor}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvFiendishVi cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvGazeofTwoM]{Gaze of Two Minds}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvGazeofTwoM cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvGiftoftheD]{Gift of the Depths}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvGiftoftheD cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvGiftoftheP]{Gift of the Protectors}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvGiftoftheP cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvInvestment]{Investment of the Chain Master}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvInvestment cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvLessonsoft]{Lessons of the First Ones}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvLessonsoft cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvLifedrinke]{Lifedrinker}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvLifedrinke cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvMaskofMany]{Mask of Many Faces}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvMaskofMany cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvMasterofMy]{Master of Myriad Forms}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvMasterofMy cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvMistyVisio]{Misty Visions}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvMistyVisio cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvOnewithSha]{One with Shadows}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvOnewithSha cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvOtherworld]{Otherworldly Leap}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvOtherworld cite=false caption=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvPactBlade0]{Pact of the Blade}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvPactBlade0 caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvPactChain0]{Pact of the Chain}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvPactChain0 caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pact of the Tome}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvPactTome00 caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvRepellingB]{Repelling Blast}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvRepellingB caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvThirstingB]{Thirsting Blade}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvThirstingB caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvVisionsOfD]{Visions of Distant Realms}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvVisionsOfD caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvWhispersOf]{Whispers of the Grave}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvWhispersOf caption=false cite=false]</p><hr /><h2>@UUID[Compendium.dnd5e.classes24.Item.phbinvWitchSight]{Witch Sight}</h2><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvWitchSight caption=false cite=false]</p></div>"
+    }
+  ],
+  "url": "/assets/atlas/rules/24/json/chapter-3/warlock.json",
+  "updated_at": "2026-07-13T06:31:43.269Z"
+}
