@@ -1,0 +1,50 @@
+{
+  "index": "manual_of_golems",
+  "name": "manual of golems",
+  "img": "icons/sundries/books/book-symbol-triangle-silver-blue.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "weight": 1,
+      "text": "Clay Golem",
+      "img": "systems/dnd5e/tokens/construct/ClayGolem.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        6,
+        17
+      ],
+      "weight": 1,
+      "text": "Flesh Golem",
+      "img": "/assets/icons/svg/mystery-man.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "weight": 1,
+      "text": "Iron Golem",
+      "img": "systems/dnd5e/tokens/construct/IronGolem.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        19,
+        20
+      ],
+      "weight": 1,
+      "text": "Stone Golem",
+      "img": "systems/dnd5e/tokens/construct/StoneGolem.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/manual_of_golems.json",
+  "updated_at": "2026-07-13T20:16:15.773Z"
+}

@@ -1,0 +1,50 @@
+{
+  "index": "sentient_magic_items_senses",
+  "name": "sentient magic items senses",
+  "img": "icons/weapons/polearms/spear-flared-silver-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Hearing and normal vision out to 30 feet.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Hearing and normal vision out to 60 feet.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Hearing and normal vision out to 120 feet.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Hearing and darkvision out to 120 feet.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/sentient_magic_items_senses.json",
+  "updated_at": "2026-07-13T20:16:15.814Z"
+}

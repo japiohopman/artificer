@@ -1,0 +1,342 @@
+{
+  "index": "deck_of_illusions",
+  "name": "deck of illusions",
+  "img": "icons/sundries/gaming/playing-cards-grey.webp",
+  "description": [
+    "Stat blocks for these creatures (except the card drawer) appear in Monsters."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        3
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmAdultRedDragon]{Adult Red Dragon}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        6
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmArchmage000000]{Archmage}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        9
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmAssassin000000]{Assassin}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        10,
+        12
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmBanditCaptain0]{Bandit Captain}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        13,
+        15
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmBasilisk000000]{Basilisk}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        18
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmBerserker00000]{Berserker}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        19,
+        21
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmBugbearWarrior]{Bugbear Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        22,
+        24
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmCloudGiant0000]{Cloud Giant}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        25,
+        27
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmDruid000000000]{Druid}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        28,
+        30
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Erinyes}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        33
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmEttin000000000]{Ettin}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        34,
+        36
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmFireGiant00000]{Fire Giant}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        37,
+        39
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmFrostGiant0000]{Frost Giant}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        40,
+        42
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmGnollWarrior00]{Gnoll Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        43,
+        45
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmGoblinWarrior0]{Goblin Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        46,
+        48
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmGuardianNaga00]{Guardian Naga}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        49,
+        51
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmHillGiant00000]{Hill Giant}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        52,
+        54
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmHobgoblinWarri]{Hobgoblin Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        55,
+        57
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Incubus}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        58,
+        60
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmIronGolem00000]{Iron Golem}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        63
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmKnight00000000]{Knight}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        64,
+        66
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmKoboldWarrior0]{Kobold Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        67,
+        69
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmLich0000000000]{Lich}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        70,
+        72
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmMedusa00000000]{Medusa}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        73,
+        75
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Night Hag}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        76,
+        78
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmOgre0000000000]{Ogre}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        79,
+        81
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmOni00000000000]{Oni}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        82,
+        84
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmPriest00000000]{Priest}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        85,
+        87
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Succubus}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        88,
+        90
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmTroll000000000]{Troll}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        93
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmWarriorVeteran]{Veteran Warrior}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        94,
+        96
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmWyvern00000000]{Wyvern}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        97,
+        100
+      ],
+      "weight": 1,
+      "text": "The card drawer",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/deck_of_illusions.json",
+  "updated_at": "2026-07-13T20:16:15.875Z"
+}

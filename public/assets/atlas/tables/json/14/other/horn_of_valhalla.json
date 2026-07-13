@@ -1,0 +1,50 @@
+{
+  "index": "horn_of_valhalla",
+  "name": "horn of valhalla",
+  "img": "icons/tools/instruments/flute-simple-wood.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        40
+      ],
+      "weight": 1,
+      "text": "Silver Horn of Valhalla",
+      "img": "icons/tools/instruments/flute-simple-wood.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        41,
+        75
+      ],
+      "weight": 1,
+      "text": "Brass Horn of Valhalla",
+      "img": "icons/tools/instruments/flute-simple-wood.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        76,
+        90
+      ],
+      "weight": 1,
+      "text": "Bronze Horn of Valhalla",
+      "img": "icons/tools/instruments/flute-simple-wood.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "Iron Horn of Valhalla",
+      "img": "icons/tools/instruments/flute-simple-wood.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/horn_of_valhalla.json",
+  "updated_at": "2026-07-13T20:16:15.749Z"
+}

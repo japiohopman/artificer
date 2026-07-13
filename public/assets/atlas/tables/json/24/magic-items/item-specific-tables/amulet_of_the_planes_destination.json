@@ -1,0 +1,60 @@
+{
+  "index": "amulet_of_the_planes_destination",
+  "name": "amulet of the planes destination",
+  "img": "icons/equipment/neck/amulet-carved-stone-purple.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        60
+      ],
+      "weight": 1,
+      "text": "Random location on the plane you named",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "weight": 1,
+      "text": "Random location on an Inner Plane determined by rolling [[/r 1d6]]: on a 1 , the Plane of Air; on a 2 , the Plane of Earth; on a 3 , the Plane of Fire; on a 4 , the Plane of Water; on a 5 , the Feywild; on a 6 , the Shadowfell",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "weight": 1,
+      "text": "Random location on an Outer Plane determined by rolling [[/r 1d8]]: on a 1 , Arborea; on a 2 , Arcadia; on a 3 , the Beastlands; on a 4 , Bytopia; on a 5 , Elysium; on a 6 , Mechanus; on a 7 , Mount Celestia; on an 8 , Ysgard",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "weight": 1,
+      "text": "Random location on an Outer Plane determined by rolling [[/r 1d8]]: on a 1 , the Abyss; on a 2 , Acheron; on a 3 , Carceri; on a 4 , Gehenna; on a 5 , Hades; on a 6 , Limbo; on a 7 , the Nine Hells; on an 8 , Pandemonium",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "Random location on the Astral Plane",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/amulet_of_the_planes_destination.json",
+  "updated_at": "2026-07-13T20:16:15.861Z"
+}

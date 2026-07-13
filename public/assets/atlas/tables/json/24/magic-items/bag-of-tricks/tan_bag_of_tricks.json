@@ -1,0 +1,90 @@
+{
+  "index": "tan_bag_of_tricks",
+  "name": "tan bag of tricks",
+  "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/bag-of-tricks.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Jackal",
+      "img": "modules/dnd-monster-manual/assets/portraits/jackal.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Ape",
+      "img": "modules/dnd-monster-manual/assets/portraits/ape.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Baboon",
+      "img": "modules/dnd-monster-manual/assets/portraits/baboon.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Axe Beak",
+      "img": "modules/dnd-monster-manual/assets/portraits/axe-beak.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Black Bear",
+      "img": "modules/dnd-monster-manual/assets/portraits/black-bear.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Giant Weasel",
+      "img": "modules/dnd-monster-manual/assets/portraits/giant-weasel.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Giant Hyena",
+      "img": "modules/dnd-monster-manual/assets/portraits/hyena.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Tiger",
+      "img": "modules/dnd-monster-manual/assets/portraits/tiger-small.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/bag-of-tricks/tan_bag_of_tricks.json",
+  "updated_at": "2026-07-13T20:16:15.855Z"
+}

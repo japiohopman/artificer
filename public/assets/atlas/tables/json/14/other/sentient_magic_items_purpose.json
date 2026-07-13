@@ -1,0 +1,110 @@
+{
+  "index": "sentient_magic_items_purpose",
+  "name": "sentient magic items purpose",
+  "img": "icons/weapons/polearms/spear-flared-silver-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Aligned: The item seeks to defeat or destroy those of a diametrically opposed alignment. (Such an item is never neutral.)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Bane: The item seeks to defeat or destroy creatures of a particular kind, such as fiends, shapechangers, trolls, or wizards.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Protector: The item seeks to defend a particular race or kind of creature, such as elves or druids.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Crusader: The item seeks to defeat, weaken, or destroy the servants of a particular deity.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Templar: The item seeks to defend the servants and interests of a particular deity.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Destroyer: The item craves destruction and goads its user to fight arbitrarily.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Glory Seeker: The item seeks renown as the greatest magic item in the world, by establishing its user as a famous or notorious figure.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Lore Seeker: The item craves knowledge or is determined to solve a mystery, learn a secret, or unravel a cryptic prophecy.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "Destiny Seeker: The item is convinced that it and its wielder have key roles to play in future events.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "text": "Creator Seeker: The item seeks its creator and wants to understand why it was created.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/sentient_magic_items_purpose.json",
+  "updated_at": "2026-07-13T20:16:15.813Z"
+}

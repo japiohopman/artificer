@@ -1,0 +1,70 @@
+{
+  "index": "necklace_of_prayer_beads",
+  "name": "necklace of prayer beads",
+  "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        6
+      ],
+      "weight": 1,
+      "text": "Bead of Blessing",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        12
+      ],
+      "weight": 1,
+      "text": "Bead of Curing",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        13,
+        16
+      ],
+      "weight": 1,
+      "text": "Bead of Favor",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        17,
+        18
+      ],
+      "weight": 1,
+      "text": "Bead of Smiting",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "weight": 1,
+      "text": "Bead of Summons",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "weight": 1,
+      "text": "Bead of Wind walking",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/necklace_of_prayer_beads.json",
+  "updated_at": "2026-07-13T20:16:15.775Z"
+}

@@ -1,0 +1,42 @@
+{
+  "index": "elven_lineage",
+  "name": "elven lineage",
+  "img": "/assets/icons/svg/items/race.svg",
+  "description": [
+    "You are part of a lineage that grants you supernatural abilities."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Elf, Drow",
+      "img": "systems/dnd5e/icons/species/drow.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Elf, High",
+      "img": "systems/dnd5e/icons/species/elf-high.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Elf, Wood",
+      "img": "systems/dnd5e/icons/species/elf-wood.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/reincarnated-lineages/elven_lineage.json",
+  "updated_at": "2026-07-13T20:16:15.944Z"
+}

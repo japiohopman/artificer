@@ -1,0 +1,50 @@
+{
+  "index": "manual_of_golems_type_time_and_cost",
+  "name": "manual of golems: type, time, and cost",
+  "img": "icons/sundries/books/book-eye-purple.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "weight": 1,
+      "text": "Golem: Clay GolemTime: 30 daysCost: 65,000 GP",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        17
+      ],
+      "weight": 1,
+      "text": "Golem: Flesh GolemTime: 60 daysCost: 50,000 GP",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        18,
+        18
+      ],
+      "weight": 1,
+      "text": "Golem: Iron GolemTime: 120 daysCost: 100,000 GP",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        19,
+        20
+      ],
+      "weight": 1,
+      "text": "Golem: Stone GolemTime: 90 daysCost: 80,000 GP",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/manual_of_golems_type_time_and_cost.json",
+  "updated_at": "2026-07-13T20:16:15.888Z"
+}

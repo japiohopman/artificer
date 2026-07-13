@@ -1,0 +1,110 @@
+{
+  "index": "armor_of_resistance_type",
+  "name": "armor of resistance type",
+  "img": "icons/equipment/chest/breastplate-layered-gold.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.YreDFSu9z9mGCWt1]",
+      "img": "/assets/icons/svg/damage/acid.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.CfxFdUSiXkOUXym6]",
+      "img": "/assets/icons/svg/damage/necrotic.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.LTByr2rsRPBLLOA0]",
+      "img": "/assets/icons/svg/damage/cold.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.VST1qNRu1dHDzkD2]",
+      "img": "/assets/icons/svg/damage/poison.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.MqubvD3XEwB7DRST]",
+      "img": "/assets/icons/svg/damage/fire.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.mmp5O2pZOxJUc2vq]",
+      "img": "/assets/icons/svg/damage/psychic.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.lsPKUk288Jkvahsp]",
+      "img": "/assets/icons/svg/damage/force.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.jyWNVNHLYdxvCOQz]",
+      "img": "/assets/icons/svg/damage/radiant.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.18IZ8X8zpDXyN33T]",
+      "img": "/assets/icons/svg/damage/lightning.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist.ActiveEffect.cbsuJ2tdbBuT5e8U]",
+      "img": "/assets/icons/svg/damage/thunder.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/armor_of_resistance_type.json",
+  "updated_at": "2026-07-13T20:16:15.863Z"
+}

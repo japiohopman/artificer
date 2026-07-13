@@ -1,0 +1,50 @@
+{
+  "index": "level_5_10",
+  "name": "level 5-10",
+  "img": "/assets/icons/svg/d20-grey.svg",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        30
+      ],
+      "weight": 1,
+      "text": "Common",
+      "img": "systems/dnd5e/icons/spell-tiers/spell1.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        81
+      ],
+      "weight": 1,
+      "text": "Uncommon",
+      "img": "systems/dnd5e/icons/spell-tiers/spell2.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        82,
+        98
+      ],
+      "weight": 1,
+      "text": "Rare",
+      "img": "systems/dnd5e/icons/spell-tiers/spell3.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        99,
+        100
+      ],
+      "weight": 1,
+      "text": "Very Rare",
+      "img": "systems/dnd5e/icons/spell-tiers/spell4.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/random-magic-item-rarity-by-level/level_5_10.json",
+  "updated_at": "2026-07-13T20:16:15.918Z"
+}

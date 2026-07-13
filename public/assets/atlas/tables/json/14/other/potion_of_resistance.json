@@ -1,0 +1,110 @@
+{
+  "index": "potion_of_resistance",
+  "name": "potion of resistance",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Potion of Acid Resistance",
+      "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Potion of Cold Resistance",
+      "img": "icons/consumables/potions/bottle-bulb-corked-labeled-blue.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Potion of Fire Resistance",
+      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Potion of Force Resistance",
+      "img": "icons/consumables/potions/bottle-bulb-corked-labeled-blue.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Potion of Lightning Resistance",
+      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Potion of Necrotic Resistance",
+      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Potion of Poison Resistance",
+      "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Potion of Psychic Resistance",
+      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "Potion of Radiant Resistance",
+      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "text": "Potion of Thunder Resistance",
+      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/potion_of_resistance.json",
+  "updated_at": "2026-07-13T20:16:15.786Z"
+}

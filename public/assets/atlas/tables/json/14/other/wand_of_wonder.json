@@ -1,0 +1,230 @@
+{
+  "index": "wand_of_wonder",
+  "name": "wand of wonder",
+  "img": "icons/weapons/staves/staff-skull-brown.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        5
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.yqUDoxk4x0NWG5Bz]{Slow}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        10
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]{Faerie Fire}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        11,
+        15
+      ],
+      "weight": 1,
+      "text": "You are &Reference[Stunned] until the start of your next turn, believing something awesome just happened.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.FSMy6VAjDnXY9vWz]{Gust of Wind}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} on the target you chose. If you didn't target a creature, you instead take [[/damage 1d6 psychic]] damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.TwlD4PLcltv7Xh7j]{Stinking Cloud}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        33
+      ],
+      "weight": 1,
+      "text": "Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        34,
+        36
+      ],
+      "weight": 1,
+      "text": "An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a [[/r 1d100]] to determine which animal appears. On a 01–25, a @UUID[Compendium.dnd5e.monsters.Actor.SBCe2BSa6opTS5M4]{Rhinoceros} appears; on a 26–50, an @UUID[Compendium.dnd5e.monsters.Actor.jLPhaBnMtAbB5dp1]{Elephant} appears; and on a 51–100, a @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{Rat} appears.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        37,
+        46
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{Lightning Bolt}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        47,
+        49
+      ],
+      "weight": 1,
+      "text": "A cloud of 600 oversized butterflies fills a 30‐foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        50,
+        53
+      ],
+      "weight": 1,
+      "text": "You enlarge the target as if you had cast @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce}. If the target can't be affected by that spell, or if you didn't target a creature, you become the target.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        54,
+        58
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.S7VbUetIfVT7B6Eq]{Darkness}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        59,
+        62
+      ],
+      "weight": 1,
+      "text": "Grass grows on the ground in a 60‐foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        63,
+        65
+      ],
+      "weight": 1,
+      "text": "An object of the GM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        66,
+        69
+      ],
+      "weight": 1,
+      "text": "You shrink yourself as if you had cast @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} on yourself.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        70,
+        79
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        80,
+        84
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B]{Invisibility} on yourself.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        85,
+        87
+      ],
+      "weight": 1,
+      "text": "Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        88,
+        90
+      ],
+      "weight": 1,
+      "text": "A stream of [[/r 1d4 * 10]]{1d4 × 10} gems, each worth 1 gp, shoots from the wand's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        95
+      ],
+      "weight": 1,
+      "text": "A burst of colorful shimmering light extends from you in a 30‐foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become &Reference[Blinded] for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        96,
+        97
+      ],
+      "weight": 1,
+      "text": "The target's skin turns bright blue for [[/r 1d10]] days. If you chose a point in space, the creature nearest to that point is affected.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        98,
+        100
+      ],
+      "weight": 1,
+      "text": "If you targeted a creature, it must make a [[/save con 15]] saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly &Reference[Petrified]. On any other failed save, the target is &Reference[Restrained] and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn, becoming Petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell or similar magic.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/wand_of_wonder.json",
+  "updated_at": "2026-07-13T20:16:15.825Z"
+}

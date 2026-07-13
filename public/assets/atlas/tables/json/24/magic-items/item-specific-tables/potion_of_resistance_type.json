@@ -1,0 +1,110 @@
+{
+  "index": "potion_of_resistance_type",
+  "name": "potion of resistance type",
+  "img": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Acid",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Cold",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Fire",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Force",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Lightning",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Necrotic",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Poison",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Psychic",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "Radiant",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "text": "Thunder",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/potion_of_resistance_type.json",
+  "updated_at": "2026-07-13T20:16:15.893Z"
+}

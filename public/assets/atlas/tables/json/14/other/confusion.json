@@ -1,0 +1,50 @@
+{
+  "index": "confusion",
+  "name": "confusion",
+  "img": "icons/magic/air/wind-tornado-cyclone-purple-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "The creature uses all its movement to move in a random direction. To determine the direction, roll a [[/r d8]] and assign a direction to each die face. The creature doesn't take an action this turn.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        6
+      ],
+      "weight": 1,
+      "text": "The creature doesn't move or take actions this turn.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        8
+      ],
+      "weight": 1,
+      "text": "The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        10
+      ],
+      "weight": 1,
+      "text": "The creature can act and move normally.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/confusion.json",
+  "updated_at": "2026-07-13T20:16:15.725Z"
+}

@@ -1,0 +1,100 @@
+{
+  "index": "sub_languages_table",
+  "name": "sub-languages table",
+  "img": "icons/sundries/books/book-open-brown.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Language: Common Sign Language. Origin: Sigil.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Language: Draconic. Origin: Dragons.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        4
+      ],
+      "weight": 1,
+      "text": "Language: Dwarvish. Origin: Dwarves.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        6
+      ],
+      "weight": 1,
+      "text": "Language: Elvish. Origin: Elves.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Language: Giant. Origin: Giants.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Language: Gnomish. Origin: Gnomes.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "Language: Goblin. Origin: Goblinoids.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        10,
+        11
+      ],
+      "weight": 1,
+      "text": "Language: Halfling. Origin: Halflings.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        12,
+        12
+      ],
+      "weight": 1,
+      "text": "Language: Orc. Origin: Orcs.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/creating-a-character/sub_languages_table.json",
+  "updated_at": "2026-07-13T20:16:15.832Z"
+}

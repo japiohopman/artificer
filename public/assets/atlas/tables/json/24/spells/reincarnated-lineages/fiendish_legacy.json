@@ -1,0 +1,42 @@
+{
+  "index": "fiendish_legacy",
+  "name": "fiendish legacy",
+  "img": "/assets/icons/svg/items/race.svg",
+  "description": [
+    "You are the recipient of a legacy that grants you supernatural abilities."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Tiefling, Abyssal",
+      "img": "systems/dnd5e/icons/species/tiefling-abyssal.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Tiefling, Chthonic",
+      "img": "systems/dnd5e/icons/species/tiefling-chthonic.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Tiefling, Infernal",
+      "img": "systems/dnd5e/icons/species/tiefling-infernal.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/reincarnated-lineages/fiendish_legacy.json",
+  "updated_at": "2026-07-13T20:16:15.946Z"
+}

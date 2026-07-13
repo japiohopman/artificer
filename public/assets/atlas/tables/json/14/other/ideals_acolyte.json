@@ -1,0 +1,70 @@
+{
+  "index": "ideals_acolyte",
+  "name": "ideals (acolyte)",
+  "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Tradition. The ancient traditions of worship and sacrifice must be preserved and upheld. (Lawful)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Charity. I always try to help those in need, no matter what the personal cost. (Good)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Power. I hope to one day rise to the top of my faith’s religious hierarchy. (Lawful)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Aspiration. I seek to prove myself worthy of my god’s favor by matching my actions against his or her teachings. (Any)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/ideals_acolyte.json",
+  "updated_at": "2026-07-13T20:16:15.752Z"
+}

@@ -1,0 +1,70 @@
+{
+  "index": "feather_tokens",
+  "name": "feather tokens",
+  "img": "icons/commodities/treasure/token-brass-round.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgAnchorQuaalsF]{Anchor (Uncommon)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-anchor.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        35
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBirdQuaalsFea]{Bird (Rare)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-bird.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        50
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgFanQuaalsFeat]{Fan (Uncommon)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-fan.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        65
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSwanBoatQuaal]{Swan boat (Rare)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-swan-boat.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        66,
+        90
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgTreeQuaalsFea]{Tree (Uncommon)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-tree.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgWhipQuaalsFea]{Whip (Rare)}",
+      "img": "modules/dnd-dungeon-masters-guide/assets/icons/items/quaals-feather-token-whip.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/feather_tokens.json",
+  "updated_at": "2026-07-13T20:16:15.878Z"
+}

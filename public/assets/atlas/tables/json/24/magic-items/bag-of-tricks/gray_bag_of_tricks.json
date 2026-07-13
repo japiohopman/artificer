@@ -1,0 +1,90 @@
+{
+  "index": "gray_bag_of_tricks",
+  "name": "gray bag of tricks",
+  "img": "icons/containers/bags/coinpouch-leather-grey.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Weasel",
+      "img": "modules/dnd-monster-manual/assets/portraits/weasel.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Giant Rat",
+      "img": "modules/dnd-monster-manual/assets/journal-art/rats.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Badger",
+      "img": "modules/dnd-monster-manual/assets/portraits/badger-small.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Boar",
+      "img": "modules/dnd-monster-manual/assets/portraits/boar.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Panther",
+      "img": "modules/dnd-monster-manual/assets/portraits/panther.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Giant Badger",
+      "img": "modules/dnd-monster-manual/assets/portraits/giant-badger.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Dire Wolf",
+      "img": "modules/dnd-monster-manual/assets/portraits/dire-wolf.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Giant Elk",
+      "img": "modules/dnd-monster-manual/assets/portraits/elk.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/bag-of-tricks/gray_bag_of_tricks.json",
+  "updated_at": "2026-07-13T20:16:15.851Z"
+}

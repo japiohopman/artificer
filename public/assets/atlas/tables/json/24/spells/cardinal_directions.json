@@ -1,0 +1,50 @@
+{
+  "index": "cardinal_directions",
+  "name": "cardinal directions",
+  "img": "icons/tools/navigation/compass-brass-blue-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "North",
+      "img": "icons/tools/navigation/compass-chain-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "East",
+      "img": "icons/tools/navigation/compass-chain-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "South",
+      "img": "icons/tools/navigation/compass-chain-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "West",
+      "img": "icons/tools/navigation/compass-chain-blue.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/cardinal_directions.json",
+  "updated_at": "2026-07-13T20:16:15.934Z"
+}

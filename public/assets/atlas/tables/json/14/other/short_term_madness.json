@@ -1,0 +1,112 @@
+{
+  "index": "short_term_madness",
+  "name": "short-term madness",
+  "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "description": [
+    "The character is afflicted with short-­term madness for [[/r 1d10]] minutes."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "The character retreats into his or her mind and becomes paralyzed. The effect ends if the character takes any damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        30
+      ],
+      "weight": 1,
+      "text": "The character becomes incapacitated and spends the duration screaming, laughing, or weeping.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        40
+      ],
+      "weight": 1,
+      "text": "The character becomes frightened and must use his or her action and movement each round to flee from the source of the fear.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        41,
+        50
+      ],
+      "weight": 1,
+      "text": "The character begins babbling and is incapable of normal speech or spellcasting.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        60
+      ],
+      "weight": 1,
+      "text": "The character must use his or her action each round to attack the nearest creature.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "weight": 1,
+      "text": "The character experiences vivid hallucinations and has disadvantage on ability checks.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "weight": 1,
+      "text": "The character does whatever anyone tells him or her to do that isn’t obviously self- destructive.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "weight": 1,
+      "text": "The character experiences an overpowering urge to eat something strange such as dirt, slime, or offal.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        90
+      ],
+      "weight": 1,
+      "text": "The character is stunned.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "The character falls unconscious.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/short_term_madness.json",
+  "updated_at": "2026-07-13T20:16:15.817Z"
+}
