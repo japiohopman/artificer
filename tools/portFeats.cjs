@@ -51,13 +51,23 @@ function normalizeIconPath(img) {
 
 function cleanHtmlToParagraphs(html) {
   if (!html) return [];
-  let cleaned = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-  cleaned = cleaned.replace(/<script/gi, '');
-  cleaned = cleaned.replace(/<\/p>/gi, '\n').replace(/<p>/gi, '');
-  cleaned = cleaned.replace(/<[^>]+>/g, '');
+
+  // Remove script tags and their content securely
+  let cleaned = html.replace(/<script[\s\S]*?<\/script\s*>/gi, '');
+
+  // Convert paragraph end tags to linebreaks
+  cleaned = cleaned.replace(/<\/p\s*>/gi, '\n');
+
+  // Strip all other HTML tags
+  cleaned = cleaned.replace(/<[^>]*>/g, '');
+
+  // Explicitly remove all angle brackets to prevent any HTML injection
+  cleaned = cleaned.replace(/[<>]/g, '');
+
+  // Sanitize entities to plain text without restoring angle brackets
   cleaned = cleaned
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
+    .replace(/&lt;/g, '')
+    .replace(/&gt;/g, '')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, '&')
