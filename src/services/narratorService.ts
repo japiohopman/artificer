@@ -77,8 +77,9 @@ Then, conclude with the question: "What would you like to do?"
           label: 'Enter Location',
           value: 'enter_location',
           action: async () => {
+            uiStore.setChatExpanded(false); // Collapse chat
             const detailed = await worldStore.fetchDetailedLocation(destination);
-            worldStore.setCurrentLocation(detailed);
+            await worldStore.setCurrentLocation(detailed);
             uiStore.setIsInsideSubMap(true);
           }
         },

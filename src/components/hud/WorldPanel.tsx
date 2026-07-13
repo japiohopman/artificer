@@ -10,6 +10,7 @@ import { cn } from '../../lib/utils';
 import ReactMarkdown from 'react-markdown';
 import { Travel } from './game/Travel';
 import { AdvancedRoller } from '../dice/DiceRollerPanel';
+import { MapLegend } from './game/MapLegend';
 
 class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
   constructor(props: any) { super(props); this.state = { hasError: false }; }
@@ -41,7 +42,17 @@ export const WorldPanel: React.FC = () => {
   const { unlockLore } = useJournalStore();
 
   const [isTravelExpanded, setIsTravelExpanded] = React.useState(true);
+  const [isLegendExpanded, setIsLegendExpanded] = React.useState(true);
   const [loreContent, setLoreContent] = React.useState<string | null>(null);
+
+  const {
+    subMapActiveCategories: activeCategories,
+    setSubMapActiveCategories: setActiveCategories,
+    subMapAllCategories: allCategories,
+    subMapActiveLayer: activeLayer,
+    setSubMapActiveLayer: setActiveLayer,
+    mapZoom
+  } = useWorldStore();
 
   // Fetch lore markdown
   React.useEffect(() => {
@@ -170,6 +181,106 @@ export const WorldPanel: React.FC = () => {
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* SubMap Category Filters & Layers */}
+        {isInsideSubMap && (
+          <div className="space-y-4 animate-in fade-in slide-in-from-top-4">
+             <div className="flex items-center gap-3">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-dragon-red/20 to-dragon-red/20" />
+                <div className="flex items-center gap-2">
+                   <GameIcon name="city" size={14} color="#8B0000" />
+                   <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Local_Topography</h3>
+                </div>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-dragon-red/20 to-dragon-red/20" />
+             </div>
+
+             {/* Layers Toggles if Sewers exist */}
+             {currentLocation?.sub_location_files?.some((f: string) => f.includes('sewers')) && (
+               <div className="bg-white/40 border border-dragon-red/10 rounded p-3 space-y-2">
+                 <span className="text-[8px] font-black text-dragon-gold uppercase tracking-widest block">Map Layers</span>
+                 <div className="flex gap-2">
+                   <button
+                     onClick={() => setActiveLayer(null)}
+                     className={cn(
+                       "flex-1 py-1 text-[10px] font-bold uppercase rounded border transition-all",
+                       !activeLayer ? "bg-dragon-gold text-white border-dragon-gold" : "bg-white/50 text-dragon-red/60 border-dragon-red/10"
+                     )}
+                   >
+                     Surface
+                   </button>
+                   <button
+                     onClick={() => {
+                       const sewerMap = (currentLocation?.map || '').replace('.webp', '_sewers.webp');
+                       setActiveLayer(sewerMap);
+                     }}
+                     className={cn(
+                       "flex-1 py-1 text-[10px] font-bold uppercase rounded border transition-all",
+                       activeLayer ? "bg-dragon-gold text-white border-dragon-gold" : "bg-white/50 text-dragon-red/60 border-dragon-red/10"
+                     )}
+                   >
+                     Sewers
+                   </button>
+                 </div>
+               </div>
+             )}
+
+             {/* Submap categories toggler */}
+             {allCategories.length > 0 && (
+               <div className="bg-white/40 border border-dragon-red/10 rounded p-3 space-y-3">
+                  <span className="text-[8px] font-black text-dragon-gold uppercase tracking-widest block">Location Legend & Filters</span>
+                  <div className="space-y-1.5 max-h-[160px] overflow-y-auto custom-scrollbar pr-1">
+                    {allCategories.map((cat) => {
+                      const isActive = activeCategories.includes(cat);
+                      const label = cat.replace(/_/g, ' ').replace('.json', '');
+
+                      return (
+                        <button
+                          key={cat}
+                          onClick={() => {
+                            setActiveCategories(isActive ? activeCategories.filter(c => c !== cat) : [...activeCategories, cat]);
+                          }}
+                          className={cn(
+                            "w-full flex items-center justify-between px-3 py-1.5 rounded-sm text-[10px] font-black uppercase tracking-tighter transition-all group",
+                            isActive
+                              ? "bg-dragon-red text-white"
+                              : "bg-parchment-200/50 text-dragon-red/60 hover:bg-parchment-300 hover:text-dragon-red"
+                          )}
+                        >
+                          <span>{label}</span>
+                          <div className={cn(
+                            "w-1.5 h-1.5 rounded-full transition-colors",
+                            isActive ? "bg-dragon-gold animate-pulse" : "bg-dragon-red/20 group-hover:bg-dragon-red/40"
+                          )} />
+                        </button>
+                      );
+                    })}
+                  </div>
+               </div>
+             )}
+          </div>
+        )}
+
+        {/* Map Legend (World Level Only) */}
+        {!isInsideSubMap && (
+          <div className="space-y-4">
+            <button
+              onClick={() => setIsLegendExpanded(!isLegendExpanded)}
+              className="w-full flex items-center justify-between border-b border-dragon-red/10 pb-2 mb-2 group text-left focus:outline-none"
+            >
+              <div className="flex items-center gap-2">
+                <GameIcon name="map" size={14} color="#8B0000" />
+                <h3 className="text-[10px] font-black uppercase text-dragon-red tracking-[0.3em]">Map_Legend</h3>
+              </div>
+              <GameIcon name="chevron_left" size={12} className={cn("transition-transform", isLegendExpanded ? "-rotate-90 text-dragon-red" : "text-dragon-red/40")} />
+            </button>
+
+            {isLegendExpanded && (
+              <div className="p-3 bg-white/40 border border-dragon-red/10 rounded shadow-sm animate-in fade-in duration-300">
+                <MapLegend currentZoom={mapZoom} />
+              </div>
+            )}
           </div>
         )}
 

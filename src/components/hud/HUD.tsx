@@ -42,11 +42,15 @@ export const HUD: React.FC = () => {
     }
   }, [gameMode, setIsWorldPanelOpen, setIsCharacterPanelOpen, setIsInventoryOpen, setActiveCharacterTab]);
 
-  const { resetAtlas } = useWorldStore();
+  const { resetAtlas, loadAllCitiesRegistry, loadDiscoveredLocations } = useWorldStore();
 
   useEffect(() => {
     // Initial cleanup of atlas data and loaded categories to prevent stale states
     resetAtlas();
+    
+    // Load directories and discovered locations
+    loadAllCitiesRegistry();
+    loadDiscoveredLocations();
 
     // Dismiss the loading screen after a short delay to ensure components are ready
     const timer = setTimeout(() => {
@@ -54,7 +58,7 @@ export const HUD: React.FC = () => {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [resetAtlas, setIsLoading]);
+  }, [resetAtlas, loadAllCitiesRegistry, loadDiscoveredLocations, setIsLoading]);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden bg-parchment-100 text-parchment-900 font-body relative bg-paper-texture">

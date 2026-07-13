@@ -22,6 +22,7 @@ export interface SavedLocation {
   bounds?: [[number, number], [number, number]];
   popup?: { title: string };
   categoryId?: string;
+  position?: [number, number];
 }
 
 export const CategoryIcons: Record<string, { icon: string, color: string }> = {
@@ -94,6 +95,13 @@ export interface WorldState {
   savedLocations: SavedLocation[];
   loadedCategories: string[];
   exploredAreas: { x: number, y: number, radius: number }[];
+  discoveredLocationIds: string[];
+  partyLocalPos: { x: number; y: number } | null;
+  activeEntryPointId: string | null;
+  allCitiesRegistry: any[];
+  subMapActiveCategories: string[];
+  subMapAllCategories: string[];
+  subMapActiveLayer: string | null;
 
   // Global State / Faction Flags
   worldFlags: Record<string, any>;
@@ -126,6 +134,15 @@ export interface WorldState {
   getCalendarDate: () => string;
   isNight: () => boolean;
   getActiveBackground: () => string;
+  setDiscoveredLocationIds: (ids: string[]) => void;
+  discoverLocation: (id: string) => void;
+  setPartyLocalPos: (pos: { x: number; y: number } | null) => void;
+  setActiveEntryPointId: (id: string | null) => void;
+  loadAllCitiesRegistry: () => Promise<void>;
+  loadDiscoveredLocations: () => Promise<void>;
+  setSubMapActiveCategories: (cats: string[]) => void;
+  setSubMapAllCategories: (cats: string[]) => void;
+  setSubMapActiveLayer: (layer: string | null) => void;
 }
 
 export const useWorldStore = create<WorldState>((set, get) => ({
@@ -159,6 +176,13 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   savedLocations: [],
   loadedCategories: [],
   exploredAreas: [],
+  discoveredLocationIds: ['waterdeep', 'baldurs_gate', 'neverwinter'],
+  partyLocalPos: null,
+  activeEntryPointId: null,
+  allCitiesRegistry: [],
+  subMapActiveCategories: [],
+  subMapAllCategories: [],
+  subMapActiveLayer: null,
 
   worldFlags: {},
 
@@ -292,7 +316,67 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
-  setCurrentLocation: (currentLocation) => set({ currentLocation }),
+  setCurrentLocation: async (currentLocation) => {
+    set({ currentLocation });
+    if (currentLocation) {
+      // 1. Calculate travel direction from travelOrigin (or previous partyLocation) to destination
+      const state = get();
+      const origin = state.travelOrigin || state.partyLocation;
+      const dest = currentLocation;
+
+      let direction: 'north' | 'south' | 'east' | 'west' = 'south';
+      if (origin && dest) {
+        const ox = (origin as any).coordinates?.lng ?? (origin as any).coordinates?.x ?? (origin as any).position?.[0] ?? 0;
+        const oy = (origin as any).coordinates?.lat ?? (origin as any).coordinates?.y ?? (origin as any).position?.[1] ?? 0;
+        const dx = (dest as any).coordinates?.lng ?? (dest as any).coordinates?.x ?? (dest as any).position?.[0] ?? 0;
+        const dy = (dest as any).coordinates?.lat ?? (dest as any).coordinates?.y ?? (dest as any).position?.[1] ?? 0;
+
+        const vx = dx - ox;
+        const vy = dy - oy;
+
+        if (Math.abs(vx) > Math.abs(vy)) {
+          direction = vx > 0 ? 'west' : 'east'; // Traveling East means we enter from West
+        } else {
+          direction = vy > 0 ? 'south' : 'north'; // Traveling North (y increases North) means we enter from South
+        }
+      }
+
+      // 2. Fetch entry points JSON
+      let entryPoints = [];
+      try {
+        const response = await fetch(`/assets/atlas/world/toril/faerun/cities/${currentLocation.id}/entry_points.json`);
+        if (response.ok) {
+          entryPoints = await response.json();
+        }
+      } catch (e) {
+        console.warn("No entry points found for", currentLocation.id);
+      }
+
+      // 3. Select logical entry point
+      let selectedEp = null;
+      if (entryPoints.length > 0) {
+        selectedEp = entryPoints.find((ep: any) => ep.direction === direction) || entryPoints[0];
+      }
+
+      if (selectedEp) {
+        set({ 
+          partyLocalPos: { x: selectedEp.x, y: selectedEp.y },
+          activeEntryPointId: selectedEp.id
+        });
+      } else {
+        // Default to center of bounds
+        const bounds = currentLocation.bounds || [[0, 0], [1000, 1000]];
+        const xMax = bounds[1][0] || 1000;
+        const yMax = bounds[1][1] || 1000;
+        set({
+          partyLocalPos: { x: xMax / 2, y: yMax / 2 },
+          activeEntryPointId: 'default_center'
+        });
+      }
+    } else {
+      set({ partyLocalPos: null, activeEntryPointId: null });
+    }
+  },
   setInspectedLocation: (inspectedLocation) => set({ inspectedLocation }),
   setCurrentSubLocation: (currentSubLocation) => set({ currentSubLocation }),
   setCurrentShop: (currentShop) => set({ currentShop }),
@@ -532,6 +616,22 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
         // Trigger discovery during travel
         state.exploreArea(currentX, currentY, 200);
+
+        // Proximity detection for hidden cities (within 30 miles = 36 proto units)
+        const radiusUnits = 36;
+        const registry = state.allCitiesRegistry;
+        if (registry && registry.length > 0) {
+          registry.forEach(city => {
+            const cx = city.position?.[0];
+            const cy = city.position?.[1];
+            if (cx !== undefined && cy !== undefined) {
+              const dist = Math.sqrt(Math.pow(cx - currentX, 2) + Math.pow(cy - currentY, 2));
+              if (dist <= radiusUnits) {
+                state.discoverLocation(city.id);
+              }
+            }
+          });
+        }
       }
     }
   },
@@ -570,4 +670,69 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     if (state.destination?.banner) return state.destination.banner;
     return '';
   },
+
+  setDiscoveredLocationIds: (discoveredLocationIds) => {
+    set({ discoveredLocationIds });
+    get().loadDiscoveredLocations();
+  },
+
+  discoverLocation: (id) => {
+    const state = get();
+    if (state.discoveredLocationIds.includes(id)) return;
+    const updated = [...state.discoveredLocationIds, id];
+    set({ discoveredLocationIds: updated });
+    get().loadDiscoveredLocations();
+  },
+
+  setPartyLocalPos: (partyLocalPos) => set({ partyLocalPos }),
+  setActiveEntryPointId: (activeEntryPointId) => set({ activeEntryPointId }),
+  setSubMapActiveCategories: (subMapActiveCategories) => set({ subMapActiveCategories }),
+  setSubMapAllCategories: (subMapAllCategories) => set({ subMapAllCategories }),
+  setSubMapActiveLayer: (subMapActiveLayer) => set({ subMapActiveLayer }),
+
+  loadAllCitiesRegistry: async () => {
+    if (get().allCitiesRegistry.length > 0) return;
+    try {
+      const response = await fetch('/assets/atlas/world/toril/faerun/cities/cities.json');
+      if (response.ok) {
+        const data = await response.json();
+        set({ allCitiesRegistry: data });
+      }
+    } catch (e) {
+      console.warn("Failed to load all cities registry for discovery checks", e);
+    }
+  },
+
+  loadDiscoveredLocations: async () => {
+    const state = get();
+    const ids = state.discoveredLocationIds;
+    const loadedIds = new Set(state.savedLocations.map(l => l.id));
+
+    const promises = ids.map(async (id) => {
+      if (loadedIds.has(id)) return null;
+      try {
+        const response = await fetch(`/assets/atlas/world/toril/faerun/cities/${id}/${id}.json`);
+        if (response.ok) {
+          const l = await response.json();
+          return {
+            ...l,
+            name: l.name || l.title || id.replace(/_/g, ' '),
+            category: l.category || l.type || 'city',
+            id: l.id || id,
+            image: l.image || null,
+            banner: l.banner || null
+          };
+        }
+      } catch (e) {
+        console.warn(`Failed to fetch individual city ${id}:`, e);
+      }
+      return null;
+    });
+
+    const results = await Promise.all(promises);
+    const validResults = results.filter((r): r is any => r !== null);
+    if (validResults.length > 0) {
+      state.addSavedLocations(validResults);
+    }
+  }
 }));

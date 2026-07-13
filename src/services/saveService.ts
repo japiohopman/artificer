@@ -1,14 +1,19 @@
 import { commitFile, deleteFile, normalizeImageUrl, REPO, BRANCH } from './storageService';
 import { Character } from '../store/useCharacterStore';
+import { useWorldStore } from '../store/useWorldStore';
 
 export const saveService = {
   async saveCharacter(character: Character, slot?: number): Promise<boolean> {
     const id = slot ? `slot${slot}` : (character.id || `char_${Date.now()}`);
     const path = `public/data/character_save/json/${id}.json`;
     
+    // Fetch current discovered locations to persist with character state
+    const { discoveredLocationIds } = useWorldStore.getState();
+
     // Normalize and sanitize for storage if needed
     const dataToSave = {
       ...character,
+      discoveredLocationIds,
       id,
       lastSaved: new Date().toISOString()
     };

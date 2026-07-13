@@ -68,12 +68,19 @@ const MapEvents = ({ bounds, onMapInstance }: { bounds: L.LatLngBoundsExpression
 };
 
 export const LocationMap: React.FC = () => {
-  const { currentLocation, inspectedLocation, setInspectedLocation } = useWorldStore();
+  const { 
+    currentLocation, 
+    inspectedLocation, 
+    setInspectedLocation,
+    subMapActiveCategories: activeCategories,
+    setSubMapActiveCategories: setActiveCategories,
+    subMapAllCategories: allCategories,
+    setSubMapAllCategories: setAllCategories,
+    subMapActiveLayer: activeLayer,
+    setSubMapActiveLayer: setActiveLayer
+  } = useWorldStore();
   const { setIsInsideSubMap } = useUIStore();
   const [subLocations, setSubLocations] = React.useState<any[]>([]);
-  const [activeLayer, setActiveLayer] = React.useState<string | null>(null);
-  const [activeCategories, setActiveCategories] = React.useState<string[]>([]);
-  const [allCategories, setAllCategories] = React.useState<string[]>([]);
 
   const mapRef = React.useRef<L.Map | null>(null);
 
@@ -86,7 +93,10 @@ export const LocationMap: React.FC = () => {
         const files = currentLocation.sub_location_files || [];
         const cats = files.map(f => f.split('/').pop() || '');
         setAllCategories(cats);
-        setActiveCategories(cats); // Default all on
+        // Only override active categories if they are empty
+        if (activeCategories.length === 0) {
+          setActiveCategories(cats);
+        }
 
         const allData = await Promise.all(
           files.map(async (file: string) => {
@@ -106,7 +116,7 @@ export const LocationMap: React.FC = () => {
       }
     };
     loadSubLocations();
-  }, [currentLocation]);
+  }, [currentLocation, setAllCategories, setActiveCategories]);
 
   if (!currentLocation?.map) return null;
 
@@ -142,6 +152,39 @@ export const LocationMap: React.FC = () => {
           opacity={1}
           zIndex={1}
         />
+
+        {useWorldStore.getState().partyLocalPos && (() => {
+          const x = useWorldStore.getState().partyLocalPos!.x;
+          const y = useWorldStore.getState().partyLocalPos!.y;
+          const isBottomLeft = currentLocation.origin === 'bottom-left';
+          const yMax = (bounds as any)[1][0];
+
+          const latLng: L.LatLngExpression = isBottomLeft
+            ? [y, x]
+            : [yMax - y, x];
+
+          return (
+            <Marker
+              position={latLng}
+              zIndexOffset={3000}
+              icon={L.divIcon({
+                html: `
+                  <div class="relative">
+                    <div class="absolute inset-0 bg-blue-500/40 blur-md rounded-full animate-pulse scale-150"></div>
+                    <div class="relative bg-blue-600 border-2 border-white w-4 h-4 rounded-full shadow-lg">
+                    </div>
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-blue-900 border-blue-400 text-white text-[9px] px-1.5 py-0.5 rounded border whitespace-nowrap font-bold uppercase tracking-tighter shadow-md">
+                      Party
+                    </div>
+                  </div>
+                `,
+                className: 'party-marker-local',
+                iconSize: [16, 16],
+                iconAnchor: [8, 8]
+              })}
+            />
+          );
+        })()}
 
         {subLocations.filter(loc => activeCategories.includes(loc._categoryFile)).map((loc, idx) => {
           let x = 0, y = 0;
@@ -193,71 +236,7 @@ export const LocationMap: React.FC = () => {
         })}
       </MapContainer>
 
-      {/* Local HUD Controls */}
-      <div className="absolute top-6 left-6 z-[1000] flex flex-col gap-6">
-         <button
-           onClick={() => setIsInsideSubMap(false)}
-           className="px-4 py-2 bg-dragon-red text-white font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 shadow-lg flex items-center gap-2 hover:bg-dragon-darkRed transition-all"
-         >
-           <GameIcon name="chevron_left" size={14} color="#FFF" />
-           Exit to Atlas
-         </button>
-
-         {/* Layer Switcher if applicable */}
-         {currentLocation.sub_location_files?.some((f: string) => f.includes('sewers')) && (
-           <div className="flex flex-col gap-1 mt-4">
-             <span className="text-[8px] font-black text-dragon-gold uppercase tracking-tighter">Map Layers</span>
-             <button
-               onClick={() => setActiveLayer(null)}
-               className={cn(
-                 "px-3 py-1.5 text-[10px] font-bold uppercase rounded border transition-all",
-                 !activeLayer ? "bg-dragon-gold text-white" : "bg-white/10 text-dragon-gold border-dragon-gold/20"
-               )}
-             >
-               Surface
-             </button>
-             <button
-               onClick={() => {
-                 // Hardcoded logic for demoing Waterdeep sewers if found
-                 const sewerMap = (currentLocation?.map || '').replace('.webp', '_sewers.webp');
-                 setActiveLayer(sewerMap);
-               }}
-               className={cn(
-                 "px-3 py-1.5 text-[10px] font-bold uppercase rounded border transition-all",
-                 activeLayer ? "bg-dragon-gold text-white" : "bg-white/10 text-dragon-gold border-dragon-gold/20"
-               )}
-             >
-               Sewers
-             </button>
-           </div>
-         )}
-
-         <Entrance
-           categories={allCategories}
-           activeCategories={activeCategories}
-           onToggleCategory={(cat) => {
-             setActiveCategories(prev =>
-               prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
-             );
-           }}
-         />
-      </div>
-
-      <div className="absolute bottom-6 right-6 z-[1000] flex flex-col gap-2 items-end">
-        <div className="bg-parchment-100/90 border-2 border-dragon-gold/50 p-2 rounded-md shadow-lg flex flex-col items-center mb-2">
-           <span className="text-[9px] font-black text-dragon-red uppercase mb-1">Local Topography</span>
-           <h3 className="font-header text-xl text-dragon-darkRed uppercase">{currentLocation.name}</h3>
-        </div>
-        
-        <MapNavigation 
-          onCenterParty={() => {
-            if (mapRef.current) mapRef.current.fitBounds(bounds);
-          }}
-          onZoomIn={() => mapRef.current?.zoomIn()}
-          onZoomOut={() => mapRef.current?.zoomOut()}
-          zoomLevel={mapRef.current?.getZoom()}
-        />
-      </div>
+      {/* Local HUD Controls removed from map overlay to avoid obscuring map views */}
     </div>
   );
 };

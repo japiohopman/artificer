@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { ItemInstance, InventoryContainer, InventorySlot } from '../types/inventory';
+import { useWorldStore } from './useWorldStore';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
@@ -18,6 +19,7 @@ export interface Character {
   alignment: string;
   background: string;
   isNpc?: boolean;
+  discoveredLocationIds?: string[];
   isRecruitable?: boolean;
   stats: {
     str: number;
@@ -191,7 +193,14 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   classLevelingData: {},
   isLoadingSaves: false,
 
-  setActiveCharacter: (id) => set({ activeCharacterId: id }),
+  setActiveCharacter: (id) => {
+    set({ activeCharacterId: id });
+    const char = get().characters.find(c => c.id === id);
+    if (char) {
+      const { setDiscoveredLocationIds } = useWorldStore.getState();
+      setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
+    }
+  },
   setMainCharacter: (char) => set((state) => {
     const newChars = [...state.characters];
     newChars[0] = char;
@@ -483,11 +492,18 @@ characters: state.characters.map(char =>
         return char;
       });
 
+      const activeId = get().activeCharacterId || (processedChars[0]?.id || '');
       set({ 
         mainCharacterSlots: slots,
         characters: processedChars,
-        activeCharacterId: get().activeCharacterId || (processedChars[0]?.id || '')
+        activeCharacterId: activeId
       });
+
+      const activeChar = processedChars.find(c => c.id === activeId);
+      if (activeChar) {
+        const { setDiscoveredLocationIds } = useWorldStore.getState();
+        setDiscoveredLocationIds(activeChar.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
+      }
 
       for (const char of processedChars) {
           if (char && char.level > 0) {

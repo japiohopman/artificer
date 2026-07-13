@@ -1,0 +1,30 @@
+[
+  {
+    "id": "south_gate",
+    "name": "Basilisk Gate (South)",
+    "x": 1000,
+    "y": 100,
+    "direction": "south"
+  },
+  {
+    "id": "north_gate",
+    "name": "Black Dragon Gate (North)",
+    "x": 1000,
+    "y": 2900,
+    "direction": "north"
+  },
+  {
+    "id": "harbor",
+    "name": "Gray Harbor",
+    "x": 100,
+    "y": 1500,
+    "direction": "west"
+  },
+  {
+    "id": "east_gate",
+    "name": "East Gate",
+    "x": 1900,
+    "y": 1500,
+    "direction": "east"
+  }
+]

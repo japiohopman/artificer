@@ -25,7 +25,7 @@ import { GameIcon } from '../../game_icons';
  */
 const CATEGORY_TIERS = [
   { zoom: 3, miles: 4001, categories: ['regions'] },
-  { zoom: 4, miles: 2001, categories: ['seas_oceans', 'cities'] },
+  { zoom: 4, miles: 2001, categories: ['seas_oceans'] }, // Removed 'cities' from global category load to optimize performance
   { zoom: 5, miles: 1001, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
   { zoom: 6, miles: 501, categories: [] },
   { zoom: 7, miles: 251, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
@@ -176,6 +176,8 @@ export const WorldMap: React.FC = () => {
   const addSavedLocations = useWorldStore(state => state.addSavedLocations);
   const isCategoryLoaded = useWorldStore(state => state.isCategoryLoaded);
   const addLoadedCategory = useWorldStore(state => state.addLoadedCategory);
+  const discoveredLocationIds = useWorldStore(state => state.discoveredLocationIds);
+  const loadDiscoveredLocations = useWorldStore(state => state.loadDiscoveredLocations);
 
   const isTraveling = useWorldStore(state => state.isTraveling);
   const destination = useWorldStore(state => state.destination);
@@ -244,7 +246,10 @@ export const WorldMap: React.FC = () => {
     setMapZoom(currentZoom);
   }, [currentZoom, setMapZoom]);
 
-
+  // Dynamically fetch and cache individual discovered locations
+  React.useEffect(() => {
+    loadDiscoveredLocations();
+  }, [discoveredLocationIds, loadDiscoveredLocations]);
 
   // Progressive Data Loading
   React.useEffect(() => {
@@ -321,6 +326,13 @@ export const WorldMap: React.FC = () => {
       if (cityOnlyCategories.includes(cat)) return false;
 
       // 2. Tier-based visibility (referencing CATEGORY_TIERS)
+      const isCity = cat.includes('city') || cat.includes('metropolis') || cat.includes('settlement');
+      if (isCity) {
+         if (!discoveredLocationIds.includes(loc.id)) {
+            return false;
+         }
+      }
+
       const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
       if (cat.includes('city') || cat.includes('metropolis')) {
          if (majorCities.includes(name)) return true; // Major cities always visible once loaded
@@ -562,21 +574,6 @@ export const WorldMap: React.FC = () => {
       
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
-      
-      {/* Map Navigation Controls */}
-      <MapNavigation 
-        className="absolute bottom-6 right-6 z-[1000]"
-        onCenterParty={() => {
-          if (partyLocation && mapRef.current) {
-            const pos = getPosition(partyLocation);
-            if (pos) mapRef.current.flyTo(pos as [number, number], Math.max(mapRef.current.getZoom(), 6), { animate: true, duration: 1.5 });
-          }
-        }}
-        onZoomIn={() => mapRef.current?.zoomIn()}
-        onZoomOut={() => mapRef.current?.zoomOut()}
-        currentMiles={currentMiles}
-        zoomLevel={currentZoom}
-      />
     </div>
   );
 };

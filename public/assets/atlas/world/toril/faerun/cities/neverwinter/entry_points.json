@@ -1,0 +1,30 @@
+[
+  {
+    "id": "south_gate",
+    "name": "South Gate",
+    "x": 500,
+    "y": 900,
+    "direction": "south"
+  },
+  {
+    "id": "north_gate",
+    "name": "North Gate",
+    "x": 500,
+    "y": 100,
+    "direction": "north"
+  },
+  {
+    "id": "harbor",
+    "name": "Harbor district",
+    "x": 100,
+    "y": 500,
+    "direction": "west"
+  },
+  {
+    "id": "east_gate",
+    "name": "East Gate",
+    "x": 900,
+    "y": 500,
+    "direction": "east"
+  }
+]
