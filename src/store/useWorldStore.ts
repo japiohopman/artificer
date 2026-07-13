@@ -233,15 +233,23 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
     state.advanceTime(totalMinutesToAdvance);
 
+    const dest = state.destination;
     set({
-      partyLocation: state.destination,
+      partyLocation: dest,
       isTraveling: false,
+      isFastForwarding: false,
       destination: null,
       travelOrigin: null,
       travelProgress: 0
     });
 
     setIsLoading(false);
+
+    import('../services/narratorService').then(({ narratorService }) => {
+      narratorService.handleArrival(dest);
+    }).catch(err => {
+      console.error("Failed to import narratorService in skipTravel", err);
+    });
   },
 
   advanceTime: (minutes) => set((state) => {
@@ -495,12 +503,20 @@ export const useWorldStore = create<WorldState>((set, get) => ({
       const newProgress = Math.min(1, nextDistProto / totalDistProto);
 
       if (newProgress >= 1) {
+        const dest = state.destination;
         set({ 
-          partyLocation: state.destination,
+          partyLocation: dest,
           isTraveling: false,
+          isFastForwarding: false,
           destination: null,
           travelOrigin: null,
           travelProgress: 0
+        });
+
+        import('../services/narratorService').then(({ narratorService }) => {
+          narratorService.handleArrival(dest);
+        }).catch(err => {
+          console.error("Failed to import narratorService in updateEnvironment", err);
         });
       } else {
         const currentX = x1 + (x2 - x1) * newProgress;
@@ -548,6 +564,10 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     if (state.currentShop?.image) return state.currentShop.image;
     if (state.currentSubLocation?.image) return state.currentSubLocation.image;
     if (state.currentLocation?.image) return state.currentLocation.image;
+    if (state.partyLocation?.image) return state.partyLocation.image;
+    if (state.partyLocation?.banner) return state.partyLocation.banner;
+    if (state.destination?.image) return state.destination.image;
+    if (state.destination?.banner) return state.destination.banner;
     return '';
   },
 }));

@@ -4,8 +4,95 @@ import { useWorldStore } from '../store/useWorldStore';
 import { useCharacterStore } from '../store/useCharacterStore';
 import { useGameStore } from '../store/useGameStore';
 import { useUIStore } from '../store/useUIStore';
+import { useJournalStore } from '../store/useJournalStore';
 
 export const narratorService = {
+  async handleArrival(destination: any) {
+    const worldStore = useWorldStore.getState();
+    const chatStore = useChatStore.getState();
+    const uiStore = useUIStore.getState();
+
+    // 1. Turn off fast forward
+    worldStore.setIsFastForwarding(false);
+
+    // 2. Open chat automatically
+    uiStore.setChatExpanded(true);
+
+    // 3. Set the thinking state
+    chatStore.setThinking(true);
+
+    try {
+      // Build prompt for narrative introduction
+      const charStore = useCharacterStore.getState();
+      const partyNames = charStore.characters.map(c => c.name).join(', ') || 'Your party';
+      const questStore = useJournalStore.getState();
+      const activeQuests = questStore.quests?.filter(q => q.status === 'Active')?.map(q => q.title)?.join(', ') || 'None';
+
+      const prompt = `
+Generate a short, evocative, narrative introduction describing the party's arrival at "${destination.name}" (Category: ${destination.category || 'landmark'}, Region: ${destination.region || 'unknown'}).
+Context:
+- Party: ${partyNames}
+- Weather: ${worldStore.weather}
+- Temperature: ${worldStore.temperature}°C
+- Time of Day: ${worldStore.getCalendarDate()} (Time value: ${worldStore.gameTime} minutes since midnight)
+- Active Quests: ${activeQuests}
+
+Write a single brief paragraph (2-3 sentences) in the style of a Dungeon Master.
+Then, conclude with the question: "What would you like to do?"
+`.trim();
+
+      // Build Contents for Gemini
+      const contents = [
+        { role: 'user', parts: [{ text: prompt }] }
+      ];
+
+      // Call AI
+      const result = await ai.models.generateContent({
+        model: MODELS.TEXT,
+        contents,
+        config: {
+          temperature: 0.7,
+          maxOutputTokens: 300,
+        }
+      });
+
+      const responseText = result.text;
+      if (!responseText || responseText.trim() === '') {
+        throw new Error("Empty response from AI");
+      }
+
+      // Add narration to chat history
+      chatStore.addMessage({ role: 'assistant', content: responseText });
+    } catch (error) {
+      console.error("Arrival Narrative Gen Error:", error);
+      // Fallback message
+      const fallbackMsg = `After a long journey, you have arrived at ${destination.name}. The skies are ${worldStore.weather.toLowerCase()} and the temperature is ${worldStore.temperature}°C. Your companions look exhausted after the journey.\n\nWhat would you like to do?`;
+      chatStore.addMessage({ role: 'assistant', content: fallbackMsg });
+    } finally {
+      chatStore.setThinking(false);
+
+      // Now set the choices
+      chatStore.setChoices([
+        {
+          label: 'Enter Location',
+          value: 'enter_location',
+          action: async () => {
+            const detailed = await worldStore.fetchDetailedLocation(destination);
+            worldStore.setCurrentLocation(detailed);
+            uiStore.setIsInsideSubMap(true);
+          }
+        },
+        {
+          label: 'Rest Here',
+          value: 'rest_here',
+          action: () => {
+            uiStore.setCurrentView('campfire');
+          }
+        }
+      ]);
+    }
+  },
+
   async generateResponse(userPrompt: string) {
     const chatStore = useChatStore.getState();
     const worldStore = useWorldStore.getState();

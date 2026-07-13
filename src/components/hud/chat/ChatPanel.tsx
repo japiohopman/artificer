@@ -8,6 +8,7 @@ import { useJournalStore } from '../../../store/useJournalStore';
 import { narratorService } from '../../../services/narratorService';
 import { ChatHistory } from './ChatHistory';
 import { ChatInput } from './ChatInput';
+import { Choice } from './Choice';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../../lib/utils';
 import { MapLegend } from '../game/MapLegend';
@@ -28,7 +29,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
   const { setChatExpanded, gameMode, isWorldPanelOpen, isMapLegendOpen, searchQuery, setSearchQuery } = useUIStore();
-  const { messages: history, isThinking } = useChatStore();
+  const { messages: history, isThinking, choices } = useChatStore();
   const { unlockedLore, unlockLore } = useJournalStore();
 
   const bgUrl = getActiveBackground();
@@ -132,14 +133,14 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                    <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10 relative">
                       <div className="flex items-center gap-4 min-w-0 flex-1">
                         <div className="flex flex-col">
-                          <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Map_Overlay</span>
-                          <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
-                            {currentLocation?.name || 'World Atlas'}
-                          </span>
+                           <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Map_Overlay</span>
+                           <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
+                             {currentLocation?.name || 'World Atlas'}
+                           </span>
                         </div>
                         <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
                         <div className="flex-1 pr-4">
-                          <MapLegend currentZoom={mapZoom} />
+                           <MapLegend currentZoom={mapZoom} />
                         </div>
                       </div>
 
@@ -173,10 +174,10 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                    <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10 relative">
                       <div className="flex items-center gap-4">
                         <div className="flex flex-col">
-                          <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Active_Domain</span>
-                          <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
-                            {currentLocation?.name || 'The Wilds'}
-                          </span>
+                           <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Active_Domain</span>
+                           <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
+                             {currentLocation?.name || 'The Wilds'}
+                           </span>
                         </div>
                         <div className="h-8 w-px bg-dragon-gold/20" />
                       </div>
@@ -219,12 +220,16 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
         </AnimatePresence>
         
         <div className="shrink-0 p-3 bg-parchment-100/95 border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
-          <ChatInput
-            message={message}
-            setMessage={setMessage}
-            onSend={handleSend}
-            placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
-          />
+          {choices && choices.length > 0 ? (
+            <Choice />
+          ) : (
+            <ChatInput
+              message={message}
+              setMessage={setMessage}
+              onSend={handleSend}
+              placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
+            />
+          )}
         </div>
 
         {isMapLegendOpen && isCollapsed && (

@@ -4,7 +4,7 @@
  * Dedicated, highly advanced utility to port Classes, Subclasses, Class Features,
  * and Active Effects/Conditions from Foundry VTT unpacked YAML sources to Artificer JSON.
  *
- * Includes backward compatible Smart Merge.
+ * Includes backward compatible Smart Merge and Icon Path Normalization.
  */
 
 const fs = require('fs');
@@ -27,6 +27,48 @@ const SOURCES = {
   features: path.join(FOUNDRY_ROOT, 'packs/_source/classfeatures'),
   effects: path.join(FOUNDRY_ROOT, 'packs/_source/effects')
 };
+
+// Normalize icon paths from systems/dnd5e/ or icons/svg/ to /assets/icons/svg/
+function normalizeIconPath(img) {
+  if (!img) return null;
+
+  let clean = img.trim();
+
+  // If it starts with systems/dnd5e/icons/svg/, map to assets/icons/svg/
+  if (clean.startsWith('systems/dnd5e/icons/svg/')) {
+    clean = clean.replace('systems/dnd5e/icons/svg/', 'assets/icons/svg/');
+  }
+
+  // If it starts with icons/svg/ or systems/dnd5e/icons/ (legacy), clean it up
+  if (clean.startsWith('icons/svg/')) {
+    clean = clean.replace('icons/svg/', 'assets/icons/svg/');
+  }
+
+  // Special overrides for missing icons
+  if (clean.includes('burrow.svg')) {
+    clean = clean.replace('burrow.svg', 'statuses/burrowing.svg');
+  } else if (clean.includes('whale.svg')) {
+    clean = clean.replace('whale.svg', 'statuses/unconscious.svg');
+  } else if (clean.includes('mountain.svg')) {
+    clean = clean.replace('mountain.svg', 'world_atlas/mountains.svg');
+  } else if (clean.includes('wing.svg')) {
+    clean = clean.replace('wing.svg', 'statuses/flying.svg');
+  } else if (clean.includes('climb.svg')) {
+    clean = clean.replace('climb.svg', 'statuses/flying.svg');
+  }
+
+  if (clean.startsWith('assets/')) {
+    clean = '/' + clean;
+  }
+
+  return clean.replace(/\/\/+/g, '/');
+}
+
+// Check if a path is legacy/invalid
+function isLegacyPath(p) {
+  if (!p) return false;
+  return p.startsWith('systems/dnd5e/') || p.startsWith('icons/svg/') || p.startsWith('public/systems/dnd5e/') || p.startsWith('public/icons/svg/');
+}
 
 // Clean HTML to paragraphs
 function cleanHtmlToParagraphs(html) {
@@ -94,7 +136,7 @@ function portClasses() {
         subclasses: preserved.subclasses || [],
         url: `/assets/atlas/class/json/${index}.json`,
         updated_at: new Date().toISOString(),
-        image: preserved.image || parsed.img || `/assets/atlas/ui/official/classes/${index}.webp`
+        image: (preserved.image && !isLegacyPath(preserved.image)) ? preserved.image : (normalizeIconPath(parsed.img) || `/assets/atlas/ui/official/classes/${index}.webp`)
       };
 
       if (!fs.existsSync(TARGETS.classes)) fs.mkdirSync(TARGETS.classes, { recursive: true });
@@ -134,7 +176,7 @@ function portSubclasses() {
         desc: cleanHtmlToParagraphs(system.description?.value),
         url: `/assets/atlas/subclasses/json/${index}.json`,
         updated_at: new Date().toISOString(),
-        image: preserved.image || parsed.img || `/assets/atlas/subclasses/images/${index}.webp`
+        image: (preserved.image && !isLegacyPath(preserved.image)) ? preserved.image : (normalizeIconPath(parsed.img) || `/assets/atlas/subclasses/images/${index}.webp`)
       };
 
       if (!fs.existsSync(TARGETS.subclasses)) fs.mkdirSync(TARGETS.subclasses, { recursive: true });
@@ -192,7 +234,7 @@ function portClassFeatures() {
             desc: cleanHtmlToParagraphs(system.description?.value),
             url: `/assets/atlas/features/json/${index}.json`,
             updated_at: new Date().toISOString(),
-            image: preserved.image || parsed.img || `/assets/atlas/features/images/${index}.webp`,
+            image: (preserved.image && !isLegacyPath(preserved.image)) ? preserved.image : (normalizeIconPath(parsed.img) || `/assets/atlas/features/images/${index}.webp`),
             feature_specific: preserved.feature_specific || {}
           };
 
@@ -268,7 +310,7 @@ function portEffects() {
             changes,
             statuses: parsed.statuses || [],
             url: `/assets/atlas/effects/json/${relativeSub}/${index}.json`.replace('//', '/'),
-            image: preserved.image || parsed.img || `/assets/atlas/effects/images/${index}.webp`,
+            image: (preserved.image && !isLegacyPath(preserved.image)) ? preserved.image : (normalizeIconPath(parsed.img) || `/assets/atlas/effects/images/${index}.webp`),
             updated_at: new Date().toISOString()
           };
 

@@ -88,10 +88,10 @@ export const ActionView: React.FC = () => {
   }
 
   return (
-    <div className="flex-1 flex flex-col h-full overflow-hidden relative items-center pointer-events-auto">
+    <div className="flex-1 flex flex-col h-full overflow-hidden relative items-center justify-end pointer-events-auto">
       {/* Visuals - Core Scene Content */}
-      <div className="w-full h-full max-w-5xl flex flex-col">
-        <div className="flex-1 bg-parchment-100 overflow-hidden shadow-2xl relative border-2 border-dragon-gold bg-paper-texture">
+      <div className="w-full flex flex-col">
+        <div className="w-full aspect-[3/1] bg-parchment-100 overflow-hidden shadow-2xl relative border-y-2 border-dragon-gold bg-paper-texture">
           <FirstPersonView />
           {/* Internal Overlay Vignette */}
           <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.5)] z-10" />

@@ -9,15 +9,23 @@ export interface ChatMessage {
   tool_call_id?: string;
 }
 
+export interface ChatChoice {
+  label: string;
+  value: string;
+  action?: () => void | Promise<void>;
+}
+
 interface ChatState {
   messages: ChatMessage[];
   isThinking: boolean;
   historyLimit: number;
+  choices: ChatChoice[] | null;
 
   addMessage: (message: Omit<ChatMessage, 'id' | 'timestamp'>) => void;
   setThinking: (isThinking: boolean) => void;
   clearHistory: () => void;
   getHistoryForAI: () => { role: string; parts: { text: string }[] }[];
+  setChoices: (choices: ChatChoice[] | null) => void;
 }
 
 export const useChatStore = create<ChatState>((set, get) => ({
@@ -31,6 +39,7 @@ export const useChatStore = create<ChatState>((set, get) => ({
   ],
   isThinking: false,
   historyLimit: 20,
+  choices: null,
 
   addMessage: (msg) => set((state) => {
     const newMessage: ChatMessage = {
@@ -57,7 +66,8 @@ export const useChatStore = create<ChatState>((set, get) => ({
       role: 'assistant',
       content: "A fresh start. The mists of the Weave clear...",
       timestamp: Date.now()
-    }]
+    }],
+    choices: null
   }),
 
   getHistoryForAI: () => {
@@ -69,5 +79,7 @@ export const useChatStore = create<ChatState>((set, get) => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.content }]
       }));
-  }
+  },
+
+  setChoices: (choices) => set({ choices })
 }));

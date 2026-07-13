@@ -100,21 +100,19 @@ export const GameScreen: React.FC = () => {
       <motion.div 
         initial={false}
         animate={{ 
+          bottom: gameMode === 'combat' ? '0px' : (chatExpanded ? 'calc(30vh + 64px)' : '64px'),
           y: (chatExpanded || gameMode === 'combat') ? 0 : -1000,
           opacity: (chatExpanded || gameMode === 'combat') ? 1 : 0,
           scale: (chatExpanded || gameMode === 'combat') ? 1 : 0.9
         }}
         transition={{ type: 'spring', damping: 30, stiffness: 120 }}
         className={cn(
-          "absolute inset-x-0 top-0 bottom-[64px] z-10 flex flex-col items-center",
-          gameMode === 'combat' && "bottom-0",
+          "absolute inset-x-0 top-0 z-10 flex flex-col items-center justify-end",
+          gameMode === 'combat' && "justify-stretch pb-0",
           (chatExpanded || gameMode === 'combat') ? "pointer-events-auto" : "pointer-events-none"
         )}
       >
-        <div className={cn(
-          "w-full h-full",
-          gameMode === 'combat' ? "max-w-none" : "max-w-5xl"
-        )}>
+        <div className="w-full h-full flex flex-col justify-end">
             <ActionView />
         </div>
       </motion.div>

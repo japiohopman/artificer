@@ -118,29 +118,13 @@ export const Travel: React.FC<TravelProps> = ({ destination, onClose, isMinimize
       </div>
 
       {isAtDestination ? (
-        <div className="space-y-3">
+        <div className="space-y-2 py-2">
           <p className="text-xs text-parchment-800 font-serif italic text-center">
             You have reached <strong className="text-dragon-darkRed">{destination?.name}</strong>.
           </p>
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              onClick={async () => {
-                const detailed = await fetchDetailedLocation(destination);
-                setCurrentLocation(detailed);
-                setIsInsideSubMap(true);
-              }}
-              className="py-3 bg-dragon-red hover:bg-dragon-darkRed text-white font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 transition-all shadow-md active:scale-95 flex items-center justify-center gap-2"
-            >
-              <GameIcon name="advance" size={14} color="#FFFFFF" />
-              Enter Location
-            </button>
-            <button
-              className="py-3 bg-parchment-200 hover:bg-parchment-300 text-dragon-red font-bold text-xs uppercase tracking-widest rounded border-2 border-dragon-gold/30 transition-all flex items-center justify-center gap-2"
-            >
-              <GameIcon name="sleep" size={14} color="#8B0000" />
-              Rest Here
-            </button>
-          </div>
+          <p className="text-[10px] text-dragon-red/70 font-roboto-condensed uppercase tracking-widest font-black text-center animate-pulse">
+            Select how to proceed in the chat window below
+          </p>
         </div>
       ) : (
         <>

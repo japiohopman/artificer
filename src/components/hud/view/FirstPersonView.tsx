@@ -11,8 +11,9 @@ interface FirstPersonViewProps {
 
 export const FirstPersonView: React.FC<FirstPersonViewProps> = () => {
   const { currentNPC, emotion } = useCharacterStore();
-  const { getActiveBackground } = useWorldStore();
+  const { getActiveBackground, isNight } = useWorldStore();
   const bgUrl = getActiveBackground();
+  const night = isNight();
 
   // Resolve NPC portrait with fallback mapping logic
   const portraitUrl = React.useMemo(() => {
@@ -37,8 +38,8 @@ export const FirstPersonView: React.FC<FirstPersonViewProps> = () => {
         className="absolute inset-0 transition-all duration-1000 group-hover:scale-105 pointer-events-none"
         style={{
           backgroundImage: `url(${bgUrl})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: '100% 200%',
+          backgroundPosition: night ? 'bottom center' : 'top center',
           backgroundRepeat: 'no-repeat'
         }}
       >
