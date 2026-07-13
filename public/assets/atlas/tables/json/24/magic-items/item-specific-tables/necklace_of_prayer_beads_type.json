@@ -1,0 +1,70 @@
+{
+  "index": "necklace_of_prayer_beads_type",
+  "name": "necklace of prayer beads type",
+  "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        6
+      ],
+      "weight": 1,
+      "text": "Bead of Blessing: @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{Bless}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        12
+      ],
+      "weight": 1,
+      "text": "Bead of Curing: @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Cure Wounds} (level 2 version)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        13,
+        16
+      ],
+      "weight": 1,
+      "text": "Bead of Favor: @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        17,
+        18
+      ],
+      "weight": 1,
+      "text": "Bead of Smiting: @UUID[Compendium.dnd5e.spells24.Item.phbsplShiningSmi]{Shining Smite}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        19,
+        19
+      ],
+      "weight": 1,
+      "text": "Bead of Summons: @UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{Guardian of Faith}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        20,
+        20
+      ],
+      "weight": 1,
+      "text": "Bead of Wind Walking: @UUID[Compendium.dnd5e.spells24.Item.phbsplWindWalk00]{Wind Walk}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/necklace_of_prayer_beads_type.json",
+  "updated_at": "2026-07-13T15:02:13.924Z"
+}

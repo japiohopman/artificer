@@ -1,0 +1,173 @@
+{
+  "index": "teleport_mishap",
+  "name": "teleport mishap",
+  "img": "icons/magic/movement/abstract-ribbons-red-orange.webp",
+  "description": [
+    "Mishap damage: [[/damage 3d10 type=force]]",
+    "Off target distance: [[/r 2d12#Miles]]{2d12 miles} [[/r 1d8#Direction]]{Direction}"
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        100
+      ],
+      "weight": 1,
+      "text": "Permanent circle: On target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        1,
+        100
+      ],
+      "weight": 1,
+      "text": "Linked object: On target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        1,
+        5
+      ],
+      "weight": 1,
+      "text": "Very familiar: Mishap",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        13
+      ],
+      "weight": 1,
+      "text": "Very familiar: Similar area",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        14,
+        24
+      ],
+      "weight": 1,
+      "text": "Very familiar: Off target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        25,
+        100
+      ],
+      "weight": 1,
+      "text": "Very familiar: On target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        1,
+        33
+      ],
+      "weight": 1,
+      "text": "Seen casually: Mishap",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        34,
+        43
+      ],
+      "weight": 1,
+      "text": "Seen casually: Similar area",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        44,
+        53
+      ],
+      "weight": 1,
+      "text": "Seen casually: Off target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        54,
+        73
+      ],
+      "weight": 1,
+      "text": "Seen casually: Off target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        1,
+        43
+      ],
+      "weight": 1,
+      "text": "Viewed or described: Mishap",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        44,
+        53
+      ],
+      "weight": 1,
+      "text": "Viewed or described: Similar area",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        54,
+        73
+      ],
+      "weight": 1,
+      "text": "Viewed or described: Off target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        74,
+        100
+      ],
+      "weight": 1,
+      "text": "Viewed or described: On target",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        1,
+        50
+      ],
+      "weight": 1,
+      "text": "False destination: Mishap",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        100
+      ],
+      "weight": 1,
+      "text": "False destination: Similar area",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/teleport_mishap.json",
+  "updated_at": "2026-07-13T15:02:13.955Z"
+}

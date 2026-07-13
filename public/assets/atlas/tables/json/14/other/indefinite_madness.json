@@ -1,0 +1,132 @@
+{
+  "index": "indefinite_madness",
+  "name": "indefinite madness",
+  "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "description": [
+    "The character is afflicted with indefinite madness."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "weight": 1,
+      "text": "\"Being drunk keeps me sane.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        25
+      ],
+      "weight": 1,
+      "text": "\"I keep whatever I find.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "weight": 1,
+      "text": "\"I try to become more like someone else I know—adopting his or her style of dress, mannerisms, and name.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "weight": 1,
+      "text": "\"I must bend the truth, exaggerate, or outright lie to be interesting to other people.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "weight": 1,
+      "text": "\"Achieving my goal is the only thing of interest to me, and I’ll ignore everything else to pursue it.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "weight": 1,
+      "text": "\"I find it hard to care about anything that goes on around me.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "weight": 1,
+      "text": "\"I don't like the way people judge me all the time.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        56,
+        70
+      ],
+      "weight": 1,
+      "text": "\"I am the smartest, wisest, strongest, fastest, and most beautiful person I know.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        71,
+        80
+      ],
+      "weight": 1,
+      "text": "\"I am convinced that powerful enemies are hunting me, and their agents are everywhere I go. I am sure they’re watching me all the time.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "weight": 1,
+      "text": "\"There's only one person I can trust. And only I can see this special friend.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        86,
+        95
+      ],
+      "weight": 1,
+      "text": "\"I can't take anything seriously. The more serious the situation, the funnier I find it.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        96,
+        100
+      ],
+      "weight": 1,
+      "text": "\"I've discovered that I really like killing people.\"",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/indefinite_madness.json",
+  "updated_at": "2026-07-13T15:02:13.841Z"
+}

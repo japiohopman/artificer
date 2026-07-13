@@ -1,0 +1,50 @@
+{
+  "index": "carpet_of_flying_size_capacity_and_speed",
+  "name": "carpet of flying: size, capacity, and speed",
+  "img": "icons/commodities/cloth/cloth-bolt-gold-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "3 × 5 ft. | 200 lb. capacity | 80 ft. Fly speed",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        55
+      ],
+      "weight": 1,
+      "text": "4 × 6 ft. | 400 lb. capacity | 60 ft. Fly speed",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        56,
+        80
+      ],
+      "weight": 1,
+      "text": "5 × 7 ft. | 600 lb. capacity | 40 ft. Fly speed",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "weight": 1,
+      "text": "6 × 9 ft. | 800 lb. capacity | 30 ft. Fly speed",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/carpet_of_flying_size_capacity_and_speed.json",
+  "updated_at": "2026-07-13T15:02:13.911Z"
+}

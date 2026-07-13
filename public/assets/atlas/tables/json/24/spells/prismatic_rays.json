@@ -1,0 +1,90 @@
+{
+  "index": "prismatic_rays",
+  "name": "prismatic rays",
+  "img": "icons/magic/light/projectiles-pink-purple.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Failed Save: [[/damage 12d6 fire]] damage. Successful Save: Half as much damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Failed Save: [[/damage 12d6]] acid damage. Successful Save: Half as much damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Failed Save: [[/damage 12d6 lightning]] damage. Successful Save: Half as much damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Failed Save: [[/damage 12d6 poison]] damage. Successful Save: Half as much damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Failed Save: [[/damage 12d6 cold]] damage. Successful Save: Half as much damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Failed Save: The target has the &Reference[Restrained] condition and makes a [[/save con]] saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the &Reference[Petrified] condition until it is freed by an effect like the Greater Restoration spell. The successes and failures needn’t be consecutive; keep track of both until the target collects three of a kind.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Failed Save: The target has the &Reference[Blinded] condition and makes a [[/save wis]] saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM’s choice).",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "The target is struck by two rays. Roll twice, rerolling any 8.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/prismatic_rays.json",
+  "updated_at": "2026-07-13T15:02:13.949Z"
+}

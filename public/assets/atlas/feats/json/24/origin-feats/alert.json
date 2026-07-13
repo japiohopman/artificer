@@ -1,0 +1,16 @@
+{
+  "index": "alert",
+  "name": "alert",
+  "prerequisites": [],
+  "desc": [
+    "You gain the following benefits.",
+    "Initiative Proficiency. When you roll Initiative, you can add your Proficiency Bonus to the roll.",
+    "Initiative Swap. Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the &Reference[Incapacitated] condition.",
+    "Foundry Note",
+    "This feature automatically includes the bonus to your Initiative."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/24/origin-feats/alert.json",
+  "image": "icons/creatures/eyes/human-single-brown.webp",
+  "updated_at": "2026-07-13T15:02:13.704Z"
+}

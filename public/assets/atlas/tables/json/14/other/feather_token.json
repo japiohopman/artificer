@@ -1,0 +1,72 @@
+{
+  "index": "feather_token",
+  "name": "feather token",
+  "img": "icons/commodities/materials/feather-black-blue.webp",
+  "description": [
+    "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "Feather Token Anchor",
+      "img": "icons/commodities/materials/feather-blue.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "Feather Token Whip",
+      "img": "icons/commodities/materials/feather-colored-blue.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        21,
+        35
+      ],
+      "weight": 1,
+      "text": "Feather Token Bird",
+      "img": "icons/commodities/materials/feather-yellow.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        36,
+        50
+      ],
+      "weight": 1,
+      "text": "Feather Token Fan",
+      "img": "icons/commodities/materials/feather-colored-red.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        51,
+        65
+      ],
+      "weight": 1,
+      "text": "Feather Token Swan Boat",
+      "img": "icons/commodities/materials/feather-blue-grey.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        66,
+        90
+      ],
+      "weight": 1,
+      "text": "Feather Token Tree",
+      "img": "icons/commodities/materials/feather-colored-green.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/feather_token.json",
+  "updated_at": "2026-07-13T15:02:13.829Z"
+}

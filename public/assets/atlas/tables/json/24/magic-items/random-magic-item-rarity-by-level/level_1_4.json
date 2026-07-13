@@ -1,0 +1,40 @@
+{
+  "index": "level_1_4",
+  "name": "level 1-4",
+  "img": "/assets/icons/svg/d20-grey.svg",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        54
+      ],
+      "weight": 1,
+      "text": "Common",
+      "img": "systems/dnd5e/icons/spell-tiers/spell1.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        55,
+        91
+      ],
+      "weight": 1,
+      "text": "Uncommon",
+      "img": "systems/dnd5e/icons/spell-tiers/spell2.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        92,
+        100
+      ],
+      "weight": 1,
+      "text": "Rare",
+      "img": "systems/dnd5e/icons/spell-tiers/spell3.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/random-magic-item-rarity-by-level/level_1_4.json",
+  "updated_at": "2026-07-13T15:02:13.936Z"
+}

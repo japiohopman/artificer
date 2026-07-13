@@ -1,0 +1,90 @@
+{
+  "index": "potion_miscibility",
+  "name": "potion miscibility",
+  "img": "icons/tools/laboratory/mortar-liquid-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Both potions lose their effects, and the mixture creates a magical explosion in a 5-foot-radius Sphere centered on itself. Each creature in that area takes [[/damage 4d10 type=force]] damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        8
+      ],
+      "weight": 1,
+      "text": "Both potions lose their effects, and the mixture becomes an ingested poison of your choice (see @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.UfAEdm3LbTzvQHC5]{Poison}).",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        9,
+        15
+      ],
+      "weight": 1,
+      "text": "Both potions lose their effects.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        25
+      ],
+      "weight": 1,
+      "text": "One potion loses its effect.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        26,
+        35
+      ],
+      "weight": 1,
+      "text": "Both potions work, but with their numerical effects and durations halved. If a potion has no numerical effect and no duration, it instead loses its effect.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        90
+      ],
+      "weight": 1,
+      "text": "Both potions work normally.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        99
+      ],
+      "weight": 1,
+      "text": "Both potions work, but the numerical effects and duration of one potion are doubled. If neither potion has anything to double in this way, they work normally.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "weight": 1,
+      "text": "Only one potion works, but its effects are permanent. Choose the simplest effect to make permanent or the one that seems the most fun. For example, a Potion of Healing might increase the drinker’s Hit Point maximum by [[/roll 2d4 + 2]], or a Potion of Invisibility might give the drinker the Invisible condition indefinitely. At your discretion, a Dispel Magic spell or similar magic might end this lasting effect.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/sentient-item-attributes/potion_miscibility.json",
+  "updated_at": "2026-07-13T15:02:13.942Z"
+}

@@ -1,0 +1,15 @@
+{
+  "index": "two_weapon_fighting",
+  "name": "two-weapon fighting",
+  "prerequisites": [],
+  "desc": [
+    "(Prerequisite: Fighting Style Feature)",
+    "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+    "Foundry Note",
+    "This feature is not automated. You can add your modifier in the Situational Bonus field of the damage roll."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/two_weapon_fighting.json",
+  "image": "icons/skills/melee/swords-parry-block-yellow.webp",
+  "updated_at": "2026-07-13T15:02:13.699Z"
+}

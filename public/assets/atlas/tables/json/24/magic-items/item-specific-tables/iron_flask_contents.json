@@ -1,0 +1,310 @@
+{
+  "index": "iron_flask_contents",
+  "name": "iron flask contents",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        50
+      ],
+      "weight": 1,
+      "text": "No creature",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        51
+      ],
+      "weight": 1,
+      "text": "Arcanaloth",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        52,
+        54
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmBoneDevil00000]{Bone Devil}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        55,
+        56
+      ],
+      "weight": 1,
+      "text": "Cambion",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        57,
+        58
+      ],
+      "weight": 1,
+      "text": "Dao",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        59,
+        59
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmDeva0000000000]{Deva}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        60,
+        61
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmDjinni00000000]{Djinni}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        62,
+        63
+      ],
+      "weight": 1,
+      "text": "Efreeti@UUID[Compendium.dnd5e.actors24.Actor.mmEfreeti0000000]{Efreeti}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        64,
+        65
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmErinyes0000000]{Erinyes}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        66,
+        67
+      ],
+      "weight": 1,
+      "text": "Fomorian",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        68,
+        68
+      ],
+      "weight": 1,
+      "text": "Githyanki Knight",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        69,
+        69
+      ],
+      "weight": 1,
+      "text": "Githzerai Zerth",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        70,
+        71
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmGlabrezu000000]{Glabrezu}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        72,
+        74
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmHezrou00000000]{Hezrou}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        75,
+        75
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{Incubus}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        76,
+        77
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmInvisibleStalk]{Invisible Stalker}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        78,
+        79
+      ],
+      "weight": 1,
+      "text": "Marid",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        80,
+        80
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmMarilith000000]{Marilith}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        82
+      ],
+      "weight": 1,
+      "text": "Mezzoloth",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        83,
+        84
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmNalfeshnee0000]{Nalfeshnee}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        85,
+        86
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmNightHag000000]{Night Hag}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        87,
+        88
+      ],
+      "weight": 1,
+      "text": "Nycaloth",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        89,
+        89
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmPlanetar000000]{Planetar}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        90,
+        91
+      ],
+      "weight": 1,
+      "text": "Red Slaad",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        92,
+        93
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmSalamander0000]{Salamander}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        94,
+        94
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmSolar000000000]{Solar}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        95,
+        95
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{Succubus}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "weight": 1,
+      "text": "Ultroloth",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        97,
+        99
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmVrock000000000]{Vrock}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.actors24.Actor.mmXorn0000000000]{Xorn}",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/iron_flask_contents.json",
+  "updated_at": "2026-07-13T15:02:13.921Z"
+}

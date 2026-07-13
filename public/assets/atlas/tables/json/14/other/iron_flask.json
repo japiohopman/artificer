@@ -1,0 +1,210 @@
+{
+  "index": "iron_flask",
+  "name": "iron flask",
+  "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        50
+      ],
+      "weight": 1,
+      "text": "Empty",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        54
+      ],
+      "weight": 1,
+      "text": "Demon (type 1)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        55,
+        58
+      ],
+      "weight": 1,
+      "text": "Demon (type 2)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        59,
+        62
+      ],
+      "weight": 1,
+      "text": "Demon (type 3)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        63,
+        64
+      ],
+      "weight": 1,
+      "text": "Demon (type 4)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        65,
+        65
+      ],
+      "weight": 1,
+      "text": "Demon (type 5)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        66,
+        66
+      ],
+      "weight": 1,
+      "text": "Demon (type 6)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        67,
+        67
+      ],
+      "weight": 1,
+      "text": "Deva",
+      "img": "systems/dnd5e/tokens/celestial/Deva.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        68,
+        69
+      ],
+      "weight": 1,
+      "text": "Devil (greater)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        70,
+        73
+      ],
+      "weight": 1,
+      "text": "Devil (lesser)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        74,
+        75
+      ],
+      "weight": 1,
+      "text": "Djinni",
+      "img": "systems/dnd5e/tokens/elemental/Djinni.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        76,
+        77
+      ],
+      "weight": 1,
+      "text": "Efreeti",
+      "img": "systems/dnd5e/tokens/elemental/Efreeti.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        78,
+        83
+      ],
+      "weight": 1,
+      "text": "Elemental (any)",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        84,
+        86
+      ],
+      "weight": 1,
+      "text": "Invisible Stalker",
+      "img": "/assets/icons/svg/mystery-man.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        87,
+        90
+      ],
+      "weight": 1,
+      "text": "Night Hag",
+      "img": "systems/dnd5e/tokens/fiend/NightHag.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        91,
+        91
+      ],
+      "weight": 1,
+      "text": "Planetar",
+      "img": "systems/dnd5e/tokens/celestial/Planetar.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        92,
+        95
+      ],
+      "weight": 1,
+      "text": "Salamander",
+      "img": "systems/dnd5e/tokens/elemental/Salamander.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        96,
+        96
+      ],
+      "weight": 1,
+      "text": "Solar",
+      "img": "/assets/icons/svg/mystery-man.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        97,
+        99
+      ],
+      "weight": 1,
+      "text": "Succubus/Incubus",
+      "img": "systems/dnd5e/tokens/fiend/Succubus.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        100,
+        100
+      ],
+      "weight": 1,
+      "text": "Xorn",
+      "img": "systems/dnd5e/tokens/elemental/Xorn.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/iron_flask.json",
+  "updated_at": "2026-07-13T15:02:13.847Z"
+}

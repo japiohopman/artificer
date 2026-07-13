@@ -1,0 +1,50 @@
+{
+  "index": "horn_of_valhalla_type_and_requirement",
+  "name": "horn of valhalla: type and requirement",
+  "img": "icons/commodities/bones/horn-drinking-white.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        40
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSilverHornOfV]{Silver} (2 spirits); No requirement",
+      "img": "icons/commodities/metal/ingot-stamped-silver.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        41,
+        75
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBrassHornOfVa]{Brass} (3 spirits); Proficiency with all Simple weapons",
+      "img": "icons/commodities/metal/ingot-stamped-flat-gold.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        76,
+        90
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgBronzeHornOfV]{Bronze} (4 spirits); Training with all Medium armor",
+      "img": "icons/commodities/metal/ingot-stamped-bronze.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgIronHornOfVal]{Iron} (5 spirits); Proficiency with all Martial weapons",
+      "img": "icons/commodities/metal/ingot-iron.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/horn_of_valhalla_type_and_requirement.json",
+  "updated_at": "2026-07-13T15:02:13.918Z"
+}

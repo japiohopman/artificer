@@ -1,0 +1,192 @@
+{
+  "index": "wand_of_wonder_effects",
+  "name": "wand of wonder effects",
+  "img": "icons/weapons/wands/wand-gem-violet.webp",
+  "description": [
+    "A roll table of effects for the @UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfWonder0]{Wand of Wonder} which implements the effects as activities where possible."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "You cast a spell originating from the chosen point. Roll 1d10 to determine the spell: on a 1–2, @UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{Darkness}; on a 3–4, @UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{Faerie Fire}; on a 5–6, @UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{Fireball}; on a 7–8, @UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{Slow}; on a 9–10, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Stinking Cloud}.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, you have the &Reference[Stunned] condition until the start of your next turn, believing something awesome just happened.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        26,
+        30
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Gust of Wind}. The Line created by the spell extends from you to the chosen point of origin.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        31,
+        35
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, you take [[/damage 1d6 type=psychic]] damage.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        40
+      ],
+      "weight": 1,
+      "text": "Heavy rain falls for 1 minute in a 120-foot-high, 60-foot-radius Cylinder centered on the chosen point of origin. During that time, the area of effect is &Reference[Lightly Obscured].",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        41,
+        45
+      ],
+      "weight": 1,
+      "text": "A cloud of 600 oversized butterflies fills a 60-foot-high, 30-foot-radius Cylinder centered on the chosen point of origin. The butterflies remain for 10 minutes, during which time the area of effect is &Reference[Heavily Obscured].",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{Lightning Bolt}. The Line created by the spell extends from you to the chosen point of origin.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        55
+      ],
+      "weight": 1,
+      "text": "The creature closest to the chosen point of origin is enlarged as if you had cast @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Enlarge/Reduce} on it. If the target isn’t you and can’t be affected by that spell, you become the target instead.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        56,
+        60
+      ],
+      "weight": 1,
+      "text": "A magically formed creature appears in an unoccupied space as close to the chosen point of origin as possible. The creature isn’t under your control, acts as it normally would, and disappears after 1 hour or when it drops to 0 Hit Points. Roll [[/r 1d4]] to determine which creature appears. On a 1, a Rhinoceros appears; on a 2, an Elephant appears; and on a 3–4, a Rat appears.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        64
+      ],
+      "weight": 1,
+      "text": "Grass covers a 60-foot-radius circle of ground, with the center of that circle as close to the chosen point of origin as possible. Grass that’s already there grows to ten times its normal size and remains overgrown for 1 minute.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        65,
+        68
+      ],
+      "weight": 1,
+      "text": "An object of the DM’s choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the chosen point of origin, and no larger than 10 feet in any dimension. If there are no such objects in range, nothing happens.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        69,
+        72
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, you shrink as if you had cast @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{Enlarge/Reduce} on yourself and remain in that state for 1 minute.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        73,
+        77
+      ],
+      "weight": 1,
+      "text": "Leaves grow from the creature nearest to the chosen point of origin. Unless they are picked off, the leaves turn brown and fall off after 24 hours.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        78,
+        82
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, a burst of colorful, shimmering light extends from you in a 30-foot Emanation. Each creature in the area must succeed on a [[/save con 15]] saving throw or have the &Reference[Blinded] condition for 1 minute. A creature repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        83,
+        87
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, you cast @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{Invisibility} on yourself.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        88,
+        92
+      ],
+      "weight": 1,
+      "text": "Nothing happens at the chosen point of origin. Instead, a stream of [[/r 1d4*10 #Gems]] gems, each worth 1 GP, shoots from the wand’s tip in a Line 30 feet long and 5 feet wide toward the chosen point of origin. Each gem deals [[/damage 1 type=bludgeoning]] damage, and the total damage of the gems is divided equally among all creatures in the Line.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        93,
+        97
+      ],
+      "weight": 1,
+      "text": "You cast @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Polymorph}, targeting the creature closest to the chosen point of origin. Roll [[/r 1d4]] to determine the target’s new form. On a 1, the new form is a Black Bear; on a 2, the new form is a Giant Wasp; on a 3–4, the new form is a Frog.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        98,
+        100
+      ],
+      "weight": 1,
+      "text": "The creature closest to the chosen point of origin makes a [[/save con 15]] saving throw. On a failed save, the creature has the &Reference[Restrained] condition and begins to turn to stone. While Restrained in this way, the creature repeats the save at the end of its next turn. On a successful save, the effect ends. On a failed save, the creature has the &Reference[Petrified] condition instead of the Restrained condition. The petrification lasts until the creature is freed by the @UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration} spell or similar magic.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/wand_of_wonder_effects.json",
+  "updated_at": "2026-07-13T15:02:13.930Z"
+}

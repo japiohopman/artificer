@@ -1,0 +1,150 @@
+{
+  "index": "ammunition_of_slaying_creature_type",
+  "name": "ammunition of slaying: creature type",
+  "img": "icons/weapons/ammunition/arrow-head-war-flight.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        10
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4GIkMFeZQHZnfjvq]",
+      "img": "icons/creatures/magical/spirit-poison-smoke-green.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        11,
+        15
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.70bFeuTndNorjLBe]",
+      "img": "icons/creatures/mammals/goat-horned-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        20
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.o4aDyFCK0ekd9w8j]",
+      "img": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        25
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.AvExH8PizzJN0jSM]",
+      "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        26,
+        35
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.VRMET3XgPTjBG91L]",
+      "img": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        45
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ku2JX8rDga8GUBul]",
+      "img": "icons/creatures/magical/spirit-fire-orange.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        46,
+        50
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ZssaQ07jWS7jFiej]",
+      "img": "icons/environment/people/commoner.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        60
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3JnW3nSByOVKu1LW]",
+      "img": "icons/creatures/magical/spirit-undead-ghost-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        70
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.ulADMO3yope7gn5R]",
+      "img": "icons/creatures/unholy/demon-fire-horned-mask.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        71,
+        75
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.MKSR9zEe2s3qVILa]",
+      "img": "icons/skills/melee/hand-grip-hammer-spiked-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        76,
+        80
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.cFNisqoGRSTHYDI4]",
+      "img": "icons/creatures/magical/humanoid-giant-forest-blue.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        81,
+        85
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.3mSYXVx987sezjuS]",
+      "img": "icons/creatures/slimes/slime-face-hollow-green.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        86,
+        90
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.BsXM9mDyGJ1R754S]",
+      "img": "icons/magic/nature/tree-animated-smile.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "@UUID[Compendium.dnd5e.equipment24.Item.dmgSlayingAmmuni.ActiveEffect.4NXhqKrNtDQjBcc8]",
+      "img": "icons/magic/death/undead-skeleton-rags-fire-green.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/ammunition_of_slaying_creature_type.json",
+  "updated_at": "2026-07-13T15:02:13.903Z"
+}

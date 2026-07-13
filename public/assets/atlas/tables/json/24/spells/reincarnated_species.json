@@ -1,0 +1,112 @@
+{
+  "index": "reincarnated_species",
+  "name": "reincarnated species",
+  "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+  "description": [
+    "Roll [[/r 1d10]] and consult the table below to determine the body’s species, or the DM chooses another playable species."
+  ],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "Aasimar",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "Dragonborn",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "Dwarf",
+      "img": "systems/dnd5e/icons/species/dwarf.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "Goliath",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "Halfling",
+      "img": "systems/dnd5e/icons/species/halfling.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "Human",
+      "img": "systems/dnd5e/icons/species/human.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        9,
+        9
+      ],
+      "weight": 1,
+      "text": "Orc",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Elven Lineage",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        10,
+        10
+      ],
+      "weight": 1,
+      "text": "Fiendish Legacy",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "Gnomish Lineage",
+      "img": "/assets/icons/svg/items/race.svg",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/spells/reincarnated_species.json",
+  "updated_at": "2026-07-13T15:02:13.953Z"
+}

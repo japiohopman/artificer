@@ -1,0 +1,90 @@
+{
+  "index": "personality_traits_acolyte",
+  "name": "personality traits (acolyte)",
+  "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "I idolize a particular hero of my faith, and constantly refer to that person’s deeds and example.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "I see omens in every event and action. The gods try to speak to us, we just need to listen.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Nothing can shake my optimistic attitude.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        7,
+        7
+      ],
+      "weight": 1,
+      "text": "I’ve enjoyed fine food, drink, and high society among my temple’s elite. Rough living grates on me.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        8,
+        8
+      ],
+      "weight": 1,
+      "text": "I’ve spent so long in the temple that I have little practical experience dealing with people in the outside world.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/personality_traits_acolyte.json",
+  "updated_at": "2026-07-13T15:02:13.857Z"
+}

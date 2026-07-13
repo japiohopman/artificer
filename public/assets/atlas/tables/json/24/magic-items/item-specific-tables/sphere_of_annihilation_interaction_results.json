@@ -1,0 +1,40 @@
+{
+  "index": "sphere_of_annihilation_interaction_results",
+  "name": "sphere of annihilation interaction results",
+  "img": "icons/magic/unholy/orb-glowing-purple.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        50
+      ],
+      "weight": 1,
+      "text": "The sphere is destroyed.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        85
+      ],
+      "weight": 1,
+      "text": "The sphere moves through the portal or into the extradimensional space.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        86,
+        100
+      ],
+      "weight": 1,
+      "text": "A spatial rift sends the sphere and each creature and object within 180 feet of the sphere to a random plane of existence.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/item-specific-tables/sphere_of_annihilation_interaction_results.json",
+  "updated_at": "2026-07-13T15:02:13.928Z"
+}

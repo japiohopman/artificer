@@ -1,0 +1,20 @@
+{
+  "index": "grappler",
+  "name": "grappler",
+  "prerequisites": [
+    "Strength or Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Punch and Grab. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.",
+    "Attack Advantage. You have Advantage on attack rolls against a creature &Reference[Grappled] by you.",
+    "Fast Wrestler. You don't have to spend extra movement to move a creature by you if the creature is your size or smaller.",
+    "Foundry Note",
+    "The Advantage is not automated."
+  ],
+  "feature_specific": {},
+  "url": "/assets/atlas/feats/json/24/general-feats/grappler.json",
+  "image": "icons/skills/melee/unarmed-punch-fist.webp",
+  "updated_at": "2026-07-13T15:02:13.702Z"
+}

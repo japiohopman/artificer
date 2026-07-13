@@ -1,0 +1,40 @@
+{
+  "index": "level_17_20",
+  "name": "level 17-20",
+  "img": "/assets/icons/svg/d20-grey.svg",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "Rare",
+      "img": "systems/dnd5e/icons/spell-tiers/spell3.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        21,
+        64
+      ],
+      "weight": 1,
+      "text": "Very Rare",
+      "img": "systems/dnd5e/icons/spell-tiers/spell4.webp",
+      "type": "text"
+    },
+    {
+      "range": [
+        65,
+        100
+      ],
+      "weight": 1,
+      "text": "Legendary",
+      "img": "systems/dnd5e/icons/spell-tiers/spell5.webp",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/random-magic-item-rarity-by-level/level_17_20.json",
+  "updated_at": "2026-07-13T15:02:13.938Z"
+}

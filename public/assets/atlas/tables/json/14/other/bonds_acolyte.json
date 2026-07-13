@@ -1,0 +1,70 @@
+{
+  "index": "bonds_acolyte",
+  "name": "bonds (acolyte)",
+  "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        1
+      ],
+      "weight": 1,
+      "text": "I would die to recover an ancient relic of my faith that was lost long ago.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        2,
+        2
+      ],
+      "weight": 1,
+      "text": "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        3,
+        3
+      ],
+      "weight": 1,
+      "text": "I owe my life to the priest who took me in when my parents died.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        4,
+        4
+      ],
+      "weight": 1,
+      "text": "Everything I do is for the common people.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        5,
+        5
+      ],
+      "weight": 1,
+      "text": "I will do anything to protect the temple where I served.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        6,
+        6
+      ],
+      "weight": 1,
+      "text": "I seek to preserve a sacred text that my enemies consider heretical and seek to destroy.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/bonds_acolyte.json",
+  "updated_at": "2026-07-13T15:02:13.817Z"
+}

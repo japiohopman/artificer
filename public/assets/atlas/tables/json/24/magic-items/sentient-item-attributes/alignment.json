@@ -1,0 +1,100 @@
+{
+  "index": "alignment",
+  "name": "alignment",
+  "img": "icons/tools/hand/scale-balances-merchant-brown.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        15
+      ],
+      "weight": 1,
+      "text": "Lawful Good",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        16,
+        35
+      ],
+      "weight": 1,
+      "text": "Neutral Good",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        36,
+        50
+      ],
+      "weight": 1,
+      "text": "Chaotic Good",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        51,
+        63
+      ],
+      "weight": 1,
+      "text": "Lawful Neutral",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        64,
+        73
+      ],
+      "weight": 1,
+      "text": "Neutral",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        74,
+        85
+      ],
+      "weight": 1,
+      "text": "Chaotic Neutral",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        86,
+        89
+      ],
+      "weight": 1,
+      "text": "Lawful Evil",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        90,
+        96
+      ],
+      "weight": 1,
+      "text": "Neutral Evil",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        97,
+        100
+      ],
+      "weight": 1,
+      "text": "Chaotic Evil",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/24/magic-items/sentient-item-attributes/alignment.json",
+  "updated_at": "2026-07-13T15:02:13.940Z"
+}

@@ -1,0 +1,50 @@
+{
+  "index": "carpet_of_flying",
+  "name": "carpet of flying",
+  "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        20
+      ],
+      "weight": 1,
+      "text": "Carpet of Flying (3x5)",
+      "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        21,
+        55
+      ],
+      "weight": 1,
+      "text": "Carpet of Flying (4x6)",
+      "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        56,
+        80
+      ],
+      "weight": 1,
+      "text": "Carpet of Flying (5x7)",
+      "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+      "type": "document"
+    },
+    {
+      "range": [
+        81,
+        100
+      ],
+      "weight": 1,
+      "text": "Carpet of Flying (6x9)",
+      "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+      "type": "document"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/carpet_of_flying.json",
+  "updated_at": "2026-07-13T15:02:13.823Z"
+}

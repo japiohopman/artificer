@@ -1,0 +1,40 @@
+{
+  "index": "sentient_magic_items_communication",
+  "name": "sentient magic items communication",
+  "img": "icons/weapons/polearms/spear-flared-silver-pink.webp",
+  "description": [],
+  "results": [
+    {
+      "range": [
+        1,
+        60
+      ],
+      "weight": 1,
+      "text": "The item communicates by transmitting emotion to the creature carrying or wielding it.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        61,
+        90
+      ],
+      "weight": 1,
+      "text": "The item can speak, read, and understand one or more languages.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    },
+    {
+      "range": [
+        91,
+        100
+      ],
+      "weight": 1,
+      "text": "The item can speak, read, and understand one or more languages. In addition, the item can communicate telepathically with any character that carries or wields it.",
+      "img": "/assets/icons/svg/d20-black.svg",
+      "type": "text"
+    }
+  ],
+  "url": "/assets/atlas/tables/json/14/other/sentient_magic_items_communication.json",
+  "updated_at": "2026-07-13T15:02:13.874Z"
+}
