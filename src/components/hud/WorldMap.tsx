@@ -28,11 +28,11 @@ import { GameIcon } from '../../game_icons';
 const CATEGORY_TIERS = [
   { zoom: 3, miles: 4001, categories: ['regions'] },
   { zoom: 4, miles: 2001, categories: ['seas_oceans'] }, // Removed 'cities' from global category load to optimize performance
-  { zoom: 5, miles: 1001, categories: ['mountains', 'forest', 'islands', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] },
+  { zoom: 5, miles: 1001, categories: ['mountains', 'forest', 'deserts_wastelands', 'glaciers_tundras', 'oases', 'plains_grasslands', 'wetlands', 'rivers', 'lakes', 'bays', 'coasts', 'sub_regions'] }, // Removed 'islands' as they are now dynamically discoverable
   { zoom: 6, miles: 501, categories: [] },
-  { zoom: 7, miles: 251, categories: ['fortresses_keeps', 'towns_settlements', 'underdark'] },
-  { zoom: 8, miles: 130, categories: ['landmarks', 'temples', 'shrines'] },
-  { zoom: 9, miles: 70, categories: ['ruins', 'poi', 'graveyards', 'dungeons', 'caves', 'roads_trails'] }
+  { zoom: 7, miles: 251, categories: ['underdark'] }, // Removed 'fortresses_keeps' and 'towns_settlements' as they are discoverable
+  { zoom: 8, miles: 130, categories: ['temples', 'shrines'] }, // Removed 'landmarks' as they are discoverable
+  { zoom: 9, miles: 70, categories: ['graveyards', 'dungeons', 'caves', 'roads_trails'] } // Removed 'ruins' and 'poi' as they are discoverable
 ];
 
 // Helper to create custom markers using World Atlas Icons
@@ -110,10 +110,12 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
 
 
 const MapEvents = ({
+  mapMode,
   onZoomChange,
   onBoundsChange,
   onMapInstance
 }: {
+  mapMode: 'pan' | 'travel';
   onZoomChange: (zoom: number) => void;
   onBoundsChange: (bounds: L.LatLngBounds) => void;
   onMapInstance: (map: L.Map) => void;
@@ -161,7 +163,7 @@ const MapEvents = ({
     click: (e) => {
       setInspectedLocation(null);
 
-      if (isTraveling) return;
+      if (isTraveling || mapMode !== 'travel') return;
 
       const latlng = e.latlng;
       const clickedLat = latlng.lat;
@@ -272,6 +274,7 @@ export const WorldMap: React.FC = () => {
   const getPartySpeedMph = useWorldStore(state => state.getPartySpeedMph);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
   
+  const [mapMode, setMapMode] = React.useState<'pan' | 'travel'>('pan');
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   const [renderedCount, setRenderedCount] = React.useState(0);
@@ -502,8 +505,8 @@ export const WorldMap: React.FC = () => {
         minZoom={3}
         maxZoom={maxZoom}
         scrollWheelZoom={true}
-        dragging={isMapPanEnabled}
-        doubleClickZoom={isMapPanEnabled}
+        dragging={isMapPanEnabled && mapMode === 'pan'}
+        doubleClickZoom={isMapPanEnabled && mapMode === 'pan'}
         className="w-full h-full grayscale-[0.1] contrast-[1.05] brightness-[0.95]"
         zoomControl={false}
         attributionControl={false}
@@ -557,6 +560,7 @@ export const WorldMap: React.FC = () => {
 
 
         <MapEvents
+          mapMode={mapMode}
           onZoomChange={React.useCallback((z: number) => setCurrentZoom(z), [])}
           onBoundsChange={React.useCallback((b: L.LatLngBounds) => setCurrentBounds(b), [])}
           onMapInstance={React.useCallback((map: L.Map) => { mapRef.current = map; }, [])}
@@ -693,6 +697,34 @@ export const WorldMap: React.FC = () => {
       
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
+
+      {/* Map Mode Toolbar */}
+      <div className="absolute top-4 left-4 z-[1000] flex gap-2 bg-parchment-100/90 border-2 border-dragon-gold/50 p-1.5 rounded shadow-lg animate-in fade-in duration-300">
+        <button
+          onClick={() => setMapMode('pan')}
+          className={cn(
+            "flex items-center gap-1.5 px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
+            mapMode === 'pan'
+              ? "bg-dragon-red text-white shadow-md"
+              : "text-dragon-red hover:bg-parchment-200"
+          )}
+        >
+          <GameIcon name="map" size={12} color={mapMode === 'pan' ? "#FFFFFF" : "#8B0000"} />
+          Navigate
+        </button>
+        <button
+          onClick={() => setMapMode('travel')}
+          className={cn(
+            "flex items-center gap-1.5 px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
+            mapMode === 'travel'
+              ? "bg-dragon-red text-white shadow-md"
+              : "text-dragon-red hover:bg-parchment-200"
+          )}
+        >
+          <GameIcon name="compass" size={12} color={mapMode === 'travel' ? "#FFFFFF" : "#8B0000"} />
+          Set Target
+        </button>
+      </div>
     </div>
   );
 };

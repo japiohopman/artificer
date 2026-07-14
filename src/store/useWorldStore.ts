@@ -136,6 +136,7 @@ export interface WorldState {
   getActiveBackground: () => string;
   setDiscoveredLocationIds: (ids: string[]) => void;
   discoverLocation: (id: string) => void;
+  setExploredAreas: (areas: { x: number, y: number, radius: number }[]) => void;
   setPartyLocalPos: (pos: { x: number; y: number } | null) => void;
   setActiveEntryPointId: (id: string | null) => void;
   loadAllCitiesRegistry: () => Promise<void>;
@@ -724,6 +725,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     get().loadDiscoveredLocations();
   },
 
+  setExploredAreas: (exploredAreas) => set({ exploredAreas }),
+
   setPartyLocalPos: (partyLocalPos) => set({ partyLocalPos }),
   setActiveEntryPointId: (activeEntryPointId) => set({ activeEntryPointId }),
   setSubMapActiveCategories: (subMapActiveCategories) => set({ subMapActiveCategories }),
@@ -790,7 +793,8 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         'fortresses_keeps/fortresses_keeps.json',
         'poi/poi.json',
         'ruins/ruins.json',
-        'towns_settlements/towns_settlements.json'
+        'towns_settlements/towns_settlements.json',
+        'islands/islands.json'
       ];
       
       let aggregated: any[] = [];

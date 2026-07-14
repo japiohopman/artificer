@@ -7,13 +7,14 @@ export const saveService = {
     const id = slot ? `slot${slot}` : (character.id || `char_${Date.now()}`);
     const path = `public/data/character_save/json/${id}.json`;
     
-    // Fetch current discovered locations to persist with character state
-    const { discoveredLocationIds } = useWorldStore.getState();
+    // Fetch current discovered locations and explored areas to persist with character state
+    const { discoveredLocationIds, exploredAreas } = useWorldStore.getState();
 
     // Normalize and sanitize for storage if needed
     const dataToSave = {
       ...character,
       discoveredLocationIds,
+      exploredAreas,
       id,
       lastSaved: new Date().toISOString()
     };

@@ -20,6 +20,7 @@ export interface Character {
   background: string;
   isNpc?: boolean;
   discoveredLocationIds?: string[];
+  exploredAreas?: { x: number, y: number, radius: number }[];
   isRecruitable?: boolean;
   stats: {
     str: number;
@@ -197,8 +198,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     set({ activeCharacterId: id });
     const char = get().characters.find(c => c.id === id);
     if (char) {
-      const { setDiscoveredLocationIds } = useWorldStore.getState();
+      const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
       setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
+      setExploredAreas(char.exploredAreas || []);
     }
   },
   setMainCharacter: (char) => set((state) => {
@@ -501,8 +503,9 @@ characters: state.characters.map(char =>
 
       const activeChar = processedChars.find(c => c.id === activeId);
       if (activeChar) {
-        const { setDiscoveredLocationIds } = useWorldStore.getState();
+        const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
         setDiscoveredLocationIds(activeChar.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
+        setExploredAreas(activeChar.exploredAreas || []);
       }
 
       for (const char of processedChars) {

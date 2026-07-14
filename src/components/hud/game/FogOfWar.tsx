@@ -49,10 +49,10 @@ export const FogOfWar: React.FC<FogOfWarProps> = ({ mapHeight, mapWidth, protoHe
 
         {/* Volumetric Cloud Pattern */}
         <pattern id="fog-pattern-1" patternUnits="userSpaceOnUse" width="1024" height="1024">
-          <image href="/assets/images/ui/map_fog_cloud.webp" x="0" y="0" width="1024" height="1024" opacity="0.9" />
+          <image href="/assets/ui/map_fog_cloud.webp" x="0" y="0" width="1024" height="1024" opacity="0.9" />
         </pattern>
         <pattern id="fog-pattern-2" patternUnits="userSpaceOnUse" width="800" height="800">
-          <image href="/assets/images/ui/map_fog_cloud.webp" x="100" y="100" width="800" height="800" opacity="0.6" />
+          <image href="/assets/ui/map_fog_cloud.webp" x="100" y="100" width="800" height="800" opacity="0.6" />
         </pattern>
       </defs>
 
