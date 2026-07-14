@@ -5,133 +5,431 @@
   "gender": "Female",
   "stats": {
     "str": 16,
-    "dex": 14,
-    "con": 14,
-    "int": 12,
-    "wis": 10,
-    "cha": 8
+    "dex": 8,
+    "con": 11,
+    "int": 11,
+    "wis": 11,
+    "cha": 11
   },
   "proficiencies": [
-    "skill: perception",
+    "skill: intimidation",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
+    "light armor",
+    "simple weapons",
+    "longswords",
     "rapiers",
     "shortswords",
     "hand crossbows",
-    "Skill: Stealth",
-    "Skill: Survival",
-    "Cartographer'S Tools",
-    "all armor",
-    "shields",
-    "simple weapons",
-    "martial weapons",
-    "saving throw: str",
-    "saving throw: con",
-    "Saving Throw: str",
-    "Saving Throw: con"
+    "thieves' tools",
+    "saving throw: dex",
+    "saving throw: int",
+    "Saving Throw: dex",
+    "Saving Throw: int"
   ],
   "traits": [
     ""
   ],
   "features": [
     {
-      "index": "fighter_fighting_style",
+      "index": "rogue_expertise_1",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "rogue",
+        "name": "rogue",
+        "url": "/assets/atlas/class/json/rogue.json"
       },
-      "name": "fighting style",
+      "name": "expertise",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+        "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+        "At 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit"
       ],
       "feature_specific": {
-        "subfeature_options": {
+        "expertise_options": {
           "choose": 1,
-          "type": "feature",
+          "type": "proficiency",
           "from": {
             "option_set_type": "options_array",
             "options": [
               {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_archery",
-                  "name": "fighting style: archery",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
+                "option_type": "choice",
+                "choice": {
+                  "choose": 2,
+                  "type": "proficiency",
+                  "from": {
+                    "option_set_type": "options_array",
+                    "options": [
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_acrobatics",
+                          "name": "skill: acrobatics",
+                          "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_animal_handling",
+                          "name": "skill: animal handling",
+                          "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_arcana",
+                          "name": "skill: arcana",
+                          "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_athletics",
+                          "name": "skill: athletics",
+                          "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_deception",
+                          "name": "skill: deception",
+                          "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_history",
+                          "name": "skill: history",
+                          "url": "/assets/atlas/proficiencies/json/skill_history.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_insight",
+                          "name": "skill: insight",
+                          "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_intimidation",
+                          "name": "skill: intimidation",
+                          "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_investigation",
+                          "name": "skill: investigation",
+                          "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_medicine",
+                          "name": "skill: medicine",
+                          "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_nature",
+                          "name": "skill: nature",
+                          "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_perception",
+                          "name": "skill: perception",
+                          "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_performance",
+                          "name": "skill: performance",
+                          "url": "/assets/atlas/proficiencies/json/skill_performance.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_persuasion",
+                          "name": "skill: persuasion",
+                          "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_religion",
+                          "name": "skill: religion",
+                          "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_sleight_of_hand",
+                          "name": "skill: sleight of hand",
+                          "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_stealth",
+                          "name": "skill: stealth",
+                          "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+                        }
+                      },
+                      {
+                        "option_type": "reference",
+                        "item": {
+                          "index": "skill_survival",
+                          "name": "skill: survival",
+                          "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+                        }
+                      }
+                    ]
+                  }
                 }
               },
               {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_defense",
-                  "name": "fighting style: defense",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_dueling",
-                  "name": "fighting style: dueling",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_great_weapon_fighting",
-                  "name": "fighting style: great weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_protection",
-                  "name": "fighting style: protection",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_two_weapon_fighting",
-                  "name": "fighting style: two_weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
-                }
+                "option_type": "multiple",
+                "items": [
+                  {
+                    "option_type": "choice",
+                    "choice": {
+                      "choose": 1,
+                      "type": "proficiency",
+                      "from": {
+                        "option_set_type": "options_array",
+                        "options": [
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_acrobatics",
+                              "name": "skill: acrobatics",
+                              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_animal_handling",
+                              "name": "skill: animal handling",
+                              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_arcana",
+                              "name": "skill: arcana",
+                              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_athletics",
+                              "name": "skill: athletics",
+                              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_deception",
+                              "name": "skill: deception",
+                              "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_history",
+                              "name": "skill: history",
+                              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_insight",
+                              "name": "skill: insight",
+                              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_intimidation",
+                              "name": "skill: intimidation",
+                              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_investigation",
+                              "name": "skill: investigation",
+                              "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_medicine",
+                              "name": "skill: medicine",
+                              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_nature",
+                              "name": "skill: nature",
+                              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_perception",
+                              "name": "skill: perception",
+                              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_performance",
+                              "name": "skill: performance",
+                              "url": "/assets/atlas/proficiencies/json/skill_performance.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_persuasion",
+                              "name": "skill: persuasion",
+                              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_religion",
+                              "name": "skill: religion",
+                              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_sleight_of_hand",
+                              "name": "skill: sleight of hand",
+                              "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_stealth",
+                              "name": "skill: stealth",
+                              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+                            }
+                          },
+                          {
+                            "option_type": "reference",
+                            "item": {
+                              "index": "skill_survival",
+                              "name": "skill: survival",
+                              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "option_type": "reference",
+                    "item": {
+                      "index": "thieves_tools",
+                      "name": "thieves' tools",
+                      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+                    }
+                  }
+                ]
               }
             ]
           }
         },
         "invocations": []
       },
-      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
+      "url": "/assets/atlas/features/json/rogue_expertise_1.0json",
+      "updated_at": "2025-10-24T20:42:13.151Z",
+      "image": "/assets/atlas/features/images/rogue_expertise_1.0webp",
       "source": "Class"
     },
     {
-      "index": "second_wind",
+      "index": "sneak_attack",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "rogue",
+        "name": "rogue",
+        "url": "/assets/atlas/class/json/rogue.json"
       },
-      "name": "second wind",
+      "name": "sneak attack",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
-        "Once you use this feature, you must finish a short or long rest before you can use it again."
+        "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.",
+        "You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll."
       ],
-      "url": "/assets/atlas/features/json/second_wind.json",
-      "updated_at": "2026-07-13T06:30:11.862Z",
-      "image": "/assets/atlas/features/images/second_wind.webp",
+      "url": "/assets/atlas/features/json/sneak_attack.json",
+      "updated_at": "2026-07-13T06:30:11.907Z",
+      "image": "/assets/atlas/features/images/sneak_attack.webp",
+      "feature_specific": {},
+      "source": "Class"
+    },
+    {
+      "index": "thieves_cant",
+      "class": {
+        "index": "rogue",
+        "name": "rogue",
+        "url": "/assets/atlas/class/json/rogue.json"
+      },
+      "name": "thieves' cant",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.",
+        "In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run."
+      ],
+      "url": "/assets/atlas/features/json/thieves_cant.json",
+      "updated_at": "2026-07-13T06:30:11.908Z",
+      "image": "/assets/atlas/features/images/thieves_cant.webp",
       "feature_specific": {
-        "special_action": "bonus_action",
-        "healing": {
-          "dice": "1d10",
-          "modifier": "fighter_level"
+        "passive_modifiers": {
+          "languages": [
+            "thieves_cant"
+          ]
         }
       },
       "source": "Class"
@@ -154,16 +452,16 @@
     "pp": 0
   },
   "appearance": {
-    "hairColor": "Autumn Oak",
+    "hairColor": "Raven Black",
     "hairStyle": "Short",
     "bodyType": "Medium",
-    "eyeColor": "Starry Sapphire",
+    "eyeColor": "Steel Gray",
     "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
     "specialFeatures": [
-      "Elongated Ears"
+      "Noble Bearing"
     ]
   },
   "items": {},
@@ -395,77 +693,91 @@
   },
   "backpack": [
     {
-      "index": "cartographers_tools",
-      "name": "Cartographer'S Tools",
-      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
-      "quantity": 1
+      "id": "carpenters_tools_t2lr0gmrh",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "index": "bedroll",
-      "name": "Bedroll",
-      "url": "/assets/atlas/equipment/json/bedroll.json",
-      "quantity": 1
+      "id": "pot_iron_o6i9tp09q",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "index": "quiver",
-      "name": "Quiver",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "quantity": 1
+      "id": "sickle_rc44euuqy",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp"
     },
     {
-      "index": "shortbow",
-      "name": "Shortbow",
-      "url": "/assets/atlas/equipment/json/shortbow.json",
-      "quantity": 1
-    },
-    {
-      "index": "arrow",
-      "name": "Arrow",
-      "url": "/assets/atlas/equipment/json/arrow.json",
-      "quantity": 20
-    },
-    {
+      "id": "clothes_travelers_kgl2bdltp",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "quantity": 1
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
+      "id": "gold_xf0031wa2",
       "index": "gold",
       "name": "Gold",
+      "quantity": 23,
+      "weight": 0,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 3
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp"
     }
   ],
   "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
-    "elvish"
+    "orc"
   ],
   "preparedSpells": [],
   "spellSlots": {},
   "choices": {
     "skills": [
-      "Insight",
-      "Medicine"
+      "Perception",
+      "Intimidation",
+      "Athletics",
+      "Insight"
     ]
   },
-  "race": "elf",
-  "subrace": "drow",
-  "class": "fighter",
+  "race": "half_orc",
+  "class": "rogue",
   "spellcastingAbility": "cha",
-  "background": "guide",
-  "alignment": "lawful_good",
-  "name": "opj",
+  "background": "farmer",
+  "alignment": "chaotic_good",
+  "name": "tui",
   "id": "slot2",
-  "hp": 7,
-  "maxHp": 7,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-07-14T18:28:33.926Z"
+  "lastSaved": "2026-07-14T15:59:07.442Z"
 }
