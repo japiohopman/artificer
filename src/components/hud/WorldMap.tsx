@@ -273,8 +273,8 @@ export const WorldMap: React.FC = () => {
   const destination = useWorldStore(state => state.destination);
   const getPartySpeedMph = useWorldStore(state => state.getPartySpeedMph);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
+  const mapMode = useWorldStore(state => state.mapMode);
   
-  const [mapMode, setMapMode] = React.useState<'pan' | 'travel'>('pan');
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
   const [currentBounds, setCurrentBounds] = React.useState<L.LatLngBounds | null>(null);
   const [renderedCount, setRenderedCount] = React.useState(0);
@@ -697,34 +697,6 @@ export const WorldMap: React.FC = () => {
       
       {/* Map Overlay Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] z-[400]" />
-
-      {/* Map Mode Toolbar */}
-      <div className="absolute top-4 left-4 z-[1000] flex gap-2 bg-parchment-100/90 border-2 border-dragon-gold/50 p-1.5 rounded shadow-lg animate-in fade-in duration-300">
-        <button
-          onClick={() => setMapMode('pan')}
-          className={cn(
-            "flex items-center gap-1.5 px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
-            mapMode === 'pan'
-              ? "bg-dragon-red text-white shadow-md"
-              : "text-dragon-red hover:bg-parchment-200"
-          )}
-        >
-          <GameIcon name="map" size={12} color={mapMode === 'pan' ? "#FFFFFF" : "#8B0000"} />
-          Navigate
-        </button>
-        <button
-          onClick={() => setMapMode('travel')}
-          className={cn(
-            "flex items-center gap-1.5 px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer",
-            mapMode === 'travel'
-              ? "bg-dragon-red text-white shadow-md"
-              : "text-dragon-red hover:bg-parchment-200"
-          )}
-        >
-          <GameIcon name="compass" size={12} color={mapMode === 'travel' ? "#FFFFFF" : "#8B0000"} />
-          Set Target
-        </button>
-      </div>
     </div>
   );
 };

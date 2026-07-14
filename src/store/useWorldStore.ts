@@ -80,6 +80,7 @@ export interface WorldState {
   currentRegion: string;
   mapZoom: number;
   isFastForwarding: boolean;
+  mapMode: 'pan' | 'travel';
 
   // Location State
   currentLocation: SavedLocation | null;
@@ -113,6 +114,7 @@ export interface WorldState {
   setRegion: (region: string) => void;
   setMapZoom: (zoom: number) => void;
   setIsFastForwarding: (isFastForwarding: boolean) => void;
+  setMapMode: (mode: 'pan' | 'travel') => void;
   setPartyLocation: (location: any) => void;
   setPartySubLocation: (location: any) => void;
   setCurrentLocation: (location: SavedLocation) => void;
@@ -158,6 +160,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   currentRegion: 'Sword Coast',
   mapZoom: 2,
   isFastForwarding: false,
+  mapMode: 'pan',
 
   currentLocation: null,
   inspectedLocation: null,
@@ -355,6 +358,7 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   setRegion: (currentRegion) => set({ currentRegion }),
   setMapZoom: (mapZoom) => set({ mapZoom }),
   setIsFastForwarding: (isFastForwarding) => set({ isFastForwarding }),
+  setMapMode: (mapMode) => set({ mapMode }),
   setPartyLocation: (partyLocation) => set({ partyLocation }),
   setPartySubLocation: (partySubLocation) => set({ partySubLocation }),
   setCurrentLocation: async (currentLocation) => {

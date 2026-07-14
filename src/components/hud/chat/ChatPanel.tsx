@@ -25,7 +25,7 @@ interface ChatPanelProps {
 }
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => {
-  const { getActiveBackground, isNight, currentLocation, mapZoom } = useWorldStore();
+  const { getActiveBackground, isNight, currentLocation, mapZoom, mapMode, setMapMode } = useWorldStore();
   const { currentNPC, setEmotion, setTestAnimalInteraction, testAnimalInteraction } = useCharacterStore();
   const { addLog, rollDice3D } = useGameStore();
   const { setChatExpanded, gameMode, isWorldPanelOpen, isMapLegendOpen, searchQuery, setSearchQuery } = useUIStore();
@@ -219,30 +219,78 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
           )}
         </AnimatePresence>
         
-        <div className="shrink-0 p-3 bg-parchment-100/95 border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
-          {choices && choices.length > 0 ? (
-            <Choice />
-          ) : (
-            <ChatInput
-              message={message}
-              setMessage={setMessage}
-              onSend={handleSend}
-              placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
-            />
-          )}
-        </div>
+        {!isCollapsed && (
+          <div className="shrink-0 p-3 bg-parchment-100/95 border-t border-dragon-gold/30 pointer-events-auto rounded-b-xl shadow-inner">
+            {choices && choices.length > 0 ? (
+              <Choice />
+            ) : (
+              <ChatInput
+                message={message}
+                setMessage={setMessage}
+                onSend={handleSend}
+                placeholder={testAnimalInteraction?.active ? "Commune with the beast..." : `Speak to ${currentNPC?.name || 'NPC'}...`}
+              />
+            )}
+          </div>
+        )}
 
-        {isMapLegendOpen && isCollapsed && (
-          <div className="px-6 py-2 flex items-center gap-4 pointer-events-auto">
-            <div className="flex flex-col shrink-0">
-              <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Atlas_Legend</span>
-              <span className="text-[10px] font-header font-black text-dragon-red uppercase tracking-widest">
-                {currentLocation?.name || 'World Map'}
-              </span>
+        {isCollapsed && (
+          <div className="px-6 py-3 flex items-center justify-between pointer-events-auto border-t border-dragon-gold/30">
+            <div className="flex items-center gap-4">
+              <div className="flex flex-col shrink-0">
+                <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Map_Navigation</span>
+                <span className="text-[10px] font-header font-black text-dragon-red uppercase tracking-widest">
+                  {currentLocation?.name || 'Sword Coast Map'}
+                </span>
+              </div>
+              <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
             </div>
-            <div className="h-8 w-px bg-dragon-gold/20 shrink-0" />
-            <div className="flex-1">
-               <MapLegend currentZoom={mapZoom} />
+
+            {/* Navigation / Travel Mode Controls */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setMapMode('pan')}
+                className={cn(
+                  "flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer rounded border border-dragon-gold/20",
+                  mapMode === 'pan'
+                    ? "bg-dragon-red text-white shadow-md border-dragon-red"
+                    : "text-dragon-red bg-parchment-200 hover:bg-parchment-300"
+                )}
+              >
+                <GameIcon name="map" size={12} color={mapMode === 'pan' ? "#FFFFFF" : "#8B0000"} />
+                Navigate & Pan
+              </button>
+              <button
+                onClick={() => setMapMode('travel')}
+                className={cn(
+                  "flex items-center gap-1.5 px-3 py-1 text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer rounded border border-dragon-gold/20",
+                  mapMode === 'travel'
+                    ? "bg-dragon-red text-white shadow-md border-dragon-red"
+                    : "text-dragon-red bg-parchment-200 hover:bg-parchment-300"
+                )}
+              >
+                <GameIcon name="compass" size={12} color={mapMode === 'travel' ? "#FFFFFF" : "#8B0000"} />
+                Set Wilderness Target
+              </button>
+            </div>
+            
+            {/* Quick search input also integrated beautifully */}
+            <div className="relative group shrink-0">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search Map..."
+                className="bg-parchment-200 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[10px] font-bold text-dragon-red placeholder:text-dragon-red/30 focus:border-dragon-gold outline-none w-36 transition-all"
+              />
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40 flex items-center gap-1">
+                 {searchQuery && (
+                   <button onClick={() => setSearchQuery('')} className="hover:text-dragon-red transition-colors">
+                     <GameIcon name="close" size={10} />
+                   </button>
+                 )}
+                 <GameIcon name="search" size={12} />
+              </div>
             </div>
           </div>
         )}

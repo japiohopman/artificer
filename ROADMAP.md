@@ -6,7 +6,7 @@ finishing right now**, so agents (and Jaap) aren't tempted to start a new GOALS.
 older ones are half-done. Update this file when priorities genuinely shift — not every sprint.
 
 ## Now — close these before touching anything new
-- [ ] Meteocons icon library for Time and Weather
+- [X] Meteocons icon library for Time and Weather
 - [ ] Dev Kit reorganization (Inspectors, Generators, Testers grouping)
 - [ ] Align Jane module with JSON schemas and existing atlas lore
 - [ ] Complete TSX translation of the Tactical Combat Grid (Aedif inspiration)
