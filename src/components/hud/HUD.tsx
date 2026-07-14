@@ -11,6 +11,7 @@ import { motion } from 'motion/react';
 
 import { Nav } from './nav/Nav';
 import { EnvironmentalEngine } from './EnvironmentalEngine';
+import { HUDFooter } from './HUDFooter';
 
 export const HUD: React.FC = () => {
   const { 
@@ -101,6 +102,9 @@ export const HUD: React.FC = () => {
           </div>
         </motion.aside>
       </div>
+
+      {/* 5. Compact Bottom Footer */}
+      <HUDFooter />
     </div>
   );
 };

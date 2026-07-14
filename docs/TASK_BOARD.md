@@ -90,3 +90,11 @@
   - [ ] Mood-Based Transitions & Ambient Layering.
 - [ ] **Rule Engine & Condition Tracker**
   - [ ] Condition Management & Rest/Recovery resolution.
+
+## Repo Hygiene
+- [x] Removed forked `dnd5e-6.0.x` and duplicated `tactical-grid-main/tactical-grid-main`
+- [x] Removed SRD PDF (`Rulebooks/srd/system_reference_document.pdf`)
+- [ ] Pick real hosting for runtime-needed heavy assets (world map, `public/assets/sounds/**`, enemy tokens) — Firebase Storage or Git LFS
+- [ ] Update fallback URLs in `atlasService.ts` (line ~174) and `soundService.ts` (`GITHUB_RAW_BASE`) to point at that host
+- [ ] Remove local copies of those assets from git once the above is verified working
+- [ ] Delete `src/store/useStore.ts` — empty deprecated stub, confirmed unused (see below)

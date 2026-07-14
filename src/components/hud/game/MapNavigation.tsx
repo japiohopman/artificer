@@ -47,7 +47,7 @@ export const MapNavigation: React.FC<MapNavigationProps> = ({
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
         title="Locate Party"
       >
-        <GameIcon name="location" size={18} />
+        <GameIcon name="location" fallbackName="place" size={18} />
       </button>
       
       <div className="h-px bg-dragon-gold/20 mx-1" />
