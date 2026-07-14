@@ -114,85 +114,108 @@ export const ChoicesStep: React.FC<{
         f.index?.includes('fighting-style')
     );
 
-    if (choiceFeatures.length === 0) {
-        return (
-            <div className="flex flex-col items-center justify-center p-12 text-center bg-dragon-gold/5 border border-dragon-gold/10 rounded-sm">
-                <GameIcon name="book" size={40} color="#B8860B" className="opacity-40 mb-4" />
-                <h3 className="text-xl font-header font-black text-dragon-darkRed uppercase tracking-widest">No Threshold Selections</h3>
-                <p className="text-[11px] text-parchment-600 font-bold max-w-xs mt-2 uppercase tracking-tighter">
-                    Your path for the first level is set in stone. Continue to arm yourself for the journey ahead.
-                </p>
-            </div>
-        );
-    }
+    const nonChoiceFeatures = features.filter(f => !choiceFeatures.includes(f));
 
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20">
-            <div className="flex flex-col border-b border-dragon-gold/20 pb-4">
-                <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-widest mb-1">Threshold Choices</h3>
-                <p className="text-[10px] text-parchment-500 font-black uppercase tracking-[0.2em]">Refine your specialty training at Level 1</p>
-            </div>
-
-            {choiceFeatures.map((f, idx) => {
-                let options = f.choice?.from?.options || [];
-                let title = f.name || "Specialty Choice";
-                
-                // Special handling for Ranger features if options are missing in JSON
-                if (f.index?.includes('favored-enemy') && options.length === 0) {
-                    options = FAVORED_ENEMIES.map(e => ({ name: e.name, index: e.index }));
-                }
-                if (f.index?.includes('natural-explorer') && options.length === 0) {
-                    options = NATURAL_TERRAINS.map(t => ({ name: t.name, index: t.index }));
-                }
-
-                return (
-                    <div key={idx} className="space-y-4">
-                        <div className="flex items-center gap-3">
-                            <span className="text-[10px] font-black bg-dragon-darkRed text-dragon-gold px-2 py-0.5 rounded-full">0{idx + 1}</span>
-                            <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">{title}</h4>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                            {options.map((opt: any, oIdx: number) => {
-                                const val = opt.index || opt.item?.index || opt.name;
-                                const label = opt.name || opt.item?.name || val;
-                                const isSelected = newChar.choices?.[f.index]?.includes(val);
-                                const Icon = CHOICE_ICON_MAP[val.toLowerCase()];
-                                
-                                return (
-                                    <button
-                                        key={oIdx}
-                                        onClick={() => handleChoice(f.index, val)}
-                                        className={cn(
-                                            "p-4 border rounded-sm transition-all text-center flex flex-col items-center justify-center gap-2 group relative overflow-hidden",
-                                            isSelected 
-                                                ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg" 
-                                                : "bg-white/40 border-dragon-gold/10 hover:border-dragon-red/30 hover:bg-white"
-                                        )}
-                                    >
-                                        {Icon && (
-                                            <div className="mb-1 pointer-events-none">
-                                                <GameIcon name={Icon as any} size={32} color={isSelected ? "#B8860B" : "currentColor"} className={isSelected ? "" : "opacity-60 group-hover:opacity-100"} />
-                                            </div>
-                                        )}
-                                        <div className={cn(
-                                            "text-[10px] font-black uppercase tracking-tight",
-                                            isSelected ? "text-dragon-gold" : "text-dragon-darkRed group-hover:text-dragon-red"
-                                        )}>
-                                            {label}
-                                        </div>
-                                        {isSelected && (
-                                            <div className="absolute top-1 right-1">
-                                                <GameIcon name="check" size={10} color="#B8860B" />
-                                            </div>
-                                        )}
-                                    </button>
-                                );
-                            })}
-                        </div>
+            {choiceFeatures.length > 0 ? (
+                <>
+                    <div className="flex flex-col border-b border-dragon-gold/20 pb-4">
+                        <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-widest mb-1">Threshold Choices</h3>
+                        <p className="text-[10px] text-parchment-500 font-black uppercase tracking-[0.2em]">Refine your specialty training at Level 1</p>
                     </div>
-                );
-            })}
+
+                    {choiceFeatures.map((f, idx) => {
+                        let options = f.choice?.from?.options || [];
+                        let title = f.name || "Specialty Choice";
+                        
+                        // Special handling for Ranger features if options are missing in JSON
+                        if (f.index?.includes('favored-enemy') && options.length === 0) {
+                            options = FAVORED_ENEMIES.map(e => ({ name: e.name, index: e.index }));
+                        }
+                        if (f.index?.includes('natural-explorer') && options.length === 0) {
+                            options = NATURAL_TERRAINS.map(t => ({ name: t.name, index: t.index }));
+                        }
+
+                        return (
+                            <div key={idx} className="space-y-4">
+                                <div className="flex items-center gap-3">
+                                    <span className="text-[10px] font-black bg-dragon-darkRed text-dragon-gold px-2 py-0.5 rounded-full">0{idx + 1}</span>
+                                    <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">{title}</h4>
+                                </div>
+                                
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                                    {options.map((opt: any, oIdx: number) => {
+                                        const val = opt.index || opt.item?.index || opt.name;
+                                        const label = opt.name || opt.item?.name || val;
+                                        const isSelected = newChar.choices?.[f.index]?.includes(val);
+                                        const Icon = CHOICE_ICON_MAP[val.toLowerCase()];
+                                        
+                                        return (
+                                            <button
+                                                key={oIdx}
+                                                onClick={() => handleChoice(f.index, val)}
+                                                className={cn(
+                                                    "p-4 border rounded-sm transition-all text-center flex flex-col items-center justify-center gap-2 group relative overflow-hidden",
+                                                    isSelected 
+                                                        ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg" 
+                                                        : "bg-white/40 border-dragon-gold/10 hover:border-dragon-red/30 hover:bg-white"
+                                                )}
+                                            >
+                                                {Icon && (
+                                                    <div className="mb-1 pointer-events-none">
+                                                        <GameIcon name={Icon as any} size={32} color={isSelected ? "#B8860B" : "currentColor"} className={isSelected ? "" : "opacity-60 group-hover:opacity-100"} />
+                                                    </div>
+                                                )}
+                                                <div className={cn(
+                                                    "text-[10px] font-black uppercase tracking-tight",
+                                                    isSelected ? "text-dragon-gold" : "text-dragon-darkRed group-hover:text-dragon-red"
+                                                )}>
+                                                    {label}
+                                                </div>
+                                                {isSelected && (
+                                                    <div className="absolute top-1 right-1">
+                                                        <GameIcon name="check" size={10} color="#B8860B" />
+                                                    </div>
+                                                )}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </>
+            ) : (
+                <div className="space-y-6">
+                    <div className="flex flex-col border-b border-dragon-gold/20 pb-4">
+                        <h3 className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-widest mb-1">Level 1 Class Features</h3>
+                        <p className="text-[10px] text-parchment-500 font-black uppercase tracking-[0.2em]">Your innate abilities at the beginning of your journey</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {nonChoiceFeatures.map((f, idx) => {
+                            const desc = Array.isArray(f.desc) ? f.desc.join('\n\n') : f.desc || "Class Feature";
+                            return (
+                                <div key={idx} className="p-5 bg-white/40 border border-dragon-gold/15 rounded-sm hover:border-dragon-red/20 transition-all flex flex-col gap-3 relative overflow-hidden group shadow-sm">
+                                    <div className="absolute top-0 right-0 p-3 opacity-5 group-hover:opacity-10 transition-opacity">
+                                        <GameIcon name="book" size={48} color="#8B0000" />
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-dragon-red/5 text-dragon-red border border-dragon-red/10 rounded-sm shrink-0">
+                                            <GameIcon name="magic_effect" size={16} color="currentColor" />
+                                        </div>
+                                        <h4 className="text-[12px] font-black text-dragon-darkRed uppercase tracking-widest">{f.name}</h4>
+                                    </div>
+                                    <p className="text-[10px] text-parchment-700 leading-relaxed font-medium">
+                                        {desc}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

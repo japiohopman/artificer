@@ -196,7 +196,7 @@ export const GameScreen: React.FC = () => {
       </div>
 
       {/* 7. Floating Map Controls */}
-      <div className="absolute top-20 right-6 z-[100] pointer-events-none">
+      <div className="absolute top-28 right-6 z-[100] pointer-events-none">
         <MapNavigation />
       </div>
 

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore, Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { generateNPCImages } from '../../../services/ai/npcService';
-import { normalizeImageUrl } from '../../../services/storageService';
+import { normalizeImageUrl, fetchEquipmentData } from '../../../services/storageService';
 import { NPCChoiceResolver, ResolvedItem } from '../../../lib/npcChoiceResolver';
 import { soundService } from '../../../services/soundService';
 import { atlasService } from '../../../services/atlasService';
@@ -18,6 +18,7 @@ export const ReviewStep: React.FC<{
     const [isGenerating, setIsGenerating] = useState(false);
     const [isUnpacking, setIsUnpacking] = useState(false);
     const [hasUnpacked, setHasUnpacked] = useState(false);
+    const [itemDetails, setItemDetails] = useState<Record<string, any>>({});
 
     React.useEffect(() => {
         // Automatic unpacking on mount
@@ -26,6 +27,30 @@ export const ReviewStep: React.FC<{
             setHasUnpacked(true);
         }
     }, []);
+
+    // Load detailed information for items on mount/update so we can display beautiful names
+    useEffect(() => {
+        const loadAllDetails = async () => {
+            const templates = new Set<string>();
+            if (newChar.items) {
+                Object.values(newChar.items).forEach(inst => {
+                    if (inst.template) templates.add(inst.template);
+                });
+            }
+            if (templates.size > 0) {
+                const results = await Promise.all(Array.from(templates).map(async (tmpl) => {
+                    const data = await fetchEquipmentData(tmpl);
+                    return { tmpl, data };
+                }));
+                const newDetails = { ...itemDetails };
+                results.forEach(r => {
+                    if (r.data) newDetails[r.tmpl] = r.data;
+                });
+                setItemDetails(newDetails);
+            }
+        };
+        loadAllDetails();
+    }, [newChar.items]);
 
     const handleGenerateImages = async () => {
         setIsGenerating(true);
@@ -95,6 +120,30 @@ export const ReviewStep: React.FC<{
             </p>
         </div>
     );
+
+    // Prepare lists for Inventory V2 displaying
+    const activeEquipment = newChar.equipment?.slots.filter(s => s.itemId).map(s => {
+        const inst = newChar.items?.[s.itemId!];
+        const data = inst ? itemDetails[inst.template] : null;
+        return {
+            slot: s.id,
+            name: data?.name || inst?.template || "Equipped Item",
+            imageUrl: data?.imageUrl,
+            index: inst?.template
+        };
+    }) || [];
+
+    const backpackContainer = Object.values(newChar.containers || {}).find(c => c.type === 'backpack');
+    const activeBackpackItems = backpackContainer?.slots.filter(s => s.itemId).map(s => {
+        const inst = newChar.items?.[s.itemId!];
+        const data = inst ? itemDetails[inst.template] : null;
+        return {
+            name: data?.name || inst?.template || "Backpack Item",
+            imageUrl: data?.imageUrl,
+            index: inst?.template,
+            quantity: inst?.quantity || 1
+        };
+    }) || [];
 
     return (
         <div className="space-y-8 h-full overflow-y-auto custom-scrollbar pr-4 pb-12">
@@ -326,36 +375,49 @@ export const ReviewStep: React.FC<{
                         </div>
                     </div>
 
-                    {/* Inventory Unpacked */}
+                    {/* Inventory Unpacked (Inventory V2 based) */}
                     <div className="space-y-4">
                         <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-[0.4em] border-b border-dragon-gold/20 pb-2 flex items-center gap-2">
                             <GameIcon name="backpack" size={14} color="#8B0000" /> Equipment & Backpack
                         </h4>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                            {/* Inventory Slots */}
-                            {Object.entries(newChar.inventory || {}).map(([slot, item]: [string, any]) => item && (
-                                <div key={slot} className="flex items-center gap-3 p-3 bg-white border border-dragon-gold/10 rounded shadow-sm group">
+                            {/* Inventory Slots (v2 Equipped) */}
+                            {activeEquipment.map((item, i) => (
+                                <div key={`eq-${i}`} className="flex items-center gap-3 p-3 bg-white border border-dragon-gold/10 rounded shadow-sm group">
                                     <div className="w-10 h-10 bg-dragon-red/5 border border-dragon-gold/20 rounded flex items-center justify-center shrink-0">
-                                        {item.imageUrl || item.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index)} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="shield" size={18} color="#8B0000" className="opacity-10" />}
+                                        {item.imageUrl || item.index ? (
+                                            <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, 'equipment', item.index || '')} alt={item.name} className="w-full h-full object-contain" />
+                                        ) : (
+                                            <GameIcon name="shield" size={18} color="#8B0000" className="opacity-10" />
+                                        )}
                                     </div>
                                     <div className="flex flex-col overflow-hidden">
-                                        <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-widest mb-0.5">{slot}</span>
+                                        <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-widest mb-0.5">{item.slot.replace(/_/g, ' ')}</span>
                                         <span className="text-[9px] font-black uppercase truncate text-parchment-900 group-hover:text-dragon-red transition-colors">{item.name}</span>
                                     </div>
                                 </div>
                             ))}
-                            {/* Backpack items */}
-                            {newChar.backpack?.map((item: any, i) => (
+                            {/* Backpack items (v2 Backpack Slots) */}
+                            {activeBackpackItems.map((item, i) => (
                                 <div key={`bp-${i}`} className="flex items-center gap-3 p-3 bg-parchment-50 border border-dragon-gold/5 rounded shadow-sm group">
                                     <div className="w-10 h-10 bg-black/5 border border-dragon-gold/10 rounded flex items-center justify-center shrink-0">
-                                        {item.imageUrl || item.index ? <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index)} alt={item.name} className="w-full h-full object-contain" /> : <GameIcon name="package" size={18} color="#8B0000" className="opacity-20" />}
+                                        {item.imageUrl || item.index ? (
+                                            <ChromaKeyImage src={normalizeImageUrl(item.imageUrl, 'equipment', item.index || '')} alt={item.name} className="w-full h-full object-contain" />
+                                        ) : (
+                                            <GameIcon name="package" size={18} color="#8B0000" className="opacity-20" />
+                                        )}
                                     </div>
                                     <div className="flex flex-col overflow-hidden">
                                         <span className="text-[8px] font-black text-parchment-400 uppercase tracking-widest mb-0.5">Backpack</span>
-                                        <span className="text-[9px] font-black uppercase truncate text-parchment-900 group-hover:text-dragon-red transition-colors">{item.name}</span>
+                                        <span className="text-[9px] font-black uppercase truncate text-parchment-900 group-hover:text-dragon-red transition-colors">
+                                            {item.name} {item.quantity > 1 ? `(x${item.quantity})` : ''}
+                                        </span>
                                     </div>
                                 </div>
                             ))}
+                            {activeEquipment.length === 0 && activeBackpackItems.length === 0 && (
+                                <span className="text-[10px] italic opacity-40 col-span-full">No items resolved yet</span>
+                            )}
                         </div>
                     </div>
 
