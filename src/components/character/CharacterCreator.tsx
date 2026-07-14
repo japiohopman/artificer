@@ -90,27 +90,6 @@ export const CharacterCreator: React.FC = () => {
   const [direction, setDirection] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
 
-  // We dynamically determine which steps are active. Specifically, we hide 'spells'
-  // if the chosen class does not support spellcasting.
-  const [isClassSpellcaster, setIsClassSpellcaster] = useState(false);
-
-  useEffect(() => {
-    if (newChar.class) {
-        atlasService.loadClass(newChar.class).then(cData => {
-            setIsClassSpellcaster(!!cData?.spellcasting);
-        }).catch(() => {
-            setIsClassSpellcaster(false);
-        });
-    } else {
-        setIsClassSpellcaster(false);
-    }
-  }, [newChar.class]);
-
-  const STEPS = ALL_STEPS.filter(s => {
-    if (s.id === 'spells' && !isClassSpellcaster) return false;
-    return true;
-  });
-
   // New character state
   const [newChar, setNewChar] = useState<Partial<Character>>({
     level: 0,
@@ -151,6 +130,27 @@ export const CharacterCreator: React.FC = () => {
     preparedSpells: [],
     spellSlots: {},
     choices: {}
+  });
+
+  // We dynamically determine which steps are active. Specifically, we hide 'spells'
+  // if the chosen class does not support spellcasting.
+  const [isClassSpellcaster, setIsClassSpellcaster] = useState(false);
+
+  useEffect(() => {
+    if (newChar.class) {
+        atlasService.loadClass(newChar.class).then(cData => {
+            setIsClassSpellcaster(!!cData?.spellcasting);
+        }).catch(() => {
+            setIsClassSpellcaster(false);
+        });
+    } else {
+        setIsClassSpellcaster(false);
+    }
+  }, [newChar.class]);
+
+  const STEPS = ALL_STEPS.filter(s => {
+    if (s.id === 'spells' && !isClassSpellcaster) return false;
+    return true;
   });
 
   const [availableSpecies, setAvailableSpecies] = useState<{name: string, index: string}[]>([]);
