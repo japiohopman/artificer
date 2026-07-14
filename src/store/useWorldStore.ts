@@ -143,6 +143,7 @@ export interface WorldState {
   setSubMapActiveCategories: (cats: string[]) => void;
   setSubMapAllCategories: (cats: string[]) => void;
   setSubMapActiveLayer: (layer: string | null) => void;
+  getPartySpeedMph: () => number;
 }
 
 export const useWorldStore = create<WorldState>((set, get) => ({
@@ -186,12 +187,51 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   worldFlags: {},
 
-  startTravel: (destination) => set((state) => ({ 
-    travelOrigin: state.partyLocation,
-    destination, 
-    isTraveling: true, 
-    travelProgress: 0 
-  })),
+  startTravel: (destination) => {
+    // 1. Get destination coordinates
+    const x = destination.coordinates?.x ?? destination.coordinates?.lng ?? destination.position?.[0] ?? 0;
+    const y = destination.coordinates?.y ?? destination.coordinates?.lat ?? destination.position?.[1] ?? 0;
+
+    // 2. Check region terrain (water vs land) and boat ownership
+    import('../lib/mapUtils').then(({ getRegionAt }) => {
+      const regionId = getRegionAt(x, y);
+      const isWater = regionId === 'water';
+
+      if (isWater) {
+        const invState = useInventoryStore.getState();
+        const waterKeywords = ['boat', 'ship', 'rowboat', 'galleon', 'caravel', 'vessel', 'keelboat', 'raft', 'schooner', 'yacht', 'vloot', 'schip', 'boot'];
+        
+        const hasWaterVehicle = (invState.partyVehicles || []).some(v => 
+          v.name && waterKeywords.some(kw => v.name.toLowerCase().includes(kw))
+        ) || (invState.partyInventory || []).some(item => 
+          item.name && waterKeywords.some(kw => item.name.toLowerCase().includes(kw))
+        );
+
+        if (!hasWaterVehicle) {
+          alert("Je kunt niet over water reizen zonder boot!");
+          return;
+        }
+      }
+
+      set((state) => ({ 
+        travelOrigin: state.partyLocation,
+        destination, 
+        isTraveling: true, 
+        travelProgress: 0,
+        isFastForwarding: true // Travel always starts with Fast Forward active
+      }));
+    }).catch(err => {
+      console.error("Failed to load mapUtils in startTravel", err);
+      // Fallback
+      set((state) => ({ 
+        travelOrigin: state.partyLocation,
+        destination, 
+        isTraveling: true, 
+        travelProgress: 0,
+        isFastForwarding: true
+      }));
+    });
+  },
 
   stopTravel: () => set({ 
     isTraveling: false, 
@@ -617,17 +657,17 @@ export const useWorldStore = create<WorldState>((set, get) => ({
         // Trigger discovery during travel
         state.exploreArea(currentX, currentY, 200);
 
-        // Proximity detection for hidden cities (within 30 miles = 36 proto units)
-        const radiusUnits = 36;
+        // Proximity detection for hidden discoverables (within 15 miles = 18 proto units)
+        const radiusUnits = 18;
         const registry = state.allCitiesRegistry;
         if (registry && registry.length > 0) {
-          registry.forEach(city => {
-            const cx = city.position?.[0];
-            const cy = city.position?.[1];
+          registry.forEach(item => {
+            const cx = item.position?.[0];
+            const cy = item.position?.[1];
             if (cx !== undefined && cy !== undefined) {
               const dist = Math.sqrt(Math.pow(cx - currentX, 2) + Math.pow(cy - currentY, 2));
               if (dist <= radiusUnits) {
-                state.discoverLocation(city.id);
+                state.discoverLocation(item.id);
               }
             }
           });
@@ -690,14 +730,85 @@ export const useWorldStore = create<WorldState>((set, get) => ({
   setSubMapAllCategories: (subMapAllCategories) => set({ subMapAllCategories }),
   setSubMapActiveLayer: (subMapActiveLayer) => set({ subMapActiveLayer }),
 
+  getPartySpeedMph: () => {
+    let currentSpeedMph = 3.0;
+    try {
+      const invState = useInventoryStore.getState();
+      const { characters } = useCharacterStore.getState();
+
+      const parseWeight = (weight: any): number => {
+        if (!weight) return 0;
+        if (typeof weight === 'number') return weight;
+        const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+        return weightMatch ? parseFloat(weightMatch[0]) : 0;
+      };
+
+      const calculateItemWeight = (item: any): number => {
+        if (!item) return 0;
+        return parseWeight(item.weight) * (item.quantity || 1);
+      };
+
+      const sharedWeight = (invState.partyInventory || []).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
+      const characterWeights = characters.reduce((acc: number, char: any) => {
+        let personalWeight = 0;
+        if (char.saveVersion === 2 && char.items) {
+          personalWeight = Object.values(char.items).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+        } else {
+          const equippedWeight = Object.values(char.inventory || {}).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+          const backpackWeight = (char.backpack || []).reduce((cAcc: number, item: any) => cAcc + calculateItemWeight(item), 0);
+          personalWeight = equippedWeight + backpackWeight;
+        }
+        const money = char.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
+        const totalCoins = (money.cp || 0) + (money.sp || 0) + (money.ep || 0) + (money.gp || 0) + (money.pp || 0);
+        const moneyWeight = totalCoins * (invState.partyStats?.currencyWeightPerCoin || 0.02);
+        return acc + personalWeight + moneyWeight;
+      }, 0);
+
+      const totalWeight = sharedWeight + characterWeights;
+      const memberCount = Math.max(invState.partyStats?.memberCount || 0, characters.length, 1);
+      const vehicleBonusCapacity = (invState.partyVehicles || []).reduce((acc: number, v: any) => acc + (v.capacity || 0), 0);
+      const totalCapacity = (memberCount * (invState.partyStats?.baseCapacityPerMember || 150)) + (invState.partyStats?.vehicleCapacityBonus || 0) + vehicleBonusCapacity;
+
+      if (totalWeight > totalCapacity) {
+        currentSpeedMph *= 0.5;
+      }
+
+      if (invState.partyVehicles && invState.partyVehicles.length > 0) {
+        currentSpeedMph *= 1.5;
+      }
+    } catch (e) {
+      console.warn("Failed to compute getPartySpeedMph", e);
+    }
+    return currentSpeedMph;
+  },
+
   loadAllCitiesRegistry: async () => {
     if (get().allCitiesRegistry.length > 0) return;
     try {
-      const response = await fetch('/assets/atlas/world/toril/faerun/cities/cities.json');
-      if (response.ok) {
-        const data = await response.json();
-        set({ allCitiesRegistry: data });
+      const files = [
+        'cities/cities.json',
+        'fortresses_keeps/fortresses_keeps.json',
+        'poi/poi.json',
+        'ruins/ruins.json',
+        'towns_settlements/towns_settlements.json'
+      ];
+      
+      let aggregated: any[] = [];
+      for (const file of files) {
+        try {
+          const response = await fetch(`/assets/atlas/world/toril/faerun/${file}`);
+          if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data)) {
+              aggregated = aggregated.concat(data);
+            }
+          }
+        } catch (err) {
+          console.warn(`Failed to load registry file ${file}:`, err);
+        }
       }
+      
+      set({ allCitiesRegistry: aggregated });
     } catch (e) {
       console.warn("Failed to load all cities registry for discovery checks", e);
     }
@@ -705,26 +816,32 @@ export const useWorldStore = create<WorldState>((set, get) => ({
 
   loadDiscoveredLocations: async () => {
     const state = get();
+    await state.loadAllCitiesRegistry(); // Ensure registry is loaded to map folder category correctly
     const ids = state.discoveredLocationIds;
     const loadedIds = new Set(state.savedLocations.map(l => l.id));
 
     const promises = ids.map(async (id) => {
       if (loadedIds.has(id)) return null;
+
+      // Look up categoryId to find the correct folder path
+      const regItem = state.allCitiesRegistry.find(item => item.id === id);
+      const categoryId = regItem?.categoryId || 'cities';
+
       try {
-        const response = await fetch(`/assets/atlas/world/toril/faerun/cities/${id}/${id}.json`);
+        const response = await fetch(`/assets/atlas/world/toril/faerun/${categoryId}/${id}/${id}.json`);
         if (response.ok) {
           const l = await response.json();
           return {
             ...l,
             name: l.name || l.title || id.replace(/_/g, ' '),
-            category: l.category || l.type || 'city',
+            category: l.category || l.type || categoryId,
             id: l.id || id,
             image: l.image || null,
             banner: l.banner || null
           };
         }
       } catch (e) {
-        console.warn(`Failed to fetch individual city ${id}:`, e);
+        console.warn(`Failed to fetch individual discoverable ${id} under category ${categoryId}:`, e);
       }
       return null;
     });

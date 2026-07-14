@@ -1,11 +1,13 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, useMapEvents, SVGOverlay, Polyline, Circle } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../../lib/utils';
 import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
+import { useInventoryStore } from '../../store/useInventoryStore';
+import { getRegionAt } from '../../lib/mapUtils';
 import { WORLD_ATLAS_ICONS } from '../../assets/icons';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
@@ -116,8 +118,14 @@ const MapEvents = ({
   onBoundsChange: (bounds: L.LatLngBounds) => void;
   onMapInstance: (map: L.Map) => void;
 }) => {
-  const { setInspectedLocation } = useWorldStore();
+  const { setInspectedLocation, partyLocation, getPartySpeedMph, isTraveling } = useWorldStore();
+  const { setIsWorldPanelOpen } = useUIStore();
   const map = useMap();
+
+  const mapWidth = 21620;
+  const mapHeight = 14461;
+  const protoWidth = 4763;
+  const protoHeight = 3185;
 
   React.useEffect(() => {
     onMapInstance(map);
@@ -127,9 +135,89 @@ const MapEvents = ({
     }
   }, [map, onMapInstance, onBoundsChange, onZoomChange]);
 
+  const isWaterVehicleOwned = (): boolean => {
+    try {
+      const invState = useInventoryStore.getState();
+      const waterKeywords = ['boat', 'ship', 'rowboat', 'galleon', 'caravel', 'vessel', 'keelboat', 'raft', 'schooner', 'yacht', 'vloot', 'schip', 'boot'];
+      
+      // Check party vehicles
+      const hasWaterVehicle = (invState.partyVehicles || []).some(v => 
+        v.name && waterKeywords.some(kw => v.name.toLowerCase().includes(kw))
+      );
+      if (hasWaterVehicle) return true;
+
+      // Check party inventory
+      const hasWaterInvItem = (invState.partyInventory || []).some(item => 
+        item.name && waterKeywords.some(kw => item.name.toLowerCase().includes(kw))
+      );
+      if (hasWaterInvItem) return true;
+    } catch (e) {
+      console.warn("Failed to check water vehicles", e);
+    }
+    return false;
+  };
+
   useMapEvents({
-    click: () => {
+    click: (e) => {
       setInspectedLocation(null);
+
+      if (isTraveling) return;
+
+      const latlng = e.latlng;
+      const clickedLat = latlng.lat;
+      const clickedLng = latlng.lng;
+
+      // Convert clicked Leaflet pixel coordinates back to proto coordinates
+      const protoX = (clickedLng / mapWidth) * protoWidth;
+      const protoY = (1 - (clickedLat / mapHeight)) * protoHeight;
+
+      // Ensure clicked point is within map bounds
+      if (protoX < 0 || protoX > protoWidth || protoY < 0 || protoY > protoHeight) {
+        return;
+      }
+
+      // Check distance from party's current location
+      if (!partyLocation) return;
+
+      const px1 = (partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0);
+      const py1 = (partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0);
+
+      const dx = protoX - px1;
+      const dy = protoY - py1;
+      const distProto = Math.sqrt(dx * dx + dy * dy);
+      const distMiles = distProto / (4763 / 4000);
+
+      // Determine 1-day travel limit (16 hours)
+      const speedMph = getPartySpeedMph();
+      const maxMiles = speedMph * 16;
+
+      if (distMiles > maxMiles) {
+        alert(`Target locatie is te ver weg voor één dag reizen! Maximale afstand: ${maxMiles.toFixed(1)} mijl. Gekozen: ${distMiles.toFixed(1)} mijl.`);
+        return;
+      }
+
+      // Handle Terrain-Based Navigation Checks (Water vs. Land)
+      const regionId = getRegionAt(protoX, protoY);
+      const isWater = regionId === 'water';
+
+      if (isWater) {
+        const hasBoat = isWaterVehicleOwned();
+        if (!hasBoat) {
+          alert("Je kunt niet over water reizen zonder boot!");
+          return;
+        }
+      }
+
+      // Create a custom Wilderness Path destination
+      setInspectedLocation({
+        id: `wilderness-${Math.round(protoX)}-${Math.round(protoY)}`,
+        name: `Wilderness Path (${regionId === 'water' ? 'Water' : 'Land'})`,
+        category: regionId === 'water' ? "seas_oceans" : "Wilderness",
+        description: `An uncharted stretch of Faerûn's untamed landscapes in ${regionId.replace(/_/g, ' ')}. Click Embark to set off towards these coordinates.`,
+        coordinates: { x: protoX, y: protoY },
+        image: regionId === 'water' ? "/assets/atlas/world/toril/faerun/seas_oceans/images/trackless_sea.webp" : null
+      });
+      setIsWorldPanelOpen(true);
     },
     zoomend: (e) => {
       onZoomChange(e.target.getZoom());
@@ -181,6 +269,7 @@ export const WorldMap: React.FC = () => {
 
   const isTraveling = useWorldStore(state => state.isTraveling);
   const destination = useWorldStore(state => state.destination);
+  const getPartySpeedMph = useWorldStore(state => state.getPartySpeedMph);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
   
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
@@ -326,14 +415,31 @@ export const WorldMap: React.FC = () => {
       if (cityOnlyCategories.includes(cat)) return false;
 
       // 2. Tier-based visibility (referencing CATEGORY_TIERS)
-      const isCity = cat.includes('city') || cat.includes('metropolis') || cat.includes('settlement');
-      if (isCity) {
+      const isDiscoverable = 
+         cat.includes('city') || 
+         cat.includes('metropolis') || 
+         cat.includes('settlement') || 
+         cat.includes('fortresses_keeps') || 
+         cat.includes('castle') || 
+         cat.includes('fortress') || 
+         cat.includes('keep') || 
+         cat.includes('poi') || 
+         cat.includes('points_of_interest') || 
+         cat.includes('ruins') || 
+         cat.includes('towns_settlements') || 
+         cat.includes('village') || 
+         cat.includes('landmark') || 
+         cat.includes('landmarks');
+
+      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
+      const isAlwaysVisibleMajorCity = (cat.includes('city') || cat.includes('metropolis')) && majorCities.includes(name);
+
+      if (isDiscoverable && !isAlwaysVisibleMajorCity) {
          if (!discoveredLocationIds.includes(loc.id)) {
             return false;
          }
       }
 
-      const majorCities = ["baldur's gate", 'waterdeep', 'neverwinter', 'luskan', 'athkatla', 'calimport', 'suzail', 'zhentil keep'];
       if (cat.includes('city') || cat.includes('metropolis')) {
          if (majorCities.includes(name)) return true; // Major cities always visible once loaded
          return currentMiles <= 2000; // Minor cities visible at 2000 miles (Zoom Level 4)
@@ -467,6 +573,19 @@ export const WorldMap: React.FC = () => {
             weight={2}
             dashArray="10, 10"
             opacity={0.6}
+          />
+        )}
+
+        {/* 1-Day Travel Radius Circle Overlay (16 hours) */}
+        {partyLocation && !isTraveling && (
+          <Circle
+            center={getPosition(partyLocation) || [mapHeight/2, mapWidth/2] as L.LatLngExpression}
+            radius={(getPartySpeedMph() * 16) * 5.405} // radius in high-res Leaflet CRS pixels (approx 5.405 pixels per mile)
+            color="#D4AF37"
+            dashArray="8, 8"
+            weight={2}
+            fillColor="#D4AF37"
+            fillOpacity={0.06}
           />
         )}
         
