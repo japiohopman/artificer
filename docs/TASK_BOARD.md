@@ -2,10 +2,10 @@
 
 ## Critical
 - [x] check priorety1.md for map update refinment in main/priority1.md
-- [ ] Implement Temperature system in `useWorldStore.ts`.
-- [ ] Integrate Meteocons icon library for Time and Weather.
-- [ ] Reorganize Dev Kit (Inspectors, Generators, Testers grouping).
-- [ ] Align Jane module with JSON schemas and existing atlas lore.
+- [x] Implement Temperature system in `useWorldStore.ts`.
+- [x] Integrate Meteocons icon library for Time and Weather.
+- [/] Reorganize Dev Kit (Inspectors, Generators, Testers grouping).
+- [/] Align Jane module with JSON schemas and existing atlas lore.
 - [ ] Complete TSX translation of Tactical Combat Grid (Aedif inspiration).
 - [ ] check and fix errors in the main/errors.md
 - [x] Create asset validation script.

@@ -369,9 +369,28 @@ export async function fetchMaterialData(index: string): Promise<any> {
 
 export async function fetchEquipmentData(index: string): Promise<any> {
   if (equipmentCache[index]) return equipmentCache[index];
-  // Local first
+  let resolvedPath: string | null = null;
+
+  // Try resolving path from local index first
   try {
-    const res = await fetch(`/assets/atlas/equipment/json/${index}.json`);
+    const indexRes = await fetch('/assets/atlas/equipment/index.json');
+    if (indexRes.ok) {
+      const equipIndex = await indexRes.json();
+      const entry = equipIndex.find((s: any) => s.index === index);
+      if (entry && entry.json_path) {
+        resolvedPath = entry.json_path;
+      }
+    }
+  } catch (e) {}
+
+  // Fallback to legacy path if still unresolved
+  if (!resolvedPath) {
+    resolvedPath = `/assets/atlas/equipment/json/${index}.json`;
+  }
+
+  // Fetch local equipment/magic item data
+  try {
+    const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
       const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index) };
@@ -380,7 +399,9 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${index}.json?t=${Date.now()}`;
+  // Construct GitHub raw path
+  const subpath = resolvedPath.replace(/^\/?assets\/atlas\/equipment\/json\//, '').replace(/^\/?public\/assets\/atlas\/equipment\/json\//, '');
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${subpath}?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {

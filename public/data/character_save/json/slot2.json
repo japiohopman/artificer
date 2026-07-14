@@ -2,14 +2,14 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
     "str": 16,
     "dex": 14,
-    "con": 12,
+    "con": 14,
     "int": 12,
-    "wis": 6,
-    "cha": 6
+    "wis": 10,
+    "cha": 8
   },
   "proficiencies": [
     "skill: perception",
@@ -23,189 +23,129 @@
     "shields",
     "simple weapons",
     "martial weapons",
-    "saving throw: wis",
-    "saving throw: cha",
-    "Saving Throw: wis",
-    "Saving Throw: cha"
+    "saving throw: str",
+    "saving throw: con",
+    "Saving Throw: str",
+    "Saving Throw: con"
   ],
   "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "fey ancestry",
-      "index": "fey_ancestry",
-      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against being charmed",
-              "condition": {
-                "index": "charmed",
-                "name": "charmed",
-                "url": "/assets/atlas/conditions/json/charmed.json"
-              }
-            }
-          ],
-          "immunity": [
-            {
-              "name": "magic sleep"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "trance",
-      "index": "trance",
-      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
-    },
-    {
-      "name": "keen senses",
-      "index": "keen_senses",
-      "desc": "You have proficiency in the Perception skill."
-    },
-    {
-      "name": "superior darkvision",
-      "index": "superior_darkvision",
-      "desc": "Your darkvision has a radius of 120 feet.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 120
-        }
-      }
-    },
-    {
-      "name": "sunlight sensitivity",
-      "index": "sunlight_sensitivity",
-      "desc": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "disadvantage": [
-            "Attack rolls in direct sunlight",
-            "Perception checks that rely on sight in direct sunlight"
-          ]
-        }
-      }
-    },
-    {
-      "name": "drow magic",
-      "index": "drow_magic",
-      "desc": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-      "trait_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        },
-        "spells": [
-          {
-            "spell": {
-              "index": "dancing_lights",
-              "name": "dancing lights",
-              "url": "/assets/atlas/spell/json/dancing_lights.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
-          },
-          {
-            "spell": {
-              "index": "faerie_fire",
-              "name": "faerie fire",
-              "url": "/assets/atlas/spell/json/faerie_fire.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 3
-          },
-          {
-            "spell": {
-              "index": "darkness",
-              "name": "darkness",
-              "url": "/assets/atlas/spell/json/darkness.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 5
-          }
-        ]
-      }
-    },
-    {
-      "name": "drow weapon training",
-      "index": "drow_weapon_training",
-      "desc": "You have proficiency with rapiers, shortswords, and hand crossbows."
-    }
+    ""
   ],
   "features": [
     {
-      "index": "divine_sense",
+      "index": "fighter_fighting_style",
       "class": {
-        "index": "paladin",
-        "name": "paladin",
-        "url": "/assets/atlas/class/json/paladin.json"
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
       },
-      "name": "divine sense",
+      "name": "fighting style",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity. Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the hallow spell.",
-        "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
+        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
       ],
-      "url": "/assets/atlas/features/json/divine_sense.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/divine_sense.webp",
       "feature_specific": {
-        "usage": {
-          "times": "1 + charisma_modifier",
-          "type": "long_rest"
-        }
+        "subfeature_options": {
+          "choose": 1,
+          "type": "feature",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_archery",
+                  "name": "fighting style: archery",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_defense",
+                  "name": "fighting style: defense",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_dueling",
+                  "name": "fighting style: dueling",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_great_weapon_fighting",
+                  "name": "fighting style: great weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_protection",
+                  "name": "fighting style: protection",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_two_weapon_fighting",
+                  "name": "fighting style: two_weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
+                }
+              }
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
       "source": "Class"
     },
     {
-      "index": "lay_on_hands",
+      "index": "second_wind",
       "class": {
-        "index": "paladin",
-        "name": "paladin",
-        "url": "/assets/atlas/class/json/paladin.json"
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
       },
-      "name": "lay on hands",
+      "name": "second wind",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5.0",
-        "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.",
-        "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.",
-        "This feature has no effect on undead and constructs."
+        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
+        "Once you use this feature, you must finish a short or long rest before you can use it again."
       ],
-      "url": "/assets/atlas/features/json/lay_on_hands.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/lay_on_hands.webp",
+      "url": "/assets/atlas/features/json/second_wind.json",
+      "updated_at": "2026-07-13T06:30:11.862Z",
+      "image": "/assets/atlas/features/images/second_wind.webp",
       "feature_specific": {
+        "special_action": "bonus_action",
         "healing": {
-          "pool": "5 * paladin_level"
+          "dice": "1d10",
+          "modifier": "fighter_level"
         }
       },
       "source": "Class"
     }
   ],
-  "flaws": [],
-  "ideals": [],
-  "bonds": [],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
   "money": {
     "cp": 0,
     "sp": 0,
@@ -217,52 +157,16 @@
     "hairColor": "Autumn Oak",
     "hairStyle": "Short",
     "bodyType": "Medium",
-    "eyeColor": "Luminous Emerald",
-    "skinColor": "#8FBC8F",
+    "eyeColor": "Starry Sapphire",
+    "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
     "specialFeatures": [
-      "Gem-Inlaid Brow"
+      "Elongated Ears"
     ]
   },
-  "items": {
-    "chain_mail_t9dblciji": {
-      "id": "chain_mail_t9dblciji",
-      "template": "chain_mail",
-      "quantity": 1,
-      "addedAt": 1783404981788,
-      "kind": "armor"
-    },
-    "crossbow_hand_bdg9n0h2v": {
-      "id": "crossbow_hand_bdg9n0h2v",
-      "template": "crossbow_hand",
-      "quantity": 1,
-      "addedAt": 1783405023195,
-      "kind": "weapon"
-    },
-    "dagger_me7vyqpvy": {
-      "id": "dagger_me7vyqpvy",
-      "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1783405035261,
-      "kind": "weapon"
-    },
-    "explorers_pack_4fw91mtuc": {
-      "id": "explorers_pack_4fw91mtuc",
-      "template": "explorers_pack",
-      "quantity": 1,
-      "addedAt": 1783405055330,
-      "kind": "equipment_pack"
-    },
-    "emblem_6kbtpx7sn": {
-      "id": "emblem_6kbtpx7sn",
-      "template": "emblem",
-      "quantity": 1,
-      "addedAt": 1783405059475,
-      "kind": "adventuring_gear"
-    }
-  },
+  "items": {},
   "containers": {
     "backpack_new_character": {
       "id": "backpack_new_character",
@@ -271,95 +175,95 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "crossbow_hand_qk3gme18q"
+          "itemId": null
         },
         {
           "id": "bag_1",
-          "itemId": "dagger_me7vyqpvy"
+          "itemId": null
         },
         {
           "id": "bag_2",
-          "itemId": "dagger_gmz1q8fon"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "backpack_8orcfbig1"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "backpack_pghr4gi3v"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "emblem_6kbtpx7sn"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "emblem_b6ut895ip"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "bedroll_rewll8vi4"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "bedroll_mwa1lnth6"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "mess_kit_w4hhdn4j4"
+          "itemId": null
         },
         {
           "id": "bag_10",
-          "itemId": "mess_kit_upphuix1m"
+          "itemId": null
         },
         {
           "id": "bag_11",
-          "itemId": "tinderbox_ndswxvqcu"
+          "itemId": null
         },
         {
           "id": "bag_12",
-          "itemId": "tinderbox_tj3grtbop"
+          "itemId": null
         },
         {
           "id": "bag_13",
-          "itemId": "torch_epookpvth"
+          "itemId": null
         },
         {
           "id": "bag_14",
-          "itemId": "torch_r9lk1fhpz"
+          "itemId": null
         },
         {
           "id": "bag_15",
-          "itemId": "rations_1_day_tfqoy7sp4"
+          "itemId": null
         },
         {
           "id": "bag_16",
-          "itemId": "rations_1_day_3aztbcz9f"
+          "itemId": null
         },
         {
           "id": "bag_17",
-          "itemId": "waterskin_ztjhubz0g"
+          "itemId": null
         },
         {
           "id": "bag_18",
-          "itemId": "rope_hempen_50_feet_rkiqf03re"
+          "itemId": null
         },
         {
           "id": "bag_19",
-          "itemId": "explorers_pack_4fw91mtuc"
+          "itemId": null
         },
         {
           "id": "bag_20",
-          "itemId": "waterskin_dgeucgr8f"
+          "itemId": null
         },
         {
           "id": "bag_21",
-          "itemId": "rope_hempen_50_feet_r5wvfm8yn"
+          "itemId": null
         },
         {
           "id": "bag_22",
-          "itemId": "explorers_pack_yng58nybi"
+          "itemId": null
         },
         {
           "id": "bag_23",
@@ -373,7 +277,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "crossbow_hand_bdg9n0h2v"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -389,7 +293,7 @@
       },
       {
         "id": "chest",
-        "itemId": "chain_mail_t9dblciji"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -491,433 +395,77 @@
   },
   "backpack": [
     {
-      "id": "cartographers_tools_bpu2yhzyt",
       "index": "cartographers_tools",
       "name": "Cartographer'S Tools",
-      "quantity": 1,
-      "weight": 6,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/cartographers_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "tools",
-        "name": "tools",
-        "url": "/assets/atlas/equipment_categories/tools"
-      },
-      "tool_category": "Artisan's Tools",
-      "cost": {
-        "quantity": 15,
-        "unit": "gp"
-      },
-      "desc": [
-        "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
-      ],
-      "updated_at": "2026-04-29T01:08:05.067Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/cartographers_tools.webp",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
-      "background_type": "land_forest",
-      "last_updated": "29-4-2026",
-      "kind": "tool",
-      "equipSlots": [
-        "tool_1",
-        "tool_2",
-        "tool_3"
-      ]
+      "quantity": 1
     },
     {
-      "id": "bedroll_juifnspjl",
       "index": "bedroll",
       "name": "Bedroll",
-      "quantity": 1,
-      "weight": 7,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/bedroll.json",
-      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
-      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
-      "desc": [
-        "A typical bedroll consisted of a sack that could contain a human-sized creature, with an opening on the side. Some variants consisted of several layers to provide waterproofing, warmth, and comfort"
-      ],
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "updated_at": "2026-04-11T15:14:56.995Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/bedroll.webp",
-      "sprite_index": 2,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
-      "category": "Adventuring Gear",
-      "last_updated": "11-4-2026",
-      "kind": "adventuring_gear",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
+      "quantity": 1
     },
     {
-      "id": "quiver_mshz5ei7i",
       "index": "quiver",
       "name": "Quiver",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp",
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "desc": [
-        "A quiver can hold up to 20 arrows."
-      ],
-      "updated_at": "2026-04-25T10:04:06.285Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/quiver.webp",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp",
-      "background_type": "land_forest",
-      "last_updated": "25-4-2026",
-      "kind": "adventuring_gear",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
+      "quantity": 1
     },
     {
-      "id": "arrow_aeyvsnx2z",
-      "index": "arrow",
-      "name": "Arrow",
-      "quantity": 20,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/arrow.json",
-      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
-      "desc": [],
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "ammunition",
-        "name": "ammunition",
-        "url": "/assets/atlas/equipment_categories/ammunition"
-      },
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "updated_at": "2026-05-17T03:51:57.696Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/arrow.webp",
-      "sprite_index": 8,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
-      "background_type": "land_forest",
-      "category": "Ammunition",
-      "last_updated": "17-5-2026",
-      "kind": "adventuring_gear",
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ]
-    },
-    {
-      "id": "gold_ayax7aswk",
-      "index": "gold",
-      "name": "Gold",
-      "quantity": 3,
-      "weight": 0.02,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "equipment_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/json/standard_gear.json"
-      },
-      "cost": "",
-      "desc": [
-        "The standard unit of currency in the game."
-      ],
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "last_updated": "21-5-2026",
-      "updated_at": "2026-05-21T01:11:21.699Z",
-      "kind": "currency"
-    }
-  ],
-  "inventory": {
-    "main-hand": {
-      "id": "shortbow_fiwgthimq",
       "index": "shortbow",
       "name": "Shortbow",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/shortbow.json",
-      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
-      "desc": [
-        "The wood of this bow is perpetually cold to the touch, carved from the gnarled marrow-root of a hangman’s tree that has tasted nothing but shadow. Each drawn string hums with the low, discordant vibration of a death rattle, eager to trade the breath in a target's lungs for the silence of the grave."
-      ],
-      "special": [],
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/weapon"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Ranged",
-      "category_range": "Simple Ranged",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 80,
-        "long": 320
-      },
-      "properties": [
-        {
-          "index": "ammunition",
-          "name": "ammunition",
-          "url": "/assets/atlas/weapon_properties/ammunition"
-        },
-        {
-          "index": "two_handed",
-          "name": "two_handed",
-          "url": "/assets/atlas/weapon_properties/two_handed"
-        }
-      ],
-      "updated_at": "2026-04-12T08:12:42.550Z",
-      "contents": [],
-      "image": "/assets/atlas/equipment/images/shortbow.webp",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
-      "category": "Simple Ranged Weapons",
-      "last_updated": "12-4-2026",
-      "kind": "weapon",
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "slot": "main-hand",
-      "main_hand_slot": "Shortbow"
+      "quantity": 1
     },
-    "clothes": {
-      "id": "clothes_travelers_kjd6nrh35",
+    {
+      "index": "arrow",
+      "name": "Arrow",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "quantity": 20
+    },
+    {
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 4,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp",
-      "desc": [],
-      "special": [],
-      "equipment_category": {
-        "index": "adventuring_gear",
-        "name": "adventuring gear",
-        "url": "/assets/atlas/equipment_categories/adventuring_gear"
-      },
-      "gear_category": {
-        "index": "standard_gear",
-        "name": "standard gear",
-        "url": "/assets/atlas/equipment_categories/standard_gear"
-      },
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "updated_at": "2026-06-29T04:35:43.351Z",
-      "contents": [],
-      "properties": [],
-      "image": "/assets/atlas/equipment/images/clothes_travelers.webp",
-      "sprite_index": 12,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-      "kind": "clothing",
-      "clothing_type": "traveler",
-      "equipSlots": [
-        "clothes"
-      ],
-      "background_type": "land_forest",
-      "last_updated": "29-6-2026",
-      "slot": "clothes",
-      "clothes_slot": "Clothes Traveler'S"
-    }
-  },
-  "knownSpells": [
-    {
-      "index": "bless",
-      "name": "bless",
-      "level": 1,
-      "school": "enchantment",
-      "classes": [
-        "cleric",
-        "paladin"
-      ],
-      "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "Up to 1 minute",
-      "json_path": "/assets/atlas/spell/json/bless.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fbless.webp%3Ft%3D1783405070396"
+      "quantity": 1
     },
     {
-      "index": "cure_wounds",
-      "name": "cure wounds",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "artificer",
-        "bard",
-        "cleric",
-        "druid",
-        "paladin",
-        "ranger"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/cure_wounds.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fcure-wounds.webp%3Ft%3D1783405070396"
-    },
-    {
-      "index": "heroism",
-      "name": "heroism",
-      "level": 1,
-      "school": "enchantment",
-      "classes": [
-        "bard",
-        "paladin"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "Up to 1 minute",
-      "json_path": "/assets/atlas/spell/json/heroism.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fheroism.webp%3Ft%3D1783405070398"
-    },
-    {
-      "index": "shield_of_faith",
-      "name": "shield of faith",
-      "level": 1,
-      "school": "abjuration",
-      "classes": [
-        "cleric",
-        "paladin"
-      ],
-      "casting_time": "1 bonus action",
-      "range": "60 feet",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/shield_of_faith.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fshield-of-faith.webp%3Ft%3D1783405070399"
-    },
-    {
-      "index": "purify_food_and_drink",
-      "name": "purify food and drink",
-      "level": 1,
-      "school": "transmutation",
-      "classes": [
-        "artificer",
-        "cleric",
-        "druid",
-        "paladin"
-      ],
-      "casting_time": "1 action",
-      "range": "10 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/purify_food_and_drink.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fpurify-food-and-drink.webp%3Ft%3D1783405070399"
-    },
-    {
-      "index": "protection_from_evil_and_good",
-      "name": "protection from evil and good",
-      "level": 1,
-      "school": "abjuration",
-      "classes": [
-        "cleric",
-        "paladin",
-        "warlock",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/protection_from_evil_and_good.json",
-      "imageUrl": "/api/raw?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjapiohopman%2Fartificer%2Fmain%2Fpublic%2Fassets%2Fatlas%2Fspell%2Fimages%2Fprotection-from-evil-and-good.webp%3Ft%3D1783405070399"
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 3
     }
   ],
+  "inventory": {},
+  "knownSpells": [],
   "languages": [
     "common",
     "elvish"
   ],
-  "preparedSpells": [
-    "bless",
-    "cure_wounds",
-    "heroism",
-    "shield_of_faith",
-    "purify_food_and_drink",
-    "protection_from_evil_and_good"
-  ],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
+  "preparedSpells": [],
+  "spellSlots": {},
+  "choices": {
+    "skills": [
+      "Insight",
+      "Medicine"
+    ]
   },
-  "choices": {},
   "race": "elf",
   "subrace": "drow",
-  "class": "paladin",
+  "class": "fighter",
   "spellcastingAbility": "cha",
   "background": "guide",
-  "alignment": "chaotic_good",
-  "name": "han",
+  "alignment": "lawful_good",
+  "name": "opj",
   "id": "slot2",
-  "hp": 6,
-  "maxHp": 6,
-  "lastSaved": "2026-07-07T06:20:08.139Z"
+  "hp": 7,
+  "maxHp": 7,
+  "discoveredLocationIds": [
+    "waterdeep",
+    "baldurs_gate",
+    "neverwinter"
+  ],
+  "exploredAreas": [],
+  "lastSaved": "2026-07-14T18:28:33.926Z"
 }
