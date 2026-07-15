@@ -68,7 +68,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'codex' | 'world' | 'flags' | 'generators' | 'testers' | 'audio_lab'>('codex');
+  const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab'>('inspectors');
+  const [activeInspector, setActiveInspector] = useState<'codex' | 'world' | 'flags'>('codex');
   const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'jane' | 'backgrounds'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -303,7 +304,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
   useEffect(() => {
     setSelectedCategory(null);
-  }, [activeTab, activeGenerator]);
+  }, [activeTab, activeGenerator, activeInspector]);
 
   // Update editing item when initialMonster changes
   useEffect(() => {
@@ -870,12 +871,10 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
           {/* Secondary Header: Tab Manager */}
           <div className="bg-[#1e1e1e] flex items-center border-b border-white/5 overflow-x-auto scrollbar-none">
             {[
-              { id: 'codex', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'CODEX' },
-              { id: 'world', icon: (props: any) => <GameIcon name="location" {...props} />, label: 'WORLD' },
-              { id: 'flags', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'FLAGS' },
-              { id: 'audio_lab', icon: (props: any) => <GameIcon name="adjust" {...props} />, label: 'AUDIO LAB' },
+              { id: 'inspectors', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'INSPECTORS' },
               { id: 'generators', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'GENERATORS' },
-              { id: 'testers', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTERS' }
+              { id: 'testers', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTERS' },
+              { id: 'audio_lab', icon: (props: any) => <GameIcon name="adjust" {...props} />, label: 'AUDIO LAB' }
             ].map(tab => (
               <button 
                 key={tab.id}
@@ -899,10 +898,26 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
             ))}
           </div>
 
-          {/* Sub-Header for Generators or Testers */}
-          {(activeTab === 'generators' || activeTab === 'testers') && (
+          {/* Sub-Header for Inspectors, Generators or Testers */}
+          {(activeTab === 'inspectors' || activeTab === 'generators' || activeTab === 'testers') && (
             <div className="bg-[#161616] flex items-center border-b border-white/5 px-4 h-10 gap-6">
-               {activeTab === 'generators' ? (
+               {activeTab === 'inspectors' ? (
+                 <>
+                   {[
+                     { id: 'codex', label: 'Codex' },
+                     { id: 'world', label: 'World' },
+                     { id: 'flags', label: 'Flags' }
+                   ].map(insp => (
+                     <button
+                       key={insp.id}
+                       onClick={() => { setActiveInspector(insp.id as any); playClickSound(); }}
+                       className={`text-[9px] font-black uppercase tracking-tighter transition-all ${activeInspector === insp.id ? 'text-dragon-red underline underline-offset-4' : 'text-white/20 hover:text-white/40'}`}
+                     >
+                       {insp.label}
+                     </button>
+                   ))}
+                 </>
+               ) : activeTab === 'generators' ? (
                  <>
                    {[
                      { id: 'npcs', label: 'NPC' },
@@ -943,11 +958,11 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
           {/* Main Space */}
           <div className="flex-1 flex overflow-hidden">
-            {activeTab === 'codex' ? (
+            {activeTab === 'inspectors' && activeInspector === 'codex' ? (
               <AssetExplorer />
-            ) : activeTab === 'world' ? (
+            ) : activeTab === 'inspectors' && activeInspector === 'world' ? (
               <WorldExplorer />
-            ) : activeTab === 'flags' ? (
+            ) : activeTab === 'inspectors' && activeInspector === 'flags' ? (
               <div className="flex-1 p-8">
                  <div className="max-w-2xl mx-auto h-full">
                     <FlagManager />
