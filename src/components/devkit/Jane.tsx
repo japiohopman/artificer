@@ -49,9 +49,10 @@ export const Jane: React.FC<JaneProps> = ({ initialData }) => {
       factions: ''
     },
     region: 'Sword Coast',
-    continent: 'Faerun',
+    sub_region: '',
+    continent: 'Faerûn',
     world: 'Toril',
-    plain: 'Prime Material'
+    plain: 'Material Plane'
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
@@ -75,6 +76,10 @@ export const Jane: React.FC<JaneProps> = ({ initialData }) => {
         description: initialData.description || prev.description,
         coordinates: initialData.coordinates || prev.coordinates,
         region: initialData.region || prev.region,
+        sub_region: initialData.sub_region || prev.sub_region,
+        continent: initialData.continent || prev.continent,
+        world: initialData.world || prev.world,
+        plain: initialData.plain || prev.plain,
         metadata: {
           ...prev.metadata,
           ...(initialData.metadata || {})
@@ -91,21 +96,88 @@ export const Jane: React.FC<JaneProps> = ({ initialData }) => {
 
     setIsBaking(true);
     try {
-      // Determine path based on type
+      // Determine logical parent and directory path based on type
+      let parentCategory = 'poi';
       let path = `public/assets/atlas/world/toril/faerun/`;
       const type = location.type || 'poi';
       
-      if (type === 'city') path += `cities/${location.id}/${location.id}.json`;
-      else if (type === 'town' || type === 'village' || type === 'settlement') path += `towns_settlements/${location.id}/${location.id}.json`;
-      else if (type === 'forest') path += `forests/${location.id}/${location.id}.json`;
-      else if (type === 'mountain' || type === 'mountains') path += `mountains/${location.id}/${location.id}.json`;
-      else if (type === 'wetland' || type === 'wetlands') path += `wetlands/${location.id}/${location.id}.json`;
-      else if (type === 'water' || type === 'lake' || type === 'river' || type === 'sea') path += `waters/${location.id}/${location.id}.json`;
-      else if (type === 'road' || type === 'trail') path += `roads_trails/${location.id}/${location.id}.json`;
-      else if (type === 'region') path += `regions/${location.id}/${location.id}.json`;
-      else path += `poi/${location.id}.json`;
+      if (type === 'city') {
+        parentCategory = 'cities';
+        path += `cities/${location.id}/${location.id}.json`;
+      } else if (type === 'town' || type === 'village' || type === 'settlement') {
+        parentCategory = 'towns_settlements';
+        path += `towns_settlements/${location.id}/${location.id}.json`;
+      } else if (type === 'forest') {
+        parentCategory = 'forests';
+        path += `forests/${location.id}/${location.id}.json`;
+      } else if (type === 'mountain' || type === 'mountains') {
+        parentCategory = 'mountains';
+        path += `mountains/${location.id}/${location.id}.json`;
+      } else if (type === 'wetland' || type === 'wetlands') {
+        parentCategory = 'wetlands';
+        path += `wetlands/${location.id}/${location.id}.json`;
+      } else if (type === 'water' || type === 'lake' || type === 'river' || type === 'sea') {
+        parentCategory = 'waters';
+        path += `waters/${location.id}/${location.id}.json`;
+      } else if (type === 'road' || type === 'trail') {
+        parentCategory = 'roads_trails';
+        path += `roads_trails/${location.id}/${location.id}.json`;
+      } else if (type === 'region') {
+        parentCategory = 'regions';
+        path += `regions/${location.id}/${location.id}.json`;
+      } else {
+        path += `poi/${location.id}.json`;
+      }
 
-      const success = await commitFile(path, JSON.stringify(location, null, 2));
+      // Merge and align with strict JSON Schemas (like city.schema.json)
+      const alignedLocation = {
+        id: location.id,
+        name: location.name,
+        type: location.type || 'settlement',
+        category: location.category || location.type || 'settlement',
+        plain: location.plain || 'Material Plane',
+        world: location.world || 'Toril',
+        continent: location.continent || 'Faerûn',
+        region: location.region || 'Sword Coast',
+        sub_region: location.sub_region || '',
+        parent: parentCategory,
+        title: location.title || '',
+        description: location.description || '',
+        wiki: location.wiki || '',
+        image: location.image || '',
+        thumbnail: location.thumbnail || '',
+        banner: location.banner || '',
+        tags: location.tags || [],
+        map: location.map || '',
+        sub_map: location.sub_map || '',
+        children: location.children || [],
+        sub_location_files: location.sub_location_files || [],
+        coordinates: {
+          lat: location.coordinates?.lat ?? 0,
+          lng: location.coordinates?.lng ?? 0
+        },
+        bounds: location.bounds || [[0, 0], [1000, 1000]],
+        origin: location.origin || 'top-left',
+        unitsPerMile: location.unitsPerMile || 1,
+        geography: location.geography || '',
+        history: location.history || '',
+        bestiary: location.bestiary || '',
+        politics: location.politics || '',
+        religion: location.religion || '',
+        trade: location.trade || '',
+        metadata: {
+          government: location.metadata?.government || '',
+          military: location.metadata?.military || '',
+          population: location.metadata?.population || '',
+          organizations: location.metadata?.organizations || '',
+          trade: location.metadata?.trade || '',
+          ...(location.metadata || {})
+        },
+        categories: location.categories || [],
+        lore: location.lore || ''
+      };
+
+      const success = await commitFile(path, JSON.stringify(alignedLocation, null, 2));
       if (success) {
         playSuccessSound();
         alert(`Location ${location.name} baked successfully to ${path}`);
@@ -350,15 +422,15 @@ export const Jane: React.FC<JaneProps> = ({ initialData }) => {
                  </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                 {['region', 'continent', 'world'].map(key => (
+              <div className="grid grid-cols-5 gap-4">
+                 {['sub_region', 'region', 'continent', 'world', 'plain'].map(key => (
                     <div key={key} className="space-y-2">
-                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">{key}</label>
+                       <label className="text-[9px] font-black text-white/20 uppercase tracking-widest">{key.replace('_', ' ')}</label>
                        <input 
                          type="text" 
                          value={(location as any)[key] || ''} 
                          onChange={(e) => setLocation({ ...location, [key]: e.target.value })}
-                         className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded"
+                         className="w-full bg-white/5 border border-white/10 p-2 text-xs text-white rounded font-mono"
                        />
                     </div>
                  ))}
