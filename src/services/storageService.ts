@@ -1473,7 +1473,7 @@ export async function fetchClassLevels(classIndex: string): Promise<any[]> {
 }
 
 export async function fetchFeatureData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/${index}.json?t=${Date.now()}`;
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/json/${index}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);

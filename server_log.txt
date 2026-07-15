@@ -2,55 +2,11 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
 Server running on http://localhost:3000
-4:21:11 PM [vite] (client) page reload src/store/useWorldStore.ts
-4:21:11 PM [vite] (client) page reload server_log.txt
-4:21:58 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-4:21:58 PM [vite] (client) page reload server_log.txt
-4:26:13 PM [vite] (client) page reload src/store/useWorldStore.ts
-4:26:13 PM [vite] (client) page reload server_log.txt
-4:34:21 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-4:34:21 PM [vite] (client) page reload server_log.txt
-4:35:24 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-4:35:24 PM [vite] (client) page reload server_log.txt
-4:36:03 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-4:36:03 PM [vite] (client) page reload server_log.txt
-4:37:53 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-4:37:53 PM [vite] (client) page reload server_log.txt
-4:40:30 PM [vite] (client) page reload src/store/useWorldStore.ts
-4:40:30 PM [vite] (client) page reload server_log.txt
-5:59:04 AM [vite] (client) page reload src/store/useWorldStore.ts
-5:59:04 AM [vite] (client) page reload server_log.txt
-5:59:44 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-5:59:44 AM [vite] (client) page reload server_log.txt
-6:03:10 AM [vite] (client) hmr update /src/components/hud/game/FogOfWar.tsx, /src/index.css
-6:03:10 AM [vite] (client) page reload server_log.txt
-6:13:01 AM [vite] (client) page reload src/store/useWorldStore.ts
-6:13:01 AM [vite] (client) page reload server_log.txt
-6:14:00 AM [vite] (client) page reload src/store/useWorldStore.ts
-6:14:00 AM [vite] (client) page reload server_log.txt
-6:14:39 AM [vite] (client) page reload src/services/saveService.ts
-6:14:39 AM [vite] (client) page reload server_log.txt
-6:16:11 AM [vite] (client) page reload src/store/useCharacterStore.ts
-6:16:11 AM [vite] (client) page reload server_log.txt
-6:17:17 AM [vite] (client) page reload src/store/useCharacterStore.ts
-6:17:17 AM [vite] (client) page reload server_log.txt
-6:18:34 AM [vite] (client) page reload src/store/useCharacterStore.ts
-6:18:34 AM [vite] (client) page reload server_log.txt
-6:23:36 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-6:23:36 AM [vite] (client) page reload server_log.txt
-6:24:12 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-6:24:12 AM [vite] (client) page reload server_log.txt
-6:25:43 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-6:25:43 AM [vite] (client) page reload server_log.txt
-6:26:28 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-6:26:28 AM [vite] (client) page reload server_log.txt
-6:28:37 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-6:28:37 AM [vite] (client) page reload server_log.txt
-8:09:07 AM [vite] (client) page reload src/store/useWorldStore.ts
-8:09:07 AM [vite] (client) page reload server_log.txt
-8:10:29 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-8:10:29 AM [vite] (client) page reload server_log.txt
-8:13:19 AM [vite] (client) hmr update /src/components/hud/chat/ChatPanel.tsx, /src/index.css
-8:13:19 AM [vite] (client) page reload server_log.txt
+7:34:53 AM [vite] (client) page reload src/services/storageService.ts
+7:34:53 AM [vite] (client) page reload server_log.txt
+10:52:40 AM [vite] (client) hmr update /src/components/character/CharacterCreator.tsx, /src/index.css
+10:52:40 AM [vite] (client) page reload server_log.txt
+11:26:18 AM [vite] (client) hmr update /src/components/character/CharacterCreator/ChoicesStep.tsx, /src/index.css
+11:26:18 AM [vite] (client) page reload server_log.txt

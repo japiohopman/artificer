@@ -275,6 +275,7 @@ export const CharacterCreator: React.FC = () => {
                    });
                }
             }
+            let detectedSubclass: string | undefined = undefined;
             if (newChar.class) {
                 const cData = await atlasService.loadClass(newChar.class);
                 if (cData?.proficiencies) {
@@ -297,6 +298,61 @@ export const CharacterCreator: React.FC = () => {
                         }
                     }
                 }
+
+                // Load and append any manually chosen subfeatures or subclasses from Choices
+                if (newChar.choices) {
+                    for (const [key, selections] of Object.entries(newChar.choices)) {
+                        // Skip non-feature keys
+                        if (key === 'skills' || key === 'languages' || key === 'subclass' || key === 'fighting-style') {
+                            continue;
+                        }
+                        
+                        if (Array.isArray(selections)) {
+                            for (const selection of selections) {
+                                if (typeof selection === 'string' && selection.trim().length > 0) {
+                                    try {
+                                        // 1. Try to load as a subclass first
+                                        const subData = await atlasService.loadSubclass(selection);
+                                        if (subData && subData.class?.index?.toLowerCase() === newChar.class.toLowerCase()) {
+                                            detectedSubclass = selection;
+                                            
+                                            // Append level 1 features from this subclass
+                                            if (subData.features) {
+                                                for (const sf of subData.features) {
+                                                    if (sf.level === 1) {
+                                                        const sFeatData = await atlasService.loadFeature(sf.index);
+                                                        if (sFeatData && sFeatData.name) {
+                                                            if (!features.some(f => f.index === sFeatData.index)) {
+                                                                features.push({
+                                                                    ...sFeatData,
+                                                                    source: 'Subclass'
+                                                                });
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            continue;
+                                        }
+
+                                        // 2. Otherwise load as standard feature/subfeature
+                                        const subFeatData = await atlasService.loadFeature(selection);
+                                        if (subFeatData && subFeatData.name) {
+                                            if (!features.some(f => f.index === subFeatData.index)) {
+                                                features.push({
+                                                    ...subFeatData,
+                                                    source: 'Class'
+                                                });
+                                            }
+                                        }
+                                    } catch (e) {
+                                        // Ignore load errors for non-feature selections
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             // Sync manually chosen skills from Choices.skills
@@ -309,6 +365,7 @@ export const CharacterCreator: React.FC = () => {
             const currentProfs = newChar.proficiencies || [];
             const currentLangs = newChar.languages || [];
             const currentFeatures = newChar.features || [];
+            const currentSubclass = newChar.subclass;
             
             const newTraits = Array.from(new Set(traits.map(t => JSON.stringify(t)))).map(s => JSON.parse(s));
             const newProfs = Array.from(new Set(profs));
@@ -323,7 +380,8 @@ export const CharacterCreator: React.FC = () => {
                 JSON.stringify(newTraits) !== JSON.stringify(currentTraits) || 
                 JSON.stringify(newProfs) !== JSON.stringify(currentProfs) ||
                 JSON.stringify(newLangs) !== JSON.stringify(currentLangs) ||
-                JSON.stringify(newFeatures) !== JSON.stringify(currentFeatures);
+                JSON.stringify(newFeatures) !== JSON.stringify(currentFeatures) ||
+                detectedSubclass !== currentSubclass;
 
             if (needsUpdate) {
                 setNewChar(prev => {
@@ -332,6 +390,7 @@ export const CharacterCreator: React.FC = () => {
                     
                     return {
                         ...prev,
+                        subclass: detectedSubclass || prev.subclass,
                         traits: newTraits,
                         proficiencies: newProfs,
                         features: newFeatures,
@@ -344,7 +403,7 @@ export const CharacterCreator: React.FC = () => {
         }
     };
     syncMetadata();
-  }, [newChar.race, newChar.subrace, newChar.class, newChar.background]);
+  }, [newChar.race, newChar.subrace, newChar.class, newChar.background, newChar.choices]);
 
   useEffect(() => {
     if (isCharacterCreatorOpen) {
