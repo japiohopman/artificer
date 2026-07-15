@@ -76,6 +76,7 @@ export const CharacterCreator: React.FC = () => {
   const { 
     isCharacterCreatorOpen, 
     setIsCharacterCreatorOpen, 
+    setIsLoading,
   } = useUIStore();
   const { setIsGameStarted } = useGameStore();
 
@@ -453,6 +454,7 @@ export const CharacterCreator: React.FC = () => {
       console.error("Failed to load initial character creation data", e);
     } finally {
       setLoading(false);
+      setIsLoading(false);
     }
   };
 
@@ -649,11 +651,11 @@ export const CharacterCreator: React.FC = () => {
   if (!isCharacterCreatorOpen) return null;
 
   return (
-    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
+    <div id="character-creator-portal" className="fixed inset-0 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
       <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch" style={{
-        backgroundImage: `url('/assets/ui/old_paper.webp')`,
+        backgroundImage: `url('/assets/ui/parchment.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
