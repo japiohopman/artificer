@@ -166,3 +166,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsTargeting: (isTargeting) => set({ isTargeting }),
   setTargetingAction: (targetingAction) => set({ targetingAction }),
 }));
+
+if (typeof window !== 'undefined') {
+  (window as any).useUIStore = useUIStore;
+}
