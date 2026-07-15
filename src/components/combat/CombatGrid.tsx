@@ -97,6 +97,7 @@ export const CombatGrid: React.FC = () => {
   const zoom = localZoom;
   const [hoveredCell, setHoveredCell] = useState<{ x: number, y: number } | null>(null);
   const [draggedPos, setDraggedPos] = useState<{ x: number, y: number } | null>(null);
+  const [panOffset, setPanOffset] = useState({ x: 0, y: 0 });
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -132,13 +133,9 @@ export const CombatGrid: React.FC = () => {
     return combatState.initiativeOrder[combatState.activeTurnIndex];
   }, [combatState.initiativeOrder, combatState.activeTurnIndex]);
 
-  const [announcement, setAnnouncement] = useState<{ text: string, sub: string, isPlayer: boolean } | null>(null);
-
   useEffect(() => {
     if (activeTurnActor) {
       const isPlayerOrAlly = !!(activeTurnActor.isPlayer || activeTurnActor.isAlly);
-      const text = isPlayerOrAlly ? "Your Turn" : "Enemy Turn";
-      const sub = activeTurnActor.name;
 
       // Play turn sound
       if (isPlayerOrAlly) {
@@ -146,10 +143,6 @@ export const CombatGrid: React.FC = () => {
       } else {
         soundService.playEffect('TURN_AI');
       }
-
-      setAnnouncement({ text, sub, isPlayer: isPlayerOrAlly });
-      const timer = setTimeout(() => setAnnouncement(null), 2200);
-      return () => clearTimeout(timer);
     }
   }, [activeTurnActor?.id]);
 
@@ -166,6 +159,22 @@ export const CombatGrid: React.FC = () => {
     }
     return playerPos;
   }, [activeTurnActor, monsters, pcPositions, playerPos]);
+
+  // Smoothly center on the active character/token's turn
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+
+    const tokenPixelX = activeTokenPos.x * cellSize + cellSize / 2;
+    const tokenPixelY = activeTokenPos.y * cellSize + cellSize / 2;
+
+    const targetX = containerWidth / 2 - tokenPixelX * zoom;
+    const targetY = containerHeight / 2 - tokenPixelY * zoom;
+
+    setPanOffset({ x: targetX, y: targetY });
+  }, [activeTokenPos.x, activeTokenPos.y, zoom]);
 
   // Check if it's currently a player or ally's turn
   const isPlayerOrAllyTurn = useMemo(() => {
@@ -410,6 +419,17 @@ export const CombatGrid: React.FC = () => {
     }
 
     if (isTargeting) {
+      // Action Economy Guard Check
+      if (targetingAction?.actionType && activeChar?.actionEconomy) {
+        const currentPoints = (activeChar.actionEconomy as any)[targetingAction.actionType].current;
+        if (currentPoints <= 0) {
+          addLog(`You do not have enough ${targetingAction.actionType.replace('bonusActions', 'bonus actions')}!`, 'error');
+          setIsTargeting(false);
+          setTargetingAction(null);
+          return;
+        }
+      }
+
       if (targetingAction && ['sphere', 'cone'].includes(targetingAction.targetType)) {
         const aoeCells = getCellsInAOE(targetingAction, activePcPos, { x, y });
         const targets = monsters.filter(m => {
@@ -470,30 +490,22 @@ export const CombatGrid: React.FC = () => {
       return;
     }
 
-    // Default movement logic
+    // Default movement logic (only allowed in exploration mode)
+    if (gameMode === 'combat') {
+      // In combat, only explicit "Move" action targeting can trigger movement
+      return;
+    }
+
     if (isCellOccupied(x, y, activePcPos, monsters, pcPositions || playerPos, 'Medium')) {
       addLog("That position is already occupied!", 'warning');
       return;
     }
-    const { gameMode } = useUIStore.getState();
     const path = findPath(activePcPos, { x, y }, grid, monsters, pcPositions || playerPos);
 
     if (path && path.length > 0) {
-      const isCombat = gameMode === 'combat';
-      const moveLimit = 6; // 30ft
-
-      if (!isCombat || path.length <= moveLimit) {
-        setPlayerPos(x, y, activeCharacterId);
-        soundService.playEffect('TOKEN_MOVE');
-        addLog(`${isCombat ? 'Combat move' : 'Exploration move'} to (${x}, ${y})`, 'info');
-
-        if (isCombat) {
-          const { consumeMovement } = useCharacterStore.getState();
-          consumeMovement(activeCharacterId, path.length * 5);
-        }
-      } else {
-        addLog("That position is too far for a single turn!", 'warning');
-      }
+      setPlayerPos(x, y, activeCharacterId);
+      soundService.playEffect('TOKEN_MOVE');
+      addLog(`Exploration move to (${x}, ${y})`, 'info');
     }
   };
 
@@ -586,6 +598,8 @@ const activeTokenCoordinates = draggedMonsterId
         <motion.div
           drag={isMapPanEnabled}
           dragMomentum={false}
+          animate={{ x: panOffset.x, y: panOffset.y }}
+          transition={{ type: 'spring', damping: 25, stiffness: 120 }}
           className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
           style={{ 
             scale: zoom,
@@ -609,6 +623,28 @@ const activeTokenCoordinates = draggedMonsterId
 
           {/* Tokens Layer */}
           <div className="absolute inset-0 pointer-events-none z-20">
+             {/* Active Attack Visual Animation Overlay */}
+             {combatState.activeAttack && (
+               <motion.div
+                 initial={{ scale: 0.5, opacity: 0 }}
+                 animate={{ scale: [1, 1.4, 1], opacity: [0, 1, 0] }}
+                 transition={{ duration: 0.8, ease: "easeOut" }}
+                 className="absolute pointer-events-none z-[120] flex items-center justify-center bg-dragon-red/10 border-2 border-dragon-red rounded-full"
+                 style={{
+                   left: combatState.activeAttack.targetX * cellSize,
+                   top: combatState.activeAttack.targetY * cellSize,
+                   width: cellSize,
+                   height: cellSize,
+                 }}
+               >
+                 <img
+                   src={combatState.activeAttack.svgPath}
+                   className="w-10 h-10 object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] filter invert sepia(1) saturate(5) hue-rotate(-50deg)"
+                   alt="attack visual effect"
+                 />
+               </motion.div>
+             )}
+
              {/* Floating Token Action HUD (Roll20-style overlay around/above player or allied summon token) */}
              {gameMode === 'combat' && !isTargeting && !draggedPos && !draggedMonsterId && (
                <TokenActionHUD
@@ -790,6 +826,17 @@ const activeTokenCoordinates = draggedMonsterId
                     onClick={async (e) => {
                       e.stopPropagation();
                       if (isTargeting) {
+                        // Action Economy Guard Check
+                        if (targetingAction?.actionType && activeChar?.actionEconomy) {
+                          const currentPoints = (activeChar.actionEconomy as any)[targetingAction.actionType].current;
+                          if (currentPoints <= 0) {
+                            addLog(`You do not have enough ${targetingAction.actionType.replace('bonusActions', 'bonus actions')}!`, 'error');
+                            setIsTargeting(false);
+                            setTargetingAction(null);
+                            return;
+                          }
+                        }
+
                         const activePcPos = pcPositions?.[activeCharacterId] || playerPos;
                         const mFootprint = monster.size === 'Large' ? 2 : 1;
                         let dist = Infinity;
@@ -866,40 +913,6 @@ const activeTokenCoordinates = draggedMonsterId
       
       {/* HUD Vignette */}
       <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.8)]" />
-
-      {/* Turn Announcement Overlay */}
-      <AnimatePresence>
-        {announcement && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 z-[1000] pointer-events-none flex flex-col items-center justify-center bg-black/45 backdrop-blur-sm"
-          >
-            <motion.div
-              initial={{ scale: 0.8, letterSpacing: '0.1em' }}
-              animate={{ scale: 1, letterSpacing: '0.25em' }}
-              exit={{ scale: 1.1 }}
-              transition={{ type: 'spring', damping: 20 }}
-              className={cn(
-                "font-elan text-4xl uppercase font-black text-center drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] mb-2",
-                announcement.isPlayer ? "text-dragon-gold" : "text-dragon-red"
-              )}
-            >
-              {announcement.text}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 0.9, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="font-header text-xl uppercase tracking-widest text-white drop-shadow-md"
-            >
-              {announcement.sub}
-            </motion.div>
-            <div className="w-48 h-0.5 bg-gradient-to-r from-transparent via-dragon-gold to-transparent mt-4 opacity-75 animate-pulse" />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
