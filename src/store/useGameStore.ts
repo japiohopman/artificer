@@ -75,6 +75,13 @@ export interface CombatState {
   grid: TacticalCell[][];
   victoryXp: number;
   combatMapBackground?: string | null;
+  activeAttack?: {
+    attackerId: string;
+    targetId: string;
+    targetX: number;
+    targetY: number;
+    svgPath: string;
+  } | null;
 }
 
 export interface LogEntry {
@@ -180,6 +187,35 @@ const initializeGrid = (width: number, height: number): TacticalCell[][] => {
   return grid;
 };
 
+const getAttackSvgPath = (actionName: string): string => {
+  const name = actionName.toLowerCase();
+  if (name.includes('claw')) return '/assets/icons/svg/attacks/claw.svg';
+  if (name.includes('bite')) return '/assets/icons/svg/attacks/bite.svg';
+  if (name.includes('beak')) return '/assets/icons/svg/attacks/beak.svg';
+  if (name.includes('tail')) return '/assets/icons/svg/attacks/tail.svg';
+  if (name.includes('talon')) return '/assets/icons/svg/attacks/talons.svg';
+  if (name.includes('tentacle')) return '/assets/icons/svg/attacks/tentacle.svg';
+  if (name.includes('crush')) return '/assets/icons/svg/attacks/crush.svg';
+  if (name.includes('web')) return '/assets/icons/svg/attacks/web.svg';
+  if (name.includes('whip')) return '/assets/icons/svg/attacks/whip.svg';
+  if (name.includes('club')) return '/assets/icons/svg/attacks/club.svg';
+  if (name.includes('trident')) return '/assets/icons/svg/attacks/trident.svg';
+  if (name.includes('warhammer')) return '/assets/icons/svg/attacks/warhammer.svg';
+  if (name.includes('hammer')) return '/assets/icons/svg/attacks/hammer.svg';
+  if (name.includes('greataxe') || name.includes('axe')) return '/assets/icons/svg/attacks/greataxe.svg';
+  if (name.includes('greatsword') || name.includes('sword') || name.includes('dagger') || name.includes('rapier') || name.includes('scimitar')) return '/assets/icons/svg/attacks/greatsword.svg';
+  if (name.includes('unarmed') || name.includes('punch') || name.includes('fist')) return '/assets/icons/svg/attacks/unarmed_strike.svg';
+  if (name.includes('fire') || name.includes('breath') || name.includes('acid') || name.includes('lightning') || name.includes('poison')) {
+    if (name.includes('fire')) return '/assets/icons/svg/attacks/fire_breath.svg';
+    if (name.includes('acid')) return '/assets/icons/svg/attacks/acid_breath.svg';
+    if (name.includes('lightning')) return '/assets/icons/svg/attacks/lightning_breath.svg';
+    if (name.includes('poison')) return '/assets/icons/svg/attacks/poison_breath.svg';
+  }
+  if (name.includes('bow') || name.includes('arrow') || name.includes('bolt') || name.includes('shoot') || name.includes('ranged')) return '/assets/icons/svg/attacks/ranged_attack.svg';
+
+  return '/assets/icons/svg/attacks/melee.svg'; // fallback
+};
+
 export const useGameStore = create<GameState>((set, get) => ({
   currentNPC: null,
   emotion: 'Neutral',
@@ -215,7 +251,8 @@ export const useGameStore = create<GameState>((set, get) => ({
     grid: initializeGrid(32, 20),
     victoryXp: 500,
     activeConditions: {},
-    combatMapBackground: 'fay_forest.png'
+    combatMapBackground: 'fay_forest.png',
+    activeAttack: null
   },
 
   setCurrentNPC: (currentNPC) => set({ currentNPC }),
@@ -472,6 +509,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       setActiveCharacter(nextActor.id);
     }
 
+    addLog(`Turn begins: ${nextActor.name}`, nextActor.isPlayer || nextActor.isAlly ? 'success' : 'warning');
+
     set((state) => {
       const newConditions = { ...state.combatState.activeConditions };
       // Clear conditions for the actor starting their turn
@@ -628,13 +667,15 @@ export const useGameStore = create<GameState>((set, get) => ({
         id: c.id,
         name: c.name,
         value: Math.floor(Math.random() * 20) + 1 + (Math.floor(((c.stats?.dex || 10) - 10) / 2) || 0),
-        isPlayer: true
+        isPlayer: true,
+        isAlly: false
       })),
       ...combatState.monsters.map(m => ({
         id: m.id,
         name: m.name,
         value: Math.floor(Math.random() * 20) + 1 + (m.stats?.dex ? Math.floor((m.stats.dex - 10) / 2) : 0),
-        isPlayer: m.isAlly || false // Treat allies/summons as player-controlled in the turn order
+        isPlayer: m.isAlly || false, // Treat allies/summons as player-controlled in the turn order
+        isAlly: m.isAlly || false
       }))
     ].sort((a, b) => b.value - a.value);
 
@@ -648,6 +689,10 @@ export const useGameStore = create<GameState>((set, get) => ({
     if (firstActor && firstActor.isPlayer) {
       charStore.setActiveCharacter(firstActor.id);
       charStore.restoreActionEconomy(firstActor.id, false);
+    }
+
+    if (firstActor) {
+      addLog(`Encounter started! Round 1 - Turn begins: ${firstActor.name}`, firstActor.isPlayer || firstActor.isAlly ? 'success' : 'warning');
     }
 
     set((state) => ({
@@ -689,6 +734,28 @@ export const useGameStore = create<GameState>((set, get) => ({
     const targetY = target.id === 'player' || combatState.pcPositions?.[target.id]
       ? (combatState.pcPositions?.[target.id]?.y ?? combatState.playerPos.y)
       : target.y;
+
+    const svgPath = getAttackSvgPath(action.name || '');
+    set(state => ({
+      combatState: {
+        ...state.combatState,
+        activeAttack: {
+          attackerId: actor.id,
+          targetId: target.id,
+          targetX,
+          targetY,
+          svgPath
+        }
+      }
+    }));
+    setTimeout(() => {
+      set(state => ({
+        combatState: {
+          ...state.combatState,
+          activeAttack: null
+        }
+      }));
+    }, 1200);
 
     const dx = targetX - actorX;
     const dy = targetY - actorY;
@@ -906,3 +973,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   clearPreview: () => set({ activeCards: [] }),
 }));
+
+if (typeof window !== 'undefined') {
+  (window as any).useGameStore = useGameStore;
+}

@@ -215,6 +215,11 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
   const defendAction = allActions.find(a => a.id === 'defend');
   const spellActions = useMemo(() => allActions.filter(a => a.category === 'Spells'), [allActions]);
 
+  const hasNoActions = (activeChar?.actionEconomy?.actions?.current ?? 0) <= 0;
+  const hasNoBonusActions = (activeChar?.actionEconomy?.bonusActions?.current ?? 0) <= 0;
+  const hasNoMovement = (activeChar?.actionEconomy?.movement?.current ?? 0) <= 0;
+  const cannotCastSpells = hasNoActions && hasNoBonusActions;
+
   const handleActionClick = (action: ActionHudAction) => {
     setIsSpellsDropdownOpen(false);
     const isActive = targetingAction?.id === action.id;
@@ -410,14 +415,17 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
         {attackAction && (
           <div className="relative">
             <button
-              onClick={() => setIsAttacksDropdownOpen(!isAttacksDropdownOpen)}
+              onClick={() => !hasNoActions && setIsAttacksDropdownOpen(!isAttacksDropdownOpen)}
+              disabled={hasNoActions}
               className={cn(
-                "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow hover:scale-110",
-                isAttacksDropdownOpen || targetingAction?.id?.startsWith('attack-')
-                  ? "bg-dragon-red border-dragon-gold text-white"
-                  : "bg-stone-900 border-white/10 text-white hover:border-white/30"
+                "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow",
+                hasNoActions
+                  ? "bg-stone-900/50 border-white/5 text-white/30 cursor-not-allowed"
+                  : "hover:scale-110 " + (isAttacksDropdownOpen || targetingAction?.id?.startsWith('attack-')
+                      ? "bg-dragon-red border-dragon-gold text-white"
+                      : "bg-stone-900 border-white/10 text-white hover:border-white/30")
               )}
-              title="Attack with Weapons (1 Action)"
+              title={hasNoActions ? "No actions remaining!" : "Attack with Weapons (1 Action)"}
             >
               <GameIcon name="melee" size={16} />
             </button>
@@ -462,14 +470,17 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
         {/* Quick Move */}
         {moveAction && (
           <button
-            onClick={() => handleActionClick(moveAction)}
+            onClick={() => !hasNoMovement && handleActionClick(moveAction)}
+            disabled={hasNoMovement}
             className={cn(
-              "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow hover:scale-110",
-              targetingAction?.id === 'move'
-                ? "bg-blue-600 border-dragon-gold text-white"
-                : "bg-stone-900 border-white/10 text-white hover:border-white/30"
+              "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow",
+              hasNoMovement
+                ? "bg-stone-900/50 border-white/5 text-white/30 cursor-not-allowed"
+                : "hover:scale-110 " + (targetingAction?.id === 'move'
+                    ? "bg-blue-600 border-dragon-gold text-white"
+                    : "bg-stone-900 border-white/10 text-white hover:border-white/30")
             )}
-            title="Move (Movement)"
+            title={hasNoMovement ? "No movement remaining!" : "Move (Movement)"}
           >
             <GameIcon name="footsteps" size={16} />
           </button>
@@ -479,14 +490,17 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
         {spellActions.length > 0 && (
           <div className="relative" ref={dropdownRef}>
             <button
-              onClick={() => setIsSpellsDropdownOpen(!isSpellsDropdownOpen)}
+              onClick={() => !cannotCastSpells && setIsSpellsDropdownOpen(!isSpellsDropdownOpen)}
+              disabled={cannotCastSpells}
               className={cn(
-                "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow hover:scale-110",
-                isSpellsDropdownOpen || targetingAction?.category === 'Spells'
-                  ? "bg-purple-600 border-dragon-gold text-white"
-                  : "bg-stone-900 border-white/10 text-white hover:border-white/30"
+                "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow",
+                cannotCastSpells
+                  ? "bg-stone-900/50 border-white/5 text-white/30 cursor-not-allowed"
+                  : "hover:scale-110 " + (isSpellsDropdownOpen || targetingAction?.category === 'Spells'
+                      ? "bg-purple-600 border-dragon-gold text-white"
+                      : "bg-stone-900 border-white/10 text-white hover:border-white/30")
               )}
-              title="Known Spells"
+              title={cannotCastSpells ? "No Actions or Bonus Actions remaining!" : "Known Spells"}
             >
               <GameIcon name="spells" size={16} />
             </button>
@@ -503,21 +517,30 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
                   <div className="text-[8px] font-black uppercase text-dragon-gold tracking-widest px-2 py-1 border-b border-white/5 mb-1 text-center font-elan">
                     Spells
                   </div>
-                  {spellActions.map((spell) => (
-                    <button
-                      key={spell.id}
-                      onClick={() => handleActionClick(spell)}
-                      className={cn(
-                        "w-full px-2 py-1 text-left text-[10px] font-serif font-black uppercase tracking-wider rounded text-white/80 hover:text-white hover:bg-stone-900 transition-colors flex items-center justify-between",
-                        targetingAction?.id === spell.id && "text-dragon-gold bg-dragon-gold/10"
-                      )}
-                    >
-                      <span className="truncate">{spell.name}</span>
-                      {spell.data?.level !== undefined && (
-                        <span className="text-[8px] text-purple-400 font-bold">L{spell.data.level}</span>
-                      )}
-                    </button>
-                  ))}
+                  {spellActions.map((spell) => {
+                    const isSpellDisabled = spell.actionType === 'bonusActions' ? hasNoBonusActions : hasNoActions;
+                    return (
+                      <button
+                        key={spell.id}
+                        onClick={() => !isSpellDisabled && handleActionClick(spell)}
+                        disabled={isSpellDisabled}
+                        className={cn(
+                          "w-full px-2 py-1 text-left text-[10px] font-serif font-black uppercase tracking-wider rounded transition-colors flex items-center justify-between",
+                          isSpellDisabled
+                            ? "text-white/20 cursor-not-allowed hover:bg-transparent"
+                            : "text-white/80 hover:text-white hover:bg-stone-900",
+                          targetingAction?.id === spell.id && "text-dragon-gold bg-dragon-gold/10"
+                        )}
+                      >
+                        <span className="truncate">{spell.name}</span>
+                        {spell.data?.level !== undefined ? (
+                          <span className={cn("text-[8px] font-bold", isSpellDisabled ? "text-purple-400/30" : "text-purple-400")}>L{spell.data.level}</span>
+                        ) : (
+                          spell.actionType === 'bonusActions' && <span className="text-[6px] text-amber-500 font-bold">BON</span>
+                        )}
+                      </button>
+                    );
+                  })}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -527,9 +550,15 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
         {/* Quick Defend */}
         {defendAction && (
           <button
-            onClick={() => handleActionClick(defendAction)}
-            className="w-8 h-8 rounded-full flex items-center justify-center transition-all border bg-stone-900 border-white/10 text-white hover:border-white/30 shadow hover:scale-110"
-            title="Defend stance (+2 AC)"
+            onClick={() => !hasNoActions && handleActionClick(defendAction)}
+            disabled={hasNoActions}
+            className={cn(
+              "w-8 h-8 rounded-full flex items-center justify-center transition-all border shadow",
+              hasNoActions
+                ? "bg-stone-900/50 border-white/5 text-white/30 cursor-not-allowed"
+                : "hover:scale-110 bg-stone-900 border-white/10 text-white hover:border-white/30"
+            )}
+            title={hasNoActions ? "No actions remaining!" : "Defend stance (+2 AC)"}
           >
             <GameIcon name="shield" size={16} />
           </button>
