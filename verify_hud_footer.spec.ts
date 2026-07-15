@@ -6,9 +6,30 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
   // Wait for React / stores to be available on window
   await page.waitForFunction(() => (window as any).useGameStore !== undefined);
   
-  // Set up store states
+  // 1. Force start game first so that the engine's initial loads run
   await page.evaluate(() => {
-    // 1. Mock Character
+    const uiStore = (window as any).useUIStore;
+    if (uiStore) {
+      uiStore.setState({
+        isWorldPanelOpen: true,
+        isCharacterPanelOpen: true
+      });
+    }
+
+    const gameStore = (window as any).useGameStore;
+    if (gameStore) {
+      gameStore.setState({
+        isGameStarted: true
+      });
+    }
+  });
+
+  // 2. Wait for decrypting/loading to disappear
+  await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 30000 });
+  await page.waitForSelector('text=Decrypting Save Data...', { state: 'detached', timeout: 30000 });
+
+  // 3. Inject our mock character now that the initial load is complete
+  await page.evaluate(() => {
     const mockChar = {
       id: 'test-hero',
       name: 'Adran the Bold',
@@ -18,7 +39,7 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
       xp: 900,
       alignment: 'Neutral Good',
       background: 'Soldier',
-      stats: { str: 16, dex: 14, con: 15, int: 10, wis: 12, cha: 8 },
+      stats: { str: 10, dex: 14, con: 15, int: 10, wis: 12, cha: 8 },
       proficiencies: [],
       traits: [],
       features: [],
@@ -43,8 +64,7 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
       maxHp: 28,
       money: { cp: 12, sp: 8, ep: 0, gp: 150, pp: 3 }
     };
-    
-    // Set active character in character store
+
     const charStore = (window as any).useCharacterStore;
     if (charStore) {
       charStore.setState({
@@ -52,41 +72,24 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
         activeCharacterId: 'test-hero'
       });
     }
-
-    // Open sidebars so we see the alignment effect
-    const uiStore = (window as any).useUIStore;
-    if (uiStore) {
-      uiStore.setState({
-        isWorldPanelOpen: true,
-        isCharacterPanelOpen: true
-      });
-    }
-
-    // Start game
-    const gameStore = (window as any).useGameStore;
-    if (gameStore) {
-      gameStore.setState({
-        isGameStarted: true
-      });
-    }
   });
   
   // Wait for the HUDFooter to render with Active Character text
   const footerText = page.locator('text=Active Character: Adran the Bold');
   await expect(footerText).toBeVisible({ timeout: 15000 });
-  
-  // Assert presence of currency elements (GP, PP, CP, SP)
-  const gpText = page.locator('span:has-text("150")');
+
+  // Assert presence of currency elements (GP, PP, CP, SP) using specific titles
+  const gpText = page.locator('div[title="Gold: 150"] span');
   await expect(gpText).toBeVisible();
   
-  const ppText = page.locator('span:has-text("3")');
+  const ppText = page.locator('div[title="Platinum: 3"] span');
   await expect(ppText).toBeVisible();
 
   // Assert presence of weight loading information
   const loadInfo = page.locator('text=Load:');
   await expect(loadInfo).toBeVisible();
   
-  const weightText = page.locator('text=/\\d+(\\.\\d+)? \\/ 150 lbs/');
+  const weightText = page.locator('text=22.5 / 150 lbs');
   await expect(weightText).toBeVisible();
 
   // Take a high-quality verification screenshot
