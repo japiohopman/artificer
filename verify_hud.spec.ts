@@ -15,10 +15,10 @@ test('verify tactical hud and grid refactor', async ({ page }) => {
   await page.screenshot({ path: 'docs/screenshots/game_hud.png' });
   
   // Switch to tactical grid
-  await page.keyboard.press('KeyG');
+  await page.keyboard.press('Shift+KeyG');
   
   // Wait for combat grid canvas
-  await page.waitForSelector('canvas', { timeout: 10000 });
+  await page.waitForSelector('canvas:not(.dice-box-canvas)', { timeout: 10000 });
   
   // Take screenshot of tactical grid
   await page.screenshot({ path: 'docs/screenshots/tactical_view.png' });

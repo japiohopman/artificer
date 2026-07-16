@@ -4,6 +4,18 @@
 
 ◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
 Server running on http://localhost:3000
+7:18:46 AM [vite] (client) page reload src/store/useUIStore.ts
+7:18:46 AM [vite] (client) page reload server_log.txt
+7:18:49 AM [vite] (client) page reload src/store/useGameStore.ts
+7:18:49 AM [vite] (client) page reload server_log.txt
+1:54:24 PM [vite] (client) page reload src/store/useGameStore.ts
+1:54:24 PM [vite] (client) page reload server_log.txt
+3:31:07 AM [vite] (client) page reload verify_combat_grid.spec.ts
+3:31:07 AM [vite] (client) page reload server_log.txt
+3:31:10 AM [vite] (client) page reload verify_hud.spec.ts
+3:31:10 AM [vite] (client) page reload server_log.txt
+3:33:36 AM [vite] (client) page reload verify_hud.spec.ts
+3:33:36 AM [vite] (client) page reload server_log.txt
 7:34:53 AM [vite] (client) page reload src/services/storageService.ts
 7:34:53 AM [vite] (client) page reload server_log.txt
 10:52:40 AM [vite] (client) hmr update /src/components/character/CharacterCreator.tsx, /src/index.css
