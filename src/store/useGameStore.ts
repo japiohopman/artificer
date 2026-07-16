@@ -480,11 +480,13 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { characters, addXp } = useCharacterStore.getState();
 
     if (victory) {
-      addLog(`Victory! The party earns ${combatState.victoryXp} XP.`, 'success');
-      for (const char of characters) {
-        if (!char.isNpc) {
-          await addXp(char.id, combatState.victoryXp);
-        }
+      const activePcs = characters.filter(char => !char.isNpc);
+      const pcCount = activePcs.length || 1;
+      const dividedXp = Math.floor(combatState.victoryXp / pcCount);
+
+      addLog(`Victory! The party earns ${combatState.victoryXp} XP (divided as ${dividedXp} XP per character).`, 'success');
+      for (const char of activePcs) {
+        await addXp(char.id, dividedXp);
       }
     } else {
       addLog("The party has been defeated...", 'error');
