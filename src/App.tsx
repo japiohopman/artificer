@@ -11,6 +11,7 @@ import { useAtlasStore } from './store/useAtlasStore';
 import { useWorldStore } from './store/useWorldStore';
 import { useGameStore } from './store/useGameStore';
 import { useCharacterStore } from './store/useCharacterStore';
+import { useInventoryStore } from './store/useInventoryStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
@@ -70,7 +71,8 @@ export default function App() {
         return;
       }
 
-      if (e.shiftKey && e.key.toLowerCase() === 'd') {
+      // Alt+D: Toggle DevKit
+      if (e.altKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
         const { isDevKitOpen: currentDevKitOpen, setIsDevKitOpen: setDevKitOpen } = useUIStore.getState();
         const nextState = !currentDevKitOpen;
@@ -79,6 +81,7 @@ export default function App() {
         else playModalCloseSound();
       }
 
+      // Alt+J: Toggle Journal
       if (e.altKey && e.key.toLowerCase() === 'j') {
         e.preventDefault();
         const { isJournalOpen: currentJournalOpen, setIsJournalOpen: setJournalOpen } = useUIStore.getState();
@@ -88,15 +91,61 @@ export default function App() {
         else playModalCloseSound();
       }
 
-      if (e.key.toLowerCase() === 'g' && !e.ctrlKey && !e.altKey && !e.metaKey) {
+      // Alt+C: Toggle Chat expanded/collapsed state
+      if (e.altKey && e.key.toLowerCase() === 'c') {
         e.preventDefault();
-        const { isGridVisible, setIsGridVisible, currentView, setCurrentView } = useUIStore.getState();
-        if (e.shiftKey) {
-          // Shift+G: Toggle between World and Grid view
-          setCurrentView(currentView === 'grid' ? 'world' : 'grid');
+        const { chatExpanded, setChatExpanded } = useUIStore.getState();
+        setChatExpanded(!chatExpanded);
+      }
+
+      // Alt+G: Toggle Grid lines visibility
+      if (e.altKey && e.key.toLowerCase() === 'g') {
+        e.preventDefault();
+        const { isGridVisible, setIsGridVisible } = useUIStore.getState();
+        setIsGridVisible(!isGridVisible);
+      }
+
+      // Alt+M: Toggle Atlas / World Panel
+      if (e.altKey && e.key.toLowerCase() === 'm') {
+        e.preventDefault();
+        const { isWorldPanelOpen, setIsWorldPanelOpen } = useUIStore.getState();
+        setIsWorldPanelOpen(!isWorldPanelOpen);
+      }
+
+      // Alt+P: Toggle Profile/Stats menu
+      if (e.altKey && e.key.toLowerCase() === 'p') {
+        e.preventDefault();
+        const { isProfileMenuOpen, setIsProfileMenuOpen } = useUIStore.getState();
+        setIsProfileMenuOpen(!isProfileMenuOpen);
+      }
+
+      // Alt+L: Toggle Logistics tab / Character Panel
+      if (e.altKey && e.key.toLowerCase() === 'l') {
+        e.preventDefault();
+        const { isCharacterPanelOpen, setIsCharacterPanelOpen, activeCharacterTab, setActiveCharacterTab, setIsInventoryOpen } = useUIStore.getState() as any;
+        const { setIsInventoryOpen: setInvOpen } = useInventoryStore.getState();
+        if (isCharacterPanelOpen && activeCharacterTab === 'logistics') {
+          setIsCharacterPanelOpen(false);
+          setInvOpen(false);
         } else {
-          // G: Toggle Grid lines visibility
-          setIsGridVisible(!isGridVisible);
+          setActiveCharacterTab('logistics');
+          setIsCharacterPanelOpen(true);
+          setInvOpen(true);
+        }
+      }
+
+      // Alt+H: Toggle Hero / Party Panel
+      if (e.altKey && e.key.toLowerCase() === 'h') {
+        e.preventDefault();
+        const { isCharacterPanelOpen, setIsCharacterPanelOpen, activeCharacterTab, setActiveCharacterTab } = useUIStore.getState();
+        const { setIsInventoryOpen: setInvOpen } = useInventoryStore.getState();
+        if (isCharacterPanelOpen && activeCharacterTab !== 'logistics') {
+          setIsCharacterPanelOpen(false);
+          setInvOpen(false);
+        } else {
+          setActiveCharacterTab('party');
+          setIsCharacterPanelOpen(true);
+          setInvOpen(true);
         }
       }
     };

@@ -170,46 +170,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({ isCollapsed = false }) => 
                 </div>
               ) : (
                 <div className="flex flex-col h-full">
-                   {/* Map/Exploration Hub Extras */}
-                   <div className="flex items-center justify-between px-6 py-2 bg-dragon-red/5 border-b border-dragon-gold/10 relative">
-                      <div className="flex items-center gap-4">
-                        <div className="flex flex-col">
-                           <span className="text-[8px] font-black uppercase text-dragon-red/40 tracking-widest">Active_Domain</span>
-                           <span className="text-xs font-header font-black text-dragon-red uppercase tracking-widest">
-                             {currentLocation?.name || 'The Wilds'}
-                           </span>
-                        </div>
-                        <div className="h-8 w-px bg-dragon-gold/20" />
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={handleClearHistory}
-                          className="bg-parchment-200 hover:bg-parchment-300 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[8px] font-black uppercase text-dragon-red transition-all"
-                          title="Clear History"
-                        >
-                          Clear
-                        </button>
-                        <div className="relative group">
-                          <input
-                            type="text"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search Atlas..."
-                            className="bg-parchment-200 border-2 border-dragon-gold/20 rounded px-3 py-1 text-[10px] font-bold text-dragon-red placeholder:text-dragon-red/30 focus:border-dragon-gold outline-none w-48 transition-all"
-                          />
-                          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-dragon-red/40 flex items-center gap-1">
-                             {searchQuery && (
-                               <button onClick={() => setSearchQuery('')} className="hover:text-dragon-red transition-colors">
-                                 <GameIcon name="close" size={10} />
-                               </button>
-                             )}
-                             <GameIcon name="search" size={12} />
-                          </div>
-                        </div>
-                      </div>
-
-                   </div>
                    <div className="flex-1 overflow-hidden">
                      <ChatHistory history={history} />
                    </div>
