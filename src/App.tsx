@@ -105,15 +105,13 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const isCharacterCreatorOpen = useUIStore(state => state.isCharacterCreatorOpen);
-
   return (
     <div className="min-h-screen bg-black overflow-hidden relative">
       {!isGameStarted ? (
         <TitleScreen />
       ) : (
         <>
-          {!isCharacterCreatorOpen && <HUD />}
+          <HUD />
 
           {/* Global Overlays Layer */}
           <AnimatePresence>
