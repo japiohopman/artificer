@@ -36,6 +36,7 @@ export interface AtlasClass {
   }>;
   starting_equipment_options?: StartingEquipmentOption[];
   spellcasting?: any;
+  [key: string]: any;
 }
 
 export interface AtlasSpecies {

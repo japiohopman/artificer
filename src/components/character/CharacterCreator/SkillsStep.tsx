@@ -60,8 +60,6 @@ export const SkillsStep: React.FC<{
                 const name = typeof p === 'string' ? p : p.name || p.index || '';
                 // Since final proficiencies might have class skills, we only consider inherited ones
                 // by checking if they are not in the current class choices or choices.skills.
-                // But a safer way is to inspect what is actually in newChar before manual skills are chosen.
-                // Actually, let's look at bgData and newChar's racial traits to be 100% precise.
             });
         }
 
@@ -134,16 +132,26 @@ export const SkillsStep: React.FC<{
     const remainingPicks = Math.max(0, selectionLimit - selectionsMade);
 
     return (
-        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20">
-            <div className="space-y-1 border-b border-dragon-gold/20 pb-4">
-                <h2 className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Skill Training</h2>
-                <p className="text-[11px] text-parchment-600 font-medium max-w-xl">
-                    {remainingPicks > 0 ? (
-                        <span>Choose <span className="text-dragon-red font-bold">{remainingPicks}</span> more skills based on your path.</span>
-                    ) : (
-                        <span className="text-dragon-green font-bold">All skill choices selected. Continue to next step.</span>
-                    )}
-                </p>
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 p-4">
+            <div className="flex justify-between items-end border-b border-dragon-gold/20 pb-4">
+                <div className="space-y-2">
+                    <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Skill Training</h2>
+                    <p className="text-[11px] text-parchment-600 font-bold max-w-2xl uppercase tracking-widest leading-relaxed">
+                        Select your professional proficiencies to represent your expertise and training. Green items indicate your heritage, while others represent class recommendations.
+                    </p>
+                </div>
+                <div className="flex items-center gap-3 bg-dragon-gold/10 px-4 py-2 rounded-sm border border-dragon-gold/20 shadow-sm shrink-0">
+                    <GameIcon name="expertise" size={20} color="#B8860B" />
+                    <div className="flex flex-col">
+                        <span className="text-[9px] font-black text-dragon-gold uppercase leading-none">Proficiency Picks</span>
+                        <span className={cn(
+                            "text-[18px] font-black leading-none mt-1.5",
+                            remainingPicks > 0 ? "text-dragon-red animate-pulse" : "text-dragon-green"
+                        )}>
+                            {selectionsMade} / {selectionLimit}
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
