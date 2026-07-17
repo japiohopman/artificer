@@ -18,7 +18,6 @@ export const MonsterProfile: React.FC = () => {
     isMonsterProfileOpen, 
     setIsMonsterProfileOpen, 
     focusedItem: monster,
-    gameMode,
   } = useUIStore();
   const { rollDice3D } = useGameStore();
 
@@ -47,9 +46,7 @@ export const MonsterProfile: React.FC = () => {
           className="flex items-center gap-3 px-4 py-2 bg-dragon-red/10 hover:bg-dragon-red text-dragon-red hover:text-white rounded border border-dragon-red/20 transition-all group"
         >
           <GameIcon name="arrow_left" size={20} color="currentColor" />
-          <span className="text-xs font-black uppercase tracking-widest">
-            {gameMode === 'combat' ? 'Return to Combat' : 'Return to Bestiary'}
-          </span>
+          <span className="text-xs font-black uppercase tracking-widest">Return to Bestiary</span>
         </button>
 
         <div className="flex items-center gap-3 px-6 py-2 bg-dragon-red text-white rounded border border-dragon-gold shadow-lg">

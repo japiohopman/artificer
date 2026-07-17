@@ -36,19 +36,17 @@ export const Nav: React.FC = () => {
     setIsInventoryOpen
   } = useInventoryStore();
 
-  const chatExpanded = useUIStore(state => state.chatExpanded);
-  const setChatExpanded = useUIStore(state => state.setChatExpanded);
-
   const leftActions: NavAction[] = [
     {
-      id: 'chat-toggle',
-      icon: 'chat_interface',
-      label: 'Chat',
+      id: 'grid-view',
+      icon: 'panel',
+      label: 'Tactical',
       onClick: () => {
-        setChatExpanded(!chatExpanded);
+        const { currentView, setCurrentView } = useUIStore.getState();
+        setCurrentView(currentView === 'grid' ? 'world' : 'grid');
       },
-      isActive: chatExpanded,
-      shortcut: 'Alt+C'
+      isActive: useUIStore.getState().currentView === 'grid',
+      shortcut: 'Shift+G'
     },
     {
       id: 'world-panel',
@@ -56,7 +54,7 @@ export const Nav: React.FC = () => {
       label: 'Atlas',
       onClick: () => setIsWorldPanelOpen(!isWorldPanelOpen),
       isActive: isWorldPanelOpen,
-      shortcut: 'Alt+M'
+      shortcut: 'M'
     },
     {
       id: 'journal-panel',
@@ -75,7 +73,7 @@ export const Nav: React.FC = () => {
       label: 'Stats',
       onClick: () => setIsProfileMenuOpen(!isProfileMenuOpen),
       isActive: isProfileMenuOpen,
-      shortcut: 'Alt+P'
+      shortcut: 'P'
     },
     {
       id: 'logistics-panel',
@@ -92,7 +90,7 @@ export const Nav: React.FC = () => {
         }
       },
       isActive: isCharacterPanelOpen && activeCharacterTab === 'logistics',
-      shortcut: 'Alt+L'
+      shortcut: 'L'
     },
     {
       id: 'character-panel',
@@ -109,7 +107,7 @@ export const Nav: React.FC = () => {
         }
       },
       isActive: isCharacterPanelOpen && activeCharacterTab !== 'logistics',
-      shortcut: 'Alt+H'
+      shortcut: 'C'
     }
   ];
 
@@ -136,6 +134,11 @@ export const Nav: React.FC = () => {
               )}
             >
               <GameIcon name={action.icon} size={18} />
+              {action.shortcut && (
+                <span className="absolute -top-1 -right-1 bg-dragon-darkRed text-[7px] px-1 rounded border border-dragon-gold text-white/80">
+                  {action.shortcut}
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -193,6 +196,11 @@ export const Nav: React.FC = () => {
               )}
             >
               <GameIcon name={action.icon} size={18} />
+              {action.shortcut && (
+                <span className="absolute -top-1 -left-1 bg-dragon-darkRed text-[7px] px-1 rounded border border-dragon-gold text-white/80">
+                  {action.shortcut}
+                </span>
+              )}
             </button>
           ))}
         </div>

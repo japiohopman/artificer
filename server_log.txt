@@ -16,38 +16,11 @@ Server running on http://localhost:3000
 3:31:10 AM [vite] (client) page reload server_log.txt
 3:33:36 AM [vite] (client) page reload verify_hud.spec.ts
 3:33:36 AM [vite] (client) page reload server_log.txt
-11:25:23 AM [vite] (client) hmr update /src/components/character/CharacterPanel.tsx, /src/index.css
-11:25:23 AM [vite] (client) page reload server_log.txt
-11:26:27 AM [vite] (client) hmr update /src/components/hud/NotificationWindow.tsx, /src/index.css
-11:26:27 AM [vite] (client) page reload server_log.txt
-11:39:13 AM [vite] (client) page reload src/store/useGameStore.ts
-11:39:13 AM [vite] (client) page reload server_log.txt
-11:39:57 AM [vite] (client) hmr update /src/components/combat/CombatGrid.tsx, /src/index.css
-11:39:57 AM [vite] (client) page reload server_log.txt
-11:42:17 AM [vite] (client) hmr update /src/components/hud/WorldPanel.tsx, /src/index.css
-11:42:17 AM [vite] (client) page reload server_log.txt
-11:43:54 AM [vite] (client) hmr update /src/components/character/MonsterProfile.tsx, /src/index.css
-11:43:54 AM [vite] (client) page reload server_log.txt
-11:48:33 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
-11:48:33 AM [vite] (client) page reload server_log.txt
-11:53:30 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
-11:53:30 AM [vite] (client) page reload server_log.txt
-12:11:20 PM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-12:11:20 PM [vite] (client) page reload server_log.txt
-12:13:18 PM [vite] (client) page reload tools/verify_map_overlay.spec.ts
-12:13:18 PM [vite] (client) page reload server_log.txt
-◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
-Server running on http://localhost:3000
-3:36:17 AM [vite] (client) hmr update /src/components/hud/HUD.tsx, /src/index.css
-3:36:17 AM [vite] (client) page reload server_log.txt
-3:36:49 AM [vite] (client) hmr update /src/components/hud/chat/ChatPanel.tsx, /src/index.css
-3:36:49 AM [vite] (client) page reload server_log.txt
-3:37:07 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
-3:37:07 AM [vite] (client) page reload server_log.txt
-9:02:37 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
-9:02:37 AM [vite] (client) page reload server_log.txt
-9:02:37 AM [vite] (client) page reload server_log.txt
-9:03:03 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
-9:03:03 AM [vite] (client) page reload server_log.txt
-9:03:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
-9:03:53 AM [vite] (client) page reload server_log.txt
+10:12:42 AM [vite] (client) page reload verify_hud_footer.spec.ts
+10:12:42 AM [vite] (client) page reload server_log.txt
+10:21:24 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
+10:21:24 AM [vite] (client) page reload server_log.txt
+10:22:39 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
+10:22:39 AM [vite] (client) page reload server_log.txt
+10:24:14 AM [vite] (client) page reload verify_hud_footer.spec.ts
+10:24:14 AM [vite] (client) page reload server_log.txt

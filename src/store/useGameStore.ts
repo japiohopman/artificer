@@ -35,7 +35,6 @@ export interface TacticalCell {
 
 export interface CombatMonster {
   id: string;
-  index?: string;
   name: string;
   type: string;
   hp: number;
@@ -411,7 +410,6 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     const newMonster: CombatMonster = {
       id,
-      index: monster.index || monster.id || monster.name?.toLowerCase().replace(/\s+/g, '-'),
       name: monster.name,
       type: monster.type || 'monster',
       hp: monster.hit_points || 10,
@@ -447,7 +445,6 @@ export const useGameStore = create<GameState>((set, get) => ({
     const { atlasService } = await import('../services/atlasService');
     const monsterData = await atlasService.loadEnemy(index);
     if (monsterData) {
-      monsterData.index = index;
       get().addMonsterToCombat(monsterData, x, y);
       get().addLog(`A ${monsterData.name} appears!`, 'warning');
     }

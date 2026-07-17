@@ -16,16 +16,16 @@ test('verify regional overlay on world map', async ({ page }) => {
   });
 
   await page.waitForSelector('.leaflet-container', { state: 'visible' });
-  await page.waitForTimeout(2000);
 
-  // Force the zoom level to 3 after Leaflet has initialized
+  // programmatically set zoom to 3 on the leaflet map instance to expose regions
+  await page.waitForFunction(() => (window as any).leafletMap !== undefined);
   await page.evaluate(() => {
-    const worldStore = (window as any).useWorldStore;
-    if (worldStore) {
-      worldStore.getState().setMapZoom(3);
+    if ((window as any).leafletMap) {
+      (window as any).leafletMap.setZoom(3);
     }
   });
 
+  // Wait for Zoom level to propagate and sync
   await page.waitForTimeout(2000);
 
   // Get zoom level from global store
@@ -33,7 +33,7 @@ test('verify regional overlay on world map', async ({ page }) => {
     const store = (window as any).useWorldStore;
     return store ? store.getState().mapZoom : null;
   });
-  console.log(`Zoom level after forcing setMapZoom(3): ${zoomLevel}`);
+  console.log(`Zoom level after Zoom Out evaluation: ${zoomLevel}`);
 
   // Take screenshot before click
   await page.screenshot({ path: '/home/jules/verification/map_before_click.png' });

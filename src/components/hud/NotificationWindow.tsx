@@ -22,22 +22,8 @@ export const NotificationWindow: React.FC = () => {
   
   const { playerPos, monsters, initiativeOrder, activeTurnIndex } = combatState;
 
-  const [visibleLog, setVisibleLog] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    if (logs.length > 0) {
-      const latestLog = logs[0];
-      setVisibleLog(latestLog);
-
-      const timer = setTimeout(() => {
-        setVisibleLog(null);
-      }, 2000);
-
-      return () => clearTimeout(timer);
-    } else {
-      setVisibleLog(null);
-    }
-  }, [logs]);
+  // Always show the newest log to keep the window active as requested
+  const recentLogs = logs.length > 0 ? logs[0] : null;
 
   const categoryIcon = currentLocation ? CategoryIcons[currentLocation.category]?.icon : null;
   const categoryColor = currentLocation ? CategoryIcons[currentLocation.category]?.color : 'currentColor';
@@ -162,9 +148,9 @@ export const NotificationWindow: React.FC = () => {
       {/* Bottom Section: Message Logs */}
       <div className="h-12 px-6 flex items-center overflow-hidden bg-black/20">
          <AnimatePresence mode="wait">
-            {visibleLog && (
+            {recentLogs && (
               <motion.div
-                key={visibleLog.id}
+                key={recentLogs.id}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -172,21 +158,21 @@ export const NotificationWindow: React.FC = () => {
               >
                 <div className={cn(
                   "shrink-0 p-1.5 rounded bg-white/5",
-                  visibleLog.type === 'error' ? 'text-red-400' :
-                  visibleLog.type === 'success' ? 'text-emerald-400' :
-                  visibleLog.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
+                  recentLogs.type === 'error' ? 'text-red-400' :
+                  recentLogs.type === 'success' ? 'text-emerald-400' :
+                  recentLogs.type === 'warning' ? 'text-amber-400' : 'text-cyan-400'
                 )}>
-                  {visibleLog.type === 'error' ? <GameIcon name="shield_alert" size={14} /> :
-                   visibleLog.type === 'success' ? <GameIcon name="magic_effect" size={14} /> :
-                   visibleLog.type === 'warning' ? <GameIcon name="bell" size={14} /> : <GameIcon name="info" size={14} />}
+                  {recentLogs.type === 'error' ? <GameIcon name="shield_alert" size={14} /> :
+                   recentLogs.type === 'success' ? <GameIcon name="magic_effect" size={14} /> :
+                   recentLogs.type === 'warning' ? <GameIcon name="bell" size={14} /> : <GameIcon name="info" size={14} />}
                 </div>
                 
                 <div className="text-sm font-mono uppercase tracking-widest text-white/90 font-medium leading-tight pt-0.5 drop-shadow-sm">
-                  <DiceText>{visibleLog.message}</DiceText>
+                  <DiceText>{recentLogs.message}</DiceText>
                 </div>
               </motion.div>
             )}
-            {!visibleLog && (
+            {!recentLogs && (
               <div className="text-[10px] font-mono uppercase text-white/20 tracking-[0.3em]">System_Idle // No active notifications</div>
             )}
           </AnimatePresence>
