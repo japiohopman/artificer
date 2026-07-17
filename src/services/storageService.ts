@@ -369,28 +369,9 @@ export async function fetchMaterialData(index: string): Promise<any> {
 
 export async function fetchEquipmentData(index: string): Promise<any> {
   if (equipmentCache[index]) return equipmentCache[index];
-  let resolvedPath: string | null = null;
-
-  // Try resolving path from local index first
+  // Local first
   try {
-    const indexRes = await fetch('/assets/atlas/equipment/index.json');
-    if (indexRes.ok) {
-      const equipIndex = await indexRes.json();
-      const entry = equipIndex.find((s: any) => s.index === index);
-      if (entry && entry.json_path) {
-        resolvedPath = entry.json_path;
-      }
-    }
-  } catch (e) {}
-
-  // Fallback to legacy path if still unresolved
-  if (!resolvedPath) {
-    resolvedPath = `/assets/atlas/equipment/json/${index}.json`;
-  }
-
-  // Fetch local equipment/magic item data
-  try {
-    const res = await fetch(resolvedPath);
+    const res = await fetch(`/assets/atlas/equipment/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
       const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index) };
@@ -399,9 +380,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     }
   } catch (e) {}
 
-  // Construct GitHub raw path
-  const subpath = resolvedPath.replace(/^\/?assets\/atlas\/equipment\/json\//, '').replace(/^\/?public\/assets\/atlas\/equipment\/json\//, '');
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${subpath}?t=${Date.now()}`;
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${index}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -1473,7 +1452,7 @@ export async function fetchClassLevels(classIndex: string): Promise<any[]> {
 }
 
 export async function fetchFeatureData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/json/${index}.json?t=${Date.now()}`;
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/${index}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);

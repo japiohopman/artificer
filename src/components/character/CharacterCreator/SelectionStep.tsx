@@ -21,24 +21,6 @@ const STAT_ICONS: Record<string, any> = {
     cha: 'cha'
 };
 
-const ALIGNMENT_GRID = [
-  [
-    { index: 'lawful_good', name: 'Lawful Good', short: 'LG' },
-    { index: 'neutral_good', name: 'Neutral Good', short: 'NG' },
-    { index: 'chaotic_good', name: 'Chaotic Good', short: 'CG' }
-  ],
-  [
-    { index: 'lawful_neutral', name: 'Lawful Neutral', short: 'LN' },
-    { index: 'true_neutral', name: 'True Neutral', short: 'TN' },
-    { index: 'chaotic_neutral', name: 'Chaotic Neutral', short: 'CN' }
-  ],
-  [
-    { index: 'lawful_evil', name: 'Lawful Evil', short: 'LE' },
-    { index: 'neutral_evil', name: 'Neutral Evil', short: 'NE' },
-    { index: 'chaotic_evil', name: 'Chaotic Evil', short: 'CE' }
-  ]
-];
-
 export const SelectionStep: React.FC<{
     title: string;
     desc: string;
@@ -124,114 +106,48 @@ export const SelectionStep: React.FC<{
           {/* List - Grid for all, or sidebar for specific */}
           <div className={cn(
               "overflow-y-auto custom-scrollbar content-start py-2",
-              category === 'backgrounds' ? "w-full md:w-80 grid grid-cols-2 gap-2 pr-2" : 
-              category === 'alignments' ? "w-full md:w-80 pr-2 border-r border-dragon-gold/10" :
-              "w-48 grid grid-cols-1 gap-1 pr-1 border-r border-dragon-gold/10"
+              category === 'backgrounds' ? "w-full md:w-80 grid grid-cols-2 gap-2 pr-2" : "w-48 grid grid-cols-1 gap-1 pr-1 border-r border-dragon-gold/10"
           )}>
-              {category === 'alignments' ? (
-                <div className="flex flex-col space-y-4">
-                  <div className="text-center py-2 border-b border-dragon-gold/10">
-                    <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-[0.2em]">Ethical Alignment Grid</span>
-                    <p className="text-[8px] text-parchment-600 font-bold uppercase tracking-widest mt-1">3x3 moral & social compass</p>
-                  </div>
+              {items.map(item => {
+                const isSelected = selected === item.index;
 
-                  <div className="grid grid-cols-4 gap-2 items-center bg-white/20 p-3 rounded-sm border border-dragon-gold/15 shadow-inner">
-                    {/* Header Row */}
-                    <div />
-                    <div className="text-center text-[8px] font-black text-dragon-darkRed/60 uppercase tracking-wider">Lawful</div>
-                    <div className="text-center text-[8px] font-black text-dragon-darkRed/60 uppercase tracking-wider">Neutral</div>
-                    <div className="text-center text-[8px] font-black text-dragon-darkRed/60 uppercase tracking-wider">Chaotic</div>
+                return (
+                    <button
+                        key={item.index}
+                        onClick={() => onSelect(item.index)}
+                        title={item.name}
+                        className={cn(
+                            "flex items-center rounded-sm border transition-all relative shrink-0 overflow-hidden",
+                            category === 'backgrounds' ? "w-full h-12 px-3 justify-start bg-white/40" : "w-full h-10 px-3 justify-start",
+                            isSelected
+                                ? "bg-dragon-red text-white border-dragon-red shadow-lg scale-102 z-10"
+                                : "bg-white/10 border-dragon-red/5 hover:border-dragon-red/20 text-parchment-950 hover:bg-white/40"
+                        )}
+                    >
+                         {/* Selection Highlight */}
+                         {isSelected && (
+                            <motion.div
+                                layoutId="selection-highlight"
+                                className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none"
+                            />
+                        )}
 
-                    {/* Rows */}
-                    {['Good', 'Neutral', 'Evil'].map((rowLabel, rowIndex) => {
-                      const alignmentRow = ALIGNMENT_GRID[rowIndex];
-                      return (
-                        <React.Fragment key={rowLabel}>
-                          {/* Row Header */}
-                          <div className="text-right pr-1 text-[8px] font-black text-dragon-darkRed/60 uppercase tracking-wider">{rowLabel}</div>
-                          
-                          {/* Grid cells */}
-                          {alignmentRow.map((cell) => {
-                            const isSelected = selected === cell.index;
-                            return (
-                              <button
-                                key={cell.index}
-                                onClick={() => onSelect(cell.index)}
-                                className={cn(
-                                  "aspect-square flex flex-col items-center justify-center rounded-sm border transition-all relative overflow-hidden group/cell",
-                                  isSelected 
-                                    ? "bg-dragon-red text-white border-dragon-red shadow-md scale-102 z-10" 
-                                    : "bg-white/30 border-dragon-red/5 hover:border-dragon-red/20 text-parchment-950 hover:bg-white/60"
-                                )}
-                              >
-                                {isSelected && (
-                                  <motion.div 
-                                    layoutId="alignment-highlight"
-                                    className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" 
-                                  />
-                                )}
-                                <span className={cn(
-                                  "text-sm font-bold font-bodoni leading-none",
-                                  isSelected ? "text-dragon-gold" : "text-dragon-darkRed"
-                                )}>
-                                  {cell.short}
-                                </span>
-                                <span className={cn(
-                                  "text-[7px] font-black uppercase tracking-tighter text-center mt-1.5 truncate w-full px-0.5",
-                                  isSelected ? "text-white/80" : "text-parchment-600"
-                                )}>
-                                  {cell.name.split(' ')[0]}
-                                </span>
-                              </button>
-                            );
-                          })}
-                        </React.Fragment>
-                      );
-                    })}
-                  </div>
-                </div>
-              ) : (
-                items.map(item => {
-                  const isSelected = selected === item.index;
-                  
-                  return (
-                      <button
-                          key={item.index}
-                          onClick={() => onSelect(item.index)}
-                          title={item.name}
-                          className={cn(
-                              "flex items-center rounded-sm border transition-all relative shrink-0 overflow-hidden",
-                              category === 'backgrounds' ? "w-full h-12 px-3 justify-start bg-white/40" : "w-full h-10 px-3 justify-start",
-                              isSelected 
-                                  ? "bg-dragon-red text-white border-dragon-red shadow-lg scale-102 z-10" 
-                                  : "bg-white/10 border-dragon-red/5 hover:border-dragon-red/20 text-parchment-950 hover:bg-white/40"
-                          )}
-                      >
-                           {/* Selection Highlight */}
-                           {isSelected && (
-                              <motion.div 
-                                  layoutId="selection-highlight"
-                                  className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" 
-                              />
-                          )}
+                        <div className="flex flex-col items-start overflow-hidden w-full">
+                            <span className={cn(
+                                "text-[9px] font-black uppercase tracking-widest truncate w-full",
+                                isSelected ? "text-white" : "text-dragon-darkRed"
+                            )}>
+                                {item.name}
+                            </span>
+                            {isSelected && <span className="text-[7px] text-white/60 font-medium uppercase tracking-tighter">Selected</span>}
+                        </div>
 
-                          <div className="flex flex-col items-start overflow-hidden w-full">
-                              <span className={cn(
-                                  "text-[9px] font-black uppercase tracking-widest truncate w-full",
-                                  isSelected ? "text-white" : "text-dragon-darkRed"
-                              )}>
-                                  {item.name}
-                              </span>
-                              {isSelected && <span className="text-[7px] text-white/60 font-medium uppercase tracking-tighter">Selected</span>}
-                          </div>
-                          
-                          {isSelected && (
-                              <div className="absolute top-0 right-0 w-2 h-2 bg-white rounded-full translate-x-1/3 -translate-y-1/3 shadow-sm border border-dragon-red" />
-                          )}
-                      </button>
-                  );
-                })
-              )}
+                        {isSelected && (
+                            <div className="absolute top-0 right-0 w-2 h-2 bg-white rounded-full translate-x-1/3 -translate-y-1/3 shadow-sm border border-dragon-red" />
+                        )}
+                    </button>
+                );
+              })}
           </div>
  
           {/* Details Panel */}

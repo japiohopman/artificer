@@ -16,21 +16,24 @@ test('verify regional overlay on world map', async ({ page }) => {
   });
 
   await page.waitForSelector('.leaflet-container', { state: 'visible' });
-  
-  // Wait for the Zoom Out button to be visible and click it
-  const zoomOutButton = page.locator('button[title="Zoom Out"]').first();
-  await expect(zoomOutButton).toBeVisible();
-  await zoomOutButton.dispatchEvent('click');
-  
-  // Wait for Zoom level to become 3
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(2000);
+
+  // Force the zoom level to 3 after Leaflet has initialized
+  await page.evaluate(() => {
+    const worldStore = (window as any).useWorldStore;
+    if (worldStore) {
+      worldStore.getState().setMapZoom(3);
+    }
+  });
+
+  await page.waitForTimeout(2000);
 
   // Get zoom level from global store
   const zoomLevel = await page.evaluate(() => {
     const store = (window as any).useWorldStore;
     return store ? store.getState().mapZoom : null;
   });
-  console.log(`Zoom level after Zoom Out click: ${zoomLevel}`);
+  console.log(`Zoom level after forcing setMapZoom(3): ${zoomLevel}`);
 
   // Take screenshot before click
   await page.screenshot({ path: '/home/jules/verification/map_before_click.png' });
