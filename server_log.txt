@@ -36,3 +36,18 @@ Server running on http://localhost:3000
 12:11:20 PM [vite] (client) page reload server_log.txt
 12:13:18 PM [vite] (client) page reload tools/verify_map_overlay.spec.ts
 12:13:18 PM [vite] (client) page reload server_log.txt
+◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+Server running on http://localhost:3000
+3:36:17 AM [vite] (client) hmr update /src/components/hud/HUD.tsx, /src/index.css
+3:36:17 AM [vite] (client) page reload server_log.txt
+3:36:49 AM [vite] (client) hmr update /src/components/hud/chat/ChatPanel.tsx, /src/index.css
+3:36:49 AM [vite] (client) page reload server_log.txt
+3:37:07 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
+3:37:07 AM [vite] (client) page reload server_log.txt
+9:02:37 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
+9:02:37 AM [vite] (client) page reload server_log.txt
+9:02:37 AM [vite] (client) page reload server_log.txt
+9:03:03 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+9:03:03 AM [vite] (client) page reload server_log.txt
+9:03:53 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+9:03:53 AM [vite] (client) page reload server_log.txt
