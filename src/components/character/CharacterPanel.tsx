@@ -13,21 +13,6 @@ import { cn } from '../../lib/utils';
 
 type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
 
-const XP_TABLE = [
-  0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000,
-  85000, 100000, 120000, 140000, 165000, 195000, 225000, 265000, 305000, 355000
-];
-
-function getXPProgressPercentage(xp: number, level: number): number {
-  const currentLvl = level || 1;
-  if (currentLvl >= 20) return 100;
-  const startXp = XP_TABLE[Math.min(Math.max(currentLvl, 0), 20)] || 0;
-  const endXp = XP_TABLE[Math.min(Math.max(currentLvl + 1, 0), 20)] || 0;
-  if (endXp <= startXp) return 100;
-  const pct = ((xp - startXp) / (endXp - startXp)) * 100;
-  return Math.min(Math.max(pct, 0), 100);
-}
-
 export const CharacterPanel: React.FC = () => {
   const { 
     focusedItem,
@@ -241,18 +226,9 @@ export const CharacterPanel: React.FC = () => {
                     >
                       {/* Avatar and Basic Header */}
                       <div className="flex items-center gap-3 w-full">
-                        <div className="w-10 aspect-[2/3] rounded-lg border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0 animate-fade-in">
-                          {char.imageUrl || char.id ? (
-                            <img
-                              src={char.imageUrl || `/data/character_save/images/${char.id}/${char.id}_portrait.webp`}
-                              alt={char.name}
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                if (char.avatarUrl) {
-                                  e.currentTarget.src = char.avatarUrl;
-                                }
-                              }}
-                            />
+                        <div className="w-10 h-10 rounded-lg border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0">
+                          {char.avatarUrl ? (
+                            <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
                               <Users size={16} />
@@ -267,22 +243,14 @@ export const CharacterPanel: React.FC = () => {
                             </span>
                           </div>
                           {/* HP Bar */}
-                          <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10 mt-1" title={`HP: ${char.hp}/${char.maxHp}`}>
+                          <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10 mt-1">
                             <div
                               className="h-full bg-dragon-red"
                               style={{ width: `${(char.hp / char.maxHp) * 100}%` }}
                             />
                           </div>
-                          {/* XP Bar */}
-                          <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10 mt-1" title={`XP: ${char.xp || 0}`}>
-                            <div
-                              className="h-full bg-purple-600"
-                              style={{ width: `${getXPProgressPercentage(char.xp || 0, char.level || 1)}%` }}
-                            />
-                          </div>
                           <div className="flex justify-between mt-1 items-center">
                             <span className="text-[7px] font-black text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
-                            <span className="text-[7px] font-black text-purple-600/80 uppercase animate-pulse">XP: {char.xp || 0}</span>
                             {activeCharacterId === char.id && (
                               <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>
                             )}

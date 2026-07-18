@@ -237,6 +237,12 @@ const MapInvalidator = () => {
   const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
 
   React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).leafletMap = map;
+    }
+  }, [map]);
+
+  React.useEffect(() => {
     // During sidebar animation (approx 350-500ms), invalidate multiple times for smoothness
     const interval = setInterval(() => {
       map.invalidateSize({ animate: false });
@@ -273,7 +279,6 @@ export const WorldMap: React.FC = () => {
   const destination = useWorldStore(state => state.destination);
   const getPartySpeedMph = useWorldStore(state => state.getPartySpeedMph);
   const setMapZoom = useWorldStore(state => state.setMapZoom);
-  const mapZoom = useWorldStore(state => state.mapZoom);
   const mapMode = useWorldStore(state => state.mapMode);
   
   const [hoveredRegion, setHoveredRegion] = React.useState<string | null>(null);
@@ -334,17 +339,10 @@ export const WorldMap: React.FC = () => {
   const [currentZoom, setCurrentZoom] = React.useState(initialZoom);
   const currentMiles = React.useMemo(() => 4000 / Math.pow(2, currentZoom - 3), [currentZoom]);
 
-  // Sync global zoom to store
+  // Sync global zoom
   React.useEffect(() => {
     setMapZoom(currentZoom);
   }, [currentZoom, setMapZoom]);
-
-  // Sync store zoom back to map instance reactively
-  React.useEffect(() => {
-    if (mapRef.current && mapRef.current.getZoom() !== mapZoom) {
-      mapRef.current.setZoom(mapZoom);
-    }
-  }, [mapZoom]);
 
   // Dynamically fetch and cache individual discovered locations
   React.useEffect(() => {

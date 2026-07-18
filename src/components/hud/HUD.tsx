@@ -80,7 +80,7 @@ export const HUD: React.FC = () => {
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-l-0"
         >
-          <div className="w-80 h-full flex flex-col">
+          <div className="w-80 h-full flex flex-col parchment-edge-mask">
             <WorldPanel />
           </div>
         </motion.aside>
@@ -97,7 +97,7 @@ export const HUD: React.FC = () => {
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-r-0"
         >
-          <div className="w-80 h-full flex flex-col overflow-hidden">
+          <div className="w-80 h-full flex flex-col overflow-hidden parchment-edge-mask">
              <CharacterPanel />
           </div>
         </motion.aside>

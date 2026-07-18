@@ -8,25 +8,14 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
   
   // 1. Force start game first so that the engine's initial loads run
   await page.evaluate(() => {
-    const uiStore = (window as any).useUIStore;
-    if (uiStore) {
-      uiStore.setState({
-        isWorldPanelOpen: true,
-        isCharacterPanelOpen: true
-      });
-    }
-
     const gameStore = (window as any).useGameStore;
     if (gameStore) {
-      gameStore.setState({
-        isGameStarted: true
-      });
+      gameStore.getState().setIsGameStarted(true);
     }
   });
 
-  // 2. Wait for decrypting/loading to disappear
-  await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 30000 });
-  await page.waitForSelector('text=Decrypting Save Data...', { state: 'detached', timeout: 30000 });
+  // 2. Wait for the game panel / HUD to be fully loaded and visible
+  await page.waitForSelector('.world-panel', { timeout: 30000 });
 
   // 3. Inject our mock character now that the initial load is complete
   await page.evaluate(() => {
@@ -70,6 +59,14 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
       charStore.setState({
         characters: [mockChar],
         activeCharacterId: 'test-hero'
+      });
+    }
+
+    const uiStore = (window as any).useUIStore;
+    if (uiStore) {
+      uiStore.setState({
+        isWorldPanelOpen: false,
+        isCharacterPanelOpen: false
       });
     }
   });

@@ -861,8 +861,7 @@ const activeTokenCoordinates = draggedMonsterId
                         }
                       } else {
                         const { fetchMonsterData } = await import('../../services/storageService');
-                        const lookupKey = monster.index || monster.name.toLowerCase().replace(/\s+/g, '-').replace(/-\d+$/, '');
-                        const fullData = await fetchMonsterData(lookupKey);
+                        const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
                         setFocusedItem(fullData || monster);
                         setIsMonsterProfileOpen(true);
                       }
