@@ -148,38 +148,61 @@ export const WorldPanel: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 gap-3">
-              {combatState.monsters.map((monster) => (
-                <button
-                  key={monster.id}
-                  onClick={async () => {
-                    const { fetchMonsterData } = await import('../../services/storageService');
-                    const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
-                    setFocusedItem(fullData || monster);
-                    setIsMonsterProfileOpen(true);
-                  }}
-                  className="group flex items-center gap-4 p-3 bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98]"
-                >
-                  <div className="w-10 h-10 rounded border-2 border-dragon-red/20 overflow-hidden bg-white flex items-center justify-center shrink-0 group-hover:border-dragon-red transition-colors">
-                    {monster.imageUrl ? (
-                      <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
-                    ) : (
-                      <GameIcon name="identity" size={20} color="#8B0000" />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-center mb-1">
-                      <p className="text-[11px] font-black text-parchment-900 uppercase tracking-tight truncate group-hover:text-dragon-darkRed transition-colors">{monster.name}</p>
-                      <span className="text-[9px] font-bold text-dragon-red/60 uppercase">{monster.hp}/{monster.maxHp} HP</span>
-                    </div>
-                    <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden">
+              {combatState.monsters.map((monster) => {
+                const hpPercent = (monster.hp / monster.maxHp) * 100;
+                // Green, turning red when under 30%
+                const barColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
+                // Only show CR, HP, AC, Speed, and Type. Avoid action/lore details.
+                const speedText = monster.speed ? (typeof monster.speed === 'object' ? ((monster.speed as any).walk || '30 ft') : `${(monster.speed as any) * 5} ft`) : '30 ft';
+
+                return (
+                  <button
+                    key={monster.id}
+                    onClick={async () => {
+                      const { fetchMonsterData } = await import('../../services/storageService');
+                      // Strip counter suffixes like ' 1' or ' -1' to fetch correct base template
+                      const baseName = monster.type || monster.name.replace(/\s\d+$/, '').replace(/-\d+$/, '').trim().toLowerCase().replace(/\s+/g, '-');
+                      const fullData = await fetchMonsterData(baseName);
+                      setFocusedItem(fullData || monster);
+                      setIsMonsterProfileOpen(true);
+                    }}
+                    className="group flex items-center gap-3 p-2 bg-red-50/50 hover:bg-red-100/50 border border-dragon-red/10 hover:border-dragon-red/30 rounded transition-all text-left shadow-sm hover:shadow-md active:scale-[0.98] relative pl-4"
+                  >
+                    {/* Vertical HP Bar on the left */}
+                    <div className="absolute left-1 top-2 bottom-2 w-1.5 bg-stone-950/40 rounded-full overflow-hidden flex flex-col justify-end">
                       <div
-                        className="h-full bg-dragon-red transition-all duration-500"
-                        style={{ width: `${(monster.hp / monster.maxHp) * 100}%` }}
+                        className={cn("w-full transition-all duration-500 rounded-full", barColor)}
+                        style={{ height: `${hpPercent}%` }}
                       />
                     </div>
-                  </div>
-                </button>
-              ))}
+
+                    <div className="w-10 h-10 rounded border border-dragon-red/20 overflow-hidden bg-white flex items-center justify-center shrink-0 group-hover:border-dragon-red transition-colors relative">
+                      {monster.imageUrl ? (
+                        <img src={monster.imageUrl} className="w-full h-full object-cover" alt={monster.name} />
+                      ) : (
+                        <GameIcon name="identity" size={20} color="#8B0000" />
+                      )}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <div className="flex justify-between items-baseline mb-0.5">
+                        <p className="text-[11px] font-black text-parchment-900 uppercase tracking-tight truncate group-hover:text-dragon-darkRed transition-colors">
+                          {monster.name}
+                        </p>
+                        <span className="text-[8px] font-bold text-stone-500 whitespace-nowrap uppercase">
+                          CR {(monster as any).challenge_rating ?? '0'}
+                        </span>
+                      </div>
+                      <div className="text-[8px] font-black uppercase text-stone-500/80 tracking-wide flex flex-wrap gap-x-2 gap-y-0.5">
+                        <span>HP: {monster.hp}/{monster.maxHp}</span>
+                        <span>AC: {monster.armor_class ?? '10'}</span>
+                        <span>Speed: {speedText}</span>
+                        <span className="text-dragon-red/70">{monster.type ?? 'Monster'}</span>
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         )}

@@ -225,7 +225,7 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
         return data.map((item: any) => ({
           ...item,
           name: item.name || item.index.replace(/_/g, ' '),
-          path: item.json_path || `public/assets/atlas/enemies/json/${item.index}.json`,
+          path: item.json_path || `public/assets/atlas/enemies/json/14/${item.index}.json`,
           index: item.index
         }));
       }
@@ -234,45 +234,78 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
     console.warn("Local monster index not found, trying GitHub fallback...");
   }
 
-  // Fallback to GitHub API
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies/json?ref=${BRANCH}&t=${Date.now()}`;
-  const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
-  
-  try {
-    const res = await fetch(url);
-    const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' '),
-        path: f.path,
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    console.error("Error fetching monster list:", e);
-    return [];
+  // Fallback to GitHub API (recursively scanning rulesets 14 and 24 if index fails)
+  const results: any[] = [];
+  const rulesets = ['14', '24'];
+  for (const r of rulesets) {
+    const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/enemies/json/${r}?ref=${BRANCH}&t=${Date.now()}`;
+    const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
+    try {
+      const res = await fetch(url);
+      const files = await safeJson(res);
+      if (files && Array.isArray(files)) {
+        files
+          .filter((f: any) => f.name.endsWith('.json'))
+          .forEach((f: any) => {
+            results.push({
+              name: f.name.replace('.json', '').replace(/_/g, ' '),
+              path: f.path,
+              index: f.name.replace('.json', '')
+            });
+          });
+      }
+    } catch (e) {}
   }
+  return results;
 }
 
 export async function fetchMonsterData(index: string): Promise<any> {
   if (monsterCache[index]) return monsterCache[index];
-  // Try local first
-  const localUrl = `/assets/atlas/enemies/json/${index}.json`;
   let data: any = null;
+  let resolvedPath: string | null = null;
 
+  // Resolve sub-directory from local index first
   try {
-    const res = await fetch(localUrl);
+    const indexRes = await fetch('/assets/atlas/enemies/index.json');
+    if (indexRes.ok) {
+      const enemyIndex = await indexRes.json();
+      const entry = enemyIndex.find((e: any) => e.index === index);
+      if (entry && entry.json_path) {
+        resolvedPath = entry.json_path;
+      }
+    }
+  } catch (e) {}
+
+  // Iterative fallbacks if index is outdated/empty
+  if (!resolvedPath) {
+    const subfolders = ['14', '24'];
+    for (const sub of subfolders) {
+      try {
+        const checkRes = await fetch(`/assets/atlas/enemies/json/${sub}/${index}.json`, { method: 'HEAD' });
+        if (checkRes.ok) {
+          resolvedPath = `/assets/atlas/enemies/json/${sub}/${index}.json`;
+          break;
+        }
+      } catch (e) {}
+    }
+  }
+
+  if (!resolvedPath) {
+    resolvedPath = `/assets/atlas/enemies/json/14/${index}.json`;
+  }
+
+  // Fetch local file
+  try {
+    const res = await fetch(resolvedPath);
     if (res.ok) {
       data = await res.json();
     }
-  } catch (e) {
-    // Ignore and try GitHub
-  }
+  } catch (e) {}
 
   if (!data) {
     // Fallback to GitHub
-    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${index}.json?t=${Date.now()}`;
+    const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/enemies\/json\//, '').replace(/^\/?public\/assets\/atlas\/enemies\/json\//, '');
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${cleanSubpath}?t=${Date.now()}`;
     const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
     
     try {
@@ -583,6 +616,20 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     }
   } else {
     finalUrl = url || "";
+  }
+
+  // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
+  if (folder === 'enemies') {
+    // If it refers to any image path that doesn't explicitly contain /tokens/ or /images/, let's resolve it.
+    if (!finalUrl.includes('/tokens/') && !finalUrl.includes('/images/')) {
+      const isLocal = finalUrl.startsWith('/') || finalUrl.startsWith('assets/');
+      const filename = ddbIndex + '.webp';
+      if (isLocal) {
+        finalUrl = `/assets/atlas/enemies/images/${filename}`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
+      }
+    }
   }
 
   // Use the proxy for all external atlas images to handle CORS and auth
