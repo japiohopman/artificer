@@ -213,125 +213,132 @@ export const CharacterPanel: React.FC = () => {
               {activeTab === 'stats' && <CharacterStats />}
               {activeTab === 'party' && (
                 <div className="space-y-4">
-                  {characters.map(char => (
-                    <button
-                      key={char.id}
-                      onClick={() => setActiveCharacter(char.id)}
-                      className={cn(
-                        "w-full flex flex-col gap-3 p-3 rounded-lg border transition-all text-left",
-                        activeCharacterId === char.id
-                          ? "bg-dragon-red/10 border-dragon-red shadow-sm"
-                          : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
-                      )}
-                    >
-                      {/* Avatar and Basic Header */}
-                      <div className="flex items-center gap-3 w-full">
-                        <div className="w-10 h-10 rounded-lg border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0">
-                          {char.avatarUrl ? (
-                            <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
-                              <Users size={16} />
-                            </div>
-                          )}
+                  {characters.map(char => {
+                    const hpPercent = (char.hp / char.maxHp) * 100;
+                    // Green, turning red when under 30%
+                    const barColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
+
+                    return (
+                      <button
+                        key={char.id}
+                        onClick={() => setActiveCharacter(char.id)}
+                        className={cn(
+                          "w-full flex flex-col gap-3 p-3 rounded-lg border transition-all text-left relative pl-5",
+                          activeCharacterId === char.id
+                            ? "bg-dragon-red/10 border-dragon-red shadow-sm"
+                            : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
+                        )}
+                      >
+                        {/* Vertical HP Bar on the left */}
+                        <div className="absolute left-1.5 top-3 bottom-3 w-1.5 bg-stone-950/20 rounded-full overflow-hidden flex flex-col justify-end">
+                          <div
+                            className={cn("w-full transition-all duration-500 rounded-full", barColor)}
+                            style={{ height: `${hpPercent}%` }}
+                          />
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex justify-between items-baseline">
-                            <p className="text-[11px] font-black text-dragon-darkRed uppercase truncate">{char.name}</p>
-                            <span className="text-[8px] font-bold text-parchment-500 uppercase shrink-0">
-                              Lvl {char.level || 1} {char.class}
-                            </span>
-                          </div>
-                          {/* HP Bar */}
-                          <div className="w-full h-1 bg-parchment-200 rounded-full overflow-hidden border border-dragon-gold/10 mt-1">
-                            <div
-                              className="h-full bg-dragon-red"
-                              style={{ width: `${(char.hp / char.maxHp) * 100}%` }}
-                            />
-                          </div>
-                          <div className="flex justify-between mt-1 items-center">
-                            <span className="text-[7px] font-black text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
-                            {activeCharacterId === char.id && (
-                              <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>
+
+                        {/* Avatar and Basic Header */}
+                        <div className="flex items-center gap-3 w-full">
+                          <div className="w-10 h-10 rounded-lg border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0">
+                            {char.avatarUrl ? (
+                              <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
+                                <Users size={16} />
+                              </div>
                             )}
                           </div>
-                        </div>
-                      </div>
-
-                      {/* Action Economy Grid */}
-                      {char.actionEconomy && (
-                        <div className="w-full bg-stone-950/5 rounded border border-parchment-300/40 p-2 grid grid-cols-4 gap-1 text-center">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[6px] font-black text-stone-500 uppercase">Action</span>
-                            <span className={cn(
-                              "text-[9px] font-bold mt-0.5",
-                              char.actionEconomy.actions.current > 0 ? "text-green-600" : "text-red-500"
-                            )}>
-                              {char.actionEconomy.actions.current}/{char.actionEconomy.actions.max}
-                            </span>
-                          </div>
-                          <div className="flex flex-col items-center">
-                            <span className="text-[6px] font-black text-stone-500 uppercase">Bonus</span>
-                            <span className={cn(
-                              "text-[9px] font-bold mt-0.5",
-                              char.actionEconomy.bonusActions.current > 0 ? "text-blue-600" : "text-red-500"
-                            )}>
-                              {char.actionEconomy.bonusActions.current}/{char.actionEconomy.bonusActions.max}
-                            </span>
-                          </div>
-                          <div className="flex flex-col items-center">
-                            <span className="text-[6px] font-black text-stone-500 uppercase">Reaction</span>
-                            <span className={cn(
-                              "text-[9px] font-bold mt-0.5",
-                              char.actionEconomy.reactions.current > 0 ? "text-purple-600" : "text-red-500"
-                            )}>
-                              {char.actionEconomy.reactions.current}/{char.actionEconomy.reactions.max}
-                            </span>
-                          </div>
-                          <div className="flex flex-col items-center">
-                            <span className="text-[6px] font-black text-stone-500 uppercase">Speed</span>
-                            <span className={cn(
-                              "text-[9px] font-bold mt-0.5",
-                              char.actionEconomy.movement.current > 0 ? "text-teal-600" : "text-red-500"
-                            )}>
-                              {char.actionEconomy.movement.current} ft
-                            </span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex justify-between items-baseline">
+                              <p className="text-[11px] font-black text-dragon-darkRed uppercase truncate">{char.name}</p>
+                              <span className="text-[8px] font-bold text-parchment-500 uppercase shrink-0">
+                                Lvl {char.level || 1} {char.class}
+                              </span>
+                            </div>
+                            <div className="flex justify-between mt-1 items-center">
+                              <span className="text-[7px] font-black text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
+                              {activeCharacterId === char.id && (
+                                <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      )}
 
-                      {/* Cantrips & Spell Slots */}
-                      <div className="w-full flex flex-col gap-1 border-t border-parchment-200/50 pt-1.5">
-                        <div className="flex justify-between items-center text-[7px] font-black text-parchment-400 uppercase tracking-widest">
-                          <span>Magic Matrix</span>
-                          <span>Cantrips: {char.knownSpells?.filter(s => s.level === 0).length || 0}</span>
-                        </div>
-
-                        {char.spellSlots && Object.keys(char.spellSlots).length > 0 ? (
-                          <div className="flex flex-wrap gap-2 mt-1">
-                            {Object.entries(char.spellSlots).map(([lvl, slot]: [string, any]) => (
-                              <div key={lvl} className="flex items-center gap-1 bg-parchment-200/50 rounded px-1.5 py-0.5 border border-parchment-300/30">
-                                <span className="text-[8px] font-black text-purple-700">L{lvl}:</span>
-                                <div className="flex gap-0.5">
-                                  {Array.from({ length: slot.max }).map((_, i) => (
-                                    <div
-                                      key={i}
-                                      className={cn(
-                                        "w-1.5 h-1.5 rounded-full border border-purple-500/20",
-                                        i < slot.current ? "bg-purple-600 shadow-[0_0_4px_rgba(147,51,234,0.5)]" : "bg-transparent"
-                                      )}
-                                    />
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
+                        {/* Action Economy Grid */}
+                        {char.actionEconomy && (
+                          <div className="w-full bg-stone-950/5 rounded border border-parchment-300/40 p-2 grid grid-cols-4 gap-1 text-center">
+                            <div className="flex flex-col items-center">
+                              <span className="text-[6px] font-black text-stone-500 uppercase">Action</span>
+                              <span className={cn(
+                                "text-[9px] font-bold mt-0.5",
+                                char.actionEconomy.actions.current > 0 ? "text-green-600" : "text-red-500"
+                              )}>
+                                {char.actionEconomy.actions.current}/{char.actionEconomy.actions.max}
+                              </span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                              <span className="text-[6px] font-black text-stone-500 uppercase">Bonus</span>
+                              <span className={cn(
+                                "text-[9px] font-bold mt-0.5",
+                                char.actionEconomy.bonusActions.current > 0 ? "text-blue-600" : "text-red-500"
+                              )}>
+                                {char.actionEconomy.bonusActions.current}/{char.actionEconomy.bonusActions.max}
+                              </span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                              <span className="text-[6px] font-black text-stone-500 uppercase">Reaction</span>
+                              <span className={cn(
+                                "text-[9px] font-bold mt-0.5",
+                                char.actionEconomy.reactions.current > 0 ? "text-purple-600" : "text-red-500"
+                              )}>
+                                {char.actionEconomy.reactions.current}/{char.actionEconomy.reactions.max}
+                              </span>
+                            </div>
+                            <div className="flex flex-col items-center">
+                              <span className="text-[6px] font-black text-stone-500 uppercase">Speed</span>
+                              <span className={cn(
+                                "text-[9px] font-bold mt-0.5",
+                                char.actionEconomy.movement.current > 0 ? "text-teal-600" : "text-red-500"
+                              )}>
+                                {char.actionEconomy.movement.current} ft
+                              </span>
+                            </div>
                           </div>
-                        ) : (
-                          <span className="text-[7px] text-parchment-500 italic mt-0.5">No Spell Slots (Non-Spellcaster)</span>
                         )}
-                      </div>
-                    </button>
-                  ))}
+
+                        {/* Cantrips & Spell Slots */}
+                        <div className="w-full flex flex-col gap-1 border-t border-parchment-200/50 pt-1.5">
+                          <div className="flex justify-between items-center text-[7px] font-black text-parchment-400 uppercase tracking-widest">
+                            <span>Magic Matrix</span>
+                            <span>Cantrips: {char.knownSpells?.filter(s => s.level === 0).length || 0}</span>
+                          </div>
+
+                          {char.spellSlots && Object.keys(char.spellSlots).length > 0 ? (
+                            <div className="flex flex-wrap gap-2 mt-1">
+                              {Object.entries(char.spellSlots).map(([lvl, slot]: [string, any]) => (
+                                <div key={lvl} className="flex items-center gap-1 bg-parchment-200/50 rounded px-1.5 py-0.5 border border-parchment-300/30">
+                                  <span className="text-[8px] font-black text-purple-700">L{lvl}:</span>
+                                  <div className="flex gap-0.5">
+                                    {Array.from({ length: slot.max }).map((_, i) => (
+                                      <div
+                                        key={i}
+                                        className={cn(
+                                          "w-1.5 h-1.5 rounded-full border border-purple-500/20",
+                                          i < slot.current ? "bg-purple-600 shadow-[0_0_4px_rgba(147,51,234,0.5)]" : "bg-transparent"
+                                        )}
+                                      />
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <span className="text-[7px] text-parchment-500 italic mt-0.5">No Spell Slots (Non-Spellcaster)</span>
+                          )}
+                        </div>
+                      </button>
+                    );
+                  })}
                 </div>
               )}
               {activeTab === 'logistics' && (

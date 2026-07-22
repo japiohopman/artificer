@@ -546,8 +546,21 @@ const activeTokenCoordinates = draggedMonsterId
     return dist * 5; // 5ft per cell
   }, [activeTokenPos, hoveredCell, draggedPos, rulerPath, draggedMonsterId, playerPos]);
 
+  const handleRightClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isTargeting) {
+      setIsTargeting(false);
+      setTargetingAction(null);
+      addLog("Action cancelled.", "info");
+      soundService.playEffect('UI_BACK_EXIT');
+    }
+  };
+
   return (
-    <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-stone-950 font-body">
+    <div
+      className="w-full h-full relative overflow-hidden flex items-center justify-center bg-stone-950 font-body"
+      onContextMenu={handleRightClick}
+    >
       {/* Antique Atlas Background */}
       <div className="absolute inset-0 bg-[#0f0e0c] opacity-40 pointer-events-none" />
       <div className="absolute inset-0 bg-[url('/assets/images/ui/parchment_texture.webp')] opacity-20 pointer-events-none mix-blend-overlay" />
@@ -860,10 +873,9 @@ const activeTokenCoordinates = draggedMonsterId
                           addLog("Target out of range!", "warning");
                         }
                       } else {
-                        const { fetchMonsterData } = await import('../../services/storageService');
-                        const fullData = await fetchMonsterData(monster.type || monster.name.toLowerCase().replace(/\s+/g, '-'));
-                        setFocusedItem(fullData || monster);
-                        setIsMonsterProfileOpen(true);
+                        // Click on combat grid token should NOT open the full details sheet anymore to prevent spoilers.
+                        // Full monster details should only be triggered by threat cards in the world panel.
+                        addLog(`Selected target: ${monster.name} (${monster.hp}/${monster.maxHp} HP)`, 'info');
                       }
                     }}
                    />

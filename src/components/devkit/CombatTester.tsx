@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { GameIcon } from '../../game_icons';
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
@@ -31,6 +31,7 @@ export const CombatTester: React.FC = () => {
   const { monstersList, loadAllLists } = useAtlasStore();
   
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCR, setSelectedCR] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
   const [rightPanelTab, setRightPanelTab] = useState<'monsters' | 'heroes'>('heroes');
   const [recruitsList, setRecruitsList] = useState<{ name: string; index: string }[]>([]);
@@ -217,10 +218,27 @@ export const CombatTester: React.FC = () => {
     playSuccessSound();
   };
 
-  const filteredMonsters = monstersList.filter(m => 
-    m.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-    m.index.toLowerCase().includes(searchQuery.toLowerCase())
-  ).slice(0, 20);
+  // Unique CR list for filtering dropdown
+  const uniqueCRs = useMemo(() => {
+    const crs = new Set<string>();
+    monstersList.forEach(m => {
+      if (m.challenge_rating !== undefined && m.challenge_rating !== null) {
+        crs.add(String(m.challenge_rating));
+      }
+    });
+    return Array.from(crs).sort((a, b) => {
+      const numA = eval(a); // Handles fractions like 1/8, 1/4, 1/2
+      const numB = eval(b);
+      return numA - numB;
+    });
+  }, [monstersList]);
+
+  const filteredMonsters = monstersList.filter(m => {
+    const matchesSearch = m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          m.index.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCR = selectedCR === 'all' || String(m.challenge_rating) === selectedCR;
+    return matchesSearch && matchesCR;
+  }).slice(0, 50); // Increased slice to 50 for better usability with filters
 
   const filteredHeroes = recruitsList.filter(h =>
     h.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -453,15 +471,32 @@ export const CombatTester: React.FC = () => {
                 </button>
              </div>
 
-             <div className="relative w-72">
-                <GameIcon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-white/20" size={12} />
-                <input 
-                  type="text"
-                  placeholder="Filter by name..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-black/40 border border-white/5 rounded-lg py-1.5 pl-9 pr-3 text-[10px] text-white focus:outline-none focus:border-red-500/50 transition-all font-mono"
-                />
+             <div className="flex items-center gap-3">
+                {rightPanelTab === 'monsters' && (
+                  <div className="flex items-center gap-2 bg-black/40 border border-white/5 rounded-lg px-3 py-1.5">
+                    <span className="text-[8px] font-black text-white/40 uppercase tracking-widest">CR:</span>
+                    <select
+                      value={selectedCR}
+                      onChange={(e) => setSelectedCR(e.target.value)}
+                      className="bg-transparent text-white text-[10px] font-bold focus:outline-none cursor-pointer uppercase tracking-widest"
+                    >
+                      <option value="all" className="bg-stone-900 text-white text-xs">All CR</option>
+                      {uniqueCRs.map((cr: string) => (
+                        <option key={cr} value={cr} className="bg-stone-900 text-white text-xs">CR {cr}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+                <div className="relative w-72">
+                   <GameIcon name="search" className="absolute left-3 top-1/2 -translate-y-1/2 text-white/20" size={12} />
+                   <input
+                     type="text"
+                     placeholder="Filter by name..."
+                     value={searchQuery}
+                     onChange={(e) => setSearchQuery(e.target.value)}
+                     className="w-full bg-black/40 border border-white/5 rounded-lg py-1.5 pl-9 pr-3 text-[10px] text-white focus:outline-none focus:border-red-500/50 transition-all font-mono"
+                   />
+                </div>
              </div>
           </div>
 
