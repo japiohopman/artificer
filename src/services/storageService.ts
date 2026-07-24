@@ -264,12 +264,16 @@ export async function fetchMonsterData(index: string): Promise<any> {
   let data: any = null;
   let resolvedPath: string | null = null;
 
-  // Resolve sub-directory from local index first
+  // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
   try {
     const indexRes = await fetch('/assets/atlas/enemies/index.json');
     if (indexRes.ok) {
       const enemyIndex = await indexRes.json();
-      const entry = enemyIndex.find((e: any) => e.index === index);
+      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+      const entry = enemyIndex.find((e: any) =>
+        e.index.toLowerCase() === index.toLowerCase() ||
+        (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+      );
       if (entry && entry.json_path) {
         resolvedPath = entry.json_path;
       }
@@ -1093,12 +1097,16 @@ export async function fetchSpellData(index: string): Promise<any> {
   if (spellCache[index]) return spellCache[index];
   let resolvedPath: string | null = null;
 
-  // Try resolving path from local index first
+  // Try resolving path from local index first (supporting index or name-based fallback matching)
   try {
     const indexRes = await fetch('/assets/atlas/spell/index.json');
     if (indexRes.ok) {
       const spellIndex = await indexRes.json();
-      const entry = spellIndex.find((s: any) => s.index === index);
+      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+      const entry = spellIndex.find((s: any) =>
+        s.index.toLowerCase() === index.toLowerCase() ||
+        (s.name && s.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+      );
       if (entry && entry.json_path) {
         resolvedPath = entry.json_path;
       }
