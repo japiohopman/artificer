@@ -141,6 +141,11 @@ interface CharacterState {
     hpIncrease: number;
     hasASI: boolean;
   }[];
+  xpGain: {
+    characterId: string;
+    amount: number;
+    key: number;
+  } | null;
 
   classLevelingData: Record<string, Record<number, any>>;
   isLoadingSaves: boolean;
@@ -150,6 +155,7 @@ interface CharacterState {
   setMainCharacter: (char: Character) => void;
   reorderCharacters: (startIndex: number, endIndex: number) => void;
   addXp: (id: string, amount: number) => Promise<void>;
+  addPartyXp: (amount: number) => Promise<void>;
   dismissLevelUp: () => void;
   updateCharacterStats: (id: string, stats: Partial<Character['stats']>) => void;
   setEmotion: (emotion: Emotion) => void;
@@ -191,6 +197,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   beastRegistry: {},
   testAnimalInteraction: null,
   levelUpQueue: [],
+  xpGain: null,
   classLevelingData: {},
   isLoadingSaves: false,
 
@@ -225,6 +232,15 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const char = characters.find(c => c.id === id);
     if (!char) return;
 
+    // Set the visual XP gain animation trigger
+    const animationKey = Date.now();
+    set({ xpGain: { characterId: id, amount, key: animationKey } });
+    setTimeout(() => {
+      if (get().xpGain?.characterId === id && get().xpGain?.key === animationKey) {
+        set({ xpGain: null });
+      }
+    }, 2000);
+
     const newXp = char.xp + amount;
     const { processLevelUp } = await import('../lib/characterUtils');
     const levelUpData = await processLevelUp({ ...char, xp: newXp });
@@ -247,6 +263,20 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       set((state) => ({
         characters: state.characters.map(c => c.id === id ? { ...c, xp: newXp } : c)
       }));
+    }
+  },
+
+  addPartyXp: async (amount) => {
+    const { characters, addXp } = get();
+    const activePcs = characters.filter(char => !char.isNpc);
+    const pcCount = activePcs.length || 1;
+    const dividedXp = Math.floor(amount / pcCount);
+
+    const { useGameStore } = await import('./useGameStore');
+    useGameStore.getState().addLog(`The party earned ${amount} XP (${dividedXp} XP each).`, 'success');
+
+    for (const char of activePcs) {
+      await addXp(char.id, dividedXp);
     }
   },
 
