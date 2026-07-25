@@ -349,6 +349,29 @@ export const WorldMap: React.FC = () => {
     loadDiscoveredLocations();
   }, [discoveredLocationIds, loadDiscoveredLocations]);
 
+  const exploreArea = useWorldStore(state => state.exploreArea);
+
+  // Automatically explore the area around the party's current location to clear Fog of War
+  React.useEffect(() => {
+    if (partyLocation) {
+      const x = partyLocation.coordinates?.x ?? partyLocation.position?.[0];
+      const y = partyLocation.coordinates?.y ?? partyLocation.position?.[1];
+      if (x !== undefined && y !== undefined) {
+        exploreArea(x, y, 200);
+      }
+    }
+  }, [partyLocation, exploreArea]);
+
+  // Automatically pan map camera to follow party when traveling
+  React.useEffect(() => {
+    if (isTraveling && partyLocation && mapRef.current) {
+      const pos = getPosition(partyLocation);
+      if (pos) {
+        mapRef.current.panTo(pos, { animate: true, duration: 0.5 });
+      }
+    }
+  }, [isTraveling, partyLocation, getPosition]);
+
   // Progressive Data Loading
   React.useEffect(() => {
     let isMounted = true;
