@@ -19,59 +19,95 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
     }
   }
 
-  // Structure 2: User provided structure 'feature_specific.subfeature_options' or 'expertise_options'
-  const subOptions = feat.feature_specific?.subfeature_options || feat.feature_specific?.expertise_options;
-  if (subOptions) {
+  // Structure 2: User provided structure 'feature_specific.*_options'
+  if (feat.feature_specific) {
     const collected: FeatureOption[] = [];
     
-    const processSet = (set: any) => {
-      if (!set) return;
-      
-      // Handle options array
-      if (set.options) {
-        set.options.forEach((opt: any) => {
-          if (opt.option_type === 'reference' && opt.item) {
-            collected.push({
-              index: opt.item.index || opt.item.name,
-              name: opt.item.name || opt.item.index,
-              desc: opt.item.desc
-            });
-          } else if (opt.option_type === 'choice' && opt.choice) {
-            processSet(opt.choice.from);
-          } else if (opt.option_type === 'multiple' && opt.items) {
-            opt.items.forEach((item: any) => {
-              if (item.option_type === 'reference' && item.item) {
-                collected.push({
-                  index: item.item.index || item.item.name,
-                  name: item.item.name || item.item.index,
-                  desc: item.item.desc
-                });
-              } else if (item.option_type === 'choice' && item.choice) {
-                processSet(item.choice.from);
-              }
-            });
-          } else if (opt.index || opt.name) {
-             // Fallback for flatter structures
-             collected.push({
-               index: opt.index || opt.name,
-               name: opt.name || opt.index,
-               desc: opt.desc
-             });
-          }
-        });
-      }
-      
-      // Handle direct proficiency gains if from is missing but structure exists
-      if (set.option_set_type === 'options_array') {
-        // Already handled by checking set.options above
-      }
-    };
-
-    processSet(subOptions.from || subOptions);
+    // Find all keys ending in _options (e.g. subfeature_options, enemy_type_options, expertise_options)
+    const optionKeys = Object.keys(feat.feature_specific).filter(k => k.endsWith('_options'));
     
+    optionKeys.forEach(key => {
+      const subOptions = feat.feature_specific[key];
+      if (!subOptions) return;
+
+      const processSet = (set: any) => {
+        if (!set) return;
+        
+        // Handle options array
+        if (set.options) {
+          set.options.forEach((opt: any) => {
+            // Handle primitive strings in options array (e.g., ["aberrations", "beasts"])
+            if (typeof opt === 'string') {
+              collected.push({
+                index: opt.toLowerCase().replace(/\s+/g, '_'),
+                name: opt
+              });
+              return;
+            }
+
+            if (opt.option_type === 'reference' && opt.item) {
+              collected.push({
+                index: opt.item.index || opt.item.name,
+                name: opt.item.name || opt.item.index,
+                desc: opt.item.desc
+              });
+            } else if (opt.option_type === 'choice' && opt.choice) {
+              processSet(opt.choice.from);
+            } else if (opt.option_type === 'multiple' && opt.items) {
+              opt.items.forEach((item: any) => {
+                if (item.option_type === 'reference' && item.item) {
+                  collected.push({
+                    index: item.item.index || item.item.name,
+                    name: item.item.name || item.item.index,
+                    desc: item.item.desc
+                  });
+                } else if (item.option_type === 'choice' && item.choice) {
+                  processSet(item.choice.from);
+                }
+              });
+            } else if (opt.index || opt.name) {
+               // Fallback for flatter structures
+               collected.push({
+                 index: opt.index || opt.name,
+                 name: opt.name || opt.index,
+                 desc: opt.desc
+               });
+            }
+          });
+        }
+      };
+
+      processSet(subOptions.from || subOptions);
+    });
+
     if (collected.length > 0) {
       // Return unique by index
       return Array.from(new Map(collected.map(item => [item.index, item])).values());
+    }
+  }
+
+  // Structure 3: @UUID links in description (Foundry VTT port)
+  if (feat.desc) {
+    const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
+    const uuidOptions: FeatureOption[] = [];
+    
+    descArray.forEach((line: string) => {
+      if (typeof line !== 'string') return;
+      const regex = /@UUID\[.*?\]\{(.*?)\}/g;
+      let match;
+      while ((match = regex.exec(line)) !== null) {
+        const name = match[1];
+        const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+        uuidOptions.push({
+          index: index,
+          name: name
+        });
+      }
+    });
+
+    if (uuidOptions.length > 0) {
+      // Return these UUIDs as options
+      return Array.from(new Map(uuidOptions.map(item => [item.index, item])).values());
     }
   }
 
@@ -81,12 +117,27 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
 export function getChoiceLimit(feat: any): number {
   if (!feat) return 0;
   
-  const standardLimit = feat.choice?.choose || feat.feature_specific?.subfeature_options?.choose || 0;
-  if (standardLimit > 0) return standardLimit;
+  if (feat.choice?.choose) return feat.choice.choose;
+
+  if (feat.feature_specific) {
+    const optionKeys = Object.keys(feat.feature_specific).filter(k => k.endsWith('_options'));
+    for (const key of optionKeys) {
+      if (feat.feature_specific[key]?.choose) {
+        return feat.feature_specific[key].choose;
+      }
+    }
+  }
 
   // Fallback for expertise features if choice data is missing
   const lowerIndex = feat.index?.toLowerCase() || '';
   if (lowerIndex.includes('expertise')) return 2;
+  
+  // If it has UUID choices but no explicit choose property, default to 1
+  if (feat.desc) {
+    const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
+    const hasUUIDs = descArray.some((line: string) => typeof line === 'string' && line.includes('@UUID'));
+    if (hasUUIDs) return 1;
+  }
   
   return 0;
 }

@@ -204,11 +204,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     }
   },
   setMainCharacter: (char) => set((state) => {
-    const newChars = [...state.characters];
-    newChars[0] = char;
     return { 
-      characters: newChars,
-      activeCharacterId: state.activeCharacterId || char.id
+      characters: [char],
+      activeCharacterId: char.id
     };
   }),
   
@@ -494,12 +492,14 @@ characters: state.characters.map(char =>
         return char;
       });
 
-      const activeId = get().activeCharacterId || (processedChars[0]?.id || '');
+      const activeId = get().activeCharacterId || '';
       set({ 
         mainCharacterSlots: slots,
-        characters: processedChars,
         activeCharacterId: activeId
       });
+
+      // We do not set 'characters' here because 'characters' represents the ACTIVE party
+      // for a loaded save. The saves themselves just belong in mainCharacterSlots.
 
       const activeChar = processedChars.find(c => c.id === activeId);
       if (activeChar) {

@@ -58,6 +58,7 @@ export interface CombatMonster {
   armor_class?: any;
   size?: 'Medium' | 'Large';
   isAlly?: boolean;
+  xp?: number;
 }
 
 export interface CombatState {
@@ -430,7 +431,8 @@ export const useGameStore = create<GameState>((set, get) => ({
         cha: monster.charisma || 10
       },
       armor_class: monster.armor_class,
-      isAlly: monster.isAlly || false
+      isAlly: monster.isAlly || false,
+      xp: monster.xp || 0
     };
 
     return {
@@ -478,13 +480,16 @@ export const useGameStore = create<GameState>((set, get) => ({
   completeCombat: async (victory) => {
     const { combatState, addLog } = get();
     const { characters, addXp } = useCharacterStore.getState();
+    
+    console.log("BUG 3 INVESTIGATION - characters at combat end:", characters.map(c => c.id));
 
     if (victory) {
       const activePcs = characters.filter(char => !char.isNpc);
       const pcCount = activePcs.length || 1;
-      const dividedXp = Math.floor(combatState.victoryXp / pcCount);
+      const totalXp = combatState.monsters.reduce((acc, m) => acc + (m.isAlly ? 0 : (m.xp || 0)), 0) || 500;
+      const dividedXp = Math.floor(totalXp / pcCount);
 
-      addLog(`Victory! The party earns ${combatState.victoryXp} XP (divided as ${dividedXp} XP per character).`, 'success');
+      addLog(`Victory! The party earns ${totalXp} XP (divided as ${dividedXp} XP per character).`, 'success');
       for (const char of activePcs) {
         await addXp(char.id, dividedXp);
       }

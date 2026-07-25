@@ -19,13 +19,13 @@ export const XP_TABLE = [
 
 export function getLevelFromXP(xp: number): number {
   for (let i = XP_TABLE.length - 1; i >= 0; i--) {
-    if (xp >= XP_TABLE[i]) return i;
+    if (xp >= XP_TABLE[i]) return i + 1;
   }
-  return 0;
+  return 1;
 }
 
 export function getXPForLevel(level: number): number {
-  return XP_TABLE[Math.min(Math.max(level, 0), 20)] || 0;
+  return XP_TABLE[Math.min(Math.max(level - 1, 0), 19)] || 0;
 }
 
 export function rollAbilityScore(): number {
