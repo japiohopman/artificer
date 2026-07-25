@@ -1,12 +1,74 @@
-WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER. thinEngine.js:786:39
-Keyframe-eigenschapwaarde ‘drop-shadow(0 0 20px rgb(220,38,38) brightness(1) sepia(0) hue-rotate(0deg) saturate(1)’ is ongeldig volgens de syntaxis voor ‘filter’. 2 start-waapi-animation.ts:41:20
-MouseEvent.mozPressure wordt niet meer ondersteund. Gebruik in plaats daarvan PointerEvent.pressure. Util.js:15:4
-MouseEvent.mozInputSource wordt niet meer ondersteund. Gebruik in plaats daarvan PointerEvent.pointerType. Util.js:15:4
-Fout tijdens het parsen van waarde voor ‘image-rendering’.  Declaratie genegeerd. localhost:3000:34:19
-Onbekende eigenschap ‘behavior’.  Declaratie genegeerd. localhost:3000:124:11
-‘progid’ gevonden waar ‘not’, URL of filterfunctie verwacht.  Fout tijdens het parsen van waarde voor ‘filter’.  Declaratie genegeerd. localhost:3000:556:10
-Fout tijdens het parsen van waarde voor ‘-webkit-text-size-adjust’.  Declaratie genegeerd. localhost:3000:229:31
-GET
-https://www.transparenttextures.com/patterns/paper-fibers.png
-[HTTP/1.1 200 OK 0ms]
+PS C:\Users\Gebruiker\Documents\GitHub\artificer> npm run dev
+
+> react-example@0.0.0 dev
+> tsx server.ts
+
+
+<--- Last few GCs --->
+
+[26140:000002499B5B3000]      925 ms: Scavenge (during sweeping) 54.9 (72.2) -> 40.8 (75.6) MB, pooled: 0.0 MB, 46.18 / 0.00 ms (average mu = 0.974, current mu = 0.974) allocation failure; 
+[26140:000002499B5B3000]     1006 ms: Scavenge (during sweeping) 58.4 (91.6) -> 49.9 (106.3) MB, pooled: 0.0 MB, 48.68 / 0.00 ms (average mu = 0.974, current mu = 0.974) allocation failure; 
+
+
+<--- Last few GCs --->
+
+[26140:000002499B5B3000]      925 ms: Scavenge (during sweeping) 54.9 (72.2) -> 40.8 (75.6) MB, pooled: 0.0 MB, 46.18 / 0.00 ms (average mu = 0.974, current mu = 0.974) allocation failure; 
+[26140:000002499B5B3000]     1006 ms: Scavenge (during sweeping) 58.4 (91.6) -> 49.9 (106.3) MB, pooled: 0.0 MB, 48.68 / 0.00 ms (average mu = 0.974, current mu = 0.974) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+ 1: 00007FF77DE7B1B6 
+ 2: 00007FF77EA1A007 
+ 1: 00007FF77DE7B1B6 
+ 3: 00007FF77E3D86A3 
+ 2: 00007FF77EA1A007 
+ 3: 00007FF77E3D86A3 
+ 4: 00007FF77FAEDF9E 
+ 4: 00007FF77F491882 
+ 5: 00007FF77F4144B4 
+ 5: 00007FF77FAE7C1C 
+ 6: 00007FF77FAE72BC 
+ 6: 00007FF77FA1FE69 
+ 7: 00007FF77FA1A4A9 
+ 8: 00007FF77FA19DD3 
+ 9: 00007FF77FA1A88E 
+10: 00007FF77FA1047F 
+11: 00007FF77F51ADFD 
+12: 00007FF77F465669 
+ 7: 00007FF77F51ADFD 
+ 8: 00007FF77F465669 
+ 9: 00007FF77F51B6A8 
+13: 00007FF77F51B6A8 
+14: 00007FF77F51B36C 
+15: 00007FF77F51B0D8 
+10: 00007FF77F51B36C 
+11: 00007FF77F51B0D8 
+12: 00007FF77F466314 
+13: 00007FF77F43B79D 
+14: 00007FF77F4384F7 
+15: 00007FF77F437DE1 
+16: 00007FF77F465218 
+16: 00007FF77E9A785F 
+17: 00007FF77F43B26D 
+18: 00007FF77F4381C7 
+19: 00007FF77F437DCA 
+20: 00007FF77E9A785F 
+21: 00007FF77E968AF3 
+22: 00007FF77E96A09E 
+17: 00007FF77E968AF3 
+18: 00007FF77E96A09E 
+19: 00007FF77F21720F 
+20: 00007FF77DDC9DDE 
+23: 00007FF77F21720F 
+21: 00007FF77EA70C56 
+22: 00007FF77FE1B6A3 
+24: 00007FF77DDC9DDE 
+25: 00007FF77EA70C56 
+23: 00007FFBCE1B257D 
+24: 00007FFBCF26AF08 
+PS C:\Users\Gebruiker\Documents\GitHub\artificer> 
 
