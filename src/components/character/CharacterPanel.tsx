@@ -24,7 +24,8 @@ export const CharacterPanel: React.FC = () => {
   const {
     characters,
     activeCharacterId,
-    setActiveCharacter
+    setActiveCharacter,
+    xpGain
   } = useCharacterStore();
 
   const {
@@ -162,7 +163,7 @@ export const CharacterPanel: React.FC = () => {
                     alt={activeCharacter.name}
                     className="w-full h-full object-cover relative z-10"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `public/assets/atlas/characters/portraits/slot${characters.indexOf(activeCharacter) + 1}_portrait.webp`;
+                      (e.target as HTMLImageElement).src = `/assets/atlas/characters/portraits/slot${characters.indexOf(activeCharacter) + 1}_portrait.webp`;
                     }}
                   />
                 ) : (
@@ -174,6 +175,24 @@ export const CharacterPanel: React.FC = () => {
                 <div className="absolute -bottom-1 -right-1 bg-dragon-gold text-dragon-darkRed text-[8px] font-black px-1.5 py-0.5 rounded border border-dragon-darkRed/20 shadow-sm z-20">
                   Lvl {activeCharacter.level || 1}
                 </div>
+
+                {/* Animated XP Floating Alert */}
+                <AnimatePresence>
+                  {xpGain && xpGain.characterId === activeCharacter.id && (
+                    <motion.div
+                      key={`xp-active-${xpGain.key}`}
+                      initial={{ opacity: 0, y: 15, scale: 0.8 }}
+                      animate={{ opacity: 1, y: -15, scale: 1.1 }}
+                      exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                      transition={{ duration: 1.5, ease: "easeOut" }}
+                      className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
+                    >
+                      <span className="bg-purple-900/90 text-dragon-gold text-[10px] font-black px-2 py-0.5 rounded-full border border-dragon-gold/30 shadow-[0_0_12px_rgba(147,51,234,0.7)] uppercase tracking-tighter">
+                        +{xpGain.amount} XP
+                      </span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Identity & HP / AC metrics */}
@@ -335,6 +354,24 @@ export const CharacterPanel: React.FC = () => {
                                 (e.target as HTMLImageElement).src = slotPortrait;
                               }}
                             />
+
+                            {/* Animated XP Floating Alert */}
+                            <AnimatePresence>
+                              {xpGain && xpGain.characterId === char.id && (
+                                <motion.div
+                                  key={`xp-party-${xpGain.key}`}
+                                  initial={{ opacity: 0, y: 15, scale: 0.8 }}
+                                  animate={{ opacity: 1, y: -15, scale: 1.1 }}
+                                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                                  transition={{ duration: 1.5, ease: "easeOut" }}
+                                  className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
+                                >
+                                  <span className="bg-purple-900/90 text-dragon-gold text-[8px] font-black px-1.5 py-0.5 rounded-full border border-dragon-gold/30 shadow-[0_0_10px_rgba(147,51,234,0.6)] uppercase tracking-tighter">
+                                    +{xpGain.amount} XP
+                                  </span>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex justify-between items-baseline">
