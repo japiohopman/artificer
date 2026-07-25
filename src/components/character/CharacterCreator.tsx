@@ -76,6 +76,7 @@ export const CharacterCreator: React.FC = () => {
   const { 
     isCharacterCreatorOpen, 
     setIsCharacterCreatorOpen, 
+    setIsLoading,
   } = useUIStore();
   const { setIsGameStarted } = useGameStore();
 
@@ -225,6 +226,24 @@ export const CharacterCreator: React.FC = () => {
                             if (idx) pool.add(idx);
                         });
                     }
+                }
+            }
+            if (newChar.subclass) {
+                const subData = await atlasService.loadSubclass(newChar.subclass);
+                if (subData?.features) {
+                    const subLvl1Features = subData.features.filter((f: any) => f.level === 1);
+                    for (const fRef of subLvl1Features) {
+                        const fData = await atlasService.loadFeature(fRef.index);
+                        if (fData) {
+                            features.push({
+                                ...fData,
+                                source: 'Subclass'
+                            });
+                        }
+                    }
+                }
+                if (subData?.proficiencies) {
+                    profs.push(...subData.proficiencies.map((p: any) => p.name || p.index || p));
                 }
             }
             if (newChar.subrace) {
@@ -453,6 +472,7 @@ export const CharacterCreator: React.FC = () => {
       console.error("Failed to load initial character creation data", e);
     } finally {
       setLoading(false);
+      setIsLoading(false);
     }
   };
 

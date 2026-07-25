@@ -2,25 +2,17 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
 Server running on http://localhost:3000
-7:18:46 AM [vite] (client) page reload src/store/useUIStore.ts
-7:18:46 AM [vite] (client) page reload server_log.txt
-7:18:49 AM [vite] (client) page reload src/store/useGameStore.ts
-7:18:49 AM [vite] (client) page reload server_log.txt
-1:54:24 PM [vite] (client) page reload src/store/useGameStore.ts
-1:54:24 PM [vite] (client) page reload server_log.txt
-3:31:07 AM [vite] (client) page reload verify_combat_grid.spec.ts
-3:31:07 AM [vite] (client) page reload server_log.txt
-3:31:10 AM [vite] (client) page reload verify_hud.spec.ts
-3:31:10 AM [vite] (client) page reload server_log.txt
-3:33:36 AM [vite] (client) page reload verify_hud.spec.ts
-3:33:36 AM [vite] (client) page reload server_log.txt
-10:12:42 AM [vite] (client) page reload verify_hud_footer.spec.ts
-10:12:42 AM [vite] (client) page reload server_log.txt
-10:21:24 AM [vite] (client) hmr update /src/components/hud/WorldMap.tsx, /src/index.css
-10:21:24 AM [vite] (client) page reload server_log.txt
-10:22:39 AM [vite] (client) page reload tools/verify_map_overlay.spec.ts
-10:22:39 AM [vite] (client) page reload server_log.txt
-10:24:14 AM [vite] (client) page reload verify_hud_footer.spec.ts
-10:24:14 AM [vite] (client) page reload server_log.txt
+11:28:46 PM [vite] (client) page reload verify_hud_footer.spec.ts
+11:28:46 PM [vite] (client) page reload server_log.txt
+11:38:35 PM [vite] (client) page reload verify_hud_footer.spec.ts
+11:38:35 PM [vite] (client) page reload server_log.txt
+11:41:23 PM [vite] (client) page reload verify_hud_footer.spec.ts
+11:41:23 PM [vite] (client) page reload server_log.txt
+11:50:29 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+11:50:29 PM [vite] (client) page reload server_log.txt
+11:57:25 PM [vite] (client) hmr update /src/components/character/CharacterCreator.tsx, /src/index.css
+11:57:25 PM [vite] (client) page reload server_log.txt
+12:06:26 AM [vite] (client) hmr update /src/components/character/CharacterCreator/ChoicesStep.tsx, /src/index.css
+12:06:26 AM [vite] (client) page reload server_log.txt

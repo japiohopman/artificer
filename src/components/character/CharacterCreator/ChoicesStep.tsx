@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { soundService } from '../../../services/soundService';
-import { fetchClassLevels, fetchFeatureData } from '../../../services/storageService';
+import { fetchClassLevels } from '../../../services/storageService';
 import { GameIcon } from '../../../game_icons';
+import { extractOptionsFromFeature, getChoiceLimit } from '../../../lib/atlasUtils';
+import { atlasService } from '../../../services/atlasService';
 
 export const FAVORED_ENEMIES = [
     { index: 'aberrations', name: 'Aberrations' },
@@ -57,7 +59,18 @@ export const CHOICE_ICON_MAP: Record<string, any> = {
     'grassland': 'compass',
     'mountain': 'mountain',
     'swamp': 'ghost',
-    'underdark': 'death'
+    'underdark': 'death',
+    // Classes / Fighting Styles / Subclasses
+    'life': 'life',
+    'life_domain': 'life',
+    'devotion': 'fighting_style_defense',
+    'oath_of_devotion': 'fighting_style_defense',
+    'defense': 'fighting_style_defense',
+    'dueling': 'fighting_style_dueling',
+    'great_weapon_fighting': 'fighting_style_great_weapon_fighting',
+    'protection': 'fighting_style_protection',
+    'two_weapon_fighting': 'fighter_fighting_style_two_weapon_fighting',
+    'archery': 'fighter_fighting_style_archery'
 };
 
 export const ChoicesStep: React.FC<{
@@ -65,6 +78,8 @@ export const ChoicesStep: React.FC<{
     setNewChar: React.Dispatch<React.SetStateAction<Partial<Character>>>;
 }> = ({ newChar, setNewChar }) => {
     const [features, setFeatures] = useState<any[]>([]);
+    const [subclasses, setSubclasses] = useState<any[]>([]);
+    const [optionDetails, setOptionDetails] = useState<Record<string, string>>({});
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -78,11 +93,18 @@ export const ChoicesStep: React.FC<{
                 if (level1?.features) {
                     const featureDetails = await Promise.all(
                         level1.features.map(async (f: any) => {
-                            const details = await fetchFeatureData(f.index);
+                            const details = await atlasService.loadFeature(f.index);
                             return details || f;
                         })
                     );
                     setFeatures(featureDetails);
+                }
+
+                // Fetch subclass list
+                const subclassRes = await fetch('/assets/atlas/subclasses/index.json');
+                if (subclassRes.ok) {
+                    const subclassData = await subclassRes.json();
+                    setSubclasses(subclassData);
                 }
             } catch (e) {
                 console.error("Error loading level choices", e);
@@ -93,10 +115,83 @@ export const ChoicesStep: React.FC<{
         loadLevelData();
     }, [newChar.class]);
 
-    const handleChoice = (featureId: string, selection: string) => {
+    useEffect(() => {
+        const loadOptionDescriptions = async () => {
+            const details: Record<string, string> = {};
+            for (const f of features) {
+                const isSubclassChoice = f.feature_specific?.subfeature_options?.type === 'subclass';
+                let options = extractOptionsFromFeature(f);
+                if (isSubclassChoice) {
+                    options = subclasses
+                        .filter((s: any) => s.class?.toLowerCase() === newChar.class?.toLowerCase())
+                        .map((s: any) => ({
+                            index: s.index,
+                            name: s.name
+                        }));
+                } else {
+                    // Special handling for Ranger features if options are missing in JSON
+                    if (f.index?.includes('favored-enemy') && options.length === 0) {
+                        options = FAVORED_ENEMIES.map(e => ({ name: e.name, index: e.index }));
+                    }
+                    if (f.index?.includes('natural-explorer') && options.length === 0) {
+                        options = NATURAL_TERRAINS.map(t => ({ name: t.name, index: t.index }));
+                    }
+                }
+
+                for (const opt of options) {
+                    if (isSubclassChoice) {
+                        const subData = await atlasService.loadSubclass(opt.index);
+                        if (subData) {
+                            const desc = Array.isArray(subData.desc) ? subData.desc.join('\n') : (subData.desc || "");
+                            details[opt.index] = desc;
+                        }
+                    } else {
+                        const featData = await atlasService.loadFeature(opt.index);
+                        if (featData) {
+                            const desc = Array.isArray(featData.desc) ? featData.desc.join('\n') : (featData.desc || "");
+                            details[opt.index] = desc;
+                        }
+                    }
+                }
+            }
+            setOptionDetails(prev => ({ ...prev, ...details }));
+        };
+        if (features.length > 0) {
+            loadOptionDescriptions();
+        }
+    }, [features, subclasses, newChar.class]);
+
+    const handleChoice = (featureId: string, selection: string, limit: number, isSubclassChoice?: boolean) => {
         const currentChoices = { ... (newChar.choices || {}) };
-        currentChoices[featureId] = [selection];
-        setNewChar({ ...newChar, choices: currentChoices });
+        const currentSelections = currentChoices[featureId] || [];
+
+        let newSelections: string[];
+        if (currentSelections.includes(selection)) {
+            newSelections = currentSelections.filter((s: string) => s !== selection);
+        } else {
+            if (currentSelections.length >= limit) {
+                if (limit === 1) {
+                    newSelections = [selection];
+                } else {
+                    return; // Max selections reached
+                }
+            } else {
+                newSelections = [...currentSelections, selection];
+            }
+        }
+
+        currentChoices[featureId] = newSelections;
+
+        const updatedChar: Partial<Character> = {
+            ...newChar,
+            choices: currentChoices
+        };
+
+        if (isSubclassChoice) {
+            updatedChar.subclass = newSelections[0] || undefined;
+        }
+
+        setNewChar(updatedChar);
         soundService.playEffect('UI_CLICK_LIGHT');
     };
 
@@ -107,12 +202,16 @@ export const ChoicesStep: React.FC<{
         </div>
     );
 
-    const choiceFeatures = features.filter(f =>
-        f.index?.includes('choice') ||
-        f.index?.includes('favored-enemy') ||
-        f.index?.includes('natural-explorer') ||
-        f.index?.includes('fighting-style')
-    );
+    const choiceFeatures = features.filter(f => {
+        const opts = extractOptionsFromFeature(f);
+        if (opts && opts.length > 0) return true;
+        if (f.feature_specific?.subfeature_options?.type === 'subclass') return true;
+
+        return f.index?.includes('choice') ||
+               f.index?.includes('favored-enemy') ||
+               f.index?.includes('natural-explorer') ||
+               f.index?.includes('fighting-style');
+    });
 
     const nonChoiceFeatures = features.filter(f => !choiceFeatures.includes(f));
 
@@ -126,37 +225,58 @@ export const ChoicesStep: React.FC<{
                     </div>
 
                     {choiceFeatures.map((f, idx) => {
-                        let options = f.choice?.from?.options || [];
+                        const isSubclassChoice = f.feature_specific?.subfeature_options?.type === 'subclass';
+                        let options = extractOptionsFromFeature(f);
                         let title = f.name || "Specialty Choice";
+                        const limit = getChoiceLimit(f) || 1;
                         
-                        // Special handling for Ranger features if options are missing in JSON
-                        if (f.index?.includes('favored-enemy') && options.length === 0) {
-                            options = FAVORED_ENEMIES.map(e => ({ name: e.name, index: e.index }));
-                        }
-                        if (f.index?.includes('natural-explorer') && options.length === 0) {
-                            options = NATURAL_TERRAINS.map(t => ({ name: t.name, index: t.index }));
+                        if (isSubclassChoice) {
+                            options = subclasses
+                                .filter((s: any) => s.class?.toLowerCase() === newChar.class?.toLowerCase())
+                                .map((s: any) => ({
+                                    index: s.index,
+                                    name: s.name
+                                }));
+                        } else {
+                            // Special handling for Ranger features if options are missing in JSON
+                            if (f.index?.includes('favored-enemy') && options.length === 0) {
+                                options = FAVORED_ENEMIES.map(e => ({ name: e.name, index: e.index }));
+                            }
+                            if (f.index?.includes('natural-explorer') && options.length === 0) {
+                                options = NATURAL_TERRAINS.map(t => ({ name: t.name, index: t.index }));
+                            }
                         }
 
                         return (
                             <div key={idx} className="space-y-4">
-                                <div className="flex items-center gap-3">
-                                    <span className="text-[10px] font-black bg-dragon-darkRed text-dragon-gold px-2 py-0.5 rounded-full">0{idx + 1}</span>
-                                    <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">{title}</h4>
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <span className="text-[10px] font-black bg-dragon-darkRed text-dragon-gold px-2 py-0.5 rounded-full">0{idx + 1}</span>
+                                        <h4 className="text-[14px] font-black text-dragon-darkRed uppercase tracking-widest">{title}</h4>
+                                    </div>
+                                    <div className="text-[10px] font-black text-dragon-gold uppercase tracking-wider">
+                                        Choose {limit} option{limit > 1 ? 's' : ''}
+                                    </div>
                                 </div>
                                 
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                     {options.map((opt: any, oIdx: number) => {
                                         const val = opt.index || opt.item?.index || opt.name;
                                         const label = opt.name || opt.item?.name || val;
                                         const isSelected = newChar.choices?.[f.index]?.includes(val);
-                                        const Icon = CHOICE_ICON_MAP[val.toLowerCase()];
+
+                                        // Try to map to the icon using the lowercase version of the value or label
+                                        const iconKey = val.toLowerCase().replace(/[\s-]/g, '_');
+                                        const labelKey = label.toLowerCase().replace(/[\s-]/g, '_');
+                                        const Icon = CHOICE_ICON_MAP[iconKey] || CHOICE_ICON_MAP[labelKey] || 'award';
+                                        const description = optionDetails[val];
                                         
                                         return (
                                             <button
                                                 key={oIdx}
-                                                onClick={() => handleChoice(f.index, val)}
+                                                onClick={() => handleChoice(f.index, val, limit, isSubclassChoice)}
                                                 className={cn(
-                                                    "p-4 border rounded-sm transition-all text-center flex flex-col items-center justify-center gap-2 group relative overflow-hidden",
+                                                    "p-5 border rounded-sm transition-all text-center flex flex-col items-center justify-start gap-2 group relative overflow-hidden h-full min-h-[140px]",
                                                     isSelected 
                                                         ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg"
                                                         : "bg-white/40 border-dragon-gold/10 hover:border-dragon-red/30 hover:bg-white"
@@ -164,7 +284,7 @@ export const ChoicesStep: React.FC<{
                                             >
                                                 {Icon && (
                                                     <div className="mb-1 pointer-events-none">
-                                                        <GameIcon name={Icon as any} size={32} color={isSelected ? "#B8860B" : "currentColor"} className={isSelected ? "" : "opacity-60 group-hover:opacity-100"} />
+                                                        <GameIcon name={Icon as any} size={28} color={isSelected ? "#B8860B" : "currentColor"} className={isSelected ? "" : "opacity-60 group-hover:opacity-100"} />
                                                     </div>
                                                 )}
                                                 <div className={cn(
@@ -173,6 +293,16 @@ export const ChoicesStep: React.FC<{
                                                 )}>
                                                     {label}
                                                 </div>
+
+                                                {description && (
+                                                    <div className={cn(
+                                                        "text-[9px] leading-relaxed font-medium transition-colors normal-case text-center opacity-85 mt-1 line-clamp-3",
+                                                        isSelected ? "text-dragon-gold" : "text-parchment-600"
+                                                    )} title={description}>
+                                                        {description}
+                                                    </div>
+                                                )}
+
                                                 {isSelected && (
                                                     <div className="absolute top-1 right-1">
                                                         <GameIcon name="check" size={10} color="#B8860B" />
