@@ -11,78 +11,107 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
   if (feat.choice) {
     const choice = feat.choice;
     if (choice.from?.options) {
-      return choice.from.options.map((opt: any) => ({
-        index: opt.index || opt.item?.index || opt.name,
-        name: opt.name || opt.item?.name || opt.index,
-        desc: opt.desc || opt.item?.desc
-      }));
+      return choice.from.options.map((opt: any) => {
+        if (typeof opt === 'string') {
+          return {
+            index: opt,
+            name: opt.charAt(0).toUpperCase() + opt.slice(1)
+          };
+        }
+        return {
+          index: opt.index || opt.item?.index || opt.name,
+          name: opt.name || opt.item?.name || opt.index,
+          desc: opt.desc || opt.item?.desc
+        };
+      });
     }
   }
 
   // Structure 2: User provided structure 'feature_specific.*_options'
-  if (feat.feature_specific) {
-    const collected: FeatureOption[] = [];
-    
-    // Find all keys ending in _options (e.g. subfeature_options, enemy_type_options, expertise_options)
-    const optionKeys = Object.keys(feat.feature_specific).filter(k => k.endsWith('_options'));
-    
-    optionKeys.forEach(key => {
-      const subOptions = feat.feature_specific[key];
-      if (!subOptions) return;
+  const collected: FeatureOption[] = [];
 
-      const processSet = (set: any) => {
-        if (!set) return;
-        
-        // Handle options array
-        if (set.options) {
-          set.options.forEach((opt: any) => {
-            // Handle primitive strings in options array (e.g., ["aberrations", "beasts"])
-            if (typeof opt === 'string') {
-              collected.push({
-                index: opt.toLowerCase().replace(/\s+/g, '_'),
-                name: opt
-              });
-              return;
-            }
+  const normalizeIndex = (s: string) => s.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
 
-            if (opt.option_type === 'reference' && opt.item) {
+  const processSet = (set: any) => {
+    if (!set) return;
+
+    // Handle options array
+    if (set.options) {
+      set.options.forEach((opt: any) => {
+        // Handle primitive strings in options array (e.g., ["aberrations", "beasts"])
+        if (typeof opt === 'string') {
+          collected.push({
+            index: normalizeIndex(opt),
+            name: opt
+          });
+          return;
+        }
+
+        if (opt.option_type === 'reference' && opt.item) {
+          collected.push({
+            index: opt.item.index || opt.item.name,
+            name: opt.item.name || opt.item.index,
+            desc: opt.item.desc
+          });
+        } else if (opt.option_type === 'choice' && opt.choice) {
+          processSet(opt.choice.from);
+        } else if (opt.option_type === 'multiple' && opt.items) {
+          opt.items.forEach((item: any) => {
+            if (item.option_type === 'reference' && item.item) {
               collected.push({
-                index: opt.item.index || opt.item.name,
-                name: opt.item.name || opt.item.index,
-                desc: opt.item.desc
+                index: item.item.index || item.item.name,
+                name: item.item.name || item.item.index,
+                desc: item.item.desc
               });
-            } else if (opt.option_type === 'choice' && opt.choice) {
-              processSet(opt.choice.from);
-            } else if (opt.option_type === 'multiple' && opt.items) {
-              opt.items.forEach((item: any) => {
-                if (item.option_type === 'reference' && item.item) {
-                  collected.push({
-                    index: item.item.index || item.item.name,
-                    name: item.item.name || item.item.index,
-                    desc: item.item.desc
-                  });
-                } else if (item.option_type === 'choice' && item.choice) {
-                  processSet(item.choice.from);
-                }
-              });
-            } else if (opt.index || opt.name) {
-               // Fallback for flatter structures
-               collected.push({
-                 index: opt.index || opt.name,
-                 name: opt.name || opt.index,
-                 desc: opt.desc
-               });
+            } else if (item.option_type === 'choice' && item.choice) {
+              processSet(item.choice.from);
             }
           });
+        } else if (opt.index || opt.name) {
+          // Fallback for flatter structures
+          collected.push({
+            index: opt.index || opt.name,
+            name: opt.name || opt.index,
+            desc: opt.desc
+          });
         }
-      };
+      });
+    }
+  };
 
-      processSet(subOptions.from || subOptions);
+  if (feat.feature_specific) {
+    Object.keys(feat.feature_specific).forEach(key => {
+      if (key.endsWith('_options')) {
+        const subOptions = feat.feature_specific[key];
+        processSet(subOptions.from || subOptions);
+      }
     });
+  }
 
-    if (collected.length > 0) {
-      // Return unique by index
-      return Array.from(new Map(collected.map(item => [item.index, item])).values());
+  if (collected.length > 0) {
+    // Return unique by index
+    return Array.from(new Map(collected.map(item => [item.index, item])).values());
+  }
+
+  // Structure 3: Parsing descriptions for @UUID links if "choose" is in description text
+  const descText = Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || '');
+  const hasChooseWord = /choose/i.test(descText);
+  if (hasChooseWord) {
+    const regex = /@UUID\[.*?\]\{(.*?)\}/g;
+    let match;
+    const uuidOptions: FeatureOption[] = [];
+    while ((match = regex.exec(descText)) !== null) {
+      const name = match[1];
+      const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
+      uuidOptions.push({
+        index,
+        name
+      });
+    }
+    if (uuidOptions.length > 0) {
+      return uuidOptions;
+    }
+  }
     }
   }
 
@@ -117,7 +146,8 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
 export function getChoiceLimit(feat: any): number {
   if (!feat) return 0;
   
-  if (feat.choice?.choose) return feat.choice.choose;
+  let standardLimit = feat.choice?.choose || 0;
+  if (standardLimit > 0) return standardLimit;
 
   if (feat.feature_specific) {
     const optionKeys = Object.keys(feat.feature_specific).filter(k => k.endsWith('_options'));
@@ -125,6 +155,27 @@ export function getChoiceLimit(feat: any): number {
       if (feat.feature_specific[key]?.choose) {
         return feat.feature_specific[key].choose;
       }
+    }
+  }
+
+  if (feat.feature_specific) {
+    for (const key of Object.keys(feat.feature_specific)) {
+      if (key.endsWith('_options')) {
+        const choose = feat.feature_specific[key]?.choose;
+        if (typeof choose === 'number' && choose > 0) {
+          return choose;
+        }
+      }
+    }
+  }
+
+  // Check if it's a UUID-inferred choice
+  const descText = Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || '');
+  const hasChooseWord = /choose/i.test(descText);
+  if (hasChooseWord) {
+    const regex = /@UUID\[.*?\]\{(.*?)\}/g;
+    if (regex.test(descText)) {
+      return 1;
     }
   }
 
