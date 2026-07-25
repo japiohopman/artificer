@@ -68,6 +68,38 @@
   - [x] Implement `Journal.tsx` component.
   - [x] Setup Session Summaries and Quest Tracker logic (UI/Store implementation).
 
+## Phase 3: Character Creation & Level Up Overhaul
+### ⚔️ Spelmechanica & Karakterdiepte (Mechanics & Depth)
+- [ ] **Point Buy Calculator**:
+  - Implement full 27-point buy logic under standard 5.5e rules.
+  - Block stats above 15 (before racial traits/bonuses) and allow refunding points down to 8.
+- [ ] **Geavanceerde Spellbook Manager**:
+  - Extend `SpellsStep.tsx`, `FocusView.tsx`, and `SpellCard.tsx`.
+  - Filter by Spell Level, School of Magic, Casting Time, Ritual, Concentration, Class availability, and Prepared Spells.
+  - Utilize dedicated tier icons (`public/assets/icons/spell-tiers/spell1.webp` to `spell9.webp`).
+- [ ] **Feat Selection bij Level Up (ASI)**:
+  - Implement choosing Feats from `/assets/atlas/feats/json/` during Level Up ASI.
+  - Support prerequisites, +1 Ability score increases, and features integration in the full Character sheet.
+- [ ] **Automatisch HP Level Up Proces**:
+  - Integrate automatic HP rolls with class hit dice, apply Con modifier automatically, and support "Average HP" fallback.
+
+### 🎭 Visuele & Zintuiglijke Beleving (UI/UX Immersion)
+- [ ] **Per-Attribute 3D Dice Rolls**:
+  - Roll 4d6 (drop lowest) with custom 3D animations using the Dice Box for each attribute.
+  - Add explicit "1 official roll attempt" warning to prevent cheat-re-rolling.
+- [ ] **Equipment Pack Inspectie (FocusView)**:
+  - Utilize or extend `src/components/ui/FocusView.tsx` to inspect packs (Explorer's, Dungeoneer's, etc.).
+  - Display item icons, description, weight, and specific properties in an interactive container detail modal.
+- [ ] **Recruitable NPC & Character-Paspoort**:
+  - Design beautiful Character Cards for player characters and recruitable NPCs (`public/assets/atlas/characters/recruit_npc/`).
+  - Feature portraits, stats, radar chart, subclass/level badges, background seals, and thematic card borders.
+
+### ⚙️ Technische Optimalisatie & Snelheid
+- **Asset Sprite Sheets**:
+  - Convert class icons, race artwork, and atlas illustrations into packed, compact sprite sheets for instantaneous load times.
+- **Pre-fetching, Parallel Hydration & Caching**:
+  - Pre-fetch Atlas data on Creator boot, implement `Promise.all` parallel feature hydration during Level Up, and build IndexedDB/LocalStorage offline caching.
+
 ## Future Modules (Roadmap)
 - [ ] **NPC Memory Module**
   - [ ] Affinity System (-10 to +10 scale).

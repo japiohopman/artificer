@@ -29,12 +29,24 @@ older ones are half-done. Update this file when priorities genuinely shift — n
   the SRD PDF) out of plain git — Git LFS or external asset hosting, per `docs/ASSET_REGISTRY.md`.
 
 ## Next — natural continuation, kept small on purpose
+- **Phase 3 - Character Creation & Level Up Overhaul (Part 1)**:
+  - [ ] **Point Buy Calculator**: Implement standard 27-point buy rules for Character Creator attribute step.
+  - [ ] **Advanced Spellbook Manager**: Fully overhaul `SpellsStep.tsx` and spell selection using `FocusView` and tiered visual folders (`spell1.webp` to `spell9.webp`).
+- **Phase 3 - Character Creation & Level Up Overhaul (Part 2)**:
+  - [ ] **ASI & Feat Selection**: Expand leveling to allow selecting feats (including attribute bonuses, prerequisites, and features) during level-up ASI.
+  - [ ] **Automated HP Level Up**: Automate hit-die level-up HP rolls with Con modifiers and average HP options.
+  - [ ] **Per-Attribute 3D Dice**: Roll 4d6 (drop lowest) with specific Dice Box animations per attribute.
+  - [ ] **Equipment Pack Inspect**: Integrate `FocusView.tsx` as an interactive container inspector for equipment packages.
 - AI DM tool-call integration (GOALS.md §12) — start with 2–3 tools only (e.g. dice roll,
   journal update), not the full tool list. Prove the narrator/mechanics boundary works before
   widening it.
 - NPC Memory module — affinity system only, no interaction-log/vector search yet.
 
 ## Later — parked until Now is clear and the app is stable
+- **Phase 3 - Optimizations**:
+  - [ ] Sprite sheet packing for fast-loaded class, race, and atlas icons.
+  - [ ] Pre-fetching of Atlas indexes and offline caching via IndexedDB/LocalStorage.
+  - [ ] Parallel features loading via `Promise.all` in `LevelUpOverlay.tsx`.
 - Economic simulation & regional pricing (GOALS.md §7)
 - Faction & reputation system (GOALS.md §7)
 - Philips Hue / physical lighting sync (GOALS.md §10 area)
