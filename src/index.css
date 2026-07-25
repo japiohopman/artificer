@@ -128,6 +128,20 @@
   --color-parchment-800: #6e5230;
   --color-parchment-900: #523b23;
 
+  /* Underdark (Dark Mode) Theme Colors */
+  --color-underdark-900: #0a0a0c;
+  --color-underdark-800: #121216;
+  --color-underdark-700: #1a1a24;
+  --color-underdark-600: #2a2a3b;
+  --color-underdark-500: #3f3f5a;
+  --color-underdark-400: #5c5c7d;
+  --color-underdark-300: #8282a5;
+  --color-underdark-200: #b0b0cc;
+  --color-underdark-100: #dbdbe8;
+  --color-underdark-50: #f4f4f7;
+
+  --color-magic-purple: #9b59b6;
+  --color-magic-blue: #3498db;
   --color-dragon-red: #8b0000;
   --color-dragon-darkRed: #5a0000;
   --color-dragon-gold: #d4af37;
@@ -135,7 +149,11 @@
 
 @layer base {
   body {
-    @apply bg-parchment-100 text-parchment-900 font-body;
+    @apply bg-parchment-100 text-parchment-900 font-body transition-colors duration-500;
+  }
+  
+  .dark body {
+    @apply bg-underdark-900 text-underdark-100;
   }
 }
 

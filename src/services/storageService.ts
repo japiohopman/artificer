@@ -368,7 +368,7 @@ export async function fetchMonsterData(index: string): Promise<any> {
 
   const finalResult = {
     ...normalized,
-    imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index)
+    imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index, normalized.name)
   };
   monsterCache[index] = finalResult;
   return finalResult;
@@ -381,7 +381,7 @@ export async function fetchMaterialData(index: string): Promise<any> {
     const res = await fetch(`/assets/atlas/crafting/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index, data.name) };
       materialCache[index] = finalResult;
       return finalResult;
     }
@@ -396,7 +396,7 @@ export async function fetchMaterialData(index: string): Promise<any> {
     if (!data) return null;
     return {
       ...data,
-      imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index)
+      imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index, data.name)
     };
   } catch (e) {
     console.error("Error fetching material data:", e);
@@ -411,7 +411,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     const res = await fetch(`/assets/atlas/equipment/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
       equipmentCache[index] = finalResult;
       return finalResult;
     }
@@ -426,7 +426,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     if (!data) return null;
     return {
       ...data,
-      imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index)
+      imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name)
     };
   } catch (e) {
     console.error("Error fetching equipment data:", e);
@@ -441,7 +441,7 @@ export async function fetchMagicItemData(index: string): Promise<any> {
     const res = await fetch(`/assets/atlas/magic_items/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index, data.name) };
       magicItemCache[index] = finalResult;
       return finalResult;
     }
@@ -456,7 +456,7 @@ export async function fetchMagicItemData(index: string): Promise<any> {
     if (!data) return null;
     return {
       ...data,
-      imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index)
+      imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'magic_items', index, data.name)
     };
   } catch (e) {
     console.error("Error fetching magic item data:", e);
@@ -464,7 +464,7 @@ export async function fetchMagicItemData(index: string): Promise<any> {
   }
 }
 
-export function normalizeImageUrl(url: string | undefined, category: string, index: string): string {
+export function normalizeImageUrl(url: string | undefined, category: string, index: string, name?: string): string {
   const timestamp = Date.now();
   let finalUrl = "";
 
@@ -510,7 +510,12 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   };
 
   const folder = categoryToFolder[category.toLowerCase()] || category.toLowerCase();
-  const cleanIndex = (index || "").toLowerCase();
+  
+  // Use name instead of index if index is a 16-character alphanumeric Foundry ID
+  const isFoundryId = /^[a-z0-9]{16}$/i.test(index);
+  const baseIdentifier = (isFoundryId && name) ? name : (index || "");
+  const cleanIndex = baseIdentifier.toLowerCase();
+  
   const underscoreIndex = cleanIndex.replace(/\s+/g, '_');
   const ddbIndex = cleanIndex.replace(/_/g, '-').replace(/\s+/g, '-');
 
@@ -651,7 +656,7 @@ export function getEnemyArtworkUrl(enemy: any): string {
   if (!enemy) return "";
   const index = enemy.index || enemy.id || enemy.name || "";
   const imageUrl = enemy.imageUrl || enemy.image || enemy.avatarUrl || "";
-  return normalizeImageUrl(imageUrl, 'enemies', index);
+  return normalizeImageUrl(imageUrl, 'enemies', index, enemy.name);
 }
 
 export async function deleteFile(path: string, message?: string): Promise<boolean> {

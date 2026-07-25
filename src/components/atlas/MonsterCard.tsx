@@ -114,8 +114,8 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
 
   const derivedImageUrl = useMemo(() => {
     const rawUrl = monster.imageUrl || (monster as any).image_url || monster.image;
-    return normalizeImageUrl(rawUrl, 'enemies', monster.index || monster.id || "");
-  }, [monster.imageUrl, (monster as any).image_url, monster.image, monster.index, monster.id]);
+    return normalizeImageUrl(rawUrl, 'enemies', monster.index || monster.id || "", monster.name);
+  }, [monster.imageUrl, (monster as any).image_url, monster.image, monster.index, monster.id, monster.name]);
 
   const hasAnyImage = !!(monster.imageUrl || (monster as any).image_url || monster.image);
 

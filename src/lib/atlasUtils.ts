@@ -93,29 +93,7 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
     return Array.from(new Map(collected.map(item => [item.index, item])).values());
   }
 
-  // Structure 3: Parsing descriptions for @UUID links if "choose" is in description text
-  const descText = Array.isArray(feat.desc) ? feat.desc.join('\n') : (feat.desc || '');
-  const hasChooseWord = /choose/i.test(descText);
-  if (hasChooseWord) {
-    const regex = /@UUID\[.*?\]\{(.*?)\}/g;
-    let match;
-    const uuidOptions: FeatureOption[] = [];
-    while ((match = regex.exec(descText)) !== null) {
-      const name = match[1];
-      const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
-      uuidOptions.push({
-        index,
-        name
-      });
-    }
-    if (uuidOptions.length > 0) {
-      return uuidOptions;
-    }
-  }
-    }
-  }
-
-  // Structure 3: @UUID links in description (Foundry VTT port)
+  // Structure 3: Parsing descriptions for @UUID links (Foundry VTT port)
   if (feat.desc) {
     const descArray = Array.isArray(feat.desc) ? feat.desc : [feat.desc];
     const uuidOptions: FeatureOption[] = [];
@@ -126,16 +104,17 @@ export function extractOptionsFromFeature(feat: any): FeatureOption[] {
       let match;
       while ((match = regex.exec(line)) !== null) {
         const name = match[1];
-        const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+        // Ensure index is completely alphanumeric/underscore
+        const index = name.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_').replace(/[^a-z0-9_]/g, '');
         uuidOptions.push({
-          index: index,
-          name: name
+          index,
+          name
         });
       }
     });
 
     if (uuidOptions.length > 0) {
-      // Return these UUIDs as options
+      // Return these UUIDs as options, ensuring they are unique by index
       return Array.from(new Map(uuidOptions.map(item => [item.index, item])).values());
     }
   }
