@@ -38,6 +38,7 @@ export default function App() {
   const isProfileMenuOpen = useUIStore(state => state.isProfileMenuOpen);
   const isJournalOpen = useUIStore(state => state.isJournalOpen);
   const setIsJournalOpen = useUIStore(state => state.setIsJournalOpen);
+  const isCharacterCreatorOpen = useUIStore(state => state.isCharacterCreatorOpen);
   
   const isGameStarted = useGameStore(state => state.isGameStarted);
   
@@ -111,7 +112,7 @@ export default function App() {
         <TitleScreen />
       ) : (
         <>
-          <HUD />
+          {!isCharacterCreatorOpen && <HUD />}
 
           {/* Global Overlays Layer */}
           <AnimatePresence>
