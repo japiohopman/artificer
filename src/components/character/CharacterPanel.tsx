@@ -10,6 +10,8 @@ import { LogisticsManifest } from '../ui/PartyLogistics';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
+import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCalculations';
+import { normalizeImageUrl } from '../../services/storageService';
 
 type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
 
@@ -54,6 +56,11 @@ export const CharacterPanel: React.FC = () => {
   }
 
   const inventory = activeCharacter.inventory;
+  const derived = calculateDerivedStats(activeCharacter);
+  const xpPercent = getXpProgress(activeCharacter.level || 1, activeCharacter.xp || 0);
+  const nextLevelXp = XP_TABLE[activeCharacter.level] || ((XP_TABLE[activeCharacter.level - 1] || 0) + 50000);
+  const hpPercent = (activeCharacter.hp / activeCharacter.maxHp) * 100;
+  const hpBarColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
 
   const handleEquip = (slot: EquipmentSlotId) => {
     if (focusedItem?._type === 'equipment') {
@@ -144,6 +151,82 @@ export const CharacterPanel: React.FC = () => {
             </button>
           </div>
 
+          {/* Active Character Classic Vital Header */}
+          <div className="bg-parchment-100/70 border-b border-parchment-300 p-3 flex flex-col gap-2.5">
+            <div className="flex gap-3">
+              {/* Profile Portrait */}
+              <div className="w-16 h-20 bg-stone-900/10 rounded-lg border-2 border-dragon-gold overflow-hidden shrink-0 shadow-md relative group">
+                {activeCharacter.avatarUrl || activeCharacter.imageUrl ? (
+                  <img
+                    src={normalizeImageUrl(activeCharacter.avatarUrl || activeCharacter.imageUrl, 'npc_character_profiles', activeCharacter.id)}
+                    alt={activeCharacter.name}
+                    className="w-full h-full object-cover relative z-10"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = `public/assets/atlas/characters/portraits/slot${characters.indexOf(activeCharacter) + 1}_portrait.webp`;
+                    }}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-dragon-red/30">
+                    <Users size={24} />
+                  </div>
+                )}
+                {/* Level Tag Overlay */}
+                <div className="absolute -bottom-1 -right-1 bg-dragon-gold text-dragon-darkRed text-[8px] font-black px-1.5 py-0.5 rounded border border-dragon-darkRed/20 shadow-sm z-20">
+                  Lvl {activeCharacter.level || 1}
+                </div>
+              </div>
+
+              {/* Identity & HP / AC metrics */}
+              <div className="flex-1 flex flex-col justify-between min-w-0 py-0.5">
+                <div>
+                  <h3 className="text-xs font-black text-dragon-darkRed uppercase tracking-tight truncate">
+                    {activeCharacter.class || "Adventurer"}
+                  </h3>
+                  <p className="text-[8px] font-bold text-parchment-500 uppercase tracking-widest mt-0.5">
+                    {activeCharacter.race || "Species"} • {activeCharacter.alignment || "Neutral"}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {/* AC Shield Badge */}
+                  <div className="flex items-center gap-1 bg-white/60 px-2 py-0.5 rounded border border-parchment-300 shadow-sm" title="Armor Class">
+                    <Shield size={10} className="text-dragon-red" />
+                    <span className="text-[10px] font-bold text-parchment-800">{derived.ac}</span>
+                  </div>
+
+                  {/* HP Text */}
+                  <span className="text-[9px] font-black text-dragon-red/80 uppercase">
+                    HP {activeCharacter.hp}/{activeCharacter.maxHp}
+                  </span>
+                </div>
+
+                {/* HP Progress Bar */}
+                <div className="h-1.5 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${hpPercent}%` }}
+                    className={cn("h-full transition-all rounded-full", hpBarColor)}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Purple XP Progress Bar */}
+            <div className="space-y-1">
+              <div className="h-1.5 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${xpPercent}%` }}
+                  className="h-full bg-purple-600 shadow-[0_0_8px_rgba(147,51,234,0.5)] transition-all rounded-full"
+                />
+              </div>
+              <div className="flex justify-between items-center text-[7px] font-black text-parchment-400 uppercase tracking-widest px-0.5">
+                <span>XP: {activeCharacter.xp.toLocaleString()} / {nextLevelXp.toLocaleString()}</span>
+                <span className="text-purple-600">{Math.floor(xpPercent)}%</span>
+              </div>
+            </div>
+          </div>
+
         <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
           <AnimatePresence mode="wait">
             <motion.div
@@ -217,13 +300,17 @@ export const CharacterPanel: React.FC = () => {
                     const hpPercent = (char.hp / char.maxHp) * 100;
                     // Green, turning red when under 30%
                     const barColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
+                    const charIndex = characters.indexOf(char);
+                    const slotPortrait = `/assets/atlas/characters/portraits/slot${charIndex + 1}_portrait.webp`;
+                    const charXpPercent = getXpProgress(char.level || 1, char.xp || 0);
+                    const charNextLevelXp = XP_TABLE[char.level] || ((XP_TABLE[char.level - 1] || 0) + 50000);
 
                     return (
                       <button
                         key={char.id}
                         onClick={() => setActiveCharacter(char.id)}
                         className={cn(
-                          "w-full flex flex-col gap-3 p-3 rounded-lg border transition-all text-left relative pl-5",
+                          "w-full flex flex-col gap-3 p-3 rounded-lg border transition-all text-left relative pl-5 overflow-hidden",
                           activeCharacterId === char.id
                             ? "bg-dragon-red/10 border-dragon-red shadow-sm"
                             : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
@@ -239,14 +326,15 @@ export const CharacterPanel: React.FC = () => {
 
                         {/* Avatar and Basic Header */}
                         <div className="flex items-center gap-3 w-full">
-                          <div className="w-10 h-10 rounded-lg border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0">
-                            {char.avatarUrl ? (
-                              <img src={char.avatarUrl} alt={char.name} className="w-full h-full object-cover" />
-                            ) : (
-                              <div className="w-full h-full flex items-center justify-center text-dragon-red/40">
-                                <Users size={16} />
-                              </div>
-                            )}
+                          <div className="w-12 h-18 rounded border-2 border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0 relative shadow-sm">
+                            <img
+                              src={char.avatarUrl || normalizeImageUrl(char.imageUrl, 'npc_character_profiles', char.id)}
+                              alt={char.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).src = slotPortrait;
+                              }}
+                            />
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex justify-between items-baseline">
@@ -260,6 +348,21 @@ export const CharacterPanel: React.FC = () => {
                               {activeCharacterId === char.id && (
                                 <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>
                               )}
+                            </div>
+
+                            {/* Party Card Purple Progress Bar */}
+                            <div className="space-y-1 mt-2">
+                              <div className="h-1 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
+                                <motion.div
+                                  initial={{ width: 0 }}
+                                  animate={{ width: `${charXpPercent}%` }}
+                                  className="h-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.4)] transition-all rounded-full"
+                                />
+                              </div>
+                              <div className="flex justify-between items-center text-[6px] font-black text-parchment-400 uppercase tracking-widest">
+                                <span>XP: {char.xp.toLocaleString()} / {charNextLevelXp.toLocaleString()}</span>
+                                <span className="text-purple-600">{Math.floor(charXpPercent)}%</span>
+                              </div>
                             </div>
                           </div>
                         </div>
