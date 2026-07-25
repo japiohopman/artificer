@@ -21,14 +21,55 @@ export const MapNavigation: React.FC<MapNavigationProps> = ({
   currentMiles,
   zoomLevel
 }) => {
-  const { mapZoom, setMapZoom } = useWorldStore();
+  const { mapZoom, setMapZoom, partyLocation } = useWorldStore();
   const { isMapPanEnabled, setIsMapPanEnabled } = useUIStore();
 
   const handleLocateParty = () => {
     if (onCenterParty) {
       onCenterParty();
+      return;
+    }
+
+    const map = (window as any).leafletMap;
+    if (partyLocation && map) {
+      const x = partyLocation.coordinates?.x ?? partyLocation.position?.[0] ?? 0;
+      const y = partyLocation.coordinates?.y ?? partyLocation.position?.[1] ?? 0;
+
+      // Convert to high-res pixel space (matches WorldMap.tsx logic)
+      const px = (x / 4763) * 21620;
+      const py = (1 - (y / 3185)) * 14461;
+
+      map.setView([py, px], map.getZoom(), { animate: true, duration: 1 });
+    }
+  };
+
+  const handleZoomIn = () => {
+    if (onZoomIn) {
+      onZoomIn();
+      return;
+    }
+    const map = (window as any).leafletMap;
+    if (map) {
+      const newZoom = Math.min(map.getZoom() + 1, 9);
+      map.setZoom(newZoom);
+      setMapZoom(newZoom);
     } else {
-      setMapZoom(3);
+      setMapZoom(Math.min(mapZoom + 1, 9));
+    }
+  };
+
+  const handleZoomOut = () => {
+    if (onZoomOut) {
+      onZoomOut();
+      return;
+    }
+    const map = (window as any).leafletMap;
+    if (map) {
+      const newZoom = Math.max(map.getZoom() - 1, 3);
+      map.setZoom(newZoom);
+      setMapZoom(newZoom);
+    } else {
+      setMapZoom(Math.max(mapZoom - 1, 3));
     }
   };
 
@@ -53,14 +94,14 @@ export const MapNavigation: React.FC<MapNavigationProps> = ({
       <div className="h-px bg-dragon-gold/20 mx-1" />
 
       <button
-        onClick={() => onZoomIn ? onZoomIn() : setMapZoom(Math.min(mapZoom + 1, 9))}
+        onClick={handleZoomIn}
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
         title="Zoom In"
       >
         <GameIcon name="plus" size={18} />
       </button>
       <button
-        onClick={() => onZoomOut ? onZoomOut() : setMapZoom(Math.max(mapZoom - 1, 3))}
+        onClick={handleZoomOut}
         className="p-2 hover:bg-dragon-red/10 text-dragon-red rounded transition-colors"
         title="Zoom Out"
       >
