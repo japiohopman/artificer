@@ -519,6 +519,15 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   const underscoreIndex = cleanIndex.replace(/\s+/g, '_');
   const ddbIndex = cleanIndex.replace(/_/g, '-').replace(/\s+/g, '-');
 
+  // Handle and replace generic underscore prefixes with the actual item names dynamically (Option B / Task Board optimization)
+  if (url && typeof url === 'string') {
+    const genericPlaceholders = ['_container.webp', '_weapon.webp', '_armor.webp', '_shield.webp', '_potion.webp', '_ring.webp', '_scroll.webp', '_tool.webp', '_loot.webp', '_food.webp', '_ammunition.webp'];
+    if (genericPlaceholders.some(p => url!.endsWith(p))) {
+      const dirPath = url!.substring(0, url!.lastIndexOf('/'));
+      url = `${dirPath}/${underscoreIndex}.webp`;
+    }
+  }
+
   if (url && (url.startsWith('/api/raw') || url.startsWith('/api/fetch'))) {
     return url;
   }
