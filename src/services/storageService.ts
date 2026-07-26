@@ -406,9 +406,32 @@ export async function fetchMaterialData(index: string): Promise<any> {
 
 export async function fetchEquipmentData(index: string): Promise<any> {
   if (equipmentCache[index]) return equipmentCache[index];
+
+  let resolvedPath: string | null = null;
+  try {
+    const indexRes = await fetch('/assets/atlas/equipment/index.json');
+    if (indexRes.ok) {
+      const equipmentIndex = await indexRes.json();
+      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+      const entry = equipmentIndex.find((e: any) =>
+        e.index.toLowerCase() === index.toLowerCase() ||
+        (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+      );
+      if (entry && entry.json_path) {
+        resolvedPath = entry.json_path;
+      }
+    }
+  } catch (e) {
+    console.warn("Error loading equipment index:", e);
+  }
+
+  if (!resolvedPath) {
+    resolvedPath = `/assets/atlas/equipment/json/${index}.json`;
+  }
+
   // Local first
   try {
-    const res = await fetch(`/assets/atlas/equipment/json/${index}.json`);
+    const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
       const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
@@ -417,7 +440,9 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${index}.json?t=${Date.now()}`;
+  // Fallback to GitHub raw
+  const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/equipment\/json\//, '').replace(/^\/?public\/assets\/atlas\/equipment\/json\//, '');
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/equipment/json/${cleanSubpath}?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -429,7 +454,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
       imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name)
     };
   } catch (e) {
-    console.error("Error fetching equipment data:", e);
+    console.error("Error fetching equipment data from GitHub:", e);
     return null;
   }
 }

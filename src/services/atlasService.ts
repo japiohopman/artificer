@@ -294,6 +294,26 @@ class AtlasService {
   }
 
   async loadEquipment(index: string): Promise<any | null> {
+    let resolvedPath: string | null = null;
+    try {
+      const equipmentIndex = await this.fetchAtlasData('/assets/atlas/equipment/index.json');
+      if (Array.isArray(equipmentIndex)) {
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const entry = equipmentIndex.find((e: any) =>
+          e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
+      }
+    } catch (e) {}
+
+    if (resolvedPath) {
+      const data = await this.fetchAtlasData(resolvedPath);
+      if (data) return data;
+    }
+
     const slug = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
     const hyphenSlug = index.toLowerCase().replace(/[\s_]/g, '-').replace(/'/g, '');
     
