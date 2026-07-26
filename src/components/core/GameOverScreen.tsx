@@ -20,7 +20,7 @@ export const GameOverScreen: React.FC = () => {
 
   const handleLoadLastSave = async () => {
     playClickSound();
-    setIsLoading(true, "Terugspoelen naar laatste save...");
+    setIsLoading(true, "Restoring last save state...");
     try {
       // 1. Load saved characters from slots/local templates
       await loadCharacters();
@@ -49,7 +49,7 @@ export const GameOverScreen: React.FC = () => {
         playSuccessSound();
         soundService.playMusic('game');
       } else {
-        alert("Geen geldig opslagbestand gevonden!");
+        alert("No valid save file found!");
       }
     } catch (e) {
       console.error("Save restoration failed:", e);
@@ -128,10 +128,10 @@ export const GameOverScreen: React.FC = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-elan font-black tracking-tighter text-red-700 uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] mb-3">
-            UW GEZELSCHAP IS GESNEUVELD
+            YOUR PARTY HAS PERISHED
           </h1>
           <p className="text-dragon-gold font-header uppercase tracking-[0.3em] text-xs max-w-md leading-relaxed">
-            De kerker heeft uw voortgang opgeëist. Uw zielen dwalen nu rond in de diepten van de vergetelheid.
+            The dungeon has claimed your progress. Your souls now wander the endless depths of the forgotten abyss.
           </p>
         </motion.div>
 
@@ -147,7 +147,7 @@ export const GameOverScreen: React.FC = () => {
             className="w-full relative group overflow-hidden bg-gradient-to-r from-red-950 to-red-900 hover:from-red-900 hover:to-red-800 text-white font-header font-bold text-sm uppercase py-4 px-6 rounded-sm border border-red-700/40 shadow-[0_4px_20px_rgba(139,0,0,0.4)] transition-all hover:scale-[1.03] active:scale-95 flex items-center justify-center gap-3"
           >
             <GameIcon name="refresh" size={16} color="#FFFFFF" />
-            Laad Laatste Save
+            Load Last Save
           </button>
 
           <button
@@ -155,7 +155,7 @@ export const GameOverScreen: React.FC = () => {
             className="w-full relative group overflow-hidden bg-stone-900 hover:bg-stone-850 text-white/70 hover:text-white font-header font-bold text-xs uppercase py-3.5 px-6 rounded-sm border border-stone-800 shadow-md transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3"
           >
             <GameIcon name="close" size={14} color="currentColor" />
-            Terug naar Hoofdmenu
+            Quit to Title Screen
           </button>
         </motion.div>
       </div>

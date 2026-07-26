@@ -22,11 +22,11 @@ test('verify game over screen overlay', async ({ page }) => {
     });
 
     console.log('Verifying Game Over Screen...');
-    await page.waitForSelector('text=UW GEZELSCHAP IS GESNEUVELD', { timeout: 15000 });
+    await page.waitForSelector('text=YOUR PARTY HAS PERISHED', { timeout: 15000 });
 
     // Assert elements are visible
-    await expect(page.locator('text=Laad Laatste Save')).toBeVisible();
-    await expect(page.locator('text=Terug naar Hoofdmenu')).toBeVisible();
+    await expect(page.locator('text=Load Last Save')).toBeVisible();
+    await expect(page.locator('text=Quit to Title Screen')).toBeVisible();
 
     // Take screenshots for verification
     await page.screenshot({ path: 'verification/game_over_screen.png' });
