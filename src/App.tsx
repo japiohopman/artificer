@@ -16,6 +16,7 @@ import { playModalOpenSound, playModalCloseSound } from './services/storageServi
 import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
 import { LoadingScreen } from './components/core/LoadingScreen';
 import { AnimatePresence } from 'motion/react';
+import { GameOverScreen } from './components/core/GameOverScreen';
 
 // Global Overlays
 import { BookReader } from './components/bookreader/BookReader';
@@ -39,6 +40,7 @@ export default function App() {
   const isJournalOpen = useUIStore(state => state.isJournalOpen);
   const setIsJournalOpen = useUIStore(state => state.setIsJournalOpen);
   const isCharacterCreatorOpen = useUIStore(state => state.isCharacterCreatorOpen);
+  const isGameOver = useUIStore(state => state.isGameOver);
   
   const isGameStarted = useGameStore(state => state.isGameStarted);
   
@@ -143,6 +145,8 @@ export default function App() {
           <TransportProfile />
           <CharacterCreator />
           <LevelUpOverlay />
+
+          {isGameOver && <GameOverScreen />}
 
           {/* DevKit Modal */}
           <DevKit

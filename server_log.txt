@@ -2,17 +2,34 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
 Server running on http://localhost:3000
-11:28:46 PM [vite] (client) page reload verify_hud_footer.spec.ts
-11:28:46 PM [vite] (client) page reload server_log.txt
-11:38:35 PM [vite] (client) page reload verify_hud_footer.spec.ts
-11:38:35 PM [vite] (client) page reload server_log.txt
-11:41:23 PM [vite] (client) page reload verify_hud_footer.spec.ts
-11:41:23 PM [vite] (client) page reload server_log.txt
-11:50:29 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
-11:50:29 PM [vite] (client) page reload server_log.txt
-11:57:25 PM [vite] (client) hmr update /src/components/character/CharacterCreator.tsx, /src/index.css
-11:57:25 PM [vite] (client) page reload server_log.txt
-12:06:26 AM [vite] (client) hmr update /src/components/character/CharacterCreator/ChoicesStep.tsx, /src/index.css
-12:06:26 AM [vite] (client) page reload server_log.txt
+1:20:13 PM [vite] Internal server error: Failed to resolve import "./components/core/GameOverScreen" from "src/App.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /app/src/App.tsx:19:31
+  18 |  import { LoadingScreen } from "./components/core/LoadingScreen";
+  19 |  import { AnimatePresence } from "motion/react";
+  20 |  import { GameOverScreen } from "./components/core/GameOverScreen";
+     |                                  ^
+  21 |  import { BookReader } from "./components/bookreader/BookReader";
+  22 |  import { SpellbookReader } from "./components/character/SpellbookReader";
+      at TransformPluginContext._formatLog (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42658:41)
+      at TransformPluginContext.error (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42655:16)
+      at normalizeUrl (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40634:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async <anonymous> (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40753:37)
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:40680:7)
+      at async EnvironmentPluginContainer.transform (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:42453:18)
+      at async loadAndTransform (/app/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35845:27)
+1:20:13 PM [vite] (client) Pre-transform error: Failed to resolve import "./components/core/GameOverScreen" from "src/App.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /app/src/App.tsx:19:31
+  18 |  import { LoadingScreen } from "./components/core/LoadingScreen";
+  19 |  import { AnimatePresence } from "motion/react";
+  20 |  import { GameOverScreen } from "./components/core/GameOverScreen";
+     |                                  ^
+  21 |  import { BookReader } from "./components/bookreader/BookReader";
+  22 |  import { SpellbookReader } from "./components/character/SpellbookReader";
+1:21:59 PM [vite] (client) page reload src/components/core/GameOverScreen.tsx
+1:21:59 PM [vite] (client) page reload server_log.txt
