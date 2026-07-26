@@ -78,7 +78,7 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: isWorldPanelOpen ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-l-0"
+          className="h-full z-[1000] relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-l-0"
         >
           <div className="w-80 h-full flex flex-col">
             <WorldPanel />
@@ -95,7 +95,7 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full z-[1000] relative flex flex-col shrink-0 shadow-2xl overflow-hidden seamless-hud-unit border-r-0"
+          className="h-full z-[1000] relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-r-0"
         >
           <div className="w-80 h-full flex flex-col overflow-hidden">
              <CharacterPanel />
