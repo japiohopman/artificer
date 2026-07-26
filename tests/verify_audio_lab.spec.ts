@@ -18,11 +18,11 @@ test('verify audio lab in devkit', async ({ page }) => {
     console.log('Waiting for THE GENESIS RITUAL...');
     await page.waitForSelector('text=THE GENESIS RITUAL', { timeout: 30000 });
 
-    console.log('Pressing Shift+D...');
+    console.log('Pressing Alt+D...');
     await page.focus('body');
-    await page.keyboard.down('Shift');
+    await page.keyboard.down('Alt');
     await page.keyboard.press('KeyD');
-    await page.keyboard.up('Shift');
+    await page.keyboard.up('Alt');
     
     console.log('Waiting for DevKit (ARCANE_OS)...');
     await page.waitForSelector('text=ARCANE_OS', { timeout: 30000 });

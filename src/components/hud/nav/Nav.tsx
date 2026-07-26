@@ -30,6 +30,8 @@ export const Nav: React.FC = () => {
     activeCharacterTab,
     setActiveCharacterTab,
     dynamicNavButtons,
+    chatExpanded,
+    setChatExpanded
   } = useUIStore();
 
   const {
@@ -38,15 +40,12 @@ export const Nav: React.FC = () => {
 
   const leftActions: NavAction[] = [
     {
-      id: 'grid-view',
+      id: 'chat-panel-toggle',
       icon: 'panel',
-      label: 'Tactical',
-      onClick: () => {
-        const { currentView, setCurrentView } = useUIStore.getState();
-        setCurrentView(currentView === 'grid' ? 'world' : 'grid');
-      },
-      isActive: useUIStore.getState().currentView === 'grid',
-      shortcut: 'Shift+G'
+      label: 'Chat',
+      onClick: () => setChatExpanded(!chatExpanded),
+      isActive: chatExpanded,
+      shortcut: 'Alt+C'
     },
     {
       id: 'world-panel',
@@ -54,7 +53,7 @@ export const Nav: React.FC = () => {
       label: 'Atlas',
       onClick: () => setIsWorldPanelOpen(!isWorldPanelOpen),
       isActive: isWorldPanelOpen,
-      shortcut: 'M'
+      shortcut: 'Alt+M'
     },
     {
       id: 'journal-panel',
@@ -134,11 +133,6 @@ export const Nav: React.FC = () => {
               )}
             >
               <GameIcon name={action.icon} size={18} />
-              {action.shortcut && (
-                <span className="absolute -top-1 -right-1 bg-dragon-darkRed text-[7px] px-1 rounded border border-dragon-gold text-white/80">
-                  {action.shortcut}
-                </span>
-              )}
             </button>
           ))}
         </div>
@@ -196,11 +190,6 @@ export const Nav: React.FC = () => {
               )}
             >
               <GameIcon name={action.icon} size={18} />
-              {action.shortcut && (
-                <span className="absolute -top-1 -left-1 bg-dragon-darkRed text-[7px] px-1 rounded border border-dragon-gold text-white/80">
-                  {action.shortcut}
-                </span>
-              )}
             </button>
           ))}
         </div>

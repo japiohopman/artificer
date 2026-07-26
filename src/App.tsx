@@ -73,7 +73,7 @@ export default function App() {
         return;
       }
 
-      if (e.shiftKey && e.key.toLowerCase() === 'd') {
+      if (e.altKey && e.key.toLowerCase() === 'd') {
         e.preventDefault();
         const { isDevKitOpen: currentDevKitOpen, setIsDevKitOpen: setDevKitOpen } = useUIStore.getState();
         const nextState = !currentDevKitOpen;
@@ -91,16 +91,22 @@ export default function App() {
         else playModalCloseSound();
       }
 
-      if (e.key.toLowerCase() === 'g' && !e.ctrlKey && !e.altKey && !e.metaKey) {
+      if (e.altKey && e.key.toLowerCase() === 'g') {
         e.preventDefault();
-        const { isGridVisible, setIsGridVisible, currentView, setCurrentView } = useUIStore.getState();
-        if (e.shiftKey) {
-          // Shift+G: Toggle between World and Grid view
-          setCurrentView(currentView === 'grid' ? 'world' : 'grid');
-        } else {
-          // G: Toggle Grid lines visibility
-          setIsGridVisible(!isGridVisible);
-        }
+        const { isGridVisible, setIsGridVisible } = useUIStore.getState();
+        setIsGridVisible(!isGridVisible);
+      }
+
+      if (e.altKey && e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+        const { chatExpanded, setChatExpanded } = useUIStore.getState();
+        setChatExpanded(!chatExpanded);
+      }
+
+      if (e.altKey && e.key.toLowerCase() === 'm') {
+        e.preventDefault();
+        const { isWorldPanelOpen, setIsWorldPanelOpen } = useUIStore.getState();
+        setIsWorldPanelOpen(!isWorldPanelOpen);
       }
     };
 
