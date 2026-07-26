@@ -9,6 +9,16 @@ interface FogOfWarProps {
   protoWidth: number;
 }
 
+const PRE_VISIBLE_SEAS = [
+  { x: 500, y: 1500, radius: 1000, name: "Trackless Sea" },
+  { x: 1000, y: 2000, radius: 600, name: "Sea of Swords" },
+  { x: 1000, y: 3100, radius: 800, name: "Sea of Moving Ice" },
+  { x: 1500, y: 500, radius: 800, name: "Shining Sea" },
+  { x: 3200, y: 2200, radius: 900, name: "Sea of Fallen Stars" },
+  { x: 3000, y: 200, radius: 900, name: "The Great Sea" },
+  { x: 4000, y: 3100, radius: 800, name: "Great Ice Sea" }
+];
+
 export const FogOfWar: React.FC<FogOfWarProps> = ({ mapHeight, mapWidth, protoHeight, protoWidth }) => {
   const exploredAreas = useWorldStore(state => state.exploredAreas);
   
@@ -29,6 +39,23 @@ export const FogOfWar: React.FC<FogOfWarProps> = ({ mapHeight, mapWidth, protoHe
         <mask id="fog-mask">
           {/* White fills the mask, meaning fully visible fog */}
           <rect x="0" y="0" width={mapWidth} height={mapHeight} fill="white" />
+
+          {/* Great pre-visible seas (always revealed) */}
+          {PRE_VISIBLE_SEAS.map((sea, index) => {
+            const [px, py] = getMapCoords(sea.x, sea.y);
+            const radius = sea.radius * (mapWidth / protoWidth);
+            return (
+              <circle
+                key={`sea-${index}`}
+                cx={px}
+                cy={py}
+                r={radius}
+                fill="black"
+                filter="url(#fog-blur)"
+              />
+            );
+          })}
+
           {/* Black circles cut holes in the mask, revealing the map underneath */}
           {exploredAreas.map((area, index) => {
             const [px, py] = getMapCoords(area.x, area.y);

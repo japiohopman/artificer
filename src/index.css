@@ -340,6 +340,18 @@
   display: none !important;
 }
 
+.leaflet-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.leaflet-tooltip::before,
+.leaflet-tooltip::after {
+  display: none !important;
+}
+
 .map-tooltip {
   background: transparent !important;
   border: none !important;
@@ -365,6 +377,8 @@
 
 .atlas-marker-seas_oceans span {
   text-shadow: none;
+  font-style: italic !important;
+  color: #0f1c30 !important; /* ocean blue/dark ink colour */
 }
 
 .fantasy-atlas-frame {
