@@ -5,29 +5,43 @@ const EQUIPMENT_DIR = path.join(__dirname, '../public/assets/atlas/equipment/jso
 const MAGIC_ITEMS_DIR = path.join(__dirname, '../public/assets/atlas/magic_items/json');
 const OUTPUT_FILE = path.join(__dirname, '../public/assets/atlas/equipment/index.json');
 
+function scanDirectoryRecursive(dirPath) {
+  let results = [];
+  if (!fs.existsSync(dirPath)) return results;
+
+  const list = fs.readdirSync(dirPath);
+  list.forEach(file => {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(scanDirectoryRecursive(filePath));
+    } else if (file.endsWith('.json') && !file.startsWith('_') && file !== 'index.json') {
+      results.push({
+        filePath,
+        relativePath: path.relative(path.join(__dirname, '../public'), filePath)
+      });
+    }
+  });
+  return results;
+}
+
 function generateIndex() {
-  console.log('Generating equipment and magic items index...');
+  console.log('Generating recursive equipment and magic items index...');
   
   const index = [];
-  const dirs = [
-    { path: EQUIPMENT_DIR, prefix: '/assets/atlas/equipment/json/' },
-    { path: MAGIC_ITEMS_DIR, prefix: '/assets/atlas/magic_items/json/' }
-  ];
+  const dirs = [EQUIPMENT_DIR, MAGIC_ITEMS_DIR];
 
-  dirs.forEach(dirInfo => {
-    if (!fs.existsSync(dirInfo.path)) {
-      console.warn(`Directory not found: ${dirInfo.path}`);
-      return;
-    }
-
-    const files = fs.readdirSync(dirInfo.path).filter(f => f.endsWith('.json'));
-    files.forEach(file => {
+  dirs.forEach(baseDir => {
+    const scanResults = scanDirectoryRecursive(baseDir);
+    scanResults.forEach(result => {
       try {
-        const content = fs.readFileSync(path.join(dirInfo.path, file), 'utf8');
+        const content = fs.readFileSync(result.filePath, 'utf8');
         const data = JSON.parse(content);
 
+        const cleanJsonPath = `/${result.relativePath.replace(/\\/g, '/')}`;
+
         index.push({
-          index: data.index || path.basename(file, '.json'),
+          index: data.index || path.basename(result.filePath, '.json'),
           name: data.name || 'Unknown Item',
           kind: data.kind || 'unknown',
           equipment_category: data.equipment_category?.name || data.equipment_category || 'Other',
@@ -35,10 +49,10 @@ function generateIndex() {
           cost: data.cost,
           weight: data.weight,
           imageUrl: data.imageUrl || data.image || null,
-          json_path: `${dirInfo.prefix}${file}`
+          json_path: cleanJsonPath
         });
       } catch (e) {
-        console.error(`Error parsing ${file} in ${dirInfo.path}:`, e.message);
+        console.error(`Error parsing ${result.filePath}:`, e.message);
       }
     });
   });
