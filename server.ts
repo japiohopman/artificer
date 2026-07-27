@@ -67,6 +67,8 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  console.log("[ElevenLabs Server Init] Available Env Keys:", Object.keys(process.env).filter(k => k.toLowerCase().includes("eleven") || k.toLowerCase().includes("11") || k.toLowerCase().includes("xi")));
+
   app.use(express.json({ limit: '10mb' }));
 
   // Helper: Set correct MIME types for WASM and other assets
@@ -570,9 +572,19 @@ async function startServer() {
   app.post("/api/audio/generate-sfx", async (req, res) => {
     try {
       const { text, duration_seconds, prompt_influence, loop, accountIndex, output_format } = req.body;
+
+      console.log("[ElevenLabs Generate SFX] Request details:", {
+        text,
+        accountIndex,
+        output_format,
+        hasHeaders: !!req.headers,
+        headerKeys: req.headers ? Object.keys(req.headers) : []
+      });
+
       const apiKey = getElevenLabsKey(req, accountIndex);
 
       if (!apiKey) {
+        console.error("[ElevenLabs Generate SFX] Error: API Key was not resolved.");
         return res.status(500).json({ error: "Missing ElevenLabs API key" });
       }
 

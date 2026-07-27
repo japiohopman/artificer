@@ -256,6 +256,14 @@ export const AudioLaboratory: React.FC = () => {
                           if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
                           if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
 
+                          console.log("[AudioLaboratory] Generating sound effect. State check:", {
+                            accountIndex,
+                            hasKey1: !!settings.elevenlabs_key_1,
+                            hasKey2: !!settings.elevenlabs_key_2,
+                            hasKey3: !!settings.elevenlabs_key_3,
+                            sendingHeaders: Object.keys(headers)
+                          });
+
                           const res = await fetch("/api/audio/generate-sfx", {
                             method: "POST",
                             headers,
