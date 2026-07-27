@@ -37,6 +37,7 @@ interface UIState {
   isTransportProfileOpen: boolean;
   isCharacterCreatorOpen: boolean;
   isCharacterSpellbookOpen: boolean;
+  isSettingsOpen: boolean;
   isGameOver: boolean;
   searchQuery: string;
 
@@ -87,6 +88,7 @@ interface UIState {
   setIsTransportProfileOpen: (isOpen: boolean) => void;
   setIsCharacterCreatorOpen: (isOpen: boolean) => void;
   setIsCharacterSpellbookOpen: (isOpen: boolean) => void;
+  setIsSettingsOpen: (isOpen: boolean) => void;
   setIsTargeting: (isTargeting: boolean) => void;
   setTargetingAction: (action: any | null) => void;
 }
@@ -123,6 +125,7 @@ export const useUIStore = create<UIState>((set) => ({
   isTransportProfileOpen: false,
   isCharacterCreatorOpen: false,
   isCharacterSpellbookOpen: false,
+  isSettingsOpen: false,
   isGameOver: false,
   searchQuery: '',
 
@@ -166,6 +169,7 @@ export const useUIStore = create<UIState>((set) => ({
   setIsTransportProfileOpen: (isTransportProfileOpen) => set({ isTransportProfileOpen }),
   setIsCharacterCreatorOpen: (isCharacterCreatorOpen) => set({ isCharacterCreatorOpen }),
   setIsCharacterSpellbookOpen: (isCharacterSpellbookOpen) => set({ isCharacterSpellbookOpen }),
+  setIsSettingsOpen: (isSettingsOpen) => set({ isSettingsOpen }),
   setIsGameOver: (isGameOver) => set({ isGameOver }),
   setIsTargeting: (isTargeting) => set({ isTargeting }),
   setTargetingAction: (targetingAction) => set({ targetingAction }),

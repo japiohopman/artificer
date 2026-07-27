@@ -31,7 +31,9 @@ export const Nav: React.FC = () => {
     setActiveCharacterTab,
     dynamicNavButtons,
     chatExpanded,
-    setChatExpanded
+    setChatExpanded,
+    isSettingsOpen,
+    setIsSettingsOpen
   } = useUIStore();
 
   const {
@@ -107,6 +109,14 @@ export const Nav: React.FC = () => {
       },
       isActive: isCharacterPanelOpen && activeCharacterTab !== 'logistics',
       shortcut: 'C'
+    },
+    {
+      id: 'settings-panel',
+      icon: 'settings',
+      label: 'Settings',
+      onClick: () => setIsSettingsOpen(!isSettingsOpen),
+      isActive: isSettingsOpen,
+      shortcut: 'Alt+O'
     }
   ];
 

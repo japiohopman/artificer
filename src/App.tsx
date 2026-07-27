@@ -17,6 +17,7 @@ import { DiceBoxCanvas } from './dice_roller/DiceBoxCanvas';
 import { LoadingScreen } from './components/core/LoadingScreen';
 import { AnimatePresence } from 'motion/react';
 import { GameOverScreen } from './components/core/GameOverScreen';
+import { SettingsModal } from './components/core/SettingsModal';
 
 // Global Overlays
 import { BookReader } from './components/bookreader/BookReader';
@@ -41,6 +42,7 @@ export default function App() {
   const setIsJournalOpen = useUIStore(state => state.setIsJournalOpen);
   const isCharacterCreatorOpen = useUIStore(state => state.isCharacterCreatorOpen);
   const isGameOver = useUIStore(state => state.isGameOver);
+  const isSettingsOpen = useUIStore(state => state.isSettingsOpen);
   
   const isGameStarted = useGameStore(state => state.isGameStarted);
   
@@ -108,6 +110,15 @@ export default function App() {
         const { isWorldPanelOpen, setIsWorldPanelOpen } = useUIStore.getState();
         setIsWorldPanelOpen(!isWorldPanelOpen);
       }
+
+      if (e.altKey && e.key.toLowerCase() === 'o') {
+        e.preventDefault();
+        const { isSettingsOpen: currentSettingsOpen, setIsSettingsOpen: setSettingsOpen } = useUIStore.getState();
+        const nextState = !currentSettingsOpen;
+        setSettingsOpen(nextState);
+        if (nextState) playModalOpenSound();
+        else playModalCloseSound();
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -151,6 +162,10 @@ export default function App() {
           <TransportProfile />
           <CharacterCreator />
           <LevelUpOverlay />
+
+          <AnimatePresence>
+            {isSettingsOpen && <SettingsModal />}
+          </AnimatePresence>
 
           {isGameOver && <GameOverScreen />}
 
