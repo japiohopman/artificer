@@ -18,7 +18,7 @@ function sanitizeEnvValue(val: string | undefined): string {
 }
 
 const ELEVENLABS_KEYS = [
-  sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY),
+  sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.XI_API_KEY),
   sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
   sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
 ];
@@ -547,14 +547,19 @@ async function startServer() {
 
   app.post("/api/audio/generate-sfx", async (req, res) => {
     try {
-      const { text, duration_seconds, prompt_influence, loop, accountIndex } = req.body;
+      const { text, duration_seconds, prompt_influence, loop, accountIndex, output_format } = req.body;
       const apiKey = getElevenLabsKey(req, accountIndex);
 
       if (!apiKey) {
         return res.status(500).json({ error: "Missing ElevenLabs API key" });
       }
 
-      const response = await fetch("https://api.elevenlabs.io/v1/sound-generation", {
+      let url = "https://api.elevenlabs.io/v1/sound-generation";
+      if (output_format) {
+        url += `?output_format=${encodeURIComponent(output_format)}`;
+      }
+
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "xi-api-key": apiKey,
@@ -576,7 +581,8 @@ async function startServer() {
       }
 
       const buffer = await response.arrayBuffer();
-      res.setHeader("Content-Type", "audio/wav");
+      const contentType = response.headers.get("content-type") || "audio/mpeg";
+      res.setHeader("Content-Type", contentType);
       res.send(Buffer.from(buffer));
     } catch (error: any) {
       console.error("SFX generation error:", error);
