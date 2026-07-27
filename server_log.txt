@@ -2,7 +2,56 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
 Server running on http://localhost:3000
-7:31:17 PM [vite] (client) page reload tests/verify_audio_lab.spec.ts
-7:31:17 PM [vite] (client) page reload server_log.txt
+4:00:06 AM [vite] (client) page reload tests/verify_settings.spec.ts
+4:00:06 AM [vite] (client) page reload tests/verify_settings.spec.ts
+4:00:06 AM [vite] (client) page reload server_log.txt
+4:59:17 AM [vite] (client) page reload src/store/useUIStore.ts
+4:59:17 AM [vite] (client) page reload server_log.txt
+4:59:46 AM [vite] (client) page reload src/store/useUIStore.ts
+4:59:46 AM [vite] (client) page reload server_log.txt
+4:59:49 AM [vite] (client) page reload src/store/useUIStore.ts
+4:59:49 AM [vite] (client) page reload server_log.txt
+4:59:49 AM [vite] (client) page reload server_log.txt
+5:00:08 AM [vite] (client) page reload src/store/useUIStore.ts
+5:00:08 AM [vite] (client) page reload server_log.txt
+5:07:33 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
+5:07:33 AM [vite] (client) page reload server_log.txt
+5:07:37 AM [vite] (client) hmr update /src/components/hud/nav/Nav.tsx, /src/index.css
+5:07:37 AM [vite] (client) page reload server_log.txt
+5:08:04 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:08:04 AM [vite] (client) page reload server_log.txt
+5:08:26 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:08:26 AM [vite] (client) page reload server_log.txt
+5:08:52 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:08:52 AM [vite] (client) page reload server_log.txt
+5:08:58 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:08:58 AM [vite] (client) page reload server_log.txt
+5:11:47 AM [vite] (client) page reload server.ts
+5:11:47 AM [vite] (client) page reload server_log.txt
+5:11:51 AM [vite] (client) page reload server.ts
+5:11:51 AM [vite] (client) page reload server_log.txt
+5:12:08 AM [vite] (client) page reload server.ts
+5:12:08 AM [vite] (client) page reload server_log.txt
+5:12:13 AM [vite] (client) page reload server.ts
+5:12:13 AM [vite] (client) page reload server_log.txt
+5:12:34 AM [vite] (client) page reload server.ts
+5:12:34 AM [vite] (client) page reload server_log.txt
+5:12:44 AM [vite] (client) page reload server.ts
+5:12:44 AM [vite] (client) page reload server_log.txt
+5:12:48 AM [vite] (client) page reload server.ts
+5:12:48 AM [vite] (client) page reload server_log.txt
+5:13:36 AM [vite] (client) page reload src/services/ai/config.ts
+5:13:36 AM [vite] (client) page reload server_log.txt
+5:14:21 AM [vite] (client) hmr update /src/components/devkit/AudioLaboratory.tsx, /src/index.css
+5:14:21 AM [vite] (client) page reload server_log.txt
+5:15:08 AM [vite] (client) hmr update /src/components/devkit/AudioLaboratory.tsx, /src/index.css
+5:15:08 AM [vite] (client) page reload server_log.txt
+5:15:56 AM [vite] (client) hmr update /src/components/devkit/AudioLaboratory.tsx, /src/index.css
+5:15:56 AM [vite] (client) page reload server_log.txt
+5:19:34 AM [vite] (client) ✨ new dependencies optimized: zustand/middleware
+5:19:34 AM [vite] (client) ✨ optimized dependencies changed. reloading
+5:19:34 AM [vite] (client) page reload server_log.txt
+5:20:37 AM [vite] (client) page reload tests/verify_settings.spec.ts
+5:20:37 AM [vite] (client) page reload server_log.txt

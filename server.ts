@@ -23,7 +23,13 @@ const ELEVENLABS_KEYS = [
   sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
 ];
 
-function getElevenLabsKey(accountIndex: number = 0) {
+function getElevenLabsKey(req?: any, accountIndex: number = 0) {
+  if (req && req.headers) {
+    const headerKey = req.headers[`x-elevenlabs-key-${accountIndex + 1}`];
+    if (headerKey && typeof headerKey === 'string' && headerKey.length > 10) {
+      return headerKey;
+    }
+  }
   const key = ELEVENLABS_KEYS[accountIndex];
   if (!key || key.length < 10) {
     const fallbackIdx = ELEVENLABS_KEYS.findIndex(k => k && k.length > 10);
@@ -422,7 +428,7 @@ async function startServer() {
   // API: AI Proxy (Google Gemini)
   app.post("/api/ai/generate-content", async (req, res) => {
     const { model, contents, config, tools } = req.body;
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = req.headers['x-gemini-key'] as string || process.env.GEMINI_API_KEY;
 
     console.log(`[AI Proxy] Generating content with model: ${model}`);
 
@@ -456,7 +462,7 @@ async function startServer() {
 
   app.post("/api/ai/generate-image", async (req, res) => {
     const { model, contents, config } = req.body;
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = req.headers['x-gemini-key'] as string || process.env.GEMINI_API_KEY;
 
     console.log(`[AI Proxy] Generating image with model: ${model}`);
 
@@ -484,7 +490,7 @@ async function startServer() {
   app.get("/api/audio/history", async (req, res) => {
     try {
       const accountIndex = parseInt(req.query.accountIndex as string || "0");
-      const apiKey = getElevenLabsKey(accountIndex);
+      const apiKey = getElevenLabsKey(req, accountIndex);
 
       if (!apiKey) {
         return res.status(500).json({ error: "Missing ElevenLabs API key" });
@@ -515,7 +521,7 @@ async function startServer() {
     }
 
     const accountIndex = parseInt(req.query.accountIndex as string || "0");
-    const apiKey = getElevenLabsKey(accountIndex);
+    const apiKey = getElevenLabsKey(req, accountIndex);
 
     try {
       if (!apiKey) {
@@ -542,7 +548,7 @@ async function startServer() {
   app.post("/api/audio/generate-sfx", async (req, res) => {
     try {
       const { text, duration_seconds, prompt_influence, loop, accountIndex } = req.body;
-      const apiKey = getElevenLabsKey(accountIndex);
+      const apiKey = getElevenLabsKey(req, accountIndex);
 
       if (!apiKey) {
         return res.status(500).json({ error: "Missing ElevenLabs API key" });
@@ -612,7 +618,7 @@ async function startServer() {
 
   app.post("/api/ai/optimize-sound-prompt", async (req, res) => {
     const { prompt, category } = req.body;
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = req.headers['x-gemini-key'] as string || process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
       return res.status(500).json({ error: "Gemini API key missing." });

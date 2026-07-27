@@ -5,6 +5,7 @@ import { playClickSound, playSuccessSound } from '../../services/storageService'
 import { motion, AnimatePresence } from 'motion/react';
 import { useAudioStore } from '../../store/useAudioStore';
 import { LAYER_NAMES } from '../../types/audio';
+import { useSettingsStore } from '../../store/useSettingsStore';
 
 export const AudioLaboratory: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'explorer' | 'forge' | 'requester'>('explorer');
@@ -211,9 +212,14 @@ export const AudioLaboratory: React.FC = () => {
                         setIsOptimizing(true);
                         playClickSound();
                         try {
+                          const settings = useSettingsStore.getState();
+                          const headers: Record<string, string> = { "Content-Type": "application/json" };
+                          if (settings.gemini_key) {
+                            headers["x-gemini-key"] = settings.gemini_key;
+                          }
                           const res = await fetch("/api/ai/optimize-sound-prompt", {
                             method: "POST",
-                            headers: { "Content-Type": "application/json" },
+                            headers,
                             body: JSON.stringify({ prompt: forgePrompt, category: 'sfx' })
                           });
                           const data = await res.json();
@@ -244,9 +250,15 @@ export const AudioLaboratory: React.FC = () => {
                         setIsGenerating(true);
                         playClickSound();
                         try {
+                          const settings = useSettingsStore.getState();
+                          const headers: Record<string, string> = { "Content-Type": "application/json" };
+                          if (settings.elevenlabs_key_1) headers["x-elevenlabs-key-1"] = settings.elevenlabs_key_1;
+                          if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
+                          if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
+
                           const res = await fetch("/api/audio/generate-sfx", {
                             method: "POST",
-                            headers: { "Content-Type": "application/json" },
+                            headers,
                             body: JSON.stringify({
                               text: forgePrompt,
                               duration_seconds: duration,

@@ -1,3 +1,5 @@
+import { useSettingsStore } from '../../store/useSettingsStore';
+
 export const MODELS = {
   TEXT: "gemini-flash-latest",
   IMAGE: "gemini-2.5-flash-image"
@@ -6,13 +8,25 @@ export const MODELS = {
 export const ai = {
   models: {
     generateContent: async ({ model, contents, config }: { model: string; contents: any; config?: any }) => {
-      const endpoint = model === MODELS.IMAGE ? '/api/ai/generate-image' : '/api/ai/generate-content';
+      const settings = useSettingsStore.getState();
+      const finalModel = (model === MODELS.TEXT || model === "gemini-1.5-flash") ? (settings.gemini_model || model) : model;
+      const endpoint = finalModel === MODELS.IMAGE ? '/api/ai/generate-image' : '/api/ai/generate-content';
+
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json'
+      };
+      if (settings.gemini_key) {
+        headers['x-gemini-key'] = settings.gemini_key;
+      }
+      if (settings.openai_key) {
+        headers['x-openai-key'] = settings.openai_key;
+      }
 
       const res = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         body: JSON.stringify({
-          model,
+          model: finalModel,
           // Normalize contents to array if it's a string or single object
           contents: Array.isArray(contents) ? contents : (typeof contents === 'string' ? [{ parts: [{ text: contents }] }] : [contents]),
           config,
