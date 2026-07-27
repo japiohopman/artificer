@@ -17,25 +17,38 @@ function sanitizeEnvValue(val: string | undefined): string {
   return clean.trim();
 }
 
-const ELEVENLABS_KEYS = [
-  sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.XI_API_KEY),
-  sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
-  sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
-];
-
-function getElevenLabsKey(req?: any, accountIndex: number = 0) {
-  if (req && req.headers) {
-    const headerKey = req.headers[`x-elevenlabs-key-${accountIndex + 1}`];
-    if (headerKey && typeof headerKey === 'string' && headerKey.length > 10) {
-      return headerKey;
+function getElevenLabsKey(req?: any, accountIndexInput: any = 0) {
+  let accountIndex = 0;
+  if (accountIndexInput !== undefined && accountIndexInput !== null) {
+    const parsed = parseInt(accountIndexInput, 10);
+    if (!isNaN(parsed) && parsed >= 0 && parsed < 3) {
+      accountIndex = parsed;
     }
   }
-  const key = ELEVENLABS_KEYS[accountIndex];
-  if (!key || key.length < 10) {
-    const fallbackIdx = ELEVENLABS_KEYS.findIndex(k => k && k.length > 10);
-    return fallbackIdx !== -1 ? ELEVENLABS_KEYS[fallbackIdx] : "";
+
+  // 1. First, check client-supplied custom headers
+  if (req && req.headers) {
+    const headerKey = req.headers[`x-elevenlabs-key-${accountIndex + 1}`];
+    if (headerKey && typeof headerKey === 'string' && headerKey.trim().length > 10) {
+      return headerKey.trim();
+    }
   }
-  return key;
+
+  // 2. Second, fetch directly from environment dynamically to avoid any cache issues
+  const keys = [
+    sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.XI_API_KEY),
+    sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
+    sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
+  ];
+
+  const key = keys[accountIndex];
+  if (key && key.length > 10) {
+    return key;
+  }
+
+  // 3. Fallback to any valid key in env
+  const fallback = keys.find(k => k && k.length > 10);
+  return fallback || "";
 }
 
 const __filename = fileURLToPath(import.meta.url);
