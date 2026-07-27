@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import { Loader2, Mic, Play, Sparkles, Wand2, History as HistoryIcon } from "lucide-react";
+import { useSettingsStore } from "../../../store/useSettingsStore";
 import { Howl } from 'howler';
 
 type VoiceModel = {
@@ -65,7 +66,13 @@ export function GenerateVoice({ voiceOptions, selectedVoiceId, onSelectVoice, on
     if (!selectedVoice) return;
     setIsLoadingHistory(true);
     try {
-      const res = await fetch(`/api/audio/history?accountIndex=${selectedVoice.accountIndex}`);
+      const settings = useSettingsStore.getState();
+      const headers: Record<string, string> = {};
+      if (settings.elevenlabs_key_1) headers["x-elevenlabs-key-1"] = settings.elevenlabs_key_1;
+      if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
+      if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
+
+      const res = await fetch(`/api/audio/history?accountIndex=${selectedVoice.accountIndex}`, { headers });
       if (res.ok) {
         const data = await res.json();
         if (data.history?.length > 0) {
@@ -94,7 +101,13 @@ export function GenerateVoice({ voiceOptions, selectedVoiceId, onSelectVoice, on
     
     setPlayingId(itemId);
     try {
-      const res = await fetch(`/api/audio/history/${itemId}/audio?accountIndex=${selectedVoice?.accountIndex}`);
+      const settings = useSettingsStore.getState();
+      const headers: Record<string, string> = {};
+      if (settings.elevenlabs_key_1) headers["x-elevenlabs-key-1"] = settings.elevenlabs_key_1;
+      if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
+      if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
+
+      const res = await fetch(`/api/audio/history/${itemId}/audio?accountIndex=${selectedVoice?.accountIndex}`, { headers });
       if (res.ok) {
         const blob = await res.blob();
         console.log(`[ElevenLabs] Playing history item ${itemId}, type: ${blob.type}, size: ${blob.size}`);
