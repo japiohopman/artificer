@@ -263,20 +263,32 @@ export const AudioLaboratory: React.FC = () => {
                               text: forgePrompt,
                               duration_seconds: duration,
                               loop: isLoop,
-                              accountIndex
+                              accountIndex,
+                              output_format: "mp3_44100_128" // Explicit free-tier friendly format
                             })
                           });
 
-                          if (!res.ok) throw new Error("Generation failed");
+                          if (!res.ok) {
+                            let errMsg = "Generation failed";
+                            try {
+                              const errData = await res.json();
+                              errMsg = errData.detail || errData.error || errMsg;
+                            } catch (_) {
+                              try {
+                                errMsg = await res.text() || errMsg;
+                              } catch (_) {}
+                            }
+                            throw new Error(errMsg);
+                          }
 
                           const blob = await res.blob();
                           setGeneratedBlob(blob);
                           const url = URL.createObjectURL(blob);
                           setPreviewUrl(url);
                           playSuccessSound();
-                        } catch (err) {
+                        } catch (err: any) {
                           console.error("Generation failed:", err);
-                          alert("Arcane synthesis failed. Check ElevenLabs credits.");
+                          alert(`Arcane synthesis failed: ${err.message || "Check ElevenLabs credentials, credits, or limits."}`);
                         } finally {
                           setIsGenerating(false);
                         }
