@@ -28,27 +28,36 @@ function getElevenLabsKey(req?: any, accountIndexInput: any = 0) {
 
   // 1. First, check client-supplied custom headers
   if (req && req.headers) {
+    // Standardize key lookup
     const headerKey = req.headers[`x-elevenlabs-key-${accountIndex + 1}`];
     if (headerKey && typeof headerKey === 'string' && headerKey.trim().length > 10) {
+      console.log(`[ElevenLabs Auth] Found client header key for account index ${accountIndex}`);
       return headerKey.trim();
     }
   }
 
   // 2. Second, fetch directly from environment dynamically to avoid any cache issues
   const keys = [
-    sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.XI_API_KEY),
+    sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.ELEVEN_LABS_API_KEY || process.env.XI_API_KEY),
     sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
     sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
   ];
 
   const key = keys[accountIndex];
   if (key && key.length > 10) {
+    console.log(`[ElevenLabs Auth] Using env key for account index ${accountIndex}`);
     return key;
   }
 
   // 3. Fallback to any valid key in env
   const fallback = keys.find(k => k && k.length > 10);
-  return fallback || "";
+  if (fallback) {
+    console.log(`[ElevenLabs Auth] Using fallback env key`);
+    return fallback;
+  }
+
+  console.warn(`[ElevenLabs Auth] No API key resolved for account index ${accountIndex}`);
+  return "";
 }
 
 const __filename = fileURLToPath(import.meta.url);

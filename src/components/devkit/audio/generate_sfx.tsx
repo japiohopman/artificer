@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import { CloudRain, Layers, Loader2, Music, RefreshCw, Sparkles, Wand2, Folder, Map as MapIcon, History, Play, Repeat, Settings2, Hammer, Zap, MousePointer2 } from "lucide-react";
+import { useSettingsStore } from "../../../store/useSettingsStore";
 import { Environment } from "../../../types/audio_kit";
 import { Howl } from 'howler';
 
@@ -109,7 +110,13 @@ export function GenerateSfx({ activeEnvironment, onGenerate }: GenerateSfxProps)
   const fetchHistory = async () => {
     setIsLoadingHistory(true);
     try {
-      const res = await fetch(`/api/audio/history?accountIndex=${accountIndex}`);
+      const settings = useSettingsStore.getState();
+      const headers: Record<string, string> = {};
+      if (settings.elevenlabs_key_1) headers["x-elevenlabs-key-1"] = settings.elevenlabs_key_1;
+      if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
+      if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
+
+      const res = await fetch(`/api/audio/history?accountIndex=${accountIndex}`, { headers });
       if (res.ok) {
         const data = await res.json();
         if (data.history?.length > 0) {
@@ -138,7 +145,13 @@ export function GenerateSfx({ activeEnvironment, onGenerate }: GenerateSfxProps)
     if (playingId === itemId) { setPlayingId(null); return; }
     setPlayingId(itemId);
     try {
-      const res = await fetch(`/api/audio/history/${itemId}/audio?accountIndex=${accountIndex}`);
+      const settings = useSettingsStore.getState();
+      const headers: Record<string, string> = {};
+      if (settings.elevenlabs_key_1) headers["x-elevenlabs-key-1"] = settings.elevenlabs_key_1;
+      if (settings.elevenlabs_key_2) headers["x-elevenlabs-key-2"] = settings.elevenlabs_key_2;
+      if (settings.elevenlabs_key_3) headers["x-elevenlabs-key-3"] = settings.elevenlabs_key_3;
+
+      const res = await fetch(`/api/audio/history/${itemId}/audio?accountIndex=${accountIndex}`, { headers });
       if (res.ok) {
         const blob = await res.blob();
         console.log(`[ElevenLabs] Playing history item ${itemId}, type: ${blob.type}, size: ${blob.size}`);
