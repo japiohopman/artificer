@@ -41,7 +41,7 @@ import { GodsLore } from '../atlas/lore/gods';
 interface DevKitProps {
   isOpen: boolean;
   onClose: () => void;
-  onMonsterUpdated: (monster: any) => void;
+  onMonsterUpdated?: (monster: any) => void;
   initialMonster?: any | null;
   initialLocation?: any | null;
   currentExplorerTab?: string;
@@ -791,7 +791,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       
       setEditingItem(itemToSave);
       setItemDataMap(prev => ({ ...prev, [itemToSave.index!]: itemToSave }));
-      onMonsterUpdated(itemToSave);
+      onMonsterUpdated?.(itemToSave);
       playSuccessSound();
       alert(`${activeGenerator.slice(0, -1)} asset successfully baked to repository!`);
     } catch (err) {

@@ -8,7 +8,7 @@ import {
   fetchTransportList, fetchTransportData
 } from '../services/storageService';
 
-export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport';
+export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport' | 'gods';
 
 interface AtlasState {
   monstersList: { name: string; index: string; rarity?: string; type?: string; challenge_rating?: string }[];
@@ -28,6 +28,7 @@ interface AtlasState {
   transportList: { name: string; index: string }[];
   transportCategories: { name: string; index: string; transport: any[] }[];
   transportCategoryMapping: Record<string, string>;
+  godsList: { name: string; index: string; alignment?: any; domains?: string[]; portfolio?: string; symbol?: string; lore?: string; imageUrl?: string; symbolUrl?: string }[];
   isLoadingList: boolean;
   selectedItem: any | null;
   isLoadingItem: boolean;
@@ -61,6 +62,7 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
   transportList: [],
   transportCategories: [],
   transportCategoryMapping: {},
+  godsList: [],
   isLoadingList: false,
   selectedItem: null,
   isLoadingItem: false,
@@ -202,6 +204,18 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
       } else if (tab === 'transport') {
         const list = await fetchTransportList();
         set({ transportList: list as any });
+      } else if (tab === 'gods') {
+        try {
+          const res = await fetch('/assets/atlas/gods/all_gods.json');
+          if (res.ok) {
+            const data = await res.json();
+            if (Array.isArray(data)) {
+              set({ godsList: data });
+            }
+          }
+        } catch (e) {
+          console.error("Error loading gods in useAtlasStore:", e);
+        }
       }
     } finally {
       set({ isLoadingList: false });
@@ -345,6 +359,18 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
         data = await fetchSpellData(index);
       } else if (tab === 'transport') {
         data = await fetchTransportData(index);
+      } else if (tab === 'gods') {
+        try {
+          const res = await fetch('/assets/atlas/gods/all_gods.json');
+          if (res.ok) {
+            const allGods = await res.json();
+            if (Array.isArray(allGods)) {
+              data = allGods.find(g => g.index === index);
+            }
+          }
+        } catch (e) {
+          console.error("Error fetching god data in selectItem:", e);
+        }
       }
       
       if (data) {
