@@ -126,7 +126,8 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
       className
     )}
     style={{
-      backgroundImage: `url('/assets/ui/old_paper.webp')`,
+      backgroundImage: `url('/assets/ui/parchment.jpg')`,
+      backgroundColor: '#f5ebd0',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>

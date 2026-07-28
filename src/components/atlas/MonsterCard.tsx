@@ -185,7 +185,8 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
       )}
       style={{ 
         borderColor: themeColor,
-        backgroundImage: `url('/assets/ui/old_paper.webp')`,
+        backgroundImage: `url('/assets/ui/parchment.jpg')`,
+        backgroundColor: '#f5ebd0',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}

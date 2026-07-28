@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { GameIcon } from '../../game_icons';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { normalizeImageUrl } from '../../services/storageService';
 
 interface GodCardProps {
@@ -59,7 +60,8 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
         className
       )}
       style={{
-        backgroundImage: `url('/assets/ui/old_paper.webp')`,
+        backgroundImage: `url('/assets/ui/parchment.jpg')`,
+        backgroundColor: '#f5ebd0',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: '#3d2516'
@@ -107,18 +109,14 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
       </div>
 
       {/* Deity Image / Portrait Area */}
-      <div className="relative shrink-0 z-20">
-        <div
-          className="aspect-[3/2] w-full bg-parchment-200 border-4 rounded-lg overflow-hidden relative shadow-inner flex items-center justify-center border-amber-900/40"
-        >
+      <div className="relative shrink-0 z-20 flex justify-center items-center">
+        {/* Borderless and transparent ChromaKey deity portrait */}
+        <div className="aspect-[3/2] w-[260px] relative flex items-center justify-center overflow-hidden">
           {god.imageUrl ? (
-            <img
+            <ChromaKeyImage
               src={normalizeImageUrl(god.imageUrl, 'gods', god.index)}
               alt={god.name}
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${god.index}/400/250`;
-              }}
+              className="max-h-full max-w-full object-contain"
             />
           ) : (
             <div className="text-center p-4 opacity-20">
@@ -129,10 +127,13 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
         </div>
 
         {/* Sacred Symbol floating at top right */}
-        {god.symbolUrl && (
-          <div className="absolute -top-3 -right-3 z-30 w-12 h-12 bg-[#161616]/90 border border-white/10 rounded-lg overflow-hidden shrink-0 flex items-center justify-center p-1 shadow-lg">
+        {(god.symbolUrl || god.index) && (
+          <div className="absolute top-0 right-1 z-30 w-12 h-12 bg-[#161616]/95 border border-white/10 rounded-full overflow-hidden shrink-0 flex items-center justify-center p-1 shadow-lg">
             <img
-              src={normalizeImageUrl(god.symbolUrl, 'gods', god.index)}
+              src={god.symbolUrl && god.symbolUrl !== "/assets/atlas/gods/images/symbols/undefined.webp"
+                ? normalizeImageUrl(god.symbolUrl, 'gods', god.index)
+                : `/assets/atlas/gods/images/symbols/${god.index}.webp`
+              }
               alt="Sacred Symbol"
               className="w-full h-full object-contain"
               onError={(e) => {

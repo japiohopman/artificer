@@ -45,7 +45,8 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material, className 
       className
     )}
     style={{
-      backgroundImage: `url('/assets/ui/old_paper.webp')`,
+      backgroundImage: `url('/assets/ui/parchment.jpg')`,
+      backgroundColor: '#f5ebd0',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
