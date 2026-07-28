@@ -24,21 +24,39 @@ const DEFAULT_BACKGROUND = "/assets/ui/monster_card_back.png";
 
 const SafeValue = ({ value, fallback = '?' }: { value: any; fallback?: string }) => {
   if (value === null || value === undefined) return <>{fallback}</>;
+
+  const extractStringOrNumber = (val: any): string => {
+    if (val === null || val === undefined) return '';
+    if (typeof val === 'object') {
+      if ('name' in val && typeof val.name === 'string') return val.name;
+      if ('value' in val) return String(val.value);
+      if ('label' in val) return String(val.label);
+      if (Array.isArray(val)) {
+        return val.map(v => extractStringOrNumber(v)).filter(Boolean).join(', ');
+      }
+      return Object.entries(val)
+        .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${extractStringOrNumber(v)}`)
+        .join(', ');
+    }
+    return String(val);
+  };
+
   if (typeof value === 'object') {
-    // Handle common D&D object patterns like { value: 17, type: 'natural' }
-    if ('value' in value) return <>{value.value}</>;
-    // Handle arrays of objects like [{ value: 17, type: 'natural' }]
     if (Array.isArray(value)) {
       if (value.length > 0) {
+        // If the first item is an AC-like object or a direct value
         const first = value[0];
         if (typeof first === 'object' && first !== null && 'value' in first) {
           return <>{first.value}</>;
         }
-        return <>{value.map(v => (typeof v === 'object' ? JSON.stringify(v) : String(v))).join(', ')}</>;
+        return <>{value.map(v => extractStringOrNumber(v)).filter(Boolean).join(', ')}</>;
       }
       return <>{fallback}</>;
     }
-    return <>{JSON.stringify(value)}</>;
+    if ('value' in value) {
+      return <>{value.value}</>;
+    }
+    return <>{extractStringOrNumber(value)}</>;
   }
   return <>{String(value)}</>;
 };
