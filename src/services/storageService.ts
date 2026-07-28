@@ -663,15 +663,11 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
-    // If it refers to any image path that doesn't explicitly contain /tokens/ or /images/, let's resolve it.
-    if (!finalUrl.includes('/tokens/') && !finalUrl.includes('/images/')) {
-      const isLocal = finalUrl.startsWith('/') || finalUrl.startsWith('assets/');
-      const filename = ddbIndex + '.webp';
-      if (isLocal) {
-        finalUrl = `/assets/atlas/enemies/images/${filename}`;
-      } else {
-        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
-      }
+    const filename = ddbIndex + '.webp';
+    if (isLocalhost) {
+      finalUrl = `/assets/atlas/enemies/images/${filename}`;
+    } else {
+      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
     }
   }
 
@@ -980,6 +976,26 @@ export async function fetchMagicItemList(): Promise<{ name: string; index: strin
 
 export async function fetchEquipmentCategories(): Promise<{ name: string; index: string; equipment: any[] }[]> {
   if (equipmentCategoriesCache) return equipmentCategoriesCache;
+  try {
+    const localRes = await fetch('/assets/atlas/equipment_categories/index.json');
+    if (localRes.ok) {
+      const fileList = await localRes.json();
+      if (Array.isArray(fileList)) {
+        const categories = await Promise.all(
+          fileList.map(async (f: any) => {
+            const res = await fetch(`/assets/atlas/equipment_categories/json/${f.index}.json`);
+            return res.ok ? await res.json() : null;
+          })
+        );
+        const filtered = categories.filter(c => c !== null);
+        equipmentCategoriesCache = filtered;
+        return filtered;
+      }
+    }
+  } catch (e) {
+    console.warn("Failed to load local equipment categories, trying fallback:", e);
+  }
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -998,9 +1014,11 @@ export async function fetchEquipmentCategories(): Promise<{ name: string; index:
         })
     );
     
-    return categories.filter(c => c !== null);
+    const filtered = categories.filter(c => c !== null);
+    equipmentCategoriesCache = filtered;
+    return filtered;
   } catch (e) {
-    console.error("Error fetching equipment categories:", e);
+    console.error("Error fetching equipment categories from GitHub:", e);
     return [];
   }
 }

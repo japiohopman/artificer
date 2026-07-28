@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport';
+export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport' | 'gods';
 
 interface UIState {
   // Navigation

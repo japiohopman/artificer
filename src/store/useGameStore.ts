@@ -417,7 +417,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       maxHp: monster.hit_points || 10,
       x,
       y,
-      imageUrl: monster.imageUrl || monster.image,
+      imageUrl: (monster.image && (monster.image.includes('/tokens/') || monster.image.includes('/enemies/tokens/'))) ? monster.image : (monster.imageUrl || monster.image),
       awareness: 'idle',
       viewDirection: 3,
       perception: monster.senses?.passive_perception || 10,
