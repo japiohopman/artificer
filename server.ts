@@ -26,37 +26,77 @@ function getElevenLabsKey(req?: any, accountIndexInput: any = 0) {
     }
   }
 
-  // 1. First, check client-supplied custom headers
-  if (req && req.headers) {
-    // Standardize key lookup
-    const headerKey = req.headers[`x-elevenlabs-key-${accountIndex + 1}`];
-    if (headerKey && typeof headerKey === 'string' && headerKey.trim().length > 10) {
-      console.log(`[ElevenLabs Auth] Found client header key for account index ${accountIndex}`);
-      return headerKey.trim();
+  // Define candidate client headers
+  const headerCandidates = [
+    req?.headers ? req.headers['x-elevenlabs-key-1'] : undefined,
+    req?.headers ? req.headers['x-elevenlabs-key-2'] : undefined,
+    req?.headers ? req.headers['x-elevenlabs-key-3'] : undefined,
+  ];
+
+  // 1. Try to find the key at the exact requested index in client headers
+  const requestedHeader = headerCandidates[accountIndex];
+  if (requestedHeader && typeof requestedHeader === 'string' && requestedHeader.trim().length > 10) {
+    console.log(`[ElevenLabs Auth] Using exact client header key for account index ${accountIndex}`);
+    return requestedHeader.trim();
+  }
+
+  // 2. Try to find ANY valid key in the client headers
+  for (let i = 0; i < headerCandidates.length; i++) {
+    const hKey = headerCandidates[i];
+    if (hKey && typeof hKey === 'string' && hKey.trim().length > 10) {
+      console.log(`[ElevenLabs Auth] Fallback: Using client header key from index ${i}`);
+      return hKey.trim();
     }
   }
 
-  // 2. Second, fetch directly from environment dynamically to avoid any cache issues
-  const keys = [
+  // 3. Define candidate env variables
+  const envKeys = [
+    process.env.ELEVENLABS_KEY_1,
+    process.env.ACCOUNT_1_11LABS_KEY,
+    process.env.ELEVENLABS_API_KEY,
+    process.env.ELEVEN_LABS_API_KEY,
+    process.env.XI_API_KEY,
+    process.env.ELEVENLABS_KEY_2,
+    process.env.ACCOUNT_2_11LABS_KEY,
+    process.env.ELEVENLABS_KEY_3,
+    process.env.ACCOUNT_3_11LABS_KEY,
+  ];
+
+  // 4. Try to find the key at the exact requested index in the env keys mapping
+  const envCandidates = [
     sanitizeEnvValue(process.env.ELEVENLABS_KEY_1 || process.env.ACCOUNT_1_11LABS_KEY || process.env.ELEVENLABS_API_KEY || process.env.ELEVEN_LABS_API_KEY || process.env.XI_API_KEY),
     sanitizeEnvValue(process.env.ELEVENLABS_KEY_2 || process.env.ACCOUNT_2_11LABS_KEY),
     sanitizeEnvValue(process.env.ELEVENLABS_KEY_3 || process.env.ACCOUNT_3_11LABS_KEY)
   ];
 
-  const key = keys[accountIndex];
-  if (key && key.length > 10) {
-    console.log(`[ElevenLabs Auth] Using env key for account index ${accountIndex}`);
-    return key;
+  const requestedEnv = envCandidates[accountIndex];
+  if (requestedEnv && requestedEnv.length > 10) {
+    console.log(`[ElevenLabs Auth] Using exact env key for account index ${accountIndex}`);
+    return requestedEnv;
   }
 
-  // 3. Fallback to any valid key in env
-  const fallback = keys.find(k => k && k.length > 10);
-  if (fallback) {
-    console.log(`[ElevenLabs Auth] Using fallback env key`);
-    return fallback;
+  // 5. Try to find ANY valid env variable key
+  for (const rawEnv of envKeys) {
+    const cleanEnv = sanitizeEnvValue(rawEnv);
+    if (cleanEnv && cleanEnv.length > 10) {
+      console.log(`[ElevenLabs Auth] Fallback: Using valid env key`);
+      return cleanEnv;
+    }
   }
 
-  console.warn(`[ElevenLabs Auth] No API key resolved for account index ${accountIndex}`);
+  // 6. Look for any key starting with ELEVEN or XI in process.env
+  for (const envName of Object.keys(process.env)) {
+    const envLower = envName.toLowerCase();
+    if (envLower.includes("eleven") || envLower.includes("xi_") || envLower.includes("11labs")) {
+      const cleanVal = sanitizeEnvValue(process.env[envName]);
+      if (cleanVal && cleanVal.length > 10) {
+        console.log(`[ElevenLabs Auth] Emergency Fallback: Using process.env.${envName}`);
+        return cleanVal;
+      }
+    }
+  }
+
+  console.warn(`[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.`);
   return "";
 }
 
