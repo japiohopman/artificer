@@ -663,19 +663,11 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
-    // If it refers to any image path that doesn't explicitly contain /tokens/ or /images/, let's resolve it.
-    // Also, if it contains /images/ but the filename is a 16-character alphanumeric hash (like 35y64peffdvqs0ra.webp), we should replace it with the name-based path!
-    const filenameOnly = finalUrl.split('/').pop()?.replace('.webp', '') || "";
-    const isHash = /^[a-z0-9]{16}$/i.test(filenameOnly) || (filenameOnly.match(/^[a-z0-9]+$/i) && filenameOnly.length >= 10);
-
-    if (!finalUrl.includes('/tokens/') && (!finalUrl.includes('/images/') || isHash)) {
-      const isLocal = finalUrl.startsWith('/') || finalUrl.startsWith('assets/');
-      const filename = ddbIndex + '.webp';
-      if (isLocal) {
-        finalUrl = `/assets/atlas/enemies/images/${filename}`;
-      } else {
-        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
-      }
+    const filename = ddbIndex + '.webp';
+    if (isLocalhost) {
+      finalUrl = `/assets/atlas/enemies/images/${filename}`;
+    } else {
+      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
     }
   }
 

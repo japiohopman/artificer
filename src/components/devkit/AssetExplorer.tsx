@@ -8,6 +8,7 @@ import { MonsterCard } from '../atlas/MonsterCard';
 import { MaterialCard } from '../atlas/MaterialCard';
 import { EquipmentCard } from '../atlas/EquipmentCard';
 import { SpellCard } from '../atlas/SpellCard';
+import { GodCard } from '../atlas/GodCard';
 
 export const AssetExplorer: React.FC = () => {
   const {
@@ -16,7 +17,7 @@ export const AssetExplorer: React.FC = () => {
   } = useUIStore();
 
   const {
-    monsterCategories, materialCategories, equipmentCategories, transportList, spellsList, spellCategories, keyItemsList, booksList,
+    monsterCategories, materialCategories, equipmentCategories, transportList, spellsList, spellCategories, keyItemsList, booksList, godsList,
     isLoadingList, loadList,
     selectedItem, selectItem
   } = useAtlasStore();
@@ -34,6 +35,7 @@ export const AssetExplorer: React.FC = () => {
     : explorerTab === 'equipment'
     ? (selectedCategory ? equipmentCategories.find(c => c.index === selectedCategory)?.equipment || [] : equipmentCategories)
     : explorerTab === 'transport' ? transportList
+    : explorerTab === 'gods' ? godsList
     : explorerTab === 'spells' ? (selectedCategory ? spellCategories.find(c => c.index === selectedCategory)?.spells || [] : spellCategories)
     : explorerTab === 'key' ? keyItemsList : booksList;
 
@@ -55,7 +57,8 @@ export const AssetExplorer: React.FC = () => {
             { id: 'enemies', icon: 'bestiary' },
             { id: 'materials', icon: 'materials' },
             { id: 'spells', icon: 'spells' },
-            { id: 'equipment', icon: 'package' }
+            { id: 'equipment', icon: 'package' },
+            { id: 'gods', icon: 'lore' }
           ].map(tab => (
             <button
               key={tab.id}
@@ -131,6 +134,7 @@ export const AssetExplorer: React.FC = () => {
                {explorerTab === 'materials' && <MaterialCard material={selectedItem} />}
                {explorerTab === 'equipment' && <EquipmentCard equipment={selectedItem} />}
                {explorerTab === 'spells' && <SpellCard spell={selectedItem} />}
+               {explorerTab === 'gods' && <GodCard god={selectedItem} />}
 
                <div className="text-[9px] font-mono text-white/20 text-center uppercase tracking-widest">
                  Index: {selectedItem.index} | Last_Sync: {selectedItem.last_updated || 'Unknown'}
