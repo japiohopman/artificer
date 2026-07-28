@@ -664,7 +664,11 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
     // If it refers to any image path that doesn't explicitly contain /tokens/ or /images/, let's resolve it.
-    if (!finalUrl.includes('/tokens/') && !finalUrl.includes('/images/')) {
+    // Also, if it contains /images/ but the filename is a 16-character alphanumeric hash (like 35y64peffdvqs0ra.webp), we should replace it with the name-based path!
+    const filenameOnly = finalUrl.split('/').pop()?.replace('.webp', '') || "";
+    const isHash = /^[a-z0-9]{16}$/i.test(filenameOnly) || (filenameOnly.match(/^[a-z0-9]+$/i) && filenameOnly.length >= 10);
+
+    if (!finalUrl.includes('/tokens/') && (!finalUrl.includes('/images/') || isHash)) {
       const isLocal = finalUrl.startsWith('/') || finalUrl.startsWith('assets/');
       const filename = ddbIndex + '.webp';
       if (isLocal) {
@@ -980,6 +984,26 @@ export async function fetchMagicItemList(): Promise<{ name: string; index: strin
 
 export async function fetchEquipmentCategories(): Promise<{ name: string; index: string; equipment: any[] }[]> {
   if (equipmentCategoriesCache) return equipmentCategoriesCache;
+  try {
+    const localRes = await fetch('/assets/atlas/equipment_categories/index.json');
+    if (localRes.ok) {
+      const fileList = await localRes.json();
+      if (Array.isArray(fileList)) {
+        const categories = await Promise.all(
+          fileList.map(async (f: any) => {
+            const res = await fetch(`/assets/atlas/equipment_categories/json/${f.index}.json`);
+            return res.ok ? await res.json() : null;
+          })
+        );
+        const filtered = categories.filter(c => c !== null);
+        equipmentCategoriesCache = filtered;
+        return filtered;
+      }
+    }
+  } catch (e) {
+    console.warn("Failed to load local equipment categories, trying fallback:", e);
+  }
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment_categories/json?ref=${BRANCH}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
@@ -998,9 +1022,11 @@ export async function fetchEquipmentCategories(): Promise<{ name: string; index:
         })
     );
     
-    return categories.filter(c => c !== null);
+    const filtered = categories.filter(c => c !== null);
+    equipmentCategoriesCache = filtered;
+    return filtered;
   } catch (e) {
-    console.error("Error fetching equipment categories:", e);
+    console.error("Error fetching equipment categories from GitHub:", e);
     return [];
   }
 }

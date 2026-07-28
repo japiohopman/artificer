@@ -36,6 +36,7 @@ import { AssetExplorer } from './AssetExplorer';
 import { WorldExplorer } from './WorldExplorer';
 import { FlagManager } from './FlagManager';
 import { AudioLaboratory } from './AudioLaboratory';
+import { GodsLore } from '../atlas/lore/gods';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -70,7 +71,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
   const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab'>('inspectors');
   const [activeInspector, setActiveInspector] = useState<'codex' | 'world' | 'flags'>('codex');
-  const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'jane' | 'backgrounds'>('npcs');
+  const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'gods' | 'jane' | 'backgrounds'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
@@ -924,6 +925,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                      { id: 'monsters', label: 'Enemy' },
                      { id: 'materials', label: 'Material' },
                      { id: 'equipment', label: 'Equipment' },
+                     { id: 'gods', label: 'Gods' },
                      { id: 'jane', label: 'Jane (World)' },
                      { id: 'backgrounds', label: 'Habitat' }
                    ].map(gen => (
@@ -980,6 +982,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <NPCGenerator onSave={() => loadAllLists()} />
             ) : activeTab === 'generators' && activeGenerator === 'jane' ? (
               <Jane initialData={initialLocation} />
+            ) : activeTab === 'generators' && activeGenerator === 'gods' ? (
+              <GodsLore />
             ) : activeTab === 'generators' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
