@@ -1,8 +1,17 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import WaveSurfer from 'wavesurfer.js';
 import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions.js';
-import { Play, Pause, Square, Scissors, X, Loader2, Save } from 'lucide-react';
+import TimelinePlugin from 'wavesurfer.js/dist/plugins/timeline.js';
+import SpectrogramPlugin from 'wavesurfer.js/dist/plugins/spectrogram.js';
+import MinimapPlugin from 'wavesurfer.js/dist/plugins/minimap.js';
+import HoverPlugin from 'wavesurfer.js/dist/plugins/hover.js';
+import ZoomPlugin from 'wavesurfer.js/dist/plugins/zoom.js';
+import RecordPlugin from 'wavesurfer.js/dist/plugins/record.js';
+import EnvelopePlugin from 'wavesurfer.js/dist/plugins/envelope.js';
+import {
+    Play, Pause, Square, Scissors, X, Loader2, Save,
+    ZoomIn, ZoomOut, Mic, MicOff, Sliders, Layers
+} from 'lucide-react';
 import { audioBufferToWav } from './audioUtils';
 
 interface AudioEditorProps {
@@ -15,8 +24,13 @@ interface AudioEditorProps {
 
 export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCategory }: AudioEditorProps) {
     const containerRef = useRef<HTMLDivElement>(null);
+    const timelineRef = useRef<HTMLDivElement>(null);
+    const spectrogramRef = useRef<HTMLDivElement>(null);
+
     const wavesurferRef = useRef<WaveSurfer | null>(null);
     const regionsRef = useRef<any>(null);
+    const recordRef = useRef<any>(null);
+
     const [isPlaying, setIsPlaying] = useState(false);
     const [loading, setLoading] = useState(true);
     const [baking, setBaking] = useState(false);
@@ -24,6 +38,12 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     const [finalName, setFinalName] = useState(fileName);
     const [optimizeForUI, setOptimizeForUI] = useState(false);
     const [targetCategory, setTargetCategory] = useState(initialCategory || 'sfx');
+
+    // UI Controls for optional plugin layers
+    const [showSpectrogram, setShowSpectrogram] = useState(true);
+    const [showEnvelope, setShowEnvelope] = useState(true);
+    const [isRecording, setIsRecording] = useState(false);
+    const [activeBlob, setActiveBlob] = useState<Blob>(fileBlob);
 
     const CATEGORIES = [
         { id: 'ambient', label: 'Ambient' },
@@ -39,8 +59,58 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     useEffect(() => {
         if (!containerRef.current) return;
 
-        const url = URL.createObjectURL(fileBlob);
+        const url = URL.createObjectURL(activeBlob);
         const regionsPlugin = RegionsPlugin.create();
+
+        const timelinePlugin = TimelinePlugin.create({
+            container: timelineRef.current || undefined,
+            height: 25,
+            timeInterval: 1,
+            primaryLabelInterval: 5,
+            style: {
+                color: '#a855f7',
+                fontSize: '9px',
+                fontFamily: 'monospace'
+            }
+        });
+
+        const spectrogramPlugin = SpectrogramPlugin.create({
+            container: spectrogramRef.current || undefined,
+            labels: true,
+            height: 60,
+            splitChannels: false
+        });
+
+        const minimapPlugin = MinimapPlugin.create({
+            height: 20,
+            waveColor: 'rgba(147, 51, 234, 0.12)',
+            progressColor: 'rgba(147, 51, 234, 0.35)'
+        });
+
+        const hoverPlugin = HoverPlugin.create({
+            lineWidth: '1px',
+            labelColor: '#ffffff',
+            labelBackground: '#a855f7',
+            labelSize: '10px'
+        });
+
+        const zoomPlugin = ZoomPlugin.create({
+            scale: 0.5,
+            maxZoom: 100
+        });
+
+        const recordPlugin = RecordPlugin.create({
+            scrollingWaveform: true,
+            renderRecordedAudio: true
+        });
+        recordRef.current = recordPlugin;
+
+        const envelopePlugin = EnvelopePlugin.create({
+            lineWidth: '2px',
+            lineColor: '#a855f7',
+            dragLine: true
+        });
+
         const ws = WaveSurfer.create({
             container: containerRef.current,
             waveColor: 'rgba(147, 51, 234, 0.25)',
@@ -53,7 +123,16 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
             height: 90,
             autoCenter: true,
             normalize: true,
-            plugins: [regionsPlugin]
+            plugins: [
+                regionsPlugin,
+                timelinePlugin,
+                spectrogramPlugin,
+                minimapPlugin,
+                hoverPlugin,
+                zoomPlugin,
+                recordPlugin,
+                envelopePlugin
+            ]
         });
 
         wavesurferRef.current = ws;
@@ -76,16 +155,21 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         ws.on('play', () => setIsPlaying(true));
         ws.on('pause', () => setIsPlaying(false));
 
+        // When record completes, load the newly recorded sound
+        recordPlugin.on('record-end', (blob: Blob) => {
+            setActiveBlob(blob);
+            setIsRecording(false);
+        });
+
         return () => {
             try {
                 ws.destroy();
             } catch (e) {
-                // Ignore AbortError which can happen during rapid unmount
                 console.warn("WaveSurfer cleanup warning:", e);
             }
             URL.revokeObjectURL(url);
         };
-    }, [fileBlob]);
+    }, [activeBlob]);
 
     const handleTrim = async () => {
         const ws = wavesurferRef.current;
@@ -97,7 +181,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
         setBaking(true);
         try {
-            const arrayBuffer = await fileBlob.arrayBuffer();
+            const arrayBuffer = await activeBlob.arrayBuffer();
             const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
             const fullBuffer = await audioCtx.decodeAudioData(arrayBuffer);
 
@@ -159,6 +243,36 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         }
     };
 
+    const handleZoomIn = () => {
+        if (wavesurferRef.current) {
+            wavesurferRef.current.zoom(wavesurferRef.current.options.minPxPerSec * 1.5);
+        }
+    };
+
+    const handleZoomOut = () => {
+        if (wavesurferRef.current) {
+            wavesurferRef.current.zoom(wavesurferRef.current.options.minPxPerSec / 1.5);
+        }
+    };
+
+    const handleToggleRecord = async () => {
+        const recordPlugin = recordRef.current;
+        if (!recordPlugin) return;
+
+        if (isRecording) {
+            recordPlugin.stopRecording();
+            setIsRecording(false);
+        } else {
+            try {
+                await recordPlugin.startRecording();
+                setIsRecording(true);
+            } catch (err: any) {
+                console.error("Microphone recording failed:", err);
+                alert(`Microphone access failed: ${err.message}`);
+            }
+        }
+    };
+
     return (
         <div className="bg-black/35 border border-white/5 rounded-2xl w-full overflow-hidden shadow-xl flex flex-col animate-in fade-in slide-in-from-top-2 duration-300">
             <div className="p-4 border-b border-white/5 flex justify-between items-center bg-black/20">
@@ -171,75 +285,127 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                 </button>
             </div>
 
-                <div className="p-8 space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="space-y-1">
-                            <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Final Resource Identifier</label>
-                            <div className="flex items-center gap-2 bg-stone-950 border border-stone-800 rounded-xl p-2 px-4">
-                                <input value={finalName} onChange={(e) => setFinalName(e.target.value.toLowerCase().replace(/[^a-z0-9_-]/g, ''))} className="bg-transparent text-[12px] font-mono text-stone-300 focus:outline-none flex-1" placeholder="enter_filename" />
-                                <span className="text-[10px] font-mono text-stone-700">{optimizeForUI ? '.ogg' : '.wav'}</span>
-                            </div>
-                        </div>
-
-                        <div className="space-y-1">
-                            <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Professional Optimization</label>
-                            <button 
-                                onClick={() => setOptimizeForUI(!optimizeForUI)}
-                                className={`w-full flex items-center justify-between p-2.5 px-4 rounded-xl border transition-all ${optimizeForUI ? 'bg-purple-900/20 border-purple-500/50 text-purple-400' : 'bg-stone-950 border-stone-800 text-stone-600'}`}
-                            >
-                                <span className="text-[10px] font-bold uppercase tracking-widest">Low Latency (OGG)</span>
-                                <div className={`w-3 h-3 rounded-full ${optimizeForUI ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.5)]' : 'bg-stone-800'}`} />
-                            </button>
-                        </div>
-
-                        <div className="space-y-1">
-                            <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Save Folder Map</label>
-                            <select
-                                value={targetCategory}
-                                onChange={(e) => setTargetCategory(e.target.value)}
-                                className="w-full bg-stone-950 border border-stone-800 rounded-xl p-2 px-4 text-xs text-stone-300 focus:outline-none focus:border-purple-500 font-sans h-[38px]"
-                            >
-                                {CATEGORIES.map(cat => (
-                                    <option key={cat.id} value={cat.id} className="bg-stone-900 text-white">
-                                        {cat.label}
-                                    </option>
-                                ))}
-                            </select>
+            <div className="p-8 space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="space-y-1">
+                        <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Final Resource Identifier</label>
+                        <div className="flex items-center gap-2 bg-stone-950 border border-stone-800 rounded-xl p-2 px-4">
+                            <input value={finalName} onChange={(e) => setFinalName(e.target.value.toLowerCase().replace(/[^a-z0-9_-]/g, ''))} className="bg-transparent text-[12px] font-mono text-stone-300 focus:outline-none flex-1" placeholder="enter_filename" />
+                            <span className="text-[10px] font-mono text-stone-700">{optimizeForUI ? '.ogg' : '.wav'}</span>
                         </div>
                     </div>
-                    <div ref={containerRef} className="bg-stone-950 border border-stone-800 rounded-xl overflow-hidden relative min-h-[120px]">
-                        {loading && (
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-stone-950 z-10 text-stone-600">
-                                <Loader2 className="w-6 h-6 animate-spin" />
-                                <span className="text-[10px] uppercase font-bold tracking-widest">Imaging Buffer...</span>
-                            </div>
-                        )}
+
+                    <div className="space-y-1">
+                        <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Professional Optimization</label>
+                        <button
+                            onClick={() => setOptimizeForUI(!optimizeForUI)}
+                            className={`w-full flex items-center justify-between p-2.5 px-4 rounded-xl border transition-all ${optimizeForUI ? 'bg-purple-900/20 border-purple-500/50 text-purple-400' : 'bg-stone-950 border-stone-800 text-stone-600'}`}
+                        >
+                            <span className="text-[10px] font-bold uppercase tracking-widest">Low Latency (OGG)</span>
+                            <div className={`w-3 h-3 rounded-full ${optimizeForUI ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.5)]' : 'bg-stone-800'}`} />
+                        </button>
                     </div>
 
-                    <div className="flex justify-between items-center text-[10px] font-mono text-stone-500">
-                        <div className="flex gap-4">
-                            <span>DURATION: {duration.toFixed(2)}s</span>
-                            <span className="text-stone-700">|</span>
-                            <span className="text-stone-400">STATUS: READY FOR BAKE</span>
-                        </div>
-                        <span className="text-stone-600 italic">Drag boundaries to set temporal limits</span>
+                    <div className="space-y-1">
+                        <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Save Folder Map</label>
+                        <select
+                            value={targetCategory}
+                            onChange={(e) => setTargetCategory(e.target.value)}
+                            className="w-full bg-stone-950 border border-stone-800 rounded-xl p-2 px-4 text-xs text-stone-300 focus:outline-none focus:border-purple-500 font-sans h-[38px]"
+                        >
+                            {CATEGORIES.map(cat => (
+                                <option key={cat.id} value={cat.id} className="bg-stone-900 text-white">
+                                    {cat.label}
+                                </option>
+                            ))}
+                        </select>
                     </div>
                 </div>
 
-                <div className="p-6 bg-stone-950 border-t border-stone-800 flex justify-between items-center">
-                    <div className="flex gap-3">
-                        <button onClick={() => wavesurferRef.current?.playPause()} aria-label={isPlaying ? "Pause playback" : "Play audio"} className="w-12 h-12 rounded-full bg-stone-800 border border-stone-700 flex items-center justify-center text-stone-200 hover:bg-stone-700 transition-all">
-                            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
-                        </button>
-                        <button onClick={() => wavesurferRef.current?.stop()} aria-label="Stop playback" className="w-12 h-12 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-200 transition-all">
-                            <Square className="w-5 h-5" />
-                        </button>
-                    </div>
-                    <button onClick={handleTrim} disabled={loading || baking} className="px-8 py-3 bg-stone-200 text-stone-950 font-sans font-bold text-[11px] tracking-[0.2em] rounded-xl hover:bg-white transition-all shadow-xl flex items-center gap-3 disabled:opacity-50">
-                        {baking ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-                        BAKE TO REPOSITORY
+                {/* Toolbar for Plugins */}
+                <div className="flex flex-wrap gap-3 items-center bg-black/40 border border-stone-800 p-2.5 px-4 rounded-xl">
+                    <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest mr-2">Plugins Toolkit:</span>
+                    <button
+                        onClick={() => setShowSpectrogram(!showSpectrogram)}
+                        className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1 ${
+                            showSpectrogram ? 'bg-purple-600/10 border-purple-500/30 text-purple-400' : 'bg-stone-900/50 border-stone-800 text-stone-500'
+                        }`}
+                        title="Toggle Spectrogram Visualization"
+                    >
+                        <Layers className="w-3.5 h-3.5" />
+                        Spectrogram
+                    </button>
+
+                    <button
+                        onClick={handleToggleRecord}
+                        className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1.5 ${
+                            isRecording ? 'bg-red-600/10 border-red-500/40 text-red-400 animate-pulse' : 'bg-stone-900/50 border-stone-800 text-stone-500'
+                        }`}
+                        title="Record audio from microphone"
+                    >
+                        {isRecording ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
+                        {isRecording ? 'Stop Recording' : 'Mic Record'}
+                    </button>
+
+                    <div className="h-4 w-px bg-stone-800 mx-2" />
+
+                    <button
+                        onClick={handleZoomIn}
+                        className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
+                        title="Zoom In Waveform"
+                    >
+                        <ZoomIn className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                        onClick={handleZoomOut}
+                        className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
+                        title="Zoom Out Waveform"
+                    >
+                        <ZoomOut className="w-3.5 h-3.5" />
                     </button>
                 </div>
+
+                <div className="bg-stone-950 border border-stone-800 rounded-xl overflow-hidden relative p-4 space-y-4">
+                    <div ref={containerRef} className="min-h-[90px]" />
+                    <div ref={timelineRef} className="bg-stone-950 text-stone-400 text-[9px]" />
+
+                    {showSpectrogram && (
+                        <div ref={spectrogramRef} className="bg-stone-950 border-t border-stone-900 rounded-lg overflow-hidden min-h-[60px] relative animate-in fade-in duration-200" />
+                    )}
+
+                    {loading && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-stone-950 z-10 text-stone-600">
+                            <Loader2 className="w-6 h-6 animate-spin" />
+                            <span className="text-[10px] uppercase font-bold tracking-widest">Imaging Buffer...</span>
+                        </div>
+                    )}
+                </div>
+
+                <div className="flex justify-between items-center text-[10px] font-mono text-stone-500">
+                    <div className="flex gap-4">
+                        <span>DURATION: {duration.toFixed(2)}s</span>
+                        <span className="text-stone-700">|</span>
+                        <span className="text-stone-400">STATUS: READY FOR BAKE</span>
+                    </div>
+                    <span className="text-stone-600 italic">Drag boundaries to set temporal limits / envelope curves</span>
+                </div>
+            </div>
+
+            <div className="p-6 bg-stone-950 border-t border-stone-800 flex justify-between items-center">
+                <div className="flex gap-3">
+                    <button onClick={() => wavesurferRef.current?.playPause()} aria-label={isPlaying ? "Pause playback" : "Play audio"} className="w-12 h-12 rounded-full bg-stone-800 border border-stone-700 flex items-center justify-center text-stone-200 hover:bg-stone-700 transition-all">
+                        {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                    </button>
+                    <button onClick={() => wavesurferRef.current?.stop()} aria-label="Stop playback" className="w-12 h-12 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-200 transition-all">
+                        <Square className="w-5 h-5" />
+                    </button>
+                </div>
+                <button onClick={handleTrim} disabled={loading || baking} className="px-8 py-3 bg-stone-200 text-stone-950 font-sans font-bold text-[11px] tracking-[0.2em] rounded-xl hover:bg-white transition-all shadow-xl flex items-center gap-3 disabled:opacity-50">
+                    {baking ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
+                    BAKE TO REPOSITORY
+                </button>
+            </div>
         </div>
     );
 }
