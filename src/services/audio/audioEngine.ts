@@ -56,6 +56,15 @@ export class SoundInstance {
     this.howl.stop();
   }
 
+  fadeAndStop(durationMs: number) {
+    const currentVol = this.howl.volume();
+    const targetId = this.instanceId !== null ? this.instanceId : undefined;
+    this.howl.fade(currentVol, 0, durationMs, targetId);
+    this.howl.once('fade', () => {
+      this.howl.stop();
+    });
+  }
+
   updateVolume() {
     const volume = this.calculateEffectiveVolume();
     if (this.instanceId !== null) {
@@ -92,6 +101,19 @@ export class AudioEngine {
         instance.stop();
         this.activeInstances.delete(instance);
       }
+    }
+  }
+
+  fadeOut(layer?: AudioLayer, durationMs: number = 1000) {
+    const toFade: SoundInstance[] = [];
+    for (const instance of this.activeInstances) {
+      if (layer === undefined || instance.getLayer() === layer) {
+        toFade.push(instance);
+      }
+    }
+    for (const instance of toFade) {
+      instance.fadeAndStop(durationMs);
+      this.activeInstances.delete(instance);
     }
   }
 }

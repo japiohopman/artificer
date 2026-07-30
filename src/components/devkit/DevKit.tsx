@@ -38,6 +38,7 @@ import { FlagManager } from './FlagManager';
 import { AudioLaboratory } from './AudioLaboratory';
 import { GodsLore } from '../atlas/lore/gods';
 import { audioEngine } from '../../services/audio/audioEngine';
+import { soundService } from '../../services/soundService';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -269,12 +270,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   // Fetch all lists when DevKit opens
   useEffect(() => {
     if (isOpen) {
-      // Stop background music and ambient audio when DevKit opens
-      audioEngine.stopAll(1);  // Master Theme (Music)
-      audioEngine.stopAll(2);  // Atmosphere (Ambient)
-      audioEngine.stopAll(3);  // Environment (Ambient)
-      audioEngine.stopAll(4);  // Combat / Action (Music)
-      audioEngine.stopAll(11); // Weather (Ambient)
+      // Fade out background music and ambient audio when DevKit opens over 1.5s
+      const fadeDuration = 1500;
+      const layersToFade: (1 | 2 | 3 | 4 | 11)[] = [1, 2, 3, 4, 11];
+
+      layersToFade.forEach(layer => {
+        audioEngine.fadeOut(layer, fadeDuration);
+        soundService.fadeOutLayer(layer, fadeDuration);
+      });
 
       loadAllLists();
       loadMissingAssets();
