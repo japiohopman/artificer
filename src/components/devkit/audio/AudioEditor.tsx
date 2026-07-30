@@ -43,12 +43,16 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         const regionsPlugin = RegionsPlugin.create();
         const ws = WaveSurfer.create({
             container: containerRef.current,
-            waveColor: '#444',
-            progressColor: '#888',
-            cursorColor: '#fff',
+            waveColor: 'rgba(147, 51, 234, 0.25)',
+            progressColor: '#a855f7',
+            cursorColor: '#c084fc',
+            cursorWidth: 2,
             barWidth: 2,
+            barGap: 3,
             barRadius: 3,
-            height: 120,
+            height: 90,
+            autoCenter: true,
+            normalize: true,
             plugins: [regionsPlugin]
         });
 
@@ -156,17 +160,16 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     };
 
     return (
-        <div className="fixed inset-0 z-[100] bg-stone-950/90 backdrop-blur-md flex items-center justify-center p-6">
-            <div className="bg-stone-900 border border-stone-800 rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col">
-                <div className="p-6 border-b border-stone-800 flex justify-between items-center bg-stone-850">
-                    <div className="flex items-center gap-3">
-                        <Scissors className="w-5 h-5 text-stone-400" />
-                        <h3 className="text-sm font-bold uppercase tracking-widest text-stone-200">Audio Refining Studio</h3>
-                    </div>
-                    <button onClick={onClose} aria-label="Close audio editor" className="p-2 hover:bg-white/5 rounded-full text-stone-500 transition-colors">
-                        <X className="w-5 h-5" />
-                    </button>
+        <div className="bg-black/35 border border-white/5 rounded-2xl w-full overflow-hidden shadow-xl flex flex-col animate-in fade-in slide-in-from-top-2 duration-300">
+            <div className="p-4 border-b border-white/5 flex justify-between items-center bg-black/20">
+                <div className="flex items-center gap-2">
+                    <Scissors className="w-4 h-4 text-purple-400" />
+                    <h3 className="text-[11px] font-bold uppercase tracking-wider text-white">Audio Refining Studio</h3>
                 </div>
+                <button onClick={onClose} aria-label="Close audio editor" className="p-1 hover:bg-white/5 rounded text-white/40 hover:text-white transition-colors">
+                    <X className="w-4 h-4" />
+                </button>
+            </div>
 
                 <div className="p-8 space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -237,7 +240,6 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                         BAKE TO REPOSITORY
                     </button>
                 </div>
-            </div>
         </div>
     );
 }
