@@ -37,6 +37,7 @@ import { WorldExplorer } from './WorldExplorer';
 import { FlagManager } from './FlagManager';
 import { AudioLaboratory } from './AudioLaboratory';
 import { GodsLore } from '../atlas/lore/gods';
+import { audioEngine } from '../../services/audio/audioEngine';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -268,6 +269,13 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   // Fetch all lists when DevKit opens
   useEffect(() => {
     if (isOpen) {
+      // Stop background music and ambient audio when DevKit opens
+      audioEngine.stopAll(1);  // Master Theme (Music)
+      audioEngine.stopAll(2);  // Atmosphere (Ambient)
+      audioEngine.stopAll(3);  // Environment (Ambient)
+      audioEngine.stopAll(4);  // Combat / Action (Music)
+      audioEngine.stopAll(11); // Weather (Ambient)
+
       loadAllLists();
       loadMissingAssets();
       setSelectedCategory(null);
