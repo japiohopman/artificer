@@ -99,6 +99,39 @@ class SoundEngine {
     }
   }
 
+  fadeOutLayer(layerId: AudioLayer, durationMs: number = 1000) {
+    const audio = this.layers.get(layerId);
+    if (!audio) return;
+
+    const startVol = audio.volume;
+    if (startVol === 0) {
+      this.stopLayer(layerId);
+      return;
+    }
+
+    const intervalTime = 30; // 30ms steps for smoother fading
+    const steps = durationMs / intervalTime;
+    const volStep = startVol / steps;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      // Check if this audio instance is still the one registered for the layer
+      if (this.layers.get(layerId) !== audio) {
+        clearInterval(interval);
+        return;
+      }
+
+      currentStep++;
+      const nextVol = Math.max(0, startVol - (volStep * currentStep));
+      audio.volume = nextVol;
+
+      if (nextVol <= 0 || currentStep >= steps) {
+        clearInterval(interval);
+        this.stopLayer(layerId);
+      }
+    }, intervalTime);
+  }
+
   updateLayerVolume(layerId: AudioLayer, volume: number) {
     const audio = this.layers.get(layerId);
     if (audio) {
