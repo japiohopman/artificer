@@ -8,8 +8,9 @@ import { useSettingsStore } from '../../store/useSettingsStore';
 import {
   Play, Pause, Trash2, Edit2, Check, X,
   Folder, FolderOpen, ChevronDown, ChevronRight,
-  RefreshCw, Music, Mic, Sparkles, Send, Save, ArrowRight, Volume2
+  RefreshCw, Music, Mic, Sparkles, Send, Save, ArrowRight, Volume2, Scissors, History
 } from 'lucide-react';
+import { AudioEditor } from './audio/AudioEditor';
 
 const CATEGORIES = [
   { id: 'ambient', label: 'Ambient' },
@@ -30,6 +31,199 @@ const VOICE_PRESETS = [
   { id: 'EXAVITQu4vr4xnSDgMaL', label: 'Bella (Soft Female)' },
   { id: 'custom', label: 'Custom Voice ID...' }
 ];
+
+interface ElevenLabsHistoryPanelProps {
+  accountIndex: number;
+  onDeploy: (blob: Blob, name: string, category: string) => Promise<void>;
+}
+
+const ElevenLabsHistoryPanel: React.FC<ElevenLabsHistoryPanelProps> = ({ accountIndex, onDeploy }) => {
+  const [historyItems, setHistoryItems] = useState<any[]>([]);
+  const [loadingHistory, setLoadingHistory] = useState(false);
+  const [playingHistoryId, setPlayingHistoryId] = useState<string | null>(null);
+  const [historyAudio, setHistoryAudio] = useState<HTMLAudioElement | null>(null);
+  const [deployingHistoryId, setDeployingHistoryId] = useState<string | null>(null);
+  const [deployName, setDeployName] = useState<string>('');
+  const [deployCategory, setDeployCategory] = useState<string>('sfx');
+
+  useEffect(() => {
+    fetchHistory();
+    return () => {
+      if (historyAudio) {
+        historyAudio.pause();
+      }
+    };
+  }, [accountIndex]);
+
+  const fetchHistory = async () => {
+    setLoadingHistory(true);
+    try {
+      const res = await fetch(`/api/audio/history?accountIndex=${accountIndex}`);
+      if (res.ok) {
+        const data = await res.json();
+        const items = data.history || data;
+        setHistoryItems(Array.isArray(items) ? items : []);
+      }
+    } catch (err) {
+      console.error("Failed to load history:", err);
+    } finally {
+      setLoadingHistory(false);
+    }
+  };
+
+  const handlePlayHistory = async (item: any) => {
+    playClickSound();
+    if (playingHistoryId === item.history_item_id && historyAudio) {
+      historyAudio.pause();
+      setPlayingHistoryId(null);
+      setHistoryAudio(null);
+    } else {
+      if (historyAudio) {
+        historyAudio.pause();
+      }
+      const url = `/api/audio/history/${item.history_item_id}/audio?accountIndex=${accountIndex}`;
+      const audio = new Audio(url);
+      audio.play().catch(err => console.error("Playback error:", err));
+      audio.onended = () => {
+        setPlayingHistoryId(null);
+        setHistoryAudio(null);
+      };
+      setHistoryAudio(audio);
+      setPlayingHistoryId(item.history_item_id);
+    }
+  };
+
+  const handleDeployHistoryItem = async (item: any) => {
+    if (!deployName.trim()) {
+      alert("Please enter a name for the asset.");
+      return;
+    }
+    playClickSound();
+    try {
+      const audioUrl = `/api/audio/history/${item.history_item_id}/audio?accountIndex=${accountIndex}`;
+      const response = await fetch(audioUrl);
+      if (!response.ok) throw new Error("Failed to fetch historical audio data.");
+      const blob = await response.blob();
+
+      const cleanName = deployName.trim().toLowerCase().replace(/\s+/g, '_').replace(/\.[^/.]+$/, "");
+      await onDeploy(blob, cleanName + ".mp3", deployCategory);
+      setDeployingHistoryId(null);
+      setDeployName('');
+    } catch (err: any) {
+      console.error("Failed to deploy history item:", err);
+      alert(`Deployment failed: ${err.message}`);
+    }
+  };
+
+  return (
+    <div className="bg-black/30 border border-white/5 rounded-2xl p-4 space-y-4 shadow-xl text-left">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <History className="w-4 h-4 text-purple-400 shrink-0" />
+          <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em] shrink-0">Account History</h3>
+        </div>
+        <button
+          onClick={fetchHistory}
+          disabled={loadingHistory}
+          className="p-1 text-white/30 hover:text-purple-400 transition-colors rounded disabled:opacity-30"
+          title="Refresh History"
+        >
+          <RefreshCw className={`w-3.5 h-3.5 ${loadingHistory ? 'animate-spin' : ''}`} />
+        </button>
+      </div>
+
+      {loadingHistory ? (
+        <div className="py-8 flex flex-col items-center justify-center gap-2 opacity-30">
+          <div className="w-4 h-4 border border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
+          <span className="text-[8px] font-bold uppercase tracking-wider">Syncing Account Logs...</span>
+        </div>
+      ) : historyItems.length === 0 ? (
+        <p className="text-[10px] text-white/20 italic text-center py-4">No recent logs found.</p>
+      ) : (
+        <div className="space-y-2 max-h-72 overflow-y-auto custom-scrollbar pr-1">
+          {historyItems.map((item, idx) => {
+            const isPlaying = playingHistoryId === item.history_item_id;
+            const isDeploying = deployingHistoryId === item.history_item_id;
+            return (
+              <div key={item.history_item_id || idx} className="bg-white/2 hover:bg-white/5 border border-white/5 rounded-xl p-2.5 space-y-2 transition-all">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[11px] text-white/70 italic leading-normal line-clamp-2" title={item.text}>
+                      "{item.text}"
+                    </p>
+                    <div className="flex items-center gap-2 mt-1 text-[8px] font-mono text-white/30 uppercase">
+                      <span>{item.voice_name || 'Sound FX'}</span>
+                      <span>•</span>
+                      <span>{new Date(item.date_unix * 1000).toLocaleDateString()}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => handlePlayHistory(item)}
+                      className={`p-1.5 rounded-full ${isPlaying ? 'bg-purple-600 text-white animate-pulse' : 'bg-white/5 text-white/40 hover:bg-white/10 hover:text-white'}`}
+                      title="Play Log"
+                    >
+                      {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                    </button>
+                    <button
+                      onClick={() => {
+                        setDeployingHistoryId(isDeploying ? null : item.history_item_id);
+                        if (!isDeploying) {
+                          const textSlug = item.text.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim().split(/\s+/).slice(0, 3).join('_');
+                          setDeployName(textSlug || 'history_audio');
+                        }
+                        playClickSound();
+                      }}
+                      className={`p-1.5 rounded-full ${isDeploying ? 'bg-emerald-600 text-white' : 'bg-white/5 text-white/40 hover:bg-white/10 hover:text-white'}`}
+                      title="Deploy to Repository"
+                    >
+                      <Save className="w-3 h-3" />
+                    </button>
+                  </div>
+                </div>
+
+                {isDeploying && (
+                  <div className="bg-black/40 border border-emerald-500/20 rounded-lg p-2.5 space-y-2.5 animate-in fade-in slide-in-from-top-1 text-left">
+                    <div className="space-y-1">
+                      <label className="text-[8px] font-bold text-emerald-400 uppercase tracking-wider">Deploy Name</label>
+                      <input
+                        value={deployName}
+                        onChange={(e) => setDeployName(e.target.value)}
+                        placeholder="e.g. dragon_breathe_fire"
+                        className="w-full bg-black/60 border border-emerald-500/30 rounded p-1.5 text-[10px] text-white font-mono focus:outline-none focus:border-emerald-500"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="text-[8px] font-bold text-emerald-400 uppercase tracking-wider">Target Category</label>
+                      <select
+                        value={deployCategory}
+                        onChange={(e) => setDeployCategory(e.target.value)}
+                        className="w-full bg-black/60 border border-emerald-500/30 rounded p-1 text-[10px] text-white focus:outline-none focus:border-emerald-500"
+                      >
+                        {CATEGORIES.map(cat => (
+                          <option key={cat.id} value={cat.id}>{cat.label}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <button
+                      onClick={() => handleDeployHistoryItem(item)}
+                      className="w-full py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[9px] font-bold uppercase rounded transition-colors"
+                    >
+                      Commit to Repository
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export const AudioLaboratory: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'forge' | 'voice' | 'requester'>('forge');
@@ -63,6 +257,7 @@ export const AudioLaboratory: React.FC = () => {
   const [duration, setDuration] = useState(5);
   const [isLoop, setIsLoop] = useState(false);
   const [accountIndex, setAccountIndex] = useState(0);
+  const [forgeCategory, setForgeCategory] = useState('sfx');
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDeploying, setIsDeploying] = useState(false);
@@ -82,6 +277,12 @@ export const AudioLaboratory: React.FC = () => {
   const [voiceGeneratedBlob, setVoiceGeneratedBlob] = useState<Blob | null>(null);
 
   const { hueState } = useAudioStore();
+
+  // WaveSurfer Audio Editing State
+  const [editingFileBlob, setEditingFileBlob] = useState<Blob | null>(null);
+  const [editingFileName, setEditingFileName] = useState<string>('');
+  const [editingFileCategory, setEditingFileCategory] = useState<string>('');
+  const [isOpeningEditor, setIsOpeningEditor] = useState(false);
 
   useEffect(() => {
     fetchAudioFiles();
@@ -192,6 +393,94 @@ export const AudioLaboratory: React.FC = () => {
       return file.path.substring(prefix.length);
     }
     return file.name;
+  };
+
+  const handleOpenRefineStudio = async (file: any) => {
+    playClickSound();
+    setIsOpeningEditor(true);
+    try {
+      const response = await fetch(file.path);
+      if (!response.ok) throw new Error("Failed to fetch audio file binary.");
+      const blob = await response.blob();
+      setEditingFileBlob(blob);
+      // Strip extension for the baseline name
+      const baseName = file.name.replace(/\.[^/.]+$/, "");
+      setEditingFileName(baseName);
+      setEditingFileCategory(file.category);
+    } catch (err: any) {
+      console.error("Failed to load audio for refining:", err);
+      alert(`Could not load audio file: ${err.message}`);
+    } finally {
+      setIsOpeningEditor(false);
+    }
+  };
+
+  const handleBakeEditedAudio = async (editedBlob: Blob, finalName: string, category: string) => {
+    try {
+      const reader = new FileReader();
+      reader.readAsDataURL(editedBlob);
+      reader.onloadend = async () => {
+        const base64data = (reader.result as string).split(',')[1];
+        const path = `public/assets/sounds/${category}/${finalName}`;
+
+        const res = await fetch("/api/commit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            path,
+            content: base64data,
+            isBase64: true,
+            message: `Refined / Trimmed audio: ${finalName}`
+          })
+        });
+
+        if (res.ok) {
+          playSuccessSound();
+          alert(`Refined sound '${finalName}' successfully baked to repository under '${category}'!`);
+          setEditingFileBlob(null);
+          setEditingFileName('');
+          fetchAudioFiles();
+        } else {
+          throw new Error("Commit failed on backend server.");
+        }
+      };
+    } catch (err: any) {
+      console.error("Failed to bake audio:", err);
+      alert(`Bake failed: ${err.message}`);
+    }
+  };
+
+  const handleDeployBlob = async (blob: Blob, finalName: string, category: string) => {
+    try {
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = async () => {
+        const base64data = (reader.result as string).split(',')[1];
+        const path = `public/assets/sounds/${category}/${finalName}`;
+
+        const res = await fetch("/api/commit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            path,
+            content: base64data,
+            isBase64: true,
+            message: `Deploy ElevenLabs asset: ${finalName}`
+          })
+        });
+
+        if (res.ok) {
+          playSuccessSound();
+          alert(`Asset '${finalName}' successfully deployed to repository under '${category}'!`);
+          fetchAudioFiles();
+        } else {
+          throw new Error("Commit failed on server");
+        }
+      };
+    } catch (err: any) {
+      console.error("Deploy blob failed:", err);
+      alert(`Deploy failed: ${err.message}`);
+    }
   };
 
   const toggleFolder = (category: string) => {
@@ -324,6 +613,14 @@ export const AudioLaboratory: React.FC = () => {
 
                               {!isRenaming && (
                                 <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
+                                  <button
+                                    onClick={() => handleOpenRefineStudio(file)}
+                                    disabled={isOpeningEditor}
+                                    className="p-1 text-white/30 hover:text-purple-400 transition-colors rounded disabled:opacity-30"
+                                    title="Refine / Edit Sound Wave"
+                                  >
+                                    <Scissors className="w-3 h-3" />
+                                  </button>
                                   <button
                                     onClick={() => {
                                       setRenameTarget(file.path);
@@ -583,7 +880,7 @@ export const AudioLaboratory: React.FC = () => {
                             reader.onloadend = async () => {
                               const base64data = (reader.result as string).split(',')[1];
                               const safeName = assetName.toLowerCase().replace(/\s+/g, '_');
-                              const path = `public/assets/sounds/sfx/${safeName}.mp3`;
+                              const path = `public/assets/sounds/${forgeCategory}/${safeName}.mp3`;
 
                               const res = await fetch("/api/commit", {
                                 method: "POST",
@@ -658,8 +955,27 @@ export const AudioLaboratory: React.FC = () => {
                       <div className={`w-3 h-3 rounded-full transition-all ${isLoop ? 'bg-purple-500 shadow-[0_0_10px_#a855f7]' : 'bg-white/10'}`} />
                     </button>
 
+                    {/* Target Folder Category Selection */}
+                    <div className="space-y-2 pt-4 border-t border-white/5">
+                      <label className="text-[9px] font-bold text-white/30 uppercase tracking-widest">Target Repository Category</label>
+                      <select
+                        value={forgeCategory}
+                        onChange={(e) => {
+                          setForgeCategory(e.target.value);
+                          playClickSound();
+                        }}
+                        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-xs text-white focus:outline-none focus:border-purple-500 font-sans"
+                      >
+                        {CATEGORIES.map(cat => (
+                          <option key={cat.id} value={cat.id} className="bg-[#121212] text-white">
+                            {cat.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
                     {/* Account Selector */}
-                    <div className="pt-6 border-t border-white/5 space-y-3">
+                    <div className="pt-4 border-t border-white/5 space-y-3">
                       <label className="text-[9px] font-bold text-white/30 uppercase tracking-widest">ElevenLabs_Account</label>
                       <div className="grid grid-cols-3 gap-2">
                         {[1, 2, 3].map((num, idx) => (
@@ -680,6 +996,9 @@ export const AudioLaboratory: React.FC = () => {
                       Note: High-fidelity synthesis consumes credits on your chosen ElevenLabs account. Optimize your prompt first for best results.
                     </p>
                   </div>
+
+                  {/* ElevenLabs History Log Panel */}
+                  <ElevenLabsHistoryPanel accountIndex={accountIndex} onDeploy={handleDeployBlob} />
                 </div>
               </motion.div>
             ) : activeTab === 'voice' ? (
@@ -936,6 +1255,9 @@ export const AudioLaboratory: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* ElevenLabs History Log Panel */}
+                  <ElevenLabsHistoryPanel accountIndex={voiceAccountIndex} onDeploy={handleDeployBlob} />
                 </div>
               </motion.div>
             ) : (
@@ -1006,6 +1328,20 @@ export const AudioLaboratory: React.FC = () => {
           </AnimatePresence>
         </div>
       </div>
+
+      {editingFileBlob && (
+        <AudioEditor
+          fileBlob={editingFileBlob}
+          fileName={editingFileName}
+          initialCategory={editingFileCategory}
+          onClose={() => {
+            setEditingFileBlob(null);
+            setEditingFileName('');
+            setEditingFileCategory('');
+          }}
+          onBake={handleBakeEditedAudio}
+        />
+      )}
     </div>
   );
 };
