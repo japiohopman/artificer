@@ -10,7 +10,7 @@ import RecordPlugin from 'wavesurfer.js/dist/plugins/record.js';
 import EnvelopePlugin from 'wavesurfer.js/dist/plugins/envelope.js';
 import {
     Play, Pause, Square, Scissors, X, Loader2, Save,
-    ZoomIn, ZoomOut, Mic, MicOff, Sliders, Layers
+    ZoomIn, ZoomOut, Mic, MicOff, Sliders, Layers, RefreshCw
 } from 'lucide-react';
 import { audioBufferToWav } from './audioUtils';
 
@@ -41,9 +41,12 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
     // UI Controls for optional plugin layers
     const [showSpectrogram, setShowSpectrogram] = useState(true);
-    const [showEnvelope, setShowEnvelope] = useState(true);
     const [isRecording, setIsRecording] = useState(false);
     const [activeBlob, setActiveBlob] = useState<Blob>(fileBlob);
+
+    // Precise numeric trim settings
+    const [trimStart, setTrimStart] = useState<number>(0);
+    const [trimEnd, setTrimEnd] = useState<number>(0);
 
     const CATEGORIES = [
         { id: 'ambient', label: 'Ambient' },
@@ -142,11 +145,17 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
         ws.on('ready', () => {
             setLoading(false);
-            setDuration(ws.getDuration());
+            const totalDur = ws.getDuration();
+            setDuration(totalDur);
+            setTrimStart(0);
+            setTrimEnd(totalDur);
+
+            regionsPlugin.clearRegions();
             regionsPlugin.addRegion({
+                id: 'trim-region',
                 start: 0,
-                end: ws.getDuration(),
-                color: 'rgba(255, 255, 255, 0.1)',
+                end: totalDur,
+                color: 'rgba(168, 85, 247, 0.18)',
                 drag: true,
                 resize: true
             });
@@ -154,6 +163,33 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
         ws.on('play', () => setIsPlaying(true));
         ws.on('pause', () => setIsPlaying(false));
+
+        // Enable dragging to select regions on the wave
+        regionsPlugin.enableDragSelection({
+            color: 'rgba(168, 85, 247, 0.18)'
+        });
+
+        // Ensure exactly one active region exists
+        regionsPlugin.on('region-created', (region: any) => {
+            const allRegions = regionsPlugin.getRegions();
+            allRegions.forEach((r: any) => {
+                if (r !== region) {
+                    r.remove();
+                }
+            });
+            region.setOptions({
+                id: 'trim-region',
+                drag: true,
+                resize: true
+            });
+            setTrimStart(region.start);
+            setTrimEnd(region.end || ws.getDuration());
+        });
+
+        regionsPlugin.on('region-updated', (region: any) => {
+            setTrimStart(region.start);
+            setTrimEnd(region.end || ws.getDuration());
+        });
 
         // When record completes, load the newly recorded sound
         recordPlugin.on('record-end', (blob: Blob) => {
@@ -176,7 +212,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         const regions = regionsRef.current;
         if (!ws || !regions) return;
 
-        const region = regions.getRegions()[0];
+        const region = regions.getRegions().find((r: any) => r.id === 'trim-region') || regions.getRegions()[0];
         if (!region) return;
 
         setBaking(true);
@@ -273,6 +309,32 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         }
     };
 
+    const handleStartChange = (val: number) => {
+        const start = Math.max(0, Math.min(val, duration));
+        setTrimStart(start);
+
+        const regions = regionsRef.current;
+        if (regions) {
+            const region = regions.getRegions().find((r: any) => r.id === 'trim-region') || regions.getRegions()[0];
+            if (region) {
+                region.setOptions({ start });
+            }
+        }
+    };
+
+    const handleEndChange = (val: number) => {
+        const end = Math.max(trimStart, Math.min(val, duration));
+        setTrimEnd(end);
+
+        const regions = regionsRef.current;
+        if (regions) {
+            const region = regions.getRegions().find((r: any) => r.id === 'trim-region') || regions.getRegions()[0];
+            if (region) {
+                region.setOptions({ end });
+            }
+        }
+    };
+
     return (
         <div className="bg-black/35 border border-white/5 rounded-2xl w-full overflow-hidden shadow-xl flex flex-col animate-in fade-in slide-in-from-top-2 duration-300">
             <div className="p-4 border-b border-white/5 flex justify-between items-center bg-black/20">
@@ -322,48 +384,75 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                     </div>
                 </div>
 
-                {/* Toolbar for Plugins */}
-                <div className="flex flex-wrap gap-3 items-center bg-black/40 border border-stone-800 p-2.5 px-4 rounded-xl">
-                    <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest mr-2">Plugins Toolkit:</span>
-                    <button
-                        onClick={() => setShowSpectrogram(!showSpectrogram)}
-                        className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1 ${
-                            showSpectrogram ? 'bg-purple-600/10 border-purple-500/30 text-purple-400' : 'bg-stone-900/50 border-stone-800 text-stone-500'
-                        }`}
-                        title="Toggle Spectrogram Visualization"
-                    >
-                        <Layers className="w-3.5 h-3.5" />
-                        Spectrogram
-                    </button>
+                {/* Manual Trim Controls & Toolbar */}
+                <div className="flex flex-wrap md:flex-nowrap gap-4 justify-between items-center bg-black/40 border border-stone-800 p-3 px-4 rounded-xl">
+                    <div className="flex items-center gap-3">
+                        <span className="text-[9px] font-mono text-purple-400 uppercase tracking-widest">Precise Trim:</span>
+                        <div className="flex items-center gap-1.5 bg-stone-950 border border-stone-800 rounded-lg p-1 px-2.5">
+                            <span className="text-[9px] text-stone-500 font-mono">START:</span>
+                            <input
+                                type="number"
+                                value={trimStart.toFixed(2)}
+                                step="0.1"
+                                onChange={(e) => handleStartChange(parseFloat(e.target.value) || 0)}
+                                className="bg-transparent text-[11px] font-mono text-purple-300 focus:outline-none w-14"
+                            />
+                            <span className="text-[9px] text-stone-600">s</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 bg-stone-950 border border-stone-800 rounded-lg p-1 px-2.5">
+                            <span className="text-[9px] text-stone-500 font-mono">END:</span>
+                            <input
+                                type="number"
+                                value={trimEnd.toFixed(2)}
+                                step="0.1"
+                                onChange={(e) => handleEndChange(parseFloat(e.target.value) || 0)}
+                                className="bg-transparent text-[11px] font-mono text-purple-300 focus:outline-none w-14"
+                            />
+                            <span className="text-[9px] text-stone-600">s</span>
+                        </div>
+                    </div>
 
-                    <button
-                        onClick={handleToggleRecord}
-                        className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1.5 ${
-                            isRecording ? 'bg-red-600/10 border-red-500/40 text-red-400 animate-pulse' : 'bg-stone-900/50 border-stone-800 text-stone-500'
-                        }`}
-                        title="Record audio from microphone"
-                    >
-                        {isRecording ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
-                        {isRecording ? 'Stop Recording' : 'Mic Record'}
-                    </button>
+                    <div className="flex flex-wrap gap-2.5 items-center">
+                        <button
+                            onClick={() => setShowSpectrogram(!showSpectrogram)}
+                            className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1 ${
+                                showSpectrogram ? 'bg-purple-600/10 border-purple-500/30 text-purple-400' : 'bg-stone-900/50 border-stone-800 text-stone-500'
+                            }`}
+                            title="Toggle Spectrogram Visualization"
+                        >
+                            <Layers className="w-3.5 h-3.5" />
+                            Spectrogram
+                        </button>
 
-                    <div className="h-4 w-px bg-stone-800 mx-2" />
+                        <button
+                            onClick={handleToggleRecord}
+                            className={`p-1.5 px-3 rounded-lg border text-[10px] font-bold uppercase transition-all flex items-center gap-1.5 ${
+                                isRecording ? 'bg-red-600/10 border-red-500/40 text-red-400 animate-pulse' : 'bg-stone-900/50 border-stone-800 text-stone-500'
+                            }`}
+                            title="Record audio from microphone"
+                        >
+                            {isRecording ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
+                            {isRecording ? 'Stop Recording' : 'Mic Record'}
+                        </button>
 
-                    <button
-                        onClick={handleZoomIn}
-                        className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
-                        title="Zoom In Waveform"
-                    >
-                        <ZoomIn className="w-3.5 h-3.5" />
-                    </button>
+                        <div className="h-4 w-px bg-stone-800 mx-1" />
 
-                    <button
-                        onClick={handleZoomOut}
-                        className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
-                        title="Zoom Out Waveform"
-                    >
-                        <ZoomOut className="w-3.5 h-3.5" />
-                    </button>
+                        <button
+                            onClick={handleZoomIn}
+                            className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
+                            title="Zoom In Waveform"
+                        >
+                            <ZoomIn className="w-3.5 h-3.5" />
+                        </button>
+
+                        <button
+                            onClick={handleZoomOut}
+                            className="p-1.5 px-2.5 bg-stone-900/50 border border-stone-800 text-stone-400 hover:text-white rounded-lg transition-colors flex items-center gap-1 text-[10px]"
+                            title="Zoom Out Waveform"
+                        >
+                            <ZoomOut className="w-3.5 h-3.5" />
+                        </button>
+                    </div>
                 </div>
 
                 <div className="bg-stone-950 border border-stone-800 rounded-xl overflow-hidden relative p-4 space-y-4">
@@ -388,7 +477,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                         <span className="text-stone-700">|</span>
                         <span className="text-stone-400">STATUS: READY FOR BAKE</span>
                     </div>
-                    <span className="text-stone-600 italic">Drag boundaries to set temporal limits / envelope curves</span>
+                    <span className="text-stone-600 italic">Drag anywhere on wavesurfer to draw trim region / envelope points</span>
                 </div>
             </div>
 
@@ -399,6 +488,10 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                     </button>
                     <button onClick={() => wavesurferRef.current?.stop()} aria-label="Stop playback" className="w-12 h-12 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-500 hover:text-stone-200 transition-all">
                         <Square className="w-5 h-5" />
+                    </button>
+                    <button onClick={onClose} className="px-5 py-3 bg-stone-900 border border-stone-850 hover:bg-stone-800 text-stone-300 font-mono text-[10px] font-bold uppercase rounded-xl transition-all flex items-center gap-2" title="Go back to generator to regenerate">
+                        <RefreshCw className="w-3.5 h-3.5 text-purple-400" />
+                        Adjust & Re-Generate
                     </button>
                 </div>
                 <button onClick={handleTrim} disabled={loading || baking} className="px-8 py-3 bg-stone-200 text-stone-950 font-sans font-bold text-[11px] tracking-[0.2em] rounded-xl hover:bg-white transition-all shadow-xl flex items-center gap-3 disabled:opacity-50">
