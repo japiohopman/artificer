@@ -9,10 +9,11 @@ interface AudioEditorProps {
     fileBlob: Blob;
     fileName: string;
     onClose: () => void;
-    onBake: (editedBlob: Blob, finalName: string) => Promise<void>;
+    onBake: (editedBlob: Blob, finalName: string, category: string) => Promise<void>;
+    initialCategory?: string;
 }
 
-export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditorProps) {
+export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCategory }: AudioEditorProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const wavesurferRef = useRef<WaveSurfer | null>(null);
     const regionsRef = useRef<any>(null);
@@ -22,6 +23,18 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditor
     const [duration, setDuration] = useState(0);
     const [finalName, setFinalName] = useState(fileName);
     const [optimizeForUI, setOptimizeForUI] = useState(false);
+    const [targetCategory, setTargetCategory] = useState(initialCategory || 'sfx');
+
+    const CATEGORIES = [
+        { id: 'ambient', label: 'Ambient' },
+        { id: 'environment', label: 'Environment' },
+        { id: 'music', label: 'Music' },
+        { id: 'npc_voice', label: 'NPC Voice' },
+        { id: 'sfx', label: 'SFX' },
+        { id: 'system', label: 'System' },
+        { id: 'voice', label: 'Voice' },
+        { id: 'weather', label: 'Weather' }
+    ];
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -133,7 +146,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditor
                 finalExt = mimeType.includes('ogg') ? '.ogg' : '.webm';
             }
 
-            await onBake(finalBlob, finalName + finalExt);
+            await onBake(finalBlob, finalName + finalExt, targetCategory);
         } catch (error) {
             console.error('Bake failed:', error);
             alert('Failed to bake sound asset');
@@ -144,7 +157,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditor
 
     return (
         <div className="fixed inset-0 z-[100] bg-stone-950/90 backdrop-blur-md flex items-center justify-center p-6">
-            <div className="bg-stone-900 border border-stone-800 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div className="bg-stone-900 border border-stone-800 rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col">
                 <div className="p-6 border-b border-stone-800 flex justify-between items-center bg-stone-850">
                     <div className="flex items-center gap-3">
                         <Scissors className="w-5 h-5 text-stone-400" />
@@ -156,7 +169,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditor
                 </div>
 
                 <div className="p-8 space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="space-y-1">
                             <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Final Resource Identifier</label>
                             <div className="flex items-center gap-2 bg-stone-950 border border-stone-800 rounded-xl p-2 px-4">
@@ -169,11 +182,26 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake }: AudioEditor
                             <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Professional Optimization</label>
                             <button 
                                 onClick={() => setOptimizeForUI(!optimizeForUI)}
-                                className={`w-full flex items-center justify-between p-2 px-4 rounded-xl border transition-all ${optimizeForUI ? 'bg-dragon-red/10 border-dragon-red/50 text-dragon-red' : 'bg-stone-950 border-stone-800 text-stone-600'}`}
+                                className={`w-full flex items-center justify-between p-2.5 px-4 rounded-xl border transition-all ${optimizeForUI ? 'bg-purple-900/20 border-purple-500/50 text-purple-400' : 'bg-stone-950 border-stone-800 text-stone-600'}`}
                             >
                                 <span className="text-[10px] font-bold uppercase tracking-widest">Low Latency (OGG)</span>
-                                <div className={`w-3 h-3 rounded-full ${optimizeForUI ? 'bg-dragon-red shadow-[0_0_8px_#8b0000]' : 'bg-stone-800'}`} />
+                                <div className={`w-3 h-3 rounded-full ${optimizeForUI ? 'bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.5)]' : 'bg-stone-800'}`} />
                             </button>
+                        </div>
+
+                        <div className="space-y-1">
+                            <label className="text-[10px] font-mono text-stone-600 uppercase tracking-tighter ml-1">Save Folder Map</label>
+                            <select
+                                value={targetCategory}
+                                onChange={(e) => setTargetCategory(e.target.value)}
+                                className="w-full bg-stone-950 border border-stone-800 rounded-xl p-2 px-4 text-xs text-stone-300 focus:outline-none focus:border-purple-500 font-sans h-[38px]"
+                            >
+                                {CATEGORIES.map(cat => (
+                                    <option key={cat.id} value={cat.id} className="bg-stone-900 text-white">
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                     </div>
                     <div ref={containerRef} className="bg-stone-950 border border-stone-800 rounded-xl overflow-hidden relative min-h-[120px]">
