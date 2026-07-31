@@ -36,8 +36,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [selectedHabitat, setSelectedHabitat] = useState('land_forest');
   const [selectedVariation, setSelectedVariation] = useState(0);
-  const [category, setCategory] = useState<'bestiary' | 'characters' | 'equipment'>(initialCategory);
-  const [selectedLevel, setSelectedLevel] = useState(level);
+  const category = 'bestiary';
 
   // Sync with initialHabitat prop
   React.useEffect(() => {
@@ -89,7 +88,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
         monsterType, 
         monsterSize, 
         monsterAlignment, 
-        category === 'characters' ? selectedLevel.toString() : monsterSubtype,
+        monsterSubtype,
         monsterLore,
         category as any
       );
@@ -114,7 +113,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
         <div className="flex items-center gap-4">
           <h3 className="text-lg font-cinzel text-dragon-red flex items-center gap-2">
             <GameIcon name="image" size={20} color="#8B0000" />
-            {category === 'bestiary' ? 'Enemy Designer' : category === 'characters' ? 'NPC Portraitist' : 'Item Forger'}
+            Enemy Designer
           </h3>
         </div>
         <button
@@ -129,42 +128,6 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
       </div>
 
       {error && <p className="text-red-500 text-sm font-bold">{error}</p>}
-
-      <div className="flex gap-2 mb-2">
-        {(['bestiary', 'characters', 'equipment'] as const).map(cat => (
-          <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={cn(
-              "flex-1 py-1 text-[10px] font-black uppercase tracking-widest rounded border transition-all",
-              category === cat ? "bg-dragon-red text-white border-dragon-red" : "bg-white/50 text-dragon-red border-dragon-red/10"
-            )}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
-      {category === 'characters' && (
-        <div className="space-y-1 mb-2">
-          <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
-            Level / Experience
-          </label>
-          <input 
-            type="range" min="1" max="20" 
-            value={selectedLevel} 
-            onChange={(e) => setSelectedLevel(parseInt(e.target.value))}
-            className="w-full accent-dragon-red"
-            title="Level / Experience range"
-            aria-label="Level / Experience range"
-          />
-          <div className="flex justify-between text-[8px] font-bold text-dragon-red">
-            <span>LEVEL 1</span>
-            <span className="text-[10px]">CURRENT: {selectedLevel}</span>
-            <span>LEVEL 20</span>
-          </div>
-        </div>
-      )}
 
       {/* Visual Habitat Gallery Carousel */}
       <div className="space-y-1.5">
