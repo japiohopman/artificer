@@ -34,6 +34,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     const recordRef = useRef<any>(null);
 
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isLooping, setIsLooping] = useState(false);
     const [loading, setLoading] = useState(true);
     const [baking, setBaking] = useState(false);
     const [duration, setDuration] = useState(0);
@@ -68,10 +69,16 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         { id: 'weather', label: 'Weather' }
     ];
 
+    // Maintain a ref for looping to prevent stale closure in Wavesurfer finish listener
+    const isLoopingRef = useRef(isLooping);
+    useEffect(() => {
+        isLoopingRef.current = isLooping;
+    }, [isLooping]);
+
+    // Initialize WaveSurfer exactly ONCE on mount
     useEffect(() => {
         if (!containerRef.current) return;
 
-        const url = URL.createObjectURL(activeBlob);
         const regionsPlugin = RegionsPlugin.create();
 
         const timelinePlugin = TimelinePlugin.create({
@@ -150,8 +157,6 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         wavesurferRef.current = ws;
         regionsRef.current = regionsPlugin;
 
-        ws.load(url);
-
         ws.on('ready', () => {
             setLoading(false);
             const totalDur = ws.getDuration();
@@ -172,6 +177,12 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
         ws.on('play', () => setIsPlaying(true));
         ws.on('pause', () => setIsPlaying(false));
+
+        ws.on('finish', () => {
+            if (isLoopingRef.current) {
+                ws.play();
+            }
+        });
 
         // Enable dragging to select regions on the wave
         regionsPlugin.enableDragSelection({
@@ -202,10 +213,6 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
 
         // When record completes, load the newly recorded sound
         recordPlugin.on('record-end', (blob: Blob) => {
-            // Save current to history before updating
-            setHistory(prev => [...prev.slice(0, historyIndex + 1), activeBlob]);
-            setHistoryIndex(prev => prev + 1);
-
             setActiveBlob(blob);
             setIsRecording(false);
         });
@@ -216,6 +223,19 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
             } catch (e) {
                 console.warn("WaveSurfer cleanup warning:", e);
             }
+        };
+    }, []); // Runs exactly once on mount!
+
+    // Load activeBlob URL dynamically when it changes
+    useEffect(() => {
+        const ws = wavesurferRef.current;
+        if (!ws) return;
+
+        setLoading(true);
+        const url = URL.createObjectURL(activeBlob);
+        ws.load(url);
+
+        return () => {
             URL.revokeObjectURL(url);
         };
     }, [activeBlob]);
@@ -405,6 +425,10 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
             setIsRecording(false);
         } else {
             try {
+                // Push current to history first
+                setHistory(prev => [...prev.slice(0, historyIndex + 1), activeBlob]);
+                setHistoryIndex(prev => prev + 1);
+
                 await recordPlugin.startRecording();
                 setIsRecording(true);
             } catch (err: any) {
@@ -459,7 +483,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                     <div className="space-y-1">
                         <label className="text-[9px] font-mono text-stone-500 uppercase tracking-tighter ml-1">Final Resource Identifier</label>
                         <div className="flex items-center gap-2 bg-stone-950 border border-stone-850 rounded-xl p-2 px-3.5">
-                            <input value={finalName} onChange={(e) => setFinalName(e.target.value.toLowerCase().replace(/[^a-z0-9_-]/g, ''))} className="bg-transparent text-[11px] font-mono text-stone-300 focus:outline-none flex-1" placeholder="enter_filename" />
+                            <input value={finalName} onChange={(e) => setFinalName(e.target.value.toLowerCase().replace(/[^a-z0-9_-]/g, ''))} className="bg-transparent text-[12px] font-mono text-stone-300 focus:outline-none flex-1" placeholder="enter_filename" />
                             <span className="text-[10px] font-mono text-stone-600">{optimizeForUI ? '.ogg' : '.wav'}</span>
                         </div>
                     </div>
@@ -653,8 +677,22 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
                     <button onClick={() => wavesurferRef.current?.stop()} aria-label="Stop playback" className="w-12 h-12 rounded-full bg-stone-900 border border-stone-850 flex items-center justify-center text-stone-500 hover:text-stone-200 hover:border-stone-700 transition-all active:scale-95">
                         <Square className="w-5 h-5" />
                     </button>
+                    <button
+                        onClick={() => {
+                            setIsLooping(!isLooping);
+                            playClickSound();
+                        }}
+                        className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all active:scale-95 ${
+                            isLooping
+                                ? 'bg-purple-600/10 border-purple-500/40 text-purple-400 font-bold shadow-[0_0_10px_rgba(168,85,247,0.15)] animate-spin-slow'
+                                : 'bg-stone-900 border-stone-850 text-stone-500 hover:text-stone-300 hover:border-stone-700'
+                        }`}
+                        title="Toggle Loop Playback"
+                    >
+                        <RefreshCw className={`w-5 h-5 ${isLooping ? 'animate-spin-slow' : ''}`} />
+                    </button>
                     <button onClick={onClose} className="px-5 py-3 bg-stone-900 border border-stone-850 hover:bg-stone-800 hover:border-stone-700 text-stone-300 font-mono text-[10px] font-bold uppercase rounded-xl transition-all flex items-center gap-2 active:scale-95" title="Go back to generator to adjust settings and regenerate">
-                        <RefreshCw className="w-3.5 h-3.5 text-purple-400 animate-spin-slow" />
+                        <RefreshCw className="w-3.5 h-3.5 text-purple-400" />
                         Adjust & Re-Generate
                     </button>
                 </div>
