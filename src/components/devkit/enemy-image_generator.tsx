@@ -4,6 +4,7 @@ import { commitFile } from '../../services/storageService';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { GameIcon } from '../../game_icons';
+import { BACKGROUND_CONFIGS, getBackgroundFilename, getSpriteThumbnailStyle } from '../../lib/backgroundConfigs';
 
 interface EnemyImageGeneratorProps {
   monsterName: string;
@@ -52,31 +53,6 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
     }
   }, [initialHabitat]);
 
-  const backgroundTypes = [
-    { id: 'air', label: 'Air' },
-    { id: 'water', label: 'Water' },
-    { id: 'land_forest', label: 'Forest' },
-    { id: 'land_urban', label: 'Urban' },
-    { id: 'land_plains', label: 'Plains' },
-    { id: 'land_mountains', label: 'Mountains' },
-    { id: 'jungle', label: 'Jungle' },
-    { id: 'desert', label: 'Desert' },
-    { id: 'underdark', label: 'Underdark' },
-    { id: 'beach', label: 'Beach' },
-    { id: 'church', label: 'Church' },
-    { id: 'castle', label: 'Castle' },
-    { id: 'fort', label: 'Fort' },
-    { id: 'ruins', label: 'Ruins' },
-    { id: 'cave', label: 'Cave' },
-    { id: 'snowy', label: 'Snowy' },
-    { id: 'swamp', label: 'Swamp' },
-    { id: 'dragon_cave', label: 'Dragon Cave' },
-    { id: 'fey', label: 'Fey' },
-    { id: 'volcano', label: 'Volcano' },
-    { id: 'ethereal', label: 'Ethereal' },
-    { id: 'void', label: 'Void' }
-  ];
-
   const handleGenerateBg = async () => {
     setIsGenerating(true);
     try {
@@ -95,7 +71,8 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
     const repo = process.env.GITHUB_REPO || "japiohopman/artificer";
     const branch = process.env.GITHUB_BRANCH || "main";
     const suffix = variation === 0 ? '' : variation;
-    return `https://raw.githubusercontent.com/${repo}/${branch}/public/assets/images/enemy_backgrounds/${type}${suffix}.webp?t=${Date.now()}`;
+    const resolvedBase = getBackgroundFilename(type);
+    return `https://raw.githubusercontent.com/${repo}/${branch}/public/assets/images/enemy_backgrounds/${resolvedBase}${suffix}.webp?t=${Date.now()}`;
   };
 
   const handleGenerate = async () => {
@@ -189,6 +166,38 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
         </div>
       )}
 
+      {/* Visual Habitat Gallery Carousel */}
+      <div className="space-y-1.5">
+        <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
+          <GameIcon name="globe" size={10} color="currentColor" /> Habitat Gallery
+        </label>
+        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-dragon-red/20 max-w-full">
+          {BACKGROUND_CONFIGS.map(b => {
+            const isSelected = selectedHabitat === b.id;
+            return (
+              <button
+                key={b.id}
+                onClick={() => setSelectedHabitat(b.id)}
+                className="flex-shrink-0 w-16 text-center focus:outline-none group"
+                title={`Select ${b.label}`}
+              >
+                <div
+                  className={`w-16 h-11 rounded border-2 transition-all overflow-hidden ${
+                    isSelected
+                      ? 'border-dragon-red scale-105 shadow-[0_0_8px_rgba(139,0,0,0.3)]'
+                      : 'border-dragon-red/10 hover:border-dragon-red/30'
+                  }`}
+                  style={getSpriteThumbnailStyle(b.id, selectedVariation)}
+                />
+                <span className={`text-[8px] font-black block mt-1 truncate ${isSelected ? 'text-dragon-red' : 'text-parchment-600 group-hover:text-parchment-800'}`}>
+                  {b.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       <div className="grid grid-cols-2 gap-4 mb-2">
         <div className="space-y-1">
           <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
@@ -200,7 +209,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
             onChange={(e) => setSelectedHabitat(e.target.value)}
             className="w-full bg-white/50 border border-dragon-red/10 p-1.5 text-[10px] text-parchment-900 rounded focus:outline-none focus:border-dragon-red transition-colors"
           >
-            {backgroundTypes.map(b => (
+            {BACKGROUND_CONFIGS.map(b => (
               <option key={b.id} value={b.id}>{b.label}</option>
             ))}
           </select>
@@ -214,11 +223,21 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
               <button
                 key={v}
                 onClick={() => setSelectedVariation(v)}
-                className={`flex-1 py-1 text-[9px] rounded border transition-all ${selectedVariation === v ? 'bg-dragon-red text-white border-dragon-red' : 'bg-white/50 text-parchment-600 border-dragon-red/10 hover:border-dragon-red/30'}`}
-                title={`Variation ${v === 0 ? 'Main' : v === 4 ? '4 (Macro)' : v}`}
-                aria-label={`Variation ${v === 0 ? 'Main' : v === 4 ? '4 (Macro)' : v}`}
+                className={`flex-1 aspect-[3/2] rounded border-2 overflow-hidden transition-all relative ${
+                  selectedVariation === v
+                    ? 'border-dragon-red ring-2 ring-dragon-red/40 scale-105 z-10'
+                    : 'border-dragon-red/10 hover:border-dragon-red/30'
+                }`}
+                title={`Variation ${v === 0 ? 'Main' : v === 3 ? '3 (Wide)' : v === 4 ? '4 (Macro)' : v}`}
+                aria-label={`Variation ${v === 0 ? 'Main' : v === 3 ? '3 (Wide)' : v === 4 ? '4 (Macro)' : v}`}
               >
-                {v === 0 ? 'M' : v === 4 ? '4 (Macro)' : v}
+                <div
+                  className="w-full h-full"
+                  style={getSpriteThumbnailStyle(selectedHabitat, v)}
+                />
+                <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-[7px] font-bold text-white px-0.5 rounded">
+                  {v === 0 ? 'M' : v === 3 ? 'W' : v === 4 ? 'C' : v}
+                </div>
               </button>
             ))}
           </div>

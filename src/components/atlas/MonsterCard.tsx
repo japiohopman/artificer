@@ -14,6 +14,7 @@ import { SpellCard } from './SpellCard';
 import { EquipmentCard } from './EquipmentCard';
 import { useUIStore } from '../../store/useUIStore';
 import { normalizeImageUrl, playClickSound } from '../../services/storageService';
+import { inferBackgroundFromMonster, getBackgroundFilename } from '../../lib/backgroundConfigs';
 
 interface MonsterCardProps {
   monster: Partial<Monster>;
@@ -164,24 +165,16 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
     let finalType = type;
 
     if (!finalType) {
-      // Try to infer from monster type
-      const mType = (monster.type || "").toLowerCase();
-      if (mType.includes('dragon')) finalType = 'dragon_cave';
-      else if (mType.includes('undead') || mType.includes('fiend') || mType.includes('aberration')) finalType = 'underdark';
-      else if (mType.includes('fey')) finalType = 'fey';
-      else if (mType.includes('beast')) finalType = 'land_forest';
-      else if (mType.includes('monstrosity')) finalType = 'ruins';
-      else if (mType.includes('elemental')) finalType = 'air';
-      else if (mType.includes('construct')) finalType = 'fort';
-      else if (mType.includes('celestial')) finalType = 'cathedral';
-      else finalType = 'land_forest'; // Default fallback
-      
+      finalType = inferBackgroundFromMonster(monster);
       console.log(`No background type provided for ${monster.name}, inferred: ${finalType}`);
     }
     
+    // Resolve any aliased filenames (like land_mountains -> mountain)
+    const filename = getBackgroundFilename(finalType);
+
     // Use GitHub URL to ensure it works in all environments
-    const rawUrl = `https://raw.githubusercontent.com/${repo}/${branch}/public/assets/images/enemy_backgrounds/${finalType}.webp?t=${timestamp}`;
-    console.log(`Loading background for ${monster.name} (type: ${finalType}): ${rawUrl}`);
+    const rawUrl = `https://raw.githubusercontent.com/${repo}/${branch}/public/assets/images/enemy_backgrounds/${filename}.webp?t=${timestamp}`;
+    console.log(`Loading background for ${monster.name} (type: ${finalType}, filename: ${filename}): ${rawUrl}`);
     return `/api/raw?url=${encodeURIComponent(rawUrl)}`;
   };
 
