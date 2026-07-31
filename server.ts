@@ -344,8 +344,11 @@ async function startServer() {
   app.post("/api/commit", async (req, res) => {
     const { path: filePath, content, isBase64, message } = req.body;
 
+    console.log(`[/api/commit] Request path: ${filePath}, allowed: ${isPathAllowed(filePath)}`);
+
     if (!isPathAllowed(filePath)) {
-      return res.status(403).json({ error: "Path not allowed." });
+      console.warn(`[/api/commit] Path rejected: ${filePath}`);
+      return res.status(403).json({ error: `Path not allowed: ${filePath}` });
     }
 
     const token = process.env.GITHUB_TOKEN;

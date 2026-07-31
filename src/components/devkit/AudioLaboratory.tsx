@@ -464,7 +464,8 @@ export const AudioLaboratory: React.FC = () => {
           setEditingFileName('');
           fetchAudioFiles();
         } else {
-          throw new Error("Commit failed on backend server.");
+          const errData = await res.json().catch(() => ({ error: "Commit failed on backend server." }));
+          throw new Error(errData.error || "Commit failed on backend server.");
         }
       };
     } catch (err: any) {
