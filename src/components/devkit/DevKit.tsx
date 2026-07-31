@@ -39,6 +39,7 @@ import { AudioLaboratory } from './AudioLaboratory';
 import { GodsLore } from '../atlas/lore/gods';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { soundService } from '../../services/soundService';
+import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle } from '../../lib/backgroundConfigs';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -133,30 +134,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     "Raw Materials", "Refined Materials", "Bundled Materials"
   ];
 
-  const backgroundTypes = [
-    { id: 'air', label: 'Air' },
-    { id: 'water', label: 'Water' },
-    { id: 'land_forest', label: 'Forest' },
-    { id: 'land_urban', label: 'Urban' },
-    { id: 'land_plains', label: 'Plains' },
-    { id: 'land_mountains', label: 'Mountains' },
-    { id: 'jungle', label: 'Jungle' },
-    { id: 'desert', label: 'Desert' },
-    { id: 'underdark', label: 'Underdark' },
-    { id: 'beach', label: 'Beach' },
-    { id: 'church', label: 'Church' },
-    { id: 'castle', label: 'Castle' },
-    { id: 'fort', label: 'Fort' },
-    { id: 'ruins', label: 'Ruins' },
-    { id: 'cave', label: 'Cave' },
-    { id: 'snowy', label: 'Snowy' },
-    { id: 'swamp', label: 'Swamp' },
-    { id: 'dragon_cave', label: 'Dragon Cave' },
-    { id: 'fey', label: 'Fey' },
-    { id: 'volcano', label: 'Volcano' },
-    { id: 'ethereal', label: 'Ethereal' },
-    { id: 'void', label: 'Void' }
-  ];
+  const backgroundTypes = BACKGROUND_CONFIGS;
 
   const npcSpecies = [
     "Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "Half-Orc", "Halfling", "Human", "Tiefling",
@@ -995,7 +973,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <Jane initialData={initialLocation} />
             ) : activeTab === 'generators' && activeGenerator === 'gods' ? (
               <GodsLore />
-            ) : activeTab === 'generators' ? (
+            ) : activeTab === 'generators' && activeGenerator !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
                 <div className="w-64 border-r border-white/5 flex flex-col bg-[#1e1e1e]">
@@ -2282,23 +2260,44 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                         </section>
 
                         {/* Status Grid */}
-                        <div className="p-5 bg-black/20 border border-white/5 rounded-xl space-y-4">
-                          <label className="text-[9px] font-bold text-white/30 uppercase tracking-[0.2em] block">Asset_Inventory_Matrix</label>
-                          <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
-                            {backgroundTypes.map(type => (
-                              <div key={type.id} className="space-y-1">
-                                <span className="text-[8px] text-white/20 font-bold uppercase truncate block">{type.id.slice(0, 10)}</span>
-                                <div className="flex gap-0.5">
-                                  {[0, 1, 2, 3, 4].map(v => (
-                                    <div 
-                                      key={v}
-                                      className={`w-2 h-2 rounded-[1px] border ${
-                                        selectedBgType === type.id && selectedBgVariation === v 
-                                          ? 'bg-blue-500 border-blue-400 shadow-[0_0_5px_rgba(59,130,246,0.5)]' 
-                                          : 'bg-white/5 border-white/5'
-                                      }`}
-                                    />
-                                  ))}
+                        <div className="p-5 bg-black/20 border border-white/5 rounded-xl space-y-4 max-h-[500px] overflow-y-auto custom-scrollbar">
+                          <label className="text-[9px] font-bold text-white/30 uppercase tracking-[0.2em] block">Asset_Inventory_Matrix (Interactive Gallery)</label>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {BACKGROUND_CONFIGS.map(bg => (
+                              <div key={bg.id} className="bg-black/40 border border-white/5 rounded-lg p-2.5 space-y-2">
+                                <div className="flex justify-between items-center border-b border-white/5 pb-1">
+                                  <span className="text-[10px] text-white/60 font-bold uppercase">{bg.label}</span>
+                                  <span className="text-[8px] text-white/20 font-mono">Row: {bg.row} | Sheet: {bg.sheet}</span>
+                                </div>
+                                <div className="grid grid-cols-5 gap-1.5">
+                                  {[0, 1, 2, 3, 4].map(v => {
+                                    const isSelected = selectedBgType === bg.id && selectedBgVariation === v;
+                                    return (
+                                      <button
+                                        key={v}
+                                        onClick={() => {
+                                          setSelectedBgType(bg.id);
+                                          setSelectedBgVariation(v);
+                                          setGeneratedBackground(null);
+                                        }}
+                                        className={`aspect-[3/2] rounded border transition-all overflow-hidden relative group/thumb ${
+                                          isSelected
+                                            ? 'border-blue-500 ring-2 ring-blue-500/30 scale-105 z-10'
+                                            : 'border-white/10 hover:border-white/30'
+                                        }`}
+                                        title={`${bg.label} (Variation ${v})`}
+                                      >
+                                        <div
+                                          className="w-full h-full"
+                                          style={getSpriteThumbnailStyle(bg.id, v)}
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity" />
+                                        <span className="absolute bottom-0 right-0 bg-black/80 text-[7px] text-white/60 px-0.5 rounded scale-90">
+                                          {v === 0 ? 'M' : v === 3 ? 'W' : v === 4 ? 'C' : v}
+                                        </span>
+                                      </button>
+                                    );
+                                  })}
                                 </div>
                               </div>
                             ))}
