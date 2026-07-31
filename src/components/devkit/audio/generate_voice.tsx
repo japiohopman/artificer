@@ -13,7 +13,7 @@ interface GenerateVoiceProps {
   voiceOptions: VoiceModel[];
   selectedVoiceId: string;
   onSelectVoice: (voiceId: string) => void;
-  onGenerate: (text: string) => Promise<void>;
+  onGenerate: (text: string, voiceId?: string) => Promise<void>;
 }
 
 const VOICE_STYLE_PRESETS = [
@@ -172,7 +172,8 @@ export function GenerateVoice({ voiceOptions, selectedVoiceId, onSelectVoice, on
     if (!activePrompt.trim()) return;
     setIsGenerating(true);
     try {
-      await onGenerate(activePrompt);
+      const activeId = selectedVoiceId === 'custom' ? customVoiceId.trim() : selectedVoiceId;
+      await onGenerate(activePrompt, activeId);
       // Refresh history after generation
       setTimeout(fetchHistory, 2000);
     } finally {

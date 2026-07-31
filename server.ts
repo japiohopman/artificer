@@ -555,13 +555,26 @@ async function startServer() {
     }
   });
 
+  async function getLocalHistory(): Promise<any[]> {
+    const historyPath = path.join(process.cwd(), "public/assets/sounds/history.json");
+    try {
+      const data = await fs.readFile(historyPath, "utf-8");
+      const history = JSON.parse(data);
+      return Array.isArray(history) ? history : [];
+    } catch {
+      return [];
+    }
+  }
+
   app.get("/api/audio/history", async (req, res) => {
     try {
       const accountIndex = parseInt(req.query.accountIndex as string || "0");
       const apiKey = getElevenLabsKey(req, accountIndex);
 
       if (!apiKey) {
-        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+        console.log("[ElevenLabs History] Missing API Key. Falling back to local history.json");
+        const localHistory = await getLocalHistory();
+        return res.json({ history: localHistory });
       }
 
       const response = await fetch("https://api.elevenlabs.io/v1/history", {
@@ -569,14 +582,17 @@ async function startServer() {
       });
 
       if (!response.ok) {
-        return res.status(response.status).json({ error: "Failed to fetch history" });
+        console.warn(`[ElevenLabs History] ElevenLabs fetch failed with status ${response.status}. Falling back to local history.json`);
+        const localHistory = await getLocalHistory();
+        return res.json({ history: localHistory });
       }
 
       const data = await response.json();
       res.json(data);
     } catch (error: any) {
-      console.error("[ElevenLabs] History fetch error:", error.message);
-      res.status(500).json({ error: "Internal server error during history fetch" });
+      console.error("[ElevenLabs] History fetch error, falling back to local history.json:", error.message);
+      const localHistory = await getLocalHistory();
+      res.json({ history: localHistory });
     }
   });
 
@@ -588,12 +604,24 @@ async function startServer() {
       return res.status(400).json({ error: "Invalid history item ID" });
     }
 
+    const localCachePath = path.join(process.cwd(), "public/assets/sounds/cache", `${id}.mp3`);
+    try {
+      await fs.access(localCachePath);
+      // Cache exists, serve it!
+      const content = await fs.readFile(localCachePath);
+      res.setHeader("Content-Type", "audio/mpeg");
+      return res.send(content);
+    } catch (err) {
+      // Cache does not exist, fetch from ElevenLabs
+      console.log(`[ElevenLabs Cache] Cache miss for ${id}. Fetching from ElevenLabs...`);
+    }
+
     const accountIndex = parseInt(req.query.accountIndex as string || "0");
     const apiKey = getElevenLabsKey(req, accountIndex);
 
     try {
       if (!apiKey) {
-        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+        return res.status(500).json({ error: "Missing ElevenLabs API key and cache miss" });
       }
 
       const response = await fetch(`https://api.elevenlabs.io/v1/history/${encodeURIComponent(id)}/audio`, {
@@ -605,13 +633,72 @@ async function startServer() {
       }
 
       const buffer = await response.arrayBuffer();
+      const nodeBuffer = Buffer.from(buffer);
+
+      // Write to local cache dynamically so subsequent requests are fast!
+      try {
+        const cacheDir = path.join(process.cwd(), "public/assets/sounds/cache");
+        await fs.mkdir(cacheDir, { recursive: true });
+        await fs.writeFile(localCachePath, nodeBuffer);
+        console.log(`[ElevenLabs Cache] Dynamically cached audio for ${id}`);
+      } catch (cacheErr) {
+        console.error("[ElevenLabs Cache] Failed to cache audio dynamically:", cacheErr);
+      }
+
       res.setHeader("Content-Type", "audio/mpeg");
-      res.send(Buffer.from(buffer));
+      res.send(nodeBuffer);
     } catch (error: any) {
       console.error("[ElevenLabs] History audio fetch error:", error.message);
       res.status(500).json({ error: "Internal server error during history audio fetch" });
     }
   });
+
+  async function saveToLocalHistory(text: string, voiceId: string | null, voiceName: string, category: string, buffer: Buffer): Promise<string> {
+    const historyDir = path.join(process.cwd(), "public/assets/sounds");
+    const cacheDir = path.join(historyDir, "cache");
+    const historyPath = path.join(historyDir, "history.json");
+
+    try {
+      await fs.mkdir(cacheDir, { recursive: true });
+
+      const id = Date.now().toString() + "-" + Math.random().toString(36).substring(2, 11);
+      const cacheFile = path.join(cacheDir, `${id}.mp3`);
+
+      await fs.writeFile(cacheFile, buffer);
+
+      let historyList: any[] = [];
+      try {
+        const data = await fs.readFile(historyPath, "utf-8");
+        historyList = JSON.parse(data);
+        if (!Array.isArray(historyList)) {
+          historyList = [];
+        }
+      } catch (err) {
+        historyList = [];
+      }
+
+      const newItem = {
+        history_item_id: id,
+        text,
+        voice_name: voiceName,
+        voice_id: voiceId || undefined,
+        date_unix: Math.floor(Date.now() / 1000),
+        category
+      };
+
+      historyList.unshift(newItem);
+
+      if (historyList.length > 100) {
+        historyList = historyList.slice(0, 100);
+      }
+
+      await fs.writeFile(historyPath, JSON.stringify(historyList, null, 2), "utf-8");
+      return id;
+    } catch (err) {
+      console.error("Failed to save local history log:", err);
+      return "";
+    }
+  }
 
   app.post("/api/audio/generate-sfx", async (req, res) => {
     try {
@@ -658,13 +745,80 @@ async function startServer() {
         return res.status(response.status).json({ error: "ElevenLabs API error", detail: errorText });
       }
 
-      const buffer = await response.arrayBuffer();
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      // Save locally to cache and history log
+      await saveToLocalHistory(text || "", null, "Sound FX", "sfx", buffer);
+
       const contentType = response.headers.get("content-type") || "audio/mpeg";
       res.setHeader("Content-Type", contentType);
-      res.send(Buffer.from(buffer));
+      res.send(buffer);
     } catch (error: any) {
       console.error("SFX generation error:", error);
       res.status(500).json({ error: "Internal server error during SFX generation." });
+    }
+  });
+
+  app.post("/api/audio/generate-voice", async (req, res) => {
+    try {
+      const { text, voice_id, accountIndex, output_format, model_id, voice_name } = req.body;
+
+      console.log("[ElevenLabs Generate Voice] Request details:", {
+        text,
+        voice_id,
+        accountIndex,
+        output_format,
+        model_id,
+        voice_name
+      });
+
+      if (!voice_id) {
+        return res.status(400).json({ error: "Missing voice_id" });
+      }
+
+      const apiKey = getElevenLabsKey(req, accountIndex);
+
+      if (!apiKey) {
+        console.error("[ElevenLabs Generate Voice] Error: API Key was not resolved.");
+        return res.status(500).json({ error: "Missing ElevenLabs API key" });
+      }
+
+      let url = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voice_id)}`;
+      if (output_format) {
+        url += `?output_format=${encodeURIComponent(output_format)}`;
+      }
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "xi-api-key": apiKey,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          text,
+          model_id: model_id || "eleven_multilingual_v2"
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("ElevenLabs Voice Error:", errorText);
+        return res.status(response.status).json({ error: "ElevenLabs API error", detail: errorText });
+      }
+
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      // Save locally to cache and history log
+      await saveToLocalHistory(text || "", voice_id, voice_name || "Voice Model", "voice", buffer);
+
+      const contentType = response.headers.get("content-type") || "audio/mpeg";
+      res.setHeader("Content-Type", contentType);
+      res.send(buffer);
+    } catch (error: any) {
+      console.error("Voice generation error:", error);
+      res.status(500).json({ error: "Internal server error during Voice generation." });
     }
   });
 
@@ -680,10 +834,12 @@ async function startServer() {
         if (entry.isDirectory()) {
           return getFiles(fullPath, entry.name);
         } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
+          const virtualPath = `/assets/sounds/${category ? category + "/" : ""}${entry.name}`;
           return {
             name: entry.name,
             category: category || "uncategorized",
-            path: `/assets/sounds/${category ? category + "/" : ""}${entry.name}`
+            path: virtualPath,
+            url: virtualPath
           };
         }
         return [];
@@ -697,6 +853,53 @@ async function startServer() {
     } catch (error) {
       console.error("Error listing audio files:", error);
       res.status(500).json({ error: "Failed to list audio files" });
+    }
+  });
+
+  app.get("/api/audio/list/:category", async (req, res) => {
+    const { category } = req.params;
+    if (!category || !/^[a-zA-Z0-9_-]+$/.test(category)) {
+      return res.status(400).json({ error: "Invalid category" });
+    }
+
+    const baseDir = path.join(process.cwd(), "public/assets/sounds", category);
+
+    async function getFiles(dir: string, currentSubCategory: string = ""): Promise<any[]> {
+      try {
+        const entries = await fs.readdir(dir, { withFileTypes: true });
+        const files = await Promise.all(entries.map(async (entry) => {
+          const fullPath = path.join(dir, entry.name);
+          const relSubCategory = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
+
+          if (entry.isDirectory()) {
+            return getFiles(fullPath, relSubCategory);
+          } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
+            const relPath = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
+            const fullVirtualPath = `/assets/sounds/${category}/${relPath}`;
+            return {
+              name: entry.name,
+              category: category,
+              path: fullVirtualPath,
+              url: fullVirtualPath
+            };
+          }
+          return [];
+        }));
+        return files.flat();
+      } catch (err: any) {
+        if (err.code === 'ENOENT') {
+          return [];
+        }
+        throw err;
+      }
+    }
+
+    try {
+      const allFiles = await getFiles(baseDir);
+      res.json(allFiles);
+    } catch (error) {
+      console.error(`Error listing category ${category}:`, error);
+      res.status(500).json({ error: "Failed to list category audio files" });
     }
   });
 

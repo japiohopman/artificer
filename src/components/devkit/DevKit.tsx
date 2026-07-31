@@ -35,8 +35,12 @@ import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';
 import { WorldExplorer } from './WorldExplorer';
 import { FlagManager } from './FlagManager';
-import { AudioLaboratory } from './AudioLaboratory';
+import { SoundStudio } from './audio/SoundStudio';
 import { GodsLore } from '../atlas/lore/gods';
+import { Lightbulb } from 'lucide-react';
+import { LampCard } from './audio/LampCard';
+import { LampControls } from './audio/LampControls';
+import { useHueStore } from '../../store/useHueStore';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { soundService } from '../../services/soundService';
 import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle } from '../../lib/backgroundConfigs';
@@ -72,7 +76,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
     addCharacter
   } = useCharacterStore();
 
-  const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab'>('inspectors');
+  const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab' | 'hue_lamps'>('inspectors');
   const [activeInspector, setActiveInspector] = useState<'codex' | 'world' | 'flags'>('codex');
   const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'gods' | 'jane' | 'backgrounds'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
@@ -872,7 +876,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               { id: 'inspectors', icon: (props: any) => <GameIcon name="save_data" {...props} />, label: 'INSPECTORS' },
               { id: 'generators', icon: (props: any) => <GameIcon name="magic_effect" {...props} />, label: 'GENERATORS' },
               { id: 'testers', icon: (props: any) => <GameIcon name="users" {...props} />, label: 'TESTERS' },
-              { id: 'audio_lab', icon: (props: any) => <GameIcon name="adjust" {...props} />, label: 'AUDIO LAB' }
+              { id: 'audio_lab', icon: (props: any) => <GameIcon name="adjust" {...props} />, label: 'AUDIO LAB' },
+              { id: 'hue_lamps', icon: (props: any) => <span className={props.className}><Lightbulb size={12} /></span>, label: 'HUE LAMPS' }
             ].map(tab => (
               <button 
                 key={tab.id}
@@ -968,7 +973,11 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                  </div>
               </div>
             ) : activeTab === 'audio_lab' ? (
-              <AudioLaboratory />
+              <SoundStudio />
+            ) : activeTab === 'hue_lamps' ? (
+              <div className="flex-1 overflow-hidden bg-stone-950 text-stone-200">
+                <DevKitHueTab />
+              </div>
             ) : activeTab === 'testers' ? (
               <>
                 {activeTester === 'npcs' && <NPCTester />}
@@ -2361,3 +2370,62 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   );
 };
 
+const DevKitHueTab: React.FC = () => {
+  const { lights, triggerHue } = useHueStore();
+  const [selectedLightId, setSelectedLightId] = useState<string | null>(null);
+  const selectedLight = lights.find(l => l.id === selectedLightId);
+
+  return (
+    <div className="h-full flex flex-col p-6 space-y-6 bg-stone-950">
+      <div className="flex items-center gap-3 pb-4 border-b border-white/5">
+        <div className="p-2 bg-yellow-500/10 rounded border border-yellow-500/20 text-yellow-500">
+          <Lightbulb className="w-5 h-5 animate-pulse" />
+        </div>
+        <div>
+          <div className="text-[10px] text-white/30 font-bold uppercase tracking-widest">LUMINESCENT_SPECTRUM</div>
+          <div className="text-sm font-bold text-white uppercase tracking-tight">Philips Hue Controller</div>
+        </div>
+      </div>
+
+      {selectedLight ? (
+        <div className="flex-1 flex flex-col min-h-0">
+          <button
+            onClick={() => setSelectedLightId(null)}
+            className="mb-4 text-[10px] font-bold uppercase tracking-widest text-stone-500 hover:text-stone-300 flex items-center gap-2 self-start"
+          >
+            ← Back to Lamp List
+          </button>
+          <div className="flex-1 min-h-0">
+            <LampControls
+              light={selectedLight}
+              onUpdate={(settings) => triggerHue(settings, selectedLight.id)}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {lights.map(light => (
+            <LampCard
+              key={light.id}
+              light={light}
+              isSelected={false}
+              onSelect={() => setSelectedLightId(light.id)}
+              onToggle={(e) => {
+                e.stopPropagation();
+                triggerHue({ on: { on: !light.on?.on } }, light.id);
+              }}
+              onBrightnessChange={(val) => triggerHue({ dimming: { brightness: val } }, light.id)}
+            />
+          ))}
+          {lights.length === 0 && (
+            <div className="col-span-full py-20 flex flex-col items-center justify-center text-stone-600 border border-dashed border-stone-800 rounded-3xl">
+              <Lightbulb className="w-12 h-12 mb-4 opacity-20" />
+              <p className="text-xs font-bold uppercase tracking-[0.2em]">No Luminaries Detected</p>
+              <p className="text-[10px] uppercase tracking-tighter mt-1">Connect to Hue Bridge via active game environments</p>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
