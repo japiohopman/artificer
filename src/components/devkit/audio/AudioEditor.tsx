@@ -16,6 +16,25 @@ import {
 import { audioBufferToWav } from './audioUtils';
 import { playClickSound, playSuccessSound } from '../../../services/storageService';
 
+// Monkey-patch HTMLMediaElement.prototype.volume to prevent finite floating-point value crashes in Wavesurfer/Envelope plugins
+if (typeof window !== 'undefined') {
+    const descriptor = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'volume');
+    if (descriptor && descriptor.set) {
+        const originalSet = descriptor.set;
+        Object.defineProperty(HTMLMediaElement.prototype, 'volume', {
+            set: function (val) {
+                if (typeof val === 'number' && isFinite(val) && !isNaN(val)) {
+                    originalSet.call(this, Math.max(0, Math.min(1, val)));
+                } else {
+                    // Quietly handle non-finite volume assignments
+                    originalSet.call(this, 1.0);
+                }
+            },
+            configurable: true
+        });
+    }
+}
+
 interface AudioEditorProps {
     fileBlob: Blob;
     fileName: string;
