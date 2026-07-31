@@ -251,6 +251,29 @@ export const AudioLaboratory: React.FC = () => {
   const [renameTarget, setRenameTarget] = useState<string | null>(null);
   const [renameValue, setRenameValue] = useState<string>('');
 
+  // Right-click context menu state
+  const [contextMenu, setContextMenu] = useState<{
+    x: number;
+    y: number;
+    file: any;
+  } | null>(null);
+
+  const handleContextMenu = (e: React.MouseEvent, file: any) => {
+    e.preventDefault();
+    setContextMenu({
+      x: e.clientX,
+      y: e.clientY,
+      file
+    });
+    playClickSound();
+  };
+
+  useEffect(() => {
+    const handleClose = () => setContextMenu(null);
+    window.addEventListener('click', handleClose);
+    return () => window.removeEventListener('click', handleClose);
+  }, []);
+
   // SFX Forge State
   const [forgePrompt, setForgePrompt] = useState('');
   const [assetName, setAssetName] = useState('');
@@ -564,7 +587,9 @@ export const AudioLaboratory: React.FC = () => {
                           return (
                             <div
                               key={`${file.path}-${idx}`}
-                              className="group flex items-center justify-between p-1.5 rounded hover:bg-white/5 transition-all text-left"
+                              onContextMenu={(e) => handleContextMenu(e, file)}
+                              className="group flex items-center justify-between p-1.5 rounded hover:bg-white/5 transition-all text-left cursor-context-menu"
+                              title="Right click for tools menu"
                             >
                               <div className="flex items-center gap-2 flex-1 min-w-0">
                                 <button
@@ -833,25 +858,41 @@ export const AudioLaboratory: React.FC = () => {
                           }
                         }}
                         disabled={isGenerating || !forgePrompt}
-                        className="py-3.5 bg-purple-600 text-white font-bold text-xs rounded-xl uppercase hover:bg-purple-500 transition-all disabled:opacity-30 flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                        className="py-3.5 bg-purple-600 text-white font-bold text-xs rounded-xl uppercase hover:bg-purple-500 transition-all disabled:opacity-30 flex items-center justify-center gap-2 shadow-lg active:scale-95 animate-pulse"
                       >
                         <Sparkles className={`w-4 h-4 ${isGenerating ? 'animate-spin' : ''}`} />
                         {isGenerating ? 'Synthesizing...' : 'Ignite Forge'}
                       </button>
 
-                      {previewUrl && (
-                        <button
-                          onClick={() => {
-                            const audio = new Audio(previewUrl);
-                            audio.play();
-                            playClickSound();
-                          }}
-                          className="py-3.5 bg-white/5 border border-purple-500/30 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
-                        >
-                          <Play className="w-4 h-4" />
-                          Preview Echo
-                        </button>
-                      )}
+                      <div className="flex gap-2">
+                        {previewUrl && (
+                          <button
+                            onClick={() => {
+                              const audio = new Audio(previewUrl);
+                              audio.play();
+                              playClickSound();
+                            }}
+                            className="flex-1 py-3.5 bg-white/5 border border-purple-500/30 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                          >
+                            <Play className="w-4 h-4" />
+                            Preview Echo
+                          </button>
+                        )}
+                        {previewUrl && (
+                          <button
+                            onClick={() => {
+                              playClickSound();
+                              setEditingFileBlob(generatedBlob);
+                              setEditingFileName(assetName || 'generated_sfx');
+                              setEditingFileCategory(forgeCategory);
+                            }}
+                            className="flex-1 py-3.5 bg-purple-500/10 border border-purple-500/40 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                          >
+                            <Scissors className="w-4 h-4" />
+                            Refine / Trim
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -1091,25 +1132,41 @@ export const AudioLaboratory: React.FC = () => {
                           }
                         }}
                         disabled={isGeneratingVoice || !voiceText.trim()}
-                        className="py-3.5 bg-purple-600 text-white font-bold text-xs rounded-xl uppercase hover:bg-purple-500 transition-all disabled:opacity-30 flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                        className="py-3.5 bg-purple-600 text-white font-bold text-xs rounded-xl uppercase hover:bg-purple-500 transition-all disabled:opacity-30 flex items-center justify-center gap-2 shadow-lg active:scale-95 animate-pulse"
                       >
                         <Mic className={`w-4 h-4 ${isGeneratingVoice ? 'animate-pulse' : ''}`} />
                         {isGeneratingVoice ? 'Synthesizing...' : 'Ignite Voice Forge'}
                       </button>
 
-                      {voicePreviewUrl && (
-                        <button
-                          onClick={() => {
-                            const audio = new Audio(voicePreviewUrl);
-                            audio.play();
-                            playClickSound();
-                          }}
-                          className="py-3.5 bg-white/5 border border-purple-500/30 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
-                        >
-                          <Play className="w-4 h-4" />
-                          Preview Voice
-                        </button>
-                      )}
+                      <div className="flex gap-2">
+                        {voicePreviewUrl && (
+                          <button
+                            onClick={() => {
+                              const audio = new Audio(voicePreviewUrl);
+                              audio.play();
+                              playClickSound();
+                            }}
+                            className="flex-1 py-3.5 bg-white/5 border border-purple-500/30 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                          >
+                            <Play className="w-4 h-4" />
+                            Preview Voice
+                          </button>
+                        )}
+                        {voicePreviewUrl && (
+                          <button
+                            onClick={() => {
+                              playClickSound();
+                              setEditingFileBlob(voiceGeneratedBlob);
+                              setEditingFileName(voiceAssetName || 'generated_voice');
+                              setEditingFileCategory(voiceCategory);
+                            }}
+                            className="flex-1 py-3.5 bg-purple-500/10 border border-purple-500/40 text-purple-400 font-bold text-xs rounded-xl uppercase hover:bg-purple-600/25 transition-all flex items-center justify-center gap-2 shadow-lg active:scale-95"
+                          >
+                            <Scissors className="w-4 h-4" />
+                            Refine / Trim
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -1341,6 +1398,51 @@ export const AudioLaboratory: React.FC = () => {
           }}
           onBake={handleBakeEditedAudio}
         />
+      )}
+
+      {/* Floating Windows-Style Context Menu */}
+      {contextMenu && (
+        <div
+          style={{ top: contextMenu.y, left: contextMenu.x }}
+          className="fixed z-[21000] bg-stone-900 border border-stone-800 rounded-xl p-1.5 shadow-2xl min-w-[160px] flex flex-col font-mono text-left animate-in zoom-in-95 duration-100"
+        >
+          <div className="px-3 py-1.5 text-[8px] font-black text-stone-500 uppercase tracking-widest border-b border-stone-850 truncate max-w-[160px]" title={contextMenu.file.name}>
+            {contextMenu.file.name}
+          </div>
+          <button
+            onClick={() => {
+              handleOpenRefineStudio(contextMenu.file);
+              setContextMenu(null);
+            }}
+            className="flex items-center gap-2 px-3 py-2 text-[10px] text-stone-300 hover:bg-purple-600/15 hover:text-purple-400 rounded-lg transition-all"
+          >
+            <Scissors className="w-3.5 h-3.5" />
+            Refine / Trim Wave
+          </button>
+          <button
+            onClick={() => {
+              setRenameTarget(contextMenu.file.path);
+              setRenameValue(getFileDisplayName(contextMenu.file));
+              setContextMenu(null);
+              playClickSound();
+            }}
+            className="flex items-center gap-2 px-3 py-2 text-[10px] text-stone-300 hover:bg-purple-600/15 hover:text-purple-400 rounded-lg transition-all"
+          >
+            <Edit2 className="w-3.5 h-3.5" />
+            Rename File
+          </button>
+          <div className="h-px bg-stone-850 my-1" />
+          <button
+            onClick={() => {
+              handleDeleteFile(contextMenu.file);
+              setContextMenu(null);
+            }}
+            className="flex items-center gap-2 px-3 py-2 text-[10px] text-red-400 hover:bg-red-500/15 rounded-lg transition-all"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+            Delete File
+          </button>
+        </div>
       )}
     </div>
   );
