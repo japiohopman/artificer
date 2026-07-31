@@ -393,80 +393,9 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     };
 
     const handleBakeToDisk = async () => {
-        const ws = wavesurferRef.current;
-        const regions = regionsRef.current;
-        if (!ws || !regions) return;
-
-        const region = regions.getRegions().find((r: any) => r.id === 'trim-region') || regions.getRegions()[0];
-        if (!region) {
-            // Save active blob as is if no region
-            setBaking(true);
-            try {
-                await onBake(activeBlob, finalName + (optimizeForUI ? '.ogg' : '.wav'), targetCategory);
-            } catch (error) {
-                console.error(error);
-                alert('Failed to bake sound asset to repository');
-            } finally {
-                setBaking(false);
-            }
-            return;
-        }
-
         setBaking(true);
         try {
-            const arrayBuffer = await activeBlob.arrayBuffer();
-            const audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
-            const fullBuffer = await audioCtx.decodeAudioData(arrayBuffer);
-
-            const start = region.start;
-            const end = region.end || duration;
-            const sampleRate = fullBuffer.sampleRate;
-            const startSample = Math.floor(start * sampleRate);
-            const endSample = Math.floor(end * sampleRate);
-            const frameCount = Math.max(1, endSample - startSample);
-
-            const trimmedBuffer = audioCtx.createBuffer(
-                fullBuffer.numberOfChannels,
-                frameCount,
-                sampleRate
-            );
-
-            for (let i = 0; i < fullBuffer.numberOfChannels; i++) {
-                trimmedBuffer.getChannelData(i).set(
-                    fullBuffer.getChannelData(i).subarray(startSample, endSample)
-                );
-            }
-
-            const wavBuffer = audioBufferToWav(trimmedBuffer);
-            let finalBlob = new Blob([wavBuffer], { type: 'audio/wav' });
-            let finalExt = '.wav';
-
-            if (optimizeForUI) {
-                const streamDest = audioCtx.createMediaStreamDestination();
-                const bufferSource = audioCtx.createBufferSource();
-                bufferSource.buffer = trimmedBuffer;
-                bufferSource.connect(streamDest);
-
-                const mimeType = MediaRecorder.isTypeSupported('audio/ogg;codecs=opus')
-                    ? 'audio/ogg;codecs=opus'
-                    : 'audio/webm;codecs=opus';
-
-                const recorder = new MediaRecorder(streamDest.stream, { mimeType });
-                const chunks: Blob[] = [];
-
-                await new Promise<void>((resolve) => {
-                    recorder.ondataavailable = (e) => chunks.push(e.data);
-                    recorder.onstop = () => resolve();
-                    recorder.start();
-                    bufferSource.start(0);
-                    bufferSource.onended = () => recorder.stop();
-                });
-
-                finalBlob = new Blob(chunks, { type: mimeType });
-                finalExt = mimeType.includes('ogg') ? '.ogg' : '.webm';
-            }
-
-            await onBake(finalBlob, finalName + finalExt, targetCategory);
+            await onBake(activeBlob, finalName + (optimizeForUI ? '.ogg' : '.wav'), targetCategory);
         } catch (error) {
             console.error('Bake failed:', error);
             alert('Failed to bake sound asset to repository');
