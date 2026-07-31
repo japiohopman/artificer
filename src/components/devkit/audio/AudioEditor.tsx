@@ -125,6 +125,10 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
         recordRef.current = recordPlugin;
 
         const envelopePlugin = EnvelopePlugin.create({
+            points: [
+                { time: 0, volume: 1.0 },
+                { time: 10, volume: 1.0 }
+            ],
             lineWidth: '2px',
             lineColor: '#a855f7',
             dragLine: true
@@ -163,6 +167,16 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
             setDuration(totalDur);
             setTrimStart(0);
             setTrimEnd(totalDur);
+
+            // Initialize Envelope points perfectly spanning the duration
+            try {
+                envelopePlugin.setPoints([
+                    { time: 0, volume: 1.0 },
+                    { time: totalDur, volume: 1.0 }
+                ]);
+            } catch (err) {
+                console.warn("Failed to set envelope points:", err);
+            }
 
             regionsPlugin.clearRegions();
             regionsPlugin.addRegion({
