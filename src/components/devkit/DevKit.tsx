@@ -95,6 +95,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
   const [generatedBackground, setGeneratedBackground] = useState<string | null>(null);
   const [isGeneratingBg, setIsGeneratingBg] = useState(false);
   const [customWikiUrl, setCustomWikiUrl] = useState('');
+
+  const getBackgroundUrl = (type: string, variation: number) => {
+    const repo = String(process.env.GITHUB_REPO || 'japiohopman/artificer').replace(/[^a-zA-Z0-9_/.-]/g, '');
+    const branch = String(process.env.GITHUB_BRANCH || 'main').replace(/[^a-zA-Z0-9_/.-]/g, '');
+    const cleanType = String(type).replace(/[^a-zA-Z0-9_-]/g, '');
+    const suffix = variation === 0 ? '' : variation;
+    return `https://raw.githubusercontent.com/${repo}/${branch}/public/assets/images/enemy_backgrounds/${cleanType}${suffix}.webp?t=${Date.now()}`;
+  };
   const [wikiTab, setWikiTab] = useState<'editor' | 'raw'>('editor');
   
   const [ripperText, setRipperText] = useState('');
@@ -2249,7 +2257,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                           ) : (
                             <div className="relative w-full h-full group">
                               <img
-                                src={`https://raw.githubusercontent.com/${process.env.GITHUB_REPO || 'japiohopman/artificer'}/${process.env.GITHUB_BRANCH || 'main'}/public/assets/images/enemy_backgrounds/${selectedBgType}${selectedBgVariation === 0 ? '' : selectedBgVariation}.webp?t=${Date.now()}`}
+                                src={getBackgroundUrl(selectedBgType, selectedBgVariation)}
                                 alt="Current habitat preview"
                                 className="w-full h-full object-cover opacity-60 grayscale-[0.3]"
                                 onError={(e) => {
