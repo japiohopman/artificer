@@ -160,7 +160,7 @@ async function startServer() {
     if (typeof filePath !== 'string') return false;
     
     // Normalize and check for traversal
-    const normalizedPath = path.normalize(filePath).replace(/\\/g, '/');
+    const normalizedPath = path.normalize(filePath).replace(/\\/g, '/').toLowerCase();
     
     if (
       normalizedPath.includes('..') || 
