@@ -6,12 +6,7 @@
   "type": "humanoid",
   "subtype": "Dwarf",
   "alignment": "Lawful Evil",
-  "armor_class": [
-    {
-      "type": "default",
-      "value": 10
-    }
-  ],
+  "armor_class": 10,
   "hit_points": 26,
   "hit_dice": "4d8",
   "hit_points_roll": "4d8 + 4",
@@ -43,7 +38,7 @@
     "passive_perception": 10
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "special_abilities": [],
@@ -113,12 +108,14 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/humanoid/Duergar.webp",
   "url": "/assets/atlas/enemies/json/igbdqa3iuksurcuy.json",
-  "updated_at": "2026-07-09T11:33:15.167Z",
+  "updated_at": "2026-08-01T22:11:51.772Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "background_type": "generic",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "1-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/duergar.webp",
+  "_type": "enemies"
 }
