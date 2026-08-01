@@ -514,7 +514,7 @@ export function AudioEditor({ fileBlob, fileName, onClose, onBake, initialCatego
     };
 
     return (
-        <div className="bg-black/35 border border-white/5 rounded-2xl w-full h-[620px] max-h-[82vh] overflow-hidden shadow-xl flex flex-col animate-in fade-in slide-in-from-top-2 duration-300 relative text-left select-none">
+        <div className="bg-black/35 border border-white/5 rounded-2xl w-full h-full overflow-hidden shadow-xl flex flex-col animate-in fade-in slide-in-from-top-2 duration-300 relative text-left select-none">
             {/* Header - Fixed & Sticky */}
             <div className="p-4 border-b border-white/5 flex justify-between items-center bg-black/25 shrink-0 z-20">
                 <div className="flex items-center gap-2">

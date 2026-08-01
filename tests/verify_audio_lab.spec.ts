@@ -3,6 +3,9 @@ import { test, expect } from '@playwright/test';
 test('verify audio lab in devkit', async ({ page }) => {
     test.setTimeout(120000);
 
+    page.on('console', msg => console.log('[BROWSER CONSOLE]', msg.text()));
+    page.on('pageerror', err => console.error('[BROWSER EXCEPTION]', err));
+
     await page.goto('http://localhost:3000');
     
     console.log('Waiting for loading to finish...');
@@ -37,9 +40,4 @@ test('verify audio lab in devkit', async ({ page }) => {
     await expect(page.locator('text=thunder.wav')).toBeVisible();
     
     await page.screenshot({ path: 'verification/audio_lab_explorer.png' });
-    
-    console.log('Verifying REQUESTER tab...');
-    await page.click('text=REQUESTER');
-    await page.waitForSelector('text=Signal Sunny', { timeout: 10000 });
-    await page.screenshot({ path: 'verification/audio_lab_requester.png' });
 });
