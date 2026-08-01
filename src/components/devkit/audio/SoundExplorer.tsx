@@ -24,7 +24,7 @@ export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: 
   const [loading, setLoading] = useState<Record<string, boolean>>({});
   const [searchTerm, setSearchTerm] = useState('');
 
-  const fetchCategory = async (id: string) => {
+  const fetchCategoryExplicit = async (id: string) => {
     setLoading(prev => ({ ...prev, [id]: true }));
     try {
       const res = await fetch(`/api/audio/list/${id}`);
@@ -188,9 +188,6 @@ function SoundFileItem({ file, isSelected, onSelect }: { file: any; isSelected: 
         <Music className={`w-3 h-3 transition-colors ${isPlaying ? 'text-emerald-400' : isSelected ? 'text-purple-400' : 'text-stone-700 group-hover:text-emerald-500/50'}`} />
         <span className={`text-[11px] truncate font-mono transition-colors ${isPlaying ? 'text-emerald-300' : isSelected ? 'text-purple-200' : 'group-hover:text-stone-300'}`}>
           {file.name}
-        </span>
-      </div>
-      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         </span>
       </div>
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
