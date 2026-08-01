@@ -229,11 +229,6 @@ export const AudioLaboratory: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'forge' | 'voice' | 'requester'>('forge');
   const [audioFiles, setAudioFiles] = useState<any[]>([]);
   const [isLoadingFiles, setIsLoadingFiles] = useState(false);
-  const [requestData, setRequestData] = useState({
-    assetName: '',
-    description: '',
-    priority: 'Medium'
-  });
   
   // Left Sidebar Explorer state
   const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>({
@@ -512,15 +507,6 @@ export const AudioLaboratory: React.FC = () => {
     playClickSound();
   };
 
-  const handleSubmitRequest = async () => {
-    if (!requestData.assetName || !requestData.description) return;
-    
-    console.log("[AudioLab] Submitting request:", requestData);
-    playSuccessSound();
-    setRequestData({ assetName: '', description: '', priority: 'Medium' });
-    alert("Audio request queued for Sunny!");
-  };
-
   return (
     <div className="flex-1 flex flex-row bg-[#121212] overflow-hidden h-full">
       {/* LEFT SIDEBAR: PERSISTENT EXPLORER */}
@@ -711,45 +697,66 @@ export const AudioLaboratory: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex bg-white/5 rounded p-0.5 border border-white/10">
+        </div>
+
+        {/* Editor Area */}
+        <div className="flex-1 p-6 relative overflow-hidden flex flex-col bg-[#0a0a0a]">
+          {editingFileBlob ? (
+            <div className="flex-1 w-full h-full relative shadow-2xl rounded-2xl overflow-hidden border border-white/5">
+              <AudioEditor
+                fileBlob={editingFileBlob}
+                fileName={editingFileName}
+                initialCategory={editingFileCategory}
+                onClose={() => {
+                  setEditingFileBlob(null);
+                  setEditingFileName('');
+                  setEditingFileCategory('');
+                }}
+                onBake={handleBakeEditedAudio}
+              />
+            </div>
+          ) : (
+            <div className="flex-1 border border-white/5 bg-white/2 rounded-2xl flex flex-col items-center justify-center text-white/30 italic text-[11px] gap-3">
+              <Scissors className="w-6 h-6 opacity-50 text-purple-400" />
+              Select a file from the explorer or generate new audio to open the workspace editor.
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* RIGHT SIDEBAR: GENERATOR */}
+      <aside className="w-[450px] bg-[#121212] flex flex-col h-full shrink-0 border-l border-white/5">
+        <div className="p-4 border-b border-white/5 bg-black/20 flex items-center shrink-0">
+          <div className="flex bg-white/5 rounded p-0.5 border border-white/10 w-full">
             <button
               onClick={() => { setActiveTab('forge'); playClickSound(); }}
-              className={`px-4 py-1 text-[10px] font-bold rounded transition-all flex items-center gap-1.5 ${activeTab === 'forge' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
+              className={`flex-1 py-1.5 text-[10px] font-bold rounded transition-all flex justify-center items-center gap-1.5 ${activeTab === 'forge' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
             >
               <Sparkles className="w-3 h-3" />
               SFX_FORGE
             </button>
             <button
               onClick={() => { setActiveTab('voice'); playClickSound(); }}
-              className={`px-4 py-1 text-[10px] font-bold rounded transition-all flex items-center gap-1.5 ${activeTab === 'voice' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
+              className={`flex-1 py-1.5 text-[10px] font-bold rounded transition-all flex justify-center items-center gap-1.5 ${activeTab === 'voice' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
             >
               <Mic className="w-3 h-3" />
               VOICE
             </button>
-            <button
-              onClick={() => { setActiveTab('requester'); playClickSound(); }}
-              className={`px-4 py-1 text-[10px] font-bold rounded transition-all flex items-center gap-1.5 ${activeTab === 'requester' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
-            >
-              <Send className="w-3 h-3" />
-              REQUESTER
-            </button>
           </div>
         </div>
 
-        {/* Workspace Scroll Area */}
-        <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-5 custom-scrollbar">
           <AnimatePresence mode="wait">
             {activeTab === 'forge' ? (
               <motion.div
                 key="forge"
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="flex flex-col gap-6"
               >
-                {/* Left Column: Instruction & Optimization */}
-                <div className="lg:col-span-2 space-y-6">
-                  <div className="bg-black/30 border border-white/5 rounded-2xl p-6 space-y-4 shadow-xl">
+                <div className="space-y-6">
+                  <div className="bg-black/30 border border-white/5 rounded-2xl p-5 space-y-4 shadow-xl">
                     <div className="space-y-4">
                       <div className="space-y-2">
                         <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Asset_Identifier</label>
@@ -963,9 +970,8 @@ export const AudioLaboratory: React.FC = () => {
                   )}
                 </div>
 
-                {/* Right Column: Forge Context */}
                 <div className="space-y-6">
-                  <div className="bg-black/30 border border-white/5 rounded-2xl p-6 space-y-6 shadow-xl">
+                  <div className="bg-black/30 border border-white/5 rounded-2xl p-5 space-y-6 shadow-xl">
                     <div className="flex items-center gap-2 mb-2">
                       <Volume2 className="w-4 h-4 text-purple-400" />
                       <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">Forge Context</h3>
@@ -1003,7 +1009,18 @@ export const AudioLaboratory: React.FC = () => {
                       <select
                         value={forgeCategory}
                         onChange={(e) => {
-                          setForgeCategory(e.target.value);
+                          const cat = e.target.value;
+                          setForgeCategory(cat);
+                          if (cat === 'sfx') {
+                            setDuration(2);
+                            setIsLoop(false);
+                          } else if (cat === 'system' || cat === 'ui') {
+                            setDuration(1);
+                            setIsLoop(false);
+                          } else if (cat === 'ambient') {
+                            setDuration(15);
+                            setIsLoop(true);
+                          }
                           playClickSound();
                         }}
                         className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-xs text-white focus:outline-none focus:border-purple-500 font-sans"
@@ -1046,14 +1063,13 @@ export const AudioLaboratory: React.FC = () => {
             ) : activeTab === 'voice' ? (
               <motion.div
                 key="voice"
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="flex flex-col gap-6"
               >
-                {/* Left: Input fields */}
-                <div className="lg:col-span-2 space-y-6">
-                  <div className="bg-black/30 border border-white/5 rounded-2xl p-6 space-y-4 shadow-xl">
+                <div className="space-y-6">
+                  <div className="bg-black/30 border border-white/5 rounded-2xl p-5 space-y-4 shadow-xl">
                     <div className="space-y-4">
                       {/* Asset identifier */}
                       <div className="space-y-2">
@@ -1238,9 +1254,8 @@ export const AudioLaboratory: React.FC = () => {
                   )}
                 </div>
 
-                {/* Right: Context configuration */}
                 <div className="space-y-6">
-                  <div className="bg-black/30 border border-white/5 rounded-2xl p-6 space-y-6 shadow-xl">
+                  <div className="bg-black/30 border border-white/5 rounded-2xl p-5 space-y-6 shadow-xl">
                     <div className="flex items-center gap-2 mb-2">
                       <Mic className="w-4 h-4 text-purple-400" />
                       <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">Voice Context</h3>
@@ -1318,88 +1333,10 @@ export const AudioLaboratory: React.FC = () => {
                   <ElevenLabsHistoryPanel accountIndex={voiceAccountIndex} onDeploy={handleDeployBlob} />
                 </div>
               </motion.div>
-            ) : (
-              <motion.div
-                key="requester"
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -10 }}
-                className="max-w-xl mx-auto space-y-8"
-              >
-                <div className="text-center space-y-2">
-                  <h3 className="text-lg font-bold text-white uppercase tracking-tight">Signal Sunny</h3>
-                  <p className="text-[11px] text-white/40 uppercase tracking-widest leading-relaxed">Request new professional audio assets for the Artificer project.</p>
-                </div>
-
-                <div className="bg-black/30 border border-white/5 rounded-2xl p-8 space-y-6 shadow-2xl">
-                  <div className="space-y-2">
-                    <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Asset_Identifier</label>
-                    <input
-                      type="text"
-                      value={requestData.assetName}
-                      onChange={(e) => setRequestData({...requestData, assetName: e.target.value})}
-                      placeholder="e.g. Arcane_Whirlwind_Loop"
-                      className="w-full bg-white/5 border border-white/10 p-3 text-sm text-white rounded-lg focus:outline-none focus:border-purple-500/50 transition-all font-mono"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Context_And_Texture</label>
-                    <textarea
-                      value={requestData.description}
-                      onChange={(e) => setRequestData({...requestData, description: e.target.value})}
-                      placeholder="Describe the mood, duration, and context (e.g. 'Low-pitched humming with occasional electrical sparks, 5s loop')..."
-                      className="w-full h-32 bg-white/5 border border-white/10 p-4 text-sm text-white rounded-lg focus:outline-none focus:border-purple-500/50 transition-all leading-relaxed custom-scrollbar"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-[9px] font-bold text-purple-400 uppercase tracking-[0.2em]">Priority_Level</label>
-                    <div className="grid grid-cols-3 gap-3">
-                      {['Low', 'Medium', 'High'].map(p => (
-                        <button
-                          key={p}
-                          onClick={() => setRequestData({...requestData, priority: p})}
-                          className={`py-2 rounded-lg border text-[10px] font-bold uppercase transition-all ${
-                            requestData.priority === p
-                              ? 'bg-purple-600 border-purple-500 text-white shadow-lg'
-                              : 'bg-white/5 border-white/10 text-white/30 hover:border-white/20'
-                          }`}
-                        >
-                          {p}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <button
-                    onClick={handleSubmitRequest}
-                    disabled={!requestData.assetName || !requestData.description}
-                    className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl uppercase hover:bg-purple-500 transition-all disabled:opacity-30 shadow-[0_0_20px_rgba(147,51,234,0.2)] active:scale-[0.98] flex items-center justify-center gap-3"
-                  >
-                    <Send className="w-4 h-4" />
-                    Queue Request for Sunny
-                  </button>
-                </div>
-              </motion.div>
-            )}
+            ) : null}
           </AnimatePresence>
         </div>
-      </div>
-
-      {editingFileBlob && (
-        <AudioEditor
-          fileBlob={editingFileBlob}
-          fileName={editingFileName}
-          initialCategory={editingFileCategory}
-          onClose={() => {
-            setEditingFileBlob(null);
-            setEditingFileName('');
-            setEditingFileCategory('');
-          }}
-          onBake={handleBakeEditedAudio}
-        />
-      )}
+      </aside>
 
       {/* Floating Windows-Style Context Menu */}
       {contextMenu && (
