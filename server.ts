@@ -660,16 +660,6 @@ async function startServer() {
       const buffer = await response.arrayBuffer();
       const nodeBuffer = Buffer.from(buffer);
 
-      // Write to local cache dynamically so subsequent requests are fast!
-      try {
-        const cacheDir = path.join(process.cwd(), "public/assets/sounds/cache");
-        await fs.mkdir(cacheDir, { recursive: true });
-        await fs.writeFile(localCachePath, nodeBuffer);
-        console.log(`[ElevenLabs Cache] Dynamically cached audio for ${safeId}`);
-      } catch (cacheErr) {
-        console.error("[ElevenLabs Cache] Failed to cache audio dynamically:", cacheErr);
-      }
-
       res.setHeader("Content-Type", "audio/mpeg");
       res.send(nodeBuffer);
     } catch (error: any) {
