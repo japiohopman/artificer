@@ -2,26 +2,7 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
 [ElevenLabs Server Init] Available Env Keys: []
+[ElevenLabs Startup Cache] Preloaded 0 cached audio IDs.
 Server running on http://localhost:3000
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json
-11:23:54 PM [vite] (client) page reload dev_server_output.txt
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json
-11:23:54 PM [vite] (client) page reload dev_server_output.txt
-11:24:35 PM [vite] (client) hmr update /src/components/devkit/audio/SoundStudio.tsx, /src/index.css
-11:24:35 PM [vite] (client) page reload dev_server_output.txt
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json
-11:24:51 PM [vite] (client) page reload dev_server_output.txt
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json
-11:27:54 PM [vite] (client) page reload tests/verify_audio_lab.spec.ts
-11:27:54 PM [vite] (client) page reload dev_server_output.txt
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json
-11:28:10 PM [vite] (client) page reload dev_server_output.txt
-[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
-[ElevenLabs History] Missing API Key. Falling back to local history.json

@@ -938,27 +938,39 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
   app.get("/api/audio/list", async (req, res) => {
     const baseDir = path.join(process.cwd(), "public/assets/sounds");
 
-    async function getFiles(dir: string, category: string = ""): Promise<any[]> {
+    async function getFiles(dir: string, category: string = "", currentSubCategory: string = ""): Promise<any[]> {
       try {
         const entries = await fs.readdir(dir, { withFileTypes: true });
         const files = await Promise.all(entries.map(async (entry) => {
           const fullPath = path.join(dir, entry.name);
 
-        if (entry.isDirectory()) {
-          if (entry.name === 'cache') return [];
-          const relSubCategory = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
-          return getFiles(fullPath, relSubCategory);
-        } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
-          const virtualPath = `/assets/sounds/${category ? category + "/" : ""}${currentSubCategory ? currentSubCategory + '/' : ''}${entry.name}`;
-          const relPath = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
-          return {
-            name: entry.name,
-            category: category || "uncategorized",
-            path: virtualPath,
-            url: virtualPath
-          };
+          if (entry.isDirectory()) {
+            if (entry.name === 'cache') return [];
+            if (!category) {
+              return getFiles(fullPath, entry.name, "");
+            } else {
+              const nextSubCategory = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
+              return getFiles(fullPath, category, nextSubCategory);
+            }
+          } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
+            const subPath = currentSubCategory ? `${currentSubCategory}/` : "";
+            const catPath = category ? `${category}/` : "";
+            const virtualPath = `/assets/sounds/${catPath}${subPath}${entry.name}`;
+            return {
+              name: entry.name,
+              category: category || "uncategorized",
+              path: virtualPath,
+              url: virtualPath
+            };
+          }
+          return [];
+        }));
+        return files.flat();
+      } catch (err: any) {
+        if (err.code === 'ENOENT') {
+          return [];
         }
-        return [];
+        throw err;
       }
     }
 
