@@ -23,7 +23,7 @@ export function SoundExplorer({ onSelectFile, activeFileName }: SoundExplorerPro
   const [loading, setLoading] = useState<Record<string, boolean>>({});
   const [searchTerm, setSearchTerm] = useState('');
 
-  const fetchCategory = async (id: string) => {
+  const loadCategoryFiles = async (id: string) => {
     setLoading(prev => ({ ...prev, [id]: true }));
     try {
       const res = await fetch(`/api/audio/list/${id}`);
@@ -39,13 +39,13 @@ export function SoundExplorer({ onSelectFile, activeFileName }: SoundExplorerPro
   const toggleFolder = (id: string) => {
     const isExpanding = !expanded.includes(id);
     setExpanded(prev => isExpanding ? [...prev, id] : prev.filter(i => i !== id));
-    if (isExpanding && !categoryData[id]) fetchCategory(id);
+    if (isExpanding && !categoryData[id]) loadCategoryFiles(id);
   };
 
   useEffect(() => {
     // Sync all folders on mount
     CATEGORIES.forEach(cat => {
-      fetchCategory(cat.id);
+      loadCategoryFiles(cat.id);
     });
   }, []);
 
