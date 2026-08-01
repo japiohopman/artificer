@@ -6,12 +6,7 @@
   "type": "monstrosity",
   "subtype": "any race",
   "alignment": "Chaotic Evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 45,
   "hit_dice": "6d10",
   "hit_points_roll": "6d10 + 12",
@@ -41,7 +36,7 @@
     "passive_perception": 10
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [],
@@ -113,12 +108,13 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/monstrosity/Merrow.webp",
   "url": "/assets/atlas/enemies/json/1cwfyaacm5f0l4y3.json",
-  "updated_at": "2026-07-09T11:33:15.452Z",
+  "updated_at": "2026-08-01T22:34:01.672Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
-  "background_type": "generic",
+  "background_type": "water",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "1-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/merrow.webp"
 }
