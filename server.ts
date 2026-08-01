@@ -574,6 +574,25 @@ async function startServer() {
     next();
   }
 
+  const cachedHistoryAudios = new Set<string>();
+
+  // Prepopulate cachedHistoryAudios on server startup
+  (async () => {
+    try {
+      const cacheDir = path.join(process.cwd(), "public/assets/sounds/cache");
+      await fs.mkdir(cacheDir, { recursive: true });
+      const files = await fs.readdir(cacheDir);
+      files.forEach(file => {
+        if (file.endsWith(".mp3")) {
+          cachedHistoryAudios.add(file.replace(".mp3", ""));
+        }
+      });
+      console.log(`[ElevenLabs Startup Cache] Preloaded ${cachedHistoryAudios.size} cached audio IDs.`);
+    } catch (err) {
+      console.warn("[ElevenLabs Startup Cache] Could not preload cache folder:", err);
+    }
+  })();
+
   async function getLocalHistory(): Promise<any[]> {
     const historyPath = path.join(process.cwd(), "public/assets/sounds/history.json");
     try {
@@ -624,22 +643,15 @@ async function startServer() {
     }
 
     const safeId = path.basename(id).replace(/[^a-zA-Z0-9_-]/g, "");
-    const relativeCachePath = `public/assets/sounds/cache/${safeId}.mp3`;
-    if (!isPathAllowed(relativeCachePath)) {
-      return res.status(403).json({ error: "Path not allowed" });
+
+    // Check preloaded memory cache - Zero FileSystem Access inside the route handler!
+    if (cachedHistoryAudios.has(safeId)) {
+      console.log(`[ElevenLabs Cache] Cache hit for ${safeId}. Redirecting to static cache...`);
+      return res.redirect(`/assets/sounds/cache/${safeId}.mp3`);
     }
 
-    const localCachePath = path.join(process.cwd(), relativeCachePath);
-    try {
-      await fs.access(localCachePath);
-      // Cache exists, serve it!
-      const content = await fs.readFile(localCachePath);
-      res.setHeader("Content-Type", "audio/mpeg");
-      return res.send(content);
-    } catch (err) {
-      // Cache does not exist, fetch from ElevenLabs
-      console.log(`[ElevenLabs Cache] Cache miss for ${safeId}. Fetching from ElevenLabs...`);
-    }
+    // Cache miss, fetch directly from ElevenLabs without file system access
+    console.log(`[ElevenLabs Cache] Cache miss for ${safeId}. Fetching from ElevenLabs...`);
 
     const accountIndex = parseInt(req.query.accountIndex as string || "0");
     const apiKey = getElevenLabsKey(req, accountIndex);
@@ -680,6 +692,9 @@ async function startServer() {
       const cacheFile = path.join(cacheDir, `${id}.mp3`);
 
       await fs.writeFile(cacheFile, buffer);
+
+      // Update memory cache
+      cachedHistoryAudios.add(id);
 
       let historyList: any[] = [];
       try {
