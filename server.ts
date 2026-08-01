@@ -107,7 +107,7 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  console.log("[ElevenLabs Server Init] Available Env Keys:", Object.keys(process.env).filter(k => k.toLowerCase().includes("eleven") || k.toLowerCase().includes("11") || k.toLowerCase().includes("xi")));
+  console.log( "[ElevenLabs Server Init] Available Env Keys:", Object.keys(process.env).filter((k) => { const lk = (k || "").toLowerCase(); return lk.includes("eleven") || lk.includes("11") || lk.includes("xi"); }) );
 
   app.use(express.json({ limit: '10mb' }));
 
