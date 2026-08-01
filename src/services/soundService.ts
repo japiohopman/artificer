@@ -209,7 +209,7 @@ class SoundEngine {
 
     let path = "";
     switch (effect) {
-      case 'UI_CLICK_LIGHT': path = '/assets/sounds/system/ui_menu_select.mp3'; break;
+      case 'UI_CLICK_LIGHT': path = '/assets/sounds/system/ui_basic_click_standard.wav'; break;
       case 'TRANSACTION_SUCCESS': path = '/assets/sounds/system/feedback_success.mp3'; break;
       case 'UI_BACK_EXIT': path = '/assets/sounds/system/ui_modal_close.mp3'; break;
       case 'UI_MODAL_OPEN': path = '/assets/sounds/system/ui_modal_open.mp3'; break;
@@ -231,7 +231,7 @@ class SoundEngine {
       case 'TOKEN_MOVE': path = '/assets/sounds/sfx/ui_map_token_move.wav'; break;
       case 'TURN_PLAYER': path = '/assets/sounds/system/tda_turn_player.mp3'; break;
       case 'TURN_AI': path = '/assets/sounds/system/tda_turn_ai.mp3'; break;
-      default: path = '/assets/sounds/system/ui_menu_select.mp3';
+      default: path = '/assets/sounds/system/ui_basic_click_standard.wav';
     }
 
     audioEngine.play(this.getUrl(path), 8); // Default to UI layer 8
