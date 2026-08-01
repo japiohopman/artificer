@@ -8,22 +8,23 @@ const CATEGORIES = [
   { id: 'npc_voice', label: 'NPC Voice', icon: Folder },
   { id: 'sfx', label: 'SFX', icon: Folder },
   { id: 'system', label: 'System', icon: Folder },
+  { id: 'voice', label: 'Voice', icon: Folder },
   { id: 'weather', label: 'Weather', icon: Folder }
 ];
 
 interface SoundExplorerProps {
-  onSelectFile?: (file: { name: string; url: string; category: string }) => void;
-  activeFileName?: string;
+  onSelectFile?: (file: { name: string; path: string; category: string }) => void;
+  activeFileName?: string | null;
   refreshTrigger?: number;
 }
 
 export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: SoundExplorerProps) {
-  const [expanded, setExpanded] = useState<string[]>(['sfx']);
+  const [expanded, setExpanded] = useState<string[]>(CATEGORIES.map(c => c.id));
   const [categoryData, setCategoryData] = useState<Record<string, any[]>>({});
   const [loading, setLoading] = useState<Record<string, boolean>>({});
   const [searchTerm, setSearchTerm] = useState('');
 
-  const fetchCategoryExplicit = async (id: string) => {
+  const fetchCategory = async (id: string) => {
     setLoading(prev => ({ ...prev, [id]: true }));
     try {
       const res = await fetch(`/api/audio/list/${id}`);
@@ -44,11 +45,14 @@ export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: 
   const toggleFolder = (id: string) => {
     const isExpanding = !expanded.includes(id);
     setExpanded(prev => isExpanding ? [...prev, id] : prev.filter(i => i !== id));
-    if (isExpanding) fetchCategory(id);
+    if (isExpanding && !categoryData[id]) fetchCategory(id);
   };
 
   useEffect(() => {
-    fetchCategory('sfx'); // Initial sync for default expanded folder
+    // Sync all folders on mount
+    CATEGORIES.forEach(cat => {
+      fetchCategory(cat.id);
+    });
   }, []);
 
   useEffect(() => {
@@ -67,7 +71,7 @@ export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: 
   };
 
   return (
-    <aside className="w-full border-r border-stone-800 bg-stone-950 flex flex-col h-full overflow-hidden">
+    <aside className="w-full h-full border-r border-stone-850 bg-stone-950 flex flex-col overflow-hidden">
       <div className="flex-shrink-0 p-4 border-b border-stone-900 bg-stone-900/20">
         <div className="flex items-center gap-2 mb-4">
           <FolderSearch className="w-3.5 h-3.5 text-stone-500" />
@@ -109,22 +113,23 @@ export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: 
 
             {expanded.includes(cat.id) && (
               <div className="ml-4 pl-4 border-l border-stone-900 space-y-0.5 mb-2">
-                {loading[cat.id] ? (
+                {loading[cat.id] && !categoryData[cat.id] ? (
                   <div className="flex items-center gap-2 px-3 py-2 text-[10px] text-stone-600 font-mono">
                     <Loader2 className="w-3 h-3 animate-spin" />
                     <span>Syncing...</span>
                   </div>
                 ) : (
-                  filteredFiles(cat.id).map((file: any) => (
-                    <SoundFileItem 
-                      key={file.path || file.name} 
-                      name={file.name} 
-                      url={file.url || file.path} 
-                      category={cat.id}
-                      isActive={activeFileName === file.name}
-                      onSelect={onSelectFile}
-                    />
-                  ))
+                  filteredFiles(cat.id).map((file: any) => {
+                    const isSelected = activeFileName === file.name;
+                    return (
+                      <SoundFileItem
+                        key={file.path || file.name}
+                        file={file}
+                        isSelected={isSelected}
+                        onSelect={() => onSelectFile?.({ name: file.name, path: file.url || file.path, category: file.category })}
+                      />
+                    );
+                  })
                 )}
                 {!loading[cat.id] && categoryData[cat.id] && filteredFiles(cat.id).length === 0 && (
                   <div className="px-3 py-2 text-[10px] text-stone-700 italic">
@@ -140,20 +145,12 @@ export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: 
   );
 }
 
-interface SoundFileItemProps {
-  name: string;
-  url: string;
-  category: string;
-  isActive: boolean;
-  onSelect?: (file: { name: string; url: string; category: string }) => void;
-}
-
-function SoundFileItem({ name, url, category, isActive, onSelect }: SoundFileItemProps) {
+function SoundFileItem({ file, isSelected, onSelect }: { file: any; isSelected: boolean; onSelect: () => void }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState(() => new Audio());
 
   useEffect(() => {
-    audio.src = url;
+    audio.src = file.url || file.path;
     audio.onplay = () => setIsPlaying(true);
     audio.onpause = () => setIsPlaying(false);
     audio.onended = () => setIsPlaying(false);
@@ -161,14 +158,14 @@ function SoundFileItem({ name, url, category, isActive, onSelect }: SoundFileIte
       audio.pause();
       audio.src = '';
     };
-  }, [url, audio]);
+  }, [file.url, file.path, audio]);
 
   const handlePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (isPlaying) {
       audio.pause();
     } else {
-      audio.play();
+      audio.play().catch(err => console.error("Playback failed:", err));
     }
   };
 
@@ -179,16 +176,21 @@ function SoundFileItem({ name, url, category, isActive, onSelect }: SoundFileIte
   };
 
   return (
-    <div 
-      onClick={() => onSelect?.({ name, url, category })}
-      className={`group flex items-center justify-between px-3 py-1.5 rounded-lg cursor-pointer transition-colors ${
-        isActive ? 'bg-purple-950/40 border border-purple-800/30' : 'hover:bg-stone-900/50'
+    <div
+      onClick={onSelect}
+      className={`group flex items-center justify-between px-3 py-1.5 rounded-lg cursor-pointer transition-all ${
+        isSelected
+          ? 'bg-purple-900/20 border border-purple-500/30 text-purple-200'
+          : 'hover:bg-stone-900/50 border border-transparent text-stone-500'
       }`}
     >
       <div className="flex items-center gap-2 overflow-hidden">
-        <Music className={`w-3 h-3 transition-colors ${isPlaying ? 'text-emerald-400' : isActive ? 'text-purple-400' : 'text-stone-700 group-hover:text-emerald-500/50'}`} />
-        <span className={`text-[11px] truncate font-mono transition-colors ${isPlaying ? 'text-emerald-300' : isActive ? 'text-purple-300 font-bold' : 'text-stone-500 group-hover:text-stone-300'}`}>
-          {name}
+        <Music className={`w-3 h-3 transition-colors ${isPlaying ? 'text-emerald-400' : isSelected ? 'text-purple-400' : 'text-stone-700 group-hover:text-emerald-500/50'}`} />
+        <span className={`text-[11px] truncate font-mono transition-colors ${isPlaying ? 'text-emerald-300' : isSelected ? 'text-purple-200' : 'group-hover:text-stone-300'}`}>
+          {file.name}
+        </span>
+      </div>
+      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         </span>
       </div>
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
