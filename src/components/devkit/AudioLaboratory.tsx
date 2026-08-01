@@ -226,7 +226,7 @@ const ElevenLabsHistoryPanel: React.FC<ElevenLabsHistoryPanelProps> = ({ account
 };
 
 export const AudioLaboratory: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'forge' | 'voice' | 'requester'>('forge');
+  const [activeTab, setActiveTab] = useState<'forge' | 'voice' | 'history'>('forge');
   const [audioFiles, setAudioFiles] = useState<any[]>([]);
   const [isLoadingFiles, setIsLoadingFiles] = useState(false);
   
@@ -525,7 +525,7 @@ export const AudioLaboratory: React.FC = () => {
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-3 space-y-2 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-3 space-y-2 custom-scrollbar min-h-0">
           {isLoadingFiles ? (
             <div className="py-12 flex flex-col items-center justify-center gap-3 opacity-30">
               <div className="w-6 h-6 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
@@ -700,9 +700,9 @@ export const AudioLaboratory: React.FC = () => {
         </div>
 
         {/* Editor Area */}
-        <div className="flex-1 p-6 relative overflow-hidden flex flex-col bg-[#0a0a0a]">
+        <div className="flex-1 p-6 relative overflow-hidden flex flex-col bg-[#0a0a0a] min-h-0">
           {editingFileBlob ? (
-            <div className="flex-1 w-full h-full relative shadow-2xl rounded-2xl overflow-hidden border border-white/5">
+            <div className="flex-1 w-full h-full relative shadow-2xl rounded-2xl overflow-hidden border border-white/5 flex flex-col min-h-0">
               <AudioEditor
                 fileBlob={editingFileBlob}
                 fileName={editingFileName}
@@ -742,10 +742,17 @@ export const AudioLaboratory: React.FC = () => {
               <Mic className="w-3 h-3" />
               VOICE
             </button>
+            <button
+              onClick={() => { setActiveTab('history'); playClickSound(); }}
+              className={`flex-1 py-1.5 text-[10px] font-bold rounded transition-all flex justify-center items-center gap-1.5 ${activeTab === 'history' ? 'bg-purple-600 text-white shadow' : 'text-white/40 hover:text-white/60'}`}
+            >
+              <History className="w-3 h-3" />
+              HISTORY
+            </button>
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-5 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-5 custom-scrollbar min-h-0">
           <AnimatePresence mode="wait">
             {activeTab === 'forge' ? (
               <motion.div
@@ -1055,9 +1062,6 @@ export const AudioLaboratory: React.FC = () => {
                       Note: High-fidelity synthesis consumes credits on your chosen ElevenLabs account. Optimize your prompt first for best results.
                     </p>
                   </div>
-
-                  {/* ElevenLabs History Log Panel */}
-                  <ElevenLabsHistoryPanel accountIndex={accountIndex} onDeploy={handleDeployBlob} />
                 </div>
               </motion.div>
             ) : activeTab === 'voice' ? (
@@ -1328,9 +1332,24 @@ export const AudioLaboratory: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* ElevenLabs History Log Panel */}
-                  <ElevenLabsHistoryPanel accountIndex={voiceAccountIndex} onDeploy={handleDeployBlob} />
+                </div>
+              </motion.div>
+            ) : activeTab === 'history' ? (
+              <motion.div
+                key="history"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="flex flex-col gap-6 h-full"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <History className="w-4 h-4 text-purple-400" />
+                    <h3 className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">ElevenLabs Generation History</h3>
+                  </div>
+                  <div className="bg-black/30 border border-white/5 rounded-2xl p-5 shadow-xl">
+                    <ElevenLabsHistoryPanel accountIndex={accountIndex} onDeploy={handleDeployBlob} />
+                  </div>
                 </div>
               </motion.div>
             ) : null}

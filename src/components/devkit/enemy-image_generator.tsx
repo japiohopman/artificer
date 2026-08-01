@@ -14,9 +14,11 @@ interface EnemyImageGeneratorProps {
   monsterSubtype?: string;
   monsterLore?: string;
   initialHabitat?: string;
+  initialImageUrl?: string;
   initialCategory?: 'bestiary' | 'characters' | 'equipment';
   level?: number;
   onImageGenerated: (url: string) => void;
+  onHabitatChanged?: (habitat: string) => void;
 }
 
 export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({ 
@@ -27,9 +29,11 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   monsterSubtype,
   monsterLore,
   initialHabitat = 'land_forest',
+  initialImageUrl,
   initialCategory = 'bestiary',
   level = 1,
-  onImageGenerated 
+  onImageGenerated,
+  onHabitatChanged
 }) => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
@@ -37,6 +41,20 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   const [selectedHabitat, setSelectedHabitat] = useState('land_forest');
   const [selectedVariation, setSelectedVariation] = useState(0);
   const category = 'bestiary';
+
+  const updateParentHabitat = (base: string, variation: number) => {
+    if (onHabitatChanged) {
+      const suffix = variation === 0 ? '' : variation.toString();
+      onHabitatChanged(`${base}${suffix}`);
+    }
+  };
+
+  // Sync with initialImageUrl prop
+  React.useEffect(() => {
+    if (initialImageUrl) {
+      setPreviewImage(initialImageUrl);
+    }
+  }, [initialImageUrl]);
 
   // Sync with initialHabitat prop
   React.useEffect(() => {
@@ -129,64 +147,58 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
 
       {error && <p className="text-red-500 text-sm font-bold">{error}</p>}
 
-      {/* Visual Habitat Gallery Carousel */}
-      <div className="space-y-1.5">
-        <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
-          <GameIcon name="globe" size={10} color="currentColor" /> Habitat Gallery
-        </label>
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-dragon-red/20 max-w-full">
-          {BACKGROUND_CONFIGS.map(b => {
-            const isSelected = selectedHabitat === b.id;
-            return (
-              <button
-                key={b.id}
-                onClick={() => setSelectedHabitat(b.id)}
-                className="flex-shrink-0 w-16 text-center focus:outline-none group"
-                title={`Select ${b.label}`}
-              >
-                <div
-                  className={`w-16 h-11 rounded border-2 transition-all overflow-hidden ${
-                    isSelected
-                      ? 'border-dragon-red scale-105 shadow-[0_0_8px_rgba(139,0,0,0.3)]'
-                      : 'border-dragon-red/10 hover:border-dragon-red/30'
-                  }`}
-                  style={getSpriteThumbnailStyle(b.id, selectedVariation)}
-                />
-                <span className={`text-[8px] font-black block mt-1 truncate ${isSelected ? 'text-dragon-red' : 'text-parchment-600 group-hover:text-parchment-800'}`}>
-                  {b.label}
-                </span>
-              </button>
-            );
-          })}
+      <div className="space-y-3 mb-4">
+        {/* Visual Habitat Gallery Grid */}
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between">
+            <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
+              <GameIcon name="globe" size={10} color="currentColor" /> Habitat Gallery
+            </label>
+          </div>
+          <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2">
+            {BACKGROUND_CONFIGS.map(b => {
+              const isSelected = selectedHabitat === b.id;
+              return (
+                <button
+                  key={b.id}
+                  onClick={() => {
+                    setSelectedHabitat(b.id);
+                    updateParentHabitat(b.id, selectedVariation);
+                  }}
+                  className="flex flex-col items-center focus:outline-none group w-full"
+                  title={`Select ${b.label}`}
+                >
+                  <div
+                    className={`w-full aspect-[3/2] rounded border-2 transition-all overflow-hidden ${
+                      isSelected
+                        ? 'border-dragon-red ring-1 ring-dragon-red shadow-[0_0_8px_rgba(139,0,0,0.3)] scale-105 z-10'
+                        : 'border-dragon-red/10 hover:border-dragon-red/30'
+                    }`}
+                    style={getSpriteThumbnailStyle(b.id, selectedVariation)}
+                  />
+                  <span className={`text-[8px] font-black block mt-1 truncate w-full text-center ${isSelected ? 'text-dragon-red' : 'text-parchment-600 group-hover:text-parchment-800'}`}>
+                    {b.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-2">
-        <div className="space-y-1">
+        {/* Variation Selector */}
+        <div className="space-y-1.5">
           <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
-            <GameIcon name="globe" size={10} color="currentColor" /> Preview Habitat
+            Camera Variation
           </label>
-          <select 
-            title="Preview Habitat"
-            value={selectedHabitat}
-            onChange={(e) => setSelectedHabitat(e.target.value)}
-            className="w-full bg-white/50 border border-dragon-red/10 p-1.5 text-[10px] text-parchment-900 rounded focus:outline-none focus:border-dragon-red transition-colors"
-          >
-            {BACKGROUND_CONFIGS.map(b => (
-              <option key={b.id} value={b.id}>{b.label}</option>
-            ))}
-          </select>
-        </div>
-        <div className="space-y-1">
-          <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
-            Variation
-          </label>
-          <div className="flex gap-1">
+          <div className="flex gap-2">
             {[0, 1, 2, 3, 4].map(v => (
               <button
                 key={v}
-                onClick={() => setSelectedVariation(v)}
-                className={`flex-1 aspect-[3/2] rounded border-2 overflow-hidden transition-all relative ${
+                onClick={() => {
+                  setSelectedVariation(v);
+                  updateParentHabitat(selectedHabitat, v);
+                }}
+                className={`w-12 aspect-[3/2] rounded border-2 overflow-hidden transition-all relative ${
                   selectedVariation === v
                     ? 'border-dragon-red ring-2 ring-dragon-red/40 scale-105 z-10'
                     : 'border-dragon-red/10 hover:border-dragon-red/30'
@@ -198,7 +210,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
                   className="w-full h-full"
                   style={getSpriteThumbnailStyle(selectedHabitat, v)}
                 />
-                <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-[7px] font-bold text-white px-0.5 rounded">
+                <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-[7px] font-bold text-white px-1 rounded">
                   {v === 0 ? 'M' : v === 3 ? 'W' : v === 4 ? 'C' : v}
                 </div>
               </button>

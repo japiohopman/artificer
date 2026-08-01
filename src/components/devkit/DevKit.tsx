@@ -2090,9 +2090,13 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   monsterSubtype={editingItem.subtype}
                                   monsterLore={editingItem.lore || (editingItem.desc ? editingItem.desc[0] : '')}
                                   initialHabitat={editingItem.background_type || 'land_forest'}
+                                  initialImageUrl={editingItem.imageUrl || editingItem.image_url}
                                   onImageGenerated={(url) => {
                                     updateField('imageUrl', url);
                                     setChecklist(prev => ({ ...prev, imageGenerated: true }));
+                                  }}
+                                  onHabitatChanged={(habitat) => {
+                                    updateField('background_type', habitat);
                                   }}
                                 />
                               )}
