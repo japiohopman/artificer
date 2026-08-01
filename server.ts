@@ -555,6 +555,25 @@ async function startServer() {
     }
   });
 
+  const fsRateLimitMemory: Record<string, { count: number; resetTime: number }> = {};
+  function fsRateLimiter(req: any, res: any, next: any) {
+    const ip = req.ip || req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
+    const now = Date.now();
+    const limit = 200; // 200 requests per minute
+    const windowMs = 60 * 1000;
+
+    if (!fsRateLimitMemory[ip] || now > fsRateLimitMemory[ip].resetTime) {
+      fsRateLimitMemory[ip] = { count: 1, resetTime: now + windowMs };
+      return next();
+    }
+
+    fsRateLimitMemory[ip].count++;
+    if (fsRateLimitMemory[ip].count > limit) {
+      return res.status(429).json({ error: "Too many requests. Please try again later." });
+    }
+    next();
+  }
+
   async function getLocalHistory(): Promise<any[]> {
     const historyPath = path.join(process.cwd(), "public/assets/sounds/history.json");
     try {
@@ -566,7 +585,7 @@ async function startServer() {
     }
   }
 
-  app.get("/api/audio/history", async (req, res) => {
+  app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     try {
       const accountIndex = parseInt(req.query.accountIndex as string || "0");
       const apiKey = getElevenLabsKey(req, accountIndex);
@@ -596,7 +615,7 @@ async function startServer() {
     }
   });
 
-  app.get("/api/audio/history/:id/audio", async (req, res) => {
+  app.get("/api/audio/history/:id/audio", fsRateLimiter, async (req, res) => {
     const { id } = req.params;
 
     // Sanitize ID to prevent SSRF or path traversal
@@ -604,7 +623,13 @@ async function startServer() {
       return res.status(400).json({ error: "Invalid history item ID" });
     }
 
-    const localCachePath = path.join(process.cwd(), "public/assets/sounds/cache", `${id}.mp3`);
+    const safeId = path.basename(id).replace(/[^a-zA-Z0-9_-]/g, "");
+    const relativeCachePath = `public/assets/sounds/cache/${safeId}.mp3`;
+    if (!isPathAllowed(relativeCachePath)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
+
+    const localCachePath = path.join(process.cwd(), relativeCachePath);
     try {
       await fs.access(localCachePath);
       // Cache exists, serve it!
@@ -613,7 +638,7 @@ async function startServer() {
       return res.send(content);
     } catch (err) {
       // Cache does not exist, fetch from ElevenLabs
-      console.log(`[ElevenLabs Cache] Cache miss for ${id}. Fetching from ElevenLabs...`);
+      console.log(`[ElevenLabs Cache] Cache miss for ${safeId}. Fetching from ElevenLabs...`);
     }
 
     const accountIndex = parseInt(req.query.accountIndex as string || "0");
@@ -624,7 +649,7 @@ async function startServer() {
         return res.status(500).json({ error: "Missing ElevenLabs API key and cache miss" });
       }
 
-      const response = await fetch(`https://api.elevenlabs.io/v1/history/${encodeURIComponent(id)}/audio`, {
+      const response = await fetch(`https://api.elevenlabs.io/v1/history/${encodeURIComponent(safeId)}/audio`, {
         headers: { "xi-api-key": apiKey }
       });
 
@@ -640,7 +665,7 @@ async function startServer() {
         const cacheDir = path.join(process.cwd(), "public/assets/sounds/cache");
         await fs.mkdir(cacheDir, { recursive: true });
         await fs.writeFile(localCachePath, nodeBuffer);
-        console.log(`[ElevenLabs Cache] Dynamically cached audio for ${id}`);
+        console.log(`[ElevenLabs Cache] Dynamically cached audio for ${safeId}`);
       } catch (cacheErr) {
         console.error("[ElevenLabs Cache] Failed to cache audio dynamically:", cacheErr);
       }
@@ -856,13 +881,19 @@ async function startServer() {
     }
   });
 
-  app.get("/api/audio/list/:category", async (req, res) => {
+  app.get("/api/audio/list/:category", fsRateLimiter, async (req, res) => {
     const { category } = req.params;
     if (!category || !/^[a-zA-Z0-9_-]+$/.test(category)) {
       return res.status(400).json({ error: "Invalid category" });
     }
 
-    const baseDir = path.join(process.cwd(), "public/assets/sounds", category);
+    const safeCategory = path.basename(category).replace(/[^a-zA-Z0-9_-]/g, "");
+    const relativeCategoryPath = `public/assets/sounds/${safeCategory}`;
+    if (!isPathAllowed(relativeCategoryPath)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
+
+    const baseDir = path.join(process.cwd(), relativeCategoryPath);
 
     async function getFiles(dir: string, currentSubCategory: string = ""): Promise<any[]> {
       try {
@@ -875,10 +906,10 @@ async function startServer() {
             return getFiles(fullPath, relSubCategory);
           } else if (entry.isFile() && /\.(mp3|wav|ogg|aac|flac)$/i.test(entry.name)) {
             const relPath = currentSubCategory ? `${currentSubCategory}/${entry.name}` : entry.name;
-            const fullVirtualPath = `/assets/sounds/${category}/${relPath}`;
+            const fullVirtualPath = `/assets/sounds/${safeCategory}/${relPath}`;
             return {
               name: entry.name,
-              category: category,
+              category: safeCategory,
               path: fullVirtualPath,
               url: fullVirtualPath
             };
@@ -898,7 +929,7 @@ async function startServer() {
       const allFiles = await getFiles(baseDir);
       res.json(allFiles);
     } catch (error) {
-      console.error(`Error listing category ${category}:`, error);
+      console.error(`Error listing category ${safeCategory}:`, error);
       res.status(500).json({ error: "Failed to list category audio files" });
     }
   });

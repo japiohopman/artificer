@@ -172,8 +172,7 @@ export function GenerateVoice({ voiceOptions, selectedVoiceId, onSelectVoice, on
     if (!activePrompt.trim()) return;
     setIsGenerating(true);
     try {
-      const activeId = selectedVoiceId === 'custom' ? customVoiceId.trim() : selectedVoiceId;
-      await onGenerate(activePrompt, activeId);
+      await onGenerate(activePrompt, selectedVoiceId);
       // Refresh history after generation
       setTimeout(fetchHistory, 2000);
     } finally {
