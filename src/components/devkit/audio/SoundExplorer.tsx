@@ -11,14 +11,19 @@ const CATEGORIES = [
   { id: 'weather', label: 'Weather', icon: Folder }
 ];
 
-export function SoundExplorer() {
+interface SoundExplorerProps {
+  onSelectFile?: (file: { name: string; url: string; category: string }) => void;
+  activeFileName?: string;
+  refreshTrigger?: number;
+}
+
+export function SoundExplorer({ onSelectFile, activeFileName, refreshTrigger }: SoundExplorerProps) {
   const [expanded, setExpanded] = useState<string[]>(['sfx']);
   const [categoryData, setCategoryData] = useState<Record<string, any[]>>({});
   const [loading, setLoading] = useState<Record<string, boolean>>({});
   const [searchTerm, setSearchTerm] = useState('');
 
-  const fetchCategory = async (id: string) => {
-    if (categoryData[id]) return; // Cache check
+  const fetchCategoryExplicit = async (id: string) => {
     setLoading(prev => ({ ...prev, [id]: true }));
     try {
       const res = await fetch(`/api/audio/list/${id}`);
@@ -31,6 +36,11 @@ export function SoundExplorer() {
     }
   };
 
+  const fetchCategory = async (id: string) => {
+    if (categoryData[id]) return; // Cache check
+    await fetchCategoryExplicit(id);
+  };
+
   const toggleFolder = (id: string) => {
     const isExpanding = !expanded.includes(id);
     setExpanded(prev => isExpanding ? [...prev, id] : prev.filter(i => i !== id));
@@ -41,6 +51,15 @@ export function SoundExplorer() {
     fetchCategory('sfx'); // Initial sync for default expanded folder
   }, []);
 
+  useEffect(() => {
+    if (refreshTrigger) {
+      setCategoryData({});
+      expanded.forEach(id => {
+        fetchCategoryExplicit(id);
+      });
+    }
+  }, [refreshTrigger]);
+
   const filteredFiles = (id: string) => {
     const list = categoryData[id] || [];
     if (!searchTerm) return list;
@@ -48,7 +67,7 @@ export function SoundExplorer() {
   };
 
   return (
-    <aside className="w-64 border-r border-stone-800 bg-stone-950 flex flex-col h-full overflow-hidden">
+    <aside className="w-full border-r border-stone-800 bg-stone-950 flex flex-col h-full overflow-hidden">
       <div className="flex-shrink-0 p-4 border-b border-stone-900 bg-stone-900/20">
         <div className="flex items-center gap-2 mb-4">
           <FolderSearch className="w-3.5 h-3.5 text-stone-500" />
@@ -97,7 +116,14 @@ export function SoundExplorer() {
                   </div>
                 ) : (
                   filteredFiles(cat.id).map((file: any) => (
-                    <SoundFileItem key={file.path || file.name} name={file.name} url={file.url} />
+                    <SoundFileItem 
+                      key={file.path || file.name} 
+                      name={file.name} 
+                      url={file.url || file.path} 
+                      category={cat.id}
+                      isActive={activeFileName === file.name}
+                      onSelect={onSelectFile}
+                    />
                   ))
                 )}
                 {!loading[cat.id] && categoryData[cat.id] && filteredFiles(cat.id).length === 0 && (
@@ -114,7 +140,15 @@ export function SoundExplorer() {
   );
 }
 
-function SoundFileItem({ name, url }: { name: string; url: string }) {
+interface SoundFileItemProps {
+  name: string;
+  url: string;
+  category: string;
+  isActive: boolean;
+  onSelect?: (file: { name: string; url: string; category: string }) => void;
+}
+
+function SoundFileItem({ name, url, category, isActive, onSelect }: SoundFileItemProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio] = useState(() => new Audio());
 
@@ -145,10 +179,15 @@ function SoundFileItem({ name, url }: { name: string; url: string }) {
   };
 
   return (
-    <div className="group flex items-center justify-between px-3 py-1.5 rounded-lg hover:bg-stone-900/50 cursor-pointer">
+    <div 
+      onClick={() => onSelect?.({ name, url, category })}
+      className={`group flex items-center justify-between px-3 py-1.5 rounded-lg cursor-pointer transition-colors ${
+        isActive ? 'bg-purple-950/40 border border-purple-800/30' : 'hover:bg-stone-900/50'
+      }`}
+    >
       <div className="flex items-center gap-2 overflow-hidden">
-        <Music className={`w-3 h-3 transition-colors ${isPlaying ? 'text-emerald-400' : 'text-stone-700 group-hover:text-emerald-500/50'}`} />
-        <span className={`text-[11px] truncate font-mono transition-colors ${isPlaying ? 'text-emerald-300' : 'text-stone-500 group-hover:text-stone-300'}`}>
+        <Music className={`w-3 h-3 transition-colors ${isPlaying ? 'text-emerald-400' : isActive ? 'text-purple-400' : 'text-stone-700 group-hover:text-emerald-500/50'}`} />
+        <span className={`text-[11px] truncate font-mono transition-colors ${isPlaying ? 'text-emerald-300' : isActive ? 'text-purple-300 font-bold' : 'text-stone-500 group-hover:text-stone-300'}`}>
           {name}
         </span>
       </div>
