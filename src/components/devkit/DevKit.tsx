@@ -43,7 +43,7 @@ import { LampControls } from './audio/LampControls';
 import { useHueStore } from '../../store/useHueStore';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { soundService } from '../../services/soundService';
-import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle, inferBackgroundFromMonster } from '../../lib/backgroundConfigs';
+import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle } from '../../lib/backgroundConfigs';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -335,7 +335,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
     const jsonExists = currentList.some(m => m.index === item.index);
     const wikiExists = !!item.lore || !!item.wikiData || !!item.desc;
-    const bgExists = activeGenerator === 'monsters' ? (!!item.background_type && item.background_type !== 'generic') : true;
+    const bgExists = activeGenerator === 'monsters' ? !!item.background_type : true;
     const xpExists = activeGenerator === 'monsters' ? (item.xp !== undefined && item.xp > 0) : true;
 
     const missingCategory = activeGenerator === 'monsters' ? 'enemy' : 
@@ -716,7 +716,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
       const index = editingItem.index;
       
       let category = activeGenerator === 'monsters' ? 'enemies' : 
-                     activeGenerator === 'materials' ? 'crafting' : 
+                     activeGenerator === 'materials' ? 'materials' : 
                      activeGenerator === 'equipment' ? 'equipment' : '';
       
       // Check if it's a magic item (Wondrous Items category or non-common rarity)
@@ -726,14 +726,36 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
         category = 'magic_items';
       }
       
-      const jsonPath = `public/assets/atlas/${category}/json/${index}.json`;
+      let jsonPath = `public/assets/atlas/${category}/json/${index}.json`;
+
+      // Subfolder resolution for standard equipment items
+      if (category === 'equipment') {
+        try {
+          const indexRes = await fetch('/assets/atlas/equipment/index.json');
+          if (indexRes.ok) {
+            const equipmentIndex = await indexRes.json();
+            const entry = equipmentIndex.find((e: any) => e.index === index);
+            if (entry && entry.json_path) {
+              let cleanPath = entry.json_path;
+              if (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
+              if (!cleanPath.startsWith('public/')) cleanPath = 'public/' + cleanPath;
+              jsonPath = cleanPath;
+            } else {
+              // Default to 14/ subdirectory if not found
+              jsonPath = `public/assets/atlas/equipment/json/14/${index}.json`;
+            }
+          }
+        } catch (e) {
+          console.error("Error resolving equipment subfolder from index:", e);
+        }
+      }
       
       // 2. Commit Image if it's a new manifestation (base64)
       let finalImageUrl = editingItem.imageUrl;
       if (editingItem.imageUrl?.startsWith('data:image/')) {
         const base64Data = editingItem.imageUrl.split(',')[1];
         
-        const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'crafting', 'materials'];
+        const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'materials'];
         const imagePath = categoriesWithImagesFolder.includes(category)
           ? `public/assets/atlas/${category}/images/${index}.webp`
           : `public/assets/atlas/${category}/${index}.webp`;
@@ -2089,10 +2111,14 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   monsterAlignment={editingItem.alignment}
                                   monsterSubtype={editingItem.subtype}
                                   monsterLore={editingItem.lore || (editingItem.desc ? editingItem.desc[0] : '')}
-                                  initialHabitat={(!editingItem.background_type || editingItem.background_type === 'generic') ? inferBackgroundFromMonster(editingItem) : editingItem.background_type}
+                                  initialHabitat={editingItem.background_type || 'land_forest'}
+                                  initialImageUrl={editingItem.imageUrl || editingItem.image_url}
                                   onImageGenerated={(url) => {
                                     updateField('imageUrl', url);
                                     setChecklist(prev => ({ ...prev, imageGenerated: true }));
+                                  }}
+                                  onHabitatChanged={(habitat) => {
+                                    updateField('background_type', habitat);
                                   }}
                                 />
                               )}

@@ -378,16 +378,16 @@ export async function fetchMaterialData(index: string): Promise<any> {
   if (materialCache[index]) return materialCache[index];
   // Local first
   try {
-    const res = await fetch(`/assets/atlas/crafting/json/${index}.json`);
+    const res = await fetch(`/assets/atlas/materials/json/${index}.json`);
     if (res.ok) {
       const data = await res.json();
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index, data.name) };
+      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl, 'materials', index, data.name) };
       materialCache[index] = finalResult;
       return finalResult;
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/crafting/json/${index}.json?t=${Date.now()}`;
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/materials/json/${index}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -396,7 +396,7 @@ export async function fetchMaterialData(index: string): Promise<any> {
     if (!data) return null;
     return {
       ...data,
-      imageUrl: normalizeImageUrl(data.imageUrl, 'crafting', index, data.name)
+      imageUrl: normalizeImageUrl(data.imageUrl, 'materials', index, data.name)
     };
   } catch (e) {
     console.error("Error fetching material data:", e);
@@ -524,7 +524,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     'npc_profiles': 'npc_profiles',
     'npc_character_profile': 'npc_character_profiles',
     'npc_character_profiles': 'npc_character_profiles',
-    'crafting': 'crafting',
+    'crafting': 'materials',
     'class': 'class',
     'species': 'species',
     'subrace': 'subraces',
@@ -572,7 +572,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   if (!url) {
     // Standard directory structure for atlas assets
-    const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'crafting', 'materials', 'npc_character_profiles', 'npc_profiles', 'spell', 'transport'];
+    const categoriesWithImagesFolder = ['magic_items', 'equipment', 'enemies', 'materials', 'npc_character_profiles', 'npc_profiles', 'spell', 'transport'];
     const wikiImageCategories = ['class', 'species', 'subraces', 'backgrounds'];
     
     // We try both underscore and hyphen versions if guessing
@@ -612,7 +612,7 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     if (!cleanUrl.startsWith('/')) cleanUrl = '/' + cleanUrl;
     
     // Inject images/ or wiki_image/ if missing in the path
-    const categoriesWithImages = ['equipment', 'enemies', 'magic_items', 'crafting', 'spell', 'npc_character_profiles', 'npc_profiles', 'materials', 'transport'];
+    const categoriesWithImages = ['equipment', 'enemies', 'magic_items', 'spell', 'npc_character_profiles', 'npc_profiles', 'materials', 'transport'];
     const wikiImageCategories = ['class', 'species', 'subraces', 'backgrounds'];
     
     // Determine path category from URL
@@ -882,7 +882,7 @@ export async function fetchMaterialsList(): Promise<{ name: string; index: strin
     }
   } catch(e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/crafting/json?ref=${BRANCH}&t=${Date.now()}`;
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/materials/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   
   try {
@@ -1025,31 +1025,20 @@ export async function fetchEquipmentCategories(): Promise<{ name: string; index:
 
 export async function fetchEquipmentCategoryMapping(): Promise<Record<string, string>> {
   if (equipmentMappingCache) return equipmentMappingCache;
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/equipment_categories/json?ref=${BRANCH}`;
-  const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
-  
   try {
-    const res = await fetch(url);
-    const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return {};
+    const categories = await fetchEquipmentCategories();
     const mapping: Record<string, string> = {};
-    
-    const categoryPromises = files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map(async (f: any) => {
-        const rawUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f.path}`;
-        const rawRes = await fetch(`/api/raw?url=${encodeURIComponent(rawUrl)}`);
-        if (rawRes.ok) {
-          const data = await safeJson(rawRes);
-          if (data && data.equipment && data.name) {
-            data.equipment.forEach((item: any) => {
-              mapping[item.index] = data.name;
-            });
+    categories.forEach(cat => {
+      if (cat && cat.equipment && cat.name) {
+        cat.equipment.forEach((item: any) => {
+          const itemIndex = typeof item === 'object' ? (item.index || item.name) : item;
+          if (itemIndex) {
+            mapping[itemIndex] = cat.name;
           }
-        }
-      });
-    
-    await Promise.all(categoryPromises);
+        });
+      }
+    });
+    equipmentMappingCache = mapping;
     return mapping;
   } catch (e) {
     console.error("Error fetching equipment category mapping:", e);

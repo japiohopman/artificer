@@ -226,9 +226,9 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
     set({ isLoadingList: true });
     try {
       const [
-        monsters, monsterCategories, monsterMapping,
-        materials, materialCategories, materialMapping, 
-        equipment, magicItems, categories, mapping,
+        fetchedMonsters, fetchedMonsterCategories, fetchedMonsterMapping,
+        fetchedMaterials, fetchedMaterialCategories, fetchedMaterialMapping, 
+        fetchedEquipment, fetchedMagicItems, fetchedCategories, fetchedMapping,
       ] = await Promise.all([
         fetchMonsterList(),
         fetchMonsterCategories(),
@@ -241,29 +241,45 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
         fetchEquipmentCategories(),
         fetchEquipmentCategoryMapping(),
       ]);
-      const combinedEquipment = [...equipment, ...magicItems];
+
+      const monsters = Array.isArray(fetchedMonsters) ? fetchedMonsters : [];
+      const monsterCategories = Array.isArray(fetchedMonsterCategories) ? fetchedMonsterCategories : [];
+      const monsterMapping = fetchedMonsterMapping || {};
+      const materials = Array.isArray(fetchedMaterials) ? fetchedMaterials : [];
+      const materialCategories = Array.isArray(fetchedMaterialCategories) ? fetchedMaterialCategories : [];
+      const materialMapping = fetchedMaterialMapping || {};
+      const equipment = Array.isArray(fetchedEquipment) ? fetchedEquipment : [];
+      const magicItems = Array.isArray(fetchedMagicItems) ? fetchedMagicItems : [];
+      const categories = Array.isArray(fetchedCategories) ? fetchedCategories : [];
+      const mapping = fetchedMapping || {};
+
+      const combinedEquipment = [...equipment, ...magicItems].filter(Boolean);
       const groupedMap = new Map<string, any>();
       
       combinedEquipment.forEach(item => {
+        if (!item || typeof item !== 'object' || !item.index) return;
         const baseIndex = item.index.replace(/_\d$/, '');
         const tierMatch = item.index.match(/_(\d)$/);
-        const tier = tierMatch ? parseInt(tierMatch[1]) : 0;
+        const tier = tierMatch ? parseInt(tierMatch[1], 10) : 0;
         
         if (!groupedMap.has(baseIndex)) {
           groupedMap.set(baseIndex, { ...item, index: baseIndex, versions: {} });
         }
         
         const group = groupedMap.get(baseIndex);
-        group.versions[tier] = item;
-        
-        if (tier === 0 || !group.name.includes('+')) {
-          const versions = group.versions;
-          Object.assign(group, { ...item, index: baseIndex, versions });
+        if (group && group.versions) {
+          group.versions[tier] = item;
+          
+          if (tier === 0 || !group.name?.includes('+')) {
+            const versions = group.versions;
+            Object.assign(group, { ...item, index: baseIndex, versions });
+          }
         }
       });
       const uniqueEquipment = Array.from(groupedMap.values());
 
       const enrichedEquipmentCategories = categories.map(cat => {
+        if (!cat) return { name: '', index: '', equipment: [], totalAssets: 0 };
         const catEquipmentIndices = cat.equipment || [];
         const resolvedEquipment: any[] = [];
         let totalAssets = 0;
@@ -273,7 +289,7 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
           if (!itemIndex) return;
 
           const group = groupedMap.get(itemIndex);
-          if (group) {
+          if (group && group.versions) {
             totalAssets += Object.keys(group.versions).length;
             resolvedEquipment.push(group);
           } else {
@@ -287,13 +303,14 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
       });
 
       const enrichedMaterialCategories = materialCategories.map(cat => {
+        if (!cat) return { name: '', index: '', materials: [], totalAssets: 0 };
         const catMaterialIndices = cat.materials || [];
         const resolvedMaterials: any[] = [];
         catMaterialIndices.forEach((itemOrIndex: any) => {
           const itemIndex = typeof itemOrIndex === 'object' ? (itemOrIndex.index || itemOrIndex.name) : itemOrIndex;
           if (!itemIndex) return;
 
-          const mat = materials.find((m: any) => m.index === itemIndex);
+          const mat = materials.find((m: any) => m && m.index === itemIndex);
           if (mat) {
             resolvedMaterials.push(mat);
           } else {
@@ -305,11 +322,12 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
       });
 
       const richMonsters = monsters.map(item => {
+        if (!item) return item;
         const categoryItem = monsterCategories
-          .flatMap(c => c.monsters || [])
-          .find(m => m.index === item.index);
+          .flatMap(c => (c && c.monsters) || [])
+          .find(m => m && m.index === item.index);
         return categoryItem ? { ...item, ...categoryItem } : item;
-      });
+      }).filter(Boolean);
 
       set({ 
         monstersList: richMonsters as any, 

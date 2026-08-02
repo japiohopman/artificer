@@ -6,12 +6,7 @@
   "type": "elemental",
   "subtype": "any race",
   "alignment": "Chaotic Evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 15
-    }
-  ],
+  "armor_class": 15,
   "hit_points": 52,
   "hit_dice": "7d8",
   "hit_points_roll": "7d8 + 21",
@@ -51,7 +46,7 @@
     "passive_perception": 10
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 2,
+  "challenge_rating": "2",
   "proficiency_bonus": 2,
   "xp": 450,
   "special_abilities": [],
@@ -107,12 +102,13 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/elemental/Gargoyle.webp",
   "url": "/assets/atlas/enemies/json/0m8qydn52qw9zzom.json",
-  "updated_at": "2026-07-09T11:33:14.845Z",
+  "updated_at": "2026-08-02T02:41:53.080Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "background_type": "generic",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "2-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/gargoyle.webp"
 }
