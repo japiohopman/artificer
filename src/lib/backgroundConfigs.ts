@@ -61,6 +61,9 @@ export function inferBackgroundFromMonster(monster: { type?: string; name?: stri
  * Returns the proper filename base for a given background ID.
  */
 export function getBackgroundFilename(id: string): string {
+  if (id === 'generic') {
+    return 'land_forest';
+  }
   // Support variations like "air2" -> base "air"
   const match = id.match(/^([a-z0-9_]+)(\d)?$/i);
   if (!match) return id;
@@ -74,7 +77,8 @@ export function getBackgroundFilename(id: string): string {
     'mountain': 'mountain',
     'forest': 'land_forest',
     'urban': 'land_urban',
-    'plains': 'land_plains'
+    'plains': 'land_plains',
+    'generic': 'land_forest'
   };
 
   const aliasBase = aliases[base] || base;
@@ -105,7 +109,8 @@ export function getSpriteThumbnailStyle(id: string, variation: number = 0): Reac
     'mountain': 'land_mountains',
     'forest': 'land_forest',
     'urban': 'land_urban',
-    'plains': 'land_plains'
+    'plains': 'land_plains',
+    'generic': 'land_forest'
   };
 
   const aliasBase = aliases[baseId] || baseId;

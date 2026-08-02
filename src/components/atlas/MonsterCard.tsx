@@ -164,9 +164,9 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
 
     let finalType = type;
 
-    if (!finalType) {
+    if (!finalType || finalType === 'generic') {
       finalType = inferBackgroundFromMonster(monster);
-      console.log(`No background type provided for ${monster.name}, inferred: ${finalType}`);
+      console.log(`No background type or 'generic' provided for ${monster.name}, inferred: ${finalType}`);
     }
     
     // Resolve any aliased filenames (like land_mountains -> mountain)

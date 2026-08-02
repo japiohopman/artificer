@@ -43,7 +43,7 @@ import { LampControls } from './audio/LampControls';
 import { useHueStore } from '../../store/useHueStore';
 import { audioEngine } from '../../services/audio/audioEngine';
 import { soundService } from '../../services/soundService';
-import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle } from '../../lib/backgroundConfigs';
+import { BACKGROUND_CONFIGS, getSpriteThumbnailStyle, inferBackgroundFromMonster } from '../../lib/backgroundConfigs';
 
 interface DevKitProps {
   isOpen: boolean;
@@ -335,7 +335,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
     const jsonExists = currentList.some(m => m.index === item.index);
     const wikiExists = !!item.lore || !!item.wikiData || !!item.desc;
-    const bgExists = activeGenerator === 'monsters' ? !!item.background_type : true;
+    const bgExists = activeGenerator === 'monsters' ? (!!item.background_type && item.background_type !== 'generic') : true;
     const xpExists = activeGenerator === 'monsters' ? (item.xp !== undefined && item.xp > 0) : true;
 
     const missingCategory = activeGenerator === 'monsters' ? 'enemy' : 
@@ -2089,14 +2089,10 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                                   monsterAlignment={editingItem.alignment}
                                   monsterSubtype={editingItem.subtype}
                                   monsterLore={editingItem.lore || (editingItem.desc ? editingItem.desc[0] : '')}
-                                  initialHabitat={editingItem.background_type || 'land_forest'}
-                                  initialImageUrl={editingItem.imageUrl || editingItem.image_url}
+                                  initialHabitat={(!editingItem.background_type || editingItem.background_type === 'generic') ? inferBackgroundFromMonster(editingItem) : editingItem.background_type}
                                   onImageGenerated={(url) => {
                                     updateField('imageUrl', url);
                                     setChecklist(prev => ({ ...prev, imageGenerated: true }));
-                                  }}
-                                  onHabitatChanged={(habitat) => {
-                                    updateField('background_type', habitat);
                                   }}
                                 />
                               )}
