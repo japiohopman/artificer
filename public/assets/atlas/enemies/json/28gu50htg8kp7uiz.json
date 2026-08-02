@@ -6,12 +6,7 @@
   "type": "beast",
   "subtype": "any race",
   "alignment": "Unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 1,
   "hit_dice": "1d4 - 1",
   "hit_points_roll": "1d4 - 1",
@@ -41,7 +36,7 @@
     "passive_perception": 10
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 0,
+  "challenge_rating": "0",
   "proficiency_bonus": 2,
   "xp": 10,
   "special_abilities": [],
@@ -88,12 +83,13 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/beast/Spider.webp",
   "url": "/assets/atlas/enemies/json/28gu50htg8kp7uiz.json",
-  "updated_at": "2026-07-09T11:33:14.239Z",
+  "updated_at": "2026-08-02T00:53:12.012Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "background_type": "generic",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "2-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/spider.webp"
 }
