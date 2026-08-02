@@ -6,12 +6,7 @@
   "type": "beast",
   "subtype": "any race",
   "alignment": "Unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 12
-    }
-  ],
+  "armor_class": 12,
   "hit_points": 37,
   "hit_dice": "5d10",
   "hit_points_roll": "5d10 + 10",
@@ -41,7 +36,7 @@
     "passive_perception": 11
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 1,
+  "challenge_rating": "1",
   "proficiency_bonus": 2,
   "xp": 200,
   "special_abilities": [],
@@ -97,12 +92,14 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/beast/Tiger.webp",
   "url": "/assets/atlas/enemies/json/fayqbnjbmszo6pat.json",
-  "updated_at": "2026-07-09T11:33:14.343Z",
+  "updated_at": "2026-08-02T01:01:32.096Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "background_type": "generic",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "2-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/tiger.webp",
+  "_type": "enemies"
 }
