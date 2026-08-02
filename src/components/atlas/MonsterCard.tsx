@@ -8,6 +8,7 @@ import { isBookLike } from '../../lib/bookUtils';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { DiceText as DiceTextComponent } from '../dice/DiceText';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { resolveMonsterText } from '../../lib/monsterFeatureResolver';
 import { isMagicUser, generateNpcSpells, inferSpellClass } from '../../services/magicService';
 import { BookReader } from '../bookreader/BookReader';
 import { SpellCard } from './SpellCard';
@@ -620,7 +621,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
                   </h4>
                   {monster.special_abilities.map((sa, i) => (
                     <div key={i} className="text-[15px] leading-snug">
-                      <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={sa.name} />.</span> <DiceText text={String(sa.desc || '')} />
+                      <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={sa.name} />.</span> <DiceText text={resolveMonsterText(monster, sa, sa.desc)} />
                     </div>
                   ))}
                 </div>
@@ -646,7 +647,7 @@ export const MonsterCard: React.FC<MonsterCardProps> = ({ monster, className }) 
                           </div>
                         )}
                         <div>
-                          <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={a.name} />.</span> <DiceText text={String(a.desc || '')} />
+                          <span className="text-[16px] font-bold uppercase text-dragon-red font-header"><SafeValue value={a.name} />.</span> <DiceText text={resolveMonsterText(monster, a, a.desc)} />
                         </div>
                       </div>
                     </div>

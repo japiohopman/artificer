@@ -9,6 +9,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { DiceText } from '../dice/DiceText';
 import { normalizeImageUrl, getEnemyArtworkUrl } from '../../services/storageService';
+import { resolveMonsterText } from '../../lib/monsterFeatureResolver';
 
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
@@ -158,7 +159,7 @@ export const MonsterProfile: React.FC = () => {
                                     )}
                                  </div>
                                  <div className="text-[11px] text-white/60 leading-relaxed italic">
-                                    <DiceText>{action.desc}</DiceText>
+                                    <DiceText>{resolveMonsterText(monster, action, action.desc)}</DiceText>
                                  </div>
                               </div>
                            ))}
@@ -186,7 +187,9 @@ export const MonsterProfile: React.FC = () => {
                            {monster.special_abilities?.map((trait: any, i: number) => (
                               <div key={i} className="bg-black/20 rounded-lg p-4 border border-white/5">
                                  <span className="font-bold text-dragon-gold uppercase text-[10px] tracking-widest block mb-1">{trait.name}</span>
-                                 <p className="text-[11px] text-white/70 leading-relaxed italic">{trait.desc}</p>
+                                 <div className="text-[11px] text-white/70 leading-relaxed italic">
+                                    <DiceText>{resolveMonsterText(monster, trait, trait.desc)}</DiceText>
+                                 </div>
                               </div>
                            ))}
                         </div>
