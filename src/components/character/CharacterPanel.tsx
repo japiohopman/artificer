@@ -157,9 +157,9 @@ export const CharacterPanel: React.FC = () => {
             <div className="flex gap-3">
               {/* Profile Portrait */}
               <div className="w-16 h-20 bg-stone-900/10 rounded-lg border-2 border-dragon-gold overflow-hidden shrink-0 shadow-md relative group">
-                {activeCharacter.avatarUrl || activeCharacter.imageUrl ? (
+                {activeCharacter.imageUrl || activeCharacter.avatarUrl ? (
                   <img
-                    src={normalizeImageUrl(activeCharacter.avatarUrl || activeCharacter.imageUrl, 'npc_character_profiles', activeCharacter.id)}
+                    src={normalizeImageUrl(activeCharacter.imageUrl || activeCharacter.avatarUrl, 'character', activeCharacter.id)}
                     alt={activeCharacter.name}
                     className="w-full h-full object-cover relative z-10"
                     onError={(e) => {
@@ -347,7 +347,7 @@ export const CharacterPanel: React.FC = () => {
                         <div className="flex items-center gap-3 w-full">
                           <div className="w-12 h-18 rounded border-2 border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0 relative shadow-sm">
                             <img
-                              src={char.avatarUrl || normalizeImageUrl(char.imageUrl, 'npc_character_profiles', char.id)}
+                              src={normalizeImageUrl(char.imageUrl || char.avatarUrl, 'character', char.id)}
                               alt={char.name}
                               className="w-full h-full object-cover"
                               onError={(e) => {

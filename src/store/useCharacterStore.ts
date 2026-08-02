@@ -79,6 +79,7 @@ export interface Character {
   };
   imageUrl?: string;
   avatarUrl?: string;
+  tokenUrl?: string;
   matrixUrl?: string;
   dataPath?: string;
   conditions?: string[];

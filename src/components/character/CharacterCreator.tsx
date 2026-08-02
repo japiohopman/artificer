@@ -87,7 +87,12 @@ export const CharacterCreator: React.FC = () => {
     loadCharacters,
     setActiveCharacter
   } = useCharacterStore();
-  const [currentStep, setCurrentStep] = useState<CreationStep>('welcome');
+  const [currentStep, setCurrentStep] = useState<CreationStep>(() => {
+    if (typeof window !== 'undefined' && (window as any).__PLAYWRIGHT_TEST_STEP__) {
+      return (window as any).__PLAYWRIGHT_TEST_STEP__;
+    }
+    return 'welcome';
+  });
   const [direction, setDirection] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
 
