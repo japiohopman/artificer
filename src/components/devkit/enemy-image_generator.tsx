@@ -15,8 +15,10 @@ interface EnemyImageGeneratorProps {
   monsterLore?: string;
   initialHabitat?: string;
   initialCategory?: 'bestiary' | 'characters' | 'equipment';
+  initialImageUrl?: string;
   level?: number;
   onImageGenerated: (url: string) => void;
+  onHabitatChanged?: (habitat: string) => void;
 }
 
 export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({ 
@@ -28,11 +30,13 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
   monsterLore,
   initialHabitat = 'land_forest',
   initialCategory = 'bestiary',
+  initialImageUrl,
   level = 1,
-  onImageGenerated 
+  onImageGenerated,
+  onHabitatChanged
 }) => {
   const [isGenerating, setIsGenerating] = useState(false);
-  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(initialImageUrl || null);
   const [error, setError] = useState<string | null>(null);
   const [selectedHabitat, setSelectedHabitat] = useState('land_forest');
   const [selectedVariation, setSelectedVariation] = useState(0);
@@ -55,6 +59,22 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
       }
     }
   }, [initialHabitat, monsterType, monsterName]);
+
+  // Sync with initialImageUrl prop when it changes
+  React.useEffect(() => {
+    if (initialImageUrl) {
+      setPreviewImage(initialImageUrl);
+    }
+  }, [initialImageUrl]);
+
+  const updateHabitatAndVariation = (base: string, variation: number) => {
+    setSelectedHabitat(base);
+    setSelectedVariation(variation);
+    if (onHabitatChanged) {
+      const suffix = variation === 0 ? '' : String(variation);
+      onHabitatChanged(`${base}${suffix}`);
+    }
+  };
 
   const handleGenerateBg = async () => {
     setIsGenerating(true);
@@ -144,7 +164,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
             return (
               <button
                 key={b.id}
-                onClick={() => setSelectedHabitat(b.id)}
+                onClick={() => updateHabitatAndVariation(b.id, selectedVariation)}
                 className="flex-shrink-0 w-16 text-center focus:outline-none group"
                 title={`Select ${b.label}`}
               >
@@ -173,7 +193,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
           <select 
             title="Preview Habitat"
             value={selectedHabitat}
-            onChange={(e) => setSelectedHabitat(e.target.value)}
+            onChange={(e) => updateHabitatAndVariation(e.target.value, selectedVariation)}
             className="w-full bg-white/50 border border-dragon-red/10 p-1.5 text-[10px] text-parchment-900 rounded focus:outline-none focus:border-dragon-red transition-colors"
           >
             {BACKGROUND_CONFIGS.map(b => (
@@ -189,7 +209,7 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
             {[0, 1, 2, 3, 4].map(v => (
               <button
                 key={v}
-                onClick={() => setSelectedVariation(v)}
+                onClick={() => updateHabitatAndVariation(selectedHabitat, v)}
                 className={`flex-1 aspect-[3/2] rounded border-2 overflow-hidden transition-all relative ${
                   selectedVariation === v
                     ? 'border-dragon-red ring-2 ring-dragon-red/40 scale-105 z-10'
@@ -203,7 +223,8 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
                   style={getSpriteThumbnailStyle(selectedHabitat, v)}
                 />
                 <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-[7px] font-bold text-white px-0.5 rounded">
-                  {v === 0 ? 'M' : v === 3 ? 'W' : v === 4 ? 'C' : v}
+                  {v === 0 ? 'M' : v === 3 ? 'W' : v === 4 ? 'C' : v
+                  }
                 </div>
               </button>
             ))}

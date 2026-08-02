@@ -17,6 +17,7 @@ test('verify character creator tactical token selector and preview', async ({ pa
 
     console.log('Force opening Character Creator on Appearance step...');
     await page.evaluate(() => {
+      (window as any).__PLAYWRIGHT_TEST_STEP__ = 'appearance';
       if ((window as any).useGameStore) {
         (window as any).useGameStore.setState({ isGameStarted: true });
       }
@@ -27,12 +28,13 @@ test('verify character creator tactical token selector and preview', async ({ pa
 
     await page.waitForTimeout(2000);
 
+    await page.waitForTimeout(1000);
+
     console.log('Taking screenshot of initial Appearance step...');
     await page.screenshot({ path: 'verification/character_creation_token_initial.png' });
 
     // Let's click on a specific token, e.g. Ranger Bow or Bard Lute
     console.log('Selecting Ranger Bow token...');
-    // We can select the button with title "Ranger (Bow)"
     const tokenButton = page.locator('button[title="Ranger (Bow)"]');
     await tokenButton.click();
 
