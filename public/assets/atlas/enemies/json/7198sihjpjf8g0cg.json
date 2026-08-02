@@ -6,12 +6,7 @@
   "type": "dragon",
   "subtype": "any race",
   "alignment": "Unaligned",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 110,
   "hit_dice": "13d10",
   "hit_points_roll": "13d10 + 39",
@@ -41,7 +36,7 @@
     "passive_perception": 11
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 6,
+  "challenge_rating": "6",
   "proficiency_bonus": 3,
   "xp": 2300,
   "special_abilities": [],
@@ -106,12 +101,13 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/dragon/Wyvern.webp",
   "url": "/assets/atlas/enemies/json/7198sihjpjf8g0cg.json",
-  "updated_at": "2026-07-09T11:33:14.758Z",
+  "updated_at": "2026-08-02T09:52:19.791Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
   "background_type": "generic",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "2-8-2026",
+  "imageUrl": "/assets/atlas/enemies/images/wyvern.webp"
 }
