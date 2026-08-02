@@ -635,6 +635,17 @@ export const CharacterProfile: React.FC = () => {
                              <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">ALIGNMENT</span>
                              <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</span>
                           </div>
+                          <div className="w-px h-12 bg-dragon-red/10" />
+                          <div className="flex flex-col items-center">
+                             <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">TOKEN</span>
+                             {character.tokenUrl ? (
+                                <div className="w-10 h-10 rounded-full border-2 border-dragon-gold bg-stone-900/80 p-0.5 shadow-md flex items-center justify-center">
+                                   <img src={character.tokenUrl} className="w-full h-full object-contain" alt="" />
+                                </div>
+                             ) : (
+                                <span className="text-sm font-bold text-parchment-400 italic">None</span>
+                             )}
+                          </div>
                        </div>
                     </div>
                  </div>
@@ -748,6 +759,17 @@ export const CharacterProfile: React.FC = () => {
                                    <div className="flex flex-col items-center">
                                       <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">ALIGNMENT</span>
                                       <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight"><GameIcon name={getAlignmentIcon(character.alignment || "neutral")} size={20} color="currentColor" fallbackName="award" /> {character.alignment || "Neutral"}</span>
+                                   </div>
+                                   <div className="w-px h-10 bg-dragon-red/10" />
+                                   <div className="flex flex-col items-center">
+                                      <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.2em] mb-1">TOKEN</span>
+                                      {character.tokenUrl ? (
+                                         <div className="w-8 h-8 rounded-full border border-dragon-gold bg-stone-900/80 p-0.5 shadow-md flex items-center justify-center">
+                                            <img src={character.tokenUrl} className="w-full h-full object-contain" alt="" />
+                                         </div>
+                                      ) : (
+                                         <span className="text-xs font-bold text-parchment-400 italic">None</span>
+                                      )}
                                    </div>
                                 </div>
                              </div>

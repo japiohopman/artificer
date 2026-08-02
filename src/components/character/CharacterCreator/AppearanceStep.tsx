@@ -12,6 +12,62 @@ interface Palette {
     features: { name: string; icon: string }[];
 }
 
+export const HERO_TOKENS = [
+  { name: 'Barbarian (Axe)', file: 'BarbarianAxe.webp' },
+  { name: 'Barbarian (Maul)', file: 'BarbarianMaul.webp' },
+  { name: 'Bard (Lute)', file: 'BardLute.webp' },
+  { name: 'Bard (Swords)', file: 'BardSwords.webp' },
+  { name: 'Cleric (Dragonborn)', file: 'ClericDragonborn.webp' },
+  { name: 'Cleric (Human)', file: 'ClericHuman.webp' },
+  { name: 'Druid (Club)', file: 'DruidClub.webp' },
+  { name: 'Druid (Staff)', file: 'DruidStaff.webp' },
+  { name: 'Fighter (Shield)', file: 'FighterShield.webp' },
+  { name: 'Fighter (Spear)', file: 'FighterSpear.webp' },
+  { name: 'Monk (Staff)', file: 'MonkStaff.webp' },
+  { name: 'Monk (Unarmed)', file: 'MonkUnarmed.webp' },
+  { name: 'Paladin (Hammer)', file: 'PaladinHammer.webp' },
+  { name: 'Paladin (Sword)', file: 'PaladinSword.webp' },
+  { name: 'Ranger (Bow)', file: 'RangerBow.webp' },
+  { name: 'Ranger (Swords)', file: 'RangerSwords.webp' },
+  { name: 'Rogue (Halfling)', file: 'RogueHalfling.webp' },
+  { name: 'Rogue (Human)', file: 'RogueHuman.webp' },
+  { name: 'Sorcerer (Human)', file: 'SorcererHuman.webp' },
+  { name: 'Sorcerer (Tiefling)', file: 'SorcererTiefling.webp' },
+  { name: 'Warlock (Staff)', file: 'WarlockStaff.webp' },
+  { name: 'Warlock (Sword)', file: 'WarlockSword.webp' },
+  { name: 'Wizard (Tome)', file: 'WizardTome.webp' },
+  { name: 'Wizard (Unarmed)', file: 'WizardUnarmed.webp' }
+];
+
+export function getDefaultTokenForClassAndRace(cls?: string, race?: string): string {
+  const c = (cls || 'Fighter').toLowerCase();
+  const r = (race || 'Human').toLowerCase();
+
+  if (c === 'barbarian') return '/assets/atlas/enemies/tokens/heroes/BarbarianAxe.webp';
+  if (c === 'bard') return '/assets/atlas/enemies/tokens/heroes/BardLute.webp';
+  if (c === 'cleric') {
+    if (r === 'dragonborn') return '/assets/atlas/enemies/tokens/heroes/ClericDragonborn.webp';
+    return '/assets/atlas/enemies/tokens/heroes/ClericHuman.webp';
+  }
+  if (c === 'druid') return '/assets/atlas/enemies/tokens/heroes/DruidStaff.webp';
+  if (c === 'fighter') return '/assets/atlas/enemies/tokens/heroes/FighterShield.webp';
+  if (c === 'monk') return '/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp';
+  if (c === 'paladin') return '/assets/atlas/enemies/tokens/heroes/PaladinSword.webp';
+  if (c === 'ranger') return '/assets/atlas/enemies/tokens/heroes/RangerBow.webp';
+  if (c === 'rogue') {
+    if (r === 'halfling') return '/assets/atlas/enemies/tokens/heroes/RogueHalfling.webp';
+    return '/assets/atlas/enemies/tokens/heroes/RogueHuman.webp';
+  }
+  if (c === 'sorcerer') {
+    if (r === 'tiefling') return '/assets/atlas/enemies/tokens/heroes/SorcererTiefling.webp';
+    return '/assets/atlas/enemies/tokens/heroes/SorcererHuman.webp';
+  }
+  if (c === 'warlock') return '/assets/atlas/enemies/tokens/heroes/WarlockSword.webp';
+  if (c === 'wizard') return '/assets/atlas/enemies/tokens/heroes/WizardTome.webp';
+
+  return '/assets/atlas/enemies/tokens/heroes/FighterShield.webp';
+}
+
 const SPECIES_PALETTES: Record<string, Palette> = {
     'dragonborn': {
         skin: ['#B8860B', '#B22222', '#228B22', '#4169E1', '#2F4F4F', '#000000', '#FFFFFF', '#CD853F', '#FFD700'],
@@ -138,6 +194,16 @@ export const AppearanceStep: React.FC<{
             fetchSpeciesData(newChar.race).then(setSpeciesStats);
         }
     }, [newChar.race]);
+
+    useEffect(() => {
+        if (!newChar.tokenUrl) {
+            const defaultToken = getDefaultTokenForClassAndRace(newChar.class, newChar.race);
+            setNewChar(prev => ({
+                ...prev,
+                tokenUrl: defaultToken
+            }));
+        }
+    }, [newChar.class, newChar.race, newChar.tokenUrl, setNewChar]);
 
     const palette = (() => {
         const base = SPECIES_PALETTES[raceKey] || DEFAULT_PALETTE;
@@ -332,6 +398,42 @@ export const AppearanceStep: React.FC<{
                             ))}
                         </div>
                     </div>
+
+                    {/* Tactical Token Selection */}
+                    <div className="space-y-4 pt-4 border-t border-dragon-gold/10">
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-parchment-400 flex items-center gap-2">
+                           <GameIcon name="focus" size={12} /> Tactical Token (Combat Grid representation)
+                        </label>
+                        <p className="text-[10px] text-parchment-600 font-bold uppercase tracking-wider">
+                           Choose a top-down token for your hero on the tactical combat grid:
+                        </p>
+                        <div className="grid grid-cols-4 sm:grid-cols-6 gap-3 p-4 bg-white/30 border border-dragon-gold/10 rounded-sm max-h-[220px] overflow-y-auto custom-scrollbar">
+                            {HERO_TOKENS.map((tok) => {
+                                const tokenPath = `/assets/atlas/enemies/tokens/heroes/${tok.file}`;
+                                const isSelected = newChar.tokenUrl === tokenPath;
+                                return (
+                                    <button
+                                        key={tok.file}
+                                        type="button"
+                                        title={tok.name}
+                                        onClick={() => setNewChar(prev => ({ ...prev, tokenUrl: tokenPath }))}
+                                        className={cn(
+                                            "aspect-square rounded-full border-2 transition-all p-1 flex items-center justify-center relative bg-stone-900/10 hover:bg-stone-900/20",
+                                            isSelected
+                                                ? "border-dragon-red ring-4 ring-dragon-red/20 scale-105 z-10 bg-dragon-red/10"
+                                                : "border-white/60 hover:border-dragon-gold"
+                                        )}
+                                    >
+                                        <img
+                                            src={tokenPath}
+                                            className="w-[90%] h-[90%] object-contain"
+                                            alt={tok.name}
+                                        />
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
 
                 {/* Preview Panel */}
@@ -344,15 +446,24 @@ export const AppearanceStep: React.FC<{
                     <motion.div 
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        className="relative"
+                        className="relative flex flex-col items-center gap-4"
                     >
                         <div className="absolute inset-0 bg-dragon-red/5 blur-3xl rounded-full scale-150 animate-pulse" />
-                        <GameIcon name="user" size={180} color="#8B0000" className="opacity-10 relative z-10" />
+                        {newChar.tokenUrl ? (
+                            <div className="relative w-44 h-44 rounded-full border-4 border-dragon-gold bg-stone-950/80 shadow-[0_0_30px_rgba(184,134,11,0.4)] flex items-center justify-center p-2 relative z-10">
+                                <img src={newChar.tokenUrl} className="w-[90%] h-[90%] object-contain" alt="Selected Token" />
+                                <div className="absolute -inset-1 border-2 border-dashed border-dragon-red rounded-full opacity-60 animate-[spin_20s_linear_infinite]" />
+                            </div>
+                        ) : (
+                            <GameIcon name="user" size={180} color="#8B0000" className="opacity-10 relative z-10" />
+                        )}
                         
                         {/* Visualization Overlays */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
-                             <div className="w-16 h-1 border-2 border-dragon-red/20 rounded-full mb-4 animate-bounce" />
-                             <span className="text-[10px] font-black text-dragon-red/40 uppercase tracking-[0.4em] select-none">V_A_I_S</span>
+                        <div className="flex flex-col items-center justify-center mt-2 relative z-20">
+                             <div className="w-16 h-1 border-2 border-dragon-red/20 rounded-full mb-2" />
+                             <span className="text-[10px] font-black text-dragon-red/60 uppercase tracking-[0.4em] select-none font-elan">
+                                {newChar.tokenUrl ? "Tactical Combat Token" : "Appearance Preview"}
+                             </span>
                         </div>
                     </motion.div>
 

@@ -505,6 +505,9 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   if (url && typeof url === 'string') {
     url = url.replace(/\/assets\/atlas\/ui\/official\/classes\//gi, '/assets/ui/official/classes/');
     url = url.replace(/assets\/atlas\/ui\/official\/classes\//gi, 'assets/ui/official/classes/');
+    // Replace dragons with dragon for token paths
+    url = url.replace(/\/tokens\/dragons\//gi, '/tokens/dragon/');
+    url = url.replace(/\/enemies\/tokens\/dragons\//gi, '/enemies/tokens/dragon/');
   }
 
   // Normalize category names to folder names
@@ -561,13 +564,26 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     return url;
   }
   
-  const normalizedPublicUrl = url?.startsWith('/public/data/character_save/') ? url.slice(1) : url;
-  if (normalizedPublicUrl && normalizedPublicUrl.startsWith('public/data/character_save/')) {
-    const localUrl = `/${normalizedPublicUrl.replace(/^public\//, '')}`;
+  // Support local character saves
+  let isSavePath = false;
+  let savePathRelative = "";
+  if (url && typeof url === 'string') {
+    const cleanUrlForSave = url.startsWith('/') ? url.substring(1) : url;
+    if (cleanUrlForSave.startsWith('data/character_save/')) {
+      isSavePath = true;
+      savePathRelative = cleanUrlForSave;
+    } else if (cleanUrlForSave.startsWith('public/data/character_save/')) {
+      isSavePath = true;
+      savePathRelative = cleanUrlForSave.substring(7); // strip public/
+    }
+  }
+
+  if (isSavePath) {
+    const localUrl = `/${savePathRelative}`;
     if (isLocalhost) {
       return localUrl;
     }
-    return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${normalizedPublicUrl}?t=${timestamp}`;
+    return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/${savePathRelative}?t=${timestamp}`;
   }
 
   if (!url) {
@@ -663,11 +679,14 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
-    const filename = ddbIndex + '.webp';
-    if (isLocalhost) {
-      finalUrl = `/assets/atlas/enemies/images/${filename}`;
-    } else {
-      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
+    const isTokenPath = url && (url.includes('/tokens/') || url.includes('/enemies/tokens/'));
+    if (!isTokenPath) {
+      const filename = ddbIndex + '.webp';
+      if (isLocalhost) {
+        finalUrl = `/assets/atlas/enemies/images/${filename}`;
+      } else {
+        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
+      }
     }
   }
 
