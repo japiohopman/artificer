@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDAndD } from '@fortawesome/free-brands-svg-icons';
-import { playClickSound, playSuccessSound, REPO, BRANCH } from '../../services/storageService';
+import { playClickSound, playSuccessSound, REPO, BRANCH, normalizeImageUrl } from '../../services/storageService';
 import { soundService } from '../../services/soundService';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useUIStore } from '../../store/useUIStore';
@@ -10,6 +10,8 @@ import { useGameStore } from '../../store/useGameStore';
 import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { calculateDerivedStats } from '../../lib/statCalculations';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -202,7 +204,12 @@ export const TitleScreen: React.FC = () => {
             const isSelected = selectedSlotIndex === index;
             const hasCharacter = !!char;
 
-            const portraitUrl = char?.imageUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_portrait.webp?t=${Date.now()}`;
+            const portraitUrl = char?.imageUrl
+              ? normalizeImageUrl(char.imageUrl, 'character_save', char.id)
+              : `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_portrait.webp?t=${Date.now()}`;
+
+            const derived = char ? calculateDerivedStats(char) : null;
+            const initiativeSign = derived ? (derived.initiative >= 0 ? `+${derived.initiative}` : `${derived.initiative}`) : '';
 
             return (
               <motion.div
@@ -228,51 +235,57 @@ export const TitleScreen: React.FC = () => {
               >
                 {hasCharacter ? (
                   <>
-                    {/* Left Side: 3:2 Landscape Portrait Area */}
-                    <div className="relative w-[180px] sm:w-[200px] md:w-[220px] h-full overflow-hidden shrink-0 border-r border-stone-850 bg-stone-900">
-                      <img 
+                    {/* Left Side: 2:3 Portrait Area with Chroma Keying & Attribute Overlay */}
+                    <div
+                      className="relative w-[90px] h-full overflow-hidden shrink-0 border-r border-stone-850 bg-[#1e1712]"
+                      style={{
+                        backgroundImage: `url('/assets/ui/parchment.jpg')`,
+                        backgroundColor: '#f5ebd0',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
+                      {/* Sub-overlay to slightly darken/warm the background parchment texture */}
+                      <div className="absolute inset-0 bg-[#3a2a1d]/15 mix-blend-multiply pointer-events-none z-0" />
+
+                      {/* Chroma Key Portrait Canvas */}
+                      <ChromaKeyImage
                         src={portraitUrl}
                         alt={char.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          const slotId = char.id || `slot${index + 1}`;
-                          if (!target.src.includes('raw.githubusercontent.com')) {
-                            target.src = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/${slotId}/${slotId}_portrait.webp?t=${Date.now()}`;
-                          } else {
-                            target.src = `https://picsum.photos/seed/${slotId}/300/200`;
-                          }
-                        }}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 relative z-10"
                       />
+
                       {/* Atmospheric Vignette Gradients */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-stone-950/80" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-stone-950/20 z-10 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent z-10 pointer-events-none" />
 
                       {/* Slot Badge */}
-                      <div className="absolute top-2 left-2 bg-stone-900/80 backdrop-blur-sm text-stone-400 text-[8px] font-black px-1.5 py-0.5 rounded border border-stone-800">
-                        SLOT 0{index + 1}
+                      <div className="absolute top-1 left-1 bg-stone-950/85 backdrop-blur-sm text-stone-400 text-[6.5px] font-black px-1 py-0.5 rounded border border-stone-800 z-25">
+                        SL0{index + 1}
                       </div>
 
                       {/* Level Badge Overlay */}
-                      <div className="absolute top-2 right-2 bg-amber-500 text-stone-950 text-[9px] font-black px-1.5 py-0.5 rounded shadow-md uppercase tracking-wider">
-                        LVL {char.level || 1}
+                      <div className="absolute top-1 right-1 bg-amber-500 text-stone-950 text-[7px] font-black px-1 py-0.5 rounded shadow-sm uppercase tracking-wider z-25">
+                        L{char.level || 1}
                       </div>
 
-                      {/* Small Quick-Delete Banish Button */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          playClickSound();
-                          setDeleteConfirmSlot(index);
-                        }}
-                        className="absolute bottom-2 left-2 p-1.5 bg-black/60 hover:bg-red-700 border border-white/5 hover:border-red-500 rounded text-stone-400 hover:text-white transition-all duration-200 z-30"
-                        title="Delete Hero"
-                      >
-                        <GameIcon name="refresh" size={10} color="currentColor" />
-                      </button>
+                      {/* Attribute Scores Bottom Overlay on image */}
+                      <div className="absolute bottom-0 inset-x-0 bg-stone-950/90 backdrop-blur-xs border-t border-stone-800/80 px-0.5 py-1 grid grid-cols-3 gap-x-0.5 gap-y-0.5 text-center z-25">
+                        {Object.entries(char.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }).map(([stat, val]) => {
+                          const score = val as number;
+                          return (
+                            <div key={stat} className="flex flex-col items-center">
+                              <span className="text-[5px] font-extrabold text-amber-500/80 uppercase leading-none">{stat}</span>
+                              <span className="text-[7.5px] font-bold text-stone-200 leading-none mt-0.5">
+                                {score}
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
 
-                    {/* Right Side: Compact Metadata Sheet */}
+                    {/* Right Side: Re-arranged and Spacious Metadata Sheet */}
                     <div className="flex-1 p-3 flex flex-col justify-between bg-[#151210] relative z-10 overflow-hidden">
                       {/* Parchment background overlay for information sheet */}
                       <div className="absolute inset-0 bg-[#f5ebd0]/[0.03] mix-blend-overlay pointer-events-none" />
@@ -283,59 +296,111 @@ export const TitleScreen: React.FC = () => {
                           <h3 className="text-lg sm:text-xl font-header font-black text-amber-500 uppercase tracking-wide truncate leading-none">
                             {char.name}
                           </h3>
-                          <p className="text-[9px] text-stone-300 font-black uppercase tracking-widest truncate mt-1">
-                            {formatText(char.subrace || char.race)} • {formatText(char.subclass || char.class)}
-                          </p>
-                          <p className="text-[8.5px] text-stone-400 font-semibold uppercase tracking-wider mt-0.5 truncate">
-                            {formatText(char.alignment)} • {formatText(char.background)}
-                          </p>
+                          <div className="flex flex-wrap items-center gap-x-2 mt-1.5 text-[9px] text-stone-300 font-black uppercase tracking-widest leading-none">
+                            <span>{formatText(char.subrace || char.race)}</span>
+                            <span className="text-stone-600">•</span>
+                            <span className="text-amber-500/80">{formatText(char.subclass || char.class)}</span>
+                            <span className="text-stone-600">•</span>
+                            <span className="text-stone-400 font-semibold lowercase tracking-wide">{formatText(char.alignment)}</span>
+                            <span className="text-stone-600">•</span>
+                            <span className="text-stone-400 font-semibold lowercase tracking-wide">{formatText(char.background)}</span>
+                          </div>
                         </div>
-                        <span className="text-[8.5px] font-bold text-stone-500 shrink-0 whitespace-nowrap bg-stone-950/40 px-2 py-0.5 rounded border border-stone-900/30">
-                          {formatLastSaved(char.lastSaved)}
-                        </span>
+                        <div className="flex items-center gap-2 shrink-0">
+                          <span className="text-[8.5px] font-bold text-stone-500 whitespace-nowrap bg-stone-950/40 px-2 py-0.5 rounded border border-stone-900/30">
+                            {formatLastSaved(char.lastSaved)}
+                          </span>
+                          {/* Elegant trash/Banish button in the top right header */}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              playClickSound();
+                              setDeleteConfirmSlot(index);
+                            }}
+                            className="p-1 bg-black/40 hover:bg-red-700/80 border border-stone-800 hover:border-red-500 rounded text-stone-400 hover:text-white transition-all duration-200"
+                            title="Delete Hero"
+                          >
+                            <GameIcon name="refresh" size={10} color="currentColor" />
+                          </button>
+                        </div>
                       </div>
 
-                      {/* Stats & Vitals Row */}
-                      <div className="flex items-center gap-3 mt-1.5">
-                        {/* Micro Stats Grid with Modifiers */}
-                        <div className="flex-1 grid grid-cols-6 gap-0.5 max-w-sm bg-stone-950/60 border border-[#3e2e21]/40 rounded p-1">
-                          {Object.entries(char.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }).map(([stat, val]) => (
-                            <div key={stat} className="flex flex-col items-center">
-                              <span className="text-[6.5px] font-black text-amber-500/50 uppercase leading-none mb-0.5">{stat}</span>
-                              <span className="text-[10px] font-bold text-stone-200 leading-none">{val as any}</span>
-                              <span className="text-[6.5px] font-bold text-stone-400 mt-0.5 leading-none">{getMod(val as number)}</span>
-                            </div>
-                          ))}
+                      {/* Balanced Vitals Grid */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2">
+                        {/* HP Vital */}
+                        <div className="flex items-center gap-2 bg-stone-950/40 border border-stone-900/60 rounded px-2.5 py-1.5 shadow-sm">
+                          <div className="p-1 bg-red-950/30 rounded border border-red-900/20 text-red-500 flex items-center justify-center">
+                            <GameIcon name="shield" size={10} color="currentColor" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider leading-none">Health</span>
+                            <span className="text-[11px] font-extrabold text-stone-200 leading-none mt-1">
+                              {char.hp}/{char.maxHp} <span className="text-[8.5px] text-stone-400 font-bold">HP</span>
+                            </span>
+                          </div>
                         </div>
 
-                        {/* HP, XP, GP Vitals Display */}
-                        <div className="flex flex-col gap-1 text-[8.5px] font-bold text-stone-300 uppercase tracking-wide bg-stone-950/30 px-2.5 py-1.5 rounded border border-stone-900/50 min-w-[150px]">
-                          <div className="flex justify-between items-center gap-2">
-                            <span className="flex items-center gap-1.5">
-                              <GameIcon name="shield" size={9} color="#EF4444" />
-                              HP: <span className="text-white font-extrabold">{char.hp}/{char.maxHp}</span>
-                            </span>
-                            <span className="flex items-center gap-1.5">
-                              <GameIcon name="magic_effect" size={9} color="#A78BFA" />
-                              XP: <span className="text-white font-extrabold">{(char.xp || 0).toLocaleString()}</span>
-                            </span>
+                        {/* Armor Class Vital */}
+                        <div className="flex items-center gap-2 bg-stone-950/40 border border-stone-900/60 rounded px-2.5 py-1.5 shadow-sm">
+                          <div className="p-1 bg-amber-950/30 rounded border border-amber-900/20 text-amber-500 flex items-center justify-center">
+                            <GameIcon name="armor" size={10} color="currentColor" />
                           </div>
-                          <div className="h-[1px] bg-[#3a2c20]/40 w-full" />
-                          <div className="flex justify-between items-center text-amber-500/90 text-[7.5px] font-black">
-                            <span>WEALTH MANIFEST</span>
-                            <span className="flex items-center gap-0.5">
-                              <GameIcon name="money" size={8} color="#F59E0B" />
-                              {char.money?.gp || 0} GP
+                          <div className="flex flex-col">
+                            <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider leading-none">Armor Class</span>
+                            <span className="text-[11px] font-extrabold text-stone-200 leading-none mt-1">
+                              {derived?.ac} <span className="text-[8.5px] text-stone-400 font-bold">AC</span>
                             </span>
                           </div>
                         </div>
+
+                        {/* Initiative Vital */}
+                        <div className="flex items-center gap-2 bg-stone-950/40 border border-stone-900/60 rounded px-2.5 py-1.5 shadow-sm">
+                          <div className="p-1 bg-blue-950/30 rounded border border-blue-900/20 text-blue-400 flex items-center justify-center">
+                            <GameIcon name="sword" size={10} color="currentColor" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider leading-none">Initiative</span>
+                            <span className="text-[11px] font-extrabold text-stone-200 leading-none mt-1">
+                              {initiativeSign} <span className="text-[8.5px] text-stone-400 font-bold">INIT</span>
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Gold & Wealth */}
+                        <div className="flex items-center gap-2 bg-stone-950/40 border border-stone-900/60 rounded px-2.5 py-1.5 shadow-sm">
+                          <div className="p-1 bg-yellow-950/30 rounded border border-yellow-900/20 text-yellow-500 flex items-center justify-center">
+                            <GameIcon name="money" size={10} color="currentColor" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider leading-none">Wealth</span>
+                            <span className="text-[11px] font-extrabold text-stone-200 leading-none mt-1">
+                              {char.money?.gp || 0} <span className="text-[8.5px] text-stone-400 font-bold">GP</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Compact XP Progress Bar */}
+                      <div className="mt-2 flex items-center gap-3 bg-stone-950/30 border border-stone-900/40 rounded px-2.5 py-1">
+                        <span className="text-[7.5px] font-black text-stone-400 uppercase tracking-wider whitespace-nowrap">
+                          Experience Points
+                        </span>
+                        <div className="flex-1 h-1.5 bg-stone-950 rounded-full overflow-hidden border border-stone-900/50">
+                          <div
+                            className="h-full bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full transition-all duration-500"
+                            style={{ width: `${Math.min(100, ((char.xp || 0) % 1000) / 10)}%` }}
+                          />
+                        </div>
+                        <span className="text-[8.5px] font-bold text-stone-300 whitespace-nowrap">
+                          {(char.xp || 0).toLocaleString()} <span className="text-purple-400/80 font-black">XP</span>
+                        </span>
                       </div>
                     </div>
                   </>
                 ) : (
                   <div className="absolute inset-0 flex flex-row items-center justify-between p-4 sm:p-6 bg-gradient-to-r from-stone-950/70 via-stone-950/90 to-stone-950/60 w-full">
                     {/* Left: Placeholder frame */}
-                    <div className="w-[80px] sm:w-[100px] h-full bg-stone-900/50 border border-dashed border-stone-850 group-hover:border-amber-500/20 rounded flex items-center justify-center text-stone-700 group-hover:text-amber-500/40 transition-colors duration-300">
+                    <div className="w-[90px] h-full bg-stone-900/50 border border-dashed border-stone-850 group-hover:border-amber-500/20 rounded-l flex items-center justify-center text-stone-700 group-hover:text-amber-500/40 transition-colors duration-300 shrink-0">
                       <GameIcon name="plus" size={14} color="currentColor" />
                     </div>
 

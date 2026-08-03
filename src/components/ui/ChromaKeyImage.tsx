@@ -6,6 +6,7 @@ interface ChromaKeyImageProps {
   className?: string;
   chromaColor?: { r: number; g: number; b: number };
   threshold?: number;
+  style?: React.CSSProperties;
 }
 
 export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({ 
@@ -13,7 +14,8 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
   alt, 
   className, 
   chromaColor = { r: 0, g: 255, b: 0 }, 
-  threshold = 100 
+  threshold = 100,
+  style
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -90,7 +92,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
       ref={canvasRef} 
       aria-label={alt}
       className={className}
-      style={{ maxWidth: '100%', height: 'auto' }}
+      style={{ maxWidth: '100%', height: 'auto', ...style }}
     />
   );
 };
