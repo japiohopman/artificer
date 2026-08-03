@@ -153,23 +153,23 @@ export const EnemyImageGenerator: React.FC<EnemyImageGeneratorProps> = ({
 
       {error && <p className="text-red-500 text-sm font-bold">{error}</p>}
 
-      {/* Visual Habitat Gallery Carousel */}
+      {/* Visual Habitat Gallery Grid */}
       <div className="space-y-1.5">
         <label className="text-[10px] font-bold text-parchment-600 uppercase tracking-widest flex items-center gap-1">
           <GameIcon name="globe" size={10} color="currentColor" /> Habitat Gallery
         </label>
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-dragon-red/20 max-w-full">
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 max-h-[160px] overflow-y-auto custom-scrollbar p-1">
           {BACKGROUND_CONFIGS.map(b => {
             const isSelected = selectedHabitat === b.id;
             return (
               <button
                 key={b.id}
                 onClick={() => updateHabitatAndVariation(b.id, selectedVariation)}
-                className="flex-shrink-0 w-16 text-center focus:outline-none group"
+                className="w-full text-center focus:outline-none group"
                 title={`Select ${b.label}`}
               >
                 <div
-                  className={`w-16 h-11 rounded border-2 transition-all overflow-hidden ${
+                  className={`aspect-[16/11] w-full rounded border-2 transition-all overflow-hidden ${
                     isSelected
                       ? 'border-dragon-red scale-105 shadow-[0_0_8px_rgba(139,0,0,0.3)]'
                       : 'border-dragon-red/10 hover:border-dragon-red/30'
