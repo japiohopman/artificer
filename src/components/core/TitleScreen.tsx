@@ -9,6 +9,7 @@ import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -135,99 +136,141 @@ export const TitleScreen: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="space-y-4"
-          >
-            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">New Game</h2>
-            <button
-              onClick={handleNewGame}
-              className="w-full group relative overflow-hidden bg-dragon-red py-8 rounded-sm border border-dragon-red/50 shadow-[0_0_30px_rgba(139,0,0,0.3)] transition-all hover:scale-[1.02] active:scale-95"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
-              <div className="relative flex items-center justify-center gap-4 text-white">
-                <GameIcon name="plus" size={24} color="#FFFFFF" />
-                <span className="text-2xl font-header font-black uppercase tracking-widest">New Game</span>
-              </div>
-            </button>
-            <p className="text-[10px] text-parchment-500 opacity-60 text-center px-8">
-              "Create a fresh identity in the codex. Existing manifest in chosen slot will be purged."
-            </p>
-          </motion.div>
+        {/* Horizontal Character Slots (3 slots) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
+          {mainCharacterSlots.map((char, index) => {
+            const isSelected = selectedSlotIndex === index;
+            const hasCharacter = !!char;
+            const portraitUrl = char?.imageUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_portrait.webp?t=${Date.now()}`;
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="space-y-4"
-          >
-            <h2 className="text-xs font-black text-white/30 uppercase tracking-[0.3em] mb-6">Continue Adventure</h2>
-            
-            <div className="grid grid-cols-1 gap-3">
-              {mainCharacterSlots.map((char, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    if (char) {
-                      setSelectedSlotIndex(index);
-                      playClickSound();
-                    }
-                  }}
-                  disabled={!char}
-                  className={`relative p-4 rounded-sm border transition-all flex items-center gap-4 group ${
-                    !char ? 'bg-white/5 border-white/5 opacity-40 cursor-not-allowed' :
-                    selectedSlotIndex === index ? 'bg-dragon-red/20 border-dragon-red shadow-[0_0_20px_rgba(139,0,0,0.2)]' :
-                    'bg-white/5 border-white/10 hover:border-white/30 hover:bg-white/10'
-                  }`}
-                >
-                  <div className="w-12 h-12 bg-black/40 rounded-sm border border-white/5 overflow-hidden shrink-0">
-                    {char && (
+            return (
+              <motion.div
+                key={index}
+                whileHover={hasCharacter ? { y: -5, scale: 1.02 } : { scale: 1.01 }}
+                onClick={() => {
+                  if (hasCharacter) {
+                    setSelectedSlotIndex(index);
+                    playClickSound();
+                  } else {
+                    handleNewGame();
+                  }
+                }}
+                className={cn(
+                  "relative flex flex-col rounded-md border-2 overflow-hidden cursor-pointer transition-all aspect-[3/4] bg-stone-950/80 shadow-2xl",
+                  hasCharacter
+                    ? isSelected
+                      ? "border-dragon-gold ring-4 ring-dragon-red/20 shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+                      : "border-white/10 hover:border-white/30"
+                    : "border-dashed border-white/5 hover:border-white/20 hover:bg-white/5 opacity-50"
+                )}
+              >
+                {hasCharacter ? (
+                  <>
+                    {/* Portrait background */}
+                    <div className="absolute inset-0">
                       <img 
-                        src={char.avatarUrl || `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/slot${index + 1}/slot${index + 1}_avatar.webp?t=${Date.now()}`}
-                        className="w-full h-full object-cover" 
-                        alt="" 
+                        src={portraitUrl}
+                        alt={char.name}
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           const slotId = char.id || `slot${index + 1}`;
                           if (!target.src.includes('raw.githubusercontent.com')) {
-                            target.src = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/${slotId}/${slotId}_avatar.webp?t=${Date.now()}`;
+                            target.src = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/data/character_save/images/${slotId}/${slotId}_portrait.webp?t=${Date.now()}`;
                           } else {
-                            target.src = `https://picsum.photos/seed/${slotId}/100/100`;
+                            target.src = `https://picsum.photos/seed/${slotId}/300/400`;
                           }
                         }}
                       />
-                    )}
-                  </div>
-                  <div className="flex-1 text-left min-w-0">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black text-dragon-red/60 uppercase tracking-widest">Slot 0{index + 1}</span>
-                      {char && <span className="text-[9px] font-bold text-parchment-500 uppercase tracking-widest">Lvl {char.level}</span>}
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
                     </div>
-                    <h3 className="font-header font-black text-white uppercase tracking-wider truncate">
-                      {char ? char.name : 'Empty Slot'}
-                    </h3>
-                  </div>
-                  {selectedSlotIndex === index && (
-                    <div className="w-2 h-2 rounded-full bg-dragon-red animate-pulse" />
-                  )}
-                </button>
-              ))}
-            </div>
 
-            <button
-              onClick={handleContinue}
-              disabled={!hasAnySaves || selectedSlotIndex === null}
-              className="w-full group relative overflow-hidden bg-dragon-gold/10 py-4 rounded-sm border border-dragon-gold/20 transition-all hover:bg-dragon-gold/20 disabled:opacity-20 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-95 mt-4"
-            >
-              <div className="relative flex items-center justify-center gap-4 text-dragon-gold">
-                <GameIcon name="play" size={20} color="#D4AF37" />
-                <span className="text-sm font-header font-black uppercase tracking-[0.2em]">Continue Adventure</span>
-              </div>
-            </button>
-          </motion.div>
+                    {/* Badge Overlay */}
+                    <div className="absolute top-3 left-3 bg-dragon-red text-white text-[8px] font-black px-2 py-0.5 rounded border border-dragon-gold/20 shadow-sm z-20">
+                      SLOT 0{index + 1}
+                    </div>
+
+                    {/* Level Tag Overlay */}
+                    <div className="absolute top-3 right-3 bg-dragon-gold text-dragon-darkRed text-[8px] font-black px-2 py-0.5 rounded border border-dragon-darkRed/20 shadow-sm z-20">
+                      Lvl {char.level || 1}
+                    </div>
+
+                    {/* Character Info aligned to bottom */}
+                    <div className="absolute bottom-0 inset-x-0 p-4 space-y-2 z-10">
+                      <div>
+                        <h3 className="text-lg font-header font-black text-white uppercase tracking-wider leading-tight truncate">
+                          {char.name}
+                        </h3>
+                        <p className="text-[10px] text-dragon-gold font-bold uppercase tracking-widest mt-0.5">
+                          {char.race} • {char.class}
+                        </p>
+                      </div>
+
+                      {/* Micro stats table */}
+                      <div className="grid grid-cols-6 gap-1 text-center bg-black/40 border border-white/5 rounded-sm p-1">
+                        {Object.entries(char.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }).map(([stat, val]) => (
+                          <div key={stat} className="flex flex-col">
+                            <span className="text-[6px] font-black text-white/40 uppercase">{stat}</span>
+                            <span className="text-[9px] font-black text-white">{val as any}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex justify-between items-center text-[8px] font-black text-white/30 uppercase mt-1">
+                        <span>HP: {char.hp}/{char.maxHp}</span>
+                        <span>XP: {char.xp.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center space-y-4">
+                    <div className="w-16 h-16 bg-white/5 border border-dashed border-white/10 rounded-full flex items-center justify-center text-white/20">
+                      <GameIcon name="plus" size={24} color="currentColor" />
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-black text-white/20 uppercase tracking-widest">SLOT 0{index + 1}</span>
+                      <h3 className="font-header font-black text-white/40 uppercase tracking-wider mt-1">Empty Manifest</h3>
+                      <p className="text-[8px] text-white/20 uppercase tracking-tight mt-1">Click to manifest character</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Selected Ring */}
+                {isSelected && (
+                  <div className="absolute inset-0 border-2 border-dragon-gold rounded-md pointer-events-none z-30" />
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Actions panel */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-2xl justify-center items-center">
+          <button
+            onClick={handleNewGame}
+            className="flex-1 w-full group relative overflow-hidden bg-white/5 py-4 px-6 rounded-sm border border-white/10 shadow-lg transition-all hover:bg-white/10 hover:border-white/30 hover:scale-[1.02] active:scale-95 text-center"
+          >
+            <div className="relative flex items-center justify-center gap-3 text-white">
+              <GameIcon name="plus" size={16} color="#FFFFFF" />
+              <span className="text-xs font-header font-black uppercase tracking-[0.25em]">Create New Character</span>
+            </div>
+          </button>
+
+          <button
+            onClick={handleContinue}
+            disabled={!hasAnySaves || selectedSlotIndex === null}
+            className={cn(
+              "flex-1 w-full group relative overflow-hidden py-4 px-6 rounded-sm border transition-all hover:scale-[1.02] active:scale-95 text-center",
+              (!hasAnySaves || selectedSlotIndex === null)
+                ? "bg-white/5 border-white/5 opacity-20 cursor-not-allowed shadow-none"
+                : "bg-dragon-red border-dragon-red/50 text-white shadow-[0_0_30px_rgba(139,0,0,0.3)] hover:brightness-110"
+            )}
+          >
+            <div className="relative flex items-center justify-center gap-3">
+              <GameIcon name="play" size={16} color="#FFFFFF" />
+              <span className="text-xs font-header font-black uppercase tracking-[0.25em]">Continue Adventure</span>
+            </div>
+          </button>
         </div>
 
         <div className="mt-16 text-[8px] font-black text-white/10 uppercase tracking-[1em]">

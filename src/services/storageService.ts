@@ -505,9 +505,8 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
   if (url && typeof url === 'string') {
     url = url.replace(/\/assets\/atlas\/ui\/official\/classes\//gi, '/assets/ui/official/classes/');
     url = url.replace(/assets\/atlas\/ui\/official\/classes\//gi, 'assets/ui/official/classes/');
-    // Replace dragons with dragon for token paths
-    url = url.replace(/\/tokens\/dragons\//gi, '/tokens/dragon/');
-    url = url.replace(/\/enemies\/tokens\/dragons\//gi, '/enemies/tokens/dragon/');
+    // Replace dragons with dragon for token paths (case-insensitive and robustly)
+    url = url.replace(/tokens\/dragons\//gi, 'tokens/dragon/');
   }
 
   // Normalize category names to folder names

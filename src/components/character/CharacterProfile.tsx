@@ -259,7 +259,7 @@ export const CharacterProfile: React.FC = () => {
                 <div className="absolute inset-0 bg-dragon-red/5 rounded-full blur-xl animate-pulse" />
                 {character.avatarUrl || character.imageUrl ? (
                   <ChromaKeyImage 
-                    src={normalizeImageUrl(character.avatarUrl || character.imageUrl, 'npc_character_profiles', character.id)} 
+                    src={normalizeImageUrl(character.avatarUrl || character.imageUrl, 'character', character.id)}
                     alt={character.name}
                     className="w-full h-full object-contain relative z-10"
                   />
@@ -1115,7 +1115,7 @@ export const CharacterProfile: React.FC = () => {
                               <div className="aspect-[9/16] bg-parchment-200 rounded-sm overflow-hidden relative shadow-inner border border-dragon-red/10">
                                  {character.imageUrl ? (
                                    <ChromaKeyImage 
-                                     src={normalizeImageUrl(character.imageUrl, 'npc_character_profiles', character.id)} 
+                                     src={normalizeImageUrl(character.imageUrl, 'character', character.id)}
                                      alt={character.name} 
                                      className="w-full h-full object-cover"
                                    />
@@ -1506,7 +1506,7 @@ const CharacterTab: React.FC<{
     <div className="w-10 h-10 shrink-0 flex items-center justify-center relative translate-y-0.5">
       {character.avatarUrl || character.imageUrl ? (
         <ChromaKeyImage 
-          src={normalizeImageUrl(character.avatarUrl || character.imageUrl, 'npc_character_profiles', character.id)} 
+          src={normalizeImageUrl(character.avatarUrl || character.imageUrl, 'character', character.id)}
           alt={character.name}
           className="w-full h-full object-contain"
         />
