@@ -33,9 +33,13 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
     ? spell.higher_level.join('\n\n')
     : renderNameValue(spell.higher_level);
 
+  const tierIconSrc = spell.level > 0
+    ? `/assets/icons/spell-tiers/spell${spell.level}.webp`
+    : null;
+
   return (
     <div className={cn(
-      "w-[400px] h-[600px] bg-parchment-100 border-[12px] rounded-[24px] p-6 flex flex-col gap-4 relative overflow-hidden shadow-2xl group",
+      "w-[440px] h-[660px] bg-parchment-100 border-[14px] rounded-[28px] p-6 flex flex-col gap-4 relative overflow-hidden shadow-2xl group",
       "border-[#8B4513]", // Default wood/leather brown
       className
     )}
@@ -50,9 +54,9 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
       
       {/* Header */}
       <div className="relative z-10 border-b-2 border-dragon-gold/30 pb-2">
-        <div className="flex justify-between items-start">
-          <div className="flex flex-col">
-            <h3 className="font-header text-2xl font-black uppercase tracking-tighter text-dragon-darkRed leading-tight drop-shadow-sm">
+        <div className="flex justify-between items-center gap-4">
+          <div className="flex flex-col min-w-0">
+            <h3 className="font-header text-2xl font-black uppercase tracking-tighter text-dragon-darkRed leading-tight drop-shadow-sm truncate">
               {renderNameValue(spell.name)}
             </h3>
             {activeCharacter && !isKnown && (
@@ -74,11 +78,27 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
               </div>
             )}
           </div>
-          <div className="bg-dragon-red/10 px-2 py-1 rounded border border-dragon-red/20 shadow-sm shrink-0">
-             <span className="text-[10px] font-anton text-dragon-red uppercase tracking-widest leading-none">
-               Lv. {spell.level}
-             </span>
-          </div>
+
+          {/* Spell Tier Medallion using public/assets/icons/spell-tiers/ */}
+          {tierIconSrc ? (
+            <div className="relative w-14 h-14 bg-stone-900/40 border-2 border-dragon-gold/30 rounded-full flex items-center justify-center p-1 shadow-md shrink-0">
+              <img
+                src={tierIconSrc}
+                alt={`Spell Tier ${spell.level}`}
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+              />
+              <div className="absolute -bottom-1 -right-1 bg-dragon-red text-white text-[8px] font-black w-5 h-5 rounded-full border border-dragon-gold/40 flex items-center justify-center shadow">
+                {spell.level}
+              </div>
+            </div>
+          ) : (
+            <div className="relative w-14 h-14 bg-stone-900/40 border-2 border-dragon-gold/30 rounded-full flex items-center justify-center p-2.5 shadow-md shrink-0">
+              <GameIcon name="magic_effect" size={24} color="#D4AF37" className="filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" />
+              <div className="absolute -bottom-1 -right-1 bg-dragon-darkRed text-white text-[7px] font-black w-5 h-5 rounded-full border border-dragon-gold/40 flex items-center justify-center shadow uppercase">
+                C
+              </div>
+            </div>
+          )}
         </div>
         <p className="text-[12px] font-playfair italic text-parchment-600 mt-1">
           {levelText} {school} {spell.ritual ? '(Ritual)' : ''}
@@ -93,8 +113,8 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
         <InfoBlock iconName="loading" label="Duration" value={(spell.concentration ? 'Conc. ' : '') + spell.duration} />
       </div>
 
-      {/* Image / Illustration */}
-      <div className="relative aspect-square h-40 mx-auto bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
+      {/* Image / Illustration - Made larger (h-48) */}
+      <div className="relative aspect-square h-48 mx-auto bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
         {spell.imageUrl || spell.index ? (
           <div className="absolute inset-0 flex items-center justify-center p-2">
              <ChromaKeyImage 
@@ -112,9 +132,9 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
         <div className="absolute inset-0 ring-1 ring-inset ring-black/5" />
       </div>
 
-      {/* Description */}
+      {/* Description - Slightly scaled typography */}
       <div className="flex-1 overflow-y-auto custom-scrollbar pr-2 relative z-10 space-y-4">
-        <div className="text-[13px] leading-relaxed text-parchment-900 font-serif italic text-justify">
+        <div className="text-[13.5px] leading-relaxed text-parchment-900 font-serif italic text-justify">
           <div className="markdown-body">
             <Markdown 
               remarkPlugins={[remarkGfm]}
