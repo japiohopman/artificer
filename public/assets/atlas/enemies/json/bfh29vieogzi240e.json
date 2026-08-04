@@ -6,12 +6,7 @@
   "type": "undead",
   "subtype": "any race",
   "alignment": "Any Evil Alignment",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 17
-    }
-  ],
+  "armor_class": 17,
   "hit_points": 135,
   "hit_dice": "18d8",
   "hit_points_roll": "18d8 + 54",
@@ -56,7 +51,7 @@
     "passive_perception": 12
   },
   "languages": "5 other languages",
-  "challenge_rating": 21,
+  "challenge_rating": "21",
   "proficiency_bonus": 7,
   "xp": 21000,
   "special_abilities": [],
@@ -145,12 +140,14 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/undead/Lich.webp",
   "url": "/assets/atlas/enemies/json/bfh29vieogzi240e.json",
-  "updated_at": "2026-07-09T11:33:15.718Z",
+  "updated_at": "2026-08-04T12:53:34.113Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
-  "background_type": "generic",
+  "background_type": "church",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "4-8-2026",
+  "imageUrl": "/assets/atlas/enemies/tokens/undead/Lich.webp",
+  "_type": "enemies"
 }
