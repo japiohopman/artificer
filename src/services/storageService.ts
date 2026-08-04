@@ -408,17 +408,27 @@ export async function fetchEquipmentData(index: string): Promise<any> {
   if (equipmentCache[index]) return equipmentCache[index];
 
   let resolvedPath: string | null = null;
+
+  // Intercept standard equipment pack indices and map to their nested _container.json path
+  const cleanIndex = index.toLowerCase().replace(/_/g, '-');
+  const packNames = ['burglars-pack', 'explorers-pack', 'dungeoneers-pack', 'priests-pack', 'entertainers-pack', 'scholars-pack', 'diplomats-pack'];
+  if (packNames.includes(cleanIndex)) {
+    resolvedPath = `/assets/atlas/equipment/json/14/equipment-packs/${cleanIndex}/_container.json`;
+  }
+
   try {
-    const indexRes = await fetch('/assets/atlas/equipment/index.json');
-    if (indexRes.ok) {
-      const equipmentIndex = await indexRes.json();
-      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-      const entry = equipmentIndex.find((e: any) =>
-        e.index.toLowerCase() === index.toLowerCase() ||
-        (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
-      );
-      if (entry && entry.json_path) {
-        resolvedPath = entry.json_path;
+    if (!resolvedPath) {
+      const indexRes = await fetch('/assets/atlas/equipment/index.json');
+      if (indexRes.ok) {
+        const equipmentIndex = await indexRes.json();
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const entry = equipmentIndex.find((e: any) =>
+          e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
       }
     }
   } catch (e) {
@@ -434,6 +444,13 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
+      // If it's an intercepted pack container, override index and imageUrl to match the pack
+      if (packNames.includes(cleanIndex)) {
+        data.index = index; // Keep original index format (e.g. burglars_pack)
+        const underscoreName = cleanIndex.replace(/-/g, '_');
+        data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+        data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+      }
       const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
       equipmentCache[index] = finalResult;
       return finalResult;
@@ -449,6 +466,12 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     const res = await fetch(url);
     const data = await safeJson(res);
     if (!data) return null;
+    if (packNames.includes(cleanIndex)) {
+      data.index = index;
+      const underscoreName = cleanIndex.replace(/-/g, '_');
+      data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+      data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+    }
     return {
       ...data,
       imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name)
@@ -458,6 +481,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
     return null;
   }
 }
+
 
 export async function fetchMagicItemData(index: string): Promise<any> {
   if (magicItemCache[index]) return magicItemCache[index];

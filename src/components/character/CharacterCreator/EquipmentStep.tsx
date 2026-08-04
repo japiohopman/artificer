@@ -235,7 +235,7 @@ const EquipmentOptionChoice: React.FC<{
                                             const subIsPack = details?.contents || details?.equipment_pack;
 
                                             return (
-                                                <div key={`${idx}-${iIdx}`} className="flex items-start gap-4">
+                                                <div key={`${idx}-${iIdx}`} className="flex items-start gap-4 relative group/subitem">
                                                     <div className="aspect-[9/16] w-14 shrink-0 bg-white rounded-sm border border-dragon-gold/20 overflow-hidden relative shadow-md">
                                                         <div className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none">
                                                             <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" />
@@ -247,12 +247,42 @@ const EquipmentOptionChoice: React.FC<{
                                                                 <GameIcon name={subIsPack ? "backpack" : "weapon"} size={20} color="#8B0000" className="opacity-20" />
                                                             </div>
                                                         )}
+
+                                                        {/* Clickable Overlay/Inspect Icon specifically for equipment packs & container sub-items */}
+                                                        {details && (
+                                                            <button
+                                                                onClick={(e) => {
+                                                                    e.stopPropagation();
+                                                                    useUIStore.getState().setFocusedItem(details);
+                                                                    soundService.playEffect('UI_MODAL_OPEN');
+                                                                }}
+                                                                className="absolute inset-0 bg-black/40 opacity-0 group-hover/subitem:opacity-100 flex items-center justify-center transition-opacity text-dragon-gold border border-dragon-gold/40"
+                                                                title={`Inspect ${details.name}`}
+                                                            >
+                                                                <GameIcon name="search" size={16} color="currentColor" />
+                                                            </button>
+                                                        )}
                                                     </div>
                                                     <div className="flex flex-col gap-1.5 max-w-[180px]">
-                                                        <span className="text-[10px] font-black uppercase text-dragon-darkRed tracking-wider leading-tight">
-                                                            {details?.name || "Item"}
-                                                            {q > 1 && <span className="ml-1 text-dragon-gold">x{q}</span>}
-                                                        </span>
+                                                        <div className="flex items-center gap-1.5">
+                                                            <span className="text-[10px] font-black uppercase text-dragon-darkRed tracking-wider leading-tight">
+                                                                {details?.name || "Item"}
+                                                                {q > 1 && <span className="ml-1 text-dragon-gold">x{q}</span>}
+                                                            </span>
+                                                            {details && (
+                                                                <button
+                                                                    onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        useUIStore.getState().setFocusedItem(details);
+                                                                        soundService.playEffect('UI_MODAL_OPEN');
+                                                                    }}
+                                                                    className="text-dragon-gold hover:text-dragon-darkRed transition-colors opacity-60 hover:opacity-100 p-0.5"
+                                                                    title={`Inspect ${details.name}`}
+                                                                >
+                                                                  <GameIcon name="search" size={10} color="currentColor" />
+                                                                </button>
+                                                            )}
+                                                        </div>
                                                         
                                                         {subIsPack && details?.contents && (
                                                             <div className="space-y-0.5 border-l border-dragon-gold/30 pl-2 py-0.5">
@@ -715,10 +745,13 @@ export const EquipmentStep: React.FC<{
                                     return (
                                         <div 
                                             key={i} 
-                                            onClick={() => {
-                                                if (item) {
-                                                    useUIStore.getState().setFocusedItem(item);
-                                                    soundService.playEffect('UI_CLICK_LIGHT');
+                                            onClick={async () => {
+                                                if (eq.equipment?.index) {
+                                                    const fullItem = await fetchEquipmentData(eq.equipment.index);
+                                                    if (fullItem) {
+                                                        useUIStore.getState().setFocusedItem(fullItem);
+                                                        soundService.playEffect('UI_CLICK_LIGHT');
+                                                    }
                                                 }
                                             }}
                                             className="group aspect-[9/16] bg-white border border-[#c5a059]/30 rounded-sm flex flex-col items-center justify-center p-0.5 hover:border-dragon-gold/30 transition-all shadow-sm relative overflow-hidden cursor-pointer"

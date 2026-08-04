@@ -11,6 +11,7 @@ import {
   RefreshCw, Music, Mic, Sparkles, Send, Save, ArrowRight, Volume2, Scissors, History
 } from 'lucide-react';
 import { AudioEditor } from './audio/AudioEditor';
+import { Hue } from './Hue';
 
 const CATEGORIES = [
   { id: 'ambient', label: 'Ambient' },
@@ -665,22 +666,7 @@ export const AudioLaboratory: React.FC = () => {
           )}
         </div>
 
-        {/* Diagnostics block */}
-        <div className="p-3 border-t border-white/5 bg-black/30 space-y-2">
-          <span className="text-[9px] font-bold text-white/30 uppercase tracking-widest">Diagnostics</span>
-          <div className="grid grid-cols-2 gap-2 text-[10px]">
-            <div className="bg-white/2 p-2 rounded border border-white/5">
-              <span className="block text-white/20 uppercase font-black text-[8px]">Hue Bridge</span>
-              <span className={`font-mono font-bold ${hueState.connected ? 'text-emerald-500' : 'text-white/30'}`}>
-                {hueState.connected ? 'ONLINE' : 'OFFLINE'}
-              </span>
-            </div>
-            <div className="bg-white/2 p-2 rounded border border-white/5">
-              <span className="block text-white/20 uppercase font-black text-[8px]">Assets</span>
-              <span className="font-mono font-bold text-purple-400">{audioFiles.length} files</span>
-            </div>
-          </div>
-        </div>
+        <Hue />
       </aside>
 
       {/* RIGHT COLUMN: WORKSPACES */}
