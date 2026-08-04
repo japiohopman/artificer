@@ -8,12 +8,8 @@ test('verify character creator tactical token selector and preview', async ({ pa
 
     await page.goto('http://localhost:3000');
 
-    console.log('Waiting for loading to finish...');
-    await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 30000 });
-
-    console.log('Waiting for NEW GAME button...');
-    const newGameBtn = page.getByRole('button', { name: 'New Game' });
-    await newGameBtn.waitFor({ state: 'visible', timeout: 30000 });
+    console.log('Waiting for React and store initialization...');
+    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
 
     console.log('Force opening Character Creator on Appearance step...');
     await page.evaluate(() => {

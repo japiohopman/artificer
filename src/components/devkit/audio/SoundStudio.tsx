@@ -48,9 +48,19 @@ export function SoundStudio() {
   const [explorerKey, setExplorerKey] = useState<number>(0);
 
   // Hue lamps states
-  const { lights, triggerHue } = useHueStore();
+  const hueStore = useHueStore();
+  const { lights, triggerHue } = hueStore;
   const [selectedLightId, setSelectedLightId] = useState<string | null>(null);
   const selectedLight = useMemo(() => lights.find(l => l.id === selectedLightId), [lights, selectedLightId]);
+
+  const [localIp, setLocalIp] = useState(hueStore.credentials.ip);
+  const [localUsername, setLocalUsername] = useState(hueStore.credentials.username);
+  const [isConnecting, setIsConnecting] = useState(false);
+
+  useEffect(() => {
+    setLocalIp(hueStore.credentials.ip);
+    setLocalUsername(hueStore.credentials.username);
+  }, [hueStore.credentials.ip, hueStore.credentials.username]);
 
   // Voice configurations
   const [selectedVoiceId, setSelectedVoiceId] = useState<string>('pNInz6obpg7j9YtY5yJJ');
@@ -290,10 +300,78 @@ export function SoundStudio() {
                       />
                     ))}
                     {lights.length === 0 && (
-                      <div className="py-12 flex flex-col items-center justify-center text-stone-600 border border-dashed border-stone-800 rounded-2xl text-center">
-                        <Lightbulb className="w-8 h-8 mb-2 opacity-25" />
-                        <p className="text-[10px] font-bold uppercase tracking-widest">No Hue Lamps Found</p>
-                        <p className="text-[8px] uppercase tracking-tighter text-stone-700 mt-1">Check settings or bridge connection</p>
+                      <div className="space-y-4">
+                        <div className="py-8 flex flex-col items-center justify-center text-stone-600 border border-dashed border-stone-800 rounded-2xl text-center px-4">
+                          <Lightbulb className="w-8 h-8 mb-2 opacity-25" />
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-stone-400">No Hue Lamps Found</p>
+                          <p className="text-[8px] uppercase tracking-tighter text-stone-700 mt-1">Configure your bridge below to connect</p>
+                        </div>
+
+                        <div className="p-4 bg-stone-900/40 border border-stone-800 rounded-xl space-y-3 text-left">
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="text-[9px] font-bold uppercase tracking-widest text-stone-400">Bridge Connection</span>
+                            <span className={`px-1.5 py-0.2 rounded text-[8px] font-bold uppercase ${
+                              hueStore.isConnected
+                                ? 'bg-emerald-500/10 text-emerald-500'
+                                : 'bg-rose-500/10 text-rose-500'
+                            }`}>
+                              {hueStore.isConnected ? 'ONLINE' : 'OFFLINE'}
+                            </span>
+                          </div>
+
+                          <div className="space-y-1">
+                            <label className="text-[8px] font-bold uppercase text-stone-500 tracking-wider">Bridge IP Address</label>
+                            <input
+                              type="text"
+                              value={localIp}
+                              onChange={(e) => setLocalIp(e.target.value)}
+                              placeholder="e.g. 192.168.178.59"
+                              className="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-[10px] text-stone-200 focus:outline-none focus:border-stone-700 transition-all font-mono"
+                            />
+                          </div>
+
+                          <div className="space-y-1">
+                            <label className="text-[8px] font-bold uppercase text-stone-500 tracking-wider">Bridge Username / App Key</label>
+                            <input
+                              type="password"
+                              value={localUsername}
+                              onChange={(e) => setLocalUsername(e.target.value)}
+                              placeholder="Key..."
+                              className="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-[10px] text-stone-200 focus:outline-none focus:border-stone-700 transition-all font-mono"
+                            />
+                          </div>
+
+                          <div className="flex gap-2 pt-1">
+                            <button
+                              onClick={() => {
+                                hueStore.setCredentials(localIp, localUsername);
+                                playSuccessSound();
+                                alert("Saved locally!");
+                              }}
+                              className="flex-1 py-1.5 border border-stone-800 text-stone-400 hover:text-stone-200 text-[9px] font-bold uppercase tracking-widest rounded transition-all"
+                            >
+                              Save
+                            </button>
+                            <button
+                              disabled={isConnecting}
+                              onClick={async () => {
+                                setIsConnecting(true);
+                                playClickSound();
+                                hueStore.setCredentials(localIp, localUsername);
+                                const success = await hueStore.connect();
+                                setIsConnecting(false);
+                                if (success) {
+                                  playSuccessSound();
+                                } else {
+                                  alert("Connection failed! Verify details.");
+                                }
+                              }}
+                              className="flex-1 py-1.5 bg-purple-600 hover:bg-purple-500 text-white text-[9px] font-bold uppercase tracking-widest rounded transition-all"
+                            >
+                              {isConnecting ? '...' : 'Connect'}
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>

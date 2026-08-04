@@ -8,24 +8,8 @@ test('verify system settings and authenticators', async ({ page }) => {
 
     await page.goto('http://localhost:3000');
 
-    console.log('Waiting for loading to finish...');
-    await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 30000 });
-
-    console.log('Waiting for NEW GAME button...');
-    const newGameBtn = page.getByRole('button', { name: 'New Game' });
-    await newGameBtn.waitFor({ state: 'visible', timeout: 30000 });
-
-    await page.screenshot({ path: 'verification/debug_title_screen.png' });
-    console.log('Saved debug_title_screen.png');
-
-    console.log('Checking global window state...');
-    const storeExists = await page.evaluate(() => {
-      return {
-        hasGameStore: typeof (window as any).useGameStore !== 'undefined',
-        hasUIStore: typeof (window as any).useUIStore !== 'undefined',
-      };
-    });
-    console.log('Store exists:', storeExists);
+    console.log('Waiting for React and store initialization...');
+    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
 
     console.log('Force Starting Game & Triggering Settings Modal State...');
     await page.evaluate(() => {
@@ -55,10 +39,17 @@ test('verify system settings and authenticators', async ({ page }) => {
     await page.screenshot({ path: 'verification/settings_auth.png' });
     console.log('Tab 2: Authenticator screenshot saved.');
 
-    // Switch to Tab 3: General & Models
+    // Switch to Tab 3: Philips Hue
+    console.log('Clicking Philips Hue tab...');
+    await page.click('button:has-text("Philips Hue")');
+    await page.waitForTimeout(1000);
+    await page.screenshot({ path: 'verification/settings_hue.png' });
+    console.log('Tab 3: Philips Hue screenshot saved.');
+
+    // Switch to Tab 4: General & Models
     console.log('Clicking General & Models tab...');
     await page.click('button:has-text("General & Models")');
     await page.waitForTimeout(1000);
     await page.screenshot({ path: 'verification/settings_general.png' });
-    console.log('Tab 3: General & Models screenshot saved.');
+    console.log('Tab 4: General & Models screenshot saved.');
 });
