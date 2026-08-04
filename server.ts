@@ -10,8 +10,10 @@ import https from "https";
 
 dotenv.config();
 
+const allowInsecureLocalTls = process.env.ALLOW_INSECURE_LOCAL_TLS === "true";
+
 const localSelfSignedHttpsAgent = new https.Agent({
-  rejectUnauthorized: false // Permitted strictly for self-signed certificates on local local-area Hue bridges
+  rejectUnauthorized: !allowInsecureLocalTls // Secure by default; only disable for explicit local testing override
 });
 
 const httpsAgent = new https.Agent({
