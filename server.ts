@@ -1036,18 +1036,26 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
       if (!token) return res.status(401).json({ error: "Not connected to Hue Cloud" });
 
       const cleanPath = (huePath || "").trim();
-      const pathMatch = cleanPath.match(/^\/[a-zA-Z0-9_\/-]*$/);
-      if (!pathMatch) {
+      if (!cleanPath.startsWith("/")) {
         return res.status(400).json({ error: "Invalid path format" });
       }
-      const safePath = pathMatch[0];
+      if (cleanPath.includes("..") || cleanPath.includes("\\") || cleanPath.includes("//")) {
+        return res.status(400).json({ error: "Invalid path format" });
+      }
+      const segments = cleanPath.split("/").filter(Boolean);
+      const validSegments = segments.every(seg => /^[a-zA-Z0-9_-]+$/.test(seg));
+      if (!validSegments && segments.length > 0) {
+        return res.status(400).json({ error: "Invalid path format" });
+      }
+      const relativePath = segments.join("/");
 
       try {
-        const constructed = `https://api.meethue.com/route/clip/v2${safePath}`;
-        const parsed = new URL(constructed);
+        const baseHueCloud = new URL("https://api.meethue.com/route/clip/v2/");
+        const parsed = new URL(relativePath, baseHueCloud);
         if (parsed.protocol !== 'https:') return res.status(400).json({ error: "Invalid protocol" });
         if (parsed.username || parsed.password) return res.status(400).json({ error: "Credentials in URL are not allowed" });
         if (parsed.hostname !== 'api.meethue.com') return res.status(403).json({ error: "Host not allowed" });
+        if (!parsed.pathname.startsWith("/route/clip/v2/")) return res.status(403).json({ error: "Path not allowed" });
 
         url = parsed.toString();
       } catch {
