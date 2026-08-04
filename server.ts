@@ -984,6 +984,10 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
   app.post("/api/hue/proxy", async (req, res) => {
     const { method, path: huePath, body, manual } = req.body;
 
+    if (typeof huePath !== "string" || !/^\/[a-zA-Z0-9_\/-]*$/.test(huePath)) {
+      return res.status(400).json({ error: "Invalid path format" });
+    }
+
     let url: string;
     let headers: Record<string, string>;
 
@@ -991,11 +995,6 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
       // Validate IP to eliminate Server-Side Request Forgery (SSRF)
       if (!isLocalIp(manual.ip)) {
         return res.status(403).json({ error: "SSRF prevention: Only local Hue Bridge private IP addresses are allowed." });
-      }
-
-      // Sanitize the huePath to prevent path injection / SSRF
-      if (typeof huePath !== 'string' || !/^\/[a-zA-Z0-9_\/-]*$/.test(huePath)) {
-        return res.status(400).json({ error: "Invalid path format" });
       }
 
       url = `https://${manual.ip}/clip/v2${huePath}`;
