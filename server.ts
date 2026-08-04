@@ -10,8 +10,10 @@ import https from "https";
 
 dotenv.config();
 
+const hueRejectUnauthorized = process.env.HUE_REJECT_UNAUTHORIZED === "true";
+
 const localSelfSignedHttpsAgent = new https.Agent({
-  rejectUnauthorized: false // Permitted strictly for self-signed certificates on local local-area Hue bridges
+  rejectUnauthorized: hueRejectUnauthorized
 });
 
 const httpsAgent = new https.Agent({
