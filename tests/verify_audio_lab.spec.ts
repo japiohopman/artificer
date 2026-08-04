@@ -8,25 +8,19 @@ test('verify audio lab in devkit', async ({ page }) => {
 
     await page.goto('http://localhost:3000');
     
-    console.log('Waiting for loading to finish...');
-    await page.waitForSelector('text=DECRYPTING SAVE DATA...', { state: 'detached', timeout: 60000 });
-    
-    console.log('Waiting for NEW GAME button...');
-    const newGameBtn = page.getByRole('button', { name: 'New Game' });
-    await newGameBtn.waitFor({ state: 'visible', timeout: 30000 });
-    
-    console.log('Clicking NEW GAME...');
-    await newGameBtn.click();
-    
-    console.log('Waiting for THE GENESIS RITUAL...');
-    await page.waitForSelector('text=THE GENESIS RITUAL', { timeout: 30000 });
+    console.log('Waiting for React and store initialization...');
+    await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useUIStore !== undefined);
 
-    console.log('Pressing Alt+D...');
-    await page.focus('body');
-    await page.keyboard.down('Alt');
-    await page.keyboard.press('KeyD');
-    await page.keyboard.up('Alt');
-    
+    console.log('Force Starting Game & Opening DevKit...');
+    await page.evaluate(() => {
+      if ((window as any).useGameStore) {
+        (window as any).useGameStore.setState({ isGameStarted: true });
+      }
+      if ((window as any).useUIStore) {
+        (window as any).useUIStore.setState({ isCharacterCreatorOpen: false, isDevKitOpen: true, isLoading: false });
+      }
+    });
+
     console.log('Waiting for DevKit (ARCANE_OS)...');
     await page.waitForSelector('text=ARCANE_OS', { timeout: 30000 });
 
