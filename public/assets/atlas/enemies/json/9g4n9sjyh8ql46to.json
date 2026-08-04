@@ -6,12 +6,7 @@
   "type": "giant",
   "subtype": "any race",
   "alignment": "Chaotic Evil",
-  "armor_class": [
-    {
-      "type": "natural",
-      "value": 13
-    }
-  ],
+  "armor_class": 13,
   "hit_points": 105,
   "hit_dice": "10d12",
   "hit_points_roll": "10d12 + 40",
@@ -41,7 +36,7 @@
     "passive_perception": 9
   },
   "languages": "any one language (usually Common)",
-  "challenge_rating": 5,
+  "challenge_rating": "5",
   "proficiency_bonus": 3,
   "xp": 1800,
   "special_abilities": [],
@@ -90,12 +85,14 @@
   "reactions": [],
   "image": "/assets/atlas/enemies/tokens/giant/HillGiant.webp",
   "url": "/assets/atlas/enemies/json/9g4n9sjyh8ql46to.json",
-  "updated_at": "2026-07-09T11:33:15.065Z",
+  "updated_at": "2026-08-04T00:12:05.218Z",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/enemies/sprites/enemies_sheet1.webp",
-  "background_type": "generic",
+  "background_type": "land_plains1",
   "item_drops": [],
   "forms": [],
   "wikiData": null,
-  "last_updated": "7/9/2026"
+  "last_updated": "4-8-2026",
+  "imageUrl": "/assets/atlas/enemies/tokens/giant/HillGiant.webp",
+  "_type": "enemies"
 }
