@@ -5,8 +5,21 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import fs from "fs/promises";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import axios from "axios";
+import https from "https";
 
 dotenv.config();
+
+const localHttpsAgent = new https.Agent({
+  rejectUnauthorized: false
+});
+
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: true, // Recommended for production, but bridge uses self-signed
+});
+
+let hueDiscoveryCache: { data: any; timestamp: number } | null = null;
+const HUE_DISCOVERY_CACHE_MS = 60_000;
 
 function sanitizeEnvValue(val: string | undefined): string {
   if (!val) return "";
@@ -932,6 +945,66 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     } catch (error: any) {
       console.error("Voice generation error:", error);
       res.status(500).json({ error: "Internal server error during Voice generation." });
+    }
+  });
+
+  // API: Hue Discover
+  app.get("/api/hue/discover", async (req, res) => {
+    if (hueDiscoveryCache && Date.now() - hueDiscoveryCache.timestamp < HUE_DISCOVERY_CACHE_MS) {
+      return res.json(hueDiscoveryCache.data);
+    }
+
+    try {
+      const response = await axios.get("https://discovery.meethue.com", { timeout: 5000 });
+      hueDiscoveryCache = { data: response.data, timestamp: Date.now() };
+      res.json(response.data);
+    } catch (error: any) {
+      console.error("Discovery error:", error.response?.status || error.message || error);
+      if (error.response) {
+        return res.status(error.response.status).json(error.response.data);
+      }
+      res.status(500).json({ error: "Failed to discover bridges", detail: error.message || String(error) });
+    }
+  });
+
+  // API: Hue Proxy
+  app.post("/api/hue/proxy", async (req, res) => {
+    const { method, path: huePath, body, manual } = req.body;
+
+    let url: string;
+    let headers: Record<string, string>;
+
+    if (manual && manual.ip && manual.username) {
+      url = `https://${manual.ip}/clip/v2${huePath}`;
+      headers = {
+        "hue-application-key": manual.username,
+        "Content-Type": "application/json"
+      };
+    } else {
+      const token = req.session?.hueToken;
+      if (!token) return res.status(401).json({ error: "Not connected to Hue Cloud" });
+      url = `https://api.meethue.com/route/clip/v2${huePath}`;
+      headers = {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      };
+    }
+
+    try {
+      const response = await axios({
+        method: (method || "GET") as any,
+        url,
+        headers,
+        data: body,
+        httpsAgent: manual ? localHttpsAgent : httpsAgent,
+        timeout: 10000
+      });
+
+      res.status(response.status).json(response.data);
+    } catch (error: any) {
+      console.error("Hue proxy error:", error.message);
+      if (error.response) return res.status(error.response.status).json(error.response.data);
+      res.status(500).json({ error: "Failed to communicate with Bridge", detail: error.message });
     }
   });
 
