@@ -4,10 +4,10 @@
     "name": "gargoyle",
     "type": "elemental",
     "alignment": "Chaotic Evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 52,
     "armor_class": 15,
-    "imageUrl": "/assets/atlas/enemies/tokens/elemental/Gargoyle.webp",
+    "imageUrl": "/assets/atlas/enemies/images/gargoyle.webp",
     "json_path": "/assets/atlas/enemies/json/0m8qydn52qw9zzom.json"
   },
   {
@@ -26,10 +26,10 @@
     "name": "merrow",
     "type": "monstrosity",
     "alignment": "Chaotic Evil",
-    "challenge_rating": 2,
+    "challenge_rating": "2",
     "hit_points": 45,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/tokens/monstrosity/Merrow.webp",
+    "imageUrl": "/assets/atlas/enemies/images/merrow.webp",
     "json_path": "/assets/atlas/enemies/json/1cwfyaacm5f0l4y3.json"
   },
   {
@@ -81,10 +81,10 @@
     "name": "spider",
     "type": "beast",
     "alignment": "Unaligned",
-    "challenge_rating": 0,
+    "challenge_rating": "0",
     "hit_points": 1,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/tokens/beast/Spider.webp",
+    "imageUrl": "/assets/atlas/enemies/images/spider.webp",
     "json_path": "/assets/atlas/enemies/json/28gu50htg8kp7uiz.json"
   },
   {
@@ -367,10 +367,10 @@
     "name": "wyvern",
     "type": "dragon",
     "alignment": "Unaligned",
-    "challenge_rating": 6,
+    "challenge_rating": "6",
     "hit_points": 110,
     "armor_class": 13,
-    "imageUrl": "/assets/atlas/enemies/tokens/dragon/Wyvern.webp",
+    "imageUrl": "/assets/atlas/enemies/images/wyvern.webp",
     "json_path": "/assets/atlas/enemies/json/7198sihjpjf8g0cg.json"
   },
   {
@@ -576,7 +576,7 @@
     "name": "hill giant",
     "type": "giant",
     "alignment": "Chaotic Evil",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 105,
     "armor_class": 13,
     "imageUrl": "/assets/atlas/enemies/tokens/giant/HillGiant.webp",
@@ -1269,10 +1269,10 @@
     "name": "tiger",
     "type": "beast",
     "alignment": "Unaligned",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 37,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/tokens/beast/Tiger.webp",
+    "imageUrl": "/assets/atlas/enemies/images/tiger.webp",
     "json_path": "/assets/atlas/enemies/json/fayqbnjbmszo6pat.json"
   },
   {
@@ -1412,10 +1412,10 @@
     "name": "unicorn",
     "type": "celestial",
     "alignment": "Lawful Good",
-    "challenge_rating": 5,
+    "challenge_rating": "5",
     "hit_points": 67,
     "armor_class": 12,
-    "imageUrl": "/assets/atlas/enemies/tokens/celestial/Unicorn.webp",
+    "imageUrl": "/assets/atlas/enemies/images/unicorn.webp",
     "json_path": "/assets/atlas/enemies/json/g9peny6nw0xrxcjw.json"
   },
   {
@@ -1709,10 +1709,10 @@
     "name": "duergar",
     "type": "humanoid",
     "alignment": "Lawful Evil",
-    "challenge_rating": 1,
+    "challenge_rating": "1",
     "hit_points": 26,
     "armor_class": 10,
-    "imageUrl": "/assets/atlas/enemies/tokens/humanoid/Duergar.webp",
+    "imageUrl": "/assets/atlas/enemies/images/duergar.webp",
     "json_path": "/assets/atlas/enemies/json/igbdqa3iuksurcuy.json"
   },
   {

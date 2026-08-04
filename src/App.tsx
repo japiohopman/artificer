@@ -30,6 +30,7 @@ import { TransportProfile } from './components/character/TransportProfile';
 import { CharacterCreator } from './components/character/CharacterCreator';
 import { LevelUpOverlay } from './components/character/LevelUpOverlay';
 import { useBookStore } from './store/useBookStore';
+import { FocusView } from './components/ui/FocusView';
 
 // Unified Loading Screen Implementation
 export default function App() {
@@ -180,6 +181,7 @@ export default function App() {
           <TransportProfile />
           <CharacterCreator />
           <LevelUpOverlay />
+          <FocusView />
 
           <AnimatePresence>
             {isSettingsOpen && <SettingsModal />}

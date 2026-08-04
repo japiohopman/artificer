@@ -9,6 +9,8 @@ import { BookFocus } from '../bookreader/BookFocus';
 import { isBookLike } from '../../lib/bookUtils';
 import { extractBookPages } from '../../lib/bookUtils';
 import { SpellCard } from '../atlas/SpellCard';
+import { PackInspector } from './PackInspector';
+import { getPackContents } from '../../lib/itemPacks';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -42,6 +44,13 @@ export const FocusView: React.FC = () => {
   };
 
   const isSpell = focusedItem._type === 'spells' || focusedItem.level !== undefined;
+
+  const isPack = focusedItem && (
+    focusedItem.kind === 'container' || 
+    focusedItem.equipment_category?.index === 'container' ||
+    focusedItem.equipment_category === 'container' ||
+    getPackContents(focusedItem.index || focusedItem.name) !== null
+  );
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = cardRef.current;
@@ -114,6 +123,8 @@ export const FocusView: React.FC = () => {
                   <SpellCard spell={focusedItem} />
                </div>
             </div>
+          ) : isPack ? (
+            <PackInspector pack={focusedItem} onClose={() => setFocusedItem(null)} />
           ) : (
             <div className="flex-1 w-full max-w-7xl mx-auto px-8 md:px-16 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 relative z-10 overflow-hidden">
               

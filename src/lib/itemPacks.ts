@@ -89,6 +89,6 @@ export const EQUIPMENT_PACKS: Record<string, PackContent[]> = {
 
 export function getPackContents(index: string): PackContent[] | null {
     // Normalize index to lowercase and handle possible slashes or extensions
-    const cleanIndex = index.toLowerCase().split('/').pop()?.replace('.json', '') || '';
+    const cleanIndex = index.toLowerCase().split('/').pop()?.replace('.json', '').replace(/_/g, '-') || '';
     return EQUIPMENT_PACKS[cleanIndex] || null;
 }

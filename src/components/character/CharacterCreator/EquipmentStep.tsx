@@ -11,6 +11,7 @@ import { atlasService } from '../../../services/atlasService';
 import { EquipmentDoll } from '../EquipmentDoll';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { GameIcon } from '../../../game_icons';
+import { useUIStore } from '../../../store/useUIStore';
 
 const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
 
@@ -712,7 +713,17 @@ export const EquipmentStep: React.FC<{
                                     const isEquipped = newChar.equipment?.slots.some(s => s.itemId && newChar.items?.[s.itemId]?.template === eq.equipment?.index);
                                     
                                     return (
-                                        <div key={i} className="group aspect-[9/16] bg-white border border-[#c5a059]/30 rounded-sm flex flex-col items-center justify-center p-0.5 hover:border-dragon-gold/30 transition-all shadow-sm relative overflow-hidden">
+                                        <div 
+                                            key={i} 
+                                            onClick={() => {
+                                                if (item) {
+                                                    useUIStore.getState().setFocusedItem(item);
+                                                    soundService.playEffect('UI_CLICK_LIGHT');
+                                                }
+                                            }}
+                                            className="group aspect-[9/16] bg-white border border-[#c5a059]/30 rounded-sm flex flex-col items-center justify-center p-0.5 hover:border-dragon-gold/30 transition-all shadow-sm relative overflow-hidden cursor-pointer"
+                                            title="Inspect item details"
+                                        >
                                             <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none">
                                                 <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                                             </div>

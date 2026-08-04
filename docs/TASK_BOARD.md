@@ -2,12 +2,12 @@
 
 ## Critical
 - [x] check priorety1.md for map update refinment in main/priority1.md
-- [ ] Implement Temperature system in `useWorldStore.ts`.
-- [ ] Integrate Meteocons icon library for Time and Weather.
-- [ ] Reorganize Dev Kit (Inspectors, Generators, Testers grouping).
-- [ ] Align Jane module with JSON schemas and existing atlas lore.
-- [ ] Complete TSX translation of Tactical Combat Grid (Aedif inspiration).
-- [ ] check and fix errors in the main/errors.md
+- [x] Implement Temperature system in `useWorldStore.ts`.
+- [x] Integrate Meteocons icon library for Time and Weather.
+- [x] Reorganize Dev Kit (Inspectors, Generators, Testers grouping).
+- [x] Align Jane module with JSON schemas and existing atlas lore.
+- [x] Complete TSX translation of Tactical Combat Grid (Aedif inspiration).
+- [x] check and fix errors in the main/errors.md
 - [x] Create asset validation script.
   - Check all JSON parseable.
   - Index matches filename.
@@ -25,8 +25,8 @@
   - [x] Enhance `atlasUtils.ts` for automated feature/subclass mapping.
 
 ## High
-- [ ] Generate indexes per domain (equipment, spell, enemies, magic_items, maps).
-- [ ] Fix references to category JSON (e.g., `equipment_categories`, `damage_types`).
+- [x] Generate indexes per domain (equipment, spell, enemies, magic_items, maps).
+- [x] Fix references to category JSON (e.g., `equipment_categories`, `damage_types`).
 - [ ] Implement allowlist for external/special paths.
 - [ ] Check image coverage per domain.
 - [x] Character Save Migration:
@@ -40,7 +40,7 @@
   - Create sub-schemas per equipment kind (weapon, armor, pack, tool, etc.).
   - Add `equipSlots` and `requiredSlots` to templates.
 - [x] Sound Asset Reorganization (Completed).
-- [ ] Implement Skill Database documentation.
+- [x] Implement Skill Database documentation.
 - [ ] Asset Registry maintenance.
 
 ## Low

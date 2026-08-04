@@ -7,10 +7,10 @@ older ones are half-done. Update this file when priorities genuinely shift — n
 
 ## Now — close these before touching anything new
 - [X] Meteocons icon library for Time and Weather
-- [ ] Dev Kit reorganization (Inspectors, Generators, Testers grouping)
-- [ ] Align Jane module with JSON schemas and existing atlas lore
-- [ ] Complete TSX translation of the Tactical Combat Grid (Aedif inspiration)
-- [ ] Minimal smoke-test / build check — something that catches a broken build automatically,
+- [X] Dev Kit reorganization (Inspectors, Generators, Testers grouping)
+- [X] Align Jane module with JSON schemas and existing atlas lore
+- [X] Complete TSX translation of the Tactical Combat Grid (Aedif inspiration)
+- [X] Minimal smoke-test / build check — something that catches a broken build automatically,
       so a single agent's change can't silently break the app for everyone else. This is the
       single highest-leverage item on this list.
 
