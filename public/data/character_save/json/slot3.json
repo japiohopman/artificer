@@ -4,39 +4,30 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 16,
-    "dex": 10,
-    "con": 9,
-    "int": 10,
-    "wis": 9,
-    "cha": 10
+    "str": 13,
+    "dex": 17,
+    "con": 8,
+    "int": 12,
+    "wis": 13,
+    "cha": 15
   },
   "proficiencies": [
     "skill: perception",
-    "rapiers",
+    "longswords",
     "shortswords",
-    "hand crossbows",
-    "Skill: Sleight Of Hand",
-    "Skill: Stealth",
-    "Thieves' Tools",
+    "shortbows",
+    "longbows",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
     "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
-    "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
-    "darts",
-    "slings",
-    "scimitars",
-    "herbalism kit",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "simple weapons",
+    "rapiers",
+    "hand crossbows",
+    "saving throw: dex",
+    "saving throw: cha",
+    "Saving Throw: dex",
+    "Saving Throw: cha"
   ],
   "traits": [
     {
@@ -84,126 +75,202 @@
       "desc": "You have proficiency in the Perception skill."
     },
     {
-      "name": "superior darkvision",
-      "index": "superior_darkvision",
-      "desc": "Your darkvision has a radius of 120 feet.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 120
-        }
-      }
+      "name": "elf weapon training",
+      "index": "elf_weapon_training",
+      "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
     },
     {
-      "name": "sunlight sensitivity",
-      "index": "sunlight_sensitivity",
-      "desc": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "disadvantage": [
-            "Attack rolls in direct sunlight",
-            "Perception checks that rely on sight in direct sunlight"
-          ]
-        }
-      }
-    },
-    {
-      "name": "drow magic",
-      "index": "drow_magic",
-      "desc": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+      "name": "high elf cantrip",
+      "index": "high_elf_cantrip",
+      "desc": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it.",
       "trait_specific": {
         "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/int.json"
         },
-        "spells": [
-          {
-            "spell": {
-              "index": "dancing_lights",
-              "name": "dancing lights",
-              "url": "/assets/atlas/spell/json/dancing_lights.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
+        "spell_options": {
+          "choose": 1,
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "light",
+                  "name": "light",
+                  "url": "/assets/atlas/spell/json/light.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "mage_hand",
+                  "name": "mage hand",
+                  "url": "/assets/atlas/spell/json/mage_hand.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "mending",
+                  "name": "mending",
+                  "url": "/assets/atlas/spell/json/mending.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "message",
+                  "name": "message",
+                  "url": "/assets/atlas/spell/json/message.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "minor_illusion",
+                  "name": "minor illusion",
+                  "url": "/assets/atlas/spell/json/minor_illusion.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "acid_splash",
+                  "name": "acid splash",
+                  "url": "/assets/atlas/spell/json/acid_splash.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "prestidigitation",
+                  "name": "prestidigitation",
+                  "url": "/assets/atlas/spell/json/prestidigitation.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "ray_of_frost",
+                  "name": "ray of frost",
+                  "url": "/assets/atlas/spell/json/ray_of_frost.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "shocking_grasp",
+                  "name": "shocking grasp",
+                  "url": "/assets/atlas/spell/json/shocking_grasp.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "true_strike",
+                  "name": "true strike",
+                  "url": "/assets/atlas/spell/json/true_strike.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "chill_touch",
+                  "name": "chill touch",
+                  "url": "/assets/atlas/spell/json/chill_touch.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "dancing_lights",
+                  "name": "dancing lights",
+                  "url": "/assets/atlas/spell/json/dancing_lights.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fire_bolt",
+                  "name": "fire bolt",
+                  "url": "/assets/atlas/spell/json/fire_bolt.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "poison_spray",
+                  "name": "poison spray",
+                  "url": "/assets/atlas/spell/json/poison_spray.json"
+                }
+              }
+            ]
           },
-          {
-            "spell": {
-              "index": "faerie_fire",
-              "name": "faerie fire",
-              "url": "/assets/atlas/spell/json/faerie_fire.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 3
-          },
-          {
-            "spell": {
-              "index": "darkness",
-              "name": "darkness",
-              "url": "/assets/atlas/spell/json/darkness.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 5
-          }
-        ]
+          "type": "spell"
+        }
       }
     },
     {
-      "name": "drow weapon training",
-      "index": "drow_weapon_training",
-      "desc": "You have proficiency with rapiers, shortswords, and hand crossbows."
+      "name": "extra language",
+      "index": "extra_language",
+      "desc": "You can speak, read, and write one extra language of your choice."
     }
   ],
   "features": [
     {
-      "index": "spellcasting_druid",
+      "index": "spellcasting_bard",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "spellcasting: druid",
+      "name": "spellcasting: bard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
       ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_bard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "druidic",
+      "index": "bardic_inspiration_d6",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "druidic",
+      "name": "bardic inspiration (d6)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
+        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
       ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
+      "feature_specific": {
+        "special_action": "bonus_action",
+        "attack_die": "1d6",
+        "usage": {
+          "type": "charisma_modifier",
+          "recovery": "long_rest"
+        }
+      },
       "source": "Class"
     }
   ],
@@ -228,7 +295,36 @@
     "size": "Medium",
     "specialFeatures": []
   },
-  "items": {},
+  "items": {
+    "leather_armor_zk97l7i62": {
+      "id": "leather_armor_zk97l7i62",
+      "template": "leather_armor",
+      "quantity": 1,
+      "addedAt": 1785847109916,
+      "kind": "armor"
+    },
+    "dagger_oqojff06o": {
+      "id": "dagger_oqojff06o",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1785847109916,
+      "kind": "weapon"
+    },
+    "viol_ozvmfbt58": {
+      "id": "viol_ozvmfbt58",
+      "template": "viol",
+      "quantity": 1,
+      "addedAt": 1785847195615,
+      "kind": "adventuring_gear"
+    },
+    "greatclub_gxmpfvs88": {
+      "id": "greatclub_gxmpfvs88",
+      "template": "greatclub",
+      "quantity": 1,
+      "addedAt": 1785847206248,
+      "kind": "weapon"
+    }
+  },
   "containers": {
     "backpack_new_character": {
       "id": "backpack_new_character",
@@ -237,19 +333,19 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": null
+          "itemId": "viol_ozvmfbt58"
         },
         {
           "id": "bag_1",
-          "itemId": null
+          "itemId": "viol_eqx8k7xqc"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "greatclub_gxmpfvs88"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "greatclub_l29fm6ffq"
         },
         {
           "id": "bag_4",
@@ -339,7 +435,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "dagger_oqojff06o"
       },
       {
         "id": "off_hand",
@@ -355,7 +451,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_zk97l7i62"
       },
       {
         "id": "clothes",
@@ -457,51 +553,29 @@
   },
   "backpack": [
     {
-      "id": "thieves_tools_q2v024w9u",
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
+      "id": "carpenters_tools_agn0cyrbm",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp"
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "id": "crowbar_j8nex9rci",
-      "index": "crowbar",
-      "name": "Crowbar",
+      "id": "pot_iron_jxqm7ejub",
+      "index": "pot_iron",
+      "name": "Pot Iron",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp"
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "id": "dagger_hjgv85c0p",
-      "index": "dagger",
-      "name": "Dagger",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dagger.webp"
-    },
-    {
-      "id": "pouch_bpyjh53ot",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "clothes_travelers_ugz8jttdy",
+      "id": "clothes_travelers_40gzhytne",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -512,18 +586,100 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_9y5ua5pws",
+      "id": "gold_7sy86wcdw",
       "index": "gold",
       "name": "Gold",
-      "quantity": 16,
-      "weight": 0,
+      "quantity": 23,
+      "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
       "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp"
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_v4vh1ht2d",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [],
   "languages": [
     "common",
@@ -539,16 +695,18 @@
   "choices": {
     "skills": [
       "Perception",
-      "Medicine"
+      "Sleight of Hand",
+      "Persuasion"
     ]
   },
   "race": "elf",
-  "subrace": "drow",
-  "class": "druid",
-  "spellcastingAbility": "wis",
-  "background": "criminal",
-  "alignment": "lawful_good",
-  "name": "ggg",
+  "subrace": "high_elf",
+  "class": "bard",
+  "spellcastingAbility": "cha",
+  "background": "farmer",
+  "alignment": "lawful_evil",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
+  "name": "hallo",
   "id": "slot3",
   "hp": 3,
   "maxHp": 3,
@@ -558,5 +716,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-07-26T00:14:21.839Z"
+  "lastSaved": "2026-08-04T12:42:25.496Z"
 }
