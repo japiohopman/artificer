@@ -10,16 +10,29 @@ import https from "https";
 
 dotenv.config();
 
-const localHttpsAgent = new https.Agent({
-  rejectUnauthorized: false
+const localSelfSignedHttpsAgent = new https.Agent({
+  rejectUnauthorized: false // Permitted strictly for self-signed certificates on local local-area Hue bridges
 });
 
 const httpsAgent = new https.Agent({
-  rejectUnauthorized: true, // Recommended for production, but bridge uses self-signed
+  rejectUnauthorized: true, // Required for secure production endpoint calls
 });
 
 let hueDiscoveryCache: { data: any; timestamp: number } | null = null;
 const HUE_DISCOVERY_CACHE_MS = 60_000;
+
+function isLocalIp(ip: string): boolean {
+  if (typeof ip !== 'string') return false;
+  const cleanIp = ip.trim();
+  if (cleanIp === 'localhost' || cleanIp === '127.0.0.1') return true;
+
+  // Regex for standard private IP ranges (RFC 1918)
+  // 10.0.0.0 – 10.255.255.255
+  // 172.16.0.0 – 172.31.255.255
+  // 192.168.0.0 – 192.168.255.255
+  const privateIpRegex = /^(?:10\.\d{1,3}\.\d{1,3}\.\d{1,3})|(?:172\.(?:1[6-9]|2\d|3[0-1])\.\d{1,3}\.\d{1,3})|(?:192\.168\.\d{1,3}\.\d{1,3})$/;
+  return privateIpRegex.test(cleanIp);
+}
 
 function sanitizeEnvValue(val: string | undefined): string {
   if (!val) return "";
@@ -975,6 +988,16 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     let headers: Record<string, string>;
 
     if (manual && manual.ip && manual.username) {
+      // Validate IP to eliminate Server-Side Request Forgery (SSRF)
+      if (!isLocalIp(manual.ip)) {
+        return res.status(403).json({ error: "SSRF prevention: Only local Hue Bridge private IP addresses are allowed." });
+      }
+
+      // Sanitize the huePath to prevent path injection / SSRF
+      if (typeof huePath !== 'string' || !/^\/[a-zA-Z0-9_\/-]*$/.test(huePath)) {
+        return res.status(400).json({ error: "Invalid path format" });
+      }
+
       url = `https://${manual.ip}/clip/v2${huePath}`;
       headers = {
         "hue-application-key": manual.username,
@@ -996,7 +1019,7 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
         url,
         headers,
         data: body,
-        httpsAgent: manual ? localHttpsAgent : httpsAgent,
+        httpsAgent: manual ? localSelfSignedHttpsAgent : httpsAgent,
         timeout: 10000
       });
 
