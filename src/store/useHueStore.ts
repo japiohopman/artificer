@@ -97,8 +97,16 @@ export const useHueStore = create<HueState>((set, get) => ({
           manual: { ip, username }
         })
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Connection failed");
+
+      const text = await res.text();
+      let data: any;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error(text || `Server returned error status ${res.status}`);
+      }
+
+      if (!res.ok) throw new Error(data.error || data.detail || "Connection failed");
       
       set({ lights: data.data || [], status: 'connected', isConnected: true, error: null });
       return true;
@@ -123,8 +131,14 @@ export const useHueStore = create<HueState>((set, get) => ({
           manual: credentials 
         })
       });
-      const lightData = await lightRes.json();
-      if (lightRes.ok && lightData.data) set({ lights: lightData.data });
+
+      const lightText = await lightRes.text();
+      try {
+        const lightData = JSON.parse(lightText);
+        if (lightRes.ok && lightData.data) set({ lights: lightData.data });
+      } catch (err) {
+        console.warn("Lamps poll parse error:", err);
+      }
 
       // Fetch Rooms
       const roomRes = await fetch("/api/hue/proxy", {
@@ -136,8 +150,14 @@ export const useHueStore = create<HueState>((set, get) => ({
           manual: credentials 
         })
       });
-      const roomData = await roomRes.json();
-      if (roomRes.ok && roomData.data) set({ rooms: roomData.data });
+
+      const roomText = await roomRes.text();
+      try {
+        const roomData = JSON.parse(roomText);
+        if (roomRes.ok && roomData.data) set({ rooms: roomData.data });
+      } catch (err) {
+        console.warn("Rooms poll parse error:", err);
+      }
 
     } catch (e) {
       console.error("Polling error:", e);
