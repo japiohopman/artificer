@@ -4,31 +4,30 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 8,
-    "dex": 9,
-    "con": 10,
-    "int": 13,
-    "wis": 14,
-    "cha": 6
+    "str": 17,
+    "dex": 14,
+    "con": 11,
+    "int": 10,
+    "wis": 9,
+    "cha": 7
   },
   "proficiencies": [
-    "battleaxes",
-    "handaxes",
-    "light hammers",
-    "warhammers",
-    "Skill: Sleight Of Hand",
-    "Skill: Stealth",
-    "Thieves' Tools",
-    "light armor",
-    "simple weapons",
+    "skill: perception",
     "longswords",
-    "rapiers",
     "shortswords",
-    "hand crossbows",
-    "saving throw: dex",
-    "saving throw: cha",
-    "Saving Throw: dex",
-    "Saving Throw: cha"
+    "shortbows",
+    "longbows",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
+    "all armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: str",
+    "saving throw: con",
+    "Saving Throw: str",
+    "Saving Throw: con"
   ],
   "traits": [
     {
@@ -42,108 +41,161 @@
       }
     },
     {
-      "name": "dwarven resilience",
-      "index": "dwarven_resilience",
-      "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+      "name": "fey ancestry",
+      "index": "fey_ancestry",
+      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
       "trait_specific": {
         "passive_modifiers": {
           "advantage": [
             {
-              "name": "Saving Throws against poison",
-              "damage_type": {
-                "index": "poison",
-                "name": "poison",
-                "url": "/assets/atlas/damage_types/json/poison.json"
+              "name": "Saving Throws against being charmed",
+              "condition": {
+                "index": "charmed",
+                "name": "charmed",
+                "url": "/assets/atlas/conditions/json/charmed.json"
               }
             }
           ],
-          "resistance": [
+          "immunity": [
             {
-              "index": "poison",
-              "name": "poison",
-              "url": "/assets/atlas/damage_types/json/poison.json"
+              "name": "magic sleep"
             }
           ]
         }
       }
     },
     {
-      "name": "stonecunning",
-      "index": "stonecunning",
-      "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+      "name": "trance",
+      "index": "trance",
+      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
     },
     {
-      "name": "dwarven combat training",
-      "index": "dwarven_combat_training",
-      "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+      "name": "keen senses",
+      "index": "keen_senses",
+      "desc": "You have proficiency in the Perception skill."
     },
     {
-      "name": "tool proficiency",
-      "index": "tool_proficiency",
-      "desc": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+      "name": "elf weapon training",
+      "index": "elf_weapon_training",
+      "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
     },
     {
-      "name": "dwarven toughness",
-      "index": "dwarven_toughness",
-      "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
+      "name": "fleet of foot",
+      "index": "fleet_of_foot",
+      "desc": "Your base walking speed increases to 35 feet.",
       "trait_specific": {
         "passive_modifiers": {
-          "hp_bonus_per_level": 1
+          "speed_set": 35
         }
       }
+    },
+    {
+      "name": "mask of the wild",
+      "index": "mask_of_the_wild",
+      "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
     }
   ],
   "features": [
     {
-      "index": "spellcasting_bard",
+      "index": "fighter_fighting_style",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
       },
-      "name": "spellcasting: bard",
+      "name": "fighting style",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
       ],
-      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_bard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        }
+        "subfeature_options": {
+          "choose": 1,
+          "type": "feature",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_archery",
+                  "name": "fighting style: archery",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_defense",
+                  "name": "fighting style: defense",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_dueling",
+                  "name": "fighting style: dueling",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_great_weapon_fighting",
+                  "name": "fighting style: great weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_protection",
+                  "name": "fighting style: protection",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
+                }
+              },
+              {
+                "option_type": "reference",
+                "item": {
+                  "index": "fighter_fighting_style_two_weapon_fighting",
+                  "name": "fighting style: two_weapon fighting",
+                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
+                }
+              }
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
       "source": "Class"
     },
     {
-      "index": "bardic_inspiration_d6",
+      "index": "second_wind",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "fighter",
+        "name": "fighter",
+        "url": "/assets/atlas/class/json/fighter.json"
       },
-      "name": "bardic inspiration (d6)",
+      "name": "second wind",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
-        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
+        "Once you use this feature, you must finish a short or long rest before you can use it again."
       ],
-      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
+      "url": "/assets/atlas/features/json/second_wind.json",
+      "updated_at": "2026-07-13T06:30:11.862Z",
+      "image": "/assets/atlas/features/images/second_wind.webp",
       "feature_specific": {
         "special_action": "bonus_action",
-        "attack_die": "1d6",
-        "usage": {
-          "type": "charisma_modifier",
-          "recovery": "long_rest"
+        "healing": {
+          "dice": "1d10",
+          "modifier": "fighter_level"
         }
       },
       "source": "Class"
@@ -171,40 +223,47 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_wp3okmay8": {
-      "id": "leather_armor_wp3okmay8",
+    "leather_armor_reu7ih14t": {
+      "id": "leather_armor_reu7ih14t",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1785951102441,
+      "addedAt": 1785964010146,
       "kind": "armor"
     },
-    "dagger_jtrew1zm9": {
-      "id": "dagger_jtrew1zm9",
-      "template": "dagger",
+    "longbow_673q7fgjk": {
+      "id": "longbow_673q7fgjk",
+      "template": "longbow",
       "quantity": 1,
-      "addedAt": 1785951102442,
+      "addedAt": 1785964010146,
       "kind": "weapon"
     },
-    "quarterstaff_x784b6ron": {
-      "id": "quarterstaff_x784b6ron",
-      "template": "quarterstaff",
-      "quantity": 1,
-      "addedAt": 1785951213919,
-      "kind": "weapon"
+    "arrow_a0u9g8m70": {
+      "id": "arrow_a0u9g8m70",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1785964010146,
+      "kind": "consumable"
     },
-    "entertainers_pack_trzej51to": {
-      "id": "entertainers_pack_trzej51to",
-      "template": "entertainers_pack",
+    "shield_yv8lut58q": {
+      "id": "shield_yv8lut58q",
+      "template": "shield",
       "quantity": 1,
-      "addedAt": 1785951227031,
+      "addedAt": 1785964015345,
+      "kind": "shield"
+    },
+    "crossbow_bolt_xu902ybxi": {
+      "id": "crossbow_bolt_xu902ybxi",
+      "template": "crossbow_bolt",
+      "quantity": 20,
+      "addedAt": 1785964022200,
+      "kind": "consumable"
+    },
+    "dungeoneers_pack_ktjdtf2qa": {
+      "id": "dungeoneers_pack_ktjdtf2qa",
+      "template": "dungeoneers_pack",
+      "quantity": 1,
+      "addedAt": 1785964026559,
       "kind": "container"
-    },
-    "horn_9pp1eu51e": {
-      "id": "horn_9pp1eu51e",
-      "template": "horn",
-      "quantity": 1,
-      "addedAt": 1785951249213,
-      "kind": "adventuring_gear"
     }
   },
   "containers": {
@@ -215,39 +274,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "horn_9pp1eu51e"
+          "itemId": "arrow_a0u9g8m70"
         },
         {
           "id": "bag_1",
-          "itemId": "quarterstaff_o72cosdzw"
+          "itemId": "leather_armor_l6tnb679w"
         },
         {
           "id": "bag_2",
-          "itemId": "entertainers_pack_trzej51to"
+          "itemId": "longbow_bc3kmii3y"
         },
         {
           "id": "bag_3",
-          "itemId": "entertainers_pack_0c6z8z8lu"
+          "itemId": "arrow_r5wwiolzw"
         },
         {
           "id": "bag_4",
-          "itemId": "dagger_jtrew1zm9"
+          "itemId": "shield_uqeb4zy0a"
         },
         {
           "id": "bag_5",
-          "itemId": "horn_ncgj7eo05"
+          "itemId": "crossbow_bolt_xu902ybxi"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "crossbow_bolt_nrtcg18yo"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "dungeoneers_pack_ktjdtf2qa"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "dungeoneers_pack_b4d1xj4ik"
         },
         {
           "id": "bag_9",
@@ -317,11 +376,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "quarterstaff_x784b6ron"
+        "itemId": "longbow_673q7fgjk"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_yv8lut58q"
       },
       {
         "id": "ranged",
@@ -333,7 +392,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_wp3okmay8"
+        "itemId": "leather_armor_reu7ih14t"
       },
       {
         "id": "clothes",
@@ -435,77 +494,165 @@
   },
   "backpack": [
     {
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "quantity": 1
+      "id": "carpenters_tools_jsp0ebzea",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "index": "crowbar",
-      "name": "Crowbar",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "quantity": 1
+      "id": "pot_iron_wh67tm3lk",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "index": "dagger",
-      "name": "Dagger",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "quantity": 2
-    },
-    {
-      "index": "pouch",
-      "name": "Pouch",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "quantity": 2
-    },
-    {
+      "id": "clothes_travelers_z1k9aeq8g",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "quantity": 1
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
+      "id": "gold_d4oq3lojp",
       "index": "gold",
       "name": "Gold",
+      "quantity": 23,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 16
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_68q1fk85d",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [],
   "languages": [
     "common",
-    "dwarvish"
+    "elvish"
   ],
   "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
-  },
+  "spellSlots": {},
   "choices": {
+    "fighter_fighting_style": [
+      "fighter_fighting_style_archery"
+    ],
     "skills": [
       "Insight",
-      "Arcana"
+      "Intimidation"
     ]
   },
-  "race": "dwarf",
-  "subrace": "hill_dwarf",
-  "class": "bard",
+  "race": "elf",
+  "subrace": "wood_elf",
+  "class": "fighter",
   "spellcastingAbility": "cha",
-  "background": "criminal",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
-  "name": "km",
+  "background": "farmer",
+  "alignment": "lawful_evil",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/FighterShield.webp",
+  "name": "kok",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-05T17:36:00.925Z"
+  "lastSaved": "2026-08-05T21:09:15.714Z"
 }
