@@ -44,7 +44,7 @@ test('verify interactive equipment pack inspection focus view', async ({ page })
 
     // Click on an item to inspect (e.g. first item slot button)
     console.log('Clicking on a sub-item to inspect details...');
-    const firstItem = page.locator('button.aspect-square').first();
+    const firstItem = page.locator('button.aspect-\\[9\\/16\\]').first();
     await firstItem.click();
 
     // Verify detail panel updates to showing details for the sub-item
