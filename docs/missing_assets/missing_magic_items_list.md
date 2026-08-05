@@ -1,14 +1,5 @@
-ammunition.webp
-ammunition_1.webp
-ammunition_2.webp
-ammunition_3.webp
-amulet_of_health.webp
 amulet_of_proof_against_detection_and_location.webp
 amulet_of_the_planes.webp
-armor.webp
-armor_1.webp
-armor_2.webp
-armor_3.webp
 armor_of_resistance.webp
 armor_of_vulnerability.webp
 arrow_catching_shield.webp
@@ -135,9 +126,6 @@ periapt_of_wound_closure.webp
 pipes_of_haunting.webp
 pipes_of_the_sewers.webp
 plate_armor_of_etherealness.webp
-potion_of_animal_friendship.webp
-potion_of_clairvoyance.webp
-potion_of_climbing.webp
 potion_of_diminution.webp
 potion_of_gaseous_form.webp
 potion_of_giant_strength.webp
@@ -249,10 +237,6 @@ wand_of_the_war_mage.webp
 wand_of_the_war_mage_1.webp
 wand_of_the_war_mage_2.webp
 wand_of_the_war_mage_3.webp
-weapon.webp
-weapon_1.webp
-weapon_2.webp
-weapon_3.webp
 well_of_many_worlds.webp
 wind_fan.webp
 winged_boots.webp

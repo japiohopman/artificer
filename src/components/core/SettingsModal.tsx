@@ -1,34 +1,18 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useUIStore } from '../../store/useUIStore';
-import { useAudioStore } from '../../store/useAudioStore';
-import { useSettingsStore } from '../../store/useSettingsStore';
-import { LAYER_NAMES, AudioLayer } from '../../types/audio';
 import { GameIcon } from '../../game_icons';
 import { playClickSound, playSuccessSound } from '../../services/storageService';
-import { useHueStore } from '../../store/useHueStore';
+import { AudioOptions } from './settings_modal/AudioOptions';
+import { AuthOptions } from './settings_modal/AuthOptions';
+import { HueOptions } from './settings_modal/HueOptions';
+import { GeneralOptions } from './settings_modal/GeneralOptions';
 
 export const SettingsModal: React.FC = () => {
   const isSettingsOpen = useUIStore(state => state.isSettingsOpen);
   const setIsSettingsOpen = useUIStore(state => state.setIsSettingsOpen);
 
-  const { layerStates, updateLayerVolume, toggleLayerMute } = useAudioStore();
-  const settings = useSettingsStore();
-  const hue = useHueStore();
-
-  const [activeTab, setActiveTab] = useState<'audio' | 'auth' | 'general' | 'hue'>('audio');
-
-  // Local state for Hue credentials edit
-  const [localIp, setLocalIp] = useState(hue.credentials.ip);
-  const [localUsername, setLocalUsername] = useState(hue.credentials.username);
-  const [isTestingHue, setIsTestingHue] = useState(false);
-
-  // Local state for passwords show/hide
-  const [showKey1, setShowKey1] = useState(false);
-  const [showKey2, setShowKey2] = useState(false);
-  const [showKey3, setShowKey3] = useState(false);
-  const [showGemini, setShowGemini] = useState(false);
-  const [showOpenAI, setShowOpenAI] = useState(false);
+  const [activeSection, setActiveSection] = useState<'audio' | 'auth' | 'hue' | 'general' | null>('audio');
 
   if (!isSettingsOpen) return null;
 
@@ -37,9 +21,10 @@ export const SettingsModal: React.FC = () => {
     setIsSettingsOpen(false);
   };
 
-  const sortedLayers = (Object.keys(layerStates) as unknown as string[])
-    .map(key => parseInt(key) as AudioLayer)
-    .sort((a, b) => a - b);
+  const toggleSection = (section: 'audio' | 'auth' | 'hue' | 'general') => {
+    playClickSound();
+    setActiveSection(prev => (prev === section ? null : section));
+  };
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
@@ -48,13 +33,14 @@ export const SettingsModal: React.FC = () => {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
         transition={{ duration: 0.2 }}
-        className="relative w-full max-w-3xl bg-zinc-950 border-2 border-dragon-gold text-zinc-300 rounded-lg shadow-[0_0_50px_rgba(0,0,0,0.8)] flex flex-col h-[580px] overflow-hidden font-mono"
+        className="relative w-full max-w-2xl bg-zinc-950 border border-zinc-800 text-zinc-300 rounded-lg shadow-[0_0_50px_rgba(159,18,57,0.15)] flex flex-col h-[600px] overflow-hidden font-mono"
       >
-        {/* Border accents */}
-        <div className="absolute inset-x-0 bottom-0 h-1 bg-dragon-red/20" />
+        {/* Border accent lines */}
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-dragon-red/30" />
+        <div className="absolute inset-y-0 left-0 w-[1px] bg-gradient-to-b from-transparent via-dragon-red/20 to-transparent" />
 
         {/* Header */}
-        <div className="p-4 border-b border-zinc-850 bg-black/40 flex items-center justify-between">
+        <div className="p-4 border-b border-zinc-850 bg-black/40 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="p-1.5 bg-dragon-red/10 border border-dragon-red/30 rounded text-dragon-red">
               <GameIcon name="adjust" size={16} />
@@ -73,396 +59,276 @@ export const SettingsModal: React.FC = () => {
           </button>
         </div>
 
-        {/* Tab Controls */}
-        <div className="flex bg-black/20 border-b border-zinc-850 p-1.5 gap-1 shrink-0">
-          <button
-            onClick={() => { setActiveTab('audio'); playClickSound(); }}
-            className={`flex-1 py-2 text-[10px] font-black rounded transition-all uppercase tracking-widest border ${
-              activeTab === 'audio'
-                ? 'bg-dragon-red border-dragon-gold text-white shadow-md'
-                : 'bg-zinc-900/40 border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900/60'
-            }`}
-          >
-            Audio & Geluid
-          </button>
-          <button
-            onClick={() => { setActiveTab('auth'); playClickSound(); }}
-            className={`flex-1 py-2 text-[10px] font-black rounded transition-all uppercase tracking-widest border ${
-              activeTab === 'auth'
-                ? 'bg-dragon-red border-dragon-gold text-white shadow-md'
-                : 'bg-zinc-900/40 border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900/60'
-            }`}
-          >
-            Authenticator
-          </button>
-          <button
-            onClick={() => { setActiveTab('hue'); playClickSound(); }}
-            className={`flex-1 py-2 text-[10px] font-black rounded transition-all uppercase tracking-widest border ${
-              activeTab === 'hue'
-                ? 'bg-dragon-red border-dragon-gold text-white shadow-md'
-                : 'bg-zinc-900/40 border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900/60'
-            }`}
-          >
-            Philips Hue
-          </button>
-          <button
-            onClick={() => { setActiveTab('general'); playClickSound(); }}
-            className={`flex-1 py-2 text-[10px] font-black rounded transition-all uppercase tracking-widest border ${
-              activeTab === 'general'
-                ? 'bg-dragon-red border-dragon-gold text-white shadow-md'
-                : 'bg-zinc-900/40 border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900/60'
-            }`}
-          >
-            General & Models
-          </button>
-        </div>
-
-        {/* Tab Content */}
-        <div className="flex-1 overflow-y-auto p-6 custom-scrollbar bg-black/10">
-          {activeTab === 'audio' && (
-            <div className="space-y-4">
-              <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-2">
-                Mixer Channel Calibrations
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {sortedLayers.map((layerId) => {
-                  const state = layerStates[layerId];
-                  if (!state) return null;
-                  return (
-                    <div
-                      key={layerId}
-                      className="bg-zinc-900/50 border border-zinc-850 rounded-lg p-3 flex items-center justify-between gap-4"
-                    >
-                      <div className="flex-1 min-w-0">
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="text-[10px] font-bold uppercase tracking-wide text-zinc-300 truncate max-w-[150px]">
-                            {LAYER_NAMES[layerId]}
-                          </span>
-                          <span className="text-[9px] text-zinc-500 tabular-nums font-mono font-bold">
-                            {Math.round(state.volume * 100)}%
-                          </span>
-                        </div>
-                        <input
-                          type="range"
-                          min="0"
-                          max="1"
-                          step="0.01"
-                          value={state.volume}
-                          onChange={(e) => updateLayerVolume(layerId, parseFloat(e.target.value))}
-                          className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-dragon-red"
-                        />
-                      </div>
-                      <button
-                        onClick={() => { toggleLayerMute(layerId); playClickSound(); }}
-                        className={`px-2 py-1 text-[9px] font-black rounded border transition-all shrink-0 ${
-                          state.isMuted
-                            ? 'bg-red-950/40 border-red-500 text-red-500 shadow-lg animate-pulse'
-                            : 'bg-zinc-950 border-zinc-800 text-zinc-500 hover:text-zinc-300'
-                        }`}
-                      >
-                        {state.isMuted ? 'MUTED' : 'MUTE'}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'auth' && (
-            <div className="space-y-4 max-w-xl mx-auto">
-              <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-2">
-                Secure Key Vault & Tokens
-              </div>
-
-              {/* ElevenLabs Account 1 */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider flex justify-between">
-                  <span>ElevenLabs API Key (Account 1)</span>
-                  <span className="text-zinc-600">PRIMARY</span>
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type={showKey1 ? 'text' : 'password'}
-                    value={settings.elevenlabs_key_1}
-                    onChange={(e) => settings.setSettings({ elevenlabs_key_1: e.target.value })}
-                    placeholder="sk_..."
-                    className="flex-1 bg-zinc-950 border border-zinc-800 p-2 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setShowKey1(!showKey1); playClickSound(); }}
-                    className="px-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded text-[10px] text-zinc-400 font-bold"
-                  >
-                    {showKey1 ? 'HIDE' : 'SHOW'}
-                  </button>
+        {/* Vertical Stack Accordion Container */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar bg-black/10">
+          
+          {/* 1. Audio & Geluid */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => toggleSection('audio')}
+              className={`flex items-center justify-between w-full p-3.5 rounded-lg border text-left transition-all font-mono group relative overflow-hidden ${
+                activeSection === 'audio'
+                  ? 'bg-zinc-900/90 border-dragon-red/40 text-white shadow-lg shadow-dragon-red/5'
+                  : 'bg-zinc-900/30 border-zinc-850 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60 hover:border-zinc-800'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className={`text-xs ${activeSection === 'audio' ? 'text-dragon-red' : 'text-zinc-500'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </span>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider block">Audio & Geluid</span>
+                  <span className="text-[9px] text-zinc-500 font-normal">Volume mixer, channels and background layers calibration</span>
                 </div>
               </div>
-
-              {/* ElevenLabs Account 2 */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider flex justify-between">
-                  <span>ElevenLabs API Key (Account 2)</span>
-                  <span className="text-zinc-600">SECONDARY</span>
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type={showKey2 ? 'text' : 'password'}
-                    value={settings.elevenlabs_key_2}
-                    onChange={(e) => settings.setSettings({ elevenlabs_key_2: e.target.value })}
-                    placeholder="sk_..."
-                    className="flex-1 bg-zinc-950 border border-zinc-800 p-2 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setShowKey2(!showKey2); playClickSound(); }}
-                    className="px-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded text-[10px] text-zinc-400 font-bold"
-                  >
-                    {showKey2 ? 'HIDE' : 'SHOW'}
-                  </button>
-                </div>
-              </div>
-
-              {/* ElevenLabs Account 3 */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider flex justify-between">
-                  <span>ElevenLabs API Key (Account 3)</span>
-                  <span className="text-zinc-600">TERTIARY</span>
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type={showKey3 ? 'text' : 'password'}
-                    value={settings.elevenlabs_key_3}
-                    onChange={(e) => settings.setSettings({ elevenlabs_key_3: e.target.value })}
-                    placeholder="sk_..."
-                    className="flex-1 bg-zinc-950 border border-zinc-800 p-2 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setShowKey3(!showKey3); playClickSound(); }}
-                    className="px-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded text-[10px] text-zinc-400 font-bold"
-                  >
-                    {showKey3 ? 'HIDE' : 'SHOW'}
-                  </button>
-                </div>
-              </div>
-
-              {/* Gemini Token */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  Google Gemini API Key
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type={showGemini ? 'text' : 'password'}
-                    value={settings.gemini_key}
-                    onChange={(e) => settings.setSettings({ gemini_key: e.target.value })}
-                    placeholder="AIzaSy..."
-                    className="flex-1 bg-zinc-950 border border-zinc-800 p-2 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setShowGemini(!showGemini); playClickSound(); }}
-                    className="px-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded text-[10px] text-zinc-400 font-bold"
-                  >
-                    {showGemini ? 'HIDE' : 'SHOW'}
-                  </button>
-                </div>
-              </div>
-
-              {/* OpenAI Token */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  OpenAI API Key
-                </label>
-                <div className="flex gap-2">
-                  <input
-                    type={showOpenAI ? 'text' : 'password'}
-                    value={settings.openai_key}
-                    onChange={(e) => settings.setSettings({ openai_key: e.target.value })}
-                    placeholder="sk-proj-..."
-                    className="flex-1 bg-zinc-950 border border-zinc-800 p-2 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => { setShowOpenAI(!showOpenAI); playClickSound(); }}
-                    className="px-3 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded text-[10px] text-zinc-400 font-bold"
-                  >
-                    {showOpenAI ? 'HIDE' : 'SHOW'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'hue' && (
-            <div className="space-y-6 max-w-xl mx-auto">
-              <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-2">
-                Philips Hue Bridge & Luminaries Configuration
-              </div>
-
-              {/* Status Banner */}
-              <div className={`p-4 rounded-xl border flex flex-col gap-2 ${
-                hue.isConnected
-                  ? "bg-emerald-950/20 border-emerald-500/30 text-emerald-400"
-                  : hue.status === 'connecting'
-                  ? "bg-yellow-950/20 border-yellow-500/30 text-yellow-400 animate-pulse"
-                  : "bg-red-950/20 border-red-500/30 text-red-400"
-              }`}>
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] font-black uppercase tracking-widest">Connection Status:</span>
-                  <span className={`px-2.5 py-0.5 rounded text-[9px] font-bold uppercase ${
-                    hue.isConnected
-                      ? "bg-emerald-500/20 text-emerald-300 shadow-[0_0_10px_#10b981]"
-                      : hue.status === 'connecting'
-                      ? "bg-yellow-500/20 text-yellow-300"
-                      : "bg-red-500/20 text-red-300"
-                  }`}>
-                    {hue.isConnected ? "CONNECTED" : hue.status === 'connecting' ? "CONNECTING..." : "DISCONNECTED"}
-                  </span>
-                </div>
-                {hue.error && (
-                  <p className="text-[10px] font-mono text-red-400 bg-black/40 p-2 rounded border border-red-500/10 mt-1">
-                    ERR: {hue.error}
-                  </p>
-                )}
-                {hue.isConnected && (
-                  <p className="text-[10px] text-emerald-500/80 font-bold uppercase tracking-tight">
-                    Detected {hue.lights.length} lights connected to the bridge.
-                  </p>
-                )}
-              </div>
-
-              {/* Hue IP */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  Bridge IP Address
-                </label>
-                <input
-                  type="text"
-                  value={localIp}
-                  onChange={(e) => setLocalIp(e.target.value)}
-                  placeholder="e.g. 192.168.178.59"
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                />
-              </div>
-
-              {/* Hue Username / Application Key */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  Bridge Username / Application Key
-                </label>
-                <input
-                  type="password"
-                  value={localUsername}
-                  onChange={(e) => setLocalUsername(e.target.value)}
-                  placeholder="e.g. 1b-t-3QlLC4cRGwai9knsfWItpR5Q17iyMt6NwTj"
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                />
-              </div>
-
-              {/* Connection Trigger Buttons */}
-              <div className="flex gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    hue.setCredentials(localIp, localUsername);
-                    playSuccessSound();
-                    alert("Credentials saved locally!");
-                  }}
-                  className="flex-1 py-2.5 bg-zinc-900 hover:bg-zinc-850 border border-zinc-800 rounded font-sans font-bold text-xs tracking-wider uppercase text-zinc-300 hover:text-white transition-all"
+              <div className="flex items-center gap-2">
+                {activeSection === 'audio' && <span className="text-[9px] text-dragon-red/80 font-bold bg-dragon-red/10 border border-dragon-red/20 px-1.5 py-0.5 rounded">ACTIVE</span>}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-transform duration-200 text-zinc-500 ${activeSection === 'audio' ? 'rotate-180 text-dragon-red' : ''}`}
                 >
-                  Save Credentials
-                </button>
-                <button
-                  type="button"
-                  disabled={isTestingHue || !localIp || !localUsername}
-                  onClick={async () => {
-                    setIsTestingHue(true);
-                    playClickSound();
-                    // First save the credentials so we test with what's on screen
-                    hue.setCredentials(localIp, localUsername);
-                    const success = await hue.connect();
-                    setIsTestingHue(false);
-                    if (success) {
-                      playSuccessSound();
-                      alert("Connected successfully to the Philips Hue Bridge!");
-                    } else {
-                      alert("Failed to establish Hue connection. Please verify IP, key, and network.");
-                    }
-                  }}
-                  className="flex-1 py-2.5 bg-dragon-red hover:bg-red-700 border border-dragon-gold rounded font-sans font-bold text-xs tracking-wider uppercase text-white shadow-lg disabled:opacity-30 disabled:pointer-events-none transition-all"
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              {/* Highlight gradient */}
+              {activeSection === 'audio' && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-dragon-red" />
+              )}
+            </button>
+            
+            <AnimatePresence initial={false}>
+              {activeSection === 'audio' && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
                 >
-                  {isTestingHue ? "CONNECTING..." : "Test Connection"}
-                </button>
-              </div>
-            </div>
-          )}
+                  <div className="bg-zinc-950/40 border-x border-b border-zinc-900 rounded-b-lg p-4 -mt-1 mb-2">
+                    <AudioOptions />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
-          {activeTab === 'general' && (
-            <div className="space-y-4 max-w-xl mx-auto">
-              <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-2">
-                General Settings & Model Selections
+          {/* 2. Authenticator */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => toggleSection('auth')}
+              className={`flex items-center justify-between w-full p-3.5 rounded-lg border text-left transition-all font-mono group relative overflow-hidden ${
+                activeSection === 'auth'
+                  ? 'bg-zinc-900/90 border-dragon-red/40 text-white shadow-lg shadow-dragon-red/5'
+                  : 'bg-zinc-900/30 border-zinc-850 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60 hover:border-zinc-800'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className={`text-xs ${activeSection === 'auth' ? 'text-dragon-red' : 'text-zinc-500'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider block">Authenticator</span>
+                  <span className="text-[9px] text-zinc-500 font-normal">Secure API Key credentials vault for Gemini, OpenAI & ElevenLabs</span>
+                </div>
               </div>
-
-              {/* User Alias */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  Personal Identity Alias
-                </label>
-                <input
-                  type="text"
-                  value={settings.user_alias}
-                  onChange={(e) => settings.setSettings({ user_alias: e.target.value })}
-                  placeholder="Adventurer"
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono"
-                />
-              </div>
-
-              {/* Gemini Model */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  Google Gemini LMM Model
-                </label>
-                <select
-                  value={settings.gemini_model}
-                  onChange={(e) => settings.setSettings({ gemini_model: e.target.value })}
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono cursor-pointer"
+              <div className="flex items-center gap-2">
+                {activeSection === 'auth' && <span className="text-[9px] text-dragon-red/80 font-bold bg-dragon-red/10 border border-dragon-red/20 px-1.5 py-0.5 rounded">ACTIVE</span>}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-transform duration-200 text-zinc-500 ${activeSection === 'auth' ? 'rotate-180 text-dragon-red' : ''}`}
                 >
-                  <option value="gemini-1.5-flash">Gemini 1.5 Flash (Recommended)</option>
-                  <option value="gemini-1.5-pro">Gemini 1.5 Pro (Analytical)</option>
-                  <option value="gemini-pro">Gemini 1.0 Pro (Legacy)</option>
-                </select>
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
               </div>
+              {/* Highlight gradient */}
+              {activeSection === 'auth' && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-dragon-red" />
+              )}
+            </button>
 
-              {/* OpenAI Model */}
-              <div className="space-y-1 bg-zinc-900/30 p-3 rounded-lg border border-zinc-850/40">
-                <label className="text-[9px] font-black uppercase text-zinc-400 tracking-wider">
-                  OpenAI GPT LMM Model
-                </label>
-                <select
-                  value={settings.openai_model}
-                  onChange={(e) => settings.setSettings({ openai_model: e.target.value })}
-                  className="w-full bg-zinc-950 border border-zinc-800 p-2.5 text-xs rounded text-zinc-300 focus:outline-none focus:border-dragon-gold transition-all font-mono cursor-pointer"
+            <AnimatePresence initial={false}>
+              {activeSection === 'auth' && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
                 >
-                  <option value="gpt-4o">GPT-4o (High Intelligence)</option>
-                  <option value="gpt-4o-mini">GPT-4o-mini (Speed & Utility)</option>
-                  <option value="gpt-4-turbo">GPT-4-Turbo (Legacy)</option>
-                </select>
+                  <div className="bg-zinc-950/40 border-x border-b border-zinc-900 rounded-b-lg p-4 -mt-1 mb-2">
+                    <AuthOptions />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* 3. Philips Hue */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => toggleSection('hue')}
+              className={`flex items-center justify-between w-full p-3.5 rounded-lg border text-left transition-all font-mono group relative overflow-hidden ${
+                activeSection === 'hue'
+                  ? 'bg-zinc-900/90 border-dragon-red/40 text-white shadow-lg shadow-dragon-red/5'
+                  : 'bg-zinc-900/30 border-zinc-850 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60 hover:border-zinc-800'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className={`text-xs ${activeSection === 'hue' ? 'text-dragon-red' : 'text-zinc-500'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A7.5 7.5 0 0 0 3 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path>
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                  </svg>
+                </span>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider block">Philips Hue</span>
+                  <span className="text-[9px] text-zinc-500 font-normal">Sync interactive room atmospheric lighting with smart bulbs</span>
+                </div>
               </div>
-            </div>
-          )}
+              <div className="flex items-center gap-2">
+                {activeSection === 'hue' && <span className="text-[9px] text-dragon-red/80 font-bold bg-dragon-red/10 border border-dragon-red/20 px-1.5 py-0.5 rounded">ACTIVE</span>}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-transform duration-200 text-zinc-500 ${activeSection === 'hue' ? 'rotate-180 text-dragon-red' : ''}`}
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              {/* Highlight gradient */}
+              {activeSection === 'hue' && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-dragon-red" />
+              )}
+            </button>
+
+            <AnimatePresence initial={false}>
+              {activeSection === 'hue' && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
+                >
+                  <div className="bg-zinc-950/40 border-x border-b border-zinc-900 rounded-b-lg p-4 -mt-1 mb-2">
+                    <HueOptions />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* 4. General & Models */}
+          <div className="flex flex-col">
+            <button
+              onClick={() => toggleSection('general')}
+              className={`flex items-center justify-between w-full p-3.5 rounded-lg border text-left transition-all font-mono group relative overflow-hidden ${
+                activeSection === 'general'
+                  ? 'bg-zinc-900/90 border-dragon-red/40 text-white shadow-lg shadow-dragon-red/5'
+                  : 'bg-zinc-900/30 border-zinc-850 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60 hover:border-zinc-800'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className={`text-xs ${activeSection === 'general' ? 'text-dragon-red' : 'text-zinc-500'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"></line>
+                    <line x1="4" y1="10" x2="4" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="3"></line>
+                    <line x1="20" y1="21" x2="20" y2="16"></line>
+                    <line x1="20" y1="12" x2="20" y2="3"></line>
+                    <line x1="1" y1="14" x2="7" y2="14"></line>
+                    <line x1="9" y1="8" x2="15" y2="8"></line>
+                    <line x1="17" y1="16" x2="23" y2="16"></line>
+                  </svg>
+                </span>
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-wider block">General & Models</span>
+                  <span className="text-[9px] text-zinc-500 font-normal">Personal alias and Large Language Model (LMM) version settings</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                {activeSection === 'general' && <span className="text-[9px] text-dragon-red/80 font-bold bg-dragon-red/10 border border-dragon-red/20 px-1.5 py-0.5 rounded">ACTIVE</span>}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-transform duration-200 text-zinc-500 ${activeSection === 'general' ? 'rotate-180 text-dragon-red' : ''}`}
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              {/* Highlight gradient */}
+              {activeSection === 'general' && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-dragon-red" />
+              )}
+            </button>
+
+            <AnimatePresence initial={false}>
+              {activeSection === 'general' && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
+                >
+                  <div className="bg-zinc-950/40 border-x border-b border-zinc-900 rounded-b-lg p-4 -mt-1 mb-2">
+                    <GeneralOptions />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
         </div>
 
         {/* Footer info banner */}
         <div className="p-4 bg-black/40 border-t border-zinc-850 flex items-center justify-between text-[10px] text-zinc-500 shrink-0">
-          <span className="uppercase tracking-widest">Arcane VTT // System Ready</span>
+          <span className="uppercase tracking-widest text-zinc-400">Arcane VTT // System Ready</span>
           <button
             onClick={() => {
               playSuccessSound();
               setIsSettingsOpen(false);
             }}
-            className="px-5 py-2 bg-dragon-red border border-dragon-gold text-white font-bold rounded uppercase tracking-wider text-[10px] hover:bg-red-700 active:scale-95 transition-all"
+            className="px-5 py-2 bg-dragon-red hover:bg-red-700 active:scale-95 text-white font-bold rounded uppercase tracking-wider text-[10px] transition-all border border-transparent shadow-[0_0_15px_rgba(239,68,68,0.2)]"
           >
             Save & Apply Calibration
           </button>
