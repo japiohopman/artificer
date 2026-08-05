@@ -2,27 +2,33 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Female",
+  "gender": "Male",
   "stats": {
-    "str": 17,
-    "dex": 13,
-    "con": 13,
-    "int": 12,
-    "wis": 8,
-    "cha": 8
+    "str": 8,
+    "dex": 9,
+    "con": 10,
+    "int": 13,
+    "wis": 14,
+    "cha": 6
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Persuasion",
-    "Navigator'S Tools",
-    "all armor",
-    "shields",
+    "battleaxes",
+    "handaxes",
+    "light hammers",
+    "warhammers",
+    "Skill: Sleight Of Hand",
+    "Skill: Stealth",
+    "Thieves' Tools",
+    "light armor",
     "simple weapons",
-    "martial weapons",
-    "saving throw: str",
-    "saving throw: con",
-    "Saving Throw: str",
-    "Saving Throw: con"
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "saving throw: dex",
+    "saving throw: cha",
+    "Saving Throw: dex",
+    "Saving Throw: cha"
   ],
   "traits": [
     {
@@ -36,150 +42,108 @@
       }
     },
     {
-      "name": "gnome cunning",
-      "index": "gnome_cunning",
-      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "name": "dwarven resilience",
+      "index": "dwarven_resilience",
+      "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
       "trait_specific": {
         "passive_modifiers": {
           "advantage": [
-            "Intelligence Saving Throws against magic",
-            "Wisdom Saving Throws against magic",
-            "Charisma Saving Throws against magic"
+            {
+              "name": "Saving Throws against poison",
+              "damage_type": {
+                "index": "poison",
+                "name": "poison",
+                "url": "/assets/atlas/damage_types/json/poison.json"
+              }
+            }
+          ],
+          "resistance": [
+            {
+              "index": "poison",
+              "name": "poison",
+              "url": "/assets/atlas/damage_types/json/poison.json"
+            }
           ]
         }
       }
     },
     {
-      "name": "natural illusionist",
-      "index": "natural_illusionist",
-      "desc": "You know the minor illusion cantrip. Intelligence is your spellcasting ability for it.",
-      "trait_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
-        },
-        "spells": [
-          {
-            "spell": {
-              "index": "minor_illusion",
-              "name": "minor illusion",
-              "url": "/assets/atlas/spell/json/minor_illusion.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
-          }
-        ]
-      }
+      "name": "stonecunning",
+      "index": "stonecunning",
+      "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
     },
     {
-      "name": "speak with small beasts",
-      "index": "speak_with_small_beasts",
-      "desc": "Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep guinea pigs, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."
+      "name": "dwarven combat training",
+      "index": "dwarven_combat_training",
+      "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+    },
+    {
+      "name": "tool proficiency",
+      "index": "tool_proficiency",
+      "desc": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+    },
+    {
+      "name": "dwarven toughness",
+      "index": "dwarven_toughness",
+      "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "hp_bonus_per_level": 1
+        }
+      }
     }
   ],
   "features": [
     {
-      "index": "fighter_fighting_style",
+      "index": "spellcasting_bard",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "fighting style",
+      "name": "spellcasting: bard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
       ],
+      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_bard.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
-        "subfeature_options": {
-          "choose": 1,
-          "type": "feature",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_archery",
-                  "name": "fighting style: archery",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_defense",
-                  "name": "fighting style: defense",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_dueling",
-                  "name": "fighting style: dueling",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_great_weapon_fighting",
-                  "name": "fighting style: great weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_protection",
-                  "name": "fighting style: protection",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_two_weapon_fighting",
-                  "name": "fighting style: two_weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
-                }
-              }
-            ]
-          }
-        },
-        "invocations": []
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        }
       },
-      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
       "source": "Class"
     },
     {
-      "index": "second_wind",
+      "index": "bardic_inspiration_d6",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "second wind",
+      "name": "bardic inspiration (d6)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
-        "Once you use this feature, you must finish a short or long rest before you can use it again."
+        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
+        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
       ],
-      "url": "/assets/atlas/features/json/second_wind.json",
-      "updated_at": "2026-07-13T06:30:11.862Z",
-      "image": "/assets/atlas/features/images/second_wind.webp",
+      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
       "feature_specific": {
         "special_action": "bonus_action",
-        "healing": {
-          "dice": "1d10",
-          "modifier": "fighter_level"
+        "attack_die": "1d6",
+        "usage": {
+          "type": "charisma_modifier",
+          "recovery": "long_rest"
         }
       },
       "source": "Class"
@@ -207,40 +171,40 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_s90htjkwk": {
-      "id": "leather_armor_s90htjkwk",
+    "leather_armor_wp3okmay8": {
+      "id": "leather_armor_wp3okmay8",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1785863479566,
+      "addedAt": 1785951102441,
       "kind": "armor"
     },
-    "longbow_n17syr6og": {
-      "id": "longbow_n17syr6og",
-      "template": "longbow",
+    "dagger_jtrew1zm9": {
+      "id": "dagger_jtrew1zm9",
+      "template": "dagger",
       "quantity": 1,
-      "addedAt": 1785863479646,
+      "addedAt": 1785951102442,
       "kind": "weapon"
     },
-    "arrow_qlxwgaezh": {
-      "id": "arrow_qlxwgaezh",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1785863479649,
-      "kind": "consumable"
-    },
-    "morningstar_dj88kibce": {
-      "id": "morningstar_dj88kibce",
-      "template": "morningstar",
+    "quarterstaff_x784b6ron": {
+      "id": "quarterstaff_x784b6ron",
+      "template": "quarterstaff",
       "quantity": 1,
-      "addedAt": 1785863497585,
+      "addedAt": 1785951213919,
       "kind": "weapon"
     },
-    "handaxe_ojhtog9cp": {
-      "id": "handaxe_ojhtog9cp",
-      "template": "handaxe",
-      "quantity": 2,
-      "addedAt": 1785863508936,
-      "kind": "weapon"
+    "entertainers_pack_trzej51to": {
+      "id": "entertainers_pack_trzej51to",
+      "template": "entertainers_pack",
+      "quantity": 1,
+      "addedAt": 1785951227031,
+      "kind": "container"
+    },
+    "horn_9pp1eu51e": {
+      "id": "horn_9pp1eu51e",
+      "template": "horn",
+      "quantity": 1,
+      "addedAt": 1785951249213,
+      "kind": "adventuring_gear"
     }
   },
   "containers": {
@@ -251,35 +215,35 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_qlxwgaezh"
+          "itemId": "horn_9pp1eu51e"
         },
         {
           "id": "bag_1",
-          "itemId": "leather_armor_69za7ekf2"
+          "itemId": "quarterstaff_o72cosdzw"
         },
         {
           "id": "bag_2",
-          "itemId": "longbow_dtiq9k6he"
+          "itemId": "entertainers_pack_trzej51to"
         },
         {
           "id": "bag_3",
-          "itemId": "arrow_mt1i7at2i"
+          "itemId": "entertainers_pack_0c6z8z8lu"
         },
         {
           "id": "bag_4",
-          "itemId": "morningstar_dj88kibce"
+          "itemId": "dagger_jtrew1zm9"
         },
         {
           "id": "bag_5",
-          "itemId": "morningstar_6hoc67og3"
+          "itemId": "horn_ncgj7eo05"
         },
         {
           "id": "bag_6",
-          "itemId": "handaxe_ojhtog9cp"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "handaxe_izwk179rg"
+          "itemId": null
         },
         {
           "id": "bag_8",
@@ -353,7 +317,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_n17syr6og"
+        "itemId": "quarterstaff_x784b6ron"
       },
       {
         "id": "off_hand",
@@ -369,7 +333,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_s90htjkwk"
+        "itemId": "leather_armor_wp3okmay8"
       },
       {
         "id": "clothes",
@@ -471,127 +435,69 @@
   },
   "backpack": [
     {
-      "id": "navigators_tools_rph90ucnd",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
     },
     {
-      "id": "abacus_ba2fnslmv",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
     },
     {
-      "id": "pouch_v3mblsxt9",
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
       "index": "pouch",
       "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
+      "quantity": 2
     },
     {
-      "id": "clothes_travelers_kgsa1yqp7",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_8c4cvaq6m",
       "index": "gold",
       "name": "Gold",
-      "quantity": 22,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear"
+      "quantity": 16
     }
   ],
   "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
-    "gnomish"
+    "dwarvish"
   ],
   "preparedSpells": [],
-  "spellSlots": {},
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {
-    "fighter_fighting_style": [
-      "fighter_fighting_style_two_weapon_fighting"
-    ],
     "skills": [
       "Insight",
-      "Athletics"
+      "Arcana"
     ]
   },
-  "race": "gnome",
-  "subrace": "forest_gnome",
-  "class": "fighter",
+  "race": "dwarf",
+  "subrace": "hill_dwarf",
+  "class": "bard",
   "spellcastingAbility": "cha",
-  "background": "merchant",
-  "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/FighterShield.webp",
-  "name": "jv",
+  "background": "criminal",
+  "alignment": "lawful_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
+  "name": "km",
   "id": "slot3",
   "hp": 6,
   "maxHp": 6,
@@ -601,5 +507,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-04T17:13:36.003Z"
+  "lastSaved": "2026-08-05T17:36:00.925Z"
 }
