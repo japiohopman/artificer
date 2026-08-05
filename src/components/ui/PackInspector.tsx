@@ -19,6 +19,7 @@ export const PackInspector: React.FC<PackInspectorProps> = ({ pack, onClose }) =
   const [loading, setLoading] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any | null>(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const [takenQuantities, setTakenQuantities] = useState<Record<string, number>>({});
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Load sub-items metadata
@@ -122,8 +123,35 @@ export const PackInspector: React.FC<PackInspectorProps> = ({ pack, onClose }) =
     return val;
   };
 
-  // Calculations for Footer
-  const contentsWeight = packItems.reduce((acc, item) => acc + ((item.weight || 0) * (item.quantity || 1)), 0);
+  // Simulated take/store handlers
+  const handleTakeItem = (itemTemplate: string) => {
+    const item = packItems.find(i => i.template === itemTemplate);
+    if (!item) return;
+    const maxQty = item.quantity || 1;
+    const currentTaken = takenQuantities[itemTemplate] || 0;
+    if (currentTaken < maxQty) {
+      setTakenQuantities(prev => ({
+        ...prev,
+        [itemTemplate]: currentTaken + 1
+      }));
+    }
+  };
+
+  const handleStoreItem = (itemTemplate: string) => {
+    const currentTaken = takenQuantities[itemTemplate] || 0;
+    if (currentTaken > 0) {
+      setTakenQuantities(prev => ({
+        ...prev,
+        [itemTemplate]: currentTaken - 1
+      }));
+    }
+  };
+
+  // Calculations for Footer & Cargo representation
+  const contentsWeight = packItems.reduce((acc, item) => {
+    const qtyLeft = (item.quantity || 1) - (takenQuantities[item.template] || 0);
+    return acc + ((item.weight || 0) * qtyLeft);
+  }, 0);
   const totalWeight = (pack.weight || 0) + contentsWeight;
 
   const currentInspected = selectedItem || pack;
@@ -139,7 +167,7 @@ export const PackInspector: React.FC<PackInspectorProps> = ({ pack, onClose }) =
         <motion.div
           ref={cardRef}
           layoutId={`item-image-${pack.index || pack.name}`}
-          className="relative w-full max-w-[280px] md:max-w-[320px] aspect-[2/3] flex items-center justify-center group/card"
+          className="relative w-full max-w-[240px] md:max-w-[280px] aspect-[9/16] flex items-center justify-center group/card"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{
@@ -227,50 +255,103 @@ export const PackInspector: React.FC<PackInspectorProps> = ({ pack, onClose }) =
                 <span className="text-[9px] font-bold text-dragon-gold/70 uppercase tracking-widest">Unpacking Provisions...</span>
               </div>
             ) : (
-              <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 grid grid-cols-4 gap-2">
-                {packItems.map((item, idx) => {
-                  const isSelected = selectedItem?.template === item.template;
-                  const itemCategory = item.equipment_category?.index || item.equipment_category || '';
-                  const itemIconName = (typeof itemCategory === 'object' ? itemCategory.index : String(itemCategory)).replace(/-/g, '_');
+              <div className="flex-1 flex flex-col min-h-0">
+                <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 grid grid-cols-4 gap-2">
+                  {packItems.map((item, idx) => {
+                    const isSelected = selectedItem?.template === item.template;
+                    const itemCategory = item.equipment_category?.index || item.equipment_category || '';
+                    const itemIconName = (typeof itemCategory === 'object' ? itemCategory.index : String(itemCategory)).replace(/-/g, '_');
+                    const totalQty = item.quantity || 1;
+                    const takenQty = takenQuantities[item.template] || 0;
+                    const qtyLeft = totalQty - takenQty;
 
-                  return (
-                    <button
-                      key={`${item.template}-${idx}`}
-                      onClick={() => setSelectedItem(item)}
-                      className={cn(
-                        "aspect-square rounded border transition-all relative flex flex-col items-center justify-center p-1 overflow-hidden shadow-sm hover:scale-[1.03]",
-                        isSelected
-                          ? "bg-dragon-darkRed/95 border-dragon-gold ring-2 ring-dragon-gold/30 z-10"
-                          : "bg-white/75 border-[#c5a059]/20 hover:border-dragon-red/30 hover:bg-white"
-                      )}
-                    >
-                      {/* Item Image or Fallback Icon */}
-                      <div className="w-full h-full flex items-center justify-center overflow-hidden relative p-0.5">
-                        {item.imageUrl ? (
-                          <ChromaKeyImage
-                            src={normalizeImageUrl(item.imageUrl, 'equipment', item.template)}
-                            alt={item.name}
-                            className="h-[90%] w-auto object-contain transition-transform group-hover:scale-105"
-                          />
-                        ) : (
-                          <GameIcon name={itemIconName as any || 'loot'} size={18} color={isSelected ? "#FFF" : "#8B0000"} className="opacity-40" />
-                        )}
-                      </div>
-
-                      {/* Quantity Badge */}
-                      {item.quantity > 1 && (
-                        <div className={cn(
-                          "absolute bottom-0.5 right-0.5 px-1.5 py-0.5 rounded-full text-[8px] font-anton tracking-wider shadow border",
+                    return (
+                      <button
+                        key={`${item.template}-${idx}`}
+                        onClick={() => setSelectedItem(item)}
+                        className={cn(
+                          "aspect-square rounded border transition-all relative flex flex-col items-center justify-center p-1 overflow-hidden shadow-sm hover:scale-[1.03]",
                           isSelected
-                            ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold/40"
-                            : "bg-dragon-darkRed text-white border-white/10"
-                        )}>
-                          x{item.quantity}
+                            ? "bg-dragon-darkRed/95 border-dragon-gold ring-2 ring-dragon-gold/30 z-10"
+                            : "bg-white/75 border-[#c5a059]/20 hover:border-dragon-red/30 hover:bg-white",
+                          qtyLeft === 0 && "opacity-40 grayscale"
+                        )}
+                      >
+                        {/* Item Image or Fallback Icon */}
+                        <div className="w-full h-full flex items-center justify-center overflow-hidden relative p-0.5">
+                          {item.imageUrl ? (
+                            <ChromaKeyImage
+                              src={normalizeImageUrl(item.imageUrl, 'equipment', item.template)}
+                              alt={item.name}
+                              className="h-[90%] w-auto object-contain transition-transform group-hover:scale-105"
+                            />
+                          ) : (
+                            <GameIcon name={itemIconName as any || 'loot'} size={18} color={isSelected ? "#FFF" : "#8B0000"} className="opacity-40" />
+                          )}
                         </div>
-                      )}
-                    </button>
-                  );
-                })}
+
+                        {/* Pocket/Taken Indicator Badge */}
+                        {takenQty > 0 && (
+                          <div className="absolute top-0.5 left-0.5 bg-yellow-600 border border-dragon-gold/30 text-white rounded-full w-4 h-4 flex items-center justify-center text-[7px] font-black shadow-sm">
+                            +{takenQty}
+                          </div>
+                        )}
+
+                        {/* Quantity Badge */}
+                        {qtyLeft > 0 && (
+                          <div className={cn(
+                            "absolute bottom-0.5 right-0.5 px-1.5 py-0.5 rounded-full text-[8px] font-anton tracking-wider shadow border",
+                            isSelected
+                              ? "bg-dragon-gold text-dragon-darkRed border-dragon-gold/40"
+                              : "bg-dragon-darkRed text-white border-white/10"
+                          )}>
+                            x{qtyLeft}
+                          </div>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Pocket items list */}
+                {Object.values(takenQuantities).some(q => q > 0) && (
+                  <div className="mt-4 pt-3 border-t border-dragon-gold/20 shrink-0">
+                    <h4 className="text-[9px] font-black text-yellow-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                      <GameIcon name="pocket" size={12} color="#B5A642" /> Simulated Pocket ({Object.values(takenQuantities).reduce((a, b) => a + b, 0)} items)
+                    </h4>
+                    <div className="flex gap-2 overflow-x-auto custom-scrollbar pb-1">
+                      {packItems.map((item, idx) => {
+                        const takenQty = takenQuantities[item.template] || 0;
+                        if (takenQty === 0) return null;
+                        const itemCategory = item.equipment_category?.index || item.equipment_category || '';
+                        const itemIconName = (typeof itemCategory === 'object' ? itemCategory.index : String(itemCategory)).replace(/-/g, '_');
+
+                        return (
+                          <button
+                            key={`pocket-${item.template}-${idx}`}
+                            onClick={() => setSelectedItem(item)}
+                            className="w-12 h-12 shrink-0 rounded border bg-amber-50/50 border-yellow-600/30 flex flex-col items-center justify-center relative hover:scale-[1.03] transition-all"
+                          >
+                            <div className="w-full h-full flex items-center justify-center overflow-hidden p-0.5 opacity-85">
+                              {item.imageUrl ? (
+                                <ChromaKeyImage
+                                  src={normalizeImageUrl(item.imageUrl, 'equipment', item.template)}
+                                  alt={item.name}
+                                  className="h-[80%] w-auto object-contain"
+                                />
+                              ) : (
+                                <GameIcon name={itemIconName as any || 'loot'} size={14} color="#B5A642" />
+                              )}
+                            </div>
+                            <div className="absolute -bottom-1 -right-1 bg-yellow-600 border border-white/20 text-white rounded-full px-1.5 py-0.2 text-[7px] font-black shadow">
+                              x{takenQty}
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -297,6 +378,34 @@ export const PackInspector: React.FC<PackInspectorProps> = ({ pack, onClose }) =
                 </span>
               </div>
             </div>
+
+            {/* Simulated Take/Store controls */}
+            {selectedItem && (
+              <div className="bg-white/80 border border-dragon-gold/30 rounded p-2 mb-3 flex items-center justify-between shrink-0 shadow-sm">
+                <div className="flex flex-col">
+                  <span className="text-[7px] font-black uppercase text-[#8B0000] tracking-wider">Simulated Pocket</span>
+                  <span className="text-[10px] font-bold text-stone-700">
+                    In Pack: {(selectedItem.quantity || 1) - (takenQuantities[selectedItem.template] || 0)} left &bull; Taken: {takenQuantities[selectedItem.template] || 0}
+                  </span>
+                </div>
+                <div className="flex gap-1.5">
+                  <button
+                    onClick={() => handleStoreItem(selectedItem.template)}
+                    disabled={!(takenQuantities[selectedItem.template] > 0)}
+                    className="px-2 py-1 text-[8px] font-black uppercase bg-stone-200 hover:bg-stone-300 disabled:opacity-30 text-stone-800 rounded transition-all flex items-center gap-1 border border-stone-300 shadow-sm active:scale-95"
+                  >
+                    Store 1
+                  </button>
+                  <button
+                    onClick={() => handleTakeItem(selectedItem.template)}
+                    disabled={!((selectedItem.quantity || 1) - (takenQuantities[selectedItem.template] || 0) > 0)}
+                    className="px-2 py-1 text-[8px] font-black uppercase bg-dragon-darkRed hover:bg-dragon-red disabled:opacity-30 text-white rounded transition-all flex items-center gap-1 border border-dragon-red shadow-sm active:scale-95"
+                  >
+                    Take 1
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* Scrollable description box */}
             <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 min-h-0">

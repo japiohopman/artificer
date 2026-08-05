@@ -141,7 +141,7 @@ potion_of_climbing.webp
 potion_of_diminution.webp
 potion_of_gaseous_form.webp
 potion_of_giant_strength.webp
-potion_of_giant_strength_cloud.webp
+potion_of_giant_strength_cloud
 potion_of_giant_strength_fire.webp
 potion_of_giant_strength_frost.webp
 potion_of_giant_strength_hill.webp
@@ -152,7 +152,7 @@ potion_of_healing.webp
 potion_of_healing_greater.webp
 potion_of_healing_superior.webp
 potion_of_healing_supreme.webp
-potion_of_heroism.webp
+potion_of_herosism.webp
 potion_of_invisibility.webp
 potion_of_mind_reading.webp
 potion_of_poison.webp
