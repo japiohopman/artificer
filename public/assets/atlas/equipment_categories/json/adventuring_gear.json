@@ -38,6 +38,26 @@
       "url": "/assets/atlas/equipment/json/14/ammunition/arrow.json"
     },
     {
+      "index": "arrow-1",
+      "name": "arrow +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-1.json"
+    },
+    {
+      "index": "arrow-2",
+      "name": "arrow +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-2.json"
+    },
+    {
+      "index": "arrow-3",
+      "name": "arrow +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-3.json"
+    },
+    {
+      "index": "arrow-of-slaying",
+      "name": "arrow of slaying",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-of-slaying.json"
+    },
+    {
       "index": "backpack",
       "name": "backpack",
       "url": "/assets/atlas/equipment/json/backpack.json"
@@ -93,6 +113,16 @@
       "url": "/assets/atlas/equipment/json/14/loot/book.json"
     },
     {
+      "index": "book-of-lore",
+      "name": "book of lore",
+      "url": "/assets/atlas/equipment/json/14/loot/book-of-lore.json"
+    },
+    {
+      "index": "book-of-shadows",
+      "name": "book of shadows",
+      "url": "/assets/atlas/equipment/json/14/loot/book-of-shadows.json"
+    },
+    {
       "index": "bottle_glass",
       "name": "bottle, glass",
       "url": "/assets/atlas/equipment/json/bottle_glass.json"
@@ -116,6 +146,11 @@
       "index": "candle",
       "name": "candle",
       "url": "/assets/atlas/equipment/json/14/trinket/candle.json"
+    },
+    {
+      "index": "candle-of-invocation",
+      "name": "candle of invocation",
+      "url": "/assets/atlas/equipment/json/14/trinket/candle-of-invocation.json"
     },
     {
       "index": "case_crossbow_bolt",
@@ -186,6 +221,21 @@
       "index": "crossbow-bolt",
       "name": "crossbow bolt",
       "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt.json"
+    },
+    {
+      "index": "crossbow-bolt-1",
+      "name": "crossbow bolt +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-1.json"
+    },
+    {
+      "index": "crossbow-bolt-2",
+      "name": "crossbow bolt +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-2.json"
+    },
+    {
+      "index": "crossbow-bolt-3",
+      "name": "crossbow bolt +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-3.json"
     },
     {
       "index": "crowbar",
@@ -538,16 +588,6 @@
       "url": "/assets/atlas/equipment/json/scholars_pack.json"
     },
     {
-      "index": "scroll_case",
-      "name": "scroll case",
-      "url": "/assets/atlas/equipment/json/scroll_case.json"
-    },
-    {
-      "index": "scroll_of_pedigree",
-      "name": "scroll of pedigree",
-      "url": "/assets/atlas/equipment/json/scroll_of_pedigree.json"
-    },
-    {
       "index": "sealing-wax",
       "name": "sealing wax",
       "url": "/assets/atlas/equipment/json/14/loot/sealing-wax.json"
@@ -571,6 +611,26 @@
       "index": "sling-bullet",
       "name": "sling bullet",
       "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet.json"
+    },
+    {
+      "index": "sling-bullet-1",
+      "name": "sling bullet +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-1.json"
+    },
+    {
+      "index": "sling-bullet-2",
+      "name": "sling bullet +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-2.json"
+    },
+    {
+      "index": "sling-bullet-3",
+      "name": "sling bullet +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-3.json"
+    },
+    {
+      "index": "sling-bullet-of-slaying",
+      "name": "sling bullet of slaying",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-of-slaying.json"
     },
     {
       "index": "small-knife",
@@ -704,6 +764,6 @@
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/adventuring_gear.json",
-  "updated_at": "2026-08-06T03:55:02.915Z",
+  "updated_at": "2026-08-06T08:05:24.048Z",
   "image": "/assets/atlas/equipment_categories/adventuring_gear.webp"
 }

@@ -6,9 +6,29 @@
       "index": "shield",
       "name": "shield",
       "url": "/assets/atlas/equipment/json/14/armor/shield.json"
+    },
+    {
+      "index": "shield-1",
+      "name": "shield +1",
+      "url": "/assets/atlas/equipment/json/14/armor/shield-1.json"
+    },
+    {
+      "index": "shield-2",
+      "name": "shield +2",
+      "url": "/assets/atlas/equipment/json/14/armor/shield-2.json"
+    },
+    {
+      "index": "shield-3",
+      "name": "shield +3",
+      "url": "/assets/atlas/equipment/json/14/armor/shield-3.json"
+    },
+    {
+      "index": "shield-of-missile-attraction",
+      "name": "shield of missile attraction",
+      "url": "/assets/atlas/equipment/json/14/armor/shield-of-missile-attraction.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/shields.json",
-  "updated_at": "2026-08-06T03:55:02.940Z",
+  "updated_at": "2026-08-06T08:05:24.074Z",
   "image": "/assets/atlas/equipment_categories/shields.webp"
 }

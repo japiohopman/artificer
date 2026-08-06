@@ -8,6 +8,26 @@
       "url": "/assets/atlas/equipment/json/14/ammunition/arrow.json"
     },
     {
+      "index": "arrow-1",
+      "name": "arrow +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-1.json"
+    },
+    {
+      "index": "arrow-2",
+      "name": "arrow +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-2.json"
+    },
+    {
+      "index": "arrow-3",
+      "name": "arrow +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-3.json"
+    },
+    {
+      "index": "arrow-of-slaying",
+      "name": "arrow of slaying",
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-of-slaying.json"
+    },
+    {
       "index": "blowgun-needle",
       "name": "blowgun needle",
       "url": "/assets/atlas/equipment/json/14/ammunition/blowgun-needle.json"
@@ -18,37 +38,47 @@
       "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt.json"
     },
     {
+      "index": "crossbow-bolt-1",
+      "name": "crossbow bolt +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-1.json"
+    },
+    {
+      "index": "crossbow-bolt-2",
+      "name": "crossbow bolt +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-2.json"
+    },
+    {
+      "index": "crossbow-bolt-3",
+      "name": "crossbow bolt +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt-3.json"
+    },
+    {
       "index": "sling-bullet",
       "name": "sling bullet",
       "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet.json"
     },
     {
-      "index": "ammunition",
-      "name": "ammunition, +1, +2, or +3",
-      "url": "/assets/atlas/magic_items/json/ammunition.json"
+      "index": "sling-bullet-1",
+      "name": "sling bullet +1",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-1.json"
     },
     {
-      "index": "arrow-of-slaying",
-      "name": "arrow of slaying",
-      "url": "/assets/atlas/equipment/json/14/ammunition/arrow-of-slaying.json"
+      "index": "sling-bullet-2",
+      "name": "sling bullet +2",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-2.json"
     },
     {
-      "index": "ammunition_1",
-      "name": "ammunition, +1",
-      "url": "/assets/atlas/magic_items/json/ammunition_1.json"
+      "index": "sling-bullet-3",
+      "name": "sling bullet +3",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-3.json"
     },
     {
-      "index": "ammunition_2",
-      "name": "ammunition, +2",
-      "url": "/assets/atlas/magic_items/json/ammunition_2.json"
-    },
-    {
-      "index": "ammunition_3",
-      "name": "ammunition, +3",
-      "url": "/assets/atlas/magic_items/json/ammunition_3.json"
+      "index": "sling-bullet-of-slaying",
+      "name": "sling bullet of slaying",
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet-of-slaying.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/ammunition.json",
-  "updated_at": "2026-08-06T03:55:02.925Z",
+  "updated_at": "2026-08-06T08:05:24.055Z",
   "image": "/assets/atlas/equipment_categories/ammunition.webp"
 }

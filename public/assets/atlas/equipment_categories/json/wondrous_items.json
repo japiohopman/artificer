@@ -178,6 +178,21 @@
       "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball.json"
     },
     {
+      "index": "crystal-ball-of-mind-reading",
+      "name": "crystal ball of mind reading",
+      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-mind-reading.json"
+    },
+    {
+      "index": "crystal-ball-of-telepathy",
+      "name": "crystal ball of telepathy",
+      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-telepathy.json"
+    },
+    {
+      "index": "crystal-ball-of-true-seeing",
+      "name": "crystal ball of true seeing",
+      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-true-seeing.json"
+    },
+    {
       "index": "cube-of-force",
       "name": "cube of force",
       "url": "/assets/atlas/equipment/json/14/trinket/cube-of-force.json"
@@ -668,21 +683,6 @@
       "url": "/assets/atlas/equipment/json/14/trinket/carpet-of-flying-6x9.json"
     },
     {
-      "index": "crystal-ball-of-mind-reading",
-      "name": "crystal ball of mind reading",
-      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-mind-reading.json"
-    },
-    {
-      "index": "crystal-ball-of-telepathy",
-      "name": "crystal ball of telepathy",
-      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-telepathy.json"
-    },
-    {
-      "index": "crystal-ball-of-true-seeing",
-      "name": "crystal ball of true seeing",
-      "url": "/assets/atlas/equipment/json/14/trinket/crystal-ball-of-true-seeing.json"
-    },
-    {
       "index": "elemental_gem_air",
       "name": "air elemental gem",
       "url": "/assets/atlas/magic_items/json/elemental_gem_air.json"
@@ -889,6 +889,6 @@
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/wondrous_items.json",
-  "updated_at": "2026-08-06T03:55:02.946Z",
+  "updated_at": "2026-08-06T08:05:24.083Z",
   "image": "/assets/atlas/equipment_categories/wondrous_items.webp"
 }

@@ -8,6 +8,21 @@
       "url": "/assets/atlas/equipment/json/14/weapon/blowgun.json"
     },
     {
+      "index": "blowgun-1",
+      "name": "blowgun +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-1.json"
+    },
+    {
+      "index": "blowgun-2",
+      "name": "blowgun +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-2.json"
+    },
+    {
+      "index": "blowgun-3",
+      "name": "blowgun +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-3.json"
+    },
+    {
       "index": "crossbow_hand",
       "name": "crossbow, hand",
       "url": "/assets/atlas/equipment/json/crossbow_hand.json"
@@ -23,12 +38,42 @@
       "url": "/assets/atlas/equipment/json/14/weapon/longbow.json"
     },
     {
+      "index": "longbow-1",
+      "name": "longbow +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-1.json"
+    },
+    {
+      "index": "longbow-2",
+      "name": "longbow +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-2.json"
+    },
+    {
+      "index": "longbow-3",
+      "name": "longbow +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-3.json"
+    },
+    {
       "index": "net",
       "name": "net",
       "url": "/assets/atlas/equipment/json/14/weapon/net.json"
+    },
+    {
+      "index": "net-1",
+      "name": "net +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-1.json"
+    },
+    {
+      "index": "net-2",
+      "name": "net +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-2.json"
+    },
+    {
+      "index": "net-3",
+      "name": "net +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-3.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/martial_ranged_weapons.json",
-  "updated_at": "2026-08-06T03:55:02.933Z",
+  "updated_at": "2026-08-06T08:05:24.066Z",
   "image": "/assets/atlas/equipment_categories/martial_ranged_weapons.webp"
 }

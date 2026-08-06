@@ -22,15 +22,15 @@ function walkSync(dir) {
 }
 
 function run() {
-  console.log('Starting equipment category regeneration...');
+  console.log('Starting equipment category regeneration with tiered expansions...');
 
-  // 1. Scan all equipment JSON files under 14 and 24 to build a directory map
   const equipmentFiles = walkSync(EQUIPMENT_DIR);
   console.log(`Found ${equipmentFiles.length} equipment JSON files.`);
 
   // Mapping from normalized index (hyphen-based) to best path info
-  // { normalizedKey: { path14, path24, anyPath, name } }
   const mappingDb = {};
+  // Files grouped by directory
+  const filesByFolder = {};
 
   equipmentFiles.forEach(filePath => {
     try {
@@ -41,43 +41,59 @@ function run() {
       const fileNameWithoutExt = path.basename(filePath, '.json');
       const itemIndex = data.index || fileNameWithoutExt;
 
-      // Normalized key: replace all underscores with hyphens
       const normalizedKey = itemIndex.toLowerCase().replace(/_/g, '-');
+      const folderPath = path.dirname(filePath);
 
       const is14 = relativePath.includes('/14/');
       const is24 = relativePath.includes('/24/');
       const isPack = relativePath.includes('/equipment-packs/');
 
+      const itemEntry = {
+        normalizedIndex: normalizedKey,
+        path: relativePath,
+        name: data.name || itemIndex.replace(/[-_]/g, ' '),
+        is14,
+        is24,
+        isPack
+      };
+
+      // Add to folder-based files
+      if (!filesByFolder[folderPath]) {
+        filesByFolder[folderPath] = [];
+      }
+      filesByFolder[folderPath].push(itemEntry);
+
+      // Build database of best paths
       if (!mappingDb[normalizedKey]) {
         mappingDb[normalizedKey] = {
           path14: null,
           path24: null,
           anyPath: relativePath,
-          name: data.name || itemIndex.replace(/[-_]/g, ' ')
+          name: itemEntry.name,
+          folderPath: folderPath
         };
       }
 
       const entry = mappingDb[normalizedKey];
 
       if (isPack) {
-        // Only map if no other path has been mapped
         if (!entry.path14 && !entry.path24 && entry.anyPath === relativePath) {
           if (is14) entry.path14 = relativePath;
           if (is24) entry.path24 = relativePath;
         }
       } else {
-        // Non-pack path: prioritizes this!
         if (is14) {
           if (!entry.path14 || entry.path14.includes('/equipment-packs/')) {
             entry.path14 = relativePath;
+            entry.folderPath = folderPath; // Prefer 14 directory for expansion folder
           }
         }
         if (is24) {
           if (!entry.path24 || entry.path24.includes('/equipment-packs/')) {
             entry.path24 = relativePath;
+            if (!entry.path14) entry.folderPath = folderPath;
           }
         }
-        // Fallback anyPath should also be non-pack if possible
         if (entry.anyPath.includes('/equipment-packs/') || entry.anyPath === relativePath) {
           entry.anyPath = relativePath;
         }
@@ -87,7 +103,6 @@ function run() {
     }
   });
 
-  // 2. Read and update all categories
   if (!fs.existsSync(CATEGORIES_DIR)) {
     console.error(`Categories directory ${CATEGORIES_DIR} does not exist!`);
     return;
@@ -106,30 +121,65 @@ function run() {
       const categoryData = JSON.parse(content);
 
       if (categoryData && Array.isArray(categoryData.equipment)) {
-        categoryData.equipment = categoryData.equipment.map(item => {
+        const newEquipmentList = [];
+        const addedIndices = new Set();
+
+        categoryData.equipment.forEach(item => {
           const originalIndex = item.index;
-          // Normalize key
           const normalizedKey = originalIndex.toLowerCase().replace(/_/g, '-');
 
           const entry = mappingDb[normalizedKey];
           if (entry) {
-            // Choose path14 as preferred, fallback to path24, then anyPath
             const bestPath = entry.path14 || entry.path24 || entry.anyPath;
-            totalUpdatedItems++;
-            return {
-              index: normalizedKey, // Convert index to standard hyphen-based format
-              name: item.name || entry.name,
-              url: bestPath
-            };
+            
+            // Add base item if not already added
+            if (!addedIndices.has(normalizedKey)) {
+              newEquipmentList.push({
+                index: normalizedKey,
+                name: item.name || entry.name,
+                url: bestPath
+              });
+              addedIndices.add(normalizedKey);
+              totalUpdatedItems++;
+            }
+
+            // Find and append variants (+1, +2, +3, etc.) located in the same folder
+            if (entry.folderPath && filesByFolder[entry.folderPath]) {
+              const folderItems = filesByFolder[entry.folderPath];
+              folderItems.forEach(folderItem => {
+                const varIndex = folderItem.normalizedIndex;
+                if (varIndex.startsWith(normalizedKey + '-') && !addedIndices.has(varIndex)) {
+                  newEquipmentList.push({
+                    index: varIndex,
+                    name: folderItem.name,
+                    url: folderItem.path
+                  });
+                  addedIndices.add(varIndex);
+                  totalUpdatedItems++;
+                }
+              });
+            }
           } else {
-            console.warn(`[WARN] No matching file found for category item "${originalIndex}" in category "${categoryData.index}"`);
-            totalMissingItems++;
-            // Keep item but normalize its URL if we can guess, or keep as is
-            return item;
+            // Check if this is a known placeholder to filter out
+            const isGenericPlaceholder = ['ammunition', 'armor', 'weapon', 'shield', 'ring', 'scroll', 'potion', 'rod', 'staff', 'wand'].some(placeholder => 
+              normalizedKey === placeholder || 
+              normalizedKey.startsWith(placeholder + '-') || 
+              normalizedKey.startsWith(placeholder + '_')
+            );
+
+            if (isGenericPlaceholder) {
+              console.log(`Filtering out old generic placeholder: "${originalIndex}" in category "${categoryData.index}"`);
+            } else {
+              // Keep unresolvable custom items to be safe, but log warning
+              console.warn(`[WARN] No matching file found for custom category item "${originalIndex}" in category "${categoryData.index}"`);
+              newEquipmentList.push(item);
+              totalMissingItems++;
+            }
           }
         });
 
-        // Set category file's own URL path to match public prefix
+        // Set category metadata
+        categoryData.equipment = newEquipmentList;
         const catRelativePath = '/' + path.relative(path.join(__dirname, '../public'), filePath).replace(/\\/g, '/');
         categoryData.url = catRelativePath;
         categoryData.updated_at = new Date().toISOString();
@@ -142,9 +192,9 @@ function run() {
   });
 
   console.log(`\nCategory regeneration completed.`);
-  console.log(`Successfully mapped and updated ${totalUpdatedItems} equipment references in categories.`);
+  console.log(`Successfully mapped and updated/expanded ${totalUpdatedItems} equipment references in categories.`);
   if (totalMissingItems > 0) {
-    console.log(`Could not find standard files for ${totalMissingItems} category items (logged above).`);
+    console.log(`Could not find files for ${totalMissingItems} custom category items.`);
   }
 }
 

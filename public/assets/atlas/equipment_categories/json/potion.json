@@ -133,11 +133,6 @@
       "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-storm.json"
     },
     {
-      "index": "potion_of_healing_common",
-      "name": "potion of healing",
-      "url": "/assets/atlas/magic_items/json/potion_of_healing_common.json"
-    },
-    {
       "index": "potion-of-healing-greater",
       "name": "potion of greater healing",
       "url": "/assets/atlas/equipment/json/24/consumables/potions/healing/potion-of-healing-greater.json"
@@ -151,59 +146,9 @@
       "index": "potion-of-healing-supreme",
       "name": "potion of supreme healing",
       "url": "/assets/atlas/equipment/json/24/consumables/potions/healing/potion-of-healing-supreme.json"
-    },
-    {
-      "index": "potion_of_resistance_acid",
-      "name": "potion of acid resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_acid.json"
-    },
-    {
-      "index": "potion_of_resistance_cold",
-      "name": "potion of cold resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_cold.json"
-    },
-    {
-      "index": "potion_of_resistance_fire",
-      "name": "potion of fire resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_fire.json"
-    },
-    {
-      "index": "potion_of_resistance_force",
-      "name": "potion of force resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_force.json"
-    },
-    {
-      "index": "potion_of_resistance_lightning",
-      "name": "potion of lightning resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_lightning.json"
-    },
-    {
-      "index": "potion_of_resistance_necrotic",
-      "name": "potion of necrotic resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_necrotic.json"
-    },
-    {
-      "index": "potion_of_resistance_poison",
-      "name": "potion of poison resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_poison.json"
-    },
-    {
-      "index": "potion_of_resistance_psychic",
-      "name": "potion of psychic resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_psychic.json"
-    },
-    {
-      "index": "potion_of_resistance_radiant",
-      "name": "potion of radiant resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_radiant.json"
-    },
-    {
-      "index": "potion_of_resistance_thunder",
-      "name": "potion of thunder resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance_thunder.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/potion.json",
-  "updated_at": "2026-08-06T03:55:02.937Z",
+  "updated_at": "2026-08-06T08:05:24.072Z",
   "image": "/assets/atlas/equipment_categories/potion.webp"
 }

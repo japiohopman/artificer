@@ -8,6 +8,21 @@
       "url": "/assets/atlas/equipment/json/14/weapon/blowgun.json"
     },
     {
+      "index": "blowgun-1",
+      "name": "blowgun +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-1.json"
+    },
+    {
+      "index": "blowgun-2",
+      "name": "blowgun +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-2.json"
+    },
+    {
+      "index": "blowgun-3",
+      "name": "blowgun +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/blowgun-3.json"
+    },
+    {
       "index": "crossbow_hand",
       "name": "crossbow, hand",
       "url": "/assets/atlas/equipment/json/crossbow_hand.json"
@@ -28,9 +43,39 @@
       "url": "/assets/atlas/equipment/json/14/weapon/dart.json"
     },
     {
+      "index": "dart-1",
+      "name": "dart +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/dart-1.json"
+    },
+    {
+      "index": "dart-2",
+      "name": "dart +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/dart-2.json"
+    },
+    {
+      "index": "dart-3",
+      "name": "dart +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/dart-3.json"
+    },
+    {
       "index": "longbow",
       "name": "longbow",
       "url": "/assets/atlas/equipment/json/14/weapon/longbow.json"
+    },
+    {
+      "index": "longbow-1",
+      "name": "longbow +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-1.json"
+    },
+    {
+      "index": "longbow-2",
+      "name": "longbow +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-2.json"
+    },
+    {
+      "index": "longbow-3",
+      "name": "longbow +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/longbow-3.json"
     },
     {
       "index": "net",
@@ -38,17 +83,62 @@
       "url": "/assets/atlas/equipment/json/14/weapon/net.json"
     },
     {
+      "index": "net-1",
+      "name": "net +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-1.json"
+    },
+    {
+      "index": "net-2",
+      "name": "net +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-2.json"
+    },
+    {
+      "index": "net-3",
+      "name": "net +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/net-3.json"
+    },
+    {
       "index": "shortbow",
       "name": "shortbow",
       "url": "/assets/atlas/equipment/json/14/weapon/shortbow.json"
     },
     {
+      "index": "shortbow-1",
+      "name": "shortbow +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/shortbow-1.json"
+    },
+    {
+      "index": "shortbow-2",
+      "name": "shortbow +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/shortbow-2.json"
+    },
+    {
+      "index": "shortbow-3",
+      "name": "shortbow +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/shortbow-3.json"
+    },
+    {
       "index": "sling",
       "name": "sling",
       "url": "/assets/atlas/equipment/json/14/weapon/sling.json"
+    },
+    {
+      "index": "sling-1",
+      "name": "sling +1",
+      "url": "/assets/atlas/equipment/json/14/weapon/sling-1.json"
+    },
+    {
+      "index": "sling-2",
+      "name": "sling +2",
+      "url": "/assets/atlas/equipment/json/14/weapon/sling-2.json"
+    },
+    {
+      "index": "sling-3",
+      "name": "sling +3",
+      "url": "/assets/atlas/equipment/json/14/weapon/sling-3.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/ranged_weapons.json",
-  "updated_at": "2026-08-06T03:55:02.938Z",
+  "updated_at": "2026-08-06T08:05:24.072Z",
   "image": "/assets/atlas/equipment_categories/ranged_weapons.webp"
 }
