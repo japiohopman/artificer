@@ -3,9 +3,9 @@
   "name": "gaming sets",
   "equipment": [
     {
-      "index": "dice_set",
+      "index": "dice-set",
       "name": "dice set",
-      "url": "/assets/atlas/equipment/json/dice_set.json"
+      "url": "/assets/atlas/equipment/json/14/tool/dice-set.json"
     },
     {
       "index": "dragonchess_set",
@@ -39,6 +39,6 @@
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/gaming_sets.json",
-  "updated_at": "2026-05-21T00:25:15.460Z",
+  "updated_at": "2026-08-06T03:55:02.929Z",
   "image": "/assets/atlas/equipment_categories/image/gaming_sets.webp"
 }

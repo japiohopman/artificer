@@ -3,27 +3,27 @@
   "name": "druidic foci",
   "equipment": [
     {
-      "index": "sprig_of_mistletoe",
+      "index": "sprig-of-mistletoe",
       "name": "sprig of mistletoe",
-      "url": "/assets/atlas/equipment/json/sprig_of_mistletoe.json"
+      "url": "/assets/atlas/equipment/json/14/spellcasting-focus/sprig-of-mistletoe.json"
     },
     {
       "index": "totem",
       "name": "totem",
-      "url": "/assets/atlas/equipment/json/totem.json"
+      "url": "/assets/atlas/equipment/json/14/spellcasting-focus/totem.json"
     },
     {
-      "index": "wooden_staff",
+      "index": "wooden-staff",
       "name": "wooden staff",
-      "url": "/assets/atlas/equipment/json/wooden_staff.json"
+      "url": "/assets/atlas/equipment/json/14/spellcasting-focus/wooden-staff.json"
     },
     {
-      "index": "yew_wand",
+      "index": "yew-wand",
       "name": "yew wand",
-      "url": "/assets/atlas/equipment/json/yew_wand.json"
+      "url": "/assets/atlas/equipment/json/14/spellcasting-focus/yew-wand.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/druidic_foci.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.928Z",
   "image": "/assets/atlas/equipment_categories/druidic_foci.webp"
 }

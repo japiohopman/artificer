@@ -3,134 +3,134 @@
   "name": "potion",
   "equipment": [
     {
-      "index": "oil_of_etherealness",
+      "index": "oil-of-etherealness",
       "name": "oil of etherealness",
-      "url": "/assets/atlas/magic_items/json/oil_of_etherealness.json"
+      "url": "/assets/atlas/equipment/json/14/potion/oil-of-etherealness.json"
     },
     {
-      "index": "oil_of_sharpness",
+      "index": "oil-of-sharpness",
       "name": "oil of sharpness",
-      "url": "/assets/atlas/magic_items/json/oil_of_sharpness.json"
+      "url": "/assets/atlas/equipment/json/14/potion/oil-of-sharpness.json"
     },
     {
-      "index": "oil_of_slipperiness",
+      "index": "oil-of-slipperiness",
       "name": "oil of slipperiness",
-      "url": "/assets/atlas/magic_items/json/oil_of_slipperiness.json"
+      "url": "/assets/atlas/equipment/json/14/potion/oil-of-slipperiness.json"
     },
     {
-      "index": "philter_of_love",
+      "index": "philter-of-love",
       "name": "philter of love",
-      "url": "/assets/atlas/magic_items/json/philter_of_love.json"
+      "url": "/assets/atlas/equipment/json/14/potion/philter-of-love.json"
     },
     {
-      "index": "potion_of_animal_friendship",
+      "index": "potion-of-animal-friendship",
       "name": "potion of animal friendship",
-      "url": "/assets/atlas/magic_items/json/potion_of_animal_friendship.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-animal-friendship.json"
     },
     {
-      "index": "potion_of_clairvoyance",
+      "index": "potion-of-clairvoyance",
       "name": "potion of clairvoyance",
-      "url": "/assets/atlas/magic_items/json/potion_of_clairvoyance.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-clairvoyance.json"
     },
     {
-      "index": "potion_of_climbing",
+      "index": "potion-of-climbing",
       "name": "potion of climbing",
-      "url": "/assets/atlas/magic_items/json/potion_of_climbing.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-climbing.json"
     },
     {
-      "index": "potion_of_diminution",
+      "index": "potion-of-diminution",
       "name": "potion of diminution",
-      "url": "/assets/atlas/magic_items/json/potion_of_diminution.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-diminution.json"
     },
     {
-      "index": "potion_of_flying",
+      "index": "potion-of-flying",
       "name": "potion of flying",
-      "url": "/assets/atlas/magic_items/json/potion_of_flying.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-flying.json"
     },
     {
-      "index": "potion_of_gaseous_form",
+      "index": "potion-of-gaseous-form",
       "name": "potion of gaseous form",
-      "url": "/assets/atlas/magic_items/json/potion_of_gaseous_form.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-gaseous-form.json"
     },
     {
-      "index": "potion_of_giant_strength",
+      "index": "potion-of-giant-strength",
       "name": "potion of giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_str.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-giant-strength.json"
     },
     {
-      "index": "potion_of_growth",
+      "index": "potion-of-growth",
       "name": "potion of growth",
-      "url": "/assets/atlas/magic_items/json/potion_of_growth.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-growth.json"
     },
     {
-      "index": "potion_of_healing",
+      "index": "potion-of-healing",
       "name": "potion of healing",
-      "url": "/assets/atlas/magic_items/json/potion_of_healing.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-healing.json"
     },
     {
-      "index": "potion_of_heroism",
+      "index": "potion-of-heroism",
       "name": "potion of heroism",
-      "url": "/assets/atlas/magic_items/json/potion_of_heroism.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-heroism.json"
     },
     {
-      "index": "potion_of_invisibility",
+      "index": "potion-of-invisibility",
       "name": "potion of invisibility",
-      "url": "/assets/atlas/magic_items/json/potion_of_invisibility.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-invisibility.json"
     },
     {
-      "index": "potion_of_mind_reading",
+      "index": "potion-of-mind-reading",
       "name": "potion of mind reading",
-      "url": "/assets/atlas/magic_items/json/potion_of_mind_reading.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-mind-reading.json"
     },
     {
-      "index": "potion_of_poison",
+      "index": "potion-of-poison",
       "name": "potion of poison",
-      "url": "/assets/atlas/magic_items/json/potion_of_poison.json"
+      "url": "/assets/atlas/equipment/json/14/poison/potion-of-poison.json"
     },
     {
-      "index": "potion_of_resistance",
+      "index": "potion-of-resistance",
       "name": "potion of resistance",
-      "url": "/assets/atlas/magic_items/json/potion_of_resistance.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potion-of-resistance.json"
     },
     {
-      "index": "potion_of_speed",
+      "index": "potion-of-speed",
       "name": "potion of speed",
-      "url": "/assets/atlas/magic_items/json/potion_of_speed.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-speed.json"
     },
     {
-      "index": "potion_of_water_breathing",
+      "index": "potion-of-water-breathing",
       "name": "potion of water breathing",
-      "url": "/assets/atlas/magic_items/json/potion_of_water_breathing.json"
+      "url": "/assets/atlas/equipment/json/14/potion/potion-of-water-breathing.json"
     },
     {
-      "index": "potion_of_giant_strength_hill",
+      "index": "potion-of-giant-strength-hill",
       "name": "potion of hill giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_hill.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-hill.json"
     },
     {
-      "index": "potion_of_giant_strength_frost",
+      "index": "potion-of-giant-strength-frost",
       "name": "potion of frost giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_frost.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-frost.json"
     },
     {
-      "index": "potion_of_giant_strength_stone",
+      "index": "potion-of-giant-strength-stone",
       "name": "potion of stone giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_stone.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-stone.json"
     },
     {
-      "index": "potion_of_giant_strength_fire",
+      "index": "potion-of-giant-strength-fire",
       "name": "potion of fire giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_fire.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-fire.json"
     },
     {
-      "index": "potion_of_giant_strength_cloud",
+      "index": "potion-of-giant-strength-cloud",
       "name": "potion of cloud giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_cloud.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-cloud.json"
     },
     {
-      "index": "potion_of_giant_strength_storm",
+      "index": "potion-of-giant-strength-storm",
       "name": "potion of storm giant strength",
-      "url": "/assets/atlas/magic_items/json/potion_of_giant_strength_storm.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/potions-of-giant-strength/potion-of-giant-strength-storm.json"
     },
     {
       "index": "potion_of_healing_common",
@@ -138,19 +138,19 @@
       "url": "/assets/atlas/magic_items/json/potion_of_healing_common.json"
     },
     {
-      "index": "potion_of_healing_greater",
+      "index": "potion-of-healing-greater",
       "name": "potion of greater healing",
-      "url": "/assets/atlas/magic_items/json/potion_of_healing_greater.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/healing/potion-of-healing-greater.json"
     },
     {
-      "index": "potion_of_healing_superior",
+      "index": "potion-of-healing-superior",
       "name": "potion of superior healing",
-      "url": "/assets/atlas/magic_items/json/potion_of_healing_superior.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/healing/potion-of-healing-superior.json"
     },
     {
-      "index": "potion_of_healing_supreme",
+      "index": "potion-of-healing-supreme",
       "name": "potion of supreme healing",
-      "url": "/assets/atlas/magic_items/json/potion_of_healing_supreme.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/potions/healing/potion-of-healing-supreme.json"
     },
     {
       "index": "potion_of_resistance_acid",
@@ -204,6 +204,6 @@
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/potion.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.937Z",
   "image": "/assets/atlas/equipment_categories/potion.webp"
 }

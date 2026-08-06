@@ -3,14 +3,14 @@
   "name": "scroll",
   "equipment": [
     {
-      "index": "spell_scroll",
+      "index": "spell-scroll",
       "name": "spell scroll",
-      "url": "/assets/atlas/magic_items/json/spell_scroll.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/scrolls/spell-scroll.json"
     },
     {
-      "index": "spell_scroll_cantrip",
+      "index": "spell-scroll-cantrip",
       "name": "spell scroll (cantrip)",
-      "url": "/assets/atlas/magic_items/json/spell_scroll_cantrip.json"
+      "url": "/assets/atlas/equipment/json/14/scroll/spell-scroll-cantrip.json"
     },
     {
       "index": "spell_scroll_1st",
@@ -59,6 +59,6 @@
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/scroll.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.940Z",
   "image": "/assets/atlas/equipment_categories/scroll.webp"
 }

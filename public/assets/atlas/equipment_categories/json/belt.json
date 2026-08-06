@@ -3,47 +3,47 @@
   "name": "belt",
   "equipment": [
     {
-      "index": "belt_of_dwarvenkind",
+      "index": "belt-of-dwarvenkind",
       "name": "belt of dwarvenkind",
-      "url": "/assets/atlas/magic_items/json/belt_of_dwarvenkind.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/belt-of-dwarvenkind.json"
     },
     {
-      "index": "belt_of_giant_strength",
+      "index": "belt-of-giant-strength",
       "name": "belt of giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_str.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belt-of-giant-strength.json"
     },
     {
-      "index": "belt_of_giant_strength_cloud",
+      "index": "belt-of-giant-strength-cloud",
       "name": "belt of cloud giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_cloud.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-cloud.json"
     },
     {
-      "index": "belt_of_giant_strength_fire",
+      "index": "belt-of-giant-strength-fire",
       "name": "belt of fire giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_fire.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-fire.json"
     },
     {
-      "index": "belt_of_giant_strength_frost",
+      "index": "belt-of-giant-strength-frost",
       "name": "belt of frost giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_frost.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-frost.json"
     },
     {
-      "index": "belt_of_giant_strength_hill",
+      "index": "belt-of-giant-strength-hill",
       "name": "belt of hill giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_hill.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-hill.json"
     },
     {
-      "index": "belt_of_giant_strength_stone",
+      "index": "belt-of-giant-strength-stone",
       "name": "belt of stone giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_stone.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-stone.json"
     },
     {
-      "index": "belt_of_giant_strength_storm",
+      "index": "belt-of-giant-strength-storm",
       "name": "belt of storm giant strength",
-      "url": "/assets/atlas/magic_items/json/belt_of_giant_strength_storm.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/belts-of-giant-strength/belt-of-giant-strength-storm.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/belt.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.927Z",
   "image": "/assets/atlas/equipment_categories/belt.webp"
 }

@@ -40,6 +40,16 @@ function generateIndex() {
 
         const cleanJsonPath = `/${result.relativePath.replace(/\\/g, '/')}`;
 
+        let imageUrl = data.imageUrl || data.image || null;
+        if (imageUrl && imageUrl.includes('/assets/atlas/equipment/images/')) {
+          const parts = imageUrl.split('/');
+          const filename = parts[parts.length - 1];
+          if (filename.includes('-')) {
+            parts[parts.length - 1] = filename.replace(/-/g, '_');
+            imageUrl = parts.join('/');
+          }
+        }
+
         index.push({
           index: data.index || path.basename(result.filePath, '.json'),
           name: data.name || 'Unknown Item',
@@ -48,7 +58,7 @@ function generateIndex() {
           rarity: typeof data.rarity === 'object' ? (data.rarity.name || 'Common') : (data.rarity || 'Common'),
           cost: data.cost,
           weight: data.weight,
-          imageUrl: data.imageUrl || data.image || null,
+          imageUrl: imageUrl,
           json_path: cleanJsonPath
         });
       } catch (e) {

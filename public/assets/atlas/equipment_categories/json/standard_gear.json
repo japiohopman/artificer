@@ -5,12 +5,12 @@
     {
       "index": "abacus",
       "name": "abacus",
-      "url": "/assets/atlas/equipment/json/abacus.json"
+      "url": "/assets/atlas/equipment/json/14/loot/abacus.json"
     },
     {
-      "index": "acid_vial",
+      "index": "acid-vial",
       "name": "acid (vial)",
-      "url": "/assets/atlas/equipment/json/acid_vial.json"
+      "url": "/assets/atlas/equipment/json/14/potion/acid-vial.json"
     },
     {
       "index": "alchemists_fire_flask",
@@ -30,7 +30,7 @@
     {
       "index": "arrow",
       "name": "arrow",
-      "url": "/assets/atlas/equipment/json/arrow.json"
+      "url": "/assets/atlas/equipment/json/14/ammunition/arrow.json"
     },
     {
       "index": "backpack",
@@ -55,37 +55,37 @@
     {
       "index": "bedroll",
       "name": "bedroll",
-      "url": "/assets/atlas/equipment/json/bedroll.json"
+      "url": "/assets/atlas/equipment/json/14/loot/bedroll.json"
     },
     {
       "index": "bell",
       "name": "bell",
-      "url": "/assets/atlas/equipment/json/bell.json"
+      "url": "/assets/atlas/equipment/json/14/loot/bell.json"
     },
     {
       "index": "blanket",
       "name": "blanket",
-      "url": "/assets/atlas/equipment/json/blanket.json"
+      "url": "/assets/atlas/equipment/json/14/loot/blanket.json"
     },
     {
-      "index": "block_and_tackle",
+      "index": "block-and-tackle",
       "name": "block and tackle",
-      "url": "/assets/atlas/equipment/json/block_and_tackle.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/block-and-tackle.json"
     },
     {
-      "index": "block_of_incense",
+      "index": "block-of-incense",
       "name": "block of incense",
-      "url": "/assets/atlas/equipment/json/block_of_incense.json"
+      "url": "/assets/atlas/equipment/json/14/loot/block-of-incense.json"
     },
     {
-      "index": "blowgun_needle",
+      "index": "blowgun-needle",
       "name": "blowgun needle",
-      "url": "/assets/atlas/equipment/json/blowgun_needle.json"
+      "url": "/assets/atlas/equipment/json/14/ammunition/blowgun-needle.json"
     },
     {
       "index": "book",
       "name": "book",
-      "url": "/assets/atlas/equipment/json/book.json"
+      "url": "/assets/atlas/equipment/json/14/loot/book.json"
     },
     {
       "index": "bottle_glass",
@@ -100,12 +100,12 @@
     {
       "index": "caltrops",
       "name": "caltrops",
-      "url": "/assets/atlas/equipment/json/caltrops.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/caltrops.json"
     },
     {
       "index": "candle",
       "name": "candle",
-      "url": "/assets/atlas/equipment/json/candle.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/candle.json"
     },
     {
       "index": "case_crossbow_bolt",
@@ -120,12 +120,12 @@
     {
       "index": "censer",
       "name": "censer",
-      "url": "/assets/atlas/equipment/json/censer.json"
+      "url": "/assets/atlas/equipment/json/14/loot/censer.json"
     },
     {
-      "index": "chain_10_feet",
+      "index": "chain-10-feet",
       "name": "chain (10 feet)",
-      "url": "/assets/atlas/equipment/json/chain_10_feet.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/chain-10-feet.json"
     },
     {
       "index": "chalk_1_piece",
@@ -153,14 +153,14 @@
       "url": "/assets/atlas/equipment/json/clothes_costume.json"
     },
     {
-      "index": "clothes_fine",
+      "index": "clothes-fine",
       "name": "clothes, fine",
-      "url": "/assets/atlas/equipment/json/clothes_fine.json"
+      "url": "/assets/atlas/equipment/json/24/adventuring-gear/clothes-fine.json"
     },
     {
-      "index": "clothes_travelers",
+      "index": "clothes-travelers",
       "name": "clothes, traveler's",
-      "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      "url": "/assets/atlas/equipment/json/24/adventuring-gear/clothes-travelers.json"
     },
     {
       "index": "component_pouch",
@@ -168,14 +168,14 @@
       "url": "/assets/atlas/equipment/json/component_pouch.json"
     },
     {
-      "index": "crossbow_bolt",
+      "index": "crossbow-bolt",
       "name": "crossbow bolt",
-      "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+      "url": "/assets/atlas/equipment/json/14/ammunition/crossbow-bolt.json"
     },
     {
       "index": "crowbar",
       "name": "crowbar",
-      "url": "/assets/atlas/equipment/json/crowbar.json"
+      "url": "/assets/atlas/equipment/json/14/loot/crowbar.json"
     },
     {
       "index": "fake_signet_ring",
@@ -183,9 +183,9 @@
       "url": "/assets/atlas/equipment/json/fake_signet_ring.json"
     },
     {
-      "index": "fishing_tackle",
+      "index": "fishing-tackle",
       "name": "fishing tackle",
-      "url": "/assets/atlas/equipment/json/fishing_tackle.json"
+      "url": "/assets/atlas/equipment/json/14/loot/fishing-tackle.json"
     },
     {
       "index": "flask_or_tankard",
@@ -195,17 +195,17 @@
     {
       "index": "gold",
       "name": "gold",
-      "url": "/assets/atlas/equipment/json/gold.json"
+      "url": "/assets/atlas/equipment/json/14/tradegoods/gold.json"
     },
     {
-      "index": "grappling_hook",
+      "index": "grappling-hook",
       "name": "grappling hook",
-      "url": "/assets/atlas/equipment/json/grappling_hook.json"
+      "url": "/assets/atlas/equipment/json/14/loot/grappling-hook.json"
     },
     {
       "index": "hammer",
       "name": "hammer",
-      "url": "/assets/atlas/equipment/json/hammer.json"
+      "url": "/assets/atlas/equipment/json/14/loot/hammer.json"
     },
     {
       "index": "hammer_sledge",
@@ -220,12 +220,12 @@
     {
       "index": "hourglass",
       "name": "hourglass",
-      "url": "/assets/atlas/equipment/json/hourglass.json"
+      "url": "/assets/atlas/equipment/json/14/loot/hourglass.json"
     },
     {
-      "index": "hunting_trap",
+      "index": "hunting-trap",
       "name": "hunting trap",
-      "url": "/assets/atlas/equipment/json/hunting_trap.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/hunting-trap.json"
     },
     {
       "index": "ink_1_ounce_bottle",
@@ -233,9 +233,9 @@
       "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json"
     },
     {
-      "index": "ink_pen",
+      "index": "ink-pen",
       "name": "ink pen",
-      "url": "/assets/atlas/equipment/json/ink_pen.json"
+      "url": "/assets/atlas/equipment/json/14/loot/ink-pen.json"
     },
     {
       "index": "insignia_of_rank",
@@ -248,24 +248,24 @@
       "url": "/assets/atlas/equipment/json/jug_or_pitcher.json"
     },
     {
-      "index": "ladder_10_foot",
+      "index": "ladder-10-foot",
       "name": "ladder (10_foot)",
-      "url": "/assets/atlas/equipment/json/ladder_10_foot.json"
+      "url": "/assets/atlas/equipment/json/14/loot/ladder-10-foot.json"
     },
     {
       "index": "lamp",
       "name": "lamp",
-      "url": "/assets/atlas/equipment/json/lamp.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/lamp.json"
     },
     {
-      "index": "lantern_bullseye",
+      "index": "lantern-bullseye",
       "name": "lantern, bullseye",
-      "url": "/assets/atlas/equipment/json/lantern_bullseye.json"
+      "url": "/assets/atlas/equipment/json/24/adventuring-gear/lantern-bullseye.json"
     },
     {
-      "index": "lantern_hooded",
+      "index": "lantern-hooded",
       "name": "lantern, hooded",
-      "url": "/assets/atlas/equipment/json/lantern_hooded.json"
+      "url": "/assets/atlas/equipment/json/24/adventuring-gear/lantern-hooded.json"
     },
     {
       "index": "leather_pouch",
@@ -290,7 +290,7 @@
     {
       "index": "lock",
       "name": "lock",
-      "url": "/assets/atlas/equipment/json/lock.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/lock.json"
     },
     {
       "index": "lock_of_hair",
@@ -308,14 +308,14 @@
       "url": "/assets/atlas/equipment/json/lucky_charm.json"
     },
     {
-      "index": "magnifying_glass",
+      "index": "magnifying-glass",
       "name": "magnifying glass",
-      "url": "/assets/atlas/equipment/json/magnifying_glass.json"
+      "url": "/assets/atlas/equipment/json/14/loot/magnifying-glass.json"
     },
     {
       "index": "manacles",
       "name": "manacles",
-      "url": "/assets/atlas/equipment/json/manacles.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/manacles.json"
     },
     {
       "index": "mirror_steel",
@@ -323,9 +323,9 @@
       "url": "/assets/atlas/equipment/json/mirror_steel.json"
     },
     {
-      "index": "oil_flask",
+      "index": "oil-flask",
       "name": "oil (flask)",
-      "url": "/assets/atlas/equipment/json/oil_flask.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/oil-flask.json"
     },
     {
       "index": "paper_one_sheet",
@@ -355,7 +355,7 @@
     {
       "index": "piton",
       "name": "piton",
-      "url": "/assets/atlas/equipment/json/piton.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/piton.json"
     },
     {
       "index": "poison_basic_vial",
@@ -393,9 +393,9 @@
       "url": "/assets/atlas/equipment/json/quiver.json"
     },
     {
-      "index": "ram_portable",
+      "index": "ram-portable",
       "name": "ram, portable",
-      "url": "/assets/atlas/equipment/json/ram_portable.json"
+      "url": "/assets/atlas/equipment/json/24/adventuring-gear/ram-portable.json"
     },
     {
       "index": "rations_1_day",
@@ -405,7 +405,7 @@
     {
       "index": "robes",
       "name": "robes",
-      "url": "/assets/atlas/equipment/json/robes.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/robes.json"
     },
     {
       "index": "rope_hempen_50_feet",
@@ -438,44 +438,44 @@
       "url": "/assets/atlas/equipment/json/scroll_of_pedigree.json"
     },
     {
-      "index": "sealing_wax",
+      "index": "sealing-wax",
       "name": "sealing wax",
-      "url": "/assets/atlas/equipment/json/sealing_wax.json"
+      "url": "/assets/atlas/equipment/json/14/loot/sealing-wax.json"
     },
     {
       "index": "shovel",
       "name": "shovel",
-      "url": "/assets/atlas/equipment/json/shovel.json"
+      "url": "/assets/atlas/equipment/json/14/loot/shovel.json"
     },
     {
-      "index": "signal_whistle",
+      "index": "signal-whistle",
       "name": "signal whistle",
-      "url": "/assets/atlas/equipment/json/signal_whistle.json"
+      "url": "/assets/atlas/equipment/json/14/loot/signal-whistle.json"
     },
     {
-      "index": "signet_ring",
+      "index": "signet-ring",
       "name": "signet ring",
-      "url": "/assets/atlas/equipment/json/signet_ring.json"
+      "url": "/assets/atlas/equipment/json/14/loot/signet-ring.json"
     },
     {
-      "index": "sling_bullet",
+      "index": "sling-bullet",
       "name": "sling bullet",
-      "url": "/assets/atlas/equipment/json/sling_bullet.json"
+      "url": "/assets/atlas/equipment/json/14/ammunition/sling-bullet.json"
     },
     {
-      "index": "small_knife",
+      "index": "small-knife",
       "name": "small knife",
-      "url": "/assets/atlas/equipment/json/small_knife.json"
+      "url": "/assets/atlas/equipment/json/14/loot/small-knife.json"
     },
     {
       "index": "soap",
       "name": "soap",
-      "url": "/assets/atlas/equipment/json/soap.json"
+      "url": "/assets/atlas/equipment/json/14/loot/soap.json"
     },
     {
       "index": "spellbook",
       "name": "spellbook",
-      "url": "/assets/atlas/equipment/json/spellbook.json"
+      "url": "/assets/atlas/equipment/json/14/loot/spellbook.json"
     },
     {
       "index": "spike_iron",
@@ -485,7 +485,7 @@
     {
       "index": "spyglass",
       "name": "spyglass",
-      "url": "/assets/atlas/equipment/json/spyglass.json"
+      "url": "/assets/atlas/equipment/json/14/loot/spyglass.json"
     },
     {
       "index": "stoppered_bottles",
@@ -505,7 +505,7 @@
     {
       "index": "tinderbox",
       "name": "tinderbox",
-      "url": "/assets/atlas/equipment/json/tinderbox.json"
+      "url": "/assets/atlas/equipment/json/14/loot/tinderbox.json"
     },
     {
       "index": "token_of_parents",
@@ -515,12 +515,12 @@
     {
       "index": "torch",
       "name": "torch",
-      "url": "/assets/atlas/equipment/json/torch.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/torch.json"
     },
     {
       "index": "trinket",
       "name": "trinket",
-      "url": "/assets/atlas/equipment/json/trinket.json"
+      "url": "/assets/atlas/equipment/json/14/loot/trinket.json"
     },
     {
       "index": "trophy_from_fallen_animal",
@@ -535,7 +535,7 @@
     {
       "index": "vestments",
       "name": "vestments",
-      "url": "/assets/atlas/equipment/json/vestments.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/vestments.json"
     },
     {
       "index": "vial",
@@ -545,15 +545,15 @@
     {
       "index": "waterskin",
       "name": "waterskin",
-      "url": "/assets/atlas/equipment/json/waterskin.json"
+      "url": "/assets/atlas/equipment/json/14/food/waterskin.json"
     },
     {
       "index": "whetstone",
       "name": "whetstone",
-      "url": "/assets/atlas/equipment/json/whetstone.json"
+      "url": "/assets/atlas/equipment/json/14/loot/whetstone.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/standard_gear.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.942Z",
   "image": "/assets/atlas/equipment_categories/standard_gear.webp"
 }

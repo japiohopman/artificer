@@ -3,32 +3,32 @@
   "name": "medium armor",
   "equipment": [
     {
-      "index": "hide_armor",
+      "index": "hide-armor",
       "name": "hide armor",
-      "url": "/assets/atlas/equipment/json/hide_armor.json"
+      "url": "/assets/atlas/equipment/json/14/armor/hide-armor.json"
     },
     {
-      "index": "chain_shirt",
+      "index": "chain-shirt",
       "name": "chain shirt",
-      "url": "/assets/atlas/equipment/json/chain_shirt.json"
+      "url": "/assets/atlas/equipment/json/14/armor/chain-shirt.json"
     },
     {
-      "index": "scale_mail",
+      "index": "scale-mail",
       "name": "scale mail",
-      "url": "/assets/atlas/equipment/json/scale_mail.json"
+      "url": "/assets/atlas/equipment/json/14/armor/scale-mail.json"
     },
     {
       "index": "breastplate",
       "name": "breastplate",
-      "url": "/assets/atlas/equipment/json/breastplate.json"
+      "url": "/assets/atlas/equipment/json/14/armor/breastplate.json"
     },
     {
-      "index": "half_plate_armor",
+      "index": "half-plate-armor",
       "name": "half plate armor",
-      "url": "/assets/atlas/equipment/json/half_plate_armor.json"
+      "url": "/assets/atlas/equipment/json/14/armor/half-plate-armor.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/medium_armor.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.934Z",
   "image": "/assets/atlas/equipment_categories/medium_armor.webp"
 }

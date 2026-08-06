@@ -3,37 +3,37 @@
   "name": "rod",
   "equipment": [
     {
-      "index": "immovable_rod",
+      "index": "immovable-rod",
       "name": "immovable rod",
-      "url": "/assets/atlas/magic_items/json/immovable_rod.json"
+      "url": "/assets/atlas/equipment/json/14/rod/immovable-rod.json"
     },
     {
-      "index": "rod_of_absorption",
+      "index": "rod-of-absorption",
       "name": "rod of absorption",
-      "url": "/assets/atlas/magic_items/json/rod_of_absorption.json"
+      "url": "/assets/atlas/equipment/json/14/rod/rod-of-absorption.json"
     },
     {
-      "index": "rod_of_alertness",
+      "index": "rod-of-alertness",
       "name": "rod of alertness",
-      "url": "/assets/atlas/magic_items/json/rod_of_alertness.json"
+      "url": "/assets/atlas/equipment/json/14/rod/rod-of-alertness.json"
     },
     {
-      "index": "rod_of_lordly_might",
+      "index": "rod-of-lordly-might",
       "name": "rod of lordly might",
-      "url": "/assets/atlas/magic_items/json/rod_of_lordly_might.json"
+      "url": "/assets/atlas/equipment/json/14/rod/rod-of-lordly-might.json"
     },
     {
-      "index": "rod_of_rulership",
+      "index": "rod-of-rulership",
       "name": "rod of rulership",
-      "url": "/assets/atlas/magic_items/json/rod_of_rulership.json"
+      "url": "/assets/atlas/equipment/json/14/rod/rod-of-rulership.json"
     },
     {
-      "index": "rod_of_security",
+      "index": "rod-of-security",
       "name": "rod of security",
-      "url": "/assets/atlas/magic_items/json/rod_of_security.json"
+      "url": "/assets/atlas/equipment/json/14/rod/rod-of-security.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/rod.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.939Z",
   "image": "/assets/atlas/equipment_categories/rod.webp"
 }

@@ -713,6 +713,16 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
     }
   }
 
+  // Ensure equipment, materials, and transport image filenames use underscores instead of hyphens
+  if (finalUrl.includes('/assets/atlas/equipment/images/') || finalUrl.includes('/assets/atlas/materials/images/') || finalUrl.includes('/assets/atlas/transport/images/')) {
+    const parts = finalUrl.split('/');
+    const filename = parts[parts.length - 1];
+    if (filename.includes('-')) {
+      parts[parts.length - 1] = filename.replace(/-/g, '_');
+      finalUrl = parts.join('/');
+    }
+  }
+
   // Use the proxy for all external atlas images to handle CORS and auth
   if (finalUrl.startsWith('http')) {
     // Add timestamp for cache busting inside the encoded URL

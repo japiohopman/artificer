@@ -3,9 +3,9 @@
   "name": "magic tokens",
   "equipment": [
     {
-      "index": "elemental_gem",
+      "index": "elemental-gem",
       "name": "elemental gem",
-      "url": "/assets/atlas/magic_items/json/elemental_gem.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/elemental-gem.json"
     },
     {
       "index": "elemental_gem_air",
@@ -28,59 +28,59 @@
       "url": "/assets/atlas/magic_items/json/elemental_gem_water.json"
     },
     {
-      "index": "feather_token",
+      "index": "feather-token",
       "name": "feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token.json"
+      "url": "/assets/atlas/equipment/json/24/consumables/feather-token.json"
     },
     {
-      "index": "feather_token_anchor",
+      "index": "feather-token-anchor",
       "name": "anchor feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_anchor.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-anchor.json"
     },
     {
-      "index": "feather_token_bird",
+      "index": "feather-token-bird",
       "name": "bird feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_bird.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-bird.json"
     },
     {
-      "index": "feather_token_fan",
+      "index": "feather-token-fan",
       "name": "fan feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_fan.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-fan.json"
     },
     {
-      "index": "feather_token_swan_boat",
+      "index": "feather-token-swan-boat",
       "name": "swan boat feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_swan_boat.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-swan-boat.json"
     },
     {
-      "index": "feather_token_tree",
+      "index": "feather-token-tree",
       "name": "tree feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_tree.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-tree.json"
     },
     {
-      "index": "feather_token_whip",
+      "index": "feather-token-whip",
       "name": "whip feather token",
-      "url": "/assets/atlas/magic_items/json/feather_token_whip.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/feather-token-whip.json"
     },
     {
-      "index": "figurine_of_wondrous_power",
+      "index": "figurine-of-wondrous-power",
       "name": "figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/figurine-of-wondrous-power.json"
     },
     {
-      "index": "figurine_of_wondrous_power_bronze_griffon",
+      "index": "figurine-of-wondrous-power-bronze-griffon",
       "name": "bronze griffon figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_bronze_griffon.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-bronze-griffon.json"
     },
     {
-      "index": "figurine_of_wondrous_power_ebony_fly",
+      "index": "figurine-of-wondrous-power-ebony-fly",
       "name": "ebony fly figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_ebony_fly.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-ebony-fly.json"
     },
     {
-      "index": "figurine_of_wondrous_power_golden_lions",
+      "index": "figurine-of-wondrous-power-golden-lions",
       "name": "golden lions figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_golden_lions.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-golden-lions.json"
     },
     {
       "index": "figurine_of_wondrous_power_ivory_goats",
@@ -88,157 +88,157 @@
       "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_ivory_goats.json"
     },
     {
-      "index": "figurine_of_wondrous_power_marble_elephant",
+      "index": "figurine-of-wondrous-power-marble-elephant",
       "name": "marble elephant figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_marble_elephant.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-marble-elephant.json"
     },
     {
-      "index": "figurine_of_wondrous_power_obsidian_steed",
+      "index": "figurine-of-wondrous-power-obsidian-steed",
       "name": "obsidian steed figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_obsidian_steed.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-obsidian-steed.json"
     },
     {
-      "index": "figurine_of_wondrous_power_onyx_dog",
+      "index": "figurine-of-wondrous-power-onyx-dog",
       "name": "onyx dog figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_onyx_dog.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-onyx-dog.json"
     },
     {
-      "index": "figurine_of_wondrous_power_serpentine_owl",
+      "index": "figurine-of-wondrous-power-serpentine-owl",
       "name": "serpentine owl figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_serpentine_owl.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-serpentine-owl.json"
     },
     {
-      "index": "figurine_of_wondrous_power_silver_raven",
+      "index": "figurine-of-wondrous-power-silver-raven",
       "name": "silver raven figurine of wondrous power",
-      "url": "/assets/atlas/magic_items/json/figurine_of_wondrous_power_silver_raven.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/figurine-of-wondrous-power-silver-raven.json"
     },
     {
-      "index": "gem_of_brightness",
+      "index": "gem-of-brightness",
       "name": "gem of brightness",
-      "url": "/assets/atlas/magic_items/json/gem_of_brightness.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/gem-of-brightness.json"
     },
     {
-      "index": "gem_of_seeing",
+      "index": "gem-of-seeing",
       "name": "gem of seeing",
-      "url": "/assets/atlas/magic_items/json/gem_of_seeing.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/gem-of-seeing.json"
     },
     {
-      "index": "ioun_stone",
+      "index": "ioun-stone",
       "name": "ioun stone",
-      "url": "/assets/atlas/magic_items/json/ioun_stone.json"
+      "url": "/assets/atlas/equipment/json/24/equipment/ioun-stone.json"
     },
     {
-      "index": "ioun_stone_of_absorption",
+      "index": "ioun-stone-of-absorption",
       "name": "ioun stone of absorption",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_absorption.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-absorption.json"
     },
     {
-      "index": "ioun_stone_of_agility",
+      "index": "ioun-stone-of-agility",
       "name": "ioun stone of agility",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_agility.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-agility.json"
     },
     {
-      "index": "ioun_stone_of_awareness",
+      "index": "ioun-stone-of-awareness",
       "name": "ioun stone of awareness",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_awareness.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-awareness.json"
     },
     {
-      "index": "ioun_stone_of_fortitude",
+      "index": "ioun-stone-of-fortitude",
       "name": "ioun stone of fortitude",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_fortitude.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-fortitude.json"
     },
     {
-      "index": "ioun_stone_of_greater_absorption",
+      "index": "ioun-stone-of-greater-absorption",
       "name": "ioun stone of greater absorption",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_greater_absorption.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-greater-absorption.json"
     },
     {
-      "index": "ioun_stone_of_insight",
+      "index": "ioun-stone-of-insight",
       "name": "ioun stone of insight",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_insight.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-insight.json"
     },
     {
-      "index": "ioun_stone_of_intellect",
+      "index": "ioun-stone-of-intellect",
       "name": "ioun stone of intellect",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_intellect.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-intellect.json"
     },
     {
-      "index": "ioun_stone_of_leadership",
+      "index": "ioun-stone-of-leadership",
       "name": "ioun stone of leadership",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_leadership.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-leadership.json"
     },
     {
-      "index": "ioun_stone_of_mastery",
+      "index": "ioun-stone-of-mastery",
       "name": "ioun stone of mastery",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_mastery.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-mastery.json"
     },
     {
-      "index": "ioun_stone_of_protection",
+      "index": "ioun-stone-of-protection",
       "name": "ioun stone of protection",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_protection.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-protection.json"
     },
     {
-      "index": "ioun_stone_of_regeneration",
+      "index": "ioun-stone-of-regeneration",
       "name": "ioun stone of regeneration",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_regeneration.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-regeneration.json"
     },
     {
-      "index": "ioun_stone_of_reserve",
+      "index": "ioun-stone-of-reserve",
       "name": "ioun stone of reserve",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_reserve.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-reserve.json"
     },
     {
-      "index": "ioun_stone_of_strength",
+      "index": "ioun-stone-of-strength",
       "name": "ioun stone of strength",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_str.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-strength.json"
     },
     {
-      "index": "ioun_stone_of_sustenance",
+      "index": "ioun-stone-of-sustenance",
       "name": "ioun stone of sustenance",
-      "url": "/assets/atlas/magic_items/json/ioun_stone_of_sustenance.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/ioun-stone-of-sustenance.json"
     },
     {
-      "index": "pipes_of_haunting",
+      "index": "pipes-of-haunting",
       "name": "pipes of haunting",
-      "url": "/assets/atlas/magic_items/json/pipes_of_haunting.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/pipes-of-haunting.json"
     },
     {
-      "index": "pipes_of_the_sewers",
+      "index": "pipes-of-the-sewers",
       "name": "pipes of the sewers",
-      "url": "/assets/atlas/magic_items/json/pipes_of_the_sewers.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/pipes-of-the-sewers.json"
     },
     {
-      "index": "sphere_of_annihilation",
+      "index": "sphere-of-annihilation",
       "name": "sphere of annihilation",
-      "url": "/assets/atlas/magic_items/json/sphere_of_annihilation.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/sphere-of-annihilation.json"
     },
     {
-      "index": "stone_of_controlling_earth_elementals",
+      "index": "stone-of-controlling-earth-elementals",
       "name": "stone of controlling earth elementals",
-      "url": "/assets/atlas/magic_items/json/stone_of_controlling_earth_elementals.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/stone-of-controlling-earth-elementals.json"
     },
     {
-      "index": "stone_of_good_luck_luckstone",
+      "index": "stone-of-good-luck-luckstone",
       "name": "stone of good luck (luckstone)",
-      "url": "/assets/atlas/magic_items/json/stone_of_good_luck_luckstone.json"
+      "url": "/assets/atlas/equipment/json/14/equipment/stone-of-good-luck-luckstone.json"
     },
     {
-      "index": "talisman_of_pure_good",
+      "index": "talisman-of-pure-good",
       "name": "talisman of pure good",
-      "url": "/assets/atlas/magic_items/json/talisman_of_pure_good.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/talisman-of-pure-good.json"
     },
     {
-      "index": "talisman_of_the_sphere",
+      "index": "talisman-of-the-sphere",
       "name": "talisman of the sphere",
-      "url": "/assets/atlas/magic_items/json/talisman_of_the_sphere.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/talisman-of-the-sphere.json"
     },
     {
-      "index": "talisman_of_ultimate_evil",
+      "index": "talisman-of-ultimate-evil",
       "name": "talisman of ultimate evil",
-      "url": "/assets/atlas/magic_items/json/talisman_of_ultimate_evil.json"
+      "url": "/assets/atlas/equipment/json/14/trinket/talisman-of-ultimate-evil.json"
     }
   ],
   "url": "/assets/atlas/equipment_categories/json/magic_tokens.json",
-  "updated_at": "2025-10-24T20:42:12.821Z",
+  "updated_at": "2026-08-06T03:55:02.932Z",
   "image": "/assets/atlas/equipment_categories/magic_tokens.webp"
 }
