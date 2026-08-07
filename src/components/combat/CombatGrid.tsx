@@ -146,6 +146,11 @@ export const CombatGrid: React.FC = () => {
     }
   }, [activeTurnActor?.id]);
 
+  // Grid constants
+  const cellSize = 60; // 60px = 5ft
+  const gridWidth = grid[0]?.length || 32;
+  const gridHeight = grid.length || 20;
+
   // Coordinates of the currently active turn token (either player or summon/ally)
   const activeTokenPos = useMemo(() => {
     if (activeTurnActor) {
@@ -164,17 +169,18 @@ export const CombatGrid: React.FC = () => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
 
     const tokenPixelX = activeTokenPos.x * cellSize + cellSize / 2;
     const tokenPixelY = activeTokenPos.y * cellSize + cellSize / 2;
 
-    const targetX = containerWidth / 2 - tokenPixelX * zoom;
-    const targetY = containerHeight / 2 - tokenPixelY * zoom;
+    const gridCenterX = (gridWidth * cellSize) / 2;
+    const gridCenterY = (gridHeight * cellSize) / 2;
+
+    const targetX = -(tokenPixelX - gridCenterX) * zoom;
+    const targetY = -(tokenPixelY - gridCenterY) * zoom;
 
     setPanOffset({ x: targetX, y: targetY });
-  }, [activeTokenPos.x, activeTokenPos.y, zoom]);
+  }, [activeTokenPos.x, activeTokenPos.y, zoom, gridWidth, gridHeight]);
 
   // Check if it's currently a player or ally's turn
   const isPlayerOrAllyTurn = useMemo(() => {
@@ -189,11 +195,6 @@ export const CombatGrid: React.FC = () => {
     if (!isPlayerOrAllyTurn) return false;  // Never show on enemy turn
     return isTargeting;                     // In combat, only show when actively targeting
   }, [gameMode, isPlayerOrAllyTurn, isTargeting]);
-
-  // Grid constants
-  const cellSize = 60; // 60px = 5ft
-  const gridWidth = grid[0]?.length || 32;
-  const gridHeight = grid.length || 20;
 
   const terrain = (partyLocation?.category || partyLocation?.type || 'land').toLowerCase();
 
