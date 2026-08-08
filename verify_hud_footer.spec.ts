@@ -68,16 +68,16 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
   await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useCharacterStore !== undefined);
 
   // Force start game now that mock character is the active state
-  await page.evaluate(() => {
+  await page.evaluate((mockChar) => {
+    const charStore = (window as any).useCharacterStore;
+    if (charStore) {
+      charStore.getState().setMainCharacter(mockChar);
+    }
     const gameStore = (window as any).useGameStore;
     if (gameStore) {
       gameStore.getState().setIsGameStarted(true);
     }
-    const charStore = (window as any).useCharacterStore;
-    if (charStore) {
-      charStore.getState().setActiveCharacter('slot1');
-    }
-  });
+  }, mockChar);
 
   // Wait for the game panel / HUD to be fully loaded and visible
   await page.waitForSelector('.world-panel', { timeout: 30000 });

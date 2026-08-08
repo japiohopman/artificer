@@ -14,8 +14,10 @@ test('verify tactical hud and grid refactor', async ({ page }) => {
   // Take screenshot of world map with new HUD
   await page.screenshot({ path: 'docs/screenshots/game_hud.png' });
   
-  // Switch to tactical grid
-  await page.keyboard.press('Shift+KeyG');
+  // Switch to tactical grid programmatically
+  await page.evaluate(() => {
+    (window as any).useUIStore.getState().setGameMode('combat');
+  });
   
   // Wait for combat grid canvas
   await page.waitForSelector('canvas:not(.dice-box-canvas)', { timeout: 10000 });

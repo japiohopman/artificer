@@ -11,8 +11,8 @@ test('verify loading screen on title screen and transition', async ({ page }) =>
   // Wait for it to disappear
   await expect(loadingScreen).not.toBeVisible({ timeout: 10000 });
 
-  // 2. Click "New Game" to trigger transition loading
-  const newGameButton = page.locator('button:has-text("New Game")');
+  // 2. Click "Create New Character" to trigger transition loading
+  const newGameButton = page.locator('button:has-text("Create New Character")');
   await newGameButton.click();
 
   // Transition loading screen should appear
@@ -25,6 +25,6 @@ test('verify loading screen on title screen and transition', async ({ page }) =>
   // Wait for HUD to mount and loading to dismiss (HUD has 1s delay)
   await expect(transitionLoading).not.toBeVisible({ timeout: 10000 });
 
-  // Verify HUD is visible (e.g., Nav component)
-  await expect(page.locator('nav')).toBeVisible();
+  // Verify Character Creator is visible
+  await expect(page.locator('#character-creator-portal')).toBeVisible();
 });

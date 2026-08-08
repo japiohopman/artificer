@@ -563,7 +563,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       // Find the closest PC to target and check awareness
       const activeParty = useCharacterStore.getState().characters.filter((c: any) => c && c.name !== 'Empty Slot' && (!c.isNpc || c.isRecruitable));
       const pcPositions = currentCombatState.pcPositions || {};
-
+      
       let targetPc: any = null;
       let minDistance = Infinity;
       let targetPcPos = playerPos;
@@ -600,16 +600,16 @@ export const useGameStore = create<GameState>((set, get) => ({
       // 2. State-based Action selection
       const monsterSpeed = updatedMonster.speed || 6;
       const monsterActions = updatedMonster.actions || [];
-
+      
       let chosenAction = null;
       let chosenRange = 1.5;
 
       if (monsterActions.length > 0) {
         const currentDist = getDistance(updatedMonster, targetPos);
         for (const act of monsterActions) {
-          const isRanged = act.desc?.toLowerCase().includes('ranged') ||
-                          act.desc?.toLowerCase().includes('range') ||
-                          act.name?.toLowerCase().includes('bow') ||
+          const isRanged = act.desc?.toLowerCase().includes('ranged') || 
+                          act.desc?.toLowerCase().includes('range') || 
+                          act.name?.toLowerCase().includes('bow') || 
                           act.name?.toLowerCase().includes('bolt');
           const range = isRanged ? 12 : 1.5;
           if (currentDist <= range) {
@@ -620,9 +620,9 @@ export const useGameStore = create<GameState>((set, get) => ({
         }
         if (!chosenAction) {
           chosenAction = monsterActions[0];
-          const isRanged = chosenAction.desc?.toLowerCase().includes('ranged') ||
-                          chosenAction.desc?.toLowerCase().includes('range') ||
-                          chosenAction.name?.toLowerCase().includes('bow') ||
+          const isRanged = chosenAction.desc?.toLowerCase().includes('ranged') || 
+                          chosenAction.desc?.toLowerCase().includes('range') || 
+                          chosenAction.name?.toLowerCase().includes('bow') || 
                           chosenAction.name?.toLowerCase().includes('bolt');
           chosenRange = isRanged ? 12 : 1.5;
         }
@@ -642,7 +642,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
       if (updatedMonster.awareness === 'combat') {
         let dist = getDistance(updatedMonster, targetPos);
-
+        
         // If not in attack range, move towards target first
         if (dist > attackRange) {
           const path = findPath(updatedMonster, targetPos, currentCombatState.grid, currentCombatState.monsters, currentCombatState.pcPositions || playerPos);
@@ -661,7 +661,7 @@ export const useGameStore = create<GameState>((set, get) => ({
             else if (firstStep.y > freshMonster.y) updatedMonster.viewDirection = 2;
             else if (firstStep.y < freshMonster.y) updatedMonster.viewDirection = 0;
             stateChanged = true;
-
+            
             // Re-calculate distance after movement
             dist = getDistance(updatedMonster, targetPos);
           }
