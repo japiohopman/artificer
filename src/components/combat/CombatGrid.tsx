@@ -614,9 +614,13 @@ const activeTokenCoordinates = draggedMonsterId
           dragMomentum={false}
           animate={{ x: panOffset.x, y: panOffset.y }}
           transition={{ type: 'spring', damping: 25, stiffness: 120 }}
-          className="relative shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
+          className="absolute shadow-2xl cursor-grab active:cursor-grabbing border-4 border-dragon-gold/20 bg-[#1a1814]"
           style={{ 
             scale: zoom,
+            left: '50%',
+            top: '50%',
+            marginLeft: -(gridWidth * cellSize) / 2,
+            marginTop: -(gridHeight * cellSize) / 2,
             width: gridWidth * cellSize, 
             height: gridHeight * cellSize,
             backgroundImage: combatState.combatMapBackground ? `url(${combatState.combatMapBackground.startsWith('http') || combatState.combatMapBackground.startsWith('/') ? combatState.combatMapBackground : `/assets/atlas/combat/combat_map_terrain/${combatState.combatMapBackground}`})` : undefined,
