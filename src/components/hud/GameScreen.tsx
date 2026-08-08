@@ -28,7 +28,8 @@ export const GameScreen: React.FC = () => {
     isInsideSubMap,
     gameMode,
     isMapLegendOpen,
-    setIsMapLegendOpen
+    setIsMapLegendOpen,
+    currentView
   } = useUIStore();
 
   const {
@@ -196,9 +197,11 @@ export const GameScreen: React.FC = () => {
       </div>
 
       {/* 7. Floating Map Controls */}
-      <div className="absolute top-28 right-6 z-[100] pointer-events-none">
-        <MapNavigation />
-      </div>
+      {gameMode !== 'combat' && currentView !== 'grid' && (
+        <div className="absolute top-28 right-6 z-[100] pointer-events-none">
+          <MapNavigation />
+        </div>
+      )}
 
       {/* 6. TOP: Stationary Notifications */}
       <div className={cn(
