@@ -742,11 +742,21 @@ export const useGameStore = create<GameState>((set, get) => ({
       return;
     }
 
-    // Initialize individual PC positions
+    // Initialize individual PC positions (ensuring no overlaps with pre-existing monsters)
     const initialPcPositions: Record<string, { x: number; y: number; rotation: number }> = {};
     activeParty.forEach((c: any, index: number) => {
-      const x = 2 + Math.floor(index / 3);
-      const y = 2 + (index % 3);
+      let x = 2 + Math.floor(index / 3);
+      let y = 2 + (index % 3);
+
+      const occupiedPositions = new Set();
+      combatState.monsters.forEach(m => occupiedPositions.add(`${m.x},${m.y}`));
+      Object.values(initialPcPositions).forEach(pos => occupiedPositions.add(`${pos.x},${pos.y}`));
+
+      while (occupiedPositions.has(`${x},${y}`)) {
+        y++;
+        if (y > 6) { y = 2; x++; }
+      }
+
       initialPcPositions[c.id] = { x, y, rotation: 0 };
     });
 
