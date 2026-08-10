@@ -30,6 +30,7 @@ import { NPCTester } from './npc_tester';
 import { CombatTester } from './CombatTester';
 import { Simulator } from './Simulator';
 import { Jane } from './Jane';
+import { BattleMapEditor } from './BattleMapEditor';
 
 import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';
@@ -78,7 +79,7 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
 
   const [activeTab, setActiveTab] = useState<'inspectors' | 'generators' | 'testers' | 'audio_lab' | 'hue_lamps'>('inspectors');
   const [activeInspector, setActiveInspector] = useState<'codex' | 'world' | 'flags'>('codex');
-  const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'gods' | 'jane' | 'backgrounds'>('npcs');
+  const [activeGenerator, setActiveGenerator] = useState<'npcs' | 'monsters' | 'materials' | 'equipment' | 'gods' | 'jane' | 'backgrounds' | 'map_editor'>('npcs');
   const [activeTester, setActiveTester] = useState<'npcs' | 'combat' | 'simulator'>('npcs');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [editingItem, setEditingItem] = useState<any | null>(initialMonster || null);
@@ -951,7 +952,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
                      { id: 'equipment', label: 'Equipment' },
                      { id: 'gods', label: 'Gods' },
                      { id: 'jane', label: 'Jane (World)' },
-                     { id: 'backgrounds', label: 'Habitat' }
+                     { id: 'backgrounds', label: 'Habitat' },
+                     { id: 'map_editor', label: 'Battle Map' }
                    ].map(gen => (
                      <button
                        key={gen.id}
@@ -1012,6 +1014,8 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               <Jane initialData={initialLocation} />
             ) : activeTab === 'generators' && activeGenerator === 'gods' ? (
               <GodsLore />
+            ) : activeTab === 'generators' && activeGenerator === 'map_editor' ? (
+              <BattleMapEditor />
             ) : activeTab === 'generators' && activeGenerator !== 'backgrounds' ? (
               <>
                 {/* Left Drawer: Hierarchy & Checklist */}
