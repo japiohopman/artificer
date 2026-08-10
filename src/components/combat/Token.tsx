@@ -238,22 +238,36 @@ tokenBorderBgStyle ?? (
           </div>
         )}
 
-        {/* Health Bar */}
-        {healthPercent !== null && (
-          <div className={cn(
-            "absolute bottom-0 left-0 w-full h-1.5 bg-black/60",
-            isTopDownToken && "bottom-1 px-1 rounded-sm overflow-hidden"
-          )}>
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: `${healthPercent}%` }}
-              className={cn(
-                "h-full transition-colors",
-                healthPercent > 50 ? "bg-green-500" : healthPercent > 20 ? "bg-yellow-500" : "bg-red-500"
-              )} 
-            />
-          </div>
-        )}
+        {/* Resource Bars Container */}
+        <div className={cn(
+          "absolute bottom-0 left-0 w-full flex flex-col gap-[2px] bg-black/40 p-[2px] z-30",
+          isTopDownToken && "bottom-1 px-1 rounded-sm overflow-hidden"
+        )}>
+          {/* Health Bar */}
+          {healthPercent !== null && (
+            <div className="w-full h-1 bg-black/60 rounded-sm overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${healthPercent}%` }}
+                className={cn(
+                  "h-full transition-colors",
+                  healthPercent > 50 ? "bg-green-500" : healthPercent > 20 ? "bg-yellow-500" : "bg-red-500"
+                )}
+              />
+            </div>
+          )}
+
+          {/* Movement Bar (only for player/allied characters) */}
+          {isPlayer && actionEconomy?.movement && (
+            <div className="w-full h-1 bg-black/60 rounded-sm overflow-hidden" title={`Movement: ${actionEconomy.movement.current}/${actionEconomy.movement.max} ft`}>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${Math.min(100, Math.max(0, (actionEconomy.movement.current / (actionEconomy.movement.max || 30)) * 100))}%` }}
+                className="h-full bg-teal-400 shadow-[0_0_4px_rgba(45,212,191,0.8)]"
+              />
+            </div>
+          )}
+        </div>
       </motion.div>
 
       {/* Name Tag */}

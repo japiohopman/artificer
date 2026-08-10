@@ -84,6 +84,9 @@ export interface Character {
   dataPath?: string;
   conditions?: string[];
   inspiration?: boolean;
+  isUnconscious?: boolean;
+  isStable?: boolean;
+  isDead?: boolean;
   deathSaves?: {
     successes: number;
     failures: number;
@@ -173,9 +176,10 @@ interface CharacterState {
   consumeMovement: (characterId: string, amount: number) => void;
   restoreActionEconomy: (characterId: string, isLongRest?: boolean) => void;
   useActionSurge: (characterId: string) => void;
-  modifyHp: (characterId: string, amount: number) => void;
+  modifyHp: (characterId: string, amount: number, isCrit?: boolean) => void;
   toggleInspiration: (characterId: string) => void;
   updateDeathSaves: (characterId: string, successes: number, failures: number) => void;
+  rollDeathSave: (characterId: string) => void;
   updateAlliesAndOrganizations: (characterId: string, text: string) => void;
   
   addCharacter: (char: Character) => void;
@@ -460,13 +464,76 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     })
   })),
 
-  modifyHp: (characterId, amount) => set((state) => ({
-    characters: state.characters.map(char => {
-      if (char.id !== characterId) return char;
-      const newHp = Math.min(char.maxHp, Math.max(0, char.hp + amount));
-      return { ...char, hp: newHp };
-    })
-  })),
+  modifyHp: (characterId, amount, isCrit) => set((state) => {
+    let gameStore: any = null;
+    try {
+      gameStore = (window as any).useGameStore?.getState();
+    } catch (e) {}
+
+    return {
+      characters: state.characters.map(char => {
+        if (char.id !== characterId) return char;
+
+        let newHp = char.hp;
+        let isUnconscious = char.isUnconscious || false;
+        let isStable = char.isStable || false;
+        let isDead = char.isDead || false;
+        let deathSaves = char.deathSaves || { successes: 0, failures: 0 };
+
+        if (amount < 0) {
+          const damageTaken = Math.abs(amount);
+
+          if (char.hp > 0) {
+            newHp = Math.max(0, char.hp + amount);
+            if (newHp === 0) {
+              isUnconscious = true;
+              isStable = false;
+              isDead = false;
+              deathSaves = { successes: 0, failures: 0 };
+              gameStore?.addLog(`${char.name} has fallen Unconscious!`, 'error');
+            }
+          } else {
+            // Already at 0 HP
+            if (damageTaken >= char.maxHp) {
+              isDead = true;
+              isUnconscious = false;
+              isStable = false;
+              deathSaves = { successes: 0, failures: 3 };
+              gameStore?.addLog(`MASSIVE DAMAGE! ${char.name} is DEAD instantly!`, 'error');
+            } else {
+              const addedFailures = isCrit ? 2 : 1;
+              const newFailures = Math.min(3, deathSaves.failures + addedFailures);
+              deathSaves = { ...deathSaves, failures: newFailures };
+              gameStore?.addLog(`${char.name} takes damage while unconscious! +${addedFailures} Death Save failure(s).`, 'error');
+
+              if (newFailures >= 3) {
+                isDead = true;
+                isUnconscious = false;
+                isStable = false;
+                gameStore?.addLog(`${char.name} has accumulated 3 failures and is now DEAD.`, 'error');
+              }
+            }
+          }
+        } else if (amount > 0) {
+          newHp = Math.min(char.maxHp, char.hp + amount);
+          isUnconscious = false;
+          isStable = false;
+          isDead = false;
+          deathSaves = { successes: 0, failures: 0 };
+          gameStore?.addLog(`${char.name} is healed for ${amount} HP and wakes up!`, 'success');
+        }
+
+        return {
+          ...char,
+          hp: newHp,
+          isUnconscious,
+          isStable,
+          isDead,
+          deathSaves
+        };
+      })
+    };
+  }),
 
   toggleInspiration: (characterId) => set((state) => ({
 characters: state.characters.map(char =>
@@ -479,6 +546,72 @@ characters: state.characters.map(char =>
       char.id === characterId ? { ...char, deathSaves: { successes, failures } } : char
     )
   })),
+
+  rollDeathSave: (characterId) => set((state) => {
+    let gameStore: any = null;
+    try {
+      gameStore = (window as any).useGameStore?.getState();
+    } catch (e) {}
+
+    return {
+      characters: state.characters.map(char => {
+        if (char.id !== characterId) return char;
+
+        const roll = Math.floor(Math.random() * 20) + 1;
+        let newHp = char.hp;
+        let isUnconscious = char.isUnconscious ?? true;
+        let isStable = char.isStable ?? false;
+        let isDead = char.isDead ?? false;
+        let deathSaves = char.deathSaves || { successes: 0, failures: 0 };
+
+        if (roll === 20) {
+          newHp = 1;
+          isUnconscious = false;
+          isStable = false;
+          isDead = false;
+          deathSaves = { successes: 0, failures: 0 };
+          gameStore?.addLog(`Death Save: Critical Success (Natural 20)! ${char.name} wakes up with 1 HP!`, 'success');
+        } else if (roll === 1) {
+          const newFailures = Math.min(3, deathSaves.failures + 2);
+          deathSaves = { ...deathSaves, failures: newFailures };
+          gameStore?.addLog(`Death Save: Critical Failure (Natural 1)! ${char.name} gets 2 failures.`, 'error');
+          if (newFailures >= 3) {
+            isDead = true;
+            isUnconscious = false;
+            isStable = false;
+            gameStore?.addLog(`${char.name} has died...`, 'error');
+          }
+        } else if (roll >= 10) {
+          const newSuccesses = Math.min(3, deathSaves.successes + 1);
+          deathSaves = { ...deathSaves, successes: newSuccesses };
+          gameStore?.addLog(`Death Save: Success (${roll}) for ${char.name}.`, 'success');
+          if (newSuccesses >= 3) {
+            isStable = true;
+            gameStore?.addLog(`${char.name} is now STABLE!`, 'success');
+          }
+        } else {
+          const newFailures = Math.min(3, deathSaves.failures + 1);
+          deathSaves = { ...deathSaves, failures: newFailures };
+          gameStore?.addLog(`Death Save: Failure (${roll}) for ${char.name}.`, 'error');
+          if (newFailures >= 3) {
+            isDead = true;
+            isUnconscious = false;
+            isStable = false;
+            gameStore?.addLog(`${char.name} has died...`, 'error');
+          }
+        }
+
+        return {
+          ...char,
+          hp: newHp,
+          isUnconscious,
+          isStable,
+          isDead,
+          deathSaves
+        };
+      })
+    };
+  }),
 
   updateAlliesAndOrganizations: (characterId, alliesAndOrganizations) => set((state) => ({
 characters: state.characters.map(char =>
