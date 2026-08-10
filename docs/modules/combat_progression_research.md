@@ -76,3 +76,150 @@ Het is **het allerslimst** om eerst een stevig fundament te leggen door de data 
 ### ⚔️ Fase 4: Tactische Combat Verfijning (Action Economy)
 - [ ] Toevoegen van turn start/end triggers in `useGameStore.ts` voor effect ticks.
 - [ ] NPC turn clustering en AI basic combat logic.
+
+we hebben een balk nodig om aan te tonen hoeveel ft movement de character nog over heeft. ook als de character de pc niet de enemies natuurlijk. hier is hoe het werkt. 1. Je komt op 0 HP
+
+Wanneer je character naar 0 HP gaat en niet direct doodgaat door bijvoorbeeld massive damage:
+
+Je valt Unconscious.
+Je kunt normaal gesproken niet meer bewegen of acties uitvoeren.
+Aan het begin van elke beurt doe je een Death Saving Throw.
+Je hebt maximaal 3 failures en 3 successes.
+
+Bijvoorbeeld:
+
+Ava Loobi
+HP: 0 / 24
+Status: Unconscious
+
+Death Saves:
+✓ Successes: 1/3
+✗ Failures: 0/3
+🎲 2. Je rolt een d20
+
+Een Death Save is geen ability check en ook geen saving throw gekoppeld aan STR/DEX/etc.
+
+Je rolt simpelweg:
+
+d20
+
+De uitkomst:
+
+Roll	Resultaat
+10–20	1 Success
+2–9	1 Failure
+1	2 Failures
+20	Je krijgt 1 HP en wordt wakker
+
+Dus:
+
+d20 = 14 → ✓ Success
+d20 = 7  → ✗ Failure
+d20 = 1  → ✗✗ 2 Failures
+d20 = 20 → HP = 1, wakker
+❤️ 3. Drie successes
+
+Bij:
+
+✓ ✓ ✓
+
+is je character Stable.
+
+Je character blijft op 0 HP, maar hoeft geen Death Saves meer te rollen.
+
+Bijvoorbeeld:
+
+HP: 0 / 24
+Condition: Unconscious
+Stable: true
+Death Saves:
+✓ ✓ ✓
+
+Je wordt dus niet automatisch wakker.
+
+Je kunt later door healing weer HP krijgen.
+
+💀 4. Drie failures
+
+Bij:
+
+✗ ✗ ✗
+
+gaat je character dood.
+
+HP: 0 / 24
+Condition: Dead
+⚔️ 5. Damage terwijl je op 0 HP ligt
+
+Dit is belangrijk als je het voor jouw character sheet/game implementeert.
+
+Wanneer een unconscious character damage krijgt:
+
+Normale damage:
+
++1 Death Save failure
+
+Critical hit:
+
++2 Death Save failures
+
+En als de damage afkomstig is van een melee attack binnen 5 feet, is er nog een speciale regel:
+
+Als die attack een critical hit is, is dat 2 failures.
+
+Daarnaast bestaat instant death door massive damage: als één instance of damage je van 0 HP naar een negatieve hoeveelheid brengt die minstens gelijk is aan je maximum HP, sterf je direct.
+
+🩹 6. Healing
+
+Zodra iemand op 0 HP ligt en healing krijgt:
+
+HP: 0
+    ↓
+Healing +8
+    ↓
+HP: 8
+
+Dan zijn de Death Saves niet meer relevant.
+
+Je character wordt weer actief afhankelijk van de betreffende healing/condition-regels.
+
+Voor jouw character sheet
+
+Als je dit in je D&D-game wilt bouwen, zou ik Death Saves los van HP opslaan.
+
+Bijvoorbeeld:
+
+interface DeathSaves {
+  successes: number; // 0-3
+  failures: number;  // 0-3
+}
+
+interface Character {
+  hp: number;
+  maxHp: number;
+  deathSaves: DeathSaves;
+  isUnconscious: boolean;
+  isStable: boolean;
+  isDead: boolean;
+}
+
+En de kernlogica:
+
+if HP <= 0
+    ↓
+Unconscious
+    ↓
+Death Save
+    ↓
+d20
+ ┌───────────────┐
+ │ 1             │ → +2 failures
+ │ 2–9           │ → +1 failure
+ │ 10–19         │ → +1 success
+ │ 20            │ → HP = 1
+ └───────────────┘
+    ↓
+3 failures? → DEAD
+3 successes? → STABLE
+
+Belangrijk voor jouw combat-systeem: Death Saves resetten wanneer je weer 1 HP of meer krijgt. Je zou dus niet moeten behandelen als een permanente character-stat zoals STR, DEX of XP. Ze horen bij de huidige downed state van het character. 
