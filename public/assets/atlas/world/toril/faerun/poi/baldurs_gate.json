@@ -1,0 +1,57 @@
+{
+  "id": "baldurs_gate",
+  "name": "Baldur's Gate",
+  "type": "metropolis",
+  "category": "metropolis",
+  "plain": "Material Plane",
+  "world": "Toril",
+  "continent": "faerun",
+  "region": "west_faerun",
+  "sub_region": "western_heartlands",
+  "parent": "poi",
+  "title": "Baldur's Gate: Metropolis of the Coast",
+  "description": "Baldur's Gate, called the City of Blood and simply the Gate, was one of the largest metropolises and city-states on the Sword Coast, within the greater Western Heartlands. It was a crowded city of commerce and opportunity, and one of the most prosperous and influential merchant cities on the western coast of Faerûn. Despite its long-standing presence as a neutral power, the leaders of Baldur's Gate were members of the Lords' Alliance of powers in the west. It was described as being the \"halfway to everywhere\".\n\nThe strong peace-keeping force known as the Watch, along with the presence of the powerful Flaming Fists mercenary company, kept the city generally peaceful and safe. This inherent sense of security allowed the Gate to keep a tolerant and welcoming attitude towards outsiders, whether they were wealthy merchants, poor refugees or, as it historically attracted, less-scrupulous individuals such as pirates and smugglers",
+  "wiki": "",
+  "image": "",
+  "thumbnail": "",
+  "banner": "",
+  "tags": [],
+  "map": "",
+  "sub_map": "",
+  "children": [],
+  "sub_location_files": [],
+  "coordinates": {
+    "lat": -1035.5,
+    "lng": -2029.5
+  },
+  "bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      1000,
+      1000
+    ]
+  ],
+  "origin": "top-left",
+  "unitsPerMile": 1,
+  "geography": "",
+  "history": "",
+  "bestiary": "",
+  "politics": "",
+  "religion": "",
+  "trade": "",
+  "metadata": {
+    "government": "The Council of Four",
+    "military": "The Flaming Fist",
+    "population": "125,000+",
+    "organizations": "",
+    "trade": "",
+    "economy": "",
+    "religion": "",
+    "factions": ""
+  },
+  "categories": [],
+  "lore": ""
+}
