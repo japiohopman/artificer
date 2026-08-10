@@ -392,7 +392,7 @@ export const TokenActionHUD: React.FC<TokenActionHUDProps> = ({ x, y, cellSize }
     );
   };
 
-  if (!isMyTurn) return null;
+  if (!isMyTurn || (activeChar && activeChar.hp <= 0)) return null;
 
   return (
     <div 
