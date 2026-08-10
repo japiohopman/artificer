@@ -30,7 +30,7 @@ import { NPCTester } from './npc_tester';
 import { CombatTester } from './CombatTester';
 import { Simulator } from './Simulator';
 import { Jane } from './Jane';
-import { BattleMapEditor } from './BattleMapEditor';
+import { BattleMapEditor } from './BattleMapEditor/index';
 
 import { Mixer } from '../audio/Mixer';
 import { AssetExplorer } from './AssetExplorer';

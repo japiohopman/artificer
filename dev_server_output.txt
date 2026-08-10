@@ -2,7 +2,17 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
 [ElevenLabs Server Init] Available Env Keys: []
-[ElevenLabs Startup Cache] Preloaded 2 cached audio IDs.
+[ElevenLabs Startup Cache] Preloaded 3 cached audio IDs.
 Server running on http://localhost:3000
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
