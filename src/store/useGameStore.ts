@@ -403,8 +403,20 @@ export const useGameStore = create<GameState>((set, get) => ({
     let y = targetY ?? 2;
 
     if (targetX === undefined || targetY === undefined) {
-      // Find an empty spot
-      const occupiedPositions = new Set(state.combatState.monsters.map(m => `${m.x},${m.y}`));
+      // Find an empty spot (excluding both other monsters and player characters)
+      const occupiedPositions = new Set();
+      state.combatState.monsters.forEach(m => occupiedPositions.add(`${m.x},${m.y}`));
+
+      const pcPositions = state.combatState.pcPositions || {};
+      Object.values(pcPositions).forEach((p: any) => {
+        if (p && typeof p === 'object' && 'x' in p && 'y' in p) {
+          occupiedPositions.add(`${p.x},${p.y}`);
+        }
+      });
+      if (state.combatState.playerPos) {
+        occupiedPositions.add(`${state.combatState.playerPos.x},${state.combatState.playerPos.y}`);
+      }
+
       while (occupiedPositions.has(`${x},${y}`)) {
         y++;
         if (y > 6) { y = 2; x++; }

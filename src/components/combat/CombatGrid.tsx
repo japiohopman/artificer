@@ -234,7 +234,7 @@ export const CombatGrid: React.FC = () => {
     const actorPos = activeTokenPos;
 
     if (targetingAction.id === 'move') {
-      return getReachableCells(actorPos, range, grid, monsters, pcPositions || playerPos);
+      return getReachableCells(actorPos, range, grid, monsters, { ...pcPositions, player: playerPos });
     }
 
     const cells = new Set<string>();
@@ -465,11 +465,11 @@ export const CombatGrid: React.FC = () => {
       }
 
       if (targetingAction?.id === 'move') {
-        if (isCellOccupied(x, y, activePcPos, monsters, pcPositions || playerPos, 'Medium')) {
+        if (isCellOccupied(x, y, activePcPos, monsters, { ...pcPositions, player: playerPos }, 'Medium')) {
           addLog("That position is already occupied!", 'warning');
           return;
         }
-        const path = findPath(activePcPos, { x, y }, grid, monsters, pcPositions || playerPos);
+        const path = findPath(activePcPos, { x, y }, grid, monsters, { ...pcPositions, player: playerPos });
         const maxMove = activeChar?.actionEconomy?.movement?.current || 30;
 
         if (path && path.length * 5 <= maxMove) {
@@ -497,11 +497,11 @@ export const CombatGrid: React.FC = () => {
       return;
     }
 
-    if (isCellOccupied(x, y, activePcPos, monsters, pcPositions || playerPos, 'Medium')) {
+    if (isCellOccupied(x, y, activePcPos, monsters, { ...pcPositions, player: playerPos }, 'Medium')) {
       addLog("That position is already occupied!", 'warning');
       return;
     }
-    const path = findPath(activePcPos, { x, y }, grid, monsters, pcPositions || playerPos);
+    const path = findPath(activePcPos, { x, y }, grid, monsters, { ...pcPositions, player: playerPos });
 
     if (path && path.length > 0) {
       setPlayerPos(x, y, activeCharacterId);
@@ -534,7 +534,7 @@ export const CombatGrid: React.FC = () => {
 const activeTokenCoordinates = draggedMonsterId
       ? (monsters.find(m => m.id === draggedMonsterId) || playerPos)
       : activeTokenPos;
-    return findPath(activeTokenCoordinates, target, grid, monsters, pcPositions || playerPos);
+    return findPath(activeTokenCoordinates, target, grid, monsters, { ...pcPositions, player: playerPos });
   }, [activeTokenPos, hoveredCell, draggedPos, grid, monsters, draggedMonsterId, pcPositions, playerPos]);
 
   const rulerDistance = useMemo(() => {
@@ -718,14 +718,14 @@ const activeTokenCoordinates = draggedMonsterId
                         const x = Math.floor(((info.point.x - rect.left) / scaleX) / cellSize);
                         const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-                          if (isCellOccupied(x, y, pos, monsters, pcPositions || playerPos, 'Medium')) {
+                          if (isCellOccupied(x, y, pos, monsters, { ...pcPositions, player: playerPos }, 'Medium')) {
                             addLog("That position is already occupied!", 'warning');
                             setDraggedPos(null);
                             setDraggedPcId(null);
                             return;
                           }
                           const { gameMode } = useUIStore.getState();
-                          const path = findPath(pos, { x, y }, grid, monsters, pcPositions || playerPos);
+                          const path = findPath(pos, { x, y }, grid, monsters, { ...pcPositions, player: playerPos });
                           if (path && path.length > 0) {
                             const isCombat = gameMode === 'combat';
                             const maxMove = char?.actionEconomy?.movement?.current || 30;
@@ -818,13 +818,13 @@ const activeTokenCoordinates = draggedMonsterId
                         const y = Math.floor(((info.point.y - rect.top) / scaleY) / cellSize);
                         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
                           const originalPos = { x: monster.x, y: monster.y };
-                          if (isCellOccupied(x, y, originalPos, monsters, pcPositions || playerPos, monster.size || 'Medium')) {
+                          if (isCellOccupied(x, y, originalPos, monsters, { ...pcPositions, player: playerPos }, monster.size || 'Medium')) {
                             addLog("That position is already occupied!", 'warning');
                             setDraggedPos(null);
                             setDraggedMonsterId(null);
                             return;
                           }
-                          const path = findPath(originalPos, { x, y }, grid, monsters, pcPositions || playerPos, monster.size || 'Medium');
+                          const path = findPath(originalPos, { x, y }, grid, monsters, { ...pcPositions, player: playerPos }, monster.size || 'Medium');
                           if (path && path.length > 0) {
                             // Move summon/allied monster
                             useGameStore.setState(state => ({
