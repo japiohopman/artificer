@@ -916,7 +916,7 @@ export const useGameStore = create<GameState>((set, get) => ({
       const isPC = useCharacterStore.getState().characters.some(c => c.id === target.id) || target.id === 'player' || target.id === 'slot1';
       if (isPC) {
         const targetId = (target.id === 'player') ? activeCharacterId : target.id;
-        modifyHp(targetId, -damageRoll.total);
+        modifyHp(targetId, -damageRoll.total, isCrit);
       } else {
         const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
         const newHp = currentHp - damageRoll.total;
