@@ -210,7 +210,7 @@ class SoundEngine {
     let path = "";
     switch (effect) {
       case 'UI_CLICK_LIGHT': path = '/assets/sounds/system/ui_basic_click_standard.wav'; break;
-      case 'TRANSACTION_SUCCESS': path = '/assets/sounds/system/feedback_success.mp3'; break;
+      case 'TRANSACTION_SUCCESS': path = '/assets/sounds/system/feedback_success.wav'; break;
       case 'UI_BACK_EXIT': path = '/assets/sounds/system/ui_modal_close.mp3'; break;
       case 'UI_MODAL_OPEN': path = '/assets/sounds/system/ui_modal_open.mp3'; break;
       case 'UI_ERROR': path = '/assets/sounds/system/feedback_error.mp3'; break;
@@ -227,7 +227,7 @@ class SoundEngine {
       case 'DOOR_OPEN': path = '/assets/sounds/sfx/door_open.mp3'; break;
       case 'DOOR_CLOSE': path = '/assets/sounds/sfx/door_close.mp3'; break;
       case 'COMBAT_HIT': path = '/assets/sounds/sfx/hit_short.wav'; break;
-      case 'COMBAT_SLASH': path = '/assets/sounds/environment/vfx_sword_slash.mp3'; break;
+      case 'COMBAT_SLASH': path = '/assets/sounds/environment/vfx_sword_slash.wav'; break;
       case 'TOKEN_MOVE': path = '/assets/sounds/sfx/ui_map_token_move.wav'; break;
       case 'TURN_PLAYER': path = '/assets/sounds/system/tda_turn_player.mp3'; break;
       case 'TURN_AI': path = '/assets/sounds/system/tda_turn_ai.mp3'; break;
