@@ -560,8 +560,21 @@ export const useGameStore = create<GameState>((set, get) => ({
       let updatedMonster = { ...freshMonster };
       let stateChanged = false;
 
-      // Find the closest PC to target and check awareness
-      const activeParty = useCharacterStore.getState().characters.filter((c: any) => c && c.name !== 'Empty Slot' && (!c.isNpc || c.isRecruitable));
+      // Find the closest PC to target and check awareness (only active PCs, not unconscious or dead)
+      const activeParty = useCharacterStore.getState().characters.filter((c: any) =>
+        c && c.name !== 'Empty Slot' &&
+        (!c.isNpc || c.isRecruitable) &&
+        c.hp > 0 &&
+        !c.isUnconscious &&
+        !c.isDead
+      );
+
+      if (activeParty.length === 0) {
+        addLog(`${updatedMonster.name} searches, but all opponents are incapacitated!`, 'info');
+        get().nextTurn();
+        return;
+      }
+
       const pcPositions = currentCombatState.pcPositions || {};
       
       let targetPc: any = null;
