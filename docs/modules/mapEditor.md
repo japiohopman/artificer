@@ -4,13 +4,13 @@ The Battle Map Editor is the Artificer DevKit authoring environment for creating
 
 ## Status
 
-The current implementation is a prototype being redesigned into a modular editor under:
+The editor is currently under active construction. Its modular foundation exists under:
 
 ```text
 src/components/devkit/BattleMapEditor/
 ```
 
-The editor is intended to combine a fast, canvas-first map-authoring workflow inspired by Dungeon Scrawl and Dungeon Map Builder with Artificer's tactical-combat requirements.
+The UI currently contains early tool/component scaffolding. Wall, Room, Door, Terrain, Object, Token, Layers, Inspector and Undo/Redo are **not considered implemented until their underlying behavior is functional and tested**.
 
 ## Architecture
 
@@ -18,6 +18,8 @@ The editor is intended to combine a fast, canvas-first map-authoring workflow in
 BattleMapEditor
       ↓
 Battle Map Definition
+      ↓
+validation / persistence
       ↓
 Map Loader / Adapter
       ↓
@@ -46,13 +48,13 @@ src/components/devkit/BattleMapEditor/
 └── utils/
 ```
 
-`BattleMapEditor.tsx` should remain an orchestration/composition component. Rendering, editor state, tools, geometry, persistence and history should not accumulate in the root component.
+`BattleMapEditor.tsx` is the composition root. Rendering, editor state, tools, geometry, persistence and history should not accumulate in the root component.
 
 ## Core Authoring Model
 
 A battle map is a versioned data structure rather than merely an image or collection of UI state.
 
-The planned model contains, at minimum:
+The model should contain, at minimum:
 
 - map metadata
 - dimensions
@@ -171,7 +173,7 @@ The initial target is a square tactical grid using Artificer's existing spatial 
 
 The editor should be designed so grid configuration can support square, hex, none, configurable cell size and configurable display/snap behaviour.
 
-The runtime adapter must preserve the spatial conventions required by CombatGrid.
+The runtime adapter must preserve the spatial conventions required by `CombatGrid`.
 
 ## Selection and Inspector
 
