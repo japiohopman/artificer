@@ -10,7 +10,7 @@ export const DEFAULT_LAYERS: MapLayer[] = [
   { id: 'fog', name: 'Fog of War', visible: true, locked: false, opacity: 0.6, zIndex: 6 }
 ];
 
-export const createDefaultMap = (width = 16, height = 12): BattleMap => {
+export const createDefaultMap = (width = 24, height = 16): BattleMap => {
   const id = `map-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   return {
     version: 1,

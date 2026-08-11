@@ -135,7 +135,7 @@ export const ToolPalette: React.FC = () => {
             <input
               type="number"
               value={map.dimensions.width}
-              onChange={(e) => updateMapDimensions(Math.max(4, parseInt(e.target.value) || 16), map.dimensions.height)}
+              onChange={(e) => updateMapDimensions(Math.max(4, parseInt(e.target.value) || 24), map.dimensions.height)}
               className="bg-black/40 border border-white/10 rounded px-2 py-1.5 text-[10px] font-bold text-white outline-none w-full"
             />
           </div>
@@ -144,9 +144,34 @@ export const ToolPalette: React.FC = () => {
             <input
               type="number"
               value={map.dimensions.height}
-              onChange={(e) => updateMapDimensions(map.dimensions.width, Math.max(4, parseInt(e.target.value) || 12))}
+              onChange={(e) => updateMapDimensions(map.dimensions.width, Math.max(4, parseInt(e.target.value) || 16))}
               className="bg-black/40 border border-white/10 rounded px-2 py-1.5 text-[10px] font-bold text-white outline-none w-full"
             />
+          </div>
+        </div>
+
+        {/* 3:2 Ratio Presets */}
+        <div className="space-y-1.5 pt-1">
+          <span className="text-[8px] text-white/40 uppercase font-bold">3:2 Tactical Presets</span>
+          <div className="grid grid-cols-2 gap-1.5">
+            {[
+              { w: 18, h: 12, label: '18 x 12 (Small)' },
+              { w: 24, h: 16, label: '24 x 16 (Standard)' },
+              { w: 30, h: 20, label: '30 x 20 (Medium)' },
+              { w: 36, h: 24, label: '36 x 24 (Large)' }
+            ].map((p) => (
+              <button
+                key={`${p.w}x${p.h}`}
+                onClick={() => updateMapDimensions(p.w, p.h)}
+                className={`p-1.5 text-[8px] font-black tracking-tight rounded border transition-all text-center ${
+                  map.dimensions.width === p.w && map.dimensions.height === p.h
+                    ? 'bg-purple-600/25 border-purple-500 text-purple-300'
+                    : 'bg-white/[0.01] border-white/5 text-white/50 hover:bg-white/5 hover:text-white'
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
           </div>
         </div>
       </div>
