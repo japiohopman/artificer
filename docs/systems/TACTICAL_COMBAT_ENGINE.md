@@ -1,92 +1,144 @@
 # ⚔️ Tactical Combat Engine
 
-The **Tactical Combat Engine** provides a grid-based interface for resolving encounters within Faerûn. Inspired by the [Aedif Tactical Grid](https://github.com/Aedif/tactical-grid), this system is being fully translated into React (TSX) to align with the Artificer architecture. It translates the abstract stats in the Atlas (Enemies, Spells, Weapons) into spatial actions.
+The Tactical Combat Engine is the **runtime** system for resolving grid-based encounters. It consumes canonical game/Atlas data and presents tactical movement, positioning, initiative and combat interactions.
 
-## ⚙️ Data Integrity
-- **Mandate**: All combat logic, including monster stats, ability effects, and equipment modifiers, must strictly utilize data from the `public/assets/atlas/` directory. Direct manual overrides in code are prohibited to ensure schema-driven consistency.
+> **Authoring boundary:** `BattleMapEditor` creates and edits battle-map authoring data. `CombatGrid` is the runtime tactical view. The editor is not a second combat engine.
 
-## 🚧 Implementation Status
-- **Current State**: Initial TSX translation of the tactical grid is functional but incomplete. Core movement and initiative tracking are implemented.
-- **Pending**: Full feature parity with the reference implementation, advanced LoS, and deeper integration with atlas-driven monster abilities.
+## Status
 
-## 🧩 Spatial Mechanics
+**Implemented foundation / actively evolving.** The current tactical implementation provides the grid, Canvas-based rendering, token presentation, movement/pathfinding foundations, initiative and several spatial utilities. Advanced combat automation and some rule integration remain work in progress.
 
-### 1. The Tactical Grid (`CombatGrid.tsx`)
-![Tactical Overlay](../screenshots/tactical_overlay.png)
-- **Dimensions**: 32 x 20 grid (640 total cells).
-- **Scale**: 1 Square = 5 Feet (60px in the UI).
-- **Coordinate System**: `[x, y]` integer-based grid.
-- **Rendering Engine**: Hybrid HTML5 Canvas + React.
-    - **Canvas**: Handles grid lines, terrain, walls, doors, and selective highlights (Selective Grid Mode).
-    - **React**: Manages token overlays, animations (Framer Motion), and drag-and-drop interactions.
-- **Selective Grid Mode**: To maintain immersion, the full grid is only rendered in a radius around the active character or the cursor.
-- **Unit Representation**:
-    - **Players**: Circular tokens with avatar images or user icons, highlighted with a blue border and movement pulse.
-    - **Monsters**: Circular tokens with monster images or identity icons, highlighted with a "Dragon Red" border.
+Do not document a feature as implemented solely because a UI placeholder or prototype exists.
 
-### 2. Movement & Pathfinding
-- **Range**: Standard movement is limited to **6 cells** (30ft) per turn, or governed by the unit's `speed` stat.
-- **Pathfinding**: Uses the **A* Algorithm** to calculate optimal paths around obstacles (walls and closed doors).
-- **Collision**: Movement is blocked by `wall` types and `door` types where `isOpen` is false.
-- **Interaction**: Clicking a valid, reachable cell updates the `playerPos`.
+## Data integrity
 
-### 3. Exploration & Interactivity
-- **Environment**: The grid supports multiple rooms defined by `wall` and `door` cells.
-- **Doors**: Interactive elements that can be toggled (`open`/`close`) when a player is adjacent (Distance <= 1.5).
-- **Line of Sight (LoS)**: Uses **Bresenham's Line Algorithm** to determine visibility between points.
-- **Fog of War**: Cells and entities not in the player's direct LoS are rendered with reduced visibility or hidden entirely.
+Combat entities and mechanical definitions should resolve from the canonical Atlas/runtime data. Avoid hard-coded monster, spell, equipment or ability definitions in UI components.
 
-### 4. AI Awareness & Perception
-Monsters operate on a state machine driven by spatial awareness:
-- **Awareness States**:
-    - `idle`: Standard patrol/waiting. Standard rotation-based search.
-    - `alert`: Searching for the player (usually triggered by sound or moving to the `lastKnownPlayerPos`).
-    - `combat`: Actively engaging the player.
-- **View Cones**: Monsters have a 90-degree field of vision based on their `viewDirection` (N, E, S, W).
-- **Detection**: Entering a monster's view cone while in LoS triggers immediate combat. High proximity (radius <= 3) triggers an `alert` state even outside the view cone.
-- **Threat Range**: Hovering over a monster reveals its potential movement and attack range (Red highlight).
+## Spatial model
 
-### 5. Initiative System
-Combatants are organized into an **Initiative Queue**.
-- **Roll**: `1d20 + Initiative Modifier`.
-- **Turn Sequence**: The `activeTurnIndex` tracks which unit's turn it is.
-- **Visuals**: The active unit is highlighted in the Initiative Tracker with a golden glow and pulse animation.
+The current tactical convention is:
 
-## 🔄 State Management (`useGameStore.ts`)
+- Square grid
+- 32 × 20 default battle area where applicable
+- 5 ft per cell
+- Integer `[x, y]` coordinates
+- Canvas for high-frequency map rendering
+- React for token/UI overlays
 
-### `combatState`
-```typescript
-interface CombatState {
-  playerPos: { x: number; y: number };
-  monsters: Array<{
-    id: string;
-    name: string;
-    type: string;
-    hp: number;
-    maxHp: number;
-    x: number;
-    y: number;
-    imageUrl?: string;
-  }>;
-  initiativeOrder: Array<{
-    id: string;
-    name: string;
-    value: number;
-    isPlayer?: boolean;
-  }>;
-  activeTurnIndex: number;
-}
+The exact map dimensions should eventually come from the loaded battle-map definition rather than being treated as a universal runtime constant.
+
+## Rendering architecture
+
+`CombatGrid` uses a hybrid rendering model:
+
+```text
+Canvas
+├── grid
+├── terrain
+├── walls / doors
+├── spatial highlights
+└── other high-frequency map visuals
+
+React
+├── tokens
+├── token interaction
+├── animation
+└── surrounding combat UI
 ```
 
-### Key Actions
-- `startCombat()`: Rolls initiative for all participants and sorts the queue.
-- `nextTurn()`: Advances the `activeTurnIndex`.
-- `updateMonsterHp(id, hp)`: Updates the current health of a target.
-- `addMonsterToCombat(monster)`: Spawns a monster onto the grid at the nearest available position.
+Do not create a React component for every grid cell.
 
-## 🤖 AI Interaction
-- **Triggers**: The AI DM can transition the game into `combat` mode via tool calls.
-- **Action Resolution**: When the AI declares an attack, it triggers system-side HP updates and log entries.
+## Movement and pathfinding
+
+The tactical layer uses grid-based movement and A* pathfinding foundations. Movement must respect the active actor's speed and the map's blocking geometry.
+
+Closed doors and blocking walls must prevent movement where appropriate.
+
+Pathfinding and coordinate utilities should remain reusable and independent from React presentation.
+
+## Doors, walls and geometry
+
+Runtime combat should consume the map's semantic wall/door geometry.
+
+The Battle Map Editor represents walls as segments between cells and doors as entities attached to wall geometry. The runtime adapter is responsible for translating that authoring model into the representation required by combat.
+
+This distinction is important for:
+
+- collision
+- line of sight
+- pathfinding
+- door interaction
+- cover
+- future lighting
+
+## Line of sight and fog of war
+
+The tactical system has spatial visibility foundations including line-of-sight calculations and fog-of-war presentation.
+
+LoS geometry should be based on actual blocking walls/doors rather than a purely visual approximation.
+
+Fog of War has both an authoring concern (map layer) and a runtime concern (what the player can currently see). Keep those concerns separate.
+
+## Initiative
+
+Combat uses an initiative order and active-turn concept. Initiative is a runtime combat concern and should not be stored as editor state.
+
+Future work includes stricter action/turn validation and richer combatant state.
+
+## Combat state
+
+`useGameStore` owns transient combat/session state. The exact shape is implementation-owned and should not be copied into documentation as a second schema. When the runtime model changes, update this document and the canonical TypeScript types together.
+
+The editor's persisted `BattleMap` schema is intentionally different from combat runtime state.
+
+## AI combat
+
+Automated enemy tactical behaviour is **planned work**, not a completed system. The intended direction includes:
+
+- target selection
+- A* movement during enemy turns
+- attack/spell resolution
+- tactical priorities
+- perception/visibility checks
+
+Do not claim an enemy AI state machine is implemented until the corresponding runtime logic exists and is tested.
+
+## Area of effect
+
+AOE targeting for cones, spheres and lines is planned as part of the tactical rules layer. Geometry utilities should be pure and testable and should eventually be shared by the runtime UI and rule resolution.
+
+## Runtime map loading
+
+The intended flow is:
+
+```text
+Saved BattleMap
+      ↓
+validation / deserialization
+      ↓
+BattleMap → combat adapter
+      ↓
+combat runtime state
+      ↓
+CombatGrid
+```
+
+The adapter is the boundary between editor-only authoring data and runtime combat data.
+
+## Development priorities
+
+1. Keep spatial conventions consistent.
+2. Keep combat rules out of presentation components.
+3. Reuse Atlas data instead of duplicating definitions.
+4. Separate map authoring from combat runtime.
+5. Make geometry utilities deterministic and testable.
+6. Add advanced AI/rules only after the runtime state model can support them cleanly.
 
 ---
-*Status: Phase 2 Tactical Foundations Implemented.*
+
+**Related documentation:**
+
+- `docs/modules/mapEditor.md` — Battle Map authoring architecture
+- `docs/modules/tactical_combat_blueprint.md` — tactical roadmap/research
+- `docs/systems/DATA_FLOW.md` — application state/data flow
+- `docs/ARCHITECTURE_STATUS.md` — current architectural contract for agents
