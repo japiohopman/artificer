@@ -25,6 +25,7 @@ This is the **active work queue**. Completed historical work should not remain m
 - [x] Refresh `docs/PROJECT_HUB.md`.
 - [x] Refresh `docs/COMPONENT_MAP.md`.
 - [x] Refresh `docs/PROGRESS.md`.
+- [x] Integrate new documentation audit findings (`docs/TASK_BOARD_addition.md` and `docs/new_map_functions.md`) into the central Task Board.
 - [ ] Audit remaining system/module docs against current source.
 - [ ] Remove or clearly mark stale/deprecated documentation.
 - [ ] Ensure all major modules have one authoritative specification.
@@ -40,10 +41,16 @@ This is the **active work queue**. Completed historical work should not remain m
 - [ ] Resolve runtime hosting strategy for heavy assets (Firebase Storage or Git LFS).
 - [ ] Remove obsolete local heavy-asset copies once hosting is verified.
 - [ ] Remove deprecated `src/store/useStore.ts` if still unused after source verification.
+- [ ] Implement the "Toril Location Image Generator" to populate empty world asset image slots (as defined in `docs/Toril_image_locations.md`).
+- [ ] Implement the Day/Night Banner Matrix (16:9 layout split into horizontal Day/Night rows) for location banners.
 
 ## 🟡 Medium — Character & gameplay systems
 
 ### Character Creation / Level Up
+- [ ] Tighten up and polish overall character creation flow (in progress).
+- [ ] Fuller Character Sheet: display Armor Class (AC), Initiative, etc., utilizing existing assets and UI elements.
+- [ ] Right-Hand Character Panel: Classic layout with profile picture, level, and XP progress bar.
+- [ ] Grid-Based Inventory: implement a container-based system and grid inventory with per-category sub-tabs.
 - [ ] Point Buy Calculator — standard 27-point-buy constraints.
 - [ ] Advanced Spellbook Manager.
 - [ ] Feat selection during ASI/Level Up with prerequisites and ability-score increases.
@@ -52,11 +59,23 @@ This is the **active work queue**. Completed historical work should not remain m
 - [ ] Equipment Pack inspection in `FocusView`.
 - [ ] Recruitable NPC / Character Passport UI.
 
-### Runtime systems
+### Runtime systems & Combat Loop
+- [ ] Combat loop — full cycle running smoothly end to end.
+- [ ] XP animation — display high-fidelity animation when players earn XP.
+- [ ] Shared XP across the party — distribute earned XP evenly to all active characters.
 - [ ] NPC Memory / relationship history module.
 - [ ] Economic & Trade module.
 - [ ] Soundscape Orchestrator.
 - [ ] Rule Engine / Condition Tracker.
+
+### Location & Submap Flow (docs/new_map_functions.md)
+- [ ] Enter Location Flow: trigger location map transition and automatically close active chat panels.
+- [ ] Spawn- or Entry-points: spawn/place party automatically on specified coordinates inside locations (e.g. `entry_points.json`).
+- [ ] Restructure HUD Responsibilities: manage legend, layer toggles, and location info in `WorldPanel.tsx` (or a dedicated React component) rather than inside markdown.
+- [ ] Discoverable Locations: introduce discovery-driven visibility, displaying location markers only after traveling, talking to NPCs, reading lore, etc.
+- [ ] Fog-of-War Granularities: pre-reveal large areas (e.g. seas) while small streams/puddles and hidden structures only reveal upon discovery.
+- [ ] WorldMap and LocationMap decoupling: split `WorldMap.tsx` and `LocationMap.tsx` into clean, specialized subcomponents (Renderer, TravelController, Markers, etc.).
+- [ ] Add D&D Markdown Styling in `WorldPanel` for location lore (crimson `#8B0000` H1/H2, gold `#D4AF37` HR, and serif quotes).
 
 ## 🟢 Maintenance / optimization
 

@@ -10,6 +10,7 @@ All notable changes to the Artificer project are documented here. The changelog 
 - **Battle Map module documentation**: documented authoring/runtime separation, map data, geometry, tools, persistence, performance and implementation phases.
 
 ### Changed
+- **Task Board Consolidation**: merged fragmented task lists from `docs/TASK_BOARD_addition.md` (Core Loop & UI Polish queue) and new feature outlines from `docs/new_map_functions.md` directly into the authoritative `docs/TASK_BOARD.md` to provide a unified active queue for development.
 - **Component Map**: synchronized `docs/COMPONENT_MAP.md` with the current DevKit/BattleMapEditor structure.
 - **Project Hub**: made `docs/PROJECT_HUB.md` the clearer canonical documentation entrypoint.
 - **Task Board**: replaced the stale mixed historical/actionable list with an active engineering queue and explicit placeholder rules.
@@ -22,7 +23,7 @@ All notable changes to the Artificer project are documented here. The changelog 
 ## [0.1.2] - 2025-02-21
 
 ### Added
-- Integrated sound effects for 3D dice rolls via `soundService`.
+- Integrated sfx for 3D dice rolls via `soundService`.
 - Added customizable dice colors in the `AdvancedRoller` panel.
 - Expanded icon library with new subclass/core feature paths.
 
