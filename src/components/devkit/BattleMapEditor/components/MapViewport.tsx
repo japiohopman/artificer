@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useEditorStore } from '../state/editorStore';
 import { worldToGrid, gridToWorld, getWallSnap } from '../geometry/coordinates';
 import { findWallAt, findObjectAt, findTokenAt } from '../geometry/hitTesting';
@@ -14,6 +14,8 @@ import {
 
 export const MapViewport: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
   
   const {
     map,
@@ -44,6 +46,24 @@ export const MapViewport: React.FC = () => {
 
   const cellSize = map.grid.cellSize;
   const { zoom, panX, panY } = viewport;
+
+  // Track layout dimensions dynamically
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width, height } = entry.contentRect;
+        setContainerSize({ width: Math.floor(width), height: Math.floor(height) });
+      }
+    });
+
+    resizeObserver.observe(container);
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   // Render loop
   useEffect(() => {
@@ -103,7 +123,7 @@ export const MapViewport: React.FC = () => {
     }
 
     ctx.restore();
-  }, [map, viewport, selection, coverAttacker, coverTarget]);
+  }, [map, viewport, selection, coverAttacker, coverTarget, containerSize]);
 
   // Handle pointer interactions on the interactive workspace canvas
   const isDraggingRef = useRef(false);
@@ -306,46 +326,50 @@ export const MapViewport: React.FC = () => {
     }
   };
 
-  const handleWheel = (e: React.WheelEvent<HTMLCanvasElement>) => {
-    e.preventDefault();
+  useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+    const handleWheelNative = (e: WheelEvent) => {
+      e.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
 
-    // Zoom around cursor coordinates to preserve visual coordinate focus
-    const zoomIntensity = 0.1;
-    const wheelValue = e.deltaY < 0 ? 1 : -1;
-    const zoomFactor = Math.exp(wheelValue * zoomIntensity);
+      // Zoom around cursor coordinates to preserve visual coordinate focus
+      const zoomIntensity = 0.1;
+      const wheelValue = e.deltaY < 0 ? 1 : -1;
+      const zoomFactor = Math.exp(wheelValue * zoomIntensity);
 
-    const newZoom = Math.max(0.25, Math.min(4.0, zoom * zoomFactor));
+      const newZoom = Math.max(0.25, Math.min(4.0, zoom * zoomFactor));
 
-    const worldX = (mouseX - panX) / zoom;
-    const worldY = (mouseY - panY) / zoom;
+      const worldX = (mouseX - panX) / zoom;
+      const worldY = (mouseY - panY) / zoom;
 
-    setViewport({
-      zoom: newZoom,
-      panX: mouseX - worldX * newZoom,
-      panY: mouseY - worldY * newZoom
-    });
-  };
+      setViewport({
+        zoom: newZoom,
+        panX: mouseX - worldX * newZoom,
+        panY: mouseY - worldY * newZoom
+      });
+    };
+
+    canvas.addEventListener('wheel', handleWheelNative, { passive: false });
+    return () => {
+      canvas.removeEventListener('wheel', handleWheelNative);
+    };
+  }, [zoom, panX, panY, setViewport]);
 
   return (
-    <div className="flex-1 bg-[#121212] overflow-hidden flex items-center justify-center relative">
+    <div ref={containerRef} className="flex-1 bg-[#121212] overflow-hidden flex items-center justify-center relative">
       <canvas
         ref={canvasRef}
-        width={map.dimensions.width * cellSize * zoom + Math.max(800, panX)}
-        height={map.dimensions.height * cellSize * zoom + Math.max(600, panY)}
+        width={containerSize.width}
+        height={containerSize.height}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        onWheel={handleWheel}
         className="cursor-crosshair shadow-2xl border border-white/5 bg-black"
         style={{
-          width: '100%',
-          height: '100%',
           touchAction: 'none'
         }}
       />

@@ -18,7 +18,7 @@ export const LayerPanel: React.FC = () => {
         <span className="text-[8px] text-white/20 font-mono">Z_INDEX</span>
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 max-h-[140px] overflow-y-auto custom-scrollbar pr-1">
         {map.layers.map((l) => {
           const isSelected = selectedLayerId === l.id;
           return (

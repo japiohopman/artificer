@@ -173,6 +173,18 @@ export const useEditorStore = create<EditorState>((set, get) => {
 
     addWall: (wall) => {
       const currentMap = get().map;
+      
+      // Boundary check to ensure walls stay within the map limits
+      if (wall.orientation === 'horizontal') {
+        if (wall.x < 0 || wall.x >= currentMap.dimensions.width || wall.y < 0 || wall.y > currentMap.dimensions.height) {
+          return;
+        }
+      } else {
+        if (wall.x < 0 || wall.x > currentMap.dimensions.width || wall.y < 0 || wall.y >= currentMap.dimensions.height) {
+          return;
+        }
+      }
+
       const id = `wall-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
       
       // Prevent duplicates in the same coordinate/orientation
