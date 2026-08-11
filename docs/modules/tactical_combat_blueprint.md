@@ -1,161 +1,183 @@
-# ⚔️ Tactical Combat Blueprint & Architecture Report
+# ⚔️ Tactical Combat Blueprint
 
-This document details the current state of the **Tactical Combat Engine**, evaluates existing limitations, addresses key design questions (such as AI enemy behavior and NPC control), and proposes a cleaner component folder reorganization structure.
+This document is the **design/roadmap document** for tactical combat. It is intentionally separate from `docs/systems/TACTICAL_COMBAT_ENGINE.md`, which documents the current runtime architecture and implementation status.
 
----
+## Relationship to the Battle Map Editor
 
-## 1. 🔍 Current Implementation State
+The tactical stack has two distinct responsibilities:
 
-The tactical combat engine utilizes a mix of React components, Zustand store slices, an HTML5 canvas layer, and optimized math utility helpers.
-
-### Currently Implemented Features:
-- [x] **HTML5 Canvas Drawing Layer (`CombatGrid.tsx`)**
-  - High-performance rendering of grid lines, field boundaries, and dynamic fog of war.
-  - Interactive highlights of attack and movement range boundaries based on chosen actions.
-  - Sphere target overlays with configurable radius highlights on hover.
-  - **Dynamic Threat Range:** Hovering over an enemy draws a red threat boundary indicating their maximum movement/attack range.
-- [x] **Pathfinding & Spatial Math Utilities (`combatUtils.ts`)**
-  - **A* Pathfinding:** Calculates optimal paths around walls, closed doors, and other occupied cells.
-  - **Chebyshev Grid Distance:** Calculates grid distance measurements (5 feet per cell grid system).
-  - **Bresenham's Line Algorithm:** Computes instant Line-of-Sight (LoS) calculations between coordinates.
-  - **Size Footprints:** Collision calculations supporting Medium (1x1) and Large (2x2) creature grids.
-- [x] **Token Action HUD (`TokenActionHUD.tsx`)**
-  - A contextual hover menu wrapped directly around the selected player token to prevent UI tray clutter.
-
----
-
-## 2. 🤖 Enemy AI Logic (Movement & Attacks)
-
-Right now, enemy tokens in `combatState.monsters` are passive targets. They take damage and record conditions but do not execute automated tactical actions.
-
-### 🚨 Current Limitations:
-- Enemies have no active turns.
-- There is no automated pathfinding loop for enemies to close distance to targets.
-- Enemy attack and spell parameters are not resolved on the grid.
-
-### 💡 Proposed Enemy AI State Machine & Logic Loop:
-To integrate automated enemy actions, we propose an automated AI scheduler integrated into the turn sequence.
-
-```
-                  [ Enemy Turn Begins ]
-                           │
-                           ▼
-          [ Search: Any Visible Target? ] ──(No)──► [ Idle / Search Move ]
-                           │ (Yes)
-                           ▼
-              [ Within Attack Range? ] ──(No)───► [ A* Move Toward Target ]
-                           │ (Yes)
-                           ▼
-           [ Execute Attack / Cast Spell ]
+```text
+BattleMapEditor
+    │
+    │ authoring
+    ▼
+BattleMap definition
+    │
+    │ adapter
+    ▼
+Combat runtime
+    │
+    ▼
+CombatGrid
 ```
 
-### 🛠️ AI Implementation Checklist:
-- [ ] **AI Grid Movement Subroutines**
-  - [ ] Implement an automated `moveMonster(monsterId, targetPos)` function utilizing the existing A* `findPath` utility.
-  - [ ] Implement simple target priority algorithms (e.g., "Attack nearest target", "Target lowest HP", or "Protect allies").
-- [ ] **AI Attack Execution**
-  - [ ] Parse actions array inside `CombatMonster` to automatically execute range/melee attacks when within distance.
-  - [ ] Push results automatically to the Combat Log and trigger relevant character store HP reductions.
+The Battle Map Editor is responsible for creating map geometry, terrain, doors, objects, spawn points, layers and other DM authoring data. Combat is responsible for resolving actions against that map at runtime.
 
----
+## Current foundation
 
-## 3. 👥 Controlling NPCs & Companions
+The tactical runtime already has foundations for:
 
-The application currently manages character selection via a single `activeCharacterId` in `useCharacterStore`. Swapping the active character shifts the map focus and token control to that target character.
+- Canvas-based grid rendering
+- grid coordinates and distance calculations
+- A* pathfinding
+- line-of-sight calculations
+- doors/walls and collision concepts
+- token rendering and interaction
+- initiative/turn sequencing
+- DevKit combat testing
 
-### 🚨 The Question: Has NPC control been designed?
-Currently, secondary party members are treated identically to the lead character in terms of control—whoever is selected is controlled. However, there is no system for **simplified summon/NPC companion management** (where the user controls the main character, and companions are directed with simplified, non-full-sheet interfaces).
+See `docs/systems/TACTICAL_COMBAT_ENGINE.md` for the current implementation contract.
 
-### 💡 The Solution:
-Introduce a dual-layered control model:
-1. **Full Sheet PC (Selected Active Character):** Full character sheet options, action bars, and spell lists.
-2. **Companions / Minions / Summons:** Controlled via the active character's action HUD as secondary actions (similar to "directed attacks" or "pet actions").
+## Design priorities
 
-### 🛠️ Companion Implementation Checklist:
-- [ ] **Establish Summon/Minion Schema**
-  - [ ] Create a `minions` or `summons` array inside `useCharacterStore` linked to the owner's `characterId`.
-  - [ ] Render summons on the grid as green-bordered allied tokens.
-- [ ] **NPC Control Interface**
-  - [ ] Add companion direction controls ("Move here", "Attack target") directly to the owner's `TokenActionHUD`.
-  - [ ] Block full-sheet opening triggers on allied companion tokens to preserve clean, lightweight interactions.
+### 1. Runtime spatial correctness
 
----
+All movement, targeting, collision, LoS and range calculations must use one consistent coordinate system.
 
-## 4. 📁 Proposed Directory Reorganization
+The initial convention is square grid, 5 ft per cell, integer `[x, y]` coordinates.
 
-Currently, combat code is spread across multiple folders:
-- Component: `src/components/hud/game/CombatGrid.tsx`
-- Component: `src/components/hud/game/Token.tsx`
-- Component: `src/components/hud/game/TokenActionHUD.tsx`
-- Utilities: `src/lib/combatUtils.ts`
+### 2. Actor turn validation
 
-### 💡 The Proposed Directory Structure: `src/components/combat/`
-To consolidate the combat loop and prepare for scale, we should group all combat assets into a dedicated `/combat/` directory.
+Movement and combat actions must be validated against the actor whose turn is active. UI selection alone must never grant permission to move or act.
 
+### 3. Geometry-first targeting
+
+Targeting should use deterministic geometry utilities for:
+
+- melee/ranged distance
+- line of sight
+- cones
+- spheres/circles
+- lines
+- creature footprints
+- blocking walls and doors
+
+The UI visualizes these calculations; it should not contain a second implementation of the rules.
+
+### 4. Area of Effect
+
+Planned AOE primitives include:
+
+- **Sphere/Circle:** cells within the defined radius.
+- **Cone:** directional fan originating from the actor.
+- **Line:** cells intersected by a directional line effect.
+
+AOE calculations must be pure and testable.
+
+## Enemy AI — planned
+
+Automated enemy turns are not considered complete yet.
+
+The intended first implementation is deliberately small:
+
+```text
+Enemy turn
+   ↓
+Find visible/valid target
+   ↓
+Check attack range
+   ├── yes → resolve attack
+   └── no  → calculate A* movement
+                ↓
+             move
+                ↓
+          resolve attack if possible
 ```
-src/components/combat/
-├── CombatGrid.tsx          # Main map canvas render component
-├── Token.tsx               # Renders players, summons, and enemy tokens
-├── TokenActionHUD.tsx      # Floating contextual action triggers
-├── combatUtils.ts          # Consolidated pathfinding, A*, and collision math
-└── CombatTester.tsx        # DevKit tester component (migrated from devkit/)
-```
 
-### 🛠️ Reorganization Checklist:
-- [ ] **Move and Refactor Files**
-  - [ ] Create `src/components/combat/` directory.
-  - [ ] Migrate `CombatGrid.tsx`, `Token.tsx`, and `TokenActionHUD.tsx` to the new directory.
-  - [ ] Move `src/lib/combatUtils.ts` into `src/components/combat/combatUtils.ts` to keep combat math local.
-- [ ] **Update Import Trees**
-  - [ ] Audit and update import paths inside `ArcaneCodex.tsx`, `useGameStore.ts`, and tester components.
-  - [ ] Recompile and build to verify complete import tree resolution.
+Later priorities can include target scoring, tactical positioning, cover, disengagement and ability selection.
 
----
+## NPCs, summons and allied units — planned
 
-## 🚀 Future Implementation Roadmap
+The runtime should eventually distinguish:
 
-### Phase 1: Reorganization (High Priority)
-- [ ] Reorganize files into `src/components/combat/` as outlined above.
-- [ ] Verify that the game builds successfully without broken import references.
+- player characters
+- full NPC party members
+- simplified companions
+- summons/minions
+- enemies
+- neutral creatures
 
-### Phase 2: Simple AI Automated Turns (Medium Priority)
-- [ ] Integrate an "AI Turn Runner" inside the turn sequence store.
-- [ ] Enable basic A* movement for monsters to pursue the nearest party member during their turn.
-- [ ] Implement standard melee/ranged attacks for basic beasts.
+The control model should be defined before implementing companion-specific UI.
 
-### Phase 3: Allied NPCs & Summons (Low Priority)
-- [ ] Map allied minion tokens to owners.
-- [ ] Add basic summon triggers and direction controls to the active character's action HUD.
+## Combat UI / viewport
 
+The tactical viewport should prioritize usable screen space. Panning and zooming should preserve accurate grid coordinate conversion.
 
----
+The combat UI should not duplicate the Battle Map Editor's authoring controls. Runtime controls should focus on:
 
-## 5. 📄 Mini Game Design Document (GDD): Tactical Overhaul
+- actor selection
+- movement
+- actions
+- targeting
+- initiative
+- combat log
+- relevant tactical information
 
-### Overview
-This mini-GDD outlines core design specs for enhancing our combat mechanics. It addresses layout expansion, interactive zooming, turn sequence restrictions, melee range checks, TokenActionHUD targeting, and Area-of-Effect (AOE) spell templates.
+## Planned implementation phases
 
-### 📐 Feature Design Checklist & Roadmap
+### Phase 1 — Runtime foundation
 
-#### 1. Maximize Viewport Screen Space (Layout Optimization)
-- **Goal:** Expand tactical combat grid to take up full available width and height when sidebars are collapsed, matching the Leaflet map mechanics.
-- **Spec:** Remove rigid max-width (`max-w-5xl`) restrictions in combat mode from `GameScreen.tsx`.
+- [x] Grid rendering foundation
+- [x] Basic pathfinding foundation
+- [x] Initiative foundation
+- [x] Token rendering foundation
+- [x] Initial LoS foundation
+- [ ] Complete runtime map loading from `BattleMap`
+- [ ] Centralize geometry/rule validation
 
-#### 2. Interactive Panning and Zooming
-- **Goal:** Enable comfortable mouse scroll-wheel zooming and direct canvas drag-to-pan.
-- **Spec:** Handle wheel events on the canvas wrapper and scale mouse client coordinates by current zoom factor, allowing accurate tile snapping.
+### Phase 2 — Action resolution
 
-#### 3. Target Range Correction (The Melee Bug)
-- **Goal:** Fix the melee range "too far away" bug where distance checks are miscalculated.
-- **Spec:** Use the actual active PC token position (`activeTokenPos`) for weapon/spell range checks rather than the global, legacy `playerPos` (Slot 1).
+- [ ] Strict active-turn movement validation
+- [ ] Melee/ranged range resolution
+- [ ] Attack targeting
+- [ ] Damage resolution
+- [ ] Combat log integration
+- [ ] Spell targeting
 
-#### 4. Turn and Token Movement Restrictions
-- **Goal:** Restrict token movement strictly to the actor taking their turn in initiative. Ensure Round 1 initialized active turns correctly assign actions to the initiative winner.
-- **Spec:** Check `activeTurnActor?.id === char.id` inside token move handlers and block dragging/movement if it is not their active turn.
+### Phase 3 — Spatial effects
 
-#### 5. Area of Effect (AOE) Targeting Systems
-- **Goal:** Add visual indicators and hit registration for Area-of-Effect zones.
-- **Spec:**
-  - **Sphere (Circle):** Select origin point, highlights all cells within `radius` Chebyshev distance.
-  - **Cone:** Originates from casting PC towards cursor, extending in a 90-degree fan-out (facing North, South, East, West).
-  - Hovering a spell with target type `sphere` or `cone` draws a red hazard boundary. Clicking triggers damage calculation on all tokens captured within the cells.
+- [ ] Cone targeting
+- [ ] Sphere targeting
+- [ ] Line targeting
+- [ ] Creature footprint-aware targeting
+- [ ] Cover resolution
+
+### Phase 4 — Enemy automation
+
+- [ ] Enemy turn runner
+- [ ] Target selection
+- [ ] A* tactical movement
+- [ ] Basic attack resolution
+- [ ] Ability selection
+
+### Phase 5 — Allied control
+
+- [ ] NPC party control model
+- [ ] Companion/minion schema
+- [ ] Companion action interface
+
+## Architecture constraints
+
+1. Do not turn `CombatGrid.tsx` into a God Component.
+2. Keep combat rules in state/domain utilities rather than UI event handlers.
+3. Do not duplicate Battle Map authoring logic in combat.
+4. Do not hard-code Atlas entity definitions in combat UI.
+5. Keep geometry deterministic and unit-testable.
+6. Prefer adapters between authoring and runtime models rather than shared mutable state.
+
+## Related documents
+
+- `docs/systems/TACTICAL_COMBAT_ENGINE.md` — current runtime architecture
+- `docs/modules/mapEditor.md` — Battle Map authoring architecture
+- `docs/systems/DATA_FLOW.md` — application state and orchestration
+- `docs/ARCHITECTURE_STATUS.md` — agent-facing architecture contract
