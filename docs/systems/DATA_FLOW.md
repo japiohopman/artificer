@@ -1,44 +1,192 @@
 # 🌊 Data Flow & Orchestration
 
-This document describes the flow of information between the UI, Stores, Services, and the AI Dungeon Master.
+This document defines how data moves through Artificer between UI components, domain stores, services, AI actions and runtime systems.
 
-## 🧩 State Orchestration
+The central principle is **state-first architecture**: UI projects state and requests actions; domain stores/services own state transitions and validation.
 
-### 1. Specialized Store Slices (Zustand)
-To ensure scalability and performance, the global state is partitioned into specialized stores:
+## 1. State ownership
 
-- **`useUIStore`**: Manages global UI visibility (menus, panels), navigation state, and search queries.
-- **`useWorldStore`**: Orchestrates temporal progression, weather cycles, travel mechanics, and environmental data.
-- **`useCharacterStore`**: Contains character statistics, features, spellcasting state, and relationship levels with NPCs.
-- **`useInventoryStore`**: Manages the V2 item registry, container slots, party resources, and vehicles.
-- **`useGameStore`**: Handles transient session state such as combat grids, logs, dice history, and minigame states.
-- **`useAtlasStore`**: Provides access to the "Reality" database, managing the loading and indexing of JSON entities.
-- **`useJournalStore`**: Persistent storage for player notes, quest logs, and discovered bestiary entries.
-- **`useAudioStore`**: Controls the multi-layered sound engine and mood-based transitions.
-- **`useBookStore`**: Manages the state of the in-game reading system and page progression.
-- **`useAuthStore`**: Handles user authentication and session status.
+Artificer uses domain-oriented Zustand stores. The exact ownership must remain clear so that no store becomes a catch-all "God Store".
 
-### 2. Services (The "Heavy Lifters")
-- **`atlasService.ts`**: Resolves JSON data from the physical asset directory.
-- **`saveService.ts`**: Handles persistence logic via GitHub Proxy and Firebase.
-- **`diceService.ts`**: Integrates with the 3D physics engine and reconciles results with logical state.
+| Store | Responsibility |
+|---|---|
+| `useUIStore` | UI/navigation state and presentation-level global state |
+| `useWorldStore` | World/time/travel/environment state |
+| `useCharacterStore` | Character and party character state |
+| `useInventoryStore` | Inventory/container/equipment state |
+| `useGameStore` | Transient game-session and combat state |
+| `useAtlasStore` | Canonical Atlas entity loading/indexing |
+| `useJournalStore` | Journal/campaign-memory state where implemented |
+| `useAudioStore` | Audio state where applicable |
+| `useBookStore` | In-game book/reading state |
+| `useAuthStore` | Authentication/session state |
 
-## 🔄 Flow Patterns
+Before adding state to a store, check whether the responsibility already belongs to another domain store or can remain feature-local.
 
-### Travel Execution
-1.  **Input**: User selects a destination on the `WorldMap`.
-2.  **Action**: `startTravel(destination)` is dispatched to `useWorldStore`.
-3.  **Simulation**: The `EnvironmentalEngine` (running in a 10s tick) advances time and calculates movement.
-4.  **Reaction**: `WorldMap` listens to `partyLocation` and animates the marker.
+## 2. Services
 
-### Combat Resolution
-1.  **Trigger**: AI tool call or random encounter interrupts travel.
-2.  **Mode Shift**: `useUIStore.setGameMode('combat')` switches the central viewport.
-3.  **Initialization**: `useGameStore.startCombat()` rolls initiative and populates the grid.
-4.  **Interaction**: User clicks on `CombatGrid` to move; actions are logged and state is updated.
+Services perform operations that should not live inside presentational components.
 
-## 🛡️ Mechanical Integrity
-The application follows a "State-First" philosophy:
-- **UI as a Projection**: Components only reflect what is in the stores.
-- **Validation**: Stores enforce game rules (e.g., movement range, spell slot availability) before committing changes.
-- **AI as an Actor**: The LLM acts through tool calls that are subject to the same validation as user clicks.
+Examples include:
+
+- `atlasService` — loads and resolves canonical Atlas data.
+- `saveService` / persistence services — save/load and external persistence concerns.
+- `diceService` — dice/physics integration and result handling.
+- audio services — playback and audio-engine orchestration.
+
+Service names and exact responsibilities are defined by the current source tree. Documentation must not invent service boundaries that do not exist.
+
+## 3. UI → state flow
+
+The normal pattern is:
+
+```text
+User interaction
+      ↓
+React component
+      ↓
+store action / domain service
+      ↓
+validation + state transition
+      ↓
+Zustand state
+      ↓
+React projection
+```
+
+Components should not directly mutate unrelated domain state.
+
+## 4. Atlas data flow
+
+Static game entities should resolve through the Atlas data layer rather than being duplicated inside UI components.
+
+```text
+Atlas JSON/assets
+      ↓
+Atlas service / loader
+      ↓
+useAtlasStore
+      ↓
+feature UI / runtime systems
+```
+
+Examples include monsters, equipment, materials, classes, species and other canonical definitions.
+
+## 5. World travel
+
+The intended high-level flow is:
+
+```text
+World Map / travel UI
+      ↓
+useWorldStore action
+      ↓
+travel/time/environment state transition
+      ↓
+world state update
+      ↓
+map + HUD + other consumers re-render
+```
+
+Travel calculations belong to the world/travel domain, not to the map presentation component.
+
+## 6. Tactical combat flow
+
+Combat is runtime state, while battle-map authoring is a separate concern.
+
+```text
+BattleMapEditor
+      ↓
+BattleMap authoring data
+      ↓
+validation / deserialization
+      ↓
+BattleMap → combat adapter
+      ↓
+combat runtime state
+      ↓
+CombatGrid
+```
+
+`CombatGrid` should not become a map editor, and `BattleMapEditor` should not duplicate combat rules.
+
+See:
+
+- `docs/modules/mapEditor.md`
+- `docs/systems/TACTICAL_COMBAT_ENGINE.md`
+
+## 7. DevKit flow
+
+The DevKit is an authoring/debug surface. A typical generator flow is:
+
+```text
+DevKit tool
+      ↓
+Atlas/domain service
+      ↓
+validation / transformation
+      ↓
+persistence or canonical registry
+      ↓
+runtime consumes canonical data
+```
+
+Large DevKit tools should remain feature modules rather than expanding `DevKit.tsx` indefinitely.
+
+## 8. AI as an actor
+
+The AI Dungeon Master should not directly declare arbitrary state mutations.
+
+The intended model is:
+
+```text
+Narrative context
+      ↓
+LLM
+      ↓
+validated tool call
+      ↓
+domain action/service
+      ↓
+validation
+      ↓
+canonical state mutation
+      ↓
+UI/runtime projection
+```
+
+This keeps AI actions subject to the same mechanical constraints as user actions.
+
+## 9. Persistence boundary
+
+Persistence should serialize canonical domain data rather than UI implementation details.
+
+For editor modules, distinguish:
+
+- persisted authoring data
+- transient editor state
+- runtime state
+
+For example, Battle Map selection, active tool and viewport zoom are editor state; walls, doors and map objects are authoring data; initiative and current turn are combat runtime state.
+
+## 10. Mechanical integrity
+
+Use the following rules when extending the architecture:
+
+- UI is a projection, not the source of truth.
+- Stores/services own domain transitions.
+- Canonical Atlas definitions are not duplicated casually.
+- Runtime state and authoring state have separate boundaries.
+- Pure calculations should be isolated and testable where practical.
+- AI actions must pass through validation.
+- Feature-local state is preferable to global state when the state has no cross-feature ownership.
+
+## 11. Documentation contract
+
+When implementation changes the data flow:
+
+1. Update the relevant TypeScript architecture.
+2. Update this document if the boundary/ownership changed.
+3. Update `docs/ARCHITECTURE_STATUS.md` for significant architectural decisions.
+4. Update module-specific documentation for feature details.
+5. Do not document placeholders as implemented systems.

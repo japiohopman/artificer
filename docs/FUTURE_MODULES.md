@@ -1,147 +1,232 @@
-# 🚀 Future Modules & AI Architecture Blueprint
+# 🚀 Future Modules & Architecture Roadmap
 
-This document outlines the architecture for missing core modules in the Artificer project. These modules are designed to bridge the gap between the immersive UI and the AI Dungeon Master (LLM), ensuring high-fidelity gameplay with optimal token efficiency.
+This document records **planned or partially designed subsystems** that are not yet complete production modules.
 
-## 1. 🌍 World State Module (`world_state.tsx`)
-**Purpose**: Manages the "living" aspects of Faerûn that exist outside of specific character data.
+It is intentionally different from `docs/COMPONENT_MAP.md` and the system documentation:
 
-### 🧩 Key Systems:
-- **Temporal Progression**: 
-    - Tracks `gameYear`, `gameMonth`, `gameDay`, and `gameTime`.
-    - Handles celestial events (phases of Selûne, solar eclipses).
-- **Environmental Engine**:
-    - Dynamic weather based on region (e.g., "Heavy Snow" in the Spine of the World).
-    - Affects mechanics (e.g., disadvantage on Perception in heavy rain).
-- **Faction & Political State**:
-    - Global reputation scores for major organizations (The Harpers, Zhentarim, Lords' Alliance).
-    - Tracks "World Flags" (e.g., `is_waterdeep_under_siege: true`).
+- `COMPONENT_MAP.md` describes what exists in the codebase.
+- `docs/systems/*` describes current system architecture and contracts.
+- This document describes future work and design direction.
+- `docs/TASK_BOARD.md` contains actionable work that is currently scheduled/open.
 
-### 🏗️ Architecture:
-- **Store Slicing**: Integrated into the `useWorldStore` slice of the global state, ensuring that world-wide updates (like time or weather) don't trigger unnecessary re-renders of character-specific components.
-
-### 🤖 Token Optimization:
-- **Status Codes**: Instead of describing the world in text, the LLM receives a compressed "World Pulse" (e.g., `W:WDT,T:0800,E:Sunny,F:Z:3`).
+> **Status rule:** A design in this file is not an implementation claim.
 
 ---
 
-## 2. 🧠 NPC Memory Module (`npc_memory.tsx`)
-**Purpose**: Provides persistence for NPCs beyond their static Atlas definitions.
+## 1. NPC Memory
 
-### 🧩 Key Systems:
-- **Affinity System**: Tracks an NPC's attitude toward the party on a numeric scale (-10 to +10).
-- **Interaction Log**: Stores a summarized "Memory Index" of past conversations.
-    - *Short-term*: Full transcript of the current session.
-    - *Long-term*: Bulleted list of key takeaways (e.g., "Player lied about the relic").
-- **Persona Context**: Powered by `src/services/ai/npcService.ts`, it maintains dynamic traits that emerge during play (e.g., "Now suspicious of Elves").
+**Status: Planned / partially designed**
 
-### 🤖 Token Optimization:
-- **Pointer Referencing**: The AI only receives the NPC's `atlas_id`. If the AI needs to "remember" something, it calls `get_npc_memory(id)`.
+Goal: give NPCs persistent memory beyond their static Atlas definitions.
 
----
+Potential capabilities:
 
-## 3. 🗺️ Atlas Map Module (`atlas_map.tsx`)
-**Purpose**: An interactive spatial interface linking the Atlas data to the UI.
+- affinity toward the party
+- important interaction memories
+- short-term session context
+- long-term summarized memories
+- dynamic persona traits
 
-### 🧩 Key Systems:
-- **Map Viewer**: Leaflet-like interaction for large-scale maps (e.g., Sword Coast).
-- **Dynamic Markers**:
-    - Real-time party location.
-    - Discovered settlements, dungeons, and points of interest.
-- **Sub-Map Navigation**: Seamless transition from a "City Map" to a "Tavern Interior" battle map.
-- **Fog of War**: Persistence of explored vs. unexplored areas stored in the save file.
+The exact persistence model and AI retrieval mechanism are not finalized.
 
 ---
 
-## 4. 📜 Journal Module (`journal.tsx`)
-**Purpose**: Automatically records the party's journey, acting as the central memory for both the player and the AI Dungeon Master.
+## 2. Journal & Campaign Memory
 
-### 🧩 Key Systems:
-- **Daily Summaries (LLM Component)**: Automated recaps triggered by Long Rests, capturing events, NPCs, locations, and mission progress.
-- **Quest Log**: Categorized tracking of Main Quests, Side Quests, and Tasks with detailed status and reward info.
-- **Bestiary & Lore Codex**: Integrated repository of encountered creatures and unlocked lore from the Atlas.
+**Status: Planned / partially implemented foundations**
 
-### 🏗️ Architecture:
-Detailed specifications can be found in the **[Journal Module Documentation](./modules/journal.md)**.
+Goal: maintain a player- and DM-facing record of:
 
----
+- important events
+- quests
+- NPC discoveries
+- locations
+- lore
+- bestiary discoveries
+- session summaries
 
-## 5. ⚔️ Tactical Combat Engine (`combat_engine.tsx`) we are looking for a way to do this tanke notes of the https://roll20.net/ site
-**Purpose**: Transitions the experience from "Card Simulator" to a tactical D&D battle interface.
+Use the existing journal/domain infrastructure where available. Do not create a parallel persistence store without an architectural decision.
 
-### 🧩 Key Systems:
-- **Grid-Based Movement**: Top-down maps with token management, collision detection, and line-of-sight.
-- **Initiative Tracker**: Dynamic turn-order management for players, NPCs, and lair actions.
-- **AOE & Spatial Logic**: Precise mechanical resolution for cones, spheres, and lines (e.g., *Fireball* or *Lightning Bolt*).
-- **AI Combat Logic**: AI-orchestrated enemy tactics based on their stat block (e.g., "Pack Tactics" for wolves).
-
-### 🤖 Token Optimization:
-- **Combat Snapshots**: Instead of sending full grid coordinates, the AI receives a "Tactical Summary" (e.g., `P1:Adjacent(E1),E1:LowHP,E2:Cover(Half)`).
+See the journal module documentation when available.
 
 ---
 
-## 6. ⚖️ Economic & Trade Module (`economy_manager.tsx`)
-**Purpose**: Manages the flow of gold, goods, and regional scarcity.
+## 3. Battle Map Authoring
 
-### 🧩 Key Systems:
-- **Regional Pricing**: Dynamic price scaling for equipment and materials based on location (e.g., higher prices for armor in war-torn regions).
-- **Merchant Inventory**: Integration with the **Inventory V2 Registry** to handle stock rotation, buying, and selling.
-- **Crafting & Materials**: Mechanical support for gathering and using materials defined in `shop_archetypes.json`.
+**Status: In progress**
 
----
+The Battle Map Editor has moved from the old monolithic prototype into:
 
-## 7. 🔊 Soundscape Orchestrator (`soundscape_engine.tsx`)
-**Purpose**: Deepens immersion by synchronizing audio with the AI-driven narrative.
+```text
+src/components/devkit/BattleMapEditor/
+```
 
-### 🧩 Key Systems:
-- **Mood-Based Transitions**: AI-requested shifts in background music via `src/services/soundService.ts` based on narrative tension.
-- **Ambient Layering**: Dynamic mixing of environmental sounds (e.g., rain, tavern bustle, eerie silence).
-- **Skeuomorphic Audio**: Physics-based SFX for dice rolls, coin flips, and page turns.
+The editor is an **authoring system**, not the tactical combat runtime.
 
----
+Planned/active areas include:
 
-## 8. 📜 Rule Engine & Condition Tracker (`rule_engine.tsx`)
-**Purpose**: Ensures mechanical consistency with D&D 5.5e rules.
+- wall authoring
+- rooms
+- doors
+- terrain
+- objects/assets
+- tokens/spawn points
+- layers
+- inspector
+- undo/redo
+- map persistence
+- runtime adapter
 
-### 🧩 Key Systems:
-- **Condition Management**: Automated tracking and application of mechanical penalties/bonuses for conditions like *Exhausted*, *Poisoned*, or *Restrained*.
-- **Passive Skill Resolution**: Background monitoring of passive Perception, Insight, and Investigation.
-- **Rest & Recovery**: Mechanical resolution of Short and Long Rests, including hit dice recovery and spell slot replenishment.
+Current UI placeholders must not be treated as completed features.
 
----
-
-## 9. 🏗️ AI Memory Cache & Context Strategy
-The core challenge is maintaining a complex world state without exceeding the LLM's context window or wasting tokens.
-
-### 🛡️ Store Slicing & Scalability
-- **Architectural Shift**: To maintain performance as these modules are implemented, the global Zustand store is split into specialized slices: `useCharacterStore`, `useInventoryStore`, and `useWorldStore`. This prevents "God Store" bloat and optimizes re-render cycles.
-
-### 🛡️ Context Distillation (The "Funnel" Method)
-Instead of sending the entire game state, the system uses a tiered approach:
-1.  **Fixed Context (Low Token)**: Party composition (names/classes), current location ID, and time.
-2.  **Relevant Fragment (Dynamic)**: The system fetches only the JSON objects of items/NPCs mentioned in the last 3 messages.
-3.  **The Summary (Rolling)**: Every 20 messages, the "Chat History" is summarized into a single "Narrative State" block.
-
-### 🛠️ Tool-Call Architecture
-The LLM should never "declare" that a player gains an item. It must call a tool:
-- `addItem(targetId, itemId)`
-- `updateWorldState(flag, value)`
-- `rollCheck(skill, dc)`
-
-### ⚡ Reference Pointers
-When discussing an item like a "Sunblade," the system sends the AI: `[ITEM_REF:sunblade]`. The UI handles the rendering of the card. This saves 500+ tokens per item description.
+See `docs/modules/mapEditor.md`.
 
 ---
 
-## 10. 📂 Implementation Roadmap
-1.  **Sprint 1: Core Foundations**
-    - Refactor `useStore.ts` into specialized slices (`useCharacterStore`, `useInventoryStore`, `useWorldStore`).
-    - Implement `worldState` and `campaignJournal` slices.
-2.  **Sprint 2: Narrative & Persistence**
-    - Create `Journal.tsx` component to visualize the recap logs and quest trackers.
-    - Implement the **Rule Engine** for basic condition tracking.
-3.  **Sprint 3: Spatial & Tactical**
-    - Implement basic `AtlasMap.tsx` using `public/assets/atlas/world` images.
-    - Develop the **Tactical Combat Engine** prototype (grid movement and initiative).
-4.  **Sprint 4: Intelligence & Immersion**
-    - Connect Gemini API to the Tool-Calling pipeline.
-    - Implement the **Soundscape Orchestrator** for AI-driven audio.
+## 4. Tactical Combat Expansion
+
+**Status: Runtime foundation exists; advanced systems planned**
+
+`CombatGrid` is already the runtime tactical surface. Future work may expand:
+
+- robust action economy
+- AOE targeting
+- richer cover rules
+- advanced visibility/lighting
+- encounter automation
+- enemy tactical AI
+- richer combat rule validation
+
+See `docs/systems/TACTICAL_COMBAT_ENGINE.md` for the current runtime architecture.
+
+See `docs/modules/tactical_combat_blueprint.md` for longer-term design work.
+
+---
+
+## 5. Economic & Trade Simulation
+
+**Status: Planned**
+
+Potential systems:
+
+- regional pricing
+- merchant inventories
+- supply/scarcity
+- crafting economy
+- material availability
+
+This should integrate with the existing inventory, Atlas and location systems rather than creating separate item definitions.
+
+---
+
+## 6. Soundscape Orchestration
+
+**Status: Partially implemented / future expansion**
+
+The project already has audio infrastructure. Future work may add higher-level orchestration for:
+
+- narrative mood transitions
+- environmental layering
+- combat-state transitions
+- dynamic ambient scenes
+- AI-directed sound cues
+
+Use the existing audio services/stores as the foundation.
+
+---
+
+## 7. Rule Engine & Condition Resolution
+
+**Status: Planned / distributed foundations exist**
+
+Goal: centralize mechanical rule resolution where it currently risks becoming scattered across UI and feature code.
+
+Potential scope:
+
+- conditions
+- passive checks
+- rest/recovery
+- action validation
+- status effects
+- mechanical modifiers
+
+Do not introduce a second rule engine until the existing combat/character utilities have been audited and the required boundary is clear.
+
+---
+
+## 8. AI Tool-Calling & Context Architecture
+
+**Status: Active architectural direction**
+
+The AI Dungeon Master should operate through validated application tools rather than directly mutating game state.
+
+Conceptually:
+
+```text
+LLM
+ ↓
+tool call
+ ↓
+validated service/store action
+ ↓
+canonical application state
+ ↓
+UI projection
+```
+
+Examples of future tool categories:
+
+- dice/check resolution
+- inventory changes
+- world-state changes
+- journal updates
+- encounter/combat actions
+
+The exact tool contract should be defined before large-scale implementation.
+
+### Context strategy
+
+The long-term goal is to avoid sending the entire game state to the LLM. Context should be assembled from relevant canonical data and compact runtime summaries.
+
+Do not treat token-optimization examples in old documentation as implemented infrastructure unless corresponding code exists.
+
+---
+
+## 9. Atlas / World Map Expansion
+
+**Status: Existing system, continued expansion**
+
+The Atlas/world-map system already exists and should not be treated as a missing future module.
+
+Future improvements may include:
+
+- richer discovery/fog behavior
+- deeper sub-map transitions
+- location-to-encounter integration
+- improved map asset loading
+- battle-map entry points
+
+Keep global map navigation separate from the Battle Map Editor and tactical runtime.
+
+---
+
+## 10. General architectural principles for future modules
+
+When a new subsystem is proposed:
+
+1. First determine whether a current store/service/component already owns the responsibility.
+2. Define the data model before building a large UI.
+3. Separate authoring state from runtime state.
+4. Keep canonical Atlas data authoritative for static game entities.
+5. Prefer pure, testable domain/geometry utilities for rules and calculations.
+6. Do not introduce a new global store simply to avoid local feature state.
+7. Do not call a placeholder an implementation.
+8. Move large modules into their own directories before they become God Components.
+9. Update the relevant architecture documentation when the design changes.
+10. Only put actionable work into `TASK_BOARD.md`.
+
+---
+
+## Historical note
+
+Older versions of this document described planned store slicing such as `useCharacterStore`, `useInventoryStore` and `useWorldStore` as future architecture. Those stores now exist, so that material has intentionally been removed from the future roadmap.
