@@ -1,191 +1,85 @@
-BattleMapEditor — volledige herbouw als professionele Artificer DevKit-module
+# Battle Map Editor
 
-We gaan de huidige src/components/devkit/BattleMapEditor.tsx volledig herstructureren en uitbouwen tot een volwaardige Battle Map Authoring Editor voor Artificer.
+The Battle Map Editor is the Artificer DevKit authoring environment for creating tactical encounter maps. It is an **authoring module**, not a second combat engine.
 
-De huidige component is slechts een prototype. Niet verder uitbreiden als één groot TSX-bestand.
+## Status
 
-De editor moet uiteindelijk functioneren als een combinatie van:
+The editor is currently under active construction. Its modular foundation exists under:
 
-Dungeon Scrawl
-Dungeon Map Builder
-een lichte Dungeondraft-achtige authoring workflow
-én specifiek de tactische combat requirements van Artificer.
+```text
+src/components/devkit/BattleMapEditor/
+```
 
-Referenties:
+The UI currently contains early tool/component scaffolding. Wall, Room, Door, Terrain, Object, Token, Layers, Inspector and Undo/Redo are **not considered implemented until their underlying behavior is functional and tested**.
 
-Dungeon Scrawl
-Dungeon Map Builder
-1. Eerst de bestaande Artificer-architectuur analyseren
+## Architecture
 
-Voordat je code wijzigt, inspecteer:
+```text
+BattleMapEditor
+      ↓
+Battle Map Definition
+      ↓
+validation / persistence
+      ↓
+Map Loader / Adapter
+      ↓
+Combat State
+      ↓
+CombatGrid
+```
 
-src/components/devkit/BattleMapEditor.tsx
-src/components/devkit/DevKit.tsx
-src/components/combat/CombatGrid.tsx
-src/components/combat/combatUtils.ts
-src/components/combat/Token.tsx
-src/store/useGameStore.ts
-src/store/useUIStore.ts
-src/store/useWorldStore.ts
-src/store/useAtlasStore.ts
-relevante atlas services
-bestaande asset loading/indexing
-docs/systems/TACTICAL_COMBAT_ENGINE.md
-docs/systems/DATA_FLOW.md
-docs/COMPONENT_MAP.md
+The editor owns **authoring data**. Runtime combat state remains owned by the tactical combat systems. Do not create a parallel combat engine inside the editor.
 
-Gebruik de bestaande Artificer-architectuur en data waar mogelijk.
+## Module Structure
 
-Niet opnieuw een parallel combat-systeem bouwen.
-
-Artificer gebruikt een state-first architectuur waarbij UI-componenten state projecteren en stores de regels afdwingen.
-
-De Battle Map Editor is echter primair een authoring tool. Maak daarom onderscheid tussen:
-
-Battle Map Authoring Data
-        ↓
-saved map definition
-        ↓
-CombatGrid runtime representation
-
-De editor mag dus niet alle editor-state rechtstreeks in useGameStore dumpen.
-
-2. Verander de structuur
-
-Verwijder de monolithische architectuur van:
-
-src/components/devkit/BattleMapEditor.tsx
-
-en maak:
-
+```text
 src/components/devkit/BattleMapEditor/
 ├── BattleMapEditor.tsx
 ├── index.ts
-│
 ├── components/
-│   ├── EditorToolbar.tsx
-│   ├── ToolPalette.tsx
-│   ├── MapCanvas.tsx
-│   ├── MapViewport.tsx
-│   ├── LayerPanel.tsx
-│   ├── InspectorPanel.tsx
-│   ├── AssetPanel.tsx
-│   ├── GridSettings.tsx
-│   ├── MapSettings.tsx
-│   ├── SelectionOverlay.tsx
-│   ├── ContextMenu.tsx
-│   ├── StatusBar.tsx
-│   └── dialogs/
-│       ├── NewMapDialog.tsx
-│       ├── ExportMapDialog.tsx
-│       └── MapPropertiesDialog.tsx
-│
 ├── tools/
-│   ├── ToolManager.ts
-│   ├── selectTool.ts
-│   ├── brushTool.ts
-│   ├── wallTool.ts
-│   ├── roomTool.ts
-│   ├── doorTool.ts
-│   ├── terrainTool.ts
-│   ├── objectTool.ts
-│   ├── tokenTool.ts
-│   ├── measureTool.ts
-│   ├── textTool.ts
-│   ├── eraserTool.ts
-│   └── panTool.ts
-│
 ├── hooks/
-│   ├── useBattleMapEditor.ts
-│   ├── useEditorHistory.ts
-│   ├── useEditorSelection.ts
-│   ├── useEditorViewport.ts
-│   ├── useEditorKeyboard.ts
-│   └── useEditorPointer.ts
-│
 ├── state/
-│   ├── editorTypes.ts
-│   ├── editorStore.ts
-│   └── editorDefaults.ts
-│
 ├── rendering/
-│   ├── renderMap.ts
-│   ├── renderGrid.ts
-│   ├── renderWalls.ts
-│   ├── renderDoors.ts
-│   ├── renderTerrain.ts
-│   ├── renderObjects.ts
-│   ├── renderTokens.ts
-│   ├── renderSelection.ts
-│   └── renderFog.ts
-│
 ├── geometry/
-│   ├── coordinates.ts
-│   ├── snapping.ts
-│   ├── bounds.ts
-│   ├── hitTesting.ts
-│   ├── lineOfSight.ts
-│   └── measurements.ts
-│
 ├── commands/
-│   ├── EditorCommand.ts
-│   ├── AddObjectCommand.ts
-│   ├── DeleteObjectCommand.ts
-│   ├── MoveObjectCommand.ts
-│   ├── ResizeMapCommand.ts
-│   └── PaintCellsCommand.ts
-│
 ├── persistence/
-│   ├── mapSerializer.ts
-│   ├── mapDeserializer.ts
-│   ├── mapSchema.ts
-│   └── mapValidation.ts
-│
 ├── types/
-│   ├── battleMap.ts
-│   ├── mapObject.ts
-│   ├── mapLayer.ts
-│   ├── mapTool.ts
-│   └── mapTerrain.ts
-│
 └── utils/
-    ├── ids.ts
-    └── clipboard.ts
+```
 
-De exacte onderverdeling mag aangepast worden als de bestaande projectstructuur daar een betere oplossing voor biedt.
+`BattleMapEditor.tsx` is the composition root. Rendering, editor state, tools, geometry, persistence and history should not accumulate in the root component.
 
-Hoofdregel: BattleMapEditor.tsx mag uiteindelijk alleen composition/orchestration bevatten.
+## Core Authoring Model
 
-3. Belangrijk architectuurbesluit: walls zijn GEEN gewone cellen
+A battle map is a versioned data structure rather than merely an image or collection of UI state.
 
-De huidige editor gebruikt:
+The model should contain, at minimum:
 
-Set<string>
+- map metadata
+- dimensions
+- grid configuration
+- background
+- terrain
+- rooms/floors
+- walls
+- doors
+- objects/assets
+- tokens/spawn points
+- labels
+- lighting
+- fog of war
+- entrances and exits
+- ordered layers
+- generator metadata where applicable
 
-zoals:
+Use stable IDs for persisted entities. Runtime `Map`/`Set` collections may be used internally, but persistence must use explicit serializable structures.
 
-"4,5"
-"4,6"
+## Walls and Doors
 
-voor walls.
+Walls are **segments between cells**, not blocked cells themselves.
 
-Dat moet worden vervangen.
-
-Een wall hoort conceptueel tussen twee cellen te zitten.
-
-Bijvoorbeeld:
-
-type WallSegment = {
-  id: string;
-  orientation: 'horizontal' | 'vertical';
-  x: number;
-  y: number;
-  type: 'wall' | 'door' | 'secret-door';
-  doorState?: 'open' | 'closed' | 'locked';
-};
-
-Dus:
-
+```text
       cell
    ┌───────┐
    │       │
@@ -193,1035 +87,226 @@ wall      wall
    │       │
    └───────┘
       wall
+```
 
-Dit is belangrijk voor:
+A wall segment should have a stable ID, orientation, grid position and type. Doors belong to wall geometry and may have states such as open, closed, locked or secret.
 
-correcte LoS
-deuren
-corridors
-openings
-pathfinding
-cover
-toekomstige lighting
-collision
-DD2VTT/Foundry-achtige export
-verschillende wall thicknesses
+This representation is required for reliable line of sight, collision, pathfinding, door interaction, cover calculations, future lighting and map export.
 
-Geen wall-cell model meer als primaire representatie.
+## Layers
 
-4. Maak een echte BattleMap data model
+Initial layers:
 
-Ontwerp een expliciet, versioned schema.
+1. Background
+2. Terrain
+3. Rooms/Floors
+4. Walls
+5. Doors
+6. Objects
+7. Lighting
+8. Fog of War
+9. Tokens
+10. Labels
+11. DM Notes
 
-Bijvoorbeeld:
+Layers should support visibility and locking. Opacity and ordering may also be exposed where useful.
 
-interface BattleMap {
-  version: 1;
+## Viewport
 
-  id: string;
-  name: string;
+The map workspace is canvas-first.
 
-  metadata: {
-    description?: string;
-    author?: string;
-    createdAt: string;
-    updatedAt: string;
-  };
+Required behaviour:
 
-  dimensions: {
-    width: number;
-    height: number;
-  };
+- mouse-wheel zoom
+- zoom around cursor position
+- middle-mouse panning
+- space + drag panning
+- dedicated pan tool
+- fit map to viewport
+- reset zoom
+- grid snapping
 
-  grid: {
-    type: 'square' | 'hex';
-    cellSize: number;
-    unit: 'ft' | 'm';
-    visible: boolean;
-    snap: boolean;
-  };
+The canvas should render map primitives directly rather than creating a React component for every grid cell.
 
-  background: {
-    type: 'color' | 'texture' | 'image';
-    value?: string;
-    opacity?: number;
-  };
+## Tools
 
-  terrain: TerrainCell[];
+The editor is intended to support at least:
 
-  walls: WallSegment[];
+- Select
+- Pan
+- Wall
+- Room
+- Door
+- Terrain/Brush
+- Object/Stamp
+- Token/Spawn
+- Measure
+- Text/Label
+- Eraser
 
-  rooms: MapRoom[];
+Selection must support moving and deleting entities and, where applicable, resizing, rotating, duplicating and multi-select.
 
-  doors: MapDoor[];
+## Tactical Authoring
 
-  objects: MapObject[];
+Map authoring must understand tactical concepts without becoming the combat runtime.
 
-  tokens: MapToken[];
+Supported concepts include:
 
-  labels: MapLabel[];
+- player spawn
+- NPC spawn
+- enemy/monster spawn
+- encounter markers
+- entrances
+- exits
+- doors
+- blocking walls
+- terrain
+- fog of war
+- measurements
+- DM-only notes
 
-  lights: MapLight[];
+Monster placements should be able to reference Artificer Atlas data rather than storing only a hard-coded display string.
 
-  fogOfWar?: FogDefinition;
+## Grid
 
-  entrances: MapMarker[];
+The initial target is a square tactical grid using Artificer's existing spatial conventions, with 5 ft per cell as the primary scale.
 
-  exits: MapMarker[];
+The editor should be designed so grid configuration can support square, hex, none, configurable cell size and configurable display/snap behaviour.
 
-  layers: MapLayer[];
-}
+The runtime adapter must preserve the spatial conventions required by `CombatGrid`.
 
-Gebruik stabiele IDs.
+## Selection and Inspector
 
-Gebruik geen Map<string, string> als persistence model.
+Selection is centralized rather than implemented independently by each tool.
 
-5. Layers
+The Inspector displays properties for the selected entity, such as position, rotation, scale, layer, asset, terrain type, door state, token/monster reference, label properties and lock state.
 
-De editor moet echte layers ondersteunen.
+## Undo / Redo
 
-Minimaal:
+Editor mutations must be undoable.
 
-Background
-Terrain
-Rooms/Floors
-Walls
-Doors
-Objects
-Lighting
-Fog of War
-Tokens
-Labels
-DM Notes
+The target implementation uses an editor command/history abstraction so actions such as drawing/removing walls, painting terrain, moving/deleting objects, adding doors, rotating/scaling objects and resizing a map can be reversed.
 
-Elke layer moet:
+## Asset Integration
 
-zichtbaar/onzichtbaar
-locked/unlocked
-selectable
-eventueel opacity
-ordering/z-index
+The editor should reuse Artificer's existing asset and Atlas infrastructure. Do not introduce a second asset registry solely for the editor.
 
-kunnen hebben.
+The planned Asset Panel supports search, categories, tags where available, previews, drag and drop and reusable stamps/props.
 
-De Layer Panel moet lijken op een professionele map editor en niet op een lijst met buttons.
+## Generator
 
-6. Canvas viewport
+A lightweight procedural generator is planned rather than a large procedural-generation engine.
 
-Gebruik een Canvas-based editor voor het mapoppervlak.
+Initial generator targets:
 
-Artificer gebruikt Canvas al voor CombatGrid, dus dit sluit aan bij de bestaande architectuur.
+- dungeon
+- rooms
+- corridors
+- cave
 
-De viewport moet ondersteunen:
+Generator settings should include dimensions, room count/size, corridor width and a persisted random seed so generated maps are reproducible.
 
-Zoom
-25%
-50%
-75%
-100%
-125%
-150%
-200%
-300%
-400%
+## Persistence and Export
 
-plus mouse-wheel zoom.
+The native map format should be a versioned JSON document. The persistence layer should provide serialization, deserialization, schema validation, migration/version handling and import/export.
 
-Pan
-middle mouse
-space + left mouse
-pan tool
-Zoom around cursor
+The editor should eventually support a native battle-map file, JSON export, rendered image export and a runtime-compatible representation.
 
-Niet simpelweg naar het midden van het canvas zoomen.
+Persistence must be isolated behind a service/adapter rather than scattered storage calls throughout UI components.
 
-De positie onder de cursor moet tijdens zoom behouden blijven.
+## Combat Integration
 
-Fit to screen
+The editor should expose an adapter such as:
 
-Shortcut:
+```text
+persistence/battleMapToCombatGrid.ts
+```
 
-F
+Its responsibility is to translate authoring data into the runtime representation required by the tactical combat engine.
 
-of een passende bestaande shortcut als Artificer daar al conventies voor heeft.
+The editor should not duplicate movement, initiative, action economy or other combat rules.
 
-7. Editor workflow
+## Geometry
 
-De UX moet ongeveer:
+Geometry utilities should be independent of React UI and testable in isolation.
 
-┌──────────────────────────────────────────────────────────────┐
-│ File   Edit   View   Grid   Map   Export                    │
-├──────────────────────────────────────────────────────────────┤
-│ Select │ Wall │ Room │ Door │ Terrain │ Object │ Token │ ...│
-├───────────┬───────────────────────────────────┬──────────────┤
-│           │                                   │              │
-│ TOOL      │                                   │ INSPECTOR    │
-│ PALETTE   │             MAP CANVAS            │              │
-│           │                                   │              │
-│           │                                   │              │
-├───────────┴───────────────────────────────────┴──────────────┤
-│ Layers                         │ zoom │ x │ y │ grid │ snap   │
-└──────────────────────────────────────────────────────────────┘
+Planned responsibilities include coordinate conversion, snapping, bounds, hit testing, wall intersection, line of sight, distance/measurement and cover geometry.
 
-Niet alles tegelijk in één sidebar proppen.
+Cover calculations should use actual wall/door geometry rather than the prototype's simple blocked-cell ratio.
 
-8. Tools
+## Fog of War
 
-Maak een echte tool architecture.
+Fog of War is an explicit map layer. The authoring model should distinguish at least hidden, revealed and explored states.
 
-Minimaal:
+## Performance
 
-Select
-single click
-drag selection
-multi-select
-shift select
-ctrl/cmd select
-move
-resize
-rotate waar relevant
-delete
-Pan
-Wall
+The map canvas should remain Canvas-based for high-frequency rendering such as grid, terrain, walls, doors, fog, selection highlights and measurement overlays.
 
-Ondersteun:
+React should primarily manage editor UI such as toolbars, panels, inspectors, dialogs and other controls.
 
-click
-drag
-line
-rectangle
-freehand waar zinvol
-snap to grid
-Room
+Large maps must not create a React component per grid cell.
 
-Rectangle room:
+## Testing
 
-drag → room
+Important test areas include:
 
-Maar ook:
+- coordinate conversion
+- snapping
+- wall geometry
+- door placement
+- line of sight
+- cover geometry
+- map serialization/deserialization
+- validation
+- map resizing
+- undo/redo
+- runtime conversion
 
-polygon room
-corridor
-irregular room
-Door
+At least one end-to-end flow should cover creating a map, editing it, undo/redo and exporting/saving it.
 
-Deur moet op een wall segment kunnen worden geplaatst.
+## Development Phases
 
-Properties:
+### Phase 1 — Architecture
 
-Open
-Closed
-Locked
-Secret
-Terrain
+Create module boundaries, types, state model and persistence schema.
 
-Brush:
+### Phase 2 — Canvas Engine
 
-stone
-wood
-water
-grass
-sand
-lava
-ice
-mud
+Implement viewport, zoom, pan, coordinate conversion, grid and snapping.
 
-De exacte lijst moet aansluiten op bestaande Artificer assets/data waar mogelijk.
+### Phase 3 — Core Tools
 
-Object / Stamp
+Implement select, wall, room, door, terrain, eraser and pan.
 
-Plaats assets uit:
+### Phase 4 — Objects
 
-public/assets/
+Implement asset browsing, placement, move, rotate, scale, duplicate and locking.
 
-of bestaande Atlas/asset infrastructuur.
+### Phase 5 — Layers and Inspector
 
-Voorbeelden:
+Implement layer management, selection and property inspection.
 
-crate
-barrel
-table
-chair
-pillar
-tree
-rock
-chest
-altar
-torch
-statue
+### Phase 6 — History
 
-Objecten moeten:
+Implement robust undo/redo.
 
-move
-scale
-rotate
-delete
-duplicate
-lock
+### Phase 7 — Runtime Integration
 
-ondersteunen.
+Implement the BattleMap-to-CombatGrid adapter and verify compatibility with tactical combat.
 
-Dungeon Scrawl heeft inmiddels juist veel nadruk op stamps/assets, shadows en object locking; dat is een goede UX-richting om over te nemen zonder de implementatie letterlijk te kopiëren.
+### Phase 8 — Advanced DM Features
 
-Token / Spawn
+Add fog of war, spawn points, encounter markers, labels, lighting, advanced LoS/cover, procedural generation and additional export formats.
 
-Niet alleen "enemy".
+## Design Principles
 
-Gebruik:
-
-Player Spawn
-NPC Spawn
-Enemy Spawn
-Monster
-Neutral
-Encounter Marker
-
-Waar mogelijk moet een Monster kunnen worden gekoppeld aan Atlas-data in plaats van alleen:
-
-"Orc Sentry"
-
-De bestaande editor doet dit nu hardcoded. Dat moet verdwijnen.
-
-Measure
-
-Meet:
-
-5 ft
-10 ft
-15 ft
-...
-
-en toon eventueel:
-
-30 ft / 6 squares
-Text
-
-Plaats labels:
-
-"Throne Room"
-"Secret Passage"
-"Trap"
-
-met:
-
-font size
-alignment
-color
-optional shadow
-rotation
-Eraser
-
-Context-aware verwijderen.
-
-9. Grid
-
-Ondersteun:
-
-Square
-Hex
-None
-
-Voor square:
-
-5 ft
-10 ft
-15 ft
-
-Grid properties:
-
-cell size
-opacity
-line width
-color
-subdivisions
-snap
-
-Maak grid rendering onafhankelijk van map rendering.
-
-10. Selection system
-
-Dit is essentieel.
-
-Maak één centrale selectie:
-
-type EditorSelection = {
-  ids: string[];
-  type:
-    | 'cell'
-    | 'wall'
-    | 'door'
-    | 'object'
-    | 'token'
-    | 'room'
-    | 'label'
-    | null;
-};
-
-De Inspector toont properties van de selectie.
-
-Bijvoorbeeld:
-
-SELECTED OBJECT
-
-Torch
-
-Position
-X 12
-Y 8
-
-Rotation
-90°
-
-Scale
-1.0
-
-Layer
-Objects
-
-Shadow
-✓
-
-Locked
-□
-11. Undo / Redo
-
-Dit moet vanaf het begin goed worden ontworpen.
-
-Niet:
-
-setState(...)
-
-zonder history.
-
-Gebruik een command/history systeem.
-
-Ondersteun:
-
-Ctrl+Z
-Ctrl+Shift+Z
-Ctrl+Y
-
-Elke betekenisvolle editoractie moet undoable zijn.
-
-Bijvoorbeeld:
-
-Paint wall
-Move object
-Delete object
-Resize map
-Change terrain
-Add door
-Rotate object
-
-Gebruik bij voorkeur immutable snapshots of commands; kies wat qua performance en bestaande Artificer-stack het beste past.
-
-12. Keyboard shortcuts
-
-Minimaal:
-
-V = Select
-B = Brush
-W = Wall
-R = Room
-D = Door
-T = Terrain
-O = Object
-M = Measure
-E = Eraser
-Space = Pan
-
-Ctrl+Z = Undo
-Ctrl+Y = Redo
-Delete = Delete selection
-Escape = Cancel tool
-Ctrl+C = Copy
-Ctrl+V = Paste
-Ctrl+D = Duplicate
-
-+ / - = Zoom
-0 = Reset zoom
-F = Fit map
-
-Zorg dat shortcuts niet conflicteren met bestaande DevKit/global shortcuts.
-
-13. Map resizing
-
-De gebruiker moet een map kunnen maken:
-
-16 × 12
-32 × 20
-40 × 30
-50 × 50
-100 × 100
-
-maar ook custom dimensions.
-
-Bij resize:
-
-bestaande content behouden waar mogelijk
-niet zomaar state vernietigen
-undoable maken
-14. Generator
-
-Voeg een eenvoudige generator toe.
-
-Niet meteen een gigantische procedural-generation engine.
-
-V1:
-
-Generate Dungeon
-Generate Rooms
-Generate Corridors
-Generate Cave
-
-Properties:
-
-Width
-Height
-Room count
-Room min size
-Room max size
-Corridor width
-Seed
-
-Belangrijk:
-
-Seed opslaan.
-
-Dus:
-
-generator: {
-  type: 'dungeon';
-  seed: 183742;
-}
-
-zodat dezelfde map reproduceerbaar is.
-
-15. Asset browser
-
-Maak een asset panel.
-
-Gebruik bestaande Artificer asset infrastructuur.
-
-Niet zelf een compleet tweede asset systeem maken.
-
-Ondersteun:
-
-Search
-Category
-Tags
-Favorites
-Preview
-Drag & Drop
-
-Drag asset naar canvas.
-
-Voorbeelden:
-
-Props
-Furniture
-Nature
-Dungeon
-Ruins
-Torches
-Doors
-Decorations
-Monsters
-Markers
-
-Als useAtlasStore, atlasService of bestaande asset indexing dit al kan leveren, hergebruik dat.
-
-16. Map metadata
-
-Een map moet niet alleen een afbeelding zijn.
-
-Ondersteun:
-
-Map name
-Description
-Location ID
-Region
-Encounter ID
-Recommended level
-Environment
-Grid size
-Scale
-Theme
-
-Voor Artificer is dit belangrijk omdat een battlemap uiteindelijk gekoppeld kan worden aan:
-
-World Location
-Encounter
-Combat
-NPCs
-Monsters
-Doors
-Entrances
-Exits
-17. Artificer combat integration
-
-De editor mag geen tweede CombatGrid worden.
-
-De relatie moet zijn:
-
-BattleMapEditor
-       ↓
-BattleMap JSON
-       ↓
-Map Loader / Adapter
-       ↓
-CombatState
-       ↓
-CombatGrid
-
-Maak hiervoor een adapter, bijvoorbeeld:
-
-persistence/
-    battleMapToCombatGrid.ts
-
-Deze vertaalt authoring data naar het bestaande runtime model.
-
-Bijvoorbeeld:
-
-wall
-door closed
-terrain
-spawn point
-monster placement
-
-naar de data die CombatGrid verwacht.
-
-De bestaande Tactical Combat Engine beschrijft al 32×20, 5 ft/cell, integer [x,y], walls, doors, LoS en A* als kernconcepten.
-
-18. LoS en cover
-
-De huidige cover calculator mag niet de architecturale kern van de editor worden.
-
-De editor moet geometrie opslaan.
-
-Maak aparte utilities voor:
-
-lineOfSight()
-rayIntersectsWall()
-calculateCover()
-getBlockingWalls()
-
-Gebruik dezelfde geometrische conventies als CombatGrid.
-
-Cover moet uiteindelijk gebaseerd zijn op echte wall/door geometry, niet op:
-
-blockedCellsCount / totalCells
-
-zoals de prototypeversie nu doet.
-
-19. Fog of War
-
-Maak een aparte layer.
-
-Ondersteun minimaal:
-
-Hidden
-Revealed
-Explored
-
-Editor tools:
-
-Reveal
-Hide
-Erase
-
-De runtime kan deze informatie later gebruiken.
-
-20. Save / Load / Export
-
-Minimaal:
-
-Native map format
-.battlemap.json
-
-of een vergelijkbaar Artificer-native formaat.
-
-JSON export
-
-Voor debugging en portability.
-
-PNG/WebP
-
-Render de map naar image.
-
-Runtime export
-
-Een map moet zonder editor kunnen worden ingeladen door de game.
-
-21. Autosave / persistence
-
-Ontwerp de editor zo dat later eenvoudig:
-
-localStorage
-Firebase
-GitHub saveService
-
-kan worden toegevoegd.
-
-Gebruik hiervoor een persistence abstraction.
-
-Niet rechtstreeks overal:
-
-localStorage.setItem(...)
-
-zetten.
-
-22. Performance
-
-Dit kan een grote module worden.
-
-Daarom:
-
-Niet voor elke cel een React component.
-
-Gebruik Canvas voor:
-
-grid
-terrain
-walls
-doors
-fog
-selection
-highlights
-measurements
-
-Gebruik React alleen voor:
-
-toolbar
-panels
-inspector
-menus
-overlays
-eventueel geselecteerde object controls
-
-Gebruik memoization waar zinvol.
-
-De bestaande CombatGrid gebruikt al een hybride Canvas + React architectuur; volg dat principe.
-
-23. Geen onnodige dependency toevoegen
-
-Controleer eerst package.json.
-
-Artificer heeft al:
-
-React
-Zustand
-Framer Motion/Motion
-dnd-kit
-Lucide
-Tailwind
-
-enzovoort.
-
-Voeg geen grote editor library zoals een complete canvas editor toe tenzij daar een aantoonbare architectonische reden voor is.
-
-De voorkeur is:
-
-React
-+
-HTML Canvas
-+
-bestaande Artificer utilities
-+
-Zustand waar nodig
-
-Dat geeft ons maximale controle over de integratie met CombatGrid.
-
-24. DevKit integration
-
-De huidige:
-
-import { BattleMapEditor } from './BattleMapEditor';
-
-in DevKit.tsx moet na refactor blijven werken.
-
-Gebruik:
-
-src/components/devkit/BattleMapEditor/index.ts
-
-zodat:
-
-import { BattleMapEditor } from './BattleMapEditor';
-
-niet hoeft te veranderen.
-
-De editor moet dus een drop-in replacement zijn voor de huidige prototypeversie.
-
-25. UI design
-
-De editor moet voelen als een echte developer/DM authoring tool.
-
-Niet als een formulier.
-
-Inspiratie:
-
-Dungeon Scrawl: snel tekenen, compacte toolbar, layers, styles en canvas-first workflow.
-Dungeon Map Builder: duidelijke scheiding tussen Tools, Elements, Layers, Grid, Generator en Assets.
-
-Voor Artificer:
-
-dark
-dense
-high information density
-minimal rounded cards
-clear active-tool states
-strong canvas focus
-
-De canvas moet het grootste deel van het scherm krijgen.
-
-26. Belangrijk: editor ≠ runtime
-
-Maak expliciet onderscheid tussen:
-
-Authoring
-BattleMapEditor
-
-en:
-
-Runtime
-CombatGrid
-
-De editor mag extra informatie bevatten die CombatGrid niet nodig heeft:
-
-DM notes
-hidden objects
-secret doors
-room labels
-encounter markers
-generator metadata
-locked layers
-editor-only decorations
-
-CombatGrid krijgt alleen wat het runtime nodig heeft.
-
-27. Migratie van huidige prototype
-
-Behoud functionaliteit die al bestaat:
-
-wall placement
-door placement
-rooms
-enemies
-entrance
-exit
-inspectables
-attacker/target selection
-cover calculation
-map export
-theme
-scale
-
-maar herimplementeer deze binnen het nieuwe architecturele model.
-
-Niet simpelweg de bestaande code verplaatsen naar tien bestanden.
-
-28. Fases
-
-Voer dit gefaseerd uit.
-
-Phase 1 — Architecture
-
-Maak:
-
-BattleMapEditor/
-components/
-hooks/
-state/
-types/
-geometry/
-rendering/
-tools/
-persistence/
-commands/
-
-Maak eerst de types en editor state.
-
-Geen gigantische UI rewrite voordat het datamodel klopt.
-
-Phase 2 — Canvas engine
-
-Implement:
-
-viewport
-pan
-zoom
-coordinate conversion
-grid
-snapping
-rendering pipeline
-Phase 3 — Core tools
-
-Implement:
-
-select
-wall
-room
-door
-terrain
-eraser
-pan
-Phase 4 — Objects
-
-Implement:
-
-asset browser
-object placement
-move
-rotate
-scale
-delete
-duplicate
-locking
-Phase 5 — Layers + Inspector
-
-Implement:
-
-layer management
-visibility
-lock
-selection
-inspector
-Phase 6 — Undo/Redo
-
-Command/history system.
-
-Phase 7 — Runtime integration
-
-Maak:
-
-battleMapToCombatGrid()
-
-en test met bestaande CombatGrid.
-
-Phase 8 — Advanced DM functionality
-
-Daarna:
-
-fog of war
-spawn points
-encounter markers
-labels
-lighting
-LoS
-cover
-generator
-advanced exports
-29. Testing
-
-Voeg tests toe voor de belangrijkste pure functies:
-
-coordinate conversion
-grid snapping
-wall geometry
-door placement
-LoS
-cover
-map serialization
-map deserialization
-map validation
-resize
-undo/redo
-
-Daarnaast minimaal één Playwright-flow:
-
-Open DevKit
-→ Battle Map Editor
-→ create map
-→ draw wall
-→ add door
-→ add object
-→ select object
-→ move object
-→ undo
-→ redo
-→ save/export
-30. Quality gates
-
-Na iedere fase:
-
-npm run lint
-npm run build
-npm test
-
-Als een bestaande test faalt, onderzoek waarom.
-
-Geen any toevoegen om TypeScript-errors te omzeilen.
-
-Geen:
-
-as any
-
-als architecturale workaround.
-
-31. Eindresultaat
-
-Het eindresultaat moet geen "mooier prototype" zijn.
-
-Het moet een echte editor zijn waarmee een DM bijvoorbeeld dit kan doen:
-
-New Map
-    ↓
-32 × 20 / 5ft
-    ↓
-Draw rooms
-    ↓
-Draw corridors
-    ↓
-Add walls
-    ↓
-Place doors
-    ↓
-Paint terrain
-    ↓
-Drag barrels / tables / torches
-    ↓
-Place secret door
-    ↓
-Place enemy spawn
-    ↓
-Place player entrance
-    ↓
-Add DM-only notes
-    ↓
-Configure fog
-    ↓
-Save BattleMap
-    ↓
-Load BattleMap in CombatGrid
-    ↓
-Run encounter
-
-De editor moet uiteindelijk voelen als een volwaardige Artificer DM DevKit-tool, niet als een configuratiescherm.
-
-Nog één belangrijke ontwerpkeuze van mij
-
-Ik zou niet proberen Dungeon Scrawl 1-op-1 na te bouwen. Dat is niet nodig en zou ons op het verkeerde spoor zetten.
-
-Dungeon Scrawl is vooral een algemene mapmaker. Artificer heeft een veel interessantere mogelijkheid: de map kan semantische game-data bevatten.
-
-Dus bijvoorbeeld:
-
-                    BATTLE MAP
-                         │
-        ┌────────────────┼────────────────┐
-        │                │                │
-      Visual           Tactical         DM Data
-        │                │                │
-   textures          movement          encounters
-   objects           LoS               secrets
-   decoration        cover             triggers
-   labels            doors             notes
-                    │
-                    ↓
-               CombatGrid
-
-Dat is wat ik als onderscheidend vermogen voor Artificer zou bouwen.
-
-De huidige CombatGrid is daar eigenlijk al een goede basis voor: 32×20, 5 ft/cell, Canvas, walls, doors, LoS, pathfinding, fog en tokens bestaan al.
-
-Kortom: eerst een solide map-authoring model, daarna de mooie editor-UI. Niet andersom. Dat voorkomt precies dat we over een paar weken weer tegen een tweede God Component aanlopen.
+1. **Canvas first.** The map is the primary workspace.
+2. **Authoring data is separate from runtime combat state.**
+3. **Do not create a second combat engine.**
+4. **Keep the root component small.**
+5. **Prefer pure geometry and serialization utilities over UI-bound logic.**
+6. **Reuse Artificer's existing Atlas, asset and combat infrastructure.**
+7. **Every meaningful edit should be undoable.**
+8. **Persist explicit, versioned data.**
+9. **Do not model walls as ordinary blocked cells.**
+10. **Design for large maps and future runtime features from the beginning.**

@@ -1,42 +1,42 @@
 # 🏛️ Artificer Project Hub
 
-Welcome to the central entrypoint for the Artificer project. This hub provides a map to all documentation, systems, and assets.
+Central navigation for Artificer documentation. This page points agents and developers toward the authoritative documentation for architecture, systems, modules and current work.
 
-## 📌 Core Documentation
-- [Master Project Goals](../GOALS.md) - 🎯 **The Project's Final Destination.**
-- [Component Map](./COMPONENT_MAP.md) - 🧩 **React Architecture.**
-- [Project Architecture](./modules/atlasService.md)
-- [House Style Guide](./STYLE_GUIDE.md)
-- [Task Board](./TASK_BOARD.md)
-- [Project Progress](./PROGRESS.md)
-- [Changelog](./CHANGELOG.md)
-- [Error Reports](./ERROR_REPORTS.md)
+## 📌 Start here
+- [Architecture Status](./ARCHITECTURE_STATUS.md) - 🧭 **Current architectural boundaries and agent rules.**
+- [Component Map](./COMPONENT_MAP.md) - 🧩 **Current React component structure.**
+- [Task Board](./TASK_BOARD.md) - 📋 **Outstanding work.**
+- [Project Progress](./PROGRESS.md) - 📈 **High-level implementation status.**
+- [Changelog](./CHANGELOG.md) - 📝 **Recent project changes.**
+- [House Style Guide](./STYLE_GUIDE.md) - 🎨 UI/visual conventions.
+- [Error Reports](./ERROR_REPORTS.md) - 🐛 Known issues and investigations.
 
 ## 🧩 Modules
+- [Battle Map Editor](./modules/mapEditor.md) - 🗺️ DM battle-map authoring and runtime integration boundary.
 - [Atlas Service](./modules/atlasService.md) - Data fetching and resiliency.
 - [Sound Engine](./modules/soundService.md) - Multi-layered audio mixer.
-- [Save System](./modules/saveService.md) - GitHub & Firebase persistence.
-- [Inventory V2](./modules/inventory_v2.md) - Registry/Slot pattern.
-- [Dice & Chat](./modules/dice_system.md) - 3D Dice and AI Chat.
+- [Save System](./modules/saveService.md) - Persistence architecture.
+- [Inventory V2](./modules/inventory_v2.md) - Registry/slot inventory architecture.
+- [Dice & Chat](./modules/dice_system.md) - Dice and AI chat systems.
 - [Journal](./modules/journal.md) - Campaign Journal & Codex.
 - [Minigames](./modules/minigames.md) - Interactive social mechanics.
 - [World Panel](./ui/WORLD_PANEL.md) - Dynamic location information.
-- [DM Kit](./ui/DEV_KIT.md) - Development and Master tools.
+- [DM Kit](./ui/DEV_KIT.md) - Development and Dungeon Master tools.
 
-## 🤖 Agents
-- [Jimmy (Sandbox)](../jimmy_instructions.md) - Core systems and mechanics.
-- [Jane (World Builder)](../jane_instructions.md) - Geography and cartography.
-- [Sonny (Atmospheric Orchestrator)](../sonny_instructions.md) - Audio and Environmental ambiance.
+## 🤖 Agent / orchestration documentation
+- [Jimmy instructions](../jimmy_instructions.md) - Core systems and mechanics.
+- [Jane instructions](../jane_instructions.md) - World building and cartography.
+- [Sonny instructions](../sonny_instructions.md) - Audio/environment orchestration.
 
 ## ⚙️ Systems
-- [Skill Database](./systems/SKILL_DATABASE.md) - D&D Skills & LLM Skills.
-- [NPC Interaction System](./systems/NPC_SYSTEM.md) - Dynamic AI dialogue and relationship state.
-- [Crafting System](./systems/CRAFTING_SYSTEM.md) - Materials and Recipes.
-- [Audio Registry](./systems/AUDIO_REGISTRY.md) - Complete index of audio assets.
-- [Asset Registry](./ASSET_REGISTRY.md) - Tracking sounds, sprites, and models.
-- [Foundry Porting Guide](./systems/FOUNDRY_PORTING_GUIDE.md) - 📦 **Mapping and transforming dnd5e 6.0.x VTT assets.**
+- [Skill Database](./systems/SKILL_DATABASE.md)
+- [NPC Interaction System](./systems/NPC_SYSTEM.md)
+- [Crafting System](./systems/CRAFTING_SYSTEM.md)
+- [Audio Registry](./systems/AUDIO_REGISTRY.md)
+- [Asset Registry](./ASSET_REGISTRY.md)
+- [Foundry Porting Guide](./systems/FOUNDRY_PORTING_GUIDE.md)
 
-### Phase 2 Architecture
+### Phase 2 / tactical architecture
 - [Party State](./systems/PARTY_STATE.md)
 - [World State](./systems/WORLD_STATE.md)
 - [Travel System](./systems/TRAVEL_SYSTEM.md)
@@ -46,14 +46,24 @@ Welcome to the central entrypoint for the Artificer project. This hub provides a
 - [World Panel Architecture](./systems/WORLD_PANEL_ARCHITECTURE.md)
 - [Leaflet Map Integration](./systems/LEAFLET_MAP_INTEGRATION.md)
 - [Tactical Combat Engine](./systems/TACTICAL_COMBAT_ENGINE.md)
-- [Foundry VTT Porting Guide](./systems/FOUNDRY_PORTING_GUIDE.md)
 - [Data Flow](./systems/DATA_FLOW.md)
 
-## 📂 Directories
-- `/src` - React application source code.
-- `/public/assets/atlas` - The "Reality" database (JSON & Assets).
-- `/docs` - Project documentation (You are here).
-- `/skills` - LLM Skill definitions.
+## 📂 Important directories
+- `/src` — React/TypeScript application source.
+- `/src/components/devkit` — DM/developer authoring and testing tools.
+- `/src/store` — domain-oriented runtime/UI stores.
+- `/public/assets/atlas` — canonical Atlas data/assets.
+- `/docs` — project documentation.
+- `/skills` — LLM/agent skill definitions.
+
+## Documentation rules
+
+- Documentation describes the current repository, not an imagined future state.
+- Planned work belongs in `TASK_BOARD.md` or a module specification; do not present it as implemented.
+- Module specifications explain intended architecture and boundaries.
+- `PROGRESS.md` contains project-level status and must have a current update date.
+- Architecture changes should update the relevant docs in the same PR.
+- When uncertain, inspect the source code before changing documentation.
 
 ---
 *Maintained by the Artificer Project Orchestrator.*

@@ -1,45 +1,50 @@
 # Changelog
 
-All notable changes to the Artificer project will be documented in this file.
+All notable changes to the Artificer project are documented here. The changelog is a project history; current implementation status belongs in `docs/PROGRESS.md`.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [Unreleased] - 2026-08-11
 
-## [Unreleased] - 2025-03-04
 ### Added
-- **Campaign Journal**: New multi-tab interface (`Journal.tsx`) for Diary, Quests, Bestiary, and Lore.
-- **World Map Evolution**: Full Leaflet integration with pyramid tiles, regional focal points, and zoom-dependent visibility.
-- **World State Engine**: Implementation of `useWorldStore.ts` managing temporal progression (minutes/days/months/years), weather patterns, and global flags.
-- **Store Slicing**: Decoupled state into specialized slices for World, Character, and Inventory.
+- **Battle Map Editor architecture**: moved the editor into `src/components/devkit/BattleMapEditor/` as a dedicated authoring module.
+- **Architecture Status**: added `docs/ARCHITECTURE_STATUS.md` as a living source of truth for architectural boundaries and coding-agent rules.
+- **Battle Map module documentation**: documented authoring/runtime separation, map data, geometry, tools, persistence, performance and implementation phases.
 
 ### Changed
-- Documentation overhaul to align with Phase 2 architecture.
-- Re-styled World Panel and Character Profile for better immersion.
+- **Component Map**: synchronized `docs/COMPONENT_MAP.md` with the current DevKit/BattleMapEditor structure.
+- **Project Hub**: made `docs/PROJECT_HUB.md` the clearer canonical documentation entrypoint.
+- **Task Board**: replaced the stale mixed historical/actionable list with an active engineering queue and explicit placeholder rules.
+- **Project Progress**: updated `docs/PROGRESS.md` to reflect the current 2026 development state and Battle Map Editor work.
+
+### Documentation policy
+- Planned/scaffolded functionality is no longer documented as implemented.
+- Major architectural decisions should be reflected in documentation in the same change that introduces them.
 
 ## [0.1.2] - 2025-02-21
+
 ### Added
 - Integrated sound effects for 3D dice rolls via `soundService`.
 - Added customizable dice colors in the `AdvancedRoller` panel.
-- Expanded icon library with new paths for subclasses (Thief, Life Domain, Open Hand, Assassin, Battle Master, Eldritch Knight) and core features.
+- Expanded icon library with new subclass/core feature paths.
 
 ### Changed
-- Refactored `WorldPanel` aside with 'Parchment & Dragonstone' aesthetic and enhanced location/temporal data.
-- Corrected Ability Score icon mapping in `CharacterProfile`.
-- Enhanced `atlasUtils` mapping logic to strip prefixes and resolve specific subclasses and features automatically.
+- Refactored the World Panel visual presentation.
+- Corrected Ability Score icon mapping.
+- Enhanced Atlas mapping logic for subclasses and features.
 
 ## [0.1.1] - 2025-02-17
+
 ### Added
-- Added `docs/STYLE_GUIDE.md` defining the "Parchment & Dragonstone" aesthetic and visual language.
-- Created `docs/reports/DEEP_DIVE_RAPPORT.md` providing a comprehensive analysis of Character Creation, Class systems, and Leveling logic.
-- Created `docs/reports/OPTIMALISATIE_ADVIES.md` evaluating system architecture and providing scaling recommendations.
-- Documentation for internal Atlas data fetching and XP progression mechanics.
+- Added `docs/STYLE_GUIDE.md`.
+- Added deep-dive architecture and optimization reports.
+- Added Atlas data-fetching and XP progression documentation.
 
 ## [0.1.0] - 2025-01-24
+
 ### Added
-- Created `docs/` structure for central project orchestration.
+- Created the central `docs/` orchestration structure.
 - Initialized `PROJECT_HUB.md`, `TASK_BOARD.md`, and `CHANGELOG.md`.
 - Added module documentation placeholders.
 
 ### Changed
-- Restructured `public/assets/sounds/` to a standardized hierarchy.
+- Standardized sound asset hierarchy.
 - Migrated legacy documentation to `docs/archive/`.
