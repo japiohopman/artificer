@@ -1088,7 +1088,7 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     }
   });
 
-  app.get("/api/terrain-images/list", async (req, res) => {
+  app.get("/api/terrain-images/list", fsRateLimiter, async (req, res) => {
     try {
       const terrainDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_map_terrain");
       await fs.mkdir(terrainDir, { recursive: true });
