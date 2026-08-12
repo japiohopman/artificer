@@ -6,3 +6,5 @@ coverage/
 *.log
 .env*
 !.env.example
+dev_server_output.txt
+server_log.txt

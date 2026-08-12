@@ -2,6 +2,8 @@ import React from 'react';
 import { useEditorStore } from '../state/editorStore';
 import { EditorTool } from '../types/battleMap';
 import { GameIcon } from '../../../../game_icons';
+import { saveBattleMap, loadBattleMap, importBattleMap, exportBattleMap } from '../persistence/battleMapStorage';
+import { validateBattleMap } from '../persistence/battleMapValidator';
 
 export const EditorToolbar: React.FC = () => {
   const {
@@ -19,84 +21,51 @@ export const EditorToolbar: React.FC = () => {
   const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleExportJSON = () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(map, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `${map.name.toLowerCase().replace(/\s+/g, '_')}.battlemap.json`);
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
+    exportBattleMap(map);
   };
 
-  const handleImportJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImportJSON = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      try {
-        const parsed = JSON.parse(event.target?.result as string);
-        if (parsed && typeof parsed === 'object') {
-          loadMapData(parsed);
-          alert('Successfully imported Battle Map JSON!');
-        } else {
-          alert('Invalid JSON structure.');
-        }
-      } catch (err) {
-        alert('Failed to parse JSON file.');
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = '';
+    try {
+      const importedMap = await importBattleMap(file);
+      loadMapData(importedMap);
+      alert('Successfully imported Battle Map JSON!');
+    } catch (err: any) {
+      alert(err.message || 'Failed to import JSON file.');
+    } finally {
+      e.target.value = '';
+    }
   };
 
   const handleSaveToLocalStorage = () => {
-    if (!map.name || map.name.trim() === '') {
-      alert('Validation Error: Map name cannot be empty!');
-      return;
-    }
-    if (map.dimensions.width <= 0 || map.dimensions.height <= 0) {
-      alert('Validation Error: Map dimensions must be greater than zero!');
-      return;
-    }
-
     try {
-      localStorage.setItem('artificer_devkit_battlemap', JSON.stringify(map));
+      saveBattleMap(map);
       alert('Successfully saved Battle Map to browser local storage!');
-    } catch (err) {
-      alert('Failed to save to local storage.');
+    } catch (err: any) {
+      alert(err.message || 'Failed to save to local storage.');
     }
   };
 
   const handleLoadFromLocalStorage = () => {
     try {
-      const saved = localStorage.getItem('artificer_devkit_battlemap');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        loadMapData(parsed);
+      const savedMap = loadBattleMap();
+      if (savedMap) {
+        loadMapData(savedMap);
         alert('Successfully loaded Battle Map from local storage!');
       } else {
         alert('No saved map found in local storage.');
       }
-    } catch (err) {
-      alert('Failed to load map from local storage.');
+    } catch (err: any) {
+      alert(err.message || 'Failed to load map from local storage.');
     }
   };
 
   const handleValidateMap = () => {
-    const errors: string[] = [];
-    if (!map.name || map.name.trim() === '') {
-      errors.push('Map name is empty.');
-    }
-    if (map.dimensions.width < 4 || map.dimensions.height < 4) {
-      errors.push('Map dimensions are too small (minimum 4x4).');
-    }
-    if (map.walls.length === 0 && map.terrain.length === 0 && map.objects.length === 0 && map.tokens.length === 0) {
-      errors.push('The map has no walls, terrain, objects, or tokens.');
-    }
-
-    if (errors.length > 0) {
-      alert(`Map Validation Report:\n\n⚠️ Warnings:\n${errors.map(e => `• ${e}`).join('\n')}`);
+    const result = validateBattleMap(map);
+    if (!result.isValid) {
+      alert(`Map Validation Report:\n\n⚠️ Warnings:\n${result.errors.map(e => `• ${e}`).join('\n')}`);
     } else {
       alert('Map Validation Report:\n\n✅ Map structure is valid and healthy! All constraints pass.');
     }
@@ -104,13 +73,12 @@ export const EditorToolbar: React.FC = () => {
 
   // Auto-load last saved map from local storage if available on mount
   React.useEffect(() => {
-    const saved = localStorage.getItem('artificer_devkit_battlemap');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        loadMapData(parsed);
-      } catch (e) {}
-    }
+    try {
+      const savedMap = loadBattleMap();
+      if (savedMap) {
+        loadMapData(savedMap);
+      }
+    } catch (e) {}
   }, [loadMapData]);
 
   return (

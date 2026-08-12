@@ -1,12 +1,39 @@
 import { create } from 'zustand';
 import { BattleMap, EditorTool, EditorSelection, WallSegment, MapObject, MapToken, TerrainCell, MapLabel, MapMarker } from '../types/battleMap';
 import { createDefaultMap } from './editorDefaults';
+import { Command } from '../commands/command';
+import {
+  createAddWallCommand,
+  createRemoveWallCommand,
+  createUpdateWallCommand,
+  createPaintTerrainCommand,
+  createAddObjectCommand,
+  createRemoveObjectCommand,
+  createUpdateObjectCommand,
+  createAddTokenCommand,
+  createRemoveTokenCommand,
+  createUpdateTokenCommand,
+  createAddRoomCommand,
+  createUpdateMapDimensionsCommand,
+  createAddLabelCommand,
+  createRemoveLabelCommand,
+  createAddMarkerCommand,
+  createRemoveMarkerCommand,
+  TerrainChange
+} from '../commands/mapCommands';
 
 interface ViewportState {
   zoom: number; // Scale factor, e.g. 1.0 (100%), 0.5 (50%), 2.0 (200%)
   panX: number;
   panY: number;
 }
+
+const createReplaceMapCommand = (oldMap: BattleMap, newMap: BattleMap): Command => ({
+  id: `replace-map-${Date.now()}`,
+  description: `Replace Map`,
+  execute: () => newMap,
+  undo: () => oldMap
+});
 
 interface EditorState {
   // Core Battle Map Data
@@ -31,8 +58,12 @@ interface EditorState {
   coverAttacker: { x: number; y: number } | null;
   coverTarget: { x: number; y: number } | null;
 
-  // History stack for Undo / Redo
-  history: BattleMap[];
+  // Command History Stacks
+  pastCommands: Command[];
+  futureCommands: Command[];
+
+  // Legacy fields for backward compatibility with disabled buttons
+  history: any[];
   historyIndex: number;
 
   // Actions
@@ -51,17 +82,18 @@ interface EditorState {
   setCoverAttacker: (pos: { x: number; y: number } | null) => void;
   setCoverTarget: (pos: { x: number; y: number } | null) => void;
 
-  // History Actions
-  pushHistory: (newMap: BattleMap) => void;
+  // History / Command Actions
+  executeCommand: (command: Command) => void;
   undo: () => void;
   redo: () => void;
 
-  // Semantic mutations that auto-trigger history
+  // Semantic mutations that auto-trigger command history
   addWall: (wall: Omit<WallSegment, 'id'>, skipHistory?: boolean) => void;
   removeWall: (id: string) => void;
   updateWall: (id: string, updates: Partial<WallSegment>) => void;
   addTerrain: (cell: TerrainCell, skipHistory?: boolean) => void;
   removeTerrain: (x: number, y: number, skipHistory?: boolean) => void;
+  commitPaintTerrain: (changes: TerrainChange[]) => void;
   addObject: (obj: Omit<MapObject, 'id'>) => void;
   updateObject: (id: string, updates: Partial<MapObject>) => void;
   removeObject: (id: string) => void;
@@ -85,6 +117,13 @@ interface EditorState {
 export const useEditorStore = create<EditorState>((set, get) => {
   const initialMap = createDefaultMap();
   
+  const updateCompatibilityHistory = (past: Command[], future: Command[]) => {
+    set({
+      historyIndex: past.length,
+      history: new Array(past.length + future.length + 1)
+    });
+  };
+
   return {
     map: initialMap,
     viewport: { zoom: 1, panX: 0, panY: 0 },
@@ -101,6 +140,8 @@ export const useEditorStore = create<EditorState>((set, get) => {
     coverAttacker: null,
     coverTarget: null,
 
+    pastCommands: [],
+    futureCommands: [],
     history: [initialMap],
     historyIndex: 0,
 
@@ -114,20 +155,22 @@ export const useEditorStore = create<EditorState>((set, get) => {
         }
       };
 
-      set({ map: updatedMap });
-
-      if (!skipHistory) {
-        get().pushHistory(updatedMap);
+      if (skipHistory) {
+        set({ map: updatedMap });
+      } else {
+        const replaceCmd = createReplaceMapCommand(get().map, updatedMap);
+        get().executeCommand(replaceCmd);
       }
     },
 
     updateMapDimensions: (width, height) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        dimensions: { width, height }
-      };
-      get().setMap(updatedMap);
+      get().executeCommand(createUpdateMapDimensionsCommand(
+        currentMap.dimensions.width,
+        currentMap.dimensions.height,
+        width,
+        height
+      ));
     },
 
     setViewport: (viewport) => set((state) => ({ viewport: { ...state.viewport, ...viewport } })),
@@ -143,34 +186,63 @@ export const useEditorStore = create<EditorState>((set, get) => {
     setCoverAttacker: (coverAttacker) => set({ coverAttacker }),
     setCoverTarget: (coverTarget) => set({ coverTarget }),
 
-    pushHistory: (newMap) => {
-      const { history, historyIndex } = get();
-      const cleanHistory = history.slice(0, historyIndex + 1);
-      
+    executeCommand: (command) => {
+      const { map, pastCommands } = get();
+      const updatedMap = command.execute(map);
+      const nowStr = new Date().toISOString();
+      const finalMap = {
+        ...updatedMap,
+        metadata: {
+          ...updatedMap.metadata,
+          updatedAt: nowStr
+        }
+      };
+
+      const newPast = [...pastCommands, command];
+      const newFuture: Command[] = [];
+
       set({
-        history: [...cleanHistory, newMap],
-        historyIndex: cleanHistory.length
+        map: finalMap,
+        pastCommands: newPast,
+        futureCommands: newFuture
       });
+      updateCompatibilityHistory(newPast, newFuture);
     },
 
     undo: () => {
-      const { history, historyIndex } = get();
-      if (historyIndex > 0) {
-        set({
-          historyIndex: historyIndex - 1,
-          map: history[historyIndex - 1]
-        });
-      }
+      const { map, pastCommands, futureCommands } = get();
+      if (pastCommands.length === 0) return;
+
+      const lastCommand = pastCommands[pastCommands.length - 1];
+      const revertedMap = lastCommand.undo(map);
+
+      const newPast = pastCommands.slice(0, -1);
+      const newFuture = [lastCommand, ...futureCommands];
+
+      set({
+        map: revertedMap,
+        pastCommands: newPast,
+        futureCommands: newFuture
+      });
+      updateCompatibilityHistory(newPast, newFuture);
     },
 
     redo: () => {
-      const { history, historyIndex } = get();
-      if (historyIndex < history.length - 1) {
-        set({
-          historyIndex: historyIndex + 1,
-          map: history[historyIndex + 1]
-        });
-      }
+      const { map, pastCommands, futureCommands } = get();
+      if (futureCommands.length === 0) return;
+
+      const nextCommand = futureCommands[0];
+      const reexecutedMap = nextCommand.execute(map);
+
+      const newPast = [...pastCommands, nextCommand];
+      const newFuture = futureCommands.slice(1);
+
+      set({
+        map: reexecutedMap,
+        pastCommands: newPast,
+        futureCommands: newFuture
+      });
+      updateCompatibilityHistory(newPast, newFuture);
     },
 
     addWall: (wall, skipHistory = false) => {
@@ -187,37 +259,40 @@ export const useEditorStore = create<EditorState>((set, get) => {
         }
       }
 
-      const id = `wall-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-      
       // Prevent duplicates in the same coordinate/orientation
       const exists = currentMap.walls.some(
         (w) => w.x === wall.x && w.y === wall.y && w.orientation === wall.orientation
       );
       if (exists) return;
 
-      const updatedMap = {
-        ...currentMap,
-        walls: [...currentMap.walls, { ...wall, id }]
-      };
-      get().setMap(updatedMap, skipHistory);
+      const id = `wall-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
+      const fullWall = { ...wall, id };
+
+      if (skipHistory) {
+        set({
+          map: { ...currentMap, walls: [...currentMap.walls, fullWall] }
+        });
+      } else {
+        get().executeCommand(createAddWallCommand(fullWall));
+      }
     },
 
     removeWall: (id) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        walls: currentMap.walls.filter((w) => w.id !== id)
-      };
-      get().setMap(updatedMap);
+      const wall = currentMap.walls.find((w) => w.id === id);
+      if (!wall) return;
+      get().executeCommand(createRemoveWallCommand(wall));
     },
 
     updateWall: (id, updates) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        walls: currentMap.walls.map((w) => (w.id === id ? { ...w, ...updates } : w))
-      };
-      get().setMap(updatedMap);
+      const wall = currentMap.walls.find((w) => w.id === id);
+      if (!wall) return;
+      const oldUpdates: Partial<WallSegment> = {};
+      Object.keys(updates).forEach((key) => {
+        (oldUpdates as any)[key] = (wall as any)[key];
+      });
+      get().executeCommand(createUpdateWallCommand(id, oldUpdates, updates));
     },
 
     addTerrain: (cell, skipHistory = false) => {
@@ -227,7 +302,17 @@ export const useEditorStore = create<EditorState>((set, get) => {
         ...currentMap,
         terrain: [...filtered, cell]
       };
-      get().setMap(updatedMap, skipHistory);
+      if (skipHistory) {
+        set({ map: updatedMap });
+      } else {
+        const existing = currentMap.terrain.find((t) => t.x === cell.x && t.y === cell.y);
+        get().executeCommand(createPaintTerrainCommand([{
+          x: cell.x,
+          y: cell.y,
+          oldType: existing?.type,
+          newType: cell.type
+        }]));
+      }
     },
 
     removeTerrain: (x, y, skipHistory = false) => {
@@ -236,101 +321,98 @@ export const useEditorStore = create<EditorState>((set, get) => {
         ...currentMap,
         terrain: currentMap.terrain.filter((t) => !(t.x === x && t.y === y))
       };
-      get().setMap(updatedMap, skipHistory);
+      if (skipHistory) {
+        set({ map: updatedMap });
+      } else {
+        const existing = currentMap.terrain.find((t) => t.x === x && t.y === y);
+        if (existing) {
+          get().executeCommand(createPaintTerrainCommand([{
+            x,
+            y,
+            oldType: existing.type,
+            newType: undefined
+          }]));
+        }
+      }
+    },
+
+    commitPaintTerrain: (changes) => {
+      if (changes.length === 0) return;
+      get().executeCommand(createPaintTerrainCommand(changes));
     },
 
     addObject: (obj) => {
-      const currentMap = get().map;
       const id = `obj-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-      const updatedMap = {
-        ...currentMap,
-        objects: [...currentMap.objects, { ...obj, id }]
-      };
-      get().setMap(updatedMap);
+      const fullObj = { ...obj, id };
+      get().executeCommand(createAddObjectCommand(fullObj));
     },
 
     updateObject: (id, updates) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        objects: currentMap.objects.map((o) => (o.id === id ? { ...o, ...updates } : o))
-      };
-      get().setMap(updatedMap);
+      const obj = currentMap.objects.find((o) => o.id === id);
+      if (!obj) return;
+      const oldUpdates: Partial<MapObject> = {};
+      Object.keys(updates).forEach((key) => {
+        (oldUpdates as any)[key] = (obj as any)[key];
+      });
+      get().executeCommand(createUpdateObjectCommand(id, oldUpdates, updates));
     },
 
     removeObject: (id) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        objects: currentMap.objects.filter((o) => o.id !== id)
-      };
-      get().setMap(updatedMap);
+      const obj = currentMap.objects.find((o) => o.id === id);
+      if (!obj) return;
+      get().executeCommand(createRemoveObjectCommand(obj));
     },
 
     addToken: (token) => {
-      const currentMap = get().map;
       const id = `tok-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-      const updatedMap = {
-        ...currentMap,
-        tokens: [...currentMap.tokens, { ...token, id }]
-      };
-      get().setMap(updatedMap);
+      const fullToken = { ...token, id };
+      get().executeCommand(createAddTokenCommand(fullToken));
     },
 
     updateToken: (id, updates) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        tokens: currentMap.tokens.map((t) => (t.id === id ? { ...t, ...updates } : t))
-      };
-      get().setMap(updatedMap);
+      const token = currentMap.tokens.find((t) => t.id === id);
+      if (!token) return;
+      const oldUpdates: Partial<MapToken> = {};
+      Object.keys(updates).forEach((key) => {
+        (oldUpdates as any)[key] = (token as any)[key];
+      });
+      get().executeCommand(createUpdateTokenCommand(id, oldUpdates, updates));
     },
 
     removeToken: (id) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        tokens: currentMap.tokens.filter((t) => t.id !== id)
-      };
-      get().setMap(updatedMap);
+      const token = currentMap.tokens.find((t) => t.id === id);
+      if (!token) return;
+      get().executeCommand(createRemoveTokenCommand(token));
     },
 
     addLabel: (label) => {
-      const currentMap = get().map;
       const id = `lbl-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-      const updatedMap = {
-        ...currentMap,
-        labels: [...currentMap.labels, { ...label, id }]
-      };
-      get().setMap(updatedMap);
+      const fullLabel = { ...label, id };
+      get().executeCommand(createAddLabelCommand(fullLabel));
     },
 
     removeLabel: (id) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        labels: currentMap.labels.filter((l) => l.id !== id)
-      };
-      get().setMap(updatedMap);
+      const label = currentMap.labels.find((l) => l.id === id);
+      if (!label) return;
+      get().executeCommand(createRemoveLabelCommand(label));
     },
 
     addMarker: (marker) => {
-      const currentMap = get().map;
       const id = `mrk-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
-      const updatedMap = {
-        ...currentMap,
-        markers: [...currentMap.markers, { ...marker, id }]
-      };
-      get().setMap(updatedMap);
+      const fullMarker = { ...marker, id };
+      get().executeCommand(createAddMarkerCommand(fullMarker));
     },
 
     removeMarker: (id) => {
       const currentMap = get().map;
-      const updatedMap = {
-        ...currentMap,
-        markers: currentMap.markers.filter((m) => m.id !== id)
-      };
-      get().setMap(updatedMap);
+      const marker = currentMap.markers.find((m) => m.id === id);
+      if (!marker) return;
+      get().executeCommand(createRemoveMarkerCommand(marker));
     },
 
     toggleLayerVisibility: (layerId) => {
@@ -339,7 +421,7 @@ export const useEditorStore = create<EditorState>((set, get) => {
         ...currentMap,
         layers: currentMap.layers.map((l) => (l.id === layerId ? { ...l, visible: !l.visible } : l))
       };
-      get().setMap(updatedMap, true); // Visual adjustment doesn't necessarily warrant full command stack history, or can skip
+      get().setMap(updatedMap, true); // Visual adjustment, bypass history
     },
 
     toggleLayerLock: (layerId) => {
@@ -405,19 +487,26 @@ export const useEditorStore = create<EditorState>((set, get) => {
         }
       }
 
-      const updatedMap = {
-        ...currentMap,
-        terrain: newTerrain,
-        walls: newWalls
-      };
-
-      get().setMap(updatedMap);
+      const roomCmd = createAddRoomCommand(
+        minX, minY, maxX, maxY,
+        terrainType, wallType,
+        currentMap.terrain, currentMap.walls,
+        newTerrain, newWalls
+      );
+      get().executeCommand(roomCmd);
     },
 
     clearMap: () => {
       const defaultMap = createDefaultMap();
-      get().setMap(defaultMap);
-      set({ selection: { ids: [], type: null }, coverAttacker: null, coverTarget: null });
+      set({
+        map: defaultMap,
+        selection: { ids: [], type: null },
+        coverAttacker: null,
+        coverTarget: null,
+        pastCommands: [],
+        futureCommands: []
+      });
+      updateCompatibilityHistory([], []);
     },
 
     loadMapData: (data) => {
@@ -491,7 +580,12 @@ export const useEditorStore = create<EditorState>((set, get) => {
         };
       }
 
-      get().setMap(parsedMap);
+      set({
+        map: parsedMap,
+        pastCommands: [],
+        futureCommands: []
+      });
+      updateCompatibilityHistory([], []);
     }
   };
 });
