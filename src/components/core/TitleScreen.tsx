@@ -34,6 +34,7 @@ export const TitleScreen: React.FC = () => {
 
   const [selectedSlotIndex, setSelectedSlotIndex] = useState<number | null>(null);
   const [deleteConfirmSlot, setDeleteConfirmSlot] = useState<number | null>(null);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   useEffect(() => {
     const init = async () => {
@@ -94,6 +95,7 @@ export const TitleScreen: React.FC = () => {
       const success = await deleteCharacter(char.id);
       if (success) {
         setSelectedSlotIndex(null);
+        setIsOverlayOpen(false);
       }
     } finally {
       setIsLoading(false);
@@ -229,7 +231,7 @@ export const TitleScreen: React.FC = () => {
           )}
         </div>
 
-        {/* MIDDLE: 3 Vertical Character Cards Side-by-Side */}
+        {/* MIDDLE: 3 Vertical Character Cards (9:16 Aspect Ratio) Side-by-Side */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-5xl my-2">
           {[0, 1, 2].map((index) => {
             const char = mainCharacterSlots[index];
@@ -248,35 +250,35 @@ export const TitleScreen: React.FC = () => {
                   if (hasCharacter) {
                     setSelectedSlotIndex(index);
                     playClickSound();
+                    setIsOverlayOpen(true);
                   } else {
                     setSelectedSlotIndex(index);
                     handleNewGame();
                   }
                 }}
                 className={cn(
-                  "relative flex flex-col rounded-lg border-2 overflow-hidden cursor-pointer transition-all duration-300 w-64 md:w-72 h-[340px] md:h-[370px] shadow-xl group",
+                  "relative flex flex-col rounded-lg border-2 overflow-hidden cursor-pointer transition-all duration-300 w-64 md:w-72 aspect-[9/16] shadow-xl group",
                   hasCharacter
                     ? isSelected
-                      ? "border-amber-400 bg-stone-900/95 ring-3 ring-amber-500/10 shadow-[0_0_30px_rgba(245,158,11,0.25)] z-20"
-                      : "border-stone-850 bg-stone-950/90 hover:border-stone-750 opacity-60 grayscale-[15%]"
+                      ? "border-amber-400 bg-black ring-3 ring-amber-500/10 shadow-[0_0_30px_rgba(245,158,11,0.25)] z-20"
+                      : "border-stone-850 bg-black hover:border-stone-750 opacity-60 grayscale-[15%]"
                     : "border-dashed border-stone-800 bg-stone-950/20 hover:border-amber-500/30 hover:bg-stone-900/20"
                 )}
               >
                 {hasCharacter ? (
                   <>
-                    {/* Top 70%: Portrait Container */}
-                    <div
-                      className="relative flex-1 overflow-hidden bg-[#1e1712]"
-                      style={{
-                        backgroundImage: `url('/assets/ui/parchment.jpg')`,
-                        backgroundColor: '#f5ebd0',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                      }}
-                    >
-                      {/* Dark blend overlay for portrait bg */}
-                      <div className="absolute inset-0 bg-[#3a2a1d]/15 mix-blend-multiply pointer-events-none z-0" />
+                    {/* Top Section: Character Name & Class */}
+                    <div className="p-3.5 bg-gradient-to-b from-black/90 to-transparent shrink-0 text-center relative z-20">
+                      <h4 className="text-sm font-header font-black text-amber-500 uppercase tracking-wider truncate leading-none mb-1">
+                        {char.name}
+                      </h4>
+                      <p className="text-[8.5px] text-stone-400 font-extrabold uppercase tracking-widest truncate leading-none">
+                        {formatText(char.subrace || char.race)} • {formatText(char.subclass || char.class)}
+                      </p>
+                    </div>
 
+                    {/* Middle Section: Portrait (Chroma Key with solid black bg) */}
+                    <div className="flex-1 relative overflow-hidden bg-black flex items-center justify-center">
                       {/* Chroma Key Portrait */}
                       <ChromaKeyImage
                         src={portraitUrl}
@@ -285,45 +287,11 @@ export const TitleScreen: React.FC = () => {
                       />
 
                       {/* Vignette */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent z-10 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent z-10 pointer-events-none" />
 
-                      {/* Top Badges */}
-                      <div className="absolute top-2.5 left-2.5 bg-stone-950/85 backdrop-blur-sm text-stone-400 text-[8px] font-black px-1.5 py-0.5 rounded border border-stone-800 z-20">
-                        SL0{index + 1}
-                      </div>
-
-                      <div className="absolute top-2.5 right-2.5 bg-amber-500 text-stone-950 text-[8px] font-black px-1.5 py-0.5 rounded shadow-sm uppercase tracking-wider z-20">
+                      {/* Level Badge Overlay (Placed at the bottom-right corner) */}
+                      <div className="absolute bottom-3 right-3 bg-amber-500 text-stone-950 text-[8.5px] font-black px-2 py-0.5 rounded shadow-sm uppercase tracking-wider z-20">
                         L{char.level || 1}
-                      </div>
-                    </div>
-
-                    {/* Bottom 30%: Compact Name & Stats */}
-                    <div className="p-3 bg-[#13100e] relative z-10 flex flex-col justify-between shrink-0 h-[120px] border-t border-stone-850/40">
-                      <div className="absolute inset-0 bg-[#f5ebd0]/[0.02] mix-blend-overlay pointer-events-none" />
-
-                      {/* Name and Race/Class */}
-                      <div className="text-center">
-                        <h4 className="text-sm font-header font-black text-amber-500 uppercase tracking-wider truncate leading-none mb-1">
-                          {char.name}
-                        </h4>
-                        <p className="text-[8.5px] text-stone-400 font-extrabold uppercase tracking-widest truncate leading-none">
-                          {formatText(char.subrace || char.race)} • {formatText(char.subclass || char.class)}
-                        </p>
-                      </div>
-
-                      {/* D&D Stats Grid: 3 columns x 2 rows */}
-                      <div className="grid grid-cols-3 gap-x-2 gap-y-1 text-center mt-1.5 pt-1.5 border-t border-stone-900/60">
-                        {Object.entries(char.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }).map(([stat, val]) => {
-                          const score = val as number;
-                          return (
-                            <div key={stat} className="flex flex-col items-center">
-                              <span className="text-[6.5px] font-black text-amber-500/70 uppercase leading-none">{stat}</span>
-                              <span className="text-[10px] font-bold text-stone-300 leading-none mt-0.5">
-                                {score}
-                              </span>
-                            </div>
-                          );
-                        })}
                       </div>
                     </div>
                   </>
@@ -352,70 +320,118 @@ export const TitleScreen: React.FC = () => {
           })}
         </div>
 
-        {/* MIDDLE-BOTTOM: Character Preview Overlay / Inspection Panel */}
-        <div className="w-full flex justify-center px-4 my-2">
-          <AnimatePresence mode="wait">
-            {selectedChar && (
-              <motion.div
-                key={`preview-${selectedChar.id}`}
-                initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 10 }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                className="w-full max-w-2xl bg-[#14100e] border-2 border-amber-600/30 shadow-[0_0_30px_rgba(217,119,6,0.15)] rounded-lg p-4 text-stone-200 relative overflow-hidden"
-              >
-                {/* Subtle paper texture background */}
-                <div className="absolute inset-0 bg-[#f5ebd0]/[0.02] mix-blend-overlay pointer-events-none" />
+        {/* BOTTOM: Action Buttons Section (Only Create New Character is placed below cards) */}
+        <div className="flex justify-center w-full max-w-sm my-4">
+          {/* Create New Character Button */}
+          <button
+            onClick={handleNewGame}
+            className="w-full group relative overflow-hidden bg-[#0d0a08] hover:bg-stone-900 py-3 px-6 rounded-md border border-amber-600/30 hover:border-amber-500/60 transition-all duration-200 active:scale-95 text-center shadow-lg"
+          >
+            <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            <div className="relative flex items-center justify-center gap-2 text-stone-300 group-hover:text-amber-400 transition-colors">
+              <GameIcon name="plus" size={12} color="currentColor" />
+              <span className="text-[11px] font-header font-black uppercase tracking-[0.25em]">Create New Character</span>
+            </div>
+          </button>
+        </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
-                  {/* Left Column: Character Details */}
-                  <div className="flex flex-col justify-between">
-                    <div>
-                      <span className="text-[8px] font-black text-amber-500/70 uppercase tracking-[0.25em] block mb-1">
-                        Character Information
-                      </span>
-                      <h3 className="text-xl md:text-2xl font-header font-black text-amber-500 uppercase tracking-wide leading-none mb-1">
-                        {selectedChar.name}
-                      </h3>
-                      <p className="text-xs text-stone-300 font-extrabold uppercase tracking-widest">
-                        {formatText(selectedChar.subrace || selectedChar.race)} {formatText(selectedChar.subclass || selectedChar.class)}
-                      </p>
-                      <p className="text-[10px] text-stone-400 mt-2 capitalize">
+        {/* FOOTER: Version Info */}
+        <div className="mt-2 mb-1 text-[8px] font-black text-stone-600 uppercase tracking-[1em] text-center">
+          Version 3.0.0 // Prime Protocol
+        </div>
+      </div>
+
+      {/* Large Backdrop-enabled Character Preview Overlay Modal */}
+      <AnimatePresence>
+        {isOverlayOpen && selectedChar && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/85 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 15 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="w-full max-w-3xl bg-[#14100e] border-2 border-amber-600/40 shadow-[0_0_50px_rgba(217,119,6,0.3)] rounded-xl p-6 relative overflow-hidden text-stone-200"
+            >
+              {/* Subtle paper texture background */}
+              <div className="absolute inset-0 bg-[#f5ebd0]/[0.02] mix-blend-overlay pointer-events-none" />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                {/* Left Column: Passport & Biography Info */}
+                <div className="flex flex-col justify-between space-y-4">
+                  <div>
+                    <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-[0.3em] block mb-1">
+                      Hero Passport
+                    </span>
+                    <h3 className="text-2xl md:text-3xl font-header font-black text-amber-500 uppercase tracking-wide leading-none mb-1.5 drop-shadow-[0_0_15px_rgba(245,158,11,0.3)]">
+                      {selectedChar.name}
+                    </h3>
+                    <p className="text-sm text-stone-300 font-extrabold uppercase tracking-widest">
+                      Level {selectedChar.level || 1} • {formatText(selectedChar.subrace || selectedChar.race)} {formatText(selectedChar.subclass || selectedChar.class)}
+                    </p>
+                    
+                    <div className="mt-4 space-y-1.5 text-xs text-stone-400">
+                      <p className="capitalize">
                         Background: <span className="text-stone-300 font-semibold">{formatText(selectedChar.background)}</span>
                       </p>
-                      <p className="text-[10px] text-stone-400 capitalize">
+                      <p className="capitalize">
                         Alignment: <span className="text-stone-300 font-semibold">{formatText(selectedChar.alignment)}</span>
                       </p>
-                      <p className="text-[10px] text-stone-400 mt-1 uppercase tracking-wider font-extrabold">
-                        Level {selectedChar.level || 1}
-                      </p>
-                    </div>
-
-                    {/* Banish Button */}
-                    <div className="mt-4 md:mt-2">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          playClickSound();
-                          setDeleteConfirmSlot(selectedSlotIndex);
-                        }}
-                        className="px-3 py-1.5 bg-red-950/20 hover:bg-red-900/40 border border-red-900/40 hover:border-red-500 rounded text-red-400 hover:text-red-200 text-[9px] font-black uppercase tracking-widest transition-all duration-200"
-                      >
-                        Banish Character
-                      </button>
                     </div>
                   </div>
 
-                  {/* Right Column: Vitals */}
-                  <div className="space-y-3">
-                    <div className="grid grid-cols-2 gap-2">
+                  {/* Ability Scores Panel (Moved from cards to preview overlay) */}
+                  <div className="bg-stone-950/50 border border-stone-900/60 rounded-lg p-3">
+                    <span className="text-[9px] font-black text-amber-500/80 uppercase tracking-widest block mb-2.5">
+                      Ability Scores
+                    </span>
+                    <div className="grid grid-cols-6 gap-2 text-center">
+                      {Object.entries(selectedChar.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }).map(([stat, val]) => {
+                        const score = val as number;
+                        const mod = Math.floor((score - 10) / 2);
+                        const modSign = mod >= 0 ? `+${mod}` : `${mod}`;
+                        return (
+                          <div key={stat} className="bg-stone-900/40 border border-stone-850/60 rounded p-1.5 flex flex-col items-center">
+                            <span className="text-[7.5px] font-black text-amber-500/70 uppercase leading-none">{stat}</span>
+                            <span className="text-sm font-bold text-stone-200 mt-1 leading-none">{score}</span>
+                            <span className="text-[8.5px] text-stone-500 font-bold mt-1 leading-none">({modSign})</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Lore Note: Last Journal Entry (Netherlands: Last Journal Entry) */}
+                  <div className="bg-stone-950/30 border border-stone-900/50 rounded-lg p-3 space-y-1">
+                    <div className="flex items-center gap-1.5 text-stone-400">
+                      <GameIcon name="magic_effect" size={10} color="#92400E" />
+                      <span className="text-[9px] font-black uppercase tracking-widest">Last Journal Entry</span>
+                    </div>
+                    <p className="text-xs font-serif italic text-stone-400 leading-relaxed pl-1">
+                      "The path grows narrower as we descend into the Whispering Caverns. The air smells of ozone and rusted iron... We must press on to find the ancient Forge."
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Column: Vitals, Experience & CTA Buttons */}
+                <div className="flex flex-col justify-between space-y-6">
+                  <div className="space-y-4">
+                    <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-[0.3em] block">
+                      Vitals & Status
+                    </span>
+                    
+                    <div className="grid grid-cols-2 gap-3">
                       {/* HP */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2 flex items-center gap-2">
+                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
                         <div className="p-1.5 bg-red-950/30 rounded border border-red-900/20 text-red-500 flex items-center justify-center">
-                          <GameIcon name="shield" size={10} color="currentColor" />
+                          <GameIcon name="shield" size={11} color="currentColor" />
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider">Health</span>
+                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Health</span>
                           <span className="text-xs font-bold text-stone-200">
                             {selectedChar.hp} / {selectedChar.maxHp} HP
                           </span>
@@ -423,12 +439,12 @@ export const TitleScreen: React.FC = () => {
                       </div>
 
                       {/* AC */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2 flex items-center gap-2">
+                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
                         <div className="p-1.5 bg-amber-950/30 rounded border border-amber-900/20 text-amber-500 flex items-center justify-center">
-                          <GameIcon name="armor" size={10} color="currentColor" />
+                          <GameIcon name="armor" size={11} color="currentColor" />
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider">Armor Class</span>
+                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Armor Class</span>
                           <span className="text-xs font-bold text-stone-200">
                             {selectedDerived?.ac} AC
                           </span>
@@ -436,12 +452,12 @@ export const TitleScreen: React.FC = () => {
                       </div>
 
                       {/* Initiative */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2 flex items-center gap-2">
+                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
                         <div className="p-1.5 bg-blue-950/30 rounded border border-blue-900/20 text-blue-400 flex items-center justify-center">
-                          <GameIcon name="sword" size={10} color="currentColor" />
+                          <GameIcon name="sword" size={11} color="currentColor" />
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider">Initiative</span>
+                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Initiative</span>
                           <span className="text-xs font-bold text-stone-200">
                             {selectedInitiativeSign} INIT
                           </span>
@@ -449,12 +465,12 @@ export const TitleScreen: React.FC = () => {
                       </div>
 
                       {/* Wealth */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2 flex items-center gap-2">
+                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
                         <div className="p-1.5 bg-yellow-950/30 rounded border border-yellow-900/20 text-yellow-500 flex items-center justify-center">
-                          <GameIcon name="money" size={10} color="currentColor" />
+                          <GameIcon name="money" size={11} color="currentColor" />
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-[7.5px] font-black text-stone-500 uppercase tracking-wider">Wealth</span>
+                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Wealth</span>
                           <span className="text-xs font-bold text-stone-200">
                             {selectedChar.money?.gp || 0} GP
                           </span>
@@ -463,8 +479,8 @@ export const TitleScreen: React.FC = () => {
                     </div>
 
                     {/* XP Progress */}
-                    <div className="bg-stone-950/30 border border-stone-900/50 rounded p-2 space-y-1">
-                      <div className="flex justify-between text-[7.5px] font-black text-stone-400 uppercase tracking-wider">
+                    <div className="bg-stone-950/30 border border-stone-900/50 rounded p-3 space-y-1.5">
+                      <div className="flex justify-between text-[8px] font-black text-stone-400 uppercase tracking-wider">
                         <span>Experience Points</span>
                         <span>{selectedChar.xp || 0} XP</span>
                       </div>
@@ -476,64 +492,58 @@ export const TitleScreen: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
+                  {/* Core Action Buttons inside overlay */}
+                  <div className="space-y-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      {/* Close Button */}
+                      <button
+                        onClick={() => setIsOverlayOpen(false)}
+                        className="flex-1 bg-stone-950 hover:bg-stone-900 text-stone-300 py-3 px-4 rounded font-black text-xs uppercase tracking-widest border border-stone-800 hover:border-amber-500/20 transition-all duration-200"
+                      >
+                        Return to Camp
+                      </button>
+
+                      {/* Continue Button (Primary CTA) */}
+                      <button
+                        onClick={() => {
+                          setIsOverlayOpen(false);
+                          handleContinue();
+                        }}
+                        className="flex-1 bg-gradient-to-b from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 border border-red-500/50 hover:border-amber-500/70 text-white py-3 px-4 rounded font-black text-xs uppercase tracking-widest transition-all duration-200 shadow-lg shadow-red-900/10 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                      >
+                        ▶ Continue with {selectedChar.name}
+                      </button>
+                    </div>
+
+                    {/* Banish Character option at the bottom */}
+                    <div className="text-center">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          playClickSound();
+                          setDeleteConfirmSlot(selectedSlotIndex);
+                        }}
+                        className="text-[9.5px] font-bold uppercase tracking-widest text-red-500/60 hover:text-red-500 transition-colors"
+                      >
+                        Banish {selectedChar.name}
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                {/* Footer timestamp info */}
-                <div className="border-t border-stone-900 mt-3 pt-2.5 flex justify-between items-center text-[8.5px] text-stone-500 font-bold relative z-10">
-                  <span>LAST PLAYED: {formatLastSaved(selectedChar.lastSaved).toUpperCase()}</span>
-                  <span className="text-[7.5px] font-black text-amber-500/40 uppercase tracking-widest">
-                    ID // {selectedChar.id.slice(0, 8)}
-                  </span>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* BOTTOM: Action Buttons Section */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl justify-center items-center my-2">
-          {/* Create New Character Button (Secondary CTA) */}
-          <button
-            onClick={handleNewGame}
-            className="flex-1 w-full group relative overflow-hidden bg-[#0d0a08] hover:bg-stone-900 py-3 px-6 rounded-md border border-amber-600/30 hover:border-amber-500/60 transition-all duration-200 active:scale-95 text-center shadow-lg"
-          >
-            <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-amber-500/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            <div className="relative flex items-center justify-center gap-2 text-stone-300 group-hover:text-amber-400 transition-colors">
-              <GameIcon name="plus" size={12} color="currentColor" />
-              <span className="text-[11px] font-header font-black uppercase tracking-[0.25em]">Create New Character</span>
-            </div>
-          </button>
-
-          {/* Continue Adventure Button (Primary CTA) */}
-          <button
-            onClick={handleContinue}
-            disabled={selectedSlotIndex === null || !mainCharacterSlots[selectedSlotIndex]}
-            className={cn(
-              "flex-1 w-full group relative overflow-hidden py-3 px-6 rounded-md border transition-all duration-300 active:scale-[0.98] text-center shadow-xl",
-              (selectedSlotIndex === null || !mainCharacterSlots[selectedSlotIndex])
-                ? "bg-stone-950/20 border-stone-900/40 text-stone-600 opacity-20 cursor-not-allowed shadow-none"
-                : "bg-gradient-to-b from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 border-red-500/50 hover:border-amber-500/70 text-white shadow-[0_0_25px_rgba(220,38,38,0.3)] hover:shadow-[0_0_35px_rgba(220,38,38,0.5)]"
-            )}
-          >
-            {selectedSlotIndex !== null && mainCharacterSlots[selectedSlotIndex] && (
-              <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-amber-300 to-transparent" />
-            )}
-            <div className="relative flex items-center justify-center gap-2">
-              <GameIcon name="play" size={12} color="#FFFFFF" />
-              <span className="text-[11px] font-header font-black uppercase tracking-[0.25em]">
-                {selectedSlotIndex !== null && mainCharacterSlots[selectedSlotIndex]
-                  ? `Continue with ${mainCharacterSlots[selectedSlotIndex]?.name}`
-                  : "Continue Adventure"}
-              </span>
-            </div>
-          </button>
-        </div>
-
-        {/* FOOTER: Version Info */}
-        <div className="mt-2 mb-1 text-[8px] font-black text-stone-600 uppercase tracking-[1em] text-center">
-          Version 3.0.0 // Prime Protocol
-        </div>
-      </div>
+              {/* Modal footer status */}
+              <div className="border-t border-stone-900 mt-4 pt-3 flex justify-between items-center text-[9px] text-stone-500 font-bold relative z-10">
+                <span>LAST PLAYED: {formatLastSaved(selectedChar.lastSaved).toUpperCase()}</span>
+                <span className="text-[8px] font-black text-amber-500/40 uppercase tracking-widest">
+                  PORT Manifest Verified // {selectedChar.id.slice(0, 8)}
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Elegant Medieval Banish/Delete Confirmation Overlay Modal */}
       <AnimatePresence>
@@ -542,7 +552,7 @@ export const TitleScreen: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md z-[100] flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md z-[110] flex items-center justify-center p-4"
           >
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
