@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useEditorStore } from '../state/editorStore';
 import { useAtlasStore } from '../../../../store/useAtlasStore';
 import { GameIcon } from '../../../../game_icons';
@@ -18,12 +18,87 @@ export const ToolPalette: React.FC = () => {
 
   const { monstersList, loadList } = useAtlasStore();
   const [tokenSearch, setTokenSearch] = useState('');
+  const [terrainImages, setTerrainImages] = useState<{ name: string; path: string; url: string }[]>([]);
+  const backgroundFileInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (activeTool === 'token' && monstersList.length === 0) {
       loadList('enemies');
     }
   }, [activeTool, monstersList.length, loadList]);
+
+  const fetchTerrainImages = async () => {
+    try {
+      const res = await fetch('/api/terrain-images/list');
+      if (res.ok) {
+        const data = await res.json();
+        setTerrainImages(data);
+      }
+    } catch (e) {
+      console.error("Error loading terrain images:", e);
+    }
+  };
+
+  useEffect(() => {
+    fetchTerrainImages();
+  }, []);
+
+  const updateBackground = (updates: Partial<typeof map.background>) => {
+    const updatedMap = {
+      ...map,
+      background: {
+        ...map.background,
+        ...updates
+      }
+    };
+    useEditorStore.getState().setMap(updatedMap);
+  };
+
+  const handleUploadBackgroundTerrain = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      try {
+        const rawContent = event.target?.result as string;
+        const base64Content = rawContent.split(',')[1];
+        if (!base64Content) return;
+
+        const targetPath = `public/assets/atlas/combat/combat_map_terrain/${file.name}`;
+
+        const res = await fetch('/api/commit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            path: targetPath,
+            content: base64Content,
+            isBase64: true,
+            message: `Upload terrain background: ${file.name}`
+          })
+        });
+
+        if (res.ok) {
+          alert(`Successfully uploaded and saved terrain image: ${file.name}`);
+          const virtualUrl = `/assets/atlas/combat/combat_map_terrain/${file.name}`;
+          updateBackground({
+            type: 'image',
+            value: virtualUrl
+          });
+          fetchTerrainImages();
+        } else {
+          const errData = await res.json();
+          alert(`Upload failed: ${errData.error || 'Server error'}`);
+        }
+      } catch (err: any) {
+        alert(`Error reading file: ${err.message}`);
+      }
+    };
+    reader.readAsDataURL(file);
+    e.target.value = '';
+  };
 
   const filteredMonsters = monstersList
     .filter((m) => m.name.toLowerCase().includes(tokenSearch.toLowerCase()))
@@ -274,6 +349,121 @@ export const ToolPalette: React.FC = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="h-px bg-white/5 my-2" />
+
+      <div className="space-y-3">
+        <label className="text-[9px] font-black tracking-wider text-white/30 uppercase">Map Background</label>
+
+        {/* Toggle Background Type */}
+        <div className="flex gap-1 bg-black/40 p-1 rounded border border-white/5">
+          <button
+            onClick={() => updateBackground({ type: 'color' })}
+            className={`flex-1 py-1 rounded text-[8px] font-black uppercase text-center transition-all ${
+              map.background.type === 'color'
+                ? 'bg-purple-600 text-white'
+                : 'text-white/40 hover:text-white/80'
+            }`}
+          >
+            Color
+          </button>
+          <button
+            onClick={() => updateBackground({ type: 'image' })}
+            className={`flex-1 py-1 rounded text-[8px] font-black uppercase text-center transition-all ${
+              map.background.type === 'image'
+                ? 'bg-purple-600 text-white'
+                : 'text-white/40 hover:text-white/80'
+            }`}
+          >
+            Terrain Image
+          </button>
+        </div>
+
+        {map.background.type === 'color' ? (
+          <div className="flex flex-col gap-1.5">
+            <span className="text-[8px] text-white/50 uppercase font-bold">Background Color</span>
+            <div className="flex gap-2 items-center">
+              <input
+                type="color"
+                value={map.background.value.startsWith('#') ? map.background.value : '#151515'}
+                onChange={(e) => updateBackground({ value: e.target.value })}
+                className="bg-transparent border-none outline-none w-8 h-8 cursor-pointer shrink-0 rounded"
+              />
+              <input
+                type="text"
+                value={map.background.value}
+                onChange={(e) => updateBackground({ value: e.target.value })}
+                className="bg-black/40 border border-white/10 rounded px-2 py-1.5 text-[10px] font-bold text-white outline-none w-full"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {/* Image Upload Trigger */}
+            <div className="flex flex-col gap-1">
+              <button
+                onClick={() => backgroundFileInputRef.current?.click()}
+                className="w-full py-1.5 bg-purple-600/20 hover:bg-purple-600/30 text-[9px] font-black uppercase tracking-wider rounded border border-purple-500/30 transition-all text-purple-300 flex items-center justify-center gap-1.5"
+                title="Upload custom background terrain image"
+              >
+                <GameIcon name="package" size={10} color="currentColor" />
+                Upload Terrain Image
+              </button>
+              <input
+                type="file"
+                ref={backgroundFileInputRef}
+                className="hidden"
+                accept="image/*"
+                onChange={handleUploadBackgroundTerrain}
+              />
+            </div>
+
+            {/* Opacity slider */}
+            <div className="flex flex-col gap-1">
+              <div className="flex justify-between text-[8px] text-white/50 font-bold uppercase">
+                <span>Opacity</span>
+                <span>{Math.round((map.background.opacity ?? 1) * 100)}%</span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.05"
+                value={map.background.opacity ?? 1}
+                onChange={(e) => updateBackground({ opacity: parseFloat(e.target.value) })}
+                className="w-full h-1 bg-black/40 rounded-lg appearance-none cursor-pointer accent-purple-500"
+              />
+            </div>
+
+            {/* Scrollable list of uploaded/available terrain backgrounds */}
+            <div className="space-y-1.5">
+              <span className="text-[8px] text-white/40 uppercase font-bold">Terrain Matrix</span>
+              <div className="max-h-[140px] overflow-y-auto custom-scrollbar border border-white/5 rounded bg-black/20 p-1 space-y-1">
+                {terrainImages.map((img) => {
+                  const isSelected = map.background.value === img.url;
+                  return (
+                    <button
+                      key={img.path}
+                      onClick={() => updateBackground({ value: img.url })}
+                      className={`w-full p-1.5 rounded text-left text-[9px] font-bold transition-all border flex items-center justify-between ${
+                        isSelected
+                          ? 'bg-purple-600/20 border-purple-500 text-purple-300'
+                          : 'bg-transparent border-transparent text-white/60 hover:bg-white/5 hover:text-white'
+                      }`}
+                    >
+                      <span className="truncate">{img.name}</span>
+                      {isSelected && <span className="text-[8px] text-purple-400 font-bold">ACTIVE</span>}
+                    </button>
+                  );
+                })}
+                {terrainImages.length === 0 && (
+                  <div className="text-center py-4 text-[9px] text-white/20 italic">No custom images found</div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

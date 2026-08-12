@@ -41,15 +41,18 @@ export const BattleMapEditor: React.FC = () => {
         {/* Left pane: drawing tools options */}
         <ToolPalette />
 
-        {/* Center pane: interactive HTML Canvas viewport & Layers */}
+        {/* Center pane: interactive HTML Canvas viewport */}
         <div className="flex-1 flex flex-col min-w-0 h-full">
           <MapViewport />
-          <LayerPanel />
         </div>
 
-        {/* Right pane: element property inspectors & cover calculations */}
-        <div className="flex flex-col h-full border-l border-white/5 bg-[#1a1a1a]">
-          <InspectorPanel />
+        {/* Right pane: element property inspectors, layers & cover calculations */}
+        <div className="w-[280px] shrink-0 border-l border-white/5 bg-[#1a1a1a] flex flex-col h-full overflow-hidden">
+          <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col min-h-0">
+            <InspectorPanel />
+            <div className="h-px bg-white/5 my-1" />
+            <LayerPanel />
+          </div>
           <button
             onClick={handleBakeToRuntime}
             className="m-4 py-2 bg-purple-600 hover:bg-purple-500 text-white font-black text-[10px] uppercase tracking-widest rounded transition-all shadow-lg shadow-purple-500/10 shrink-0 border border-purple-500/20"

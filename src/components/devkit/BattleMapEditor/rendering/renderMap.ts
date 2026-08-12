@@ -27,13 +27,25 @@ export function getCachedImage(url: string, onLoad: () => void): HTMLImageElemen
 }
 
 export function drawBackground(rc: RenderContext, map: BattleMap) {
-  const { ctx, zoom } = rc;
-  const width = map.dimensions.width * rc.cellSize;
-  const height = map.dimensions.height * rc.cellSize;
+  const { ctx, cellSize, triggerRedraw } = rc;
+  const width = map.dimensions.width * cellSize;
+  const height = map.dimensions.height * cellSize;
 
   ctx.save();
-  ctx.fillStyle = map.background.value || '#151515';
-  ctx.fillRect(0, 0, width, height);
+  if (map.background.type === 'image' && map.background.value) {
+    const img = getCachedImage(map.background.value, triggerRedraw || (() => {}));
+    if (img) {
+      ctx.globalAlpha = map.background.opacity ?? 1;
+      ctx.drawImage(img, 0, 0, width, height);
+    } else {
+      // Dark placeholder during image loading
+      ctx.fillStyle = '#151515';
+      ctx.fillRect(0, 0, width, height);
+    }
+  } else {
+    ctx.fillStyle = map.background.value || '#151515';
+    ctx.fillRect(0, 0, width, height);
+  }
   ctx.restore();
 }
 

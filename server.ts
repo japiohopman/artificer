@@ -1088,6 +1088,30 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     }
   });
 
+  app.get("/api/terrain-images/list", async (req, res) => {
+    try {
+      const terrainDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_map_terrain");
+      await fs.mkdir(terrainDir, { recursive: true });
+
+      const entries = await fs.readdir(terrainDir, { withFileTypes: true });
+      const images = entries
+        .filter(entry => entry.isFile() && /\.(png|jpe?g|webp|jpg|gif)$/i.test(entry.name))
+        .map(entry => {
+          const virtualPath = `/assets/atlas/combat/combat_map_terrain/${entry.name}`;
+          return {
+            name: entry.name,
+            path: virtualPath,
+            url: virtualPath
+          };
+        });
+
+      res.json(images);
+    } catch (err: any) {
+      console.error("Error listing terrain images:", err);
+      res.status(500).json({ error: "Failed to list terrain images." });
+    }
+  });
+
   app.get("/api/audio/list", async (req, res) => {
     const baseDir = path.join(process.cwd(), "public/assets/sounds");
 
