@@ -93,7 +93,7 @@ NO cartoon, NO mobile game, NO low-quality, NO kids style.
 
 ---
 
-### 👤 Character Prompts (Aspect Ratio: `3:4`)
+### 👤 Character Prompts (Aspect Ratio: `9:16`)
 
 #### Novice Traveler (Levels 1 - 4)
 > **Prompt:** `A high-fidelity, cinematic digital painting of a level [Level] [Class/Race] named [Name]. The character is a NOVICE TRAVELER. Their equipment is basic and functional—raw leather, simple iron, and sturdy canvas. They look eager but relatively fresh-faced and less seasoned. The character should be rendered as a realistic D&D adventurer. Focus on period-accurate materials like worn leather, forged steel, and textured fabrics.`
@@ -128,7 +128,7 @@ NO cartoon, NO mobile game, NO low-quality, NO kids style.
 
 ---
 
-### 🌿 Material & Specimen Prompts (Aspect Ratio: `9:16`)
+### 🌿 Material & Specimen Prompts (Aspect Ratio: `1:1`)
 
 #### Botanical Specimens (Herbs, Roots, Sprigs)
 > **Prompt:** `The material MUST be presented as a freshly picked botanical specimen (sprig, leaf, or root). It should look organic, raw, and harvested. ABSOLUTELY NO leather straps, NO labels, NO furniture, NO props. Focus on natural plant textures. NO characters, NO people, NO hands, NO creatures in the image.`
