@@ -6,6 +6,24 @@ export interface RenderContext {
   zoom: number;
   panX: number;
   panY: number;
+  triggerRedraw?: () => void;
+}
+
+const imageCache: Record<string, HTMLImageElement> = {};
+
+export function getCachedImage(url: string, onLoad: () => void): HTMLImageElement | null {
+  if (!url) return null;
+  if (imageCache[url]) {
+    if (imageCache[url].complete) return imageCache[url];
+    return null;
+  }
+  const img = new Image();
+  img.src = url;
+  img.onload = () => {
+    onLoad();
+  };
+  imageCache[url] = img;
+  return null;
 }
 
 export function drawBackground(rc: RenderContext, map: BattleMap) {
@@ -214,7 +232,7 @@ export function drawObjects(rc: RenderContext, objects: MapObject[]) {
 }
 
 export function drawTokens(rc: RenderContext, tokens: MapToken[]) {
-  const { ctx, cellSize } = rc;
+  const { ctx, cellSize, triggerRedraw } = rc;
   ctx.save();
 
   for (const t of tokens) {
@@ -245,14 +263,31 @@ export function drawTokens(rc: RenderContext, tokens: MapToken[]) {
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    // Render Initials or Icon
+    // Render Image or Initials
     ctx.shadowBlur = 0;
     ctx.shadowOffsetY = 0;
-    ctx.fillStyle = '#ffffff';
-    ctx.font = `bold ${footprint === 2 ? '14px' : '10px'} monospace`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(t.name.substr(0, 3).toUpperCase(), cx, cy);
+
+    let imageDrawn = false;
+    if (t.imageUrl) {
+      const img = getCachedImage(t.imageUrl, triggerRedraw || (() => {}));
+      if (img) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy, r - 3, 0, Math.PI * 2);
+        ctx.clip();
+        ctx.drawImage(img, cx - r, cy - r, r * 2, r * 2);
+        ctx.restore();
+        imageDrawn = true;
+      }
+    }
+
+    if (!imageDrawn) {
+      ctx.fillStyle = '#ffffff';
+      ctx.font = `bold ${footprint === 2 ? '14px' : '10px'} monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(t.name.substr(0, 3).toUpperCase(), cx, cy);
+    }
 
     ctx.restore();
   }
@@ -264,22 +299,41 @@ export function drawSelectionOverlay(rc: RenderContext, selectedIds: string[], m
   const { ctx, cellSize } = rc;
   ctx.save();
 
-  ctx.strokeStyle = '#00e5ff';
-  ctx.lineWidth = 2;
-  ctx.setLineDash([4, 4]);
-
   // Highlight selected items
   for (const id of selectedIds) {
     const obj = map.objects.find((o) => o.id === id);
     if (obj) {
+      ctx.strokeStyle = '#00e5ff';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
       const size = cellSize * obj.scale;
       ctx.strokeRect(obj.x * cellSize - size / 2, obj.y * cellSize - size / 2, size, size);
     }
 
     const tok = map.tokens.find((t) => t.id === id);
     if (tok) {
+      ctx.strokeStyle = '#00e5ff';
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
       const footprint = tok.size === 'Large' ? 2 : 1;
       ctx.strokeRect(tok.x * cellSize, tok.y * cellSize, footprint * cellSize, footprint * cellSize);
+    }
+
+    const wall = map.walls.find((w) => w.id === id);
+    if (wall) {
+      ctx.strokeStyle = '#00e5ff';
+      ctx.lineWidth = 8;
+      ctx.lineCap = 'round';
+      ctx.setLineDash([]);
+      const startX = wall.x * cellSize;
+      const startY = wall.y * cellSize;
+      const endX = wall.orientation === 'horizontal' ? (wall.x + 1) * cellSize : wall.x * cellSize;
+      const endY = wall.orientation === 'vertical' ? (wall.y + 1) * cellSize : wall.y * cellSize;
+
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
+      ctx.stroke();
     }
   }
 

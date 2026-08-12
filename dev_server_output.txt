@@ -2,10 +2,34 @@
 > react-example@0.0.0 dev
 > tsx server.ts
 
-◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
 [ElevenLabs Server Init] Available Env Keys: []
-[ElevenLabs Startup Cache] Preloaded 3 cached audio IDs.
+[ElevenLabs Startup Cache] Preloaded 5 cached audio IDs.
 Server running on http://localhost:3000
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
+[ElevenLabs History] Missing API Key. Falling back to local history.json
+[ElevenLabs Auth] No API key resolved anywhere in headers or process.env.
+[ElevenLabs History] Missing API Key. Falling back to local history.json
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
+Hue proxy error: timeout of 10000ms exceeded
 Hue proxy error: timeout of 10000ms exceeded
 Hue proxy error: timeout of 10000ms exceeded
 Hue proxy error: timeout of 10000ms exceeded

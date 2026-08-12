@@ -11,7 +11,7 @@ import {
 export type ExplorerTab = 'enemies' | 'materials' | 'equipment' | 'key' | 'books' | 'spells' | 'transport' | 'gods';
 
 interface AtlasState {
-  monstersList: { name: string; index: string; rarity?: string; type?: string; challenge_rating?: string }[];
+  monstersList: { name: string; index: string; rarity?: string; type?: string; challenge_rating?: string; imageUrl?: string }[];
   monsterCategories: { name: string; index: string; monsters: any[] }[];
   monsterCategoryMapping: Record<string, string>;
   materialsList: { name: string; index: string }[];

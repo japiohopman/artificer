@@ -12,8 +12,11 @@ export const EditorToolbar: React.FC = () => {
     historyIndex,
     history,
     map,
-    clearMap
+    clearMap,
+    loadMapData
   } = useEditorStore();
+
+  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleExportJSON = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(map, null, 2));
@@ -24,6 +27,91 @@ export const EditorToolbar: React.FC = () => {
     downloadAnchor.click();
     downloadAnchor.remove();
   };
+
+  const handleImportJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const parsed = JSON.parse(event.target?.result as string);
+        if (parsed && typeof parsed === 'object') {
+          loadMapData(parsed);
+          alert('Successfully imported Battle Map JSON!');
+        } else {
+          alert('Invalid JSON structure.');
+        }
+      } catch (err) {
+        alert('Failed to parse JSON file.');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  };
+
+  const handleSaveToLocalStorage = () => {
+    if (!map.name || map.name.trim() === '') {
+      alert('Validation Error: Map name cannot be empty!');
+      return;
+    }
+    if (map.dimensions.width <= 0 || map.dimensions.height <= 0) {
+      alert('Validation Error: Map dimensions must be greater than zero!');
+      return;
+    }
+
+    try {
+      localStorage.setItem('artificer_devkit_battlemap', JSON.stringify(map));
+      alert('Successfully saved Battle Map to browser local storage!');
+    } catch (err) {
+      alert('Failed to save to local storage.');
+    }
+  };
+
+  const handleLoadFromLocalStorage = () => {
+    try {
+      const saved = localStorage.getItem('artificer_devkit_battlemap');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        loadMapData(parsed);
+        alert('Successfully loaded Battle Map from local storage!');
+      } else {
+        alert('No saved map found in local storage.');
+      }
+    } catch (err) {
+      alert('Failed to load map from local storage.');
+    }
+  };
+
+  const handleValidateMap = () => {
+    const errors: string[] = [];
+    if (!map.name || map.name.trim() === '') {
+      errors.push('Map name is empty.');
+    }
+    if (map.dimensions.width < 4 || map.dimensions.height < 4) {
+      errors.push('Map dimensions are too small (minimum 4x4).');
+    }
+    if (map.walls.length === 0 && map.terrain.length === 0 && map.objects.length === 0 && map.tokens.length === 0) {
+      errors.push('The map has no walls, terrain, objects, or tokens.');
+    }
+
+    if (errors.length > 0) {
+      alert(`Map Validation Report:\n\n⚠️ Warnings:\n${errors.map(e => `• ${e}`).join('\n')}`);
+    } else {
+      alert('Map Validation Report:\n\n✅ Map structure is valid and healthy! All constraints pass.');
+    }
+  };
+
+  // Auto-load last saved map from local storage if available on mount
+  React.useEffect(() => {
+    const saved = localStorage.getItem('artificer_devkit_battlemap');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        loadMapData(parsed);
+      } catch (e) {}
+    }
+  }, [loadMapData]);
 
   return (
     <div className="h-12 bg-[#1a1a1a] border-b border-white/5 flex items-center justify-between px-4 shrink-0 select-none">
@@ -38,11 +126,46 @@ export const EditorToolbar: React.FC = () => {
           New Map
         </button>
         <button
+          onClick={() => fileInputRef.current?.click()}
+          className="p-1.5 px-3 bg-white/5 hover:bg-white/10 text-[10px] font-bold uppercase rounded border border-white/5 transition-all text-white/80"
+          title="Import Map from JSON File"
+        >
+          Import JSON
+        </button>
+        <input
+          type="file"
+          ref={fileInputRef}
+          className="hidden"
+          accept=".json"
+          onChange={handleImportJSON}
+        />
+        <button
           onClick={handleExportJSON}
           className="p-1.5 px-3 bg-purple-600/20 border border-purple-500/30 hover:bg-purple-600/30 text-[10px] font-bold uppercase rounded transition-all text-purple-300"
           title="Export Map to JSON File"
         >
           Export JSON
+        </button>
+        <button
+          onClick={handleSaveToLocalStorage}
+          className="p-1.5 px-3 bg-white/5 hover:bg-white/10 text-[10px] font-bold uppercase rounded border border-white/5 transition-all text-white/80"
+          title="Save Map to local browser storage"
+        >
+          Save Map
+        </button>
+        <button
+          onClick={handleLoadFromLocalStorage}
+          className="p-1.5 px-3 bg-white/5 hover:bg-white/10 text-[10px] font-bold uppercase rounded border border-white/5 transition-all text-white/80"
+          title="Load Map from local browser storage"
+        >
+          Load Map
+        </button>
+        <button
+          onClick={handleValidateMap}
+          className="p-1.5 px-3 bg-white/5 hover:bg-white/10 text-[10px] font-bold uppercase rounded border border-white/5 transition-all text-white/80"
+          title="Validate Map constraints"
+        >
+          Validate
         </button>
       </div>
 
