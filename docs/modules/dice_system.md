@@ -1,61 +1,72 @@
-# Dice System & Chat Interface Module
+# Dice System
 
-## Purpose
-The Dice System provides both visual (3D) and logical dice rolling capabilities within the Arcane Codex. The Chat Interface serves as a high-fidelity preview of the upcoming "AI Dungeon Master" orchestration.
+## Status
 
-## Owner
-Jules Agent
+**Implemented / evolving**
 
-## Dependencies
-- `@3d-dice/dice-box`: 3D dice physics engine.
-- `@3d-dice/dice-parser-interface`: Unified interface for parsing and reconciling visual roll results.
-- `src/store/useStore.ts`
-- `public/assets/dice-box/`: Standardized asset location for dice themes and textures.
+The dice system provides deterministic/logical dice resolution and a visual 3D dice presentation for supported UI flows.
+
+## Responsibility
+
+The dice domain owns dice notation parsing, roll resolution and the interface between logical results and optional visual dice presentation.
+
+Chat is a consumer of the dice system, not part of the dice module itself.
 
 ## Architecture
-### Dice System
-- **DiceService (`src/dice_roller/diceService.ts`)**: Core logic provider for 3D and background rolls. Integrates `DiceParser` from `@3d-dice/dice-parser-interface` for precise result reconciliation and `@3d-dice/dice-roller-parser` for logical background rolls. It uses `parser.parseNotation()` to initialize the engine before each 3D roll.
-- **DiceBoxCanvas (`src/dice_roller/DiceBoxCanvas.tsx`)**: Global React component container for the dice box.
-- **DiceRollOverlay (`src/dice_roller/DiceRollOverlay.tsx`)**: Parchment UI for displaying recent roll results. This replaces the legacy `@3d-dice/display-results` addon with a theme-consistent parchment interface.
-- **Zustand Integration**: `rollDice3D` and `rollDice` actions in the store.
 
-### Chat Interface
-- **ChatPanel (`src/components/hud/ChatPanel.tsx`)**: Main UI with parchment-themed history and glassmorphism input.
-- **Dynamic Backgrounds**: Reflects location environment and time of day.
-- **Command System**: Supports `/roll` and other interactive commands.
+```text
+Feature / UI
+    ↓
+dice service / dice domain
+    ├── logical roll
+    └── optional 3D presentation
+          ↓
+      result / roll state
+```
 
-## API
-### Dice Logic (diceService.ts)
-- `diceService.roll3D(notation, label, theme)`: Triggers a 3D roll with an optional theme. Standard themes are located in `public/assets/dice-box/themes/`.
-- `diceService.rollBackground(notation, label)`: Logical roll without animation.
-- **Path Resolution**: The service uses `window.location.origin` to provide absolute paths to the `ammo.wasm` worker, fixing rendering issues in diverse hosting environments.
+The exact implementation API is defined by the current TypeScript source under `src/dice_roller/` and its consumers.
 
-### Store Integration (useStore.ts)
-- `rollDice3D(notation, label, theme)`: Triggers a 3D roll and updates the `recentRolls` state.
-- `rollDice(label, modifier, dieType)`: Fallback/Background roll.
+## Ownership
 
-### Chat Commands
-- `/roll [notation]`: Chat command to trigger rolls directly from the interface.
+Do not assign ownership of the module to a specific coding agent. Architecture and source code are the authority.
 
-## Known Issues
-- Browser autoplay policies can block initial sound integration.
-- Mobile touch interaction for dice and chat needs optimization.
+## Runtime behavior
 
-## Themes
-Dice themes are loaded as textures from `public/assets/dice-box/themes/`. Each theme folder must contain a `theme.config.json` and the corresponding diffuse/normal maps. Themes are sourced from `@3d-dice/dice-themes` and copied to the public directory to ensure accessibility by the BabylonJS engine.
+The system supports the distinction between:
 
-### Supported Themes:
-- **Default**: Classic opaque dice.
-- **Rust**: Weathered metallic look.
-- **Smooth**: Polished, vibrant plastic.
-- **Wooden**: Natural wood grain texture.
-- **Gemstone**: Translucent, crystalline appearance.
-- **Metal**: (blueGreenMetal) Ornate metallic design.
-- **Rock**: Rough, stony texture.
+- **logical/background rolls** — used when a visual animation is unnecessary;
+- **3D rolls** — used when the UI should present a physical dice animation.
 
-## TODO's
-- [x] Implement dice themes (colors, materials).
-- [ ] Integrate dice sounds with `soundService`.
-- [ ] Gemini AI integration for dynamic NPC conversations.
-- [ ] Context awareness for the AI (character state, lore).
-- [ ] AI-driven action triggers (combat, checks).
+A logical result must remain authoritative; visual dice should not independently become a second source of truth.
+
+## Chat integration
+
+The chat interface may invoke dice actions such as `/roll`, but chat-specific orchestration belongs to the chat/AI layer.
+
+This separation allows dice resolution to be reused by combat, checks, generators and other systems without depending on the chat UI.
+
+## Assets and presentation
+
+3D dice presentation may use assets/themes under the dice-roller/public asset paths. Asset loading details should follow the current implementation rather than old documentation assumptions.
+
+## Known limitations
+
+The exact current limitations should be taken from the active source/tests when changing this module. Historical TODO lists should not be treated as active requirements.
+
+## Future direction
+
+Potential improvements include:
+
+- stronger result metadata for checks/attacks;
+- richer integration with combat/rules resolution;
+- audio feedback through the existing audio system;
+- improved mobile interaction;
+- AI/tool-call integration through validated domain actions.
+
+These are design directions, not claims of completed functionality.
+
+## Related documentation
+
+- `docs/systems/DATA_FLOW.md`
+- `docs/ARCHITECTURE_STATUS.md`
+- `docs/systems/TACTICAL_COMBAT_ENGINE.md`
