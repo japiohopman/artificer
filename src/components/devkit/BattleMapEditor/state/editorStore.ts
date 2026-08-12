@@ -57,10 +57,11 @@ interface EditorState {
   redo: () => void;
 
   // Semantic mutations that auto-trigger history
-  addWall: (wall: Omit<WallSegment, 'id'>) => void;
+  addWall: (wall: Omit<WallSegment, 'id'>, skipHistory?: boolean) => void;
   removeWall: (id: string) => void;
-  addTerrain: (cell: TerrainCell) => void;
-  removeTerrain: (x: number, y: number) => void;
+  updateWall: (id: string, updates: Partial<WallSegment>) => void;
+  addTerrain: (cell: TerrainCell, skipHistory?: boolean) => void;
+  removeTerrain: (x: number, y: number, skipHistory?: boolean) => void;
   addObject: (obj: Omit<MapObject, 'id'>) => void;
   updateObject: (id: string, updates: Partial<MapObject>) => void;
   removeObject: (id: string) => void;
@@ -76,6 +77,7 @@ interface EditorState {
   toggleLayerLock: (layerId: string) => void;
 
   // Batch actions / generators
+  addRoom: (minX: number, minY: number, maxX: number, maxY: number, terrainType: string, wallType: 'wall' | 'door' | 'secret-door' | 'none') => void;
   clearMap: () => void;
   loadMapData: (data: any) => void;
 }
@@ -171,7 +173,7 @@ export const useEditorStore = create<EditorState>((set, get) => {
       }
     },
 
-    addWall: (wall) => {
+    addWall: (wall, skipHistory = false) => {
       const currentMap = get().map;
       
       // Boundary check to ensure walls stay within the map limits
@@ -197,7 +199,7 @@ export const useEditorStore = create<EditorState>((set, get) => {
         ...currentMap,
         walls: [...currentMap.walls, { ...wall, id }]
       };
-      get().setMap(updatedMap);
+      get().setMap(updatedMap, skipHistory);
     },
 
     removeWall: (id) => {
@@ -209,23 +211,32 @@ export const useEditorStore = create<EditorState>((set, get) => {
       get().setMap(updatedMap);
     },
 
-    addTerrain: (cell) => {
+    updateWall: (id, updates) => {
+      const currentMap = get().map;
+      const updatedMap = {
+        ...currentMap,
+        walls: currentMap.walls.map((w) => (w.id === id ? { ...w, ...updates } : w))
+      };
+      get().setMap(updatedMap);
+    },
+
+    addTerrain: (cell, skipHistory = false) => {
       const currentMap = get().map;
       const filtered = currentMap.terrain.filter((t) => !(t.x === cell.x && t.y === cell.y));
       const updatedMap = {
         ...currentMap,
         terrain: [...filtered, cell]
       };
-      get().setMap(updatedMap);
+      get().setMap(updatedMap, skipHistory);
     },
 
-    removeTerrain: (x, y) => {
+    removeTerrain: (x, y, skipHistory = false) => {
       const currentMap = get().map;
       const updatedMap = {
         ...currentMap,
         terrain: currentMap.terrain.filter((t) => !(t.x === x && t.y === y))
       };
-      get().setMap(updatedMap);
+      get().setMap(updatedMap, skipHistory);
     },
 
     addObject: (obj) => {
@@ -338,6 +349,69 @@ export const useEditorStore = create<EditorState>((set, get) => {
         layers: currentMap.layers.map((l) => (l.id === layerId ? { ...l, locked: !l.locked } : l))
       };
       get().setMap(updatedMap, true);
+    },
+
+    addRoom: (minX, minY, maxX, maxY, terrainType, wallType) => {
+      const currentMap = get().map;
+
+      // 1. Build new terrain cells
+      const newTerrain = [...currentMap.terrain];
+      for (let x = minX; x <= maxX; x++) {
+        for (let y = minY; y <= maxY; y++) {
+          const index = newTerrain.findIndex((t) => t.x === x && t.y === y);
+          if (index !== -1) {
+            newTerrain[index] = { x, y, type: terrainType };
+          } else {
+            newTerrain.push({ x, y, type: terrainType });
+          }
+        }
+      }
+
+      // 2. Build new walls around perimeter
+      const newWalls = [...currentMap.walls];
+
+      if (wallType !== 'none') {
+        const addWallHelper = (x: number, y: number, orientation: 'horizontal' | 'vertical') => {
+          if (orientation === 'horizontal') {
+            if (x < 0 || x >= currentMap.dimensions.width || y < 0 || y > currentMap.dimensions.height) return;
+          } else {
+            if (x < 0 || x > currentMap.dimensions.width || y < 0 || y >= currentMap.dimensions.height) return;
+          }
+
+          const exists = newWalls.some((w) => w.x === x && w.y === y && w.orientation === orientation);
+          if (exists) return;
+
+          const id = `wall-${Date.now()}-${Math.random().toString(36).substr(2, 5)}-${Math.floor(Math.random() * 1000)}`;
+          newWalls.push({
+            id,
+            x,
+            y,
+            orientation,
+            type: wallType,
+            doorState: wallType === 'door' || wallType === 'secret-door' ? 'closed' : undefined
+          });
+        };
+
+        // Top & Bottom horizontal walls
+        for (let x = minX; x <= maxX; x++) {
+          addWallHelper(x, minY, 'horizontal');
+          addWallHelper(x, maxY + 1, 'horizontal');
+        }
+
+        // Left & Right vertical walls
+        for (let y = minY; y <= maxY; y++) {
+          addWallHelper(minX, y, 'vertical');
+          addWallHelper(maxX + 1, y, 'vertical');
+        }
+      }
+
+      const updatedMap = {
+        ...currentMap,
+        terrain: newTerrain,
+        walls: newWalls
+      };
+
+      get().setMap(updatedMap);
     },
 
     clearMap: () => {

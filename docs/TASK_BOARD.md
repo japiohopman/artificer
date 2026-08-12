@@ -5,18 +5,18 @@ This is the **active work queue**. Completed historical work should not remain m
 ## 🔴 Critical — Current engineering
 
 ### Battle Map Editor
-- [ ] Complete the `BattleMap` authoring data model and versioned schema.
-- [ ] Implement functional Canvas viewport: coordinates, pan, zoom and grid/snap.
-- [ ] Implement functional Wall tool using wall-segment geometry.
-- [ ] Implement functional Room and Door tools.
-- [ ] Implement functional Terrain painting.
-- [ ] Implement Object/Stamp placement using canonical asset infrastructure.
-- [ ] Implement Token/Spawn placement with Atlas references where appropriate.
-- [ ] Implement Layers and Inspector behavior.
-- [ ] Implement command-based Undo/Redo.
-- [ ] Implement map validation, serialization and save/load.
-- [ ] Implement BattleMap → CombatGrid runtime adapter.
-- [ ] Add editor tests for geometry, serialization and history.
+- [x] Complete the `BattleMap` authoring data model and versioned schema.
+- [x] Implement functional Canvas viewport: coordinates, pan, zoom and grid/snap.
+- [x] Implement functional Wall tool using wall-segment geometry.
+- [x] Implement functional Room and Door tools.
+- [x] Implement functional Terrain painting.
+- [x] Implement Object/Stamp placement using canonical asset infrastructure.
+- [x] Implement Token/Spawn placement with Atlas references where appropriate.
+- [x] Implement Layers and Inspector behavior.
+- [x] Implement command-based Undo/Redo.
+- [x] Implement map validation, serialization and save/load.
+- [x] Implement BattleMap → CombatGrid runtime adapter.
+- [x] Add editor tests for geometry, serialization and history.
 
 > **Important:** the current Wall → Room → Door → Terrain → Object → Token → Layers → Inspector → Undo/Redo UI is scaffolding. A placeholder is not a completed task.
 

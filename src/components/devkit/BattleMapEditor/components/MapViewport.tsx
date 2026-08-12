@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useEditorStore } from '../state/editorStore';
+import { useAtlasStore } from '../../../../store/useAtlasStore';
 import { worldToGrid, gridToWorld, getWallSnap } from '../geometry/coordinates';
 import { findWallAt, findObjectAt, findTokenAt } from '../geometry/hitTesting';
 import {
@@ -16,6 +17,16 @@ export const MapViewport: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
+
+  const [roomStartPos, setRoomStartPos] = useState<{ x: number; y: number } | null>(null);
+  const [roomEndPos, setRoomEndPos] = useState<{ x: number; y: number } | null>(null);
+  const [isDrawingRoom, setIsDrawingRoom] = useState(false);
+  const [hoveredCell, setHoveredCell] = useState<{ x: number; y: number } | null>(null);
+  const [redrawKey, setRedrawKey] = useState(0);
+
+  const isPaintingRef = useRef(false);
+  const lastPaintedCellRef = useRef<{ x: number; y: number } | null>(null);
+  const hasModifiedRef = useRef(false);
   
   const {
     map,
@@ -81,7 +92,14 @@ export const MapViewport: React.FC = () => {
     ctx.translate(panX, panY);
     ctx.scale(zoom, zoom);
 
-    const rc = { ctx, cellSize, zoom, panX, panY };
+    const rc = {
+      ctx,
+      cellSize,
+      zoom,
+      panX,
+      panY,
+      triggerRedraw: () => setRedrawKey((k) => k + 1)
+    };
 
     // 1. Draw static color or textures
     drawBackground(rc, map);
@@ -122,8 +140,31 @@ export const MapViewport: React.FC = () => {
       ctx.fill();
     }
 
+    // 9. Room Tool Preview
+    if (isDrawingRoom && roomStartPos && roomEndPos) {
+      const minX = Math.min(roomStartPos.x, roomEndPos.x);
+      const maxX = Math.max(roomStartPos.x, roomEndPos.x);
+      const minY = Math.min(roomStartPos.y, roomEndPos.y);
+      const maxY = Math.max(roomStartPos.y, roomEndPos.y);
+
+      const px = minX * cellSize;
+      const py = minY * cellSize;
+      const pw = (maxX - minX + 1) * cellSize;
+      const ph = (maxY - minY + 1) * cellSize;
+
+      ctx.save();
+      ctx.fillStyle = 'rgba(168, 85, 247, 0.25)';
+      ctx.fillRect(px, py, pw, ph);
+
+      ctx.strokeStyle = '#eab308';
+      ctx.lineWidth = 3;
+      ctx.setLineDash([5, 5]);
+      ctx.strokeRect(px, py, pw, ph);
+      ctx.restore();
+    }
+
     ctx.restore();
-  }, [map, viewport, selection, coverAttacker, coverTarget, containerSize]);
+  }, [map, viewport, selection, coverAttacker, coverTarget, containerSize, isDrawingRoom, roomStartPos, roomEndPos, redrawKey]);
 
   // Handle pointer interactions on the interactive workspace canvas
   const isDraggingRef = useRef(false);
@@ -152,6 +193,15 @@ export const MapViewport: React.FC = () => {
       return;
     }
 
+    // Room Drawing tool
+    if (activeTool === 'room') {
+      setRoomStartPos(gridPos);
+      setRoomEndPos(gridPos);
+      setIsDrawingRoom(true);
+      canvas.setPointerCapture(e.pointerId);
+      return;
+    }
+
     // 2. Wall Drawing tool
     if (activeTool === 'wall' || activeTool === 'door') {
       const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
@@ -168,11 +218,15 @@ export const MapViewport: React.FC = () => {
 
     // 3. Terrain Brush tool
     if (activeTool === 'terrain') {
+      isPaintingRef.current = true;
+      lastPaintedCellRef.current = gridPos;
+      hasModifiedRef.current = true;
       addTerrain({
         x: gridPos.x,
         y: gridPos.y,
         type: selectedTerrainType
-      });
+      }, true);
+      canvas.setPointerCapture(e.pointerId);
       return;
     }
 
@@ -194,12 +248,17 @@ export const MapViewport: React.FC = () => {
 
     // 5. Token Spawner tool
     if (activeTool === 'token' && selectedStampIndex) {
+      const monstersList = useAtlasStore.getState().monstersList;
+      const foundMonster = monstersList.find(m => m.name === selectedStampIndex || m.index === selectedStampIndex);
+
       addToken({
-        name: selectedStampIndex,
+        name: foundMonster ? foundMonster.name : selectedStampIndex,
+        index: foundMonster ? foundMonster.index : undefined,
         type: selectedStampIndex === 'Player Spawn' ? 'player' : 'enemy',
         x: gridPos.x,
         y: gridPos.y,
-        size: 'Medium'
+        size: foundMonster?.type === 'dragon' || foundMonster?.type === 'giant' ? 'Large' : 'Medium',
+        imageUrl: foundMonster ? foundMonster.imageUrl : undefined
       });
       return;
     }
@@ -245,8 +304,12 @@ export const MapViewport: React.FC = () => {
         return;
       }
 
-      // Default to terrain erase
-      removeTerrain(gridPos.x, gridPos.y);
+      // Default to terrain continuous erase
+      isPaintingRef.current = true;
+      lastPaintedCellRef.current = gridPos;
+      hasModifiedRef.current = true;
+      removeTerrain(gridPos.x, gridPos.y, true);
+      canvas.setPointerCapture(e.pointerId);
       return;
     }
 
@@ -275,20 +338,57 @@ export const MapViewport: React.FC = () => {
         return;
       }
 
+      // Try wall/door segment selection
+      const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
+      const wall = findWallAt(map.walls, snap.x, snap.y, snap.orientation);
+      if (wall) {
+        setSelection({ ids: [wall.id], type: wall.type === 'door' || wall.type === 'secret-door' ? 'door' : 'wall' });
+        return;
+      }
+
       // Clicked void
       setSelection({ ids: [], type: null });
     }
   };
 
   const handlePointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (!isDraggingRef.current) return;
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const rect = canvas.getBoundingClientRect();
     const currX = e.clientX - rect.left;
     const currY = e.clientY - rect.top;
+
+    const gridPos = worldToGrid(currX, currY, panX, panY, zoom, cellSize);
+    if (gridPos.x >= 0 && gridPos.x < map.dimensions.width && gridPos.y >= 0 && gridPos.y < map.dimensions.height) {
+      setHoveredCell(gridPos);
+    } else {
+      setHoveredCell(null);
+    }
+
+    if (activeTool === 'room' && isDrawingRoom) {
+      const clampedX = Math.max(0, Math.min(map.dimensions.width - 1, gridPos.x));
+      const clampedY = Math.max(0, Math.min(map.dimensions.height - 1, gridPos.y));
+      setRoomEndPos({ x: clampedX, y: clampedY });
+      return;
+    }
+
+    if (isPaintingRef.current) {
+      if (gridPos.x >= 0 && gridPos.x < map.dimensions.width && gridPos.y >= 0 && gridPos.y < map.dimensions.height) {
+        if (!lastPaintedCellRef.current || lastPaintedCellRef.current.x !== gridPos.x || lastPaintedCellRef.current.y !== gridPos.y) {
+          lastPaintedCellRef.current = gridPos;
+          hasModifiedRef.current = true;
+          if (activeTool === 'terrain') {
+            addTerrain({ x: gridPos.x, y: gridPos.y, type: selectedTerrainType }, true);
+          } else if (activeTool === 'eraser') {
+            removeTerrain(gridPos.x, gridPos.y, true);
+          }
+        }
+      }
+      return;
+    }
+
+    if (!isDraggingRef.current) return;
 
     if (activeTool === 'pan' || e.buttons === 4 || (activeTool === 'select' && e.shiftKey)) {
       // Viewport panning drag
@@ -317,6 +417,33 @@ export const MapViewport: React.FC = () => {
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    if (isPaintingRef.current) {
+      isPaintingRef.current = false;
+      lastPaintedCellRef.current = null;
+      canvasRef.current?.releasePointerCapture(e.pointerId);
+      if (hasModifiedRef.current) {
+        useEditorStore.getState().pushHistory(useEditorStore.getState().map);
+        hasModifiedRef.current = false;
+      }
+      return;
+    }
+
+    if (activeTool === 'room' && isDrawingRoom) {
+      setIsDrawingRoom(false);
+      canvasRef.current?.releasePointerCapture(e.pointerId);
+      if (roomStartPos && roomEndPos) {
+        const minX = Math.min(roomStartPos.x, roomEndPos.x);
+        const maxX = Math.max(roomStartPos.x, roomEndPos.x);
+        const minY = Math.min(roomStartPos.y, roomEndPos.y);
+        const maxY = Math.max(roomStartPos.y, roomEndPos.y);
+
+        useEditorStore.getState().addRoom(minX, minY, maxX, maxY, selectedTerrainType, selectedWallType);
+      }
+      setRoomStartPos(null);
+      setRoomEndPos(null);
+      return;
+    }
+
     if (isDraggingRef.current) {
       isDraggingRef.current = false;
       const canvas = canvasRef.current;
@@ -376,6 +503,12 @@ export const MapViewport: React.FC = () => {
       
       {/* HUD Zoom overlay */}
       <div className="absolute bottom-4 right-4 bg-black/80 p-2 px-3 rounded-lg border border-white/10 text-[9px] font-mono tracking-widest text-white/60 select-none pointer-events-none flex items-center gap-3">
+        {hoveredCell && (
+          <>
+            <span>CURSOR: ({hoveredCell.x}, {hoveredCell.y})</span>
+            <span>|</span>
+          </>
+        )}
         <span>ZOOM: {Math.round(zoom * 100)}%</span>
         <span>|</span>
         <span>GRID: {map.dimensions.width}x{map.dimensions.height}</span>

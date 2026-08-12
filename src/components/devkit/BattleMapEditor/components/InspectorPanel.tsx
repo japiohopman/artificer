@@ -11,6 +11,9 @@ export const InspectorPanel: React.FC = () => {
     removeToken,
     updateObject,
     updateToken,
+    removeWall,
+    updateWall,
+    setSelection,
     coverAttacker,
     coverTarget,
     setCoverAttacker,
@@ -24,6 +27,7 @@ export const InspectorPanel: React.FC = () => {
   // Resolve selected entity details
   const selectedObject = selectedId ? map.objects.find((o) => o.id === selectedId) : null;
   const selectedToken = selectedId ? map.tokens.find((t) => t.id === selectedId) : null;
+  const selectedWall = selectedId ? map.walls.find((w) => w.id === selectedId) : null;
 
   // Auto cover logic
   const calculatedCover = React.useMemo(() => {
@@ -126,7 +130,10 @@ export const InspectorPanel: React.FC = () => {
               </div>
 
               <button
-                onClick={() => removeToken(selectedToken.id)}
+                onClick={() => {
+                  removeToken(selectedToken.id);
+                  setSelection({ ids: [], type: null });
+                }}
                 className="w-full py-1.5 bg-red-950/40 hover:bg-red-900/40 border border-red-500/20 text-red-400 text-[10px] font-black uppercase tracking-wider rounded transition-all"
               >
                 Banish Token
@@ -135,7 +142,65 @@ export const InspectorPanel: React.FC = () => {
           </div>
         )}
 
-        {!selectedObject && !selectedToken && (
+        {selectedWall && (
+          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-2">
+            <div className="bg-black/30 p-2.5 rounded border border-white/5">
+              <span className="text-[8px] text-purple-400 font-mono block mb-0.5">{selectedWall.id}</span>
+              <span className="text-[11px] font-bold uppercase">
+                {selectedWall.type === 'wall'
+                  ? 'Solid Wall'
+                  : selectedWall.type === 'door'
+                  ? 'Standard Door'
+                  : 'Secret Door'}
+              </span>
+              <span className="text-[8px] text-white/40 block">
+                Position: ({selectedWall.x}, {selectedWall.y}) | {selectedWall.orientation.toUpperCase()}
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex flex-col gap-1">
+                <span className="text-[8px] text-white/40 uppercase font-black">Segment Type</span>
+                <select
+                  value={selectedWall.type}
+                  onChange={(e) => updateWall(selectedWall.id, { type: e.target.value as any })}
+                  className="bg-black/40 border border-white/10 rounded px-2 py-1 text-[10px] text-white focus:outline-none cursor-pointer"
+                >
+                  <option value="wall">Solid Wall</option>
+                  <option value="door">Standard Door</option>
+                  <option value="secret-door">Secret Door</option>
+                </select>
+              </div>
+
+              {(selectedWall.type === 'door' || selectedWall.type === 'secret-door') && (
+                <div className="flex flex-col gap-1">
+                  <span className="text-[8px] text-white/40 uppercase font-black">Door State</span>
+                  <select
+                    value={selectedWall.doorState || 'closed'}
+                    onChange={(e) => updateWall(selectedWall.id, { doorState: e.target.value as any })}
+                    className="bg-black/40 border border-white/10 rounded px-2 py-1 text-[10px] text-white focus:outline-none cursor-pointer"
+                  >
+                    <option value="closed">Closed</option>
+                    <option value="open">Open</option>
+                    <option value="locked">Locked</option>
+                  </select>
+                </div>
+              )}
+
+              <button
+                onClick={() => {
+                  removeWall(selectedWall.id);
+                  setSelection({ ids: [], type: null });
+                }}
+                className="w-full py-1.5 bg-red-950/40 hover:bg-red-900/40 border border-red-500/20 text-red-400 text-[10px] font-black uppercase tracking-wider rounded transition-all"
+              >
+                Delete Segment
+              </button>
+            </div>
+          </div>
+        )}
+
+        {!selectedObject && !selectedToken && !selectedWall && (
           <div className="py-6 text-center text-[10px] text-white/20 italic bg-black/10 rounded border border-dashed border-white/5">
             Select an element on canvas to inspect credentials.
           </div>
