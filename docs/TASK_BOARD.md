@@ -5,6 +5,9 @@ This is the **active work queue**. Completed historical work should not remain m
 ## 🔴 Critical — Current engineering
 
 ### Battle Map Editor
+
+The core editor foundation is implemented. Remaining work is focused on authoring UX, repository-backed map assets and integration hardening.
+
 - [x] Complete the `BattleMap` authoring data model and versioned schema.
 - [x] Implement functional Canvas viewport: coordinates, pan, zoom and grid/snap.
 - [x] Implement functional Wall tool using wall-segment geometry.
@@ -14,13 +17,22 @@ This is the **active work queue**. Completed historical work should not remain m
 - [x] Implement Token/Spawn placement with Atlas references where appropriate.
 - [x] Implement Layers and Inspector behavior.
 - [x] Implement command-based Undo/Redo.
-- [x] Implement map validation, serialization and save/load.
+- [x] Implement map validation and isolated serialization/persistence operations.
 - [x] Implement BattleMap → CombatGrid runtime adapter.
 - [x] Add editor tests for geometry, serialization and history.
-
-> **Important:** the current Wall → Room → Door → Terrain → Object → Token → Layers → Inspector → Undo/Redo UI is scaffolding. A placeholder is not a completed task.
+- [ ] Make `Pan` the default tool on editor startup.
+- [ ] Implement repository-backed permanent combat-map authoring under `public/assets/atlas/combat/combat_maps/` through the controlled development/server persistence boundary.
+- [ ] Make `CombatTester` consume the canonical BattleMap loading path rather than maintaining alternate map logic.
+- [ ] Verify/fix CombatGrid interpretation so walls remain cell boundaries rather than full blocked cells.
+- [ ] Add File/Maps menu workflow for New, Open, Save, Save As, Import, Export and Delete.
+- [ ] Implement context-aware right-click actions for selected entities and empty-map context.
+- [ ] Finalize Explorer → Battle Map → Inspector layout and bottom status area.
+- [ ] Remove remaining hardcoded creature/bestiary data from editor paths and resolve through canonical Atlas references.
+- [ ] Reuse existing Artificer SVG icons; add new icons only where no suitable existing icon exists.
+- [ ] Extract/reuse generic DevKit tools where justified, while keeping BattleMap domain state isolated.
 
 ### Documentation / agent alignment
+
 - [x] Establish living `docs/ARCHITECTURE_STATUS.md`.
 - [x] Refresh `docs/PROJECT_HUB.md`.
 - [x] Refresh `docs/COMPONENT_MAP.md`.
@@ -32,6 +44,10 @@ This is the **active work queue**. Completed historical work should not remain m
 
 ## 🟠 High — Data & infrastructure
 
+- [ ] Implement shared DevKit command/history primitives where existing editor implementations justify extraction.
+- [ ] Extract a reusable DevKit ColorPicker from the existing audio color-wheel implementation if the behavior is sufficiently generic.
+- [ ] Establish shared DevKit ContextMenu/FileMenu/AssetBrowser primitives where reuse is demonstrated.
+- [ ] Maintain the canonical Artificer icon registry and document missing icon coverage.
 - [ ] Implement allowlist for external/special asset paths.
 - [ ] Check image coverage per Atlas domain.
 - [ ] Asset Registry maintenance.
@@ -105,4 +121,4 @@ These are recorded here as historical milestones rather than active tasks:
 4. If a task becomes large enough to need its own design, create/update a module document and keep this board as the execution checklist.
 5. Update this file when work materially changes the active priority.
 
-*Last Updated: 2026-08-11*
+*Last Updated: 2026-08-13*
