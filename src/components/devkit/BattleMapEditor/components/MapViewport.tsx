@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useEditorStore } from '../state/editorStore';
 import { worldToGrid, getWallSnap } from '../geometry/coordinates';
+import { GameIcon } from '../../../../game_icons';
 import { dispatchPointerDown, dispatchPointerMove, dispatchPointerUp, ToolContext } from '../tools/toolDispatcher';
 import {
   drawBackground,
@@ -12,6 +13,8 @@ import {
   drawSelectionOverlay
 } from '../rendering/renderMap';
 
+import { findWallAt, findObjectAt, findTokenAt } from '../geometry/hitTesting';
+
 export const MapViewport: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -22,6 +25,15 @@ export const MapViewport: React.FC = () => {
   const [isDrawingRoom, setIsDrawingRoom] = useState(false);
   const [hoveredCell, setHoveredCell] = useState<{ x: number; y: number } | null>(null);
   const [redrawKey, setRedrawKey] = useState(0);
+
+  // Custom Right-Click Context Menu State
+  const [contextMenu, setContextMenu] = useState<{
+    x: number;
+    y: number;
+    gridX: number;
+    gridY: number;
+    target: { id: string; type: 'token' | 'object' | 'wall' | 'door' } | null;
+  } | null>(null);
 
   // Interaction refs managed by the dispatcher
   const isPaintingRef = useRef(false);
@@ -36,11 +48,25 @@ export const MapViewport: React.FC = () => {
     viewport,
     setViewport,
     activeTool,
+    setActiveTool,
     selection,
+    setSelection,
     coverAttacker,
     coverTarget,
     setCoverAttacker,
-    setCoverTarget
+    setCoverTarget,
+    selectedStampIndex,
+    selectedTerrainType,
+    selectedWallType,
+    addObject,
+    addToken,
+    addRoom,
+    updateObject,
+    updateToken,
+    updateWall,
+    removeObject,
+    removeToken,
+    removeWall
   } = useEditorStore();
 
   const cellSize = map.grid.cellSize;
@@ -194,6 +220,9 @@ export const MapViewport: React.FC = () => {
   };
 
   const handlePointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    // Left-click closes active context menu
+    setContextMenu(null);
+
     const ctx = buildToolContext(e);
     if (!ctx) return;
     dispatchPointerDown(activeTool, ctx, e);
@@ -217,6 +246,159 @@ export const MapViewport: React.FC = () => {
     const ctx = buildToolContext(e);
     if (!ctx) return;
     dispatchPointerUp(activeTool, ctx, e);
+  };
+
+  // Right-Click Context Menu Handler
+  const handleContextMenu = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const clickY = e.clientY - rect.top;
+
+    const gridPos = worldToGrid(clickX, clickY, panX, panY, zoom, cellSize);
+    const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
+    const worldCoords = {
+      x: (clickX - panX) / zoom,
+      y: (clickY - panY) / zoom
+    };
+
+    // Hit test target selection under cursor
+    let hitTarget: { id: string; type: 'token' | 'object' | 'wall' | 'door' } | null = null;
+
+    const tok = findTokenAt(map.tokens, gridPos.x, gridPos.y);
+    if (tok) {
+      hitTarget = { id: tok.id, type: 'token' };
+    } else {
+      const obj = findObjectAt(map.objects, worldCoords.x, worldCoords.y, cellSize);
+      if (obj) {
+        hitTarget = { id: obj.id, type: 'object' };
+      } else {
+        const wall = findWallAt(map.walls, snap.x, snap.y, snap.orientation);
+        if (wall) {
+          hitTarget = { id: wall.id, type: wall.type === 'door' || wall.type === 'secret-door' ? 'door' : 'wall' };
+        }
+      }
+    }
+
+    // Set selection state to the right-clicked target if any
+    if (hitTarget) {
+      setSelection({ ids: [hitTarget.id], type: hitTarget.type });
+    }
+
+    // Get client position relative to the container element
+    const containerRect = containerRef.current?.getBoundingClientRect();
+    const clientX = containerRect ? e.clientX - containerRect.left : e.clientX;
+    const clientY = containerRect ? e.clientY - containerRect.top : e.clientY;
+
+    setContextMenu({
+      x: clientX,
+      y: clientY,
+      gridX: gridPos.x,
+      gridY: gridPos.y,
+      target: hitTarget
+    });
+  };
+
+  // Context Actions Trigger Routines
+  const handleContextEdit = () => {
+    if (contextMenu?.target) {
+      setSelection({ ids: [contextMenu.target.id], type: contextMenu.target.type });
+      setActiveTool('select');
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextDelete = () => {
+    if (contextMenu?.target) {
+      const { id, type } = contextMenu.target;
+      if (type === 'token') removeToken(id);
+      else if (type === 'object') removeObject(id);
+      else if (type === 'wall' || type === 'door') removeWall(id);
+      setSelection({ ids: [], type: null });
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextDuplicate = () => {
+    if (contextMenu?.target) {
+      const { id, type } = contextMenu.target;
+      if (type === 'token') {
+        const origin = map.tokens.find(t => t.id === id);
+        if (origin) {
+          addToken({
+            ...origin,
+            name: `${origin.name} (Copy)`,
+            x: origin.x + 1,
+            y: origin.y
+          });
+        }
+      } else if (type === 'object') {
+        const origin = map.objects.find(o => o.id === id);
+        if (origin) {
+          addObject({
+            ...origin,
+            name: `${origin.name} (Copy)`,
+            x: origin.x + 1,
+            y: origin.y + 1
+          });
+        }
+      }
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextCreateRoom = () => {
+    if (contextMenu) {
+      const { gridX, gridY } = contextMenu;
+      // Creates a standard 3x3 stone room centered at right-click location
+      addRoom(gridX - 1, gridY - 1, gridX + 1, gridY + 1, selectedTerrainType || 'stone', selectedWallType || 'wall');
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextAddObject = () => {
+    if (contextMenu && selectedStampIndex) {
+      const { gridX, gridY } = contextMenu;
+      addObject({
+        name: selectedStampIndex === 'barrel' ? 'Barrel Stamp' : selectedStampIndex === 'chest' ? 'Chest Stamp' : 'Table Prop',
+        index: selectedStampIndex,
+        x: gridX + 0.5,
+        y: gridY + 0.5,
+        rotation: 0,
+        scale: selectedStampIndex === 'table' ? 1.5 : 1,
+        layerId: 'objects',
+        isLocked: false,
+        hasShadow: true
+      });
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextAddToken = () => {
+    if (contextMenu && selectedStampIndex) {
+      const { gridX, gridY } = contextMenu;
+      addToken({
+        name: selectedStampIndex,
+        type: selectedStampIndex === 'Player Spawn' ? 'player' : 'enemy',
+        x: gridX,
+        y: gridY,
+        size: 'Medium'
+      });
+    }
+    setContextMenu(null);
+  };
+
+  const handleContextSelectAll = () => {
+    const allIds = [
+      ...map.tokens.map(t => t.id),
+      ...map.objects.map(o => o.id),
+      ...map.walls.map(w => w.id)
+    ];
+    setSelection({ ids: allIds, type: 'object' });
+    setContextMenu(null);
   };
 
   useEffect(() => {
@@ -261,11 +443,67 @@ export const MapViewport: React.FC = () => {
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        onContextMenu={handleContextMenu}
         className="cursor-crosshair shadow-2xl border border-white/5 bg-black"
         style={{
           touchAction: 'none'
         }}
       />
+
+      {/* --- Themed Right-Click Context Menu Overlay --- */}
+      {contextMenu && (
+        <div
+          className="absolute bg-[#151515] border border-white/10 rounded shadow-2xl py-1 z-[2000] text-[9px] font-bold uppercase tracking-wider text-white/80 w-44"
+          style={{
+            left: contextMenu.x,
+            top: contextMenu.y
+          }}
+          onContextMenu={(e) => e.preventDefault()}
+        >
+          {contextMenu.target ? (
+            <>
+              {/* Entity Context Actions */}
+              <div className="px-3 py-1 border-b border-white/5 text-[8px] text-white/40 mb-1">
+                {contextMenu.target.type.toUpperCase()}: {contextMenu.target.id.slice(0, 10)}
+              </div>
+              <button onClick={handleContextEdit} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                <GameIcon name="search" size={9} /> Edit Properties
+              </button>
+              {contextMenu.target.type !== 'wall' && contextMenu.target.type !== 'door' && (
+                <button onClick={handleContextDuplicate} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                  <GameIcon name="plus" size={9} /> Duplicate
+                </button>
+              )}
+              <button onClick={handleContextDelete} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-red-400 flex items-center gap-2 text-red-500/80">
+                <GameIcon name="close" size={9} /> Delete Element
+              </button>
+            </>
+          ) : (
+            <>
+              {/* Empty Map Context Actions */}
+              <div className="px-3 py-1 border-b border-white/5 text-[8px] text-white/40 mb-1">
+                COORDINATES: ({contextMenu.gridX}, {contextMenu.gridY})
+              </div>
+              <button onClick={handleContextCreateRoom} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                <GameIcon name="panel" size={9} /> Create 3x3 Room
+              </button>
+              {selectedStampIndex && activeTool === 'object' && (
+                <button onClick={handleContextAddObject} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                  <GameIcon name="package" size={9} /> Place Stamp: {selectedStampIndex}
+                </button>
+              )}
+              {selectedStampIndex && activeTool === 'token' && (
+                <button onClick={handleContextAddToken} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                  <GameIcon name="identity" size={9} /> Place Token: {selectedStampIndex}
+                </button>
+              )}
+              <button onClick={handleContextSelectAll} className="w-full text-left px-3 py-1.5 hover:bg-white/5 hover:text-white flex items-center gap-2">
+                <GameIcon name="adjust" size={9} /> Select All
+              </button>
+            </>
+          )}
+        </div>
+      )}
       
       {/* HUD Zoom overlay */}
       <div className="absolute bottom-4 right-4 bg-black/80 p-2 px-3 rounded-lg border border-white/10 text-[9px] font-mono tracking-widest text-white/60 select-none pointer-events-none flex items-center gap-3">

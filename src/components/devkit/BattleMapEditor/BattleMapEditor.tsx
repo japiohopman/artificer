@@ -22,7 +22,8 @@ export const BattleMapEditor: React.FC = () => {
         ...state.combatState,
         grid: runtimeRep.grid,
         monsters: runtimeRep.monsters,
-        combatMapBackground: runtimeRep.background
+        combatMapBackground: runtimeRep.background,
+        walls: map.walls // Pass boundary walls for exact LoS/Pathfinding!
       }
     }));
 

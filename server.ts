@@ -1088,6 +1088,88 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     }
   });
 
+  app.get("/api/combat-maps", fsRateLimiter, async (req, res) => {
+    try {
+      const mapsDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps");
+      await fs.mkdir(mapsDir, { recursive: true });
+
+      const entries = await fs.readdir(mapsDir, { withFileTypes: true });
+      const maps = entries
+        .filter(entry => entry.isFile() && entry.name.endsWith('.json'))
+        .map(entry => {
+          const id = entry.name.slice(0, -5); // remove .json
+          return {
+            id,
+            name: id.replace(/_/g, ' '),
+            filename: entry.name
+          };
+        });
+
+      res.json(maps);
+    } catch (err: any) {
+      console.error("Error listing combat maps:", err);
+      res.status(500).json({ error: "Failed to list combat maps." });
+    }
+  });
+
+  app.get("/api/combat-maps/:id", fsRateLimiter, async (req, res) => {
+    const { id } = req.params;
+    if (!id || !/^[a-zA-Z0-9_-]+$/.test(id)) {
+      return res.status(400).json({ error: "Invalid map ID format" });
+    }
+
+    try {
+      const filePath = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps", `${id}.json`);
+      const content = await fs.readFile(filePath, "utf-8");
+      res.json(JSON.parse(content));
+    } catch (err: any) {
+      if (err.code === "ENOENT") {
+        return res.status(404).json({ error: "Map not found" });
+      }
+      console.error("Error reading combat map:", err);
+      res.status(500).json({ error: "Failed to read combat map." });
+    }
+  });
+
+  app.post("/api/combat-maps", fsRateLimiter, async (req, res) => {
+    const { id, name, mapData } = req.body;
+    if (!id || !/^[a-zA-Z0-9_-]+$/.test(id)) {
+      return res.status(400).json({ error: "Invalid map ID format" });
+    }
+
+    try {
+      const mapsDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps");
+      await fs.mkdir(mapsDir, { recursive: true });
+
+      const filePath = path.join(mapsDir, `${id}.json`);
+      await fs.writeFile(filePath, JSON.stringify(mapData, null, 2), "utf-8");
+
+      res.json({ success: true, id, name });
+    } catch (err: any) {
+      console.error("Error saving combat map:", err);
+      res.status(500).json({ error: "Failed to save combat map." });
+    }
+  });
+
+  app.delete("/api/combat-maps/:id", fsRateLimiter, async (req, res) => {
+    const { id } = req.params;
+    if (!id || !/^[a-zA-Z0-9_-]+$/.test(id)) {
+      return res.status(400).json({ error: "Invalid map ID format" });
+    }
+
+    try {
+      const filePath = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps", `${id}.json`);
+      await fs.unlink(filePath);
+      res.json({ success: true });
+    } catch (err: any) {
+      if (err.code === "ENOENT") {
+        return res.status(404).json({ error: "Map not found" });
+      }
+      console.error("Error deleting combat map:", err);
+      res.status(500).json({ error: "Failed to delete combat map." });
+    }
+  });
+
   app.get("/api/terrain-images/list", fsRateLimiter, async (req, res) => {
     try {
       const terrainDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_map_terrain");

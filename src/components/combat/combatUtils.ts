@@ -12,6 +12,56 @@ export const getDistance = (a: Point, b: Point): number => {
   return Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y));
 };
 
+export const lineSegmentsIntersect = (
+  p0: Point,
+  p1: Point,
+  p2: Point,
+  p3: Point
+): boolean => {
+  const s1_x = p1.x - p0.x;
+  const s1_y = p1.y - p0.y;
+  const s2_x = p3.x - p2.x;
+  const s2_y = p3.y - p2.y;
+
+  const denominator = -s2_x * s1_y + s1_x * s2_y;
+  if (denominator === 0) return false; // Parallel lines
+
+  const s = (-s1_y * (p0.x - p2.x) + s1_x * (p0.y - p2.y)) / denominator;
+  const t = (s2_x * (p0.y - p2.y) - s2_y * (p0.x - p2.x)) / denominator;
+
+  return s >= 0 && s <= 1 && t >= 0 && t <= 1;
+};
+
+export const isMoveBlockedByWalls = (
+  from: Point,
+  to: Point,
+  walls?: any[]
+): boolean => {
+  if (!walls || walls.length === 0) return false;
+  const p0 = { x: from.x + 0.5, y: from.y + 0.5 };
+  const p1 = { x: to.x + 0.5, y: to.y + 0.5 };
+
+  for (const w of walls) {
+    if (w.type === 'door' && w.doorState === 'open') continue;
+
+    let w0: Point;
+    let w1: Point;
+
+    if (w.orientation === 'horizontal') {
+      w0 = { x: w.x, y: w.y };
+      w1 = { x: w.x + 1, y: w.y };
+    } else {
+      w0 = { x: w.x, y: w.y };
+      w1 = { x: w.x, y: w.y + 1 };
+    }
+
+    if (lineSegmentsIntersect(p0, p1, w0, w1)) {
+      return true;
+    }
+  }
+  return false;
+};
+
 /**
  * Checks if a cell or area is occupied by a monster or player.
  */
@@ -65,7 +115,7 @@ export const isCellOccupied = (
  * Treats 'wall', closed 'door', and occupied cells as impassable.
  * Optimized with indexed arrays and reduced allocations.
  */
-export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Point[] | null => {
+export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium', walls?: any[]): Point[] | null => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -118,8 +168,14 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monst
 
         if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
         
-        const cell = grid[ny][nx];
-        if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+        // Exact physical wall boundary intersection check if walls are loaded
+        if (walls && walls.length > 0) {
+          if (isMoveBlockedByWalls({ x: cx, y: cy }, { x: nx, y: ny }, walls)) continue;
+        } else {
+          // Cellular fallback
+          const cell = grid[ny][nx];
+          if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+        }
         
         // Footprint check for larger creatures
         const footprint = creatureSize === 'Large' ? 2 : 1;
@@ -129,8 +185,13 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monst
             const tx = nx + fx;
             const ty = ny + fy;
             if (tx >= width || ty >= height) { areaBlocked = true; break; }
-            const tCell = grid[ty][tx];
-            if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+            if (walls && walls.length > 0) {
+              // Diagonal/step checks block larger creatures crossing boundaries
+              if (isMoveBlockedByWalls({ x: cx, y: cy }, { x: tx, y: ty }, walls)) { areaBlocked = true; break; }
+            } else {
+              const tCell = grid[ty][tx];
+              if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+            }
           }
           if (areaBlocked) break;
         }
@@ -160,7 +221,7 @@ export const findPath = (start: Point, end: Point, grid: TacticalCell[][], monst
  * Calculates all reachable cells within a range using Dijkstra/BFS.
  * Returns a Set of "x,y" strings.
  */
-export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium'): Set<string> => {
+export const getReachableCells = (start: Point, range: number, grid: TacticalCell[][], monsters: CombatMonster[] = [], pcPositions: Record<string, Point> | Point[] | Point = { x: -1, y: -1 }, creatureSize: 'Medium' | 'Large' = 'Medium', walls?: any[]): Set<string> => {
   const width = grid[0].length;
   const height = grid.length;
   const size = width * height;
@@ -189,8 +250,14 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
         const ny = cy + dy;
 
         if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
-        const cell = grid[ny][nx];
-        if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+
+        // Boundary wall collision
+        if (walls && walls.length > 0) {
+          if (isMoveBlockedByWalls({ x: cx, y: cy }, { x: nx, y: ny }, walls)) continue;
+        } else {
+          const cell = grid[ny][nx];
+          if (cell.type === 'wall' || (cell.type === 'door' && !cell.isOpen)) continue;
+        }
 
         // Footprint check for larger creatures
         const footprint = creatureSize === 'Large' ? 2 : 1;
@@ -200,8 +267,12 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
             const tx = nx + fx;
             const ty = ny + fy;
             if (tx >= width || ty >= height) { areaBlocked = true; break; }
-            const tCell = grid[ty][tx];
-            if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+            if (walls && walls.length > 0) {
+              if (isMoveBlockedByWalls({ x: cx, y: cy }, { x: tx, y: ty }, walls)) { areaBlocked = true; break; }
+            } else {
+              const tCell = grid[ty][tx];
+              if (tCell.type === 'wall' || (tCell.type === 'door' && !tCell.isOpen)) { areaBlocked = true; break; }
+            }
           }
           if (areaBlocked) break;
         }
@@ -226,7 +297,32 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
  * Bresenham's Line Algorithm for Line of Sight.
  * Returns true if the line between start and end is not blocked.
  */
-export const checkLoS = (start: Point, end: Point, grid: TacticalCell[][]): boolean => {
+export const checkLoS = (start: Point, end: Point, grid: TacticalCell[][], walls?: any[]): boolean => {
+  if (walls && walls.length > 0) {
+    const p0 = { x: start.x + 0.5, y: start.y + 0.5 };
+    const p1 = { x: end.x + 0.5, y: end.y + 0.5 };
+
+    for (const w of walls) {
+      if (w.type === 'door' && w.doorState === 'open') continue;
+
+      let w0: Point;
+      let w1: Point;
+
+      if (w.orientation === 'horizontal') {
+        w0 = { x: w.x, y: w.y };
+        w1 = { x: w.x + 1, y: w.y };
+      } else {
+        w0 = { x: w.x, y: w.y };
+        w1 = { x: w.x, y: w.y + 1 };
+      }
+
+      if (lineSegmentsIntersect(p0, p1, w0, w1)) {
+        return false; // Intersection blocks LoS
+      }
+    }
+    return true;
+  }
+
   let x0 = start.x;
   let y0 = start.y;
   const x1 = end.x;

@@ -85,6 +85,7 @@ export interface CombatState {
     targetY: number;
     svgPath: string;
   } | null;
+  walls?: any[]; // physical line segments for custom boundary semantics
 }
 
 export interface LogEntry {
@@ -478,17 +479,28 @@ export const useGameStore = create<GameState>((set, get) => ({
 
   toggleDoor: (x, y) => set((state) => {
     const newGrid = [...state.combatState.grid];
+    let nextOpen = false;
     if (newGrid[y]?.[x] && newGrid[y][x].type === 'door') {
       newGrid[y] = [...newGrid[y]];
       newGrid[y][x] = { ...newGrid[y][x], isOpen: !newGrid[y][x].isOpen };
 
       // Mark as explored if player opens it
       newGrid[y][x].explored = true;
+      nextOpen = !!newGrid[y][x].isOpen;
     }
+
+    const newWalls = (state.combatState.walls || []).map(w => {
+      if (w.x === x && w.y === y && (w.type === 'door' || w.type === 'secret-door')) {
+        return { ...w, doorState: nextOpen ? 'open' : 'closed' };
+      }
+      return w;
+    });
+
     return {
       combatState: {
         ...state.combatState,
-        grid: newGrid
+        grid: newGrid,
+        walls: newWalls
       }
     };
   }),
