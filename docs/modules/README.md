@@ -30,7 +30,7 @@ A placeholder button, panel or component is **not** an implemented feature.
 
 Use `docs/modules/` for one feature/domain module.
 
-Use `docs/systems/` when the subject describes a cross-cutting architectural system or contract, such as data flow or tactical runtime behavior.
+Use `docs/systems/` when the subject describes a cross-cutting architectural system or contract, such as data flow, shared DevKit tooling or tactical runtime behavior.
 
 Use `docs/FUTURE_MODULES.md` for future modules and broader design direction.
 
@@ -70,7 +70,7 @@ Candidates must be confirmed against the current source tree before adding a doc
 ## Related documentation
 
 - `docs/ARCHITECTURE_STATUS.md` — architectural contract
-- `docs/systems/` — cross-cutting systems
+- `docs/systems/` — cross-cutting systems, including `DEVKIT_SHARED_TOOLS.md`
 - `docs/COMPONENT_MAP.md` — source/component map
 - `docs/FUTURE_MODULES.md` — future architecture
 - `docs/TASK_BOARD.md` — active work
