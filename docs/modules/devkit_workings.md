@@ -86,7 +86,28 @@ BattleMapEditor/
    └── persistence/
 ```
 
-### 4. Placeholder ≠ implemented
+### 4. Shared tooling, isolated domain state
+
+Common editor capabilities should be reusable across DevKit modules when an existing implementation can be safely generalized.
+
+Potential shared capabilities include:
+
+- Undo/Redo command/history primitives
+- ColorPicker
+- ContextMenu
+- File/Maps menu primitives
+- AssetBrowser
+- Search/filter controls
+- Inspector primitives
+- keyboard shortcut handling
+- selection helpers
+- icon helpers
+
+Shared tooling must **not** merge domain state. BattleMap history, Audio history and World editor history remain separate.
+
+See `docs/systems/DEVKIT_SHARED_TOOLS.md` for the cross-cutting contract.
+
+### 5. Placeholder ≠ implemented
 
 A button, tab, panel or placeholder tool must **not** be recorded as a completed feature.
 
@@ -97,7 +118,7 @@ Use these status meanings:
 - **Scaffolded** — UI/architecture exists but behavior is incomplete.
 - **Planned** — design exists, implementation has not started.
 
-### 5. Runtime boundary
+### 6. Runtime boundary
 
 Authoring tools should produce canonical data that runtime systems can consume. They should not silently write editor-only state into unrelated global stores.
 
@@ -114,6 +135,14 @@ combat runtime
       ↓
 CombatGrid
 ```
+
+### 7. Asset and icon reuse
+
+DevKit editors should use the canonical Atlas and existing Artificer icon registry before creating local registries or duplicate asset definitions.
+
+### 8. Repository-backed authoring
+
+When an authoring tool needs to persist files under `public/assets/`, browser UI must use the project's controlled development/server write boundary. Do not assume browser code can directly overwrite repository files.
 
 ## Maintenance guidance
 
