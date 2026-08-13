@@ -1,29 +1,58 @@
 # 🤖 Agent Entry Point
 
-Welcome to Artificer. If you are an AI agent, please follow these directions to understand your role, what to work on right now, and how we work here.
+Welcome to Artificer. AI agents are part of the engineering team. Your job is not only to change code, but to preserve continuity between agents.
 
-## 📍 Read in this order
-1. 👉 **[ROADMAP.md](./ROADMAP.md)** — what's in scope *right now*. Start here, not with GOALS.md.
-2. 👉 **[AGENT_RULES.md](./AGENT_RULES.md)** — the rules for how you're allowed to work. Non-negotiable.
-3. 👉 **[GOALS.md](./GOALS.md)** — the long-term vision and architectural truth. This is the destination, not this week's task list — don't start building toward it until ROADMAP.md says it's time.
-4. 👉 **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** — the boundary between AI narration and game mechanics.
-5. 👉 **[DOCS_INDEX.md](./DOCS_INDEX.md)** — for navigating the rest of the documentation.
+## 📍 Mandatory read order
+
+1. 👉 **[ROADMAP.md](./ROADMAP.md)** — what is in scope now.
+2. 👉 **[AGENT_RULES.md](./AGENT_RULES.md)** — non-negotiable working rules.
+3. 👉 **[docs/AGENT_STATE.md](./docs/AGENT_STATE.md)** — current operational state and active work claims.
+4. 👉 **[docs/PROGRESS.md](./docs/PROGRESS.md)** — current implementation status.
+5. 👉 **[docs/agents/WORKFLOW.md](./docs/agents/WORKFLOW.md)** — standard agentic workflow.
+6. 👉 **[GOALS.md](./GOALS.md)** — long-term vision and architectural destination.
+7. 👉 **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** — boundary between AI narration and game mechanics.
+8. 👉 **[DOCS_INDEX.md](./DOCS_INDEX.md)** — navigate the rest of the knowledge base.
+
+Do not skip directly to GOALS.md and start building future systems. Current scope comes from ROADMAP/TASK_BOARD/PROGRESS.
+
+## 🧭 Work-type playbooks
+
+Use the relevant playbook after the mandatory read order:
+
+- **Feature:** [docs/agents/FEATURE_WORKFLOW.md](./docs/agents/FEATURE_WORKFLOW.md)
+- **Bug:** [docs/agents/BUG_WORKFLOW.md](./docs/agents/BUG_WORKFLOW.md)
+- **Refactor:** [docs/agents/REFACTOR_WORKFLOW.md](./docs/agents/REFACTOR_WORKFLOW.md)
+- **Handoff:** [docs/agents/HANDOFF.md](./docs/agents/HANDOFF.md)
+
+More playbooks should be added only when a recurring workflow genuinely benefits from one.
 
 ## 🏷️ Identified Agents
-If you have been assigned one of the following roles, read your specific instructions in
-addition to the above:
 
-- **Jimmy (Sandbox/Core Agent)**: Read [jimmy_instructions.md](./jimmy_instructions.md)
-- **Jane (World Builder)**: Read [jane_instructions.md](./jane_instructions.md)
-- **Sonny (The Atmospheric Orchestrator)**: Read [sonny_instructions.md](./sonny_instructions.md)
+If assigned a named role, read its specific instructions in addition to the mandatory workflow:
 
-## 🛠️ General Guidelines
-- **Groundedness**: Always verify your actions against the existing codebase — docs drift, code doesn't lie.
-- **Verification**: Don't mark a TASK_BOARD item `[x]` until you've actually run the app and watched it work. See AGENT_RULES.md §1.
-- **Scope discipline**: Don't start a new GOALS.md system while ROADMAP.md's "Now" section still has open items. See AGENT_RULES.md §2.
-- **Documentation**: Keep `DOCS_INDEX.md`, `docs/CHANGELOG.md`, and your specific instructions updated — and accurate, not aspirational.
-- **Standardization**: Follow the project's naming and formatting conventions (snake_case, `/assets/atlas/` prefixes, etc.).
-- **Repo hygiene**: No new binary assets over 1MB and no vendored/reference codebases committed without flagging it first. See AGENT_RULES.md §5.
+- **Jimmy (Sandbox/Core Agent):** [jimmy_instructions.md](./jimmy_instructions.md)
+- **Jane (World Builder):** [jane_instructions.md](./jane_instructions.md)
+- **Sonny (The Atmospheric Orchestrator):** [sonny_instructions.md](./sonny_instructions.md)
+
+Named-agent instructions define domain ownership; they do not override the general agent workflow or safety rules.
+
+## 🛠️ Core principles
+
+- **Groundedness:** Verify against the actual repository and runtime. Docs drift; code is the implementation source of truth.
+- **Verification:** Never mark work complete until the affected behavior has been verified. See `AGENT_RULES.md`.
+- **Scope discipline:** Do not silently expand the task or take over another agent's domain.
+- **Continuity:** Leave a factual handoff so the next agent can continue without reconstructing your work.
+- **Documentation:** Update affected docs to reflect reality, not intention.
+- **Claims:** Claim shared/conflicting scope in `docs/AGENT_STATE.md` before editing.
+- **Repo hygiene:** No new binary assets over 1MB or vendored/reference codebases without following `AGENT_RULES.md`.
+
+## 🔁 Standard lifecycle
+
+```text
+ORIENT → CLASSIFY → CHECK PRIORITY → CLAIM → INVESTIGATE → PLAN → IMPLEMENT → VERIFY → DOCUMENT → HANDOFF
+```
+
+If blocked, stop before improvising around an architectural boundary. Record the blocker, investigation and required decision.
 
 ---
-*Happy coding.*
+*Artificer is built by humans and agents. Continuity, verification and architectural discipline are part of the product.*
