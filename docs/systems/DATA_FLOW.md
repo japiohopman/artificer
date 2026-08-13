@@ -33,6 +33,7 @@ Examples include:
 - `saveService` / persistence services — save/load and external persistence concerns.
 - `diceService` — dice/physics integration and result handling.
 - audio services — playback and audio-engine orchestration.
+- BattleMap persistence/adapter services — serialization, validation, storage and conversion of authoring maps where implemented.
 
 Service names and exact responsibilities are defined by the current source tree. Documentation must not invent service boundaries that do not exist.
 
@@ -95,20 +96,42 @@ Travel calculations belong to the world/travel domain, not to the map presentati
 Combat is runtime state, while battle-map authoring is a separate concern.
 
 ```text
-BattleMapEditor
+BattleMap authoring asset
       ↓
-BattleMap authoring data
+BattleMap Loader
       ↓
-validation / deserialization
-      ↓
-BattleMap → combat adapter
-      ↓
-combat runtime state
-      ↓
-CombatGrid
+BattleMap definition
+   ↙             ↘
+Editor       Combat Adapter
+                 ↓
+          combat runtime state
+                 ↓
+             CombatGrid
 ```
 
-`CombatGrid` should not become a map editor, and `BattleMapEditor` should not duplicate combat rules.
+The intended permanent authoring location for combat maps is:
+
+```text
+public/assets/atlas/combat/combat_maps/*.json
+```
+
+The browser cannot directly overwrite repository files. A controlled development/server persistence boundary is therefore required for repository-backed authoring. Until that write path is verified, import/export and transitional local development storage must not be described as permanent repository persistence.
+
+`CombatTester` should consume the same BattleMap definition and loader rather than inventing a second map format.
+
+### Wall geometry
+
+Walls are **boundaries between cells**, not complete blocked cells. Both BattleMap authoring and tactical runtime must use this semantic.
+
+```text
+cell A | wall boundary | cell B
+```
+
+`CombatGrid` is responsible for runtime tactical representation; it should not reinterpret a wall segment as an entire blocked cell.
+
+### Runtime boundary
+
+BattleMapEditor should not directly patch unrelated combat stores. A deliberate test/deploy action may call the adapter boundary, but authoring state and runtime combat state remain separate.
 
 See:
 
@@ -117,12 +140,12 @@ See:
 
 ## 7. DevKit flow
 
-The DevKit is an authoring/debug surface. A typical generator flow is:
+The DevKit is an authoring/debug surface. A typical generator/editor flow is:
 
 ```text
 DevKit tool
       ↓
-Atlas/domain service
+Atlas/domain service or feature-local state
       ↓
 validation / transformation
       ↓
@@ -132,6 +155,8 @@ runtime consumes canonical data
 ```
 
 Large DevKit tools should remain feature modules rather than expanding `DevKit.tsx` indefinitely.
+
+Common editor capabilities may be shared as infrastructure, but domain state remains feature-local. See `docs/systems/DEVKIT_SHARED_TOOLS.md`.
 
 ## 8. AI as an actor
 
@@ -167,7 +192,22 @@ For editor modules, distinguish:
 - transient editor state
 - runtime state
 
-For example, Battle Map selection, active tool and viewport zoom are editor state; walls, doors and map objects are authoring data; initiative and current turn are combat runtime state.
+For BattleMap specifically:
+
+```text
+Authoring data
+  walls / doors / terrain / objects / tokens / layers
+          ↓
+versioned BattleMap JSON
+
+Transient editor state
+  selection / active tool / viewport / zoom / snap UI
+
+Runtime state
+  initiative / current turn / combatants / combat effects
+```
+
+Authoring assets and player save-game state are different persistence concerns.
 
 ## 10. Mechanical integrity
 
@@ -180,6 +220,7 @@ Use the following rules when extending the architecture:
 - Pure calculations should be isolated and testable where practical.
 - AI actions must pass through validation.
 - Feature-local state is preferable to global state when the state has no cross-feature ownership.
+- Shared DevKit tooling must not merge unrelated domain histories or state.
 
 ## 11. Documentation contract
 
