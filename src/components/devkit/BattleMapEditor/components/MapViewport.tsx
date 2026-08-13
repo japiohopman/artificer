@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useEditorStore } from '../state/editorStore';
-import { useAtlasStore } from '../../../../store/useAtlasStore';
-import { worldToGrid, gridToWorld, getWallSnap } from '../geometry/coordinates';
-import { findWallAt, findObjectAt, findTokenAt } from '../geometry/hitTesting';
+import { worldToGrid, getWallSnap } from '../geometry/coordinates';
+import { dispatchPointerDown, dispatchPointerMove, dispatchPointerUp, ToolContext } from '../tools/toolDispatcher';
 import {
   drawBackground,
   drawTerrain,
@@ -24,35 +23,24 @@ export const MapViewport: React.FC = () => {
   const [hoveredCell, setHoveredCell] = useState<{ x: number; y: number } | null>(null);
   const [redrawKey, setRedrawKey] = useState(0);
 
+  // Interaction refs managed by the dispatcher
   const isPaintingRef = useRef(false);
   const lastPaintedCellRef = useRef<{ x: number; y: number } | null>(null);
   const hasModifiedRef = useRef(false);
+  const isDraggingRef = useRef(false);
+  const dragStartRef = useRef({ x: 0, y: 0 });
+  const accumulatedTerrainChangesRef = useRef<any[]>([]);
   
   const {
     map,
     viewport,
     setViewport,
     activeTool,
-    selectedWallType,
-    selectedTerrainType,
-    selectedStampIndex,
-    selectedStampCategory,
     selection,
-    setSelection,
     coverAttacker,
     coverTarget,
     setCoverAttacker,
-    setCoverTarget,
-    addWall,
-    removeWall,
-    addTerrain,
-    removeTerrain,
-    addObject,
-    updateObject,
-    addToken,
-    updateToken,
-    removeObject,
-    removeToken
+    setCoverTarget
   } = useEditorStore();
 
   const cellSize = map.grid.cellSize;
@@ -166,291 +154,69 @@ export const MapViewport: React.FC = () => {
     ctx.restore();
   }, [map, viewport, selection, coverAttacker, coverTarget, containerSize, isDrawingRoom, roomStartPos, roomEndPos, redrawKey]);
 
-  // Handle pointer interactions on the interactive workspace canvas
-  const isDraggingRef = useRef(false);
-  const dragStartRef = useRef({ x: 0, y: 0 });
-
-  const handlePointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
+  // Build unified Context for Tool Dispatcher
+  const buildToolContext = (e: React.PointerEvent<HTMLCanvasElement>): ToolContext | null => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) return null;
 
     const rect = canvas.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
 
-    // 1. Pan Tool or Middle Mouse drags viewport
-    if (activeTool === 'pan' || e.button === 1 || (activeTool === 'select' && e.shiftKey)) {
-      isDraggingRef.current = true;
-      dragStartRef.current = { x: clickX - panX, y: clickY - panY };
-      canvas.setPointerCapture(e.pointerId);
-      return;
-    }
-
     const gridPos = worldToGrid(clickX, clickY, panX, panY, zoom, cellSize);
-    
-    // Bounds check
-    if (gridPos.x < 0 || gridPos.x >= map.dimensions.width || gridPos.y < 0 || gridPos.y >= map.dimensions.height) {
-      return;
-    }
+    const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
 
-    // Room Drawing tool
-    if (activeTool === 'room') {
-      setRoomStartPos(gridPos);
-      setRoomEndPos(gridPos);
-      setIsDrawingRoom(true);
-      canvas.setPointerCapture(e.pointerId);
-      return;
-    }
+    return {
+      canvas,
+      pointerId: e.pointerId,
+      clickX,
+      clickY,
+      gridPos,
+      snap,
+      zoom,
+      panX,
+      panY,
+      cellSize,
+      activeTool,
+      setRoomStartPos,
+      setRoomEndPos,
+      setIsDrawingRoom,
+      isDrawingRoom,
+      roomStartPos,
+      roomEndPos,
+      isPaintingRef,
+      lastPaintedCellRef,
+      hasModifiedRef,
+      isDraggingRef,
+      dragStartRef,
+      accumulatedTerrainChangesRef
+    };
+  };
 
-    // 2. Wall Drawing tool
-    if (activeTool === 'wall' || activeTool === 'door') {
-      const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
-      const isDoor = activeTool === 'door';
-      addWall({
-        orientation: snap.orientation,
-        x: snap.x,
-        y: snap.y,
-        type: isDoor ? 'door' : 'wall',
-        doorState: isDoor ? 'closed' : undefined
-      });
-      return;
-    }
-
-    // 3. Terrain Brush tool
-    if (activeTool === 'terrain') {
-      isPaintingRef.current = true;
-      lastPaintedCellRef.current = gridPos;
-      hasModifiedRef.current = true;
-      addTerrain({
-        x: gridPos.x,
-        y: gridPos.y,
-        type: selectedTerrainType
-      }, true);
-      canvas.setPointerCapture(e.pointerId);
-      return;
-    }
-
-    // 4. Object Stamp tool
-    if (activeTool === 'object' && selectedStampIndex) {
-      addObject({
-        name: selectedStampIndex === 'barrel' ? 'Barrel Stamp' : selectedStampIndex === 'chest' ? 'Chest Stamp' : 'Table Prop',
-        index: selectedStampIndex,
-        x: gridPos.x + 0.5, // Center stamp on tile
-        y: gridPos.y + 0.5,
-        rotation: 0,
-        scale: selectedStampIndex === 'table' ? 1.5 : 1,
-        layerId: 'objects',
-        isLocked: false,
-        hasShadow: true
-      });
-      return;
-    }
-
-    // 5. Token Spawner tool
-    if (activeTool === 'token' && selectedStampIndex) {
-      const monstersList = useAtlasStore.getState().monstersList;
-      const foundMonster = monstersList.find(m => m.name === selectedStampIndex || m.index === selectedStampIndex);
-
-      addToken({
-        name: foundMonster ? foundMonster.name : selectedStampIndex,
-        index: foundMonster ? foundMonster.index : undefined,
-        type: selectedStampIndex === 'Player Spawn' ? 'player' : 'enemy',
-        x: gridPos.x,
-        y: gridPos.y,
-        size: foundMonster?.type === 'dragon' || foundMonster?.type === 'giant' ? 'Large' : 'Medium',
-        imageUrl: foundMonster ? foundMonster.imageUrl : undefined
-      });
-      return;
-    }
-
-    // 6. Measure / Pins tool
-    if (activeTool === 'measure') {
-      if (!coverAttacker) {
-        setCoverAttacker(gridPos);
-      } else if (!coverTarget) {
-        setCoverTarget(gridPos);
-      } else {
-        // Reset pins
-        setCoverAttacker(null);
-        setCoverTarget(null);
-      }
-      return;
-    }
-
-    // 7. Eraser tool
-    if (activeTool === 'eraser') {
-      // Find objects/tokens at spot
-      const tok = findTokenAt(map.tokens, gridPos.x, gridPos.y);
-      if (tok) {
-        removeToken(tok.id);
-        return;
-      }
-
-      const worldCoords = {
-        x: (clickX - panX) / zoom,
-        y: (clickY - panY) / zoom
-      };
-      const obj = findObjectAt(map.objects, worldCoords.x, worldCoords.y, cellSize);
-      if (obj) {
-        removeObject(obj.id);
-        return;
-      }
-
-      // Try wall erase
-      const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
-      const wall = findWallAt(map.walls, snap.x, snap.y, snap.orientation);
-      if (wall) {
-        removeWall(wall.id);
-        return;
-      }
-
-      // Default to terrain continuous erase
-      isPaintingRef.current = true;
-      lastPaintedCellRef.current = gridPos;
-      hasModifiedRef.current = true;
-      removeTerrain(gridPos.x, gridPos.y, true);
-      canvas.setPointerCapture(e.pointerId);
-      return;
-    }
-
-    // 8. Select tool (Object, token hit testing)
-    if (activeTool === 'select') {
-      // Try tokens first
-      const tok = findTokenAt(map.tokens, gridPos.x, gridPos.y);
-      if (tok) {
-        setSelection({ ids: [tok.id], type: 'token' });
-        return;
-      }
-
-      // Try objects
-      const worldCoords = {
-        x: (clickX - panX) / zoom,
-        y: (clickY - panY) / zoom
-      };
-      const obj = findObjectAt(map.objects, worldCoords.x, worldCoords.y, cellSize);
-      if (obj) {
-        setSelection({ ids: [obj.id], type: 'object' });
-        
-        // Setup dragging for selected objects
-        isDraggingRef.current = true;
-        dragStartRef.current = { x: worldCoords.x - obj.x * cellSize, y: worldCoords.y - obj.y * cellSize };
-        canvas.setPointerCapture(e.pointerId);
-        return;
-      }
-
-      // Try wall/door segment selection
-      const snap = getWallSnap(clickX, clickY, panX, panY, zoom, cellSize);
-      const wall = findWallAt(map.walls, snap.x, snap.y, snap.orientation);
-      if (wall) {
-        setSelection({ ids: [wall.id], type: wall.type === 'door' || wall.type === 'secret-door' ? 'door' : 'wall' });
-        return;
-      }
-
-      // Clicked void
-      setSelection({ ids: [], type: null });
-    }
+  const handlePointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    const ctx = buildToolContext(e);
+    if (!ctx) return;
+    dispatchPointerDown(activeTool, ctx, e);
   };
 
   const handlePointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const ctx = buildToolContext(e);
+    if (!ctx) return;
 
-    const rect = canvas.getBoundingClientRect();
-    const currX = e.clientX - rect.left;
-    const currY = e.clientY - rect.top;
-
-    const gridPos = worldToGrid(currX, currY, panX, panY, zoom, cellSize);
-    if (gridPos.x >= 0 && gridPos.x < map.dimensions.width && gridPos.y >= 0 && gridPos.y < map.dimensions.height) {
-      setHoveredCell(gridPos);
+    // Track cursor grid coordinates for HUD overlay
+    if (ctx.gridPos.x >= 0 && ctx.gridPos.x < map.dimensions.width && ctx.gridPos.y >= 0 && ctx.gridPos.y < map.dimensions.height) {
+      setHoveredCell(ctx.gridPos);
     } else {
       setHoveredCell(null);
     }
 
-    if (activeTool === 'room' && isDrawingRoom) {
-      const clampedX = Math.max(0, Math.min(map.dimensions.width - 1, gridPos.x));
-      const clampedY = Math.max(0, Math.min(map.dimensions.height - 1, gridPos.y));
-      setRoomEndPos({ x: clampedX, y: clampedY });
-      return;
-    }
-
-    if (isPaintingRef.current) {
-      if (gridPos.x >= 0 && gridPos.x < map.dimensions.width && gridPos.y >= 0 && gridPos.y < map.dimensions.height) {
-        if (!lastPaintedCellRef.current || lastPaintedCellRef.current.x !== gridPos.x || lastPaintedCellRef.current.y !== gridPos.y) {
-          lastPaintedCellRef.current = gridPos;
-          hasModifiedRef.current = true;
-          if (activeTool === 'terrain') {
-            addTerrain({ x: gridPos.x, y: gridPos.y, type: selectedTerrainType }, true);
-          } else if (activeTool === 'eraser') {
-            removeTerrain(gridPos.x, gridPos.y, true);
-          }
-        }
-      }
-      return;
-    }
-
-    if (!isDraggingRef.current) return;
-
-    if (activeTool === 'pan' || e.buttons === 4 || (activeTool === 'select' && e.shiftKey)) {
-      // Viewport panning drag
-      setViewport({
-        panX: currX - dragStartRef.current.x,
-        panY: currY - dragStartRef.current.y
-      });
-    } else if (activeTool === 'select' && selection.type === 'object' && selection.ids[0]) {
-      // Dragging selected object stamp
-      const objId = selection.ids[0];
-      const worldX = (currX - panX) / zoom;
-      const worldY = (currY - panY) / zoom;
-      
-      const newGridX = (worldX - dragStartRef.current.x) / cellSize;
-      const newGridY = (worldY - dragStartRef.current.y) / cellSize;
-
-      // Optional snap to cell grid boundaries when dragging stamps
-      const snapGridX = Math.floor(newGridX) + 0.5;
-      const snapGridY = Math.floor(newGridY) + 0.5;
-
-      updateObject(objId, {
-        x: snapGridX,
-        y: snapGridY
-      });
-    }
+    dispatchPointerMove(activeTool, ctx, e);
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (isPaintingRef.current) {
-      isPaintingRef.current = false;
-      lastPaintedCellRef.current = null;
-      canvasRef.current?.releasePointerCapture(e.pointerId);
-      if (hasModifiedRef.current) {
-        useEditorStore.getState().pushHistory(useEditorStore.getState().map);
-        hasModifiedRef.current = false;
-      }
-      return;
-    }
-
-    if (activeTool === 'room' && isDrawingRoom) {
-      setIsDrawingRoom(false);
-      canvasRef.current?.releasePointerCapture(e.pointerId);
-      if (roomStartPos && roomEndPos) {
-        const minX = Math.min(roomStartPos.x, roomEndPos.x);
-        const maxX = Math.max(roomStartPos.x, roomEndPos.x);
-        const minY = Math.min(roomStartPos.y, roomEndPos.y);
-        const maxY = Math.max(roomStartPos.y, roomEndPos.y);
-
-        useEditorStore.getState().addRoom(minX, minY, maxX, maxY, selectedTerrainType, selectedWallType);
-      }
-      setRoomStartPos(null);
-      setRoomEndPos(null);
-      return;
-    }
-
-    if (isDraggingRef.current) {
-      isDraggingRef.current = false;
-      const canvas = canvasRef.current;
-      if (canvas) {
-        canvas.releasePointerCapture(e.pointerId);
-      }
-    }
+    const ctx = buildToolContext(e);
+    if (!ctx) return;
+    dispatchPointerUp(activeTool, ctx, e);
   };
 
   useEffect(() => {
