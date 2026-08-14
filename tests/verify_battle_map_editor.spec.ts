@@ -34,6 +34,8 @@ test('verify complete battle map editor workflow and custom operations', async (
   await page.click('canvas'); // Paint a wall segment
 
   await page.click('button:has-text("object")');
+  // In the updated collapsible layout, let's select objects
+  await page.click('button:has-text("OBJECTS & PROPS")');
   await page.waitForSelector('button:has-text("barrel")');
   await page.click('button:has-text("barrel")');
   await page.click('canvas'); // Place barrel
@@ -47,6 +49,7 @@ test('verify complete battle map editor workflow and custom operations', async (
   await page.click('button:has-text("Redo")');
 
   // Verify Exporting JSON
+  await page.click('text=FILE / MAPS');
   const [download] = await Promise.all([
     page.waitForEvent('download'),
     page.click('button:has-text("Export JSON")')

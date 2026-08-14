@@ -232,6 +232,14 @@ React primarily manages editor UI such as toolbars, panels, inspectors, dialogs 
 
 Large maps do not create a React component per grid cell.
 
+## Canonical Boundary Semantics
+
+With Battle Map Editor v1.1, the editor implements strict line-segment boundary collision semantics:
+- **Default Tool**: The editor defaults to `"pan"` mode on initialization, prioritizing high-fidelity navigation.
+- **Physical Walls**: Walls are line segments sitting on grid lines rather than blocking entire cells. Crossing these lines blocks line-of-sight and movement.
+- **Door Interaction**: Toggling doors in the active `CombatGrid` automatically synchronizes door states between the cellular representation and the line segment representation in `CombatState`.
+- **Combat Loader**: `CombatTester` and the runtime combat engine load compiled maps from the `public/assets/atlas/combat/combat_maps` directory using the secure `/api/combat-maps` REST API.
+
 ## Testing
 
 Verified test areas include coordinate conversion, snapping, wall geometry, door placement, line of sight, map serialization, validation, and command-based Undo/Redo.

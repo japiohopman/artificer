@@ -61,3 +61,50 @@ export const exportBattleMap = (map: BattleMap): void => {
   downloadAnchor.click();
   downloadAnchor.remove();
 };
+
+export const saveBattleMapToServer = async (id: string, name: string, map: BattleMap): Promise<boolean> => {
+  const validation = validateBattleMap(map);
+  if (!validation.isValid) {
+    throw new Error(`Validation Error:\n\n${validation.errors.map(e => `• ${e}`).join('\n')}`);
+  }
+
+  const res = await fetch('/api/combat-maps', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id, name, mapData: map })
+  });
+
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Failed to save combat map to server.');
+  }
+
+  return true;
+};
+
+export const loadBattleMapFromServer = async (id: string): Promise<BattleMap> => {
+  const res = await fetch(`/api/combat-maps/${id}`);
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Failed to load combat map from server.');
+  }
+  const parsed = await res.json();
+  return migrateBattleMap(parsed);
+};
+
+export const listBattleMapsFromServer = async (): Promise<Array<{ id: string; name: string; filename: string }>> => {
+  const res = await fetch('/api/combat-maps');
+  if (!res.ok) {
+    throw new Error('Failed to list combat maps from server.');
+  }
+  return res.json();
+};
+
+export const deleteBattleMapFromServer = async (id: string): Promise<boolean> => {
+  const res = await fetch(`/api/combat-maps/${id}`, { method: 'DELETE' });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Failed to delete combat map from server.');
+  }
+  return true;
+};

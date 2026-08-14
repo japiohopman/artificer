@@ -127,7 +127,7 @@ export const useEditorStore = create<EditorState>((set, get) => {
   return {
     map: initialMap,
     viewport: { zoom: 1, panX: 0, panY: 0 },
-    activeTool: 'wall',
+    activeTool: 'pan',
     selectedLayerId: 'walls_doors',
     selection: { ids: [], type: null },
     activeThemeId: 'dungeon',

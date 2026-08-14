@@ -35,6 +35,8 @@ export const CombatTester: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [rightPanelTab, setRightPanelTab] = useState<'monsters' | 'heroes'>('heroes');
   const [recruitsList, setRecruitsList] = useState<{ name: string; index: string }[]>([]);
+  const [customMaps, setCustomMaps] = useState<Array<{ id: string; name: string }>>([]);
+  const [selectedCustomMapId, setSelectedCustomMapId] = useState<string>('');
 
   const terrainMaps = [
     { name: 'Fey Forest', file: 'fay_forest.png' },
@@ -50,7 +52,55 @@ export const CombatTester: React.FC = () => {
       loadAllLists();
     }
     loadRecruits();
+    loadCustomMaps();
   }, []);
+
+  const loadCustomMaps = async () => {
+    try {
+      const res = await fetch('/api/combat-maps');
+      if (res.ok) {
+        const data = await res.json();
+        setCustomMaps(data);
+      }
+    } catch (e) {
+      console.error("Failed to load custom maps in CombatTester:", e);
+    }
+  };
+
+  const handleLoadCustomMap = async (mapId: string) => {
+    if (!mapId) return;
+    setIsLoading(true);
+    try {
+      const res = await fetch(`/api/combat-maps/${mapId}`);
+      if (res.ok) {
+        const battleMap = await res.json();
+        const { battleMapToCombatGrid } = await import('./BattleMapEditor/persistence/battleMapToCombatGrid');
+        const runtimeRep = battleMapToCombatGrid(battleMap);
+
+        // Deploy directly to the game store combatState
+        useGameStore.setState((state) => ({
+          combatState: {
+            ...state.combatState,
+            grid: runtimeRep.grid,
+            monsters: runtimeRep.monsters,
+            combatMapBackground: runtimeRep.background,
+            walls: battleMap.walls // Pass boundary walls for exact LoS/Pathfinding!
+          }
+        }));
+
+        setSelectedCustomMapId(mapId);
+        addLog(`Loaded Battle Map: ${battleMap.name || mapId}`, 'success');
+        playSuccessSound();
+      } else {
+        addLog(`Failed to load custom map: ${mapId}`, 'error');
+      }
+    } catch (err) {
+      console.error("Failed to load custom map:", err);
+      addLog(`Error loading custom map: ${err instanceof Error ? err.message : String(err)}`, 'error');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const loadRecruits = async () => {
     try {
@@ -283,6 +333,26 @@ export const CombatTester: React.FC = () => {
               Combat
             </button>
           </div>
+          {customMaps.length > 0 && (
+            <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+              <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Custom Map:</span>
+              <select
+                value={selectedCustomMapId}
+                onChange={(e) => {
+                  handleLoadCustomMap(e.target.value);
+                  playClickSound();
+                }}
+                className="bg-transparent text-white text-[10px] font-bold focus:outline-none cursor-pointer uppercase tracking-widest"
+              >
+                <option value="" className="bg-stone-900 text-white text-xs">-- Select Map --</option>
+                {customMaps.map(m => (
+                  <option key={m.id} value={m.id} className="bg-stone-900 text-white text-xs">
+                    {m.name.toUpperCase()}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
             <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Terrain:</span>
             <select

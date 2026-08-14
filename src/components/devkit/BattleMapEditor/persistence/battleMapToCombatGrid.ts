@@ -1,5 +1,6 @@
 import { BattleMap } from '../types/battleMap';
 import { TacticalCell, CombatMonster } from '../../../../store/useGameStore';
+import { useAtlasStore } from '../../../../store/useAtlasStore';
 
 export interface CombatGridRepresentation {
   grid: TacticalCell[][];
@@ -30,35 +31,49 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
 
   // 2. Map cells painted as wall/door terrain or walls in close proximity to cell boundaries
   // Note: Standard combat engine matches cells containing doors/walls. We adapt the segments safely.
+  // Walls are boundary segments rather than full blocked cells, so they are not set to 'wall' type on cells.
+  // Doors are mapped so they can be clicked/interacted with.
   for (const w of map.walls) {
     if (w.x >= 0 && w.x < width && w.y >= 0 && w.y < height) {
-      if (w.type === 'wall') {
-        grid[w.y][w.x].type = 'wall';
-      } else if (w.type === 'door' || w.type === 'secret-door') {
+      if (w.type === 'door' || w.type === 'secret-door') {
         grid[w.y][w.x].type = 'door';
         grid[w.y][w.x].isOpen = w.doorState === 'open';
       }
     }
   }
 
-  // 3. Map tokens to standard CombatMonsters
+  // 3. Map tokens to standard CombatMonsters referencing the Atlas store Bestiary definitions
+  const monstersList = useAtlasStore.getState().monstersList;
+
   const monsters: CombatMonster[] = map.tokens.map((t) => {
     const isAlly = t.type === 'player' || t.type === 'npc';
+    const foundMonster = monstersList.find(m => m.index === t.index || m.name === t.name) as any;
+
     return {
       id: t.id,
       name: t.name,
       type: t.type === 'enemy' ? 'enemy' : 'neutral',
-      hp: 30, // standard default
-      maxHp: 30,
+      hp: foundMonster?.hit_points || 30,
+      maxHp: foundMonster?.hit_points || 30,
       x: t.x,
       y: t.y,
-      imageUrl: t.imageUrl || '/assets/atlas/enemies/tokens/orc_sentry.webp',
+      imageUrl: t.imageUrl || foundMonster?.imageUrl || '/assets/atlas/enemies/tokens/orc_sentry.webp',
       awareness: 'idle',
       viewDirection: 3,
-      perception: 12,
-      speed: 6,
+      perception: foundMonster?.senses?.passive_perception || 12,
+      speed: foundMonster?.speed?.walk ? Math.max(1, Math.round(parseInt(foundMonster.speed.walk) / 5)) : 6,
       size: t.size,
-      isAlly
+      isAlly,
+      stats: foundMonster ? {
+        str: foundMonster.strength || 10,
+        dex: foundMonster.dexterity || 10,
+        con: foundMonster.constitution || 10,
+        int: foundMonster.intelligence || 10,
+        wis: foundMonster.wisdom || 10,
+        cha: foundMonster.charisma || 10
+      } : undefined,
+      actions: foundMonster?.actions || [],
+      special_abilities: foundMonster?.special_abilities || []
     };
   });
 

@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "name": "Integration Test Map",
+  "dimensions": {
+    "width": 24,
+    "height": 16
+  },
+  "grid": {
+    "cellSize": 60,
+    "visible": true,
+    "type": "square",
+    "scale": 5
+  },
+  "background": {
+    "type": "color",
+    "value": "#151515",
+    "opacity": 1
+  },
+  "metadata": {
+    "theme": "dungeon",
+    "createdAt": "2026-08-13T00:00:00.000Z",
+    "updatedAt": "2026-08-13T00:00:00.000Z"
+  },
+  "layers": [
+    { "id": "background", "name": "Background", "visible": true, "locked": false },
+    { "id": "terrain", "name": "Terrain", "visible": true, "locked": false },
+    { "id": "walls_doors", "name": "Walls & Doors", "visible": true, "locked": false },
+    { "id": "objects", "name": "Objects", "visible": true, "locked": false },
+    { "id": "tokens", "name": "Tokens", "visible": true, "locked": false }
+  ],
+  "terrain": [
+    { "x": 0, "y": 0, "type": "stone" },
+    { "x": 1, "y": 1, "type": "grass" },
+    { "x": 2, "y": 2, "type": "grass" },
+    { "x": 3, "y": 3, "type": "wood" }
+  ],
+  "walls": [
+    {
+      "id": "wall-1",
+      "x": 5,
+      "y": 5,
+      "orientation": "horizontal",
+      "type": "wall"
+    },
+    {
+      "id": "wall-2",
+      "x": 5,
+      "y": 6,
+      "orientation": "vertical",
+      "type": "door",
+      "doorState": "closed"
+    }
+  ],
+  "objects": [
+    {
+      "id": "obj-1",
+      "name": "Dining Table",
+      "index": "table",
+      "x": 10.5,
+      "y": 8.5,
+      "rotation": 0,
+      "scale": 1.5,
+      "layerId": "objects",
+      "isLocked": false,
+      "hasShadow": true
+    },
+    {
+      "id": "obj-2",
+      "name": "Wooden Barrel",
+      "index": "barrel",
+      "x": 12.5,
+      "y": 4.5,
+      "rotation": 45,
+      "scale": 1,
+      "layerId": "objects",
+      "isLocked": false,
+      "hasShadow": true
+    }
+  ],
+  "tokens": [
+    {
+      "id": "tok-1",
+      "name": "Spawn Point",
+      "type": "player",
+      "x": 2,
+      "y": 2,
+      "size": "Medium"
+    },
+    {
+      "id": "tok-2",
+      "name": "Goblin Scout",
+      "index": "goblin",
+      "type": "enemy",
+      "x": 10,
+      "y": 10,
+      "size": "Medium"
+    },
+    {
+      "id": "tok-3",
+      "name": "Orc Sentry",
+      "index": "orc",
+      "type": "enemy",
+      "x": 12,
+      "y": 12,
+      "size": "Medium"
+    }
+  ],
+  "labels": [],
+  "markers": []
+}
