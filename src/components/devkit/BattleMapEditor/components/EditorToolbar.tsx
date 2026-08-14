@@ -37,11 +37,7 @@ export const EditorToolbar: React.FC = () => {
   const [saveAsModalOpen, setSaveAsModalOpen] = useState(false);
   const [serverMaps, setServerMaps] = useState<Array<{ id: string; name: string }>>([]);
   const [saveAsName, setSaveAsName] = useState('');
-<<<<<<< Updated upstream
-
-=======
   
->>>>>>> Stashed changes
   // Track modified/dirty state
   const [isDirty, setIsDirty] = useState(false);
   const prevMapJsonRef = useRef<string>('');
@@ -119,19 +115,11 @@ export const EditorToolbar: React.FC = () => {
         alert('Please specify a valid map name first.');
         return;
       }
-<<<<<<< Updated upstream
-
-      // Save locally as backup & to server as canonical authoring asset
-      saveBattleMap(map);
-      await saveBattleMapToServer(mapId, map.name, map);
-
 =======
       
       // Save locally as backup & to server as canonical authoring asset
       saveBattleMap(map);
       await saveBattleMapToServer(mapId, map.name, map);
-      
->>>>>>> Stashed changes
       prevMapJsonRef.current = JSON.stringify({
         dimensions: map.dimensions,
         grid: map.grid,
@@ -168,11 +156,7 @@ export const EditorToolbar: React.FC = () => {
 
       await saveBattleMapToServer(newId, saveAsName, clonedMap);
       setMap(clonedMap);
-<<<<<<< Updated upstream
-
-=======
       
->>>>>>> Stashed changes
       prevMapJsonRef.current = JSON.stringify({
         dimensions: clonedMap.dimensions,
         grid: clonedMap.grid,
@@ -389,11 +373,6 @@ export const EditorToolbar: React.FC = () => {
                 <GameIcon name="close" size={14} />
               </button>
             </div>
-<<<<<<< Updated upstream
-
-=======
-            
->>>>>>> Stashed changes
             <div className="flex flex-col gap-1.5 max-h-[240px] overflow-y-auto custom-scrollbar">
               {serverMaps.map(m => (
                 <div key={m.id} className="flex justify-between items-center p-2 rounded bg-white/[0.02] border border-white/5 hover:bg-white/5">
@@ -423,11 +402,6 @@ export const EditorToolbar: React.FC = () => {
                 <GameIcon name="close" size={14} />
               </button>
             </div>
-<<<<<<< Updated upstream
-
-=======
-            
->>>>>>> Stashed changes
             <div className="flex flex-col gap-2">
               <label className="text-[9px] font-bold text-white/40 uppercase">Map Name</label>
               <input

@@ -250,11 +250,6 @@ export const getReachableCells = (start: Point, range: number, grid: TacticalCel
         const ny = cy + dy;
 
         if (nx < 0 || nx >= width || ny < 0 || ny >= height) continue;
-<<<<<<< Updated upstream
-
-=======
-        
->>>>>>> Stashed changes
         // Boundary wall collision
         if (walls && walls.length > 0) {
           if (isMoveBlockedByWalls({ x: cx, y: cy }, { x: nx, y: ny }, walls)) continue;
