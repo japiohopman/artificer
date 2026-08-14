@@ -61,7 +61,7 @@ This is the **active work queue**. Completed historical work should not remain m
 
 ### Runtime systems & Combat Loop
 - [ ] Combat loop — full cycle running smoothly end to end.
-- [ ] XP animation — display high-fidelity animation when players earn XP.
+- [x] XP animation — display high-fidelity animation when players earn XP.
 - [ ] Shared XP across the party — distribute earned XP evenly to all active characters.
 - [ ] NPC Memory / relationship history module.
 - [ ] Economic & Trade module.
