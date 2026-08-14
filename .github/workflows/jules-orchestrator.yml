@@ -1,0 +1,38 @@
+name: Jules Queue Orchestrator
+
+# The "heartbeat" — but see the commented-out schedule below. It starts OFF on purpose:
+# run this manually (workflow_dispatch) and verify one full Ready -> Jules -> PR -> your
+# review -> merge -> checkbox -> next-task cycle before enabling the cron. Uncomment the
+# `schedule:` block only after that first cycle has gone exactly as expected.
+
+on:
+  # schedule:
+  #   - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: jules-orchestrator
+  cancel-in-progress: false
+
+jobs:
+  orchestrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run orchestrator
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JULES_SOURCE: sources/github/japiohopman/artificer
+        run: node scripts/jules-orchestrator.mjs
