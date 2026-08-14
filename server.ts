@@ -1088,15 +1088,14 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
     }
   });
 
-  app.get("/api/combat-maps", fsRateLimiter, async (req, res) => {
-<<<<<<< Updated upstream
+app.get("/api/combat-maps", fsRateLimiter, async (req, res) => {
     const relativeDir = "public/assets/atlas/combat/combat_maps";
     if (!isPathAllowed(relativeDir)) {
       return res.status(403).json({ error: "Path not allowed" });
     }
     try {
       const mapsDir = path.join(process.cwd(), relativeDir);
-=======
+      await fs.mkdir(mapsDir, { recursive: true });
     try {
       const mapsDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps");
 >>>>>>> Stashed changes
