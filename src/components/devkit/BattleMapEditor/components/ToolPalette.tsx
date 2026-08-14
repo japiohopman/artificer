@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useEditorStore } from '../state/editorStore';
 import { useAtlasStore } from '../../../../store/useAtlasStore';
 import { GameIcon } from '../../../../game_icons';
+import { EditorTool } from '../types/battleMap';
 
 export const ToolPalette: React.FC = () => {
   const {

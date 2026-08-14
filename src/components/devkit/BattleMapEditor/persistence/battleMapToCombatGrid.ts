@@ -47,7 +47,7 @@ export function battleMapToCombatGrid(map: BattleMap): CombatGridRepresentation 
 
   const monsters: CombatMonster[] = map.tokens.map((t) => {
     const isAlly = t.type === 'player' || t.type === 'npc';
-    const foundMonster = monstersList.find(m => m.index === t.index || m.name === t.name);
+    const foundMonster = monstersList.find(m => m.index === t.index || m.name === t.name) as any;
 
     return {
       id: t.id,

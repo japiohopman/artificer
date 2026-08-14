@@ -1089,8 +1089,12 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
   });
 
   app.get("/api/combat-maps", fsRateLimiter, async (req, res) => {
+    const relativeDir = "public/assets/atlas/combat/combat_maps";
+    if (!isPathAllowed(relativeDir)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
     try {
-      const mapsDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps");
+      const mapsDir = path.join(process.cwd(), relativeDir);
       await fs.mkdir(mapsDir, { recursive: true });
 
       const entries = await fs.readdir(mapsDir, { withFileTypes: true });
@@ -1118,8 +1122,13 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
       return res.status(400).json({ error: "Invalid map ID format" });
     }
 
+    const relativePath = `public/assets/atlas/combat/combat_maps/${id}.json`;
+    if (!isPathAllowed(relativePath)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
+
     try {
-      const filePath = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps", `${id}.json`);
+      const filePath = path.join(process.cwd(), relativePath);
       const content = await fs.readFile(filePath, "utf-8");
       res.json(JSON.parse(content));
     } catch (err: any) {
@@ -1137,11 +1146,16 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
       return res.status(400).json({ error: "Invalid map ID format" });
     }
 
+    const relativePath = `public/assets/atlas/combat/combat_maps/${id}.json`;
+    if (!isPathAllowed(relativePath)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
+
     try {
       const mapsDir = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps");
       await fs.mkdir(mapsDir, { recursive: true });
 
-      const filePath = path.join(mapsDir, `${id}.json`);
+      const filePath = path.join(process.cwd(), relativePath);
       await fs.writeFile(filePath, JSON.stringify(mapData, null, 2), "utf-8");
 
       res.json({ success: true, id, name });
@@ -1157,8 +1171,13 @@ app.get("/api/audio/history", fsRateLimiter, async (req, res) => {
       return res.status(400).json({ error: "Invalid map ID format" });
     }
 
+    const relativePath = `public/assets/atlas/combat/combat_maps/${id}.json`;
+    if (!isPathAllowed(relativePath)) {
+      return res.status(403).json({ error: "Path not allowed" });
+    }
+
     try {
-      const filePath = path.join(process.cwd(), "public/assets/atlas/combat/combat_maps", `${id}.json`);
+      const filePath = path.join(process.cwd(), relativePath);
       await fs.unlink(filePath);
       res.json({ success: true });
     } catch (err: any) {
