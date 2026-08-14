@@ -234,9 +234,10 @@ export const CharacterPanel: React.FC = () => {
             <div className="space-y-1">
               <div className="h-1.5 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
                 <motion.div
-                  initial={{ width: 0 }}
+                  initial={false}
                   animate={{ width: `${xpPercent}%` }}
-                  className="h-full bg-purple-600 shadow-[0_0_8px_rgba(147,51,234,0.5)] transition-all rounded-full"
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="h-full bg-purple-600 shadow-[0_0_8px_rgba(147,51,234,0.5)] rounded-full"
                 />
               </div>
               <div className="flex justify-between items-center text-[7px] font-black text-parchment-400 uppercase tracking-widest px-0.5">
@@ -391,9 +392,10 @@ export const CharacterPanel: React.FC = () => {
                             <div className="space-y-1 mt-2">
                               <div className="h-1 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
                                 <motion.div
-                                  initial={{ width: 0 }}
+                                  initial={false}
                                   animate={{ width: `${charXpPercent}%` }}
-                                  className="h-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.4)] transition-all rounded-full"
+                                  transition={{ duration: 0.8, ease: "easeOut" }}
+                                  className="h-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.4)] rounded-full"
                                 />
                               </div>
                               <div className="flex justify-between items-center text-[6px] font-black text-parchment-400 uppercase tracking-widest">

@@ -5,6 +5,7 @@ All notable changes to the Artificer project are documented here. The changelog 
 ## [Unreleased] - 2026-08-11
 
 ### Added
+- **XP Bar Fill Animation**: added smooth fill animation for the active character and party member XP progress bars in `CharacterPanel.tsx` using Framer Motion with `initial={false}` and `transition={{ duration: 0.8, ease: "easeOut" }}`.
 - **Battle Map Editor architecture**: moved the editor into `src/components/devkit/BattleMapEditor/` as a dedicated authoring module.
 - **Architecture Status**: added `docs/ARCHITECTURE_STATUS.md` as a living source of truth for architectural boundaries and coding-agent rules.
 - **Battle Map module documentation**: documented authoring/runtime separation, map data, geometry, tools, persistence, performance and implementation phases.

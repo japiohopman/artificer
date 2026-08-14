@@ -17,7 +17,6 @@ goes live, especially anything that looks architectural rather than a discrete f
 <!-- The orchestrator moves a task here when it starts it. At most one at a time in v1. -->
 
 ### Ready
-- [ ] XP animation — animate the XP bar fill in CharacterPanel.tsx instead of an instant jump
 - [ ] Inventory: container system + grid inventory with per-category sub-tabs (FullInventoryMenu.tsx is still a 193-line shell)
 - [ ] Equipment_categories JSON: fix stale `url` fields to point at the real `/14/` and `/24/` versioned paths (see the equipment-atlas deep dive)
 
@@ -29,6 +28,7 @@ goes live, especially anything that looks architectural rather than a discrete f
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — same, small design decision needed first
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] XP animation — animated XP bar fill in CharacterPanel.tsx
 - [x] Combat loop — XP/leveling bugs fixed and verified
 - [x] Shared party XP (addPartyXp)
 - [x] Location discovery
