@@ -115,7 +115,6 @@ export const EditorToolbar: React.FC = () => {
         alert('Please specify a valid map name first.');
         return;
       }
-=======
       
       // Save locally as backup & to server as canonical authoring asset
       saveBattleMap(map);
