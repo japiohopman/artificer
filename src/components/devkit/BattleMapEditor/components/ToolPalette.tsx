@@ -19,7 +19,11 @@ export const ToolPalette: React.FC = () => {
   } = useEditorStore();
 
   const { monstersList, loadList } = useAtlasStore();
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
   // UI states for tree directory expansions
   const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>({
     maps: true,
@@ -136,7 +140,11 @@ export const ToolPalette: React.FC = () => {
 
   return (
     <div className="w-[240px] bg-[#1a1a1a] border-r border-white/5 p-3 flex flex-col gap-4 shrink-0 overflow-y-auto custom-scrollbar select-none text-white/80">
+<<<<<<< Updated upstream
 
+=======
+      
+>>>>>>> Stashed changes
       {/* Root Node: COMBAT */}
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-1.5 px-1 py-1 border-b border-white/5">
@@ -216,7 +224,11 @@ export const ToolPalette: React.FC = () => {
 
           {expandedNodes.assets && (
             <div className="pl-4 flex flex-col gap-2 py-1 border-l border-white/5 ml-1.5 mt-0.5">
+<<<<<<< Updated upstream
 
+=======
+              
+>>>>>>> Stashed changes
               {/* 2.1 Stamps / Objects */}
               <div className="flex flex-col">
                 <button
