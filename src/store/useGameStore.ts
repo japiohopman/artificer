@@ -96,6 +96,9 @@ export interface LogEntry {
 }
 
 interface GameState {
+  // Ruleset Context
+  ruleset: '2014' | '2024';
+
   // Common
   currentNPC: any | null;
   emotion: string;
@@ -126,6 +129,9 @@ interface GameState {
   combatState: CombatState & {
     activeConditions: Record<string, string[]>; // id -> list of conditions
   };
+
+  // Ruleset Action
+  setRuleset: (ruleset: '2014' | '2024') => void;
 
   // Actions
   setCurrentNPC: (npc: any | null) => void;
@@ -221,8 +227,11 @@ const getAttackSvgPath = (actionName: string): string => {
 };
 
 export const useGameStore = create<GameState>((set, get) => ({
+  ruleset: '2014',
   currentNPC: null,
   emotion: 'Neutral',
+
+  setRuleset: (ruleset) => set({ ruleset }),
   characters: [],
   activeCharacterId: '',
   logs: [],
@@ -1086,6 +1095,5 @@ export const useGameStore = create<GameState>((set, get) => ({
   clearPreview: () => set({ activeCards: [] }),
 }));
 
-if (typeof window !== 'undefined') {
-  (window as any).useGameStore = useGameStore;
-}
+const globalObj = typeof window !== 'undefined' ? (window as any) : (globalThis as any);
+globalObj.useGameStore = useGameStore;

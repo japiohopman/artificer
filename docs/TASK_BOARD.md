@@ -48,15 +48,15 @@ The BattleMapEditor now has a strong functional authoring foundation. The next p
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
 Do not treat `/14/` and `/24/` as a recurring URL-fix task. These are separate ruleset datasets and require an explicit game/campaign ruleset context.
 
-- [ ] Define the canonical ruleset identifier (`2014` / `2024`) for a game/campaign.
-- [ ] Add ruleset selection at the appropriate new-game/campaign setup point.
-- [ ] Persist the selected ruleset with the campaign/game state.
-- [ ] Provide a single ruleset context/resolver used by rules-sensitive systems.
-- [ ] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
-- [ ] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution.
-- [ ] Validate that both rulesets load the correct versioned Atlas data.
-- [ ] Document which systems are ruleset-sensitive and which are ruleset-neutral.
-- [ ] Do not introduce parallel ruleset logic in individual UI components.
+- [x] Define the canonical ruleset identifier (`2014` / `2024`) for a game/campaign.
+- [x] Add ruleset selection at the appropriate new-game/campaign setup point.
+- [x] Persist the selected ruleset with the campaign/game state.
+- [x] Provide a single ruleset context/resolver used by rules-sensitive systems.
+- [x] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
+- [x] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution.
+- [x] Validate that both rulesets load the correct versioned Atlas data.
+- [x] Document which systems are ruleset-sensitive and which are ruleset-neutral.
+- [x] Do not introduce parallel ruleset logic in individual UI components.
 
 ### Inventory & Equipment Architecture / UX Overhaul
 The existing Inventory V2 foundation is already present. Do **not** implement another container/grid system. Consolidate the current character-domain components and separate compact runtime HUD presentation from the full inventory workspace.

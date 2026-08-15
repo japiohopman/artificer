@@ -215,6 +215,26 @@ export async function fetchMonsterCategoryMapping(): Promise<Record<string, stri
   }
 }
 
+export function getActiveRulesetContext(explicitRuleset?: '2014' | '2024'): '2014' | '2024' {
+  if (explicitRuleset === '2014' || explicitRuleset === '2024') {
+    return explicitRuleset;
+  }
+  const globalObj = typeof window !== 'undefined' ? (window as any) : (globalThis as any);
+  try {
+    const gameRuleset = globalObj.useGameStore?.getState()?.ruleset;
+    if (gameRuleset === '2014' || gameRuleset === '2024') {
+      return gameRuleset;
+    }
+  } catch (e) {}
+  try {
+    const charRuleset = globalObj.useCharacterStore?.getState()?.characters?.[0]?.ruleset;
+    if (charRuleset === '2014' || charRuleset === '2024') {
+      return charRuleset;
+    }
+  } catch (e) {}
+  return '2014';
+}
+
 export async function fetchMonsterList(): Promise<{ name: string; path: string; index: string }[]> {
   try {
     // Try local index first
@@ -259,10 +279,15 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
   return results;
 }
 
-export async function fetchMonsterData(index: string): Promise<any> {
-  if (monsterCache[index]) return monsterCache[index];
+export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const cacheKey = `${activeRuleset}:${index}`;
+  if (monsterCache[cacheKey]) return monsterCache[cacheKey];
+
   let data: any = null;
   let resolvedPath: string | null = null;
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const altFolder = activeRuleset === '2024' ? '14' : '24';
 
   // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
   try {
@@ -270,19 +295,21 @@ export async function fetchMonsterData(index: string): Promise<any> {
     if (indexRes.ok) {
       const enemyIndex = await indexRes.json();
       const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-      const entry = enemyIndex.find((e: any) =>
+      const matchingEntries = enemyIndex.filter((e: any) =>
         e.index.toLowerCase() === index.toLowerCase() ||
         (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
       );
+      const versionedEntry = matchingEntries.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+      const entry = versionedEntry || matchingEntries[0];
       if (entry && entry.json_path) {
         resolvedPath = entry.json_path;
       }
     }
   } catch (e) {}
 
-  // Iterative fallbacks if index is outdated/empty
+  // Iterative fallbacks prioritizing current ruleset version folder
   if (!resolvedPath) {
-    const subfolders = ['14', '24'];
+    const subfolders = [versionFolder, altFolder];
     for (const sub of subfolders) {
       try {
         const checkRes = await fetch(`/assets/atlas/enemies/json/${sub}/${index}.json`, { method: 'HEAD' });
@@ -295,7 +322,7 @@ export async function fetchMonsterData(index: string): Promise<any> {
   }
 
   if (!resolvedPath) {
-    resolvedPath = `/assets/atlas/enemies/json/14/${index}.json`;
+    resolvedPath = `/assets/atlas/enemies/json/${versionFolder}/${index}.json`;
   }
 
   // Fetch local file
@@ -370,7 +397,7 @@ export async function fetchMonsterData(index: string): Promise<any> {
     ...normalized,
     imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index, normalized.name)
   };
-  monsterCache[index] = finalResult;
+  monsterCache[cacheKey] = finalResult;
   return finalResult;
 }
 
@@ -404,16 +431,19 @@ export async function fetchMaterialData(index: string): Promise<any> {
   }
 }
 
-export async function fetchEquipmentData(index: string): Promise<any> {
-  if (equipmentCache[index]) return equipmentCache[index];
+export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const cacheKey = `${activeRuleset}:${index}`;
+  if (equipmentCache[cacheKey]) return equipmentCache[cacheKey];
 
   let resolvedPath: string | null = null;
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
 
   // Intercept standard equipment pack indices and map to their nested _container.json path
   const cleanIndex = index.toLowerCase().replace(/_/g, '-');
   const packNames = ['burglars-pack', 'explorers-pack', 'dungeoneers-pack', 'priests-pack', 'entertainers-pack', 'scholars-pack', 'diplomats-pack'];
   if (packNames.includes(cleanIndex)) {
-    resolvedPath = `/assets/atlas/equipment/json/14/equipment-packs/${cleanIndex}/_container.json`;
+    resolvedPath = `/assets/atlas/equipment/json/${versionFolder}/equipment-packs/${cleanIndex}/_container.json`;
   }
 
   try {
@@ -422,10 +452,12 @@ export async function fetchEquipmentData(index: string): Promise<any> {
       if (indexRes.ok) {
         const equipmentIndex = await indexRes.json();
         const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-        const entry = equipmentIndex.find((e: any) =>
+        const matchingEntries = equipmentIndex.filter((e: any) =>
           e.index.toLowerCase() === index.toLowerCase() ||
           (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
         );
+        const versionedEntry = matchingEntries.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+        const entry = versionedEntry || matchingEntries[0];
         if (entry && entry.json_path) {
           resolvedPath = entry.json_path;
         }
@@ -436,7 +468,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
   }
 
   if (!resolvedPath) {
-    resolvedPath = `/assets/atlas/equipment/json/${index}.json`;
+    resolvedPath = `/assets/atlas/equipment/json/${versionFolder}/${index}.json`;
   }
 
   // Local first
@@ -452,7 +484,7 @@ export async function fetchEquipmentData(index: string): Promise<any> {
         data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
       }
       const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
-      equipmentCache[index] = finalResult;
+      equipmentCache[cacheKey] = finalResult;
       return finalResult;
     }
   } catch (e) {}
