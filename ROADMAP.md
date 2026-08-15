@@ -3,29 +3,73 @@
 [GOALS.md](./GOALS.md) is the destination — it doesn't change often. [TASK_BOARD.md](./docs/TASK_BOARD.md)
 is the granular checklist. This document sits between them: it says **what we're actually
 finishing right now**, so agents (and Jaap) aren't tempted to start a new GOALS.md system while
-older ones are half-done. Update this file when priorities genuinely shift — not every sprint.
+older ones are half-done.
+
+This file is also the **agent dispatch contract** for the Jules orchestrator:
+- Jules only receives work from `### Ready`.
+- `### Active` contains at most one task in v1.
+- `### Blocked` and `### Human Review` are never auto-dispatched.
+- A task is not considered complete because Jules says "done"; completion is confirmed by human review, testing, and architecture/doc checks before the checkbox is marked `[x]`.
+- Large architectural tasks must be written as explicit contracts with scope, acceptance criteria, and out-of-scope boundaries.
 
 ## Now
 
-*Restructured for the Jules orchestrator: it only ever dispatches from ### Ready. Nothing
-under ### Blocked or ### Human Review will be picked up automatically — those need you
-(and whoever else is reviewing) to move them to Ready first, once they're safe to hand off.
-This is a draft placement based on the last deep-dive — re-sort as you see fit before this
-goes live, especially anything that looks architectural rather than a discrete fix.*
-
 ### Active
-<!-- The orchestrator moves a task here when it starts it. At most one at a time in v1. -->
+<!-- Exactly one task may be active at a time in v1. The human coordinator or orchestrator may place a task here when it is genuinely in progress. Do not dispatch a second task while this contains an unfinished task. -->
+- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
+  - **Status:** currently in progress via the BattleMap/Combat integration instruction; do not dispatch a duplicate combat task.
+  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
+  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
+  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
 
 ### Ready
-- [ ] Inventory: container system + grid inventory with per-category sub-tabs (FullInventoryMenu.tsx is still a 193-line shell)
-- [ ] Equipment_categories JSON: fix stale `url` fields to point at the real `/14/` and `/24/` versioned paths (see the equipment-atlas deep dive)
+
+- [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024**
+  - **Goal:** stop treating the `/14/` and `/24/` datasets as a simple URL-cleanup problem. A new game/campaign must have an explicit ruleset selection that becomes part of the canonical game/campaign context.
+  - **User choice:** support an initial choice between **D&D 5e 2014** and **D&D 5e 2024** at the appropriate new-game/campaign entry point.
+  - **Canonical state:** store a single ruleset identifier (for example `2014` or `2024`) in the campaign/game context; downstream systems must resolve rules data from that context rather than independently guessing a version.
+  - **Ruleset-aware systems:** inspect and document the impact on rules lookup, character creation, classes/species, feats, spells, equipment, conditions, combat rules and other version-sensitive data. Reuse existing Atlas/index infrastructure.
+  - **Equipment implication:** `/14/` and `/24/` equipment/rules paths are implementation details of the selected ruleset, not a standalone repeated repair task. Do not create duplicate routing branches in individual UI components.
+  - **Acceptance:** selecting a ruleset produces a single canonical context; rules/Atlas loaders can resolve the correct version; equipment category routing works for both versions through the same service boundary; no screen/component hardcodes a default version when a ruleset context exists; existing data remains loadable.
+  - **Out of scope:** redesigning all 2014/2024 game mechanics in this task; do not invent mixed-ruleset behavior unless explicitly required by existing architecture.
+  - **Docs:** update the relevant architecture/data-flow docs and the equipment/Atlas documentation to make the ruleset contract explicit.
+
+- [ ] **Inventory & Equipment Architecture / UX Overhaul**
+  - **Goal:** consolidate the existing inventory/equipment implementations instead of adding another inventory screen. The current system has overlapping responsibilities across `Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and `CharacterPanel.tsx`.
+  - **Intended responsibility boundaries:**
+    - `src/components/hud/CharacterPanel.tsx` should remain a compact runtime HUD surface and should not contain a full 120-slot inventory workspace.
+    - Character-domain inventory components should live under a clear `src/components/character/inventory/` module.
+    - Character equipment presentation should live under `src/components/character/equipment/`.
+    - `DraggableInventoryItem` should remain a reusable item-level primitive, not become the owner of inventory-screen behavior.
+    - `FullInventoryMenu` should become the full inventory workspace for detailed management, party inventory/shared storage, inspection, scrolling and drag/drop.
+    - `PartyInventory` remains an inventory-domain component, not a HUD implementation.
+  - **Required UX:** provide a clear entry point from the compact CharacterPanel inventory/equipment view into `FullInventoryMenu`; the full inventory must have usable scrolling, category filtering, item inspection, equip/unequip, and working drag/drop where appropriate.
+  - **Equipment presentation:** keep the equipment doll as a reusable presentation component; make equipment cards/slots visually consistent and use the intended 9:16 presentation where the asset format calls for it.
+  - **Asset rendering:** fix the shared `ChromaKeyImage` behavior so green-screen equipment/character assets are actually keyed correctly without relying on ad-hoc local workarounds.
+  - **State/data:** preserve the existing inventory V2/domain state as the canonical source; do not create another inventory data model merely to support the UI.
+  - **Consolidation rule:** audit existing inventory components before creating new ones. Prefer extracting/composing existing behavior over cloning it.
+  - **Acceptance:** CharacterPanel is compact and usable in the gameplay HUD; FullInventoryMenu is reachable and functional; items can be inspected; valid equipment can be equipped/unequipped; drag/drop works where intended; inventory grids scroll correctly; party/shared inventory remains usable; no duplicate inventory system is introduced; the resulting component structure is documented.
+  - **Out of scope:** changing the underlying item registry/container data model unless the implementation proves a concrete blocker that cannot be solved at the presentation layer.
+  - **Docs:** update `docs/COMPONENT_MAP.md` and the inventory module documentation if responsibilities/folders move.
+
+- [ ] **Canonical Character Profile & TitleScreen Refactor**
+  - **Goal:** establish one reusable character profile/passport presentation instead of allowing each screen to invent its own character card/passport implementation.
+  - **Architecture:** create reusable character-profile presentation primitives that can be composed into compact/selection and full variants.
+  - **Consumers:** TitleScreen, CharacterPanel/game UI and party-facing character views should reuse the same canonical profile primitives rather than duplicating portrait/identity/level/stat presentation logic.
+  - **File boundaries:** move character-profile-specific pieces into a clear `src/components/character/profile/` module where appropriate; keep `CharacterPanel` as a HUD surface and do not turn the new profile module into another God Component.
+  - **TitleScreen:** refactor `src/components/core/TitleScreen.tsx` so it owns save-slot/new-game/continue orchestration, not its own parallel character presentation implementation.
+  - **CharacterProfile:** refactor `src/components/character/CharacterProfile.tsx` into clear composition with professional responsive layout and explicit presentation boundaries.
+  - **Canonical data:** existing character stores/data remain the single source of truth; no parallel character schema.
+  - **Acceptance:** no new screen-specific `CharacterPassport`/`CharacterCard` implementation; TitleScreen and other consumers reuse canonical profile primitives; compact and full presentation variants are available; existing character behavior continues to work; layout is responsive and visually coherent; tests cover the shared profile integration.
+  - **Out of scope:** redesigning the character data model or introducing a new global UI framework solely for this refactor.
+  - **Docs:** update `docs/COMPONENT_MAP.md` and character module docs to reflect the final responsibility boundaries.
 
 ### Blocked
-<!-- Move a task here yourself with a short reason if it's waiting on something outside Jules's control. -->
+<!-- Move a task here yourself with a short reason if it is waiting on something outside Jules's control. -->
 
 ### Human Review
-- [ ] Character creation: point-buy stat system (currently standard-array + manual roll only) — worth deciding the exact rules before handing this to Jules
-- [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — same, small design decision needed first
+- [ ] Character creation: point-buy stat system (currently standard-array + manual roll only) — exact rules still need an explicit product decision before dispatch.
+- [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
 - [x] XP animation — animated XP bar fill in CharacterPanel.tsx
@@ -37,24 +81,10 @@ goes live, especially anything that looks architectural rather than a discrete f
 - [x] Fuller character sheet (AC/HP/initiative via GameIcon, not bare numbers) — largely done, worth a final pass
 
 ## Conditional cleanup — do this once the condition is met, not before
-- Remove the forked `dnd5e-6.0.x` folder and the duplicated `tactical-grid-main/tactical-grid-main`
-  once the agents referencing them (Jimmy/Jane) confirm they no longer need them as inspiration.
-  Until then they're allowed to stay, but they should not be extended or built on top of —
-  reference only.
-- Once that's out: move the remaining heavy binaries (93MB Sword Coast map, the music files,
-  the SRD PDF) out of plain git — Git LFS or external asset hosting, per `docs/ASSET_REGISTRY.md`.
+- Remove the forked `dnd5e-6.0.x` folder and the duplicated `tactical-grid-main/tactical-grid-main` once the agents referencing them (Jimmy/Jane) confirm they no longer need them as inspiration. Until then they're allowed to stay, but they should not be extended or built on — reference only.
+- Once that's out: move the remaining heavy binaries (93MB Sword Coast map, the music files, the SRD PDF) out of plain git — Git LFS or external asset hosting, per `docs/ASSET_REGISTRY.md`.
 
 ## Next — natural continuation, kept small on purpose
-- **Canonical Character Profile & TitleScreen Refactor**:
-  - [ ] Establish one reusable character profile/passport presentation instead of creating screen-specific character cards/passports.
-  - [ ] Refactor `src/components/core/TitleScreen.tsx` to consume the canonical character profile rather than owning duplicate character presentation logic.
-  - [ ] Refactor `src/components/character/CharacterProfile.tsx` into a clean, reusable profile composition with clear presentation boundaries; avoid replacing the current God Component with another generic God Component.
-  - [ ] Define compact/selection and full profile variants so TitleScreen, game UI, and party UI can reuse the same character presentation primitives.
-  - [ ] Bring the CharacterProfile layout to a consistent, professional responsive standard and remove ad-hoc layout patterns.
-  - [ ] Preserve the existing character data/state as the canonical source; do not introduce parallel character schemas.
-  - [ ] Add/update tests for the shared profile and TitleScreen integration.
-  - **Acceptance:** no new screen-specific CharacterPassport/CharacterCard implementation; TitleScreen and other consumers reuse the canonical profile primitives; character data/state remains single-source-of-truth; existing character functionality continues to work.
-  - **Out of scope:** redesigning the character data model or introducing a new global UI framework solely for this refactor.
 - **Phase 3 - Character Creation & Level Up Overhaul (Part 1)**:
   - [ ] **Point Buy Calculator**: Implement standard 27-point buy rules for Character Creator attribute step.
   - [ ] **Advanced Spellbook Manager**: Fully overhaul `SpellsStep.tsx` and spell selection using `FocusView` and tiered visual folders (`spell1.webp` to `spell9.webp`).
@@ -63,9 +93,7 @@ goes live, especially anything that looks architectural rather than a discrete f
   - [ ] **Automated HP Level Up**: Automate hit-die level-up HP rolls with Con modifiers and average HP options.
   - [ ] **Per-Attribute 3D Dice**: Roll 4d6 (drop lowest) with specific Dice Box animations per attribute.
   - [ ] **Equipment Pack Inspect**: Integrate `FocusView.tsx` as an interactive container inspector for equipment packages.
-- AI DM tool-call integration (GOALS.md §12) — start with 2–3 tools only (e.g. dice roll,
-  journal update), not the full tool list. Prove the narrator/mechanics boundary works before
-  widening it.
+- AI DM tool-call integration (GOALS.md §12) — start with 2–3 tools only (e.g. dice roll, journal update), not the full tool list. Prove the narrator/mechanics boundary works before widening it.
 - NPC Memory module — affinity system only, no interaction-log/vector search yet.
 
 ## Later — parked until Now is clear and the app is stable
@@ -79,10 +107,7 @@ goes live, especially anything that looks architectural rather than a discrete f
 - Vector-based session memory (GOALS.md §13)
 - Fully autonomous adventure generation (GOALS.md §5)
 
-These aren't bad ideas — they're exactly the kind of thing that makes this project fun. They're
-parked because each one is a new subsystem, and the project currently has more open subsystems
-than closed ones. Finishing the "Now" list is what makes starting these safe.
+These aren't bad ideas — they're exactly the kind of thing that makes this project fun. They're parked because each one is a new subsystem, and the project currently has more open subsystems than closed ones. Finishing the "Now" list is what makes starting these safe.
 
 ---
-*Owned by whoever is coordinating the agents (Jules, or Jaap directly). Revisit this list when
-the "Now" section is empty — not before.*
+*Owned by whoever is coordinating the agents (Jules, or Jaap directly). Revisit this list when the "Now" section is empty — not before.*
