@@ -45,6 +45,16 @@ goes live, especially anything that looks architectural rather than a discrete f
   the SRD PDF) out of plain git — Git LFS or external asset hosting, per `docs/ASSET_REGISTRY.md`.
 
 ## Next — natural continuation, kept small on purpose
+- **Canonical Character Profile & TitleScreen Refactor**:
+  - [ ] Establish one reusable character profile/passport presentation instead of creating screen-specific character cards/passports.
+  - [ ] Refactor `src/components/core/TitleScreen.tsx` to consume the canonical character profile rather than owning duplicate character presentation logic.
+  - [ ] Refactor `src/components/character/CharacterProfile.tsx` into a clean, reusable profile composition with clear presentation boundaries; avoid replacing the current God Component with another generic God Component.
+  - [ ] Define compact/selection and full profile variants so TitleScreen, game UI, and party UI can reuse the same character presentation primitives.
+  - [ ] Bring the CharacterProfile layout to a consistent, professional responsive standard and remove ad-hoc layout patterns.
+  - [ ] Preserve the existing character data/state as the canonical source; do not introduce parallel character schemas.
+  - [ ] Add/update tests for the shared profile and TitleScreen integration.
+  - **Acceptance:** no new screen-specific CharacterPassport/CharacterCard implementation; TitleScreen and other consumers reuse the canonical profile primitives; character data/state remains single-source-of-truth; existing character functionality continues to work.
+  - **Out of scope:** redesigning the character data model or introducing a new global UI framework solely for this refactor.
 - **Phase 3 - Character Creation & Level Up Overhaul (Part 1)**:
   - [ ] **Point Buy Calculator**: Implement standard 27-point buy rules for Character Creator attribute step.
   - [ ] **Advanced Spellbook Manager**: Fully overhaul `SpellsStep.tsx` and spell selection using `FocusView` and tiered visual folders (`spell1.webp` to `spell9.webp`).
