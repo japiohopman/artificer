@@ -1,18 +1,22 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
-    "str": 10,
-    "dex": 10,
-    "con": 10,
-    "int": 10,
-    "wis": 10,
-    "cha": 10
+    "str": 7,
+    "dex": 14,
+    "con": 13,
+    "int": 7,
+    "wis": 8,
+    "cha": 14
   },
   "proficiencies": [
+    "skill: perception",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
     "Skill: Animal Handling",
     "Skill: Nature",
     "Carpenter'S Tools",
@@ -35,7 +39,128 @@
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "fey ancestry",
+      "index": "fey_ancestry",
+      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            {
+              "name": "Saving Throws against being charmed",
+              "condition": {
+                "index": "charmed",
+                "name": "charmed",
+                "url": "/assets/atlas/conditions/json/charmed.json"
+              }
+            }
+          ],
+          "immunity": [
+            {
+              "name": "magic sleep"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "trance",
+      "index": "trance",
+      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+    },
+    {
+      "name": "keen senses",
+      "index": "keen_senses",
+      "desc": "You have proficiency in the Perception skill."
+    },
+    {
+      "name": "superior darkvision",
+      "index": "superior_darkvision",
+      "desc": "Your darkvision has a radius of 120 feet.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 120
+        }
+      }
+    },
+    {
+      "name": "sunlight sensitivity",
+      "index": "sunlight_sensitivity",
+      "desc": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "disadvantage": [
+            "Attack rolls in direct sunlight",
+            "Perception checks that rely on sight in direct sunlight"
+          ]
+        }
+      }
+    },
+    {
+      "name": "drow magic",
+      "index": "drow_magic",
+      "desc": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+      "trait_specific": {
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        },
+        "spells": [
+          {
+            "spell": {
+              "index": "dancing_lights",
+              "name": "dancing lights",
+              "url": "/assets/atlas/spell/json/dancing_lights.json"
+            },
+            "usage": {
+              "type": "at will"
+            }
+          },
+          {
+            "spell": {
+              "index": "faerie_fire",
+              "name": "faerie fire",
+              "url": "/assets/atlas/spell/json/faerie_fire.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 3
+          },
+          {
+            "spell": {
+              "index": "darkness",
+              "name": "darkness",
+              "url": "/assets/atlas/spell/json/darkness.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "drow weapon training",
+      "index": "drow_weapon_training",
+      "desc": "You have proficiency with rapiers, shortswords, and hand crossbows."
+    }
+  ],
   "features": [
     {
       "index": "spellcasting_druid",
@@ -98,47 +223,26 @@
     "hairStyle": "Short",
     "bodyType": "Medium",
     "eyeColor": "Brown",
-    "skinColor": "#e0ac69",
+    "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_u4hmmkvzf": {
-      "id": "leather_armor_u4hmmkvzf",
+    "leather_armor_kgsquihyx": {
+      "id": "leather_armor_kgsquihyx",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1786855118974,
+      "addedAt": 1786867503650,
       "kind": "armor"
     },
-    "explorers_pack_ngbdpyqkq": {
-      "id": "explorers_pack_ngbdpyqkq",
+    "explorers_pack_uchxerets": {
+      "id": "explorers_pack_uchxerets",
       "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1786855118974,
+      "addedAt": 1786867503650,
       "kind": "container"
-    },
-    "dagger-1_nbgjmu01e": {
-      "id": "dagger-1_nbgjmu01e",
-      "template": "dagger-1",
-      "quantity": 1,
-      "addedAt": 1786855182980,
-      "kind": "weapon"
-    },
-    "dart_uh7l8egsq": {
-      "id": "dart_uh7l8egsq",
-      "template": "dart",
-      "quantity": 1,
-      "addedAt": 1786855188868,
-      "kind": "weapon"
-    },
-    "wooden-staff_v7hwh0kfm": {
-      "id": "wooden-staff_v7hwh0kfm",
-      "template": "wooden-staff",
-      "quantity": 1,
-      "addedAt": 1786855197100,
-      "kind": "weapon"
     }
   },
   "containers": {
@@ -149,27 +253,27 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_ngbdpyqkq"
+          "itemId": "explorers_pack_uchxerets"
         },
         {
           "id": "bag_1",
-          "itemId": "dagger-1_snmlstf31"
+          "itemId": null
         },
         {
           "id": "bag_2",
-          "itemId": "dart_uh7l8egsq"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "dart_864fpug7h"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "wooden-staff_v7hwh0kfm"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "wooden-staff_oaq59aptp"
+          "itemId": null
         },
         {
           "id": "bag_6",
@@ -251,7 +355,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger-1_nbgjmu01e"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -267,7 +371,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_u4hmmkvzf"
+        "itemId": "leather_armor_kgsquihyx"
       },
       {
         "id": "clothes",
@@ -369,7 +473,7 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_ivum3qwqv",
+      "id": "carpenters_tools_j6tmdrom0",
       "index": "carpenters_tools",
       "name": "Carpenter'S Tools",
       "quantity": 1,
@@ -380,7 +484,7 @@
       "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "id": "pot_iron_if7isdgnx",
+      "id": "pot_iron_krldjnq9k",
       "index": "pot_iron",
       "name": "Pot Iron",
       "quantity": 1,
@@ -391,7 +495,7 @@
       "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "id": "clothes_travelers_qrs2e7gzy",
+      "id": "clothes_travelers_xkgzrlns6",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -402,7 +506,7 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_5zb8jowfd",
+      "id": "gold_rjbq7pnnx",
       "index": "gold",
       "name": "Gold",
       "quantity": 23,
@@ -435,7 +539,7 @@
   ],
   "inventory": {
     "main-hand": {
-      "id": "sickle_9zz2pmmau",
+      "id": "sickle_zm5q3lbjr",
       "index": "sickle",
       "name": "Sickle",
       "quantity": 1,
@@ -499,7 +603,7 @@
   "knownSpells": [],
   "languages": [
     "common",
-    "gnomish"
+    "elvish"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -509,21 +613,22 @@
     }
   },
   "choices": {},
-  "race": "human",
+  "race": "elf",
+  "subrace": "drow",
   "class": "druid",
-  "spellcastingAbility": "wis",
   "background": "farmer",
-  "alignment": "lawful_evil",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardSwords.webp",
-  "name": "kh",
+  "spellcastingAbility": "wis",
+  "alignment": "chaotic_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "walu",
   "id": "slot3",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-16T04:41:56.693Z"
+  "lastSaved": "2026-08-16T08:06:25.486Z"
 }
