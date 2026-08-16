@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('verify ruleset selection in character creator welcome step', async ({ page }) => {
+test('verify ruleset selection flow and state toggling in character creator', async ({ page }) => {
     test.setTimeout(60000);
 
     await page.goto('http://localhost:3000');
@@ -23,20 +23,37 @@ test('verify ruleset selection in character creator welcome step', async ({ page
     console.log('Verifying Welcome Step and Ruleset Selection UI...');
     await page.waitForSelector('text=Select Ruleset Framework', { timeout: 15000 });
 
-    const selectorHeader = page.locator('text=Select Ruleset Framework');
-    await expect(selectorHeader).toBeVisible();
-
     const ruleset2014Btn = page.locator('button:has-text("D&D 5e (2014)")');
     const ruleset2024Btn = page.locator('button:has-text("D&D 5.5e (2024)")');
 
     await expect(ruleset2014Btn).toBeVisible();
     await expect(ruleset2024Btn).toBeVisible();
 
-    // Click 2024 Ruleset
-    await ruleset2024Btn.click();
-    await page.waitForTimeout(500);
+    // Verify initial active state (2014 active)
+    await expect(page.locator('text=✓ Active Ruleset Context')).toBeVisible();
+    await expect(ruleset2014Btn).toContainText('Active Ruleset Context');
 
-    // Save screenshot
-    await page.screenshot({ path: 'verification/ruleset_selection_2024.png' });
-    console.log('Saved screenshot verification/ruleset_selection_2024.png');
+    // Toggle 2014 -> 2024
+    console.log('Selecting 2024 ruleset...');
+    await ruleset2024Btn.click();
+    await page.waitForTimeout(300);
+    await expect(ruleset2024Btn).toContainText('Active Ruleset Context');
+
+    // Toggle 2024 -> 2014
+    console.log('Selecting 2014 ruleset...');
+    await ruleset2014Btn.click();
+    await page.waitForTimeout(300);
+    await expect(ruleset2014Btn).toContainText('Active Ruleset Context');
+
+    // Toggle 2014 -> 2024 -> 2014 -> 2024
+    console.log('Testing rapid multi-toggle flow (2014 -> 2024 -> 2014 -> 2024)...');
+    await ruleset2024Btn.click();
+    await page.waitForTimeout(200);
+    await ruleset2014Btn.click();
+    await page.waitForTimeout(200);
+    await ruleset2024Btn.click();
+    await page.waitForTimeout(300);
+    await expect(ruleset2024Btn).toContainText('Active Ruleset Context');
+
+    console.log('✓ Playwright ruleset selection test complete!');
 });

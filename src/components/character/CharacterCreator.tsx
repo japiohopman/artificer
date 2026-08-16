@@ -98,6 +98,7 @@ export const CharacterCreator: React.FC = () => {
 
   // New character state
   const [newChar, setNewChar] = useState<Partial<Character>>({
+    ruleset: '2014',
     level: 0,
     xp: 0,
     saveVersion: 2,
@@ -137,6 +138,29 @@ export const CharacterCreator: React.FC = () => {
     spellSlots: {},
     choices: {}
   });
+
+  const handleRulesetChange = (ruleset: '2014' | '2024') => {
+    if (newChar.ruleset === ruleset) return;
+    soundService.playEffect('UI_CLICK_LIGHT');
+    // Reset rules-sensitive selections on ruleset change to prevent mixed data
+    setNewChar(prev => ({
+      ...prev,
+      ruleset,
+      race: undefined,
+      subrace: undefined,
+      class: undefined,
+      subclass: undefined,
+      background: undefined,
+      proficiencies: [],
+      traits: [],
+      features: [],
+      knownSpells: [],
+      preparedSpells: [],
+      backpack: [],
+      inventory: {},
+      choices: {}
+    }));
+  };
 
   // We dynamically determine which steps are active. Specifically, we hide 'spells'
   // if the chosen class does not support spellcasting.
@@ -759,6 +783,7 @@ export const CharacterCreator: React.FC = () => {
                         setNewChar={setNewChar}
                         selectedSlot={selectedSlot}
                         setSelectedSlot={setSelectedSlot}
+                        onSelectRuleset={handleRulesetChange}
                         available={{ subraces: availableSubraces,
                            species: availableSpecies,
                            classes: availableClasses,
@@ -833,14 +858,15 @@ const StepContent: React.FC<{
   setNewChar: React.Dispatch<React.SetStateAction<Partial<Character>>>;
   selectedSlot: number | null;
   setSelectedSlot: (slot: number) => void;
+  onSelectRuleset: (ruleset: '2014' | '2024') => void;
   available: any;
   languageDetails: Record<string, any>;
   maxLanguageOptions: number;
   staticLanguages: string[];
   allowedLanguagesPool: string[] | null;
-}> = ({ step, newChar, setNewChar, selectedSlot, setSelectedSlot, available, languageDetails, maxLanguageOptions, staticLanguages, allowedLanguagesPool }) => {
+}> = ({ step, newChar, setNewChar, selectedSlot, setSelectedSlot, onSelectRuleset, available, languageDetails, maxLanguageOptions, staticLanguages, allowedLanguagesPool }) => {
    switch (step) {
-     case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep /></div>;
+     case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep ruleset={newChar.ruleset || '2014'} onSelectRuleset={onSelectRuleset} /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
      case 'species': {
         const speciesWithSubraces = available.species.flatMap((s: any) => {

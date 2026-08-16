@@ -3,6 +3,7 @@
  */
 
 import { soundService } from './soundService';
+import { useGameStore } from '../store/useGameStore';
 
 export const REPO = process.env.GITHUB_REPO || "japiohopman/artificer";
 export const BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -219,17 +220,10 @@ export function getActiveRulesetContext(explicitRuleset?: '2014' | '2024'): '201
   if (explicitRuleset === '2014' || explicitRuleset === '2024') {
     return explicitRuleset;
   }
-  const globalObj = typeof window !== 'undefined' ? (window as any) : (globalThis as any);
   try {
-    const gameRuleset = globalObj.useGameStore?.getState()?.ruleset;
+    const gameRuleset = useGameStore.getState()?.ruleset;
     if (gameRuleset === '2014' || gameRuleset === '2024') {
       return gameRuleset;
-    }
-  } catch (e) {}
-  try {
-    const charRuleset = globalObj.useCharacterStore?.getState()?.characters?.[0]?.ruleset;
-    if (charRuleset === '2014' || charRuleset === '2024') {
-      return charRuleset;
     }
   } catch (e) {}
   return '2014';

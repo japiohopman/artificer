@@ -207,21 +207,23 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   classLevelingData: {},
   isLoadingSaves: false,
 
-  setActiveCharacter: (id) => {
+  setActiveCharacter: async (id) => {
     set({ activeCharacterId: id });
     const char = get().characters.find(c => c.id === id);
     if (char) {
-      if (char.ruleset && globalObj.useGameStore) {
-        globalObj.useGameStore.getState().setRuleset(char.ruleset);
+      if (char.ruleset) {
+        const { useGameStore } = await import('./useGameStore');
+        useGameStore.getState().setRuleset(char.ruleset);
       }
       const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
       setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
       setExploredAreas(char.exploredAreas || []);
     }
   },
-  setMainCharacter: (char) => {
-    if (char?.ruleset && globalObj.useGameStore) {
-      globalObj.useGameStore.getState().setRuleset(char.ruleset);
+  setMainCharacter: async (char) => {
+    if (char?.ruleset) {
+      const { useGameStore } = await import('./useGameStore');
+      useGameStore.getState().setRuleset(char.ruleset);
     }
     set(() => ({
       characters: [char],
