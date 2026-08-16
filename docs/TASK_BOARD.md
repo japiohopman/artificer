@@ -106,6 +106,7 @@ A character profile/passport is a reusable presentation capability, not a screen
 
 ### Character Creation / Level Up
 - [ ] Tighten and polish the overall character creation flow.
+- [ ] Starting Equipment Eligibility Resolver — enforce ruleset-aware starting equipment filters in Character Creator to prevent invalid high-tier equipment selection.
 - [ ] Point Buy Calculator — standard 27-point-buy constraints.
 - [ ] Advanced Spellbook Manager.
 - [ ] Feat selection during ASI/Level Up with prerequisites and ability-score increases.
