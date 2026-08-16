@@ -1,203 +1,85 @@
 {
+  "ruleset": "2014",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 17,
-    "dex": 14,
-    "con": 11,
+    "str": 10,
+    "dex": 10,
+    "con": 10,
     "int": 10,
-    "wis": 9,
-    "cha": 7
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "skill: perception",
-    "longswords",
-    "shortswords",
-    "shortbows",
-    "longbows",
     "Skill: Animal Handling",
     "Skill: Nature",
     "Carpenter'S Tools",
-    "all armor",
+    "light armor",
+    "medium armor",
     "shields",
-    "simple weapons",
-    "martial weapons",
-    "saving throw: str",
-    "saving throw: con",
-    "Saving Throw: str",
-    "Saving Throw: con"
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "fey ancestry",
-      "index": "fey_ancestry",
-      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against being charmed",
-              "condition": {
-                "index": "charmed",
-                "name": "charmed",
-                "url": "/assets/atlas/conditions/json/charmed.json"
-              }
-            }
-          ],
-          "immunity": [
-            {
-              "name": "magic sleep"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "trance",
-      "index": "trance",
-      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
-    },
-    {
-      "name": "keen senses",
-      "index": "keen_senses",
-      "desc": "You have proficiency in the Perception skill."
-    },
-    {
-      "name": "elf weapon training",
-      "index": "elf_weapon_training",
-      "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
-    },
-    {
-      "name": "fleet of foot",
-      "index": "fleet_of_foot",
-      "desc": "Your base walking speed increases to 35 feet.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "speed_set": 35
-        }
-      }
-    },
-    {
-      "name": "mask of the wild",
-      "index": "mask_of_the_wild",
-      "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "fighter_fighting_style",
+      "index": "spellcasting_druid",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "fighting style",
+      "name": "spellcasting: druid",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again."
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
       ],
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
       "feature_specific": {
-        "subfeature_options": {
-          "choose": 1,
-          "type": "feature",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_archery",
-                  "name": "fighting style: archery",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_archery.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_defense",
-                  "name": "fighting style: defense",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_defense.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_dueling",
-                  "name": "fighting style: dueling",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_dueling.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_great_weapon_fighting",
-                  "name": "fighting style: great weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_great_weapon_fighting.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_protection",
-                  "name": "fighting style: protection",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_protection.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "fighter_fighting_style_two_weapon_fighting",
-                  "name": "fighting style: two_weapon fighting",
-                  "url": "/assets/atlas/features/json/fighter_fighting_style_two_weapon_fighting.json"
-                }
-              }
-            ]
-          }
-        },
-        "invocations": []
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        }
       },
-      "url": "/assets/atlas/features/json/fighter_fighting_style.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/fighter_fighting_style.webp",
       "source": "Class"
     },
     {
-      "index": "second_wind",
+      "index": "druidic",
       "class": {
-        "index": "fighter",
-        "name": "fighter",
-        "url": "/assets/atlas/class/json/fighter.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "second wind",
+      "name": "druidic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
-        "Once you use this feature, you must finish a short or long rest before you can use it again."
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
       ],
-      "url": "/assets/atlas/features/json/second_wind.json",
-      "updated_at": "2026-07-13T06:30:11.862Z",
-      "image": "/assets/atlas/features/images/second_wind.webp",
-      "feature_specific": {
-        "special_action": "bonus_action",
-        "healing": {
-          "dice": "1d10",
-          "modifier": "fighter_level"
-        }
-      },
+      "url": "/assets/atlas/features/json/druidic.json",
+      "updated_at": "2026-07-13T06:30:11.853Z",
+      "image": "/assets/atlas/features/images/druidic.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -216,54 +98,47 @@
     "hairStyle": "Short",
     "bodyType": "Medium",
     "eyeColor": "Brown",
-    "skinColor": "#ffdbac",
+    "skinColor": "#e0ac69",
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_reu7ih14t": {
-      "id": "leather_armor_reu7ih14t",
+    "leather_armor_u4hmmkvzf": {
+      "id": "leather_armor_u4hmmkvzf",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1785964010146,
+      "addedAt": 1786855118974,
       "kind": "armor"
     },
-    "longbow_673q7fgjk": {
-      "id": "longbow_673q7fgjk",
-      "template": "longbow",
+    "explorers_pack_ngbdpyqkq": {
+      "id": "explorers_pack_ngbdpyqkq",
+      "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1785964010146,
+      "addedAt": 1786855118974,
+      "kind": "container"
+    },
+    "dagger-1_nbgjmu01e": {
+      "id": "dagger-1_nbgjmu01e",
+      "template": "dagger-1",
+      "quantity": 1,
+      "addedAt": 1786855182980,
       "kind": "weapon"
     },
-    "arrow_a0u9g8m70": {
-      "id": "arrow_a0u9g8m70",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1785964010146,
-      "kind": "consumable"
-    },
-    "shield_yv8lut58q": {
-      "id": "shield_yv8lut58q",
-      "template": "shield",
+    "dart_uh7l8egsq": {
+      "id": "dart_uh7l8egsq",
+      "template": "dart",
       "quantity": 1,
-      "addedAt": 1785964015345,
-      "kind": "shield"
+      "addedAt": 1786855188868,
+      "kind": "weapon"
     },
-    "crossbow_bolt_xu902ybxi": {
-      "id": "crossbow_bolt_xu902ybxi",
-      "template": "crossbow_bolt",
-      "quantity": 20,
-      "addedAt": 1785964022200,
-      "kind": "consumable"
-    },
-    "dungeoneers_pack_ktjdtf2qa": {
-      "id": "dungeoneers_pack_ktjdtf2qa",
-      "template": "dungeoneers_pack",
+    "wooden-staff_v7hwh0kfm": {
+      "id": "wooden-staff_v7hwh0kfm",
+      "template": "wooden-staff",
       "quantity": 1,
-      "addedAt": 1785964026559,
-      "kind": "container"
+      "addedAt": 1786855197100,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -274,39 +149,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_a0u9g8m70"
+          "itemId": "explorers_pack_ngbdpyqkq"
         },
         {
           "id": "bag_1",
-          "itemId": "leather_armor_l6tnb679w"
+          "itemId": "dagger-1_snmlstf31"
         },
         {
           "id": "bag_2",
-          "itemId": "longbow_bc3kmii3y"
+          "itemId": "dart_uh7l8egsq"
         },
         {
           "id": "bag_3",
-          "itemId": "arrow_r5wwiolzw"
+          "itemId": "dart_864fpug7h"
         },
         {
           "id": "bag_4",
-          "itemId": "shield_uqeb4zy0a"
+          "itemId": "wooden-staff_v7hwh0kfm"
         },
         {
           "id": "bag_5",
-          "itemId": "crossbow_bolt_xu902ybxi"
+          "itemId": "wooden-staff_oaq59aptp"
         },
         {
           "id": "bag_6",
-          "itemId": "crossbow_bolt_nrtcg18yo"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "dungeoneers_pack_ktjdtf2qa"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "dungeoneers_pack_b4d1xj4ik"
+          "itemId": null
         },
         {
           "id": "bag_9",
@@ -376,11 +251,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_673q7fgjk"
+        "itemId": "dagger-1_nbgjmu01e"
       },
       {
         "id": "off_hand",
-        "itemId": "shield_yv8lut58q"
+        "itemId": null
       },
       {
         "id": "ranged",
@@ -392,7 +267,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_reu7ih14t"
+        "itemId": "leather_armor_u4hmmkvzf"
       },
       {
         "id": "clothes",
@@ -494,7 +369,7 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_jsp0ebzea",
+      "id": "carpenters_tools_ivum3qwqv",
       "index": "carpenters_tools",
       "name": "Carpenter'S Tools",
       "quantity": 1,
@@ -505,7 +380,7 @@
       "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "id": "pot_iron_wh67tm3lk",
+      "id": "pot_iron_if7isdgnx",
       "index": "pot_iron",
       "name": "Pot Iron",
       "quantity": 1,
@@ -516,7 +391,7 @@
       "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "id": "clothes_travelers_z1k9aeq8g",
+      "id": "clothes_travelers_qrs2e7gzy",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -527,7 +402,7 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_d4oq3lojp",
+      "id": "gold_5zb8jowfd",
       "index": "gold",
       "name": "Gold",
       "quantity": 23,
@@ -560,7 +435,7 @@
   ],
   "inventory": {
     "main-hand": {
-      "id": "sickle_68q1fk85d",
+      "id": "sickle_9zz2pmmau",
       "index": "sickle",
       "name": "Sickle",
       "quantity": 1,
@@ -624,35 +499,31 @@
   "knownSpells": [],
   "languages": [
     "common",
-    "elvish"
+    "gnomish"
   ],
   "preparedSpells": [],
-  "spellSlots": {},
-  "choices": {
-    "fighter_fighting_style": [
-      "fighter_fighting_style_archery"
-    ],
-    "skills": [
-      "Insight",
-      "Intimidation"
-    ]
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
   },
-  "race": "elf",
-  "subrace": "wood_elf",
-  "class": "fighter",
-  "spellcastingAbility": "cha",
+  "choices": {},
+  "race": "human",
+  "class": "druid",
+  "spellcastingAbility": "wis",
   "background": "farmer",
   "alignment": "lawful_evil",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/FighterShield.webp",
-  "name": "kok",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardSwords.webp",
+  "name": "kh",
   "id": "slot3",
-  "hp": 5,
-  "maxHp": 5,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-05T21:09:15.714Z"
+  "lastSaved": "2026-08-16T04:41:56.693Z"
 }
