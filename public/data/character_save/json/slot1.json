@@ -1,29 +1,31 @@
 {
+  "ruleset": "2014",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 18,
-    "dex": 17,
-    "con": 14,
-    "int": 14,
-    "wis": 13,
-    "cha": 11
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "Skill: Athletics",
-    "Skill: Intimidation",
-    "Dice Set",
+    "Skill: Arcana",
+    "Skill: History",
+    "Calligrapher'S Supplies",
     "light armor",
-    "medium armor",
-    "shields",
     "simple weapons",
-    "martial weapons",
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
     "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "saving throw: cha",
+    "Saving Throw: dex",
+    "Saving Throw: cha"
   ],
   "traits": [
     {
@@ -135,98 +137,57 @@
   ],
   "features": [
     {
-      "index": "favored_enemy_1_type",
+      "index": "spellcasting_bard",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "favored enemy (1 type)",
+      "name": "spellcasting: bard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
-        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
       ],
+      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_bard.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
-        "enemy_type_options": {
-          "desc": "one enemy type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "aberrations",
-              "beasts",
-              "celestials",
-              "constructs",
-              "dragons",
-              "elementals",
-              "fey",
-              "fiends",
-              "giants",
-              "monstrosities",
-              "oozes",
-              "plants",
-              "undead",
-              "humanoids"
-            ]
-          }
-        },
-        "invocations": []
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        }
       },
-      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
       "source": "Class"
     },
     {
-      "index": "natural_explorer_1_terrain_type",
+      "index": "bardic_inspiration_d6",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "natural explorer (1 terrain type)",
+      "name": "bardic inspiration (d6)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
-        "- Difficult terrain doesn't slow your group's travel.",
-        "- Your group can't become lost except by magical means.",
-        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-        "- If you are traveling alone, you can move stealthily at a normal pace.",
-        "- When you forage, you find twice as much food as you normally would.",
-        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
-        "You choose additional favored terrain types at 6th and 10th level."
+        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
+        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
       ],
+      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
       "feature_specific": {
-        "terrain_type_options": {
-          "desc": "one terrain type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "arctic",
-              "coast",
-              "desert",
-              "forest",
-              "grassland",
-              "mountain",
-              "swamp"
-            ]
-          }
-        },
-        "invocations": []
+        "special_action": "bonus_action",
+        "attack_die": "1d6",
+        "usage": {
+          "type": "charisma_modifier",
+          "recovery": "long_rest"
+        }
       },
-      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
       "source": "Class"
     }
   ],
@@ -252,19 +213,19 @@
     "specialFeatures": []
   },
   "items": {
-    "longbow_ktviqzkke": {
-      "id": "longbow_ktviqzkke",
-      "template": "longbow",
+    "leather_armor_pm6ubil2k": {
+      "id": "leather_armor_pm6ubil2k",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1784089256259,
-      "kind": "weapon"
+      "addedAt": 1786869921938,
+      "kind": "armor"
     },
-    "arrow_zh41dxl6j": {
-      "id": "arrow_zh41dxl6j",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1784089256259,
-      "kind": "consumable"
+    "dagger_tg7m85j2w": {
+      "id": "dagger_tg7m85j2w",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1786869921938,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -275,7 +236,7 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_zh41dxl6j"
+          "itemId": null
         },
         {
           "id": "bag_1",
@@ -377,7 +338,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_ktviqzkke"
+        "itemId": "dagger_tg7m85j2w"
       },
       {
         "id": "off_hand",
@@ -393,7 +354,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_pm6ubil2k"
       },
       {
         "id": "clothes",
@@ -495,147 +456,46 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_2vwpniiaf",
       "index": "calligraphers_supplies",
       "name": "Calligrapher'S Supplies",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
+      "quantity": 1
     },
     {
-      "id": "book_zio8vhu48",
       "index": "book",
       "name": "Book",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp"
+      "quantity": 1
     },
     {
-      "id": "amulet_qllezqi0r",
-      "index": "amulet",
-      "name": "Amulet",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/amulet.json",
-      "image_url": "public/assets/atlas/equipment/images/amulet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/amulet.webp"
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "quantity": 1
     },
     {
-      "id": "parchment_one_sheet_c31r8rty0",
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "quantity": 1
+    },
+    {
       "index": "parchment_one_sheet",
       "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
+      "quantity": 10
     },
     {
-      "id": "robes_4iaiz1fmy",
       "index": "robes",
       "name": "Robes",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/robes.json",
-      "image_url": "public/assets/atlas/equipment/images/robes.webp",
-      "imageUrl": "/assets/atlas/equipment/images/robes.webp"
+      "quantity": 1
     },
     {
-      "id": "clothes_travelers_ypuhk22ub",
-      "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
-      "quantity": 3,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
-    },
-    {
-      "id": "gold_z5nsyqmm5",
       "index": "gold",
       "name": "Gold",
-      "quantity": 44,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp"
-    },
-    {
-      "id": "navigators_tools_zbfsgwzf8",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
-    },
-    {
-      "id": "abacus_ursywfa3p",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp"
-    },
-    {
-      "id": "pouch_lj1w9jnhg",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "dice_set_6o5w4tpsk",
-      "index": "dice_set",
-      "name": "Dice Set",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dice_set.json",
-      "image_url": "public/assets/atlas/equipment/images/dice_set.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dice_set.webp"
-    },
-    {
-      "id": "quiver_telt43ron",
-      "index": "quiver",
-      "name": "Quiver",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
-    },
-    {
-      "id": "spear_5tdm085y8",
-      "index": "spear",
-      "name": "Spear",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/spear.json",
-      "image_url": "public/assets/atlas/equipment/images/spear.webp",
-      "imageUrl": "/assets/atlas/equipment/images/spear.webp"
+      "quantity": 8
     }
   ],
   "inventory": {},
@@ -653,25 +513,26 @@
   },
   "choices": {
     "skills": [
-      "History",
-      "Medicine",
-      "Persuasion"
+      "Insight",
+      "Nature",
+      "Sleight of Hand"
     ]
   },
   "race": "dragonborn",
-  "class": "ranger",
-  "spellcastingAbility": "wis",
-  "background": "soldier",
+  "class": "bard",
+  "spellcastingAbility": "cha",
+  "background": "sage",
   "alignment": "neutral_good",
-  "name": "shazam",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
+  "name": "wuyu",
   "id": "slot1",
-  "hp": 7,
-  "maxHp": 7,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-07-15T05:41:06.803Z"
+  "lastSaved": "2026-08-16T08:49:21.464Z"
 }
