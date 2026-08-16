@@ -818,6 +818,10 @@ export const CharacterCreator: React.FC = () => {
                  <span>{newChar.race?.replace(/-/g, ' ') || 'NO_ANCESTRY'}</span>
                  <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
                  <span>{newChar.class || 'NO_CLASS'}</span>
+                 <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
+                 <span className="px-2 py-0.5 bg-dragon-gold/20 border border-dragon-gold/30 rounded text-[9px] font-black text-dragon-darkRed">
+                   Ruleset: {newChar.ruleset === '2024' ? 'D&D 5.5e (2024)' : 'D&D 5e (2014)'}
+                 </span>
               </div>
            </div>
 

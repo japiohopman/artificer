@@ -55,5 +55,7 @@ test('verify ruleset selection flow and state toggling in character creator', as
     await page.waitForTimeout(300);
     await expect(ruleset2024Btn).toContainText('Active Ruleset Context');
 
+    // Save screenshot
+    await page.screenshot({ path: 'verification/ruleset_selection_2024.png' });
     console.log('✓ Playwright ruleset selection test complete!');
 });
