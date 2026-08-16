@@ -6,6 +6,7 @@ export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' |
 
 export interface Character {
   id: string;
+  ruleset?: '2014' | '2024';
   saveVersion?: number;
   lastSaved?: string;
   name: string;
@@ -206,21 +207,29 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
   classLevelingData: {},
   isLoadingSaves: false,
 
-  setActiveCharacter: (id) => {
+  setActiveCharacter: async (id) => {
     set({ activeCharacterId: id });
     const char = get().characters.find(c => c.id === id);
     if (char) {
+      if (char.ruleset) {
+        const { useGameStore } = await import('./useGameStore');
+        useGameStore.getState().setRuleset(char.ruleset);
+      }
       const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
       setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
       setExploredAreas(char.exploredAreas || []);
     }
   },
-  setMainCharacter: (char) => set((state) => {
-    return { 
+  setMainCharacter: async (char) => {
+    if (char?.ruleset) {
+      const { useGameStore } = await import('./useGameStore');
+      useGameStore.getState().setRuleset(char.ruleset);
+    }
+    set(() => ({
       characters: [char],
       activeCharacterId: char.id
-    };
-  }),
+    }));
+  },
   
   reorderCharacters: (startIndex, endIndex) => {
     if (startIndex === 0 || endIndex === 0) return;
@@ -791,3 +800,6 @@ characters: state.characters.map(char =>
     });
   },
 }));
+
+const globalObj = typeof window !== 'undefined' ? (window as any) : (globalThis as any);
+globalObj.useCharacterStore = useCharacterStore;

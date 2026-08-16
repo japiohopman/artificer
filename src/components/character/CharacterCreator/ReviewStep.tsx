@@ -210,10 +210,14 @@ export const ReviewStep: React.FC<{
                         <div className="flex items-center justify-between border-b border-dragon-red/10 pb-4 relative z-10">
                             <div>
                                 <h3 className="text-5xl font-header font-black text-dragon-darkRed uppercase tracking-tight leading-none mb-2 italic">{newChar.name || 'Hero'}</h3>
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-3 flex-wrap">
                                     <span className="text-[11px] font-black text-dragon-red/60 uppercase tracking-widest">Level {newChar.level} {newChar.class}</span>
                                     <div className="w-1 h-1 rounded-full bg-parchment-300" />
                                     <span className="text-[11px] font-black text-parchment-500 uppercase tracking-widest">{newChar.race?.replace(/-/g, ' ')}</span>
+                                    <div className="w-1 h-1 rounded-full bg-parchment-300" />
+                                    <span id="review-ruleset-badge" className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 bg-dragon-gold/20 text-dragon-darkRed border border-dragon-gold/30 rounded">
+                                        Ruleset: {newChar.ruleset === '2024' ? 'D&D 5.5e (2024)' : 'D&D 5e (2014)'}
+                                    </span>
                                 </div>
                             </div>
                             <div className="w-16 h-16 bg-dragon-red/10 border border-dragon-red/20 rounded-full flex items-center justify-center shrink-0">
