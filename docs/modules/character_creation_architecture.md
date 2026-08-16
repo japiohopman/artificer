@@ -55,6 +55,21 @@ Op dit moment "rammelt" het proces nog aan een aantal kanten. Hier is de diagnos
 
 ---
 
+## 🎨 Species Sprite-Sheet Contract
+
+The Species Selection presentation uses a canonical single sprite-sheet asset to render top-down / full portrait visual representations of the 14 standard playable species:
+
+- **Canonical Asset Path**: `public/assets/ui/official/races/race_sprite.webp`
+- **Layout Grid**: 2 Rows × 7 Columns
+- **Cell Aspect Ratio**: 3:2 Aspect Ratio per cell (e.g., 384×256 pixels in a 2688×512 sprite sheet).
+- **Species Ordering**:
+  - **Row 1 (0)**: 1. Dragonborn, 2. Hill Dwarf, 3. Mountain Dwarf, 4. Drow, 5. High Elf, 6. Wood Elf, 7. Forest Gnome.
+  - **Row 2 (1)**: 1. Rock Gnome, 2. Half-Elf, 3. Half-Orc, 4. Lightfoot Halfling, 5. Stout Halfling, 6. Human, 7. Tiefling.
+- **Chroma-Key Processing**: Built-in green-screen backgrounds are transparently keyed out at render time using `ChromaKeyImage.tsx` with dynamic crop bounds.
+- **Data Mapping**: Defined centrally in `src/components/character/species/speciesSpriteMap.ts` and rendered via `SpeciesSprite.tsx`. Selection value remain strictly canonical (`speciesId`), keeping visual rendering completely decoupled from gameplay mechanics.
+
+---
+
 ## 🎨 Deel 3: Ontwerp voor de Nieuwe Karaktercreatie-Wizard
 
 We gaan de Character Creator ombouwen tot een meeslepende, vloeiende, 12-staps reis:

@@ -1,11 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 
+export interface CropBounds {
+  sx: number;
+  sy: number;
+  sw: number;
+  sh: number;
+}
+
 interface ChromaKeyImageProps {
   src: string;
   alt: string;
   className?: string;
   chromaColor?: { r: number; g: number; b: number };
   threshold?: number;
+  crop?: CropBounds;
+  onError?: () => void;
   style?: React.CSSProperties;
 }
 
@@ -15,6 +24,8 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
   className, 
   chromaColor = { r: 0, g: 255, b: 0 }, 
   threshold = 100,
+  crop,
+  onError,
   style
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -25,16 +36,37 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.src = src;
+
+    img.onerror = () => {
+      if (onError) onError();
+    };
+
     img.onload = () => {
       const canvas = canvasRef.current;
       if (!canvas) return;
       const ctx = canvas.getContext('2d', { willReadFrequently: true });
       if (!ctx) return;
 
-      // Maintain aspect ratio while fitting in the canvas
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
+      const sourceWidth = crop ? crop.sw : img.width;
+      const sourceHeight = crop ? crop.sh : img.height;
+      const sourceX = crop ? crop.sx : 0;
+      const sourceY = crop ? crop.sy : 0;
+
+      canvas.width = sourceWidth;
+      canvas.height = sourceHeight;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        img,
+        sourceX,
+        sourceY,
+        sourceWidth,
+        sourceHeight,
+        0,
+        0,
+        sourceWidth,
+        sourceHeight
+      );
 
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imageData.data;
@@ -85,7 +117,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
 
       ctx.putImageData(imageData, 0, 0);
     };
-  }, [src, chromaColor, threshold]);
+  }, [src, chromaColor, threshold, crop?.sx, crop?.sy, crop?.sw, crop?.sh, onError]);
 
   return (
     <canvas 

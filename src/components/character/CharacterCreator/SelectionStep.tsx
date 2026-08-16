@@ -10,6 +10,7 @@ import {
   fetchSubraceData, fetchTraitData, fetchWikiAsset,
   normalizeImageUrl
 } from '../../../services/storageService';
+import { SpeciesSprite } from '../species/SpeciesSprite';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
 const STAT_ICONS: Record<string, any> = {
@@ -160,15 +161,24 @@ export const SelectionStep: React.FC<{
                  <div className="h-full overflow-y-auto custom-scrollbar pr-2">
                     <div className="space-y-4">
                         <div className="flex gap-8 items-start border-b border-dragon-gold/10 pb-6 relative group/header">
-                            {artUrl && (
+                            {(category === 'species' || artUrl) && (
                                 <div className="w-48 h-48 lg:w-56 lg:h-56 bg-dragon-red/5 border-2 border-dragon-gold/20 shadow-[0_0_40px_rgba(153,27,27,0.15)] overflow-hidden p-2 shrink-0 rounded-sm group relative">
                                     <div className="absolute inset-0 bg-paper-texture opacity-30 mix-blend-multiply" />
-                                    <img 
-                                        src={normalizeImageUrl(artUrl, category, detailData.index)} 
-                                        alt={detailData.name}
-                                        referrerPolicy="no-referrer"
-                                        className="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
-                                    />
+                                    {category === 'species' ? (
+                                        <SpeciesSprite
+                                            speciesKey={detailData?.index || selected || ''}
+                                            alt={detailData?.name}
+                                            fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
+                                            className="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
+                                        />
+                                    ) : (
+                                        <img
+                                            src={normalizeImageUrl(artUrl, category, detailData.index)}
+                                            alt={detailData.name}
+                                            referrerPolicy="no-referrer"
+                                            className="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
+                                        />
+                                    )}
                                     <div className="absolute inset-0 border-2 border-dragon-gold/10 m-1 pointer-events-none" />
                                 </div>
                             )}
