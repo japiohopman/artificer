@@ -29,6 +29,11 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
   style
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const onErrorRef = useRef(onError);
+
+  useEffect(() => {
+    onErrorRef.current = onError;
+  }, [onError]);
 
   useEffect(() => {
     if (!src) return;
@@ -38,7 +43,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
     img.src = src;
 
     img.onerror = () => {
-      if (onError) onError();
+      if (onErrorRef.current) onErrorRef.current();
     };
 
     img.onload = () => {
@@ -117,7 +122,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
 
       ctx.putImageData(imageData, 0, 0);
     };
-  }, [src, chromaColor, threshold, crop?.sx, crop?.sy, crop?.sw, crop?.sh, onError]);
+  }, [src, chromaColor, threshold, crop?.sx, crop?.sy, crop?.sw, crop?.sh]);
 
   return (
     <canvas 

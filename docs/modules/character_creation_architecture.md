@@ -4,6 +4,45 @@ Dit document bevat de diepgaande analyse en het technische ontwerp voor een voll
 
 ---
 
+## 🏛️ Official Character Visuals Asset Contract
+
+Official character presentation artwork is maintained as public, stable, and module-agnostic assets under `public/assets/ui/official/`. These artwork files represent canonical official presentation assets and are shared across current and future application modules (e.g. Character Creator, Rulebook, Character Profile, Atlas Details Cards):
+
+- **Species Visual Path**: `/assets/ui/official/races/`
+- **Class Visual Path**: `/assets/ui/official/classes/`
+- **Background Visual Path**: `/assets/ui/official/backgrounds/`
+
+### Data vs. Presentation Separation
+Canonical gameplay, rules, and stats data reside inside `public/assets/atlas/` (e.g., `public/assets/atlas/class/json/barbarian.json`). Image fields in data JSON files point to public official UI assets (e.g., `/assets/ui/official/classes/barbarian.webp`). Modules consume gameplay data and presentation assets independently without cross-component coupling.
+
+---
+
+## 🎨 Sprite Sheet Contracts & Geometry
+
+### 1. Species Visual Sprite Sheet
+- **Canonical Asset Path**: `public/assets/ui/official/races/race_sprite.webp`
+- **Layout Grid**: 2 Rows × 7 Columns
+- **Cell Aspect Ratio**: 3:2 Aspect Ratio per cell (e.g., 384×256 source cells).
+- **Species Ordering**:
+  - **Row 1 (0)**: 1. Dragonborn, 2. Hill Dwarf, 3. Mountain Dwarf, 4. Drow, 5. High Elf, 6. Wood Elf, 7. Forest Gnome.
+  - **Row 2 (1)**: 1. Rock Gnome, 2. Half-Elf, 3. Half-Orc, 4. Lightfoot Halfling, 5. Stout Halfling, 6. Human, 7. Tiefling.
+- **Data Mapping**: Defined in `src/components/character/species/speciesSpriteMap.ts` and rendered via `SpeciesSprite.tsx`.
+
+### 2. Class Visual Sprite Sheet
+- **Canonical Asset Path**: `public/assets/ui/official/classes/classSprite.webp`
+- **Layout Grid**: 3 Rows × 4 Columns
+- **Cell Aspect Ratio**: 3:2 Aspect Ratio per cell.
+- **Class Ordering**:
+  - **Row 0**: 1. Barbarian (0,0), 2. Bard (0,1), 3. Fighter (0,2), 4. Cleric (0,3)
+  - **Row 1**: 1. Ranger (1,0), 2. Rogue (1,1), 3. Paladin (1,2), 4. Monk (1,3)
+  - **Row 2**: 1. Druid (2,0), 2. Sorcerer (2,1), 3. Warlock (2,2), 4. Wizard (2,3)
+- **Data Mapping**: Defined in `src/components/character/classes/classSpriteMap.ts` and rendered via `ClassSprite.tsx`.
+
+### Shared Rendering & Chroma-Key Processing
+Both `SpeciesSprite` and `ClassSprite` leverage `ChromaKeyImage.tsx` to key out green-screen backgrounds dynamically via offscreen canvas crop geometry (`crop: { sx, sy, sw, sh }`). Visual mapping components NEVER alter canonical gameplay IDs (`selectedSpecies` / `selectedClass`).
+
+---
+
 ## 🔬 Deel 1: Lering uit de VTT Module-Architectuur
 
 Uit onze inspectie van `module/documents/actor/` en `module/documents/advancement/` trekken we de volgende belangrijke lessen:
@@ -52,21 +91,6 @@ Op dit moment "rammelt" het proces nog aan een aantal kanten. Hier is de diagnos
 ### Knelpunt 3: Onduidelijkheid bij keuzes (wat doet wat?)
 - **Oorzaak**: Spelers zien alleen een naam van een feature of feat, zonder te weten wat het doet.
 - **Oplossing**: Integreer onze prachtige, nieuw geschreven `fetchFeatData` en `fetchFeatureData` helpers om bij elke keuze een prachtige "floating details card" of tooltip te tonen waarin de beschrijving, werking en afbeelding helder worden uitgelegd!
-
----
-
-## 🎨 Species Sprite-Sheet Contract
-
-The Species Selection presentation uses a canonical single sprite-sheet asset to render top-down / full portrait visual representations of the 14 standard playable species:
-
-- **Canonical Asset Path**: `public/assets/ui/official/races/race_sprite.webp`
-- **Layout Grid**: 2 Rows × 7 Columns
-- **Cell Aspect Ratio**: 3:2 Aspect Ratio per cell (e.g., 384×256 pixels in a 2688×512 sprite sheet).
-- **Species Ordering**:
-  - **Row 1 (0)**: 1. Dragonborn, 2. Hill Dwarf, 3. Mountain Dwarf, 4. Drow, 5. High Elf, 6. Wood Elf, 7. Forest Gnome.
-  - **Row 2 (1)**: 1. Rock Gnome, 2. Half-Elf, 3. Half-Orc, 4. Lightfoot Halfling, 5. Stout Halfling, 6. Human, 7. Tiefling.
-- **Chroma-Key Processing**: Built-in green-screen backgrounds are transparently keyed out at render time using `ChromaKeyImage.tsx` with dynamic crop bounds.
-- **Data Mapping**: Defined centrally in `src/components/character/species/speciesSpriteMap.ts` and rendered via `SpeciesSprite.tsx`. Selection value remain strictly canonical (`speciesId`), keeping visual rendering completely decoupled from gameplay mechanics.
 
 ---
 

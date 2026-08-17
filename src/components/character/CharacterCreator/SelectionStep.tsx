@@ -11,6 +11,7 @@ import {
   normalizeImageUrl
 } from '../../../services/storageService';
 import { SpeciesSprite } from '../species/SpeciesSprite';
+import { ClassSprite } from '../classes/ClassSprite';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
 const STAT_ICONS: Record<string, any> = {
@@ -168,6 +169,15 @@ export const SelectionStep: React.FC<{
                                         <div className="w-full h-full flex items-center justify-center relative z-10 p-1">
                                             <SpeciesSprite
                                                 speciesKey={detailData?.index || selected || ''}
+                                                alt={detailData?.name}
+                                                fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
+                                                className="transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
+                                            />
+                                        </div>
+                                    ) : category === 'class' ? (
+                                        <div className="w-full h-full flex items-center justify-center relative z-10 p-1">
+                                            <ClassSprite
+                                                classKey={detailData?.index || selected || ''}
                                                 alt={detailData?.name}
                                                 fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
                                                 className="transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
