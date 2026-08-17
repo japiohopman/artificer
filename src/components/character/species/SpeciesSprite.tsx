@@ -40,18 +40,22 @@ export const SpeciesSprite: React.FC<SpeciesSpriteProps> = ({
   if (!coord || hasError) {
     if (fallbackUrl) {
       return (
-        <ChromaKeyImage
-          src={fallbackUrl}
-          alt={alt || speciesKey}
-          className={className}
-          style={style}
-          onError={() => setHasError(true)}
-        />
+        <div
+          className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[3/2] ${className}`}
+          style={{ aspectRatio: '3/2', ...style }}
+        >
+          <ChromaKeyImage
+            src={fallbackUrl}
+            alt={alt || speciesKey}
+            onError={() => setHasError(true)}
+            className="max-w-full max-h-full object-contain pointer-events-none"
+          />
+        </div>
       );
     }
     return (
       <div
-        className={`flex items-center justify-center bg-dragon-darkRed/20 text-dragon-gold text-xs font-bold rounded p-2 ${className}`}
+        className={`flex items-center justify-center bg-dragon-darkRed/20 text-dragon-gold text-xs font-bold rounded p-2 max-w-full max-h-full aspect-[3/2] ${className}`}
         style={{ aspectRatio: '3/2', ...style }}
       >
         {alt || speciesKey}
@@ -75,7 +79,7 @@ export const SpeciesSprite: React.FC<SpeciesSpriteProps> = ({
 
   return (
     <div
-      className={`relative overflow-hidden flex items-center justify-center ${className}`}
+      className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[3/2] ${className}`}
       style={{ aspectRatio: '3/2', ...style }}
     >
       <ChromaKeyImage
@@ -83,7 +87,7 @@ export const SpeciesSprite: React.FC<SpeciesSpriteProps> = ({
         alt={alt || coord.speciesId}
         crop={crop}
         onError={() => setHasError(true)}
-        className="w-full h-full object-contain pointer-events-none"
+        className="max-w-full max-h-full object-contain pointer-events-none"
       />
     </div>
   );
