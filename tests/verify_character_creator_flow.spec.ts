@@ -56,7 +56,7 @@ test.describe('Character Creator — Selection Experience & Flow', () => {
     await expect(validationOverlay).not.toBeVisible();
   });
 
-  test('verifies Help overlay and Markdown loading', async ({ page }) => {
+  test('verifies Help overlay in step navigation header and Markdown loading', async ({ page }) => {
     const creatorPortal = page.locator('#character-creator-portal');
     await expect(creatorPortal).toBeVisible({ timeout: 15000 });
 
@@ -64,7 +64,7 @@ test.describe('Character Creator — Selection Experience & Flow', () => {
     await speciesBtn.click();
     await page.waitForTimeout(300);
 
-    const helpBtn = page.locator('button', { hasText: '[?]' });
+    const helpBtn = page.locator('#step-help-btn');
     await expect(helpBtn).toBeVisible({ timeout: 10000 });
     await helpBtn.click();
 
@@ -75,6 +75,47 @@ test.describe('Character Creator — Selection Experience & Flow', () => {
     const closeBtn = helpModal.locator('button', { hasText: 'Close' });
     await closeBtn.click();
     await expect(helpModal).not.toBeVisible();
+  });
+
+  test('verifies canonical species mechanics and examine records intro display', async ({ page }) => {
+    const creatorPortal = page.locator('#character-creator-portal');
+    await expect(creatorPortal).toBeVisible({ timeout: 15000 });
+
+    const speciesBtn = page.locator('#creator-sidebar button[title="Species"]');
+    await speciesBtn.click();
+    await page.waitForTimeout(300);
+
+    // Examine records intro block
+    const examineRecords = page.locator('#examine-records-intro');
+    await expect(examineRecords).toBeVisible({ timeout: 10000 });
+
+    // Select Dwarf
+    const dwarfBtn = page.locator('button', { hasText: 'Dwarf' }).first();
+    await dwarfBtn.click();
+
+    // Verify canonical species details appear
+    const stage = page.locator('#creator-stage');
+    await expect(stage).toContainText('Canonical Species Traits & Mechanics');
+    await expect(stage).toContainText('Ability Score Increase');
+  });
+
+  test('verifies 2-column Class choice grid layout with sprites', async ({ page }) => {
+    const creatorPortal = page.locator('#character-creator-portal');
+    await expect(creatorPortal).toBeVisible({ timeout: 15000 });
+
+    const classBtn = page.locator('#creator-sidebar button[title="Class"]');
+    await classBtn.click();
+    await page.waitForTimeout(300);
+
+    // Select Barbarian class card
+    const barbBtn = page.locator('button', { hasText: /barbarian/i }).first();
+    await expect(barbBtn).toBeVisible({ timeout: 10000 });
+    await barbBtn.click();
+    await page.waitForTimeout(1000);
+
+    const stage = page.locator('#creator-stage');
+    await expect(stage).toContainText(/barbarian/i);
+    await expect(stage).toContainText('Hit Die');
   });
 
   test('verifies 3x3 Alignment selection and persistent startingAlignment', async ({ page }) => {

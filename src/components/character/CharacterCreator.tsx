@@ -28,8 +28,16 @@ import { BackstoryStep } from './CharacterCreator/BackstoryStep';
 import { AlignmentStep } from './CharacterCreator/AlignmentStep';
 import { validateStep, validateFullCharacter, ValidationError, CreationStep } from './CharacterCreator/validation';
 import { ValidationOverlay } from './CharacterCreator/ValidationOverlay';
+import { SelectionHelp } from './CharacterCreator/SelectionHelp';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';
+
+const STEP_HELP_ASSETS: Record<string, { path: string; title: string }> = {
+  species: { path: '/assets/ui/official/races/race_help.md', title: 'Species Guide' },
+  class: { path: '/assets/ui/official/classes/class_help.md', title: 'Class Guide' },
+  background: { path: '/assets/ui/official/backgrounds/background_help.md', title: 'Origins & Background Guide' },
+  equipment: { path: '/assets/atlas/equipment/armor_help.md', title: 'Equipment & Armor Guide' }
+};
 
 const ALL_STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'welcome', label: 'Welcome', icon: 'devkit' },
@@ -81,6 +89,7 @@ export const CharacterCreator: React.FC = () => {
   // Validation state
   const [validationErrors, setValidationErrors] = useState<ValidationError[]>([]);
   const [isValidationOpen, setIsValidationOpen] = useState(false);
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
 
   // New character state
   const [newChar, setNewChar] = useState<Partial<Character>>({
@@ -398,8 +407,8 @@ export const CharacterCreator: React.FC = () => {
         backgroundPosition: 'center'
       }}>
         {/* Header */}
-        <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
-          <div className="flex items-center gap-2">
+        <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center justify-between px-4 shrink-0 relative">
+          <div className="flex items-center gap-2 z-10">
             <div className="p-1 bg-dragon-red/5 text-dragon-red border border-dragon-red/10 rounded-sm">
               {(() => {
                 const iconName = STEPS.find(s => s.id === currentStep)?.icon || 'identity';
@@ -408,11 +417,26 @@ export const CharacterCreator: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-             <h1 className="text-2xl font-bodoni font-black text-dragon-darkRed uppercase tracking-[0.2em] drop-shadow-sm">
-                {STEPS.find(s => s.id === currentStep)?.label}
-             </h1>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+             <div className="flex items-center gap-3 pointer-events-auto">
+               <h1 className="text-2xl font-bodoni font-black text-dragon-darkRed uppercase tracking-[0.2em] drop-shadow-sm">
+                  {STEPS.find(s => s.id === currentStep)?.label}
+               </h1>
+               {STEP_HELP_ASSETS[currentStep] && (
+                 <button
+                   id="step-help-btn"
+                   onClick={() => setIsHelpOpen(true)}
+                   className="px-2.5 py-1 bg-dragon-gold/20 hover:bg-dragon-gold/40 border border-dragon-gold/50 text-dragon-darkRed rounded text-[11px] font-black uppercase tracking-wider flex items-center gap-1 transition-all shadow-sm cursor-pointer active:scale-95"
+                   title="Open Step Rules & Help"
+                 >
+                   <GameIcon name="info" size={13} color="#991B1B" />
+                   [?]
+                 </button>
+               )}
+             </div>
           </div>
+
+          <div className="z-10"></div>
         </div>
 
         {/* Content */}
@@ -548,6 +572,16 @@ export const CharacterCreator: React.FC = () => {
           setCurrentStep(targetStep);
         }}
       />
+
+      {/* Step Help Modal Overlay */}
+      {STEP_HELP_ASSETS[currentStep] && (
+        <SelectionHelp
+          isOpen={isHelpOpen}
+          helpAssetPath={STEP_HELP_ASSETS[currentStep].path}
+          title={STEP_HELP_ASSETS[currentStep].title}
+          onClose={() => setIsHelpOpen(false)}
+        />
+      )}
     </div>
   );
 };
