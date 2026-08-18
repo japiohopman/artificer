@@ -8,7 +8,7 @@ export const CLASS_SPRITE_SHEET_CONFIG = {
   src: '/assets/ui/official/classes/classSprite.webp',
   rows: 3,
   cols: 4,
-  aspectRatio: 3 / 2, // 3:2 cell aspect ratio
+  aspectRatio: 2 / 3, // 2:3 cell aspect ratio
 };
 
 export const CLASS_SPRITE_MAP: Record<string, ClassSpriteCoord> = {

@@ -876,7 +876,7 @@ const StepContent: React.FC<{
         const speciesWithSubraces = available.species.flatMap((s: any) => {
             const speciesSubraces = available.subraces.filter((sub: any) => {
                 const idx = sub.index.toLowerCase();
-                if (s.index === 'elf') return idx.includes('elf') || idx.includes('drow');
+                if (s.index === 'elf') return (idx.includes('elf') && !idx.includes('half-elf')) || idx.includes('drow');
                 if (s.index === 'dwarf') return idx.includes('dwarf');
                 if (s.index === 'halfling') return idx.includes('halfling');
                 if (s.index === 'gnome') return idx.includes('gnome');

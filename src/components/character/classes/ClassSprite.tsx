@@ -41,8 +41,8 @@ export const ClassSprite: React.FC<ClassSpriteProps> = ({
     if (fallbackUrl) {
       return (
         <div
-          className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[3/2] ${className}`}
-          style={{ aspectRatio: '3/2', ...style }}
+          className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[2/3] ${className}`}
+          style={{ aspectRatio: '2/3', ...style }}
         >
           <ChromaKeyImage
             src={fallbackUrl}
@@ -55,17 +55,19 @@ export const ClassSprite: React.FC<ClassSpriteProps> = ({
     }
     return (
       <div
-        className={`flex items-center justify-center bg-dragon-darkRed/20 text-dragon-gold text-xs font-bold rounded p-2 max-w-full max-h-full aspect-[3/2] ${className}`}
-        style={{ aspectRatio: '3/2', ...style }}
+        className={`flex items-center justify-center bg-dragon-darkRed/20 text-dragon-gold text-xs font-bold rounded p-2 max-w-full max-h-full aspect-[2/3] ${className}`}
+        style={{ aspectRatio: '2/3', ...style }}
       >
         {alt || classKey}
       </div>
     );
   }
 
-  // Calculate crop geometry based on loaded sheet dimensions or default VP8X 1024x993
-  const sheetWidth = imageDimensions?.width || 1024;
-  const sheetHeight = imageDimensions?.height || 993;
+  if (!imageDimensions) {
+    return null;
+  }
+  const sheetWidth = imageDimensions.width;
+  const sheetHeight = imageDimensions.height;
 
   const cellWidth = sheetWidth / CLASS_SPRITE_SHEET_CONFIG.cols;
   const cellHeight = sheetHeight / CLASS_SPRITE_SHEET_CONFIG.rows;
@@ -79,8 +81,8 @@ export const ClassSprite: React.FC<ClassSpriteProps> = ({
 
   return (
     <div
-      className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[3/2] ${className}`}
-      style={{ aspectRatio: '3/2', ...style }}
+      className={`relative overflow-hidden flex items-center justify-center max-w-full max-h-full aspect-[2/3] ${className}`}
+      style={{ aspectRatio: '2/3', ...style }}
     >
       <ChromaKeyImage
         src={CLASS_SPRITE_SHEET_CONFIG.src}

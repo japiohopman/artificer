@@ -27,7 +27,9 @@ export const SpeciesSprite: React.FC<SpeciesSpriteProps> = ({
     if (!coord) return;
 
     const img = new Image();
-    img.crossOrigin = 'anonymous';
+    if (SPRITE_SHEET_CONFIG.src.startsWith('http://') || SPRITE_SHEET_CONFIG.src.startsWith('https://')) {
+      img.crossOrigin = 'anonymous';
+    }
     img.src = SPRITE_SHEET_CONFIG.src;
     img.onload = () => {
       setImageDimensions({ width: img.width, height: img.height });
