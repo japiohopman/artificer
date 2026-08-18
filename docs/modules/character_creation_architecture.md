@@ -4,6 +4,59 @@ Dit document bevat de diepgaande analyse en het technische ontwerp voor een voll
 
 ---
 
+## 🏛️ Official Character Visuals Asset Contract
+
+Official character presentation artwork is maintained as public, stable, and module-agnostic assets under `public/assets/ui/official/`. These artwork files represent canonical official presentation assets and are shared across current and future application modules (e.g. Character Creator, Rulebook, Character Profile, Atlas Details Cards):
+
+- **Species Visual Path**: `/assets/ui/official/races/`
+- **Class Visual Path**: `/assets/ui/official/classes/`
+- **Background Visual Path**: `/assets/ui/official/backgrounds/`
+
+### Data vs. Presentation Separation
+Canonical gameplay, rules, and stats data reside inside `public/assets/atlas/` (e.g., `public/assets/atlas/class/json/barbarian.json`). Image fields in data JSON files point to public official UI assets (e.g., `/assets/ui/official/classes/barbarian.webp`). Modules consume gameplay data and presentation assets independently without cross-component coupling.
+
+---
+
+## 🎨 Sprite Sheet Contracts & Geometry
+
+### 1. Species Visual Sprite Sheet
+- **Canonical Asset Path**: `public/assets/ui/official/races/race_sprite.webp`
+- **Layout Grid**: 2 Rows × 7 Columns
+- **Cell Aspect Ratio**: 3:2 Aspect Ratio per cell (e.g., 384×256 source cells).
+- **Species Ordering**:
+  - **Row 1 (0)**: 1. Dragonborn, 2. Hill Dwarf, 3. Mountain Dwarf, 4. Drow, 5. High Elf, 6. Wood Elf, 7. Forest Gnome.
+  - **Row 2 (1)**: 1. Rock Gnome, 2. Half-Elf, 3. Half-Orc, 4. Lightfoot Halfling, 5. Stout Halfling, 6. Human, 7. Tiefling.
+- **Data Mapping**: Defined in `src/components/character/species/speciesSpriteMap.ts` and rendered via `SpeciesSprite.tsx`.
+
+### 2. Class Visual Sprite Sheet
+- **Canonical Asset Path**: `public/assets/ui/official/classes/classSprite.webp`
+- **Layout Grid**: 3 Rows × 4 Columns
+- **Cell Aspect Ratio**: 2:3 Aspect Ratio per cell (portrait orientation, e.g. 256×331 source cells).
+- **Class Ordering**:
+  - **Row 0**: 1. Barbarian (0,0), 2. Bard (0,1), 3. Fighter (0,2), 4. Cleric (0,3)
+  - **Row 1**: 1. Ranger (1,0), 2. Rogue (1,1), 3. Paladin (1,2), 4. Monk (1,3)
+  - **Row 2**: 1. Druid (2,0), 2. Sorcerer (2,1), 3. Warlock (2,2), 4. Wizard (2,3)
+- **Data Mapping**: Defined in `src/components/character/classes/classSpriteMap.ts` and rendered via `ClassSprite.tsx`.
+
+### 3. Background Visual Asset Contract
+- **Canonical Individual Image Path**: `/assets/ui/official/backgrounds/<name>.webp`
+- **Canonical Sprite Sheet Path**: `public/assets/ui/official/backgrounds/backgroundSprite.webp`
+- **Layout Grid**: 4 Rows × 4 Columns
+- **Cell Aspect Ratio**: 1:1 Aspect Ratio per cell (square presentation).
+- **Background Ordering**:
+  - **Row 0**: 0_0 Acolyte, 0_1 Artisan, 0_2 Charlatan, 0_3 Criminal
+  - **Row 1**: 1_0 Entertainer, 1_1 Farmer, 1_2 Guard, 1_3 Guide
+  - **Row 2**: 2_0 Hermit, 2_1 Merchant, 2_2 Noble, 2_3 Sage
+  - **Row 3**: 3_0 Sailor, 3_1 Scribe, 3_2 Soldier, 3_3 Wayfarer
+
+### Shared Rendering & Chroma-Key Processing
+Both `SpeciesSprite` and `ClassSprite` leverage `ChromaKeyImage.tsx` to key out green-screen backgrounds dynamically via offscreen canvas crop geometry (`crop: { sx, sy, sw, sh }`). The image crop occurs before chroma-key processing so each sprite cell is keyed independently. Visual mapping components NEVER alter canonical gameplay IDs (`selectedSpecies` / `selectedClass`).
+
+### Sprite Sheets vs. Detail Artwork Usage
+Sprite sheets are intended specifically for compact selector rendering (e.g. species tiles and race selector cards in wizard selection steps), while individual official presentation images under `/assets/ui/official/...` remain available and reusable for larger/detail presentations (e.g. full character sheet passports, inspect modals, and rulebook entries).
+
+---
+
 ## 🔬 Deel 1: Lering uit de VTT Module-Architectuur
 
 Uit onze inspectie van `module/documents/actor/` en `module/documents/advancement/` trekken we de volgende belangrijke lessen:
