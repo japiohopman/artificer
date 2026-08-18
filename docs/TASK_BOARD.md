@@ -4,19 +4,64 @@ This is the **active execution checklist**. `ROADMAP.md` defines current priorit
 
 ## 🔴 Critical — Current engineering
 
-### BattleMapEditor → Combat Integration v1
-The BattleMapEditor now has a strong functional authoring foundation. The next priority is to make authored maps directly testable in the combat stack.
+### Character Creator — Species Visual Integration v1
+PR #247 / `feat/species-visuals-integration-15532997127621620413` is currently under human review/testing.
 
-- [x] BattleMap authoring data model and versioned schema.
-- [x] Canvas viewport foundation: coordinates, pan, zoom and grid/snap.
-- [x] Wall-segment authoring foundation.
-- [x] Room and Door authoring foundation.
-- [x] Terrain painting foundation.
-- [x] Object/Stamp placement foundation using canonical asset infrastructure.
-- [x] Token/Spawn placement foundation with Atlas references where appropriate.
-- [x] Layers and Inspector UI foundation.
-- [x] Initial Undo/Redo/history foundation.
-- [x] Map validation and JSON serialization foundation.
+- [x] Establish shared `ChromaKeyImage` usage for official character visuals.
+- [x] Integrate canonical `race_sprite.webp` sprite sheet into Species selection.
+- [x] Define data-driven species sprite mapping for the 2×7 sheet.
+- [x] Use 3:2 species-cell geometry.
+- [ ] Human-test every species selection and verify crop, positioning and green-screen removal.
+- [ ] Confirm no stale/duplicate species visual implementation remains in the Character Creator.
+- [ ] Keep Class and Background visual integration out of this PR unless required to fix a shared foundation regression.
+- [ ] After acceptance, close PR #247 and dispatch the next focused Character Creator task.
+
+### Documentation / agent alignment
+- [x] Establish living `docs/ARCHITECTURE_STATUS.md`.
+- [x] Refresh `docs/PROJECT_HUB.md`.
+- [x] Refresh `docs/COMPONENT_MAP.md`.
+- [x] Refresh `docs/PROGRESS.md`.
+- [x] Integrate the documentation audit findings into the central task system.
+- [x] Establish the Jules orchestrator roadmap/review workflow.
+- [ ] Audit remaining system/module docs against current source.
+- [ ] Remove or clearly mark stale/deprecated documentation.
+- [ ] Ensure all major modules have one authoritative specification.
+- [x] Keep `ROADMAP.md`, `TASK_BOARD.md` and module/system docs synchronized after material architecture changes.
+
+## 🟠 High — Architecture & data foundations
+
+### Character Creator — Selection Experience v1
+The next Character Creator task after Species Visual Integration. This is a UX/flow integration task, not the full Appearance or image-generation redesign.
+
+- [ ] Define and implement the intended order: Welcome/Ruleset → Identity → Species → Class → Background → Equipment → Appearance → Describe Your Character → Review.
+- [ ] Move Background before Equipment.
+- [ ] Add meaningful introduction/content before Species/Class/Background selection using the official Markdown content assets where available.
+- [ ] Use official visual assets from `public/assets/ui/official/` with correct aspect ratios: races 3:2, classes 2:3, backgrounds 1:1.
+- [ ] Use sprite sheets where appropriate for efficient loading while retaining individual images where the asset contract calls for them.
+- [ ] Make selected records/items inspectable where appropriate, including background-provided equipment.
+- [ ] Prevent invalid starting equipment tiers; selection must be ruleset/class/background aware.
+- [ ] Migrate character-creation selection UI toward `public/assets/icons/svg/`; document legacy `src/assets/icons` usage before removing anything.
+- [ ] Use `public/assets/sounds/sfx/ui_character_select.wav` for character selection feedback where appropriate.
+- [ ] Add polished required-step validation: a user cannot silently skip required character data; missing requirements produce an overlay and a route to the missing step.
+- [ ] Preserve existing ruleset selection and save persistence; do not duplicate ruleset state in individual steps.
+- [ ] Re-verify spell selection after the separate spell-selection work lands; do not hide a broken spell selector behind the new flow.
+- [ ] Keep Appearance redesign, canonical profile schema and image generation out of this task.
+
+### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
+The feature branch has been tested for selection/persistence. The remaining work is integration verification and downstream adoption.
+
+- [x] Provide the 2014/2024 selection UI.
+- [x] Persist the selected ruleset in character save data.
+- [ ] Verify the selected ruleset is exposed through one canonical game/campaign context rather than read independently by screens.
+- [ ] Provide a single ruleset context/resolver used by rules-sensitive systems.
+- [ ] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
+- [ ] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution.
+- [ ] Validate both rulesets load the correct versioned Atlas data where 2024 content exists.
+- [ ] Document which systems are ruleset-sensitive and which are ruleset-neutral.
+
+### Combat Integration v1 — BattleMap → CombatTester → CombatGrid
+Queued after the current Character Creator visual review; do not dispatch concurrently with the active PR.
+
 - [ ] Persistent combat-map authoring files under `public/assets/atlas/combat/combat_maps/` through the supported development/server write boundary.
 - [ ] Canonical BattleMap loader/service shared by editor and runtime testing.
 - [ ] Update `src/components/devkit/CombatTester.tsx` to load the same BattleMap authoring data as the editor.
@@ -29,86 +74,49 @@ The BattleMapEditor now has a strong functional authoring foundation. The next p
 - [ ] Add focused regression tests for BattleMap loading, conversion, wall boundaries, terrain and spawn/entry data.
 - [ ] Keep BattleMapEditor as authoring UI; keep CombatTester as testing/debug UI; keep CombatGrid as runtime representation.
 
-> **Important:** UI presence does not equal completed behavior. Do not mark editor tools complete unless the underlying behavior is functional and tested.
-
-### Documentation / agent alignment
-- [x] Establish living `docs/ARCHITECTURE_STATUS.md`.
-- [x] Refresh `docs/PROJECT_HUB.md`.
-- [x] Refresh `docs/COMPONENT_MAP.md`.
-- [x] Refresh `docs/PROGRESS.md`.
-- [x] Integrate the documentation audit findings into the central task system.
-- [x] Establish the Jules orchestrator roadmap/review workflow.
-- [ ] Audit remaining system/module docs against current source.
-- [ ] Remove or clearly mark stale/deprecated documentation.
-- [ ] Ensure all major modules have one authoritative specification.
-- [ ] Keep `ROADMAP.md`, `TASK_BOARD.md` and module/system docs synchronized after material architecture changes.
-
-## 🟠 High — Architecture & data foundations
-
-### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
-Do not treat `/14/` and `/24/` as a recurring URL-fix task. These are separate ruleset datasets and require an explicit game/campaign ruleset context.
-
-- [ ] Define the canonical ruleset identifier (`2014` / `2024`) for a game/campaign.
-- [ ] Add ruleset selection at the appropriate new-game/campaign setup point.
-- [ ] Persist the selected ruleset with the campaign/game state.
-- [ ] Provide a single ruleset context/resolver used by rules-sensitive systems.
-- [ ] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
-- [ ] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution.
-- [ ] Validate that both rulesets load the correct versioned Atlas data.
-- [ ] Document which systems are ruleset-sensitive and which are ruleset-neutral.
-- [ ] Do not introduce parallel ruleset logic in individual UI components.
-
 ### Inventory & Equipment Architecture / UX Overhaul
-The existing Inventory V2 foundation is already present. Do **not** implement another container/grid system. Consolidate the current character-domain components and separate compact runtime HUD presentation from the full inventory workspace.
-
 - [ ] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.
-- [ ] Define the intended character-domain structure:
-  - `character/profile/`
-  - `character/inventory/`
-  - `character/equipment/`
-  - `character/progression/`
+- [ ] Define the intended character-domain structure: `character/profile/`, `character/inventory/`, `character/equipment/`, `character/progression/`.
 - [ ] Keep reusable character-domain inventory/equipment components under `character/`; do not move inventory into `hud/` merely because it is visible from the HUD.
-- [ ] Move/refactor `CharacterPanel.tsx` toward a runtime HUD surface that consumes reusable character-domain components rather than owning the complete inventory implementation.
+- [ ] Refactor `CharacterPanel.tsx` toward a compact runtime HUD surface.
 - [ ] Keep `DraggableInventoryItem` as a reusable item interaction primitive where appropriate.
-- [ ] Make `FullInventoryMenu` the full inventory workspace rather than another partial implementation.
-- [ ] Provide a clear UI entry point from the CharacterPanel to the full inventory workspace.
-- [ ] Implement reliable scrolling in the full inventory workspace and compact inventory contexts.
-- [ ] Provide working item inspection through the existing inspection infrastructure.
-- [ ] Provide working equip/unequip interactions via supported click and drag/drop flows.
-- [ ] Ensure EquipmentDoll and equipment item presentation use the intended 9:16 visual treatment consistently.
-- [ ] Fix the current equipment/background chroma-key presentation so supported green-screen assets render correctly.
-- [ ] Verify party inventory/shared storage behavior and transfer interactions.
-- [ ] Remove duplicate inventory presentation/state logic rather than adding another inventory component.
-- [ ] Preserve Inventory V2 registry/slot architecture and existing save compatibility.
+- [ ] Make `FullInventoryMenu` the full inventory workspace.
+- [ ] Provide a clear UI entry point from CharacterPanel to the full inventory workspace.
+- [ ] Implement reliable scrolling, category filtering and item inspection.
+- [ ] Implement working equip/unequip interactions through supported click and drag/drop flows.
+- [ ] Ensure EquipmentDoll uses the intended 9:16 visual treatment consistently.
+- [ ] Fix supported green-screen equipment rendering through the shared chroma-key infrastructure.
+- [ ] Verify party inventory/shared storage behavior and transfers.
+- [ ] Preserve Inventory V2 registry/slot architecture and save compatibility.
 - [ ] Add regression tests around equip/unequip, item inspection, DnD transfers and inventory rendering state.
 
-### Canonical Character Profile & TitleScreen
-A character profile/passport is a reusable presentation capability, not a screen-specific implementation.
+### Canonical Character Profile & CharacterScreen Refactor
+This follows the Character Creator Selection Experience rather than being folded into it.
 
 - [ ] Establish canonical character-profile presentation primitives.
 - [ ] Add compact/selection and full-profile variants without creating a second character schema.
-- [ ] Refactor `src/components/core/TitleScreen.tsx` to consume canonical character profile primitives.
-- [ ] Refactor `src/components/character/CharacterProfile.tsx` into a clean composition with clear responsibility boundaries.
+- [ ] Refactor `src/components/core/TitleScreen.tsx` to consume canonical profile primitives.
+- [ ] Refactor `src/components/character/CharacterProfile.tsx` into clean composition with clear responsibility boundaries.
+- [ ] Refactor the full `CharacterScreen.tsx` only after the shared profile foundation is stable.
 - [ ] Remove duplicated character identity/portrait/class/level presentation logic from screens where the canonical profile can be reused.
 - [ ] Keep character data/state as the single source of truth.
-- [ ] Bring CharacterProfile layout to a consistent professional responsive standard.
-- [ ] Avoid replacing the existing God Component with a new generic profile God Component.
-- [ ] Add/update tests for canonical profile rendering and TitleScreen integration.
+- [ ] Include narrative character fields such as **Traits, Ideals, Bonds and Flaws** as first-class profile data; these are important inputs for Journal and DM/LM immersion and must not be UI-only decorations.
+- [ ] Keep `CharacterPanel` as a HUD surface and avoid replacing it with another profile God Component.
+- [ ] Add/update tests for canonical profile rendering and screen integration.
 
 ### DevKit shared infrastructure
-- [ ] Establish shared DevKit interaction primitives where reuse is justified: context menu, file actions, color picker, icon helpers, keyboard shortcut handling and history/command infrastructure.
+- [ ] Establish shared DevKit interaction primitives where reuse is justified: context menu/right-click actions, file actions, color picker, icon helpers, keyboard shortcut handling and history/command infrastructure.
 - [ ] Refactor/reuse `src/components/devkit/audio/ColorWheel.tsx` as a shared color-picker capability where appropriate.
-- [ ] Keep shared infrastructure separate from domain state: BattleMap, Audio, World and other editor histories must remain isolated.
+- [ ] Keep shared infrastructure separate from domain state: BattleMap, Audio, World and other editor histories remain isolated.
 - [ ] Reuse the existing Artificer icon registry under `public/assets/icons/svg/` before adding new icons.
 - [ ] Keep reusable asset/entity browsers backed by canonical Atlas data rather than hardcoded lists.
 
 ## 🟡 Medium — Character & gameplay systems
 
 ### Character Creation / Level Up
-- [ ] Tighten and polish the overall character creation flow.
-- [ ] Starting Equipment Eligibility Resolver — enforce ruleset-aware starting equipment filters in Character Creator to prevent invalid high-tier equipment selection.
+- [ ] Starting Equipment Eligibility Resolver — enforce ruleset-aware starting equipment filters in Character Creator.
 - [ ] Point Buy Calculator — standard 27-point-buy constraints.
-- [ ] Advanced Spellbook Manager.
+- [ ] Advanced Spellbook Manager — repair and then overhaul spell selection using the canonical spell Atlas data.
 - [ ] Feat selection during ASI/Level Up with prerequisites and ability-score increases.
 - [ ] Automatic HP level-up flow with class hit dice and Constitution modifier.
 - [ ] Per-attribute 3D ability-score rolls.
@@ -123,6 +131,7 @@ A character profile/passport is a reusable presentation capability, not a screen
 - [ ] Economic & Trade module.
 - [ ] Soundscape Orchestrator.
 - [ ] Rule Engine / Condition Tracker.
+- [ ] Journal/DM/LM character-context integration — use character narrative state (Traits/Ideals/Bonds/Flaws and later description/profile data) as structured context rather than scraping UI text.
 
 ### Location & Submap Flow
 - [x] Enter Location Flow foundation.
@@ -167,4 +176,4 @@ These are historical milestones and should not be re-opened as new implementatio
 8. Keep runtime HUD presentation separate from reusable domain capabilities.
 9. Keep authoring tools separate from runtime representations.
 
-*Last Updated: 2026-08-15*
+*Last Updated: 2026-08-18*
