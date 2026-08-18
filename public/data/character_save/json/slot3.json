@@ -1,216 +1,42 @@
 {
-  "ruleset": "2024",
+  "ruleset": "2014",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Female",
+  "gender": "Male",
   "stats": {
-    "str": 7,
-    "dex": 14,
-    "con": 13,
-    "int": 7,
-    "wis": 8,
-    "cha": 14
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "skill: perception",
-    "rapiers",
-    "shortswords",
-    "hand crossbows",
-    "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
-    "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
-    "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
-    "darts",
-    "slings",
-    "scimitars",
-    "herbalism kit",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "skill_investigation",
+    "skill_persuasion",
+    "potters_tools"
   ],
   "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "fey ancestry",
-      "index": "fey_ancestry",
-      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against being charmed",
-              "condition": {
-                "index": "charmed",
-                "name": "charmed",
-                "url": "/assets/atlas/conditions/json/charmed.json"
-              }
-            }
-          ],
-          "immunity": [
-            {
-              "name": "magic sleep"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "trance",
-      "index": "trance",
-      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
-    },
-    {
-      "name": "keen senses",
-      "index": "keen_senses",
-      "desc": "You have proficiency in the Perception skill."
-    },
-    {
-      "name": "superior darkvision",
-      "index": "superior_darkvision",
-      "desc": "Your darkvision has a radius of 120 feet.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 120
-        }
-      }
-    },
-    {
-      "name": "sunlight sensitivity",
-      "index": "sunlight_sensitivity",
-      "desc": "You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "disadvantage": [
-            "Attack rolls in direct sunlight",
-            "Perception checks that rely on sight in direct sunlight"
-          ]
-        }
-      }
-    },
-    {
-      "name": "drow magic",
-      "index": "drow_magic",
-      "desc": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-      "trait_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        },
-        "spells": [
-          {
-            "spell": {
-              "index": "dancing_lights",
-              "name": "dancing lights",
-              "url": "/assets/atlas/spell/json/dancing_lights.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
-          },
-          {
-            "spell": {
-              "index": "faerie_fire",
-              "name": "faerie fire",
-              "url": "/assets/atlas/spell/json/faerie_fire.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 3
-          },
-          {
-            "spell": {
-              "index": "darkness",
-              "name": "darkness",
-              "url": "/assets/atlas/spell/json/darkness.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 5
-          }
-        ]
-      }
-    },
-    {
-      "name": "drow weapon training",
-      "index": "drow_weapon_training",
-      "desc": "You have proficiency with rapiers, shortswords, and hand crossbows."
-    }
+    ""
   ],
   "features": [
     {
-      "index": "spellcasting_druid",
-      "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
-      },
-      "name": "spellcasting: druid",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
-      ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
-      "feature_specific": {
-        "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
-        }
-      },
-      "source": "Class"
-    },
-    {
-      "index": "druidic",
-      "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
-      },
-      "name": "druidic",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
-      ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
-      "feature_specific": {},
-      "source": "Class"
+      "name": "Crafter",
+      "index": "crafter",
+      "desc": "Granted by your Artisan background.",
+      "source": "Background"
     }
   ],
-  "flaws": [],
-  "ideals": [],
-  "bonds": [],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
   "money": {
     "cp": 0,
     "sp": 0,
@@ -230,19 +56,26 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_kgsquihyx": {
-      "id": "leather_armor_kgsquihyx",
-      "template": "leather_armor",
+    "shield_53xuc1q9r": {
+      "id": "shield_53xuc1q9r",
+      "template": "shield",
       "quantity": 1,
-      "addedAt": 1786867503650,
-      "kind": "armor"
+      "addedAt": 1787079662706,
+      "kind": "shield"
     },
-    "explorers_pack_uchxerets": {
-      "id": "explorers_pack_uchxerets",
-      "template": "explorers_pack",
+    "abacus_0n1gxdcf6": {
+      "id": "abacus_0n1gxdcf6",
+      "template": "abacus",
       "quantity": 1,
-      "addedAt": 1786867503650,
-      "kind": "container"
+      "addedAt": 1787079662706,
+      "kind": "tradegood"
+    },
+    "gold_qywo4450y": {
+      "id": "gold_qywo4450y",
+      "template": "gold",
+      "quantity": 25,
+      "addedAt": 1787079662706,
+      "kind": "tradegood"
     }
   },
   "containers": {
@@ -253,11 +86,11 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_uchxerets"
+          "itemId": "abacus_0n1gxdcf6"
         },
         {
           "id": "bag_1",
-          "itemId": null
+          "itemId": "gold_qywo4450y"
         },
         {
           "id": "bag_2",
@@ -359,7 +192,7 @@
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_53xuc1q9r"
       },
       {
         "id": "ranged",
@@ -371,7 +204,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_kgsquihyx"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -473,29 +306,50 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_j6tmdrom0",
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
+      "id": "abacus_z49bo7pnr",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [
+        "The abacus, also called a counting frame, is a calculating tool."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "updated_at": "2026-07-12T19:00:14.466Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
+    },
+    {
+      "id": "scale_merchants_fzmvfm8uy",
+      "index": "scale_merchants",
+      "name": "Scale Merchant'S",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
+      "url": "/assets/atlas/equipment/json/scale_merchants.json",
+      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp"
     },
     {
-      "id": "pot_iron_krldjnq9k",
-      "index": "pot_iron",
-      "name": "Pot Iron",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
-    },
-    {
-      "id": "clothes_travelers_xkgzrlns6",
+      "id": "clothes_travelers_8j1h2mbdw",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -506,10 +360,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_rjbq7pnnx",
+      "id": "gold_924erq38g",
       "index": "gold",
       "name": "Gold",
-      "quantity": 23,
+      "quantity": 25,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -537,73 +391,10 @@
       "category": "Standard Gear"
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "sickle_zm5q3lbjr",
-      "index": "sickle",
-      "name": "Sickle",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
-      "desc": [
-        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/sickle.webp",
-      "updated_at": "2026-07-12T19:00:20.427Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 20,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
-      "category": "Melee Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "/assets/atlas/damage_types/json/slashing.json"
-        }
-      },
-      "range": {
-        "normal": 5,
-        "long": null
-      },
-      "slot": "main-hand",
-      "main_hand_slot": "Sickle"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common",
-    "elvish"
+    "common"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -613,14 +404,15 @@
     }
   },
   "choices": {},
-  "race": "elf",
-  "subrace": "drow",
-  "class": "druid",
-  "background": "farmer",
+  "name": "jj",
+  "race": "dwarf",
+  "subrace": "hill_dwarf",
+  "class": "cleric",
   "spellcastingAbility": "wis",
-  "alignment": "chaotic_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
-  "name": "walu",
+  "background": "artisan",
+  "alignment": "lawful_neutral",
+  "startingAlignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
   "id": "slot3",
   "hp": 5,
   "maxHp": 5,
@@ -630,5 +422,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-16T08:06:25.486Z"
+  "lastSaved": "2026-08-18T19:10:29.967Z"
 }
