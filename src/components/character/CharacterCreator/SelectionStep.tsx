@@ -93,12 +93,6 @@ export const SelectionStep: React.FC<{
     category === 'backgrounds' ? '/assets/ui/official/backgrounds/background_choice.md' :
     category === 'equipment' ? '/assets/atlas/equipment/equipment_choice.md' : undefined;
 
-  const helpAssetPath =
-    category === 'species' ? '/assets/ui/official/races/race_help.md' :
-    category === 'class' ? '/assets/ui/official/classes/class_help.md' :
-    category === 'backgrounds' ? '/assets/ui/official/backgrounds/background_help.md' :
-    category === 'equipment' ? '/assets/atlas/equipment/armor_help.md' : undefined;
-
   const handleItemSelect = (val: string) => {
     soundService.playEffect('UI_CHARACTER_SELECT');
     onSelect(val);
@@ -106,12 +100,11 @@ export const SelectionStep: React.FC<{
 
   return (
     <div className="h-full flex flex-col overflow-hidden p-2 space-y-3">
-      {/* Introduction Banner & Help trigger */}
+      {/* Introduction Banner */}
       <SelectionIntro
         title={title}
         desc={desc}
         choiceAssetPath={choiceAssetPath}
-        onOpenHelp={helpAssetPath ? () => setIsHelpOpen(true) : undefined}
       />
 
       {/* Main Workspace: List and Detail */}
@@ -129,18 +122,9 @@ export const SelectionStep: React.FC<{
           loadingDetail={loadingDetail}
           selectedKey={selected}
           hydratedTraits={hydratedTraits}
+          choiceAssetPath={choiceAssetPath}
         />
       </div>
-
-      {/* Help Overlay Modal */}
-      {helpAssetPath && (
-        <SelectionHelp
-          isOpen={isHelpOpen}
-          helpAssetPath={helpAssetPath}
-          title={title}
-          onClose={() => setIsHelpOpen(false)}
-        />
-      )}
     </div>
   );
 };

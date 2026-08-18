@@ -1416,21 +1416,41 @@ export async function fetchMagicSchools(): Promise<{ name: string; index: string
 }
 
 export async function fetchSpeciesList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/species/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((s: any) => ({
+          name: s.name || s.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: s.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  // Fallback to static list of core species if index/github unreachable
+  const coreSpecies = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    return [];
-  }
+    if (files && Array.isArray(files)) {
+      return files
+        .filter((f: any) => f.name.endsWith('.json'))
+        .map((f: any) => ({
+          name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.name.replace('.json', '')
+        }));
+    }
+  } catch (e) {}
+
+  return coreSpecies.map(s => ({
+    name: s.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    index: s
+  }));
 }
 
 export async function fetchSpeciesWikiData(index: string): Promise<any> {
@@ -1507,21 +1527,40 @@ export async function fetchSpeciesData(index: string): Promise<any> {
 }
 
 export async function fetchClassesList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/class/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((c: any) => ({
+          name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: c.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  const coreClasses = ['barbarian', 'bard', 'cleric', 'druid', 'fighter', 'monk', 'paladin', 'ranger', 'rogue', 'sorcerer', 'warlock', 'wizard'];
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    return [];
-  }
+    if (files && Array.isArray(files)) {
+      return files
+        .filter((f: any) => f.name.endsWith('.json'))
+        .map((f: any) => ({
+          name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.name.replace('.json', '')
+        }));
+    }
+  } catch (e) {}
+
+  return coreClasses.map(c => ({
+    name: c.replace(/\b\w/g, l => l.toUpperCase()),
+    index: c
+  }));
 }
 
 export async function fetchClassWikiData(index: string): Promise<any> {
