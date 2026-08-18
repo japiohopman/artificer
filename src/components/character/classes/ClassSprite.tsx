@@ -27,7 +27,9 @@ export const ClassSprite: React.FC<ClassSpriteProps> = ({
     if (!coord) return;
 
     const img = new Image();
-    img.crossOrigin = 'anonymous';
+    if (CLASS_SPRITE_SHEET_CONFIG.src.startsWith('http://') || CLASS_SPRITE_SHEET_CONFIG.src.startsWith('https://')) {
+      img.crossOrigin = 'anonymous';
+    }
     img.src = CLASS_SPRITE_SHEET_CONFIG.src;
     img.onload = () => {
       setImageDimensions({ width: img.width, height: img.height });

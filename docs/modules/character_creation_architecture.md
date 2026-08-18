@@ -52,6 +52,9 @@ Canonical gameplay, rules, and stats data reside inside `public/assets/atlas/` (
 ### Shared Rendering & Chroma-Key Processing
 Both `SpeciesSprite` and `ClassSprite` leverage `ChromaKeyImage.tsx` to key out green-screen backgrounds dynamically via offscreen canvas crop geometry (`crop: { sx, sy, sw, sh }`). The image crop occurs before chroma-key processing so each sprite cell is keyed independently. Visual mapping components NEVER alter canonical gameplay IDs (`selectedSpecies` / `selectedClass`).
 
+### Sprite Sheets vs. Detail Artwork Usage
+Sprite sheets are intended specifically for compact selector rendering (e.g. species tiles and race selector cards in wizard selection steps), while individual official presentation images under `/assets/ui/official/...` remain available and reusable for larger/detail presentations (e.g. full character sheet passports, inspect modals, and rulebook entries).
+
 ---
 
 ## 🔬 Deel 1: Lering uit de VTT Module-Architectuur

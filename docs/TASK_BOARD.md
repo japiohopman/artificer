@@ -119,9 +119,8 @@ A character profile/passport is a reusable presentation capability, not a screen
 - [ ] Combat loop — verify the full cycle end to end after BattleMap/CombatTester integration work.
 - [x] XP animation — display high-fidelity animation when players earn XP.
 - [x] Shared XP across the party — distribute earned XP evenly to all active characters.
-- [ ] location map, map movement 
 - [ ] NPC Memory / relationship history module.
-- [ ] Economic & Trade module. (shops)
+- [ ] Economic & Trade module.
 - [ ] Soundscape Orchestrator.
 - [ ] Rule Engine / Condition Tracker.
 
@@ -132,7 +131,7 @@ A character profile/passport is a reusable presentation capability, not a screen
 - [x] Discoverable Locations foundation.
 - [x] Fog-of-War granularity foundation.
 - [ ] WorldMap and LocationMap decoupling into clean specialized subcomponents.
-- [ ] Add D&D Markdown Styling in `WorldPanel` for location lore. with a expant option for    eazy reading. in tha famous D&D style red h1 yellow hr and a nice font 
+- [ ] Add D&D Markdown Styling in `WorldPanel` for location lore.
 
 ## 🟢 Maintenance / optimization
 
