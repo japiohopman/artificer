@@ -1,9 +1,6 @@
 # 🗺️ Roadmap
 
-[GOALS.md](./GOALS.md) is the destination — it doesn't change often. [TASK_BOARD.md](./docs/TASK_BOARD.md)
-is the granular checklist. This document sits between them: it says **what we're actually
-finishing right now**, so agents (and Jaap) aren't tempted to start a new GOALS.md system while
-older ones are half-done.
+[GOALS.md](./GOALS.md) is the destination — it doesn't change often. [TASK_BOARD.md](./docs/TASK_BOARD.md) is the granular checklist. This document sits between them: it says **what we're actually finishing right now**, so agents (and Jaap) aren't tempted to start a new GOALS.md system while older ones are half-done.
 
 This file is also the **agent dispatch contract** for the Jules orchestrator:
 - Jules only receives work from `### Ready`.
@@ -15,16 +12,29 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 ## Now
 
 ### Active
-<!-- Exactly one task may be active at a time in v1. The human coordinator or orchestrator may place a task here when it is genuinely in progress. Do not dispatch a second task while this contains an unfinished task. -->
-- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
-  - **Status:** currently in progress via the BattleMap/Combat integration instruction; do not dispatch a duplicate combat task.
-  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
-  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
-  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
+- [ ] **Character Creator — Species Visual Integration v1**
+  - **Status:** PR #247 (`feat/species-visuals-integration-15532997127621620413`) is open and under human review/testing.
+  - **Goal:** integrate the canonical race sprite sheet into Species selection through shared visual infrastructure without expanding this PR into the full Character Creator redesign.
+  - **Required:** verify 2×7 sprite mapping, 3:2 species-cell geometry, green-screen removal, crop/positioning, responsive selection UX and correct official asset paths.
+  - **Scope boundary:** this PR remains Species-focused. Class sprites, Background sprites, Appearance redesign, Character Profile redesign and image-generation work are follow-up tasks.
+  - **Acceptance:** runtime behavior is verified by human testing; no duplicate visual implementation is introduced; shared image/chroma-key infrastructure remains reusable.
 
 ### Ready
 
+- [ ] **Character Creator — Selection Experience v1**
+  - **Goal:** turn the current character creation screens into a coherent, guided selection experience using the new official visual assets and canonical Atlas data.
+  - **Flow:** Welcome/Ruleset → Identity → Species → Class → Background → Equipment → Appearance → Describe Your Character → Review.
+  - **Ordering:** Background must precede Equipment; the flow must expose the consequences and available starting equipment from the selected background/class without allowing invalid high-tier starting gear.
+  - **Selection UX:** each selection step should provide a meaningful introduction before selection, inspectable records/items where appropriate, strong visual selection states, correct aspect ratios and official icon/sound assets.
+  - **Official visual assets:** race sprite sheet uses 3:2 cells; class sprite sheet uses 2:3 cells; background images are 1:1. Use `public/assets/ui/official/...` as the canonical character-creation visual source. Sprite sheets should be used where appropriate for efficient loading; individual images may be used where the UX/asset contract calls for them.
+  - **Content:** use Markdown introduction/content assets such as `race_choice.md`, `class_choice.md` and `background_choice.md` when present; do not hardcode long selection copy in components.
+  - **Icons:** migrate character-creation selection UI toward `public/assets/icons/svg/` and document/remove obsolete `src/assets/icons` usage safely rather than deleting legacy assets blindly.
+  - **Feedback:** use the canonical character-selection SFX where appropriate (`public/assets/sounds/sfx/ui_character_select.wav`).
+  - **Completion:** required steps cannot be silently skipped. Attempting to continue with missing required data must produce a clear, polished completion overlay and route the player to the missing step.
+  - **Out of scope:** full Appearance redesign and canonical character-profile schema are separate follow-up architecture tasks; do not start image generation in this task.
+
 - [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024**
+  - **Status:** selection/persistence foundation has been implemented and tested on the feature branch; remaining work is to verify integration and ensure the canonical context is consumed downstream.
   - **Goal:** stop treating the `/14/` and `/24/` datasets as a simple URL-cleanup problem. A new game/campaign must have an explicit ruleset selection that becomes part of the canonical game/campaign context.
   - **User choice:** support an initial choice between **D&D 5e 2014** and **D&D 5e 2024** at the appropriate new-game/campaign entry point.
   - **Canonical state:** store a single ruleset identifier (for example `2014` or `2024`) in the campaign/game context; downstream systems must resolve rules data from that context rather than independently guessing a version.
@@ -33,6 +43,11 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
   - **Acceptance:** selecting a ruleset produces a single canonical context; rules/Atlas loaders can resolve the correct version; equipment category routing works for both versions through the same service boundary; no screen/component hardcodes a default version when a ruleset context exists; existing data remains loadable.
   - **Out of scope:** redesigning all 2014/2024 game mechanics in this task; do not invent mixed-ruleset behavior unless explicitly required by existing architecture.
   - **Docs:** update the relevant architecture/data-flow docs and the equipment/Atlas documentation to make the ruleset contract explicit.
+
+- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
+  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
+  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
+  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
 
 - [ ] **Inventory & Equipment Architecture / UX Overhaul**
   - **Goal:** consolidate the existing inventory/equipment implementations instead of adding another inventory screen. The current system has overlapping responsibilities across `Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and `CharacterPanel.tsx`.
@@ -52,20 +67,20 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
   - **Out of scope:** changing the underlying item registry/container data model unless the implementation proves a concrete blocker that cannot be solved at the presentation layer.
   - **Docs:** update `docs/COMPONENT_MAP.md` and the inventory module documentation if responsibilities/folders move.
 
-- [ ] **Canonical Character Profile & TitleScreen Refactor**
-  - **Goal:** establish one reusable character profile/passport presentation instead of allowing each screen to invent its own character card/passport implementation.
+- [ ] **Canonical Character Profile & CharacterScreen Refactor**
+  - **Goal:** establish one reusable character profile/passport presentation instead of allowing each screen to invent its own character card/passport implementation, then use it to cleanly refactor the full `CharacterScreen.tsx`.
   - **Architecture:** create reusable character-profile presentation primitives that can be composed into compact/selection and full variants.
   - **Consumers:** TitleScreen, CharacterPanel/game UI and party-facing character views should reuse the same canonical profile primitives rather than duplicating portrait/identity/level/stat presentation logic.
+  - **Character data boundary:** the future canonical character profile must include narrative fields such as Traits/Ideals/Bonds/Flaws as first-class character data; these are important inputs for Journal/DM/LM immersion and must not remain ad-hoc UI-only fields.
   - **File boundaries:** move character-profile-specific pieces into a clear `src/components/character/profile/` module where appropriate; keep `CharacterPanel` as a HUD surface and do not turn the new profile module into another God Component.
   - **TitleScreen:** refactor `src/components/core/TitleScreen.tsx` so it owns save-slot/new-game/continue orchestration, not its own parallel character presentation implementation.
   - **CharacterProfile:** refactor `src/components/character/CharacterProfile.tsx` into clear composition with professional responsive layout and explicit presentation boundaries.
-  - **Canonical data:** existing character stores/data remain the single source of truth; no parallel character schema.
+  - **CharacterScreen:** after the profile/creator foundations are stable, consolidate the full screen around those reusable capabilities rather than continuing screen-specific implementations.
   - **Acceptance:** no new screen-specific `CharacterPassport`/`CharacterCard` implementation; TitleScreen and other consumers reuse canonical profile primitives; compact and full presentation variants are available; existing character behavior continues to work; layout is responsive and visually coherent; tests cover the shared profile integration.
-  - **Out of scope:** redesigning the character data model or introducing a new global UI framework solely for this refactor.
+  - **Out of scope:** image-generation pipeline and a full character-profile schema redesign are separate follow-up architecture work unless explicitly dispatched.
   - **Docs:** update `docs/COMPONENT_MAP.md` and character module docs to reflect the final responsibility boundaries.
 
 ### Blocked
-<!-- Move a task here yourself with a short reason if it is waiting on something outside Jules's control. -->
 
 ### Human Review
 - [ ] Character creation: point-buy stat system (currently standard-array + manual roll only) — exact rules still need an explicit product decision before dispatch.
@@ -88,6 +103,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - **Phase 3 - Character Creation & Level Up Overhaul (Part 1)**:
   - [ ] **Point Buy Calculator**: Implement standard 27-point buy rules for Character Creator attribute step.
   - [ ] **Advanced Spellbook Manager**: Fully overhaul `SpellsStep.tsx` and spell selection using `FocusView` and tiered visual folders (`spell1.webp` to `spell9.webp`).
+  - [ ] **Character Creator profile requirements:** after Selection Experience v1, define the canonical profile fields and validation model, including narrative identity (Traits/Ideals/Bonds/Flaws), before the Appearance/portrait-generation work begins.
 - **Phase 3 - Character Creation & Level Up Overhaul (Part 2)**:
   - [ ] **ASI & Feat Selection**: Expand leveling to allow selecting feats (including attribute bonuses, prerequisites, and features) during level-up ASI.
   - [ ] **Automated HP Level Up**: Automate hit-die level-up HP rolls with Con modifiers and average HP options.
