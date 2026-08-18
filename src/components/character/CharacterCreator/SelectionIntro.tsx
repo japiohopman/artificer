@@ -27,8 +27,8 @@ export const SelectionIntro: React.FC<SelectionIntroProps> = ({
   }, [choiceAssetPath]);
 
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-3 border-b border-dragon-gold/20 shrink-0">
-      <div className="space-y-1 flex-1">
+    <div className="flex flex-col items-start justify-between gap-2 pb-3 border-b border-dragon-gold/20 shrink-0">
+      <div className="w-full flex items-center justify-between">
         <div className="flex items-center gap-3">
           <h2 className="text-2xl font-header font-black text-dragon-darkRed uppercase tracking-tight">
             {title}
@@ -36,22 +36,23 @@ export const SelectionIntro: React.FC<SelectionIntroProps> = ({
           {onOpenHelp && (
             <button
               onClick={onOpenHelp}
-              className="px-2.5 py-1 bg-dragon-gold/15 hover:bg-dragon-gold/30 border border-dragon-gold/40 text-dragon-darkRed rounded text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm"
+              className="px-2.5 py-1 bg-dragon-gold/15 hover:bg-dragon-gold/30 border border-dragon-gold/40 text-dragon-darkRed rounded text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-sm cursor-pointer active:scale-95"
             >
               <GameIcon name="info" size={12} color="#991B1B" />
-              [? HELP]
+              [?]
             </button>
           )}
         </div>
-        <p className="text-[11px] text-parchment-600 font-bold uppercase tracking-wider">
+        <p className="text-[11px] text-parchment-600 font-bold uppercase tracking-wider hidden sm:block">
           {desc}
         </p>
-        {choiceMarkdown && (
-          <div className="mt-2 text-[10px] text-parchment-700 italic border-l-2 border-dragon-gold/30 pl-2 max-h-16 overflow-y-auto custom-scrollbar">
-            <Markdown children={choiceMarkdown} />
-          </div>
-        )}
       </div>
+
+      {choiceMarkdown && (
+        <div className="w-full text-[11px] text-parchment-800 font-medium leading-relaxed bg-white/30 border-l-2 border-dragon-gold/40 pl-3 py-1.5 pr-2 max-h-20 overflow-y-auto custom-scrollbar rounded-r-sm">
+          <Markdown children={choiceMarkdown} />
+        </div>
+      )}
     </div>
   );
 };

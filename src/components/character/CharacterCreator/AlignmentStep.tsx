@@ -139,10 +139,10 @@ export const AlignmentStep: React.FC<{
         <motion.div
           key={selectedOption.bgUrl}
           initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 0.25, scale: 1 }}
+          animate={{ opacity: 0.35, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 bg-cover bg-center filter blur-md pointer-events-none z-0"
+          className="absolute inset-0 bg-cover bg-center filter blur-[3px] pointer-events-none z-0"
           style={{ backgroundImage: `url('${selectedOption.bgUrl}')` }}
         />
       </AnimatePresence>

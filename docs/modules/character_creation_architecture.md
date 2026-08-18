@@ -57,6 +57,20 @@ Sprite sheets are intended specifically for compact selector rendering (e.g. spe
 
 ---
 
+## 🏷️ Future Character Name Generator Architecture (Planned)
+
+The final character naming experience will be a dedicated late-stage creation step positioned after species, class, background, and visual identity choices have been established.
+
+### Planned Generator Inputs & Cultural Parameters
+The name generator will dynamically evaluate character context and parameters:
+- **Gender**: Masculine, feminine, and gender-neutral naming roots aligned with selected identity polarity.
+- **Species & Subrace**: Lineage-specific naming traditions (e.g., Dwarven clan names, Elven ancestral epithets).
+- **Culture & Ethnicity**: Regional naming patterns across Faerûn and outer domains where applicable.
+- **Naming Conventions & Family/Clan Structures**: Compound surnames, lineage descriptors, and honorifics.
+- **Cultural Naming Patterns**: Rhythmic and phonetic conventions matching species lore archives.
+
+---
+
 ## 🔬 Deel 1: Lering uit de VTT Module-Architectuur
 
 Uit onze inspectie van `module/documents/actor/` en `module/documents/advancement/` trekken we de volgende belangrijke lessen:

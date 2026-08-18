@@ -50,10 +50,10 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
            <button
              type="button"
              onClick={() => onSelectRuleset?.('2014')}
-             className={`p-4 rounded-md border-2 transition-all flex flex-col justify-between relative overflow-hidden text-left ${
+             className={`p-4 rounded-md border-2 transition-all flex flex-col justify-between relative overflow-hidden text-left cursor-pointer active:scale-[0.99] ${
                ruleset === '2014'
-                 ? 'border-dragon-red bg-dragon-red/10 shadow-lg shadow-dragon-red/10 ring-1 ring-dragon-gold/30'
-                 : 'border-dragon-gold/20 bg-white/40 hover:border-dragon-gold/40 hover:bg-white/60'
+                 ? 'border-dragon-red bg-dragon-red/10 shadow-md'
+                 : 'border-dragon-gold/20 bg-white/40 hover:border-dragon-red/40 hover:bg-white/60 shadow-sm'
              }`}
            >
              <div className="flex items-center justify-between w-full mb-2">
@@ -77,10 +77,10 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
            <button
              type="button"
              onClick={() => onSelectRuleset?.('2024')}
-             className={`p-4 rounded-md border-2 transition-all flex flex-col justify-between relative overflow-hidden text-left ${
+             className={`p-4 rounded-md border-2 transition-all flex flex-col justify-between relative overflow-hidden text-left cursor-pointer active:scale-[0.99] ${
                ruleset === '2024'
-                 ? 'border-dragon-red bg-dragon-red/10 shadow-lg shadow-dragon-red/10 ring-1 ring-dragon-gold/30'
-                 : 'border-dragon-gold/20 bg-white/40 hover:border-dragon-gold/40 hover:bg-white/60'
+                 ? 'border-dragon-red bg-dragon-red/10 shadow-md'
+                 : 'border-dragon-gold/20 bg-white/40 hover:border-dragon-red/40 hover:bg-white/60 shadow-sm'
              }`}
            >
              <div className="flex items-center justify-between w-full mb-2">
@@ -100,21 +100,6 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
              </div>
            </button>
         </div>
-     </div>
-
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
-        {[
-          { label: 'Bloodline', desc: 'Scribe your ancestry into the great records of the Atlas.', icon: 'ancestry' },
-          { label: 'Archetype', desc: 'Channel your innate talents into a disciplined calling.', icon: 'weapon' },
-          { label: 'Epithet', desc: 'Identify your moral compass and manifested form.', icon: 'document' },
-        ].map((feat, i) => (
-          <div key={i} className="p-6 bg-white/40 border border-dragon-gold/10 rounded-sm space-y-3 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-16 h-16 bg-dragon-red/5 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-150" />
-             <div className="text-dragon-red relative z-10"><GameIcon name={feat.icon as any} size={20} color="currentColor" /></div>
-             <h4 className="font-header font-black text-xs uppercase tracking-[0.2em] text-dragon-darkRed relative z-10">{feat.label}</h4>
-             <p className="text-[10px] text-parchment-600 font-bold leading-relaxed relative z-10">{feat.desc}</p>
-          </div>
-        ))}
      </div>
   </div>
 );

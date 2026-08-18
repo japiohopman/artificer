@@ -64,7 +64,7 @@ test.describe('Character Creator — Selection Experience & Flow', () => {
     await speciesBtn.click();
     await page.waitForTimeout(300);
 
-    const helpBtn = page.locator('button', { hasText: '[? HELP]' });
+    const helpBtn = page.locator('button', { hasText: '[?]' });
     await expect(helpBtn).toBeVisible({ timeout: 10000 });
     await helpBtn.click();
 

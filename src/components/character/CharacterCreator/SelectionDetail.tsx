@@ -30,9 +30,14 @@ export const SelectionDetail: React.FC<SelectionDetailProps> = ({
 
   if (!detailData) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center bg-white/40 border border-dragon-gold/20 rounded-sm p-6 text-center opacity-30 space-y-2">
-        <GameIcon name="info" size={36} color="currentColor" />
-        <p className="text-[10px] font-black uppercase tracking-[0.3em]">Examine Records</p>
+      <div className="flex-1 flex flex-col items-center justify-center bg-white/40 border border-dragon-gold/20 rounded-sm p-6 text-center text-parchment-600 space-y-3">
+        <GameIcon name="info" size={32} color="#B8860B" className="opacity-40" />
+        <div className="space-y-1">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-dragon-darkRed">Select an Option to Inspect</p>
+          <p className="text-[10px] font-medium max-w-xs mx-auto italic">
+            Choose from the choices list on the left to examine detailed mechanics, traits, and background lore.
+          </p>
+        </div>
       </div>
     );
   }

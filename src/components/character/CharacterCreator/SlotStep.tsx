@@ -87,19 +87,28 @@ export const SlotStep: React.FC<SlotStepProps> = ({ selectedSlot, onSelect }) =>
                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                      </div>
                     
-                    <div className="text-center space-y-1">
-                      <h3 className="font-header font-black text-dragon-darkRed truncate max-w-[150px]">{character.name}</h3>
-                      <div className="flex items-center justify-center gap-2 text-[9px] font-black text-parchment-400 uppercase tracking-widest">
-                        <span>Lvl {character.level}</span>
-                        <div className="w-1 h-1 rounded-full bg-dragon-gold/40" />
-                        <span>{character.class}</span>
+                    <div className="text-center space-y-1 w-full px-2">
+                      <h3 className="font-header font-black text-dragon-darkRed text-base truncate max-w-[180px] mx-auto">{character.name || 'Unnamed Adventurer'}</h3>
+                      <div className="flex items-center justify-center gap-1.5 text-[10px] font-bold text-parchment-600 uppercase tracking-wider flex-wrap">
+                        {character.race && <span>{character.race}</span>}
+                        {character.race && character.class && <span className="text-dragon-gold font-black">•</span>}
+                        {character.class && <span>{character.class}</span>}
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-[9px] font-black text-dragon-red uppercase tracking-widest pt-1">
+                        <span>Lvl {character.level || 1}</span>
+                        {character.ruleset && (
+                          <>
+                            <div className="w-1 h-1 rounded-full bg-dragon-gold/40" />
+                            <span className="bg-dragon-gold/10 px-1.5 py-0.5 rounded border border-dragon-gold/20 text-dragon-darkRed">{character.ruleset}</span>
+                          </>
+                        )}
                       </div>
                     </div>
 
-                    <div className="pt-4 flex flex-col items-center gap-2">
-                       <div className="flex items-center gap-1.5 text-dragon-red font-black text-[9px] uppercase tracking-widest opacity-60">
+                    <div className="pt-2 flex flex-col items-center gap-1">
+                       <div className="flex items-center gap-1.5 text-dragon-red font-black text-[9px] uppercase tracking-widest opacity-70">
                           <GameIcon name="alert" size={10} color="currentColor" />
-                          <span>Will be overwritten</span>
+                          <span>Existing save data</span>
                        </div>
                     </div>
                   </>
