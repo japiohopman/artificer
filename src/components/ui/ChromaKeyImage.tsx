@@ -39,7 +39,9 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
     if (!src) return;
 
     const img = new Image();
-    img.crossOrigin = "anonymous";
+    if (src.startsWith('http://') || src.startsWith('https://')) {
+      img.crossOrigin = "anonymous";
+    }
     img.src = src;
 
     img.onerror = () => {

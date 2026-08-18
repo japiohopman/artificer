@@ -1438,24 +1438,68 @@ export async function fetchSpeciesWikiData(index: string): Promise<any> {
 }
 
 export async function fetchSpeciesData(index: string): Promise<any> {
+    if (!index) return null;
+
+    const parts = index.split(':');
+    const racePart = parts[0].toLowerCase().trim();
+    const subracePart = parts.length > 1 ? parts[1].toLowerCase().trim() : '';
+
+    const cleanIndex = index.toLowerCase().trim();
+    const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
+    const hyphenatedIndex = cleanIndex.replace(/[:_]/g, '-');
+
+    const localCandidates: string[] = [];
+    if (subracePart) {
+      const subraceUnderscore = subracePart.replace(/-/g, '_');
+      localCandidates.push(`/assets/atlas/subraces/json/${subraceUnderscore}.json`);
+      localCandidates.push(`/assets/atlas/subraces/json/${subracePart}.json`);
+    }
+    localCandidates.push(`/assets/atlas/species/json/${underscoreIndex}.json`);
+    localCandidates.push(`/assets/atlas/species/json/${hyphenatedIndex}.json`);
+    localCandidates.push(`/assets/atlas/subraces/json/${underscoreIndex}.json`);
+    if (racePart) {
+      localCandidates.push(`/assets/atlas/species/json/${racePart}.json`);
+    }
+
+    // Try local static files first
+    for (const path of localCandidates) {
+      try {
+        const res = await fetch(path);
+        if (res.ok) {
+          const data = await safeJson(res);
+          if (data) {
+            return {
+              ...data,
+              index: index,
+              imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'species', index)
+            };
+          }
+        }
+      } catch (e) {
+        // continue to next candidate
+      }
+    }
+
+    // Fallback to GitHub raw
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${index}.json?t=${Date.now()}`;
     const wikiUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/spicies_wiki/${index}.json?t=${Date.now()}`;
-    
+
     try {
       const [res, wRes] = await Promise.all([
         fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`),
         fetch(`/api/raw?url=${encodeURIComponent(wikiUrl)}`)
       ]);
-      
+
       const data = await safeJson(res);
       const wiki = await safeJson(wRes);
-      
+
       if (!data && !wiki) return null;
-      
+
       const merged = { ...(data || {}), ...wiki, wiki_source: !!wiki };
-      return { 
-        ...merged, 
-        imageUrl: normalizeImageUrl(merged.image || merged.imageUrl, 'species', index) 
+      return {
+        ...merged,
+        index: index,
+        imageUrl: normalizeImageUrl(merged.image || merged.imageUrl, 'species', index)
       };
     } catch (e) {
       return null;
