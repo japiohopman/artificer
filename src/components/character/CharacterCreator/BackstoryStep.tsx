@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
@@ -15,6 +14,12 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
   const [backgroundData, setBackgroundData] = useState<any>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [loadingBg, setLoadingBg] = useState(false);
+
+  // Dynamic gender pronoun calculation
+  const genderLower = newChar.gender?.toLowerCase();
+  const genderPrompt =
+    genderLower === 'female' ? 'What is she like?' :
+    genderLower === 'male' ? 'What is he like?' : 'What are they like?';
 
   useEffect(() => {
     if (newChar.background) {
@@ -61,6 +66,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
         Create a compelling, immersive backstory for a D&D character with the following traits:
         
         Name: ${newChar.name || 'Unknown'}
+        Gender: ${newChar.gender || 'Unknown'}
         Race: ${newChar.race} ${newChar.subrace ? `(${newChar.subrace})` : ''}
         Class: ${newChar.class}
         Background: ${newChar.background}
@@ -92,13 +98,18 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
 
   return (
     <div className="max-w-4xl mx-auto space-y-8 py-4">
+      {/* Header */}
       <div className="flex items-center gap-4 border-b border-dragon-gold/20 pb-4">
         <div className="p-3 bg-dragon-red text-white rounded-sm shadow-xl">
            <GameIcon name="book" size={24} color="#FFFFFF" />
         </div>
         <div>
-          <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Crest & Chronicle</h2>
-          <p className="text-[11px] font-bold text-parchment-500 uppercase tracking-widest italic">"Every legend begins with a single line of history."</p>
+          <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">
+            DESCRIBE YOUR CHARACTER
+          </h2>
+          <p className="text-sm font-bold text-dragon-gold uppercase tracking-widest italic">
+            "{genderPrompt}"
+          </p>
         </div>
       </div>
 
@@ -164,7 +175,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
           <div className="flex items-center justify-between">
             <h3 className="text-xs font-black text-dragon-darkRed uppercase tracking-[0.2em] flex items-center gap-2">
                <GameIcon name="wand" size={14} color="#B8860B" />
-               The Chronicle
+               Personal History
             </h3>
             <button 
               onClick={handleGenerateBackstory}
@@ -176,7 +187,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
             </button>
           </div>
 
-          <div className="relative min-h-[300px] bg-white/40 border border-dragon-gold/20 rounded-sm p-6 shadow-inner overflow-hidden flex flex-col group">
+          <div className="relative min-h-[280px] bg-white/40 border border-dragon-gold/20 rounded-sm p-6 shadow-inner overflow-hidden flex flex-col group">
             <div className="absolute inset-0 bg-paper-texture opacity-30 mix-blend-multiply pointer-events-none" />
             
             {newChar.backstory ? (
@@ -186,10 +197,10 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
                   ))}
                </div>
             ) : (
-               <div className="flex-1 flex flex-col items-center justify-center opacity-20 space-y-4 relative z-10">
-                  <GameIcon name="book" size={48} color="currentColor" />
-                  <p className="text-[9px] font-black uppercase tracking-[0.3em] max-w-[200px] text-center">
-                    The pages are blank. Invoke the scribe or write your own destiny.
+               <div className="flex-1 flex flex-col items-center justify-center opacity-30 space-y-3 relative z-10">
+                  <GameIcon name="book" size={40} color="currentColor" />
+                  <p className="text-[10px] font-black uppercase tracking-widest text-center">
+                    Describe your character's persona and motives.
                   </p>
                </div>
             )}
@@ -207,7 +218,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
           <textarea 
             value={newChar.backstory || ''}
             onChange={(e) => setNewChar({ ...newChar, backstory: e.target.value })}
-            placeholder="Type your own backstory here..."
+            placeholder="Describe your character here..."
             className="w-full h-32 bg-white/20 border border-dragon-gold/10 rounded-sm p-3 text-[11px] font-medium text-parchment-900 focus:ring-1 focus:ring-dragon-red/20 focus:outline-none placeholder:text-parchment-400 placeholder:italic resize-none custom-scrollbar"
           />
         </div>
