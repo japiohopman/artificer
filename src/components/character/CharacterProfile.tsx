@@ -26,7 +26,7 @@ import { isBookLike } from '../../lib/bookUtils';
 import { getAlignmentColor, getAlignmentBackgroundStyle } from '../../lib/colors';
 
 import { normalizeImageUrl } from '../../services/storageService';
-import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE } from '../../lib/statCalculations';
+import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE, useActiveCharacter } from '../../lib/character';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon , getAttackIcon } from '../../lib/atlasUtils';
@@ -118,7 +118,7 @@ export const CharacterProfile: React.FC = () => {
   const [activeTab, setActiveTab] = React.useState<'stats' | 'equipment' | 'bio' | 'spells'>('stats');
   const [optionDetails, setOptionDetails] = React.useState<Record<string, string>>({});
 
-  const character = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const character = useActiveCharacter();
   const effectiveStats = getEffectiveStats(character);
 
   React.useEffect(() => {

@@ -11,7 +11,7 @@ import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { calculateDerivedStats } from '../../lib/statCalculations';
+import { calculateDerivedStats } from '../../lib/character';
 
 export const TitleScreen: React.FC = () => {
   const { 

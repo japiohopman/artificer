@@ -1715,14 +1715,39 @@ export async function fetchAlignmentData(index: string): Promise<any> {
 }
 
 export async function fetchTraitData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${index}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  // Try local traits
   try {
-    const res = await fetch(url);
-    return await safeJson(res);
-  } catch (e) {
-    return null;
-  }
+    const localTraits = await fetch(`/assets/atlas/traits/json/${index}.json`);
+    if (localTraits.ok) return await localTraits.json();
+  } catch (e) {}
+
+  // Try local proficiencies
+  try {
+    const localProf = await fetch(`/assets/atlas/proficiencies/json/${index}.json`);
+    if (localProf.ok) return await localProf.json();
+  } catch (e) {}
+
+  // GitHub traits
+  const traitUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/traits/json/${index}.json?t=${Date.now()}`;
+  try {
+    const res = await fetch(`/api/raw?url=${encodeURIComponent(traitUrl)}`);
+    if (res.ok) {
+      const data = await safeJson(res);
+      if (data) return data;
+    }
+  } catch (e) {}
+
+  // GitHub proficiencies
+  const profUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/proficiencies/json/${index}.json?t=${Date.now()}`;
+  try {
+    const res = await fetch(`/api/raw?url=${encodeURIComponent(profUrl)}`);
+    if (res.ok) {
+      const data = await safeJson(res);
+      if (data) return data;
+    }
+  } catch (e) {}
+
+  return null;
 }
 
 export async function fetchLanguagesList(): Promise<{ name: string; index: string }[]> {
