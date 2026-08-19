@@ -46,14 +46,14 @@ export const SelectionStep: React.FC<{
   // Load intro and help markdown files based on category
   useEffect(() => {
     const loadMarkdownFiles = async () => {
-      let mdCategory = 'species';
-      if (category === 'class') mdCategory = 'class';
-      else if (category === 'backgrounds') mdCategory = 'background';
+      let basePath = '/assets/ui/official/races/race';
+      if (category === 'class') basePath = '/assets/ui/official/classes/class';
+      else if (category === 'backgrounds') basePath = '/assets/ui/official/backgrounds/background';
 
       try {
         const [introRes, helpRes] = await Promise.all([
-          fetch(`/assets/atlas/markdown/${mdCategory}_choice.md`),
-          fetch(`/assets/atlas/markdown/${mdCategory}_help.md`)
+          fetch(`${basePath}_choice.md`),
+          fetch(`${basePath}_help.md`)
         ]);
 
         if (introRes.ok) {
@@ -161,10 +161,6 @@ export const SelectionStep: React.FC<{
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-parchment-100 border-2 border-dragon-gold p-6 rounded-sm max-w-2xl w-full max-h-[80vh] overflow-y-auto custom-scrollbar shadow-2xl relative"
-              style={{
-                backgroundImage: `url('/assets/ui/old_paper.webp')`,
-                backgroundSize: 'cover'
-              }}
             >
               <button
                 onClick={() => setIsHelpOpen(false)}
