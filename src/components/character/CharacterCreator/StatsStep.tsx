@@ -4,6 +4,8 @@ import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
 import { fetchSpeciesData, fetchSubraceData } from '../../../services/storageService';
 import { soundService } from '../../../services/soundService';
+import { diceService } from '../../../dice_roller/diceService';
+import { useGameStore } from '../../../store/useGameStore';
 
 const POINT_BUY_COSTS: Record<number, number> = { 8: 0, 9: 1, 10: 2, 11: 3, 12: 4, 13: 5, 14: 7, 15: 9 };
 const MAX_POINT_BUY = 27;
@@ -58,35 +60,51 @@ export const StatsStep: React.FC<{
     setNewChar({ ...newChar, stats: newStats });
   };
 
-  const rollAbilityScore = () => {
-    const rolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
-    rolls.sort((a, b) => a - b);
-    return rolls.slice(1).reduce((acc, val) => acc + val, 0);
-  };
-
-  const handleRollAttribute = (stat: keyof Character['stats']) => {
-    soundService.playEffect('DICE_ROLL');
+  const handleRollAttribute = async (stat: keyof Character['stats']) => {
     setIsRolling(true);
-    setTimeout(() => {
-      const val = rollAbilityScore();
-      handleAssign(stat, val);
+    useGameStore.getState().setIsRolling3D(true);
+    try {
+      const result = await diceService.rollAbilityScore(`Roll ${labels[stat]}`);
+      handleAssign(stat, result.total);
+      
+      // Auto-hide dice after a delay like in useGameStore
+      setTimeout(() => {
+        diceService.clear();
+        useGameStore.getState().setIsRolling3D(false);
+      }, 5000);
+    } catch (e) {
+      console.error(e);
+    } finally {
       setIsRolling(false);
-    }, 300);
+    }
   };
 
-  const handleRollPool = () => {
+  const handleRollPool = async () => {
     setIsRolling(true);
-    soundService.playEffect('DICE_ROLL');
-    setTimeout(() => {
+    useGameStore.getState().setIsRolling3D(true);
+    try {
       const newStats: Record<string, number> = {};
-      statsList.forEach(s => {
-        newStats[s] = rollAbilityScore();
-      });
+      
+      // Roll all 6 simultaneously or sequentially? Sequentially is easier and works
+      for (const s of statsList) {
+        const result = await diceService.rollAbilityScore(`Roll ${labels[s]}`);
+        newStats[s] = result.total;
+        
+        // Brief pause between rolls to let them clear
+        diceService.clear();
+        await new Promise(r => setTimeout(r, 100));
+      }
+      
       setAssignments(newStats);
       setNewChar({ ...newChar, stats: newStats as any });
       setPoolType('rolled');
+      
+      useGameStore.getState().setIsRolling3D(false);
+    } catch (e) {
+      console.error(e);
+    } finally {
       setIsRolling(false);
-    }, 500);
+    }
   };
 
   const handlePointBuyChange = (stat: string, delta: number) => {

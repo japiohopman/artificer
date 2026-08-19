@@ -59,14 +59,14 @@ export const DiceBoxCanvas: React.FC = () => {
       id="dice-box-container"
       ref={containerRef}
       className={cn(
-        "fixed inset-0 z-[100000] border-2 border-transparent w-screen h-screen overflow-hidden pointer-events-none",
-        isRolling3D ? "block visible opacity-100" : "hidden invisible opacity-0"
+        "fixed inset-0 z-[100000] border-2 border-transparent w-screen h-screen overflow-hidden pointer-events-none transition-opacity duration-300",
+        isRolling3D ? "opacity-100" : "opacity-0"
       )}
     >
       <style>
         {`
           #dice-box-container canvas {
-            display: ${isRolling3D ? 'block' : 'none'} !important;
+            display: block !important;
             width: 100vw !important;
             height: 100vh !important;
             pointer-events: none !important;

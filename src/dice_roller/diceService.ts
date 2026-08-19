@@ -249,6 +249,10 @@ class DiceService {
     }
   }
 
+  async rollAbilityScore(label = "Ability Score"): Promise<DiceResult> {
+    return this.roll3D("4d6dl1", label, "default", "#8b0000");
+  }
+
   clear() {
     if (this.initialized) {
       this.diceBox.clear();

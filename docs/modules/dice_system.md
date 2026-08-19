@@ -1,72 +1,33 @@
-# Dice System
+# Dice System Architecture
 
-## Status
-
-**Implemented / evolving**
-
-The dice system provides deterministic/logical dice resolution and a visual 3D dice presentation for supported UI flows.
-
-## Responsibility
-
-The dice domain owns dice notation parsing, roll resolution and the interface between logical results and optional visual dice presentation.
-
-Chat is a consumer of the dice system, not part of the dice module itself.
+This is the single authoritative source of truth for the Artificer Dice System.
 
 ## Architecture
+The system uses ONE dice runtime.
+- **Service Layer**: `src/dice_roller/diceService.ts` is the single runtime authority.
+- **Upstream Package**: `@3d-dice/dice-box@1.1.4` (Reference: https://fantasticdice.games/docs/intro)
+- **UI Components**: UI must never instantiate DiceBox directly.
+- **Render Host**: `src/dice_roller/DiceBoxCanvas.tsx`
 
-```text
-Feature / UI
-    ↓
-dice service / dice domain
-    ├── logical roll
-    └── optional 3D presentation
-          ↓
-      result / roll state
-```
+## Initialization & Canvas Lifecycle
+- The `DiceBox` canvas container must have `display: block` and non-zero dimensions at the time of initialization.
+- Instead of using `display: none` to hide the dice when inactive, we use `opacity: 0` and `pointer-events: none` while keeping `display: block`. This ensures the physics viewport initializes correctly without blocking user interactions.
+- The render host is mounted with `z-index: 100000` to act as an overlay above other UI, but manages `pointer-events` properly.
 
-The exact implementation API is defined by the current TypeScript source under `src/dice_roller/` and its consumers.
+## Asset Root & WASM
+- **Asset Root**: `public/assets/dice-box/`
+- **WASM Location**: `public/assets/dice-box/ammo/ammo.wasm.wasm`
+- The system exclusively uses the dependencies from `node_modules`. No upstream internals (like `WorldFacade.js`) are manually vendored.
 
-## Ownership
+## Result Handling & Fallback
+- `DiceService` owns all result interpretation using `@3d-dice/dice-parser-interface`. 
+- If WebGL or WASM initialization fails, or if a roll fails to produce results, `DiceService` seamlessly falls back to a background random number generation. The application uses `rollBackground` ensuring the game state continues without interruption.
 
-Do not assign ownership of the module to a specific coding agent. Architecture and source code are the authority.
+## Character Creator API
+- **4d6 Drop-Lowest**: Character Creator rolls ability scores using the `diceService.rollAbilityScore()` API.
+- This invokes a physical `4d6dl1` roll (4d6 drop lowest), waits for the physics to settle, extracts the actual dice faces, and sums the top 3.
+- The UI strictly consumes the result emitted by the service rather than independently generating `Math.random()` values.
 
-## Runtime behavior
-
-The system supports the distinction between:
-
-- **logical/background rolls** — used when a visual animation is unnecessary;
-- **3D rolls** — used when the UI should present a physical dice animation.
-
-A logical result must remain authoritative; visual dice should not independently become a second source of truth.
-
-## Chat integration
-
-The chat interface may invoke dice actions such as `/roll`, but chat-specific orchestration belongs to the chat/AI layer.
-
-This separation allows dice resolution to be reused by combat, checks, generators and other systems without depending on the chat UI.
-
-## Assets and presentation
-
-3D dice presentation may use assets/themes under the dice-roller/public asset paths. Asset loading details should follow the current implementation rather than old documentation assumptions.
-
-## Known limitations
-
-The exact current limitations should be taken from the active source/tests when changing this module. Historical TODO lists should not be treated as active requirements.
-
-## Future direction
-
-Potential improvements include:
-
-- stronger result metadata for checks/attacks;
-- richer integration with combat/rules resolution;
-- audio feedback through the existing audio system;
-- improved mobile interaction;
-- AI/tool-call integration through validated domain actions.
-
-These are design directions, not claims of completed functionality.
-
-## Related documentation
-
-- `docs/systems/DATA_FLOW.md`
-- `docs/ARCHITECTURE_STATUS.md`
-- `docs/systems/TACTICAL_COMBAT_ENGINE.md`
+## Other Game Systems
+- **Point Buy**: Handled independently from the dice rolling UI in `StatsStep.tsx`.
+- **Advanced Roller**: `src/components/dice/DiceRollerPanel.tsx` uses `useGameStore().rollDice3D` for advanced combinations (e.g. advantage, disadvantage) routed entirely through `DiceService`.
