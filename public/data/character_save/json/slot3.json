@@ -5,78 +5,95 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 10,
-    "dex": 10,
-    "con": 10,
-    "int": 10,
-    "wis": 10,
-    "cha": 10
+    "str": 15,
+    "dex": 12,
+    "con": 11,
+    "int": 11,
+    "wis": 15,
+    "cha": 12
   },
   "proficiencies": [
-    "Skill: Stealth",
-    "Skill: Survival",
-    "Cartographer'S Tools",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: con",
-    "saving throw: cha",
-    "Saving Throw: con",
-    "Saving Throw: cha"
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
+    "simple weapons",
+    "shortswords",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "gnome cunning",
+      "index": "gnome_cunning",
+      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            "Intelligence Saving Throws against magic",
+            "Wisdom Saving Throws against magic",
+            "Charisma Saving Throws against magic"
+          ]
+        }
+      }
+    }
+  ],
   "features": [
     {
-      "index": "spellcasting_sorcerer",
+      "index": "monk_unarmored_defense",
       "class": {
-        "index": "sorcerer",
-        "name": "sorcerer",
-        "url": "/assets/atlas/class/json/sorcerer.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "spellcasting: sorcerer",
+      "name": "unarmored defense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
       ],
-      "reference": "public/assets/atlas/class/json/sorcerer/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_sorcerer.json",
+      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_sorcerer.webp",
+      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
         }
       },
       "source": "Class"
     },
     {
-      "index": "sorcerous_origin",
+      "index": "martial_arts",
       "class": {
-        "index": "sorcerer",
-        "name": "sorcerer",
-        "url": "/assets/atlas/class/json/sorcerer.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "sorcerous origin",
+      "name": "martial arts",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Choose a sorcerous origin, which describes the source of your innate magical power, such as Draconic Bloodline.",
-        "Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
+        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
+        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
+        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
+        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
       ],
-      "url": "/assets/atlas/features/json/sorcerous_origin.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/sorcerous_origin.webp",
-      "feature_specific": {
-        "subfeature_options": {
-          "choose": 1,
-          "type": "subclass"
-        }
-      },
+      "url": "/assets/atlas/features/json/martial_arts.json",
+      "updated_at": "2026-07-13T06:30:11.868Z",
+      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -102,68 +119,26 @@
     "specialFeatures": []
   },
   "items": {
-    "dart_wa1kdx9v1": {
-      "id": "dart_wa1kdx9v1",
+    "dart_5826rojfc": {
+      "id": "dart_5826rojfc",
       "template": "dart",
       "quantity": 10,
-      "addedAt": 1787121780121,
+      "addedAt": 1787163790767,
       "kind": "weapon"
     },
-    "book_px0cpm32u": {
-      "id": "book_px0cpm32u",
-      "template": "book",
+    "sickle_euhtgrs7f": {
+      "id": "sickle_euhtgrs7f",
+      "template": "sickle",
       "quantity": 1,
-      "addedAt": 1787121780121,
-      "kind": "tradegood"
+      "addedAt": 1787163790768,
+      "kind": "weapon"
     },
-    "amulet_trvd4grs8": {
-      "id": "amulet_trvd4grs8",
-      "template": "amulet",
-      "quantity": 1,
-      "addedAt": 1787121780121,
-      "kind": "equipment"
-    },
-    "robes_p03myj1bq": {
-      "id": "robes_p03myj1bq",
-      "template": "robes",
-      "quantity": 1,
-      "addedAt": 1787121780121,
-      "kind": "equipment"
-    },
-    "gold_2wy226n2n": {
-      "id": "gold_2wy226n2n",
+    "gold_vr7b9iwk1": {
+      "id": "gold_vr7b9iwk1",
       "template": "gold",
-      "quantity": 8,
-      "addedAt": 1787121780121,
+      "quantity": 23,
+      "addedAt": 1787163790768,
       "kind": "tradegood"
-    },
-    "dagger_was3d34a4": {
-      "id": "dagger_was3d34a4",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1787123933409,
-      "kind": "weapon"
-    },
-    "bedroll_rizzlhalf": {
-      "id": "bedroll_rizzlhalf",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1787123933409,
-      "kind": "tradegood"
-    },
-    "shortbow_e60uvi8g8": {
-      "id": "shortbow_e60uvi8g8",
-      "template": "shortbow",
-      "quantity": 1,
-      "addedAt": 1787123933409,
-      "kind": "weapon"
-    },
-    "arrow_sfo9kqfvq": {
-      "id": "arrow_sfo9kqfvq",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1787123933410,
-      "kind": "consumable"
     }
   },
   "containers": {
@@ -174,51 +149,51 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "book_px0cpm32u"
+          "itemId": "sickle_euhtgrs7f"
         },
         {
           "id": "bag_1",
-          "itemId": "amulet_trvd4grs8"
+          "itemId": "gold_vr7b9iwk1"
         },
         {
           "id": "bag_2",
-          "itemId": "robes_p03myj1bq"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "gold_2wy226n2n"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "dagger_up8ahv4ga"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "bedroll_4tunb701d"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "shortbow_ita1li3ri"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "arrow_fxql6rexi"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "dagger_was3d34a4"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "bedroll_rizzlhalf"
+          "itemId": null
         },
         {
           "id": "bag_10",
-          "itemId": "shortbow_e60uvi8g8"
+          "itemId": null
         },
         {
           "id": "bag_11",
-          "itemId": "arrow_sfo9kqfvq"
+          "itemId": null
         },
         {
           "id": "bag_12",
@@ -276,7 +251,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dart_wa1kdx9v1"
+        "itemId": "dart_5826rojfc"
       },
       {
         "id": "off_hand",
@@ -394,641 +369,60 @@
   },
   "backpack": [
     {
-      "id": "cartographers_tools_k68equ91y",
-      "index": "cartographers_tools",
-      "name": "Cartographer'S Tools",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "quantity": 1
     },
     {
-      "id": "bedroll_0zcyht6z2",
-      "index": "bedroll",
-      "name": "Bedroll",
-      "quantity": 2,
-      "weight": 7,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/bedroll.json",
-      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
-      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
-      "desc": [
-        "Roll of cloth used by traveller to sleep in."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/bedroll.webp",
-      "updated_at": "2026-07-12T19:00:14.010Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 2,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp",
-      "category": "Adventuring Gear"
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "quantity": 1
     },
     {
-      "id": "quiver_o4ky3ww54",
-      "index": "quiver",
-      "name": "Quiver",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
+      "index": "sickle",
+      "name": "Sickle",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "quantity": 1
     },
     {
-      "id": "arrow_6uc0rbbdy",
-      "index": "arrow",
-      "name": "Arrow",
-      "quantity": 40,
-      "weight": 0.05,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/arrow.json",
-      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
-      "desc": [
-        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
-      ],
-      "special": [],
-      "kind": "consumable",
-      "cost": {
-        "quantity": 5,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/arrow.webp",
-      "updated_at": "2026-07-12T19:00:11.722Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 8,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
-      "category": "Ammunition"
-    },
-    {
-      "id": "clothes_travelers_kh3hg6wup",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 5,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_k1zvpj3yb",
       "index": "gold",
       "name": "Gold",
-      "quantity": 67,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear"
-    },
-    {
-      "id": "navigators_tools_8xlj55pbr",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
-    },
-    {
-      "id": "abacus_y9xwukkbv",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
-    },
-    {
-      "id": "pouch_9awsgs0pe",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 4,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "forgery_kit_qlc152s1o",
-      "index": "forgery_kit",
-      "name": "Forgery Kit",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/forgery_kit.json",
-      "image_url": "public/assets/atlas/equipment/images/forgery_kit.webp",
-      "imageUrl": "/assets/atlas/equipment/images/forgery-kit.webp",
-      "desc": [
-        "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document."
-      ],
-      "special": [],
-      "kind": "adventuring_gear",
-      "cost": {
-        "quantity": 15,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/forgery-kit.webp",
-      "updated_at": "2026-07-12T19:00:16.304Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic"
-    },
-    {
-      "id": "clothes_costume_vqc9qp80u",
-      "index": "clothes_costume",
-      "name": "Clothes Costume",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/clothes_costume.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_costume.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_costume.webp"
-    },
-    {
-      "id": "clothes_fine_bmjs6vtf7",
-      "index": "clothes_fine",
-      "name": "Clothes Fine",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/clothes_fine.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_fine.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_fine.webp"
-    },
-    {
-      "id": "calligraphers_supplies_fo6t7zllk",
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
-    },
-    {
-      "id": "book_alywa4fa9",
-      "index": "book",
-      "name": "Book",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp",
-      "desc": [
-        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/book.webp",
-      "updated_at": "2026-07-12T19:00:14.600Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.0webp"
-    },
-    {
-      "id": "parchment_one_sheet_em1kormcr",
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
-    },
-    {
-      "id": "robes_5zpq6e13j",
-      "index": "robes",
-      "name": "Robes",
-      "quantity": 1,
-      "weight": 4,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/robes.json",
-      "image_url": "public/assets/atlas/equipment/images/robes.webp",
-      "imageUrl": "/assets/atlas/equipment/images/robes.webp",
-      "desc": [
-        "Simple or ceremonial wear, often used by priests and other religious figures."
-      ],
-      "special": [],
-      "kind": "equipment",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/robes.webp",
-      "updated_at": "2026-07-12T19:00:13.321Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.0webp"
-    },
-    {
-      "id": "thieves_tools_dp3xzln0o",
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp"
-    },
-    {
-      "id": "crowbar_uwua9qvdo",
-      "index": "crowbar",
-      "name": "Crowbar",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
-      "desc": [
-        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/crowbar.webp",
-      "updated_at": "2026-07-12T19:00:13.571Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 21,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp"
-    },
-    {
-      "id": "shortbow_ivzoteghm",
-      "index": "shortbow",
-      "name": "Shortbow",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/shortbow.json",
-      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
-      "desc": [
-        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/shortbow.webp",
-      "updated_at": "2026-07-12T19:00:20.317Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "ammunition",
-          "name": "ammunition",
-          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
-        },
-        {
-          "index": "two-handed",
-          "name": "two-handed",
-          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
-      "category": "Simple Ranged Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Ranged",
-      "category_range": "Simple Ranged",
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 80,
-        "long": 320
-      }
+      "quantity": 23
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "shortbow_o3bv5bhdx",
-      "index": "shortbow",
-      "name": "Shortbow",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/shortbow.json",
-      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
-      "desc": [
-        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/shortbow.webp",
-      "updated_at": "2026-07-12T19:00:20.317Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "ammunition",
-          "name": "ammunition",
-          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
-        },
-        {
-          "index": "two-handed",
-          "name": "two-handed",
-          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
-      "category": "Simple Ranged Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Ranged",
-      "category_range": "Simple Ranged",
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 80,
-        "long": 320
-      },
-      "slot": "main-hand",
-      "main_hand_slot": "Shortbow"
-    },
-    "neck": {
-      "id": "amulet_nlyfh6368",
-      "index": "amulet",
-      "name": "Amulet",
-      "quantity": 1,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/amulet.json",
-      "image_url": "public/assets/atlas/equipment/images/amulet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/amulet.webp",
-      "desc": [
-        "An amulet depicting a symbol representing a deity through which a true believer can call forth their power and in doing so spread the faith.",
-        "Spellcasting Focus. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
-      ],
-      "special": [],
-      "kind": "equipment",
-      "cost": {
-        "quantity": 5,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/amulet.webp",
-      "updated_at": "2026-07-12T19:00:16.004Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 5,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.0webp",
-      "slot": "neck",
-      "neck_slot": "Amulet"
-    },
-    "off-hand": {
-      "id": "dagger_t29axtdeo",
-      "index": "dagger",
-      "name": "Dagger",
-      "quantity": 2,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
-      "desc": [
-        "A short metal blade mounted to a small hilt and crossguard. The dagger makes an effective side armament for hardened warriors or a hidden blade for assassins and thieves."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/dagger.webp",
-      "updated_at": "2026-07-12T19:00:18.366Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "/assets/atlas/weapon_properties/json/finesse.json"
-        },
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        },
-        {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "/assets/atlas/weapon_properties/json/thrown.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.0webp",
-      "category": "Simple Melee Weapons",
-      "slot": "off-hand",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 20,
-        "long": 60
-      },
-      "off_hand_slot": "Dagger"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
-    "orc"
+    "gnomish"
   ],
   "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
-  },
-  "choices": {
-    "sorcerous_origin": [
-      "draconic_bloodline"
-    ]
-  },
-  "race": "human",
-  "class": "sorcerer",
+  "spellSlots": {},
+  "choices": {},
+  "race": "gnome",
+  "class": "monk",
   "spellcastingAbility": "cha",
-  "background": "guide",
-  "alignment": "neutral_good",
+  "background": "farmer",
+  "alignment": "true_neutral",
   "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
-  "subclass": "draconic_bloodline",
   "id": "slot3",
   "name": "Hero",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-19T08:08:49.017Z"
+  "lastSaved": "2026-08-19T18:23:33.659Z"
 }
