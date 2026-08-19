@@ -864,37 +864,14 @@ const StepContent: React.FC<{
      case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep ruleset={newChar.ruleset || '2014'} onSelectRuleset={onSelectRuleset} /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
      case 'species': {
-        const speciesWithSubraces = available.species.flatMap((s: any) => {
-            const speciesSubraces = available.subraces.filter((sub: any) => {
-                const idx = sub.index.toLowerCase();
-                if (s.index === 'elf') return (idx.includes('elf') && !idx.includes('half-elf')) || idx.includes('drow');
-                if (s.index === 'dwarf') return idx.includes('dwarf');
-                if (s.index === 'halfling') return idx.includes('halfling');
-                if (s.index === 'gnome') return idx.includes('gnome');
-                return false;
-            });
-
-            if (speciesSubraces.length > 0) {
-                return speciesSubraces.map((sub: any) => ({
-                    index: `${s.index}:${sub.index}`,
-                    name: `${sub.name}`
-                }));
-            }
-            return [s];
-        });
-
         return <SelectionStep 
             title="Select Species & Heritage"
             desc="Your species defines your biological traits and natural talents."
-            items={speciesWithSubraces}
-            selected={newChar.subrace ? `${newChar.race}:${newChar.subrace}` : newChar.race}
-            onSelect={(val) => {
-                if (val.includes(':')) {
-                    const [race, subrace] = val.split(':');
-                    setNewChar({...newChar, race, subrace});
-                } else {
-                    setNewChar({...newChar, race: val, subrace: undefined});
-                }
+            items={available.species}
+            selected={newChar.race}
+            selectedSubrace={newChar.subrace}
+            onSelect={(raceVal, subraceVal) => {
+                setNewChar({...newChar, race: raceVal, subrace: subraceVal});
             }}
             category="species"
         />;

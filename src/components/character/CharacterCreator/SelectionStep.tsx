@@ -6,7 +6,7 @@ import {
   fetchSpeciesWikiData, fetchSpeciesData,
   fetchClassWikiData, fetchClassData,
   fetchBackgroundData, fetchAlignmentData,
-  fetchSubraceData, fetchTraitData, fetchWikiAsset,
+  fetchSubraceList, fetchSubraceData, fetchTraitData, fetchWikiAsset,
   normalizeImageUrl
 } from '../../../services/storageService';
 import { SpeciesSprite } from '../species/SpeciesSprite';
@@ -30,13 +30,18 @@ export const SelectionStep: React.FC<{
   desc: string;
   items: { name: string; index: string }[];
   selected?: string;
-  onSelect: (val: string) => void;
+  selectedSubrace?: string;
+  onSelect: (val: string, subraceVal?: string) => void;
   category: string;
-}> = ({ title, desc, items, selected, onSelect, category }) => {
+}> = ({ title, desc, items, selected, selectedSubrace, onSelect, category }) => {
   const [detailData, setDetailData] = useState<any>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [hydratedTraits, setHydratedTraits] = useState<Record<string, any>>({});
   const [hoveredTrait, setHoveredTrait] = useState<string | null>(null);
+
+  // Subrace resolution state
+  const [availableSubraces, setAvailableSubraces] = useState<{ name: string; index: string }[]>([]);
+  const [subraceData, setSubraceData] = useState<any>(null);
 
   // Markdown intro & help state
   const [introMarkdown, setIntroMarkdown] = useState<string>('');
@@ -73,6 +78,66 @@ export const SelectionStep: React.FC<{
       loadMarkdownFiles();
     }
   }, [category]);
+
+  // Fetch available subraces for selected parent species
+  useEffect(() => {
+    if (category === 'species' && selected) {
+      const loadSubraces = async () => {
+        try {
+          const allSubraces = await fetchSubraceList();
+          const matching = await Promise.all(allSubraces.map(async (sub) => {
+            const data = await fetchSubraceData(sub.index);
+            if (data?.race?.index === selected || (data?.race as any) === selected) {
+              return { name: data.name || sub.name, index: sub.index };
+            }
+            const normSub = sub.index.toLowerCase();
+            const normParent = selected.toLowerCase();
+            if (normParent === 'elf' && (normSub.includes('elf') || normSub.includes('drow')) && !normSub.includes('half')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'dwarf' && normSub.includes('dwarf')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'halfling' && normSub.includes('halfling')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'gnome' && normSub.includes('gnome')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            return null;
+          }));
+
+          const validSubraces = matching.filter((s): s is { name: string; index: string } => s !== null);
+          setAvailableSubraces(validSubraces);
+        } catch (err) {
+          console.error("Failed to load subraces for species:", selected, err);
+          setAvailableSubraces([]);
+        }
+      };
+      loadSubraces();
+    } else {
+      setAvailableSubraces([]);
+      setSubraceData(null);
+    }
+  }, [selected, category]);
+
+  // Fetch subrace detail data when selectedSubrace is active
+  useEffect(() => {
+    if (category === 'species' && selectedSubrace) {
+      const loadSubData = async () => {
+        try {
+          const sData = await fetchSubraceData(selectedSubrace);
+          setSubraceData(sData);
+        } catch (e) {
+          console.error("Failed to load subrace data:", selectedSubrace, e);
+          setSubraceData(null);
+        }
+      };
+      loadSubData();
+    } else {
+      setSubraceData(null);
+    }
+  }, [selectedSubrace, category]);
 
   // Fetch detail data when item selected
   useEffect(() => {
@@ -364,17 +429,92 @@ export const SelectionStep: React.FC<{
                       </div>
                     )}
 
-                    {/* Subraces Section */}
-                    {detailData.stats.subraces && detailData.stats.subraces.length > 0 && (
-                      <div className="p-3 bg-white/60 border border-dragon-gold/20 rounded-sm">
-                        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider mb-1">Ancestral Subraces</h4>
-                        <div className="flex gap-2 flex-wrap">
-                          {detailData.stats.subraces.map((sub: any, i: number) => (
-                            <span key={i} className="px-2.5 py-1 bg-dragon-gold/20 border border-dragon-gold/40 text-dragon-darkRed text-xs font-black uppercase rounded">
-                              {sub.name || sub.index || sub}
+                    {/* Subrace Choice Selector Section */}
+                    {category === 'species' && availableSubraces.length > 0 && (
+                      <div className="p-4 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-xs font-header font-black text-dragon-darkRed uppercase tracking-wider flex items-center gap-2">
+                            <GameIcon name="ancestry" size={14} color="#8B0000" />
+                            Select Subrace / Lineage ({detailData?.name})
+                          </h4>
+                          {selectedSubrace && (
+                            <span className="text-[10px] font-black uppercase text-dragon-gold px-2 py-0.5 bg-dragon-darkRed border border-dragon-gold/40 rounded">
+                              Selected: {subraceData?.name || selectedSubrace}
                             </span>
-                          ))}
+                          )}
                         </div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                          {availableSubraces.map(sub => {
+                            const isSubSelected = selectedSubrace === sub.index;
+                            return (
+                              <button
+                                key={sub.index}
+                                onClick={() => onSelect(selected!, isSubSelected ? undefined : sub.index)}
+                                className={cn(
+                                  "p-3 rounded-sm border-2 transition-all flex flex-col items-center justify-center text-center gap-1.5 relative group",
+                                  isSubSelected
+                                    ? "bg-dragon-darkRed text-white border-dragon-gold shadow-md"
+                                    : "bg-white/70 border-dragon-gold/30 text-dragon-darkRed hover:bg-white hover:border-dragon-gold/60"
+                                )}
+                              >
+                                <div className="w-12 h-12 rounded-full overflow-hidden border border-dragon-gold/30 p-1 bg-parchment-100 flex items-center justify-center shrink-0">
+                                  <SpeciesSprite speciesKey={sub.index} alt={sub.name} className="w-full h-full object-contain" />
+                                </div>
+                                <span className="text-xs font-header font-black uppercase tracking-wide">
+                                  {sub.name}
+                                </span>
+                                {isSubSelected && (
+                                  <span className="text-[8px] font-black uppercase text-dragon-gold tracking-widest">
+                                    ✓ Active Subrace
+                                  </span>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Active Subrace Detailed Stats */}
+                    {category === 'species' && subraceData && (
+                      <div className="p-4 bg-white/80 border-2 border-dragon-gold/40 rounded-sm space-y-3 relative shadow-md">
+                        <div className="flex justify-between items-start border-b border-dragon-gold/20 pb-2">
+                          <div>
+                            <span className="text-[9px] font-black text-dragon-gold uppercase tracking-widest block">Subrace Lineage Profile</span>
+                            <h4 className="text-2xl font-header font-black text-dragon-darkRed uppercase leading-none">{subraceData.name}</h4>
+                          </div>
+                          {subraceData.ability_bonuses && subraceData.ability_bonuses.length > 0 && (
+                            <div className="flex gap-1">
+                              {subraceData.ability_bonuses.map((ab: any, idx: number) => (
+                                <span key={idx} className="px-2 py-0.5 bg-dragon-red text-white rounded text-[10px] font-black uppercase shadow-sm">
+                                  {(ab.ability_score?.name || ab.ability_score?.index || ab.ability_score || '').toUpperCase()} +{ab.bonus}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {subraceData.desc && (
+                          <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
+                            {subraceData.desc}
+                          </p>
+                        )}
+
+                        {subraceData.racial_traits && subraceData.racial_traits.length > 0 && (
+                          <div className="space-y-2 pt-1">
+                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider block">Subrace Granted Traits</span>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                              {subraceData.racial_traits.map((t: any, i: number) => (
+                                <div key={i} className="p-2 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm">
+                                  <span className="text-xs font-header font-black text-dragon-red uppercase block">
+                                    {t.name || t.index || t}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
 
