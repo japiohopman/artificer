@@ -61,17 +61,13 @@ export const StatsStep: React.FC<{
   };
 
   const handleRollAttribute = async (stat: keyof Character['stats']) => {
+    if (diceService.isRolling) return;
     setIsRolling(true);
-    useGameStore.getState().setIsRolling3D(true);
     try {
       const result = await diceService.rollAbilityScore(`Roll ${labels[stat]}`);
-      handleAssign(stat, result.total);
-      
-      // Auto-hide dice after a delay like in useGameStore
-      setTimeout(() => {
-        diceService.clear();
-        useGameStore.getState().setIsRolling3D(false);
-      }, 5000);
+      if (result) {
+        handleAssign(stat, result.total);
+      }
     } catch (e) {
       console.error(e);
     } finally {
@@ -80,26 +76,21 @@ export const StatsStep: React.FC<{
   };
 
   const handleRollPool = async () => {
+    if (diceService.isRolling) return;
     setIsRolling(true);
-    useGameStore.getState().setIsRolling3D(true);
     try {
       const newStats: Record<string, number> = {};
       
-      // Roll all 6 simultaneously or sequentially? Sequentially is easier and works
       for (const s of statsList) {
         const result = await diceService.rollAbilityScore(`Roll ${labels[s]}`);
-        newStats[s] = result.total;
-        
-        // Brief pause between rolls to let them clear
-        diceService.clear();
-        await new Promise(r => setTimeout(r, 100));
+        if (result) {
+          newStats[s] = result.total;
+        }
       }
       
       setAssignments(newStats);
       setNewChar({ ...newChar, stats: newStats as any });
       setPoolType('rolled');
-      
-      useGameStore.getState().setIsRolling3D(false);
     } catch (e) {
       console.error(e);
     } finally {
@@ -259,7 +250,7 @@ export const StatsStep: React.FC<{
                     ) : poolType === 'rolled' ? (
                       <button
                         onClick={() => handleRollAttribute(stat)}
-                        disabled={isRolling}
+                        disabled={isRolling || diceService.isRolling}
                         className="px-3 py-2 bg-dragon-red text-white border border-dragon-gold/40 rounded-sm font-header font-black text-xs uppercase tracking-wider shadow-md hover:bg-dragon-darkRed transition-all flex items-center gap-1.5 active:scale-95 disabled:opacity-50"
                       >
                         <GameIcon name="dice" size={14} color="#FFFFFF" />
@@ -350,7 +341,7 @@ export const StatsStep: React.FC<{
                 </p>
                 <button
                   onClick={handleRollPool}
-                  disabled={isRolling}
+                  disabled={isRolling || diceService.isRolling}
                   className="w-full py-3 bg-dragon-gold text-dragon-darkRed border border-white font-header font-black uppercase tracking-wider rounded-sm shadow-xl hover:bg-white transition-all flex items-center justify-center gap-2"
                 >
                   <GameIcon name="refresh" size={16} color="currentColor" className={isRolling ? "animate-spin" : ""} />
