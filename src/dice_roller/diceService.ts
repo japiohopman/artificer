@@ -24,17 +24,50 @@ export interface DiceResult {
   timestamp: number;
 }
 
+export type DiceServiceStatus = 'idle' | 'rolling';
+
 class DiceService {
   private diceBox: any;
   private roller: any;
   private parser: any;
   private initialized: boolean = false;
   private initPromise: Promise<void> | null = null;
+  private status: DiceServiceStatus = 'idle';
+  private listeners: Set<(status: DiceServiceStatus) => void> = new Set();
 
   constructor() {
     // Some versions of dice-roller-parser require a random callback
     this.roller = new DiceRoller();
     this.parser = new DiceParser();
+  }
+
+  get isRolling(): boolean {
+    return this.status === 'rolling';
+  }
+
+  getStatus(): DiceServiceStatus {
+    return this.status;
+  }
+
+  subscribe(listener: (status: DiceServiceStatus) => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  private async updateGameStoreState(isRolling: boolean) {
+    try {
+      const { useGameStore } = await import('../store/useGameStore');
+      useGameStore.getState().setIsRolling3D(isRolling);
+    } catch (e) {
+      console.warn('[DiceService] Could not update useGameStore:', e);
+    }
+  }
+
+  private setStatus(status: DiceServiceStatus) {
+    this.status = status;
+    const isRolling = status === 'rolling';
+    this.updateGameStoreState(isRolling);
+    this.listeners.forEach(l => l(status));
   }
 
   async init(containerArg: string | HTMLElement): Promise<void> {
@@ -113,7 +146,14 @@ class DiceService {
   /**
    * Roll dice with 3D animation
    */
-  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult> {
+  async roll3D(notation: string, label: string = "Roll", theme?: string, color?: string): Promise<DiceResult | null> {
+    if (this.isRolling) {
+      console.warn(`[DiceService] Roll request ignored: dice system is busy (${this.status}).`);
+      return null;
+    }
+
+    this.setStatus('rolling');
+
     console.log(`[DiceService] Starting 3D Roll: ${notation} with theme: ${theme}, color: ${color}`);
 
     // Play roll sound effect
@@ -121,17 +161,17 @@ class DiceService {
       soundService.playEffect('DICE_ROLL');
     });
 
-    // Wait for initialization if it's in progress
-    if (this.initPromise) {
-      await this.initPromise;
-    }
-
-    if (!this.initialized) {
-      console.warn("[DiceService] DiceBox not initialized, falling back to background roll.");
-      return this.rollBackground(notation, label);
-    }
-
     try {
+      // Wait for initialization if it's in progress
+      if (this.initPromise) {
+        await this.initPromise;
+      }
+
+      if (!this.initialized || !this.diceBox) {
+        console.warn("[DiceService] DiceBox not initialized, falling back to background roll.");
+        return this.rollBackground(notation, label);
+      }
+
       // 3D Roll - Ensure theme and color are passed correctly
       const rollTheme = theme || "default";
       const rollOptions: any = { theme: rollTheme };
@@ -163,7 +203,7 @@ class DiceService {
       rolls.filter(r => r.valid !== false).forEach(r => rollSum += r.result);
       const modifier = finalResults.value - rollSum;
 
-      return {
+      const diceResult: DiceResult = {
         id: crypto.randomUUID(),
         notation,
         total: finalResults.value,
@@ -172,9 +212,17 @@ class DiceService {
         modifier,
         timestamp: Date.now()
       };
+
+      // Centralized short visual delay so physical dice remain visible briefly after settling
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      return diceResult;
     } catch (error) {
       console.error("[DiceService] roll3D execution failed:", error);
       return this.rollBackground(notation, label);
+    } finally {
+      this.safeClear();
+      this.setStatus('idle');
     }
   }
 
@@ -249,14 +297,26 @@ class DiceService {
     }
   }
 
-  async rollAbilityScore(label = "Ability Score"): Promise<DiceResult> {
+  async rollAbilityScore(label = "Ability Score"): Promise<DiceResult | null> {
     return this.roll3D("4d6dl1", label, "default", "#8b0000");
   }
 
-  clear() {
-    if (this.initialized) {
-      this.diceBox.clear();
+  private safeClear() {
+    if (this.initialized && this.diceBox) {
+      try {
+        this.diceBox.clear();
+      } catch (e) {
+        console.warn("[DiceService] Error clearing diceBox:", e);
+      }
     }
+  }
+
+  clear() {
+    if (this.isRolling) {
+      console.warn("[DiceService] Cannot clear dice while a roll is active.");
+      return;
+    }
+    this.safeClear();
   }
 
   updateConfig(config: any) {

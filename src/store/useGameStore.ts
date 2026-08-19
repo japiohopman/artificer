@@ -1031,9 +1031,14 @@ export const useGameStore = create<GameState>((set, get) => ({
     const selectedDiceTheme = 'default';
     const selectedDiceColor = '#8b0000';
     
-    set({ isRolling3D: true });
+    if (diceService.isRolling) {
+      console.warn("[GameStore] Roll request ignored: DiceService is currently rolling.");
+      return;
+    }
+
     try {
       const result = await diceService.roll3D(notation, label, theme || selectedDiceTheme, color || selectedDiceColor);
+      if (!result) return;
       
       // Create detailed log message
       const rollDetails = result.rolls
@@ -1053,19 +1058,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       set((state) => ({ 
         recentRolls: [result, ...state.recentRolls].slice(0, 5) 
       }));
-      
-      // Auto-clear 3D dice after a delay
-      setTimeout(() => {
-        diceService.clear();
-        set({ isRolling3D: false });
-      }, 5000);
     } catch (error) {
       console.error("Roll failed", error);
-      set({ isRolling3D: false });
-      const result = diceService.rollBackground(notation, label);
-      set((state) => ({ 
-        recentRolls: [result, ...state.recentRolls].slice(0, 5) 
-      }));
     }
   },
 
