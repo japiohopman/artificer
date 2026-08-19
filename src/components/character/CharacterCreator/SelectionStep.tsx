@@ -25,6 +25,37 @@ const STAT_ICONS: Record<string, any> = {
   cha: 'cha'
 };
 
+const ALIGNMENT_ATMOSPHERE_MAP: Record<string, string> = {
+  'lawful_good': '/assets/images/enemy_backgrounds/church.webp',
+  'lawful-good': '/assets/images/enemy_backgrounds/church.webp',
+  'lawful good': '/assets/images/enemy_backgrounds/church.webp',
+  'neutral_good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'neutral-good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'neutral good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'chaotic_good': '/assets/images/enemy_backgrounds/air1.webp',
+  'chaotic-good': '/assets/images/enemy_backgrounds/air1.webp',
+  'chaotic good': '/assets/images/enemy_backgrounds/air1.webp',
+  'lawful_neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'lawful-neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'lawful neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'true_neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'true-neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'true neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'chaotic_neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'chaotic-neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'chaotic neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'lawful_evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'lawful-evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'lawful evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'neutral_evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'neutral-evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'neutral evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'chaotic_evil': '/assets/images/enemy_backgrounds/void.webp',
+  'chaotic-evil': '/assets/images/enemy_backgrounds/void.webp',
+  'chaotic evil': '/assets/images/enemy_backgrounds/void.webp'
+};
+
 export const SelectionStep: React.FC<{
   title: string;
   desc: string;
@@ -208,8 +239,16 @@ export const SelectionStep: React.FC<{
 
   const artUrl = detailData?.imageUrl;
 
+  const alignmentBg = category === 'alignments' && selected ? ALIGNMENT_ATMOSPHERE_MAP[selected.toLowerCase()] : null;
+
   return (
     <div className="h-full flex flex-col overflow-hidden relative">
+      {alignmentBg && (
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none transition-all duration-700 ease-in-out filter blur-[1px]"
+          style={{ backgroundImage: `url('${alignmentBg}')` }}
+        />
+      )}
       {/* Help Modal Overlay */}
       <AnimatePresence>
         {isHelpOpen && (
