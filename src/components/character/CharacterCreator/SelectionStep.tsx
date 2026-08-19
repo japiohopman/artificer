@@ -1,46 +1,183 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import Markdown from 'react-markdown';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
 import { 
   fetchSpeciesWikiData, fetchSpeciesData,
   fetchClassWikiData, fetchClassData,
   fetchBackgroundData, fetchAlignmentData,
-  fetchSubraceData, fetchTraitData, fetchWikiAsset,
+  fetchSubraceList, fetchSubraceData, fetchTraitData, fetchWikiAsset,
   normalizeImageUrl
 } from '../../../services/storageService';
 import { SpeciesSprite } from '../species/SpeciesSprite';
 import { ClassSprite } from '../classes/ClassSprite';
+import { BackgroundSprite } from '../backgrounds/BackgroundSprite';
+import { ChoiceCard } from './ChoiceCard';
+import { DnDMarkdown } from '../../ui/DnDMarkdown';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
 
 const STAT_ICONS: Record<string, any> = {
-    str: 'str',
-    dex: 'dex',
-    con: 'con',
-    int: 'int',
-    wis: 'wis',
-    cha: 'cha'
+  str: 'str',
+  dex: 'dex',
+  con: 'con',
+  int: 'int',
+  wis: 'wis',
+  cha: 'cha'
+};
+
+const ALIGNMENT_ATMOSPHERE_MAP: Record<string, string> = {
+  'lawful_good': '/assets/images/enemy_backgrounds/church.webp',
+  'lawful-good': '/assets/images/enemy_backgrounds/church.webp',
+  'lawful good': '/assets/images/enemy_backgrounds/church.webp',
+  'neutral_good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'neutral-good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'neutral good': '/assets/images/enemy_backgrounds/mountain2.webp',
+  'chaotic_good': '/assets/images/enemy_backgrounds/air1.webp',
+  'chaotic-good': '/assets/images/enemy_backgrounds/air1.webp',
+  'chaotic good': '/assets/images/enemy_backgrounds/air1.webp',
+  'lawful_neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'lawful-neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'lawful neutral': '/assets/images/enemy_backgrounds/castle2.webp',
+  'true_neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'true-neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'true neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
+  'chaotic_neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'chaotic-neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'chaotic neutral': '/assets/images/enemy_backgrounds/air3.webp',
+  'lawful_evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'lawful-evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'lawful evil': '/assets/images/enemy_backgrounds/volcano.webp',
+  'neutral_evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'neutral-evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'neutral evil': '/assets/images/enemy_backgrounds/void3.webp',
+  'chaotic_evil': '/assets/images/enemy_backgrounds/void.webp',
+  'chaotic-evil': '/assets/images/enemy_backgrounds/void.webp',
+  'chaotic evil': '/assets/images/enemy_backgrounds/void.webp'
 };
 
 export const SelectionStep: React.FC<{
-    title: string;
-    desc: string;
-    items: {name: string, index: string}[];
-    selected?: string;
-    onSelect: (val: string) => void;
-    category: string;
-}> = ({ title, desc, items, selected, onSelect, category }) => {
+  title: string;
+  desc: string;
+  items: { name: string; index: string }[];
+  selected?: string;
+  selectedSubrace?: string;
+  onSelect: (val: string, subraceVal?: string) => void;
+  category: string;
+}> = ({ title, desc, items, selected, selectedSubrace, onSelect, category }) => {
   const [detailData, setDetailData] = useState<any>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [hydratedTraits, setHydratedTraits] = useState<Record<string, any>>({});
   const [hoveredTrait, setHoveredTrait] = useState<string | null>(null);
 
+  // Subrace resolution state
+  const [availableSubraces, setAvailableSubraces] = useState<{ name: string; index: string }[]>([]);
+  const [subraceData, setSubraceData] = useState<any>(null);
+
+  // Markdown intro & help state
+  const [introMarkdown, setIntroMarkdown] = useState<string>('');
+  const [helpMarkdown, setHelpMarkdown] = useState<string>('');
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
+
+  // Load intro and help markdown files based on category
+  useEffect(() => {
+    const loadMarkdownFiles = async () => {
+      let basePath = '/assets/ui/official/races/race';
+      if (category === 'class') basePath = '/assets/ui/official/classes/class';
+      else if (category === 'backgrounds') basePath = '/assets/ui/official/backgrounds/background';
+
+      try {
+        const [introRes, helpRes] = await Promise.all([
+          fetch(`${basePath}_choice.md`),
+          fetch(`${basePath}_help.md`)
+        ]);
+
+        if (introRes.ok) {
+          const introText = await introRes.text();
+          setIntroMarkdown(introText);
+        }
+        if (helpRes.ok) {
+          const helpText = await helpRes.text();
+          setHelpMarkdown(helpText);
+        }
+      } catch (err) {
+        console.error('Failed to load markdown files for category:', category, err);
+      }
+    };
+
+    if (['species', 'class', 'backgrounds'].includes(category)) {
+      loadMarkdownFiles();
+    }
+  }, [category]);
+
+  // Fetch available subraces for selected parent species
+  useEffect(() => {
+    if (category === 'species' && selected) {
+      const loadSubraces = async () => {
+        try {
+          const allSubraces = await fetchSubraceList();
+          const matching = await Promise.all(allSubraces.map(async (sub) => {
+            const data = await fetchSubraceData(sub.index);
+            if (data?.race?.index === selected || (data?.race as any) === selected) {
+              return { name: data.name || sub.name, index: sub.index };
+            }
+            const normSub = sub.index.toLowerCase();
+            const normParent = selected.toLowerCase();
+            if (normParent === 'elf' && (normSub.includes('elf') || normSub.includes('drow')) && !normSub.includes('half')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'dwarf' && normSub.includes('dwarf')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'halfling' && normSub.includes('halfling')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            if (normParent === 'gnome' && normSub.includes('gnome')) {
+              return { name: data?.name || sub.name, index: sub.index };
+            }
+            return null;
+          }));
+
+          const validSubraces = matching.filter((s): s is { name: string; index: string } => s !== null);
+          setAvailableSubraces(validSubraces);
+        } catch (err) {
+          console.error("Failed to load subraces for species:", selected, err);
+          setAvailableSubraces([]);
+        }
+      };
+      loadSubraces();
+    } else {
+      setAvailableSubraces([]);
+      setSubraceData(null);
+    }
+  }, [selected, category]);
+
+  // Fetch subrace detail data when selectedSubrace is active
+  useEffect(() => {
+    if (category === 'species' && selectedSubrace) {
+      const loadSubData = async () => {
+        try {
+          const sData = await fetchSubraceData(selectedSubrace);
+          setSubraceData(sData);
+        } catch (e) {
+          console.error("Failed to load subrace data:", selectedSubrace, e);
+          setSubraceData(null);
+        }
+      };
+      loadSubData();
+    } else {
+      setSubraceData(null);
+    }
+  }, [selectedSubrace, category]);
+
+  // Fetch detail data when item selected
   useEffect(() => {
     if (selected) {
-        fetchDetail(selected);
+      fetchDetail(selected);
+    } else {
+      setDetailData(null);
     }
-  }, [selected]);
+  }, [selected, category]);
 
   const fetchDetail = async (index: string) => {
     setDetailData(null);
@@ -48,343 +185,438 @@ export const SelectionStep: React.FC<{
     let data = null;
     let statsData = null;
     try {
-        if (category === 'species') {
-            data = await fetchSpeciesWikiData(index);
-            statsData = await fetchSpeciesData(index);
-        }
-        else if (category === 'subrace') {
-            data = await fetchSubraceData(index);
-            statsData = data;
-        }
-        else if (category === 'class') {
-            data = await fetchClassWikiData(index);
-            statsData = await fetchClassData(index);
-        }
-        else if (category === 'backgrounds') data = await fetchBackgroundData(index);
-        else if (category === 'alignments') data = await fetchAlignmentData(index);
-        
-        setDetailData({ ...data, stats: statsData });
+      if (category === 'species') {
+        data = await fetchSpeciesWikiData(index);
+        statsData = await fetchSpeciesData(index);
+      } else if (category === 'subrace') {
+        data = await fetchSubraceData(index);
+        statsData = data;
+      } else if (category === 'class') {
+        data = await fetchClassWikiData(index);
+        statsData = await fetchClassData(index);
+      } else if (category === 'backgrounds') {
+        data = await fetchBackgroundData(index);
+      } else if (category === 'alignments') {
+        data = await fetchAlignmentData(index);
+      }
 
-        // Hydrate traits/proficiencies for tooltips
-        const traits = (data?.traits || statsData?.proficiencies || data?.proficiencies || []).slice(0, 20);
-        const traitPromises = traits.map(async (t: any) => {
-            const tIndex = t.index || (typeof t === 'string' ? t.toLowerCase().replace(/\s+/g, '_') : '');
-            const tUrl = t.url;
-            
-            let tData = null;
-            if (tUrl && !tUrl.includes('/json/')) {
-                if (tUrl.includes('/traits/')) {
-                    tData = await fetchTraitData(tIndex);
-                } else {
-                    tData = await fetchWikiAsset(tUrl);
-                }
-            } else if (tIndex) {
-                tData = await fetchTraitData(tIndex);
-            }
-            
-            if (tData) return { id: tIndex || (t.name || t), data: tData };
-            return null;
-        });
+      setDetailData({ ...data, stats: statsData });
 
-        const results = await Promise.all(traitPromises);
-        const traitsMap: Record<string, any> = {};
-        results.forEach(r => {
-            if (r) traitsMap[r.id] = r.data;
-        });
-        setHydratedTraits(traitsMap);
+      // Hydrate traits/proficiencies for tooltips & detailed view
+      const traits = (data?.traits || statsData?.traits || statsData?.proficiencies || data?.proficiencies || []).slice(0, 20);
+      const traitPromises = traits.map(async (t: any) => {
+        const tIndex = t.index || (typeof t === 'string' ? t.toLowerCase().replace(/\s+/g, '_') : '');
+        const tUrl = t.url;
+
+        let tData = null;
+        if (tUrl && !tUrl.includes('/json/')) {
+          if (tUrl.includes('/traits/')) {
+            tData = await fetchTraitData(tIndex);
+          } else {
+            tData = await fetchWikiAsset(tUrl);
+          }
+        } else if (tIndex) {
+          tData = await fetchTraitData(tIndex);
+        }
+
+        if (tData) return { id: tIndex || (t.name || t), data: tData };
+        return null;
+      });
+
+      const results = await Promise.all(traitPromises);
+      const traitsMap: Record<string, any> = {};
+      results.forEach(r => {
+        if (r) traitsMap[r.id] = r.data;
+      });
+      setHydratedTraits(traitsMap);
 
     } catch (e) {
-        console.error(e);
+      console.error(e);
     } finally {
-        setLoadingDetail(false);
+      setLoadingDetail(false);
     }
   };
 
   const artUrl = detailData?.imageUrl;
 
-   return (
-    <div className="h-full flex flex-col overflow-hidden">
-       <div className="flex-1 flex flex-col md:flex-row gap-4 overflow-hidden min-h-0 p-1">
-          {/* List - Grid for all, or sidebar for specific */}
-          <div className={cn(
-              "overflow-y-auto custom-scrollbar content-start py-2",
-              category === 'backgrounds' ? "w-full md:w-80 grid grid-cols-2 gap-2 pr-2" : "w-48 grid grid-cols-1 gap-1 pr-1 border-r border-dragon-gold/10"
-          )}>
-              {items.map(item => {
-                const isSelected = selected === item.index;
+  const alignmentBg = category === 'alignments' && selected ? ALIGNMENT_ATMOSPHERE_MAP[selected.toLowerCase()] : null;
 
-                return (
-                    <button
-                        key={item.index}
-                        onClick={() => onSelect(item.index)}
-                        title={item.name}
-                        className={cn(
-                            "flex items-center rounded-sm border transition-all relative shrink-0 overflow-hidden",
-                            category === 'backgrounds' ? "w-full h-12 px-3 justify-start bg-white/40" : "w-full h-10 px-3 justify-start",
-                            isSelected
-                                ? "bg-dragon-red text-white border-dragon-red shadow-lg scale-102 z-10"
-                                : "bg-white/10 border-dragon-red/5 hover:border-dragon-red/20 text-parchment-950 hover:bg-white/40"
-                        )}
-                    >
-                         {/* Selection Highlight */}
-                         {isSelected && (
-                            <motion.div
-                                layoutId="selection-highlight"
-                                className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none"
-                            />
+  return (
+    <div className="h-full flex flex-col overflow-hidden relative">
+      {alignmentBg && (
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none transition-all duration-700 ease-in-out filter blur-[1px]"
+          style={{ backgroundImage: `url('${alignmentBg}')` }}
+        />
+      )}
+      {/* Help Modal Overlay */}
+      <AnimatePresence>
+        {isHelpOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex items-center justify-center p-6"
+            onClick={() => setIsHelpOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-parchment-100 border-2 border-dragon-gold p-6 rounded-sm max-w-2xl w-full max-h-[80vh] overflow-y-auto custom-scrollbar shadow-2xl relative"
+            >
+              <button
+                onClick={() => setIsHelpOpen(false)}
+                className="absolute top-4 right-4 px-2 py-1 bg-dragon-red text-white text-xs font-bold rounded hover:bg-dragon-darkRed transition-colors"
+              >
+                Close ✕
+              </button>
+              <DnDMarkdown content={helpMarkdown} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Content Layout */}
+      <div className="flex-1 flex flex-col md:flex-row gap-4 overflow-hidden min-h-0 p-1">
+        {/* Left Selector Panel: 2 Columns for Species, Class, Backgrounds */}
+        <div className={cn(
+          "overflow-y-auto custom-scrollbar content-start py-2 pr-2 border-r border-dragon-gold/20 shrink-0",
+          category === 'alignments' ? "w-full md:w-80 grid grid-cols-3 gap-2" : "w-full md:w-80 lg:w-96 grid grid-cols-2 gap-2"
+        )}>
+          {items.map(item => {
+            const isSelected = selected === item.index;
+
+            return (
+              <ChoiceCard
+                key={item.index}
+                id={item.index}
+                name={item.name}
+                category={category}
+                isSelected={isSelected}
+                onSelect={() => onSelect(item.index)}
+              />
+            );
+          })}
+        </div>
+
+        {/* Right Central Information / "Examine Records" Panel */}
+        <div className="flex-1 bg-white/40 border border-dragon-gold/20 rounded-sm p-4 relative overflow-hidden flex flex-col">
+          {/* Panel Header with Title and Help Button */}
+          <div className="flex justify-between items-center border-b border-dragon-gold/20 pb-2 mb-3 shrink-0">
+            <span className="text-[10px] font-black uppercase text-dragon-darkRed tracking-[0.3em] flex items-center gap-2">
+              <GameIcon name="info" size={14} color="#B8860B" />
+              {selected ? "Examine Records: " + (detailData?.name || selected) : "Selection Guide & Lore"}
+            </span>
+
+            {['species', 'class', 'backgrounds'].includes(category) && (
+              <button
+                onClick={() => setIsHelpOpen(true)}
+                title="View Help & Advice"
+                className="flex items-center gap-1.5 px-2.5 py-1 bg-dragon-gold/10 border border-dragon-gold/30 hover:bg-dragon-gold/20 rounded text-[10px] font-black text-dragon-darkRed uppercase tracking-wider transition-colors"
+              >
+                <GameIcon name="help" size={12} color="#8B0000" fallbackName="info" />
+                Help [?]
+              </button>
+            )}
+          </div>
+
+          {/* Panel Body: Show Intro Markdown when NO selection, or Selected Details when item chosen */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
+            {loadingDetail ? (
+              <div className="h-full flex items-center justify-center">
+                <GameIcon name="refresh" color="#B8860B" size={24} className="animate-spin" />
+              </div>
+            ) : !selected ? (
+              /* Initial State: Show Choice Introduction Markdown */
+              <div className="py-2 px-1">
+                <DnDMarkdown content={introMarkdown} />
+              </div>
+            ) : detailData ? (
+              /* Selected State: Hide Introduction and Show Selected Details */
+              <div className="space-y-6">
+                {/* Header Banner */}
+                <div className="flex gap-6 items-start border-b border-dragon-gold/20 pb-4 relative">
+                  <div className="w-40 h-40 lg:w-48 lg:h-48 bg-dragon-red/5 border-2 border-dragon-gold/20 shadow-md overflow-hidden p-2 shrink-0 rounded-sm relative flex items-center justify-center">
+                    <div className="absolute inset-0 bg-paper-texture opacity-30 mix-blend-multiply" />
+                    {category === 'species' ? (
+                      <div className="w-full h-full flex items-center justify-center relative z-10">
+                        <SpeciesSprite
+                          speciesKey={detailData?.index || selected || ''}
+                          alt={detailData?.name}
+                          fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
+                          className="w-full h-full object-contain drop-shadow-xl"
+                        />
+                      </div>
+                    ) : category === 'class' ? (
+                      <div className="w-full h-full flex items-center justify-center relative z-10">
+                        <ClassSprite
+                          classKey={detailData?.index || selected || ''}
+                          alt={detailData?.name}
+                          fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
+                          className="w-full h-full object-contain drop-shadow-xl"
+                        />
+                      </div>
+                    ) : category === 'backgrounds' ? (
+                      <div className="w-full h-full flex items-center justify-center relative z-10">
+                        <BackgroundSprite
+                          backgroundKey={detailData?.index || selected || ''}
+                          alt={detailData?.name}
+                          fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
+                          className="w-full h-full object-contain drop-shadow-xl"
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        src={normalizeImageUrl(artUrl, category, detailData.index)}
+                        alt={detailData.name}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain relative z-10 drop-shadow-xl"
+                      />
+                    )}
+                  </div>
+
+                  <div className="flex-1 space-y-3">
+                    <h3 className="text-4xl lg:text-5xl font-header font-black text-dragon-darkRed uppercase tracking-wide leading-none">
+                      {detailData.name}
+                    </h3>
+
+                    {/* Category-Specific Quick Stats Grid */}
+                    {category === 'species' && (
+                      <div className="space-y-2">
+                        {/* Ability Score Increases */}
+                        {detailData.stats?.ability_bonuses && detailData.stats.ability_bonuses.length > 0 && (
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-[10px] font-black uppercase text-parchment-600 tracking-wider">Ability Score Bonus:</span>
+                            {detailData.stats.ability_bonuses.map((ab: any, idx: number) => (
+                              <span key={idx} className="px-2 py-0.5 bg-dragon-gold/20 border border-dragon-gold/40 rounded text-xs font-black text-dragon-darkRed uppercase">
+                                {(ab.ability_score?.name || ab.ability_score?.index || ab.ability_score || '').toUpperCase()} +{ab.bonus}
+                              </span>
+                            ))}
+                          </div>
                         )}
 
-                        <div className="flex flex-col items-start overflow-hidden w-full">
-                            <span className={cn(
-                                "text-[9px] font-black uppercase tracking-widest truncate w-full",
-                                isSelected ? "text-white" : "text-dragon-darkRed"
-                            )}>
-                                {item.name}
+                        <div className="grid grid-cols-2 gap-2 pt-1">
+                          <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded">
+                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Size</span>
+                            <span className="text-sm font-header font-black text-dragon-darkRed uppercase">{detailData.stats?.size || 'Medium'}</span>
+                          </div>
+                          <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded">
+                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Speed</span>
+                            <span className="text-sm font-header font-black text-dragon-darkRed uppercase">{detailData.stats?.speed || '30'} ft.</span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {category === 'class' && (
+                      <div className="grid grid-cols-2 gap-2 pt-1">
+                        <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded flex items-center gap-2">
+                          <GameIcon name={`d${detailData.stats?.hit_die || '8'}` as any} size={24} className="text-dragon-red" />
+                          <div>
+                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Hit Die</span>
+                            <span className="text-sm font-header font-black text-dragon-darkRed uppercase">D{detailData.stats?.hit_die || '8'}</span>
+                          </div>
+                        </div>
+                        <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded">
+                          <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Saving Throws</span>
+                          <span className="text-xs font-header font-black text-dragon-darkRed uppercase">
+                            {detailData.stats?.saving_throws?.map((s: any) => (s.name || s).toUpperCase()).join(', ') || 'N/A'}
+                          </span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Detailed Canonical Species Content Sections */}
+                {category === 'species' && detailData.stats && (
+                  <div className="space-y-4">
+                    {/* Age Section */}
+                    {detailData.stats.age && (
+                      <div className="p-3 bg-white/60 border border-dragon-gold/20 rounded-sm">
+                        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider mb-1">Age</h4>
+                        <p className="text-xs font-body text-parchment-900 leading-relaxed">{detailData.stats.age}</p>
+                      </div>
+                    )}
+
+                    {/* Alignment Section */}
+                    {detailData.stats.alignment && (
+                      <div className="p-3 bg-white/60 border border-dragon-gold/20 rounded-sm">
+                        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider mb-1">Alignment Orientation</h4>
+                        <p className="text-xs font-body text-parchment-900 leading-relaxed">{detailData.stats.alignment}</p>
+                      </div>
+                    )}
+
+                    {/* Languages Section */}
+                    {(detailData.stats.languages || detailData.stats.language_desc) && (
+                      <div className="p-3 bg-white/60 border border-dragon-gold/20 rounded-sm space-y-1">
+                        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider">Languages</h4>
+                        {detailData.stats.languages && (
+                          <div className="flex gap-1.5 flex-wrap mb-1">
+                            {detailData.stats.languages.map((l: any, i: number) => (
+                              <span key={i} className="px-2 py-0.5 bg-dragon-red/10 text-dragon-red text-[10px] font-black uppercase rounded">
+                                {l.name || l.index || l}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {detailData.stats.language_desc && (
+                          <p className="text-xs font-body text-parchment-800 leading-relaxed italic">{detailData.stats.language_desc}</p>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Subrace Choice Selector Section */}
+                    {category === 'species' && availableSubraces.length > 0 && (
+                      <div className="p-4 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-xs font-header font-black text-dragon-darkRed uppercase tracking-wider flex items-center gap-2">
+                            <GameIcon name="ancestry" size={14} color="#8B0000" />
+                            Select Subrace / Lineage ({detailData?.name})
+                          </h4>
+                          {selectedSubrace && (
+                            <span className="text-[10px] font-black uppercase text-dragon-gold px-2 py-0.5 bg-dragon-darkRed border border-dragon-gold/40 rounded">
+                              Selected: {subraceData?.name || selectedSubrace}
                             </span>
-                            {isSelected && <span className="text-[7px] text-white/60 font-medium uppercase tracking-tighter">Selected</span>}
+                          )}
                         </div>
 
-                        {isSelected && (
-                            <div className="absolute top-0 right-0 w-2 h-2 bg-white rounded-full translate-x-1/3 -translate-y-1/3 shadow-sm border border-dragon-red" />
-                        )}
-                    </button>
-                );
-              })}
-          </div>
- 
-          {/* Details Panel */}
-          <div className="flex-1 bg-white/40 border border-dragon-gold/20 rounded-sm p-3 relative overflow-hidden flex flex-col">
-             {loadingDetail ? (
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <GameIcon name="refresh" color="#B8860B" size={20} className="animate-spin" />
-                 </div>
-             ) : detailData ? (
-                 <div className="h-full overflow-y-auto custom-scrollbar pr-2">
-                    <div className="space-y-4">
-                        <div className="flex gap-8 items-start border-b border-dragon-gold/10 pb-6 relative group/header">
-                            {(category === 'species' || artUrl) && (
-                                <div className="w-48 h-48 lg:w-56 lg:h-56 bg-dragon-red/5 border-2 border-dragon-gold/20 shadow-[0_0_40px_rgba(153,27,27,0.15)] overflow-hidden p-2 shrink-0 rounded-sm group relative flex items-center justify-center">
-                                    <div className="absolute inset-0 bg-paper-texture opacity-30 mix-blend-multiply" />
-                                    {category === 'species' ? (
-                                        <div className="w-full h-full flex items-center justify-center relative z-10 p-1">
-                                            <SpeciesSprite
-                                                speciesKey={detailData?.index || selected || ''}
-                                                alt={detailData?.name}
-                                                fallbackUrl={artUrl ? normalizeImageUrl(artUrl, category, detailData.index) : undefined}
-                                                className="transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
-                                            />
-                                        </div>
-                                    ) : (
-                                        <img
-                                            src={normalizeImageUrl(artUrl, category, detailData.index)}
-                                            alt={detailData.name}
-                                            referrerPolicy="no-referrer"
-                                            className="w-full h-full object-contain relative z-10 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
-                                        />
-                                    )}
-                                    <div className="absolute inset-0 border-2 border-dragon-gold/10 m-1 pointer-events-none" />
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                          {availableSubraces.map(sub => {
+                            const isSubSelected = selectedSubrace === sub.index;
+                            return (
+                              <button
+                                key={sub.index}
+                                onClick={() => onSelect(selected!, isSubSelected ? undefined : sub.index)}
+                                className={cn(
+                                  "p-3 rounded-sm border-2 transition-all flex flex-col items-center justify-center text-center gap-1.5 relative group",
+                                  isSubSelected
+                                    ? "bg-dragon-darkRed text-white border-dragon-gold shadow-md"
+                                    : "bg-white/70 border-dragon-gold/30 text-dragon-darkRed hover:bg-white hover:border-dragon-gold/60"
+                                )}
+                              >
+                                <div className="w-12 h-12 rounded-full overflow-hidden border border-dragon-gold/30 p-1 bg-parchment-100 flex items-center justify-center shrink-0">
+                                  <SpeciesSprite speciesKey={sub.index} alt={sub.name} className="w-full h-full object-contain" />
                                 </div>
-                            )}
+                                <span className="text-xs font-header font-black uppercase tracking-wide">
+                                  {sub.name}
+                                </span>
+                                {isSubSelected && (
+                                  <span className="text-[8px] font-black uppercase text-dragon-gold tracking-widest">
+                                    ✓ Active Subrace
+                                  </span>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
 
-                             <div className="flex-1 space-y-6 pt-24">
-                                <div className="space-y-1">
-                                    <div className="flex items-center gap-4 justify-center lg:justify-start relative group/header">
-                                        <div className="flex items-center gap-6 relative z-10 transition-transform group-hover/header:translate-x-2">
-                                            <h3 className="text-7xl font-header font-black text-dragon-darkRed uppercase tracking-[0.05em] drop-shadow-md select-none leading-none">{detailData.name}</h3>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-2 mt-4">
-                                        <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-dragon-gold/30" />
-                                        <GameIcon name="award" size={14} color="#B8860B" className="animate-pulse" />
-                                        <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-dragon-gold/30" />
-                                    </div>
-                                </div>
-                                
-                                <div className="grid grid-cols-2 gap-x-12 gap-y-4">
-                                    {category === 'species' ? (
-                                        <>
-                                            <div className="flex flex-col border-b border-dragon-gold/20 pb-2 bg-gradient-to-t from-dragon-gold/5 to-transparent px-3 rounded-t-sm">
-                                                <span className="text-[10px] font-black uppercase text-parchment-400 tracking-[0.2em]">Velocity</span>
-                                                <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">{detailData.stats?.speed || '30'} ft.</span>
-                                            </div>
-                                            <div className="flex flex-col border-b border-dragon-gold/20 pb-2 bg-gradient-to-t from-dragon-gold/5 to-transparent px-3 rounded-t-sm">
-                                                <span className="text-[10px] font-black uppercase text-parchment-400 tracking-[0.2em]">Magnitude</span>
-                                                <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">{detailData.stats?.size || 'Medium'}</span>
-                                            </div>
-                                            <div className="col-span-2 space-y-2 p-3 bg-white/40 border border-dragon-gold/10 rounded-sm shadow-inner group/span">
-                                                <span className="text-[10px] font-black uppercase text-parchment-400 block tracking-[0.3em]">Mortal Span</span>
-                                                <p className="text-[11px] font-bold text-parchment-700 leading-relaxed italic group-hover/span:text-dragon-red transition-colors">
-                                                    "{detailData.stats?.age || 'Historical records regarding their natural expiry are scattered across the Atlas.'}"
-                                                </p>
-                                            </div>
-                                            <div className="col-span-2 mt-4 p-5 bg-dragon-gold/5 border border-dragon-gold/20 rounded-sm relative overflow-hidden group/counsel">
-                                                <div className="absolute top-0 right-0 p-1 opacity-10 group-hover/counsel:opacity-20 transition-opacity">
-                                                    <GameIcon name="ancestry" size={40} color="currentColor" />
-                                                </div>
-                                                <h5 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-[0.2em] flex items-center gap-2 mb-3">
-                                                    <GameIcon name="info" size={14} color="#B8860B" className="animate-pulse" />
-                                                    Genesis_Counsel
-                                                </h5>
-                                                <p className="text-[10px] text-parchment-700 font-bold leading-relaxed italic relative z-10">
-                                                    "Your ancestry is the bedrock of your legend. It grants you innate resistances, specialized environmental awareness, and biological advantages that will define your tactical approach."
-                                                </p>
-                                            </div>
-                                        </>
-                                    ) : category === 'class' ? (
-                                        <>
-                                            <div className="flex flex-col border-b border-dragon-gold/20 pb-2 bg-gradient-to-t from-dragon-gold/5 to-transparent px-3 rounded-t-sm relative overflow-hidden group/hitdie">
-                                                <span className="text-[10px] font-black uppercase text-parchment-400 tracking-[0.2em]">Resilience</span>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="text-dragon-red opacity-40 group-hover/hitdie:opacity-80 transition-opacity">
-                                                        <GameIcon name={`d${detailData.stats?.hit_die || '8'}` as any} size={28} />
-                                                    </div>
-                                                    <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">D{detailData.stats?.hit_die || '8'} Die</span>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-col border-b border-dragon-gold/20 pb-2 bg-gradient-to-t from-dragon-gold/5 to-transparent px-3 rounded-t-sm overflow-hidden group/saves">
-                                                <span className="text-[10px] font-black uppercase text-parchment-400 tracking-[0.2em]">Saving Throws</span>
-                                                <div className="flex gap-2 items-center">
-                                                    {detailData.stats?.saving_throws?.map((s: any, idx: number) => {
-                                                        const sName = (s.name || s).toLowerCase();
-                                                        let sIcon = null;
-                                                        if (sName.includes('str')) sIcon = 'str';
-                                                        else if (sName.includes('dex')) sIcon = 'dex';
-                                                        else if (sName.includes('con')) sIcon = 'con';
-                                                        else if (sName.includes('int')) sIcon = 'int';
-                                                        else if (sName.includes('wis')) sIcon = 'wis';
-                                                        else if (sName.includes('cha')) sIcon = 'cha';
-                                                        
-                                                        return (
-                                                            <div key={idx} className="flex items-center gap-1 text-dragon-red">
-                                                                {sIcon && STAT_ICONS[sIcon] && (
-                                                                    <div className="opacity-60 group-hover/saves:opacity-100 transition-opacity">
-                                                                        <GameIcon name={STAT_ICONS[sIcon] as any} size={12} />
-                                                                    </div>
-                                                                )}
-                                                                <span className="text-[11px] font-black uppercase tracking-tighter truncate">{s.name || s}</span>
-                                                            </div>
-                                                        );
-                                                    }) || <span className="text-[11px] font-black text-dragon-red/40 uppercase tracking-tighter">Martial Focus</span>}
-                                                </div>
-                                            </div>
-                                        </>
-                                    ) : (
-                                        <div className="col-span-2 flex flex-col border-b border-dragon-gold/20 pb-2 bg-gradient-to-t from-dragon-gold/5 to-transparent px-3 rounded-t-sm">
-                                            <span className="text-[10px] font-black uppercase text-parchment-400 tracking-[0.2em]">Manifestation Detail</span>
-                                            <span className="text-2xl font-header font-black text-dragon-red uppercase tracking-tight">{detailData.name}</span>
-                                        </div>
-                                    )}
-                                </div>
+                    {/* Active Subrace Detailed Stats */}
+                    {category === 'species' && subraceData && (
+                      <div className="p-4 bg-white/80 border-2 border-dragon-gold/40 rounded-sm space-y-3 relative shadow-md">
+                        <div className="flex justify-between items-start border-b border-dragon-gold/20 pb-2">
+                          <div>
+                            <span className="text-[9px] font-black text-dragon-gold uppercase tracking-widest block">Subrace Lineage Profile</span>
+                            <h4 className="text-2xl font-header font-black text-dragon-darkRed uppercase leading-none">{subraceData.name}</h4>
+                          </div>
+                          {subraceData.ability_bonuses && subraceData.ability_bonuses.length > 0 && (
+                            <div className="flex gap-1">
+                              {subraceData.ability_bonuses.map((ab: any, idx: number) => (
+                                <span key={idx} className="px-2 py-0.5 bg-dragon-red text-white rounded text-[10px] font-black uppercase shadow-sm">
+                                  {(ab.ability_score?.name || ab.ability_score?.index || ab.ability_score || '').toUpperCase()} +{ab.bonus}
+                                </span>
+                              ))}
                             </div>
+                          )}
                         </div>
-                        
-                        <div className="markdown-body prose prose-slate prose-sm max-w-none text-[12px] font-medium text-parchment-700 leading-relaxed border-l-2 border-dragon-gold/20 pl-4">
-                            <Markdown children={(() => {
-                                const desc = detailData.desc || detailData.lore || detailData.description;
-                                if (Array.isArray(desc)) return desc.join('\n\n');
-                                return typeof desc === 'string' ? desc : "Historical records for this specific lineage are presently undergoing restoration.";
-                            })() || ""} />
+
+                        {subraceData.desc && (
+                          <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
+                            {subraceData.desc}
+                          </p>
+                        )}
+
+                        {subraceData.racial_traits && subraceData.racial_traits.length > 0 && (
+                          <div className="space-y-2 pt-1">
+                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider block">Subrace Granted Traits</span>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                              {subraceData.racial_traits.map((t: any, i: number) => (
+                                <div key={i} className="p-2 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm">
+                                  <span className="text-xs font-header font-black text-dragon-red uppercase block">
+                                    {t.name || t.index || t}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Traits List & Descriptions */}
+                    {(detailData.stats.traits || detailData.traits) && (
+                      <div className="space-y-2">
+                        <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-wider flex items-center gap-2">
+                          <GameIcon name="award" size={12} color="#8B0000" />
+                          Canonical Ancestral Traits
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {(detailData.stats.traits || detailData.traits || []).map((t: any, i: number) => {
+                            const tName = t.name || t.index || t;
+                            const tIndex = t.index || (typeof t === 'string' ? t.toLowerCase().replace(/\s+/g, '_') : '');
+                            const traitInfo = hydratedTraits[tIndex] || hydratedTraits[tName?.toLowerCase()];
+
+                            return (
+                              <div key={i} className="p-3 bg-dragon-gold/5 border border-dragon-gold/20 rounded-sm space-y-1">
+                                <span className="text-xs font-header font-black text-dragon-red uppercase block">
+                                  {tName}
+                                </span>
+                                <p className="text-[11px] font-body text-parchment-800 leading-relaxed">
+                                  {traitInfo?.desc ? (Array.isArray(traitInfo.desc) ? traitInfo.desc.join(' ') : traitInfo.desc) : "Ancestral trait granted by lineage."}
+                                </p>
+                              </div>
+                            );
+                          })}
                         </div>
-    
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-                           {category === 'backgrounds' && detailData.feature && (
-                              <div className="space-y-2 col-span-2">
-                                 <h4 className="text-[9px] font-black text-dragon-red uppercase tracking-[0.3em] flex items-center gap-2">
-                                     <div className="w-1 h-1 rounded-full bg-dragon-red" />
-                                     Background Privilege: {detailData.feature.name}
-                                 </h4>
-                                 <div className="p-3 bg-dragon-gold/5 border border-dragon-gold/10 rounded-sm">
-                                    <p className="text-[10px] font-bold text-parchment-700 leading-relaxed italic">
-                                        {Array.isArray(detailData.feature.desc) ? detailData.feature.desc.join(' ') : detailData.feature.desc}
-                                    </p>
-                                 </div>
-                              </div>
-                           )}
+                      </div>
+                    )}
+                  </div>
+                )}
 
-                           {category === 'backgrounds' && (detailData.starting_equipment || detailData.starting_equipment_options) && (
-                              <div className="space-y-2">
-                                 <h4 className="text-[9px] font-black text-dragon-red uppercase tracking-[0.3em] flex items-center gap-2">
-                                     <div className="w-1 h-1 rounded-full bg-dragon-red" />
-                                     Manifested Gear
-                                 </h4>
-                                 <div className="flex flex-wrap gap-1.5">
-                                    {(detailData.starting_equipment || []).map((eq: any, i: number) => (
-                                       <div key={i} className="px-2 py-1 bg-parchment-100 border border-dragon-gold/20 rounded-sm text-[9px] font-black text-dragon-darkRed uppercase tracking-tighter">
-                                          {eq.equipment?.name || eq.name} {eq.quantity > 1 ? `x${eq.quantity}` : ''}
-                                       </div>
-                                    ))}
-                                    {(detailData.starting_equipment_options || []).map((opt: any, i: number) => (
-                                       <div key={`opt-${i}`} className="px-2 py-1 bg-white border border-dragon-gold/10 rounded-sm text-[9px] font-black text-parchment-400 uppercase tracking-tighter italic">
-                                          + Choice of {opt.desc || 'Equipment'}
-                                       </div>
-                                    ))}
-                                 </div>
-                              </div>
-                           )}
+                {/* Lore / Description Markdown for all categories */}
+                <div className="pt-2 border-t border-dragon-gold/20">
+                  <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider mb-2">Chronicle & Overview</h4>
+                  <DnDMarkdown content={(() => {
+                    const desc = detailData.desc || detailData.lore || detailData.description;
+                    if (Array.isArray(desc)) return desc.join('\n\n');
+                    return typeof desc === 'string' ? desc : "Records for this entry are maintained in the Atlas.";
+                  })()} />
+                </div>
 
-                           {(detailData.traits || detailData.stats?.proficiencies || detailData.proficiencies || (category === 'backgrounds' && detailData.starting_proficiencies)) && (
-                              <div className="space-y-2">
-                                 <h4 className="text-[9px] font-black text-dragon-red uppercase tracking-[0.3em] flex items-center gap-2">
-                                     <div className="w-1 h-1 rounded-full bg-dragon-red" />
-                                     {category === 'species' ? 'Ancestral Traits' : category === 'class' ? 'Core Proficiencies' : category === 'backgrounds' ? 'Learned Proficiencies' : 'Innate Traits'}
-                                 </h4>
-                                 <div className="flex flex-wrap gap-1.5">
-                                    {(detailData.traits || detailData.stats?.proficiencies || detailData.proficiencies || detailData.starting_proficiencies || []).slice(0, 20).map((t: any, i: number) => {
-                                        const pName = (t.name || t).toLowerCase();
-                                        const pIndex = (t.index || "").toLowerCase();
-                                        
-                                         return (
-                                            <div 
-                                                key={i} 
-                                                onMouseEnter={() => setHoveredTrait(pIndex || pName)}
-                                                onMouseLeave={() => setHoveredTrait(null)}
-                                                className="px-2 py-1 bg-dragon-red/5 border border-dragon-red/10 rounded-sm text-[9px] font-black text-dragon-red uppercase tracking-tighter flex items-center gap-1.5 hover:bg-dragon-red/10 transition-colors shadow-sm relative group/trait"
-                                            >
-                                                <GameIcon name={t.index ? getTraitIcon(t.index) : getProficiencyIcon(t)} size={10} color="currentColor" fallbackName="award" /> {t.name || t}
-
-                                                <AnimatePresence>
-                                                    {hoveredTrait === (pIndex || pName) && hydratedTraits[pIndex || pName] && (
-                                                        <motion.div 
-                                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                            className="absolute bottom-full left-0 mb-2 w-64 bg-dragon-darkRed text-white p-3 rounded-sm shadow-2xl border border-dragon-gold/20 z-[100] pointer-events-none"
-                                                        >
-                                                            <div className="space-y-1">
-                                                                <div className="flex justify-between items-center border-b border-dragon-gold/20 pb-1 mb-1">
-                                                                    <span className="text-[10px] font-black tracking-widest text-dragon-gold">{t.name || t}</span>
-                                                                    <span className="text-[8px] opacity-40 uppercase">Trait Info</span>
-                                                                </div>
-                                                                <p className="text-[10px] font-bold leading-relaxed text-parchment-100 italic normal-case tracking-normal">
-                                                                    {(() => {
-                                                                        const d = hydratedTraits[pIndex || pName].desc;
-                                                                        if (Array.isArray(d)) return d[0];
-                                                                        if (typeof d === 'string') return d;
-                                                                        return "Archives are silent on this particular essence.";
-                                                                    })()}
-                                                                </p>
-                                                            </div>
-                                                            <div className="absolute -bottom-1 left-2 w-2 h-2 bg-dragon-darkRed border-b border-r border-dragon-gold/20 rotate-45" />
-                                                        </motion.div>
-                                                    )}
-                                                </AnimatePresence>
-                                            </div>
-                                        );
-                                    })}
-                                 </div>
-                              </div>
-                           )}
-                        </div>
-                    </div>
-                 </div>
-             ) : (
-                 <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-2 opacity-20">
-                    <GameIcon name="info" size={32} color="currentColor" />
-                    <p className="text-[9px] font-black uppercase tracking-[0.3em]">Examine Records</p>
-                 </div>
-             )}
+                {/* Background-Specific Details */}
+                {category === 'backgrounds' && detailData.feature && (
+                  <div className="p-3 bg-dragon-gold/10 border border-dragon-gold/20 rounded-sm space-y-1">
+                    <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider">
+                      Background Origin Privilege: {detailData.feature.name}
+                    </h4>
+                    <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
+                      {Array.isArray(detailData.feature.desc) ? detailData.feature.desc.join(' ') : detailData.feature.desc}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="h-full flex items-center justify-center text-center p-6 opacity-40">
+                <p className="text-xs font-black uppercase tracking-widest text-dragon-darkRed">Select an item to view records</p>
+              </div>
+            )}
           </div>
-       </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -33,37 +33,33 @@ import { injectFontFace, getLanguageFontFamily } from '../../lib/fontLoader';
 type CreationStep = 
   | 'welcome'
   | 'slot'
+  | 'identity'
   | 'species'
   | 'class'
-  | 'choices'
-  | 'equipment'
-  | 'spells'
   | 'background'
-  | 'backstory'
   | 'alignment'
   | 'stats'
-  | 'skills'
+  | 'choices'
+  | 'spells'
+  | 'equipment'
   | 'appearance'
-  | 'languages'
-  | 'identity'
+  | 'backstory'
   | 'review';
 
 const ALL_STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'welcome', label: 'Welcome', icon: 'devkit' },
   { id: 'slot', label: 'Save Slot', icon: 'save_data' },
+  { id: 'identity', label: 'Identity', icon: 'info' },
   { id: 'species', label: 'Species', icon: 'ancestry' },
   { id: 'class', label: 'Class', icon: 'weapon' },
-  { id: 'choices', label: 'Choices', icon: 'book' },
-  { id: 'equipment', label: 'Gear', icon: 'shield' },
-  { id: 'spells', label: 'Arcana', icon: 'magic_effect' },
   { id: 'background', label: 'Origins', icon: 'scroll' },
-  { id: 'backstory', label: 'Chronicle', icon: 'book' },
   { id: 'alignment', label: 'Ethos', icon: 'shield' },
   { id: 'stats', label: 'Attributes', icon: 'dice' },
-  { id: 'skills', label: 'Skills', icon: 'user' },
+  { id: 'choices', label: 'Skills & Choices', icon: 'book' },
+  { id: 'spells', label: 'Arcana', icon: 'magic_effect' },
+  { id: 'equipment', label: 'Gear', icon: 'shield' },
   { id: 'appearance', label: 'Appearance', icon: 'identity' },
-  { id: 'languages', label: 'Tongues', icon: 'magic_effect' },
-  { id: 'identity', label: 'Identity', icon: 'info' },
+  { id: 'backstory', label: 'Describe Your Character', icon: 'book' },
   { id: 'review', label: 'Commit', icon: 'save_data' },
 ];
 
@@ -518,9 +514,8 @@ export const CharacterCreator: React.FC = () => {
         case 'backstory': return true;
         case 'alignment': return !!newChar.alignment;
         case 'stats': return true;
-        case 'skills': return true;
         case 'appearance': return true;
-        case 'identity': return !!newChar.name && !!newChar.gender;
+        case 'identity': return true;
         default: return true;
     }
   };
@@ -701,11 +696,7 @@ export const CharacterCreator: React.FC = () => {
     <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
-      <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch" style={{
-        backgroundImage: `url('/assets/ui/old_paper.webp')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
+      <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch">
         {/* Header */}
         <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
           <div className="flex items-center gap-2">
@@ -873,37 +864,14 @@ const StepContent: React.FC<{
      case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep ruleset={newChar.ruleset || '2014'} onSelectRuleset={onSelectRuleset} /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
      case 'species': {
-        const speciesWithSubraces = available.species.flatMap((s: any) => {
-            const speciesSubraces = available.subraces.filter((sub: any) => {
-                const idx = sub.index.toLowerCase();
-                if (s.index === 'elf') return (idx.includes('elf') && !idx.includes('half-elf')) || idx.includes('drow');
-                if (s.index === 'dwarf') return idx.includes('dwarf');
-                if (s.index === 'halfling') return idx.includes('halfling');
-                if (s.index === 'gnome') return idx.includes('gnome');
-                return false;
-            });
-
-            if (speciesSubraces.length > 0) {
-                return speciesSubraces.map((sub: any) => ({
-                    index: `${s.index}:${sub.index}`,
-                    name: `${sub.name}`
-                }));
-            }
-            return [s];
-        });
-
         return <SelectionStep 
             title="Select Species & Heritage"
             desc="Your species defines your biological traits and natural talents."
-            items={speciesWithSubraces}
-            selected={newChar.subrace ? `${newChar.race}:${newChar.subrace}` : newChar.race}
-            onSelect={(val) => {
-                if (val.includes(':')) {
-                    const [race, subrace] = val.split(':');
-                    setNewChar({...newChar, race, subrace});
-                } else {
-                    setNewChar({...newChar, race: val, subrace: undefined});
-                }
+            items={available.species}
+            selected={newChar.race}
+            selectedSubrace={newChar.subrace}
+            onSelect={(raceVal, subraceVal) => {
+                setNewChar({...newChar, race: raceVal, subrace: subraceVal});
             }}
             category="species"
         />;
@@ -1005,126 +973,7 @@ const StepContent: React.FC<{
          category="alignments"
       />;
       case 'stats': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><StatsStep newChar={newChar} setNewChar={setNewChar} /></div>;
-     case 'skills': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><SkillsStep newChar={newChar} setNewChar={setNewChar} /></div>;
-     case 'appearance': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><AppearanceStep newChar={newChar} setNewChar={setNewChar} /></div>;
-      case 'languages': return <div className="h-full overflow-y-auto custom-scrollbar pr-2">
-        <div className="p-8 space-y-8">
-            <div className="flex justify-between items-end border-b border-dragon-gold/20 pb-4">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Linguistic Mastery</h2>
-                    <p className="text-[11px] text-parchment-600 font-bold max-w-2xl uppercase tracking-widest">
-                        {maxLanguageOptions > 0 
-                            ? `You may choose ${maxLanguageOptions} additional ${maxLanguageOptions === 1 ? 'language' : 'languages'} based on your origins.` 
-                            : "Your linguistic capabilities are dictated by your lineage and background."}
-                    </p>
-                </div>
-                <div className="flex items-center gap-3 bg-dragon-gold/10 px-4 py-2 rounded-sm border border-dragon-gold/20">
-                    <GameIcon name="book" size={20} color="#B8860B" />
-                    <div className="flex flex-col">
-                        <span className="text-[9px] font-black text-dragon-gold uppercase leading-none">Limit</span>
-                        <span className="text-[14px] font-black text-dragon-darkRed leading-none mt-1">
-                            {(newChar.languages || []).filter(l => !staticLanguages.includes(l)).length} / {maxLanguageOptions}
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {(available.languages || []).filter((l: any) => !allowedLanguagesPool || allowedLanguagesPool.includes(l.index)).map((lang: any) => {
-                    const isSelected = (newChar.languages || []).includes(lang.index);
-                    const isStatic = staticLanguages.includes(lang.index);
-                    const fontFamily = getLanguageFontFamily(lang.index);
-                    const choicesMade = (newChar.languages || []).filter(l => !staticLanguages.includes(l)).length;
-                    const canSelect = isSelected || choicesMade < maxLanguageOptions;
-                    
-                    return (
-                        <button
-                            key={lang.index}
-                            disabled={isStatic}
-                            onClick={() => {
-                                const current = newChar.languages || [];
-                                if (isStatic) return;
-                                
-                                if (isSelected) {
-                                    setNewChar({ ...newChar, languages: current.filter(l => l !== lang.index) });
-                                    soundService.playEffect('UI_CLICK_LIGHT');
-                                } else if (choicesMade < maxLanguageOptions) {
-                                    setNewChar({ ...newChar, languages: [...current, lang.index] });
-                                    soundService.playEffect('TRANSACTION_SUCCESS');
-                                } else {
-                                    soundService.playEffect('MENU_ERROR');
-                                }
-                            }}
-                            className={cn(
-                                "flex flex-col items-center justify-center p-4 rounded-sm border-2 transition-all relative group h-32 overflow-hidden",
-                                isStatic
-                                    ? "bg-dragon-darkRed/10 border-dragon-gold/30 text-dragon-darkRed/40 cursor-default"
-                                    : isSelected 
-                                        ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg" 
-                                        : canSelect
-                                            ? "bg-white/40 border-dragon-red/5 text-dragon-darkRed hover:border-dragon-red/20 shadow-sm"
-                                            : "bg-white/10 border-dragon-red/5 text-dragon-darkRed/20 opacity-50 cursor-not-allowed"
-                            )}
-                        >
-                            <span className={cn(
-                                "text-[22px] font-black uppercase tracking-widest text-center relative z-10",
-                                isStatic ? "opacity-30" : ""
-                            )}>
-                                {lang.name}
-                            </span>
-                            
-                            <span 
-                                className={cn(
-                                    "mt-1 text-[55px] font-bold leading-[28px] group-hover:opacity-100 transition-opacity whitespace-nowrap relative z-10",
-                                    isSelected ? "text-dragon-gold" : "text-dragon-gold/30"
-                                )}
-                                style={{ fontFamily }}
-                            >
-                                {lang.name}
-                            </span>
-
-                            {/* Background Decoration */}
-                            <div className={cn(
-                                "absolute -bottom-4 -right-4 opacity-5 transition-transform duration-500 group-hover:scale-110",
-                                isSelected ? "text-dragon-gold" : "text-dragon-darkRed"
-                            )}>
-                                <GameIcon name="book" size={80} color="currentColor" />
-                            </div>
-
-                            {(isSelected || isStatic) && (
-                                <div className="absolute top-1 right-1 z-20">
-                                    <GameIcon name={isStatic ? "lock" : "check"} size={12} color={isStatic ? "#B8860B" : "white"} />
-                                </div>
-                            )}
-                            
-                            {isStatic && (
-                                <div className="absolute top-1 left-1 z-20">
-                                    <span className="text-[7px] font-black bg-dragon-gold/20 text-dragon-gold px-1 py-0.5 rounded uppercase">Heritage</span>
-                                </div>
-                            )}
-                        </button>
-                    );
-                })}
-            </div>
-            
-            <div className="p-5 bg-dragon-gold/5 border border-dragon-gold/20 rounded-sm relative overflow-hidden">
-                <div className="absolute -right-8 -bottom-8 opacity-5">
-                    <GameIcon name="book" size={120} color="#B8860B" />
-                </div>
-                <span className="text-[10px] font-black text-dragon-gold uppercase tracking-[0.3em]">Registry of Known Tongues</span>
-                <div className="flex flex-wrap gap-2 mt-3">
-                    {(newChar.languages || []).sort().map(l => (
-                        <div key={l} className="flex items-center gap-2 px-3 py-1.5 bg-white border border-dragon-gold/10 rounded-sm shadow-sm">
-                            <GameIcon name="magic_effect" size={10} color="#B8860B" />
-                            <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-tight">
-                                {l.replace(/-/g, ' ')}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-     </div>;
+      case 'appearance': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><AppearanceStep newChar={newChar} setNewChar={setNewChar} /></div>;
      case 'identity': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><IdentityStep newChar={newChar} setNewChar={setNewChar} /></div>;
      case 'review': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><ReviewStep newChar={newChar} setNewChar={setNewChar} /></div>;
      default: return null;
