@@ -13,30 +13,115 @@
     "cha": 10
   },
   "proficiencies": [
-    "skill_investigation",
-    "skill_persuasion",
-    "potters_tools"
+    "tinker's tools",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
-    ""
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "gnome cunning",
+      "index": "gnome_cunning",
+      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            "Intelligence Saving Throws against magic",
+            "Wisdom Saving Throws against magic",
+            "Charisma Saving Throws against magic"
+          ]
+        }
+      }
+    },
+    {
+      "name": "artificer's lore",
+      "index": "artificers_lore",
+      "desc": "Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+    },
+    {
+      "name": "tinker",
+      "index": "tinker",
+      "desc": "You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\nWhen you create a device, choose one of the following options:\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+    }
   ],
   "features": [
     {
-      "name": "Crafter",
-      "index": "crafter",
-      "desc": "Granted by your Artisan background.",
-      "source": "Background"
+      "index": "spellcasting_druid",
+      "class": {
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
+      },
+      "name": "spellcasting: druid",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+      ],
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "feature_specific": {
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
+        }
+      },
+      "source": "Class"
+    },
+    {
+      "index": "druidic",
+      "class": {
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
+      },
+      "name": "druidic",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+      ],
+      "url": "/assets/atlas/features/json/druidic.json",
+      "updated_at": "2026-07-13T06:30:11.853Z",
+      "image": "/assets/atlas/features/images/druidic.webp",
+      "feature_specific": {},
+      "source": "Class"
     }
   ],
-  "flaws": [
-    ""
-  ],
-  "ideals": [
-    ""
-  ],
-  "bonds": [
-    ""
-  ],
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
   "money": {
     "cp": 0,
     "sp": 0,
@@ -56,25 +141,32 @@
     "specialFeatures": []
   },
   "items": {
-    "shield_53xuc1q9r": {
-      "id": "shield_53xuc1q9r",
-      "template": "shield",
+    "leather_armor_rt29ax23w": {
+      "id": "leather_armor_rt29ax23w",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1787079662706,
-      "kind": "shield"
+      "addedAt": 1787098402099,
+      "kind": "armor"
     },
-    "abacus_0n1gxdcf6": {
-      "id": "abacus_0n1gxdcf6",
-      "template": "abacus",
+    "explorers_pack_oag76in0d": {
+      "id": "explorers_pack_oag76in0d",
+      "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1787079662706,
-      "kind": "tradegood"
+      "addedAt": 1787098402099,
+      "kind": "container"
     },
-    "gold_qywo4450y": {
-      "id": "gold_qywo4450y",
+    "sickle_i9a2fumfi": {
+      "id": "sickle_i9a2fumfi",
+      "template": "sickle",
+      "quantity": 1,
+      "addedAt": 1787098402099,
+      "kind": "weapon"
+    },
+    "gold_yzfm52qd1": {
+      "id": "gold_yzfm52qd1",
       "template": "gold",
-      "quantity": 25,
-      "addedAt": 1787079662706,
+      "quantity": 23,
+      "addedAt": 1787098402099,
       "kind": "tradegood"
     }
   },
@@ -86,11 +178,11 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "abacus_0n1gxdcf6"
+          "itemId": "explorers_pack_oag76in0d"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_qywo4450y"
+          "itemId": "gold_yzfm52qd1"
         },
         {
           "id": "bag_2",
@@ -188,11 +280,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "sickle_i9a2fumfi"
       },
       {
         "id": "off_hand",
-        "itemId": "shield_53xuc1q9r"
+        "itemId": null
       },
       {
         "id": "ranged",
@@ -204,7 +296,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_rt29ax23w"
       },
       {
         "id": "clothes",
@@ -306,50 +398,29 @@
   },
   "backpack": [
     {
-      "id": "abacus_z49bo7pnr",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
-    },
-    {
-      "id": "scale_merchants_fzmvfm8uy",
-      "index": "scale_merchants",
-      "name": "Scale Merchant'S",
+      "id": "carpenters_tools_xdkktoedx",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/scale_merchants.json",
-      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
-      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp"
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "id": "clothes_travelers_8j1h2mbdw",
+      "id": "pot_iron_4iy3ksnrx",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+    },
+    {
+      "id": "clothes_travelers_kzl412oa9",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -360,10 +431,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_924erq38g",
+      "id": "gold_90jpfpmr1",
       "index": "gold",
       "name": "Gold",
-      "quantity": 25,
+      "quantity": 23,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -391,10 +462,73 @@
       "category": "Standard Gear"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_ytds97p86",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [],
   "languages": [
-    "common"
+    "common",
+    "gnomish"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -404,23 +538,22 @@
     }
   },
   "choices": {},
-  "name": "jj",
-  "race": "dwarf",
-  "subrace": "hill_dwarf",
-  "class": "cleric",
+  "name": "jh",
+  "race": "gnome",
+  "subrace": "rock_gnome",
+  "class": "druid",
   "spellcastingAbility": "wis",
-  "background": "artisan",
+  "background": "farmer",
   "alignment": "lawful_neutral",
-  "startingAlignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
   "id": "slot3",
-  "hp": 5,
-  "maxHp": 5,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-18T19:10:29.967Z"
+  "lastSaved": "2026-08-19T00:13:47.936Z"
 }
