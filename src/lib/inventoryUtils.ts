@@ -1,5 +1,39 @@
 
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG, ItemKind } from '../types/inventory';
+import { Character } from '../store/useCharacterStore';
+import { calculateCurrencyWeight } from './currencyUtils';
+
+/**
+ * Calculates total carrying weight for a character including equipped items, backpack items, and currency.
+ */
+export function calculateCharacterWeight(character: Character | undefined): number {
+  if (!character) return 0;
+
+  const parseWeight = (weight: any): number => {
+    if (!weight) return 0;
+    if (typeof weight === 'number') return weight;
+    const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+    return weightMatch ? parseFloat(weightMatch[0]) : 0;
+  };
+
+  const calculateItemWeight = (item: any): number => {
+    if (!item) return 0;
+    return parseWeight(item.weight) * (item.quantity || 1);
+  };
+
+  let inventoryWeight = 0;
+  if (character.saveVersion === 2 && character.items) {
+    inventoryWeight = Object.values(character.items).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
+  } else {
+    const equippedWeight = Object.values(character.inventory || {}).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
+    const backpackWeight = (character.backpack || []).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
+    inventoryWeight = equippedWeight + backpackWeight;
+  }
+
+  const moneyWeight = calculateCurrencyWeight(character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
+
+  return inventoryWeight + moneyWeight;
+}
 
 /**
  * Creates a unique ID for an item instance

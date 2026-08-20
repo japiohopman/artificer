@@ -27,7 +27,7 @@ export const CharacterStats: React.FC<CharacterStatsProps> = ({
   if (isCompact) {
     return (
       <div className={cn("space-y-3", className)}>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           <div className="flex items-center gap-2 bg-stone-900/40 p-1.5 rounded border border-white/5">
             <Shield size={12} className="text-dragon-red/60" />
             <div className="flex flex-col">
@@ -45,6 +45,15 @@ export const CharacterStats: React.FC<CharacterStatsProps> = ({
             </div>
           </div>
           <div className="flex items-center gap-2 bg-stone-900/40 p-1.5 rounded border border-white/5">
+            <Zap size={12} className="text-dragon-red/60" />
+            <div className="flex flex-col">
+              <span className="text-[6px] text-white/40 uppercase font-bold leading-none mb-0.5">INIT</span>
+              <span className="text-[10px] font-cinzel text-white leading-none">
+                {derived.initiative >= 0 ? `+${derived.initiative}` : derived.initiative}
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 bg-stone-900/40 p-1.5 rounded border border-white/5">
             <Heart size={12} className="text-dragon-red/60" />
             <div className="flex flex-col">
               <span className="text-[6px] text-white/40 uppercase font-bold leading-none mb-0.5">HP</span>
@@ -58,6 +67,13 @@ export const CharacterStats: React.FC<CharacterStatsProps> = ({
             <div className="flex flex-col">
               <span className="text-[6px] text-white/40 uppercase font-bold leading-none mb-0.5">SPD</span>
               <span className="text-[10px] font-cinzel text-white leading-none">{derived.speed}ft</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 bg-stone-900/40 p-1.5 rounded border border-white/5">
+            <Sparkles size={12} className="text-dragon-red/60" />
+            <div className="flex flex-col">
+              <span className="text-[6px] text-white/40 uppercase font-bold leading-none mb-0.5">PROF</span>
+              <span className="text-[10px] font-cinzel text-white leading-none">+{derived.proficiencyBonus}</span>
             </div>
           </div>
         </div>
