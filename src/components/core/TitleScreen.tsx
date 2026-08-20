@@ -11,7 +11,6 @@ import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { calculateDerivedStats } from '../../lib/character';
 import { CharacterStats } from '../character/CharacterStats';
 
 export const TitleScreen: React.FC = () => {
@@ -131,8 +130,6 @@ export const TitleScreen: React.FC = () => {
   };
 
   const selectedChar = selectedSlotIndex !== null ? mainCharacterSlots[selectedSlotIndex] : null;
-  const selectedDerived = selectedChar ? calculateDerivedStats(selectedChar) : null;
-  const selectedInitiativeSign = selectedDerived ? (selectedDerived.initiative >= 0 ? `+${selectedDerived.initiative}` : `${selectedDerived.initiative}`) : '';
 
   return (
     <div 
