@@ -5,95 +5,82 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 15,
-    "dex": 12,
-    "con": 11,
-    "int": 11,
-    "wis": 15,
-    "cha": 12
+    "str": 18,
+    "dex": 11,
+    "con": 13,
+    "int": 12,
+    "wis": 9,
+    "cha": 13
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
+    "Skill: Investigation",
+    "Skill: Persuasion",
+    "Potters Tools",
+    "light armor",
     "simple weapons",
+    "longswords",
+    "rapiers",
     "shortswords",
+    "hand crossbows",
     "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "saving throw: cha",
+    "Saving Throw: dex",
+    "Saving Throw: cha"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "gnome cunning",
-      "index": "gnome_cunning",
-      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            "Intelligence Saving Throws against magic",
-            "Wisdom Saving Throws against magic",
-            "Charisma Saving Throws against magic"
-          ]
-        }
-      }
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "monk_unarmored_defense",
+      "index": "spellcasting_bard",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "unarmored defense",
+      "name": "spellcasting: bard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
       ],
-      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
+      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_bard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
+      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
-        "passive_modifiers": {
-          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "martial_arts",
+      "index": "bardic_inspiration_d6",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "bard",
+        "name": "bard",
+        "url": "/assets/atlas/class/json/bard.json"
       },
-      "name": "martial arts",
+      "name": "bardic inspiration (d6)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
-        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
-        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
-        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
-        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
+        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
+        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
       ],
-      "url": "/assets/atlas/features/json/martial_arts.json",
-      "updated_at": "2026-07-13T06:30:11.868Z",
-      "image": "/assets/atlas/features/images/martial_arts.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
+      "feature_specific": {
+        "special_action": "bonus_action",
+        "attack_die": "1d6",
+        "usage": {
+          "type": "charisma_modifier",
+          "recovery": "long_rest"
+        }
+      },
       "source": "Class"
     }
   ],
@@ -119,25 +106,32 @@
     "specialFeatures": []
   },
   "items": {
-    "dart_5826rojfc": {
-      "id": "dart_5826rojfc",
-      "template": "dart",
-      "quantity": 10,
-      "addedAt": 1787163790767,
-      "kind": "weapon"
-    },
-    "sickle_euhtgrs7f": {
-      "id": "sickle_euhtgrs7f",
-      "template": "sickle",
+    "leather_armor_u5cym1n4r": {
+      "id": "leather_armor_u5cym1n4r",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1787163790768,
+      "addedAt": 1787264673838,
+      "kind": "armor"
+    },
+    "dagger_nh96rtvbz": {
+      "id": "dagger_nh96rtvbz",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1787264673838,
       "kind": "weapon"
     },
-    "gold_vr7b9iwk1": {
-      "id": "gold_vr7b9iwk1",
+    "abacus_authtmurg": {
+      "id": "abacus_authtmurg",
+      "template": "abacus",
+      "quantity": 1,
+      "addedAt": 1787264673838,
+      "kind": "tradegood"
+    },
+    "gold_ug3axuhnb": {
+      "id": "gold_ug3axuhnb",
       "template": "gold",
-      "quantity": 23,
-      "addedAt": 1787163790768,
+      "quantity": 25,
+      "addedAt": 1787264673838,
       "kind": "tradegood"
     }
   },
@@ -149,11 +143,11 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "sickle_euhtgrs7f"
+          "itemId": "abacus_authtmurg"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_vr7b9iwk1"
+          "itemId": "gold_ug3axuhnb"
         },
         {
           "id": "bag_2",
@@ -251,7 +245,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dart_5826rojfc"
+        "itemId": "dagger_nh96rtvbz"
       },
       {
         "id": "off_hand",
@@ -267,7 +261,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_u5cym1n4r"
       },
       {
         "id": "clothes",
@@ -369,60 +363,119 @@
   },
   "backpack": [
     {
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "quantity": 1
+      "id": "abacus_76m8y5nu4",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [
+        "The abacus, also called a counting frame, is a calculating tool."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "updated_at": "2026-07-12T19:00:14.466Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
     },
     {
-      "index": "pot_iron",
-      "name": "Pot Iron",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "quantity": 1
+      "id": "scale_merchants_x5fcy9rzo",
+      "index": "scale_merchants",
+      "name": "Scale Merchant'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/scale_merchants.json",
+      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
+      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp"
     },
     {
-      "index": "sickle",
-      "name": "Sickle",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "quantity": 1
-    },
-    {
+      "id": "clothes_travelers_snq902yal",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "quantity": 1
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
+      "id": "gold_fs5wojh7t",
       "index": "gold",
       "name": "Gold",
+      "quantity": 25,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 23
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear"
     }
   ],
   "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common",
-    "gnomish"
+    "common"
   ],
   "preparedSpells": [],
-  "spellSlots": {},
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {},
-  "race": "gnome",
-  "class": "monk",
+  "name": "gg",
+  "race": "human",
+  "class": "bard",
   "spellcastingAbility": "cha",
-  "background": "farmer",
+  "background": "artisan",
   "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
   "id": "slot3",
-  "name": "Hero",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 6,
+  "maxHp": 6,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-19T18:23:33.659Z"
+  "lastSaved": "2026-08-20T22:25:13.562Z"
 }
