@@ -18,7 +18,8 @@ export function calculateCharacterWeight(character: Character | undefined): numb
 
   const calculateItemWeight = (item: any): number => {
     if (!item) return 0;
-    return parseWeight(item.weight) * (item.quantity || 1);
+    const rawWeight = item.weight ?? item.weight_lbs ?? item.metadata?.weight ?? item.template?.weight ?? 0;
+    return parseWeight(rawWeight) * (item.quantity || 1);
   };
 
   let inventoryWeight = 0;
