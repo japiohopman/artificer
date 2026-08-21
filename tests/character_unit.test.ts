@@ -33,20 +33,51 @@ const v1Char: any = {
 const v1Weight = calculateCharacterWeight(v1Char); // 55 + 3 + 10 + 2 + 1 = 71
 if (v1Weight !== 71) throw new Error(`Expected V1 weight 71, got ${v1Weight}`);
 
-// 3. V2 Registry-based item weight
-const v2Char: any = {
-  id: 'v2_char',
-  name: 'V2 Hero',
+// 3. V2 Registry-based item weight tests (canonical resolution via template ID)
+// 3a. Single V2 item
+const v2SingleItemChar: any = {
+  id: 'v2_single',
   saveVersion: 2,
   items: {
-    inst_1: { id: 'inst_1', template: 'plate_armor', weight: 65, quantity: 1 },
-    inst_2: { id: 'inst_2', template: 'shield', weight_lbs: 6, quantity: 1 },
-    inst_3: { id: 'inst_3', template: 'potion', metadata: { weight: 0.5 }, quantity: 4 } // 2 lbs
+    inst_1: { id: 'inst_1', template: 'plate_armor', quantity: 1 }
+  }
+};
+const singleWeight = calculateCharacterWeight(v2SingleItemChar);
+if (singleWeight !== 65) throw new Error(`Expected single V2 item weight 65, got ${singleWeight}`);
+
+// 3b. Multiple V2 items + quantity > 1 + unknown template + currency
+const v2MultiChar: any = {
+  id: 'v2_multi',
+  saveVersion: 2,
+  items: {
+    inst_1: { id: 'inst_1', template: 'plate_armor', quantity: 1 }, // 65 lbs
+    inst_2: { id: 'inst_2', template: 'shield', quantity: 1 },      // 6 lbs
+    inst_3: { id: 'inst_3', template: 'potion', quantity: 4 },      // 0.5 * 4 = 2 lbs
+    inst_4: { id: 'inst_4', template: 'unknown_magic_orb', quantity: 1 } // 0 lbs
   },
   money: { cp: 0, sp: 0, ep: 0, gp: 100, pp: 0 } // 100 coins = 2 lbs
 };
-const v2Weight = calculateCharacterWeight(v2Char); // 65 + 6 + 2 + 2 = 75
-if (v2Weight !== 75) throw new Error(`Expected V2 weight 75, got ${v2Weight}`);
+const multiWeight = calculateCharacterWeight(v2MultiChar); // 65 + 6 + 2 + 0 + 2 = 75
+if (multiWeight !== 75) throw new Error(`Expected V2 multi-item weight 75, got ${multiWeight}`);
+
+// 3c. Derived stats feature speed_bonus check
+import { calculateDerivedStats } from '../src/lib/statCalculations';
+const speedFeatChar: any = {
+  id: 'speed_char',
+  race: 'Human',
+  stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 },
+  features: [
+    {
+      index: 'fast_movement',
+      name: 'Fast Movement',
+      feature_specific: {
+        passive_modifiers: { speed_bonus: 10 }
+      }
+    }
+  ]
+};
+const derivedStats = calculateDerivedStats(speedFeatChar);
+if (derivedStats.speed !== 40) throw new Error(`Expected speed 40 with +10 speed bonus feature, got ${derivedStats.speed}`);
 
 // 4. Character Store A/B Switching & State Isolation
 const store = useCharacterStore.getState();

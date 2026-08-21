@@ -223,16 +223,12 @@ export function calculateDerivedStats(character: Character | undefined): Derived
     }
   });
 
-  // Process Passive Modifiers from Features/Feats for AC and Speed
+  // Process Passive Modifiers from Features/Feats for AC
   character.features?.forEach(feat => {
     const mods = feat.feature_specific?.passive_modifiers;
     if (!mods) return;
 
     if (mods.ac_bonus) acBonus += safeNum(mods.ac_bonus);
-    if (mods.speed_bonus) speed += safeNum(mods.speed_bonus);
-    if (mods.hp_bonus_per_level) {
-        // This is handled in maxHp calculation, but for derived stats we might show it
-    }
   });
 
   const ac = baseAC + acBonus;
@@ -266,7 +262,12 @@ export function calculateDerivedStats(character: Character | undefined): Derived
           speed += safeNum(t.trait_specific.passive_modifiers.speed_bonus);
       }
   });
-  // Could add more speed logic based on class features/equipment
+
+  character.features?.forEach(f => {
+      if (f.feature_specific?.passive_modifiers?.speed_bonus) {
+          speed += safeNum(f.feature_specific.passive_modifiers.speed_bonus);
+      }
+  });
 
   // 4. Attack Bonuses
   const weapon = getEquippedItem('main_hand');

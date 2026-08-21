@@ -75,6 +75,8 @@ container/equipment slot
 
 The Atlas remains the source for canonical static item definitions. Inventory state records ownership, quantity and placement rather than duplicating the complete item definition.
 
+In V2, `ItemInstance.template` holds the template ID string. `calculateCharacterWeight()` resolves static properties (such as item weight) via `resolveItemTemplateWeight()`, which queries `getCachedEquipment()`, `useAtlasStore`, and canonical template fallbacks. Each instance in `character.items` is counted exactly once scaled by `quantity`.
+
 ## Store responsibilities
 
 `useInventoryStore` currently handles both domain actions and some presentation/session state:

@@ -2,6 +2,100 @@
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG, ItemKind } from '../types/inventory';
 import { Character } from '../store/useCharacterStore';
 import { calculateCurrencyWeight } from './currencyUtils';
+import { getCachedEquipment } from '../services/storageService';
+import { useAtlasStore } from '../store/useAtlasStore';
+
+const parseWeight = (weight: any): number => {
+  if (weight === null || weight === undefined) return 0;
+  if (typeof weight === 'number') return weight;
+  const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+  return weightMatch ? parseFloat(weightMatch[0]) : 0;
+};
+
+// Canonical D&D 5e standard equipment weights dictionary for template fallbacks
+const CANONICAL_TEMPLATE_WEIGHTS: Record<string, number> = {
+  'plate_armor': 65, 'plate-armor': 65, 'plate': 65,
+  'shield': 6,
+  'chain_mail': 55, 'chain-mail': 55,
+  'leather_armor': 10, 'leather-armor': 10,
+  'studded_leather_armor': 13, 'studded-leather-armor': 13,
+  'hide_armor': 12, 'hide-armor': 12,
+  'scale_mail': 45, 'scale-mail': 45,
+  'breastplate': 20,
+  'half_plate_armor': 40, 'half-plate-armor': 40,
+  'ring_mail': 40, 'ring-mail': 40,
+  'splint_armor': 60, 'splint-armor': 60,
+  'padded_armor': 8, 'padded-armor': 8,
+  'dagger': 1,
+  'longsword': 3,
+  'shortsword': 2,
+  'greatsword': 6,
+  'shortbow': 2,
+  'longbow': 2,
+  'backpack': 5,
+  'bedroll': 7,
+  'rations': 2, 'rations-1-day': 2, 'rations_1_day': 2,
+  'torch': 1,
+  'waterskin': 5,
+  'tinderbox': 1,
+  'rope-hempen-50-feet': 10, 'rope_hempen_50_feet': 10,
+  'crowbar': 5,
+  'hammer': 2,
+  'piton': 0.25,
+  'potion': 0.5,
+  'potion-of-healing': 0.5, 'potion_of_healing': 0.5,
+};
+
+/**
+ * Resolves the canonical weight of an item template using Atlas cache, Atlas store, or canonical fallbacks.
+ */
+export function resolveItemTemplateWeight(templateRef: any, itemInstance?: any): number {
+  if (itemInstance?.metadata?.weight !== undefined) {
+    return parseWeight(itemInstance.metadata.weight);
+  }
+
+  if (typeof templateRef === 'object' && templateRef !== null) {
+    const directWeight = templateRef.weight ?? templateRef.weight_lbs ?? templateRef.metadata?.weight;
+    if (directWeight !== undefined) return parseWeight(directWeight);
+    if (templateRef.template) return resolveItemTemplateWeight(templateRef.template, itemInstance);
+  }
+
+  if (typeof templateRef === 'string' && templateRef.trim()) {
+    const cleanId = templateRef.toLowerCase().trim();
+    const hyphenId = cleanId.replace(/_/g, '-');
+    const underscoreId = cleanId.replace(/-/g, '_');
+
+    const cached = getCachedEquipment(cleanId) || getCachedEquipment(hyphenId) || getCachedEquipment(underscoreId);
+    if (cached?.weight !== undefined) {
+      return parseWeight(cached.weight);
+    }
+
+    try {
+      const atlasState = useAtlasStore.getState();
+      const allAtlasItems = [
+        ...(atlasState.equipmentList || []),
+        ...(atlasState.materialsList || []),
+        ...(atlasState.keyItemsList || []),
+        ...(atlasState.booksList || [])
+      ];
+      const foundInList = (allAtlasItems as any[]).find((i: any) =>
+        i?.index === cleanId || i?.index === hyphenId || i?.index === underscoreId
+      );
+      if (foundInList?.weight !== undefined) {
+        return parseWeight(foundInList.weight);
+      }
+    } catch (e) {}
+
+    if (CANONICAL_TEMPLATE_WEIGHTS[cleanId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[cleanId];
+    if (CANONICAL_TEMPLATE_WEIGHTS[hyphenId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[hyphenId];
+    if (CANONICAL_TEMPLATE_WEIGHTS[underscoreId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[underscoreId];
+  }
+
+  if (itemInstance?.weight !== undefined) return parseWeight(itemInstance.weight);
+  if (itemInstance?.weight_lbs !== undefined) return parseWeight(itemInstance.weight_lbs);
+
+  return 0;
+}
 
 /**
  * Calculates total carrying weight for a character including equipped items, backpack items, and currency.
@@ -9,17 +103,10 @@ import { calculateCurrencyWeight } from './currencyUtils';
 export function calculateCharacterWeight(character: Character | undefined): number {
   if (!character) return 0;
 
-  const parseWeight = (weight: any): number => {
-    if (!weight) return 0;
-    if (typeof weight === 'number') return weight;
-    const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
-    return weightMatch ? parseFloat(weightMatch[0]) : 0;
-  };
-
   const calculateItemWeight = (item: any): number => {
     if (!item) return 0;
-    const rawWeight = item.weight ?? item.weight_lbs ?? item.metadata?.weight ?? item.template?.weight ?? 0;
-    return parseWeight(rawWeight) * (item.quantity || 1);
+    const unitWeight = resolveItemTemplateWeight(item.template || item, item);
+    return unitWeight * (item.quantity || 1);
   };
 
   let inventoryWeight = 0;
