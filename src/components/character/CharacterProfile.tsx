@@ -168,7 +168,6 @@ export const CharacterProfile: React.FC = () => {
 
   const xpPercentage = getXpProgress(character.level || 1, character.xp || 0);
   const alignmentColor = getAlignmentColor(character.alignment || "Neutral");
-  const proficiencyBonus = Math.floor(2 + ((character.level || 1) - 1) / 4);
 
   const totalCharacterWeight = calculateCharacterWeight(character);
   const derived = calculateDerivedStats(character);
@@ -869,7 +868,7 @@ export const CharacterProfile: React.FC = () => {
                             const statVal = effectiveStats?.[skill.ability as keyof typeof effectiveStats] ?? 10;
                             const abilityMod = Math.floor((statVal - 10) / 2);
                             const isProficient = (character.proficiencies || []).includes(skill.name);
-                            const totalMod = abilityMod + (isProficient ? proficiencyBonus : 0);
+                            const totalMod = abilityMod + (isProficient ? derived.proficiencyBonus : 0);
                             
                             return (
                               <button 
