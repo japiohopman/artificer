@@ -5,82 +5,160 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 18,
-    "dex": 11,
+    "str": 10,
+    "dex": 8,
     "con": 13,
-    "int": 12,
-    "wis": 9,
-    "cha": 13
+    "int": 10,
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "Skill: Investigation",
+    "skill: intimidation",
+    "Skill: Animal Handling",
     "Skill: Persuasion",
-    "Potters Tools",
+    "Navigator'S Tools",
     "light armor",
+    "medium armor",
+    "shields",
     "simple weapons",
-    "longswords",
-    "rapiers",
-    "shortswords",
-    "hand crossbows",
+    "martial weapons",
     "saving throw: dex",
-    "saving throw: cha",
-    "Saving Throw: dex",
-    "Saving Throw: cha"
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "savage attacks",
+      "index": "savage_attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "extra_critical_damage_dice": 1
+        }
+      }
+    },
+    {
+      "name": "relentless endurance",
+      "index": "relentless_endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "trait_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      }
+    },
+    {
+      "name": "menacing",
+      "index": "menacing",
+      "desc": "You gain proficiency in the Intimidation skill."
+    }
+  ],
   "features": [
     {
-      "index": "spellcasting_bard",
+      "index": "favored_enemy_1_type",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
       },
-      "name": "spellcasting: bard",
+      "name": "favored enemy (1 type)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
       ],
-      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_bard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        }
+        "enemy_type_options": {
+          "desc": "one enemy type",
+          "choose": 1,
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "aberrations",
+              "beasts",
+              "celestials",
+              "constructs",
+              "dragons",
+              "elementals",
+              "fey",
+              "fiends",
+              "giants",
+              "monstrosities",
+              "oozes",
+              "plants",
+              "undead",
+              "humanoids"
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
       "source": "Class"
     },
     {
-      "index": "bardic_inspiration_d6",
+      "index": "natural_explorer_1_terrain_type",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
       },
-      "name": "bardic inspiration (d6)",
+      "name": "natural explorer (1 terrain type)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
-        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
+        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+        "- Difficult terrain doesn't slow your group's travel.",
+        "- Your group can't become lost except by magical means.",
+        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+        "- If you are traveling alone, you can move stealthily at a normal pace.",
+        "- When you forage, you find twice as much food as you normally would.",
+        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+        "You choose additional favored terrain types at 6th and 10th level."
       ],
-      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
       "feature_specific": {
-        "special_action": "bonus_action",
-        "attack_die": "1d6",
-        "usage": {
-          "type": "charisma_modifier",
-          "recovery": "long_rest"
-        }
+        "terrain_type_options": {
+          "desc": "one terrain type",
+          "choose": 1,
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "arctic",
+              "coast",
+              "desert",
+              "forest",
+              "grassland",
+              "mountain",
+              "swamp"
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
       "source": "Class"
     }
   ],
@@ -106,32 +184,32 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_u5cym1n4r": {
-      "id": "leather_armor_u5cym1n4r",
-      "template": "leather_armor",
+    "longbow_3v9s9479w": {
+      "id": "longbow_3v9s9479w",
+      "template": "longbow",
       "quantity": 1,
-      "addedAt": 1787264673838,
-      "kind": "armor"
-    },
-    "dagger_nh96rtvbz": {
-      "id": "dagger_nh96rtvbz",
-      "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1787264673838,
+      "addedAt": 1787305799515,
       "kind": "weapon"
     },
-    "abacus_authtmurg": {
-      "id": "abacus_authtmurg",
+    "arrow_g03ry5ku6": {
+      "id": "arrow_g03ry5ku6",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1787305799515,
+      "kind": "consumable"
+    },
+    "abacus_plq0d1dyj": {
+      "id": "abacus_plq0d1dyj",
       "template": "abacus",
       "quantity": 1,
-      "addedAt": 1787264673838,
+      "addedAt": 1787305799515,
       "kind": "tradegood"
     },
-    "gold_ug3axuhnb": {
-      "id": "gold_ug3axuhnb",
+    "gold_eq453yeg9": {
+      "id": "gold_eq453yeg9",
       "template": "gold",
-      "quantity": 25,
-      "addedAt": 1787264673838,
+      "quantity": 22,
+      "addedAt": 1787305799515,
       "kind": "tradegood"
     }
   },
@@ -143,15 +221,15 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "abacus_authtmurg"
+          "itemId": "arrow_g03ry5ku6"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_ug3axuhnb"
+          "itemId": "abacus_plq0d1dyj"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "gold_eq453yeg9"
         },
         {
           "id": "bag_3",
@@ -245,7 +323,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_nh96rtvbz"
+        "itemId": "longbow_3v9s9479w"
       },
       {
         "id": "off_hand",
@@ -261,7 +339,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_u5cym1n4r"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -363,95 +441,41 @@
   },
   "backpack": [
     {
-      "id": "abacus_76m8y5nu4",
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "quantity": 1
+    },
+    {
       "index": "abacus",
       "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
+      "quantity": 1
     },
     {
-      "id": "scale_merchants_x5fcy9rzo",
-      "index": "scale_merchants",
-      "name": "Scale Merchant'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/scale_merchants.json",
-      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
-      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp"
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
     },
     {
-      "id": "clothes_travelers_snq902yal",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_fs5wojh7t",
       "index": "gold",
       "name": "Gold",
-      "quantity": 25,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear"
+      "quantity": 22
     }
   ],
   "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common"
+    "common",
+    "orc"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -460,22 +484,29 @@
       "max": 0
     }
   },
-  "choices": {},
-  "name": "gg",
-  "race": "human",
-  "class": "bard",
-  "spellcastingAbility": "cha",
-  "background": "artisan",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
+  "choices": {
+    "favored_enemy_1_type": [
+      "celestials"
+    ],
+    "natural_explorer_1_terrain_type": [
+      "mountain"
+    ]
+  },
+  "race": "half_orc",
+  "class": "ranger",
+  "spellcastingAbility": "wis",
+  "background": "merchant",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "name": "Hero",
+  "hp": 7,
+  "maxHp": 7,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-20T22:25:13.562Z"
+  "lastSaved": "2026-08-21T09:50:51.544Z"
 }
