@@ -34,6 +34,7 @@ class DiceService {
   private initPromise: Promise<void> | null = null;
   private status: DiceServiceStatus = 'idle';
   private listeners: Set<(status: DiceServiceStatus) => void> = new Set();
+  private containerElement: HTMLElement | null = null;
 
   constructor() {
     // Some versions of dice-roller-parser require a random callback
@@ -71,18 +72,35 @@ class DiceService {
   }
 
   async init(containerArg: string | HTMLElement): Promise<void> {
-    if (this.initialized) return;
+    let containerElement: HTMLElement | null = null;
+    if (typeof containerArg === 'string') {
+      containerElement = document.querySelector(containerArg) as HTMLElement;
+    } else {
+      containerElement = containerArg;
+    }
+
+    const selector = typeof containerArg === 'string'
+      ? containerArg
+      : `#${containerArg.id || 'dice-box-container'}`;
+
+    // Reuse existing instance only if initialized AND attached to the same DOM container that still holds a canvas
+    const isCanvasAttached = containerElement && containerElement.querySelector('canvas') !== null;
+    if (this.initialized && this.containerElement === containerElement && isCanvasAttached) {
+      return;
+    }
+
     if (this.initPromise) return this.initPromise;
 
     this.initPromise = (async (): Promise<void> => {
       try {
-        const selector = typeof containerArg === 'string' ? containerArg : `#${containerArg.id || 'dice-box-container'}`;
         console.log("[DiceService] Initializing DiceBox with selector:", selector);
         
         // Ensure the container exists in the DOM before initializing
-        let containerElement = document.querySelector(selector);
         if (!containerElement && typeof containerArg !== 'string') {
           containerElement = containerArg;
+        }
+        if (!containerElement) {
+          containerElement = document.querySelector(selector) as HTMLElement;
         }
         
         if (!containerElement) {
@@ -126,6 +144,7 @@ class DiceService {
         
         console.log("[DiceService] DiceBox initialized successfully.");
         this.initialized = true;
+        this.containerElement = containerElement;
 
         // Force a resize calculation
         if (this.diceBox && typeof this.diceBox.resize === 'function') {
@@ -317,6 +336,22 @@ class DiceService {
       return;
     }
     this.safeClear();
+  }
+
+  detach(containerArg?: string | HTMLElement) {
+    let targetElement: HTMLElement | null = null;
+    if (typeof containerArg === 'string') {
+      targetElement = document.querySelector(containerArg) as HTMLElement;
+    } else if (containerArg) {
+      targetElement = containerArg as HTMLElement;
+    }
+
+    if (!containerArg || !this.containerElement || this.containerElement === targetElement) {
+      console.log("[DiceService] Detaching container lifecycle from host element.");
+      this.initialized = false;
+      this.containerElement = null;
+      this.initPromise = null;
+    }
   }
 
   updateConfig(config: any) {
