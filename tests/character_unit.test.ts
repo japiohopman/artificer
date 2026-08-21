@@ -1,5 +1,6 @@
 import { calculateCharacterWeight } from '../src/lib/inventoryUtils';
 import { useCharacterStore } from '../src/store/useCharacterStore';
+import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, selectPartyCharacters } from '../src/lib/character/selectors';
 
 console.log('Running Character Architecture Unit Tests...');
 
@@ -74,44 +75,55 @@ const charB: any = {
 
 store.setCharacters([charA, charB]);
 
+// Test Canonical Selector Layer
 // Activate A
 store.setActiveCharacter('char_a');
-const activeA = useCharacterStore.getState().characters.find(c => c.id === useCharacterStore.getState().activeCharacterId);
-if (activeA?.name !== 'Thorin' || activeA?.stats?.str !== 18) {
-  throw new Error('Thorin activation failed');
+const selectedActiveA = selectActiveCharacter(useCharacterStore.getState());
+if (selectedActiveA?.name !== 'Thorin' || selectedActiveA?.stats?.str !== 18) {
+  throw new Error('selectActiveCharacter failed for Thorin');
+}
+
+// Select by ID
+const selectedByIdB = selectCharacterById(useCharacterStore.getState(), 'char_b');
+if (selectedByIdB?.name !== 'Elrond' || selectedByIdB?.stats?.int !== 18) {
+  throw new Error('selectCharacterById failed for Elrond');
 }
 
 // Activate B
 store.setActiveCharacter('char_b');
-const activeB = useCharacterStore.getState().characters.find(c => c.id === useCharacterStore.getState().activeCharacterId);
-if (activeB?.name !== 'Elrond' || activeB?.stats?.int !== 18) {
-  throw new Error('Elrond activation failed');
+const selectedActiveB = selectActiveCharacter(useCharacterStore.getState());
+if (selectedActiveB?.name !== 'Elrond' || selectedActiveB?.stats?.int !== 18) {
+  throw new Error('selectActiveCharacter failed for Elrond');
 }
 
 // Modify B's HP
 store.updateCharacter('char_b', { hp: 20 });
-const bUpdated = useCharacterStore.getState().characters.find(c => c.id === 'char_b');
+const bUpdated = selectCharacterById(useCharacterStore.getState(), 'char_b');
 if (bUpdated?.hp !== 20) throw new Error('Elrond HP update failed');
 
 // Switch back to A and verify A's state is preserved
 store.setActiveCharacter('char_a');
-const activeA2 = useCharacterStore.getState().characters.find(c => c.id === useCharacterStore.getState().activeCharacterId);
-if (activeA2?.name !== 'Thorin' || activeA2?.hp !== 45) {
+const selectedActiveA2 = selectActiveCharacter(useCharacterStore.getState());
+if (selectedActiveA2?.name !== 'Thorin' || selectedActiveA2?.hp !== 45) {
   throw new Error('Thorin state persistence failed after switching');
 }
+
+// Select party
+const party = selectPartyCharacters(useCharacterStore.getState());
+if (party.length !== 2) throw new Error('selectPartyCharacters failed');
 
 // 5. Save slot integrity
 const slot1Char: any = { id: 'slot1', name: 'Slot 1 Hero', level: 1 };
 const slot2Char: any = { id: 'slot2', name: 'Slot 2 Hero', level: 2 };
 
 useCharacterStore.getState().setMainCharacterSlots([slot1Char, slot2Char, null]);
-const slotsBefore = useCharacterStore.getState().mainCharacterSlots;
+const slotsBefore = selectMainCharacterSlots(useCharacterStore.getState());
 if (slotsBefore[0]?.name !== 'Slot 1 Hero' || slotsBefore[1]?.name !== 'Slot 2 Hero') {
   throw new Error('Main character slots setting failed');
 }
 
 useCharacterStore.getState().setMainCharacter(slot1Char);
-const slotsAfter = useCharacterStore.getState().mainCharacterSlots;
+const slotsAfter = selectMainCharacterSlots(useCharacterStore.getState());
 if (slotsAfter[0]?.id !== 'slot1' || slotsAfter[1]?.id !== 'slot2' || slotsAfter[2] !== null) {
   throw new Error('Save slots overwritten during setMainCharacter');
 }

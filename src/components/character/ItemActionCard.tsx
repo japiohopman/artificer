@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { 
@@ -19,11 +20,6 @@ export const ItemActionCard: React.FC = () => {
   } = useUIStore();
 
   const {
-    activeCharacterId, 
-    characters
-  } = useCharacterStore();
-
-  const {
     equipItem,
     unequipItem,
     transferItem,
@@ -31,10 +27,11 @@ export const ItemActionCard: React.FC = () => {
     removeFromPartyInventory
   } = useInventoryStore();
 
-  if (!inspectingItem) return null;
+  const activeChar = useActiveCharacter();
+
+  if (!inspectingItem || !activeChar) return null;
 
   const { item, sourceId, index, slot } = inspectingItem;
-  const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
   const isEquipment = item._type === 'equipment';
   
   const handleEquip = (slotId: string) => {

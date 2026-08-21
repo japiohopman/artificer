@@ -1,13 +1,14 @@
 import React from 'react';
 import { GameIcon } from '../../game_icons';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { motion, AnimatePresence } from 'motion/react';
 import { XP_TABLE, getXpProgress } from '../../lib/statCalculations';
 import { cn } from '../../lib/utils';
 
 export const Simulator: React.FC = () => {
   const { characters, addXp, activeCharacterId, setActiveCharacter } = useCharacterStore();
-  const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const activeChar = useActiveCharacter();
 
   const handleLevelUp = async () => {
     if (!activeChar) return;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter, selectCharacterById } from '../../lib/character';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
 import { Package, Trash2, Weight, Shield, ArrowRight, Sparkles, Book, Key, Filter } from 'lucide-react';
@@ -24,11 +25,12 @@ export const Inventory: React.FC<InventoryProps> = ({
   compactEquipped = false,
   gridCols = 10
 }) => {
-  const { characters, activeCharacterId } = useCharacterStore();
+  const storeActiveChar = useActiveCharacter();
+  const forcedChar = useCharacterStore(state => forceCharacterId ? selectCharacterById(state, forceCharacterId) : undefined);
   const { unequipItem, removeFromBackpack } = useInventoryStore();
   const [activeCategory, setActiveCategory] = React.useState<BackpackCategory>('all');
   
-  const activeCharacter = characters.find(c => c.id === (forceCharacterId || activeCharacterId)) || characters[0];
+  const activeCharacter = forcedChar || storeActiveChar;
   if (!activeCharacter) {
     return <div className="text-[10px] text-parchment-400 italic">No active character</div>;
   }

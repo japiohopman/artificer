@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { calculateCharacterWeight } from '../../lib/inventoryUtils';
 import { calculateDerivedStats } from '../../lib/statCalculations';
@@ -7,10 +7,8 @@ import { Weight, Coins } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 export const HUDFooter: React.FC = () => {
-  const { characters, activeCharacterId } = useCharacterStore();
+  const activeCharacter = useActiveCharacter();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
-
-  const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
 
   if (!activeCharacter) {
     return null;
