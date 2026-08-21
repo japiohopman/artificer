@@ -12,35 +12,29 @@ export const DiceBoxCanvas: React.FC = () => {
   const { isInventoryOpen } = useInventoryStore();
 
   useEffect(() => {
-    const el = containerRef.current;
-    if (el) {
+    if (containerRef.current) {
       // Ensure we don't have multiple canvases
-      const existingCanvas = el.querySelector('canvas');
+      const existingCanvas = containerRef.current.querySelector('canvas');
       if (existingCanvas) {
         console.log("[DiceBoxCanvas] Canvas already exists, skipping re-init.");
-      } else {
-        diceService.init(el).then(() => {
-          setIsDiceReady(true);
-          // Force initial resize
-          const handleResize = () => {
-            // @ts-ignore
-            if (diceService.diceBox && typeof diceService.diceBox.resize === 'function') {
-              // @ts-ignore
-              diceService.diceBox.resize();
-            }
-          };
-          handleResize();
-        }).catch((err: any) => {
-          console.error("[DiceBoxCanvas] Init failed:", err);
-        });
+        return;
       }
-    }
 
-    return () => {
-      if (el) {
-        diceService.detach(el);
-      }
-    };
+      diceService.init(containerRef.current).then(() => {
+        setIsDiceReady(true);
+        // Force initial resize
+        const handleResize = () => {
+          // @ts-ignore
+          if (diceService.diceBox && typeof diceService.diceBox.resize === 'function') {
+            // @ts-ignore
+            diceService.diceBox.resize();
+          }
+        };
+        handleResize();
+      }).catch((err: any) => {
+        console.error("[DiceBoxCanvas] Init failed:", err);
+      });
+    }
   }, [setIsDiceReady]);
 
   // Handle resizing when sidebars toggle
