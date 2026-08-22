@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useUIStore } from '../../../store/useUIStore';
 import { useGameStore } from '../../../store/useGameStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
+import { useActiveCharacter } from '../../../lib/character';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,9 +19,8 @@ export const ActionPanel: React.FC = () => {
     targetingAction
   } = useUIStore();
   const { addLog, nextTurn } = useGameStore();
-  const { activeCharacterId, characters } = useCharacterStore();
-
-  const activeChar = characters.find(c => c.id === activeCharacterId);
+  const activeChar = useActiveCharacter();
+  const activeCharacterId = activeChar?.id || '';
 
   // Downed State check
   const isDowned = activeChar && activeChar.hp <= 0;

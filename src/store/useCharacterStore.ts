@@ -218,6 +218,9 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
       setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
       setExploredAreas(char.exploredAreas || []);
+      const { ensureCharacterEquipmentLoaded } = await import('../lib/inventoryUtils');
+      await ensureCharacterEquipmentLoaded(char);
+      set((state) => ({ characters: [...state.characters] }));
     }
   },
   setMainCharacter: async (char) => {
@@ -225,6 +228,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       const { useGameStore } = await import('./useGameStore');
       useGameStore.getState().setRuleset(char.ruleset);
     }
+    const { ensureCharacterEquipmentLoaded } = await import('../lib/inventoryUtils');
+    await ensureCharacterEquipmentLoaded(char);
     set(() => ({
       characters: [char],
       activeCharacterId: char.id
@@ -707,10 +712,14 @@ characters: state.characters.map(char =>
         setExploredAreas(activeChar.exploredAreas || []);
       }
 
+      const { ensureCharacterEquipmentLoaded } = await import('../lib/inventoryUtils');
       for (const char of processedChars) {
-          if (char && char.level > 0) {
+          if (char) {
+            await ensureCharacterEquipmentLoaded(char);
+            if (char.level > 0) {
               const levels = Array.from({ length: char.level }, (_, i) => i + 1);
               await get().loadLeveledData(char.class, levels);
+            }
           }
       }
     } finally {

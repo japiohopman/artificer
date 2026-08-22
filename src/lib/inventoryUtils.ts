@@ -1,5 +1,100 @@
 
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG, ItemKind } from '../types/inventory';
+import { Character } from '../store/useCharacterStore';
+import { calculateCurrencyWeight } from './currencyUtils';
+import { fetchEquipmentData, getCachedEquipment } from '../services/storageService';
+
+/**
+ * Ensures that all canonical Atlas equipment definitions for V2 character item templates are loaded into memory cache.
+ * Must be invoked at the character loading/activation lifecycle boundary.
+ */
+export async function ensureCharacterEquipmentLoaded(character: Character | undefined): Promise<void> {
+  if (!character || character.saveVersion !== 2 || !character.items) return;
+  const ruleset = character.ruleset;
+  const templateIds = new Set<string>();
+
+  Object.values(character.items).forEach((item: any) => {
+    if (item && item.template && typeof item.template === 'string') {
+      templateIds.add(item.template);
+    }
+  });
+
+  const missingIds = Array.from(templateIds).filter(id => !getCachedEquipment(id, ruleset));
+  if (missingIds.length > 0) {
+    await Promise.all(missingIds.map(id => fetchEquipmentData(id, ruleset)));
+  }
+}
+
+const parseWeight = (weight: any): number => {
+  if (weight === null || weight === undefined) return 0;
+  if (typeof weight === 'number') return weight;
+  const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
+  return weightMatch ? parseFloat(weightMatch[0]) : 0;
+};
+
+/**
+ * Resolves the static canonical weight of an item template from storageService equipmentCache.
+ * Unloaded templates synchronously resolve to weight 0 until loaded into memory via fetchEquipmentData.
+ */
+export function resolveItemTemplateWeight(templateRef: any, ruleset?: '2014' | '2024'): number {
+  if (!templateRef) return 0;
+
+  // Embedded object handling (e.g. V1 legacy item or loaded item object)
+  if (typeof templateRef === 'object') {
+    const directWeight = templateRef.weight ?? templateRef.weight_lbs;
+    if (directWeight !== undefined) return parseWeight(directWeight);
+    if (templateRef.template) return resolveItemTemplateWeight(templateRef.template, ruleset);
+    return 0;
+  }
+
+  if (typeof templateRef === 'string' && templateRef.trim()) {
+    const cleanId = templateRef.toLowerCase().trim();
+    const hyphenId = cleanId.replace(/_/g, '-');
+    const underscoreId = cleanId.replace(/-/g, '_');
+
+    const cached = getCachedEquipment(cleanId, ruleset) ||
+                   getCachedEquipment(hyphenId, ruleset) ||
+                   getCachedEquipment(underscoreId, ruleset);
+
+    if (cached?.weight !== undefined) {
+      return parseWeight(cached.weight);
+    }
+  }
+
+  return 0;
+}
+
+/**
+ * Calculates total carrying weight for a character including equipped items, backpack items, and currency.
+ * For V2 characters (saveVersion === 2), item weights are synchronously resolved from loaded Atlas equipment
+ * definitions in storageService (getCachedEquipment). Unloaded templates resolve to weight 0 until loaded.
+ */
+export function calculateCharacterWeight(character: Character | undefined): number {
+  if (!character) return 0;
+
+  let inventoryWeight = 0;
+  if (character.saveVersion === 2 && character.items) {
+    inventoryWeight = Object.values(character.items).reduce((acc: number, item: any) => {
+      if (!item) return acc;
+      const unitWeight = resolveItemTemplateWeight(item.template, character.ruleset);
+      return acc + (unitWeight * (item.quantity || 1));
+    }, 0);
+  } else {
+    const calculateV1ItemWeight = (item: any): number => {
+      if (!item) return 0;
+      const rawWeight = item.weight ?? item.weight_lbs ?? 0;
+      return parseWeight(rawWeight) * (item.quantity || 1);
+    };
+
+    const equippedWeight = Object.values(character.inventory || {}).reduce((acc: number, item: any) => acc + calculateV1ItemWeight(item), 0);
+    const backpackWeight = (character.backpack || []).reduce((acc: number, item: any) => acc + calculateV1ItemWeight(item), 0);
+    inventoryWeight = equippedWeight + backpackWeight;
+  }
+
+  const moneyWeight = calculateCurrencyWeight(character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
+
+  return inventoryWeight + moneyWeight;
+}
 
 /**
  * Creates a unique ID for an item instance

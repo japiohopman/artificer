@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { BookReader } from '../bookreader/BookReader';
 import { GameIcon } from '../../game_icons';
 import { calculateMaxSpellSlots, getEffectiveStats } from '../../lib/statCalculations';
@@ -16,12 +17,10 @@ interface SpellbookReaderProps {
 export const SpellbookReader: React.FC<SpellbookReaderProps> = ({ isOpen, onClose }) => {
   const {
     prepareSpell,
-    unprepareSpell,
-    characters,
-    activeCharacterId
+    unprepareSpell
   } = useCharacterStore();
   
-  const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const activeCharacter = useActiveCharacter();
   if (!activeCharacter) return null;
 
   const knownSpells = (activeCharacter.knownSpells as any[]) || (activeCharacter as any).spells || [];

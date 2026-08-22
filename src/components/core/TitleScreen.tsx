@@ -11,7 +11,7 @@ import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { calculateDerivedStats } from '../../lib/character';
+import { CharacterStats } from '../character/CharacterStats';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -130,8 +130,6 @@ export const TitleScreen: React.FC = () => {
   };
 
   const selectedChar = selectedSlotIndex !== null ? mainCharacterSlots[selectedSlotIndex] : null;
-  const selectedDerived = selectedChar ? calculateDerivedStats(selectedChar) : null;
-  const selectedInitiativeSign = selectedDerived ? (selectedDerived.initiative >= 0 ? `+${selectedDerived.initiative}` : `${selectedDerived.initiative}`) : '';
 
   return (
     <div 
@@ -421,60 +419,21 @@ export const TitleScreen: React.FC = () => {
                 <div className="flex flex-col justify-between space-y-6">
                   <div className="space-y-4">
                     <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-[0.3em] block">
-                      Vitals & Status
+                      Vitals & Combat Readiness
                     </span>
                     
-                    <div className="grid grid-cols-2 gap-3">
-                      {/* HP */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
-                        <div className="p-1.5 bg-red-950/30 rounded border border-red-900/20 text-red-500 flex items-center justify-center">
-                          <GameIcon name="shield" size={11} color="currentColor" />
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Health</span>
-                          <span className="text-xs font-bold text-stone-200">
-                            {selectedChar.hp} / {selectedChar.maxHp} HP
-                          </span>
-                        </div>
-                      </div>
+                    <CharacterStats character={selectedChar} variant="compact" />
 
-                      {/* AC */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
-                        <div className="p-1.5 bg-amber-950/30 rounded border border-amber-900/20 text-amber-500 flex items-center justify-center">
-                          <GameIcon name="armor" size={11} color="currentColor" />
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Armor Class</span>
-                          <span className="text-xs font-bold text-stone-200">
-                            {selectedDerived?.ac} AC
-                          </span>
-                        </div>
+                    {/* Wealth */}
+                    <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
+                      <div className="p-1.5 bg-yellow-950/30 rounded border border-yellow-900/20 text-yellow-500 flex items-center justify-center">
+                        <GameIcon name="money" size={11} color="currentColor" />
                       </div>
-
-                      {/* Initiative */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
-                        <div className="p-1.5 bg-blue-950/30 rounded border border-blue-900/20 text-blue-400 flex items-center justify-center">
-                          <GameIcon name="sword" size={11} color="currentColor" />
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Initiative</span>
-                          <span className="text-xs font-bold text-stone-200">
-                            {selectedInitiativeSign} INIT
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Wealth */}
-                      <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">
-                        <div className="p-1.5 bg-yellow-950/30 rounded border border-yellow-900/20 text-yellow-500 flex items-center justify-center">
-                          <GameIcon name="money" size={11} color="currentColor" />
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Wealth</span>
-                          <span className="text-xs font-bold text-stone-200">
-                            {selectedChar.money?.gp || 0} GP
-                          </span>
-                        </div>
+                      <div className="flex flex-col">
+                        <span className="text-[8px] font-black text-stone-500 uppercase tracking-wider">Wealth</span>
+                        <span className="text-xs font-bold text-stone-200">
+                          {selectedChar.money?.gp || 0} GP
+                        </span>
                       </div>
                     </div>
 

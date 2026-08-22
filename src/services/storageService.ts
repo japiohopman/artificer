@@ -425,17 +425,70 @@ export async function fetchMaterialData(index: string): Promise<any> {
   }
 }
 
+export function getCachedEquipment(index: string, ruleset?: '2014' | '2024'): any | null {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  return equipmentCache[`${activeRuleset}:${index}`] || equipmentCache[`2014:${index}`] || equipmentCache[`2024:${index}`] || null;
+}
+
 export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
   const activeRuleset = getActiveRulesetContext(ruleset);
   const cacheKey = `${activeRuleset}:${index}`;
   if (equipmentCache[cacheKey]) return equipmentCache[cacheKey];
 
-  let resolvedPath: string | null = null;
   const versionFolder = activeRuleset === '2024' ? '24' : '14';
-
-  // Intercept standard equipment pack indices and map to their nested _container.json path
   const cleanIndex = index.toLowerCase().replace(/_/g, '-');
   const packNames = ['burglars-pack', 'explorers-pack', 'dungeoneers-pack', 'priests-pack', 'entertainers-pack', 'scholars-pack', 'diplomats-pack'];
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const path = await import('path');
+      let nodePath: string | null = null;
+
+      if (packNames.includes(cleanIndex)) {
+        nodePath = `public/assets/atlas/equipment/json/${versionFolder}/equipment-packs/${cleanIndex}/_container.json`;
+      } else {
+        const indexPath = path.resolve(process.cwd(), 'public/assets/atlas/equipment/index.json');
+        if (fs.existsSync(indexPath)) {
+          const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+          const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+          const hyphenSearch = index.toLowerCase().replace(/_/g, '-');
+          const matching = indexData.filter((e: any) =>
+            e.index.toLowerCase() === index.toLowerCase() ||
+            e.index.toLowerCase() === cleanIndex ||
+            e.index.toLowerCase() === hyphenSearch ||
+            (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+          );
+          const versioned = matching.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+          const entry = versioned || matching[0];
+          if (entry && entry.json_path) {
+            nodePath = entry.json_path.replace(/^\/?assets\/atlas\//, 'public/assets/atlas/').replace(/^\/?public\/assets\/atlas\//, 'public/assets/atlas/');
+          }
+        }
+      }
+
+      if (nodePath) {
+        const fullPath = path.resolve(process.cwd(), nodePath);
+        if (fs.existsSync(fullPath)) {
+          const fileContent = fs.readFileSync(fullPath, 'utf8');
+          const data = JSON.parse(fileContent);
+          if (packNames.includes(cleanIndex)) {
+            data.index = index;
+            const underscoreName = cleanIndex.replace(/-/g, '_');
+            data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+            data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+          }
+          const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+          equipmentCache[cacheKey] = finalResult;
+          return finalResult;
+        }
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  let resolvedPath: string | null = null;
   if (packNames.includes(cleanIndex)) {
     resolvedPath = `/assets/atlas/equipment/json/${versionFolder}/equipment-packs/${cleanIndex}/_container.json`;
   }
@@ -463,6 +516,29 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
 
   if (!resolvedPath) {
     resolvedPath = `/assets/atlas/equipment/json/${versionFolder}/${index}.json`;
+  }
+
+  // Node CLI local filesystem fallback for resolvedPath in test environments
+  if (typeof window === 'undefined' && resolvedPath) {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\//, 'public/assets/atlas/').replace(/^\/?public\/assets\/atlas\//, 'public/assets/atlas/');
+      const fullFsPath = path.resolve(process.cwd(), cleanSubpath);
+      if (fs.existsSync(fullFsPath)) {
+        const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+        const data = JSON.parse(fileContent);
+        if (packNames.includes(cleanIndex)) {
+          data.index = index;
+          const underscoreName = cleanIndex.replace(/-/g, '_');
+          data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+          data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
+        }
+        const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+        equipmentCache[cacheKey] = finalResult;
+        return finalResult;
+      }
+    } catch (e) {}
   }
 
   // Local first

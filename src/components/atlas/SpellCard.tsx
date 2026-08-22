@@ -9,6 +9,7 @@ import { normalizeImageUrl } from '../../services/storageService';
 import { renderNameValue, getOrdinal } from '../../lib/dataUtils';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 
 interface SpellCardProps {
   spell: any;
@@ -16,10 +17,9 @@ interface SpellCardProps {
 }
 
 export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
-  const { characters, activeCharacterId, learnSpell } = useCharacterStore();
+  const { learnSpell } = useCharacterStore();
+  const activeCharacter = useActiveCharacter();
   if (!spell) return null;
-
-  const activeCharacter = characters.find(c => c.id === activeCharacterId);
   const isKnown = activeCharacter?.knownSpells?.some(s => s.index === spell.index);
 
   const levelText = spell.level === 0 ? 'Cantrip' : `${spell.level}${getOrdinal(spell.level)}-level`;

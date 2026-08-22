@@ -26,11 +26,12 @@ import { isBookLike } from '../../lib/bookUtils';
 import { getAlignmentColor, getAlignmentBackgroundStyle } from '../../lib/colors';
 
 import { normalizeImageUrl } from '../../services/storageService';
-import { calculateDerivedStats, getXpProgress, getEffectiveStats, XP_TABLE, useActiveCharacter } from '../../lib/character';
+import { calculateDerivedStats, getXpProgress, getEffectiveStats, calculateMaxSpellSlots, XP_TABLE, useActiveCharacter } from '../../lib/character';
+import { calculateCharacterWeight } from '../../lib/inventoryUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon , getAttackIcon } from '../../lib/atlasUtils';
-import { calculateCurrencyWeight, formatMoney } from '../../lib/currencyUtils';
+import { formatMoney } from '../../lib/currencyUtils';
 
 const SpellListRow: React.FC<{ 
   spell: any; 
@@ -167,48 +168,12 @@ export const CharacterProfile: React.FC = () => {
 
   const xpPercentage = getXpProgress(character.level || 1, character.xp || 0);
   const alignmentColor = getAlignmentColor(character.alignment || "Neutral");
-  const proficiencyBonus = Math.floor(2 + ((character.level || 1) - 1) / 4);
 
-  const calculateWeight = () => {
-    const parseWeight = (weight: any): number => {
-      if (!weight) return 0;
-      if (typeof weight === 'number') return weight;
-      const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
-      return weightMatch ? parseFloat(weightMatch[0]) : 0;
-    };
-
-    const calculateItemWeight = (item: any): number => {
-      if (!item) return 0;
-      return parseWeight(item.weight) * (item.quantity || 1);
-    };
-
-    const equippedWeight = Object.values(character.inventory || {}).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
-    const backpackWeight = (character.backpack || []).reduce((acc: number, item: any) => acc + calculateItemWeight(item), 0);
-    
-    const moneyWeight = calculateCurrencyWeight(character.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 });
-
-    return equippedWeight + backpackWeight + moneyWeight;
-  };
-
-  const totalCharacterWeight = calculateWeight();
+  const totalCharacterWeight = calculateCharacterWeight(character);
   const derived = calculateDerivedStats(character);
 
-  const getSpellSlots = (lvl: number, cls: string) => {
-    // Simplified SRD mapping for level 1
-    const slots: Record<string, number[]> = {
-      'cleric': [2],
-      'druid': [2],
-      'paladin': [0], // Paladins get spells at level 2
-      'ranger': [0],
-      'sorcerer': [2],
-      'warlock': [1], // Pact magic is different but for simplicity...
-      'wizard': [2],
-      'bard': [2]
-    };
-    return slots[cls.toLowerCase()] || [];
-  };
-
-  const spellSlots = getSpellSlots(character.level || 1, character.class || "");
+  const maxSpellSlots = calculateMaxSpellSlots(character);
+  const spellSlotEntries = Object.entries(maxSpellSlots).sort(([a], [b]) => Number(a) - Number(b));
   const cantrips = character.knownSpells?.filter(s => s.level === 0) || [];
   const leveledSpells = character.knownSpells?.filter(s => s.level > 0) || [];
 
@@ -903,7 +868,7 @@ export const CharacterProfile: React.FC = () => {
                             const statVal = effectiveStats?.[skill.ability as keyof typeof effectiveStats] ?? 10;
                             const abilityMod = Math.floor((statVal - 10) / 2);
                             const isProficient = (character.proficiencies || []).includes(skill.name);
-                            const totalMod = abilityMod + (isProficient ? proficiencyBonus : 0);
+                            const totalMod = abilityMod + (isProficient ? derived.proficiencyBonus : 0);
                             
                             return (
                               <button 
@@ -1375,9 +1340,9 @@ export const CharacterProfile: React.FC = () => {
                          </div>
 
                          <div className="space-y-4">
-                            {spellSlots.map((max, idx) => {
-                               const level = idx + 1;
-                               const current = (character.spellSlots?.[level.toString()] as any)?.current ?? max;
+                            {spellSlotEntries.map(([levelStr, max]) => {
+                               const level = Number(levelStr);
+                               const current = (character.spellSlots?.[levelStr] as any)?.current ?? max;
                                return (
                                  <div key={level} className="flex flex-col gap-2 p-3 bg-white/40 border border-dragon-red/5 rounded">
                                     <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-widest">

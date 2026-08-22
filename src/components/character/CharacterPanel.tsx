@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { EquipmentDoll } from './EquipmentDoll';
@@ -46,7 +47,7 @@ export const CharacterPanel: React.FC = () => {
   const activeTab = activeCharacterTab;
   const setActiveTab = setActiveCharacterTab;
 
-  const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const activeCharacter = useActiveCharacter();
   
   if (!activeCharacter) {
     return (

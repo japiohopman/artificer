@@ -1,51 +1,21 @@
 import React from 'react';
-import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
-import { calculateCurrencyWeight } from '../../lib/currencyUtils';
+import { calculateCharacterWeight } from '../../lib/inventoryUtils';
 import { calculateDerivedStats } from '../../lib/statCalculations';
 import { Weight, Coins } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 export const HUDFooter: React.FC = () => {
-  const { characters, activeCharacterId } = useCharacterStore();
+  const activeCharacter = useActiveCharacter();
   const { isWorldPanelOpen, isCharacterPanelOpen } = useUIStore();
-
-  const activeCharacter = characters.find(c => c.id === activeCharacterId) || characters[0];
 
   if (!activeCharacter) {
     return null;
   }
 
   const money = activeCharacter.money || { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 };
-
-  // Calculate current weight of active character
-  const calculateWeight = () => {
-    const parseWeight = (weight: any): number => {
-      if (!weight) return 0;
-      if (typeof weight === 'number') return weight;
-      const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
-      return weightMatch ? parseFloat(weightMatch[0]) : 0;
-    };
-
-    const calculateItemWeight = (item: any): number => {
-      if (!item) return 0;
-      return parseWeight(item.weight) * (item.quantity || 1);
-    };
-
-    const equippedWeight = Object.values(activeCharacter.inventory || {}).reduce(
-      (acc: number, item: any) => acc + calculateItemWeight(item),
-      0
-    );
-    const backpackWeight = (activeCharacter.backpack || []).reduce(
-      (acc: number, item: any) => acc + calculateItemWeight(item),
-      0
-    );
-    const moneyWeight = calculateCurrencyWeight(money);
-
-    return equippedWeight + backpackWeight + moneyWeight;
-  };
-
-  const totalWeight = calculateWeight();
+  const totalWeight = calculateCharacterWeight(activeCharacter);
   const derived = calculateDerivedStats(activeCharacter);
   const maxWeight = derived.weightCapacity || 150;
 

@@ -9,6 +9,7 @@ import { useUIStore } from '../../store/useUIStore';
 import { fetchLanguageData, REPO, BRANCH } from '../../services/storageService';
 import { injectFontFace, getLanguageFontFamily } from '../../lib/fontLoader';
 import { useCharacterStore } from '../../store/useCharacterStore';
+import { useActiveCharacter } from '../../lib/character';
 
 export type BookViewState = 'front-cover' | 'back-cover' | 'single-sheet' | 'spread';
 
@@ -172,8 +173,7 @@ const SinglePageContent = ({
     bookAuthor,
     language
 }: any) => {
-  const { characters, activeCharacterId } = useCharacterStore();
-  const character = characters.find(c => c.id === activeCharacterId) || characters[0];
+  const character = useActiveCharacter();
   const knowsLanguage = !language || (character?.languages || []).includes(language.toLowerCase());
   const { fontLoaded } = useLanguageFont(knowsLanguage ? undefined : language);
 
