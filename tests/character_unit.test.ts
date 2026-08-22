@@ -1,7 +1,6 @@
-import { calculateCharacterWeight, resolveItemTemplateWeight } from '../src/lib/inventoryUtils';
+import { calculateCharacterWeight, resolveItemTemplateWeight, ensureCharacterEquipmentLoaded } from '../src/lib/inventoryUtils';
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, selectPartyCharacters } from '../src/lib/character/selectors';
-import { seedEquipmentCache } from '../src/services/storageService';
 
 console.log('Running Character Architecture Unit Tests...');
 
@@ -34,42 +33,29 @@ const v1Char: any = {
 const v1Weight = calculateCharacterWeight(v1Char); // 55 + 3 + 10 + 2 + 1 = 71
 if (v1Weight !== 71) throw new Error(`Expected V1 weight 71, got ${v1Weight}`);
 
-// 3. V2 Registry-based item weight tests (canonical resolution via template ID and storageService cache)
-
-// 3a. Explicit check for unloaded canonical template data (synchronous calculation returns 0 without errors)
-const unloadedTemplateChar: any = {
-  id: 'v2_unloaded',
-  saveVersion: 2,
-  items: {
-    inst_1: { id: 'inst_1', template: 'plate_armor', quantity: 1 }
-  }
-};
-const unloadedWeight = calculateCharacterWeight(unloadedTemplateChar);
-if (unloadedWeight !== 0) throw new Error(`Expected 0 weight for unloaded template, got ${unloadedWeight}`);
-
-// Seed storageService equipmentCache with full canonical equipment definitions
-seedEquipmentCache('plate_armor', { index: 'plate_armor', name: 'Plate Armor', weight: 65 });
-seedEquipmentCache('shield', { index: 'shield', name: 'Shield', weight: 6 });
-seedEquipmentCache('potion', { index: 'potion', name: 'Potion of Healing', weight: 0.5 });
-
-// 3b. Single V2 item after canonical equipment data is loaded into storageService cache
-const singleWeight = calculateCharacterWeight(unloadedTemplateChar);
-if (singleWeight !== 65) throw new Error(`Expected single loaded V2 item weight 65, got ${singleWeight}`);
-
-// 3c. Multiple V2 items + quantity > 1 + unknown template + currency
-const v2MultiChar: any = {
+// 3. V2 Registry-based item weight tests (canonical resolution via ensureCharacterEquipmentLoaded lifecycle)
+const v2Char: any = {
   id: 'v2_multi',
   saveVersion: 2,
   items: {
-    inst_1: { id: 'inst_1', template: 'plate_armor', quantity: 1 }, // 65 lbs
-    inst_2: { id: 'inst_2', template: 'shield', quantity: 1 },      // 6 lbs
-    inst_3: { id: 'inst_3', template: 'potion', quantity: 4 },      // 0.5 * 4 = 2 lbs
-    inst_4: { id: 'inst_4', template: 'unknown_magic_orb', quantity: 1 } // 0 lbs
+    inst_1: { id: 'inst_1', template: 'plate-armor', quantity: 1 },        // 65 lbs
+    inst_2: { id: 'inst_2', template: 'shield', quantity: 1 },             // 6 lbs
+    inst_3: { id: 'inst_3', template: 'potion-of-healing', quantity: 4 },  // 0.1 * 4 = 0.4 lbs
+    inst_4: { id: 'inst_4', template: 'unknown_magic_orb', quantity: 1 }   // 0 lbs
   },
   money: { cp: 0, sp: 0, ep: 0, gp: 100, pp: 0 } // 100 coins = 2 lbs
 };
-const multiWeight = calculateCharacterWeight(v2MultiChar); // 65 + 6 + 2 + 0 + 2 = 75
-if (multiWeight !== 75) throw new Error(`Expected V2 multi-item weight 75, got ${multiWeight}`);
+
+// 3a. Prior to lifecycle preloading, calculateCharacterWeight returns only currency weight (2 lbs)
+const weightBeforeLoad = calculateCharacterWeight(v2Char);
+if (weightBeforeLoad !== 2) throw new Error(`Expected weight 2 before preloading, got ${weightBeforeLoad}`);
+
+// 3b. Execute canonical character equipment preloader lifecycle
+await ensureCharacterEquipmentLoaded(v2Char);
+
+// 3c. After lifecycle preloading, calculateCharacterWeight resolves full canonical template weights from Atlas: 65 + 6 + 0.4 + 0 + 2 = 73.4
+const weightAfterLoad = calculateCharacterWeight(v2Char);
+if (weightAfterLoad !== 73.4) throw new Error(`Expected weight 73.4 after preloading, got ${weightAfterLoad}`);
 
 // 3c. Derived stats feature speed_bonus check
 import { calculateDerivedStats } from '../src/lib/statCalculations';

@@ -27,7 +27,7 @@ import { getAlignmentColor, getAlignmentBackgroundStyle } from '../../lib/colors
 
 import { normalizeImageUrl } from '../../services/storageService';
 import { calculateDerivedStats, getXpProgress, getEffectiveStats, calculateMaxSpellSlots, XP_TABLE, useActiveCharacter } from '../../lib/character';
-import { calculateCharacterWeight } from '../../lib/inventoryUtils';
+import { calculateCharacterWeight, ensureCharacterEquipmentLoaded } from '../../lib/inventoryUtils';
 import { soundService } from '../../services/soundService';
 import { atlasService } from '../../services/atlasService';
 import { extractOptionsFromFeature, getChoiceLimit, getFeatureIcon, getTraitIcon, getFeatIcon , getAlignmentIcon, getBackgroundIcon, getProficiencyIcon , getMagicSchoolIcon , getLanguageIcon , getAttackIcon } from '../../lib/atlasUtils';
@@ -121,6 +121,15 @@ export const CharacterProfile: React.FC = () => {
 
   const character = useActiveCharacter();
   const effectiveStats = getEffectiveStats(character);
+  const [, forceUpdate] = React.useState({});
+
+  React.useEffect(() => {
+    if (character) {
+      ensureCharacterEquipmentLoaded(character).then(() => {
+        forceUpdate({});
+      });
+    }
+  }, [character?.id, character?.saveVersion, JSON.stringify(character?.items)]);
 
   React.useEffect(() => {
     if (character?.features) {

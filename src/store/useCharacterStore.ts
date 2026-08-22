@@ -218,6 +218,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       const { setDiscoveredLocationIds, setExploredAreas } = useWorldStore.getState();
       setDiscoveredLocationIds(char.discoveredLocationIds || ['waterdeep', 'baldurs_gate', 'neverwinter']);
       setExploredAreas(char.exploredAreas || []);
+      const { ensureCharacterEquipmentLoaded } = await import('../lib/inventoryUtils');
+      await ensureCharacterEquipmentLoaded(char);
     }
   },
   setMainCharacter: async (char) => {
@@ -229,6 +231,8 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
       characters: [char],
       activeCharacterId: char.id
     }));
+    const { ensureCharacterEquipmentLoaded } = await import('../lib/inventoryUtils');
+    await ensureCharacterEquipmentLoaded(char);
   },
   
   reorderCharacters: (startIndex, endIndex) => {
