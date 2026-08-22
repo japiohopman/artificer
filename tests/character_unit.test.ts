@@ -1,8 +1,18 @@
 import { calculateCharacterWeight } from '../src/lib/inventoryUtils';
 import { useCharacterStore } from '../src/store/useCharacterStore';
+import { useAtlasStore } from '../src/store/useAtlasStore';
 import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, selectPartyCharacters } from '../src/lib/character/selectors';
 
 console.log('Running Character Architecture Unit Tests...');
+
+// Seed Atlas store with equipment definitions for canonical template weight resolution
+useAtlasStore.setState({
+  equipmentList: [
+    { name: 'Plate Armor', index: 'plate_armor', weight: 65 },
+    { name: 'Shield', index: 'shield', weight: 6 },
+    { name: 'Potion of Healing', index: 'potion', weight: 0.5 }
+  ] as any
+});
 
 // 1. Empty inventory weight
 const emptyChar: any = {

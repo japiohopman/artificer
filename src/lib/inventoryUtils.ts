@@ -12,42 +12,8 @@ const parseWeight = (weight: any): number => {
   return weightMatch ? parseFloat(weightMatch[0]) : 0;
 };
 
-// Canonical D&D 5e standard equipment weights dictionary for template fallbacks
-const CANONICAL_TEMPLATE_WEIGHTS: Record<string, number> = {
-  'plate_armor': 65, 'plate-armor': 65, 'plate': 65,
-  'shield': 6,
-  'chain_mail': 55, 'chain-mail': 55,
-  'leather_armor': 10, 'leather-armor': 10,
-  'studded_leather_armor': 13, 'studded-leather-armor': 13,
-  'hide_armor': 12, 'hide-armor': 12,
-  'scale_mail': 45, 'scale-mail': 45,
-  'breastplate': 20,
-  'half_plate_armor': 40, 'half-plate-armor': 40,
-  'ring_mail': 40, 'ring-mail': 40,
-  'splint_armor': 60, 'splint-armor': 60,
-  'padded_armor': 8, 'padded-armor': 8,
-  'dagger': 1,
-  'longsword': 3,
-  'shortsword': 2,
-  'greatsword': 6,
-  'shortbow': 2,
-  'longbow': 2,
-  'backpack': 5,
-  'bedroll': 7,
-  'rations': 2, 'rations-1-day': 2, 'rations_1_day': 2,
-  'torch': 1,
-  'waterskin': 5,
-  'tinderbox': 1,
-  'rope-hempen-50-feet': 10, 'rope_hempen_50_feet': 10,
-  'crowbar': 5,
-  'hammer': 2,
-  'piton': 0.25,
-  'potion': 0.5,
-  'potion-of-healing': 0.5, 'potion_of_healing': 0.5,
-};
-
 /**
- * Resolves the canonical weight of an item template using Atlas cache, Atlas store, or canonical fallbacks.
+ * Resolves the canonical weight of an item template using Atlas equipment cache or Atlas store definitions.
  */
 export function resolveItemTemplateWeight(templateRef: any, itemInstance?: any): number {
   if (itemInstance?.metadata?.weight !== undefined) {
@@ -85,10 +51,6 @@ export function resolveItemTemplateWeight(templateRef: any, itemInstance?: any):
         return parseWeight(foundInList.weight);
       }
     } catch (e) {}
-
-    if (CANONICAL_TEMPLATE_WEIGHTS[cleanId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[cleanId];
-    if (CANONICAL_TEMPLATE_WEIGHTS[hyphenId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[hyphenId];
-    if (CANONICAL_TEMPLATE_WEIGHTS[underscoreId] !== undefined) return CANONICAL_TEMPLATE_WEIGHTS[underscoreId];
   }
 
   if (itemInstance?.weight !== undefined) return parseWeight(itemInstance.weight);

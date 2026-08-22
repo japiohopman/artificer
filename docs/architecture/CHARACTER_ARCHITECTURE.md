@@ -66,7 +66,7 @@ All derived statistics and calculations are deterministic and calculated dynamic
 - **`calculateDerivedStats(character)`**: Calculates AC, initiative, speed, proficiency bonus, attack bonus, spell DC, spell attack bonus, passive perception, weight capacity, and spell slots.
 - **`calculateCharacterWeight(character)`**: Calculates combined carrying weight (equipped items, backpack, currency) normalized across V1 (legacy) and V2 (slot/registry) inventory models:
   - **V1 Model**: Sums items in `character.inventory` (equipped) and `character.backpack` array.
-  - **V2 Model**: Iterates over `character.items` (the physical item instance registry) counting each physical item instance exactly once regardless of container/slot placement, scaled by quantity. Resolves canonical item template weight via `resolveItemTemplateWeight()` through `getCachedEquipment()`, `useAtlasStore`, or fallback canonical template definitions (or instance metadata weight overrides).
+  - **V2 Model**: Iterates over `character.items` (the physical item instance registry) counting each physical item instance exactly once regardless of container/slot placement, scaled by quantity. Resolves canonical item template weight via `resolveItemTemplateWeight()` through `getCachedEquipment()` or `useAtlasStore` (or instance metadata weight overrides).
   - **Currency**: Adds coin weight via `calculateCurrencyWeight(character.money)` (50 coins per lb rule).
 - **`calculateMaxSpellSlots(character)`**: Computes class-, level-, and subclass-specific D&D 5e spell slot maximums (full casters, half casters, warlock pact magic, 1/3 casters).
 - **`getEffectiveStats(character)`**: Calculates base ability scores adjusted by equipment and feature passive modifiers.
