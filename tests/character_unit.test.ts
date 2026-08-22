@@ -33,29 +33,35 @@ const v1Char: any = {
 const v1Weight = calculateCharacterWeight(v1Char); // 55 + 3 + 10 + 2 + 1 = 71
 if (v1Weight !== 71) throw new Error(`Expected V1 weight 71, got ${v1Weight}`);
 
-// 3. V2 Registry-based item weight tests (canonical resolution via ensureCharacterEquipmentLoaded lifecycle)
-const v2Char: any = {
-  id: 'v2_multi',
-  saveVersion: 2,
-  items: {
-    inst_1: { id: 'inst_1', template: 'plate-armor', quantity: 1 },        // 65 lbs
-    inst_2: { id: 'inst_2', template: 'shield', quantity: 1 },             // 6 lbs
-    inst_3: { id: 'inst_3', template: 'potion-of-healing', quantity: 4 },  // 0.1 * 4 = 0.4 lbs
-    inst_4: { id: 'inst_4', template: 'unknown_magic_orb', quantity: 1 }   // 0 lbs
-  },
-  money: { cp: 0, sp: 0, ep: 0, gp: 100, pp: 0 } // 100 coins = 2 lbs
-};
+// 3. V2 Registry-based item weight tests (canonical resolution via domain lifecycle preloading)
 
-// 3a. Prior to lifecycle preloading, calculateCharacterWeight returns only currency weight (2 lbs)
-const weightBeforeLoad = calculateCharacterWeight(v2Char);
-if (weightBeforeLoad !== 2) throw new Error(`Expected weight 2 before preloading, got ${weightBeforeLoad}`);
+async function runAsyncUnitTests() {
+  const v2Char: any = {
+    id: 'v2_char',
+    saveVersion: 2,
+    ruleset: '2014',
+    items: {
+      inst_1: { id: 'inst_1', template: 'plate-armor', quantity: 1 }, // 65 lbs
+      inst_2: { id: 'inst_2', template: 'shield', quantity: 1 },      // 6 lbs
+      inst_3: { id: 'inst_3', template: 'potion-of-healing', quantity: 4 }, // 0.5 * 4 = 2 lbs
+      inst_4: { id: 'inst_4', template: 'unknown_magic_orb', quantity: 1 } // 0 lbs
+    },
+    money: { cp: 0, sp: 0, ep: 0, gp: 100, pp: 0 } // 100 coins = 2 lbs
+  };
 
-// 3b. Execute canonical character equipment preloader lifecycle
-await ensureCharacterEquipmentLoaded(v2Char);
+  // 3a. Prior to domain lifecycle preload, weight calculation returns currency weight (2 lbs) synchronously without errors
+  const weightBeforeLoad = calculateCharacterWeight(v2Char);
+  if (weightBeforeLoad !== 2) throw new Error(`Expected weight before load to be 2, got ${weightBeforeLoad}`);
 
-// 3c. After lifecycle preloading, calculateCharacterWeight resolves full canonical template weights from Atlas: 65 + 6 + 0.4 + 0 + 2 = 73.4
-const weightAfterLoad = calculateCharacterWeight(v2Char);
-if (weightAfterLoad !== 73.4) throw new Error(`Expected weight 73.4 after preloading, got ${weightAfterLoad}`);
+  // 3b. Execute domain lifecycle preload (ensures canonical Atlas definitions are loaded into cache)
+  await ensureCharacterEquipmentLoaded(v2Char);
+
+  // 3c. After domain lifecycle preload, weight resolves deterministically (65 + 6 + 0.4 + 0 + 2 = 73.4 lbs)
+  const weightAfterLoad = calculateCharacterWeight(v2Char);
+  if (weightAfterLoad !== 73.4) throw new Error(`Expected weight after load to be 73.4, got ${weightAfterLoad}`);
+}
+
+await runAsyncUnitTests();
 
 // 3c. Derived stats feature speed_bonus check
 import { calculateDerivedStats } from '../src/lib/statCalculations';

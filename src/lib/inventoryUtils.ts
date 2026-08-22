@@ -2,7 +2,28 @@
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG, ItemKind } from '../types/inventory';
 import { Character } from '../store/useCharacterStore';
 import { calculateCurrencyWeight } from './currencyUtils';
-import { getCachedEquipment, fetchEquipmentData } from '../services/storageService';
+import { fetchEquipmentData, getCachedEquipment } from '../services/storageService';
+
+/**
+ * Ensures that all canonical Atlas equipment definitions for V2 character item templates are loaded into memory cache.
+ * Must be invoked at the character loading/activation lifecycle boundary.
+ */
+export async function ensureCharacterEquipmentLoaded(character: Character | undefined): Promise<void> {
+  if (!character || character.saveVersion !== 2 || !character.items) return;
+  const ruleset = character.ruleset;
+  const templateIds = new Set<string>();
+
+  Object.values(character.items).forEach((item: any) => {
+    if (item && item.template && typeof item.template === 'string') {
+      templateIds.add(item.template);
+    }
+  });
+
+  const missingIds = Array.from(templateIds).filter(id => !getCachedEquipment(id, ruleset));
+  if (missingIds.length > 0) {
+    await Promise.all(missingIds.map(id => fetchEquipmentData(id, ruleset)));
+  }
+}
 
 const parseWeight = (weight: any): number => {
   if (weight === null || weight === undefined) return 0;
@@ -10,39 +31,6 @@ const parseWeight = (weight: any): number => {
   const weightMatch = String(weight).match(/(\d+(\.\d+)?)/);
   return weightMatch ? parseFloat(weightMatch[0]) : 0;
 };
-
-/**
- * Asynchronously preloads all full equipment definitions referenced by a character's inventory or V2 item registry
- * into the storageService equipmentCache.
- */
-export async function ensureCharacterEquipmentLoaded(character: Character | undefined): Promise<void> {
-  if (!character) return;
-
-  const ruleset = character.ruleset;
-  const templateIds = new Set<string>();
-
-  if (character.saveVersion === 2 && character.items) {
-    Object.values(character.items).forEach((instance: any) => {
-      if (instance?.template && typeof instance.template === 'string') {
-        templateIds.add(instance.template);
-      }
-    });
-  } else {
-    Object.values(character.inventory || {}).forEach((item: any) => {
-      if (item?.index && typeof item.index === 'string') templateIds.add(item.index);
-      if (item?.template && typeof item.template === 'string') templateIds.add(item.template);
-    });
-    (character.backpack || []).forEach((item: any) => {
-      if (item?.index && typeof item.index === 'string') templateIds.add(item.index);
-      if (item?.template && typeof item.template === 'string') templateIds.add(item.template);
-    });
-  }
-
-  const missingIds = Array.from(templateIds).filter(id => !getCachedEquipment(id, ruleset));
-  if (missingIds.length > 0) {
-    await Promise.all(missingIds.map(id => fetchEquipmentData(id, ruleset)));
-  }
-}
 
 /**
  * Resolves the static canonical weight of an item template from storageService equipmentCache.

@@ -442,8 +442,8 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
   // Node CLI local filesystem fallback for unit test environments
   if (typeof window === 'undefined') {
     try {
-      const fs = require('fs');
-      const path = require('path');
+      const fs = await import('fs');
+      const path = await import('path');
       let nodePath: string | null = null;
 
       if (packNames.includes(cleanIndex)) {
@@ -541,7 +541,7 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
     } catch (e) {}
   }
 
-  // Local first (Browser runtime)
+  // Local first
   try {
     const res = await fetch(resolvedPath);
     if (res.ok) {
