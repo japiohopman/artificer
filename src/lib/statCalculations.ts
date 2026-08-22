@@ -16,6 +16,69 @@ export interface DerivedStats {
 
 const safeNum = (val: any) => typeof val === 'number' ? val : (parseInt(String(val)) || 0);
 
+/**
+ * Normalized evaluation of unarmored AC features data contract.
+ * Parses passive_modifiers.ac_set (formulas or numeric base values) from Atlas features.
+ */
+export function evaluateUnarmoredACFeature(
+  feature: any,
+  mods: { dexMod: number; conMod: number; wisMod: number },
+  hasShield: boolean
+): number | null {
+  if (!feature) return null;
+
+  const passiveMods = feature.feature_specific?.passive_modifiers;
+  const acSet = passiveMods?.ac_set;
+
+  // 1. Numeric ac_set (e.g. ac_set: 13)
+  if (typeof acSet === 'number') {
+    return acSet + mods.dexMod;
+  }
+
+  // 2. Data-driven formula string parsing (e.g., "10 + dexterity_modifier + constitution_modifier")
+  if (typeof acSet === 'string') {
+    const formula = acSet.toLowerCase();
+
+    // Extract base number from formula (defaulting to 10 if unparsed)
+    const baseMatch = formula.match(/(\d+)/);
+    const base = baseMatch ? parseInt(baseMatch[1], 10) : 10;
+
+    let total = base;
+
+    if (formula.includes('dexterity')) {
+      total += mods.dexMod;
+    }
+
+    if (formula.includes('constitution')) {
+      total += mods.conMod;
+    }
+
+    if (formula.includes('wisdom')) {
+      // Monk Unarmored Defense prohibits shield usage
+      if (hasShield) {
+        return null;
+      }
+      total += mods.wisMod;
+    }
+
+    return total;
+  }
+
+  // 3. Isolated legacy compatibility fallback (only used if feature_specific is unpopulated)
+  const idx = String(feature.index || feature.name || '').toLowerCase();
+  if (idx.includes('barbarian')) {
+    return 10 + mods.dexMod + mods.conMod;
+  }
+  if (idx.includes('monk')) {
+    return hasShield ? null : (10 + mods.dexMod + mods.wisMod);
+  }
+  if (idx.includes('draconic') || idx.includes('shadows')) {
+    return 13 + mods.dexMod;
+  }
+
+  return null;
+}
+
 export function calculateWeaponAttackBonus(character: Character | undefined, weapon: any): number {
   if (!character) return 2;
 
@@ -241,37 +304,13 @@ export function calculateDerivedStats(character: Character | undefined): Derived
     let unarmoredAC = 10 + dexMod;
 
     character.features?.forEach(feat => {
-      const idx = String(feat.index || feat.name || '').toLowerCase();
-      const mods = feat.feature_specific?.passive_modifiers;
-      const acSet = mods?.ac_set;
-
-      if (typeof acSet === 'number') {
-        unarmoredAC = Math.max(unarmoredAC, acSet + dexMod);
-      } else if (typeof acSet === 'string') {
-        const acSetStr = acSet.toLowerCase();
-        if (acSetStr.includes('constitution') || acSetStr.includes('con_mod') || idx.includes('barbarian')) {
-          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
-        }
-        if ((acSetStr.includes('wisdom') || acSetStr.includes('wis_mod') || idx.includes('monk')) && !shield) {
-          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
-        }
-        if (acSetStr.includes('13') || idx.includes('draconic') || idx.includes('shadows')) {
-          unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
-        }
-      } else {
-        if (idx.includes('barbarian')) {
-          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
-        }
-        if (idx.includes('monk') && !shield) {
-          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
-        }
-        if (idx.includes('draconic')) {
-          unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
-        }
+      const computedAC = evaluateUnarmoredACFeature(feat, { dexMod, conMod, wisMod }, !!shield);
+      if (computedAC !== null) {
+        unarmoredAC = Math.max(unarmoredAC, computedAC);
       }
     });
 
-    // Fallback based on class if features are unpopulated
+    // Class-based fallback for unpopulated legacy features
     const charClass = (character.class || '').toLowerCase();
     if (charClass === 'barbarian') {
       unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
@@ -297,8 +336,12 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   equippedList.forEach((item: any) => {
     if (!item) return;
     
-    // Check for explicit bonus fields
-    if (item.ac_bonus || item.acBonus) acBonus += (item.ac_bonus || item.acBonus);
+    // Check for explicit bonus fields (avoiding double-counting standard shield base AC)
+    if (item !== shield) {
+      if (item.ac_bonus || item.acBonus) acBonus += (item.ac_bonus || item.acBonus);
+    } else if (item.ac_bonus) {
+      acBonus += item.ac_bonus;
+    }
 
     // New format: feature_specific.passive_modifiers.ac_bonus
     if (item.feature_specific?.passive_modifiers?.ac_bonus) {
