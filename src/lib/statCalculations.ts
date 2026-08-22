@@ -27,52 +27,44 @@ export function evaluateUnarmoredACFeature(
 ): number | null {
   if (!feature) return null;
 
+  const featureIndex = String(feature.index || '').toLowerCase();
+  const classIndex = String(feature.class?.index || '').toLowerCase();
   const passiveMods = feature.feature_specific?.passive_modifiers;
   const acSet = passiveMods?.ac_set;
 
-  // 1. Numeric ac_set (e.g. ac_set: 13)
+  // 1. Explicit ac_set in feature_specific.passive_modifiers (e.g. Draconic Resilience, Monk/Barbarian 2014)
   if (typeof acSet === 'number') {
     return acSet + mods.dexMod;
   }
 
-  // 2. Data-driven formula string parsing (e.g., "10 + dexterity_modifier + constitution_modifier")
   if (typeof acSet === 'string') {
     const formula = acSet.toLowerCase();
-
-    // Extract base number from formula (defaulting to 10 if unparsed)
     const baseMatch = formula.match(/(\d+)/);
     const base = baseMatch ? parseInt(baseMatch[1], 10) : 10;
 
     let total = base;
-
-    if (formula.includes('dexterity')) {
-      total += mods.dexMod;
-    }
-
-    if (formula.includes('constitution')) {
-      total += mods.conMod;
-    }
-
+    if (formula.includes('dexterity')) total += mods.dexMod;
+    if (formula.includes('constitution')) total += mods.conMod;
     if (formula.includes('wisdom')) {
-      // Monk Unarmored Defense prohibits shield usage
-      if (hasShield) {
-        return null;
-      }
+      if (hasShield) return null;
       total += mods.wisMod;
     }
-
     return total;
   }
 
-  // 3. Isolated legacy compatibility fallback (only used if feature_specific is unpopulated)
-  const idx = String(feature.index || feature.name || '').toLowerCase();
-  if (idx.includes('barbarian')) {
-    return 10 + mods.dexMod + mods.conMod;
-  }
-  if (idx.includes('monk')) {
+  // 2. Canonical Atlas feature identity contract resolution
+  // Monk Unarmored Defense: index "unarmored_defense" or "monk_unarmored_defense" with class "monk"
+  if (featureIndex === 'unarmored_defense' && classIndex === 'monk' || featureIndex === 'monk_unarmored_defense') {
     return hasShield ? null : (10 + mods.dexMod + mods.wisMod);
   }
-  if (idx.includes('draconic') || idx.includes('shadows')) {
+
+  // Barbarian Unarmored Defense: index "unarmored_defense_barbarian" or "barbarian_unarmored_defense" with class "barbarian"
+  if (featureIndex === 'unarmored_defense_barbarian' || featureIndex === 'barbarian_unarmored_defense' || classIndex === 'barbarian' && featureIndex.includes('unarmored')) {
+    return 10 + mods.dexMod + mods.conMod;
+  }
+
+  // Draconic Resilience / Armor of Shadows
+  if (featureIndex === 'draconic_resilience' || featureIndex === 'eldritch_invocation_armor_of_shadows') {
     return 13 + mods.dexMod;
   }
 

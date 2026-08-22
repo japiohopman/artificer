@@ -224,55 +224,46 @@ if (calculateDerivedStats(mediumArmorChar).ac !== 16) {
   throw new Error(`Expected Scale Mail + capped DEX AC 16, got ${calculateDerivedStats(mediumArmorChar).ac}`);
 }
 
-// Production-shaped Barbarian Unarmored Defense (10 + DEX + CON)
+// Real Atlas-shaped Barbarian Unarmored Defense (unarmored_defense_barbarian, feature_specific: {})
 const barbChar: any = {
   class: 'Barbarian',
   stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
   features: [{
-    index: 'barbarian_unarmored_defense',
-    name: 'unarmored defense',
-    feature_specific: {
-      passive_modifiers: {
-        ac_set: '10 + dexterity_modifier + constitution_modifier'
-      }
-    }
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
   }]
 };
 if (calculateDerivedStats(barbChar).ac !== 15) {
   throw new Error(`Expected Barbarian Unarmored AC 15, got ${calculateDerivedStats(barbChar).ac}`);
 }
 
-// Production-shaped Barbarian Unarmored Defense WITH Shield (+2 AC allowed)
+// Real Atlas-shaped Barbarian Unarmored Defense WITH Shield (+2 AC allowed)
 const barbWithShield: any = {
   class: 'Barbarian',
   stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
-  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield', acBonus: 2 } },
+  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield' } },
   features: [{
-    index: 'barbarian_unarmored_defense',
-    name: 'unarmored defense',
-    feature_specific: {
-      passive_modifiers: {
-        ac_set: '10 + dexterity_modifier + constitution_modifier'
-      }
-    }
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
   }]
 };
 if (calculateDerivedStats(barbWithShield).ac !== 17) {
   throw new Error(`Expected Barbarian Unarmored + Shield AC 17, got ${calculateDerivedStats(barbWithShield).ac}`);
 }
 
-// Production-shaped Monk Unarmored Defense (10 + DEX + WIS)
+// Real Atlas-shaped Monk Unarmored Defense (unarmored_defense, feature_specific: {})
 const monkChar: any = {
   class: 'Monk',
   stats: { str: 10, dex: 18, con: 12, int: 10, wis: 16, cha: 8 }, // dexMod 4, wisMod 3
   features: [{
-    index: 'monk_unarmored_defense',
+    index: 'unarmored_defense',
+    class: { index: 'monk', name: 'monk' },
     name: 'unarmored defense',
-    feature_specific: {
-      passive_modifiers: {
-        ac_set: '10 + dexterity_modifier + wisdom_modifier'
-      }
-    }
+    feature_specific: {}
   }]
 };
 if (calculateDerivedStats(monkChar).ac !== 17) {
@@ -283,15 +274,12 @@ if (calculateDerivedStats(monkChar).ac !== 17) {
 const monkWithShield: any = {
   class: 'Monk',
   stats: { str: 10, dex: 18, con: 12, int: 10, wis: 16, cha: 8 }, // dexMod 4, wisMod 3
-  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield', acBonus: 2 } },
+  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield' } },
   features: [{
-    index: 'monk_unarmored_defense',
+    index: 'unarmored_defense',
+    class: { index: 'monk', name: 'monk' },
     name: 'unarmored defense',
-    feature_specific: {
-      passive_modifiers: {
-        ac_set: '10 + dexterity_modifier + wisdom_modifier'
-      }
-    }
+    feature_specific: {}
   }]
 };
 // 10 base + 4 dex + 2 shield = 16 (wisdom modifier of 3 is NOT added)
@@ -299,7 +287,7 @@ if (calculateDerivedStats(monkWithShield).ac !== 16) {
   throw new Error(`Expected Monk with Shield AC 16 (unarmored wis mod disabled), got ${calculateDerivedStats(monkWithShield).ac}`);
 }
 
-// Production-shaped Draconic Resilience (13 + DEX)
+// Real Atlas-shaped Draconic Resilience (draconic_resilience, passive_modifiers.ac_set = "13 + dexterity_modifier")
 const draconicChar: any = {
   class: 'Sorcerer',
   subclass: 'Draconic Bloodline',
@@ -318,7 +306,7 @@ if (calculateDerivedStats(draconicChar).ac !== 16) {
   throw new Error(`Expected Draconic Resilience AC 16 (13 + DEX 3), got ${calculateDerivedStats(draconicChar).ac}`);
 }
 
-// Armored Character with Barbarian/Monk feature MUST BPASS Unarmored Defense and use armor AC
+// Armored Character with Barbarian/Monk feature MUST BYPASS Unarmored Defense and use armor AC
 const armoredBarb: any = {
   class: 'Barbarian',
   stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
@@ -326,13 +314,10 @@ const armoredBarb: any = {
     chest: { name: 'Chain Mail', armor_class: { base: 16, dex_bonus: false } }
   },
   features: [{
-    index: 'barbarian_unarmored_defense',
-    name: 'unarmored defense',
-    feature_specific: {
-      passive_modifiers: {
-        ac_set: '10 + dexterity_modifier + constitution_modifier'
-      }
-    }
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
   }]
 };
 if (calculateDerivedStats(armoredBarb).ac !== 16) {
