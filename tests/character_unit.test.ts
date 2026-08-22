@@ -1,18 +1,9 @@
-import { calculateCharacterWeight } from '../src/lib/inventoryUtils';
+import { calculateCharacterWeight, resolveItemTemplateWeight } from '../src/lib/inventoryUtils';
 import { useCharacterStore } from '../src/store/useCharacterStore';
-import { useAtlasStore } from '../src/store/useAtlasStore';
 import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, selectPartyCharacters } from '../src/lib/character/selectors';
+import { seedEquipmentCache } from '../src/services/storageService';
 
 console.log('Running Character Architecture Unit Tests...');
-
-// Seed Atlas store with equipment definitions for canonical template weight resolution
-useAtlasStore.setState({
-  equipmentList: [
-    { name: 'Plate Armor', index: 'plate_armor', weight: 65 },
-    { name: 'Shield', index: 'shield', weight: 6 },
-    { name: 'Potion of Healing', index: 'potion', weight: 0.5 }
-  ] as any
-});
 
 // 1. Empty inventory weight
 const emptyChar: any = {
@@ -43,19 +34,29 @@ const v1Char: any = {
 const v1Weight = calculateCharacterWeight(v1Char); // 55 + 3 + 10 + 2 + 1 = 71
 if (v1Weight !== 71) throw new Error(`Expected V1 weight 71, got ${v1Weight}`);
 
-// 3. V2 Registry-based item weight tests (canonical resolution via template ID)
-// 3a. Single V2 item
-const v2SingleItemChar: any = {
-  id: 'v2_single',
+// 3. V2 Registry-based item weight tests (canonical resolution via template ID and storageService cache)
+
+// 3a. Explicit check for unloaded canonical template data (synchronous calculation returns 0 without errors)
+const unloadedTemplateChar: any = {
+  id: 'v2_unloaded',
   saveVersion: 2,
   items: {
     inst_1: { id: 'inst_1', template: 'plate_armor', quantity: 1 }
   }
 };
-const singleWeight = calculateCharacterWeight(v2SingleItemChar);
-if (singleWeight !== 65) throw new Error(`Expected single V2 item weight 65, got ${singleWeight}`);
+const unloadedWeight = calculateCharacterWeight(unloadedTemplateChar);
+if (unloadedWeight !== 0) throw new Error(`Expected 0 weight for unloaded template, got ${unloadedWeight}`);
 
-// 3b. Multiple V2 items + quantity > 1 + unknown template + currency
+// Seed storageService equipmentCache with full canonical equipment definitions
+seedEquipmentCache('plate_armor', { index: 'plate_armor', name: 'Plate Armor', weight: 65 });
+seedEquipmentCache('shield', { index: 'shield', name: 'Shield', weight: 6 });
+seedEquipmentCache('potion', { index: 'potion', name: 'Potion of Healing', weight: 0.5 });
+
+// 3b. Single V2 item after canonical equipment data is loaded into storageService cache
+const singleWeight = calculateCharacterWeight(unloadedTemplateChar);
+if (singleWeight !== 65) throw new Error(`Expected single loaded V2 item weight 65, got ${singleWeight}`);
+
+// 3c. Multiple V2 items + quantity > 1 + unknown template + currency
 const v2MultiChar: any = {
   id: 'v2_multi',
   saveVersion: 2,

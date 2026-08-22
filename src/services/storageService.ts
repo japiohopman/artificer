@@ -430,6 +430,10 @@ export function getCachedEquipment(index: string, ruleset?: '2014' | '2024'): an
   return equipmentCache[`${activeRuleset}:${index}`] || equipmentCache[`2014:${index}`] || equipmentCache[`2024:${index}`] || null;
 }
 
+export function seedEquipmentCache(index: string, data: any, ruleset: '2014' | '2024' = '2014'): void {
+  equipmentCache[`${ruleset}:${index}`] = data;
+}
+
 export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
   const activeRuleset = getActiveRulesetContext(ruleset);
   const cacheKey = `${activeRuleset}:${index}`;
