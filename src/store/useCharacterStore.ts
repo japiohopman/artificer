@@ -31,7 +31,8 @@ export interface Character {
     wis: number;
     cha: number;
   };
-  proficiencies: string[];
+  proficiencies: (string | any)[];
+  skills?: (string | any)[];
   traits: { name: string; index: string; desc: string; trait_specific?: any }[];
   features: { name: string; index: string; desc: string; source: string; feature_specific?: any }[];
   flaws: string[];

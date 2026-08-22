@@ -1,8 +1,7 @@
 import React from 'react';
 import { Shield, Sword, Zap, Heart, Footprints, Sparkles } from 'lucide-react';
 import { Character } from '../../store/useCharacterStore';
-import { useActiveCharacter } from '../../lib/character/selectors';
-import { calculateDerivedStats } from '../../lib/character/derivedStats';
+import { useActiveCharacter, calculateDerivedStats } from '../../lib/character';
 import { cn } from '../../lib/utils';
 
 export interface CharacterStatsProps {

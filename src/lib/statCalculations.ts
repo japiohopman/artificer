@@ -147,6 +147,7 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   const effectiveStats = getEffectiveStats(character);
   const dexMod = getModifier(effectiveStats.dex);
   const strMod = getModifier(effectiveStats.str);
+  const conMod = getModifier(effectiveStats.con);
   const intMod = getModifier(effectiveStats.int);
   const wisMod = getModifier(effectiveStats.wis);
   const chaMod = getModifier(effectiveStats.cha);
@@ -174,15 +175,35 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   const armor = getEquippedItem('chest');
   const shield = getEquippedItem('off_hand');
 
-  if (armor) {
-    const armorData = armor.armor_class || armor; // Handle both direct and nested AC
-    if (armorData.base) {
-      baseAC = armorData.base;
-      if (armorData.dex_bonus || armorData.dexBonus) {
-        const maxDex = armorData.max_bonus ?? armorData.maxDexBonus ?? 10;
-        baseAC += Math.min(dexMod, maxDex);
-      }
+  const armorData = armor ? (armor.armor_class || armor) : null;
+  const isWearingArmor = armorData && typeof armorData.base === 'number' && armorData.base > 0;
+
+  if (isWearingArmor) {
+    baseAC = armorData.base;
+    if (armorData.dex_bonus || armorData.dexBonus) {
+      const maxDex = armorData.max_bonus ?? armorData.maxDexBonus ?? 10;
+      baseAC += Math.min(dexMod, maxDex);
     }
+  } else {
+    // Unarmored AC calculations
+    let unarmoredAC = 10 + dexMod;
+
+    character.features?.forEach(feat => {
+      const idx = (feat.index || feat.name || '').toLowerCase();
+      const mods = feat.feature_specific?.passive_modifiers;
+
+      if (idx.includes('barbarian_unarmored') || idx.includes('barbarian unarmored') || mods?.ac_set?.includes('constitution_modifier')) {
+        unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
+      }
+      if ((idx.includes('monk_unarmored') || idx.includes('monk unarmored') || mods?.ac_set?.includes('wisdom_modifier')) && !shield) {
+        unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
+      }
+      if (idx.includes('draconic_resilience') || idx.includes('draconic resilience') || mods?.ac_set?.includes('13 + dexterity')) {
+        unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
+      }
+    });
+
+    baseAC = unarmoredAC;
   }
 
   if (shield && (shield.armor_category === 'Shield' || shield.index === 'shield')) {
@@ -235,9 +256,10 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   
   // 1.1 Feature AC Bonuses (e.g. Defense Fighting Style)
   let featureAcBonus = 0;
-  if (character.class === 'Fighter' || character.class === 'Paladin' || character.class === 'Ranger') {
+  const charClass = (character.class || '').toLowerCase();
+  if (charClass === 'fighter' || charClass === 'paladin' || charClass === 'ranger') {
       const styles = (character.choices?.['fighting-style'] || []).map((s: any) => String(s || '').toLowerCase());
-      if (styles.some((s: string) => s === 'defense' || s.includes('defense')) && armor) {
+      if (styles.some((s: string) => s === 'defense' || s.includes('defense')) && isWearingArmor) {
           featureAcBonus += 1;
       }
   }
@@ -306,18 +328,46 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   const attackBonus = proficiencyBonus + attackAbilityMod + weaponBonus;
 
   // 5. Spellcasting
-  const spellcastingAbilityMod = character.class === 'Wizard' || character.class === 'Artificer' ? intMod :
-                                 character.class === 'Cleric' || character.class === 'Druid' || character.class === 'Ranger' ? wisMod :
-                                 character.class === 'Bard' || character.class === 'Sorcerer' || character.class === 'Warlock' || character.class === 'Paladin' ? chaMod : 0;
+  const subclass = (character.subclass || '').toLowerCase();
+  const isThirdCaster = subclass.includes('arcane trickster') || subclass.includes('eldritch knight');
+
+  let spellcastingAbilityMod = 0;
+  if (['wizard', 'artificer'].includes(charClass) || isThirdCaster) {
+    spellcastingAbilityMod = intMod;
+  } else if (['cleric', 'druid', 'ranger'].includes(charClass)) {
+    spellcastingAbilityMod = wisMod;
+  } else if (['bard', 'sorcerer', 'warlock', 'paladin'].includes(charClass)) {
+    spellcastingAbilityMod = chaMod;
+  }
   
   const spellSaveDC = 8 + proficiencyBonus + spellcastingAbilityMod;
   const spellAttackBonus = proficiencyBonus + spellcastingAbilityMod;
 
   // 6. Logistics
-  const isProficientInPerception = character.proficiencies?.includes('Perception');
-  const hasExpertiseInPerception = character.features?.some(f => (f.index?.toLowerCase() || '').includes('expertise') || (f.name?.toLowerCase() || '').includes('expertise')) && 
-                                    character.choices?.['expertise']?.includes('Perception');
-                                    
+  const isPerceptionMatch = (val: any) => {
+    if (typeof val === 'string') {
+      const lower = val.toLowerCase();
+      return lower === 'perception' || lower === 'skill_perception' || lower === 'skill: perception';
+    }
+    if (val && typeof val === 'object') {
+      const idx = String(val.index || val.name || '').toLowerCase();
+      return idx.includes('perception');
+    }
+    return false;
+  };
+
+  const isProficientInPerception =
+    (Array.isArray(character.skills) && character.skills.some(isPerceptionMatch)) ||
+    (Array.isArray(character.proficiencies) && character.proficiencies.some(isPerceptionMatch)) ||
+    (Array.isArray(character.choices?.['skills']) && character.choices['skills'].some(isPerceptionMatch));
+
+  const hasExpertiseInPerception =
+    (Array.isArray(character.choices?.['expertise']) && character.choices['expertise'].some(v => String(v).toLowerCase().includes('perception'))) ||
+    character.features?.some(f => {
+      const name = (f.name || f.index || '').toLowerCase();
+      return name.includes('expertise') && JSON.stringify(f).toLowerCase().includes('perception');
+    });
+
   const passivePerception = 10 + wisMod + (isProficientInPerception ? proficiencyBonus : 0) + (hasExpertiseInPerception ? proficiencyBonus : 0);
   const weightCapacity = effectiveStats.str * 15;
   const spellSlots = calculateMaxSpellSlots(character);

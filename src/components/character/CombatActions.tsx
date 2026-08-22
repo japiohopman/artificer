@@ -1,8 +1,7 @@
 import React from 'react';
-import { useActiveCharacter } from '../../lib/character';
+import { useActiveCharacter, calculateDerivedStats, getEffectiveStats } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
-import { calculateDerivedStats, getEffectiveStats } from '../../lib/statCalculations';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { motion } from 'motion/react';
 import { cn } from '../../lib/utils';
@@ -121,15 +120,14 @@ export const CombatActions: React.FC = () => {
 
     const actions = weapons.map(([slot, w]: [string, any]) => {
       const styles = (activeCharacter.choices?.['fighting-style'] || []).map((s: string) => s.toLowerCase());
-      const hasArchery = styles.some(s => s === 'archery' || s.includes('archery'));
       const hasDueling = styles.some(s => s === 'dueling' || s.includes('dueling'));
       
       const isRanged = w.weapon_range === 'Ranged' || w.index?.includes('bow') || w.index?.includes('crossbow');
       const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse');
       const abilityMod = (isRanged || (isFinesse && dexMod > strMod)) ? dexMod : strMod;
       
-      let bonus = derived.proficiencyBonus + abilityMod + (w.attack_bonus || 0) + (w.feature_specific?.passive_modifiers?.attack_bonus || 0);
-      if (isRanged && hasArchery) bonus += 2;
+      const isMainHand = slot === 'main-hand' || slot === 'main_hand' || slot === 'mainHand';
+      let bonus = isMainHand ? derived.attackBonus : (derived.proficiencyBonus + abilityMod + (w.attack_bonus || 0) + (w.feature_specific?.passive_modifiers?.attack_bonus || 0));
       
       let dmgDice = w.damage?.damage_dice || "1d4";
       let dmgType = w.damage?.damage_type?.name || "Piercing";
