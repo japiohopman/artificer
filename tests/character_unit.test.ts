@@ -162,4 +162,248 @@ if (slotsAfter[0]?.id !== 'slot1' || slotsAfter[1]?.id !== 'slot2' || slotsAfter
   throw new Error('Save slots overwritten during setMainCharacter');
 }
 
+// 6. Comprehensive Character Calculation Integrity Pass Tests
+import { getEffectiveStats, calculateMaxSpellSlots } from '../src/lib/statCalculations';
+import { getModifier } from '../src/lib/npcGeneratorUtils';
+
+// 6a. Ability Modifiers & Proficiency Progression
+const levelTests = [
+  { level: 1, expectedProf: 2 },
+  { level: 4, expectedProf: 2 },
+  { level: 5, expectedProf: 3 },
+  { level: 8, expectedProf: 3 },
+  { level: 9, expectedProf: 4 },
+  { level: 13, expectedProf: 5 },
+  { level: 17, expectedProf: 6 },
+  { level: 20, expectedProf: 6 }
+];
+levelTests.forEach(({ level, expectedProf }) => {
+  const d = calculateDerivedStats({ level, stats: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 } } as any);
+  if (d.proficiencyBonus !== expectedProf) {
+    throw new Error(`Expected level ${level} prof bonus ${expectedProf}, got ${d.proficiencyBonus}`);
+  }
+});
+
+if (getModifier(10) !== 0 || getModifier(18) !== 4 || getModifier(8) !== -1 || getModifier(15) !== 2) {
+  throw new Error('Ability modifier calculation error');
+}
+
+// 6b. Effective Stats with Item Set (Headband of Intellect) and Additive Bonuses
+const statsChar: any = {
+  stats: { str: 14, dex: 12, con: 14, int: 8, wis: 10, cha: 10 },
+  inventory: {
+    head: { name: 'Headband of Intellect', intelligence_set: 19 },
+    ring: { name: 'Ring of Strength', strength_bonus: 2 }
+  }
+};
+const effStats = getEffectiveStats(statsChar);
+if (effStats.int !== 19 || effStats.str !== 16) {
+  throw new Error(`Expected effective INT 19 and STR 16, got INT ${effStats.int}, STR ${effStats.str}`);
+}
+
+// 6c. Armor Class Construction & Features
+// Base leather + DEX (maxDex unlimited)
+const rogueChar: any = {
+  stats: { str: 10, dex: 16, con: 12, int: 10, wis: 10, cha: 10 },
+  inventory: {
+    chest: { name: 'Leather Armor', armor_class: { base: 11, dex_bonus: true } }
+  }
+};
+if (calculateDerivedStats(rogueChar).ac !== 14) {
+  throw new Error(`Expected Leather + DEX 16 AC 14, got ${calculateDerivedStats(rogueChar).ac}`);
+}
+
+// Medium armor with max DEX cap
+const mediumArmorChar: any = {
+  stats: { str: 14, dex: 16, con: 12, int: 10, wis: 10, cha: 10 },
+  inventory: {
+    chest: { name: 'Scale Mail', armor_class: { base: 14, dex_bonus: true, max_bonus: 2 } }
+  }
+};
+if (calculateDerivedStats(mediumArmorChar).ac !== 16) {
+  throw new Error(`Expected Scale Mail + capped DEX AC 16, got ${calculateDerivedStats(mediumArmorChar).ac}`);
+}
+
+// Real Atlas-shaped Barbarian Unarmored Defense (unarmored_defense_barbarian, feature_specific: {})
+const barbChar: any = {
+  class: 'Barbarian',
+  stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
+  features: [{
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
+  }]
+};
+if (calculateDerivedStats(barbChar).ac !== 15) {
+  throw new Error(`Expected Barbarian Unarmored AC 15, got ${calculateDerivedStats(barbChar).ac}`);
+}
+
+// Real Atlas-shaped Barbarian Unarmored Defense WITH Shield (+2 AC allowed)
+const barbWithShield: any = {
+  class: 'Barbarian',
+  stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
+  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield' } },
+  features: [{
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
+  }]
+};
+if (calculateDerivedStats(barbWithShield).ac !== 17) {
+  throw new Error(`Expected Barbarian Unarmored + Shield AC 17, got ${calculateDerivedStats(barbWithShield).ac}`);
+}
+
+// Real Atlas-shaped Monk Unarmored Defense (unarmored_defense, feature_specific: {})
+const monkChar: any = {
+  class: 'Monk',
+  stats: { str: 10, dex: 18, con: 12, int: 10, wis: 16, cha: 8 }, // dexMod 4, wisMod 3
+  features: [{
+    index: 'unarmored_defense',
+    class: { index: 'monk', name: 'monk' },
+    name: 'unarmored defense',
+    feature_specific: {}
+  }]
+};
+if (calculateDerivedStats(monkChar).ac !== 17) {
+  throw new Error(`Expected Monk Unarmored AC 17, got ${calculateDerivedStats(monkChar).ac}`);
+}
+
+// Monk WITH Shield equipped MUST PROHIBIT Monk Unarmored Defense (reverting to normal 10 + DEX + Shield)
+const monkWithShield: any = {
+  class: 'Monk',
+  stats: { str: 10, dex: 18, con: 12, int: 10, wis: 16, cha: 8 }, // dexMod 4, wisMod 3
+  inventory: { 'off-hand': { index: 'shield', armor_category: 'Shield' } },
+  features: [{
+    index: 'unarmored_defense',
+    class: { index: 'monk', name: 'monk' },
+    name: 'unarmored defense',
+    feature_specific: {}
+  }]
+};
+// 10 base + 4 dex + 2 shield = 16 (wisdom modifier of 3 is NOT added)
+if (calculateDerivedStats(monkWithShield).ac !== 16) {
+  throw new Error(`Expected Monk with Shield AC 16 (unarmored wis mod disabled), got ${calculateDerivedStats(monkWithShield).ac}`);
+}
+
+// Real Atlas-shaped Draconic Resilience (draconic_resilience, passive_modifiers.ac_set = "13 + dexterity_modifier")
+const draconicChar: any = {
+  class: 'Sorcerer',
+  subclass: 'Draconic Bloodline',
+  stats: { str: 8, dex: 16, con: 14, int: 10, wis: 10, cha: 16 }, // dexMod 3
+  features: [{
+    index: 'draconic_resilience',
+    name: 'draconic resilience',
+    feature_specific: {
+      passive_modifiers: {
+        ac_set: '13 + dexterity_modifier'
+      }
+    }
+  }]
+};
+if (calculateDerivedStats(draconicChar).ac !== 16) {
+  throw new Error(`Expected Draconic Resilience AC 16 (13 + DEX 3), got ${calculateDerivedStats(draconicChar).ac}`);
+}
+
+// Armored Character with Barbarian/Monk feature MUST BYPASS Unarmored Defense and use armor AC
+const armoredBarb: any = {
+  class: 'Barbarian',
+  stats: { str: 16, dex: 14, con: 16, int: 8, wis: 10, cha: 8 }, // dexMod 2, conMod 3
+  inventory: {
+    chest: { name: 'Chain Mail', armor_class: { base: 16, dex_bonus: false } }
+  },
+  features: [{
+    index: 'unarmored_defense_barbarian',
+    class: { index: 'barbarian', name: 'barbarian' },
+    name: 'unarmored defense (barbarian)',
+    feature_specific: {}
+  }]
+};
+if (calculateDerivedStats(armoredBarb).ac !== 16) {
+  throw new Error(`Expected Armored Barbarian to use Chain Mail AC 16, got ${calculateDerivedStats(armoredBarb).ac}`);
+}
+
+// 6d. Speed, Initiative, and Carrying Capacity
+const halflingChar: any = {
+  race: 'Halfling',
+  stats: { str: 12, dex: 14, con: 10, int: 10, wis: 10, cha: 10 }
+};
+const halflingDerived = calculateDerivedStats(halflingChar);
+if (halflingDerived.speed !== 25 || halflingDerived.initiative !== 2 || halflingDerived.weightCapacity !== 180) {
+  throw new Error(`Expected halfling speed 25, init 2, weightCap 180; got speed ${halflingDerived.speed}, init ${halflingDerived.initiative}, weightCap ${halflingDerived.weightCapacity}`);
+}
+
+// 6e. Attack Bonus Tests (Melee, Ranged, Ranged + Archery, Finesse, Magic Bonuses)
+import { calculateWeaponAttackBonus } from '../src/lib/statCalculations';
+
+const fighterWithArchery: any = {
+  level: 5, // prof 3
+  stats: { str: 14, dex: 18, con: 14, int: 10, wis: 10, cha: 10 }, // strMod 2, dexMod 4
+  choices: { 'fighting-style': ['Archery'] }
+};
+
+const longbow = { name: 'Longbow', weapon_range: 'Ranged', properties: [] };
+const longsword = { name: 'Longsword', weapon_range: 'Melee', properties: [] };
+const rapier = { name: 'Rapier', weapon_range: 'Melee', properties: [{ index: 'finesse', name: 'Finesse' }] };
+const magicDagger = { name: 'Dagger +1', weapon_range: 'Melee', attack_bonus: 1, properties: [{ index: 'finesse', name: 'Finesse' }] };
+
+// Melee weapon (STR mod 2 + prof 3 = 5)
+const meleeAtk = calculateWeaponAttackBonus(fighterWithArchery, longsword);
+if (meleeAtk !== 5) throw new Error(`Expected longsword attack bonus 5, got ${meleeAtk}`);
+
+// Ranged weapon + Archery (DEX mod 4 + prof 3 + 2 archery = 9)
+const rangedAtk = calculateWeaponAttackBonus(fighterWithArchery, longbow);
+if (rangedAtk !== 9) throw new Error(`Expected longbow + archery attack bonus 9, got ${rangedAtk}`);
+
+// Finesse weapon (DEX mod 4 > STR mod 2 + prof 3 = 7)
+const finesseAtk = calculateWeaponAttackBonus(fighterWithArchery, rapier);
+if (finesseAtk !== 7) throw new Error(`Expected rapier attack bonus 7, got ${finesseAtk}`);
+
+// Magic dagger +1 (DEX mod 4 + prof 3 + 1 weapon = 8)
+const magicAtk = calculateWeaponAttackBonus(fighterWithArchery, magicDagger);
+if (magicAtk !== 8) throw new Error(`Expected +1 dagger attack bonus 8, got ${magicAtk}`);
+
+// 6e. 1/3 Casters Spell Save DC & Spell Attack Bonus
+const eldritchKnight: any = {
+  class: 'Fighter',
+  subclass: 'Eldritch Knight',
+  level: 7, // prof 3
+  stats: { str: 16, dex: 10, con: 14, int: 16, wis: 10, cha: 8 }, // strMod 3, intMod 3
+  inventory: {
+    'main-hand': { name: 'Longsword', attack_bonus: 1, properties: [] }
+  }
+};
+const ekDerived = calculateDerivedStats(eldritchKnight);
+if (ekDerived.attackBonus !== 7) { // 3 prof + 3 str + 1 weapon
+  throw new Error(`Expected Eldritch Knight attack bonus 7, got ${ekDerived.attackBonus}`);
+}
+if (ekDerived.spellSaveDC !== 14 || ekDerived.spellAttackBonus !== 6) { // 8 + 3 prof + 3 int = 14 DC; 3 prof + 3 int = 6 attack
+  throw new Error(`Expected Eldritch Knight DC 14 / Attack 6, got DC ${ekDerived.spellSaveDC} / Attack ${ekDerived.spellAttackBonus}`);
+}
+
+// 6f. Passive Perception with Skill/Proficiency/Expertise
+const perceptionChar: any = {
+  level: 5, // prof 3
+  stats: { str: 10, dex: 10, con: 10, int: 10, wis: 14, cha: 10 }, // wisMod 2
+  skills: ['skill_perception'],
+  choices: { expertise: ['Perception'] }
+};
+const percDerived = calculateDerivedStats(perceptionChar);
+if (percDerived.passivePerception !== 18) { // 10 + 2 wis + 3 prof + 3 expertise
+  throw new Error(`Expected Passive Perception 18, got ${percDerived.passivePerception}`);
+}
+
+// 6g. Spell Slot Maximums (Warlock vs Full Caster vs 1/3 Caster)
+const warlock: any = { class: 'Warlock', level: 5 };
+const warlockSlots = calculateMaxSpellSlots(warlock);
+if (warlockSlots['3'] !== 2 || Object.keys(warlockSlots).length !== 1) {
+  throw new Error(`Expected Warlock 2 level 3 slots, got ${JSON.stringify(warlockSlots)}`);
+}
+
+const eldritchKnightSlots = calculateMaxSpellSlots(eldritchKnight); // Level 7 1/3 caster -> floor(7/3)=2 -> 1st level: 3 slots
+if (eldritchKnightSlots['1'] !== 3) {
+  throw new Error(`Expected Eldritch Knight level 7 to have 3 level 1 slots, got ${JSON.stringify(eldritchKnightSlots)}`);
+}
+
 console.log('✓ All Character Architecture Unit Tests Passed Successfully!');

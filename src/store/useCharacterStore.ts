@@ -4,6 +4,8 @@ import { useWorldStore } from './useWorldStore';
 
 export type Emotion = 'Neutral' | 'Curious' | 'Skeptical' | 'Happy' | 'Greedy' | 'Angry' | 'Sad' | 'Surprised' | 'Proud';
 
+export type ProficiencyRef = string | { index?: string; name?: string; url?: string };
+
 export interface Character {
   id: string;
   ruleset?: '2014' | '2024';
@@ -31,7 +33,8 @@ export interface Character {
     wis: number;
     cha: number;
   };
-  proficiencies: string[];
+  proficiencies: ProficiencyRef[];
+  skills?: ProficiencyRef[];
   traits: { name: string; index: string; desc: string; trait_specific?: any }[];
   features: { name: string; index: string; desc: string; source: string; feature_specific?: any }[];
   flaws: string[];

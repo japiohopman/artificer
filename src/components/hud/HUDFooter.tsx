@@ -2,7 +2,7 @@ import React from 'react';
 import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { calculateCharacterWeight } from '../../lib/inventoryUtils';
-import { calculateDerivedStats } from '../../lib/statCalculations';
+import { calculateDerivedStats } from '../../lib/character';
 import { Weight, Coins } from 'lucide-react';
 import { cn } from '../../lib/utils';
 

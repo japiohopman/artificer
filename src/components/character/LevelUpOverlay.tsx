@@ -339,17 +339,23 @@ export const LevelUpOverlay: React.FC = () => {
              .replace(/expertise:\s*/i, '')
              .trim();
            
-           return currentProfs.some(p => p.toLowerCase() === normalizedName || p.toLowerCase() === opt.index.toLowerCase());
+           return currentProfs.some(p => {
+             const name = (typeof p === 'string' ? p : (p.name || p.index || '')).toLowerCase();
+             return name === normalizedName || name === opt.index.toLowerCase();
+           });
         });
         if (filtered.length > 0) return filtered;
       }
       
       // Fallback to all current proficiencies if pool is empty or filtering failed
       if (currentProfs.length > 0) {
-        return currentProfs.map(p => ({
-          index: p,
-          name: p
-        }));
+        return currentProfs.map(p => {
+          const name = typeof p === 'string' ? p : (p.name || p.index || '');
+          return {
+            index: name,
+            name: name
+          };
+        });
       }
     }
 
@@ -370,10 +376,13 @@ export const LevelUpOverlay: React.FC = () => {
     if (choice.from?.option_set_type === 'proficiencies' || choice.type === 'proficiencies') {
       if (isExpertise(feat)) {
         // Choose from existing proficiencies
-        return (character.proficiencies || []).map(p => ({
-          index: p,
-          name: p
-        }));
+        return (character.proficiencies || []).map(p => {
+          const name = typeof p === 'string' ? p : (p.name || p.index || '');
+          return {
+            index: name,
+            name: name
+          };
+        });
       } else {
         // Gain new proficiency - show skills not already possessed
         // We use a simplified list of standard skills if the JSON doesn't specify
