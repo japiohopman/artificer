@@ -11,9 +11,9 @@ PR #247 / `feat/species-visuals-integration-15532997127621620413` is currently u
 - [x] Integrate canonical `race_sprite.webp` sprite sheet into Species selection.
 - [x] Define data-driven species sprite mapping for the 2×7 sheet.
 - [x] Use 3:2 species-cell geometry.
-- [ ] Human-test every species selection and verify crop, positioning and green-screen removal.
-- [ ] Confirm no stale/duplicate species visual implementation remains in the Character Creator.
-- [ ] Keep Class and Background visual integration out of this PR unless required to fix a shared foundation regression.
+- [x] Human-test every species selection and verify crop, positioning and green-screen removal.
+- [x] Confirm no stale/duplicate species visual implementation remains in the Character Creator.
+- [x] Keep Class and Background visual integration out of this PR unless required to fix a shared foundation regression.
 - [ ] After acceptance, close PR #247 and dispatch the next focused Character Creator task.
 
 ### Documentation / agent alignment
