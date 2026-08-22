@@ -254,7 +254,37 @@ if (halflingDerived.speed !== 25 || halflingDerived.initiative !== 2 || halfling
   throw new Error(`Expected halfling speed 25, init 2, weightCap 180; got speed ${halflingDerived.speed}, init ${halflingDerived.initiative}, weightCap ${halflingDerived.weightCapacity}`);
 }
 
-// 6e. Attack Bonus, Spell Save DC, Spell Attack Bonus for 1/3 Casters
+// 6e. Attack Bonus Tests (Melee, Ranged, Ranged + Archery, Finesse, Magic Bonuses)
+import { calculateWeaponAttackBonus } from '../src/lib/statCalculations';
+
+const fighterWithArchery: any = {
+  level: 5, // prof 3
+  stats: { str: 14, dex: 18, con: 14, int: 10, wis: 10, cha: 10 }, // strMod 2, dexMod 4
+  choices: { 'fighting-style': ['Archery'] }
+};
+
+const longbow = { name: 'Longbow', weapon_range: 'Ranged', properties: [] };
+const longsword = { name: 'Longsword', weapon_range: 'Melee', properties: [] };
+const rapier = { name: 'Rapier', weapon_range: 'Melee', properties: [{ index: 'finesse', name: 'Finesse' }] };
+const magicDagger = { name: 'Dagger +1', weapon_range: 'Melee', attack_bonus: 1, properties: [{ index: 'finesse', name: 'Finesse' }] };
+
+// Melee weapon (STR mod 2 + prof 3 = 5)
+const meleeAtk = calculateWeaponAttackBonus(fighterWithArchery, longsword);
+if (meleeAtk !== 5) throw new Error(`Expected longsword attack bonus 5, got ${meleeAtk}`);
+
+// Ranged weapon + Archery (DEX mod 4 + prof 3 + 2 archery = 9)
+const rangedAtk = calculateWeaponAttackBonus(fighterWithArchery, longbow);
+if (rangedAtk !== 9) throw new Error(`Expected longbow + archery attack bonus 9, got ${rangedAtk}`);
+
+// Finesse weapon (DEX mod 4 > STR mod 2 + prof 3 = 7)
+const finesseAtk = calculateWeaponAttackBonus(fighterWithArchery, rapier);
+if (finesseAtk !== 7) throw new Error(`Expected rapier attack bonus 7, got ${finesseAtk}`);
+
+// Magic dagger +1 (DEX mod 4 + prof 3 + 1 weapon = 8)
+const magicAtk = calculateWeaponAttackBonus(fighterWithArchery, magicDagger);
+if (magicAtk !== 8) throw new Error(`Expected +1 dagger attack bonus 8, got ${magicAtk}`);
+
+// 6e. 1/3 Casters Spell Save DC & Spell Attack Bonus
 const eldritchKnight: any = {
   class: 'Fighter',
   subclass: 'Eldritch Knight',

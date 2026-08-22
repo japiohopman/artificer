@@ -823,10 +823,10 @@ export const CharacterProfile: React.FC = () => {
                                 const key = abbr.toLowerCase() as keyof typeof effectiveStats;
                                 const statVal = (effectiveStats?.[key] as number) ?? 10;
                                 const abilityMod = Math.floor((statVal - 10) / 2);
-                                const isProficient = (character.proficiencies || []).some(p => 
-                                   p.toLowerCase().includes(`saving throw: ${abbr.toLowerCase()}`) ||
-                                   p.toLowerCase() === `saving throw: ${abbr.toLowerCase()}`
-                                );
+                                const isProficient = (character.proficiencies || []).some(p => {
+                                   const name = (typeof p === 'string' ? p : (p.name || p.index || '')).toLowerCase();
+                                   return name.includes(`saving throw: ${abbr.toLowerCase()}`) || name === `saving throw: ${abbr.toLowerCase()}`;
+                                });
                                 const totalMod = abilityMod + (isProficient ? derived.proficiencyBonus : 0);
                                 
                                 return (
@@ -867,7 +867,10 @@ export const CharacterProfile: React.FC = () => {
                           {SKILL_LIST.map(skill => {
                             const statVal = effectiveStats?.[skill.ability as keyof typeof effectiveStats] ?? 10;
                             const abilityMod = Math.floor((statVal - 10) / 2);
-                            const isProficient = (character.proficiencies || []).includes(skill.name);
+                            const isProficient = (character.proficiencies || []).some(p => {
+                               const name = typeof p === 'string' ? p : (p.name || p.index || '');
+                               return name === skill.name || name.toLowerCase().includes(skill.name.toLowerCase());
+                            });
                             const totalMod = abilityMod + (isProficient ? derived.proficiencyBonus : 0);
                             
                             return (
@@ -1244,11 +1247,14 @@ export const CharacterProfile: React.FC = () => {
                             <GameIcon name="weapon" size={14} color="#8B0000" />
                             <h3 className="text-[10px] font-black uppercase tracking-widest text-dragon-darkRed">Features</h3>
                           </div>
-                          <div className="flex flex-wrap gap-2 mb-4">{character.proficiencies?.map((prof, i) => (
+                          <div className="flex flex-wrap gap-2 mb-4">{character.proficiencies?.map((prof, i) => {
+                              const profName = typeof prof === 'string' ? prof : (prof.name || prof.index || '');
+                              return (
                               <div key={`prof-${i}`} className="bg-white/40 px-3 py-1 rounded border border-dragon-red/5 shadow-sm italic text-[9px] flex items-center gap-1.5">
-                                <GameIcon name={getProficiencyIcon(prof)} size={10} color="#8B0000" fallbackName="award" /> {prof}
+                                <GameIcon name={getProficiencyIcon(profName)} size={10} color="#8B0000" fallbackName="award" /> {profName}
                                </div>
-                            ))}</div>
+                              );
+                            })}</div>
                           <div className="space-y-2">
                             {character.features?.map((feat, i) => (
                               <div key={`feat-${i}`} className="bg-dragon-red/5 p-3 rounded-sm border-l-2 border-dragon-red/30">

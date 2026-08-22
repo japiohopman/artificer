@@ -1,5 +1,5 @@
 import React from 'react';
-import { useActiveCharacter, calculateDerivedStats, getEffectiveStats } from '../../lib/character';
+import { useActiveCharacter, calculateDerivedStats, calculateWeaponAttackBonus, getEffectiveStats } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 import { GameIcon, GameIconName } from '../../game_icons';
@@ -126,8 +126,7 @@ export const CombatActions: React.FC = () => {
       const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse');
       const abilityMod = (isRanged || (isFinesse && dexMod > strMod)) ? dexMod : strMod;
       
-      const isMainHand = slot === 'main-hand' || slot === 'main_hand' || slot === 'mainHand';
-      let bonus = isMainHand ? derived.attackBonus : (derived.proficiencyBonus + abilityMod + (w.attack_bonus || 0) + (w.feature_specific?.passive_modifiers?.attack_bonus || 0));
+      const bonus = calculateWeaponAttackBonus(activeCharacter, w);
       
       let dmgDice = w.damage?.damage_dice || "1d4";
       let dmgType = w.damage?.damage_type?.name || "Piercing";

@@ -1,5 +1,6 @@
 export {
   calculateDerivedStats,
+  calculateWeaponAttackBonus,
   getEffectiveStats,
   calculateMaxSpellSlots,
   getXpProgress,

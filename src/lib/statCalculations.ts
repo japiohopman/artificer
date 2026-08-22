@@ -16,6 +16,58 @@ export interface DerivedStats {
 
 const safeNum = (val: any) => typeof val === 'number' ? val : (parseInt(String(val)) || 0);
 
+export function calculateWeaponAttackBonus(character: Character | undefined, weapon: any): number {
+  if (!character) return 2;
+
+  const effectiveStats = getEffectiveStats(character);
+  const dexMod = getModifier(effectiveStats.dex);
+  const strMod = getModifier(effectiveStats.str);
+  const proficiencyBonus = Math.floor(Math.max(0, (character.level || 0) - 1) / 4) + 2;
+
+  let weaponBonus = 0;
+  let attackAbilityMod = strMod;
+
+  if (weapon) {
+    const isRanged = weapon.weapon_range === 'Ranged' || weapon.category === 'Ranged' || weapon.index?.includes('bow') || weapon.index?.includes('crossbow');
+    const isFinesse = (weapon.properties || []).some((p: any) => (p.index === 'finesse' || p.name === 'Finesse'));
+
+    if (isRanged || (isFinesse && dexMod > strMod)) {
+      attackAbilityMod = dexMod;
+    }
+
+    if (typeof weapon.attack_bonus === 'number') {
+      weaponBonus += weapon.attack_bonus;
+    } else {
+      const name = (weapon.name || "").toLowerCase();
+      if (name.includes('+3')) weaponBonus = 3;
+      else if (name.includes('+2')) weaponBonus = 2;
+      else if (name.includes('+1')) weaponBonus = 1;
+    }
+
+    if (weapon.feature_specific?.passive_modifiers?.attack_bonus) {
+      weaponBonus += weapon.feature_specific.passive_modifiers.attack_bonus;
+    }
+
+    // Archery Fighting Style checks
+    if (isRanged) {
+      const choices = (character.choices?.['fighting-style'] || []).map((s: any) => String(s || '').toLowerCase());
+      const hasArcheryChoice = choices.some((s: string) => s === 'archery' || s.includes('archery'));
+
+      const hasArcheryFeature = character.features?.some(f => {
+        const idx = (f.index || f.name || '').toLowerCase();
+        const mods = f.feature_specific?.passive_modifiers;
+        return idx.includes('archery') || (mods?.attack_bonus === 2 && mods?.weapon_type === 'ranged');
+      });
+
+      if (hasArcheryChoice || hasArcheryFeature) {
+        weaponBonus += 2;
+      }
+    }
+  }
+
+  return proficiencyBonus + attackAbilityMod + weaponBonus;
+}
+
 export function getEffectiveStats(character: Character | undefined): Character['stats'] {
   const baseStats = character?.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
   if (!character) return baseStats;
@@ -189,19 +241,43 @@ export function calculateDerivedStats(character: Character | undefined): Derived
     let unarmoredAC = 10 + dexMod;
 
     character.features?.forEach(feat => {
-      const idx = (feat.index || feat.name || '').toLowerCase();
+      const idx = String(feat.index || feat.name || '').toLowerCase();
       const mods = feat.feature_specific?.passive_modifiers;
+      const acSet = mods?.ac_set;
 
-      if (idx.includes('barbarian_unarmored') || idx.includes('barbarian unarmored') || mods?.ac_set?.includes('constitution_modifier')) {
-        unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
-      }
-      if ((idx.includes('monk_unarmored') || idx.includes('monk unarmored') || mods?.ac_set?.includes('wisdom_modifier')) && !shield) {
-        unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
-      }
-      if (idx.includes('draconic_resilience') || idx.includes('draconic resilience') || mods?.ac_set?.includes('13 + dexterity')) {
-        unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
+      if (typeof acSet === 'number') {
+        unarmoredAC = Math.max(unarmoredAC, acSet + dexMod);
+      } else if (typeof acSet === 'string') {
+        const acSetStr = acSet.toLowerCase();
+        if (acSetStr.includes('constitution') || acSetStr.includes('con_mod') || idx.includes('barbarian')) {
+          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
+        }
+        if ((acSetStr.includes('wisdom') || acSetStr.includes('wis_mod') || idx.includes('monk')) && !shield) {
+          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
+        }
+        if (acSetStr.includes('13') || idx.includes('draconic') || idx.includes('shadows')) {
+          unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
+        }
+      } else {
+        if (idx.includes('barbarian')) {
+          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
+        }
+        if (idx.includes('monk') && !shield) {
+          unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
+        }
+        if (idx.includes('draconic')) {
+          unarmoredAC = Math.max(unarmoredAC, 13 + dexMod);
+        }
       }
     });
+
+    // Fallback based on class if features are unpopulated
+    const charClass = (character.class || '').toLowerCase();
+    if (charClass === 'barbarian') {
+      unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + conMod);
+    } else if (charClass === 'monk' && !shield) {
+      unarmoredAC = Math.max(unarmoredAC, 10 + dexMod + wisMod);
+    }
 
     baseAC = unarmoredAC;
   }
@@ -293,39 +369,7 @@ export function calculateDerivedStats(character: Character | undefined): Derived
 
   // 4. Attack Bonuses
   const weapon = getEquippedItem('main_hand');
-  let weaponBonus = 0;
-  let attackAbilityMod = strMod;
-
-  if (weapon) {
-    // Determine if finesse or ranged
-    const isRanged = weapon.weapon_range === 'Ranged' || weapon.category === 'Ranged' || weapon.index?.includes('bow') || weapon.index?.includes('crossbow');
-    const isFinesse = (weapon.properties || []).some((p: any) => (p.index === 'finesse' || p.name === 'Finesse'));
-    
-    if (isRanged || (isFinesse && dexMod > strMod)) {
-        attackAbilityMod = dexMod;
-    }
-
-    // Check for weapon bonus (+1, +2, etc)
-    const name = (weapon.name || "").toLowerCase();
-    if (name.includes('+1')) weaponBonus = 1;
-    else if (name.includes('+2')) weaponBonus = 2;
-    else if (name.includes('+3')) weaponBonus = 3;
-    
-    if (weapon.attack_bonus) weaponBonus += weapon.attack_bonus;
-
-    // New format: feature_specific.passive_modifiers.attack_bonus
-    if (weapon.feature_specific?.passive_modifiers?.attack_bonus) {
-      weaponBonus += weapon.feature_specific.passive_modifiers.attack_bonus;
-    }
-
-    // Feature Bonuses (e.g. Archery Fighting Style)
-    const styles = (character.choices?.['fighting-style'] || []).map((s: any) => String(s || '').toLowerCase());
-    if (isRanged && styles.some((s: string) => s === 'archery' || s.includes('archery'))) {
-        weaponBonus += 2;
-    }
-  }
-
-  const attackBonus = proficiencyBonus + attackAbilityMod + weaponBonus;
+  const attackBonus = calculateWeaponAttackBonus(character, weapon);
 
   // 5. Spellcasting
   const subclass = (character.subclass || '').toLowerCase();
