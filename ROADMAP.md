@@ -12,12 +12,6 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 ## Now
 
 ### Active
-- [ ] **Character Creator — Species Visual Integration v1**
-  - **Status:** PR #247 (`feat/species-visuals-integration-15532997127621620413`) is open and under human review/testing.
-  - **Goal:** integrate the canonical race sprite sheet into Species selection through shared visual infrastructure without expanding this PR into the full Character Creator redesign.
-  - **Required:** verify 2×7 sprite mapping, 3:2 species-cell geometry, green-screen removal, crop/positioning, responsive selection UX and correct official asset paths.
-  - **Scope boundary:** this PR remains Species-focused. Class sprites, Background sprites, Appearance redesign, Character Profile redesign and image-generation work are follow-up tasks.
-  - **Acceptance:** runtime behavior is verified by human testing; no duplicate visual implementation is introduced; shared image/chroma-key infrastructure remains reusable.
 
 ### Ready
 
@@ -87,6 +81,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Character Creator — Species Visual Integration v1 (PR #247 accepted and merged)
 - [x] XP animation — animated XP bar fill in CharacterPanel.tsx
 - [x] Combat loop — XP/leveling bugs fixed and verified
 - [x] Shared party XP (addPartyXp)
