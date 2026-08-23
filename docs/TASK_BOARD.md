@@ -5,16 +5,16 @@ This is the **active execution checklist**. `ROADMAP.md` defines current priorit
 ## 🔴 Critical — Current engineering
 
 ### Character Creator — Species Visual Integration v1
-PR #247 / `feat/species-visuals-integration-15532997127621620413` is currently under human review/testing.
+PR #247 accepted and merged. Species Visual Integration v1 completed. Character Creator — Selection Experience v1 is the next focused task.
 
 - [x] Establish shared `ChromaKeyImage` usage for official character visuals.
 - [x] Integrate canonical `race_sprite.webp` sprite sheet into Species selection.
 - [x] Define data-driven species sprite mapping for the 2×7 sheet.
 - [x] Use 3:2 species-cell geometry.
-- [ ] Human-test every species selection and verify crop, positioning and green-screen removal.
-- [ ] Confirm no stale/duplicate species visual implementation remains in the Character Creator.
-- [ ] Keep Class and Background visual integration out of this PR unless required to fix a shared foundation regression.
-- [ ] After acceptance, close PR #247 and dispatch the next focused Character Creator task.
+- [x] Human-test every species selection and verify crop, positioning and green-screen removal.
+- [x] Confirm no stale/duplicate species visual implementation remains in the Character Creator.
+- [x] Keep Class and Background visual integration out of this PR unless required to fix a shared foundation regression.
+- [x] PR #247 accepted and merged; Species Visual Integration v1 completed.
 
 ### Documentation / agent alignment
 - [x] Establish living `docs/ARCHITECTURE_STATUS.md`.
