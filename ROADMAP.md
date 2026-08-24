@@ -15,16 +15,17 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 
 ### Ready
 
+- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid (In Review)**
+  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
+  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
+  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
+
 - [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024 (Downstream Integration)**
   - **Status:** Canonical foundation (equipment, monsters) and Downstream Integration v1 (feats, class levels, spells) are complete. Remaining downstream loaders and rules-sensitive systems (conditions, features, subraces, backgrounds) remain to be audited and migrated in subsequent passes.
   - **Goal:** Ensure remaining rules-sensitive Atlas loaders resolve rules data through the canonical context boundary rather than hardcoding paths or independently guessing ruleset versions.
   - **Acceptance:** downstream Atlas loaders resolve versioned content through the canonical context boundary; no component hardcodes `/14/` or `/24/` paths; existing data remains loadable.
   - **Out of scope:** redesigning all D&D rules or creating mixed-ruleset fallback engines.
 
-- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
-  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
-  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
-  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
 
 - [ ] **Inventory & Equipment Architecture / UX Overhaul**
   - **Goal:** consolidate the existing inventory/equipment implementations instead of adding another inventory screen. The current system has overlapping responsibilities across `Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and `CharacterPanel.tsx`.

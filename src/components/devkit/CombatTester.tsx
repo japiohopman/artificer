@@ -71,29 +71,37 @@ export const CombatTester: React.FC = () => {
     if (!mapId) return;
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/combat-maps/${mapId}`);
-      if (res.ok) {
-        const battleMap = await res.json();
-        const { battleMapToCombatGrid } = await import('./BattleMapEditor/persistence/battleMapToCombatGrid');
-        const runtimeRep = battleMapToCombatGrid(battleMap);
+      const { loadBattleMapFromServer } = await import('./BattleMapEditor/persistence/battleMapStorage');
+      const battleMap = await loadBattleMapFromServer(mapId);
+      const { battleMapToCombatGrid } = await import('./BattleMapEditor/persistence/battleMapToCombatGrid');
+      const runtimeRep = battleMapToCombatGrid(battleMap);
 
-        // Deploy directly to the game store combatState
-        useGameStore.setState((state) => ({
-          combatState: {
-            ...state.combatState,
-            grid: runtimeRep.grid,
-            monsters: runtimeRep.monsters,
-            combatMapBackground: runtimeRep.background,
-            walls: battleMap.walls // Pass boundary walls for exact LoS/Pathfinding!
-          }
-        }));
-
-        setSelectedCustomMapId(mapId);
-        addLog(`Loaded Battle Map: ${battleMap.name || mapId}`, 'success');
-        playSuccessSound();
-      } else {
-        addLog(`Failed to load custom map: ${mapId}`, 'error');
+      if (!runtimeRep.partySpawnPos) {
+        throw new Error(`BattleMap '${battleMap.name || mapId}' contains no valid player spawn token or entry point.`);
       }
+
+      const spawnPos = runtimeRep.partySpawnPos;
+
+      // Apply the returned representation directly to combatState
+      useGameStore.setState((state) => ({
+        combatState: {
+          ...state.combatState,
+          grid: runtimeRep.grid,
+          monsters: runtimeRep.monsters,
+          combatMapBackground: runtimeRep.background,
+          walls: runtimeRep.walls,
+          playerPos: spawnPos
+        }
+      }));
+
+      const activeCharId = useCharacterStore.getState().activeCharacterId;
+      if (activeCharId) {
+        useGameStore.getState().setPlayerPos(spawnPos.x, spawnPos.y, activeCharId);
+      }
+
+      setSelectedCustomMapId(mapId);
+      addLog(`Loaded Battle Map: ${battleMap.name || mapId}`, 'success');
+      playSuccessSound();
     } catch (err) {
       console.error("Failed to load custom map:", err);
       addLog(`Error loading custom map: ${err instanceof Error ? err.message : String(err)}`, 'error');

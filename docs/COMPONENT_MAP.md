@@ -71,12 +71,14 @@ Developer/DM authoring and testing tools. DevKit modules are not automatically r
 
 - **`DevKit.tsx`**: Central DevKit shell and navigation.
 - **`Jane.tsx`**: World-building/Atlas authoring tool.
-- **`CombatTester.tsx`**: Tactical combat sandbox.
+- **`CombatTester.tsx`**: Tactical combat sandbox; loads canonical BattleMap authoring files via `battleMapStorage.ts` and transforms them via `battleMapToCombatGrid.ts`.
 - **`BattleMapEditor/`**: Battle-map authoring module.
   - `BattleMapEditor.tsx` is the composition root.
   - Editor state, tools, rendering, geometry, commands and persistence are kept inside the module.
+  - Authoring maps persist under `public/assets/atlas/combat/combat_maps/`.
+  - Shared server loading and persistence live in `persistence/battleMapStorage.ts`.
+  - Conversion to runtime combat state lives strictly in `persistence/battleMapToCombatGrid.ts`.
   - The editor produces authoring data; it must not become a second `CombatGrid` implementation.
-  - Current tool UI includes early placeholders. Wall, Room, Door, Terrain, Object, Token, Layers, Inspector and Undo/Redo are **not considered implemented until their underlying behavior is functional and tested**.
 
 ### Runtime vs authoring boundary
 

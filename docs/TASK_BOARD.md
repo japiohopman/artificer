@@ -65,19 +65,19 @@ Foundation and Downstream Integration v1 passes in progress.
 - [ ] Validate both rulesets load correct versioned Atlas data across all downstream consumers where 2024 content exists.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid
-Queued after the current Character Creator visual review; do not dispatch concurrently with the active PR.
+Under human review. Implementation, adapter, unit tests, and Playwright verification complete.
 
-- [ ] Persistent combat-map authoring files under `public/assets/atlas/combat/combat_maps/` through the supported development/server write boundary.
-- [ ] Canonical BattleMap loader/service shared by editor and runtime testing.
-- [ ] Update `src/components/devkit/CombatTester.tsx` to load the same BattleMap authoring data as the editor.
-- [ ] Introduce/verify a dedicated BattleMap → CombatGrid adapter rather than duplicating map conversion in UI code.
-- [ ] Ensure CombatGrid treats walls as **cell boundaries**, not fully blocked cells.
-- [ ] Map terrain identity into combat walkability/movement-cost queries using canonical terrain definitions.
-- [ ] Load PC/enemy token references from BattleMap data without creating a second entity schema.
-- [ ] Support explicit player/party entry points rather than hardcoded spawn coordinates.
-- [ ] Add a small canonical integration test map covering walls, doors, terrain, PC, enemy, entry point and objects.
-- [ ] Add focused regression tests for BattleMap loading, conversion, wall boundaries, terrain and spawn/entry data.
-- [ ] Keep BattleMapEditor as authoring UI; keep CombatTester as testing/debug UI; keep CombatGrid as runtime representation.
+- [x] Persistent combat-map authoring files under `public/assets/atlas/combat/combat_maps/` through the supported development/server write boundary.
+- [x] Canonical BattleMap loader/service shared by editor and runtime testing.
+- [x] Update `src/components/devkit/CombatTester.tsx` to load the same BattleMap authoring data as the editor.
+- [x] Introduce/verify a dedicated BattleMap → CombatGrid adapter rather than duplicating map conversion in UI code.
+- [x] Ensure CombatGrid treats walls as **cell boundaries**, not fully blocked cells.
+- [x] Map terrain identity into combat walkability/movement-cost queries using canonical terrain definitions.
+- [x] Load PC/enemy token references from BattleMap data without creating a second entity schema.
+- [x] Support explicit player/party entry points rather than hardcoded spawn coordinates.
+- [x] Add a small canonical integration test map covering walls, doors, terrain, PC, enemy, entry point and objects.
+- [x] Add focused regression tests for BattleMap loading, conversion, wall boundaries, terrain and spawn/entry data.
+- [x] Keep BattleMapEditor as authoring UI; keep CombatTester as testing/debug UI; keep CombatGrid as runtime representation.
 
 ### Inventory & Equipment Architecture / UX Overhaul
 - [ ] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.

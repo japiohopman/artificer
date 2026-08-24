@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "id": "canonical_integration_map",
+  "name": "Canonical Integration Test Map",
+  "metadata": {
+    "description": "Small canonical integration test map for BattleMap -> CombatTester -> CombatGrid pipeline",
+    "author": "Jules",
+    "createdAt": "2026-08-18T00:00:00.000Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
+    "theme": "fay_forest"
+  },
+  "dimensions": {
+    "width": 12,
+    "height": 10
+  },
+  "grid": {
+    "type": "square",
+    "cellSize": 60,
+    "unit": "ft",
+    "scale": 5,
+    "visible": true,
+    "snap": true
+  },
+  "background": {
+    "type": "image",
+    "value": "fay_forest.png",
+    "opacity": 1.0
+  },
+  "terrain": [
+    { "x": 0, "y": 0, "type": "stone" },
+    { "x": 1, "y": 0, "type": "stone" },
+    { "x": 2, "y": 0, "type": "stone" },
+    { "x": 2, "y": 2, "type": "grass" },
+    { "x": 3, "y": 2, "type": "grass" },
+    { "x": 4, "y": 2, "type": "mud" },
+    { "x": 5, "y": 2, "type": "mud" }
+  ],
+  "walls": [
+    {
+      "id": "wall-boundary-1",
+      "orientation": "horizontal",
+      "x": 5,
+      "y": 5,
+      "type": "wall"
+    },
+    {
+      "id": "door-boundary-1",
+      "orientation": "vertical",
+      "x": 5,
+      "y": 6,
+      "type": "door",
+      "doorState": "closed"
+    }
+  ],
+  "objects": [
+    {
+      "id": "table-1",
+      "name": "Wooden Table",
+      "index": "table",
+      "x": 6,
+      "y": 6,
+      "rotation": 0,
+      "scale": 1,
+      "layerId": "objects",
+      "isLocked": false,
+      "hasShadow": true
+    }
+  ],
+  "tokens": [
+    {
+      "id": "pc-entry-1",
+      "name": "Party Spawn Point",
+      "type": "player",
+      "x": 2,
+      "y": 2,
+      "size": "Medium"
+    },
+    {
+      "id": "enemy-goblin-1",
+      "name": "Goblin Scout",
+      "index": "goblin",
+      "type": "enemy",
+      "x": 8,
+      "y": 8,
+      "size": "Medium"
+    }
+  ],
+  "labels": [],
+  "markers": [
+    {
+      "id": "marker-entry",
+      "type": "entrance",
+      "x": 2,
+      "y": 2,
+      "name": "Main Entrance"
+    }
+  ],
+  "layers": [
+    { "id": "default", "name": "Default", "visible": true, "locked": false, "opacity": 1.0, "zIndex": 0 }
+  ]
+}
