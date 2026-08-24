@@ -35,19 +35,28 @@ Do not recreate the old monolithic store pattern.
 
 `CombatGrid` is the runtime tactical representation. It is not the map-authoring editor.
 
-The intended relationship is:
+The integration relationship is established:
 
 ```text
 BattleMapEditor
       ↓
-BattleMap authoring data
+BattleMap authoring JSON (public/assets/atlas/combat/combat_maps/)
       ↓
-serializer / validator / adapter
+loader (battleMapStorage.ts)
       ↓
-Combat runtime representation
+adapter (battleMapToCombatGrid.ts)
+      ↓
+CombatTester / runtime combatState
       ↓
 CombatGrid
 ```
+
+### Integration & Boundary Rules
+- **Authoring Source:** `public/assets/atlas/combat/combat_maps/` holds canonical JSON authoring files.
+- **Loader Ownership:** `battleMapStorage.ts` owns server map fetching, validation, and migration.
+- **Adapter Ownership:** `battleMapToCombatGrid.ts` converts authoring data into runtime `TacticalCell[][]` grid, monster references, background, and player entry points (`partySpawnPos`).
+- **Wall Semantics:** Walls are represented as boundary line segments in `combatState.walls`, keeping cells navigable while enforcing physical edge collisions for movement and line-of-sight.
+- **Terrain Semantics:** Authoring cell terrain types (stone, grass, wood, mud, water, ice, etc.) survive conversion into `TacticalCell.type`.
 
 The Battle Map Editor may contain authoring-only information such as DM notes, hidden objects, layers, generator metadata and editing state. Runtime combat should receive only the information it needs.
 

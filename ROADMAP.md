@@ -21,10 +21,6 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
   - **Acceptance:** downstream Atlas loaders resolve versioned content through the canonical context boundary; no component hardcodes `/14/` or `/24/` paths; existing data remains loadable.
   - **Out of scope:** redesigning all D&D rules or creating mixed-ruleset fallback engines.
 
-- [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
-  - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
-  - **Required boundaries:** BattleMap is authoring data; CombatTester is the testing surface; CombatGrid is the runtime representation.
-  - **Important semantics:** walls are cell boundaries, not blocked cells; terrain identity must drive walkability/movement semantics; PC/enemy tokens and player entry points must come from map data/Atlas references rather than hardcoded tester coordinates.
 
 - [ ] **Inventory & Equipment Architecture / UX Overhaul**
   - **Goal:** consolidate the existing inventory/equipment implementations instead of adding another inventory screen. The current system has overlapping responsibilities across `Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and `CharacterPanel.tsx`.
@@ -64,6 +60,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Combat Integration v1 — BattleMap → CombatTester → CombatGrid
 - [x] Ruleset Selection & Ruleset Context — 2014 vs 2024 (Downstream Integration v1 Pass: Feats, Class Levels, Spells)
 - [x] Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation Pass
 - [x] Character Creator — Selection Experience v1 (PR #257 accepted and merged)
