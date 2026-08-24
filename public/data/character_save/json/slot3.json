@@ -6,23 +6,35 @@
   "gender": "Male",
   "stats": {
     "str": 11,
-    "dex": 11,
-    "con": 10,
-    "int": 10,
-    "wis": 10,
+    "dex": 16,
+    "con": 16,
+    "int": 11,
+    "wis": 8,
     "cha": 10
   },
   "proficiencies": [
     "skill: intimidation",
     "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
-    "simple weapons",
-    "shortswords",
-    "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "Skill: Persuasion",
+    "Navigator'S Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
     {
@@ -64,48 +76,47 @@
   ],
   "features": [
     {
-      "index": "monk_unarmored_defense",
+      "index": "spellcasting_druid",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "unarmored defense",
+      "name": "spellcasting: druid",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
       ],
-      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
       "feature_specific": {
-        "passive_modifiers": {
-          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
+        "spellcasting_ability": {
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "martial_arts",
+      "index": "druidic",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "martial arts",
+      "name": "druidic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
-        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
-        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
-        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
-        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
       ],
-      "url": "/assets/atlas/features/json/martial_arts.json",
-      "updated_at": "2026-07-13T06:30:11.868Z",
-      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "url": "/assets/atlas/features/json/druidic.json",
+      "updated_at": "2026-07-13T06:30:11.853Z",
+      "image": "/assets/atlas/features/images/druidic.webp",
       "feature_specific": {},
       "source": "Class"
     }
@@ -132,25 +143,32 @@
     "specialFeatures": []
   },
   "items": {
-    "dart_8ll2l59ch": {
-      "id": "dart_8ll2l59ch",
-      "template": "dart",
-      "quantity": 10,
-      "addedAt": 1787411551475,
-      "kind": "weapon"
-    },
-    "sickle_itn8ff0cl": {
-      "id": "sickle_itn8ff0cl",
-      "template": "sickle",
+    "leather_armor_lgbflf1da": {
+      "id": "leather_armor_lgbflf1da",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1787411551475,
-      "kind": "weapon"
+      "addedAt": 1787602598310,
+      "kind": "armor"
     },
-    "gold_2697f09p8": {
-      "id": "gold_2697f09p8",
+    "explorers_pack_q11v1n2y2": {
+      "id": "explorers_pack_q11v1n2y2",
+      "template": "explorers_pack",
+      "quantity": 1,
+      "addedAt": 1787602598310,
+      "kind": "container"
+    },
+    "abacus_jq1yhpib3": {
+      "id": "abacus_jq1yhpib3",
+      "template": "abacus",
+      "quantity": 1,
+      "addedAt": 1787602598311,
+      "kind": "tradegood"
+    },
+    "gold_8la8lzryy": {
+      "id": "gold_8la8lzryy",
       "template": "gold",
-      "quantity": 23,
-      "addedAt": 1787411551475,
+      "quantity": 22,
+      "addedAt": 1787602598311,
       "kind": "tradegood"
     }
   },
@@ -162,15 +180,15 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "sickle_itn8ff0cl"
+          "itemId": "explorers_pack_q11v1n2y2"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_2697f09p8"
+          "itemId": "abacus_jq1yhpib3"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "gold_8la8lzryy"
         },
         {
           "id": "bag_3",
@@ -264,7 +282,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dart_8ll2l59ch"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -280,7 +298,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_lgbflf1da"
       },
       {
         "id": "clothes",
@@ -382,156 +400,65 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_qmab1f0t6",
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "quantity": 1
     },
     {
-      "id": "pot_iron_fkerlmz32",
-      "index": "pot_iron",
-      "name": "Pot Iron",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
     },
     {
-      "id": "clothes_travelers_cp40xuk02",
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_s73u1hd94",
       "index": "gold",
       "name": "Gold",
-      "quantity": 23,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear"
+      "quantity": 22
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "sickle_hzhii44j0",
-      "index": "sickle",
-      "name": "Sickle",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
-      "desc": [
-        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/sickle.webp",
-      "updated_at": "2026-07-12T19:00:20.427Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 20,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
-      "category": "Melee Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "/assets/atlas/damage_types/json/slashing.json"
-        }
-      },
-      "range": {
-        "normal": 5,
-        "long": null
-      },
-      "slot": "main-hand",
-      "main_hand_slot": "Sickle"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
     "orc"
   ],
   "preparedSpells": [],
-  "spellSlots": {},
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {},
   "race": "half_orc",
-  "class": "monk",
-  "spellcastingAbility": "cha",
-  "background": "farmer",
+  "class": "druid",
+  "background": "merchant",
+  "name": "  cv ",
+  "spellcastingAbility": "wis",
   "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
   "id": "slot3",
-  "name": "Hero",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 7,
+  "maxHp": 7,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-22T15:13:35.970Z"
+  "lastSaved": "2026-08-24T20:16:45.968Z"
 }
