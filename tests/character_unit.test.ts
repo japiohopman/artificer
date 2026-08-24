@@ -93,6 +93,15 @@ async function runAsyncUnitTests() {
   if (!eq2024 || !eq2024.name) {
     throw new Error('fetchEquipmentData for 2024 failed to resolve via canonical ruleset boundary');
   }
+
+  const mon2014 = await fetchMonsterData('beholder', '2014');
+  if (!mon2014 || !mon2014.name) {
+    throw new Error('fetchMonsterData for 2014 failed to resolve via canonical ruleset boundary');
+  }
+  const mon2024 = await fetchMonsterData('beholder', '2024');
+  if (!mon2024 || !mon2024.name) {
+    throw new Error('fetchMonsterData for 2024 failed to resolve via canonical ruleset boundary');
+  }
 }
 
 await runAsyncUnitTests();
