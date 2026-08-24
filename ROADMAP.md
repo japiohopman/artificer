@@ -13,11 +13,6 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 
 ### Active
 
-- [ ] **Character Creator — Selection Experience v1 (PR #257 under review)**
-  - **Goal:** turn the current character creation screens into a coherent, guided selection experience using official visual assets and canonical Atlas data.
-  - **Status:** PR #257 submitted and active under review.
-  - **Flow:** Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes → Skills & Choices → Arcana/Spells → Equipment → Appearance → Describe Your Character → Review.
-
 ### Ready
 
 - [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024**
@@ -74,6 +69,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Character Creator — Selection Experience v1 (PR #257 accepted and merged)
 - [x] Character Creator — Species Visual Integration v1 (PR #247 accepted and merged)
 - [x] XP animation — animated XP bar fill in CharacterPanel.tsx
 - [x] Combat loop — XP/leveling bugs fixed and verified

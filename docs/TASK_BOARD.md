@@ -31,9 +31,9 @@ PR #247 accepted and merged. Species Visual Integration v1 completed. Character 
 ## 🟠 High — Architecture & data foundations
 
 ### Character Creator — Selection Experience v1
-PR #257 submitted and under active review.
+PR #257 accepted and merged. Selection Experience v1 completed.
 
-- [ ] PR #257 accepted and merged.
+- [x] PR #257 accepted and merged.
 
 - [x] Define and implement the intended order: Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes/Stats → Skills & Choices → Arcana/Spells → Equipment → Appearance → Describe Your Character → Review.
 - [x] Move Background before Equipment.
