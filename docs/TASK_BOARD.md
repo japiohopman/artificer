@@ -50,16 +50,17 @@ PR #257 accepted and merged. Selection Experience v1 completed.
 - [x] Keep Appearance redesign, canonical profile schema and image generation out of this task.
 
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
-The foundation pass is complete. `useGameStore` is established as the canonical ruleset owner, resolved via `getActiveRulesetContext` and `getRulesetVersionFolder`.
+Foundation pass is complete. Downstream system audits and versioned loader migrations remain actionable.
 
 - [x] Provide the 2014/2024 selection UI.
 - [x] Persist the selected ruleset in character save data.
-- [x] Verify the selected ruleset is exposed through one canonical game/campaign context rather than read independently by screens.
+- [x] Verify the selected ruleset is exposed through one canonical game/campaign context (`useGameStore.ruleset`) rather than read independently by screens.
 - [x] Provide a single ruleset context/resolver (`getActiveRulesetContext` / `getRulesetVersionFolder`) used by rules-sensitive systems.
-- [x] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
 - [x] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution in representative loaders (`fetchEquipmentData`, `fetchMonsterData`, `atlasService.loadEquipment`, `atlasService.loadEnemy`).
-- [x] Validate both rulesets load the correct versioned Atlas data where 2024 content exists.
-- [x] Document which systems are ruleset-sensitive and which are ruleset-neutral in `docs/ARCHITECTURE_STATUS.md`.
+- [x] Document canonical ruleset ownership contract and scope in `docs/ARCHITECTURE_STATUS.md`.
+- [ ] Audit remaining rules, classes, species, subraces, backgrounds, feats, spells, conditions and feature rulesets for ruleset awareness.
+- [ ] Migrate remaining rules-sensitive Atlas loaders to consume the canonical resolution boundary (`getActiveRulesetContext` / `getRulesetVersionFolder`).
+- [ ] Validate both rulesets load correct versioned Atlas data across all downstream consumers where 2024 content exists.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid
 Queued after the current Character Creator visual review; do not dispatch concurrently with the active PR.
