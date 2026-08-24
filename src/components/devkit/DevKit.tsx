@@ -742,8 +742,9 @@ export const DevKit: React.FC<DevKitProps> = ({ isOpen, onClose, onMonsterUpdate
               if (!cleanPath.startsWith('public/')) cleanPath = 'public/' + cleanPath;
               jsonPath = cleanPath;
             } else {
-              // Default to 14/ subdirectory if not found
-              jsonPath = `public/assets/atlas/equipment/json/14/${index}.json`;
+              // Default to active ruleset subdirectory if not found
+              const { getRulesetVersionFolder } = await import('../../services/storageService');
+              jsonPath = `public/assets/atlas/equipment/json/${getRulesetVersionFolder()}/${index}.json`;
             }
           }
         } catch (e) {

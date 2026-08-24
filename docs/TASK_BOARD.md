@@ -50,16 +50,16 @@ PR #257 accepted and merged. Selection Experience v1 completed.
 - [x] Keep Appearance redesign, canonical profile schema and image generation out of this task.
 
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
-The feature branch has been tested for selection/persistence. The remaining work is integration verification and downstream adoption.
+The foundation pass is complete. `useGameStore` is established as the canonical ruleset owner, resolved via `getActiveRulesetContext` and `getRulesetVersionFolder`.
 
 - [x] Provide the 2014/2024 selection UI.
 - [x] Persist the selected ruleset in character save data.
-- [ ] Verify the selected ruleset is exposed through one canonical game/campaign context rather than read independently by screens.
-- [ ] Provide a single ruleset context/resolver used by rules-sensitive systems.
-- [ ] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
-- [ ] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution.
-- [ ] Validate both rulesets load the correct versioned Atlas data where 2024 content exists.
-- [ ] Document which systems are ruleset-sensitive and which are ruleset-neutral.
+- [x] Verify the selected ruleset is exposed through one canonical game/campaign context rather than read independently by screens.
+- [x] Provide a single ruleset context/resolver (`getActiveRulesetContext` / `getRulesetVersionFolder`) used by rules-sensitive systems.
+- [x] Audit rules, equipment, classes, species, feats, spells and other rules-sensitive Atlas access for ruleset awareness where required.
+- [x] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution in representative loaders (`fetchEquipmentData`, `fetchMonsterData`, `atlasService.loadEquipment`, `atlasService.loadEnemy`).
+- [x] Validate both rulesets load the correct versioned Atlas data where 2024 content exists.
+- [x] Document which systems are ruleset-sensitive and which are ruleset-neutral in `docs/ARCHITECTURE_STATUS.md`.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid
 Queued after the current Character Creator visual review; do not dispatch concurrently with the active PR.

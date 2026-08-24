@@ -2,7 +2,31 @@ import { calculateCharacterWeight, resolveItemTemplateWeight, ensureCharacterEqu
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, selectPartyCharacters } from '../src/lib/character/selectors';
 
+import { getActiveRulesetContext, getRulesetVersionFolder, fetchEquipmentData, fetchMonsterData } from '../src/services/storageService';
+import { useGameStore } from '../src/store/useGameStore';
+
 console.log('Running Character Architecture Unit Tests...');
+
+// 0. Ruleset Context Boundary Unit Tests
+if (getActiveRulesetContext() !== '2014') {
+  throw new Error(`Expected default active ruleset context '2014', got '${getActiveRulesetContext()}'`);
+}
+if (getActiveRulesetContext('2024') !== '2024') {
+  throw new Error(`Expected explicit ruleset override '2024', got '${getActiveRulesetContext('2024')}'`);
+}
+if (getRulesetVersionFolder('2014') !== '14' || getRulesetVersionFolder('2024') !== '24') {
+  throw new Error(`Ruleset version folder resolution failed`);
+}
+
+// Test Zustand gameStore integration
+useGameStore.getState().setRuleset('2024');
+if (getActiveRulesetContext() !== '2024' || getRulesetVersionFolder() !== '24') {
+  throw new Error(`gameStore setRuleset('2024') did not update canonical context boundary`);
+}
+useGameStore.getState().setRuleset('2014');
+if (getActiveRulesetContext() !== '2014' || getRulesetVersionFolder() !== '14') {
+  throw new Error(`gameStore setRuleset('2014') did not restore canonical context boundary`);
+}
 
 // 1. Empty inventory weight
 const emptyChar: any = {
@@ -59,6 +83,16 @@ async function runAsyncUnitTests() {
   // 3c. After domain lifecycle preload, weight resolves deterministically (65 + 6 + 0.4 + 0 + 2 = 73.4 lbs)
   const weightAfterLoad = calculateCharacterWeight(v2Char);
   if (weightAfterLoad !== 73.4) throw new Error(`Expected weight after load to be 73.4, got ${weightAfterLoad}`);
+
+  // 3d. Ruleset-aware consumer resolution test
+  const eq2014 = await fetchEquipmentData('dagger', '2014');
+  if (!eq2014 || !eq2014.name) {
+    throw new Error('fetchEquipmentData for 2014 failed to resolve via canonical ruleset boundary');
+  }
+  const eq2024 = await fetchEquipmentData('dagger', '2024');
+  if (!eq2024 || !eq2024.name) {
+    throw new Error('fetchEquipmentData for 2024 failed to resolve via canonical ruleset boundary');
+  }
 }
 
 await runAsyncUnitTests();

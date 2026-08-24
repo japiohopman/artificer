@@ -229,7 +229,13 @@ export function getActiveRulesetContext(explicitRuleset?: '2014' | '2024'): '201
   return '2014';
 }
 
+export function getRulesetVersionFolder(ruleset?: '2014' | '2024'): '14' | '24' {
+  const active = getActiveRulesetContext(ruleset);
+  return active === '2024' ? '24' : '14';
+}
+
 export async function fetchMonsterList(): Promise<{ name: string; path: string; index: string }[]> {
+  const versionFolder = getRulesetVersionFolder();
   try {
     // Try local index first
     const localRes = await fetch('/assets/atlas/enemies/index.json');
@@ -239,7 +245,7 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
         return data.map((item: any) => ({
           ...item,
           name: item.name || item.index.replace(/_/g, ' '),
-          path: item.json_path || `public/assets/atlas/enemies/json/14/${item.index}.json`,
+          path: item.json_path || `public/assets/atlas/enemies/json/${versionFolder}/${item.index}.json`,
           index: item.index
         }));
       }
@@ -280,8 +286,8 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
 
   let data: any = null;
   let resolvedPath: string | null = null;
-  const versionFolder = activeRuleset === '2024' ? '24' : '14';
-  const altFolder = activeRuleset === '2024' ? '14' : '24';
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const altFolder = versionFolder === '24' ? '14' : '24';
 
   // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
   try {
@@ -435,7 +441,7 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
   const cacheKey = `${activeRuleset}:${index}`;
   if (equipmentCache[cacheKey]) return equipmentCache[cacheKey];
 
-  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const versionFolder = getRulesetVersionFolder(ruleset);
   const cleanIndex = index.toLowerCase().replace(/_/g, '-');
   const packNames = ['burglars-pack', 'explorers-pack', 'dungeoneers-pack', 'priests-pack', 'entertainers-pack', 'scholars-pack', 'diplomats-pack'];
 
