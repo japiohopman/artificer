@@ -1,30 +1,24 @@
 {
-  "ruleset": "2024",
+  "ruleset": "2014",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Female",
+  "gender": "Male",
   "stats": {
-    "str": 18,
-    "dex": 13,
+    "str": 11,
+    "dex": 11,
     "con": 10,
     "int": 10,
-    "wis": 17,
-    "cha": 17
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "battleaxes",
-    "handaxes",
-    "light hammers",
-    "warhammers",
-    "Skill: Investigation",
-    "Skill: Persuasion",
-    "Potters Tools",
-    "light armor",
-    "medium armor",
-    "shields",
+    "skill: intimidation",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
     "simple weapons",
-    "martial weapons",
+    "shortswords",
     "saving throw: dex",
     "saving throw: str",
     "Saving Throw: str",
@@ -42,141 +36,77 @@
       }
     },
     {
-      "name": "dwarven resilience",
-      "index": "dwarven_resilience",
-      "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+      "name": "savage attacks",
+      "index": "savage_attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
       "trait_specific": {
         "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against poison",
-              "damage_type": {
-                "index": "poison",
-                "name": "poison",
-                "url": "/assets/atlas/damage_types/json/poison.json"
-              }
-            }
-          ],
-          "resistance": [
-            {
-              "index": "poison",
-              "name": "poison",
-              "url": "/assets/atlas/damage_types/json/poison.json"
-            }
-          ]
+          "extra_critical_damage_dice": 1
         }
       }
     },
     {
-      "name": "stonecunning",
-      "index": "stonecunning",
-      "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+      "name": "relentless endurance",
+      "index": "relentless_endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "trait_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      }
     },
     {
-      "name": "dwarven combat training",
-      "index": "dwarven_combat_training",
-      "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
-    },
-    {
-      "name": "tool proficiency",
-      "index": "tool_proficiency",
-      "desc": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
+      "name": "menacing",
+      "index": "menacing",
+      "desc": "You gain proficiency in the Intimidation skill."
     }
   ],
   "features": [
     {
-      "index": "favored_enemy_1_type",
+      "index": "monk_unarmored_defense",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "favored enemy (1 type)",
+      "name": "unarmored defense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
-        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
       ],
+      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
+      "updated_at": "2024-06-19T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
       "feature_specific": {
-        "enemy_type_options": {
-          "desc": "one enemy type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "aberrations",
-              "beasts",
-              "celestials",
-              "constructs",
-              "dragons",
-              "elementals",
-              "fey",
-              "fiends",
-              "giants",
-              "monstrosities",
-              "oozes",
-              "plants",
-              "undead",
-              "humanoids"
-            ]
-          }
-        },
-        "invocations": []
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
+        }
       },
-      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
       "source": "Class"
     },
     {
-      "index": "natural_explorer_1_terrain_type",
+      "index": "martial_arts",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "natural explorer (1 terrain type)",
+      "name": "martial arts",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
-        "- Difficult terrain doesn't slow your group's travel.",
-        "- Your group can't become lost except by magical means.",
-        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-        "- If you are traveling alone, you can move stealthily at a normal pace.",
-        "- When you forage, you find twice as much food as you normally would.",
-        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
-        "You choose additional favored terrain types at 6th and 10th level."
+        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
+        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
+        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
+        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
+        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
       ],
-      "feature_specific": {
-        "terrain_type_options": {
-          "desc": "one terrain type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "arctic",
-              "coast",
-              "desert",
-              "forest",
-              "grassland",
-              "mountain",
-              "swamp"
-            ]
-          }
-        },
-        "invocations": []
-      },
-      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
+      "url": "/assets/atlas/features/json/martial_arts.json",
+      "updated_at": "2026-07-13T06:30:11.868Z",
+      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -202,32 +132,25 @@
     "specialFeatures": []
   },
   "items": {
-    "longbow_gmcxtw77c": {
-      "id": "longbow_gmcxtw77c",
-      "template": "longbow",
-      "quantity": 1,
-      "addedAt": 1787560329089,
+    "dart_8ll2l59ch": {
+      "id": "dart_8ll2l59ch",
+      "template": "dart",
+      "quantity": 10,
+      "addedAt": 1787411551475,
       "kind": "weapon"
     },
-    "arrow_p3yqk275a": {
-      "id": "arrow_p3yqk275a",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1787560329090,
-      "kind": "consumable"
-    },
-    "abacus_5sccq3j2o": {
-      "id": "abacus_5sccq3j2o",
-      "template": "abacus",
+    "sickle_itn8ff0cl": {
+      "id": "sickle_itn8ff0cl",
+      "template": "sickle",
       "quantity": 1,
-      "addedAt": 1787560329090,
-      "kind": "tradegood"
+      "addedAt": 1787411551475,
+      "kind": "weapon"
     },
-    "gold_i3z2rgtcg": {
-      "id": "gold_i3z2rgtcg",
+    "gold_2697f09p8": {
+      "id": "gold_2697f09p8",
       "template": "gold",
-      "quantity": 25,
-      "addedAt": 1787560329090,
+      "quantity": 23,
+      "addedAt": 1787411551475,
       "kind": "tradegood"
     }
   },
@@ -239,15 +162,15 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_p3yqk275a"
+          "itemId": "sickle_itn8ff0cl"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_5sccq3j2o"
+          "itemId": "gold_2697f09p8"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_i3z2rgtcg"
+          "itemId": null
         },
         {
           "id": "bag_3",
@@ -341,7 +264,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_gmcxtw77c"
+        "itemId": "dart_8ll2l59ch"
       },
       {
         "id": "off_hand",
@@ -459,50 +382,29 @@
   },
   "backpack": [
     {
-      "id": "abacus_70mvk5px0",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp"
-    },
-    {
-      "id": "scale_merchants_1vbc38uvo",
-      "index": "scale_merchants",
-      "name": "Scale Merchant'S",
+      "id": "carpenters_tools_qmab1f0t6",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/scale_merchants.json",
-      "image_url": "public/assets/atlas/equipment/images/scale_merchants.webp",
-      "imageUrl": "/assets/atlas/equipment/images/scale_merchants.webp"
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "id": "clothes_travelers_8k6qqn332",
+      "id": "pot_iron_fkerlmz32",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+    },
+    {
+      "id": "clothes_travelers_cp40xuk02",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -513,10 +415,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_q1cm6jfdz",
+      "id": "gold_s73u1hd94",
       "index": "gold",
       "name": "Gold",
-      "quantity": 25,
+      "quantity": 23,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -544,42 +446,92 @@
       "category": "Standard Gear"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_hzhii44j0",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [],
   "languages": [
     "common",
-    "dwarvish"
+    "orc"
   ],
   "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
-  },
-  "choices": {
-    "favored_enemy_1_type": [
-      "aberrations"
-    ],
-    "natural_explorer_1_terrain_type": [
-      "desert"
-    ]
-  },
-  "race": "dwarf",
-  "class": "ranger",
-  "background": "artisan",
-  "name": "fous",
-  "spellcastingAbility": "wis",
+  "spellSlots": {},
+  "choices": {},
+  "race": "half_orc",
+  "class": "monk",
+  "spellcastingAbility": "cha",
+  "background": "farmer",
   "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "name": "Hero",
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-24T08:33:41.279Z"
+  "lastSaved": "2026-08-22T15:13:35.970Z"
 }
