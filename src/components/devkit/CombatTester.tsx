@@ -76,7 +76,11 @@ export const CombatTester: React.FC = () => {
       const { battleMapToCombatGrid } = await import('./BattleMapEditor/persistence/battleMapToCombatGrid');
       const runtimeRep = battleMapToCombatGrid(battleMap);
 
-      const spawnPos = runtimeRep.partySpawnPos || { x: 2, y: 2 };
+      if (!runtimeRep.partySpawnPos) {
+        throw new Error(`BattleMap '${battleMap.name || mapId}' contains no valid player spawn token or entry point.`);
+      }
+
+      const spawnPos = runtimeRep.partySpawnPos;
 
       // Apply the returned representation directly to combatState
       useGameStore.setState((state) => ({

@@ -65,7 +65,7 @@ Foundation and Downstream Integration v1 passes in progress.
 - [ ] Validate both rulesets load correct versioned Atlas data across all downstream consumers where 2024 content exists.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid
-Completed and verified with unit/integration and Playwright tests.
+Under human review. Implementation, adapter, unit tests, and Playwright verification complete.
 
 - [x] Persistent combat-map authoring files under `public/assets/atlas/combat/combat_maps/` through the supported development/server write boundary.
 - [x] Canonical BattleMap loader/service shared by editor and runtime testing.

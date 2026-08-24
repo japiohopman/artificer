@@ -75,6 +75,17 @@ describe('Combat Integration v1 — BattleMap -> CombatGrid Adapter Unit Tests',
       expect(converted.monsters.some(m => m.name === 'Party Spawn Point')).toBe(false);
     });
 
+    it('returns null partySpawnPos if no player token or entrance marker exists', () => {
+      const map = migrateBattleMap(deserializeBattleMap(rawJson));
+      const mapNoSpawn = {
+        ...map,
+        tokens: map.tokens.filter(t => t.type !== 'player'),
+        markers: []
+      };
+      const converted = battleMapToCombatGrid(mapNoSpawn);
+      expect(converted.partySpawnPos).toBeNull();
+    });
+
     it('resolves enemy tokens to CombatMonster objects referencing Atlas store data', () => {
       const map = migrateBattleMap(deserializeBattleMap(rawJson));
       const converted = battleMapToCombatGrid(map);
