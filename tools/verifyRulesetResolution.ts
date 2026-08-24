@@ -128,7 +128,11 @@ async function run() {
   }
 
   const fighterLevels24 = await fetchClassLevels('fighter', '2024');
-  console.log('Fighter Levels 2024 count:', fighterLevels24?.length, 'level 1 rulesetContext:', fighterLevels24?.[0]?.rulesetContext);
+  if (fighterLevels24?.[0]?.rulesetContext === '2024') {
+    console.log('Fighter Levels 2024 successfully resolved distinct 2024 data.');
+  } else {
+    console.log('INFO: Repository has no distinct /24/ class levels dataset for fighter. Fallback returned 2014 content with rulesetContext:', fighterLevels24?.[0]?.rulesetContext);
+  }
 
   // C. Spell Resolution Check
   const fireball14 = await fetchSpellData('fireball', '2014');
@@ -139,7 +143,19 @@ async function run() {
   }
 
   const fireball24 = await fetchSpellData('fireball', '2024');
-  console.log('Spell Fireball 2024 rulesetContext:', fireball24?.rulesetContext);
+  if (fireball24?.rulesetContext === '2024') {
+    console.log('Spell Fireball 2024 successfully resolved distinct 2024 data.');
+  } else {
+    console.log('INFO: Repository has no distinct /24/ spell dataset for fireball. Fallback returned 2014 content with rulesetContext:', fireball24?.rulesetContext);
+  }
+
+  // D. Equipment 2024 Check
+  const dagger24 = await fetchEquipmentData('dagger', '2024');
+  console.log('Equipment Dagger 2024 rulesetContext:', dagger24?.rulesetContext);
+  if (dagger24?.rulesetContext !== '2024') {
+    console.error('FAILED: Equipment Dagger 2024 did not return rulesetContext 2024');
+    process.exit(1);
+  }
 
   // D. AtlasService Wrapper Checks
   const atlasFeat = await atlasService.loadFeat('archery', '2024');
