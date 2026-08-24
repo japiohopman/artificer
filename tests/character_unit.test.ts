@@ -5,6 +5,26 @@ import { selectActiveCharacter, selectCharacterById, selectMainCharacterSlots, s
 import { getActiveRulesetContext, getRulesetVersionFolder, fetchEquipmentData, fetchMonsterData } from '../src/services/storageService';
 import { useGameStore } from '../src/store/useGameStore';
 
+import fs from 'fs';
+import path from 'path';
+
+// Polyfill relative fetch for Node CLI unit test environment
+if (typeof window === 'undefined') {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (input: any, init?: any) => {
+    const urlStr = typeof input === 'string' ? input : (input && input.url ? input.url : '');
+    if (urlStr.startsWith('/assets/atlas/')) {
+      const localPath = path.resolve(process.cwd(), 'public' + urlStr);
+      if (fs.existsSync(localPath)) {
+        const content = fs.readFileSync(localPath, 'utf8');
+        return new Response(content, { status: 200, statusText: 'OK', headers: { 'Content-Type': 'application/json' } });
+      }
+      return new Response(null, { status: 404, statusText: 'Not Found' });
+    }
+    return originalFetch(input, init);
+  };
+}
+
 console.log('Running Character Architecture Unit Tests...');
 
 // 0. Ruleset Context Boundary Unit Tests
@@ -84,23 +104,37 @@ async function runAsyncUnitTests() {
   const weightAfterLoad = calculateCharacterWeight(v2Char);
   if (weightAfterLoad !== 73.4) throw new Error(`Expected weight after load to be 73.4, got ${weightAfterLoad}`);
 
-  // 3d. Ruleset-aware consumer resolution test
-  const eq2014 = await fetchEquipmentData('dagger', '2014');
-  if (!eq2014 || !eq2014.name) {
-    throw new Error('fetchEquipmentData for 2014 failed to resolve via canonical ruleset boundary');
+  // 3d. Ruleset-aware consumer resolution test (distinguish versioned records on disk via explicit ruleset parameter and active store context)
+  const solvent2014 = await fetchEquipmentData('universal-solvent', '2014');
+  if (!solvent2014 || !solvent2014.url?.includes('/14/') || solvent2014.kind !== 'consumable') {
+    throw new Error(`fetchEquipmentData for 2014 failed to resolve 2014 record. Got: ${JSON.stringify(solvent2014)}`);
   }
-  const eq2024 = await fetchEquipmentData('dagger', '2024');
-  if (!eq2024 || !eq2024.name) {
-    throw new Error('fetchEquipmentData for 2024 failed to resolve via canonical ruleset boundary');
+  const solvent2024 = await fetchEquipmentData('universal-solvent', '2024');
+  if (!solvent2024 || !solvent2024.url?.includes('/24/') || solvent2024.kind !== 'equipment') {
+    throw new Error(`fetchEquipmentData for 2024 failed to resolve 2024 record. Got: ${JSON.stringify(solvent2024)}`);
   }
 
+  // Test implicit context resolution through useGameStore without explicit ruleset param
+  useGameStore.getState().setRuleset('2014');
+  const storeSolvent2014 = await fetchEquipmentData('universal-solvent');
+  if (!storeSolvent2014 || !storeSolvent2014.url?.includes('/14/')) {
+    throw new Error('fetchEquipmentData failed to resolve via active gameStore ruleset 2014');
+  }
+
+  useGameStore.getState().setRuleset('2024');
+  const storeSolvent2024 = await fetchEquipmentData('universal-solvent');
+  if (!storeSolvent2024 || !storeSolvent2024.url?.includes('/24/')) {
+    throw new Error('fetchEquipmentData failed to resolve via active gameStore ruleset 2024');
+  }
+  useGameStore.getState().setRuleset('2014'); // restore default
+
   const mon2014 = await fetchMonsterData('beholder', '2014');
-  if (!mon2014 || !mon2014.name) {
-    throw new Error('fetchMonsterData for 2014 failed to resolve via canonical ruleset boundary');
+  if (!mon2014 || !mon2014.name || mon2014.rulesetContext !== '2014') {
+    throw new Error(`fetchMonsterData for 2014 failed to resolve with canonical 2014 context. Got: ${mon2014?.rulesetContext}`);
   }
   const mon2024 = await fetchMonsterData('beholder', '2024');
-  if (!mon2024 || !mon2024.name) {
-    throw new Error('fetchMonsterData for 2024 failed to resolve via canonical ruleset boundary');
+  if (!mon2024 || !mon2024.name || mon2024.rulesetContext !== '2024') {
+    throw new Error(`fetchMonsterData for 2024 failed to resolve with canonical 2024 context. Got: ${mon2024?.rulesetContext}`);
   }
 }
 

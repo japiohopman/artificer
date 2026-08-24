@@ -289,47 +289,7 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
   const versionFolder = getRulesetVersionFolder(ruleset);
   const altFolder = versionFolder === '24' ? '14' : '24';
 
-  // Node CLI local filesystem fallback for unit test environments
-  if (typeof window === 'undefined') {
-    try {
-      const fs = await import('fs');
-      const path = await import('path');
-      let nodePath: string | null = null;
-
-      const indexPath = path.resolve(process.cwd(), 'public/assets/atlas/enemies/index.json');
-      if (fs.existsSync(indexPath)) {
-        const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-        const matching = indexData.filter((e: any) =>
-          e.index.toLowerCase() === index.toLowerCase() ||
-          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
-        );
-        const versioned = matching.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
-        const entry = versioned || matching[0];
-        if (entry && entry.json_path) {
-          nodePath = entry.json_path.replace(/^\/?assets\/atlas\//, 'public/assets/atlas/').replace(/^\/?public\/assets\/atlas\//, 'public/assets/atlas/');
-        }
-      }
-
-      if (!nodePath) {
-        const directPath = path.resolve(process.cwd(), `public/assets/atlas/enemies/json/${index}.json`);
-        if (fs.existsSync(directPath)) {
-          nodePath = `public/assets/atlas/enemies/json/${index}.json`;
-        }
-      }
-
-      if (nodePath) {
-        const fullPath = path.resolve(process.cwd(), nodePath);
-        if (fs.existsSync(fullPath)) {
-          const fileContent = fs.readFileSync(fullPath, 'utf8');
-          data = JSON.parse(fileContent);
-        }
-      }
-    } catch (e) {}
-  }
-
-  if (!data) {
-    // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
+  // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
     try {
       const indexRes = await fetch('/assets/atlas/enemies/index.json');
       if (indexRes.ok) {
@@ -372,7 +332,6 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
         data = await res.json();
       }
     } catch (e) {}
-  }
 
   if (!data && resolvedPath) {
     // Fallback to GitHub
@@ -436,6 +395,7 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
 
   const finalResult = {
     ...normalized,
+    rulesetContext: activeRuleset,
     imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index, normalized.name)
   };
   monsterCache[cacheKey] = finalResult;
