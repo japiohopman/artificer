@@ -20,9 +20,14 @@ The current architectural priority is to keep **authoring tools separate from ru
 
 - **Canonical Ruleset Owner:** `useGameStore` holds the single canonical ruleset identifier (`'2014'` or `'2024'`).
 - **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
-- **Scope Proven (Foundation Pass):** Representative loaders (`fetchEquipmentData`, `fetchMonsterData`, `atlasService.loadEquipment`, `atlasService.loadEnemy`) resolve versioned Atlas content (`/14/` vs `/24/`) through this boundary without hardcoded guesses.
+- **Scope Proven (Downstream Integration v1 Pass):**
+  - Equipment: `fetchEquipmentData` & `atlasService.loadEquipment`
+  - Monsters: `fetchMonsterData` & `atlasService.loadEnemy`
+  - Feats: `fetchFeatData` & `atlasService.loadFeat` (resolving `/feats/json/14/` vs `/24/` subcategories)
+  - Class Levels: `fetchClassLevels` & `atlasService.loadLevelData` (resolving `/class/levels/14/` vs `/24/`)
+  - Spells: `fetchSpellData` & `atlasService.loadSpell` (resolving versioned subpaths)
+- **Ruleset-Neutral / Inherited Audit:** Species, Subraces, Backgrounds, Alignments, Languages, and Features are audited; their data structures remain ruleset-neutral or inherit resolution from parent class/equipment context, attaching truthful `rulesetContext` metadata upon resolution.
 - **Character Persistence Relationship:** `Character.ruleset` remains saved character metadata. Loading character saves into slots does not alter the active global game ruleset. Activating a character session (`setActiveCharacter` / `setMainCharacter`) explicitly synchronizes `useGameStore.ruleset` to the character's ruleset.
-- **Remaining Downstream Work:** Other rules-sensitive systems (classes, species, subraces, backgrounds, feats, spells, conditions, feature rulesets) remain to be audited and migrated to consume this canonical boundary in subsequent focused tasks. This foundation pass does NOT claim universal downstream adoption.
 
 Do not recreate the old monolithic store pattern.
 

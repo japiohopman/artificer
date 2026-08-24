@@ -386,7 +386,11 @@ class AtlasService {
     );
   }
 
-  async loadSpell(index: string): Promise<any | null> {
+  async loadSpell(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchSpellData } = await import('./storageService');
+    const data = await fetchSpellData(index, ruleset);
+    if (data) return data;
+
     return this.fetchAtlasData(
       `/assets/atlas/spells/json/${index.toLowerCase().replace(/[\s-]/g, '_')}.json`
     );
@@ -412,17 +416,23 @@ class AtlasService {
     return null;
   }
 
-  async loadLevelData(className: string, level: number): Promise<any | null> {
+  async loadLevelData(className: string, level: number, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchClassLevels } = await import('./storageService');
+    const levels = await fetchClassLevels(className, ruleset);
+    if (Array.isArray(levels) && levels.length > 0) {
+      const match = levels.find(lvl => lvl.level === level);
+      if (match) return match;
+    }
+
     const slug = className.toLowerCase().replace(/\s+/g, '_');
     const hyphenSlug = className.toLowerCase().replace(/\s+/g, '-');
     
-    // Look for explicit level file if it exists, otherwise usually class data or special levels folder
     const paths = [
       `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
       `/assets/atlas/levels/json/${slug}_${level}.json`,
       `/assets/atlas/levels/json/${hyphenSlug}_${level}.json`,
       `/assets/atlas/class/levels/${slug}_${level}.json`,
-      `/assets/atlas/class/levels/${slug}.json` // Sometimes it's a big array in one file
+      `/assets/atlas/class/levels/${slug}.json`
     ];
 
     for (const p of paths) {
@@ -435,6 +445,11 @@ class AtlasService {
       }
     }
     return null;
+  }
+
+  async loadFeat(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchFeatData } = await import('./storageService');
+    return fetchFeatData(index, ruleset);
   }
 
   async loadFeature(index: string): Promise<any | null> {

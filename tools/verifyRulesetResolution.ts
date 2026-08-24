@@ -100,7 +100,49 @@ async function run() {
     process.exit(1);
   }
 
-  console.log('✓ All ruleset context, resolution & character switching checks passed successfully!');
+  // 5. Downstream Atlas Loaders Resolution Check (Feats, Class Levels, Spells)
+  const { fetchFeatData, fetchClassLevels, fetchSpellData } = await import('../src/services/storageService');
+  const { atlasService } = await import('../src/services/atlasService');
+
+  // A. Feat Resolution Check
+  const feat2024 = await fetchFeatData('archery', '2024');
+  console.log('Feat 2024 (Archery) rulesetContext:', feat2024?.rulesetContext);
+  if (feat2024?.rulesetContext !== '2024') {
+    console.error('FAILED: Feat 2024 (Archery) did not return rulesetContext 2024');
+    process.exit(1);
+  }
+
+  const feat2014 = await fetchFeatData('war_caster', '2014');
+  console.log('Feat 2014 (War Caster) rulesetContext:', feat2014?.rulesetContext);
+  if (feat2014?.rulesetContext !== '2014') {
+    console.error('FAILED: Feat 2014 (War Caster) did not return rulesetContext 2014');
+    process.exit(1);
+  }
+
+  // B. Class Levels Resolution Check
+  const fighterLevels14 = await fetchClassLevels('fighter', '2014');
+  console.log('Fighter Levels 2014 count:', fighterLevels14?.length, 'level 1 rulesetContext:', fighterLevels14?.[0]?.rulesetContext);
+  if (!fighterLevels14 || fighterLevels14.length === 0 || fighterLevels14[0]?.rulesetContext !== '2014') {
+    console.error('FAILED: Fighter levels 2014 failed or reported incorrect rulesetContext');
+    process.exit(1);
+  }
+
+  // C. Spell Resolution Check
+  const fireball14 = await fetchSpellData('fireball', '2014');
+  console.log('Spell Fireball 2014 rulesetContext:', fireball14?.rulesetContext);
+  if (fireball14?.rulesetContext !== '2014') {
+    console.error('FAILED: Fireball 2014 spell data did not return rulesetContext 2014');
+    process.exit(1);
+  }
+
+  // D. AtlasService Wrapper Check
+  const atlasFeat = await atlasService.loadFeat('archery', '2024');
+  if (atlasFeat?.rulesetContext !== '2024') {
+    console.error('FAILED: atlasService.loadFeat 2024 failed');
+    process.exit(1);
+  }
+
+  console.log('✓ All ruleset context, resolution, character switching & downstream loader checks passed successfully!');
 }
 
 run().catch((err) => {
