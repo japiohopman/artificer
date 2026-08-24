@@ -36,16 +36,30 @@ test.describe('Combat Integration v1 — Playwright Verification', () => {
     const optionValue = await targetOption.getAttribute('value');
     await mapSelect.selectOption({ value: optionValue || 'canonical_integration_map' });
 
-    // Wait for the game store combatState grid to update
+    // Wait for the game store combatState grid to update to the authored 10 rows
     await page.waitForFunction(() => (window as any).useGameStore.getState().combatState.grid.length === 10, { timeout: 5000 });
 
-    // Verify game store state was populated with canonical map data
+    // Verify game store state was populated with canonical map data produced by the adapter
     const combatState = await page.evaluate(() => (window as any).useGameStore.getState().combatState);
+
+    // Dimensions
     expect(combatState.grid.length).toBe(10);
     expect(combatState.grid[0].length).toBe(12);
-    expect(combatState.monsters.some((m: any) => m.name === 'Goblin Scout')).toBe(true);
-    expect(combatState.playerPos).toEqual({ x: 2, y: 2 });
+
+    // Terrain identity survival
+    expect(combatState.grid[0][0].type).toBe('stone');
+    expect(combatState.grid[2][2].type).toBe('grass');
+    expect(combatState.grid[2][4].type).toBe('mud');
+
+    // Walls boundary survival via adapter
     expect(combatState.walls.length).toBe(2);
+
+    // Player spawn/entry point survival
+    expect(combatState.playerPos).toEqual({ x: 2, y: 2 });
+
+    // Enemy resolution via adapter and absence of spawn point token as combatant
+    expect(combatState.monsters.some((m: any) => m.name === 'Goblin Scout')).toBe(true);
+    expect(combatState.monsters.some((m: any) => m.name === 'Party Spawn Point')).toBe(false);
 
     // Take screenshot for verification
     await page.screenshot({ path: 'public/assets/screenshots/verify_combat_integration.png' });
