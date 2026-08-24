@@ -112,9 +112,21 @@ test.describe('Inventory & Equipment UI Integration', () => {
     expect(mainHandItemId).toBe('item_sword');
 
     console.log('Testing category filter tabs in Vault Backpack...');
-    const gearCategoryBtn = page.getByRole('button', { name: /Gear/i }).first();
-    await expect(gearCategoryBtn).toBeVisible();
-    await gearCategoryBtn.click();
+    const potionsCategoryBtn = page.getByRole('button', { name: /Potions/i }).first();
+    await expect(potionsCategoryBtn).toBeVisible();
+    await potionsCategoryBtn.click();
+
+    console.log('Verifying 9:16 item card geometry (max 5 columns)...');
+    const firstCard = page.locator('div[title*="Potion of Healing"]').first();
+    await expect(firstCard).toBeVisible();
+    const box = await firstCard.boundingBox();
+    expect(box).not.toBeNull();
+    if (box) {
+      const ratio = box.width / box.height;
+      // Expect 9:16 ratio ~0.5625
+      expect(ratio).toBeGreaterThan(0.4);
+      expect(ratio).toBeLessThan(0.8);
+    }
 
     console.log('Verifying party storage panel is accessible...');
     await expect(page.getByText('Party Storage')).toBeVisible();

@@ -113,13 +113,11 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
           }
         }
 
-        // Additional AI background green haze filter when chroma key target is green
-        if (isGreenKey) {
+        // AI background green haze filter when pixel distance is within edge margin and green is dominant
+        if (isGreenKey && dist < threshold * 1.5) {
           const maxOther = Math.max(r, b);
           const diff = g - maxOther;
-          if (g > maxOther && diff > 35) {
-            data[i + 3] = 0;
-          } else if (g > 180 && g > r && g > b) {
+          if (g > 180 && diff > 40) {
             data[i + 3] = 0;
           }
         }

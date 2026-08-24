@@ -16,14 +16,26 @@ interface InventoryProps {
   gridCols?: number;
 }
 
-type BackpackCategory = 'all' | 'equipment' | 'materials' | 'key' | 'books';
+type BackpackCategory =
+  | 'all'
+  | 'weapons'
+  | 'armor'
+  | 'shields'
+  | 'head'
+  | 'boots'
+  | 'rings'
+  | 'neck'
+  | 'consumables'
+  | 'materials'
+  | 'key'
+  | 'books';
 
 export const Inventory: React.FC<InventoryProps> = ({
   onEquipRequest,
   forceCharacterId,
   showCategoryTabs = true,
   compactEquipped = false,
-  gridCols = 10
+  gridCols = 5
 }) => {
   const storeActiveChar = useActiveCharacter();
   const forcedChar = useCharacterStore(state => forceCharacterId ? selectCharacterById(state, forceCharacterId) : undefined);
@@ -65,17 +77,32 @@ export const Inventory: React.FC<InventoryProps> = ({
   const equippedItems = Object.entries(inventory).filter(([_, item]) => item !== null);
 
   const filteredBackpack = backpack.filter((item: any) => {
+    const kind = item.kind || item._type || '';
     if (activeCategory === 'all') return true;
-    if (activeCategory === 'equipment') return item._type === 'equipment' || item.kind === 'weapon' || item.kind === 'armor' || item.kind === 'shield';
-    if (activeCategory === 'materials') return item._type === 'materials' || item._type === 'material' || item.kind === 'material';
-    if (activeCategory === 'key') return item.isKeyItem || item.category?.index === 'key-items' || item._type === 'key' || item.kind === 'quest';
-    if (activeCategory === 'books') return item.isBook || item.category?.index === 'books' || item._type === 'books' || item.kind === 'book';
+    if (activeCategory === 'weapons') return kind === 'weapon';
+    if (activeCategory === 'armor') return kind === 'armor';
+    if (activeCategory === 'shields') return kind === 'shield';
+    if (activeCategory === 'head') return kind === 'head';
+    if (activeCategory === 'boots') return kind === 'feet';
+    if (activeCategory === 'rings') return kind === 'ring';
+    if (activeCategory === 'neck') return kind === 'neck';
+    if (activeCategory === 'consumables') return kind === 'consumable';
+    if (activeCategory === 'materials') return kind === 'material' || kind === 'materials';
+    if (activeCategory === 'key') return item.isKeyItem || kind === 'quest' || kind === 'key';
+    if (activeCategory === 'books') return item.isBook || kind === 'book' || kind === 'books';
     return true;
   });
 
   const categories: { id: BackpackCategory; icon: any; label: string }[] = [
     { id: 'all', icon: Filter, label: 'All' },
-    { id: 'equipment', icon: Shield, label: 'Gear' },
+    { id: 'weapons', icon: Shield, label: 'Weapons' },
+    { id: 'armor', icon: Shield, label: 'Armor' },
+    { id: 'shields', icon: Shield, label: 'Shields' },
+    { id: 'head', icon: Shield, label: 'Head' },
+    { id: 'boots', icon: Shield, label: 'Boots' },
+    { id: 'rings', icon: Sparkles, label: 'Rings' },
+    { id: 'neck', icon: Sparkles, label: 'Neck' },
+    { id: 'consumables', icon: Package, label: 'Potions' },
     { id: 'materials', icon: Sparkles, label: 'Mats' },
     { id: 'key', icon: Key, label: 'Key' },
     { id: 'books', icon: Book, label: 'Books' }
@@ -163,11 +190,11 @@ export const Inventory: React.FC<InventoryProps> = ({
           </div>
         )}
 
-        {/* 120-Slot Fixed Grid Layout */}
+        {/* 120-Slot Max 5 Column Grid Layout */}
         <div
           ref={setNodeRef}
           className={cn(
-            "p-1.5 rounded-lg border-2 border-dragon-red/15 transition-all relative overflow-hidden bg-stone-950/5",
+            "p-2 rounded-lg border-2 border-dragon-red/15 transition-all relative overflow-y-auto max-h-[55vh] custom-scrollbar bg-stone-950/5",
             isOver ? "bg-dragon-red/[0.04] border-dragon-red/30" : "border-dragon-red/10"
           )}
         >
@@ -175,31 +202,22 @@ export const Inventory: React.FC<InventoryProps> = ({
             <div className="absolute inset-0 border-2 border-dashed border-dragon-red/20 z-10 pointer-events-none rounded m-0.5 animate-pulse" />
           )}
 
-          <div
-            className="grid gap-1 relative z-20"
-            style={{ gridTemplateColumns: `repeat(${gridCols}, minmax(0, 1fr))` }}
-          >
-            {gridSlots.map((_, idx) => {
-              const item = filteredBackpack[idx];
-              if (item) {
-                return (
-                  <div key={item.id || `slot-${idx}`} className="w-full aspect-square">
-                    <DraggableInventoryItem
-                      item={item}
-                      index={backpack.indexOf(item)} // use original backpack index for state updates
-                      sourceId={activeCharacter.id}
-                      gridMode={true}
-                    />
-                  </div>
-                );
-              }
-              return (
-                <div
-                  key={`empty-slot-${idx}`}
-                  className="aspect-square w-full h-full bg-[#1e1a15]/5 border border-dragon-red/10 rounded-sm relative flex items-center justify-center p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)] hover:bg-dragon-red/5 transition-colors"
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 relative z-20">
+            {filteredBackpack.map((item, idx) => (
+              <div key={item.id || `item-slot-${idx}`} className="w-full">
+                <DraggableInventoryItem
+                  item={item}
+                  index={backpack.indexOf(item)}
+                  sourceId={activeCharacter.id}
+                  gridMode={true}
                 />
-              );
-            })}
+              </div>
+            ))}
+            {filteredBackpack.length === 0 && (
+              <div className="col-span-full py-8 text-center text-[10px] text-parchment-400 italic">
+                No items matching selected category.
+              </div>
+            )}
           </div>
         </div>
       </div>

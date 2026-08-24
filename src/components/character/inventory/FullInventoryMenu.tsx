@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
+import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
 import { cn } from '../../../lib/utils';
@@ -15,7 +16,8 @@ export const FullInventoryMenu: React.FC = () => {
   const { 
     isInventoryMenuOpen, 
     setIsInventoryMenuOpen,
-    equipItem
+    equipItem,
+    transferItem
   } = useInventoryStore();
 
   const {
@@ -38,13 +40,37 @@ export const FullInventoryMenu: React.FC = () => {
   const leftChars = characters.slice(0, 3);
   const rightChars = characters.slice(3, 6);
 
+  const handleDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+    if (!active || !over) return;
+
+    const activeData = active.data.current;
+    const overData = over.data.current;
+
+    if (!activeData || !overData) return;
+
+    const sourceId = activeData.sourceId;
+    const targetId = overData.characterId || overData.type;
+    const itemId = activeData.item?.id;
+
+    if (sourceId && targetId && itemId && sourceId !== targetId) {
+      transferItem({
+        sourceId,
+        targetId: targetId === 'backpack' ? overData.characterId : targetId,
+        itemId
+      });
+    }
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-x-0 bottom-0 top-16 bg-parchment-100 z-50 overflow-hidden flex flex-col"
-    >
+    <DndContext onDragEnd={handleDragEnd}>
+    <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.98 }}
+        className="w-full h-full max-w-7xl max-h-[92vh] bg-parchment-100 rounded-2xl border-2 border-dragon-gold shadow-2xl overflow-hidden flex flex-col relative z-[210]"
+      >
       {/* Texture Overlays */}
       <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
@@ -216,7 +242,9 @@ export const FullInventoryMenu: React.FC = () => {
             <span className="px-2 py-0.5 bg-black/5 rounded">NODE:INV-ALPHA-01</span>
          </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </div>
+    </DndContext>
   );
 };
 
