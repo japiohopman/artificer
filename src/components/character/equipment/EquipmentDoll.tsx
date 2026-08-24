@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDroppable } from '@dnd-kit/core';
 import { cn } from '../../../lib/utils';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { GameIcon } from '../../../game_icons';
@@ -60,18 +61,24 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     return null;
   };
 
-  const renderSlot = (slot: EquipmentSlotId) => {
+  const EquipmentDollSlot: React.FC<{ slot: EquipmentSlotId }> = ({ slot }) => {
+    const { setNodeRef, isOver } = useDroppable({
+      id: `equip-slot-${slot}`,
+      data: { type: 'equip_slot', slotId: slot }
+    });
+
     const isActive = activeSlots.includes(slot);
     const equippedItem = getSlotItem(slot);
     const slotDef = EQUIPMENT_SLOTS[slot];
 
     return (
       <button
+        ref={setNodeRef}
         key={slot}
         onClick={() => onSlotClick?.(slot)}
         className={cn(
           "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group",
-          isActive
+          isActive || isOver
             ? "bg-dragon-red/30 border-dragon-red shadow-[0_0_10px_rgba(139,0,0,0.3)] scale-105 z-10"
             : "bg-black/10 border-parchment-300/30",
           equippedItem && "opacity-100 border-dragon-red/40"
@@ -94,11 +101,11 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
           <div className="flex flex-col items-center gap-0.5 z-10">
             <GameIcon name={slotDef.gameIcon} size={12} className={cn(
               "transition-colors",
-              isActive ? "text-dragon-red" : "text-red-600/80"
+              isActive || isOver ? "text-dragon-red" : "text-red-600/80"
             )} />
             <span className={cn(
               "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
-              isActive ? "text-dragon-red" : "text-red-600/60"
+              isActive || isOver ? "text-dragon-red" : "text-red-600/60"
             )}>
               {slotDef.label}
             </span>
@@ -116,6 +123,8 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       </button>
     );
   };
+
+  const renderSlot = (slot: EquipmentSlotId) => <EquipmentDollSlot key={slot} slot={slot} />;
 
   return (
     <div className={cn("flex flex-col gap-4 w-full max-w-[280px] mx-auto", className)}>

@@ -37,9 +37,8 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
   const style = transform ? { transform: CSS.Translate.toString(transform) } : undefined;
 
   const handleInspect = (e: React.MouseEvent) => {
-    e.preventDefault();
     e.stopPropagation();
-    setInspectingItem({
+    useUIStore.getState().setInspectingItem({
       item, sourceId, index: typeof index === 'number' ? index : undefined, itemId: item.id, slot
     });
   };
@@ -53,12 +52,6 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         style={style}
         {...attributes}
         {...listeners}
-        onPointerDown={(e) => {
-          // Trigger inspection on click / tap pointer down to bypass drag listener capture
-          setInspectingItem({
-            item, sourceId, index: typeof index === 'number' ? index : undefined, itemId: item.id, slot
-          });
-        }}
         onClick={handleInspect}
         title={`${item.name} (${item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(

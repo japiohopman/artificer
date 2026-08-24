@@ -58,13 +58,25 @@ export const Inventory: React.FC<InventoryProps> = ({
         .filter(s => s.itemId && items[s.itemId])
         .map(s => {
           const itemInstance = items[s.itemId!];
+          const kind = itemInstance.kind || 'adventuring_gear';
+          let defaultSlot = undefined;
+          if (kind === 'weapon') defaultSlot = 'main_hand';
+          else if (kind === 'shield') defaultSlot = 'off_hand';
+          else if (kind === 'armor') defaultSlot = 'chest';
+          else if (kind === 'head') defaultSlot = 'head';
+          else if (kind === 'feet') defaultSlot = 'feet';
+          else if (kind === 'ring') defaultSlot = 'ring_1';
+          else if (kind === 'neck') defaultSlot = 'neck';
+          else if (kind === 'back') defaultSlot = 'back';
+
           return {
             id: itemInstance.id,
             name: itemInstance.customName || itemInstance.template,
             template: itemInstance.template,
             quantity: itemInstance.quantity || 1,
-            kind: itemInstance.kind || 'adventuring_gear',
-            _type: itemInstance.kind === 'weapon' || itemInstance.kind === 'armor' || itemInstance.kind === 'shield' ? 'equipment' : (itemInstance.kind || 'equipment'),
+            kind,
+            slot: defaultSlot,
+            _type: kind === 'weapon' || kind === 'armor' || kind === 'shield' || kind === 'head' || kind === 'feet' || kind === 'ring' || kind === 'neck' ? 'equipment' : kind,
             imageUrl: `/assets/atlas/equipment/images/${itemInstance.template}.webp`,
             index: itemInstance.template
           };

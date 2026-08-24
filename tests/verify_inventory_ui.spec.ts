@@ -62,7 +62,7 @@ test.describe('Inventory & Equipment UI Integration', () => {
 
       invStore.setState({
         isInventoryOpen: true,
-        isInventoryMenuOpen: false
+        isInventoryMenuOpen: true
       });
 
       if ((window as any).useGameStore) {

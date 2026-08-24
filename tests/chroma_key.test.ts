@@ -1,29 +1,38 @@
 // @ts-nocheck
 import { describe, it, expect } from 'vitest';
 
-describe('ChromaKeyImage Infrastructure Algorithm', () => {
-  it('correctly keys out target chroma color pixels', () => {
-    const chromaColor = { r: 0, g: 255, b: 0 };
-    const threshold = 100;
-    const isGreenKey = chromaColor.g > Math.max(chromaColor.r, chromaColor.b);
+describe('ChromaKeyImage Green Dominance Algorithm', () => {
+  const processPixel = (r: number, g: number, b: number, a: number = 255) => {
+    const maxOther = Math.max(r, b);
+    const diff = g - maxOther;
+    let alpha = a;
 
-    // Mock RGBA pixel array: Pure green background pixel
-    const data = [0, 255, 0, 255]; // [R, G, B, A]
-
-    const r = data[0];
-    const g = data[1];
-    const b = data[2];
-
-    const dist = Math.sqrt(
-      (r - chromaColor.r) ** 2 +
-      (g - chromaColor.g) ** 2 +
-      (b - chromaColor.b) ** 2
-    );
-
-    if (dist < threshold) {
-      data[3] = 0;
+    if (g > maxOther) {
+      if (diff > 5) {
+        const factor = Math.max(0, Math.min(1, (diff - 5) / 30));
+        alpha = Math.floor(255 * (1 - factor));
+        if (diff > 35) alpha = 0;
+        if (g > 160 && diff > 15) alpha = 0;
+      }
     }
 
-    expect(data[3]).toBe(0);
+    if (g > 180 && g > r && g > b) {
+      alpha = 0;
+    }
+
+    return alpha;
+  };
+
+  it('keys out pure green background pixels completely', () => {
+    expect(processPixel(0, 255, 0)).toBe(0);
+  });
+
+  it('keys out noisy AI green background pixels', () => {
+    expect(processPixel(20, 200, 30)).toBe(0);
+  });
+
+  it('preserves non-green subject assets (e.g. steel sword, red potion)', () => {
+    expect(processPixel(180, 180, 180)).toBe(255); // Steel sword
+    expect(processPixel(200, 30, 30)).toBe(255);   // Red health potion
   });
 });

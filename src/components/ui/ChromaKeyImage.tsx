@@ -80,46 +80,47 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imageData.data;
 
-      const targetR = chromaColor.r;
-      const targetG = chromaColor.g;
-      const targetB = chromaColor.b;
-      const isGreenKey = targetG > Math.max(targetR, targetB);
-
       for (let i = 0; i < data.length; i += 4) {
         const r = data[i];
         const g = data[i + 1];
         const b = data[i + 2];
 
-        // Calculate Euclidean color distance from target chromaColor
-        const dist = Math.sqrt(
-          (r - targetR) ** 2 +
-          (g - targetG) ** 2 +
-          (b - targetB) ** 2
-        );
+        // Aggressive Chroma key logic for AI-generated "noisy" green screens
+        // We look for any pixel where green is the dominant channel
+        const maxOther = Math.max(r, b);
+        const diff = g - maxOther;
 
-        if (dist < threshold) {
-          let alpha = 0;
-          if (dist > threshold * 0.7) {
-            // Smooth alpha feathering at edge threshold boundary
-            const factor = (dist - threshold * 0.7) / (threshold * 0.3);
-            alpha = Math.floor(255 * factor);
-          }
-          data[i + 3] = Math.min(data[i + 3], alpha);
+        // If green is dominant, we treat it as background
+        // We use a very low threshold to catch the "vague" greenish haze
+        if (g > maxOther) {
+          // Confidence score: how sure are we this is background green?
+          // If diff is > 10, we start fading. If diff is > 35, it's gone.
+          let alpha = 255;
 
-          // Edge spill reduction
-          if (isGreenKey && alpha < 255) {
-            const maxOther = Math.max(r, b);
-            data[i + 1] = maxOther;
+          if (diff > 5) {
+            // Map diff 5-35 to alpha 255-0
+            const factor = Math.max(0, Math.min(1, (diff - 5) / 30));
+            alpha = Math.floor(255 * (1 - factor));
+
+            // For clear green dominance, force transparency
+            if (diff > 35) alpha = 0;
+
+            // Also check for high-brightness greens which are common in AI backgrounds
+            if (g > 160 && diff > 15) alpha = 0;
+
+            data[i + 3] = Math.min(data[i + 3], alpha);
+
+            // Aggressive spill reduction: remove green tint from edges entirely
+            if (alpha < 255) {
+              data[i + 1] = maxOther;
+            }
           }
         }
 
-        // AI background green haze filter when pixel distance is within edge margin and green is dominant
-        if (isGreenKey && dist < threshold * 1.5) {
-          const maxOther = Math.max(r, b);
-          const diff = g - maxOther;
-          if (g > 180 && diff > 40) {
-            data[i + 3] = 0;
-          }
+        // Special case for desaturated greenish grays (common in AI haze)
+        // If it's bright and slightly greenish, fade it out
+        if (g > 180 && g > r && g > b) {
+          data[i + 3] = 0;
         }
       }
 

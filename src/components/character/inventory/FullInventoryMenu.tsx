@@ -3,9 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
-import { DndContext, DragEndEvent } from '@dnd-kit/core';
+import { DndContext, DragEndEvent, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
+import { EquipmentDoll } from '../equipment/EquipmentDoll';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
@@ -40,6 +41,14 @@ export const FullInventoryMenu: React.FC = () => {
   const leftChars = characters.slice(0, 3);
   const rightChars = characters.slice(3, 6);
 
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 5,
+      },
+    })
+  );
+
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
     if (!active || !over) return;
@@ -53,7 +62,12 @@ export const FullInventoryMenu: React.FC = () => {
     const targetId = overData.characterId || overData.type;
     const itemId = activeData.item?.id;
 
-    if (sourceId && targetId && itemId && sourceId !== targetId) {
+    if (overData.type === 'equip_slot' && overData.slotId && activeData.item) {
+      equipItem(activeData.item, overData.slotId);
+      return;
+    }
+
+    if (sourceId && targetId && itemId) {
       transferItem({
         sourceId,
         targetId: targetId === 'backpack' ? overData.characterId : targetId,
@@ -63,7 +77,7 @@ export const FullInventoryMenu: React.FC = () => {
   };
 
   return (
-    <DndContext onDragEnd={handleDragEnd}>
+    <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
     <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
@@ -131,7 +145,19 @@ export const FullInventoryMenu: React.FC = () => {
                     </div>
                     <div className="text-[10px] font-mono opacity-50 uppercase">Character_Focus_Active</div>
                  </div>
-                 <div className="flex-1 overflow-y-auto custom-scrollbar p-6">
+                 <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
+                    <div className="flex justify-center bg-parchment-100/50 p-4 rounded-xl border border-dragon-red/10 shadow-inner">
+                      <EquipmentDoll
+                        equipment={activeChar?.equipment}
+                        items={activeChar?.items}
+                        equippedItems={activeChar?.inventory}
+                        onSlotClick={(slot) => {
+                          if (activeChar?.inventory?.[slot]) {
+                            useInventoryStore.getState().unequipItem(slot);
+                          }
+                        }}
+                      />
+                    </div>
                     <Inventory />
                  </div>
               </div>
