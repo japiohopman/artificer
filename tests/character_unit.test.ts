@@ -106,35 +106,39 @@ async function runAsyncUnitTests() {
 
   // 3d. Ruleset-aware consumer resolution test (distinguish versioned records on disk via explicit ruleset parameter and active store context)
   const solvent2014 = await fetchEquipmentData('universal-solvent', '2014');
-  if (!solvent2014 || !solvent2014.url?.includes('/14/') || solvent2014.kind !== 'consumable') {
+  if (!solvent2014 || !solvent2014.url?.includes('/14/') || solvent2014.kind !== 'consumable' || solvent2014.rulesetContext !== '2014') {
     throw new Error(`fetchEquipmentData for 2014 failed to resolve 2014 record. Got: ${JSON.stringify(solvent2014)}`);
   }
   const solvent2024 = await fetchEquipmentData('universal-solvent', '2024');
-  if (!solvent2024 || !solvent2024.url?.includes('/24/') || solvent2024.kind !== 'equipment') {
+  if (!solvent2024 || !solvent2024.url?.includes('/24/') || solvent2024.kind !== 'equipment' || solvent2024.rulesetContext !== '2024') {
     throw new Error(`fetchEquipmentData for 2024 failed to resolve 2024 record. Got: ${JSON.stringify(solvent2024)}`);
   }
 
   // Test implicit context resolution through useGameStore without explicit ruleset param
   useGameStore.getState().setRuleset('2014');
   const storeSolvent2014 = await fetchEquipmentData('universal-solvent');
-  if (!storeSolvent2014 || !storeSolvent2014.url?.includes('/14/')) {
+  if (!storeSolvent2014 || !storeSolvent2014.url?.includes('/14/') || storeSolvent2014.rulesetContext !== '2014') {
     throw new Error('fetchEquipmentData failed to resolve via active gameStore ruleset 2014');
   }
 
   useGameStore.getState().setRuleset('2024');
   const storeSolvent2024 = await fetchEquipmentData('universal-solvent');
-  if (!storeSolvent2024 || !storeSolvent2024.url?.includes('/24/')) {
+  if (!storeSolvent2024 || !storeSolvent2024.url?.includes('/24/') || storeSolvent2024.rulesetContext !== '2024') {
     throw new Error('fetchEquipmentData failed to resolve via active gameStore ruleset 2024');
   }
   useGameStore.getState().setRuleset('2014'); // restore default
 
+  // Test monster fallback behavior: beholders exist in the base 2014 monsters folder.
+  // A 2014 request loads 2014 data -> rulesetContext = '2014'
   const mon2014 = await fetchMonsterData('beholder', '2014');
   if (!mon2014 || !mon2014.name || mon2014.rulesetContext !== '2014') {
     throw new Error(`fetchMonsterData for 2014 failed to resolve with canonical 2014 context. Got: ${mon2014?.rulesetContext}`);
   }
+  // A 2024 request for beholder fails to find a /24/ beholder and falls back to 2014 data.
+  // The returned rulesetContext MUST truthfully report '2014' (the version actually loaded), NOT '2024'.
   const mon2024 = await fetchMonsterData('beholder', '2024');
-  if (!mon2024 || !mon2024.name || mon2024.rulesetContext !== '2024') {
-    throw new Error(`fetchMonsterData for 2024 failed to resolve with canonical 2024 context. Got: ${mon2024?.rulesetContext}`);
+  if (!mon2024 || !mon2024.name || mon2024.rulesetContext !== '2014') {
+    throw new Error(`fetchMonsterData for 2024 with 2014 fallback failed to truthfully report actual loaded ruleset '2014'. Got: ${mon2024?.rulesetContext}`);
   }
 }
 

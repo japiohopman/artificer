@@ -393,9 +393,13 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
      } catch(e) {}
   }
 
+  // Determine actual ruleset of the loaded monster record based on resolved path or record URL
+  const actualPath = resolvedPath || normalized.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
   const finalResult = {
     ...normalized,
-    rulesetContext: activeRuleset,
+    rulesetContext: actualRuleset,
     imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index, normalized.name)
   };
   monsterCache[cacheKey] = finalResult;
@@ -486,7 +490,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
             data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
             data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
           }
-          const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+          const actualPath = nodePath || data.url || '';
+          const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+          const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
           equipmentCache[cacheKey] = finalResult;
           return finalResult;
         }
@@ -541,7 +547,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
           data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
           data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
         }
-        const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+        const actualPath = resolvedPath || data.url || '';
+        const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+        const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
         equipmentCache[cacheKey] = finalResult;
         return finalResult;
       }
@@ -560,7 +568,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
         data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
         data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
       }
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+      const actualPath = resolvedPath || data.url || '';
+      const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+      const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
       equipmentCache[cacheKey] = finalResult;
       return finalResult;
     }
@@ -581,8 +591,11 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
       data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
       data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
     }
+    const actualPath = resolvedPath || data.url || '';
+    const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
     return {
       ...data,
+      rulesetContext: actualRuleset,
       imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name)
     };
   } catch (e) {
