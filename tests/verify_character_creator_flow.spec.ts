@@ -56,8 +56,25 @@ test('verify complete guided character creator flow, validation overlay, and rev
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);
 
-    // 3. Identity Step
-    console.log('3. Verifying Identity Step...');
+    // 3. Identity Step & Name Validation
+    console.log('3. Verifying Identity Step & Name Validation...');
+    await expect(page.locator('h2:has-text("The Great Sigil")')).toBeVisible();
+
+    // Try to continue without entering a name -> trigger validation overlay
+    await page.click('#next-stage-btn');
+    await page.waitForTimeout(500);
+
+    await expect(page.locator('text=Complete Your Character')).toBeVisible();
+    await expect(page.locator('text=Character name is missing')).toBeVisible();
+
+    // Dismiss validation overlay
+    await page.click('button:has-text("Dismiss")');
+    await page.waitForTimeout(300);
+
+    // Type character name
+    await page.fill('input[placeholder="Enter Moniker..."]', 'Arthur');
+    await page.waitForTimeout(300);
+
     await page.click('#next-stage-btn');
     await page.waitForTimeout(500);
 
@@ -139,6 +156,7 @@ test('verify complete guided character creator flow, validation overlay, and rev
     // 13. Review Step (Final Manifest)
     console.log('13. Verifying Review Step (Final Manifest)...');
     await expect(page.locator('h2:has-text("Final Manifest")')).toBeVisible();
+    await expect(page.getByText('Arthur')).toBeVisible();
     await expect(page.getByText('Level 0 fighter')).toBeVisible();
     await expect(page.locator('#review-ruleset-badge')).toContainText('Ruleset: D&D 5e (2014)');
 

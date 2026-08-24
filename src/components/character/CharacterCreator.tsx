@@ -514,6 +514,14 @@ export const CharacterCreator: React.FC = () => {
         reason: 'No save slot selected'
       });
     }
+    if (!newChar.name || !newChar.name.trim()) {
+      missing.push({
+        stepId: 'identity',
+        label: 'Character Identity',
+        icon: 'info',
+        reason: 'Character name is missing'
+      });
+    }
     if (!newChar.race) {
       missing.push({
         stepId: 'species',
@@ -554,6 +562,7 @@ export const CharacterCreator: React.FC = () => {
     switch(currentStep) {
         case 'welcome': return true;
         case 'slot': return !!selectedSlot;
+        case 'identity': return !!newChar.name && newChar.name.trim().length > 0;
         case 'species': return !!newChar.race;
         case 'class': return !!newChar.class;
         case 'choices': return true;
@@ -564,7 +573,6 @@ export const CharacterCreator: React.FC = () => {
         case 'alignment': return !!newChar.alignment;
         case 'stats': return true;
         case 'appearance': return true;
-        case 'identity': return true;
         default: return true;
     }
   };
