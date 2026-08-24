@@ -1,9 +1,9 @@
 import React from 'react';
-import { useUIStore } from '../../store/useUIStore';
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { GameIcon } from '../../game_icons';
-import { cn } from '../../lib/utils';
-import { normalizeImageUrl } from '../../services/storageService';
+import { useUIStore } from '../../../store/useUIStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
+import { GameIcon, GameIconName } from '../../../game_icons';
+import { cn } from '../../../lib/utils';
+import { normalizeImageUrl } from '../../../services/storageService';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 

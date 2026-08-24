@@ -23,7 +23,7 @@ import { SettingsModal } from './components/core/SettingsModal';
 // Global Overlays
 import { BookReader } from './components/bookreader/BookReader';
 import { SpellbookReader } from './components/character/SpellbookReader';
-import { FullInventoryMenu } from './components/character/FullInventoryMenu';
+import { FullInventoryMenu } from './components/character/inventory/FullInventoryMenu';
 import { CharacterProfile } from './components/character/CharacterProfile';
 import { MonsterProfile } from './components/character/MonsterProfile';
 import { TransportProfile } from './components/character/TransportProfile';

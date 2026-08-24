@@ -1,15 +1,15 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
-import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { GameIcon } from '../../game_icons';
-import { normalizeImageUrl } from '../../services/storageService';
+import { cn } from '../../../lib/utils';
+import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
+import { GameIcon } from '../../../game_icons';
+import { normalizeImageUrl } from '../../../services/storageService';
 import { 
   EQUIPMENT_SLOTS, 
   EquipmentSlotId, 
   DOLL_GRID, 
   SIDE_SLOTS, 
   BOTTOM_SLOTS 
-} from '../../lib/equipmentConstants';
+} from '../../../lib/equipmentConstants';
 
 interface ItemDollProps {
   activeSlots?: EquipmentSlotId[];
@@ -40,9 +40,29 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   maxWidth,
   characterImageUrl
 }) => {
+  // Resolve item for slot from equippedItems object or V2 equipment/items dictionaries
+  const getSlotItem = (slot: EquipmentSlotId) => {
+    if (equippedItems[slot]) return equippedItems[slot];
+    if (equipment?.slots && items) {
+      const slotRecord = equipment.slots.find((s: any) => s.id === slot);
+      if (slotRecord?.itemId && items[slotRecord.itemId]) {
+        const itemInstance = items[slotRecord.itemId];
+        const details = equipmentDetails?.[itemInstance.template] || {};
+        return {
+          id: itemInstance.id,
+          name: itemInstance.customName || details.name || itemInstance.template,
+          imageUrl: details.imageUrl || `/assets/atlas/equipment/images/${itemInstance.template}.webp`,
+          _type: itemInstance.kind || details._type || 'equipment',
+          index: itemInstance.template
+        };
+      }
+    }
+    return null;
+  };
+
   const renderSlot = (slot: EquipmentSlotId) => {
     const isActive = activeSlots.includes(slot);
-    const equippedItem = equippedItems[slot];
+    const equippedItem = getSlotItem(slot);
     const slotDef = EQUIPMENT_SLOTS[slot];
 
     return (

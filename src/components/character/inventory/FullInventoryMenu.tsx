@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { useUIStore } from '../../store/useUIStore';
-import { useInventoryStore } from '../../store/useInventoryStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
+import { useUIStore } from '../../../store/useUIStore';
+import { useInventoryStore } from '../../../store/useInventoryStore';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
-import { cn } from '../../lib/utils';
-import { GameIcon, GameIconName } from '../../game_icons';
-import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { cn } from '../../../lib/utils';
+import { GameIcon, GameIconName } from '../../../game_icons';
+import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 
 export const FullInventoryMenu: React.FC = () => {
   const { 

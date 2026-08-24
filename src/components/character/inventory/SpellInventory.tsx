@@ -1,12 +1,12 @@
 import React from 'react';
-import { useUIStore } from '../../store/useUIStore';
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { useActiveCharacter } from '../../lib/character';
-import { useInventoryStore } from '../../store/useInventoryStore';
-import { GameIcon } from '../../game_icons';
-import { cn } from '../../lib/utils';
-import { SpellCard } from '../atlas/SpellCard';
-import { calculateMaxSpellSlots } from '../../lib/statCalculations';
+import { useUIStore } from '../../../store/useUIStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
+import { useActiveCharacter } from '../../../lib/character';
+import { useInventoryStore } from '../../../store/useInventoryStore';
+import { GameIcon, GameIconName } from '../../../game_icons';
+import { cn } from '../../../lib/utils';
+import { SpellCard } from '../../atlas/SpellCard';
+import { calculateMaxSpellSlots } from '../../../lib/statCalculations';
 
 export const SpellInventory: React.FC = () => {
   const { setFocusedItem, isCharacterSpellbookOpen, setIsCharacterSpellbookOpen } = useUIStore();

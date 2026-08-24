@@ -8,7 +8,7 @@ import {
   fetchClassData, fetchBackgroundJson, fetchEquipmentData, normalizeImageUrl 
 } from '../../../services/storageService';
 import { atlasService } from '../../../services/atlasService';
-import { EquipmentDoll } from '../EquipmentDoll';
+import { EquipmentDoll } from '../equipment/EquipmentDoll';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { GameIcon } from '../../../game_icons';
 import { useUIStore } from '../../../store/useUIStore';

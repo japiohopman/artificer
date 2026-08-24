@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { useActiveCharacter, selectCharacterById } from '../../lib/character';
-import { useInventoryStore } from '../../store/useInventoryStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
+import { useActiveCharacter, selectCharacterById } from '../../../lib/character';
+import { useInventoryStore } from '../../../store/useInventoryStore';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
 import { Package, Trash2, Weight, Shield, ArrowRight, Sparkles, Book, Key, Filter } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { cn } from '../../lib/utils';
+import { cn } from '../../../lib/utils';
 
 interface InventoryProps {
   onEquipRequest?: (item: any) => void;

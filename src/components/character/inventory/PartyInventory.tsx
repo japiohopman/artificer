@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { motion, AnimatePresence } from 'motion/react';
-import { useInventoryStore } from '../../store/useInventoryStore';
+import { useInventoryStore } from '../../../store/useInventoryStore';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
-import { cn } from '../../lib/utils';
-import { GameIcon, GameIconName } from '../../game_icons';
+import { cn } from '../../../lib/utils';
+import { GameIcon, GameIconName } from '../../../game_icons';
 
 export const PartyInventory: React.FC = () => {
   const { partyInventory, removeFromPartyInventory } = useInventoryStore();

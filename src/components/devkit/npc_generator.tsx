@@ -12,7 +12,7 @@ import { commitFile, playSuccessSound, playFailSound, playClickSound, normalizeI
 import { useUIStore } from '../../store/useUIStore';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
-import { EquipmentDoll } from '../character/EquipmentDoll';
+import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { GameIcon, GameIconName } from '../../game_icons';
 
 import { NPCChoiceResolver } from '../../lib/npcChoiceResolver';
