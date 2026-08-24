@@ -63,14 +63,6 @@ export default function App() {
   const activeBook = registeredBooks.find(b => b.id === activeBookId);
 
   useEffect(() => {
-    // Expose stores to window for Playwright integration tests
-    if (typeof window !== 'undefined') {
-      (window as any).useGameStore = useGameStore;
-      (window as any).useCharacterStore = useCharacterStore;
-      (window as any).useUIStore = useUIStore;
-      (window as any).useInventoryStore = useInventoryStore;
-    }
-
     // Initial data load - execute only on mount
     const { loadAllLists } = useAtlasStore.getState();
     const { loadCharacters } = useCharacterStore.getState();

@@ -110,6 +110,15 @@ test.describe('Inventory & Equipment UI Integration', () => {
     });
 
     expect(mainHandItemId).toBe('item_sword');
-    console.log('✓ Playwright integration test passed successfully!');
+
+    console.log('Testing category filter tabs in Vault Backpack...');
+    const gearCategoryBtn = page.getByRole('button', { name: /Gear/i }).first();
+    await expect(gearCategoryBtn).toBeVisible();
+    await gearCategoryBtn.click();
+
+    console.log('Verifying party storage panel is accessible...');
+    await expect(page.getByText('Party Storage')).toBeVisible();
+
+    console.log('✓ Extended Playwright integration test passed successfully!');
   });
 });

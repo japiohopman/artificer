@@ -11,7 +11,7 @@ import { useWorldStore } from './store/useWorldStore';
 
 import { useInventoryStore } from './store/useInventoryStore';
 
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined' && import.meta.env.DEV) {
   (window as any).useCharacterStore = useCharacterStore;
   (window as any).useUIStore = useUIStore;
   (window as any).useGameStore = useGameStore;

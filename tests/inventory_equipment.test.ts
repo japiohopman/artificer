@@ -104,4 +104,18 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
     expect(activeChar?.items?.['potion_1']).toBeUndefined();
   });
+
+  it('preserves save slot persistence state across loadCharacters and setMainCharacter triggers', async () => {
+    const { setMainCharacter, loadCharacters } = useCharacterStore.getState();
+
+    setMainCharacter(mockChar);
+    const activeParty = useCharacterStore.getState().characters;
+    expect(activeParty.length).toBe(1);
+    expect(activeParty[0].id).toBe('char_test_1');
+
+    // Reload characters boundary
+    loadCharacters();
+    const reloadedParty = useCharacterStore.getState().characters;
+    expect(reloadedParty.length).toBeGreaterThan(0);
+  });
 });
