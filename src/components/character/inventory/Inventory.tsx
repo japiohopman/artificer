@@ -35,16 +35,41 @@ export const Inventory: React.FC<InventoryProps> = ({
     return <div className="text-[10px] text-parchment-400 italic">No active character</div>;
   }
 
+  // Normalize items list for V1 and V2 characters
+  const backpack = React.useMemo(() => {
+    if (activeCharacter.saveVersion === 2 && activeCharacter.items && activeCharacter.containers) {
+      const items = activeCharacter.items;
+      const backpackContainer = Object.values(activeCharacter.containers).find(c => c.type === 'backpack');
+      if (!backpackContainer) return [];
+
+      return backpackContainer.slots
+        .filter(s => s.itemId && items[s.itemId])
+        .map(s => {
+          const itemInstance = items[s.itemId!];
+          return {
+            id: itemInstance.id,
+            name: itemInstance.customName || itemInstance.template,
+            template: itemInstance.template,
+            quantity: itemInstance.quantity || 1,
+            kind: itemInstance.kind || 'adventuring_gear',
+            _type: itemInstance.kind === 'weapon' || itemInstance.kind === 'armor' || itemInstance.kind === 'shield' ? 'equipment' : (itemInstance.kind || 'equipment'),
+            imageUrl: `/assets/atlas/equipment/images/${itemInstance.template}.webp`,
+            index: itemInstance.template
+          };
+        });
+    }
+    return activeCharacter.backpack || [];
+  }, [activeCharacter]);
+
   const inventory = activeCharacter.inventory || {};
-  const backpack = activeCharacter.backpack || [];
   const equippedItems = Object.entries(inventory).filter(([_, item]) => item !== null);
 
-  const filteredBackpack = backpack.filter(item => {
+  const filteredBackpack = backpack.filter((item: any) => {
     if (activeCategory === 'all') return true;
-    if (activeCategory === 'equipment') return item._type === 'equipment';
-    if (activeCategory === 'materials') return item._type === 'materials' || item._type === 'material';
-    if (activeCategory === 'key') return item.isKeyItem || item.category?.index === 'key-items' || item._type === 'key';
-    if (activeCategory === 'books') return item.isBook || item.category?.index === 'books' || item._type === 'books';
+    if (activeCategory === 'equipment') return item._type === 'equipment' || item.kind === 'weapon' || item.kind === 'armor' || item.kind === 'shield';
+    if (activeCategory === 'materials') return item._type === 'materials' || item._type === 'material' || item.kind === 'material';
+    if (activeCategory === 'key') return item.isKeyItem || item.category?.index === 'key-items' || item._type === 'key' || item.kind === 'quest';
+    if (activeCategory === 'books') return item.isBook || item.category?.index === 'books' || item._type === 'books' || item.kind === 'book';
     return true;
   });
 

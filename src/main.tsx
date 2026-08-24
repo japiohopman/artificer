@@ -9,12 +9,15 @@ import { useGameStore } from './store/useGameStore';
 import { useChatStore } from './store/useChatStore';
 import { useWorldStore } from './store/useWorldStore';
 
-if (typeof window !== 'undefined' && import.meta.env.DEV) {
+import { useInventoryStore } from './store/useInventoryStore';
+
+if (typeof window !== 'undefined') {
   (window as any).useCharacterStore = useCharacterStore;
   (window as any).useUIStore = useUIStore;
   (window as any).useGameStore = useGameStore;
   (window as any).useChatStore = useChatStore;
   (window as any).useWorldStore = useWorldStore;
+  (window as any).useInventoryStore = useInventoryStore;
 }
 
 createRoot(document.getElementById('root')!).render(

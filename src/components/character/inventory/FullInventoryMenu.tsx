@@ -8,11 +8,14 @@ import { PartyInventory } from './PartyInventory';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
+import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
+import { normalizeImageUrl } from '../../../services/storageService';
 
 export const FullInventoryMenu: React.FC = () => {
   const { 
     isInventoryMenuOpen, 
-    setIsInventoryMenuOpen
+    setIsInventoryMenuOpen,
+    equipItem
   } = useInventoryStore();
 
   const {
@@ -22,8 +25,13 @@ export const FullInventoryMenu: React.FC = () => {
   } = useCharacterStore();
 
   const {
-    transferItem
-  } = useInventoryStore();
+    inspectingItem,
+    setInspectingItem
+  } = useUIStore();
+
+  const activeChar = characters.find(c => c.id === activeCharacterId);
+  const selectedItem = inspectingItem?.item;
+  const itemWeight = selectedItem ? resolveItemTemplateWeight(selectedItem.template || selectedItem.index || selectedItem, activeChar?.ruleset) : 0;
 
   if (!isInventoryMenuOpen) return null;
 
@@ -83,7 +91,7 @@ export const FullInventoryMenu: React.FC = () => {
         {/* Center Column: Focused Character & Shared Storage */}
         <div className="flex-1 h-full flex flex-col p-6 gap-6 bg-parchment-50/50 relative overflow-hidden">
            {/* Visual Flourish */}
-           <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12">
+           <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12 pointer-events-none">
               <GameIcon name="chest" size={200} color="#8B0000" />
            </div>
 
@@ -102,9 +110,77 @@ export const FullInventoryMenu: React.FC = () => {
                  </div>
               </div>
 
-              {/* Shared Party Storage */}
-              <div className="flex-1 flex flex-col min-w-[320px]">
-                 <PartyInventory />
+              {/* Shared Party Storage & Inspection Panel */}
+              <div className="flex-1 flex flex-col min-w-[320px] gap-4">
+                 {/* Item Inspection Panel */}
+                 <AnimatePresence mode="wait">
+                   {selectedItem ? (
+                     <motion.div
+                       initial={{ opacity: 0, y: 10 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       exit={{ opacity: 0, y: -10 }}
+                       className="bg-white/60 rounded-2xl border-2 border-dragon-gold/40 p-4 shadow-xl flex flex-col gap-3 shrink-0"
+                     >
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-[8px] font-black text-dragon-gold uppercase tracking-widest block">Inspecting Item</span>
+                            <h3 className="font-header text-sm text-dragon-darkRed uppercase">{selectedItem.name}</h3>
+                          </div>
+                          <button
+                            onClick={() => setInspectingItem(null)}
+                            className="p-1 text-parchment-400 hover:text-dragon-red transition-colors"
+                          >
+                            <GameIcon name="close" size={14} />
+                          </button>
+                        </div>
+
+                        <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
+                          <div className="w-12 h-12 rounded bg-black/10 overflow-hidden flex items-center justify-center shrink-0 border border-dragon-red/20">
+                            <ChromaKeyImage
+                              src={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
+                              alt={selectedItem.name}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <div className="flex-1 text-[9px] space-y-0.5">
+                            <div className="flex justify-between">
+                              <span className="text-parchment-500 font-bold uppercase">Type:</span>
+                              <span className="font-mono text-dragon-red font-bold uppercase">{selectedItem.kind || selectedItem._type || 'item'}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-parchment-500 font-bold uppercase">Quantity:</span>
+                              <span className="font-mono text-parchment-800 font-bold">x{selectedItem.quantity || 1}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-parchment-500 font-bold uppercase">Weight:</span>
+                              <span className="font-mono text-parchment-800 font-bold">{itemWeight} lbs</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {(selectedItem._type === 'equipment' || selectedItem.kind === 'weapon' || selectedItem.kind === 'armor' || selectedItem.kind === 'shield') && (
+                          <button
+                            onClick={() => {
+                              const targetSlot = selectedItem.slot || (selectedItem.kind === 'shield' ? 'off_hand' : 'main_hand');
+                              equipItem(selectedItem, targetSlot);
+                              setInspectingItem(null);
+                            }}
+                            className="w-full py-1.5 bg-dragon-red text-white hover:bg-dragon-darkRed rounded text-[9px] font-bold uppercase tracking-wider transition-colors shadow"
+                          >
+                            Equip Item
+                          </button>
+                        )}
+                     </motion.div>
+                   ) : (
+                     <div className="bg-white/20 rounded-2xl border border-dashed border-dragon-red/20 p-4 text-center text-[9px] text-parchment-400 italic">
+                       Click an item to inspect details and options.
+                     </div>
+                   )}
+                 </AnimatePresence>
+
+                 <div className="flex-1 min-h-0">
+                    <PartyInventory />
+                 </div>
               </div>
            </div>
         </div>

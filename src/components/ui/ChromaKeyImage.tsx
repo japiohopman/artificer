@@ -59,6 +59,8 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
       const sourceX = crop ? crop.sx : 0;
       const sourceY = crop ? crop.sy : 0;
 
+      if (!sourceWidth || !sourceHeight) return;
+
       canvas.width = sourceWidth;
       canvas.height = sourceHeight;
 

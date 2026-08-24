@@ -11,6 +11,7 @@ import { useAtlasStore } from './store/useAtlasStore';
 import { useWorldStore } from './store/useWorldStore';
 import { useGameStore } from './store/useGameStore';
 import { useCharacterStore } from './store/useCharacterStore';
+import { useInventoryStore } from './store/useInventoryStore';
 import { useEffect } from 'react';
 import { playModalOpenSound, playModalCloseSound } from './services/storageService';
 import { useHueStore } from './store/useHueStore';
@@ -62,6 +63,14 @@ export default function App() {
   const activeBook = registeredBooks.find(b => b.id === activeBookId);
 
   useEffect(() => {
+    // Expose stores to window for Playwright integration tests
+    if (typeof window !== 'undefined') {
+      (window as any).useGameStore = useGameStore;
+      (window as any).useCharacterStore = useCharacterStore;
+      (window as any).useUIStore = useUIStore;
+      (window as any).useInventoryStore = useInventoryStore;
+    }
+
     // Initial data load - execute only on mount
     const { loadAllLists } = useAtlasStore.getState();
     const { loadCharacters } = useCharacterStore.getState();
