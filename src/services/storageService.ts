@@ -289,6 +289,51 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
   const versionFolder = getRulesetVersionFolder(ruleset);
   const altFolder = versionFolder === '24' ? '14' : '24';
 
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+
+      // 1. Try resolving via local index.json first
+      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies/index.json');
+      if (fs.existsSync(indexPath)) {
+        const enemyIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const matching = enemyIndex.filter((e: any) =>
+          e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        const versioned = matching.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+        const entry = versioned || matching[0];
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
+      }
+
+      // 2. Direct folder fallback
+      if (!resolvedPath) {
+        const subfolders = [versionFolder, altFolder, ''];
+        for (const sub of subfolders) {
+          const candidate = sub ? `/assets/atlas/enemies/json/${sub}/${index}.json` : `/assets/atlas/enemies/json/${index}.json`;
+          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+          if (fs.existsSync(fullFsPath)) {
+            resolvedPath = candidate;
+            break;
+          }
+        }
+      }
+
+      if (resolvedPath) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${resolvedPath.replace(/^\/?public\//, '/')}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          data = JSON.parse(fileContent);
+        }
+      }
+    } catch (e) {}
+  }
+
   // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
     try {
       const indexRes = await fetch('/assets/atlas/enemies/index.json');
@@ -1313,9 +1358,67 @@ export async function fetchDamageTypeData(index: string): Promise<any> {
   }
 }
 
-export async function fetchSpellData(index: string): Promise<any> {
-  if (spellCache[index]) return spellCache[index];
+export async function fetchSpellData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const cacheKey = `${activeRuleset}:${index}`;
+  if (spellCache[cacheKey]) return spellCache[cacheKey];
+
   let resolvedPath: string | null = null;
+  const versionFolder = getRulesetVersionFolder(ruleset);
+
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/spell/index.json');
+      if (fs.existsSync(indexPath)) {
+        const spellIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const matchingEntries = spellIndex.filter((s: any) =>
+          s.index.toLowerCase() === index.toLowerCase() ||
+          (s.name && s.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        const versionedEntry = matchingEntries.find((s: any) => s.json_path && s.json_path.includes(`/${versionFolder}/`));
+        const entry = versionedEntry || matchingEntries[0];
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
+      }
+
+      if (!resolvedPath) {
+        const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
+        const subfolders = [versionFolder, ''];
+        for (const sub of subfolders) {
+          const folderPrefix = sub ? `${sub}/` : '';
+          for (const lvl of levels) {
+            const candidate = `/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`;
+            const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+            if (fs.existsSync(fullFsPath)) {
+              resolvedPath = candidate;
+              break;
+            }
+          }
+          if (resolvedPath) break;
+        }
+      }
+
+      if (resolvedPath) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${resolvedPath.replace(/^\/?public\//, '/')}`);
+        if (fs.existsSync(fullFsPath)) {
+          const data = JSON.parse(fs.readFileSync(fullFsPath, 'utf8'));
+          const actualRuleset: '2014' | '2024' = (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/')) ? '2024' : '2014';
+          const finalResult = {
+            ...data,
+            rulesetContext: actualRuleset,
+            imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
+          };
+          spellCache[cacheKey] = finalResult;
+          return finalResult;
+        }
+      }
+    } catch (e) {}
+  }
 
   // Try resolving path from local index first (supporting index or name-based fallback matching)
   try {
@@ -1323,10 +1426,12 @@ export async function fetchSpellData(index: string): Promise<any> {
     if (indexRes.ok) {
       const spellIndex = await indexRes.json();
       const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-      const entry = spellIndex.find((s: any) =>
+      const matchingEntries = spellIndex.filter((s: any) =>
         s.index.toLowerCase() === index.toLowerCase() ||
         (s.name && s.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
       );
+      const versionedEntry = matchingEntries.find((s: any) => s.json_path && s.json_path.includes(`/${versionFolder}/`));
+      const entry = versionedEntry || matchingEntries[0];
       if (entry && entry.json_path) {
         resolvedPath = entry.json_path;
       }
@@ -1336,14 +1441,19 @@ export async function fetchSpellData(index: string): Promise<any> {
   // If not found in index, attempt direct subdirectories via iterative fallback
   if (!resolvedPath) {
     const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
-    for (const lvl of levels) {
-      try {
-        const checkRes = await fetch(`/assets/atlas/spell/json/${lvl}/${index}.json`, { method: 'HEAD' });
-        if (checkRes.ok) {
-          resolvedPath = `/assets/atlas/spell/json/${lvl}/${index}.json`;
-          break;
-        }
-      } catch (e) {}
+    const subfolders = [versionFolder, ''];
+    for (const sub of subfolders) {
+      const folderPrefix = sub ? `${sub}/` : '';
+      for (const lvl of levels) {
+        try {
+          const checkRes = await fetch(`/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`, { method: 'HEAD' });
+          if (checkRes.ok) {
+            resolvedPath = `/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`;
+            break;
+          }
+        } catch (e) {}
+      }
+      if (resolvedPath) break;
     }
   }
 
@@ -1357,25 +1467,36 @@ export async function fetchSpellData(index: string): Promise<any> {
     const res = await fetch(resolvedPath);
     if (res.ok) {
       const data = await res.json();
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index) };
-      spellCache[index] = finalResult;
+      const actualPath = resolvedPath || data.url || '';
+      const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+      const finalResult = {
+        ...data,
+        rulesetContext: actualRuleset,
+        imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
+      };
+      spellCache[cacheKey] = finalResult;
       return finalResult;
     }
   } catch (e) {}
 
   // Construct GitHub raw path
-  const subpath = resolvedPath.replace(/^\/?assets\/atlas\/spell\/json\//, '').replace(/^\/?public\/assets\/atlas\/spell\/json\//, '');
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${subpath}?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  const cleanSubpath = resolvedPath ? resolvedPath.replace(/^\/?assets\/atlas\/spell\/json\//, '').replace(/^\/?public\/assets\/atlas\/spell\/json\//, '') : '';
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${cleanSubpath}?t=${Date.now()}`;
+  const rawApiUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   
   try {
-    const res = await fetch(url);
+    const res = await fetch(rawApiUrl);
     const data = await safeJson(res);
     if (!data) return null;
-    return {
+    const actualPath = cleanSubpath || data.url || '';
+    const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+    const finalResult = {
       ...data,
+      rulesetContext: actualRuleset,
       imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
     };
+    spellCache[cacheKey] = finalResult;
+    return finalResult;
   } catch (e) {
     console.error("Error fetching spell data:", e);
     return null;
@@ -1734,40 +1855,242 @@ export async function fetchSubraceData(index: string): Promise<any> {
   }
 }
 
-export async function fetchClassLevels(classIndex: string): Promise<any[]> {
-  // First try the new structure (individual level files)
+export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2024'): Promise<any[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const altFolder = versionFolder === '24' ? '14' : '24';
+  const slug = classIndex.toLowerCase().replace(/[\s-]/g, '_');
+
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+
+      const levels: any[] = [];
+      for (let level = 1; level <= 20; level++) {
+        const candidates = [
+          `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
+          `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
+          `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
+        ];
+
+        let levelData: any = null;
+        let resolvedPath: string | null = null;
+
+        for (const candidate of candidates) {
+          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+          if (fs.existsSync(fullFsPath)) {
+            const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+            levelData = JSON.parse(fileContent);
+            resolvedPath = candidate;
+            break;
+          }
+        }
+
+        if (levelData) {
+          const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
+          levels.push({ ...levelData, rulesetContext: actualRuleset });
+        } else if (level === 1) {
+          break;
+        }
+      }
+
+      if (levels.length > 0) return levels;
+
+      const legacyCandidates = [
+        `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
+        `/assets/atlas/class/levels/${slug}.json`,
+        `/assets/atlas/class/levels/${altFolder}/${slug}.json`
+      ];
+
+      for (const candidate of legacyCandidates) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          const parsed = JSON.parse(fileContent);
+          if (Array.isArray(parsed)) {
+            const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
+            return parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+          }
+        }
+      }
+    } catch (e) {}
+  }
+
+  // First try individual level files (levels 1 to 20)
   try {
     const levels: any[] = [];
     for (let level = 1; level <= 20; level++) {
-      const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${level}/${classIndex}_level_${level}.json?t=${Date.now()}`;
-      const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-      const res = await fetch(url);
-      if (res.ok) {
-        const levelData = await safeJson(res);
-        if (levelData) levels.push(levelData);
+      let levelData: any = null;
+      let resolvedPath: string | null = null;
+
+      const candidates = [
+        // Versioned folder subpath
+        `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
+        `/assets/atlas/class/levels/${versionFolder}/${slug}_level_${level}.json`,
+        // Unversioned level folder
+        `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
+        // Alt version folder
+        `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
+      ];
+
+      for (const p of candidates) {
+        try {
+          const res = await fetch(p);
+          if (res.ok) {
+            const data = await safeJson(res);
+            if (data) {
+              levelData = data;
+              resolvedPath = p;
+              break;
+            }
+          }
+        } catch (e) {}
+      }
+
+      // Remote fallback if local fetch returned nothing
+      if (!levelData) {
+        const remoteCandidates = candidates.map(c => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${c}?t=${Date.now()}`);
+        for (const remoteUrl of remoteCandidates) {
+          try {
+            const res = await fetch(`/api/raw?url=${encodeURIComponent(remoteUrl)}`);
+            if (res.ok) {
+              const data = await safeJson(res);
+              if (data) {
+                levelData = data;
+                resolvedPath = remoteUrl;
+                break;
+              }
+            }
+          } catch (e) {}
+        }
+      }
+
+      if (levelData) {
+        const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
+        levels.push({ ...levelData, rulesetContext: actualRuleset });
       } else if (level === 1) {
-        // If level 1 fails, fall back to legacy single-file array
+        // If level 1 fails, break and try legacy single-file array
         break;
       }
     }
-    
+
     if (levels.length > 0) return levels;
   } catch (e) {
     console.warn("New class levels structure fetch failed, trying legacy:", e);
   }
 
   // Fallback to legacy single-file array structure
-  const legacyUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${classIndex}.json?t=${Date.now()}`;
+  const legacyCandidates = [
+    `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
+    `/assets/atlas/class/levels/${slug}.json`,
+    `/assets/atlas/class/levels/${altFolder}/${slug}.json`
+  ];
+
+  for (const p of legacyCandidates) {
+    try {
+      const res = await fetch(p);
+      if (res.ok) {
+        const levels = await safeJson(res);
+        if (Array.isArray(levels)) {
+          const actualRuleset: '2014' | '2024' = (p.includes('/24/') || p.includes('/2024/')) ? '2024' : '2014';
+          return levels.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+        }
+      }
+    } catch (e) {}
+  }
+
+  const legacyUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${slug}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(legacyUrl)}`;
   try {
     const res = await fetch(url);
     if (!res.ok) return [];
     const levels = await safeJson(res);
-    return Array.isArray(levels) ? levels : [];
+    if (Array.isArray(levels)) {
+      return levels.map((lvl: any) => ({ ...lvl, rulesetContext: '2014' }));
+    }
+    return [];
   } catch (e) {
     console.error("Error fetching legacy class levels:", e);
     return [];
   }
+}
+
+export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
+  const hyphenIndex = index.toLowerCase().replace(/[\s_]/g, '-').replace(/'/g, '');
+
+  const candidatePaths = [
+    // 1. Explicit ruleset version folder
+    `/assets/atlas/feats/json/${versionFolder}/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/${hyphenIndex}.json`,
+    // Subcategory paths for 2024 feats (origin-feats, general-feats, fighting-style-feats, epic-boon-feats)
+    `/assets/atlas/feats/json/${versionFolder}/origin-feats/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/origin-feats/${hyphenIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/general-feats/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/general-feats/${hyphenIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/fighting-style-feats/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/fighting-style-feats/${hyphenIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/epic-boon-feats/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder}/epic-boon-feats/${hyphenIndex}.json`,
+    // 2. Unversioned root folder
+    `/assets/atlas/feats/json/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${hyphenIndex}.json`,
+    // 3. Fallback to alternative ruleset version folder
+    `/assets/atlas/feats/json/${versionFolder === '14' ? '24' : '14'}/${cleanIndex}.json`,
+    `/assets/atlas/feats/json/${versionFolder === '14' ? '24' : '14'}/${hyphenIndex}.json`
+  ];
+
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const candidate of candidatePaths) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          const data = JSON.parse(fileContent);
+          const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
+          return { ...data, rulesetContext: actualRuleset };
+        }
+      }
+    } catch (e) {}
+  }
+
+  for (const path of candidatePaths) {
+    try {
+      const res = await fetch(path);
+      if (res.ok) {
+        const text = await res.text();
+        if (text && (text.trim().startsWith('{') || text.trim().startsWith('['))) {
+          const data = JSON.parse(text);
+          const actualRuleset: '2014' | '2024' = (path.includes('/24/') || path.includes('/2024/')) ? '2024' : '2014';
+          return { ...data, rulesetContext: actualRuleset };
+        }
+      }
+    } catch (e) {}
+  }
+
+  // 4. Remote proxy fallbacks
+  const remotePaths = candidatePaths.map(p => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${p}?t=${Date.now()}`);
+  for (const rawUrl of remotePaths) {
+    try {
+      const res = await fetch(`/api/raw?url=${encodeURIComponent(rawUrl)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && !data.error) {
+          const actualRuleset: '2014' | '2024' = (rawUrl.includes('/24/') || rawUrl.includes('/2024/')) ? '2024' : '2014';
+          return { ...data, rulesetContext: actualRuleset };
+        }
+      }
+    } catch (e) {}
+  }
+
+  return null;
 }
 
 export async function fetchFeatureData(index: string): Promise<any> {

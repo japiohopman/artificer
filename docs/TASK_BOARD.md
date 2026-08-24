@@ -50,7 +50,7 @@ PR #257 accepted and merged. Selection Experience v1 completed.
 - [x] Keep Appearance redesign, canonical profile schema and image generation out of this task.
 
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
-Foundation pass is complete. Downstream system audits and versioned loader migrations remain actionable.
+Foundation and Downstream Integration v1 passes in progress.
 
 - [x] Provide the 2014/2024 selection UI.
 - [x] Persist the selected ruleset in character save data.
@@ -58,8 +58,10 @@ Foundation pass is complete. Downstream system audits and versioned loader migra
 - [x] Provide a single ruleset context/resolver (`getActiveRulesetContext` / `getRulesetVersionFolder`) used by rules-sensitive systems.
 - [x] Replace ad-hoc `/14/` / `/24/` branching with canonical ruleset-aware resolution in representative loaders (`fetchEquipmentData`, `fetchMonsterData`, `atlasService.loadEquipment`, `atlasService.loadEnemy`).
 - [x] Document canonical ruleset ownership contract and scope in `docs/ARCHITECTURE_STATUS.md`.
-- [ ] Audit remaining rules, classes, species, subraces, backgrounds, feats, spells, conditions and feature rulesets for ruleset awareness.
-- [ ] Migrate remaining rules-sensitive Atlas loaders to consume the canonical resolution boundary (`getActiveRulesetContext` / `getRulesetVersionFolder`).
+- [x] Audit and migrate Feat data loaders (`fetchFeatData`, `atlasService.loadFeat`).
+- [x] Audit and migrate Class Levels data loaders (`fetchClassLevels`, `atlasService.loadLevelData`).
+- [x] Audit and migrate Spell data loaders (`fetchSpellData`, `atlasService.loadSpell`).
+- [ ] Audit and migrate remaining rules, species, subraces, backgrounds, conditions and feature rulesets for ruleset awareness.
 - [ ] Validate both rulesets load correct versioned Atlas data across all downstream consumers where 2024 content exists.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid

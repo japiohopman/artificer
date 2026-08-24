@@ -100,7 +100,95 @@ async function run() {
     process.exit(1);
   }
 
-  console.log('✓ All ruleset context, resolution & character switching checks passed successfully!');
+  // 5. Downstream Atlas Loaders Resolution Check (Feats, Class Levels, Spells)
+  const { fetchFeatData, fetchClassLevels, fetchSpellData, fetchEquipmentData, fetchMonsterData } = await import('../src/services/storageService');
+  const { atlasService } = await import('../src/services/atlasService');
+
+  // A. Feat Resolution Check
+  const feat2024 = await fetchFeatData('archery', '2024');
+  console.log('Feat 2024 (Archery) rulesetContext:', feat2024?.rulesetContext);
+  if (feat2024?.rulesetContext !== '2024') {
+    console.error('FAILED: Feat 2024 (Archery) did not return rulesetContext 2024');
+    process.exit(1);
+  }
+
+  const feat2014 = await fetchFeatData('war_caster', '2014');
+  console.log('Feat 2014 (War Caster) rulesetContext:', feat2014?.rulesetContext);
+  if (feat2014?.rulesetContext !== '2014') {
+    console.error('FAILED: Feat 2014 (War Caster) did not return rulesetContext 2014');
+    process.exit(1);
+  }
+
+  // B. Class Levels Resolution Check
+  const fighterLevels14 = await fetchClassLevels('fighter', '2014');
+  console.log('Fighter Levels 2014 count:', fighterLevels14?.length, 'level 1 rulesetContext:', fighterLevels14?.[0]?.rulesetContext);
+  if (!fighterLevels14 || fighterLevels14.length === 0 || fighterLevels14[0]?.rulesetContext !== '2014') {
+    console.error('FAILED: Fighter levels 2014 failed or reported incorrect rulesetContext');
+    process.exit(1);
+  }
+
+  const fighterLevels24 = await fetchClassLevels('fighter', '2024');
+  if (fighterLevels24?.[0]?.rulesetContext === '2024') {
+    console.log('Fighter Levels 2024 successfully resolved distinct 2024 data.');
+  } else {
+    console.log('INFO: Repository has no distinct /24/ class levels dataset for fighter. Fallback returned 2014 content with rulesetContext:', fighterLevels24?.[0]?.rulesetContext);
+  }
+
+  // C. Spell Resolution Check
+  const fireball14 = await fetchSpellData('fireball', '2014');
+  console.log('Spell Fireball 2014 rulesetContext:', fireball14?.rulesetContext);
+  if (fireball14?.rulesetContext !== '2014') {
+    console.error('FAILED: Fireball 2014 spell data did not return rulesetContext 2014');
+    process.exit(1);
+  }
+
+  const fireball24 = await fetchSpellData('fireball', '2024');
+  if (fireball24?.rulesetContext === '2024') {
+    console.log('Spell Fireball 2024 successfully resolved distinct 2024 data.');
+  } else {
+    console.log('INFO: Repository has no distinct /24/ spell dataset for fireball. Fallback returned 2014 content with rulesetContext:', fireball24?.rulesetContext);
+  }
+
+  // D. Equipment 2024 Check
+  const dagger24 = await fetchEquipmentData('dagger', '2024');
+  console.log('Equipment Dagger 2024 rulesetContext:', dagger24?.rulesetContext);
+  if (dagger24?.rulesetContext !== '2024') {
+    console.error('FAILED: Equipment Dagger 2024 did not return rulesetContext 2024');
+    process.exit(1);
+  }
+
+  // D. AtlasService Wrapper Checks
+  const atlasFeat = await atlasService.loadFeat('archery', '2024');
+  if (atlasFeat?.rulesetContext !== '2024') {
+    console.error('FAILED: atlasService.loadFeat 2024 failed');
+    process.exit(1);
+  }
+
+  const atlasLevel = await atlasService.loadLevelData('fighter', 1, '2014');
+  if (atlasLevel?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadLevelData 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasSpell = await atlasService.loadSpell('fireball', '2014');
+  if (atlasSpell?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadSpell 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasEquip = await atlasService.loadEquipment('dagger', '2014');
+  if (atlasEquip?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadEquipment 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasEnemy = await atlasService.loadEnemy('gargoyle', '2014');
+  if (atlasEnemy?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadEnemy 2014 failed');
+    process.exit(1);
+  }
+
+  console.log('✓ All ruleset context, resolution, character switching & downstream loader checks passed successfully!');
 }
 
 run().catch((err) => {
