@@ -31,21 +31,23 @@ PR #247 accepted and merged. Species Visual Integration v1 completed. Character 
 ## 🟠 High — Architecture & data foundations
 
 ### Character Creator — Selection Experience v1
-The next Character Creator task after Species Visual Integration. This is a UX/flow integration task, not the full Appearance or image-generation redesign.
+PR #257 submitted and under active review.
 
-- [ ] Define and implement the intended order: Welcome/Ruleset → Identity → Species → Class → Background → Equipment → Appearance → Describe Your Character → Review.
-- [ ] Move Background before Equipment.
-- [ ] Add meaningful introduction/content before Species/Class/Background selection using the official Markdown content assets where available.
-- [ ] Use official visual assets from `public/assets/ui/official/` with correct aspect ratios: races 3:2, classes 2:3, backgrounds 1:1.
-- [ ] Use sprite sheets where appropriate for efficient loading while retaining individual images where the asset contract calls for them.
-- [ ] Make selected records/items inspectable where appropriate, including background-provided equipment.
-- [ ] Prevent invalid starting equipment tiers; selection must be ruleset/class/background aware.
-- [ ] Migrate character-creation selection UI toward `public/assets/icons/svg/`; document legacy `src/assets/icons` usage before removing anything.
-- [ ] Use `public/assets/sounds/sfx/ui_character_select.wav` for character selection feedback where appropriate.
-- [ ] Add polished required-step validation: a user cannot silently skip required character data; missing requirements produce an overlay and a route to the missing step.
-- [ ] Preserve existing ruleset selection and save persistence; do not duplicate ruleset state in individual steps.
-- [ ] Re-verify spell selection after the separate spell-selection work lands; do not hide a broken spell selector behind the new flow.
-- [ ] Keep Appearance redesign, canonical profile schema and image generation out of this task.
+- [ ] PR #257 accepted and merged.
+
+- [x] Define and implement the intended order: Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes/Stats → Skills & Choices → Arcana/Spells → Equipment → Appearance → Describe Your Character → Review.
+- [x] Move Background before Equipment.
+- [x] Add meaningful introduction/content before Species/Class/Background selection using the official Markdown content assets (`race_choice.md`, `class_choice.md`, `background_choice.md`) and Help overlays.
+- [x] Use official visual assets from `public/assets/ui/official/` with correct aspect ratios: races 3:2, classes 2:3, backgrounds 1:1.
+- [x] Use sprite sheets where appropriate (`SpeciesSprite`, `ClassSprite`, `BackgroundSprite`) for efficient loading while retaining individual images where the asset contract calls for them.
+- [x] Make selected records/items inspectable where appropriate, including background-provided equipment.
+- [x] Prevent invalid starting equipment tiers; selection must be ruleset/class/background aware.
+- [x] Use `public/assets/icons/svg/` for character creator selection UI via `GameIcon`.
+- [x] Use `public/assets/sounds/sfx/ui_character_select.wav` (`UI_CHARACTER_SELECT` in `soundService`) for character selection feedback.
+- [x] Add polished required-step validation overlay (`ValidationOverlay.tsx`): missing required selections trigger modal overlay with direct route buttons to missing steps.
+- [x] Preserve existing ruleset selection (2014 vs 2024) and save persistence; do not duplicate ruleset state in individual steps.
+- [x] Review step consumes canonical `Character` state and displays actual persisted data.
+- [x] Keep Appearance redesign, canonical profile schema and image generation out of this task.
 
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
 The feature branch has been tested for selection/persistence. The remaining work is integration verification and downstream adoption.

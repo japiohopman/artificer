@@ -25,6 +25,7 @@ import { IdentityStep } from './CharacterCreator/IdentityStep';
 import { ReviewStep } from './CharacterCreator/ReviewStep';
 import { SlotStep } from './CharacterCreator/SlotStep';
 import { BackstoryStep } from './CharacterCreator/BackstoryStep';
+import { ValidationOverlay, MissingStepItem } from './CharacterCreator/ValidationOverlay';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';
 import { injectFontFace, getLanguageFontFamily } from '../../lib/fontLoader';
@@ -53,7 +54,7 @@ const ALL_STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'species', label: 'Species', icon: 'ancestry' },
   { id: 'class', label: 'Class', icon: 'weapon' },
   { id: 'background', label: 'Origins', icon: 'scroll' },
-  { id: 'alignment', label: 'Ethos', icon: 'shield' },
+  { id: 'alignment', label: 'Alignment', icon: 'shield' },
   { id: 'stats', label: 'Attributes', icon: 'dice' },
   { id: 'choices', label: 'Skills & Choices', icon: 'book' },
   { id: 'spells', label: 'Arcana', icon: 'magic_effect' },
@@ -91,6 +92,7 @@ export const CharacterCreator: React.FC = () => {
   });
   const [direction, setDirection] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
+  const [isValidationOpen, setIsValidationOpen] = useState(false);
 
   // New character state
   const [newChar, setNewChar] = useState<Partial<Character>>({
@@ -501,10 +503,66 @@ export const CharacterCreator: React.FC = () => {
     }
   };
 
+  const getMissingRequiredSteps = (): MissingStepItem[] => {
+    const missing: MissingStepItem[] = [];
+
+    if (!selectedSlot) {
+      missing.push({
+        stepId: 'slot',
+        label: 'Save Slot',
+        icon: 'save_data',
+        reason: 'No save slot selected'
+      });
+    }
+    if (!newChar.name || !newChar.name.trim()) {
+      missing.push({
+        stepId: 'identity',
+        label: 'Character Identity',
+        icon: 'info',
+        reason: 'Character name is missing'
+      });
+    }
+    if (!newChar.race) {
+      missing.push({
+        stepId: 'species',
+        label: 'Species & Heritage',
+        icon: 'ancestry',
+        reason: 'No species selected'
+      });
+    }
+    if (!newChar.class) {
+      missing.push({
+        stepId: 'class',
+        label: 'Class',
+        icon: 'weapon',
+        reason: 'No class selected'
+      });
+    }
+    if (!newChar.background) {
+      missing.push({
+        stepId: 'background',
+        label: 'Origins / Background',
+        icon: 'scroll',
+        reason: 'No background selected'
+      });
+    }
+    if (!newChar.alignment) {
+      missing.push({
+        stepId: 'alignment',
+        label: 'Alignment',
+        icon: 'shield',
+        reason: 'No alignment selected'
+      });
+    }
+
+    return missing;
+  };
+
   const canGoNext = () => {
     switch(currentStep) {
         case 'welcome': return true;
         case 'slot': return !!selectedSlot;
+        case 'identity': return !!newChar.name && newChar.name.trim().length > 0;
         case 'species': return !!newChar.race;
         case 'class': return !!newChar.class;
         case 'choices': return true;
@@ -515,14 +573,14 @@ export const CharacterCreator: React.FC = () => {
         case 'alignment': return !!newChar.alignment;
         case 'stats': return true;
         case 'appearance': return true;
-        case 'identity': return true;
         default: return true;
     }
   };
 
   const nextStep = () => {
     if (!canGoNext()) {
-        soundService.playEffect('MENU_ERROR');
+        soundService.playEffect('UI_ERROR');
+        setIsValidationOpen(true);
         return;
     }
     const currentIndex = STEPS.findIndex(s => s.id === currentStep);
@@ -553,6 +611,13 @@ export const CharacterCreator: React.FC = () => {
   };
 
   const handleFinish = async () => {
+    const missing = getMissingRequiredSteps();
+    if (missing.length > 0) {
+      soundService.playEffect('UI_ERROR');
+      setIsValidationOpen(true);
+      return;
+    }
+
     setLoading(true);
     let finalHp = 10;
 
@@ -793,6 +858,13 @@ export const CharacterCreator: React.FC = () => {
           </div>
         </div>
 
+        <ValidationOverlay
+          isOpen={isValidationOpen}
+          onClose={() => setIsValidationOpen(false)}
+          missingSteps={getMissingRequiredSteps()}
+          onGoToStep={(stepId) => setCurrentStep(stepId as CreationStep)}
+        />
+
         {/* Footer Navigation */}
         <div id="creator-footer" className="h-16 bg-white/20 border-t border-dragon-red/20 flex items-center justify-between px-6 shrink-0">
            <button 
@@ -829,12 +901,11 @@ export const CharacterCreator: React.FC = () => {
              <button 
                id="next-stage-btn"
                onClick={nextStep}
-               disabled={!canGoNext()}
                className={cn(
                  "flex items-center gap-1.5 px-6 py-2 rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg transition-all",
                  canGoNext() 
                     ? "bg-dragon-red text-white hover:bg-dragon-darkRed" 
-                    : "bg-parchment-200 text-parchment-400 cursor-not-allowed shadow-none"
+                    : "bg-parchment-200 text-parchment-600 hover:bg-parchment-300 shadow-none cursor-pointer"
                )}
              >
                Continue
@@ -965,8 +1036,8 @@ const StepContent: React.FC<{
       />;
      case 'backstory': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><BackstoryStep newChar={newChar} setNewChar={setNewChar} /></div>;
      case 'alignment': return <SelectionStep 
-         title="Ethical Ethos" 
-         desc="The moral compass that guides your decisions."
+         title="Alignment"
+         desc="The moral and ethical compass that guides your decisions."
          items={available.alignments}
          selected={newChar.alignment}
          onSelect={(val) => setNewChar({...newChar, alignment: val})}

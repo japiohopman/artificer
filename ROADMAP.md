@@ -13,19 +13,12 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 
 ### Active
 
-### Ready
+- [ ] **Character Creator — Selection Experience v1 (PR #257 under review)**
+  - **Goal:** turn the current character creation screens into a coherent, guided selection experience using official visual assets and canonical Atlas data.
+  - **Status:** PR #257 submitted and active under review.
+  - **Flow:** Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes → Skills & Choices → Arcana/Spells → Equipment → Appearance → Describe Your Character → Review.
 
-- [ ] **Character Creator — Selection Experience v1**
-  - **Goal:** turn the current character creation screens into a coherent, guided selection experience using the new official visual assets and canonical Atlas data.
-  - **Flow:** Welcome/Ruleset → Identity → Species → Class → Background → Equipment → Appearance → Describe Your Character → Review.
-  - **Ordering:** Background must precede Equipment; the flow must expose the consequences and available starting equipment from the selected background/class without allowing invalid high-tier starting gear.
-  - **Selection UX:** each selection step should provide a meaningful introduction before selection, inspectable records/items where appropriate, strong visual selection states, correct aspect ratios and official icon/sound assets.
-  - **Official visual assets:** race sprite sheet uses 3:2 cells; class sprite sheet uses 2:3 cells; background images are 1:1. Use `public/assets/ui/official/...` as the canonical character-creation visual source. Sprite sheets should be used where appropriate for efficient loading; individual images may be used where the UX/asset contract calls for them.
-  - **Content:** use Markdown introduction/content assets such as `race_choice.md`, `class_choice.md` and `background_choice.md` when present; do not hardcode long selection copy in components.
-  - **Icons:** migrate character-creation selection UI toward `public/assets/icons/svg/` and document/remove obsolete `src/assets/icons` usage safely rather than deleting legacy assets blindly.
-  - **Feedback:** use the canonical character-selection SFX where appropriate (`public/assets/sounds/sfx/ui_character_select.wav`).
-  - **Completion:** required steps cannot be silently skipped. Attempting to continue with missing required data must produce a clear, polished completion overlay and route the player to the missing step.
-  - **Out of scope:** full Appearance redesign and canonical character-profile schema are separate follow-up architecture tasks; do not start image generation in this task.
+### Ready
 
 - [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024**
   - **Status:** selection/persistence foundation has been implemented and tested on the feature branch; remaining work is to verify integration and ensure the canonical context is consumed downstream.
