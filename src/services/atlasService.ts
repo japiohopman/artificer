@@ -136,7 +136,7 @@ class AtlasService {
   }
 
   private async fetchAtlasData(path: string, remotePath?: string): Promise<any> {
-    const isDev = window.location.hostname === 'localhost';
+    const isDev = typeof window !== 'undefined' && window.location.hostname === 'localhost';
     
     // 1. Try local fetch first (for speed/offline)
     try {

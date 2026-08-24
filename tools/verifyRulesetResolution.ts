@@ -101,7 +101,7 @@ async function run() {
   }
 
   // 5. Downstream Atlas Loaders Resolution Check (Feats, Class Levels, Spells)
-  const { fetchFeatData, fetchClassLevels, fetchSpellData } = await import('../src/services/storageService');
+  const { fetchFeatData, fetchClassLevels, fetchSpellData, fetchEquipmentData, fetchMonsterData } = await import('../src/services/storageService');
   const { atlasService } = await import('../src/services/atlasService');
 
   // A. Feat Resolution Check
@@ -127,6 +127,9 @@ async function run() {
     process.exit(1);
   }
 
+  const fighterLevels24 = await fetchClassLevels('fighter', '2024');
+  console.log('Fighter Levels 2024 count:', fighterLevels24?.length, 'level 1 rulesetContext:', fighterLevels24?.[0]?.rulesetContext);
+
   // C. Spell Resolution Check
   const fireball14 = await fetchSpellData('fireball', '2014');
   console.log('Spell Fireball 2014 rulesetContext:', fireball14?.rulesetContext);
@@ -135,10 +138,37 @@ async function run() {
     process.exit(1);
   }
 
-  // D. AtlasService Wrapper Check
+  const fireball24 = await fetchSpellData('fireball', '2024');
+  console.log('Spell Fireball 2024 rulesetContext:', fireball24?.rulesetContext);
+
+  // D. AtlasService Wrapper Checks
   const atlasFeat = await atlasService.loadFeat('archery', '2024');
   if (atlasFeat?.rulesetContext !== '2024') {
     console.error('FAILED: atlasService.loadFeat 2024 failed');
+    process.exit(1);
+  }
+
+  const atlasLevel = await atlasService.loadLevelData('fighter', 1, '2014');
+  if (atlasLevel?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadLevelData 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasSpell = await atlasService.loadSpell('fireball', '2014');
+  if (atlasSpell?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadSpell 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasEquip = await atlasService.loadEquipment('dagger', '2014');
+  if (atlasEquip?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadEquipment 2014 failed');
+    process.exit(1);
+  }
+
+  const atlasEnemy = await atlasService.loadEnemy('gargoyle', '2014');
+  if (atlasEnemy?.rulesetContext !== '2014') {
+    console.error('FAILED: atlasService.loadEnemy 2014 failed');
     process.exit(1);
   }
 

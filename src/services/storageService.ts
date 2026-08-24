@@ -289,6 +289,51 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
   const versionFolder = getRulesetVersionFolder(ruleset);
   const altFolder = versionFolder === '24' ? '14' : '24';
 
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+
+      // 1. Try resolving via local index.json first
+      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/enemies/index.json');
+      if (fs.existsSync(indexPath)) {
+        const enemyIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const matching = enemyIndex.filter((e: any) =>
+          e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        const versioned = matching.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+        const entry = versioned || matching[0];
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
+      }
+
+      // 2. Direct folder fallback
+      if (!resolvedPath) {
+        const subfolders = [versionFolder, altFolder, ''];
+        for (const sub of subfolders) {
+          const candidate = sub ? `/assets/atlas/enemies/json/${sub}/${index}.json` : `/assets/atlas/enemies/json/${index}.json`;
+          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+          if (fs.existsSync(fullFsPath)) {
+            resolvedPath = candidate;
+            break;
+          }
+        }
+      }
+
+      if (resolvedPath) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${resolvedPath.replace(/^\/?public\//, '/')}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          data = JSON.parse(fileContent);
+        }
+      }
+    } catch (e) {}
+  }
+
   // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
     try {
       const indexRes = await fetch('/assets/atlas/enemies/index.json');
