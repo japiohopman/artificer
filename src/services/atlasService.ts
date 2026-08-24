@@ -293,7 +293,11 @@ class AtlasService {
     return data?.equipment || [];
   }
 
-  async loadEquipment(index: string): Promise<any | null> {
+  async loadEquipment(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchEquipmentData } = await import('./storageService');
+    const data = await fetchEquipmentData(index, ruleset);
+    if (data) return data;
+
     let resolvedPath: string | null = null;
     try {
       const equipmentIndex = await this.fetchAtlasData('/assets/atlas/equipment/index.json');
@@ -388,7 +392,11 @@ class AtlasService {
     );
   }
 
-  async loadEnemy(index: string): Promise<any | null> {
+  async loadEnemy(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchMonsterData } = await import('./storageService');
+    const data = await fetchMonsterData(index, ruleset);
+    if (data) return data;
+
     const slug = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
     const hyphenSlug = index.toLowerCase().replace(/[\s_]/g, '-').replace(/'/g, '');
 

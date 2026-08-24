@@ -15,16 +15,12 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 
 ### Ready
 
-- [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024**
-  - **Status:** selection/persistence foundation has been implemented and tested on the feature branch; remaining work is to verify integration and ensure the canonical context is consumed downstream.
-  - **Goal:** stop treating the `/14/` and `/24/` datasets as a simple URL-cleanup problem. A new game/campaign must have an explicit ruleset selection that becomes part of the canonical game/campaign context.
-  - **User choice:** support an initial choice between **D&D 5e 2014** and **D&D 5e 2024** at the appropriate new-game/campaign entry point.
-  - **Canonical state:** store a single ruleset identifier (for example `2014` or `2024`) in the campaign/game context; downstream systems must resolve rules data from that context rather than independently guessing a version.
-  - **Ruleset-aware systems:** inspect and document the impact on rules lookup, character creation, classes/species, feats, spells, equipment, conditions, combat rules and other version-sensitive data. Reuse existing Atlas/index infrastructure.
-  - **Equipment implication:** `/14/` and `/24/` equipment/rules paths are implementation details of the selected ruleset, not a standalone repeated repair task. Do not create duplicate routing branches in individual UI components.
-  - **Acceptance:** selecting a ruleset produces a single canonical context; rules/Atlas loaders can resolve the correct version; equipment category routing works for both versions through the same service boundary; no screen/component hardcodes a default version when a ruleset context exists; existing data remains loadable.
-  - **Out of scope:** redesigning all 2014/2024 game mechanics in this task; do not invent mixed-ruleset behavior unless explicitly required by existing architecture.
-  - **Docs:** update the relevant architecture/data-flow docs and the equipment/Atlas documentation to make the ruleset contract explicit.
+- [ ] **Ruleset Selection & Ruleset Context — 2014 vs 2024 (Downstream Integration)**
+  - **Status:** Canonical ruleset context foundation is complete (`useGameStore.ruleset`, `getActiveRulesetContext`, `getRulesetVersionFolder`, and representative loaders for equipment/enemies). Remaining work is auditing and migrating other rules-sensitive loaders (classes, species, feats, spells, conditions) to consume the canonical boundary.
+  - **Goal:** Ensure all remaining rules-sensitive Atlas loaders resolve rules data through the canonical context boundary rather than hardcoding paths or independently guessing ruleset versions.
+  - **Ruleset-aware systems:** Audit and migrate classes, species, subraces, backgrounds, feats, spells, conditions, and rules-sensitive feature data.
+  - **Acceptance:** downstream Atlas loaders resolve versioned content through the canonical context boundary; no component hardcodes `/14/` or `/24/` paths; existing data remains loadable.
+  - **Out of scope:** redesigning all D&D rules or creating mixed-ruleset fallback engines.
 
 - [ ] **Combat Integration v1 — BattleMap → CombatTester → CombatGrid**
   - **Goal:** a map authored in BattleMapEditor can be persisted, loaded by CombatTester, converted through a clear adapter, and tested against the runtime CombatGrid without a second map format.
@@ -69,6 +65,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation Pass
 - [x] Character Creator — Selection Experience v1 (PR #257 accepted and merged)
 - [x] Character Creator — Species Visual Integration v1 (PR #247 accepted and merged)
 - [x] XP animation — animated XP bar fill in CharacterPanel.tsx

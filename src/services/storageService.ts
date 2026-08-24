@@ -229,7 +229,13 @@ export function getActiveRulesetContext(explicitRuleset?: '2014' | '2024'): '201
   return '2014';
 }
 
+export function getRulesetVersionFolder(ruleset?: '2014' | '2024'): '14' | '24' {
+  const active = getActiveRulesetContext(ruleset);
+  return active === '2024' ? '24' : '14';
+}
+
 export async function fetchMonsterList(): Promise<{ name: string; path: string; index: string }[]> {
+  const versionFolder = getRulesetVersionFolder();
   try {
     // Try local index first
     const localRes = await fetch('/assets/atlas/enemies/index.json');
@@ -239,7 +245,7 @@ export async function fetchMonsterList(): Promise<{ name: string; path: string; 
         return data.map((item: any) => ({
           ...item,
           name: item.name || item.index.replace(/_/g, ' '),
-          path: item.json_path || `public/assets/atlas/enemies/json/14/${item.index}.json`,
+          path: item.json_path || `public/assets/atlas/enemies/json/${versionFolder}/${item.index}.json`,
           index: item.index
         }));
       }
@@ -280,54 +286,54 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
 
   let data: any = null;
   let resolvedPath: string | null = null;
-  const versionFolder = activeRuleset === '2024' ? '24' : '14';
-  const altFolder = activeRuleset === '2024' ? '14' : '24';
+  const versionFolder = getRulesetVersionFolder(ruleset);
+  const altFolder = versionFolder === '24' ? '14' : '24';
 
   // Resolve sub-directory from local index first (supporting index or name-based fallback matching)
-  try {
-    const indexRes = await fetch('/assets/atlas/enemies/index.json');
-    if (indexRes.ok) {
-      const enemyIndex = await indexRes.json();
-      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-      const matchingEntries = enemyIndex.filter((e: any) =>
-        e.index.toLowerCase() === index.toLowerCase() ||
-        (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
-      );
-      const versionedEntry = matchingEntries.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
-      const entry = versionedEntry || matchingEntries[0];
-      if (entry && entry.json_path) {
-        resolvedPath = entry.json_path;
+    try {
+      const indexRes = await fetch('/assets/atlas/enemies/index.json');
+      if (indexRes.ok) {
+        const enemyIndex = await indexRes.json();
+        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
+        const matchingEntries = enemyIndex.filter((e: any) =>
+          e.index.toLowerCase() === index.toLowerCase() ||
+          (e.name && e.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
+        );
+        const versionedEntry = matchingEntries.find((e: any) => e.json_path && e.json_path.includes(`/${versionFolder}/`));
+        const entry = versionedEntry || matchingEntries[0];
+        if (entry && entry.json_path) {
+          resolvedPath = entry.json_path;
+        }
+      }
+    } catch (e) {}
+
+    // Iterative fallbacks prioritizing current ruleset version folder
+    if (!resolvedPath) {
+      const subfolders = [versionFolder, altFolder];
+      for (const sub of subfolders) {
+        try {
+          const checkRes = await fetch(`/assets/atlas/enemies/json/${sub}/${index}.json`, { method: 'HEAD' });
+          if (checkRes.ok) {
+            resolvedPath = `/assets/atlas/enemies/json/${sub}/${index}.json`;
+            break;
+          }
+        } catch (e) {}
       }
     }
-  } catch (e) {}
 
-  // Iterative fallbacks prioritizing current ruleset version folder
-  if (!resolvedPath) {
-    const subfolders = [versionFolder, altFolder];
-    for (const sub of subfolders) {
-      try {
-        const checkRes = await fetch(`/assets/atlas/enemies/json/${sub}/${index}.json`, { method: 'HEAD' });
-        if (checkRes.ok) {
-          resolvedPath = `/assets/atlas/enemies/json/${sub}/${index}.json`;
-          break;
-        }
-      } catch (e) {}
+    if (!resolvedPath) {
+      resolvedPath = `/assets/atlas/enemies/json/${versionFolder}/${index}.json`;
     }
-  }
 
-  if (!resolvedPath) {
-    resolvedPath = `/assets/atlas/enemies/json/${versionFolder}/${index}.json`;
-  }
+    // Fetch local file
+    try {
+      const res = await fetch(resolvedPath);
+      if (res.ok) {
+        data = await res.json();
+      }
+    } catch (e) {}
 
-  // Fetch local file
-  try {
-    const res = await fetch(resolvedPath);
-    if (res.ok) {
-      data = await res.json();
-    }
-  } catch (e) {}
-
-  if (!data) {
+  if (!data && resolvedPath) {
     // Fallback to GitHub
     const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/enemies\/json\//, '').replace(/^\/?public\/assets\/atlas\/enemies\/json\//, '');
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${cleanSubpath}?t=${Date.now()}`;
@@ -387,8 +393,13 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
      } catch(e) {}
   }
 
+  // Determine actual ruleset of the loaded monster record based on resolved path or record URL
+  const actualPath = resolvedPath || normalized.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
   const finalResult = {
     ...normalized,
+    rulesetContext: actualRuleset,
     imageUrl: normalizeImageUrl(normalized.imageUrl || normalized.image || normalized.image_url || data.imageUrl, 'enemies', index, normalized.name)
   };
   monsterCache[cacheKey] = finalResult;
@@ -435,7 +446,7 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
   const cacheKey = `${activeRuleset}:${index}`;
   if (equipmentCache[cacheKey]) return equipmentCache[cacheKey];
 
-  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const versionFolder = getRulesetVersionFolder(ruleset);
   const cleanIndex = index.toLowerCase().replace(/_/g, '-');
   const packNames = ['burglars-pack', 'explorers-pack', 'dungeoneers-pack', 'priests-pack', 'entertainers-pack', 'scholars-pack', 'diplomats-pack'];
 
@@ -479,7 +490,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
             data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
             data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
           }
-          const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+          const actualPath = nodePath || data.url || '';
+          const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+          const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
           equipmentCache[cacheKey] = finalResult;
           return finalResult;
         }
@@ -534,7 +547,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
           data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
           data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
         }
-        const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+        const actualPath = resolvedPath || data.url || '';
+        const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+        const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
         equipmentCache[cacheKey] = finalResult;
         return finalResult;
       }
@@ -553,7 +568,9 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
         data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
         data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
       }
-      const finalResult = { ...data, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
+      const actualPath = resolvedPath || data.url || '';
+      const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+      const finalResult = { ...data, rulesetContext: actualRuleset, imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name) };
       equipmentCache[cacheKey] = finalResult;
       return finalResult;
     }
@@ -574,8 +591,11 @@ export async function fetchEquipmentData(index: string, ruleset?: '2014' | '2024
       data.imageUrl = `/assets/atlas/equipment/images/${underscoreName}.webp`;
       data.image = `/assets/atlas/equipment/images/${underscoreName}.webp`;
     }
+    const actualPath = resolvedPath || data.url || '';
+    const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
     return {
       ...data,
+      rulesetContext: actualRuleset,
       imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'equipment', index, data.name)
     };
   } catch (e) {

@@ -8,13 +8,21 @@ Artificer is a React/TypeScript application with domain-oriented Zustand stores,
 
 The current architectural priority is to keep **authoring tools separate from runtime systems** while reusing the same domain models and geometry rules wherever possible.
 
-## State ownership
+## State ownership & Ruleset Context
 
-- `useGameStore` — runtime game/combat state.
+- `useGameStore` — runtime game/combat state and canonical campaign ruleset context (`ruleset: '2014' | '2024'`).
 - `useUIStore` — UI/navigation state.
 - `useWorldStore` — world/time/weather/discovery state.
 - `useAtlasStore` — Atlas data and registries.
 - Feature-local state — temporary editor/UI state that does not belong in global runtime stores.
+
+### Ruleset Context Ownership Contract
+
+- **Canonical Ruleset Owner:** `useGameStore` holds the single canonical ruleset identifier (`'2014'` or `'2024'`).
+- **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
+- **Scope Proven (Foundation Pass):** Representative loaders (`fetchEquipmentData`, `fetchMonsterData`, `atlasService.loadEquipment`, `atlasService.loadEnemy`) resolve versioned Atlas content (`/14/` vs `/24/`) through this boundary without hardcoded guesses.
+- **Character Persistence Relationship:** `Character.ruleset` remains saved character metadata. Loading character saves into slots does not alter the active global game ruleset. Activating a character session (`setActiveCharacter` / `setMainCharacter`) explicitly synchronizes `useGameStore.ruleset` to the character's ruleset.
+- **Remaining Downstream Work:** Other rules-sensitive systems (classes, species, subraces, backgrounds, feats, spells, conditions, feature rulesets) remain to be audited and migrated to consume this canonical boundary in subsequent focused tasks. This foundation pass does NOT claim universal downstream adoption.
 
 Do not recreate the old monolithic store pattern.
 
