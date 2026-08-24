@@ -374,7 +374,7 @@ export async function fetchMonsterData(index: string, ruleset?: '2014' | '2024')
     } catch (e) {}
   }
 
-  if (!data) {
+  if (!data && resolvedPath) {
     // Fallback to GitHub
     const cleanSubpath = resolvedPath.replace(/^\/?assets\/atlas\/enemies\/json\//, '').replace(/^\/?public\/assets\/atlas\/enemies\/json\//, '');
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/json/${cleanSubpath}?t=${Date.now()}`;
