@@ -307,7 +307,7 @@ export const SelectionStep: React.FC<{
           <div className="flex justify-between items-center border-b border-dragon-gold/20 pb-2 mb-3 shrink-0">
             <span className="text-[10px] font-black uppercase text-dragon-darkRed tracking-[0.3em] flex items-center gap-2">
               <GameIcon name="info" size={14} color="#B8860B" />
-              {selected ? "Examine Records: " + (detailData?.name || selected) : "Selection Guide & Lore"}
+              {selected ? "Examine Records: " + (detailData?.name || selected) : (title || "Selection Guide & Lore")}
             </span>
 
             {['species', 'class', 'backgrounds'].includes(category) && (

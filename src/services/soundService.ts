@@ -209,6 +209,7 @@ class SoundEngine {
 
     let path = "";
     switch (effect) {
+      case 'UI_CHARACTER_SELECT': path = '/assets/sounds/sfx/ui_character_select.wav'; break;
       case 'UI_CLICK_LIGHT': path = '/assets/sounds/system/ui_basic_click_standard.wav'; break;
       case 'TRANSACTION_SUCCESS': path = '/assets/sounds/system/feedback_success.wav'; break;
       case 'UI_BACK_EXIT': path = '/assets/sounds/system/ui_modal_close.mp3'; break;

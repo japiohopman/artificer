@@ -4,6 +4,7 @@ import { cn } from '../../../lib/utils';
 import { SpeciesSprite } from '../species/SpeciesSprite';
 import { ClassSprite } from '../classes/ClassSprite';
 import { BackgroundSprite } from '../backgrounds/BackgroundSprite';
+import { soundService } from '../../../services/soundService';
 
 interface ChoiceCardProps {
   id: string;
@@ -22,10 +23,15 @@ export const ChoiceCard: React.FC<ChoiceCardProps> = ({
   onSelect,
   className,
 }) => {
+  const handleClick = () => {
+    soundService.playEffect('UI_CHARACTER_SELECT');
+    onSelect();
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      onSelect();
+      handleClick();
     }
   };
 
@@ -34,7 +40,7 @@ export const ChoiceCard: React.FC<ChoiceCardProps> = ({
       type="button"
       role="button"
       tabIndex={0}
-      onClick={onSelect}
+      onClick={handleClick}
       onKeyDown={handleKeyDown}
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.98 }}
