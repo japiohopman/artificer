@@ -29,29 +29,47 @@ Inventory & Equipment UI
    - 2014 and 2024 equipment records use the **SAME** visual identity when the item is visually identical.
    - Separate visual IDs (e.g., `equipment.longsword_2024`) are created ONLY when explicit visual divergence is required.
 
-4. **Equipment Packs vs. Pack Contents**
+4. **Canonical Item Identity vs. Visual Identity (Rope Case Study)**
+   - Canonical item identity and visual identity remain separate concepts.
+   - Distinct D&D items with distinct mechanics (such as `hempen_rope_50_ft` vs `silk_rope_50_ft`) retain separate canonical item IDs and visual IDs (`equipment.hempen_rope_50_ft` vs `equipment.silk_rope_50_ft`).
+   - Manifest entries support explicit `fallbackVisualId` mappings so distinct items can reuse existing fallback visuals gracefully when specific assets are still `PLANNED`.
+
+5. **Equipment Packs vs. Pack Contents**
    - Equipment packs (e.g., `Explorer's Pack`) have a dedicated pack visual identity (`equipment.explorers_pack`) representing the pack as a container choice.
    - Individual pack contents (e.g., `rope`, `bedroll`, `rations`, `torch`, `tinderbox`, `waterskin`, `mess_kit`) resolve separately to their own individual visual identities.
    - Packs are NOT collapsed into their contents during visual resolution.
 
-5. **Starter vs. Progression Equipment Separation**
+6. **Starter vs. Progression Equipment Separation**
    - Starter assets are strictly items legally obtainable as starting equipment choices across Classes, Backgrounds, and Packs.
    - High-tier weapons, magic items, progression gear, and random treasure belong to separate future progression sheets and MUST NOT pollute starter sprite sheets.
 
 ---
 
-## Key Domain Modules
+## Verified Sprite Sheet Layout & Dimensions
 
-### 1. Visual Identity Resolver (`src/lib/inventoryVisuals/visualIdentity.ts`)
-Provides canonical item ID normalization, alias translation, source deduplication, and ruleset resolution:
-- `resolveVisualIdentity(itemInput, ruleset?)`: Returns canonical `visualId` (e.g. `equipment.longsword`).
-- `resolveVisualIdentityDetails(itemInput, ruleset?)`: Returns full resolution metadata.
+Physical WebP assets under `public/assets/atlas/equipment/sprites/` are **1024 × 1792 pixels**:
+- **Grid Layout**: 4 columns × 7 rows (28 total cell slots per sheet).
+- **Cell Dimensions**: 256 × 256 pixels per cell (`1:1` cell aspect ratio).
+- **Coordinate System**: 0-based indices (`row: 0..6`, `col: 0..3`).
 
-### 2. Sprite Manifest (`src/lib/inventoryVisuals/spriteManifest.ts`)
-Authoritative mapping of visual identities to sprite sheet cell locations:
-- Sheet definitions (`starter_weapons_01`, `starter_weapons_02`, `starter_armor_01`, `starter_adventuring_01`, `starter_tools_01`, `starter_spellcasting_01`, `starter_personal_01`).
-- `SPRITE_MANIFEST`: Record mapping `equipment.<id>` to `{ sheetId, row, col, status, category, aspectRatio }`.
-- Status fields (`READY`, `PLANNED`, `MISSING`, `DUPLICATE`, `VERIFY`).
+### Core Asset Groups
+- `starter_weapons_01` (4 cols × 7 rows)
+- `starter_weapons_02` (4 cols × 7 rows)
+- `starter_armor_01` (4 cols × 7 rows)
+- `starter_adventuring_01` (4 cols × 7 rows)
+- `starter_tools_01` (4 cols × 7 rows)
+- `starter_spellcasting_01` (4 cols × 7 rows)
+- `starter_personal_01` (4 cols × 7 rows)
+
+---
+
+## Audit Terminology & Coverage
+
+- **READY**: Sprite image asset exists on disk AND manifest cell contract is complete.
+- **PLANNED**: Canonical visual ID and manifest cell coordinate assigned; awaiting sprite image production.
+- **MISSING**: Item reference exists in starter data but lacks a visual identity / manifest cell assignment.
+
+_Note: "0 MISSING" indicates 100% manifest/identity coverage (every canonical starter item has an assigned visual ID and sheet cell coordinate). It does NOT mean 100% of final image sprite sheets have been rendered._
 
 ---
 
@@ -64,7 +82,7 @@ Authoritative mapping of visual identities to sprite sheet cell locations:
 
 ### Automated Unit Tests
 - Unit test suite: `tests/inventory_visual_assets.test.ts`
-- Validates Visual Identity resolution, ruleset equivalence, manifest coordinate bounds, no cell collisions, and 100% starter equipment coverage.
+- Validates Visual Identity resolution, ruleset equivalence, strict grid coordinate bounds (`row < sheet.grid.rows`, `col < sheet.grid.cols`), no cell collisions, out-of-bounds coordinate rejection, and 100% starter equipment manifest coverage.
 
 ---
 

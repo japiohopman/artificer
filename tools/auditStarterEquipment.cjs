@@ -52,14 +52,20 @@ const TEMPLATE_ALIASES = {
   'priests-pack': 'priests_pack',
   'scholars-pack': 'scholars_pack',
 
-  // Adventuring gear aliases
+  // Adventuring gear aliases (Hempen Rope vs Silk Rope are distinct canonical D&D items)
   'hempen-rope-50-ft': 'hempen_rope_50_ft',
   'rope-hempen-50-feet': 'hempen_rope_50_ft',
   'rope_hempen_50_feet': 'hempen_rope_50_ft',
-  'rope_silk_50_feet': 'hempen_rope_50_ft',
-  'rope-silk-50-feet': 'hempen_rope_50_ft',
   'hempen_rope_50_ft': 'hempen_rope_50_ft',
   'rope': 'hempen_rope_50_ft',
+
+  'rope_silk_50_feet': 'silk_rope_50_ft',
+  'rope-silk-50-feet': 'silk_rope_50_ft',
+  'silk_rope_50_feet': 'silk_rope_50_ft',
+  'silk_rope_50_ft': 'silk_rope_50_ft',
+  'silk-rope-50-ft': 'silk_rope_50_ft',
+  'silk_rope': 'silk_rope_50_ft',
+
   'rations-1-day': 'rations',
   'rations_1_day': 'rations',
   'mess-kit': 'mess_kit',
@@ -296,18 +302,26 @@ const starterMissing = starterItems.filter(i => i.status === 'MISSING').length;
 
 let mdContent = `# Inventory & Starter Equipment Visual Asset Audit Report
 
+## Audit Status Terminology
+
+- **READY**: Sprite image asset exists on disk AND manifest cell coordinate contract is complete.
+- **PLANNED**: Canonical visual ID and manifest cell coordinate assigned; awaiting sprite image production.
+- **MISSING**: Item reference exists in starter data but lacks a visual identity / manifest cell assignment.
+
+_Note on "0 MISSING": This indicates 100% manifest and identity coverage (every canonical starter item has an assigned visual ID and sheet cell). It does NOT mean 100% of final image sprite sheets have been rendered._
+
+---
+
 ## Summary Statistics (Starter Equipment)
 
 - **Total Canonical Starter Items**: ${starterItems.length}
 - **READY (Sprite Image + Manifest Cell Contract Ready)**: ${starterReady}
 - **PLANNED (Cell Coordinate Assigned in Manifest, Image Planned)**: ${starterPlanned}
-- **MISSING (No Manifest Entry / Cell Assignment)**: ${starterMissing}
+- **MISSING (No Manifest Entry / Cell Assignment)**: ${starterMissing} (100% Manifest Identity Coverage)
 
 ---
 
 ## Canonical Starter Items Audit (Class, Background & Pack Choices)
-
-Which canonical starter items still need a visual?
 
 ### Ready Starter Items (${starterReady})
 

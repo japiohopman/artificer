@@ -52,14 +52,20 @@ const TEMPLATE_ALIASES: Record<string, string> = {
   'priests-pack': 'priests_pack',
   'scholars-pack': 'scholars_pack',
 
-  // Adventuring gear aliases
+  // Adventuring gear aliases (Hempen Rope vs Silk Rope are distinct D&D items)
   'hempen-rope-50-ft': 'hempen_rope_50_ft',
   'rope-hempen-50-feet': 'hempen_rope_50_ft',
   'rope_hempen_50_feet': 'hempen_rope_50_ft',
-  'rope_silk_50_feet': 'hempen_rope_50_ft',
-  'rope-silk-50-feet': 'hempen_rope_50_ft',
   'hempen_rope_50_ft': 'hempen_rope_50_ft',
   'rope': 'hempen_rope_50_ft',
+
+  'rope_silk_50_feet': 'silk_rope_50_ft',
+  'rope-silk-50-feet': 'silk_rope_50_ft',
+  'silk_rope_50_feet': 'silk_rope_50_ft',
+  'silk_rope_50_ft': 'silk_rope_50_ft',
+  'silk-rope-50-ft': 'silk_rope_50_ft',
+  'silk_rope': 'silk_rope_50_ft',
+
   'rations-1-day': 'rations',
   'rations_1_day': 'rations',
   'mess-kit': 'mess_kit',

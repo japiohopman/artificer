@@ -1,17 +1,25 @@
 # Inventory & Starter Equipment Visual Asset Audit Report
 
+## Audit Status Terminology
+
+- **READY**: Sprite image asset exists on disk AND manifest cell coordinate contract is complete.
+- **PLANNED**: Canonical visual ID and manifest cell coordinate assigned; awaiting sprite image production.
+- **MISSING**: Item reference exists in starter data but lacks a visual identity / manifest cell assignment.
+
+_Note on "0 MISSING": This indicates 100% manifest and identity coverage (every canonical starter item has an assigned visual ID and sheet cell). It does NOT mean 100% of final image sprite sheets have been rendered._
+
+---
+
 ## Summary Statistics (Starter Equipment)
 
-- **Total Canonical Starter Items**: 92
+- **Total Canonical Starter Items**: 93
 - **READY (Sprite Image + Manifest Cell Contract Ready)**: 39
-- **PLANNED (Cell Coordinate Assigned in Manifest, Image Planned)**: 53
-- **MISSING (No Manifest Entry / Cell Assignment)**: 0
+- **PLANNED (Cell Coordinate Assigned in Manifest, Image Planned)**: 54
+- **MISSING (No Manifest Entry / Cell Assignment)**: 0 (100% Manifest Identity Coverage)
 
 ---
 
 ## Canonical Starter Items Audit (Class, Background & Pack Choices)
-
-Which canonical starter items still need a visual?
 
 ### Ready Starter Items (39)
 
@@ -31,7 +39,7 @@ Which canonical starter items still need a visual?
 | `explorers_pack` | `equipment.explorers_pack` | `starter_adventuring_01` | `(0, 0)` | `container` | class:barbarian, class:cleric |
 | `greataxe` | `equipment.greataxe` | `starter_weapons_01` | `(3, 1)` | `weapon` | class:barbarian |
 | `handaxe` | `equipment.handaxe` | `starter_weapons_01` | `(0, 1)` | `weapon` | class:barbarian, class:fighter |
-| `hempen_rope_50_ft` | `equipment.hempen_rope_50_ft` | `starter_adventuring_01` | `(2, 2)` | `adventuring_gear` | background:sailor, pack_content:burglars-pack |
+| `hempen_rope_50_ft` | `equipment.hempen_rope_50_ft` | `starter_adventuring_01` | `(2, 2)` | `adventuring_gear` | pack_content:burglars-pack, pack_content:dungeoneers-pack |
 | `javelin` | `equipment.javelin` | `starter_weapons_01` | `(0, 2)` | `weapon` | class:barbarian, class:paladin |
 | `leather_armor` | `equipment.leather_armor` | `starter_armor_01` | `(0, 1)` | `armor` | class:bard, class:cleric |
 | `light_crossbow` | `equipment.light_crossbow` | `starter_weapons_02` | `(0, 2)` | `weapon` | class:cleric, class:fighter |
@@ -57,7 +65,7 @@ Which canonical starter items still need a visual?
 | `warhammer` | `equipment.warhammer` | `starter_weapons_02` | `(2, 0)` | `weapon` | class:cleric |
 | `waterskin` | `equipment.waterskin` | `starter_adventuring_01` | `(3, 2)` | `adventuring_gear` | pack_content:burglars-pack, pack_content:dungeoneers-pack |
 
-### Planned Starter Items (53)
+### Planned Starter Items (54)
 
 | Canonical Item ID | Visual ID | Sheet | Cell (R, C) | Category | Sources |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -109,6 +117,7 @@ Which canonical starter items still need a visual?
 | `scale_merchants` | `equipment.scale_merchants` | `starter_tools_01` | `(4, 0)` | `tool` | background:artisan |
 | `sealing_wax` | `equipment.sealing_wax` | `starter_personal_01` | `(6, 0)` | `personal` | pack_content:diplomats-pack |
 | `signet_ring` | `equipment.signet_ring` | `starter_personal_01` | `(1, 0)` | `personal` | background:noble |
+| `silk_rope_50_ft` | `equipment.silk_rope_50_ft` | `starter_adventuring_01` | `(6, 1)` | `adventuring_gear` | background:sailor |
 | `soap` | `equipment.soap` | `starter_personal_01` | `(3, 1)` | `personal` | pack_content:diplomats-pack |
 | `string` | `equipment.string` | `starter_adventuring_01` | `(4, 1)` | `adventuring_gear` | pack_content:burglars-pack |
 | `thieves_tools` | `equipment.thieves_tools` | `starter_tools_01` | `(0, 0)` | `tool` | class:rogue, background:criminal |
@@ -125,7 +134,7 @@ _None! All canonical starter equipment items are covered by READY or PLANNED man
 
 ## Full Catalog Audit Summary (1001 Items Total)
 
-- **Starter Equipment Items**: 92
-- **Progression / Catalog Items**: 909
+- **Starter Equipment Items**: 93
+- **Progression / Catalog Items**: 908
 
 _Report generated automatically by `tools/auditStarterEquipment.cjs`._

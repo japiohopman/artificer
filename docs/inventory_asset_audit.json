@@ -4588,7 +4588,6 @@
     "category": "adventuring_gear",
     "isStarterEquipment": true,
     "sources": [
-      "background:sailor",
       "pack_content:burglars-pack",
       "pack_content:dungeoneers-pack",
       "pack_content:explorers-pack"
@@ -9445,13 +9444,18 @@
   {
     "canonicalId": "silk_rope_50_ft",
     "visualId": "equipment.silk_rope_50_ft",
-    "category": "other",
-    "isStarterEquipment": false,
-    "sources": [],
+    "category": "adventuring_gear",
+    "isStarterEquipment": true,
+    "sources": [
+      "background:sailor"
+    ],
     "ruleset": "2014",
-    "spriteSheet": null,
-    "cell": null,
-    "status": "MISSING"
+    "spriteSheet": "starter_adventuring_01",
+    "cell": {
+      "row": 6,
+      "col": 1
+    },
+    "status": "PLANNED"
   },
   {
     "canonicalId": "silver",
