@@ -6,77 +6,107 @@
   "gender": "Male",
   "stats": {
     "str": 11,
-    "dex": 10,
+    "dex": 11,
     "con": 10,
     "int": 10,
     "wis": 10,
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Insight",
-    "Skill: Stealth",
-    "Thieves' Tools",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "skill: intimidation",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
+    "simple weapons",
+    "shortswords",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "savage attacks",
+      "index": "savage_attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "extra_critical_damage_dice": 1
+        }
+      }
+    },
+    {
+      "name": "relentless endurance",
+      "index": "relentless_endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "trait_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      }
+    },
+    {
+      "name": "menacing",
+      "index": "menacing",
+      "desc": "You gain proficiency in the Intimidation skill."
+    }
+  ],
   "features": [
     {
-      "index": "spellcasting_wizard",
+      "index": "monk_unarmored_defense",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "spellcasting: wizard",
+      "name": "unarmored defense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
       ],
-      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
+      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
+      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
         }
       },
       "source": "Class"
     },
     {
-      "index": "arcane_recovery",
+      "index": "martial_arts",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "arcane recovery",
+      "name": "martial arts",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
+        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
+        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
+        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
+        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
       ],
-      "url": "/assets/atlas/features/json/arcane_recovery.json",
-      "updated_at": "2026-07-13T06:30:11.957Z",
-      "image": "/assets/atlas/features/images/arcane_recovery.webp",
-      "feature_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
-      },
+      "url": "/assets/atlas/features/json/martial_arts.json",
+      "updated_at": "2026-07-13T06:30:11.868Z",
+      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -102,61 +132,26 @@
     "specialFeatures": []
   },
   "items": {
-    "spellbook_i6cu41e41": {
-      "id": "spellbook_i6cu41e41",
-      "template": "spellbook",
-      "quantity": 1,
-      "addedAt": 1787642970941,
-      "kind": "tradegood"
-    },
-    "bedroll_z2y45wb31": {
-      "id": "bedroll_z2y45wb31",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1787642970942,
-      "kind": "tradegood"
-    },
-    "crowbar_fwyss6ku8": {
-      "id": "crowbar_fwyss6ku8",
-      "template": "crowbar",
-      "quantity": 1,
-      "addedAt": 1787642970942,
-      "kind": "tradegood"
-    },
-    "dagger_ueh1rivqy": {
-      "id": "dagger_ueh1rivqy",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1787642970942,
+    "dart_8ll2l59ch": {
+      "id": "dart_8ll2l59ch",
+      "template": "dart",
+      "quantity": 10,
+      "addedAt": 1787411551475,
       "kind": "weapon"
     },
-    "gold_qmfvs8an6": {
-      "id": "gold_qmfvs8an6",
+    "sickle_itn8ff0cl": {
+      "id": "sickle_itn8ff0cl",
+      "template": "sickle",
+      "quantity": 1,
+      "addedAt": 1787411551475,
+      "kind": "weapon"
+    },
+    "gold_2697f09p8": {
+      "id": "gold_2697f09p8",
       "template": "gold",
-      "quantity": 11,
-      "addedAt": 1787642970942,
+      "quantity": 23,
+      "addedAt": 1787411551475,
       "kind": "tradegood"
-    },
-    "quarterstaff_lbca4hxa4": {
-      "id": "quarterstaff_lbca4hxa4",
-      "template": "quarterstaff",
-      "quantity": 1,
-      "addedAt": 1787642980939,
-      "kind": "weapon"
-    },
-    "wand_psu96chf1": {
-      "id": "wand_psu96chf1",
-      "template": "wand",
-      "quantity": 1,
-      "addedAt": 1787642987682,
-      "kind": "equipment"
-    },
-    "scholars_pack_uunbwwvnp": {
-      "id": "scholars_pack_uunbwwvnp",
-      "template": "scholars_pack",
-      "quantity": 1,
-      "addedAt": 1787642992140,
-      "kind": "container"
     }
   },
   "containers": {
@@ -167,43 +162,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_i6cu41e41"
+          "itemId": "sickle_itn8ff0cl"
         },
         {
           "id": "bag_1",
-          "itemId": "bedroll_z2y45wb31"
+          "itemId": "gold_2697f09p8"
         },
         {
           "id": "bag_2",
-          "itemId": "crowbar_fwyss6ku8"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "gold_qmfvs8an6"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "quarterstaff_lbca4hxa4"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "quarterstaff_w94893qtw"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "wand_psu96chf1"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "wand_va4uc3apk"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "scholars_pack_uunbwwvnp"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "scholars_pack_mkdo1w8oe"
+          "itemId": null
         },
         {
           "id": "bag_10",
@@ -269,7 +264,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_ueh1rivqy"
+        "itemId": "dart_8ll2l59ch"
       },
       {
         "id": "off_hand",
@@ -387,76 +382,156 @@
   },
   "backpack": [
     {
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "quantity": 1
+      "id": "carpenters_tools_qmab1f0t6",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "index": "bedroll",
-      "name": "Bedroll",
-      "url": "/assets/atlas/equipment/json/bedroll.json",
-      "quantity": 1
+      "id": "pot_iron_fkerlmz32",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "index": "crowbar",
-      "name": "Crowbar",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "quantity": 1
-    },
-    {
-      "index": "dagger",
-      "name": "Dagger",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "quantity": 2
-    },
-    {
-      "index": "pouch",
-      "name": "Pouch",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "quantity": 2
-    },
-    {
+      "id": "clothes_travelers_cp40xuk02",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "quantity": 1
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
+      "id": "gold_s73u1hd94",
       "index": "gold",
       "name": "Gold",
+      "quantity": 23,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 11
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear"
     }
   ],
-  "inventory": {},
-  "knownSpells": [],
-  "languages": [
-    "common"
-  ],
-  "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_hzhii44j0",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.0webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
     }
   },
+  "knownSpells": [],
+  "languages": [
+    "common",
+    "orc"
+  ],
+  "preparedSpells": [],
+  "spellSlots": {},
   "choices": {},
-  "name": "j",
-  "race": "human",
-  "class": "wizard",
-  "spellcastingAbility": "int",
-  "background": "wayfarer",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "race": "half_orc",
+  "class": "monk",
+  "spellcastingAbility": "cha",
+  "background": "farmer",
+  "alignment": "lawful_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
   "id": "slot3",
-  "hp": 3,
-  "maxHp": 3,
+  "name": "Hero",
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-25T07:30:05.039Z"
+  "lastSaved": "2026-08-22T15:13:35.970Z"
 }
