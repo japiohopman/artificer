@@ -5,6 +5,8 @@ import { useInventoryStore } from '../src/store/useInventoryStore';
 import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/inventoryUtils';
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
 import { getEquipmentSpriteCoord } from '../src/components/character/equipment/equipmentSpriteMap';
+import { resolveVisualIdentity, getCategoryForVisual } from '../src/lib/inventoryVisuals/visualIdentity';
+import { getSpriteCell, getSpriteSheet, validateManifest, SPRITE_SHEET_SPECS, SPRITE_MANIFEST } from '../src/lib/inventoryVisuals/spriteManifest';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -249,5 +251,105 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const backpack = Object.values(normalized.containers).find((c: any) => c.type === 'backpack');
     expect(mainHand?.itemId).toBe('handaxe_instance_A');
     expect(backpack?.slots[0].itemId).toBe('handaxe_instance_B');
+  });
+
+  // --- NEW CANONICAL ASSET LAYER UNIT TESTS ---
+
+  describe('Canonical Visual Identity Layer Tests', () => {
+    it('resolves canonical item template to same visual ID', () => {
+      const vis1 = resolveVisualIdentity('longsword');
+      const vis2 = resolveVisualIdentity('longsword');
+      expect(vis1).toBe('equipment.longsword');
+      expect(vis2).toBe('equipment.longsword');
+    });
+
+    it('ensures different item templates resolve to distinct visual IDs', () => {
+      const sword = resolveVisualIdentity('longsword');
+      const axe = resolveVisualIdentity('greataxe');
+      const dagger = resolveVisualIdentity('dagger');
+
+      expect(sword).not.toBe(axe);
+      expect(sword).not.toBe(dagger);
+      expect(axe).not.toBe(dagger);
+    });
+
+    it('deduplicates equivalent visual representation across classes, backgrounds, loot, and rulesets', () => {
+      const fighterSword = resolveVisualIdentity('longsword');
+      const soldierSword = resolveVisualIdentity('/assets/atlas/equipment/json/14/longsword.json');
+      const lootSword = resolveVisualIdentity('2024/longsword');
+
+      expect(fighterSword).toBe('equipment.longsword');
+      expect(soldierSword).toBe('equipment.longsword');
+      expect(lootSword).toBe('equipment.longsword');
+    });
+
+    it('handles ruleset variants cleanly', () => {
+      const vis14 = resolveVisualIdentity('longsword', { ruleset: '2014' });
+      const vis24 = resolveVisualIdentity('longsword', { ruleset: '2024' });
+
+      expect(vis14).toBe('equipment.longsword');
+      expect(vis24).toBe('equipment.longsword');
+    });
+  });
+
+  describe('Sprite Manifest Layer Tests', () => {
+    it('validates manifest integrity with no coordinate bounds or cell overlap errors', () => {
+      const validation = validateManifest();
+      expect(validation.valid).toBe(true);
+      expect(validation.errors.length).toBe(0);
+    });
+
+    it('verifies every referenced sprite sheet exists in SPRITE_SHEET_SPECS', () => {
+      for (const [visualId, cell] of Object.entries(SPRITE_MANIFEST)) {
+        const sheetSpec = getSpriteSheet(cell.sheetId);
+        expect(sheetSpec).toBeDefined();
+        expect(sheetSpec?.isStarter).toBe(true);
+      }
+    });
+
+    it('confirms cell coordinates are strictly within sheet boundaries', () => {
+      for (const [visualId, cell] of Object.entries(SPRITE_MANIFEST)) {
+        const sheetSpec = SPRITE_SHEET_SPECS[cell.sheetId];
+        expect(cell.row).toBeGreaterThanOrEqual(0);
+        expect(cell.row).toBeLessThan(sheetSpec.rows);
+        expect(cell.col).toBeGreaterThanOrEqual(0);
+        expect(cell.col).toBeLessThan(sheetSpec.cols);
+      }
+    });
+  });
+
+  describe('Starter Equipment Audit & Pack Contents Tests', () => {
+    it('resolves starter equipment items to valid visual IDs and manifest cell locations', () => {
+      const starterItems = ['dagger', 'longsword', 'padded_armor', 'holy_symbol', 'thieves_tools'];
+
+      starterItems.forEach(item => {
+        const visualId = resolveVisualIdentity(item);
+        const cell = getSpriteCell(visualId);
+        expect(visualId).toContain('equipment.');
+        expect(cell).toBeDefined();
+        expect(cell?.sheetId).toBeDefined();
+      });
+    });
+
+    it('represents pack choices and pack contents separately', () => {
+      const packVisualId = resolveVisualIdentity('explorers_pack');
+      const ropeVisualId = resolveVisualIdentity('rope-hempen-50-feet');
+      const bedrollVisualId = resolveVisualIdentity('bedroll');
+      const rationsVisualId = resolveVisualIdentity('rations-1-day');
+
+      expect(packVisualId).toBe('equipment.explorers_pack');
+      expect(ropeVisualId).toBe('equipment.rope_hempen_50');
+      expect(bedrollVisualId).toBe('equipment.bedroll');
+      expect(rationsVisualId).toBe('equipment.rations');
+
+      // Pack itself is a pack visual category
+      expect(getCategoryForVisual(packVisualId)).toBe('pack');
+
+      // Pack contents have separate visual locations in the manifest
+      expect(getSpriteCell(packVisualId)).toBeDefined();
+      expect(getSpriteCell(ropeVisualId)).toBeDefined();
+      expect(getSpriteCell(bedrollVisualId)).toBeDefined();
+      expect(getSpriteCell(rationsVisualId)).toBeDefined();
+    });
   });
 });

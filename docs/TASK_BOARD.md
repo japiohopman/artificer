@@ -4,6 +4,37 @@ This is the **active execution checklist**. `ROADMAP.md` defines current priorit
 
 ## 🔴 Critical — Current engineering
 
+### Inventory & Equipment Asset Foundation v1
+- [x] Establish canonical visual identity resolution layer (`src/lib/inventoryVisuals/visualIdentity.ts`).
+- [x] Decouple game item template/instance IDs from sprite sheet cell coordinates (`Item -> Visual ID -> Sprite Cell -> Renderer`).
+- [x] Create authoritative sprite manifest mapping visual identities to cell locations across 7 starter asset groups (`src/lib/inventoryVisuals/spriteManifest.ts`).
+- [x] Handle 2014 & 2024 rulesets explicitly (shared visual identity for equivalent items, distinct visual IDs only when visually required).
+- [x] Deduplicate equivalent visual representations across classes, backgrounds, loot, and NPCs without creating class-specific duplicates.
+- [x] Separate starter equipment assets from future progression tiers (no high-tier or progression items mixed in starter sheets).
+- [x] Audit starter equipment from class JSONs, background JSONs, equipment packs, and versioned datasets (`tools/auditStarterEquipment.cjs`).
+- [x] Represent pack choices (`explorers_pack`) and pack contents (`rope`, `bedroll`, `rations`) separately.
+- [x] Export machine-readable (`docs/inventory_asset_audit.json`) and human-readable (`docs/INVENTORY_ASSET_AUDIT.md`) audit reports.
+- [x] Add comprehensive unit test suite in `tests/inventory_equipment.test.ts`.
+- [x] Document canonical asset architecture in `docs/architecture/INVENTORY_ASSETS.md`.
+
+### Inventory & Equipment Architecture / UX Overhaul
+- [x] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.
+- [x] Define the intended character-domain structure: `character/profile/`, `character/inventory/`, `character/equipment/`, `character/progression/`.
+- [x] Keep reusable character-domain inventory/equipment components under `character/`; do not move inventory into `hud/` merely because it is visible from the HUD.
+- [x] Refactor `CharacterPanel.tsx` toward a compact runtime HUD surface.
+- [x] Keep `DraggableInventoryItem` as a reusable item interaction primitive where appropriate.
+- [x] Make `FullInventoryMenu` the full inventory workspace.
+- [x] Provide a clear UI entry point from CharacterPanel to the full inventory workspace.
+- [x] Implement reliable scrolling, category filtering and item inspection.
+- [x] Implement working equip/unequip interactions through supported click and drag/drop flows.
+- [x] Ensure EquipmentDoll uses the intended 9:16 visual treatment consistently.
+- [x] Fix supported green-screen equipment rendering through the shared chroma-key infrastructure.
+- [x] Verify party inventory/shared storage behavior and transfers.
+- [x] Preserve Inventory V2 registry/slot architecture and save compatibility.
+- [x] Add regression tests around equip/unequip, item inspection, DnD transfers and inventory rendering state.
+- [ ] Asset Production: Render and commit high-resolution WebP sprite sheet images (`starter_weapons_01.webp`, etc.).
+- [ ] Inventory UI Integration: Integrate `resolveVisualIdentity` and `<EquipmentSprite />` into UI components (`Inventory.tsx`, `EquipmentDollSlot.tsx`, `FullInventoryMenu.tsx`, etc.).
+
 ### Character Creator — Species Visual Integration v1
 PR #247 accepted and merged. Species Visual Integration v1 completed. Character Creator — Selection Experience v1 is the next focused task.
 
@@ -79,22 +110,6 @@ PR #261 accepted and merged. Implementation, adapter, unit tests, and Playwright
 - [x] Add a small canonical integration test map covering walls, doors, terrain, PC, enemy, entry point and objects.
 - [x] Add focused regression tests for BattleMap loading, conversion, wall boundaries, terrain and spawn/entry data.
 - [x] Keep BattleMapEditor as authoring UI; keep CombatTester as testing/debug UI; keep CombatGrid as runtime representation.
-
-### Inventory & Equipment Architecture / UX Overhaul
-- [x] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.
-- [x] Define the intended character-domain structure: `character/profile/`, `character/inventory/`, `character/equipment/`, `character/progression/`.
-- [x] Keep reusable character-domain inventory/equipment components under `character/`; do not move inventory into `hud/` merely because it is visible from the HUD.
-- [x] Refactor `CharacterPanel.tsx` toward a compact runtime HUD surface.
-- [x] Keep `DraggableInventoryItem` as a reusable item interaction primitive where appropriate.
-- [x] Make `FullInventoryMenu` the full inventory workspace.
-- [x] Provide a clear UI entry point from CharacterPanel to the full inventory workspace.
-- [x] Implement reliable scrolling, category filtering and item inspection.
-- [x] Implement working equip/unequip interactions through supported click and drag/drop flows.
-- [x] Ensure EquipmentDoll uses the intended 9:16 visual treatment consistently.
-- [x] Fix supported green-screen equipment rendering through the shared chroma-key infrastructure.
-- [x] Verify party inventory/shared storage behavior and transfers.
-- [x] Preserve Inventory V2 registry/slot architecture and save compatibility.
-- [x] Add regression tests around equip/unequip, item inspection, DnD transfers and inventory rendering state.
 
 ### Canonical Character Profile & CharacterScreen Refactor
 This follows the Character Creator Selection Experience rather than being folded into it.
@@ -182,4 +197,4 @@ These are historical milestones and should not be re-opened as new implementatio
 8. Keep runtime HUD presentation separate from reusable domain capabilities.
 9. Keep authoring tools separate from runtime representations.
 
-*Last Updated: 2026-08-18*
+*Last Updated: 2026-08-25*
