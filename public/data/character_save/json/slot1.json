@@ -3,9 +3,9 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Female",
+  "gender": "Male",
   "stats": {
-    "str": 10,
+    "str": 15,
     "dex": 10,
     "con": 10,
     "int": 10,
@@ -13,181 +13,98 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Arcana",
-    "Skill: History",
-    "Calligrapher'S Supplies",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
     "light armor",
-    "simple weapons",
-    "longswords",
-    "rapiers",
-    "shortswords",
-    "hand crossbows",
-    "saving throw: dex",
-    "saving throw: cha",
-    "Saving Throw: dex",
-    "Saving Throw: cha"
+    "medium armor",
+    "shields",
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
   "traits": [
     {
-      "name": "draconic ancestry",
-      "index": "draconic_ancestry",
-      "desc": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.",
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
       "trait_specific": {
-        "subtrait_options": {
-          "choose": 1,
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_black",
-                  "name": "draconic ancestry (black)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_black.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_blue",
-                  "name": "draconic ancestry (blue)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_blue.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_brass",
-                  "name": "draconic ancestry (brass)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_brass.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_bronze",
-                  "name": "draconic ancestry (bronze)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_bronze.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_copper",
-                  "name": "draconic ancestry (copper)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_copper.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_gold",
-                  "name": "draconic ancestry (gold)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_gold.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_green",
-                  "name": "draconic ancestry (green)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_green.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_red",
-                  "name": "draconic ancestry (red)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_red.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_silver",
-                  "name": "draconic ancestry (silver)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_silver.json"
-                }
-              },
-              {
-                "option_type": "reference",
-                "item": {
-                  "index": "draconic_ancestry_white",
-                  "name": "draconic ancestry (white)",
-                  "url": "/assets/atlas/traits/json/draconic_ancestry_white.json"
-                }
-              }
-            ]
-          },
-          "type": "trait"
+        "passive_modifiers": {
+          "darkvision": 60
         }
       }
     },
     {
-      "name": "breath weapon",
-      "index": "breath_weapon",
-      "desc": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you cannot use it again until you complete a short or long rest."
-    },
-    {
-      "name": "damage resistance",
-      "index": "damage_resistance",
-      "desc": "You have resistance to the damage type associated with your draconic ancestry."
+      "name": "gnome cunning",
+      "index": "gnome_cunning",
+      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            "Intelligence Saving Throws against magic",
+            "Wisdom Saving Throws against magic",
+            "Charisma Saving Throws against magic"
+          ]
+        }
+      }
     }
   ],
   "features": [
     {
-      "index": "spellcasting_bard",
+      "index": "spellcasting_druid",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "spellcasting: bard",
+      "name": "spellcasting: druid",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations."
+        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
       ],
-      "reference": "public/assets/atlas/class/json/bard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_bard.json",
+      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_bard.webp",
+      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
+          "index": "wisdom",
+          "name": "wisdom",
+          "url": "/assets/atlas/ability_scores/json/wis.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "bardic_inspiration_d6",
+      "index": "druidic",
       "class": {
-        "index": "bard",
-        "name": "bard",
-        "url": "/assets/atlas/class/json/bard.json"
+        "index": "druid",
+        "name": "druid",
+        "url": "/assets/atlas/class/json/druid.json"
       },
-      "name": "bardic inspiration (d6)",
+      "name": "druidic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.0 Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-        "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. ",
-        "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
       ],
-      "url": "/assets/atlas/features/json/bardic_inspiration_d6.0json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/bardic_inspiration_d6.0webp",
-      "feature_specific": {
-        "special_action": "bonus_action",
-        "attack_die": "1d6",
-        "usage": {
-          "type": "charisma_modifier",
-          "recovery": "long_rest"
-        }
-      },
+      "url": "/assets/atlas/features/json/druidic.json",
+      "updated_at": "2026-07-13T06:30:11.853Z",
+      "image": "/assets/atlas/features/images/druidic.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
@@ -213,18 +130,60 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_pm6ubil2k": {
-      "id": "leather_armor_pm6ubil2k",
+    "leather_armor_g8rgynhdv": {
+      "id": "leather_armor_g8rgynhdv",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1786869921938,
+      "addedAt": 1787633309862,
       "kind": "armor"
     },
-    "dagger_tg7m85j2w": {
-      "id": "dagger_tg7m85j2w",
-      "template": "dagger",
+    "explorers_pack_zwbjoffnj": {
+      "id": "explorers_pack_zwbjoffnj",
+      "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1786869921938,
+      "addedAt": 1787633309862,
+      "kind": "container"
+    },
+    "sickle_k8po8mx55": {
+      "id": "sickle_k8po8mx55",
+      "template": "sickle",
+      "quantity": 1,
+      "addedAt": 1787633309862,
+      "kind": "weapon"
+    },
+    "gold_5lbp2lyeo": {
+      "id": "gold_5lbp2lyeo",
+      "template": "gold",
+      "quantity": 23,
+      "addedAt": 1787633309862,
+      "kind": "tradegood"
+    },
+    "gold_1wj4y682m": {
+      "id": "gold_1wj4y682m",
+      "template": "gold",
+      "quantity": 1,
+      "addedAt": 1787633413759,
+      "kind": "tradegood"
+    },
+    "yew-wand_aq226wzts": {
+      "id": "yew-wand_aq226wzts",
+      "template": "yew-wand",
+      "quantity": 1,
+      "addedAt": 1787633420147,
+      "kind": "equipment"
+    },
+    "mace_bx1zdi1d4": {
+      "id": "mace_bx1zdi1d4",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1787633430761,
+      "kind": "weapon"
+    },
+    "shortbow_guamy76iv": {
+      "id": "shortbow_guamy76iv",
+      "template": "shortbow",
+      "quantity": 1,
+      "addedAt": 1787633439067,
       "kind": "weapon"
     }
   },
@@ -236,43 +195,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": null
+          "itemId": "explorers_pack_zwbjoffnj"
         },
         {
           "id": "bag_1",
-          "itemId": null
+          "itemId": "gold_5lbp2lyeo"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "gold_1wj4y682m"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "gold_yufrmlx0w"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "yew-wand_aq226wzts"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "yew-wand_z5csxiy7l"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "mace_bx1zdi1d4"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "mace_zi2grg6wf"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "shortbow_guamy76iv"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "shortbow_lpxq2u67o"
         },
         {
           "id": "bag_10",
@@ -338,7 +297,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_tg7m85j2w"
+        "itemId": "sickle_k8po8mx55"
       },
       {
         "id": "off_hand",
@@ -354,7 +313,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_pm6ubil2k"
+        "itemId": "leather_armor_g8rgynhdv"
       },
       {
         "id": "clothes",
@@ -456,53 +415,139 @@
   },
   "backpack": [
     {
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "quantity": 1
+      "id": "carpenters_tools_gjdgh1s4q",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "index": "book",
-      "name": "Book",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "quantity": 1
+      "id": "pot_iron_18dztu2f4",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "quantity": 1
+      "id": "clothes_travelers_jaxao5wh7",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "quantity": 1
-    },
-    {
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "quantity": 10
-    },
-    {
-      "index": "robes",
-      "name": "Robes",
-      "url": "/assets/atlas/equipment/json/robes.json",
-      "quantity": 1
-    },
-    {
+      "id": "gold_z5q6gvuml",
       "index": "gold",
       "name": "Gold",
+      "quantity": 23,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 8
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_kap7315l3",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "rulesetContext": "2014",
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [],
   "languages": [
     "common",
-    "draconic"
+    "gnomish"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -511,20 +556,14 @@
       "max": 0
     }
   },
-  "choices": {
-    "skills": [
-      "Insight",
-      "Nature",
-      "Sleight of Hand"
-    ]
-  },
-  "race": "dragonborn",
-  "class": "bard",
-  "spellcastingAbility": "cha",
-  "background": "sage",
-  "alignment": "neutral_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BardLute.webp",
-  "name": "wuyu",
+  "choices": {},
+  "name": "red",
+  "race": "gnome",
+  "class": "druid",
+  "spellcastingAbility": "wis",
+  "background": "farmer",
+  "alignment": "lawful_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
   "id": "slot1",
   "hp": 4,
   "maxHp": 4,
@@ -534,5 +573,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-16T08:49:21.464Z"
+  "lastSaved": "2026-08-25T04:51:10.050Z"
 }
