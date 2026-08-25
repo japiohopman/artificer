@@ -19,25 +19,24 @@ export const migrateCharacterV1ToV2 = (character: Character): Character => {
     }
     const backpackContainer = containers[backpackId];
 
-    // Helper: Find existing item instance by template/index or add a new one
+    // Helper: Match legacy item to existing V2 instance by instance ID or create distinct instance
     const reconcileItem = (itemTemplate: any, targetSlots: InventorySlot[]) => {
-      const templateId = itemTemplate.index || itemTemplate.template || itemTemplate.id || 'unknown';
+      const templateId = itemTemplate.index || itemTemplate.template || 'unknown';
+      const explicitId = itemTemplate.id;
 
-      // Check if instance already exists in items dictionary
-      const existingInstanceId = Object.keys(items).find(id => items[id].template === templateId);
-      if (existingInstanceId) {
-        // Ensure it is mapped into a slot if missing
-        const isMapped = Object.values(containers).some(c => c.slots.some(s => s.itemId === existingInstanceId)) ||
-                         equipment.slots.some(s => s.itemId === existingInstanceId);
+      // Case A: Match by exact instance ID if present in items dictionary
+      if (explicitId && items[explicitId]) {
+        const isMapped = Object.values(containers).some(c => c.slots.some(s => s.itemId === explicitId)) ||
+                         equipment.slots.some(s => s.itemId === explicitId);
         if (!isMapped) {
           const emptySlot = targetSlots.find(s => s.itemId === null);
-          if (emptySlot) emptySlot.itemId = existingInstanceId;
+          if (emptySlot) emptySlot.itemId = explicitId;
         }
         return;
       }
 
-      // If not present, create new instance
-      const instanceId = generateInstanceId(templateId);
+      // Case B: Instance missing or unmapped — create a distinct new V2 ItemInstance
+      const instanceId = explicitId && !items[explicitId] ? explicitId : generateInstanceId(templateId);
       const instance: ItemInstance = {
         id: instanceId,
         template: templateId,
