@@ -3,7 +3,17 @@
 This file is used to track and communicate errors between the user, CLI, and AI agents.
 
 ## Active Issues
-*None reported.*
+1. **Legacy Character Save V1 -> V2 Migration Gap** [FIXED]
+   - *Description*: Loaded V1 character saves remained unmigrated at runtime boundary, causing inventory items to fail rendering in Inventory V2 workspace.
+   - *Status*: FIXED. Integrated `migrateCharacterV1ToV2` inside `saveService.ts` character loading pipeline.
+
+2. **Recruit NPC Mixed Inventory Normalization** [FIXED]
+   - *Description*: Recruit NPC records with legacy `backpack` and `inventory` fields were not normalized into canonical V2 containers.
+   - *Status*: FIXED. Integrated migration pipeline in `saveService.ts`.
+
+3. **dnd-kit Drag-and-Drop Pointer Sensor Activation Contract** [FIXED]
+   - *Description*: Unconstrained pointer sensors caused click inspection to conflict with drag activations on item cards.
+   - *Status*: FIXED. Added PointerSensor activation constraint (`distance: 5`) to `DndContext` in `FullInventoryMenu.tsx`.
 
 ## Reporting a new issue
 When reporting an issue, please include:

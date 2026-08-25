@@ -3,6 +3,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { useInventoryStore } from '../src/store/useInventoryStore';
 import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/inventoryUtils';
+import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -117,5 +118,29 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     loadCharacters();
     const reloadedParty = useCharacterStore.getState().characters;
     expect(reloadedParty.length).toBeGreaterThan(0);
+  });
+
+  it('migrates legacy V1 character save to V2 canonical items and equipment without duplicating or losing items', () => {
+    const legacyChar: any = {
+      id: 'v1_char',
+      name: 'V1 Hero',
+      inventory: {
+        'main-hand': { id: 'v1_sword', index: 'longsword', name: 'Longsword', quantity: 1 }
+      },
+      backpack: [
+        { id: 'v1_potion', index: 'potion-of-healing', name: 'Potion of Healing', quantity: 2 }
+      ]
+    };
+
+    const migrated = migrateCharacterV1ToV2(legacyChar);
+    expect(migrated.saveVersion).toBe(2);
+    expect(migrated.items).toBeDefined();
+
+    const mainHandSlot = migrated.equipment.slots.find((s: any) => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeDefined();
+
+    const backpackContainer = Object.values(migrated.containers).find((c: any) => c.type === 'backpack');
+    expect(backpackContainer).toBeDefined();
+    expect(backpackContainer.slots.some((s: any) => s.itemId !== null)).toBe(true);
   });
 });
