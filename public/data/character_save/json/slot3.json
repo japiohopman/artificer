@@ -5,119 +5,78 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 10,
+    "str": 11,
     "dex": 10,
     "con": 10,
-    "int": 15,
+    "int": 10,
     "wis": 10,
     "cha": 10
   },
   "proficiencies": [
-    "skill: intimidation",
-    "Skill: Sleight Of Hand",
+    "Skill: Insight",
     "Skill: Stealth",
     "Thieves' Tools",
-    "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
     "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
     "darts",
     "slings",
-    "scimitars",
-    "herbalism kit",
+    "quarterstaffs",
+    "crossbows, light",
     "saving throw: int",
     "saving throw: wis",
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "savage attacks",
-      "index": "savage_attacks",
-      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "extra_critical_damage_dice": 1
-        }
-      }
-    },
-    {
-      "name": "relentless endurance",
-      "index": "relentless_endurance",
-      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
-      "trait_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
-      }
-    },
-    {
-      "name": "menacing",
-      "index": "menacing",
-      "desc": "You gain proficiency in the Intimidation skill."
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "spellcasting_druid",
+      "index": "spellcasting_wizard",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "spellcasting: druid",
+      "name": "spellcasting: wizard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
       ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/int.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "druidic",
+      "index": "arcane_recovery",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "druidic",
+      "name": "arcane recovery",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
       ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/arcane_recovery.json",
+      "updated_at": "2026-07-13T06:30:11.957Z",
+      "image": "/assets/atlas/features/images/arcane_recovery.webp",
+      "feature_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      },
       "source": "Class"
     }
   ],
@@ -143,68 +102,61 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_7u8mqpc0o": {
-      "id": "leather_armor_7u8mqpc0o",
-      "template": "leather_armor",
+    "spellbook_i6cu41e41": {
+      "id": "spellbook_i6cu41e41",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1787641887961,
-      "kind": "armor"
+      "addedAt": 1787642970941,
+      "kind": "tradegood"
     },
-    "explorers_pack_fzcihm8c2": {
-      "id": "explorers_pack_fzcihm8c2",
-      "template": "explorers_pack",
+    "bedroll_z2y45wb31": {
+      "id": "bedroll_z2y45wb31",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1787641887961,
-      "kind": "container"
+      "addedAt": 1787642970942,
+      "kind": "tradegood"
     },
-    "crowbar_kbd1vt6ni": {
-      "id": "crowbar_kbd1vt6ni",
+    "crowbar_fwyss6ku8": {
+      "id": "crowbar_fwyss6ku8",
       "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1787641887963,
+      "addedAt": 1787642970942,
       "kind": "tradegood"
     },
-    "dagger_t7lqh3noh": {
-      "id": "dagger_t7lqh3noh",
+    "dagger_ueh1rivqy": {
+      "id": "dagger_ueh1rivqy",
       "template": "dagger",
       "quantity": 2,
-      "addedAt": 1787641887963,
+      "addedAt": 1787642970942,
       "kind": "weapon"
     },
-    "gold_80575t0i8": {
-      "id": "gold_80575t0i8",
+    "gold_qmfvs8an6": {
+      "id": "gold_qmfvs8an6",
       "template": "gold",
-      "quantity": 16,
-      "addedAt": 1787641887963,
+      "quantity": 11,
+      "addedAt": 1787642970942,
       "kind": "tradegood"
     },
-    "greatclub-2_yrrf6gbdp": {
-      "id": "greatclub-2_yrrf6gbdp",
-      "template": "greatclub-2",
+    "quarterstaff_lbca4hxa4": {
+      "id": "quarterstaff_lbca4hxa4",
+      "template": "quarterstaff",
       "quantity": 1,
-      "addedAt": 1787641917155,
+      "addedAt": 1787642980939,
       "kind": "weapon"
     },
-    "club_3ubm3qmbd": {
-      "id": "club_3ubm3qmbd",
-      "template": "club",
+    "wand_psu96chf1": {
+      "id": "wand_psu96chf1",
+      "template": "wand",
       "quantity": 1,
-      "addedAt": 1787641923719,
-      "kind": "weapon"
-    },
-    "totem_dh3xo5l55": {
-      "id": "totem_dh3xo5l55",
-      "template": "totem",
-      "quantity": 1,
-      "addedAt": 1787641931297,
+      "addedAt": 1787642987682,
       "kind": "equipment"
     },
-    "gold_1dyqq7ojg": {
-      "id": "gold_1dyqq7ojg",
-      "template": "gold",
+    "scholars_pack_uunbwwvnp": {
+      "id": "scholars_pack_uunbwwvnp",
+      "template": "scholars_pack",
       "quantity": 1,
-      "addedAt": 1787641936534,
-      "kind": "tradegood"
+      "addedAt": 1787642992140,
+      "kind": "container"
     }
   },
   "containers": {
@@ -215,47 +167,47 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_fzcihm8c2"
+          "itemId": "spellbook_i6cu41e41"
         },
         {
           "id": "bag_1",
-          "itemId": "crowbar_kbd1vt6ni"
+          "itemId": "bedroll_z2y45wb31"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_80575t0i8"
+          "itemId": "crowbar_fwyss6ku8"
         },
         {
           "id": "bag_3",
-          "itemId": "greatclub-2_yrrf6gbdp"
+          "itemId": "gold_qmfvs8an6"
         },
         {
           "id": "bag_4",
-          "itemId": "greatclub-2_3axpnsmh8"
+          "itemId": "quarterstaff_lbca4hxa4"
         },
         {
           "id": "bag_5",
-          "itemId": "club_3ubm3qmbd"
+          "itemId": "quarterstaff_w94893qtw"
         },
         {
           "id": "bag_6",
-          "itemId": "club_1umw5v7mz"
+          "itemId": "wand_psu96chf1"
         },
         {
           "id": "bag_7",
-          "itemId": "totem_dh3xo5l55"
+          "itemId": "wand_va4uc3apk"
         },
         {
           "id": "bag_8",
-          "itemId": "totem_9xwme5b4b"
+          "itemId": "scholars_pack_uunbwwvnp"
         },
         {
           "id": "bag_9",
-          "itemId": "gold_1dyqq7ojg"
+          "itemId": "scholars_pack_mkdo1w8oe"
         },
         {
           "id": "bag_10",
-          "itemId": "gold_nty3l08xu"
+          "itemId": null
         },
         {
           "id": "bag_11",
@@ -317,7 +269,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_t7lqh3noh"
+        "itemId": "dagger_ueh1rivqy"
       },
       {
         "id": "off_hand",
@@ -333,7 +285,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_7u8mqpc0o"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -435,182 +387,52 @@
   },
   "backpack": [
     {
-      "id": "thieves_tools_3c6zvl2iw",
       "index": "thieves_tools",
       "name": "Thieves' Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp"
+      "quantity": 1
     },
     {
-      "id": "crowbar_xsktszw7b",
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
+    },
+    {
       "index": "crowbar",
       "name": "Crowbar",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/crowbar.json",
-      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
-      "desc": [
-        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/crowbar.webp",
-      "updated_at": "2026-07-12T19:00:13.571Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 21,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "pouch_b91pozweq",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "clothes_travelers_gfnec7ntv",
-      "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
-    },
-    {
-      "id": "gold_oyjngek4t",
-      "index": "gold",
-      "name": "Gold",
-      "quantity": 16,
-      "weight": 1,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
-    }
-  ],
-  "inventory": {
-    "main-hand": {
-      "id": "dagger_1nlv4dsyy",
       "index": "dagger",
       "name": "Dagger",
-      "quantity": 2,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/dagger.json",
-      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
-      "desc": [
-        "A short metal blade mounted to a small hilt and crossguard. The dagger makes an effective side armament for hardened warriors or a hidden blade for assassins and thieves."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/dagger.webp",
-      "updated_at": "2026-07-12T19:00:18.366Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "/assets/atlas/weapon_properties/json/finesse.json"
-        },
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        },
-        {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "/assets/atlas/weapon_properties/json/thrown.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
-      "category": "Simple Melee Weapons",
-      "slot": "main-hand",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 20,
-        "long": 60
-      },
-      "rulesetContext": "2014",
-      "main_hand_slot": "Dagger"
+      "quantity": 2
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 11
     }
-  },
+  ],
+  "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common",
-    "orc"
+    "common"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -620,21 +442,21 @@
     }
   },
   "choices": {},
-  "name": "hdj",
-  "race": "half_orc",
-  "class": "druid",
-  "spellcastingAbility": "wis",
-  "background": "criminal",
-  "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "j",
+  "race": "human",
+  "class": "wizard",
+  "spellcastingAbility": "int",
+  "background": "wayfarer",
+  "alignment": "true_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
   "id": "slot3",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 3,
+  "maxHp": 3,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-25T07:12:35.132Z"
+  "lastSaved": "2026-08-25T07:30:05.039Z"
 }
