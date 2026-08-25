@@ -7,8 +7,79 @@ import { generateInstanceId, deriveItemKind, createDefaultEquipment, createDefau
  * Migrates a Character from v1 (inventory/backpack) to v2 (items/containers/equipment)
  */
 export const migrateCharacterV1ToV2 = (character: Character): Character => {
+  // If character has saveVersion >= 2, perform deep canonical normalization to reconcile mixed records
   if (character.saveVersion && character.saveVersion >= 2) {
-    return character;
+    const items: Record<string, ItemInstance> = { ...(character.items || {}) };
+    const containers: Record<string, InventoryContainer> = { ...(character.containers || {}) };
+    const equipment = character.equipment || createDefaultEquipment(character.id);
+
+    const backpackId = `backpack_${character.id}`;
+    if (!containers[backpackId]) {
+      containers[backpackId] = createDefaultBackpack(character.id);
+    }
+    const backpackContainer = containers[backpackId];
+
+    // Helper: Find existing item instance by template/index or add a new one
+    const reconcileItem = (itemTemplate: any, targetSlots: InventorySlot[]) => {
+      const templateId = itemTemplate.index || itemTemplate.template || itemTemplate.id || 'unknown';
+
+      // Check if instance already exists in items dictionary
+      const existingInstanceId = Object.keys(items).find(id => items[id].template === templateId);
+      if (existingInstanceId) {
+        // Ensure it is mapped into a slot if missing
+        const isMapped = Object.values(containers).some(c => c.slots.some(s => s.itemId === existingInstanceId)) ||
+                         equipment.slots.some(s => s.itemId === existingInstanceId);
+        if (!isMapped) {
+          const emptySlot = targetSlots.find(s => s.itemId === null);
+          if (emptySlot) emptySlot.itemId = existingInstanceId;
+        }
+        return;
+      }
+
+      // If not present, create new instance
+      const instanceId = generateInstanceId(templateId);
+      const instance: ItemInstance = {
+        id: instanceId,
+        template: templateId,
+        quantity: itemTemplate.quantity || 1,
+        addedAt: Date.now(),
+        kind: deriveItemKind(itemTemplate),
+        isMagic: itemTemplate.rarity && itemTemplate.rarity !== 'Common'
+      };
+      items[instanceId] = instance;
+
+      const emptySlot = targetSlots.find(s => s.itemId === null);
+      if (emptySlot) emptySlot.itemId = instanceId;
+    };
+
+    // Reconcile legacy backpack items
+    if (Array.isArray(character.backpack)) {
+      character.backpack.forEach(item => reconcileItem(item, backpackContainer.slots));
+    }
+
+    // Reconcile legacy inventory slots
+    if (character.inventory && typeof character.inventory === 'object') {
+      Object.entries(character.inventory).forEach(([slotId, item]) => {
+        if (!item) return;
+        const v2SlotId = slotId.replace('-', '_');
+        const slot = equipment.slots.find(s => s.id === v2SlotId);
+        if (slot) {
+          reconcileItem(item, [slot]);
+        } else {
+          reconcileItem(item, backpackContainer.slots);
+        }
+      });
+    }
+
+    return {
+      ...character,
+      saveVersion: 2,
+      items,
+      containers,
+      equipment,
+      inventory: {},
+      backpack: []
+    };
   }
 
   const items: Record<string, ItemInstance> = character.items || {};
