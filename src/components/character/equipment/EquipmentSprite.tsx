@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import {
-  getStarterWeaponSpriteCoord,
-  STARTER_WEAPONS_01_PATH,
-  STARTER_WEAPONS_02_PATH
-} from './starterWeaponSpriteMap';
+  getEquipmentSpriteCoord,
+  SPRITE_SHEET_PATHS
+} from './equipmentSpriteMap';
 
-interface StarterWeaponSpriteProps {
-  weaponKey: string;
+interface EquipmentSpriteProps {
+  itemKey: string;
   className?: string;
   alt?: string;
   fallbackUrl?: string;
   style?: React.CSSProperties;
 }
 
-export const StarterWeaponSprite: React.FC<StarterWeaponSpriteProps> = ({
-  weaponKey,
+export const EquipmentSprite: React.FC<EquipmentSpriteProps> = ({
+  itemKey,
   className = '',
   alt,
   fallbackUrl,
@@ -24,12 +23,12 @@ export const StarterWeaponSprite: React.FC<StarterWeaponSpriteProps> = ({
   const [hasError, setHasError] = useState(false);
   const [imageDimensions, setImageDimensions] = useState<{ width: number; height: number } | null>(null);
 
-  const coord = getStarterWeaponSpriteCoord(weaponKey);
-  const sheetPath = coord?.sheet === 'starter_weapons_01' ? STARTER_WEAPONS_01_PATH : STARTER_WEAPONS_02_PATH;
+  const coord = getEquipmentSpriteCoord(itemKey);
+  const sheetPath = coord ? SPRITE_SHEET_PATHS[coord.sheet] : undefined;
 
   useEffect(() => {
     setHasError(false);
-    if (!coord) return;
+    if (!coord || !sheetPath) return;
 
     const img = new Image();
     img.src = sheetPath;
@@ -39,14 +38,14 @@ export const StarterWeaponSprite: React.FC<StarterWeaponSpriteProps> = ({
     img.onerror = () => {
       setHasError(true);
     };
-  }, [weaponKey, coord?.sheet, coord?.row, coord?.col]);
+  }, [itemKey, coord?.sheet, coord?.row, coord?.col]);
 
-  if (!coord || hasError) {
+  if (!coord || !sheetPath || hasError) {
     if (fallbackUrl) {
       return (
         <ChromaKeyImage
           src={fallbackUrl}
-          alt={alt || weaponKey}
+          alt={alt || itemKey}
           onError={() => setHasError(true)}
           className={className}
           style={style}
@@ -73,7 +72,7 @@ export const StarterWeaponSprite: React.FC<StarterWeaponSpriteProps> = ({
   return (
     <ChromaKeyImage
       src={sheetPath}
-      alt={alt || weaponKey}
+      alt={alt || itemKey}
       crop={crop}
       onError={() => setHasError(true)}
       className={className}

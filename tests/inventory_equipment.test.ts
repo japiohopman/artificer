@@ -4,7 +4,7 @@ import { useCharacterStore } from '../src/store/useCharacterStore';
 import { useInventoryStore } from '../src/store/useInventoryStore';
 import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/inventoryUtils';
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
-import { getStarterWeaponSpriteCoord } from '../src/components/character/equipment/starterWeaponSpriteMap';
+import { getEquipmentSpriteCoord } from '../src/components/character/equipment/equipmentSpriteMap';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -180,20 +180,41 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(Object.keys(normalized2.items).length).toBeGreaterThan(0);
   });
 
-  it('resolves starter weapon sprite coordinates for all 32 starter weapon keys', () => {
+  it('resolves equipment sprite coordinates across starter weapon, armor, spellcasting, and adventuring gear sprite sheets', () => {
     const weapons1 = ['dagger', 'handaxe', 'javelin', 'mace', 'quarterstaff', 'sickle', 'club', 'spear', 'shortsword', 'rapier', 'longsword', 'scimitar', 'greatsword', 'greataxe', 'greatclub', 'light_hammer'];
     const weapons2 = ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'sling', 'dart', 'blowgun', 'trident', 'warhammer', 'battleaxe', 'flail', 'maul', 'morningstar', 'pike', 'halberd', 'glaive'];
+    const spellcasting = ['arcane_focus', 'component_pouch', 'druidic_focus', 'holy_symbol', 'crystal', 'orb', 'rod', 'staff', 'wand', 'spellbook', 'amulet', 'reliquary', 'emblem', 'sprig_of_mistletoe', 'totem'];
+    const armor = ['padded_armor', 'leather_armor', 'studded_leather_armor', 'hide_armor', 'chain_shirt', 'scale_mail', 'breastplate', 'half_plate', 'ring_mail', 'chain_mail', 'splint_armor', 'plate_armor', 'shield'];
+    const adventuring = ['explorers_pack', 'dungeoneers_pack', 'burglars_pack', 'diplomats_pack', 'entertainers_pack', 'priests_pack', 'scholars_pack', 'backpack', 'bedroll', 'hempen_rope_50_ft', 'rations', 'torch', 'tinderbox', 'waterskin', 'mess_kit'];
 
     weapons1.forEach(w => {
-      const coord = getStarterWeaponSpriteCoord(w);
+      const coord = getEquipmentSpriteCoord(w);
       expect(coord).not.toBeNull();
       expect(coord?.sheet).toBe('starter_weapons_01');
     });
 
     weapons2.forEach(w => {
-      const coord = getStarterWeaponSpriteCoord(w);
+      const coord = getEquipmentSpriteCoord(w);
       expect(coord).not.toBeNull();
       expect(coord?.sheet).toBe('starter_weapons_02');
+    });
+
+    spellcasting.forEach(s => {
+      const coord = getEquipmentSpriteCoord(s);
+      expect(coord).not.toBeNull();
+      expect(coord?.sheet).toBe('starter_spellcasting_01');
+    });
+
+    armor.forEach(a => {
+      const coord = getEquipmentSpriteCoord(a);
+      expect(coord).not.toBeNull();
+      expect(coord?.sheet).toBe('starter_armor_01');
+    });
+
+    adventuring.forEach(adv => {
+      const coord = getEquipmentSpriteCoord(adv);
+      expect(coord).not.toBeNull();
+      expect(coord?.sheet).toBe('starter_adventuring_01');
     });
   });
 

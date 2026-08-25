@@ -12,8 +12,8 @@ import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
 import { normalizeImageUrl } from '../../../services/storageService';
-import { StarterWeaponSprite } from '../equipment/StarterWeaponSprite';
-import { getStarterWeaponSpriteCoord } from '../equipment/starterWeaponSpriteMap';
+import { EquipmentSprite } from '../equipment/EquipmentSprite';
+import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
 
 export const FullInventoryMenu: React.FC = () => {
   const {
@@ -190,9 +190,9 @@ export const FullInventoryMenu: React.FC = () => {
 
                         <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
                           <div className="w-12 h-12 rounded bg-black/10 overflow-hidden flex items-center justify-center shrink-0 border border-dragon-red/20">
-                            {getStarterWeaponSpriteCoord(selectedItem.template || selectedItem.index || selectedItem.name) ? (
-                              <StarterWeaponSprite
-                                weaponKey={selectedItem.template || selectedItem.index || selectedItem.name}
+                            {getEquipmentSpriteCoord(selectedItem.template || selectedItem.index || selectedItem.name) ? (
+                              <EquipmentSprite
+                                itemKey={selectedItem.template || selectedItem.index || selectedItem.name}
                                 alt={selectedItem.name}
                                 className="w-full h-full object-contain"
                                 fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
