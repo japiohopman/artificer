@@ -21,9 +21,12 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
   - **Acceptance:** downstream Atlas loaders resolve versioned content through the canonical context boundary; no component hardcodes `/14/` or `/24/` paths; existing data remains loadable.
   - **Out of scope:** redesigning all D&D rules or creating mixed-ruleset fallback engines.
 
-
 - [ ] **Inventory & Equipment Architecture / UX Overhaul**
   - **Goal:** consolidate the existing inventory/equipment implementations instead of adding another inventory screen. The current system has overlapping responsibilities across `Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and `CharacterPanel.tsx`.
+  - **Phases:**
+    - [x] **Asset Foundation v1:** Canonical visual identity layer (`resolveVisualIdentity`), authoritative sprite manifest (`spriteManifest.ts`), ruleset handling, deduplication across classes/backgrounds/loot, pack/pack-content representation, starter equipment audit tool (`auditStarterEquipment.cjs`), test suite, and architecture contract (`INVENTORY_ASSETS.md`).
+    - [ ] **Asset Production:** Rendering and producing high-resolution WebP sprite sheet images (`starter_weapons_01.webp`, etc.).
+    - [ ] **Inventory UI Integration:** Integrating `resolveVisualIdentity` and `<EquipmentSprite />` into UI components (`Inventory.tsx`, `EquipmentDollSlot.tsx`, `FullInventoryMenu.tsx`, etc.).
   - **Intended responsibility boundaries:**
     - `src/components/hud/CharacterPanel.tsx` should remain a compact runtime HUD surface and should not contain a full 120-slot inventory workspace.
     - Character-domain inventory components should live under a clear `src/components/character/inventory/` module.
@@ -60,7 +63,8 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
-- [x] Inventory & Equipment Architecture / UX Overhaul
+- [x] Inventory & Equipment Visual Asset Foundation v1 (Canonical Visual Identity layer, Sprite Manifest contract, ruleset semantics, deduplication, pack content handling, audit script, tests & docs)
+- [x] Inventory & Equipment Architecture / UX Overhaul (V2 migration & drag/drop foundation)
 - [x] Combat Integration v1 — BattleMap → CombatTester → CombatGrid (PR #261 accepted and merged)
 - [x] Ruleset Selection & Ruleset Context — 2014 vs 2024 (Downstream Integration v1 Pass: Feats, Class Levels, Spells)
 - [x] Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation Pass
