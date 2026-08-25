@@ -1,9 +1,11 @@
 import React from 'react';
-import { useUIStore } from '../../store/useUIStore';
-import { useCharacterStore } from '../../store/useCharacterStore';
-import { GameIcon } from '../../game_icons';
-import { cn } from '../../lib/utils';
-import { normalizeImageUrl } from '../../services/storageService';
+import { useUIStore } from '../../../store/useUIStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
+import { GameIcon, GameIconName } from '../../../game_icons';
+import { cn } from '../../../lib/utils';
+import { normalizeImageUrl } from '../../../services/storageService';
+import { EquipmentSprite } from '../equipment/EquipmentSprite';
+import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
@@ -38,7 +40,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
 
   const handleInspect = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setInspectingItem({
+    useUIStore.getState().setInspectingItem({
       item, sourceId, index: typeof index === 'number' ? index : undefined, itemId: item.id, slot
     });
   };
@@ -55,24 +57,42 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         onClick={handleInspect}
         title={`${item.name} (${item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
-          "aspect-square w-full h-full bg-parchment-200/40 hover:bg-dragon-red/15 border border-dragon-red/10 rounded-sm relative flex items-center justify-center p-0.5 cursor-grab active:cursor-grabbing transition-all select-none shadow-[inset_0_1px_3px_rgba(0,0,0,0.1)]",
-          isMagic && "ring-1 ring-dragon-gold/30 border-dragon-gold/40 bg-dragon-gold/[0.03]",
+          "aspect-[9/16] w-full bg-parchment-200/50 hover:bg-dragon-red/15 border-2 border-dragon-red/15 hover:border-dragon-red/40 rounded-lg relative flex flex-col items-center justify-between p-1.5 cursor-pointer transition-all select-none shadow-sm group overflow-hidden text-left pointer-events-auto",
+          isMagic && "ring-1 ring-dragon-gold/50 border-dragon-gold/60 bg-dragon-gold/[0.05]",
           isDragging && "opacity-0 z-50 scale-105"
         )}
       >
-        <img
-          src={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
-          alt={item.name}
-          className="max-h-[90%] max-w-[90%] object-contain pointer-events-none"
-          referrerPolicy="no-referrer"
-        />
+        <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
+          {getEquipmentSpriteCoord(item.template || item.index || item.name) ? (
+            <EquipmentSprite
+              itemKey={item.template || item.index || item.name}
+              alt={item.name}
+              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+              fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
+            />
+          ) : (
+            <img
+              src={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
+              alt={item.name}
+              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+              referrerPolicy="no-referrer"
+            />
+          )}
+        </div>
 
-        {/* Quantity Indicator */}
-        {item.quantity > 1 && (
-          <div className="absolute bottom-0.5 right-0.5 bg-dragon-red/90 text-white font-mono font-bold text-[6px] px-1 rounded-sm shadow-sm pointer-events-none scale-[0.8] origin-bottom-right">
-            x{item.quantity}
+        <div className="w-full text-center pointer-events-none">
+          <p className="text-[7px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-tight w-full px-0.5">
+            {item.name}
+          </p>
+          <div className="flex items-center justify-between w-full mt-0.5 text-[6px] font-bold text-parchment-500 uppercase px-0.5">
+            <span className="truncate">{item.kind || item._type || 'item'}</span>
+            {item.quantity > 1 && (
+              <span className="bg-dragon-red/90 text-white px-1 rounded-sm font-mono font-bold">
+                x{item.quantity}
+              </span>
+            )}
           </div>
-        )}
+        </div>
       </div>
     );
   }

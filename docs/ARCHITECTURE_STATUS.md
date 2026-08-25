@@ -14,6 +14,7 @@ The current architectural priority is to keep **authoring tools separate from ru
 - `useUIStore` — UI/navigation state.
 - `useWorldStore` — world/time/weather/discovery state.
 - `useAtlasStore` — Atlas data and registries.
+- `useInventoryStore` — domain command & controller layer for party inventory, equip/unequip, and transfers operating directly against canonical character state (`useCharacterStore`).
 - Feature-local state — temporary editor/UI state that does not belong in global runtime stores.
 
 ### Ruleset Context Ownership Contract
