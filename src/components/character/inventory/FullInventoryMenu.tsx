@@ -12,10 +12,12 @@ import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
 import { normalizeImageUrl } from '../../../services/storageService';
+import { StarterWeaponSprite } from '../equipment/StarterWeaponSprite';
+import { getStarterWeaponSpriteCoord } from '../equipment/starterWeaponSpriteMap';
 
 export const FullInventoryMenu: React.FC = () => {
-  const { 
-    isInventoryMenuOpen, 
+  const {
+    isInventoryMenuOpen,
     setIsInventoryMenuOpen,
     equipItem,
     transferItem
@@ -88,7 +90,7 @@ export const FullInventoryMenu: React.FC = () => {
       {/* Texture Overlays */}
       <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
-      
+
       {/* Header */}
       <div className="shrink-0 bg-dragon-darkRed h-16 border-b-4 border-dragon-gold flex items-center justify-between px-8 relative z-10 shadow-xl">
         <div className="flex items-center gap-4">
@@ -104,7 +106,7 @@ export const FullInventoryMenu: React.FC = () => {
           </div>
         </div>
 
-        <button 
+        <button
           onClick={() => setIsInventoryMenuOpen(false)}
           className="w-10 h-10 rounded-full bg-white/10 text-white hover:bg-dragon-red hover:rotate-90 transition-all flex items-center justify-center border border-white/20 group"
           title="Close Inventory Menu"
@@ -119,9 +121,9 @@ export const FullInventoryMenu: React.FC = () => {
         <div className="w-1/4 h-full border-r border-dragon-red/10 p-4 space-y-4 overflow-y-auto custom-scrollbar bg-black/5">
            <SectionLabel label="Primary Cohort" />
            {leftChars.map(char => (
-             <CharacterInventoryCard 
-               key={char.id} 
-               character={char} 
+             <CharacterInventoryCard
+               key={char.id}
+               character={char}
                isActive={activeCharacterId === char.id}
                onClick={() => setActiveCharacter(char.id)}
              />
@@ -188,11 +190,20 @@ export const FullInventoryMenu: React.FC = () => {
 
                         <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
                           <div className="w-12 h-12 rounded bg-black/10 overflow-hidden flex items-center justify-center shrink-0 border border-dragon-red/20">
-                            <ChromaKeyImage
-                              src={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
-                              alt={selectedItem.name}
-                              className="w-full h-full object-contain"
-                            />
+                            {getStarterWeaponSpriteCoord(selectedItem.template || selectedItem.index || selectedItem.name) ? (
+                              <StarterWeaponSprite
+                                weaponKey={selectedItem.template || selectedItem.index || selectedItem.name}
+                                alt={selectedItem.name}
+                                className="w-full h-full object-contain"
+                                fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
+                              />
+                            ) : (
+                              <ChromaKeyImage
+                                src={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
+                                alt={selectedItem.name}
+                                className="w-full h-full object-contain"
+                              />
+                            )}
                           </div>
                           <div className="flex-1 text-[9px] space-y-0.5">
                             <div className="flex justify-between">
@@ -241,9 +252,9 @@ export const FullInventoryMenu: React.FC = () => {
         <div className="w-1/4 h-full border-l border-dragon-red/10 p-4 space-y-4 overflow-y-auto custom-scrollbar bg-black/5">
            <SectionLabel label="Reserve Contingent" />
            {rightChars.map(char => (
-             <CharacterInventoryCard 
-               key={char.id} 
-               character={char} 
+             <CharacterInventoryCard
+               key={char.id}
+               character={char}
                isActive={activeCharacterId === char.id}
                onClick={() => setActiveCharacter(char.id)}
              />
@@ -282,12 +293,12 @@ const SectionLabel: React.FC<{ label: string }> = ({ label }) => (
 );
 
 const CharacterInventoryCard: React.FC<{ character: any, isActive: boolean, onClick: () => void }> = ({ character, isActive, onClick }) => (
-  <button 
+  <button
     onClick={onClick}
     className={cn(
       "w-full p-3 rounded-xl border-2 transition-all text-left flex items-center gap-4 group relative overflow-hidden",
-      isActive 
-        ? "bg-dragon-red border-dragon-gold shadow-xl -translate-y-1" 
+      isActive
+        ? "bg-dragon-red border-dragon-gold shadow-xl -translate-y-1"
         : "bg-white/40 border-dragon-red/10 hover:bg-white/60 hover:border-dragon-red/30 shadow-md"
     )}
   >

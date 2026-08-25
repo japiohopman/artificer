@@ -4,6 +4,7 @@ import { useCharacterStore } from '../src/store/useCharacterStore';
 import { useInventoryStore } from '../src/store/useInventoryStore';
 import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/inventoryUtils';
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
+import { getStarterWeaponSpriteCoord } from '../src/components/character/equipment/starterWeaponSpriteMap';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -177,6 +178,23 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
 
     expect(normalized2.saveVersion).toBe(2);
     expect(Object.keys(normalized2.items).length).toBeGreaterThan(0);
+  });
+
+  it('resolves starter weapon sprite coordinates for all 32 starter weapon keys', () => {
+    const weapons1 = ['dagger', 'handaxe', 'javelin', 'mace', 'quarterstaff', 'sickle', 'club', 'spear', 'shortsword', 'rapier', 'longsword', 'scimitar', 'greatsword', 'greataxe', 'greatclub', 'light_hammer'];
+    const weapons2 = ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'sling', 'dart', 'blowgun', 'trident', 'warhammer', 'battleaxe', 'flail', 'maul', 'morningstar', 'pike', 'halberd', 'glaive'];
+
+    weapons1.forEach(w => {
+      const coord = getStarterWeaponSpriteCoord(w);
+      expect(coord).not.toBeNull();
+      expect(coord?.sheet).toBe('starter_weapons_01');
+    });
+
+    weapons2.forEach(w => {
+      const coord = getStarterWeaponSpriteCoord(w);
+      expect(coord).not.toBeNull();
+      expect(coord?.sheet).toBe('starter_weapons_02');
+    });
   });
 
   it('preserves distinct ItemInstances sharing the same template without merging or deduplicating', () => {
