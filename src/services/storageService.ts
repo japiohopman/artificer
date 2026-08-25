@@ -4,6 +4,7 @@
 
 import { soundService } from './soundService';
 import { useGameStore } from '../store/useGameStore';
+import { migrateCharacterV1ToV2 } from '../lib/migrationUtils';
 
 export const REPO = process.env.GITHUB_REPO || "japiohopman/artificer";
 export const BRANCH = process.env.GITHUB_BRANCH || "main";
@@ -99,22 +100,27 @@ export async function fetchRecruitNPCList(): Promise<{ name: string; path: strin
 }
 
 export async function fetchRecruitNPCData(index: string): Promise<any> {
+  let data: any = null;
   // Try local first
   try {
     const res = await fetch(`/assets/atlas/characters/recruit_npc/${index}.json`);
     if (res.ok) {
-      return await res.json();
+      data = await res.json();
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/characters/recruit_npc/${index}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-  try {
-    const res = await fetch(url);
-    return await safeJson(res);
-  } catch (e) {
-    return null;
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/characters/recruit_npc/${index}.json?t=${Date.now()}`;
+    const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+    try {
+      const res = await fetch(url);
+      data = await safeJson(res);
+    } catch (e) {
+      return null;
+    }
   }
+
+  return data ? migrateCharacterV1ToV2(data) : null;
 }
 
 export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {

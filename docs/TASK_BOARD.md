@@ -81,20 +81,20 @@ PR #261 accepted and merged. Implementation, adapter, unit tests, and Playwright
 - [x] Keep BattleMapEditor as authoring UI; keep CombatTester as testing/debug UI; keep CombatGrid as runtime representation.
 
 ### Inventory & Equipment Architecture / UX Overhaul
-- [ ] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.
-- [ ] Define the intended character-domain structure: `character/profile/`, `character/inventory/`, `character/equipment/`, `character/progression/`.
-- [ ] Keep reusable character-domain inventory/equipment components under `character/`; do not move inventory into `hud/` merely because it is visible from the HUD.
-- [ ] Refactor `CharacterPanel.tsx` toward a compact runtime HUD surface.
-- [ ] Keep `DraggableInventoryItem` as a reusable item interaction primitive where appropriate.
-- [ ] Make `FullInventoryMenu` the full inventory workspace.
-- [ ] Provide a clear UI entry point from CharacterPanel to the full inventory workspace.
-- [ ] Implement reliable scrolling, category filtering and item inspection.
-- [ ] Implement working equip/unequip interactions through supported click and drag/drop flows.
-- [ ] Ensure EquipmentDoll uses the intended 9:16 visual treatment consistently.
-- [ ] Fix supported green-screen equipment rendering through the shared chroma-key infrastructure.
-- [ ] Verify party inventory/shared storage behavior and transfers.
-- [ ] Preserve Inventory V2 registry/slot architecture and save compatibility.
-- [ ] Add regression tests around equip/unequip, item inspection, DnD transfers and inventory rendering state.
+- [x] Audit `src/components/character/Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `EquipmentDoll.tsx`, `SpellInventory.tsx` and related inventory/equipment components.
+- [x] Define the intended character-domain structure: `character/profile/`, `character/inventory/`, `character/equipment/`, `character/progression/`.
+- [x] Keep reusable character-domain inventory/equipment components under `character/`; do not move inventory into `hud/` merely because it is visible from the HUD.
+- [x] Refactor `CharacterPanel.tsx` toward a compact runtime HUD surface.
+- [x] Keep `DraggableInventoryItem` as a reusable item interaction primitive where appropriate.
+- [x] Make `FullInventoryMenu` the full inventory workspace.
+- [x] Provide a clear UI entry point from CharacterPanel to the full inventory workspace.
+- [x] Implement reliable scrolling, category filtering and item inspection.
+- [x] Implement working equip/unequip interactions through supported click and drag/drop flows.
+- [x] Ensure EquipmentDoll uses the intended 9:16 visual treatment consistently.
+- [x] Fix supported green-screen equipment rendering through the shared chroma-key infrastructure.
+- [x] Verify party inventory/shared storage behavior and transfers.
+- [x] Preserve Inventory V2 registry/slot architecture and save compatibility.
+- [x] Add regression tests around equip/unequip, item inspection, DnD transfers and inventory rendering state.
 
 ### Canonical Character Profile & CharacterScreen Refactor
 This follows the Character Creator Selection Experience rather than being folded into it.

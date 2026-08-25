@@ -59,6 +59,8 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
       const sourceX = crop ? crop.sx : 0;
       const sourceY = crop ? crop.sy : 0;
 
+      if (!sourceWidth || !sourceHeight) return;
+
       canvas.width = sourceWidth;
       canvas.height = sourceHeight;
 
@@ -87,25 +89,25 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
         // We look for any pixel where green is the dominant channel
         const maxOther = Math.max(r, b);
         const diff = g - maxOther;
-        
+
         // If green is dominant, we treat it as background
         // We use a very low threshold to catch the "vague" greenish haze
         if (g > maxOther) {
           // Confidence score: how sure are we this is background green?
           // If diff is > 10, we start fading. If diff is > 35, it's gone.
           let alpha = 255;
-          
+
           if (diff > 5) {
             // Map diff 5-35 to alpha 255-0
             const factor = Math.max(0, Math.min(1, (diff - 5) / 30));
             alpha = Math.floor(255 * (1 - factor));
-            
+
             // For clear green dominance, force transparency
             if (diff > 35) alpha = 0;
-            
+
             // Also check for high-brightness greens which are common in AI backgrounds
             if (g > 160 && diff > 15) alpha = 0;
-            
+
             data[i + 3] = Math.min(data[i + 3], alpha);
 
             // Aggressive spill reduction: remove green tint from edges entirely
@@ -114,7 +116,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
             }
           }
         }
-        
+
         // Special case for desaturated greenish grays (common in AI haze)
         // If it's bright and slightly greenish, fade it out
         if (g > 180 && g > r && g > b) {

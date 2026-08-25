@@ -4,8 +4,8 @@ import { useCharacterStore } from '../../store/useCharacterStore';
 import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
-import { EquipmentDoll } from './EquipmentDoll';
-import { Inventory } from './Inventory';
+import { EquipmentDoll } from './equipment/EquipmentDoll';
+import { Inventory } from './inventory/Inventory';
 import { CharacterStats } from './CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
 import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
@@ -32,6 +32,7 @@ export const CharacterPanel: React.FC = () => {
   const {
     isInventoryOpen,
     setIsInventoryOpen,
+    setIsInventoryMenuOpen,
     equipItem,
     unequipItem,
     addVehicle
@@ -495,10 +496,17 @@ export const CharacterPanel: React.FC = () => {
           </AnimatePresence>
         </div>
 
-          {/* Footer */}
-          <div className="bg-parchment-200 p-2 text-[8px] text-parchment-500 font-mono flex justify-between border-t border-parchment-300">
-            <span>CHAR_SYS_v2.1</span>
-            <span className="flex items-center gap-1">
+          {/* Footer & Full Inventory Entry Point */}
+          <div className="bg-parchment-200 p-2 border-t border-parchment-300 flex items-center justify-between">
+            <button
+              onClick={() => setIsInventoryMenuOpen(true)}
+              className="flex items-center gap-1.5 px-2.5 py-1 bg-dragon-red text-white hover:bg-dragon-darkRed rounded text-[9px] font-bold uppercase tracking-wider transition-colors shadow-sm"
+              title="Open Grand Party Manifest / Full Inventory Workspace"
+            >
+              <Package size={12} />
+              <span>Full Inventory</span>
+            </button>
+            <span className="flex items-center gap-1 text-[8px] text-parchment-500 font-mono">
               <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse" />
               SYNC
             </span>

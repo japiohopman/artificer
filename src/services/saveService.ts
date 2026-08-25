@@ -1,6 +1,7 @@
 import { commitFile, deleteFile, normalizeImageUrl, REPO, BRANCH } from './storageService';
 import { Character } from '../store/useCharacterStore';
 import { useWorldStore } from '../store/useWorldStore';
+import { migrateCharacterV1ToV2 } from '../lib/migrationUtils';
 
 export const saveService = {
   async saveCharacter(character: Character, slot?: number): Promise<boolean> {
@@ -135,8 +136,9 @@ export const saveService = {
         const imagePath = char.imageUrl || (isSlot ? `/data/character_save/images/${id}/${id}_portrait.webp` : undefined);
         const matrixPath = char.matrixUrl || (isSlot ? `/data/character_save/images/${id}/${id}_matrix.webp` : undefined);
 
+        const normalizedChar = migrateCharacterV1ToV2(char);
         return {
-          ...char,
+          ...normalizedChar,
           avatarUrl: avatarPath ? normalizeImageUrl(avatarPath, 'character', id) : undefined,
           imageUrl: imagePath ? normalizeImageUrl(imagePath, 'character', id) : undefined,
           matrixUrl: matrixPath ? normalizeImageUrl(matrixPath, 'character', id) : undefined

@@ -4,7 +4,7 @@ XHR GET
 http://localhost:3000/api/fetch?url=https://api.github.com/repos/japiohopman/artificer/contents/public/assets/atlas/magic_items/json?ref=main&t=1787144508496
 [HTTP/1.1 404 Not Found 210ms]
 
-	
+
 GET
 	http://localhost:3000/api/fetch?url=https://api.github.com/repos/japiohopman/artificer/contents/public/assets/atlas/magic_items/json?ref=main&t=1787144508496
 Status

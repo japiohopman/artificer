@@ -22,7 +22,7 @@ import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from '../../s
 import { motion, AnimatePresence } from 'motion/react';
 import { useAtlasStore } from '../../store/useAtlasStore';
 import { useCharacterStore, SKILL_LIST } from '../../store/useCharacterStore';
-import { EquipmentDoll } from '../character/EquipmentDoll';
+import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { GameIcon } from '../../game_icons';
 
 import { NPCGenerator } from './npc_generator';
