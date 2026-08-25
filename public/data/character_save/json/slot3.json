@@ -1,123 +1,82 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
-    "str": 11,
-    "dex": 16,
-    "con": 16,
-    "int": 11,
-    "wis": 8,
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
     "cha": 10
   },
   "proficiencies": [
-    "skill: intimidation",
     "Skill: Animal Handling",
     "Skill: Persuasion",
     "Navigator'S Tools",
-    "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
     "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
     "darts",
     "slings",
-    "scimitars",
-    "herbalism kit",
+    "quarterstaffs",
+    "crossbows, light",
     "saving throw: int",
     "saving throw: wis",
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "savage attacks",
-      "index": "savage_attacks",
-      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "extra_critical_damage_dice": 1
-        }
-      }
-    },
-    {
-      "name": "relentless endurance",
-      "index": "relentless_endurance",
-      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
-      "trait_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
-      }
-    },
-    {
-      "name": "menacing",
-      "index": "menacing",
-      "desc": "You gain proficiency in the Intimidation skill."
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "spellcasting_druid",
+      "index": "spellcasting_wizard",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "spellcasting: druid",
+      "name": "spellcasting: wizard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
       ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/int.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "druidic",
+      "index": "arcane_recovery",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "druidic",
+      "name": "arcane recovery",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
       ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/arcane_recovery.json",
+      "updated_at": "2026-07-13T06:30:11.957Z",
+      "image": "/assets/atlas/features/images/arcane_recovery.webp",
+      "feature_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      },
       "source": "Class"
     }
   ],
@@ -143,33 +102,47 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_lgbflf1da": {
-      "id": "leather_armor_lgbflf1da",
-      "template": "leather_armor",
+    "spellbook_8wvv6oepn": {
+      "id": "spellbook_8wvv6oepn",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1787602598310,
-      "kind": "armor"
+      "addedAt": 1787632523149,
+      "kind": "tradegood"
     },
-    "explorers_pack_q11v1n2y2": {
-      "id": "explorers_pack_q11v1n2y2",
-      "template": "explorers_pack",
-      "quantity": 1,
-      "addedAt": 1787602598310,
-      "kind": "container"
-    },
-    "abacus_jq1yhpib3": {
-      "id": "abacus_jq1yhpib3",
+    "abacus_ytzj3jnnj": {
+      "id": "abacus_ytzj3jnnj",
       "template": "abacus",
       "quantity": 1,
-      "addedAt": 1787602598311,
+      "addedAt": 1787632523149,
       "kind": "tradegood"
     },
-    "gold_8la8lzryy": {
-      "id": "gold_8la8lzryy",
+    "gold_wdphx05a6": {
+      "id": "gold_wdphx05a6",
       "template": "gold",
       "quantity": 22,
-      "addedAt": 1787602598311,
+      "addedAt": 1787632523149,
       "kind": "tradegood"
+    },
+    "quarterstaff_58fnq7xfh": {
+      "id": "quarterstaff_58fnq7xfh",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1787632529141,
+      "kind": "weapon"
+    },
+    "orb_binas21sn": {
+      "id": "orb_binas21sn",
+      "template": "orb",
+      "quantity": 1,
+      "addedAt": 1787632533946,
+      "kind": "equipment"
+    },
+    "scholars_pack_f5e88upse": {
+      "id": "scholars_pack_f5e88upse",
+      "template": "scholars_pack",
+      "quantity": 1,
+      "addedAt": 1787632546451,
+      "kind": "container"
     }
   },
   "containers": {
@@ -180,35 +153,35 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_q11v1n2y2"
+          "itemId": "spellbook_8wvv6oepn"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_jq1yhpib3"
+          "itemId": "abacus_ytzj3jnnj"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_8la8lzryy"
+          "itemId": "gold_wdphx05a6"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "quarterstaff_5hie1k4fd"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "orb_binas21sn"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "orb_dl42f1op6"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "scholars_pack_f5e88upse"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "scholars_pack_eb8k9l2et"
         },
         {
           "id": "bag_8",
@@ -282,7 +255,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "quarterstaff_58fnq7xfh"
       },
       {
         "id": "off_hand",
@@ -298,7 +271,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_lgbflf1da"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -433,8 +406,7 @@
   "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common",
-    "orc"
+    "common"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -444,21 +416,21 @@
     }
   },
   "choices": {},
-  "race": "half_orc",
-  "class": "druid",
+  "race": "human",
+  "class": "wizard",
   "background": "merchant",
-  "name": "  cv ",
-  "spellcastingAbility": "wis",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "yeyo",
+  "spellcastingAbility": "int",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
   "id": "slot3",
-  "hp": 7,
-  "maxHp": 7,
+  "hp": 3,
+  "maxHp": 3,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-24T20:16:45.968Z"
+  "lastSaved": "2026-08-25T04:35:57.440Z"
 }
