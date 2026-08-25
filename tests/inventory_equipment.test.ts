@@ -144,7 +144,7 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(backpackContainer.slots.some((s: any) => s.itemId !== null)).toBe(true);
   });
 
-  it('normalizes real recruit NPC repository JSON files without data loss or duplicate instances', () => {
+  it('normalizes real recruit NPC repository JSON files with full item data integrity', () => {
     const fs = require('fs');
     const path = require('path');
 
@@ -158,11 +158,57 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const normalized2 = migrateCharacterV1ToV2(raw2);
 
     expect(normalized1.saveVersion).toBe(2);
-    expect(normalized1.items).toBeDefined();
-    expect(normalized1.equipment?.slots.length).toBeGreaterThan(0);
+    expect(Object.keys(normalized1.items).length).toBeGreaterThan(0);
+
+    // Verify main_hand, chest, off_hand equipment slots populated from raw1 inventory
+    const mainHandSlot1 = normalized1.equipment.slots.find((s: any) => s.id === 'main_hand');
+    const chestSlot1 = normalized1.equipment.slots.find((s: any) => s.id === 'chest');
+    const offHandSlot1 = normalized1.equipment.slots.find((s: any) => s.id === 'off_hand');
+
+    expect(mainHandSlot1?.itemId).not.toBeNull();
+    expect(chestSlot1?.itemId).not.toBeNull();
+    expect(offHandSlot1?.itemId).not.toBeNull();
+
+    // Verify backpack container items match raw1 backpack items
+    const backpack1 = Object.values(normalized1.containers).find((c: any) => c.type === 'backpack');
+    expect(backpack1).toBeDefined();
+    const backpackMappedItemIds = backpack1.slots.filter((s: any) => s.itemId !== null).map((s: any) => s.itemId);
+    expect(backpackMappedItemIds.length).toBeGreaterThan(0);
 
     expect(normalized2.saveVersion).toBe(2);
-    expect(normalized2.items).toBeDefined();
-    expect(normalized2.equipment?.slots.length).toBeGreaterThan(0);
+    expect(Object.keys(normalized2.items).length).toBeGreaterThan(0);
+  });
+
+  it('preserves distinct ItemInstances sharing the same template without merging or deduplicating', () => {
+    const characterWithDuplicates: any = {
+      id: 'char_dups',
+      name: 'Twin Blades',
+      saveVersion: 2,
+      items: {
+        'handaxe_instance_A': { id: 'handaxe_instance_A', template: 'handaxe', quantity: 1 },
+        'handaxe_instance_B': { id: 'handaxe_instance_B', template: 'handaxe', quantity: 1 }
+      },
+      equipment: {
+        containerId: 'equip_char_dups',
+        slots: [{ id: 'main_hand', itemId: 'handaxe_instance_A' }]
+      },
+      containers: {
+        'backpack_char_dups': {
+          id: 'backpack_char_dups',
+          type: 'backpack',
+          slots: [{ id: 'slot_0', itemId: 'handaxe_instance_B' }]
+        }
+      }
+    };
+
+    const normalized = migrateCharacterV1ToV2(characterWithDuplicates);
+    expect(normalized.items['handaxe_instance_A']).toBeDefined();
+    expect(normalized.items['handaxe_instance_B']).toBeDefined();
+    expect(Object.keys(normalized.items).length).toBe(2);
+
+    const mainHand = normalized.equipment.slots.find((s: any) => s.id === 'main_hand');
+    const backpack = Object.values(normalized.containers).find((c: any) => c.type === 'backpack');
+    expect(mainHand?.itemId).toBe('handaxe_instance_A');
+    expect(backpack?.slots[0].itemId).toBe('handaxe_instance_B');
   });
 });

@@ -214,7 +214,7 @@ export const FullInventoryMenu: React.FC = () => {
                           <button
                             onClick={() => {
                               const targetSlot = selectedItem.slot || (selectedItem.kind === 'shield' ? 'off_hand' : 'main_hand');
-                              equipItem(selectedItem, targetSlot);
+                              equipItem(selectedItem.id || selectedItem, targetSlot);
                               setInspectingItem(null);
                             }}
                             className="w-full py-1.5 bg-dragon-red text-white hover:bg-dragon-darkRed rounded text-[9px] font-bold uppercase tracking-wider transition-colors shadow"

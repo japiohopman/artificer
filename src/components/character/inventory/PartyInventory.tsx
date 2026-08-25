@@ -13,6 +13,7 @@ export const PartyInventory: React.FC = () => {
 
   const { setNodeRef, isOver } = useDroppable({
     id: 'party',
+    data: { characterId: 'party', type: 'party' }
   });
 
   const categories = [
