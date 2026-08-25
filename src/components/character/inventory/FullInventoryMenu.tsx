@@ -36,11 +36,6 @@ export const FullInventoryMenu: React.FC = () => {
   const selectedItem = inspectingItem?.item;
   const itemWeight = selectedItem ? resolveItemTemplateWeight(selectedItem.template || selectedItem.index || selectedItem, activeChar?.ruleset) : 0;
 
-  if (!isInventoryMenuOpen) return null;
-
-  const leftChars = characters.slice(0, 3);
-  const rightChars = characters.slice(3, 6);
-
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -48,6 +43,11 @@ export const FullInventoryMenu: React.FC = () => {
       },
     })
   );
+
+  if (!isInventoryMenuOpen) return null;
+
+  const leftChars = characters.slice(0, 3);
+  const rightChars = characters.slice(3, 6);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
