@@ -145,6 +145,7 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.halberd': { visualId: 'equipment.halberd', sheetId: 'starter_weapons_02', row: 3, col: 2, status: 'READY', category: 'weapon', aspectRatio: '1:1' },
   'equipment.glaive': { visualId: 'equipment.glaive', sheetId: 'starter_weapons_02', row: 3, col: 3, status: 'READY', category: 'weapon', aspectRatio: '1:1' },
 
+
   // --- STARTER WEAPONS 03 ---
   'equipment.arrow': { visualId: 'equipment.arrow', sheetId: 'starter_weapons_03', row: 0, col: 0, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
   'equipment.crossbow_bolt': { visualId: 'equipment.crossbow_bolt', sheetId: 'starter_weapons_03', row: 0, col: 1, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
@@ -181,6 +182,7 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.tinderbox': { visualId: 'equipment.tinderbox', sheetId: 'starter_adventuring_01', row: 3, col: 1, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
   'equipment.waterskin': { visualId: 'equipment.waterskin', sheetId: 'starter_adventuring_01', row: 3, col: 2, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
   'equipment.mess_kit': { visualId: 'equipment.mess_kit', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
+
 
   // --- STARTER ADVENTURING 02 ---
   'equipment.ball_bearings': { visualId: 'equipment.ball_bearings', sheetId: 'starter_adventuring_02', row: 0, col: 0, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
@@ -231,6 +233,7 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.emblem': { visualId: 'equipment.emblem', sheetId: 'starter_spellcasting_01', row: 3, col: 0, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
   'equipment.sprig_of_mistletoe': { visualId: 'equipment.sprig_of_mistletoe', sheetId: 'starter_spellcasting_01', row: 3, col: 1, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
   'equipment.totem': { visualId: 'equipment.totem', sheetId: 'starter_spellcasting_01', row: 3, col: 2, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
+
 
   // --- STARTER SPELLCASTING 02 ---
   'equipment.alms_box': { visualId: 'equipment.alms_box', sheetId: 'starter_spellcasting_02', row: 0, col: 0, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },

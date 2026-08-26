@@ -163,15 +163,16 @@ const EQUIPMENT_PACKS = {
 const manifestTs = fs.readFileSync(path.join(PROJECT_ROOT, 'src/lib/inventoryVisuals/spriteManifest.ts'), 'utf8');
 
 const manifestMappings = {};
-const mappingRegex = /'equipment\.([^']+)':\s*\{\s*visualId:\s*'equipment\.[^']+',\s*sheetId:\s*'([^']+)',\s*row:\s*(\d+),\s*col:\s*(\d+),\s*status:\s*'([^']+)',\s*category:\s*'([^']+)'/g;
+// Parse entries matching either full READY mappings with sheetId, row, col or PLANNED mappings without row/col
+const mappingRegex = /'equipment\.([^']+)':\s*\{[^}]*visualId:\s*'equipment\.[^']+'(?:,\s*sheetId:\s*'([^']+)')?(?:,\s*row:\s*(\d+))?(?:,\s*col:\s*(\d+))?[^}]*status:\s*'([^']+)',\s*category:\s*'([^']+)'/g;
 
 let match;
 while ((match = mappingRegex.exec(manifestTs)) !== null) {
   const [, itemKey, sheetId, row, col, status, category] = match;
   manifestMappings[`equipment.${itemKey}`] = {
-    sheetId,
-    row: parseInt(row, 10),
-    col: parseInt(col, 10),
+    sheetId: sheetId || null,
+    row: row !== undefined ? parseInt(row, 10) : null,
+    col: col !== undefined ? parseInt(col, 10) : null,
     status,
     category
   };
@@ -193,8 +194,8 @@ function getOrCreateRecord(rawId, isStarter = false) {
       rulesets: new Set(),
       isStarterEquipment: false,
       sheetId: manifestInfo?.sheetId || null,
-      row: manifestInfo !== undefined ? manifestInfo.row : null,
-      col: manifestInfo !== undefined ? manifestInfo.col : null,
+      row: manifestInfo?.row !== undefined ? manifestInfo.row : null,
+      col: manifestInfo?.col !== undefined ? manifestInfo.col : null,
       status: manifestInfo?.status || 'MISSING'
     });
   }
@@ -305,10 +306,10 @@ let mdContent = `# Inventory & Starter Equipment Visual Asset Audit Report
 ## Audit Status Terminology
 
 - **READY**: Sprite image asset exists on disk AND manifest cell coordinate contract is complete.
-- **PLANNED**: Canonical visual ID and manifest cell coordinate assigned; awaiting sprite image production.
+- **PLANNED**: Canonical visual ID exists; sprite is planned but does not yet have a renderable cell.
 - **MISSING**: Item reference exists in starter data but lacks a visual identity / manifest cell assignment.
 
-_Note on "0 MISSING": This indicates 100% manifest and identity coverage (every canonical starter item has an assigned visual ID and sheet cell). It does NOT mean 100% of final image sprite sheets have been rendered._
+_Note on "0 MISSING": This indicates 100% manifest and identity coverage (every canonical starter item has an assigned visual ID in the manifest). It does NOT mean 100% of final image sprite sheets have been rendered._
 
 ---
 
@@ -316,7 +317,7 @@ _Note on "0 MISSING": This indicates 100% manifest and identity coverage (every 
 
 - **Total Canonical Starter Items**: ${starterItems.length}
 - **READY (Sprite Image + Manifest Cell Contract Ready)**: ${starterReady}
-- **PLANNED (Cell Coordinate Assigned in Manifest, Image Planned)**: ${starterPlanned}
+- **PLANNED (Canonical Visual ID Registered, Sprite Asset Planned)**: ${starterPlanned}
 - **MISSING (No Manifest Entry / Cell Assignment)**: ${starterMissing} (100% Manifest Identity Coverage)
 
 ---
@@ -331,15 +332,15 @@ ${starterItems.filter(i => i.status === 'READY').map(i => `| \`${i.canonicalId}\
 
 ### Planned Starter Items (${starterPlanned})
 
-| Canonical Item ID | Visual ID | Sheet | Cell (R, C) | Category | Sources |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-${starterItems.filter(i => i.status === 'PLANNED').map(i => `| \`${i.canonicalId}\` | \`${i.visualId}\` | \`${i.spriteSheet}\` | \`(${i.cell.row}, ${i.cell.col})\` | \`${i.category}\` | ${i.sources.slice(0, 2).join(', ')} |`).join('\n')}
+| Canonical Item ID | Visual ID | Category | Sources |
+| :--- | :--- | :--- | :--- |
+${starterItems.filter(i => i.status === 'PLANNED').map(i => `| \`${i.canonicalId}\` | \`${i.visualId}\` | \`${i.category}\` | ${i.sources.slice(0, 2).join(', ')} |`).join('\n')}
 
 ### Missing Starter Items (${starterMissing})
 
 | Canonical Item ID | Visual ID | Category | Sources |
 | :--- | :--- | :--- | :--- |
-${starterItems.filter(i => i.status === 'MISSING').length === 0 ? '_None! All canonical starter equipment items are covered by READY or PLANNED manifest cells._' : starterItems.filter(i => i.status === 'MISSING').map(i => `| \`${i.canonicalId}\` | \`${i.visualId}\` | \`${i.category}\` | ${i.sources.slice(0, 2).join(', ')} |`).join('\n')}
+${starterItems.filter(i => i.status === 'MISSING').length === 0 ? '_None! All canonical starter equipment items are covered by READY or PLANNED manifest entries._' : starterItems.filter(i => i.status === 'MISSING').map(i => `| \`${i.canonicalId}\` | \`${i.visualId}\` | \`${i.category}\` | ${i.sources.slice(0, 2).join(', ')} |`).join('\n')}
 
 ---
 

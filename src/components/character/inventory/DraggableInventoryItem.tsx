@@ -65,10 +65,10 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
       >
         <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
           <EquipmentSprite
-            itemKey={itemKey}
+            itemKey={item}
             alt={item.name}
             className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-            fallbackUrl={fallbackUrl}
+            fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
           />
         </div>
 
