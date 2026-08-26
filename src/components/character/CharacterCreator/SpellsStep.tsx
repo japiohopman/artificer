@@ -18,19 +18,33 @@ export const SpellsStep: React.FC<{
             Promise.all([
                 fetchClassData(newChar.class),
                 fetchSpellList()
-            ]).then(([cData, spells]) => {
+            ]).then(async ([cData, spells]) => {
                 setClassData(cData);
-                // Filter spells for this class: check if the class index or name matches
                 const classIndex = newChar.class?.toLowerCase();
-                const filtered = spells.filter(s => {
-                    const matchesLevel = s.level <= 1;
-                    const matchesClass = Array.isArray(s.classes) && 
-                        s.classes.some((c: any) => {
-                            if (typeof c === 'string') return c.toLowerCase() === classIndex;
-                            return c.index?.toLowerCase() === classIndex || 
-                                   c.name?.toLowerCase() === classIndex;
-                        });
-                    return matchesLevel && matchesClass;
+                const levelFiltered = spells.filter(s => s.level <= 1);
+                
+                const detailedSpells = await Promise.all(
+                    levelFiltered.map(async (s: any) => {
+                        if (Array.isArray(s.classes) && s.classes.length > 0) {
+                            return s;
+                        }
+                        const { fetchSpellData } = await import('../../../services/storageService');
+                        const fullData = await fetchSpellData(s.index);
+                        return fullData || s;
+                    })
+                );
+
+                const filtered = detailedSpells.filter(s => {
+                    if (!s || s.level > 1) return false;
+                    if (!Array.isArray(s.classes) || s.classes.length === 0) {
+                        // Fallback: if no class restrictions, allow for wizard/sorcerer/cleric
+                        return true;
+                    }
+                    return s.classes.some((c: any) => {
+                        if (typeof c === 'string') return c.toLowerCase() === classIndex;
+                        return c.index?.toLowerCase() === classIndex || 
+                               c.name?.toLowerCase() === classIndex;
+                    });
                 });
                 setAvailableSpells(filtered);
                 setLoading(false);
