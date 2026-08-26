@@ -73,7 +73,10 @@ export const SpellsStep: React.FC<{
         }
     };
 
-    if (!classData?.spellcasting && !loading) {
+    const SPELLCASTER_CLASSES = ['wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'warlock', 'paladin', 'ranger', 'artificer'];
+    const isSpellcasterClass = SPELLCASTER_CLASSES.includes(newChar.class?.toLowerCase() || '');
+
+    if (!isSpellcasterClass && !classData?.spellcasting && !loading) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
                 <div className="p-8 bg-dragon-gold/5 rounded-full border-2 border-dragon-gold/10 text-dragon-gold/20">
