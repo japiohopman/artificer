@@ -5,6 +5,7 @@ import { fetchClassData, fetchSpellList } from '../../../services/storageService
 import { soundService } from '../../../services/soundService';
 import { GameIcon } from '../../../game_icons';
 import { DnDMarkdown } from '../../ui/DnDMarkdown';
+import { SpellSprite } from '../../atlas/SpellSprite';
 
 export interface ClassSpellLimits {
   cantrips: number;
@@ -381,41 +382,54 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void }> 
     <button
         onClick={onClick}
         className={cn(
-            "p-4 rounded-sm border text-left transition-all relative flex flex-col gap-2 group overflow-hidden h-full",
+            "p-3 rounded-sm border text-left transition-all relative flex flex-col justify-between gap-3 group overflow-hidden h-full min-h-[120px]",
             active 
                 ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg" 
                 : "bg-white/40 border-dragon-gold/10 hover:border-dragon-red/30 hover:bg-white"
         )}
     >
-        <div className="flex justify-between items-start relative z-10">
-            <span className={cn(
-                "text-[10px] font-black uppercase tracking-tight leading-tight",
-                active ? "text-dragon-gold" : "text-dragon-darkRed"
-            )}>
-                {spell.name}
-            </span>
-            <GameIcon name="book" size={12} color={active ? "#B8860B" : "currentColor"} className="opacity-40" />
-        </div>
-        <div className="flex flex-col gap-0.5 relative z-10">
-            <span className="text-[8px] font-black uppercase opacity-60 tracking-wider">
-                {typeof spell.school === 'string' ? spell.school : spell.school?.name || 'Arcane'}
-            </span>
-            <div className="flex items-center gap-1">
-                <span className="text-[7px] font-bold text-parchment-400 uppercase">Range: {spell.range}</span>
-                <div className="w-0.5 h-0.5 rounded-full bg-parchment-300" />
-                <span className="text-[7px] font-bold text-parchment-400 uppercase">{spell.casting_time}</span>
+        <div className="flex items-start gap-3 relative z-10 w-full">
+            <SpellSprite spell={spell} size={44} className="rounded border border-dragon-gold/30 bg-stone-900/20 p-0.5 shadow-sm shrink-0" />
+            
+            <div className="flex flex-col min-w-0 flex-1">
+                <span className={cn(
+                    "text-[11px] font-black uppercase tracking-tight leading-snug truncate",
+                    active ? "text-dragon-gold" : "text-dragon-darkRed group-hover:text-dragon-red"
+                )} title={spell.name}>
+                    {spell.name}
+                </span>
+                
+                <span className="text-[8px] font-black uppercase opacity-60 tracking-wider mt-0.5">
+                    {typeof spell.school === 'string' ? spell.school : spell.school?.name || 'Arcane'}
+                </span>
+                
+                <div className="flex items-center gap-1 mt-1 text-[8px] font-bold opacity-75">
+                    <span className="truncate">Range: {spell.range}</span>
+                </div>
             </div>
+        </div>
+
+        <div className="flex justify-between items-center relative z-10 pt-1 border-t border-dragon-gold/10">
+            <span className="text-[7px] font-bold uppercase tracking-wider opacity-60">
+                {spell.casting_time}
+            </span>
+            <span className={cn(
+                "text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded",
+                active ? "bg-dragon-gold text-black" : "bg-dragon-red/10 text-dragon-red"
+            )}>
+                {spell.level === 0 ? 'Cantrip' : `Lvl ${spell.level}`}
+            </span>
         </div>
         
         {active && (
-            <div className="absolute top-1 right-1 z-20">
+            <div className="absolute top-1 right-1 z-20 bg-dragon-gold/20 p-0.5 rounded">
                 <GameIcon name="check" size={10} color="#B8860B" />
             </div>
         )}
         
         {/* Background Accent */}
         <div className={cn(
-            "absolute -bottom-4 -right-4 opacity-5 transition-transform duration-500 group-hover:scale-110",
+            "absolute -bottom-4 -right-4 opacity-5 transition-transform duration-500 group-hover:scale-110 pointer-events-none",
             active ? "text-dragon-gold" : "text-dragon-darkRed"
         )}>
             <GameIcon name="energy" size={60} color="currentColor" />
