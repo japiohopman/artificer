@@ -95,37 +95,48 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
   });
 
   describe('Sprite Manifest & Grid Bounds Integrity', () => {
-    it('ensures every manifest entry references a valid sprite sheet definition', () => {
-      const mappings = getAllManifestMappings();
+    it('ensures every READY manifest entry references a valid sprite sheet definition', () => {
+      const mappings = getAllManifestMappings().filter(m => m.status === 'READY');
       expect(mappings.length).toBeGreaterThan(0);
 
       mappings.forEach(mapping => {
-        const sheet = getSpriteSheetDefinition(mapping.sheetId);
-        expect(sheet, `Sheet ${mapping.sheetId} referenced by ${mapping.visualId} must exist`).toBeDefined();
-        expect(sheet?.path).toMatch(/^\/assets\/atlas\/equipment\/sprites\/[a-z0-9_]+\.webp$/);
+        expect(mapping.sheetId).toBeDefined();
+        if (mapping.sheetId) {
+          const sheet = getSpriteSheetDefinition(mapping.sheetId);
+          expect(sheet, `Sheet ${mapping.sheetId} referenced by ${mapping.visualId} must exist`).toBeDefined();
+          expect(sheet?.path).toMatch(/^\/assets\/atlas\/equipment\/sprites\/[a-z0-9_]+\.webp$/);
+        }
       });
     });
 
-    it('validates cell coordinates are strictly within the actual declared sheet grid bounds', () => {
-      const mappings = getAllManifestMappings();
+    it('validates cell coordinates for READY items are strictly within the actual declared sheet grid bounds', () => {
+      const mappings = getAllManifestMappings().filter(m => m.status === 'READY');
 
       mappings.forEach(mapping => {
-        const sheet = getSpriteSheetDefinition(mapping.sheetId);
-        expect(sheet).toBeDefined();
+        expect(mapping.sheetId).toBeDefined();
+        if (mapping.sheetId) {
+          const sheet = getSpriteSheetDefinition(mapping.sheetId);
+          expect(sheet).toBeDefined();
 
-        if (sheet) {
-          expect(mapping.row, `Row for ${mapping.visualId} must be >= 0`).toBeGreaterThanOrEqual(0);
-          expect(mapping.col, `Col for ${mapping.visualId} must be >= 0`).toBeGreaterThanOrEqual(0);
+          if (sheet) {
+            expect(mapping.row, `Row for ${mapping.visualId} must be defined`).toBeDefined();
+            expect(mapping.col, `Col for ${mapping.visualId} must be defined`).toBeDefined();
 
-          expect(
-            mapping.row,
-            `Row ${mapping.row} for ${mapping.visualId} must be < sheet rows (${sheet.grid.rows}) on ${sheet.id}`
-          ).toBeLessThan(sheet.grid.rows);
+            if (mapping.row !== undefined && mapping.col !== undefined) {
+              expect(mapping.row, `Row for ${mapping.visualId} must be >= 0`).toBeGreaterThanOrEqual(0);
+              expect(mapping.col, `Col for ${mapping.visualId} must be >= 0`).toBeGreaterThanOrEqual(0);
 
-          expect(
-            mapping.col,
-            `Col ${mapping.col} for ${mapping.visualId} must be < sheet cols (${sheet.grid.cols}) on ${sheet.id}`
-          ).toBeLessThan(sheet.grid.cols);
+              expect(
+                mapping.row,
+                `Row ${mapping.row} for ${mapping.visualId} must be < sheet rows (${sheet.grid.rows}) on ${sheet.id}`
+              ).toBeLessThan(sheet.grid.rows);
+
+              expect(
+                mapping.col,
+                `Col ${mapping.col} for ${mapping.visualId} must be < sheet cols (${sheet.grid.cols}) on ${sheet.id}`
+              ).toBeLessThan(sheet.grid.cols);
+            }
+          }
         }
       });
     });
@@ -152,7 +163,7 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
       expect(checkValid(invalidColCell)).toBe(false);
     });
 
-    it('ensures no duplicate cell coordinate assignments exist for READY items within the same sprite sheet', () => {
+    it('ensures all READY renderable cells are unique and no two READY items share the same cell', () => {
       const mappings = getAllManifestMappings().filter(m => m.status === 'READY');
       const occupiedCells = new Set<string>();
 
@@ -161,6 +172,59 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
         expect(occupiedCells.has(key), `Duplicate cell assignment detected at ${key} for ${mapping.visualId}`).toBe(false);
         occupiedCells.add(key);
       });
+    });
+  });
+
+  describe('PLANNED vs READY Semantics', () => {
+    it('verifies PLANNED items without a sprite asset have no renderable cell assigned', () => {
+      const arrowMapping = getSpriteCellForVisual('equipment.arrow');
+      expect(arrowMapping).toBeDefined();
+      expect(arrowMapping?.status).toBe('PLANNED');
+      expect(arrowMapping?.sheetId).toBeUndefined();
+      expect(arrowMapping?.row).toBeUndefined();
+      expect(arrowMapping?.col).toBeUndefined();
+
+      const ballBearingsMapping = getSpriteCellForVisual('equipment.ball_bearings');
+      expect(ballBearingsMapping).toBeDefined();
+      expect(ballBearingsMapping?.status).toBe('PLANNED');
+      expect(ballBearingsMapping?.row).toBeUndefined();
+      expect(ballBearingsMapping?.col).toBeUndefined();
+    });
+
+    it('verifies PLANNED items do not accidentally claim occupied READY cells', () => {
+      const readyMappings = getAllManifestMappings().filter(m => m.status === 'READY');
+      const readyCells = new Set(readyMappings.map(m => `${m.sheetId}:${m.row}:${m.col}`));
+
+      const plannedMappings = getAllManifestMappings().filter(m => m.status === 'PLANNED');
+      plannedMappings.forEach(planned => {
+        if (planned.sheetId && planned.row !== undefined && planned.col !== undefined) {
+          const key = `${planned.sheetId}:${planned.row}:${planned.col}`;
+          expect(readyCells.has(key), `PLANNED item ${planned.visualId} must not occupy READY cell ${key}`).toBe(false);
+        }
+      });
+    });
+
+    it('verifies PLANNED items with explicit fallbackVisualId resolve through fallback mapping', () => {
+      const silkRopeMapping = getSpriteCellForVisual('equipment.silk_rope_50_ft');
+      expect(silkRopeMapping).toBeDefined();
+      expect(silkRopeMapping?.status).toBe('PLANNED');
+      expect(silkRopeMapping?.fallbackVisualId).toBe('equipment.hempen_rope_50_ft');
+
+      const fallbackTargetMapping = getSpriteCellForVisual(silkRopeMapping!.fallbackVisualId!);
+      expect(fallbackTargetMapping).toBeDefined();
+      expect(fallbackTargetMapping?.status).toBe('READY');
+      expect(fallbackTargetMapping?.sheetId).toBe('starter_adventuring_01');
+      expect(fallbackTargetMapping?.row).toBe(2);
+      expect(fallbackTargetMapping?.col).toBe(2);
+    });
+
+    it('verifies READY items resolve directly to their authoritative renderable cell', () => {
+      const longswordMapping = getSpriteCellForVisual('equipment.longsword');
+      expect(longswordMapping).toBeDefined();
+      expect(longswordMapping?.status).toBe('READY');
+      expect(longswordMapping?.sheetId).toBe('starter_weapons_01');
+      expect(longswordMapping?.row).toBe(2);
+      expect(longswordMapping?.col).toBe(2);
     });
   });
 

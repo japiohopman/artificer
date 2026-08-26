@@ -37,12 +37,21 @@ export const EquipmentSprite: React.FC<EquipmentSpriteProps> = ({
     }
   }
 
-  // 3. Retrieve authoritative sheet definition
-  const sheetDefinition = cellMapping ? getSpriteSheetDefinition(cellMapping.sheetId) : undefined;
+  // A mapping is only renderable as a sprite cell if it is READY and has assigned cell coordinates
+  const isRenderableCell = Boolean(
+    cellMapping &&
+    cellMapping.status === 'READY' &&
+    cellMapping.sheetId &&
+    cellMapping.row !== undefined &&
+    cellMapping.col !== undefined
+  );
+
+  // 3. Retrieve authoritative sheet definition if cell mapping is renderable
+  const sheetDefinition = isRenderableCell && cellMapping?.sheetId ? getSpriteSheetDefinition(cellMapping.sheetId) : undefined;
   const sheetPath = sheetDefinition?.path;
 
   // 4. Check 4x4 grid bounds (rows: 0..3, cols: 0..3)
-  const isOutOfBounds = cellMapping && sheetDefinition ? (
+  const isOutOfBounds = isRenderableCell && cellMapping && sheetDefinition && cellMapping.row !== undefined && cellMapping.col !== undefined ? (
     cellMapping.row < 0 ||
     cellMapping.row >= sheetDefinition.grid.rows ||
     cellMapping.col < 0 ||
@@ -52,7 +61,7 @@ export const EquipmentSprite: React.FC<EquipmentSpriteProps> = ({
   useEffect(() => {
     setHasError(false);
     setImageDimensions(null);
-    if (!cellMapping || !sheetDefinition || !sheetPath || isOutOfBounds) return;
+    if (!isRenderableCell || !cellMapping || !sheetDefinition || !sheetPath || isOutOfBounds) return;
 
     const img = new Image();
     img.src = sheetPath;
@@ -62,12 +71,12 @@ export const EquipmentSprite: React.FC<EquipmentSpriteProps> = ({
     img.onerror = () => {
       setHasError(true);
     };
-  }, [visualId, cellMapping?.sheetId, cellMapping?.row, cellMapping?.col, sheetPath, isOutOfBounds]);
+  }, [visualId, cellMapping?.sheetId, cellMapping?.row, cellMapping?.col, sheetPath, isOutOfBounds, isRenderableCell]);
 
   const altText = alt || (typeof itemKey === 'string' ? itemKey : itemKey?.name || itemKey?.template || 'item');
 
-  // Fallback rendering on missing mapping, out of bounds, asset load failure, or uninitialized dimensions
-  if (!cellMapping || !sheetDefinition || !sheetPath || isOutOfBounds || hasError || !imageDimensions) {
+  // Fallback rendering on missing mapping, PLANNED without READY fallback, out of bounds, asset load failure, or uninitialized dimensions
+  if (!isRenderableCell || !cellMapping || cellMapping.row === undefined || cellMapping.col === undefined || !sheetDefinition || !sheetPath || isOutOfBounds || hasError || !imageDimensions) {
     if (fallbackUrl) {
       return (
         <ChromaKeyImage
@@ -82,7 +91,7 @@ export const EquipmentSprite: React.FC<EquipmentSpriteProps> = ({
     return null;
   }
 
-  // 5. Derive crop dynamically using the canonical grid metadata (e.g., 4 x 4)
+  // 5. Derive crop dynamically using the canonical grid metadata (4 x 4)
   const cellWidth = imageDimensions.width / sheetDefinition.grid.cols;
   const cellHeight = imageDimensions.height / sheetDefinition.grid.rows;
 
