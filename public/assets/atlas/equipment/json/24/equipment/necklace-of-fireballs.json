@@ -10,7 +10,7 @@
   "special": [],
   "index": "necklace-of-fireballs",
   "name": "necklace of fireballs",
-  "kind": "equipment",
+  "kind": "neck",
   "cost": {
     "quantity": 2000,
     "unit": "gp"
@@ -23,7 +23,7 @@
   "contents": [],
   "properties": [],
   "equipSlots": [
-    "none"
+    "neck"
   ],
   "last_updated": "12-7-2026",
   "background_type": "generic"

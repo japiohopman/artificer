@@ -131,9 +131,9 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
     });
 
     it('fails bounds validation when a coordinate exceeds sheet grid dimensions', () => {
-      const mockSheet = { id: 'test_sheet', grid: { rows: 7, cols: 4 } };
-      const validCell = { row: 6, col: 3 };
-      const invalidRowCell = { row: 7, col: 0 };
+      const mockSheet = { id: 'test_sheet', grid: { rows: 4, cols: 4 } };
+      const validCell = { row: 3, col: 3 };
+      const invalidRowCell = { row: 4, col: 0 };
       const invalidColCell = { row: 0, col: 4 };
 
       const checkValid = (cell: { row: number; col: number }) =>
@@ -233,11 +233,11 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
   });
 
   describe('Crop Dimensions & Architecture Guard Tests', () => {
-    it('correctly calculates cell crop dimensions for 1024x1792 sheet with 4x7 grid', () => {
+    it('correctly calculates cell crop dimensions for 1024x1024 sheet with 4x4 grid', () => {
       const sheet = getSpriteSheetDefinition('starter_weapons_01');
       expect(sheet).toBeDefined();
       if (sheet) {
-        const imageDimensions = { width: 1024, height: 1792 };
+        const imageDimensions = { width: 1024, height: 1024 };
         const cellWidth = imageDimensions.width / sheet.grid.cols;
         const cellHeight = imageDimensions.height / sheet.grid.rows;
         expect(cellWidth).toBe(256);

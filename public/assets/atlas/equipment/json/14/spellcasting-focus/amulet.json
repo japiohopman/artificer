@@ -6,7 +6,7 @@
   "special": [],
   "index": "amulet",
   "name": "amulet",
-  "kind": "equipment",
+  "kind": "neck",
   "cost": {
     "quantity": 5,
     "unit": "gp"
@@ -19,8 +19,7 @@
   "contents": [],
   "properties": [],
   "equipSlots": [
-    "ring_1",
-    "ring_2"
+    "neck"
   ],
   "last_updated": "12-7-2026",
   "background_type": "land_forest",

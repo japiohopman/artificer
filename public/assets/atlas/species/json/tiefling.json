@@ -28,12 +28,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "infernal",
       "name": "infernal",
-      "url": "/assets/atlas/languages/infernal"
+      "url": "/assets/atlas/languages/json/infernal.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Infernal.",
@@ -41,17 +41,17 @@
     {
       "index": "darkvision",
       "name": "darkvision",
-      "url": "/assets/atlas/traits/darkvision"
+      "url": "/assets/atlas/traits/json/darkvision.json"
     },
     {
       "index": "hellish_resistance",
       "name": "hellish resistance",
-      "url": "/assets/atlas/traits/hellish_resistance"
+      "url": "/assets/atlas/traits/json/hellish_resistance.json"
     },
     {
       "index": "infernal_legacy",
       "name": "infernal legacy",
-      "url": "/assets/atlas/traits/infernal_legacy"
+      "url": "/assets/atlas/traits/json/infernal_legacy.json"
     }
   ],
   "subraces": [],

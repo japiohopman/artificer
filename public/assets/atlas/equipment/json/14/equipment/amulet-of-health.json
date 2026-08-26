@@ -6,7 +6,7 @@
   "special": [],
   "index": "amulet-of-health",
   "name": "amulet of health",
-  "kind": "equipment",
+  "kind": "neck",
   "cost": {
     "quantity": 4000,
     "unit": "gp"
@@ -19,7 +19,7 @@
   "contents": [],
   "properties": [],
   "equipSlots": [
-    "none"
+    "neck"
   ],
   "last_updated": "12-7-2026",
   "background_type": "generic"

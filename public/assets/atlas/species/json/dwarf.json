@@ -20,12 +20,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "dwarvish",
       "name": "dwarvish",
-      "url": "/assets/atlas/languages/dwarvish"
+      "url": "/assets/atlas/languages/json/dwarvish.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
@@ -33,34 +33,34 @@
     {
       "index": "darkvision",
       "name": "darkvision",
-      "url": "/assets/atlas/traits/darkvision"
+      "url": "/assets/atlas/traits/json/darkvision.json"
     },
     {
       "index": "dwarven_resilience",
       "name": "dwarven resilience",
-      "url": "/assets/atlas/traits/dwarven_resilience"
+      "url": "/assets/atlas/traits/json/dwarven_resilience.json"
     },
     {
       "index": "stonecunning",
       "name": "stonecunning",
-      "url": "/assets/atlas/traits/stonecunning"
+      "url": "/assets/atlas/traits/json/stonecunning.json"
     },
     {
       "index": "dwarven_combat_training",
       "name": "dwarven combat training",
-      "url": "/assets/atlas/traits/dwarven_combat_training"
+      "url": "/assets/atlas/traits/json/dwarven_combat_training.json"
     },
     {
       "index": "tool_proficiency",
       "name": "tool proficiency",
-      "url": "/assets/atlas/traits/tool_proficiency"
+      "url": "/assets/atlas/traits/json/tool_proficiency.json"
     }
   ],
   "subraces": [
     {
       "index": "hill_dwarf",
       "name": "hill dwarf",
-      "url": "/assets/atlas/subraces/hill_dwarf"
+      "url": "/assets/atlas/subraces/json/hill_dwarf.json"
     }
   ],
   "url": "/assets/atlas/species/json/dwarf.json",

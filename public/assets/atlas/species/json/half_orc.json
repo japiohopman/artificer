@@ -28,12 +28,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "orc",
       "name": "orc",
-      "url": "/assets/atlas/languages/orc"
+      "url": "/assets/atlas/languages/json/orc.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
@@ -41,22 +41,22 @@
     {
       "index": "darkvision",
       "name": "darkvision",
-      "url": "/assets/atlas/traits/darkvision"
+      "url": "/assets/atlas/traits/json/darkvision.json"
     },
     {
       "index": "savage_attacks",
       "name": "savage attacks",
-      "url": "/assets/atlas/traits/savage_attacks"
+      "url": "/assets/atlas/traits/json/savage_attacks.json"
     },
     {
       "index": "relentless_endurance",
       "name": "relentless endurance",
-      "url": "/assets/atlas/traits/relentless_endurance"
+      "url": "/assets/atlas/traits/json/relentless_endurance.json"
     },
     {
       "index": "menacing",
       "name": "menacing",
-      "url": "/assets/atlas/traits/menacing"
+      "url": "/assets/atlas/traits/json/menacing.json"
     }
   ],
   "subraces": [],

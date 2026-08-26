@@ -20,12 +20,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "halfling",
       "name": "halfling",
-      "url": "/assets/atlas/languages/halfling"
+      "url": "/assets/atlas/languages/json/halfling.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
@@ -33,24 +33,24 @@
     {
       "index": "brave",
       "name": "brave",
-      "url": "/assets/atlas/traits/brave"
+      "url": "/assets/atlas/traits/json/brave.json"
     },
     {
       "index": "halfling_nimbleness",
       "name": "halfling nimbleness",
-      "url": "/assets/atlas/traits/halfling_nimbleness"
+      "url": "/assets/atlas/traits/json/halfling_nimbleness.json"
     },
     {
       "index": "lucky",
       "name": "lucky",
-      "url": "/assets/atlas/traits/lucky"
+      "url": "/assets/atlas/traits/json/lucky.json"
     }
   ],
   "subraces": [
     {
       "index": "lightfoot_halfling",
       "name": "lightfoot halfling",
-      "url": "/assets/atlas/subraces/lightfoot_halfling"
+      "url": "/assets/atlas/subraces/json/lightfoot_halfling.json"
     }
   ],
   "url": "/assets/atlas/species/json/halfling.json",

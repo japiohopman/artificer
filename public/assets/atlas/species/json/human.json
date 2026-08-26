@@ -60,7 +60,7 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     }
   ],
   "language_options": {
@@ -74,7 +74,7 @@
           "item": {
             "index": "dwarvish",
             "name": "dwarvish",
-            "url": "/assets/atlas/languages/dwarvish"
+            "url": "/assets/atlas/languages/json/dwarvish.json"
           }
         },
         {
@@ -82,7 +82,7 @@
           "item": {
             "index": "elvish",
             "name": "elvish",
-            "url": "/assets/atlas/languages/elvish"
+            "url": "/assets/atlas/languages/json/elvish.json"
           }
         },
         {
@@ -90,7 +90,7 @@
           "item": {
             "index": "giant",
             "name": "giant",
-            "url": "/assets/atlas/languages/giant"
+            "url": "/assets/atlas/languages/json/giant.json"
           }
         },
         {
@@ -98,7 +98,7 @@
           "item": {
             "index": "gnomish",
             "name": "gnomish",
-            "url": "/assets/atlas/languages/gnomish"
+            "url": "/assets/atlas/languages/json/gnomish.json"
           }
         },
         {
@@ -106,7 +106,7 @@
           "item": {
             "index": "goblin",
             "name": "goblin",
-            "url": "/assets/atlas/languages/goblin"
+            "url": "/assets/atlas/languages/json/goblin.json"
           }
         },
         {
@@ -114,7 +114,7 @@
           "item": {
             "index": "halfling",
             "name": "halfling",
-            "url": "/assets/atlas/languages/halfling"
+            "url": "/assets/atlas/languages/json/halfling.json"
           }
         },
         {
@@ -122,7 +122,7 @@
           "item": {
             "index": "orc",
             "name": "orc",
-            "url": "/assets/atlas/languages/orc"
+            "url": "/assets/atlas/languages/json/orc.json"
           }
         },
         {
@@ -130,7 +130,7 @@
           "item": {
             "index": "abyssal",
             "name": "abyssal",
-            "url": "/assets/atlas/languages/abyssal"
+            "url": "/assets/atlas/languages/json/abyssal.json"
           }
         },
         {
@@ -138,7 +138,7 @@
           "item": {
             "index": "celestial",
             "name": "celestial",
-            "url": "/assets/atlas/languages/celestial"
+            "url": "/assets/atlas/languages/json/celestial.json"
           }
         },
         {
@@ -146,7 +146,7 @@
           "item": {
             "index": "draconic",
             "name": "draconic",
-            "url": "/assets/atlas/languages/draconic"
+            "url": "/assets/atlas/languages/json/draconic.json"
           }
         },
         {
@@ -154,7 +154,7 @@
           "item": {
             "index": "deep_speech",
             "name": "deep speech",
-            "url": "/assets/atlas/languages/deep_speech"
+            "url": "/assets/atlas/languages/json/deep_speech.json"
           }
         },
         {
@@ -162,7 +162,7 @@
           "item": {
             "index": "infernal",
             "name": "infernal",
-            "url": "/assets/atlas/languages/infernal"
+            "url": "/assets/atlas/languages/json/infernal.json"
           }
         },
         {
@@ -170,7 +170,7 @@
           "item": {
             "index": "primordial",
             "name": "primordial",
-            "url": "/assets/atlas/languages/primordial"
+            "url": "/assets/atlas/languages/json/primordial.json"
           }
         },
         {
@@ -178,7 +178,7 @@
           "item": {
             "index": "sylvan",
             "name": "sylvan",
-            "url": "/assets/atlas/languages/sylvan"
+            "url": "/assets/atlas/languages/json/sylvan.json"
           }
         },
         {
@@ -186,7 +186,7 @@
           "item": {
             "index": "undercommon",
             "name": "undercommon",
-            "url": "/assets/atlas/languages/undercommon"
+            "url": "/assets/atlas/languages/json/undercommon.json"
           }
         }
       ]

@@ -20,12 +20,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "gnomish",
       "name": "gnomish",
-      "url": "/assets/atlas/languages/gnomish"
+      "url": "/assets/atlas/languages/json/gnomish.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
@@ -33,19 +33,19 @@
     {
       "index": "darkvision",
       "name": "darkvision",
-      "url": "/assets/atlas/traits/darkvision"
+      "url": "/assets/atlas/traits/json/darkvision.json"
     },
     {
       "index": "gnome_cunning",
       "name": "gnome cunning",
-      "url": "/assets/atlas/traits/gnome_cunning"
+      "url": "/assets/atlas/traits/json/gnome_cunning.json"
     }
   ],
   "subraces": [
     {
       "index": "rock_gnome",
       "name": "rock gnome",
-      "url": "/assets/atlas/subraces/rock_gnome"
+      "url": "/assets/atlas/subraces/json/rock_gnome.json"
     }
   ],
   "url": "/assets/atlas/species/json/gnome.json",

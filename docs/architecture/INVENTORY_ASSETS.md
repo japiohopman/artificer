@@ -47,19 +47,24 @@ Inventory & Equipment UI
 
 ## Verified Sprite Sheet Layout & Dimensions
 
-Physical WebP assets under `public/assets/atlas/equipment/sprites/` are **1024 × 1792 pixels**:
-- **Grid Layout**: 4 columns × 7 rows (28 total cell slots per sheet).
+Physical WebP assets under `public/assets/atlas/equipment/sprites/` are **1024 × 1024 pixels**:
+- **Grid Layout**: 4 columns × 4 rows (16 total cell slots per sheet).
 - **Cell Dimensions**: 256 × 256 pixels per cell (`1:1` cell aspect ratio).
-- **Coordinate System**: 0-based indices (`row: 0..6`, `col: 0..3`).
+- **Coordinate System**: 0-based indices (`row: 0..3`, `col: 0..3`).
 
 ### Core Asset Groups
-- `starter_weapons_01` (4 cols × 7 rows)
-- `starter_weapons_02` (4 cols × 7 rows)
-- `starter_armor_01` (4 cols × 7 rows)
-- `starter_adventuring_01` (4 cols × 7 rows)
-- `starter_tools_01` (4 cols × 7 rows)
-- `starter_spellcasting_01` (4 cols × 7 rows)
-- `starter_personal_01` (4 cols × 7 rows)
+- `starter_weapons_01` (4 cols × 4 rows)
+- `starter_weapons_02` (4 cols × 4 rows)
+- `starter_weapons_03` (4 cols × 4 rows)
+- `starter_armor_01` (4 cols × 4 rows)
+- `starter_adventuring_01` (4 cols × 4 rows)
+- `starter_adventuring_02` (4 cols × 4 rows)
+- `starter_tools_01` (4 cols × 4 rows)
+- `starter_tools_02` (4 cols × 4 rows)
+- `starter_spellcasting_01` (4 cols × 4 rows)
+- `starter_spellcasting_02` (4 cols × 4 rows)
+- `starter_personal_01` (4 cols × 4 rows)
+- `starter_personal_02` (4 cols × 4 rows)
 
 ---
 

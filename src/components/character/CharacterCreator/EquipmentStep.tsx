@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { soundService } from '../../../services/soundService';
@@ -9,11 +10,39 @@ import {
 } from '../../../services/storageService';
 import { atlasService } from '../../../services/atlasService';
 import { EquipmentDoll } from '../equipment/EquipmentDoll';
+import { EquipmentSprite } from '../equipment/EquipmentSprite';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
+import { DnDMarkdown } from '../../ui/DnDMarkdown';
 import { GameIcon } from '../../../game_icons';
 import { useUIStore } from '../../../store/useUIStore';
 
 const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
+
+/**
+ * Filter to restrict starting equipment options strictly to base/starter gear.
+ * Excludes tiered items (+1, +2, +3, -1, etc.) and magical/special variants (e.g. "dagger of venom").
+ */
+export const isStarterEquipment = (item: any): boolean => {
+    if (!item) return false;
+    const idx = (item.index || item.item?.index || item.equipment?.index || item.of?.index || '').toLowerCase();
+    const name = (item.name || item.item?.name || item.equipment?.name || item.of?.name || '').toLowerCase();
+
+    // Exclude tier bonuses (+1, +2, +3, -1, -2, -3)
+    if (/[-+]\d+$/.test(idx) || /[-+]\d+[\s_-]/.test(idx) || /\+[1-5]/.test(name) || /-[1-5]/.test(name)) {
+        return false;
+    }
+    // Exclude magic / named tier variants
+    if (idx.includes('-of-') || name.includes(' of ') || idx.includes('adamantine') || idx.includes('mithral')) {
+        return false;
+    }
+    if (item.rarity && item.rarity !== 'common' && item.rarity !== 'none') {
+        return false;
+    }
+    if (item.magic_item || item.is_magic) {
+        return false;
+    }
+    return true;
+};
 
 const EquipmentOptionChoice: React.FC<{
     opt: any;
@@ -38,7 +67,8 @@ const EquipmentOptionChoice: React.FC<{
                 
                 if (opt.from?.option_set_type === 'equipment_category' && opt.from?.equipment_category?.index) {
                     const catItems = await atlasService.loadEquipmentByCategory(opt.from.equipment_category.index);
-                    const mappedItems = (catItems || []).map((item: any) => ({
+                    const filtered = (catItems || []).filter(isStarterEquipment);
+                    const mappedItems = filtered.map((item: any) => ({
                         option_type: 'reference',
                         item,
                         equipment: item,
@@ -52,11 +82,18 @@ const EquipmentOptionChoice: React.FC<{
                         if (choice.option_type === 'choice' && choice.choice?.from?.option_set_type === 'equipment_category') {
                             const subCatItems = await atlasService.loadEquipmentByCategory(choice.choice.from.equipment_category.index);
                             if (subCatItems) {
-                                expanded.push(...subCatItems);
+                                const filteredSub = subCatItems.filter(isStarterEquipment).map((item: any) => ({
+                                    option_type: 'reference',
+                                    item,
+                                    equipment: item,
+                                    index: item.index,
+                                    name: item.name
+                                }));
+                                expanded.push(...filteredSub);
                             } else {
                                 expanded.push(choice);
                             }
-                        } else {
+                        } else if (isStarterEquipment(choice)) {
                             expanded.push(choice);
                         }
                     }
@@ -241,7 +278,12 @@ const EquipmentOptionChoice: React.FC<{
                                                             <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" />
                                                         </div>
                                                         {details?.imageUrl || details?.index ? (
-                                                            <ChromaKeyImage src={normalizeImageUrl(details.imageUrl, 'equipment', details.index)} alt={details.name} className="h-full w-full object-contain" />
+                                                            <EquipmentSprite
+                                                                itemKey={details.index || details.name}
+                                                                alt={details.name}
+                                                                className="h-full w-full object-contain"
+                                                                fallbackUrl={normalizeImageUrl(details.imageUrl, 'equipment', details.index)}
+                                                            />
                                                         ) : (
                                                             <div className="h-full w-full flex items-center justify-center bg-black/5">
                                                                 <GameIcon name={subIsPack ? "backpack" : "weapon"} size={20} color="#8B0000" className="opacity-20" />
@@ -342,10 +384,11 @@ const EquipmentOptionChoice: React.FC<{
                             
                             <div className="w-full h-full bg-black/5 rounded-sm flex items-center justify-center overflow-hidden relative z-10 border border-[#c5a059]/10">
                                 {details?.imageUrl || details?.index ? (
-                                    <ChromaKeyImage 
-                                        src={normalizeImageUrl(details.imageUrl, 'equipment', details.index)} 
+                                    <EquipmentSprite 
+                                        itemKey={details.index || details.name} 
                                         alt={name} 
                                         className="h-[90%] w-auto object-contain filter group-hover:scale-110 transition-transform duration-500" 
+                                        fallbackUrl={normalizeImageUrl(details.imageUrl, 'equipment', details.index)}
                                     />
                                 ) : (
                                     <GameIcon name={isPack ? "backpack" : "weapon"} size={16} color="#8B0000" className="opacity-20 group-hover:opacity-40 transition-opacity" />
@@ -406,6 +449,38 @@ export const EquipmentStep: React.FC<{
     const [loading, setLoading] = useState(false);
     const [completedOptions, setCompletedOptions] = useState<Record<string, boolean>>({});
     const [choiceSelections, setChoiceSelections] = useState<Record<string, string[]>>({}); // optKey -> list of selected choice indices
+
+    // Equipment markdown compendium & help state
+    const [choiceMarkdown, setChoiceMarkdown] = useState<string>('');
+    const [helpMarkdown, setHelpMarkdown] = useState<string>('');
+    const [weaponsMarkdown, setWeaponsMarkdown] = useState<string>('');
+    const [armorClassMarkdown, setArmorClassMarkdown] = useState<string>('');
+
+    const [isHelpOpen, setIsHelpOpen] = useState<boolean>(false);
+    const [activeHelpTab, setActiveHelpTab] = useState<'help' | 'choice' | 'weapons' | 'armor'>('help');
+    const [showInlineIntro, setShowInlineIntro] = useState<boolean>(false);
+
+    // Fetch official equipment markdown guide files on mount
+    useEffect(() => {
+        const loadMarkdownFiles = async () => {
+            try {
+                const [choiceRes, helpRes, weaponsRes, armorRes] = await Promise.all([
+                    fetch('/assets/ui/official/equipment/equipment_choice.md'),
+                    fetch('/assets/ui/official/equipment/equipment_help.md'),
+                    fetch('/assets/ui/official/equipment/weapons.md'),
+                    fetch('/assets/ui/official/equipment/armor_class.md')
+                ]);
+
+                if (choiceRes.ok) setChoiceMarkdown(await choiceRes.text());
+                if (helpRes.ok) setHelpMarkdown(await helpRes.text());
+                if (weaponsRes.ok) setWeaponsMarkdown(await weaponsRes.text());
+                if (armorRes.ok) setArmorClassMarkdown(await armorRes.text());
+            } catch (err) {
+                console.error('Failed to load equipment markdown files:', err);
+            }
+        };
+        loadMarkdownFiles();
+    }, []);
 
     useEffect(() => {
         const loadEquipment = async () => {
@@ -710,18 +785,142 @@ export const EquipmentStep: React.FC<{
     };
 
     return (
-        <div className="h-full flex gap-6 p-2">
+        <div className="h-full flex gap-6 p-2 relative">
+            {/* Help Compendium Modal Overlay */}
+            <AnimatePresence>
+                {isHelpOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-[2px] flex items-center justify-center p-6"
+                        onClick={() => setIsHelpOpen(false)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="bg-parchment-100 border-2 border-dragon-gold p-6 rounded-sm max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl relative"
+                        >
+                            <div className="flex justify-between items-center border-b border-dragon-gold/30 pb-3 mb-4 shrink-0">
+                                <div className="flex items-center gap-2">
+                                    <GameIcon name="help" size={18} color="#8B0000" fallbackName="info" />
+                                    <h3 className="text-lg font-header font-black uppercase text-dragon-darkRed tracking-wide">
+                                        Official Equipment Compendium & Rules
+                                    </h3>
+                                </div>
+                                <button
+                                    onClick={() => setIsHelpOpen(false)}
+                                    className="px-2.5 py-1 bg-dragon-red text-white text-xs font-bold rounded hover:bg-dragon-darkRed transition-colors"
+                                >
+                                    Close ✕
+                                </button>
+                            </div>
+
+                            {/* Navigation Tabs */}
+                            <div className="flex border-b border-dragon-gold/20 mb-4 gap-1 overflow-x-auto shrink-0 pb-1">
+                                <button
+                                    onClick={() => setActiveHelpTab('help')}
+                                    className={cn(
+                                        "px-3 py-1.5 text-[11px] font-black uppercase tracking-wider rounded-t border-t border-x transition-colors",
+                                        activeHelpTab === 'help'
+                                            ? "bg-dragon-darkRed text-white border-dragon-gold"
+                                            : "bg-dragon-gold/10 text-dragon-darkRed border-dragon-gold/20 hover:bg-dragon-gold/20"
+                                    )}
+                                >
+                                    Equipment Rules
+                                </button>
+                                <button
+                                    onClick={() => setActiveHelpTab('choice')}
+                                    className={cn(
+                                        "px-3 py-1.5 text-[11px] font-black uppercase tracking-wider rounded-t border-t border-x transition-colors",
+                                        activeHelpTab === 'choice'
+                                            ? "bg-dragon-darkRed text-white border-dragon-gold"
+                                            : "bg-dragon-gold/10 text-dragon-darkRed border-dragon-gold/20 hover:bg-dragon-gold/20"
+                                    )}
+                                >
+                                    Starting Gear Choice
+                                </button>
+                                <button
+                                    onClick={() => setActiveHelpTab('weapons')}
+                                    className={cn(
+                                        "px-3 py-1.5 text-[11px] font-black uppercase tracking-wider rounded-t border-t border-x transition-colors",
+                                        activeHelpTab === 'weapons'
+                                            ? "bg-dragon-darkRed text-white border-dragon-gold"
+                                            : "bg-dragon-gold/10 text-dragon-darkRed border-dragon-gold/20 hover:bg-dragon-gold/20"
+                                    )}
+                                >
+                                    Weapons Guide
+                                </button>
+                                <button
+                                    onClick={() => setActiveHelpTab('armor')}
+                                    className={cn(
+                                        "px-3 py-1.5 text-[11px] font-black uppercase tracking-wider rounded-t border-t border-x transition-colors",
+                                        activeHelpTab === 'armor'
+                                            ? "bg-dragon-darkRed text-white border-dragon-gold"
+                                            : "bg-dragon-gold/10 text-dragon-darkRed border-dragon-gold/20 hover:bg-dragon-gold/20"
+                                    )}
+                                >
+                                    Armor Class (AC)
+                                </button>
+                            </div>
+
+                            {/* Content Scroll Area */}
+                            <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
+                                <DnDMarkdown
+                                    content={
+                                        activeHelpTab === 'help' ? helpMarkdown :
+                                        activeHelpTab === 'choice' ? choiceMarkdown :
+                                        activeHelpTab === 'weapons' ? weaponsMarkdown :
+                                        armorClassMarkdown
+                                    }
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             <div className="w-[60%] flex flex-col gap-6 overflow-hidden">
-                <div className="space-y-1 shrink-0">
-                    <div className="flex items-center gap-3">
-                        <div className="p-2 bg-dragon-red/10 text-dragon-red border border-dragon-red/20 rounded-sm">
-                            <GameIcon name="backpack" size={20} color="currentColor" />
+                <div className="space-y-3 shrink-0">
+                    <div className="flex items-center justify-between gap-3 flex-wrap border-b border-dragon-gold/20 pb-3">
+                        <div className="flex items-center gap-3">
+                            <div className="p-2 bg-dragon-red/10 text-dragon-red border border-dragon-red/20 rounded-sm">
+                                <GameIcon name="backpack" size={20} color="currentColor" />
+                            </div>
+                            <div>
+                                <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Armament Selection</h2>
+                                <p className="text-[11px] text-parchment-600 font-medium">Equip your starting gear and resolve equipment choices.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h2 className="text-3xl font-header font-black text-dragon-darkRed uppercase tracking-tight">Armament Selection</h2>
-                            <p className="text-[11px] text-parchment-600 font-medium">Equip your starting gear and resolve equipment choices.</p>
+
+                        <div className="flex items-center gap-2">
+                            <button
+                                onClick={() => setShowInlineIntro(prev => !prev)}
+                                className="px-3 py-1.5 bg-dragon-gold/10 border border-dragon-gold/30 hover:bg-dragon-gold/20 rounded text-[10px] font-black text-dragon-darkRed uppercase tracking-wider transition-colors flex items-center gap-1.5"
+                            >
+                                <GameIcon name="scroll" size={13} color="#8B0000" />
+                                {showInlineIntro ? 'Hide Overview' : 'Overview Guide'}
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setActiveHelpTab('help');
+                                    setIsHelpOpen(true);
+                                }}
+                                className="px-3 py-1.5 bg-dragon-darkRed text-white border border-dragon-gold/40 hover:bg-dragon-red rounded text-[10px] font-black uppercase tracking-wider transition-colors flex items-center gap-1.5 shadow-sm"
+                            >
+                                <GameIcon name="help" size={13} color="#FFD700" fallbackName="info" />
+                                Equipment Rules & Help [?]
+                            </button>
                         </div>
                     </div>
+
+                    {showInlineIntro && choiceMarkdown && (
+                        <div className="p-4 bg-white/80 border-2 border-dragon-gold/30 rounded-sm shadow-sm max-h-60 overflow-y-auto custom-scrollbar">
+                            <DnDMarkdown content={choiceMarkdown} />
+                        </div>
+                    )}
                 </div>
 
                 {loading ? (

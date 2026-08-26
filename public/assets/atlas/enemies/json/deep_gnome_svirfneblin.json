@@ -86,7 +86,7 @@
             "name": "nondetection",
             "level": 3,
             "notes": "Self only",
-            "url": "/assets/atlas/spell/json/json/nondetection.json",
+            "url": "/assets/atlas/spell/json/nondetection.json",
             "usage": {
               "type": "at will",
               "rest_types": []
@@ -95,7 +95,7 @@
           {
             "name": "blindness/deafness",
             "level": 2,
-            "url": "/assets/atlas/spell/json/json/blindness_deafness.json",
+            "url": "/assets/atlas/spell/json/blindness_deafness.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -105,7 +105,7 @@
           {
             "name": "blur",
             "level": 2,
-            "url": "/assets/atlas/spell/json/json/blur.json",
+            "url": "/assets/atlas/spell/json/blur.json",
             "usage": {
               "type": "per day",
               "times": 1,
@@ -115,7 +115,7 @@
           {
             "name": "disguise self",
             "level": 1,
-            "url": "/assets/atlas/spell/json/json/disguise_self.json",
+            "url": "/assets/atlas/spell/json/disguise_self.json",
             "usage": {
               "type": "per day",
               "times": 1,

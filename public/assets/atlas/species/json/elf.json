@@ -20,12 +20,12 @@
     {
       "index": "common",
       "name": "common",
-      "url": "/assets/atlas/languages/common"
+      "url": "/assets/atlas/languages/json/common.json"
     },
     {
       "index": "elvish",
       "name": "elvish",
-      "url": "/assets/atlas/languages/elvish"
+      "url": "/assets/atlas/languages/json/elvish.json"
     }
   ],
   "language_desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
@@ -33,29 +33,29 @@
     {
       "index": "darkvision",
       "name": "darkvision",
-      "url": "/assets/atlas/traits/darkvision"
+      "url": "/assets/atlas/traits/json/darkvision.json"
     },
     {
       "index": "fey_ancestry",
       "name": "fey ancestry",
-      "url": "/assets/atlas/traits/fey_ancestry"
+      "url": "/assets/atlas/traits/json/fey_ancestry.json"
     },
     {
       "index": "trance",
       "name": "trance",
-      "url": "/assets/atlas/traits/trance"
+      "url": "/assets/atlas/traits/json/trance.json"
     },
     {
       "index": "keen_senses",
       "name": "keen senses",
-      "url": "/assets/atlas/traits/keen_senses"
+      "url": "/assets/atlas/traits/json/keen_senses.json"
     }
   ],
   "subraces": [
     {
       "index": "high_elf",
       "name": "high elf",
-      "url": "/assets/atlas/subraces/high_elf"
+      "url": "/assets/atlas/subraces/json/high_elf.json"
     }
   ],
   "url": "/assets/atlas/species/json/elf.json",

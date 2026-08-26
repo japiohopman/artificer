@@ -6,7 +6,7 @@
   "special": [],
   "index": "masons-tools",
   "name": "mason's tools",
-  "kind": "adventuring_gear",
+  "kind": "tool",
   "cost": {
     "quantity": 10,
     "unit": "gp"
@@ -19,7 +19,9 @@
   "contents": [],
   "properties": [],
   "equipSlots": [
-    "none"
+    "tool_1",
+    "tool_2",
+    "tool_3"
   ],
   "last_updated": "12-7-2026",
   "background_type": "generic"
