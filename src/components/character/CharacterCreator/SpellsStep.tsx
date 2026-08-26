@@ -44,9 +44,14 @@ export const SpellsStep: React.FC<{
     const cantripLimit = classData?.spellcasting?.cantrips_known ?? limits.cantrips;
     const spellLimit = limits.spells;
 
+    const getSpellLevel = (s: any): number => {
+        if (!s || s.level === undefined || s.level === null) return 0;
+        return Number(s.level);
+    };
+
     const currentKnown = newChar.knownSpells || [];
-    const selectedCantrips = currentKnown.filter((s: any) => s.level === 0);
-    const selectedLevel1 = currentKnown.filter((s: any) => s.level === 1);
+    const selectedCantrips = currentKnown.filter((s: any) => getSpellLevel(s) === 0);
+    const selectedLevel1 = currentKnown.filter((s: any) => getSpellLevel(s) === 1);
 
     // Load markdown guide files
     useEffect(() => {
@@ -80,7 +85,7 @@ export const SpellsStep: React.FC<{
                 fetchSpellList()
             ]).then(async ([cData, spells]) => {
                 setClassData(cData);
-                const levelFiltered = spells.filter((s: any) => s.level <= 1);
+                const levelFiltered = spells.filter((s: any) => getSpellLevel(s) <= 1);
                 
                 const detailedSpells = await Promise.all(
                     levelFiltered.map(async (s: any) => {
@@ -93,11 +98,11 @@ export const SpellsStep: React.FC<{
                     })
                 );
 
-                // Class filtering
+                // Strict class filtering: ONLY include spells whose classes explicitly contain classIndex
                 const filtered = detailedSpells.filter((s: any) => {
-                    if (!s || s.level > 1) return false;
+                    if (!s || getSpellLevel(s) > 1) return false;
                     if (!Array.isArray(s.classes) || s.classes.length === 0) {
-                        return true;
+                        return false; // Exclude unclassed/hashed fallback entries
                     }
                     return s.classes.some((c: any) => {
                         const cName = typeof c === 'string' ? c : c.index || c.name || '';
@@ -124,18 +129,26 @@ export const SpellsStep: React.FC<{
     }, [newChar.class, classIndex]);
 
     const toggleSpell = (spell: any) => {
-        const isSelected = currentKnown.some((s: any) => s.index === spell.index);
+        const isSelected = currentKnown.some((s: any) => 
+            s.index === spell.index || 
+            (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
+        );
 
         if (isSelected) {
             setNoticeMsg(null);
             setNewChar({ 
                 ...newChar, 
-                knownSpells: currentKnown.filter((s: any) => s.index !== spell.index),
+                knownSpells: currentKnown.filter((s: any) => 
+                    s.index !== spell.index && 
+                    (!s.name || !spell.name || s.name.toLowerCase() !== spell.name.toLowerCase())
+                ),
                 preparedSpells: (newChar.preparedSpells || []).filter((index: string) => index !== spell.index)
             });
             soundService.playEffect('UI_CLICK_LIGHT');
         } else {
-            const isCantrip = spell.level === 0;
+            const spellLevel = getSpellLevel(spell);
+            const isCantrip = spellLevel === 0;
+
             if (isCantrip) {
                 if (cantripLimit > 0 && selectedCantrips.length >= cantripLimit) {
                     soundService.playEffect('UI_ERROR');
@@ -177,8 +190,8 @@ export const SpellsStep: React.FC<{
         );
     }
 
-    const cantrips = availableSpells.filter(s => s.level === 0);
-    const level1Spells = availableSpells.filter(s => s.level === 1);
+    const cantrips = availableSpells.filter(s => getSpellLevel(s) === 0);
+    const level1Spells = availableSpells.filter(s => getSpellLevel(s) === 1);
 
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 relative">
@@ -269,9 +282,12 @@ export const SpellsStep: React.FC<{
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 {cantrips.map(spell => {
-                                    const active = !!newChar.knownSpells?.some((s: any) => s.index === spell.index);
+                                    const active = currentKnown.some((s: any) => 
+                                        s.index === spell.index || 
+                                        (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
+                                    );
                                     return (
-                                        <SpellCard key={spell.index} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
+                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
                                     );
                                 })}
                             </div>
@@ -294,9 +310,12 @@ export const SpellsStep: React.FC<{
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 {level1Spells.map(spell => {
-                                    const active = !!newChar.knownSpells?.some((s: any) => s.index === spell.index);
+                                    const active = currentKnown.some((s: any) => 
+                                        s.index === spell.index || 
+                                        (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
+                                    );
                                     return (
-                                        <SpellCard key={spell.index} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
+                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
                                     );
                                 })}
                             </div>
@@ -417,7 +436,7 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void }> 
                 "text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded",
                 active ? "bg-dragon-gold text-black" : "bg-dragon-red/10 text-dragon-red"
             )}>
-                {spell.level === 0 ? 'Cantrip' : `Lvl ${spell.level}`}
+                {(spell.level === 0 || spell.level === "0") ? 'Cantrip' : `Lvl ${spell.level}`}
             </span>
         </div>
         
