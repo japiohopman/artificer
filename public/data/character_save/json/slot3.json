@@ -5,7 +5,7 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 16,
+    "str": 10,
     "dex": 10,
     "con": 10,
     "int": 10,
@@ -13,16 +13,15 @@
     "cha": 10
   },
   "proficiencies": [
-    "skill: intimidation",
     "Skill: Sleight Of Hand",
     "Skill: Stealth",
     "Thieves' Tools",
+    "light armor",
     "simple weapons",
-    "shortswords",
-    "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
   "traits": [
     {
@@ -36,76 +35,127 @@
       }
     },
     {
-      "name": "savage attacks",
-      "index": "savage_attacks",
-      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+      "name": "hellish resistance",
+      "index": "hellish_resistance",
+      "desc": "You have resistance to fire damage.",
       "trait_specific": {
         "passive_modifiers": {
-          "extra_critical_damage_dice": 1
+          "resistance": [
+            {
+              "index": "fire",
+              "name": "fire",
+              "url": "/assets/atlas/damage_types/json/fire.json"
+            }
+          ]
         }
       }
     },
     {
-      "name": "relentless endurance",
-      "index": "relentless_endurance",
-      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "name": "infernal legacy",
+      "index": "infernal_legacy",
+      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
       "trait_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        },
+        "spells": [
+          {
+            "spell": {
+              "index": "thaumaturgy",
+              "name": "thaumaturgy",
+              "url": "/assets/atlas/spell/json/thaumaturgy.json"
+            },
+            "usage": {
+              "type": "at will"
+            }
+          },
+          {
+            "spell": {
+              "index": "hellish_rebuke",
+              "name": "hellish rebuke",
+              "url": "/assets/atlas/spell/json/hellish_rebuke.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 3,
+            "spell_level": 2
+          },
+          {
+            "spell": {
+              "index": "darkness",
+              "name": "darkness",
+              "url": "/assets/atlas/spell/json/darkness.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 5
+          }
+        ]
       }
-    },
-    {
-      "name": "menacing",
-      "index": "menacing",
-      "desc": "You gain proficiency in the Intimidation skill."
     }
   ],
   "features": [
     {
-      "index": "monk_unarmored_defense",
+      "index": "otherworldly_patron",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "warlock",
+        "name": "warlock",
+        "url": "/assets/atlas/class/json/warlock.json"
       },
-      "name": "unarmored defense",
+      "name": "otherworldly patron",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+        "At 1st level, you have struck a bargain with an otherworldly being, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
       ],
-      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
+      "url": "/assets/atlas/features/json/otherworldly_patron.json",
+      "updated_at": "2026-07-13T06:30:11.950Z",
+      "image": "/assets/atlas/features/images/otherworldly_patron.webp",
       "feature_specific": {
-        "passive_modifiers": {
-          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
+        "subfeature_options": {
+          "choose": 1,
+          "type": "subclass"
         }
       },
       "source": "Class"
     },
     {
-      "index": "martial_arts",
+      "index": "pact_magic",
       "class": {
-        "index": "monk",
-        "name": "monk",
-        "url": "/assets/atlas/class/json/monk.json"
+        "index": "warlock",
+        "name": "warlock",
+        "url": "/assets/atlas/class/json/warlock.json"
       },
-      "name": "martial arts",
+      "name": "pact magic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
-        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
-        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
-        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
-        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
+        "Your arcane research and the magic bestowed on you by your patron have given you facility with spells.",
+        "Cantrips",
+        "You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.",
+        "Spell Slots",
+        "The Warlock table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+        "For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.",
+        "Spells Known of 1st Level and Higher",
+        "At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+        "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+        "Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.",
+        "Spellcasting Ability",
+        "Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+        "Spell save DC = 8 + your proficiency bonus + your Charisma modifier",
+        "Spell attack modifier = your proficiency bonus + your Charisma modifier",
+        "Spellcasting Focus",
+        "You can use an arcane focus as a spellcasting focus for your warlock spells."
       ],
-      "url": "/assets/atlas/features/json/martial_arts.json",
-      "updated_at": "2026-07-13T06:30:11.868Z",
-      "image": "/assets/atlas/features/images/martial_arts.webp",
+      "url": "/assets/atlas/features/json/pact_magic.json",
+      "updated_at": "2026-07-13T06:30:11.951Z",
+      "image": "/assets/atlas/features/images/pact_magic.webp",
       "feature_specific": {},
       "source": "Class"
     }
@@ -132,33 +182,68 @@
     "specialFeatures": []
   },
   "items": {
-    "dart_4t4ebas9p": {
-      "id": "dart_4t4ebas9p",
-      "template": "dart",
-      "quantity": 10,
-      "addedAt": 1787760955228,
-      "kind": "weapon"
-    },
-    "crowbar_tbulg04uq": {
-      "id": "crowbar_tbulg04uq",
-      "template": "crowbar",
-      "quantity": 1,
-      "addedAt": 1787760955228,
-      "kind": "tradegood"
-    },
-    "dagger_rvgr507en": {
-      "id": "dagger_rvgr507en",
+    "dagger_akf4a8xzo": {
+      "id": "dagger_akf4a8xzo",
       "template": "dagger",
       "quantity": 2,
-      "addedAt": 1787760955228,
+      "addedAt": 1787765156811,
       "kind": "weapon"
     },
-    "gold_i8xch4722": {
-      "id": "gold_i8xch4722",
+    "leather_armor_zj3l2o1mq": {
+      "id": "leather_armor_zj3l2o1mq",
+      "template": "leather_armor",
+      "quantity": 1,
+      "addedAt": 1787765156811,
+      "kind": "armor"
+    },
+    "crowbar_qwy0w3xgl": {
+      "id": "crowbar_qwy0w3xgl",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1787765156811,
+      "kind": "tradegood"
+    },
+    "gold_vid958aih": {
+      "id": "gold_vid958aih",
       "template": "gold",
       "quantity": 16,
-      "addedAt": 1787760955228,
+      "addedAt": 1787765156811,
       "kind": "currency"
+    },
+    "light-hammer_lubiycbr7": {
+      "id": "light-hammer_lubiycbr7",
+      "template": "light-hammer",
+      "quantity": 1,
+      "addedAt": 1787765176424,
+      "kind": "weapon"
+    },
+    "orb_26tab7aa4": {
+      "id": "orb_26tab7aa4",
+      "template": "orb",
+      "quantity": 1,
+      "addedAt": 1787765191818,
+      "kind": "equipment"
+    },
+    "dungeoneers_pack_tx2zy4v2e": {
+      "id": "dungeoneers_pack_tx2zy4v2e",
+      "template": "dungeoneers_pack",
+      "quantity": 1,
+      "addedAt": 1787765213365,
+      "kind": "container"
+    },
+    "gold_6w65liz8p": {
+      "id": "gold_6w65liz8p",
+      "template": "gold",
+      "quantity": 1,
+      "addedAt": 1787765221808,
+      "kind": "currency"
+    },
+    "mace_gszomueug": {
+      "id": "mace_gszomueug",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1787765228460,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -169,51 +254,51 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "crowbar_tbulg04uq"
+          "itemId": "crowbar_qwy0w3xgl"
         },
         {
           "id": "bag_1",
-          "itemId": "dagger_rvgr507en"
+          "itemId": "gold_vid958aih"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_i8xch4722"
+          "itemId": "light-hammer_lubiycbr7"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "light-hammer_hzfg7oib0"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "orb_26tab7aa4"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "orb_t9stwxa3m"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "dungeoneers_pack_tx2zy4v2e"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "dungeoneers_pack_ayj0kuf83"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "gold_6w65liz8p"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "gold_ciasi7t5d"
         },
         {
           "id": "bag_10",
-          "itemId": null
+          "itemId": "mace_gszomueug"
         },
         {
           "id": "bag_11",
-          "itemId": null
+          "itemId": "mace_o0guzpvkh"
         },
         {
           "id": "bag_12",
@@ -271,7 +356,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dart_4t4ebas9p"
+        "itemId": "dagger_akf4a8xzo"
       },
       {
         "id": "off_hand",
@@ -287,7 +372,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_zj3l2o1mq"
       },
       {
         "id": "clothes",
@@ -429,18 +514,23 @@
   "knownSpells": [],
   "languages": [
     "common",
-    "orc"
+    "infernal"
   ],
   "preparedSpells": [],
-  "spellSlots": {},
+  "spellSlots": {
+    "1": {
+      "current": 1,
+      "max": 1
+    }
+  },
   "choices": {},
-  "name": "willy",
-  "race": "half_orc",
-  "class": "monk",
+  "name": "fggrh",
+  "race": "tiefling",
+  "class": "warlock",
   "spellcastingAbility": "cha",
   "background": "criminal",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WarlockSword.webp",
   "id": "slot3",
   "hp": 4,
   "maxHp": 4,
@@ -450,5 +540,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-26T16:16:07.825Z"
+  "lastSaved": "2026-08-26T17:27:22.003Z"
 }
