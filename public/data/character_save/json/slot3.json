@@ -3,9 +3,9 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Female",
+  "gender": "Male",
   "stats": {
-    "str": 10,
+    "str": 16,
     "dex": 10,
     "con": 10,
     "int": 10,
@@ -13,27 +13,16 @@
     "cha": 10
   },
   "proficiencies": [
+    "skill: intimidation",
     "Skill: Sleight Of Hand",
     "Skill: Stealth",
     "Thieves' Tools",
-    "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
-    "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
-    "darts",
-    "slings",
-    "scimitars",
-    "herbalism kit",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "simple weapons",
+    "shortswords",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
   "traits": [
     {
@@ -47,63 +36,76 @@
       }
     },
     {
-      "name": "gnome cunning",
-      "index": "gnome_cunning",
-      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "name": "savage attacks",
+      "index": "savage_attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
       "trait_specific": {
         "passive_modifiers": {
-          "advantage": [
-            "Intelligence Saving Throws against magic",
-            "Wisdom Saving Throws against magic",
-            "Charisma Saving Throws against magic"
-          ]
+          "extra_critical_damage_dice": 1
         }
       }
+    },
+    {
+      "name": "relentless endurance",
+      "index": "relentless_endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "trait_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      }
+    },
+    {
+      "name": "menacing",
+      "index": "menacing",
+      "desc": "You gain proficiency in the Intimidation skill."
     }
   ],
   "features": [
     {
-      "index": "spellcasting_druid",
+      "index": "monk_unarmored_defense",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "spellcasting: druid",
+      "name": "unarmored defense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+        "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier."
       ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "url": "/assets/atlas/features/json/monk_unarmored_defense.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "image": "/assets/atlas/features/images/monk_unarmored_defense.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
+        "passive_modifiers": {
+          "ac_set": "10 + dexterity_modifier + wisdom_modifier"
         }
       },
       "source": "Class"
     },
     {
-      "index": "druidic",
+      "index": "martial_arts",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "monk",
+        "name": "monk",
+        "url": "/assets/atlas/class/json/monk.json"
       },
-      "name": "druidic",
+      "name": "martial arts",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        "At 1st level, your practice of martial arts gives you mastery of combat styles that use and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property. You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:",
+        "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.",
+        "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.",
+        "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.",
+        "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon."
       ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
+      "url": "/assets/atlas/features/json/martial_arts.json",
+      "updated_at": "2026-07-13T06:30:11.868Z",
+      "image": "/assets/atlas/features/images/martial_arts.webp",
       "feature_specific": {},
       "source": "Class"
     }
@@ -130,39 +132,32 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_q6b85xmrc": {
-      "id": "leather_armor_q6b85xmrc",
-      "template": "leather_armor",
-      "quantity": 1,
-      "addedAt": 1787724585411,
-      "kind": "armor"
-    },
-    "explorers_pack_wfukb6hh6": {
-      "id": "explorers_pack_wfukb6hh6",
-      "template": "explorers_pack",
-      "quantity": 1,
-      "addedAt": 1787724585413,
-      "kind": "container"
-    },
-    "crowbar_dc0tm2ef7": {
-      "id": "crowbar_dc0tm2ef7",
-      "template": "crowbar",
-      "quantity": 1,
-      "addedAt": 1787724585413,
-      "kind": "tradegood"
-    },
-    "dagger_1rkg4fyej": {
-      "id": "dagger_1rkg4fyej",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1787724585413,
+    "dart_4t4ebas9p": {
+      "id": "dart_4t4ebas9p",
+      "template": "dart",
+      "quantity": 10,
+      "addedAt": 1787760955228,
       "kind": "weapon"
     },
-    "gold_f8jz85nxc": {
-      "id": "gold_f8jz85nxc",
+    "crowbar_tbulg04uq": {
+      "id": "crowbar_tbulg04uq",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1787760955228,
+      "kind": "tradegood"
+    },
+    "dagger_rvgr507en": {
+      "id": "dagger_rvgr507en",
+      "template": "dagger",
+      "quantity": 2,
+      "addedAt": 1787760955228,
+      "kind": "weapon"
+    },
+    "gold_i8xch4722": {
+      "id": "gold_i8xch4722",
       "template": "gold",
       "quantity": 16,
-      "addedAt": 1787724585413,
+      "addedAt": 1787760955228,
       "kind": "currency"
     }
   },
@@ -174,15 +169,15 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_wfukb6hh6"
+          "itemId": "crowbar_tbulg04uq"
         },
         {
           "id": "bag_1",
-          "itemId": "crowbar_dc0tm2ef7"
+          "itemId": "dagger_rvgr507en"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_f8jz85nxc"
+          "itemId": "gold_i8xch4722"
         },
         {
           "id": "bag_3",
@@ -276,7 +271,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_1rkg4fyej"
+        "itemId": "dart_4t4ebas9p"
       },
       {
         "id": "off_hand",
@@ -292,7 +287,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_q6b85xmrc"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -434,23 +429,18 @@
   "knownSpells": [],
   "languages": [
     "common",
-    "gnomish"
+    "orc"
   ],
   "preparedSpells": [],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
-  },
+  "spellSlots": {},
   "choices": {},
-  "name": ",jj",
-  "race": "gnome",
-  "class": "druid",
-  "spellcastingAbility": "wis",
+  "name": "willy",
+  "race": "half_orc",
+  "class": "monk",
+  "spellcastingAbility": "cha",
   "background": "criminal",
-  "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "alignment": "lawful_good",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/MonkUnarmed.webp",
   "id": "slot3",
   "hp": 4,
   "maxHp": 4,
@@ -460,5 +450,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-26T07:27:19.587Z"
+  "lastSaved": "2026-08-26T16:16:07.825Z"
 }
