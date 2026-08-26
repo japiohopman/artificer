@@ -14,6 +14,7 @@ import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
 import { InventoryDragPreview } from './InventoryDragPreview';
+import { InventoryItemActionMenu } from './InventoryItemActionMenu';
 import { soundService } from '../../../services/soundService';
 
 export const FullInventoryMenu: React.FC = () => {
@@ -320,6 +321,7 @@ export const FullInventoryMenu: React.FC = () => {
       </div>
       </motion.div>
     </div>
+    <InventoryItemActionMenu />
     </DndContext>
   );
 };

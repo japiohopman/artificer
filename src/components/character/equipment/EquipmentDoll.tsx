@@ -4,6 +4,8 @@ import { cn } from '../../../lib/utils';
 import { EquipmentSprite } from './EquipmentSprite';
 import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
+import { useUIStore } from '../../../store/useUIStore';
+import { useCharacterStore } from '../../../store/useCharacterStore';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,
@@ -46,6 +48,20 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
     data: { type: 'equip_slot', slotId: slot }
   });
 
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!equippedItem) return;
+
+    const charId = useCharacterStore.getState().activeCharacterId;
+    useUIStore.getState().setItemActionMenu({
+      item: equippedItem,
+      sourceId: charId,
+      slot,
+      position: { x: e.clientX, y: e.clientY }
+    });
+  };
+
   const isActive = activeSlots.includes(slot);
   const slotDef = EQUIPMENT_SLOTS[slot];
   const itemKey = equippedItem ? (equippedItem.template || equippedItem.index || equippedItem.id || equippedItem.name) : undefined;
@@ -56,6 +72,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       ref={setNodeRef}
       key={slot}
       onClick={() => onSlotClick?.(slot)}
+      onContextMenu={handleContextMenu}
       className={cn(
         "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group",
         isActive || isOver

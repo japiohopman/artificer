@@ -54,6 +54,13 @@ interface UIState {
     itemId?: string;
     slot?: string;
   } | null;
+  itemActionMenu: {
+    item: any;
+    sourceId: string;
+    index?: number;
+    slot?: string;
+    position: { x: number; y: number };
+  } | null;
 
   // Actions
   setViewMode: (mode: 'combat' | 'collection') => void;
@@ -83,6 +90,7 @@ interface UIState {
   setActiveBottomHub: (hub: 'chat' | 'legend' | 'actions') => void;
   setFocusedItem: (item: any | null) => void;
   setInspectingItem: (data: { item: any; sourceId: string; index?: number; itemId?: string; slot?: string; } | null) => void;
+  setItemActionMenu: (menu: { item: any; sourceId: string; index?: number; slot?: string; position: { x: number; y: number } } | null) => void;
   setIsProfileMenuOpen: (isOpen: boolean) => void;
   setIsMonsterProfileOpen: (isOpen: boolean) => void;
   setIsTransportProfileOpen: (isOpen: boolean) => void;
@@ -134,6 +142,7 @@ export const useUIStore = create<UIState>((set) => ({
   
   focusedItem: null,
   inspectingItem: null,
+  itemActionMenu: null,
 
   setViewMode: (viewMode) => set({ viewMode }),
   setGameMode: (gameMode) => set({ gameMode }),
@@ -164,6 +173,7 @@ export const useUIStore = create<UIState>((set) => ({
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setFocusedItem: (focusedItem) => set({ focusedItem }),
   setInspectingItem: (inspectingItem) => set({ inspectingItem }),
+  setItemActionMenu: (itemActionMenu) => set({ itemActionMenu }),
   setIsProfileMenuOpen: (isProfileMenuOpen) => set({ isProfileMenuOpen }),
   setIsMonsterProfileOpen: (isMonsterProfileOpen) => set({ isMonsterProfileOpen }),
   setIsTransportProfileOpen: (isTransportProfileOpen) => set({ isTransportProfileOpen }),

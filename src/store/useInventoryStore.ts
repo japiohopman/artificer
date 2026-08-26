@@ -117,7 +117,13 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             delete items[itemId];
             return { ...char, items, containers };
           }
-          return { ...char, backpack: char.backpack.filter((_, i) => i === indexOrItemId ? false : true) };
+          return {
+            ...char,
+            backpack: char.backpack.filter((item, i) => {
+              if (typeof indexOrItemId === 'number') return i !== indexOrItemId;
+              return item.id !== indexOrItemId;
+            })
+          };
         })
       });
     });
