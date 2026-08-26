@@ -5,7 +5,6 @@ import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
-import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
@@ -46,6 +45,8 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
   };
 
   const isMagic = item.rarity && item.rarity !== 'Common';
+  const itemKey = item.template || item.index || item.id || item.name;
+  const fallbackUrl = normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name);
 
   if (gridMode) {
     return (
@@ -59,25 +60,16 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         className={cn(
           "aspect-[9/16] w-full bg-parchment-200/50 hover:bg-dragon-red/15 border-2 border-dragon-red/15 hover:border-dragon-red/40 rounded-lg relative flex flex-col items-center justify-between p-1.5 cursor-pointer transition-all select-none shadow-sm group overflow-hidden text-left pointer-events-auto",
           isMagic && "ring-1 ring-dragon-gold/50 border-dragon-gold/60 bg-dragon-gold/[0.05]",
-          isDragging && "opacity-0 z-50 scale-105"
+          isDragging && "opacity-40 border-dashed border-dragon-red/50 shadow-inner scale-95"
         )}
       >
         <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
-          {getEquipmentSpriteCoord(item.template || item.index || item.name) ? (
-            <EquipmentSprite
-              itemKey={item.template || item.index || item.name}
-              alt={item.name}
-              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-              fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
-            />
-          ) : (
-            <img
-              src={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
-              alt={item.name}
-              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-              referrerPolicy="no-referrer"
-            />
-          )}
+          <EquipmentSprite
+            itemKey={itemKey}
+            alt={item.name}
+            className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+            fallbackUrl={fallbackUrl}
+          />
         </div>
 
         <div className="w-full text-center pointer-events-none">
@@ -107,15 +99,15 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
       className={cn(
         "group relative flex items-center gap-3 p-3 bg-white/40 hover:bg-white/60 border border-dragon-red/10 hover:border-dragon-red/30 rounded-xl transition-all cursor-grab active:cursor-grabbing shadow-sm",
         isMagic && "ring-1 ring-dragon-gold/30 border-dragon-gold/40 bg-dragon-gold/[0.03]",
-        isDragging && "opacity-0"
+        isDragging && "opacity-40 border-dashed border-dragon-red/50 scale-95"
       )}
     >
-      <div className="w-12 aspect-[9/16] bg-black/5 rounded-lg overflow-hidden shrink-0 border border-dragon-red/5">
-        <img 
-          src={normalizeImageUrl(item.imageUrl, item._type || 'equipment', item.index || item.id)} 
+      <div className="w-12 aspect-[9/16] bg-black/5 rounded-lg overflow-hidden shrink-0 border border-dragon-red/5 flex items-center justify-center">
+        <EquipmentSprite 
+          itemKey={itemKey}
           alt={item.name}
           className="w-full h-full object-contain p-1"
-          referrerPolicy="no-referrer"
+          fallbackUrl={fallbackUrl}
         />
       </div>
       <div className="flex-1 min-w-0">
@@ -131,3 +123,4 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     </div>
   );
 };
+

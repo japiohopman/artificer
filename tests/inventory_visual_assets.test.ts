@@ -232,4 +232,56 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
     });
   });
 
+  describe('Crop Dimensions & Architecture Guard Tests', () => {
+    it('correctly calculates cell crop dimensions for 1024x1792 sheet with 4x7 grid', () => {
+      const sheet = getSpriteSheetDefinition('starter_weapons_01');
+      expect(sheet).toBeDefined();
+      if (sheet) {
+        const imageDimensions = { width: 1024, height: 1792 };
+        const cellWidth = imageDimensions.width / sheet.grid.cols;
+        const cellHeight = imageDimensions.height / sheet.grid.rows;
+        expect(cellWidth).toBe(256);
+        expect(cellHeight).toBe(256);
+
+        const visualId = resolveVisualIdentity('longsword');
+        const cell = getSpriteCellForVisual(visualId);
+        expect(cell).toBeDefined();
+        if (cell) {
+          const crop = {
+            sx: cell.col * cellWidth,
+            sy: cell.row * cellHeight,
+            sw: cellWidth,
+            sh: cellHeight,
+          };
+          expect(crop).toEqual({ sx: 512, sy: 512, sw: 256, sh: 256 });
+        }
+      }
+    });
+
+    it('architectural guard: ensures no production files re-introduce equipmentSpriteMap or getEquipmentSpriteCoord', () => {
+      const srcDir = path.join(process.cwd(), 'src');
+      const scanDir = (dir: string): string[] => {
+        let results: string[] = [];
+        const list = fs.readdirSync(dir);
+        list.forEach(file => {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          if (stat && stat.isDirectory()) {
+            results = results.concat(scanDir(filePath));
+          } else if (file.endsWith('.ts') || file.endsWith('.tsx')) {
+            results.push(filePath);
+          }
+        });
+        return results;
+      };
+
+      const sourceFiles = scanDir(srcDir);
+      sourceFiles.forEach(file => {
+        const content = fs.readFileSync(file, 'utf8');
+        expect(content.includes('equipmentSpriteMap')).toBe(false);
+        expect(content.includes('getEquipmentSpriteCoord')).toBe(false);
+      });
+    });
+  });
 });
+

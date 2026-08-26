@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { cn } from '../../../lib/utils';
-import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
+import { EquipmentSprite } from './EquipmentSprite';
 import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import {
@@ -48,6 +48,8 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
   const isActive = activeSlots.includes(slot);
   const slotDef = EQUIPMENT_SLOTS[slot];
+  const itemKey = equippedItem ? (equippedItem.template || equippedItem.index || equippedItem.id || equippedItem.name) : undefined;
+  const fallbackUrl = equippedItem ? normalizeImageUrl(equippedItem.imageUrl || equippedItem.image, equippedItem._type || 'equipment', equippedItem.index || equippedItem.id, equippedItem.name) : undefined;
 
   return (
     <button
@@ -69,10 +71,11 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
       {equippedItem ? (
         <div className="absolute inset-0 flex items-center justify-center p-0.5 z-10">
-          <ChromaKeyImage
-            src={normalizeImageUrl(equippedItem.imageUrl, equippedItem._type || 'equipment', equippedItem.index)}
+          <EquipmentSprite
+            itemKey={itemKey}
             alt={equippedItem.name}
             className="w-full h-full object-contain drop-shadow-sm"
+            fallbackUrl={fallbackUrl}
           />
         </div>
       ) : (

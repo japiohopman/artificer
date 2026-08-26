@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
-import { DndContext, DragEndEvent, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
+import { DndContext, DragEndEvent, DragStartEvent, DragOverEvent, DragOverlay, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { Inventory } from './Inventory';
 import { PartyInventory } from './PartyInventory';
 import { EquipmentDoll } from '../equipment/EquipmentDoll';
@@ -13,9 +13,13 @@ import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
-import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
+import { InventoryDragPreview } from './InventoryDragPreview';
+import { soundService } from '../../../services/soundService';
 
 export const FullInventoryMenu: React.FC = () => {
+  const [activeDragItem, setActiveDragItem] = React.useState<any>(null);
+  const lastHoverTargetRef = React.useRef<string | null>(null);
+
   const {
     isInventoryMenuOpen,
     setIsInventoryMenuOpen,
@@ -51,14 +55,39 @@ export const FullInventoryMenu: React.FC = () => {
   const leftChars = characters.slice(0, 3);
   const rightChars = characters.slice(3, 6);
 
+  const handleDragStart = (event: DragStartEvent) => {
+    const item = event.active.data.current?.item;
+    if (item) {
+      setActiveDragItem(item);
+      soundService.playEffect('ITEM_GRAB');
+    }
+  };
+
+  const handleDragOver = (event: DragOverEvent) => {
+    const overId = event.over?.id ? String(event.over.id) : null;
+    if (overId && overId !== lastHoverTargetRef.current) {
+      lastHoverTargetRef.current = overId;
+      soundService.playEffect('UI_CLICK_LIGHT');
+    }
+  };
+
   const handleDragEnd = (event: DragEndEvent) => {
+    setActiveDragItem(null);
+    lastHoverTargetRef.current = null;
+
     const { active, over } = event;
-    if (!active || !over) return;
+    if (!active || !over) {
+      soundService.playEffect('UI_BACK_EXIT');
+      return;
+    }
 
     const activeData = active.data.current;
     const overData = over.data.current;
 
-    if (!activeData || !overData) return;
+    if (!activeData || !overData) {
+      soundService.playEffect('UI_BACK_EXIT');
+      return;
+    }
 
     const sourceId = activeData.sourceId;
     const targetId = overData.characterId || overData.type;
@@ -66,6 +95,7 @@ export const FullInventoryMenu: React.FC = () => {
 
     if (overData.type === 'equip_slot' && overData.slotId && activeData.item) {
       equipItem(activeData.item, overData.slotId);
+      soundService.playEffect('ITEM_EQUIP');
       return;
     }
 
@@ -75,11 +105,27 @@ export const FullInventoryMenu: React.FC = () => {
         targetId: targetId === 'backpack' ? overData.characterId : targetId,
         itemId
       });
+      soundService.playEffect('ITEM_SLOT');
     }
   };
 
+  const handleDragCancel = () => {
+    setActiveDragItem(null);
+    lastHoverTargetRef.current = null;
+    soundService.playEffect('UI_BACK_EXIT');
+  };
+
   return (
-    <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
+    <DndContext
+      sensors={sensors}
+      onDragStart={handleDragStart}
+      onDragOver={handleDragOver}
+      onDragEnd={handleDragEnd}
+      onDragCancel={handleDragCancel}
+    >
+      <DragOverlay dropAnimation={{ duration: 200, easing: 'cubic-bezier(0.18, 0.67, 0.6, 1.22)' }}>
+        {activeDragItem ? <InventoryDragPreview item={activeDragItem} /> : null}
+      </DragOverlay>
     <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
@@ -175,35 +221,27 @@ export const FullInventoryMenu: React.FC = () => {
                        exit={{ opacity: 0, y: -10 }}
                        className="bg-white/60 rounded-2xl border-2 border-dragon-gold/40 p-4 shadow-xl flex flex-col gap-3 shrink-0"
                      >
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <span className="text-[8px] font-black text-dragon-gold uppercase tracking-widest block">Inspecting Item</span>
-                            <h3 className="font-header text-sm text-dragon-darkRed uppercase">{selectedItem.name}</h3>
-                          </div>
-                          <button
-                            onClick={() => setInspectingItem(null)}
-                            className="p-1 text-parchment-400 hover:text-dragon-red transition-colors"
-                          >
-                            <GameIcon name="close" size={14} />
-                          </button>
-                        </div>
+                         <div className="flex justify-between items-start">
+                           <div>
+                             <span className="text-[8px] font-black text-dragon-gold uppercase tracking-widest block">Inspecting Item</span>
+                             <h3 className="font-header text-sm text-dragon-darkRed uppercase">{selectedItem.name}</h3>
+                           </div>
+                           <button
+                             onClick={() => setInspectingItem(null)}
+                             className="p-1 text-parchment-400 hover:text-dragon-red transition-colors"
+                           >
+                             <GameIcon name="close" size={14} />
+                           </button>
+                         </div>
 
-                        <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
+                         <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
                           <div className="w-12 h-12 rounded bg-black/10 overflow-hidden flex items-center justify-center shrink-0 border border-dragon-red/20">
-                            {getEquipmentSpriteCoord(selectedItem.template || selectedItem.index || selectedItem.name) ? (
-                              <EquipmentSprite
-                                itemKey={selectedItem.template || selectedItem.index || selectedItem.name}
-                                alt={selectedItem.name}
-                                className="w-full h-full object-contain"
-                                fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
-                              />
-                            ) : (
-                              <ChromaKeyImage
-                                src={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
-                                alt={selectedItem.name}
-                                className="w-full h-full object-contain"
-                              />
-                            )}
+                            <EquipmentSprite
+                              itemKey={selectedItem.template || selectedItem.index || selectedItem.id || selectedItem.name}
+                              alt={selectedItem.name}
+                              className="w-full h-full object-contain"
+                              fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
+                            />
                           </div>
                           <div className="flex-1 text-[9px] space-y-0.5">
                             <div className="flex justify-between">
