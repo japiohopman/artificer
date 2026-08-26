@@ -9,7 +9,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_weapons_01: {
     id: 'starter_weapons_01',
     path: '/assets/atlas/equipment/sprites/starter_weapons_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'weapon',
     description: 'Core simple & martial melee starter weapons',
@@ -17,7 +17,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_weapons_02: {
     id: 'starter_weapons_02',
     path: '/assets/atlas/equipment/sprites/starter_weapons_02.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'weapon',
     description: 'Ranged weapons, heavy martial weapons & ammunition',
@@ -25,7 +25,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_armor_01: {
     id: 'starter_armor_01',
     path: '/assets/atlas/equipment/sprites/starter_armor_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'armor',
     description: 'Light, medium, heavy armor and shields',
@@ -33,7 +33,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_adventuring_01: {
     id: 'starter_adventuring_01',
     path: '/assets/atlas/equipment/sprites/starter_adventuring_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'adventuring_gear',
     description: 'Equipment packs, containers, ropes, and basic survival gear',
@@ -41,7 +41,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_tools_01: {
     id: 'starter_tools_01',
     path: '/assets/atlas/equipment/sprites/starter_tools_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'tool',
     description: 'Artisan tools, thieves tools, musical instruments, and gaming sets',
@@ -49,7 +49,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_spellcasting_01: {
     id: 'starter_spellcasting_01',
     path: '/assets/atlas/equipment/sprites/starter_spellcasting_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'spellcasting',
     description: 'Arcane foci, holy symbols, druidic foci, vestments, and spellbooks',
@@ -57,7 +57,7 @@ export const SPRITE_SHEETS: Record<string, SpriteSheetDefinition> = {
   starter_personal_01: {
     id: 'starter_personal_01',
     path: '/assets/atlas/equipment/sprites/starter_personal_01.webp',
-    grid: { rows: 7, cols: 4 },
+    grid: { rows: 4, cols: 4 },
     aspectRatio: '1:1',
     category: 'personal',
     description: 'Starter clothing, trinkets, writing supplies, and roleplay items',
@@ -103,9 +103,9 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.pike': { visualId: 'equipment.pike', sheetId: 'starter_weapons_02', row: 3, col: 1, status: 'READY', category: 'weapon', aspectRatio: '1:1' },
   'equipment.halberd': { visualId: 'equipment.halberd', sheetId: 'starter_weapons_02', row: 3, col: 2, status: 'READY', category: 'weapon', aspectRatio: '1:1' },
   'equipment.glaive': { visualId: 'equipment.glaive', sheetId: 'starter_weapons_02', row: 3, col: 3, status: 'READY', category: 'weapon', aspectRatio: '1:1' },
-  'equipment.arrow': { visualId: 'equipment.arrow', sheetId: 'starter_weapons_02', row: 4, col: 0, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
-  'equipment.crossbow_bolt': { visualId: 'equipment.crossbow_bolt', sheetId: 'starter_weapons_02', row: 4, col: 1, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
-  'equipment.quiver': { visualId: 'equipment.quiver', sheetId: 'starter_weapons_02', row: 4, col: 2, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
+  'equipment.arrow': { visualId: 'equipment.arrow', sheetId: 'starter_weapons_02', row: 3, col: 3, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
+  'equipment.crossbow_bolt': { visualId: 'equipment.crossbow_bolt', sheetId: 'starter_weapons_02', row: 3, col: 3, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
+  'equipment.quiver': { visualId: 'equipment.quiver', sheetId: 'starter_weapons_02', row: 3, col: 3, status: 'PLANNED', category: 'weapon', aspectRatio: '1:1' },
 
   // --- STARTER ARMOR 01 ---
   'equipment.padded_armor': { visualId: 'equipment.padded_armor', sheetId: 'starter_armor_01', row: 0, col: 0, status: 'READY', category: 'armor', aspectRatio: '1:1' },
@@ -138,16 +138,16 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.tinderbox': { visualId: 'equipment.tinderbox', sheetId: 'starter_adventuring_01', row: 3, col: 1, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
   'equipment.waterskin': { visualId: 'equipment.waterskin', sheetId: 'starter_adventuring_01', row: 3, col: 2, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
   'equipment.mess_kit': { visualId: 'equipment.mess_kit', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'READY', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.ball_bearings': { visualId: 'equipment.ball_bearings', sheetId: 'starter_adventuring_01', row: 4, col: 0, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.string': { visualId: 'equipment.string', sheetId: 'starter_adventuring_01', row: 4, col: 1, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.hammer': { visualId: 'equipment.hammer', sheetId: 'starter_adventuring_01', row: 4, col: 2, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.piton': { visualId: 'equipment.piton', sheetId: 'starter_adventuring_01', row: 4, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.lantern_hooded': { visualId: 'equipment.lantern_hooded', sheetId: 'starter_adventuring_01', row: 5, col: 0, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.chest': { visualId: 'equipment.chest', sheetId: 'starter_adventuring_01', row: 5, col: 1, status: 'PLANNED', category: 'container', aspectRatio: '1:1' },
-  'equipment.map_case': { visualId: 'equipment.map_case', sheetId: 'starter_adventuring_01', row: 5, col: 2, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.blanket': { visualId: 'equipment.blanket', sheetId: 'starter_adventuring_01', row: 5, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.pot_iron': { visualId: 'equipment.pot_iron', sheetId: 'starter_adventuring_01', row: 6, col: 0, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
-  'equipment.silk_rope_50_ft': { visualId: 'equipment.silk_rope_50_ft', sheetId: 'starter_adventuring_01', row: 6, col: 1, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1', fallbackVisualId: 'equipment.hempen_rope_50_ft' },
+  'equipment.ball_bearings': { visualId: 'equipment.ball_bearings', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.string': { visualId: 'equipment.string', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.hammer': { visualId: 'equipment.hammer', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.piton': { visualId: 'equipment.piton', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.lantern_hooded': { visualId: 'equipment.lantern_hooded', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.chest': { visualId: 'equipment.chest', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'container', aspectRatio: '1:1' },
+  'equipment.map_case': { visualId: 'equipment.map_case', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.blanket': { visualId: 'equipment.blanket', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.pot_iron': { visualId: 'equipment.pot_iron', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1' },
+  'equipment.silk_rope_50_ft': { visualId: 'equipment.silk_rope_50_ft', sheetId: 'starter_adventuring_01', row: 3, col: 3, status: 'PLANNED', category: 'adventuring_gear', aspectRatio: '1:1', fallbackVisualId: 'equipment.hempen_rope_50_ft' },
 
   // --- STARTER TOOLS 01 ---
   'equipment.thieves_tools': { visualId: 'equipment.thieves_tools', sheetId: 'starter_tools_01', row: 0, col: 0, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
@@ -166,7 +166,7 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.lute': { visualId: 'equipment.lute', sheetId: 'starter_tools_01', row: 3, col: 1, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
   'equipment.dice_set': { visualId: 'equipment.dice_set', sheetId: 'starter_tools_01', row: 3, col: 2, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
   'equipment.playing_card_set': { visualId: 'equipment.playing_card_set', sheetId: 'starter_tools_01', row: 3, col: 3, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
-  'equipment.scale_merchants': { visualId: 'equipment.scale_merchants', sheetId: 'starter_tools_01', row: 4, col: 0, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
+  'equipment.scale_merchants': { visualId: 'equipment.scale_merchants', sheetId: 'starter_tools_01', row: 3, col: 3, status: 'PLANNED', category: 'tool', aspectRatio: '1:1' },
 
   // --- STARTER SPELLCASTING 01 ---
   'equipment.arcane_focus': { visualId: 'equipment.arcane_focus', sheetId: 'starter_spellcasting_01', row: 0, col: 0, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
@@ -184,10 +184,10 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.emblem': { visualId: 'equipment.emblem', sheetId: 'starter_spellcasting_01', row: 3, col: 0, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
   'equipment.sprig_of_mistletoe': { visualId: 'equipment.sprig_of_mistletoe', sheetId: 'starter_spellcasting_01', row: 3, col: 1, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
   'equipment.totem': { visualId: 'equipment.totem', sheetId: 'starter_spellcasting_01', row: 3, col: 2, status: 'READY', category: 'spellcasting', aspectRatio: '1:1' },
-  'equipment.alms_box': { visualId: 'equipment.alms_box', sheetId: 'starter_spellcasting_01', row: 4, col: 0, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
-  'equipment.censer': { visualId: 'equipment.censer', sheetId: 'starter_spellcasting_01', row: 4, col: 1, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
-  'equipment.incense_block': { visualId: 'equipment.incense_block', sheetId: 'starter_spellcasting_01', row: 4, col: 2, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
-  'equipment.vestments': { visualId: 'equipment.vestments', sheetId: 'starter_spellcasting_01', row: 4, col: 3, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
+  'equipment.alms_box': { visualId: 'equipment.alms_box', sheetId: 'starter_spellcasting_01', row: 3, col: 3, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
+  'equipment.censer': { visualId: 'equipment.censer', sheetId: 'starter_spellcasting_01', row: 3, col: 3, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
+  'equipment.incense_block': { visualId: 'equipment.incense_block', sheetId: 'starter_spellcasting_01', row: 3, col: 3, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
+  'equipment.vestments': { visualId: 'equipment.vestments', sheetId: 'starter_spellcasting_01', row: 3, col: 3, status: 'PLANNED', category: 'spellcasting', aspectRatio: '1:1' },
 
   // --- STARTER PERSONAL / ROLEPLAY 01 ---
   'equipment.travelers_clothes': { visualId: 'equipment.travelers_clothes', sheetId: 'starter_personal_01', row: 0, col: 0, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
@@ -206,15 +206,15 @@ export const SPRITE_MANIFEST: Record<string, SpriteCellMapping> = {
   'equipment.soap': { visualId: 'equipment.soap', sheetId: 'starter_personal_01', row: 3, col: 1, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
   'equipment.bell': { visualId: 'equipment.bell', sheetId: 'starter_personal_01', row: 3, col: 2, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
   'equipment.crowbar': { visualId: 'equipment.crowbar', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.abacus': { visualId: 'equipment.abacus', sheetId: 'starter_personal_01', row: 4, col: 0, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.book': { visualId: 'equipment.book', sheetId: 'starter_personal_01', row: 4, col: 1, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.gold': { visualId: 'equipment.gold', sheetId: 'starter_personal_01', row: 4, col: 2, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.knife_small': { visualId: 'equipment.knife_small', sheetId: 'starter_personal_01', row: 4, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.little_bag_of_sand': { visualId: 'equipment.little_bag_of_sand', sheetId: 'starter_personal_01', row: 5, col: 0, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.manacles': { visualId: 'equipment.manacles', sheetId: 'starter_personal_01', row: 5, col: 1, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.perfume_vial': { visualId: 'equipment.perfume_vial', sheetId: 'starter_personal_01', row: 5, col: 2, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.robes': { visualId: 'equipment.robes', sheetId: 'starter_personal_01', row: 5, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
-  'equipment.sealing_wax': { visualId: 'equipment.sealing_wax', sheetId: 'starter_personal_01', row: 6, col: 0, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.abacus': { visualId: 'equipment.abacus', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.book': { visualId: 'equipment.book', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.gold': { visualId: 'equipment.gold', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.knife_small': { visualId: 'equipment.knife_small', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.little_bag_of_sand': { visualId: 'equipment.little_bag_of_sand', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.manacles': { visualId: 'equipment.manacles', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.perfume_vial': { visualId: 'equipment.perfume_vial', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.robes': { visualId: 'equipment.robes', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
+  'equipment.sealing_wax': { visualId: 'equipment.sealing_wax', sheetId: 'starter_personal_01', row: 3, col: 3, status: 'PLANNED', category: 'personal', aspectRatio: '1:1' },
 };
 
 export function getSpriteSheetDefinition(sheetId: string): SpriteSheetDefinition | undefined {

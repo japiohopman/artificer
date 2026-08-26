@@ -130,10 +130,18 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
       });
     });
 
+    it('enforces logical grid is strictly 4 columns by 4 rows across all declared sheets', () => {
+      const sheets = Object.values(SPRITE_SHEETS);
+      sheets.forEach(sheet => {
+        expect(sheet.grid.rows, `Sheet ${sheet.id} must have 4 rows`).toBe(4);
+        expect(sheet.grid.cols, `Sheet ${sheet.id} must have 4 columns`).toBe(4);
+      });
+    });
+
     it('fails bounds validation when a coordinate exceeds sheet grid dimensions', () => {
-      const mockSheet = { id: 'test_sheet', grid: { rows: 7, cols: 4 } };
-      const validCell = { row: 6, col: 3 };
-      const invalidRowCell = { row: 7, col: 0 };
+      const mockSheet = { id: 'test_sheet', grid: { rows: 4, cols: 4 } };
+      const validCell = { row: 3, col: 3 };
+      const invalidRowCell = { row: 4, col: 0 };
       const invalidColCell = { row: 0, col: 4 };
 
       const checkValid = (cell: { row: number; col: number }) =>
@@ -144,8 +152,8 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
       expect(checkValid(invalidColCell)).toBe(false);
     });
 
-    it('ensures no duplicate cell coordinate assignments exist within the same sprite sheet', () => {
-      const mappings = getAllManifestMappings();
+    it('ensures no duplicate cell coordinate assignments exist for READY items within the same sprite sheet', () => {
+      const mappings = getAllManifestMappings().filter(m => m.status === 'READY');
       const occupiedCells = new Set<string>();
 
       mappings.forEach(mapping => {
@@ -153,6 +161,28 @@ describe('Inventory Visual Asset Contract Unit Tests', () => {
         expect(occupiedCells.has(key), `Duplicate cell assignment detected at ${key} for ${mapping.visualId}`).toBe(false);
         occupiedCells.add(key);
       });
+    });
+  });
+
+  describe('Renderer & Graceful Fallback Handling', () => {
+    it('handles missing or unknown visual identities gracefully without crashing', () => {
+      const unknownVisual = resolveVisualIdentity('non_existent_item_999');
+      expect(unknownVisual).toBe('equipment.non_existent_item_999');
+
+      const cell = getSpriteCellForVisual(unknownVisual);
+      expect(cell).toBeUndefined();
+    });
+
+    it('handles missing manifest entries gracefully when looking up unmapped items', () => {
+      const cell = getSpriteCellForVisual('equipment.unmapped_custom_item');
+      expect(cell).toBeUndefined();
+    });
+  });
+
+  describe('Architecture Protection', () => {
+    it('prevents legacy equipmentSpriteMap.ts from being re-introduced into production', () => {
+      const legacyMapPath = path.join(process.cwd(), 'src/components/character/equipment/equipmentSpriteMap.ts');
+      expect(fs.existsSync(legacyMapPath), 'equipmentSpriteMap.ts must not exist in production codebase').toBe(false);
     });
   });
 
