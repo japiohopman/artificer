@@ -13,7 +13,6 @@ import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
 import { resolveItemTemplateWeight } from '../../../lib/inventoryUtils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
-import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
 
 export const FullInventoryMenu: React.FC = () => {
   const {
@@ -190,20 +189,13 @@ export const FullInventoryMenu: React.FC = () => {
 
                         <div className="flex gap-3 items-center bg-parchment-100/50 p-2 rounded-lg border border-parchment-300/40">
                           <div className="w-12 h-12 rounded bg-black/10 overflow-hidden flex items-center justify-center shrink-0 border border-dragon-red/20">
-                            {getEquipmentSpriteCoord(selectedItem.template || selectedItem.index || selectedItem.name) ? (
-                              <EquipmentSprite
-                                itemKey={selectedItem.template || selectedItem.index || selectedItem.name}
-                                alt={selectedItem.name}
-                                className="w-full h-full object-contain"
-                                fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
-                              />
-                            ) : (
-                              <ChromaKeyImage
-                                src={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
-                                alt={selectedItem.name}
-                                className="w-full h-full object-contain"
-                              />
-                            )}
+                            <EquipmentSprite
+                              itemKey={selectedItem}
+                              ruleset={activeChar?.ruleset}
+                              alt={selectedItem.name}
+                              className="w-full h-full object-contain"
+                              fallbackUrl={normalizeImageUrl(selectedItem.imageUrl || selectedItem.image, selectedItem._type || 'equipment', selectedItem.index || selectedItem.id, selectedItem.name)}
+                            />
                           </div>
                           <div className="flex-1 text-[9px] space-y-0.5">
                             <div className="flex justify-between">

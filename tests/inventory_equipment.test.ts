@@ -4,7 +4,8 @@ import { useCharacterStore } from '../src/store/useCharacterStore';
 import { useInventoryStore } from '../src/store/useInventoryStore';
 import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/inventoryUtils';
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
-import { getEquipmentSpriteCoord } from '../src/components/character/equipment/equipmentSpriteMap';
+import { resolveVisualIdentity } from '../src/lib/inventoryVisuals/visualIdentity';
+import { getSpriteCellForVisual } from '../src/lib/inventoryVisuals/spriteManifest';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -180,7 +181,7 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(Object.keys(normalized2.items).length).toBeGreaterThan(0);
   });
 
-  it('resolves equipment sprite coordinates across starter weapon, armor, spellcasting, and adventuring gear sprite sheets', () => {
+  it('resolves equipment sprite coordinates across starter weapon, armor, spellcasting, and adventuring gear sprite sheets using canonical asset layer', () => {
     const weapons1 = ['dagger', 'handaxe', 'javelin', 'mace', 'quarterstaff', 'sickle', 'club', 'spear', 'shortsword', 'rapier', 'longsword', 'scimitar', 'greatsword', 'greataxe', 'greatclub', 'light_hammer'];
     const weapons2 = ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'sling', 'dart', 'blowgun', 'trident', 'warhammer', 'battleaxe', 'flail', 'maul', 'morningstar', 'pike', 'halberd', 'glaive'];
     const spellcasting = ['arcane_focus', 'component_pouch', 'druidic_focus', 'holy_symbol', 'crystal', 'orb', 'rod', 'staff', 'wand', 'spellbook', 'amulet', 'reliquary', 'emblem', 'sprig_of_mistletoe', 'totem'];
@@ -188,33 +189,38 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const adventuring = ['explorers_pack', 'dungeoneers_pack', 'burglars_pack', 'diplomats_pack', 'entertainers_pack', 'priests_pack', 'scholars_pack', 'backpack', 'bedroll', 'hempen_rope_50_ft', 'rations', 'torch', 'tinderbox', 'waterskin', 'mess_kit'];
 
     weapons1.forEach(w => {
-      const coord = getEquipmentSpriteCoord(w);
-      expect(coord).not.toBeNull();
-      expect(coord?.sheet).toBe('starter_weapons_01');
+      const visualId = resolveVisualIdentity(w);
+      const cell = getSpriteCellForVisual(visualId);
+      expect(cell).toBeDefined();
+      expect(cell?.sheetId).toBe('starter_weapons_01');
     });
 
     weapons2.forEach(w => {
-      const coord = getEquipmentSpriteCoord(w);
-      expect(coord).not.toBeNull();
-      expect(coord?.sheet).toBe('starter_weapons_02');
+      const visualId = resolveVisualIdentity(w);
+      const cell = getSpriteCellForVisual(visualId);
+      expect(cell).toBeDefined();
+      expect(cell?.sheetId).toBe('starter_weapons_02');
     });
 
     spellcasting.forEach(s => {
-      const coord = getEquipmentSpriteCoord(s);
-      expect(coord).not.toBeNull();
-      expect(coord?.sheet).toBe('starter_spellcasting_01');
+      const visualId = resolveVisualIdentity(s);
+      const cell = getSpriteCellForVisual(visualId);
+      expect(cell).toBeDefined();
+      expect(cell?.sheetId).toBe('starter_spellcasting_01');
     });
 
     armor.forEach(a => {
-      const coord = getEquipmentSpriteCoord(a);
-      expect(coord).not.toBeNull();
-      expect(coord?.sheet).toBe('starter_armor_01');
+      const visualId = resolveVisualIdentity(a);
+      const cell = getSpriteCellForVisual(visualId);
+      expect(cell).toBeDefined();
+      expect(cell?.sheetId).toBe('starter_armor_01');
     });
 
     adventuring.forEach(adv => {
-      const coord = getEquipmentSpriteCoord(adv);
-      expect(coord).not.toBeNull();
-      expect(coord?.sheet).toBe('starter_adventuring_01');
+      const visualId = resolveVisualIdentity(adv);
+      const cell = getSpriteCellForVisual(visualId);
+      expect(cell).toBeDefined();
+      expect(cell?.sheetId).toBe('starter_adventuring_01');
     });
   });
 

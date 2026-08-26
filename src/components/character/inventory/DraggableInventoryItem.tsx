@@ -5,7 +5,6 @@ import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
-import { getEquipmentSpriteCoord } from '../equipment/equipmentSpriteMap';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
@@ -63,21 +62,12 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         )}
       >
         <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
-          {getEquipmentSpriteCoord(item.template || item.index || item.name) ? (
-            <EquipmentSprite
-              itemKey={item.template || item.index || item.name}
-              alt={item.name}
-              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-              fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
-            />
-          ) : (
-            <img
-              src={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
-              alt={item.name}
-              className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-              referrerPolicy="no-referrer"
-            />
-          )}
+          <EquipmentSprite
+            itemKey={item}
+            alt={item.name}
+            className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+            fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
+          />
         </div>
 
         <div className="w-full text-center pointer-events-none">
