@@ -25,6 +25,7 @@ import { IdentityStep } from './CharacterCreator/IdentityStep';
 import { ReviewStep } from './CharacterCreator/ReviewStep';
 import { SlotStep } from './CharacterCreator/SlotStep';
 import { BackstoryStep } from './CharacterCreator/BackstoryStep';
+import { CreatorRightPanel } from './CharacterCreator/CreatorRightPanel';
 import { ValidationOverlay, MissingStepItem } from './CharacterCreator/ValidationOverlay';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';
@@ -871,6 +872,9 @@ export const CharacterCreator: React.FC = () => {
                </AnimatePresence>
              )}
           </div>
+
+          {/* Persistent Character Frame Right Panel */}
+          <CreatorRightPanel newChar={newChar} currentStep={currentStep} />
         </div>
 
         <ValidationOverlay
@@ -891,15 +895,9 @@ export const CharacterCreator: React.FC = () => {
            </button>
 
            <div className="flex flex-col items-center">
-              <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-tighter mb-0.5">Character_Identity</span>
+              <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-tighter mb-0.5">Character Creation Wizard</span>
               <div className="flex items-center gap-2 text-[11px] font-black text-dragon-darkRed uppercase tracking-wider font-bodoni">
-                 <span>{newChar.race?.replace(/-/g, ' ') || 'NO_ANCESTRY'}</span>
-                 <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
-                 <span>{newChar.class || 'NO_CLASS'}</span>
-                 <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
-                 <span className="px-2 py-0.5 bg-dragon-gold/20 border border-dragon-gold/30 rounded text-[9px] font-black text-dragon-darkRed">
-                   Ruleset: {newChar.ruleset === '2024' ? 'D&D 5.5e (2024)' : 'D&D 5e (2014)'}
-                 </span>
+                 <span>Step {STEPS.findIndex(s => s.id === currentStep) + 1} of {STEPS.length}</span>
               </div>
            </div>
 
