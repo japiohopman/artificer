@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
 import { fetchBackgroundJson } from '../../../services/storageService';
 import { ai, MODELS } from '../../../services/ai/config';
+import { generateName } from '../../../lib/naming';
 
 interface BackstoryStepProps {
   newChar: Partial<Character>;
@@ -31,6 +31,24 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
       console.error("Failed to load background json", e);
     } finally {
       setLoadingBg(false);
+    }
+  };
+
+  const handleGenerateMoniker = () => {
+    try {
+      const result = generateName({
+        species: newChar.race || 'human',
+        subrace: newChar.subrace,
+        gender: newChar.gender?.toLowerCase() || 'male',
+        culture: newChar.background,
+        background: newChar.background,
+        class: newChar.class,
+        alignment: newChar.alignment,
+        seed: Date.now()
+      });
+      setNewChar(prev => ({ ...prev, name: result.displayName }));
+    } catch (e) {
+      console.error("Failed to auto-generate name", e);
     }
   };
 
@@ -92,6 +110,30 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
 
   return (
     <div className="max-w-4xl mx-auto space-y-8 py-4">
+      {/* Soul Moniker / Name Selection Header */}
+      <div className="bg-white/40 border border-dragon-gold/30 rounded-sm p-4 space-y-3">
+        <div className="flex items-center justify-between">
+          <label className="text-xs font-black text-dragon-darkRed uppercase tracking-[0.2em] flex items-center gap-2">
+            <GameIcon name="identity" size={16} color="#B8860B" />
+            Soul Moniker (Character Name)
+          </label>
+          <button
+            onClick={handleGenerateMoniker}
+            className="px-3 py-1 bg-dragon-red text-white hover:bg-dragon-darkRed rounded-sm text-[10px] font-black uppercase tracking-widest transition-all flex items-center gap-1.5 shadow"
+          >
+            <GameIcon name="refresh" size={12} color="currentColor" />
+            Auto-Generate Name
+          </button>
+        </div>
+        <input
+          type="text"
+          placeholder="Enter Character Name or Moniker..."
+          value={newChar.name || ''}
+          onChange={(e) => setNewChar({ ...newChar, name: e.target.value })}
+          className="w-full text-2xl font-header font-black uppercase bg-white/60 border-b-2 border-dragon-gold/40 focus:border-dragon-red outline-none px-3 py-2 text-dragon-darkRed placeholder:text-parchment-400 placeholder:normal-case placeholder:font-normal"
+        />
+      </div>
+
       <div className="flex items-center gap-4 border-b border-dragon-gold/20 pb-4">
         <div className="p-3 bg-dragon-red text-white rounded-sm shadow-xl">
            <GameIcon name="book" size={24} color="#FFFFFF" />
