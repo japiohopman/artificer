@@ -41,50 +41,56 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
           </span>
         </div>
 
-        {/* Dynamic Summary Cards Stack */}
+        {/* Dynamic Summary Cards Stack (Only display selections that have been explicitly made) */}
         <div className="my-auto space-y-2.5 py-4">
-          <SummaryRow
-            icon="ancestry"
-            label="Species"
-            value={
-              newChar.race
-                ? `${newChar.race.replace(/-/g, ' ')}${
-                    newChar.subrace ? ` (${newChar.subrace.replace(/-/g, ' ')})` : ''
-                  }`
-                : 'Choice Pending...'
-            }
-            active={currentStep === 'species'}
-          />
+          {newChar.race && (
+            <SummaryRow
+              icon="ancestry"
+              label="Species"
+              value={`${newChar.race.replace(/-/g, ' ')}${
+                newChar.subrace ? ` (${newChar.subrace.replace(/-/g, ' ')})` : ''
+              }`}
+              active={currentStep === 'species'}
+            />
+          )}
 
-          <SummaryRow
-            icon="weapon"
-            label="Class"
-            value={newChar.class ? newChar.class : 'Choice Pending...'}
-            active={currentStep === 'class'}
-          />
+          {newChar.class && (
+            <SummaryRow
+              icon="weapon"
+              label="Class"
+              value={newChar.class}
+              active={currentStep === 'class'}
+            />
+          )}
 
-          <SummaryRow
-            icon="scroll"
-            label="Origins / Background"
-            value={newChar.background ? newChar.background : 'Choice Pending...'}
-            active={currentStep === 'background'}
-          />
+          {newChar.background && (
+            <SummaryRow
+              icon="scroll"
+              label="Origins / Background"
+              value={newChar.background}
+              active={currentStep === 'background'}
+            />
+          )}
 
-          <SummaryRow
-            icon="shield"
-            label="Alignment"
-            value={newChar.alignment ? newChar.alignment : 'Choice Pending...'}
-            active={currentStep === 'alignment'}
-          />
+          {newChar.alignment && (
+            <SummaryRow
+              icon="shield"
+              label="Alignment"
+              value={newChar.alignment}
+              active={currentStep === 'alignment'}
+            />
+          )}
 
-          <SummaryRow
-            icon="info"
-            label="Polarity (Gender)"
-            value={newChar.gender || 'Male'}
-            active={currentStep === 'identity'}
-          />
+          {newChar.gender && (
+            <SummaryRow
+              icon="info"
+              label="Polarity (Gender)"
+              value={newChar.gender}
+              active={currentStep === 'identity'}
+            />
+          )}
 
-          {newChar.stats && (
+          {newChar.stats && currentStep !== 'welcome' && currentStep !== 'slot' && currentStep !== 'identity' && (
             <div className="bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded-sm p-3 shadow-sm">
               <span className="text-[8px] font-black uppercase text-dragon-red tracking-widest block mb-1">
                 Attribute Matrix

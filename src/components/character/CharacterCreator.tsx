@@ -774,10 +774,10 @@ export const CharacterCreator: React.FC = () => {
   if (!isCharacterCreatorOpen) return null;
 
   return (
-    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
+    <div id="character-creator-portal" className="fixed inset-0 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-0">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
-      <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch">
+      <div id="creator-main-modal" className="w-full h-full bg-parchment-100 border-none shadow-none overflow-hidden flex flex-col relative rounded-none items-stretch">
         {/* Header */}
         <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
           <div className="flex items-center gap-2">
@@ -873,8 +873,15 @@ export const CharacterCreator: React.FC = () => {
              )}
           </div>
 
-          {/* Persistent Character Frame Right Panel */}
-          <CreatorRightPanel newChar={newChar} currentStep={currentStep} />
+          {/* Persistent Character Frame Right Panel (Appears starting at 'species' step) */}
+          {(() => {
+            const stepIndex = STEPS.findIndex(s => s.id === currentStep);
+            const speciesIndex = STEPS.findIndex(s => s.id === 'species');
+            if (speciesIndex !== -1 && stepIndex >= speciesIndex) {
+              return <CreatorRightPanel newChar={newChar} currentStep={currentStep} />;
+            }
+            return null;
+          })()}
         </div>
 
         <ValidationOverlay
