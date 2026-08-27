@@ -1752,15 +1752,44 @@ export async function fetchClassWikiData(index: string): Promise<any> {
 }
 
 export async function fetchClassData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/json/${index}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  let data: any = null;
+  const cleanIndex = index.toLowerCase().trim();
+
+  // Local first
   try {
-    const res = await fetch(url);
-    const data = await safeJson(res);
-    return data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'class', index) } : null;
-  } catch (e) {
-    return null;
+    const localRes = await fetch(`/assets/atlas/class/json/${cleanIndex}.json`);
+    if (localRes.ok) {
+      data = await localRes.json();
+    }
+  } catch (e) {}
+
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/json/${cleanIndex}.json?t=${Date.now()}`;
+    const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+    try {
+      const res = await fetch(url);
+      data = await safeJson(res);
+    } catch (e) {
+      data = null;
+    }
   }
+
+  if (!data) return null;
+
+  // Try fetching official markdown lore guide (e.g., /assets/ui/official/classes/rogue.md)
+  let markdownGuide = '';
+  try {
+    const mdRes = await fetch(`/assets/ui/official/classes/${cleanIndex}.md`);
+    if (mdRes.ok) {
+      markdownGuide = await mdRes.text();
+    }
+  } catch (e) {}
+
+  return {
+    ...data,
+    markdownGuide,
+    imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'class', cleanIndex)
+  };
 }
 
 export async function fetchBackgroundsList(): Promise<{ name: string; index: string }[]> {

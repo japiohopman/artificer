@@ -162,17 +162,24 @@ export const CharacterCreator: React.FC = () => {
 
   // We dynamically determine which steps are active. Specifically, we hide 'spells'
   // if the chosen class does not support spellcasting.
+  const SPELLCASTER_CLASSES = ['wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'warlock', 'paladin', 'ranger', 'artificer'];
   const [isClassSpellcaster, setIsClassSpellcaster] = useState(false);
 
   useEffect(() => {
     if (newChar.class) {
+      const clsLower = newChar.class.toLowerCase();
+      const isKnownSpellcaster = SPELLCASTER_CLASSES.includes(clsLower);
+      if (isKnownSpellcaster) {
+        setIsClassSpellcaster(true);
+      } else {
         atlasService.loadClass(newChar.class).then(cData => {
-            setIsClassSpellcaster(!!cData?.spellcasting);
+          setIsClassSpellcaster(!!cData?.spellcasting);
         }).catch(() => {
-            setIsClassSpellcaster(false);
+          setIsClassSpellcaster(false);
         });
+      }
     } else {
-        setIsClassSpellcaster(false);
+      setIsClassSpellcaster(false);
     }
   }, [newChar.class]);
 

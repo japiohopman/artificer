@@ -44,6 +44,18 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     });
   };
 
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    useUIStore.getState().setItemActionMenu({
+      item,
+      sourceId,
+      index: typeof index === 'number' ? index : undefined,
+      slot,
+      position: { x: e.clientX, y: e.clientY }
+    });
+  };
+
   const isMagic = item.rarity && item.rarity !== 'Common';
   const itemKey = item.template || item.index || item.id || item.name;
   const fallbackUrl = normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name);
@@ -56,6 +68,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         {...attributes}
         {...listeners}
         onClick={handleInspect}
+        onContextMenu={handleContextMenu}
         title={`${item.name} (${item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
           "aspect-[9/16] w-full bg-parchment-200/50 hover:bg-dragon-red/15 border-2 border-dragon-red/15 hover:border-dragon-red/40 rounded-lg relative flex flex-col items-center justify-between p-1.5 cursor-pointer transition-all select-none shadow-sm group overflow-hidden text-left pointer-events-auto",
@@ -96,6 +109,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
       {...attributes}
       {...listeners}
       onClick={handleInspect}
+      onContextMenu={handleContextMenu}
       className={cn(
         "group relative flex items-center gap-3 p-3 bg-white/40 hover:bg-white/60 border border-dragon-red/10 hover:border-dragon-red/30 rounded-xl transition-all cursor-grab active:cursor-grabbing shadow-sm",
         isMagic && "ring-1 ring-dragon-gold/30 border-dragon-gold/40 bg-dragon-gold/[0.03]",

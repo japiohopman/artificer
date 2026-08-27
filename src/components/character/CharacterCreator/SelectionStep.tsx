@@ -411,20 +411,46 @@ export const SelectionStep: React.FC<{
                     )}
 
                     {category === 'class' && (
-                      <div className="grid grid-cols-2 gap-2 pt-1">
-                        <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded flex items-center gap-2">
-                          <GameIcon name={`d${detailData.stats?.hit_die || '8'}` as any} size={24} className="text-dragon-red" />
-                          <div>
-                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Hit Die</span>
-                            <span className="text-sm font-header font-black text-dragon-darkRed uppercase">D{detailData.stats?.hit_die || '8'}</span>
+                      <div className="space-y-3 pt-1">
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2.5 rounded flex items-center gap-2.5">
+                            <GameIcon name={`d${detailData.stats?.hit_die || '8'}` as any} size={28} className="text-dragon-red shrink-0" />
+                            <div>
+                              <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Hit Die</span>
+                              <span className="text-sm font-header font-black text-dragon-darkRed uppercase">d{detailData.stats?.hit_die || '8'}</span>
+                            </div>
+                          </div>
+                          <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2.5 rounded">
+                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Saving Throws</span>
+                            <span className="text-xs font-header font-black text-dragon-darkRed uppercase">
+                              {detailData.stats?.saving_throws?.map((s: any) => (s.name || s.index || s).toUpperCase()).join(', ') || 'N/A'}
+                            </span>
                           </div>
                         </div>
-                        <div className="bg-dragon-gold/10 border border-dragon-gold/20 p-2 rounded">
-                          <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block">Saving Throws</span>
-                          <span className="text-xs font-header font-black text-dragon-darkRed uppercase">
-                            {detailData.stats?.saving_throws?.map((s: any) => (s.name || s).toUpperCase()).join(', ') || 'N/A'}
-                          </span>
-                        </div>
+
+                        {/* Class Armor & Weapon Proficiencies */}
+                        {detailData.stats?.proficiencies && detailData.stats.proficiencies.length > 0 && (
+                          <div className="p-2.5 bg-white/60 border border-dragon-gold/20 rounded">
+                            <span className="text-[9px] font-black uppercase text-parchment-600 tracking-widest block mb-1">Proficiencies</span>
+                            <div className="flex flex-wrap gap-1">
+                              {detailData.stats.proficiencies.map((p: any, idx: number) => (
+                                <span key={idx} className="px-2 py-0.5 bg-dragon-gold/15 border border-dragon-gold/30 rounded text-[10px] font-black text-dragon-darkRed uppercase">
+                                  {p.name || p.index || p}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Skill Choices Description */}
+                        {detailData.stats?.proficiency_choices && detailData.stats.proficiency_choices.length > 0 && (
+                          <div className="p-2.5 bg-dragon-gold/5 border border-dragon-gold/20 rounded">
+                            <span className="text-[9px] font-black uppercase text-dragon-darkRed tracking-widest block mb-1">Skill Choices</span>
+                            <p className="text-xs font-body text-parchment-800 leading-relaxed italic">
+                              {detailData.stats.proficiency_choices[0]?.desc || 'Skill selection configured during character creation.'}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -591,6 +617,7 @@ export const SelectionStep: React.FC<{
                 <div className="pt-2 border-t border-dragon-gold/20">
                   <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider mb-2">Chronicle & Overview</h4>
                   <DnDMarkdown content={(() => {
+                    if (detailData.markdownGuide) return detailData.markdownGuide;
                     const desc = detailData.desc || detailData.lore || detailData.description;
                     if (Array.isArray(desc)) return desc.join('\n\n');
                     return typeof desc === 'string' ? desc : "Records for this entry are maintained in the Atlas.";

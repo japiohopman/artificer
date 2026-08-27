@@ -8,6 +8,7 @@ import { DiceText } from '../dice/DiceText';
 import { normalizeImageUrl } from '../../services/storageService';
 import { renderNameValue, getOrdinal } from '../../lib/dataUtils';
 import { GameIcon, GameIconName } from '../../game_icons';
+import { SpellSprite } from './SpellSprite';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useActiveCharacter } from '../../lib/character';
 
@@ -114,22 +115,14 @@ export const SpellCard: React.FC<SpellCardProps> = ({ spell, className }) => {
       </div>
 
       {/* Image / Illustration - Made larger (h-48) */}
-      <div className="relative aspect-square h-48 mx-auto bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0">
-        {spell.imageUrl || spell.index ? (
-          <div className="absolute inset-0 flex items-center justify-center p-2">
-             <ChromaKeyImage 
-                src={normalizeImageUrl(spell.imageUrl, 'spell', spell.index)} 
-                alt={spell.name} 
-                className="w-full h-full object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] group-hover/image:scale-105 transition-transform duration-700"
-              />
-          </div>
-        ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center text-parchment-300">
-            <GameIcon name="book" size={48} color="currentColor" className="opacity-20 animate-pulse-slow" />
-            <span className="text-[10px] uppercase font-bold tracking-widest mt-2">Arcane Pattern</span>
-          </div>
-        )}
-        <div className="absolute inset-0 ring-1 ring-inset ring-black/5" />
+      <div className="relative aspect-square h-48 mx-auto bg-parchment-200 border-2 border-dragon-gold/20 rounded-lg overflow-hidden shadow-inner group/image shrink-0 flex items-center justify-center p-2">
+        <SpellSprite
+          spell={spell}
+          size="100%"
+          alt={renderNameValue(spell.name)}
+          className="w-full h-full object-contain group-hover/image:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none" />
       </div>
 
       {/* Description - Slightly scaled typography */}
