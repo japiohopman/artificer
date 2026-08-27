@@ -3,6 +3,7 @@ import { cn } from '../../../lib/utils';
 
 interface GenderBodySvgProps {
   gender: 'Male' | 'Female';
+  race?: string;
   selected?: boolean;
   onClick?: () => void;
   className?: string;
@@ -10,11 +11,13 @@ interface GenderBodySvgProps {
 
 export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
   gender,
+  race,
   selected = false,
   onClick,
   className
 }) => {
   const isMale = gender === 'Male';
+  const isElven = race && race.toLowerCase().includes('elf');
 
   return (
     <div
@@ -141,7 +144,7 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
               id="female-arm-R"
               fillRule="evenodd"
               className="transition-colors duration-200"
-              d="m310.21 232.31c0 0 38-11 48.5 21 10.5 32 7 47.5 7 47.5 0 0 16.5 46 16.5 63 0 0 24.5 13.5 31 68 0 0 9 26 15 38 6 12 18.5 18.5 5 18.5-13.5 0-25.5 2-25.5 2 0 0-5.5-11.68-9.5-21.5-4-9.81-39.5-51-51.5-97-12-46-30-89.5-30-89.5z"
+              d="m310.21 232.31c0 0 38-11 48.5 21 10.5 32 7 47.5 7 47.5 0 0 16.5 46 16.5 63 0 0 24.5 13.5 31 68 0 0 9 26 15 38 6 12 18.5 18.5-5 18.5-13.5 0-25.5 2-25.5 2 0 0-5.5-11.68-9.5-21.5-4-9.81-39.5-51-51.5-97-12-46-30-89.5-30-89.5z"
             />
             <path
               id="female-body-type-1"
@@ -152,18 +155,37 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
           </g>
         )}
         <g id="head">
-          <path
-            id="human-ear-L"
-            fillRule="evenodd"
-            className="transition-colors duration-200"
-            d="m225.96 167.75c0 0-5.79 10.13-9.4-0.36-3.62-10.49-10.5-26.05-1.45-24.6 9.04 1.45 11.58 13.02 10.85 24.96z"
-          />
-          <path
-            id="human-ear-R"
-            fillRule="evenodd"
-            className="transition-colors duration-200"
-            d="m284.75 167.75c0 0 5.79 10.13 9.41-0.36 3.62-10.49 10.49-26.05 1.45-24.6-9.05 1.45-11.58 13.02-10.86 24.96z"
-          />
+          {isElven ? (
+            <>
+              <path
+                id="elf-ear-L"
+                fillRule="evenodd"
+                className="transition-colors duration-200"
+                d="m225.63 163.75c0 0-4.65 9.67-9.41-0.36-5.54-11.66-11.74-52.87-6.54-34.27 2.47 8.83 16.67 22.69 15.95 34.63z"
+              />
+              <path
+                id="elf-ear-R"
+                fillRule="evenodd"
+                className="transition-colors duration-200"
+                d="m285.75 163.75c0 0 4.65 9.67 9.41-0.36 5.54-11.66 11.74-52.87 6.54-34.27-2.47 8.83-16.67 22.69-15.95 34.63z"
+              />
+            </>
+          ) : (
+            <>
+              <path
+                id="human-ear-L"
+                fillRule="evenodd"
+                className="transition-colors duration-200"
+                d="m225.96 167.75c0 0-5.79 10.13-9.4-0.36-3.62-10.49-10.5-26.05-1.45-24.6 9.04 1.45 11.58 13.02 10.85 24.96z"
+              />
+              <path
+                id="human-ear-R"
+                fillRule="evenodd"
+                className="transition-colors duration-200"
+                d="m284.75 167.75c0 0 5.79 10.13 9.41-0.36 3.62-10.49 10.49-26.05 1.45-24.6-9.05 1.45-11.58 13.02-10.86 24.96z"
+              />
+            </>
+          )}
           <path
             id="humannoid-head"
             fillRule="evenodd"

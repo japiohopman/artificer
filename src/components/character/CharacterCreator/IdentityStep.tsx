@@ -19,6 +19,7 @@ export const IdentityStep: React.FC<{
             <div className="w-full flex flex-row gap-8 items-center justify-center">
                 <GenderBodySvg
                     gender="Male"
+                    race={newChar.race}
                     selected={newChar.gender === 'Male'}
                     onClick={() => {
                         setNewChar({ ...newChar, gender: 'Male' });
@@ -27,6 +28,7 @@ export const IdentityStep: React.FC<{
                 />
                 <GenderBodySvg
                     gender="Female"
+                    race={newChar.race}
                     selected={newChar.gender === 'Female'}
                     onClick={() => {
                         setNewChar({ ...newChar, gender: 'Female' });

@@ -20,6 +20,7 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
       <div className="absolute inset-0 flex items-center justify-center opacity-85 pointer-events-none p-4 z-0">
         <GenderBodySvg
           gender={gender}
+          race={newChar.race}
           selected={false}
           className="border-none bg-transparent hover:bg-transparent shadow-none p-0 scale-110 fill-black stroke-black opacity-90"
         />
