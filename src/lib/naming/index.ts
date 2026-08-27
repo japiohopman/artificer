@@ -17,6 +17,7 @@ import { SeedableRNG } from './rng';
 
 export * from './types';
 export * from './rng';
+export { SOURCE_NAMING_DATA } from './data/sourceData';
 export { resolveNamingProfile } from './rules/namingRules';
 
 /**
@@ -72,6 +73,8 @@ export function generateName(ctx: NamingContext): NamingResult {
   evaluatedCandidates.sort((a, b) => b.score - a.score);
   const best = evaluatedCandidates[0];
 
+  const fallbackApplied = profileRef.cultureStatus === 'unknown' || profileRef.cultureStatus === 'missing';
+
   return {
     displayName: best.displayName,
     resolvedProfile: profileRef,
@@ -81,6 +84,8 @@ export function generateName(ctx: NamingContext): NamingResult {
       seed,
       candidatesEvaluated: evaluatedCandidates.length,
       warnings: warnings.length > 0 ? warnings : undefined,
+      fallbackApplied,
+      cultureStatus: profileRef.cultureStatus,
       ruleId: rule.id
     }
   };

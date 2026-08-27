@@ -3,7 +3,7 @@
  * Composes raw components into a final display name using the rule composition pattern.
  */
 
-import { NameComponent, Candidate } from '../types';
+import { NameComponent } from '../types';
 
 export function composeCandidateName(
   components: NameComponent[],
@@ -14,7 +14,9 @@ export function composeCandidateName(
   // Build a map of component values by type
   const compMap = new Map<string, string>();
   for (const comp of components) {
-    compMap.set(comp.type, comp.value);
+    if (comp.value && comp.value.trim().length > 0) {
+      compMap.set(comp.type, comp.value.trim());
+    }
   }
 
   // Replace placeholders like {given}, {clan}, {nickname}, {family}, {surname}, {virtue}, {child}
@@ -24,8 +26,8 @@ export function composeCandidateName(
 
   // Clean up extra spaces or empty quotes if optional components were omitted
   result = result
+    .replace(/''|""|'\s*'/g, '')
     .replace(/\s+/g, ' ')
-    .replace(/''|""/g, '')
     .trim();
 
   return result;

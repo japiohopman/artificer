@@ -1,7 +1,7 @@
 /**
  * Source Naming Data
- * Canonically structured naming pools derived directly from source material
- * and structured for domain rule execution.
+ * Canonically structured naming pools derived directly from official source material
+ * and clearly separated from project-authored extension pools.
  */
 
 export interface SourceNamePool {
@@ -18,6 +18,7 @@ export interface SourceNamePool {
 }
 
 export interface SourceNamingCatalog {
+  /** Source-derived species naming pools (PHB / official D&D source material) */
   tiefling: SourceNamePool;
   gnome: SourceNamePool;
   dragonborn: SourceNamePool;
@@ -25,14 +26,18 @@ export interface SourceNamingCatalog {
   dwarf: SourceNamePool;
   halfling: SourceNamePool;
   halfOrc: SourceNamePool;
+  /** Regional human ethnic naming pools derived from official source material + neutral fallback */
   human: Record<string, SourceNamePool>;
+  /** Explicit project-authored fallback and generic extension pools (NOT presented as official D&D source material) */
   projectExtensions?: Record<string, SourceNamePool>;
 }
 
 /**
- * Official source-derived name lists from documentation & core materials.
+ * Official source-derived name lists from D&D 5e source material.
+ * Categorized strictly by origin and semantic domain.
  */
 export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
+  // --- 1. Tiefling (Source-derived: PHB Ch. 2) ---
   tiefling: {
     maleGiven: [
       'Akmenos', 'Amnon', 'Barakas', 'Damakos', 'Ekemon', 'Iados',
@@ -50,6 +55,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 2. Gnome (Source-derived: PHB Ch. 2) ---
   gnome: {
     maleGiven: [
       'Alston', 'Alvyn', 'Boddynock', 'Brocc', 'Burgell', 'Dimble',
@@ -73,6 +79,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 3. Dragonborn (Source-derived: PHB Ch. 2) ---
   dragonborn: {
     maleGiven: [
       'Arjhan', 'Balasar', 'Bharash', 'Donaar', 'Ghesh', 'Heskan',
@@ -96,6 +103,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 4. Elf (Source-derived: PHB Ch. 2) ---
   elf: {
     childGiven: [
       'Ara', 'Bryn', 'Del', 'Eryn', 'Faen', 'Innil',
@@ -121,6 +129,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 5. Dwarf (Source-derived: PHB Ch. 2) ---
   dwarf: {
     maleGiven: [
       'Adrik', 'Alberich', 'Baern', 'Barendd', 'Brottor', 'Bruenor',
@@ -142,6 +151,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 6. Halfling (Source-derived: PHB Ch. 2) ---
   halfling: {
     maleGiven: [
       'Alton', 'Ander', 'Cade', 'Corrin', 'Eldon', 'Errich',
@@ -159,6 +169,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 7. Half-Orc (Source-derived: PHB Ch. 2) ---
   halfOrc: {
     maleGiven: [
       'Dench', 'Feng', 'Gell', 'Henk', 'Holg', 'Imsh',
@@ -170,6 +181,7 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
     ]
   },
 
+  // --- 8. Human Regional Ethnicities (Source-derived: PHB Ch. 2) + Project Neutral ---
   human: {
     calishite: {
       maleGiven: ['Aseir', 'Bardeid', 'Haseid', 'Khemed', 'Mehmen', 'Sudeiman', 'Zasheir'],
@@ -215,10 +227,17 @@ export const SOURCE_NAMING_DATA: SourceNamingCatalog = {
       maleGiven: ['Anton', 'Diero', 'Marcon', 'Pieron', 'Rimardo', 'Romero', 'Salazar', 'Umbero'],
       femaleGiven: ['Balama', 'Dona', 'Faila', 'Jalana', 'Luisa', 'Marta', 'Quara', 'Selise', 'Vonda'],
       surnames: ['Agosto', 'Astorio', 'Calabra', 'Domine', 'Falone', 'Marivaldi', 'Pisacar', 'Ramondo']
+    },
+    /** Project-authored neutral default for unspecified/unknown human culture (distinct from Chondathan) */
+    neutral: {
+      maleGiven: ['Adrian', 'Julian', 'Gabriel', 'Marcus', 'Tristan', 'Valentin', 'Lucian', 'Dominic'],
+      femaleGiven: ['Elena', 'Clara', 'Sylvia', 'Iris', 'Vivian', 'Marian', 'Celeste', 'Nora'],
+      surnames: ['Vane', 'Sterling', 'Winter', 'Mercer', 'Fairfax', 'Cross', 'Holloway', 'Vance']
     }
   },
 
-  // Clearly separated project-authored extensions (used as safe fallback / neutral additions)
+  // --- 9. Project-Authored Generic Extensions ---
+  // Clearly separated from source data; used only as fallback for unknown non-source species/pools.
   projectExtensions: {
     genericFantasy: {
       unisexGiven: ['Valen', 'Kaelen', 'Rowan', 'Elden', 'Lyra', 'Soren'],

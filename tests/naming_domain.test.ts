@@ -4,10 +4,11 @@ import {
   generateCandidates,
   resolveNamingProfile,
   NamingDomainError,
-  SeedableRNG
+  SeedableRNG,
+  SOURCE_NAMING_DATA
 } from '../src/lib/naming';
 
-describe('Naming Domain Foundation v1 Test Suite', () => {
+describe('Naming Domain Foundation v1 Remediation & Quality Test Suite', () => {
   describe('Seedable PRNG & Determinism', () => {
     it('produces identical outputs for identical context and seed', () => {
       const ctx = { species: 'Tiefling', gender: 'female', seed: 'test_seed_123' };
@@ -32,7 +33,7 @@ describe('Naming Domain Foundation v1 Test Suite', () => {
       expect(res1.displayName).not.toBe(res2.displayName);
     });
 
-    it('maintains deterministic PRNG sequence', () => {
+    it('maintains deterministic PRNG sequence across runs', () => {
       const rng1 = new SeedableRNG('alpha_seed');
       const rng2 = new SeedableRNG('alpha_seed');
 
@@ -43,7 +44,7 @@ describe('Naming Domain Foundation v1 Test Suite', () => {
     });
   });
 
-  describe('Rule Correctness & Source Material Coverage', () => {
+  describe('Tiefling Naming Traditions', () => {
     it('generates Tiefling Infernal male and female names', () => {
       const maleRes = generateName({ species: 'Tiefling', gender: 'male', seed: 'infernal_m' });
       const femaleRes = generateName({ species: 'Tiefling', gender: 'female', seed: 'infernal_f' });
@@ -60,7 +61,94 @@ describe('Naming Domain Foundation v1 Test Suite', () => {
       expect(res.components[0].type).toBe('virtue');
     });
 
-    it('generates Gnome 3-part multi-component names', () => {
+    it('does not silently convert Infernal style requests to Virtue or vice versa', () => {
+      const infernalRes = generateName({ species: 'Tiefling', traditionStyle: 'infernal', seed: 'seed_inf' });
+      const virtueRes = generateName({ species: 'Tiefling', traditionStyle: 'virtue', seed: 'seed_virt' });
+
+      expect(infernalRes.resolvedProfile.id).toBe('tiefling_infernal');
+      expect(virtueRes.resolvedProfile.id).toBe('tiefling_virtue');
+    });
+  });
+
+  describe('Half-Elf Delegated Naming (Dual Cultural Delegation)', () => {
+    it('resolves Half-Elf to Elven tradition when traditionStyle or origin is elven', () => {
+      const res = generateName({ species: 'Half-Elf', traditionStyle: 'elven', seed: 'he_elf_seed' });
+      expect(res.resolvedProfile.id).toBe('half_elf_elven');
+      const elfFamilies = SOURCE_NAMING_DATA.elf.familyNames;
+      expect(elfFamilies).toContain(res.components.find((c) => c.type === 'family')?.value);
+    });
+
+    it('resolves Half-Elf to Human tradition when traditionStyle or origin is human', () => {
+      const res = generateName({
+        species: 'Half-Elf',
+        traditionStyle: 'human',
+        culture: 'Illuskan',
+        seed: 'he_hum_seed'
+      });
+      expect(res.resolvedProfile.id).toBe('half_elf_human');
+      const illuskanSurnames = SOURCE_NAMING_DATA.human.illuskan.surnames;
+      expect(illuskanSurnames).toContain(res.components.find((c) => c.type === 'surname')?.value);
+    });
+
+    it('supports cross-cultural delegation without hardcoding solely to Elven names', () => {
+      const elfRes = generateName({ species: 'Half-Elf', traditionStyle: 'elven', seed: 42 });
+      const humRes = generateName({ species: 'Half-Elf', traditionStyle: 'human', seed: 42 });
+
+      expect(elfRes.resolvedProfile.id).not.toBe(humRes.resolvedProfile.id);
+    });
+  });
+
+  describe('Human Regional Cultural Naming & Explicit Fallback', () => {
+    const cultures = [
+      'Calishite',
+      'Chondathan',
+      'Damaran',
+      'Illuskan',
+      'Mulan',
+      'Rashemi',
+      'Shou',
+      'Tethyrian',
+      'Turami'
+    ];
+
+    cultures.forEach((culture) => {
+      it(`generates valid name for human culture: ${culture}`, () => {
+        const res = generateName({ species: 'Human', culture, gender: 'female', seed: `h_${culture}` });
+        expect(res.resolvedProfile.cultureStatus).toBe('known');
+        expect(res.displayName).toBeTruthy();
+      });
+    });
+
+    it('enforces surname-first ordering for Shou cultural names ({surname} {given})', () => {
+      const res = generateName({ species: 'Human', culture: 'Shou', gender: 'male', seed: 'shou_test' });
+      expect(res.resolvedProfile.id).toBe('human_shou');
+      const parts = res.displayName.split(' ');
+      expect(parts.length).toBe(2);
+
+      const surname = res.components.find((c) => c.type === 'surname')?.value;
+      const given = res.components.find((c) => c.type === 'given')?.value;
+
+      expect(parts[0]).toBe(surname);
+      expect(parts[1]).toBe(given);
+    });
+
+    it('handles missing human culture explicitly without identity corruption', () => {
+      const res = generateName({ species: 'Human', seed: 'missing_culture_seed' });
+      expect(res.metadata.cultureStatus).toBe('missing');
+      expect(res.metadata.fallbackApplied).toBe(true);
+      expect(res.displayName).toBeTruthy();
+    });
+
+    it('handles unknown human culture explicitly without identity corruption', () => {
+      const res = generateName({ species: 'Human', culture: 'Atlantian', seed: 'unknown_culture_seed' });
+      expect(res.metadata.cultureStatus).toBe('unknown');
+      expect(res.metadata.fallbackApplied).toBe(true);
+      expect(res.displayName).toBeTruthy();
+    });
+  });
+
+  describe('Multi-Component Species Rules', () => {
+    it('generates Gnome 3-part multi-component names (given, nickname, clan)', () => {
       const res = generateName({ species: 'Gnome', gender: 'male', seed: 'gnome_seed' });
       expect(res.resolvedProfile.id).toBe('gnome_traditional');
       expect(res.displayName).toContain("'"); // Nickname in quotes
@@ -102,47 +190,36 @@ describe('Naming Domain Foundation v1 Test Suite', () => {
       expect(res.resolvedProfile.id).toBe('halfling_family');
     });
 
-    it('generates Half-Elf delegated names', () => {
-      const res = generateName({ species: 'Half-Elf', gender: 'female', seed: 'he_1' });
-      expect(res.resolvedProfile.id).toBe('half_elf_delegated');
-    });
-
     it('generates Half-Orc names', () => {
       const res = generateName({ species: 'Half-Orc', gender: 'male', seed: 'ho_1' });
       expect(res.resolvedProfile.id).toBe('half_orc_traditional');
     });
-
-    it('generates Human ethnic cultural names', () => {
-      const illuskan = generateName({ species: 'Human', culture: 'Illuskan', seed: 'h_ill' });
-      const turami = generateName({ species: 'Human', culture: 'Turami', seed: 'h_tur' });
-
-      expect(illuskan.resolvedProfile.id).toBe('human_cultural');
-      expect(turami.resolvedProfile.id).toBe('human_cultural');
-      expect(illuskan.displayName).not.toBe(turami.displayName);
-    });
   });
 
-  describe('Invalid Context & Fallback Handling', () => {
+  describe('Invalid Context & Fallback Error Handling', () => {
     it('throws typed NamingDomainError for unknown species', () => {
       expect(() => {
         resolveNamingProfile({ species: 'MartianAlien' });
       }).toThrow(NamingDomainError);
     });
-
-    it('handles missing gender or culture gracefully with safe defaults', () => {
-      const res = generateName({ species: 'Human', seed: 'no_gender' });
-      expect(res.displayName).toBeDefined();
-      expect(res.displayName.length).toBeGreaterThan(0);
-    });
   });
 
-  describe('Candidate Set Generation & Diversity', () => {
-    it('generates multiple candidate names for UI/inspection', () => {
+  describe('Candidate Set Generation & Diversity Regression', () => {
+    it('generates multiple candidate names for UI/inspection via generateCandidates()', () => {
       const candidates = generateCandidates({ species: 'Dwarf', gender: 'male', seed: 'multi_seed' }, 5);
       expect(candidates.length).toBe(5);
       const names = candidates.map((c) => c.displayName);
       const uniqueNames = new Set(names);
-      expect(uniqueNames.size).toBeGreaterThan(1); // Diversity across candidate set
+      expect(uniqueNames.size).toBeGreaterThan(1);
+    });
+
+    it('produces high candidate variety without collapsing into a repeated subset', () => {
+      const generatedNames = new Set<string>();
+      for (let i = 0; i < 20; i++) {
+        const res = generateName({ species: 'Elf', gender: 'female', seed: `diversity_run_${i}` });
+        generatedNames.add(res.displayName);
+      }
+      expect(generatedNames.size).toBeGreaterThanOrEqual(15);
     });
   });
 });

@@ -3,13 +3,13 @@
  * Defines species-specific naming rules and resolves structured NamingContext into NamingProfile.
  */
 
-import { NamingContext, NamingProfileRef, NamingDomainError, NameComponentType } from '../types';
-import { SOURCE_NAMING_DATA, SourceNamePool } from '../data/sourceData';
+import { NamingContext, NamingProfileRef, NamingDomainError, NameComponentType, CultureStatus } from '../types';
+import { SOURCE_NAMING_DATA } from '../data/sourceData';
 
 export interface ComponentRule {
   type: NameComponentType;
   required: boolean;
-  poolSource: string; // Path or identifier to data pool, e.g. "tiefling.maleGiven", "human.illuskan.maleGiven"
+  poolSource: string; // Identifier to data pool, e.g. "tiefling.genderGiven", "human.illuskan.maleGiven"
   isOptional?: boolean;
 }
 
@@ -21,7 +21,7 @@ export interface NamingRule {
   tradition: string;
   description: string;
   componentRules: ComponentRule[];
-  compositionPattern: string; // e.g. "{given} {family}", "{clan} {given}", "{given} '{nickname}' {clan}"
+  compositionPattern: string; // e.g. "{given} {family}", "{clan} {given}", "{surname} {given}"
   matchesContext: (ctx: NamingContext) => boolean;
   scoreMatch: (ctx: NamingContext) => number;
 }
@@ -41,19 +41,29 @@ export function normalizeSpeciesKey(species?: string): string {
   return clean;
 }
 
-export function normalizeCultureKey(culture?: string): string {
-  if (!culture) return 'chondathan';
+export interface HumanCultureResolution {
+  key: string;
+  status: CultureStatus;
+}
+
+export function resolveHumanCulture(culture?: string): HumanCultureResolution {
+  if (!culture || culture.trim().length === 0) {
+    return { key: 'neutral', status: 'missing' };
+  }
   const clean = culture.trim().toLowerCase();
-  if (clean.includes('calish')) return 'calishite';
-  if (clean.includes('chondath')) return 'chondathan';
-  if (clean.includes('damar')) return 'damaran';
-  if (clean.includes('illusk')) return 'illuskan';
-  if (clean.includes('mulan')) return 'mulan';
-  if (clean.includes('rashem')) return 'rashemi';
-  if (clean.includes('shou')) return 'shou';
-  if (clean.includes('tethyr')) return 'tethyrian';
-  if (clean.includes('turam')) return 'turami';
-  return 'chondathan';
+  if (clean.includes('calish')) return { key: 'calishite', status: 'known' };
+  if (clean.includes('chondath')) return { key: 'chondathan', status: 'known' };
+  if (clean.includes('damar')) return { key: 'damaran', status: 'known' };
+  if (clean.includes('illusk')) return { key: 'illuskan', status: 'known' };
+  if (clean.includes('mulan')) return { key: 'mulan', status: 'known' };
+  if (clean.includes('rashem')) return { key: 'rashemi', status: 'known' };
+  if (clean.includes('shou')) return { key: 'shou', status: 'known' };
+  if (clean.includes('tethyr')) return { key: 'tethyrian', status: 'known' };
+  if (clean.includes('turam')) return { key: 'turami', status: 'known' };
+  if (clean === 'neutral') return { key: 'neutral', status: 'known' };
+
+  // Unrecognized culture name -> explicit 'unknown' status, map to neutral pool without identity corruption
+  return { key: 'neutral', status: 'unknown' };
 }
 
 /**
@@ -126,7 +136,7 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     scoreMatch: () => 10
   },
 
-  // 4. Dragonborn - Clan First + Personal + Childhood
+  // 4. Dragonborn - Clan First + Personal
   {
     id: 'dragonborn_honor',
     species: 'dragonborn',
@@ -138,10 +148,7 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
       { type: 'given', required: true, poolSource: 'dragonborn.genderGiven' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'dragonborn',
-    scoreMatch: (ctx) => {
-      if (ctx.lifeStage === 'child') return 5;
-      return 10;
-    }
+    scoreMatch: (ctx) => (ctx.lifeStage === 'child' ? 5 : 10)
   },
 
   // 5. Dragonborn Childhood Name
@@ -221,7 +228,57 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     scoreMatch: () => 10
   },
 
-  // 10. Half-Elf Delegated Naming (Human or Elven)
+  // 10a. Half-Elf Delegated Naming - Elven Tradition
+  {
+    id: 'half_elf_elven',
+    species: 'halfElf',
+    tradition: 'Elven Heritage Delegation',
+    description: 'Half-elves raised among elves adopting traditional Elven given and family names.',
+    compositionPattern: '{given} {family}',
+    componentRules: [
+      { type: 'given', required: true, poolSource: 'halfElf.elvenGiven' },
+      { type: 'family', required: true, poolSource: 'halfElf.elvenFamily' }
+    ],
+    matchesContext: (ctx) => {
+      if (normalizeSpeciesKey(ctx.species) !== 'halfElf') return false;
+      const style = (ctx.traditionStyle || '').toLowerCase();
+      const origin = (ctx.origin || '').toLowerCase();
+      return style === 'elven' || origin.includes('elf') || origin.includes('elven');
+    },
+    scoreMatch: (ctx) => {
+      const style = (ctx.traditionStyle || '').toLowerCase();
+      const origin = (ctx.origin || '').toLowerCase();
+      if (style === 'elven' || origin.includes('elf')) return 15;
+      return 10;
+    }
+  },
+
+  // 10b. Half-Elf Delegated Naming - Human Tradition
+  {
+    id: 'half_elf_human',
+    species: 'halfElf',
+    tradition: 'Human Heritage Delegation',
+    description: 'Half-elves raised in human society adopting Human regional given and surnames.',
+    compositionPattern: '{given} {surname}',
+    componentRules: [
+      { type: 'given', required: true, poolSource: 'halfElf.humanGiven' },
+      { type: 'surname', required: true, poolSource: 'halfElf.humanSurname' }
+    ],
+    matchesContext: (ctx) => {
+      if (normalizeSpeciesKey(ctx.species) !== 'halfElf') return false;
+      const style = (ctx.traditionStyle || '').toLowerCase();
+      const origin = (ctx.origin || '').toLowerCase();
+      return style === 'human' || origin.includes('human');
+    },
+    scoreMatch: (ctx) => {
+      const style = (ctx.traditionStyle || '').toLowerCase();
+      const origin = (ctx.origin || '').toLowerCase();
+      if (style === 'human' || origin.includes('human')) return 15;
+      return 10;
+    }
+  },
+
+  // 10c. Half-Elf General / Default Dual Delegation
   {
     id: 'half_elf_delegated',
     species: 'halfElf',
@@ -229,14 +286,14 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     description: 'Half-elves taking human or elven names based on environment or upbringing.',
     compositionPattern: '{given} {family}',
     componentRules: [
-      { type: 'given', required: true, poolSource: 'halfElf.delegatedGiven' },
-      { type: 'family', required: true, poolSource: 'halfElf.delegatedFamily' }
+      { type: 'given', required: true, poolSource: 'halfElf.elvenGiven' },
+      { type: 'family', required: true, poolSource: 'halfElf.elvenFamily' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'halfElf',
-    scoreMatch: () => 10
+    scoreMatch: () => 8 // Lower score than specific elven/human match
   },
 
-  // 11. Half-Orc Guttural Orc or Human Trade Name
+  // 11. Half-Orc Orc/Human Naming
   {
     id: 'half_orc_traditional',
     species: 'halfOrc',
@@ -250,7 +307,27 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     scoreMatch: () => 10
   },
 
-  // 12. Human Cultural Ethnicity Naming
+  // 12a. Human Cultural Naming - Shou Tradition (Surname First)
+  {
+    id: 'human_shou',
+    species: 'human',
+    culture: 'shou',
+    tradition: 'Shou Clan First Lineage',
+    description: 'Shou cultural tradition placing family surname before given name.',
+    compositionPattern: '{surname} {given}',
+    componentRules: [
+      { type: 'surname', required: true, poolSource: 'human.culturalSurname' },
+      { type: 'given', required: true, poolSource: 'human.culturalGiven' }
+    ],
+    matchesContext: (ctx) => {
+      if (normalizeSpeciesKey(ctx.species) !== 'human') return false;
+      const cul = resolveHumanCulture(ctx.culture);
+      return cul.key === 'shou';
+    },
+    scoreMatch: () => 15
+  },
+
+  // 12b. Human Cultural Naming - Standard Regional (Given + Surname)
   {
     id: 'human_cultural',
     species: 'human',
@@ -262,7 +339,11 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
       { type: 'surname', required: true, poolSource: 'human.culturalSurname' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'human',
-    scoreMatch: (ctx) => (ctx.culture ? 12 : 10)
+    scoreMatch: (ctx) => {
+      const cul = resolveHumanCulture(ctx.culture);
+      if (cul.status === 'known') return 12;
+      return 10;
+    }
   }
 ];
 
@@ -287,11 +368,17 @@ export function resolveNamingProfile(ctx: NamingContext): {
   matchingRules.sort((a, b) => b.scoreMatch(ctx) - a.scoreMatch(ctx));
   const bestRule = matchingRules[0];
 
+  let cultureStatus: CultureStatus = 'missing';
+  if (speciesKey === 'human') {
+    cultureStatus = resolveHumanCulture(ctx.culture).status;
+  }
+
   const profileRef: NamingProfileRef = {
     id: bestRule.id,
     species: ctx.species || speciesKey,
     subrace: ctx.subrace,
     culture: ctx.culture,
+    cultureStatus,
     tradition: bestRule.tradition,
     description: bestRule.description
   };
@@ -300,84 +387,142 @@ export function resolveNamingProfile(ctx: NamingContext): {
 }
 
 /**
+ * Safely resolves gender pool selection without silent male-only defaults.
+ * If gender is unspecified/non-binary, combines male and female pools or uses unisex pool.
+ */
+function resolveGenderPool(
+  malePool: readonly string[] = [],
+  femalePool: readonly string[] = [],
+  unisexPool?: readonly string[],
+  gender?: string
+): readonly string[] {
+  const g = (gender || 'unspecified').trim().toLowerCase();
+
+  if (g === 'female') return femalePool.length > 0 ? femalePool : malePool;
+  if (g === 'male') return malePool.length > 0 ? malePool : femalePool;
+
+  // Unspecified, non-binary, or non-gendered
+  if (unisexPool && unisexPool.length > 0) {
+    return unisexPool;
+  }
+  return [...malePool, ...femalePool];
+}
+
+/**
  * Resolves a pool string like "tiefling.genderGiven" or "human.culturalGiven" into an array of string values.
  */
 export function resolveDataPool(poolSource: string, ctx: NamingContext): readonly string[] {
-  const gender = (ctx.gender || 'male').toString().toLowerCase();
+  const genderStr = ctx.gender ? ctx.gender.toString() : undefined;
 
   if (poolSource === 'tiefling.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.tiefling.femaleGiven!
-      : SOURCE_NAMING_DATA.tiefling.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.tiefling.maleGiven,
+      SOURCE_NAMING_DATA.tiefling.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'tiefling.virtueNames') {
     return SOURCE_NAMING_DATA.tiefling.virtueNames!;
   }
 
   if (poolSource === 'gnome.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.gnome.femaleGiven!
-      : SOURCE_NAMING_DATA.gnome.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.gnome.maleGiven,
+      SOURCE_NAMING_DATA.gnome.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'gnome.clanNames') return SOURCE_NAMING_DATA.gnome.clanNames!;
   if (poolSource === 'gnome.nicknames') return SOURCE_NAMING_DATA.gnome.nicknames!;
 
   if (poolSource === 'dragonborn.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.dragonborn.femaleGiven!
-      : SOURCE_NAMING_DATA.dragonborn.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.dragonborn.maleGiven,
+      SOURCE_NAMING_DATA.dragonborn.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'dragonborn.clanNames') return SOURCE_NAMING_DATA.dragonborn.clanNames!;
   if (poolSource === 'dragonborn.childhoodNames') return SOURCE_NAMING_DATA.dragonborn.childhoodNames!;
 
   if (poolSource === 'elf.childGiven') return SOURCE_NAMING_DATA.elf.childGiven!;
   if (poolSource === 'elf.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.elf.femaleGiven!
-      : SOURCE_NAMING_DATA.elf.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.elf.maleGiven,
+      SOURCE_NAMING_DATA.elf.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'elf.familyNames') return SOURCE_NAMING_DATA.elf.familyNames!;
 
   if (poolSource === 'dwarf.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.dwarf.femaleGiven!
-      : SOURCE_NAMING_DATA.dwarf.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.dwarf.maleGiven,
+      SOURCE_NAMING_DATA.dwarf.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'dwarf.clanNames') return SOURCE_NAMING_DATA.dwarf.clanNames!;
 
   if (poolSource === 'halfling.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.halfling.femaleGiven!
-      : SOURCE_NAMING_DATA.halfling.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.halfling.maleGiven,
+      SOURCE_NAMING_DATA.halfling.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
   if (poolSource === 'halfling.familyNames') return SOURCE_NAMING_DATA.halfling.familyNames!;
 
   if (poolSource === 'halfOrc.genderGiven') {
-    return gender === 'female'
-      ? SOURCE_NAMING_DATA.halfOrc.femaleGiven!
-      : SOURCE_NAMING_DATA.halfOrc.maleGiven!;
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.halfOrc.maleGiven,
+      SOURCE_NAMING_DATA.halfOrc.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
 
-  if (poolSource === 'halfElf.delegatedGiven') {
-    // Half-Elf delegates to either Elf or Human given names
-    const pool = gender === 'female' ? SOURCE_NAMING_DATA.elf.femaleGiven! : SOURCE_NAMING_DATA.elf.maleGiven!;
-    return pool;
+  // Half-Elf specific delegated pool sources
+  if (poolSource === 'halfElf.elvenGiven') {
+    return resolveGenderPool(
+      SOURCE_NAMING_DATA.elf.maleGiven,
+      SOURCE_NAMING_DATA.elf.femaleGiven,
+      undefined,
+      genderStr
+    );
   }
-  if (poolSource === 'halfElf.delegatedFamily') {
+  if (poolSource === 'halfElf.elvenFamily') {
     return SOURCE_NAMING_DATA.elf.familyNames!;
   }
+  if (poolSource === 'halfElf.humanGiven') {
+    const cul = resolveHumanCulture(ctx.culture);
+    const pool = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
+    return resolveGenderPool(pool.maleGiven, pool.femaleGiven, undefined, genderStr);
+  }
+  if (poolSource === 'halfElf.humanSurname') {
+    const cul = resolveHumanCulture(ctx.culture);
+    const pool = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
+    return pool.surnames!;
+  }
 
+  // Human cultural pools
   if (poolSource === 'human.culturalGiven') {
-    const cultureKey = normalizeCultureKey(ctx.culture);
-    const humanPool = SOURCE_NAMING_DATA.human[cultureKey] || SOURCE_NAMING_DATA.human.chondathan;
-    return gender === 'female' ? humanPool.femaleGiven! : humanPool.maleGiven!;
+    const cul = resolveHumanCulture(ctx.culture);
+    const humanPool = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
+    return resolveGenderPool(humanPool.maleGiven, humanPool.femaleGiven, undefined, genderStr);
   }
   if (poolSource === 'human.culturalSurname') {
-    const cultureKey = normalizeCultureKey(ctx.culture);
-    const humanPool = SOURCE_NAMING_DATA.human[cultureKey] || SOURCE_NAMING_DATA.human.chondathan;
+    const cul = resolveHumanCulture(ctx.culture);
+    const humanPool = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
     return humanPool.surnames!;
   }
 
-  // Fallback to project generic extension
+  // Explicit Fallback to project generic extensions
   return SOURCE_NAMING_DATA.projectExtensions!.genericFantasy.unisexGiven!;
 }

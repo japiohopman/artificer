@@ -16,7 +16,7 @@ export function generateCandidatesForRule(
   const candidates: Candidate[] = [];
 
   for (let i = 0; i < count; i++) {
-    const iterRng = rng.fork(`candidate_${i}`);
+    const iterRng = rng.fork(`cand_${i}`);
     const components: NameComponent[] = [];
 
     for (const compRule of rule.componentRules) {

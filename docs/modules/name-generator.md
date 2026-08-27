@@ -1,28 +1,33 @@
-# Naming Domain & Name Generator Foundation v1
+# Artificer Naming Domain & Name Generator Foundation v1
 
 ## Architectural Purpose & Scope
 
 The **Naming Domain** in Artificer is an application-wide, data-driven content generation capability located at `src/lib/naming/`.
 
-It is **NOT** a UI component or a Character Creator-only feature. The Naming Domain serves as pure core infrastructure designed to be consumed by:
+It is **NOT** a UI component, React hook, or Character Creator-only feature. The Naming Domain serves as pure core domain infrastructure designed to be consumed across the application by:
 
-* Character Creator (`IdentityStep`, quick character generation)
+* Character Creator (`IdentityStep`, `BackstoryStep`, quick random hero generation)
 * Character Sheet / Character Profile
-* NPC Generation (`src/lib/npcGeneratorUtils.ts`, `DevKit`)
+* NPC Generation (`src/lib/npcGeneratorUtils.ts`, DevKit tools)
 * Named Enemies & Bosses
 * Companions & Recruitable Characters
-* World Generation & Settlement Inhabitants
-* Narrative & Quest Systems
-* Content Authoring Tools
+* World Generation, Towns & Settlement Inhabitants
+* Narrative, Quest & DM/LM Systems
+* Content Authoring & DevKit Tools
 
 ## Core Architecture & Principles
 
-1. **Decoupled & Stateless**: Pure TypeScript module in `src/lib/naming/` with zero dependencies on React, UI global state, DOM, external APIs, or network services.
-2. **Deterministic Seedability**: Guaranteed `same context + same seed = same generated result` via Mulberry32 PRNG (`src/lib/naming/rng.ts`).
+1. **Decoupled & Stateless**: Pure TypeScript module in `src/lib/naming/` with zero dependencies on React, UI global state, DOM, external APIs, network services, LLMs, or database persistence.
+2. **Deterministic Seedability**: Guaranteed `same context + same seed = same generated result` via Mulberry32 seedable PRNG (`src/lib/naming/rng.ts`).
 3. **Data-Driven Rules**: Naming profiles and rules live in code/data (`src/lib/naming/rules/namingRules.ts` & `src/lib/naming/data/sourceData.ts`), isolating species-specific mechanics from UI code.
-4. **Composition & Validation Pipeline**:
+4. **Source Data vs Project Extensions**: Official D&D source-derived name lists are kept strictly separated from project-authored extension pools (`projectExtensions` and neutral human default).
+5. **Composition & Validation Pipeline**:
    `Context` → `Resolve Profile` → `Generate Candidates` → `Validate` → `Score & Diversity` → `Compose Name` → `Return Result`
-5. **Typed Public API**: Minimal and clean public boundary exported via `src/lib/naming/index.ts`.
+6. **Explicit Context Handling**:
+   - Genuinely gender-independent or unspecified gender pools are handled safely without silent defaulting to male.
+   - Human culture handling explicitly distinguishes `known`, `missing`, and `unknown` culture statuses without corrupting character identity.
+   - Half-Elf naming supports dual cross-cultural delegation (Elven or Human heritage) based on context.
+7. **Typed Public API**: Minimal and clean public boundary exported via `src/lib/naming/index.ts`.
 
 ---
 
@@ -30,18 +35,28 @@ It is **NOT** a UI component or a Character Creator-only feature. The Naming Dom
 
 ```
 src/lib/naming/
-├── types.ts                   # Public API interfaces, context, candidate & error types
+├── types.ts                   # Public API interfaces, NamingContext, NamingResult & error models
 ├── rng.ts                     # Deterministic seedable Mulberry32 PRNG & array utilities
 ├── data/
-│   └── sourceData.ts          # Structured canonical naming pools from source material
+│   └── sourceData.ts          # Structured source data catalog (Official D&D source + Project extensions)
 ├── rules/
-│   └── namingRules.ts         # Profile resolution, context match scoring & rule catalog
+│   └── namingRules.ts         # Profile resolution, human culture resolution & rule catalog
 ├── pipeline/
 │   ├── generator.ts           # Candidate set generator
-│   ├── composer.ts            # Component composition according to rule patterns
-│   └── validatorAndScorer.ts  # Validation guards & quality scoring algorithms
+│   ├── composer.ts            # Component composition according to rule patterns & placeholder formatting
+│   └── validatorAndScorer.ts  # Validation guards & deterministic quality/diversity scoring
 └── index.ts                   # Public entrypoint exports (generateName, generateCandidates)
 ```
+
+---
+
+## Public Domain API
+
+### `generateName(ctx: NamingContext): NamingResult`
+Generates a single high-quality, deterministic name result matching the provided structured context.
+
+### `generateCandidates(ctx: NamingContext, count?: number): NamingResult[]`
+Generates multiple valid candidate names for inspection or UI choice selection tools without mutating global state.
 
 ---
 
@@ -53,18 +68,18 @@ src/lib/naming/
 * **Elf**: Child names (under 100th birthday) vs Adult given names with combined Elven family lineage names.
 * **Dwarf**: Elder-granted clan names and traditional given names.
 * **Halfling**: Given name and persistent family nickname/surname.
-* **Half-Elf**: Delegated cross-cultural human or elven naming conventions.
+* **Half-Elf**: Delegated cross-cultural human or elven naming conventions based on upbringing/origin context.
 * **Half-Orc**: Guttural Orc given names or human trade names.
-* **Human Ethnicities**: Calishite, Chondathan, Damaran, Illuskan, Mulan, Rashemi, Shou, Tethyrian, Turami regional lineages.
+* **Human Ethnicities**: Calishite, Chondathan, Damaran, Illuskan, Mulan, Rashemi, Shou (surname-first `{surname} {given}`), Tethyrian, Turami regional lineages, alongside explicit neutral handling for missing/unknown cultures.
 
 ---
 
 ## Code Example
 
 ```typescript
-import { generateName } from '@/lib/naming';
+import { generateName, generateCandidates } from '@/lib/naming';
 
-// Deterministic generation
+// 1. Deterministic generation with explicit seed
 const result = generateName({
   species: 'Dragonborn',
   gender: 'male',
@@ -76,38 +91,21 @@ console.log(result.displayName);
 
 console.log(result.resolvedProfile.tradition);
 // Output: "Clan First Honor"
+
+// 2. Generating choices for UI or tool inspectors
+const candidates = generateCandidates({
+  species: 'Half-Elf',
+  traditionStyle: 'human',
+  culture: 'Illuskan',
+  seed: 99
+}, 3);
+
+console.log(candidates.map(c => c.displayName));
 ```
 
 ---
 
-## Source Material Reference
+## Limitations & Future Extensions
 
-The raw source text below serves as the source of truth for the canonical naming data pools embedded in `src/lib/naming/data/sourceData.ts`.
-
-```
-TIEFLING
-Male Infernal Names: Akmenos, Amnon, Barakas, Damakos, Ekemon, Iados, Kairon, Leucis, Melech, Mordai, Morthos, Pelaios, Skamos, Therai
-Female Infernal Names: Akta, Anakis, Bryseis, Criella, Damaia, Ea, Kallista, Lerissa, Makaria, Nemeia, Orianna, Phelaia, Rieta
-Virtue Names: Art, Carrion, Chant, Creed, Despair, Excellence, Fear, Glory, Hope, Ideal, Music, Nowhere, Open, Poetry, Quest, Random, Reverence, Sorrow, Temerity, Torment, Weary
-
-HALF-ORC
-Male Orc Names: Dench, Feng, Gell, Henk, Holg, Imsh, Keth, Krusk, Mhurren, Ront, Shump, Thokk
-Female Orc Names: Baggi, Emen, Engong, Kansif, Myev, Neega, Ovak, Ownka, Shautha, Sulha, Vola, Volen, Yevelda
-
-GNOME
-Male Names: Alston, Alvyn, Boddynock, Brocc, Burgell, Dimble, Eldon, Erky, Fonkin, Frug, Gerbo, Gimble, Glim, Jebeddo, Kellen, Namfoodle, Orryn, Roondar, Seebo, Sindri, Warryn, Wrenn, Zook
-Female Names: Bimpnollin, Breena, Caramip, Carlin, Donella, Duvamil, Ella, Ellyjobell, Ellywick, Lilli, Loopmottin, Lorilla, Mardnab, Nissa, Nyx, Oda, Orla, Roywyn, Shamil, Tana, Waywocket, Zanna
-Clan Names: Beren, Daergel, Folkor, Garrick, Nackle, Murnig, Ningel, Raulnor, Scheppen, Timbers, Turen
-Nicknames: Aleslosh, Ashhearth, Badger, Cloak, Doublelock, Filchbatter, Fnipper, Ku, Nim, Oneshoe, Pock, Sparklegem, Stumbleduck
-
-DRAGONBORN
-Male Names: Arjhan, Balasar, Bharash, Donaar, Ghesh, Heskan, Kriv, Medrash, Mehen, Nadarr, Pandjed, Patrin, Rhogar, Shamash, Shedinn, Tarhun, Torinn
-Female Names: Akra, Biri, Daar, Farideh, Harann, Havilar, Jheri, Kava, Korinn, Mishann, Nala, Perra, Raiann, Sora, Surina, Thava, Uadjit
-Childhood Names: Climber, Earbender, Leaper, Pious, Shieldbiter, Zealous
-Clan Names: Clethtinthiallor, Daardendrian, Delmirev, Drachedandion, Fenkenkabradon, Kepeshkmolik, Kerrhylon, Kimbatuul, Linxakasendalor, Myastan, Nemmonis, Norixius, Ophinshtalajiir, Prexijandilin, Shestendeliath, Turnuroth, Verthisathurgiesh, Yarjerit
-
-DWARF
-Male Names: Adrik, Alberich, Baern, Barendd, Brottor, Bruenor, Dain, Darrak, Delg, Eberk, Einkil, Fargrim, Flint, Gardain, Harbek, Kildrak, Morgran, Orsik, Oskar, Rangrim, Rurik, Taklinn, Thoradin, Thorin, Tordek, Traubon, Travok, Ulfgar, Veit, Vondal
-Female Names: Amber, Artin, Audhild, Bardryn, Dagnal, Diesa, Eldeth, Falkrunn, Finellen, Gunnloda, Gurdis, Helja, Hlin, Kathra, Kristryd, Ilde, Liftrasa, Mardred, Riswynn, Sanni, Torbera, Torgga, Vistra
-Clan Names: Balderk, Battlehammer, Brawnanvil, Dankil, Fireforge, Frostbeard, Gorunn, Holderhek, Ironfist, Loderr, Lutgehr, Rumnaheim, Strakeln, Torunn, Ungart
-```
+1. **Persistence Boundary**: The domain is strictly stateless and seedable. Persistence (saving generated names to character sheets or databases) is owned by consumer storage services (`useCharacterStore`, `storageService`).
+2. **Rule Extensibility**: New species or cultural traditions can be added to `BUILTIN_NAMING_RULES` in `namingRules.ts` without modifying generator pipeline logic or public API contracts.

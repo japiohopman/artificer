@@ -7,6 +7,8 @@ export type GenderOption = 'male' | 'female' | 'non-binary' | 'unspecified' | st
 
 export type LifeStage = 'child' | 'adult' | 'elder' | string;
 
+export type CultureStatus = 'known' | 'missing' | 'unknown';
+
 export type NameComponentType =
   | 'given'
   | 'family'
@@ -29,7 +31,7 @@ export interface NamingContext {
   lifeStage?: LifeStage;
   socialContext?: string;
   origin?: string;
-  traditionStyle?: string;
+  traditionStyle?: string; // e.g., 'infernal', 'virtue', 'elven', 'human', 'clan_first'
   seed?: number | string;
   candidateCount?: number;
   [key: string]: unknown; // Extensibility without breaking public API
@@ -40,6 +42,7 @@ export interface NamingProfileRef {
   species: string;
   subrace?: string;
   culture?: string;
+  cultureStatus?: CultureStatus;
   tradition: string;
   description: string;
 }
@@ -76,7 +79,8 @@ export interface NamingResult {
     candidatesEvaluated: number;
     warnings?: string[];
     fallbackApplied?: boolean;
-    ruleId?: string;
+    cultureStatus?: CultureStatus;
+    ruleId: string;
   };
 }
 
