@@ -521,11 +521,19 @@ export const CharacterCreator: React.FC = () => {
         reason: 'No save slot selected'
       });
     }
-    if (!newChar.name || !newChar.name.trim()) {
+    if (!newChar.gender) {
       missing.push({
         stepId: 'identity',
-        label: 'Character Identity',
+        label: 'Manifested Polarity',
         icon: 'info',
+        reason: 'Gender selection is missing'
+      });
+    }
+    if (!newChar.name || !newChar.name.trim()) {
+      missing.push({
+        stepId: 'backstory',
+        label: 'Soul Moniker',
+        icon: 'book',
         reason: 'Character name is missing'
       });
     }
@@ -569,7 +577,7 @@ export const CharacterCreator: React.FC = () => {
     switch(currentStep) {
         case 'welcome': return true;
         case 'slot': return !!selectedSlot;
-        case 'identity': return !!newChar.name && newChar.name.trim().length > 0;
+        case 'identity': return !!newChar.gender;
         case 'species': return !!newChar.race;
         case 'class': return !!newChar.class;
         case 'choices': return true;
