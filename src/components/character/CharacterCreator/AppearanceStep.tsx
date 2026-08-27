@@ -246,6 +246,9 @@ export const AppearanceStep: React.FC<{
     const sizes = ['Tiny', 'Small', 'Medium', 'Large'];
     const currentSize = newChar.appearance?.size || speciesStats?.size || 'Medium';
 
+    const heightScale = (newChar.appearance as any)?.heightScale ?? 1.0;
+    const weightScale = (newChar.appearance as any)?.weightScale ?? 1.0;
+
     return (
         <div className="space-y-8 h-full flex flex-col p-6">
             <div className="space-y-1">
@@ -275,6 +278,45 @@ export const AppearanceStep: React.FC<{
                                     {s}
                                 </button>
                             ))}
+                        </div>
+                    </div>
+
+                    {/* Height & Weight Sliders */}
+                    <div className="space-y-4 pt-2 border-t border-dragon-gold/10">
+                        <label className="text-[10px] font-black uppercase tracking-[0.2em] text-parchment-400 flex items-center gap-2">
+                            <GameIcon name="user" size={12} /> Body Proportions (Height & Weight Scale)
+                        </label>
+                        <div className="grid grid-cols-2 gap-6 bg-white/30 border border-dragon-gold/10 p-4 rounded-sm">
+                            <div className="space-y-2">
+                                <div className="flex justify-between items-center text-[10px] font-black uppercase text-dragon-darkRed">
+                                    <span>Height Scale</span>
+                                    <span>{Math.round(heightScale * 100)}%</span>
+                                </div>
+                                <input
+                                    type="range"
+                                    min="0.85"
+                                    max="1.15"
+                                    step="0.01"
+                                    value={heightScale}
+                                    onChange={(e) => updateAppearance('heightScale' as any, parseFloat(e.target.value))}
+                                    className="w-full accent-dragon-red cursor-pointer"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <div className="flex justify-between items-center text-[10px] font-black uppercase text-dragon-darkRed">
+                                    <span>Weight Scale</span>
+                                    <span>{Math.round(weightScale * 100)}%</span>
+                                </div>
+                                <input
+                                    type="range"
+                                    min="0.85"
+                                    max="1.15"
+                                    step="0.01"
+                                    value={weightScale}
+                                    onChange={(e) => updateAppearance('weightScale' as any, parseFloat(e.target.value))}
+                                    className="w-full accent-dragon-red cursor-pointer"
+                                />
+                            </div>
                         </div>
                     </div>
 

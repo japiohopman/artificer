@@ -5,6 +5,9 @@ interface GenderBodySvgProps {
   gender: 'Male' | 'Female';
   race?: string;
   selected?: boolean;
+  skinColor?: string;
+  heightScale?: number; // scaleY e.g. 0.85 - 1.15
+  weightScale?: number; // scaleX e.g. 0.85 - 1.15
   onClick?: () => void;
   className?: string;
 }
@@ -13,11 +16,24 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
   gender,
   race,
   selected = false,
+  skinColor,
+  heightScale = 1,
+  weightScale = 1,
   onClick,
   className
 }) => {
   const isMale = gender === 'Male';
-  const isElven = race && race.toLowerCase().includes('elf');
+  const raceLower = race?.toLowerCase() || '';
+  const isElven = raceLower.includes('elf') || raceLower.includes('tiefling');
+  const isTiefling = raceLower.includes('tiefling');
+
+  const effectiveSkinColor = isTiefling && (!skinColor || skinColor === '#ffdbac') ? '#8B0000' : skinColor;
+
+  const svgStyle: React.CSSProperties = {
+    transform: `scale(${weightScale}, ${heightScale})`,
+    transformOrigin: 'bottom center',
+    ...(effectiveSkinColor ? { fill: effectiveSkinColor } : {})
+  };
 
   return (
     <div
@@ -34,11 +50,24 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
         version="1.2"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 923"
+        style={svgStyle}
         className={cn(
           'w-48 h-auto max-h-[380px] drop-shadow-md transition-all duration-300',
-          selected ? 'fill-dragon-red stroke-dragon-gold' : 'fill-parchment-500 hover:fill-dragon-darkRed'
+          effectiveSkinColor
+            ? ''
+            : selected
+            ? 'fill-dragon-red stroke-dragon-gold'
+            : 'fill-parchment-500 hover:fill-dragon-darkRed'
         )}
       >
+        {isTiefling && (
+          <path
+            id="thiefling-tail"
+            fillRule="evenodd"
+            className="transition-colors duration-200"
+            d="m272.25 468.94c0 0-80.04 148.76 73.5 177 133.74 24.6 139.5 131.37 73.5 161.87-67.05 30.99-309.5 52-287-26l5.5 11.5c0.5 5.5 0-18.5-5-26.5 0 0-10.5 9-12.5 19.5l6.5-3.5c0 0-7.5 28 17 42 36.94 21.11 103.76 29.98 199 21 103.74-9.77 148.5-43.07 145.5-101.5-2.76-53.77-32.35-88.44-87.26-111.27-50.5-21-111.22-3.82-116.24-94.23-5.5-99-8-78.25-12.5-69.87z"
+          />
+        )}
         {isMale ? (
           <g id="male">
             <path

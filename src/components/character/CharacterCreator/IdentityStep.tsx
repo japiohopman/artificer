@@ -21,6 +21,9 @@ export const IdentityStep: React.FC<{
                     gender="Male"
                     race={newChar.race}
                     selected={newChar.gender === 'Male'}
+                    skinColor={newChar.appearance?.skinColor}
+                    heightScale={(newChar.appearance as any)?.heightScale}
+                    weightScale={(newChar.appearance as any)?.weightScale}
                     onClick={() => {
                         setNewChar({ ...newChar, gender: 'Male' });
                         soundService.playEffect('UI_CLICK_LIGHT');
@@ -30,6 +33,9 @@ export const IdentityStep: React.FC<{
                     gender="Female"
                     race={newChar.race}
                     selected={newChar.gender === 'Female'}
+                    skinColor={newChar.appearance?.skinColor}
+                    heightScale={(newChar.appearance as any)?.heightScale}
+                    weightScale={(newChar.appearance as any)?.weightScale}
                     onClick={() => {
                         setNewChar({ ...newChar, gender: 'Female' });
                         soundService.playEffect('UI_CLICK_LIGHT');

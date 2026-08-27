@@ -60,6 +60,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Artificer Naming Domain & Name Generator Foundation v1
 - [x] Inventory & Equipment Architecture / UX Overhaul
 - [x] Combat Integration v1 — BattleMap → CombatTester → CombatGrid (PR #261 accepted and merged)
 - [x] Ruleset Selection & Ruleset Context — 2014 vs 2024 (Downstream Integration v1 Pass: Feats, Class Levels, Spells)

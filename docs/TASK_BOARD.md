@@ -30,6 +30,14 @@ PR #247 accepted and merged. Species Visual Integration v1 completed. Character 
 
 ## 🟠 High — Architecture & data foundations
 
+### Artificer Naming Domain & Name Generator Foundation v1
+- [x] Create application-wide, data-driven Naming Domain (`src/lib/naming/`).
+- [x] Implement deterministic seedable PRNG (`Mulberry32`).
+- [x] Source-backed naming data pools & rules for Tiefling, Gnome, Dragonborn, Elf, Dwarf, Halfling, Half-Elf, Half-Orc, and Human ethnic naming.
+- [x] Comprehensive unit test suite (`tests/naming_domain.test.ts` - 17 passing tests).
+- [x] Complete system documentation in `docs/modules/name-generator.md` and SVG specs in `docs/modules/svgBodys.md`.
+- [x] Seamless integration into Character Creator (`BackstoryStep.tsx`).
+
 ### Character Creator — Selection Experience v1
 PR #257 accepted and merged. Selection Experience v1 completed.
 

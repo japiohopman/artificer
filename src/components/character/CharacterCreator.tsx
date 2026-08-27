@@ -962,7 +962,16 @@ const StepContent: React.FC<{
             selected={newChar.race}
             selectedSubrace={newChar.subrace}
             onSelect={(raceVal, subraceVal) => {
-                setNewChar({...newChar, race: raceVal, subrace: subraceVal});
+                const defaultSkin = raceVal.toLowerCase() === 'tiefling' ? '#8B0000' : (newChar.appearance?.skinColor || '#ffdbac');
+                setNewChar({
+                  ...newChar,
+                  race: raceVal,
+                  subrace: subraceVal,
+                  appearance: {
+                    ...newChar.appearance!,
+                    skinColor: defaultSkin
+                  }
+                });
             }}
             category="species"
         />;
