@@ -2,6 +2,7 @@ import React from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { GenderBodySvg } from './GenderBodySvg';
 import { GameIcon } from '../../../game_icons';
+import { ALIGNMENT_ATMOSPHERE_MAP } from './SelectionStep';
 
 interface CreatorRightPanelProps {
   newChar: Partial<Character>;
@@ -10,11 +11,20 @@ interface CreatorRightPanelProps {
 
 export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, currentStep }) => {
   const gender = (newChar.gender === 'Female' ? 'Female' : 'Male') as 'Male' | 'Female';
+  const alignmentBg = newChar.alignment ? ALIGNMENT_ATMOSPHERE_MAP[newChar.alignment.toLowerCase()] : null;
 
   return (
     <div className="w-80 lg:w-96 border-l border-dragon-gold/20 bg-white/30 flex flex-col relative overflow-hidden shrink-0 shadow-inner">
       {/* Background Paper Texture */}
       <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none" />
+
+      {/* Alignment Enemy Background Backdrop Layer */}
+      {alignmentBg && (
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-35 pointer-events-none transition-all duration-700 ease-in-out filter blur-[1px]"
+          style={{ backgroundImage: `url('${alignmentBg}')` }}
+        />
+      )}
 
       {/* SVG Silhouette Backdrop Layer */}
       <div className="absolute inset-0 flex items-center justify-center opacity-85 pointer-events-none p-4 z-0">
