@@ -1,5 +1,5 @@
 import React from 'react';
-import { ALL_ICONS } from './assets/icons';
+import { ALL_ICONS } from '../public/assets/icons';
 
 /**
  * Game Icons Registry
