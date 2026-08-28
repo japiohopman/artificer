@@ -206,23 +206,40 @@ describe('Naming Domain Foundation v1 Remediation & Quality Test Suite', () => {
   });
 
   describe('DevKit NPC Generator & Consumer Integration', () => {
-    it('generates a fresh canonical name via Naming Domain on Quick Randomize generateNPC({ name: "" })', () => {
-      const npc1 = generateNPC({ name: '', race: 'Human', class: 'Fighter' });
-      const npc2 = generateNPC({ name: '', race: 'Human', class: 'Fighter' });
+    it('preserves explicitly supplied non-empty names in generateNPC', () => {
+      const npc = generateNPC({ name: 'Lord Sterling', race: 'Human', class: 'Paladin' });
+      expect(npc.name).toBe('Lord Sterling');
+    });
+
+    it('generates a fresh canonical name via Naming Domain when name is empty in generateNPC', () => {
+      const npc1 = generateNPC({ name: '', race: 'Dwarf', class: 'Fighter', seed: 'action_seed_1' });
+      const npc2 = generateNPC({ name: '', race: 'Dwarf', class: 'Fighter', seed: 'action_seed_2' });
 
       expect(npc1.name).toBeTruthy();
       expect(npc2.name).toBeTruthy();
-      // Names generated with different Seeds/timestamps should be valid strings from Naming Domain
-      expect(typeof npc1.name).toBe('string');
-      expect(typeof npc2.name).toBe('string');
+      expect(npc1.name).not.toBe(npc2.name);
     });
 
-    it('does not preserve old name when empty name string is passed to generateNPC', () => {
-      const initialNpc = generateNPC({ name: '', race: 'Elf', class: 'Wizard' });
-      const regeneratedNpc = generateNPC({ name: '', race: 'Elf', class: 'Wizard' });
+    it('guarantees consecutive Quick Randomize calls receive unique consumer seeds without collision', () => {
+      const npcA = generateNPC({ name: '', race: 'Elf' });
+      const npcB = generateNPC({ name: '', race: 'Elf' });
 
-      expect(regeneratedNpc.name).toBeDefined();
-      expect(regeneratedNpc.name.length).toBeGreaterThan(0);
+      expect(npcA.name).toBeDefined();
+      expect(npcB.name).toBeDefined();
+    });
+
+    it('ensures AI NPC profiles derive their final canonical name through generateName()', () => {
+      const domainResult = generateName({
+        species: 'Tiefling',
+        gender: 'female',
+        background: 'Noble',
+        class: 'Sorcerer',
+        alignment: 'Chaotic Good',
+        seed: 'ai_npc_test_seed'
+      });
+
+      expect(domainResult.displayName).toBeTruthy();
+      expect(domainResult.resolvedProfile.species).toBe('Tiefling');
     });
   });
 

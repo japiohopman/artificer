@@ -205,7 +205,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         background: data.background,
         class: data.class,
         alignment: data.alignment,
-        seed: Date.now()
+        seed: `ai_npc_${Date.now()}_${Math.random()}`
       }).displayName;
       
       // Auto-resolve equipment for the generated character

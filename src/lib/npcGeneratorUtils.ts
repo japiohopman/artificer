@@ -358,6 +358,13 @@ export const BACKGROUND_DATA: Record<string, any> = {
   }
 };
 
+let consumerSeedCounter = 0;
+
+export function createConsumerSeed(prefix: string = 'npc_action'): string {
+  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
+  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
+}
+
 export function generateNPC(partial: any): any {
   const className = partial.class || randomFromList(DND_CLASSES);
   const race = partial.race || randomFromList(DND_RACES);
@@ -505,7 +512,7 @@ export function generateNPC(partial: any): any {
         background,
         class: className,
         alignment,
-        seed: Date.now()
+        seed: partial.seed || createConsumerSeed('quick_randomize')
       }).displayName;
 
   return {
