@@ -1,5 +1,6 @@
 
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../types/inventory';
+import { generateName } from './naming';
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -357,6 +358,13 @@ export const BACKGROUND_DATA: Record<string, any> = {
   }
 };
 
+let consumerSeedCounter = 0;
+
+export function createConsumerSeed(prefix: string = 'npc_action'): string {
+  consumerSeedCounter = (consumerSeedCounter + 1) % 1000000;
+  return `${prefix}_${Date.now()}_${consumerSeedCounter}`;
+}
+
 export function generateNPC(partial: any): any {
   const className = partial.class || randomFromList(DND_CLASSES);
   const race = partial.race || randomFromList(DND_RACES);
@@ -496,13 +504,21 @@ export function generateNPC(partial: any): any {
     });
   }
 
-  const npcIdPlaceholder = partial.id || `npc-${Date.now()}`;
-  // Removed duplicate npcId declaration below
+  const canonicalName = (partial.name && partial.name.trim().length > 0)
+    ? partial.name
+    : generateName({
+        species: race,
+        gender: gender.toLowerCase(),
+        background,
+        class: className,
+        alignment,
+        seed: partial.seed || createConsumerSeed('quick_randomize')
+      }).displayName;
 
   return {
     id: npcId,
     saveVersion: 2,
-    name: partial.name || `NPC ${Math.floor(Math.random() * 1000)}`,
+    name: canonicalName,
     class: className,
     race,
     gender,
