@@ -25,7 +25,6 @@ import { IdentityStep } from './CharacterCreator/IdentityStep';
 import { ReviewStep } from './CharacterCreator/ReviewStep';
 import { SlotStep } from './CharacterCreator/SlotStep';
 import { BackstoryStep } from './CharacterCreator/BackstoryStep';
-import { CreatorRightPanel } from './CharacterCreator/CreatorRightPanel';
 import { ValidationOverlay, MissingStepItem } from './CharacterCreator/ValidationOverlay';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';
@@ -522,19 +521,11 @@ export const CharacterCreator: React.FC = () => {
         reason: 'No save slot selected'
       });
     }
-    if (!newChar.gender) {
-      missing.push({
-        stepId: 'identity',
-        label: 'Manifested Polarity',
-        icon: 'info',
-        reason: 'Gender selection is missing'
-      });
-    }
     if (!newChar.name || !newChar.name.trim()) {
       missing.push({
-        stepId: 'backstory',
-        label: 'Soul Moniker',
-        icon: 'book',
+        stepId: 'identity',
+        label: 'Character Identity',
+        icon: 'info',
         reason: 'Character name is missing'
       });
     }
@@ -578,7 +569,7 @@ export const CharacterCreator: React.FC = () => {
     switch(currentStep) {
         case 'welcome': return true;
         case 'slot': return !!selectedSlot;
-        case 'identity': return !!newChar.gender;
+        case 'identity': return !!newChar.name && newChar.name.trim().length > 0;
         case 'species': return !!newChar.race;
         case 'class': return !!newChar.class;
         case 'choices': return true;
@@ -774,10 +765,10 @@ export const CharacterCreator: React.FC = () => {
   if (!isCharacterCreatorOpen) return null;
 
   return (
-    <div id="character-creator-portal" className="fixed inset-0 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-0">
+    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
-      <div id="creator-main-modal" className="w-full h-full bg-parchment-100 border-none shadow-none overflow-hidden flex flex-col relative rounded-none items-stretch">
+      <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch">
         {/* Header */}
         <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
           <div className="flex items-center gap-2">
@@ -872,16 +863,6 @@ export const CharacterCreator: React.FC = () => {
                </AnimatePresence>
              )}
           </div>
-
-          {/* Persistent Character Frame Right Panel (Appears starting at 'species' step) */}
-          {(() => {
-            const stepIndex = STEPS.findIndex(s => s.id === currentStep);
-            const speciesIndex = STEPS.findIndex(s => s.id === 'species');
-            if (speciesIndex !== -1 && stepIndex >= speciesIndex) {
-              return <CreatorRightPanel newChar={newChar} currentStep={currentStep} />;
-            }
-            return null;
-          })()}
         </div>
 
         <ValidationOverlay
@@ -902,9 +883,15 @@ export const CharacterCreator: React.FC = () => {
            </button>
 
            <div className="flex flex-col items-center">
-              <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-tighter mb-0.5">Character Creation Wizard</span>
+              <span className="text-[8px] font-black text-dragon-red/40 uppercase tracking-tighter mb-0.5">Character_Identity</span>
               <div className="flex items-center gap-2 text-[11px] font-black text-dragon-darkRed uppercase tracking-wider font-bodoni">
-                 <span>Step {STEPS.findIndex(s => s.id === currentStep) + 1} of {STEPS.length}</span>
+                 <span>{newChar.race?.replace(/-/g, ' ') || 'NO_ANCESTRY'}</span>
+                 <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
+                 <span>{newChar.class || 'NO_CLASS'}</span>
+                 <div className="w-1.5 h-1.5 rounded-full bg-dragon-gold/40" />
+                 <span className="px-2 py-0.5 bg-dragon-gold/20 border border-dragon-gold/30 rounded text-[9px] font-black text-dragon-darkRed">
+                   Ruleset: {newChar.ruleset === '2024' ? 'D&D 5.5e (2024)' : 'D&D 5e (2014)'}
+                 </span>
               </div>
            </div>
 
@@ -962,16 +949,7 @@ const StepContent: React.FC<{
             selected={newChar.race}
             selectedSubrace={newChar.subrace}
             onSelect={(raceVal, subraceVal) => {
-                const defaultSkin = raceVal.toLowerCase() === 'tiefling' ? '#8B0000' : (newChar.appearance?.skinColor || '#ffdbac');
-                setNewChar({
-                  ...newChar,
-                  race: raceVal,
-                  subrace: subraceVal,
-                  appearance: {
-                    ...newChar.appearance!,
-                    skinColor: defaultSkin
-                  }
-                });
+                setNewChar({...newChar, race: raceVal, subrace: subraceVal});
             }}
             category="species"
         />;

@@ -25,7 +25,7 @@ const STAT_ICONS: Record<string, any> = {
   cha: 'cha'
 };
 
-export const ALIGNMENT_ATMOSPHERE_MAP: Record<string, string> = {
+const ALIGNMENT_ATMOSPHERE_MAP: Record<string, string> = {
   'lawful_good': '/assets/images/enemy_backgrounds/church.webp',
   'lawful-good': '/assets/images/enemy_backgrounds/church.webp',
   'lawful good': '/assets/images/enemy_backgrounds/church.webp',
