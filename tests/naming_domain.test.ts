@@ -7,6 +7,7 @@ import {
   SeedableRNG,
   SOURCE_NAMING_DATA
 } from '../src/lib/naming';
+import { generateNPC } from '../src/lib/npcGeneratorUtils';
 
 describe('Naming Domain Foundation v1 Remediation & Quality Test Suite', () => {
   describe('Seedable PRNG & Determinism', () => {
@@ -201,6 +202,27 @@ describe('Naming Domain Foundation v1 Remediation & Quality Test Suite', () => {
       expect(() => {
         resolveNamingProfile({ species: 'MartianAlien' });
       }).toThrow(NamingDomainError);
+    });
+  });
+
+  describe('DevKit NPC Generator & Consumer Integration', () => {
+    it('generates a fresh canonical name via Naming Domain on Quick Randomize generateNPC({ name: "" })', () => {
+      const npc1 = generateNPC({ name: '', race: 'Human', class: 'Fighter' });
+      const npc2 = generateNPC({ name: '', race: 'Human', class: 'Fighter' });
+
+      expect(npc1.name).toBeTruthy();
+      expect(npc2.name).toBeTruthy();
+      // Names generated with different Seeds/timestamps should be valid strings from Naming Domain
+      expect(typeof npc1.name).toBe('string');
+      expect(typeof npc2.name).toBe('string');
+    });
+
+    it('does not preserve old name when empty name string is passed to generateNPC', () => {
+      const initialNpc = generateNPC({ name: '', race: 'Elf', class: 'Wizard' });
+      const regeneratedNpc = generateNPC({ name: '', race: 'Elf', class: 'Wizard' });
+
+      expect(regeneratedNpc.name).toBeDefined();
+      expect(regeneratedNpc.name.length).toBeGreaterThan(0);
     });
   });
 

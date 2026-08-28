@@ -174,7 +174,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
 
   const handleQuickRandomize = () => {
     const npc = generateNPC({
-        name: npcData.name,
+        name: '', // Pass empty string so Quick Randomize generates a fresh procedural name via Naming Domain
         class: npcData.class,
         race: npcData.race,
         alignment: npcData.alignment,
