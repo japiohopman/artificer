@@ -6,6 +6,7 @@ import {
   getModifier,
   calculateInitiative, generateNPC
 } from '../../lib/npcGeneratorUtils';
+import { generateName } from '../../lib/naming';
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground, StartingEquipmentOption } from '../../services/atlasService';
 import { generateNPCData, generateNPCImages, NPCProfile } from '../../services/ai/npcService';
 import { commitFile, playSuccessSound, playFailSound, playClickSound, normalizeImageUrl } from '../../services/storageService';
@@ -195,6 +196,17 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
         alignmentList: DND_ALIGNMENTS as string[],
         statGenMethod: statGenMethod
       });
+
+      // Authoritative Naming Domain resolution for AI generated NPC
+      // Always generate canonical procedural name via Naming Domain for AI flow unless manually edited name was provided prior to click
+      const canonicalName = generateName({
+        species: data.race,
+        gender: data.gender?.toLowerCase() || 'unspecified',
+        background: data.background,
+        class: data.class,
+        alignment: data.alignment,
+        seed: Date.now()
+      }).displayName;
       
       // Auto-resolve equipment for the generated character
       const atlasCls = await atlasService.loadClass(data.class);
@@ -213,6 +225,7 @@ export const NPCGenerator: React.FC<NPCGeneratorProps> = ({ onSave }) => {
 
       setNpcData({
         ...data,
+        name: canonicalName,
         level: data.level ?? 0,
         inventory,
         backpack,

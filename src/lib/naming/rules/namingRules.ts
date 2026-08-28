@@ -286,8 +286,8 @@ export const BUILTIN_NAMING_RULES: NamingRule[] = [
     description: 'Half-elves taking human or elven names based on environment or upbringing.',
     compositionPattern: '{given} {family}',
     componentRules: [
-      { type: 'given', required: true, poolSource: 'halfElf.elvenGiven' },
-      { type: 'family', required: true, poolSource: 'halfElf.elvenFamily' }
+      { type: 'given', required: true, poolSource: 'halfElf.delegatedGiven' },
+      { type: 'family', required: true, poolSource: 'halfElf.delegatedFamily' }
     ],
     matchesContext: (ctx) => normalizeSpeciesKey(ctx.species) === 'halfElf',
     scoreMatch: () => 8 // Lower score than specific elven/human match
@@ -509,6 +509,28 @@ export function resolveDataPool(poolSource: string, ctx: NamingContext): readonl
     const cul = resolveHumanCulture(ctx.culture);
     const pool = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
     return pool.surnames!;
+  }
+  if (poolSource === 'halfElf.delegatedGiven') {
+    const elvenPool = resolveGenderPool(
+      SOURCE_NAMING_DATA.elf.maleGiven,
+      SOURCE_NAMING_DATA.elf.femaleGiven,
+      undefined,
+      genderStr
+    );
+    const cul = resolveHumanCulture(ctx.culture);
+    const humanObj = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
+    const humanPool = resolveGenderPool(
+      humanObj.maleGiven,
+      humanObj.femaleGiven,
+      undefined,
+      genderStr
+    );
+    return [...elvenPool, ...humanPool];
+  }
+  if (poolSource === 'halfElf.delegatedFamily') {
+    const cul = resolveHumanCulture(ctx.culture);
+    const humanObj = SOURCE_NAMING_DATA.human[cul.key] || SOURCE_NAMING_DATA.human.neutral;
+    return [...SOURCE_NAMING_DATA.elf.familyNames!, ...humanObj.surnames!];
   }
 
   // Human cultural pools

@@ -40,7 +40,6 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
         species: newChar.race || 'human',
         subrace: newChar.subrace,
         gender: newChar.gender?.toLowerCase() || 'male',
-        culture: newChar.background,
         background: newChar.background,
         class: newChar.class,
         alignment: newChar.alignment,

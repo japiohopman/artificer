@@ -1,5 +1,6 @@
 
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../types/inventory';
+import { generateName } from './naming';
 
 const SLOT_MAP: Record<string, string> = {
   'chest': 'chest',
@@ -496,13 +497,21 @@ export function generateNPC(partial: any): any {
     });
   }
 
-  const npcIdPlaceholder = partial.id || `npc-${Date.now()}`;
-  // Removed duplicate npcId declaration below
+  const canonicalName = (partial.name && partial.name.trim().length > 0)
+    ? partial.name
+    : generateName({
+        species: race,
+        gender: gender.toLowerCase(),
+        background,
+        class: className,
+        alignment,
+        seed: Date.now()
+      }).displayName;
 
   return {
     id: npcId,
     saveVersion: 2,
-    name: partial.name || `NPC ${Math.floor(Math.random() * 1000)}`,
+    name: canonicalName,
     class: className,
     race,
     gender,
