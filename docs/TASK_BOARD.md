@@ -177,6 +177,7 @@ These are historical milestones and should not be re-opened as new implementatio
 - [x] Core asset validation/indexing and canonical Atlas paths.
 - [x] Inventory V2 migration / save schema v2.
 - [x] DevKit organizational restructuring.
+- [x] Canonical SVG Icon System Migration (`public/assets/icons/svg/`, `GameIcon`, zero third-party/legacy icons).
 
 ## Task-board rules
 

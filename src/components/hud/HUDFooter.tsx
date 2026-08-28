@@ -3,7 +3,7 @@ import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { calculateCharacterWeight } from '../../lib/inventoryUtils';
 import { calculateDerivedStats } from '../../lib/character';
-import { Weight, Coins } from 'lucide-react';
+import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 
 export const HUDFooter: React.FC = () => {
@@ -33,11 +33,11 @@ export const HUDFooter: React.FC = () => {
   }
 
   const coinsMeta = [
-    { key: 'pp', label: 'Platinum', color: 'text-stone-500', img: '/assets/icons/currency/platinum.webp' },
-    { key: 'gp', label: 'Gold', color: 'text-amber-500', img: '/assets/icons/currency/gold.webp' },
-    { key: 'ep', label: 'Electrum', color: 'text-emerald-500', img: '/assets/icons/currency/electrum.webp' },
-    { key: 'sp', label: 'Silver', color: 'text-stone-400', img: '/assets/icons/currency/silver.webp' },
-    { key: 'cp', label: 'Copper', color: 'text-amber-800', img: '/assets/icons/currency/copper.webp' },
+    { key: 'pp', label: 'Platinum', color: 'text-stone-500', icon: 'platinum_coin' },
+    { key: 'gp', label: 'Gold', color: 'text-amber-500', icon: 'gold_coin' },
+    { key: 'ep', label: 'Electrum', color: 'text-emerald-500', icon: 'electrum_coin' },
+    { key: 'sp', label: 'Silver', color: 'text-stone-400', icon: 'silver_coin' },
+    { key: 'cp', label: 'Copper', color: 'text-amber-800', icon: 'copper_coin' },
   ] as const;
 
   return (
@@ -59,13 +59,13 @@ export const HUDFooter: React.FC = () => {
           isWorldPanelOpen ? "w-80" : "w-auto"
         )}
       >
-        <Coins size={13} className="text-amber-600 shrink-0" />
+        <GameIcon name="coins" size={14} className="text-amber-600 shrink-0" />
         <div className="flex items-center gap-3">
-          {coinsMeta.map(({ key, label, img }) => {
+          {coinsMeta.map(({ key, label, icon }) => {
             const val = money[key] || 0;
             return (
               <div key={key} className="flex items-center gap-1.5" title={`${label}: ${val}`}>
-                <img src={img} alt={label} className="w-4 h-4 object-contain shadow-sm shrink-0" />
+                <GameIcon name={icon} size={14} className="shrink-0" />
                 <span className="text-[10px] font-black tracking-tight text-stone-700">{val}</span>
               </div>
             );
@@ -87,7 +87,7 @@ export const HUDFooter: React.FC = () => {
       >
         <div className="flex flex-col items-end gap-0.5">
           <div className="flex items-center gap-1.5">
-            <Weight size={11} className="text-stone-400" />
+            <GameIcon name="loot" size={12} className="text-stone-400" />
             <span className="text-[9px] font-bold text-stone-400 uppercase tracking-wide">Load:</span>
             <span className={cn("text-[10px] font-black", textWeightClass)}>
               {totalWeight.toFixed(1)} / {maxWeight} lbs
