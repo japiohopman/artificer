@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useUIStore } from '../../../store/useUIStore';
 import { useWorldStore, CategoryIcons } from '../../../store/useWorldStore';
-import { WORLD_ATLAS_ICONS } from '../../../assets/icons';
+import { WORLD_ATLAS_ICONS } from '../../../../public/assets/icons';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { Entrance } from './Entrance';

@@ -8,7 +8,7 @@ import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { getRegionAt } from '../../lib/mapUtils';
-import { WORLD_ATLAS_ICONS } from '../../assets/icons';
+import { WORLD_ATLAS_ICONS } from '../../../public/assets/icons';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
 import { MapNavigation } from './game/MapNavigation';
