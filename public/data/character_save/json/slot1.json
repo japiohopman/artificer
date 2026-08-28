@@ -5,7 +5,7 @@
   "saveVersion": 2,
   "gender": "Male",
   "stats": {
-    "str": 15,
+    "str": 10,
     "dex": 10,
     "con": 10,
     "int": 10,
@@ -13,98 +13,70 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
-    "light armor",
-    "medium armor",
-    "shields",
-    "clubs",
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
     "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
     "darts",
     "slings",
-    "scimitars",
-    "herbalism kit",
+    "quarterstaffs",
+    "crossbows, light",
     "saving throw: int",
     "saving throw: wis",
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "gnome cunning",
-      "index": "gnome_cunning",
-      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            "Intelligence Saving Throws against magic",
-            "Wisdom Saving Throws against magic",
-            "Charisma Saving Throws against magic"
-          ]
-        }
-      }
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "spellcasting_druid",
+      "index": "spellcasting_wizard",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "spellcasting: druid",
+      "name": "spellcasting: wizard",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will."
+        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
       ],
-      "reference": "public/assets/atlas/class/json/druid/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_druid.json",
+      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
+      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
       "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_druid.webp",
+      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {
         "spellcasting_ability": {
-          "index": "wisdom",
-          "name": "wisdom",
-          "url": "/assets/atlas/ability_scores/json/wis.json"
+          "index": "intelligence",
+          "name": "intelligence",
+          "url": "/assets/atlas/ability_scores/json/int.json"
         }
       },
       "source": "Class"
     },
     {
-      "index": "druidic",
+      "index": "arcane_recovery",
       "class": {
-        "index": "druid",
-        "name": "druid",
-        "url": "/assets/atlas/class/json/druid.json"
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/wizard.json"
       },
-      "name": "druidic",
+      "name": "arcane recovery",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
+        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
       ],
-      "url": "/assets/atlas/features/json/druidic.json",
-      "updated_at": "2026-07-13T06:30:11.853Z",
-      "image": "/assets/atlas/features/images/druidic.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/arcane_recovery.json",
+      "updated_at": "2026-07-13T06:30:11.957Z",
+      "image": "/assets/atlas/features/images/arcane_recovery.webp",
+      "feature_specific": {
+        "usage": {
+          "times": 1,
+          "type": "long_rest"
+        }
+      },
       "source": "Class"
     }
   ],
@@ -130,61 +102,40 @@
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_g8rgynhdv": {
-      "id": "leather_armor_g8rgynhdv",
-      "template": "leather_armor",
+    "spellbook_slkzafah2": {
+      "id": "spellbook_slkzafah2",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1787633309862,
-      "kind": "armor"
+      "addedAt": 1787899118782,
+      "kind": "focus"
     },
-    "explorers_pack_zwbjoffnj": {
-      "id": "explorers_pack_zwbjoffnj",
-      "template": "explorers_pack",
+    "abacus_o3bpvears": {
+      "id": "abacus_o3bpvears",
+      "template": "abacus",
       "quantity": 1,
-      "addedAt": 1787633309862,
-      "kind": "container"
-    },
-    "sickle_k8po8mx55": {
-      "id": "sickle_k8po8mx55",
-      "template": "sickle",
-      "quantity": 1,
-      "addedAt": 1787633309862,
-      "kind": "weapon"
-    },
-    "gold_5lbp2lyeo": {
-      "id": "gold_5lbp2lyeo",
-      "template": "gold",
-      "quantity": 23,
-      "addedAt": 1787633309862,
+      "addedAt": 1787899118782,
       "kind": "tradegood"
     },
-    "gold_1wj4y682m": {
-      "id": "gold_1wj4y682m",
-      "template": "gold",
+    "book_e8183hn8r": {
+      "id": "book_e8183hn8r",
+      "template": "book",
       "quantity": 1,
-      "addedAt": 1787633413759,
+      "addedAt": 1787899118782,
+      "kind": "book"
+    },
+    "ink_pen_3d7urv9dc": {
+      "id": "ink_pen_3d7urv9dc",
+      "template": "ink_pen",
+      "quantity": 1,
+      "addedAt": 1787899118782,
       "kind": "tradegood"
     },
-    "yew-wand_aq226wzts": {
-      "id": "yew-wand_aq226wzts",
-      "template": "yew-wand",
-      "quantity": 1,
-      "addedAt": 1787633420147,
-      "kind": "equipment"
-    },
-    "mace_bx1zdi1d4": {
-      "id": "mace_bx1zdi1d4",
-      "template": "mace",
-      "quantity": 1,
-      "addedAt": 1787633430761,
-      "kind": "weapon"
-    },
-    "shortbow_guamy76iv": {
-      "id": "shortbow_guamy76iv",
-      "template": "shortbow",
-      "quantity": 1,
-      "addedAt": 1787633439067,
-      "kind": "weapon"
+    "gold_f3mffd827": {
+      "id": "gold_f3mffd827",
+      "template": "gold",
+      "quantity": 8,
+      "addedAt": 1787899118782,
+      "kind": "currency"
     }
   },
   "containers": {
@@ -195,43 +146,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_zwbjoffnj"
+          "itemId": "spellbook_slkzafah2"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_5lbp2lyeo"
+          "itemId": "abacus_o3bpvears"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_1wj4y682m"
+          "itemId": "book_e8183hn8r"
         },
         {
           "id": "bag_3",
-          "itemId": "gold_yufrmlx0w"
+          "itemId": "ink_pen_3d7urv9dc"
         },
         {
           "id": "bag_4",
-          "itemId": "yew-wand_aq226wzts"
+          "itemId": "gold_f3mffd827"
         },
         {
           "id": "bag_5",
-          "itemId": "yew-wand_z5csxiy7l"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "mace_bx1zdi1d4"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "mace_zi2grg6wf"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "shortbow_guamy76iv"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "shortbow_lpxq2u67o"
+          "itemId": null
         },
         {
           "id": "bag_10",
@@ -297,7 +248,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "sickle_k8po8mx55"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -313,7 +264,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_g8rgynhdv"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -415,29 +366,136 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_gjdgh1s4q",
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
+      "id": "calligraphers_supplies_p7827830r",
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
+      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
     },
     {
-      "id": "pot_iron_18dztu2f4",
-      "index": "pot_iron",
-      "name": "Pot Iron",
+      "id": "abacus_buno2pbz2",
+      "index": "abacus",
+      "name": "Abacus",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "desc": [
+        "The abacus, also called a counting frame, is a calculating tool."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "updated_at": "2026-07-12T19:00:14.466Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "book_g5hv91fb8",
+      "index": "book",
+      "name": "Book",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "image_url": "public/assets/atlas/equipment/images/book.webp",
+      "imageUrl": "/assets/atlas/equipment/images/book.webp",
+      "desc": [
+        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
+      ],
+      "special": [],
+      "kind": "book",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/book.webp",
+      "updated_at": "2026-07-12T19:00:14.600Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 10,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "ink_1_ounce_bottle_urrhn0nqh",
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp"
     },
     {
-      "id": "clothes_travelers_jaxao5wh7",
+      "id": "ink_pen_84vkixfoh",
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
+      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
+      "desc": [
+        "A deviced used in combination with ink to write or draw on a sheet of paper."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 2,
+        "unit": "cp"
+      },
+      "image": "/assets/atlas/equipment/images/ink-pen.webp",
+      "updated_at": "2026-07-12T19:00:13.712Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "parchment_one_sheet_8drghcfl0",
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "quantity": 10,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
+      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
+    },
+    {
+      "id": "clothes_travelers_fjs8ceajq",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -448,10 +506,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_z5q6gvuml",
+      "id": "gold_fcggoa8jj",
       "index": "gold",
       "name": "Gold",
-      "quantity": 23,
+      "quantity": 8,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -462,7 +520,7 @@
         "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
       ],
       "special": [],
-      "kind": "tradegood",
+      "kind": "currency",
       "cost": {
         "quantity": 50,
         "unit": "gp"
@@ -480,74 +538,10 @@
       "rulesetContext": "2014"
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "sickle_kap7315l3",
-      "index": "sickle",
-      "name": "Sickle",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
-      "desc": [
-        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/sickle.webp",
-      "updated_at": "2026-07-12T19:00:20.427Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 20,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-      "category": "Melee Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "/assets/atlas/damage_types/json/slashing.json"
-        }
-      },
-      "range": {
-        "normal": 5,
-        "long": null
-      },
-      "rulesetContext": "2014",
-      "slot": "main-hand",
-      "main_hand_slot": "Sickle"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
-    "common",
-    "gnomish"
+    "common"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -557,21 +551,21 @@
     }
   },
   "choices": {},
-  "name": "red",
-  "race": "gnome",
-  "class": "druid",
-  "spellcastingAbility": "wis",
-  "background": "farmer",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "Tristan Sterling",
+  "race": "human",
+  "class": "wizard",
+  "spellcastingAbility": "int",
+  "background": "scribe",
+  "alignment": "true_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
   "id": "slot1",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 3,
+  "maxHp": 3,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-25T04:51:10.050Z"
+  "lastSaved": "2026-08-28T06:39:04.263Z"
 }
