@@ -1,20 +1,17 @@
 import React from 'react';
-import { ALL_ICONS } from '../public/assets/icons';
+import { ALL_ICONS, IconDefinition } from './lib/iconRegistry.generated';
 
 /**
  * Game Icons Registry
- * Categorized icons are dynamically loaded from the new solo-SVG architecture
- * in public/assets/icons/svg/.
- * 
- * NOTE: Prefer importing specific icons/categories directly in components
- * to support tree-shaking and reduce bundle size.
+ * SVG metadata & public URLs are generated at build time into src/lib/iconRegistry.generated.ts
+ * while physical SVG artwork files remain strictly canonical in public/assets/icons/svg/.
  */
 
 export const GAME_ICONS = ALL_ICONS;
 
 export type GameIconName = keyof typeof GAME_ICONS;
 
-interface GameIconProps extends React.SVGAttributes<SVGElement> {
+interface GameIconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   name?: string;
   path?: string;
   size?: number;
@@ -25,54 +22,52 @@ interface GameIconProps extends React.SVGAttributes<SVGElement> {
   title?: string;
 }
 
-export const GameIcon: React.FC<GameIconProps> = ({ name, path: directPath, className, size, width, height, color = "currentColor", fallbackName, title, ...props }) => {
-  let pathEntry = directPath || (name ? GAME_ICONS[name as GameIconName] : undefined);
-  
-  if (!pathEntry && fallbackName) {
-    pathEntry = GAME_ICONS[fallbackName as GameIconName];
+export const GameIcon: React.FC<GameIconProps> = ({
+  name,
+  path: directPath,
+  className,
+  size,
+  width,
+  height,
+  color = "currentColor",
+  fallbackName,
+  title,
+  style,
+  ...props
+}) => {
+  let iconEntry: IconDefinition | string | undefined = directPath || (name ? GAME_ICONS[name as GameIconName] : undefined);
+
+  if (!iconEntry && fallbackName) {
+    iconEntry = GAME_ICONS[fallbackName as GameIconName];
   }
 
-  if (!pathEntry) {
+  if (!iconEntry) {
     return null;
   }
 
   const w = width || size || 24;
   const h = height || size || 24;
 
-  const entry = pathEntry as any;
-
-  // Support for the new solo SVG raw HTML content
-  if (typeof entry === 'object' && entry && entry.rawHtml) {
-    return (
-      <svg
-        viewBox={entry.viewBox || "0 0 512 512"}
-        width={w}
-        height={h}
-        fill={color}
-        className={className}
-        xmlns="http://www.w3.org/2000/svg"
-        dangerouslySetInnerHTML={{ __html: (title ? `<title>${title}</title>` : '') + entry.rawHtml }}
-        {...props}
-      />
-    );
-  }
-
-  // Backward compatibility with legacy string path formats
-  const path = typeof entry === 'string' ? entry : entry.path;
+  const assetUrl = typeof iconEntry === 'string' ? iconEntry : iconEntry.path;
+  const label = typeof iconEntry === 'object' ? iconEntry.label : (name || 'icon');
 
   return (
-    <svg 
-      viewBox="0 0 512 512" 
-      width={w} 
-      height={h} 
-      fill={color} 
+    <img
+      src={assetUrl}
+      alt={title || label}
+      title={title}
+      width={w}
+      height={h}
       className={className}
-      xmlns="http://www.w3.org/2000/svg"
+      style={{
+        width: `${w}px`,
+        height: `${h}px`,
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        ...style,
+      }}
       {...props}
-    >
-      {title && <title>{title}</title>}
-      <path d={path} />
-    </svg>
+    />
   );
 };
 

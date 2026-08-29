@@ -5,18 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
+    "build": "npm run generate:icon-registry && cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit",
+    "lint": "npm run generate:icon-registry && tsc --noEmit",
     "validate:assets": "node tools/validateAssets.cjs",
     "generate:tiles": "python tools/generate_tiles.py",
     "generate:faerun-tiles": "python tools/generate_tiles.py --source \"public/assets/atlas/world/maps/Sword_Coast_Map _faerun.png\" --output public/tiles/faerun --metadata",
+    "generate:icon-registry": "node tools/generateIconRegistry.cjs",
     "generate:equipment-index": "node tools/generateEquipmentIndex.cjs",
     "generate:spell-index": "node tools/generateSpellIndex.cjs",
     "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
     "normalize:assets": "node tools/normalizeAllAssets.cjs",
-    "check:assets": "npm run normalize:assets && npm run validate:assets",
+    "check:assets": "npm run generate:icon-registry && npm run normalize:assets && npm run validate:assets",
     "test": "npm run lint && npm run check:assets && npx playwright test tests/"
   },
   "dependencies": {
