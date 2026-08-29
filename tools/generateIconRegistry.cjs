@@ -209,29 +209,29 @@ function buildExplorerTree(svgFiles) {
 }
 
 function main() {
-  console.log('Generating source-side icon manifest (URLs + metadata only)...');
+  console.log('Generating optimized source-side icon manifest (URLs + metadata only)...');
   const svgFiles = scanSvgFiles(PUBLIC_ICONS_DIR);
   console.log(`Found ${svgFiles.length} SVG files.`);
 
   const parsedSvgs = svgFiles.map(parseSvgFile);
 
   const allIconsMap = {};
-  const categoriesMap = {};
+  const categoryIdsMap = {};
 
   parsedSvgs.forEach(item => {
     allIconsMap[item.id] = item.definition;
-    if (!categoriesMap[item.categoryId]) {
-      categoriesMap[item.categoryId] = {};
+    if (!categoryIdsMap[item.categoryId]) {
+      categoryIdsMap[item.categoryId] = [];
     }
-    categoriesMap[item.categoryId][item.id] = item.definition;
+    categoryIdsMap[item.categoryId].push(item.id);
   });
 
   const categoryList = CATEGORY_META.map(cat => ({
     ...cat,
-    icons: categoriesMap[cat.id] || {}
+    iconIds: categoryIdsMap[cat.id] || []
   }));
 
-  Object.keys(categoriesMap).forEach(catId => {
+  Object.keys(categoryIdsMap).forEach(catId => {
     if (!categoryList.find(c => c.id === catId)) {
       const catName = catId
         .replace(/[-_]/g, ' ')
@@ -242,7 +242,7 @@ function main() {
         id: catId,
         name: catName,
         file: `svg/${catId}/`,
-        icons: categoriesMap[catId],
+        iconIds: categoryIdsMap[catId],
         description: `Custom SVG icons under the ${catName} module.`
       });
     }
@@ -295,11 +295,32 @@ export interface FolderNode {
   children: Array<FolderNode | FileNode>;
 }
 
+// Canonical physical manifest of all icons (single object allocation per icon)
 export const ALL_ICONS: Record<string, IconDefinition> = ${JSON.stringify(allIconsMap, null, 2)};
 
-export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = ${JSON.stringify(categoriesMap, null, 2)};
+const CATEGORY_MAPPINGS: Record<string, string[]> = ${JSON.stringify(categoryIdsMap, null, 2)};
 
-export const ICON_CATEGORIES: IconCategory[] = ${JSON.stringify(categoryList, null, 2)};
+// Derived category map referencing ALL_ICONS entries directly
+export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {};
+Object.entries(CATEGORY_MAPPINGS).forEach(([catId, iconIds]) => {
+  SVG_CATEGORIES[catId] = {};
+  iconIds.forEach(id => {
+    if (ALL_ICONS[id]) {
+      SVG_CATEGORIES[catId][id] = ALL_ICONS[id];
+    }
+  });
+});
+
+const RAW_CATEGORY_META = ${JSON.stringify(categoryList, null, 2)};
+
+export const ICON_CATEGORIES: IconCategory[] = RAW_CATEGORY_META.map(cat => ({
+  id: cat.id,
+  name: cat.name,
+  file: cat.file,
+  description: cat.description,
+  isComplete: cat.isComplete,
+  icons: SVG_CATEGORIES[cat.id] || {}
+}));
 
 export const TAROT_ICONS = SVG_CATEGORIES['tarot'] || {};
 export const WORLD_ATLAS_ICONS = SVG_CATEGORIES['world_atlas'] || {};
@@ -332,7 +353,7 @@ export const EXPLORER_TREE: FolderNode = ${JSON.stringify(explorerTree, null, 2)
 `;
 
   fs.writeFileSync(OUTPUT_FILE, fileContent, 'utf8');
-  console.log(`Successfully generated icon manifest at ${OUTPUT_FILE}`);
+  console.log(`Successfully generated optimized icon manifest at ${OUTPUT_FILE}`);
 }
 
 main();

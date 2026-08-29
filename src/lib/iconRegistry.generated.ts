@@ -43,6 +43,7 @@ export interface FolderNode {
   children: Array<FolderNode | FileNode>;
 }
 
+// Canonical physical manifest of all icons (single object allocation per icon)
 export const ALL_ICONS: Record<string, IconDefinition> = {
   "cha": {
     "name": "cha",
@@ -3949,4728 +3950,672 @@ export const ALL_ICONS: Record<string, IconDefinition> = {
   }
 };
 
-export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {
-  "ability_score": {
-    "cha": {
-      "name": "cha",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/cha.svg",
-      "label": "Cha",
-      "description": "A symbolic icon representing Cha.",
-      "viewBox": "0 0 512 512"
-    },
-    "charisma": {
-      "name": "charisma",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/charisma.svg",
-      "label": "Charisma",
-      "description": "A symbolic icon representing Charisma.",
-      "viewBox": "0 0 100 100"
-    },
-    "constitut": {
-      "name": "constitut",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/constitut.svg",
-      "label": "Constitut",
-      "description": "A symbolic icon representing Constitut.",
-      "viewBox": "0 0 512 512"
-    },
-    "constitution": {
-      "name": "constitution",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/constitution.svg",
-      "label": "Constitution",
-      "description": "A symbolic icon representing Constitution.",
-      "viewBox": "4 4 93 93"
-    },
-    "dex": {
-      "name": "dex",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/dex.svg",
-      "label": "Dex",
-      "description": "A symbolic icon representing Dex.",
-      "viewBox": "0 0 512 512"
-    },
-    "dexterity": {
-      "name": "dexterity",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/dexterity.svg",
-      "label": "Dexterity",
-      "description": "A symbolic icon representing Dexterity.",
-      "viewBox": "159 133 712 712"
-    },
-    "int": {
-      "name": "int",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/int.svg",
-      "label": "Int",
-      "description": "A symbolic icon representing Int.",
-      "viewBox": "0 0 512 512"
-    },
-    "intelligence": {
-      "name": "intelligence",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/intelligence.svg",
-      "label": "Intelligence",
-      "description": "A symbolic icon representing Intelligence.",
-      "viewBox": "5 5 91 91"
-    },
-    "str": {
-      "name": "str",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/str.svg",
-      "label": "Str",
-      "description": "A symbolic icon representing Str.",
-      "viewBox": "0 0 512 512"
-    },
-    "strength": {
-      "name": "strength",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/strength.svg",
-      "label": "Strength",
-      "description": "A symbolic icon representing Strength.",
-      "viewBox": "4 4 92 92"
-    },
-    "wis": {
-      "name": "wis",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/wis.svg",
-      "label": "Wis",
-      "description": "A symbolic icon representing Wis.",
-      "viewBox": "0 0 512 512"
-    },
-    "wisdom": {
-      "name": "wisdom",
-      "category": "ability_score",
-      "path": "/assets/icons/svg/abilities/wisdom.svg",
-      "label": "Wisdom",
-      "description": "A symbolic icon representing Wisdom.",
-      "viewBox": "0 2 1e3 1e3"
-    }
-  },
-  "svg": {
-    "ability-score-improvement": {
-      "name": "ability-score-improvement",
-      "category": "svg",
-      "path": "/assets/icons/svg/ability-score-improvement.svg",
-      "label": "Ability Score Improvement",
-      "description": "A symbolic icon representing Ability Score Improvement.",
-      "viewBox": "0 0 512 512"
-    },
-    "backpack": {
-      "name": "backpack",
-      "category": "svg",
-      "path": "/assets/icons/svg/backpack.svg",
-      "label": "Backpack",
-      "description": "A symbolic icon representing Backpack.",
-      "viewBox": "0 0 346.58 365.81"
-    },
-    "break-concentration": {
-      "name": "break-concentration",
-      "category": "svg",
-      "path": "/assets/icons/svg/break-concentration.svg",
-      "label": "Break Concentration",
-      "description": "A symbolic icon representing Break Concentration.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "checked-shield": {
-      "name": "checked-shield",
-      "category": "svg",
-      "path": "/assets/icons/svg/checked-shield.svg",
-      "label": "Checked Shield",
-      "description": "A symbolic icon representing Checked Shield.",
-      "viewBox": "0 0 333.5 377.2"
-    },
-    "hit-points": {
-      "name": "hit-points",
-      "category": "svg",
-      "path": "/assets/icons/svg/hit-points.svg",
-      "label": "Hit Points",
-      "description": "A symbolic icon representing Hit Points.",
-      "viewBox": "0 0 512 512"
-    },
-    "ink-pot": {
-      "name": "ink-pot",
-      "category": "svg",
-      "path": "/assets/icons/svg/ink-pot.svg",
-      "label": "Ink Pot",
-      "description": "A symbolic icon representing Ink Pot.",
-      "viewBox": "2 0 44 48.583"
-    },
-    "item-choice": {
-      "name": "item-choice",
-      "category": "svg",
-      "path": "/assets/icons/svg/item-choice.svg",
-      "label": "Item Choice",
-      "description": "A symbolic icon representing Item Choice.",
-      "viewBox": "0 0 512 512"
-    },
-    "item-grant": {
-      "name": "item-grant",
-      "category": "svg",
-      "path": "/assets/icons/svg/item-grant.svg",
-      "label": "Item Grant",
-      "description": "A symbolic icon representing Item Grant.",
-      "viewBox": "0 0 512 512"
-    },
-    "monster": {
-      "name": "monster",
-      "category": "svg",
-      "path": "/assets/icons/svg/monster.svg",
-      "label": "Monster",
-      "description": "A symbolic icon representing Monster.",
-      "viewBox": "0 0 474.67 471.22"
-    },
-    "mouse-left": {
-      "name": "mouse-left",
-      "category": "svg",
-      "path": "/assets/icons/svg/mouse-left.svg",
-      "label": "Mouse Left",
-      "description": "A symbolic icon representing Mouse Left.",
-      "viewBox": "11 3 42 42"
-    },
-    "mouse-middle": {
-      "name": "mouse-middle",
-      "category": "svg",
-      "path": "/assets/icons/svg/mouse-middle.svg",
-      "label": "Mouse Middle",
-      "description": "A symbolic icon representing Mouse Middle.",
-      "viewBox": "11 3 42 42"
-    },
-    "mouse": {
-      "name": "mouse",
-      "category": "svg",
-      "path": "/assets/icons/svg/mouse.svg",
-      "label": "Mouse",
-      "description": "A symbolic icon representing Mouse.",
-      "viewBox": "3 3 58 58"
-    },
-    "multiclass": {
-      "name": "multiclass",
-      "category": "svg",
-      "path": "/assets/icons/svg/multiclass.svg",
-      "label": "Multiclass",
-      "description": "A symbolic icon representing Multiclass.",
-      "viewBox": "0 0 495.01 458.64"
-    },
-    "original-class": {
-      "name": "original-class",
-      "category": "svg",
-      "path": "/assets/icons/svg/original-class.svg",
-      "label": "Original Class",
-      "description": "A symbolic icon representing Original Class.",
-      "viewBox": "0 0 512 512"
-    },
-    "range-connector": {
-      "name": "range-connector",
-      "category": "svg",
-      "path": "/assets/icons/svg/range-connector.svg",
-      "label": "Range Connector",
-      "description": "A symbolic icon representing Range Connector.",
-      "viewBox": "0 0 566.5 149.38"
-    },
-    "rosa-shield": {
-      "name": "rosa-shield",
-      "category": "svg",
-      "path": "/assets/icons/svg/rosa-shield.svg",
-      "label": "Rosa Shield",
-      "description": "A symbolic icon representing Rosa Shield.",
-      "viewBox": "0 0 318.36 374.68"
-    },
-    "scale-value": {
-      "name": "scale-value",
-      "category": "svg",
-      "path": "/assets/icons/svg/scale-value.svg",
-      "label": "Scale Value",
-      "description": "A symbolic icon representing Scale Value.",
-      "viewBox": "0 0 512 512"
-    },
-    "size": {
-      "name": "size",
-      "category": "svg",
-      "path": "/assets/icons/svg/size.svg",
-      "label": "Size",
-      "description": "A symbolic icon representing Size.",
-      "viewBox": "0 0 512 512"
-    },
-    "spell-slot": {
-      "name": "spell-slot",
-      "category": "svg",
-      "path": "/assets/icons/svg/spell-slot.svg",
-      "label": "Spell Slot",
-      "description": "A symbolic icon representing Spell Slot.",
-      "viewBox": "0 0 16 16"
-    },
-    "subclass": {
-      "name": "subclass",
-      "category": "svg",
-      "path": "/assets/icons/svg/subclass.svg",
-      "label": "Subclass",
-      "description": "A symbolic icon representing Subclass.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-armor-proficiencies": {
-      "name": "trait-armor-proficiencies",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-armor-proficiencies.svg",
-      "label": "Armor Proficiencies",
-      "description": "A symbolic icon representing Armor Proficiencies.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-condition-immunities": {
-      "name": "trait-condition-immunities",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-condition-immunities.svg",
-      "label": "Condition Immunities",
-      "description": "A symbolic icon representing Condition Immunities.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-damage-immunities": {
-      "name": "trait-damage-immunities",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-damage-immunities.svg",
-      "label": "Damage Immunities",
-      "description": "A symbolic icon representing Damage Immunities.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-damage-resistances": {
-      "name": "trait-damage-resistances",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-damage-resistances.svg",
-      "label": "Damage Resistances",
-      "description": "A symbolic icon representing Damage Resistances.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-damage-vulnerabilities": {
-      "name": "trait-damage-vulnerabilities",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-damage-vulnerabilities.svg",
-      "label": "Damage Vulnerabilities",
-      "description": "A symbolic icon representing Damage Vulnerabilities.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-languages": {
-      "name": "trait-languages",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-languages.svg",
-      "label": "Languages",
-      "description": "A symbolic icon representing Languages.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-saves": {
-      "name": "trait-saves",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-saves.svg",
-      "label": "Saves",
-      "description": "A symbolic icon representing Saves.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-skills": {
-      "name": "trait-skills",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-skills.svg",
-      "label": "Skills",
-      "description": "A symbolic icon representing Skills.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-tool-proficiencies": {
-      "name": "trait-tool-proficiencies",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-tool-proficiencies.svg",
-      "label": "Tool Proficiencies",
-      "description": "A symbolic icon representing Tool Proficiencies.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait-weapon-proficiencies": {
-      "name": "trait-weapon-proficiencies",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait-weapon-proficiencies.svg",
-      "label": "Weapon Proficiencies",
-      "description": "A symbolic icon representing Weapon Proficiencies.",
-      "viewBox": "0 0 512 512"
-    },
-    "trait": {
-      "name": "trait",
-      "category": "svg",
-      "path": "/assets/icons/svg/trait.svg",
-      "label": "Trait",
-      "description": "A symbolic icon representing Trait.",
-      "viewBox": "0 0 512 512"
-    },
-    "versatile": {
-      "name": "versatile",
-      "category": "svg",
-      "path": "/assets/icons/svg/versatile.svg",
-      "label": "Versatile",
-      "description": "A symbolic icon representing Versatile.",
-      "viewBox": "0 0 464.79 465.9"
-    }
-  },
-  "actions": {
-    "attack": {
-      "name": "attack",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/attack.svg",
-      "label": "Attack",
-      "description": "A symbolic icon representing Attack.",
-      "viewBox": "0 0 512 512"
-    },
-    "dash": {
-      "name": "dash",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/dash.svg",
-      "label": "Dash",
-      "description": "A symbolic icon representing Dash.",
-      "viewBox": "0 0 512 512"
-    },
-    "dodge": {
-      "name": "dodge",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/dodge.svg",
-      "label": "Dodge",
-      "description": "A symbolic icon representing Dodge.",
-      "viewBox": "0 0 512 512"
-    },
-    "help": {
-      "name": "help",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/help.svg",
-      "label": "Help",
-      "description": "A symbolic icon representing Help.",
-      "viewBox": "0 0 512 512"
-    },
-    "hide": {
-      "name": "hide",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/hide.svg",
-      "label": "Hide",
-      "description": "A symbolic icon representing Hide.",
-      "viewBox": "0 0 512 512"
-    },
-    "jump": {
-      "name": "jump",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/jump.svg",
-      "label": "Jump",
-      "description": "A symbolic icon representing Jump.",
-      "viewBox": "0 0 512 512"
-    },
-    "move": {
-      "name": "move",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/move.svg",
-      "label": "Move",
-      "description": "A symbolic icon representing Move.",
-      "viewBox": "0 0 512 512"
-    },
-    "read": {
-      "name": "read",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/read.svg",
-      "label": "Read",
-      "description": "A symbolic icon representing Read.",
-      "viewBox": "0 0 512 512"
-    },
-    "trow": {
-      "name": "trow",
-      "category": "actions",
-      "path": "/assets/icons/svg/action/trow.svg",
-      "label": "Trow",
-      "description": "A symbolic icon representing Trow.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "active-effects": {
-    "enchantment": {
-      "name": "enchantment",
-      "category": "active-effects",
-      "path": "/assets/icons/svg/active-effects/enchantment.svg",
-      "label": "Enchantment",
-      "description": "A symbolic icon representing Enchantment.",
-      "viewBox": "0 0 512 512"
-    },
-    "standard": {
-      "name": "standard",
-      "category": "active-effects",
-      "path": "/assets/icons/svg/active-effects/standard.svg",
-      "label": "Standard",
-      "description": "A symbolic icon representing Standard.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "activity": {
-    "attack": {
-      "name": "attack",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/attack.svg",
-      "label": "Attack",
-      "description": "A symbolic icon representing Attack.",
-      "viewBox": "0 0 512 512"
-    },
-    "cast": {
-      "name": "cast",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/cast.svg",
-      "label": "Cast",
-      "description": "A symbolic icon representing Cast.",
-      "viewBox": "0 0 512 512"
-    },
-    "check": {
-      "name": "check",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/check.svg",
-      "label": "Check",
-      "description": "A symbolic icon representing Check.",
-      "viewBox": "0 0 512 512"
-    },
-    "damage": {
-      "name": "damage",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/damage.svg",
-      "label": "Damage",
-      "description": "A symbolic icon representing Damage.",
-      "viewBox": "0 0 512 512"
-    },
-    "enchant": {
-      "name": "enchant",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/enchant.svg",
-      "label": "Enchant",
-      "description": "A symbolic icon representing Enchant.",
-      "viewBox": "0 0 512 512"
-    },
-    "forward": {
-      "name": "forward",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/forward.svg",
-      "label": "Forward",
-      "description": "A symbolic icon representing Forward.",
-      "viewBox": "0 0 512 512"
-    },
-    "heal": {
-      "name": "heal",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/heal.svg",
-      "label": "Heal",
-      "description": "A symbolic icon representing Heal.",
-      "viewBox": "0 0 512 512"
-    },
-    "order": {
-      "name": "order",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/order.svg",
-      "label": "Order",
-      "description": "A symbolic icon representing Order.",
-      "viewBox": "0 0 474.56 417.85"
-    },
-    "save": {
-      "name": "save",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/save.svg",
-      "label": "Save",
-      "description": "A symbolic icon representing Save.",
-      "viewBox": "0 0 512 512"
-    },
-    "summon": {
-      "name": "summon",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/summon.svg",
-      "label": "Summon",
-      "description": "A symbolic icon representing Summon.",
-      "viewBox": "0 0 512 512"
-    },
-    "teleport": {
-      "name": "teleport",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/teleport.svg",
-      "label": "Teleport",
-      "description": "A symbolic icon representing Teleport.",
-      "viewBox": "0 0 512 512"
-    },
-    "transform": {
-      "name": "transform",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/transform.svg",
-      "label": "Transform",
-      "description": "A symbolic icon representing Transform.",
-      "viewBox": "0 0 512 512"
-    },
-    "utility": {
-      "name": "utility",
-      "category": "activity",
-      "path": "/assets/icons/svg/activity/utility.svg",
-      "label": "Utility",
-      "description": "A symbolic icon representing Utility.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "creatures": {
-    "aberration": {
-      "name": "aberration",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/aberration.svg",
-      "label": "Aberration",
-      "description": "A symbolic icon representing Aberration.",
-      "viewBox": "0 0 512 512"
-    },
-    "beast": {
-      "name": "beast",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/beast.svg",
-      "label": "Beast",
-      "description": "A symbolic icon representing Beast.",
-      "viewBox": "0 0 512 512"
-    },
-    "celestial": {
-      "name": "celestial",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/celestial.svg",
-      "label": "Celestial",
-      "description": "A symbolic icon representing Celestial.",
-      "viewBox": "0 0 512 512"
-    },
-    "character": {
-      "name": "character",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/character.svg",
-      "label": "Character",
-      "description": "A symbolic icon representing Character.",
-      "viewBox": "0 0 340 340"
-    },
-    "construct": {
-      "name": "construct",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/construct.svg",
-      "label": "Construct",
-      "description": "A symbolic icon representing Construct.",
-      "viewBox": "0 0 512 512"
-    },
-    "dragon": {
-      "name": "dragon",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/dragon.svg",
-      "label": "Dragon",
-      "description": "A symbolic icon representing Dragon.",
-      "viewBox": "0 0 512 512"
-    },
-    "dragons": {
-      "name": "dragons",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/dragons.svg",
-      "label": "Dragons",
-      "description": "A symbolic icon representing Dragons.",
-      "viewBox": "0 0 512 512"
-    },
-    "elemental": {
-      "name": "elemental",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/elemental.svg",
-      "label": "Elemental",
-      "description": "A symbolic icon representing Elemental.",
-      "viewBox": "0 0 512 512"
-    },
-    "encounter": {
-      "name": "encounter",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/encounter.svg",
-      "label": "Encounter",
-      "description": "A symbolic icon representing Encounter.",
-      "viewBox": "0 0 512 512"
-    },
-    "fey": {
-      "name": "fey",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/fey.svg",
-      "label": "Fey",
-      "description": "A symbolic icon representing Fey.",
-      "viewBox": "0 0 512 512"
-    },
-    "fiend": {
-      "name": "fiend",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/fiend.svg",
-      "label": "Fiend",
-      "description": "A symbolic icon representing Fiend.",
-      "viewBox": "0 0 512 512"
-    },
-    "giant": {
-      "name": "giant",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/giant.svg",
-      "label": "Giant",
-      "description": "A symbolic icon representing Giant.",
-      "viewBox": "0 0 512 512"
-    },
-    "group": {
-      "name": "group",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/group.svg",
-      "label": "Group",
-      "description": "A symbolic icon representing Group.",
-      "viewBox": "0 0 512 512"
-    },
-    "humanoid": {
-      "name": "humanoid",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/humanoid.svg",
-      "label": "Humanoid",
-      "description": "A symbolic icon representing Humanoid.",
-      "viewBox": "0 0 512 512"
-    },
-    "monstrosity": {
-      "name": "monstrosity",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/monstrosity.svg",
-      "label": "Monstrosity",
-      "description": "A symbolic icon representing Monstrosity.",
-      "viewBox": "0 0 512 512"
-    },
-    "npc": {
-      "name": "npc",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/npc.svg",
-      "label": "Npc",
-      "description": "A symbolic icon representing Npc.",
-      "viewBox": "0 0 474.67 471.22"
-    },
-    "ooze": {
-      "name": "ooze",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/ooze.svg",
-      "label": "Ooze",
-      "description": "A symbolic icon representing Ooze.",
-      "viewBox": "0 0 512 512"
-    },
-    "plant": {
-      "name": "plant",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/plant.svg",
-      "label": "Plant",
-      "description": "A symbolic icon representing Plant.",
-      "viewBox": "0 0 512 512"
-    },
-    "undead": {
-      "name": "undead",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/undead.svg",
-      "label": "Undead",
-      "description": "A symbolic icon representing Undead.",
-      "viewBox": "0 0 512 512"
-    },
-    "vehicle": {
-      "name": "vehicle",
-      "category": "creatures",
-      "path": "/assets/icons/svg/actors/vehicle.svg",
-      "label": "Vehicle",
-      "description": "A symbolic icon representing Vehicle.",
-      "viewBox": "0 0 479.97 480.01"
-    }
-  },
-  "advancement": {
-    "modify-item": {
-      "name": "modify-item",
-      "category": "advancement",
-      "path": "/assets/icons/svg/advancement/modify-item.svg",
-      "label": "Modify Item",
-      "description": "A symbolic icon representing Modify Item.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "attacks": {
-    "acid_breath": {
-      "name": "acid_breath",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/acid_breath.svg",
-      "label": "Acid Breath",
-      "description": "A symbolic icon representing Acid Breath.",
-      "viewBox": "0 0 512 512"
-    },
-    "beak": {
-      "name": "beak",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/beak.svg",
-      "label": "Beak",
-      "description": "A symbolic icon representing Beak.",
-      "viewBox": "0 0 512 512"
-    },
-    "bite": {
-      "name": "bite",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/bite.svg",
-      "label": "Bite",
-      "description": "A symbolic icon representing Bite.",
-      "viewBox": "0 0 512 512"
-    },
-    "claw": {
-      "name": "claw",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/claw.svg",
-      "label": "Claw",
-      "description": "A symbolic icon representing Claw.",
-      "viewBox": "0 0 512 512"
-    },
-    "claws": {
-      "name": "claws",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/claws.svg",
-      "label": "Claws",
-      "description": "A symbolic icon representing Claws.",
-      "viewBox": "0 0 512 512"
-    },
-    "club": {
-      "name": "club",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/club.svg",
-      "label": "Club",
-      "description": "A symbolic icon representing Club.",
-      "viewBox": "0 0 512 512"
-    },
-    "crush": {
-      "name": "crush",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/crush.svg",
-      "label": "Crush",
-      "description": "A symbolic icon representing Crush.",
-      "viewBox": "0 0 512 512"
-    },
-    "fire_breath": {
-      "name": "fire_breath",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/fire_breath.svg",
-      "label": "Fire Breath",
-      "description": "A symbolic icon representing Fire Breath.",
-      "viewBox": "0 0 512 512"
-    },
-    "greataxe": {
-      "name": "greataxe",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/greataxe.svg",
-      "label": "Greataxe",
-      "description": "A symbolic icon representing Greataxe.",
-      "viewBox": "0 0 512 512"
-    },
-    "greatsword": {
-      "name": "greatsword",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/greatsword.svg",
-      "label": "Greatsword",
-      "description": "A symbolic icon representing Greatsword.",
-      "viewBox": "0 0 512 512"
-    },
-    "hammer": {
-      "name": "hammer",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/hammer.svg",
-      "label": "Hammer",
-      "description": "A symbolic icon representing Hammer.",
-      "viewBox": "0 0 512 512"
-    },
-    "lightning_breath": {
-      "name": "lightning_breath",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/lightning_breath.svg",
-      "label": "Lightning Breath",
-      "description": "A symbolic icon representing Lightning Breath.",
-      "viewBox": "0 0 512 512"
-    },
-    "melee": {
-      "name": "melee",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/melee.svg",
-      "label": "Melee",
-      "description": "A symbolic icon representing Melee.",
-      "viewBox": "0 0 512 512"
-    },
-    "poison_breath": {
-      "name": "poison_breath",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/poison_breath.svg",
-      "label": "Poison Breath",
-      "description": "A symbolic icon representing Poison Breath.",
-      "viewBox": "0 0 512 512"
-    },
-    "ranged_attack": {
-      "name": "ranged_attack",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/ranged_attack.svg",
-      "label": "Ranged Attack",
-      "description": "A symbolic icon representing Ranged Attack.",
-      "viewBox": "0 0 512 512"
-    },
-    "tail": {
-      "name": "tail",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/tail.svg",
-      "label": "Tail",
-      "description": "A symbolic icon representing Tail.",
-      "viewBox": "0 0 512 512"
-    },
-    "talons": {
-      "name": "talons",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/talons.svg",
-      "label": "Talons",
-      "description": "A symbolic icon representing Talons.",
-      "viewBox": "0 0 512 512"
-    },
-    "tentacle": {
-      "name": "tentacle",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/tentacle.svg",
-      "label": "Tentacle",
-      "description": "A symbolic icon representing Tentacle.",
-      "viewBox": "0 0 512 512"
-    },
-    "trident": {
-      "name": "trident",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/trident.svg",
-      "label": "Trident",
-      "description": "A symbolic icon representing Trident.",
-      "viewBox": "0 0 512 512"
-    },
-    "unarmed_strike": {
-      "name": "unarmed_strike",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/unarmed_strike.svg",
-      "label": "Unarmed Strike",
-      "description": "A symbolic icon representing Unarmed Strike.",
-      "viewBox": "0 0 512 512"
-    },
-    "warhammer": {
-      "name": "warhammer",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/warhammer.svg",
-      "label": "Warhammer",
-      "description": "A symbolic icon representing Warhammer.",
-      "viewBox": "0 0 512 512"
-    },
-    "web": {
-      "name": "web",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/web.svg",
-      "label": "Web",
-      "description": "A symbolic icon representing Web.",
-      "viewBox": "0 0 512 512"
-    },
-    "whip": {
-      "name": "whip",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/whip.svg",
-      "label": "Whip",
-      "description": "A symbolic icon representing Whip.",
-      "viewBox": "0 0 512 512"
-    },
-    "whirlwind": {
-      "name": "whirlwind",
-      "category": "attacks",
-      "path": "/assets/icons/svg/attacks/whirlwind.svg",
-      "label": "Whirlwind",
-      "description": "A symbolic icon representing Whirlwind.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "behaviors": {
-    "apply-active-effect": {
-      "name": "apply-active-effect",
-      "category": "behaviors",
-      "path": "/assets/icons/svg/behaviors/apply-active-effect.svg",
-      "label": "Apply Active Effect",
-      "description": "A symbolic icon representing Apply Active Effect.",
-      "viewBox": "0 0 512 512"
-    },
-    "difficult-terrain": {
-      "name": "difficult-terrain",
-      "category": "behaviors",
-      "path": "/assets/icons/svg/behaviors/difficult-terrain.svg",
-      "label": "Difficult Terrain",
-      "description": "A symbolic icon representing Difficult Terrain.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "book_reader": {
-    "read_mode": {
-      "name": "read_mode",
-      "category": "book_reader",
-      "path": "/assets/icons/svg/book_reader/read_mode.svg",
-      "label": "Read Mode",
-      "description": "A symbolic icon representing Read Mode.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "character": {
-    "blinded": {
-      "name": "blinded",
-      "category": "character",
-      "path": "/assets/icons/svg/character/blinded.svg",
-      "label": "Blinded",
-      "description": "A symbolic icon representing Blinded.",
-      "viewBox": "0 0 512 512"
-    },
-    "burning": {
-      "name": "burning",
-      "category": "character",
-      "path": "/assets/icons/svg/character/burning.svg",
-      "label": "Burning",
-      "description": "A symbolic icon representing Burning.",
-      "viewBox": "0 0 512 512"
-    },
-    "charmed": {
-      "name": "charmed",
-      "category": "character",
-      "path": "/assets/icons/svg/character/charmed.svg",
-      "label": "Charmed",
-      "description": "A symbolic icon representing Charmed.",
-      "viewBox": "0 0 512 512"
-    },
-    "corroding": {
-      "name": "corroding",
-      "category": "character",
-      "path": "/assets/icons/svg/character/corroding.svg",
-      "label": "Corroding",
-      "description": "A symbolic icon representing Corroding.",
-      "viewBox": "0 0 512 512"
-    },
-    "deafened": {
-      "name": "deafened",
-      "category": "character",
-      "path": "/assets/icons/svg/character/deafened.svg",
-      "label": "Deafened",
-      "description": "A symbolic icon representing Deafened.",
-      "viewBox": "0 0 512 512"
-    },
-    "exhaustion": {
-      "name": "exhaustion",
-      "category": "character",
-      "path": "/assets/icons/svg/character/exhaustion.svg",
-      "label": "Exhaustion",
-      "description": "A symbolic icon representing Exhaustion.",
-      "viewBox": "0 0 512 512"
-    },
-    "frightened": {
-      "name": "frightened",
-      "category": "character",
-      "path": "/assets/icons/svg/character/frightened.svg",
-      "label": "Frightened",
-      "description": "A symbolic icon representing Frightened.",
-      "viewBox": "0 0 512 512"
-    },
-    "grappled": {
-      "name": "grappled",
-      "category": "character",
-      "path": "/assets/icons/svg/character/grappled.svg",
-      "label": "Grappled",
-      "description": "A symbolic icon representing Grappled.",
-      "viewBox": "0 0 512 512"
-    },
-    "incapacitated": {
-      "name": "incapacitated",
-      "category": "character",
-      "path": "/assets/icons/svg/character/incapacitated.svg",
-      "label": "Incapacitated",
-      "description": "A symbolic icon representing Incapacitated.",
-      "viewBox": "0 0 512 512"
-    },
-    "invisible": {
-      "name": "invisible",
-      "category": "character",
-      "path": "/assets/icons/svg/character/invisible.svg",
-      "label": "Invisible",
-      "description": "A symbolic icon representing Invisible.",
-      "viewBox": "0 0 512 512"
-    },
-    "paralyzed": {
-      "name": "paralyzed",
-      "category": "character",
-      "path": "/assets/icons/svg/character/paralyzed.svg",
-      "label": "Paralyzed",
-      "description": "A symbolic icon representing Paralyzed.",
-      "viewBox": "0 0 512 512"
-    },
-    "petrified": {
-      "name": "petrified",
-      "category": "character",
-      "path": "/assets/icons/svg/character/petrified.svg",
-      "label": "Petrified",
-      "description": "A symbolic icon representing Petrified.",
-      "viewBox": "0 0 512 512"
-    },
-    "poisoned": {
-      "name": "poisoned",
-      "category": "character",
-      "path": "/assets/icons/svg/character/poisoned.svg",
-      "label": "Poisoned",
-      "description": "A symbolic icon representing Poisoned.",
-      "viewBox": "0 0 512 512"
-    },
-    "prone": {
-      "name": "prone",
-      "category": "character",
-      "path": "/assets/icons/svg/character/prone.svg",
-      "label": "Prone",
-      "description": "A symbolic icon representing Prone.",
-      "viewBox": "0 0 512 512"
-    },
-    "restrained": {
-      "name": "restrained",
-      "category": "character",
-      "path": "/assets/icons/svg/character/restrained.svg",
-      "label": "Restrained",
-      "description": "A symbolic icon representing Restrained.",
-      "viewBox": "0 0 512 512"
-    },
-    "stunned": {
-      "name": "stunned",
-      "category": "character",
-      "path": "/assets/icons/svg/character/stunned.svg",
-      "label": "Stunned",
-      "description": "A symbolic icon representing Stunned.",
-      "viewBox": "0 0 512 512"
-    },
-    "unconscious": {
-      "name": "unconscious",
-      "category": "character",
-      "path": "/assets/icons/svg/character/unconscious.svg",
-      "label": "Unconscious",
-      "description": "A symbolic icon representing Unconscious.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "currency": {
-    "all_coins": {
-      "name": "all_coins",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/all_coins.svg",
-      "label": "All Coins",
-      "description": "A symbolic icon representing All Coins.",
-      "viewBox": "0 0 512 512"
-    },
-    "coin": {
-      "name": "coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/coin.svg",
-      "label": "Coin",
-      "description": "A symbolic icon representing Coin.",
-      "viewBox": "0 0 512 512"
-    },
-    "coins": {
-      "name": "coins",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/coins.svg",
-      "label": "Coins",
-      "description": "A symbolic icon representing Coins.",
-      "viewBox": "0 0 512 512"
-    },
-    "copper_coin": {
-      "name": "copper_coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/copper_coin.svg",
-      "label": "Copper Coin",
-      "description": "A symbolic icon representing Copper Coin.",
-      "viewBox": "0 0 512 512",
-      "color": "#B45309"
-    },
-    "cost": {
-      "name": "cost",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/cost.svg",
-      "label": "Cost",
-      "description": "A symbolic icon representing Cost.",
-      "viewBox": "0 0 512 512"
-    },
-    "electrum_coin": {
-      "name": "electrum_coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/electrum_coin.svg",
-      "label": "Electrum Coin",
-      "description": "A symbolic icon representing Electrum Coin.",
-      "viewBox": "0 0 512 512",
-      "color": "#10B981"
-    },
-    "gold_coin": {
-      "name": "gold_coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/gold_coin.svg",
-      "label": "Gold Coin",
-      "description": "A symbolic icon representing Gold Coin.",
-      "viewBox": "0 0 512 512",
-      "color": "#FBBF24"
-    },
-    "loot": {
-      "name": "loot",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/loot.svg",
-      "label": "Loot",
-      "description": "A symbolic icon representing Loot.",
-      "viewBox": "0 0 512 512"
-    },
-    "money_pouch": {
-      "name": "money_pouch",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/money_pouch.svg",
-      "label": "Money Pouch",
-      "description": "A symbolic icon representing Money Pouch.",
-      "viewBox": "0 0 512 512"
-    },
-    "pay": {
-      "name": "pay",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/pay.svg",
-      "label": "Pay",
-      "description": "A symbolic icon representing Pay.",
-      "viewBox": "0 0 512 512"
-    },
-    "platinum_coin": {
-      "name": "platinum_coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/platinum_coin.svg",
-      "label": "Platinum Coin",
-      "description": "A symbolic icon representing Platinum Coin.",
-      "viewBox": "0 0 512 512",
-      "color": "#E2E8F0"
-    },
-    "receive": {
-      "name": "receive",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/receive.svg",
-      "label": "Receive",
-      "description": "A symbolic icon representing Receive.",
-      "viewBox": "0 0 512 512"
-    },
-    "silver_coin": {
-      "name": "silver_coin",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/silver_coin.svg",
-      "label": "Silver Coin",
-      "description": "A symbolic icon representing Silver Coin.",
-      "viewBox": "0 0 512 512",
-      "color": "#94A3B8"
-    },
-    "wallet": {
-      "name": "wallet",
-      "category": "currency",
-      "path": "/assets/icons/svg/currency/wallet.svg",
-      "label": "Wallet",
-      "description": "A symbolic icon representing Wallet.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "damage_types": {
-    "acid": {
-      "name": "acid",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/acid.svg",
-      "label": "Acid",
-      "description": "A symbolic icon representing Acid.",
-      "viewBox": "0 0 512 512"
-    },
-    "all": {
-      "name": "all",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/all.svg",
-      "label": "All",
-      "description": "A symbolic icon representing All.",
-      "viewBox": "0 0 512 512"
-    },
-    "bludgeoning": {
-      "name": "bludgeoning",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/bludgeoning.svg",
-      "label": "Bludgeoning",
-      "description": "A symbolic icon representing Bludgeoning.",
-      "viewBox": "0 0 512 512"
-    },
-    "cold": {
-      "name": "cold",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/cold.svg",
-      "label": "Cold",
-      "description": "A symbolic icon representing Cold.",
-      "viewBox": "0 0 512 512"
-    },
-    "fire": {
-      "name": "fire",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/fire.svg",
-      "label": "Fire",
-      "description": "A symbolic icon representing Fire.",
-      "viewBox": "0 0 512 512"
-    },
-    "force": {
-      "name": "force",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/force.svg",
-      "label": "Force",
-      "description": "A symbolic icon representing Force.",
-      "viewBox": "0 0 512 512"
-    },
-    "healing": {
-      "name": "healing",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/healing.svg",
-      "label": "Healing",
-      "description": "A symbolic icon representing Healing.",
-      "viewBox": "0 0 512 512"
-    },
-    "lightning": {
-      "name": "lightning",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/lightning.svg",
-      "label": "Lightning",
-      "description": "A symbolic icon representing Lightning.",
-      "viewBox": "0 0 512 512"
-    },
-    "maxhp": {
-      "name": "maxhp",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/maxhp.svg",
-      "label": "Maxhp",
-      "description": "A symbolic icon representing Maxhp.",
-      "viewBox": "0 0 512 512"
-    },
-    "necrotic": {
-      "name": "necrotic",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/necrotic.svg",
-      "label": "Necrotic",
-      "description": "A symbolic icon representing Necrotic.",
-      "viewBox": "0 0 512 512"
-    },
-    "piercing": {
-      "name": "piercing",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/piercing.svg",
-      "label": "Piercing",
-      "description": "A symbolic icon representing Piercing.",
-      "viewBox": "0 0 512 512"
-    },
-    "poison": {
-      "name": "poison",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/poison.svg",
-      "label": "Poison",
-      "description": "A symbolic icon representing Poison.",
-      "viewBox": "0 0 512 512"
-    },
-    "psychic": {
-      "name": "psychic",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/psychic.svg",
-      "label": "Psychic",
-      "description": "A symbolic icon representing Psychic.",
-      "viewBox": "0 0 512 512"
-    },
-    "radiant": {
-      "name": "radiant",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/radiant.svg",
-      "label": "Radiant",
-      "description": "A symbolic icon representing Radiant.",
-      "viewBox": "0 0 512 512"
-    },
-    "range": {
-      "name": "range",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/range.svg",
-      "label": "Range",
-      "description": "A symbolic icon representing Range.",
-      "viewBox": "0 0 512 512"
-    },
-    "slashing": {
-      "name": "slashing",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/slashing.svg",
-      "label": "Slashing",
-      "description": "A symbolic icon representing Slashing.",
-      "viewBox": "0 0 512 512"
-    },
-    "temphp": {
-      "name": "temphp",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/temphp.svg",
-      "label": "Temphp",
-      "description": "A symbolic icon representing Temphp.",
-      "viewBox": "0 0 512 512"
-    },
-    "threshold": {
-      "name": "threshold",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/threshold.svg",
-      "label": "Threshold",
-      "description": "A symbolic icon representing Threshold.",
-      "viewBox": "0 0 512 512"
-    },
-    "thunder": {
-      "name": "thunder",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/thunder.svg",
-      "label": "Thunder",
-      "description": "A symbolic icon representing Thunder.",
-      "viewBox": "0 0 512 512"
-    },
-    "unarmed": {
-      "name": "unarmed",
-      "category": "damage_types",
-      "path": "/assets/icons/svg/damage/unarmed.svg",
-      "label": "Unarmed",
-      "description": "A symbolic icon representing Unarmed.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "dice": {
-    "advantage": {
-      "name": "advantage",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/advantage.svg",
-      "label": "Advantage",
-      "description": "A symbolic icon representing Advantage.",
-      "viewBox": "0 0 512 512"
-    },
-    "d10": {
-      "name": "d10",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d10.svg",
-      "label": "D10",
-      "description": "A symbolic icon representing D10.",
-      "viewBox": "0 0 512 512"
-    },
-    "d12": {
-      "name": "d12",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d12.svg",
-      "label": "D12",
-      "description": "A symbolic icon representing D12.",
-      "viewBox": "0 0 512 512"
-    },
-    "d20": {
-      "name": "d20",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d20.svg",
-      "label": "D20",
-      "description": "A symbolic icon representing D20.",
-      "viewBox": "0 0 512 512"
-    },
-    "d4": {
-      "name": "d4",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d4.svg",
-      "label": "D4",
-      "description": "A symbolic icon representing D4.",
-      "viewBox": "0 0 512 512"
-    },
-    "d6": {
-      "name": "d6",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d6.svg",
-      "label": "D6",
-      "description": "A symbolic icon representing D6.",
-      "viewBox": "0 0 512 512"
-    },
-    "d8": {
-      "name": "d8",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/d8.svg",
-      "label": "D8",
-      "description": "A symbolic icon representing D8.",
-      "viewBox": "0 0 512 512"
-    },
-    "dice_roll": {
-      "name": "dice_roll",
-      "category": "dice",
-      "path": "/assets/icons/svg/dice/dice_roll.svg",
-      "label": "Dice Roll",
-      "description": "A symbolic icon representing Dice Roll.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "documents": {
-    "active-effect": {
-      "name": "active-effect",
-      "category": "documents",
-      "path": "/assets/icons/svg/documents/active-effect.svg",
-      "label": "Active Effect",
-      "description": "A symbolic icon representing Active Effect.",
-      "viewBox": "0 0 512 512"
-    },
-    "actor": {
-      "name": "actor",
-      "category": "documents",
-      "path": "/assets/icons/svg/documents/actor.svg",
-      "label": "Actor",
-      "description": "A symbolic icon representing Actor.",
-      "viewBox": "0 0 512 512"
-    },
-    "item": {
-      "name": "item",
-      "category": "documents",
-      "path": "/assets/icons/svg/documents/item.svg",
-      "label": "Item",
-      "description": "A symbolic icon representing Item.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "editor": {
-    "collapse": {
-      "name": "collapse",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/collapse.svg",
-      "label": "Collapse",
-      "description": "A symbolic icon representing Collapse.",
-      "viewBox": "0 0 512 512"
-    },
-    "copy": {
-      "name": "copy",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/copy.svg",
-      "label": "Copy",
-      "description": "A symbolic icon representing Copy.",
-      "viewBox": "0 0 512 512"
-    },
-    "cut": {
-      "name": "cut",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/cut.svg",
-      "label": "Cut",
-      "description": "A symbolic icon representing Cut.",
-      "viewBox": "0 0 512 512"
-    },
-    "delete": {
-      "name": "delete",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/delete.svg",
-      "label": "Delete",
-      "description": "A symbolic icon representing Delete.",
-      "viewBox": "0 0 512 512"
-    },
-    "devkit": {
-      "name": "devkit",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/devkit.svg",
-      "label": "Devkit",
-      "description": "A symbolic icon representing Devkit.",
-      "viewBox": "0 0 512 512"
-    },
-    "duplicate": {
-      "name": "duplicate",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/duplicate.svg",
-      "label": "Duplicate",
-      "description": "A symbolic icon representing Duplicate.",
-      "viewBox": "0 0 512 512"
-    },
-    "expand": {
-      "name": "expand",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/expand.svg",
-      "label": "Expand",
-      "description": "A symbolic icon representing Expand.",
-      "viewBox": "0 0 512 512"
-    },
-    "map_marker": {
-      "name": "map_marker",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/map_marker.svg",
-      "label": "map_marker",
-      "description": "a simple upside-down tear shape marker for  pointing to a location ",
-      "viewBox": "0 0 512 512",
-      "usage": "also could be used for Wold atlas poi point of interest  ",
-      "usedIn": "editor setting new location nodes"
-    },
-    "move": {
-      "name": "move",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/move.svg",
-      "label": "Move",
-      "description": "A symbolic icon representing Move.",
-      "viewBox": "0 0 512 512"
-    },
-    "paste": {
-      "name": "paste",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/paste.svg",
-      "label": "Paste",
-      "description": "A symbolic icon representing Paste.",
-      "viewBox": "0 0 512 512"
-    },
-    "redo": {
-      "name": "redo",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/redo.svg",
-      "label": "Redo",
-      "description": "A symbolic icon representing Redo.",
-      "viewBox": "0 0 512 512"
-    },
-    "resize": {
-      "name": "resize",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/resize.svg",
-      "label": "Resize",
-      "description": "A symbolic icon representing Resize.",
-      "viewBox": "0 0 512 512"
-    },
-    "save": {
-      "name": "save",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/save.svg",
-      "label": "Save",
-      "description": "A symbolic icon representing Save.",
-      "viewBox": "0 0 512 512"
-    },
-    "scissors": {
-      "name": "scissors",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/scissors.svg",
-      "label": "Scissors",
-      "description": "A symbolic icon representing Scissors.",
-      "viewBox": "0 0 512 512"
-    },
-    "settings": {
-      "name": "settings",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/settings.svg",
-      "label": "Settings",
-      "description": "A symbolic icon representing Settings.",
-      "viewBox": "0 0 512 512"
-    },
-    "undo": {
-      "name": "undo",
-      "category": "editor",
-      "path": "/assets/icons/svg/editor/undo.svg",
-      "label": "Undo",
-      "description": "A symbolic icon representing Undo.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "equipment_doll": {
-    "back": {
-      "name": "back",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/back.svg",
-      "label": "Back",
-      "description": "A symbolic icon representing Back.",
-      "viewBox": "0 0 512 512"
-    },
-    "belt": {
-      "name": "belt",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/belt.svg",
-      "label": "Belt",
-      "description": "A symbolic icon representing Belt.",
-      "viewBox": "0 0 512 512"
-    },
-    "boots": {
-      "name": "boots",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/boots.svg",
-      "label": "Boots",
-      "description": "A symbolic icon representing Boots.",
-      "viewBox": "0 0 512 512"
-    },
-    "chest": {
-      "name": "chest",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/chest.svg",
-      "label": "Chest",
-      "description": "A symbolic icon representing Chest.",
-      "viewBox": "0 0 512 512"
-    },
-    "cloak": {
-      "name": "cloak",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/cloak.svg",
-      "label": "Cloak",
-      "description": "A symbolic icon representing Cloak.",
-      "viewBox": "0 0 512 512"
-    },
-    "focus": {
-      "name": "focus",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/focus.svg",
-      "label": "Focus",
-      "description": "A symbolic icon representing Focus.",
-      "viewBox": "0 0 512 512"
-    },
-    "gem": {
-      "name": "gem",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/gem.svg",
-      "label": "Gem",
-      "description": "A symbolic icon representing Gem.",
-      "viewBox": "0 0 512 512"
-    },
-    "hand": {
-      "name": "hand",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/hand.svg",
-      "label": "Hand",
-      "description": "A symbolic icon representing Hand.",
-      "viewBox": "0 0 512 512"
-    },
-    "head": {
-      "name": "head",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/head.svg",
-      "label": "Head",
-      "description": "A symbolic icon representing Head.",
-      "viewBox": "0 0 512 512"
-    },
-    "necklace": {
-      "name": "necklace",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/necklace.svg",
-      "label": "Necklace",
-      "description": "A symbolic icon representing Necklace.",
-      "viewBox": "0 0 512 512"
-    },
-    "ring": {
-      "name": "ring",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/ring.svg",
-      "label": "Ring",
-      "description": "A symbolic icon representing Ring.",
-      "viewBox": "0 0 512 512"
-    },
-    "shield": {
-      "name": "shield",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/shield.svg",
-      "label": "Shield",
-      "description": "A symbolic icon representing Shield.",
-      "viewBox": "0 0 512 512"
-    },
-    "shirt": {
-      "name": "shirt",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/shirt.svg",
-      "label": "Shirt",
-      "description": "A symbolic icon representing Shirt.",
-      "viewBox": "0 0 512 512"
-    },
-    "tools": {
-      "name": "tools",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/tools.svg",
-      "label": "Tools",
-      "description": "A symbolic icon representing Tools.",
-      "viewBox": "0 0 512 512"
-    },
-    "weapon": {
-      "name": "weapon",
-      "category": "equipment_doll",
-      "path": "/assets/icons/svg/equipment_doll/weapon.svg",
-      "label": "Weapon",
-      "description": "A symbolic icon representing Weapon.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "facilities": {
-    "build": {
-      "name": "build",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/build.svg",
-      "label": "Build",
-      "description": "A symbolic icon representing Build.",
-      "viewBox": "0 0 457.22 446"
-    },
-    "change": {
-      "name": "change",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/change.svg",
-      "label": "Change",
-      "description": "A symbolic icon representing Change.",
-      "viewBox": "0 0 473.41 473.42"
-    },
-    "craft": {
-      "name": "craft",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/craft.svg",
-      "label": "Craft",
-      "description": "A symbolic icon representing Craft.",
-      "viewBox": "0 0 478.75 328.19"
-    },
-    "empower": {
-      "name": "empower",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/empower.svg",
-      "label": "Empower",
-      "description": "A symbolic icon representing Empower.",
-      "viewBox": "0 0 460 437.77"
-    },
-    "enlarge": {
-      "name": "enlarge",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/enlarge.svg",
-      "label": "Enlarge",
-      "description": "A symbolic icon representing Enlarge.",
-      "viewBox": "0 0 462 452.37"
-    },
-    "harvest": {
-      "name": "harvest",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/harvest.svg",
-      "label": "Harvest",
-      "description": "A symbolic icon representing Harvest.",
-      "viewBox": "0 0 460.92 469.12"
-    },
-    "maintain": {
-      "name": "maintain",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/maintain.svg",
-      "label": "Maintain",
-      "description": "A symbolic icon representing Maintain.",
-      "viewBox": "0 0 446.44 434.56"
-    },
-    "recruit": {
-      "name": "recruit",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/recruit.svg",
-      "label": "Recruit",
-      "description": "A symbolic icon representing Recruit.",
-      "viewBox": "0 0 384 464"
-    },
-    "repair": {
-      "name": "repair",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/repair.svg",
-      "label": "Repair",
-      "description": "A symbolic icon representing Repair.",
-      "viewBox": "0 0 476 475.96"
-    },
-    "research": {
-      "name": "research",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/research.svg",
-      "label": "Research",
-      "description": "A symbolic icon representing Research.",
-      "viewBox": "0 0 470.34 409.24"
-    },
-    "trade": {
-      "name": "trade",
-      "category": "facilities",
-      "path": "/assets/icons/svg/facilities/trade.svg",
-      "label": "Trade",
-      "description": "A symbolic icon representing Trade.",
-      "viewBox": "0 0 473.78 470.69"
-    }
-  },
-  "feats": {
-    "alert": {
-      "name": "alert",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/alert.svg",
-      "label": "Alert",
-      "description": "A symbolic icon representing Alert.",
-      "viewBox": "0 0 512 512"
-    },
-    "athlete": {
-      "name": "athlete",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/athlete.svg",
-      "label": "Athlete",
-      "description": "A symbolic icon representing Athlete.",
-      "viewBox": "0 0 512 512"
-    },
-    "bountiful_luck": {
-      "name": "bountiful_luck",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/bountiful_luck.svg",
-      "label": "Bountiful Luck",
-      "description": "A symbolic icon representing Bountiful Luck.",
-      "viewBox": "0 0 512 512"
-    },
-    "chef": {
-      "name": "chef",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/chef.svg",
-      "label": "Chef",
-      "description": "A symbolic icon representing Chef.",
-      "viewBox": "0 0 512 512"
-    },
-    "crossbow_expert": {
-      "name": "crossbow_expert",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/crossbow_expert.svg",
-      "label": "Crossbow Expert",
-      "description": "A symbolic icon representing Crossbow Expert.",
-      "viewBox": "0 0 512 512"
-    },
-    "great_weapon_master": {
-      "name": "great_weapon_master",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/great_weapon_master.svg",
-      "label": "Great Weapon Master",
-      "description": "A symbolic icon representing Great Weapon Master.",
-      "viewBox": "0 0 512 512"
-    },
-    "healer": {
-      "name": "healer",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/healer.svg",
-      "label": "Healer",
-      "description": "A symbolic icon representing Healer.",
-      "viewBox": "0 0 512 512"
-    },
-    "lucky": {
-      "name": "lucky",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/lucky.svg",
-      "label": "Lucky",
-      "description": "A symbolic icon representing Lucky.",
-      "viewBox": "0 0 512 512"
-    },
-    "mage_slayer": {
-      "name": "mage_slayer",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/mage_slayer.svg",
-      "label": "Mage Slayer",
-      "description": "A symbolic icon representing Mage Slayer.",
-      "viewBox": "0 0 512 512"
-    },
-    "musician": {
-      "name": "musician",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/musician.svg",
-      "label": "Musician",
-      "description": "A symbolic icon representing Musician.",
-      "viewBox": "0 0 512 512"
-    },
-    "piercer": {
-      "name": "piercer",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/piercer.svg",
-      "label": "Piercer",
-      "description": "A symbolic icon representing Piercer.",
-      "viewBox": "0 0 512 512"
-    },
-    "poisoner": {
-      "name": "poisoner",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/poisoner.svg",
-      "label": "Poisoner",
-      "description": "A symbolic icon representing Poisoner.",
-      "viewBox": "0 0 512 512"
-    },
-    "rune_shaper": {
-      "name": "rune_shaper",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/rune_shaper.svg",
-      "label": "Rune Shaper",
-      "description": "A symbolic icon representing Rune Shaper.",
-      "viewBox": "0 0 512 512"
-    },
-    "sharpshooter": {
-      "name": "sharpshooter",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/sharpshooter.svg",
-      "label": "Sharpshooter",
-      "description": "A symbolic icon representing Sharpshooter.",
-      "viewBox": "0 0 512 512"
-    },
-    "shield_master": {
-      "name": "shield_master",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/shield_master.svg",
-      "label": "Shield Master",
-      "description": "A symbolic icon representing Shield Master.",
-      "viewBox": "0 0 512 512"
-    },
-    "skill_expert": {
-      "name": "skill_expert",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/skill_expert.svg",
-      "label": "Skill Expert",
-      "description": "A symbolic icon representing Skill Expert.",
-      "viewBox": "0 0 512 512"
-    },
-    "spell_sniper": {
-      "name": "spell_sniper",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/spell_sniper.svg",
-      "label": "Spell Sniper",
-      "description": "A symbolic icon representing Spell Sniper.",
-      "viewBox": "0 0 512 512"
-    },
-    "strike_of_the_giants": {
-      "name": "strike_of_the_giants",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/strike_of_the_giants.svg",
-      "label": "Strike Of The Giants",
-      "description": "A symbolic icon representing Strike Of The Giants.",
-      "viewBox": "0 0 512 512"
-    },
-    "telepathic": {
-      "name": "telepathic",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/telepathic.svg",
-      "label": "Telepathic",
-      "description": "A symbolic icon representing Telepathic.",
-      "viewBox": "0 0 512 512"
-    },
-    "wood_elf_magic": {
-      "name": "wood_elf_magic",
-      "category": "feats",
-      "path": "/assets/icons/svg/feats/wood_elf_magic.svg",
-      "label": "Wood Elf Magic",
-      "description": "A symbolic icon representing Wood Elf Magic.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "features": {
-    "action_surge": {
-      "name": "action_surge",
-      "category": "features",
-      "path": "/assets/icons/svg/features/action_surge.svg",
-      "label": "Action Surge",
-      "description": "A symbolic icon representing Action Surge.",
-      "viewBox": "0 0 512 512"
-    },
-    "assassinate": {
-      "name": "assassinate",
-      "category": "features",
-      "path": "/assets/icons/svg/features/assassinate.svg",
-      "label": "Assassinate",
-      "description": "A symbolic icon representing Assassinate.",
-      "viewBox": "0 0 512 512"
-    },
-    "cunning_action": {
-      "name": "cunning_action",
-      "category": "features",
-      "path": "/assets/icons/svg/features/cunning_action.svg",
-      "label": "Cunning Action",
-      "description": "A symbolic icon representing Cunning Action.",
-      "viewBox": "0 0 512 512"
-    },
-    "expertise": {
-      "name": "expertise",
-      "category": "features",
-      "path": "/assets/icons/svg/features/expertise.svg",
-      "label": "Expertise",
-      "description": "A symbolic icon representing Expertise.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style": {
-      "name": "fighter_fighting_style",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style.svg",
-      "label": "Fighter Fighting Style",
-      "description": "A symbolic icon representing Fighter Fighting Style.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_archery": {
-      "name": "fighter_fighting_style_archery",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_archery.svg",
-      "label": "Fighter Fighting Style Archery",
-      "description": "A symbolic icon representing Fighter Fighting Style Archery.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_defense": {
-      "name": "fighter_fighting_style_defense",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_defense.svg",
-      "label": "Fighter Fighting Style Defense",
-      "description": "A symbolic icon representing Fighter Fighting Style Defense.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_dueling": {
-      "name": "fighter_fighting_style_dueling",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_dueling.svg",
-      "label": "Fighter Fighting Style Dueling",
-      "description": "A symbolic icon representing Fighter Fighting Style Dueling.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_great_weapon_fighting": {
-      "name": "fighter_fighting_style_great_weapon_fighting",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_great_weapon_fighting.svg",
-      "label": "Fighter Fighting Style Great Weapon Fighting",
-      "description": "A symbolic icon representing Fighter Fighting Style Great Weapon Fighting.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_protection": {
-      "name": "fighter_fighting_style_protection",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_protection.svg",
-      "label": "Fighter Fighting Style Protection",
-      "description": "A symbolic icon representing Fighter Fighting Style Protection.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighter_fighting_style_two_weapon_fighting": {
-      "name": "fighter_fighting_style_two_weapon_fighting",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighter_fighting_style_two_weapon_fighting.svg",
-      "label": "Fighter Fighting Style Two Weapon Fighting",
-      "description": "A symbolic icon representing Fighter Fighting Style Two Weapon Fighting.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighting_style_defense": {
-      "name": "fighting_style_defense",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighting_style_defense.svg",
-      "label": "Fighting Style Defense",
-      "description": "A symbolic icon representing Fighting Style Defense.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighting_style_dueling": {
-      "name": "fighting_style_dueling",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighting_style_dueling.svg",
-      "label": "Fighting Style Dueling",
-      "description": "A symbolic icon representing Fighting Style Dueling.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighting_style_great_weapon_fighting": {
-      "name": "fighting_style_great_weapon_fighting",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighting_style_great_weapon_fighting.svg",
-      "label": "Fighting Style Great Weapon Fighting",
-      "description": "A symbolic icon representing Fighting Style Great Weapon Fighting.",
-      "viewBox": "0 0 512 512"
-    },
-    "fighting_style_protection": {
-      "name": "fighting_style_protection",
-      "category": "features",
-      "path": "/assets/icons/svg/features/fighting_style_protection.svg",
-      "label": "Fighting Style Protection",
-      "description": "A symbolic icon representing Fighting Style Protection.",
-      "viewBox": "0 0 512 512"
-    },
-    "rage": {
-      "name": "rage",
-      "category": "features",
-      "path": "/assets/icons/svg/features/rage.svg",
-      "label": "Rage",
-      "description": "A symbolic icon representing Rage.",
-      "viewBox": "0 0 512 512"
-    },
-    "second_wind": {
-      "name": "second_wind",
-      "category": "features",
-      "path": "/assets/icons/svg/features/second_wind.svg",
-      "label": "Second Wind",
-      "description": "A symbolic icon representing Second Wind.",
-      "viewBox": "0 0 512 512"
-    },
-    "sneak_attack": {
-      "name": "sneak_attack",
-      "category": "features",
-      "path": "/assets/icons/svg/features/sneak_attack.svg",
-      "label": "Sneak Attack",
-      "description": "A symbolic icon representing Sneak Attack.",
-      "viewBox": "0 0 512 512"
-    },
-    "uncanny_dodge": {
-      "name": "uncanny_dodge",
-      "category": "features",
-      "path": "/assets/icons/svg/features/uncanny_dodge.svg",
-      "label": "Uncanny Dodge",
-      "description": "A symbolic icon representing Uncanny Dodge.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "equipment": {
-    "background": {
-      "name": "background",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/background.svg",
-      "label": "Background",
-      "description": "A symbolic icon representing Background.",
-      "viewBox": "0 0 385.05 374.08"
-    },
-    "class": {
-      "name": "class",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/class.svg",
-      "label": "Class",
-      "description": "A symbolic icon representing Class.",
-      "viewBox": "0 0 373.35 355.11"
-    },
-    "consumable": {
-      "name": "consumable",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/consumable.svg",
-      "label": "Consumable",
-      "description": "A symbolic icon representing Consumable.",
-      "viewBox": "0 0 302.04 368"
-    },
-    "container": {
-      "name": "container",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/container.svg",
-      "label": "Container",
-      "description": "A symbolic icon representing Container.",
-      "viewBox": "0 0 344 376.7"
-    },
-    "equipment": {
-      "name": "equipment",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/equipment.svg",
-      "label": "Equipment",
-      "description": "A symbolic icon representing Equipment.",
-      "viewBox": "0 0 375.77 294.1"
-    },
-    "facility": {
-      "name": "facility",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/facility.svg",
-      "label": "Facility",
-      "description": "A symbolic icon representing Facility.",
-      "viewBox": "0 0 389.12 468.44"
-    },
-    "feature": {
-      "name": "feature",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/feature.svg",
-      "label": "Feature",
-      "description": "A symbolic icon representing Feature.",
-      "viewBox": "0 0 365.81 348.78"
-    },
-    "loot": {
-      "name": "loot",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/loot.svg",
-      "label": "Loot",
-      "description": "A symbolic icon representing Loot.",
-      "viewBox": "0 0 355.99 365.82"
-    },
-    "race": {
-      "name": "race",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/race.svg",
-      "label": "Race",
-      "description": "A symbolic icon representing Race.",
-      "viewBox": "0 0 288.02 386.56"
-    },
-    "spell": {
-      "name": "spell",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/spell.svg",
-      "label": "Spell",
-      "description": "A symbolic icon representing Spell.",
-      "viewBox": "0 0 368 350.22"
-    },
-    "subclass": {
-      "name": "subclass",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/subclass.svg",
-      "label": "Subclass",
-      "description": "A symbolic icon representing Subclass.",
-      "viewBox": "0 0 284.21 368"
-    },
-    "tool": {
-      "name": "tool",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/tool.svg",
-      "label": "Tool",
-      "description": "A symbolic icon representing Tool.",
-      "viewBox": "0 0 372.88 346.45"
-    },
-    "weapon": {
-      "name": "weapon",
-      "category": "equipment",
-      "path": "/assets/icons/svg/items/weapon.svg",
-      "label": "Weapon",
-      "description": "A symbolic icon representing Weapon.",
-      "viewBox": "0 0 378.67 382.87"
-    }
-  },
-  "minigame": {
-    "brain": {
-      "name": "brain",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/brain.svg",
-      "label": "Brain",
-      "description": "A symbolic icon representing Brain.",
-      "viewBox": "0 0 512 512"
-    },
-    "discard": {
-      "name": "discard",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/discard.svg",
-      "label": "Discard",
-      "description": "A symbolic icon representing Discard.",
-      "viewBox": "0 0 512 512"
-    },
-    "dispell_card": {
-      "name": "dispell_card",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/dispell_card.svg",
-      "label": "Dispell Card",
-      "description": "A symbolic icon representing Dispell Card.",
-      "viewBox": "0 0 512 512"
-    },
-    "draw_card": {
-      "name": "draw_card",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/draw_card.svg",
-      "label": "Draw Card",
-      "description": "A symbolic icon representing Draw Card.",
-      "viewBox": "0 0 512 512"
-    },
-    "heads": {
-      "name": "heads",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/heads.svg",
-      "label": "Heads",
-      "description": "A symbolic icon representing Heads.",
-      "viewBox": "0 0 512 512"
-    },
-    "hourglass": {
-      "name": "hourglass",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/hourglass.svg",
-      "label": "Hourglass",
-      "description": "A symbolic icon representing Hourglass.",
-      "viewBox": "0 0 512 512"
-    },
-    "paper": {
-      "name": "paper",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/paper.svg",
-      "label": "Paper",
-      "description": "A symbolic icon representing Paper.",
-      "viewBox": "0 0 512 512"
-    },
-    "paper_button": {
-      "name": "paper_button",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/paper_button.svg",
-      "label": "Paper Button",
-      "description": "A symbolic icon representing Paper Button.",
-      "viewBox": "0 0 512 512"
-    },
-    "pickup_card": {
-      "name": "pickup_card",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/pickup_card.svg",
-      "label": "Pickup Card",
-      "description": "A symbolic icon representing Pickup Card.",
-      "viewBox": "0 0 512 512"
-    },
-    "play_card": {
-      "name": "play_card",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/play_card.svg",
-      "label": "Play Card",
-      "description": "A symbolic icon representing Play Card.",
-      "viewBox": "0 0 512 512"
-    },
-    "rock": {
-      "name": "rock",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/rock.svg",
-      "label": "Rock",
-      "description": "A symbolic icon representing Rock.",
-      "viewBox": "0 0 512 512"
-    },
-    "rock_button": {
-      "name": "rock_button",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/rock_button.svg",
-      "label": "Rock Button",
-      "description": "A symbolic icon representing Rock Button.",
-      "viewBox": "0 0 512 512"
-    },
-    "scissors_button": {
-      "name": "scissors_button",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/scissors_button.svg",
-      "label": "Scissors Button",
-      "description": "A symbolic icon representing Scissors Button.",
-      "viewBox": "0 0 512 512"
-    },
-    "steal": {
-      "name": "steal",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/steal.svg",
-      "label": "Steal",
-      "description": "A symbolic icon representing Steal.",
-      "viewBox": "0 0 512 512"
-    },
-    "tails": {
-      "name": "tails",
-      "category": "minigame",
-      "path": "/assets/icons/svg/minigame/tails.svg",
-      "label": "Tails",
-      "description": "A symbolic icon representing Tails.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "musical_instruments": {
-    "bagpipes": {
-      "name": "bagpipes",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/bagpipes.svg",
-      "label": "Bagpipes",
-      "description": "A symbolic icon representing Bagpipes.",
-      "viewBox": "0 0 512 512"
-    },
-    "drum": {
-      "name": "drum",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/drum.svg",
-      "label": "Drum",
-      "description": "A symbolic icon representing Drum.",
-      "viewBox": "0 0 512 512"
-    },
-    "dulcimer": {
-      "name": "dulcimer",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/dulcimer.svg",
-      "label": "Dulcimer",
-      "description": "A symbolic icon representing Dulcimer.",
-      "viewBox": "0 0 512 512"
-    },
-    "flute": {
-      "name": "flute",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/flute.svg",
-      "label": "Flute",
-      "description": "A symbolic icon representing Flute.",
-      "viewBox": "0 0 512 512"
-    },
-    "horn": {
-      "name": "horn",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/horn.svg",
-      "label": "Horn",
-      "description": "A symbolic icon representing Horn.",
-      "viewBox": "0 0 512 512"
-    },
-    "lute": {
-      "name": "lute",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/lute.svg",
-      "label": "Lute",
-      "description": "A symbolic icon representing Lute.",
-      "viewBox": "0 0 512 512"
-    },
-    "lyre": {
-      "name": "lyre",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/lyre.svg",
-      "label": "Lyre",
-      "description": "A symbolic icon representing Lyre.",
-      "viewBox": "0 0 512 512"
-    },
-    "pan_flute": {
-      "name": "pan_flute",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/pan_flute.svg",
-      "label": "Pan Flute",
-      "description": "A symbolic icon representing Pan Flute.",
-      "viewBox": "0 0 512 512"
-    },
-    "shawm": {
-      "name": "shawm",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/shawm.svg",
-      "label": "Shawm",
-      "description": "A symbolic icon representing Shawm.",
-      "viewBox": "0 0 512 512"
-    },
-    "viol": {
-      "name": "viol",
-      "category": "musical_instruments",
-      "path": "/assets/icons/svg/musical_instruments/viol.svg",
-      "label": "Viol",
-      "description": "A symbolic icon representing Viol.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "properties": {
-    "magical": {
-      "name": "magical",
-      "category": "properties",
-      "path": "/assets/icons/svg/properties/magical.svg",
-      "label": "Magical",
-      "description": "A symbolic icon representing Magical.",
-      "viewBox": "20 20 492 492"
-    }
-  },
-  "magic_schools": {
-    "abjuration": {
-      "name": "abjuration",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/abjuration.svg",
-      "label": "Abjuration",
-      "description": "A symbolic icon representing Abjuration.",
-      "viewBox": "0 0 26 26"
-    },
-    "conjuration": {
-      "name": "conjuration",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/conjuration.svg",
-      "label": "Conjuration",
-      "description": "A symbolic icon representing Conjuration.",
-      "viewBox": "0 0 94 94"
-    },
-    "divination": {
-      "name": "divination",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/divination.svg",
-      "label": "Divination",
-      "description": "A symbolic icon representing Divination.",
-      "viewBox": "0 0 95 95"
-    },
-    "enchantment": {
-      "name": "enchantment",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/enchantment.svg",
-      "label": "Enchantment",
-      "description": "A symbolic icon representing Enchantment.",
-      "viewBox": "0 0 93 93"
-    },
-    "evocation": {
-      "name": "evocation",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/evocation.svg",
-      "label": "Evocation",
-      "description": "A symbolic icon representing Evocation.",
-      "viewBox": "0 0 120 120"
-    },
-    "illusion": {
-      "name": "illusion",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/illusion.svg",
-      "label": "Illusion",
-      "description": "A symbolic icon representing Illusion.",
-      "viewBox": "0 0 115 115"
-    },
-    "necromancy": {
-      "name": "necromancy",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/necromancy.svg",
-      "label": "Necromancy",
-      "description": "A symbolic icon representing Necromancy.",
-      "viewBox": "0 0 185 185"
-    },
-    "transmutation": {
-      "name": "transmutation",
-      "category": "magic_schools",
-      "path": "/assets/icons/svg/schools/transmutation.svg",
-      "label": "Transmutation",
-      "description": "A symbolic icon representing Transmutation.",
-      "viewBox": "0 0 164 164"
-    }
-  },
-  "skill": {
-    "acrobatics": {
-      "name": "acrobatics",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/acrobatics.svg",
-      "label": "Acrobatics",
-      "description": "A symbolic icon representing Acrobatics.",
-      "viewBox": "0 0 512 512"
-    },
-    "animal_handling": {
-      "name": "animal_handling",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/animal_handling.svg",
-      "label": "Animal Handling",
-      "description": "A symbolic icon representing Animal Handling.",
-      "viewBox": "0 0 512 512"
-    },
-    "arcana": {
-      "name": "arcana",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/arcana.svg",
-      "label": "Arcana",
-      "description": "A symbolic icon representing Arcana.",
-      "viewBox": "0 0 512 512"
-    },
-    "athletics": {
-      "name": "athletics",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/athletics.svg",
-      "label": "Athletics",
-      "description": "A symbolic icon representing Athletics.",
-      "viewBox": "0 0 512 512"
-    },
-    "deception": {
-      "name": "deception",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/deception.svg",
-      "label": "Deception",
-      "description": "A symbolic icon representing Deception.",
-      "viewBox": "0 0 512 512"
-    },
-    "history": {
-      "name": "history",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/history.svg",
-      "label": "History",
-      "description": "A symbolic icon representing History.",
-      "viewBox": "0 0 512 512"
-    },
-    "insight": {
-      "name": "insight",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/insight.svg",
-      "label": "Insight",
-      "description": "A symbolic icon representing Insight.",
-      "viewBox": "0 0 512 512"
-    },
-    "intimidation": {
-      "name": "intimidation",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/intimidation.svg",
-      "label": "Intimidation",
-      "description": "A symbolic icon representing Intimidation.",
-      "viewBox": "0 0 512 512"
-    },
-    "investigation": {
-      "name": "investigation",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/investigation.svg",
-      "label": "Investigation",
-      "description": "A symbolic icon representing Investigation.",
-      "viewBox": "0 0 512 512"
-    },
-    "medicine": {
-      "name": "medicine",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/medicine.svg",
-      "label": "Medicine",
-      "description": "A symbolic icon representing Medicine.",
-      "viewBox": "0 0 512 512"
-    },
-    "nature": {
-      "name": "nature",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/nature.svg",
-      "label": "Nature",
-      "description": "A symbolic icon representing Nature.",
-      "viewBox": "0 0 512 512"
-    },
-    "perception": {
-      "name": "perception",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/perception.svg",
-      "label": "Perception",
-      "description": "A symbolic icon representing Perception.",
-      "viewBox": "0 0 512 512"
-    },
-    "performance": {
-      "name": "performance",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/performance.svg",
-      "label": "Performance",
-      "description": "A symbolic icon representing Performance.",
-      "viewBox": "0 0 512 512"
-    },
-    "persuasion": {
-      "name": "persuasion",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/persuasion.svg",
-      "label": "Persuasion",
-      "description": "A symbolic icon representing Persuasion.",
-      "viewBox": "0 0 512 512"
-    },
-    "religion": {
-      "name": "religion",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/religion.svg",
-      "label": "Religion",
-      "description": "A symbolic icon representing Religion.",
-      "viewBox": "0 0 512 512"
-    },
-    "sleight_of_hand": {
-      "name": "sleight_of_hand",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/sleight_of_hand.svg",
-      "label": "Sleight Of Hand",
-      "description": "A symbolic icon representing Sleight Of Hand.",
-      "viewBox": "0 0 512 512"
-    },
-    "stealth": {
-      "name": "stealth",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/stealth.svg",
-      "label": "Stealth",
-      "description": "A symbolic icon representing Stealth.",
-      "viewBox": "0 0 512 512"
-    },
-    "survival": {
-      "name": "survival",
-      "category": "skill",
-      "path": "/assets/icons/svg/skill/survival.svg",
-      "label": "Survival",
-      "description": "A symbolic icon representing Survival.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "conditions": {
-    "bleeding": {
-      "name": "bleeding",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/bleeding.svg",
-      "label": "Bleeding",
-      "description": "A symbolic icon representing Bleeding.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "blinded": {
-      "name": "blinded",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/blinded.svg",
-      "label": "Blinded",
-      "description": "A symbolic icon representing Blinded.",
-      "viewBox": "0 0 384 384"
-    },
-    "bloodied": {
-      "name": "bloodied",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/bloodied.svg",
-      "label": "Bloodied",
-      "description": "A symbolic icon representing Bloodied.",
-      "viewBox": "0 0 512 512"
-    },
-    "burning": {
-      "name": "burning",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/burning.svg",
-      "label": "Burning",
-      "description": "A symbolic icon representing Burning.",
-      "viewBox": "0 0 512 512"
-    },
-    "burrowing": {
-      "name": "burrowing",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/burrowing.svg",
-      "label": "Burrowing",
-      "description": "A symbolic icon representing Burrowing.",
-      "viewBox": "0 0 512 512"
-    },
-    "charmed": {
-      "name": "charmed",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/charmed.svg",
-      "label": "Charmed",
-      "description": "A symbolic icon representing Charmed.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "concentrating": {
-      "name": "concentrating",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/concentrating.svg",
-      "label": "Concentrating",
-      "description": "A symbolic icon representing Concentrating.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "cover-half": {
-      "name": "cover-half",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/cover-half.svg",
-      "label": "Cover Half",
-      "description": "A symbolic icon representing Cover Half.",
-      "viewBox": "0 0 512 512"
-    },
-    "cover-three-quarters": {
-      "name": "cover-three-quarters",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/cover-three-quarters.svg",
-      "label": "Cover Three Quarters",
-      "description": "A symbolic icon representing Cover Three Quarters.",
-      "viewBox": "0 0 512 512"
-    },
-    "cover-total": {
-      "name": "cover-total",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/cover-total.svg",
-      "label": "Cover Total",
-      "description": "A symbolic icon representing Cover Total.",
-      "viewBox": "0 0 512 512"
-    },
-    "cursed": {
-      "name": "cursed",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/cursed.svg",
-      "label": "Cursed",
-      "description": "A symbolic icon representing Cursed.",
-      "viewBox": "0 0 512 512"
-    },
-    "dead-outline": {
-      "name": "dead-outline",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/dead-outline.svg",
-      "label": "Dead Outline",
-      "description": "A symbolic icon representing Dead Outline.",
-      "viewBox": "0 0 512 512"
-    },
-    "dead": {
-      "name": "dead",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/dead.svg",
-      "label": "Dead",
-      "description": "A symbolic icon representing Dead.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "deafened": {
-      "name": "deafened",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/deafened.svg",
-      "label": "Deafened",
-      "description": "A symbolic icon representing Deafened.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "dehydration": {
-      "name": "dehydration",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/dehydration.svg",
-      "label": "Dehydration",
-      "description": "A symbolic icon representing Dehydration.",
-      "viewBox": "0 0 512 512"
-    },
-    "diseased": {
-      "name": "diseased",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/diseased.svg",
-      "label": "Diseased",
-      "description": "A symbolic icon representing Diseased.",
-      "viewBox": "0 0 512 512"
-    },
-    "dodging": {
-      "name": "dodging",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/dodging.svg",
-      "label": "Dodging",
-      "description": "A symbolic icon representing Dodging.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "encumbered": {
-      "name": "encumbered",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/encumbered.svg",
-      "label": "Encumbered",
-      "description": "A symbolic icon representing Encumbered.",
-      "viewBox": "0 0 333.3 333.3"
-    },
-    "ethereal": {
-      "name": "ethereal",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/ethereal.svg",
-      "label": "Ethereal",
-      "description": "A symbolic icon representing Ethereal.",
-      "viewBox": "0 0 512 512"
-    },
-    "exceeding-carrying-capacity": {
-      "name": "exceeding-carrying-capacity",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exceeding-carrying-capacity.svg",
-      "label": "Exceeding Carrying Capacity",
-      "description": "A symbolic icon representing Exceeding Carrying Capacity.",
-      "viewBox": "0 0 333.3 333.3"
-    },
-    "exhaustion-1": {
-      "name": "exhaustion-1",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-1.svg",
-      "label": "Exhaustion 1",
-      "description": "A symbolic icon representing Exhaustion 1.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion-2": {
-      "name": "exhaustion-2",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-2.svg",
-      "label": "Exhaustion 2",
-      "description": "A symbolic icon representing Exhaustion 2.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion-3": {
-      "name": "exhaustion-3",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-3.svg",
-      "label": "Exhaustion 3",
-      "description": "A symbolic icon representing Exhaustion 3.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion-4": {
-      "name": "exhaustion-4",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-4.svg",
-      "label": "Exhaustion 4",
-      "description": "A symbolic icon representing Exhaustion 4.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion-5": {
-      "name": "exhaustion-5",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-5.svg",
-      "label": "Exhaustion 5",
-      "description": "A symbolic icon representing Exhaustion 5.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion-6": {
-      "name": "exhaustion-6",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion-6.svg",
-      "label": "Exhaustion 6",
-      "description": "A symbolic icon representing Exhaustion 6.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "exhaustion": {
-      "name": "exhaustion",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/exhaustion.svg",
-      "label": "Exhaustion",
-      "description": "A symbolic icon representing Exhaustion.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "falling": {
-      "name": "falling",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/falling.svg",
-      "label": "Falling",
-      "description": "A symbolic icon representing Falling.",
-      "viewBox": "0 0 512 512"
-    },
-    "flying": {
-      "name": "flying",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/flying.svg",
-      "label": "Flying",
-      "description": "A symbolic icon representing Flying.",
-      "viewBox": "0 0 512 512"
-    },
-    "frightened": {
-      "name": "frightened",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/frightened.svg",
-      "label": "Frightened",
-      "description": "A symbolic icon representing Frightened.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "grappled": {
-      "name": "grappled",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/grappled.svg",
-      "label": "Grappled",
-      "description": "A symbolic icon representing Grappled.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "heavily-encumbered": {
-      "name": "heavily-encumbered",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/heavily-encumbered.svg",
-      "label": "Heavily Encumbered",
-      "description": "A symbolic icon representing Heavily Encumbered.",
-      "viewBox": "0 0 333.3 333.3"
-    },
-    "hiding": {
-      "name": "hiding",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/hiding.svg",
-      "label": "Hiding",
-      "description": "A symbolic icon representing Hiding.",
-      "viewBox": "0 0 512 512"
-    },
-    "hovering": {
-      "name": "hovering",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/hovering.svg",
-      "label": "Hovering",
-      "description": "A symbolic icon representing Hovering.",
-      "viewBox": "0 0 512 512"
-    },
-    "incapacitated": {
-      "name": "incapacitated",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/incapacitated.svg",
-      "label": "Incapacitated",
-      "description": "A symbolic icon representing Incapacitated.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "invisible": {
-      "name": "invisible",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/invisible.svg",
-      "label": "Invisible",
-      "description": "A symbolic icon representing Invisible.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "malnutrition": {
-      "name": "malnutrition",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/malnutrition.svg",
-      "label": "Malnutrition",
-      "description": "A symbolic icon representing Malnutrition.",
-      "viewBox": "0 0 512 512"
-    },
-    "marked": {
-      "name": "marked",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/marked.svg",
-      "label": "Marked",
-      "description": "A symbolic icon representing Marked.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "paralyzed": {
-      "name": "paralyzed",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/paralyzed.svg",
-      "label": "Paralyzed",
-      "description": "A symbolic icon representing Paralyzed.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "petrified": {
-      "name": "petrified",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/petrified.svg",
-      "label": "Petrified",
-      "description": "A symbolic icon representing Petrified.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "poisoned": {
-      "name": "poisoned",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/poisoned.svg",
-      "label": "Poisoned",
-      "description": "A symbolic icon representing Poisoned.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "prone": {
-      "name": "prone",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/prone.svg",
-      "label": "Prone",
-      "description": "A symbolic icon representing Prone.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "restrained": {
-      "name": "restrained",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/restrained.svg",
-      "label": "Restrained",
-      "description": "A symbolic icon representing Restrained.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "silenced": {
-      "name": "silenced",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/silenced.svg",
-      "label": "Silenced",
-      "description": "A symbolic icon representing Silenced.",
-      "viewBox": "0 0 512 512"
-    },
-    "sleeping": {
-      "name": "sleeping",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/sleeping.svg",
-      "label": "Sleeping",
-      "description": "A symbolic icon representing Sleeping.",
-      "viewBox": "0 0 512 512"
-    },
-    "stable": {
-      "name": "stable",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/stable.svg",
-      "label": "Stable",
-      "description": "A symbolic icon representing Stable.",
-      "viewBox": "0 0 512 512"
-    },
-    "stunned": {
-      "name": "stunned",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/stunned.svg",
-      "label": "Stunned",
-      "description": "A symbolic icon representing Stunned.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "suffocation": {
-      "name": "suffocation",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/suffocation.svg",
-      "label": "Suffocation",
-      "description": "A symbolic icon representing Suffocation.",
-      "viewBox": "0 0 512 512"
-    },
-    "surprised": {
-      "name": "surprised",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/surprised.svg",
-      "label": "Surprised",
-      "description": "A symbolic icon representing Surprised.",
-      "viewBox": "0 0 1866.7 1866.7"
-    },
-    "transformed": {
-      "name": "transformed",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/transformed.svg",
-      "label": "Transformed",
-      "description": "A symbolic icon representing Transformed.",
-      "viewBox": "0 0 512 512"
-    },
-    "unconscious": {
-      "name": "unconscious",
-      "category": "conditions",
-      "path": "/assets/icons/svg/statuses/unconscious.svg",
-      "label": "Unconscious",
-      "description": "A symbolic icon representing Unconscious.",
-      "viewBox": "0 0 1866.7 1866.7"
-    }
-  },
-  "subclasses": {
-    "arcane_trickster": {
-      "name": "arcane_trickster",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/arcane_trickster.svg",
-      "label": "Arcane Trickster",
-      "description": "A symbolic icon representing Arcane Trickster.",
-      "viewBox": "0 0 512 512"
-    },
-    "assassin": {
-      "name": "assassin",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/assassin.svg",
-      "label": "Assassin",
-      "description": "A symbolic icon representing Assassin.",
-      "viewBox": "0 0 512 512"
-    },
-    "battle_master": {
-      "name": "battle_master",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/battle_master.svg",
-      "label": "Battle Master",
-      "description": "A symbolic icon representing Battle Master.",
-      "viewBox": "0 0 512 512"
-    },
-    "draconic": {
-      "name": "draconic",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/draconic.svg",
-      "label": "Draconic",
-      "description": "A symbolic icon representing Draconic.",
-      "viewBox": "0 0 512 512"
-    },
-    "eldritch_knight": {
-      "name": "eldritch_knight",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/eldritch_knight.svg",
-      "label": "Eldritch Knight",
-      "description": "A symbolic icon representing Eldritch Knight.",
-      "viewBox": "0 0 512 512"
-    },
-    "life": {
-      "name": "life",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/life.svg",
-      "label": "Life",
-      "description": "A symbolic icon representing Life.",
-      "viewBox": "0 0 512 512"
-    },
-    "lore": {
-      "name": "lore",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/lore.svg",
-      "label": "Lore",
-      "description": "A symbolic icon representing Lore.",
-      "viewBox": "0 0 512 512"
-    },
-    "open_hand": {
-      "name": "open_hand",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/open_hand.svg",
-      "label": "Open Hand",
-      "description": "A symbolic icon representing Open Hand.",
-      "viewBox": "0 0 512 512"
-    },
-    "thief": {
-      "name": "thief",
-      "category": "subclasses",
-      "path": "/assets/icons/svg/subclasses/thief.svg",
-      "label": "Thief",
-      "description": "A symbolic icon representing Thief.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "tarot": {
-    "tarot_00_the_fool": {
-      "name": "tarot_00_the_fool",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_00_the_fool.svg",
-      "label": "The Fool",
-      "description": "A symbolic icon representing The Fool.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_01_the_magician": {
-      "name": "tarot_01_the_magician",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_01_the_magician.svg",
-      "label": "The Magician",
-      "description": "A symbolic icon representing The Magician.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_02_the_priestess": {
-      "name": "tarot_02_the_priestess",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_02_the_priestess.svg",
-      "label": "The Priestess",
-      "description": "A symbolic icon representing The Priestess.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_03_the_empress": {
-      "name": "tarot_03_the_empress",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_03_the_empress.svg",
-      "label": "The Empress",
-      "description": "A symbolic icon representing The Empress.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_04_the_emperor": {
-      "name": "tarot_04_the_emperor",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_04_the_emperor.svg",
-      "label": "The Emperor",
-      "description": "A symbolic icon representing The Emperor.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_05_the_hierophant": {
-      "name": "tarot_05_the_hierophant",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_05_the_hierophant.svg",
-      "label": "The Hierophant",
-      "description": "A symbolic icon representing The Hierophant.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_06_the_lovers": {
-      "name": "tarot_06_the_lovers",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_06_the_lovers.svg",
-      "label": "The Lovers",
-      "description": "A symbolic icon representing The Lovers.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_07_the_chariot": {
-      "name": "tarot_07_the_chariot",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_07_the_chariot.svg",
-      "label": "The Chariot",
-      "description": "A symbolic icon representing The Chariot.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_08_strength": {
-      "name": "tarot_08_strength",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_08_strength.svg",
-      "label": "Strength",
-      "description": "A symbolic icon representing Strength.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_09_the_hermit": {
-      "name": "tarot_09_the_hermit",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_09_the_hermit.svg",
-      "label": "The Hermit",
-      "description": "A symbolic icon representing The Hermit.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_10_wheel_of_fortune": {
-      "name": "tarot_10_wheel_of_fortune",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_10_wheel_of_fortune.svg",
-      "label": "Wheel Of Fortune",
-      "description": "A symbolic icon representing Wheel Of Fortune.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_11_justice": {
-      "name": "tarot_11_justice",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_11_justice.svg",
-      "label": "Justice",
-      "description": "A symbolic icon representing Justice.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_12_the_hanged_man": {
-      "name": "tarot_12_the_hanged_man",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_12_the_hanged_man.svg",
-      "label": "The Hanged Man",
-      "description": "A symbolic icon representing The Hanged Man.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_13_death": {
-      "name": "tarot_13_death",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_13_death.svg",
-      "label": "Death",
-      "description": "A symbolic icon representing Death.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_14_temperance": {
-      "name": "tarot_14_temperance",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_14_temperance.svg",
-      "label": "Temperance",
-      "description": "A symbolic icon representing Temperance.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_15_the_devil": {
-      "name": "tarot_15_the_devil",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_15_the_devil.svg",
-      "label": "The Devil",
-      "description": "A symbolic icon representing The Devil.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_16_the_tower": {
-      "name": "tarot_16_the_tower",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_16_the_tower.svg",
-      "label": "The Tower",
-      "description": "A symbolic icon representing The Tower.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_17_the_star": {
-      "name": "tarot_17_the_star",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_17_the_star.svg",
-      "label": "The Star",
-      "description": "A symbolic icon representing The Star.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_18_the_moon": {
-      "name": "tarot_18_the_moon",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_18_the_moon.svg",
-      "label": "The Moon",
-      "description": "A symbolic icon representing The Moon.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_19_the_sun": {
-      "name": "tarot_19_the_sun",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_19_the_sun.svg",
-      "label": "The Sun",
-      "description": "A symbolic icon representing The Sun.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_20_judgement": {
-      "name": "tarot_20_judgement",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_20_judgement.svg",
-      "label": "Judgement",
-      "description": "A symbolic icon representing Judgement.",
-      "viewBox": "0 0 512 512"
-    },
-    "tarot_21_the_world": {
-      "name": "tarot_21_the_world",
-      "category": "tarot",
-      "path": "/assets/icons/svg/tarot/tarot_21_the_world.svg",
-      "label": "The World",
-      "description": "A symbolic icon representing The World.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "traits": {
-    "darkvision": {
-      "name": "darkvision",
-      "category": "traits",
-      "path": "/assets/icons/svg/traits/darkvision.svg",
-      "label": "Darkvision",
-      "description": "A symbolic icon representing Darkvision.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "ui": {
-    "adjust": {
-      "name": "adjust",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/adjust.svg",
-      "label": "Adjust",
-      "description": "A symbolic icon representing Adjust.",
-      "viewBox": "0 0 512 512"
-    },
-    "advance": {
-      "name": "advance",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/advance.svg",
-      "label": "Advance",
-      "description": "A symbolic icon representing Advance.",
-      "viewBox": "0 0 512 512"
-    },
-    "alert_triangle": {
-      "name": "alert_triangle",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/alert_triangle.svg",
-      "label": "Alert Triangle",
-      "description": "A symbolic icon representing Alert Triangle.",
-      "viewBox": "0 0 512 512"
-    },
-    "ancestry": {
-      "name": "ancestry",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/ancestry.svg",
-      "label": "Ancestry",
-      "description": "A symbolic icon representing Ancestry.",
-      "viewBox": "0 0 512 512"
-    },
-    "arrow_left": {
-      "name": "arrow_left",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/arrow_left.svg",
-      "label": "Arrow Left",
-      "description": "A symbolic icon representing Arrow Left.",
-      "viewBox": "0 0 512 512"
-    },
-    "award": {
-      "name": "award",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/award.svg",
-      "label": "Award",
-      "description": "A symbolic icon representing Award.",
-      "viewBox": "0 0 512 512"
-    },
-    "bestiary": {
-      "name": "bestiary",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/bestiary.svg",
-      "label": "Bestiary",
-      "description": "A symbolic icon representing Bestiary.",
-      "viewBox": "0 0 512 512"
-    },
-    "camera": {
-      "name": "camera",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/camera.svg",
-      "label": "Camera",
-      "description": "A symbolic icon representing Camera.",
-      "viewBox": "0 0 512 512"
-    },
-    "chart": {
-      "name": "chart",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/chart.svg",
-      "label": "Chart",
-      "description": "A symbolic icon representing Chart.",
-      "viewBox": "0 0 512 512"
-    },
-    "chat_interface": {
-      "name": "chat_interface",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/chat_interface.svg",
-      "label": "Chat Interface",
-      "description": "A symbolic icon representing Chat Interface.",
-      "viewBox": "0 0 512 512"
-    },
-    "chevron_down": {
-      "name": "chevron_down",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/chevron_down.svg",
-      "label": "Chevron Down",
-      "description": "A symbolic icon representing Chevron Down.",
-      "viewBox": "0 0 512 512"
-    },
-    "chevron_left": {
-      "name": "chevron_left",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/chevron_left.svg",
-      "label": "Chevron Left",
-      "description": "A symbolic icon representing Chevron Left.",
-      "viewBox": "0 0 512 512"
-    },
-    "chevron_right": {
-      "name": "chevron_right",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/chevron_right.svg",
-      "label": "Chevron Right",
-      "description": "A symbolic icon representing Chevron Right.",
-      "viewBox": "0 0 512 512"
-    },
-    "citation": {
-      "name": "citation",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/citation.svg",
-      "label": "Citation",
-      "description": "A symbolic icon representing Citation.",
-      "viewBox": "0 0 512 512"
-    },
-    "close": {
-      "name": "close",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/close.svg",
-      "label": "Close",
-      "description": "A symbolic icon representing Close.",
-      "viewBox": "0 0 512 512"
-    },
-    "console": {
-      "name": "console",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/console.svg",
-      "label": "Console",
-      "description": "A symbolic icon representing Console.",
-      "viewBox": "0 0 512 512"
-    },
-    "death": {
-      "name": "death",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/death.svg",
-      "label": "Death",
-      "description": "A symbolic icon representing Death.",
-      "viewBox": "0 0 512 512"
-    },
-    "display": {
-      "name": "display",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/display.svg",
-      "label": "Display",
-      "description": "A symbolic icon representing Display.",
-      "viewBox": "0 0 512 512"
-    },
-    "document": {
-      "name": "document",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/document.svg",
-      "label": "Document",
-      "description": "A symbolic icon representing Document.",
-      "viewBox": "0 0 512 512"
-    },
-    "download": {
-      "name": "download",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/download.svg",
-      "label": "Download",
-      "description": "A symbolic icon representing Download.",
-      "viewBox": "0 0 512 512"
-    },
-    "energy": {
-      "name": "energy",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/energy.svg",
-      "label": "Energy",
-      "description": "A symbolic icon representing Energy.",
-      "viewBox": "0 0 512 512"
-    },
-    "equip": {
-      "name": "equip",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/equip.svg",
-      "label": "Equip",
-      "description": "A symbolic icon representing Equip.",
-      "viewBox": "0 0 512 512"
-    },
-    "file_json": {
-      "name": "file_json",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/file_json.svg",
-      "label": "File Json",
-      "description": "A symbolic icon representing File Json.",
-      "viewBox": "0 0 512 512"
-    },
-    "filter": {
-      "name": "filter",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/filter.svg",
-      "label": "Filter",
-      "description": "A symbolic icon representing Filter.",
-      "viewBox": "0 0 512 512"
-    },
-    "footsteps": {
-      "name": "footsteps",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/footsteps.svg",
-      "label": "Footsteps",
-      "description": "A symbolic icon representing Footsteps.",
-      "viewBox": "0 0 512 512"
-    },
-    "grab": {
-      "name": "grab",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/grab.svg",
-      "label": "Grab",
-      "description": "A symbolic icon representing Grab.",
-      "viewBox": "0 0 512 512"
-    },
-    "heart": {
-      "name": "heart",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/heart.svg",
-      "label": "Heart",
-      "description": "A symbolic icon representing Heart.",
-      "viewBox": "0 0 512 512"
-    },
-    "identity": {
-      "name": "identity",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/identity.svg",
-      "label": "Identity",
-      "description": "A symbolic icon representing Identity.",
-      "viewBox": "0 0 512 512"
-    },
-    "image": {
-      "name": "image",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/image.svg",
-      "label": "Image",
-      "description": "A symbolic icon representing Image.",
-      "viewBox": "0 0 512 512"
-    },
-    "info": {
-      "name": "info",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/info.svg",
-      "label": "Info",
-      "description": "A symbolic icon representing Info.",
-      "viewBox": "0 0 512 512"
-    },
-    "inventory_menu": {
-      "name": "inventory_menu",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/inventory_menu.svg",
-      "label": "Inventory Menu",
-      "description": "A symbolic icon representing Inventory Menu.",
-      "viewBox": "0 0 512 512"
-    },
-    "key": {
-      "name": "key",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/key.svg",
-      "label": "Key",
-      "description": "A symbolic icon representing Key.",
-      "viewBox": "0 0 512 512"
-    },
-    "legend": {
-      "name": "legend",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/legend.svg",
-      "label": "Legend",
-      "description": "A symbolic icon representing Legend.",
-      "viewBox": "0 0 512 512"
-    },
-    "loading": {
-      "name": "loading",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/loading.svg",
-      "label": "Loading",
-      "description": "A symbolic icon representing Loading.",
-      "viewBox": "0 0 512 512"
-    },
-    "magic_effect": {
-      "name": "magic_effect",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/magic_effect.svg",
-      "label": "Magic Effect",
-      "description": "A symbolic icon representing Magic Effect.",
-      "viewBox": "0 0 512 512"
-    },
-    "materials": {
-      "name": "materials",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/materials.svg",
-      "label": "Materials",
-      "description": "A symbolic icon representing Materials.",
-      "viewBox": "0 0 512 512"
-    },
-    "minus": {
-      "name": "minus",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/minus.svg",
-      "label": "Minus",
-      "description": "A symbolic icon representing Minus.",
-      "viewBox": "0 0 512 512"
-    },
-    "music": {
-      "name": "music",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/music.svg",
-      "label": "Music",
-      "description": "A symbolic icon representing Music.",
-      "viewBox": "0 0 512 512"
-    },
-    "overview": {
-      "name": "overview",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/overview.svg",
-      "label": "Overview",
-      "description": "A symbolic icon representing Overview.",
-      "viewBox": "0 0 512 512"
-    },
-    "package": {
-      "name": "package",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/package.svg",
-      "label": "Package",
-      "description": "A symbolic icon representing Package.",
-      "viewBox": "0 0 512 512"
-    },
-    "panel": {
-      "name": "panel",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/panel.svg",
-      "label": "Panel",
-      "description": "A symbolic icon representing Panel.",
-      "viewBox": "0 0 512 512"
-    },
-    "party_stats": {
-      "name": "party_stats",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/party_stats.svg",
-      "label": "Party Stats",
-      "description": "A symbolic icon representing Party Stats.",
-      "viewBox": "0 0 512 512"
-    },
-    "pen_line": {
-      "name": "pen_line",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/pen_line.svg",
-      "label": "Pen Line",
-      "description": "A symbolic icon representing Pen Line.",
-      "viewBox": "0 0 512 512"
-    },
-    "place": {
-      "name": "place",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/place.svg",
-      "label": "Place",
-      "description": "A symbolic icon representing Place.",
-      "viewBox": "0 0 512 512"
-    },
-    "play": {
-      "name": "play",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/play.svg",
-      "label": "Play",
-      "description": "A symbolic icon representing Play.",
-      "viewBox": "0 0 512 512"
-    },
-    "plus": {
-      "name": "plus",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/plus.svg",
-      "label": "Plus",
-      "description": "A symbolic icon representing Plus.",
-      "viewBox": "0 0 512 512"
-    },
-    "refresh": {
-      "name": "refresh",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/refresh.svg",
-      "label": "Refresh",
-      "description": "A symbolic icon representing Refresh.",
-      "viewBox": "0 0 512 512"
-    },
-    "reset": {
-      "name": "reset",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/reset.svg",
-      "label": "Reset",
-      "description": "A symbolic icon representing Reset.",
-      "viewBox": "0 0 512 512"
-    },
-    "rest": {
-      "name": "rest",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/rest.svg",
-      "label": "Rest",
-      "description": "A symbolic icon representing Rest.",
-      "viewBox": "0 0 512 512"
-    },
-    "save_data": {
-      "name": "save_data",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/save_data.svg",
-      "label": "Save Data",
-      "description": "A symbolic icon representing Save Data.",
-      "viewBox": "0 0 512 512"
-    },
-    "scan_identity": {
-      "name": "scan_identity",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/scan_identity.svg",
-      "label": "Scan Identity",
-      "description": "A symbolic icon representing Scan Identity.",
-      "viewBox": "0 0 512 512"
-    },
-    "search": {
-      "name": "search",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/search.svg",
-      "label": "Search",
-      "description": "A symbolic icon representing Search.",
-      "viewBox": "0 0 512 512"
-    },
-    "sent": {
-      "name": "sent",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/sent.svg",
-      "label": "Sent",
-      "description": "A symbolic icon representing Sent.",
-      "viewBox": "0 0 512 512"
-    },
-    "skill": {
-      "name": "skill",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/skill.svg",
-      "label": "Skill",
-      "description": "A symbolic icon representing Skill.",
-      "viewBox": "0 0 512 512"
-    },
-    "skip_forward": {
-      "name": "skip_forward",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/skip_forward.svg",
-      "label": "Skip Forward",
-      "description": "A symbolic icon representing Skip Forward.",
-      "viewBox": "0 0 512 512"
-    },
-    "speaker_off": {
-      "name": "speaker_off",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/speaker_off.svg",
-      "label": "Speaker Off",
-      "description": "A symbolic icon representing Speaker Off.",
-      "viewBox": "0 0 512 512"
-    },
-    "speaker_on": {
-      "name": "speaker_on",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/speaker_on.svg",
-      "label": "Speaker On",
-      "description": "A symbolic icon representing Speaker On.",
-      "viewBox": "0 0 512 512"
-    },
-    "spells": {
-      "name": "spells",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/spells.svg",
-      "label": "Spells",
-      "description": "A symbolic icon representing Spells.",
-      "viewBox": "0 0 512 512"
-    },
-    "star": {
-      "name": "star",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/star.svg",
-      "label": "Star",
-      "description": "A symbolic icon representing Star.",
-      "viewBox": "0 0 512 512"
-    },
-    "stop": {
-      "name": "stop",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/stop.svg",
-      "label": "Stop",
-      "description": "A symbolic icon representing Stop.",
-      "viewBox": "0 0 512 512"
-    },
-    "truck": {
-      "name": "truck",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/truck.svg",
-      "label": "Truck",
-      "description": "A symbolic icon representing Truck.",
-      "viewBox": "0 0 512 512"
-    },
-    "unpack": {
-      "name": "unpack",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/unpack.svg",
-      "label": "Unpack",
-      "description": "A symbolic icon representing Unpack.",
-      "viewBox": "0 0 512 512"
-    },
-    "upload": {
-      "name": "upload",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/upload.svg",
-      "label": "Upload",
-      "description": "A symbolic icon representing Upload.",
-      "viewBox": "0 0 512 512"
-    },
-    "user": {
-      "name": "user",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/user.svg",
-      "label": "User",
-      "description": "A symbolic icon representing User.",
-      "viewBox": "0 0 512 512"
-    },
-    "users": {
-      "name": "users",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/users.svg",
-      "label": "Users",
-      "description": "A symbolic icon representing Users.",
-      "viewBox": "0 0 512 512"
-    },
-    "vitality": {
-      "name": "vitality",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/vitality.svg",
-      "label": "Vitality",
-      "description": "A symbolic icon representing Vitality.",
-      "viewBox": "0 0 512 512"
-    },
-    "volume": {
-      "name": "volume",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/volume.svg",
-      "label": "Volume",
-      "description": "A symbolic icon representing Volume.",
-      "viewBox": "0 0 512 512"
-    },
-    "volume_x": {
-      "name": "volume_x",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/volume_x.svg",
-      "label": "Volume X",
-      "description": "A symbolic icon representing Volume X.",
-      "viewBox": "0 0 512 512"
-    },
-    "weight": {
-      "name": "weight",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/weight.svg",
-      "label": "Weight",
-      "description": "A symbolic icon representing Weight.",
-      "viewBox": "0 0 512 512"
-    },
-    "x": {
-      "name": "x",
-      "category": "ui",
-      "path": "/assets/icons/svg/ui/x.svg",
-      "label": "X",
-      "description": "A symbolic icon representing X.",
-      "viewBox": "0 0 512 512"
-    }
-  },
-  "world_atlas": {
-    "castle": {
-      "name": "castle",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/castle.svg",
-      "label": "Castle",
-      "description": "A symbolic icon representing Castle.",
-      "viewBox": "0 0 512 512"
-    },
-    "cave": {
-      "name": "cave",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/cave.svg",
-      "label": "Cave",
-      "description": "A symbolic icon representing Cave.",
-      "viewBox": "0 0 512 512"
-    },
-    "city": {
-      "name": "city",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/city.svg",
-      "label": "City",
-      "description": "A symbolic icon representing City.",
-      "viewBox": "0 0 512 512"
-    },
-    "continent": {
-      "name": "continent",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/continent.svg",
-      "label": "Continent",
-      "description": "A symbolic icon representing Continent.",
-      "viewBox": "0 0 512 512"
-    },
-    "deserts": {
-      "name": "deserts",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/deserts.svg",
-      "label": "Deserts",
-      "description": "A symbolic icon representing Deserts.",
-      "viewBox": "0 0 512 512"
-    },
-    "docks": {
-      "name": "docks",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/docks.svg",
-      "label": "Docks",
-      "description": "A symbolic icon representing Docks.",
-      "viewBox": "0 0 512 512"
-    },
-    "doorway": {
-      "name": "doorway",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/doorway.svg",
-      "label": "Doorway",
-      "description": "A symbolic icon representing Doorway.",
-      "viewBox": "0 0 512 512"
-    },
-    "dungeon": {
-      "name": "dungeon",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/dungeon.svg",
-      "label": "Dungeon",
-      "description": "A symbolic icon representing Dungeon.",
-      "viewBox": "0 0 512 512"
-    },
-    "estates": {
-      "name": "estates",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/estates.svg",
-      "label": "Estates",
-      "description": "A symbolic icon representing Estates.",
-      "viewBox": "0 0 512 512"
-    },
-    "forest": {
-      "name": "forest",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/forest.svg",
-      "label": "Forest",
-      "description": "A symbolic icon representing Forest.",
-      "viewBox": "0 0 512 512"
-    },
-    "fortresses_keeps": {
-      "name": "fortresses_keeps",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/fortresses_keeps.svg",
-      "label": "Fortresses Keeps",
-      "description": "A symbolic icon representing Fortresses Keeps.",
-      "viewBox": "0 0 512 512"
-    },
-    "gates": {
-      "name": "gates",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/gates.svg",
-      "label": "Gates",
-      "description": "A symbolic icon representing Gates.",
-      "viewBox": "0 0 512 512"
-    },
-    "glaciers_tundras": {
-      "name": "glaciers_tundras",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/glaciers_tundras.svg",
-      "label": "Glaciers Tundras",
-      "description": "A symbolic icon representing Glaciers Tundras.",
-      "viewBox": "0 0 512 512"
-    },
-    "grassland": {
-      "name": "grassland",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/grassland.svg",
-      "label": "Grassland",
-      "description": "A symbolic icon representing Grassland.",
-      "viewBox": "0 0 512 512"
-    },
-    "graveyard": {
-      "name": "graveyard",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/graveyard.svg",
-      "label": "Graveyard",
-      "description": "A symbolic icon representing Graveyard.",
-      "viewBox": "0 0 512 512"
-    },
-    "islands": {
-      "name": "islands",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/islands.svg",
-      "label": "Islands",
-      "description": "A symbolic icon representing Islands.",
-      "viewBox": "0 0 512 512"
-    },
-    "mountains": {
-      "name": "mountains",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/mountains.svg",
-      "label": "Mountains",
-      "description": "A symbolic icon representing Mountains.",
-      "viewBox": "0 0 512 512"
-    },
-    "plains": {
-      "name": "plains",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/plains.svg",
-      "label": "Plains",
-      "description": "A symbolic icon representing Plains.",
-      "viewBox": "0 0 512 512"
-    },
-    "poi": {
-      "name": "poi",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/poi.svg",
-      "label": "Poi",
-      "description": "A symbolic icon representing Poi.",
-      "viewBox": "0 0 512 512"
-    },
-    "region": {
-      "name": "region",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/region.svg",
-      "label": "Region",
-      "description": "A symbolic icon representing Region.",
-      "viewBox": "0 0 512 512"
-    },
-    "ruins": {
-      "name": "ruins",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/ruins.svg",
-      "label": "Ruins",
-      "description": "A symbolic icon representing Ruins.",
-      "viewBox": "0 0 512 512"
-    },
-    "sea": {
-      "name": "sea",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/sea.svg",
-      "label": "Sea",
-      "description": "A symbolic icon representing Sea.",
-      "viewBox": "0 0 512 512"
-    },
-    "settlement": {
-      "name": "settlement",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/settlement.svg",
-      "label": "Settlement",
-      "description": "A symbolic icon representing Settlement.",
-      "viewBox": "0 0 512 512"
-    },
-    "sewer_entrens": {
-      "name": "sewer_entrens",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/sewer_entrens.svg",
-      "label": "Sewer Entrens",
-      "description": "A symbolic icon representing Sewer Entrens.",
-      "viewBox": "0 0 512 512"
-    },
-    "shops": {
-      "name": "shops",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/shops.svg",
-      "label": "Shops",
-      "description": "A symbolic icon representing Shops.",
-      "viewBox": "0 0 512 512"
-    },
-    "shrines": {
-      "name": "shrines",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/shrines.svg",
-      "label": "Shrines",
-      "description": "A symbolic icon representing Shrines.",
-      "viewBox": "0 0 512 512"
-    },
-    "sub_region": {
-      "name": "sub_region",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/sub_region.svg",
-      "label": "Sub Region",
-      "description": "A symbolic icon representing Sub Region.",
-      "viewBox": "0 0 512 512"
-    },
-    "swamp": {
-      "name": "swamp",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/swamp.svg",
-      "label": "Swamp",
-      "description": "A symbolic icon representing Swamp.",
-      "viewBox": "0 0 512 512"
-    },
-    "taverns": {
-      "name": "taverns",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/taverns.svg",
-      "label": "Taverns",
-      "description": "A symbolic icon representing Taverns.",
-      "viewBox": "0 0 512 512"
-    },
-    "temples": {
-      "name": "temples",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/temples.svg",
-      "label": "Temples",
-      "description": "A symbolic icon representing Temples.",
-      "viewBox": "0 0 512 512"
-    },
-    "village": {
-      "name": "village",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/village.svg",
-      "label": "Village",
-      "description": "A symbolic icon representing Village.",
-      "viewBox": "0 0 512 512"
-    },
-    "waters": {
-      "name": "waters",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/waters.svg",
-      "label": "Waters",
-      "description": "A symbolic icon representing Waters.",
-      "viewBox": "0 0 512 512"
-    },
-    "wetlands": {
-      "name": "wetlands",
-      "category": "world_atlas",
-      "path": "/assets/icons/svg/world_atlas/wetlands.svg",
-      "label": "Wetlands",
-      "description": "A symbolic icon representing Wetlands.",
-      "viewBox": "0 0 512 512"
-    }
-  }
+const CATEGORY_MAPPINGS: Record<string, string[]> = {
+  "ability_score": [
+    "cha",
+    "charisma",
+    "constitut",
+    "constitution",
+    "dex",
+    "dexterity",
+    "int",
+    "intelligence",
+    "str",
+    "strength",
+    "wis",
+    "wisdom"
+  ],
+  "svg": [
+    "ability-score-improvement",
+    "backpack",
+    "break-concentration",
+    "checked-shield",
+    "hit-points",
+    "ink-pot",
+    "item-choice",
+    "item-grant",
+    "monster",
+    "mouse-left",
+    "mouse-middle",
+    "mouse",
+    "multiclass",
+    "original-class",
+    "range-connector",
+    "rosa-shield",
+    "scale-value",
+    "size",
+    "spell-slot",
+    "subclass",
+    "trait-armor-proficiencies",
+    "trait-condition-immunities",
+    "trait-damage-immunities",
+    "trait-damage-resistances",
+    "trait-damage-vulnerabilities",
+    "trait-languages",
+    "trait-saves",
+    "trait-skills",
+    "trait-tool-proficiencies",
+    "trait-weapon-proficiencies",
+    "trait",
+    "versatile"
+  ],
+  "actions": [
+    "attack",
+    "dash",
+    "dodge",
+    "help",
+    "hide",
+    "jump",
+    "move",
+    "read",
+    "trow"
+  ],
+  "active-effects": [
+    "enchantment",
+    "standard"
+  ],
+  "activity": [
+    "attack",
+    "cast",
+    "check",
+    "damage",
+    "enchant",
+    "forward",
+    "heal",
+    "order",
+    "save",
+    "summon",
+    "teleport",
+    "transform",
+    "utility"
+  ],
+  "creatures": [
+    "aberration",
+    "beast",
+    "celestial",
+    "character",
+    "construct",
+    "dragon",
+    "dragons",
+    "elemental",
+    "encounter",
+    "fey",
+    "fiend",
+    "giant",
+    "group",
+    "humanoid",
+    "monstrosity",
+    "npc",
+    "ooze",
+    "plant",
+    "undead",
+    "vehicle"
+  ],
+  "advancement": [
+    "modify-item"
+  ],
+  "attacks": [
+    "acid_breath",
+    "beak",
+    "bite",
+    "claw",
+    "claws",
+    "club",
+    "crush",
+    "fire_breath",
+    "greataxe",
+    "greatsword",
+    "hammer",
+    "lightning_breath",
+    "melee",
+    "poison_breath",
+    "ranged_attack",
+    "tail",
+    "talons",
+    "tentacle",
+    "trident",
+    "unarmed_strike",
+    "warhammer",
+    "web",
+    "whip",
+    "whirlwind"
+  ],
+  "behaviors": [
+    "apply-active-effect",
+    "difficult-terrain"
+  ],
+  "book_reader": [
+    "read_mode"
+  ],
+  "character": [
+    "blinded",
+    "burning",
+    "charmed",
+    "corroding",
+    "deafened",
+    "exhaustion",
+    "frightened",
+    "grappled",
+    "incapacitated",
+    "invisible",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "stunned",
+    "unconscious"
+  ],
+  "currency": [
+    "all_coins",
+    "coin",
+    "coins",
+    "copper_coin",
+    "cost",
+    "electrum_coin",
+    "gold_coin",
+    "loot",
+    "money_pouch",
+    "pay",
+    "platinum_coin",
+    "receive",
+    "silver_coin",
+    "wallet"
+  ],
+  "damage_types": [
+    "acid",
+    "all",
+    "bludgeoning",
+    "cold",
+    "fire",
+    "force",
+    "healing",
+    "lightning",
+    "maxhp",
+    "necrotic",
+    "piercing",
+    "poison",
+    "psychic",
+    "radiant",
+    "range",
+    "slashing",
+    "temphp",
+    "threshold",
+    "thunder",
+    "unarmed"
+  ],
+  "dice": [
+    "advantage",
+    "d10",
+    "d12",
+    "d20",
+    "d4",
+    "d6",
+    "d8",
+    "dice_roll"
+  ],
+  "documents": [
+    "active-effect",
+    "actor",
+    "item"
+  ],
+  "editor": [
+    "collapse",
+    "copy",
+    "cut",
+    "delete",
+    "devkit",
+    "duplicate",
+    "expand",
+    "map_marker",
+    "move",
+    "paste",
+    "redo",
+    "resize",
+    "save",
+    "scissors",
+    "settings",
+    "undo"
+  ],
+  "equipment_doll": [
+    "back",
+    "belt",
+    "boots",
+    "chest",
+    "cloak",
+    "focus",
+    "gem",
+    "hand",
+    "head",
+    "necklace",
+    "ring",
+    "shield",
+    "shirt",
+    "tools",
+    "weapon"
+  ],
+  "facilities": [
+    "build",
+    "change",
+    "craft",
+    "empower",
+    "enlarge",
+    "harvest",
+    "maintain",
+    "recruit",
+    "repair",
+    "research",
+    "trade"
+  ],
+  "feats": [
+    "alert",
+    "athlete",
+    "bountiful_luck",
+    "chef",
+    "crossbow_expert",
+    "great_weapon_master",
+    "healer",
+    "lucky",
+    "mage_slayer",
+    "musician",
+    "piercer",
+    "poisoner",
+    "rune_shaper",
+    "sharpshooter",
+    "shield_master",
+    "skill_expert",
+    "spell_sniper",
+    "strike_of_the_giants",
+    "telepathic",
+    "wood_elf_magic"
+  ],
+  "features": [
+    "action_surge",
+    "assassinate",
+    "cunning_action",
+    "expertise",
+    "fighter_fighting_style",
+    "fighter_fighting_style_archery",
+    "fighter_fighting_style_defense",
+    "fighter_fighting_style_dueling",
+    "fighter_fighting_style_great_weapon_fighting",
+    "fighter_fighting_style_protection",
+    "fighter_fighting_style_two_weapon_fighting",
+    "fighting_style_defense",
+    "fighting_style_dueling",
+    "fighting_style_great_weapon_fighting",
+    "fighting_style_protection",
+    "rage",
+    "second_wind",
+    "sneak_attack",
+    "uncanny_dodge"
+  ],
+  "equipment": [
+    "background",
+    "class",
+    "consumable",
+    "container",
+    "equipment",
+    "facility",
+    "feature",
+    "loot",
+    "race",
+    "spell",
+    "subclass",
+    "tool",
+    "weapon"
+  ],
+  "minigame": [
+    "brain",
+    "discard",
+    "dispell_card",
+    "draw_card",
+    "heads",
+    "hourglass",
+    "paper",
+    "paper_button",
+    "pickup_card",
+    "play_card",
+    "rock",
+    "rock_button",
+    "scissors_button",
+    "steal",
+    "tails"
+  ],
+  "musical_instruments": [
+    "bagpipes",
+    "drum",
+    "dulcimer",
+    "flute",
+    "horn",
+    "lute",
+    "lyre",
+    "pan_flute",
+    "shawm",
+    "viol"
+  ],
+  "properties": [
+    "magical"
+  ],
+  "magic_schools": [
+    "abjuration",
+    "conjuration",
+    "divination",
+    "enchantment",
+    "evocation",
+    "illusion",
+    "necromancy",
+    "transmutation"
+  ],
+  "skill": [
+    "acrobatics",
+    "animal_handling",
+    "arcana",
+    "athletics",
+    "deception",
+    "history",
+    "insight",
+    "intimidation",
+    "investigation",
+    "medicine",
+    "nature",
+    "perception",
+    "performance",
+    "persuasion",
+    "religion",
+    "sleight_of_hand",
+    "stealth",
+    "survival"
+  ],
+  "conditions": [
+    "bleeding",
+    "blinded",
+    "bloodied",
+    "burning",
+    "burrowing",
+    "charmed",
+    "concentrating",
+    "cover-half",
+    "cover-three-quarters",
+    "cover-total",
+    "cursed",
+    "dead-outline",
+    "dead",
+    "deafened",
+    "dehydration",
+    "diseased",
+    "dodging",
+    "encumbered",
+    "ethereal",
+    "exceeding-carrying-capacity",
+    "exhaustion-1",
+    "exhaustion-2",
+    "exhaustion-3",
+    "exhaustion-4",
+    "exhaustion-5",
+    "exhaustion-6",
+    "exhaustion",
+    "falling",
+    "flying",
+    "frightened",
+    "grappled",
+    "heavily-encumbered",
+    "hiding",
+    "hovering",
+    "incapacitated",
+    "invisible",
+    "malnutrition",
+    "marked",
+    "paralyzed",
+    "petrified",
+    "poisoned",
+    "prone",
+    "restrained",
+    "silenced",
+    "sleeping",
+    "stable",
+    "stunned",
+    "suffocation",
+    "surprised",
+    "transformed",
+    "unconscious"
+  ],
+  "subclasses": [
+    "arcane_trickster",
+    "assassin",
+    "battle_master",
+    "draconic",
+    "eldritch_knight",
+    "life",
+    "lore",
+    "open_hand",
+    "thief"
+  ],
+  "tarot": [
+    "tarot_00_the_fool",
+    "tarot_01_the_magician",
+    "tarot_02_the_priestess",
+    "tarot_03_the_empress",
+    "tarot_04_the_emperor",
+    "tarot_05_the_hierophant",
+    "tarot_06_the_lovers",
+    "tarot_07_the_chariot",
+    "tarot_08_strength",
+    "tarot_09_the_hermit",
+    "tarot_10_wheel_of_fortune",
+    "tarot_11_justice",
+    "tarot_12_the_hanged_man",
+    "tarot_13_death",
+    "tarot_14_temperance",
+    "tarot_15_the_devil",
+    "tarot_16_the_tower",
+    "tarot_17_the_star",
+    "tarot_18_the_moon",
+    "tarot_19_the_sun",
+    "tarot_20_judgement",
+    "tarot_21_the_world"
+  ],
+  "traits": [
+    "darkvision"
+  ],
+  "ui": [
+    "adjust",
+    "advance",
+    "alert_triangle",
+    "ancestry",
+    "arrow_left",
+    "award",
+    "bestiary",
+    "camera",
+    "chart",
+    "chat_interface",
+    "chevron_down",
+    "chevron_left",
+    "chevron_right",
+    "citation",
+    "close",
+    "console",
+    "death",
+    "display",
+    "document",
+    "download",
+    "energy",
+    "equip",
+    "file_json",
+    "filter",
+    "footsteps",
+    "grab",
+    "heart",
+    "identity",
+    "image",
+    "info",
+    "inventory_menu",
+    "key",
+    "legend",
+    "loading",
+    "magic_effect",
+    "materials",
+    "minus",
+    "music",
+    "overview",
+    "package",
+    "panel",
+    "party_stats",
+    "pen_line",
+    "place",
+    "play",
+    "plus",
+    "refresh",
+    "reset",
+    "rest",
+    "save_data",
+    "scan_identity",
+    "search",
+    "sent",
+    "skill",
+    "skip_forward",
+    "speaker_off",
+    "speaker_on",
+    "spells",
+    "star",
+    "stop",
+    "truck",
+    "unpack",
+    "upload",
+    "user",
+    "users",
+    "vitality",
+    "volume",
+    "volume_x",
+    "weight",
+    "x"
+  ],
+  "world_atlas": [
+    "castle",
+    "cave",
+    "city",
+    "continent",
+    "deserts",
+    "docks",
+    "doorway",
+    "dungeon",
+    "estates",
+    "forest",
+    "fortresses_keeps",
+    "gates",
+    "glaciers_tundras",
+    "grassland",
+    "graveyard",
+    "islands",
+    "mountains",
+    "plains",
+    "poi",
+    "region",
+    "ruins",
+    "sea",
+    "settlement",
+    "sewer_entrens",
+    "shops",
+    "shrines",
+    "sub_region",
+    "swamp",
+    "taverns",
+    "temples",
+    "village",
+    "waters",
+    "wetlands"
+  ]
 };
 
-export const ICON_CATEGORIES: IconCategory[] = [
+// Derived category map referencing ALL_ICONS entries directly
+export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {};
+Object.entries(CATEGORY_MAPPINGS).forEach(([catId, iconIds]) => {
+  SVG_CATEGORIES[catId] = {};
+  iconIds.forEach(id => {
+    if (ALL_ICONS[id]) {
+      SVG_CATEGORIES[catId][id] = ALL_ICONS[id];
+    }
+  });
+});
+
+const RAW_CATEGORY_META = [
   {
     "id": "ui",
     "name": "User Interface",
     "file": "svg/ui/",
     "description": "General interface elements and controls.",
-    "icons": {
-      "adjust": {
-        "name": "adjust",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/adjust.svg",
-        "label": "Adjust",
-        "description": "A symbolic icon representing Adjust.",
-        "viewBox": "0 0 512 512"
-      },
-      "advance": {
-        "name": "advance",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/advance.svg",
-        "label": "Advance",
-        "description": "A symbolic icon representing Advance.",
-        "viewBox": "0 0 512 512"
-      },
-      "alert_triangle": {
-        "name": "alert_triangle",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/alert_triangle.svg",
-        "label": "Alert Triangle",
-        "description": "A symbolic icon representing Alert Triangle.",
-        "viewBox": "0 0 512 512"
-      },
-      "ancestry": {
-        "name": "ancestry",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/ancestry.svg",
-        "label": "Ancestry",
-        "description": "A symbolic icon representing Ancestry.",
-        "viewBox": "0 0 512 512"
-      },
-      "arrow_left": {
-        "name": "arrow_left",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/arrow_left.svg",
-        "label": "Arrow Left",
-        "description": "A symbolic icon representing Arrow Left.",
-        "viewBox": "0 0 512 512"
-      },
-      "award": {
-        "name": "award",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/award.svg",
-        "label": "Award",
-        "description": "A symbolic icon representing Award.",
-        "viewBox": "0 0 512 512"
-      },
-      "bestiary": {
-        "name": "bestiary",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/bestiary.svg",
-        "label": "Bestiary",
-        "description": "A symbolic icon representing Bestiary.",
-        "viewBox": "0 0 512 512"
-      },
-      "camera": {
-        "name": "camera",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/camera.svg",
-        "label": "Camera",
-        "description": "A symbolic icon representing Camera.",
-        "viewBox": "0 0 512 512"
-      },
-      "chart": {
-        "name": "chart",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/chart.svg",
-        "label": "Chart",
-        "description": "A symbolic icon representing Chart.",
-        "viewBox": "0 0 512 512"
-      },
-      "chat_interface": {
-        "name": "chat_interface",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/chat_interface.svg",
-        "label": "Chat Interface",
-        "description": "A symbolic icon representing Chat Interface.",
-        "viewBox": "0 0 512 512"
-      },
-      "chevron_down": {
-        "name": "chevron_down",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/chevron_down.svg",
-        "label": "Chevron Down",
-        "description": "A symbolic icon representing Chevron Down.",
-        "viewBox": "0 0 512 512"
-      },
-      "chevron_left": {
-        "name": "chevron_left",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/chevron_left.svg",
-        "label": "Chevron Left",
-        "description": "A symbolic icon representing Chevron Left.",
-        "viewBox": "0 0 512 512"
-      },
-      "chevron_right": {
-        "name": "chevron_right",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/chevron_right.svg",
-        "label": "Chevron Right",
-        "description": "A symbolic icon representing Chevron Right.",
-        "viewBox": "0 0 512 512"
-      },
-      "citation": {
-        "name": "citation",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/citation.svg",
-        "label": "Citation",
-        "description": "A symbolic icon representing Citation.",
-        "viewBox": "0 0 512 512"
-      },
-      "close": {
-        "name": "close",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/close.svg",
-        "label": "Close",
-        "description": "A symbolic icon representing Close.",
-        "viewBox": "0 0 512 512"
-      },
-      "console": {
-        "name": "console",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/console.svg",
-        "label": "Console",
-        "description": "A symbolic icon representing Console.",
-        "viewBox": "0 0 512 512"
-      },
-      "death": {
-        "name": "death",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/death.svg",
-        "label": "Death",
-        "description": "A symbolic icon representing Death.",
-        "viewBox": "0 0 512 512"
-      },
-      "display": {
-        "name": "display",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/display.svg",
-        "label": "Display",
-        "description": "A symbolic icon representing Display.",
-        "viewBox": "0 0 512 512"
-      },
-      "document": {
-        "name": "document",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/document.svg",
-        "label": "Document",
-        "description": "A symbolic icon representing Document.",
-        "viewBox": "0 0 512 512"
-      },
-      "download": {
-        "name": "download",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/download.svg",
-        "label": "Download",
-        "description": "A symbolic icon representing Download.",
-        "viewBox": "0 0 512 512"
-      },
-      "energy": {
-        "name": "energy",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/energy.svg",
-        "label": "Energy",
-        "description": "A symbolic icon representing Energy.",
-        "viewBox": "0 0 512 512"
-      },
-      "equip": {
-        "name": "equip",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/equip.svg",
-        "label": "Equip",
-        "description": "A symbolic icon representing Equip.",
-        "viewBox": "0 0 512 512"
-      },
-      "file_json": {
-        "name": "file_json",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/file_json.svg",
-        "label": "File Json",
-        "description": "A symbolic icon representing File Json.",
-        "viewBox": "0 0 512 512"
-      },
-      "filter": {
-        "name": "filter",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/filter.svg",
-        "label": "Filter",
-        "description": "A symbolic icon representing Filter.",
-        "viewBox": "0 0 512 512"
-      },
-      "footsteps": {
-        "name": "footsteps",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/footsteps.svg",
-        "label": "Footsteps",
-        "description": "A symbolic icon representing Footsteps.",
-        "viewBox": "0 0 512 512"
-      },
-      "grab": {
-        "name": "grab",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/grab.svg",
-        "label": "Grab",
-        "description": "A symbolic icon representing Grab.",
-        "viewBox": "0 0 512 512"
-      },
-      "heart": {
-        "name": "heart",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/heart.svg",
-        "label": "Heart",
-        "description": "A symbolic icon representing Heart.",
-        "viewBox": "0 0 512 512"
-      },
-      "identity": {
-        "name": "identity",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/identity.svg",
-        "label": "Identity",
-        "description": "A symbolic icon representing Identity.",
-        "viewBox": "0 0 512 512"
-      },
-      "image": {
-        "name": "image",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/image.svg",
-        "label": "Image",
-        "description": "A symbolic icon representing Image.",
-        "viewBox": "0 0 512 512"
-      },
-      "info": {
-        "name": "info",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/info.svg",
-        "label": "Info",
-        "description": "A symbolic icon representing Info.",
-        "viewBox": "0 0 512 512"
-      },
-      "inventory_menu": {
-        "name": "inventory_menu",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/inventory_menu.svg",
-        "label": "Inventory Menu",
-        "description": "A symbolic icon representing Inventory Menu.",
-        "viewBox": "0 0 512 512"
-      },
-      "key": {
-        "name": "key",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/key.svg",
-        "label": "Key",
-        "description": "A symbolic icon representing Key.",
-        "viewBox": "0 0 512 512"
-      },
-      "legend": {
-        "name": "legend",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/legend.svg",
-        "label": "Legend",
-        "description": "A symbolic icon representing Legend.",
-        "viewBox": "0 0 512 512"
-      },
-      "loading": {
-        "name": "loading",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/loading.svg",
-        "label": "Loading",
-        "description": "A symbolic icon representing Loading.",
-        "viewBox": "0 0 512 512"
-      },
-      "magic_effect": {
-        "name": "magic_effect",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/magic_effect.svg",
-        "label": "Magic Effect",
-        "description": "A symbolic icon representing Magic Effect.",
-        "viewBox": "0 0 512 512"
-      },
-      "materials": {
-        "name": "materials",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/materials.svg",
-        "label": "Materials",
-        "description": "A symbolic icon representing Materials.",
-        "viewBox": "0 0 512 512"
-      },
-      "minus": {
-        "name": "minus",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/minus.svg",
-        "label": "Minus",
-        "description": "A symbolic icon representing Minus.",
-        "viewBox": "0 0 512 512"
-      },
-      "music": {
-        "name": "music",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/music.svg",
-        "label": "Music",
-        "description": "A symbolic icon representing Music.",
-        "viewBox": "0 0 512 512"
-      },
-      "overview": {
-        "name": "overview",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/overview.svg",
-        "label": "Overview",
-        "description": "A symbolic icon representing Overview.",
-        "viewBox": "0 0 512 512"
-      },
-      "package": {
-        "name": "package",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/package.svg",
-        "label": "Package",
-        "description": "A symbolic icon representing Package.",
-        "viewBox": "0 0 512 512"
-      },
-      "panel": {
-        "name": "panel",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/panel.svg",
-        "label": "Panel",
-        "description": "A symbolic icon representing Panel.",
-        "viewBox": "0 0 512 512"
-      },
-      "party_stats": {
-        "name": "party_stats",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/party_stats.svg",
-        "label": "Party Stats",
-        "description": "A symbolic icon representing Party Stats.",
-        "viewBox": "0 0 512 512"
-      },
-      "pen_line": {
-        "name": "pen_line",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/pen_line.svg",
-        "label": "Pen Line",
-        "description": "A symbolic icon representing Pen Line.",
-        "viewBox": "0 0 512 512"
-      },
-      "place": {
-        "name": "place",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/place.svg",
-        "label": "Place",
-        "description": "A symbolic icon representing Place.",
-        "viewBox": "0 0 512 512"
-      },
-      "play": {
-        "name": "play",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/play.svg",
-        "label": "Play",
-        "description": "A symbolic icon representing Play.",
-        "viewBox": "0 0 512 512"
-      },
-      "plus": {
-        "name": "plus",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/plus.svg",
-        "label": "Plus",
-        "description": "A symbolic icon representing Plus.",
-        "viewBox": "0 0 512 512"
-      },
-      "refresh": {
-        "name": "refresh",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/refresh.svg",
-        "label": "Refresh",
-        "description": "A symbolic icon representing Refresh.",
-        "viewBox": "0 0 512 512"
-      },
-      "reset": {
-        "name": "reset",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/reset.svg",
-        "label": "Reset",
-        "description": "A symbolic icon representing Reset.",
-        "viewBox": "0 0 512 512"
-      },
-      "rest": {
-        "name": "rest",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/rest.svg",
-        "label": "Rest",
-        "description": "A symbolic icon representing Rest.",
-        "viewBox": "0 0 512 512"
-      },
-      "save_data": {
-        "name": "save_data",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/save_data.svg",
-        "label": "Save Data",
-        "description": "A symbolic icon representing Save Data.",
-        "viewBox": "0 0 512 512"
-      },
-      "scan_identity": {
-        "name": "scan_identity",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/scan_identity.svg",
-        "label": "Scan Identity",
-        "description": "A symbolic icon representing Scan Identity.",
-        "viewBox": "0 0 512 512"
-      },
-      "search": {
-        "name": "search",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/search.svg",
-        "label": "Search",
-        "description": "A symbolic icon representing Search.",
-        "viewBox": "0 0 512 512"
-      },
-      "sent": {
-        "name": "sent",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/sent.svg",
-        "label": "Sent",
-        "description": "A symbolic icon representing Sent.",
-        "viewBox": "0 0 512 512"
-      },
-      "skill": {
-        "name": "skill",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/skill.svg",
-        "label": "Skill",
-        "description": "A symbolic icon representing Skill.",
-        "viewBox": "0 0 512 512"
-      },
-      "skip_forward": {
-        "name": "skip_forward",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/skip_forward.svg",
-        "label": "Skip Forward",
-        "description": "A symbolic icon representing Skip Forward.",
-        "viewBox": "0 0 512 512"
-      },
-      "speaker_off": {
-        "name": "speaker_off",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/speaker_off.svg",
-        "label": "Speaker Off",
-        "description": "A symbolic icon representing Speaker Off.",
-        "viewBox": "0 0 512 512"
-      },
-      "speaker_on": {
-        "name": "speaker_on",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/speaker_on.svg",
-        "label": "Speaker On",
-        "description": "A symbolic icon representing Speaker On.",
-        "viewBox": "0 0 512 512"
-      },
-      "spells": {
-        "name": "spells",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/spells.svg",
-        "label": "Spells",
-        "description": "A symbolic icon representing Spells.",
-        "viewBox": "0 0 512 512"
-      },
-      "star": {
-        "name": "star",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/star.svg",
-        "label": "Star",
-        "description": "A symbolic icon representing Star.",
-        "viewBox": "0 0 512 512"
-      },
-      "stop": {
-        "name": "stop",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/stop.svg",
-        "label": "Stop",
-        "description": "A symbolic icon representing Stop.",
-        "viewBox": "0 0 512 512"
-      },
-      "truck": {
-        "name": "truck",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/truck.svg",
-        "label": "Truck",
-        "description": "A symbolic icon representing Truck.",
-        "viewBox": "0 0 512 512"
-      },
-      "unpack": {
-        "name": "unpack",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/unpack.svg",
-        "label": "Unpack",
-        "description": "A symbolic icon representing Unpack.",
-        "viewBox": "0 0 512 512"
-      },
-      "upload": {
-        "name": "upload",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/upload.svg",
-        "label": "Upload",
-        "description": "A symbolic icon representing Upload.",
-        "viewBox": "0 0 512 512"
-      },
-      "user": {
-        "name": "user",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/user.svg",
-        "label": "User",
-        "description": "A symbolic icon representing User.",
-        "viewBox": "0 0 512 512"
-      },
-      "users": {
-        "name": "users",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/users.svg",
-        "label": "Users",
-        "description": "A symbolic icon representing Users.",
-        "viewBox": "0 0 512 512"
-      },
-      "vitality": {
-        "name": "vitality",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/vitality.svg",
-        "label": "Vitality",
-        "description": "A symbolic icon representing Vitality.",
-        "viewBox": "0 0 512 512"
-      },
-      "volume": {
-        "name": "volume",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/volume.svg",
-        "label": "Volume",
-        "description": "A symbolic icon representing Volume.",
-        "viewBox": "0 0 512 512"
-      },
-      "volume_x": {
-        "name": "volume_x",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/volume_x.svg",
-        "label": "Volume X",
-        "description": "A symbolic icon representing Volume X.",
-        "viewBox": "0 0 512 512"
-      },
-      "weight": {
-        "name": "weight",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/weight.svg",
-        "label": "Weight",
-        "description": "A symbolic icon representing Weight.",
-        "viewBox": "0 0 512 512"
-      },
-      "x": {
-        "name": "x",
-        "category": "ui",
-        "path": "/assets/icons/svg/ui/x.svg",
-        "label": "X",
-        "description": "A symbolic icon representing X.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "adjust",
+      "advance",
+      "alert_triangle",
+      "ancestry",
+      "arrow_left",
+      "award",
+      "bestiary",
+      "camera",
+      "chart",
+      "chat_interface",
+      "chevron_down",
+      "chevron_left",
+      "chevron_right",
+      "citation",
+      "close",
+      "console",
+      "death",
+      "display",
+      "document",
+      "download",
+      "energy",
+      "equip",
+      "file_json",
+      "filter",
+      "footsteps",
+      "grab",
+      "heart",
+      "identity",
+      "image",
+      "info",
+      "inventory_menu",
+      "key",
+      "legend",
+      "loading",
+      "magic_effect",
+      "materials",
+      "minus",
+      "music",
+      "overview",
+      "package",
+      "panel",
+      "party_stats",
+      "pen_line",
+      "place",
+      "play",
+      "plus",
+      "refresh",
+      "reset",
+      "rest",
+      "save_data",
+      "scan_identity",
+      "search",
+      "sent",
+      "skill",
+      "skip_forward",
+      "speaker_off",
+      "speaker_on",
+      "spells",
+      "star",
+      "stop",
+      "truck",
+      "unpack",
+      "upload",
+      "user",
+      "users",
+      "vitality",
+      "volume",
+      "volume_x",
+      "weight",
+      "x"
+    ]
   },
   {
     "id": "ability_score",
@@ -8678,1920 +4623,324 @@ export const ICON_CATEGORIES: IconCategory[] = [
     "file": "svg/abilities/",
     "description": "Core character attributes.",
     "isComplete": true,
-    "icons": {
-      "cha": {
-        "name": "cha",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/cha.svg",
-        "label": "Cha",
-        "description": "A symbolic icon representing Cha.",
-        "viewBox": "0 0 512 512"
-      },
-      "charisma": {
-        "name": "charisma",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/charisma.svg",
-        "label": "Charisma",
-        "description": "A symbolic icon representing Charisma.",
-        "viewBox": "0 0 100 100"
-      },
-      "constitut": {
-        "name": "constitut",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/constitut.svg",
-        "label": "Constitut",
-        "description": "A symbolic icon representing Constitut.",
-        "viewBox": "0 0 512 512"
-      },
-      "constitution": {
-        "name": "constitution",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/constitution.svg",
-        "label": "Constitution",
-        "description": "A symbolic icon representing Constitution.",
-        "viewBox": "4 4 93 93"
-      },
-      "dex": {
-        "name": "dex",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/dex.svg",
-        "label": "Dex",
-        "description": "A symbolic icon representing Dex.",
-        "viewBox": "0 0 512 512"
-      },
-      "dexterity": {
-        "name": "dexterity",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/dexterity.svg",
-        "label": "Dexterity",
-        "description": "A symbolic icon representing Dexterity.",
-        "viewBox": "159 133 712 712"
-      },
-      "int": {
-        "name": "int",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/int.svg",
-        "label": "Int",
-        "description": "A symbolic icon representing Int.",
-        "viewBox": "0 0 512 512"
-      },
-      "intelligence": {
-        "name": "intelligence",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/intelligence.svg",
-        "label": "Intelligence",
-        "description": "A symbolic icon representing Intelligence.",
-        "viewBox": "5 5 91 91"
-      },
-      "str": {
-        "name": "str",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/str.svg",
-        "label": "Str",
-        "description": "A symbolic icon representing Str.",
-        "viewBox": "0 0 512 512"
-      },
-      "strength": {
-        "name": "strength",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/strength.svg",
-        "label": "Strength",
-        "description": "A symbolic icon representing Strength.",
-        "viewBox": "4 4 92 92"
-      },
-      "wis": {
-        "name": "wis",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/wis.svg",
-        "label": "Wis",
-        "description": "A symbolic icon representing Wis.",
-        "viewBox": "0 0 512 512"
-      },
-      "wisdom": {
-        "name": "wisdom",
-        "category": "ability_score",
-        "path": "/assets/icons/svg/abilities/wisdom.svg",
-        "label": "Wisdom",
-        "description": "A symbolic icon representing Wisdom.",
-        "viewBox": "0 2 1e3 1e3"
-      }
-    }
+    "iconIds": [
+      "cha",
+      "charisma",
+      "constitut",
+      "constitution",
+      "dex",
+      "dexterity",
+      "int",
+      "intelligence",
+      "str",
+      "strength",
+      "wis",
+      "wisdom"
+    ]
   },
   {
     "id": "actions",
     "name": "Actions",
     "file": "svg/action/",
     "description": "Combat and exploration actions.",
-    "icons": {
-      "attack": {
-        "name": "attack",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/attack.svg",
-        "label": "Attack",
-        "description": "A symbolic icon representing Attack.",
-        "viewBox": "0 0 512 512"
-      },
-      "dash": {
-        "name": "dash",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/dash.svg",
-        "label": "Dash",
-        "description": "A symbolic icon representing Dash.",
-        "viewBox": "0 0 512 512"
-      },
-      "dodge": {
-        "name": "dodge",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/dodge.svg",
-        "label": "Dodge",
-        "description": "A symbolic icon representing Dodge.",
-        "viewBox": "0 0 512 512"
-      },
-      "help": {
-        "name": "help",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/help.svg",
-        "label": "Help",
-        "description": "A symbolic icon representing Help.",
-        "viewBox": "0 0 512 512"
-      },
-      "hide": {
-        "name": "hide",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/hide.svg",
-        "label": "Hide",
-        "description": "A symbolic icon representing Hide.",
-        "viewBox": "0 0 512 512"
-      },
-      "jump": {
-        "name": "jump",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/jump.svg",
-        "label": "Jump",
-        "description": "A symbolic icon representing Jump.",
-        "viewBox": "0 0 512 512"
-      },
-      "move": {
-        "name": "move",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/move.svg",
-        "label": "Move",
-        "description": "A symbolic icon representing Move.",
-        "viewBox": "0 0 512 512"
-      },
-      "read": {
-        "name": "read",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/read.svg",
-        "label": "Read",
-        "description": "A symbolic icon representing Read.",
-        "viewBox": "0 0 512 512"
-      },
-      "trow": {
-        "name": "trow",
-        "category": "actions",
-        "path": "/assets/icons/svg/action/trow.svg",
-        "label": "Trow",
-        "description": "A symbolic icon representing Trow.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "attack",
+      "dash",
+      "dodge",
+      "help",
+      "hide",
+      "jump",
+      "move",
+      "read",
+      "trow"
+    ]
   },
   {
     "id": "attacks",
     "name": "Attacks",
     "file": "svg/attacks/",
     "description": "Offensive maneuvers and strikes.",
-    "icons": {
-      "acid_breath": {
-        "name": "acid_breath",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/acid_breath.svg",
-        "label": "Acid Breath",
-        "description": "A symbolic icon representing Acid Breath.",
-        "viewBox": "0 0 512 512"
-      },
-      "beak": {
-        "name": "beak",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/beak.svg",
-        "label": "Beak",
-        "description": "A symbolic icon representing Beak.",
-        "viewBox": "0 0 512 512"
-      },
-      "bite": {
-        "name": "bite",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/bite.svg",
-        "label": "Bite",
-        "description": "A symbolic icon representing Bite.",
-        "viewBox": "0 0 512 512"
-      },
-      "claw": {
-        "name": "claw",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/claw.svg",
-        "label": "Claw",
-        "description": "A symbolic icon representing Claw.",
-        "viewBox": "0 0 512 512"
-      },
-      "claws": {
-        "name": "claws",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/claws.svg",
-        "label": "Claws",
-        "description": "A symbolic icon representing Claws.",
-        "viewBox": "0 0 512 512"
-      },
-      "club": {
-        "name": "club",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/club.svg",
-        "label": "Club",
-        "description": "A symbolic icon representing Club.",
-        "viewBox": "0 0 512 512"
-      },
-      "crush": {
-        "name": "crush",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/crush.svg",
-        "label": "Crush",
-        "description": "A symbolic icon representing Crush.",
-        "viewBox": "0 0 512 512"
-      },
-      "fire_breath": {
-        "name": "fire_breath",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/fire_breath.svg",
-        "label": "Fire Breath",
-        "description": "A symbolic icon representing Fire Breath.",
-        "viewBox": "0 0 512 512"
-      },
-      "greataxe": {
-        "name": "greataxe",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/greataxe.svg",
-        "label": "Greataxe",
-        "description": "A symbolic icon representing Greataxe.",
-        "viewBox": "0 0 512 512"
-      },
-      "greatsword": {
-        "name": "greatsword",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/greatsword.svg",
-        "label": "Greatsword",
-        "description": "A symbolic icon representing Greatsword.",
-        "viewBox": "0 0 512 512"
-      },
-      "hammer": {
-        "name": "hammer",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/hammer.svg",
-        "label": "Hammer",
-        "description": "A symbolic icon representing Hammer.",
-        "viewBox": "0 0 512 512"
-      },
-      "lightning_breath": {
-        "name": "lightning_breath",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/lightning_breath.svg",
-        "label": "Lightning Breath",
-        "description": "A symbolic icon representing Lightning Breath.",
-        "viewBox": "0 0 512 512"
-      },
-      "melee": {
-        "name": "melee",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/melee.svg",
-        "label": "Melee",
-        "description": "A symbolic icon representing Melee.",
-        "viewBox": "0 0 512 512"
-      },
-      "poison_breath": {
-        "name": "poison_breath",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/poison_breath.svg",
-        "label": "Poison Breath",
-        "description": "A symbolic icon representing Poison Breath.",
-        "viewBox": "0 0 512 512"
-      },
-      "ranged_attack": {
-        "name": "ranged_attack",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/ranged_attack.svg",
-        "label": "Ranged Attack",
-        "description": "A symbolic icon representing Ranged Attack.",
-        "viewBox": "0 0 512 512"
-      },
-      "tail": {
-        "name": "tail",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/tail.svg",
-        "label": "Tail",
-        "description": "A symbolic icon representing Tail.",
-        "viewBox": "0 0 512 512"
-      },
-      "talons": {
-        "name": "talons",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/talons.svg",
-        "label": "Talons",
-        "description": "A symbolic icon representing Talons.",
-        "viewBox": "0 0 512 512"
-      },
-      "tentacle": {
-        "name": "tentacle",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/tentacle.svg",
-        "label": "Tentacle",
-        "description": "A symbolic icon representing Tentacle.",
-        "viewBox": "0 0 512 512"
-      },
-      "trident": {
-        "name": "trident",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/trident.svg",
-        "label": "Trident",
-        "description": "A symbolic icon representing Trident.",
-        "viewBox": "0 0 512 512"
-      },
-      "unarmed_strike": {
-        "name": "unarmed_strike",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/unarmed_strike.svg",
-        "label": "Unarmed Strike",
-        "description": "A symbolic icon representing Unarmed Strike.",
-        "viewBox": "0 0 512 512"
-      },
-      "warhammer": {
-        "name": "warhammer",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/warhammer.svg",
-        "label": "Warhammer",
-        "description": "A symbolic icon representing Warhammer.",
-        "viewBox": "0 0 512 512"
-      },
-      "web": {
-        "name": "web",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/web.svg",
-        "label": "Web",
-        "description": "A symbolic icon representing Web.",
-        "viewBox": "0 0 512 512"
-      },
-      "whip": {
-        "name": "whip",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/whip.svg",
-        "label": "Whip",
-        "description": "A symbolic icon representing Whip.",
-        "viewBox": "0 0 512 512"
-      },
-      "whirlwind": {
-        "name": "whirlwind",
-        "category": "attacks",
-        "path": "/assets/icons/svg/attacks/whirlwind.svg",
-        "label": "Whirlwind",
-        "description": "A symbolic icon representing Whirlwind.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "acid_breath",
+      "beak",
+      "bite",
+      "claw",
+      "claws",
+      "club",
+      "crush",
+      "fire_breath",
+      "greataxe",
+      "greatsword",
+      "hammer",
+      "lightning_breath",
+      "melee",
+      "poison_breath",
+      "ranged_attack",
+      "tail",
+      "talons",
+      "tentacle",
+      "trident",
+      "unarmed_strike",
+      "warhammer",
+      "web",
+      "whip",
+      "whirlwind"
+    ]
   },
   {
     "id": "character",
     "name": "Character",
     "file": "svg/character/",
     "description": "Social and biographical elements.",
-    "icons": {
-      "blinded": {
-        "name": "blinded",
-        "category": "character",
-        "path": "/assets/icons/svg/character/blinded.svg",
-        "label": "Blinded",
-        "description": "A symbolic icon representing Blinded.",
-        "viewBox": "0 0 512 512"
-      },
-      "burning": {
-        "name": "burning",
-        "category": "character",
-        "path": "/assets/icons/svg/character/burning.svg",
-        "label": "Burning",
-        "description": "A symbolic icon representing Burning.",
-        "viewBox": "0 0 512 512"
-      },
-      "charmed": {
-        "name": "charmed",
-        "category": "character",
-        "path": "/assets/icons/svg/character/charmed.svg",
-        "label": "Charmed",
-        "description": "A symbolic icon representing Charmed.",
-        "viewBox": "0 0 512 512"
-      },
-      "corroding": {
-        "name": "corroding",
-        "category": "character",
-        "path": "/assets/icons/svg/character/corroding.svg",
-        "label": "Corroding",
-        "description": "A symbolic icon representing Corroding.",
-        "viewBox": "0 0 512 512"
-      },
-      "deafened": {
-        "name": "deafened",
-        "category": "character",
-        "path": "/assets/icons/svg/character/deafened.svg",
-        "label": "Deafened",
-        "description": "A symbolic icon representing Deafened.",
-        "viewBox": "0 0 512 512"
-      },
-      "exhaustion": {
-        "name": "exhaustion",
-        "category": "character",
-        "path": "/assets/icons/svg/character/exhaustion.svg",
-        "label": "Exhaustion",
-        "description": "A symbolic icon representing Exhaustion.",
-        "viewBox": "0 0 512 512"
-      },
-      "frightened": {
-        "name": "frightened",
-        "category": "character",
-        "path": "/assets/icons/svg/character/frightened.svg",
-        "label": "Frightened",
-        "description": "A symbolic icon representing Frightened.",
-        "viewBox": "0 0 512 512"
-      },
-      "grappled": {
-        "name": "grappled",
-        "category": "character",
-        "path": "/assets/icons/svg/character/grappled.svg",
-        "label": "Grappled",
-        "description": "A symbolic icon representing Grappled.",
-        "viewBox": "0 0 512 512"
-      },
-      "incapacitated": {
-        "name": "incapacitated",
-        "category": "character",
-        "path": "/assets/icons/svg/character/incapacitated.svg",
-        "label": "Incapacitated",
-        "description": "A symbolic icon representing Incapacitated.",
-        "viewBox": "0 0 512 512"
-      },
-      "invisible": {
-        "name": "invisible",
-        "category": "character",
-        "path": "/assets/icons/svg/character/invisible.svg",
-        "label": "Invisible",
-        "description": "A symbolic icon representing Invisible.",
-        "viewBox": "0 0 512 512"
-      },
-      "paralyzed": {
-        "name": "paralyzed",
-        "category": "character",
-        "path": "/assets/icons/svg/character/paralyzed.svg",
-        "label": "Paralyzed",
-        "description": "A symbolic icon representing Paralyzed.",
-        "viewBox": "0 0 512 512"
-      },
-      "petrified": {
-        "name": "petrified",
-        "category": "character",
-        "path": "/assets/icons/svg/character/petrified.svg",
-        "label": "Petrified",
-        "description": "A symbolic icon representing Petrified.",
-        "viewBox": "0 0 512 512"
-      },
-      "poisoned": {
-        "name": "poisoned",
-        "category": "character",
-        "path": "/assets/icons/svg/character/poisoned.svg",
-        "label": "Poisoned",
-        "description": "A symbolic icon representing Poisoned.",
-        "viewBox": "0 0 512 512"
-      },
-      "prone": {
-        "name": "prone",
-        "category": "character",
-        "path": "/assets/icons/svg/character/prone.svg",
-        "label": "Prone",
-        "description": "A symbolic icon representing Prone.",
-        "viewBox": "0 0 512 512"
-      },
-      "restrained": {
-        "name": "restrained",
-        "category": "character",
-        "path": "/assets/icons/svg/character/restrained.svg",
-        "label": "Restrained",
-        "description": "A symbolic icon representing Restrained.",
-        "viewBox": "0 0 512 512"
-      },
-      "stunned": {
-        "name": "stunned",
-        "category": "character",
-        "path": "/assets/icons/svg/character/stunned.svg",
-        "label": "Stunned",
-        "description": "A symbolic icon representing Stunned.",
-        "viewBox": "0 0 512 512"
-      },
-      "unconscious": {
-        "name": "unconscious",
-        "category": "character",
-        "path": "/assets/icons/svg/character/unconscious.svg",
-        "label": "Unconscious",
-        "description": "A symbolic icon representing Unconscious.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "blinded",
+      "burning",
+      "charmed",
+      "corroding",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "incapacitated",
+      "invisible",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "stunned",
+      "unconscious"
+    ]
   },
   {
     "id": "conditions",
     "name": "Conditions",
     "file": "svg/statuses/",
     "description": "Status effects and ailments.",
-    "icons": {
-      "bleeding": {
-        "name": "bleeding",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/bleeding.svg",
-        "label": "Bleeding",
-        "description": "A symbolic icon representing Bleeding.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "blinded": {
-        "name": "blinded",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/blinded.svg",
-        "label": "Blinded",
-        "description": "A symbolic icon representing Blinded.",
-        "viewBox": "0 0 384 384"
-      },
-      "bloodied": {
-        "name": "bloodied",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/bloodied.svg",
-        "label": "Bloodied",
-        "description": "A symbolic icon representing Bloodied.",
-        "viewBox": "0 0 512 512"
-      },
-      "burning": {
-        "name": "burning",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/burning.svg",
-        "label": "Burning",
-        "description": "A symbolic icon representing Burning.",
-        "viewBox": "0 0 512 512"
-      },
-      "burrowing": {
-        "name": "burrowing",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/burrowing.svg",
-        "label": "Burrowing",
-        "description": "A symbolic icon representing Burrowing.",
-        "viewBox": "0 0 512 512"
-      },
-      "charmed": {
-        "name": "charmed",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/charmed.svg",
-        "label": "Charmed",
-        "description": "A symbolic icon representing Charmed.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "concentrating": {
-        "name": "concentrating",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/concentrating.svg",
-        "label": "Concentrating",
-        "description": "A symbolic icon representing Concentrating.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "cover-half": {
-        "name": "cover-half",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/cover-half.svg",
-        "label": "Cover Half",
-        "description": "A symbolic icon representing Cover Half.",
-        "viewBox": "0 0 512 512"
-      },
-      "cover-three-quarters": {
-        "name": "cover-three-quarters",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/cover-three-quarters.svg",
-        "label": "Cover Three Quarters",
-        "description": "A symbolic icon representing Cover Three Quarters.",
-        "viewBox": "0 0 512 512"
-      },
-      "cover-total": {
-        "name": "cover-total",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/cover-total.svg",
-        "label": "Cover Total",
-        "description": "A symbolic icon representing Cover Total.",
-        "viewBox": "0 0 512 512"
-      },
-      "cursed": {
-        "name": "cursed",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/cursed.svg",
-        "label": "Cursed",
-        "description": "A symbolic icon representing Cursed.",
-        "viewBox": "0 0 512 512"
-      },
-      "dead-outline": {
-        "name": "dead-outline",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/dead-outline.svg",
-        "label": "Dead Outline",
-        "description": "A symbolic icon representing Dead Outline.",
-        "viewBox": "0 0 512 512"
-      },
-      "dead": {
-        "name": "dead",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/dead.svg",
-        "label": "Dead",
-        "description": "A symbolic icon representing Dead.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "deafened": {
-        "name": "deafened",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/deafened.svg",
-        "label": "Deafened",
-        "description": "A symbolic icon representing Deafened.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "dehydration": {
-        "name": "dehydration",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/dehydration.svg",
-        "label": "Dehydration",
-        "description": "A symbolic icon representing Dehydration.",
-        "viewBox": "0 0 512 512"
-      },
-      "diseased": {
-        "name": "diseased",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/diseased.svg",
-        "label": "Diseased",
-        "description": "A symbolic icon representing Diseased.",
-        "viewBox": "0 0 512 512"
-      },
-      "dodging": {
-        "name": "dodging",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/dodging.svg",
-        "label": "Dodging",
-        "description": "A symbolic icon representing Dodging.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "encumbered": {
-        "name": "encumbered",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/encumbered.svg",
-        "label": "Encumbered",
-        "description": "A symbolic icon representing Encumbered.",
-        "viewBox": "0 0 333.3 333.3"
-      },
-      "ethereal": {
-        "name": "ethereal",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/ethereal.svg",
-        "label": "Ethereal",
-        "description": "A symbolic icon representing Ethereal.",
-        "viewBox": "0 0 512 512"
-      },
-      "exceeding-carrying-capacity": {
-        "name": "exceeding-carrying-capacity",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exceeding-carrying-capacity.svg",
-        "label": "Exceeding Carrying Capacity",
-        "description": "A symbolic icon representing Exceeding Carrying Capacity.",
-        "viewBox": "0 0 333.3 333.3"
-      },
-      "exhaustion-1": {
-        "name": "exhaustion-1",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-1.svg",
-        "label": "Exhaustion 1",
-        "description": "A symbolic icon representing Exhaustion 1.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion-2": {
-        "name": "exhaustion-2",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-2.svg",
-        "label": "Exhaustion 2",
-        "description": "A symbolic icon representing Exhaustion 2.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion-3": {
-        "name": "exhaustion-3",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-3.svg",
-        "label": "Exhaustion 3",
-        "description": "A symbolic icon representing Exhaustion 3.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion-4": {
-        "name": "exhaustion-4",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-4.svg",
-        "label": "Exhaustion 4",
-        "description": "A symbolic icon representing Exhaustion 4.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion-5": {
-        "name": "exhaustion-5",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-5.svg",
-        "label": "Exhaustion 5",
-        "description": "A symbolic icon representing Exhaustion 5.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion-6": {
-        "name": "exhaustion-6",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion-6.svg",
-        "label": "Exhaustion 6",
-        "description": "A symbolic icon representing Exhaustion 6.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "exhaustion": {
-        "name": "exhaustion",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/exhaustion.svg",
-        "label": "Exhaustion",
-        "description": "A symbolic icon representing Exhaustion.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "falling": {
-        "name": "falling",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/falling.svg",
-        "label": "Falling",
-        "description": "A symbolic icon representing Falling.",
-        "viewBox": "0 0 512 512"
-      },
-      "flying": {
-        "name": "flying",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/flying.svg",
-        "label": "Flying",
-        "description": "A symbolic icon representing Flying.",
-        "viewBox": "0 0 512 512"
-      },
-      "frightened": {
-        "name": "frightened",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/frightened.svg",
-        "label": "Frightened",
-        "description": "A symbolic icon representing Frightened.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "grappled": {
-        "name": "grappled",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/grappled.svg",
-        "label": "Grappled",
-        "description": "A symbolic icon representing Grappled.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "heavily-encumbered": {
-        "name": "heavily-encumbered",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/heavily-encumbered.svg",
-        "label": "Heavily Encumbered",
-        "description": "A symbolic icon representing Heavily Encumbered.",
-        "viewBox": "0 0 333.3 333.3"
-      },
-      "hiding": {
-        "name": "hiding",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/hiding.svg",
-        "label": "Hiding",
-        "description": "A symbolic icon representing Hiding.",
-        "viewBox": "0 0 512 512"
-      },
-      "hovering": {
-        "name": "hovering",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/hovering.svg",
-        "label": "Hovering",
-        "description": "A symbolic icon representing Hovering.",
-        "viewBox": "0 0 512 512"
-      },
-      "incapacitated": {
-        "name": "incapacitated",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/incapacitated.svg",
-        "label": "Incapacitated",
-        "description": "A symbolic icon representing Incapacitated.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "invisible": {
-        "name": "invisible",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/invisible.svg",
-        "label": "Invisible",
-        "description": "A symbolic icon representing Invisible.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "malnutrition": {
-        "name": "malnutrition",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/malnutrition.svg",
-        "label": "Malnutrition",
-        "description": "A symbolic icon representing Malnutrition.",
-        "viewBox": "0 0 512 512"
-      },
-      "marked": {
-        "name": "marked",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/marked.svg",
-        "label": "Marked",
-        "description": "A symbolic icon representing Marked.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "paralyzed": {
-        "name": "paralyzed",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/paralyzed.svg",
-        "label": "Paralyzed",
-        "description": "A symbolic icon representing Paralyzed.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "petrified": {
-        "name": "petrified",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/petrified.svg",
-        "label": "Petrified",
-        "description": "A symbolic icon representing Petrified.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "poisoned": {
-        "name": "poisoned",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/poisoned.svg",
-        "label": "Poisoned",
-        "description": "A symbolic icon representing Poisoned.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "prone": {
-        "name": "prone",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/prone.svg",
-        "label": "Prone",
-        "description": "A symbolic icon representing Prone.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "restrained": {
-        "name": "restrained",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/restrained.svg",
-        "label": "Restrained",
-        "description": "A symbolic icon representing Restrained.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "silenced": {
-        "name": "silenced",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/silenced.svg",
-        "label": "Silenced",
-        "description": "A symbolic icon representing Silenced.",
-        "viewBox": "0 0 512 512"
-      },
-      "sleeping": {
-        "name": "sleeping",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/sleeping.svg",
-        "label": "Sleeping",
-        "description": "A symbolic icon representing Sleeping.",
-        "viewBox": "0 0 512 512"
-      },
-      "stable": {
-        "name": "stable",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/stable.svg",
-        "label": "Stable",
-        "description": "A symbolic icon representing Stable.",
-        "viewBox": "0 0 512 512"
-      },
-      "stunned": {
-        "name": "stunned",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/stunned.svg",
-        "label": "Stunned",
-        "description": "A symbolic icon representing Stunned.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "suffocation": {
-        "name": "suffocation",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/suffocation.svg",
-        "label": "Suffocation",
-        "description": "A symbolic icon representing Suffocation.",
-        "viewBox": "0 0 512 512"
-      },
-      "surprised": {
-        "name": "surprised",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/surprised.svg",
-        "label": "Surprised",
-        "description": "A symbolic icon representing Surprised.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "transformed": {
-        "name": "transformed",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/transformed.svg",
-        "label": "Transformed",
-        "description": "A symbolic icon representing Transformed.",
-        "viewBox": "0 0 512 512"
-      },
-      "unconscious": {
-        "name": "unconscious",
-        "category": "conditions",
-        "path": "/assets/icons/svg/statuses/unconscious.svg",
-        "label": "Unconscious",
-        "description": "A symbolic icon representing Unconscious.",
-        "viewBox": "0 0 1866.7 1866.7"
-      }
-    }
+    "iconIds": [
+      "bleeding",
+      "blinded",
+      "bloodied",
+      "burning",
+      "burrowing",
+      "charmed",
+      "concentrating",
+      "cover-half",
+      "cover-three-quarters",
+      "cover-total",
+      "cursed",
+      "dead-outline",
+      "dead",
+      "deafened",
+      "dehydration",
+      "diseased",
+      "dodging",
+      "encumbered",
+      "ethereal",
+      "exceeding-carrying-capacity",
+      "exhaustion-1",
+      "exhaustion-2",
+      "exhaustion-3",
+      "exhaustion-4",
+      "exhaustion-5",
+      "exhaustion-6",
+      "exhaustion",
+      "falling",
+      "flying",
+      "frightened",
+      "grappled",
+      "heavily-encumbered",
+      "hiding",
+      "hovering",
+      "incapacitated",
+      "invisible",
+      "malnutrition",
+      "marked",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "silenced",
+      "sleeping",
+      "stable",
+      "stunned",
+      "suffocation",
+      "surprised",
+      "transformed",
+      "unconscious"
+    ]
   },
   {
     "id": "creatures",
     "name": "Creatures",
     "file": "svg/actors/",
     "description": "Beast and monster identifiers.",
-    "icons": {
-      "aberration": {
-        "name": "aberration",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/aberration.svg",
-        "label": "Aberration",
-        "description": "A symbolic icon representing Aberration.",
-        "viewBox": "0 0 512 512"
-      },
-      "beast": {
-        "name": "beast",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/beast.svg",
-        "label": "Beast",
-        "description": "A symbolic icon representing Beast.",
-        "viewBox": "0 0 512 512"
-      },
-      "celestial": {
-        "name": "celestial",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/celestial.svg",
-        "label": "Celestial",
-        "description": "A symbolic icon representing Celestial.",
-        "viewBox": "0 0 512 512"
-      },
-      "character": {
-        "name": "character",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/character.svg",
-        "label": "Character",
-        "description": "A symbolic icon representing Character.",
-        "viewBox": "0 0 340 340"
-      },
-      "construct": {
-        "name": "construct",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/construct.svg",
-        "label": "Construct",
-        "description": "A symbolic icon representing Construct.",
-        "viewBox": "0 0 512 512"
-      },
-      "dragon": {
-        "name": "dragon",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/dragon.svg",
-        "label": "Dragon",
-        "description": "A symbolic icon representing Dragon.",
-        "viewBox": "0 0 512 512"
-      },
-      "dragons": {
-        "name": "dragons",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/dragons.svg",
-        "label": "Dragons",
-        "description": "A symbolic icon representing Dragons.",
-        "viewBox": "0 0 512 512"
-      },
-      "elemental": {
-        "name": "elemental",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/elemental.svg",
-        "label": "Elemental",
-        "description": "A symbolic icon representing Elemental.",
-        "viewBox": "0 0 512 512"
-      },
-      "encounter": {
-        "name": "encounter",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/encounter.svg",
-        "label": "Encounter",
-        "description": "A symbolic icon representing Encounter.",
-        "viewBox": "0 0 512 512"
-      },
-      "fey": {
-        "name": "fey",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/fey.svg",
-        "label": "Fey",
-        "description": "A symbolic icon representing Fey.",
-        "viewBox": "0 0 512 512"
-      },
-      "fiend": {
-        "name": "fiend",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/fiend.svg",
-        "label": "Fiend",
-        "description": "A symbolic icon representing Fiend.",
-        "viewBox": "0 0 512 512"
-      },
-      "giant": {
-        "name": "giant",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/giant.svg",
-        "label": "Giant",
-        "description": "A symbolic icon representing Giant.",
-        "viewBox": "0 0 512 512"
-      },
-      "group": {
-        "name": "group",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/group.svg",
-        "label": "Group",
-        "description": "A symbolic icon representing Group.",
-        "viewBox": "0 0 512 512"
-      },
-      "humanoid": {
-        "name": "humanoid",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/humanoid.svg",
-        "label": "Humanoid",
-        "description": "A symbolic icon representing Humanoid.",
-        "viewBox": "0 0 512 512"
-      },
-      "monstrosity": {
-        "name": "monstrosity",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/monstrosity.svg",
-        "label": "Monstrosity",
-        "description": "A symbolic icon representing Monstrosity.",
-        "viewBox": "0 0 512 512"
-      },
-      "npc": {
-        "name": "npc",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/npc.svg",
-        "label": "Npc",
-        "description": "A symbolic icon representing Npc.",
-        "viewBox": "0 0 474.67 471.22"
-      },
-      "ooze": {
-        "name": "ooze",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/ooze.svg",
-        "label": "Ooze",
-        "description": "A symbolic icon representing Ooze.",
-        "viewBox": "0 0 512 512"
-      },
-      "plant": {
-        "name": "plant",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/plant.svg",
-        "label": "Plant",
-        "description": "A symbolic icon representing Plant.",
-        "viewBox": "0 0 512 512"
-      },
-      "undead": {
-        "name": "undead",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/undead.svg",
-        "label": "Undead",
-        "description": "A symbolic icon representing Undead.",
-        "viewBox": "0 0 512 512"
-      },
-      "vehicle": {
-        "name": "vehicle",
-        "category": "creatures",
-        "path": "/assets/icons/svg/actors/vehicle.svg",
-        "label": "Vehicle",
-        "description": "A symbolic icon representing Vehicle.",
-        "viewBox": "0 0 479.97 480.01"
-      }
-    }
+    "iconIds": [
+      "aberration",
+      "beast",
+      "celestial",
+      "character",
+      "construct",
+      "dragon",
+      "dragons",
+      "elemental",
+      "encounter",
+      "fey",
+      "fiend",
+      "giant",
+      "group",
+      "humanoid",
+      "monstrosity",
+      "npc",
+      "ooze",
+      "plant",
+      "undead",
+      "vehicle"
+    ]
   },
   {
     "id": "damage_types",
     "name": "Damage Types",
     "file": "svg/damage/",
     "description": "Elemental and physical damage markers.",
-    "icons": {
-      "acid": {
-        "name": "acid",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/acid.svg",
-        "label": "Acid",
-        "description": "A symbolic icon representing Acid.",
-        "viewBox": "0 0 512 512"
-      },
-      "all": {
-        "name": "all",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/all.svg",
-        "label": "All",
-        "description": "A symbolic icon representing All.",
-        "viewBox": "0 0 512 512"
-      },
-      "bludgeoning": {
-        "name": "bludgeoning",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/bludgeoning.svg",
-        "label": "Bludgeoning",
-        "description": "A symbolic icon representing Bludgeoning.",
-        "viewBox": "0 0 512 512"
-      },
-      "cold": {
-        "name": "cold",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/cold.svg",
-        "label": "Cold",
-        "description": "A symbolic icon representing Cold.",
-        "viewBox": "0 0 512 512"
-      },
-      "fire": {
-        "name": "fire",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/fire.svg",
-        "label": "Fire",
-        "description": "A symbolic icon representing Fire.",
-        "viewBox": "0 0 512 512"
-      },
-      "force": {
-        "name": "force",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/force.svg",
-        "label": "Force",
-        "description": "A symbolic icon representing Force.",
-        "viewBox": "0 0 512 512"
-      },
-      "healing": {
-        "name": "healing",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/healing.svg",
-        "label": "Healing",
-        "description": "A symbolic icon representing Healing.",
-        "viewBox": "0 0 512 512"
-      },
-      "lightning": {
-        "name": "lightning",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/lightning.svg",
-        "label": "Lightning",
-        "description": "A symbolic icon representing Lightning.",
-        "viewBox": "0 0 512 512"
-      },
-      "maxhp": {
-        "name": "maxhp",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/maxhp.svg",
-        "label": "Maxhp",
-        "description": "A symbolic icon representing Maxhp.",
-        "viewBox": "0 0 512 512"
-      },
-      "necrotic": {
-        "name": "necrotic",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/necrotic.svg",
-        "label": "Necrotic",
-        "description": "A symbolic icon representing Necrotic.",
-        "viewBox": "0 0 512 512"
-      },
-      "piercing": {
-        "name": "piercing",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/piercing.svg",
-        "label": "Piercing",
-        "description": "A symbolic icon representing Piercing.",
-        "viewBox": "0 0 512 512"
-      },
-      "poison": {
-        "name": "poison",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/poison.svg",
-        "label": "Poison",
-        "description": "A symbolic icon representing Poison.",
-        "viewBox": "0 0 512 512"
-      },
-      "psychic": {
-        "name": "psychic",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/psychic.svg",
-        "label": "Psychic",
-        "description": "A symbolic icon representing Psychic.",
-        "viewBox": "0 0 512 512"
-      },
-      "radiant": {
-        "name": "radiant",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/radiant.svg",
-        "label": "Radiant",
-        "description": "A symbolic icon representing Radiant.",
-        "viewBox": "0 0 512 512"
-      },
-      "range": {
-        "name": "range",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/range.svg",
-        "label": "Range",
-        "description": "A symbolic icon representing Range.",
-        "viewBox": "0 0 512 512"
-      },
-      "slashing": {
-        "name": "slashing",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/slashing.svg",
-        "label": "Slashing",
-        "description": "A symbolic icon representing Slashing.",
-        "viewBox": "0 0 512 512"
-      },
-      "temphp": {
-        "name": "temphp",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/temphp.svg",
-        "label": "Temphp",
-        "description": "A symbolic icon representing Temphp.",
-        "viewBox": "0 0 512 512"
-      },
-      "threshold": {
-        "name": "threshold",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/threshold.svg",
-        "label": "Threshold",
-        "description": "A symbolic icon representing Threshold.",
-        "viewBox": "0 0 512 512"
-      },
-      "thunder": {
-        "name": "thunder",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/thunder.svg",
-        "label": "Thunder",
-        "description": "A symbolic icon representing Thunder.",
-        "viewBox": "0 0 512 512"
-      },
-      "unarmed": {
-        "name": "unarmed",
-        "category": "damage_types",
-        "path": "/assets/icons/svg/damage/unarmed.svg",
-        "label": "Unarmed",
-        "description": "A symbolic icon representing Unarmed.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "acid",
+      "all",
+      "bludgeoning",
+      "cold",
+      "fire",
+      "force",
+      "healing",
+      "lightning",
+      "maxhp",
+      "necrotic",
+      "piercing",
+      "poison",
+      "psychic",
+      "radiant",
+      "range",
+      "slashing",
+      "temphp",
+      "threshold",
+      "thunder",
+      "unarmed"
+    ]
   },
   {
     "id": "dice",
     "name": "Dice",
     "file": "svg/dice/",
     "description": "Polyhedral dice and randomization.",
-    "icons": {
-      "advantage": {
-        "name": "advantage",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/advantage.svg",
-        "label": "Advantage",
-        "description": "A symbolic icon representing Advantage.",
-        "viewBox": "0 0 512 512"
-      },
-      "d10": {
-        "name": "d10",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d10.svg",
-        "label": "D10",
-        "description": "A symbolic icon representing D10.",
-        "viewBox": "0 0 512 512"
-      },
-      "d12": {
-        "name": "d12",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d12.svg",
-        "label": "D12",
-        "description": "A symbolic icon representing D12.",
-        "viewBox": "0 0 512 512"
-      },
-      "d20": {
-        "name": "d20",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d20.svg",
-        "label": "D20",
-        "description": "A symbolic icon representing D20.",
-        "viewBox": "0 0 512 512"
-      },
-      "d4": {
-        "name": "d4",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d4.svg",
-        "label": "D4",
-        "description": "A symbolic icon representing D4.",
-        "viewBox": "0 0 512 512"
-      },
-      "d6": {
-        "name": "d6",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d6.svg",
-        "label": "D6",
-        "description": "A symbolic icon representing D6.",
-        "viewBox": "0 0 512 512"
-      },
-      "d8": {
-        "name": "d8",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/d8.svg",
-        "label": "D8",
-        "description": "A symbolic icon representing D8.",
-        "viewBox": "0 0 512 512"
-      },
-      "dice_roll": {
-        "name": "dice_roll",
-        "category": "dice",
-        "path": "/assets/icons/svg/dice/dice_roll.svg",
-        "label": "Dice Roll",
-        "description": "A symbolic icon representing Dice Roll.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "advantage",
+      "d10",
+      "d12",
+      "d20",
+      "d4",
+      "d6",
+      "d8",
+      "dice_roll"
+    ]
   },
   {
     "id": "equipment",
     "name": "Equipment",
     "file": "svg/items/",
     "description": "Items, gear, and tools.",
-    "icons": {
-      "background": {
-        "name": "background",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/background.svg",
-        "label": "Background",
-        "description": "A symbolic icon representing Background.",
-        "viewBox": "0 0 385.05 374.08"
-      },
-      "class": {
-        "name": "class",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/class.svg",
-        "label": "Class",
-        "description": "A symbolic icon representing Class.",
-        "viewBox": "0 0 373.35 355.11"
-      },
-      "consumable": {
-        "name": "consumable",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/consumable.svg",
-        "label": "Consumable",
-        "description": "A symbolic icon representing Consumable.",
-        "viewBox": "0 0 302.04 368"
-      },
-      "container": {
-        "name": "container",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/container.svg",
-        "label": "Container",
-        "description": "A symbolic icon representing Container.",
-        "viewBox": "0 0 344 376.7"
-      },
-      "equipment": {
-        "name": "equipment",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/equipment.svg",
-        "label": "Equipment",
-        "description": "A symbolic icon representing Equipment.",
-        "viewBox": "0 0 375.77 294.1"
-      },
-      "facility": {
-        "name": "facility",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/facility.svg",
-        "label": "Facility",
-        "description": "A symbolic icon representing Facility.",
-        "viewBox": "0 0 389.12 468.44"
-      },
-      "feature": {
-        "name": "feature",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/feature.svg",
-        "label": "Feature",
-        "description": "A symbolic icon representing Feature.",
-        "viewBox": "0 0 365.81 348.78"
-      },
-      "loot": {
-        "name": "loot",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/loot.svg",
-        "label": "Loot",
-        "description": "A symbolic icon representing Loot.",
-        "viewBox": "0 0 355.99 365.82"
-      },
-      "race": {
-        "name": "race",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/race.svg",
-        "label": "Race",
-        "description": "A symbolic icon representing Race.",
-        "viewBox": "0 0 288.02 386.56"
-      },
-      "spell": {
-        "name": "spell",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/spell.svg",
-        "label": "Spell",
-        "description": "A symbolic icon representing Spell.",
-        "viewBox": "0 0 368 350.22"
-      },
-      "subclass": {
-        "name": "subclass",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/subclass.svg",
-        "label": "Subclass",
-        "description": "A symbolic icon representing Subclass.",
-        "viewBox": "0 0 284.21 368"
-      },
-      "tool": {
-        "name": "tool",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/tool.svg",
-        "label": "Tool",
-        "description": "A symbolic icon representing Tool.",
-        "viewBox": "0 0 372.88 346.45"
-      },
-      "weapon": {
-        "name": "weapon",
-        "category": "equipment",
-        "path": "/assets/icons/svg/items/weapon.svg",
-        "label": "Weapon",
-        "description": "A symbolic icon representing Weapon.",
-        "viewBox": "0 0 378.67 382.87"
-      }
-    }
+    "iconIds": [
+      "background",
+      "class",
+      "consumable",
+      "container",
+      "equipment",
+      "facility",
+      "feature",
+      "loot",
+      "race",
+      "spell",
+      "subclass",
+      "tool",
+      "weapon"
+    ]
   },
   {
     "id": "equipment_doll",
     "name": "Equipment Doll",
     "file": "svg/equipment_doll/",
     "description": "Character slot indicators.",
-    "icons": {
-      "back": {
-        "name": "back",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/back.svg",
-        "label": "Back",
-        "description": "A symbolic icon representing Back.",
-        "viewBox": "0 0 512 512"
-      },
-      "belt": {
-        "name": "belt",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/belt.svg",
-        "label": "Belt",
-        "description": "A symbolic icon representing Belt.",
-        "viewBox": "0 0 512 512"
-      },
-      "boots": {
-        "name": "boots",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/boots.svg",
-        "label": "Boots",
-        "description": "A symbolic icon representing Boots.",
-        "viewBox": "0 0 512 512"
-      },
-      "chest": {
-        "name": "chest",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/chest.svg",
-        "label": "Chest",
-        "description": "A symbolic icon representing Chest.",
-        "viewBox": "0 0 512 512"
-      },
-      "cloak": {
-        "name": "cloak",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/cloak.svg",
-        "label": "Cloak",
-        "description": "A symbolic icon representing Cloak.",
-        "viewBox": "0 0 512 512"
-      },
-      "focus": {
-        "name": "focus",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/focus.svg",
-        "label": "Focus",
-        "description": "A symbolic icon representing Focus.",
-        "viewBox": "0 0 512 512"
-      },
-      "gem": {
-        "name": "gem",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/gem.svg",
-        "label": "Gem",
-        "description": "A symbolic icon representing Gem.",
-        "viewBox": "0 0 512 512"
-      },
-      "hand": {
-        "name": "hand",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/hand.svg",
-        "label": "Hand",
-        "description": "A symbolic icon representing Hand.",
-        "viewBox": "0 0 512 512"
-      },
-      "head": {
-        "name": "head",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/head.svg",
-        "label": "Head",
-        "description": "A symbolic icon representing Head.",
-        "viewBox": "0 0 512 512"
-      },
-      "necklace": {
-        "name": "necklace",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/necklace.svg",
-        "label": "Necklace",
-        "description": "A symbolic icon representing Necklace.",
-        "viewBox": "0 0 512 512"
-      },
-      "ring": {
-        "name": "ring",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/ring.svg",
-        "label": "Ring",
-        "description": "A symbolic icon representing Ring.",
-        "viewBox": "0 0 512 512"
-      },
-      "shield": {
-        "name": "shield",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/shield.svg",
-        "label": "Shield",
-        "description": "A symbolic icon representing Shield.",
-        "viewBox": "0 0 512 512"
-      },
-      "shirt": {
-        "name": "shirt",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/shirt.svg",
-        "label": "Shirt",
-        "description": "A symbolic icon representing Shirt.",
-        "viewBox": "0 0 512 512"
-      },
-      "tools": {
-        "name": "tools",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/tools.svg",
-        "label": "Tools",
-        "description": "A symbolic icon representing Tools.",
-        "viewBox": "0 0 512 512"
-      },
-      "weapon": {
-        "name": "weapon",
-        "category": "equipment_doll",
-        "path": "/assets/icons/svg/equipment_doll/weapon.svg",
-        "label": "Weapon",
-        "description": "A symbolic icon representing Weapon.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "back",
+      "belt",
+      "boots",
+      "chest",
+      "cloak",
+      "focus",
+      "gem",
+      "hand",
+      "head",
+      "necklace",
+      "ring",
+      "shield",
+      "shirt",
+      "tools",
+      "weapon"
+    ]
   },
   {
     "id": "feats",
     "name": "Feats",
     "file": "svg/feats/",
     "description": "Specialized talents and expertise.",
-    "icons": {
-      "alert": {
-        "name": "alert",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/alert.svg",
-        "label": "Alert",
-        "description": "A symbolic icon representing Alert.",
-        "viewBox": "0 0 512 512"
-      },
-      "athlete": {
-        "name": "athlete",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/athlete.svg",
-        "label": "Athlete",
-        "description": "A symbolic icon representing Athlete.",
-        "viewBox": "0 0 512 512"
-      },
-      "bountiful_luck": {
-        "name": "bountiful_luck",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/bountiful_luck.svg",
-        "label": "Bountiful Luck",
-        "description": "A symbolic icon representing Bountiful Luck.",
-        "viewBox": "0 0 512 512"
-      },
-      "chef": {
-        "name": "chef",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/chef.svg",
-        "label": "Chef",
-        "description": "A symbolic icon representing Chef.",
-        "viewBox": "0 0 512 512"
-      },
-      "crossbow_expert": {
-        "name": "crossbow_expert",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/crossbow_expert.svg",
-        "label": "Crossbow Expert",
-        "description": "A symbolic icon representing Crossbow Expert.",
-        "viewBox": "0 0 512 512"
-      },
-      "great_weapon_master": {
-        "name": "great_weapon_master",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/great_weapon_master.svg",
-        "label": "Great Weapon Master",
-        "description": "A symbolic icon representing Great Weapon Master.",
-        "viewBox": "0 0 512 512"
-      },
-      "healer": {
-        "name": "healer",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/healer.svg",
-        "label": "Healer",
-        "description": "A symbolic icon representing Healer.",
-        "viewBox": "0 0 512 512"
-      },
-      "lucky": {
-        "name": "lucky",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/lucky.svg",
-        "label": "Lucky",
-        "description": "A symbolic icon representing Lucky.",
-        "viewBox": "0 0 512 512"
-      },
-      "mage_slayer": {
-        "name": "mage_slayer",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/mage_slayer.svg",
-        "label": "Mage Slayer",
-        "description": "A symbolic icon representing Mage Slayer.",
-        "viewBox": "0 0 512 512"
-      },
-      "musician": {
-        "name": "musician",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/musician.svg",
-        "label": "Musician",
-        "description": "A symbolic icon representing Musician.",
-        "viewBox": "0 0 512 512"
-      },
-      "piercer": {
-        "name": "piercer",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/piercer.svg",
-        "label": "Piercer",
-        "description": "A symbolic icon representing Piercer.",
-        "viewBox": "0 0 512 512"
-      },
-      "poisoner": {
-        "name": "poisoner",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/poisoner.svg",
-        "label": "Poisoner",
-        "description": "A symbolic icon representing Poisoner.",
-        "viewBox": "0 0 512 512"
-      },
-      "rune_shaper": {
-        "name": "rune_shaper",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/rune_shaper.svg",
-        "label": "Rune Shaper",
-        "description": "A symbolic icon representing Rune Shaper.",
-        "viewBox": "0 0 512 512"
-      },
-      "sharpshooter": {
-        "name": "sharpshooter",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/sharpshooter.svg",
-        "label": "Sharpshooter",
-        "description": "A symbolic icon representing Sharpshooter.",
-        "viewBox": "0 0 512 512"
-      },
-      "shield_master": {
-        "name": "shield_master",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/shield_master.svg",
-        "label": "Shield Master",
-        "description": "A symbolic icon representing Shield Master.",
-        "viewBox": "0 0 512 512"
-      },
-      "skill_expert": {
-        "name": "skill_expert",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/skill_expert.svg",
-        "label": "Skill Expert",
-        "description": "A symbolic icon representing Skill Expert.",
-        "viewBox": "0 0 512 512"
-      },
-      "spell_sniper": {
-        "name": "spell_sniper",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/spell_sniper.svg",
-        "label": "Spell Sniper",
-        "description": "A symbolic icon representing Spell Sniper.",
-        "viewBox": "0 0 512 512"
-      },
-      "strike_of_the_giants": {
-        "name": "strike_of_the_giants",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/strike_of_the_giants.svg",
-        "label": "Strike Of The Giants",
-        "description": "A symbolic icon representing Strike Of The Giants.",
-        "viewBox": "0 0 512 512"
-      },
-      "telepathic": {
-        "name": "telepathic",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/telepathic.svg",
-        "label": "Telepathic",
-        "description": "A symbolic icon representing Telepathic.",
-        "viewBox": "0 0 512 512"
-      },
-      "wood_elf_magic": {
-        "name": "wood_elf_magic",
-        "category": "feats",
-        "path": "/assets/icons/svg/feats/wood_elf_magic.svg",
-        "label": "Wood Elf Magic",
-        "description": "A symbolic icon representing Wood Elf Magic.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "alert",
+      "athlete",
+      "bountiful_luck",
+      "chef",
+      "crossbow_expert",
+      "great_weapon_master",
+      "healer",
+      "lucky",
+      "mage_slayer",
+      "musician",
+      "piercer",
+      "poisoner",
+      "rune_shaper",
+      "sharpshooter",
+      "shield_master",
+      "skill_expert",
+      "spell_sniper",
+      "strike_of_the_giants",
+      "telepathic",
+      "wood_elf_magic"
+    ]
   },
   {
     "id": "features",
     "name": "Features",
     "file": "svg/features/",
     "description": "Class and racial abilities.",
-    "icons": {
-      "action_surge": {
-        "name": "action_surge",
-        "category": "features",
-        "path": "/assets/icons/svg/features/action_surge.svg",
-        "label": "Action Surge",
-        "description": "A symbolic icon representing Action Surge.",
-        "viewBox": "0 0 512 512"
-      },
-      "assassinate": {
-        "name": "assassinate",
-        "category": "features",
-        "path": "/assets/icons/svg/features/assassinate.svg",
-        "label": "Assassinate",
-        "description": "A symbolic icon representing Assassinate.",
-        "viewBox": "0 0 512 512"
-      },
-      "cunning_action": {
-        "name": "cunning_action",
-        "category": "features",
-        "path": "/assets/icons/svg/features/cunning_action.svg",
-        "label": "Cunning Action",
-        "description": "A symbolic icon representing Cunning Action.",
-        "viewBox": "0 0 512 512"
-      },
-      "expertise": {
-        "name": "expertise",
-        "category": "features",
-        "path": "/assets/icons/svg/features/expertise.svg",
-        "label": "Expertise",
-        "description": "A symbolic icon representing Expertise.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style": {
-        "name": "fighter_fighting_style",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style.svg",
-        "label": "Fighter Fighting Style",
-        "description": "A symbolic icon representing Fighter Fighting Style.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_archery": {
-        "name": "fighter_fighting_style_archery",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_archery.svg",
-        "label": "Fighter Fighting Style Archery",
-        "description": "A symbolic icon representing Fighter Fighting Style Archery.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_defense": {
-        "name": "fighter_fighting_style_defense",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_defense.svg",
-        "label": "Fighter Fighting Style Defense",
-        "description": "A symbolic icon representing Fighter Fighting Style Defense.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_dueling": {
-        "name": "fighter_fighting_style_dueling",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_dueling.svg",
-        "label": "Fighter Fighting Style Dueling",
-        "description": "A symbolic icon representing Fighter Fighting Style Dueling.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_great_weapon_fighting": {
-        "name": "fighter_fighting_style_great_weapon_fighting",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_great_weapon_fighting.svg",
-        "label": "Fighter Fighting Style Great Weapon Fighting",
-        "description": "A symbolic icon representing Fighter Fighting Style Great Weapon Fighting.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_protection": {
-        "name": "fighter_fighting_style_protection",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_protection.svg",
-        "label": "Fighter Fighting Style Protection",
-        "description": "A symbolic icon representing Fighter Fighting Style Protection.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighter_fighting_style_two_weapon_fighting": {
-        "name": "fighter_fighting_style_two_weapon_fighting",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighter_fighting_style_two_weapon_fighting.svg",
-        "label": "Fighter Fighting Style Two Weapon Fighting",
-        "description": "A symbolic icon representing Fighter Fighting Style Two Weapon Fighting.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighting_style_defense": {
-        "name": "fighting_style_defense",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighting_style_defense.svg",
-        "label": "Fighting Style Defense",
-        "description": "A symbolic icon representing Fighting Style Defense.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighting_style_dueling": {
-        "name": "fighting_style_dueling",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighting_style_dueling.svg",
-        "label": "Fighting Style Dueling",
-        "description": "A symbolic icon representing Fighting Style Dueling.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighting_style_great_weapon_fighting": {
-        "name": "fighting_style_great_weapon_fighting",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighting_style_great_weapon_fighting.svg",
-        "label": "Fighting Style Great Weapon Fighting",
-        "description": "A symbolic icon representing Fighting Style Great Weapon Fighting.",
-        "viewBox": "0 0 512 512"
-      },
-      "fighting_style_protection": {
-        "name": "fighting_style_protection",
-        "category": "features",
-        "path": "/assets/icons/svg/features/fighting_style_protection.svg",
-        "label": "Fighting Style Protection",
-        "description": "A symbolic icon representing Fighting Style Protection.",
-        "viewBox": "0 0 512 512"
-      },
-      "rage": {
-        "name": "rage",
-        "category": "features",
-        "path": "/assets/icons/svg/features/rage.svg",
-        "label": "Rage",
-        "description": "A symbolic icon representing Rage.",
-        "viewBox": "0 0 512 512"
-      },
-      "second_wind": {
-        "name": "second_wind",
-        "category": "features",
-        "path": "/assets/icons/svg/features/second_wind.svg",
-        "label": "Second Wind",
-        "description": "A symbolic icon representing Second Wind.",
-        "viewBox": "0 0 512 512"
-      },
-      "sneak_attack": {
-        "name": "sneak_attack",
-        "category": "features",
-        "path": "/assets/icons/svg/features/sneak_attack.svg",
-        "label": "Sneak Attack",
-        "description": "A symbolic icon representing Sneak Attack.",
-        "viewBox": "0 0 512 512"
-      },
-      "uncanny_dodge": {
-        "name": "uncanny_dodge",
-        "category": "features",
-        "path": "/assets/icons/svg/features/uncanny_dodge.svg",
-        "label": "Uncanny Dodge",
-        "description": "A symbolic icon representing Uncanny Dodge.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "action_surge",
+      "assassinate",
+      "cunning_action",
+      "expertise",
+      "fighter_fighting_style",
+      "fighter_fighting_style_archery",
+      "fighter_fighting_style_defense",
+      "fighter_fighting_style_dueling",
+      "fighter_fighting_style_great_weapon_fighting",
+      "fighter_fighting_style_protection",
+      "fighter_fighting_style_two_weapon_fighting",
+      "fighting_style_defense",
+      "fighting_style_dueling",
+      "fighting_style_great_weapon_fighting",
+      "fighting_style_protection",
+      "rage",
+      "second_wind",
+      "sneak_attack",
+      "uncanny_dodge"
+    ]
   },
   {
     "id": "magic_schools",
@@ -10599,534 +4948,114 @@ export const ICON_CATEGORIES: IconCategory[] = [
     "file": "svg/schools/",
     "description": "Arcane traditions and domains.",
     "isComplete": true,
-    "icons": {
-      "abjuration": {
-        "name": "abjuration",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/abjuration.svg",
-        "label": "Abjuration",
-        "description": "A symbolic icon representing Abjuration.",
-        "viewBox": "0 0 26 26"
-      },
-      "conjuration": {
-        "name": "conjuration",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/conjuration.svg",
-        "label": "Conjuration",
-        "description": "A symbolic icon representing Conjuration.",
-        "viewBox": "0 0 94 94"
-      },
-      "divination": {
-        "name": "divination",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/divination.svg",
-        "label": "Divination",
-        "description": "A symbolic icon representing Divination.",
-        "viewBox": "0 0 95 95"
-      },
-      "enchantment": {
-        "name": "enchantment",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/enchantment.svg",
-        "label": "Enchantment",
-        "description": "A symbolic icon representing Enchantment.",
-        "viewBox": "0 0 93 93"
-      },
-      "evocation": {
-        "name": "evocation",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/evocation.svg",
-        "label": "Evocation",
-        "description": "A symbolic icon representing Evocation.",
-        "viewBox": "0 0 120 120"
-      },
-      "illusion": {
-        "name": "illusion",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/illusion.svg",
-        "label": "Illusion",
-        "description": "A symbolic icon representing Illusion.",
-        "viewBox": "0 0 115 115"
-      },
-      "necromancy": {
-        "name": "necromancy",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/necromancy.svg",
-        "label": "Necromancy",
-        "description": "A symbolic icon representing Necromancy.",
-        "viewBox": "0 0 185 185"
-      },
-      "transmutation": {
-        "name": "transmutation",
-        "category": "magic_schools",
-        "path": "/assets/icons/svg/schools/transmutation.svg",
-        "label": "Transmutation",
-        "description": "A symbolic icon representing Transmutation.",
-        "viewBox": "0 0 164 164"
-      }
-    }
+    "iconIds": [
+      "abjuration",
+      "conjuration",
+      "divination",
+      "enchantment",
+      "evocation",
+      "illusion",
+      "necromancy",
+      "transmutation"
+    ]
   },
   {
     "id": "materials",
     "name": "Materials",
     "file": "svg/materials/",
     "description": "Crafting resources and ingredients.",
-    "icons": {}
+    "iconIds": []
   },
   {
     "id": "minigame",
     "name": "Minigames",
     "file": "svg/minigame/",
     "description": "Cards, tokens, and game pieces.",
-    "icons": {
-      "brain": {
-        "name": "brain",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/brain.svg",
-        "label": "Brain",
-        "description": "A symbolic icon representing Brain.",
-        "viewBox": "0 0 512 512"
-      },
-      "discard": {
-        "name": "discard",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/discard.svg",
-        "label": "Discard",
-        "description": "A symbolic icon representing Discard.",
-        "viewBox": "0 0 512 512"
-      },
-      "dispell_card": {
-        "name": "dispell_card",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/dispell_card.svg",
-        "label": "Dispell Card",
-        "description": "A symbolic icon representing Dispell Card.",
-        "viewBox": "0 0 512 512"
-      },
-      "draw_card": {
-        "name": "draw_card",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/draw_card.svg",
-        "label": "Draw Card",
-        "description": "A symbolic icon representing Draw Card.",
-        "viewBox": "0 0 512 512"
-      },
-      "heads": {
-        "name": "heads",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/heads.svg",
-        "label": "Heads",
-        "description": "A symbolic icon representing Heads.",
-        "viewBox": "0 0 512 512"
-      },
-      "hourglass": {
-        "name": "hourglass",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/hourglass.svg",
-        "label": "Hourglass",
-        "description": "A symbolic icon representing Hourglass.",
-        "viewBox": "0 0 512 512"
-      },
-      "paper": {
-        "name": "paper",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/paper.svg",
-        "label": "Paper",
-        "description": "A symbolic icon representing Paper.",
-        "viewBox": "0 0 512 512"
-      },
-      "paper_button": {
-        "name": "paper_button",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/paper_button.svg",
-        "label": "Paper Button",
-        "description": "A symbolic icon representing Paper Button.",
-        "viewBox": "0 0 512 512"
-      },
-      "pickup_card": {
-        "name": "pickup_card",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/pickup_card.svg",
-        "label": "Pickup Card",
-        "description": "A symbolic icon representing Pickup Card.",
-        "viewBox": "0 0 512 512"
-      },
-      "play_card": {
-        "name": "play_card",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/play_card.svg",
-        "label": "Play Card",
-        "description": "A symbolic icon representing Play Card.",
-        "viewBox": "0 0 512 512"
-      },
-      "rock": {
-        "name": "rock",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/rock.svg",
-        "label": "Rock",
-        "description": "A symbolic icon representing Rock.",
-        "viewBox": "0 0 512 512"
-      },
-      "rock_button": {
-        "name": "rock_button",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/rock_button.svg",
-        "label": "Rock Button",
-        "description": "A symbolic icon representing Rock Button.",
-        "viewBox": "0 0 512 512"
-      },
-      "scissors_button": {
-        "name": "scissors_button",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/scissors_button.svg",
-        "label": "Scissors Button",
-        "description": "A symbolic icon representing Scissors Button.",
-        "viewBox": "0 0 512 512"
-      },
-      "steal": {
-        "name": "steal",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/steal.svg",
-        "label": "Steal",
-        "description": "A symbolic icon representing Steal.",
-        "viewBox": "0 0 512 512"
-      },
-      "tails": {
-        "name": "tails",
-        "category": "minigame",
-        "path": "/assets/icons/svg/minigame/tails.svg",
-        "label": "Tails",
-        "description": "A symbolic icon representing Tails.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "brain",
+      "discard",
+      "dispell_card",
+      "draw_card",
+      "heads",
+      "hourglass",
+      "paper",
+      "paper_button",
+      "pickup_card",
+      "play_card",
+      "rock",
+      "rock_button",
+      "scissors_button",
+      "steal",
+      "tails"
+    ]
   },
   {
     "id": "musical_instruments",
     "name": "Instruments",
     "file": "svg/musical_instruments/",
     "description": "Tools for bards and performers.",
-    "icons": {
-      "bagpipes": {
-        "name": "bagpipes",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/bagpipes.svg",
-        "label": "Bagpipes",
-        "description": "A symbolic icon representing Bagpipes.",
-        "viewBox": "0 0 512 512"
-      },
-      "drum": {
-        "name": "drum",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/drum.svg",
-        "label": "Drum",
-        "description": "A symbolic icon representing Drum.",
-        "viewBox": "0 0 512 512"
-      },
-      "dulcimer": {
-        "name": "dulcimer",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/dulcimer.svg",
-        "label": "Dulcimer",
-        "description": "A symbolic icon representing Dulcimer.",
-        "viewBox": "0 0 512 512"
-      },
-      "flute": {
-        "name": "flute",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/flute.svg",
-        "label": "Flute",
-        "description": "A symbolic icon representing Flute.",
-        "viewBox": "0 0 512 512"
-      },
-      "horn": {
-        "name": "horn",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/horn.svg",
-        "label": "Horn",
-        "description": "A symbolic icon representing Horn.",
-        "viewBox": "0 0 512 512"
-      },
-      "lute": {
-        "name": "lute",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/lute.svg",
-        "label": "Lute",
-        "description": "A symbolic icon representing Lute.",
-        "viewBox": "0 0 512 512"
-      },
-      "lyre": {
-        "name": "lyre",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/lyre.svg",
-        "label": "Lyre",
-        "description": "A symbolic icon representing Lyre.",
-        "viewBox": "0 0 512 512"
-      },
-      "pan_flute": {
-        "name": "pan_flute",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/pan_flute.svg",
-        "label": "Pan Flute",
-        "description": "A symbolic icon representing Pan Flute.",
-        "viewBox": "0 0 512 512"
-      },
-      "shawm": {
-        "name": "shawm",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/shawm.svg",
-        "label": "Shawm",
-        "description": "A symbolic icon representing Shawm.",
-        "viewBox": "0 0 512 512"
-      },
-      "viol": {
-        "name": "viol",
-        "category": "musical_instruments",
-        "path": "/assets/icons/svg/musical_instruments/viol.svg",
-        "label": "Viol",
-        "description": "A symbolic icon representing Viol.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "bagpipes",
+      "drum",
+      "dulcimer",
+      "flute",
+      "horn",
+      "lute",
+      "lyre",
+      "pan_flute",
+      "shawm",
+      "viol"
+    ]
   },
   {
     "id": "skill",
     "name": "Skills",
     "file": "svg/skill/",
     "description": "Proficiencies and expertise.",
-    "icons": {
-      "acrobatics": {
-        "name": "acrobatics",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/acrobatics.svg",
-        "label": "Acrobatics",
-        "description": "A symbolic icon representing Acrobatics.",
-        "viewBox": "0 0 512 512"
-      },
-      "animal_handling": {
-        "name": "animal_handling",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/animal_handling.svg",
-        "label": "Animal Handling",
-        "description": "A symbolic icon representing Animal Handling.",
-        "viewBox": "0 0 512 512"
-      },
-      "arcana": {
-        "name": "arcana",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/arcana.svg",
-        "label": "Arcana",
-        "description": "A symbolic icon representing Arcana.",
-        "viewBox": "0 0 512 512"
-      },
-      "athletics": {
-        "name": "athletics",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/athletics.svg",
-        "label": "Athletics",
-        "description": "A symbolic icon representing Athletics.",
-        "viewBox": "0 0 512 512"
-      },
-      "deception": {
-        "name": "deception",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/deception.svg",
-        "label": "Deception",
-        "description": "A symbolic icon representing Deception.",
-        "viewBox": "0 0 512 512"
-      },
-      "history": {
-        "name": "history",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/history.svg",
-        "label": "History",
-        "description": "A symbolic icon representing History.",
-        "viewBox": "0 0 512 512"
-      },
-      "insight": {
-        "name": "insight",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/insight.svg",
-        "label": "Insight",
-        "description": "A symbolic icon representing Insight.",
-        "viewBox": "0 0 512 512"
-      },
-      "intimidation": {
-        "name": "intimidation",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/intimidation.svg",
-        "label": "Intimidation",
-        "description": "A symbolic icon representing Intimidation.",
-        "viewBox": "0 0 512 512"
-      },
-      "investigation": {
-        "name": "investigation",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/investigation.svg",
-        "label": "Investigation",
-        "description": "A symbolic icon representing Investigation.",
-        "viewBox": "0 0 512 512"
-      },
-      "medicine": {
-        "name": "medicine",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/medicine.svg",
-        "label": "Medicine",
-        "description": "A symbolic icon representing Medicine.",
-        "viewBox": "0 0 512 512"
-      },
-      "nature": {
-        "name": "nature",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/nature.svg",
-        "label": "Nature",
-        "description": "A symbolic icon representing Nature.",
-        "viewBox": "0 0 512 512"
-      },
-      "perception": {
-        "name": "perception",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/perception.svg",
-        "label": "Perception",
-        "description": "A symbolic icon representing Perception.",
-        "viewBox": "0 0 512 512"
-      },
-      "performance": {
-        "name": "performance",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/performance.svg",
-        "label": "Performance",
-        "description": "A symbolic icon representing Performance.",
-        "viewBox": "0 0 512 512"
-      },
-      "persuasion": {
-        "name": "persuasion",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/persuasion.svg",
-        "label": "Persuasion",
-        "description": "A symbolic icon representing Persuasion.",
-        "viewBox": "0 0 512 512"
-      },
-      "religion": {
-        "name": "religion",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/religion.svg",
-        "label": "Religion",
-        "description": "A symbolic icon representing Religion.",
-        "viewBox": "0 0 512 512"
-      },
-      "sleight_of_hand": {
-        "name": "sleight_of_hand",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/sleight_of_hand.svg",
-        "label": "Sleight Of Hand",
-        "description": "A symbolic icon representing Sleight Of Hand.",
-        "viewBox": "0 0 512 512"
-      },
-      "stealth": {
-        "name": "stealth",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/stealth.svg",
-        "label": "Stealth",
-        "description": "A symbolic icon representing Stealth.",
-        "viewBox": "0 0 512 512"
-      },
-      "survival": {
-        "name": "survival",
-        "category": "skill",
-        "path": "/assets/icons/svg/skill/survival.svg",
-        "label": "Survival",
-        "description": "A symbolic icon representing Survival.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "acrobatics",
+      "animal_handling",
+      "arcana",
+      "athletics",
+      "deception",
+      "history",
+      "insight",
+      "intimidation",
+      "investigation",
+      "medicine",
+      "nature",
+      "perception",
+      "performance",
+      "persuasion",
+      "religion",
+      "sleight_of_hand",
+      "stealth",
+      "survival"
+    ]
   },
   {
     "id": "stat_comparison",
     "name": "Stat Comparison",
     "file": "svg/stat_comparison/",
     "description": "Value changes and trends.",
-    "icons": {}
+    "iconIds": []
   },
   {
     "id": "subclasses",
     "name": "Subclasses",
     "file": "svg/subclasses/",
     "description": "Archetypes and specialization.",
-    "icons": {
-      "arcane_trickster": {
-        "name": "arcane_trickster",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/arcane_trickster.svg",
-        "label": "Arcane Trickster",
-        "description": "A symbolic icon representing Arcane Trickster.",
-        "viewBox": "0 0 512 512"
-      },
-      "assassin": {
-        "name": "assassin",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/assassin.svg",
-        "label": "Assassin",
-        "description": "A symbolic icon representing Assassin.",
-        "viewBox": "0 0 512 512"
-      },
-      "battle_master": {
-        "name": "battle_master",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/battle_master.svg",
-        "label": "Battle Master",
-        "description": "A symbolic icon representing Battle Master.",
-        "viewBox": "0 0 512 512"
-      },
-      "draconic": {
-        "name": "draconic",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/draconic.svg",
-        "label": "Draconic",
-        "description": "A symbolic icon representing Draconic.",
-        "viewBox": "0 0 512 512"
-      },
-      "eldritch_knight": {
-        "name": "eldritch_knight",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/eldritch_knight.svg",
-        "label": "Eldritch Knight",
-        "description": "A symbolic icon representing Eldritch Knight.",
-        "viewBox": "0 0 512 512"
-      },
-      "life": {
-        "name": "life",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/life.svg",
-        "label": "Life",
-        "description": "A symbolic icon representing Life.",
-        "viewBox": "0 0 512 512"
-      },
-      "lore": {
-        "name": "lore",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/lore.svg",
-        "label": "Lore",
-        "description": "A symbolic icon representing Lore.",
-        "viewBox": "0 0 512 512"
-      },
-      "open_hand": {
-        "name": "open_hand",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/open_hand.svg",
-        "label": "Open Hand",
-        "description": "A symbolic icon representing Open Hand.",
-        "viewBox": "0 0 512 512"
-      },
-      "thief": {
-        "name": "thief",
-        "category": "subclasses",
-        "path": "/assets/icons/svg/subclasses/thief.svg",
-        "label": "Thief",
-        "description": "A symbolic icon representing Thief.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "arcane_trickster",
+      "assassin",
+      "battle_master",
+      "draconic",
+      "eldritch_knight",
+      "life",
+      "lore",
+      "open_hand",
+      "thief"
+    ]
   },
   {
     "id": "tarot",
@@ -11134,1337 +5063,275 @@ export const ICON_CATEGORIES: IconCategory[] = [
     "file": "svg/tarot/",
     "description": "Arcana and divination cards.",
     "isComplete": true,
-    "icons": {
-      "tarot_00_the_fool": {
-        "name": "tarot_00_the_fool",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_00_the_fool.svg",
-        "label": "The Fool",
-        "description": "A symbolic icon representing The Fool.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_01_the_magician": {
-        "name": "tarot_01_the_magician",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_01_the_magician.svg",
-        "label": "The Magician",
-        "description": "A symbolic icon representing The Magician.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_02_the_priestess": {
-        "name": "tarot_02_the_priestess",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_02_the_priestess.svg",
-        "label": "The Priestess",
-        "description": "A symbolic icon representing The Priestess.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_03_the_empress": {
-        "name": "tarot_03_the_empress",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_03_the_empress.svg",
-        "label": "The Empress",
-        "description": "A symbolic icon representing The Empress.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_04_the_emperor": {
-        "name": "tarot_04_the_emperor",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_04_the_emperor.svg",
-        "label": "The Emperor",
-        "description": "A symbolic icon representing The Emperor.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_05_the_hierophant": {
-        "name": "tarot_05_the_hierophant",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_05_the_hierophant.svg",
-        "label": "The Hierophant",
-        "description": "A symbolic icon representing The Hierophant.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_06_the_lovers": {
-        "name": "tarot_06_the_lovers",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_06_the_lovers.svg",
-        "label": "The Lovers",
-        "description": "A symbolic icon representing The Lovers.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_07_the_chariot": {
-        "name": "tarot_07_the_chariot",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_07_the_chariot.svg",
-        "label": "The Chariot",
-        "description": "A symbolic icon representing The Chariot.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_08_strength": {
-        "name": "tarot_08_strength",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_08_strength.svg",
-        "label": "Strength",
-        "description": "A symbolic icon representing Strength.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_09_the_hermit": {
-        "name": "tarot_09_the_hermit",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_09_the_hermit.svg",
-        "label": "The Hermit",
-        "description": "A symbolic icon representing The Hermit.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_10_wheel_of_fortune": {
-        "name": "tarot_10_wheel_of_fortune",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_10_wheel_of_fortune.svg",
-        "label": "Wheel Of Fortune",
-        "description": "A symbolic icon representing Wheel Of Fortune.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_11_justice": {
-        "name": "tarot_11_justice",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_11_justice.svg",
-        "label": "Justice",
-        "description": "A symbolic icon representing Justice.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_12_the_hanged_man": {
-        "name": "tarot_12_the_hanged_man",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_12_the_hanged_man.svg",
-        "label": "The Hanged Man",
-        "description": "A symbolic icon representing The Hanged Man.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_13_death": {
-        "name": "tarot_13_death",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_13_death.svg",
-        "label": "Death",
-        "description": "A symbolic icon representing Death.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_14_temperance": {
-        "name": "tarot_14_temperance",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_14_temperance.svg",
-        "label": "Temperance",
-        "description": "A symbolic icon representing Temperance.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_15_the_devil": {
-        "name": "tarot_15_the_devil",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_15_the_devil.svg",
-        "label": "The Devil",
-        "description": "A symbolic icon representing The Devil.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_16_the_tower": {
-        "name": "tarot_16_the_tower",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_16_the_tower.svg",
-        "label": "The Tower",
-        "description": "A symbolic icon representing The Tower.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_17_the_star": {
-        "name": "tarot_17_the_star",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_17_the_star.svg",
-        "label": "The Star",
-        "description": "A symbolic icon representing The Star.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_18_the_moon": {
-        "name": "tarot_18_the_moon",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_18_the_moon.svg",
-        "label": "The Moon",
-        "description": "A symbolic icon representing The Moon.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_19_the_sun": {
-        "name": "tarot_19_the_sun",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_19_the_sun.svg",
-        "label": "The Sun",
-        "description": "A symbolic icon representing The Sun.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_20_judgement": {
-        "name": "tarot_20_judgement",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_20_judgement.svg",
-        "label": "Judgement",
-        "description": "A symbolic icon representing Judgement.",
-        "viewBox": "0 0 512 512"
-      },
-      "tarot_21_the_world": {
-        "name": "tarot_21_the_world",
-        "category": "tarot",
-        "path": "/assets/icons/svg/tarot/tarot_21_the_world.svg",
-        "label": "The World",
-        "description": "A symbolic icon representing The World.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "tarot_00_the_fool",
+      "tarot_01_the_magician",
+      "tarot_02_the_priestess",
+      "tarot_03_the_empress",
+      "tarot_04_the_emperor",
+      "tarot_05_the_hierophant",
+      "tarot_06_the_lovers",
+      "tarot_07_the_chariot",
+      "tarot_08_strength",
+      "tarot_09_the_hermit",
+      "tarot_10_wheel_of_fortune",
+      "tarot_11_justice",
+      "tarot_12_the_hanged_man",
+      "tarot_13_death",
+      "tarot_14_temperance",
+      "tarot_15_the_devil",
+      "tarot_16_the_tower",
+      "tarot_17_the_star",
+      "tarot_18_the_moon",
+      "tarot_19_the_sun",
+      "tarot_20_judgement",
+      "tarot_21_the_world"
+    ]
   },
   {
     "id": "traits",
     "name": "Traits",
     "file": "svg/traits/",
     "description": "Personality and physical quirks.",
-    "icons": {
-      "darkvision": {
-        "name": "darkvision",
-        "category": "traits",
-        "path": "/assets/icons/svg/traits/darkvision.svg",
-        "label": "Darkvision",
-        "description": "A symbolic icon representing Darkvision.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "darkvision"
+    ]
   },
   {
     "id": "world_atlas",
     "name": "World Atlas",
     "file": "svg/world_atlas/",
     "description": "Locations and geography.",
-    "icons": {
-      "castle": {
-        "name": "castle",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/castle.svg",
-        "label": "Castle",
-        "description": "A symbolic icon representing Castle.",
-        "viewBox": "0 0 512 512"
-      },
-      "cave": {
-        "name": "cave",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/cave.svg",
-        "label": "Cave",
-        "description": "A symbolic icon representing Cave.",
-        "viewBox": "0 0 512 512"
-      },
-      "city": {
-        "name": "city",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/city.svg",
-        "label": "City",
-        "description": "A symbolic icon representing City.",
-        "viewBox": "0 0 512 512"
-      },
-      "continent": {
-        "name": "continent",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/continent.svg",
-        "label": "Continent",
-        "description": "A symbolic icon representing Continent.",
-        "viewBox": "0 0 512 512"
-      },
-      "deserts": {
-        "name": "deserts",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/deserts.svg",
-        "label": "Deserts",
-        "description": "A symbolic icon representing Deserts.",
-        "viewBox": "0 0 512 512"
-      },
-      "docks": {
-        "name": "docks",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/docks.svg",
-        "label": "Docks",
-        "description": "A symbolic icon representing Docks.",
-        "viewBox": "0 0 512 512"
-      },
-      "doorway": {
-        "name": "doorway",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/doorway.svg",
-        "label": "Doorway",
-        "description": "A symbolic icon representing Doorway.",
-        "viewBox": "0 0 512 512"
-      },
-      "dungeon": {
-        "name": "dungeon",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/dungeon.svg",
-        "label": "Dungeon",
-        "description": "A symbolic icon representing Dungeon.",
-        "viewBox": "0 0 512 512"
-      },
-      "estates": {
-        "name": "estates",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/estates.svg",
-        "label": "Estates",
-        "description": "A symbolic icon representing Estates.",
-        "viewBox": "0 0 512 512"
-      },
-      "forest": {
-        "name": "forest",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/forest.svg",
-        "label": "Forest",
-        "description": "A symbolic icon representing Forest.",
-        "viewBox": "0 0 512 512"
-      },
-      "fortresses_keeps": {
-        "name": "fortresses_keeps",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/fortresses_keeps.svg",
-        "label": "Fortresses Keeps",
-        "description": "A symbolic icon representing Fortresses Keeps.",
-        "viewBox": "0 0 512 512"
-      },
-      "gates": {
-        "name": "gates",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/gates.svg",
-        "label": "Gates",
-        "description": "A symbolic icon representing Gates.",
-        "viewBox": "0 0 512 512"
-      },
-      "glaciers_tundras": {
-        "name": "glaciers_tundras",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/glaciers_tundras.svg",
-        "label": "Glaciers Tundras",
-        "description": "A symbolic icon representing Glaciers Tundras.",
-        "viewBox": "0 0 512 512"
-      },
-      "grassland": {
-        "name": "grassland",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/grassland.svg",
-        "label": "Grassland",
-        "description": "A symbolic icon representing Grassland.",
-        "viewBox": "0 0 512 512"
-      },
-      "graveyard": {
-        "name": "graveyard",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/graveyard.svg",
-        "label": "Graveyard",
-        "description": "A symbolic icon representing Graveyard.",
-        "viewBox": "0 0 512 512"
-      },
-      "islands": {
-        "name": "islands",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/islands.svg",
-        "label": "Islands",
-        "description": "A symbolic icon representing Islands.",
-        "viewBox": "0 0 512 512"
-      },
-      "mountains": {
-        "name": "mountains",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/mountains.svg",
-        "label": "Mountains",
-        "description": "A symbolic icon representing Mountains.",
-        "viewBox": "0 0 512 512"
-      },
-      "plains": {
-        "name": "plains",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/plains.svg",
-        "label": "Plains",
-        "description": "A symbolic icon representing Plains.",
-        "viewBox": "0 0 512 512"
-      },
-      "poi": {
-        "name": "poi",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/poi.svg",
-        "label": "Poi",
-        "description": "A symbolic icon representing Poi.",
-        "viewBox": "0 0 512 512"
-      },
-      "region": {
-        "name": "region",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/region.svg",
-        "label": "Region",
-        "description": "A symbolic icon representing Region.",
-        "viewBox": "0 0 512 512"
-      },
-      "ruins": {
-        "name": "ruins",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/ruins.svg",
-        "label": "Ruins",
-        "description": "A symbolic icon representing Ruins.",
-        "viewBox": "0 0 512 512"
-      },
-      "sea": {
-        "name": "sea",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/sea.svg",
-        "label": "Sea",
-        "description": "A symbolic icon representing Sea.",
-        "viewBox": "0 0 512 512"
-      },
-      "settlement": {
-        "name": "settlement",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/settlement.svg",
-        "label": "Settlement",
-        "description": "A symbolic icon representing Settlement.",
-        "viewBox": "0 0 512 512"
-      },
-      "sewer_entrens": {
-        "name": "sewer_entrens",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/sewer_entrens.svg",
-        "label": "Sewer Entrens",
-        "description": "A symbolic icon representing Sewer Entrens.",
-        "viewBox": "0 0 512 512"
-      },
-      "shops": {
-        "name": "shops",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/shops.svg",
-        "label": "Shops",
-        "description": "A symbolic icon representing Shops.",
-        "viewBox": "0 0 512 512"
-      },
-      "shrines": {
-        "name": "shrines",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/shrines.svg",
-        "label": "Shrines",
-        "description": "A symbolic icon representing Shrines.",
-        "viewBox": "0 0 512 512"
-      },
-      "sub_region": {
-        "name": "sub_region",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/sub_region.svg",
-        "label": "Sub Region",
-        "description": "A symbolic icon representing Sub Region.",
-        "viewBox": "0 0 512 512"
-      },
-      "swamp": {
-        "name": "swamp",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/swamp.svg",
-        "label": "Swamp",
-        "description": "A symbolic icon representing Swamp.",
-        "viewBox": "0 0 512 512"
-      },
-      "taverns": {
-        "name": "taverns",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/taverns.svg",
-        "label": "Taverns",
-        "description": "A symbolic icon representing Taverns.",
-        "viewBox": "0 0 512 512"
-      },
-      "temples": {
-        "name": "temples",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/temples.svg",
-        "label": "Temples",
-        "description": "A symbolic icon representing Temples.",
-        "viewBox": "0 0 512 512"
-      },
-      "village": {
-        "name": "village",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/village.svg",
-        "label": "Village",
-        "description": "A symbolic icon representing Village.",
-        "viewBox": "0 0 512 512"
-      },
-      "waters": {
-        "name": "waters",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/waters.svg",
-        "label": "Waters",
-        "description": "A symbolic icon representing Waters.",
-        "viewBox": "0 0 512 512"
-      },
-      "wetlands": {
-        "name": "wetlands",
-        "category": "world_atlas",
-        "path": "/assets/icons/svg/world_atlas/wetlands.svg",
-        "label": "Wetlands",
-        "description": "A symbolic icon representing Wetlands.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "castle",
+      "cave",
+      "city",
+      "continent",
+      "deserts",
+      "docks",
+      "doorway",
+      "dungeon",
+      "estates",
+      "forest",
+      "fortresses_keeps",
+      "gates",
+      "glaciers_tundras",
+      "grassland",
+      "graveyard",
+      "islands",
+      "mountains",
+      "plains",
+      "poi",
+      "region",
+      "ruins",
+      "sea",
+      "settlement",
+      "sewer_entrens",
+      "shops",
+      "shrines",
+      "sub_region",
+      "swamp",
+      "taverns",
+      "temples",
+      "village",
+      "waters",
+      "wetlands"
+    ]
   },
   {
     "id": "book_reader",
     "name": "Book Reader",
     "file": "svg/book_reader/",
     "description": "Documentation and lore tools.",
-    "icons": {
-      "read_mode": {
-        "name": "read_mode",
-        "category": "book_reader",
-        "path": "/assets/icons/svg/book_reader/read_mode.svg",
-        "label": "Read Mode",
-        "description": "A symbolic icon representing Read Mode.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "read_mode"
+    ]
   },
   {
     "id": "editor",
     "name": "Editor",
     "file": "svg/editor/",
     "description": "Development and tool icons.",
-    "icons": {
-      "collapse": {
-        "name": "collapse",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/collapse.svg",
-        "label": "Collapse",
-        "description": "A symbolic icon representing Collapse.",
-        "viewBox": "0 0 512 512"
-      },
-      "copy": {
-        "name": "copy",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/copy.svg",
-        "label": "Copy",
-        "description": "A symbolic icon representing Copy.",
-        "viewBox": "0 0 512 512"
-      },
-      "cut": {
-        "name": "cut",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/cut.svg",
-        "label": "Cut",
-        "description": "A symbolic icon representing Cut.",
-        "viewBox": "0 0 512 512"
-      },
-      "delete": {
-        "name": "delete",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/delete.svg",
-        "label": "Delete",
-        "description": "A symbolic icon representing Delete.",
-        "viewBox": "0 0 512 512"
-      },
-      "devkit": {
-        "name": "devkit",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/devkit.svg",
-        "label": "Devkit",
-        "description": "A symbolic icon representing Devkit.",
-        "viewBox": "0 0 512 512"
-      },
-      "duplicate": {
-        "name": "duplicate",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/duplicate.svg",
-        "label": "Duplicate",
-        "description": "A symbolic icon representing Duplicate.",
-        "viewBox": "0 0 512 512"
-      },
-      "expand": {
-        "name": "expand",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/expand.svg",
-        "label": "Expand",
-        "description": "A symbolic icon representing Expand.",
-        "viewBox": "0 0 512 512"
-      },
-      "map_marker": {
-        "name": "map_marker",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/map_marker.svg",
-        "label": "map_marker",
-        "description": "a simple upside-down tear shape marker for  pointing to a location ",
-        "viewBox": "0 0 512 512",
-        "usage": "also could be used for Wold atlas poi point of interest  ",
-        "usedIn": "editor setting new location nodes"
-      },
-      "move": {
-        "name": "move",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/move.svg",
-        "label": "Move",
-        "description": "A symbolic icon representing Move.",
-        "viewBox": "0 0 512 512"
-      },
-      "paste": {
-        "name": "paste",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/paste.svg",
-        "label": "Paste",
-        "description": "A symbolic icon representing Paste.",
-        "viewBox": "0 0 512 512"
-      },
-      "redo": {
-        "name": "redo",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/redo.svg",
-        "label": "Redo",
-        "description": "A symbolic icon representing Redo.",
-        "viewBox": "0 0 512 512"
-      },
-      "resize": {
-        "name": "resize",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/resize.svg",
-        "label": "Resize",
-        "description": "A symbolic icon representing Resize.",
-        "viewBox": "0 0 512 512"
-      },
-      "save": {
-        "name": "save",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/save.svg",
-        "label": "Save",
-        "description": "A symbolic icon representing Save.",
-        "viewBox": "0 0 512 512"
-      },
-      "scissors": {
-        "name": "scissors",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/scissors.svg",
-        "label": "Scissors",
-        "description": "A symbolic icon representing Scissors.",
-        "viewBox": "0 0 512 512"
-      },
-      "settings": {
-        "name": "settings",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/settings.svg",
-        "label": "Settings",
-        "description": "A symbolic icon representing Settings.",
-        "viewBox": "0 0 512 512"
-      },
-      "undo": {
-        "name": "undo",
-        "category": "editor",
-        "path": "/assets/icons/svg/editor/undo.svg",
-        "label": "Undo",
-        "description": "A symbolic icon representing Undo.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "collapse",
+      "copy",
+      "cut",
+      "delete",
+      "devkit",
+      "duplicate",
+      "expand",
+      "map_marker",
+      "move",
+      "paste",
+      "redo",
+      "resize",
+      "save",
+      "scissors",
+      "settings",
+      "undo"
+    ]
   },
   {
     "id": "currency",
     "name": "Currency",
     "file": "svg/currency/",
     "description": "Wealth and trade markers.",
-    "icons": {
-      "all_coins": {
-        "name": "all_coins",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/all_coins.svg",
-        "label": "All Coins",
-        "description": "A symbolic icon representing All Coins.",
-        "viewBox": "0 0 512 512"
-      },
-      "coin": {
-        "name": "coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/coin.svg",
-        "label": "Coin",
-        "description": "A symbolic icon representing Coin.",
-        "viewBox": "0 0 512 512"
-      },
-      "coins": {
-        "name": "coins",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/coins.svg",
-        "label": "Coins",
-        "description": "A symbolic icon representing Coins.",
-        "viewBox": "0 0 512 512"
-      },
-      "copper_coin": {
-        "name": "copper_coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/copper_coin.svg",
-        "label": "Copper Coin",
-        "description": "A symbolic icon representing Copper Coin.",
-        "viewBox": "0 0 512 512",
-        "color": "#B45309"
-      },
-      "cost": {
-        "name": "cost",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/cost.svg",
-        "label": "Cost",
-        "description": "A symbolic icon representing Cost.",
-        "viewBox": "0 0 512 512"
-      },
-      "electrum_coin": {
-        "name": "electrum_coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/electrum_coin.svg",
-        "label": "Electrum Coin",
-        "description": "A symbolic icon representing Electrum Coin.",
-        "viewBox": "0 0 512 512",
-        "color": "#10B981"
-      },
-      "gold_coin": {
-        "name": "gold_coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/gold_coin.svg",
-        "label": "Gold Coin",
-        "description": "A symbolic icon representing Gold Coin.",
-        "viewBox": "0 0 512 512",
-        "color": "#FBBF24"
-      },
-      "loot": {
-        "name": "loot",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/loot.svg",
-        "label": "Loot",
-        "description": "A symbolic icon representing Loot.",
-        "viewBox": "0 0 512 512"
-      },
-      "money_pouch": {
-        "name": "money_pouch",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/money_pouch.svg",
-        "label": "Money Pouch",
-        "description": "A symbolic icon representing Money Pouch.",
-        "viewBox": "0 0 512 512"
-      },
-      "pay": {
-        "name": "pay",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/pay.svg",
-        "label": "Pay",
-        "description": "A symbolic icon representing Pay.",
-        "viewBox": "0 0 512 512"
-      },
-      "platinum_coin": {
-        "name": "platinum_coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/platinum_coin.svg",
-        "label": "Platinum Coin",
-        "description": "A symbolic icon representing Platinum Coin.",
-        "viewBox": "0 0 512 512",
-        "color": "#E2E8F0"
-      },
-      "receive": {
-        "name": "receive",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/receive.svg",
-        "label": "Receive",
-        "description": "A symbolic icon representing Receive.",
-        "viewBox": "0 0 512 512"
-      },
-      "silver_coin": {
-        "name": "silver_coin",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/silver_coin.svg",
-        "label": "Silver Coin",
-        "description": "A symbolic icon representing Silver Coin.",
-        "viewBox": "0 0 512 512",
-        "color": "#94A3B8"
-      },
-      "wallet": {
-        "name": "wallet",
-        "category": "currency",
-        "path": "/assets/icons/svg/currency/wallet.svg",
-        "label": "Wallet",
-        "description": "A symbolic icon representing Wallet.",
-        "viewBox": "0 0 512 512"
-      }
-    }
+    "iconIds": [
+      "all_coins",
+      "coin",
+      "coins",
+      "copper_coin",
+      "cost",
+      "electrum_coin",
+      "gold_coin",
+      "loot",
+      "money_pouch",
+      "pay",
+      "platinum_coin",
+      "receive",
+      "silver_coin",
+      "wallet"
+    ]
   },
   {
     "id": "svg",
     "name": "Svg",
     "file": "svg/svg/",
-    "icons": {
-      "ability-score-improvement": {
-        "name": "ability-score-improvement",
-        "category": "svg",
-        "path": "/assets/icons/svg/ability-score-improvement.svg",
-        "label": "Ability Score Improvement",
-        "description": "A symbolic icon representing Ability Score Improvement.",
-        "viewBox": "0 0 512 512"
-      },
-      "backpack": {
-        "name": "backpack",
-        "category": "svg",
-        "path": "/assets/icons/svg/backpack.svg",
-        "label": "Backpack",
-        "description": "A symbolic icon representing Backpack.",
-        "viewBox": "0 0 346.58 365.81"
-      },
-      "break-concentration": {
-        "name": "break-concentration",
-        "category": "svg",
-        "path": "/assets/icons/svg/break-concentration.svg",
-        "label": "Break Concentration",
-        "description": "A symbolic icon representing Break Concentration.",
-        "viewBox": "0 0 1866.7 1866.7"
-      },
-      "checked-shield": {
-        "name": "checked-shield",
-        "category": "svg",
-        "path": "/assets/icons/svg/checked-shield.svg",
-        "label": "Checked Shield",
-        "description": "A symbolic icon representing Checked Shield.",
-        "viewBox": "0 0 333.5 377.2"
-      },
-      "hit-points": {
-        "name": "hit-points",
-        "category": "svg",
-        "path": "/assets/icons/svg/hit-points.svg",
-        "label": "Hit Points",
-        "description": "A symbolic icon representing Hit Points.",
-        "viewBox": "0 0 512 512"
-      },
-      "ink-pot": {
-        "name": "ink-pot",
-        "category": "svg",
-        "path": "/assets/icons/svg/ink-pot.svg",
-        "label": "Ink Pot",
-        "description": "A symbolic icon representing Ink Pot.",
-        "viewBox": "2 0 44 48.583"
-      },
-      "item-choice": {
-        "name": "item-choice",
-        "category": "svg",
-        "path": "/assets/icons/svg/item-choice.svg",
-        "label": "Item Choice",
-        "description": "A symbolic icon representing Item Choice.",
-        "viewBox": "0 0 512 512"
-      },
-      "item-grant": {
-        "name": "item-grant",
-        "category": "svg",
-        "path": "/assets/icons/svg/item-grant.svg",
-        "label": "Item Grant",
-        "description": "A symbolic icon representing Item Grant.",
-        "viewBox": "0 0 512 512"
-      },
-      "monster": {
-        "name": "monster",
-        "category": "svg",
-        "path": "/assets/icons/svg/monster.svg",
-        "label": "Monster",
-        "description": "A symbolic icon representing Monster.",
-        "viewBox": "0 0 474.67 471.22"
-      },
-      "mouse-left": {
-        "name": "mouse-left",
-        "category": "svg",
-        "path": "/assets/icons/svg/mouse-left.svg",
-        "label": "Mouse Left",
-        "description": "A symbolic icon representing Mouse Left.",
-        "viewBox": "11 3 42 42"
-      },
-      "mouse-middle": {
-        "name": "mouse-middle",
-        "category": "svg",
-        "path": "/assets/icons/svg/mouse-middle.svg",
-        "label": "Mouse Middle",
-        "description": "A symbolic icon representing Mouse Middle.",
-        "viewBox": "11 3 42 42"
-      },
-      "mouse": {
-        "name": "mouse",
-        "category": "svg",
-        "path": "/assets/icons/svg/mouse.svg",
-        "label": "Mouse",
-        "description": "A symbolic icon representing Mouse.",
-        "viewBox": "3 3 58 58"
-      },
-      "multiclass": {
-        "name": "multiclass",
-        "category": "svg",
-        "path": "/assets/icons/svg/multiclass.svg",
-        "label": "Multiclass",
-        "description": "A symbolic icon representing Multiclass.",
-        "viewBox": "0 0 495.01 458.64"
-      },
-      "original-class": {
-        "name": "original-class",
-        "category": "svg",
-        "path": "/assets/icons/svg/original-class.svg",
-        "label": "Original Class",
-        "description": "A symbolic icon representing Original Class.",
-        "viewBox": "0 0 512 512"
-      },
-      "range-connector": {
-        "name": "range-connector",
-        "category": "svg",
-        "path": "/assets/icons/svg/range-connector.svg",
-        "label": "Range Connector",
-        "description": "A symbolic icon representing Range Connector.",
-        "viewBox": "0 0 566.5 149.38"
-      },
-      "rosa-shield": {
-        "name": "rosa-shield",
-        "category": "svg",
-        "path": "/assets/icons/svg/rosa-shield.svg",
-        "label": "Rosa Shield",
-        "description": "A symbolic icon representing Rosa Shield.",
-        "viewBox": "0 0 318.36 374.68"
-      },
-      "scale-value": {
-        "name": "scale-value",
-        "category": "svg",
-        "path": "/assets/icons/svg/scale-value.svg",
-        "label": "Scale Value",
-        "description": "A symbolic icon representing Scale Value.",
-        "viewBox": "0 0 512 512"
-      },
-      "size": {
-        "name": "size",
-        "category": "svg",
-        "path": "/assets/icons/svg/size.svg",
-        "label": "Size",
-        "description": "A symbolic icon representing Size.",
-        "viewBox": "0 0 512 512"
-      },
-      "spell-slot": {
-        "name": "spell-slot",
-        "category": "svg",
-        "path": "/assets/icons/svg/spell-slot.svg",
-        "label": "Spell Slot",
-        "description": "A symbolic icon representing Spell Slot.",
-        "viewBox": "0 0 16 16"
-      },
-      "subclass": {
-        "name": "subclass",
-        "category": "svg",
-        "path": "/assets/icons/svg/subclass.svg",
-        "label": "Subclass",
-        "description": "A symbolic icon representing Subclass.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-armor-proficiencies": {
-        "name": "trait-armor-proficiencies",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-armor-proficiencies.svg",
-        "label": "Armor Proficiencies",
-        "description": "A symbolic icon representing Armor Proficiencies.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-condition-immunities": {
-        "name": "trait-condition-immunities",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-condition-immunities.svg",
-        "label": "Condition Immunities",
-        "description": "A symbolic icon representing Condition Immunities.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-damage-immunities": {
-        "name": "trait-damage-immunities",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-damage-immunities.svg",
-        "label": "Damage Immunities",
-        "description": "A symbolic icon representing Damage Immunities.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-damage-resistances": {
-        "name": "trait-damage-resistances",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-damage-resistances.svg",
-        "label": "Damage Resistances",
-        "description": "A symbolic icon representing Damage Resistances.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-damage-vulnerabilities": {
-        "name": "trait-damage-vulnerabilities",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-damage-vulnerabilities.svg",
-        "label": "Damage Vulnerabilities",
-        "description": "A symbolic icon representing Damage Vulnerabilities.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-languages": {
-        "name": "trait-languages",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-languages.svg",
-        "label": "Languages",
-        "description": "A symbolic icon representing Languages.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-saves": {
-        "name": "trait-saves",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-saves.svg",
-        "label": "Saves",
-        "description": "A symbolic icon representing Saves.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-skills": {
-        "name": "trait-skills",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-skills.svg",
-        "label": "Skills",
-        "description": "A symbolic icon representing Skills.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-tool-proficiencies": {
-        "name": "trait-tool-proficiencies",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-tool-proficiencies.svg",
-        "label": "Tool Proficiencies",
-        "description": "A symbolic icon representing Tool Proficiencies.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait-weapon-proficiencies": {
-        "name": "trait-weapon-proficiencies",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait-weapon-proficiencies.svg",
-        "label": "Weapon Proficiencies",
-        "description": "A symbolic icon representing Weapon Proficiencies.",
-        "viewBox": "0 0 512 512"
-      },
-      "trait": {
-        "name": "trait",
-        "category": "svg",
-        "path": "/assets/icons/svg/trait.svg",
-        "label": "Trait",
-        "description": "A symbolic icon representing Trait.",
-        "viewBox": "0 0 512 512"
-      },
-      "versatile": {
-        "name": "versatile",
-        "category": "svg",
-        "path": "/assets/icons/svg/versatile.svg",
-        "label": "Versatile",
-        "description": "A symbolic icon representing Versatile.",
-        "viewBox": "0 0 464.79 465.9"
-      }
-    },
+    "iconIds": [
+      "ability-score-improvement",
+      "backpack",
+      "break-concentration",
+      "checked-shield",
+      "hit-points",
+      "ink-pot",
+      "item-choice",
+      "item-grant",
+      "monster",
+      "mouse-left",
+      "mouse-middle",
+      "mouse",
+      "multiclass",
+      "original-class",
+      "range-connector",
+      "rosa-shield",
+      "scale-value",
+      "size",
+      "spell-slot",
+      "subclass",
+      "trait-armor-proficiencies",
+      "trait-condition-immunities",
+      "trait-damage-immunities",
+      "trait-damage-resistances",
+      "trait-damage-vulnerabilities",
+      "trait-languages",
+      "trait-saves",
+      "trait-skills",
+      "trait-tool-proficiencies",
+      "trait-weapon-proficiencies",
+      "trait",
+      "versatile"
+    ],
     "description": "Custom SVG icons under the Svg module."
   },
   {
     "id": "active-effects",
     "name": "Active Effects",
     "file": "svg/active-effects/",
-    "icons": {
-      "enchantment": {
-        "name": "enchantment",
-        "category": "active-effects",
-        "path": "/assets/icons/svg/active-effects/enchantment.svg",
-        "label": "Enchantment",
-        "description": "A symbolic icon representing Enchantment.",
-        "viewBox": "0 0 512 512"
-      },
-      "standard": {
-        "name": "standard",
-        "category": "active-effects",
-        "path": "/assets/icons/svg/active-effects/standard.svg",
-        "label": "Standard",
-        "description": "A symbolic icon representing Standard.",
-        "viewBox": "0 0 512 512"
-      }
-    },
+    "iconIds": [
+      "enchantment",
+      "standard"
+    ],
     "description": "Custom SVG icons under the Active Effects module."
   },
   {
     "id": "activity",
     "name": "Activity",
     "file": "svg/activity/",
-    "icons": {
-      "attack": {
-        "name": "attack",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/attack.svg",
-        "label": "Attack",
-        "description": "A symbolic icon representing Attack.",
-        "viewBox": "0 0 512 512"
-      },
-      "cast": {
-        "name": "cast",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/cast.svg",
-        "label": "Cast",
-        "description": "A symbolic icon representing Cast.",
-        "viewBox": "0 0 512 512"
-      },
-      "check": {
-        "name": "check",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/check.svg",
-        "label": "Check",
-        "description": "A symbolic icon representing Check.",
-        "viewBox": "0 0 512 512"
-      },
-      "damage": {
-        "name": "damage",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/damage.svg",
-        "label": "Damage",
-        "description": "A symbolic icon representing Damage.",
-        "viewBox": "0 0 512 512"
-      },
-      "enchant": {
-        "name": "enchant",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/enchant.svg",
-        "label": "Enchant",
-        "description": "A symbolic icon representing Enchant.",
-        "viewBox": "0 0 512 512"
-      },
-      "forward": {
-        "name": "forward",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/forward.svg",
-        "label": "Forward",
-        "description": "A symbolic icon representing Forward.",
-        "viewBox": "0 0 512 512"
-      },
-      "heal": {
-        "name": "heal",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/heal.svg",
-        "label": "Heal",
-        "description": "A symbolic icon representing Heal.",
-        "viewBox": "0 0 512 512"
-      },
-      "order": {
-        "name": "order",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/order.svg",
-        "label": "Order",
-        "description": "A symbolic icon representing Order.",
-        "viewBox": "0 0 474.56 417.85"
-      },
-      "save": {
-        "name": "save",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/save.svg",
-        "label": "Save",
-        "description": "A symbolic icon representing Save.",
-        "viewBox": "0 0 512 512"
-      },
-      "summon": {
-        "name": "summon",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/summon.svg",
-        "label": "Summon",
-        "description": "A symbolic icon representing Summon.",
-        "viewBox": "0 0 512 512"
-      },
-      "teleport": {
-        "name": "teleport",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/teleport.svg",
-        "label": "Teleport",
-        "description": "A symbolic icon representing Teleport.",
-        "viewBox": "0 0 512 512"
-      },
-      "transform": {
-        "name": "transform",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/transform.svg",
-        "label": "Transform",
-        "description": "A symbolic icon representing Transform.",
-        "viewBox": "0 0 512 512"
-      },
-      "utility": {
-        "name": "utility",
-        "category": "activity",
-        "path": "/assets/icons/svg/activity/utility.svg",
-        "label": "Utility",
-        "description": "A symbolic icon representing Utility.",
-        "viewBox": "0 0 512 512"
-      }
-    },
+    "iconIds": [
+      "attack",
+      "cast",
+      "check",
+      "damage",
+      "enchant",
+      "forward",
+      "heal",
+      "order",
+      "save",
+      "summon",
+      "teleport",
+      "transform",
+      "utility"
+    ],
     "description": "Custom SVG icons under the Activity module."
   },
   {
     "id": "advancement",
     "name": "Advancement",
     "file": "svg/advancement/",
-    "icons": {
-      "modify-item": {
-        "name": "modify-item",
-        "category": "advancement",
-        "path": "/assets/icons/svg/advancement/modify-item.svg",
-        "label": "Modify Item",
-        "description": "A symbolic icon representing Modify Item.",
-        "viewBox": "0 0 512 512"
-      }
-    },
+    "iconIds": [
+      "modify-item"
+    ],
     "description": "Custom SVG icons under the Advancement module."
   },
   {
     "id": "behaviors",
     "name": "Behaviors",
     "file": "svg/behaviors/",
-    "icons": {
-      "apply-active-effect": {
-        "name": "apply-active-effect",
-        "category": "behaviors",
-        "path": "/assets/icons/svg/behaviors/apply-active-effect.svg",
-        "label": "Apply Active Effect",
-        "description": "A symbolic icon representing Apply Active Effect.",
-        "viewBox": "0 0 512 512"
-      },
-      "difficult-terrain": {
-        "name": "difficult-terrain",
-        "category": "behaviors",
-        "path": "/assets/icons/svg/behaviors/difficult-terrain.svg",
-        "label": "Difficult Terrain",
-        "description": "A symbolic icon representing Difficult Terrain.",
-        "viewBox": "0 0 512 512"
-      }
-    },
+    "iconIds": [
+      "apply-active-effect",
+      "difficult-terrain"
+    ],
     "description": "Custom SVG icons under the Behaviors module."
   },
   {
     "id": "documents",
     "name": "Documents",
     "file": "svg/documents/",
-    "icons": {
-      "active-effect": {
-        "name": "active-effect",
-        "category": "documents",
-        "path": "/assets/icons/svg/documents/active-effect.svg",
-        "label": "Active Effect",
-        "description": "A symbolic icon representing Active Effect.",
-        "viewBox": "0 0 512 512"
-      },
-      "actor": {
-        "name": "actor",
-        "category": "documents",
-        "path": "/assets/icons/svg/documents/actor.svg",
-        "label": "Actor",
-        "description": "A symbolic icon representing Actor.",
-        "viewBox": "0 0 512 512"
-      },
-      "item": {
-        "name": "item",
-        "category": "documents",
-        "path": "/assets/icons/svg/documents/item.svg",
-        "label": "Item",
-        "description": "A symbolic icon representing Item.",
-        "viewBox": "0 0 512 512"
-      }
-    },
+    "iconIds": [
+      "active-effect",
+      "actor",
+      "item"
+    ],
     "description": "Custom SVG icons under the Documents module."
   },
   {
     "id": "facilities",
     "name": "Facilities",
     "file": "svg/facilities/",
-    "icons": {
-      "build": {
-        "name": "build",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/build.svg",
-        "label": "Build",
-        "description": "A symbolic icon representing Build.",
-        "viewBox": "0 0 457.22 446"
-      },
-      "change": {
-        "name": "change",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/change.svg",
-        "label": "Change",
-        "description": "A symbolic icon representing Change.",
-        "viewBox": "0 0 473.41 473.42"
-      },
-      "craft": {
-        "name": "craft",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/craft.svg",
-        "label": "Craft",
-        "description": "A symbolic icon representing Craft.",
-        "viewBox": "0 0 478.75 328.19"
-      },
-      "empower": {
-        "name": "empower",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/empower.svg",
-        "label": "Empower",
-        "description": "A symbolic icon representing Empower.",
-        "viewBox": "0 0 460 437.77"
-      },
-      "enlarge": {
-        "name": "enlarge",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/enlarge.svg",
-        "label": "Enlarge",
-        "description": "A symbolic icon representing Enlarge.",
-        "viewBox": "0 0 462 452.37"
-      },
-      "harvest": {
-        "name": "harvest",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/harvest.svg",
-        "label": "Harvest",
-        "description": "A symbolic icon representing Harvest.",
-        "viewBox": "0 0 460.92 469.12"
-      },
-      "maintain": {
-        "name": "maintain",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/maintain.svg",
-        "label": "Maintain",
-        "description": "A symbolic icon representing Maintain.",
-        "viewBox": "0 0 446.44 434.56"
-      },
-      "recruit": {
-        "name": "recruit",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/recruit.svg",
-        "label": "Recruit",
-        "description": "A symbolic icon representing Recruit.",
-        "viewBox": "0 0 384 464"
-      },
-      "repair": {
-        "name": "repair",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/repair.svg",
-        "label": "Repair",
-        "description": "A symbolic icon representing Repair.",
-        "viewBox": "0 0 476 475.96"
-      },
-      "research": {
-        "name": "research",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/research.svg",
-        "label": "Research",
-        "description": "A symbolic icon representing Research.",
-        "viewBox": "0 0 470.34 409.24"
-      },
-      "trade": {
-        "name": "trade",
-        "category": "facilities",
-        "path": "/assets/icons/svg/facilities/trade.svg",
-        "label": "Trade",
-        "description": "A symbolic icon representing Trade.",
-        "viewBox": "0 0 473.78 470.69"
-      }
-    },
+    "iconIds": [
+      "build",
+      "change",
+      "craft",
+      "empower",
+      "enlarge",
+      "harvest",
+      "maintain",
+      "recruit",
+      "repair",
+      "research",
+      "trade"
+    ],
     "description": "Custom SVG icons under the Facilities module."
   },
   {
     "id": "properties",
     "name": "Properties",
     "file": "svg/properties/",
-    "icons": {
-      "magical": {
-        "name": "magical",
-        "category": "properties",
-        "path": "/assets/icons/svg/properties/magical.svg",
-        "label": "Magical",
-        "description": "A symbolic icon representing Magical.",
-        "viewBox": "20 20 492 492"
-      }
-    },
+    "iconIds": [
+      "magical"
+    ],
     "description": "Custom SVG icons under the Properties module."
   }
 ];
+
+export const ICON_CATEGORIES: IconCategory[] = RAW_CATEGORY_META.map(cat => ({
+  id: cat.id,
+  name: cat.name,
+  file: cat.file,
+  description: cat.description,
+  isComplete: cat.isComplete,
+  icons: SVG_CATEGORIES[cat.id] || {}
+}));
 
 export const TAROT_ICONS = SVG_CATEGORIES['tarot'] || {};
 export const WORLD_ATLAS_ICONS = SVG_CATEGORIES['world_atlas'] || {};
