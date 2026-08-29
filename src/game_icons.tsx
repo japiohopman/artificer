@@ -18,6 +18,8 @@ interface GameIconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   width?: number;
   height?: number;
   color?: string;
+  stroke?: string;
+  strokeWidth?: number | string;
   fallbackName?: GameIconName | string;
   title?: string;
 }
@@ -30,6 +32,8 @@ export const GameIcon: React.FC<GameIconProps> = ({
   width,
   height,
   color = "currentColor",
+  stroke,
+  strokeWidth,
   fallbackName,
   title,
   style,
@@ -60,8 +64,8 @@ export const GameIcon: React.FC<GameIconProps> = ({
       height={h}
       className={className}
       style={{
-        width: `${w}px`,
-        height: `${h}px`,
+        width: typeof w === 'number' ? `${w}px` : w,
+        height: typeof h === 'number' ? `${h}px` : h,
         display: 'inline-block',
         verticalAlign: 'middle',
         ...style,
