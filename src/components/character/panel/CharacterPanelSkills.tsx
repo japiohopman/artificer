@@ -1,9 +1,12 @@
 import React from 'react';
-import { Character } from '../../../../store/useCharacterStore';
-import { GameIcon } from '../../../../game_icons';
+import { Character } from '../../../store/useCharacterStore';
+import { GameIcon } from '../../../game_icons';
+import { calculateDerivedStats, getEffectiveStats } from '../../../lib/statCalculations';
+import { getModifier } from '../../../lib/npcGeneratorUtils';
 
-interface CharacterMirrorSkillsProps {
-  newChar: Partial<Character>;
+interface CharacterPanelSkillsProps {
+  character: Partial<Character>;
+  className?: string;
 }
 
 const SKILLS_LIST = [
@@ -27,27 +30,26 @@ const SKILLS_LIST = [
   { id: 'survival', name: 'Survival', ability: 'wis' }
 ];
 
-export const CharacterMirrorSkills: React.FC<CharacterMirrorSkillsProps> = ({ newChar }) => {
-  const stats = newChar.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
-  const profBonus = 2; // Level 1 / Creator default
+export const CharacterPanelSkills: React.FC<CharacterPanelSkillsProps> = ({ character, className }) => {
+  const derivedStats = calculateDerivedStats(character as Character);
+  const effectiveStats = getEffectiveStats(character as Character);
+  const profBonus = derivedStats.proficiencyBonus;
 
-  // Extract proficient skills from newChar.proficiencies and newChar.choices
+  // Extract proficient skills from character proficiencies and choices
   const proficientSkillsSet = new Set<string>();
 
-  (newChar.proficiencies || []).forEach((p: any) => {
+  const processSkillEntry = (p: any) => {
     const raw = typeof p === 'string' ? p : p.name || p.index || '';
     const clean = raw.replace(/^Skill:\s*/i, '').toLowerCase().replace(/[\s-]+/g, '_');
     if (clean) proficientSkillsSet.add(clean);
-  });
+  };
 
-  const chosenSkills = newChar.choices?.skills || [];
-  chosenSkills.forEach((sk: string) => {
-    const clean = sk.toLowerCase().replace(/[\s-]+/g, '_');
-    if (clean) proficientSkillsSet.add(clean);
-  });
+  (character.proficiencies || []).forEach(processSkillEntry);
+  (character.skills || []).forEach(processSkillEntry);
+  (character.choices?.skills || []).forEach((sk: string) => processSkillEntry(sk));
 
   return (
-    <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1.5 bg-white/40 border border-dragon-gold/20 rounded-sm">
+    <div className={`flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1.5 bg-white/40 border border-dragon-gold/20 rounded-sm ${className || ''}`}>
       <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-1 mb-2">
         <span className="text-[9px] font-black uppercase text-dragon-red tracking-widest flex items-center gap-1.5">
           <GameIcon name="book" size={12} color="#8B0000" />
@@ -61,8 +63,8 @@ export const CharacterMirrorSkills: React.FC<CharacterMirrorSkillsProps> = ({ ne
       <div className="grid grid-cols-1 gap-1">
         {SKILLS_LIST.map((sk) => {
           const isProf = proficientSkillsSet.has(sk.id) || proficientSkillsSet.has(sk.name.toLowerCase().replace(/[\s-]+/g, '_'));
-          const abilityScore = (stats as any)[sk.ability] ?? 10;
-          const abilityMod = Math.floor((abilityScore - 10) / 2);
+          const score = (effectiveStats as any)[sk.ability] ?? 10;
+          const abilityMod = getModifier(score);
           const totalBonus = abilityMod + (isProf ? profBonus : 0);
           const bonusText = totalBonus >= 0 ? `+${totalBonus}` : `${totalBonus}`;
 

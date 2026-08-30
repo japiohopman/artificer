@@ -1,31 +1,13 @@
 import React from 'react';
-import { Character } from '../../../../store/useCharacterStore';
-import { GameIcon } from '../../../../game_icons';
+import { Character } from '../../../store/useCharacterStore';
+import { GameIcon } from '../../../game_icons';
+import { getEffectiveStats } from '../../../lib/statCalculations';
+import { getModifier } from '../../../lib/npcGeneratorUtils';
 
-interface CharacterMirrorAbilitiesProps {
-  newChar: Partial<Character>;
+interface CharacterPanelAbilitiesProps {
+  character: Partial<Character>;
+  className?: string;
 }
-
-const SPECIES_BONUSES_MAP: Record<string, Record<string, number>> = {
-  'human': { str: 1, dex: 1, con: 1, int: 1, wis: 1, cha: 1 },
-  'elf': { dex: 2 },
-  'high-elf': { dex: 2, int: 1 },
-  'wood-elf': { dex: 2, wis: 1 },
-  'drow': { dex: 2, cha: 1 },
-  'dwarf': { con: 2 },
-  'hill-dwarf': { con: 2, wis: 1 },
-  'mountain-dwarf': { str: 2, con: 2 },
-  'halfling': { dex: 2 },
-  'lightfoot-halfling': { dex: 2, cha: 1 },
-  'stout-halfling': { dex: 2, con: 1 },
-  'dragonborn': { str: 2, cha: 1 },
-  'gnome': { int: 2 },
-  'forest-gnome': { int: 2, dex: 1 },
-  'rock-gnome': { int: 2, con: 1 },
-  'half-elf': { cha: 2 },
-  'half-orc': { str: 2, con: 1 },
-  'tiefling': { int: 1, cha: 2 }
-};
 
 const ABILITIES = [
   { key: 'str', label: 'STR', icon: 'strength' },
@@ -36,15 +18,11 @@ const ABILITIES = [
   { key: 'cha', label: 'CHA', icon: 'charisma' }
 ] as const;
 
-export const CharacterMirrorAbilities: React.FC<CharacterMirrorAbilitiesProps> = ({ newChar }) => {
-  const baseStats = newChar.stats || { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 };
-
-  // Calculate species ability bonuses
-  const speciesKey = newChar.subrace?.toLowerCase() || newChar.race?.toLowerCase() || '';
-  const bonuses = SPECIES_BONUSES_MAP[speciesKey] || (newChar.race ? SPECIES_BONUSES_MAP[newChar.race.toLowerCase()] : {}) || {};
+export const CharacterPanelAbilities: React.FC<CharacterPanelAbilitiesProps> = ({ character, className }) => {
+  const effectiveStats = getEffectiveStats(character as Character);
 
   return (
-    <div className="w-full bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded-sm p-2 shadow-sm shrink-0">
+    <div className={`w-full bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded-sm p-2 shadow-sm shrink-0 ${className || ''}`}>
       <span className="text-[8px] font-black uppercase text-dragon-red tracking-widest block text-center mb-1">
         Attribute Matrix
       </span>
@@ -52,11 +30,9 @@ export const CharacterMirrorAbilities: React.FC<CharacterMirrorAbilitiesProps> =
       {/* 6 Horizontal Ability Score Tabs */}
       <div className="grid grid-cols-6 gap-1 w-full">
         {ABILITIES.map(({ key, label, icon }) => {
-          const baseVal = (baseStats as any)[key] ?? 10;
-          const bonusVal = bonuses[key] || 0;
-          const totalVal = baseVal + bonusVal;
-          const modVal = Math.floor((totalVal - 10) / 2);
-          const modText = modVal >= 0 ? `+${modVal}` : `${modVal}`;
+          const score = (effectiveStats as any)[key] ?? 10;
+          const mod = getModifier(score);
+          const modText = mod >= 0 ? `+${mod}` : `${mod}`;
 
           return (
             <div
@@ -76,7 +52,7 @@ export const CharacterMirrorAbilities: React.FC<CharacterMirrorAbilitiesProps> =
 
               {/* Total Score Value */}
               <span className="relative z-10 text-[12px] font-header font-black text-dragon-darkRed leading-none my-0.5">
-                {totalVal}
+                {score}
               </span>
 
               {/* Modifier Value */}

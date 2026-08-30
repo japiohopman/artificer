@@ -25,7 +25,7 @@ import { IdentityStep } from './CharacterCreator/IdentityStep';
 import { ReviewStep } from './CharacterCreator/ReviewStep';
 import { SlotStep } from './CharacterCreator/SlotStep';
 import { BackstoryStep } from './CharacterCreator/BackstoryStep';
-import { CreatorRightPanel } from './CharacterCreator/CreatorRightPanel';
+import { CreatorRightPanel } from './CreatorRightPanel';
 import { ValidationOverlay, MissingStepItem } from './CharacterCreator/ValidationOverlay';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';

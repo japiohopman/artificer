@@ -1,15 +1,15 @@
 import React from 'react';
-import { Character } from '../../../../store/useCharacterStore';
-import { GameIcon } from '../../../../game_icons';
+import { Character } from '../../../store/useCharacterStore';
+import { GameIcon } from '../../../game_icons';
 
-interface CharacterMirrorTraitsProps {
-  newChar: Partial<Character>;
+interface CharacterPanelTraitsProps {
+  character: Partial<Character>;
+  className?: string;
 }
 
-export const CharacterMirrorTraits: React.FC<CharacterMirrorTraitsProps> = ({ newChar }) => {
-  // Collect actual traits and features
-  const traits = newChar.traits || [];
-  const features = newChar.features || [];
+export const CharacterPanelTraits: React.FC<CharacterPanelTraitsProps> = ({ character, className }) => {
+  const traits = character.traits || [];
+  const features = character.features || [];
 
   const allItems: Array<{ name: string; desc?: string; source?: string }> = [];
 
@@ -30,7 +30,7 @@ export const CharacterMirrorTraits: React.FC<CharacterMirrorTraitsProps> = ({ ne
   });
 
   return (
-    <div className="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2 bg-white/40 border border-dragon-gold/20 rounded-sm">
+    <div className={`flex-1 overflow-y-auto custom-scrollbar p-2 space-y-2 bg-white/40 border border-dragon-gold/20 rounded-sm ${className || ''}`}>
       <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-1 mb-1">
         <span className="text-[9px] font-black uppercase text-dragon-red tracking-widest flex items-center gap-1.5">
           <GameIcon name="ancestry" size={12} color="#8B0000" />

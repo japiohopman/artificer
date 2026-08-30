@@ -1,68 +1,32 @@
 import React, { useState } from 'react';
-import { Character } from '../../../../store/useCharacterStore';
-import { GameIcon } from '../../../../game_icons';
-import { CharacterMirrorBody } from './CharacterMirrorBody';
-import { CharacterMirrorAbilities } from './CharacterMirrorAbilities';
-import { CharacterMirrorSkills } from './CharacterMirrorSkills';
-import { CharacterMirrorTraits } from './CharacterMirrorTraits';
+import { Character } from '../../store/useCharacterStore';
+import { GameIcon } from '../../game_icons';
+import { calculateDerivedStats } from '../../lib/statCalculations';
+import { CharacterPanelBody } from './panel/CharacterPanelBody';
+import { CharacterPanelAbilities } from './panel/CharacterPanelAbilities';
+import { CharacterPanelSkills } from './panel/CharacterPanelSkills';
+import { CharacterPanelTraits } from './panel/CharacterPanelTraits';
 
-interface CharacterMirrorProps {
+interface CreatorRightPanelProps {
   newChar: Partial<Character>;
   currentStep: string;
 }
 
-type MirrorTab = 'overview' | 'skills' | 'traits';
+type PanelTab = 'overview' | 'skills' | 'traits';
 
-const SPECIES_SPEED_MAP: Record<string, number> = {
-  'human': 30,
-  'elf': 30,
-  'high-elf': 30,
-  'wood-elf': 35,
-  'drow': 30,
-  'dwarf': 25,
-  'hill-dwarf': 25,
-  'mountain-dwarf': 25,
-  'halfling': 25,
-  'lightfoot-halfling': 25,
-  'stout-halfling': 25,
-  'dragonborn': 30,
-  'gnome': 25,
-  'forest-gnome': 25,
-  'rock-gnome': 25,
-  'half-elf': 30,
-  'half-orc': 30,
-  'tiefling': 30
-};
+export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, currentStep }) => {
+  const [activeTab, setActiveTab] = useState<PanelTab>('overview');
 
-export const CharacterMirror: React.FC<CharacterMirrorProps> = ({ newChar, currentStep }) => {
-  const [activeTab, setActiveTab] = useState<MirrorTab>('overview');
-
-  // Tabs are enabled once class selection is made or reached
+  // Tabs are enabled once class selection is made
   const hasClassSelected = !!newChar.class;
 
-  // Metric Calculations
-  const dexVal = newChar.stats?.dex ?? 10;
-  const conVal = newChar.stats?.con ?? 10;
-  const dexMod = Math.floor((dexVal - 10) / 2);
-  const conMod = Math.floor((conVal - 10) / 2);
+  // Calculate canonical derived stats (AC, Speed, HP, Initiative) without local game rule formulas
+  const derivedStats = calculateDerivedStats(newChar as Character);
 
-  let speedText = '—';
-  if (newChar.subrace && SPECIES_SPEED_MAP[newChar.subrace.toLowerCase()]) {
-    speedText = `${SPECIES_SPEED_MAP[newChar.subrace.toLowerCase()]} FT`;
-  } else if (newChar.race && SPECIES_SPEED_MAP[newChar.race.toLowerCase()]) {
-    speedText = `${SPECIES_SPEED_MAP[newChar.race.toLowerCase()]} FT`;
-  } else if (newChar.race) {
-    speedText = '30 FT';
-  }
-
-  const initiativeText = dexMod >= 0 ? `+${dexMod}` : `${dexMod}`;
-  const acText = `${10 + dexMod}`;
-
-  let hpText = '—';
-  if (newChar.class) {
-    const baseHp = (newChar.hp || 10) + conMod;
-    hpText = `${Math.max(1, baseHp)}`;
-  }
+  const speedText = newChar.race ? `${derivedStats.speed} FT` : '—';
+  const initiativeText = derivedStats.initiative >= 0 ? `+${derivedStats.initiative}` : `${derivedStats.initiative}`;
+  const acText = `${derivedStats.ac}`;
+  const hpText = newChar.class ? `${Math.max(1, newChar.hp || derivedStats.ac)}` : '—';
 
   return (
     <div className="w-80 lg:w-96 border-l border-dragon-gold/20 bg-white/30 flex flex-col relative overflow-hidden shrink-0 shadow-inner h-full">
@@ -113,13 +77,13 @@ export const CharacterMirror: React.FC<CharacterMirrorProps> = ({ newChar, curre
 
         {/* Tab Content Display */}
         {activeTab === 'skills' ? (
-          <CharacterMirrorSkills newChar={newChar} />
+          <CharacterPanelSkills character={newChar} />
         ) : activeTab === 'traits' ? (
-          <CharacterMirrorTraits newChar={newChar} />
+          <CharacterPanelTraits character={newChar} />
         ) : (
           /* Overview View: Central Stage (Background + Body + Overlays) */
           <div className="relative flex-1 my-1 min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
-            <CharacterMirrorBody newChar={newChar} currentStep={currentStep} />
+            <CharacterPanelBody character={newChar} currentStep={currentStep} />
 
             {/* Left Overlay: Dynamic Selections (Species, Class, Background, Alignment) */}
             <div className="absolute left-2 top-3 z-20 flex flex-col gap-1.5 max-w-[120px] pointer-events-none">
@@ -187,7 +151,7 @@ export const CharacterMirror: React.FC<CharacterMirrorProps> = ({ newChar, curre
         )}
 
         {/* Bottom Ability Score Strip */}
-        <CharacterMirrorAbilities newChar={newChar} />
+        <CharacterPanelAbilities character={newChar} />
       </div>
     </div>
   );
