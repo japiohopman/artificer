@@ -1639,21 +1639,46 @@ export async function fetchMagicSchools(): Promise<{ name: string; index: string
 }
 
 export async function fetchSpeciesList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/species/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((s: any) => ({
+          name: s.name || s.index.replace(/_/g, ' '),
+          index: s.index
+        }));
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/species/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    return [];
-  }
+    if (files && Array.isArray(files)) {
+      return files
+        .filter((f: any) => f.name.endsWith('.json'))
+        .map((f: any) => ({
+          name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.name.replace('.json', '')
+        }));
+    }
+  } catch (e) {}
+
+  // Fallback for local/offline environments
+  return [
+    { name: 'Dragonborn', index: 'dragonborn' },
+    { name: 'Dwarf', index: 'dwarf' },
+    { name: 'Elf', index: 'elf' },
+    { name: 'Gnome', index: 'gnome' },
+    { name: 'Half-Elf', index: 'half_elf' },
+    { name: 'Half-Orc', index: 'half_orc' },
+    { name: 'Halfling', index: 'halfling' },
+    { name: 'Human', index: 'human' },
+    { name: 'Tiefling', index: 'tiefling' }
+  ];
 }
 
 export async function fetchSpeciesWikiData(index: string): Promise<any> {
@@ -1730,21 +1755,48 @@ export async function fetchSpeciesData(index: string): Promise<any> {
 }
 
 export async function fetchClassesList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/class/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((c: any) => ({
+          name: c.name || c.index.replace(/_/g, ' '),
+          index: c.index
+        }));
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    return [];
-  }
+    if (files && Array.isArray(files)) {
+      return files
+        .filter((f: any) => f.name.endsWith('.json'))
+        .map((f: any) => ({
+          name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.name.replace('.json', '')
+        }));
+    }
+  } catch (e) {}
+
+  return [
+    { name: 'Barbarian', index: 'barbarian' },
+    { name: 'Bard', index: 'bard' },
+    { name: 'Cleric', index: 'cleric' },
+    { name: 'Druid', index: 'druid' },
+    { name: 'Fighter', index: 'fighter' },
+    { name: 'Monk', index: 'monk' },
+    { name: 'Paladin', index: 'paladin' },
+    { name: 'Ranger', index: 'ranger' },
+    { name: 'Rogue', index: 'rogue' },
+    { name: 'Sorcerer', index: 'sorcerer' },
+    { name: 'Warlock', index: 'warlock' },
+    { name: 'Wizard', index: 'wizard' }
+  ];
 }
 
 export async function fetchClassWikiData(index: string): Promise<any> {
@@ -2140,21 +2192,45 @@ export async function fetchFeatureData(index: string): Promise<any> {
 }
 
 export async function fetchAlignmentsList(): Promise<{ name: string; index: string }[]> {
+  try {
+    const localRes = await fetch('/assets/atlas/alignments/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((a: any) => ({
+          name: a.name || a.index.replace(/_/g, ' '),
+          index: a.index
+        }));
+      }
+    }
+  } catch (e) {}
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/alignments/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    return files
-      .filter((f: any) => f.name.endsWith('.json'))
-      .map((f: any) => ({
-        name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.name.replace('.json', '')
-      }));
-  } catch (e) {
-    return [];
-  }
+    if (files && Array.isArray(files)) {
+      return files
+        .filter((f: any) => f.name.endsWith('.json'))
+        .map((f: any) => ({
+          name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.name.replace('.json', '')
+        }));
+    }
+  } catch (e) {}
+
+  return [
+    { name: 'Lawful Good', index: 'lawful_good' },
+    { name: 'Neutral Good', index: 'neutral_good' },
+    { name: 'Chaotic Good', index: 'chaotic_good' },
+    { name: 'Lawful Neutral', index: 'lawful_neutral' },
+    { name: 'True Neutral', index: 'true_neutral' },
+    { name: 'Chaotic Neutral', index: 'chaotic_neutral' },
+    { name: 'Lawful Evil', index: 'lawful_evil' },
+    { name: 'Neutral Evil', index: 'neutral_evil' },
+    { name: 'Chaotic Evil', index: 'chaotic_evil' }
+  ];
 }
 
 export async function fetchAlignmentData(index: string): Promise<any> {
