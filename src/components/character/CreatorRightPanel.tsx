@@ -26,7 +26,8 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
   const speedText = newChar.race ? `${derivedStats.speed} FT` : '—';
   const initiativeText = derivedStats.initiative >= 0 ? `+${derivedStats.initiative}` : `${derivedStats.initiative}`;
   const acText = `${derivedStats.ac}`;
-  const hpText = newChar.class ? `${Math.max(1, newChar.hp || derivedStats.ac)}` : '—';
+  const hpVal = newChar.hp ?? newChar.maxHp;
+  const hpText = hpVal ? `${hpVal}` : '—';
 
   return (
     <div className="w-80 lg:w-96 border-l border-dragon-gold/20 bg-white/30 flex flex-col relative overflow-hidden shrink-0 shadow-inner h-full">
