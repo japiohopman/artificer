@@ -923,7 +923,7 @@ export const CharacterCreator: React.FC = () => {
                className={cn(
                  "flex items-center gap-1.5 px-6 py-2 rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg transition-all",
                  canGoNext() 
-                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed" 
+                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed animate-[pulse_3s_ease-in-out_infinite]"
                     : "bg-parchment-200 text-parchment-600 hover:bg-parchment-300 shadow-none cursor-pointer"
                )}
              >

@@ -39,15 +39,15 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
           <button
             type="button"
             onClick={() => onSelectRuleset?.('2014')}
-            className={`p-4 rounded-sm border-2 transition-all flex flex-col justify-between text-left ${
+            className={`p-4 rounded-sm border-2 transition-all flex flex-col justify-between text-left cursor-pointer ${
               ruleset === '2014'
-                ? 'border-dragon-red bg-dragon-red/10 shadow-md ring-1 ring-dragon-gold/30'
-                : 'border-dragon-gold/20 bg-white/50 hover:border-dragon-gold/40 hover:bg-white/80'
+                ? 'border-dragon-red bg-dragon-red/10 shadow-md ring-1 ring-dragon-gold/40'
+                : 'border-parchment-300 bg-white/40 hover:border-dragon-gold/50 hover:bg-white/70'
             }`}
           >
             <div className="flex items-center justify-between w-full mb-2">
               <div className="flex items-center gap-2">
-                <GameIcon name="book" size={18} color={ruleset === '2014' ? '#991B1B' : '#B8860B'} />
+                <GameIcon name="book" size={18} color={ruleset === '2014' ? '#991B1B' : '#8B7355'} />
                 <h4 className="font-header font-black text-sm uppercase text-dragon-darkRed tracking-wide">
                   D&D 5e (2014)
                 </h4>
@@ -59,8 +59,8 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
             <p className="text-[11px] text-parchment-600 font-medium leading-normal mb-3">
               Traditional 5th Edition rules, classic origin backgrounds, and original spell/equipment indexing.
             </p>
-            <div className="text-[9px] font-bold text-dragon-red/80 uppercase tracking-wider">
-              {ruleset === '2014' ? '✓ Active Ruleset Context' : 'Click to select 2014 Ruleset'}
+            <div className={`text-[9px] font-bold uppercase tracking-wider ${ruleset === '2014' ? 'text-dragon-red' : 'text-parchment-500'}`}>
+              {ruleset === '2014' ? '✓ Selected Ruleset' : 'Click to select 2014 Ruleset'}
             </div>
           </button>
 
@@ -68,15 +68,15 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
           <button
             type="button"
             onClick={() => onSelectRuleset?.('2024')}
-            className={`p-4 rounded-sm border-2 transition-all flex flex-col justify-between text-left ${
+            className={`p-4 rounded-sm border-2 transition-all flex flex-col justify-between text-left cursor-pointer ${
               ruleset === '2024'
-                ? 'border-dragon-red bg-dragon-red/10 shadow-md ring-1 ring-dragon-gold/30'
-                : 'border-dragon-gold/20 bg-white/50 hover:border-dragon-gold/40 hover:bg-white/80'
+                ? 'border-dragon-red bg-dragon-red/10 shadow-md ring-1 ring-dragon-gold/40'
+                : 'border-parchment-300 bg-white/40 hover:border-dragon-gold/50 hover:bg-white/70'
             }`}
           >
             <div className="flex items-center justify-between w-full mb-2">
               <div className="flex items-center gap-2">
-                <GameIcon name="magic_effect" size={18} color={ruleset === '2024' ? '#991B1B' : '#B8860B'} />
+                <GameIcon name="magic_effect" size={18} color={ruleset === '2024' ? '#991B1B' : '#8B7355'} />
                 <h4 className="font-header font-black text-sm uppercase text-dragon-darkRed tracking-wide">
                   D&D 5.5e (2024)
                 </h4>
@@ -88,8 +88,8 @@ export const WelcomeStep: React.FC<WelcomeStepProps> = ({ ruleset = '2014', onSe
             <p className="text-[11px] text-parchment-600 font-medium leading-normal mb-3">
               2024 Revised ruleset featuring Origin Feats, weapon masteries, updated species traits, and expanded rules references.
             </p>
-            <div className="text-[9px] font-bold text-dragon-red/80 uppercase tracking-wider">
-              {ruleset === '2024' ? '✓ Active Ruleset Context' : 'Click to select 2024 Ruleset'}
+            <div className={`text-[9px] font-bold uppercase tracking-wider ${ruleset === '2024' ? 'text-dragon-red' : 'text-parchment-500'}`}>
+              {ruleset === '2024' ? '✓ Selected Ruleset' : 'Click to select 2024 Ruleset'}
             </div>
           </button>
         </div>
