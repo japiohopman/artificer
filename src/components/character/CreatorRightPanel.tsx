@@ -4,7 +4,6 @@ import { GameIcon } from '../../game_icons';
 import { calculateDerivedStats } from '../../lib/statCalculations';
 import { CharacterPanelBody } from './panel/CharacterPanelBody';
 import { CharacterPanelAbilities } from './panel/CharacterPanelAbilities';
-import { CharacterPanelSkills } from './panel/CharacterPanelSkills';
 import { CharacterPanelTraits } from './panel/CharacterPanelTraits';
 import { EquipmentDoll } from './equipment/EquipmentDoll';
 import { useInventoryStore } from '../../store/useInventoryStore';
@@ -15,7 +14,7 @@ interface CreatorRightPanelProps {
   currentStep: string;
 }
 
-type PanelTab = 'overview' | 'skills' | 'traits' | 'equipment';
+type PanelTab = 'overview' | 'traits' | 'equipment';
 
 export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, currentStep }) => {
   const [activeTab, setActiveTab] = useState<PanelTab>('overview');
@@ -75,14 +74,8 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
                 onClick={() => setActiveTab('overview')}
               />
               <TabButton
-                label="Skills"
-                icon="book"
-                isActive={activeTab === 'skills'}
-                onClick={() => setActiveTab('skills')}
-              />
-              <TabButton
                 label="Traits"
-                icon="award"
+                icon="trait"
                 isActive={activeTab === 'traits'}
                 onClick={() => setActiveTab('traits')}
               />
@@ -99,13 +92,11 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
         </div>
 
         {/* Tab Content Display */}
-        {activeTab === 'skills' ? (
-          <CharacterPanelSkills character={newChar} />
-        ) : activeTab === 'traits' ? (
+        {activeTab === 'traits' ? (
           <CharacterPanelTraits character={newChar} />
         ) : (
           /* Central Stage (Background + Body + Overlays) */
-          <div className="relative flex-1 my-1 min-h-[280px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
+          <div className="relative flex-1 my-1 min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
             {/* Permanent Character Surface */}
             <CharacterPanelBody character={newChar} currentStep={currentStep} />
 

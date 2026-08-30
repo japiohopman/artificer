@@ -15,7 +15,6 @@ import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCa
 import { normalizeImageUrl } from '../../services/storageService';
 import { CharacterPanelBody } from '../character/panel/CharacterPanelBody';
 import { CharacterPanelAbilities } from '../character/panel/CharacterPanelAbilities';
-import { CharacterPanelSkills } from '../character/panel/CharacterPanelSkills';
 import { CharacterPanelTraits } from '../character/panel/CharacterPanelTraits';
 
 type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
@@ -327,7 +326,6 @@ export const CharacterPanel: React.FC = () => {
               {activeTab === 'stats' && (
                 <div className="space-y-3">
                   <CharacterPanelAbilities character={activeCharacter} />
-                  <CharacterPanelSkills character={activeCharacter} />
                   <CharacterPanelTraits character={activeCharacter} />
                   <CharacterStats />
                 </div>
