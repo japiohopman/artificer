@@ -44,8 +44,8 @@ export const CharacterMirrorAbilities: React.FC<CharacterMirrorAbilitiesProps> =
   const bonuses = SPECIES_BONUSES_MAP[speciesKey] || (newChar.race ? SPECIES_BONUSES_MAP[newChar.race.toLowerCase()] : {}) || {};
 
   return (
-    <div className="w-full bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded-sm p-2 shadow-sm">
-      <span className="text-[8px] font-black uppercase text-dragon-red tracking-widest block text-center mb-1.5">
+    <div className="w-full bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded-sm p-2 shadow-sm shrink-0">
+      <span className="text-[8px] font-black uppercase text-dragon-red tracking-widest block text-center mb-1">
         Attribute Matrix
       </span>
 
@@ -55,33 +55,34 @@ export const CharacterMirrorAbilities: React.FC<CharacterMirrorAbilitiesProps> =
           const baseVal = (baseStats as any)[key] ?? 10;
           const bonusVal = bonuses[key] || 0;
           const totalVal = baseVal + bonusVal;
+          const modVal = Math.floor((totalVal - 10) / 2);
+          const modText = modVal >= 0 ? `+${modVal}` : `${modVal}`;
 
           return (
             <div
               key={key}
-              className="relative flex flex-col items-center justify-between p-1 rounded min-w-0 border border-dragon-gold/20 overflow-hidden text-center group"
+              className="relative flex flex-col items-center justify-between p-1 rounded min-w-0 border border-dragon-gold/20 overflow-hidden text-center aspect-[4/5] bg-contain bg-no-repeat bg-center"
               style={{
                 backgroundImage: "url('/assets/ui/ability-score-tab-hc.svg')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
               }}
             >
+              {/* Header Label */}
               <div className="relative z-10 flex items-center justify-center gap-0.5 mt-0.5">
-                <GameIcon name={icon as any} size={10} color="#8B0000" className="shrink-0 opacity-80" />
+                <GameIcon name={icon as any} size={9} color="#8B0000" className="shrink-0 opacity-80" />
                 <span className="text-[8px] font-black uppercase text-parchment-700 leading-none">
                   {label}
                 </span>
               </div>
 
-              <span className="relative z-10 text-[12px] font-header font-black text-dragon-darkRed leading-tight my-0.5">
+              {/* Total Score Value */}
+              <span className="relative z-10 text-[12px] font-header font-black text-dragon-darkRed leading-none my-0.5">
                 {totalVal}
               </span>
 
-              {bonusVal > 0 && (
-                <span className="relative z-10 text-[7px] font-black text-dragon-red leading-none mb-0.5">
-                  +{bonusVal}
-                </span>
-              )}
+              {/* Modifier Value */}
+              <span className="relative z-10 text-[8px] font-black text-parchment-600 leading-none mb-0.5">
+                {modText}
+              </span>
             </div>
           );
         })}
