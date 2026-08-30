@@ -3,32 +3,29 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
-    "str": 10,
-    "dex": 10,
-    "con": 10,
-    "int": 10,
+    "str": 15,
+    "dex": 14,
+    "con": 11,
+    "int": 12,
     "wis": 10,
-    "cha": 10
+    "cha": 11
   },
   "proficiencies": [
-    "battleaxes",
-    "handaxes",
-    "light hammers",
-    "warhammers",
-    "Skill: Arcana",
-    "Skill: History",
-    "Calligrapher'S Supplies",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "skill: intimidation",
+    "Skill: Stealth",
+    "Skill: Survival",
+    "Cartographer'S Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
   "traits": [
     {
@@ -42,97 +39,126 @@
       }
     },
     {
-      "name": "dwarven resilience",
-      "index": "dwarven_resilience",
-      "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+      "name": "savage attacks",
+      "index": "savage_attacks",
+      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
       "trait_specific": {
         "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against poison",
-              "damage_type": {
-                "index": "poison",
-                "name": "poison",
-                "url": "/assets/atlas/damage_types/json/poison.json"
-              }
-            }
-          ],
-          "resistance": [
-            {
-              "index": "poison",
-              "name": "poison",
-              "url": "/assets/atlas/damage_types/json/poison.json"
-            }
-          ]
+          "extra_critical_damage_dice": 1
         }
       }
     },
     {
-      "name": "stonecunning",
-      "index": "stonecunning",
-      "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
-    },
-    {
-      "name": "dwarven combat training",
-      "index": "dwarven_combat_training",
-      "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
-    },
-    {
-      "name": "tool proficiency",
-      "index": "tool_proficiency",
-      "desc": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools."
-    }
-  ],
-  "features": [
-    {
-      "index": "spellcasting_wizard",
-      "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
-      },
-      "name": "spellcasting: wizard",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
-      ],
-      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
-      "feature_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
-        }
-      },
-      "source": "Class"
-    },
-    {
-      "index": "arcane_recovery",
-      "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
-      },
-      "name": "arcane recovery",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
-      ],
-      "url": "/assets/atlas/features/json/arcane_recovery.json",
-      "updated_at": "2026-07-13T06:30:11.957Z",
-      "image": "/assets/atlas/features/images/arcane_recovery.webp",
-      "feature_specific": {
+      "name": "relentless endurance",
+      "index": "relentless_endurance",
+      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "trait_specific": {
         "usage": {
           "times": 1,
           "type": "long_rest"
         }
+      }
+    },
+    {
+      "name": "menacing",
+      "index": "menacing",
+      "desc": "You gain proficiency in the Intimidation skill."
+    }
+  ],
+  "features": [
+    {
+      "index": "favored_enemy_1_type",
+      "class": {
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
       },
+      "name": "favored enemy (1 type)",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+      ],
+      "feature_specific": {
+        "enemy_type_options": {
+          "desc": "one enemy type",
+          "choose": 1,
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "aberrations",
+              "beasts",
+              "celestials",
+              "constructs",
+              "dragons",
+              "elementals",
+              "fey",
+              "fiends",
+              "giants",
+              "monstrosities",
+              "oozes",
+              "plants",
+              "undead",
+              "humanoids"
+            ]
+          }
+        },
+        "invocations": []
+      },
+      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
+      "source": "Class"
+    },
+    {
+      "index": "natural_explorer_1_terrain_type",
+      "class": {
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
+      },
+      "name": "natural explorer (1 terrain type)",
+      "level": 1,
+      "prerequisites": [],
+      "desc": [
+        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
+        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+        "- Difficult terrain doesn't slow your group's travel.",
+        "- Your group can't become lost except by magical means.",
+        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+        "- If you are traveling alone, you can move stealthily at a normal pace.",
+        "- When you forage, you find twice as much food as you normally would.",
+        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+        "You choose additional favored terrain types at 6th and 10th level."
+      ],
+      "feature_specific": {
+        "terrain_type_options": {
+          "desc": "one terrain type",
+          "choose": 1,
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "arctic",
+              "coast",
+              "desert",
+              "forest",
+              "grassland",
+              "mountain",
+              "swamp"
+            ]
+          }
+        },
+        "invocations": []
+      },
+      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
       "source": "Class"
     }
   ],
@@ -147,7 +173,7 @@
     "pp": 0
   },
   "appearance": {
-    "hairColor": "Stone Brown",
+    "hairColor": "Raven Black",
     "hairStyle": "Short",
     "bodyType": "Medium",
     "eyeColor": "Brown",
@@ -155,68 +181,45 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": [
-      "Braided Beard"
-    ],
-    "weightScale": 1.03,
+    "specialFeatures": [],
+    "weightScale": 0.98,
     "heightScale": 1.05
   },
   "items": {
-    "spellbook_czo8wur80": {
-      "id": "spellbook_czo8wur80",
-      "template": "spellbook",
+    "longbow_u1l73sdfn": {
+      "id": "longbow_u1l73sdfn",
+      "template": "longbow",
       "quantity": 1,
-      "addedAt": 1787952429292,
-      "kind": "focus"
-    },
-    "book_r46on8sk9": {
-      "id": "book_r46on8sk9",
-      "template": "book",
-      "quantity": 1,
-      "addedAt": 1787952429292,
-      "kind": "book"
-    },
-    "ink_pen_w0swi3662": {
-      "id": "ink_pen_w0swi3662",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1787952429292,
-      "kind": "tradegood"
-    },
-    "robes_s3xojuzub": {
-      "id": "robes_s3xojuzub",
-      "template": "robes",
-      "quantity": 1,
-      "addedAt": 1787952429292,
-      "kind": "equipment"
-    },
-    "gold_uz4sql9ac": {
-      "id": "gold_uz4sql9ac",
-      "template": "gold",
-      "quantity": 8,
-      "addedAt": 1787952429292,
-      "kind": "currency"
-    },
-    "quarterstaff_q1a22meb4": {
-      "id": "quarterstaff_q1a22meb4",
-      "template": "quarterstaff",
-      "quantity": 1,
-      "addedAt": 1787952437684,
+      "addedAt": 1788061238727,
       "kind": "weapon"
     },
-    "orb_cl34cwoso": {
-      "id": "orb_cl34cwoso",
-      "template": "orb",
-      "quantity": 1,
-      "addedAt": 1787952454128,
-      "kind": "equipment"
+    "arrow_i7up35tg5": {
+      "id": "arrow_i7up35tg5",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1788061238727,
+      "kind": "consumable"
     },
-    "scholars_pack_3a7jcrgec": {
-      "id": "scholars_pack_3a7jcrgec",
-      "template": "scholars_pack",
+    "bedroll_393ozuxlt": {
+      "id": "bedroll_393ozuxlt",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1787952461373,
-      "kind": "container"
+      "addedAt": 1788061238727,
+      "kind": "tradegood"
+    },
+    "shortbow_liwfts6zu": {
+      "id": "shortbow_liwfts6zu",
+      "template": "shortbow",
+      "quantity": 1,
+      "addedAt": 1788061238728,
+      "kind": "weapon"
+    },
+    "gold_mwbfh7bje": {
+      "id": "gold_mwbfh7bje",
+      "template": "gold",
+      "quantity": 3,
+      "addedAt": 1788061238728,
+      "kind": "currency"
     }
   },
   "containers": {
@@ -227,43 +230,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_czo8wur80"
+          "itemId": "arrow_i7up35tg5"
         },
         {
           "id": "bag_1",
-          "itemId": "book_r46on8sk9"
+          "itemId": "bedroll_393ozuxlt"
         },
         {
           "id": "bag_2",
-          "itemId": "ink_pen_w0swi3662"
+          "itemId": "shortbow_liwfts6zu"
         },
         {
           "id": "bag_3",
-          "itemId": "robes_s3xojuzub"
+          "itemId": "gold_mwbfh7bje"
         },
         {
           "id": "bag_4",
-          "itemId": "gold_uz4sql9ac"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "quarterstaff_g7ofw9zp0"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "orb_cl34cwoso"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "orb_1kd6lasj8"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "scholars_pack_3a7jcrgec"
+          "itemId": null
         },
         {
           "id": "bag_9",
-          "itemId": "scholars_pack_1pyize22r"
+          "itemId": null
         },
         {
           "id": "bag_10",
@@ -329,7 +332,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "quarterstaff_q1a22meb4"
+        "itemId": "longbow_u1l73sdfn"
       },
       {
         "id": "off_hand",
@@ -447,232 +450,243 @@
   },
   "backpack": [
     {
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "quantity": 1
+      "id": "cartographers_tools_e0tp1fwpy",
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
     },
     {
-      "index": "book",
-      "name": "Book",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "quantity": 1
+      "id": "bedroll_13mfr3w4j",
+      "index": "bedroll",
+      "name": "Bedroll",
+      "quantity": 1,
+      "weight": 7,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
+      "desc": [
+        "Roll of cloth used by traveller to sleep in."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/bedroll.webp",
+      "updated_at": "2026-07-12T19:00:14.010Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 2,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "rulesetContext": "2014"
     },
     {
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "quantity": 1
+      "id": "quiver_x66qb21nx",
+      "index": "quiver",
+      "name": "Quiver",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
     },
     {
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "quantity": 1
+      "id": "arrow_gb34seoyk",
+      "index": "arrow",
+      "name": "Arrow",
+      "quantity": 20,
+      "weight": 0.05,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
+      "desc": [
+        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
+      ],
+      "special": [],
+      "kind": "consumable",
+      "cost": {
+        "quantity": 5,
+        "unit": "cp"
+      },
+      "image": "/assets/atlas/equipment/images/arrow.webp",
+      "updated_at": "2026-07-12T19:00:11.722Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 8,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+      "category": "Ammunition",
+      "rulesetContext": "2014"
     },
     {
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "quantity": 10
+      "id": "clothes_travelers_fnw51dfdv",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "index": "robes",
-      "name": "Robes",
-      "url": "/assets/atlas/equipment/json/robes.json",
-      "quantity": 1
-    },
-    {
+      "id": "gold_yw1y6iip3",
       "index": "gold",
       "name": "Gold",
+      "quantity": 3,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 8
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "currency",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
-  "knownSpells": [
-    {
-      "index": "chill_touch",
-      "name": "chill touch",
-      "level": 0,
-      "school": "necromancy",
-      "classes": [
-        "sorcerer",
-        "warlock",
-        "wizard"
+  "inventory": {
+    "main-hand": {
+      "id": "shortbow_zd34ud7dt",
+      "index": "shortbow",
+      "name": "Shortbow",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/shortbow.json",
+      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
+      "desc": [
+        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
       ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/chill_touch.json",
-      "imageUrl": "/assets/atlas/spell/images/chill-touch.webp"
-    },
-    {
-      "index": "dancing_lights",
-      "name": "dancing lights",
-      "level": 0,
-      "school": "evocation",
-      "classes": [
-        "artificer",
-        "bard",
-        "sorcerer",
-        "wizard"
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/shortbow.webp",
+      "updated_at": "2026-07-12T19:00:20.317Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
+        },
+        {
+          "index": "two-handed",
+          "name": "two-handed",
+          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+        }
       ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Up to 1 minute",
-      "json_path": "/assets/atlas/spell/json/dancing_lights.json",
-      "imageUrl": "/assets/atlas/spell/images/dancing-lights.webp"
-    },
-    {
-      "index": "fire_bolt",
-      "name": "fire bolt",
-      "level": 0,
-      "school": "evocation",
-      "classes": [
-        "artificer",
-        "sorcerer",
-        "wizard"
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
       ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/fire_bolt.json",
-      "imageUrl": "/assets/atlas/spell/images/fire-bolt.webp"
-    },
-    {
-      "index": "catapult",
-      "name": "catapult",
-      "level": 1,
-      "school": "transmutation",
-      "classes": [
-        "artificer",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "60 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/catapult.json",
-      "imageUrl": "/assets/atlas/spell/images/catapult.webp"
-    },
-    {
-      "index": "burning_hands",
-      "name": "burning hands",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/burning_hands.json",
-      "imageUrl": "/assets/atlas/spell/images/burning-hands.webp"
-    },
-    {
-      "index": "alarm",
-      "name": "alarm",
-      "level": 1,
-      "school": "abjuration",
-      "classes": [
-        "artificer",
-        "ranger",
-        "wizard"
-      ],
-      "casting_time": "1 minute",
-      "range": "30 feet",
-      "duration": "8 hours",
-      "json_path": "/assets/atlas/spell/json/alarm.json",
-      "imageUrl": "/assets/atlas/spell/images/alarm.webp"
-    },
-    {
-      "index": "color_spray",
-      "name": "color spray",
-      "level": 1,
-      "school": "illusion",
-      "classes": [
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/color_spray.json",
-      "imageUrl": "/assets/atlas/spell/images/color-spray.webp"
-    },
-    {
-      "index": "jump",
-      "name": "jump",
-      "level": 1,
-      "school": "transmutation",
-      "classes": [
-        "artificer",
-        "druid",
-        "ranger",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/jump.json",
-      "imageUrl": "/assets/atlas/spell/images/jump.webp"
-    },
-    {
-      "index": "magic_missile",
-      "name": "magic missile",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/magic_missile.json",
-      "imageUrl": "/assets/atlas/spell/images/magic-missile.webp"
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 17,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+      "category": "Simple Ranged Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "range": {
+        "normal": 80,
+        "long": 320
+      },
+      "rulesetContext": "2014",
+      "slot": "main-hand",
+      "main_hand_slot": "Shortbow"
     }
-  ],
+  },
+  "knownSpells": [],
   "languages": [
     "common",
-    "dwarvish"
+    "orc"
   ],
-  "preparedSpells": [
-    "chill_touch",
-    "dancing_lights",
-    "fire_bolt",
-    "catapult",
-    "burning_hands",
-    "alarm",
-    "color_spray",
-    "jump",
-    "magic_missile"
-  ],
+  "preparedSpells": [],
   "spellSlots": {
     "1": {
       "current": 0,
       "max": 0
     }
   },
-  "choices": {},
-  "race": "dwarf",
-  "class": "wizard",
-  "background": "sage",
-  "spellcastingAbility": "int",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Rurik Lutgehr",
+  "choices": {
+    "favored_enemy_1_type": [
+      "beasts"
+    ],
+    "natural_explorer_1_terrain_type": [
+      "desert"
+    ]
+  },
+  "race": "half_orc",
+  "class": "ranger",
+  "spellcastingAbility": "wis",
+  "background": "guide",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
+  "name": "Kansif",
   "id": "slot3",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 6,
+  "maxHp": 6,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-28T21:28:19.979Z"
+  "lastSaved": "2026-08-30T03:43:38.763Z"
 }
