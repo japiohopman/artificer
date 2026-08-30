@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useUIStore } from '../../../store/useUIStore';
 import { useWorldStore, CategoryIcons } from '../../../store/useWorldStore';
-import { WORLD_ATLAS_ICONS } from '../../../../public/assets/icons';
+import { WORLD_ATLAS_ICONS } from '../../../lib/iconRegistry.generated';
 import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { Entrance } from './Entrance';
@@ -35,7 +35,8 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
                  { icon: WORLD_ATLAS_ICONS[catKey as keyof typeof WORLD_ATLAS_ICONS] ? catKey : 'landmark', color: '#D4AF37' };
 
   const iconKey = (WORLD_ATLAS_ICONS[config.icon as keyof typeof WORLD_ATLAS_ICONS] ? config.icon : 'landmark') as keyof typeof WORLD_ATLAS_ICONS;
-  const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark;
+  const iconEntry = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark;
+  const iconUrl = typeof iconEntry === 'object' ? iconEntry.path : iconEntry;
 
   const scaleClass = isInspected ? 'scale-125' : 'group-hover:scale-110';
 
@@ -43,10 +44,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
         <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
-        <svg viewBox="0 0 512 512" width="24" height="24" overflow="visible" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass}">
-          <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
-          <path d="${path}" fill="${config.color}" />
-        </svg>
+        <div class="relative w-6 h-6 transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass}" style="background-color: ${config.color}; -webkit-mask: url('${iconUrl}') no-repeat center / contain; mask: url('${iconUrl}') no-repeat center / contain;"></div>
       </div>
     `,
     className: `custom-map-marker`,

@@ -8,7 +8,7 @@ import { useUIStore } from '../../store/useUIStore';
 import { useWorldStore, CategoryIcons, SavedLocation } from '../../store/useWorldStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { getRegionAt } from '../../lib/mapUtils';
-import { WORLD_ATLAS_ICONS } from '../../../public/assets/icons';
+import { WORLD_ATLAS_ICONS } from '../../lib/iconRegistry.generated';
 import { MapLegend } from './game/MapLegend';
 import { FogOfWar } from './game/FogOfWar';
 import { MapNavigation } from './game/MapNavigation';
@@ -74,7 +74,8 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
   
   // Use mapping to WORLD_ATLAS_ICONS
   const iconKey = config.icon as keyof typeof WORLD_ATLAS_ICONS;
-  const path = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
+  const iconEntry = WORLD_ATLAS_ICONS[iconKey] || WORLD_ATLAS_ICONS.landmark || WORLD_ATLAS_ICONS.city;
+  const iconUrl = typeof iconEntry === 'object' ? iconEntry.path : iconEntry;
   
   const scaleClass = isInspected ? 'scale-125' : 'group-hover:scale-110';
 
@@ -90,14 +91,8 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
           <div class="absolute inset-[-6px] border border-dragon-gold/60 rounded-full"></div>
         ` : ''}
 
-        <!-- Icon SVG -->
-        <svg viewBox="0 0 512 512" width="32" height="32" overflow="visible" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}">
-          <path d="${path}" fill="${config.color}" stroke="rgba(0,0,0,0.9)" stroke-width="12" />
-          <path d="${path}" fill="${config.color}" />
-          ${isInspected ? `
-            <circle cx="256" cy="256" r="280" fill="none" stroke="#FFD700" stroke-width="15" stroke-dasharray="80 40" class="animate-[spin_12s_linear_infinite]" />
-          ` : ''}
-        </svg>
+        <!-- Icon Mask -->
+        <div class="relative w-8 h-8 transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}" style="background-color: ${config.color}; -webkit-mask: url('${iconUrl}') no-repeat center / contain; mask: url('${iconUrl}') no-repeat center / contain;"></div>
       </div>
     `,
     className: `custom-map-marker atlas-marker-${catKey}`,
@@ -106,8 +101,6 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
     popupAnchor: [0, -16]
   });
 };
-
-
 
 const MapEvents = ({
   mapMode,
