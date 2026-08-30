@@ -16,7 +16,7 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - The mirror reflects only player-confirmed character choices.
 
 ### Shared Character Panel Presentation & Data Authority
-- **Single Character Panel Architecture**: `src/components/character/CharacterCreator/CharacterMirror/` and `src/components/character/CreatorRightPanel.tsx` provide shared character presentation primitives suitable for both Character Creator and HUD runtime contexts.
+- **Single Character Panel Architecture**: `src/components/character/panel/` (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`) provides shared character presentation primitives consumed by both `CreatorRightPanel.tsx` and runtime HUD `src/components/hud/CharacterPanel.tsx`.
 - **Single Source of Character State**: `useCharacterStore` is the authoritative owner of runtime character state. No secondary store (`useCharacterMirrorStore`, `useCreatorPanelStore`) exists.
 - **Static vs Dynamic Data**: `useCharacterStore` owns player choices, stats, equipment, and proficiencies. Atlas JSON data owns static rules and definitions.
 - **Tabbed Right Panel**: `[ Overview ]`, `[ Skills ]`, and `[ Traits ]` tabs become available once Class selection is established.

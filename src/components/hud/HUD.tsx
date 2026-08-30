@@ -5,7 +5,7 @@ import { useWorldStore } from '../../store/useWorldStore';
 import { useGameStore } from '../../store/useGameStore';
 import { WorldPanel } from './WorldPanel';
 import { GameScreen } from './GameScreen';
-import { CharacterPanel } from '../character/CharacterPanel';
+import { CharacterPanel } from './CharacterPanel';
 import { Journal } from './Journal';
 import { motion } from 'motion/react';
 

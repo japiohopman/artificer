@@ -18,7 +18,7 @@ The current architectural priority is to keep **authoring tools separate from ru
 - Feature-local state — temporary editor/UI state that does not belong in global runtime stores.
 
 ### Character Panel Presentation Architecture
-- **Shared Presentation Primitives**: `CharacterMirror` and `CreatorRightPanel` form the shared presentation foundation for both Character Creator and runtime HUD `CharacterPanel`.
+- **Shared Presentation Primitives**: `src/components/character/panel/` (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`) forms the shared presentation foundation consumed by both `CreatorRightPanel` and runtime HUD `src/components/hud/CharacterPanel.tsx`.
 - **CharacterStore Authority**: `useCharacterStore` owns active character state, stats, items, and proficiencies. No duplicate character state store exists.
 - **Tab Availability**: Overview, Skills, and Traits tabs become available after Class selection.
 - **Equipment Doll Domain**: `EquipmentDoll.tsx` remains strictly inside `src/components/character/equipment/`.

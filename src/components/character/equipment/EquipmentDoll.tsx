@@ -6,7 +6,7 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { GenderBodySvg } from '../CharacterCreator/GenderBodySvg';
+import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Character } from '../../../store/useCharacterStore';
-import { GenderBodySvg } from '../CharacterCreator/GenderBodySvg';
-import { ALIGNMENT_ATMOSPHERE_MAP } from '../CharacterCreator/SelectionStep';
+import { GenderBodySvg } from '../GenderBodySvg';
+import { ALIGNMENT_ATMOSPHERE_MAP } from '../../../lib/alignmentConstants';
 
 interface CharacterPanelBodyProps {
   character: Partial<Character>;

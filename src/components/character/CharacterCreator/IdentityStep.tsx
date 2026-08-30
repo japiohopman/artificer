@@ -2,7 +2,7 @@ import React from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { soundService } from '../../../services/soundService';
 import { GameIcon } from '../../../game_icons';
-import { GenderBodySvg } from './GenderBodySvg';
+import { GenderBodySvg } from '../GenderBodySvg';
 
 interface IdentityStepProps {
     newChar: Partial<Character>;
