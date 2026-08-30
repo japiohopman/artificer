@@ -4,6 +4,16 @@ Dit document bevat de diepgaande analyse en het technische ontwerp voor een voll
 
 ---
 
+## 🖥️ Layout & Viewport Architecture
+
+The Character Creator is a **full-screen application surface** (`fixed inset-0 z-[100] w-full h-full`) styled similarly to structured DevKit tools, consuming 100% of the viewport. It operates without floating card backdrops, outer window borders, or top banner offsets.
+
+### Character Mirror Visibility Rule
+- Steps prior to `species` (`welcome`, `slot`, `identity`) use **100% of the creator content stage**. There is NO reserved empty column or right panel for these steps.
+- Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
+
+---
+
 ## 🏛️ Official Character Visuals Asset Contract
 
 Official character presentation artwork is maintained as public, stable, and module-agnostic assets under `public/assets/ui/official/`. These artwork files represent canonical official presentation assets and are shared across current and future application modules (e.g. Character Creator, Rulebook, Character Profile, Atlas Details Cards):

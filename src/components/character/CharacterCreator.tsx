@@ -65,6 +65,8 @@ const ALL_STEPS: { id: CreationStep; label: string; icon: any }[] = [
   { id: 'review', label: 'Commit', icon: 'save_data' },
 ];
 
+const CHARACTER_MIRROR_START_STEP: CreationStep = 'species';
+
 const PLAYABLE_SPECIES = ['dragonborn', 'dwarf', 'elf', 'gnome', 'half-elf', 'half-orc', 'halfling', 'human', 'tiefling'];
 
 import { useUIStore } from '../../store/useUIStore';
@@ -773,11 +775,15 @@ export const CharacterCreator: React.FC = () => {
 
   if (!isCharacterCreatorOpen) return null;
 
+  const speciesStepIndex = ALL_STEPS.findIndex(s => s.id === CHARACTER_MIRROR_START_STEP);
+  const currentStepIndex = ALL_STEPS.findIndex(s => s.id === currentStep);
+  const showCharacterMirror = currentStepIndex >= speciesStepIndex;
+
   return (
-    <div id="character-creator-portal" className="fixed inset-0 top-16 z-[100] bg-dragon-darkRed/95 flex items-center justify-center p-4">
+    <div id="character-creator-portal" className="fixed inset-0 z-[100] w-full h-full bg-parchment-100 flex flex-col items-stretch overflow-hidden">
       <div className="absolute inset-0 bg-paper-texture opacity-10 mix-blend-overlay pointer-events-none" />
       
-      <div id="creator-main-modal" className="w-full max-w-7xl h-[95vh] bg-parchment-100 border border-dragon-gold/30 shadow-[0_0_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col relative rounded-sm items-stretch">
+      <div id="creator-main-modal" className="w-full h-full bg-transparent flex flex-col relative overflow-hidden items-stretch flex-1">
         {/* Header */}
         <div className="h-12 bg-white/20 border-b border-dragon-red/20 flex items-center px-4 shrink-0 relative">
           <div className="flex items-center gap-2">
@@ -874,7 +880,7 @@ export const CharacterCreator: React.FC = () => {
           </div>
 
           {/* Persistent Character Frame Right Panel */}
-          <CreatorRightPanel newChar={newChar} currentStep={currentStep} />
+          {showCharacterMirror && <CreatorRightPanel newChar={newChar} currentStep={currentStep} />}
         </div>
 
         <ValidationOverlay
