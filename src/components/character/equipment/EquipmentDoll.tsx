@@ -6,11 +6,9 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,
-  DOLL_GRID,
   SIDE_SLOTS,
   BOTTOM_SLOTS
 } from '../../../lib/equipmentConstants';
@@ -78,16 +76,16 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       onClick={() => onSlotClick?.(slot)}
       onContextMenu={handleContextMenu}
       className={cn(
-        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group w-full cursor-pointer",
+        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group w-full cursor-pointer pointer-events-auto",
         isActive || isOver
-          ? "bg-dragon-red/30 border-dragon-gold shadow-[0_0_12px_rgba(212,175,55,0.4)] scale-105 z-20"
+          ? "bg-dragon-red/35 border-dragon-gold shadow-[0_0_12px_rgba(212,175,55,0.5)] scale-105 z-20"
           : equippedItem
-          ? "bg-black/40 border-dragon-red/50 shadow-sm opacity-100 z-10"
-          : "bg-black/15 border-parchment-300/20 hover:border-dragon-gold/40 hover:bg-black/25 opacity-70"
+          ? "bg-black/50 border-dragon-red/60 shadow-sm opacity-100 z-10"
+          : "bg-black/20 border-parchment-300/30 hover:border-dragon-gold/50 hover:bg-black/35 opacity-75 backdrop-blur-[1px]"
       )}
     >
       {/* Background Image Slug */}
-      <div className="absolute inset-0 opacity-30 mix-blend-multiply pointer-events-none">
+      <div className="absolute inset-0 opacity-25 mix-blend-multiply pointer-events-none">
         <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
       </div>
 
@@ -104,11 +102,11 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
         <div className="flex flex-col items-center gap-0.5 z-10">
           <GameIcon name={slotDef.gameIcon} size={11} className={cn(
             "transition-colors",
-            isActive || isOver ? "text-dragon-gold" : "text-parchment-400"
+            isActive || isOver ? "text-dragon-gold" : "text-parchment-300"
           )} />
           <span className={cn(
             "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
-            isActive || isOver ? "text-dragon-gold" : "text-parchment-400/70"
+            isActive || isOver ? "text-dragon-gold" : "text-parchment-300/80"
           )}>
             {slotDef.label}
           </span>
@@ -117,7 +115,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
       {/* Hover Tooltip */}
       {equippedItem && (
-        <div className="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
+        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
           <span className="text-[5px] text-white font-bold uppercase text-center leading-tight break-words">
             {equippedItem.name}
           </span>
@@ -134,9 +132,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   className,
   equipment,
   items,
-  equipmentDetails,
-  gender = 'Male',
-  race
+  equipmentDetails
 }) => {
   // Resolve item for slot from equippedItems object or V2 equipment/items dictionaries
   const getSlotItem = (slot: EquipmentSlotId) => {
@@ -169,21 +165,8 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   );
 
   return (
-    <div className={cn("relative flex flex-col gap-3 w-full max-w-[280px] mx-auto p-2 bg-white/20 border border-dragon-gold/20 rounded-sm shadow-inner overflow-hidden", className)}>
-      {/* Background Paper Texture */}
-      <div className="absolute inset-0 bg-paper-texture opacity-15 mix-blend-multiply pointer-events-none" />
-
-      {/* Central Character Body Silhouette Backdrop */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none p-4 z-0">
-        <GenderBodySvg
-          gender={gender}
-          race={race}
-          selected={false}
-          className="border-none bg-transparent hover:bg-transparent shadow-none p-0 scale-90 fill-black stroke-black opacity-80"
-        />
-      </div>
-
-      {/* Main Overlay Doll Frame Layout */}
+    <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 pointer-events-none", className)}>
+      {/* Overlay Frame Layout over Character Body Surface */}
       <div className="relative z-10 flex gap-2 items-start justify-between">
         {/* Left Column Slots */}
         <div className="flex flex-col gap-1 w-10 shrink-0">
@@ -194,17 +177,17 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
           {renderSlot(SIDE_SLOTS[1])}
         </div>
 
-        {/* Center Slots (Head, Neck, Chest, Back) */}
+        {/* Center Top / Chest Slots */}
         <div className="flex flex-col items-center gap-1 flex-1 px-1">
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[90px]">
+          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px]">
             {renderSlot('head')}
             {renderSlot('neck')}
           </div>
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[90px] my-auto">
+          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px] my-auto">
             {renderSlot('chest')}
             {renderSlot('back')}
           </div>
-          <div className="w-full max-w-[45px]">
+          <div className="w-full max-w-[42px]">
             {renderSlot('feet')}
           </div>
         </div>
@@ -220,7 +203,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       </div>
 
       {/* Bottom Bar Slots */}
-      <div className="relative z-10 grid grid-cols-5 gap-1 w-full pt-1 border-t border-dragon-gold/20">
+      <div className="relative z-10 grid grid-cols-5 gap-1 w-full pt-1 border-t border-dragon-gold/30">
         {BOTTOM_SLOTS.map(slot => renderSlot(slot))}
       </div>
     </div>

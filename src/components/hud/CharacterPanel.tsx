@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCharacterStore } from '../../store/useCharacterStore';
 import { useActiveCharacter } from '../../lib/character';
@@ -8,11 +8,12 @@ import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { Inventory } from '../character/inventory/Inventory';
 import { CharacterStats } from '../character/CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
-import { X, Shield, Package, BarChart3, Info, Truck, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
+import { Shield, Package, BarChart3, Info, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCalculations';
 import { normalizeImageUrl } from '../../services/storageService';
+import { CharacterPanelBody } from '../character/panel/CharacterPanelBody';
 import { CharacterPanelAbilities } from '../character/panel/CharacterPanelAbilities';
 import { CharacterPanelSkills } from '../character/panel/CharacterPanelSkills';
 import { CharacterPanelTraits } from '../character/panel/CharacterPanelTraits';
@@ -34,11 +35,9 @@ export const CharacterPanel: React.FC = () => {
 
   const {
     isInventoryOpen,
-    setIsInventoryOpen,
-    setIsInventoryMenuOpen,
     equipItem,
     unequipItem,
-    addVehicle
+    setIsInventoryMenuOpen
   } = useInventoryStore();
 
   const {
@@ -252,7 +251,7 @@ export const CharacterPanel: React.FC = () => {
             </div>
           </div>
 
-        <div className="flex-1 overflow-y-auto p-4 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -263,28 +262,34 @@ export const CharacterPanel: React.FC = () => {
               className="h-full"
             >
               {activeTab === 'equipment' && (
-                <div className="space-y-6">
-                  <div className="flex justify-center">
-                    <EquipmentDoll
-                      equippedItems={inventory}
-                      gender={activeCharacter.gender as any}
-                      race={activeCharacter.race}
-                      onSlotClick={(slot) => {
-                        if (inventory[slot]) {
-                          unequipItem(slot);
-                        } else {
-                          handleEquip(slot);
+                <div className="space-y-4">
+                  {/* Shared Body Surface with Overlaid Equipment Slots */}
+                  <div className="relative min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20 p-1">
+                    <CharacterPanelBody character={activeCharacter} />
+                    <div className="absolute inset-0 z-30 flex items-center justify-center p-2">
+                      <EquipmentDoll
+                        equippedItems={inventory}
+                        gender={activeCharacter.gender as any}
+                        race={activeCharacter.race}
+                        equipment={activeCharacter.equipment}
+                        items={activeCharacter.items}
+                        onSlotClick={(slot) => {
+                          if (inventory[slot]) {
+                            unequipItem(slot);
+                          } else {
+                            handleEquip(slot);
+                          }
+                        }}
+                        activeSlots={
+                          focusedItem?._type === 'equipment'
+                            ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
+                            : []
                         }
-                      }}
-                      activeSlots={
-                        focusedItem?._type === 'equipment'
-                          ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
-                          : []
-                      }
-                    />
+                      />
+                    </div>
                   </div>
 
-                  <div className="bg-dragon-red/5 p-3 rounded-lg border border-dragon-red/10 text-center space-y-2">
+                  <div className="bg-dragon-red/5 p-2 rounded-lg border border-dragon-red/10 text-center space-y-1">
                     <div className="flex items-center justify-center gap-2 text-dragon-red">
                       <Info size={12} />
                       <p className="text-[9px] font-bold uppercase tracking-wider">
@@ -320,15 +325,11 @@ export const CharacterPanel: React.FC = () => {
               )}
 
               {activeTab === 'stats' && (
-                <div className="space-y-4">
-                  {/* Shared Ability Scores Presentation Primitive */}
+                <div className="space-y-3">
                   <CharacterPanelAbilities character={activeCharacter} />
-
-                  {/* Shared Skills Presentation Primitive */}
                   <CharacterPanelSkills character={activeCharacter} />
-
-                  {/* Shared Traits Presentation Primitive */}
                   <CharacterPanelTraits character={activeCharacter} />
+                  <CharacterStats />
                 </div>
               )}
 
