@@ -4,6 +4,22 @@ This is the **active execution checklist**. `ROADMAP.md` defines current priorit
 
 ## 🔴 Critical — Current engineering
 
+### Character Creator — Species Character Mirror & Choice State v1
+Feature branch `feat/character-creator-species-mirror` completed and verified.
+
+- [x] Welcome/Ruleset choice state visually reflects explicit user selection (`isExplicitlySelected`), starting neutral before interaction.
+- [x] Identity choice state visually reflects explicit user selection (`isExplicitlySelected`), starting neutral before interaction.
+- [x] Hover and selected card states are clearly distinct (subtle border/bg on hover vs persistent glow/border on selected).
+- [x] Continue button is disabled when choice is incomplete and subtly pulses when valid choice exists.
+- [x] Character Mirror begins strictly at Species step (`currentStep === 'species'`).
+- [x] Prior steps (`welcome`, `slot`, `identity`) consume 100% stage area with no reserved right panel.
+- [x] Selected species dynamically drives the Character Mirror (background image, body SVG, species name label).
+- [x] Species ability score modifiers dynamically affect displayed ability scores.
+- [x] 6 horizontal ability tabs (`STR DEX CON INT WIS CHA`) appear at the bottom using `ability-score-tab-hc.svg` background and semantic `<GameIcon />` icons.
+- [x] HP, AC, Speed, Initiative metrics use canonical icons (`hit-points.svg`, `ac-badge.webp`, `speedfoot.svg`, `initiative.svg`).
+- [x] Display only player-confirmed character choices (unselected metrics remain unresolved/neutral `—`).
+- [x] Character Mirror is modularized into reusable components (`CharacterMirror.tsx`, `CharacterMirrorBody.tsx`, `CharacterMirrorMetrics.tsx`, `CharacterMirrorAbilities.tsx`).
+
 ### Character Creator — Species Visual Integration v1
 PR #247 accepted and merged. Species Visual Integration v1 completed. Character Creator — Selection Experience v1 is the next focused task.
 

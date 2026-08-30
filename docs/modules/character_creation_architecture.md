@@ -8,9 +8,12 @@ Dit document bevat de diepgaande analyse en het technische ontwerp voor een voll
 
 The Character Creator is a **full-screen application surface** (`fixed inset-0 z-[100] w-full h-full`) styled similarly to structured DevKit tools, consuming 100% of the viewport. It operates without floating card backdrops, outer window borders, or top banner offsets.
 
-### Character Mirror Visibility Rule
+### Character Mirror Visibility & Choice Rules
+- Character Mirror begins at Species.
+- Welcome / Slot / Identity are full-screen with no mirror.
 - Steps prior to `species` (`welcome`, `slot`, `identity`) use **100% of the creator content stage**. There is NO reserved empty column or right panel for these steps.
 - Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
+- The mirror reflects only player-confirmed character choices.
 
 ---
 

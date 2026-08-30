@@ -60,6 +60,7 @@ This file is also the **agent dispatch contract** for the Jules orchestrator:
 - [ ] Character creation: advanced spellbook filters (level/ritual/concentration) — small design decision still needed before dispatch.
 
 ### Done this cycle (confirmed, not yet folded into GOALS.md phases)
+- [x] Character Creator — Species Character Mirror & Choice State v1
 - [x] Canonical SVG Icon System Migration (Solo SVG System & GameIcon)
 - [x] Artificer Naming Domain & Name Generator Foundation v1
 - [x] Inventory & Equipment Architecture / UX Overhaul

@@ -4,10 +4,28 @@ import { soundService } from '../../../services/soundService';
 import { GameIcon } from '../../../game_icons';
 import { GenderBodySvg } from './GenderBodySvg';
 
-export const IdentityStep: React.FC<{
+interface IdentityStepProps {
     newChar: Partial<Character>;
     setNewChar: React.Dispatch<React.SetStateAction<Partial<Character>>>;
-}> = ({ newChar, setNewChar }) => {
+    isExplicitlySelected?: boolean;
+    onSelectGender?: (gender: 'Male' | 'Female') => void;
+}
+
+export const IdentityStep: React.FC<IdentityStepProps> = ({
+    newChar,
+    setNewChar,
+    isExplicitlySelected = false,
+    onSelectGender
+}) => {
+    const handleSelect = (gender: 'Male' | 'Female') => {
+        if (onSelectGender) {
+            onSelectGender(gender);
+        } else {
+            setNewChar({ ...newChar, gender });
+        }
+        soundService.playEffect('UI_CLICK_LIGHT');
+    };
+
     return (
         <div className="h-full flex flex-col items-center justify-center space-y-8 p-6 max-w-4xl mx-auto">
             <div className="space-y-2 text-center relative">
@@ -20,26 +38,20 @@ export const IdentityStep: React.FC<{
                 <GenderBodySvg
                     gender="Male"
                     race={newChar.race}
-                    selected={newChar.gender === 'Male'}
+                    selected={isExplicitlySelected && newChar.gender === 'Male'}
                     skinColor={newChar.appearance?.skinColor}
                     heightScale={(newChar.appearance as any)?.heightScale}
                     weightScale={(newChar.appearance as any)?.weightScale}
-                    onClick={() => {
-                        setNewChar({ ...newChar, gender: 'Male' });
-                        soundService.playEffect('UI_CLICK_LIGHT');
-                    }}
+                    onClick={() => handleSelect('Male')}
                 />
                 <GenderBodySvg
                     gender="Female"
                     race={newChar.race}
-                    selected={newChar.gender === 'Female'}
+                    selected={isExplicitlySelected && newChar.gender === 'Female'}
                     skinColor={newChar.appearance?.skinColor}
                     heightScale={(newChar.appearance as any)?.heightScale}
                     weightScale={(newChar.appearance as any)?.weightScale}
-                    onClick={() => {
-                        setNewChar({ ...newChar, gender: 'Female' });
-                        soundService.playEffect('UI_CLICK_LIGHT');
-                    }}
+                    onClick={() => handleSelect('Female')}
                 />
             </div>
         </div>

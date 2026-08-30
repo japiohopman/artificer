@@ -1883,6 +1883,14 @@ export const ALL_ICONS: Record<string, IconDefinition> = {
     "description": "A symbolic icon representing Hit Points.",
     "viewBox": "0 0 512 512"
   },
+  "initiative": {
+    "name": "initiative",
+    "category": "svg",
+    "path": "/assets/icons/svg/initiative.svg",
+    "label": "Initiative",
+    "description": "A symbolic icon representing Initiative.",
+    "viewBox": "0 0 512 512"
+  },
   "ink-pot": {
     "name": "ink-pot",
     "category": "svg",
@@ -2481,6 +2489,14 @@ export const ALL_ICONS: Record<string, IconDefinition> = {
     "path": "/assets/icons/svg/skill/survival.svg",
     "label": "Survival",
     "description": "A symbolic icon representing Survival.",
+    "viewBox": "0 0 512 512"
+  },
+  "speedfoot": {
+    "name": "speedfoot",
+    "category": "svg",
+    "path": "/assets/icons/svg/speedfoot.svg",
+    "label": "Speedfoot",
+    "description": "A symbolic icon representing Speedfoot.",
     "viewBox": "0 0 512 512"
   },
   "spell-slot": {
@@ -4089,6 +4105,14 @@ export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {
       "description": "A symbolic icon representing Hit Points.",
       "viewBox": "0 0 512 512"
     },
+    "initiative": {
+      "name": "initiative",
+      "category": "svg",
+      "path": "/assets/icons/svg/initiative.svg",
+      "label": "Initiative",
+      "description": "A symbolic icon representing Initiative.",
+      "viewBox": "0 0 512 512"
+    },
     "ink-pot": {
       "name": "ink-pot",
       "category": "svg",
@@ -4191,6 +4215,14 @@ export const SVG_CATEGORIES: Record<string, Record<string, IconDefinition>> = {
       "path": "/assets/icons/svg/size.svg",
       "label": "Size",
       "description": "A symbolic icon representing Size.",
+      "viewBox": "0 0 512 512"
+    },
+    "speedfoot": {
+      "name": "speedfoot",
+      "category": "svg",
+      "path": "/assets/icons/svg/speedfoot.svg",
+      "label": "Speedfoot",
+      "description": "A symbolic icon representing Speedfoot.",
       "viewBox": "0 0 512 512"
     },
     "spell-slot": {
@@ -11925,6 +11957,14 @@ export const ICON_CATEGORIES: IconCategory[] = [
         "description": "A symbolic icon representing Hit Points.",
         "viewBox": "0 0 512 512"
       },
+      "initiative": {
+        "name": "initiative",
+        "category": "svg",
+        "path": "/assets/icons/svg/initiative.svg",
+        "label": "Initiative",
+        "description": "A symbolic icon representing Initiative.",
+        "viewBox": "0 0 512 512"
+      },
       "ink-pot": {
         "name": "ink-pot",
         "category": "svg",
@@ -12027,6 +12067,14 @@ export const ICON_CATEGORIES: IconCategory[] = [
         "path": "/assets/icons/svg/size.svg",
         "label": "Size",
         "description": "A symbolic icon representing Size.",
+        "viewBox": "0 0 512 512"
+      },
+      "speedfoot": {
+        "name": "speedfoot",
+        "category": "svg",
+        "path": "/assets/icons/svg/speedfoot.svg",
+        "label": "Speedfoot",
+        "description": "A symbolic icon representing Speedfoot.",
         "viewBox": "0 0 512 512"
       },
       "spell-slot": {
@@ -16098,6 +16146,13 @@ export const EXPLORER_TREE: FolderNode = {
     },
     {
       "type": "file",
+      "name": "initiative.svg",
+      "iconId": "initiative",
+      "path": "initiative.svg",
+      "fullPath": "/public/assets/icons/svg/initiative.svg"
+    },
+    {
+      "type": "file",
       "name": "ink-pot.svg",
       "iconId": "ink-pot",
       "path": "ink-pot.svg",
@@ -16186,6 +16241,13 @@ export const EXPLORER_TREE: FolderNode = {
       "iconId": "size",
       "path": "size.svg",
       "fullPath": "/public/assets/icons/svg/size.svg"
+    },
+    {
+      "type": "file",
+      "name": "speedfoot.svg",
+      "iconId": "speedfoot",
+      "path": "speedfoot.svg",
+      "fullPath": "/public/assets/icons/svg/speedfoot.svg"
     },
     {
       "type": "file",
