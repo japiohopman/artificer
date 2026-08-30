@@ -66,6 +66,30 @@ export const GameIcon: React.FC<GameIconProps> = ({
     return null;
   }
 
+  const w = width || size || 24;
+  const h = height || size || 24;
+  const fillColor = fill || color;
+
+  // Support direct SVG path 'd' strings
+  if (typeof iconEntry === 'string' && !iconEntry.startsWith('/assets/')) {
+    return (
+      <svg
+        viewBox={customViewBox || "0 0 512 512"}
+        width={w}
+        height={h}
+        fill={fillColor}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        className={className}
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+      >
+        {title && <title>{title}</title>}
+        <path d={iconEntry} />
+      </svg>
+    );
+  }
+
   const assetUrl = typeof iconEntry === 'string' ? iconEntry : iconEntry.path;
   const defaultViewBox = (typeof iconEntry === 'object' && iconEntry.viewBox) || "0 0 512 512";
   const viewBox = customViewBox || defaultViewBox;
@@ -101,10 +125,6 @@ export const GameIcon: React.FC<GameIconProps> = ({
 
     return () => { isMounted = false; };
   }, [assetUrl]);
-
-  const w = width || size || 24;
-  const h = height || size || 24;
-  const fillColor = fill || color;
 
   if (!innerHtml) {
     // Render placeholder <svg> shell while async fetch completes

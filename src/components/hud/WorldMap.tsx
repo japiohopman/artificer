@@ -91,8 +91,8 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
           <div class="absolute inset-[-6px] border border-dragon-gold/60 rounded-full"></div>
         ` : ''}
 
-        <!-- Icon Image -->
-        <img src="${iconUrl}" width="32" height="32" alt="${catKey}" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}" />
+        <!-- Icon Mask -->
+        <div class="relative w-8 h-8 transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass} ${isInspected ? '-translate-y-1' : ''}" style="background-color: ${config.color}; -webkit-mask: url('${iconUrl}') no-repeat center / contain; mask: url('${iconUrl}') no-repeat center / contain;"></div>
       </div>
     `,
     className: `custom-map-marker atlas-marker-${catKey}`,

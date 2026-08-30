@@ -44,7 +44,7 @@ const createCustomIcon = (category: string, isInspected: boolean = false) => {
     html: `
       <div class="relative group ${isInspected ? 'z-[1000]' : ''}">
         <div class="absolute inset-0 bg-black/60 blur-lg rounded-full transform scale-50 transition-transform ${scaleClass}"></div>
-        <img src="${iconUrl}" width="24" height="24" alt="${catKey}" class="relative transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass}" />
+        <div class="relative w-6 h-6 transition-all drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${scaleClass}" style="background-color: ${config.color}; -webkit-mask: url('${iconUrl}') no-repeat center / contain; mask: url('${iconUrl}') no-repeat center / contain;"></div>
       </div>
     `,
     className: `custom-map-marker`,
