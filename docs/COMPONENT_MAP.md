@@ -32,7 +32,7 @@ Shared reusable UI and inspection components.
 
 ## 📁 `character/`
 Character creation, character presentation and inventory/equipment UI.
-- **`CharacterCreator/`**: Coherent guided character creation workflow (`WelcomeStep`, `SlotStep`, `IdentityStep`, `SelectionStep`, `ChoicesStep`, `StatsStep`, `SpellsStep`, `EquipmentStep`, `AppearanceStep`, `BackstoryStep`, `ValidationOverlay`, `ReviewStep`, `ChoiceCard`).
+- **`CharacterCreator/`**: Coherent guided character creation workflow (`WelcomeStep`, `SlotStep`, `IdentityStep`, `SelectionStep`, `ChoicesStep`, `StatsStep`, `SpellsStep`, `EquipmentStep`, `AppearanceStep`, `BackstoryStep`, `ValidationOverlay`, `ReviewStep`, `ChoiceCard`, `CreatorRightPanel`, `CharacterMirror/`).
 - **`CharacterProfile.tsx`**: Character sheet/profile presentation.
 - **`inventory/`**: Reusable inventory workspace components (`Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `SpellInventory.tsx`).
 - **`equipment/`**: Equipment presentation components (`EquipmentDoll.tsx`, `StarterWeaponSprite.tsx`, `starterWeaponSpriteMap.ts`).

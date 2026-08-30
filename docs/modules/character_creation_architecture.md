@@ -15,6 +15,13 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
 - The mirror reflects only player-confirmed character choices.
 
+### Shared Character Panel Presentation & Data Authority
+- **Single Character Panel Architecture**: `src/components/character/CharacterCreator/CharacterMirror/` and `src/components/character/CreatorRightPanel.tsx` provide shared character presentation primitives suitable for both Character Creator and HUD runtime contexts.
+- **Single Source of Character State**: `useCharacterStore` is the authoritative owner of runtime character state. No secondary store (`useCharacterMirrorStore`, `useCreatorPanelStore`) exists.
+- **Static vs Dynamic Data**: `useCharacterStore` owns player choices, stats, equipment, and proficiencies. Atlas JSON data owns static rules and definitions.
+- **Tabbed Right Panel**: `[ Overview ]`, `[ Skills ]`, and `[ Traits ]` tabs become available once Class selection is established.
+- **Equipment Doll Placement**: `EquipmentDoll.tsx` remains an equipment-domain component (`src/components/character/equipment/`) using 9:16 slot geometry and central character body silhouette framing without changing DnD-kit droppable behavior or slot constants.
+
 ---
 
 ## 🏛️ Official Character Visuals Asset Contract

@@ -17,6 +17,12 @@ The current architectural priority is to keep **authoring tools separate from ru
 - `useInventoryStore` — domain command & controller layer for party inventory, equip/unequip, and transfers operating directly against canonical character state (`useCharacterStore`).
 - Feature-local state — temporary editor/UI state that does not belong in global runtime stores.
 
+### Character Panel Presentation Architecture
+- **Shared Presentation Primitives**: `CharacterMirror` and `CreatorRightPanel` form the shared presentation foundation for both Character Creator and runtime HUD `CharacterPanel`.
+- **CharacterStore Authority**: `useCharacterStore` owns active character state, stats, items, and proficiencies. No duplicate character state store exists.
+- **Tab Availability**: Overview, Skills, and Traits tabs become available after Class selection.
+- **Equipment Doll Domain**: `EquipmentDoll.tsx` remains strictly inside `src/components/character/equipment/`.
+
 ### Ruleset Context Ownership Contract
 
 - **Canonical Ruleset Owner:** `useGameStore` holds the single canonical ruleset identifier (`'2014'` or `'2024'`).
