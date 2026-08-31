@@ -8,7 +8,7 @@ import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { Inventory } from '../character/inventory/Inventory';
 import { CharacterStats } from '../character/CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
-import { Shield, Package, BarChart3, Info, ChevronLeft, ChevronRight, Archive, Users } from 'lucide-react';
+import { GameIcon } from '../../game_icons';
 import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCalculations';
@@ -88,11 +88,11 @@ export const CharacterPanel: React.FC = () => {
   };
 
   const tabs = [
-    { id: 'party', icon: Users, label: 'Party' },
-    { id: 'equipment', icon: Shield, label: 'Equipment' },
-    { id: 'inventory', icon: Package, label: 'Inventory' },
-    { id: 'stats', icon: BarChart3, label: 'Stats' },
-    { id: 'logistics', icon: Archive, label: 'Logistics' }
+    { id: 'party', iconName: 'users', label: 'Party' },
+    { id: 'equipment', iconName: 'equipment', label: 'Equipment' },
+    { id: 'inventory', iconName: 'package', label: 'Inventory' },
+    { id: 'stats', iconName: 'chart', label: 'Stats' },
+    { id: 'logistics', iconName: 'archive', label: 'Logistics' }
   ];
 
   const activeTabLabel = tabs.find(t => t.id === activeTab)?.label;
@@ -120,7 +120,7 @@ export const CharacterPanel: React.FC = () => {
                   activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
                 )}
               >
-                <tab.icon size={18} />
+                <GameIcon name={tab.iconName} className="w-4.5 h-4.5" />
               </button>
             ))}
           </div>
@@ -131,9 +131,9 @@ export const CharacterPanel: React.FC = () => {
               onClick={prevCharacter}
               title="Previous Character"
               aria-label="Previous Character"
-              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
+              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors flex items-center justify-center"
             >
-              <ChevronLeft size={16} />
+              <GameIcon name="chevron_left" className="w-4 h-4 text-dragon-red" />
             </button>
 
             <div className="text-center flex-1">
@@ -149,9 +149,9 @@ export const CharacterPanel: React.FC = () => {
               onClick={nextCharacter}
               title="Next Character"
               aria-label="Next Character"
-              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors"
+              className="p-1 hover:bg-parchment-200 rounded-full text-dragon-red transition-colors flex items-center justify-center"
             >
-              <ChevronRight size={16} />
+              <GameIcon name="chevron_right" className="w-4 h-4 text-dragon-red" />
             </button>
           </div>
 
@@ -171,7 +171,7 @@ export const CharacterPanel: React.FC = () => {
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-dragon-red/30">
-                    <Users size={24} />
+                    <GameIcon name="users" className="w-6 h-6 text-dragon-red/30" />
                   </div>
                 )}
                 {/* Level Tag Overlay */}
@@ -212,7 +212,7 @@ export const CharacterPanel: React.FC = () => {
                 <div className="flex items-center gap-2">
                   {/* AC Shield Badge */}
                   <div className="flex items-center gap-1 bg-white/60 px-2 py-0.5 rounded border border-parchment-300 shadow-sm" title="Armor Class">
-                    <Shield size={10} className="text-dragon-red" />
+                    <GameIcon name="shield" className="w-2.5 h-2.5 text-dragon-red" />
                     <span className="text-[10px] font-bold text-parchment-800">{derived.ac}</span>
                   </div>
 
@@ -290,7 +290,7 @@ export const CharacterPanel: React.FC = () => {
 
                   <div className="bg-dragon-red/5 p-2 rounded-lg border border-dragon-red/10 text-center space-y-1">
                     <div className="flex items-center justify-center gap-2 text-dragon-red">
-                      <Info size={12} />
+                      <GameIcon name="info" className="w-3 h-3 text-dragon-red" />
                       <p className="text-[9px] font-bold uppercase tracking-wider">
                         {focusedItem?._type === 'equipment'
                           ? `Equip ${focusedItem.name}`
@@ -518,7 +518,7 @@ export const CharacterPanel: React.FC = () => {
               className="flex items-center gap-1.5 px-2.5 py-1 bg-dragon-red text-white hover:bg-dragon-darkRed rounded text-[9px] font-bold uppercase tracking-wider transition-colors shadow-sm"
               title="Open Grand Party Manifest / Full Inventory Workspace"
             >
-              <Package size={12} />
+              <GameIcon name="package" className="w-3 h-3 text-white" />
               <span>Full Inventory</span>
             </button>
             <span className="flex items-center gap-1 text-[8px] text-parchment-500 font-mono">
