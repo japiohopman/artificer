@@ -1,5 +1,5 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
@@ -13,151 +13,89 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Persuasion",
-    "Navigator'S Tools",
-    "all armor",
-    "shields",
+    "skill: intimidation",
+    "Skill: Medicine",
+    "Skill: Religion",
+    "Herbalism Kit",
+    "light armor",
     "simple weapons",
-    "martial weapons",
     "saving throw: wis",
     "saving throw: cha",
     "Saving Throw: wis",
     "Saving Throw: cha"
   ],
   "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "hellish resistance",
-      "index": "hellish_resistance",
-      "desc": "You have resistance to fire damage.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "resistance": [
-            {
-              "index": "fire",
-              "name": "fire",
-              "url": "/assets/atlas/damage_types/json/fire.json"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "infernal legacy",
-      "index": "infernal_legacy",
-      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-      "trait_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        },
-        "spells": [
-          {
-            "spell": {
-              "index": "thaumaturgy",
-              "name": "thaumaturgy",
-              "url": "/assets/atlas/spell/json/thaumaturgy.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
-          },
-          {
-            "spell": {
-              "index": "hellish_rebuke",
-              "name": "hellish rebuke",
-              "url": "/assets/atlas/spell/json/hellish_rebuke.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 3,
-            "spell_level": 2
-          },
-          {
-            "spell": {
-              "index": "darkness",
-              "name": "darkness",
-              "url": "/assets/atlas/spell/json/darkness.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 5
-          }
-        ]
-      }
-    }
+    ""
   ],
   "features": [
     {
-      "index": "divine_sense",
+      "index": "otherworldly_patron",
       "class": {
-        "index": "paladin",
-        "name": "paladin",
-        "url": "/assets/atlas/class/json/paladin.json"
+        "index": "warlock",
+        "name": "warlock",
+        "url": "/assets/atlas/class/json/warlock.json"
       },
-      "name": "divine sense",
+      "name": "otherworldly patron",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the @UUID[Compendium.dnd5e.spells.Item.SLxA9QhrggTz0taU]{Hallow} spell.",
-        "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
+        "At 1st level, you have struck a bargain with an otherworldly being, such as the Fiend. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level."
       ],
-      "url": "/assets/atlas/features/json/divine_sense.json",
-      "updated_at": "2026-07-13T06:30:11.884Z",
-      "image": "/assets/atlas/features/images/divine_sense.webp",
+      "url": "/assets/atlas/features/json/otherworldly_patron.json",
+      "updated_at": "2026-07-13T06:30:11.950Z",
+      "image": "/assets/atlas/features/images/otherworldly_patron.webp",
       "feature_specific": {
-        "usage": {
-          "times": "1 + charisma_modifier",
-          "type": "long_rest"
+        "subfeature_options": {
+          "choose": 1,
+          "type": "subclass"
         }
       },
       "source": "Class"
     },
     {
-      "index": "lay_on_hands",
+      "index": "pact_magic",
       "class": {
-        "index": "paladin",
-        "name": "paladin",
-        "url": "/assets/atlas/class/json/paladin.json"
+        "index": "warlock",
+        "name": "warlock",
+        "url": "/assets/atlas/class/json/warlock.json"
       },
-      "name": "lay on hands",
+      "name": "pact magic",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.0",
-        "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.",
-        "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.",
-        "This feature has no effect on undead and constructs."
+        "Your arcane research and the magic bestowed on you by your patron have given you facility with spells.",
+        "Cantrips",
+        "You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.",
+        "Spell Slots",
+        "The Warlock table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+        "For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.",
+        "Spells Known of 1st Level and Higher",
+        "At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+        "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+        "Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.",
+        "Spellcasting Ability",
+        "Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+        "Spell save DC = 8 + your proficiency bonus + your Charisma modifier",
+        "Spell attack modifier = your proficiency bonus + your Charisma modifier",
+        "Spellcasting Focus",
+        "You can use an arcane focus as a spellcasting focus for your warlock spells."
       ],
-      "url": "/assets/atlas/features/json/lay_on_hands.json",
-      "updated_at": "2026-07-13T06:30:11.886Z",
-      "image": "/assets/atlas/features/images/lay_on_hands.webp",
-      "feature_specific": {
-        "healing": {
-          "pool": "5 * paladin_level"
-        }
-      },
+      "url": "/assets/atlas/features/json/pact_magic.json",
+      "updated_at": "2026-07-13T06:30:11.951Z",
+      "image": "/assets/atlas/features/images/pact_magic.webp",
+      "feature_specific": {},
       "source": "Class"
     }
   ],
-  "flaws": [],
-  "ideals": [],
-  "bonds": [],
+  "flaws": [
+    ""
+  ],
+  "ideals": [
+    ""
+  ],
+  "bonds": [
+    ""
+  ],
   "money": {
     "cp": 0,
     "sp": 0,
@@ -177,25 +115,53 @@
     "specialFeatures": []
   },
   "items": {
-    "chain_mail_yolznnnqp": {
-      "id": "chain_mail_yolznnnqp",
-      "template": "chain_mail",
+    "dagger_hijyjukqg": {
+      "id": "dagger_hijyjukqg",
+      "template": "dagger",
+      "quantity": 2,
+      "addedAt": 1788155985052,
+      "kind": "weapon"
+    },
+    "leather_armor_fcuxdnbq0": {
+      "id": "leather_armor_fcuxdnbq0",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1788133994776,
+      "addedAt": 1788155985052,
       "kind": "armor"
     },
-    "abacus_l9laofkiv": {
-      "id": "abacus_l9laofkiv",
-      "template": "abacus",
+    "herbalism_kit_6w33u0hvc": {
+      "id": "herbalism_kit_6w33u0hvc",
+      "template": "herbalism_kit",
       "quantity": 1,
-      "addedAt": 1788133994776,
+      "addedAt": 1788155985052,
+      "kind": "adventuring_gear"
+    },
+    "bedroll_i4frk9s8m": {
+      "id": "bedroll_i4frk9s8m",
+      "template": "bedroll",
+      "quantity": 1,
+      "addedAt": 1788155985052,
       "kind": "tradegood"
     },
-    "gold_qix5ljlvm": {
-      "id": "gold_qix5ljlvm",
+    "book_axafgd115": {
+      "id": "book_axafgd115",
+      "template": "book",
+      "quantity": 1,
+      "addedAt": 1788155985053,
+      "kind": "book"
+    },
+    "quarterstaff_or4riwnqz": {
+      "id": "quarterstaff_or4riwnqz",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1788155985053,
+      "kind": "weapon"
+    },
+    "gold_0mu10xhl0": {
+      "id": "gold_0mu10xhl0",
       "template": "gold",
-      "quantity": 22,
-      "addedAt": 1788133994776,
+      "quantity": 15,
+      "addedAt": 1788155985053,
       "kind": "currency"
     }
   },
@@ -207,23 +173,23 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "abacus_l9laofkiv"
+          "itemId": "herbalism_kit_6w33u0hvc"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_qix5ljlvm"
+          "itemId": "bedroll_i4frk9s8m"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "book_axafgd115"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "quarterstaff_or4riwnqz"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "gold_0mu10xhl0"
         },
         {
           "id": "bag_5",
@@ -309,7 +275,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "dagger_hijyjukqg"
       },
       {
         "id": "off_hand",
@@ -325,7 +291,7 @@
       },
       {
         "id": "chest",
-        "itemId": "chain_mail_yolznnnqp"
+        "itemId": "leather_armor_fcuxdnbq0"
       },
       {
         "id": "clothes",
@@ -427,37 +393,90 @@
   },
   "backpack": [
     {
-      "id": "navigators_tools_9j777jdwz",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
+      "id": "herbalism_kit_wbm7436s0",
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit",
       "quantity": 1,
-      "weight": 0,
+      "weight": 3,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
+      "url": "/assets/atlas/equipment/json/herbalism_kit.json",
+      "image_url": "public/assets/atlas/equipment/images/herbalism_kit.webp",
+      "imageUrl": "/assets/atlas/equipment/images/herbalism_kit.webp",
+      "desc": [
+        "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
+      ],
+      "special": [],
+      "kind": "adventuring_gear",
+      "cost": {
+        "quantity": 5,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/herbalism-kit.webp",
+      "updated_at": "2026-07-12T19:00:16.316Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "rulesetContext": "2014"
     },
     {
-      "id": "abacus_dy0t2bn3a",
-      "index": "abacus",
-      "name": "Abacus",
+      "id": "bedroll_pamzf8dp5",
+      "index": "bedroll",
+      "name": "Bedroll",
       "quantity": 1,
-      "weight": 2,
+      "weight": 7,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
       "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
+        "Roll of cloth used by traveller to sleep in."
       ],
       "special": [],
       "kind": "tradegood",
       "cost": {
-        "quantity": 2,
+        "quantity": 1,
         "unit": "gp"
       },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
+      "image": "/assets/atlas/equipment/images/bedroll.webp",
+      "updated_at": "2026-07-12T19:00:14.010Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 2,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "book_2zomygh3p",
+      "index": "book",
+      "name": "Book",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "image_url": "public/assets/atlas/equipment/images/book.webp",
+      "imageUrl": "/assets/atlas/equipment/images/book.webp",
+      "desc": [
+        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
+      ],
+      "special": [],
+      "kind": "book",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/book.webp",
+      "updated_at": "2026-07-12T19:00:14.600Z",
       "contents": [],
       "properties": [],
       "equipSlots": [
@@ -466,23 +485,12 @@
       ],
       "last_updated": "12-7-2026",
       "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+      "sprite_index": 10,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
       "rulesetContext": "2014"
     },
     {
-      "id": "pouch_ndx25qhdm",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "clothes_travelers_gji1u76z6",
+      "id": "clothes_travelers_mvh55q1bp",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -493,10 +501,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_p7g15uxzt",
+      "id": "gold_nk0hkebt7",
       "index": "gold",
       "name": "Gold",
-      "quantity": 22,
+      "quantity": 15,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -525,39 +533,185 @@
       "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
-  "knownSpells": [],
+  "inventory": {
+    "main-hand": {
+      "id": "quarterstaff_rvlvp76n4",
+      "index": "quarterstaff",
+      "name": "Quarterstaff",
+      "quantity": 1,
+      "weight": 4,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/quarterstaff.json",
+      "image_url": "public/assets/atlas/equipment/images/quarterstaff.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quarterstaff.webp",
+      "desc": [
+        "A thick shaft of wood wrapped with a sturdy grip makes a highly functional weapon in addition to a stout walking stick."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 2,
+        "unit": "sp"
+      },
+      "image": "/assets/atlas/equipment/images/quarterstaff.webp",
+      "updated_at": "2026-07-12T19:00:20.162Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "versatile",
+          "name": "versatile",
+          "url": "/assets/atlas/weapon_properties/json/versatile.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 16,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+      "category": "Simple Melee Weapons",
+      "slot": "main-hand",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+        }
+      },
+      "two_handed_damage": {
+        "damage_dice": "1d8",
+        "damage_type": {
+          "index": "bludgeoning",
+          "name": "bludgeoning",
+          "url": "/assets/atlas/damage_types/json/bludgeoning.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "rulesetContext": "2014",
+      "main_hand_slot": "Quarterstaff"
+    }
+  },
+  "knownSpells": [
+    {
+      "index": "expeditious_retreat",
+      "name": "expeditious retreat",
+      "level": 1,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/expeditious_retreat.json",
+      "imageUrl": "/assets/atlas/spell/images/expeditious-retreat.webp"
+    },
+    {
+      "index": "unseen_servant",
+      "name": "unseen servant",
+      "level": 1,
+      "school": "conjuration",
+      "classes": [
+        "bard",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "60 feet",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/unseen_servant.json",
+      "imageUrl": "/assets/atlas/spell/images/unseen-servant.webp"
+    },
+    {
+      "index": "true_strike",
+      "name": "true strike",
+      "level": 0,
+      "school": "divination",
+      "classes": [
+        "bard",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Up to 1 round",
+      "json_path": "/assets/atlas/spell/json/true_strike.json",
+      "imageUrl": "/assets/atlas/spell/images/true-strike.webp"
+    },
+    {
+      "index": "prestidigitation",
+      "name": "prestidigitation",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "bard",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "10 feet",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/prestidigitation.json",
+      "imageUrl": "/assets/atlas/spell/images/prestidigitation.webp"
+    }
+  ],
   "languages": [
     "common",
-    "infernal"
+    "orc"
   ],
-  "preparedSpells": [],
+  "preparedSpells": [
+    "expeditious_retreat",
+    "unseen_servant",
+    "true_strike",
+    "prestidigitation"
+  ],
   "spellSlots": {
     "1": {
-      "current": 0,
-      "max": 0
+      "current": 1,
+      "max": 1
     }
   },
   "choices": {
-    "divine_sense": [
-      "hallow"
+    "otherworldly_patron": [
+      "fiend"
     ]
   },
-  "race": "tiefling",
-  "class": "paladin",
-  "background": "merchant",
+  "race": "half_orc",
+  "class": "warlock",
+  "subclass": "fiend",
+  "background": "hermit",
   "spellcastingAbility": "cha",
   "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/PaladinSword.webp",
-  "name": "Kallista",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WarlockSword.webp",
+  "name": "Shautha",
   "id": "slot3",
-  "hp": 5,
-  "maxHp": 5,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-31T00:00:53.619Z"
+  "lastSaved": "2026-08-31T06:01:06.252Z"
 }
