@@ -5,6 +5,7 @@ import { calculateDerivedStats } from '../../lib/statCalculations';
 import { CharacterPanelBody } from './panel/CharacterPanelBody';
 import { CharacterPanelAbilities } from './panel/CharacterPanelAbilities';
 import { CharacterPanelTraits } from './panel/CharacterPanelTraits';
+import { CharacterPanelBio } from './panel/CharacterPanelBio';
 import { EquipmentDoll } from './equipment/EquipmentDoll';
 import { useInventoryStore } from '../../store/useInventoryStore';
 import { useUIStore } from '../../store/useUIStore';
@@ -14,10 +15,24 @@ interface CreatorRightPanelProps {
   currentStep: string;
 }
 
-type PanelTab = 'overview' | 'traits' | 'equipment';
+export type CharacterPanelTab = 'stats' | 'traits' | 'bio' | 'equipment';
+
+export function getDefaultCharacterPanelTab(step: string): CharacterPanelTab {
+  switch (step) {
+    case 'class':
+      return 'traits';
+    case 'equipment':
+      return 'equipment';
+    case 'backstory':
+      return 'bio';
+    case 'species':
+    default:
+      return 'stats';
+  }
+}
 
 export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, currentStep }) => {
-  const [activeTab, setActiveTab] = useState<PanelTab>('overview');
+  const [activeTab, setActiveTab] = useState<CharacterPanelTab>(() => getDefaultCharacterPanelTab(currentStep));
 
   const { unequipItem, equipItem } = useInventoryStore();
   const { focusedItem } = useUIStore();
@@ -26,12 +41,10 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
   const hasClassSelected = !!newChar.class;
   const isEquipmentStep = currentStep === 'equipment';
 
-  // Automatically activate Equipment tab when entering equipment step
+  // Automatically adjust default active tab when step changes if player hasn't locked tab
   useEffect(() => {
-    if (isEquipmentStep) {
-      setActiveTab('equipment');
-    }
-  }, [currentStep, isEquipmentStep]);
+    setActiveTab(getDefaultCharacterPanelTab(currentStep));
+  }, [currentStep]);
 
   // Calculate canonical derived stats (AC, Speed, HP, Initiative)
   const derivedStats = calculateDerivedStats(newChar as Character);
@@ -65,19 +78,25 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
           </h2>
 
           {/* Panel Navigation Tabs */}
-          {(hasClassSelected || isEquipmentStep) && (
+          {(hasClassSelected || isEquipmentStep || currentStep === 'backstory') && (
             <div className="flex items-center gap-1 pt-1 border-t border-dragon-gold/20">
               <TabButton
-                label="Overview"
-                icon="ancestry"
-                isActive={activeTab === 'overview'}
-                onClick={() => setActiveTab('overview')}
+                label="Stats"
+                icon="chart"
+                isActive={activeTab === 'stats'}
+                onClick={() => setActiveTab('stats')}
               />
               <TabButton
                 label="Traits"
                 icon="trait"
                 isActive={activeTab === 'traits'}
                 onClick={() => setActiveTab('traits')}
+              />
+              <TabButton
+                label="Bio"
+                icon="pen_line"
+                isActive={activeTab === 'bio'}
+                onClick={() => setActiveTab('bio')}
               />
               {isEquipmentStep && (
                 <TabButton
@@ -94,6 +113,8 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
         {/* Tab Content Display */}
         {activeTab === 'traits' ? (
           <CharacterPanelTraits character={newChar} />
+        ) : activeTab === 'bio' ? (
+          <CharacterPanelBio character={newChar} />
         ) : (
           /* Central Stage (Background + Body + Overlays) */
           <div className="relative flex-1 my-1 min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
@@ -185,8 +206,8 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
           </div>
         )}
 
-        {/* Bottom Ability Score Strip */}
-        <CharacterPanelAbilities character={newChar} />
+        {/* Bottom Ability Score Strip - ONLY on Stats tab */}
+        {activeTab === 'stats' && <CharacterPanelAbilities character={newChar} />}
       </div>
     </div>
   );
