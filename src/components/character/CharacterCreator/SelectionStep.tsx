@@ -15,6 +15,9 @@ import { BackgroundSprite } from '../backgrounds/BackgroundSprite';
 import { ChoiceCard } from './ChoiceCard';
 import { DnDMarkdown } from '../../ui/DnDMarkdown';
 import { getTraitIcon, getProficiencyIcon } from '../../../lib/atlasUtils';
+import { ALIGNMENT_ATMOSPHERE_MAP } from '../../../lib/alignmentConstants';
+
+export { ALIGNMENT_ATMOSPHERE_MAP };
 
 const STAT_ICONS: Record<string, any> = {
   str: 'str',
@@ -23,37 +26,6 @@ const STAT_ICONS: Record<string, any> = {
   int: 'int',
   wis: 'wis',
   cha: 'cha'
-};
-
-export const ALIGNMENT_ATMOSPHERE_MAP: Record<string, string> = {
-  'lawful_good': '/assets/images/enemy_backgrounds/church.webp',
-  'lawful-good': '/assets/images/enemy_backgrounds/church.webp',
-  'lawful good': '/assets/images/enemy_backgrounds/church.webp',
-  'neutral_good': '/assets/images/enemy_backgrounds/mountain2.webp',
-  'neutral-good': '/assets/images/enemy_backgrounds/mountain2.webp',
-  'neutral good': '/assets/images/enemy_backgrounds/mountain2.webp',
-  'chaotic_good': '/assets/images/enemy_backgrounds/air1.webp',
-  'chaotic-good': '/assets/images/enemy_backgrounds/air1.webp',
-  'chaotic good': '/assets/images/enemy_backgrounds/air1.webp',
-  'lawful_neutral': '/assets/images/enemy_backgrounds/castle2.webp',
-  'lawful-neutral': '/assets/images/enemy_backgrounds/castle2.webp',
-  'lawful neutral': '/assets/images/enemy_backgrounds/castle2.webp',
-  'true_neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
-  'true-neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
-  'true neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
-  'neutral': '/assets/images/enemy_backgrounds/land_plains1.webp',
-  'chaotic_neutral': '/assets/images/enemy_backgrounds/air3.webp',
-  'chaotic-neutral': '/assets/images/enemy_backgrounds/air3.webp',
-  'chaotic neutral': '/assets/images/enemy_backgrounds/air3.webp',
-  'lawful_evil': '/assets/images/enemy_backgrounds/volcano.webp',
-  'lawful-evil': '/assets/images/enemy_backgrounds/volcano.webp',
-  'lawful evil': '/assets/images/enemy_backgrounds/volcano.webp',
-  'neutral_evil': '/assets/images/enemy_backgrounds/void3.webp',
-  'neutral-evil': '/assets/images/enemy_backgrounds/void3.webp',
-  'neutral evil': '/assets/images/enemy_backgrounds/void3.webp',
-  'chaotic_evil': '/assets/images/enemy_backgrounds/void.webp',
-  'chaotic-evil': '/assets/images/enemy_backgrounds/void.webp',
-  'chaotic evil': '/assets/images/enemy_backgrounds/void.webp'
 };
 
 export const SelectionStep: React.FC<{

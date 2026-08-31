@@ -42,24 +42,24 @@ export const Nav: React.FC = () => {
 
   const leftActions: NavAction[] = [
     {
-      id: 'chat-panel-toggle',
-      icon: 'panel',
-      label: 'Chat',
-      onClick: () => setChatExpanded(!chatExpanded),
-      isActive: chatExpanded,
-      shortcut: 'Alt+C'
-    },
-    {
       id: 'world-panel',
-      icon: 'city',
+      icon: 'panel',
       label: 'Atlas',
       onClick: () => setIsWorldPanelOpen(!isWorldPanelOpen),
       isActive: isWorldPanelOpen,
       shortcut: 'Alt+M'
     },
     {
+      id: 'chat-panel-toggle',
+      icon: 'chat_interface',
+      label: 'Chat',
+      onClick: () => setChatExpanded(!chatExpanded),
+      isActive: chatExpanded,
+      shortcut: 'Alt+C'
+    },
+    {
       id: 'journal-panel',
-      icon: 'book',
+      icon: 'pen_line',
       label: 'Journal',
       onClick: () => setIsJournalOpen(!isJournalOpen),
       isActive: isJournalOpen,

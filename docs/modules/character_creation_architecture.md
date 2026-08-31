@@ -8,9 +8,32 @@ Dit document bevat de diepgaande analyse en het technische ontwerp voor een voll
 
 The Character Creator is a **full-screen application surface** (`fixed inset-0 z-[100] w-full h-full`) styled similarly to structured DevKit tools, consuming 100% of the viewport. It operates without floating card backdrops, outer window borders, or top banner offsets.
 
-### Character Mirror Visibility Rule
+### Character Mirror Visibility & Choice Rules
+- Character Mirror begins at Species.
+- Welcome / Slot / Identity are full-screen with no mirror.
 - Steps prior to `species` (`welcome`, `slot`, `identity`) use **100% of the creator content stage**. There is NO reserved empty column or right panel for these steps.
 - Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
+- The mirror reflects only player-confirmed character choices.
+- Ruleset Architecture Rule: A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution. Versioned Atlas data is supported for Equipment, Feats, and Class Levels, while Species and Classes currently resolve unversioned 2014 datasets (see `docs/audits/ruleset-2024-gap-analysis.md`).
+
+### Shared Presentation Primitives & HUD Integration
+Shared primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) in `src/components/character/panel/` are consumed by both `CreatorRightPanel` and runtime HUD `CharacterPanel.tsx`. The environment background + body SVG form a single persistent visual backdrop across all tabs without decorative race/class captions underneath the SVG body.
+
+### Mechanical Traits & Canonical Data Enforcement
+In `CharacterPanelTraits.tsx`, mechanical traits (Saving Throws, Weapon Proficiencies, Armor Proficiencies, Skills & Proficiencies, Languages) render actual character data only. No fabricated defaults (such as `'Simple Weapons'`, `'Light Armor'`, `'Perception'`, or `'Common'`) are invented when character data is absent. Saving throws are derived directly from actual saving throw proficiencies and class specifications rather than iterating raw ability scores.
+
+### 6-PC Party Scoping & Individual Character Mirror
+The Character Mirror is explicitly character-scoped, representing one active player character at a time. The active character is selected dynamically from `useCharacterStore` (`activeCharacterId` or party index 0..5). A single reusable Character Mirror component supports all 6 PCs in a party; switching characters dynamically re-renders all derived metrics, traits, bio, equipment, and inventory without maintaining independent state or retaining stale data across characters.
+
+### Tab Architecture & Interaction Workflows
+The canonical Mirror tabs are:
+* `Stats` (`ui/chart.svg`): At-a-glance vitals (HP, AC, Speed, Initiative), identity badges, and bottom horizontal ability score strip.
+* `Traits` (`trait.svg`): Mechanical proficiencies, saving throws, skills, languages, and condition/damage immunities/resistances.
+* `Bio` (`ui/pen_line.svg`): Structured narrative fields (`traits`, `ideals`, `bonds`, `flaws`, `backstory`) bound directly to canonical character state.
+* `Equipment` (`items/equipment.svg`): Unifies Equipment Doll overlay framing and Backpack Inventory into a single context workflow, enabling direct drag-and-drop between inventory items and equipment slots.
+
+### Party-Level Logistics Scoping
+Logistics (party travel, transport profiles, shared rations/supplies, marching order) is scoped at the Party/Game level rather than inside individual character presentation sheets. The Character Mirror excludes the Logistics tab; runtime logistics manifests exist as party-level views.
 
 ---
 
@@ -58,6 +81,16 @@ Canonical gameplay, rules, and stats data reside inside `public/assets/atlas/` (
   - **Row 1**: 1_0 Entertainer, 1_1 Farmer, 1_2 Guard, 1_3 Guide
   - **Row 2**: 2_0 Hermit, 2_1 Merchant, 2_2 Noble, 2_3 Sage
   - **Row 3**: 3_0 Sailor, 3_1 Scribe, 3_2 Soldier, 3_3 Wayfarer
+
+### 4. Spell Sprite Asset Contract
+- **Canonical Directory Path**: `public/assets/atlas/spell/sprites/`
+- **Available Sprite Sheets**:
+  - **Cantrip Sheets**: `cantrips_sheet_01.webp`, `cantrips_sheet_02.webp`
+  - **Level 1 Sheets**: `spell_level1_sheet_01.webp`, `spell_level1_sheet_02.webp`, `spell_level1_sheet_03.webp`, `spell_level1_sheet_04.webp`
+  - Additional higher-level spell sheets (Level 2 to Level 9) reside in the same canonical directory.
+- **Rules & Data Boundary**:
+  - Sprite sheets are canonical assets; they must NOT be split, converted to individual image files, or relocated.
+  - The spell selection UI during the later Arcana phase (`SpellsStep`) will consume the data-driven sprite resolver (`src/lib/spellVisuals/`) to resolve `spell identifier -> sprite sheet + position`.
 
 ### Shared Rendering & Chroma-Key Processing
 Both `SpeciesSprite` and `ClassSprite` leverage `ChromaKeyImage.tsx` to key out green-screen backgrounds dynamically via offscreen canvas crop geometry (`crop: { sx, sy, sw, sh }`). The image crop occurs before chroma-key processing so each sprite cell is keyed independently. Visual mapping components NEVER alter canonical gameplay IDs (`selectedSpecies` / `selectedClass`).

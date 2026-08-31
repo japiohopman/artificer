@@ -33,10 +33,12 @@ Shared reusable UI and inspection components.
 ## 📁 `character/`
 Character creation, character presentation and inventory/equipment UI.
 - **`CharacterCreator/`**: Coherent guided character creation workflow (`WelcomeStep`, `SlotStep`, `IdentityStep`, `SelectionStep`, `ChoicesStep`, `StatsStep`, `SpellsStep`, `EquipmentStep`, `AppearanceStep`, `BackstoryStep`, `ValidationOverlay`, `ReviewStep`, `ChoiceCard`).
+- **`CreatorRightPanel.tsx`**: Creator persistent right panel consuming shared character panel primitives.
+- **`panel/`**: Shared character panel presentation primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`).
 - **`CharacterProfile.tsx`**: Character sheet/profile presentation.
 - **`inventory/`**: Reusable inventory workspace components (`Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `SpellInventory.tsx`).
 - **`equipment/`**: Equipment presentation components (`EquipmentDoll.tsx`, `StarterWeaponSprite.tsx`, `starterWeaponSpriteMap.ts`).
-- **`CharacterPanel.tsx`**: Character quick-view panel.
+- **`CharacterPanel.tsx`**: Re-export wrapper for HUD runtime CharacterPanel.
 - **`LevelUpOverlay.tsx`**: Level-up workflow.
 
 ## 📁 `hud/`
@@ -49,6 +51,7 @@ Runtime game HUD and player-facing gameplay views.
 - **`game/MapLegend.tsx`**: Dynamic map legend.
 - **`view/`**: First-person and NPC presentation.
 - **`WorldMap.tsx`**: Interactive world map.
+- **`CharacterPanel.tsx`**: Runtime HUD character panel surface consuming shared character panel primitives.
 - **`journal/`**: Campaign journal, quests and bestiary.
 
 ## 📁 `minigames/`

@@ -82,7 +82,7 @@ describe('Spell Visual Asset Architecture & Contract Unit Tests', () => {
 
   describe('PLANNED vs READY Semantics', () => {
     it('verifies PLANNED spells have no renderable cell or fake coordinates', () => {
-      const plannedSpell = getSpellSpriteCellForVisual('spell.absorb_elements');
+      const plannedSpell = getSpellSpriteCellForVisual('spell.arms_of_hadar');
       expect(plannedSpell).toBeDefined();
       expect(plannedSpell?.status).toBe('PLANNED');
       expect(plannedSpell?.row).toBeUndefined();
@@ -91,8 +91,8 @@ describe('Spell Visual Asset Architecture & Contract Unit Tests', () => {
     });
 
     it('verifies PLANNED spells with explicit fallbackVisualId resolve to a valid READY fallback mapping', () => {
-      const plannedSpell = getSpellSpriteCellForVisual('spell.absorb_elements');
-      expect(plannedSpell?.fallbackVisualId).toBe('spell.shield');
+      const plannedSpell = getSpellSpriteCellForVisual('spell.arms_of_hadar');
+      expect(plannedSpell?.fallbackVisualId).toBe('spell.inflict_wounds');
 
       const fallbackMapping = getSpellSpriteCellForVisual(plannedSpell!.fallbackVisualId!);
       expect(fallbackMapping).toBeDefined();

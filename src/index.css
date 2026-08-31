@@ -193,6 +193,20 @@
     animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
+  @keyframes subtlePulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 4px 6px -1px rgba(139, 0, 0, 0.2), 0 2px 4px -2px rgba(139, 0, 0, 0.2);
+    }
+    50% {
+      opacity: 0.88;
+      box-shadow: 0 8px 15px -1px rgba(139, 0, 0, 0.45), 0 4px 6px -2px rgba(139, 0, 0, 0.35);
+    }
+  }
+  .animate-subtle-pulse {
+    animation: subtlePulse 4s ease-in-out infinite;
+  }
+
   .font-bitcount {
     font-family: var(--font-bitcount);
     font-optical-sizing: auto;

@@ -25,7 +25,7 @@ import { IdentityStep } from './CharacterCreator/IdentityStep';
 import { ReviewStep } from './CharacterCreator/ReviewStep';
 import { SlotStep } from './CharacterCreator/SlotStep';
 import { BackstoryStep } from './CharacterCreator/BackstoryStep';
-import { CreatorRightPanel } from './CharacterCreator/CreatorRightPanel';
+import { CreatorRightPanel } from './CreatorRightPanel';
 import { ValidationOverlay, MissingStepItem } from './CharacterCreator/ValidationOverlay';
 import { saveService } from '../../services/saveService';
 import { atlasService } from '../../services/atlasService';
@@ -96,6 +96,8 @@ export const CharacterCreator: React.FC = () => {
   const [direction, setDirection] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [isValidationOpen, setIsValidationOpen] = useState(false);
+  const [isRulesetExplicitlySelected, setIsRulesetExplicitlySelected] = useState(false);
+  const [isGenderExplicitlySelected, setIsGenderExplicitlySelected] = useState(false);
 
   // New character state
   const [newChar, setNewChar] = useState<Partial<Character>>({
@@ -141,6 +143,7 @@ export const CharacterCreator: React.FC = () => {
   });
 
   const handleRulesetChange = (ruleset: '2014' | '2024') => {
+    setIsRulesetExplicitlySelected(true);
     if (newChar.ruleset === ruleset) return;
     soundService.playEffect('UI_CLICK_LIGHT');
     // Reset rules-sensitive selections on ruleset change to prevent mixed data
@@ -161,6 +164,11 @@ export const CharacterCreator: React.FC = () => {
       inventory: {},
       choices: {}
     }));
+  };
+
+  const handleGenderChange = (gender: 'Male' | 'Female') => {
+    setIsGenderExplicitlySelected(true);
+    setNewChar(prev => ({ ...prev, gender }));
   };
 
   // We dynamically determine which steps are active. Specifically, we hide 'spells'
@@ -578,9 +586,9 @@ export const CharacterCreator: React.FC = () => {
 
   const canGoNext = () => {
     switch(currentStep) {
-        case 'welcome': return true;
+        case 'welcome': return isRulesetExplicitlySelected;
         case 'slot': return !!selectedSlot;
-        case 'identity': return !!newChar.gender;
+        case 'identity': return isGenderExplicitlySelected;
         case 'species': return !!newChar.race;
         case 'class': return !!newChar.class;
         case 'choices': return true;
@@ -862,6 +870,9 @@ export const CharacterCreator: React.FC = () => {
                         selectedSlot={selectedSlot}
                         setSelectedSlot={setSelectedSlot}
                         onSelectRuleset={handleRulesetChange}
+                        onSelectGender={handleGenderChange}
+                        isRulesetExplicitlySelected={isRulesetExplicitlySelected}
+                        isGenderExplicitlySelected={isGenderExplicitlySelected}
                         available={{ subraces: availableSubraces,
                            species: availableSpecies,
                            classes: availableClasses,
@@ -920,11 +931,12 @@ export const CharacterCreator: React.FC = () => {
              <button 
                id="next-stage-btn"
                onClick={nextStep}
+               disabled={!canGoNext()}
                className={cn(
                  "flex items-center gap-1.5 px-6 py-2 rounded-sm font-header font-black text-[10px] uppercase tracking-widest shadow-lg transition-all",
                  canGoNext() 
-                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed animate-[pulse_3s_ease-in-out_infinite]"
-                    : "bg-parchment-200 text-parchment-600 hover:bg-parchment-300 shadow-none cursor-pointer"
+                    ? "bg-dragon-red text-white hover:bg-dragon-darkRed animate-subtle-pulse cursor-pointer"
+                    : "bg-parchment-200 text-parchment-600 shadow-none cursor-not-allowed opacity-60"
                )}
              >
                Continue
@@ -944,14 +956,17 @@ const StepContent: React.FC<{
   selectedSlot: number | null;
   setSelectedSlot: (slot: number) => void;
   onSelectRuleset: (ruleset: '2014' | '2024') => void;
+  onSelectGender: (gender: 'Male' | 'Female') => void;
+  isRulesetExplicitlySelected: boolean;
+  isGenderExplicitlySelected: boolean;
   available: any;
   languageDetails: Record<string, any>;
   maxLanguageOptions: number;
   staticLanguages: string[];
   allowedLanguagesPool: string[] | null;
-}> = ({ step, newChar, setNewChar, selectedSlot, setSelectedSlot, onSelectRuleset, available, languageDetails, maxLanguageOptions, staticLanguages, allowedLanguagesPool }) => {
+}> = ({ step, newChar, setNewChar, selectedSlot, setSelectedSlot, onSelectRuleset, onSelectGender, isRulesetExplicitlySelected, isGenderExplicitlySelected, available, languageDetails, maxLanguageOptions, staticLanguages, allowedLanguagesPool }) => {
    switch (step) {
-     case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep ruleset={newChar.ruleset || '2014'} onSelectRuleset={onSelectRuleset} /></div>;
+     case 'welcome': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><WelcomeStep ruleset={newChar.ruleset || '2014'} isExplicitlySelected={isRulesetExplicitlySelected} onSelectRuleset={onSelectRuleset} /></div>;
      case 'slot': return <SlotStep selectedSlot={selectedSlot} onSelect={setSelectedSlot} />;
      case 'species': {
         return <SelectionStep 
@@ -1064,7 +1079,7 @@ const StepContent: React.FC<{
       />;
       case 'stats': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><StatsStep newChar={newChar} setNewChar={setNewChar} /></div>;
       case 'appearance': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><AppearanceStep newChar={newChar} setNewChar={setNewChar} /></div>;
-     case 'identity': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><IdentityStep newChar={newChar} setNewChar={setNewChar} /></div>;
+     case 'identity': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><IdentityStep newChar={newChar} setNewChar={setNewChar} isExplicitlySelected={isGenderExplicitlySelected} onSelectGender={onSelectGender} /></div>;
      case 'review': return <div className="h-full overflow-y-auto custom-scrollbar pr-2"><ReviewStep newChar={newChar} setNewChar={setNewChar} /></div>;
      default: return null;
    }
