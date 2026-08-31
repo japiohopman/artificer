@@ -69,6 +69,16 @@ Canonical gameplay, rules, and stats data reside inside `public/assets/atlas/` (
   - **Row 2**: 2_0 Hermit, 2_1 Merchant, 2_2 Noble, 2_3 Sage
   - **Row 3**: 3_0 Sailor, 3_1 Scribe, 3_2 Soldier, 3_3 Wayfarer
 
+### 4. Spell Sprite Asset Contract
+- **Canonical Directory Path**: `public/assets/atlas/spell/sprites/`
+- **Available Sprite Sheets**:
+  - **Cantrip Sheets**: `cantrips_sheet_01.webp`, `cantrips_sheet_02.webp`
+  - **Level 1 Sheets**: `spell_level1_sheet_01.webp`, `spell_level1_sheet_02.webp`, `spell_level1_sheet_03.webp`, `spell_level1_sheet_04.webp`
+  - Additional higher-level spell sheets (Level 2 to Level 9) reside in the same canonical directory.
+- **Rules & Data Boundary**:
+  - Sprite sheets are canonical assets; they must NOT be split, converted to individual image files, or relocated.
+  - The spell selection UI during the later Arcana phase (`SpellsStep`) will consume the data-driven sprite resolver (`src/lib/spellVisuals/`) to resolve `spell identifier -> sprite sheet + position`.
+
 ### Shared Rendering & Chroma-Key Processing
 Both `SpeciesSprite` and `ClassSprite` leverage `ChromaKeyImage.tsx` to key out green-screen backgrounds dynamically via offscreen canvas crop geometry (`crop: { sx, sy, sw, sh }`). The image crop occurs before chroma-key processing so each sprite cell is keyed independently. Visual mapping components NEVER alter canonical gameplay IDs (`selectedSpecies` / `selectedClass`).
 
