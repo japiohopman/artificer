@@ -5,27 +5,25 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 15,
-    "dex": 14,
-    "con": 11,
-    "int": 12,
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
     "wis": 10,
-    "cha": 11
+    "cha": 10
   },
   "proficiencies": [
-    "skill: intimidation",
-    "Skill: Stealth",
-    "Skill: Survival",
-    "Cartographer'S Tools",
-    "light armor",
-    "medium armor",
+    "Skill: Animal Handling",
+    "Skill: Persuasion",
+    "Navigator'S Tools",
+    "all armor",
     "shields",
     "simple weapons",
     "martial weapons",
-    "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
   "traits": [
     {
@@ -39,126 +37,121 @@
       }
     },
     {
-      "name": "savage attacks",
-      "index": "savage_attacks",
-      "desc": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+      "name": "hellish resistance",
+      "index": "hellish_resistance",
+      "desc": "You have resistance to fire damage.",
       "trait_specific": {
         "passive_modifiers": {
-          "extra_critical_damage_dice": 1
+          "resistance": [
+            {
+              "index": "fire",
+              "name": "fire",
+              "url": "/assets/atlas/damage_types/json/fire.json"
+            }
+          ]
         }
       }
     },
     {
-      "name": "relentless endurance",
-      "index": "relentless_endurance",
-      "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. you cannot use this feature again until you finish a long rest.",
+      "name": "infernal legacy",
+      "index": "infernal_legacy",
+      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
       "trait_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
+        "spellcasting_ability": {
+          "index": "charisma",
+          "name": "charisma",
+          "url": "/assets/atlas/ability_scores/json/cha.json"
+        },
+        "spells": [
+          {
+            "spell": {
+              "index": "thaumaturgy",
+              "name": "thaumaturgy",
+              "url": "/assets/atlas/spell/json/thaumaturgy.json"
+            },
+            "usage": {
+              "type": "at will"
+            }
+          },
+          {
+            "spell": {
+              "index": "hellish_rebuke",
+              "name": "hellish rebuke",
+              "url": "/assets/atlas/spell/json/hellish_rebuke.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 3,
+            "spell_level": 2
+          },
+          {
+            "spell": {
+              "index": "darkness",
+              "name": "darkness",
+              "url": "/assets/atlas/spell/json/darkness.json"
+            },
+            "usage": {
+              "times": 1,
+              "type": "long_rest"
+            },
+            "level_required": 5
+          }
+        ]
       }
-    },
-    {
-      "name": "menacing",
-      "index": "menacing",
-      "desc": "You gain proficiency in the Intimidation skill."
     }
   ],
   "features": [
     {
-      "index": "favored_enemy_1_type",
+      "index": "divine_sense",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "paladin",
+        "name": "paladin",
+        "url": "/assets/atlas/class/json/paladin.json"
       },
-      "name": "favored enemy (1 type)",
+      "name": "divine sense",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
-        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
-        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
-        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
-        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
+        "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the @UUID[Compendium.dnd5e.spells.Item.SLxA9QhrggTz0taU]{Hallow} spell.",
+        "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
       ],
+      "url": "/assets/atlas/features/json/divine_sense.json",
+      "updated_at": "2026-07-13T06:30:11.884Z",
+      "image": "/assets/atlas/features/images/divine_sense.webp",
       "feature_specific": {
-        "enemy_type_options": {
-          "desc": "one enemy type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "aberrations",
-              "beasts",
-              "celestials",
-              "constructs",
-              "dragons",
-              "elementals",
-              "fey",
-              "fiends",
-              "giants",
-              "monstrosities",
-              "oozes",
-              "plants",
-              "undead",
-              "humanoids"
-            ]
-          }
-        },
-        "invocations": []
+        "usage": {
+          "times": "1 + charisma_modifier",
+          "type": "long_rest"
+        }
       },
-      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
       "source": "Class"
     },
     {
-      "index": "natural_explorer_1_terrain_type",
+      "index": "lay_on_hands",
       "class": {
-        "index": "ranger",
-        "name": "ranger",
-        "url": "/assets/atlas/class/json/ranger.json"
+        "index": "paladin",
+        "name": "paladin",
+        "url": "/assets/atlas/class/json/paladin.json"
       },
-      "name": "natural explorer (1 terrain type)",
+      "name": "lay on hands",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
-        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
-        "- Difficult terrain doesn't slow your group's travel.",
-        "- Your group can't become lost except by magical means.",
-        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
-        "- If you are traveling alone, you can move stealthily at a normal pace.",
-        "- When you forage, you find twice as much food as you normally would.",
-        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
-        "You choose additional favored terrain types at 6th and 10th level."
+        "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.0",
+        "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.",
+        "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.",
+        "This feature has no effect on undead and constructs."
       ],
+      "url": "/assets/atlas/features/json/lay_on_hands.json",
+      "updated_at": "2026-07-13T06:30:11.886Z",
+      "image": "/assets/atlas/features/images/lay_on_hands.webp",
       "feature_specific": {
-        "terrain_type_options": {
-          "desc": "one terrain type",
-          "choose": 1,
-          "type": "string",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              "arctic",
-              "coast",
-              "desert",
-              "forest",
-              "grassland",
-              "mountain",
-              "swamp"
-            ]
-          }
-        },
-        "invocations": []
+        "healing": {
+          "pool": "5 * paladin_level"
+        }
       },
-      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
-      "updated_at": "2025-10-24T20:42:13.150Z",
-      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
       "source": "Class"
     }
   ],
@@ -181,44 +174,28 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": [],
-    "weightScale": 0.98,
-    "heightScale": 1.05
+    "specialFeatures": []
   },
   "items": {
-    "longbow_u1l73sdfn": {
-      "id": "longbow_u1l73sdfn",
-      "template": "longbow",
+    "chain_mail_yolznnnqp": {
+      "id": "chain_mail_yolznnnqp",
+      "template": "chain_mail",
       "quantity": 1,
-      "addedAt": 1788061238727,
-      "kind": "weapon"
+      "addedAt": 1788133994776,
+      "kind": "armor"
     },
-    "arrow_i7up35tg5": {
-      "id": "arrow_i7up35tg5",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1788061238727,
-      "kind": "consumable"
-    },
-    "bedroll_393ozuxlt": {
-      "id": "bedroll_393ozuxlt",
-      "template": "bedroll",
+    "abacus_l9laofkiv": {
+      "id": "abacus_l9laofkiv",
+      "template": "abacus",
       "quantity": 1,
-      "addedAt": 1788061238727,
+      "addedAt": 1788133994776,
       "kind": "tradegood"
     },
-    "shortbow_liwfts6zu": {
-      "id": "shortbow_liwfts6zu",
-      "template": "shortbow",
-      "quantity": 1,
-      "addedAt": 1788061238728,
-      "kind": "weapon"
-    },
-    "gold_mwbfh7bje": {
-      "id": "gold_mwbfh7bje",
+    "gold_qix5ljlvm": {
+      "id": "gold_qix5ljlvm",
       "template": "gold",
-      "quantity": 3,
-      "addedAt": 1788061238728,
+      "quantity": 22,
+      "addedAt": 1788133994776,
       "kind": "currency"
     }
   },
@@ -230,19 +207,19 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_i7up35tg5"
+          "itemId": "abacus_l9laofkiv"
         },
         {
           "id": "bag_1",
-          "itemId": "bedroll_393ozuxlt"
+          "itemId": "gold_qix5ljlvm"
         },
         {
           "id": "bag_2",
-          "itemId": "shortbow_liwfts6zu"
+          "itemId": null
         },
         {
           "id": "bag_3",
-          "itemId": "gold_mwbfh7bje"
+          "itemId": null
         },
         {
           "id": "bag_4",
@@ -332,7 +309,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_u1l73sdfn"
+        "itemId": null
       },
       {
         "id": "off_hand",
@@ -348,7 +325,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "chain_mail_yolznnnqp"
       },
       {
         "id": "clothes",
@@ -450,82 +427,37 @@
   },
   "backpack": [
     {
-      "id": "cartographers_tools_e0tp1fwpy",
-      "index": "cartographers_tools",
-      "name": "Cartographer'S Tools",
+      "id": "navigators_tools_9j777jdwz",
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
     },
     {
-      "id": "bedroll_13mfr3w4j",
-      "index": "bedroll",
-      "name": "Bedroll",
+      "id": "abacus_dy0t2bn3a",
+      "index": "abacus",
+      "name": "Abacus",
       "quantity": 1,
-      "weight": 7,
+      "weight": 2,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/bedroll.json",
-      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
-      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
+      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
       "desc": [
-        "Roll of cloth used by traveller to sleep in."
+        "The abacus, also called a counting frame, is a calculating tool."
       ],
       "special": [],
       "kind": "tradegood",
       "cost": {
-        "quantity": 1,
+        "quantity": 2,
         "unit": "gp"
       },
-      "image": "/assets/atlas/equipment/images/bedroll.webp",
-      "updated_at": "2026-07-12T19:00:14.010Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 2,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "category": "Adventuring Gear",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "quiver_x66qb21nx",
-      "index": "quiver",
-      "name": "Quiver",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
-    },
-    {
-      "id": "arrow_gb34seoyk",
-      "index": "arrow",
-      "name": "Arrow",
-      "quantity": 20,
-      "weight": 0.05,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/arrow.json",
-      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
-      "desc": [
-        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
-      ],
-      "special": [],
-      "kind": "consumable",
-      "cost": {
-        "quantity": 5,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/arrow.webp",
-      "updated_at": "2026-07-12T19:00:11.722Z",
+      "image": "/assets/atlas/equipment/images/abacus.webp",
+      "updated_at": "2026-07-12T19:00:14.466Z",
       "contents": [],
       "properties": [],
       "equipSlots": [
@@ -534,13 +466,23 @@
       ],
       "last_updated": "12-7-2026",
       "background_type": "land_forest",
-      "sprite_index": 8,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
-      "category": "Ammunition",
+      "sprite_index": 0,
+      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
       "rulesetContext": "2014"
     },
     {
-      "id": "clothes_travelers_fnw51dfdv",
+      "id": "pouch_ndx25qhdm",
+      "index": "pouch",
+      "name": "Pouch",
+      "quantity": 2,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
+    },
+    {
+      "id": "clothes_travelers_gji1u76z6",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -551,10 +493,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_yw1y6iip3",
+      "id": "gold_p7g15uxzt",
       "index": "gold",
       "name": "Gold",
-      "quantity": 3,
+      "quantity": 22,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -583,79 +525,11 @@
       "rulesetContext": "2014"
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "shortbow_zd34ud7dt",
-      "index": "shortbow",
-      "name": "Shortbow",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/shortbow.json",
-      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
-      "desc": [
-        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/shortbow.webp",
-      "updated_at": "2026-07-12T19:00:20.317Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "ammunition",
-          "name": "ammunition",
-          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
-        },
-        {
-          "index": "two-handed",
-          "name": "two-handed",
-          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-      "category": "Simple Ranged Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Ranged",
-      "category_range": "Simple Ranged",
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 80,
-        "long": 320
-      },
-      "rulesetContext": "2014",
-      "slot": "main-hand",
-      "main_hand_slot": "Shortbow"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
-    "orc"
+    "infernal"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -665,28 +539,25 @@
     }
   },
   "choices": {
-    "favored_enemy_1_type": [
-      "beasts"
-    ],
-    "natural_explorer_1_terrain_type": [
-      "desert"
+    "divine_sense": [
+      "hallow"
     ]
   },
-  "race": "half_orc",
-  "class": "ranger",
-  "spellcastingAbility": "wis",
-  "background": "guide",
+  "race": "tiefling",
+  "class": "paladin",
+  "background": "merchant",
+  "spellcastingAbility": "cha",
   "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
-  "name": "Kansif",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/PaladinSword.webp",
+  "name": "Kallista",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-30T03:43:38.763Z"
+  "lastSaved": "2026-08-31T00:00:53.619Z"
 }
