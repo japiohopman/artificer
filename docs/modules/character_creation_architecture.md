@@ -15,19 +15,21 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
 - The mirror reflects only player-confirmed character choices.
 
-### Shared Character Panel Presentation & Data Authority
-- **Single Character Panel Architecture**: `src/components/character/panel/` (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) provides shared character presentation primitives consumed by both `CreatorRightPanel.tsx` and runtime HUD `src/components/hud/CharacterPanel.tsx`.
-- **Single Source of Character State**: `useCharacterStore` is the authoritative owner of runtime character state (including narrative bio fields: `traits`, `ideals`, `bonds`, `flaws`, `backstory`). No secondary store (`useCharacterMirrorStore`, `useCreatorPanelStore`, `useBioStore`) exists.
-- **Static vs Dynamic Data**: `useCharacterStore` owns player choices, stats, equipment, and proficiencies. Atlas JSON data owns static rules and definitions.
-- **Persistent Visual Backdrop**: `CharacterPanelBody` (selected alignment environment background + body SVG silhouette) serves as the persistent background layer across the entire right panel stage. Switching tabs (`Stats`, `Traits`, `Bio`, `Equipment`) renders translucent overlays over this persistent backdrop.
-- **Clean Body Presentation**: Sex/gender and class decorative labels are omitted from directly under the body SVG. Gender choices remain in the left creator content; class choice is presented in creator selection steps.
-- **Canonical Semantic Icons**: Choice UI and panel navigation tabs consume canonical `GameIcon` references: `race` (`items/race.svg`), `class` (`items/class.svg`), `background` (`items/background.svg`), and `equipment` (`items/equipment.svg`).
-- **Information Architecture & Tabbed Structure**:
-  - `Stats`: Core character overview, environment backdrop, body silhouette, vitals column (HP, AC, Speed, Initiative), and bottom horizontal 6 ability scores.
-  - `Traits`: Mechanical details (Saving Throws, Weapon/Armor/Tool Proficiencies, Skills, Languages, conditional Immunities/Resistances).
-  - `Bio`: Structured narrative fields (Personality Traits, Ideals, Bonds, Flaws, Backstory).
-  - `Equipment`: Equipment doll overlay over persistent body silhouette.
-- **Equipment Doll Placement**: `EquipmentDoll.tsx` remains an equipment-domain component (`src/components/character/equipment/`) using 9:16 slot geometry and central character body silhouette framing without changing DnD-kit droppable behavior or slot constants.
+### Shared Presentation Primitives & HUD Integration
+Shared primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) in `src/components/character/panel/` are consumed by both `CreatorRightPanel` and runtime HUD `CharacterPanel.tsx`. The environment background + body SVG form a single persistent visual backdrop across all tabs without decorative gender/class captions underneath.
+
+### 6-PC Party Scoping & Individual Character Mirror
+The Character Mirror is explicitly character-scoped, representing one active player character at a time. The active character is selected dynamically from `useCharacterStore` (`activeCharacterId` or party index 0..5). A single reusable Character Mirror component supports all 6 PCs in a party; switching characters dynamically re-renders all derived metrics, traits, bio, equipment, and inventory without maintaining independent state or retaining stale data across characters.
+
+### Tab Architecture & Interaction Workflows
+The canonical Mirror tabs are:
+* `Stats` (`ui/chart.svg`): At-a-glance vitals (HP, AC, Speed, Initiative), identity badges, and bottom horizontal ability score strip.
+* `Traits` (`trait.svg`): Mechanical proficiencies, saving throws, skills, languages, and condition/damage immunities/resistances.
+* `Bio` (`ui/pen_line.svg`): Structured narrative fields (`traits`, `ideals`, `bonds`, `flaws`, `backstory`) bound directly to canonical character state.
+* `Equipment` (`items/equipment.svg`): Unifies Equipment Doll overlay framing and Backpack Inventory into a single context workflow, enabling direct drag-and-drop between inventory items and equipment slots.
+
+### Party-Level Logistics Scoping
+Logistics (party travel, transport profiles, shared rations/supplies, marching order) is scoped at the Party/Game level rather than inside individual character presentation sheets. The Character Mirror excludes the Logistics tab; runtime logistics manifests exist as party-level views.
 
 ---
 
