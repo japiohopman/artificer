@@ -1,58 +1,99 @@
-# Jules Queue Orchestrator — Setup (v2)
+# Jules Queue Orchestrator — Setup (v3)
 
-## What changed from the first version
-1. **Root cause of the "files aren't where the docs say" confusion**: the first version's
-   four files were committed to the repo **root** instead of `.github/workflows/`, `scripts/`,
-   and `.github/`. GitHub Actions only reads workflows from `.github/workflows/`, so the
-   orchestrator was never actually running. This version's file tree (below) has the correct
-   paths — double-check them after committing.
-2. **Two gates before advancing, not one**: the orchestrator now waits for the PR to be
-   **merged** *and* for the task's line under `### Active` in `ROADMAP.md` to be manually
-   checked to `- [x]`. A merge alone no longer counts as "done" — matching AGENT_RULES.md §1.
-3. **Ready / Blocked / Human Review structure**: `ROADMAP.md`'s `## Now` section is now split
-   into subsections. The orchestrator only ever dispatches from `### Ready`. Anything you file
-   under `### Blocked` or `### Human Review` is never touched automatically.
-4. **Schedule starts disabled.** The workflow ships with the cron trigger commented out —
-   manual (`workflow_dispatch`) only, until you've watched one full cycle succeed.
+## Canonical roadmap architecture
 
-## File tree (commit each file to this exact path)
+Artificer now has **one roadmap only**:
+
+```text
+ROADMAP.md
 ```
-.github/workflows/jules-orchestrator.yml
-.github/jules-queue-state.json
-scripts/jules-orchestrator.mjs
-JULES_ORCHESTRATOR_SETUP.md          (wherever you keep setup docs — this file)
+
+The root `ROADMAP.md` is the authoritative source for:
+
+- current priority
+- `### Active`
+- `### Ready`
+- `### Blocked`
+- `### Human Review`
+- Jules dispatch state
+- phase acceptance status
+
+The detailed implementation checklist lives in:
+
+```text
+ docs/TASK_BOARD.md
 ```
-Also merge in `ROADMAP_Now_section_v2.md`'s content — replace your current `## Now` section
-in `ROADMAP.md` with it (review and re-sort the Ready/Blocked/Human Review placement first;
-it's a draft based on the last deep-dive, not a final call).
 
-## One-time manual setup
-1. Install the Jules GitHub app on this repo (jules.google.com), if not done already.
-2. Create an API key: jules.google.com/settings#api → "Create new key".
-3. Add it as a repo secret: Settings → Secrets and variables → Actions → New repository
-   secret → name `JULES_API_KEY`. Never paste the key anywhere but this field.
-4. Confirm your Jules source name:
-   ```sh
-   curl 'https://jules.googleapis.com/v1alpha/sources' -H 'X-Goog-Api-Key: YOUR_KEY'
-   ```
-   Update `JULES_SOURCE` in the workflow file if it differs from `sources/github/japiohopman/artificer`.
+Architecture decisions belong in `docs/ARCHITECTURE_STATUS.md` and the relevant module/system documentation.
 
-## Running the controlled test cycle
-1. Commit all files to the correct paths above, including the restructured `## Now` section.
-2. Actions tab → "Jules Queue Orchestrator" → "Run workflow" (manual trigger).
-3. It should pick the first `### Ready` task, move it to `### Active` in `ROADMAP.md`, and
-   start a Jules session. Check the Actions log to confirm.
-4. Wait for Jules to open a PR. Review it as you normally would.
-5. Merge it.
-6. **Manually check the box** for that task under `### Active` in `ROADMAP.md` — this is the
-   deliberate human confirmation step, separate from the merge itself.
-7. Run the workflow manually again (or wait — see step 8). It should detect both the merge
-   and the checked box, remove the task from `### Active`, and dispatch the next `### Ready`
-   item.
-8. Only once step 7 has worked correctly: uncomment the `schedule:` block in
-   `.github/workflows/jules-orchestrator.yml` to turn on the 15-minute heartbeat.
+There must be **no second roadmap copy** under `docs/` or `.github/workflows/`.
+
+## Jules queue contract
+
+The orchestrator reads only:
+
+```text
+ROADMAP.md → ## Now
+```
+
+Flow:
+
+1. Jules dispatches the first unchecked task under `### Ready`.
+2. The task moves to `### Active`.
+3. Jules works from `main` and creates a PR.
+4. The PR is reviewed and merged manually.
+5. The human reviewer checks the corresponding task as `[x]` only after runtime, architecture and documentation verification.
+6. The next orchestrator run removes the confirmed task from `### Active` and dispatches the next `### Ready` task.
+
+`### Blocked` and `### Human Review` are never auto-dispatched.
+
+## File tree
+
+```text
+ROADMAP.md
+
+docs/
+  TASK_BOARD.md
+  ARCHITECTURE_STATUS.md
+  modules/
+  systems/
+
+.github/
+  jules-queue-state.json
+  workflows/
+    jules-orchestrator.yml
+    ci.yml
+```
+
+`.github/workflows/` contains executable automation and its supporting setup documentation only. It is **not** a roadmap location.
+
+## Orchestrator implementation
+
+`scripts/jules-orchestrator.mjs` uses:
+
+```text
+const ROADMAP_PATH = 'ROADMAP.md';
+```
+
+This is intentional. Do not change the orchestrator to read a generated or duplicated roadmap file.
+
+## Controlled workflow
+
+The workflow currently uses manual `workflow_dispatch` and keeps the scheduled heartbeat disabled until the full queue cycle has been manually verified.
+
+When enabled, the heartbeat must continue to operate against the root `ROADMAP.md`.
 
 ## What the orchestrator will never do
-- Touch anything under `### Blocked` or `### Human Review`.
-- Mark a task's checkbox `[x]` itself — only remove the line once you've checked it.
-- Advance the queue on a merge alone, without your explicit checkbox confirmation.
+
+- Read or write a roadmap copy under `docs/`.
+- Read or write a roadmap copy under `.github/workflows/`.
+- Dispatch tasks from `### Blocked` or `### Human Review`.
+- Mark a task `[x]` merely because Jules reports completion.
+- Treat a merged PR as sufficient proof of completion.
+- Create a second task queue to work around the canonical roadmap.
+
+## Maintenance rule
+
+If a future change needs roadmap automation, modify the orchestrator against the root `ROADMAP.md` rather than creating another roadmap representation.
+
+*Last Updated: 2026-08-31*
