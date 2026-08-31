@@ -75,7 +75,7 @@ PR #257 accepted and merged. Selection Experience v1 completed.
 - [x] Keep Appearance redesign, canonical profile schema and image generation out of this task.
 
 ### Ruleset Selection & Ruleset Context — D&D 2014 / 2024
-Foundation and Downstream Integration v1 passes in progress.
+Foundation and Downstream Integration v1 passes in progress. Complete Ruleset Data Audit & Gap Analysis documented in `docs/audits/ruleset-2024-gap-analysis.md`.
 
 - [x] Provide the 2014/2024 selection UI.
 - [x] Persist the selected ruleset in character save data.
@@ -86,7 +86,9 @@ Foundation and Downstream Integration v1 passes in progress.
 - [x] Audit and migrate Feat data loaders (`fetchFeatData`, `atlasService.loadFeat`).
 - [x] Audit and migrate Class Levels data loaders (`fetchClassLevels`, `atlasService.loadLevelData`).
 - [x] Audit and migrate Spell data loaders (`fetchSpellData`, `atlasService.loadSpell`).
-- [ ] Audit and migrate remaining rules, species, subraces, backgrounds, conditions and feature rulesets for ruleset awareness.
+- [x] Perform full Ruleset Data Audit & 2024 Gap Analysis (`docs/audits/ruleset-2024-gap-analysis.md`).
+- [x] Establish ruleset architectural rule: *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
+- [ ] Ingest 2024 Species (`origins24/species`), 2024 Backgrounds (`origins24/backgrounds`), and 2024 Classes (`classes24`) into versioned `/assets/atlas/<domain>/json/24/` folders in Phase 2.
 - [ ] Validate both rulesets load correct versioned Atlas data across all downstream consumers where 2024 content exists.
 
 ### Combat Integration v1 — BattleMap → CombatTester → CombatGrid

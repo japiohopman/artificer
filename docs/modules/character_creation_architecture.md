@@ -14,6 +14,7 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - Steps prior to `species` (`welcome`, `slot`, `identity`) use **100% of the creator content stage**. There is NO reserved empty column or right panel for these steps.
 - Starting at `species` (`CHARACTER_MIRROR_START_STEP = 'species'`), the layout transitions to include the persistent **Character Mirror** (`<CreatorRightPanel>`) on the right side.
 - The mirror reflects only player-confirmed character choices.
+- Ruleset Architecture Rule: A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution. Versioned Atlas data is supported for Equipment, Feats, and Class Levels, while Species and Classes currently resolve unversioned 2014 datasets (see `docs/audits/ruleset-2024-gap-analysis.md`).
 
 ### Shared Presentation Primitives & HUD Integration
 Shared primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) in `src/components/character/panel/` are consumed by both `CreatorRightPanel` and runtime HUD `CharacterPanel.tsx`. The environment background + body SVG form a single persistent visual backdrop across all tabs without decorative race/class captions underneath the SVG body.
