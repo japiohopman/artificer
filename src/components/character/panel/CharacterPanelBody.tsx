@@ -19,12 +19,13 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
     bgImage = ALIGNMENT_ATMOSPHERE_MAP[key] || ALIGNMENT_ATMOSPHERE_MAP[key.replace(/\s+/g, '_')] || null;
   }
 
-  // Formatted species label
-  const formattedSpeciesName = character.race
+  // Formatted labels for race and class
+  const formattedRace = character.race
     ? `${character.race.replace(/-/g, ' ')}${
         character.subrace ? ` (${character.subrace.replace(/-/g, ' ')})` : ''
       }`.toUpperCase()
     : null;
+  const formattedClass = character.class ? character.class.toUpperCase() : null;
 
   return (
     <div className={`relative w-full h-full flex flex-col items-center justify-between overflow-hidden rounded-sm min-h-[220px] ${className || ''}`}>
@@ -51,12 +52,19 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
         />
       </div>
 
-      {/* Selected Species Name Label */}
-      {formattedSpeciesName && (
-        <div className="relative z-20 mb-2 px-3 py-1 bg-white/70 backdrop-blur-md border border-dragon-gold/30 rounded shadow-sm text-center">
-          <span className="text-[10px] font-header font-black text-dragon-darkRed tracking-widest block">
-            {formattedSpeciesName}
-          </span>
+      {/* Race and Class Labels under the SVG doll */}
+      {(formattedRace || formattedClass) && (
+        <div className="relative z-20 mb-2 px-3 py-1 bg-white/80 backdrop-blur-md border border-dragon-gold/30 rounded shadow-sm text-center flex flex-col gap-0.5">
+          {formattedRace && (
+            <span className="text-[10px] font-header font-black text-dragon-darkRed tracking-widest block leading-tight">
+              {formattedRace}
+            </span>
+          )}
+          {formattedClass && (
+            <span className="text-[9px] font-bold text-parchment-700 tracking-wider block uppercase leading-tight">
+              {formattedClass}
+            </span>
+          )}
         </div>
       )}
     </div>
