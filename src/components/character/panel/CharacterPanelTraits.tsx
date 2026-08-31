@@ -1,5 +1,6 @@
 import React from 'react';
 import { Character } from '../../../store/useCharacterStore';
+import { CLASS_DATA } from '../../../lib/characterUtils';
 import { GameIcon } from '../../../game_icons';
 
 interface CharacterPanelTraitsProps {
@@ -10,19 +11,54 @@ export const CharacterPanelTraits: React.FC<CharacterPanelTraitsProps> = ({ char
   const profs = character.proficiencies || [];
   const profNames = profs.map(p => typeof p === 'string' ? p : p.name || p.index || '').filter(Boolean);
 
-  const weaponProfs = profNames.filter(p => /weapon|sword|axe|bow|hammer|dagger|spear|mace/i.test(p));
-  const armorProfs = profNames.filter(p => /armor|shield|mail|plate|padded|leather/i.test(p));
-  const toolProfs = profNames.filter(p => /tool|kit|supplies|instrument/i.test(p));
-  const generalProfs = profNames.filter(p => !weaponProfs.includes(p) && !armorProfs.includes(p) && !toolProfs.includes(p));
+  // Derive actual saving throw proficiencies
+  const derivedSavesSet = new Set<string>();
+
+  if (Array.isArray((character as any).savingThrows)) {
+    (character as any).savingThrows.forEach((s: string) => derivedSavesSet.add(s.toUpperCase()));
+  }
+
+  if (character.class) {
+    const formattedClassName = character.class.charAt(0).toUpperCase() + character.class.slice(1).toLowerCase();
+    const classSaves: string[] = CLASS_DATA[formattedClassName]?.savingThrows || [];
+    classSaves.forEach(s => derivedSavesSet.add(s.toUpperCase()));
+  }
+
+  profNames.forEach(p => {
+    const match = p.match(/saving\s*throw[:\s]+([a-z]+)/i);
+    if (match) {
+      derivedSavesSet.add(match[1].toUpperCase());
+    }
+  });
+
+  const saves = Array.from(derivedSavesSet);
+
+  // Filter out saving throw entries from general proficiencies
+  const nonSaveProfs = profNames.filter(p => !/saving\s*throw/i.test(p));
+
+  const weaponProfs = nonSaveProfs.filter(p => /weapon|sword|axe|bow|hammer|dagger|spear|mace|crossbow|club|flail|halberd|javelin|lance|maul|morningstar|pike|rapier|scimitar|shortsword|sickle|trident|warhammer|whip/i.test(p));
+  const armorProfs = nonSaveProfs.filter(p => /armor|shield|mail|plate|padded|leather/i.test(p));
+  const toolProfs = nonSaveProfs.filter(p => /tool|kit|supplies|instrument|disguise|thieves/i.test(p));
+  const skillProfs = nonSaveProfs.filter(p => !weaponProfs.includes(p) && !armorProfs.includes(p) && !toolProfs.includes(p));
 
   const languages = character.languages || [];
-  const saves = character.stats ? Object.keys(character.stats) : [];
 
-  // Conditional Trait lists (only rendered if non-empty)
+  // Conditional Trait lists
   const conditionImmunities = character.conditions?.filter(c => /immunity|immune/i.test(c)) || [];
   const damageImmunities: string[] = [];
   const damageResistances: string[] = [];
   const damageVulnerabilities: string[] = [];
+
+  const hasAnyTraits =
+    saves.length > 0 ||
+    weaponProfs.length > 0 ||
+    armorProfs.length > 0 ||
+    skillProfs.length > 0 ||
+    languages.length > 0 ||
+    conditionImmunities.length > 0 ||
+    damageImmunities.length > 0 ||
+    damageResistances.length > 0 ||
+    damageVulnerabilities.length > 0;
 
   return (
     <div className="flex-1 flex flex-col gap-2 overflow-y-auto custom-scrollbar p-2 bg-white/40 backdrop-blur-sm rounded border border-dragon-gold/20">
@@ -33,72 +69,90 @@ export const CharacterPanelTraits: React.FC<CharacterPanelTraitsProps> = ({ char
         </h3>
       </div>
 
-      {/* Saving Throws */}
-      <TraitSection
-        title="Saving Throws"
-        icon="trait-saves"
-        items={saves.map(s => s.toUpperCase())}
-      />
+      {!hasAnyTraits ? (
+        <div className="text-[11px] font-sans italic text-parchment-600 text-center py-6">
+          No mechanical traits or proficiencies derived yet.
+        </div>
+      ) : (
+        <>
+          {/* Saving Throws */}
+          {saves.length > 0 && (
+            <TraitSection
+              title="Saving Throws"
+              icon="trait-saves"
+              items={saves}
+            />
+          )}
 
-      {/* Weapon Proficiencies */}
-      <TraitSection
-        title="Weapon Proficiencies"
-        icon="trait-weapon-proficiencies"
-        items={weaponProfs.length > 0 ? weaponProfs : ['Simple Weapons']}
-      />
+          {/* Weapon Proficiencies */}
+          {weaponProfs.length > 0 && (
+            <TraitSection
+              title="Weapon Proficiencies"
+              icon="trait-weapon-proficiencies"
+              items={weaponProfs}
+            />
+          )}
 
-      {/* Armor Proficiencies */}
-      <TraitSection
-        title="Armor Proficiencies"
-        icon="trait-armor-proficiencies"
-        items={armorProfs.length > 0 ? armorProfs : ['Light Armor']}
-      />
+          {/* Armor Proficiencies */}
+          {armorProfs.length > 0 && (
+            <TraitSection
+              title="Armor Proficiencies"
+              icon="trait-armor-proficiencies"
+              items={armorProfs}
+            />
+          )}
 
-      {/* Skills & General Proficiencies */}
-      <TraitSection
-        title="Skills & Proficiencies"
-        icon="trait-skills"
-        items={generalProfs.length > 0 ? generalProfs : ['Perception']}
-      />
+          {/* Skills & General Proficiencies */}
+          {skillProfs.length > 0 && (
+            <TraitSection
+              title="Skills & Proficiencies"
+              icon="trait-skills"
+              items={skillProfs}
+            />
+          )}
 
-      {/* Languages */}
-      <TraitSection
-        title="Languages"
-        icon="trait-languages"
-        items={languages.length > 0 ? languages : ['Common']}
-      />
+          {/* Languages */}
+          {languages.length > 0 && (
+            <TraitSection
+              title="Languages"
+              icon="trait-languages"
+              items={languages}
+            />
+          )}
 
-      {/* Conditional Trait Sections (only render when data exists) */}
-      {conditionImmunities.length > 0 && (
-        <TraitSection
-          title="Condition Immunities"
-          icon="trait-condition-immunities"
-          items={conditionImmunities}
-        />
-      )}
+          {/* Conditional Trait Sections */}
+          {conditionImmunities.length > 0 && (
+            <TraitSection
+              title="Condition Immunities"
+              icon="trait-condition-immunities"
+              items={conditionImmunities}
+            />
+          )}
 
-      {damageImmunities.length > 0 && (
-        <TraitSection
-          title="Damage Immunities"
-          icon="trait-damage-immunities"
-          items={damageImmunities}
-        />
-      )}
+          {damageImmunities.length > 0 && (
+            <TraitSection
+              title="Damage Immunities"
+              icon="trait-damage-immunities"
+              items={damageImmunities}
+            />
+          )}
 
-      {damageResistances.length > 0 && (
-        <TraitSection
-          title="Damage Resistances"
-          icon="trait-damage-resistances"
-          items={damageResistances}
-        />
-      )}
+          {damageResistances.length > 0 && (
+            <TraitSection
+              title="Damage Resistances"
+              icon="trait-damage-resistances"
+              items={damageResistances}
+            />
+          )}
 
-      {damageVulnerabilities.length > 0 && (
-        <TraitSection
-          title="Damage Vulnerabilities"
-          icon="trait-damage-vulnerabilities"
-          items={damageVulnerabilities}
-        />
+          {damageVulnerabilities.length > 0 && (
+            <TraitSection
+              title="Damage Vulnerabilities"
+              icon="trait-damage-vulnerabilities"
+              items={damageVulnerabilities}
+            />
+          )}
+        </>
       )}
     </div>
   );

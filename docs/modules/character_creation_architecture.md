@@ -16,7 +16,10 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - The mirror reflects only player-confirmed character choices.
 
 ### Shared Presentation Primitives & HUD Integration
-Shared primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) in `src/components/character/panel/` are consumed by both `CreatorRightPanel` and runtime HUD `CharacterPanel.tsx`. The environment background + body SVG form a single persistent visual backdrop across all tabs without decorative gender/class captions underneath.
+Shared primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) in `src/components/character/panel/` are consumed by both `CreatorRightPanel` and runtime HUD `CharacterPanel.tsx`. The environment background + body SVG form a single persistent visual backdrop across all tabs without decorative race/class captions underneath the SVG body.
+
+### Mechanical Traits & Canonical Data Enforcement
+In `CharacterPanelTraits.tsx`, mechanical traits (Saving Throws, Weapon Proficiencies, Armor Proficiencies, Skills & Proficiencies, Languages) render actual character data only. No fabricated defaults (such as `'Simple Weapons'`, `'Light Armor'`, `'Perception'`, or `'Common'`) are invented when character data is absent. Saving throws are derived directly from actual saving throw proficiencies and class specifications rather than iterating raw ability scores.
 
 ### 6-PC Party Scoping & Individual Character Mirror
 The Character Mirror is explicitly character-scoped, representing one active player character at a time. The active character is selected dynamically from `useCharacterStore` (`activeCharacterId` or party index 0..5). A single reusable Character Mirror component supports all 6 PCs in a party; switching characters dynamically re-renders all derived metrics, traits, bio, equipment, and inventory without maintaining independent state or retaining stale data across characters.

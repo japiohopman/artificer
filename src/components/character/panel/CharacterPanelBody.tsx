@@ -51,22 +51,6 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
           className="border-none bg-transparent hover:bg-transparent shadow-none p-0 scale-90"
         />
       </div>
-
-      {/* Race and Class Labels under the SVG doll */}
-      {(formattedRace || formattedClass) && (
-        <div className="relative z-20 mb-2 px-3 py-1 bg-white/80 backdrop-blur-md border border-dragon-gold/30 rounded shadow-sm text-center flex flex-col gap-0.5">
-          {formattedRace && (
-            <span className="text-[10px] font-header font-black text-dragon-darkRed tracking-widest block leading-tight">
-              {formattedRace}
-            </span>
-          )}
-          {formattedClass && (
-            <span className="text-[9px] font-bold text-parchment-700 tracking-wider block uppercase leading-tight">
-              {formattedClass}
-            </span>
-          )}
-        </div>
-      )}
     </div>
   );
 };
