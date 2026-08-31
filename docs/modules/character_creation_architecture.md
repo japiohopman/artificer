@@ -19,11 +19,14 @@ The Character Creator is a **full-screen application surface** (`fixed inset-0 z
 - **Single Character Panel Architecture**: `src/components/character/panel/` (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelBio`) provides shared character presentation primitives consumed by both `CreatorRightPanel.tsx` and runtime HUD `src/components/hud/CharacterPanel.tsx`.
 - **Single Source of Character State**: `useCharacterStore` is the authoritative owner of runtime character state (including narrative bio fields: `traits`, `ideals`, `bonds`, `flaws`, `backstory`). No secondary store (`useCharacterMirrorStore`, `useCreatorPanelStore`, `useBioStore`) exists.
 - **Static vs Dynamic Data**: `useCharacterStore` owns player choices, stats, equipment, and proficiencies. Atlas JSON data owns static rules and definitions.
+- **Persistent Visual Backdrop**: `CharacterPanelBody` (selected alignment environment background + body SVG silhouette) serves as the persistent background layer across the entire right panel stage. Switching tabs (`Stats`, `Traits`, `Bio`, `Equipment`) renders translucent overlays over this persistent backdrop.
+- **Clean Body Presentation**: Sex/gender and class decorative labels are omitted from directly under the body SVG. Gender choices remain in the left creator content; class choice is presented in creator selection steps.
+- **Canonical Semantic Icons**: Choice UI and panel navigation tabs consume canonical `GameIcon` references: `race` (`items/race.svg`), `class` (`items/class.svg`), `background` (`items/background.svg`), and `equipment` (`items/equipment.svg`).
 - **Information Architecture & Tabbed Structure**:
   - `Stats`: Core character overview, environment backdrop, body silhouette, vitals column (HP, AC, Speed, Initiative), and bottom horizontal 6 ability scores.
   - `Traits`: Mechanical details (Saving Throws, Weapon/Armor/Tool Proficiencies, Skills, Languages, conditional Immunities/Resistances).
   - `Bio`: Structured narrative fields (Personality Traits, Ideals, Bonds, Flaws, Backstory).
-  - `Equipment`: Equipment doll overlay and equipment interactions.
+  - `Equipment`: Equipment doll overlay over persistent body silhouette.
 - **Equipment Doll Placement**: `EquipmentDoll.tsx` remains an equipment-domain component (`src/components/character/equipment/`) using 9:16 slot geometry and central character body silhouette framing without changing DnD-kit droppable behavior or slot constants.
 
 ---

@@ -100,8 +100,8 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
               />
               {isEquipmentStep && (
                 <TabButton
-                  label="Gear"
-                  icon="shield"
+                  label="Equipment"
+                  icon="equipment"
                   isActive={activeTab === 'equipment'}
                   onClick={() => setActiveTab('equipment')}
                 />
@@ -110,74 +110,51 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
           )}
         </div>
 
-        {/* Tab Content Display */}
-        {activeTab === 'traits' ? (
-          <CharacterPanelTraits character={newChar} />
-        ) : activeTab === 'bio' ? (
-          <CharacterPanelBio character={newChar} />
-        ) : (
-          /* Central Stage (Background + Body + Overlays) */
-          <div className="relative flex-1 my-1 min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
-            {/* Permanent Character Surface */}
-            <CharacterPanelBody character={newChar} currentStep={currentStep} />
+        {/* Central Stage (Background + Body + Overlays persistent across ALL tabs) */}
+        <div className="relative flex-1 my-1 min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20">
+          {/* Permanent Shared Character Surface (Environment Background + SVG Body Silhouette) */}
+          <CharacterPanelBody character={newChar} currentStep={currentStep} />
 
-            {/* Left Overlay: Dynamic Selections */}
-            {activeTab !== 'equipment' && (
-              <div className="absolute left-2 top-3 z-20 flex flex-col gap-1.5 max-w-[120px] pointer-events-none">
-                {newChar.race && (
-                  <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
-                    <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Species</span>
-                    <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                      {newChar.race.replace(/-/g, ' ')}
-                    </span>
-                  </div>
-                )}
-                {newChar.class && (
-                  <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
-                    <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Class</span>
-                    <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                      {newChar.class}
-                    </span>
-                  </div>
-                )}
-                {newChar.background && (
-                  <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
-                    <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Background</span>
-                    <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                      {newChar.background.replace(/-/g, ' ')}
-                    </span>
-                  </div>
-                )}
-                {newChar.alignment && (
-                  <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
-                    <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Alignment</span>
-                    <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                      {newChar.alignment.replace(/-/g, ' ')}
-                    </span>
-                  </div>
-                )}
-              </div>
-            )}
+          {/* Dynamic Selections Overlay (Species, Class, Background, Alignment) */}
+          {activeTab === 'stats' && (
+            <div className="absolute left-2 top-3 z-20 flex flex-col gap-1.5 max-w-[120px] pointer-events-none">
+              {newChar.race && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
+                  <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Species</span>
+                  <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {newChar.race.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+              {newChar.class && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
+                  <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Class</span>
+                  <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {newChar.class}
+                  </span>
+                </div>
+              )}
+              {newChar.background && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
+                  <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Background</span>
+                  <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {newChar.background.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+              {newChar.alignment && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm">
+                  <span className="text-[7px] font-black uppercase text-parchment-600 block leading-tight">Alignment</span>
+                  <span className="text-[10px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {newChar.alignment.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
 
-            {/* Equipment Slot Overlay over the SAME permanent character surface */}
-            {activeTab === 'equipment' && (
-              <div className="absolute inset-0 z-30 flex items-center justify-center p-2">
-                <EquipmentDoll
-                  equippedItems={newChar.inventory || {}}
-                  equipment={newChar.equipment}
-                  items={newChar.items}
-                  onSlotClick={(slot) => {
-                    if (newChar.inventory?.[slot]) {
-                      unequipItem(slot);
-                    } else if (focusedItem?._type === 'equipment') {
-                      equipItem(focusedItem, slot);
-                    }
-                  }}
-                />
-              </div>
-            )}
-
-            {/* Right Overlay: Vertical Metrics Column (HP, Speed, AC, Initiative) */}
+          {/* Right Overlay: Vertical Metrics Column (HP, Speed, AC, Initiative) on Stats Tab */}
+          {activeTab === 'stats' && (
             <div className="absolute right-2 top-3 z-20 flex flex-col gap-2 pointer-events-none items-end">
               {/* HP Metric */}
               <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-1 shadow-sm flex items-center gap-1.5 min-w-[65px] justify-between">
@@ -203,8 +180,38 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
                 <span className="text-[11px] font-header font-black text-dragon-darkRed">{initiativeText}</span>
               </div>
             </div>
-          </div>
-        )}
+          )}
+
+          {/* Translucent Tab Overlays over the persistent Character Surface */}
+          {activeTab === 'traits' && (
+            <div className="absolute inset-0 z-30 p-2 overflow-y-auto custom-scrollbar bg-white/60 backdrop-blur-xs">
+              <CharacterPanelTraits character={newChar} />
+            </div>
+          )}
+
+          {activeTab === 'bio' && (
+            <div className="absolute inset-0 z-30 p-2 overflow-y-auto custom-scrollbar bg-white/60 backdrop-blur-xs">
+              <CharacterPanelBio character={newChar} />
+            </div>
+          )}
+
+          {activeTab === 'equipment' && (
+            <div className="absolute inset-0 z-30 flex items-center justify-center p-2 bg-white/20 backdrop-blur-xs">
+              <EquipmentDoll
+                equippedItems={newChar.inventory || {}}
+                equipment={newChar.equipment}
+                items={newChar.items}
+                onSlotClick={(slot) => {
+                  if (newChar.inventory?.[slot]) {
+                    unequipItem(slot);
+                  } else if (focusedItem?._type === 'equipment') {
+                    equipItem(focusedItem, slot);
+                  }
+                }}
+              />
+            </div>
+          )}
+        </div>
 
         {/* Bottom Ability Score Strip - ONLY on Stats tab */}
         {activeTab === 'stats' && <CharacterPanelAbilities character={newChar} />}
