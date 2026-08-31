@@ -1,58 +1,63 @@
 # Jules Queue Orchestrator — Setup (v2)
 
-## What changed from the first version
-1. **Root cause of the "files aren't where the docs say" confusion**: the first version's
-   four files were committed to the repo **root** instead of `.github/workflows/`, `scripts/`,
-   and `.github/`. GitHub Actions only reads workflows from `.github/workflows/`, so the
-   orchestrator was never actually running. This version's file tree (below) has the correct
-   paths — double-check them after committing.
-2. **Two gates before advancing, not one**: the orchestrator now waits for the PR to be
-   **merged** *and* for the task's line under `### Active` in `ROADMAP.md` to be manually
-   checked to `- [x]`. A merge alone no longer counts as "done" — matching AGENT_RULES.md §1.
-3. **Ready / Blocked / Human Review structure**: `ROADMAP.md`'s `## Now` section is now split
-   into subsections. The orchestrator only ever dispatches from `### Ready`. Anything you file
-   under `### Blocked` or `### Human Review` is never touched automatically.
-4. **Schedule starts disabled.** The workflow ships with the cron trigger commented out —
-   manual (`workflow_dispatch`) only, until you've watched one full cycle succeed.
+## Canonical roadmap
 
-## File tree (commit each file to this exact path)
+The repository has one canonical current-priority roadmap:
+
+```text
+ROADMAP.md
 ```
+
+The Jules orchestrator reads the `## Now` / `### Ready` section from that file. Do not maintain a second roadmap copy under `.github/workflows/` or `docs/`.
+
+`docs/TASK_BOARD.md` is the detailed execution checklist behind the canonical roadmap. Architecture/design details belong in `docs/modules/` and `docs/systems/`.
+
+The orchestrator rules are:
+1. Jules only dispatches from `### Ready`.
+2. `### Active` contains at most one task in v1.
+3. `### Blocked` and `### Human Review` are never auto-dispatched.
+4. A task is not complete because Jules says "done"; completion requires human review, testing and architecture/doc checks.
+5. A merge alone does not count as completion; the roadmap checkbox is deliberately human-confirmed before the queue advances.
+
+## File tree
+
+```text
 .github/workflows/jules-orchestrator.yml
 .github/jules-queue-state.json
 scripts/jules-orchestrator.mjs
-JULES_ORCHESTRATOR_SETUP.md          (wherever you keep setup docs — this file)
+ROADMAP.md
 ```
-Also merge in `ROADMAP_Now_section_v2.md`'s content — replace your current `## Now` section
-in `ROADMAP.md` with it (review and re-sort the Ready/Blocked/Human Review placement first;
-it's a draft based on the last deep-dive, not a final call).
+
+The old roadmap snapshots:
+
+```text
+.github/workflows/ROADMAP_Now_section_v2.md
+docs/ROADMAP.md
+```
+
+are intentionally retired. Their content must not be recreated. The root `ROADMAP.md` is the single dispatch source.
 
 ## One-time manual setup
-1. Install the Jules GitHub app on this repo (jules.google.com), if not done already.
-2. Create an API key: jules.google.com/settings#api → "Create new key".
-3. Add it as a repo secret: Settings → Secrets and variables → Actions → New repository
-   secret → name `JULES_API_KEY`. Never paste the key anywhere but this field.
-4. Confirm your Jules source name:
-   ```sh
-   curl 'https://jules.googleapis.com/v1alpha/sources' -H 'X-Goog-Api-Key: YOUR_KEY'
-   ```
-   Update `JULES_SOURCE` in the workflow file if it differs from `sources/github/japiohopman/artificer`.
 
-## Running the controlled test cycle
-1. Commit all files to the correct paths above, including the restructured `## Now` section.
-2. Actions tab → "Jules Queue Orchestrator" → "Run workflow" (manual trigger).
-3. It should pick the first `### Ready` task, move it to `### Active` in `ROADMAP.md`, and
-   start a Jules session. Check the Actions log to confirm.
-4. Wait for Jules to open a PR. Review it as you normally would.
-5. Merge it.
-6. **Manually check the box** for that task under `### Active` in `ROADMAP.md` — this is the
-   deliberate human confirmation step, separate from the merge itself.
-7. Run the workflow manually again (or wait — see step 8). It should detect both the merge
-   and the checked box, remove the task from `### Active`, and dispatch the next `### Ready`
-   item.
-8. Only once step 7 has worked correctly: uncomment the `schedule:` block in
-   `.github/workflows/jules-orchestrator.yml` to turn on the 15-minute heartbeat.
+1. Install the Jules GitHub app on this repo (jules.google.com), if not already installed.
+2. Create an API key in Jules settings.
+3. Add it as the repository secret `JULES_API_KEY`. Never commit the key.
+4. Confirm/update `JULES_SOURCE` in the workflow if the configured source differs from `sources/github/japiohopman/artificer`.
+
+## Controlled test cycle
+
+1. Keep the canonical `ROADMAP.md` `### Ready` queue reviewed and ordered.
+2. Actions → Jules Queue Orchestrator → Run workflow manually.
+3. Confirm it moves the first Ready task to Active and starts the Jules session.
+4. Review the resulting PR.
+5. Merge the PR when verified.
+6. Manually mark the corresponding Active roadmap task `[x]` only after verification.
+7. Run the workflow again to advance the queue.
+8. Keep the cron disabled until the controlled cycle has been observed end to end.
 
 ## What the orchestrator will never do
+
 - Touch anything under `### Blocked` or `### Human Review`.
-- Mark a task's checkbox `[x]` itself — only remove the line once you've checked it.
-- Advance the queue on a merge alone, without your explicit checkbox confirmation.
+- Mark a roadmap checkbox itself.
+- Advance the queue on a merge alone.
+- Read a retired roadmap snapshot instead of the canonical root `ROADMAP.md`.
