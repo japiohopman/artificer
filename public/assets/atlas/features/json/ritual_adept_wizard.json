@@ -1,0 +1,18 @@
+{
+  "index": "ritual_adept_wizard",
+  "class": {
+    "index": "wizard",
+    "name": "wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "name": "Ritual Adept",
+  "level": 1,
+  "prerequisites": [],
+  "desc": [
+    "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your Spellbook. You needn't have the spell prepared."
+  ],
+  "url": "/assets/atlas/features/json/ritual_adept_wizard.json",
+  "updated_at": "2026-08-31T00:00:00.000Z",
+  "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
+  "feature_specific": {}
+}

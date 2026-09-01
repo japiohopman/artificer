@@ -180,7 +180,12 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(wizardLvl14?.rulesetContext).toBe('2014');
     expect(wizardLvl24?.rulesetContext).toBe('2024');
     const wizard24Features = wizardLvl24?.features?.map((f: any) => f.index);
-    expect(wizard24Features).toContain('ritual_study_wizard');
+    expect(wizard24Features).toContain('ritual_adept_wizard');
+    expect(wizard24Features).not.toContain('ritual_study_wizard');
+    expect(wizardLvl24?.prof_bonus).toBe(2);
+    expect(wizardLvl24?.spellcasting?.cantrips_known).toBe(3);
+    expect(wizardLvl24?.spellcasting?.prepared_spells).toBe(4);
+    expect(wizardLvl24?.spellcasting?.spell_slots_level_1).toBe(2);
 
     // 3. Cleric Level 1
     const clericLvl14 = await atlasService.loadLevelData('cleric', 1, '2014');
