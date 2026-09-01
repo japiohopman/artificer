@@ -8,8 +8,28 @@
 
 ## 1. Executive Summary & Core Finding
 
+### Current Phase Status
+```text
+2024 Species Foundation
+→ implemented / verified
+
+2024 Class Foundation
+→ implemented / verified
+→ Fighter
+→ Wizard
+→ Cleric
+→ Rogue
+→ remaining classes pending
+
+2024 Class Levels / Features
+→ current phase
+
+2024 Subclasses
+→ pending
+```
+
 ### Critical Test Result
-Selecting 2014 vs. 2024 in the Character Creator currently resolves the **EXACT SAME DATASET** for almost all core character creation steps:
+Selecting 2014 vs. 2024 in the Character Creator currently resolves the **EXACT SAME DATASET** for unversioned steps (Backgrounds, Subclasses, Spells):
 
 ```text
 Select 2014 ruleset -> Fighter resolves /public/assets/atlas/class/json/fighter.json
@@ -45,7 +65,7 @@ Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`),
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
 | **Spells** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/spell/json/`. 2024 spell text/scaling updates missing. |
 | **Spellcasting Rules** | Supported | **Not Supported** | Embedded in classic 2014 class JSON records. |
-| **Level Progression** | Supported | **Partial** | Versioned folder `/class/levels/14/` exists; `/class/levels/24/` is unpopulated. |
+| **Level Progression** | Supported | **In Progress** | Versioned folder `/class/levels/14/` exists; `/class/levels/24/` Level 1 data in progress for Fighter, Wizard, Cleric, Rogue. |
 | **Starting Equipment** | Supported | **Not Supported** | Hardcoded in `CLASS_DATA` (`characterUtils.ts`) and 2014 background JSON records. |
 | **Proficiencies** | Supported | **Not Supported** | Derived from 2014 `CLASS_DATA` and 2014 background templates. |
 | **Derived Calculations** | Supported | **Not Supported** | Standard 2014 formulas (HP, AC, Initiative). |

@@ -1,0 +1,37 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "fighting_style",
+      "name": "Fighting Style",
+      "url": "/assets/atlas/feats/json/24/fighting-style-feats/"
+    },
+    {
+      "index": "second_wind",
+      "name": "Second Wind",
+      "url": "/assets/atlas/features/json/second_wind.json"
+    },
+    {
+      "index": "weapon_mastery",
+      "name": "Weapon Mastery",
+      "url": "/assets/atlas/features/json/weapon_mastery.json"
+    }
+  ],
+  "class_specific": {
+    "action_surges": 0,
+    "indomitable_uses": 0,
+    "extra_attacks": 0,
+    "second_wind_uses": 2,
+    "weapon_mastery_slots": 3
+  },
+  "index": "fighter_level_1",
+  "rulesetContext": "2024",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/1/fighter_level_1.json"
+}
