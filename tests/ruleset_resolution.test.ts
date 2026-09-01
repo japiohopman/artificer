@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 
 describe('Ruleset Resolution Audit Tests', () => {
@@ -40,6 +40,25 @@ describe('Ruleset Resolution Audit Tests', () => {
     // Assertion for strict resolution: missing 2024 class returns null (no cross-ruleset fallback to 2014)
     const sorcerer24 = await fetchClassData('sorcerer', '2024');
     expect(sorcerer24).toBeNull();
+  });
+
+  it('correctly filters fetchClassesList by ruleset context', async () => {
+    const list14 = await fetchClassesList('2014');
+    const list24 = await fetchClassesList('2024');
+
+    const indices14 = list14.map(c => c.index);
+    const indices24 = list24.map(c => c.index);
+
+    expect(indices14).toContain('fighter');
+    expect(indices14).toContain('sorcerer');
+    expect(indices14.length).toBe(12);
+
+    expect(indices24).toContain('fighter');
+    expect(indices24).toContain('wizard');
+    expect(indices24).toContain('cleric');
+    expect(indices24).toContain('rogue');
+    expect(indices24).not.toContain('sorcerer');
+    expect(indices24.length).toBe(4);
   });
 
   it('verifies atlasService class loading with explicit ruleset and cache key separation', async () => {

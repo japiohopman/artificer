@@ -497,7 +497,7 @@ export const CharacterCreator: React.FC = () => {
       const [s, sub, c, b, a, l] = await Promise.all([
         fetchSpeciesList(),
         fetchSubraceList(),
-        fetchClassesList(),
+        fetchClassesList(newChar.ruleset),
         fetchBackgroundsList(),
         fetchAlignmentsList(),
         fetchLanguagesList()

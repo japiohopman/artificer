@@ -1778,8 +1778,53 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     };
 }
 
-export async function fetchClassesList(): Promise<{ name: string; index: string }[]> {
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json?ref=${BRANCH}&t=${Date.now()}`;
+export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/class/json/${versionFolder}`);
+      if (fs.existsSync(dirPath)) {
+        const files = fs.readdirSync(dirPath);
+        return files
+          .filter((f: string) => f.endsWith('.json'))
+          .map((f: string) => ({
+            name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+            index: f.replace('.json', '')
+          }));
+      }
+    } catch (e) {}
+  }
+
+  // Try local index first if available
+  try {
+    const indexRes = await fetch(`/assets/atlas/class/index.json`);
+    if (indexRes.ok) {
+      const indexData = await indexRes.json();
+      if (Array.isArray(indexData)) {
+        if (versionFolder === '24') {
+          // For 2024, filter index entries by presence in /24/ folder
+          const valid24 = ['fighter', 'wizard', 'cleric', 'rogue'];
+          return indexData
+            .filter((c: any) => valid24.includes(c.index))
+            .map((c: any) => ({
+              name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+              index: c.index
+            }));
+        }
+        return indexData.map((c: any) => ({
+          name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: c.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);

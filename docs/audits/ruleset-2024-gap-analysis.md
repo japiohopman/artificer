@@ -37,7 +37,7 @@ Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`),
 | Domain | 2014 Status | 2024 Status | Resolution Path / Current State |
 | :--- | :--- | :--- | :--- |
 | **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species foundation dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. (Full coverage ongoing). |
-| **Classes** | Supported | **In Progress** | Phase 2024 Classes Foundation active. Establishing ruleset-aware `/class/json/14/` vs `/24/` boundaries and representative 2024 records (Fighter, Wizard, Cleric, Rogue). |
+| **Classes** | Supported | **Foundation Implemented** | Versioned directories exist (`/class/json/14/` vs `/24/`). Representative 2024 class foundation implemented for Fighter, Wizard, Cleric, Rogue. (Remaining 8 classes pending). |
 | **Subclasses** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/subclasses/json/`. |
 | **Class Features** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/features/json/`. |
 | **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |
