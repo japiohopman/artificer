@@ -1,0 +1,594 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "divine_sense",
+        "name": "Divine Sense",
+        "url": "/assets/atlas/features/json/divine_sense.json"
+      },
+      {
+        "index": "lay_on_hands",
+        "name": "Lay on Hands",
+        "url": "/assets/atlas/features/json/lay_on_hands.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 0
+    },
+    "index": "paladin_level_1",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/1/paladin_level_1.json",
+    "spellcasting": {
+      "spell_slots_level_1": 0,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "paladin_fighting_style",
+        "name": "Fighting Style",
+        "url": "/assets/atlas/features/json/paladin_fighting_style.json"
+      },
+      {
+        "index": "spellcasting_paladin",
+        "name": "Spellcasting: Paladin",
+        "url": "/assets/atlas/features/json/spellcasting_paladin.json"
+      },
+      {
+        "index": "divine_smite",
+        "name": "Divine Smite",
+        "url": "/assets/atlas/features/json/divine_smite.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 0
+    },
+    "index": "paladin_level_2",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/2/paladin_level_2.json",
+    "spellcasting": {
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "divine_health",
+        "name": "Divine Health",
+        "url": "/assets/atlas/features/json/divine_health.json"
+      },
+      {
+        "index": "sacred_oath",
+        "name": "Sacred Oath",
+        "url": "/assets/atlas/features/json/sacred_oath.json"
+      },
+      {
+        "index": "oath_spells",
+        "name": "Oath Spells",
+        "url": "/assets/atlas/features/json/oath_spells.json"
+      },
+      {
+        "index": "channel_divinity",
+        "name": "Channel Divinity",
+        "url": "/assets/atlas/features/json/channel_divinity.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 0
+    },
+    "index": "paladin_level_3",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/3/paladin_level_3.json",
+    "spellcasting": {
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "paladin_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/paladin_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 0
+    },
+    "index": "paladin_level_4",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/4/paladin_level_4.json",
+    "spellcasting": {
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "paladin_extra_attack",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/json/paladin_extra_attack.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 0
+    },
+    "index": "paladin_level_5",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/5/paladin_level_5.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "aura_of_protection",
+        "name": "Aura of Protection",
+        "url": "/assets/atlas/features/json/aura_of_protection.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_6",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/6/paladin_level_6.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "sacred_oath_improvement_1",
+        "name": "Sacred Oath feature",
+        "url": "/assets/atlas/features/json/sacred_oath_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_7",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/7/paladin_level_7.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "paladin_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/paladin_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_8",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/8/paladin_level_8.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_9",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/9/paladin_level_9.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "aura_of_courage",
+        "name": "Aura of Courage",
+        "url": "/assets/atlas/features/json/aura_of_courage.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_10",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/10/paladin_level_10.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "improved_divine_smite",
+        "name": "Improved Divine Smite",
+        "url": "/assets/atlas/features/json/improved_divine_smite.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_11",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/11/paladin_level_11.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "paladin_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/paladin_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_12",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/12/paladin_level_12.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_13",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/13/paladin_level_13.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "cleansing_touch",
+        "name": "Cleansing Touch",
+        "url": "/assets/atlas/features/json/cleansing_touch.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_14",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/14/paladin_level_14.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "sacred_oath_improvement_2",
+        "name": "Sacred Oath feature",
+        "url": "/assets/atlas/features/json/sacred_oath_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_15",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/15/paladin_level_15.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "paladin_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/paladin_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_16",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/16/paladin_level_16.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "class_specific": {
+      "aura_range": 10
+    },
+    "index": "paladin_level_17",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/17/paladin_level_17.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "aura_improvements",
+        "name": "Aura improvements",
+        "url": "/assets/atlas/features/json/aura_improvements.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 30
+    },
+    "index": "paladin_level_18",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/18/paladin_level_18.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "paladin_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/paladin_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 30
+    },
+    "index": "paladin_level_19",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/19/paladin_level_19.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "sacred_oath_improvement_3",
+        "name": "Sacred Oath feature",
+        "url": "/assets/atlas/features/json/sacred_oath_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "aura_range": 30
+    },
+    "index": "paladin_level_20",
+    "class": {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/assets/atlas/class/json/paladin.json"
+    },
+    "url": "/assets/atlas/class/levels/20/paladin_level_20.json",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    }
+  }
+]

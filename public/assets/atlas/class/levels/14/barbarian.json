@@ -1,0 +1,497 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "rage",
+        "name": "Rage",
+        "url": "/assets/atlas/features/json/rage.json"
+      },
+      {
+        "index": "barbarian_unarmored_defense",
+        "name": "Unarmored Defense",
+        "url": "/assets/atlas/features/json/barbarian_unarmored_defense.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 2,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_1",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/1/barbarian_level_1.json"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "reckless_attack",
+        "name": "Reckless Attack",
+        "url": "/assets/atlas/features/json/reckless_attack.json"
+      },
+      {
+        "index": "danger_sense",
+        "name": "Danger Sense",
+        "url": "/assets/atlas/features/json/danger_sense.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 2,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_2",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/2/barbarian_level_2.json"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "primal_path",
+        "name": "Primal Path",
+        "url": "/assets/atlas/features/json/primal_path.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 3,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_3",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/3/barbarian_level_3.json"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "barbarian_ability_score_improvement_1",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 3,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_4",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/4/barbarian_level_4.json"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "barbarian_extra_attack",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/json/barbarian_extra_attack.json"
+      },
+      {
+        "index": "fast_movement",
+        "name": "Fast Movement",
+        "url": "/assets/atlas/features/json/fast_movement.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 3,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_5",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/5/barbarian_level_5.json"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "primal_path_improvement_1",
+        "name": "Path feature",
+        "url": "/assets/atlas/features/json/primal_path_improvement_1.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_6",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/6/barbarian_level_6.json"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "feral_instinct",
+        "name": "Feral Instinct",
+        "url": "/assets/atlas/features/json/feral_instinct.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_7",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/7/barbarian_level_7.json"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "barbarian_ability_score_improvement_2",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 2,
+      "brutal_critical_dice": 0
+    },
+    "index": "barbarian_level_8",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/8/barbarian_level_8.json"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "brutal_critical_1_die",
+        "name": "Brutal Critical (1 die)",
+        "url": "/assets/atlas/features/json/brutal_critical_1_die.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 1
+    },
+    "index": "barbarian_level_9",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/9/barbarian_level_9.json"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "primal_path_improvement_2",
+        "name": "Path feature",
+        "url": "/assets/atlas/features/json/primal_path_improvement_2.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 1
+    },
+    "index": "barbarian_level_10",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/10/barbarian_level_10.json"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "relentless_rage",
+        "name": "Relentless Rage",
+        "url": "/assets/atlas/features/json/relentless_rage.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 4,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 1
+    },
+    "index": "barbarian_level_11",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/11/barbarian_level_11.json"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "barbarian_ability_score_improvement_3",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 5,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 1
+    },
+    "index": "barbarian_level_12",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/12/barbarian_level_12.json"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "brutal_critical_2_dice",
+        "name": "Brutal Critical (2 dice)",
+        "url": "/assets/atlas/features/json/brutal_critical_2_dice.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 5,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 2
+    },
+    "index": "barbarian_level_13",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/13/barbarian_level_13.json"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "primal_path_improvement_3",
+        "name": "Path feature",
+        "url": "/assets/atlas/features/json/primal_path_improvement_3.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 5,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 2
+    },
+    "index": "barbarian_level_14",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/14/barbarian_level_14.json"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "persistent_rage",
+        "name": "Persistent Rage",
+        "url": "/assets/atlas/features/json/persistent_rage.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 5,
+      "rage_damage_bonus": 3,
+      "brutal_critical_dice": 2
+    },
+    "index": "barbarian_level_15",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/15/barbarian_level_15.json"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "barbarian_ability_score_improvement_4",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_4.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 5,
+      "rage_damage_bonus": 4,
+      "brutal_critical_dice": 2
+    },
+    "index": "barbarian_level_16",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/16/barbarian_level_16.json"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "brutal_critical_3_dice",
+        "name": "Brutal Critical (3 dice)",
+        "url": "/assets/atlas/features/json/brutal_critical_3_dice.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 6,
+      "rage_damage_bonus": 4,
+      "brutal_critical_dice": 3
+    },
+    "index": "barbarian_level_17",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/17/barbarian_level_17.json"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "indomitable_might",
+        "name": "Indomitable Might",
+        "url": "/assets/atlas/features/json/indomitable_might.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 6,
+      "rage_damage_bonus": 4,
+      "brutal_critical_dice": 3
+    },
+    "index": "barbarian_level_18",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/18/barbarian_level_18.json"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "barbarian_ability_score_improvement_5",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/barbarian_ability_score_improvement_5.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 6,
+      "rage_damage_bonus": 4,
+      "brutal_critical_dice": 3
+    },
+    "index": "barbarian_level_19",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/19/barbarian_level_19.json"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "primal_champion",
+        "name": "Primal Champion",
+        "url": "/assets/atlas/features/json/primal_champion.json"
+      }
+    ],
+    "class_specific": {
+      "rage_count": 9999,
+      "rage_damage_bonus": 4,
+      "brutal_critical_dice": 3
+    },
+    "index": "barbarian_level_20",
+    "class": {
+      "index": "barbarian",
+      "name": "Barbarian",
+      "url": "/assets/atlas/class/json/barbarian.json"
+    },
+    "url": "/assets/atlas/class/levels/20/barbarian_level_20.json"
+  }
+]

@@ -191,7 +191,7 @@ interface CharacterState {
   setCharacters: (chars: Character[]) => void;
   setMainCharacterSlots: (slots: (Character | null)[]) => void;
   loadCharacters: () => Promise<void>;
-  loadLeveledData: (classIndex: string, levels: number[]) => Promise<void>;
+  loadLeveledData: (classIndex: string, levels: number[], ruleset?: '2014' | '2024') => Promise<void>;
   deleteCharacter: (id: string) => Promise<boolean>;
   modifyMoney: (characterId: string, amount: Partial<import('../lib/currencyUtils').Money>, mode: 'add' | 'subtract') => boolean;
   consolidateMoney: (characterId: string) => void;
@@ -721,7 +721,7 @@ characters: state.characters.map(char =>
             await ensureCharacterEquipmentLoaded(char);
             if (char.level > 0) {
               const levels = Array.from({ length: char.level }, (_, i) => i + 1);
-              await get().loadLeveledData(char.class, levels);
+              await get().loadLeveledData(char.class, levels, char.ruleset);
             }
           }
       }
@@ -730,10 +730,10 @@ characters: state.characters.map(char =>
     }
   },
 
-  loadLeveledData: async (classIndex, levels) => {
+  loadLeveledData: async (classIndex, levels, ruleset) => {
     const { classLevelingData } = get();
     const { atlasService } = await import('../services/atlasService');
-    const classKey = classIndex.toLowerCase();
+    const classKey = `${ruleset || '2014'}:${classIndex.toLowerCase()}`;
     
     let updated = false;
     const newData = { ...classLevelingData };
@@ -744,7 +744,7 @@ characters: state.characters.map(char =>
 
     for (const lvl of levels) {
         if (!newData[classKey][lvl]) {
-            const data = await atlasService.loadLevelData(classIndex, lvl);
+            const data = await atlasService.loadLevelData(classIndex, lvl, ruleset);
             if (data) {
                 newData[classKey][lvl] = data;
                 updated = true;

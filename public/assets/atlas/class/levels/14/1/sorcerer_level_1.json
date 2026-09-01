@@ -1,0 +1,42 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "spellcasting_sorcerer",
+      "name": "Spellcasting: Sorcerer",
+      "url": "/assets/atlas/features/json/spellcasting_sorcerer.json"
+    },
+    {
+      "index": "sorcerous_origin",
+      "name": "Sorcerous Origin",
+      "url": "/assets/atlas/features/json/sorcerous_origin.json"
+    }
+  ],
+  "class_specific": {
+    "sorcery_points": 0,
+    "metamagic_known": 0,
+    "creating_spell_slots": []
+  },
+  "index": "sorcerer_level_1",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/sorcerer.json"
+  },
+  "url": "/assets/atlas/class/levels/1/sorcerer_level_1.json",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "spells_known": 2,
+    "spell_slots_level_1": 2,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

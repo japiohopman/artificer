@@ -16,6 +16,7 @@ const equipmentCache: Record<string, any> = {};
 const magicItemCache: Record<string, any> = {};
 const spellCache: Record<string, any> = {};
 const backgroundCache: Record<string, any> = {};
+const classLevelCache: Record<string, any[]> = {};
 let monsterCategoriesCache: any[] | null = null;
 let monsterMappingCache: Record<string, string> | null = null;
 let materialCategoriesCache: any[] | null = null;
@@ -2040,164 +2041,114 @@ export async function fetchSubraceData(index: string): Promise<any> {
 
 export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2024'): Promise<any[]> {
   const activeRuleset = getActiveRulesetContext(ruleset);
-  const versionFolder = getRulesetVersionFolder(ruleset);
-  const altFolder = versionFolder === '24' ? '14' : '24';
-  const slug = classIndex.toLowerCase().replace(/[\s-]/g, '_');
+  const cleanClass = classIndex.toLowerCase().replace(/[\s-]/g, '_');
+  const cacheKey = `${activeRuleset}:${cleanClass}`;
 
-  // Node CLI local filesystem fallback for test environments
+  if (classLevelCache[cacheKey]) return classLevelCache[cacheKey];
+
+  let levels: any[] = [];
+
+  // Determine candidate paths based on ruleset context
+  const candidatePaths: string[] = [];
+
+  if (activeRuleset === '2024') {
+    // Strictly 2024 paths — no fallback to 2014 or unversioned root
+    candidatePaths.push(`/assets/atlas/class/levels/24/${cleanClass}.json`);
+    for (let l = 1; l <= 20; l++) {
+      candidatePaths.push(`/assets/atlas/class/levels/24/${l}/${cleanClass}_level_${l}.json`);
+      candidatePaths.push(`/assets/atlas/class/levels/24/${cleanClass}_level_${l}.json`);
+    }
+  } else {
+    // 2014 paths — versioned 14/ first, then unversioned root fallback
+    candidatePaths.push(`/assets/atlas/class/levels/14/${cleanClass}.json`);
+    candidatePaths.push(`/assets/atlas/class/levels/${cleanClass}.json`);
+    for (let l = 1; l <= 20; l++) {
+      candidatePaths.push(`/assets/atlas/class/levels/14/${l}/${cleanClass}_level_${l}.json`);
+      candidatePaths.push(`/assets/atlas/class/levels/${l}/${cleanClass}_level_${l}.json`);
+    }
+  }
+
+  // Node CLI local filesystem fallback for unit test environments
   if (typeof window === 'undefined') {
     try {
       const fs = await import('fs');
       const pathModule = await import('path');
 
-      const levels: any[] = [];
-      for (let level = 1; level <= 20; level++) {
-        const candidates = [
-          `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
-          `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
-          `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
-        ];
-
-        let levelData: any = null;
-        let resolvedPath: string | null = null;
-
-        for (const candidate of candidates) {
-          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
-          if (fs.existsSync(fullFsPath)) {
-            const fileContent = fs.readFileSync(fullFsPath, 'utf8');
-            levelData = JSON.parse(fileContent);
-            resolvedPath = candidate;
-            break;
-          }
-        }
-
-        if (levelData) {
-          const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
-          levels.push({ ...levelData, rulesetContext: actualRuleset });
-        } else if (level === 1) {
-          break;
-        }
-      }
-
-      if (levels.length > 0) return levels;
-
-      const legacyCandidates = [
-        `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
-        `/assets/atlas/class/levels/${slug}.json`,
-        `/assets/atlas/class/levels/${altFolder}/${slug}.json`
-      ];
-
-      for (const candidate of legacyCandidates) {
+      for (const candidate of candidatePaths) {
         const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
         if (fs.existsSync(fullFsPath)) {
           const fileContent = fs.readFileSync(fullFsPath, 'utf8');
           const parsed = JSON.parse(fileContent);
           if (Array.isArray(parsed)) {
             const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
-            return parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+            if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+            levels = parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+            break;
+          } else if (parsed && typeof parsed === 'object' && parsed.level) {
+            const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
+            if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+            levels.push({ ...parsed, rulesetContext: actualRuleset });
           }
         }
       }
     } catch (e) {}
-  }
 
-  // First try individual level files (levels 1 to 20)
-  try {
-    const levels: any[] = [];
-    for (let level = 1; level <= 20; level++) {
-      let levelData: any = null;
-      let resolvedPath: string | null = null;
-
-      const candidates = [
-        // Versioned folder subpath
-        `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
-        `/assets/atlas/class/levels/${versionFolder}/${slug}_level_${level}.json`,
-        // Unversioned level folder
-        `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
-        // Alt version folder
-        `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
-      ];
-
-      for (const p of candidates) {
-        try {
-          const res = await fetch(p);
-          if (res.ok) {
-            const data = await safeJson(res);
-            if (data) {
-              levelData = data;
-              resolvedPath = p;
-              break;
-            }
-          }
-        } catch (e) {}
-      }
-
-      // Remote fallback if local fetch returned nothing
-      if (!levelData) {
-        const remoteCandidates = candidates.map(c => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${c}?t=${Date.now()}`);
-        for (const remoteUrl of remoteCandidates) {
-          try {
-            const res = await fetch(`/api/raw?url=${encodeURIComponent(remoteUrl)}`);
-            if (res.ok) {
-              const data = await safeJson(res);
-              if (data) {
-                levelData = data;
-                resolvedPath = remoteUrl;
-                break;
-              }
-            }
-          } catch (e) {}
-        }
-      }
-
-      if (levelData) {
-        const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
-        levels.push({ ...levelData, rulesetContext: actualRuleset });
-      } else if (level === 1) {
-        // If level 1 fails, break and try legacy single-file array
-        break;
-      }
+    if (levels.length > 0) {
+      classLevelCache[cacheKey] = levels;
+      return levels;
     }
 
-    if (levels.length > 0) return levels;
-  } catch (e) {
-    console.warn("New class levels structure fetch failed, trying legacy:", e);
+    if (activeRuleset === '2024') {
+      classLevelCache[cacheKey] = [];
+      return [];
+    }
   }
 
-  // Fallback to legacy single-file array structure
-  const legacyCandidates = [
-    `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
-    `/assets/atlas/class/levels/${slug}.json`,
-    `/assets/atlas/class/levels/${altFolder}/${slug}.json`
-  ];
-
-  for (const p of legacyCandidates) {
+  // Browser / Network resolution
+  for (const p of candidatePaths) {
     try {
       const res = await fetch(p);
       if (res.ok) {
-        const levels = await safeJson(res);
-        if (Array.isArray(levels)) {
+        const parsed = await safeJson(res);
+        if (Array.isArray(parsed)) {
           const actualRuleset: '2014' | '2024' = (p.includes('/24/') || p.includes('/2024/')) ? '2024' : '2014';
-          return levels.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+          if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+          levels = parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+          break;
+        } else if (parsed && typeof parsed === 'object' && parsed.level) {
+          const actualRuleset: '2014' | '2024' = (p.includes('/24/') || p.includes('/2024/')) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+          levels.push({ ...parsed, rulesetContext: actualRuleset });
         }
       }
     } catch (e) {}
   }
 
-  const legacyUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${slug}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(legacyUrl)}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return [];
-    const levels = await safeJson(res);
-    if (Array.isArray(levels)) {
-      return levels.map((lvl: any) => ({ ...lvl, rulesetContext: '2014' }));
+  // Remote GitHub raw fallback
+  if (levels.length === 0) {
+    const remotePaths = candidatePaths.map(c => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${c}?t=${Date.now()}`);
+    for (const rawUrl of remotePaths) {
+      try {
+        const res = await fetch(`/api/raw?url=${encodeURIComponent(rawUrl)}`);
+        if (res.ok) {
+          const parsed = await safeJson(res);
+          if (Array.isArray(parsed)) {
+            const actualRuleset: '2014' | '2024' = (rawUrl.includes('/24/') || rawUrl.includes('/2024/')) ? '2024' : '2014';
+            if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+            levels = parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+            break;
+          } else if (parsed && typeof parsed === 'object' && parsed.level) {
+            const actualRuleset: '2014' | '2024' = (rawUrl.includes('/24/') || rawUrl.includes('/2024/')) ? '2024' : '2014';
+            if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
+            levels.push({ ...parsed, rulesetContext: actualRuleset });
+          }
+        }
+      } catch (e) {}
     }
-    return [];
-  } catch (e) {
-    console.error("Error fetching legacy class levels:", e);
-    return [];
   }
+
+  classLevelCache[cacheKey] = levels;
+  return levels;
 }
 
 export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
@@ -2277,7 +2228,26 @@ export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): P
 }
 
 export async function fetchFeatureData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/${index}.json?t=${Date.now()}`;
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const candidates = [
+        `public/assets/atlas/features/json/${cleanIndex}.json`,
+        `public/assets/atlas/features/${cleanIndex}.json`
+      ];
+      for (const cand of candidates) {
+        const fullPath = pathModule.resolve(process.cwd(), cand);
+        if (fs.existsSync(fullPath)) {
+          return JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        }
+      }
+    } catch (e) {}
+  }
+
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/json/${cleanIndex}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);

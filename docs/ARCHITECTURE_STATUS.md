@@ -29,8 +29,10 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
 - **Versioned Domain Coverage:**
-  - Species (`14/` vs `24/` — Human, Dwarf, Elf, Halfling, Orc foundation implemented)
-  - Classes (`14/` vs `24/` — Fighter, Wizard, Cleric, Rogue representative foundation implemented)
+  - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
+  - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: Fighter, Wizard, Cleric, Rogue; remaining classes pending)
+  - 2024 Class Levels / Features (`14/` vs `24/` — Level 1 foundation implemented / verified for Fighter, Wizard, Cleric, Rogue; feature dependencies audited)
+  - Next active dependency: 2024 Class Features / Backgrounds & Origins
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)

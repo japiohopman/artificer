@@ -5,7 +5,27 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 ## 🔴 Critical — Current engineering
 
 ### 2024 Atlas Data Ingestion & Ruleset-Aware Character Creation
-**Status:** Audit complete; implementation is the next phase.
+**Status:**
+2024 Species Foundation
+→ implemented / verified
+
+2024 Class Foundation
+→ implemented / verified
+→ Fighter
+→ Wizard
+→ Cleric
+→ Rogue
+→ remaining classes pending
+
+2024 Class Levels / Features
+→ Level 1 foundation implemented
+→ Fighter
+→ Wizard
+→ Cleric
+→ Rogue
+→ feature dependencies audited
+
+Next active dependency: 2024 Class Features / Backgrounds & Origins.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -13,9 +33,10 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 - [x] Migrate Feats, Class Levels and Spells to the canonical ruleset context.
 - [x] Complete `docs/audits/ruleset-2024-gap-analysis.md`.
 - [x] Confirm the current gap: Character Creator 2024 Species/Class resolution still points at shared/unversioned classic data.
-- [ ] Ingest 2024 Species/Origins from the appropriate source into a versioned Atlas structure (Phase 2 Species foundation ingested for Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/` with ruleset-aware loader and regression tests).
-- [ ] Ingest 2024 Classes.
-- [ ] Ingest 2024 Class Levels/Features and verify dependencies.
+- [x] Ingest 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/`).
+- [x] Ingest 2024 Class Foundation (Fighter, Wizard, Cleric, Rogue under `/class/json/14/` vs `/24/`).
+- [x] Ingest 2024 Class Levels / Features Level 1 foundation (Fighter, Wizard, Cleric, Rogue under `/class/levels/14/` vs `/24/`) and audit feature dependencies.
+- [ ] Ingest 2024 Class Features (full feature definitions) and verify dependencies.
 - [ ] Ingest 2024 Backgrounds/Origins.
 - [ ] Integrate 2024 Feats where rules differ.
 - [ ] Integrate 2024 Spells where rules differ.
