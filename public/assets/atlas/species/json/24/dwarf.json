@@ -1,0 +1,49 @@
+{
+  "index": "dwarf",
+  "name": "dwarf",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "ability_bonuses": [],
+  "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society.",
+  "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+  "size": "Medium",
+  "size_description": "Medium (about 4–5 feet tall).",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    },
+    {
+      "index": "dwarvish",
+      "name": "dwarvish",
+      "url": "/assets/atlas/languages/json/dwarvish.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Dwarvish.",
+  "traits": [
+    {
+      "index": "darkvision",
+      "name": "darkvision",
+      "url": "/assets/atlas/traits/json/darkvision.json"
+    },
+    {
+      "index": "dwarven_resilience",
+      "name": "dwarven resilience",
+      "url": "/assets/atlas/traits/json/dwarven_resilience.json"
+    },
+    {
+      "index": "dwarven_toughness",
+      "name": "dwarven toughness",
+      "url": "/assets/atlas/traits/json/dwarven_toughness.json"
+    },
+    {
+      "index": "stonecunning",
+      "name": "stonecunning",
+      "url": "/assets/atlas/traits/json/stonecunning.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/dwarf.json",
+  "image": "/assets/ui/official/races/dwarf.webp"
+}

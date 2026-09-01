@@ -191,9 +191,9 @@ export const AppearanceStep: React.FC<{
 
     useEffect(() => {
         if (newChar.race) {
-            fetchSpeciesData(newChar.race).then(setSpeciesStats);
+            fetchSpeciesData(newChar.race, newChar.ruleset).then(setSpeciesStats);
         }
-    }, [newChar.race]);
+    }, [newChar.race, newChar.ruleset]);
 
     useEffect(() => {
         if (!newChar.tokenUrl) {

@@ -1656,12 +1656,15 @@ export async function fetchSpeciesList(): Promise<{ name: string; index: string 
   }
 }
 
-export async function fetchSpeciesWikiData(index: string): Promise<any> {
-  return fetchSpeciesData(index);
+export async function fetchSpeciesWikiData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  return fetchSpeciesData(index, ruleset);
 }
 
-export async function fetchSpeciesData(index: string): Promise<any> {
+export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
     if (!index) return null;
+
+    const versionFolder = getRulesetVersionFolder(ruleset);
+    const altFolder = versionFolder === '24' ? '14' : '24';
 
     const parts = index.split(':');
     const racePart = parts[0].toLowerCase().trim();
@@ -1674,59 +1677,100 @@ export async function fetchSpeciesData(index: string): Promise<any> {
     const localCandidates: string[] = [];
     if (subracePart) {
       const subraceUnderscore = subracePart.replace(/-/g, '_');
+      localCandidates.push(`/assets/atlas/subraces/json/${versionFolder}/${subraceUnderscore}.json`);
       localCandidates.push(`/assets/atlas/subraces/json/${subraceUnderscore}.json`);
       localCandidates.push(`/assets/atlas/subraces/json/${subracePart}.json`);
     }
+    // Versioned species subfolders
+    localCandidates.push(`/assets/atlas/species/json/${versionFolder}/${underscoreIndex}.json`);
+    localCandidates.push(`/assets/atlas/species/json/${versionFolder}/${hyphenatedIndex}.json`);
+    if (racePart) {
+      localCandidates.push(`/assets/atlas/species/json/${versionFolder}/${racePart}.json`);
+    }
+    // Root species folder fallback
     localCandidates.push(`/assets/atlas/species/json/${underscoreIndex}.json`);
     localCandidates.push(`/assets/atlas/species/json/${hyphenatedIndex}.json`);
     localCandidates.push(`/assets/atlas/subraces/json/${underscoreIndex}.json`);
     if (racePart) {
       localCandidates.push(`/assets/atlas/species/json/${racePart}.json`);
     }
+    // Alternative version folder fallback
+    localCandidates.push(`/assets/atlas/species/json/${altFolder}/${underscoreIndex}.json`);
+    localCandidates.push(`/assets/atlas/species/json/${altFolder}/${hyphenatedIndex}.json`);
 
-    // Try local static files first
-    for (const path of localCandidates) {
+    let data: any = null;
+    let resolvedPath: string | null = null;
+
+    // Node CLI local filesystem fallback for unit test environments
+    if (typeof window === 'undefined') {
       try {
-        const res = await fetch(path);
-        if (res.ok) {
-          const data = await safeJson(res);
-          if (data) {
-            return {
-              ...data,
-              index: index,
-              imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'species', index)
-            };
+        const fs = await import('fs');
+        const pathModule = await import('path');
+        for (const candidate of localCandidates) {
+          const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+          if (fs.existsSync(fullFsPath)) {
+            const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+            data = JSON.parse(fileContent);
+            resolvedPath = candidate;
+            break;
           }
         }
-      } catch (e) {
-        // continue to next candidate
+      } catch (e) {}
+    }
+
+    // Try local static files first if not resolved via Node CLI
+    if (!data) {
+      for (const path of localCandidates) {
+        try {
+          const res = await fetch(path);
+          if (res.ok) {
+            const parsed = await safeJson(res);
+            if (parsed) {
+              data = parsed;
+              resolvedPath = path;
+              break;
+            }
+          }
+        } catch (e) {
+          // continue to next candidate
+        }
       }
     }
 
     // Fallback to GitHub raw
-    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${index}.json?t=${Date.now()}`;
-    const wikiUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/spicies_wiki/${index}.json?t=${Date.now()}`;
+    if (!data) {
+      const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${versionFolder}/${underscoreIndex}.json?t=${Date.now()}`;
+      const fallbackGithubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${underscoreIndex}.json?t=${Date.now()}`;
+      const wikiUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/spicies_wiki/${underscoreIndex}.json?t=${Date.now()}`;
 
-    try {
-      const [res, wRes] = await Promise.all([
-        fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`),
-        fetch(`/api/raw?url=${encodeURIComponent(wikiUrl)}`)
-      ]);
+      try {
+        const [res, fbRes, wRes] = await Promise.all([
+          fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`),
+          fetch(`/api/raw?url=${encodeURIComponent(fallbackGithubUrl)}`),
+          fetch(`/api/raw?url=${encodeURIComponent(wikiUrl)}`)
+        ]);
 
-      const data = await safeJson(res);
-      const wiki = await safeJson(wRes);
+        const mainData = (await safeJson(res)) || (await safeJson(fbRes));
+        const wiki = await safeJson(wRes);
 
-      if (!data && !wiki) return null;
-
-      const merged = { ...(data || {}), ...wiki, wiki_source: !!wiki };
-      return {
-        ...merged,
-        index: index,
-        imageUrl: normalizeImageUrl(merged.image || merged.imageUrl, 'species', index)
-      };
-    } catch (e) {
-      return null;
+        if (mainData || wiki) {
+          data = { ...(mainData || {}), ...wiki, wiki_source: !!wiki };
+          resolvedPath = mainData ? githubUrl : wikiUrl;
+        }
+      } catch (e) {}
     }
+
+    if (!data) return null;
+
+    const actualPath = resolvedPath || data.url || '';
+    const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+    return {
+      ...data,
+      index: index,
+      rulesetContext: actualRuleset,
+      imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'species', index)
+    };
 }
 
 export async function fetchClassesList(): Promise<{ name: string; index: string }[]> {

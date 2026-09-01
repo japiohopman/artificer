@@ -1,0 +1,44 @@
+{
+  "index": "orc",
+  "name": "orc",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "ability_bonuses": [],
+  "alignment": "Orcs tend toward chaotic alignments.",
+  "age": "Orcs reach adulthood at age 12 and live up to 50 years.",
+  "size": "Medium",
+  "size_description": "Medium (about 6–7 feet tall).",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    },
+    {
+      "index": "orc",
+      "name": "orc",
+      "url": "/assets/atlas/languages/json/orc.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Orc.",
+  "traits": [
+    {
+      "index": "adrenaline_rush",
+      "name": "adrenaline rush",
+      "url": "/assets/atlas/traits/json/adrenaline_rush.json"
+    },
+    {
+      "index": "darkvision",
+      "name": "darkvision",
+      "url": "/assets/atlas/traits/json/darkvision.json"
+    },
+    {
+      "index": "relentless_endurance",
+      "name": "relentless endurance",
+      "url": "/assets/atlas/traits/json/relentless_endurance.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/orc.json",
+  "image": "/assets/ui/official/races/half_orc.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "index": "halfling",
+  "name": "halfling",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "ability_bonuses": [],
+  "alignment": "Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression.",
+  "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+  "size": "Small",
+  "size_description": "Small (about 2–3 feet tall).",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    },
+    {
+      "index": "halfling",
+      "name": "halfling",
+      "url": "/assets/atlas/languages/json/halfling.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and Halfling.",
+  "traits": [
+    {
+      "index": "brave",
+      "name": "brave",
+      "url": "/assets/atlas/traits/json/brave.json"
+    },
+    {
+      "index": "halfling_nimbleness",
+      "name": "halfling nimbleness",
+      "url": "/assets/atlas/traits/json/halfling_nimbleness.json"
+    },
+    {
+      "index": "luck",
+      "name": "luck",
+      "url": "/assets/atlas/traits/json/luck.json"
+    },
+    {
+      "index": "naturally_stealthy",
+      "name": "naturally stealthy",
+      "url": "/assets/atlas/traits/json/naturally_stealthy.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/halfling.json",
+  "image": "/assets/ui/official/races/halfling.webp"
+}

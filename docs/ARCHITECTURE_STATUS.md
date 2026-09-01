@@ -29,12 +29,13 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
 - **Versioned Domain Coverage:**
+  - Species (`14/` vs `24/` — Human, Dwarf, Elf, Halfling, Orc foundation ingested)
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)
   - Rules (`14/` vs `24/`)
   - Tables (`14/` vs `24/`)
-- **Unversioned / Missing 2024 Datasets:** Species, Classes, Subclasses, Features, Backgrounds, and Spells currently exist only as unversioned classic 2014 Atlas records. Full 2024 support for these domains requires future ingestion from Foundry 6.0.x source files (`packs/_source/origins24/`, `packs/_source/classes24/`). See `docs/audits/ruleset-2024-gap-analysis.md`.
+- **Unversioned / Missing 2024 Datasets:** Classes, Subclasses, Features, Backgrounds, and Spells currently exist as unversioned classic 2014 Atlas records. Full 2024 support for these remaining domains requires future ingestion from Foundry 6.0.x source files (`packs/_source/origins24/backgrounds/`, `packs/_source/classes24/`). See `docs/audits/ruleset-2024-gap-analysis.md`.
 - **Character Persistence Relationship:** `Character.ruleset` remains saved character metadata. Loading character saves into slots does not alter the active global game ruleset. Activating a character session (`setActiveCharacter` / `setMainCharacter`) explicitly synchronizes `useGameStore.ruleset` to the character's ruleset.
 
 Do not recreate the old monolithic store pattern.

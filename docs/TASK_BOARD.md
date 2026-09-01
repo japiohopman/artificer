@@ -13,7 +13,7 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 - [x] Migrate Feats, Class Levels and Spells to the canonical ruleset context.
 - [x] Complete `docs/audits/ruleset-2024-gap-analysis.md`.
 - [x] Confirm the current gap: Character Creator 2024 Species/Class resolution still points at shared/unversioned classic data.
-- [ ] Ingest 2024 Species/Origins from the appropriate source into a versioned Atlas structure.
+- [ ] Ingest 2024 Species/Origins from the appropriate source into a versioned Atlas structure (Phase 2 Species foundation ingested for Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/` with ruleset-aware loader and regression tests).
 - [ ] Ingest 2024 Classes.
 - [ ] Ingest 2024 Class Levels/Features and verify dependencies.
 - [ ] Ingest 2024 Backgrounds/Origins.
