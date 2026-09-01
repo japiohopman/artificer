@@ -34,9 +34,10 @@ export const SelectionStep: React.FC<{
   items: { name: string; index: string }[];
   selected?: string;
   selectedSubrace?: string;
+  ruleset?: '2014' | '2024';
   onSelect: (val: string, subraceVal?: string) => void;
   category: string;
-}> = ({ title, desc, items, selected, selectedSubrace, onSelect, category }) => {
+}> = ({ title, desc, items, selected, selectedSubrace, ruleset, onSelect, category }) => {
   const [detailData, setDetailData] = useState<any>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [hydratedTraits, setHydratedTraits] = useState<Record<string, any>>({});
@@ -158,8 +159,8 @@ export const SelectionStep: React.FC<{
     let statsData = null;
     try {
       if (category === 'species') {
-        data = await fetchSpeciesWikiData(index);
-        statsData = await fetchSpeciesData(index);
+        data = await fetchSpeciesWikiData(index, ruleset);
+        statsData = await fetchSpeciesData(index, ruleset);
       } else if (category === 'subrace') {
         data = await fetchSubraceData(index);
         statsData = data;

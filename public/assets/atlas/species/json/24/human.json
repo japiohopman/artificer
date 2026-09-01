@@ -1,0 +1,39 @@
+{
+  "index": "human",
+  "name": "human",
+  "rulesetContext": "2024",
+  "speed": 30,
+  "ability_bonuses": [],
+  "age": "Humans reach adulthood in their late teens and live less than a century.",
+  "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+  "size": "Medium or Small",
+  "size_description": "Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species.",
+  "languages": [
+    {
+      "index": "common",
+      "name": "common",
+      "url": "/assets/atlas/languages/json/common.json"
+    }
+  ],
+  "language_desc": "You can speak, read, and write Common and one extra language of your choice.",
+  "traits": [
+    {
+      "index": "resourceful",
+      "name": "resourceful",
+      "url": "/assets/atlas/traits/json/resourceful.json"
+    },
+    {
+      "index": "skillful",
+      "name": "skillful",
+      "url": "/assets/atlas/traits/json/skillful.json"
+    },
+    {
+      "index": "versatile",
+      "name": "versatile",
+      "url": "/assets/atlas/traits/json/versatile.json"
+    }
+  ],
+  "subraces": [],
+  "url": "/assets/atlas/species/json/24/human.json",
+  "image": "/assets/ui/official/races/human.webp"
+}

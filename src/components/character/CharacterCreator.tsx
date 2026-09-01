@@ -252,7 +252,7 @@ export const CharacterCreator: React.FC = () => {
             };
 
             if (newChar.race) {
-                const sData = await fetchSpeciesData(newChar.race);
+                const sData = await fetchSpeciesData(newChar.race, newChar.ruleset);
                 if (sData?.traits) {
                     await Promise.all(sData.traits.map(resolveTrait));
                 }
@@ -649,7 +649,7 @@ export const CharacterCreator: React.FC = () => {
 
     try {
         const [sData, subData, cData] = await Promise.all([
-            newChar.race ? fetchSpeciesData(newChar.race) : null,
+            newChar.race ? fetchSpeciesData(newChar.race, newChar.ruleset) : null,
             newChar.subrace ? fetchSubraceData(newChar.subrace) : null,
             newChar.class ? fetchClassData(newChar.class) : null
         ]);
@@ -975,6 +975,7 @@ const StepContent: React.FC<{
             items={available.species}
             selected={newChar.race}
             selectedSubrace={newChar.subrace}
+            ruleset={newChar.ruleset}
             onSelect={(raceVal, subraceVal) => {
                 setNewChar({...newChar, race: raceVal, subrace: subraceVal});
             }}

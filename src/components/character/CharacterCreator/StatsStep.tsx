@@ -32,7 +32,7 @@ export const StatsStep: React.FC<{
   const remainingPoints = MAX_POINT_BUY - totalSpentPoints;
 
   useEffect(() => {
-    if (newChar.race) fetchSpeciesData(newChar.race).then(setSpeciesData);
+    if (newChar.race) fetchSpeciesData(newChar.race, newChar.ruleset).then(setSpeciesData);
     if (newChar.subrace) fetchSubraceData(newChar.subrace).then(setSubraceData);
 
     if (newChar.stats && Object.keys(assignments).length === 0) {

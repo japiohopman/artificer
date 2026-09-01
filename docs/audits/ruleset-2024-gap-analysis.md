@@ -36,7 +36,7 @@ Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`),
 
 | Domain | 2014 Status | 2024 Status | Resolution Path / Current State |
 | :--- | :--- | :--- | :--- |
-| **Species** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/species/json/`. 2024 trait revisions and background ability score shifts are missing. |
+| **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. |
 | **Classes** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/class/json/`. 2024 class feature progression, level 3 subclass standardization, and weapon masteries are missing. |
 | **Subclasses** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/subclasses/json/`. |
 | **Class Features** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/features/json/`. |
@@ -60,14 +60,14 @@ Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`),
 3. In `storageService.ts`, loaders use `getActiveRulesetContext(ruleset)` and `getRulesetVersionFolder(ruleset)` ('14' vs '24').
 
 ### Where Versioning Works
+- `fetchSpeciesData(index, ruleset)`: Checks `/assets/atlas/species/json/14/` vs `/24/`.
 - `fetchEquipmentData(index, ruleset)`: Checks `/assets/atlas/equipment/json/14/` vs `/24/`.
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchClassLevels(classIndex, ruleset)`: Checks `/assets/atlas/class/levels/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
 
 ### Where Versioning Breaks (Missing Loaders)
-The following core loaders in `storageService.ts` and `atlasService.ts` **do NOT accept a `ruleset` parameter** and query unversioned root folders:
-- `fetchSpeciesData(index)` -> `/assets/atlas/species/json/${index}.json`
+The following core loaders in `storageService.ts` and `atlasService.ts` do NOT accept a `ruleset` parameter yet and query unversioned root folders:
 - `fetchClassData(index)` -> `/assets/atlas/class/json/${index}.json`
 - `fetchBackgroundData(index)` -> `/assets/atlas/backgrounds/json/${index}.json`
 - `fetchSubraceData(index)` -> `/assets/atlas/subraces/json/${index}.json`

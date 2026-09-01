@@ -3,80 +3,149 @@
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
-  "gender": "Male",
+  "gender": "Female",
   "stats": {
-    "str": 10,
+    "str": 9,
     "dex": 10,
     "con": 10,
-    "int": 10,
-    "wis": 10,
-    "cha": 10
+    "int": 13,
+    "wis": 5,
+    "cha": 12
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: con",
-    "saving throw: cha",
-    "Saving Throw: con",
-    "Saving Throw: cha"
+    "Skill: Sleight Of Hand",
+    "Skill: Stealth",
+    "Thieves' Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "martial weapons",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "gnome cunning",
+      "index": "gnome_cunning",
+      "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            "Intelligence Saving Throws against magic",
+            "Wisdom Saving Throws against magic",
+            "Charisma Saving Throws against magic"
+          ]
+        }
+      }
+    }
+  ],
   "features": [
     {
-      "index": "spellcasting_sorcerer",
+      "index": "favored_enemy_1_type",
       "class": {
-        "index": "sorcerer",
-        "name": "sorcerer",
-        "url": "/assets/atlas/class/json/sorcerer.json"
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
       },
-      "name": "spellcasting: sorcerer",
+      "name": "favored enemy (1 type)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells."
+        "Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.",
+        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.",
+        "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.",
+        "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.",
+        "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures."
       ],
-      "reference": "public/assets/atlas/class/json/sorcerer/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_sorcerer.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_sorcerer.webp",
       "feature_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        }
+        "enemy_type_options": {
+          "desc": "one enemy type",
+          "choose": 1,
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "aberrations",
+              "beasts",
+              "celestials",
+              "constructs",
+              "dragons",
+              "elementals",
+              "fey",
+              "fiends",
+              "giants",
+              "monstrosities",
+              "oozes",
+              "plants",
+              "undead",
+              "humanoids"
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/favored_enemy_1_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/favored_enemy_1_type.webp",
       "source": "Class"
     },
     {
-      "index": "sorcerous_origin",
+      "index": "natural_explorer_1_terrain_type",
       "class": {
-        "index": "sorcerer",
-        "name": "sorcerer",
-        "url": "/assets/atlas/class/json/sorcerer.json"
+        "index": "ranger",
+        "name": "ranger",
+        "url": "/assets/atlas/class/json/ranger.json"
       },
-      "name": "sorcerous origin",
+      "name": "natural explorer (1 terrain type)",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Choose a sorcerous origin, which describes the source of your innate magical power, such as Draconic Bloodline.",
-        "Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level."
+        "You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you're proficient in.",
+        "While traveling for an hour or more in your favored terrain, you gain the following benefits:",
+        "- Difficult terrain doesn't slow your group's travel.",
+        "- Your group can't become lost except by magical means.",
+        "- Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.",
+        "- If you are traveling alone, you can move stealthily at a normal pace.",
+        "- When you forage, you find twice as much food as you normally would.",
+        "- While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.",
+        "You choose additional favored terrain types at 6th and 10th level."
       ],
-      "url": "/assets/atlas/features/json/sorcerous_origin.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/sorcerous_origin.webp",
       "feature_specific": {
-        "subfeature_options": {
+        "terrain_type_options": {
+          "desc": "one terrain type",
           "choose": 1,
-          "type": "subclass"
-        }
+          "type": "string",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              "arctic",
+              "coast",
+              "desert",
+              "forest",
+              "grassland",
+              "mountain",
+              "swamp"
+            ]
+          }
+        },
+        "invocations": []
       },
+      "url": "/assets/atlas/features/json/natural_explorer_1_terrain_type.json",
+      "updated_at": "2025-10-24T20:42:13.150Z",
+      "image": "/assets/atlas/features/images/natural_explorer_1_terrain_type.webp",
       "source": "Class"
     }
   ],
@@ -99,31 +168,43 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": [],
-    "heightScale": 0.91,
-    "weightScale": 0.85
+    "specialFeatures": []
   },
   "items": {
-    "dagger_78jbk42u9": {
-      "id": "dagger_78jbk42u9",
+    "longbow_tgiiurqdq": {
+      "id": "longbow_tgiiurqdq",
+      "template": "longbow",
+      "quantity": 1,
+      "addedAt": 1787649360136,
+      "kind": "weapon"
+    },
+    "arrow_jguauipkg": {
+      "id": "arrow_jguauipkg",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1787649360137,
+      "kind": "consumable"
+    },
+    "crowbar_dbesowwef": {
+      "id": "crowbar_dbesowwef",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1787649360137,
+      "kind": "tradegood"
+    },
+    "dagger_vcu153zhr": {
+      "id": "dagger_vcu153zhr",
       "template": "dagger",
       "quantity": 2,
-      "addedAt": 1788202519689,
+      "addedAt": 1787649360137,
       "kind": "weapon"
     },
-    "sickle_mz03ifx8v": {
-      "id": "sickle_mz03ifx8v",
-      "template": "sickle",
-      "quantity": 1,
-      "addedAt": 1788202519689,
-      "kind": "weapon"
-    },
-    "gold_2bmcxe9ic": {
-      "id": "gold_2bmcxe9ic",
+    "gold_4r9uk62zc": {
+      "id": "gold_4r9uk62zc",
       "template": "gold",
-      "quantity": 23,
-      "addedAt": 1788202519689,
-      "kind": "currency"
+      "quantity": 16,
+      "addedAt": 1787649360137,
+      "kind": "tradegood"
     }
   },
   "containers": {
@@ -134,19 +215,19 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "sickle_mz03ifx8v"
+          "itemId": "arrow_jguauipkg"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_2bmcxe9ic"
+          "itemId": "crowbar_dbesowwef"
         },
         {
           "id": "bag_2",
-          "itemId": null
+          "itemId": "dagger_vcu153zhr"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "gold_4r9uk62zc"
         },
         {
           "id": "bag_4",
@@ -236,7 +317,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_78jbk42u9"
+        "itemId": "longbow_tgiiurqdq"
       },
       {
         "id": "off_hand",
@@ -354,139 +435,47 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_0lby5l7aa",
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
     },
     {
-      "id": "pot_iron_ji424tkdn",
-      "index": "pot_iron",
-      "name": "Pot Iron",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
     },
     {
-      "id": "clothes_travelers_kak1c0yqg",
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_w2ieadndy",
       "index": "gold",
       "name": "Gold",
-      "quantity": 23,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 16
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "sickle_7b489nyv9",
-      "index": "sickle",
-      "name": "Sickle",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
-      "desc": [
-        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/sickle.webp",
-      "updated_at": "2026-07-12T19:00:20.427Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 20,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-      "category": "Melee Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "/assets/atlas/damage_types/json/slashing.json"
-        }
-      },
-      "range": {
-        "normal": 5,
-        "long": null
-      },
-      "rulesetContext": "2014",
-      "slot": "main-hand",
-      "main_hand_slot": "Sickle"
-    }
-  },
+  "inventory": {},
   "knownSpells": [],
   "languages": [
     "common",
-    "orc"
+    "gnomish"
   ],
   "preparedSpells": [],
   "spellSlots": {
@@ -496,26 +485,28 @@
     }
   },
   "choices": {
-    "sorcerous_origin": [
-      "draconic_bloodline"
+    "favored_enemy_1_type": [
+      "celestials"
+    ],
+    "natural_explorer_1_terrain_type": [
+      "grassland"
     ]
   },
-  "race": "human",
-  "class": "sorcerer",
-  "subclass": "draconic_bloodline",
-  "background": "farmer",
-  "spellcastingAbility": "cha",
+  "name": "tedr",
+  "race": "gnome",
+  "class": "ranger",
+  "spellcastingAbility": "wis",
+  "background": "criminal",
   "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/SorcererHuman.webp",
-  "name": "Adrian Vane",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
   "id": "slot2",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-08-31T18:59:35.417Z"
+  "lastSaved": "2026-08-25T09:16:18.680Z"
 }

@@ -232,26 +232,18 @@ class AtlasService {
     return null;
   }
 
-  async loadSpecies(speciesName: string): Promise<AtlasSpecies | null> {
+  async loadSpecies(speciesName: string, ruleset?: '2014' | '2024'): Promise<AtlasSpecies | null> {
+    const { fetchSpeciesData, getActiveRulesetContext } = await import('./storageService');
+    const activeRuleset = getActiveRulesetContext(ruleset);
     const slug = speciesName.toLowerCase().replace(/\s+/g, '_');
-    const hyphenSlug = speciesName.toLowerCase().replace(/\s+/g, '-');
-    
-    if (this.speciesCache[slug]) return this.speciesCache[slug];
+    const cacheKey = `${activeRuleset}:${slug}`;
 
-    // Reordered to check plural 'species' first as it matches the filesystem
-    const paths = [
-      `/assets/atlas/species/json/${slug}.json`,
-      `/assets/atlas/species/json/${hyphenSlug}.json`,
-      `/assets/atlas/subraces/json/${slug}.json`,
-      `/assets/atlas/subraces/json/${hyphenSlug}.json`
-    ];
+    if (this.speciesCache[cacheKey]) return this.speciesCache[cacheKey];
 
-    for (const p of paths) {
-      const data = await this.fetchAtlasData(p);
-      if (data) {
-        this.speciesCache[slug] = data;
-        return data;
-      }
+    const data = await fetchSpeciesData(speciesName, ruleset);
+    if (data) {
+      this.speciesCache[cacheKey] = data;
+      return data;
     }
     return null;
   }
