@@ -1,0 +1,48 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_wizard_2024",
+        "name": "Spellcasting: Wizard",
+        "url": "/assets/atlas/features/json/spellcasting_wizard_2024.json"
+      },
+      {
+        "index": "arcane_recovery_2024",
+        "name": "Arcane Recovery",
+        "url": "/assets/atlas/features/json/arcane_recovery_2024.json"
+      },
+      {
+        "index": "ritual_study_wizard",
+        "name": "Ritual Study",
+        "url": "/assets/atlas/features/json/ritual_study_wizard.json"
+      }
+    ],
+    "class_specific": {
+      "arcane_recovery_levels": 1,
+      "prepared_spells_count": 4
+    },
+    "index": "wizard_level_1",
+    "class": {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/assets/atlas/class/json/24/wizard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/wizard.json",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 4,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  }
+]

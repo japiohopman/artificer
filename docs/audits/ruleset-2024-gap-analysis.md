@@ -23,7 +23,24 @@ Select 2024 ruleset -> Acolyte resolves /public/assets/atlas/backgrounds/json/ac
 ```
 
 ### Key Conclusion
-While the Character Creator UI exposes a ruleset toggle (`2014` vs `2024`), 2024 Species foundation (Human, Dwarf, Elf, Halfling, Orc) is implemented with ruleset-aware resolution, while **Classes, Subclasses, Class Features, Backgrounds, and Spells currently resolve shared/unversioned classic 2014 data.** Note: Foundation implemented ≠ complete 2024 Species coverage across all species.
+While the Character Creator UI exposes a ruleset toggle (`2014` vs `2024`), the 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Foundation (Fighter, Wizard, Cleric, Rogue) are implemented with ruleset-aware resolution:
+
+```text
+2024 Species Foundation
+→ implemented / verified
+
+2024 Class Foundation
+→ implemented / verified
+→ Fighter
+→ Wizard
+→ Cleric
+→ Rogue
+→ remaining classes pending
+
+Next active dependency: 2024 Class Levels / Features
+```
+
+Subclasses, Backgrounds/Origins, and Spells currently resolve shared/unversioned classic 2014 data. Note: Foundation implemented ≠ complete 2024 coverage across all records.
 
 Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`.
 

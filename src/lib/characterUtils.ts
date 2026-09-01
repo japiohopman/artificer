@@ -558,7 +558,7 @@ export async function processLevelUp(character: any): Promise<any> {
   }
   
   const levelDatas = await Promise.all(
-    levelsToLoad.map(lvl => atlasService.loadLevelData(character.class, lvl))
+    levelsToLoad.map(lvl => atlasService.loadLevelData(character.class, lvl, character.ruleset))
   );
 
   for (let i = 0; i < levelsToLoad.length; i++) {

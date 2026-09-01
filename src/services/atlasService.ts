@@ -401,17 +401,23 @@ class AtlasService {
   }
 
   async loadLevelData(className: string, level: number, ruleset?: '2014' | '2024'): Promise<any | null> {
-    const { fetchClassLevels } = await import('./storageService');
+    const { fetchClassLevels, getActiveRulesetContext } = await import('./storageService');
+    const activeRuleset = getActiveRulesetContext(ruleset);
     const levels = await fetchClassLevels(className, ruleset);
     if (Array.isArray(levels) && levels.length > 0) {
       const match = levels.find(lvl => lvl.level === level);
       if (match) return match;
     }
 
+    if (activeRuleset === '2024') {
+      return null;
+    }
+
     const slug = className.toLowerCase().replace(/\s+/g, '_');
     const hyphenSlug = className.toLowerCase().replace(/\s+/g, '-');
     
     const paths = [
+      `/assets/atlas/class/levels/14/${slug}.json`,
       `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
       `/assets/atlas/levels/json/${slug}_${level}.json`,
       `/assets/atlas/levels/json/${hyphenSlug}_${level}.json`,

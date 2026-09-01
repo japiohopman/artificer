@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 
 describe('Ruleset Resolution Audit Tests', () => {
@@ -157,5 +157,57 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(eq24).not.toBeNull();
     expect(eq14?.rulesetContext).toBe('2014');
     expect(eq24?.rulesetContext).toBe('2024');
+  });
+
+  it('correctly resolves versioned class levels dataset (14 vs 24) for representative classes', async () => {
+    // 1. Fighter Level 1
+    const fighterLvl14 = await atlasService.loadLevelData('fighter', 1, '2014');
+    const fighterLvl24 = await atlasService.loadLevelData('fighter', 1, '2024');
+
+    expect(fighterLvl14).not.toBeNull();
+    expect(fighterLvl24).not.toBeNull();
+    expect(fighterLvl14?.rulesetContext).toBe('2014');
+    expect(fighterLvl24?.rulesetContext).toBe('2024');
+    expect(fighterLvl24?.weapon_mastery?.count).toBe(3);
+    expect(fighterLvl24?.class_specific?.second_wind_uses).toBe(2);
+
+    // 2. Wizard Level 1
+    const wizardLvl14 = await atlasService.loadLevelData('wizard', 1, '2014');
+    const wizardLvl24 = await atlasService.loadLevelData('wizard', 1, '2024');
+
+    expect(wizardLvl14).not.toBeNull();
+    expect(wizardLvl24).not.toBeNull();
+    expect(wizardLvl14?.rulesetContext).toBe('2014');
+    expect(wizardLvl24?.rulesetContext).toBe('2024');
+    const wizard24Features = wizardLvl24?.features?.map((f: any) => f.index);
+    expect(wizard24Features).toContain('ritual_study_wizard');
+
+    // 3. Cleric Level 1
+    const clericLvl14 = await atlasService.loadLevelData('cleric', 1, '2014');
+    const clericLvl24 = await atlasService.loadLevelData('cleric', 1, '2024');
+
+    expect(clericLvl14).not.toBeNull();
+    expect(clericLvl24).not.toBeNull();
+    expect(clericLvl14?.rulesetContext).toBe('2014');
+    expect(clericLvl24?.rulesetContext).toBe('2024');
+    const cleric24Features = clericLvl24?.features?.map((f: any) => f.index);
+    expect(cleric24Features).toContain('divine_order_cleric');
+
+    // 4. Rogue Level 1
+    const rogueLvl14 = await atlasService.loadLevelData('rogue', 1, '2014');
+    const rogueLvl24 = await atlasService.loadLevelData('rogue', 1, '2024');
+
+    expect(rogueLvl14).not.toBeNull();
+    expect(rogueLvl24).not.toBeNull();
+    expect(rogueLvl14?.rulesetContext).toBe('2014');
+    expect(rogueLvl24?.rulesetContext).toBe('2024');
+    expect(rogueLvl24?.weapon_mastery?.count).toBe(2);
+
+    // 5. Strict Fallback Regression Test: Missing 2024 class levels must return [] / null (no fallback to 2014)
+    const barbarianLvl24Array = await fetchClassLevels('barbarian', '2024');
+    const barbarianLvl24Data = await atlasService.loadLevelData('barbarian', 1, '2024');
+
+    expect(barbarianLvl24Array).toEqual([]);
+    expect(barbarianLvl24Data).toBeNull();
   });
 });
