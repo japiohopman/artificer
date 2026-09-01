@@ -548,7 +548,7 @@ export async function processLevelUp(character: any): Promise<any> {
   const { atlasService } = await import('../services/atlasService');
 
   // Load class data once
-  const classData = await atlasService.loadClass(character.class);
+  const classData = await atlasService.loadClass(character.class, character.ruleset);
   const hitDie = classData?.hit_die || 8;
 
   // Load all level data in parallel

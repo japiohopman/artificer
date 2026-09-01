@@ -1,0 +1,176 @@
+{
+  "index": "rogue",
+  "name": "Rogue",
+  "rulesetContext": "2024",
+  "hit_die": 8,
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 weapons of your choice."
+  },
+  "proficiency_choices": [
+    {
+      "desc": "Choose four skills from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
+      "choose": 4,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_deception",
+              "name": "skill: deception",
+              "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_performance",
+              "name": "skill: performance",
+              "url": "/assets/atlas/proficiencies/json/skill_performance.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_sleight_of_hand",
+              "name": "skill: sleight of hand",
+              "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_stealth",
+              "name": "skill: stealth",
+              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons_finesse_light",
+      "name": "martial weapons with finesse or light property",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "thieves' tools",
+      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+    },
+    {
+      "index": "saving_throw_dex",
+      "name": "saving throw: dex",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_dex.json"
+    },
+    {
+      "index": "saving_throw_int",
+      "name": "saving throw: int",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "dex",
+      "name": "dex",
+      "url": "/assets/atlas/ability_scores/json/dex.json"
+    },
+    {
+      "index": "int",
+      "name": "int",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    }
+  ],
+  "starting_equipment": [],
+  "starting_equipment_options": [],
+  "class_levels": "/assets/atlas/class/levels/24/rogue.json",
+  "subclasses": [
+    {
+      "index": "thief",
+      "name": "thief",
+      "url": "/assets/atlas/subclasses/json/thief.json"
+    },
+    {
+      "index": "assassin",
+      "name": "assassin",
+      "url": "/assets/atlas/subclasses/json/assassin.json"
+    },
+    {
+      "index": "arcane_trickster",
+      "name": "arcane trickster",
+      "url": "/assets/atlas/subclasses/json/arcane_trickster.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/rogue.json",
+  "image": "/assets/ui/official/classes/rogue.webp"
+}

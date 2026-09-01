@@ -183,7 +183,7 @@ export const CharacterCreator: React.FC = () => {
       if (isKnownSpellcaster) {
         setIsClassSpellcaster(true);
       } else {
-        atlasService.loadClass(newChar.class).then(cData => {
+        atlasService.loadClass(newChar.class, newChar.ruleset).then(cData => {
           setIsClassSpellcaster(!!cData?.spellcasting);
         }).catch(() => {
           setIsClassSpellcaster(false);
@@ -339,7 +339,7 @@ export const CharacterCreator: React.FC = () => {
                }
             }
             if (newChar.class) {
-                const cData = await atlasService.loadClass(newChar.class);
+                const cData = await atlasService.loadClass(newChar.class, newChar.ruleset);
                 if (cData?.proficiencies) {
                     profs.push(...cData.proficiencies.map((p: any) => p.name || p.index || p));
                 }
@@ -413,7 +413,7 @@ export const CharacterCreator: React.FC = () => {
     if (isCharacterCreatorOpen) {
       loadInitialData();
     }
-  }, [isCharacterCreatorOpen]);
+  }, [isCharacterCreatorOpen, newChar.ruleset]);
 
   useEffect(() => {
     if (availableLanguages.length > 0) {
@@ -497,7 +497,7 @@ export const CharacterCreator: React.FC = () => {
       const [s, sub, c, b, a, l] = await Promise.all([
         fetchSpeciesList(),
         fetchSubraceList(),
-        fetchClassesList(),
+        fetchClassesList(newChar.ruleset),
         fetchBackgroundsList(),
         fetchAlignmentsList(),
         fetchLanguagesList()
@@ -651,7 +651,7 @@ export const CharacterCreator: React.FC = () => {
         const [sData, subData, cData] = await Promise.all([
             newChar.race ? fetchSpeciesData(newChar.race, newChar.ruleset) : null,
             newChar.subrace ? fetchSubraceData(newChar.subrace) : null,
-            newChar.class ? fetchClassData(newChar.class) : null
+            newChar.class ? fetchClassData(newChar.class, newChar.ruleset) : null
         ]);
 
         if (cData?.hit_die) {

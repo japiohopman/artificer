@@ -9,9 +9,9 @@
 ### Ready
 
 - [ ] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
-  - **Status:** Audit complete. The Character Creator exposes 2014/2024 selection, but Species, Classes, Subclasses, Features, Backgrounds/Origins and Spells currently resolve shared/unversioned classic data. Equipment, Feats, Rules, Tables and selected downstream loaders already have version-aware paths.
+  - **Status:** 2024 Species foundation implemented (Human, Dwarf, Elf, Halfling, Orc; full species coverage ongoing). 2024 Class foundation implemented (representative scope: Fighter, Wizard, Cleric, Rogue; remaining classes pending). Subclasses, Features, Backgrounds/Origins and Spells currently resolve shared/unversioned classic data. Equipment, Feats, Rules, Tables and selected downstream loaders already have version-aware paths.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species/Origins → 2024 Classes → Class Levels/Features → Backgrounds/Origins → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species/Origins (foundation complete) → 2024 Classes (in progress) → Class Levels/Features → Backgrounds/Origins → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
   - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.

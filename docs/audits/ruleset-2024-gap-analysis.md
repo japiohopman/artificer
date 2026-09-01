@@ -23,7 +23,7 @@ Select 2024 ruleset -> Acolyte resolves /public/assets/atlas/backgrounds/json/ac
 ```
 
 ### Key Conclusion
-While the Character Creator UI exposes a ruleset toggle (`2014` vs `2024`), **Artificer currently contains only a classic 2014 dataset for Species, Classes, Subclasses, Class Features, Backgrounds, and Spells.**
+While the Character Creator UI exposes a ruleset toggle (`2014` vs `2024`), 2024 Species foundation (Human, Dwarf, Elf, Halfling, Orc) is implemented with ruleset-aware resolution, while **Classes, Subclasses, Class Features, Backgrounds, and Spells currently resolve shared/unversioned classic 2014 data.** Note: Foundation implemented ≠ complete 2024 Species coverage across all species.
 
 Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`.
 
@@ -36,8 +36,8 @@ Only Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Rules (`14/` vs `24/`),
 
 | Domain | 2014 Status | 2024 Status | Resolution Path / Current State |
 | :--- | :--- | :--- | :--- |
-| **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. |
-| **Classes** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/class/json/`. 2024 class feature progression, level 3 subclass standardization, and weapon masteries are missing. |
+| **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species foundation dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. (Full coverage ongoing). |
+| **Classes** | Supported | **Foundation Implemented** | Versioned directories exist (`/class/json/14/` vs `/24/`). Representative 2024 class foundation implemented for Fighter, Wizard, Cleric, Rogue. (Remaining 8 classes pending). |
 | **Subclasses** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/subclasses/json/`. |
 | **Class Features** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/features/json/`. |
 | **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |

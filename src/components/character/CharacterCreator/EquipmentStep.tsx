@@ -488,7 +488,7 @@ export const EquipmentStep: React.FC<{
             setLoading(true);
             try {
                 const [cData, bData] = await Promise.all([
-                    fetchClassData(newChar.class!),
+                    fetchClassData(newChar.class!, newChar.ruleset),
                     newChar.background ? fetchBackgroundJson(newChar.background) : Promise.resolve(null)
                 ]);
                 

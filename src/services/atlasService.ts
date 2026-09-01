@@ -208,26 +208,18 @@ class AtlasService {
     }
   }
 
-  async loadClass(className: string): Promise<AtlasClass | null> {
+  async loadClass(className: string, ruleset?: '2014' | '2024'): Promise<AtlasClass | null> {
+    const { fetchClassData, getActiveRulesetContext } = await import('./storageService');
+    const activeRuleset = getActiveRulesetContext(ruleset);
     const slug = className.toLowerCase().replace(/\s+/g, '_');
-    const hyphenSlug = className.toLowerCase().replace(/\s+/g, '-');
-    
-    if (this.classCache[slug]) return this.classCache[slug];
+    const cacheKey = `${activeRuleset}:${slug}`;
 
-    // Reordered to check singular 'class' first as it matches the filesystem
-    const paths = [
-      `/assets/atlas/class/json/${slug}.json`,
-      `/assets/atlas/class/json/${hyphenSlug}.json`,
-      `/assets/atlas/classes/json/${slug}.json`,
-      `/assets/atlas/classes/json/${hyphenSlug}.json`
-    ];
+    if (this.classCache[cacheKey]) return this.classCache[cacheKey];
 
-    for (const p of paths) {
-      const data = await this.fetchAtlasData(p);
-      if (data) {
-        this.classCache[slug] = data;
-        return data;
-      }
+    const data = await fetchClassData(className, ruleset);
+    if (data) {
+      this.classCache[cacheKey] = data;
+      return data;
     }
     return null;
   }

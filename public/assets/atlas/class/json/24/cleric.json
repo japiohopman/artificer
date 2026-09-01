@@ -1,0 +1,141 @@
+{
+  "index": "cleric",
+  "name": "Cleric",
+  "rulesetContext": "2024",
+  "hit_die": 8,
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    },
+    "info": [
+      {
+        "name": "Cantrips",
+        "desc": [
+          "At 1st level, you know 3 cantrips of your choice from the cleric spell list."
+        ]
+      },
+      {
+        "name": "Prepared Spells",
+        "desc": [
+          "You prepare the list of cleric spells that are available for you to cast."
+        ]
+      }
+    ]
+  },
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from History, Insight, Medicine, Persuasion, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  ],
+  "starting_equipment": [],
+  "starting_equipment_options": [],
+  "class_levels": "/assets/atlas/class/levels/24/cleric.json",
+  "subclasses": [
+    {
+      "index": "life",
+      "name": "life domain",
+      "url": "/assets/atlas/subclasses/json/life.json"
+    },
+    {
+      "index": "light",
+      "name": "light domain",
+      "url": "/assets/atlas/subclasses/json/light.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/cleric.json",
+  "image": "/assets/ui/official/classes/cleric.webp"
+}

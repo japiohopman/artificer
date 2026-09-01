@@ -1778,8 +1778,53 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     };
 }
 
-export async function fetchClassesList(): Promise<{ name: string; index: string }[]> {
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json?ref=${BRANCH}&t=${Date.now()}`;
+export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/class/json/${versionFolder}`);
+      if (fs.existsSync(dirPath)) {
+        const files = fs.readdirSync(dirPath);
+        return files
+          .filter((f: string) => f.endsWith('.json'))
+          .map((f: string) => ({
+            name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+            index: f.replace('.json', '')
+          }));
+      }
+    } catch (e) {}
+  }
+
+  // Try local index first if available
+  try {
+    const indexRes = await fetch(`/assets/atlas/class/index.json`);
+    if (indexRes.ok) {
+      const indexData = await indexRes.json();
+      if (Array.isArray(indexData)) {
+        if (versionFolder === '24') {
+          // For 2024, filter index entries by presence in /24/ folder
+          const valid24 = ['fighter', 'wizard', 'cleric', 'rogue'];
+          return indexData
+            .filter((c: any) => valid24.includes(c.index))
+            .map((c: any) => ({
+              name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+              index: c.index
+            }));
+        }
+        return indexData.map((c: any) => ({
+          name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: c.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/class/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
@@ -1796,34 +1841,87 @@ export async function fetchClassesList(): Promise<{ name: string; index: string 
   }
 }
 
-export async function fetchClassWikiData(index: string): Promise<any> {
-  return fetchClassData(index);
+export async function fetchClassWikiData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  return fetchClassData(index, ruleset);
 }
 
-export async function fetchClassData(index: string): Promise<any> {
-  let data: any = null;
+export async function fetchClassData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  if (!index) return null;
+
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
   const cleanIndex = index.toLowerCase().trim();
+  const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
+  const hyphenatedIndex = cleanIndex.replace(/[:_]/g, '-');
 
-  // Local first
-  try {
-    const localRes = await fetch(`/assets/atlas/class/json/${cleanIndex}.json`);
-    if (localRes.ok) {
-      data = await localRes.json();
-    }
-  } catch (e) {}
+  const localCandidates: string[] = [
+    `/assets/atlas/class/json/${versionFolder}/${underscoreIndex}.json`,
+    `/assets/atlas/class/json/${versionFolder}/${hyphenatedIndex}.json`,
+  ];
 
-  if (!data) {
-    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/json/${cleanIndex}.json?t=${Date.now()}`;
-    const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+  if (versionFolder === '14') {
+    localCandidates.push(`/assets/atlas/class/json/${underscoreIndex}.json`);
+    localCandidates.push(`/assets/atlas/class/json/${hyphenatedIndex}.json`);
+  }
+
+  let data: any = null;
+  let resolvedPath: string | null = null;
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
     try {
-      const res = await fetch(url);
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const candidate of localCandidates) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          data = JSON.parse(fileContent);
+          resolvedPath = candidate;
+          break;
+        }
+      }
+    } catch (e) {}
+  }
+
+  // Try local static files first if not resolved via Node CLI
+  if (!data) {
+    for (const path of localCandidates) {
+      try {
+        const res = await fetch(path);
+        if (res.ok) {
+          const parsed = await safeJson(res);
+          if (parsed) {
+            data = parsed;
+            resolvedPath = path;
+            break;
+          }
+        }
+      } catch (e) {}
+    }
+  }
+
+  // Fallback to GitHub raw ONLY within requested version folder
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/json/${versionFolder}/${underscoreIndex}.json?t=${Date.now()}`;
+    try {
+      const res = await fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`);
       data = await safeJson(res);
+      if (data) resolvedPath = githubUrl;
     } catch (e) {
       data = null;
     }
   }
 
   if (!data) return null;
+
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  // Strict safety check: if ruleset requested was 2024 but loaded record is not 2024, reject!
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
 
   // Try fetching official markdown lore guide (e.g., /assets/ui/official/classes/rogue.md)
   let markdownGuide = '';
@@ -1836,6 +1934,7 @@ export async function fetchClassData(index: string): Promise<any> {
 
   return {
     ...data,
+    rulesetContext: actualRuleset,
     markdownGuide,
     imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'class', cleanIndex)
   };

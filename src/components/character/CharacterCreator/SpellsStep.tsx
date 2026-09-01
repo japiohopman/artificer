@@ -81,7 +81,7 @@ export const SpellsStep: React.FC<{
         if (newChar.class) {
             setLoading(true);
             Promise.all([
-                fetchClassData(newChar.class),
+                fetchClassData(newChar.class, newChar.ruleset),
                 fetchSpellList()
             ]).then(async ([cData, spells]) => {
                 setClassData(cData);
