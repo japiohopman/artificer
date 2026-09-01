@@ -21,9 +21,17 @@
     → Rogue
     → remaining classes pending
 
-    Next active dependency: 2024 Class Levels / Features.
+    2024 Class Levels / Features
+    → Level 1 foundation implemented
+    → Fighter
+    → Wizard
+    → Cleric
+    → Rogue
+    → feature dependencies audited
+
+    Next active dependency: 2024 Class Features / Backgrounds & Origins.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for Fighter, Wizard, Cleric, Rogue) → 2024 Class Levels / Features (in progress) → Backgrounds/Origins → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for Fighter, Wizard, Cleric, Rogue) → 2024 Class Levels / Features (Level 1 foundation complete) → 2024 Class Features & Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
   - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.

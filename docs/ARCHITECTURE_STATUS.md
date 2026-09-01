@@ -31,10 +31,11 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Versioned Domain Coverage:**
   - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
   - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: Fighter, Wizard, Cleric, Rogue; remaining classes pending)
-  - Next active dependency: 2024 Class Levels / Features
+  - 2024 Class Levels / Features (`14/` vs `24/` — Level 1 foundation implemented / verified for Fighter, Wizard, Cleric, Rogue; feature dependencies audited)
+  - Next active dependency: 2024 Class Features / Backgrounds & Origins
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
-  - Class Levels (`14/` vs `24/` — Phase 2 in progress)
+  - Class Levels (`14/` vs `24/`)
   - Rules (`14/` vs `24/`)
   - Tables (`14/` vs `24/`)
 - **Unversioned / Missing 2024 Datasets:** Classes, Subclasses, Features, Backgrounds, and Spells currently exist as unversioned classic 2014 Atlas records. Full 2024 support for these remaining domains requires future ingestion from Foundry 6.0.x source files (`packs/_source/origins24/backgrounds/`, `packs/_source/classes24/`). See `docs/audits/ruleset-2024-gap-analysis.md`.

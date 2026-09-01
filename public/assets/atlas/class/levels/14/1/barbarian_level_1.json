@@ -1,0 +1,29 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "rage",
+      "name": "Rage",
+      "url": "/assets/atlas/features/json/rage.json"
+    },
+    {
+      "index": "barbarian_unarmored_defense",
+      "name": "Unarmored Defense",
+      "url": "/assets/atlas/features/json/barbarian_unarmored_defense.json"
+    }
+  ],
+  "class_specific": {
+    "rage_count": 2,
+    "rage_damage_bonus": 2,
+    "brutal_critical_dice": 0
+  },
+  "index": "barbarian_level_1",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/1/barbarian_level_1.json"
+}

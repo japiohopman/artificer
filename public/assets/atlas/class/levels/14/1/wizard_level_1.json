@@ -1,0 +1,39 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "spellcasting_wizard",
+      "name": "Spellcasting: Wizard",
+      "url": "/assets/atlas/features/json/spellcasting_wizard.json"
+    },
+    {
+      "index": "arcane_recovery",
+      "name": "Arcane Recovery",
+      "url": "/assets/atlas/features/json/arcane_recovery.json"
+    }
+  ],
+  "class_specific": {
+    "arcane_recovery_levels": 1
+  },
+  "index": "wizard_level_1",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/wizard.json"
+  },
+  "url": "/assets/atlas/class/levels/1/wizard_level_1.json",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "spell_slots_level_1": 2,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

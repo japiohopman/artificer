@@ -37,7 +37,15 @@ While the Character Creator UI exposes a ruleset toggle (`2014` vs `2024`), the 
 → Rogue
 → remaining classes pending
 
-Next active dependency: 2024 Class Levels / Features
+2024 Class Levels / Features
+→ Level 1 foundation implemented
+→ Fighter
+→ Wizard
+→ Cleric
+→ Rogue
+→ feature dependencies audited
+
+Next active dependency: 2024 Class Features / Backgrounds & Origins
 ```
 
 Subclasses, Backgrounds/Origins, and Spells currently resolve shared/unversioned classic 2014 data. Note: Foundation implemented ≠ complete 2024 coverage across all records.
