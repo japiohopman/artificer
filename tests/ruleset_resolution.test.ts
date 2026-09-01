@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 
 describe('Ruleset Resolution Audit Tests', () => {
@@ -157,5 +157,61 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(eq24).not.toBeNull();
     expect(eq14?.rulesetContext).toBe('2014');
     expect(eq24?.rulesetContext).toBe('2024');
+  });
+
+  it('correctly resolves versioned class levels dataset (14 vs 24)', async () => {
+    // 2014 vs 2024 Fighter Level 1
+    const fighterLevels14 = await fetchClassLevels('fighter', '2014');
+    const fighterLevels24 = await fetchClassLevels('fighter', '2024');
+
+    expect(fighterLevels14.length).toBeGreaterThan(0);
+    expect(fighterLevels24.length).toBeGreaterThan(0);
+    expect(fighterLevels14[0].rulesetContext).toBe('2014');
+    expect(fighterLevels24[0].rulesetContext).toBe('2024');
+
+    // Fighter 2024 Level 1 includes Weapon Mastery feature
+    const fighter24FeatureIndices = fighterLevels24[0].features.map((f: any) => f.index);
+    expect(fighter24FeatureIndices).toContain('weapon_mastery');
+    expect(fighterLevels24[0].class_specific.second_wind_uses).toBe(2);
+
+    // 2014 vs 2024 Wizard Level 1
+    const wizardLevels14 = await fetchClassLevels('wizard', '2014');
+    const wizardLevels24 = await fetchClassLevels('wizard', '2024');
+
+    expect(wizardLevels14[0].rulesetContext).toBe('2014');
+    expect(wizardLevels24[0].rulesetContext).toBe('2024');
+    const wizard24FeatureIndices = wizardLevels24[0].features.map((f: any) => f.index);
+    expect(wizard24FeatureIndices).toContain('ritual_adept');
+
+    // 2014 vs 2024 Cleric Level 1
+    const clericLevels14 = await fetchClassLevels('cleric', '2014');
+    const clericLevels24 = await fetchClassLevels('cleric', '2024');
+
+    expect(clericLevels14[0].rulesetContext).toBe('2014');
+    expect(clericLevels24[0].rulesetContext).toBe('2024');
+    const cleric24FeatureIndices = clericLevels24[0].features.map((f: any) => f.index);
+    expect(cleric24FeatureIndices).toContain('divine_order');
+
+    // 2014 vs 2024 Rogue Level 1
+    const rogueLevels14 = await fetchClassLevels('rogue', '2014');
+    const rogueLevels24 = await fetchClassLevels('rogue', '2024');
+
+    expect(rogueLevels14[0].rulesetContext).toBe('2014');
+    expect(rogueLevels24[0].rulesetContext).toBe('2024');
+    const rogue24FeatureIndices = rogueLevels24[0].features.map((f: any) => f.index);
+    expect(rogue24FeatureIndices).toContain('weapon_mastery');
+
+    // atlasService.loadLevelData verification
+    const lvl1Fighter14 = await atlasService.loadLevelData('fighter', 1, '2014');
+    const lvl1Fighter24 = await atlasService.loadLevelData('fighter', 1, '2024');
+    expect(lvl1Fighter14?.rulesetContext).toBe('2014');
+    expect(lvl1Fighter24?.rulesetContext).toBe('2024');
+
+    // Assertion for strict resolution: missing 2024 class levels returns empty array (no cross-ruleset fallback to 2014)
+    const sorcererLevels24 = await fetchClassLevels('sorcerer', '2024');
+    expect(sorcererLevels24).toEqual([]);
+
+    const lvl1Sorcerer24 = await atlasService.loadLevelData('sorcerer', 1, '2024');
+    expect(lvl1Sorcerer24).toBeNull();
   });
 });

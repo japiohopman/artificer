@@ -16,6 +16,7 @@ const equipmentCache: Record<string, any> = {};
 const magicItemCache: Record<string, any> = {};
 const spellCache: Record<string, any> = {};
 const backgroundCache: Record<string, any> = {};
+const classLevelsCache: Record<string, any[]> = {};
 let monsterCategoriesCache: any[] | null = null;
 let monsterMappingCache: Record<string, string> | null = null;
 let materialCategoriesCache: any[] | null = null;
@@ -2041,8 +2042,33 @@ export async function fetchSubraceData(index: string): Promise<any> {
 export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2024'): Promise<any[]> {
   const activeRuleset = getActiveRulesetContext(ruleset);
   const versionFolder = getRulesetVersionFolder(ruleset);
-  const altFolder = versionFolder === '24' ? '14' : '24';
   const slug = classIndex.toLowerCase().replace(/[\s-]/g, '_');
+  const cacheKey = `${activeRuleset}:${slug}`;
+
+  if (classLevelsCache[cacheKey]) return classLevelsCache[cacheKey];
+
+  // Define strict candidate paths per ruleset
+  // For 2024, search ONLY /24/ paths (no fallback to 14/ or unversioned root)
+  const candidatesForLevel = (lvl: number): string[] => {
+    if (versionFolder === '24') {
+      return [
+        `/assets/atlas/class/levels/24/${lvl}/${slug}_level_${lvl}.json`,
+        `/assets/atlas/class/levels/24/${slug}_level_${lvl}.json`,
+      ];
+    }
+    return [
+      `/assets/atlas/class/levels/14/${lvl}/${slug}_level_${lvl}.json`,
+      `/assets/atlas/class/levels/14/${slug}_level_${lvl}.json`,
+      `/assets/atlas/class/levels/${lvl}/${slug}_level_${lvl}.json`,
+    ];
+  };
+
+  const legacyCandidates: string[] = versionFolder === '24'
+    ? [`/assets/atlas/class/levels/24/${slug}.json`]
+    : [
+        `/assets/atlas/class/levels/14/${slug}.json`,
+        `/assets/atlas/class/levels/${slug}.json`
+      ];
 
   // Node CLI local filesystem fallback for test environments
   if (typeof window === 'undefined') {
@@ -2052,12 +2078,7 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
 
       const levels: any[] = [];
       for (let level = 1; level <= 20; level++) {
-        const candidates = [
-          `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
-          `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
-          `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
-        ];
-
+        const candidates = candidatesForLevel(level);
         let levelData: any = null;
         let resolvedPath: string | null = null;
 
@@ -2073,19 +2094,19 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
 
         if (levelData) {
           const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') {
+            break;
+          }
           levels.push({ ...levelData, rulesetContext: actualRuleset });
         } else if (level === 1) {
           break;
         }
       }
 
-      if (levels.length > 0) return levels;
-
-      const legacyCandidates = [
-        `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
-        `/assets/atlas/class/levels/${slug}.json`,
-        `/assets/atlas/class/levels/${altFolder}/${slug}.json`
-      ];
+      if (levels.length > 0) {
+        classLevelsCache[cacheKey] = levels;
+        return levels;
+      }
 
       for (const candidate of legacyCandidates) {
         const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
@@ -2094,29 +2115,30 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
           const parsed = JSON.parse(fileContent);
           if (Array.isArray(parsed)) {
             const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
-            return parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+            if (activeRuleset === '2024' && actualRuleset !== '2024') {
+              continue;
+            }
+            const result = parsed.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+            classLevelsCache[cacheKey] = result;
+            return result;
           }
         }
+      }
+
+      // If ruleset is 2024 and no 2024 files were found, return empty array
+      if (activeRuleset === '2024') {
+        return [];
       }
     } catch (e) {}
   }
 
-  // First try individual level files (levels 1 to 20)
+  // First try individual level files (levels 1 to 20) in browser/runtime
   try {
     const levels: any[] = [];
     for (let level = 1; level <= 20; level++) {
       let levelData: any = null;
       let resolvedPath: string | null = null;
-
-      const candidates = [
-        // Versioned folder subpath
-        `/assets/atlas/class/levels/${versionFolder}/${level}/${slug}_level_${level}.json`,
-        `/assets/atlas/class/levels/${versionFolder}/${slug}_level_${level}.json`,
-        // Unversioned level folder
-        `/assets/atlas/class/levels/${level}/${slug}_level_${level}.json`,
-        // Alt version folder
-        `/assets/atlas/class/levels/${altFolder}/${level}/${slug}_level_${level}.json`,
-      ];
+      const candidates = candidatesForLevel(level);
 
       for (const p of candidates) {
         try {
@@ -2152,25 +2174,24 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
 
       if (levelData) {
         const actualRuleset: '2014' | '2024' = (resolvedPath && (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/'))) ? '2024' : '2014';
+        if (activeRuleset === '2024' && actualRuleset !== '2024') {
+          break;
+        }
         levels.push({ ...levelData, rulesetContext: actualRuleset });
       } else if (level === 1) {
-        // If level 1 fails, break and try legacy single-file array
         break;
       }
     }
 
-    if (levels.length > 0) return levels;
+    if (levels.length > 0) {
+      classLevelsCache[cacheKey] = levels;
+      return levels;
+    }
   } catch (e) {
-    console.warn("New class levels structure fetch failed, trying legacy:", e);
+    console.warn("Class levels structure fetch failed:", e);
   }
 
   // Fallback to legacy single-file array structure
-  const legacyCandidates = [
-    `/assets/atlas/class/levels/${versionFolder}/${slug}.json`,
-    `/assets/atlas/class/levels/${slug}.json`,
-    `/assets/atlas/class/levels/${altFolder}/${slug}.json`
-  ];
-
   for (const p of legacyCandidates) {
     try {
       const res = await fetch(p);
@@ -2178,12 +2199,23 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
         const levels = await safeJson(res);
         if (Array.isArray(levels)) {
           const actualRuleset: '2014' | '2024' = (p.includes('/24/') || p.includes('/2024/')) ? '2024' : '2014';
-          return levels.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+          if (activeRuleset === '2024' && actualRuleset !== '2024') {
+            continue;
+          }
+          const result = levels.map((lvl: any) => ({ ...lvl, rulesetContext: actualRuleset }));
+          classLevelsCache[cacheKey] = result;
+          return result;
         }
       }
     } catch (e) {}
   }
 
+  // If ruleset 2024 was requested, strictly return empty array if 2024 files were not found
+  if (activeRuleset === '2024') {
+    return [];
+  }
+
+  // Legacy fallback for 2014 only
   const legacyUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/class/levels/${slug}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(legacyUrl)}`;
   try {
@@ -2191,7 +2223,9 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
     if (!res.ok) return [];
     const levels = await safeJson(res);
     if (Array.isArray(levels)) {
-      return levels.map((lvl: any) => ({ ...lvl, rulesetContext: '2014' }));
+      const result = levels.map((lvl: any) => ({ ...lvl, rulesetContext: '2014' as const }));
+      classLevelsCache[cacheKey] = result;
+      return result;
     }
     return [];
   } catch (e) {

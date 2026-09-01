@@ -28,12 +28,13 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Canonical Ruleset Owner:** `useGameStore` holds the single canonical ruleset identifier (`'2014'` or `'2024'`).
 - **Canonical Resolution Boundary:** `getActiveRulesetContext(explicitRuleset?)` and `getRulesetVersionFolder(explicitRuleset?)` in `src/services/storageService.ts` form the single resolution boundary.
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
-- **Versioned Domain Coverage:**
-  - Species (`14/` vs `24/` — Human, Dwarf, Elf, Halfling, Orc foundation implemented)
-  - Classes (`14/` vs `24/` — Fighter, Wizard, Cleric, Rogue representative foundation implemented)
+- **Versioned Domain Coverage & Current Status:**
+  - 2024 Species Foundation: implemented / verified (`14/` vs `24/` — Human, Dwarf, Elf, Halfling, Orc)
+  - 2024 Class Foundation: implemented / verified (`14/` vs `24/` — Fighter, Wizard, Cleric, Rogue foundation; remaining classes pending)
+  - 2024 Class Levels / Features: current phase (`14/` vs `24/` — Level 1 foundation in progress for Fighter, Wizard, Cleric, Rogue)
+  - 2024 Subclasses: pending
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
-  - Class Levels (`14/` vs `24/`)
   - Rules (`14/` vs `24/`)
   - Tables (`14/` vs `24/`)
 - **Unversioned / Missing 2024 Datasets:** Classes, Subclasses, Features, Backgrounds, and Spells currently exist as unversioned classic 2014 Atlas records. Full 2024 support for these remaining domains requires future ingestion from Foundry 6.0.x source files (`packs/_source/origins24/backgrounds/`, `packs/_source/classes24/`). See `docs/audits/ruleset-2024-gap-analysis.md`.

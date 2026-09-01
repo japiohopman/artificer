@@ -348,7 +348,7 @@ export const CharacterCreator: React.FC = () => {
                 }
 
                 // Initial level features
-                const lvlData = await atlasService.loadLevelData(newChar.class, 1);
+                const lvlData = await atlasService.loadLevelData(newChar.class, 1, newChar.ruleset);
                 if (lvlData?.features) {
                     for (const fRef of lvlData.features) {
                         const fData = await atlasService.loadFeature(fRef.index);
