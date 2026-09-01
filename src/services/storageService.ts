@@ -1663,8 +1663,8 @@ export async function fetchSpeciesWikiData(index: string, ruleset?: '2014' | '20
 export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
     if (!index) return null;
 
-    const versionFolder = getRulesetVersionFolder(ruleset);
-    const altFolder = versionFolder === '24' ? '14' : '24';
+    const activeRuleset = getActiveRulesetContext(ruleset);
+    const versionFolder = activeRuleset === '2024' ? '24' : '14';
 
     const parts = index.split(':');
     const racePart = parts[0].toLowerCase().trim();
@@ -1678,8 +1678,10 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     if (subracePart) {
       const subraceUnderscore = subracePart.replace(/-/g, '_');
       localCandidates.push(`/assets/atlas/subraces/json/${versionFolder}/${subraceUnderscore}.json`);
-      localCandidates.push(`/assets/atlas/subraces/json/${subraceUnderscore}.json`);
-      localCandidates.push(`/assets/atlas/subraces/json/${subracePart}.json`);
+      if (versionFolder === '14') {
+        localCandidates.push(`/assets/atlas/subraces/json/${subraceUnderscore}.json`);
+        localCandidates.push(`/assets/atlas/subraces/json/${subracePart}.json`);
+      }
     }
     // Versioned species subfolders
     localCandidates.push(`/assets/atlas/species/json/${versionFolder}/${underscoreIndex}.json`);
@@ -1687,16 +1689,16 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     if (racePart) {
       localCandidates.push(`/assets/atlas/species/json/${versionFolder}/${racePart}.json`);
     }
-    // Root species folder fallback
-    localCandidates.push(`/assets/atlas/species/json/${underscoreIndex}.json`);
-    localCandidates.push(`/assets/atlas/species/json/${hyphenatedIndex}.json`);
-    localCandidates.push(`/assets/atlas/subraces/json/${underscoreIndex}.json`);
-    if (racePart) {
-      localCandidates.push(`/assets/atlas/species/json/${racePart}.json`);
+
+    // Only for 2014 ruleset: fallback to unversioned root species folder
+    if (versionFolder === '14') {
+      localCandidates.push(`/assets/atlas/species/json/${underscoreIndex}.json`);
+      localCandidates.push(`/assets/atlas/species/json/${hyphenatedIndex}.json`);
+      localCandidates.push(`/assets/atlas/subraces/json/${underscoreIndex}.json`);
+      if (racePart) {
+        localCandidates.push(`/assets/atlas/species/json/${racePart}.json`);
+      }
     }
-    // Alternative version folder fallback
-    localCandidates.push(`/assets/atlas/species/json/${altFolder}/${underscoreIndex}.json`);
-    localCandidates.push(`/assets/atlas/species/json/${altFolder}/${hyphenatedIndex}.json`);
 
     let data: any = null;
     let resolvedPath: string | null = null;
@@ -1737,20 +1739,18 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
       }
     }
 
-    // Fallback to GitHub raw
+    // Fallback to GitHub raw ONLY within the requested version folder
     if (!data) {
       const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${versionFolder}/${underscoreIndex}.json?t=${Date.now()}`;
-      const fallbackGithubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/json/${underscoreIndex}.json?t=${Date.now()}`;
       const wikiUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/species/spicies_wiki/${underscoreIndex}.json?t=${Date.now()}`;
 
       try {
-        const [res, fbRes, wRes] = await Promise.all([
+        const [res, wRes] = await Promise.all([
           fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`),
-          fetch(`/api/raw?url=${encodeURIComponent(fallbackGithubUrl)}`),
           fetch(`/api/raw?url=${encodeURIComponent(wikiUrl)}`)
         ]);
 
-        const mainData = (await safeJson(res)) || (await safeJson(fbRes));
+        const mainData = await safeJson(res);
         const wiki = await safeJson(wRes);
 
         if (mainData || wiki) {
@@ -1764,6 +1764,11 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
 
     const actualPath = resolvedPath || data.url || '';
     const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+    // Strict safety check: if ruleset requested was 2024 but loaded record is not 2024, reject!
+    if (activeRuleset === '2024' && actualRuleset !== '2024') {
+      return null;
+    }
 
     return {
       ...data,

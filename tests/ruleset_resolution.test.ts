@@ -24,12 +24,32 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(dwarf14?.speed).toBe(25);
     expect(dwarf24?.speed).toBe(30);
 
+    // Assertion for 2024 Elf dataset
+    const elf14 = await fetchSpeciesData('elf', '2014');
+    const elf24 = await fetchSpeciesData('elf', '2024');
+    expect(elf14?.rulesetContext).toBe('2014');
+    expect(elf24?.rulesetContext).toBe('2024');
+    const elfTraits24 = elf24?.traits?.map((t: any) => t.index || t.name);
+    expect(elfTraits24).toContain('elven_lineage');
+
+    // Assertion for 2024 Halfling dataset
+    const halfling14 = await fetchSpeciesData('halfling', '2014');
+    const halfling24 = await fetchSpeciesData('halfling', '2024');
+    expect(halfling14?.rulesetContext).toBe('2014');
+    expect(halfling24?.rulesetContext).toBe('2024');
+    expect(halfling14?.speed).toBe(25);
+    expect(halfling24?.speed).toBe(30);
+
     // Assertion for 2024 Orc dataset
     const orc24 = await fetchSpeciesData('orc', '2024');
     expect(orc24).not.toBeNull();
     expect(orc24?.rulesetContext).toBe('2024');
     const orcTraitIndices = orc24?.traits?.map((t: any) => t.index || t.name);
     expect(orcTraitIndices).toContain('adrenaline_rush');
+
+    // Assertion for strict resolution: missing 2024 species returns null (no cross-ruleset fallback to 2014)
+    const gnome24 = await fetchSpeciesData('gnome', '2024');
+    expect(gnome24).toBeNull();
   });
 
   it('verifies atlasService species loading with explicit ruleset', async () => {

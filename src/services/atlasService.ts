@@ -245,28 +245,6 @@ class AtlasService {
       this.speciesCache[cacheKey] = data;
       return data;
     }
-
-    const hyphenSlug = speciesName.toLowerCase().replace(/\s+/g, '-');
-    const versionFolder = activeRuleset === '2024' ? '24' : '14';
-
-    const paths = [
-      `/assets/atlas/species/json/${versionFolder}/${slug}.json`,
-      `/assets/atlas/species/json/${versionFolder}/${hyphenSlug}.json`,
-      `/assets/atlas/species/json/${slug}.json`,
-      `/assets/atlas/species/json/${hyphenSlug}.json`,
-      `/assets/atlas/subraces/json/${slug}.json`,
-      `/assets/atlas/subraces/json/${hyphenSlug}.json`
-    ];
-
-    for (const p of paths) {
-      const pData = await this.fetchAtlasData(p);
-      if (pData) {
-        const actualRuleset: '2014' | '2024' = (p.includes('/24/') || p.includes('/2024/')) ? '2024' : '2014';
-        const result = { ...pData, rulesetContext: actualRuleset };
-        this.speciesCache[cacheKey] = result;
-        return result;
-      }
-    }
     return null;
   }
 
