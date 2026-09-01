@@ -413,7 +413,7 @@ export const CharacterCreator: React.FC = () => {
     if (isCharacterCreatorOpen) {
       loadInitialData();
     }
-  }, [isCharacterCreatorOpen]);
+  }, [isCharacterCreatorOpen, newChar.ruleset]);
 
   useEffect(() => {
     if (availableLanguages.length > 0) {
@@ -651,7 +651,7 @@ export const CharacterCreator: React.FC = () => {
         const [sData, subData, cData] = await Promise.all([
             newChar.race ? fetchSpeciesData(newChar.race, newChar.ruleset) : null,
             newChar.subrace ? fetchSubraceData(newChar.subrace) : null,
-            newChar.class ? fetchClassData(newChar.class) : null
+            newChar.class ? fetchClassData(newChar.class, newChar.ruleset) : null
         ]);
 
         if (cData?.hit_die) {
