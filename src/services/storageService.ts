@@ -2228,7 +2228,26 @@ export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): P
 }
 
 export async function fetchFeatureData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/${index}.json?t=${Date.now()}`;
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const candidates = [
+        `public/assets/atlas/features/json/${cleanIndex}.json`,
+        `public/assets/atlas/features/${cleanIndex}.json`
+      ];
+      for (const cand of candidates) {
+        const fullPath = pathModule.resolve(process.cwd(), cand);
+        if (fs.existsSync(fullPath)) {
+          return JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        }
+      }
+    } catch (e) {}
+  }
+
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/features/json/${cleanIndex}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);

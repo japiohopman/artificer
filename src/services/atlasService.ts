@@ -443,6 +443,9 @@ class AtlasService {
   }
 
   async loadFeature(index: string): Promise<any | null> {
+    const { fetchFeatureData } = await import('./storageService');
+    const data = await fetchFeatureData(index);
+    if (data) return data;
     return this.fetchAtlasData(
       `/assets/atlas/features/json/${index.toLowerCase().replace(/[\s-]/g, '_')}.json`
     );

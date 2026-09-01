@@ -187,6 +187,12 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(wizardLvl24?.spellcasting?.prepared_spells).toBe(4);
     expect(wizardLvl24?.spellcasting?.spell_slots_level_1).toBe(2);
 
+    // Verify Ritual Adept feature description requirement to read from book
+    const ritualAdeptFeature = await atlasService.loadFeature('ritual_adept_wizard');
+    expect(ritualAdeptFeature).not.toBeNull();
+    const descText = Array.isArray(ritualAdeptFeature?.desc) ? ritualAdeptFeature.desc.join(' ') : ritualAdeptFeature?.desc || '';
+    expect(descText.toLowerCase()).toContain('read from the book');
+
     // 3. Cleric Level 1
     const clericLvl14 = await atlasService.loadLevelData('cleric', 1, '2014');
     const clericLvl24 = await atlasService.loadLevelData('cleric', 1, '2024');
