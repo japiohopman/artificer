@@ -149,6 +149,7 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 - [x] Character Creator Selection Experience v1.
 - [x] Character Creator Species Visual Integration v1.
 - [x] Character Creator Species Character Mirror & Choice State v1.
+- [x] 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc ruleset-aware resolution).
 - [x] Combat Integration v1 — BattleMap → CombatTester → CombatGrid.
 - [x] XP animation and shared party XP foundations.
 

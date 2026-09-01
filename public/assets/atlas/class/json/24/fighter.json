@@ -1,0 +1,157 @@
+{
+  "index": "fighter",
+  "name": "Fighter",
+  "rulesetContext": "2024",
+  "hit_die": 10,
+  "weapon_mastery": {
+    "count": 3,
+    "description": "You can master 3 martial or simple weapons of your choice."
+  },
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_acrobatics",
+              "name": "skill: acrobatics",
+              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "all_armor",
+      "name": "all armor",
+      "url": "/assets/atlas/proficiencies/json/all_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "simple_weapons",
+      "name": "simple weapons",
+      "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+    },
+    {
+      "index": "saving_throw_str",
+      "name": "saving throw: str",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_str.json"
+    },
+    {
+      "index": "saving_throw_con",
+      "name": "saving throw: con",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "str",
+      "name": "str",
+      "url": "/assets/atlas/ability_scores/json/str.json"
+    },
+    {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    }
+  ],
+  "starting_equipment": [],
+  "starting_equipment_options": [],
+  "class_levels": "/assets/atlas/class/levels/24/fighter.json",
+  "subclasses": [
+    {
+      "index": "champion",
+      "name": "champion",
+      "url": "/assets/atlas/subclasses/json/champion.json"
+    },
+    {
+      "index": "battle_master",
+      "name": "battle master",
+      "url": "/assets/atlas/subclasses/json/battle_master.json"
+    },
+    {
+      "index": "eldritch_knight",
+      "name": "eldritch knight",
+      "url": "/assets/atlas/subclasses/json/eldritch_knight.json"
+    },
+    {
+      "index": "psi_warrior",
+      "name": "psi warrior",
+      "url": "/assets/atlas/subclasses/json/psi_warrior.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/fighter.json",
+  "image": "/assets/ui/official/classes/fighter.webp"
+}

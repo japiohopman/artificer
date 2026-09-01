@@ -123,6 +123,12 @@ Uit onze inspectie van `module/documents/actor/` en `module/documents/advancemen
 
 ---
 
+## 📜 Ruleset Data Resolution (2014 vs 2024 Boundary)
+Character Creator selection steps enforce strict ruleset resolution via `getActiveRulesetContext(ruleset)`:
+- **Species**: `/assets/atlas/species/json/14/` vs `/24/` (Foundation: Human, Dwarf, Elf, Halfling, Orc).
+- **Classes**: `/assets/atlas/class/json/14/` vs `/24/` (Foundation: Fighter, Wizard, Cleric, Rogue).
+- Resolvers return `rulesetContext` derived from loaded file location and enforce strict safety (no 2024 -> 2014 fallback when 2024 ruleset is explicitly requested).
+
 ## 🛠️ Deel 2: Diagnose van de Huidige Character Creator & Knelpunten
 
 Op dit moment "rammelt" het proces nog aan een aantal kanten. Hier is de diagnose en de concrete oplossing:

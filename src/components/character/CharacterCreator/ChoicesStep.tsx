@@ -87,7 +87,7 @@ export const ChoicesStep: React.FC<{
             if (!newChar.class) return;
             setLoading(true);
             try {
-                const levels = await fetchClassLevels(newChar.class!);
+                const levels = await fetchClassLevels(newChar.class!, newChar.ruleset);
                 const level1 = levels.find((l: any) => l.level === 1);
                 
                 if (level1?.features) {

@@ -165,8 +165,8 @@ export const SelectionStep: React.FC<{
         data = await fetchSubraceData(index);
         statsData = data;
       } else if (category === 'class') {
-        data = await fetchClassWikiData(index);
-        statsData = await fetchClassData(index);
+        data = await fetchClassWikiData(index, ruleset);
+        statsData = await fetchClassData(index, ruleset);
       } else if (category === 'backgrounds') {
         data = await fetchBackgroundData(index);
       } else if (category === 'alignments') {

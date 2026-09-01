@@ -16,7 +16,7 @@ export const SkillsStep: React.FC<{
 
     useEffect(() => {
         if (newChar.class) {
-            fetchClassData(newChar.class).then(data => {
+            fetchClassData(newChar.class, newChar.ruleset).then(data => {
                 setClassData(data);
                 if (data?.proficiency_choices?.[0]) {
                     setSelectionLimit(data.proficiency_choices[0].choose);

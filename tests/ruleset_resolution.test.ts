@@ -1,8 +1,56 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 
 describe('Ruleset Resolution Audit Tests', () => {
+  it('correctly resolves versioned class dataset (14 vs 24)', async () => {
+    const fighter14 = await fetchClassData('fighter', '2014');
+    const fighter24 = await fetchClassData('fighter', '2024');
+
+    expect(fighter14).not.toBeNull();
+    expect(fighter24).not.toBeNull();
+    expect(fighter14?.rulesetContext).toBe('2014');
+    expect(fighter24?.rulesetContext).toBe('2024');
+
+    // Assertion for Fighter 2024 Weapon Mastery metadata
+    expect(fighter14?.weapon_mastery).toBeUndefined();
+    expect(fighter24?.weapon_mastery).toBeDefined();
+    expect(fighter24?.weapon_mastery?.count).toBe(3);
+
+    // Assertion for Wizard 2014 vs 2024 class dataset
+    const wizard14 = await fetchClassData('wizard', '2014');
+    const wizard24 = await fetchClassData('wizard', '2024');
+    expect(wizard14?.rulesetContext).toBe('2014');
+    expect(wizard24?.rulesetContext).toBe('2024');
+    expect(wizard24?.spellcasting?.info?.some((i: any) => i.name === 'Spellbook')).toBe(true);
+
+    // Assertion for Cleric 2014 vs 2024 class dataset
+    const cleric14 = await fetchClassData('cleric', '2014');
+    const cleric24 = await fetchClassData('cleric', '2024');
+    expect(cleric14?.rulesetContext).toBe('2014');
+    expect(cleric24?.rulesetContext).toBe('2024');
+
+    // Assertion for Rogue 2014 vs 2024 class dataset
+    const rogue14 = await fetchClassData('rogue', '2014');
+    const rogue24 = await fetchClassData('rogue', '2024');
+    expect(rogue14?.rulesetContext).toBe('2014');
+    expect(rogue24?.rulesetContext).toBe('2024');
+    expect(rogue24?.weapon_mastery?.count).toBe(2);
+
+    // Assertion for strict resolution: missing 2024 class returns null (no cross-ruleset fallback to 2014)
+    const sorcerer24 = await fetchClassData('sorcerer', '2024');
+    expect(sorcerer24).toBeNull();
+  });
+
+  it('verifies atlasService class loading with explicit ruleset and cache key separation', async () => {
+    const fighter14 = await atlasService.loadClass('fighter', '2014');
+    const fighter24 = await atlasService.loadClass('fighter', '2024');
+
+    expect(fighter14).not.toBeNull();
+    expect(fighter24).not.toBeNull();
+    expect(fighter14?.rulesetContext).toBe('2014');
+    expect(fighter24?.rulesetContext).toBe('2024');
+  });
   it('correctly resolves versioned species dataset (14 vs 24)', async () => {
     const sp14 = await fetchSpeciesData('human', '2014');
     const sp24 = await fetchSpeciesData('human', '2024');

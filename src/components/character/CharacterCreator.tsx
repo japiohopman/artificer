@@ -183,7 +183,7 @@ export const CharacterCreator: React.FC = () => {
       if (isKnownSpellcaster) {
         setIsClassSpellcaster(true);
       } else {
-        atlasService.loadClass(newChar.class).then(cData => {
+        atlasService.loadClass(newChar.class, newChar.ruleset).then(cData => {
           setIsClassSpellcaster(!!cData?.spellcasting);
         }).catch(() => {
           setIsClassSpellcaster(false);
@@ -339,7 +339,7 @@ export const CharacterCreator: React.FC = () => {
                }
             }
             if (newChar.class) {
-                const cData = await atlasService.loadClass(newChar.class);
+                const cData = await atlasService.loadClass(newChar.class, newChar.ruleset);
                 if (cData?.proficiencies) {
                     profs.push(...cData.proficiencies.map((p: any) => p.name || p.index || p));
                 }

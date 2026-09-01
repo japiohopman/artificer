@@ -1,0 +1,154 @@
+{
+  "index": "wizard",
+  "name": "Wizard",
+  "rulesetContext": "2024",
+  "hit_die": 6,
+  "spellcasting": {
+    "level": 1,
+    "spellcasting_ability": {
+      "index": "int",
+      "name": "int",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    "info": [
+      {
+        "name": "Cantrips",
+        "desc": [
+          "At 1st level, you know 3 cantrips of your choice from the wizard spell list."
+        ]
+      },
+      {
+        "name": "Spellbook",
+        "desc": [
+          "At 1st level, your spellbook contains 6 1st-level wizard spells of your choice."
+        ]
+      }
+    ]
+  },
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Arcana, History, Insight, Investigation, Medicine, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_history",
+              "name": "skill: history",
+              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_investigation",
+              "name": "skill: investigation",
+              "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "daggers",
+      "name": "daggers",
+      "url": "/assets/atlas/proficiencies/json/daggers.json"
+    },
+    {
+      "index": "darts",
+      "name": "darts",
+      "url": "/assets/atlas/proficiencies/json/darts.json"
+    },
+    {
+      "index": "slings",
+      "name": "slings",
+      "url": "/assets/atlas/proficiencies/json/slings.json"
+    },
+    {
+      "index": "quarterstaffs",
+      "name": "quarterstaffs",
+      "url": "/assets/atlas/proficiencies/json/quarterstaffs.json"
+    },
+    {
+      "index": "light_crossbows",
+      "name": "light crossbows",
+      "url": "/assets/atlas/proficiencies/json/light_crossbows.json"
+    },
+    {
+      "index": "saving_throw_int",
+      "name": "saving throw: int",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "int",
+      "name": "int",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    }
+  ],
+  "starting_equipment": [],
+  "starting_equipment_options": [],
+  "class_levels": "/assets/atlas/class/levels/24/wizard.json",
+  "subclasses": [
+    {
+      "index": "evocation",
+      "name": "school of evocation",
+      "url": "/assets/atlas/subclasses/json/evocation.json"
+    },
+    {
+      "index": "abjuration",
+      "name": "school of abjuration",
+      "url": "/assets/atlas/subclasses/json/abjuration.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/wizard.json",
+  "image": "/assets/ui/official/classes/wizard.webp"
+}
