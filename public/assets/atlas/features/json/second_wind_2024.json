@@ -1,0 +1,20 @@
+{
+  "index": "second_wind_2024",
+  "name": "Second Wind",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 1,
+  "desc": [
+    "You have a limited well of stamina that you can draw on to protect yourself from harm. As a Bonus Action, you can regain Hit Points equal to 1d10 + your Fighter level. You can use this feature twice. You regain one expended use when you finish a Short Rest, and all expended uses when you finish a Long Rest. The number of uses increases at Fighter levels 4 (3 uses) and 10 (4 uses)."
+  ],
+  "feature_specific": {
+    "uses_at_level_1": 2,
+    "uses_at_level_4": 3,
+    "uses_at_level_10": 4,
+    "recharge": "short_rest_1_all_long_rest"
+  },
+  "url": "/assets/atlas/features/json/second_wind_2024.json"
+}

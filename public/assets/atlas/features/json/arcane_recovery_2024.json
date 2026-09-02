@@ -1,0 +1,14 @@
+{
+  "index": "arcane_recovery_2024",
+  "name": "Arcane Recovery",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "level": 1,
+  "desc": [
+    "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Wizard level (rounded up), and none of the slots can be 6th level or higher."
+  ],
+  "url": "/assets/atlas/features/json/arcane_recovery_2024.json"
+}

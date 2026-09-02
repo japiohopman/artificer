@@ -1,0 +1,17 @@
+{
+  "index": "weapon_mastery_rogue",
+  "name": "Weapon Mastery",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 1,
+  "desc": [
+    "Your training with weapons allows you to use the mastery properties of two weapons of your choice from your class weapon proficiencies."
+  ],
+  "feature_specific": {
+    "mastery_count": 2
+  },
+  "url": "/assets/atlas/features/json/weapon_mastery_rogue.json"
+}

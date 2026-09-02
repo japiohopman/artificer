@@ -1,0 +1,18 @@
+{
+  "index": "sneak_attack_2024",
+  "name": "Sneak Attack",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 1,
+  "desc": [
+    "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal extra damage to one creature you hit with an attack roll if you have Advantage on the roll. The attack must use a Finesse or Ranged weapon. You don't need Advantage if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have Disadvantage. The extra damage is 1d6 at level 1 and increases as you gain Rogue levels."
+  ],
+  "feature_specific": {
+    "dice_count": 1,
+    "dice_value": 6
+  },
+  "url": "/assets/atlas/features/json/sneak_attack_2024.json"
+}

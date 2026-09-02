@@ -1,0 +1,14 @@
+{
+  "index": "spellcasting_wizard_2024",
+  "name": "Spellcasting: Wizard",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "level": 1,
+  "desc": [
+    "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. Intelligence is your spellcasting ability for your Wizard spells."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_wizard_2024.json"
+}

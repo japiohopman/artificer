@@ -1,0 +1,14 @@
+{
+  "index": "divine_intervention_cleric_2024",
+  "name": "Divine Intervention",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 10,
+  "desc": [
+    "You can call directly on your deity for aid. As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction. You cast that spell without expending a spell slot or material components. Once used, you must finish a Long Rest before using this feature again."
+  ],
+  "url": "/assets/atlas/features/json/divine_intervention_cleric_2024.json"
+}

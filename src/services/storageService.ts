@@ -1807,16 +1807,6 @@ export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ nam
     if (indexRes.ok) {
       const indexData = await indexRes.json();
       if (Array.isArray(indexData)) {
-        if (versionFolder === '24') {
-          // For 2024, filter index entries by presence in /24/ folder
-          const valid24 = ['fighter', 'wizard', 'cleric', 'rogue'];
-          return indexData
-            .filter((c: any) => valid24.includes(c.index))
-            .map((c: any) => ({
-              name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-              index: c.index
-            }));
-        }
         return indexData.map((c: any) => ({
           name: c.name || c.index.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
           index: c.index

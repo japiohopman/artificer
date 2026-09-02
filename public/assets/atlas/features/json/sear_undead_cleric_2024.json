@@ -1,0 +1,14 @@
+{
+  "index": "sear_undead_cleric_2024",
+  "name": "Sear Undead",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 5,
+  "desc": [
+    "Whenever you use Turn Undead, roll a number of d8s equal to your Wisdom modifier (minimum of 1d8). Each Undead that fails its saving throw against Turn Undead takes Radiant damage equal to the total rolled."
+  ],
+  "url": "/assets/atlas/features/json/sear_undead_cleric_2024.json"
+}

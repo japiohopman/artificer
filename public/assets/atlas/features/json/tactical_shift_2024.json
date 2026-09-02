@@ -1,0 +1,14 @@
+{
+  "index": "tactical_shift_2024",
+  "name": "Tactical Shift",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 5,
+  "desc": [
+    "Whenever you activate Second Wind as a Bonus Action, you can move up to half your Speed without provoking Opportunity Attacks."
+  ],
+  "url": "/assets/atlas/features/json/tactical_shift_2024.json"
+}

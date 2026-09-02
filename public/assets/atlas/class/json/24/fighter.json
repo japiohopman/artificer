@@ -128,7 +128,185 @@
     }
   ],
   "starting_equipment": [],
-  "starting_equipment_options": [],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "chain_mail",
+              "name": "chain mail",
+              "url": "/assets/atlas/equipment/json/chain_mail.json"
+            }
+          },
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "leather_armor",
+                  "name": "leather armor",
+                  "url": "/assets/atlas/equipment/json/leather_armor.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "longbow",
+                  "name": "longbow",
+                  "url": "/assets/atlas/equipment/json/longbow.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "arrow",
+                  "name": "arrow",
+                  "url": "/assets/atlas/equipment/json/arrow.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "choice",
+                "choice": {
+                  "desc": "a martial weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "index": "martial_weapons",
+                      "name": "martial weapons",
+                      "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                    }
+                  }
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shield",
+                  "name": "shield",
+                  "url": "/assets/atlas/equipment/json/shield.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "two martial weapons",
+              "choose": 2,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "martial_weapons",
+                  "name": "martial weapons",
+                  "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) two handaxes",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 2,
+            "of": {
+              "index": "handaxe",
+              "name": "handaxe",
+              "url": "/assets/atlas/equipment/json/handaxe.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "class_levels": "/assets/atlas/class/levels/24/fighter.json",
   "subclasses": [
     {

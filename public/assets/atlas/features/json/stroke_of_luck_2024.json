@@ -1,0 +1,18 @@
+{
+  "index": "stroke_of_luck_2024",
+  "name": "Stroke of Luck",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 20,
+  "desc": [
+    "You have a knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short or Long Rest."
+  ],
+  "feature_specific": {
+    "recharge": "short_or_long_rest",
+    "effect": "turn_failed_d20_test_into_20"
+  },
+  "url": "/assets/atlas/features/json/stroke_of_luck_2024.json"
+}

@@ -1,0 +1,31 @@
+{
+  "level": 13,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "studied_attacks_2024",
+      "name": "Studied Attacks",
+      "url": "/assets/atlas/features/json/studied_attacks_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 5,
+    "description": "You can master 5 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 4,
+    "weapon_mastery_count": 5,
+    "action_surges": 1,
+    "indomitable_uses": 2,
+    "extra_attacks": 2
+  },
+  "index": "fighter_level_13",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/13/fighter_level_13.json",
+  "rulesetContext": "2024"
+}

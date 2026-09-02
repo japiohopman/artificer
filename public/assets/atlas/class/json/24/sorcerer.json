@@ -1,0 +1,249 @@
+{
+  "index": "sorcerer",
+  "name": "Sorcerer",
+  "rulesetContext": "2024",
+  "hit_die": 6,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_deception",
+              "name": "skill: deception",
+              "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_persuasion",
+              "name": "skill: persuasion",
+              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "daggers",
+      "name": "daggers",
+      "url": "/assets/atlas/proficiencies/json/daggers.json"
+    },
+    {
+      "index": "darts",
+      "name": "darts",
+      "url": "/assets/atlas/proficiencies/json/darts.json"
+    },
+    {
+      "index": "slings",
+      "name": "slings",
+      "url": "/assets/atlas/proficiencies/json/slings.json"
+    },
+    {
+      "index": "quarterstaffs",
+      "name": "quarterstaffs",
+      "url": "/assets/atlas/proficiencies/json/quarterstaffs.json"
+    },
+    {
+      "index": "crossbows_light",
+      "name": "crossbows, light",
+      "url": "/assets/atlas/proficiencies/json/crossbows_light.json"
+    },
+    {
+      "index": "saving_throw_con",
+      "name": "saving throw: con",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_con.json"
+    },
+    {
+      "index": "saving_throw_cha",
+      "name": "saving throw: cha",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_cha.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "con",
+      "name": "con",
+      "url": "/assets/atlas/ability_scores/json/con.json"
+    },
+    {
+      "index": "cha",
+      "name": "cha",
+      "url": "/assets/atlas/ability_scores/json/cha.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "dagger",
+        "url": "/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a component pouch or (b) an arcane focus",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "component_pouch",
+              "name": "component pouch",
+              "url": "/assets/atlas/equipment/json/component_pouch.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "arcane focus",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "arcane_foci",
+                  "name": "arcane foci",
+                  "url": "/assets/atlas/equipment_categories/json/arcane_foci.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a dungeoneer’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/24/sorcerer.json",
+  "subclasses": [
+    {
+      "index": "draconic",
+      "name": "draconic",
+      "url": "/assets/atlas/subclasses/json/draconic.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/sorcerer.json",
+  "image": "/assets/ui/official/classes/sorcerer.webp"
+}

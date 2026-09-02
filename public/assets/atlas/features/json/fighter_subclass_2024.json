@@ -1,0 +1,14 @@
+{
+  "index": "fighter_subclass_2024",
+  "name": "Fighter Subclass",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain a Fighter subclass of your choice. A subclass is a specialization that grants you features at certain Fighter levels (levels 3, 7, 10, and 15)."
+  ],
+  "url": "/assets/atlas/features/json/fighter_subclass_2024.json"
+}

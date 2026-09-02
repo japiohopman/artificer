@@ -3,31 +3,9 @@
   "name": "Cleric",
   "rulesetContext": "2024",
   "hit_die": 8,
-  "spellcasting": {
-    "level": 1,
-    "spellcasting_ability": {
-      "index": "wis",
-      "name": "wis",
-      "url": "/assets/atlas/ability_scores/json/wis.json"
-    },
-    "info": [
-      {
-        "name": "Cantrips",
-        "desc": [
-          "At 1st level, you know 3 cantrips of your choice from the cleric spell list."
-        ]
-      },
-      {
-        "name": "Prepared Spells",
-        "desc": [
-          "You prepare the list of cleric spells that are available for you to cast."
-        ]
-      }
-    ]
-  },
   "proficiency_choices": [
     {
-      "desc": "Choose two skills from History, Insight, Medicine, Persuasion, and Religion",
+      "desc": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
       "choose": 2,
       "type": "proficiencies",
       "from": {
@@ -121,19 +99,199 @@
       "url": "/assets/atlas/ability_scores/json/cha.json"
     }
   ],
-  "starting_equipment": [],
-  "starting_equipment_options": [],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "shield",
+        "name": "shield",
+        "url": "/assets/atlas/equipment/json/shield.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a mace or (b) a warhammer (if proficient)",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "mace",
+              "name": "mace",
+              "url": "/assets/atlas/equipment/json/mace.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "warhammer",
+              "name": "warhammer",
+              "url": "/assets/atlas/equipment/json/warhammer.json"
+            },
+            "prerequisites": [
+              {
+                "type": "proficiency",
+                "proficiency": {
+                  "index": "warhammers",
+                  "name": "warhammers",
+                  "url": "/assets/atlas/proficiencies/json/warhammers.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scale_mail",
+              "name": "scale mail",
+              "url": "/assets/atlas/equipment/json/scale_mail.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "leather_armor",
+              "name": "leather armor",
+              "url": "/assets/atlas/equipment/json/leather_armor.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "chain_mail",
+              "name": "chain mail",
+              "url": "/assets/atlas/equipment/json/chain_mail.json"
+            },
+            "prerequisites": [
+              {
+                "type": "proficiency",
+                "proficiency": {
+                  "index": "chain_mail",
+                  "name": "chain mail",
+                  "url": "/assets/atlas/proficiencies/json/chain_mail.json"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "crossbow_light",
+                  "name": "crossbow, light",
+                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "crossbow_bolt",
+                  "name": "crossbow bolt",
+                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a priest’s pack or (b) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "priests_pack",
+              "name": "priest's pack",
+              "url": "/assets/atlas/equipment/json/priests_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "holy symbol",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "holy_symbols",
+          "name": "holy symbols",
+          "url": "/assets/atlas/equipment_categories/json/holy_symbols.json"
+        }
+      }
+    }
+  ],
   "class_levels": "/assets/atlas/class/levels/24/cleric.json",
   "subclasses": [
     {
       "index": "life",
-      "name": "life domain",
+      "name": "life",
       "url": "/assets/atlas/subclasses/json/life.json"
-    },
-    {
-      "index": "light",
-      "name": "light domain",
-      "url": "/assets/atlas/subclasses/json/light.json"
     }
   ],
   "url": "/assets/atlas/class/json/24/cleric.json",

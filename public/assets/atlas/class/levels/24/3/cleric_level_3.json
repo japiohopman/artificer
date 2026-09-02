@@ -1,0 +1,40 @@
+{
+  "level": 3,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "cleric_subclass_2024",
+      "name": "Cleric Subclass",
+      "url": "/assets/atlas/features/json/cleric_subclass_2024.json"
+    }
+  ],
+  "class_specific": {
+    "divine_order_options": [
+      "Protector",
+      "Thaumaturge"
+    ],
+    "channel_divinity_charges": 2
+  },
+  "index": "cleric_level_3",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "url": "/assets/atlas/class/levels/24/3/cleric_level_3.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "prepared_spells": 6,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 2,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

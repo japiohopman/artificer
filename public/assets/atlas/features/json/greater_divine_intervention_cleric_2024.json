@@ -1,0 +1,18 @@
+{
+  "index": "greater_divine_intervention_cleric_2024",
+  "name": "Greater Divine Intervention",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 20,
+  "desc": [
+    "Your connection to your deity reaches its peak. When you use Divine Intervention, you can choose Wish. After doing so, you can't use Divine Intervention again until you finish 2d4 Long Rests."
+  ],
+  "feature_specific": {
+    "effect": "cast_wish",
+    "recharge": "2d4_long_rests"
+  },
+  "url": "/assets/atlas/features/json/greater_divine_intervention_cleric_2024.json"
+}

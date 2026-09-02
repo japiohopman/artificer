@@ -1,0 +1,14 @@
+{
+  "index": "tactical_mind_2024",
+  "name": "Tactical Mind",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 2,
+  "desc": [
+    "When you fail an ability check, you can expend one use of your Second Wind to roll 1d10 and add the number rolled to the check, potentially turning the failure into a success. If the check still fails, the Second Wind use isn't expended."
+  ],
+  "url": "/assets/atlas/features/json/tactical_mind_2024.json"
+}

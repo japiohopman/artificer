@@ -1,0 +1,14 @@
+{
+  "index": "signature_spells_wizard_2024",
+  "name": "Signature Spells",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "level": 20,
+  "desc": [
+    "You gain mastery over two powerful spells. Choose two 3rd-level Wizard spells in your spellbook as your signature spells. You always have these spells prepared, and you can cast each once at 3rd level without expending a spell slot. You regain the ability to cast them after a Short or Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/signature_spells_wizard_2024.json"
+}

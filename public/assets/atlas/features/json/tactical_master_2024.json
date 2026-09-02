@@ -1,0 +1,14 @@
+{
+  "index": "tactical_master_2024",
+  "name": "Tactical Master",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 9,
+  "desc": [
+    "When you attack with a weapon whose mastery property you can use, you can replace that property for that attack with Push, Sap, or Slow."
+  ],
+  "url": "/assets/atlas/features/json/tactical_master_2024.json"
+}

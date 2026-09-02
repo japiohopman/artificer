@@ -1,0 +1,14 @@
+{
+  "index": "rogue_ability_score_improvement_3_2024",
+  "name": "Ability Score Improvement",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 10,
+  "desc": [
+    "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify."
+  ],
+  "url": "/assets/atlas/features/json/rogue_ability_score_improvement_3_2024.json"
+}

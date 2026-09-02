@@ -5,11 +5,11 @@
   "hit_die": 8,
   "weapon_mastery": {
     "count": 2,
-    "description": "You can master 2 weapons of your choice."
+    "description": "You can master 2 weapons of your choice from your class weapon proficiencies."
   },
   "proficiency_choices": [
     {
-      "desc": "Choose four skills from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
+      "desc": "Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
       "choose": 4,
       "type": "proficiencies",
       "from": {
@@ -119,9 +119,24 @@
       "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
     },
     {
-      "index": "martial_weapons_finesse_light",
-      "name": "martial weapons with finesse or light property",
-      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
+      "index": "longswords",
+      "name": "longswords",
+      "url": "/assets/atlas/proficiencies/json/longswords.json"
+    },
+    {
+      "index": "rapiers",
+      "name": "rapiers",
+      "url": "/assets/atlas/proficiencies/json/rapiers.json"
+    },
+    {
+      "index": "shortswords",
+      "name": "shortswords",
+      "url": "/assets/atlas/proficiencies/json/shortswords.json"
+    },
+    {
+      "index": "hand_crossbows",
+      "name": "hand crossbows",
+      "url": "/assets/atlas/proficiencies/json/hand_crossbows.json"
     },
     {
       "index": "thieves_tools",
@@ -151,8 +166,141 @@
       "url": "/assets/atlas/ability_scores/json/int.json"
     }
   ],
-  "starting_equipment": [],
-  "starting_equipment_options": [],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather_armor",
+        "name": "leather armor",
+        "url": "/assets/atlas/equipment/json/leather_armor.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "dagger",
+        "url": "/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "thieves_tools",
+        "name": "thieves' tools",
+        "url": "/assets/atlas/equipment/json/thieves_tools.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a rapier or (b) a shortsword",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "rapier",
+              "name": "rapier",
+              "url": "/assets/atlas/equipment/json/rapier.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "shortsword",
+              "name": "shortsword",
+              "url": "/assets/atlas/equipment/json/shortsword.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a shortbow and quiver of 20 arrows or (b) a shortsword",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "multiple",
+            "items": [
+              {
+                "option_type": "counted_reference",
+                "count": 1,
+                "of": {
+                  "index": "shortbow",
+                  "name": "shortbow",
+                  "url": "/assets/atlas/equipment/json/shortbow.json"
+                }
+              },
+              {
+                "option_type": "counted_reference",
+                "count": 20,
+                "of": {
+                  "index": "arrow",
+                  "name": "arrow",
+                  "url": "/assets/atlas/equipment/json/arrow.json"
+                }
+              }
+            ]
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "shortsword",
+              "name": "shortsword",
+              "url": "/assets/atlas/equipment/json/shortsword.json"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a burglar’s pack, (b) a dungeoneer’s pack, or (c) an explorer’s pack",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "burglars_pack",
+              "name": "burglar's pack",
+              "url": "/assets/atlas/equipment/json/burglars_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "dungeoneers_pack",
+              "name": "dungeoneer's pack",
+              "url": "/assets/atlas/equipment/json/dungeoneers_pack.json"
+            }
+          },
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "explorers_pack",
+              "name": "explorer's pack",
+              "url": "/assets/atlas/equipment/json/explorers_pack.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "class_levels": "/assets/atlas/class/levels/24/rogue.json",
   "subclasses": [
     {

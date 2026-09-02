@@ -1,0 +1,18 @@
+{
+  "index": "indomitable_2024",
+  "name": "Indomitable",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 9,
+  "desc": [
+    "If you fail a saving throw, you can reroll it with a bonus equal to your Fighter level. You must use the new roll, and you can't use this feature again until you finish a Long Rest. You gain additional uses at level 13 (2 uses) and level 17 (3 uses)."
+  ],
+  "feature_specific": {
+    "uses_at_level_9": 1,
+    "bonus": "fighter_level"
+  },
+  "url": "/assets/atlas/features/json/indomitable_2024.json"
+}

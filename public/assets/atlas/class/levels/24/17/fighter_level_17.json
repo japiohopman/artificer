@@ -1,0 +1,25 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 6,
+  "prof_bonus": 6,
+  "features": [],
+  "weapon_mastery": {
+    "count": 6,
+    "description": "You can master 6 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 4,
+    "weapon_mastery_count": 6,
+    "action_surges": 2,
+    "indomitable_uses": 3,
+    "extra_attacks": 2
+  },
+  "index": "fighter_level_17",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/17/fighter_level_17.json",
+  "rulesetContext": "2024"
+}

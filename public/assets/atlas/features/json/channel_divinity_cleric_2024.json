@@ -1,0 +1,35 @@
+{
+  "index": "channel_divinity_cleric_2024",
+  "name": "Channel Divinity",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 2,
+  "desc": [
+    "You can channel divine energy directly from the outer planes to fuel magical effects. You start with two options: Divine Spark and Turn Undead. You gain 2 uses of Channel Divinity. You regain 1 expended use when you finish a Short Rest, and all expended uses when you finish a Long Rest. The number of uses increases to 3 at level 6 and 4 at level 18.",
+    "Divine Spark: As a Magic action, you point your holy symbol at a creature you can see within 30 feet of yourself and focus divine energy. Roll 1d8 + your Wisdom modifier. You either restore Hit Points to the creature equal to that total or force the creature to make a Constitution saving throw against your Cleric spell save DC. On a failed save, the target takes Radiant or Necrotic damage (your choice) equal to the total, or half as much damage on a successful save. The damage or healing increases to 2d8 + WIS at level 7, 3d8 + WIS at level 13, and 4d8 + WIS at level 18.",
+    "Turn Undead: As a Magic action, you present your holy symbol and censure Undead creatures. Each Undead within 30 feet of you that can see or hear you must make a Wisdom saving throw against your Cleric spell save DC. On a failed save, the creature is Turned for 1 minute or until it takes damage."
+  ],
+  "feature_specific": {
+    "uses_at_level_2": 2,
+    "uses_at_level_6": 3,
+    "uses_at_level_18": 4,
+    "recharge": "short_rest_1_all_long_rest",
+    "save_dc": "Cleric spell save DC",
+    "divine_spark": {
+      "action": "Magic",
+      "range": "30 feet",
+      "dice": "1d8 (L2), 2d8 (L7), 3d8 (L13), 4d8 (L18) + WIS mod",
+      "save": "CON"
+    },
+    "turn_undead": {
+      "action": "Magic",
+      "range": "30 feet",
+      "save": "WIS",
+      "duration": "1 minute"
+    }
+  },
+  "url": "/assets/atlas/features/json/channel_divinity_cleric_2024.json"
+}

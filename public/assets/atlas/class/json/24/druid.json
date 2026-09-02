@@ -1,0 +1,289 @@
+{
+  "index": "druid",
+  "name": "Druid",
+  "rulesetContext": "2024",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+      "choose": 2,
+      "type": "proficiencies",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_arcana",
+              "name": "skill: arcana",
+              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_animal_handling",
+              "name": "skill: animal handling",
+              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_insight",
+              "name": "skill: insight",
+              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_medicine",
+              "name": "skill: medicine",
+              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_nature",
+              "name": "skill: nature",
+              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_perception",
+              "name": "skill: perception",
+              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_religion",
+              "name": "skill: religion",
+              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_survival",
+              "name": "skill: survival",
+              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proficiencies": [
+    {
+      "index": "light_armor",
+      "name": "light armor",
+      "url": "/assets/atlas/proficiencies/json/light_armor.json"
+    },
+    {
+      "index": "medium_armor",
+      "name": "medium armor",
+      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+    },
+    {
+      "index": "shields",
+      "name": "shields",
+      "url": "/assets/atlas/proficiencies/json/shields.json"
+    },
+    {
+      "index": "clubs",
+      "name": "clubs",
+      "url": "/assets/atlas/proficiencies/json/clubs.json"
+    },
+    {
+      "index": "daggers",
+      "name": "daggers",
+      "url": "/assets/atlas/proficiencies/json/daggers.json"
+    },
+    {
+      "index": "javelins",
+      "name": "javelins",
+      "url": "/assets/atlas/proficiencies/json/javelins.json"
+    },
+    {
+      "index": "maces",
+      "name": "maces",
+      "url": "/assets/atlas/proficiencies/json/maces.json"
+    },
+    {
+      "index": "quarterstaffs",
+      "name": "quarterstaffs",
+      "url": "/assets/atlas/proficiencies/json/quarterstaffs.json"
+    },
+    {
+      "index": "sickles",
+      "name": "sickles",
+      "url": "/assets/atlas/proficiencies/json/sickles.json"
+    },
+    {
+      "index": "spears",
+      "name": "spears",
+      "url": "/assets/atlas/proficiencies/json/spears.json"
+    },
+    {
+      "index": "darts",
+      "name": "darts",
+      "url": "/assets/atlas/proficiencies/json/darts.json"
+    },
+    {
+      "index": "slings",
+      "name": "slings",
+      "url": "/assets/atlas/proficiencies/json/slings.json"
+    },
+    {
+      "index": "scimitars",
+      "name": "scimitars",
+      "url": "/assets/atlas/proficiencies/json/scimitars.json"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "herbalism kit",
+      "url": "/assets/atlas/proficiencies/json/herbalism_kit.json"
+    },
+    {
+      "index": "saving_throw_int",
+      "name": "saving throw: int",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_int.json"
+    },
+    {
+      "index": "saving_throw_wis",
+      "name": "saving throw: wis",
+      "url": "/assets/atlas/proficiencies/json/saving_throw_wis.json"
+    }
+  ],
+  "saving_throws": [
+    {
+      "index": "int",
+      "name": "int",
+      "url": "/assets/atlas/ability_scores/json/int.json"
+    },
+    {
+      "index": "wis",
+      "name": "wis",
+      "url": "/assets/atlas/ability_scores/json/wis.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather_armor",
+        "name": "leather armor",
+        "url": "/assets/atlas/equipment/json/leather_armor.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "explorers_pack",
+        "name": "explorer's pack",
+        "url": "/assets/atlas/equipment/json/explorers_pack.json"
+      },
+      "quantity": 1
+    }
+  ],
+  "starting_equipment_options": [
+    {
+      "desc": "(a) a wooden shield or (b) any simple weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "shield",
+              "name": "shield",
+              "url": "/assets/atlas/equipment/json/shield.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_weapons",
+                  "name": "simple weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) a scimitar or (b) any simple melee weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 1,
+            "of": {
+              "index": "scimitar",
+              "name": "scimitar",
+              "url": "/assets/atlas/equipment/json/scimitar.json"
+            }
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "any simple melee weapon",
+              "choose": 1,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "simple_melee_weapons",
+                  "name": "simple melee weapons",
+                  "url": "/assets/atlas/equipment_categories/json/simple_melee_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "druidic focus",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "equipment_category",
+        "equipment_category": {
+          "index": "druidic_foci",
+          "name": "druidic foci",
+          "url": "/assets/atlas/equipment_categories/json/druidic_foci.json"
+        }
+      }
+    }
+  ],
+  "class_levels": "/assets/atlas/class/levels/24/druid.json",
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "land",
+      "url": "/assets/atlas/subclasses/json/land.json"
+    }
+  ],
+  "url": "/assets/atlas/class/json/24/druid.json",
+  "image": "/assets/ui/official/classes/druid.webp"
+}

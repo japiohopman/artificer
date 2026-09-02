@@ -1,0 +1,25 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 weapons of your choice from your class weapon proficiencies."
+  },
+  "class_specific": {
+    "weapon_mastery_count": 2,
+    "sneak_attack": {
+      "dice_count": 5,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_9",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/24/9/rogue_level_9.json",
+  "rulesetContext": "2024"
+}
