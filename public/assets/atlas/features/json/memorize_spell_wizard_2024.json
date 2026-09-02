@@ -1,0 +1,14 @@
+{
+  "index": "memorize_spell_wizard_2024",
+  "name": "Memorize Spell",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "level": 5,
+  "desc": [
+    "Whenever you finish a Short Rest, you can study your spellbook and replace one of your prepared Wizard spells of level 1 or higher with another level 1+ spell from your spellbook."
+  ],
+  "url": "/assets/atlas/features/json/memorize_spell_wizard_2024.json"
+}

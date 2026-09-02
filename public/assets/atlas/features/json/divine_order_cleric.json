@@ -1,0 +1,14 @@
+{
+  "index": "divine_order_cleric",
+  "name": "Divine Order",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 1,
+  "desc": [
+    "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
+  ],
+  "url": "/assets/atlas/features/json/divine_order_cleric.json"
+}

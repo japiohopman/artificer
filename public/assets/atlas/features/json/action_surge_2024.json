@@ -1,0 +1,18 @@
+{
+  "index": "action_surge_2024",
+  "name": "Action Surge",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 2,
+  "desc": [
+    "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action, except the Magic action. Once you use this feature, you must finish a Short or Long Rest before you can use it again. Starting at level 17, you can use it twice before a rest, but only once on the same turn."
+  ],
+  "feature_specific": {
+    "uses": 1,
+    "recharge": "short_or_long_rest"
+  },
+  "url": "/assets/atlas/features/json/action_surge_2024.json"
+}

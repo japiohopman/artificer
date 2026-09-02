@@ -1,0 +1,14 @@
+{
+  "index": "blessed_strikes_cleric_2024",
+  "name": "Blessed Strikes",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 7,
+  "desc": [
+    "Divine power infuses your attacks. Choose Divine Strike (once per turn, dealing extra 1d8 Radiant or Necrotic damage on weapon hit) or Potent Spellcasting (adding Wisdom modifier to damage dealt by any Cleric cantrip)."
+  ],
+  "url": "/assets/atlas/features/json/blessed_strikes_cleric_2024.json"
+}

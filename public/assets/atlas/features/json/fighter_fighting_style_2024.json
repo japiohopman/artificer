@@ -1,0 +1,14 @@
+{
+  "index": "fighter_fighting_style_2024",
+  "name": "Fighting Style",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 1,
+  "desc": [
+    "You gain a Fighting Style feat of your choice. If you later gain a choice of Fighting Style feat, you must choose a different one."
+  ],
+  "url": "/assets/atlas/features/json/fighter_fighting_style_2024.json"
+}

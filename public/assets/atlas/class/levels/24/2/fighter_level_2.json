@@ -1,0 +1,36 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "action_surge_2024",
+      "name": "Action Surge",
+      "url": "/assets/atlas/features/json/action_surge_2024.json"
+    },
+    {
+      "index": "tactical_mind_2024",
+      "name": "Tactical Mind",
+      "url": "/assets/atlas/features/json/tactical_mind_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 3,
+    "description": "You can master 3 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 2,
+    "weapon_mastery_count": 3,
+    "action_surges": 1,
+    "indomitable_uses": 0,
+    "extra_attacks": 0
+  },
+  "index": "fighter_level_2",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/2/fighter_level_2.json",
+  "rulesetContext": "2024"
+}

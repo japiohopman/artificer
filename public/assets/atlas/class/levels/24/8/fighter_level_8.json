@@ -1,0 +1,31 @@
+{
+  "level": 8,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "fighter_ability_score_improvement_3_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/fighter_ability_score_improvement_3_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 4,
+    "description": "You can master 4 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 3,
+    "weapon_mastery_count": 4,
+    "action_surges": 1,
+    "indomitable_uses": 0,
+    "extra_attacks": 1
+  },
+  "index": "fighter_level_8",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/8/fighter_level_8.json",
+  "rulesetContext": "2024"
+}

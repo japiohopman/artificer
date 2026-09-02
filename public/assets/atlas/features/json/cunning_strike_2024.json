@@ -1,0 +1,14 @@
+{
+  "index": "cunning_strike_2024",
+  "name": "Cunning Strike",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 5,
+  "desc": [
+    "You can forgo some of your Sneak Attack damage to perform a tactical maneuver: Poison (1d6), Trip (1d6), Withdraw (1d6), or Disarm (1d6)."
+  ],
+  "url": "/assets/atlas/features/json/cunning_strike_2024.json"
+}

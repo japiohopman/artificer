@@ -1,0 +1,14 @@
+{
+  "index": "studied_attacks_2024",
+  "name": "Studied Attacks",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 13,
+  "desc": [
+    "If you make an attack roll against a creature and miss, you have Advantage on your next attack roll against that creature before the end of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/studied_attacks_2024.json"
+}

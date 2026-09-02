@@ -1,0 +1,31 @@
+{
+  "level": 10,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "rogue_ability_score_improvement_3_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/rogue_ability_score_improvement_3_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 weapons of your choice from your class weapon proficiencies."
+  },
+  "class_specific": {
+    "weapon_mastery_count": 2,
+    "sneak_attack": {
+      "dice_count": 5,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_10",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/24/10/rogue_level_10.json",
+  "rulesetContext": "2024"
+}

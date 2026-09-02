@@ -1,0 +1,31 @@
+{
+  "level": 16,
+  "ability_score_bonuses": 6,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "fighter_ability_score_improvement_6_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/fighter_ability_score_improvement_6_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 6,
+    "description": "You can master 6 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 4,
+    "weapon_mastery_count": 6,
+    "action_surges": 1,
+    "indomitable_uses": 2,
+    "extra_attacks": 2
+  },
+  "index": "fighter_level_16",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/16/fighter_level_16.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,36 @@
+{
+  "level": 9,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 4,
+  "features": [
+    {
+      "index": "indomitable_2024",
+      "name": "Indomitable",
+      "url": "/assets/atlas/features/json/indomitable_2024.json"
+    },
+    {
+      "index": "tactical_master_2024",
+      "name": "Tactical Master",
+      "url": "/assets/atlas/features/json/tactical_master_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 4,
+    "description": "You can master 4 martial or simple weapons of your choice."
+  },
+  "class_specific": {
+    "second_wind_uses": 3,
+    "weapon_mastery_count": 4,
+    "action_surges": 1,
+    "indomitable_uses": 1,
+    "extra_attacks": 1
+  },
+  "index": "fighter_level_9",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "url": "/assets/atlas/class/levels/24/9/fighter_level_9.json",
+  "rulesetContext": "2024"
+}

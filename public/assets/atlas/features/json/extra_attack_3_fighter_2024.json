@@ -1,0 +1,14 @@
+{
+  "index": "extra_attack_3_fighter_2024",
+  "name": "Extra Attack (3)",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 20,
+  "desc": [
+    "You can attack four times, instead of three, whenever you take the Attack action on your turn."
+  ],
+  "url": "/assets/atlas/features/json/extra_attack_3_fighter_2024.json"
+}

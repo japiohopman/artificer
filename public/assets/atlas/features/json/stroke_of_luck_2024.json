@@ -1,0 +1,14 @@
+{
+  "index": "stroke_of_luck_2024",
+  "name": "Stroke of Luck",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 20,
+  "desc": [
+    "You have a knack for succeeding when you need to. If your attack roll misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20. Once you use this feature, you can't use it again until you finish a Short or Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/stroke_of_luck_2024.json"
+}

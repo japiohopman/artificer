@@ -1,0 +1,14 @@
+{
+  "index": "reliable_talent_2024",
+  "name": "Reliable Talent",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "level": 7,
+  "desc": [
+    "Whenever you make an ability check that uses one of your skill or tool proficiencies, you can treat a d20 roll of 9 or lower as a 10."
+  ],
+  "url": "/assets/atlas/features/json/reliable_talent_2024.json"
+}

@@ -37,6 +37,581 @@
       "name": "Fighter",
       "url": "/assets/atlas/class/json/24/fighter.json"
     },
-    "url": "/assets/atlas/class/levels/24/fighter.json"
+    "url": "/assets/atlas/class/levels/24/1/fighter_level_1.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "action_surge_2024",
+        "name": "Action Surge",
+        "url": "/assets/atlas/features/json/action_surge_2024.json"
+      },
+      {
+        "index": "tactical_mind_2024",
+        "name": "Tactical Mind",
+        "url": "/assets/atlas/features/json/tactical_mind_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 3,
+      "description": "You can master 3 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 2,
+      "weapon_mastery_count": 3,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter_level_2",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/2/fighter_level_2.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighter_subclass_2024",
+        "name": "Fighter Subclass",
+        "url": "/assets/atlas/features/json/fighter_subclass_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 3,
+      "description": "You can master 3 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 2,
+      "weapon_mastery_count": 3,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter_level_3",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/3/fighter_level_3.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_1_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_1_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 0
+    },
+    "index": "fighter_level_4",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/4/fighter_level_4.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "extra_attack_fighter_2024",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/json/extra_attack_fighter_2024.json"
+      },
+      {
+        "index": "tactical_shift_2024",
+        "name": "Tactical Shift",
+        "url": "/assets/atlas/features/json/tactical_shift_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_5",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/5/fighter_level_5.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_2_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_2_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_6",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/6/fighter_level_6.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_7",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/7/fighter_level_7.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_3_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_3_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 0,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_8",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/8/fighter_level_8.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "indomitable_2024",
+        "name": "Indomitable",
+        "url": "/assets/atlas/features/json/indomitable_2024.json"
+      },
+      {
+        "index": "tactical_master_2024",
+        "name": "Tactical Master",
+        "url": "/assets/atlas/features/json/tactical_master_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 4,
+      "description": "You can master 4 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 3,
+      "weapon_mastery_count": 4,
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_9",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/9/fighter_level_9.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 1
+    },
+    "index": "fighter_level_10",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/10/fighter_level_10.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "extra_attack_2_fighter_2024",
+        "name": "Extra Attack (2)",
+        "url": "/assets/atlas/features/json/extra_attack_2_fighter_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_11",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/11/fighter_level_11.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_4_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_4_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 1,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_12",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/12/fighter_level_12.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "studied_attacks_2024",
+        "name": "Studied Attacks",
+        "url": "/assets/atlas/features/json/studied_attacks_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_13",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/13/fighter_level_13.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_5_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_5_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_14",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/14/fighter_level_14.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 5,
+    "prof_bonus": 5,
+    "features": [],
+    "weapon_mastery": {
+      "count": 5,
+      "description": "You can master 5 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 5,
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_15",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/15/fighter_level_15.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "fighter_ability_score_improvement_6_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/fighter_ability_score_improvement_6_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 6,
+      "description": "You can master 6 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 6,
+      "action_surges": 1,
+      "indomitable_uses": 2,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_16",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/16/fighter_level_16.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 6,
+    "features": [],
+    "weapon_mastery": {
+      "count": 6,
+      "description": "You can master 6 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 6,
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_17",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/17/fighter_level_17.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 6,
+    "prof_bonus": 6,
+    "features": [],
+    "weapon_mastery": {
+      "count": 6,
+      "description": "You can master 6 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 6,
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_18",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/18/fighter_level_18.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 7,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "epic_boon_fighter_2024",
+        "name": "Epic Boon",
+        "url": "/assets/atlas/features/json/epic_boon_fighter_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 6,
+      "description": "You can master 6 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 6,
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 2
+    },
+    "index": "fighter_level_19",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/19/fighter_level_19.json",
+    "rulesetContext": "2024"
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 7,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "extra_attack_3_fighter_2024",
+        "name": "Extra Attack (3)",
+        "url": "/assets/atlas/features/json/extra_attack_3_fighter_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 6,
+      "description": "You can master 6 martial or simple weapons of your choice."
+    },
+    "class_specific": {
+      "second_wind_uses": 4,
+      "weapon_mastery_count": 6,
+      "action_surges": 2,
+      "indomitable_uses": 3,
+      "extra_attacks": 3
+    },
+    "index": "fighter_level_20",
+    "class": {
+      "index": "fighter",
+      "name": "Fighter",
+      "url": "/assets/atlas/class/json/24/fighter.json"
+    },
+    "url": "/assets/atlas/class/levels/24/20/fighter_level_20.json",
+    "rulesetContext": "2024"
   }
 ]

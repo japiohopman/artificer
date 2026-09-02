@@ -1,0 +1,19 @@
+{
+  "index": "channel_divinity_cleric_2024",
+  "name": "Channel Divinity",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 2,
+  "desc": [
+    "You can channel divine energy directly from the outer planes to fuel magical effects. You start with two options: Divine Spark and Turn Undead. You gain 2 uses of Channel Divinity per Short or Long Rest (increasing to 3 at level 6 and 4 at level 18)."
+  ],
+  "feature_specific": {
+    "uses_at_level_2": 2,
+    "uses_at_level_6": 3,
+    "uses_at_level_18": 4
+  },
+  "url": "/assets/atlas/features/json/channel_divinity_cleric_2024.json"
+}

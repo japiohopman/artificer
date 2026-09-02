@@ -1,0 +1,36 @@
+{
+  "level": 7,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "evasion_rogue_2024",
+      "name": "Evasion",
+      "url": "/assets/atlas/features/json/evasion_rogue_2024.json"
+    },
+    {
+      "index": "reliable_talent_2024",
+      "name": "Reliable Talent",
+      "url": "/assets/atlas/features/json/reliable_talent_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 weapons of your choice from your class weapon proficiencies."
+  },
+  "class_specific": {
+    "weapon_mastery_count": 2,
+    "sneak_attack": {
+      "dice_count": 4,
+      "dice_value": 6
+    }
+  },
+  "index": "rogue_level_7",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "url": "/assets/atlas/class/levels/24/7/rogue_level_7.json",
+  "rulesetContext": "2024"
+}

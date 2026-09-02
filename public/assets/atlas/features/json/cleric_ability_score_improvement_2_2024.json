@@ -1,0 +1,14 @@
+{
+  "index": "cleric_ability_score_improvement_2_2024",
+  "name": "Ability Score Improvement",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "level": 8,
+  "desc": [
+    "You gain the Ability Score Improvement feat or another feat of your choice for which you qualify."
+  ],
+  "url": "/assets/atlas/features/json/cleric_ability_score_improvement_2_2024.json"
+}

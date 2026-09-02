@@ -1,0 +1,14 @@
+{
+  "index": "spell_mastery_wizard_2024",
+  "name": "Spell Mastery",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "level": 18,
+  "desc": [
+    "You have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level and a 2nd-level Wizard spell in your spellbook. You always have these spells prepared, and you can cast each once at its lowest level without expending a spell slot. You regain the ability to cast them this way after a Short or Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/spell_mastery_wizard_2024.json"
+}

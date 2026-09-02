@@ -1,0 +1,17 @@
+{
+  "index": "weapon_mastery_fighter",
+  "name": "Weapon Mastery",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "level": 1,
+  "desc": [
+    "Your training with weapons allows you to use the mastery properties of three martial or simple weapons of your choice. Whenever you finish a Long Rest, you can change the kinds of weapons you master. The number of weapons increases to 4 at level 4, 5 at level 10, and 6 at level 16."
+  ],
+  "feature_specific": {
+    "mastery_count": 3
+  },
+  "url": "/assets/atlas/features/json/weapon_mastery_fighter.json"
+}
