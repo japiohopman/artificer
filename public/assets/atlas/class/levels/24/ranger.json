@@ -1,0 +1,673 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_ranger_2024",
+        "name": "Spellcasting: Ranger",
+        "url": "/assets/atlas/features/json/spellcasting_ranger_2024.json"
+      },
+      {
+        "index": "favored_enemy_2024",
+        "name": "Favored Enemy",
+        "url": "/assets/atlas/features/json/favored_enemy_2024.json"
+      },
+      {
+        "index": "weapon_mastery_ranger_2024",
+        "name": "Weapon Mastery",
+        "url": "/assets/atlas/features/json/weapon_mastery_ranger_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 2
+    },
+    "index": "ranger_level_1",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/1/ranger_level_1.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "deft_explorer_2024",
+        "name": "Deft Explorer",
+        "url": "/assets/atlas/features/json/deft_explorer_2024.json"
+      },
+      {
+        "index": "fighting_style_ranger_2024",
+        "name": "Fighting Style",
+        "url": "/assets/atlas/features/json/fighting_style_ranger_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 2
+    },
+    "index": "ranger_level_2",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/2/ranger_level_2.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ranger_subclass_2024",
+        "name": "Ranger Subclass",
+        "url": "/assets/atlas/features/json/ranger_subclass_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 2
+    },
+    "index": "ranger_level_3",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/3/ranger_level_3.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "ranger_ability_score_improvement_1_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/ranger_ability_score_improvement_1_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 2
+    },
+    "index": "ranger_level_4",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/4/ranger_level_4.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "extra_attack_ranger_2024",
+        "name": "Extra Attack",
+        "url": "/assets/atlas/features/json/extra_attack_ranger_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 3
+    },
+    "index": "ranger_level_5",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/5/ranger_level_5.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "roving_2024",
+        "name": "Roving",
+        "url": "/assets/atlas/features/json/roving_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 3
+    },
+    "index": "ranger_level_6",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/6/ranger_level_6.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 3
+    },
+    "index": "ranger_level_7",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/7/ranger_level_7.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "ranger_ability_score_improvement_2_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/ranger_ability_score_improvement_2_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 3
+    },
+    "index": "ranger_level_8",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/8/ranger_level_8.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "expertise_ranger_2_2024",
+        "name": "Expertise (Level 9)",
+        "url": "/assets/atlas/features/json/expertise_ranger_2_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 4
+    },
+    "index": "ranger_level_9",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/9/ranger_level_9.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "tireless_2024",
+        "name": "Tireless",
+        "url": "/assets/atlas/features/json/tireless_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 4
+    },
+    "index": "ranger_level_10",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/10/ranger_level_10.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 4
+    },
+    "index": "ranger_level_11",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/11/ranger_level_11.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "ranger_ability_score_improvement_3_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/ranger_ability_score_improvement_3_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 4
+    },
+    "index": "ranger_level_12",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/12/ranger_level_12.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "relentless_hunter_2024",
+        "name": "Relentless Hunter",
+        "url": "/assets/atlas/features/json/relentless_hunter_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 5
+    },
+    "index": "ranger_level_13",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/13/ranger_level_13.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "nature_veil_2024",
+        "name": "Nature's Veil",
+        "url": "/assets/atlas/features/json/nature_veil_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 5
+    },
+    "index": "ranger_level_14",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/14/ranger_level_14.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 5
+    },
+    "index": "ranger_level_15",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/15/ranger_level_15.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "ranger_ability_score_improvement_4_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/ranger_ability_score_improvement_4_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 5
+    },
+    "index": "ranger_level_16",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/16/ranger_level_16.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "precise_hunter_2024",
+        "name": "Precise Hunter",
+        "url": "/assets/atlas/features/json/precise_hunter_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 6
+    },
+    "index": "ranger_level_17",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/17/ranger_level_17.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 6
+    },
+    "index": "ranger_level_18",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/18/ranger_level_18.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "epic_boon_ranger_2024",
+        "name": "Epic Boon",
+        "url": "/assets/atlas/features/json/epic_boon_ranger_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 6
+    },
+    "index": "ranger_level_19",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/19/ranger_level_19.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "foe_slayer_2024",
+        "name": "Foe Slayer",
+        "url": "/assets/atlas/features/json/foe_slayer_2024.json"
+      }
+    ],
+    "weapon_mastery": {
+      "count": 2,
+      "description": "You can master 2 simple or martial weapons of your choice."
+    },
+    "class_specific": {
+      "hunters_mark_free_uses": 6
+    },
+    "index": "ranger_level_20",
+    "class": {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/assets/atlas/class/json/24/ranger.json"
+    },
+    "url": "/assets/atlas/class/levels/24/20/ranger_level_20.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2
+    }
+  }
+]

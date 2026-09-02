@@ -17,25 +17,14 @@
     ✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)
 
     2024 Class Progression
-    ✓ 4/12 classes:
-      - Fighter
-      - Wizard
-      - Cleric
-      - Rogue
+    ✓ 12/12 core classes (levels 1-20 for all classes)
 
     2024 Class Features
-    ✓ 4/12 classes:
-      - Fighter
-      - Wizard
-      - Cleric
-      - Rogue
+    ✓ 12/12 core classes (canonical feature definitions for all 12 core classes)
 
-    Remaining 8 classes
-    → progression/features still pending
-
-    Next active dependency: 2024 Class Features & Progression for remaining 8 classes / Backgrounds & Origins.
+    Next active dependency: 2024 Backgrounds & Origins / Origin Feats.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for 12/12 core classes) → 2024 Class Progression & Features (complete for 4/12 classes: Fighter, Wizard, Cleric, Rogue) → 2024 Class Progression & Features for remaining 8 classes (pending) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for all 12 core classes) → 2024 Class Progression & Features (complete for all 12 core classes) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
   - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.

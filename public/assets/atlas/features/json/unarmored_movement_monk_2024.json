@@ -1,0 +1,14 @@
+{
+  "index": "unarmored_movement_monk_2024",
+  "name": "Unarmored Movement",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 2,
+  "desc": [
+    "Your Speed increases by 10 feet while not wearing armor or wielding a shield. Increases at levels 6 (+15ft), 10 (+20ft), 14 (+25ft), and 18 (+30ft)."
+  ],
+  "url": "/assets/atlas/features/json/unarmored_movement_monk_2024.json"
+}

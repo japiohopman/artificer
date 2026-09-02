@@ -1,0 +1,14 @@
+{
+  "index": "indomitable_might_2024",
+  "name": "Indomitable Might",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 18,
+  "desc": [
+    "If your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+  ],
+  "url": "/assets/atlas/features/json/indomitable_might_2024.json"
+}

@@ -1,0 +1,14 @@
+{
+  "index": "evasion_monk_2024",
+  "name": "Evasion",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 7,
+  "desc": [
+    "DEX save for half damage -> take no damage on success, half on fail."
+  ],
+  "url": "/assets/atlas/features/json/evasion_monk_2024.json"
+}

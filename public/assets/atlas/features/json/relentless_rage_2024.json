@@ -1,0 +1,14 @@
+{
+  "index": "relentless_rage_2024",
+  "name": "Relentless Rage",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 11,
+  "desc": [
+    "If you drop to 0 Hit Points while raging, you can make a DC 10 Constitution saving throw. On a success, you drop to 1 Hit Point instead. Each time you use this feature after the first, the DC increases by 5."
+  ],
+  "url": "/assets/atlas/features/json/relentless_rage_2024.json"
+}

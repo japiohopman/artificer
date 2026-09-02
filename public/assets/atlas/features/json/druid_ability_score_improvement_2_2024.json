@@ -1,0 +1,14 @@
+{
+  "index": "druid_ability_score_improvement_2_2024",
+  "name": "Ability Score Improvement",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 8,
+  "desc": [
+    "You gain the Ability Score Improvement feat or another feat for which you qualify."
+  ],
+  "url": "/assets/atlas/features/json/druid_ability_score_improvement_2_2024.json"
+}

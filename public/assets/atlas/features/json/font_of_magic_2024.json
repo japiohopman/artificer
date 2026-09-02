@@ -1,0 +1,14 @@
+{
+  "index": "font_of_magic_2024",
+  "name": "Font of Magic",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "level": 2,
+  "desc": [
+    "Sorcery Points equal Sorcerer level. Convert Sorcery Points to spell slots and vice versa."
+  ],
+  "url": "/assets/atlas/features/json/font_of_magic_2024.json"
+}

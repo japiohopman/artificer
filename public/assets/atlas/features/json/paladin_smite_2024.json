@@ -1,0 +1,14 @@
+{
+  "index": "paladin_smite_2024",
+  "name": "Paladin Smite",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 2,
+  "desc": [
+    "As a Bonus Action when hitting a creature with melee weapon/Unarmed Strike, cast Divine Smite or a Smite spell using a spell slot. Deal 2d8 Radiant damage + 1d8 per slot level above 1st, +1d8 vs Fiends/Undead."
+  ],
+  "url": "/assets/atlas/features/json/paladin_smite_2024.json"
+}

@@ -1,0 +1,34 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "paladin_ability_score_improvement_1_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/paladin_ability_score_improvement_1_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 simple or martial weapons of your choice."
+  },
+  "class_specific": {
+    "lay_on_hands_pool": 20
+  },
+  "index": "paladin_level_4",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/24/4/paladin_level_4.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

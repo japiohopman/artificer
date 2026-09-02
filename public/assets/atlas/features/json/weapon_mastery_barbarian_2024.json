@@ -1,0 +1,17 @@
+{
+  "index": "weapon_mastery_barbarian_2024",
+  "name": "Weapon Mastery",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 1,
+  "desc": [
+    "Your training with weapons allows you to use the mastery properties of two martial or simple melee weapons of your choice."
+  ],
+  "feature_specific": {
+    "mastery_count": 2
+  },
+  "url": "/assets/atlas/features/json/weapon_mastery_barbarian_2024.json"
+}

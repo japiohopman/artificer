@@ -1,0 +1,14 @@
+{
+  "index": "archdruid_2024",
+  "name": "Archdruid",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 20,
+  "desc": [
+    "When you roll Initiative and have no uses of Wild Shape left, you regain 1 use. For every 10 years that pass, your body ages only 1 year. You can cast spells in Wild Shape ignoring Verbal and Somatic components."
+  ],
+  "url": "/assets/atlas/features/json/archdruid_2024.json"
+}

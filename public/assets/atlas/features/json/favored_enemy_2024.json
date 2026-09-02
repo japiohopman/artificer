@@ -1,0 +1,17 @@
+{
+  "index": "favored_enemy_2024",
+  "name": "Favored Enemy",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 1,
+  "desc": [
+    "Always have Hunter's Mark prepared. Cast it without a spell slot 2 times at L1, scaling up to 6 times at L17. Regain uses on Long Rest."
+  ],
+  "feature_specific": {
+    "uses_at_level_1": 2
+  },
+  "url": "/assets/atlas/features/json/favored_enemy_2024.json"
+}

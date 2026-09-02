@@ -1,0 +1,25 @@
+{
+  "level": 6,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "empowered_strikes_2024",
+      "name": "Empowered Strikes",
+      "url": "/assets/atlas/features/json/empowered_strikes_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 6,
+    "martial_arts_die": "1d8",
+    "unarmored_movement_bonus": 15
+  },
+  "index": "monk_level_6",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/6/monk_level_6.json",
+  "rulesetContext": "2024"
+}

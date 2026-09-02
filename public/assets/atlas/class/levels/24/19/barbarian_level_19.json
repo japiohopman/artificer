@@ -1,0 +1,28 @@
+{
+  "level": 19,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "epic_boon_barbarian_2024",
+      "name": "Epic Boon",
+      "url": "/assets/atlas/features/json/epic_boon_barbarian_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 martial or simple melee weapons of your choice."
+  },
+  "class_specific": {
+    "rage_uses": 6,
+    "rage_damage_bonus": 4
+  },
+  "index": "barbarian_level_19",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "url": "/assets/atlas/class/levels/24/19/barbarian_level_19.json",
+  "rulesetContext": "2024"
+}

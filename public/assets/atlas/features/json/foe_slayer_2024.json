@@ -1,0 +1,17 @@
+{
+  "index": "foe_slayer_2024",
+  "name": "Foe Slayer",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 20,
+  "desc": [
+    "Hunter's Mark extra damage die increases from 1d6 to 1d10."
+  ],
+  "feature_specific": {
+    "mark_damage_die": "1d10"
+  },
+  "url": "/assets/atlas/features/json/foe_slayer_2024.json"
+}

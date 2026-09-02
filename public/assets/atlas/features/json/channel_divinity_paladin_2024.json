@@ -1,0 +1,18 @@
+{
+  "index": "channel_divinity_paladin_2024",
+  "name": "Channel Divinity",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 3,
+  "desc": [
+    "1 charge per Short or Long Rest. Use Divine Sense as a Bonus Action or fuel subclass options."
+  ],
+  "feature_specific": {
+    "uses": 1,
+    "recharge": "short_or_long_rest"
+  },
+  "url": "/assets/atlas/features/json/channel_divinity_paladin_2024.json"
+}

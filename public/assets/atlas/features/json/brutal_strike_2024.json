@@ -1,0 +1,17 @@
+{
+  "index": "brutal_strike_2024",
+  "name": "Brutal Strike",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 9,
+  "desc": [
+    "If you use Reckless Attack, you can forgo Advantage on one attack roll to deal an extra 1d10 damage and apply a Brutal Strike effect (Forceful Blow or Hamstring Blow)."
+  ],
+  "feature_specific": {
+    "dice": "1d10"
+  },
+  "url": "/assets/atlas/features/json/brutal_strike_2024.json"
+}

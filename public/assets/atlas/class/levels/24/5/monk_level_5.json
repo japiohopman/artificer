@@ -1,0 +1,30 @@
+{
+  "level": 5,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "extra_attack_monk_2024",
+      "name": "Extra Attack",
+      "url": "/assets/atlas/features/json/extra_attack_monk_2024.json"
+    },
+    {
+      "index": "stunning_strike_2024",
+      "name": "Stunning Strike",
+      "url": "/assets/atlas/features/json/stunning_strike_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 5,
+    "martial_arts_die": "1d8",
+    "unarmored_movement_bonus": 10
+  },
+  "index": "monk_level_5",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/5/monk_level_5.json",
+  "rulesetContext": "2024"
+}

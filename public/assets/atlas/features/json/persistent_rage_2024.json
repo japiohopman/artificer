@@ -1,0 +1,14 @@
+{
+  "index": "persistent_rage_2024",
+  "name": "Persistent Rage",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 15,
+  "desc": [
+    "Your Rage lasts for 10 minutes without requiring you to attack or take damage to maintain it. Once per Long Rest, when you roll Initiative and have no Rage uses remaining, you regain all expended uses."
+  ],
+  "url": "/assets/atlas/features/json/persistent_rage_2024.json"
+}

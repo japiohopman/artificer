@@ -1,0 +1,44 @@
+{
+  "level": 1,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "lay_on_hands_2024",
+      "name": "Lay on Hands",
+      "url": "/assets/atlas/features/json/lay_on_hands_2024.json"
+    },
+    {
+      "index": "spellcasting_paladin_2024",
+      "name": "Spellcasting: Paladin",
+      "url": "/assets/atlas/features/json/spellcasting_paladin_2024.json"
+    },
+    {
+      "index": "weapon_mastery_paladin_2024",
+      "name": "Weapon Mastery",
+      "url": "/assets/atlas/features/json/weapon_mastery_paladin_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 simple or martial weapons of your choice."
+  },
+  "class_specific": {
+    "lay_on_hands_pool": 5
+  },
+  "index": "paladin_level_1",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/24/1/paladin_level_1.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "spell_slots_level_1": 2,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0
+  }
+}

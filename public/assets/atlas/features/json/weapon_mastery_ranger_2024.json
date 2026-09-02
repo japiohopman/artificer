@@ -1,0 +1,17 @@
+{
+  "index": "weapon_mastery_ranger_2024",
+  "name": "Weapon Mastery",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 1,
+  "desc": [
+    "Mastery properties of two simple or martial weapons of your choice."
+  ],
+  "feature_specific": {
+    "mastery_count": 2
+  },
+  "url": "/assets/atlas/features/json/weapon_mastery_ranger_2024.json"
+}

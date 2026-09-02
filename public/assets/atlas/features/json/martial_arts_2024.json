@@ -1,0 +1,17 @@
+{
+  "index": "martial_arts_2024",
+  "name": "Martial Arts",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 1,
+  "desc": [
+    "Martial Arts die: 1d6 at L1, 1d8 at L5, 1d10 at L11, 1d12 at L17. Use DEX for Monk weapon/Unarmed Strike attack/damage rolls. Make an Unarmed Strike as a Bonus Action."
+  ],
+  "feature_specific": {
+    "die": "1d6"
+  },
+  "url": "/assets/atlas/features/json/martial_arts_2024.json"
+}

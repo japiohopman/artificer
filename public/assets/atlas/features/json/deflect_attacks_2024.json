@@ -1,0 +1,14 @@
+{
+  "index": "deflect_attacks_2024",
+  "name": "Deflect Attacks",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Reaction when hit by a melee/ranged attack, reduce damage by 1d10 + DEX + Monk level. If reduced to 0, spend 1 Focus Point to deflect the attack dealing 2 Martial Arts dice + DEX damage to a creature within 60 feet."
+  ],
+  "url": "/assets/atlas/features/json/deflect_attacks_2024.json"
+}

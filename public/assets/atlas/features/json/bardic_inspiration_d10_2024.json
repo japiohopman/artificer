@@ -1,0 +1,17 @@
+{
+  "index": "bardic_inspiration_d10_2024",
+  "name": "Bardic Inspiration (d10)",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "level": 9,
+  "desc": [
+    "Your Bardic Inspiration die becomes a d10."
+  ],
+  "feature_specific": {
+    "die": "d10"
+  },
+  "url": "/assets/atlas/features/json/bardic_inspiration_d10_2024.json"
+}

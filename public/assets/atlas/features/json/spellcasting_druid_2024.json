@@ -1,0 +1,14 @@
+{
+  "index": "spellcasting_druid_2024",
+  "name": "Spellcasting: Druid",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 1,
+  "desc": [
+    "You can cast Druid spells using Wisdom as your spellcasting ability. You prepare Druid spells from the Druid spell list."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_druid_2024.json"
+}

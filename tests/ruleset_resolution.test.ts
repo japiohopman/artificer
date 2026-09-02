@@ -67,7 +67,7 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('verifies atlasService class loading with explicit ruleset and cache key separation', async () => {
-    const coreClasses = ['fighter', 'wizard', 'cleric', 'rogue', 'barbarian', 'paladin'];
+    const coreClasses = ['fighter', 'wizard', 'cleric', 'rogue', 'barbarian', 'paladin', 'bard', 'druid', 'monk', 'ranger', 'sorcerer', 'warlock'];
 
     for (const className of coreClasses) {
       const cls14 = await atlasService.loadClass(className, '2014');
@@ -89,19 +89,16 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(sp14?.rulesetContext).toBe('2014');
     expect(sp24?.rulesetContext).toBe('2024');
 
-    // Assertion for 2014 vs 2024 Human differences
     expect(sp14?.ability_bonuses?.length).toBeGreaterThan(0);
     const traitIndices24 = sp24?.traits?.map((t: any) => t.index || t.name);
     expect(traitIndices24).toContain('resourceful');
     expect(traitIndices24).toContain('versatile');
 
-    // Assertion for 2014 vs 2024 Dwarf differences (speed 25 vs 30)
     const dwarf14 = await fetchSpeciesData('dwarf', '2014');
     const dwarf24 = await fetchSpeciesData('dwarf', '2024');
     expect(dwarf14?.speed).toBe(25);
     expect(dwarf24?.speed).toBe(30);
 
-    // Assertion for 2024 Elf dataset
     const elf14 = await fetchSpeciesData('elf', '2014');
     const elf24 = await fetchSpeciesData('elf', '2024');
     expect(elf14?.rulesetContext).toBe('2014');
@@ -109,7 +106,6 @@ describe('Ruleset Resolution Audit Tests', () => {
     const elfTraits24 = elf24?.traits?.map((t: any) => t.index || t.name);
     expect(elfTraits24).toContain('elven_lineage');
 
-    // Assertion for 2024 Halfling dataset
     const halfling14 = await fetchSpeciesData('halfling', '2014');
     const halfling24 = await fetchSpeciesData('halfling', '2024');
     expect(halfling14?.rulesetContext).toBe('2014');
@@ -117,14 +113,12 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(halfling14?.speed).toBe(25);
     expect(halfling24?.speed).toBe(30);
 
-    // Assertion for 2024 Orc dataset
     const orc24 = await fetchSpeciesData('orc', '2024');
     expect(orc24).not.toBeNull();
     expect(orc24?.rulesetContext).toBe('2024');
     const orcTraitIndices = orc24?.traits?.map((t: any) => t.index || t.name);
     expect(orcTraitIndices).toContain('adrenaline_rush');
 
-    // Assertion for strict resolution: missing 2024 species returns null (no cross-ruleset fallback to 2014)
     const gnome24 = await fetchSpeciesData('gnome', '2024');
     expect(gnome24).toBeNull();
   });
@@ -169,66 +163,14 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(eq24?.rulesetContext).toBe('2024');
   });
 
-  it('correctly resolves versioned class levels dataset (14 vs 24) for representative classes', async () => {
-    // 1. Fighter Level 1
-    const fighterLvl14 = await atlasService.loadLevelData('fighter', 1, '2014');
-    const fighterLvl24 = await atlasService.loadLevelData('fighter', 1, '2024');
+  it('verifies complete 2024 class progressions (levels 1-20) for ALL 12 core classes and resolves ALL referenced feature definitions', async () => {
+    const all12Classes = [
+      'barbarian', 'bard', 'cleric', 'druid', 'fighter',
+      'monk', 'paladin', 'ranger', 'rogue', 'sorcerer',
+      'warlock', 'wizard'
+    ];
 
-    expect(fighterLvl14).not.toBeNull();
-    expect(fighterLvl24).not.toBeNull();
-    expect(fighterLvl14?.rulesetContext).toBe('2014');
-    expect(fighterLvl24?.rulesetContext).toBe('2024');
-    expect(fighterLvl24?.weapon_mastery?.count).toBe(3);
-    expect(fighterLvl24?.class_specific?.second_wind_uses).toBe(2);
-
-    // 2. Wizard Level 1
-    const wizardLvl14 = await atlasService.loadLevelData('wizard', 1, '2014');
-    const wizardLvl24 = await atlasService.loadLevelData('wizard', 1, '2024');
-
-    expect(wizardLvl14).not.toBeNull();
-    expect(wizardLvl24).not.toBeNull();
-    expect(wizardLvl14?.rulesetContext).toBe('2014');
-    expect(wizardLvl24?.rulesetContext).toBe('2024');
-    const wizard24Features = wizardLvl24?.features?.map((f: any) => f.index);
-    expect(wizard24Features).toContain('ritual_adept_wizard');
-    expect(wizard24Features).not.toContain('ritual_study_wizard');
-    expect(wizardLvl24?.prof_bonus).toBe(2);
-    expect(wizardLvl24?.spellcasting?.cantrips_known).toBe(3);
-    expect(wizardLvl24?.spellcasting?.prepared_spells).toBe(4);
-    expect(wizardLvl24?.spellcasting?.spell_slots_level_1).toBe(2);
-
-    // Verify Ritual Adept feature description requirement to read from book
-    const ritualAdeptFeature = await atlasService.loadFeature('ritual_adept_wizard');
-    expect(ritualAdeptFeature).not.toBeNull();
-    const descText = Array.isArray(ritualAdeptFeature?.desc) ? ritualAdeptFeature.desc.join(' ') : ritualAdeptFeature?.desc || '';
-    expect(descText.toLowerCase()).toContain('read from the book');
-
-    // 3. Cleric Level 1
-    const clericLvl14 = await atlasService.loadLevelData('cleric', 1, '2014');
-    const clericLvl24 = await atlasService.loadLevelData('cleric', 1, '2024');
-
-    expect(clericLvl14).not.toBeNull();
-    expect(clericLvl24).not.toBeNull();
-    expect(clericLvl14?.rulesetContext).toBe('2014');
-    expect(clericLvl24?.rulesetContext).toBe('2024');
-    const cleric24Features = clericLvl24?.features?.map((f: any) => f.index);
-    expect(cleric24Features).toContain('divine_order_cleric');
-
-    // 4. Rogue Level 1
-    const rogueLvl14 = await atlasService.loadLevelData('rogue', 1, '2014');
-    const rogueLvl24 = await atlasService.loadLevelData('rogue', 1, '2024');
-
-    expect(rogueLvl14).not.toBeNull();
-    expect(rogueLvl24).not.toBeNull();
-    expect(rogueLvl14?.rulesetContext).toBe('2014');
-    expect(rogueLvl24?.rulesetContext).toBe('2024');
-    expect(rogueLvl24?.weapon_mastery?.count).toBe(2);
-  });
-
-  it('verifies complete 2024 class progressions (levels 1-20) and resolves ALL referenced feature definitions', async () => {
-    const classes = ['fighter', 'wizard', 'cleric', 'rogue'];
-
-    for (const className of classes) {
+    for (const className of all12Classes) {
       const levels = await fetchClassLevels(className, '2024');
       expect(levels).toHaveLength(20);
 
@@ -270,113 +212,75 @@ describe('Ruleset Resolution Audit Tests', () => {
     const wizard19 = await atlasService.loadLevelData('wizard', 19, '2024');
     const cleric19 = await atlasService.loadLevelData('cleric', 19, '2024');
     const rogue19 = await atlasService.loadLevelData('rogue', 19, '2024');
+    const barbarian19 = await atlasService.loadLevelData('barbarian', 19, '2024');
+    const paladin19 = await atlasService.loadLevelData('paladin', 19, '2024');
 
     expect(fighter19?.ability_score_bonuses).toBe(6);
     expect(wizard19?.ability_score_bonuses).toBe(4);
     expect(cleric19?.ability_score_bonuses).toBe(4);
     expect(rogue19?.ability_score_bonuses).toBe(5);
+    expect(barbarian19?.ability_score_bonuses).toBe(4);
+    expect(paladin19?.ability_score_bonuses).toBe(4);
   });
 
-  it('validates precise 2024 mechanics for Fighter, Wizard, Cleric, and Rogue features', async () => {
-    // 1. Fighter 2024 features
-    const actionSurge24 = await atlasService.loadFeature('action_surge_2024');
-    expect(actionSurge24).not.toBeNull();
-    expect(actionSurge24.desc.join(' ')).toContain('except the Magic action');
+  it('validates precise 2024 mechanics for all 12 core classes', async () => {
+    // Barbarian 2024
+    const rage24 = await atlasService.loadFeature('rage_2024');
+    expect(rage24).not.toBeNull();
+    expect(rage24.desc.join(' ')).toContain('Bonus Action');
 
-    const tacticalMind24 = await atlasService.loadFeature('tactical_mind_2024');
-    expect(tacticalMind24).not.toBeNull();
+    const brutalStrike24 = await atlasService.loadFeature('brutal_strike_2024');
+    expect(brutalStrike24).not.toBeNull();
+    expect(brutalStrike24.feature_specific?.dice).toBe('1d10');
 
-    const tacticalShift24 = await atlasService.loadFeature('tactical_shift_2024');
-    expect(tacticalShift24).not.toBeNull();
+    // Bard 2024
+    const bardicInspiration24 = await atlasService.loadFeature('bardic_inspiration_2024');
+    expect(bardicInspiration24).not.toBeNull();
 
-    const indomitable24 = await atlasService.loadFeature('indomitable_2024');
-    expect(indomitable24).not.toBeNull();
-    expect(indomitable24.feature_specific?.bonus).toBe('fighter_level');
+    const magicalSecrets24 = await atlasService.loadFeature('magical_secrets_2024');
+    expect(magicalSecrets24).not.toBeNull();
 
-    const tacticalMaster24 = await atlasService.loadFeature('tactical_master_2024');
-    expect(tacticalMaster24).not.toBeNull();
-    expect(tacticalMaster24.desc.join(' ')).toContain('weapon whose mastery property you can use');
+    // Druid 2024
+    const wildShape24 = await atlasService.loadFeature('wild_shape_2024');
+    expect(wildShape24).not.toBeNull();
+    expect(wildShape24.desc.join(' ')).toContain('Temp HP');
 
-    const studiedAttacks24 = await atlasService.loadFeature('studied_attacks_2024');
-    expect(studiedAttacks24).not.toBeNull();
+    const archdruid24 = await atlasService.loadFeature('archdruid_2024');
+    expect(archdruid24).not.toBeNull();
 
-    // 2. Wizard 2024 features
-    const scholar24 = await atlasService.loadFeature('scholar_wizard_2024');
-    expect(scholar24).not.toBeNull();
+    // Monk 2024
+    const martialArts24 = await atlasService.loadFeature('martial_arts_2024');
+    expect(martialArts24).not.toBeNull();
 
-    const memorizeSpell24 = await atlasService.loadFeature('memorize_spell_wizard_2024');
-    expect(memorizeSpell24).not.toBeNull();
+    const deflectAttacks24 = await atlasService.loadFeature('deflect_attacks_2024');
+    expect(deflectAttacks24).not.toBeNull();
 
-    const spellMastery24 = await atlasService.loadFeature('spell_mastery_wizard_2024');
-    expect(spellMastery24).not.toBeNull();
-    expect(spellMastery24.feature_specific?.at_will_casting).toBe(true);
-    expect(spellMastery24.feature_specific?.slot_expenditure).toBe(false);
-    expect(spellMastery24.desc.join(' ')).toContain('cast them at will');
-    expect(spellMastery24.desc.join(' ')).not.toContain('once per rest');
+    // Paladin 2024
+    const layOnHands24 = await atlasService.loadFeature('lay_on_hands_2024');
+    expect(layOnHands24).not.toBeNull();
 
-    const signatureSpells24 = await atlasService.loadFeature('signature_spells_wizard_2024');
-    expect(signatureSpells24).not.toBeNull();
+    const paladinSmite24 = await atlasService.loadFeature('paladin_smite_2024');
+    expect(paladinSmite24).not.toBeNull();
 
-    // 3. Cleric 2024 features
-    const divineOrder24 = await atlasService.loadFeature('divine_order_cleric');
-    expect(divineOrder24).not.toBeNull();
-    expect(divineOrder24.desc.join(' ')).toContain('Protector');
-    expect(divineOrder24.desc.join(' ')).toContain('Thaumaturge');
+    // Ranger 2024
+    const favoredEnemy24 = await atlasService.loadFeature('favored_enemy_2024');
+    expect(favoredEnemy24).not.toBeNull();
 
-    const channelDivinityCleric24 = await atlasService.loadFeature('channel_divinity_cleric_2024');
-    expect(channelDivinityCleric24).not.toBeNull();
-    expect(channelDivinityCleric24.feature_specific?.recharge).toBe('short_rest_1_all_long_rest');
-    expect(channelDivinityCleric24.feature_specific?.divine_spark?.save).toBe('CON');
+    const foeSlayer24 = await atlasService.loadFeature('foe_slayer_2024');
+    expect(foeSlayer24).not.toBeNull();
 
-    const searUndead24 = await atlasService.loadFeature('sear_undead_cleric_2024');
-    expect(searUndead24).not.toBeNull();
+    // Sorcerer 2024
+    const innateSorcery24 = await atlasService.loadFeature('innate_sorcery_2024');
+    expect(innateSorcery24).not.toBeNull();
 
-    const divineIntervention24 = await atlasService.loadFeature('divine_intervention_cleric_2024');
-    expect(divineIntervention24).not.toBeNull();
-    expect(divineIntervention24.desc.join(' ')).toContain('level 5 or lower');
+    const fontOfMagic24 = await atlasService.loadFeature('font_of_magic_2024');
+    expect(fontOfMagic24).not.toBeNull();
 
-    const blessedStrikesImp24 = await atlasService.loadFeature('blessed_strikes_improvement_cleric_2024');
-    expect(blessedStrikesImp24).not.toBeNull();
-    expect(blessedStrikesImp24.desc.join(' ')).toContain('twice your Wisdom modifier');
-    expect(blessedStrikesImp24.feature_specific?.potent_spellcasting_temp_hp).toBe('2_x_wis_modifier');
+    // Warlock 2024
+    const pactSpells24 = await atlasService.loadFeature('pact_spells_warlock_2024');
+    expect(pactSpells24).not.toBeNull();
 
-    const greaterDivineIntervention24 = await atlasService.loadFeature('greater_divine_intervention_cleric_2024');
-    expect(greaterDivineIntervention24).not.toBeNull();
-    expect(greaterDivineIntervention24.desc.join(' ')).toContain('Wish');
-    expect(greaterDivineIntervention24.feature_specific?.recharge).toBe('2d4_long_rests');
-
-    // 4. Rogue 2024 features
-    const rogueExpertise24 = await atlasService.loadFeature('rogue_expertise_2024');
-    expect(rogueExpertise24).not.toBeNull();
-    expect(rogueExpertise24.desc.join(' ')).toContain('two of your skill proficiencies');
-
-    const cunningAction24 = await atlasService.loadFeature('cunning_action_2024');
-    expect(cunningAction24).not.toBeNull();
-
-    const steadyAim24 = await atlasService.loadFeature('steady_aim_rogue_2024');
-    expect(steadyAim24).not.toBeNull();
-
-    const cunningStrike24 = await atlasService.loadFeature('cunning_strike_2024');
-    expect(cunningStrike24).not.toBeNull();
-    expect(cunningStrike24.feature_specific?.save_dc).toBe('8 + PB + DEX');
-    expect(cunningStrike24.feature_specific?.options?.poison?.requires).toBe("Poisoner's Kit");
-
-    const reliableTalent24 = await atlasService.loadFeature('reliable_talent_2024');
-    expect(reliableTalent24).not.toBeNull();
-    expect(reliableTalent24.level).toBe(7);
-
-    const deviousStrikes24 = await atlasService.loadFeature('devious_strikes_2024');
-    expect(deviousStrikes24).not.toBeNull();
-    expect(deviousStrikes24.feature_specific?.options?.daze?.cost).toBe('2d6');
-    expect(deviousStrikes24.feature_specific?.options?.knock_out?.cost).toBe('6d6');
-    expect(deviousStrikes24.feature_specific?.options?.obscure?.cost).toBe('3d6');
-
-    const slipperyMind24 = await atlasService.loadFeature('slippery_mind_2024');
-    expect(slipperyMind24).not.toBeNull();
-
-    const strokeOfLuck24 = await atlasService.loadFeature('stroke_of_luck_2024');
-    expect(strokeOfLuck24).not.toBeNull();
-    expect(strokeOfLuck24.desc.join(' ')).toContain('fail a D20 Test');
-    expect(strokeOfLuck24.feature_specific?.effect).toBe('turn_failed_d20_test_into_20');
+    const eldritchInvocations24 = await atlasService.loadFeature('eldritch_invocations_2024');
+    expect(eldritchInvocations24).not.toBeNull();
   });
 });

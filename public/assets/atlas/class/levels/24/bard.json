@@ -1,0 +1,713 @@
+[
+  {
+    "level": 1,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "spellcasting_bard_2024",
+        "name": "Spellcasting: Bard",
+        "url": "/assets/atlas/features/json/spellcasting_bard_2024.json"
+      },
+      {
+        "index": "bardic_inspiration_2024",
+        "name": "Bardic Inspiration",
+        "url": "/assets/atlas/features/json/bardic_inspiration_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d6"
+    },
+    "index": "bard_level_1",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/1/bard_level_1.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 4,
+      "spell_slots_level_1": 2,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 2,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "jack_of_all_trades_2024",
+        "name": "Jack of All Trades",
+        "url": "/assets/atlas/features/json/jack_of_all_trades_2024.json"
+      },
+      {
+        "index": "expertise_bard_2024",
+        "name": "Expertise",
+        "url": "/assets/atlas/features/json/expertise_bard_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d6"
+    },
+    "index": "bard_level_2",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/2/bard_level_2.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 5,
+      "spell_slots_level_1": 3,
+      "spell_slots_level_2": 0,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 3,
+    "ability_score_bonuses": 0,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "bard_subclass_2024",
+        "name": "Bard Subclass",
+        "url": "/assets/atlas/features/json/bard_subclass_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d6"
+    },
+    "index": "bard_level_3",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/3/bard_level_3.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 6,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 2,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 4,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 2,
+    "features": [
+      {
+        "index": "bard_ability_score_improvement_1_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/bard_ability_score_improvement_1_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d6"
+    },
+    "index": "bard_level_4",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/4/bard_level_4.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 7,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 0,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 5,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "font_of_inspiration_2024",
+        "name": "Font of Inspiration",
+        "url": "/assets/atlas/features/json/font_of_inspiration_2024.json"
+      },
+      {
+        "index": "bardic_inspiration_d8_2024",
+        "name": "Bardic Inspiration (d8)",
+        "url": "/assets/atlas/features/json/bardic_inspiration_d8_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d8"
+    },
+    "index": "bard_level_5",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/5/bard_level_5.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 9,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 2,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 6,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "countercharm_2024",
+        "name": "Countercharm",
+        "url": "/assets/atlas/features/json/countercharm_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d8"
+    },
+    "index": "bard_level_6",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/6/bard_level_6.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 10,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 0,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 7,
+    "ability_score_bonuses": 1,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "expertise_bard_2_2024",
+        "name": "Expertise (Level 7)",
+        "url": "/assets/atlas/features/json/expertise_bard_2_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d8"
+    },
+    "index": "bard_level_7",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/7/bard_level_7.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 11,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 1,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 8,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 3,
+    "features": [
+      {
+        "index": "bard_ability_score_improvement_2_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/bard_ability_score_improvement_2_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d8"
+    },
+    "index": "bard_level_8",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/8/bard_level_8.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 12,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 2,
+      "spell_slots_level_5": 0,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 9,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "bardic_inspiration_d10_2024",
+        "name": "Bardic Inspiration (d10)",
+        "url": "/assets/atlas/features/json/bardic_inspiration_d10_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_9",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/9/bard_level_9.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 14,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 1,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 10,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "magical_secrets_2024",
+        "name": "Magical Secrets",
+        "url": "/assets/atlas/features/json/magical_secrets_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_10",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/10/bard_level_10.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 15,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 0,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 11,
+    "ability_score_bonuses": 2,
+    "prof_bonus": 4,
+    "features": [],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_11",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/11/bard_level_11.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 16,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 12,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 4,
+    "features": [
+      {
+        "index": "bard_ability_score_improvement_3_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/bard_ability_score_improvement_3_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_12",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/12/bard_level_12.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 16,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 0,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 13,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_13",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/13/bard_level_13.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 17,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 14,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [],
+    "class_specific": {
+      "bardic_inspiration_die": "d10"
+    },
+    "index": "bard_level_14",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/14/bard_level_14.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 17,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 0,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 15,
+    "ability_score_bonuses": 3,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "bardic_inspiration_d12_2024",
+        "name": "Bardic Inspiration (d12)",
+        "url": "/assets/atlas/features/json/bardic_inspiration_d12_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_15",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/15/bard_level_15.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 18,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 16,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 5,
+    "features": [
+      {
+        "index": "bard_ability_score_improvement_4_2024",
+        "name": "Ability Score Improvement",
+        "url": "/assets/atlas/features/json/bard_ability_score_improvement_4_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_16",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/16/bard_level_16.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 19,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 0
+    }
+  },
+  {
+    "level": 17,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_17",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/17/bard_level_17.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 20,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 2,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 18,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "superior_inspiration_2024",
+        "name": "Superior Inspiration",
+        "url": "/assets/atlas/features/json/superior_inspiration_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_18",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/18/bard_level_18.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 21,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 1,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 19,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "epic_boon_bard_2024",
+        "name": "Epic Boon",
+        "url": "/assets/atlas/features/json/epic_boon_bard_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_19",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/19/bard_level_19.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 22,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 1,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  },
+  {
+    "level": 20,
+    "ability_score_bonuses": 4,
+    "prof_bonus": 6,
+    "features": [
+      {
+        "index": "words_of_creation_2024",
+        "name": "Words of Creation",
+        "url": "/assets/atlas/features/json/words_of_creation_2024.json"
+      }
+    ],
+    "class_specific": {
+      "bardic_inspiration_die": "d12"
+    },
+    "index": "bard_level_20",
+    "class": {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/assets/atlas/class/json/24/bard.json"
+    },
+    "url": "/assets/atlas/class/levels/24/20/bard_level_20.json",
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 5,
+      "prepared_spells": 24,
+      "spell_slots_level_1": 4,
+      "spell_slots_level_2": 3,
+      "spell_slots_level_3": 3,
+      "spell_slots_level_4": 3,
+      "spell_slots_level_5": 3,
+      "spell_slots_level_6": 2,
+      "spell_slots_level_7": 2,
+      "spell_slots_level_8": 1,
+      "spell_slots_level_9": 1
+    }
+  }
+]

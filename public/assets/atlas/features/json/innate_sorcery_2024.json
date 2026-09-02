@@ -1,0 +1,18 @@
+{
+  "index": "innate_sorcery_2024",
+  "name": "Innate Sorcery",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "level": 1,
+  "desc": [
+    "As Bonus Action, activate Innate Sorcery for 1 minute: spell save DC +1, Advantage on Sorcerer spell attack rolls. 2 uses per Long Rest."
+  ],
+  "feature_specific": {
+    "uses": 2,
+    "recharge": "long_rest"
+  },
+  "url": "/assets/atlas/features/json/innate_sorcery_2024.json"
+}

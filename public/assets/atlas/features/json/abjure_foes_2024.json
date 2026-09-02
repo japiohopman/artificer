@@ -1,0 +1,14 @@
+{
+  "index": "abjure_foes_2024",
+  "name": "Abjure Foes",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 9,
+  "desc": [
+    "As a Magic action, spend Channel Divinity charge. Up to CHA mod creatures within 60ft make WIS save. On fail, Frightened & Speed 0."
+  ],
+  "url": "/assets/atlas/features/json/abjure_foes_2024.json"
+}

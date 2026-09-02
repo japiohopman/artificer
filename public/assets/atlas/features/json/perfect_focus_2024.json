@@ -1,0 +1,14 @@
+{
+  "index": "perfect_focus_2024",
+  "name": "Perfect Focus",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 15,
+  "desc": [
+    "When you roll Initiative and have fewer than 4 Focus Points, you regain Focus Points up to 4."
+  ],
+  "url": "/assets/atlas/features/json/perfect_focus_2024.json"
+}

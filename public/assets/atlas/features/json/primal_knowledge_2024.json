@@ -1,0 +1,14 @@
+{
+  "index": "primal_knowledge_2024",
+  "name": "Primal Knowledge",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain proficiency in one skill of your choice from the Barbarian skill list. In addition, while raging, you can use your Strength modifier for Acrobatics, Intimidation, Perception, Stealth, or Survival checks."
+  ],
+  "url": "/assets/atlas/features/json/primal_knowledge_2024.json"
+}

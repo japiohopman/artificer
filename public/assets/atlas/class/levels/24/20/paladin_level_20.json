@@ -1,0 +1,34 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "subclass_capstone_paladin_2024",
+      "name": "Subclass Capstone",
+      "url": "/assets/atlas/features/json/subclass_capstone_paladin_2024.json"
+    }
+  ],
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 simple or martial weapons of your choice."
+  },
+  "class_specific": {
+    "lay_on_hands_pool": 100
+  },
+  "index": "paladin_level_20",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "url": "/assets/atlas/class/levels/24/20/paladin_level_20.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 2
+  }
+}

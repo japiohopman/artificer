@@ -1,0 +1,25 @@
+{
+  "level": 17,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "mystic_arcanum_17_2024",
+      "name": "Mystic Arcanum (9th Level)",
+      "url": "/assets/atlas/features/json/mystic_arcanum_17_2024.json"
+    }
+  ],
+  "class_specific": {
+    "pact_slots": 3,
+    "pact_slot_level": 5,
+    "invocations_known": 7
+  },
+  "index": "warlock_level_17",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/24/17/warlock_level_17.json",
+  "rulesetContext": "2024"
+}

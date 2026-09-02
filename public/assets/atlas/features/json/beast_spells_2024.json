@@ -1,0 +1,14 @@
+{
+  "index": "beast_spells_2024",
+  "name": "Beast Spells",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 18,
+  "desc": [
+    "You can cast spells in Beast form, provided the spells don't require material components with a gold cost or that are consumed."
+  ],
+  "url": "/assets/atlas/features/json/beast_spells_2024.json"
+}

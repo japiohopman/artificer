@@ -1,0 +1,14 @@
+{
+  "index": "ranger_ability_score_improvement_3_2024",
+  "name": "Ability Score Improvement",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 12,
+  "desc": [
+    "You gain the Ability Score Improvement feat or another feat for which you qualify."
+  ],
+  "url": "/assets/atlas/features/json/ranger_ability_score_improvement_3_2024.json"
+}

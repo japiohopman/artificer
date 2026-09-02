@@ -1,0 +1,17 @@
+{
+  "index": "lay_on_hands_2024",
+  "name": "Lay on Hands",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 1,
+  "desc": [
+    "Pool of healing = 5x Paladin level. As a Bonus Action, touch a creature to restore HP or spend 5 points to cure Poisoned condition."
+  ],
+  "feature_specific": {
+    "pool": "5_x_paladin_level"
+  },
+  "url": "/assets/atlas/features/json/lay_on_hands_2024.json"
+}

@@ -1,0 +1,30 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "monk_ability_score_improvement_1_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/monk_ability_score_improvement_1_2024.json"
+    },
+    {
+      "index": "slow_fall_2024",
+      "name": "Slow Fall",
+      "url": "/assets/atlas/features/json/slow_fall_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 4,
+    "martial_arts_die": "1d6",
+    "unarmored_movement_bonus": 10
+  },
+  "index": "monk_level_4",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/4/monk_level_4.json",
+  "rulesetContext": "2024"
+}

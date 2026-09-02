@@ -1,0 +1,14 @@
+{
+  "index": "pact_spells_warlock_2024",
+  "name": "Pact Spells",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "level": 1,
+  "desc": [
+    "Cast Warlock spells using Pact Slots. All slots same level, regain on Short or Long Rest. Charisma is spellcasting ability."
+  ],
+  "url": "/assets/atlas/features/json/pact_spells_warlock_2024.json"
+}

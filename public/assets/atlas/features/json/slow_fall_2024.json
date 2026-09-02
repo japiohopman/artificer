@@ -1,0 +1,14 @@
+{
+  "index": "slow_fall_2024",
+  "name": "Slow Fall",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 4,
+  "desc": [
+    "You can use your Reaction when you fall to reduce falling damage by 5 times your Monk level."
+  ],
+  "url": "/assets/atlas/features/json/slow_fall_2024.json"
+}

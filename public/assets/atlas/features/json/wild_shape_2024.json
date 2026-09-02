@@ -1,0 +1,18 @@
+{
+  "index": "wild_shape_2024",
+  "name": "Wild Shape",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 2,
+  "desc": [
+    "As a Bonus Action, magically assume the shape of a Beast you have seen. Max CR: 1/4 at L2, 1/2 at L4, 1 at L8. Uses: 2 per Short or Long Rest. Gain Temp HP equal to 2x Druid level."
+  ],
+  "feature_specific": {
+    "uses": 2,
+    "recharge": "short_or_long_rest"
+  },
+  "url": "/assets/atlas/features/json/wild_shape_2024.json"
+}

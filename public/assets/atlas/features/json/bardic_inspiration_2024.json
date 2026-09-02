@@ -1,0 +1,17 @@
+{
+  "index": "bardic_inspiration_2024",
+  "name": "Bardic Inspiration",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "level": 1,
+  "desc": [
+    "As a Bonus Action, give a Bardic Inspiration die (d6 at L1, scaling to d12) to a creature within 60ft. It can add the die to a d20 Test or use it to regain Hit Points. Uses equal your Charisma modifier (minimum 1). Regain on Long Rest; at L5 regain on Short or Long Rest."
+  ],
+  "feature_specific": {
+    "die": "d6"
+  },
+  "url": "/assets/atlas/features/json/bardic_inspiration_2024.json"
+}

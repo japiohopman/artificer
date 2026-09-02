@@ -1,0 +1,14 @@
+{
+  "index": "uncanny_metabolism_2024",
+  "name": "Uncanny Metabolism",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 2,
+  "desc": [
+    "When you roll Initiative, you can regain all your Focus Points and regain HP equal to 1 Martial Arts die + Monk level. Once per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/uncanny_metabolism_2024.json"
+}
