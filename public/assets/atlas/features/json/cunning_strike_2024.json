@@ -8,7 +8,35 @@
   },
   "level": 5,
   "desc": [
-    "You can forgo some of your Sneak Attack damage to perform a tactical maneuver: Poison (1d6), Trip (1d6), Withdraw (1d6), or Disarm (1d6)."
+    "You have developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can forgo 1d6 of that damage to apply one of the following Cunning Strike effects of your choice. The save DC for these effects equals 8 + your Proficiency Bonus + your Dexterity modifier.",
+    "Disarm (Cost: 1d6): The target must succeed on a Dexterity saving throw or drop one object of your choice that it is holding.",
+    "Poison (Cost: 1d6): You must have a Poisoner's Kit on your person. The target must succeed on a Constitution saving throw or have the Poisoned condition for 1 minute. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.",
+    "Trip (Cost: 1d6): If the target is Large or smaller, it must succeed on a Dexterity saving throw or fall Prone.",
+    "Withdraw (Cost: 1d6): Immediately after the attack, you can move up to half your Speed without provoking Opportunity Attacks."
   ],
+  "feature_specific": {
+    "save_dc": "8 + PB + DEX",
+    "options": {
+      "disarm": {
+        "cost": "1d6",
+        "save": "DEX"
+      },
+      "poison": {
+        "cost": "1d6",
+        "save": "CON",
+        "duration": "1 minute",
+        "requires": "Poisoner's Kit"
+      },
+      "trip": {
+        "cost": "1d6",
+        "save": "DEX",
+        "size_limit": "Large"
+      },
+      "withdraw": {
+        "cost": "1d6",
+        "no_oa": true
+      }
+    }
+  },
   "url": "/assets/atlas/features/json/cunning_strike_2024.json"
 }

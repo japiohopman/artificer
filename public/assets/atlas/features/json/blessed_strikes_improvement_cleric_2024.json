@@ -8,7 +8,11 @@
   },
   "level": 14,
   "desc": [
-    "Your Blessed Strikes option improves. Divine Strike damage increases to 2d8. Potent Spellcasting grants temporary hit points equal to twice your Cleric level when dealing damage with a cantrip."
+    "Your Blessed Strikes option improves. Divine Strike: The extra damage increases to 2d8. Potent Spellcasting: When you deal damage to a creature with a Cleric cantrip, you gain temporary hit points equal to twice your Wisdom modifier."
   ],
+  "feature_specific": {
+    "divine_strike_dice": "2d8",
+    "potent_spellcasting_temp_hp": "2_x_wis_modifier"
+  },
   "url": "/assets/atlas/features/json/blessed_strikes_improvement_cleric_2024.json"
 }

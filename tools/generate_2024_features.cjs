@@ -94,7 +94,7 @@ const features = [
     name: "Tactical Master",
     class: fighterRef,
     level: 9,
-    desc: ["When you hit a creature with a weapon you are mastering, you can replace weapon's mastery property for that attack with Push, Sap, or Slow."],
+    desc: ["When you attack with a weapon whose mastery property you can use, you can replace that property for that attack with Push, Sap, or Slow."],
     url: "/assets/atlas/features/json/tactical_master_2024.json"
   },
   {
@@ -259,7 +259,8 @@ const features = [
     name: "Blessed Strikes Improvement",
     class: clericRef,
     level: 14,
-    desc: ["Your Blessed Strikes option improves. Divine Strike damage increases to 2d8. Potent Spellcasting grants temporary hit points equal to twice your Cleric level when dealing damage with a cantrip."],
+    desc: ["Your Blessed Strikes option improves. Divine Strike: The extra damage increases to 2d8. Potent Spellcasting: When you deal damage to a creature with a Cleric cantrip, you gain temporary hit points equal to twice your Wisdom modifier."],
+    feature_specific: { divine_strike_dice: "2d8", potent_spellcasting_temp_hp: "2_x_wis_modifier" },
     url: "/assets/atlas/features/json/blessed_strikes_improvement_cleric_2024.json"
   },
   {
@@ -343,7 +344,22 @@ const features = [
     name: "Cunning Strike",
     class: rogueRef,
     level: 5,
-    desc: ["You can forgo some of your Sneak Attack damage to perform a tactical maneuver: Poison (1d6), Trip (1d6), Withdraw (1d6), or Disarm (1d6)."],
+    desc: [
+      "You have developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can forgo 1d6 of that damage to apply one of the following Cunning Strike effects of your choice. The save DC for these effects equals 8 + your Proficiency Bonus + your Dexterity modifier.",
+      "Disarm (Cost: 1d6): The target must succeed on a Dexterity saving throw or drop one object of your choice that it is holding.",
+      "Poison (Cost: 1d6): You must have a Poisoner's Kit on your person. The target must succeed on a Constitution saving throw or have the Poisoned condition for 1 minute. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.",
+      "Trip (Cost: 1d6): If the target is Large or smaller, it must succeed on a Dexterity saving throw or fall Prone.",
+      "Withdraw (Cost: 1d6): Immediately after the attack, you can move up to half your Speed without provoking Opportunity Attacks."
+    ],
+    feature_specific: {
+      save_dc: "8 + PB + DEX",
+      options: {
+        disarm: { cost: "1d6", save: "DEX" },
+        poison: { cost: "1d6", save: "CON", duration: "1 minute", requires: "Poisoner's Kit" },
+        trip: { cost: "1d6", save: "DEX", size_limit: "Large" },
+        withdraw: { cost: "1d6", no_oa: true }
+      }
+    },
     url: "/assets/atlas/features/json/cunning_strike_2024.json"
   },
   {
@@ -391,7 +407,19 @@ const features = [
     name: "Devious Strikes",
     class: rogueRef,
     level: 14,
-    desc: ["You learn new Cunning Strike options: Daze (2d6), Knock Out (6d6), and Obscure (1d6)."],
+    desc: [
+      "You learn new ways to use your Cunning Strike. The following options now cost additional Sneak Attack dice:",
+      "Daze (Cost: 2d6): The target must succeed on a Constitution saving throw or be dazed until the end of its next turn. While dazed, the target can take an action or a bonus action, not both, and it cannot take reactions.",
+      "Knock Out (Cost: 6d6): The target must succeed on a Constitution saving throw or fall Prone and have the Unconscious condition for 1 minute or until it takes damage or a creature uses an action to wake it.",
+      "Obscure (Cost: 3d6): The target must succeed on a Dexterity saving throw or have the Blinded condition until the end of its next turn."
+    ],
+    feature_specific: {
+      options: {
+        daze: { cost: "2d6", save: "CON", effect: "action_or_bonus_action_no_reaction" },
+        knock_out: { cost: "6d6", save: "CON", condition: "Unconscious", duration: "1 minute" },
+        obscure: { cost: "3d6", save: "DEX", condition: "Blinded", duration: "1 round" }
+      }
+    },
     url: "/assets/atlas/features/json/devious_strikes_2024.json"
   },
   {
@@ -415,7 +443,11 @@ const features = [
     name: "Stroke of Luck",
     class: rogueRef,
     level: 20,
-    desc: ["You have a knack for succeeding when you need to. If your attack roll misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20. Once you use this feature, you can't use it again until you finish a Short or Long Rest."],
+    desc: ["You have a knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20. Once you use this feature, you can't use it again until you finish a Short or Long Rest."],
+    feature_specific: {
+      recharge: "short_or_long_rest",
+      effect: "turn_failed_d20_test_into_20"
+    },
     url: "/assets/atlas/features/json/stroke_of_luck_2024.json"
   },
   {

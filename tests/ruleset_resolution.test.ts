@@ -70,6 +70,7 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(fighter14?.rulesetContext).toBe('2014');
     expect(fighter24?.rulesetContext).toBe('2024');
   });
+
   it('correctly resolves versioned species dataset (14 vs 24)', async () => {
     const sp14 = await fetchSpeciesData('human', '2014');
     const sp24 = await fetchSpeciesData('human', '2024');
@@ -220,5 +221,121 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     expect(barbarianLvl24Array).toEqual([]);
     expect(barbarianLvl24Data).toBeNull();
+  });
+
+  it('verifies complete 2024 class progressions (levels 1-20) and resolves ALL referenced feature definitions', async () => {
+    const classes = ['fighter', 'wizard', 'cleric', 'rogue'];
+
+    for (const className of classes) {
+      const levels = await fetchClassLevels(className, '2024');
+      expect(levels).toHaveLength(20);
+
+      for (let lvl = 1; lvl <= 20; lvl++) {
+        const lvlData = await atlasService.loadLevelData(className, lvl, '2024');
+        expect(lvlData).not.toBeNull();
+        expect(lvlData?.level).toBe(lvl);
+        expect(lvlData?.rulesetContext).toBe('2024');
+
+        // Verify every feature reference resolves to an existing canonical feature definition
+        if (Array.isArray(lvlData?.features)) {
+          for (const featRef of lvlData.features) {
+            const featData = await atlasService.loadFeature(featRef.index);
+            expect(featData).not.toBeNull();
+            expect(featData.index).toBe(featRef.index);
+            expect(featData.class.index).toBe(className);
+            expect(featData.name).toBeTruthy();
+            expect(featData.desc.length).toBeGreaterThan(0);
+          }
+        }
+      }
+    }
+  });
+
+  it('validates precise 2024 mechanics for Fighter, Wizard, Cleric, and Rogue features', async () => {
+    // 1. Fighter 2024 features
+    const actionSurge24 = await atlasService.loadFeature('action_surge_2024');
+    expect(actionSurge24).not.toBeNull();
+    expect(actionSurge24.desc.join(' ')).toContain('except the Magic action');
+
+    const tacticalMind24 = await atlasService.loadFeature('tactical_mind_2024');
+    expect(tacticalMind24).not.toBeNull();
+
+    const tacticalShift24 = await atlasService.loadFeature('tactical_shift_2024');
+    expect(tacticalShift24).not.toBeNull();
+
+    const indomitable24 = await atlasService.loadFeature('indomitable_2024');
+    expect(indomitable24).not.toBeNull();
+    expect(indomitable24.feature_specific?.bonus).toBe('fighter_level');
+
+    const tacticalMaster24 = await atlasService.loadFeature('tactical_master_2024');
+    expect(tacticalMaster24).not.toBeNull();
+    expect(tacticalMaster24.desc.join(' ')).toContain('weapon whose mastery property you can use');
+
+    const studiedAttacks24 = await atlasService.loadFeature('studied_attacks_2024');
+    expect(studiedAttacks24).not.toBeNull();
+
+    // 2. Wizard 2024 features
+    const scholar24 = await atlasService.loadFeature('scholar_wizard_2024');
+    expect(scholar24).not.toBeNull();
+
+    const memorizeSpell24 = await atlasService.loadFeature('memorize_spell_wizard_2024');
+    expect(memorizeSpell24).not.toBeNull();
+
+    const spellMastery24 = await atlasService.loadFeature('spell_mastery_wizard_2024');
+    expect(spellMastery24).not.toBeNull();
+
+    const signatureSpells24 = await atlasService.loadFeature('signature_spells_wizard_2024');
+    expect(signatureSpells24).not.toBeNull();
+
+    // 3. Cleric 2024 features
+    const divineOrder24 = await atlasService.loadFeature('divine_order_cleric');
+    expect(divineOrder24).not.toBeNull();
+    expect(divineOrder24.desc.join(' ')).toContain('Protector');
+    expect(divineOrder24.desc.join(' ')).toContain('Thaumaturge');
+
+    const channelDivinityCleric24 = await atlasService.loadFeature('channel_divinity_cleric_2024');
+    expect(channelDivinityCleric24).not.toBeNull();
+
+    const searUndead24 = await atlasService.loadFeature('sear_undead_cleric_2024');
+    expect(searUndead24).not.toBeNull();
+
+    const divineIntervention24 = await atlasService.loadFeature('divine_intervention_cleric_2024');
+    expect(divineIntervention24).not.toBeNull();
+    expect(divineIntervention24.desc.join(' ')).toContain('level 5 or lower');
+
+    const blessedStrikesImp24 = await atlasService.loadFeature('blessed_strikes_improvement_cleric_2024');
+    expect(blessedStrikesImp24).not.toBeNull();
+    expect(blessedStrikesImp24.desc.join(' ')).toContain('twice your Wisdom modifier');
+    expect(blessedStrikesImp24.feature_specific?.potent_spellcasting_temp_hp).toBe('2_x_wis_modifier');
+
+    // 4. Rogue 2024 features
+    const cunningAction24 = await atlasService.loadFeature('cunning_action_2024');
+    expect(cunningAction24).not.toBeNull();
+
+    const steadyAim24 = await atlasService.loadFeature('steady_aim_rogue_2024');
+    expect(steadyAim24).not.toBeNull();
+
+    const cunningStrike24 = await atlasService.loadFeature('cunning_strike_2024');
+    expect(cunningStrike24).not.toBeNull();
+    expect(cunningStrike24.feature_specific?.save_dc).toBe('8 + PB + DEX');
+    expect(cunningStrike24.feature_specific?.options?.poison?.requires).toBe("Poisoner's Kit");
+
+    const reliableTalent24 = await atlasService.loadFeature('reliable_talent_2024');
+    expect(reliableTalent24).not.toBeNull();
+    expect(reliableTalent24.level).toBe(7);
+
+    const deviousStrikes24 = await atlasService.loadFeature('devious_strikes_2024');
+    expect(deviousStrikes24).not.toBeNull();
+    expect(deviousStrikes24.feature_specific?.options?.daze?.cost).toBe('2d6');
+    expect(deviousStrikes24.feature_specific?.options?.knock_out?.cost).toBe('6d6');
+    expect(deviousStrikes24.feature_specific?.options?.obscure?.cost).toBe('3d6');
+
+    const slipperyMind24 = await atlasService.loadFeature('slippery_mind_2024');
+    expect(slipperyMind24).not.toBeNull();
+
+    const strokeOfLuck24 = await atlasService.loadFeature('stroke_of_luck_2024');
+    expect(strokeOfLuck24).not.toBeNull();
+    expect(strokeOfLuck24.desc.join(' ')).toContain('fail a D20 Test');
+    expect(strokeOfLuck24.feature_specific?.effect).toBe('turn_failed_d20_test_into_20');
   });
 });

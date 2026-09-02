@@ -8,7 +8,31 @@
   },
   "level": 14,
   "desc": [
-    "You learn new Cunning Strike options: Daze (2d6), Knock Out (6d6), and Obscure (1d6)."
+    "You learn new ways to use your Cunning Strike. The following options now cost additional Sneak Attack dice:",
+    "Daze (Cost: 2d6): The target must succeed on a Constitution saving throw or be dazed until the end of its next turn. While dazed, the target can take an action or a bonus action, not both, and it cannot take reactions.",
+    "Knock Out (Cost: 6d6): The target must succeed on a Constitution saving throw or fall Prone and have the Unconscious condition for 1 minute or until it takes damage or a creature uses an action to wake it.",
+    "Obscure (Cost: 3d6): The target must succeed on a Dexterity saving throw or have the Blinded condition until the end of its next turn."
   ],
+  "feature_specific": {
+    "options": {
+      "daze": {
+        "cost": "2d6",
+        "save": "CON",
+        "effect": "action_or_bonus_action_no_reaction"
+      },
+      "knock_out": {
+        "cost": "6d6",
+        "save": "CON",
+        "condition": "Unconscious",
+        "duration": "1 minute"
+      },
+      "obscure": {
+        "cost": "3d6",
+        "save": "DEX",
+        "condition": "Blinded",
+        "duration": "1 round"
+      }
+    }
+  },
   "url": "/assets/atlas/features/json/devious_strikes_2024.json"
 }
