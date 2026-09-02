@@ -82,9 +82,12 @@ function buildFighterLevel(lvl) {
   const indomitableUses = lvl >= 17 ? 3 : (lvl >= 13 ? 2 : (lvl >= 9 ? 1 : 0));
   const extraAttacks = lvl >= 20 ? 3 : (lvl >= 11 ? 2 : (lvl >= 5 ? 1 : 0));
 
+  // Fighter ASI levels: 4, 6, 8, 12, 14, 16
+  const asiCount = [4, 6, 8, 12, 14, 16].filter(l => l <= lvl).length;
+
   return {
     level: lvl,
-    ability_score_bonuses: [4,6,8,12,14,16,19].filter(l => l <= lvl).length,
+    ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
     weapon_mastery: {
@@ -133,7 +136,8 @@ const casterSpellSlots = [
   [4,3,3,3,3,2,2,1,1]  // L20
 ];
 const cantripsTable = [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5];
-const preparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
 
 // --- WIZARD 2024 ---
 function buildWizardLevel(lvl) {
@@ -175,15 +179,17 @@ function buildWizardLevel(lvl) {
   }
 
   const slots = casterSpellSlots[lvl - 1];
+  // Wizard ASI levels: 4, 8, 12, 16
+  const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,
-    ability_score_bonuses: [4,8,12,16,19].filter(l => l <= lvl).length,
+    ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
     class_specific: {
       arcane_recovery_levels: Math.ceil(lvl / 2),
-      prepared_spells_count: preparedTable[lvl - 1]
+      prepared_spells_count: wizardPreparedTable[lvl - 1]
     },
     index: `wizard_level_${lvl}`,
     class: {
@@ -195,7 +201,7 @@ function buildWizardLevel(lvl) {
     rulesetContext: "2024",
     spellcasting: {
       cantrips_known: cantripsTable[lvl - 1],
-      prepared_spells: preparedTable[lvl - 1],
+      prepared_spells: wizardPreparedTable[lvl - 1],
       spell_slots_level_1: slots[0],
       spell_slots_level_2: slots[1],
       spell_slots_level_3: slots[2],
@@ -255,10 +261,12 @@ function buildClericLevel(lvl) {
 
   const slots = casterSpellSlots[lvl - 1];
   const channelCharges = lvl >= 18 ? 4 : (lvl >= 6 ? 3 : (lvl >= 2 ? 2 : 0));
+  // Cleric ASI levels: 4, 8, 12, 16
+  const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,
-    ability_score_bonuses: [4,8,12,16,19].filter(l => l <= lvl).length,
+    ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
     class_specific: {
@@ -275,7 +283,7 @@ function buildClericLevel(lvl) {
     rulesetContext: "2024",
     spellcasting: {
       cantrips_known: cantripsTable[lvl - 1],
-      prepared_spells: preparedTable[lvl - 1],
+      prepared_spells: clericPreparedTable[lvl - 1],
       spell_slots_level_1: slots[0],
       spell_slots_level_2: slots[1],
       spell_slots_level_3: slots[2],
@@ -351,10 +359,12 @@ function buildRogueLevel(lvl) {
   }
 
   const sneakDice = Math.ceil(lvl / 2);
+  // Rogue ASI levels: 4, 8, 10, 12, 16
+  const asiCount = [4, 8, 10, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,
-    ability_score_bonuses: [4,8,10,12,16,19].filter(l => l <= lvl).length,
+    ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
     weapon_mastery: {

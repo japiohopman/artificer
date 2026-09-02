@@ -176,7 +176,13 @@ const features = [
     name: "Spell Mastery",
     class: wizardRef,
     level: 18,
-    desc: ["You have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level and a 2nd-level Wizard spell in your spellbook. You always have these spells prepared, and you can cast each once at its lowest level without expending a spell slot. You regain the ability to cast them this way after a Short or Long Rest."],
+    desc: ["You have achieved such mastery over certain spells that you can cast them at will. Choose one 1st-level Wizard spell and one 2nd-level Wizard spell in your spellbook that have a casting time of an Action. You always have these spells prepared, and you can cast each at its lowest level without expending a spell slot. If you want to cast either spell at a higher level, you must expend a spell slot as normal. Whenever you finish a Long Rest, you can study your spellbook and replace one of these chosen spells with another eligible spell of the same level."],
+    feature_specific: {
+      at_will_casting: true,
+      slot_expenditure: false,
+      casting_time_restriction: "1 Action",
+      replace_on_long_rest: 1
+    },
     url: "/assets/atlas/features/json/spell_mastery_wizard_2024.json"
   },
   {
@@ -218,8 +224,20 @@ const features = [
     name: "Channel Divinity",
     class: clericRef,
     level: 2,
-    desc: ["You can channel divine energy directly from the outer planes to fuel magical effects. You start with two options: Divine Spark and Turn Undead. You gain 2 uses of Channel Divinity per Short or Long Rest (increasing to 3 at level 6 and 4 at level 18)."],
-    feature_specific: { uses_at_level_2: 2, uses_at_level_6: 3, uses_at_level_18: 4 },
+    desc: [
+      "You can channel divine energy directly from the outer planes to fuel magical effects. You start with two options: Divine Spark and Turn Undead. You gain 2 uses of Channel Divinity. You regain 1 expended use when you finish a Short Rest, and all expended uses when you finish a Long Rest. The number of uses increases to 3 at level 6 and 4 at level 18.",
+      "Divine Spark: As a Magic action, you point your holy symbol at a creature you can see within 30 feet of yourself and focus divine energy. Roll 1d8 + your Wisdom modifier. You either restore Hit Points to the creature equal to that total or force the creature to make a Constitution saving throw against your Cleric spell save DC. On a failed save, the target takes Radiant or Necrotic damage (your choice) equal to the total, or half as much damage on a successful save. The damage or healing increases to 2d8 + WIS at level 7, 3d8 + WIS at level 13, and 4d8 + WIS at level 18.",
+      "Turn Undead: As a Magic action, you present your holy symbol and censure Undead creatures. Each Undead within 30 feet of you that can see or hear you must make a Wisdom saving throw against your Cleric spell save DC. On a failed save, the creature is Turned for 1 minute or until it takes damage."
+    ],
+    feature_specific: {
+      uses_at_level_2: 2,
+      uses_at_level_6: 3,
+      uses_at_level_18: 4,
+      recharge: "short_rest_1_all_long_rest",
+      save_dc: "Cleric spell save DC",
+      divine_spark: { action: "Magic", range: "30 feet", dice: "1d8 (L2), 2d8 (L7), 3d8 (L13), 4d8 (L18) + WIS mod", save: "CON" },
+      turn_undead: { action: "Magic", range: "30 feet", save: "WIS", duration: "1 minute" }
+    },
     url: "/assets/atlas/features/json/channel_divinity_cleric_2024.json"
   },
   {
@@ -268,7 +286,8 @@ const features = [
     name: "Greater Divine Intervention",
     class: clericRef,
     level: 20,
-    desc: ["Your connection to your deity reaches its peak. When you use Divine Intervention, you can choose Wish (even if not on the Cleric list) or cast a Cleric spell of 1st through 8th level. After doing so, you regain the use of Divine Intervention after 2d4 Long Rests."],
+    desc: ["Your connection to your deity reaches its peak. When you use Divine Intervention, you can choose Wish. After doing so, you can't use Divine Intervention again until you finish 2d4 Long Rests."],
+    feature_specific: { effect: "cast_wish", recharge: "2d4_long_rests" },
     url: "/assets/atlas/features/json/greater_divine_intervention_cleric_2024.json"
   },
   {
@@ -286,7 +305,7 @@ const features = [
     name: "Expertise",
     class: rogueRef,
     level: 1,
-    desc: ["You gain Expertise in two of your skill proficiencies of your choice, or in one skill proficiency and Thieves' Tools. At level 6, you gain Expertise in two more skill proficiencies or Thieves' Tools."],
+    desc: ["You gain Expertise in two of your skill proficiencies of your choice. At level 6, you gain Expertise in two more skill proficiencies of your choice."],
     url: "/assets/atlas/features/json/rogue_expertise_2024.json"
   },
   {
@@ -375,7 +394,7 @@ const features = [
     name: "Expertise (Level 6)",
     class: rogueRef,
     level: 6,
-    desc: ["You gain Expertise in two more of your skill proficiencies or Thieves' Tools."],
+    desc: ["You gain Expertise in two more of your skill proficiencies of your choice."],
     url: "/assets/atlas/features/json/rogue_expertise_2_2024.json"
   },
   {

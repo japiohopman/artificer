@@ -8,7 +8,11 @@
   },
   "level": 20,
   "desc": [
-    "Your connection to your deity reaches its peak. When you use Divine Intervention, you can choose Wish (even if not on the Cleric list) or cast a Cleric spell of 1st through 8th level. After doing so, you regain the use of Divine Intervention after 2d4 Long Rests."
+    "Your connection to your deity reaches its peak. When you use Divine Intervention, you can choose Wish. After doing so, you can't use Divine Intervention again until you finish 2d4 Long Rests."
   ],
+  "feature_specific": {
+    "effect": "cast_wish",
+    "recharge": "2d4_long_rests"
+  },
   "url": "/assets/atlas/features/json/greater_divine_intervention_cleric_2024.json"
 }

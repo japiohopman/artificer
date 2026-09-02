@@ -251,6 +251,30 @@ describe('Ruleset Resolution Audit Tests', () => {
     }
   });
 
+  it('verifies official 2024 Wizard prepared spells progression table', async () => {
+    const wiz14 = await atlasService.loadLevelData('wizard', 14, '2024');
+    const wiz16 = await atlasService.loadLevelData('wizard', 16, '2024');
+    const wiz18 = await atlasService.loadLevelData('wizard', 18, '2024');
+    const wiz20 = await atlasService.loadLevelData('wizard', 20, '2024');
+
+    expect(wiz14?.class_specific?.prepared_spells_count).toBe(17);
+    expect(wiz16?.class_specific?.prepared_spells_count).toBe(21);
+    expect(wiz18?.class_specific?.prepared_spells_count).toBe(23);
+    expect(wiz20?.class_specific?.prepared_spells_count).toBe(25);
+  });
+
+  it('verifies Level 19 Ability Score Improvement counts (excluding Epic Boon)', async () => {
+    const fighter19 = await atlasService.loadLevelData('fighter', 19, '2024');
+    const wizard19 = await atlasService.loadLevelData('wizard', 19, '2024');
+    const cleric19 = await atlasService.loadLevelData('cleric', 19, '2024');
+    const rogue19 = await atlasService.loadLevelData('rogue', 19, '2024');
+
+    expect(fighter19?.ability_score_bonuses).toBe(6);
+    expect(wizard19?.ability_score_bonuses).toBe(4);
+    expect(cleric19?.ability_score_bonuses).toBe(4);
+    expect(rogue19?.ability_score_bonuses).toBe(5);
+  });
+
   it('validates precise 2024 mechanics for Fighter, Wizard, Cleric, and Rogue features', async () => {
     // 1. Fighter 2024 features
     const actionSurge24 = await atlasService.loadFeature('action_surge_2024');
@@ -283,6 +307,10 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const spellMastery24 = await atlasService.loadFeature('spell_mastery_wizard_2024');
     expect(spellMastery24).not.toBeNull();
+    expect(spellMastery24.feature_specific?.at_will_casting).toBe(true);
+    expect(spellMastery24.feature_specific?.slot_expenditure).toBe(false);
+    expect(spellMastery24.desc.join(' ')).toContain('cast them at will');
+    expect(spellMastery24.desc.join(' ')).not.toContain('once per rest');
 
     const signatureSpells24 = await atlasService.loadFeature('signature_spells_wizard_2024');
     expect(signatureSpells24).not.toBeNull();
@@ -295,6 +323,8 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const channelDivinityCleric24 = await atlasService.loadFeature('channel_divinity_cleric_2024');
     expect(channelDivinityCleric24).not.toBeNull();
+    expect(channelDivinityCleric24.feature_specific?.recharge).toBe('short_rest_1_all_long_rest');
+    expect(channelDivinityCleric24.feature_specific?.divine_spark?.save).toBe('CON');
 
     const searUndead24 = await atlasService.loadFeature('sear_undead_cleric_2024');
     expect(searUndead24).not.toBeNull();
@@ -308,7 +338,16 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(blessedStrikesImp24.desc.join(' ')).toContain('twice your Wisdom modifier');
     expect(blessedStrikesImp24.feature_specific?.potent_spellcasting_temp_hp).toBe('2_x_wis_modifier');
 
+    const greaterDivineIntervention24 = await atlasService.loadFeature('greater_divine_intervention_cleric_2024');
+    expect(greaterDivineIntervention24).not.toBeNull();
+    expect(greaterDivineIntervention24.desc.join(' ')).toContain('Wish');
+    expect(greaterDivineIntervention24.feature_specific?.recharge).toBe('2d4_long_rests');
+
     // 4. Rogue 2024 features
+    const rogueExpertise24 = await atlasService.loadFeature('rogue_expertise_2024');
+    expect(rogueExpertise24).not.toBeNull();
+    expect(rogueExpertise24.desc.join(' ')).toContain('two of your skill proficiencies');
+
     const cunningAction24 = await atlasService.loadFeature('cunning_action_2024');
     expect(cunningAction24).not.toBeNull();
 

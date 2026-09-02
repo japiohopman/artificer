@@ -37,9 +37,9 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Fo
 2024 Class Levels / Features (Levels 1-20)
 → implemented / verified
 → Fighter (levels 1-20 & features)
-→ Wizard (levels 1-20 & features, including Ritual Adept spellbook requirement)
-→ Cleric (levels 1-20 & features, including Blessed Strikes Improvement twice WIS mod temp HP)
-→ Rogue (levels 1-20 & features, including Cunning Strike, Devious Strikes 2d6/6d6/3d6, and Stroke of Luck)
+→ Wizard (levels 1-20 & features, including Spell Mastery at-will rules & prepared spells table)
+→ Cleric (levels 1-20 & features, including Blessed Strikes Improvement twice WIS mod temp HP, Channel Divinity Divine Spark/Turn Undead mechanics, Greater Divine Intervention Wish effect)
+→ Rogue (levels 1-20 & features, including Level 1 Expertise skill proficiencies, Cunning Strike, Devious Strikes 2d6/6d6/3d6, and Stroke of Luck D20 Test)
 → feature dependencies fully resolved
 
 Next active dependency: Backgrounds & Origins / Remaining 8 Classes / Subclasses

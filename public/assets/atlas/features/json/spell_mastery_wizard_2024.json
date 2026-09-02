@@ -8,7 +8,13 @@
   },
   "level": 18,
   "desc": [
-    "You have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level and a 2nd-level Wizard spell in your spellbook. You always have these spells prepared, and you can cast each once at its lowest level without expending a spell slot. You regain the ability to cast them this way after a Short or Long Rest."
+    "You have achieved such mastery over certain spells that you can cast them at will. Choose one 1st-level Wizard spell and one 2nd-level Wizard spell in your spellbook that have a casting time of an Action. You always have these spells prepared, and you can cast each at its lowest level without expending a spell slot. If you want to cast either spell at a higher level, you must expend a spell slot as normal. Whenever you finish a Long Rest, you can study your spellbook and replace one of these chosen spells with another eligible spell of the same level."
   ],
+  "feature_specific": {
+    "at_will_casting": true,
+    "slot_expenditure": false,
+    "casting_time_restriction": "1 Action",
+    "replace_on_long_rest": 1
+  },
   "url": "/assets/atlas/features/json/spell_mastery_wizard_2024.json"
 }

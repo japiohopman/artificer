@@ -1,6 +1,6 @@
 {
   "level": 19,
-  "ability_score_bonuses": 5,
+  "ability_score_bonuses": 4,
   "prof_bonus": 6,
   "features": [
     {
@@ -11,7 +11,7 @@
   ],
   "class_specific": {
     "arcane_recovery_levels": 10,
-    "prepared_spells_count": 21
+    "prepared_spells_count": 24
   },
   "index": "wizard_level_19",
   "class": {
@@ -23,7 +23,7 @@
   "rulesetContext": "2024",
   "spellcasting": {
     "cantrips_known": 5,
-    "prepared_spells": 21,
+    "prepared_spells": 24,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,
     "spell_slots_level_3": 3,
