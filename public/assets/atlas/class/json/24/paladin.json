@@ -1,11 +1,15 @@
 {
-  "index": "cleric",
-  "name": "Cleric",
+  "index": "paladin",
+  "name": "Paladin",
   "rulesetContext": "2024",
-  "hit_die": 8,
+  "hit_die": 10,
+  "weapon_mastery": {
+    "count": 2,
+    "description": "You can master 2 martial or simple weapons of your choice."
+  },
   "proficiency_choices": [
     {
-      "desc": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
+      "desc": "Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion",
       "choose": 2,
       "type": "proficiencies",
       "from": {
@@ -14,9 +18,9 @@
           {
             "option_type": "reference",
             "item": {
-              "index": "skill_history",
-              "name": "skill: history",
-              "url": "/assets/atlas/proficiencies/json/skill_history.json"
+              "index": "skill_athletics",
+              "name": "skill: athletics",
+              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
             }
           },
           {
@@ -25,6 +29,14 @@
               "index": "skill_insight",
               "name": "skill: insight",
               "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+            }
+          },
+          {
+            "option_type": "reference",
+            "item": {
+              "index": "skill_intimidation",
+              "name": "skill: intimidation",
+              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
             }
           },
           {
@@ -57,14 +69,9 @@
   ],
   "proficiencies": [
     {
-      "index": "light_armor",
-      "name": "light armor",
-      "url": "/assets/atlas/proficiencies/json/light_armor.json"
-    },
-    {
-      "index": "medium_armor",
-      "name": "medium armor",
-      "url": "/assets/atlas/proficiencies/json/medium_armor.json"
+      "index": "all_armor",
+      "name": "all armor",
+      "url": "/assets/atlas/proficiencies/json/all_armor.json"
     },
     {
       "index": "shields",
@@ -75,6 +82,11 @@
       "index": "simple_weapons",
       "name": "simple weapons",
       "url": "/assets/atlas/proficiencies/json/simple_weapons.json"
+    },
+    {
+      "index": "martial_weapons",
+      "name": "martial weapons",
+      "url": "/assets/atlas/proficiencies/json/martial_weapons.json"
     },
     {
       "index": "saving_throw_wis",
@@ -102,101 +114,16 @@
   "starting_equipment": [
     {
       "equipment": {
-        "index": "shield",
-        "name": "shield",
-        "url": "/assets/atlas/equipment/json/shield.json"
+        "index": "chain_mail",
+        "name": "chain mail",
+        "url": "/assets/atlas/equipment/json/chain_mail.json"
       },
       "quantity": 1
     }
   ],
   "starting_equipment_options": [
     {
-      "desc": "(a) a mace or (b) a warhammer (if proficient)",
-      "choose": 1,
-      "type": "equipment",
-      "from": {
-        "option_set_type": "options_array",
-        "options": [
-          {
-            "option_type": "counted_reference",
-            "count": 1,
-            "of": {
-              "index": "mace",
-              "name": "mace",
-              "url": "/assets/atlas/equipment/json/mace.json"
-            }
-          },
-          {
-            "option_type": "counted_reference",
-            "count": 1,
-            "of": {
-              "index": "warhammer",
-              "name": "warhammer",
-              "url": "/assets/atlas/equipment/json/warhammer.json"
-            },
-            "prerequisites": [
-              {
-                "type": "proficiency",
-                "proficiency": {
-                  "index": "warhammers",
-                  "name": "warhammers",
-                  "url": "/assets/atlas/proficiencies/json/warhammers.json"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "desc": "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
-      "choose": 1,
-      "type": "equipment",
-      "from": {
-        "option_set_type": "options_array",
-        "options": [
-          {
-            "option_type": "counted_reference",
-            "count": 1,
-            "of": {
-              "index": "scale_mail",
-              "name": "scale mail",
-              "url": "/assets/atlas/equipment/json/scale_mail.json"
-            }
-          },
-          {
-            "option_type": "counted_reference",
-            "count": 1,
-            "of": {
-              "index": "leather_armor",
-              "name": "leather armor",
-              "url": "/assets/atlas/equipment/json/leather_armor.json"
-            }
-          },
-          {
-            "option_type": "counted_reference",
-            "count": 1,
-            "of": {
-              "index": "chain_mail",
-              "name": "chain mail",
-              "url": "/assets/atlas/equipment/json/chain_mail.json"
-            },
-            "prerequisites": [
-              {
-                "type": "proficiency",
-                "proficiency": {
-                  "index": "chain_mail",
-                  "name": "chain mail",
-                  "url": "/assets/atlas/proficiencies/json/chain_mail.json"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "desc": "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+      "desc": "(a) a martial weapon and a shield or (b) two martial weapons",
       "choose": 1,
       "type": "equipment",
       "from": {
@@ -206,24 +133,66 @@
             "option_type": "multiple",
             "items": [
               {
-                "option_type": "counted_reference",
-                "count": 1,
-                "of": {
-                  "index": "crossbow_light",
-                  "name": "crossbow, light",
-                  "url": "/assets/atlas/equipment/json/crossbow_light.json"
+                "option_type": "choice",
+                "choice": {
+                  "desc": "a martial weapon",
+                  "choose": 1,
+                  "type": "equipment",
+                  "from": {
+                    "option_set_type": "equipment_category",
+                    "equipment_category": {
+                      "name": "martial weapons",
+                      "index": "martial_weapons",
+                      "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                    }
+                  }
                 }
               },
               {
                 "option_type": "counted_reference",
-                "count": 20,
+                "count": 1,
                 "of": {
-                  "index": "crossbow_bolt",
-                  "name": "crossbow bolt",
-                  "url": "/assets/atlas/equipment/json/crossbow_bolt.json"
+                  "index": "shield",
+                  "name": "shield",
+                  "url": "/assets/atlas/equipment/json/shield.json"
                 }
               }
             ]
+          },
+          {
+            "option_type": "choice",
+            "choice": {
+              "desc": "two martial weapons",
+              "choose": 2,
+              "type": "equipment",
+              "from": {
+                "option_set_type": "equipment_category",
+                "equipment_category": {
+                  "index": "martial_weapons",
+                  "name": "martial weapons",
+                  "url": "/assets/atlas/equipment_categories/json/martial_weapons.json"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "desc": "(a) five javelins or (b) any simple melee weapon",
+      "choose": 1,
+      "type": "equipment",
+      "from": {
+        "option_set_type": "options_array",
+        "options": [
+          {
+            "option_type": "counted_reference",
+            "count": 5,
+            "of": {
+              "index": "javelin",
+              "name": "javelin",
+              "url": "/assets/atlas/equipment/json/javelin.json"
+            }
           },
           {
             "option_type": "choice",
@@ -286,14 +255,14 @@
       }
     }
   ],
-  "class_levels": "/assets/atlas/class/levels/24/cleric.json",
+  "class_levels": "/assets/atlas/class/levels/24/paladin.json",
   "subclasses": [
     {
-      "index": "life",
-      "name": "life",
-      "url": "/assets/atlas/subclasses/json/life.json"
+      "index": "devotion",
+      "name": "devotion",
+      "url": "/assets/atlas/subclasses/json/devotion.json"
     }
   ],
-  "url": "/assets/atlas/class/json/24/cleric.json",
-  "image": "/assets/ui/official/classes/cleric.webp"
+  "url": "/assets/atlas/class/json/24/paladin.json",
+  "image": "/assets/ui/official/classes/paladin.webp"
 }
