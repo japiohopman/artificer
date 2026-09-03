@@ -1,0 +1,14 @@
+{
+  "index": "acrobatic_movement_2024",
+  "name": "Acrobatic Movement",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 9,
+  "desc": [
+    "You can move along vertical surfaces and across liquids on your turn without falling."
+  ],
+  "url": "/assets/atlas/features/json/acrobatic_movement_2024.json"
+}

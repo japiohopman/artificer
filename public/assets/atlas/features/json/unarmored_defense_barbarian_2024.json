@@ -1,0 +1,14 @@
+{
+  "index": "unarmored_defense_barbarian_2024",
+  "name": "Unarmored Defense",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 1,
+  "desc": [
+    "While you are wearing no armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+  ],
+  "url": "/assets/atlas/features/json/unarmored_defense_barbarian_2024.json"
+}

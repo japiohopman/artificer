@@ -1,0 +1,14 @@
+{
+  "index": "disciplined_survivor_2024",
+  "name": "Disciplined Survivor",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 14,
+  "desc": [
+    "Gain proficiency in all saving throws. If you fail a saving throw, spend 1 Focus Point to reroll."
+  ],
+  "url": "/assets/atlas/features/json/disciplined_survivor_2024.json"
+}

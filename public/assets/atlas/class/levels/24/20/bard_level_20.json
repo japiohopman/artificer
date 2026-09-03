@@ -1,0 +1,36 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "words_of_creation_2024",
+      "name": "Words of Creation",
+      "url": "/assets/atlas/features/json/words_of_creation_2024.json"
+    }
+  ],
+  "class_specific": {
+    "bardic_inspiration_die": "d12"
+  },
+  "index": "bard_level_20",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "url": "/assets/atlas/class/levels/24/20/bard_level_20.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 5,
+    "prepared_spells": 24,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 3,
+    "spell_slots_level_5": 3,
+    "spell_slots_level_6": 2,
+    "spell_slots_level_7": 2,
+    "spell_slots_level_8": 1,
+    "spell_slots_level_9": 1
+  }
+}

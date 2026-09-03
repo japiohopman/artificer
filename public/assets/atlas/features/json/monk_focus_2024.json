@@ -1,0 +1,14 @@
+{
+  "index": "monk_focus_2024",
+  "name": "Monk Focus",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 2,
+  "desc": [
+    "Focus Points equal your Monk level. Regain all on Short or Long Rest. Spend 1 Focus Point for Flurry of Blows (2 Unarmed Strikes as Bonus Action), Patient Defense (Disengage as Bonus Action, or spend 1 Focus Point for Dodge + Temp HP), or Step of the Wind (Dash + Disengage as Bonus Action)."
+  ],
+  "url": "/assets/atlas/features/json/monk_focus_2024.json"
+}

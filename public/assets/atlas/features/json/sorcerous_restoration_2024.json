@@ -1,0 +1,14 @@
+{
+  "index": "sorcerous_restoration_2024",
+  "name": "Sorcerous Restoration",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "level": 5,
+  "desc": [
+    "When you finish a Short Rest with 0 Sorcery Points, regain Sorcery Points equal to half your Sorcerer level."
+  ],
+  "url": "/assets/atlas/features/json/sorcerous_restoration_2024.json"
+}

@@ -13,31 +13,21 @@
     2024 Species Foundation
     ✓ 5/10 species (Human, Dwarf, Elf, Halfling, Orc)
 
-    2024 Class Foundation
+    2024 Base Class Foundation
     ✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)
 
-    2024 Class Progression
-    ✓ 4/12 classes:
-      - Fighter
-      - Wizard
-      - Cleric
-      - Rogue
+    2024 Base Class Progression & Feature Definitions
+    ✓ 4/12 core classes (Fighter, Wizard, Cleric, Rogue complete for levels 1–20 and canonical 2024 features)
+    ⏳ 8/12 remaining core classes pending level progression & feature definitions
 
-    2024 Class Features
-    ✓ 4/12 classes:
-      - Fighter
-      - Wizard
-      - Cleric
-      - Rogue
+    2024 Subclasses & Subclass Features
+    ⏳ Pending (Subclass-specific feature levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
 
-    Remaining 8 classes
-    → progression/features still pending
-
-    Next active dependency: 2024 Class Features & Progression for remaining 8 classes / Backgrounds & Origins.
+    Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for 12/12 core classes) → 2024 Class Progression & Features (complete for 4/12 classes: Fighter, Wizard, Cleric, Rogue) → 2024 Class Progression & Features for remaining 8 classes (pending) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (Fighter, Wizard, Cleric, Rogue complete) → Remaining 8 classes progressions/features (pending) → 2024 Subclasses & Subclass Features (pending) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
-  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths.
+  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths; no fake/generic placeholder feature definitions exist.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.
   - **Docs:** `docs/audits/ruleset-2024-gap-analysis.md` is the current audit; update it as implementation closes gaps.
 

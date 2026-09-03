@@ -1,0 +1,18 @@
+{
+  "index": "rage_2024",
+  "name": "Rage",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 1,
+  "desc": [
+    "In battle, you fight with primal ferocity. As a Bonus Action, enter a Rage. While raging, you gain Advantage on Strength checks and saves, extra rage damage on Strength weapon attacks (+2 at L1, scaling to +4), and resistance to Bludgeoning, Piercing, and Slashing damage. Maintain by attacking, forcing a save, or taking a Bonus Action to extend. Uses: 2 at L1, scaling to 6 at L17. Regain 1 on Short Rest, all on Long Rest."
+  ],
+  "feature_specific": {
+    "uses_at_level_1": 2,
+    "recharge": "short_rest_1_all_long_rest"
+  },
+  "url": "/assets/atlas/features/json/rage_2024.json"
+}

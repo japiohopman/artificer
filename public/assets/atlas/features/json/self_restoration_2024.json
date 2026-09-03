@@ -1,0 +1,14 @@
+{
+  "index": "self_restoration_2024",
+  "name": "Self-Restoration",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 10,
+  "desc": [
+    "At the start of your turn, end Charmed, Frightened, or Poisoned condition. You no longer need food or water."
+  ],
+  "url": "/assets/atlas/features/json/self_restoration_2024.json"
+}

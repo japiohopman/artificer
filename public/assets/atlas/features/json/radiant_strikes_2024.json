@@ -1,0 +1,17 @@
+{
+  "index": "radiant_strikes_2024",
+  "name": "Radiant Strikes",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 11,
+  "desc": [
+    "All melee weapon and Unarmed Strike hits deal an extra 1d8 Radiant damage."
+  ],
+  "feature_specific": {
+    "extra_damage": "1d8_radiant"
+  },
+  "url": "/assets/atlas/features/json/radiant_strikes_2024.json"
+}

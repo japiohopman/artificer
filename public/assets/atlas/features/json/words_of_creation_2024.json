@@ -1,0 +1,14 @@
+{
+  "index": "words_of_creation_2024",
+  "name": "Words of Creation",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "level": 20,
+  "desc": [
+    "You always have Power Word Heal and Power Word Kill prepared. You can cast each once per Long Rest without expending a spell slot, and when you do, you can target two creatures instead of one."
+  ],
+  "url": "/assets/atlas/features/json/words_of_creation_2024.json"
+}

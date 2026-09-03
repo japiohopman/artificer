@@ -1,0 +1,14 @@
+{
+  "index": "spellcasting_ranger_2024",
+  "name": "Spellcasting: Ranger",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 1,
+  "desc": [
+    "Cast Ranger spells using Wisdom as spellcasting ability."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_ranger_2024.json"
+}

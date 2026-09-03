@@ -1,0 +1,35 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "monk_focus_2024",
+      "name": "Monk Focus",
+      "url": "/assets/atlas/features/json/monk_focus_2024.json"
+    },
+    {
+      "index": "unarmored_movement_monk_2024",
+      "name": "Unarmored Movement",
+      "url": "/assets/atlas/features/json/unarmored_movement_monk_2024.json"
+    },
+    {
+      "index": "uncanny_metabolism_2024",
+      "name": "Uncanny Metabolism",
+      "url": "/assets/atlas/features/json/uncanny_metabolism_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 2,
+    "martial_arts_die": "1d6",
+    "unarmored_movement_bonus": 10
+  },
+  "index": "monk_level_2",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/2/monk_level_2.json",
+  "rulesetContext": "2024"
+}

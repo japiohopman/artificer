@@ -1,0 +1,30 @@
+{
+  "level": 3,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "monk_subclass_2024",
+      "name": "Monk Subclass",
+      "url": "/assets/atlas/features/json/monk_subclass_2024.json"
+    },
+    {
+      "index": "deflect_attacks_2024",
+      "name": "Deflect Attacks",
+      "url": "/assets/atlas/features/json/deflect_attacks_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 3,
+    "martial_arts_die": "1d6",
+    "unarmored_movement_bonus": 10
+  },
+  "index": "monk_level_3",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/3/monk_level_3.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,14 @@
+{
+  "index": "stunning_strike_2024",
+  "name": "Stunning Strike",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 5,
+  "desc": [
+    "When hitting a creature with a Monk weapon/Unarmed Strike, spend 1 Focus Point. Target makes CON save vs Monk DC. On fail, Stunned until start of your next turn. On success, Speed halved and next attack against it has Advantage."
+  ],
+  "url": "/assets/atlas/features/json/stunning_strike_2024.json"
+}

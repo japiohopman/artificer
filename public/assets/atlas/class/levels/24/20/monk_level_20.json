@@ -1,0 +1,25 @@
+{
+  "level": 20,
+  "ability_score_bonuses": 4,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "body_and_mind_2024",
+      "name": "Body and Mind",
+      "url": "/assets/atlas/features/json/body_and_mind_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 20,
+    "martial_arts_die": "1d12",
+    "unarmored_movement_bonus": 30
+  },
+  "index": "monk_level_20",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/20/monk_level_20.json",
+  "rulesetContext": "2024"
+}

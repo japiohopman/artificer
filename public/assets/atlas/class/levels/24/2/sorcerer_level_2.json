@@ -1,0 +1,42 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "font_of_magic_2024",
+      "name": "Font of Magic",
+      "url": "/assets/atlas/features/json/font_of_magic_2024.json"
+    },
+    {
+      "index": "metamagic_2024",
+      "name": "Metamagic",
+      "url": "/assets/atlas/features/json/metamagic_2024.json"
+    }
+  ],
+  "class_specific": {
+    "sorcery_points": 2,
+    "metamagic_known_count": 2
+  },
+  "index": "sorcerer_level_2",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "url": "/assets/atlas/class/levels/24/2/sorcerer_level_2.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "prepared_spells": 5,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

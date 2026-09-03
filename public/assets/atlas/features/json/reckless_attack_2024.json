@@ -1,0 +1,14 @@
+{
+  "index": "reckless_attack_2024",
+  "name": "Reckless Attack",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 2,
+  "desc": [
+    "When you make your first attack on your turn, you can throw away all concern for defense to attack recklessly. Doing so gives you Advantage on Strength attack rolls during this turn, but attack rolls against you have Advantage until your next turn."
+  ],
+  "url": "/assets/atlas/features/json/reckless_attack_2024.json"
+}

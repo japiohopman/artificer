@@ -1,0 +1,14 @@
+{
+  "index": "metamagic_2024",
+  "name": "Metamagic",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "level": 2,
+  "desc": [
+    "Gain 2 Metamagic options to alter spells (Careful, Distant, Empowered, Extended, Heightened, Quickened, Seeking, Subtle, Twinned)."
+  ],
+  "url": "/assets/atlas/features/json/metamagic_2024.json"
+}

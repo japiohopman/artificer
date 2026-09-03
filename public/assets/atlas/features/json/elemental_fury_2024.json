@@ -1,0 +1,14 @@
+{
+  "index": "elemental_fury_2024",
+  "name": "Elemental Fury",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "level": 7,
+  "desc": [
+    "Choose Potent Spellcasting (add WIS mod to cantrip damage) or Primal Strike (once per turn, deal extra 1d8 Cold, Fire, Lightning, or Thunder damage on weapon/Wild Shape hit)."
+  ],
+  "url": "/assets/atlas/features/json/elemental_fury_2024.json"
+}

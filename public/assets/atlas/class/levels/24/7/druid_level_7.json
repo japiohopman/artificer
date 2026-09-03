@@ -1,0 +1,37 @@
+{
+  "level": 7,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 3,
+  "features": [
+    {
+      "index": "elemental_fury_2024",
+      "name": "Elemental Fury",
+      "url": "/assets/atlas/features/json/elemental_fury_2024.json"
+    }
+  ],
+  "class_specific": {
+    "wild_shape_max_cr": 0.5,
+    "wild_shape_uses": 2
+  },
+  "index": "druid_level_7",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "url": "/assets/atlas/class/levels/24/7/druid_level_7.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "prepared_spells": 11,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 3,
+    "spell_slots_level_4": 1,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "level": 11,
+  "ability_score_bonuses": 2,
+  "prof_bonus": 4,
+  "features": [],
+  "class_specific": {
+    "focus_points": 11,
+    "martial_arts_die": "1d10",
+    "unarmored_movement_bonus": 20
+  },
+  "index": "monk_level_11",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/11/monk_level_11.json",
+  "rulesetContext": "2024"
+}

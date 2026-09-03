@@ -1,0 +1,14 @@
+{
+  "index": "extra_attack_paladin_2024",
+  "name": "Extra Attack",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 5,
+  "desc": [
+    "Attack twice whenever taking the Attack action on your turn."
+  ],
+  "url": "/assets/atlas/features/json/extra_attack_paladin_2024.json"
+}

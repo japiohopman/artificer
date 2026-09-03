@@ -1,0 +1,14 @@
+{
+  "index": "spellcasting_paladin_2024",
+  "name": "Spellcasting: Paladin",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 1,
+  "desc": [
+    "You cast Paladin spells using Charisma as your spellcasting ability. Prepare spells from Paladin spell list."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_paladin_2024.json"
+}

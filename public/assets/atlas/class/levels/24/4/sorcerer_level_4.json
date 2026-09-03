@@ -1,0 +1,37 @@
+{
+  "level": 4,
+  "ability_score_bonuses": 1,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "sorcerer_ability_score_improvement_1_2024",
+      "name": "Ability Score Improvement",
+      "url": "/assets/atlas/features/json/sorcerer_ability_score_improvement_1_2024.json"
+    }
+  ],
+  "class_specific": {
+    "sorcery_points": 4,
+    "metamagic_known_count": 2
+  },
+  "index": "sorcerer_level_4",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "url": "/assets/atlas/class/levels/24/4/sorcerer_level_4.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "prepared_spells": 7,
+    "spell_slots_level_1": 4,
+    "spell_slots_level_2": 3,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "index": "improved_brutal_strike_2024",
+  "name": "Improved Brutal Strike",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "level": 13,
+  "desc": [
+    "Your Brutal Strike extra damage increases to 2d10, and you gain two new Brutal Strike options: Staggering Blow and Sundering Blow."
+  ],
+  "feature_specific": {
+    "dice": "2d10"
+  },
+  "url": "/assets/atlas/features/json/improved_brutal_strike_2024.json"
+}

@@ -1,0 +1,25 @@
+{
+  "level": 14,
+  "ability_score_bonuses": 3,
+  "prof_bonus": 5,
+  "features": [
+    {
+      "index": "disciplined_survivor_2024",
+      "name": "Disciplined Survivor",
+      "url": "/assets/atlas/features/json/disciplined_survivor_2024.json"
+    }
+  ],
+  "class_specific": {
+    "focus_points": 14,
+    "martial_arts_die": "1d10",
+    "unarmored_movement_bonus": 25
+  },
+  "index": "monk_level_14",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "url": "/assets/atlas/class/levels/24/14/monk_level_14.json",
+  "rulesetContext": "2024"
+}

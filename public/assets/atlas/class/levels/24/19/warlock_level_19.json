@@ -1,0 +1,25 @@
+{
+  "level": 19,
+  "ability_score_bonuses": 5,
+  "prof_bonus": 6,
+  "features": [
+    {
+      "index": "epic_boon_warlock_2024",
+      "name": "Epic Boon",
+      "url": "/assets/atlas/features/json/epic_boon_warlock_2024.json"
+    }
+  ],
+  "class_specific": {
+    "pact_slots": 3,
+    "pact_slot_level": 5,
+    "invocations_known": 8
+  },
+  "index": "warlock_level_19",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "url": "/assets/atlas/class/levels/24/19/warlock_level_19.json",
+  "rulesetContext": "2024"
+}

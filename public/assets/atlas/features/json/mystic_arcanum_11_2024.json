@@ -1,0 +1,14 @@
+{
+  "index": "mystic_arcanum_11_2024",
+  "name": "Mystic Arcanum (6th Level)",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "level": 11,
+  "desc": [
+    "Choose one 6th-level Warlock spell as Arcanum. Cast once per Long Rest without spell slot."
+  ],
+  "url": "/assets/atlas/features/json/mystic_arcanum_11_2024.json"
+}

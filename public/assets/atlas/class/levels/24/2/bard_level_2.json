@@ -1,0 +1,41 @@
+{
+  "level": 2,
+  "ability_score_bonuses": 0,
+  "prof_bonus": 2,
+  "features": [
+    {
+      "index": "jack_of_all_trades_2024",
+      "name": "Jack of All Trades",
+      "url": "/assets/atlas/features/json/jack_of_all_trades_2024.json"
+    },
+    {
+      "index": "expertise_bard_2024",
+      "name": "Expertise",
+      "url": "/assets/atlas/features/json/expertise_bard_2024.json"
+    }
+  ],
+  "class_specific": {
+    "bardic_inspiration_die": "d6"
+  },
+  "index": "bard_level_2",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "url": "/assets/atlas/class/levels/24/2/bard_level_2.json",
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "prepared_spells": 5,
+    "spell_slots_level_1": 3,
+    "spell_slots_level_2": 0,
+    "spell_slots_level_3": 0,
+    "spell_slots_level_4": 0,
+    "spell_slots_level_5": 0,
+    "spell_slots_level_6": 0,
+    "spell_slots_level_7": 0,
+    "spell_slots_level_8": 0,
+    "spell_slots_level_9": 0
+  }
+}

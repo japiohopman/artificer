@@ -1,0 +1,14 @@
+{
+  "index": "countercharm_2024",
+  "name": "Countercharm",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Reaction when you or a creature within 30 feet fails a save against Charmed or Frightened, you can force the save to be rerolled with Advantage."
+  ],
+  "url": "/assets/atlas/features/json/countercharm_2024.json"
+}

@@ -1,0 +1,14 @@
+{
+  "index": "deflect_energy_2024",
+  "name": "Deflect Energy",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 13,
+  "desc": [
+    "Deflect Attacks now works against attack rolls of any damage type, not just Bludgeoning, Piercing, or Slashing."
+  ],
+  "url": "/assets/atlas/features/json/deflect_energy_2024.json"
+}

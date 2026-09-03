@@ -1,0 +1,14 @@
+{
+  "index": "spellcasting_bard_2024",
+  "name": "Spellcasting: Bard",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "level": 1,
+  "desc": [
+    "You can cast Bard spells using Charisma as your spellcasting ability. You prepare Bard spells from the Bard spell list."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_bard_2024.json"
+}
