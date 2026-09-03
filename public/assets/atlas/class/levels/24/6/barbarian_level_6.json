@@ -2,13 +2,7 @@
   "level": 6,
   "ability_score_bonuses": 1,
   "prof_bonus": 3,
-  "features": [
-    {
-      "index": "barbarian_subclass_feature_1_2024",
-      "name": "Barbarian Subclass Feature",
-      "url": "/assets/atlas/features/json/barbarian_subclass_feature_1_2024.json"
-    }
-  ],
+  "features": [],
   "weapon_mastery": {
     "count": 2,
     "description": "You can master 2 martial or simple melee weapons of your choice."

@@ -276,18 +276,15 @@ function buildBarbarianLevel(lvl) {
     features.push(featureRef("extra_attack_barbarian_2024", "Extra Attack"));
     features.push(featureRef("fast_movement_2024", "Fast Movement"));
   }
-  if (lvl === 6) features.push(featureRef("barbarian_subclass_feature_1_2024", "Barbarian Subclass Feature"));
   if (lvl === 7) {
     features.push(featureRef("feral_instinct_2024", "Feral Instinct"));
     features.push(featureRef("instinctive_pounce_2024", "Instinctive Pounce"));
   }
   if (lvl === 8) features.push(featureRef("barbarian_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("brutal_strike_2024", "Brutal Strike"));
-  if (lvl === 10) features.push(featureRef("barbarian_subclass_feature_2_2024", "Barbarian Subclass Feature"));
   if (lvl === 11) features.push(featureRef("relentless_rage_2024", "Relentless Rage"));
   if (lvl === 12) features.push(featureRef("barbarian_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 13) features.push(featureRef("improved_brutal_strike_2024", "Improved Brutal Strike"));
-  if (lvl === 14) features.push(featureRef("barbarian_subclass_feature_3_2024", "Barbarian Subclass Feature"));
   if (lvl === 15) features.push(featureRef("persistent_rage_2024", "Persistent Rage"));
   if (lvl === 16) features.push(featureRef("barbarian_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 17) features.push(featureRef("improved_brutal_strike_2_2024", "Improved Brutal Strike (2)"));
@@ -491,7 +488,6 @@ function buildPaladinLevel(lvl) {
   if (lvl === 16) features.push(featureRef("paladin_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 18) features.push(featureRef("aura_expansion_2024", "Aura Expansion"));
   if (lvl === 19) features.push(featureRef("epic_boon_paladin_2024", "Epic Boon"));
-  if (lvl === 20) features.push(featureRef("subclass_capstone_paladin_2024", "Subclass Capstone"));
 
   const halfSlots = halfCasterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
@@ -622,7 +618,7 @@ function buildWarlockLevel(lvl) {
   const pactSlots = lvl >= 11 ? 3 : (lvl >= 2 ? 2 : 1);
   const slotLevel = lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 3 ? 2 : 1)));
   const invocations = lvl >= 18 ? 8 : (lvl >= 15 ? 7 : (lvl >= 12 ? 6 : (lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 2 ? 2 : 1))))));
-  const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
+  const asiCount = [4, 8, 10, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,

@@ -1728,40 +1728,6 @@ const features = [
     level: 16,
     desc: ["You gain the Ability Score Improvement feat or another feat for which you qualify."],
     url: "/assets/atlas/features/json/warlock_ability_score_improvement_4_2024.json"
-  },
-
-  // --- SUBCLASS CAPSTONE PLACEHOLDERS 2024 ---
-  {
-    index: "subclass_capstone_paladin_2024",
-    name: "Subclass Capstone",
-    class: paladinRef,
-    level: 20,
-    desc: ["You gain the capstone feature of your chosen Sacred Oath subclass."],
-    url: "/assets/atlas/features/json/subclass_capstone_paladin_2024.json"
-  },
-  {
-    index: "barbarian_subclass_feature_1_2024",
-    name: "Barbarian Subclass Feature",
-    class: barbarianRef,
-    level: 6,
-    desc: ["You gain a feature from your Barbarian subclass."],
-    url: "/assets/atlas/features/json/barbarian_subclass_feature_1_2024.json"
-  },
-  {
-    index: "barbarian_subclass_feature_2_2024",
-    name: "Barbarian Subclass Feature",
-    class: barbarianRef,
-    level: 10,
-    desc: ["You gain a feature from your Barbarian subclass."],
-    url: "/assets/atlas/features/json/barbarian_subclass_feature_2_2024.json"
-  },
-  {
-    index: "barbarian_subclass_feature_3_2024",
-    name: "Barbarian Subclass Feature",
-    class: barbarianRef,
-    level: 14,
-    desc: ["You gain a feature from your Barbarian subclass."],
-    url: "/assets/atlas/features/json/barbarian_subclass_feature_3_2024.json"
   }
 ];
 

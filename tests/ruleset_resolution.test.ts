@@ -163,7 +163,7 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(eq24?.rulesetContext).toBe('2024');
   });
 
-  it('verifies complete 2024 class progressions (levels 1-20) for ALL 12 core classes and resolves ALL referenced feature definitions', async () => {
+  it('verifies complete 2024 class progressions (levels 1-20) for ALL 12 core classes and ensures NO placeholder definitions exist', async () => {
     const all12Classes = [
       'barbarian', 'bard', 'cleric', 'druid', 'fighter',
       'monk', 'paladin', 'ranger', 'rogue', 'sorcerer',
@@ -188,7 +188,14 @@ describe('Ruleset Resolution Audit Tests', () => {
             expect(featData.index).toBe(featRef.index);
             expect(featData.class.index).toBe(className);
             expect(featData.name).toBeTruthy();
-            expect(featData.desc.length).toBeGreaterThan(0);
+
+            const desc = Array.isArray(featData.desc) ? featData.desc.join(' ') : featData.desc || '';
+            expect(desc.length).toBeGreaterThanOrEqual(30);
+
+            // STRICT PLACEHOLDER DETECTION ASSERTIONS
+            expect(desc.toLowerCase()).not.toContain('feature from your');
+            expect(desc.toLowerCase()).not.toContain('placeholder');
+            expect(desc.toLowerCase()).not.toContain('you gain a feature');
           }
         }
       }
