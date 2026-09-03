@@ -1779,6 +1779,8 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     };
 }
 
+const SUPPORTED_2024_CLASSES = ['fighter', 'wizard', 'cleric', 'rogue'];
+
 export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
   const activeRuleset = getActiveRulesetContext(ruleset);
   const versionFolder = activeRuleset === '2024' ? '24' : '14';
@@ -1791,12 +1793,16 @@ export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ nam
       const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/class/json/${versionFolder}`);
       if (fs.existsSync(dirPath)) {
         const files = fs.readdirSync(dirPath);
-        return files
+        const list = files
           .filter((f: string) => f.endsWith('.json'))
           .map((f: string) => ({
             name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
             index: f.replace('.json', '')
           }));
+        if (activeRuleset === '2024') {
+          return list.filter(c => SUPPORTED_2024_CLASSES.includes(c.index));
+        }
+        return list;
       }
     } catch (e) {}
   }
@@ -1821,12 +1827,16 @@ export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ nam
     const res = await fetch(url);
     const files = await safeJson(res);
     if (!files || !Array.isArray(files)) return [];
-    return files
+    const list = files
       .filter((f: any) => f.name.endsWith('.json'))
       .map((f: any) => ({
         name: f.name.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
         index: f.name.replace('.json', '')
       }));
+    if (activeRuleset === '2024') {
+      return list.filter(c => SUPPORTED_2024_CLASSES.includes(c.index));
+    }
+    return list;
   } catch (e) {
     return [];
   }
@@ -1842,6 +1852,10 @@ export async function fetchClassData(index: string, ruleset?: '2014' | '2024'): 
   const activeRuleset = getActiveRulesetContext(ruleset);
   const versionFolder = activeRuleset === '2024' ? '24' : '14';
   const cleanIndex = index.toLowerCase().trim();
+
+  if (activeRuleset === '2024' && !SUPPORTED_2024_CLASSES.includes(cleanIndex)) {
+    return null;
+  }
   const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
   const hyphenatedIndex = cleanIndex.replace(/[:_]/g, '-');
 
@@ -2033,6 +2047,10 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
   const activeRuleset = getActiveRulesetContext(ruleset);
   const cleanClass = classIndex.toLowerCase().replace(/[\s-]/g, '_');
   const cacheKey = `${activeRuleset}:${cleanClass}`;
+
+  if (activeRuleset === '2024' && !SUPPORTED_2024_CLASSES.includes(cleanClass)) {
+    return [];
+  }
 
   if (classLevelCache[cacheKey]) return classLevelCache[cacheKey];
 

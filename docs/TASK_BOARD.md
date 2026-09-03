@@ -12,16 +12,14 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Base Class Foundation
 → implemented / verified (12/12 core classes in /class/json/24/)
 
-2024 Base Class Progression
-→ implemented / verified (12/12 core classes in /class/levels/24/)
-
-2024 Base Class Features
-→ implemented / verified (12/12 core classes in /features/json/)
+2024 Base Class Progression & Feature Definitions
+→ implemented / verified (Fighter, Wizard, Cleric, Rogue in /class/levels/24/ and /features/json/)
+→ pending (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)
 
 2024 Subclasses & Subclass Features
 → pending (Subclass-specific progression levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
 
-Next active dependency: 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
+Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -31,7 +29,8 @@ Next active dependency: 2024 Subclasses & Subclass Features / 2024 Backgrounds &
 - [x] Confirm the current gap: Character Creator 2024 Species/Class resolution still points at shared/unversioned classic data.
 - [x] Ingest 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/`).
 - [x] Ingest 2024 Base Class Foundation (All 12 core classes under `/class/json/14/` vs `/24/`).
-- [x] Ingest 2024 Base Class Levels / Features Level 1-20 progression for all 12 core classes under `/class/levels/24/` and `/features/json/`.
+- [ ] Ingest 2024 Class Features & 1-20 Progressions for Fighter, Wizard, Cleric, Rogue under `/class/levels/24/` and `/features/json/` (PR under review).
+- [ ] Ingest 2024 Class Features & 1-20 Progressions for remaining 8 core classes.
 - [ ] Ingest 2024 Subclasses & Subclass Features.
 - [ ] Ingest 2024 Backgrounds/Origins.
 - [ ] Integrate 2024 Feats where rules differ.
