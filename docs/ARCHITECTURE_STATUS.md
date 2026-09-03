@@ -30,9 +30,11 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
 - **Versioned Domain Coverage:**
   - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
-  - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: Fighter, Wizard, Cleric, Rogue; remaining classes pending)
-  - 2024 Class Levels / Features (`14/` vs `24/` — Level 1 foundation implemented / verified for Fighter, Wizard, Cleric, Rogue; feature dependencies audited)
-  - Next active dependency: 2024 Class Features / Backgrounds & Origins
+  - 2024 Base Class Foundation: 12/12 ✅ (`14/` vs `24/` — Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)
+  - 2024 Base Class Progression: 12/12 ✅ (`14/` vs `24/` — level 1-20 base progression level files & arrays for all 12 core classes)
+  - 2024 Base Class Features: 12/12 ✅ (canonical 2024 base class feature definitions for all 12 classes)
+  - 2024 Subclass Features: pending ⏳ (subclass feature implementation pending)
+  - Next active dependency: 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)
