@@ -29,7 +29,7 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(fighter24?.weapon_mastery?.count).toBe(3);
 
     const wizard24 = await fetchClassData('wizard', '2024');
-    expect(wizard24?.spellcasting?.info?.some((i: any) => i.name === 'Spellbook')).toBe(true);
+    expect(wizard24?.starting_equipment?.some((e: any) => e.equipment?.index === 'spellbook')).toBe(true);
 
     const rogue24 = await fetchClassData('rogue', '2024');
     expect(rogue24?.weapon_mastery?.count).toBe(2);
@@ -275,6 +275,53 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(wizard19?.ability_score_bonuses).toBe(4);
     expect(cleric19?.ability_score_bonuses).toBe(4);
     expect(rogue19?.ability_score_bonuses).toBe(5);
+  });
+
+  it('verifies 2024 Rogue Ability Score Improvement progression counts (levels 4, 8, 10, 12, 16, 19)', async () => {
+    const rogueLvl4 = await atlasService.loadLevelData('rogue', 4, '2024');
+    const rogueLvl8 = await atlasService.loadLevelData('rogue', 8, '2024');
+    const rogueLvl10 = await atlasService.loadLevelData('rogue', 10, '2024');
+    const rogueLvl12 = await atlasService.loadLevelData('rogue', 12, '2024');
+    const rogueLvl16 = await atlasService.loadLevelData('rogue', 16, '2024');
+    const rogueLvl19 = await atlasService.loadLevelData('rogue', 19, '2024');
+
+    expect(rogueLvl4?.ability_score_bonuses).toBe(1);
+    expect(rogueLvl8?.ability_score_bonuses).toBe(2);
+    expect(rogueLvl10?.ability_score_bonuses).toBe(3);
+    expect(rogueLvl12?.ability_score_bonuses).toBe(4);
+    expect(rogueLvl16?.ability_score_bonuses).toBe(5);
+    expect(rogueLvl19?.ability_score_bonuses).toBe(5);
+  });
+
+  it('ensures no fake placeholder feature definitions exist across 2024 class levels', async () => {
+    const classes = [
+      'barbarian', 'bard', 'cleric', 'druid', 'fighter',
+      'monk', 'paladin', 'ranger', 'rogue', 'sorcerer',
+      'warlock', 'wizard'
+    ];
+    const placeholderPatterns = [/placeholder/i, /feature from your/i, /you gain a feature/i];
+
+    for (const className of classes) {
+      const levels = await fetchClassLevels(className, '2024');
+      for (const lvlData of levels) {
+        if (Array.isArray(lvlData?.features)) {
+          for (const featRef of lvlData.features) {
+            const featData = await atlasService.loadFeature(featRef.index);
+            expect(featData).not.toBeNull();
+
+            const descText = Array.isArray(featData?.desc)
+              ? featData.desc.join(' ')
+              : featData?.desc || '';
+
+            expect(descText.trim().length).toBeGreaterThan(10);
+
+            for (const pattern of placeholderPatterns) {
+              expect(descText).not.toMatch(pattern);
+            }
+          }
+        }
+      }
+    }
   });
 
   it('validates precise 2024 mechanics for Fighter, Wizard, Cleric, and Rogue features', async () => {
