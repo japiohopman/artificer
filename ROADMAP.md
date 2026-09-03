@@ -13,20 +13,23 @@
     2024 Species Foundation
     ✓ 5/10 species (Human, Dwarf, Elf, Halfling, Orc)
 
-    2024 Class Foundation
+    2024 Base Class Foundation
     ✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard)
 
-    2024 Class Progression
-    ✓ 12/12 core classes (levels 1-20 for all classes)
+    2024 Base Class Progression
+    ✓ 12/12 core classes (levels 1–20 base class level files & arrays for all 12 core classes)
 
-    2024 Class Features
-    ✓ 12/12 core classes (canonical feature definitions for all 12 core classes)
+    2024 Base Class Features
+    ✓ 12/12 core classes (canonical base class feature definitions for all 12 core classes)
 
-    Next active dependency: 2024 Backgrounds & Origins / Origin Feats.
+    2024 Subclasses & Subclass Features
+    ⏳ Pending (Subclass-specific feature levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
+
+    Next active dependency: 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Class Foundation (complete for all 12 core classes) → 2024 Class Progression & Features (complete for all 12 core classes) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Base Class Progression & Features (12/12 core classes complete) → 2024 Subclasses & Subclass Features (pending) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
-  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths.
+  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths; no fake/generic placeholder feature definitions exist.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.
   - **Docs:** `docs/audits/ruleset-2024-gap-analysis.md` is the current audit; update it as implementation closes gaps.
 

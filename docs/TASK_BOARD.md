@@ -9,16 +9,19 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Species Foundation
 → implemented / verified (Human, Dwarf, Elf, Halfling, Orc)
 
-2024 Class Foundation
+2024 Base Class Foundation
 → implemented / verified (12/12 core classes in /class/json/24/)
 
-2024 Class Progression
+2024 Base Class Progression
 → implemented / verified (12/12 core classes in /class/levels/24/)
 
-2024 Class Features
+2024 Base Class Features
 → implemented / verified (12/12 core classes in /features/json/)
 
-Next active dependency: 2024 Backgrounds & Origins / Origin Feats.
+2024 Subclasses & Subclass Features
+→ pending (Subclass-specific progression levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
+
+Next active dependency: 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -27,8 +30,9 @@ Next active dependency: 2024 Backgrounds & Origins / Origin Feats.
 - [x] Complete `docs/audits/ruleset-2024-gap-analysis.md`.
 - [x] Confirm the current gap: Character Creator 2024 Species/Class resolution still points at shared/unversioned classic data.
 - [x] Ingest 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/`).
-- [x] Ingest 2024 Class Foundation (All 12 core classes under `/class/json/14/` vs `/24/`).
-- [x] Ingest 2024 Class Levels / Features Level 1-20 progression for all 12 core classes under `/class/levels/24/` and `/features/json/`.
+- [x] Ingest 2024 Base Class Foundation (All 12 core classes under `/class/json/14/` vs `/24/`).
+- [x] Ingest 2024 Base Class Levels / Features Level 1-20 progression for all 12 core classes under `/class/levels/24/` and `/features/json/`.
+- [ ] Ingest 2024 Subclasses & Subclass Features.
 - [ ] Ingest 2024 Backgrounds/Origins.
 - [ ] Integrate 2024 Feats where rules differ.
 - [ ] Integrate 2024 Spells where rules differ.
