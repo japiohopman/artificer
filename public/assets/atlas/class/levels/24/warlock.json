@@ -43,7 +43,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 1,
-      "invocations_known": 2
+      "invocations_known": 3
     },
     "index": "warlock_level_2",
     "class": {
@@ -68,7 +68,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 2,
-      "invocations_known": 2
+      "invocations_known": 3
     },
     "index": "warlock_level_3",
     "class": {
@@ -93,7 +93,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 2,
-      "invocations_known": 2
+      "invocations_known": 3
     },
     "index": "warlock_level_4",
     "class": {
@@ -112,7 +112,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 3,
-      "invocations_known": 3
+      "invocations_known": 5
     },
     "index": "warlock_level_5",
     "class": {
@@ -131,7 +131,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 3,
-      "invocations_known": 3
+      "invocations_known": 5
     },
     "index": "warlock_level_6",
     "class": {
@@ -150,7 +150,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 4,
-      "invocations_known": 4
+      "invocations_known": 6
     },
     "index": "warlock_level_7",
     "class": {
@@ -175,7 +175,7 @@
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 4,
-      "invocations_known": 4
+      "invocations_known": 6
     },
     "index": "warlock_level_8",
     "class": {
@@ -190,11 +190,17 @@
     "level": 9,
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
-    "features": [],
+    "features": [
+      {
+        "index": "contact_patron_2024",
+        "name": "Contact Patron",
+        "url": "/assets/atlas/features/json/contact_patron_2024.json"
+      }
+    ],
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 5,
-      "invocations_known": 5
+      "invocations_known": 7
     },
     "index": "warlock_level_9",
     "class": {
@@ -207,13 +213,13 @@
   },
   {
     "level": 10,
-    "ability_score_bonuses": 3,
+    "ability_score_bonuses": 2,
     "prof_bonus": 4,
     "features": [],
     "class_specific": {
       "pact_slots": 2,
       "pact_slot_level": 5,
-      "invocations_known": 5
+      "invocations_known": 7
     },
     "index": "warlock_level_10",
     "class": {
@@ -226,7 +232,7 @@
   },
   {
     "level": 11,
-    "ability_score_bonuses": 3,
+    "ability_score_bonuses": 2,
     "prof_bonus": 4,
     "features": [
       {
@@ -238,7 +244,7 @@
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 5
+      "invocations_known": 7
     },
     "index": "warlock_level_11",
     "class": {
@@ -251,7 +257,7 @@
   },
   {
     "level": 12,
-    "ability_score_bonuses": 4,
+    "ability_score_bonuses": 3,
     "prof_bonus": 4,
     "features": [
       {
@@ -263,7 +269,7 @@
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 6
+      "invocations_known": 8
     },
     "index": "warlock_level_12",
     "class": {
@@ -276,7 +282,7 @@
   },
   {
     "level": 13,
-    "ability_score_bonuses": 4,
+    "ability_score_bonuses": 3,
     "prof_bonus": 5,
     "features": [
       {
@@ -288,7 +294,7 @@
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 6
+      "invocations_known": 8
     },
     "index": "warlock_level_13",
     "class": {
@@ -301,13 +307,13 @@
   },
   {
     "level": 14,
-    "ability_score_bonuses": 4,
+    "ability_score_bonuses": 3,
     "prof_bonus": 5,
     "features": [],
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 6
+      "invocations_known": 8
     },
     "index": "warlock_level_14",
     "class": {
@@ -320,7 +326,7 @@
   },
   {
     "level": 15,
-    "ability_score_bonuses": 4,
+    "ability_score_bonuses": 3,
     "prof_bonus": 5,
     "features": [
       {
@@ -332,7 +338,7 @@
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 7
+      "invocations_known": 9
     },
     "index": "warlock_level_15",
     "class": {
@@ -345,7 +351,7 @@
   },
   {
     "level": 16,
-    "ability_score_bonuses": 5,
+    "ability_score_bonuses": 4,
     "prof_bonus": 5,
     "features": [
       {
@@ -357,7 +363,7 @@
     "class_specific": {
       "pact_slots": 3,
       "pact_slot_level": 5,
-      "invocations_known": 7
+      "invocations_known": 9
     },
     "index": "warlock_level_16",
     "class": {
@@ -370,7 +376,7 @@
   },
   {
     "level": 17,
-    "ability_score_bonuses": 5,
+    "ability_score_bonuses": 4,
     "prof_bonus": 6,
     "features": [
       {
@@ -380,9 +386,9 @@
       }
     ],
     "class_specific": {
-      "pact_slots": 3,
+      "pact_slots": 4,
       "pact_slot_level": 5,
-      "invocations_known": 7
+      "invocations_known": 9
     },
     "index": "warlock_level_17",
     "class": {
@@ -395,13 +401,13 @@
   },
   {
     "level": 18,
-    "ability_score_bonuses": 5,
+    "ability_score_bonuses": 4,
     "prof_bonus": 6,
     "features": [],
     "class_specific": {
-      "pact_slots": 3,
+      "pact_slots": 4,
       "pact_slot_level": 5,
-      "invocations_known": 8
+      "invocations_known": 10
     },
     "index": "warlock_level_18",
     "class": {
@@ -414,7 +420,7 @@
   },
   {
     "level": 19,
-    "ability_score_bonuses": 5,
+    "ability_score_bonuses": 4,
     "prof_bonus": 6,
     "features": [
       {
@@ -424,9 +430,9 @@
       }
     ],
     "class_specific": {
-      "pact_slots": 3,
+      "pact_slots": 4,
       "pact_slot_level": 5,
-      "invocations_known": 8
+      "invocations_known": 10
     },
     "index": "warlock_level_19",
     "class": {
@@ -439,7 +445,7 @@
   },
   {
     "level": 20,
-    "ability_score_bonuses": 5,
+    "ability_score_bonuses": 4,
     "prof_bonus": 6,
     "features": [
       {
@@ -449,9 +455,9 @@
       }
     ],
     "class_specific": {
-      "pact_slots": 3,
+      "pact_slots": 4,
       "pact_slot_level": 5,
-      "invocations_known": 8
+      "invocations_known": 10
     },
     "index": "warlock_level_20",
     "class": {

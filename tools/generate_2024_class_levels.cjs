@@ -74,7 +74,7 @@ const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21
 const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
 const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
 const sorcererPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
+const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
 
 // --- FIGHTER 2024 ---
 function buildFighterLevel(lvl) {
@@ -330,8 +330,10 @@ function buildBardLevel(lvl) {
   if (lvl === 6) features.push(featureRef("countercharm_2024", "Countercharm"));
   if (lvl === 7) features.push(featureRef("expertise_bard_2_2024", "Expertise (Level 7)"));
   if (lvl === 8) features.push(featureRef("bard_ability_score_improvement_2_2024", "Ability Score Improvement"));
-  if (lvl === 9) features.push(featureRef("bardic_inspiration_d10_2024", "Bardic Inspiration (d10)"));
-  if (lvl === 10) features.push(featureRef("magical_secrets_2024", "Magical Secrets"));
+  if (lvl === 10) {
+    features.push(featureRef("bardic_inspiration_d10_2024", "Bardic Inspiration (d10)"));
+    features.push(featureRef("magical_secrets_2024", "Magical Secrets"));
+  }
   if (lvl === 12) features.push(featureRef("bard_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 15) features.push(featureRef("bardic_inspiration_d12_2024", "Bardic Inspiration (d12)"));
   if (lvl === 16) features.push(featureRef("bard_ability_score_improvement_4_2024", "Ability Score Improvement"));
@@ -341,7 +343,7 @@ function buildBardLevel(lvl) {
 
   const slots = casterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
-  const inspirationDie = lvl >= 15 ? "d12" : (lvl >= 9 ? "d10" : (lvl >= 5 ? "d8" : "d6"));
+  const inspirationDie = lvl >= 15 ? "d12" : (lvl >= 10 ? "d10" : (lvl >= 5 ? "d8" : "d6"));
 
   return {
     level: lvl,
@@ -384,13 +386,14 @@ function buildDruidLevel(lvl) {
   const slots = casterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
   const maxCr = lvl >= 8 ? 1 : (lvl >= 4 ? 0.5 : 0.25);
+  const wildShapeUses = lvl >= 17 ? 4 : (lvl >= 6 ? 3 : 2);
 
   return {
     level: lvl,
     ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
-    class_specific: { wild_shape_max_cr: maxCr, wild_shape_uses: 2 },
+    class_specific: { wild_shape_max_cr: maxCr, wild_shape_uses: wildShapeUses },
     index: `druid_level_${lvl}`,
     class: { index: "druid", name: "Druid", url: "/assets/atlas/class/json/24/druid.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/druid_level_${lvl}.json`,
@@ -424,19 +427,19 @@ function buildMonkLevel(lvl) {
     features.push(featureRef("stunning_strike_2024", "Stunning Strike"));
   }
   if (lvl === 6) features.push(featureRef("empowered_strikes_2024", "Empowered Strikes"));
-  if (lvl === 7) {
-    features.push(featureRef("evasion_monk_2024", "Evasion"));
-    features.push(featureRef("heightened_focus_2024", "Heightened Focus"));
-  }
+  if (lvl === 7) features.push(featureRef("evasion_monk_2024", "Evasion"));
   if (lvl === 8) features.push(featureRef("monk_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("acrobatic_movement_2024", "Acrobatic Movement"));
-  if (lvl === 10) features.push(featureRef("self_restoration_2024", "Self-Restoration"));
+  if (lvl === 10) {
+    features.push(featureRef("heightened_focus_2024", "Heightened Focus"));
+    features.push(featureRef("self_restoration_2024", "Self-Restoration"));
+  }
   if (lvl === 12) features.push(featureRef("monk_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 13) features.push(featureRef("deflect_energy_2024", "Deflect Energy"));
   if (lvl === 14) features.push(featureRef("disciplined_survivor_2024", "Disciplined Survivor"));
   if (lvl === 15) features.push(featureRef("perfect_focus_2024", "Perfect Focus"));
   if (lvl === 16) features.push(featureRef("monk_ability_score_improvement_4_2024", "Ability Score Improvement"));
-  if (lvl === 18) features.push(featureRef("empty_body_2024", "Empty Body"));
+  if (lvl === 18) features.push(featureRef("superior_defense_2024", "Superior Defense"));
   if (lvl === 19) features.push(featureRef("epic_boon_monk_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("body_and_mind_2024", "Body and Mind"));
 
@@ -488,6 +491,7 @@ function buildPaladinLevel(lvl) {
   if (lvl === 16) features.push(featureRef("paladin_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 18) features.push(featureRef("aura_expansion_2024", "Aura Expansion"));
   if (lvl === 19) features.push(featureRef("epic_boon_paladin_2024", "Epic Boon"));
+  if (lvl === 20) features.push(featureRef("holy_nimbus_2024", "Holy Nimbus"));
 
   const halfSlots = halfCasterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
@@ -531,6 +535,7 @@ function buildRangerLevel(lvl) {
   if (lvl === 14) features.push(featureRef("nature_veil_2024", "Nature's Veil"));
   if (lvl === 16) features.push(featureRef("ranger_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 17) features.push(featureRef("precise_hunter_2024", "Precise Hunter"));
+  if (lvl === 18) features.push(featureRef("feral_senses_2024", "Feral Senses"));
   if (lvl === 19) features.push(featureRef("epic_boon_ranger_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("foe_slayer_2024", "Foe Slayer"));
 
@@ -606,6 +611,7 @@ function buildWarlockLevel(lvl) {
   if (lvl === 3) features.push(featureRef("warlock_subclass_2024", "Warlock Subclass"));
   if (lvl === 4) features.push(featureRef("warlock_ability_score_improvement_1_2024", "Ability Score Improvement"));
   if (lvl === 8) features.push(featureRef("warlock_ability_score_improvement_2_2024", "Ability Score Improvement"));
+  if (lvl === 9) features.push(featureRef("contact_patron_2024", "Contact Patron"));
   if (lvl === 11) features.push(featureRef("mystic_arcanum_11_2024", "Mystic Arcanum (6th Level)"));
   if (lvl === 12) features.push(featureRef("warlock_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 13) features.push(featureRef("mystic_arcanum_13_2024", "Mystic Arcanum (7th Level)"));
@@ -615,10 +621,10 @@ function buildWarlockLevel(lvl) {
   if (lvl === 19) features.push(featureRef("epic_boon_warlock_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("eldritch_master_2024", "Eldritch Master"));
 
-  const pactSlots = lvl >= 11 ? 3 : (lvl >= 2 ? 2 : 1);
+  const pactSlots = lvl >= 17 ? 4 : (lvl >= 11 ? 3 : (lvl >= 2 ? 2 : 1));
   const slotLevel = lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 3 ? 2 : 1)));
-  const invocations = lvl >= 18 ? 8 : (lvl >= 15 ? 7 : (lvl >= 12 ? 6 : (lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 2 ? 2 : 1))))));
-  const asiCount = [4, 8, 10, 12, 16].filter(l => l <= lvl).length;
+  const invocations = lvl >= 18 ? 10 : (lvl >= 15 ? 9 : (lvl >= 12 ? 8 : (lvl >= 9 ? 7 : (lvl >= 7 ? 6 : (lvl >= 5 ? 5 : (lvl >= 2 ? 3 : 1))))));
+  const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,

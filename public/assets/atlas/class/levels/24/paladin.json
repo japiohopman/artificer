@@ -644,7 +644,13 @@
     "level": 20,
     "ability_score_bonuses": 4,
     "prof_bonus": 6,
-    "features": [],
+    "features": [
+      {
+        "index": "holy_nimbus_2024",
+        "name": "Holy Nimbus",
+        "url": "/assets/atlas/features/json/holy_nimbus_2024.json"
+      }
+    ],
     "weapon_mastery": {
       "count": 2,
       "description": "You can master 2 simple or martial weapons of your choice."

@@ -306,15 +306,9 @@
     "level": 9,
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
-    "features": [
-      {
-        "index": "bardic_inspiration_d10_2024",
-        "name": "Bardic Inspiration (d10)",
-        "url": "/assets/atlas/features/json/bardic_inspiration_d10_2024.json"
-      }
-    ],
+    "features": [],
     "class_specific": {
-      "bardic_inspiration_die": "d10"
+      "bardic_inspiration_die": "d8"
     },
     "index": "bard_level_9",
     "class": {
@@ -343,6 +337,11 @@
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
     "features": [
+      {
+        "index": "bardic_inspiration_d10_2024",
+        "name": "Bardic Inspiration (d10)",
+        "url": "/assets/atlas/features/json/bardic_inspiration_d10_2024.json"
+      },
       {
         "index": "magical_secrets_2024",
         "name": "Magical Secrets",

@@ -578,7 +578,13 @@
     "level": 18,
     "ability_score_bonuses": 4,
     "prof_bonus": 6,
-    "features": [],
+    "features": [
+      {
+        "index": "feral_senses_2024",
+        "name": "Feral Senses",
+        "url": "/assets/atlas/features/json/feral_senses_2024.json"
+      }
+    ],
     "weapon_mastery": {
       "count": 2,
       "description": "You can master 2 simple or martial weapons of your choice."
