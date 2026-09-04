@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 
 describe('Ruleset Resolution Audit Tests', () => {
@@ -324,5 +324,53 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(strokeOfLuck24).not.toBeNull();
     expect(strokeOfLuck24.desc.join(' ')).toContain('fail a D20 Test');
     expect(strokeOfLuck24.feature_specific?.effect).toBe('turn_failed_d20_test_into_20');
+  });
+
+  it('verifies 2024 subclass data resolution, level timing, referential integrity, and placeholder protection', async () => {
+    const subclasses2024 = [
+      { index: 'champion_2024', expectedClass: 'fighter', expectedLevels: [3, 7, 10, 15] },
+      { index: 'battle_master_2024', expectedClass: 'fighter', expectedLevels: [3, 7, 10, 15] },
+      { index: 'evocation_2024', expectedClass: 'wizard', expectedLevels: [3, 6, 10, 14] },
+      { index: 'life_domain_2024', expectedClass: 'cleric', expectedLevels: [3, 6, 17] },
+      { index: 'thief_2024', expectedClass: 'rogue', expectedLevels: [3, 9, 13, 17] },
+      { index: 'assassin_2024', expectedClass: 'rogue', expectedLevels: [3, 9, 13, 17] }
+    ];
+
+    for (const subConfig of subclasses2024) {
+      const subclassData = await fetchSubclassData(subConfig.index, '2024');
+      expect(subclassData).not.toBeNull();
+      expect(subclassData?.rulesetContext).toBe('2024');
+      expect(subclassData?.class?.index).toBe(subConfig.expectedClass);
+
+      const actualLevels = subclassData?.subclass_levels?.map((l: any) => l.level);
+      expect(actualLevels).toEqual(subConfig.expectedLevels);
+
+      for (const levelGroup of subclassData?.subclass_levels || []) {
+        for (const featRef of levelGroup.features || []) {
+          const feat = await atlasService.loadFeature(featRef.index);
+          expect(feat).not.toBeNull();
+          expect(feat.index).toBe(featRef.index);
+          expect(feat.name).toBeTruthy();
+
+          const desc = Array.isArray(feat.desc) ? feat.desc.join(' ') : feat.desc || '';
+          expect(desc.length).toBeGreaterThanOrEqual(30);
+
+          expect(desc.toLowerCase()).not.toContain('feature from your');
+          expect(desc.toLowerCase()).not.toContain('placeholder');
+          expect(desc.toLowerCase()).not.toContain('you gain a feature');
+        }
+      }
+    }
+
+    const champion24 = await atlasService.loadSubclass('champion_2024', '2024');
+    expect(champion24).not.toBeNull();
+    expect(champion24?.rulesetContext).toBe('2024');
+
+    const champion14 = await fetchSubclassData('champion', '2014');
+    expect(champion14).not.toBeNull();
+    expect(champion14?.rulesetContext).toBe('2014');
+
+    const unmigrated24 = await fetchSubclassData('wild_heart_2024', '2024');
+    expect(unmigrated24).toBeNull();
   });
 });

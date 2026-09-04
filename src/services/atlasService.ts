@@ -451,10 +451,9 @@ class AtlasService {
     );
   }
 
-  async loadSubclass(index: string): Promise<any | null> {
-    return this.fetchAtlasData(
-      `/assets/atlas/subclasses/json/${index.toLowerCase().replace(/[\s-]/g, '_')}.json`
-    );
+  async loadSubclass(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
+    const { fetchSubclassData } = await import('./storageService');
+    return fetchSubclassData(index, ruleset);
   }
 
   async loadShopArchetypes(): Promise<any> {

@@ -1,0 +1,10 @@
+{
+  "index": "heroic_warrior_champion_2024",
+  "name": "Heroic Warrior",
+  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
+  "subclass": { "index": "champion_2024", "name": "Champion", "url": "/assets/atlas/subclasses/json/24/champion_2024.json" },
+  "level": 7,
+  "desc": [ "The thrill of battle drives you onward. At the start of your turn in combat, if you do not currently have Heroic Inspiration, you gain Heroic Inspiration." ],
+  "feature_specific": { "turn_start_effect": "gain_heroic_inspiration_if_none" },
+  "url": "/assets/atlas/features/json/heroic_warrior_champion_2024.json"
+}

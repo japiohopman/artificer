@@ -1,0 +1,10 @@
+{
+  "index": "channel_divinity_preserve_life_2024",
+  "name": "Channel Divinity: Preserve Life",
+  "class": { "index": "cleric", "name": "Cleric", "url": "/assets/atlas/class/json/24/cleric.json" },
+  "subclass": { "index": "life_domain_2024", "name": "Life Domain", "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json" },
+  "level": 3,
+  "desc": [ "As a Magic action, you present your Holy Symbol and evoke healing energy that can restore Hit Points equal to 5 times your Cleric level. Choose conscious creatures within 30 feet of yourself and divide those Hit Points among them. This feature can't restore a creature to more than half of its Hit Point maximum." ],
+  "feature_specific": { "pool_formula": "5_x_cleric_level", "max_target_hp_percentage": 50 },
+  "url": "/assets/atlas/features/json/channel_divinity_preserve_life_2024.json"
+}

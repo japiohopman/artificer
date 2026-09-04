@@ -1,0 +1,56 @@
+{
+  "index": "life_domain_2024",
+  "name": "Life Domain",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "desc": [
+    "The Life Domain focuses on the vibrant positive energy that sustains all living things. Clerics who serve deities of life are comforting healers, staunch protectors against undeath, and bringers of vitality in times of sickness or peril."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "domain_spells_life_2024",
+          "name": "Life Domain Spells",
+          "url": "/assets/atlas/features/json/domain_spells_life_2024.json"
+        },
+        {
+          "index": "disciple_of_life_2024",
+          "name": "Disciple of Life",
+          "url": "/assets/atlas/features/json/disciple_of_life_2024.json"
+        },
+        {
+          "index": "channel_divinity_preserve_life_2024",
+          "name": "Channel Divinity: Preserve Life",
+          "url": "/assets/atlas/features/json/channel_divinity_preserve_life_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "blessed_healer_2024",
+          "name": "Blessed Healer",
+          "url": "/assets/atlas/features/json/blessed_healer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "supreme_healing_2024",
+          "name": "Supreme Healing",
+          "url": "/assets/atlas/features/json/supreme_healing_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json",
+  "rulesetContext": "2024"
+}

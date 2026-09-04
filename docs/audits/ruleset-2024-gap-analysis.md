@@ -1,6 +1,6 @@
 # 📊 Ruleset Data Audit & 2024 Gap Analysis
 
-**Branch:** `feat/2024-class-features-foundation`
+**Branch:** `feat/2024-subclasses-foundation`
 **Date:** March 2026
 **Scope:** Evaluation of D&D 5e (2014) vs D&D 5.5e (2024) ruleset data support across Artificer Atlas datasets, storage loaders, and the Character Creator.
 
@@ -39,9 +39,10 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Fo
 ⏳ Pending (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)
 
 2024 Subclasses & Subclass Features
-⏳ Pending (Subclass-specific progression levels legitimately maintain features: [] until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
+✓ Implemented 6 subclasses across 4 supported 2024 classes (Fighter: Champion, Battle Master; Wizard: Evoker; Cleric: Life Domain; Rogue: Thief, Assassin)
+⏳ Pending remaining 2024 subclasses for Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock
 
-Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats
+Next active dependency: 2024 Progressions for remaining 8 classes / remaining 2024 Subclasses / 2024 Backgrounds & Origins / Origin Feats
 ```
 
 Subclasses, Backgrounds/Origins, and Spells currently resolve shared/unversioned classic 2014 data. Note: Base foundation implemented ≠ complete 2024 coverage across all subclass/origin records.
@@ -61,7 +62,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Classes (Base)** | Supported | **Implemented (12/12)** | Versioned directories exist (`/class/json/14/` vs `/24/`). All 12 core 2024 base class definitions implemented in `/assets/atlas/class/json/24/`. |
 | **Class Progressions (1-20)** | Supported | **Implemented (4/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for Fighter, Wizard, Cleric, and Rogue. |
 | **Class Features** | Supported | **Implemented (4/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for Fighter, Wizard, Cleric, and Rogue with distinct `_2024` IDs. |
-| **Subclasses & Subclass Features** | Supported | **Pending** | Subclass-specific levels maintain `features: []` until subclass data ingestion. Resolves unversioned `/assets/atlas/subclasses/json/`. |
+| **Subclasses & Subclass Features** | Supported | **Implemented (4/12 classes)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). 6 subclasses implemented for Fighter, Wizard, Cleric, Rogue with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |
 | **Feats** | Supported | **Partial** | Versioned directories exist (`/feats/json/14/` vs `/24/`). 2024 origin, general, and epic boon feats populated in `/24/`. |
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
@@ -87,7 +88,8 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 - `fetchEquipmentData(index, ruleset)`: Checks `/assets/atlas/equipment/json/14/` vs `/24/`.
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
-- `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `action_surge_2024`, `cunning_strike_2024`, `second_wind_2024`).
+- `fetchSubclassData(index, ruleset)`: Checks `/assets/atlas/subclasses/json/14/` vs `/24/`.
+- `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `action_surge_2024`, `improved_critical_champion_2024`, `sculpt_spells_2024`).
 
 ---
 

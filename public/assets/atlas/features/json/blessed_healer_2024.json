@@ -1,0 +1,10 @@
+{
+  "index": "blessed_healer_2024",
+  "name": "Blessed Healer",
+  "class": { "index": "cleric", "name": "Cleric", "url": "/assets/atlas/class/json/24/cleric.json" },
+  "subclass": { "index": "life_domain_2024", "name": "Life Domain", "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json" },
+  "level": 6,
+  "desc": [ "The healing spells you cast on others heal you as well. When you cast a spell using a spell slot that restores Hit Points to a creature other than yourself, you regain Hit Points equal to 2 + the spell's level." ],
+  "feature_specific": { "self_heal_amount": "2_plus_spell_level" },
+  "url": "/assets/atlas/features/json/blessed_healer_2024.json"
+}

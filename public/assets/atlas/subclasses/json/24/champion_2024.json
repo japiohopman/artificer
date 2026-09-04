@@ -1,0 +1,66 @@
+{
+  "index": "champion_2024",
+  "name": "Champion",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "desc": [
+    "The Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows, inspire heroic acts, and withstand brutal battles."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "improved_critical_champion_2024",
+          "name": "Improved Critical",
+          "url": "/assets/atlas/features/json/improved_critical_champion_2024.json"
+        },
+        {
+          "index": "remarkable_athlete_champion_2024",
+          "name": "Remarkable Athlete",
+          "url": "/assets/atlas/features/json/remarkable_athlete_champion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "additional_fighting_style_champion_2024",
+          "name": "Additional Fighting Style",
+          "url": "/assets/atlas/features/json/additional_fighting_style_champion_2024.json"
+        },
+        {
+          "index": "heroic_warrior_champion_2024",
+          "name": "Heroic Warrior",
+          "url": "/assets/atlas/features/json/heroic_warrior_champion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "heroic_critical_champion_2024",
+          "name": "Heroic Critical",
+          "url": "/assets/atlas/features/json/heroic_critical_champion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "superior_critical_champion_2024",
+          "name": "Superior Critical",
+          "url": "/assets/atlas/features/json/superior_critical_champion_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/champion_2024.json",
+  "rulesetContext": "2024"
+}

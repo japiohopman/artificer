@@ -1,0 +1,10 @@
+{
+  "index": "relentless_battle_master_2024",
+  "name": "Relentless",
+  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
+  "subclass": { "index": "battle_master_2024", "name": "Battle Master", "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json" },
+  "level": 15,
+  "desc": [ "Once per turn when you use a Maneuver, you can roll a d8 and use the result instead of expending a Superiority Die. In addition, you learn 2 additional maneuvers and gain 1 additional Superiority Die (d12 at level 18)." ],
+  "feature_specific": { "bonus_superiority_dice": 1, "bonus_maneuvers": 2, "free_maneuver_die": "d8_per_turn" },
+  "url": "/assets/atlas/features/json/relentless_battle_master_2024.json"
+}

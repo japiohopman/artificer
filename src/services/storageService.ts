@@ -65,6 +65,138 @@ async function safeJson(res: Response): Promise<any> {
   }
 }
 
+const subclassCache: Record<string, any> = {};
+
+export async function fetchSubclassesList(ruleset?: '2014' | '2024', classFilter?: string): Promise<{ name: string; index: string; classIndex?: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/subclasses/json/${versionFolder}`);
+      let files: string[] = [];
+      if (fs.existsSync(dirPath)) {
+        files = fs.readdirSync(dirPath).filter((f: string) => f.endsWith('.json'));
+      } else if (activeRuleset === '2014') {
+        const rootDir = pathModule.resolve(process.cwd(), 'public/assets/atlas/subclasses/json');
+        if (fs.existsSync(rootDir)) {
+          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json'));
+        }
+      }
+      const list = files.map((f: string) => ({
+        name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+        index: f.replace('.json', '')
+      }));
+      return list;
+    } catch (e) {}
+  }
+
+  try {
+    const localRes = await fetch('/assets/atlas/subclasses/index.json');
+    if (localRes.ok) {
+      const data = await localRes.json();
+      if (Array.isArray(data)) {
+        return data.map((s: any) => ({
+          name: s.name || s.index.replace(/_/g, ' '),
+          index: s.index,
+          classIndex: s.class?.index
+        }));
+      }
+    }
+  } catch (e) {}
+
+  return [];
+}
+
+export async function fetchSubclassData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  if (!index) return null;
+
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const cacheKey = `${activeRuleset}:${index}`;
+  if (subclassCache[cacheKey]) return subclassCache[cacheKey];
+
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanIndex = index.toLowerCase().trim();
+  const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
+  const hyphenatedIndex = cleanIndex.replace(/[:_]/g, '-');
+
+  const candidatePaths: string[] = [
+    `/assets/atlas/subclasses/json/${versionFolder}/${underscoreIndex}.json`,
+    `/assets/atlas/subclasses/json/${versionFolder}/${hyphenatedIndex}.json`,
+  ];
+
+  if (versionFolder === '14') {
+    candidatePaths.push(`/assets/atlas/subclasses/json/${underscoreIndex}.json`);
+    candidatePaths.push(`/assets/atlas/subclasses/json/${hyphenatedIndex}.json`);
+  }
+
+  let data: any = null;
+  let resolvedPath: string | null = null;
+
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const candidate of candidatePaths) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          data = JSON.parse(fileContent);
+          resolvedPath = candidate;
+          break;
+        }
+      }
+    } catch (e) {}
+  }
+
+  if (!data) {
+    for (const path of candidatePaths) {
+      try {
+        const res = await fetch(path);
+        if (res.ok) {
+          const parsed = await safeJson(res);
+          if (parsed) {
+            data = parsed;
+            resolvedPath = path;
+            break;
+          }
+        }
+      } catch (e) {}
+    }
+  }
+
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/subclasses/json/${versionFolder}/${underscoreIndex}.json?t=${Date.now()}`;
+    try {
+      const res = await fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`);
+      data = await safeJson(res);
+      if (data) resolvedPath = githubUrl;
+    } catch (e) {
+      data = null;
+    }
+  }
+
+  if (!data) return null;
+
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
+
+  const result = {
+    ...data,
+    rulesetContext: actualRuleset,
+    imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'subclasses', cleanIndex)
+  };
+
+  subclassCache[cacheKey] = result;
+  return result;
+}
+
 export async function fetchRecruitNPCList(): Promise<{ name: string; path: string; index: string }[]> {
   try {
     const localRes = await fetch('/assets/atlas/characters/recruit_npc/index.json');

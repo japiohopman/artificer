@@ -1,0 +1,9 @@
+{
+  "index": "fast_hands_thief_2024",
+  "name": "Fast Hands",
+  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
+  "subclass": { "index": "thief_2024", "name": "Thief", "url": "/assets/atlas/subclasses/json/24/thief_2024.json" },
+  "level": 3,
+  "desc": [ "As a Bonus Action using Cunning Action, you can make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap, use the Utilize action, or activate a Magic Item that requires a Utilize action." ],
+  "url": "/assets/atlas/features/json/fast_hands_thief_2024.json"
+}

@@ -1,0 +1,61 @@
+{
+  "index": "thief_2024",
+  "name": "Thief",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "desc": [
+    "You discover your skills in the ancient thieves' guild or through lone practice in darkened alleyways. In addition to agility and stealth, you possess the ability to slip into places others can't reach and harness magical items that weren't intended for you."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "fast_hands_thief_2024",
+          "name": "Fast Hands",
+          "url": "/assets/atlas/features/json/fast_hands_thief_2024.json"
+        },
+        {
+          "index": "second_story_work_thief_2024",
+          "name": "Second-Story Work",
+          "url": "/assets/atlas/features/json/second_story_work_thief_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "features": [
+        {
+          "index": "supreme_sneak_thief_2024",
+          "name": "Supreme Sneak",
+          "url": "/assets/atlas/features/json/supreme_sneak_thief_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "features": [
+        {
+          "index": "use_magic_device_thief_2024",
+          "name": "Use Magic Device",
+          "url": "/assets/atlas/features/json/use_magic_device_thief_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "thiefs_reflexes_2024",
+          "name": "Thief's Reflexes",
+          "url": "/assets/atlas/features/json/thiefs_reflexes_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/thief_2024.json",
+  "rulesetContext": "2024"
+}

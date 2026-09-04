@@ -21,9 +21,9 @@
     ⏳ 8/12 remaining core classes pending level progression & feature definitions
 
     2024 Subclasses & Subclass Features
-    ⏳ Pending (Subclass-specific feature levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
+    ✓ 6 subclasses implemented across 4 supported 2024 classes (Fighter: Champion, Battle Master; Wizard: Evoker; Cleric: Life Domain; Rogue: Thief, Assassin; remaining 2024 subclasses pending)
 
-    Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
+    Next active dependency: 2024 Progressions for remaining 8 classes / remaining 2024 Subclasses / 2024 Backgrounds & Origins / Origin Feats.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
   - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (Fighter, Wizard, Cleric, Rogue complete) → Remaining 8 classes progressions/features (pending) → 2024 Subclasses & Subclass Features (pending) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.

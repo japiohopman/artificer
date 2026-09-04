@@ -30,15 +30,16 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Ruleset Selection Rule:** *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
 - **Versioned Domain Coverage:**
   - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
-  - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: Fighter, Wizard, Cleric, Rogue; remaining classes pending)
-  - 2024 Class Levels / Features (`14/` vs `24/` — Level 1 foundation implemented / verified for Fighter, Wizard, Cleric, Rogue; feature dependencies audited)
-  - Next active dependency: 2024 Class Features / Backgrounds & Origins
+  - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: All 12 core classes)
+  - 2024 Class Levels / Features (`14/` vs `24/` — levels 1–20 implemented / verified for Fighter, Wizard, Cleric, Rogue; remaining 8 core classes pending)
+  - 2024 Subclasses & Features (`14/` vs `24/` — 6 subclasses implemented / verified: Fighter [Champion, Battle Master], Wizard [Evoker], Cleric [Life Domain], Rogue [Thief, Assassin]; remaining 2024 subclasses pending)
+  - Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Backgrounds & Origins / Origin Feats
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)
   - Rules (`14/` vs `24/`)
   - Tables (`14/` vs `24/`)
-- **Unversioned / Missing 2024 Datasets:** Classes, Subclasses, Features, Backgrounds, and Spells currently exist as unversioned classic 2014 Atlas records. Full 2024 support for these remaining domains requires future ingestion from Foundry 6.0.x source files (`packs/_source/origins24/backgrounds/`, `packs/_source/classes24/`). See `docs/audits/ruleset-2024-gap-analysis.md`.
+- **Unversioned / Missing 2024 Datasets:** Remaining subclasses, Backgrounds/Origins, and Spells currently exist as unversioned classic 2014 Atlas records. See `docs/audits/ruleset-2024-gap-analysis.md`.
 - **Character Persistence Relationship:** `Character.ruleset` remains saved character metadata. Loading character saves into slots does not alter the active global game ruleset. Activating a character session (`setActiveCharacter` / `setMainCharacter`) explicitly synchronizes `useGameStore.ruleset` to the character's ruleset.
 
 Do not recreate the old monolithic store pattern.
