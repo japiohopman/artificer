@@ -32,11 +32,6 @@
           "index": "additional_fighting_style_champion_2024",
           "name": "Additional Fighting Style",
           "url": "/assets/atlas/features/json/additional_fighting_style_champion_2024.json"
-        },
-        {
-          "index": "heroic_warrior_champion_2024",
-          "name": "Heroic Warrior",
-          "url": "/assets/atlas/features/json/heroic_warrior_champion_2024.json"
         }
       ]
     },
@@ -44,9 +39,9 @@
       "level": 10,
       "features": [
         {
-          "index": "heroic_critical_champion_2024",
-          "name": "Heroic Critical",
-          "url": "/assets/atlas/features/json/heroic_critical_champion_2024.json"
+          "index": "heroic_warrior_champion_2024",
+          "name": "Heroic Warrior",
+          "url": "/assets/atlas/features/json/heroic_warrior_champion_2024.json"
         }
       ]
     },
@@ -57,6 +52,16 @@
           "index": "superior_critical_champion_2024",
           "name": "Superior Critical",
           "url": "/assets/atlas/features/json/superior_critical_champion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "survivor_champion_2024",
+          "name": "Survivor",
+          "url": "/assets/atlas/features/json/survivor_champion_2024.json"
         }
       ]
     }

@@ -70,7 +70,11 @@ const subclassCache: Record<string, any> = {};
 export async function fetchSubclassesList(ruleset?: '2014' | '2024', classFilter?: string): Promise<{ name: string; index: string; classIndex?: string }[]> {
   const activeRuleset = getActiveRulesetContext(ruleset);
   const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanClassFilter = classFilter ? classFilter.toLowerCase().trim() : undefined;
 
+  let list: { name: string; index: string; classIndex?: string }[] = [];
+
+  // Node CLI local filesystem fallback for unit test environments
   if (typeof window === 'undefined') {
     try {
       const fs = await import('fs');
@@ -82,32 +86,66 @@ export async function fetchSubclassesList(ruleset?: '2014' | '2024', classFilter
       } else if (activeRuleset === '2014') {
         const rootDir = pathModule.resolve(process.cwd(), 'public/assets/atlas/subclasses/json');
         if (fs.existsSync(rootDir)) {
-          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json'));
+          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json') && f !== 'index.json');
         }
       }
-      const list = files.map((f: string) => ({
-        name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
-        index: f.replace('.json', '')
-      }));
+
+      list = files.map((f: string) => {
+        const filePath = activeRuleset === '2024'
+          ? pathModule.resolve(process.cwd(), `public/assets/atlas/subclasses/json/${versionFolder}/${f}`)
+          : pathModule.resolve(process.cwd(), `public/assets/atlas/subclasses/json/${f}`);
+        let classIndex: string | undefined = undefined;
+        let name: string = f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+        try {
+          if (fs.existsSync(filePath)) {
+            const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            classIndex = content.class?.index;
+            if (content.name) name = content.name;
+          }
+        } catch (e) {}
+        return { name, index: f.replace('.json', ''), classIndex };
+      });
+
+      if (cleanClassFilter) {
+        list = list.filter(item => item.classIndex?.toLowerCase() === cleanClassFilter);
+      }
       return list;
     } catch (e) {}
   }
 
-  try {
-    const localRes = await fetch('/assets/atlas/subclasses/index.json');
-    if (localRes.ok) {
-      const data = await localRes.json();
-      if (Array.isArray(data)) {
-        return data.map((s: any) => ({
-          name: s.name || s.index.replace(/_/g, ' '),
-          index: s.index,
-          classIndex: s.class?.index
-        }));
+  // Browser / Network resolution
+  if (activeRuleset === '2024') {
+    // 2024 lists known 2024 subclass IDs
+    const known2024Subclasses = [
+      { index: 'champion_2024', name: 'Champion', classIndex: 'fighter' },
+      { index: 'battle_master_2024', name: 'Battle Master', classIndex: 'fighter' },
+      { index: 'evocation_2024', name: 'Evoker', classIndex: 'wizard' },
+      { index: 'life_domain_2024', name: 'Life Domain', classIndex: 'cleric' },
+      { index: 'thief_2024', name: 'Thief', classIndex: 'rogue' },
+      { index: 'assassin_2024', name: 'Assassin', classIndex: 'rogue' }
+    ];
+    list = known2024Subclasses;
+  } else {
+    try {
+      const localRes = await fetch('/assets/atlas/subclasses/index.json');
+      if (localRes.ok) {
+        const data = await localRes.json();
+        if (Array.isArray(data)) {
+          list = data.map((s: any) => ({
+            name: s.name || s.index.replace(/_/g, ' '),
+            index: s.index,
+            classIndex: s.class?.index
+          }));
+        }
       }
-    }
-  } catch (e) {}
+    } catch (e) {}
+  }
 
-  return [];
+  if (cleanClassFilter) {
+    list = list.filter(item => item.classIndex?.toLowerCase() === cleanClassFilter);
+  }
+
+  return list;
 }
 
 export async function fetchSubclassData(index: string, ruleset?: '2014' | '2024'): Promise<any> {

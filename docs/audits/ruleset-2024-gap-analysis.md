@@ -45,7 +45,7 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Fo
 Next active dependency: 2024 Progressions for remaining 8 classes / remaining 2024 Subclasses / 2024 Backgrounds & Origins / Origin Feats
 ```
 
-Subclasses, Backgrounds/Origins, and Spells currently resolve shared/unversioned classic 2014 data. Note: Base foundation implemented ≠ complete 2024 coverage across all subclass/origin records.
+Backgrounds/Origins and Spells currently resolve shared/unversioned classic 2014 data, while Subclasses resolve versioned `/24/` data for the six implemented 2024 subclasses across Fighter, Wizard, Cleric, and Rogue. Note: Base foundation implemented ≠ complete 2024 coverage across all subclass/origin records.
 
 Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
