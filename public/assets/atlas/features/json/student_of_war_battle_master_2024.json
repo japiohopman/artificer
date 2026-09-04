@@ -1,0 +1,9 @@
+{
+  "index": "student_of_war_battle_master_2024",
+  "name": "Student of War",
+  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
+  "subclass": { "index": "battle_master_2024", "name": "Battle Master", "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json" },
+  "level": 3,
+  "desc": [ "You gain proficiency with one type of Artisan's Tools of your choice and one skill proficiency from the Fighter skill list." ],
+  "url": "/assets/atlas/features/json/student_of_war_battle_master_2024.json"
+}

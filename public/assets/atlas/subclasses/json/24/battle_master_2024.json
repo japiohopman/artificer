@@ -1,0 +1,71 @@
+{
+  "index": "battle_master_2024",
+  "name": "Battle Master",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "desc": [
+    "Battle Masters view martial combat as an academic field, including subjects such as weaponsmithing and calligraphy. To a Battle Master, a weapon is a tool that requires study, practice, and tactical mastery to wield with maximum impact."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "combat_superiority_battle_master_2024",
+          "name": "Combat Superiority",
+          "url": "/assets/atlas/features/json/combat_superiority_battle_master_2024.json"
+        },
+        {
+          "index": "student_of_war_battle_master_2024",
+          "name": "Student of War",
+          "url": "/assets/atlas/features/json/student_of_war_battle_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "know_your_enemy_battle_master_2024",
+          "name": "Know Your Enemy",
+          "url": "/assets/atlas/features/json/know_your_enemy_battle_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "improved_combat_superiority_battle_master_2024",
+          "name": "Improved Combat Superiority",
+          "url": "/assets/atlas/features/json/improved_combat_superiority_battle_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "relentless_battle_master_2024",
+          "name": "Relentless",
+          "url": "/assets/atlas/features/json/relentless_battle_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "ultimate_combat_superiority_battle_master_2024",
+          "name": "Ultimate Combat Superiority",
+          "url": "/assets/atlas/features/json/ultimate_combat_superiority_battle_master_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json",
+  "rulesetContext": "2024"
+}

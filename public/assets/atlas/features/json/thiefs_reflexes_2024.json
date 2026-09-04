@@ -1,0 +1,10 @@
+{
+  "index": "thiefs_reflexes_2024",
+  "name": "Thief's Reflexes",
+  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
+  "subclass": { "index": "thief_2024", "name": "Thief", "url": "/assets/atlas/subclasses/json/24/thief_2024.json" },
+  "level": 17,
+  "desc": [ "You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature if you have the Surprised condition." ],
+  "feature_specific": { "extra_first_round_turn": true },
+  "url": "/assets/atlas/features/json/thiefs_reflexes_2024.json"
+}

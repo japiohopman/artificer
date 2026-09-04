@@ -1,0 +1,9 @@
+{
+  "index": "evocation_savant_2024",
+  "name": "Evocation Savant",
+  "class": { "index": "wizard", "name": "Wizard", "url": "/assets/atlas/class/json/24/wizard.json" },
+  "subclass": { "index": "evocation_2024", "name": "Evoker", "url": "/assets/atlas/subclasses/json/24/evocation_2024.json" },
+  "level": 3,
+  "desc": [ "Choose two 1st- or 2nd-level Evocation spells from the Wizard spell list to add to your spellbook for free. Whenever you gain access to a new level of spell slots in this class, choose one Evocation spell of that level from the Wizard spell list to add to your spellbook for free." ],
+  "url": "/assets/atlas/features/json/evocation_savant_2024.json"
+}

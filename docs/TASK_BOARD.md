@@ -17,9 +17,10 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 → pending (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)
 
 2024 Subclasses & Subclass Features
-→ pending (Subclass-specific progression levels legitimately maintain `features: []` until subclass feature data ingestion; fake/generic placeholder feature JSONs are strictly prohibited)
+→ implemented 6 subclasses across 4 supported 2024 classes (Fighter: Champion, Battle Master; Wizard: Evoker; Cleric: Life Domain; Rogue: Thief, Assassin)
+→ pending remaining 2024 subclasses for Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock
 
-Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Subclasses & Subclass Features / 2024 Backgrounds & Origins / Origin Feats.
+Next active dependency: 2024 Progressions for remaining 8 classes / remaining 2024 Subclasses / 2024 Backgrounds & Origins / Origin Feats.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.

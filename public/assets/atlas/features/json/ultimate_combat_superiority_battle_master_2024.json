@@ -1,0 +1,22 @@
+{
+  "index": "ultimate_combat_superiority_battle_master_2024",
+  "name": "Ultimate Combat Superiority",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master_2024",
+    "name": "Battle Master",
+    "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "Your Superiority Dice turn into d12s, granting maximum tactical power to your maneuvers."
+  ],
+  "feature_specific": {
+    "superiority_die_type": "d12"
+  },
+  "url": "/assets/atlas/features/json/ultimate_combat_superiority_battle_master_2024.json"
+}

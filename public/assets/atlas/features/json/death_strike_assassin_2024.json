@@ -1,0 +1,10 @@
+{
+  "index": "death_strike_assassin_2024",
+  "name": "Death Strike",
+  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
+  "subclass": { "index": "assassin_2024", "name": "Assassin", "url": "/assets/atlas/subclasses/json/24/assassin_2024.json" },
+  "level": 17,
+  "desc": [ "When you hit a creature with a Sneak Attack during the first round of combat, the target must succeed on a Constitution saving throw (DC 8 + your Proficiency Bonus + your Dexterity modifier). On a failed save, the damage of your attack is doubled against the target." ],
+  "feature_specific": { "save_dc": "8 + PB + DEX", "save_type": "CON", "failed_save_effect": "double_attack_damage" },
+  "url": "/assets/atlas/features/json/death_strike_assassin_2024.json"
+}

@@ -1,0 +1,10 @@
+{
+  "index": "heroic_critical_champion_2024",
+  "name": "Heroic Critical",
+  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
+  "subclass": { "index": "champion_2024", "name": "Champion", "url": "/assets/atlas/subclasses/json/24/champion_2024.json" },
+  "level": 10,
+  "desc": [ "Whenever you score a critical hit with a weapon or Unarmed Strike, you can choose to either regain Hit Points equal to your Fighter level or regain one expended use of Second Wind." ],
+  "feature_specific": { "crit_recovery_options": ["heal_fighter_level", "regain_second_wind"] },
+  "url": "/assets/atlas/features/json/heroic_critical_champion_2024.json"
+}

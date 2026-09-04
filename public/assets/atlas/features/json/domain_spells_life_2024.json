@@ -1,0 +1,9 @@
+{
+  "index": "domain_spells_life_2024",
+  "name": "Life Domain Spells",
+  "class": { "index": "cleric", "name": "Cleric", "url": "/assets/atlas/class/json/24/cleric.json" },
+  "subclass": { "index": "life_domain_2024", "name": "Life Domain", "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json" },
+  "level": 3,
+  "desc": [ "Your connection to this domain ensures you always have certain spells prepared. At level 3, you always have Aid, Bless, Cure Wounds, and Lesser Restoration prepared. At level 5: Mass Healing Word, Revivify. At level 7: Death Ward, Aura of Life. At level 9: Greater Restoration, Mass Cure Wounds." ],
+  "url": "/assets/atlas/features/json/domain_spells_life_2024.json"
+}

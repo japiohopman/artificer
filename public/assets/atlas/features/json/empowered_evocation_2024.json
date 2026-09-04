@@ -1,0 +1,10 @@
+{
+  "index": "empowered_evocation_2024",
+  "name": "Empowered Evocation",
+  "class": { "index": "wizard", "name": "Wizard", "url": "/assets/atlas/class/json/24/wizard.json" },
+  "subclass": { "index": "evocation_2024", "name": "Evoker", "url": "/assets/atlas/subclasses/json/24/evocation_2024.json" },
+  "level": 10,
+  "desc": [ "You can add your Intelligence modifier (minimum of +1) to one damage roll of any Evocation spell you cast." ],
+  "feature_specific": { "bonus_damage": "intelligence_modifier" },
+  "url": "/assets/atlas/features/json/empowered_evocation_2024.json"
+}

@@ -1,0 +1,24 @@
+{
+  "index": "survivor_champion_2024",
+  "name": "Survivor",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "champion_2024",
+    "name": "Champion",
+    "url": "/assets/atlas/subclasses/json/24/champion_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "You attain the pinnacle of resilience in battle. At the start of each of your turns, if you have no more than half your Hit Point maximum remaining and have at least 1 Hit Point, you regain Hit Points equal to 5 + your Constitution modifier (minimum of 1). In addition, you have Advantage on Death Saving Throws, and your attack rolls score a critical hit on a roll of 18–20 on the d20 if you are Bloodied."
+  ],
+  "feature_specific": {
+    "turn_start_healing": "5_plus_con_modifier",
+    "trigger_condition": "bloodied_half_hp_or_lower",
+    "death_save_advantage": true
+  },
+  "url": "/assets/atlas/features/json/survivor_champion_2024.json"
+}
