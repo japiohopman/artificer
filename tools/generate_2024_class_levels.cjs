@@ -74,7 +74,7 @@ const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21
 const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
 const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
 const sorcererPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
 
 // --- FIGHTER 2024 ---
 function buildFighterLevel(lvl) {
@@ -327,9 +327,10 @@ function buildBardLevel(lvl) {
     features.push(featureRef("font_of_inspiration_2024", "Font of Inspiration"));
     features.push(featureRef("bardic_inspiration_d8_2024", "Bardic Inspiration (d8)"));
   }
-  if (lvl === 6) features.push(featureRef("countercharm_2024", "Countercharm"));
-  if (lvl === 7) features.push(featureRef("expertise_bard_2_2024", "Expertise (Level 7)"));
+  // Level 6: Bard Subclass feature slot only (no base class features)
+  if (lvl === 7) features.push(featureRef("countercharm_2024", "Countercharm"));
   if (lvl === 8) features.push(featureRef("bard_ability_score_improvement_2_2024", "Ability Score Improvement"));
+  if (lvl === 9) features.push(featureRef("expertise_bard_2_2024", "Expertise"));
   if (lvl === 10) {
     features.push(featureRef("bardic_inspiration_d10_2024", "Bardic Inspiration (d10)"));
     features.push(featureRef("magical_secrets_2024", "Magical Secrets"));
@@ -485,6 +486,7 @@ function buildPaladinLevel(lvl) {
   if (lvl === 6) features.push(featureRef("aura_of_protection_2024", "Aura of Protection"));
   if (lvl === 8) features.push(featureRef("paladin_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("abjure_foes_2024", "Abjure Foes"));
+  if (lvl === 10) features.push(featureRef("aura_of_courage_2024", "Aura of Courage"));
   if (lvl === 11) features.push(featureRef("radiant_strikes_2024", "Radiant Strikes"));
   if (lvl === 12) features.push(featureRef("paladin_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 14) features.push(featureRef("restoring_touch_2024", "Restoring Touch"));

@@ -2,13 +2,7 @@
   "level": 6,
   "ability_score_bonuses": 1,
   "prof_bonus": 3,
-  "features": [
-    {
-      "index": "countercharm_2024",
-      "name": "Countercharm",
-      "url": "/assets/atlas/features/json/countercharm_2024.json"
-    }
-  ],
+  "features": [],
   "class_specific": {
     "bardic_inspiration_die": "d8"
   },

@@ -220,18 +220,27 @@ describe('Ruleset Resolution Audit Tests', () => {
 
   it('verifies exact 2024 Bard level progressions and feature timing', async () => {
     const bard5 = await atlasService.loadLevelData('bard', 5, '2024');
+    const bard6 = await atlasService.loadLevelData('bard', 6, '2024');
+    const bard7 = await atlasService.loadLevelData('bard', 7, '2024');
     const bard9 = await atlasService.loadLevelData('bard', 9, '2024');
     const bard10 = await atlasService.loadLevelData('bard', 10, '2024');
     const bard15 = await atlasService.loadLevelData('bard', 15, '2024');
 
     const bard5FeatIndices = bard5?.features.map((f: any) => f.index);
+    const bard6FeatIndices = bard6?.features.map((f: any) => f.index);
+    const bard7FeatIndices = bard7?.features.map((f: any) => f.index);
     const bard9FeatIndices = bard9?.features.map((f: any) => f.index);
     const bard10FeatIndices = bard10?.features.map((f: any) => f.index);
     const bard15FeatIndices = bard15?.features.map((f: any) => f.index);
 
     expect(bard5FeatIndices).toContain('bardic_inspiration_d8_2024');
+    expect(bard6FeatIndices).not.toContain('countercharm_2024');
+    expect(bard7FeatIndices).toContain('countercharm_2024');
+    expect(bard7FeatIndices).not.toContain('expertise_bard_2_2024');
+    expect(bard9FeatIndices).toContain('expertise_bard_2_2024');
     expect(bard9FeatIndices).not.toContain('bardic_inspiration_d10_2024');
     expect(bard10FeatIndices).toContain('bardic_inspiration_d10_2024');
+    expect(bard10FeatIndices).toContain('magical_secrets_2024');
     expect(bard15FeatIndices).toContain('bardic_inspiration_d12_2024');
 
     expect(bard5?.class_specific?.bardic_inspiration_die).toBe('d8');
@@ -241,14 +250,22 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('verifies exact 2024 Paladin level progressions and feature timing', async () => {
+    const paladin10 = await atlasService.loadLevelData('paladin', 10, '2024');
     const paladin19 = await atlasService.loadLevelData('paladin', 19, '2024');
     const paladin20 = await atlasService.loadLevelData('paladin', 20, '2024');
 
+    const paladin10FeatIndices = paladin10?.features.map((f: any) => f.index);
     const paladin19FeatIndices = paladin19?.features.map((f: any) => f.index);
     const paladin20FeatIndices = paladin20?.features.map((f: any) => f.index);
 
+    expect(paladin10FeatIndices).toContain('aura_of_courage_2024');
     expect(paladin19FeatIndices).toContain('epic_boon_paladin_2024');
     expect(paladin20FeatIndices).toContain('holy_nimbus_2024');
+
+    const auraOfCourage = await atlasService.loadFeature('aura_of_courage_2024');
+    expect(auraOfCourage).not.toBeNull();
+    expect(auraOfCourage.class.index).toBe('paladin');
+    expect(auraOfCourage.level).toBe(10);
 
     const holyNimbus = await atlasService.loadFeature('holy_nimbus_2024');
     expect(holyNimbus).not.toBeNull();

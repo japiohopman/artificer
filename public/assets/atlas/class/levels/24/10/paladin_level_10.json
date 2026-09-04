@@ -2,7 +2,13 @@
   "level": 10,
   "ability_score_bonuses": 2,
   "prof_bonus": 4,
-  "features": [],
+  "features": [
+    {
+      "index": "aura_of_courage_2024",
+      "name": "Aura of Courage",
+      "url": "/assets/atlas/features/json/aura_of_courage_2024.json"
+    }
+  ],
   "weapon_mastery": {
     "count": 2,
     "description": "You can master 2 simple or martial weapons of your choice."
