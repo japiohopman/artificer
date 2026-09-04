@@ -29,14 +29,8 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Fo
 2024 Base Class Definitions
 ✓ 12/12 core base class JSONs in /assets/atlas/class/json/24/
 
-2024 Class Progressions & Feature Definitions (Active 4 Classes)
-✓ Fighter (Levels 1-20 progression & canonical 2024 feature definitions)
-✓ Wizard (Levels 1-20 progression & canonical 2024 feature definitions)
-✓ Cleric (Levels 1-20 progression & canonical 2024 feature definitions)
-✓ Rogue (Levels 1-20 progression & canonical 2024 feature definitions)
-
-2024 Class Progressions (Remaining 8 Classes)
-⏳ Pending (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)
+2024 Class Progressions & Feature Definitions (All 12 Core Classes)
+✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard complete for levels 1–20 and canonical 2024 features)
 
 2024 Subclasses & Subclass Features
 ✓ Implemented 6 subclasses across 4 supported 2024 classes (Fighter: Champion, Battle Master; Wizard: Evoker; Cleric: Life Domain; Rogue: Thief, Assassin)
@@ -60,8 +54,8 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | :--- | :--- | :--- | :--- |
 | **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species foundation dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. |
 | **Classes (Base)** | Supported | **Implemented (12/12)** | Versioned directories exist (`/class/json/14/` vs `/24/`). All 12 core 2024 base class definitions implemented in `/assets/atlas/class/json/24/`. |
-| **Class Progressions (1-20)** | Supported | **Implemented (4/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for Fighter, Wizard, Cleric, and Rogue. |
-| **Class Features** | Supported | **Implemented (4/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for Fighter, Wizard, Cleric, and Rogue with distinct `_2024` IDs. |
+| **Class Progressions (1-20)** | Supported | **Implemented (12/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for all 12 core classes. |
+| **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
 | **Subclasses & Subclass Features** | Supported | **Implemented (4/12 classes)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). 6 subclasses implemented for Fighter, Wizard, Cleric, Rogue with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |
 | **Feats** | Supported | **Partial** | Versioned directories exist (`/feats/json/14/` vs `/24/`). 2024 origin, general, and epic boon feats populated in `/24/`. |

@@ -13,8 +13,7 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 → implemented / verified (12/12 core classes in /class/json/24/)
 
 2024 Base Class Progression & Feature Definitions
-→ implemented / verified (Fighter, Wizard, Cleric, Rogue in /class/levels/24/ and /features/json/)
-→ pending (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)
+→ implemented / verified (12/12 core classes in /class/levels/24/ and /features/json/)
 
 2024 Subclasses & Subclass Features
 → implemented 6 subclasses across 4 supported 2024 classes (Fighter: Champion, Battle Master; Wizard: Evoker; Cleric: Life Domain; Rogue: Thief, Assassin)
@@ -30,8 +29,8 @@ Next active dependency: 2024 Progressions for remaining 8 classes / remaining 20
 - [x] Confirm the current gap: Character Creator 2024 Species/Class resolution still points at shared/unversioned classic data.
 - [x] Ingest 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc under `/species/json/14/` vs `/24/`).
 - [x] Ingest 2024 Base Class Foundation (All 12 core classes under `/class/json/14/` vs `/24/`).
-- [ ] Ingest 2024 Class Features & 1-20 Progressions for Fighter, Wizard, Cleric, Rogue under `/class/levels/24/` and `/features/json/` (PR under review).
-- [ ] Ingest 2024 Class Features & 1-20 Progressions for remaining 8 core classes.
+- [x] Ingest 2024 Class Features & 1-20 Progressions for Fighter, Wizard, Cleric, Rogue under `/class/levels/24/` and `/features/json/`.
+- [x] Ingest 2024 Class Features & 1-20 Progressions for remaining 8 core classes.
 - [ ] Ingest 2024 Subclasses & Subclass Features.
 - [ ] Ingest 2024 Backgrounds/Origins.
 - [ ] Integrate 2024 Feats where rules differ.
