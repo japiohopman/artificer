@@ -457,6 +457,9 @@ describe('Ruleset Resolution Audit Tests', () => {
     const rogueSubclasses2024 = await fetchSubclassesList('2024', 'rogue');
     expect(rogueSubclasses2024.map(s => s.index).sort()).toEqual(['assassin_2024', 'thief_2024']);
 
+    const barbarianSubclasses2024 = await fetchSubclassesList('2024', 'barbarian');
+    expect(barbarianSubclasses2024).toEqual([]);
+
     const list2014 = await fetchSubclassesList('2014');
     const indices2014 = list2014.map(s => s.index);
     expect(indices2014.length).toBeGreaterThan(0);

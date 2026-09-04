@@ -115,16 +115,31 @@ export async function fetchSubclassesList(ruleset?: '2014' | '2024', classFilter
 
   // Browser / Network resolution
   if (activeRuleset === '2024') {
-    // 2024 lists known 2024 subclass IDs
-    const known2024Subclasses = [
-      { index: 'champion_2024', name: 'Champion', classIndex: 'fighter' },
-      { index: 'battle_master_2024', name: 'Battle Master', classIndex: 'fighter' },
-      { index: 'evocation_2024', name: 'Evoker', classIndex: 'wizard' },
-      { index: 'life_domain_2024', name: 'Life Domain', classIndex: 'cleric' },
-      { index: 'thief_2024', name: 'Thief', classIndex: 'rogue' },
-      { index: 'assassin_2024', name: 'Assassin', classIndex: 'rogue' }
-    ];
-    list = known2024Subclasses;
+    try {
+      const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/subclasses/json/24?ref=${BRANCH}&t=${Date.now()}`;
+      const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
+      const res = await fetch(url);
+      const files = await safeJson(res);
+      if (Array.isArray(files)) {
+        const indices = files
+          .filter((f: any) => f.name && f.name.endsWith('.json'))
+          .map((f: any) => f.name.replace('.json', ''));
+
+        const subclassRecords: ({ name: string; index: string; classIndex?: string } | null)[] = await Promise.all(
+          indices.map(async (idx: string) => {
+            const data = await fetchSubclassData(idx, '2024');
+            if (!data) return null;
+            return {
+              index: String(data.index || idx),
+              name: String(data.name || idx.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())),
+              classIndex: data.class?.index ? String(data.class.index) : undefined
+            };
+          })
+        );
+
+        list = subclassRecords.filter((s): s is { name: string; index: string; classIndex?: string } => s !== null);
+      }
+    } catch (e) {}
   } else {
     try {
       const localRes = await fetch('/assets/atlas/subclasses/index.json');
