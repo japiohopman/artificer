@@ -21,5 +21,11 @@
     "url": "/assets/atlas/class/json/24/warlock.json"
   },
   "url": "/assets/atlas/class/levels/24/20/warlock_level_20.json",
-  "rulesetContext": "2024"
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 4,
+    "prepared_spells": 15,
+    "pact_slots": 4,
+    "pact_slot_level": 5
+  }
 }

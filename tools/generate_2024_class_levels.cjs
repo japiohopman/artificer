@@ -70,11 +70,17 @@ const halfCasterSpellSlots = [
 ];
 
 const cantripsTable = [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5];
+const bardCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+const warlockCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+
 const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
 const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
 const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
 const sorcererPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
 const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
+const paladinPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
+const rangerPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
+const warlockPreparedTable = [2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15];
 
 // --- FIGHTER 2024 ---
 function buildFighterLevel(lvl) {
@@ -327,7 +333,6 @@ function buildBardLevel(lvl) {
     features.push(featureRef("font_of_inspiration_2024", "Font of Inspiration"));
     features.push(featureRef("bardic_inspiration_d8_2024", "Bardic Inspiration (d8)"));
   }
-  // Level 6: Bard Subclass feature slot only (no base class features)
   if (lvl === 7) features.push(featureRef("countercharm_2024", "Countercharm"));
   if (lvl === 8) features.push(featureRef("bard_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("expertise_bard_2_2024", "Expertise"));
@@ -356,7 +361,7 @@ function buildBardLevel(lvl) {
     class: { index: "bard", name: "Bard", url: "/assets/atlas/class/json/24/bard.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/bard_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: bardPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: bardCantripsTable[lvl - 1], prepared_spells: bardPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 
@@ -509,7 +514,7 @@ function buildPaladinLevel(lvl) {
     class: { index: "paladin", name: "Paladin", url: "/assets/atlas/class/json/24/paladin.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/paladin_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
+    spellcasting: { prepared_spells: paladinPreparedTable[lvl - 1], spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
   };
 }
 
@@ -556,7 +561,7 @@ function buildRangerLevel(lvl) {
     class: { index: "ranger", name: "Ranger", url: "/assets/atlas/class/json/24/ranger.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/ranger_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
+    spellcasting: { prepared_spells: rangerPreparedTable[lvl - 1], spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
   };
 }
 
@@ -637,7 +642,13 @@ function buildWarlockLevel(lvl) {
     index: `warlock_level_${lvl}`,
     class: { index: "warlock", name: "Warlock", url: "/assets/atlas/class/json/24/warlock.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/warlock_level_${lvl}.json`,
-    rulesetContext: "2024"
+    rulesetContext: "2024",
+    spellcasting: {
+      cantrips_known: warlockCantripsTable[lvl - 1],
+      prepared_spells: warlockPreparedTable[lvl - 1],
+      pact_slots: pactSlots,
+      pact_slot_level: slotLevel
+    }
   };
 }
 

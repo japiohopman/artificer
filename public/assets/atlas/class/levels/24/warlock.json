@@ -27,7 +27,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/1/warlock_level_1.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "prepared_spells": 2,
+      "pact_slots": 1,
+      "pact_slot_level": 1
+    }
   },
   {
     "level": 2,
@@ -52,7 +58,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/2/warlock_level_2.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "prepared_spells": 3,
+      "pact_slots": 2,
+      "pact_slot_level": 1
+    }
   },
   {
     "level": 3,
@@ -77,7 +89,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/3/warlock_level_3.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 2,
+      "prepared_spells": 4,
+      "pact_slots": 2,
+      "pact_slot_level": 2
+    }
   },
   {
     "level": 4,
@@ -102,7 +120,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/4/warlock_level_4.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 5,
+      "pact_slots": 2,
+      "pact_slot_level": 2
+    }
   },
   {
     "level": 5,
@@ -121,7 +145,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/5/warlock_level_5.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 6,
+      "pact_slots": 2,
+      "pact_slot_level": 3
+    }
   },
   {
     "level": 6,
@@ -140,7 +170,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/6/warlock_level_6.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 7,
+      "pact_slots": 2,
+      "pact_slot_level": 3
+    }
   },
   {
     "level": 7,
@@ -159,7 +195,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/7/warlock_level_7.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 8,
+      "pact_slots": 2,
+      "pact_slot_level": 4
+    }
   },
   {
     "level": 8,
@@ -184,7 +226,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/8/warlock_level_8.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 9,
+      "pact_slots": 2,
+      "pact_slot_level": 4
+    }
   },
   {
     "level": 9,
@@ -209,7 +257,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/9/warlock_level_9.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 3,
+      "prepared_spells": 10,
+      "pact_slots": 2,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 10,
@@ -228,7 +282,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/10/warlock_level_10.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 10,
+      "pact_slots": 2,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 11,
@@ -253,7 +313,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/11/warlock_level_11.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 11,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 12,
@@ -278,7 +344,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/12/warlock_level_12.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 11,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 13,
@@ -303,7 +375,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/13/warlock_level_13.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 12,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 14,
@@ -322,7 +400,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/14/warlock_level_14.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 12,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 15,
@@ -347,7 +431,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/15/warlock_level_15.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 13,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 16,
@@ -372,7 +462,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/16/warlock_level_16.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 13,
+      "pact_slots": 3,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 17,
@@ -397,7 +493,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/17/warlock_level_17.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 14,
+      "pact_slots": 4,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 18,
@@ -416,7 +518,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/18/warlock_level_18.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 14,
+      "pact_slots": 4,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 19,
@@ -441,7 +549,13 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/19/warlock_level_19.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 15,
+      "pact_slots": 4,
+      "pact_slot_level": 5
+    }
   },
   {
     "level": 20,
@@ -466,6 +580,12 @@
       "url": "/assets/atlas/class/json/24/warlock.json"
     },
     "url": "/assets/atlas/class/levels/24/20/warlock_level_20.json",
-    "rulesetContext": "2024"
+    "rulesetContext": "2024",
+    "spellcasting": {
+      "cantrips_known": 4,
+      "prepared_spells": 15,
+      "pact_slots": 4,
+      "pact_slot_level": 5
+    }
   }
 ]

@@ -219,12 +219,21 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('verifies exact 2024 Bard level progressions and feature timing', async () => {
+    const bard1 = await atlasService.loadLevelData('bard', 1, '2024');
+    const bard4 = await atlasService.loadLevelData('bard', 4, '2024');
     const bard5 = await atlasService.loadLevelData('bard', 5, '2024');
     const bard6 = await atlasService.loadLevelData('bard', 6, '2024');
     const bard7 = await atlasService.loadLevelData('bard', 7, '2024');
     const bard9 = await atlasService.loadLevelData('bard', 9, '2024');
     const bard10 = await atlasService.loadLevelData('bard', 10, '2024');
     const bard15 = await atlasService.loadLevelData('bard', 15, '2024');
+    const bard20 = await atlasService.loadLevelData('bard', 20, '2024');
+
+    expect(bard1?.spellcasting?.cantrips_known).toBe(2);
+    expect(bard4?.spellcasting?.cantrips_known).toBe(3);
+    expect(bard10?.spellcasting?.cantrips_known).toBe(4);
+    expect(bard1?.spellcasting?.prepared_spells).toBe(4);
+    expect(bard20?.spellcasting?.prepared_spells).toBe(24);
 
     const bard5FeatIndices = bard5?.features.map((f: any) => f.index);
     const bard6FeatIndices = bard6?.features.map((f: any) => f.index);
@@ -250,9 +259,15 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('verifies exact 2024 Paladin level progressions and feature timing', async () => {
+    const paladin1 = await atlasService.loadLevelData('paladin', 1, '2024');
+    const paladin5 = await atlasService.loadLevelData('paladin', 5, '2024');
     const paladin10 = await atlasService.loadLevelData('paladin', 10, '2024');
     const paladin19 = await atlasService.loadLevelData('paladin', 19, '2024');
     const paladin20 = await atlasService.loadLevelData('paladin', 20, '2024');
+
+    expect(paladin1?.spellcasting?.prepared_spells).toBe(2);
+    expect(paladin5?.spellcasting?.prepared_spells).toBe(6);
+    expect(paladin20?.spellcasting?.prepared_spells).toBe(15);
 
     const paladin10FeatIndices = paladin10?.features.map((f: any) => f.index);
     const paladin19FeatIndices = paladin19?.features.map((f: any) => f.index);
@@ -280,6 +295,15 @@ describe('Ruleset Resolution Audit Tests', () => {
     const warlock11 = await atlasService.loadLevelData('warlock', 11, '2024');
     const warlock17 = await atlasService.loadLevelData('warlock', 17, '2024');
     const warlock20 = await atlasService.loadLevelData('warlock', 20, '2024');
+
+    expect(warlock1?.spellcasting?.cantrips_known).toBe(2);
+    expect(warlock1?.spellcasting?.prepared_spells).toBe(2);
+    expect(warlock1?.spellcasting?.pact_slots).toBe(1);
+    expect(warlock1?.spellcasting?.pact_slot_level).toBe(1);
+
+    expect(warlock9?.spellcasting?.pact_slots).toBe(2);
+    expect(warlock9?.spellcasting?.pact_slot_level).toBe(5);
+    expect(warlock9?.spellcasting?.prepared_spells).toBe(10);
 
     expect(warlock1?.class_specific?.pact_slots).toBe(1);
     expect(warlock2?.class_specific?.pact_slots).toBe(2);
@@ -329,7 +353,13 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('verifies exact 2024 Ranger level progressions and feature timing', async () => {
+    const ranger1 = await atlasService.loadLevelData('ranger', 1, '2024');
+    const ranger5 = await atlasService.loadLevelData('ranger', 5, '2024');
     const ranger18 = await atlasService.loadLevelData('ranger', 18, '2024');
+
+    expect(ranger1?.spellcasting?.prepared_spells).toBe(2);
+    expect(ranger5?.spellcasting?.prepared_spells).toBe(6);
+
     const ranger18FeatIndices = ranger18?.features.map((f: any) => f.index);
 
     expect(ranger18FeatIndices).toContain('feral_senses_2024');
