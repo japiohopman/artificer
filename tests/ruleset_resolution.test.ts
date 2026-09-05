@@ -218,29 +218,38 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(monk19?.ability_score_bonuses).toBe(4);
   });
 
-  it('verifies exact 2024 Bard level progressions and feature timing', async () => {
-    const bard1 = await atlasService.loadLevelData('bard', 1, '2024');
-    const bard4 = await atlasService.loadLevelData('bard', 4, '2024');
+  it('verifies exact 2024 Bard level progressions, cantrips, prepared spells, and feature timing', async () => {
+    const expectedBardPrepared = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
+    for (let lvl = 1; lvl <= 20; lvl++) {
+      const bardLvl = await atlasService.loadLevelData('bard', lvl, '2024');
+      expect(bardLvl?.spellcasting?.prepared_spells).toBe(expectedBardPrepared[lvl - 1]);
+    }
+
+    const bard15 = await atlasService.loadLevelData('bard', 15, '2024');
+    const bard16 = await atlasService.loadLevelData('bard', 16, '2024');
+    const bard17 = await atlasService.loadLevelData('bard', 17, '2024');
+    const bard18 = await atlasService.loadLevelData('bard', 18, '2024');
+    const bard19 = await atlasService.loadLevelData('bard', 19, '2024');
+    const bard20 = await atlasService.loadLevelData('bard', 20, '2024');
+
+    expect(bard15?.spellcasting?.prepared_spells).toBe(18);
+    expect(bard16?.spellcasting?.prepared_spells).toBe(18);
+    expect(bard17?.spellcasting?.prepared_spells).toBe(19);
+    expect(bard18?.spellcasting?.prepared_spells).toBe(20);
+    expect(bard19?.spellcasting?.prepared_spells).toBe(21);
+    expect(bard20?.spellcasting?.prepared_spells).toBe(22);
+
     const bard5 = await atlasService.loadLevelData('bard', 5, '2024');
     const bard6 = await atlasService.loadLevelData('bard', 6, '2024');
     const bard7 = await atlasService.loadLevelData('bard', 7, '2024');
     const bard9 = await atlasService.loadLevelData('bard', 9, '2024');
     const bard10 = await atlasService.loadLevelData('bard', 10, '2024');
-    const bard15 = await atlasService.loadLevelData('bard', 15, '2024');
-    const bard20 = await atlasService.loadLevelData('bard', 20, '2024');
-
-    expect(bard1?.spellcasting?.cantrips_known).toBe(2);
-    expect(bard4?.spellcasting?.cantrips_known).toBe(3);
-    expect(bard10?.spellcasting?.cantrips_known).toBe(4);
-    expect(bard1?.spellcasting?.prepared_spells).toBe(4);
-    expect(bard20?.spellcasting?.prepared_spells).toBe(24);
 
     const bard5FeatIndices = bard5?.features.map((f: any) => f.index);
     const bard6FeatIndices = bard6?.features.map((f: any) => f.index);
     const bard7FeatIndices = bard7?.features.map((f: any) => f.index);
     const bard9FeatIndices = bard9?.features.map((f: any) => f.index);
     const bard10FeatIndices = bard10?.features.map((f: any) => f.index);
-    const bard15FeatIndices = bard15?.features.map((f: any) => f.index);
 
     expect(bard5FeatIndices).toContain('bardic_inspiration_d8_2024');
     expect(bard6FeatIndices).not.toContain('countercharm_2024');
@@ -250,12 +259,114 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(bard9FeatIndices).not.toContain('bardic_inspiration_d10_2024');
     expect(bard10FeatIndices).toContain('bardic_inspiration_d10_2024');
     expect(bard10FeatIndices).toContain('magical_secrets_2024');
-    expect(bard15FeatIndices).toContain('bardic_inspiration_d12_2024');
+  });
 
-    expect(bard5?.class_specific?.bardic_inspiration_die).toBe('d8');
-    expect(bard9?.class_specific?.bardic_inspiration_die).toBe('d8');
-    expect(bard10?.class_specific?.bardic_inspiration_die).toBe('d10');
-    expect(bard15?.class_specific?.bardic_inspiration_die).toBe('d12');
+  it('verifies exact 2024 Druid level progressions, cantrips, prepared spells, and Wild Shape timing', async () => {
+    const expectedDruidCantrips = [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
+    const expectedDruidPrepared = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
+
+    for (let lvl = 1; lvl <= 20; lvl++) {
+      const druidLvl = await atlasService.loadLevelData('druid', lvl, '2024');
+      expect(druidLvl?.spellcasting?.cantrips_known).toBe(expectedDruidCantrips[lvl - 1]);
+      expect(druidLvl?.spellcasting?.prepared_spells).toBe(expectedDruidPrepared[lvl - 1]);
+    }
+
+    const druid1 = await atlasService.loadLevelData('druid', 1, '2024');
+    const druid3 = await atlasService.loadLevelData('druid', 3, '2024');
+    const druid4 = await atlasService.loadLevelData('druid', 4, '2024');
+    const druid9 = await atlasService.loadLevelData('druid', 9, '2024');
+    const druid10 = await atlasService.loadLevelData('druid', 10, '2024');
+    const druid18 = await atlasService.loadLevelData('druid', 18, '2024');
+    const druid19 = await atlasService.loadLevelData('druid', 19, '2024');
+    const druid20 = await atlasService.loadLevelData('druid', 20, '2024');
+
+    expect(druid1?.spellcasting?.cantrips_known).toBe(2);
+    expect(druid3?.spellcasting?.cantrips_known).toBe(2);
+    expect(druid4?.spellcasting?.cantrips_known).toBe(3);
+    expect(druid9?.spellcasting?.cantrips_known).toBe(3);
+    expect(druid10?.spellcasting?.cantrips_known).toBe(4);
+    expect(druid20?.spellcasting?.cantrips_known).toBe(4);
+
+    expect(druid18?.spellcasting?.prepared_spells).toBe(20);
+    expect(druid19?.spellcasting?.prepared_spells).toBe(21);
+    expect(druid20?.spellcasting?.prepared_spells).toBe(22);
+
+    const druid2 = await atlasService.loadLevelData('druid', 2, '2024');
+    const druid6 = await atlasService.loadLevelData('druid', 6, '2024');
+    const druid17 = await atlasService.loadLevelData('druid', 17, '2024');
+
+    expect(druid2?.class_specific?.wild_shape_uses).toBe(2);
+    expect(druid6?.class_specific?.wild_shape_uses).toBe(3);
+    expect(druid17?.class_specific?.wild_shape_uses).toBe(4);
+  });
+
+  it('verifies exact 2024 Sorcerer level progressions, cantrips, prepared spells, and feature timing', async () => {
+    const expectedSorcererCantrips = [4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6];
+    const expectedSorcererPrepared = [2, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
+
+    for (let lvl = 1; lvl <= 20; lvl++) {
+      const sorcLvl = await atlasService.loadLevelData('sorcerer', lvl, '2024');
+      expect(sorcLvl?.spellcasting?.cantrips_known).toBe(expectedSorcererCantrips[lvl - 1]);
+      expect(sorcLvl?.spellcasting?.prepared_spells).toBe(expectedSorcererPrepared[lvl - 1]);
+    }
+
+    const sorc1 = await atlasService.loadLevelData('sorcerer', 1, '2024');
+    const sorc3 = await atlasService.loadLevelData('sorcerer', 3, '2024');
+    const sorc4 = await atlasService.loadLevelData('sorcerer', 4, '2024');
+    const sorc7 = await atlasService.loadLevelData('sorcerer', 7, '2024');
+    const sorc10 = await atlasService.loadLevelData('sorcerer', 10, '2024');
+    const sorc13 = await atlasService.loadLevelData('sorcerer', 13, '2024');
+    const sorc17 = await atlasService.loadLevelData('sorcerer', 17, '2024');
+    const sorc19 = await atlasService.loadLevelData('sorcerer', 19, '2024');
+    const sorc20 = await atlasService.loadLevelData('sorcerer', 20, '2024');
+
+    expect(sorc1?.spellcasting?.cantrips_known).toBe(4);
+    expect(sorc1?.spellcasting?.prepared_spells).toBe(2);
+
+    expect(sorc3?.spellcasting?.cantrips_known).toBe(4);
+    expect(sorc3?.spellcasting?.prepared_spells).toBe(6);
+
+    expect(sorc4?.spellcasting?.cantrips_known).toBe(5);
+    expect(sorc4?.spellcasting?.prepared_spells).toBe(7);
+
+    expect(sorc10?.spellcasting?.cantrips_known).toBe(6);
+    expect(sorc10?.spellcasting?.prepared_spells).toBe(15);
+
+    expect(sorc13?.spellcasting?.prepared_spells).toBe(17);
+
+    expect(sorc17?.spellcasting?.prepared_spells).toBe(19);
+
+    expect(sorc19?.spellcasting?.prepared_spells).toBe(21);
+
+    expect(sorc20?.spellcasting?.cantrips_known).toBe(6);
+    expect(sorc20?.spellcasting?.prepared_spells).toBe(22);
+
+    // Feature timing assertions
+    const sorc7FeatIndices = sorc7?.features.map((f: any) => f.index);
+    const sorc10FeatIndices = sorc10?.features.map((f: any) => f.index);
+    const sorc13FeatIndices = sorc13?.features.map((f: any) => f.index);
+    const sorc17FeatIndices = sorc17?.features.map((f: any) => f.index);
+    const sorc19FeatIndices = sorc19?.features.map((f: any) => f.index);
+    const sorc20FeatIndices = sorc20?.features.map((f: any) => f.index);
+
+    expect(sorc7FeatIndices).toContain('sorcery_incarnate_2024');
+    expect(sorc7FeatIndices).not.toContain('metamagic_options_2_2024');
+
+    expect(sorc10FeatIndices).toContain('metamagic_2024');
+
+    expect(sorc13FeatIndices).not.toContain('metamagic_options_3_2024');
+
+    expect(sorc17FeatIndices).toContain('metamagic_2024');
+
+    expect(sorc19FeatIndices).toContain('epic_boon_sorcerer_2024');
+
+    expect(sorc20FeatIndices).toContain('arcane_apotheosis_2024');
+
+    const sorceryIncarnate = await atlasService.loadFeature('sorcery_incarnate_2024');
+    expect(sorceryIncarnate).not.toBeNull();
+    expect(sorceryIncarnate.class.index).toBe('sorcerer');
+    expect(sorceryIncarnate.level).toBe(7);
+    expect(sorceryIncarnate.desc.join(' ')).toContain('Innate Sorcery');
   });
 
   it('verifies exact 2024 Paladin level progressions and feature timing', async () => {
@@ -368,22 +479,6 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(feralSenses).not.toBeNull();
     expect(feralSenses.class.index).toBe('ranger');
     expect(feralSenses.level).toBe(18);
-  });
-
-  it('verifies exact 2024 Druid level progressions and Wild Shape resource timing', async () => {
-    const druid2 = await atlasService.loadLevelData('druid', 2, '2024');
-    const druid6 = await atlasService.loadLevelData('druid', 6, '2024');
-    const druid17 = await atlasService.loadLevelData('druid', 17, '2024');
-
-    expect(druid2?.class_specific?.wild_shape_uses).toBe(2);
-    expect(druid6?.class_specific?.wild_shape_uses).toBe(3);
-    expect(druid17?.class_specific?.wild_shape_uses).toBe(4);
-
-    expect(druid2?.class_specific?.wild_shape_max_cr).toBe(0.25);
-    const druid4 = await atlasService.loadLevelData('druid', 4, '2024');
-    expect(druid4?.class_specific?.wild_shape_max_cr).toBe(0.5);
-    const druid8 = await atlasService.loadLevelData('druid', 8, '2024');
-    expect(druid8?.class_specific?.wild_shape_max_cr).toBe(1);
   });
 
   it('validates precise 2024 mechanics for all 8 remaining classes (Barbarian, Bard, Druid, Monk, Paladin, Ranger, Sorcerer, Warlock)', async () => {

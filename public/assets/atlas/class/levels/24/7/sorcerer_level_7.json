@@ -4,14 +4,14 @@
   "prof_bonus": 3,
   "features": [
     {
-      "index": "metamagic_options_2_2024",
-      "name": "Metamagic Options (Level 7)",
-      "url": "/assets/atlas/features/json/metamagic_options_2_2024.json"
+      "index": "sorcery_incarnate_2024",
+      "name": "Sorcery Incarnate",
+      "url": "/assets/atlas/features/json/sorcery_incarnate_2024.json"
     }
   ],
   "class_specific": {
     "sorcery_points": 7,
-    "metamagic_known_count": 4
+    "metamagic_known_count": 2
   },
   "index": "sorcerer_level_7",
   "class": {
@@ -22,7 +22,7 @@
   "url": "/assets/atlas/class/levels/24/7/sorcerer_level_7.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 4,
+    "cantrips_known": 5,
     "prepared_spells": 11,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,

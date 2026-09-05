@@ -71,13 +71,15 @@ const halfCasterSpellSlots = [
 
 const cantripsTable = [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5];
 const bardCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+const druidCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+const sorcererCantripsTable = [4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6];
 const warlockCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
 
 const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
 const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
-const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const sorcererPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
+const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const sorcererPreparedTable = [2,4,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
 const paladinPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
 const rangerPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
 const warlockPreparedTable = [2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15];
@@ -404,7 +406,7 @@ function buildDruidLevel(lvl) {
     class: { index: "druid", name: "Druid", url: "/assets/atlas/class/json/24/druid.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/druid_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: druidPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: druidCantripsTable[lvl - 1], prepared_spells: druidPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 
@@ -579,18 +581,18 @@ function buildSorcererLevel(lvl) {
   if (lvl === 3) features.push(featureRef("sorcerer_subclass_2024", "Sorcerer Subclass"));
   if (lvl === 4) features.push(featureRef("sorcerer_ability_score_improvement_1_2024", "Ability Score Improvement"));
   if (lvl === 5) features.push(featureRef("sorcerous_restoration_2024", "Sorcerous Restoration"));
-  if (lvl === 7) features.push(featureRef("metamagic_options_2_2024", "Metamagic Options (Level 7)"));
+  if (lvl === 7) features.push(featureRef("sorcery_incarnate_2024", "Sorcery Incarnate"));
   if (lvl === 8) features.push(featureRef("sorcerer_ability_score_improvement_2_2024", "Ability Score Improvement"));
+  if (lvl === 10) features.push(featureRef("metamagic_2024", "Metamagic"));
   if (lvl === 12) features.push(featureRef("sorcerer_ability_score_improvement_3_2024", "Ability Score Improvement"));
-  if (lvl === 13) features.push(featureRef("metamagic_options_3_2024", "Metamagic Options (Level 13)"));
   if (lvl === 16) features.push(featureRef("sorcerer_ability_score_improvement_4_2024", "Ability Score Improvement"));
-  if (lvl === 17) features.push(featureRef("metamagic_options_4_2024", "Metamagic Options (Level 17)"));
+  if (lvl === 17) features.push(featureRef("metamagic_2024", "Metamagic"));
   if (lvl === 19) features.push(featureRef("epic_boon_sorcerer_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("arcane_apotheosis_2024", "Arcane Apotheosis"));
 
   const slots = casterSpellSlots[lvl - 1];
   const sorceryPoints = lvl >= 2 ? lvl : 0;
-  const metamagicCount = lvl >= 17 ? 8 : (lvl >= 13 ? 6 : (lvl >= 7 ? 4 : (lvl >= 2 ? 2 : 0)));
+  const metamagicCount = lvl >= 17 ? 6 : (lvl >= 10 ? 4 : (lvl >= 2 ? 2 : 0));
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
@@ -603,7 +605,7 @@ function buildSorcererLevel(lvl) {
     class: { index: "sorcerer", name: "Sorcerer", url: "/assets/atlas/class/json/24/sorcerer.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/sorcerer_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: sorcererPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: sorcererCantripsTable[lvl - 1], prepared_spells: sorcererPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 

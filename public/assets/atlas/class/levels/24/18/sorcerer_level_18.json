@@ -5,7 +5,7 @@
   "features": [],
   "class_specific": {
     "sorcery_points": 18,
-    "metamagic_known_count": 8
+    "metamagic_known_count": 6
   },
   "index": "sorcerer_level_18",
   "class": {
@@ -16,8 +16,8 @@
   "url": "/assets/atlas/class/levels/24/18/sorcerer_level_18.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 5,
-    "prepared_spells": 21,
+    "cantrips_known": 6,
+    "prepared_spells": 20,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,
     "spell_slots_level_3": 3,

@@ -33,7 +33,7 @@
     "url": "/assets/atlas/class/levels/24/1/druid_level_1.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
+      "cantrips_known": 2,
       "prepared_spells": 4,
       "spell_slots_level_1": 2,
       "spell_slots_level_2": 0,
@@ -75,7 +75,7 @@
     "url": "/assets/atlas/class/levels/24/2/druid_level_2.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
+      "cantrips_known": 2,
       "prepared_spells": 5,
       "spell_slots_level_1": 3,
       "spell_slots_level_2": 0,
@@ -112,7 +112,7 @@
     "url": "/assets/atlas/class/levels/24/3/druid_level_3.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
+      "cantrips_known": 2,
       "prepared_spells": 6,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 2,
@@ -149,7 +149,7 @@
     "url": "/assets/atlas/class/levels/24/4/druid_level_4.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 7,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -186,7 +186,7 @@
     "url": "/assets/atlas/class/levels/24/5/druid_level_5.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 9,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -217,7 +217,7 @@
     "url": "/assets/atlas/class/levels/24/6/druid_level_6.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 10,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -254,7 +254,7 @@
     "url": "/assets/atlas/class/levels/24/7/druid_level_7.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 11,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -291,7 +291,7 @@
     "url": "/assets/atlas/class/levels/24/8/druid_level_8.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 12,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -322,7 +322,7 @@
     "url": "/assets/atlas/class/levels/24/9/druid_level_9.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 3,
       "prepared_spells": 14,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -353,7 +353,7 @@
     "url": "/assets/atlas/class/levels/24/10/druid_level_10.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 15,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -384,7 +384,7 @@
     "url": "/assets/atlas/class/levels/24/11/druid_level_11.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 16,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -421,7 +421,7 @@
     "url": "/assets/atlas/class/levels/24/12/druid_level_12.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 16,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -452,7 +452,7 @@
     "url": "/assets/atlas/class/levels/24/13/druid_level_13.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 17,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -483,7 +483,7 @@
     "url": "/assets/atlas/class/levels/24/14/druid_level_14.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 17,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -520,7 +520,7 @@
     "url": "/assets/atlas/class/levels/24/15/druid_level_15.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 4,
       "prepared_spells": 18,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -557,8 +557,8 @@
     "url": "/assets/atlas/class/levels/24/16/druid_level_16.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 19,
+      "cantrips_known": 4,
+      "prepared_spells": 18,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -588,8 +588,8 @@
     "url": "/assets/atlas/class/levels/24/17/druid_level_17.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 20,
+      "cantrips_known": 4,
+      "prepared_spells": 19,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -625,8 +625,8 @@
     "url": "/assets/atlas/class/levels/24/18/druid_level_18.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 21,
+      "cantrips_known": 4,
+      "prepared_spells": 20,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -662,8 +662,8 @@
     "url": "/assets/atlas/class/levels/24/19/druid_level_19.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 22,
+      "cantrips_known": 4,
+      "prepared_spells": 21,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -699,8 +699,8 @@
     "url": "/assets/atlas/class/levels/24/20/druid_level_20.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 24,
+      "cantrips_known": 4,
+      "prepared_spells": 22,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
