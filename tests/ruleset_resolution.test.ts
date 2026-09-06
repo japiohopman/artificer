@@ -1202,6 +1202,8 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const elementalEpitome = await atlasService.loadFeature('elemental_epitome_elements_2024');
     expect(elementalEpitome.desc.join(' ')).toContain('resistance');
+    expect(elementalEpitome.desc.join(' ')).toContain('flying or swimming speed by 20 feet');
+    expect(elementalEpitome.desc.join(' ')).toContain('Martial Arts die');
 
     // 3. Draconic Sorcery
     const draconicSorc = await fetchSubclassData('draconic_sorcery_2024', '2024');
@@ -1213,10 +1215,13 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(draconicFeats).toContain('dragon_companion_draconic_2024');
 
     const elementalAffinity = await atlasService.loadFeature('elemental_affinity_draconic_2024');
+    expect(elementalAffinity.desc.join(' ')).toContain('Acid, Cold, Fire, Lightning, or Poison');
     expect(elementalAffinity.desc.join(' ')).toContain('permanent resistance');
 
     const dragonCompanion = await atlasService.loadFeature('dragon_companion_draconic_2024');
+    expect(dragonCompanion.desc.join(' ')).toContain('without material components');
     expect(dragonCompanion.desc.join(' ')).toContain('does not require Concentration');
+    expect(dragonCompanion.desc.join(' ')).toContain('1 minute');
 
     // 4. Warrior of the Open Hand
     const openHand = await fetchSubclassData('open_hand_2024', '2024');

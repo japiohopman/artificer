@@ -734,7 +734,7 @@ const subclassesData = [
       {
         level: 17,
         features: [
-          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, choose one damage resistance at the start of each of your turns (Acid, Cold, Fire, Lightning, or Thunder). In addition, when using Step of the Wind, gain flight and swim speed boost, and once per turn deal additional Martial Arts die elemental damage on an Unarmed Strike." }
+          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, you gain the following benefits: at the start of each of your turns, choose one resistance from Acid, Cold, Fire, Lightning, or Thunder until the start of your next turn; Step of the Wind increases your flying or swimming speed by 20 feet; when you move within 5 feet of a creature during that Step of the Wind movement, deal elemental damage equal to 1 Martial Arts die of your chosen type (once per creature per turn); and once per turn when you hit with an Unarmed Strike, deal extra elemental damage equal to 1 Martial Arts die of your chosen type." }
         ]
       }
     ]
@@ -1292,7 +1292,7 @@ const subclassesData = [
       {
         level: 6,
         features: [
-          { index: "elemental_affinity_draconic_2024", name: "Elemental Affinity", desc: "When you cast a spell that deals damage associated with your draconic ancestor, add your Charisma modifier to one damage roll of the spell. In addition, you gain permanent resistance to that damage type." }
+          { index: "elemental_affinity_draconic_2024", name: "Elemental Affinity", desc: "Choose one damage type associated with your Draconic Ancestor: Acid, Cold, Fire, Lightning, or Poison. You gain permanent resistance to that chosen damage type. In addition, when you cast a spell that deals damage of that chosen type, add your Charisma modifier to one damage roll of the spell." }
         ]
       },
       {
@@ -1304,7 +1304,7 @@ const subclassesData = [
       {
         level: 18,
         features: [
-          { index: "dragon_companion_draconic_2024", name: "Dragon Companion", desc: "You can cast Summon Dragon once per Long Rest without expending a spell slot or requiring material components. When cast this way, the spell does not require Concentration for you." }
+          { index: "dragon_companion_draconic_2024", name: "Dragon Companion", desc: "You can cast Summon Dragon without material components. You can cast it once without expending a spell slot, regaining this free casting on a Long Rest. Whenever you start casting Summon Dragon, you can choose to modify that casting so it does not require Concentration for you; if modified this way, the spell's duration is 1 minute." }
         ]
       }
     ]
