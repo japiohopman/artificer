@@ -1,0 +1,56 @@
+{
+  "index": "world_tree_2024",
+  "name": "Path of the World Tree",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "desc": [
+    "Barbarians who follow the Path of the World Tree draw vitality and cosmic roots from the cosmic Yggdrasil, connecting their rage to the lifeforce of creation."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "vitality_of_the_tree_world_tree_2024",
+          "name": "Vitality of the Tree",
+          "url": "/assets/atlas/features/json/vitality_of_the_tree_world_tree_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "branches_of_the_tree_world_tree_2024",
+          "name": "Branches of the Tree",
+          "url": "/assets/atlas/features/json/branches_of_the_tree_world_tree_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "bountiful_roots_world_tree_2024",
+          "name": "Bountiful Roots",
+          "url": "/assets/atlas/features/json/bountiful_roots_world_tree_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "travel_along_the_tree_world_tree_2024",
+          "name": "Travel Along the Tree",
+          "url": "/assets/atlas/features/json/travel_along_the_tree_world_tree_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/world_tree_2024.json",
+  "rulesetContext": "2024"
+}

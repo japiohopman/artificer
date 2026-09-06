@@ -1,0 +1,19 @@
+{
+  "index": "draconic_speech_draconic_2024",
+  "name": "Draconic Speech",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic_sorcery_2024",
+    "name": "Draconic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/draconic_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You can speak, read, and write Draconic, and comprehend dragons instinctively."
+  ],
+  "url": "/assets/atlas/features/json/draconic_speech_draconic_2024.json"
+}

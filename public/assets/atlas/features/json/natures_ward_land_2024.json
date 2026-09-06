@@ -1,0 +1,19 @@
+{
+  "index": "natures_ward_land_2024",
+  "name": "Nature's Ward",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "You cannot be Poisoned, and you gain resistance to Poison damage and immune to disease."
+  ],
+  "url": "/assets/atlas/features/json/natures_ward_land_2024.json"
+}

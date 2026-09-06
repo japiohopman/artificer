@@ -1,0 +1,19 @@
+{
+  "index": "beguiling_magic_glamour_2024",
+  "name": "Beguiling Magic",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "glamour_2024",
+    "name": "College of Glamour",
+    "url": "/assets/atlas/subclasses/json/24/glamour_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have Charm Person and Enthrall prepared. When you cast an Enchantment or Illusion spell, you can force a creature to make a WIS save or be Charmed or Frightened."
+  ],
+  "url": "/assets/atlas/features/json/beguiling_magic_glamour_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "shadowy_dodge_gloom_stalker_2024",
+  "name": "Shadowy Dodge",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "gloom_stalker_2024",
+    "name": "Gloom Stalker",
+    "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When an attack roll hits you, use your Reaction to impose Disadvantage on that roll unless the attacker has Advantage."
+  ],
+  "url": "/assets/atlas/features/json/shadowy_dodge_gloom_stalker_2024.json"
+}

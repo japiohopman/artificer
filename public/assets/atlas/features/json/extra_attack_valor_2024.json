@@ -1,0 +1,19 @@
+{
+  "index": "extra_attack_valor_2024",
+  "name": "Extra Attack",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "valor_2024",
+    "name": "College of Valor",
+    "url": "/assets/atlas/subclasses/json/24/valor_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You can attack twice whenever taking the Attack action. You can replace one attack with casting a Bard cantrip."
+  ],
+  "url": "/assets/atlas/features/json/extra_attack_valor_2024.json"
+}

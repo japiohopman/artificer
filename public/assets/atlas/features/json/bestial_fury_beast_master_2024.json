@@ -1,0 +1,19 @@
+{
+  "index": "bestial_fury_beast_master_2024",
+  "name": "Bestial Fury",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "beast_master_2024",
+    "name": "Beast Master",
+    "url": "/assets/atlas/subclasses/json/24/beast_master_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "When you command your companion to attack, it can attack twice or benefit from Hunter's Mark extra damage."
+  ],
+  "url": "/assets/atlas/features/json/bestial_fury_beast_master_2024.json"
+}

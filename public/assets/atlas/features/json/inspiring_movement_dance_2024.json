@@ -1,0 +1,19 @@
+{
+  "index": "inspiring_movement_dance_2024",
+  "name": "Inspiring Movement",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "dance_2024",
+    "name": "College of Dance",
+    "url": "/assets/atlas/subclasses/json/24/dance_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When an enemy ends its turn within 5 feet of you, spend a Bardic Inspiration die to move up to half your Speed without provoking Opportunity Attacks and allow an ally to move."
+  ],
+  "url": "/assets/atlas/features/json/inspiring_movement_dance_2024.json"
+}

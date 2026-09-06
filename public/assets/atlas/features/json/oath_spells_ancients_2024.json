@@ -1,0 +1,19 @@
+{
+  "index": "oath_spells_ancients_2024",
+  "name": "Oath Spells",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "ancients_2024",
+    "name": "Oath of the Ancients",
+    "url": "/assets/atlas/subclasses/json/24/ancients_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have oath spells prepared (Ensnaring Strike, Speak with Animals, Misty Step, Moonbeam, Plant Growth, Protection from Energy, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/oath_spells_ancients_2024.json"
+}

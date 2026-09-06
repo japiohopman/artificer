@@ -1,0 +1,19 @@
+{
+  "index": "thought_shield_great_old_one_2024",
+  "name": "Thought Shield",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Your thoughts cannot be read, gain resistance to Psychic damage, and reflect Psychic damage back at attackers."
+  ],
+  "url": "/assets/atlas/features/json/thought_shield_great_old_one_2024.json"
+}

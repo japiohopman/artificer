@@ -1,0 +1,19 @@
+{
+  "index": "zealous_presence_zealot_2024",
+  "name": "Zealous Presence",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "zealot_2024",
+    "name": "Path of the Zealot",
+    "url": "/assets/atlas/subclasses/json/24/zealot_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "As a Bonus Action, unleash a battle cry. Up to 10 allies within 60 feet gain Advantage on attack rolls and saving throws until the start of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/zealous_presence_zealot_2024.json"
+}

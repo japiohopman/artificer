@@ -1,0 +1,19 @@
+{
+  "index": "wild_magic_surge_wild_magic_2024",
+  "name": "Wild Magic Surge",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Whenever you cast a Sorcerer spell of level 1 or higher, roll a d20 to trigger a Wild Magic Surge table effect."
+  ],
+  "url": "/assets/atlas/features/json/wild_magic_surge_wild_magic_2024.json"
+}

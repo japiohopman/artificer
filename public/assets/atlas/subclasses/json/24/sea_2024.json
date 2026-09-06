@@ -1,0 +1,61 @@
+{
+  "index": "sea_2024",
+  "name": "Circle of the Sea",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "desc": [
+    "Circle of the Sea Druids channel the turbulent currents, freezing depths, and howling oceanic tempests."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "circle_spells_sea_2024",
+          "name": "Circle Spells",
+          "url": "/assets/atlas/features/json/circle_spells_sea_2024.json"
+        },
+        {
+          "index": "wrath_of_the_sea_sea_2024",
+          "name": "Wrath of the Sea",
+          "url": "/assets/atlas/features/json/wrath_of_the_sea_sea_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "aquatic_affinity_sea_2024",
+          "name": "Aquatic Affinity",
+          "url": "/assets/atlas/features/json/aquatic_affinity_sea_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "stormborn_sea_2024",
+          "name": "Stormborn",
+          "url": "/assets/atlas/features/json/stormborn_sea_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "oceanic_gift_sea_2024",
+          "name": "Oceanic Gift",
+          "url": "/assets/atlas/features/json/oceanic_gift_sea_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/sea_2024.json",
+  "rulesetContext": "2024"
+}

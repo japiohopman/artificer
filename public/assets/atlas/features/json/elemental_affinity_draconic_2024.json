@@ -1,0 +1,19 @@
+{
+  "index": "elemental_affinity_draconic_2024",
+  "name": "Elemental Affinity",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic_sorcery_2024",
+    "name": "Draconic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/draconic_sorcery_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When you cast a spell that deals damage associated with your draconic ancestor, add CHA mod to the damage and gain resistance to that element for 1 hour."
+  ],
+  "url": "/assets/atlas/features/json/elemental_affinity_draconic_2024.json"
+}

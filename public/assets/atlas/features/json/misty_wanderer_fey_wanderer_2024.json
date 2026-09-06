@@ -1,0 +1,19 @@
+{
+  "index": "misty_wanderer_fey_wanderer_2024",
+  "name": "Misty Wanderer",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "fey_wanderer_2024",
+    "name": "Fey Wanderer",
+    "url": "/assets/atlas/subclasses/json/24/fey_wanderer_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "Cast Misty Step WIS mod times per Long Rest without expending a spell slot, bringing a willing ally with you."
+  ],
+  "url": "/assets/atlas/features/json/misty_wanderer_fey_wanderer_2024.json"
+}

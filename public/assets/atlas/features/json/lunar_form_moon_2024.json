@@ -1,0 +1,19 @@
+{
+  "index": "lunar_form_moon_2024",
+  "name": "Lunar Form",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "moon_2024",
+    "name": "Circle of the Moon",
+    "url": "/assets/atlas/subclasses/json/24/moon_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Your attacks in Wild Shape deal an extra 1d10 Radiant damage, and you can share your Wild Shape Temp HP with an ally."
+  ],
+  "url": "/assets/atlas/features/json/lunar_form_moon_2024.json"
+}

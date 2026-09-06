@@ -1,0 +1,19 @@
+{
+  "index": "cloak_of_shadows_shadow_2024",
+  "name": "Cloak of Shadows",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "shadow_2024",
+    "name": "Warrior of the Shadow",
+    "url": "/assets/atlas/subclasses/json/24/shadow_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "While in dim light or darkness, spend 3 Focus Points to become Invisible for 1 minute and phase through solid objects."
+  ],
+  "url": "/assets/atlas/features/json/cloak_of_shadows_shadow_2024.json"
+}

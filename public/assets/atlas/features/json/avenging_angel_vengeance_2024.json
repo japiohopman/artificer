@@ -1,0 +1,19 @@
+{
+  "index": "avenging_angel_vengeance_2024",
+  "name": "Avenging Angel",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "vengeance_2024",
+    "name": "Oath of Vengeance",
+    "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json"
+  },
+  "level": 20,
+  "desc": [
+    "Transform into an angelic avenger for 10 minutes: gain wings with 60-foot flying speed and an aura of fear that frightens enemies."
+  ],
+  "url": "/assets/atlas/features/json/avenging_angel_vengeance_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "umbral_sight_gloom_stalker_2024",
+  "name": "Umbral Sight",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "gloom_stalker_2024",
+    "name": "Gloom Stalker",
+    "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gain Darkvision up to 60 feet (or extend by 60 feet). While in darkness, you are Invisible to creatures relying on Darkvision to see you."
+  ],
+  "url": "/assets/atlas/features/json/umbral_sight_gloom_stalker_2024.json"
+}

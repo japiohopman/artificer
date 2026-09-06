@@ -1,0 +1,19 @@
+{
+  "index": "radiance_of_the_dawn_light_2024",
+  "name": "Channel Divinity: Radiance of the Dawn",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "light_domain_2024",
+    "name": "Light Domain",
+    "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Magic action, harness divine light to dispel magical darkness and deal 2d10 + Cleric level Radiant damage to hostile creatures within 30 feet (CON save for half)."
+  ],
+  "url": "/assets/atlas/features/json/radiance_of_the_dawn_light_2024.json"
+}

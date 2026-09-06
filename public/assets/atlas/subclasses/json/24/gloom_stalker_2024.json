@@ -1,0 +1,66 @@
+{
+  "index": "gloom_stalker_2024",
+  "name": "Gloom Stalker",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "desc": [
+    "Gloom Stalkers haunt the dark depths of the Underdark and shadowed wilderness, striking unseen from pitch darkness."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "dread_ambusher_gloom_stalker_2024",
+          "name": "Dread Ambusher",
+          "url": "/assets/atlas/features/json/dread_ambusher_gloom_stalker_2024.json"
+        },
+        {
+          "index": "gloom_stalker_spells_2024",
+          "name": "Gloom Stalker Spells",
+          "url": "/assets/atlas/features/json/gloom_stalker_spells_2024.json"
+        },
+        {
+          "index": "umbral_sight_gloom_stalker_2024",
+          "name": "Umbral Sight",
+          "url": "/assets/atlas/features/json/umbral_sight_gloom_stalker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "iron_mind_gloom_stalker_2024",
+          "name": "Iron Mind",
+          "url": "/assets/atlas/features/json/iron_mind_gloom_stalker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "stalkers_flurry_gloom_stalker_2024",
+          "name": "Stalker's Flurry",
+          "url": "/assets/atlas/features/json/stalkers_flurry_gloom_stalker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "shadowy_dodge_gloom_stalker_2024",
+          "name": "Shadowy Dodge",
+          "url": "/assets/atlas/features/json/shadowy_dodge_gloom_stalker_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json",
+  "rulesetContext": "2024"
+}

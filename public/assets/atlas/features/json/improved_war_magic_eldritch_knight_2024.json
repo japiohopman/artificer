@@ -1,0 +1,19 @@
+{
+  "index": "improved_war_magic_eldritch_knight_2024",
+  "name": "Improved War Magic",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "eldritch_knight_2024",
+    "name": "Eldritch Knight",
+    "url": "/assets/atlas/subclasses/json/24/eldritch_knight_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "When you take the Attack action, you can replace two attacks with casting a 1st-level or 2nd-level Wizard spell."
+  ],
+  "url": "/assets/atlas/features/json/improved_war_magic_eldritch_knight_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "psychic_blades_soulknife_2024",
+  "name": "Psychic Blades",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "soulknife_2024",
+    "name": "Soulknife",
+    "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Manifest psionic daggers (1d6 Psychic damage, Finesse/Thrown 60ft) whenever you take the Attack action, making a bonus action blade attack (1d4)."
+  ],
+  "url": "/assets/atlas/features/json/psychic_blades_soulknife_2024.json"
+}

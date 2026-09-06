@@ -1,0 +1,66 @@
+{
+  "index": "glory_2024",
+  "name": "Oath of Glory",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "desc": [
+    "Paladins of Glory strive for athletic perfection and legendary heroic deeds that echo through history."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "oath_spells_glory_2024",
+          "name": "Oath Spells",
+          "url": "/assets/atlas/features/json/oath_spells_glory_2024.json"
+        },
+        {
+          "index": "peerless_athlete_glory_2024",
+          "name": "Channel Divinity: Peerless Athlete",
+          "url": "/assets/atlas/features/json/peerless_athlete_glory_2024.json"
+        },
+        {
+          "index": "inspiring_smite_glory_2024",
+          "name": "Channel Divinity: Inspiring Smite",
+          "url": "/assets/atlas/features/json/inspiring_smite_glory_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "aura_of_alacrity_glory_2024",
+          "name": "Aura of Alacrity",
+          "url": "/assets/atlas/features/json/aura_of_alacrity_glory_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "glorious_defense_glory_2024",
+          "name": "Glorious Defense",
+          "url": "/assets/atlas/features/json/glorious_defense_glory_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "features": [
+        {
+          "index": "living_legend_glory_2024",
+          "name": "Living Legend",
+          "url": "/assets/atlas/features/json/living_legend_glory_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/glory_2024.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "circle_forms_moon_2024",
+  "name": "Circle Forms",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "moon_2024",
+    "name": "Circle of the Moon",
+    "url": "/assets/atlas/subclasses/json/24/moon_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Assume Beast forms up to CR 1 at L3, CR 2 at L6, CR 3 at L9, scaling higher. Gain AC equal to 13 + WIS mod while transformed."
+  ],
+  "url": "/assets/atlas/features/json/circle_forms_moon_2024.json"
+}

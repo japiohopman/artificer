@@ -1,0 +1,19 @@
+{
+  "index": "bewitching_vanish_archfey_2024",
+  "name": "Bewitching Vanish",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "archfey_2024",
+    "name": "Archfey Patron",
+    "url": "/assets/atlas/subclasses/json/24/archfey_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "When using Steps of the Fey, become Invisible until the start of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/bewitching_vanish_archfey_2024.json"
+}

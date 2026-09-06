@@ -1,0 +1,19 @@
+{
+  "index": "projected_ward_abjurer_2024",
+  "name": "Projected Ward",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "abjurer_2024",
+    "name": "Abjurer",
+    "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When a creature within 30 feet takes damage, use your Reaction to cause your Arcane Ward to absorb the damage."
+  ],
+  "url": "/assets/atlas/features/json/projected_ward_abjurer_2024.json"
+}

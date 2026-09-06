@@ -1,0 +1,56 @@
+{
+  "index": "war_domain_2024",
+  "name": "War Domain",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "desc": [
+    "War Clerics excel in battle, rallying allies, striking with divine accuracy, and crushing enemies under heavy armaments."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "war_domain_spells_2024",
+          "name": "War Domain Spells",
+          "url": "/assets/atlas/features/json/war_domain_spells_2024.json"
+        },
+        {
+          "index": "war_priest_war_2024",
+          "name": "War Priest",
+          "url": "/assets/atlas/features/json/war_priest_war_2024.json"
+        },
+        {
+          "index": "guided_strike_war_2024",
+          "name": "Channel Divinity: Guided Strike",
+          "url": "/assets/atlas/features/json/guided_strike_war_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "war_gods_blessing_war_2024",
+          "name": "War God's Blessing",
+          "url": "/assets/atlas/features/json/war_gods_blessing_war_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "avatar_of_battle_war_2024",
+          "name": "Avatar of Battle",
+          "url": "/assets/atlas/features/json/avatar_of_battle_war_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json",
+  "rulesetContext": "2024"
+}

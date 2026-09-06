@@ -1,0 +1,19 @@
+{
+  "index": "elemental_epitome_elements_2024",
+  "name": "Elemental Epitome",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "elements_2024",
+    "name": "Warrior of the Elements",
+    "url": "/assets/atlas/subclasses/json/24/elements_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "While Elemental Attunement is active, gain resistance to Acid, Cold, Fire, Lightning, and Thunder, and automatically deal elemental damage when stepping near foes."
+  ],
+  "url": "/assets/atlas/features/json/elemental_epitome_elements_2024.json"
+}

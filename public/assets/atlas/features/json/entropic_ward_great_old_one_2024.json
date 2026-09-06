@@ -1,0 +1,19 @@
+{
+  "index": "entropic_ward_great_old_one_2024",
+  "name": "Entropic Ward",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Reaction when hit by an attack, impose Disadvantage on the attacker and gain Advantage on your next attack roll against it."
+  ],
+  "url": "/assets/atlas/features/json/entropic_ward_great_old_one_2024.json"
+}

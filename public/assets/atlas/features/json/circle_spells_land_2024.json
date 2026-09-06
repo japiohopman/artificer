@@ -1,0 +1,19 @@
+{
+  "index": "circle_spells_land_2024",
+  "name": "Circle Spells",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Choose a land biome (Arid, Polar, Temperate, Tropical) to gain prepared circle spells and change biome on Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/circle_spells_land_2024.json"
+}

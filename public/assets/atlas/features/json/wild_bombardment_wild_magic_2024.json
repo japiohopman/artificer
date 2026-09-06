@@ -1,0 +1,19 @@
+{
+  "index": "wild_bombardment_wild_magic_2024",
+  "name": "Wild Bombardment",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "When you cast a spell that deals damage, roll maximum damage for one of the spell's damage dice and trigger a Wild Magic Surge automatically."
+  ],
+  "url": "/assets/atlas/features/json/wild_bombardment_wild_magic_2024.json"
+}

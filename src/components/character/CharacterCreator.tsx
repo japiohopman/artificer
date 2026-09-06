@@ -274,7 +274,7 @@ export const CharacterCreator: React.FC = () => {
                 }
             }
             if (newChar.subclass) {
-                const subData = await atlasService.loadSubclass(newChar.subclass);
+                const subData = await atlasService.loadSubclass(newChar.subclass, newChar.ruleset);
                 if (subData?.features) {
                     const subLvl1Features = subData.features.filter((f: any) => f.level === 1);
                     for (const fRef of subLvl1Features) {

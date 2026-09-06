@@ -1,0 +1,56 @@
+{
+  "index": "light_domain_2024",
+  "name": "Light Domain",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "desc": [
+    "Clerics of the Light Domain embody truth, vigilance, and burning divine fire. They blind dark forces and incinerate threats with radiant power."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "light_domain_spells_2024",
+          "name": "Light Domain Spells",
+          "url": "/assets/atlas/features/json/light_domain_spells_2024.json"
+        },
+        {
+          "index": "warding_flare_light_2024",
+          "name": "Warding Flare",
+          "url": "/assets/atlas/features/json/warding_flare_light_2024.json"
+        },
+        {
+          "index": "radiance_of_the_dawn_light_2024",
+          "name": "Channel Divinity: Radiance of the Dawn",
+          "url": "/assets/atlas/features/json/radiance_of_the_dawn_light_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "improved_flare_light_2024",
+          "name": "Improved Flare",
+          "url": "/assets/atlas/features/json/improved_flare_light_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "corona_of_light_light_2024",
+          "name": "Corona of Light",
+          "url": "/assets/atlas/features/json/corona_of_light_light_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json",
+  "rulesetContext": "2024"
+}

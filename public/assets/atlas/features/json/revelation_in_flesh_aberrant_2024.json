@@ -1,0 +1,19 @@
+{
+  "index": "revelation_in_flesh_aberrant_2024",
+  "name": "Revelation in Flesh",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "aberrant_sorcery_2024",
+    "name": "Aberrant Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Spend 1 Sorcery Point to transform for 10 minutes: gain flight, swimming speed, squeeze through tight spaces, or see invisible creatures."
+  ],
+  "url": "/assets/atlas/features/json/revelation_in_flesh_aberrant_2024.json"
+}

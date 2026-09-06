@@ -1,0 +1,56 @@
+{
+  "index": "shadow_2024",
+  "name": "Warrior of the Shadow",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "desc": [
+    "Warriors of the Shadow slip through darkness, creating magical gloom, teleporting between shadows, and striking from stealth."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "shadow_arts_shadow_2024",
+          "name": "Shadow Arts",
+          "url": "/assets/atlas/features/json/shadow_arts_shadow_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "shadow_step_shadow_2024",
+          "name": "Shadow Step",
+          "url": "/assets/atlas/features/json/shadow_step_shadow_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "improved_shadow_step_shadow_2024",
+          "name": "Improved Shadow Step",
+          "url": "/assets/atlas/features/json/improved_shadow_step_shadow_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "cloak_of_shadows_shadow_2024",
+          "name": "Cloak of Shadows",
+          "url": "/assets/atlas/features/json/cloak_of_shadows_shadow_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/shadow_2024.json",
+  "rulesetContext": "2024"
+}

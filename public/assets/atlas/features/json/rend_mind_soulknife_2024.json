@@ -1,0 +1,19 @@
+{
+  "index": "rend_mind_soulknife_2024",
+  "name": "Rend Mind",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "soulknife_2024",
+    "name": "Soulknife",
+    "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "When dealing Sneak Attack with Psychic Blades, force a WIS save vs DC 8 + PB + DEX or Stun the target for 1 minute."
+  ],
+  "url": "/assets/atlas/features/json/rend_mind_soulknife_2024.json"
+}

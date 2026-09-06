@@ -1,0 +1,19 @@
+{
+  "index": "hand_of_ultimate_mercy_mercy_2024",
+  "name": "Hand of Ultimate Mercy",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "mercy_2024",
+    "name": "Warrior of Mercy",
+    "url": "/assets/atlas/subclasses/json/24/mercy_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "Once per Long Rest, touch a creature dead within 24 hours and spend 5 Focus Points to revive it with HP equal to 4 Martial Arts dice + WIS mod."
+  ],
+  "url": "/assets/atlas/features/json/hand_of_ultimate_mercy_mercy_2024.json"
+}

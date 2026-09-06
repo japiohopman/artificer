@@ -1,0 +1,61 @@
+{
+  "index": "wild_heart_2024",
+  "name": "Path of the Wild Heart",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "desc": [
+    "The Path of the Wild Heart tunes your fury to the natural realm and animal spirits. You embody primal aspects of beasts to channel speed, resilience, and feral power."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "animal_speaker_wild_heart_2024",
+          "name": "Animal Speaker",
+          "url": "/assets/atlas/features/json/animal_speaker_wild_heart_2024.json"
+        },
+        {
+          "index": "rage_of_the_wild_wild_heart_2024",
+          "name": "Rage of the Wild",
+          "url": "/assets/atlas/features/json/rage_of_the_wild_wild_heart_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "aspect_of_the_wild_wild_heart_2024",
+          "name": "Aspect of the Wild",
+          "url": "/assets/atlas/features/json/aspect_of_the_wild_wild_heart_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "nature_speaker_wild_heart_2024",
+          "name": "Nature Speaker",
+          "url": "/assets/atlas/features/json/nature_speaker_wild_heart_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "power_of_the_wild_wild_heart_2024",
+          "name": "Power of the Wild",
+          "url": "/assets/atlas/features/json/power_of_the_wild_wild_heart_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/wild_heart_2024.json",
+  "rulesetContext": "2024"
+}

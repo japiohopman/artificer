@@ -1,0 +1,19 @@
+{
+  "index": "bend_fate_wild_magic_2024",
+  "name": "Bend Fate",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Use Reaction and spend 2 Sorcery Points to roll a d10 and add or subtract it from another creature's d20 roll."
+  ],
+  "url": "/assets/atlas/features/json/bend_fate_wild_magic_2024.json"
+}

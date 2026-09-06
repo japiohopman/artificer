@@ -1,0 +1,51 @@
+{
+  "index": "glamour_2024",
+  "name": "College of Glamour",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "desc": [
+    "Bards of the College of Glamour trace their origin to the Feywild. Their magic mesmerizes audiences, charms foes, and shields allies in glorious fey light."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "beguiling_magic_glamour_2024",
+          "name": "Beguiling Magic",
+          "url": "/assets/atlas/features/json/beguiling_magic_glamour_2024.json"
+        },
+        {
+          "index": "mantle_of_inspiration_glamour_2024",
+          "name": "Mantle of Inspiration",
+          "url": "/assets/atlas/features/json/mantle_of_inspiration_glamour_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "mantle_of_majesty_glamour_2024",
+          "name": "Mantle of Majesty",
+          "url": "/assets/atlas/features/json/mantle_of_majesty_glamour_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "unbreakable_majesty_glamour_2024",
+          "name": "Unbreakable Majesty",
+          "url": "/assets/atlas/features/json/unbreakable_majesty_glamour_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/glamour_2024.json",
+  "rulesetContext": "2024"
+}

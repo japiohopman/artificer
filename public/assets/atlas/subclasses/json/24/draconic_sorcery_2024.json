@@ -1,0 +1,61 @@
+{
+  "index": "draconic_sorcery_2024",
+  "name": "Draconic Sorcery",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "desc": [
+    "Draconic Sorcerers carry the ancient bloodline of dragons, manifesting scales, elemental breath, and draconic wings."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "draconic_resilience_draconic_2024",
+          "name": "Draconic Resilience",
+          "url": "/assets/atlas/features/json/draconic_resilience_draconic_2024.json"
+        },
+        {
+          "index": "draconic_speech_draconic_2024",
+          "name": "Draconic Speech",
+          "url": "/assets/atlas/features/json/draconic_speech_draconic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "elemental_affinity_draconic_2024",
+          "name": "Elemental Affinity",
+          "url": "/assets/atlas/features/json/elemental_affinity_draconic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "dragon_wings_draconic_2024",
+          "name": "Dragon Wings",
+          "url": "/assets/atlas/features/json/dragon_wings_draconic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "dragonkind_draconic_2024",
+          "name": "Dragonkind",
+          "url": "/assets/atlas/features/json/dragonkind_draconic_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/draconic_sorcery_2024.json",
+  "rulesetContext": "2024"
+}

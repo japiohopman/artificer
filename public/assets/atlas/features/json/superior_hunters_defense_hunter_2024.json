@@ -1,0 +1,19 @@
+{
+  "index": "superior_hunters_defense_hunter_2024",
+  "name": "Superior Hunter's Defense",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter_2024",
+    "name": "Hunter",
+    "url": "/assets/atlas/subclasses/json/24/hunter_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When you take damage, use your Reaction to halve the damage and reflect the halved damage back to an attacker within 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/superior_hunters_defense_hunter_2024.json"
+}

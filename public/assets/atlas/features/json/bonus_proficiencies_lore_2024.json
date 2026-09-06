@@ -1,0 +1,19 @@
+{
+  "index": "bonus_proficiencies_lore_2024",
+  "name": "Bonus Proficiencies",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "lore_2024",
+    "name": "College of Lore",
+    "url": "/assets/atlas/subclasses/json/24/lore_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain proficiency in three skills of your choice."
+  ],
+  "url": "/assets/atlas/features/json/bonus_proficiencies_lore_2024.json"
+}

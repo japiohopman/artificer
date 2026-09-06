@@ -1,0 +1,19 @@
+{
+  "index": "spell_thief_arcane_trickster_2024",
+  "name": "Spell Thief",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster_2024",
+    "name": "Arcane Trickster",
+    "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "When targeted by a spell, use Reaction to negate its effect on you and temporarily steal the spell for 8 hours."
+  ],
+  "url": "/assets/atlas/features/json/spell_thief_arcane_trickster_2024.json"
+}

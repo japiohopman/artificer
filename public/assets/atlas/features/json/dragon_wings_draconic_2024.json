@@ -1,0 +1,19 @@
+{
+  "index": "dragon_wings_draconic_2024",
+  "name": "Dragon Wings",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic_sorcery_2024",
+    "name": "Draconic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/draconic_sorcery_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Manifest draconic wings granting a Flying speed equal to your Speed."
+  ],
+  "url": "/assets/atlas/features/json/dragon_wings_draconic_2024.json"
+}

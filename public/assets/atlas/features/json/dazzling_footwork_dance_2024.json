@@ -1,0 +1,19 @@
+{
+  "index": "dazzling_footwork_dance_2024",
+  "name": "Dazzling Footwork",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "dance_2024",
+    "name": "College of Dance",
+    "url": "/assets/atlas/subclasses/json/24/dance_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "While not wearing armor or wielding a shield, AC equals 10 + DEX + CHA. In addition, your Unarmed Strikes deal damage equal to your Bardic Inspiration die."
+  ],
+  "url": "/assets/atlas/features/json/dazzling_footwork_dance_2024.json"
+}

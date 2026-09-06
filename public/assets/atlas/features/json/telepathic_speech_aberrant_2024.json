@@ -1,0 +1,19 @@
+{
+  "index": "telepathic_speech_aberrant_2024",
+  "name": "Telepathic Speech",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "aberrant_sorcery_2024",
+    "name": "Aberrant Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Form a telepathic link with a creature within 30 feet for 1 hour as a Bonus Action."
+  ],
+  "url": "/assets/atlas/features/json/telepathic_speech_aberrant_2024.json"
+}

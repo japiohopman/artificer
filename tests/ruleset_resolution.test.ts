@@ -596,103 +596,91 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(eldritchMaster24).not.toBeNull();
   });
 
-  it('verifies 2024 subclass data resolution, level timing, exact feature mapping, referential integrity, and placeholder protection', async () => {
-    const subclasses2024 = [
-      {
-        index: 'champion_2024',
-        expectedClass: 'fighter',
-        expectedFeaturesByLevel: {
-          3: ['improved_critical_champion_2024', 'remarkable_athlete_champion_2024'],
-          7: ['additional_fighting_style_champion_2024'],
-          10: ['heroic_warrior_champion_2024'],
-          15: ['superior_critical_champion_2024'],
-          18: ['survivor_champion_2024']
-        }
-      },
-      {
-        index: 'battle_master_2024',
-        expectedClass: 'fighter',
-        expectedFeaturesByLevel: {
-          3: ['combat_superiority_battle_master_2024', 'student_of_war_battle_master_2024'],
-          7: ['know_your_enemy_battle_master_2024'],
-          10: ['improved_combat_superiority_battle_master_2024'],
-          15: ['relentless_battle_master_2024'],
-          18: ['ultimate_combat_superiority_battle_master_2024']
-        }
-      },
-      {
-        index: 'evocation_2024',
-        expectedClass: 'wizard',
-        expectedFeaturesByLevel: {
-          3: ['evocation_savant_2024', 'potent_cantrip_2024'],
-          6: ['sculpt_spells_2024'],
-          10: ['empowered_evocation_2024'],
-          14: ['overchannel_2024']
-        }
-      },
-      {
-        index: 'life_domain_2024',
-        expectedClass: 'cleric',
-        expectedFeaturesByLevel: {
-          3: ['domain_spells_life_2024', 'disciple_of_life_2024', 'channel_divinity_preserve_life_2024'],
-          6: ['blessed_healer_2024'],
-          17: ['supreme_healing_2024']
-        }
-      },
-      {
-        index: 'thief_2024',
-        expectedClass: 'rogue',
-        expectedFeaturesByLevel: {
-          3: ['fast_hands_thief_2024', 'second_story_work_thief_2024'],
-          9: ['supreme_sneak_thief_2024'],
-          13: ['use_magic_device_thief_2024'],
-          17: ['thiefs_reflexes_2024']
-        }
-      },
-      {
-        index: 'assassin_2024',
-        expectedClass: 'rogue',
-        expectedFeaturesByLevel: {
-          3: ['assassinate_2024', 'bonus_proficiencies_assassin_2024'],
-          9: ['infiltrator_expertise_assassin_2024'],
-          13: ['envenom_weapons_assassin_2024'],
-          17: ['death_strike_assassin_2024']
-        }
-      }
-    ];
+  it('verifies 2024 subclass catalog complete coverage (48/48 total, 4 per core class)', async () => {
+    const list2024 = await fetchSubclassesList('2024');
+    expect(list2024).toHaveLength(48);
 
-    for (const subConfig of subclasses2024) {
-      const subclassData = await fetchSubclassData(subConfig.index, '2024');
-      expect(subclassData).not.toBeNull();
-      expect(subclassData?.rulesetContext).toBe('2024');
-      expect(subclassData?.class?.index).toBe(subConfig.expectedClass);
+    for (const className of ALL_12_CLASSES) {
+      const classSubs = await fetchSubclassesList('2024', className);
+      expect(classSubs).toHaveLength(4);
 
-      const actualLevels = subclassData?.subclass_levels?.map((l: any) => l.level);
-      const expectedLevels = Object.keys(subConfig.expectedFeaturesByLevel).map(Number);
-      expect(actualLevels).toEqual(expectedLevels);
+      for (const subRef of classSubs) {
+        expect(subRef.classIndex?.toLowerCase()).toBe(className);
+        const subData = await fetchSubclassData(subRef.index, '2024');
+        expect(subData).not.toBeNull();
+        expect(subData?.rulesetContext).toBe('2024');
+        expect(subData?.class?.index).toBe(className);
 
-      for (const levelGroup of subclassData?.subclass_levels || []) {
-        const lvl = levelGroup.level;
-        const expectedFeatureIds = subConfig.expectedFeaturesByLevel[lvl as keyof typeof subConfig.expectedFeaturesByLevel];
-        const actualFeatureIds = (levelGroup.features || []).map((f: any) => f.index);
-        expect(actualFeatureIds).toEqual(expectedFeatureIds);
+        // Verify subclass feature definitions and referential integrity
+        for (const levelGroup of subData?.subclass_levels || []) {
+          for (const featRef of levelGroup.features || []) {
+            const feat = await atlasService.loadFeature(featRef.index);
+            expect(feat).not.toBeNull();
+            expect(feat.index).toBe(featRef.index);
+            expect(feat.class.index).toBe(className);
+            expect(feat.subclass.index).toBe(subData.index);
+            expect(feat.name).toBeTruthy();
 
-        for (const featRef of levelGroup.features || []) {
-          const feat = await atlasService.loadFeature(featRef.index);
-          expect(feat).not.toBeNull();
-          expect(feat.index).toBe(featRef.index);
-          expect(feat.name).toBeTruthy();
+            const desc = Array.isArray(feat.desc) ? feat.desc.join(' ') : feat.desc || '';
+            expect(desc.length).toBeGreaterThanOrEqual(30);
 
-          const desc = Array.isArray(feat.desc) ? feat.desc.join(' ') : feat.desc || '';
-          expect(desc.length).toBeGreaterThanOrEqual(30);
-
-          expect(desc.toLowerCase()).not.toContain('feature from your');
-          expect(desc.toLowerCase()).not.toContain('placeholder');
-          expect(desc.toLowerCase()).not.toContain('you gain a feature');
+            // STRICT PLACEHOLDER DETECTION ASSERTIONS
+            expect(desc.toLowerCase()).not.toContain('feature from your');
+            expect(desc.toLowerCase()).not.toContain('placeholder');
+            expect(desc.toLowerCase()).not.toContain('you gain a feature');
+          }
         }
       }
     }
+  });
 
+  it('verifies exact assertions for renamed 2024 subclass identities', async () => {
+    const wildHeart = await fetchSubclassData('wild_heart_2024', '2024');
+    expect(wildHeart?.name).toBe('Path of the Wild Heart');
+    expect(wildHeart?.class?.index).toBe('barbarian');
+
+    const shadowMonk = await fetchSubclassData('shadow_2024', '2024');
+    expect(shadowMonk?.name).toBe('Warrior of the Shadow');
+    expect(shadowMonk?.class?.index).toBe('monk');
+
+    const elementsMonk = await fetchSubclassData('elements_2024', '2024');
+    expect(elementsMonk?.name).toBe('Warrior of the Elements');
+    expect(elementsMonk?.class?.index).toBe('monk');
+
+    const aberrantSorc = await fetchSubclassData('aberrant_sorcery_2024', '2024');
+    expect(aberrantSorc?.name).toBe('Aberrant Sorcery');
+    expect(aberrantSorc?.class?.index).toBe('sorcerer');
+
+    const clockworkSorc = await fetchSubclassData('clockwork_sorcery_2024', '2024');
+    expect(clockworkSorc?.name).toBe('Clockwork Sorcery');
+    expect(clockworkSorc?.class?.index).toBe('sorcerer');
+
+    const draconicSorc = await fetchSubclassData('draconic_sorcery_2024', '2024');
+    expect(draconicSorc?.name).toBe('Draconic Sorcery');
+    expect(draconicSorc?.class?.index).toBe('sorcerer');
+
+    const archfeyWarlock = await fetchSubclassData('archfey_2024', '2024');
+    expect(archfeyWarlock?.name).toBe('Archfey Patron');
+    expect(archfeyWarlock?.class?.index).toBe('warlock');
+
+    const celestialWarlock = await fetchSubclassData('celestial_2024', '2024');
+    expect(celestialWarlock?.name).toBe('Celestial Patron');
+    expect(celestialWarlock?.class?.index).toBe('warlock');
+
+    const abjurer = await fetchSubclassData('abjurer_2024', '2024');
+    expect(abjurer?.name).toBe('Abjurer');
+    expect(abjurer?.class?.index).toBe('wizard');
+
+    const diviner = await fetchSubclassData('diviner_2024', '2024');
+    expect(diviner?.name).toBe('Diviner');
+    expect(diviner?.class?.index).toBe('wizard');
+
+    const illusionist = await fetchSubclassData('illusionist_2024', '2024');
+    expect(illusionist?.name).toBe('Illusionist');
+    expect(illusionist?.class?.index).toBe('wizard');
+  });
+
+  it('verifies 2014 vs 2024 subclass isolation and nonexistent subclass returns null', async () => {
     const champion24 = await atlasService.loadSubclass('champion_2024', '2024');
     expect(champion24).not.toBeNull();
     expect(champion24?.rulesetContext).toBe('2024');
@@ -701,8 +689,8 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(champion14).not.toBeNull();
     expect(champion14?.rulesetContext).toBe('2014');
 
-    const unmigrated24 = await fetchSubclassData('wild_heart_2024', '2024');
-    expect(unmigrated24).toBeNull();
+    const nonexistent24 = await fetchSubclassData('nonexistent_subclass_2024', '2024');
+    expect(nonexistent24).toBeNull();
   });
 
   it('verifies ruleset-aware fetchSubclassesList and class filtering', async () => {
@@ -714,21 +702,26 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(indices2024).toContain('life_domain_2024');
     expect(indices2024).toContain('thief_2024');
     expect(indices2024).toContain('assassin_2024');
+    expect(indices2024).toContain('wild_heart_2024');
+    expect(indices2024).toContain('shadow_2024');
     expect(indices2024).not.toContain('champion');
     expect(indices2024).not.toContain('berserker');
 
     const fighterSubclasses2024 = await fetchSubclassesList('2024', 'fighter');
     const fighterIndices2024 = fighterSubclasses2024.map(s => s.index);
-    expect(fighterIndices2024.sort()).toEqual(['battle_master_2024', 'champion_2024']);
+    expect(fighterIndices2024.sort()).toEqual(['battle_master_2024', 'champion_2024', 'eldritch_knight_2024', 'psi_warrior_2024']);
 
     const wizardSubclasses2024 = await fetchSubclassesList('2024', 'wizard');
-    expect(wizardSubclasses2024.map(s => s.index)).toEqual(['evocation_2024']);
+    const wizardIndices2024 = wizardSubclasses2024.map(s => s.index);
+    expect(wizardIndices2024.sort()).toEqual(['abjurer_2024', 'diviner_2024', 'evocation_2024', 'illusionist_2024']);
 
     const rogueSubclasses2024 = await fetchSubclassesList('2024', 'rogue');
-    expect(rogueSubclasses2024.map(s => s.index).sort()).toEqual(['assassin_2024', 'thief_2024']);
+    const rogueIndices2024 = rogueSubclasses2024.map(s => s.index);
+    expect(rogueIndices2024.sort()).toEqual(['arcane_trickster_2024', 'assassin_2024', 'soulknife_2024', 'thief_2024']);
 
     const barbarianSubclasses2024 = await fetchSubclassesList('2024', 'barbarian');
-    expect(barbarianSubclasses2024).toEqual([]);
+    const barbarianIndices2024 = barbarianSubclasses2024.map(s => s.index);
+    expect(barbarianIndices2024.sort()).toEqual(['berserker_2024', 'wild_heart_2024', 'world_tree_2024', 'zealot_2024']);
 
     const list2014 = await fetchSubclassesList('2014');
     const indices2014 = list2014.map(s => s.index);

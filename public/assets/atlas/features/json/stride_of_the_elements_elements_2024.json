@@ -1,0 +1,19 @@
+{
+  "index": "stride_of_the_elements_elements_2024",
+  "name": "Stride of the Elements",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "elements_2024",
+    "name": "Warrior of the Elements",
+    "url": "/assets/atlas/subclasses/json/24/elements_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "While Elemental Attunement is active, gain a Flying speed equal to your Speed and hover."
+  ],
+  "url": "/assets/atlas/features/json/stride_of_the_elements_elements_2024.json"
+}

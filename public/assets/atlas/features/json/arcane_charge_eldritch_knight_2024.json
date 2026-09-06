@@ -1,0 +1,19 @@
+{
+  "index": "arcane_charge_eldritch_knight_2024",
+  "name": "Arcane Charge",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "eldritch_knight_2024",
+    "name": "Eldritch Knight",
+    "url": "/assets/atlas/subclasses/json/24/eldritch_knight_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When you use Action Surge, teleport up to 30 feet to an unoccupied space you can see before or after taking your additional action."
+  ],
+  "url": "/assets/atlas/features/json/arcane_charge_eldritch_knight_2024.json"
+}

@@ -1,0 +1,61 @@
+{
+  "index": "hunter_2024",
+  "name": "Hunter",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "desc": [
+    "Hunters adapt martial techniques to eliminate deadly monsters and horde threats."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "hunters_prey_hunter_2024",
+          "name": "Hunter's Prey",
+          "url": "/assets/atlas/features/json/hunters_prey_hunter_2024.json"
+        },
+        {
+          "index": "hunters_lore_hunter_2024",
+          "name": "Hunter's Lore",
+          "url": "/assets/atlas/features/json/hunters_lore_hunter_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "defensive_tactics_hunter_2024",
+          "name": "Defensive Tactics",
+          "url": "/assets/atlas/features/json/defensive_tactics_hunter_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "superior_hunters_prey_hunter_2024",
+          "name": "Superior Hunter's Prey",
+          "url": "/assets/atlas/features/json/superior_hunters_prey_hunter_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "superior_hunters_defense_hunter_2024",
+          "name": "Superior Hunter's Defense",
+          "url": "/assets/atlas/features/json/superior_hunters_defense_hunter_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/hunter_2024.json",
+  "rulesetContext": "2024"
+}

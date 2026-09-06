@@ -1,0 +1,19 @@
+{
+  "index": "dark_ones_blessing_fiend_2024",
+  "name": "Dark One's Blessing",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "fiend_2024",
+    "name": "Fiend Patron",
+    "url": "/assets/atlas/subclasses/json/24/fiend_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you reduce a enemy to 0 HP, gain Temp HP equal to CHA mod + Warlock level."
+  ],
+  "url": "/assets/atlas/features/json/dark_ones_blessing_fiend_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "draconic_resilience_draconic_2024",
+  "name": "Draconic Resilience",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "draconic_sorcery_2024",
+    "name": "Draconic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/draconic_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Your HP maximum increases by 3 (and by +1 each level). While not wearing armor, your AC equals 10 + DEX + CHA."
+  ],
+  "url": "/assets/atlas/features/json/draconic_resilience_draconic_2024.json"
+}

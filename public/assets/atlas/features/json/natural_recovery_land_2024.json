@@ -1,0 +1,19 @@
+{
+  "index": "natural_recovery_land_2024",
+  "name": "Natural Recovery",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "During a Short Rest, regain expended spell slots with a combined level equal to half your Druid level."
+  ],
+  "url": "/assets/atlas/features/json/natural_recovery_land_2024.json"
+}

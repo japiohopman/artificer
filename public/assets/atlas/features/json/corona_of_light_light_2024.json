@@ -1,0 +1,19 @@
+{
+  "index": "corona_of_light_light_2024",
+  "name": "Corona of Light",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "light_domain_2024",
+    "name": "Light Domain",
+    "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "As an Action, emit an aura of bright sunlight in a 60-foot radius. Enemies in the aura have Disadvantage on saves against fire and radiant spells."
+  ],
+  "url": "/assets/atlas/features/json/corona_of_light_light_2024.json"
+}

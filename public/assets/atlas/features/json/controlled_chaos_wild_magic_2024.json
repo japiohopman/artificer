@@ -1,0 +1,19 @@
+{
+  "index": "controlled_chaos_wild_magic_2024",
+  "name": "Controlled Chaos",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Whenever you roll on the Wild Magic Surge table, roll twice and choose either effect."
+  ],
+  "url": "/assets/atlas/features/json/controlled_chaos_wild_magic_2024.json"
+}

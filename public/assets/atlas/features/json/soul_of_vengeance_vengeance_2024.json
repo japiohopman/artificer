@@ -1,0 +1,19 @@
+{
+  "index": "soul_of_vengeance_vengeance_2024",
+  "name": "Soul of Vengeance",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "vengeance_2024",
+    "name": "Oath of Vengeance",
+    "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When the target of your Vow of Enmity makes an attack, use your Reaction to make a melee weapon attack against it."
+  ],
+  "url": "/assets/atlas/features/json/soul_of_vengeance_vengeance_2024.json"
+}

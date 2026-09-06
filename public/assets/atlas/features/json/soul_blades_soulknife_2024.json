@@ -1,0 +1,19 @@
+{
+  "index": "soul_blades_soulknife_2024",
+  "name": "Soul Blades",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "soulknife_2024",
+    "name": "Soulknife",
+    "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json"
+  },
+  "level": 9,
+  "desc": [
+    "Harness psionic energy for Homing Strikes (add Psionic die to missed attack) or Psychic Teleportation (teleport to thrown blade)."
+  ],
+  "url": "/assets/atlas/features/json/soul_blades_soulknife_2024.json"
+}

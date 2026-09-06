@@ -1,0 +1,61 @@
+{
+  "index": "wild_magic_sorcery_2024",
+  "name": "Wild Magic Sorcery",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "desc": [
+    "Wild Magic Sorcerers channel raw, chaotic magic from the Feywild and Limbo, unleashing unpredictable magical surges."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "wild_magic_surge_wild_magic_2024",
+          "name": "Wild Magic Surge",
+          "url": "/assets/atlas/features/json/wild_magic_surge_wild_magic_2024.json"
+        },
+        {
+          "index": "tides_of_chaos_wild_magic_2024",
+          "name": "Tides of Chaos",
+          "url": "/assets/atlas/features/json/tides_of_chaos_wild_magic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "bend_fate_wild_magic_2024",
+          "name": "Bend Fate",
+          "url": "/assets/atlas/features/json/bend_fate_wild_magic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "controlled_chaos_wild_magic_2024",
+          "name": "Controlled Chaos",
+          "url": "/assets/atlas/features/json/controlled_chaos_wild_magic_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "wild_bombardment_wild_magic_2024",
+          "name": "Wild Bombardment",
+          "url": "/assets/atlas/features/json/wild_bombardment_wild_magic_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json",
+  "rulesetContext": "2024"
+}

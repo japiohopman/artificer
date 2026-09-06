@@ -1,0 +1,19 @@
+{
+  "index": "oath_spells_devotion_2024",
+  "name": "Oath Spells",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion_2024",
+    "name": "Oath of Devotion",
+    "url": "/assets/atlas/subclasses/json/24/devotion_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have oath spells prepared (Protection from Evil and Good, Sanctuary, Aid, Zone of Truth, Beacon of Hope, Dispel Magic, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/oath_spells_devotion_2024.json"
+}

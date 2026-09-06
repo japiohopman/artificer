@@ -1,0 +1,19 @@
+{
+  "index": "stormborn_sea_2024",
+  "name": "Stormborn",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "sea_2024",
+    "name": "Circle of the Sea",
+    "url": "/assets/atlas/subclasses/json/24/sea_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "While Wrath of the Sea is active, gain a Flying speed equal to your Speed and resistance to Cold, Lightning, and Thunder damage."
+  ],
+  "url": "/assets/atlas/features/json/stormborn_sea_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "full_of_stars_stars_2024",
+  "name": "Full of Stars",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "stars_2024",
+    "name": "Circle of the Stars",
+    "url": "/assets/atlas/subclasses/json/24/stars_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "While in Starry Form, you become partially incorporeal and gain resistance to Bludgeoning, Piercing, and Slashing damage."
+  ],
+  "url": "/assets/atlas/features/json/full_of_stars_stars_2024.json"
+}

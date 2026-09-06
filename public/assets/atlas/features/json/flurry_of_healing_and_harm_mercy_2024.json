@@ -1,0 +1,19 @@
+{
+  "index": "flurry_of_healing_and_harm_mercy_2024",
+  "name": "Flurry of Healing and Harm",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "mercy_2024",
+    "name": "Warrior of Mercy",
+    "url": "/assets/atlas/subclasses/json/24/mercy_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "When using Flurry of Blows, replace every Unarmed Strike with Hand of Healing without spending extra Focus Points."
+  ],
+  "url": "/assets/atlas/features/json/flurry_of_healing_and_harm_mercy_2024.json"
+}
