@@ -7,7 +7,7 @@
     "url": "/assets/atlas/class/json/24/druid.json"
   },
   "desc": [
-    "Druids of the Circle of the Moon are fierce guardians of the wilds who assume terrifying animal and elemental battle forms."
+    "Druids of the Circle of the Moon are fierce guardians of the wilds who assume terrifying animal battle forms infused with lunar magic."
   ],
   "subclass_levels": [
     {
@@ -29,9 +29,9 @@
       "level": 6,
       "features": [
         {
-          "index": "moonlight_strike_moon_2024",
-          "name": "Moonlight Strike",
-          "url": "/assets/atlas/features/json/moonlight_strike_moon_2024.json"
+          "index": "improved_circle_forms_moon_2024",
+          "name": "Improved Circle Forms",
+          "url": "/assets/atlas/features/json/improved_circle_forms_moon_2024.json"
         }
       ]
     },
@@ -39,9 +39,9 @@
       "level": 10,
       "features": [
         {
-          "index": "elemental_wild_shape_moon_2024",
-          "name": "Elemental Wild Shape",
-          "url": "/assets/atlas/features/json/elemental_wild_shape_moon_2024.json"
+          "index": "moonlight_step_moon_2024",
+          "name": "Moonlight Step",
+          "url": "/assets/atlas/features/json/moonlight_step_moon_2024.json"
         }
       ]
     },

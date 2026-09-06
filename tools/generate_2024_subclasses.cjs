@@ -7,6 +7,22 @@ const FEATURES_DIR = path.join(__dirname, '../public/assets/atlas/features/json'
 if (!fs.existsSync(SUBCLASSES_DIR)) fs.mkdirSync(SUBCLASSES_DIR, { recursive: true });
 if (!fs.existsSync(FEATURES_DIR)) fs.mkdirSync(FEATURES_DIR, { recursive: true });
 
+// Clean up obsolete feature files from previous build
+const obsoleteFeatureFiles = [
+  'bountiful_roots_world_tree_2024.json',
+  'elemental_wild_shape_moon_2024.json',
+  'moonlight_strike_moon_2024.json',
+  'wild_bombardment_wild_magic_2024.json'
+];
+
+obsoleteFeatureFiles.forEach(f => {
+  const p = path.join(FEATURES_DIR, f);
+  if (fs.existsSync(p)) {
+    fs.unlinkSync(p);
+    console.log(`Removed obsolete feature file: ${f}`);
+  }
+});
+
 const classRefs = {
   barbarian: { index: "barbarian", name: "Barbarian", url: "/assets/atlas/class/json/24/barbarian.json" },
   bard: { index: "bard", name: "Bard", url: "/assets/atlas/class/json/24/bard.json" },
@@ -33,7 +49,7 @@ const newSubclassesData = [
       {
         level: 3,
         features: [
-          { index: "frenzy_berserker_2024", name: "Frenzy", desc: "If you use Reckless Attack while raging, you can deal extra damage to the first target you hit on your turn. The extra damage equal to a number of d6s equal to your Rage Damage bonus." }
+          { index: "frenzy_berserker_2024", name: "Frenzy", desc: "If you use Reckless Attack while raging, you can deal extra damage to the first target you hit on your turn. The extra damage equals a number of d6s equal to your Rage Damage bonus." }
         ]
       },
       {
@@ -110,7 +126,7 @@ const newSubclassesData = [
       {
         level: 10,
         features: [
-          { index: "bountiful_roots_world_tree_2024", name: "Bountiful Roots", desc: "Your vitality aura expands to 20 feet, and allies near you gain resistance to damage while holding Temp HP granted by your Vitality of the Tree." }
+          { index: "battering_roots_world_tree_2024", name: "Battering Roots", desc: "During your rage, tendrils of the World Tree extend your reach by 10 feet with Heavy and Versatile melee weapons, allowing you to use Push or Topple property on hits." }
         ]
       },
       {
@@ -306,7 +322,7 @@ const newSubclassesData = [
         features: [
           { index: "trickery_domain_spells_2024", name: "Trickery Domain Spells", desc: "You always have domain spells prepared (Disguise Self, Charm Person, Invisibility, Pass Without Trace, Hypnotic Pattern, etc.)." },
           { index: "blessing_of_the_trickster_trickery_2024", name: "Blessing of the Trickster", desc: "As an Action, touch a willing creature to grant it Advantage on Stealth checks for 1 hour or until you use this feature again." },
-          { index: "invoke_duplicity_trickery_2024", name: "Channel Divinity: Invoke Duplicity", desc: "As a Bonus Action, create a illusory duplicate within 30 feet. You can cast spells from its space and gain Advantage on attacks when near it." }
+          { index: "invoke_duplicity_trickery_2024", name: "Channel Divinity: Invoke Duplicity", desc: "As a Bonus Action, create an illusory duplicate within 30 feet. You can cast spells from its space and gain Advantage on attacks when near it." }
         ]
       },
       {
@@ -375,7 +391,7 @@ const newSubclassesData = [
       {
         level: 10,
         features: [
-          { index: "natures_ward_land_2024", name: "Nature's Ward", desc: "You cannot be Poisoned, and you gain resistance to Poison damage and immune to disease." }
+          { index: "natures_ward_land_2024", name: "Nature's Ward", desc: "You cannot be Poisoned, and you gain resistance to Poison damage and immunity to disease." }
         ]
       },
       {
@@ -390,7 +406,7 @@ const newSubclassesData = [
     index: "moon_2024",
     name: "Circle of the Moon",
     classKey: "druid",
-    desc: ["Druids of the Circle of the Moon are fierce guardians of the wilds who assume terrifying animal and elemental battle forms."],
+    desc: ["Druids of the Circle of the Moon are fierce guardians of the wilds who assume terrifying animal battle forms infused with lunar magic."],
     levels: [
       {
         level: 3,
@@ -402,19 +418,19 @@ const newSubclassesData = [
       {
         level: 6,
         features: [
-          { index: "moonlight_strike_moon_2024", name: "Moonlight Strike", desc: "Your attacks in Wild Shape form deal Radiant damage instead of physical damage if you choose." }
+          { index: "improved_circle_forms_moon_2024", name: "Improved Circle Forms", desc: "Attacks in Wild Shape deal extra Radiant damage equal to 1d6 or your Wisdom modifier, and AC equals 13 + WIS mod in beast form." }
         ]
       },
       {
         level: 10,
         features: [
-          { index: "elemental_wild_shape_moon_2024", name: "Elemental Wild Shape", desc: "Expend two uses of Wild Shape to transform into an Air, Earth, Fire, or Water Elemental." }
+          { index: "moonlight_step_moon_2024", name: "Moonlight Step", desc: "As a Bonus Action, teleport up to 30 feet to an unoccupied space you can see and gain Advantage on your next attack roll before the end of your turn WIS mod times per Long Rest." }
         ]
       },
       {
         level: 14,
         features: [
-          { index: "lunar_form_moon_2024", name: "Lunar Form", desc: "Your attacks in Wild Shape deal an extra 1d10 Radiant damage, and you can share your Wild Shape Temp HP with an ally." }
+          { index: "lunar_form_moon_2024", name: "Lunar Form", desc: "Your attacks in Wild Shape deal an extra 2d10 Radiant damage, and you can share your Moonlight Step teleportation with a willing ally within 10 feet." }
         ]
       }
     ]
@@ -1166,7 +1182,7 @@ const newSubclassesData = [
       {
         level: 18,
         features: [
-          { index: "wild_bombardment_wild_magic_2024", name: "Wild Bombardment", desc: "When you cast a spell that deals damage, roll maximum damage for one of the spell's damage dice and trigger a Wild Magic Surge automatically." }
+          { index: "tamed_surge_wild_magic_2024", name: "Tamed Surge", desc: "Whenever you roll on the Wild Magic Surge table, you can choose the effect directly or spend 5 Sorcery Points to choose any result on the 1–100 table." }
         ]
       }
     ]
@@ -1249,7 +1265,7 @@ const newSubclassesData = [
         level: 3,
         features: [
           { index: "fiend_spells_2024", name: "Fiend Spells", desc: "You always have prepared patron spells (Burning Hands, Command, Scorching Ray, Fireball, Stinking Cloud, Wall of Fire, etc.)." },
-          { index: "dark_ones_blessing_fiend_2024", name: "Dark One's Blessing", desc: "When you reduce a enemy to 0 HP, gain Temp HP equal to CHA mod + Warlock level." }
+          { index: "dark_ones_blessing_fiend_2024", name: "Dark One's Blessing", desc: "When you reduce an enemy to 0 HP, gain Temp HP equal to CHA mod + Warlock level." }
         ]
       },
       {

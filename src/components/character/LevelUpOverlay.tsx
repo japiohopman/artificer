@@ -158,8 +158,9 @@ export const LevelUpOverlay: React.FC = () => {
       const subclassIndex = subclassEntries[0][1][0];
       if (subclassIndex) {
         atlasService.loadSubclass(subclassIndex, character?.ruleset).then(async (subData) => {
-          if (subData && subData.features) {
-            const currentLevelFeatures = subData.features.filter((f: any) => f.level === levelUpResult.newLevel);
+          if (subData && subData.subclass_levels) {
+            const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
+            const currentLevelFeatures = currentLevelGroup?.features || [];
             
             // Expand subclass features
             const expanded = await Promise.all(currentLevelFeatures.map(async (f: any) => {
@@ -184,8 +185,9 @@ export const LevelUpOverlay: React.FC = () => {
     } else if (character?.subclass) {
       // If character already has a subclass, check it for new features at this level
       atlasService.loadSubclass(character.subclass, character?.ruleset).then(async (subData) => {
-        if (subData && subData.features) {
-          const currentLevelFeatures = subData.features.filter((f: any) => f.level === levelUpResult.newLevel);
+        if (subData && subData.subclass_levels) {
+          const currentLevelGroup = subData.subclass_levels.find((l: any) => l.level === levelUpResult.newLevel);
+          const currentLevelFeatures = currentLevelGroup?.features || [];
           
           // Expand subclass features
           const expanded = await Promise.all(currentLevelFeatures.map(async (f: any) => {

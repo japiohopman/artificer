@@ -634,6 +634,51 @@ describe('Ruleset Resolution Audit Tests', () => {
     }
   });
 
+  it('verifies exact semantic 2024 PHB feature mechanics and corrections for high-risk subclasses', async () => {
+    // 1. Path of the World Tree (Barbarian)
+    const worldTree = await fetchSubclassData('world_tree_2024', '2024');
+    expect(worldTree).not.toBeNull();
+    const l10WorldTree = worldTree?.subclass_levels.find((l: any) => l.level === 10)?.features.map((f: any) => f.index);
+    expect(l10WorldTree).toContain('battering_roots_world_tree_2024');
+    expect(l10WorldTree).not.toContain('bountiful_roots_world_tree_2024');
+
+    const batteringRoots = await atlasService.loadFeature('battering_roots_world_tree_2024');
+    expect(batteringRoots).not.toBeNull();
+    expect(batteringRoots.name).toBe('Battering Roots');
+    expect(batteringRoots.level).toBe(10);
+    expect(batteringRoots.desc.join(' ')).toContain('reach');
+
+    // 2. Circle of the Moon (Druid)
+    const moonDruid = await fetchSubclassData('moon_2024', '2024');
+    expect(moonDruid).not.toBeNull();
+    const l6Moon = moonDruid?.subclass_levels.find((l: any) => l.level === 6)?.features.map((f: any) => f.index);
+    const l10Moon = moonDruid?.subclass_levels.find((l: any) => l.level === 10)?.features.map((f: any) => f.index);
+
+    expect(l6Moon).toContain('improved_circle_forms_moon_2024');
+    expect(l10Moon).toContain('moonlight_step_moon_2024');
+    expect(l10Moon).not.toContain('elemental_wild_shape_moon_2024');
+
+    const moonlightStep = await atlasService.loadFeature('moonlight_step_moon_2024');
+    expect(moonlightStep).not.toBeNull();
+    expect(moonlightStep.name).toBe('Moonlight Step');
+    expect(moonlightStep.level).toBe(10);
+    expect(moonlightStep.desc.join(' ')).toContain('teleport');
+
+    // 3. Wild Magic Sorcery (Sorcerer)
+    const wildMagic = await fetchSubclassData('wild_magic_sorcery_2024', '2024');
+    expect(wildMagic).not.toBeNull();
+    const l18WildMagic = wildMagic?.subclass_levels.find((l: any) => l.level === 18)?.features.map((f: any) => f.index);
+
+    expect(l18WildMagic).toContain('tamed_surge_wild_magic_2024');
+    expect(l18WildMagic).not.toContain('wild_bombardment_wild_magic_2024');
+
+    const tamedSurge = await atlasService.loadFeature('tamed_surge_wild_magic_2024');
+    expect(tamedSurge).not.toBeNull();
+    expect(tamedSurge.name).toBe('Tamed Surge');
+    expect(tamedSurge.level).toBe(18);
+    expect(tamedSurge.desc.join(' ')).toContain('Wild Magic Surge');
+  });
+
   it('verifies exact assertions for renamed 2024 subclass identities', async () => {
     const wildHeart = await fetchSubclassData('wild_heart_2024', '2024');
     expect(wildHeart?.name).toBe('Path of the Wild Heart');

@@ -1,6 +1,6 @@
 {
-  "index": "wild_bombardment_wild_magic_2024",
-  "name": "Wild Bombardment",
+  "index": "tamed_surge_wild_magic_2024",
+  "name": "Tamed Surge",
   "class": {
     "index": "sorcerer",
     "name": "Sorcerer",
@@ -13,7 +13,7 @@
   },
   "level": 18,
   "desc": [
-    "When you cast a spell that deals damage, roll maximum damage for one of the spell's damage dice and trigger a Wild Magic Surge automatically."
+    "Whenever you roll on the Wild Magic Surge table, you can choose the effect directly or spend 5 Sorcery Points to choose any result on the 1–100 table."
   ],
-  "url": "/assets/atlas/features/json/wild_bombardment_wild_magic_2024.json"
+  "url": "/assets/atlas/features/json/tamed_surge_wild_magic_2024.json"
 }
