@@ -7,21 +7,21 @@
     "url": "/assets/atlas/class/json/24/rogue.json"
   },
   "desc": [
-    "You focus your training on the grim art of death. Those who adhere to this archetype are diverse—hired killers, spies, bounty hunters, and even specially anointed agents chosen to seek out and eliminate threats before they loom."
+    "Assassins master the art of silent murder, ambushing unsuspecting targets with lethal poison and disguised precision."
   ],
   "subclass_levels": [
     {
       "level": 3,
       "features": [
         {
-          "index": "assassinate_2024",
+          "index": "assassinate_assassin_2024",
           "name": "Assassinate",
-          "url": "/assets/atlas/features/json/assassinate_2024.json"
+          "url": "/assets/atlas/features/json/assassinate_assassin_2024.json"
         },
         {
-          "index": "bonus_proficiencies_assassin_2024",
-          "name": "Bonus Proficiencies",
-          "url": "/assets/atlas/features/json/bonus_proficiencies_assassin_2024.json"
+          "index": "assassins_tools_assassin_2024",
+          "name": "Assassin's Tools",
+          "url": "/assets/atlas/features/json/assassins_tools_assassin_2024.json"
         }
       ]
     },
@@ -29,9 +29,9 @@
       "level": 9,
       "features": [
         {
-          "index": "infiltrator_expertise_assassin_2024",
-          "name": "Infiltrator Expertise",
-          "url": "/assets/atlas/features/json/infiltrator_expertise_assassin_2024.json"
+          "index": "infiltration_expertise_assassin_2024",
+          "name": "Infiltration Expertise",
+          "url": "/assets/atlas/features/json/infiltration_expertise_assassin_2024.json"
         }
       ]
     },
@@ -39,9 +39,9 @@
       "level": 13,
       "features": [
         {
-          "index": "envenom_weapons_assassin_2024",
-          "name": "Envenom Weapons",
-          "url": "/assets/atlas/features/json/envenom_weapons_assassin_2024.json"
+          "index": "envenomed_weapons_assassin_2024",
+          "name": "Envenomed Weapons",
+          "url": "/assets/atlas/features/json/envenomed_weapons_assassin_2024.json"
         }
       ]
     },

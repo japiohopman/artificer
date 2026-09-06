@@ -20,7 +20,7 @@
     ✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard complete for levels 1–20 and canonical 2024 features)
 
     2024 Subclasses & Subclass Features
-    ✓ 48/48 canonical subclasses implemented across all 12 core classes (4 subclasses per class)
+    ✓ 48/48 canonical subclasses fully audited and implemented across all 12 core classes (4 subclasses per class)
 
     Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.

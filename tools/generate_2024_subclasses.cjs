@@ -7,28 +7,6 @@ const FEATURES_DIR = path.join(__dirname, '../public/assets/atlas/features/json'
 if (!fs.existsSync(SUBCLASSES_DIR)) fs.mkdirSync(SUBCLASSES_DIR, { recursive: true });
 if (!fs.existsSync(FEATURES_DIR)) fs.mkdirSync(FEATURES_DIR, { recursive: true });
 
-// Clean up obsolete/noncanonical feature files
-const obsoleteFeatureFiles = [
-  'bardic_damage_dance_2024.json',
-  'bountiful_roots_world_tree_2024.json',
-  'elemental_wild_shape_moon_2024.json',
-  'moonlight_strike_moon_2024.json',
-  'environmental_stride_elements_2024.json',
-  'draconic_speech_draconic_2024.json',
-  'dragonkind_draconic_2024.json',
-  'wild_bombardment_wild_magic_2024.json',
-  'entropic_ward_great_old_one_2024.json',
-  'thought_shield_great_old_one_2024.json'
-];
-
-obsoleteFeatureFiles.forEach(f => {
-  const p = path.join(FEATURES_DIR, f);
-  if (fs.existsSync(p)) {
-    fs.unlinkSync(p);
-    console.log(`Removed obsolete feature file: ${f}`);
-  }
-});
-
 const classRefs = {
   barbarian: { index: "barbarian", name: "Barbarian", url: "/assets/atlas/class/json/24/barbarian.json" },
   bard: { index: "bard", name: "Bard", url: "/assets/atlas/class/json/24/bard.json" },
@@ -44,7 +22,7 @@ const classRefs = {
   wizard: { index: "wizard", name: "Wizard", url: "/assets/atlas/class/json/24/wizard.json" }
 };
 
-const newSubclassesData = [
+const subclassesData = [
   // --- BARBARIAN ---
   {
     index: "berserker_2024",
@@ -289,6 +267,34 @@ const newSubclassesData = [
 
   // --- CLERIC ---
   {
+    index: "life_domain_2024",
+    name: "Life Domain",
+    classKey: "cleric",
+    desc: ["The Life Domain focuses on the vibrant positive energy that sustains all living things. Clerics of Life are masters of healing and restoration."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "life_domain_spells_2024", name: "Life Domain Spells", desc: "You always have domain spells prepared (Bless, Cure Wounds, Aid, Lesser Restoration, Revivify, Death Ward, etc.)." },
+          { index: "disciple_of_life_life_2024", name: "Disciple of Life", desc: "Whenever you use a spell of 1st level or higher to restore HP to a creature, the creature regains additional HP equal to 2 + the spell's level." },
+          { index: "preserve_life_life_2024", name: "Channel Divinity: Preserve Life", desc: "As a Magic action, restore hit points equal to 5x Cleric level distributed among willing creatures within 30 feet (up to half max HP)." }
+        ]
+      },
+      {
+        level: 6,
+        features: [
+          { index: "blessed_healer_life_2024", name: "Blessed Healer", desc: "When you cast a spell of 1st level or higher that restores HP to another creature, you regain HP equal to 2 + the spell's level." }
+        ]
+      },
+      {
+        level: 17,
+        features: [
+          { index: "supreme_healing_life_2024", name: "Supreme Healing", desc: "When you would normally roll one or more dice to restore HP with a spell, you use the highest possible die roll instead." }
+        ]
+      }
+    ]
+  },
+  {
     index: "light_domain_2024",
     name: "Light Domain",
     classKey: "cleric",
@@ -509,6 +515,84 @@ const newSubclassesData = [
 
   // --- FIGHTER ---
   {
+    index: "battle_master_2024",
+    name: "Battle Master",
+    classKey: "fighter",
+    desc: ["Battle Masters view martial combat as an academic field, mastering maneuvers powered by superiority dice to control the flow of battle."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "combat_superiority_battle_master_2024", name: "Combat Superiority", desc: "Gain Superiority Dice (d8 at L3, d10 at L10, d12 at L18). Learn tactical maneuvers such as Menacing Attack, Precision Attack, and Riposte." },
+          { index: "student_of_war_battle_master_2024", name: "Student of War", desc: "Gain proficiency with one type of Artisan's Tools of your choice and one skill proficiency." }
+        ]
+      },
+      {
+        level: 7,
+        features: [
+          { index: "know_your_enemy_battle_master_2024", name: "Know Your Enemy", desc: "As a Bonus Action, discern information about a creature within 30 feet, such as resistances, vulnerabilities, or AC comparison." }
+        ]
+      },
+      {
+        level: 10,
+        features: [
+          { index: "improved_combat_superiority_battle_master_2024", name: "Improved Combat Superiority", desc: "Your Superiority Dice turn into d10s." }
+        ]
+      },
+      {
+        level: 15,
+        features: [
+          { index: "relentless_battle_master_2024", name: "Relentless", desc: "Once per turn when you use a maneuver, roll 1d8 instead of expending a Superiority Die if you have no Superiority Dice remaining." }
+        ]
+      },
+      {
+        level: 18,
+        features: [
+          { index: "ultimate_combat_superiority_battle_master_2024", name: "Ultimate Combat Superiority", desc: "Your Superiority Dice turn into d12s." }
+        ]
+      }
+    ]
+  },
+  {
+    index: "champion_2024",
+    name: "Champion",
+    classKey: "fighter",
+    desc: ["The Champion focuses on raw physical power honed to deadly perfection, combining rigorous training with physical excellence."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "improved_critical_champion_2024", name: "Improved Critical", desc: "Your weapon attack rolls score a Critical Hit on a roll of 19 or 20 on the d20." },
+          { index: "remarkable_athlete_champion_2024", name: "Remarkable Athlete", desc: "You gain Advantage on Initiative rolls and Strength (Athletics) checks. On a critical hit, move up to half your Speed without provoking Opportunity Attacks." }
+        ]
+      },
+      {
+        level: 7,
+        features: [
+          { index: "additional_fighting_style_champion_2024", name: "Additional Fighting Style", desc: "You gain another Fighting Style feat of your choice." }
+        ]
+      },
+      {
+        level: 10,
+        features: [
+          { index: "heroic_warrior_champion_2024", name: "Heroic Warrior", desc: "At the start of your turn in combat, if you don't have Heroic Inspiration, you gain Heroic Inspiration." }
+        ]
+      },
+      {
+        level: 15,
+        features: [
+          { index: "superior_critical_champion_2024", name: "Superior Critical", desc: "Your weapon attack rolls score a Critical Hit on a roll of 18–20 on the d20." }
+        ]
+      },
+      {
+        level: 18,
+        features: [
+          { index: "survivor_champion_2024", name: "Survivor", desc: "Gain Defy Death (Advantage on death saves and 18-20 crit) and Heroic Recovery (at start of turn, if bloodied, regain HP equal to 5 + CON mod)." }
+        ]
+      }
+    ]
+  },
+  {
     index: "eldritch_knight_2024",
     name: "Eldritch Knight",
     classKey: "fighter",
@@ -650,7 +734,7 @@ const newSubclassesData = [
       {
         level: 17,
         features: [
-          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, choose one damage resistance at start of turn (Acid, Cold, Fire, Lightning, or Thunder), gain +20ft speed for Step of the Wind, and deal 1 Martial Arts die of damage to foes passed." }
+          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, choose one damage resistance at the start of each of your turns (Acid, Cold, Fire, Lightning, or Thunder). In addition, when using Step of the Wind, gain flight and swim speed boost, and once per turn deal additional Martial Arts die elemental damage on an Unarmed Strike." }
         ]
       }
     ]
@@ -676,13 +760,13 @@ const newSubclassesData = [
       {
         level: 11,
         features: [
-          { index: "fleet_step_open_hand_2024", name: "Fleet Step", desc: "You can take Step of the Wind without expending Focus Points whenever you take the Attack action." }
+          { index: "fleet_step_open_hand_2024", name: "Fleet Step", desc: "After taking a Bonus Action other than Step of the Wind, you can immediately use Step of the Wind without spending a Focus Point." }
         ]
       },
       {
         level: 17,
         features: [
-          { index: "quivering_palm_open_hand_2024", name: "Quivering Palm", desc: "Hit a target with an Unarmed Strike and spend 4 Focus Points to set up lethal vibrations. Later, trigger the vibration as an Action dealing 10d12 Force damage or dropping it to 0 HP on failed CON save." }
+          { index: "quivering_palm_open_hand_2024", name: "Quivering Palm", desc: "Spend 4 Focus Points when hitting with an Unarmed Strike to set up vibrations lasting Monk level days. Can end vibrations via an Action or by forgoing one attack of the Attack action. Target makes a CON save: takes 10d12 Force damage on a failed save, or half as much on a successful save." }
         ]
       }
     ]
@@ -1025,6 +1109,39 @@ const newSubclassesData = [
     ]
   },
   {
+    index: "assassin_2024",
+    name: "Assassin",
+    classKey: "rogue",
+    desc: ["Assassins master the art of silent murder, ambushing unsuspecting targets with lethal poison and disguised precision."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "assassinate_assassin_2024", name: "Assassinate", desc: "Gain Advantage on attack rolls against any creature that hasn't taken a turn in combat yet. In addition, on the first turn of combat, hits deal extra damage equal to your Rogue level." },
+          { index: "assassins_tools_assassin_2024", name: "Assassin's Tools", desc: "You gain proficiency with the Disguise Kit and Poisoner's Kit." }
+        ]
+      },
+      {
+        level: 9,
+        features: [
+          { index: "infiltration_expertise_assassin_2024", name: "Infiltration Expertise", desc: "You can adopt false identities seamlessly, mimic speech and handwriting, and craft infallible cover disguises." }
+        ]
+      },
+      {
+        level: 13,
+        features: [
+          { index: "envenomed_weapons_assassin_2024", name: "Envenomed Weapons", desc: "When you apply Sneak Attack to a weapon attack, you can also deal Poison damage equal to your Sneak Attack dice or ignore Poison resistance." }
+        ]
+      },
+      {
+        level: 17,
+        features: [
+          { index: "death_strike_assassin_2024", name: "Death Strike", desc: "When you hit a surprised creature or target on turn 1 with Assassinate, force a CON save (DC 8 + DEX + PB) or double the attack's damage." }
+        ]
+      }
+    ]
+  },
+  {
     index: "soulknife_2024",
     name: "Soulknife",
     classKey: "rogue",
@@ -1053,6 +1170,39 @@ const newSubclassesData = [
         level: 17,
         features: [
           { index: "rend_mind_soulknife_2024", name: "Rend Mind", desc: "When dealing Sneak Attack with Psychic Blades, force a WIS save vs DC 8 + PB + DEX or Stun the target for 1 minute." }
+        ]
+      }
+    ]
+  },
+  {
+    index: "thief_2024",
+    name: "Thief",
+    classKey: "rogue",
+    desc: ["Thieves refine agility, stealth, and agility to scale walls, pick locks mid-battle, and use magic items beyond standard limitations."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "fast_hands_thief_2024", name: "Fast Hands", desc: "You can use Cunning Action to make a Dexterity (Sleight of Hand) check, use Thieves' Tools, or take the Use an Object action." },
+          { index: "second_story_work_thief_2024", name: "Second-Story Work", desc: "Gain a Climbing speed equal to your Speed, and add your DEX modifier to running jump distances." }
+        ]
+      },
+      {
+        level: 9,
+        features: [
+          { index: "supreme_sneak_thief_2024", name: "Supreme Sneak", desc: "You gain Cunning Strike options for Stealth, or Advantage on Dexterity (Stealth) checks if moving no more than half your Speed." }
+        ]
+      },
+      {
+        level: 13,
+        features: [
+          { index: "use_magic_device_thief_2024", name: "Use Magic Device", desc: "You ignore all class, species, and level requirements on the use of any magic item, and gain an extra attuned item slot." }
+        ]
+      },
+      {
+        level: 17,
+        features: [
+          { index: "thiefs_reflexes_thief_2024", name: "Thief's Reflexes", desc: "You can take two turns during the first round of any combat (one on your normal Initiative and another at Initiative minus 10)." }
         ]
       }
     ]
@@ -1142,7 +1292,7 @@ const newSubclassesData = [
       {
         level: 6,
         features: [
-          { index: "elemental_affinity_draconic_2024", name: "Elemental Affinity", desc: "When you cast a spell that deals damage associated with your draconic ancestor, add CHA mod to the damage and gain resistance to that element for 1 hour." }
+          { index: "elemental_affinity_draconic_2024", name: "Elemental Affinity", desc: "When you cast a spell that deals damage associated with your draconic ancestor, add your Charisma modifier to one damage roll of the spell. In addition, you gain permanent resistance to that damage type." }
         ]
       },
       {
@@ -1154,7 +1304,7 @@ const newSubclassesData = [
       {
         level: 18,
         features: [
-          { index: "dragon_companion_draconic_2024", name: "Dragon Companion", desc: "Cast Summon Dragon without material components once per Long Rest, gaining a Draconic dragon companion." }
+          { index: "dragon_companion_draconic_2024", name: "Dragon Companion", desc: "You can cast Summon Dragon once per Long Rest without expending a spell slot or requiring material components. When cast this way, the spell does not require Concentration for you." }
         ]
       }
     ]
@@ -1168,14 +1318,14 @@ const newSubclassesData = [
       {
         level: 3,
         features: [
-          { index: "wild_magic_surge_wild_magic_2024", name: "Wild Magic Surge", desc: "Whenever you cast a Sorcerer spell of level 1 or higher, roll a d20 to trigger a Wild Magic Surge table effect." },
-          { index: "tides_of_chaos_wild_magic_2024", name: "Tides of Chaos", desc: "Gain Advantage on one attack roll, ability check, or save once per Long Rest. Regain immediately after triggering a Wild Magic Surge." }
+          { index: "wild_magic_surge_wild_magic_2024", name: "Wild Magic Surge", desc: "Whenever you cast a Sorcerer spell of level 1 or higher, the DM can have you roll a d20. On a 1 or 20 (or when triggered by Tides of Chaos), roll on the Wild Magic Surge table." },
+          { index: "tides_of_chaos_wild_magic_2024", name: "Tides of Chaos", desc: "Gain Advantage on one d20 test. Regain once per Long Rest, or immediately when the DM triggers a Wild Magic Surge after you cast a Sorcerer spell of level 1 or higher." }
         ]
       },
       {
         level: 6,
         features: [
-          { index: "bend_fate_wild_magic_2024", name: "Bend Fate", desc: "Use Reaction and spend 2 Sorcery Points to roll a d10 and add or subtract it from another creature's d20 roll." }
+          { index: "bend_luck_wild_magic_2024", name: "Bend Luck", desc: "As a Reaction when another creature within 30 feet rolls a d20 for a D20 Test, spend 1 Sorcery Point to roll a d4 and add or subtract it from the creature's roll." }
         ]
       },
       {
@@ -1187,7 +1337,7 @@ const newSubclassesData = [
       {
         level: 18,
         features: [
-          { index: "tamed_surge_wild_magic_2024", name: "Tamed Surge", desc: "Once per Long Rest when you roll on the Wild Magic Surge table, you can choose the Wild Magic Surge effect directly instead of rolling randomly." }
+          { index: "tamed_surge_wild_magic_2024", name: "Tamed Surge", desc: "Once per Long Rest, when a Wild Magic Surge triggers, you can choose a Wild Magic Surge effect directly instead of rolling randomly. If that effect requires another die roll, roll that die normally." }
         ]
       }
     ]
@@ -1304,7 +1454,7 @@ const newSubclassesData = [
         features: [
           { index: "great_old_one_spells_2024", name: "Great Old One Spells", desc: "You always have prepared patron spells (Dissonant Whispers, Tasha's Hideous Laughter, Detect Thoughts, Phantasmal Force, Clairvoyance, etc.)." },
           { index: "awakened_mind_great_old_one_2024", name: "Awakened Mind", desc: "Establish two-way telepathic communication with any creature within 30 feet that understands at least one language." },
-          { index: "psychic_spells_great_old_one_2024", name: "Psychic Spells", desc: "You can change spell damage types to Psychic damage." }
+          { index: "psychic_spells_great_old_one_2024", name: "Psychic Spells", desc: "When you cast a Warlock spell that deals damage, you can change the damage type to Psychic. In addition, Enchantment and Illusion spells cast by you require no Verbal or Somatic components." }
         ]
       },
       {
@@ -1322,7 +1472,7 @@ const newSubclassesData = [
       {
         level: 14,
         features: [
-          { index: "create_thrall_great_old_one_2024", name: "Create Thrall", desc: "Cast Summon Aberration without components once per Long Rest, or place an Incapacitated target under Charmed telepathic thrall." }
+          { index: "create_thrall_great_old_one_2024", name: "Create Thrall", desc: "Cast Summon Aberration once per Long Rest without spell slot or material components. The summoned aberration requires no Concentration for you, and gains temporary HP." }
         ]
       }
     ]
@@ -1396,6 +1546,39 @@ const newSubclassesData = [
     ]
   },
   {
+    index: "evocation_2024",
+    name: "Evoker",
+    classKey: "wizard",
+    desc: ["Evokers specialize in elemental spellcasting, sculpting fiery cataclysms and lightning storms safely around allies."],
+    levels: [
+      {
+        level: 3,
+        features: [
+          { index: "evocation_savant_evoker_2024", name: "Evocation Savant", desc: "Gold and time required to copy Evocation spells into your spellbook is halved, and you gain two free Evocation spells in your spellbook." },
+          { index: "sculpt_spells_evoker_2024", name: "Sculpt Spells", desc: "When you cast an Evocation spell that affects other creatures you can see, choose up to 1 + spell level creatures to automatically succeed on their saving throws and take no damage." }
+        ]
+      },
+      {
+        level: 6,
+        features: [
+          { index: "potent_cantrip_evoker_2024", name: "Potent Cantrip", desc: "Your damaging cantrips affect even creatures that avoid the brunt of the effect. On a save or miss, the target takes half damage." }
+        ]
+      },
+      {
+        level: 10,
+        features: [
+          { index: "empowered_evocation_evoker_2024", name: "Empowered Evocation", desc: "Add your Intelligence modifier to one damage roll of any Wizard evocation spell you cast." }
+        ]
+      },
+      {
+        level: 14,
+        features: [
+          { index: "overchannel_evoker_2024", name: "Overchannel", desc: "When you cast a Wizard spell of 1st through 5th level that deals damage, deal maximum damage instead of rolling. Subsequent uses before a Long Rest inflict Necrotic damage." }
+        ]
+      }
+    ]
+  },
+  {
     index: "illusionist_2024",
     name: "Illusionist",
     classKey: "wizard",
@@ -1432,13 +1615,15 @@ const newSubclassesData = [
 
 let createdSubclasses = 0;
 let createdFeatures = 0;
+const activeFeatureIndices = new Set();
 
-newSubclassesData.forEach(sub => {
+subclassesData.forEach(sub => {
   const clsRef = classRefs[sub.classKey];
   if (!clsRef) throw new Error(`Unknown class key: ${sub.classKey}`);
 
   const subclassLevels = sub.levels.map(lvlGroup => {
     const featureRefs = lvlGroup.features.map(feat => {
+      activeFeatureIndices.add(feat.index);
       const featObject = {
         index: feat.index,
         name: feat.name,
@@ -1485,4 +1670,27 @@ newSubclassesData.forEach(sub => {
   createdSubclasses++;
 });
 
-console.log(`Successfully created ${createdSubclasses} 2024 subclass records and ${createdFeatures} subclass feature definitions.`);
+// Automatic cleanup: Remove any orphan/obsolete *_2024.json feature files in FEATURES_DIR that are not active
+const existingFeatureFiles = fs.readdirSync(FEATURES_DIR);
+let deletedObsoleteFiles = 0;
+
+existingFeatureFiles.forEach(fileName => {
+  if (fileName.endsWith('_2024.json')) {
+    const featIndex = fileName.replace('.json', '');
+    // Check if this feature file belongs to a 2024 subclass and is not in activeFeatureIndices
+    const filePath = path.join(FEATURES_DIR, fileName);
+    try {
+      const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      if (content.subclass && content.subclass.index && !activeFeatureIndices.has(featIndex)) {
+        fs.unlinkSync(filePath);
+        deletedObsoleteFiles++;
+        console.log(`Deleted obsolete subclass feature file: ${fileName}`);
+      }
+    } catch (e) {
+      // If unparseable or error, ignore
+    }
+  }
+});
+
+console.log(`Successfully generated ${createdSubclasses} 2024 subclass records and ${createdFeatures} subclass feature definitions.`);
+console.log(`Cleaned up ${deletedObsoleteFiles} obsolete 2024 subclass feature files.`);

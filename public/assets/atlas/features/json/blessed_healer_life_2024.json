@@ -1,0 +1,19 @@
+{
+  "index": "blessed_healer_life_2024",
+  "name": "Blessed Healer",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "life_domain_2024",
+    "name": "Life Domain",
+    "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When you cast a spell of 1st level or higher that restores HP to another creature, you regain HP equal to 2 + the spell's level."
+  ],
+  "url": "/assets/atlas/features/json/blessed_healer_life_2024.json"
+}

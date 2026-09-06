@@ -1,10 +1,19 @@
 {
   "index": "know_your_enemy_battle_master_2024",
   "name": "Know Your Enemy",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "battle_master_2024", "name": "Battle Master", "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master_2024",
+    "name": "Battle Master",
+    "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json"
+  },
   "level": 7,
-  "desc": [ "As a Bonus Action, you can observe a creature you can see within 30 feet of yourself. You learn whether the creature has any Damage Immunities, Damage Resistances, Damage Vulnerabilities, or Condition Immunities, and you learn what they are. In addition, you learn 2 additional maneuvers and gain 1 additional Superiority Die." ],
-  "feature_specific": { "bonus_superiority_dice": 1, "bonus_maneuvers": 2 },
+  "desc": [
+    "As a Bonus Action, discern information about a creature within 30 feet, such as resistances, vulnerabilities, or AC comparison."
+  ],
   "url": "/assets/atlas/features/json/know_your_enemy_battle_master_2024.json"
 }

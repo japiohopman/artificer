@@ -1,0 +1,19 @@
+{
+  "index": "potent_cantrip_evoker_2024",
+  "name": "Potent Cantrip",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "evocation_2024",
+    "name": "Evoker",
+    "url": "/assets/atlas/subclasses/json/24/evocation_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Your damaging cantrips affect even creatures that avoid the brunt of the effect. On a save or miss, the target takes half damage."
+  ],
+  "url": "/assets/atlas/features/json/potent_cantrip_evoker_2024.json"
+}

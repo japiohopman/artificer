@@ -1,10 +1,19 @@
 {
   "index": "combat_superiority_battle_master_2024",
   "name": "Combat Superiority",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "battle_master_2024", "name": "Battle Master", "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master_2024",
+    "name": "Battle Master",
+    "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json"
+  },
   "level": 3,
-  "desc": [ "You learn maneuvers that are fueled by special dice called Superiority Dice. You learn 3 maneuvers of your choice from the Battle Master maneuver list. You gain 4 Superiority Dice, which are d8s. You regain all expended Superiority Dice when you finish a Short or Long Rest." ],
-  "feature_specific": { "superiority_die_type": "d8", "superiority_dice_count": 4, "maneuvers_known": 3, "recharge": "short_rest_all_long_rest" },
+  "desc": [
+    "Gain Superiority Dice (d8 at L3, d10 at L10, d12 at L18). Learn tactical maneuvers such as Menacing Attack, Precision Attack, and Riposte."
+  ],
   "url": "/assets/atlas/features/json/combat_superiority_battle_master_2024.json"
 }

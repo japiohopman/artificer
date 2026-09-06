@@ -20,7 +20,7 @@ Select 2024 ruleset -> Human resolves /public/assets/atlas/species/json/24/human
 ```
 
 ### Key Conclusion
-The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Foundation, Progressions, and Feature Definitions for Fighter, Wizard, Cleric, and Rogue are fully implemented with ruleset-aware resolution derived from official 2024 D&D PHB mechanics and Foundry `classes24` structural mapping:
+The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Foundation, Progressions, Feature Definitions, and Subclasses for all 12 core classes are fully implemented with ruleset-aware resolution derived from official 2024 D&D Player's Handbook mechanics:
 
 ```text
 2024 Species Foundation
@@ -32,15 +32,15 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc) and 2024 Class Fo
 2024 Class Progressions & Feature Definitions (All 12 Core Classes)
 ✓ 12/12 core classes (Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard complete for levels 1–20 and canonical 2024 features)
 
-2024 Subclasses & Subclass Features
-✓ Implemented 48/48 canonical subclasses across all 12 core classes (4 subclasses per class)
+2024 Subclasses & Subclass Features (All 12 Core Classes)
+✓ 48/48 canonical subclasses fully audited and verified across all 12 core classes (4 subclasses per class)
 
 Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells
 ```
 
-Backgrounds/Origins and Spells currently resolve shared/unversioned classic 2014 data, while Subclasses resolve versioned `/24/` data for the six implemented 2024 subclasses across Fighter, Wizard, Cleric, and Rogue. Note: Base foundation implemented ≠ complete 2024 coverage across all subclass/origin records.
+Backgrounds/Origins and Spells currently resolve shared/unversioned classic 2014 data, while Subclasses resolve versioned `/24/` data for all 48 canonical 2024 subclasses across all 12 core classes.
 
-Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
+Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Subclasses (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
 > **Architectural Rule:**
 > *A ruleset selector is only meaningful when the selected ruleset controls the underlying canonical data/rules resolution.*
@@ -55,7 +55,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Classes (Base)** | Supported | **Implemented (12/12)** | Versioned directories exist (`/class/json/14/` vs `/24/`). All 12 core 2024 base class definitions implemented in `/assets/atlas/class/json/24/`. |
 | **Class Progressions (1-20)** | Supported | **Implemented (12/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for all 12 core classes. |
 | **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
-| **Subclasses & Subclass Features** | Supported | **Implemented (12/12 classes)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). 48 canonical subclasses implemented across all 12 core classes with ruleset-aware resolution. |
+| **Subclasses & Subclass Features** | Supported | **Implemented (48/48)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). All 48 canonical 2024 subclasses audited and implemented across all 12 core classes (4 per class) with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |
 | **Feats** | Supported | **Partial** | Versioned directories exist (`/feats/json/14/` vs `/24/`). 2024 origin, general, and epic boon feats populated in `/24/`. |
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
@@ -82,20 +82,4 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
 - `fetchSubclassData(index, ruleset)`: Checks `/assets/atlas/subclasses/json/14/` vs `/24/`.
-- `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `action_surge_2024`, `improved_critical_champion_2024`, `sculpt_spells_2024`).
-
----
-
-## 4. Foundry dnd5e `classes24` Ingestion Pipeline & Source Provenance
-
-The 2024 class progression files (`public/assets/atlas/class/levels/24/`) and feature definitions (`public/assets/atlas/features/json/`) are generated via deterministic NodeJS authoring scripts located in `tools/`:
-
-* `tools/generate_2024_classes.cjs`
-* `tools/generate_2024_features.cjs`
-* `tools/generate_2024_class_levels.cjs`
-
-### Mapping Rules from Foundry `classes24` Source
-1. **Source Mapping:** Structural data maps directly from official 2024 PHB rules and Foundry dnd5e `6.0.x` `packs/_source/classes24/` schema definitions.
-2. **Canonical Versioned Feature IDs:** Every 2024 feature is assigned a versioned canonical index ending in `_2024` (or class-prefixed e.g. `spellcasting_wizard_2024`, `rogue_expertise_2024`) to guarantee zero silent resolution to 2014 records.
-3. **Structured Mechanical Metadata:** Complex mechanics are represented as first-class JSON fields (e.g. `feature_specific.at_will_casting`, `feature_specific.save_dc`, `weapon_mastery.count`).
-4. **Availability Truth:** `storageService.ts` gates runtime selection of 2024 classes via `SUPPORTED_2024_CLASSES = ['fighter', 'wizard', 'cleric', 'rogue']`, exposing only fully playable classes while preserving strict 2024/2014 boundaries.
+- `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `bend_luck_wild_magic_2024`, `elemental_epitome_elements_2024`, `quivering_palm_open_hand_2024`).

@@ -1,6 +1,6 @@
 {
-  "index": "bend_fate_wild_magic_2024",
-  "name": "Bend Fate",
+  "index": "bend_luck_wild_magic_2024",
+  "name": "Bend Luck",
   "class": {
     "index": "sorcerer",
     "name": "Sorcerer",
@@ -13,7 +13,7 @@
   },
   "level": 6,
   "desc": [
-    "Use Reaction and spend 2 Sorcery Points to roll a d10 and add or subtract it from another creature's d20 roll."
+    "As a Reaction when another creature within 30 feet rolls a d20 for a D20 Test, spend 1 Sorcery Point to roll a d4 and add or subtract it from the creature's roll."
   ],
-  "url": "/assets/atlas/features/json/bend_fate_wild_magic_2024.json"
+  "url": "/assets/atlas/features/json/bend_luck_wild_magic_2024.json"
 }
