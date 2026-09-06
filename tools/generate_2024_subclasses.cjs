@@ -1318,8 +1318,8 @@ const subclassesData = [
       {
         level: 3,
         features: [
-          { index: "wild_magic_surge_wild_magic_2024", name: "Wild Magic Surge", desc: "Whenever you cast a Sorcerer spell of level 1 or higher, the DM can have you roll a d20. On a 1 or 20 (or when triggered by Tides of Chaos), roll on the Wild Magic Surge table." },
-          { index: "tides_of_chaos_wild_magic_2024", name: "Tides of Chaos", desc: "Gain Advantage on one d20 test. Regain once per Long Rest, or immediately when the DM triggers a Wild Magic Surge after you cast a Sorcerer spell of level 1 or higher." }
+          { index: "wild_magic_surge_wild_magic_2024", name: "Wild Magic Surge", desc: "Whenever you cast a Sorcerer spell using a spell slot, you can roll a d20. On a roll of 20, roll on the Wild Magic Surge table to create a random magical effect. In addition, after using Tides of Chaos, casting a Sorcerer spell using a spell slot automatically triggers a Wild Magic Surge and recharges Tides of Chaos." },
+          { index: "tides_of_chaos_wild_magic_2024", name: "Tides of Chaos", desc: "Gain Advantage on one d20 test. Regain once per Long Rest, or immediately when you trigger a Wild Magic Surge after casting a Sorcerer spell using a spell slot." }
         ]
       },
       {

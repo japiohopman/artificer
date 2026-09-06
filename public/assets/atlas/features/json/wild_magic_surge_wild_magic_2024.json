@@ -13,7 +13,7 @@
   },
   "level": 3,
   "desc": [
-    "Whenever you cast a Sorcerer spell of level 1 or higher, the DM can have you roll a d20. On a 1 or 20 (or when triggered by Tides of Chaos), roll on the Wild Magic Surge table."
+    "Whenever you cast a Sorcerer spell using a spell slot, you can roll a d20. On a roll of 20, roll on the Wild Magic Surge table to create a random magical effect. In addition, after using Tides of Chaos, casting a Sorcerer spell using a spell slot automatically triggers a Wild Magic Surge and recharges Tides of Chaos."
   ],
   "url": "/assets/atlas/features/json/wild_magic_surge_wild_magic_2024.json"
 }
