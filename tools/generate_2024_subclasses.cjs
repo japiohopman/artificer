@@ -408,7 +408,7 @@ const subclassesData = [
       {
         level: 14,
         features: [
-          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "As a Magic action, you can expend one use of your Wild Shape to create a 15-foot Cube of spectral vegetation on the ground in an unoccupied space within 120 feet of you. The Cube lasts for 1 minute, or until you have the Incapacitated condition or die. While in the Cube, you and your allies have Half Cover, and your allies gain the damage resistance currently granted by your Nature's Ward feature. As a Bonus Action, you can move the Cube to an unoccupied space on the ground within 120 feet of you." }
+          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "As a Magic action, you can expend one use of your Wild Shape to create a 15-foot Cube of spectral vegetation on the ground within 120 feet of you. The Cube lasts for 1 minute, or until you have the Incapacitated condition or die. While in the Cube, you and your allies have Half Cover, and your allies gain the damage resistance currently granted by your Nature's Ward feature. As a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of you." }
         ]
       }
     ]
