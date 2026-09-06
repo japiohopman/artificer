@@ -1,0 +1,18 @@
+{
+  "index": "aura_of_courage_2024",
+  "name": "Aura of Courage",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 10,
+  "desc": [
+    "You and your allies are immune to the Frightened condition while in your Aura of Protection."
+  ],
+  "feature_specific": {
+    "condition_immunity": "Frightened",
+    "aura": "aura_of_protection"
+  },
+  "url": "/assets/atlas/features/json/aura_of_courage_2024.json"
+}

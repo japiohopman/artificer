@@ -1,0 +1,19 @@
+{
+  "index": "contact_patron_2024",
+  "name": "Contact Patron",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "level": 9,
+  "desc": [
+    "You can cast Contact Other Plane to contact your otherworldly patron without expending a spell slot. When you cast the spell using this feature, you automatically succeed on the Intelligence saving throw required by the spell. Once you cast the spell using this feature, you can't cast it again in this way until you finish a Long Rest."
+  ],
+  "feature_specific": {
+    "spell": "contact_other_plane",
+    "auto_succeed_save": true,
+    "recharge": "long_rest"
+  },
+  "url": "/assets/atlas/features/json/contact_patron_2024.json"
+}

@@ -70,11 +70,19 @@ const halfCasterSpellSlots = [
 ];
 
 const cantripsTable = [3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5];
+const bardCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+const druidCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+const sorcererCantripsTable = [4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6];
+const warlockCantripsTable = [2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4];
+
 const clericPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
 const wizardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,18,19,21,22,23,24,25];
-const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const sorcererPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
-const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,19,20,21,22,24];
+const bardPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const druidPreparedTable = [4,5,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const sorcererPreparedTable = [2,4,6,7,9,10,11,12,14,15,16,16,17,17,18,18,19,20,21,22];
+const paladinPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
+const rangerPreparedTable = [2,3,4,5,6,6,7,7,9,9,10,10,11,11,12,12,14,14,15,15];
+const warlockPreparedTable = [2,3,4,5,6,7,8,9,10,10,11,11,12,12,13,13,14,14,15,15];
 
 // --- FIGHTER 2024 ---
 function buildFighterLevel(lvl) {
@@ -327,11 +335,13 @@ function buildBardLevel(lvl) {
     features.push(featureRef("font_of_inspiration_2024", "Font of Inspiration"));
     features.push(featureRef("bardic_inspiration_d8_2024", "Bardic Inspiration (d8)"));
   }
-  if (lvl === 6) features.push(featureRef("countercharm_2024", "Countercharm"));
-  if (lvl === 7) features.push(featureRef("expertise_bard_2_2024", "Expertise (Level 7)"));
+  if (lvl === 7) features.push(featureRef("countercharm_2024", "Countercharm"));
   if (lvl === 8) features.push(featureRef("bard_ability_score_improvement_2_2024", "Ability Score Improvement"));
-  if (lvl === 9) features.push(featureRef("bardic_inspiration_d10_2024", "Bardic Inspiration (d10)"));
-  if (lvl === 10) features.push(featureRef("magical_secrets_2024", "Magical Secrets"));
+  if (lvl === 9) features.push(featureRef("expertise_bard_2_2024", "Expertise"));
+  if (lvl === 10) {
+    features.push(featureRef("bardic_inspiration_d10_2024", "Bardic Inspiration (d10)"));
+    features.push(featureRef("magical_secrets_2024", "Magical Secrets"));
+  }
   if (lvl === 12) features.push(featureRef("bard_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 15) features.push(featureRef("bardic_inspiration_d12_2024", "Bardic Inspiration (d12)"));
   if (lvl === 16) features.push(featureRef("bard_ability_score_improvement_4_2024", "Ability Score Improvement"));
@@ -341,7 +351,7 @@ function buildBardLevel(lvl) {
 
   const slots = casterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
-  const inspirationDie = lvl >= 15 ? "d12" : (lvl >= 9 ? "d10" : (lvl >= 5 ? "d8" : "d6"));
+  const inspirationDie = lvl >= 15 ? "d12" : (lvl >= 10 ? "d10" : (lvl >= 5 ? "d8" : "d6"));
 
   return {
     level: lvl,
@@ -353,7 +363,7 @@ function buildBardLevel(lvl) {
     class: { index: "bard", name: "Bard", url: "/assets/atlas/class/json/24/bard.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/bard_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: bardPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: bardCantripsTable[lvl - 1], prepared_spells: bardPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 
@@ -384,18 +394,19 @@ function buildDruidLevel(lvl) {
   const slots = casterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
   const maxCr = lvl >= 8 ? 1 : (lvl >= 4 ? 0.5 : 0.25);
+  const wildShapeUses = lvl >= 17 ? 4 : (lvl >= 6 ? 3 : 2);
 
   return {
     level: lvl,
     ability_score_bonuses: asiCount,
     prof_bonus: getProfBonus(lvl),
     features,
-    class_specific: { wild_shape_max_cr: maxCr, wild_shape_uses: 2 },
+    class_specific: { wild_shape_max_cr: maxCr, wild_shape_uses: wildShapeUses },
     index: `druid_level_${lvl}`,
     class: { index: "druid", name: "Druid", url: "/assets/atlas/class/json/24/druid.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/druid_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: druidPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: druidCantripsTable[lvl - 1], prepared_spells: druidPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 
@@ -424,19 +435,19 @@ function buildMonkLevel(lvl) {
     features.push(featureRef("stunning_strike_2024", "Stunning Strike"));
   }
   if (lvl === 6) features.push(featureRef("empowered_strikes_2024", "Empowered Strikes"));
-  if (lvl === 7) {
-    features.push(featureRef("evasion_monk_2024", "Evasion"));
-    features.push(featureRef("heightened_focus_2024", "Heightened Focus"));
-  }
+  if (lvl === 7) features.push(featureRef("evasion_monk_2024", "Evasion"));
   if (lvl === 8) features.push(featureRef("monk_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("acrobatic_movement_2024", "Acrobatic Movement"));
-  if (lvl === 10) features.push(featureRef("self_restoration_2024", "Self-Restoration"));
+  if (lvl === 10) {
+    features.push(featureRef("heightened_focus_2024", "Heightened Focus"));
+    features.push(featureRef("self_restoration_2024", "Self-Restoration"));
+  }
   if (lvl === 12) features.push(featureRef("monk_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 13) features.push(featureRef("deflect_energy_2024", "Deflect Energy"));
   if (lvl === 14) features.push(featureRef("disciplined_survivor_2024", "Disciplined Survivor"));
   if (lvl === 15) features.push(featureRef("perfect_focus_2024", "Perfect Focus"));
   if (lvl === 16) features.push(featureRef("monk_ability_score_improvement_4_2024", "Ability Score Improvement"));
-  if (lvl === 18) features.push(featureRef("empty_body_2024", "Empty Body"));
+  if (lvl === 18) features.push(featureRef("superior_defense_2024", "Superior Defense"));
   if (lvl === 19) features.push(featureRef("epic_boon_monk_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("body_and_mind_2024", "Body and Mind"));
 
@@ -482,12 +493,14 @@ function buildPaladinLevel(lvl) {
   if (lvl === 6) features.push(featureRef("aura_of_protection_2024", "Aura of Protection"));
   if (lvl === 8) features.push(featureRef("paladin_ability_score_improvement_2_2024", "Ability Score Improvement"));
   if (lvl === 9) features.push(featureRef("abjure_foes_2024", "Abjure Foes"));
+  if (lvl === 10) features.push(featureRef("aura_of_courage_2024", "Aura of Courage"));
   if (lvl === 11) features.push(featureRef("radiant_strikes_2024", "Radiant Strikes"));
   if (lvl === 12) features.push(featureRef("paladin_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 14) features.push(featureRef("restoring_touch_2024", "Restoring Touch"));
   if (lvl === 16) features.push(featureRef("paladin_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 18) features.push(featureRef("aura_expansion_2024", "Aura Expansion"));
   if (lvl === 19) features.push(featureRef("epic_boon_paladin_2024", "Epic Boon"));
+  if (lvl === 20) features.push(featureRef("holy_nimbus_2024", "Holy Nimbus"));
 
   const halfSlots = halfCasterSpellSlots[lvl - 1];
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
@@ -503,7 +516,7 @@ function buildPaladinLevel(lvl) {
     class: { index: "paladin", name: "Paladin", url: "/assets/atlas/class/json/24/paladin.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/paladin_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
+    spellcasting: { prepared_spells: paladinPreparedTable[lvl - 1], spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
   };
 }
 
@@ -531,6 +544,7 @@ function buildRangerLevel(lvl) {
   if (lvl === 14) features.push(featureRef("nature_veil_2024", "Nature's Veil"));
   if (lvl === 16) features.push(featureRef("ranger_ability_score_improvement_4_2024", "Ability Score Improvement"));
   if (lvl === 17) features.push(featureRef("precise_hunter_2024", "Precise Hunter"));
+  if (lvl === 18) features.push(featureRef("feral_senses_2024", "Feral Senses"));
   if (lvl === 19) features.push(featureRef("epic_boon_ranger_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("foe_slayer_2024", "Foe Slayer"));
 
@@ -549,7 +563,7 @@ function buildRangerLevel(lvl) {
     class: { index: "ranger", name: "Ranger", url: "/assets/atlas/class/json/24/ranger.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/ranger_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
+    spellcasting: { prepared_spells: rangerPreparedTable[lvl - 1], spell_slots_level_1: halfSlots[0], spell_slots_level_2: halfSlots[1], spell_slots_level_3: halfSlots[2], spell_slots_level_4: halfSlots[3], spell_slots_level_5: halfSlots[4] }
   };
 }
 
@@ -567,18 +581,18 @@ function buildSorcererLevel(lvl) {
   if (lvl === 3) features.push(featureRef("sorcerer_subclass_2024", "Sorcerer Subclass"));
   if (lvl === 4) features.push(featureRef("sorcerer_ability_score_improvement_1_2024", "Ability Score Improvement"));
   if (lvl === 5) features.push(featureRef("sorcerous_restoration_2024", "Sorcerous Restoration"));
-  if (lvl === 7) features.push(featureRef("metamagic_options_2_2024", "Metamagic Options (Level 7)"));
+  if (lvl === 7) features.push(featureRef("sorcery_incarnate_2024", "Sorcery Incarnate"));
   if (lvl === 8) features.push(featureRef("sorcerer_ability_score_improvement_2_2024", "Ability Score Improvement"));
+  if (lvl === 10) features.push(featureRef("metamagic_2024", "Metamagic"));
   if (lvl === 12) features.push(featureRef("sorcerer_ability_score_improvement_3_2024", "Ability Score Improvement"));
-  if (lvl === 13) features.push(featureRef("metamagic_options_3_2024", "Metamagic Options (Level 13)"));
   if (lvl === 16) features.push(featureRef("sorcerer_ability_score_improvement_4_2024", "Ability Score Improvement"));
-  if (lvl === 17) features.push(featureRef("metamagic_options_4_2024", "Metamagic Options (Level 17)"));
+  if (lvl === 17) features.push(featureRef("metamagic_2024", "Metamagic"));
   if (lvl === 19) features.push(featureRef("epic_boon_sorcerer_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("arcane_apotheosis_2024", "Arcane Apotheosis"));
 
   const slots = casterSpellSlots[lvl - 1];
   const sorceryPoints = lvl >= 2 ? lvl : 0;
-  const metamagicCount = lvl >= 17 ? 8 : (lvl >= 13 ? 6 : (lvl >= 7 ? 4 : (lvl >= 2 ? 2 : 0)));
+  const metamagicCount = lvl >= 17 ? 6 : (lvl >= 10 ? 4 : (lvl >= 2 ? 2 : 0));
   const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
@@ -591,7 +605,7 @@ function buildSorcererLevel(lvl) {
     class: { index: "sorcerer", name: "Sorcerer", url: "/assets/atlas/class/json/24/sorcerer.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/sorcerer_level_${lvl}.json`,
     rulesetContext: "2024",
-    spellcasting: { cantrips_known: cantripsTable[lvl - 1], prepared_spells: sorcererPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
+    spellcasting: { cantrips_known: sorcererCantripsTable[lvl - 1], prepared_spells: sorcererPreparedTable[lvl - 1], spell_slots_level_1: slots[0], spell_slots_level_2: slots[1], spell_slots_level_3: slots[2], spell_slots_level_4: slots[3], spell_slots_level_5: slots[4], spell_slots_level_6: slots[5], spell_slots_level_7: slots[6], spell_slots_level_8: slots[7], spell_slots_level_9: slots[8] }
   };
 }
 
@@ -606,6 +620,7 @@ function buildWarlockLevel(lvl) {
   if (lvl === 3) features.push(featureRef("warlock_subclass_2024", "Warlock Subclass"));
   if (lvl === 4) features.push(featureRef("warlock_ability_score_improvement_1_2024", "Ability Score Improvement"));
   if (lvl === 8) features.push(featureRef("warlock_ability_score_improvement_2_2024", "Ability Score Improvement"));
+  if (lvl === 9) features.push(featureRef("contact_patron_2024", "Contact Patron"));
   if (lvl === 11) features.push(featureRef("mystic_arcanum_11_2024", "Mystic Arcanum (6th Level)"));
   if (lvl === 12) features.push(featureRef("warlock_ability_score_improvement_3_2024", "Ability Score Improvement"));
   if (lvl === 13) features.push(featureRef("mystic_arcanum_13_2024", "Mystic Arcanum (7th Level)"));
@@ -615,10 +630,10 @@ function buildWarlockLevel(lvl) {
   if (lvl === 19) features.push(featureRef("epic_boon_warlock_2024", "Epic Boon"));
   if (lvl === 20) features.push(featureRef("eldritch_master_2024", "Eldritch Master"));
 
-  const pactSlots = lvl >= 11 ? 3 : (lvl >= 2 ? 2 : 1);
+  const pactSlots = lvl >= 17 ? 4 : (lvl >= 11 ? 3 : (lvl >= 2 ? 2 : 1));
   const slotLevel = lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 3 ? 2 : 1)));
-  const invocations = lvl >= 18 ? 8 : (lvl >= 15 ? 7 : (lvl >= 12 ? 6 : (lvl >= 9 ? 5 : (lvl >= 7 ? 4 : (lvl >= 5 ? 3 : (lvl >= 2 ? 2 : 1))))));
-  const asiCount = [4, 8, 10, 12, 16].filter(l => l <= lvl).length;
+  const invocations = lvl >= 18 ? 10 : (lvl >= 15 ? 9 : (lvl >= 12 ? 8 : (lvl >= 9 ? 7 : (lvl >= 7 ? 6 : (lvl >= 5 ? 5 : (lvl >= 2 ? 3 : 1))))));
+  const asiCount = [4, 8, 12, 16].filter(l => l <= lvl).length;
 
   return {
     level: lvl,
@@ -629,7 +644,13 @@ function buildWarlockLevel(lvl) {
     index: `warlock_level_${lvl}`,
     class: { index: "warlock", name: "Warlock", url: "/assets/atlas/class/json/24/warlock.json" },
     url: `/assets/atlas/class/levels/24/${lvl}/warlock_level_${lvl}.json`,
-    rulesetContext: "2024"
+    rulesetContext: "2024",
+    spellcasting: {
+      cantrips_known: warlockCantripsTable[lvl - 1],
+      prepared_spells: warlockPreparedTable[lvl - 1],
+      pact_slots: pactSlots,
+      pact_slot_level: slotLevel
+    }
   };
 }
 

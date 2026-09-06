@@ -2,7 +2,13 @@
   "level": 10,
   "ability_score_bonuses": 2,
   "prof_bonus": 4,
-  "features": [],
+  "features": [
+    {
+      "index": "metamagic_2024",
+      "name": "Metamagic",
+      "url": "/assets/atlas/features/json/metamagic_2024.json"
+    }
+  ],
   "class_specific": {
     "sorcery_points": 10,
     "metamagic_known_count": 4
@@ -16,7 +22,7 @@
   "url": "/assets/atlas/class/levels/24/10/sorcerer_level_10.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 5,
+    "cantrips_known": 6,
     "prepared_spells": 15,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,

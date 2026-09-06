@@ -6,7 +6,7 @@
   "class_specific": {
     "pact_slots": 2,
     "pact_slot_level": 4,
-    "invocations_known": 4
+    "invocations_known": 6
   },
   "index": "warlock_level_7",
   "class": {
@@ -15,5 +15,11 @@
     "url": "/assets/atlas/class/json/24/warlock.json"
   },
   "url": "/assets/atlas/class/levels/24/7/warlock_level_7.json",
-  "rulesetContext": "2024"
+  "rulesetContext": "2024",
+  "spellcasting": {
+    "cantrips_known": 3,
+    "prepared_spells": 8,
+    "pact_slots": 2,
+    "pact_slot_level": 4
+  }
 }

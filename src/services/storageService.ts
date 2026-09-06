@@ -1964,7 +1964,7 @@ export async function fetchSpeciesData(index: string, ruleset?: '2014' | '2024')
     };
 }
 
-const SUPPORTED_2024_CLASSES = ['fighter', 'wizard', 'cleric', 'rogue'];
+const SUPPORTED_2024_CLASSES = ['barbarian', 'bard', 'cleric', 'druid', 'fighter', 'monk', 'paladin', 'ranger', 'rogue', 'sorcerer', 'warlock', 'wizard'];
 
 export async function fetchClassesList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
   const activeRuleset = getActiveRulesetContext(ruleset);

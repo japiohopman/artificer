@@ -4,6 +4,11 @@
   "prof_bonus": 4,
   "features": [
     {
+      "index": "bardic_inspiration_d10_2024",
+      "name": "Bardic Inspiration (d10)",
+      "url": "/assets/atlas/features/json/bardic_inspiration_d10_2024.json"
+    },
+    {
       "index": "magical_secrets_2024",
       "name": "Magical Secrets",
       "url": "/assets/atlas/features/json/magical_secrets_2024.json"
@@ -21,7 +26,7 @@
   "url": "/assets/atlas/class/levels/24/10/bard_level_10.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 5,
+    "cantrips_known": 4,
     "prepared_spells": 15,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,

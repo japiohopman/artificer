@@ -4,14 +4,14 @@
   "prof_bonus": 6,
   "features": [
     {
-      "index": "metamagic_options_4_2024",
-      "name": "Metamagic Options (Level 17)",
-      "url": "/assets/atlas/features/json/metamagic_options_4_2024.json"
+      "index": "metamagic_2024",
+      "name": "Metamagic",
+      "url": "/assets/atlas/features/json/metamagic_2024.json"
     }
   ],
   "class_specific": {
     "sorcery_points": 17,
-    "metamagic_known_count": 8
+    "metamagic_known_count": 6
   },
   "index": "sorcerer_level_17",
   "class": {
@@ -22,8 +22,8 @@
   "url": "/assets/atlas/class/levels/24/17/sorcerer_level_17.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 5,
-    "prepared_spells": 20,
+    "cantrips_known": 6,
+    "prepared_spells": 19,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,
     "spell_slots_level_3": 3,

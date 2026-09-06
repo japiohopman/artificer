@@ -1,0 +1,17 @@
+{
+  "index": "feral_senses_2024",
+  "name": "Feral Senses",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "level": 18,
+  "desc": [
+    "Your connection to nature grant you Blindsight with a range of 30 feet."
+  ],
+  "feature_specific": {
+    "blindsight_range_feet": 30
+  },
+  "url": "/assets/atlas/features/json/feral_senses_2024.json"
+}

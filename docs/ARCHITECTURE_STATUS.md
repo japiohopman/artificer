@@ -31,7 +31,7 @@ The current architectural priority is to keep **authoring tools separate from ru
 - **Versioned Domain Coverage:**
   - 2024 Species Foundation (`14/` vs `24/` — implemented / verified: Human, Dwarf, Elf, Halfling, Orc)
   - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: All 12 core classes)
-  - 2024 Class Levels / Features (`14/` vs `24/` — levels 1–20 implemented / verified for Fighter, Wizard, Cleric, Rogue; remaining 8 core classes pending)
+  - 2024 Class Levels / Features (`14/` vs `24/` — levels 1–20 implemented / verified for all 12 core classes)
   - 2024 Subclasses & Features (`14/` vs `24/` — 6 subclasses implemented / verified: Fighter [Champion, Battle Master], Wizard [Evoker], Cleric [Life Domain], Rogue [Thief, Assassin]; remaining 2024 subclasses pending)
   - Next active dependency: 2024 Progressions for remaining 8 classes / 2024 Backgrounds & Origins / Origin Feats
   - Equipment (`14/` vs `24/`)

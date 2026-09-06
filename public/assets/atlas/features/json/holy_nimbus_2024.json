@@ -1,0 +1,19 @@
+{
+  "index": "holy_nimbus_2024",
+  "name": "Holy Nimbus",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "level": 20,
+  "desc": [
+    "As a Bonus Action, you can emanate an aura of sunlight in a 30-foot Emanation for 1 minute or until you dismiss it (no action required). Bright light fills the aura, and dim light extends for an additional 30 feet. Whenever an enemy starts its turn in the aura, it takes Radiant damage equal to 10 + your Charisma modifier. You have Advantage on saving throws against spells cast by Fiends and Undead while in the aura. Once you use this feature, you can't use it again until you finish a Long Rest unless you expend a 5th-level spell slot to use it."
+  ],
+  "feature_specific": {
+    "duration": "1 minute",
+    "emanation_feet": 30,
+    "recharge": "long_rest_or_5th_level_slot"
+  },
+  "url": "/assets/atlas/features/json/holy_nimbus_2024.json"
+}

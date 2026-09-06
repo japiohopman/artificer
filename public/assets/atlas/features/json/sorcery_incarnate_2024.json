@@ -1,0 +1,15 @@
+{
+  "index": "sorcery_incarnate_2024",
+  "name": "Sorcery Incarnate",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "level": 7,
+  "desc": [
+    "While Innate Sorcery is active, you can use up to two of your Metamagic options on each spell you cast. In addition, if you use your Innate Sorcery feature while all your Innate Sorcery uses are expended, you can gain a use by expending 2 Sorcery Points."
+  ],
+  "url": "/assets/atlas/features/json/sorcery_incarnate_2024.json",
+  "rulesetContext": "2024"
+}

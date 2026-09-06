@@ -2,16 +2,10 @@
   "level": 13,
   "ability_score_bonuses": 3,
   "prof_bonus": 5,
-  "features": [
-    {
-      "index": "metamagic_options_3_2024",
-      "name": "Metamagic Options (Level 13)",
-      "url": "/assets/atlas/features/json/metamagic_options_3_2024.json"
-    }
-  ],
+  "features": [],
   "class_specific": {
     "sorcery_points": 13,
-    "metamagic_known_count": 6
+    "metamagic_known_count": 4
   },
   "index": "sorcerer_level_13",
   "class": {
@@ -22,7 +16,7 @@
   "url": "/assets/atlas/class/levels/24/13/sorcerer_level_13.json",
   "rulesetContext": "2024",
   "spellcasting": {
-    "cantrips_known": 5,
+    "cantrips_known": 6,
     "prepared_spells": 17,
     "spell_slots_level_1": 4,
     "spell_slots_level_2": 3,

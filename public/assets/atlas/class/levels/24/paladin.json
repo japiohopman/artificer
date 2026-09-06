@@ -36,6 +36,7 @@
     "url": "/assets/atlas/class/levels/24/1/paladin_level_1.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 2,
       "spell_slots_level_1": 2,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -75,6 +76,7 @@
     "url": "/assets/atlas/class/levels/24/2/paladin_level_2.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 3,
       "spell_slots_level_1": 2,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -114,6 +116,7 @@
     "url": "/assets/atlas/class/levels/24/3/paladin_level_3.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 4,
       "spell_slots_level_1": 3,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -148,6 +151,7 @@
     "url": "/assets/atlas/class/levels/24/4/paladin_level_4.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 5,
       "spell_slots_level_1": 3,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -187,6 +191,7 @@
     "url": "/assets/atlas/class/levels/24/5/paladin_level_5.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 6,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 2,
       "spell_slots_level_3": 0,
@@ -221,6 +226,7 @@
     "url": "/assets/atlas/class/levels/24/6/paladin_level_6.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 6,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 2,
       "spell_slots_level_3": 0,
@@ -249,6 +255,7 @@
     "url": "/assets/atlas/class/levels/24/7/paladin_level_7.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 7,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 0,
@@ -283,6 +290,7 @@
     "url": "/assets/atlas/class/levels/24/8/paladin_level_8.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 7,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 0,
@@ -317,6 +325,7 @@
     "url": "/assets/atlas/class/levels/24/9/paladin_level_9.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 9,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 2,
@@ -328,7 +337,13 @@
     "level": 10,
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
-    "features": [],
+    "features": [
+      {
+        "index": "aura_of_courage_2024",
+        "name": "Aura of Courage",
+        "url": "/assets/atlas/features/json/aura_of_courage_2024.json"
+      }
+    ],
     "weapon_mastery": {
       "count": 2,
       "description": "You can master 2 simple or martial weapons of your choice."
@@ -345,6 +360,7 @@
     "url": "/assets/atlas/class/levels/24/10/paladin_level_10.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 9,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 2,
@@ -379,6 +395,7 @@
     "url": "/assets/atlas/class/levels/24/11/paladin_level_11.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 10,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -413,6 +430,7 @@
     "url": "/assets/atlas/class/levels/24/12/paladin_level_12.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 10,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -441,6 +459,7 @@
     "url": "/assets/atlas/class/levels/24/13/paladin_level_13.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 11,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -475,6 +494,7 @@
     "url": "/assets/atlas/class/levels/24/14/paladin_level_14.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 11,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -503,6 +523,7 @@
     "url": "/assets/atlas/class/levels/24/15/paladin_level_15.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 12,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -537,6 +558,7 @@
     "url": "/assets/atlas/class/levels/24/16/paladin_level_16.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 12,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -565,6 +587,7 @@
     "url": "/assets/atlas/class/levels/24/17/paladin_level_17.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 14,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -599,6 +622,7 @@
     "url": "/assets/atlas/class/levels/24/18/paladin_level_18.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 14,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -633,6 +657,7 @@
     "url": "/assets/atlas/class/levels/24/19/paladin_level_19.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 15,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -644,7 +669,13 @@
     "level": 20,
     "ability_score_bonuses": 4,
     "prof_bonus": 6,
-    "features": [],
+    "features": [
+      {
+        "index": "holy_nimbus_2024",
+        "name": "Holy Nimbus",
+        "url": "/assets/atlas/features/json/holy_nimbus_2024.json"
+      }
+    ],
     "weapon_mastery": {
       "count": 2,
       "description": "You can master 2 simple or martial weapons of your choice."
@@ -661,6 +692,7 @@
     "url": "/assets/atlas/class/levels/24/20/paladin_level_20.json",
     "rulesetContext": "2024",
     "spellcasting": {
+      "prepared_spells": 15,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,

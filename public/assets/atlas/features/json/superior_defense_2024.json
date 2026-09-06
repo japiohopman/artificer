@@ -1,0 +1,19 @@
+{
+  "index": "superior_defense_2024",
+  "name": "Superior Defense",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "level": 18,
+  "desc": [
+    "At the start of your turn, you can expend 3 Focus Points to gain resistance to all damage types except Force damage for 1 minute or until you are Incapacitated."
+  ],
+  "feature_specific": {
+    "focus_point_cost": 3,
+    "duration": "1 minute",
+    "resisted_damage_types": "all_except_force"
+  },
+  "url": "/assets/atlas/features/json/superior_defense_2024.json"
+}

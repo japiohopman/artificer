@@ -28,8 +28,8 @@
     "url": "/assets/atlas/class/levels/24/1/sorcerer_level_1.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
-      "prepared_spells": 4,
+      "cantrips_known": 4,
+      "prepared_spells": 2,
       "spell_slots_level_1": 2,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -70,8 +70,8 @@
     "url": "/assets/atlas/class/levels/24/2/sorcerer_level_2.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
-      "prepared_spells": 5,
+      "cantrips_known": 4,
+      "prepared_spells": 4,
       "spell_slots_level_1": 3,
       "spell_slots_level_2": 0,
       "spell_slots_level_3": 0,
@@ -107,7 +107,7 @@
     "url": "/assets/atlas/class/levels/24/3/sorcerer_level_3.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 3,
+      "cantrips_known": 4,
       "prepared_spells": 6,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 2,
@@ -144,7 +144,7 @@
     "url": "/assets/atlas/class/levels/24/4/sorcerer_level_4.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 7,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -181,7 +181,7 @@
     "url": "/assets/atlas/class/levels/24/5/sorcerer_level_5.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 9,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -212,7 +212,7 @@
     "url": "/assets/atlas/class/levels/24/6/sorcerer_level_6.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 10,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -231,14 +231,14 @@
     "prof_bonus": 3,
     "features": [
       {
-        "index": "metamagic_options_2_2024",
-        "name": "Metamagic Options (Level 7)",
-        "url": "/assets/atlas/features/json/metamagic_options_2_2024.json"
+        "index": "sorcery_incarnate_2024",
+        "name": "Sorcery Incarnate",
+        "url": "/assets/atlas/features/json/sorcery_incarnate_2024.json"
       }
     ],
     "class_specific": {
       "sorcery_points": 7,
-      "metamagic_known_count": 4
+      "metamagic_known_count": 2
     },
     "index": "sorcerer_level_7",
     "class": {
@@ -249,7 +249,7 @@
     "url": "/assets/atlas/class/levels/24/7/sorcerer_level_7.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 11,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -275,7 +275,7 @@
     ],
     "class_specific": {
       "sorcery_points": 8,
-      "metamagic_known_count": 4
+      "metamagic_known_count": 2
     },
     "index": "sorcerer_level_8",
     "class": {
@@ -286,7 +286,7 @@
     "url": "/assets/atlas/class/levels/24/8/sorcerer_level_8.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 12,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -306,7 +306,7 @@
     "features": [],
     "class_specific": {
       "sorcery_points": 9,
-      "metamagic_known_count": 4
+      "metamagic_known_count": 2
     },
     "index": "sorcerer_level_9",
     "class": {
@@ -317,7 +317,7 @@
     "url": "/assets/atlas/class/levels/24/9/sorcerer_level_9.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 4,
+      "cantrips_known": 5,
       "prepared_spells": 14,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -334,7 +334,13 @@
     "level": 10,
     "ability_score_bonuses": 2,
     "prof_bonus": 4,
-    "features": [],
+    "features": [
+      {
+        "index": "metamagic_2024",
+        "name": "Metamagic",
+        "url": "/assets/atlas/features/json/metamagic_2024.json"
+      }
+    ],
     "class_specific": {
       "sorcery_points": 10,
       "metamagic_known_count": 4
@@ -348,7 +354,7 @@
     "url": "/assets/atlas/class/levels/24/10/sorcerer_level_10.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 15,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -379,7 +385,7 @@
     "url": "/assets/atlas/class/levels/24/11/sorcerer_level_11.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 16,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -416,7 +422,7 @@
     "url": "/assets/atlas/class/levels/24/12/sorcerer_level_12.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 16,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -433,16 +439,10 @@
     "level": 13,
     "ability_score_bonuses": 3,
     "prof_bonus": 5,
-    "features": [
-      {
-        "index": "metamagic_options_3_2024",
-        "name": "Metamagic Options (Level 13)",
-        "url": "/assets/atlas/features/json/metamagic_options_3_2024.json"
-      }
-    ],
+    "features": [],
     "class_specific": {
       "sorcery_points": 13,
-      "metamagic_known_count": 6
+      "metamagic_known_count": 4
     },
     "index": "sorcerer_level_13",
     "class": {
@@ -453,7 +453,7 @@
     "url": "/assets/atlas/class/levels/24/13/sorcerer_level_13.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 17,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -473,7 +473,7 @@
     "features": [],
     "class_specific": {
       "sorcery_points": 14,
-      "metamagic_known_count": 6
+      "metamagic_known_count": 4
     },
     "index": "sorcerer_level_14",
     "class": {
@@ -484,7 +484,7 @@
     "url": "/assets/atlas/class/levels/24/14/sorcerer_level_14.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 17,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -504,7 +504,7 @@
     "features": [],
     "class_specific": {
       "sorcery_points": 15,
-      "metamagic_known_count": 6
+      "metamagic_known_count": 4
     },
     "index": "sorcerer_level_15",
     "class": {
@@ -515,7 +515,7 @@
     "url": "/assets/atlas/class/levels/24/15/sorcerer_level_15.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
+      "cantrips_known": 6,
       "prepared_spells": 18,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
@@ -541,7 +541,7 @@
     ],
     "class_specific": {
       "sorcery_points": 16,
-      "metamagic_known_count": 6
+      "metamagic_known_count": 4
     },
     "index": "sorcerer_level_16",
     "class": {
@@ -552,8 +552,8 @@
     "url": "/assets/atlas/class/levels/24/16/sorcerer_level_16.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 19,
+      "cantrips_known": 6,
+      "prepared_spells": 18,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -571,14 +571,14 @@
     "prof_bonus": 6,
     "features": [
       {
-        "index": "metamagic_options_4_2024",
-        "name": "Metamagic Options (Level 17)",
-        "url": "/assets/atlas/features/json/metamagic_options_4_2024.json"
+        "index": "metamagic_2024",
+        "name": "Metamagic",
+        "url": "/assets/atlas/features/json/metamagic_2024.json"
       }
     ],
     "class_specific": {
       "sorcery_points": 17,
-      "metamagic_known_count": 8
+      "metamagic_known_count": 6
     },
     "index": "sorcerer_level_17",
     "class": {
@@ -589,8 +589,8 @@
     "url": "/assets/atlas/class/levels/24/17/sorcerer_level_17.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 20,
+      "cantrips_known": 6,
+      "prepared_spells": 19,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -609,7 +609,7 @@
     "features": [],
     "class_specific": {
       "sorcery_points": 18,
-      "metamagic_known_count": 8
+      "metamagic_known_count": 6
     },
     "index": "sorcerer_level_18",
     "class": {
@@ -620,8 +620,8 @@
     "url": "/assets/atlas/class/levels/24/18/sorcerer_level_18.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 21,
+      "cantrips_known": 6,
+      "prepared_spells": 20,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -646,7 +646,7 @@
     ],
     "class_specific": {
       "sorcery_points": 19,
-      "metamagic_known_count": 8
+      "metamagic_known_count": 6
     },
     "index": "sorcerer_level_19",
     "class": {
@@ -657,8 +657,8 @@
     "url": "/assets/atlas/class/levels/24/19/sorcerer_level_19.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 22,
+      "cantrips_known": 6,
+      "prepared_spells": 21,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
@@ -683,7 +683,7 @@
     ],
     "class_specific": {
       "sorcery_points": 20,
-      "metamagic_known_count": 8
+      "metamagic_known_count": 6
     },
     "index": "sorcerer_level_20",
     "class": {
@@ -694,8 +694,8 @@
     "url": "/assets/atlas/class/levels/24/20/sorcerer_level_20.json",
     "rulesetContext": "2024",
     "spellcasting": {
-      "cantrips_known": 5,
-      "prepared_spells": 24,
+      "cantrips_known": 6,
+      "prepared_spells": 22,
       "spell_slots_level_1": 4,
       "spell_slots_level_2": 3,
       "spell_slots_level_3": 3,
