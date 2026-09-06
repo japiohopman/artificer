@@ -1,10 +1,19 @@
 {
   "index": "use_magic_device_thief_2024",
   "name": "Use Magic Device",
-  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
-  "subclass": { "index": "thief_2024", "name": "Thief", "url": "/assets/atlas/subclasses/json/24/thief_2024.json" },
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "thief_2024",
+    "name": "Thief",
+    "url": "/assets/atlas/subclasses/json/24/thief_2024.json"
+  },
   "level": 13,
-  "desc": [ "You can attune to up to 4 magic items at once. You ignore all class, species, and level requirements on the use of magic items and Spell Scrolls. Whenever you activate a magic item that expends charges, you can roll a d6; on a 6, no charges are expended." ],
-  "feature_specific": { "attunement_slots": 4, "ignore_item_requirements": true, "charge_preservation_chance": "1_in_6" },
+  "desc": [
+    "You ignore all class, species, and level requirements on the use of any magic item, and gain an extra attuned item slot."
+  ],
   "url": "/assets/atlas/features/json/use_magic_device_thief_2024.json"
 }

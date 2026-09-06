@@ -1,0 +1,19 @@
+{
+  "index": "tandem_footwork_dance_2024",
+  "name": "Tandem Footwork",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "dance_2024",
+    "name": "College of Dance",
+    "url": "/assets/atlas/subclasses/json/24/dance_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When rolling Initiative, spend one Bardic Inspiration die to add the roll to your Initiative and the Initiative of all willing allies within 60 feet."
+  ],
+  "url": "/assets/atlas/features/json/tandem_footwork_dance_2024.json"
+}

@@ -1,0 +1,66 @@
+{
+  "index": "great_old_one_2024",
+  "name": "Great Old One Patron",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "desc": [
+    "Your patron is an alien entity from the Far Realm, granting eldritch mind blast powers, telepathic speech, and enthralling mental dominance."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "great_old_one_spells_2024",
+          "name": "Great Old One Spells",
+          "url": "/assets/atlas/features/json/great_old_one_spells_2024.json"
+        },
+        {
+          "index": "awakened_mind_great_old_one_2024",
+          "name": "Awakened Mind",
+          "url": "/assets/atlas/features/json/awakened_mind_great_old_one_2024.json"
+        },
+        {
+          "index": "psychic_spells_great_old_one_2024",
+          "name": "Psychic Spells",
+          "url": "/assets/atlas/features/json/psychic_spells_great_old_one_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "clairvoyant_combatant_great_old_one_2024",
+          "name": "Clairvoyant Combatant",
+          "url": "/assets/atlas/features/json/clairvoyant_combatant_great_old_one_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "eldritch_hex_great_old_one_2024",
+          "name": "Eldritch Hex",
+          "url": "/assets/atlas/features/json/eldritch_hex_great_old_one_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "create_thrall_great_old_one_2024",
+          "name": "Create Thrall",
+          "url": "/assets/atlas/features/json/create_thrall_great_old_one_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "guided_strike_war_2024",
+  "name": "Channel Divinity: Guided Strike",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "war_domain_2024",
+    "name": "War Domain",
+    "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you or an ally within 30 feet makes an attack roll, spend Channel Divinity to add +10 to the roll."
+  ],
+  "url": "/assets/atlas/features/json/guided_strike_war_2024.json"
+}

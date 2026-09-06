@@ -1,0 +1,19 @@
+{
+  "index": "mantle_of_majesty_glamour_2024",
+  "name": "Mantle of Majesty",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "glamour_2024",
+    "name": "College of Glamour",
+    "url": "/assets/atlas/subclasses/json/24/glamour_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Bonus Action, cast Command without expending a spell slot. For 1 minute, you can cast Command as a Bonus Action on each of your turns."
+  ],
+  "url": "/assets/atlas/features/json/mantle_of_majesty_glamour_2024.json"
+}

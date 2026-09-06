@@ -1,9 +1,19 @@
 {
   "index": "additional_fighting_style_champion_2024",
   "name": "Additional Fighting Style",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "champion_2024", "name": "Champion", "url": "/assets/atlas/subclasses/json/24/champion_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "champion_2024",
+    "name": "Champion",
+    "url": "/assets/atlas/subclasses/json/24/champion_2024.json"
+  },
   "level": 7,
-  "desc": [ "You gain another Fighting Style feat of your choice from the Fighting Style feats available to Fighters." ],
+  "desc": [
+    "You gain another Fighting Style feat of your choice."
+  ],
   "url": "/assets/atlas/features/json/additional_fighting_style_champion_2024.json"
 }

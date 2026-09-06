@@ -1,0 +1,19 @@
+{
+  "index": "war_gods_blessing_war_2024",
+  "name": "War God's Blessing",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "war_domain_2024",
+    "name": "War Domain",
+    "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You can spend Channel Divinity to cast Shield of Faith or Spiritual Weapon without expending a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/war_gods_blessing_war_2024.json"
+}

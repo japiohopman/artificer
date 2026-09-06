@@ -1,0 +1,19 @@
+{
+  "index": "leading_evasion_dance_2024",
+  "name": "Leading Evasion",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "dance_2024",
+    "name": "College of Dance",
+    "url": "/assets/atlas/subclasses/json/24/dance_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "You gain Evasion. When you use Evasion to take no damage from an area effect, allies within 5 feet of you also take no damage if they failed their save."
+  ],
+  "url": "/assets/atlas/features/json/leading_evasion_dance_2024.json"
+}

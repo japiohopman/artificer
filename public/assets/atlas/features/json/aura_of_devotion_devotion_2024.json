@@ -1,0 +1,19 @@
+{
+  "index": "aura_of_devotion_devotion_2024",
+  "name": "Aura of Devotion",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion_2024",
+    "name": "Oath of Devotion",
+    "url": "/assets/atlas/subclasses/json/24/devotion_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "You and allies within 10 feet cannot be Charmed while conscious."
+  ],
+  "url": "/assets/atlas/features/json/aura_of_devotion_devotion_2024.json"
+}

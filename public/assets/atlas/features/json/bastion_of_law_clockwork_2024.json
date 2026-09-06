@@ -1,0 +1,19 @@
+{
+  "index": "bastion_of_law_clockwork_2024",
+  "name": "Bastion of Law",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "clockwork_sorcery_2024",
+    "name": "Clockwork Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/clockwork_sorcery_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Spend 1 to 5 Sorcery Points to grant an ally a ward of d8 dice that absorbs incoming damage."
+  ],
+  "url": "/assets/atlas/features/json/bastion_of_law_clockwork_2024.json"
+}

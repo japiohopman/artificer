@@ -1,0 +1,19 @@
+{
+  "index": "overchannel_evoker_2024",
+  "name": "Overchannel",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "evocation_2024",
+    "name": "Evoker",
+    "url": "/assets/atlas/subclasses/json/24/evocation_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "When you cast a Wizard spell of 1st through 5th level that deals damage, deal maximum damage instead of rolling. Subsequent uses before a Long Rest inflict Necrotic damage."
+  ],
+  "url": "/assets/atlas/features/json/overchannel_evoker_2024.json"
+}

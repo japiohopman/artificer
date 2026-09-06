@@ -1,0 +1,19 @@
+{
+  "index": "abjuration_savant_abjurer_2024",
+  "name": "Abjuration Savant",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "abjurer_2024",
+    "name": "Abjurer",
+    "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gold and time required to copy Abjuration spells into your spellbook is halved, and you gain two free Abjuration spells in your spellbook."
+  ],
+  "url": "/assets/atlas/features/json/abjuration_savant_abjurer_2024.json"
+}

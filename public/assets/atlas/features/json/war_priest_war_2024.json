@@ -1,0 +1,19 @@
+{
+  "index": "war_priest_war_2024",
+  "name": "War Priest",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "war_domain_2024",
+    "name": "War Domain",
+    "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you take the Attack action, you can make one weapon attack as a Bonus Action WIS mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/war_priest_war_2024.json"
+}

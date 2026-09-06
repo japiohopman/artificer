@@ -1,0 +1,19 @@
+{
+  "index": "aquatic_affinity_sea_2024",
+  "name": "Aquatic Affinity",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "sea_2024",
+    "name": "Circle of the Sea",
+    "url": "/assets/atlas/subclasses/json/24/sea_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You gain a Swimming speed equal to your Speed and can breathe underwater indefinitely."
+  ],
+  "url": "/assets/atlas/features/json/aquatic_affinity_sea_2024.json"
+}

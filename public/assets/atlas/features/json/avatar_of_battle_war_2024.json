@@ -1,0 +1,19 @@
+{
+  "index": "avatar_of_battle_war_2024",
+  "name": "Avatar of Battle",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "war_domain_2024",
+    "name": "War Domain",
+    "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "You gain resistance to Bludgeoning, Piercing, and Slashing damage from nonmagical attacks."
+  ],
+  "url": "/assets/atlas/features/json/avatar_of_battle_war_2024.json"
+}

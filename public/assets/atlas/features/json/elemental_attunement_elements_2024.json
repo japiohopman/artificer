@@ -1,0 +1,19 @@
+{
+  "index": "elemental_attunement_elements_2024",
+  "name": "Elemental Attunement",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "elements_2024",
+    "name": "Warrior of the Elements",
+    "url": "/assets/atlas/subclasses/json/24/elements_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, spend 1 Focus Point to enter elemental reach for 1 minute: Unarmed Strike reach increases by 10 feet, dealing Acid, Cold, Fire, Lightning, or Thunder damage."
+  ],
+  "url": "/assets/atlas/features/json/elemental_attunement_elements_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "radiant_soul_celestial_2024",
+  "name": "Radiant Soul",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "celestial_2024",
+    "name": "Celestial Patron",
+    "url": "/assets/atlas/subclasses/json/24/celestial_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Gain resistance to Radiant damage. Add CHA mod to damage when casting Radiant or Fire damage spells."
+  ],
+  "url": "/assets/atlas/features/json/radiant_soul_celestial_2024.json"
+}

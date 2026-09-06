@@ -1,0 +1,19 @@
+{
+  "index": "trickery_domain_spells_2024",
+  "name": "Trickery Domain Spells",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "trickery_domain_2024",
+    "name": "Trickery Domain",
+    "url": "/assets/atlas/subclasses/json/24/trickery_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have domain spells prepared (Disguise Self, Charm Person, Invisibility, Pass Without Trace, Hypnotic Pattern, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/trickery_domain_spells_2024.json"
+}

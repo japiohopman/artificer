@@ -1,0 +1,19 @@
+{
+  "index": "glorious_defense_glory_2024",
+  "name": "Glorious Defense",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "glory_2024",
+    "name": "Oath of Glory",
+    "url": "/assets/atlas/subclasses/json/24/glory_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When an attacker hits an ally within 10 feet, use Reaction to add CHA mod to AC and make a counterattack if it misses."
+  ],
+  "url": "/assets/atlas/features/json/glorious_defense_glory_2024.json"
+}

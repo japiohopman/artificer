@@ -1,0 +1,19 @@
+{
+  "index": "living_legend_glory_2024",
+  "name": "Living Legend",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "glory_2024",
+    "name": "Oath of Glory",
+    "url": "/assets/atlas/subclasses/json/24/glory_2024.json"
+  },
+  "level": 20,
+  "desc": [
+    "For 1 minute, gain Advantage on Charisma checks, turn missed attacks into hits once per turn, and reroll failed saves as Reaction."
+  ],
+  "url": "/assets/atlas/features/json/living_legend_glory_2024.json"
+}

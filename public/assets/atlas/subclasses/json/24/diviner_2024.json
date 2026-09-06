@@ -1,0 +1,61 @@
+{
+  "index": "diviner_2024",
+  "name": "Diviner",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "desc": [
+    "Diviners pierce the veil of time and space, foreseeing future rolls, discerning secrets, and gaining uncanny foresight."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "divination_savant_diviner_2024",
+          "name": "Divination Savant",
+          "url": "/assets/atlas/features/json/divination_savant_diviner_2024.json"
+        },
+        {
+          "index": "portent_diviner_2024",
+          "name": "Portent",
+          "url": "/assets/atlas/features/json/portent_diviner_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "expert_divination_diviner_2024",
+          "name": "Expert Divination",
+          "url": "/assets/atlas/features/json/expert_divination_diviner_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "the_third_eye_diviner_2024",
+          "name": "The Third Eye",
+          "url": "/assets/atlas/features/json/the_third_eye_diviner_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "greater_portent_diviner_2024",
+          "name": "Greater Portent",
+          "url": "/assets/atlas/features/json/greater_portent_diviner_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/diviner_2024.json",
+  "rulesetContext": "2024"
+}

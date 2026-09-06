@@ -1,0 +1,61 @@
+{
+  "index": "abjurer_2024",
+  "name": "Abjurer",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "desc": [
+    "Abjurers specialize in protective magic, weaving arcane barriers that ward off elemental fury, curses, and magical attacks."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "abjuration_savant_abjurer_2024",
+          "name": "Abjuration Savant",
+          "url": "/assets/atlas/features/json/abjuration_savant_abjurer_2024.json"
+        },
+        {
+          "index": "arcane_ward_abjurer_2024",
+          "name": "Arcane Ward",
+          "url": "/assets/atlas/features/json/arcane_ward_abjurer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "projected_ward_abjurer_2024",
+          "name": "Projected Ward",
+          "url": "/assets/atlas/features/json/projected_ward_abjurer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "spell_breaker_abjurer_2024",
+          "name": "Spell Breaker",
+          "url": "/assets/atlas/features/json/spell_breaker_abjurer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "spell_resistance_abjurer_2024",
+          "name": "Spell Resistance",
+          "url": "/assets/atlas/features/json/spell_resistance_abjurer_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json",
+  "rulesetContext": "2024"
+}

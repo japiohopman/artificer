@@ -1,0 +1,19 @@
+{
+  "index": "envenomed_weapons_assassin_2024",
+  "name": "Envenomed Weapons",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin_2024",
+    "name": "Assassin",
+    "url": "/assets/atlas/subclasses/json/24/assassin_2024.json"
+  },
+  "level": 13,
+  "desc": [
+    "When you apply Sneak Attack to a weapon attack, you can also deal Poison damage equal to your Sneak Attack dice or ignore Poison resistance."
+  ],
+  "url": "/assets/atlas/features/json/envenomed_weapons_assassin_2024.json"
+}

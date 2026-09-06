@@ -1,0 +1,19 @@
+{
+  "index": "mage_hand_legerdemain_arcane_trickster_2024",
+  "name": "Mage Hand Legerdemain",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster_2024",
+    "name": "Arcane Trickster",
+    "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Cast Mage Hand as a Bonus Action, making the spectral hand invisible to stow/retrieve objects or pick locks silently."
+  ],
+  "url": "/assets/atlas/features/json/mage_hand_legerdemain_arcane_trickster_2024.json"
+}

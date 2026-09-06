@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { soundService } from '../../../services/soundService';
-import { fetchClassLevels } from '../../../services/storageService';
+import { fetchClassLevels, fetchSubclassesList } from '../../../services/storageService';
 import { GameIcon } from '../../../game_icons';
 import { extractOptionsFromFeature, getChoiceLimit } from '../../../lib/atlasUtils';
 import { atlasService } from '../../../services/atlasService';
@@ -101,11 +101,8 @@ export const ChoicesStep: React.FC<{
                 }
 
                 // Fetch subclass list
-                const subclassRes = await fetch('/assets/atlas/subclasses/index.json');
-                if (subclassRes.ok) {
-                    const subclassData = await subclassRes.json();
-                    setSubclasses(subclassData);
-                }
+                const subclassData = await fetchSubclassesList(newChar.ruleset, newChar.class);
+                setSubclasses(subclassData);
             } catch (e) {
                 console.error("Error loading level choices", e);
             } finally {
@@ -123,7 +120,7 @@ export const ChoicesStep: React.FC<{
                 let options = extractOptionsFromFeature(f);
                 if (isSubclassChoice) {
                     options = subclasses
-                        .filter((s: any) => s.class?.toLowerCase() === newChar.class?.toLowerCase())
+                        .filter((s: any) => !s.classIndex || s.classIndex.toLowerCase() === newChar.class?.toLowerCase())
                         .map((s: any) => ({
                             index: s.index,
                             name: s.name
@@ -140,7 +137,7 @@ export const ChoicesStep: React.FC<{
 
                 for (const opt of options) {
                     if (isSubclassChoice) {
-                        const subData = await atlasService.loadSubclass(opt.index);
+                        const subData = await atlasService.loadSubclass(opt.index, newChar.ruleset);
                         if (subData) {
                             const desc = Array.isArray(subData.desc) ? subData.desc.join('\n') : (subData.desc || "");
                             details[opt.index] = desc;
@@ -232,7 +229,7 @@ export const ChoicesStep: React.FC<{
                         
                         if (isSubclassChoice) {
                             options = subclasses
-                                .filter((s: any) => s.class?.toLowerCase() === newChar.class?.toLowerCase())
+                                .filter((s: any) => !s.classIndex || s.classIndex.toLowerCase() === newChar.class?.toLowerCase())
                                 .map((s: any) => ({
                                     index: s.index,
                                     name: s.name

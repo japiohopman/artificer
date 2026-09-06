@@ -1,0 +1,19 @@
+{
+  "index": "steps_of_the_fey_archfey_2024",
+  "name": "Steps of the Fey",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "archfey_2024",
+    "name": "Archfey Patron",
+    "url": "/assets/atlas/subclasses/json/24/archfey_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you cast Misty Step, trigger a fey effect (Refreshment, Taunting, Disappearing) CHA mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/steps_of_the_fey_archfey_2024.json"
+}

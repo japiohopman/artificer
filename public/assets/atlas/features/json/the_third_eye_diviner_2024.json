@@ -1,0 +1,19 @@
+{
+  "index": "the_third_eye_diviner_2024",
+  "name": "The Third Eye",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "diviner_2024",
+    "name": "Diviner",
+    "url": "/assets/atlas/subclasses/json/24/diviner_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "As a Bonus Action, gain Darkvision 60ft, See Invisibility, or comprehend languages until short or long rest."
+  ],
+  "url": "/assets/atlas/features/json/the_third_eye_diviner_2024.json"
+}

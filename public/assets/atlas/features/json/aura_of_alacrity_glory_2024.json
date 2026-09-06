@@ -1,0 +1,19 @@
+{
+  "index": "aura_of_alacrity_glory_2024",
+  "name": "Aura of Alacrity",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "glory_2024",
+    "name": "Oath of Glory",
+    "url": "/assets/atlas/subclasses/json/24/glory_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "Your Speed increases by 10 feet, and allies starting their turn within 10 feet gain +10 feet Speed for that turn."
+  ],
+  "url": "/assets/atlas/features/json/aura_of_alacrity_glory_2024.json"
+}

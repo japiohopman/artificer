@@ -1,0 +1,19 @@
+{
+  "index": "psionic_sorcery_aberrant_2024",
+  "name": "Psionic Sorcery",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "aberrant_sorcery_2024",
+    "name": "Aberrant Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Cast psionic spells by spending Sorcery Points equal to spell level without Verbal, Somatic, or Material components."
+  ],
+  "url": "/assets/atlas/features/json/psionic_sorcery_aberrant_2024.json"
+}

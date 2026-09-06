@@ -1,0 +1,19 @@
+{
+  "index": "assassinate_assassin_2024",
+  "name": "Assassinate",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin_2024",
+    "name": "Assassin",
+    "url": "/assets/atlas/subclasses/json/24/assassin_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gain Advantage on attack rolls against any creature that hasn't taken a turn in combat yet. In addition, on the first turn of combat, hits deal extra damage equal to your Rogue level."
+  ],
+  "url": "/assets/atlas/features/json/assassinate_assassin_2024.json"
+}

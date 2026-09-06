@@ -1,0 +1,19 @@
+{
+  "index": "weapon_bond_eldritch_knight_2024",
+  "name": "Weapon Bond",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "eldritch_knight_2024",
+    "name": "Eldritch Knight",
+    "url": "/assets/atlas/subclasses/json/24/eldritch_knight_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Perform a 1-hour ritual to bond with up to two weapons. You cannot be disarmed of a bonded weapon and can summon it to hand as a Bonus Action."
+  ],
+  "url": "/assets/atlas/features/json/weapon_bond_eldritch_knight_2024.json"
+}

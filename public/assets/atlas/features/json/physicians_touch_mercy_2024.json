@@ -1,0 +1,19 @@
+{
+  "index": "physicians_touch_mercy_2024",
+  "name": "Physician's Touch",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "mercy_2024",
+    "name": "Warrior of Mercy",
+    "url": "/assets/atlas/subclasses/json/24/mercy_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Hand of Healing removes Poisoned, Blinded, Deafened, Paralyzed, or Stunned. Hand of Harm inflicts Poisoned until end of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/physicians_touch_mercy_2024.json"
+}

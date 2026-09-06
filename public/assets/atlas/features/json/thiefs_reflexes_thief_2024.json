@@ -1,0 +1,19 @@
+{
+  "index": "thiefs_reflexes_thief_2024",
+  "name": "Thief's Reflexes",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "thief_2024",
+    "name": "Thief",
+    "url": "/assets/atlas/subclasses/json/24/thief_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "You can take two turns during the first round of any combat (one on your normal Initiative and another at Initiative minus 10)."
+  ],
+  "url": "/assets/atlas/features/json/thiefs_reflexes_thief_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "improved_flare_light_2024",
+  "name": "Improved Flare",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "light_domain_2024",
+    "name": "Light Domain",
+    "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You can use Warding Flare when an attacker hits a creature within 30 feet of you, imposing Disadvantage on the attack roll."
+  ],
+  "url": "/assets/atlas/features/json/improved_flare_light_2024.json"
+}

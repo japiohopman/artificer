@@ -1,0 +1,19 @@
+{
+  "index": "restore_balance_clockwork_2024",
+  "name": "Restore Balance",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "clockwork_sorcery_2024",
+    "name": "Clockwork Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/clockwork_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Reaction when a creature within 60 feet rolls with Advantage or Disadvantage, negate the Advantage or Disadvantage PB times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/restore_balance_clockwork_2024.json"
+}

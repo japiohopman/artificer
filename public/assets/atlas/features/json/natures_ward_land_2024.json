@@ -1,0 +1,19 @@
+{
+  "index": "natures_ward_land_2024",
+  "name": "Nature's Ward",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "You are immune to the Poisoned condition, and you gain damage resistance based on your active land choice: Arid (Fire), Polar (Cold), Temperate (Lightning), or Tropical (Poison)."
+  ],
+  "url": "/assets/atlas/features/json/natures_ward_land_2024.json"
+}

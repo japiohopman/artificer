@@ -1,0 +1,61 @@
+{
+  "index": "stars_2024",
+  "name": "Circle of the Stars",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "desc": [
+    "Circle of the Stars Druids harness starlight and cosmic constellations to guide allies, blast foes, and foretell fate."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "star_map_stars_2024",
+          "name": "Star Map",
+          "url": "/assets/atlas/features/json/star_map_stars_2024.json"
+        },
+        {
+          "index": "starry_form_stars_2024",
+          "name": "Starry Form",
+          "url": "/assets/atlas/features/json/starry_form_stars_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "cosmic_omen_stars_2024",
+          "name": "Cosmic Omen",
+          "url": "/assets/atlas/features/json/cosmic_omen_stars_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "twinkling_constellations_stars_2024",
+          "name": "Twinkling Constellations",
+          "url": "/assets/atlas/features/json/twinkling_constellations_stars_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "full_of_stars_stars_2024",
+          "name": "Full of Stars",
+          "url": "/assets/atlas/features/json/full_of_stars_stars_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/stars_2024.json",
+  "rulesetContext": "2024"
+}

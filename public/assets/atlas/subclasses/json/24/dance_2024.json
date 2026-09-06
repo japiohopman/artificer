@@ -1,0 +1,51 @@
+{
+  "index": "dance_2024",
+  "name": "College of Dance",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "desc": [
+    "Bards of the College of Dance know that rhythm and movement carry ancient spellcraft. They weave agility, unarmed strikes, and evasive grace into battle performance."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "dazzling_footwork_dance_2024",
+          "name": "Dazzling Footwork",
+          "url": "/assets/atlas/features/json/dazzling_footwork_dance_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "inspiring_movement_dance_2024",
+          "name": "Inspiring Movement",
+          "url": "/assets/atlas/features/json/inspiring_movement_dance_2024.json"
+        },
+        {
+          "index": "tandem_footwork_dance_2024",
+          "name": "Tandem Footwork",
+          "url": "/assets/atlas/features/json/tandem_footwork_dance_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "leading_evasion_dance_2024",
+          "name": "Leading Evasion",
+          "url": "/assets/atlas/features/json/leading_evasion_dance_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/dance_2024.json",
+  "rulesetContext": "2024"
+}

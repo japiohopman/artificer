@@ -1,0 +1,61 @@
+{
+  "index": "arcane_trickster_2024",
+  "name": "Arcane Trickster",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "desc": [
+    "Arcane Tricksters enhance stealth and sleight of hand with Wizard illusions and enchantments."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "spellcasting_arcane_trickster_2024",
+          "name": "Spellcasting",
+          "url": "/assets/atlas/features/json/spellcasting_arcane_trickster_2024.json"
+        },
+        {
+          "index": "mage_hand_legerdemain_arcane_trickster_2024",
+          "name": "Mage Hand Legerdemain",
+          "url": "/assets/atlas/features/json/mage_hand_legerdemain_arcane_trickster_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "features": [
+        {
+          "index": "magical_ambush_arcane_trickster_2024",
+          "name": "Magical Ambush",
+          "url": "/assets/atlas/features/json/magical_ambush_arcane_trickster_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "features": [
+        {
+          "index": "versatile_trickster_arcane_trickster_2024",
+          "name": "Versatile Trickster",
+          "url": "/assets/atlas/features/json/versatile_trickster_arcane_trickster_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "spell_thief_arcane_trickster_2024",
+          "name": "Spell Thief",
+          "url": "/assets/atlas/features/json/spell_thief_arcane_trickster_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json",
+  "rulesetContext": "2024"
+}

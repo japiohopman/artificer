@@ -1,0 +1,19 @@
+{
+  "index": "aura_of_warding_ancients_2024",
+  "name": "Aura of Warding",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "ancients_2024",
+    "name": "Oath of the Ancients",
+    "url": "/assets/atlas/subclasses/json/24/ancients_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "You and allies within 10 feet have resistance to spell damage while conscious."
+  ],
+  "url": "/assets/atlas/features/json/aura_of_warding_ancients_2024.json"
+}

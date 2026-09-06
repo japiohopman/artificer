@@ -1,0 +1,66 @@
+{
+  "index": "fey_wanderer_2024",
+  "name": "Fey Wanderer",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "desc": [
+    "Fey Wanderers draw otherworldly joy and deceptive charm from the Feywild, weaving illusion and psychic venom into battle."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "dreadful_strikes_fey_wanderer_2024",
+          "name": "Dreadful Strikes",
+          "url": "/assets/atlas/features/json/dreadful_strikes_fey_wanderer_2024.json"
+        },
+        {
+          "index": "fey_wanderer_spells_2024",
+          "name": "Fey Wanderer Spells",
+          "url": "/assets/atlas/features/json/fey_wanderer_spells_2024.json"
+        },
+        {
+          "index": "otherworldly_glamour_fey_wanderer_2024",
+          "name": "Otherworldly Glamour",
+          "url": "/assets/atlas/features/json/otherworldly_glamour_fey_wanderer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "beguiling_twist_fey_wanderer_2024",
+          "name": "Beguiling Twist",
+          "url": "/assets/atlas/features/json/beguiling_twist_fey_wanderer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "fey_reinforcements_fey_wanderer_2024",
+          "name": "Fey Reinforcements",
+          "url": "/assets/atlas/features/json/fey_reinforcements_fey_wanderer_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "misty_wanderer_fey_wanderer_2024",
+          "name": "Misty Wanderer",
+          "url": "/assets/atlas/features/json/misty_wanderer_fey_wanderer_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/fey_wanderer_2024.json",
+  "rulesetContext": "2024"
+}

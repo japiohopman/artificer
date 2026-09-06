@@ -1,0 +1,19 @@
+{
+  "index": "warping_implosion_aberrant_2024",
+  "name": "Warping Implosion",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "aberrant_sorcery_2024",
+    "name": "Aberrant Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "Teleport up to 120 feet and cause a 30-foot implosion dealing 3d10 Force damage and pulling enemies toward your former space."
+  ],
+  "url": "/assets/atlas/features/json/warping_implosion_aberrant_2024.json"
+}

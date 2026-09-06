@@ -1,0 +1,19 @@
+{
+  "index": "moonlight_step_moon_2024",
+  "name": "Moonlight Step",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "moon_2024",
+    "name": "Circle of the Moon",
+    "url": "/assets/atlas/subclasses/json/24/moon_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "As a Bonus Action, teleport up to 30 feet to an unoccupied space you can see and gain Advantage on your next attack roll before the end of your turn WIS mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/moonlight_step_moon_2024.json"
+}

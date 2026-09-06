@@ -1,0 +1,19 @@
+{
+  "index": "spellcasting_arcane_trickster_2024",
+  "name": "Spellcasting",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster_2024",
+    "name": "Arcane Trickster",
+    "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You cast Wizard spells using Intelligence as spellcasting ability. Prepare 1/3 caster spell progression from Wizard list."
+  ],
+  "url": "/assets/atlas/features/json/spellcasting_arcane_trickster_2024.json"
+}

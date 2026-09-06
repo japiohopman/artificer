@@ -1,0 +1,19 @@
+{
+  "index": "sacred_weapon_devotion_2024",
+  "name": "Channel Divinity: Sacred Weapon",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion_2024",
+    "name": "Oath of Devotion",
+    "url": "/assets/atlas/subclasses/json/24/devotion_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, imbue a weapon with holy light: add CHA mod to attack rolls and emit bright light for 10 minutes."
+  ],
+  "url": "/assets/atlas/features/json/sacred_weapon_devotion_2024.json"
+}

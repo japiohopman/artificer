@@ -148,7 +148,7 @@ export const CharacterProfile: React.FC = () => {
                  return prev;
               });
             } else {
-              atlasService.loadSubclass(opt.index).then(subFeat => {
+              atlasService.loadSubclass(opt.index, character?.ruleset).then(subFeat => {
                 if (subFeat && subFeat.desc) {
                   const description = Array.isArray(subFeat.desc) ? subFeat.desc.join('\n') : subFeat.desc;
                   setOptionDetails(prev => {

@@ -1,0 +1,19 @@
+{
+  "index": "rage_of_the_wild_wild_heart_2024",
+  "name": "Rage of the Wild",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "wild_heart_2024",
+    "name": "Path of the Wild Heart",
+    "url": "/assets/atlas/subclasses/json/24/wild_heart_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Whenever you enter your Rage, choose an animal aspect (Bear for resistance to all damage except Force, Eagle for Dash as Bonus Action, or Wolf for Advantage on melee attacks for allies)."
+  ],
+  "url": "/assets/atlas/features/json/rage_of_the_wild_wild_heart_2024.json"
+}

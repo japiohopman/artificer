@@ -1,0 +1,19 @@
+{
+  "index": "shadow_step_shadow_2024",
+  "name": "Shadow Step",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "shadow_2024",
+    "name": "Warrior of the Shadow",
+    "url": "/assets/atlas/subclasses/json/24/shadow_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Bonus Action while in dim light or darkness, teleport up to 60 feet to another unoccupied space in dim light or darkness and gain Advantage on your next melee attack."
+  ],
+  "url": "/assets/atlas/features/json/shadow_step_shadow_2024.json"
+}

@@ -1,0 +1,51 @@
+{
+  "index": "valor_2024",
+  "name": "College of Valor",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "desc": [
+    "Bards of the College of Valor keep memory of great heroes alive through martial skill, battle hymns, and inspiring leadership on the front line."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "combat_inspiration_valor_2024",
+          "name": "Combat Inspiration",
+          "url": "/assets/atlas/features/json/combat_inspiration_valor_2024.json"
+        },
+        {
+          "index": "martial_training_valor_2024",
+          "name": "Martial Training",
+          "url": "/assets/atlas/features/json/martial_training_valor_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "extra_attack_valor_2024",
+          "name": "Extra Attack",
+          "url": "/assets/atlas/features/json/extra_attack_valor_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "battle_magic_valor_2024",
+          "name": "Battle Magic",
+          "url": "/assets/atlas/features/json/battle_magic_valor_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/valor_2024.json",
+  "rulesetContext": "2024"
+}

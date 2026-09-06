@@ -1,0 +1,19 @@
+{
+  "index": "hurl_through_hell_fiend_2024",
+  "name": "Hurl Through Hell",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "fiend_2024",
+    "name": "Fiend Patron",
+    "url": "/assets/atlas/subclasses/json/24/fiend_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "When you hit a target with an attack, hurl it through nightmare lower planes dealing 10d10 Psychic damage on return."
+  ],
+  "url": "/assets/atlas/features/json/hurl_through_hell_fiend_2024.json"
+}

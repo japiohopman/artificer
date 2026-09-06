@@ -1,0 +1,19 @@
+{
+  "index": "clockwork_spells_clockwork_2024",
+  "name": "Clockwork Spells",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "clockwork_sorcery_2024",
+    "name": "Clockwork Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/clockwork_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have clockwork spells prepared (Alarm, Armor of Agathys, Aid, Lesser Restoration, Protection from Energy, Dispel Magic, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/clockwork_spells_clockwork_2024.json"
+}

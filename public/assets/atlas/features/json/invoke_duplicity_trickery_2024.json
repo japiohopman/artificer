@@ -1,0 +1,19 @@
+{
+  "index": "invoke_duplicity_trickery_2024",
+  "name": "Channel Divinity: Invoke Duplicity",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "trickery_domain_2024",
+    "name": "Trickery Domain",
+    "url": "/assets/atlas/subclasses/json/24/trickery_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, create an illusory duplicate within 30 feet. You can cast spells from its space and gain Advantage on attacks when near it."
+  ],
+  "url": "/assets/atlas/features/json/invoke_duplicity_trickery_2024.json"
+}

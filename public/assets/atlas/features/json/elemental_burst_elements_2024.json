@@ -1,0 +1,19 @@
+{
+  "index": "elemental_burst_elements_2024",
+  "name": "Elemental Burst",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "elements_2024",
+    "name": "Warrior of the Elements",
+    "url": "/assets/atlas/subclasses/json/24/elements_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As an Action, spend 2 Focus Points to unleash a 20-foot radius elemental explosion dealing 3 Martial Arts dice damage (DEX save for half)."
+  ],
+  "url": "/assets/atlas/features/json/elemental_burst_elements_2024.json"
+}

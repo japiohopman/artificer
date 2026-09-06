@@ -1,0 +1,19 @@
+{
+  "index": "dreadful_strikes_fey_wanderer_2024",
+  "name": "Dreadful Strikes",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "fey_wanderer_2024",
+    "name": "Fey Wanderer",
+    "url": "/assets/atlas/subclasses/json/24/fey_wanderer_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Once per turn when you hit a creature with a weapon, deal an extra 1d4 Psychic damage (1d6 at L11)."
+  ],
+  "url": "/assets/atlas/features/json/dreadful_strikes_fey_wanderer_2024.json"
+}

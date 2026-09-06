@@ -1,0 +1,61 @@
+{
+  "index": "illusionist_2024",
+  "name": "Illusionist",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "desc": [
+    "Illusionists master phantasms and deceptions, weaving light, shadows, and mental trickery into solid realities."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "illusion_savant_illusionist_2024",
+          "name": "Illusion Savant",
+          "url": "/assets/atlas/features/json/illusion_savant_illusionist_2024.json"
+        },
+        {
+          "index": "improved_phantasms_illusionist_2024",
+          "name": "Improved Phantasms",
+          "url": "/assets/atlas/features/json/improved_phantasms_illusionist_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "malleable_illusions_illusionist_2024",
+          "name": "Malleable Illusions",
+          "url": "/assets/atlas/features/json/malleable_illusions_illusionist_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "illusory_self_illusionist_2024",
+          "name": "Illusory Self",
+          "url": "/assets/atlas/features/json/illusory_self_illusionist_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "illusory_reality_illusionist_2024",
+          "name": "Illusory Reality",
+          "url": "/assets/atlas/features/json/illusory_reality_illusionist_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json",
+  "rulesetContext": "2024"
+}

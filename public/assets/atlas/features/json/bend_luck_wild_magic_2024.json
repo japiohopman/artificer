@@ -1,0 +1,19 @@
+{
+  "index": "bend_luck_wild_magic_2024",
+  "name": "Bend Luck",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Reaction when another creature within 30 feet rolls a d20 for a D20 Test, spend 1 Sorcery Point to roll a d4 and add or subtract it from the creature's roll."
+  ],
+  "url": "/assets/atlas/features/json/bend_luck_wild_magic_2024.json"
+}

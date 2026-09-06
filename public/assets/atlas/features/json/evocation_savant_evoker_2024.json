@@ -1,0 +1,19 @@
+{
+  "index": "evocation_savant_evoker_2024",
+  "name": "Evocation Savant",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "evocation_2024",
+    "name": "Evoker",
+    "url": "/assets/atlas/subclasses/json/24/evocation_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gold and time required to copy Evocation spells into your spellbook is halved, and you gain two free Evocation spells in your spellbook."
+  ],
+  "url": "/assets/atlas/features/json/evocation_savant_evoker_2024.json"
+}

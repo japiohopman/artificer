@@ -1,0 +1,19 @@
+{
+  "index": "vow_of_enmity_vengeance_2024",
+  "name": "Channel Divinity: Vow of Enmity",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "vengeance_2024",
+    "name": "Oath of Vengeance",
+    "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, swear enmity against a target within 30 feet to gain Advantage on attack rolls against it for 1 minute."
+  ],
+  "url": "/assets/atlas/features/json/vow_of_enmity_vengeance_2024.json"
+}

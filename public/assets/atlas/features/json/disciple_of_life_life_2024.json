@@ -1,0 +1,19 @@
+{
+  "index": "disciple_of_life_life_2024",
+  "name": "Disciple of Life",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "life_domain_2024",
+    "name": "Life Domain",
+    "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Whenever you use a spell of 1st level or higher to restore HP to a creature, the creature regains additional HP equal to 2 + the spell's level."
+  ],
+  "url": "/assets/atlas/features/json/disciple_of_life_life_2024.json"
+}

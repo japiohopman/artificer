@@ -1,0 +1,19 @@
+{
+  "index": "psychic_spells_great_old_one_2024",
+  "name": "Psychic Spells",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you cast a Warlock spell that deals damage, you can change the damage type to Psychic. In addition, Enchantment and Illusion spells cast by you require no Verbal or Somatic components."
+  ],
+  "url": "/assets/atlas/features/json/psychic_spells_great_old_one_2024.json"
+}

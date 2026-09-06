@@ -1,0 +1,19 @@
+{
+  "index": "nature_speaker_wild_heart_2024",
+  "name": "Nature Speaker",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "wild_heart_2024",
+    "name": "Path of the Wild Heart",
+    "url": "/assets/atlas/subclasses/json/24/wild_heart_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "You can cast the Commune with Nature spell as a Ritual without material components."
+  ],
+  "url": "/assets/atlas/features/json/nature_speaker_wild_heart_2024.json"
+}

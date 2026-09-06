@@ -1,0 +1,19 @@
+{
+  "index": "magical_discoveries_lore_2024",
+  "name": "Magical Discoveries",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "lore_2024",
+    "name": "College of Lore",
+    "url": "/assets/atlas/subclasses/json/24/lore_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You learn two spells of your choice from any class list (Cleric, Druid, Wizard). These count as Bard spells for you."
+  ],
+  "url": "/assets/atlas/features/json/magical_discoveries_lore_2024.json"
+}

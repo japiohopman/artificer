@@ -1,0 +1,19 @@
+{
+  "index": "assassins_tools_assassin_2024",
+  "name": "Assassin's Tools",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin_2024",
+    "name": "Assassin",
+    "url": "/assets/atlas/subclasses/json/24/assassin_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain proficiency with the Disguise Kit and Poisoner's Kit."
+  ],
+  "url": "/assets/atlas/features/json/assassins_tools_assassin_2024.json"
+}

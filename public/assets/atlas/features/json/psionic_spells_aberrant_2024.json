@@ -1,0 +1,19 @@
+{
+  "index": "psionic_spells_aberrant_2024",
+  "name": "Psionic Spells",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "aberrant_sorcery_2024",
+    "name": "Aberrant Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have psionic spells prepared (Mind Spike, Dissonant Whispers, Hunger of Hadar, Evard's Black Tentacles, Telekinesis, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/psionic_spells_aberrant_2024.json"
+}

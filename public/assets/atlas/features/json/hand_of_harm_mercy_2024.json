@@ -1,0 +1,19 @@
+{
+  "index": "hand_of_harm_mercy_2024",
+  "name": "Hand of Harm",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "mercy_2024",
+    "name": "Warrior of Mercy",
+    "url": "/assets/atlas/subclasses/json/24/mercy_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you hit a creature with an Unarmed Strike, spend 1 Focus Point to deal extra Necrotic damage equal to 1 Martial Arts die + WIS mod."
+  ],
+  "url": "/assets/atlas/features/json/hand_of_harm_mercy_2024.json"
+}

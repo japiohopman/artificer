@@ -1,0 +1,19 @@
+{
+  "index": "awakened_mind_great_old_one_2024",
+  "name": "Awakened Mind",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Establish two-way telepathic communication with any creature within 30 feet that understands at least one language."
+  ],
+  "url": "/assets/atlas/features/json/awakened_mind_great_old_one_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "frenzy_berserker_2024",
+  "name": "Frenzy",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "berserker_2024",
+    "name": "Path of the Berserker",
+    "url": "/assets/atlas/subclasses/json/24/berserker_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "If you use Reckless Attack while raging, you can deal extra damage to the first target you hit on your turn. The extra damage equals a number of d6s equal to your Rage Damage bonus."
+  ],
+  "url": "/assets/atlas/features/json/frenzy_berserker_2024.json"
+}
