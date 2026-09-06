@@ -1032,10 +1032,11 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   it('validates precise 2024 mechanics for all 8 remaining classes', async () => {
-    // Barbarian
+    // 1. Barbarian
     const rage24 = await atlasService.loadFeature('rage_2024');
     expect(rage24).not.toBeNull();
     expect(rage24.class.index).toBe('barbarian');
+    expect(rage24.desc.join(' ')).toContain('Strength');
 
     const brutalStrike24 = await atlasService.loadFeature('brutal_strike_2024');
     expect(brutalStrike24).not.toBeNull();
@@ -1043,58 +1044,135 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const relentlessRage24 = await atlasService.loadFeature('relentless_rage_2024');
     expect(relentlessRage24).not.toBeNull();
+    expect(relentlessRage24.desc.join(' ')).toContain('saving throw');
 
     const primalChampion24 = await atlasService.loadFeature('primal_champion_2024');
     expect(primalChampion24).not.toBeNull();
+    expect(primalChampion24.desc.join(' ')).toContain('Strength and Constitution');
 
-    // Bard
+    // 2. Bard
     const bardicInspiration24 = await atlasService.loadFeature('bardic_inspiration_2024');
     expect(bardicInspiration24).not.toBeNull();
+    expect(bardicInspiration24.class.index).toBe('bard');
+    expect(bardicInspiration24.desc.join(' ')).toContain('Bonus Action');
 
     const fontOfInspiration24 = await atlasService.loadFeature('font_of_inspiration_2024');
     expect(fontOfInspiration24).not.toBeNull();
+    expect(fontOfInspiration24.desc.join(' ')).toContain('Short or Long Rest');
 
     const magicalSecrets24 = await atlasService.loadFeature('magical_secrets_2024');
     expect(magicalSecrets24).not.toBeNull();
+    expect(magicalSecrets24.desc.join(' ')).toContain('Cleric, Druid, or Wizard');
 
-    // Druid
+    const wordsOfCreation24 = await atlasService.loadFeature('words_of_creation_2024');
+    expect(wordsOfCreation24).not.toBeNull();
+    expect(wordsOfCreation24.desc.join(' ')).toContain('Power Word');
+
+    // 3. Druid
     const primalOrder24 = await atlasService.loadFeature('primal_order_2024');
     expect(primalOrder24).not.toBeNull();
+    expect(primalOrder24.desc.join(' ')).toContain('Magician');
 
     const wildShape24 = await atlasService.loadFeature('wild_shape_2024');
     expect(wildShape24).not.toBeNull();
+    expect(wildShape24.desc.join(' ')).toContain('Beast');
 
-    // Monk
+    const wildResurgence24 = await atlasService.loadFeature('wild_resurgence_2024');
+    expect(wildResurgence24).not.toBeNull();
+    expect(wildResurgence24.desc.join(' ')).toContain('Wild Shape');
+
+    const archdruid24 = await atlasService.loadFeature('archdruid_2024');
+    expect(archdruid24).not.toBeNull();
+    expect(archdruid24.desc.join(' ')).toContain('Nature Magician');
+
+    // 4. Monk
     const martialArts24 = await atlasService.loadFeature('martial_arts_2024');
     expect(martialArts24).not.toBeNull();
+    expect(martialArts24.desc.join(' ')).toContain('Unarmed Strike');
 
     const monkFocus24 = await atlasService.loadFeature('monk_focus_2024');
     expect(monkFocus24).not.toBeNull();
+    expect(monkFocus24.desc.join(' ')).toContain('Flurry of Blows');
 
-    // Paladin
+    const uncannyMetabolism24 = await atlasService.loadFeature('uncanny_metabolism_2024');
+    expect(uncannyMetabolism24).not.toBeNull();
+    expect(uncannyMetabolism24.desc.join(' ')).toContain('Focus Points');
+
+    const deflectAttacks24 = await atlasService.loadFeature('deflect_attacks_2024');
+    expect(deflectAttacks24).not.toBeNull();
+    expect(deflectAttacks24.desc.join(' ')).toContain('Reaction');
+
+    const bodyAndMind24 = await atlasService.loadFeature('body_and_mind_2024');
+    expect(bodyAndMind24).not.toBeNull();
+    expect(bodyAndMind24.desc.join(' ')).toContain('Dexterity and Wisdom');
+
+    // 5. Paladin
     const layOnHands24 = await atlasService.loadFeature('lay_on_hands_2024');
     expect(layOnHands24).not.toBeNull();
+    expect(layOnHands24.desc.join(' ')).toContain('Bonus Action');
 
     const paladinSmite24 = await atlasService.loadFeature('paladin_smite_2024');
     expect(paladinSmite24).not.toBeNull();
+    expect(paladinSmite24.desc.join(' ')).toContain('Divine Smite');
 
-    // Ranger
+    const auraOfProtection24 = await atlasService.loadFeature('aura_of_protection_2024');
+    expect(auraOfProtection24).not.toBeNull();
+    expect(auraOfProtection24.desc.join(' ')).toContain('saving throws');
+
+    const radiantStrikes24 = await atlasService.loadFeature('radiant_strikes_2024');
+    expect(radiantStrikes24).not.toBeNull();
+    expect(radiantStrikes24.desc.join(' ')).toContain('Radiant damage');
+
+    // 6. Ranger
     const favoredEnemy24 = await atlasService.loadFeature('favored_enemy_2024');
     expect(favoredEnemy24).not.toBeNull();
+    expect(favoredEnemy24.desc.join(' ')).toContain("Hunter's Mark");
 
-    // Sorcerer
+    const deftExplorer24 = await atlasService.loadFeature('deft_explorer_2024');
+    expect(deftExplorer24).not.toBeNull();
+    expect(deftExplorer24.desc.join(' ')).toContain('Expertise');
+
+    const roving24 = await atlasService.loadFeature('roving_2024');
+    expect(roving24).not.toBeNull();
+    expect(roving24.desc.join(' ')).toContain('Speed');
+
+    const foeSlayer24 = await atlasService.loadFeature('foe_slayer_2024');
+    expect(foeSlayer24).not.toBeNull();
+    expect(foeSlayer24.desc.join(' ')).toContain("Hunter's Mark");
+
+    // 7. Sorcerer
     const innateSorcery24 = await atlasService.loadFeature('innate_sorcery_2024');
     expect(innateSorcery24).not.toBeNull();
+    expect(innateSorcery24.desc.join(' ')).toContain('Advantage');
 
     const fontOfMagic24 = await atlasService.loadFeature('font_of_magic_2024');
     expect(fontOfMagic24).not.toBeNull();
+    expect(fontOfMagic24.desc.join(' ')).toContain('Sorcery Points');
 
-    // Warlock
+    const sorcerousRestoration24 = await atlasService.loadFeature('sorcerous_restoration_2024');
+    expect(sorcerousRestoration24).not.toBeNull();
+    expect(sorcerousRestoration24.desc.join(' ')).toContain('Short Rest');
+
+    const arcaneApotheosis24 = await atlasService.loadFeature('arcane_apotheosis_2024');
+    expect(arcaneApotheosis24).not.toBeNull();
+    expect(arcaneApotheosis24.desc.join(' ')).toContain('Metamagic');
+
+    // 8. Warlock
     const pactSpellsWarlock24 = await atlasService.loadFeature('pact_spells_warlock_2024');
     expect(pactSpellsWarlock24).not.toBeNull();
+    expect(pactSpellsWarlock24.desc.join(' ')).toContain('Pact Magic');
 
     const eldritchInvocations24 = await atlasService.loadFeature('eldritch_invocations_2024');
     expect(eldritchInvocations24).not.toBeNull();
+    expect(eldritchInvocations24.desc.join(' ')).toContain('Invocations');
+
+    const magicalCunning24 = await atlasService.loadFeature('magical_cunning_2024');
+    expect(magicalCunning24).not.toBeNull();
+    expect(magicalCunning24.desc.join(' ')).toContain('Pact Slots');
+
+    const eldritchMaster24 = await atlasService.loadFeature('eldritch_master_2024');
+    expect(eldritchMaster24).not.toBeNull();
+    expect(eldritchMaster24.desc.join(' ')).toContain('Magical Cunning');
   });
 
   it('verifies ALL 48 2024 subclasses with GRANULAR PER-LEVEL feature array equality and referential integrity', async () => {

@@ -396,7 +396,7 @@ const subclassesData = [
       {
         level: 6,
         features: [
-          { index: "natural_recovery_land_2024", name: "Natural Recovery", desc: "During a Short Rest, regain expended spell slots with a combined level equal to half your Druid level. You can also cast one 1st-level spell from your current land circle spell list once without expending a spell slot." }
+          { index: "natural_recovery_land_2024", name: "Natural Recovery", desc: "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot; once you cast a spell in this way, you can't do so again until you finish a Long Rest. In addition, when you finish a Short Rest, you can choose expended spell slots to recover. The combined level of the recovered slots can be no more than half your Druid level (rounded up), and none of the slots can be level 6 or higher. Once you recover spell slots with this feature, you cannot do so again until you finish a Long Rest." }
         ]
       },
       {
@@ -408,7 +408,7 @@ const subclassesData = [
       {
         level: 14,
         features: [
-          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "As a Magic action, expend a Wild Shape use to create a 15-foot Cube on the ground within 120 feet for 1 minute. You and allies have Half Cover in the area and gain the current Nature's Ward resistance. As a Bonus Action, move the Cube up to 60 feet." }
+          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "As a Magic action, you can expend one use of your Wild Shape to create a 15-foot Cube of spectral vegetation on the ground in an unoccupied space within 120 feet of you. The Cube lasts for 1 minute, or until you have the Incapacitated condition or die. While in the Cube, you and your allies have Half Cover, and your allies gain the damage resistance currently granted by your Nature's Ward feature. As a Bonus Action, you can move the Cube to an unoccupied space on the ground within 120 feet of you." }
         ]
       }
     ]
