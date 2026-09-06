@@ -1,6 +1,6 @@
 {
-  "index": "thought_shield_great_old_one_2024",
-  "name": "Thought Shield",
+  "index": "eldritch_hex_great_old_one_2024",
+  "name": "Eldritch Hex",
   "class": {
     "index": "warlock",
     "name": "Warlock",
@@ -13,7 +13,7 @@
   },
   "level": 10,
   "desc": [
-    "Your thoughts cannot be read, gain resistance to Psychic damage, and reflect Psychic damage back at attackers."
+    "Target marked by your Hex spell or Hexblade's Curse has Disadvantage on saving throws for an ability score of your choice."
   ],
-  "url": "/assets/atlas/features/json/thought_shield_great_old_one_2024.json"
+  "url": "/assets/atlas/features/json/eldritch_hex_great_old_one_2024.json"
 }

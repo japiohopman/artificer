@@ -1,6 +1,6 @@
 {
-  "index": "draconic_speech_draconic_2024",
-  "name": "Draconic Speech",
+  "index": "draconic_spells_draconic_2024",
+  "name": "Draconic Spells",
   "class": {
     "index": "sorcerer",
     "name": "Sorcerer",
@@ -13,7 +13,7 @@
   },
   "level": 3,
   "desc": [
-    "You can speak, read, and write Draconic, and comprehend dragons instinctively."
+    "You learn the Draconic language and always have prepared draconic sorcery spells (Command, Alter Self, Dragon's Breath, Fear, Fly, Charm Monster, Summon Dragon)."
   ],
-  "url": "/assets/atlas/features/json/draconic_speech_draconic_2024.json"
+  "url": "/assets/atlas/features/json/draconic_spells_draconic_2024.json"
 }

@@ -7,12 +7,18 @@ const FEATURES_DIR = path.join(__dirname, '../public/assets/atlas/features/json'
 if (!fs.existsSync(SUBCLASSES_DIR)) fs.mkdirSync(SUBCLASSES_DIR, { recursive: true });
 if (!fs.existsSync(FEATURES_DIR)) fs.mkdirSync(FEATURES_DIR, { recursive: true });
 
-// Clean up obsolete feature files from previous build
+// Clean up obsolete/noncanonical feature files
 const obsoleteFeatureFiles = [
+  'bardic_damage_dance_2024.json',
   'bountiful_roots_world_tree_2024.json',
   'elemental_wild_shape_moon_2024.json',
   'moonlight_strike_moon_2024.json',
-  'wild_bombardment_wild_magic_2024.json'
+  'environmental_stride_elements_2024.json',
+  'draconic_speech_draconic_2024.json',
+  'dragonkind_draconic_2024.json',
+  'wild_bombardment_wild_magic_2024.json',
+  'entropic_ward_great_old_one_2024.json',
+  'thought_shield_great_old_one_2024.json'
 ];
 
 obsoleteFeatureFiles.forEach(f => {
@@ -181,8 +187,7 @@ const newSubclassesData = [
       {
         level: 3,
         features: [
-          { index: "dazzling_footwork_dance_2024", name: "Dazzling Footwork", desc: "While not wearing armor or wielding a shield, AC equals 10 + DEX + CHA. In addition, your Unarmed Strikes deal damage equal to your Bardic Inspiration die." },
-          { index: "bardic_damage_dance_2024", name: "Bardic Damage", desc: "When you spend a Bardic Inspiration die, you can make an Unarmed Strike as a Bonus Action or add the die roll to your Unarmed Strike damage." }
+          { index: "dazzling_footwork_dance_2024", name: "Dazzling Footwork", desc: "You gain Dance Virtuoso (AC equals 10 + DEX + CHA while unarmored and no shield) and Agile Strikes (when spending Bardic Inspiration, make an Unarmed Strike as a Bonus Action, dealing damage equal to Bardic Inspiration die)." }
         ]
       },
       {
@@ -209,7 +214,7 @@ const newSubclassesData = [
       {
         level: 3,
         features: [
-          { index: "beguiling_magic_glamour_2024", name: "Beguiling Magic", desc: "You always have Charm Person and Enthrall prepared. When you cast an Enchantment or Illusion spell, you can force a creature to make a WIS save or be Charmed or Frightened." },
+          { index: "beguiling_magic_glamour_2024", name: "Beguiling Magic", desc: "You always have Charm Person and Mirror Image prepared. When you cast an Enchantment or Illusion spell, force a creature to make a WIS save or be Charmed or Frightened for 1 minute." },
           { index: "mantle_of_inspiration_glamour_2024", name: "Mantle of Inspiration", desc: "As a Bonus Action, spend a Bardic Inspiration die to grant allies within 60 feet Temp HP equal to 2x the roll and allow them to move using their Reaction." }
         ]
       },
@@ -385,19 +390,19 @@ const newSubclassesData = [
       {
         level: 6,
         features: [
-          { index: "natural_recovery_land_2024", name: "Natural Recovery", desc: "During a Short Rest, regain expended spell slots with a combined level equal to half your Druid level." }
+          { index: "natural_recovery_land_2024", name: "Natural Recovery", desc: "During a Short Rest, regain expended spell slots with a combined level equal to half your Druid level. You can also cast one 1st-level spell from your current land circle spell list once without expending a spell slot." }
         ]
       },
       {
         level: 10,
         features: [
-          { index: "natures_ward_land_2024", name: "Nature's Ward", desc: "You cannot be Poisoned, and you gain resistance to Poison damage and immunity to disease." }
+          { index: "natures_ward_land_2024", name: "Nature's Ward", desc: "You are immune to the Poisoned condition, and you gain damage resistance based on your active land choice: Arid (Fire), Polar (Cold), Temperate (Lightning), or Tropical (Poison)." }
         ]
       },
       {
         level: 14,
         features: [
-          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "When you use Land's Aid, create a protective sanctuary area for 1 minute granting half cover to allies." }
+          { index: "natures_sanctuary_land_2024", name: "Nature's Sanctuary", desc: "As a Magic action, expend a Wild Shape use to create a 15-foot Cube on the ground within 120 feet for 1 minute. You and allies have Half Cover in the area and gain the current Nature's Ward resistance. As a Bonus Action, move the Cube up to 60 feet." }
         ]
       }
     ]
@@ -627,7 +632,7 @@ const newSubclassesData = [
         level: 3,
         features: [
           { index: "elemental_attunement_elements_2024", name: "Elemental Attunement", desc: "As a Bonus Action, spend 1 Focus Point to enter elemental reach for 1 minute: Unarmed Strike reach increases by 10 feet, dealing Acid, Cold, Fire, Lightning, or Thunder damage." },
-          { index: "environmental_stride_elements_2024", name: "Environmental Stride", desc: "You gain a Climbing and Swimming speed equal to your Speed while Elemental Attunement is active." }
+          { index: "manipulate_elements_elements_2024", name: "Manipulate Elements", desc: "You learn the Elementalism cantrip, allowing you to manipulate fire, earth, air, and water." }
         ]
       },
       {
@@ -639,13 +644,13 @@ const newSubclassesData = [
       {
         level: 11,
         features: [
-          { index: "stride_of_the_elements_elements_2024", name: "Stride of the Elements", desc: "While Elemental Attunement is active, gain a Flying speed equal to your Speed and hover." }
+          { index: "stride_of_the_elements_elements_2024", name: "Stride of the Elements", desc: "While Elemental Attunement is active, gain a Flying speed and Swimming speed equal to your Speed." }
         ]
       },
       {
         level: 17,
         features: [
-          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, gain resistance to Acid, Cold, Fire, Lightning, and Thunder, and automatically deal elemental damage when stepping near foes." }
+          { index: "elemental_epitome_elements_2024", name: "Elemental Epitome", desc: "While Elemental Attunement is active, choose one damage resistance at start of turn (Acid, Cold, Fire, Lightning, or Thunder), gain +20ft speed for Step of the Wind, and deal 1 Martial Arts die of damage to foes passed." }
         ]
       }
     ]
@@ -979,7 +984,7 @@ const newSubclassesData = [
       {
         level: 15,
         features: [
-          { index: "superior_hunters_defense_hunter_2024", name: "Superior Hunter's Defense", desc: "When you take damage, use your Reaction to halve the damage and reflect the halved damage back to an attacker within 30 feet." }
+          { index: "superior_hunters_defense_hunter_2024", name: "Superior Hunter's Defense", desc: "When you take damage, you can use your Reaction to give yourself Resistance to that damage and any other damage of the same type until the end of the current turn." }
         ]
       }
     ]
@@ -1131,7 +1136,7 @@ const newSubclassesData = [
         level: 3,
         features: [
           { index: "draconic_resilience_draconic_2024", name: "Draconic Resilience", desc: "Your HP maximum increases by 3 (and by +1 each level). While not wearing armor, your AC equals 10 + DEX + CHA." },
-          { index: "draconic_speech_draconic_2024", name: "Draconic Speech", desc: "You can speak, read, and write Draconic, and comprehend dragons instinctively." }
+          { index: "draconic_spells_draconic_2024", name: "Draconic Spells", desc: "You learn the Draconic language and always have prepared draconic sorcery spells (Command, Alter Self, Dragon's Breath, Fear, Fly, Charm Monster, Summon Dragon)." }
         ]
       },
       {
@@ -1149,7 +1154,7 @@ const newSubclassesData = [
       {
         level: 18,
         features: [
-          { index: "dragonkind_draconic_2024", name: "Dragonkind", desc: "Exude a 60-foot aura of draconic majesty for 1 minute: frighten or charm enemies and deal elemental damage on command." }
+          { index: "dragon_companion_draconic_2024", name: "Dragon Companion", desc: "Cast Summon Dragon without material components once per Long Rest, gaining a Draconic dragon companion." }
         ]
       }
     ]
@@ -1182,7 +1187,7 @@ const newSubclassesData = [
       {
         level: 18,
         features: [
-          { index: "tamed_surge_wild_magic_2024", name: "Tamed Surge", desc: "Whenever you roll on the Wild Magic Surge table, you can choose the effect directly or spend 5 Sorcery Points to choose any result on the 1–100 table." }
+          { index: "tamed_surge_wild_magic_2024", name: "Tamed Surge", desc: "Once per Long Rest when you roll on the Wild Magic Surge table, you can choose the Wild Magic Surge effect directly instead of rolling randomly." }
         ]
       }
     ]
@@ -1305,19 +1310,19 @@ const newSubclassesData = [
       {
         level: 6,
         features: [
-          { index: "entropic_ward_great_old_one_2024", name: "Entropic Ward", desc: "As a Reaction when hit by an attack, impose Disadvantage on the attacker and gain Advantage on your next attack roll against it." }
+          { index: "clairvoyant_combatant_great_old_one_2024", name: "Clairvoyant Combatant", desc: "When you form an Awakened Mind link with a creature, impose Disadvantage on its attack rolls against you, and gain Advantage on your attack rolls against it." }
         ]
       },
       {
         level: 10,
         features: [
-          { index: "thought_shield_great_old_one_2024", name: "Thought Shield", desc: "Your thoughts cannot be read, gain resistance to Psychic damage, and reflect Psychic damage back at attackers." }
+          { index: "eldritch_hex_great_old_one_2024", name: "Eldritch Hex", desc: "Target marked by your Hex spell or Hexblade's Curse has Disadvantage on saving throws for an ability score of your choice." }
         ]
       },
       {
         level: 14,
         features: [
-          { index: "create_thrall_great_old_one_2024", name: "Create Thrall", desc: "Target an Incapacitated humanoid to mentally touch it, placing it under Charmed telepathic thrall until dispelled." }
+          { index: "create_thrall_great_old_one_2024", name: "Create Thrall", desc: "Cast Summon Aberration without components once per Long Rest, or place an Incapacitated target under Charmed telepathic thrall." }
         ]
       }
     ]

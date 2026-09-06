@@ -1,0 +1,19 @@
+{
+  "index": "clairvoyant_combatant_great_old_one_2024",
+  "name": "Clairvoyant Combatant",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When you form an Awakened Mind link with a creature, impose Disadvantage on its attack rolls against you, and gain Advantage on your attack rolls against it."
+  ],
+  "url": "/assets/atlas/features/json/clairvoyant_combatant_great_old_one_2024.json"
+}
