@@ -1,0 +1,19 @@
+{
+  "index": "branches_of_the_tree_world_tree_2024",
+  "name": "Branches of the Tree",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "world_tree_2024",
+    "name": "Path of the World Tree",
+    "url": "/assets/atlas/subclasses/json/24/world_tree_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When a creature starts its turn within 30 feet, use a Reaction to summon spectral roots that teleport it to an empty space near you and reduce its Speed to 0."
+  ],
+  "url": "/assets/atlas/features/json/branches_of_the_tree_world_tree_2024.json"
+}

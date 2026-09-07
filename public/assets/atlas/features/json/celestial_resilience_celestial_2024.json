@@ -1,0 +1,19 @@
+{
+  "index": "celestial_resilience_celestial_2024",
+  "name": "Celestial Resilience",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "celestial_2024",
+    "name": "Celestial Patron",
+    "url": "/assets/atlas/subclasses/json/24/celestial_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Whenever you finish a Short or Long Rest, gain Temp HP equal to Warlock level + CHA mod, and give Temp HP to up to 5 allies."
+  ],
+  "url": "/assets/atlas/features/json/celestial_resilience_celestial_2024.json"
+}

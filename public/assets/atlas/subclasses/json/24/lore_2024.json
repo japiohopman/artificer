@@ -1,0 +1,51 @@
+{
+  "index": "lore_2024",
+  "name": "College of Lore",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "desc": [
+    "Bards of the College of Lore collect knowledge from every realm. They use secrets, cutting wit, and stolen magical discoveries to outsmart any challenge."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "bonus_proficiencies_lore_2024",
+          "name": "Bonus Proficiencies",
+          "url": "/assets/atlas/features/json/bonus_proficiencies_lore_2024.json"
+        },
+        {
+          "index": "cutting_words_lore_2024",
+          "name": "Cutting Words",
+          "url": "/assets/atlas/features/json/cutting_words_lore_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "magical_discoveries_lore_2024",
+          "name": "Magical Discoveries",
+          "url": "/assets/atlas/features/json/magical_discoveries_lore_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "peerless_skill_lore_2024",
+          "name": "Peerless Skill",
+          "url": "/assets/atlas/features/json/peerless_skill_lore_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/lore_2024.json",
+  "rulesetContext": "2024"
+}

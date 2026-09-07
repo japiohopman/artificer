@@ -1,0 +1,19 @@
+{
+  "index": "smite_of_protection_devotion_2024",
+  "name": "Smite of Protection",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion_2024",
+    "name": "Oath of Devotion",
+    "url": "/assets/atlas/subclasses/json/24/devotion_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "Whenever you cast a Smite spell, you and allies within 30 feet gain half cover until the start of your next turn."
+  ],
+  "url": "/assets/atlas/features/json/smite_of_protection_devotion_2024.json"
+}

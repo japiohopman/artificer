@@ -1,0 +1,19 @@
+{
+  "index": "cosmic_omen_stars_2024",
+  "name": "Cosmic Omen",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "stars_2024",
+    "name": "Circle of the Stars",
+    "url": "/assets/atlas/subclasses/json/24/stars_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Consult your star map on Long Rest to roll a d6: Weal (add d6 to ally roll) or Woe (subtract d6 from enemy roll) WIS mod times per day."
+  ],
+  "url": "/assets/atlas/features/json/cosmic_omen_stars_2024.json"
+}

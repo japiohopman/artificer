@@ -1,0 +1,61 @@
+{
+  "index": "moon_2024",
+  "name": "Circle of the Moon",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "desc": [
+    "Druids of the Circle of the Moon are fierce guardians of the wilds who assume terrifying animal battle forms infused with lunar magic."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "circle_forms_moon_2024",
+          "name": "Circle Forms",
+          "url": "/assets/atlas/features/json/circle_forms_moon_2024.json"
+        },
+        {
+          "index": "combat_wild_shape_moon_2024",
+          "name": "Combat Wild Shape",
+          "url": "/assets/atlas/features/json/combat_wild_shape_moon_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "improved_circle_forms_moon_2024",
+          "name": "Improved Circle Forms",
+          "url": "/assets/atlas/features/json/improved_circle_forms_moon_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "moonlight_step_moon_2024",
+          "name": "Moonlight Step",
+          "url": "/assets/atlas/features/json/moonlight_step_moon_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "lunar_form_moon_2024",
+          "name": "Lunar Form",
+          "url": "/assets/atlas/features/json/lunar_form_moon_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/moon_2024.json",
+  "rulesetContext": "2024"
+}

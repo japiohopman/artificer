@@ -1,0 +1,56 @@
+{
+  "index": "open_hand_2024",
+  "name": "Warrior of the Open Hand",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "desc": [
+    "Warriors of the Open Hand master physical martial combat, pushing enemies, knocking them prone, and executing lethal vibrational strikes."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "open_hand_technique_open_hand_2024",
+          "name": "Open Hand Technique",
+          "url": "/assets/atlas/features/json/open_hand_technique_open_hand_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "wholeness_of_body_open_hand_2024",
+          "name": "Wholeness of Body",
+          "url": "/assets/atlas/features/json/wholeness_of_body_open_hand_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "fleet_step_open_hand_2024",
+          "name": "Fleet Step",
+          "url": "/assets/atlas/features/json/fleet_step_open_hand_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "quivering_palm_open_hand_2024",
+          "name": "Quivering Palm",
+          "url": "/assets/atlas/features/json/quivering_palm_open_hand_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/open_hand_2024.json",
+  "rulesetContext": "2024"
+}

@@ -274,9 +274,11 @@ export const CharacterCreator: React.FC = () => {
                 }
             }
             if (newChar.subclass) {
-                const subData = await atlasService.loadSubclass(newChar.subclass);
-                if (subData?.features) {
-                    const subLvl1Features = subData.features.filter((f: any) => f.level === 1);
+                const subData = await atlasService.loadSubclass(newChar.subclass, newChar.ruleset);
+                if (subData?.subclass_levels) {
+                    const subLvl1Features = subData.subclass_levels
+                        .filter((lGroup: any) => lGroup.level === 1 || lGroup.level === 3)
+                        .flatMap((lGroup: any) => lGroup.features || []);
                     for (const fRef of subLvl1Features) {
                         const fData = await atlasService.loadFeature(fRef.index);
                         if (fData) {

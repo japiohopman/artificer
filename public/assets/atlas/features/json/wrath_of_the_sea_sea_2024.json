@@ -1,0 +1,19 @@
+{
+  "index": "wrath_of_the_sea_sea_2024",
+  "name": "Wrath of the Sea",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "sea_2024",
+    "name": "Circle of the Sea",
+    "url": "/assets/atlas/subclasses/json/24/sea_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, spend a Wild Shape use to manifest an aura of ocean spray dealing Cold or Lightning damage and pushing enemies 10 feet."
+  ],
+  "url": "/assets/atlas/features/json/wrath_of_the_sea_sea_2024.json"
+}

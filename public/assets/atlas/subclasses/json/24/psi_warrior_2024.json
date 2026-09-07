@@ -1,0 +1,71 @@
+{
+  "index": "psi_warrior_2024",
+  "name": "Psi Warrior",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "desc": [
+    "Psi Warriors augment physical might with psionic energy, manipulating telekinetic energy to shield allies, leap across battlefields, and crush foes."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "psionic_power_psi_warrior_2024",
+          "name": "Psionic Power",
+          "url": "/assets/atlas/features/json/psionic_power_psi_warrior_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "telekinetic_movement_psi_warrior_2024",
+          "name": "Telekinetic Movement",
+          "url": "/assets/atlas/features/json/telekinetic_movement_psi_warrior_2024.json"
+        },
+        {
+          "index": "psi_powered_leap_psi_warrior_2024",
+          "name": "Psi-Powered Leap",
+          "url": "/assets/atlas/features/json/psi_powered_leap_psi_warrior_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "guarded_mind_psi_warrior_2024",
+          "name": "Guarded Mind",
+          "url": "/assets/atlas/features/json/guarded_mind_psi_warrior_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "bulwark_of_force_psi_warrior_2024",
+          "name": "Bulwark of Force",
+          "url": "/assets/atlas/features/json/bulwark_of_force_psi_warrior_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "telekinetic_master_psi_warrior_2024",
+          "name": "Telekinetic Master",
+          "url": "/assets/atlas/features/json/telekinetic_master_psi_warrior_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json",
+  "rulesetContext": "2024"
+}

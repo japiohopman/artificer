@@ -1,0 +1,19 @@
+{
+  "index": "wholeness_of_body_open_hand_2024",
+  "name": "Wholeness of Body",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "open_hand_2024",
+    "name": "Warrior of the Open Hand",
+    "url": "/assets/atlas/subclasses/json/24/open_hand_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "As a Bonus Action, regain Hit Points equal to 1 Martial Arts die + WIS mod WIS mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/wholeness_of_body_open_hand_2024.json"
+}

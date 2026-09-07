@@ -1,0 +1,19 @@
+{
+  "index": "tides_of_chaos_wild_magic_2024",
+  "name": "Tides of Chaos",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gain Advantage on one d20 test. Regain once per Long Rest, or immediately when you trigger a Wild Magic Surge after casting a Sorcerer spell using a spell slot."
+  ],
+  "url": "/assets/atlas/features/json/tides_of_chaos_wild_magic_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "supreme_healing_life_2024",
+  "name": "Supreme Healing",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "life_domain_2024",
+    "name": "Life Domain",
+    "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "When you would normally roll one or more dice to restore HP with a spell, you use the highest possible die roll instead."
+  ],
+  "url": "/assets/atlas/features/json/supreme_healing_life_2024.json"
+}

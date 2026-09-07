@@ -1,0 +1,19 @@
+{
+  "index": "elemental_epitome_elements_2024",
+  "name": "Elemental Epitome",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "elements_2024",
+    "name": "Warrior of the Elements",
+    "url": "/assets/atlas/subclasses/json/24/elements_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "While Elemental Attunement is active, you gain the following benefits: at the start of each of your turns, choose one resistance from Acid, Cold, Fire, Lightning, or Thunder until the start of your next turn; Step of the Wind increases your flying or swimming speed by 20 feet; when you move within 5 feet of a creature during that Step of the Wind movement, deal elemental damage equal to 1 Martial Arts die of your chosen type (once per creature per turn); and once per turn when you hit with an Unarmed Strike, deal extra elemental damage equal to 1 Martial Arts die of your chosen type."
+  ],
+  "url": "/assets/atlas/features/json/elemental_epitome_elements_2024.json"
+}

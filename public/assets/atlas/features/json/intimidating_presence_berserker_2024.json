@@ -1,0 +1,19 @@
+{
+  "index": "intimidating_presence_berserker_2024",
+  "name": "Intimidating Presence",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "berserker_2024",
+    "name": "Path of the Berserker",
+    "url": "/assets/atlas/subclasses/json/24/berserker_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "As a Bonus Action, force each creature of your choice within 30 feet to make a Wisdom save vs DC 8 + PB + STR. On a fail, a target is Frightened of you for 1 minute."
+  ],
+  "url": "/assets/atlas/features/json/intimidating_presence_berserker_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "spell_breaker_abjurer_2024",
+  "name": "Spell Breaker",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "abjurer_2024",
+    "name": "Abjurer",
+    "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "You always have Counterspell and Dispel Magic prepared, and add your Proficiency Bonus to ability checks made as part of casting them."
+  ],
+  "url": "/assets/atlas/features/json/spell_breaker_abjurer_2024.json"
+}

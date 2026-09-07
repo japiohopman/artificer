@@ -1,0 +1,19 @@
+{
+  "index": "warrior_of_the_gods_zealot_2024",
+  "name": "Warrior of the Gods",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "zealot_2024",
+    "name": "Path of the Zealot",
+    "url": "/assets/atlas/subclasses/json/24/zealot_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "If a spell has the sole effect of restoring Hit Points to you (or reviving you), the caster doesn't need material components to cast the spell on you."
+  ],
+  "url": "/assets/atlas/features/json/warrior_of_the_gods_zealot_2024.json"
+}

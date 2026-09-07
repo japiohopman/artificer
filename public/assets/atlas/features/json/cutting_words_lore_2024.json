@@ -1,0 +1,19 @@
+{
+  "index": "cutting_words_lore_2024",
+  "name": "Cutting Words",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "lore_2024",
+    "name": "College of Lore",
+    "url": "/assets/atlas/subclasses/json/24/lore_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When a creature within 60 feet makes an attack roll, ability check, or damage roll, use your Reaction to spend a Bardic Inspiration die and subtract the number rolled."
+  ],
+  "url": "/assets/atlas/features/json/cutting_words_lore_2024.json"
+}

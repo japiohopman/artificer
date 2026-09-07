@@ -1,10 +1,19 @@
 {
   "index": "improved_combat_superiority_battle_master_2024",
   "name": "Improved Combat Superiority",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "battle_master_2024", "name": "Battle Master", "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "battle_master_2024",
+    "name": "Battle Master",
+    "url": "/assets/atlas/subclasses/json/24/battle_master_2024.json"
+  },
   "level": 10,
-  "desc": [ "Your Superiority Dice turn into d10s. In addition, you learn 2 additional maneuvers of your choice." ],
-  "feature_specific": { "superiority_die_type": "d10", "bonus_maneuvers": 2 },
+  "desc": [
+    "Your Superiority Dice turn into d10s."
+  ],
   "url": "/assets/atlas/features/json/improved_combat_superiority_battle_master_2024.json"
 }

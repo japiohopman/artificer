@@ -1,0 +1,19 @@
+{
+  "index": "travel_along_the_tree_world_tree_2024",
+  "name": "Travel Along the Tree",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "world_tree_2024",
+    "name": "Path of the World Tree",
+    "url": "/assets/atlas/subclasses/json/24/world_tree_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "While raging, teleport up to 60 feet to an unoccupied space on your turn. You can also transport willing allies along with you."
+  ],
+  "url": "/assets/atlas/features/json/travel_along_the_tree_world_tree_2024.json"
+}

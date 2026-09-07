@@ -1,0 +1,19 @@
+{
+  "index": "psychic_veil_soulknife_2024",
+  "name": "Psychic Veil",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "soulknife_2024",
+    "name": "Soulknife",
+    "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json"
+  },
+  "level": 13,
+  "desc": [
+    "As an Action, turn Invisible for 1 hour once per Long Rest or by spending 1 Psionic Energy die."
+  ],
+  "url": "/assets/atlas/features/json/psychic_veil_soulknife_2024.json"
+}

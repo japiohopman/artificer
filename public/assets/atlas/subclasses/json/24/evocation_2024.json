@@ -7,21 +7,21 @@
     "url": "/assets/atlas/class/json/24/wizard.json"
   },
   "desc": [
-    "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak."
+    "Evokers specialize in elemental spellcasting, sculpting fiery cataclysms and lightning storms safely around allies."
   ],
   "subclass_levels": [
     {
       "level": 3,
       "features": [
         {
-          "index": "evocation_savant_2024",
+          "index": "evocation_savant_evoker_2024",
           "name": "Evocation Savant",
-          "url": "/assets/atlas/features/json/evocation_savant_2024.json"
+          "url": "/assets/atlas/features/json/evocation_savant_evoker_2024.json"
         },
         {
-          "index": "potent_cantrip_2024",
-          "name": "Potent Cantrip",
-          "url": "/assets/atlas/features/json/potent_cantrip_2024.json"
+          "index": "sculpt_spells_evoker_2024",
+          "name": "Sculpt Spells",
+          "url": "/assets/atlas/features/json/sculpt_spells_evoker_2024.json"
         }
       ]
     },
@@ -29,9 +29,9 @@
       "level": 6,
       "features": [
         {
-          "index": "sculpt_spells_2024",
-          "name": "Sculpt Spells",
-          "url": "/assets/atlas/features/json/sculpt_spells_2024.json"
+          "index": "potent_cantrip_evoker_2024",
+          "name": "Potent Cantrip",
+          "url": "/assets/atlas/features/json/potent_cantrip_evoker_2024.json"
         }
       ]
     },
@@ -39,9 +39,9 @@
       "level": 10,
       "features": [
         {
-          "index": "empowered_evocation_2024",
+          "index": "empowered_evocation_evoker_2024",
           "name": "Empowered Evocation",
-          "url": "/assets/atlas/features/json/empowered_evocation_2024.json"
+          "url": "/assets/atlas/features/json/empowered_evocation_evoker_2024.json"
         }
       ]
     },
@@ -49,9 +49,9 @@
       "level": 14,
       "features": [
         {
-          "index": "overchannel_2024",
+          "index": "overchannel_evoker_2024",
           "name": "Overchannel",
-          "url": "/assets/atlas/features/json/overchannel_2024.json"
+          "url": "/assets/atlas/features/json/overchannel_evoker_2024.json"
         }
       ]
     }

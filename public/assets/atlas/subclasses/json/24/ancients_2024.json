@@ -1,0 +1,61 @@
+{
+  "index": "ancients_2024",
+  "name": "Oath of the Ancients",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "desc": [
+    "Paladins who swear the Oath of the Ancients preserve the light of the world, fighting for nature, joy, and beauty against dark forces."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "oath_spells_ancients_2024",
+          "name": "Oath Spells",
+          "url": "/assets/atlas/features/json/oath_spells_ancients_2024.json"
+        },
+        {
+          "index": "natures_wrath_ancients_2024",
+          "name": "Channel Divinity: Nature's Wrath",
+          "url": "/assets/atlas/features/json/natures_wrath_ancients_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "aura_of_warding_ancients_2024",
+          "name": "Aura of Warding",
+          "url": "/assets/atlas/features/json/aura_of_warding_ancients_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "undying_sentinel_ancients_2024",
+          "name": "Undying Sentinel",
+          "url": "/assets/atlas/features/json/undying_sentinel_ancients_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "features": [
+        {
+          "index": "elder_champion_ancients_2024",
+          "name": "Elder Champion",
+          "url": "/assets/atlas/features/json/elder_champion_ancients_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/ancients_2024.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "versatile_trickster_arcane_trickster_2024",
+  "name": "Versatile Trickster",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster_2024",
+    "name": "Arcane Trickster",
+    "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json"
+  },
+  "level": 13,
+  "desc": [
+    "Use a Bonus Action to distract a target with your Mage Hand, gaining Advantage on attack rolls against it until the end of your turn."
+  ],
+  "url": "/assets/atlas/features/json/versatile_trickster_arcane_trickster_2024.json"
+}

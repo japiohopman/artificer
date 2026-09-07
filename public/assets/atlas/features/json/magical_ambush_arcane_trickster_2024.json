@@ -1,0 +1,19 @@
+{
+  "index": "magical_ambush_arcane_trickster_2024",
+  "name": "Magical Ambush",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "arcane_trickster_2024",
+    "name": "Arcane Trickster",
+    "url": "/assets/atlas/subclasses/json/24/arcane_trickster_2024.json"
+  },
+  "level": 9,
+  "desc": [
+    "If you are hidden from a creature when you cast a spell on it, that creature has Disadvantage on saves against the spell this turn."
+  ],
+  "url": "/assets/atlas/features/json/magical_ambush_arcane_trickster_2024.json"
+}

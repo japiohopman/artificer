@@ -1,0 +1,56 @@
+{
+  "index": "beast_master_2024",
+  "name": "Beast Master",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "desc": [
+    "Beast Masters bond with a fierce primal beast that fights alongside them in perfect unison on the battlefield."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "primal_companion_beast_master_2024",
+          "name": "Primal Companion",
+          "url": "/assets/atlas/features/json/primal_companion_beast_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "exceptional_training_beast_master_2024",
+          "name": "Exceptional Training",
+          "url": "/assets/atlas/features/json/exceptional_training_beast_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "bestial_fury_beast_master_2024",
+          "name": "Bestial Fury",
+          "url": "/assets/atlas/features/json/bestial_fury_beast_master_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "share_spells_beast_master_2024",
+          "name": "Share Spells",
+          "url": "/assets/atlas/features/json/share_spells_beast_master_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/beast_master_2024.json",
+  "rulesetContext": "2024"
+}

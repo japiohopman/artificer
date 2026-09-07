@@ -1,0 +1,19 @@
+{
+  "index": "tricksters_transposition_trickery_2024",
+  "name": "Trickster's Transposition",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "trickery_domain_2024",
+    "name": "Trickery Domain",
+    "url": "/assets/atlas/subclasses/json/24/trickery_domain_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When you use Invoke Duplicity or as a Bonus Action on later turns, you can swap places with your illusory duplicate."
+  ],
+  "url": "/assets/atlas/features/json/tricksters_transposition_trickery_2024.json"
+}

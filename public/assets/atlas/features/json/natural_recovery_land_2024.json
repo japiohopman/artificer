@@ -1,0 +1,19 @@
+{
+  "index": "natural_recovery_land_2024",
+  "name": "Natural Recovery",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You can cast one of the level 1+ spells that you have prepared from your Circle Spells feature without expending a spell slot; once you cast a spell in this way, you can't do so again until you finish a Long Rest. In addition, when you finish a Short Rest, you can choose expended spell slots to recover. The combined level of the recovered slots can be no more than half your Druid level (rounded up), and none of the slots can be level 6 or higher. Once you recover spell slots with this feature, you cannot do so again until you finish a Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/natural_recovery_land_2024.json"
+}

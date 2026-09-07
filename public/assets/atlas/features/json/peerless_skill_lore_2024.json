@@ -1,0 +1,19 @@
+{
+  "index": "peerless_skill_lore_2024",
+  "name": "Peerless Skill",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "lore_2024",
+    "name": "College of Lore",
+    "url": "/assets/atlas/subclasses/json/24/lore_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "When you make an ability check or attack roll and miss, spend a Bardic Inspiration die and add the number rolled to the total."
+  ],
+  "url": "/assets/atlas/features/json/peerless_skill_lore_2024.json"
+}

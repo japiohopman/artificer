@@ -1,10 +1,19 @@
 {
   "index": "remarkable_athlete_champion_2024",
   "name": "Remarkable Athlete",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "champion_2024", "name": "Champion", "url": "/assets/atlas/subclasses/json/24/champion_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "champion_2024",
+    "name": "Champion",
+    "url": "/assets/atlas/subclasses/json/24/champion_2024.json"
+  },
   "level": 3,
-  "desc": [ "Thanks to your athletic prowess, you have Advantage on Initiative checks and Strength (Athletics) checks. In addition, when you score a critical hit, you can immediately move up to half your Speed without provoking Opportunity Attacks." ],
-  "feature_specific": { "advantage_checks": ["initiative", "athletics"], "crit_mobility": "half_speed_no_opportunity" },
+  "desc": [
+    "You gain Advantage on Initiative rolls and Strength (Athletics) checks. On a critical hit, move up to half your Speed without provoking Opportunity Attacks."
+  ],
   "url": "/assets/atlas/features/json/remarkable_athlete_champion_2024.json"
 }

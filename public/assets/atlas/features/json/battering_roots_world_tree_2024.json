@@ -1,0 +1,19 @@
+{
+  "index": "battering_roots_world_tree_2024",
+  "name": "Battering Roots",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "world_tree_2024",
+    "name": "Path of the World Tree",
+    "url": "/assets/atlas/subclasses/json/24/world_tree_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "During your rage, tendrils of the World Tree extend your reach by 10 feet with Heavy and Versatile melee weapons, allowing you to use Push or Topple property on hits."
+  ],
+  "url": "/assets/atlas/features/json/battering_roots_world_tree_2024.json"
+}

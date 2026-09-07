@@ -1,0 +1,71 @@
+{
+  "index": "eldritch_knight_2024",
+  "name": "Eldritch Knight",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "desc": [
+    "Eldritch Knights combine martial prowess with arcane magic, channeling abjuration and evocation spells to weaponize elemental magic."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "spellcasting_eldritch_knight_2024",
+          "name": "Spellcasting",
+          "url": "/assets/atlas/features/json/spellcasting_eldritch_knight_2024.json"
+        },
+        {
+          "index": "weapon_bond_eldritch_knight_2024",
+          "name": "Weapon Bond",
+          "url": "/assets/atlas/features/json/weapon_bond_eldritch_knight_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "war_magic_eldritch_knight_2024",
+          "name": "War Magic",
+          "url": "/assets/atlas/features/json/war_magic_eldritch_knight_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "eldritch_strike_eldritch_knight_2024",
+          "name": "Eldritch Strike",
+          "url": "/assets/atlas/features/json/eldritch_strike_eldritch_knight_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "arcane_charge_eldritch_knight_2024",
+          "name": "Arcane Charge",
+          "url": "/assets/atlas/features/json/arcane_charge_eldritch_knight_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "improved_war_magic_eldritch_knight_2024",
+          "name": "Improved War Magic",
+          "url": "/assets/atlas/features/json/improved_war_magic_eldritch_knight_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/eldritch_knight_2024.json",
+  "rulesetContext": "2024"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "battle_magic_valor_2024",
+  "name": "Battle Magic",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "valor_2024",
+    "name": "College of Valor",
+    "url": "/assets/atlas/subclasses/json/24/valor_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Whenever you cast a Bard spell with an action, you can make one weapon attack as a Bonus Action."
+  ],
+  "url": "/assets/atlas/features/json/battle_magic_valor_2024.json"
+}

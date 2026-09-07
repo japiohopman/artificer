@@ -1,0 +1,19 @@
+{
+  "index": "undying_sentinel_ancients_2024",
+  "name": "Undying Sentinel",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "ancients_2024",
+    "name": "Oath of the Ancients",
+    "url": "/assets/atlas/subclasses/json/24/ancients_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "When you drop to 0 HP, drop to 1 HP instead once per Long Rest. You suffer no drawbacks of old age."
+  ],
+  "url": "/assets/atlas/features/json/undying_sentinel_ancients_2024.json"
+}

@@ -1,0 +1,66 @@
+{
+  "index": "aberrant_sorcery_2024",
+  "name": "Aberrant Sorcery",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "desc": [
+    "Aberrant Sorcerers channel alien mind power, cosmic voids, and tentacled psionic horrors."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "psionic_spells_aberrant_2024",
+          "name": "Psionic Spells",
+          "url": "/assets/atlas/features/json/psionic_spells_aberrant_2024.json"
+        },
+        {
+          "index": "telepathic_speech_aberrant_2024",
+          "name": "Telepathic Speech",
+          "url": "/assets/atlas/features/json/telepathic_speech_aberrant_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "psionic_sorcery_aberrant_2024",
+          "name": "Psionic Sorcery",
+          "url": "/assets/atlas/features/json/psionic_sorcery_aberrant_2024.json"
+        },
+        {
+          "index": "psychic_defenses_aberrant_2024",
+          "name": "Psychic Defenses",
+          "url": "/assets/atlas/features/json/psychic_defenses_aberrant_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "revelation_in_flesh_aberrant_2024",
+          "name": "Revelation in Flesh",
+          "url": "/assets/atlas/features/json/revelation_in_flesh_aberrant_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features": [
+        {
+          "index": "warping_implosion_aberrant_2024",
+          "name": "Warping Implosion",
+          "url": "/assets/atlas/features/json/warping_implosion_aberrant_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/aberrant_sorcery_2024.json",
+  "rulesetContext": "2024"
+}

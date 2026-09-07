@@ -1,0 +1,19 @@
+{
+  "index": "healing_light_celestial_2024",
+  "name": "Healing Light",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "celestial_2024",
+    "name": "Celestial Patron",
+    "url": "/assets/atlas/subclasses/json/24/celestial_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Pool of d6 dice equal to 1 + Warlock level. As a Bonus Action, spend dice to heal a creature within 60 feet."
+  ],
+  "url": "/assets/atlas/features/json/healing_light_celestial_2024.json"
+}

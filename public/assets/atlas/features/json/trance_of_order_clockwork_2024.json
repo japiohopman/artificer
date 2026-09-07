@@ -1,0 +1,19 @@
+{
+  "index": "trance_of_order_clockwork_2024",
+  "name": "Trance of Order",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "clockwork_sorcery_2024",
+    "name": "Clockwork Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/clockwork_sorcery_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "As a Bonus Action, spend 5 Sorcery Points to enter a trance for 1 minute: attack rolls cannot have Advantage against you, and d20 rolls of 9 or lower count as 10."
+  ],
+  "url": "/assets/atlas/features/json/trance_of_order_clockwork_2024.json"
+}

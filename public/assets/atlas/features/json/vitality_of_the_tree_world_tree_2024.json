@@ -1,0 +1,19 @@
+{
+  "index": "vitality_of_the_tree_world_tree_2024",
+  "name": "Vitality of the Tree",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "world_tree_2024",
+    "name": "Path of the World Tree",
+    "url": "/assets/atlas/subclasses/json/24/world_tree_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you enter your Rage, gain Temporary Hit Points equal to your Barbarian level. At the start of each of your turns while raging, give Temp HP to an ally within 10 feet."
+  ],
+  "url": "/assets/atlas/features/json/vitality_of_the_tree_world_tree_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "eldritch_hex_great_old_one_2024",
+  "name": "Eldritch Hex",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Target marked by your Hex spell or Hexblade's Curse has Disadvantage on saving throws for an ability score of your choice."
+  ],
+  "url": "/assets/atlas/features/json/eldritch_hex_great_old_one_2024.json"
+}

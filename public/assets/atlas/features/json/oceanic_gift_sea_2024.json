@@ -1,0 +1,19 @@
+{
+  "index": "oceanic_gift_sea_2024",
+  "name": "Oceanic Gift",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "sea_2024",
+    "name": "Circle of the Sea",
+    "url": "/assets/atlas/subclasses/json/24/sea_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "You can manifest Wrath of the Sea around a willing ally within 60 feet instead of yourself."
+  ],
+  "url": "/assets/atlas/features/json/oceanic_gift_sea_2024.json"
+}

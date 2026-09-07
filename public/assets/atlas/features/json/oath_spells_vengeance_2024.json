@@ -1,0 +1,19 @@
+{
+  "index": "oath_spells_vengeance_2024",
+  "name": "Oath Spells",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "vengeance_2024",
+    "name": "Oath of Vengeance",
+    "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have oath spells prepared (Bane, Hunter's Mark, Hold Person, Misty Step, Haste, Protection from Energy, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/oath_spells_vengeance_2024.json"
+}

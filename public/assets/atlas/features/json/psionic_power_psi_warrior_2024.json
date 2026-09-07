@@ -1,0 +1,19 @@
+{
+  "index": "psionic_power_psi_warrior_2024",
+  "name": "Psionic Power",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior_2024",
+    "name": "Psi Warrior",
+    "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gain Psionic Energy Dice (d6 at L3, d8 at L7, d10 at L11, d12 at L17). Use for Protective Field (reduce damage), Psionic Strike (extra Force damage), or Telekinetic Movement (move objects/allies)."
+  ],
+  "url": "/assets/atlas/features/json/psionic_power_psi_warrior_2024.json"
+}

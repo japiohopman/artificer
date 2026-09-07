@@ -1,0 +1,19 @@
+{
+  "index": "hunters_lore_hunter_2024",
+  "name": "Hunter's Lore",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter_2024",
+    "name": "Hunter",
+    "url": "/assets/atlas/subclasses/json/24/hunter_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you mark a target with Hunter's Mark, instantly learn its immunities, resistances, and vulnerabilities."
+  ],
+  "url": "/assets/atlas/features/json/hunters_lore_hunter_2024.json"
+}

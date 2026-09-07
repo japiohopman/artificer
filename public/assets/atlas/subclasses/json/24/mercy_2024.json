@@ -1,0 +1,66 @@
+{
+  "index": "mercy_2024",
+  "name": "Warrior of Mercy",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "desc": [
+    "Warriors of Mercy manipulate the life force of creatures to heal wounds or inflict necrotic torment on enemies."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "implements_of_mercy_mercy_2024",
+          "name": "Implements of Mercy",
+          "url": "/assets/atlas/features/json/implements_of_mercy_mercy_2024.json"
+        },
+        {
+          "index": "hand_of_harm_mercy_2024",
+          "name": "Hand of Harm",
+          "url": "/assets/atlas/features/json/hand_of_harm_mercy_2024.json"
+        },
+        {
+          "index": "hand_of_healing_mercy_2024",
+          "name": "Hand of Healing",
+          "url": "/assets/atlas/features/json/hand_of_healing_mercy_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "physicians_touch_mercy_2024",
+          "name": "Physician's Touch",
+          "url": "/assets/atlas/features/json/physicians_touch_mercy_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "features": [
+        {
+          "index": "flurry_of_healing_and_harm_mercy_2024",
+          "name": "Flurry of Healing and Harm",
+          "url": "/assets/atlas/features/json/flurry_of_healing_and_harm_mercy_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "hand_of_ultimate_mercy_mercy_2024",
+          "name": "Hand of Ultimate Mercy",
+          "url": "/assets/atlas/features/json/hand_of_ultimate_mercy_mercy_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/mercy_2024.json",
+  "rulesetContext": "2024"
+}

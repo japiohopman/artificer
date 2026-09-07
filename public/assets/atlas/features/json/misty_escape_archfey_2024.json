@@ -1,0 +1,19 @@
+{
+  "index": "misty_escape_archfey_2024",
+  "name": "Misty Escape",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "archfey_2024",
+    "name": "Archfey Patron",
+    "url": "/assets/atlas/subclasses/json/24/archfey_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When taking damage, use your Reaction to cast Misty Step without expending a spell slot once per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/misty_escape_archfey_2024.json"
+}

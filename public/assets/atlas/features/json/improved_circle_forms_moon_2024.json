@@ -1,0 +1,19 @@
+{
+  "index": "improved_circle_forms_moon_2024",
+  "name": "Improved Circle Forms",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "moon_2024",
+    "name": "Circle of the Moon",
+    "url": "/assets/atlas/subclasses/json/24/moon_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "Attacks in Wild Shape deal extra Radiant damage equal to 1d6 or your Wisdom modifier, and AC equals 13 + WIS mod in beast form."
+  ],
+  "url": "/assets/atlas/features/json/improved_circle_forms_moon_2024.json"
+}

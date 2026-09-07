@@ -1,0 +1,61 @@
+{
+  "index": "vengeance_2024",
+  "name": "Oath of Vengeance",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "desc": [
+    "Paladins of Vengeance pursue wicked evildoers without mercy, swearing holy vows to hunt down those who commit atrocities."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "oath_spells_vengeance_2024",
+          "name": "Oath Spells",
+          "url": "/assets/atlas/features/json/oath_spells_vengeance_2024.json"
+        },
+        {
+          "index": "vow_of_enmity_vengeance_2024",
+          "name": "Channel Divinity: Vow of Enmity",
+          "url": "/assets/atlas/features/json/vow_of_enmity_vengeance_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "relentless_avenger_vengeance_2024",
+          "name": "Relentless Avenger",
+          "url": "/assets/atlas/features/json/relentless_avenger_vengeance_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "soul_of_vengeance_vengeance_2024",
+          "name": "Soul of Vengeance",
+          "url": "/assets/atlas/features/json/soul_of_vengeance_vengeance_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "features": [
+        {
+          "index": "avenging_angel_vengeance_2024",
+          "name": "Avenging Angel",
+          "url": "/assets/atlas/features/json/avenging_angel_vengeance_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json",
+  "rulesetContext": "2024"
+}

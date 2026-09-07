@@ -1,0 +1,19 @@
+{
+  "index": "fey_wanderer_spells_2024",
+  "name": "Fey Wanderer Spells",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "fey_wanderer_2024",
+    "name": "Fey Wanderer",
+    "url": "/assets/atlas/subclasses/json/24/fey_wanderer_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have prepared spells (Charm Person, Misty Step, Dispel Magic, Dimension Door, Mislead)."
+  ],
+  "url": "/assets/atlas/features/json/fey_wanderer_spells_2024.json"
+}

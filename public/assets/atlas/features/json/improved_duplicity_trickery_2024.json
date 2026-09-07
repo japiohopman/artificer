@@ -1,0 +1,19 @@
+{
+  "index": "improved_duplicity_trickery_2024",
+  "name": "Improved Duplicity",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "trickery_domain_2024",
+    "name": "Trickery Domain",
+    "url": "/assets/atlas/subclasses/json/24/trickery_domain_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "You can create up to four duplicates with Invoke Duplicity, and move any number of them as a Bonus Action."
+  ],
+  "url": "/assets/atlas/features/json/improved_duplicity_trickery_2024.json"
+}

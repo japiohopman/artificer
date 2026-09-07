@@ -1,0 +1,19 @@
+{
+  "index": "natures_sanctuary_land_2024",
+  "name": "Nature's Sanctuary",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "As a Magic action, you can expend one use of your Wild Shape to create a 15-foot Cube of spectral vegetation on the ground within 120 feet of you. The Cube lasts for 1 minute, or until you have the Incapacitated condition or die. While in the Cube, you and your allies have Half Cover, and your allies gain the damage resistance currently granted by your Nature's Ward feature. As a Bonus Action, you can move the Cube up to 60 feet to ground within 120 feet of you."
+  ],
+  "url": "/assets/atlas/features/json/natures_sanctuary_land_2024.json"
+}

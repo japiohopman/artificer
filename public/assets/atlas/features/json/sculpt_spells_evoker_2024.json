@@ -1,0 +1,19 @@
+{
+  "index": "sculpt_spells_evoker_2024",
+  "name": "Sculpt Spells",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "evocation_2024",
+    "name": "Evoker",
+    "url": "/assets/atlas/subclasses/json/24/evocation_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you cast an Evocation spell that affects other creatures you can see, choose up to 1 + spell level creatures to automatically succeed on their saving throws and take no damage."
+  ],
+  "url": "/assets/atlas/features/json/sculpt_spells_evoker_2024.json"
+}

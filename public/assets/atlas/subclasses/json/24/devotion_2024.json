@@ -1,0 +1,61 @@
+{
+  "index": "devotion_2024",
+  "name": "Oath of Devotion",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "desc": [
+    "Paladins of Devotion uphold justice, honor, and duty. They weaponize holy light to protect innocents and smite evil."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "oath_spells_devotion_2024",
+          "name": "Oath Spells",
+          "url": "/assets/atlas/features/json/oath_spells_devotion_2024.json"
+        },
+        {
+          "index": "sacred_weapon_devotion_2024",
+          "name": "Channel Divinity: Sacred Weapon",
+          "url": "/assets/atlas/features/json/sacred_weapon_devotion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features": [
+        {
+          "index": "aura_of_devotion_devotion_2024",
+          "name": "Aura of Devotion",
+          "url": "/assets/atlas/features/json/aura_of_devotion_devotion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features": [
+        {
+          "index": "smite_of_protection_devotion_2024",
+          "name": "Smite of Protection",
+          "url": "/assets/atlas/features/json/smite_of_protection_devotion_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "features": [
+        {
+          "index": "holy_nimbus_devotion_2024",
+          "name": "Holy Nimbus",
+          "url": "/assets/atlas/features/json/holy_nimbus_devotion_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/devotion_2024.json",
+  "rulesetContext": "2024"
+}

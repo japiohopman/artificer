@@ -1,0 +1,19 @@
+{
+  "index": "primal_companion_beast_master_2024",
+  "name": "Primal Companion",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "beast_master_2024",
+    "name": "Beast Master",
+    "url": "/assets/atlas/subclasses/json/24/beast_master_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Summon a Primal Beast (Beast of the Land, Sea, or Sky) that acts on your turn and obeys your commands in battle."
+  ],
+  "url": "/assets/atlas/features/json/primal_companion_beast_master_2024.json"
+}

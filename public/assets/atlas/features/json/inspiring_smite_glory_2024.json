@@ -1,0 +1,19 @@
+{
+  "index": "inspiring_smite_glory_2024",
+  "name": "Channel Divinity: Inspiring Smite",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "glory_2024",
+    "name": "Oath of Glory",
+    "url": "/assets/atlas/subclasses/json/24/glory_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Immediately after hitting with Divine Smite, grant Temp HP equal to 2d8 + Paladin level split among allies within 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/inspiring_smite_glory_2024.json"
+}

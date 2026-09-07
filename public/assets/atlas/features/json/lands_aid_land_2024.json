@@ -1,0 +1,19 @@
+{
+  "index": "lands_aid_land_2024",
+  "name": "Land's Aid",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "land_2024",
+    "name": "Circle of the Land",
+    "url": "/assets/atlas/subclasses/json/24/land_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Magic Action, expend Wild Shape to cause thorny vines to deal 2d6 Force damage to foes and heal an ally in a 10-foot area."
+  ],
+  "url": "/assets/atlas/features/json/lands_aid_land_2024.json"
+}

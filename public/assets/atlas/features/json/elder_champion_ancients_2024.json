@@ -1,0 +1,19 @@
+{
+  "index": "elder_champion_ancients_2024",
+  "name": "Elder Champion",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "ancients_2024",
+    "name": "Oath of the Ancients",
+    "url": "/assets/atlas/subclasses/json/24/ancients_2024.json"
+  },
+  "level": 20,
+  "desc": [
+    "Transform into a force of nature for 1 minute: regain HP at start of turn, cast paladin spells as Bonus Action, and enemies save vs spells at Disadvantage."
+  ],
+  "url": "/assets/atlas/features/json/elder_champion_ancients_2024.json"
+}

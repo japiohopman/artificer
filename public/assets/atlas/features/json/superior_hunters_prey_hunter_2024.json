@@ -1,0 +1,19 @@
+{
+  "index": "superior_hunters_prey_hunter_2024",
+  "name": "Superior Hunter's Prey",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter_2024",
+    "name": "Hunter",
+    "url": "/assets/atlas/subclasses/json/24/hunter_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "When you hit a target marked by Hunter's Mark, deal the extra Hunter's Mark damage to another creature within 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/superior_hunters_prey_hunter_2024.json"
+}

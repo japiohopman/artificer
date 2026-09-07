@@ -1,0 +1,19 @@
+{
+  "index": "great_old_one_spells_2024",
+  "name": "Great Old One Spells",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have prepared patron spells (Dissonant Whispers, Tasha's Hideous Laughter, Detect Thoughts, Phantasmal Force, Clairvoyance, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/great_old_one_spells_2024.json"
+}

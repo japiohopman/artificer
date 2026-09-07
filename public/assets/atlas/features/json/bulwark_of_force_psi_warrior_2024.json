@@ -1,0 +1,19 @@
+{
+  "index": "bulwark_of_force_psi_warrior_2024",
+  "name": "Bulwark of Force",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior_2024",
+    "name": "Psi Warrior",
+    "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "As a Bonus Action, grant half cover to allies within 30 feet for 1 minute INT mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/bulwark_of_force_psi_warrior_2024.json"
+}

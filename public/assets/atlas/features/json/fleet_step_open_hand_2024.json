@@ -1,0 +1,19 @@
+{
+  "index": "fleet_step_open_hand_2024",
+  "name": "Fleet Step",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "open_hand_2024",
+    "name": "Warrior of the Open Hand",
+    "url": "/assets/atlas/subclasses/json/24/open_hand_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "After taking a Bonus Action other than Step of the Wind, you can immediately use Step of the Wind without spending a Focus Point."
+  ],
+  "url": "/assets/atlas/features/json/fleet_step_open_hand_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "warding_flare_light_2024",
+  "name": "Warding Flare",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "light_domain_2024",
+    "name": "Light Domain",
+    "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When an attacker within 30 feet hits you, use a Reaction to impose Disadvantage on the attack roll WIS mod times per Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/warding_flare_light_2024.json"
+}

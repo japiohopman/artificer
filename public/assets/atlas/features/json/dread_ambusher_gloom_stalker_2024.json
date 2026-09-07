@@ -1,0 +1,19 @@
+{
+  "index": "dread_ambusher_gloom_stalker_2024",
+  "name": "Dread Ambusher",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "gloom_stalker_2024",
+    "name": "Gloom Stalker",
+    "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Add WIS mod to Initiative. On the first turn of combat, speed increases by 10 feet and making an attack deals an extra 2d6 damage WIS mod times per day."
+  ],
+  "url": "/assets/atlas/features/json/dread_ambusher_gloom_stalker_2024.json"
+}

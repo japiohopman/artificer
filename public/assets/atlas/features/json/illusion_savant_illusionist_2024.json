@@ -1,0 +1,19 @@
+{
+  "index": "illusion_savant_illusionist_2024",
+  "name": "Illusion Savant",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "illusionist_2024",
+    "name": "Illusionist",
+    "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gold and time to copy Illusion spells is halved, and you gain two free Illusion spells in your spellbook."
+  ],
+  "url": "/assets/atlas/features/json/illusion_savant_illusionist_2024.json"
+}

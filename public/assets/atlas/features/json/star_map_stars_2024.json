@@ -1,0 +1,19 @@
+{
+  "index": "star_map_stars_2024",
+  "name": "Star Map",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "stars_2024",
+    "name": "Circle of the Stars",
+    "url": "/assets/atlas/subclasses/json/24/stars_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You possess a cosmic map that grants Guiding Bolt prepared without counting against spell limit, castable without slots WIS mod times per LR."
+  ],
+  "url": "/assets/atlas/features/json/star_map_stars_2024.json"
+}

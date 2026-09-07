@@ -1,0 +1,19 @@
+{
+  "index": "combat_wild_shape_moon_2024",
+  "name": "Combat Wild Shape",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "moon_2024",
+    "name": "Circle of the Moon",
+    "url": "/assets/atlas/subclasses/json/24/moon_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Transform as a Bonus Action. While in Beast form, cast circle spells (Cure Wounds, Moonbeam, Starry Wisp, etc.) and spend spell slots to heal."
+  ],
+  "url": "/assets/atlas/features/json/combat_wild_shape_moon_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "eldritch_strike_eldritch_knight_2024",
+  "name": "Eldritch Strike",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "eldritch_knight_2024",
+    "name": "Eldritch Knight",
+    "url": "/assets/atlas/subclasses/json/24/eldritch_knight_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "When you hit a creature with a weapon attack, that creature has Disadvantage on the next saving throw it makes against a spell you cast."
+  ],
+  "url": "/assets/atlas/features/json/eldritch_strike_eldritch_knight_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "illusory_self_illusionist_2024",
+  "name": "Illusory Self",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "illusionist_2024",
+    "name": "Illusionist",
+    "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "As a Reaction when hit by an attack roll, create an illusory duplicate that causes the attack to automatically miss once per Short or Long Rest."
+  ],
+  "url": "/assets/atlas/features/json/illusory_self_illusionist_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "relentless_avenger_vengeance_2024",
+  "name": "Relentless Avenger",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "vengeance_2024",
+    "name": "Oath of Vengeance",
+    "url": "/assets/atlas/subclasses/json/24/vengeance_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "When you hit a creature with an Opportunity Attack, move up to half your Speed as part of the same Reaction without provoking Opportunity Attacks."
+  ],
+  "url": "/assets/atlas/features/json/relentless_avenger_vengeance_2024.json"
+}

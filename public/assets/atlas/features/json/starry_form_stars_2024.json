@@ -1,0 +1,19 @@
+{
+  "index": "starry_form_stars_2024",
+  "name": "Starry Form",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "stars_2024",
+    "name": "Circle of the Stars",
+    "url": "/assets/atlas/subclasses/json/24/stars_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, spend a Wild Shape use to assume a Starry Form: Archer (luminous bonus action blast), Chalice (healing boost), or Dragon (minimum 10 on INT/WIS rolls)."
+  ],
+  "url": "/assets/atlas/features/json/starry_form_stars_2024.json"
+}

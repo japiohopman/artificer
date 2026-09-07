@@ -1,0 +1,19 @@
+{
+  "index": "twinkling_constellations_stars_2024",
+  "name": "Twinkling Constellations",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "subclass": {
+    "index": "stars_2024",
+    "name": "Circle of the Stars",
+    "url": "/assets/atlas/subclasses/json/24/stars_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Starry Form constellation effects improve (Archer 2d8 damage, Chalice 2d8 heal, Dragon grants flying speed)."
+  ],
+  "url": "/assets/atlas/features/json/twinkling_constellations_stars_2024.json"
+}

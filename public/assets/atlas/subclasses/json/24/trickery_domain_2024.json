@@ -1,0 +1,56 @@
+{
+  "index": "trickery_domain_2024",
+  "name": "Trickery Domain",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "desc": [
+    "Clerics of Trickery promote deceit, illusion, and freedom. They confuse enemies with duplicates, stealth, and divine trickery."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "trickery_domain_spells_2024",
+          "name": "Trickery Domain Spells",
+          "url": "/assets/atlas/features/json/trickery_domain_spells_2024.json"
+        },
+        {
+          "index": "blessing_of_the_trickster_trickery_2024",
+          "name": "Blessing of the Trickster",
+          "url": "/assets/atlas/features/json/blessing_of_the_trickster_trickery_2024.json"
+        },
+        {
+          "index": "invoke_duplicity_trickery_2024",
+          "name": "Channel Divinity: Invoke Duplicity",
+          "url": "/assets/atlas/features/json/invoke_duplicity_trickery_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "tricksters_transposition_trickery_2024",
+          "name": "Trickster's Transposition",
+          "url": "/assets/atlas/features/json/tricksters_transposition_trickery_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "improved_duplicity_trickery_2024",
+          "name": "Improved Duplicity",
+          "url": "/assets/atlas/features/json/improved_duplicity_trickery_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/trickery_domain_2024.json",
+  "rulesetContext": "2024"
+}

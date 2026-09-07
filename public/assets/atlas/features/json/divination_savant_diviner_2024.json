@@ -1,0 +1,19 @@
+{
+  "index": "divination_savant_diviner_2024",
+  "name": "Divination Savant",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "diviner_2024",
+    "name": "Diviner",
+    "url": "/assets/atlas/subclasses/json/24/diviner_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gold and time to copy Divination spells is halved, and you gain two free Divination spells in your spellbook."
+  ],
+  "url": "/assets/atlas/features/json/divination_savant_diviner_2024.json"
+}

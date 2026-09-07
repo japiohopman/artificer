@@ -1,0 +1,19 @@
+{
+  "index": "fey_reinforcements_fey_wanderer_2024",
+  "name": "Fey Reinforcements",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "fey_wanderer_2024",
+    "name": "Fey Wanderer",
+    "url": "/assets/atlas/subclasses/json/24/fey_wanderer_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "Summon Fey without material components once per Long Rest or by expending a 3rd-level spell slot."
+  ],
+  "url": "/assets/atlas/features/json/fey_reinforcements_fey_wanderer_2024.json"
+}

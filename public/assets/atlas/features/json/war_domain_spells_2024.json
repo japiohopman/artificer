@@ -1,0 +1,19 @@
+{
+  "index": "war_domain_spells_2024",
+  "name": "War Domain Spells",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "war_domain_2024",
+    "name": "War Domain",
+    "url": "/assets/atlas/subclasses/json/24/war_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have domain spells prepared (Divine Favor, Shield of Faith, Spiritual Weapon, Crusader's Mantle, Freedom of Movement, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/war_domain_spells_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "clockwork_cavalcade_clockwork_2024",
+  "name": "Clockwork Cavalcade",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "clockwork_sorcery_2024",
+    "name": "Clockwork Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/clockwork_sorcery_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "Summon cosmic construct spirits in a 30-foot cube that restore up to 100 Hit Points, repair damaged objects, and end 6th-level or lower spell effects."
+  ],
+  "url": "/assets/atlas/features/json/clockwork_cavalcade_clockwork_2024.json"
+}

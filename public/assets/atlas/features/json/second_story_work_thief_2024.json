@@ -1,10 +1,19 @@
 {
   "index": "second_story_work_thief_2024",
   "name": "Second-Story Work",
-  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
-  "subclass": { "index": "thief_2024", "name": "Thief", "url": "/assets/atlas/subclasses/json/24/thief_2024.json" },
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "thief_2024",
+    "name": "Thief",
+    "url": "/assets/atlas/subclasses/json/24/thief_2024.json"
+  },
   "level": 3,
-  "desc": [ "You gain a Climb Speed equal to your Speed. In addition, when determining how far you jump, you can use your Dexterity modifier instead of your Strength modifier." ],
-  "feature_specific": { "climb_speed": "equal_to_speed", "jump_modifier": "DEX" },
+  "desc": [
+    "Gain a Climbing speed equal to your Speed, and add your DEX modifier to running jump distances."
+  ],
   "url": "/assets/atlas/features/json/second_story_work_thief_2024.json"
 }

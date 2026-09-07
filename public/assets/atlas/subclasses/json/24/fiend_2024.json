@@ -1,0 +1,61 @@
+{
+  "index": "fiend_2024",
+  "name": "Fiend Patron",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "desc": [
+    "You bound your soul to a fiend from the Lower Planes, wielding hellfire, dark luck, and infernal resilience."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "fiend_spells_2024",
+          "name": "Fiend Spells",
+          "url": "/assets/atlas/features/json/fiend_spells_2024.json"
+        },
+        {
+          "index": "dark_ones_blessing_fiend_2024",
+          "name": "Dark One's Blessing",
+          "url": "/assets/atlas/features/json/dark_ones_blessing_fiend_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "dark_ones_own_luck_fiend_2024",
+          "name": "Dark One's Own Luck",
+          "url": "/assets/atlas/features/json/dark_ones_own_luck_fiend_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "fiendish_resilience_fiend_2024",
+          "name": "Fiendish Resilience",
+          "url": "/assets/atlas/features/json/fiendish_resilience_fiend_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "hurl_through_hell_fiend_2024",
+          "name": "Hurl Through Hell",
+          "url": "/assets/atlas/features/json/hurl_through_hell_fiend_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/fiend_2024.json",
+  "rulesetContext": "2024"
+}

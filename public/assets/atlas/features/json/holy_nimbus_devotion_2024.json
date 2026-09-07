@@ -1,0 +1,19 @@
+{
+  "index": "holy_nimbus_devotion_2024",
+  "name": "Holy Nimbus",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "devotion_2024",
+    "name": "Oath of Devotion",
+    "url": "/assets/atlas/subclasses/json/24/devotion_2024.json"
+  },
+  "level": 20,
+  "desc": [
+    "As a Bonus Action, emit a 30-foot aura of holy sunlight dealing Radiant damage equal to CHA mod + PB to foes and Advantage on saves vs fiends/undead."
+  ],
+  "url": "/assets/atlas/features/json/holy_nimbus_devotion_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "light_domain_spells_2024",
+  "name": "Light Domain Spells",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "light_domain_2024",
+    "name": "Light Domain",
+    "url": "/assets/atlas/subclasses/json/24/light_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have domain spells prepared (Burning Hands, Faerie Fire, Scorching Ray, Daylight, Fireball, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/light_domain_spells_2024.json"
+}

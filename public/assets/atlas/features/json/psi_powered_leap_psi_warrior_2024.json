@@ -1,0 +1,19 @@
+{
+  "index": "psi_powered_leap_psi_warrior_2024",
+  "name": "Psi-Powered Leap",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior_2024",
+    "name": "Psi Warrior",
+    "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "As a Bonus Action, gain a Flying speed equal to twice your Speed until the end of the current turn."
+  ],
+  "url": "/assets/atlas/features/json/psi_powered_leap_psi_warrior_2024.json"
+}

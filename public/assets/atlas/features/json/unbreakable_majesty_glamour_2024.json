@@ -1,0 +1,19 @@
+{
+  "index": "unbreakable_majesty_glamour_2024",
+  "name": "Unbreakable Majesty",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "glamour_2024",
+    "name": "College of Glamour",
+    "url": "/assets/atlas/subclasses/json/24/glamour_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "As a Bonus Action, assume a majestic appearance for 1 minute. Enemies attempting to attack you must succeed on a Charisma save or choose another target."
+  ],
+  "url": "/assets/atlas/features/json/unbreakable_majesty_glamour_2024.json"
+}

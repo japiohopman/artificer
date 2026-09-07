@@ -1,0 +1,19 @@
+{
+  "index": "portent_diviner_2024",
+  "name": "Portent",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "diviner_2024",
+    "name": "Diviner",
+    "url": "/assets/atlas/subclasses/json/24/diviner_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Roll two d20s on finishing a Long Rest and record the numbers. Replace any d20 roll made by you or a creature you can see with one of these foretold rolls."
+  ],
+  "url": "/assets/atlas/features/json/portent_diviner_2024.json"
+}

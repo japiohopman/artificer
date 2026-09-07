@@ -1,0 +1,19 @@
+{
+  "index": "fiend_spells_2024",
+  "name": "Fiend Spells",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "fiend_2024",
+    "name": "Fiend Patron",
+    "url": "/assets/atlas/subclasses/json/24/fiend_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have prepared patron spells (Burning Hands, Command, Scorching Ray, Fireball, Stinking Cloud, Wall of Fire, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/fiend_spells_2024.json"
+}

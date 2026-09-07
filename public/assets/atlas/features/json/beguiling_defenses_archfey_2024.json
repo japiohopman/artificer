@@ -1,0 +1,19 @@
+{
+  "index": "beguiling_defenses_archfey_2024",
+  "name": "Beguiling Defenses",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "archfey_2024",
+    "name": "Archfey Patron",
+    "url": "/assets/atlas/subclasses/json/24/archfey_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "You are immune to Charmed condition. When a creature tries to charm you, reflect the charm back at it."
+  ],
+  "url": "/assets/atlas/features/json/beguiling_defenses_archfey_2024.json"
+}

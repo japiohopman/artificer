@@ -1,0 +1,19 @@
+{
+  "index": "dazzling_footwork_dance_2024",
+  "name": "Dazzling Footwork",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "dance_2024",
+    "name": "College of Dance",
+    "url": "/assets/atlas/subclasses/json/24/dance_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain Dance Virtuoso (AC equals 10 + DEX + CHA while unarmored and no shield) and Agile Strikes (when spending Bardic Inspiration, make an Unarmed Strike as a Bonus Action, dealing damage equal to Bardic Inspiration die)."
+  ],
+  "url": "/assets/atlas/features/json/dazzling_footwork_dance_2024.json"
+}

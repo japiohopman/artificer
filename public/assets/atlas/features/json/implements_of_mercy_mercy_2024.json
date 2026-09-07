@@ -1,0 +1,19 @@
+{
+  "index": "implements_of_mercy_mercy_2024",
+  "name": "Implements of Mercy",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "mercy_2024",
+    "name": "Warrior of Mercy",
+    "url": "/assets/atlas/subclasses/json/24/mercy_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain proficiency in Insight, Medicine, and the Herbalism Kit."
+  ],
+  "url": "/assets/atlas/features/json/implements_of_mercy_mercy_2024.json"
+}

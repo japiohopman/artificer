@@ -7,7 +7,7 @@
     "url": "/assets/atlas/class/json/24/rogue.json"
   },
   "desc": [
-    "You discover your skills in the ancient thieves' guild or through lone practice in darkened alleyways. In addition to agility and stealth, you possess the ability to slip into places others can't reach and harness magical items that weren't intended for you."
+    "Thieves refine agility, stealth, and agility to scale walls, pick locks mid-battle, and use magic items beyond standard limitations."
   ],
   "subclass_levels": [
     {
@@ -49,9 +49,9 @@
       "level": 17,
       "features": [
         {
-          "index": "thiefs_reflexes_2024",
+          "index": "thiefs_reflexes_thief_2024",
           "name": "Thief's Reflexes",
-          "url": "/assets/atlas/features/json/thiefs_reflexes_2024.json"
+          "url": "/assets/atlas/features/json/thiefs_reflexes_thief_2024.json"
         }
       ]
     }

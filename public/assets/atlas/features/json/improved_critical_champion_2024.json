@@ -1,10 +1,19 @@
 {
   "index": "improved_critical_champion_2024",
   "name": "Improved Critical",
-  "class": { "index": "fighter", "name": "Fighter", "url": "/assets/atlas/class/json/24/fighter.json" },
-  "subclass": { "index": "champion_2024", "name": "Champion", "url": "/assets/atlas/subclasses/json/24/champion_2024.json" },
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "champion_2024",
+    "name": "Champion",
+    "url": "/assets/atlas/subclasses/json/24/champion_2024.json"
+  },
   "level": 3,
-  "desc": [ "Your attack rolls with weapons and Unarmed Strikes score a critical hit on a roll of 19 or 20 on the d20." ],
-  "feature_specific": { "critical_threshold": 19 },
+  "desc": [
+    "Your weapon attack rolls score a Critical Hit on a roll of 19 or 20 on the d20."
+  ],
   "url": "/assets/atlas/features/json/improved_critical_champion_2024.json"
 }

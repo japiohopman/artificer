@@ -1,0 +1,19 @@
+{
+  "index": "psionic_power_soulknife_2024",
+  "name": "Psionic Power",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "soulknife_2024",
+    "name": "Soulknife",
+    "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Gain Psionic Energy Dice (d6 at L3, scaling to d12). Use for Psi-Bolstered Knack (add to failed skill check) or Psychic Whispers (telepathy)."
+  ],
+  "url": "/assets/atlas/features/json/psionic_power_soulknife_2024.json"
+}

@@ -1,0 +1,19 @@
+{
+  "index": "illusory_reality_illusionist_2024",
+  "name": "Illusory Reality",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "illusionist_2024",
+    "name": "Illusionist",
+    "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "As a Bonus Action when casting an Illusion spell, choose one inanimate nonmagical object in the illusion and make it real for 1 minute."
+  ],
+  "url": "/assets/atlas/features/json/illusory_reality_illusionist_2024.json"
+}

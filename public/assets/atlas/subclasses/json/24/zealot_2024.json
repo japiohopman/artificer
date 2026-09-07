@@ -1,0 +1,61 @@
+{
+  "index": "zealot_2024",
+  "name": "Path of the Zealot",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "desc": [
+    "Some deities inspire their followers to a holy fury. Barbarians who walk the Path of the Zealot channel divine zeal into their weapon attacks and defy death itself."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "divine_fury_zealot_2024",
+          "name": "Divine Fury",
+          "url": "/assets/atlas/features/json/divine_fury_zealot_2024.json"
+        },
+        {
+          "index": "warrior_of_the_gods_zealot_2024",
+          "name": "Warrior of the Gods",
+          "url": "/assets/atlas/features/json/warrior_of_the_gods_zealot_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "fanatical_focus_zealot_2024",
+          "name": "Fanatical Focus",
+          "url": "/assets/atlas/features/json/fanatical_focus_zealot_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "zealous_presence_zealot_2024",
+          "name": "Zealous Presence",
+          "url": "/assets/atlas/features/json/zealous_presence_zealot_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "rage_beyond_death_zealot_2024",
+          "name": "Rage Beyond Death",
+          "url": "/assets/atlas/features/json/rage_beyond_death_zealot_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/zealot_2024.json",
+  "rulesetContext": "2024"
+}

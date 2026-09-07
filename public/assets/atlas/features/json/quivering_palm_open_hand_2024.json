@@ -1,0 +1,19 @@
+{
+  "index": "quivering_palm_open_hand_2024",
+  "name": "Quivering Palm",
+  "class": {
+    "index": "monk",
+    "name": "Monk",
+    "url": "/assets/atlas/class/json/24/monk.json"
+  },
+  "subclass": {
+    "index": "open_hand_2024",
+    "name": "Warrior of the Open Hand",
+    "url": "/assets/atlas/subclasses/json/24/open_hand_2024.json"
+  },
+  "level": 17,
+  "desc": [
+    "Spend 4 Focus Points when hitting with an Unarmed Strike to set up vibrations lasting Monk level days. Can end vibrations via an Action or by forgoing one attack of the Attack action. Target makes a CON save: takes 10d12 Force damage on a failed save, or half as much on a successful save."
+  ],
+  "url": "/assets/atlas/features/json/quivering_palm_open_hand_2024.json"
+}

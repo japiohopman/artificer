@@ -1,0 +1,19 @@
+{
+  "index": "animal_speaker_wild_heart_2024",
+  "name": "Animal Speaker",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "wild_heart_2024",
+    "name": "Path of the Wild Heart",
+    "url": "/assets/atlas/subclasses/json/24/wild_heart_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You gain the ability to cast Beast Sense and Speak with Animals as Rituals using Wisdom as your spellcasting ability."
+  ],
+  "url": "/assets/atlas/features/json/animal_speaker_wild_heart_2024.json"
+}

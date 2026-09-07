@@ -1,0 +1,19 @@
+{
+  "index": "infiltration_expertise_assassin_2024",
+  "name": "Infiltration Expertise",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "assassin_2024",
+    "name": "Assassin",
+    "url": "/assets/atlas/subclasses/json/24/assassin_2024.json"
+  },
+  "level": 9,
+  "desc": [
+    "You can adopt false identities seamlessly, mimic speech and handwriting, and craft infallible cover disguises."
+  ],
+  "url": "/assets/atlas/features/json/infiltration_expertise_assassin_2024.json"
+}

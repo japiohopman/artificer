@@ -1,0 +1,56 @@
+{
+  "index": "berserker_2024",
+  "name": "Path of the Berserker",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "desc": [
+    "For some Barbarians, rage is a means to a violent end. The Path of the Berserker is a path of untamed, thrilling fury. You thrill in the chaos of battle, heedless of your own health or safety."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "frenzy_berserker_2024",
+          "name": "Frenzy",
+          "url": "/assets/atlas/features/json/frenzy_berserker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "mindless_rage_berserker_2024",
+          "name": "Mindless Rage",
+          "url": "/assets/atlas/features/json/mindless_rage_berserker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "retaliation_berserker_2024",
+          "name": "Retaliation",
+          "url": "/assets/atlas/features/json/retaliation_berserker_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "intimidating_presence_berserker_2024",
+          "name": "Intimidating Presence",
+          "url": "/assets/atlas/features/json/intimidating_presence_berserker_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/berserker_2024.json",
+  "rulesetContext": "2024"
+}

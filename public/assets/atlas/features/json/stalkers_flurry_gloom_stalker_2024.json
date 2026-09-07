@@ -1,0 +1,19 @@
+{
+  "index": "stalkers_flurry_gloom_stalker_2024",
+  "name": "Stalker's Flurry",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "gloom_stalker_2024",
+    "name": "Gloom Stalker",
+    "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json"
+  },
+  "level": 11,
+  "desc": [
+    "When you miss a weapon attack on your turn, make another weapon attack, or cause a Dread Ambusher burst to hit adjacent targets."
+  ],
+  "url": "/assets/atlas/features/json/stalkers_flurry_gloom_stalker_2024.json"
+}

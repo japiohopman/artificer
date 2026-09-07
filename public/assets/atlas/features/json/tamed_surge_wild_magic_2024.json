@@ -1,0 +1,19 @@
+{
+  "index": "tamed_surge_wild_magic_2024",
+  "name": "Tamed Surge",
+  "class": {
+    "index": "sorcerer",
+    "name": "Sorcerer",
+    "url": "/assets/atlas/class/json/24/sorcerer.json"
+  },
+  "subclass": {
+    "index": "wild_magic_sorcery_2024",
+    "name": "Wild Magic Sorcery",
+    "url": "/assets/atlas/subclasses/json/24/wild_magic_sorcery_2024.json"
+  },
+  "level": 18,
+  "desc": [
+    "Once per Long Rest, when a Wild Magic Surge triggers, you can choose a Wild Magic Surge effect directly instead of rolling randomly. If that effect requires another die roll, roll that die normally."
+  ],
+  "url": "/assets/atlas/features/json/tamed_surge_wild_magic_2024.json"
+}

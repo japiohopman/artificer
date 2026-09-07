@@ -1,0 +1,19 @@
+{
+  "index": "mindless_rage_berserker_2024",
+  "name": "Mindless Rage",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "berserker_2024",
+    "name": "Path of the Berserker",
+    "url": "/assets/atlas/subclasses/json/24/berserker_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You are immune to the Charmed and Frightened conditions while raging. If you are Charmed or Frightened when you enter your Rage, the effect is suspended for the duration of the Rage."
+  ],
+  "url": "/assets/atlas/features/json/mindless_rage_berserker_2024.json"
+}

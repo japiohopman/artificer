@@ -1,0 +1,19 @@
+{
+  "index": "spell_resistance_abjurer_2024",
+  "name": "Spell Resistance",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "abjurer_2024",
+    "name": "Abjurer",
+    "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "You have Advantage on saving throws against spells, and resistance to damage dealt by spells."
+  ],
+  "url": "/assets/atlas/features/json/spell_resistance_abjurer_2024.json"
+}

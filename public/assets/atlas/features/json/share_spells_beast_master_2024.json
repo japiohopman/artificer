@@ -1,0 +1,19 @@
+{
+  "index": "share_spells_beast_master_2024",
+  "name": "Share Spells",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "beast_master_2024",
+    "name": "Beast Master",
+    "url": "/assets/atlas/subclasses/json/24/beast_master_2024.json"
+  },
+  "level": 15,
+  "desc": [
+    "Whenever you cast a spell targeting yourself, you can also have the spell affect your primal companion if within 30 feet."
+  ],
+  "url": "/assets/atlas/features/json/share_spells_beast_master_2024.json"
+}

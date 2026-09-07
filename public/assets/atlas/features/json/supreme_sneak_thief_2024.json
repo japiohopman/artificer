@@ -1,10 +1,19 @@
 {
   "index": "supreme_sneak_thief_2024",
   "name": "Supreme Sneak",
-  "class": { "index": "rogue", "name": "Rogue", "url": "/assets/atlas/class/json/24/rogue.json" },
-  "subclass": { "index": "thief_2024", "name": "Thief", "url": "/assets/atlas/subclasses/json/24/thief_2024.json" },
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "subclass": {
+    "index": "thief_2024",
+    "name": "Thief",
+    "url": "/assets/atlas/subclasses/json/24/thief_2024.json"
+  },
   "level": 9,
-  "desc": [ "You gain a new option for Cunning Strike: Stealth Attack (cost: 1d6). You can forgo 1d6 Sneak Attack damage to remain hidden after taking an attack action, provided you end the turn in cover." ],
-  "feature_specific": { "cunning_strike_option": "stealth_attack", "cost": "1d6" },
+  "desc": [
+    "You gain Cunning Strike options for Stealth, or Advantage on Dexterity (Stealth) checks if moving no more than half your Speed."
+  ],
   "url": "/assets/atlas/features/json/supreme_sneak_thief_2024.json"
 }

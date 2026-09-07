@@ -1,0 +1,19 @@
+{
+  "index": "exceptional_training_beast_master_2024",
+  "name": "Exceptional Training",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "beast_master_2024",
+    "name": "Beast Master",
+    "url": "/assets/atlas/subclasses/json/24/beast_master_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "On your turn, command your beast to Dash, Disengage, Dodge, or Help as a Bonus Action, and its attacks count as magical."
+  ],
+  "url": "/assets/atlas/features/json/exceptional_training_beast_master_2024.json"
+}

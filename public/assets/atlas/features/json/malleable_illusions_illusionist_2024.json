@@ -1,0 +1,19 @@
+{
+  "index": "malleable_illusions_illusionist_2024",
+  "name": "Malleable Illusions",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "illusionist_2024",
+    "name": "Illusionist",
+    "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "When you cast an Illusion spell with a duration of 1 minute or longer, use an Action to change the nature of the illusion."
+  ],
+  "url": "/assets/atlas/features/json/malleable_illusions_illusionist_2024.json"
+}

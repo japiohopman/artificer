@@ -1,0 +1,19 @@
+{
+  "index": "iron_mind_gloom_stalker_2024",
+  "name": "Iron Mind",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "gloom_stalker_2024",
+    "name": "Gloom Stalker",
+    "url": "/assets/atlas/subclasses/json/24/gloom_stalker_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "You gain proficiency in Wisdom saving throws. If you already have it, gain proficiency in Intelligence or Charisma saves."
+  ],
+  "url": "/assets/atlas/features/json/iron_mind_gloom_stalker_2024.json"
+}

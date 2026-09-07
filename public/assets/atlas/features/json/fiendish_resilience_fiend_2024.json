@@ -1,0 +1,19 @@
+{
+  "index": "fiendish_resilience_fiend_2024",
+  "name": "Fiendish Resilience",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "fiend_2024",
+    "name": "Fiend Patron",
+    "url": "/assets/atlas/subclasses/json/24/fiend_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Choose one damage type on Short or Long Rest to gain resistance against (except Force/Psychic)."
+  ],
+  "url": "/assets/atlas/features/json/fiendish_resilience_fiend_2024.json"
+}

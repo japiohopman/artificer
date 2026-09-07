@@ -1,0 +1,19 @@
+{
+  "index": "combat_inspiration_valor_2024",
+  "name": "Combat Inspiration",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "valor_2024",
+    "name": "College of Valor",
+    "url": "/assets/atlas/subclasses/json/24/valor_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Creatures with your Bardic Inspiration die can add it to weapon damage rolls or add it to AC as a Reaction against an incoming attack."
+  ],
+  "url": "/assets/atlas/features/json/combat_inspiration_valor_2024.json"
+}

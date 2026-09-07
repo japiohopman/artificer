@@ -1,0 +1,61 @@
+{
+  "index": "soulknife_2024",
+  "name": "Soulknife",
+  "class": {
+    "index": "rogue",
+    "name": "Rogue",
+    "url": "/assets/atlas/class/json/24/rogue.json"
+  },
+  "desc": [
+    "Soulknives strike with psionic blades forged from pure mental focus, piercing minds and leaping across shadow."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "psychic_blades_soulknife_2024",
+          "name": "Psychic Blades",
+          "url": "/assets/atlas/features/json/psychic_blades_soulknife_2024.json"
+        },
+        {
+          "index": "psionic_power_soulknife_2024",
+          "name": "Psionic Power",
+          "url": "/assets/atlas/features/json/psionic_power_soulknife_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "features": [
+        {
+          "index": "soul_blades_soulknife_2024",
+          "name": "Soul Blades",
+          "url": "/assets/atlas/features/json/soul_blades_soulknife_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "features": [
+        {
+          "index": "psychic_veil_soulknife_2024",
+          "name": "Psychic Veil",
+          "url": "/assets/atlas/features/json/psychic_veil_soulknife_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "features": [
+        {
+          "index": "rend_mind_soulknife_2024",
+          "name": "Rend Mind",
+          "url": "/assets/atlas/features/json/rend_mind_soulknife_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/soulknife_2024.json",
+  "rulesetContext": "2024"
+}

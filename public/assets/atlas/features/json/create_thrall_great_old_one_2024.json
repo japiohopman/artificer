@@ -1,0 +1,19 @@
+{
+  "index": "create_thrall_great_old_one_2024",
+  "name": "Create Thrall",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "great_old_one_2024",
+    "name": "Great Old One Patron",
+    "url": "/assets/atlas/subclasses/json/24/great_old_one_2024.json"
+  },
+  "level": 14,
+  "desc": [
+    "Cast Summon Aberration once per Long Rest without spell slot or material components. The summoned aberration requires no Concentration for you, and gains temporary HP."
+  ],
+  "url": "/assets/atlas/features/json/create_thrall_great_old_one_2024.json"
+}

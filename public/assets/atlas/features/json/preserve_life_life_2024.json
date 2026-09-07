@@ -1,0 +1,19 @@
+{
+  "index": "preserve_life_life_2024",
+  "name": "Channel Divinity: Preserve Life",
+  "class": {
+    "index": "cleric",
+    "name": "Cleric",
+    "url": "/assets/atlas/class/json/24/cleric.json"
+  },
+  "subclass": {
+    "index": "life_domain_2024",
+    "name": "Life Domain",
+    "url": "/assets/atlas/subclasses/json/24/life_domain_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Magic action, restore hit points equal to 5x Cleric level distributed among willing creatures within 30 feet (up to half max HP)."
+  ],
+  "url": "/assets/atlas/features/json/preserve_life_life_2024.json"
+}

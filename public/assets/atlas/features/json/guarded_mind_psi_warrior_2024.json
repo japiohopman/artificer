@@ -1,0 +1,19 @@
+{
+  "index": "guarded_mind_psi_warrior_2024",
+  "name": "Guarded Mind",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior_2024",
+    "name": "Psi Warrior",
+    "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "Gain resistance to Psychic damage, and spend 1 Psionic Energy die to end Charmed or Frightened on yourself."
+  ],
+  "url": "/assets/atlas/features/json/guarded_mind_psi_warrior_2024.json"
+}

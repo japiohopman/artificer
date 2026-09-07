@@ -1,0 +1,61 @@
+{
+  "index": "land_2024",
+  "name": "Circle of the Land",
+  "class": {
+    "index": "druid",
+    "name": "Druid",
+    "url": "/assets/atlas/class/json/24/druid.json"
+  },
+  "desc": [
+    "Druids of the Circle of the Land draw nature magic from specific biomes—arid deserts, lush forests, or polar tundras."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "circle_spells_land_2024",
+          "name": "Circle Spells",
+          "url": "/assets/atlas/features/json/circle_spells_land_2024.json"
+        },
+        {
+          "index": "lands_aid_land_2024",
+          "name": "Land's Aid",
+          "url": "/assets/atlas/features/json/lands_aid_land_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "natural_recovery_land_2024",
+          "name": "Natural Recovery",
+          "url": "/assets/atlas/features/json/natural_recovery_land_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "natures_ward_land_2024",
+          "name": "Nature's Ward",
+          "url": "/assets/atlas/features/json/natures_ward_land_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "natures_sanctuary_land_2024",
+          "name": "Nature's Sanctuary",
+          "url": "/assets/atlas/features/json/natures_sanctuary_land_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/land_2024.json",
+  "rulesetContext": "2024"
+}

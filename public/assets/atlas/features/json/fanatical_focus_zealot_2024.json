@@ -1,0 +1,19 @@
+{
+  "index": "fanatical_focus_zealot_2024",
+  "name": "Fanatical Focus",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "zealot_2024",
+    "name": "Path of the Zealot",
+    "url": "/assets/atlas/subclasses/json/24/zealot_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "If you fail a saving throw while raging, you can reroll it with a bonus equal to your Rage Damage bonus. You must use the new roll."
+  ],
+  "url": "/assets/atlas/features/json/fanatical_focus_zealot_2024.json"
+}

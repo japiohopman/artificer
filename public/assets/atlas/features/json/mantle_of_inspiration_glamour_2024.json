@@ -1,0 +1,19 @@
+{
+  "index": "mantle_of_inspiration_glamour_2024",
+  "name": "Mantle of Inspiration",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "glamour_2024",
+    "name": "College of Glamour",
+    "url": "/assets/atlas/subclasses/json/24/glamour_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As a Bonus Action, spend a Bardic Inspiration die to grant allies within 60 feet Temp HP equal to 2x the roll and allow them to move using their Reaction."
+  ],
+  "url": "/assets/atlas/features/json/mantle_of_inspiration_glamour_2024.json"
+}

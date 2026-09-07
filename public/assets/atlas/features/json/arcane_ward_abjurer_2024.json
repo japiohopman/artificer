@@ -1,0 +1,19 @@
+{
+  "index": "arcane_ward_abjurer_2024",
+  "name": "Arcane Ward",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "abjurer_2024",
+    "name": "Abjurer",
+    "url": "/assets/atlas/subclasses/json/24/abjurer_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "When you cast an Abjuration spell of 1st level or higher, create a protective ward with HP equal to 2x Wizard level + INT mod that absorbs damage."
+  ],
+  "url": "/assets/atlas/features/json/arcane_ward_abjurer_2024.json"
+}

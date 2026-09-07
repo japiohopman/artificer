@@ -1,0 +1,19 @@
+{
+  "index": "telekinetic_movement_psi_warrior_2024",
+  "name": "Telekinetic Movement",
+  "class": {
+    "index": "fighter",
+    "name": "Fighter",
+    "url": "/assets/atlas/class/json/24/fighter.json"
+  },
+  "subclass": {
+    "index": "psi_warrior_2024",
+    "name": "Psi Warrior",
+    "url": "/assets/atlas/subclasses/json/24/psi_warrior_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "Move an object or willing creature within 30 feet up to 30 feet as an action."
+  ],
+  "url": "/assets/atlas/features/json/telekinetic_movement_psi_warrior_2024.json"
+}

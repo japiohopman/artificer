@@ -1,0 +1,61 @@
+{
+  "index": "archfey_2024",
+  "name": "Archfey Patron",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "desc": [
+    "You forged a pact with an Archfey lord or lady of the Feywild, weaving fey steps, glamours, and deceptive mist into combat."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "archfey_spells_2024",
+          "name": "Archfey Spells",
+          "url": "/assets/atlas/features/json/archfey_spells_2024.json"
+        },
+        {
+          "index": "steps_of_the_fey_archfey_2024",
+          "name": "Steps of the Fey",
+          "url": "/assets/atlas/features/json/steps_of_the_fey_archfey_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "misty_escape_archfey_2024",
+          "name": "Misty Escape",
+          "url": "/assets/atlas/features/json/misty_escape_archfey_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "beguiling_defenses_archfey_2024",
+          "name": "Beguiling Defenses",
+          "url": "/assets/atlas/features/json/beguiling_defenses_archfey_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "bewitching_vanish_archfey_2024",
+          "name": "Bewitching Vanish",
+          "url": "/assets/atlas/features/json/bewitching_vanish_archfey_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/archfey_2024.json",
+  "rulesetContext": "2024"
+}

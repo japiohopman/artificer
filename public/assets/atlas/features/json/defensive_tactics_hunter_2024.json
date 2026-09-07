@@ -1,0 +1,19 @@
+{
+  "index": "defensive_tactics_hunter_2024",
+  "name": "Defensive Tactics",
+  "class": {
+    "index": "ranger",
+    "name": "Ranger",
+    "url": "/assets/atlas/class/json/24/ranger.json"
+  },
+  "subclass": {
+    "index": "hunter_2024",
+    "name": "Hunter",
+    "url": "/assets/atlas/subclasses/json/24/hunter_2024.json"
+  },
+  "level": 7,
+  "desc": [
+    "Choose Escape the Horde (Opportunity Attacks against you have Disadvantage) or Multiattack Defense (+4 AC vs follow-up attacks)."
+  ],
+  "url": "/assets/atlas/features/json/defensive_tactics_hunter_2024.json"
+}

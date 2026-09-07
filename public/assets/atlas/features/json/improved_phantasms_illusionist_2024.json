@@ -1,0 +1,19 @@
+{
+  "index": "improved_phantasms_illusionist_2024",
+  "name": "Improved Phantasms",
+  "class": {
+    "index": "wizard",
+    "name": "Wizard",
+    "url": "/assets/atlas/class/json/24/wizard.json"
+  },
+  "subclass": {
+    "index": "illusionist_2024",
+    "name": "Illusionist",
+    "url": "/assets/atlas/subclasses/json/24/illusionist_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "Cast Minor Illusion as a Bonus Action, combining sound and image in a single casting, with casting range doubled to 60 feet."
+  ],
+  "url": "/assets/atlas/features/json/improved_phantasms_illusionist_2024.json"
+}

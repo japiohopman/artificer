@@ -1,0 +1,19 @@
+{
+  "index": "retaliation_berserker_2024",
+  "name": "Retaliation",
+  "class": {
+    "index": "barbarian",
+    "name": "Barbarian",
+    "url": "/assets/atlas/class/json/24/barbarian.json"
+  },
+  "subclass": {
+    "index": "berserker_2024",
+    "name": "Path of the Berserker",
+    "url": "/assets/atlas/subclasses/json/24/berserker_2024.json"
+  },
+  "level": 10,
+  "desc": [
+    "When you take damage from a creature that is within 5 feet of you, you can use your Reaction to make one melee weapon or Unarmed Strike attack against that creature."
+  ],
+  "url": "/assets/atlas/features/json/retaliation_berserker_2024.json"
+}

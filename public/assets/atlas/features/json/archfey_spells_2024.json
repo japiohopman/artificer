@@ -1,0 +1,19 @@
+{
+  "index": "archfey_spells_2024",
+  "name": "Archfey Spells",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "subclass": {
+    "index": "archfey_2024",
+    "name": "Archfey Patron",
+    "url": "/assets/atlas/subclasses/json/24/archfey_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "You always have prepared patron spells (Faerie Fire, Sleep, Misty Step, Phantasmal Force, Blink, Plant Growth, etc.)."
+  ],
+  "url": "/assets/atlas/features/json/archfey_spells_2024.json"
+}

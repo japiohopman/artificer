@@ -1,0 +1,19 @@
+{
+  "index": "magical_discoveries_lore_2024",
+  "name": "Magical Discoveries",
+  "class": {
+    "index": "bard",
+    "name": "Bard",
+    "url": "/assets/atlas/class/json/24/bard.json"
+  },
+  "subclass": {
+    "index": "lore_2024",
+    "name": "College of Lore",
+    "url": "/assets/atlas/subclasses/json/24/lore_2024.json"
+  },
+  "level": 6,
+  "desc": [
+    "You learn two spells of your choice. Each spell can come from the Cleric, Druid, or Wizard spell list, in any combination. Each chosen spell must be either a cantrip or a spell for which you have spell slots, according to the Bard Features table. You always have the chosen spells prepared. Whenever you gain a Bard level, you can replace one of those spells with another spell meeting the same requirements. The chosen spells count as Bard spells for you."
+  ],
+  "url": "/assets/atlas/features/json/magical_discoveries_lore_2024.json"
+}

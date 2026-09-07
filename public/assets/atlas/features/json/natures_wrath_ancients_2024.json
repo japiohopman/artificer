@@ -1,0 +1,19 @@
+{
+  "index": "natures_wrath_ancients_2024",
+  "name": "Channel Divinity: Nature's Wrath",
+  "class": {
+    "index": "paladin",
+    "name": "Paladin",
+    "url": "/assets/atlas/class/json/24/paladin.json"
+  },
+  "subclass": {
+    "index": "ancients_2024",
+    "name": "Oath of the Ancients",
+    "url": "/assets/atlas/subclasses/json/24/ancients_2024.json"
+  },
+  "level": 3,
+  "desc": [
+    "As an Action or Bonus Action, cause spectral vines to entangle a foe within 15 feet (STR/DEX save or Restrained)."
+  ],
+  "url": "/assets/atlas/features/json/natures_wrath_ancients_2024.json"
+}

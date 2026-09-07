@@ -1,0 +1,61 @@
+{
+  "index": "celestial_2024",
+  "name": "Celestial Patron",
+  "class": {
+    "index": "warlock",
+    "name": "Warlock",
+    "url": "/assets/atlas/class/json/24/warlock.json"
+  },
+  "desc": [
+    "You struck a pact with a celestial power of the Upper Planes, channeling radiant light, healing flames, and divine protection."
+  ],
+  "subclass_levels": [
+    {
+      "level": 3,
+      "features": [
+        {
+          "index": "celestial_spells_2024",
+          "name": "Celestial Spells",
+          "url": "/assets/atlas/features/json/celestial_spells_2024.json"
+        },
+        {
+          "index": "healing_light_celestial_2024",
+          "name": "Healing Light",
+          "url": "/assets/atlas/features/json/healing_light_celestial_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features": [
+        {
+          "index": "radiant_soul_celestial_2024",
+          "name": "Radiant Soul",
+          "url": "/assets/atlas/features/json/radiant_soul_celestial_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features": [
+        {
+          "index": "celestial_resilience_celestial_2024",
+          "name": "Celestial Resilience",
+          "url": "/assets/atlas/features/json/celestial_resilience_celestial_2024.json"
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features": [
+        {
+          "index": "searing_vengeance_celestial_2024",
+          "name": "Searing Vengeance",
+          "url": "/assets/atlas/features/json/searing_vengeance_celestial_2024.json"
+        }
+      ]
+    }
+  ],
+  "url": "/assets/atlas/subclasses/json/24/celestial_2024.json",
+  "rulesetContext": "2024"
+}
