@@ -1,0 +1,50 @@
+{
+  "index": "sage",
+  "name": "Sage",
+  "description": "You spent years learning the lore of the multiverse, scribing manuscripts and studying ancient texts.",
+  "feature": {
+    "name": "Researcher",
+    "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_arcana",
+      "name": "Skill: Arcana",
+      "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
+    },
+    {
+      "index": "skill_history",
+      "name": "Skill: History",
+      "url": "/assets/atlas/proficiencies/json/skill_history.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "book",
+        "name": "Book",
+        "url": "/assets/atlas/equipment/json/book.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/sage.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/sage.json"
+}

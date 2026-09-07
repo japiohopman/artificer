@@ -1,0 +1,55 @@
+{
+  "index": "criminal",
+  "name": "Criminal",
+  "description": "You are an experienced criminal with a history of breaking the law and surviving by your wits.",
+  "feature": {
+    "name": "Criminal Contact",
+    "desc": "You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_deception",
+      "name": "Skill: Deception",
+      "url": "/assets/atlas/proficiencies/json/skill_deception.json"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "crowbar",
+        "name": "Crowbar",
+        "url": "/assets/atlas/equipment/json/crowbar.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Dark Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 15
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/criminal.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/criminal.json"
+}

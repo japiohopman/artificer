@@ -1,0 +1,74 @@
+{
+  "index": "acolyte",
+  "name": "Acolyte",
+  "description": "You have spent your life in service to a temple, learning sacred rites and providing sacrifices to gods.",
+  "feature": {
+    "name": "Shelter of the Faithful",
+    "desc": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight",
+      "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+    },
+    {
+      "index": "skill_religion",
+      "name": "Skill: Religion",
+      "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+    }
+  ],
+  "languages": 2,
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "amulet",
+        "name": "Amulet",
+        "url": "/assets/atlas/equipment/json/amulet.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "book",
+        "name": "Prayer Book",
+        "url": "/assets/atlas/equipment/json/book.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Vestments",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 15
+    }
+  ],
+  "suggested_characteristics": {
+    "traits": [
+      "I idolize a particular hero of my faith.",
+      "I can find common ground between the fiercest enemies."
+    ],
+    "ideals": [
+      "Tradition. The ancient traditions of worship must be preserved."
+    ],
+    "bonds": [
+      "I would die to recover an ancient relic of my faith."
+    ],
+    "flaws": [
+      "I judge others harshly, and myself even more severely."
+    ]
+  },
+  "image": "/assets/ui/official/backgrounds/acolyte.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/acolyte.json"
+}

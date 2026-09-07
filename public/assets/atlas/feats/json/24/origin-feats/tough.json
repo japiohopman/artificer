@@ -1,0 +1,15 @@
+{
+  "index": "tough",
+  "name": "tough",
+  "prerequisites": [],
+  "desc": [
+    "Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit points."
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "hp_bonus_per_level": 2
+    }
+  },
+  "rulesetContext": "2024",
+  "url": "/assets/atlas/feats/json/24/origin-feats/tough.json"
+}

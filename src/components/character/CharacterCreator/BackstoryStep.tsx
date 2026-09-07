@@ -25,7 +25,7 @@ export const BackstoryStep: React.FC<BackstoryStepProps> = ({ newChar, setNewCha
   const loadBackgroundData = async (index: string) => {
     setLoadingBg(true);
     try {
-      const data = await fetchBackgroundJson(index);
+      const data = await fetchBackgroundJson(index, newChar.ruleset);
       setBackgroundData(data);
     } catch (e) {
       console.error("Failed to load background json", e);

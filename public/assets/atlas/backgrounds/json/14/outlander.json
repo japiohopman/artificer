@@ -1,0 +1,50 @@
+{
+  "index": "outlander",
+  "name": "Outlander",
+  "description": "You grew up in the wilds, far from civilization and the comforts of town and technology.",
+  "feature": {
+    "name": "Wanderer",
+    "desc": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics",
+      "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival",
+      "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "staff",
+        "name": "Staff",
+        "url": "/assets/atlas/equipment/json/staff.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/guide.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/outlander.json"
+}

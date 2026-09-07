@@ -22,9 +22,12 @@
     2024 Subclasses & Subclass Features
     ✓ 48/48 canonical subclasses fully audited and implemented across all 12 core classes (4 subclasses per class)
 
-    Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells.
+    2024 Backgrounds & Origins Foundation
+    ✓ 16/16 PHB Origin Backgrounds, 10 Origin Feats, ability score choice model (+2/+1 or +1/+1/+1), official markdown lore guides (/ui/official/backgrounds/*.md), and ruleset-aware resolution in Character Creator
+
+    Next active dependency: 2024 Feats integration / 2024 Spells migration.
   - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (12/12 core classes complete) → 2024 Subclasses & Subclass Features (48/48 subclasses complete across 12 core classes) → 2024 Backgrounds/Origins (pending) → Feats integration → Spells → remaining rules-sensitive domains → complete ruleset integration tests.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (12/12 core classes complete) → 2024 Subclasses & Subclass Features (48/48 subclasses complete across 12 core classes) → 2024 Backgrounds/Origins (implemented) → Feats integration (pending) → Spells (pending) → remaining rules-sensitive domains → complete ruleset integration tests.
   - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
   - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths; no fake/generic placeholder feature definitions exist.
   - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.

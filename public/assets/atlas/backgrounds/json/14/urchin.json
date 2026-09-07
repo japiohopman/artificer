@@ -1,0 +1,60 @@
+{
+  "index": "urchin",
+  "name": "Urchin",
+  "description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or to provide for you.",
+  "feature": {
+    "name": "City Secrets",
+    "desc": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_sleight_of_hand",
+      "name": "Skill: Sleight of Hand",
+      "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
+    },
+    {
+      "index": "skill_stealth",
+      "name": "Skill: Stealth",
+      "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
+    },
+    {
+      "index": "disguise_kit",
+      "name": "Disguise Kit",
+      "url": "/assets/atlas/proficiencies/json/disguise_kit.json"
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/assets/atlas/equipment/json/dagger.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/wayfarer.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/urchin.json"
+}

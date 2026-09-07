@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
-import { fetchSpeciesData, fetchSubraceData } from '../../../services/storageService';
+import { fetchSpeciesData, fetchSubraceData, fetchBackgroundData } from '../../../services/storageService';
 import { soundService } from '../../../services/soundService';
 import { diceService } from '../../../dice_roller/diceService';
 import { useGameStore } from '../../../store/useGameStore';
@@ -16,6 +16,7 @@ export const StatsStep: React.FC<{
 }> = ({ newChar, setNewChar }) => {
   const [speciesData, setSpeciesData] = useState<any>(null);
   const [subraceData, setSubraceData] = useState<any>(null);
+  const [backgroundData, setBackgroundData] = useState<any>(null);
   const [isRolling, setIsRolling] = useState(false);
   const [pool, setPool] = useState<number[]>([15, 14, 13, 12, 10, 8]);
   const [poolType, setPoolType] = useState<'standard' | 'pointbuy' | 'rolled'>('standard');
@@ -34,6 +35,7 @@ export const StatsStep: React.FC<{
   useEffect(() => {
     if (newChar.race) fetchSpeciesData(newChar.race, newChar.ruleset).then(setSpeciesData);
     if (newChar.subrace) fetchSubraceData(newChar.subrace).then(setSubraceData);
+    if (newChar.background) fetchBackgroundData(newChar.background, newChar.ruleset).then(setBackgroundData);
 
     if (newChar.stats && Object.keys(assignments).length === 0) {
       const initial: Record<string, number> = {};
@@ -42,7 +44,7 @@ export const StatsStep: React.FC<{
       });
       setAssignments(initial);
     }
-  }, [newChar.race, newChar.subrace]);
+  }, [newChar.race, newChar.subrace, newChar.background, newChar.ruleset]);
 
   const handleAssign = (stat: keyof Character['stats'], value: number) => {
     const newAssignments = { ...assignments, [stat]: value };
@@ -121,13 +123,23 @@ export const StatsStep: React.FC<{
   const getBonus = (stat: string) => {
     let bonus = 0;
     const sKey = stat.toLowerCase();
-    if (speciesData?.ability_bonuses) {
-      const b = speciesData.ability_bonuses.find((ab: any) => ab.ability_score.index === sKey || ab.ability_score.name.toLowerCase().includes(sKey));
-      if (b) bonus += b.bonus;
-    }
-    if (subraceData?.ability_bonuses) {
-      const b = subraceData.ability_bonuses.find((ab: any) => ab.ability_score.index === sKey || ab.ability_score.name.toLowerCase().includes(sKey));
-      if (b) bonus += b.bonus;
+
+    if (newChar.ruleset === '2024') {
+      const bgChoices = newChar.choices?.background_ability_scores || [];
+      bgChoices.forEach((choiceStat: string) => {
+        if (choiceStat.toLowerCase() === sKey) {
+          bonus += 1;
+        }
+      });
+    } else {
+      if (speciesData?.ability_bonuses) {
+        const b = speciesData.ability_bonuses.find((ab: any) => ab.ability_score.index === sKey || ab.ability_score.name.toLowerCase().includes(sKey));
+        if (b) bonus += b.bonus;
+      }
+      if (subraceData?.ability_bonuses) {
+        const b = subraceData.ability_bonuses.find((ab: any) => ab.ability_score.index === sKey || ab.ability_score.name.toLowerCase().includes(sKey));
+        if (b) bonus += b.bonus;
+      }
     }
     return bonus;
   };
@@ -192,6 +204,90 @@ export const StatsStep: React.FC<{
           </button>
         </div>
       </div>
+
+      {/* 2024 Background Ability Score Increases Selection */}
+      {newChar.ruleset === '2024' && backgroundData?.allowed_ability_scores && (
+        <div className="p-4 bg-dragon-gold/10 border border-dragon-gold/30 rounded-sm space-y-3">
+          <div className="flex justify-between items-center">
+            <span className="text-xs font-header font-black text-dragon-darkRed uppercase tracking-wider flex items-center gap-2">
+              <GameIcon name="scroll" size={14} color="#8B0000" />
+              2024 Background Ability Score Increases ({backgroundData.name})
+            </span>
+            <div className="flex gap-2">
+              <button
+                onClick={() => {
+                  const allowed = backgroundData.allowed_ability_scores;
+                  if (allowed.length >= 2) {
+                    const choices = { ...(newChar.choices || {}), background_ability_scores: [allowed[0], allowed[0], allowed[1]] };
+                    setNewChar({ ...newChar, choices });
+                    soundService.playEffect('UI_CLICK_LIGHT');
+                  }
+                }}
+                className="px-2.5 py-1 bg-white/80 border border-dragon-gold/40 text-[9px] font-black text-dragon-darkRed uppercase rounded hover:bg-white"
+              >
+                Preset (+2 / +1)
+              </button>
+              <button
+                onClick={() => {
+                  const allowed = backgroundData.allowed_ability_scores;
+                  if (allowed.length >= 3) {
+                    const choices = { ...(newChar.choices || {}), background_ability_scores: [allowed[0], allowed[1], allowed[2]] };
+                    setNewChar({ ...newChar, choices });
+                    soundService.playEffect('UI_CLICK_LIGHT');
+                  }
+                }}
+                className="px-2.5 py-1 bg-white/80 border border-dragon-gold/40 text-[9px] font-black text-dragon-darkRed uppercase rounded hover:bg-white"
+              >
+                Preset (+1 / +1 / +1)
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-2">
+            {backgroundData.allowed_ability_scores.map((statKey: string) => {
+              const bgChoices = newChar.choices?.background_ability_scores || [];
+              const statCount = bgChoices.filter((s: string) => s.toLowerCase() === statKey.toLowerCase()).length;
+
+              return (
+                <div key={statKey} className="p-2.5 bg-white/80 border border-dragon-gold/20 rounded flex items-center justify-between">
+                  <span className="text-xs font-header font-black text-dragon-darkRed uppercase">{labels[statKey] || statKey}</span>
+                  <div className="flex items-center gap-1">
+                    <button
+                      disabled={statCount <= 0}
+                      onClick={() => {
+                        const newBgChoices = [...bgChoices];
+                        const idx = newBgChoices.findIndex((s: string) => s.toLowerCase() === statKey.toLowerCase());
+                        if (idx !== -1) {
+                          newBgChoices.splice(idx, 1);
+                          const choices = { ...(newChar.choices || {}), background_ability_scores: newBgChoices };
+                          setNewChar({ ...newChar, choices });
+                          soundService.playEffect('UI_CLICK_LIGHT');
+                        }
+                      }}
+                      className="w-6 h-6 bg-dragon-red/10 text-dragon-darkRed font-black rounded hover:bg-dragon-red hover:text-white transition-colors disabled:opacity-20 flex items-center justify-center text-xs"
+                    >
+                      -
+                    </button>
+                    <span className="w-6 text-center text-xs font-black text-dragon-red">+{statCount}</span>
+                    <button
+                      disabled={bgChoices.length >= 3}
+                      onClick={() => {
+                        const newBgChoices = [...bgChoices, statKey];
+                        const choices = { ...(newChar.choices || {}), background_ability_scores: newBgChoices };
+                        setNewChar({ ...newChar, choices });
+                        soundService.playEffect('UI_CLICK_LIGHT');
+                      }}
+                      className="w-6 h-6 bg-dragon-red/10 text-dragon-darkRed font-black rounded hover:bg-dragon-red hover:text-white transition-colors disabled:opacity-20 flex items-center justify-center text-xs"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <div className="flex-1 flex gap-6 overflow-hidden">
         {/* Attributes Column */}

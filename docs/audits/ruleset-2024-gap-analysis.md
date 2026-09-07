@@ -35,10 +35,13 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Found
 2024 Subclasses & Subclass Features (All 12 Core Classes)
 ✓ 48/48 canonical subclasses fully audited and verified across all 12 core classes (4 subclasses per class)
 
-Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells
+2024 Backgrounds & Origins Foundation
+✓ 16/16 PHB Origin Backgrounds in /backgrounds/json/24/, 10 Origin Feats in /feats/json/24/origin-feats/, ability score choice model (+2/+1 or +1/+1/+1), official markdown lore guides (/ui/official/backgrounds/*.md), and ruleset-aware resolution in Character Creator
+
+Next active dependency: 2024 Feats integration / 2024 Spells migration
 ```
 
-Backgrounds/Origins and Spells currently resolve shared/unversioned classic 2014 data, while Subclasses resolve versioned `/24/` data for all 48 canonical 2024 subclasses across all 12 core classes.
+Spells currently resolve unversioned classic 2014 data, while Backgrounds, Subclasses, Species, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
 
 Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Subclasses (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
@@ -56,7 +59,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Class Progressions (1-20)** | Supported | **Implemented (12/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for all 12 core classes. |
 | **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
 | **Subclasses & Subclass Features** | Supported | **Implemented (48/48)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). All 48 canonical 2024 subclasses audited and implemented across all 12 core classes (4 per class) with ruleset-aware resolution. |
-| **Backgrounds / Origins** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/backgrounds/json/`. 2024 Origin Feats and +3 ability score choices are missing. |
+| **Backgrounds / Origins** | Supported | **Implemented (16/16)** | Versioned directories exist (`/backgrounds/json/14/` vs `/24/`). All 16 2024 PHB Origin Backgrounds implemented with allowed ability scores, canonical Origin Feats, proficiencies, equipment, and official markdown guides in `/ui/official/backgrounds/*.md`. Loader returns `rulesetContext`. |
 | **Feats** | Supported | **Partial** | Versioned directories exist (`/feats/json/14/` vs `/24/`). 2024 origin, general, and epic boon feats populated in `/24/`. |
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
 | **Spells** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/spell/json/`. 2024 spell text/scaling updates missing. |
@@ -82,4 +85,5 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
 - `fetchSubclassData(index, ruleset)`: Checks `/assets/atlas/subclasses/json/14/` vs `/24/`.
+- `fetchBackgroundData(index, ruleset)`: Checks `/assets/atlas/backgrounds/json/14/` vs `/24/`.
 - `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `bend_luck_wild_magic_2024`, `elemental_epitome_elements_2024`, `quivering_palm_open_hand_2024`).
