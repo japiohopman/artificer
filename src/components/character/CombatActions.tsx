@@ -120,7 +120,7 @@ export const CombatActions: React.FC = () => {
 
     const actions = weapons.map(([slot, w]: [string, any]) => {
       const styles = (activeCharacter.choices?.['fighting-style'] || []).map((s: string) => s.toLowerCase());
-      const hasDueling = styles.some((s: string) => s === 'dueling' || s.includes('dueling'));
+      const hasDueling = styles.some(s => s === 'dueling' || s.includes('dueling'));
       
       const isRanged = w.weapon_range === 'Ranged' || w.index?.includes('bow') || w.index?.includes('crossbow');
       const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse');
@@ -317,7 +317,7 @@ export const CombatActions: React.FC = () => {
       // Fighting Styles
       const styles = (activeCharacter.choices?.['fighting-style'] || []).map((s: string) => s.toLowerCase());
       
-      if (styles.some((s: string) => s === 'archery' || s.includes('archery'))) {
+      if (styles.some(s => s === 'archery' || s.includes('archery'))) {
         actions.push(
           <CombatActionCard 
             key="archery"
@@ -334,7 +334,7 @@ export const CombatActions: React.FC = () => {
         );
       }
       
-      if (styles.some((s: string) => s === 'defense' || s.includes('defense'))) {
+      if (styles.some(s => s === 'defense' || s.includes('defense'))) {
         actions.push(
           <CombatActionCard 
             key="defense"
@@ -351,7 +351,7 @@ export const CombatActions: React.FC = () => {
         );
       }
 
-      if (styles.some((s: string) => s === 'great weapon fighting' || s.includes('great_weapon') || s.includes('great-weapon'))) {
+      if (styles.some(s => s === 'great weapon fighting' || s.includes('great_weapon') || s.includes('great-weapon'))) {
         actions.push(
           <CombatActionCard 
             key="gwf"
@@ -367,7 +367,7 @@ export const CombatActions: React.FC = () => {
           />
         );
       }
-      if (styles.some((s: string) => s === 'dueling' || s.includes('dueling'))) {
+      if (styles.some(s => s === 'dueling' || s.includes('dueling'))) {
         actions.push(
           <CombatActionCard 
             key="dueling"
@@ -383,7 +383,7 @@ export const CombatActions: React.FC = () => {
           />
         );
       }
-      if (styles.some((s: string) => s === 'protection' || s.includes('protection'))) {
+      if (styles.some(s => s === 'protection' || s.includes('protection'))) {
         actions.push(
           <CombatActionCard 
             key="protection"
