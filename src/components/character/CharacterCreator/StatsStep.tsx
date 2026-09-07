@@ -166,7 +166,13 @@ export const StatsStep: React.FC<{
   const validation = validate2024BackgroundAbilityScores(currentAllocations, allowedAbilities);
 
   const handleUpdate2024Allocations = (newAllocations: BackgroundAbilityScoreAllocations) => {
-    const choices = { ...(newChar.choices || {}), background_ability_scores: newAllocations };
+    const arrayChoices: string[] = [];
+    for (const [stat, bonus] of Object.entries(newAllocations)) {
+      for (let i = 0; i < bonus; i++) {
+        arrayChoices.push(stat.toLowerCase());
+      }
+    }
+    const choices = { ...(newChar.choices || {}), background_ability_scores: arrayChoices };
     setNewChar({ ...newChar, choices });
     soundService.playEffect('UI_CLICK_LIGHT');
   };
