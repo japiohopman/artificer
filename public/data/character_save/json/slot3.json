@@ -5,107 +5,94 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 10,
-    "dex": 10,
-    "con": 10,
-    "int": 10,
-    "wis": 10,
-    "cha": 10
+    "str": 14,
+    "dex": 15,
+    "con": 11,
+    "int": 16,
+    "wis": 16,
+    "cha": 16
   },
   "proficiencies": [
-    "skill: perception",
+    "Skill: Sleight Of Hand",
     "Skill: Stealth",
-    "Skill: Survival",
-    "Cartographer'S Tools",
+    "Thieves' Tools",
     "light armor",
     "medium armor",
     "shields",
     "simple weapons",
-    "saving throw: wis",
-    "saving throw: cha",
-    "Saving Throw: wis",
-    "Saving Throw: cha"
+    "martial weapons",
+    "saving throw: dex",
+    "saving throw: str",
+    "Saving Throw: str",
+    "Saving Throw: dex"
   ],
   "traits": [
     {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
+      "name": "resourceful",
+      "index": "resourceful",
+      "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
     },
     {
-      "name": "elven lineage",
-      "index": "elven_lineage",
-      "desc": "You are part of an elven lineage (Drow, High Elf, or Wood Elf) that grants you supernatural cantrips and spells as you level up."
+      "name": "skillful",
+      "index": "skillful",
+      "desc": "You gain proficiency in one skill of your choice."
     },
     {
-      "name": "fey ancestry",
-      "index": "fey_ancestry",
-      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against being charmed",
-              "condition": {
-                "index": "charmed",
-                "name": "charmed",
-                "url": "/assets/atlas/conditions/json/charmed.json"
-              }
-            }
-          ],
-          "immunity": [
-            {
-              "name": "magic sleep"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "keen senses",
-      "index": "keen_senses",
-      "desc": "You have proficiency in the Perception skill."
-    },
-    {
-      "name": "trance",
-      "index": "trance",
-      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+      "name": "versatile",
+      "index": "versatile",
+      "desc": "You gain an Origin feat of your choice. Skilled is recommended."
     }
   ],
   "features": [
     {
-      "index": "spellcasting_cleric_2024",
-      "name": "Spellcasting: Cleric",
+      "index": "spellcasting_ranger_2024",
+      "name": "Spellcasting: Ranger",
       "class": {
-        "index": "cleric",
-        "name": "Cleric",
-        "url": "/assets/atlas/class/json/24/cleric.json"
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/assets/atlas/class/json/24/ranger.json"
       },
       "level": 1,
       "desc": [
-        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
+        "Cast Ranger spells using Wisdom as spellcasting ability."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_ranger_2024.json",
       "source": "Class"
     },
     {
-      "index": "divine_order_cleric",
-      "name": "Divine Order",
+      "index": "favored_enemy_2024",
+      "name": "Favored Enemy",
       "class": {
-        "index": "cleric",
-        "name": "Cleric",
-        "url": "/assets/atlas/class/json/24/cleric.json"
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/assets/atlas/class/json/24/ranger.json"
       },
       "level": 1,
       "desc": [
-        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
+        "Always have Hunter's Mark prepared. Cast it without a spell slot 2 times at L1, scaling up to 6 times at L17. Regain uses on Long Rest."
       ],
-      "url": "/assets/atlas/features/json/divine_order_cleric.json",
+      "feature_specific": {
+        "uses_at_level_1": 2
+      },
+      "url": "/assets/atlas/features/json/favored_enemy_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "weapon_mastery_ranger_2024",
+      "name": "Weapon Mastery",
+      "class": {
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/assets/atlas/class/json/24/ranger.json"
+      },
+      "level": 1,
+      "desc": [
+        "Mastery properties of two simple or martial weapons of your choice."
+      ],
+      "feature_specific": {
+        "mastery_count": 2
+      },
+      "url": "/assets/atlas/features/json/weapon_mastery_ranger_2024.json",
       "source": "Class"
     }
   ],
@@ -128,73 +115,64 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": [],
-    "weightScale": 1.1,
-    "heightScale": 1.04
+    "specialFeatures": []
   },
   "items": {
-    "shield_ubdt3sdo6": {
-      "id": "shield_ubdt3sdo6",
-      "template": "shield",
+    "longbow_geeyqfqn7": {
+      "id": "longbow_geeyqfqn7",
+      "template": "longbow",
       "quantity": 1,
-      "addedAt": 1788771172451,
-      "kind": "shield"
-    },
-    "bedroll_nprcdxw0s": {
-      "id": "bedroll_nprcdxw0s",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1788771172451,
-      "kind": "tradegood"
-    },
-    "shortbow_sw9lee5h9": {
-      "id": "shortbow_sw9lee5h9",
-      "template": "shortbow",
-      "quantity": 1,
-      "addedAt": 1788771172451,
+      "addedAt": 1788777807933,
       "kind": "weapon"
     },
-    "arrow_ac57k2xji": {
-      "id": "arrow_ac57k2xji",
+    "arrow_svgdsknl5": {
+      "id": "arrow_svgdsknl5",
       "template": "arrow",
       "quantity": 20,
-      "addedAt": 1788771172452,
+      "addedAt": 1788777807933,
       "kind": "consumable"
     },
-    "gold_je5pa7yhj": {
-      "id": "gold_je5pa7yhj",
-      "template": "gold",
-      "quantity": 3,
-      "addedAt": 1788771172452,
-      "kind": "currency"
-    },
-    "scale_mail_6178v826f": {
-      "id": "scale_mail_6178v826f",
-      "template": "scale_mail",
+    "crowbar_til8v16kz": {
+      "id": "crowbar_til8v16kz",
+      "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1788771223674,
-      "kind": "armor"
+      "addedAt": 1788777807933,
+      "kind": "tradegood"
     },
-    "dagger_lw2wyzyco": {
-      "id": "dagger_lw2wyzyco",
+    "dagger_xvk195n0s": {
+      "id": "dagger_xvk195n0s",
       "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1788771234565,
+      "quantity": 2,
+      "addedAt": 1788777807933,
       "kind": "weapon"
     },
-    "priests_pack_mr7zm2ldt": {
-      "id": "priests_pack_mr7zm2ldt",
-      "template": "priests_pack",
+    "gold_wj9fyagcf": {
+      "id": "gold_wj9fyagcf",
+      "template": "gold",
+      "quantity": 16,
+      "addedAt": 1788777807933,
+      "kind": "currency"
+    },
+    "scale_mail_xd26fjwfq": {
+      "id": "scale_mail_xd26fjwfq",
+      "template": "scale_mail",
       "quantity": 1,
-      "addedAt": 1788771251022,
+      "addedAt": 1788777829379,
+      "kind": "armor"
+    },
+    "dungeoneers_pack_itbg6skp4": {
+      "id": "dungeoneers_pack_itbg6skp4",
+      "template": "dungeoneers_pack",
+      "quantity": 1,
+      "addedAt": 1788777844352,
       "kind": "container"
     },
-    "emblem_uds9e9uel": {
-      "id": "emblem_uds9e9uel",
-      "template": "emblem",
+    "sickle_lxyrln8e9": {
+      "id": "sickle_lxyrln8e9",
+      "template": "sickle",
       "quantity": 1,
-      "addedAt": 1788771275520,
-      "kind": "equipment"
+      "addedAt": 1788777856942,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -205,43 +183,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "bedroll_nprcdxw0s"
+          "itemId": "arrow_svgdsknl5"
         },
         {
           "id": "bag_1",
-          "itemId": "arrow_ac57k2xji"
+          "itemId": "crowbar_til8v16kz"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_je5pa7yhj"
+          "itemId": "dagger_xvk195n0s"
         },
         {
           "id": "bag_3",
-          "itemId": "scale_mail_rq1iquj4i"
+          "itemId": "gold_wj9fyagcf"
         },
         {
           "id": "bag_4",
-          "itemId": "dagger_lw2wyzyco"
+          "itemId": "scale_mail_h42qg59dg"
         },
         {
           "id": "bag_5",
-          "itemId": "dagger_6esynh831"
+          "itemId": "dungeoneers_pack_itbg6skp4"
         },
         {
           "id": "bag_6",
-          "itemId": "priests_pack_mr7zm2ldt"
+          "itemId": "dungeoneers_pack_h3b0kzoqv"
         },
         {
           "id": "bag_7",
-          "itemId": "priests_pack_s5m2p77hs"
+          "itemId": "sickle_lxyrln8e9"
         },
         {
           "id": "bag_8",
-          "itemId": "emblem_uds9e9uel"
+          "itemId": "sickle_honkplmbs"
         },
         {
           "id": "bag_9",
-          "itemId": "emblem_fk0gkwrbz"
+          "itemId": null
         },
         {
           "id": "bag_10",
@@ -307,11 +285,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "shortbow_sw9lee5h9"
+        "itemId": "longbow_geeyqfqn7"
       },
       {
         "id": "off_hand",
-        "itemId": "shield_ubdt3sdo6"
+        "itemId": null
       },
       {
         "id": "ranged",
@@ -323,7 +301,7 @@
       },
       {
         "id": "chest",
-        "itemId": "scale_mail_6178v826f"
+        "itemId": "scale_mail_xd26fjwfq"
       },
       {
         "id": "clothes",
@@ -425,342 +403,726 @@
   },
   "backpack": [
     {
-      "id": "cartographers_tools_8uklydoka",
-      "index": "cartographers_tools",
-      "name": "Cartographer'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit",
+      "url": "/assets/atlas/equipment/json/herbalism_kit.json",
+      "quantity": 1
     },
     {
-      "id": "bedroll_jmth6jujb",
       "index": "bedroll",
       "name": "Bedroll",
-      "quantity": 1,
-      "weight": 7,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/bedroll.json",
-      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
-      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
-      "desc": [
-        "Roll of cloth used by traveller to sleep in."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/bedroll.webp",
-      "updated_at": "2026-07-12T19:00:14.010Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 2,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "category": "Adventuring Gear",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "quiver_xv1sijjka",
-      "index": "quiver",
-      "name": "Quiver",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/quiver.json",
-      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
-      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
     },
     {
-      "id": "arrow_jrwmwa3s3",
-      "index": "arrow",
-      "name": "Arrow",
-      "quantity": 20,
-      "weight": 0.05,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/arrow.json",
-      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
-      "desc": [
-        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
-      ],
-      "special": [],
-      "kind": "consumable",
-      "cost": {
-        "quantity": 5,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/arrow.webp",
-      "updated_at": "2026-07-12T19:00:11.722Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 8,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
-      "category": "Ammunition",
-      "rulesetContext": "2014"
+      "index": "quarterstaff",
+      "name": "Quarterstaff",
+      "url": "/assets/atlas/equipment/json/quarterstaff.json",
+      "quantity": 1
     },
     {
-      "id": "clothes_travelers_i45rnqos1",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_msj4pygtl",
       "index": "gold",
       "name": "Gold",
-      "quantity": 3,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
-    }
-  ],
-  "inventory": {
-    "main-hand": {
-      "id": "shortbow_hh42xskpb",
+      "quantity": 15
+    },
+    {
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 22
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit",
+      "url": "/assets/atlas/equipment/json/herbalism_kit.json",
+      "quantity": 1
+    },
+    {
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "quarterstaff",
+      "name": "Quarterstaff",
+      "url": "/assets/atlas/equipment/json/quarterstaff.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 15
+    },
+    {
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "quantity": 1
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "amulet",
+      "name": "Amulet",
+      "url": "/assets/atlas/equipment/json/amulet.json",
+      "quantity": 1
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "quantity": 10
+    },
+    {
+      "index": "robes",
+      "name": "Robes",
+      "url": "/assets/atlas/equipment/json/robes.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 8
+    },
+    {
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
+    },
+    {
+      "index": "scale_merchants",
+      "name": "Scale Merchant'S",
+      "url": "/assets/atlas/equipment/json/scale_merchants.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 25
+    },
+    {
+      "index": "forgery_kit",
+      "name": "Forgery Kit",
+      "url": "/assets/atlas/equipment/json/forgery_kit.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_costume",
+      "name": "Clothes Costume",
+      "url": "/assets/atlas/equipment/json/clothes_costume.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_fine",
+      "name": "Clothes Fine",
+      "url": "/assets/atlas/equipment/json/clothes_fine.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 15
+    },
+    {
+      "index": "forgery_kit",
+      "name": "Forgery Kit",
+      "url": "/assets/atlas/equipment/json/forgery_kit.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_costume",
+      "name": "Clothes Costume",
+      "url": "/assets/atlas/equipment/json/clothes_costume.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_fine",
+      "name": "Clothes Fine",
+      "url": "/assets/atlas/equipment/json/clothes_fine.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 15
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
+    },
+    {
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 16
+    },
+    {
+      "index": "clothes_costume",
+      "name": "Clothes Costume",
+      "url": "/assets/atlas/equipment/json/clothes_costume.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 11
+    },
+    {
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "quantity": 1
+    },
+    {
+      "index": "sickle",
+      "name": "Sickle",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 23
+    },
+    {
+      "index": "dice_set",
+      "name": "Dice Set",
+      "url": "/assets/atlas/equipment/json/dice_set.json",
+      "quantity": 1
+    },
+    {
+      "index": "lantern_hooded",
+      "name": "Lantern Hooded",
+      "url": "/assets/atlas/equipment/json/lantern_hooded.json",
+      "quantity": 1
+    },
+    {
+      "index": "manacles",
+      "name": "Manacles",
+      "url": "/assets/atlas/equipment/json/manacles.json",
+      "quantity": 1
+    },
+    {
+      "index": "quiver",
+      "name": "Quiver",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "quantity": 1
+    },
+    {
+      "index": "spear",
+      "name": "Spear",
+      "url": "/assets/atlas/equipment/json/spear.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 12
+    },
+    {
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
+      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
+    },
+    {
+      "index": "quiver",
+      "name": "Quiver",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "quantity": 1
+    },
+    {
       "index": "shortbow",
       "name": "Shortbow",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/shortbow.json",
-      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
-      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
-      "desc": [
-        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/shortbow.webp",
-      "updated_at": "2026-07-12T19:00:20.317Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "ammunition",
-          "name": "ammunition",
-          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
-        },
-        {
-          "index": "two-handed",
-          "name": "two-handed",
-          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 17,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-      "category": "Simple Ranged Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Ranged",
-      "category_range": "Simple Ranged",
-      "damage": {
-        "damage_dice": "1d6",
-        "damage_type": {
-          "index": "piercing",
-          "name": "piercing",
-          "url": "/assets/atlas/damage_types/json/piercing.json"
-        }
-      },
-      "range": {
-        "normal": 80,
-        "long": 320
-      },
-      "rulesetContext": "2014",
-      "slot": "main-hand",
-      "main_hand_slot": "Shortbow"
-    }
-  },
-  "knownSpells": [
-    {
-      "index": "create_or_destroy_water",
-      "name": "create or destroy water",
-      "level": 1,
-      "school": "transmutation",
-      "classes": [
-        "cleric",
-        "druid"
-      ],
-      "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/create_or_destroy_water.json",
-      "imageUrl": "/assets/atlas/spell/images/create-or-destroy-water.webp"
+      "quantity": 1
     },
     {
-      "index": "detect_magic",
-      "name": "detect magic",
-      "level": 1,
-      "school": "divination",
-      "classes": [
-        "artificer",
-        "bard",
-        "cleric",
-        "druid",
-        "paladin",
-        "ranger",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/detect_magic.json",
-      "imageUrl": "/assets/atlas/spell/images/detect-magic.webp"
+      "index": "arrow",
+      "name": "Arrow",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "quantity": 20
     },
     {
-      "index": "healing_word",
-      "name": "healing word",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "bard",
-        "cleric",
-        "druid"
-      ],
-      "casting_time": "1 bonus action",
-      "range": "60 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/healing_word.json",
-      "imageUrl": "/assets/atlas/spell/images/healing-word.webp"
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
     },
     {
-      "index": "guiding_bolt",
-      "name": "guiding bolt",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "cleric"
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/guiding_bolt.json",
-      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 3
     },
     {
-      "index": "mending",
-      "name": "mending",
-      "level": 0,
-      "school": "transmutation",
-      "classes": [
-        "artificer",
-        "cleric",
-        "bard",
-        "druid",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 minute",
-      "range": "Touch",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/mending.json",
-      "imageUrl": "/assets/atlas/spell/images/mending.webp"
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "quantity": 1
     },
     {
-      "index": "light",
-      "name": "light",
-      "level": 0,
-      "school": "evocation",
-      "classes": [
-        "artificer",
-        "bard",
-        "cleric",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/light.json",
-      "imageUrl": "/assets/atlas/spell/images/light.webp"
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
     },
     {
-      "index": "guidance",
-      "name": "guidance",
-      "level": 0,
-      "school": "divination",
-      "classes": [
-        "artificer",
-        "cleric",
-        "druid"
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "Up to 1 minute",
-      "json_path": "/assets/atlas/spell/json/guidance.json",
-      "imageUrl": "/assets/atlas/spell/images/guidance.webp"
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 22
+    },
+    {
+      "index": "playing_card_set",
+      "name": "Playing Card Set",
+      "url": "/assets/atlas/equipment/json/playing_card_set.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_fine",
+      "name": "Clothes Fine",
+      "url": "/assets/atlas/equipment/json/clothes_fine.json",
+      "quantity": 1
+    },
+    {
+      "index": "perfume_vial",
+      "name": "Perfume Vial",
+      "url": "/assets/atlas/equipment/json/perfume_vial.json",
+      "quantity": 1
+    },
+    {
+      "index": "signet_ring",
+      "name": "Signet Ring",
+      "url": "/assets/atlas/equipment/json/signet_ring.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 24
+    },
+    {
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "quantity": 1
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "quantity": 1
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "quantity": 10
+    },
+    {
+      "index": "robes",
+      "name": "Robes",
+      "url": "/assets/atlas/equipment/json/robes.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 8
+    },
+    {
+      "index": "navigators_tools",
+      "name": "Navigator'S Tools",
+      "url": "/assets/atlas/equipment/json/navigators_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 1
+    },
+    {
+      "index": "rope_silk_50_feet",
+      "name": "Rope Silk 50 Feet",
+      "url": "/assets/atlas/equipment/json/rope_silk_50_feet.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 10
+    },
+    {
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "quantity": 1
+    },
+    {
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "quantity": 1
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "quantity": 10
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 8
+    },
+    {
+      "index": "dice_set",
+      "name": "Dice Set",
+      "url": "/assets/atlas/equipment/json/dice_set.json",
+      "quantity": 1
+    },
+    {
+      "index": "quiver",
+      "name": "Quiver",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "quantity": 1
+    },
+    {
+      "index": "spear",
+      "name": "Spear",
+      "url": "/assets/atlas/equipment/json/spear.json",
+      "quantity": 1
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 14
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
+    },
+    {
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
+    },
+    {
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 11
+    },
+    {
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
+      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
+    },
+    {
+      "index": "quiver",
+      "name": "Quiver",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "quantity": 1
+    },
+    {
+      "index": "shortbow",
+      "name": "Shortbow",
+      "url": "/assets/atlas/equipment/json/shortbow.json",
+      "quantity": 1
+    },
+    {
+      "index": "arrow",
+      "name": "Arrow",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "quantity": 20
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 3
+    },
+    {
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
+    },
+    {
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
+    },
+    {
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
+    },
+    {
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "quantity": 1
+    },
+    {
+      "index": "gold",
+      "name": "Gold",
+      "url": "/assets/atlas/equipment/json/gold.json",
+      "quantity": 16
     }
   ],
+  "inventory": {},
+  "knownSpells": [],
   "languages": [
-    "common",
-    "elvish"
+    "common"
   ],
-  "preparedSpells": [
-    "create_or_destroy_water",
-    "detect_magic",
-    "healing_word",
-    "guiding_bolt",
-    "mending",
-    "light",
-    "guidance"
-  ],
+  "preparedSpells": [],
   "spellSlots": {
     "1": {
       "current": 0,
@@ -768,21 +1130,21 @@
     }
   },
   "choices": {},
-  "race": "elf",
-  "class": "cleric",
-  "background": "guide",
+  "race": "human",
+  "class": "ranger",
+  "background": "criminal",
   "spellcastingAbility": "wis",
-  "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
-  "name": "Naivara Siannodel",
+  "alignment": "neutral_evil",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
+  "name": "Sylvia Mercer",
   "id": "slot3",
-  "hp": 4,
-  "maxHp": 4,
+  "hp": 5,
+  "maxHp": 5,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-07T08:55:38.403Z"
+  "lastSaved": "2026-09-07T10:45:04.816Z"
 }
