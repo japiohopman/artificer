@@ -1064,6 +1064,15 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(magicalSecrets24).not.toBeNull();
     expect(magicalSecrets24.desc.join(' ')).toContain('Cleric, Druid, or Wizard');
 
+    const magicalDiscoveries24 = await atlasService.loadFeature('magical_discoveries_lore_2024');
+    expect(magicalDiscoveries24).not.toBeNull();
+    const magDiscDesc = magicalDiscoveries24.desc.join(' ');
+    expect(magDiscDesc).toContain('Cleric, Druid, or Wizard');
+    expect(magDiscDesc).toContain('cantrip');
+    expect(magDiscDesc).toContain('spell slots');
+    expect(magDiscDesc).toContain('always have the chosen spells prepared');
+    expect(magDiscDesc).toContain('replace one of those spells');
+
     const wordsOfCreation24 = await atlasService.loadFeature('words_of_creation_2024');
     expect(wordsOfCreation24).not.toBeNull();
     expect(wordsOfCreation24.desc.join(' ')).toContain('Power Word');

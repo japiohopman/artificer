@@ -226,7 +226,7 @@ const subclassesData = [
       {
         level: 6,
         features: [
-          { index: "magical_discoveries_lore_2024", name: "Magical Discoveries", desc: "You learn two spells of your choice from any class list (Cleric, Druid, Wizard). These count as Bard spells for you." }
+          { index: "magical_discoveries_lore_2024", name: "Magical Discoveries", desc: "You learn two spells of your choice. Each spell can come from the Cleric, Druid, or Wizard spell list, in any combination. Each chosen spell must be either a cantrip or a spell for which you have spell slots, according to the Bard Features table. You always have the chosen spells prepared. Whenever you gain a Bard level, you can replace one of those spells with another spell meeting the same requirements. The chosen spells count as Bard spells for you." }
         ]
       },
       {
