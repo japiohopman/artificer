@@ -1,4 +1,4 @@
-# Wizard
+# Rogue
 
 A halfling signals for her companions to wait.
 
