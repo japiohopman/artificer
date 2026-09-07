@@ -1,5 +1,5 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
@@ -13,84 +13,105 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Arcana",
-    "Skill: History",
-    "Calligrapher'S Supplies",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
+    "skill: perception",
+    "Skill: Stealth",
+    "Skill: Survival",
+    "Cartographer'S Tools",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
     "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
   "traits": [
-    ""
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "elven lineage",
+      "index": "elven_lineage",
+      "desc": "You are part of an elven lineage (Drow, High Elf, or Wood Elf) that grants you supernatural cantrips and spells as you level up."
+    },
+    {
+      "name": "fey ancestry",
+      "index": "fey_ancestry",
+      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            {
+              "name": "Saving Throws against being charmed",
+              "condition": {
+                "index": "charmed",
+                "name": "charmed",
+                "url": "/assets/atlas/conditions/json/charmed.json"
+              }
+            }
+          ],
+          "immunity": [
+            {
+              "name": "magic sleep"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "keen senses",
+      "index": "keen_senses",
+      "desc": "You have proficiency in the Perception skill."
+    },
+    {
+      "name": "trance",
+      "index": "trance",
+      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+    }
   ],
   "features": [
     {
-      "index": "spellcasting_wizard",
+      "index": "spellcasting_cleric_2024",
+      "name": "Spellcasting: Cleric",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
-      "name": "spellcasting: wizard",
       "level": 1,
-      "prerequisites": [],
       "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power."
+        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
       ],
-      "reference": "public/assets/atlas/class/json/wizard/spellcasting.json",
-      "url": "/assets/atlas/features/json/spellcasting_wizard.json",
-      "updated_at": "2024-06-19T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
-      "feature_specific": {
-        "spellcasting_ability": {
-          "index": "intelligence",
-          "name": "intelligence",
-          "url": "/assets/atlas/ability_scores/json/int.json"
-        }
-      },
+      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
       "source": "Class"
     },
     {
-      "index": "arcane_recovery",
+      "index": "divine_order_cleric",
+      "name": "Divine Order",
       "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/wizard.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
-      "name": "arcane recovery",
       "level": 1,
-      "prerequisites": [],
       "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.",
-        "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots."
+        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
       ],
-      "url": "/assets/atlas/features/json/arcane_recovery.json",
-      "updated_at": "2026-07-13T06:30:11.957Z",
-      "image": "/assets/atlas/features/images/arcane_recovery.webp",
-      "feature_specific": {
-        "usage": {
-          "times": 1,
-          "type": "long_rest"
-        }
-      },
+      "url": "/assets/atlas/features/json/divine_order_cleric.json",
       "source": "Class"
     }
   ],
-  "flaws": [
-    ""
-  ],
-  "ideals": [
-    ""
-  ],
-  "bonds": [
-    ""
-  ],
+  "flaws": [],
+  "ideals": [],
+  "bonds": [],
   "money": {
     "cp": 0,
     "sp": 0,
@@ -107,71 +128,73 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": []
+    "specialFeatures": [],
+    "weightScale": 1.1,
+    "heightScale": 1.04
   },
   "items": {
-    "spellbook_stqb390l4": {
-      "id": "spellbook_stqb390l4",
-      "template": "spellbook",
+    "shield_ubdt3sdo6": {
+      "id": "shield_ubdt3sdo6",
+      "template": "shield",
       "quantity": 1,
-      "addedAt": 1788464911080,
-      "kind": "focus"
+      "addedAt": 1788771172451,
+      "kind": "shield"
     },
-    "book_04pkgazz4": {
-      "id": "book_04pkgazz4",
-      "template": "book",
+    "bedroll_nprcdxw0s": {
+      "id": "bedroll_nprcdxw0s",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1788464911081,
-      "kind": "book"
-    },
-    "ink_pen_5fn3y4top": {
-      "id": "ink_pen_5fn3y4top",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1788464911082,
+      "addedAt": 1788771172451,
       "kind": "tradegood"
     },
-    "robes_zo593w2ak": {
-      "id": "robes_zo593w2ak",
-      "template": "robes",
+    "shortbow_sw9lee5h9": {
+      "id": "shortbow_sw9lee5h9",
+      "template": "shortbow",
       "quantity": 1,
-      "addedAt": 1788464911082,
-      "kind": "equipment"
-    },
-    "gold_zdy30x28a": {
-      "id": "gold_zdy30x28a",
-      "template": "gold",
-      "quantity": 8,
-      "addedAt": 1788464911082,
-      "kind": "currency"
-    },
-    "dagger_u7q0r5md3": {
-      "id": "dagger_u7q0r5md3",
-      "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1788464923386,
+      "addedAt": 1788771172451,
       "kind": "weapon"
     },
-    "wand_31aknnjd1": {
-      "id": "wand_31aknnjd1",
-      "template": "wand",
-      "quantity": 1,
-      "addedAt": 1788464931134,
-      "kind": "equipment"
+    "arrow_ac57k2xji": {
+      "id": "arrow_ac57k2xji",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1788771172452,
+      "kind": "consumable"
     },
-    "scholars_pack_zxty160mf": {
-      "id": "scholars_pack_zxty160mf",
-      "template": "scholars_pack",
+    "gold_je5pa7yhj": {
+      "id": "gold_je5pa7yhj",
+      "template": "gold",
+      "quantity": 3,
+      "addedAt": 1788771172452,
+      "kind": "currency"
+    },
+    "scale_mail_6178v826f": {
+      "id": "scale_mail_6178v826f",
+      "template": "scale_mail",
       "quantity": 1,
-      "addedAt": 1788464937436,
+      "addedAt": 1788771223674,
+      "kind": "armor"
+    },
+    "dagger_lw2wyzyco": {
+      "id": "dagger_lw2wyzyco",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1788771234565,
+      "kind": "weapon"
+    },
+    "priests_pack_mr7zm2ldt": {
+      "id": "priests_pack_mr7zm2ldt",
+      "template": "priests_pack",
+      "quantity": 1,
+      "addedAt": 1788771251022,
       "kind": "container"
     },
-    "gold_flaxvzeet": {
-      "id": "gold_flaxvzeet",
-      "template": "gold",
+    "emblem_uds9e9uel": {
+      "id": "emblem_uds9e9uel",
+      "template": "emblem",
       "quantity": 1,
-      "addedAt": 1788464946091,
-      "kind": "currency"
+      "addedAt": 1788771275520,
+      "kind": "equipment"
     }
   },
   "containers": {
@@ -182,51 +205,51 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_stqb390l4"
+          "itemId": "bedroll_nprcdxw0s"
         },
         {
           "id": "bag_1",
-          "itemId": "book_04pkgazz4"
+          "itemId": "arrow_ac57k2xji"
         },
         {
           "id": "bag_2",
-          "itemId": "ink_pen_5fn3y4top"
+          "itemId": "gold_je5pa7yhj"
         },
         {
           "id": "bag_3",
-          "itemId": "robes_zo593w2ak"
+          "itemId": "scale_mail_rq1iquj4i"
         },
         {
           "id": "bag_4",
-          "itemId": "gold_zdy30x28a"
+          "itemId": "dagger_lw2wyzyco"
         },
         {
           "id": "bag_5",
-          "itemId": "dagger_x4fkol7a6"
+          "itemId": "dagger_6esynh831"
         },
         {
           "id": "bag_6",
-          "itemId": "wand_31aknnjd1"
+          "itemId": "priests_pack_mr7zm2ldt"
         },
         {
           "id": "bag_7",
-          "itemId": "wand_kbh9fcmh0"
+          "itemId": "priests_pack_s5m2p77hs"
         },
         {
           "id": "bag_8",
-          "itemId": "scholars_pack_zxty160mf"
+          "itemId": "emblem_uds9e9uel"
         },
         {
           "id": "bag_9",
-          "itemId": "scholars_pack_fj232mwy9"
+          "itemId": "emblem_fk0gkwrbz"
         },
         {
           "id": "bag_10",
-          "itemId": "gold_flaxvzeet"
+          "itemId": null
         },
         {
           "id": "bag_11",
-          "itemId": "gold_ciaxc804e"
+          "itemId": null
         },
         {
           "id": "bag_12",
@@ -284,11 +307,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_u7q0r5md3"
+        "itemId": "shortbow_sw9lee5h9"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_ubdt3sdo6"
       },
       {
         "id": "ranged",
@@ -300,7 +323,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "scale_mail_6178v826f"
       },
       {
         "id": "clothes",
@@ -402,122 +425,82 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_362fmqc8k",
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
+      "id": "cartographers_tools_8uklydoka",
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
+      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
     },
     {
-      "id": "book_c46qjb145",
-      "index": "book",
-      "name": "Book",
+      "id": "bedroll_jmth6jujb",
+      "index": "bedroll",
+      "name": "Bedroll",
       "quantity": 1,
-      "weight": 5,
+      "weight": 7,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
       "desc": [
-        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
-      ],
-      "special": [],
-      "kind": "book",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/book.webp",
-      "updated_at": "2026-07-12T19:00:14.600Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "ink_1_ounce_bottle_u029t338g",
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp"
-    },
-    {
-      "id": "ink_pen_bhxd7s7u2",
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
-      "desc": [
-        "A deviced used in combination with ink to write or draw on a sheet of paper."
+        "Roll of cloth used by traveller to sleep in."
       ],
       "special": [],
       "kind": "tradegood",
       "cost": {
-        "quantity": 2,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/ink-pen.webp",
-      "updated_at": "2026-07-12T19:00:13.712Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "rulesetContext": "2014"
-    },
-    {
-      "id": "parchment_one_sheet_c48lioimz",
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
-    },
-    {
-      "id": "robes_pmisndqyj",
-      "index": "robes",
-      "name": "Robes",
-      "quantity": 1,
-      "weight": 4,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/robes.json",
-      "image_url": "public/assets/atlas/equipment/images/robes.webp",
-      "imageUrl": "/assets/atlas/equipment/images/robes.webp",
-      "desc": [
-        "Simple or ceremonial wear, often used by priests and other religious figures."
-      ],
-      "special": [],
-      "kind": "equipment",
-      "cost": {
         "quantity": 1,
         "unit": "gp"
       },
-      "image": "/assets/atlas/equipment/images/robes.webp",
-      "updated_at": "2026-07-12T19:00:13.321Z",
+      "image": "/assets/atlas/equipment/images/bedroll.webp",
+      "updated_at": "2026-07-12T19:00:14.010Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 2,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "quiver_xv1sijjka",
+      "index": "quiver",
+      "name": "Quiver",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
+    },
+    {
+      "id": "arrow_jrwmwa3s3",
+      "index": "arrow",
+      "name": "Arrow",
+      "quantity": 20,
+      "weight": 0.05,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
+      "desc": [
+        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
+      ],
+      "special": [],
+      "kind": "consumable",
+      "cost": {
+        "quantity": 5,
+        "unit": "cp"
+      },
+      "image": "/assets/atlas/equipment/images/arrow.webp",
+      "updated_at": "2026-07-12T19:00:11.722Z",
       "contents": [],
       "properties": [],
       "equipSlots": [
@@ -526,15 +509,27 @@
       ],
       "last_updated": "12-7-2026",
       "background_type": "land_forest",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet7.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+      "category": "Ammunition",
       "rulesetContext": "2014"
     },
     {
-      "id": "gold_5ujusv9gq",
+      "id": "clothes_travelers_i45rnqos1",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+    },
+    {
+      "id": "gold_msj4pygtl",
       "index": "gold",
       "name": "Gold",
-      "quantity": 8,
+      "quantity": 3,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -563,173 +558,208 @@
       "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "shortbow_hh42xskpb",
+      "index": "shortbow",
+      "name": "Shortbow",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/shortbow.json",
+      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
+      "desc": [
+        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 25,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/shortbow.webp",
+      "updated_at": "2026-07-12T19:00:20.317Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
+        },
+        {
+          "index": "two-handed",
+          "name": "two-handed",
+          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 17,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+      "category": "Simple Ranged Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
+      "damage": {
+        "damage_dice": "1d6",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "range": {
+        "normal": 80,
+        "long": 320
+      },
+      "rulesetContext": "2014",
+      "slot": "main-hand",
+      "main_hand_slot": "Shortbow"
+    }
+  },
   "knownSpells": [
     {
-      "index": "true_strike",
-      "name": "true strike",
-      "level": 0,
-      "school": "divination",
+      "index": "create_or_destroy_water",
+      "name": "create or destroy water",
+      "level": 1,
+      "school": "transmutation",
       "classes": [
-        "bard",
-        "sorcerer",
-        "warlock",
-        "wizard"
+        "cleric",
+        "druid"
       ],
       "casting_time": "1 action",
       "range": "30 feet",
-      "duration": "Up to 1 round",
-      "json_path": "/assets/atlas/spell/json/true_strike.json",
-      "imageUrl": "/assets/atlas/spell/images/true-strike.webp"
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/create_or_destroy_water.json",
+      "imageUrl": "/assets/atlas/spell/images/create-or-destroy-water.webp"
     },
     {
-      "index": "shocking_grasp",
-      "name": "shocking grasp",
+      "index": "detect_magic",
+      "name": "detect magic",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/detect_magic.json",
+      "imageUrl": "/assets/atlas/spell/images/detect-magic.webp"
+    },
+    {
+      "index": "healing_word",
+      "name": "healing word",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/healing_word.json",
+      "imageUrl": "/assets/atlas/spell/images/healing-word.webp"
+    },
+    {
+      "index": "guiding_bolt",
+      "name": "guiding bolt",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "1 round",
+      "json_path": "/assets/atlas/spell/json/guiding_bolt.json",
+      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+    },
+    {
+      "index": "mending",
+      "name": "mending",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "cleric",
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 minute",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/mending.json",
+      "imageUrl": "/assets/atlas/spell/images/mending.webp"
+    },
+    {
+      "index": "light",
+      "name": "light",
       "level": 0,
       "school": "evocation",
       "classes": [
         "artificer",
+        "bard",
+        "cleric",
         "sorcerer",
         "wizard"
       ],
       "casting_time": "1 action",
       "range": "Touch",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/shocking_grasp.json",
-      "imageUrl": "/assets/atlas/spell/images/shocking-grasp.webp"
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/light.json",
+      "imageUrl": "/assets/atlas/spell/images/light.webp"
     },
     {
-      "index": "minor_illusion",
-      "name": "minor illusion",
+      "index": "guidance",
+      "name": "guidance",
       "level": 0,
-      "school": "illusion",
-      "classes": [
-        "bard",
-        "sorcerer",
-        "warlock",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/minor_illusion.json",
-      "imageUrl": "/assets/atlas/spell/images/minor-illusion.webp"
-    },
-    {
-      "index": "burning_hands",
-      "name": "burning hands",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/burning_hands.json",
-      "imageUrl": "/assets/atlas/spell/images/burning-hands.webp"
-    },
-    {
-      "index": "alarm",
-      "name": "alarm",
-      "level": 1,
-      "school": "abjuration",
+      "school": "divination",
       "classes": [
         "artificer",
-        "ranger",
-        "wizard"
-      ],
-      "casting_time": "1 minute",
-      "range": "30 feet",
-      "duration": "8 hours",
-      "json_path": "/assets/atlas/spell/json/alarm.json",
-      "imageUrl": "/assets/atlas/spell/images/alarm.webp"
-    },
-    {
-      "index": "absorb_elements",
-      "name": "absorb elements",
-      "level": 1,
-      "school": "abjuration",
-      "classes": [
-        "artificer",
-        "druid",
-        "ranger",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 reaction",
-      "range": "Self",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/absorb_elements.json",
-      "imageUrl": "/assets/atlas/spell/images/absorb-elements.webp"
-    },
-    {
-      "index": "charm_person",
-      "name": "charm person",
-      "level": 1,
-      "school": "enchantment",
-      "classes": [
-        "bard",
-        "druid",
-        "sorcerer",
-        "warlock",
-        "wizard"
+        "cleric",
+        "druid"
       ],
       "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/charm_person.json",
-      "imageUrl": "/assets/atlas/spell/images/charm-person.webp"
-    },
-    {
-      "index": "false_life",
-      "name": "false life",
-      "level": 1,
-      "school": "necromancy",
-      "classes": [
-        "artificer",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/false_life.json",
-      "imageUrl": "/assets/atlas/spell/images/false-life.webp"
-    },
-    {
-      "index": "disguise_self",
-      "name": "disguise self",
-      "level": 1,
-      "school": "illusion",
-      "classes": [
-        "artificer",
-        "bard",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "1 hour",
-      "json_path": "/assets/atlas/spell/json/disguise_self.json",
-      "imageUrl": "/assets/atlas/spell/images/disguise-self.webp"
+      "range": "Touch",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/guidance.json",
+      "imageUrl": "/assets/atlas/spell/images/guidance.webp"
     }
   ],
   "languages": [
     "common",
-    "infernal"
+    "elvish"
   ],
   "preparedSpells": [
-    "true_strike",
-    "shocking_grasp",
-    "minor_illusion",
-    "burning_hands",
-    "alarm",
-    "absorb_elements",
-    "charm_person",
-    "false_life",
-    "disguise_self"
+    "create_or_destroy_water",
+    "detect_magic",
+    "healing_word",
+    "guiding_bolt",
+    "mending",
+    "light",
+    "guidance"
   ],
   "spellSlots": {
     "1": {
@@ -738,21 +768,21 @@
     }
   },
   "choices": {},
-  "race": "tiefling",
-  "class": "wizard",
-  "spellcastingAbility": "int",
-  "background": "sage",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Damaia",
+  "race": "elf",
+  "class": "cleric",
+  "background": "guide",
+  "spellcastingAbility": "wis",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Naivara Siannodel",
   "id": "slot3",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-03T19:51:45.621Z"
+  "lastSaved": "2026-09-07T08:55:38.403Z"
 }
