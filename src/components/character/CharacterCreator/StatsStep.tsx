@@ -5,7 +5,12 @@ import { GameIcon } from '../../../game_icons';
 import { fetchSpeciesData, fetchSubraceData, fetchBackgroundData } from '../../../services/storageService';
 import { soundService } from '../../../services/soundService';
 import { diceService } from '../../../dice_roller/diceService';
-import { useGameStore } from '../../../store/useGameStore';
+import {
+  validate2024BackgroundAbilityScores,
+  calculate2024BackgroundBonuses,
+  normalizeAllocations,
+  BackgroundAbilityScoreAllocations
+} from '../../../lib/backgroundUtils';
 
 const POINT_BUY_COSTS: Record<number, number> = { 8: 0, 9: 1, 10: 2, 11: 3, 12: 4, 13: 5, 14: 7, 15: 9 };
 const MAX_POINT_BUY = 27;
@@ -125,12 +130,10 @@ export const StatsStep: React.FC<{
     const sKey = stat.toLowerCase();
 
     if (newChar.ruleset === '2024') {
-      const bgChoices = newChar.choices?.background_ability_scores || [];
-      bgChoices.forEach((choiceStat: string) => {
-        if (choiceStat.toLowerCase() === sKey) {
-          bonus += 1;
-        }
-      });
+      const allowed = backgroundData?.allowed_ability_scores || [];
+      const rawChoices = newChar.choices?.background_ability_scores;
+      const calculated = calculate2024BackgroundBonuses(rawChoices, allowed);
+      bonus += calculated[sKey] || 0;
     } else {
       if (speciesData?.ability_bonuses) {
         const b = speciesData.ability_bonuses.find((ab: any) => ab.ability_score.index === sKey || ab.ability_score.name.toLowerCase().includes(sKey));
@@ -156,6 +159,17 @@ export const StatsStep: React.FC<{
     });
     return indices;
   })();
+
+  // 2024 Background Choice State calculation
+  const allowedAbilities: string[] = backgroundData?.allowed_ability_scores || [];
+  const currentAllocations = normalizeAllocations(newChar.choices?.background_ability_scores);
+  const validation = validate2024BackgroundAbilityScores(currentAllocations, allowedAbilities);
+
+  const handleUpdate2024Allocations = (newAllocations: BackgroundAbilityScoreAllocations) => {
+    const choices = { ...(newChar.choices || {}), background_ability_scores: newAllocations };
+    setNewChar({ ...newChar, choices });
+    soundService.playEffect('UI_CLICK_LIGHT');
+  };
 
   return (
     <div className="space-y-6 h-full flex flex-col p-4">
@@ -216,66 +230,73 @@ export const StatsStep: React.FC<{
             <div className="flex gap-2">
               <button
                 onClick={() => {
-                  const allowed = backgroundData.allowed_ability_scores;
-                  if (allowed.length >= 2) {
-                    const choices = { ...(newChar.choices || {}), background_ability_scores: [allowed[0], allowed[0], allowed[1]] };
-                    setNewChar({ ...newChar, choices });
-                    soundService.playEffect('UI_CLICK_LIGHT');
+                  if (allowedAbilities.length >= 2) {
+                    handleUpdate2024Allocations({
+                      [allowedAbilities[0]]: 2,
+                      [allowedAbilities[1]]: 1
+                    });
                   }
                 }}
-                className="px-2.5 py-1 bg-white/80 border border-dragon-gold/40 text-[9px] font-black text-dragon-darkRed uppercase rounded hover:bg-white"
+                className={cn(
+                  "px-2.5 py-1 border text-[9px] font-black uppercase rounded transition-all",
+                  validation.mode === 'A (+2/+1)'
+                    ? "bg-dragon-red text-white border-dragon-gold shadow"
+                    : "bg-white/80 border-dragon-gold/40 text-dragon-darkRed hover:bg-white"
+                )}
               >
-                Preset (+2 / +1)
+                Mode A (+2 / +1)
               </button>
               <button
                 onClick={() => {
-                  const allowed = backgroundData.allowed_ability_scores;
-                  if (allowed.length >= 3) {
-                    const choices = { ...(newChar.choices || {}), background_ability_scores: [allowed[0], allowed[1], allowed[2]] };
-                    setNewChar({ ...newChar, choices });
-                    soundService.playEffect('UI_CLICK_LIGHT');
+                  if (allowedAbilities.length >= 3) {
+                    handleUpdate2024Allocations({
+                      [allowedAbilities[0]]: 1,
+                      [allowedAbilities[1]]: 1,
+                      [allowedAbilities[2]]: 1
+                    });
                   }
                 }}
-                className="px-2.5 py-1 bg-white/80 border border-dragon-gold/40 text-[9px] font-black text-dragon-darkRed uppercase rounded hover:bg-white"
+                className={cn(
+                  "px-2.5 py-1 border text-[9px] font-black uppercase rounded transition-all",
+                  validation.mode === 'B (+1/+1/+1)'
+                    ? "bg-dragon-red text-white border-dragon-gold shadow"
+                    : "bg-white/80 border-dragon-gold/40 text-dragon-darkRed hover:bg-white"
+                )}
               >
-                Preset (+1 / +1 / +1)
+                Mode B (+1 / +1 / +1)
               </button>
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-2">
-            {backgroundData.allowed_ability_scores.map((statKey: string) => {
-              const bgChoices = newChar.choices?.background_ability_scores || [];
-              const statCount = bgChoices.filter((s: string) => s.toLowerCase() === statKey.toLowerCase()).length;
+            {allowedAbilities.map((statKey: string) => {
+              const currentVal = currentAllocations[statKey.toLowerCase()] || 0;
 
               return (
                 <div key={statKey} className="p-2.5 bg-white/80 border border-dragon-gold/20 rounded flex items-center justify-between">
                   <span className="text-xs font-header font-black text-dragon-darkRed uppercase">{labels[statKey] || statKey}</span>
                   <div className="flex items-center gap-1">
                     <button
-                      disabled={statCount <= 0}
+                      disabled={currentVal <= 0}
                       onClick={() => {
-                        const newBgChoices = [...bgChoices];
-                        const idx = newBgChoices.findIndex((s: string) => s.toLowerCase() === statKey.toLowerCase());
-                        if (idx !== -1) {
-                          newBgChoices.splice(idx, 1);
-                          const choices = { ...(newChar.choices || {}), background_ability_scores: newBgChoices };
-                          setNewChar({ ...newChar, choices });
-                          soundService.playEffect('UI_CLICK_LIGHT');
+                        const nextAlloc = { ...currentAllocations };
+                        if (currentVal <= 1) {
+                          delete nextAlloc[statKey.toLowerCase()];
+                        } else {
+                          nextAlloc[statKey.toLowerCase()] = currentVal - 1;
                         }
+                        handleUpdate2024Allocations(nextAlloc);
                       }}
                       className="w-6 h-6 bg-dragon-red/10 text-dragon-darkRed font-black rounded hover:bg-dragon-red hover:text-white transition-colors disabled:opacity-20 flex items-center justify-center text-xs"
                     >
                       -
                     </button>
-                    <span className="w-6 text-center text-xs font-black text-dragon-red">+{statCount}</span>
+                    <span className="w-6 text-center text-xs font-black text-dragon-red">+{currentVal}</span>
                     <button
-                      disabled={bgChoices.length >= 3}
+                      disabled={currentVal >= 2}
                       onClick={() => {
-                        const newBgChoices = [...bgChoices, statKey];
-                        const choices = { ...(newChar.choices || {}), background_ability_scores: newBgChoices };
-                        setNewChar({ ...newChar, choices });
-                        soundService.playEffect('UI_CLICK_LIGHT');
+                        const nextAlloc = { ...currentAllocations, [statKey.toLowerCase()]: currentVal + 1 };
+                        handleUpdate2024Allocations(nextAlloc);
                       }}
                       className="w-6 h-6 bg-dragon-red/10 text-dragon-darkRed font-black rounded hover:bg-dragon-red hover:text-white transition-colors disabled:opacity-20 flex items-center justify-center text-xs"
                     >
@@ -286,6 +307,12 @@ export const StatsStep: React.FC<{
               );
             })}
           </div>
+
+          {!validation.valid && (
+            <p className="text-[10px] text-dragon-red font-bold uppercase tracking-wider italic">
+              * {validation.reason || "Please select either +2/+1 across two abilities or +1/+1/+1 across three abilities."}
+            </p>
+          )}
         </div>
       )}
 

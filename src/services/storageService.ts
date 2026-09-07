@@ -2179,18 +2179,20 @@ export async function fetchBackgroundsList(ruleset?: '2014' | '2024'): Promise<{
     }
   } catch (e) {}
 
-  try {
-    const localRes = await fetch('/assets/atlas/backgrounds/index.json');
-    if (localRes.ok) {
-      const data = await localRes.json();
-      if (Array.isArray(data)) {
-        return data.map((b: any) => ({
-          name: b.name || b.index.replace(/_/g, ' '),
-          index: b.index
-        }));
+  if (activeRuleset === '2014') {
+    try {
+      const localRes = await fetch('/assets/atlas/backgrounds/index.json');
+      if (localRes.ok) {
+        const data = await localRes.json();
+        if (Array.isArray(data)) {
+          return data.map((b: any) => ({
+            name: b.name || b.index.replace(/_/g, ' '),
+            index: b.index
+          }));
+        }
       }
-    }
-  } catch (e) {}
+    } catch (e) {}
+  }
 
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/backgrounds/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;

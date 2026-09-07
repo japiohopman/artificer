@@ -71,7 +71,7 @@ export interface Character {
   spellSlots: Record<string, { current: number; max: number }>;
   spellcastingAbility?: string;
   concentrationSpellId?: string | null;
-  choices: Record<string, string[]>;
+  choices: Record<string, any>;
   hp: number;
   maxHp: number;
   money: {
