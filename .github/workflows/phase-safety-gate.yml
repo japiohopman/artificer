@@ -1,0 +1,86 @@
+name: Phase Safety Gate
+
+# This is deliberately a second gate beside the normal CI workflow.
+# CI answers: "does the repository build?"
+# This workflow answers: "does a substantial PR carry the evidence needed for review?"
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: phase-safety-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  phase-contract:
+    name: Validate phase contract
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR metadata
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+
+          if [ "$HEAD_REF" = "main" ]; then
+            echo "Safety gate failed: phase work must never target main directly."
+            exit 1
+          fi
+
+          body="${PR_BODY:-}"
+          required_sections=(
+            "## Phase"
+            "## Goal"
+            "## Scope completed"
+            "## Safety / architecture"
+            "## Verification"
+            "## Data / content integrity"
+            "## Documentation"
+            "## Definition of Done"
+          )
+
+          for section in "${required_sections[@]}"; do
+            if ! grep -Fq "$section" <<< "$body"; then
+              echo "Safety gate failed: missing PR section: $section"
+              exit 1
+            fi
+          done
+
+          if ! grep -Eq 'Closes #[0-9]+' <<< "$body"; then
+            echo "Safety gate failed: PR must reference its phase Issue with 'Closes #123'."
+            exit 1
+          fi
+
+          echo "Phase contract present and reviewable."
+
+  repository-health:
+    name: Repository health checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run lint
+
+      - name: Validate game assets
+        run: npm run validate:assets
+
+      - name: Build
+        run: npm run build

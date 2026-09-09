@@ -1,0 +1,109 @@
+name: Engineering Phase
+description: Define a multi-step engineering phase for Jules with explicit safety gates.
+title: "phase: "
+labels:
+  - phase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for substantial work that may contain multiple implementation steps.
+        The issue is the persistent execution contract for Jules; the PR is the implementation record.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What must be true when this phase is complete?
+      placeholder: Describe the desired end state, not the implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the concrete systems, files, datasets, or modules that may be changed.
+      placeholder: |
+        - src/...
+        - public/assets/...
+        - tests/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: Subtasks
+      description: Break the phase into small, independently verifiable steps.
+      placeholder: |
+        - [ ] Audit existing implementation
+        - [ ] Implement canonical data
+        - [ ] Integrate consumers
+        - [ ] Add regression tests
+        - [ ] Update documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: These are the conditions used during PR review. Keep them objective and testable.
+      placeholder: |
+        - [ ] Canonical data is complete
+        - [ ] Ruleset resolution is correct
+        - [ ] No fallback to the wrong ruleset
+        - [ ] Tests pass
+        - [ ] Build passes
+        - [ ] Documentation is updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: architecture
+    attributes:
+      label: Architecture / Safety Constraints
+      description: State invariants that must not be broken.
+      placeholder: |
+        - useGameStore.ruleset remains canonical
+        - getActiveRulesetContext remains the resolver
+        - No competing store or ruleset state
+        - No fake or placeholder mechanics
+        - Preserve existing versioned data boundaries
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: Explicitly list attractive but unrelated work that must not enter this phase.
+      placeholder: |
+        - Unrelated UI refactors
+        - New data models
+        - Bulk migrations outside this phase
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification Plan
+      description: Which commands, tests, or manual checks prove completion?
+      placeholder: |
+        npm run lint
+        npm run validate:assets
+        npm run build
+        npx playwright test tests/ruleset_resolution.test.ts
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Canonical References
+      description: Link or name the authoritative repository/data/documentation references used for this phase.
+      placeholder: Official source, existing canonical implementation, or repository path.
+    validations:
+      required: true
