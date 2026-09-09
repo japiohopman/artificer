@@ -1,0 +1,48 @@
+{
+  "index": "counterspell",
+  "name": "counterspell",
+  "desc": [
+    "You attempt to interrupt a creature in the process of casting a spell. The target must make a Constitution saving throw. On a failed save, the spell fails and has no effect."
+  ],
+  "higher_level": [
+    "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."
+  ],
+  "range": "60 feet",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantaneous",
+  "concentration": false,
+  "casting_time": "1 reaction",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "abjuration",
+    "url": "/assets/atlas/magic_schools/json/abjuration.json"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [],
+  "url": "/assets/atlas/spell/json/counterspell.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/counterspell.webp",
+  "sprite_index": 14,
+  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet3.webp",
+  "ruleset": "2024"
+}

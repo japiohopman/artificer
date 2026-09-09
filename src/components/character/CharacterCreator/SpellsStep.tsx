@@ -82,7 +82,7 @@ export const SpellsStep: React.FC<{
             setLoading(true);
             Promise.all([
                 fetchClassData(newChar.class, newChar.ruleset),
-                fetchSpellList()
+                fetchSpellList(newChar.ruleset)
             ]).then(async ([cData, spells]) => {
                 setClassData(cData);
                 const levelFiltered = spells.filter((s: any) => getSpellLevel(s) <= 1);
@@ -93,7 +93,7 @@ export const SpellsStep: React.FC<{
                             return s;
                         }
                         const { fetchSpellData } = await import('../../../services/storageService');
-                        const fullData = await fetchSpellData(s.index);
+                        const fullData = await fetchSpellData(s.index, newChar.ruleset);
                         return fullData || s;
                     })
                 );

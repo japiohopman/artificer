@@ -10,65 +10,19 @@ import { cn } from '../../lib/utils';
 import { checkLoS, findPath, getDistance, getReachableCells, isCellOccupied } from './combatUtils';
 import { Token } from './Token';
 import { TokenActionHUD } from './TokenActionHUD';
+import { calculateAOECells, AOEDefinition } from '../../domain/spells/geometry';
 
-// Helper for Area of Effect (AOE) cell calculations (Sphere and Cone shapes)
+// Helper for Area of Effect (AOE) cell calculations (delegates to canonical spell geometry domain)
 const getCellsInAOE = (action: any, origin: { x: number; y: number }, target: { x: number; y: number }) => {
-  const cells = new Set<string>();
-  if (!action) return cells;
-
-  if (action.targetType === 'sphere') {
-    const radius = action.radius || 0;
-    for (let dy = -radius; dy <= radius; dy++) {
-      for (let dx = -radius; dx <= radius; dx++) {
-        if (Math.max(Math.abs(dx), Math.abs(dy)) <= radius) {
-          cells.add(`${target.x + dx},${target.y + dy}`);
-        }
-      }
-    }
-  } else if (action.targetType === 'cone') {
-    const length = action.radius || action.range || 3;
-    const dx = target.x - origin.x;
-    const dy = target.y - origin.y;
-
-    if (dx !== 0 || dy !== 0) {
-      if (Math.abs(dx) >= Math.abs(dy)) {
-        // East or West
-        if (dx > 0) {
-          // East
-          for (let step = 1; step <= length; step++) {
-            for (let perp = -step; perp <= step; perp++) {
-              cells.add(`${origin.x + step},${origin.y + perp}`);
-            }
-          }
-        } else {
-          // West
-          for (let step = 1; step <= length; step++) {
-            for (let perp = -step; perp <= step; perp++) {
-              cells.add(`${origin.x - step},${origin.y + perp}`);
-            }
-          }
-        }
-      } else {
-        // North or South
-        if (dy > 0) {
-          // South
-          for (let step = 1; step <= length; step++) {
-            for (let perp = -step; perp <= step; perp++) {
-              cells.add(`${origin.x + perp},${origin.y + step}`);
-            }
-          }
-        } else {
-          // North
-          for (let step = 1; step <= length; step++) {
-            for (let perp = -step; perp <= step; perp++) {
-              cells.add(`${origin.x + perp},${origin.y - step}`);
-            }
-          }
-        }
-      }
-    }
-  }
-  return cells;
+  if (!action) return new Set<string>();
+  const aoeDef: AOEDefinition = {
+    targetType: action.targetType,
+    radius: action.radius,
+    length: action.length || action.radius,
+    width: action.width,
+    size: action.size
+  };
+  return calculateAOECells(aoeDef, origin, target);
 };
 
 export const CombatGrid: React.FC = () => {
