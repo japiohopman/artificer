@@ -708,7 +708,7 @@ describe('Ruleset Resolution Audit Tests', () => {
       ].sort();
 
       const EXPECTED_FIGHTING_STYLE_FEATS = [
-        'archery', 'blind_fighting', 'defense', 'druidic_warrior', 'dueling',
+        'archery', 'blind_fighting', 'defense', 'dueling',
         'great_weapon_fighting', 'interception', 'protection',
         'thrown_weapon_fighting', 'two_weapon_fighting', 'unarmed_fighting'
       ].sort();
@@ -729,8 +729,8 @@ describe('Ruleset Resolution Audit Tests', () => {
         'martial_weapon_training', 'medium_armor_master', 'moderately_armored',
         'mounted_combatant', 'observant', 'piercer', 'poisoner',
         'polearm_master', 'resilient', 'ritual_caster', 'sentinel',
-        'sharpshooter', 'shield_master', 'skill_expert', 'skulker',
-        'slasher', 'speedy', 'spell_sniper', 'telekinetic',
+        'shadow_touched', 'sharpshooter', 'shield_master', 'skill_expert',
+        'skulker', 'slasher', 'speedy', 'spell_sniper', 'telekinetic',
         'telepathic', 'war_caster', 'weapon_master'
       ].sort();
 

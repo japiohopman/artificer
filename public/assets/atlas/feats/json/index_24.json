@@ -90,12 +90,6 @@
     "ruleset": "2024"
   },
   {
-    "name": "druidic warrior",
-    "index": "druidic_warrior",
-    "category": "fighting-style",
-    "ruleset": "2024"
-  },
-  {
     "name": "dueling",
     "index": "dueling",
     "category": "fighting-style",
@@ -320,6 +314,12 @@
   {
     "name": "sentinel",
     "index": "sentinel",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "shadow-touched",
+    "index": "shadow_touched",
     "category": "general",
     "ruleset": "2024"
   },

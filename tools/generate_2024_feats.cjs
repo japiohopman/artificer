@@ -5,11 +5,11 @@
  * public/assets/atlas/feats/json/24/ (<category>/<feat>.json)
  * and builds index_24.json.
  *
- * Exact Distribution:
+ * Exact Canonical Distribution:
  * - Origin: 10
- * - Fighting Style: 11
+ * - Fighting Style: 10
  * - Epic Boon: 12
- * - General: 42
+ * - General: 43
  * Total: 75
  */
 
@@ -139,10 +139,11 @@ const feats = [
     },
     desc: [
       "You gain the following benefits.",
-      "Unarmed Strike. When you hit with your Unarmed Strike, you deal Bludgeoning damage equal to 1d4 + your Strength modifier, instead of the normal damage for an Unarmed Strike.",
+      "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
+      "Enhanced Unarmed Strike. When you hit with your Unarmed Strike, you deal Bludgeoning damage equal to 1d4 + your Strength modifier, instead of the normal damage for an Unarmed Strike.",
       "Damage Reroll. Whenever you roll a 1 on a damage die for an Unarmed Strike, you can reroll the die, and you must use the new roll.",
       "Push. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage and push the target 5 feet away from you. You can use this benefit only once per turn.",
-      "Furniture as Weapon. You have proficiency with Improvised Weapons."
+      "Improvised Weaponry. You have proficiency with Improvised Weapons."
     ]
   },
   {
@@ -161,7 +162,7 @@ const feats = [
     ]
   },
 
-  // ==================== FIGHTING STYLE FEATS (11) ====================
+  // ==================== FIGHTING STYLE FEATS (10) ====================
   {
     index: 'archery',
     name: 'archery',
@@ -200,16 +201,6 @@ const feats = [
     },
     desc: [
       "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class."
-    ]
-  },
-  {
-    index: 'druidic_warrior',
-    name: 'druidic warrior',
-    category: 'fighting-style',
-    ruleset: '2024',
-    prerequisites: ['Fighting Style Feature'],
-    desc: [
-      "You learn two Druid cantrips of your choice from the Druid spell list. Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip."
     ]
   },
   {
@@ -452,7 +443,7 @@ const feats = [
     ]
   },
 
-  // ==================== GENERAL FEATS (42) ====================
+  // ==================== GENERAL FEATS (43) ====================
   {
     index: 'ability_score_improvement',
     name: 'ability score improvement',
@@ -673,7 +664,7 @@ const feats = [
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Wisdom or Charisma score by 1, to a maximum of 20.",
-      "Encouraging Performance. When you finish a Short or Long Rest, you can inspire up to six willing allies (which can include yourself) within 30 feet who can see or hear you. Each target gains Temporary Hit Points equal to your level + the ability modifier increased by this feat."
+      "Bolstering Performance. When you finish a Short or Long Rest, you can give an inspiring performance. Choose up to six allies (which can include yourself) within 30 feet who can see or hear you. Each target gains Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability increased by this feat."
     ]
   },
   {
@@ -685,7 +676,7 @@ const feats = [
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Intelligence score by 1, to a maximum of 20.",
-      "Skill Proficiency. You gain proficiency in one of the following skills: Arcana, History, Investigation, Nature, or Religion.",
+      "Lore Knowledge. You gain proficiency in one of the following skills of your choice: Arcana, History, Investigation, Nature, or Religion. If you already have proficiency in the chosen skill, you gain Expertise in it instead.",
       "Quick Study. You can take the Search action as a Bonus Action."
     ]
   },
@@ -760,7 +751,9 @@ const feats = [
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.",
-      "Mount Mastery. While mounted, you have Advantage on melee attack rolls against unmounted creatures smaller than your mount, you can force an attack targeted at your mount to target you instead, and your mount takes no damage on successful Dexterity saving throws."
+      "Mounted Strike. While mounted, you have Advantage on melee attack rolls against unmounted creatures smaller than your mount.",
+      "Leap Aside. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it takes no damage if it succeeds and half damage if it fails.",
+      "Veer. While mounted, you can force an attack targeted at your mount to target you instead."
     ]
   },
   {
@@ -772,8 +765,8 @@ const feats = [
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Intelligence or Wisdom score by 1, to a maximum of 20.",
-      "Skill Proficiency. You gain proficiency in Insight, Investigation, or Perception.",
-      "Keen Observer. You can take the Search action as a Bonus Action."
+      "Keen Observer. You can take the Search action as a Bonus Action.",
+      "Quick Study. Choose Insight, Investigation, or Perception. If you lack proficiency in the chosen skill, you gain proficiency in it. If you already have proficiency, you gain Expertise in it instead."
     ]
   },
   {
@@ -860,6 +853,18 @@ const feats = [
       "Halt. When you hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the turn.",
       "Ignore Disengage. Creatures provoke Opportunity Attacks from you even if they take the Disengage action.",
       "Retaliation. When a creature within 5 feet of you makes an attack against a target other than you, you can use your Reaction to make a melee weapon attack against the attacking creature."
+    ]
+  },
+  {
+    index: 'shadow_touched',
+    name: 'shadow-touched',
+    category: 'general',
+    ruleset: '2024',
+    prerequisites: ['Level 4+'],
+    desc: [
+      "You gain the following benefits.",
+      "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+      "Spellcasting. You learn the Invisibility spell and one level 1 spell of your choice from the Illusion or Necromancy school of magic. You can cast each spell once without expending a spell slot, regaining the ability to do so on a Long Rest. You can also cast them using any spell slots you have."
     ]
   },
   {

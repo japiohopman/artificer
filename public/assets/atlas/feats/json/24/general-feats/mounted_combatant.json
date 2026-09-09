@@ -9,7 +9,9 @@
   "desc": [
     "You gain the following benefits.",
     "Ability Score Increase. Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.",
-    "Mount Mastery. While mounted, you have Advantage on melee attack rolls against unmounted creatures smaller than your mount, you can force an attack targeted at your mount to target you instead, and your mount takes no damage on successful Dexterity saving throws."
+    "Mounted Strike. While mounted, you have Advantage on melee attack rolls against unmounted creatures smaller than your mount.",
+    "Leap Aside. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it takes no damage if it succeeds and half damage if it fails.",
+    "Veer. While mounted, you can force an attack targeted at your mount to target you instead."
   ],
   "url": "/assets/atlas/feats/json/24/general-feats/mounted_combatant.json",
   "image": "/assets/icons/svg/items/feature.svg"
