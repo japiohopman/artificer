@@ -1,11 +1,11 @@
 /**
  * tools/generate_2024_feats.cjs
  *
- * Generates the complete 2024 PHB Feats catalogue into versioned directories under
+ * Generates the complete, canonical 2024 PHB Feats catalogue into versioned directories under
  * public/assets/atlas/feats/json/24/ (<category>/<feat>.json)
  * and builds index_24.json.
  *
- * Distribution:
+ * Exact Distribution:
  * - Origin: 10
  * - Fighting Style: 11
  * - Epic Boon: 12
@@ -40,6 +40,11 @@ const feats = [
     category: 'origin',
     ruleset: '2024',
     prerequisites: [],
+    feature_specific: {
+      tool_proficiencies_count: 3,
+      discount_percent: 20,
+      fast_crafting_reduction_percent: 20
+    },
     desc: [
       "You gain the following benefits.",
       "Tool Proficiency. You gain proficiency in three different Artisan's Tools of your choice.",
@@ -92,6 +97,9 @@ const feats = [
     category: 'origin',
     ruleset: '2024',
     prerequisites: [],
+    feature_specific: {
+      instrument_proficiencies_count: 3
+    },
     desc: [
       "You gain the following benefits.",
       "Instrument Training. You gain proficiency with three Musical Instruments of your choice.",
@@ -125,6 +133,10 @@ const feats = [
     category: 'origin',
     ruleset: '2024',
     prerequisites: [],
+    feature_specific: {
+      unarmed_strike_dice: "1d4",
+      push_distance_feet: 5
+    },
     desc: [
       "You gain the following benefits.",
       "Unarmed Strike. When you hit with your Unarmed Strike, you deal Bludgeoning damage equal to 1d4 + your Strength modifier, instead of the normal damage for an Unarmed Strike.",
@@ -559,20 +571,6 @@ const feats = [
     ]
   },
   {
-    index: 'dungeon_delver',
-    name: 'dungeon delver',
-    category: 'general',
-    ruleset: '2024',
-    prerequisites: ['Level 4+', 'Intelligence or Wisdom 13+'],
-    desc: [
-      "You gain the following benefits.",
-      "Ability Score Increase. Increase your Intelligence or Wisdom score by 1, to a maximum of 20.",
-      "Alert to Traps. You have Advantage on Perception and Investigation checks to detect secret doors and traps.",
-      "Trap Resistance. You have Advantage on saving throws made to avoid or resist traps, and you have Resistance to damage dealt by traps.",
-      "Fast Search. You can search for traps while traveling at a fast pace without taking a penalty to your passive Perception."
-    ]
-  },
-  {
     index: 'durable',
     name: 'durable',
     category: 'general',
@@ -596,6 +594,18 @@ const feats = [
       "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
       "Energy Mastery. Choose one damage type: Acid, Cold, Fire, Lightning, or Thunder. Spells you cast ignore Resistance to damage of the chosen type. In addition, when you roll damage for a spell that deals damage of that type, you can treat any 1 on a damage die as a 2.",
       "Repeatable. You can take this feat more than once, choosing a different damage type each time."
+    ]
+  },
+  {
+    index: 'fey_touched',
+    name: 'fey-touched',
+    category: 'general',
+    ruleset: '2024',
+    prerequisites: ['Level 4+'],
+    desc: [
+      "You gain the following benefits.",
+      "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+      "Spellcasting. You learn the Misty Step spell and one level 1 spell of your choice from the Divination or Enchantment school of magic. You can cast each spell once without expending a spell slot, regaining the ability to do so on a Long Rest. You can also cast them using any spell slots you have."
     ]
   },
   {
@@ -631,6 +641,11 @@ const feats = [
     category: 'general',
     ruleset: '2024',
     prerequisites: ['Level 4+', 'Heavy Armor Training'],
+    feature_specific: {
+      passive_modifiers: {
+        damage_reduction_type: "pb"
+      }
+    },
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
@@ -819,11 +834,18 @@ const feats = [
     category: 'general',
     ruleset: '2024',
     prerequisites: ['Level 4+', 'Intelligence, Wisdom, or Charisma 13+'],
+    feature_specific: {
+      subfeature_options: {
+        choose: "pb",
+        type: "ritual_spells",
+        spell_level: 1
+      }
+    },
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
       "Quick Ritual. You can cast a ritual spell with its normal casting time, without adding 10 minutes. Once you use this benefit, you can't use it again until you finish a Long Rest.",
-      "Ritual Spells. You learn two level 1 spells that have the Ritual tag from any class spell list."
+      "Ritual Spells. You learn a number of level 1 spells that have the Ritual tag equal to your Proficiency Bonus. These spells are always prepared, and you can cast them as Rituals or using any spell slots you have. Whenever your Proficiency Bonus increases, you can learn another level 1 Ritual spell."
     ]
   },
   {

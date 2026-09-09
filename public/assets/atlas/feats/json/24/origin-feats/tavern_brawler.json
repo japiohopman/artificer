@@ -4,6 +4,10 @@
   "category": "origin",
   "ruleset": "2024",
   "prerequisites": [],
+  "feature_specific": {
+    "unarmed_strike_dice": "1d4",
+    "push_distance_feet": 5
+  },
   "desc": [
     "You gain the following benefits.",
     "Unarmed Strike. When you hit with your Unarmed Strike, you deal Bludgeoning damage equal to 1d4 + your Strength modifier, instead of the normal damage for an Unarmed Strike.",

@@ -7,6 +7,11 @@
     "Level 4+",
     "Heavy Armor Training"
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "damage_reduction_type": "pb"
+    }
+  },
   "desc": [
     "You gain the following benefits.",
     "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",

@@ -4,6 +4,11 @@
   "category": "origin",
   "ruleset": "2024",
   "prerequisites": [],
+  "feature_specific": {
+    "tool_proficiencies_count": 3,
+    "discount_percent": 20,
+    "fast_crafting_reduction_percent": 20
+  },
   "desc": [
     "You gain the following benefits.",
     "Tool Proficiency. You gain proficiency in three different Artisan's Tools of your choice.",

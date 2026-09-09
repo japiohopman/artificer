@@ -7,11 +7,18 @@
     "Level 4+",
     "Intelligence, Wisdom, or Charisma 13+"
   ],
+  "feature_specific": {
+    "subfeature_options": {
+      "choose": "pb",
+      "type": "ritual_spells",
+      "spell_level": 1
+    }
+  },
   "desc": [
     "You gain the following benefits.",
     "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
     "Quick Ritual. You can cast a ritual spell with its normal casting time, without adding 10 minutes. Once you use this benefit, you can't use it again until you finish a Long Rest.",
-    "Ritual Spells. You learn two level 1 spells that have the Ritual tag from any class spell list."
+    "Ritual Spells. You learn a number of level 1 spells that have the Ritual tag equal to your Proficiency Bonus. These spells are always prepared, and you can cast them as Rituals or using any spell slots you have. Whenever your Proficiency Bonus increases, you can learn another level 1 Ritual spell."
   ],
   "url": "/assets/atlas/feats/json/24/general-feats/ritual_caster.json",
   "image": "/assets/icons/svg/items/feature.svg"

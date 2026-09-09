@@ -723,7 +723,7 @@ describe('Ruleset Resolution Audit Tests', () => {
       const EXPECTED_GENERAL_FEATS = [
         'ability_score_improvement', 'actor', 'athlete', 'charger', 'chef',
         'crossbow_expert', 'crusher', 'defensive_duelist', 'dual_wielder',
-        'dungeon_delver', 'durable', 'elemental_adept', 'grappler',
+        'durable', 'elemental_adept', 'fey_touched', 'grappler',
         'great_weapon_master', 'heavily_armored', 'heavy_armor_master',
         'inspiring_leader', 'keen_mind', 'lightly_armored', 'mage_slayer',
         'martial_weapon_training', 'medium_armor_master', 'moderately_armored',
