@@ -5,113 +5,81 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 15,
-    "dex": 15,
-    "con": 13,
-    "int": 12,
-    "wis": 14,
-    "cha": 14
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "Skill: Arcana",
-    "Skill: History",
+    "Skill: Animal Handling",
+    "Skill: Nature",
+    "Carpenter'S Tools",
     "light armor",
-    "simple weapons",
+    "medium armor",
+    "shields",
+    "clubs",
+    "daggers",
+    "javelins",
+    "maces",
+    "quarterstaffs",
+    "sickles",
+    "spears",
+    "darts",
+    "slings",
+    "scimitars",
+    "herbalism kit",
+    "saving throw: int",
     "saving throw: wis",
-    "saving throw: cha",
-    "Saving Throw: wis",
-    "Saving Throw: cha"
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "dwarven resilience",
-      "index": "dwarven_resilience",
-      "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "advantage": [
-            {
-              "name": "Saving Throws against poison",
-              "damage_type": {
-                "index": "poison",
-                "name": "poison",
-                "url": "/assets/atlas/damage_types/json/poison.json"
-              }
-            }
-          ],
-          "resistance": [
-            {
-              "index": "poison",
-              "name": "poison",
-              "url": "/assets/atlas/damage_types/json/poison.json"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "dwarven toughness",
-      "index": "dwarven_toughness",
-      "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "hp_bonus_per_level": 1
-        }
-      }
-    },
-    {
-      "name": "stonecunning",
-      "index": "stonecunning",
-      "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "name": "Researcher",
-      "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it.",
-      "source": "Background"
-    },
-    {
-      "index": "pact_spells_warlock_2024",
-      "name": "Pact Spells",
+      "index": "spellcasting_druid_2024",
+      "name": "Spellcasting: Druid",
       "class": {
-        "index": "warlock",
-        "name": "Warlock",
-        "url": "/assets/atlas/class/json/24/warlock.json"
+        "index": "druid",
+        "name": "Druid",
+        "url": "/assets/atlas/class/json/24/druid.json"
       },
       "level": 1,
       "desc": [
-        "Cast Warlock spells using Pact Slots. All slots same level, regain on Short or Long Rest. Charisma is spellcasting ability."
+        "You can cast Druid spells using Wisdom as your spellcasting ability. You prepare Druid spells from the Druid spell list."
       ],
-      "url": "/assets/atlas/features/json/pact_spells_warlock_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_druid_2024.json",
       "source": "Class"
     },
     {
-      "index": "eldritch_invocations_2024",
-      "name": "Eldritch Invocations",
+      "index": "primal_order_2024",
+      "name": "Primal Order",
       "class": {
-        "index": "warlock",
-        "name": "Warlock",
-        "url": "/assets/atlas/class/json/24/warlock.json"
+        "index": "druid",
+        "name": "Druid",
+        "url": "/assets/atlas/class/json/24/druid.json"
       },
       "level": 1,
       "desc": [
-        "Inbued with eldritch magic. Gain Invocations starting at L1 (Pact of Blade, Pact of Chain, Pact of Tome, Agonizing Blast, etc.). Total: 1 at L1, 2 at L2, scaling to 8 at L18."
+        "Dedicated to a sacred role: Magician (extra cantrip & Arcana/Nature check bonus equal to WIS mod) or Warden (Martial weapon & Medium Armor proficiency)."
       ],
-      "feature_specific": {
-        "invocations_at_level_1": 1
+      "url": "/assets/atlas/features/json/primal_order_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "druidic_2024",
+      "name": "Druidic",
+      "class": {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/assets/atlas/class/json/24/druid.json"
       },
-      "url": "/assets/atlas/features/json/eldritch_invocations_2024.json",
+      "level": 1,
+      "desc": [
+        "You know Druidic, the secret language of Druids. You also learn one additional language of your choice."
+      ],
+      "url": "/assets/atlas/features/json/druidic_2024.json",
       "source": "Class"
     }
   ],
@@ -137,47 +105,54 @@
     "specialFeatures": []
   },
   "items": {
-    "dagger_t393d4jcl": {
-      "id": "dagger_t393d4jcl",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1788949498547,
-      "kind": "weapon"
-    },
-    "leather_armor_a3sc5rouv": {
-      "id": "leather_armor_a3sc5rouv",
+    "leather_armor_jl8wt0tpz": {
+      "id": "leather_armor_jl8wt0tpz",
       "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1788949498548,
+      "addedAt": 1788954560289,
       "kind": "armor"
     },
-    "book_9arlmvvr1": {
-      "id": "book_9arlmvvr1",
-      "template": "book",
+    "explorers_pack_mt8i7iv50": {
+      "id": "explorers_pack_mt8i7iv50",
+      "template": "explorers_pack",
       "quantity": 1,
-      "addedAt": 1788949498548,
-      "kind": "book"
+      "addedAt": 1788954560289,
+      "kind": "container"
     },
-    "ink_pen_zzcwqldno": {
-      "id": "ink_pen_zzcwqldno",
-      "template": "ink_pen",
+    "sickle_pxg0hlm9c": {
+      "id": "sickle_pxg0hlm9c",
+      "template": "sickle",
       "quantity": 1,
-      "addedAt": 1788949498548,
-      "kind": "tradegood"
+      "addedAt": 1788954560289,
+      "kind": "weapon"
     },
-    "robes_99zhldj2r": {
-      "id": "robes_99zhldj2r",
-      "template": "robes",
-      "quantity": 1,
-      "addedAt": 1788949498549,
-      "kind": "equipment"
-    },
-    "gold_vqx54v45w": {
-      "id": "gold_vqx54v45w",
+    "gold_z6e4r8nag": {
+      "id": "gold_z6e4r8nag",
       "template": "gold",
-      "quantity": 8,
-      "addedAt": 1788949498549,
+      "quantity": 23,
+      "addedAt": 1788954560289,
       "kind": "currency"
+    },
+    "mace_yi1qx08vb": {
+      "id": "mace_yi1qx08vb",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1788954632031,
+      "kind": "weapon"
+    },
+    "dagger_jzzo0z8ab": {
+      "id": "dagger_jzzo0z8ab",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1788954642691,
+      "kind": "weapon"
+    },
+    "wooden-staff_bsmvzvcr4": {
+      "id": "wooden-staff_bsmvzvcr4",
+      "template": "wooden-staff",
+      "quantity": 1,
+      "addedAt": 1788954657055,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -188,35 +163,35 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "book_9arlmvvr1"
+          "itemId": "explorers_pack_mt8i7iv50"
         },
         {
           "id": "bag_1",
-          "itemId": "ink_pen_zzcwqldno"
+          "itemId": "gold_z6e4r8nag"
         },
         {
           "id": "bag_2",
-          "itemId": "robes_99zhldj2r"
+          "itemId": "mace_yi1qx08vb"
         },
         {
           "id": "bag_3",
-          "itemId": "gold_vqx54v45w"
+          "itemId": "mace_nltisdg7m"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "dagger_jzzo0z8ab"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "dagger_v1mx453cz"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "wooden-staff_bsmvzvcr4"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "wooden-staff_mo02gsbpr"
         },
         {
           "id": "bag_8",
@@ -290,7 +265,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_t393d4jcl"
+        "itemId": "sickle_pxg0hlm9c"
       },
       {
         "id": "off_hand",
@@ -306,7 +281,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_a3sc5rouv"
+        "itemId": "leather_armor_jl8wt0tpz"
       },
       {
         "id": "clothes",
@@ -408,149 +383,275 @@
   },
   "backpack": [
     {
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "quantity": 1
+      "id": "carpenters_tools_tlj4n8r1c",
+      "index": "carpenters_tools",
+      "name": "Carpenter'S Tools",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
     },
     {
-      "index": "book",
-      "name": "Book",
-      "url": "/assets/atlas/equipment/json/book.json",
-      "quantity": 1
+      "id": "pot_iron_jxgsl4ft4",
+      "index": "pot_iron",
+      "name": "Pot Iron",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/pot_iron.json",
+      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
+      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
     },
     {
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "quantity": 1
+      "id": "clothes_travelers_11rnbb3n9",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "quantity": 1,
+      "weight": 0,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
+      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "quantity": 1
-    },
-    {
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "quantity": 10
-    },
-    {
-      "index": "robes",
-      "name": "Robes",
-      "url": "/assets/atlas/equipment/json/robes.json",
-      "quantity": 1
-    },
-    {
+      "id": "gold_d6g8y1yvj",
       "index": "gold",
       "name": "Gold",
+      "quantity": 23,
+      "weight": 1,
+      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 8
+      "image_url": "public/assets/atlas/equipment/images/gold.webp",
+      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
+      "desc": [
+        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
+        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
+      ],
+      "special": [],
+      "kind": "currency",
+      "cost": {
+        "quantity": 50,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/gold.webp",
+      "updated_at": "2026-07-12T19:00:29.152Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "none"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "category": "Standard Gear",
+      "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
+  "inventory": {
+    "main-hand": {
+      "id": "sickle_dts837c5m",
+      "index": "sickle",
+      "name": "Sickle",
+      "quantity": 1,
+      "weight": 2,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/sickle.json",
+      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
+      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
+      "desc": [
+        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/sickle.webp",
+      "updated_at": "2026-07-12T19:00:20.427Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 20,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+      "category": "Melee Weapons",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "slashing",
+          "name": "slashing",
+          "url": "/assets/atlas/damage_types/json/slashing.json"
+        }
+      },
+      "range": {
+        "normal": 5,
+        "long": null
+      },
+      "rulesetContext": "2014",
+      "slot": "main-hand",
+      "main_hand_slot": "Sickle"
+    }
+  },
   "knownSpells": [
     {
-      "higher_level": [],
-      "index": "minor_illusion",
-      "name": "minor illusion",
-      "desc": [
-        "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.",
-        "If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.",
-        "If you create an image of an object--such as a chair, muddy footprints, or a small chest--it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
-        "If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
-      ],
-      "range": "30 feet",
-      "components": [
-        "S",
-        "M"
-      ],
-      "material": "A bit of fleece.",
-      "ritual": false,
-      "duration": "1 minute",
-      "concentration": false,
-      "casting_time": "1 action",
+      "index": "mending",
+      "name": "mending",
       "level": 0,
-      "school": {
-        "index": "illusion",
-        "name": "illusion",
-        "url": "/assets/atlas/magic_schools/json/illusion.json"
-      },
+      "school": "transmutation",
       "classes": [
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "warlock",
-          "name": "warlock",
-          "url": "/assets/atlas/class/json/warlock.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
+        "artificer",
+        "cleric",
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
       ],
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
+      "casting_time": "1 minute",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/mending.json",
+      "imageUrl": "/assets/atlas/spell/images/mending.webp"
+    },
+    {
+      "index": "shillelagh",
+      "name": "shillelagh",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "druid"
       ],
-      "url": "/assets/atlas/spell/json/minor_illusion.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "image": "/assets/atlas/spell/wiki_image/wiki_image/images/minor_illusion.webp",
-      "sprite_index": 4,
-      "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet9.webp",
-      "rulesetContext": "2014",
-      "imageUrl": "/assets/atlas/spell/images/wiki_image/wiki_image/images/minor_illusion.webp"
+      "casting_time": "1 bonus action",
+      "range": "Touch",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/shillelagh.json",
+      "imageUrl": "/assets/atlas/spell/images/shillelagh.webp"
+    },
+    {
+      "index": "animal_friendship",
+      "name": "animal friendship",
+      "level": 1,
+      "school": "enchantment",
+      "classes": [
+        "bard",
+        "druid",
+        "ranger"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "24 hours",
+      "json_path": "/assets/atlas/spell/json/animal_friendship.json",
+      "imageUrl": "/assets/atlas/spell/images/animal-friendship.webp"
+    },
+    {
+      "index": "healing_word",
+      "name": "healing word",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/healing_word.json",
+      "imageUrl": "/assets/atlas/spell/images/healing-word.webp"
+    },
+    {
+      "index": "fog_cloud",
+      "name": "fog cloud",
+      "level": 1,
+      "school": "conjuration",
+      "classes": [
+        "druid",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Up to 1 hour",
+      "json_path": "/assets/atlas/spell/json/fog_cloud.json",
+      "imageUrl": "/assets/atlas/spell/images/fog-cloud.webp"
+    },
+    {
+      "index": "thunderwave",
+      "name": "thunderwave",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/thunderwave.json",
+      "imageUrl": "/assets/atlas/spell/images/thunderwave.webp"
     }
   ],
   "languages": [
-    "common",
-    "dwarvish"
+    "common"
   ],
   "preparedSpells": [
-    "minor_illusion"
+    "mending",
+    "shillelagh",
+    "animal_friendship",
+    "healing_word",
+    "fog_cloud",
+    "thunderwave"
   ],
   "spellSlots": {
     "1": {
-      "current": 1,
-      "max": 1
+      "current": 0,
+      "max": 0
     }
   },
   "choices": {
     "background_ability_scores": [
-      "con",
-      "con",
-      "int"
+      "str",
+      "str",
+      "con"
     ]
   },
-  "race": "dwarf",
-  "class": "warlock",
-  "background": "sage",
-  "spellcastingAbility": "cha",
+  "race": "tiefling",
+  "class": "druid",
+  "background": "farmer",
+  "spellcastingAbility": "wis",
   "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WarlockSword.webp",
-  "name": "Diesa Battlehammer",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
+  "name": "Lerissa",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-09T10:37:17.014Z"
+  "lastSaved": "2026-09-09T11:51:38.984Z"
 }
