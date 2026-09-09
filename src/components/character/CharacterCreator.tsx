@@ -1046,9 +1046,9 @@ const StepContent: React.FC<{
                     }
                 }
 
-                // Handle 2024 Origin Feat structure
+                // Handle Origin Feat structure
                 if (bgData?.feat) {
-                    fetchFeatData(bgData.feat.index, prev.ruleset || '2024').then(featData => {
+                    fetchFeatData(bgData.feat.index, prev.ruleset).then(featData => {
                         const featFeature = {
                             name: featData?.name || bgData.feat.name,
                             index: bgData.feat.index,

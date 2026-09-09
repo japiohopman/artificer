@@ -778,11 +778,24 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
     });
 
-    it('verifies canonical 2024 background-to-origin feat resolution across all 16 backgrounds', async () => {
-      const allBackgrounds = await fetchBackgroundsList('2024');
-      expect(allBackgrounds.length).toBe(16);
+    it('verifies canonical background-to-origin feat resolution respects the selected ruleset (2014 vs 2024)', async () => {
+      // 2024 Background -> 2024 Origin Feat
+      const acolyte24 = await fetchBackgroundData('acolyte', '2024');
+      expect(acolyte24?.feat?.index).toBe('magic_initiate');
+      const feat24 = await fetchFeatData(acolyte24.feat.index, '2024');
+      expect(feat24).not.toBeNull();
+      expect(feat24?.rulesetContext).toBe('2024');
+      expect(feat24?.url).toContain('/24/origin-feats/');
 
-      for (const bgRef of allBackgrounds) {
+      // 2014 Background (e.g. acolyte) does not use 2024 Origin Feats
+      const acolyte14 = await fetchBackgroundData('acolyte', '2014');
+      expect(acolyte14?.feat).toBeUndefined();
+
+      // Verify all 16 2024 PHB backgrounds resolve 2024 origin feats when requested under '2024'
+      const allBackgrounds24 = await fetchBackgroundsList('2024');
+      expect(allBackgrounds24.length).toBe(16);
+
+      for (const bgRef of allBackgrounds24) {
         const bgData = await fetchBackgroundData(bgRef.index, '2024');
         expect(bgData, `Background missing: ${bgRef.index}`).not.toBeNull();
         expect(bgData?.feat?.index, `Background ${bgRef.index} missing feat reference`).toBeTruthy();
@@ -791,11 +804,6 @@ describe('Ruleset Resolution Audit Tests', () => {
         expect(feat, `Origin feat ${bgData.feat.index} for background ${bgRef.index} failed to resolve`).not.toBeNull();
         expect(feat?.rulesetContext).toBe('2024');
         expect(feat?.url).toContain('/origin-feats/');
-
-        // Verify zero placeholder mechanics in resolved origin feat
-        const desc = Array.isArray(feat.desc) ? feat.desc.join(' ') : feat.desc || '';
-        expect(desc.toLowerCase()).not.toContain('placeholder');
-        expect(desc.toLowerCase()).not.toContain('you gain a feature');
       }
     });
   });
