@@ -1,0 +1,19 @@
+{
+  "index": "shield_master",
+  "name": "shield master",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Shield Proficiency"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength score by 1, to a maximum of 20.",
+    "Shield Bash. If you hit a creature with a melee attack as part of the Attack action, you can use a Bonus Action to force the target to make a Strength saving throw (DC 8 + your Strength modifier + your Proficiency Bonus). On a failed save, you push the target 5 feet away or knock it Prone.",
+    "Interpose Shield. If you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your Reaction to take no damage if you succeed on the saving throw."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/shield_master.json",
+  "image": "/assets/icons/svg/feats/shield_master.svg",
+  "updated_at": "2026-09-09T12:30:19.045Z"
+}

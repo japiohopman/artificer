@@ -1,0 +1,19 @@
+{
+  "index": "piercer",
+  "name": "piercer",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Strength or Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Piercing Reroll. Once per turn when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
+    "Piercing Critical. When you score a Critical Hit that deals Piercing damage, you can roll one additional damage die when determining the extra Piercing damage."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/piercer.json",
+  "image": "/assets/icons/svg/feats/piercer.svg",
+  "updated_at": "2026-09-09T12:30:19.044Z"
+}

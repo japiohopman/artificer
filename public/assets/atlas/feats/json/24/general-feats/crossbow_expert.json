@@ -1,0 +1,20 @@
+{
+  "index": "crossbow_expert",
+  "name": "crossbow expert",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Dexterity score by 1, to a maximum of 20.",
+    "Ignore Loading. You ignore the Loading property of crossbows.",
+    "Firing in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with crossbows.",
+    "Dual Wielding Crossbows. When you make an attack with a Light weapon, you can make an attack with a Hand Crossbow held in your other hand as a Bonus Action."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/crossbow_expert.json",
+  "image": "/assets/icons/svg/feats/crossbow_expert.svg",
+  "updated_at": "2026-09-09T12:30:19.042Z"
+}

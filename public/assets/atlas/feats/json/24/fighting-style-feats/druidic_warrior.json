@@ -1,0 +1,15 @@
+{
+  "index": "druidic_warrior",
+  "name": "druidic warrior",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "You learn two Druid cantrips of your choice from the Druid spell list. Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/druidic_warrior.json",
+  "image": "/assets/icons/svg/feats/druidic_warrior.svg",
+  "updated_at": "2026-09-09T12:30:19.039Z"
+}

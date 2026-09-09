@@ -1,0 +1,18 @@
+{
+  "index": "skill_expert",
+  "name": "skill expert",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 20.",
+    "Skill Proficiency. You gain proficiency in one skill of your choice.",
+    "Expertise. Choose one skill in which you have proficiency. You gain Expertise in that skill."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/skill_expert.json",
+  "image": "/assets/icons/svg/feats/skill_expert.svg",
+  "updated_at": "2026-09-09T12:30:19.045Z"
+}

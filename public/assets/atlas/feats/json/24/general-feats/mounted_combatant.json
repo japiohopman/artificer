@@ -1,0 +1,17 @@
+{
+  "index": "mounted_combatant",
+  "name": "mounted combatant",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.",
+    "Mount Mastery. While mounted, you have Advantage on melee attack rolls against unmounted creatures smaller than your mount, you can force an attack targeted at your mount to target you instead, and your mount takes no damage on successful Dexterity saving throws."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/mounted_combatant.json",
+  "image": "/assets/icons/svg/feats/mounted_combatant.svg",
+  "updated_at": "2026-09-09T12:30:19.044Z"
+}

@@ -1,0 +1,15 @@
+{
+  "index": "protection",
+  "name": "protection",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your Reaction to impose Disadvantage on the attack roll. You must be holding a Shield."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/protection.json",
+  "image": "/assets/icons/svg/feats/protection.svg",
+  "updated_at": "2026-09-09T12:30:19.039Z"
+}

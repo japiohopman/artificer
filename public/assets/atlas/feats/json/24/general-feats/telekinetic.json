@@ -1,0 +1,18 @@
+{
+  "index": "telekinetic",
+  "name": "telekinetic",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "Mage Hand. You learn the Mage Hand cantrip. You can cast it invisibly, and its range increases by 30 feet.",
+    "Telekinetic Shove. As a Bonus Action, you can telekinetically shove one creature you can see within 30 feet of you. Target must succeed on a Strength saving throw (DC 8 + your spellcasting ability modifier + your Proficiency Bonus) or be moved 5 feet toward or away from you."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/telekinetic.json",
+  "image": "/assets/icons/svg/feats/telekinetic.svg",
+  "updated_at": "2026-09-09T12:30:19.045Z"
+}

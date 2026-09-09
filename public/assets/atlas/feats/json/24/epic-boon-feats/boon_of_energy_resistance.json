@@ -1,0 +1,18 @@
+{
+  "index": "boon_of_energy_resistance",
+  "name": "boon of energy resistance",
+  "category": "epic-boon",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 19+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.",
+    "Energy Resistance. You gain Resistance to two of the following damage types of your choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever you finish a Long Rest, you can change the chosen damage types.",
+    "Energy Redirection. When you take damage of one of the chosen types, you can use your Reaction to deal damage of that type to a target within 60 feet of you equal to 2d6 + the ability modifier increased by this feat."
+  ],
+  "url": "/assets/atlas/feats/json/24/epic-boon-feats/boon_of_energy_resistance.json",
+  "image": "/assets/icons/svg/feats/boon_of_energy_resistance.svg",
+  "updated_at": "2026-09-09T12:30:19.040Z"
+}

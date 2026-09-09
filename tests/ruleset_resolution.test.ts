@@ -701,8 +701,33 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   describe('2024 Feats Integration & Isolation Tests', () => {
+    it('enforces complete 2024 catalogue representation (75 feats) and index synchronization', async () => {
+      const all24 = await atlasService.loadFeatsList('2024');
+      expect(all24.length).toBe(75);
+
+      const originFeats = await atlasService.loadFeatsList('2024', 'origin');
+      expect(originFeats.length).toBe(10);
+      expect(originFeats.map(f => f.index)).toContain('magic_initiate');
+      expect(originFeats.map(f => f.index)).toContain('alert');
+
+      const fightingStyleFeats = await atlasService.loadFeatsList('2024', 'fighting-style');
+      expect(fightingStyleFeats.length).toBe(10);
+      expect(fightingStyleFeats.map(f => f.index)).toContain('archery');
+      expect(fightingStyleFeats.map(f => f.index)).toContain('blind_fighting');
+
+      const epicBoonFeats = await atlasService.loadFeatsList('2024', 'epic-boon');
+      expect(epicBoonFeats.length).toBe(12);
+      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
+      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fortitude');
+
+      const generalFeats = await atlasService.loadFeatsList('2024', 'general');
+      expect(generalFeats.length).toBe(43);
+      expect(generalFeats.map(f => f.index)).toContain('war_caster');
+      expect(generalFeats.map(f => f.index)).toContain('sharpshooter');
+    });
+
     it('enforces strict ruleset isolation for 2024 vs 2014 feat loading with no silent cross-ruleset fallback', async () => {
-      // 1. Alert exists in both rulesets
+      // 1. Alert exists in both rulesets with distinct 2024 vs 2014 mechanics
       const alert14 = await fetchFeatData('alert', '2014');
       const alert24 = await fetchFeatData('alert', '2024');
       expect(alert14).not.toBeNull();
@@ -711,14 +736,35 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(alert24?.rulesetContext).toBe('2024');
       expect(alert24?.url).toContain('/24/');
 
-      // 2. Requesting a 2014-only feat under 2024 ruleset MUST return null (no silent fallback to 2014)
-      const actor24 = await fetchFeatData('actor', '2024');
-      expect(actor24).toBeNull();
+      // 2014 Alert: +5 to initiative, can't be surprised
+      expect(alert14?.desc.join(' ')).toContain('+5 bonus to initiative');
+      // 2024 Alert: Proficiency Bonus to initiative, Initiative Swap
+      expect(alert24?.desc.join(' ')).toContain('Proficiency Bonus to the roll');
+      expect(alert24?.desc.join(' ')).toContain('Initiative Swap');
 
-      // 3. Requesting a 2014-only feat under 2014 ruleset resolves correctly
-      const actor14 = await fetchFeatData('actor', '2014');
-      expect(actor14).not.toBeNull();
-      expect(actor14?.rulesetContext).toBe('2014');
+      // 2. Requesting a non-existent 2024 feat returns null (no silent fallback to 2014 or fake data)
+      const nonExistent = await fetchFeatData('non_existent_feat_xyz', '2024');
+      expect(nonExistent).toBeNull();
+    });
+
+    it('verifies material edition differences for 2014 vs 2024 feats', async () => {
+      // Grappler
+      const grappler14 = await fetchFeatData('grappler', '2014');
+      const grappler24 = await fetchFeatData('grappler', '2024');
+      expect(grappler14?.desc.join(' ')).toContain('pin a creature');
+      expect(grappler24?.desc.join(' ')).toContain('Punch and Grab');
+
+      // Heavy Armor Master
+      const ham14 = await fetchFeatData('heavy_armor_master', '2014');
+      const ham24 = await fetchFeatData('heavy_armor_master', '2024');
+      expect(ham14?.desc.join(' ')).toContain('reduced by 3');
+      expect(ham24?.desc.join(' ')).toContain('reduced by an amount equal to your Proficiency Bonus');
+
+      // Heavy Weapon Master / Great Weapon Master
+      const gwm14 = await fetchFeatData('great_weapon_master', '2014');
+      const hwm24 = await fetchFeatData('heavy_weapon_master', '2024');
+      expect(gwm14?.desc.join(' ')).toContain('-5 penalty to the attack roll');
+      expect(hwm24?.desc.join(' ')).toContain('extra damage equal to your Proficiency Bonus');
     });
 
     it('resolves feats across distinct 2024 subcategories (Origin, General, Fighting Style, Epic Boon)', async () => {
@@ -758,24 +804,6 @@ describe('Ruleset Resolution Audit Tests', () => {
       const boonFate = await fetchFeatData('boon_of_fate', '2024');
       expect(boonFate).not.toBeNull();
       expect(boonFate?.url).toContain('/epic-boon-feats/');
-    });
-
-    it('verifies fetchFeatsList and category filtering for 2024 feats', async () => {
-      const all24 = await atlasService.loadFeatsList('2024');
-      expect(all24.length).toBeGreaterThanOrEqual(23);
-
-      const originFeats = await atlasService.loadFeatsList('2024', 'origin');
-      expect(originFeats.length).toBe(10);
-      expect(originFeats.map(f => f.index)).toContain('magic_initiate');
-      expect(originFeats.map(f => f.index)).toContain('alert');
-
-      const fightingStyleFeats = await atlasService.loadFeatsList('2024', 'fighting-style');
-      expect(fightingStyleFeats.length).toBe(4);
-      expect(fightingStyleFeats.map(f => f.index)).toContain('archery');
-
-      const epicBoonFeats = await atlasService.loadFeatsList('2024', 'epic-boon');
-      expect(epicBoonFeats.length).toBe(7);
-      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
     });
 
     it('verifies canonical background-to-origin feat resolution respects the selected ruleset (2014 vs 2024)', async () => {

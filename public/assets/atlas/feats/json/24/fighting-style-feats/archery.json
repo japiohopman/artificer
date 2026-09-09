@@ -1,12 +1,15 @@
 {
   "index": "archery",
   "name": "archery",
-  "prerequisites": [],
-  "desc": [
-    "(Prerequisite: Fighting Style Feature)You gain a +2 bonus to attack rolls you make with Ranged weapons.Foundry NoteThis feature includes an Active Effect which adds the bonus to Ranged weapon attack rolls."
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
   ],
-  "feature_specific": {},
+  "desc": [
+    "You gain a +2 bonus to attack rolls you make with Ranged weapons."
+  ],
   "url": "/assets/atlas/feats/json/24/fighting-style-feats/archery.json",
-  "image": "icons/skills/ranged/arrow-flying-broadhead-metal.webp",
-  "updated_at": "2026-07-13T20:16:15.525Z"
+  "image": "/assets/icons/svg/feats/archery.svg",
+  "updated_at": "2026-09-09T12:30:19.038Z"
 }
