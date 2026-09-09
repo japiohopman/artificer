@@ -700,6 +700,106 @@ describe('Ruleset Resolution Audit Tests', () => {
     expect(feat24?.rulesetContext).toBe('2024');
   });
 
+  describe('2024 Feats Integration & Isolation Tests', () => {
+    it('enforces strict ruleset isolation for 2024 vs 2014 feat loading with no silent cross-ruleset fallback', async () => {
+      // 1. Alert exists in both rulesets
+      const alert14 = await fetchFeatData('alert', '2014');
+      const alert24 = await fetchFeatData('alert', '2024');
+      expect(alert14).not.toBeNull();
+      expect(alert24).not.toBeNull();
+      expect(alert14?.rulesetContext).toBe('2014');
+      expect(alert24?.rulesetContext).toBe('2024');
+      expect(alert24?.url).toContain('/24/');
+
+      // 2. Requesting a 2014-only feat under 2024 ruleset MUST return null (no silent fallback to 2014)
+      const actor24 = await fetchFeatData('actor', '2024');
+      expect(actor24).toBeNull();
+
+      // 3. Requesting a 2014-only feat under 2014 ruleset resolves correctly
+      const actor14 = await fetchFeatData('actor', '2014');
+      expect(actor14).not.toBeNull();
+      expect(actor14?.rulesetContext).toBe('2014');
+    });
+
+    it('resolves feats across distinct 2024 subcategories (Origin, General, Fighting Style, Epic Boon)', async () => {
+      // Origin Feats
+      const lucky = await fetchFeatData('lucky', '2024');
+      expect(lucky).not.toBeNull();
+      expect(lucky?.rulesetContext).toBe('2024');
+      expect(lucky?.url).toContain('/origin-feats/');
+
+      const tough = await fetchFeatData('tough', '2024');
+      expect(tough).not.toBeNull();
+      expect(tough?.url).toContain('/origin-feats/');
+
+      // General Feats
+      const grappler = await fetchFeatData('grappler', '2024');
+      expect(grappler).not.toBeNull();
+      expect(grappler?.url).toContain('/general-feats/');
+
+      const asi = await fetchFeatData('ability_score_improvement', '2024');
+      expect(asi).not.toBeNull();
+      expect(asi?.url).toContain('/general-feats/');
+
+      // Fighting Style Feats
+      const archery = await fetchFeatData('archery', '2024');
+      expect(archery).not.toBeNull();
+      expect(archery?.url).toContain('/fighting-style-feats/');
+
+      const defense = await fetchFeatData('defense', '2024');
+      expect(defense).not.toBeNull();
+      expect(defense?.url).toContain('/fighting-style-feats/');
+
+      // Epic Boon Feats
+      const boonTruesight = await fetchFeatData('boon_of_truesight', '2024');
+      expect(boonTruesight).not.toBeNull();
+      expect(boonTruesight?.url).toContain('/epic-boon-feats/');
+
+      const boonFate = await fetchFeatData('boon_of_fate', '2024');
+      expect(boonFate).not.toBeNull();
+      expect(boonFate?.url).toContain('/epic-boon-feats/');
+    });
+
+    it('verifies fetchFeatsList and category filtering for 2024 feats', async () => {
+      const all24 = await atlasService.loadFeatsList('2024');
+      expect(all24.length).toBeGreaterThanOrEqual(23);
+
+      const originFeats = await atlasService.loadFeatsList('2024', 'origin');
+      expect(originFeats.length).toBe(10);
+      expect(originFeats.map(f => f.index)).toContain('magic_initiate');
+      expect(originFeats.map(f => f.index)).toContain('alert');
+
+      const fightingStyleFeats = await atlasService.loadFeatsList('2024', 'fighting-style');
+      expect(fightingStyleFeats.length).toBe(4);
+      expect(fightingStyleFeats.map(f => f.index)).toContain('archery');
+
+      const epicBoonFeats = await atlasService.loadFeatsList('2024', 'epic-boon');
+      expect(epicBoonFeats.length).toBe(7);
+      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
+    });
+
+    it('verifies canonical 2024 background-to-origin feat resolution across all 16 backgrounds', async () => {
+      const allBackgrounds = await fetchBackgroundsList('2024');
+      expect(allBackgrounds.length).toBe(16);
+
+      for (const bgRef of allBackgrounds) {
+        const bgData = await fetchBackgroundData(bgRef.index, '2024');
+        expect(bgData, `Background missing: ${bgRef.index}`).not.toBeNull();
+        expect(bgData?.feat?.index, `Background ${bgRef.index} missing feat reference`).toBeTruthy();
+
+        const feat = await fetchFeatData(bgData.feat.index, '2024');
+        expect(feat, `Origin feat ${bgData.feat.index} for background ${bgRef.index} failed to resolve`).not.toBeNull();
+        expect(feat?.rulesetContext).toBe('2024');
+        expect(feat?.url).toContain('/origin-feats/');
+
+        // Verify zero placeholder mechanics in resolved origin feat
+        const desc = Array.isArray(feat.desc) ? feat.desc.join(' ') : feat.desc || '';
+        expect(desc.toLowerCase()).not.toContain('placeholder');
+        expect(desc.toLowerCase()).not.toContain('you gain a feature');
+      }
+    });
+  });
+
   it('verifies atlasService equipment and feat loading with explicit ruleset', async () => {
     const eq14 = await atlasService.loadEquipment('dagger', '2014');
     const eq24 = await atlasService.loadEquipment('dagger', '2024');

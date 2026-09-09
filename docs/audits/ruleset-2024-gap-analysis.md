@@ -60,7 +60,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
 | **Subclasses & Subclass Features** | Supported | **Implemented (48/48)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). All 48 canonical 2024 subclasses audited and implemented across all 12 core classes (4 per class) with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Implemented (16/16)** | Versioned directories exist (`/backgrounds/json/14/` vs `/24/`). All 16 2024 PHB Origin Backgrounds implemented with allowed ability scores, canonical Origin Feats, proficiencies, equipment, and official markdown guides in `/ui/official/backgrounds/*.md`. Loader returns `rulesetContext`. |
-| **Feats** | Supported | **Partial** | Versioned directories exist (`/feats/json/14/` vs `/24/`). 2024 origin, general, and epic boon feats populated in `/24/`. |
+| **Feats** | Supported | **Implemented** | Versioned directories exist (`/feats/json/14/` vs `/24/`). Strict ruleset-aware resolution in place for Origin, General, Fighting Style, and Epic Boon subcategories with index_14.json / index_24.json catalogs and zero silent cross-ruleset fallbacks. |
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
 | **Spells** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/spell/json/`. 2024 spell text/scaling updates missing. |
 | **Spellcasting Rules** | Supported | **Supported** | Embedded in versioned 2024 class and level JSON records. |

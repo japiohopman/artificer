@@ -13,71 +13,99 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Insight",
+    "skill: perception",
     "Skill: Stealth",
-    "Thieves' Tools",
+    "Skill: Survival",
+    "Cartographer'S Tools",
     "light armor",
     "medium armor",
     "shields",
     "simple weapons",
-    "martial weapons",
-    "saving throw: str",
-    "saving throw: con",
-    "Saving Throw: str",
-    "Saving Throw: con"
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "darkvision",
+      "index": "darkvision",
+      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "darkvision": 60
+        }
+      }
+    },
+    {
+      "name": "elven lineage",
+      "index": "elven_lineage",
+      "desc": "You are part of an elven lineage (Drow, High Elf, or Wood Elf) that grants you supernatural cantrips and spells as you level up."
+    },
+    {
+      "name": "fey ancestry",
+      "index": "fey_ancestry",
+      "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep.",
+      "trait_specific": {
+        "passive_modifiers": {
+          "advantage": [
+            {
+              "name": "Saving Throws against being charmed",
+              "condition": {
+                "index": "charmed",
+                "name": "charmed",
+                "url": "/assets/atlas/conditions/json/charmed.json"
+              }
+            }
+          ],
+          "immunity": [
+            {
+              "name": "magic sleep"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "keen senses",
+      "index": "keen_senses",
+      "desc": "You have proficiency in the Perception skill."
+    },
+    {
+      "name": "trance",
+      "index": "trance",
+      "desc": "Elves do not need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is \"trance.\") While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting this way, you gain the same benefit that a human does from 8 hours of sleep."
+    }
+  ],
   "features": [
     {
-      "index": "rage_2024",
-      "name": "Rage",
+      "index": "spellcasting_cleric_2024",
+      "name": "Spellcasting: Cleric",
       "class": {
-        "index": "barbarian",
-        "name": "Barbarian",
-        "url": "/assets/atlas/class/json/24/barbarian.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "In battle, you fight with primal ferocity. As a Bonus Action, enter a Rage. While raging, you gain Advantage on Strength checks and saves, extra rage damage on Strength weapon attacks (+2 at L1, scaling to +4), and resistance to Bludgeoning, Piercing, and Slashing damage. Maintain by attacking, forcing a save, or taking a Bonus Action to extend. Uses: 2 at L1, scaling to 6 at L17. Regain 1 on Short Rest, all on Long Rest."
+        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
       ],
-      "feature_specific": {
-        "uses_at_level_1": 2,
-        "recharge": "short_rest_1_all_long_rest"
-      },
-      "url": "/assets/atlas/features/json/rage_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
       "source": "Class"
     },
     {
-      "index": "unarmored_defense_barbarian_2024",
-      "name": "Unarmored Defense",
+      "index": "divine_order_cleric",
+      "name": "Divine Order",
       "class": {
-        "index": "barbarian",
-        "name": "Barbarian",
-        "url": "/assets/atlas/class/json/24/barbarian.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "While you are wearing no armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
       ],
-      "url": "/assets/atlas/features/json/unarmored_defense_barbarian_2024.json",
-      "source": "Class"
-    },
-    {
-      "index": "weapon_mastery_barbarian_2024",
-      "name": "Weapon Mastery",
-      "class": {
-        "index": "barbarian",
-        "name": "Barbarian",
-        "url": "/assets/atlas/class/json/24/barbarian.json"
-      },
-      "level": 1,
-      "desc": [
-        "Your training with weapons allows you to use the mastery properties of two martial or simple melee weapons of your choice."
-      ],
-      "feature_specific": {
-        "mastery_count": 2
-      },
-      "url": "/assets/atlas/features/json/weapon_mastery_barbarian_2024.json",
+      "url": "/assets/atlas/features/json/divine_order_cleric.json",
       "source": "Class"
     }
   ],
@@ -100,50 +128,73 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": []
+    "specialFeatures": [],
+    "weightScale": 1.1,
+    "heightScale": 1.04
   },
   "items": {
-    "explorers_pack_skjbmkimf": {
-      "id": "explorers_pack_skjbmkimf",
-      "template": "explorers_pack",
+    "shield_ubdt3sdo6": {
+      "id": "shield_ubdt3sdo6",
+      "template": "shield",
       "quantity": 1,
-      "addedAt": 1788915377653,
-      "kind": "container"
+      "addedAt": 1788771172451,
+      "kind": "shield"
     },
-    "javelin_uvyaerogt": {
-      "id": "javelin_uvyaerogt",
-      "template": "javelin",
-      "quantity": 4,
-      "addedAt": 1788915377653,
-      "kind": "weapon"
-    },
-    "bedroll_uthuabnzl": {
-      "id": "bedroll_uthuabnzl",
+    "bedroll_nprcdxw0s": {
+      "id": "bedroll_nprcdxw0s",
       "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1788915377653,
+      "addedAt": 1788771172451,
       "kind": "tradegood"
     },
-    "crowbar_2eb7hzmnx": {
-      "id": "crowbar_2eb7hzmnx",
-      "template": "crowbar",
+    "shortbow_sw9lee5h9": {
+      "id": "shortbow_sw9lee5h9",
+      "template": "shortbow",
       "quantity": 1,
-      "addedAt": 1788915377653,
-      "kind": "tradegood"
-    },
-    "dagger_o7vnqptuo": {
-      "id": "dagger_o7vnqptuo",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1788915377653,
+      "addedAt": 1788771172451,
       "kind": "weapon"
     },
-    "gold_asi2h9xbj": {
-      "id": "gold_asi2h9xbj",
+    "arrow_ac57k2xji": {
+      "id": "arrow_ac57k2xji",
+      "template": "arrow",
+      "quantity": 20,
+      "addedAt": 1788771172452,
+      "kind": "consumable"
+    },
+    "gold_je5pa7yhj": {
+      "id": "gold_je5pa7yhj",
       "template": "gold",
-      "quantity": 11,
-      "addedAt": 1788915377653,
+      "quantity": 3,
+      "addedAt": 1788771172452,
       "kind": "currency"
+    },
+    "scale_mail_6178v826f": {
+      "id": "scale_mail_6178v826f",
+      "template": "scale_mail",
+      "quantity": 1,
+      "addedAt": 1788771223674,
+      "kind": "armor"
+    },
+    "dagger_lw2wyzyco": {
+      "id": "dagger_lw2wyzyco",
+      "template": "dagger",
+      "quantity": 1,
+      "addedAt": 1788771234565,
+      "kind": "weapon"
+    },
+    "priests_pack_mr7zm2ldt": {
+      "id": "priests_pack_mr7zm2ldt",
+      "template": "priests_pack",
+      "quantity": 1,
+      "addedAt": 1788771251022,
+      "kind": "container"
+    },
+    "emblem_uds9e9uel": {
+      "id": "emblem_uds9e9uel",
+      "template": "emblem",
+      "quantity": 1,
+      "addedAt": 1788771275520,
+      "kind": "equipment"
     }
   },
   "containers": {
@@ -154,43 +205,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_skjbmkimf"
+          "itemId": "bedroll_nprcdxw0s"
         },
         {
           "id": "bag_1",
-          "itemId": "bedroll_uthuabnzl"
+          "itemId": "arrow_ac57k2xji"
         },
         {
           "id": "bag_2",
-          "itemId": "crowbar_2eb7hzmnx"
+          "itemId": "gold_je5pa7yhj"
         },
         {
           "id": "bag_3",
-          "itemId": "dagger_o7vnqptuo"
+          "itemId": "scale_mail_rq1iquj4i"
         },
         {
           "id": "bag_4",
-          "itemId": "gold_asi2h9xbj"
+          "itemId": "dagger_lw2wyzyco"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "dagger_6esynh831"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "priests_pack_mr7zm2ldt"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "priests_pack_s5m2p77hs"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "emblem_uds9e9uel"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "emblem_fk0gkwrbz"
         },
         {
           "id": "bag_10",
@@ -256,11 +307,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "javelin_uvyaerogt"
+        "itemId": "shortbow_sw9lee5h9"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_ubdt3sdo6"
       },
       {
         "id": "ranged",
@@ -272,7 +323,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "scale_mail_6178v826f"
       },
       {
         "id": "clothes",
@@ -374,18 +425,18 @@
   },
   "backpack": [
     {
-      "id": "thieves_tools_e8y8kp6vw",
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
+      "id": "cartographers_tools_8uklydoka",
+      "index": "cartographers_tools",
+      "name": "Cartographer'S Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp"
+      "url": "/assets/atlas/equipment/json/cartographers_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/cartographers_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/cartographers_tools.webp"
     },
     {
-      "id": "bedroll_fgmjx006y",
+      "id": "bedroll_jmth6jujb",
       "index": "bedroll",
       "name": "Bedroll",
       "quantity": 1,
@@ -419,26 +470,37 @@
       "rulesetContext": "2014"
     },
     {
-      "id": "crowbar_4w2206jc6",
-      "index": "crowbar",
-      "name": "Crowbar",
+      "id": "quiver_xv1sijjka",
+      "index": "quiver",
+      "name": "Quiver",
       "quantity": 1,
-      "weight": 5,
+      "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
-      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+      "url": "/assets/atlas/equipment/json/quiver.json",
+      "image_url": "public/assets/atlas/equipment/images/quiver.webp",
+      "imageUrl": "/assets/atlas/equipment/images/quiver.webp"
+    },
+    {
+      "id": "arrow_jrwmwa3s3",
+      "index": "arrow",
+      "name": "Arrow",
+      "quantity": 20,
+      "weight": 0.05,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/arrow.json",
+      "image_url": "public/assets/atlas/equipment/images/arrow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/arrow.webp",
       "desc": [
-        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
+        "Standard ammunition used for bows of all varieties. These mundane arrows are made of smooth wooden shafts with goose feather fletching and hammer metal bodkins."
       ],
       "special": [],
-      "kind": "tradegood",
+      "kind": "consumable",
       "cost": {
-        "quantity": 2,
-        "unit": "gp"
+        "quantity": 5,
+        "unit": "cp"
       },
-      "image": "/assets/atlas/equipment/images/crowbar.webp",
-      "updated_at": "2026-07-12T19:00:13.571Z",
+      "image": "/assets/atlas/equipment/images/arrow.webp",
+      "updated_at": "2026-07-12T19:00:11.722Z",
       "contents": [],
       "properties": [],
       "equipSlots": [
@@ -447,23 +509,13 @@
       ],
       "last_updated": "12-7-2026",
       "background_type": "land_forest",
-      "sprite_index": 21,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+      "sprite_index": 8,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet1.webp",
+      "category": "Ammunition",
       "rulesetContext": "2014"
     },
     {
-      "id": "pouch_q6xt73njd",
-      "index": "pouch",
-      "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
-    },
-    {
-      "id": "clothes_travelers_o0k3ictvs",
+      "id": "clothes_travelers_i45rnqos1",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -474,10 +526,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_57zymcvqx",
+      "id": "gold_msj4pygtl",
       "index": "gold",
       "name": "Gold",
-      "quantity": 11,
+      "quantity": 3,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -508,42 +560,37 @@
   ],
   "inventory": {
     "main-hand": {
-      "id": "dagger_d7ietc04e",
-      "index": "dagger",
-      "name": "Dagger",
-      "quantity": 2,
-      "weight": 1,
+      "id": "shortbow_hh42xskpb",
+      "index": "shortbow",
+      "name": "Shortbow",
+      "quantity": 1,
+      "weight": 2,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
-      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
+      "url": "/assets/atlas/equipment/json/shortbow.json",
+      "image_url": "public/assets/atlas/equipment/images/shortbow.webp",
+      "imageUrl": "/assets/atlas/equipment/images/shortbow.webp",
       "desc": [
-        "A short metal blade mounted to a small hilt and crossguard. The dagger makes an effective side armament for hardened warriors or a hidden blade for assassins and thieves."
+        "This two handed bow is somewhat smaller than the traditional longbow variant, making it well suited for rapid attacks while on the move or mounted from horseback."
       ],
       "special": [],
       "kind": "weapon",
       "cost": {
-        "quantity": 2,
+        "quantity": 25,
         "unit": "gp"
       },
-      "image": "/assets/atlas/equipment/images/dagger.webp",
-      "updated_at": "2026-07-12T19:00:18.366Z",
+      "image": "/assets/atlas/equipment/images/shortbow.webp",
+      "updated_at": "2026-07-12T19:00:20.317Z",
       "contents": [],
       "properties": [
         {
-          "index": "finesse",
-          "name": "finesse",
-          "url": "/assets/atlas/weapon_properties/json/finesse.json"
+          "index": "ammunition",
+          "name": "ammunition",
+          "url": "/assets/atlas/weapon_properties/json/ammunition.json"
         },
         {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        },
-        {
-          "index": "thrown",
-          "name": "thrown",
-          "url": "/assets/atlas/weapon_properties/json/thrown.json"
+          "index": "two-handed",
+          "name": "two-handed",
+          "url": "/assets/atlas/weapon_properties/json/two-handed.json"
         }
       ],
       "equipSlots": [
@@ -551,21 +598,20 @@
         "off_hand"
       ],
       "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 23,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
-      "category": "Simple Melee Weapons",
-      "slot": "main-hand",
+      "background_type": "generic",
+      "sprite_index": 17,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
+      "category": "Simple Ranged Weapons",
       "equipment_category": {
         "index": "weapon",
         "name": "weapon",
         "url": "/assets/atlas/equipment_categories/json/weapon.json"
       },
       "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
+      "weapon_range": "Ranged",
+      "category_range": "Simple Ranged",
       "damage": {
-        "damage_dice": "1d4",
+        "damage_dice": "1d6",
         "damage_type": {
           "index": "piercing",
           "name": "piercing",
@@ -573,42 +619,170 @@
         }
       },
       "range": {
-        "normal": 20,
-        "long": 60
+        "normal": 80,
+        "long": 320
       },
       "rulesetContext": "2014",
-      "main_hand_slot": "Dagger"
+      "slot": "main-hand",
+      "main_hand_slot": "Shortbow"
     }
   },
-  "knownSpells": [],
-  "languages": [
-    "common"
+  "knownSpells": [
+    {
+      "index": "create_or_destroy_water",
+      "name": "create or destroy water",
+      "level": 1,
+      "school": "transmutation",
+      "classes": [
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/create_or_destroy_water.json",
+      "imageUrl": "/assets/atlas/spell/images/create-or-destroy-water.webp"
+    },
+    {
+      "index": "detect_magic",
+      "name": "detect magic",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/detect_magic.json",
+      "imageUrl": "/assets/atlas/spell/images/detect-magic.webp"
+    },
+    {
+      "index": "healing_word",
+      "name": "healing word",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/healing_word.json",
+      "imageUrl": "/assets/atlas/spell/images/healing-word.webp"
+    },
+    {
+      "index": "guiding_bolt",
+      "name": "guiding bolt",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "1 round",
+      "json_path": "/assets/atlas/spell/json/guiding_bolt.json",
+      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+    },
+    {
+      "index": "mending",
+      "name": "mending",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "cleric",
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 minute",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/mending.json",
+      "imageUrl": "/assets/atlas/spell/images/mending.webp"
+    },
+    {
+      "index": "light",
+      "name": "light",
+      "level": 0,
+      "school": "evocation",
+      "classes": [
+        "artificer",
+        "bard",
+        "cleric",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/light.json",
+      "imageUrl": "/assets/atlas/spell/images/light.webp"
+    },
+    {
+      "index": "guidance",
+      "name": "guidance",
+      "level": 0,
+      "school": "divination",
+      "classes": [
+        "artificer",
+        "cleric",
+        "druid"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/guidance.json",
+      "imageUrl": "/assets/atlas/spell/images/guidance.webp"
+    }
   ],
-  "preparedSpells": [],
-  "spellSlots": {},
-  "choices": {
-    "background_ability_scores": [
-      "dex",
-      "dex",
-      "wis",
-      "cha"
-    ]
+  "languages": [
+    "common",
+    "elvish"
+  ],
+  "preparedSpells": [
+    "create_or_destroy_water",
+    "detect_magic",
+    "healing_word",
+    "guiding_bolt",
+    "mending",
+    "light",
+    "guidance"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
   },
-  "race": "tiefling",
-  "class": "barbarian",
-  "background": "wayfarer",
-  "spellcastingAbility": "cha",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/BarbarianAxe.webp",
-  "name": "Kallista",
+  "choices": {},
+  "race": "elf",
+  "class": "cleric",
+  "background": "guide",
+  "spellcastingAbility": "wis",
+  "alignment": "lawful_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Naivara Siannodel",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-09T00:58:19.968Z"
+  "lastSaved": "2026-09-07T08:55:38.403Z"
 }

@@ -172,7 +172,7 @@ export const SelectionStep: React.FC<{
         data = await fetchBackgroundData(index, ruleset);
         if (data?.feat?.index) {
           const { fetchFeatData } = await import('../../../services/storageService');
-          const fData = await fetchFeatData(data.feat.index, '2024');
+          const fData = await fetchFeatData(data.feat.index, ruleset || '2024');
           setOriginFeatData(fData);
         } else {
           setOriginFeatData(null);

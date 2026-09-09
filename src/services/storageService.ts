@@ -2471,32 +2471,71 @@ export async function fetchClassLevels(classIndex: string, ruleset?: '2014' | '2
   return levels;
 }
 
+export async function fetchFeatsList(ruleset?: '2014' | '2024', category?: string): Promise<{ name: string; index: string; category?: string; ruleset: '2014' | '2024' }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const indexFile = activeRuleset === '2024' ? 'index_24.json' : 'index_14.json';
+
+  // Node CLI local filesystem fallback for test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const fullFsPath = pathModule.resolve(process.cwd(), `public/assets/atlas/feats/json/${indexFile}`);
+      if (fs.existsSync(fullFsPath)) {
+        const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+        let data = JSON.parse(fileContent);
+        if (category) {
+          data = data.filter((item: any) => item.category === category);
+        }
+        return data;
+      }
+    } catch (e) {}
+  }
+
+  try {
+    const res = await fetch(`/assets/atlas/feats/json/${indexFile}`);
+    if (res.ok) {
+      let data = await res.json();
+      if (category) {
+        data = data.filter((item: any) => item.category === category);
+      }
+      return data;
+    }
+  } catch (e) {}
+
+  return [];
+}
+
 export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
   const activeRuleset = getActiveRulesetContext(ruleset);
-  const versionFolder = getRulesetVersionFolder(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
   const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_').replace(/'/g, '');
   const hyphenIndex = index.toLowerCase().replace(/[\s_]/g, '-').replace(/'/g, '');
 
-  const candidatePaths = [
-    // 1. Explicit ruleset version folder
-    `/assets/atlas/feats/json/${versionFolder}/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/${hyphenIndex}.json`,
-    // Subcategory paths for 2024 feats (origin-feats, general-feats, fighting-style-feats, epic-boon-feats)
-    `/assets/atlas/feats/json/${versionFolder}/origin-feats/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/origin-feats/${hyphenIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/general-feats/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/general-feats/${hyphenIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/fighting-style-feats/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/fighting-style-feats/${hyphenIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/epic-boon-feats/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder}/epic-boon-feats/${hyphenIndex}.json`,
-    // 2. Unversioned root folder
-    `/assets/atlas/feats/json/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${hyphenIndex}.json`,
-    // 3. Fallback to alternative ruleset version folder
-    `/assets/atlas/feats/json/${versionFolder === '14' ? '24' : '14'}/${cleanIndex}.json`,
-    `/assets/atlas/feats/json/${versionFolder === '14' ? '24' : '14'}/${hyphenIndex}.json`
-  ];
+  let candidatePaths: string[] = [];
+
+  if (activeRuleset === '2024') {
+    candidatePaths = [
+      `/assets/atlas/feats/json/24/origin-feats/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/24/origin-feats/${hyphenIndex}.json`,
+      `/assets/atlas/feats/json/24/general-feats/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/24/general-feats/${hyphenIndex}.json`,
+      `/assets/atlas/feats/json/24/fighting-style-feats/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/24/fighting-style-feats/${hyphenIndex}.json`,
+      `/assets/atlas/feats/json/24/epic-boon-feats/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/24/epic-boon-feats/${hyphenIndex}.json`,
+      `/assets/atlas/feats/json/24/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/24/${hyphenIndex}.json`
+    ];
+  } else {
+    candidatePaths = [
+      `/assets/atlas/feats/json/14/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/14/${hyphenIndex}.json`,
+      `/assets/atlas/feats/json/${cleanIndex}.json`,
+      `/assets/atlas/feats/json/${hyphenIndex}.json`
+    ];
+  }
 
   // Node CLI local filesystem fallback for test environments
   if (typeof window === 'undefined') {
@@ -2509,6 +2548,7 @@ export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): P
           const fileContent = fs.readFileSync(fullFsPath, 'utf8');
           const data = JSON.parse(fileContent);
           const actualRuleset: '2014' | '2024' = (candidate.includes('/24/') || candidate.includes('/2024/')) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
           return { ...data, rulesetContext: actualRuleset };
         }
       }
@@ -2523,13 +2563,14 @@ export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): P
         if (text && (text.trim().startsWith('{') || text.trim().startsWith('['))) {
           const data = JSON.parse(text);
           const actualRuleset: '2014' | '2024' = (path.includes('/24/') || path.includes('/2024/')) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
           return { ...data, rulesetContext: actualRuleset };
         }
       }
     } catch (e) {}
   }
 
-  // 4. Remote proxy fallbacks
+  // Remote proxy fallbacks (strictly matching requested ruleset version folder)
   const remotePaths = candidatePaths.map(p => `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public${p}?t=${Date.now()}`);
   for (const rawUrl of remotePaths) {
     try {
@@ -2538,6 +2579,7 @@ export async function fetchFeatData(index: string, ruleset?: '2014' | '2024'): P
         const data = await res.json();
         if (data && !data.error) {
           const actualRuleset: '2014' | '2024' = (rawUrl.includes('/24/') || rawUrl.includes('/2024/')) ? '2024' : '2014';
+          if (activeRuleset === '2024' && actualRuleset !== '2024') continue;
           return { ...data, rulesetContext: actualRuleset };
         }
       }
