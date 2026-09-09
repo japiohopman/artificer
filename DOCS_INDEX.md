@@ -8,6 +8,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[Foundry Porting Guide](./docs/systems/FOUNDRY_PORTING_GUIDE.md)** - 📦 **Guide for aligning and porting dnd5e 6.0.x assets.**
 - **[House Style Guide](./docs/STYLE_GUIDE.md)** - Visual language and UI/UX guidelines.
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
+- **[Phase Safety Gate](./docs/PHASE_SAFETY_GATE.md)** - 🛡️ Persistent issue/PR contract and automated safety checks for substantial phases.
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
