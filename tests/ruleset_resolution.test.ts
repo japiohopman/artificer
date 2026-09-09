@@ -701,29 +701,58 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   describe('2024 Feats Integration & Isolation Tests', () => {
-    it('enforces complete 2024 catalogue representation (75 feats) and index synchronization', async () => {
+    it('enforces complete 2024 catalogue representation (75 feats) and exact canonical identities per category', async () => {
+      const EXPECTED_ORIGIN_FEATS = [
+        'alert', 'crafter', 'healer', 'lucky', 'magic_initiate',
+        'musician', 'savage_attacker', 'skilled', 'tavern_brawler', 'tough'
+      ].sort();
+
+      const EXPECTED_FIGHTING_STYLE_FEATS = [
+        'archery', 'blind_fighting', 'defense', 'druidic_warrior', 'dueling',
+        'great_weapon_fighting', 'interception', 'protection',
+        'thrown_weapon_fighting', 'two_weapon_fighting', 'unarmed_fighting'
+      ].sort();
+
+      const EXPECTED_EPIC_BOON_FEATS = [
+        'boon_of_combat_prowess', 'boon_of_dimensional_travel', 'boon_of_energy_resistance',
+        'boon_of_fate', 'boon_of_fortitude', 'boon_of_irresistible_offense',
+        'boon_of_recovery', 'boon_of_skill', 'boon_of_speed',
+        'boon_of_spell_recall', 'boon_of_the_night_spirit', 'boon_of_truesight'
+      ].sort();
+
+      const EXPECTED_GENERAL_FEATS = [
+        'ability_score_improvement', 'actor', 'athlete', 'charger', 'chef',
+        'crossbow_expert', 'crusher', 'defensive_duelist', 'dual_wielder',
+        'dungeon_delver', 'durable', 'elemental_adept', 'grappler',
+        'great_weapon_master', 'heavily_armored', 'heavy_armor_master',
+        'inspiring_leader', 'keen_mind', 'lightly_armored', 'mage_slayer',
+        'martial_weapon_training', 'medium_armor_master', 'moderately_armored',
+        'mounted_combatant', 'observant', 'piercer', 'poisoner',
+        'polearm_master', 'resilient', 'ritual_caster', 'sentinel',
+        'sharpshooter', 'shield_master', 'skill_expert', 'skulker',
+        'slasher', 'speedy', 'spell_sniper', 'telekinetic',
+        'telepathic', 'war_caster', 'weapon_master'
+      ].sort();
+
       const all24 = await atlasService.loadFeatsList('2024');
       expect(all24.length).toBe(75);
 
-      const originFeats = await atlasService.loadFeatsList('2024', 'origin');
-      expect(originFeats.length).toBe(10);
-      expect(originFeats.map(f => f.index)).toContain('magic_initiate');
-      expect(originFeats.map(f => f.index)).toContain('alert');
+      const originFeats = (await atlasService.loadFeatsList('2024', 'origin')).map(f => f.index).sort();
+      expect(originFeats).toEqual(EXPECTED_ORIGIN_FEATS);
 
-      const fightingStyleFeats = await atlasService.loadFeatsList('2024', 'fighting-style');
-      expect(fightingStyleFeats.length).toBe(10);
-      expect(fightingStyleFeats.map(f => f.index)).toContain('archery');
-      expect(fightingStyleFeats.map(f => f.index)).toContain('blind_fighting');
+      const fightingStyleFeats = (await atlasService.loadFeatsList('2024', 'fighting-style')).map(f => f.index).sort();
+      expect(fightingStyleFeats).toEqual(EXPECTED_FIGHTING_STYLE_FEATS);
 
-      const epicBoonFeats = await atlasService.loadFeatsList('2024', 'epic-boon');
-      expect(epicBoonFeats.length).toBe(12);
-      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
-      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fortitude');
+      const epicBoonFeats = (await atlasService.loadFeatsList('2024', 'epic-boon')).map(f => f.index).sort();
+      expect(epicBoonFeats).toEqual(EXPECTED_EPIC_BOON_FEATS);
 
-      const generalFeats = await atlasService.loadFeatsList('2024', 'general');
-      expect(generalFeats.length).toBe(43);
-      expect(generalFeats.map(f => f.index)).toContain('war_caster');
-      expect(generalFeats.map(f => f.index)).toContain('sharpshooter');
+      const generalFeats = (await atlasService.loadFeatsList('2024', 'general')).map(f => f.index).sort();
+      expect(generalFeats).toEqual(EXPECTED_GENERAL_FEATS);
+
+      // Verify boon_of_skill explicitly
+      const boonSkill = await fetchFeatData('boon_of_skill', '2024');
+      expect(boonSkill).not.toBeNull();
+      expect(boonSkill?.name).toBe('boon of skill');
     });
 
     it('enforces strict ruleset isolation for 2024 vs 2014 feat loading with no silent cross-ruleset fallback', async () => {
@@ -760,11 +789,11 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(ham14?.desc.join(' ')).toContain('reduced by 3');
       expect(ham24?.desc.join(' ')).toContain('reduced by an amount equal to your Proficiency Bonus');
 
-      // Heavy Weapon Master / Great Weapon Master
+      // Great Weapon Master (2014 vs 2024)
       const gwm14 = await fetchFeatData('great_weapon_master', '2014');
-      const hwm24 = await fetchFeatData('heavy_weapon_master', '2024');
+      const gwm24 = await fetchFeatData('great_weapon_master', '2024');
       expect(gwm14?.desc.join(' ')).toContain('-5 penalty to the attack roll');
-      expect(hwm24?.desc.join(' ')).toContain('extra damage equal to your Proficiency Bonus');
+      expect(gwm24?.desc.join(' ')).toContain('extra damage equal to your Proficiency Bonus');
     });
 
     it('resolves feats across distinct 2024 subcategories (Origin, General, Fighting Style, Epic Boon)', async () => {

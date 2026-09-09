@@ -4,6 +4,13 @@
  * Generates the complete 2024 PHB Feats catalogue into versioned directories under
  * public/assets/atlas/feats/json/24/ (<category>/<feat>.json)
  * and builds index_24.json.
+ *
+ * Distribution:
+ * - Origin: 10
+ * - Fighting Style: 11
+ * - Epic Boon: 12
+ * - General: 42
+ * Total: 75
  */
 
 const fs = require('fs');
@@ -11,9 +18,10 @@ const path = require('path');
 
 const BASE_DIR = path.join(__dirname, '../public/assets/atlas/feats/json/24');
 const INDEX_PATH = path.join(__dirname, '../public/assets/atlas/feats/json/index_24.json');
+const ICONS_FEATS_DIR = path.join(__dirname, '../public/assets/icons/svg/feats');
 
 const feats = [
-  // ==================== ORIGIN FEATS ====================
+  // ==================== ORIGIN FEATS (10) ====================
   {
     index: 'alert',
     name: 'alert',
@@ -131,18 +139,28 @@ const feats = [
     category: 'origin',
     ruleset: '2024',
     prerequisites: [],
+    feature_specific: {
+      passive_modifiers: {
+        hp_bonus_per_level: 2
+      }
+    },
     desc: [
       "Your Hit Point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your Hit Point maximum increases by an additional 2 Hit Points."
     ]
   },
 
-  // ==================== FIGHTING STYLE FEATS ====================
+  // ==================== FIGHTING STYLE FEATS (11) ====================
   {
     index: 'archery',
     name: 'archery',
     category: 'fighting-style',
     ruleset: '2024',
     prerequisites: ['Fighting Style Feature'],
+    feature_specific: {
+      passive_modifiers: {
+        ranged_attack_bonus: 2
+      }
+    },
     desc: [
       "You gain a +2 bonus to attack rolls you make with Ranged weapons."
     ]
@@ -163,6 +181,11 @@ const feats = [
     category: 'fighting-style',
     ruleset: '2024',
     prerequisites: ['Fighting Style Feature'],
+    feature_specific: {
+      passive_modifiers: {
+        ac_bonus: 1
+      }
+    },
     desc: [
       "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class."
     ]
@@ -175,6 +198,21 @@ const feats = [
     prerequisites: ['Fighting Style Feature'],
     desc: [
       "You learn two Druid cantrips of your choice from the Druid spell list. Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip."
+    ]
+  },
+  {
+    index: 'dueling',
+    name: 'dueling',
+    category: 'fighting-style',
+    ruleset: '2024',
+    prerequisites: ['Fighting Style Feature'],
+    feature_specific: {
+      passive_modifiers: {
+        damage_bonus: 2
+      }
+    },
+    desc: [
+      "When you are wielding a Melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
     ]
   },
   {
@@ -239,7 +277,7 @@ const feats = [
     ]
   },
 
-  // ==================== EPIC BOON FEATS ====================
+  // ==================== EPIC BOON FEATS (12) ====================
   {
     index: 'boon_of_combat_prowess',
     name: 'boon of combat prowess',
@@ -295,6 +333,11 @@ const feats = [
     category: 'epic-boon',
     ruleset: '2024',
     prerequisites: ['Level 19+'],
+    feature_specific: {
+      passive_modifiers: {
+        hp_flat_bonus: 40
+      }
+    },
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.",
@@ -329,8 +372,8 @@ const feats = [
     ]
   },
   {
-    index: 'boon_of_skill_proficiency',
-    name: 'boon of skill proficiency',
+    index: 'boon_of_skill',
+    name: 'boon of skill',
     category: 'epic-boon',
     ruleset: '2024',
     prerequisites: ['Level 19+'],
@@ -347,6 +390,11 @@ const feats = [
     category: 'epic-boon',
     ruleset: '2024',
     prerequisites: ['Level 19+'],
+    feature_specific: {
+      passive_modifiers: {
+        speed_bonus: 30
+      }
+    },
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.",
@@ -359,7 +407,7 @@ const feats = [
     name: 'boon of spell recall',
     category: 'epic-boon',
     ruleset: '2024',
-    prerequisites: ['Level 19+'],
+    prerequisites: ['Level 19+', 'Spellcasting or Pact Magic feature'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.",
@@ -392,7 +440,7 @@ const feats = [
     ]
   },
 
-  // ==================== GENERAL FEATS ====================
+  // ==================== GENERAL FEATS (42) ====================
   {
     index: 'ability_score_improvement',
     name: 'ability score improvement',
@@ -415,20 +463,6 @@ const feats = [
       "Ability Score Increase. Increase your Charisma score by 1, to a maximum of 20.",
       "Impersonation. You have Advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person.",
       "Mimicry. You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking or heard the creature make the sound for at least 1 minute."
-    ]
-  },
-  {
-    index: 'chef',
-    name: 'chef',
-    category: 'general',
-    ruleset: '2024',
-    prerequisites: ['Level 4+'],
-    desc: [
-      "You gain the following benefits.",
-      "Ability Score Increase. Increase your Constitution or Wisdom score by 1, to a maximum of 20.",
-      "Tool Proficiency. You gain proficiency with Cook's Utensils.",
-      "Special Treats. As part of a Short Rest, you can prepare special food using Cook's Utensils. You can prepare enough treats for a number of creatures equal to 4 + your Proficiency Bonus. A creature that eats a treat regains an extra 1d8 Hit Points when it expends Hit Point Dice.",
-      "Bolstering Treats. With 1 hour of work or when you finish a Long Rest, you can cook treats equal to your Proficiency Bonus that last for 8 hours. A creature can eat a treat as a Bonus Action to gain Temporary Hit Points equal to your Proficiency Bonus."
     ]
   },
   {
@@ -455,7 +489,21 @@ const feats = [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
       "Improved Dash. When you take the Dash action, your Speed increases by 10 feet for that turn.",
-      "Charge Attack. If you move at least 10 feet in a straight line toward a target immediately before hitting it with a attack roll as part of the Attack action, you can choose one of the following effects: deal 1d8 extra damage, or push the target up to 10 feet away from you (if it is no more than one size larger than you)."
+      "Charge Attack. If you move at least 10 feet in a straight line toward a target immediately before hitting it with an attack roll as part of the Attack action on your turn, you can choose one of the following effects: deal 1d8 extra damage, or push the target up to 10 feet away from you (provided the target is no more than one size larger than you)."
+    ]
+  },
+  {
+    index: 'chef',
+    name: 'chef',
+    category: 'general',
+    ruleset: '2024',
+    prerequisites: ['Level 4+'],
+    desc: [
+      "You gain the following benefits.",
+      "Ability Score Increase. Increase your Constitution or Wisdom score by 1, to a maximum of 20.",
+      "Tool Proficiency. You gain proficiency with Cook's Utensils.",
+      "Special Treats. As part of a Short Rest, you can prepare special food using Cook's Utensils. You can prepare enough treats for a number of creatures equal to 4 + your Proficiency Bonus. A creature that eats a treat regains an extra 1d8 Hit Points when it expends Hit Point Dice.",
+      "Bolstering Treats. With 1 hour of work or when you finish a Long Rest, you can cook treats equal to your Proficiency Bonus that last for 8 hours. A creature can eat a treat as a Bonus Action to gain Temporary Hit Points equal to your Proficiency Bonus."
     ]
   },
   {
@@ -551,18 +599,6 @@ const feats = [
     ]
   },
   {
-    index: 'fey_touched',
-    name: 'fey-touched',
-    category: 'general',
-    ruleset: '2024',
-    prerequisites: ['Level 4+'],
-    desc: [
-      "You gain the following benefits.",
-      "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
-      "Spellcasting. You learn the Misty Step spell and one level 1 spell of your choice from the Divination or Enchantment school of magic. You can cast each spell once without expending a spell slot, regaining the ability to do so on a Long Rest. You can also cast them using any spell slots you have."
-    ]
-  },
-  {
     index: 'grappler',
     name: 'grappler',
     category: 'general',
@@ -594,7 +630,7 @@ const feats = [
     name: 'heavy armor master',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+', 'Heavy Armor Proficiency'],
+    prerequisites: ['Level 4+', 'Heavy Armor Training'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
@@ -602,28 +638,15 @@ const feats = [
     ]
   },
   {
-    index: 'heavy_weapon_master',
-    name: 'heavy weapon master',
-    category: 'general',
-    ruleset: '2024',
-    prerequisites: ['Level 4+', 'Strength 13+'],
-    desc: [
-      "You gain the following benefits.",
-      "Ability Score Increase. Increase your Strength score by 1, to a maximum of 20.",
-      "Heavy Weapon Mastery. When you hit a creature with a Heavy weapon as part of the Attack action on your turn, you can deal extra damage equal to your Proficiency Bonus.",
-      "Hew. Immediately after you score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, you can make one attack with a Melee weapon as a Bonus Action."
-    ]
-  },
-  {
     index: 'heavily_armored',
     name: 'heavily armored',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+', 'Medium Armor Proficiency'],
+    prerequisites: ['Level 4+', 'Medium Armor Training'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
-      "Armor Training. You gain proficiency with Heavy armor."
+      "Armor Training. You gain Heavy Armor Training."
     ]
   },
   {
@@ -660,7 +683,7 @@ const feats = [
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
-      "Armor Training. You gain proficiency with Light armor and Shields."
+      "Armor Training. You gain Light Armor Training and Shield Training."
     ]
   },
   {
@@ -677,11 +700,23 @@ const feats = [
     ]
   },
   {
+    index: 'martial_weapon_training',
+    name: 'martial weapon training',
+    category: 'general',
+    ruleset: '2024',
+    prerequisites: ['Level 4+'],
+    desc: [
+      "You gain the following benefits.",
+      "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+      "Martial Weapon Proficiency. You gain proficiency with Martial weapons."
+    ]
+  },
+  {
     index: 'medium_armor_master',
     name: 'medium armor master',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+', 'Medium Armor Proficiency'],
+    prerequisites: ['Level 4+', 'Medium Armor Training'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
@@ -694,11 +729,11 @@ const feats = [
     name: 'moderately armored',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+', 'Light Armor Proficiency'],
+    prerequisites: ['Level 4+', 'Light Armor Training'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
-      "Armor Training. You gain proficiency with Medium armor and Shields."
+      "Armor Training. You gain Medium Armor Training and Shield Training."
     ]
   },
   {
@@ -740,6 +775,19 @@ const feats = [
     ]
   },
   {
+    index: 'poisoner',
+    name: 'poisoner',
+    category: 'general',
+    ruleset: '2024',
+    prerequisites: ['Level 4+'],
+    desc: [
+      "You gain the following benefits.",
+      "Ability Score Increase. Increase your Dexterity or Intelligence score by 1, to a maximum of 20.",
+      "Ignore Resistance. Spells and attacks you make ignore Poison Resistance.",
+      "Potent Poison. You gain proficiency with Poisoner's Kit. With 1 hour of work and 50 GP of materials, you can create a number of doses of potent poison equal to your Proficiency Bonus. As a Bonus Action, you can apply poison to a weapon or piece of ammunition. A creature hit takes 2d8 Poison damage and must succeed on a DC 14 Constitution saving throw or be Poisoned until the end of your next turn."
+    ]
+  },
+  {
     index: 'polearm_master',
     name: 'polearm master',
     category: 'general',
@@ -757,12 +805,12 @@ const feats = [
     name: 'resilient',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+'],
+    prerequisites: ['Level 4+', 'Choice of an ability score in which you lack saving throw proficiency'],
     desc: [
-      "Choose one ability score. You gain the following benefits.",
+      "Choose one ability score in which you lack saving throw proficiency. You gain the following benefits.",
       "Ability Score Increase. Increase the chosen ability score by 1, to a maximum of 20.",
       "Saving Throw Proficiency. You gain proficiency in saving throws using the chosen ability.",
-      "Repeatable. You can take this feat more than once, choosing a different ability score each time."
+      "Repeatable. You can take this feat more than once, choosing a different ability score in which you lack saving throw proficiency each time."
     ]
   },
   {
@@ -793,18 +841,6 @@ const feats = [
     ]
   },
   {
-    index: 'shadow_touched',
-    name: 'shadow-touched',
-    category: 'general',
-    ruleset: '2024',
-    prerequisites: ['Level 4+'],
-    desc: [
-      "You gain the following benefits.",
-      "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
-      "Spellcasting. You learn the Invisibility spell and one level 1 spell of your choice from the Illusion or Necromancy school of magic. You can cast each spell once without expending a spell slot, regaining the ability to do so on a Long Rest. You can also cast them using any spell slots you have."
-    ]
-  },
-  {
     index: 'sharpshooter',
     name: 'sharpshooter',
     category: 'general',
@@ -823,7 +859,7 @@ const feats = [
     name: 'shield master',
     category: 'general',
     ruleset: '2024',
-    prerequisites: ['Level 4+', 'Shield Proficiency'],
+    prerequisites: ['Level 4+', 'Shield Training'],
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Strength score by 1, to a maximum of 20.",
@@ -877,6 +913,11 @@ const feats = [
     category: 'general',
     ruleset: '2024',
     prerequisites: ['Level 4+', 'Dexterity or Constitution 13+'],
+    feature_specific: {
+      passive_modifiers: {
+        speed_bonus: 10
+      }
+    },
     desc: [
       "You gain the following benefits.",
       "Ability Score Increase. Increase your Dexterity or Constitution score by 1, to a maximum of 20.",
@@ -964,10 +1005,18 @@ const categorySubdirs = {
 function generate() {
   console.log('Generating 2024 Feats...');
 
-  // Ensure directories
+  // Ensure clean target directories
   Object.values(categorySubdirs).forEach(sub => {
     const dir = path.join(BASE_DIR, sub);
-    if (!fs.existsSync(dir)) {
+    if (fs.existsSync(dir)) {
+      // Clean obsolete files in subdirectory
+      const existing = fs.readdirSync(dir);
+      existing.forEach(f => {
+        if (f.endsWith('.json') && !f.startsWith('_')) {
+          fs.unlinkSync(path.join(dir, f));
+        }
+      });
+    } else {
       fs.mkdirSync(dir, { recursive: true });
     }
   });
@@ -983,16 +1032,23 @@ function generate() {
     const jsonPath = path.join(BASE_DIR, subdir, `${feat.index}.json`);
     const relativeUrl = `/assets/atlas/feats/json/24/${subdir}/${feat.index}.json`;
 
+    // Determine image path: if dedicated SVG exists in icons/svg/feats, use it, otherwise use /assets/icons/svg/items/feature.svg
+    let iconPath = `/assets/icons/svg/items/feature.svg`;
+    const dedicatedSvg = path.join(ICONS_FEATS_DIR, `${feat.index}.svg`);
+    if (fs.existsSync(dedicatedSvg)) {
+      iconPath = `/assets/icons/svg/feats/${feat.index}.svg`;
+    }
+
     const record = {
       index: feat.index,
       name: feat.name,
       category: feat.category,
       ruleset: feat.ruleset,
       prerequisites: feat.prerequisites,
+      ...(feat.feature_specific ? { feature_specific: feat.feature_specific } : {}),
       desc: feat.desc,
       url: relativeUrl,
-      image: `/assets/icons/svg/feats/${feat.index}.svg`,
-      updated_at: new Date().toISOString()
+      image: iconPath
     };
 
     fs.writeFileSync(jsonPath, JSON.stringify(record, null, 2) + '\n', 'utf8');

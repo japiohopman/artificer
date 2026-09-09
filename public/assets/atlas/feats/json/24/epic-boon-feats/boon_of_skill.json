@@ -1,6 +1,6 @@
 {
-  "index": "boon_of_skill_proficiency",
-  "name": "boon of skill proficiency",
+  "index": "boon_of_skill",
+  "name": "boon of skill",
   "category": "epic-boon",
   "ruleset": "2024",
   "prerequisites": [
@@ -12,7 +12,6 @@
     "Skill Mastery. You gain proficiency in all skills.",
     "Expertise. Choose one skill in which you have proficiency. You gain Expertise in that skill."
   ],
-  "url": "/assets/atlas/feats/json/24/epic-boon-feats/boon_of_skill_proficiency.json",
-  "image": "/assets/icons/svg/feats/boon_of_skill_proficiency.svg",
-  "updated_at": "2026-09-09T12:30:19.040Z"
+  "url": "/assets/atlas/feats/json/24/epic-boon-feats/boon_of_skill.json",
+  "image": "/assets/icons/svg/items/feature.svg"
 }

@@ -6,10 +6,14 @@
   "prerequisites": [
     "Fighting Style Feature"
   ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "ac_bonus": 1
+    }
+  },
   "desc": [
     "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class."
   ],
   "url": "/assets/atlas/feats/json/24/fighting-style-feats/defense.json",
-  "image": "/assets/icons/svg/feats/defense.svg",
-  "updated_at": "2026-09-09T12:30:19.039Z"
+  "image": "/assets/icons/svg/items/feature.svg"
 }

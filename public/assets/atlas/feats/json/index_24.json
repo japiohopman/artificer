@@ -42,8 +42,8 @@
     "ruleset": "2024"
   },
   {
-    "name": "boon of skill proficiency",
-    "index": "boon_of_skill_proficiency",
+    "name": "boon of skill",
+    "index": "boon_of_skill",
     "category": "epic-boon",
     "ruleset": "2024"
   },
@@ -92,6 +92,12 @@
   {
     "name": "druidic warrior",
     "index": "druidic_warrior",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "dueling",
+    "index": "dueling",
     "category": "fighting-style",
     "ruleset": "2024"
   },
@@ -204,12 +210,6 @@
     "ruleset": "2024"
   },
   {
-    "name": "fey-touched",
-    "index": "fey_touched",
-    "category": "general",
-    "ruleset": "2024"
-  },
-  {
     "name": "grappler",
     "index": "grappler",
     "category": "general",
@@ -234,12 +234,6 @@
     "ruleset": "2024"
   },
   {
-    "name": "heavy weapon master",
-    "index": "heavy_weapon_master",
-    "category": "general",
-    "ruleset": "2024"
-  },
-  {
     "name": "inspiring leader",
     "index": "inspiring_leader",
     "category": "general",
@@ -260,6 +254,12 @@
   {
     "name": "mage slayer",
     "index": "mage_slayer",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "martial weapon training",
+    "index": "martial_weapon_training",
     "category": "general",
     "ruleset": "2024"
   },
@@ -294,6 +294,12 @@
     "ruleset": "2024"
   },
   {
+    "name": "poisoner",
+    "index": "poisoner",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
     "name": "polearm master",
     "index": "polearm_master",
     "category": "general",
@@ -314,12 +320,6 @@
   {
     "name": "sentinel",
     "index": "sentinel",
-    "category": "general",
-    "ruleset": "2024"
-  },
-  {
-    "name": "shadow-touched",
-    "index": "shadow_touched",
     "category": "general",
     "ruleset": "2024"
   },

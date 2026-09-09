@@ -1,0 +1,19 @@
+{
+  "index": "dueling",
+  "name": "dueling",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "damage_bonus": 2
+    }
+  },
+  "desc": [
+    "When you are wielding a Melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/dueling.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}
