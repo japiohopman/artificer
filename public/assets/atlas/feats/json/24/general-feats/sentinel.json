@@ -1,0 +1,19 @@
+{
+  "index": "sentinel",
+  "name": "sentinel",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Strength or Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Halt. When you hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the turn.",
+    "Ignore Disengage. Creatures provoke Opportunity Attacks from you even if they take the Disengage action.",
+    "Retaliation. When a creature within 5 feet of you makes an attack against a target other than you, you can use your Reaction to make a melee weapon attack against the attacking creature."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/sentinel.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

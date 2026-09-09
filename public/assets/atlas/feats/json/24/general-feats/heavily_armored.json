@@ -1,0 +1,17 @@
+{
+  "index": "heavily_armored",
+  "name": "heavily armored",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Medium Armor Training"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
+    "Armor Training. You gain Heavy Armor Training."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/heavily_armored.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "index": "dual_wielder",
+  "name": "dual wielder",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Strength or Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Enhanced Dual Wielding. When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action using a different weapon that doesn't have the Two-Handed property.",
+    "Quick Draw. You can draw or stow two weapons when you would normally be able to draw or stow only one."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/dual_wielder.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

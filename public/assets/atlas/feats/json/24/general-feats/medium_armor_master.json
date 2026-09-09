@@ -1,0 +1,18 @@
+{
+  "index": "medium_armor_master",
+  "name": "medium armor master",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Medium Armor Training"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Dexterity Modifier Bonus. When you wear Medium armor, you can add 3, rather than 2, to your Armor Class if you have a Dexterity score of 16 or higher.",
+    "Stealth Disadvantage. Wearing Medium armor doesn't impose Disadvantage on your Dexterity (Stealth) checks."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/medium_armor_master.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

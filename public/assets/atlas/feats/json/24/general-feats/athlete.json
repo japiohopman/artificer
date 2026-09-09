@@ -1,0 +1,19 @@
+{
+  "index": "athlete",
+  "name": "athlete",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Strength or Dexterity 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Climb Speed. You gain a Climb Speed equal to your Speed.",
+    "Prone Recovery. You can stand up from Prone using only 5 feet of movement.",
+    "Jumping. You can make a running high or long jump after moving only 5 feet on foot."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/athlete.json",
+  "image": "/assets/icons/svg/feats/athlete.svg"
+}

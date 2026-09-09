@@ -1,0 +1,17 @@
+{
+  "index": "boon_of_recovery",
+  "name": "boon of recovery",
+  "category": "epic-boon",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 19+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.",
+    "Lasting Health. When you drop to 0 Hit Points, you can regain Hit Points equal to half your Hit Point maximum instead. Once you use this benefit, you can't use it again until you finish a Long Rest.",
+    "Recovery Action. As a Bonus Action, you can regain Hit Points equal to half your Hit Point maximum. Once you use this benefit, you can't use it again until you finish a Long Rest."
+  ],
+  "url": "/assets/atlas/feats/json/24/epic-boon-feats/boon_of_recovery.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

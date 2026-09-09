@@ -1,0 +1,19 @@
+{
+  "index": "spell_sniper",
+  "name": "spell sniper",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Spellcasting or Pact Magic feature"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "Bypass Cover. Your spell attack rolls ignore Half Cover and Three-Quarters Cover.",
+    "Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your spell attack rolls.",
+    "Extended Range. When you cast a spell that has a range of at least 10 feet and requires an attack roll, the range increases by 60 feet."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/spell_sniper.json",
+  "image": "/assets/icons/svg/feats/spell_sniper.svg"
+}

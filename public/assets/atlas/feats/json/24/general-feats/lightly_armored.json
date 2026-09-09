@@ -1,0 +1,16 @@
+{
+  "index": "lightly_armored",
+  "name": "lightly armored",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Armor Training. You gain Light Armor Training and Shield Training."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/lightly_armored.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

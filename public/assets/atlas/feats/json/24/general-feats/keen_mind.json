@@ -1,0 +1,18 @@
+{
+  "index": "keen_mind",
+  "name": "keen mind",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Intelligence 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Intelligence score by 1, to a maximum of 20.",
+    "Lore Knowledge. You gain proficiency in one of the following skills of your choice: Arcana, History, Investigation, Nature, or Religion. If you already have proficiency in the chosen skill, you gain Expertise in it instead.",
+    "Quick Study. You can take the Search action as a Bonus Action."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/keen_mind.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

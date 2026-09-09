@@ -1,0 +1,14 @@
+{
+  "index": "thrown_weapon_fighting",
+  "name": "thrown weapon fighting",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "You can draw a weapon that has the Thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a Thrown weapon, you gain a +2 bonus to the damage roll."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/thrown_weapon_fighting.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

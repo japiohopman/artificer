@@ -1,0 +1,17 @@
+{
+  "index": "moderately_armored",
+  "name": "moderately armored",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Light Armor Training"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Armor Training. You gain Medium Armor Training and Shield Training."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/moderately_armored.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

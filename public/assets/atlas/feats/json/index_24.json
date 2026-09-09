@@ -1,23 +1,5 @@
 [
   {
-    "name": "ability score improvement",
-    "index": "ability_score_improvement",
-    "category": "general",
-    "ruleset": "2024"
-  },
-  {
-    "name": "alert",
-    "index": "alert",
-    "category": "origin",
-    "ruleset": "2024"
-  },
-  {
-    "name": "archery",
-    "index": "archery",
-    "category": "fighting-style",
-    "ruleset": "2024"
-  },
-  {
     "name": "boon of combat prowess",
     "index": "boon_of_combat_prowess",
     "category": "epic-boon",
@@ -30,14 +12,44 @@
     "ruleset": "2024"
   },
   {
+    "name": "boon of energy resistance",
+    "index": "boon_of_energy_resistance",
+    "category": "epic-boon",
+    "ruleset": "2024"
+  },
+  {
     "name": "boon of fate",
     "index": "boon_of_fate",
     "category": "epic-boon",
     "ruleset": "2024"
   },
   {
+    "name": "boon of fortitude",
+    "index": "boon_of_fortitude",
+    "category": "epic-boon",
+    "ruleset": "2024"
+  },
+  {
     "name": "boon of irresistible offense",
     "index": "boon_of_irresistible_offense",
+    "category": "epic-boon",
+    "ruleset": "2024"
+  },
+  {
+    "name": "boon of recovery",
+    "index": "boon_of_recovery",
+    "category": "epic-boon",
+    "ruleset": "2024"
+  },
+  {
+    "name": "boon of skill",
+    "index": "boon_of_skill",
+    "category": "epic-boon",
+    "ruleset": "2024"
+  },
+  {
+    "name": "boon of speed",
+    "index": "boon_of_speed",
     "category": "epic-boon",
     "ruleset": "2024"
   },
@@ -60,9 +72,15 @@
     "ruleset": "2024"
   },
   {
-    "name": "crafter",
-    "index": "crafter",
-    "category": "origin",
+    "name": "archery",
+    "index": "archery",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "blind fighting",
+    "index": "blind_fighting",
+    "category": "fighting-style",
     "ruleset": "2024"
   },
   {
@@ -72,15 +90,315 @@
     "ruleset": "2024"
   },
   {
-    "name": "grappler",
-    "index": "grappler",
-    "category": "general",
+    "name": "dueling",
+    "index": "dueling",
+    "category": "fighting-style",
     "ruleset": "2024"
   },
   {
     "name": "great weapon fighting",
     "index": "great_weapon_fighting",
     "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "interception",
+    "index": "interception",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "protection",
+    "index": "protection",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "thrown weapon fighting",
+    "index": "thrown_weapon_fighting",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "two-weapon fighting",
+    "index": "two_weapon_fighting",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "unarmed fighting",
+    "index": "unarmed_fighting",
+    "category": "fighting-style",
+    "ruleset": "2024"
+  },
+  {
+    "name": "ability score improvement",
+    "index": "ability_score_improvement",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "actor",
+    "index": "actor",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "athlete",
+    "index": "athlete",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "charger",
+    "index": "charger",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "chef",
+    "index": "chef",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "crossbow expert",
+    "index": "crossbow_expert",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "crusher",
+    "index": "crusher",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "defensive duelist",
+    "index": "defensive_duelist",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "dual wielder",
+    "index": "dual_wielder",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "durable",
+    "index": "durable",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "elemental adept",
+    "index": "elemental_adept",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "fey-touched",
+    "index": "fey_touched",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "grappler",
+    "index": "grappler",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "great weapon master",
+    "index": "great_weapon_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "heavily armored",
+    "index": "heavily_armored",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "heavy armor master",
+    "index": "heavy_armor_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "inspiring leader",
+    "index": "inspiring_leader",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "keen mind",
+    "index": "keen_mind",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "lightly armored",
+    "index": "lightly_armored",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "mage slayer",
+    "index": "mage_slayer",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "martial weapon training",
+    "index": "martial_weapon_training",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "medium armor master",
+    "index": "medium_armor_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "moderately armored",
+    "index": "moderately_armored",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "mounted combatant",
+    "index": "mounted_combatant",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "observant",
+    "index": "observant",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "piercer",
+    "index": "piercer",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "poisoner",
+    "index": "poisoner",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "polearm master",
+    "index": "polearm_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "resilient",
+    "index": "resilient",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "ritual caster",
+    "index": "ritual_caster",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "sentinel",
+    "index": "sentinel",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "shadow-touched",
+    "index": "shadow_touched",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "sharpshooter",
+    "index": "sharpshooter",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "shield master",
+    "index": "shield_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "skill expert",
+    "index": "skill_expert",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "skulker",
+    "index": "skulker",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "slasher",
+    "index": "slasher",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "speedy",
+    "index": "speedy",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "spell sniper",
+    "index": "spell_sniper",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "telekinetic",
+    "index": "telekinetic",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "telepathic",
+    "index": "telepathic",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "war caster",
+    "index": "war_caster",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "weapon master",
+    "index": "weapon_master",
+    "category": "general",
+    "ruleset": "2024"
+  },
+  {
+    "name": "alert",
+    "index": "alert",
+    "category": "origin",
+    "ruleset": "2024"
+  },
+  {
+    "name": "crafter",
+    "index": "crafter",
+    "category": "origin",
     "ruleset": "2024"
   },
   {
@@ -129,12 +447,6 @@
     "name": "tough",
     "index": "tough",
     "category": "origin",
-    "ruleset": "2024"
-  },
-  {
-    "name": "two-weapon fighting",
-    "index": "two_weapon_fighting",
-    "category": "fighting-style",
     "ruleset": "2024"
   }
 ]

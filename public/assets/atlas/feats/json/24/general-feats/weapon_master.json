@@ -1,0 +1,17 @@
+{
+  "index": "weapon_master",
+  "name": "weapon master",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Weapon Proficiency. You gain proficiency with four Martial weapons of your choice.",
+    "Weapon Mastery. Choose one weapon with which you have proficiency. You gain access to its Mastery property."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/weapon_master.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

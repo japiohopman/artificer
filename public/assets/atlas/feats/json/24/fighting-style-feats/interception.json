@@ -1,0 +1,14 @@
+{
+  "index": "interception",
+  "name": "interception",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your Reaction to reduce the damage the target takes by 1d10 + your Proficiency Bonus (to a minimum of 0 damage). You must be wielding a Shield or a Simple or Martial weapon to use this Reaction."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/interception.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}
