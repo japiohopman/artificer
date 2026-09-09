@@ -52,6 +52,8 @@ export interface AtlasBackground {
   index: string;
   name: string;
   description?: string;
+  rulesetContext?: '2014' | '2024';
+  allowed_ability_scores?: string[];
   ability_scores?: Array<{ index: string; name: string; url: string }>;
   feat?: { index: string; name: string; url: string };
   starting_proficiencies: any[];
@@ -240,28 +242,19 @@ class AtlasService {
     return null;
   }
 
-  async loadBackground(backgroundName: string): Promise<AtlasBackground | null> {
+  async loadBackground(backgroundName: string, ruleset?: '2014' | '2024'): Promise<AtlasBackground | null> {
+    const { fetchBackgroundData, getActiveRulesetContext } = await import('./storageService');
+    const activeRuleset = getActiveRulesetContext(ruleset);
     const slug = backgroundName.toLowerCase().replace(/\s+/g, '_');
-    const hyphenSlug = backgroundName.toLowerCase().replace(/\s+/g, '-');
-    
-    if (this.backgroundCache[slug]) return this.backgroundCache[slug];
+    const cacheKey = `${activeRuleset}:${slug}`;
 
-    // Reordered to check plural 'backgrounds' first as it matches the filesystem
-    const paths = [
-      `/assets/atlas/backgrounds/json/${slug}.json`,
-      `/assets/atlas/backgrounds/json/${hyphenSlug}.json`,
-      `/assets/atlas/background/json/${slug}.json`,
-      `/assets/atlas/background/json/${hyphenSlug}.json`
-    ];
+    if (this.backgroundCache[cacheKey]) return this.backgroundCache[cacheKey];
 
-    for (const p of paths) {
-      const data = await this.fetchAtlasData(p);
-      if (data) {
-        this.backgroundCache[slug] = data;
-        return data;
-      }
+    const data = await fetchBackgroundData(backgroundName, ruleset);
+    if (data) {
+      this.backgroundCache[cacheKey] = data;
+      return data;
     }
-
     return null;
   }
 

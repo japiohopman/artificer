@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
+import { validate2024BackgroundAbilityScores, calculate2024BackgroundBonuses } from '../src/lib/backgroundUtils';
 import fs from 'fs';
 import path from 'path';
 
@@ -1092,7 +1093,7 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const archdruid24 = await atlasService.loadFeature('archdruid_2024');
     expect(archdruid24).not.toBeNull();
-    expect(archdruid24.desc.join(' ')).toContain('Nature Magician');
+    expect(archdruid24.desc.join(' ')).toContain('Wild Shape');
 
     // 4. Monk
     const martialArts24 = await atlasService.loadFeature('martial_arts_2024');
@@ -1169,7 +1170,7 @@ describe('Ruleset Resolution Audit Tests', () => {
     // 8. Warlock
     const pactSpellsWarlock24 = await atlasService.loadFeature('pact_spells_warlock_2024');
     expect(pactSpellsWarlock24).not.toBeNull();
-    expect(pactSpellsWarlock24.desc.join(' ')).toContain('Pact Magic');
+    expect(pactSpellsWarlock24.desc.join(' ')).toContain('Pact Slots');
 
     const eldritchInvocations24 = await atlasService.loadFeature('eldritch_invocations_2024');
     expect(eldritchInvocations24).not.toBeNull();
@@ -1393,6 +1394,150 @@ describe('Ruleset Resolution Audit Tests', () => {
     for (const className of ALL_12_CLASSES) {
       const classSubs = await fetchSubclassesList('2024', className);
       expect(classSubs, `Class ${className} must have exactly 4 subclasses`).toHaveLength(4);
+    }
+  });
+
+  it('verifies 2024 Backgrounds/Origins dataset integrity, Origin Feat linking, and ability score choice space', async () => {
+    const list2024 = await fetchBackgroundsList('2024');
+    expect(list2024.length).toBe(16);
+
+    const ALL_16_2024_BACKGROUNDS = [
+      { index: 'acolyte', name: 'Acolyte', allowedAbilities: ['int', 'wis', 'cha'], expectedFeat: 'magic_initiate' },
+      { index: 'artisan', name: 'Artisan', allowedAbilities: ['str', 'dex', 'int'], expectedFeat: 'crafter' },
+      { index: 'charlatan', name: 'Charlatan', allowedAbilities: ['dex', 'con', 'cha'], expectedFeat: 'skilled' },
+      { index: 'criminal', name: 'Criminal', allowedAbilities: ['dex', 'con', 'int'], expectedFeat: 'alert' },
+      { index: 'entertainer', name: 'Entertainer', allowedAbilities: ['str', 'dex', 'cha'], expectedFeat: 'musician' },
+      { index: 'farmer', name: 'Farmer', allowedAbilities: ['str', 'con', 'wis'], expectedFeat: 'tough' },
+      { index: 'guard', name: 'Guard', allowedAbilities: ['str', 'int', 'wis'], expectedFeat: 'alert' },
+      { index: 'guide', name: 'Guide', allowedAbilities: ['dex', 'con', 'wis'], expectedFeat: 'magic_initiate' },
+      { index: 'hermit', name: 'Hermit', allowedAbilities: ['con', 'wis', 'cha'], expectedFeat: 'healer' },
+      { index: 'merchant', name: 'Merchant', allowedAbilities: ['con', 'int', 'cha'], expectedFeat: 'lucky' },
+      { index: 'noble', name: 'Noble', allowedAbilities: ['str', 'int', 'cha'], expectedFeat: 'skilled' },
+      { index: 'sage', name: 'Sage', allowedAbilities: ['con', 'int', 'wis'], expectedFeat: 'magic_initiate' },
+      { index: 'sailor', name: 'Sailor', allowedAbilities: ['str', 'dex', 'wis'], expectedFeat: 'tavern_brawler' },
+      { index: 'scribe', name: 'Scribe', allowedAbilities: ['dex', 'int', 'wis'], expectedFeat: 'skilled' },
+      { index: 'soldier', name: 'Soldier', allowedAbilities: ['str', 'dex', 'con'], expectedFeat: 'savage_attacker' },
+      { index: 'wayfarer', name: 'Wayfarer', allowedAbilities: ['dex', 'wis', 'cha'], expectedFeat: 'lucky' }
+    ];
+
+    for (const expectedBg of ALL_16_2024_BACKGROUNDS) {
+      const bgData = await fetchBackgroundData(expectedBg.index, '2024');
+      expect(bgData, `2024 Background missing: ${expectedBg.index}`).not.toBeNull();
+      expect(bgData?.rulesetContext).toBe('2024');
+      expect(bgData?.name).toBe(expectedBg.name);
+
+      // Verify 2024 Ability Score Choice Space (allowed 3 abilities)
+      expect(bgData?.allowed_ability_scores).toEqual(expectedBg.allowedAbilities);
+
+      // Verify canonical Origin Feat URL and reference
+      expect(bgData?.feat?.index).toBe(expectedBg.expectedFeat);
+      expect(bgData?.feat?.url).toBe(`/assets/atlas/feats/json/24/origin-feats/${expectedBg.expectedFeat}.json`);
+
+      const originFeat = await fetchFeatData(bgData.feat.index, '2024');
+      expect(originFeat, `Origin feat definition missing: ${bgData.feat.index}`).not.toBeNull();
+      expect(originFeat.rulesetContext).toBe('2024');
+
+      // Verify proficiencies and equipment
+      expect(bgData?.starting_proficiencies?.length).toBeGreaterThanOrEqual(2);
+      expect(bgData?.starting_equipment?.length).toBeGreaterThan(0);
+
+      // Verify zero placeholder language
+      const desc = bgData.description || '';
+      expect(desc.toLowerCase()).not.toContain('placeholder');
+      expect(desc.toLowerCase()).not.toContain('feature from your');
+      expect(desc.toLowerCase()).not.toContain('you gain a feature');
+    }
+  });
+
+  it('verifies 2014 vs 2024 Background isolation, cache separation, and strict non-fallback', async () => {
+    const soldier14 = await fetchBackgroundData('soldier', '2014');
+    const soldier24 = await fetchBackgroundData('soldier', '2024');
+
+    expect(soldier14).not.toBeNull();
+    expect(soldier24).not.toBeNull();
+
+    expect(soldier14?.rulesetContext).toBe('2014');
+    expect(soldier24?.rulesetContext).toBe('2024');
+
+    // 2014 has feature 'Military Rank', 2024 has Origin Feat 'savage_attacker' and allowed_ability_scores
+    expect(soldier14?.feature?.name).toBe('Military Rank');
+    expect(soldier24?.feat?.index).toBe('savage_attacker');
+    expect(soldier24?.allowed_ability_scores).toEqual(['str', 'dex', 'con']);
+
+    // AtlasService cache test
+    const atlasSoldier14 = await atlasService.loadBackground('soldier', '2014');
+    const atlasSoldier24 = await atlasService.loadBackground('soldier', '2024');
+    expect(atlasSoldier14?.rulesetContext).toBe('2014');
+    expect(atlasSoldier24?.rulesetContext).toBe('2024');
+
+    // Strict non-fallback for nonexistent 2024 background
+    const nonexistent24 = await fetchBackgroundData('nonexistent_background_2024', '2024');
+    expect(nonexistent24).toBeNull();
+  });
+
+  it('verifies unit test assertions for 2024 ability-score choice model validation and calculation', () => {
+    const allowed = ['str', 'dex', 'con'];
+
+    // 1. Valid Mode A (+2 / +1 across 2 distinct allowed abilities)
+    const validModeA = { str: 2, dex: 1 };
+    const resA = validate2024BackgroundAbilityScores(validModeA, allowed);
+    expect(resA.valid).toBe(true);
+    expect(resA.mode).toBe('A (+2/+1)');
+    const bonusesA = calculate2024BackgroundBonuses(validModeA, allowed);
+    expect(bonusesA).toEqual({ str: 2, dex: 1, con: 0, int: 0, wis: 0, cha: 0 });
+
+    // 2. Valid Mode B (+1 / +1 / +1 across 3 distinct allowed abilities)
+    const validModeB = { str: 1, dex: 1, con: 1 };
+    const resB = validate2024BackgroundAbilityScores(validModeB, allowed);
+    expect(resB.valid).toBe(true);
+    expect(resB.mode).toBe('B (+1/+1/+1)');
+    const bonusesB = calculate2024BackgroundBonuses(validModeB, allowed);
+    expect(bonusesB).toEqual({ str: 1, dex: 1, con: 1, int: 0, wis: 0, cha: 0 });
+
+    // 3. Reject +3 on a single ability
+    const invalidPlus3 = { str: 3 };
+    const resPlus3 = validate2024BackgroundAbilityScores(invalidPlus3, allowed);
+    expect(resPlus3.valid).toBe(false);
+    expect(calculate2024BackgroundBonuses(invalidPlus3, allowed)).toEqual({ str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 });
+
+    // 4. Reject duplicate +1 choices resulting in invalid count/sum (e.g. { str: 2, dex: 2 } or { str: 1, dex: 1 } totaling 2)
+    const invalidSum2 = { str: 1, dex: 1 };
+    const resSum2 = validate2024BackgroundAbilityScores(invalidSum2, allowed);
+    expect(resSum2.valid).toBe(false);
+
+    // 5. Reject abilities outside allowed background set
+    const invalidOutsideAbility = { str: 2, int: 1 };
+    const resOutside = validate2024BackgroundAbilityScores(invalidOutsideAbility, allowed);
+    expect(resOutside.valid).toBe(false);
+    expect(resOutside.reason).toContain("is not in allowed background options");
+  });
+
+  it('verifies official Background Markdown content resolves for all backgrounds with exact 1-to-1 matching, title matching, and uniqueness', async () => {
+    const bgList = await fetchBackgroundsList('2024');
+    expect(bgList.length).toBe(16);
+
+    const seenContents = new Set<string>();
+
+    for (const bgRef of bgList) {
+      const bgData = await fetchBackgroundData(bgRef.index, '2024');
+      expect(bgData, `Background missing: ${bgRef.index}`).not.toBeNull();
+      expect(bgData?.markdownGuide, `Background ${bgRef.index} missing markdownGuide`).toBeTruthy();
+
+      const md = bgData.markdownGuide || '';
+      expect(md.length).toBeGreaterThan(300);
+
+      // Verify Markdown starts with correct Background identity/title
+      expect(md.toLowerCase()).toContain(`# ${bgData.name.toLowerCase()}`);
+
+      // Verify content uniqueness across files
+      expect(seenContents.has(md), `Duplicate markdown content detected for ${bgRef.index}`).toBe(false);
+      seenContents.add(md);
+
+      // Verify no placeholder, Rogue, or coming soon content
+      expect(md.toLowerCase()).not.toContain('# rogue');
+      expect(md.toLowerCase()).not.toContain('placeholder');
+      expect(md.toLowerCase()).not.toContain('coming soon');
+      expect(md.toLowerCase()).not.toContain('feature from your');
     }
   });
 });

@@ -1,0 +1,55 @@
+{
+  "index": "hermit",
+  "name": "Hermit",
+  "description": "You lived in seclusion for a formative period of your life, seeking solitude and contemplation.",
+  "feature": {
+    "name": "Discovery",
+    "desc": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_medicine",
+      "name": "Skill: Medicine",
+      "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
+    },
+    {
+      "index": "skill_religion",
+      "name": "Skill: Religion",
+      "url": "/assets/atlas/proficiencies/json/skill_religion.json"
+    },
+    {
+      "index": "herbalism_kit",
+      "name": "Herbalism Kit",
+      "url": "/assets/atlas/proficiencies/json/herbalism_kit.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "herbalism_kit",
+        "name": "Herbalism Kit",
+        "url": "/assets/atlas/equipment/json/herbalism_kit.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 5
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/hermit.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/hermit.json"
+}

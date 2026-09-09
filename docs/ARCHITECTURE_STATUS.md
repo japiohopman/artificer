@@ -33,13 +33,14 @@ The current architectural priority is to keep **authoring tools separate from ru
   - 2024 Class Foundation (`14/` vs `24/` — implemented / verified: All 12 core classes)
   - 2024 Class Levels / Features (`14/` vs `24/` — levels 1–20 implemented / verified for all 12 core classes)
   - 2024 Subclasses & Features (`14/` vs `24/` — 48/48 canonical subclasses fully audited and verified across all 12 core classes)
-  - Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells
+  - 2024 Backgrounds & Origins (`14/` vs `24/` — 16/16 PHB Origin Backgrounds, 10 Origin Feats in `/feats/json/24/origin-feats/`, ability score choice model [+2/+1 or +1/+1/+1], official markdown guides in `/ui/official/backgrounds/*.md`)
+  - Next active dependency: 2024 Feats integration / 2024 Spells migration
   - Equipment (`14/` vs `24/`)
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)
   - Rules (`14/` vs `24/`)
   - Tables (`14/` vs `24/`)
-- **Unversioned / Missing 2024 Datasets:** Backgrounds/Origins and Spells currently exist as unversioned classic 2014 Atlas records. See `docs/audits/ruleset-2024-gap-analysis.md`.
+- **Unversioned / Missing 2024 Datasets:** Spells currently exist as unversioned classic 2014 Atlas records. See `docs/audits/ruleset-2024-gap-analysis.md`.
 - **Character Persistence Relationship:** `Character.ruleset` remains saved character metadata. Loading character saves into slots does not alter the active global game ruleset. Activating a character session (`setActiveCharacter` / `setMainCharacter`) explicitly synchronizes `useGameStore.ruleset` to the character's ruleset.
 
 Do not recreate the old monolithic store pattern.

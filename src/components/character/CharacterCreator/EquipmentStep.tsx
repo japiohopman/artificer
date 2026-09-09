@@ -489,7 +489,7 @@ export const EquipmentStep: React.FC<{
             try {
                 const [cData, bData] = await Promise.all([
                     fetchClassData(newChar.class!, newChar.ruleset),
-                    newChar.background ? fetchBackgroundJson(newChar.background) : Promise.resolve(null)
+                    newChar.background ? fetchBackgroundJson(newChar.background, newChar.ruleset) : Promise.resolve(null)
                 ]);
                 
                 setClassData(cData);

@@ -1,0 +1,50 @@
+{
+  "index": "soldier",
+  "name": "Soldier",
+  "description": "War has been your life for as long as you care to remember. You trained as a youth, studied tactics, and served in a army.",
+  "feature": {
+    "name": "Military Rank",
+    "desc": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_athletics",
+      "name": "Skill: Athletics",
+      "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
+    },
+    {
+      "index": "skill_intimidation",
+      "name": "Skill: Intimidation",
+      "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "spear",
+        "name": "Spear",
+        "url": "/assets/atlas/equipment/json/spear.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/soldier.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/soldier.json"
+}

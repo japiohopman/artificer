@@ -1,0 +1,58 @@
+{
+  "index": "folk_hero",
+  "name": "Folk Hero",
+  "description": "You come from a humble social rank, but you are destined for much more.",
+  "feature": {
+    "name": "Rustic Hospitality",
+    "desc": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_animal_handling",
+      "name": "Skill: Animal Handling",
+      "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
+    },
+    {
+      "index": "skill_survival",
+      "name": "Skill: Survival",
+      "url": "/assets/atlas/proficiencies/json/skill_survival.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "shovel",
+        "name": "Shovel",
+        "url": "/assets/atlas/equipment/json/shovel.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "iron_pot",
+        "name": "Iron Pot",
+        "url": "/assets/atlas/equipment/json/iron_pot.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "clothes_common",
+        "name": "Common Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_common.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 10
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/farmer.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/folk_hero.json"
+}

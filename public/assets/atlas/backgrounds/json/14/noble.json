@@ -1,0 +1,50 @@
+{
+  "index": "noble",
+  "name": "Noble",
+  "description": "You understand wealth, power, and privilege. You carry a noble title, and your family owns land and holds wealth.",
+  "feature": {
+    "name": "Position of Privilege",
+    "desc": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_history",
+      "name": "Skill: History",
+      "url": "/assets/atlas/proficiencies/json/skill_history.json"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion",
+      "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "clothes_fine",
+        "name": "Fine Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_fine.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "signet_ring",
+        "name": "Signet Ring",
+        "url": "/assets/atlas/equipment/json/signet_ring.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 25
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/noble.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/noble.json"
+}

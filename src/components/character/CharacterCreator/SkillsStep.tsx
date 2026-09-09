@@ -24,7 +24,7 @@ export const SkillsStep: React.FC<{
             });
         }
         if (newChar.background) {
-            fetchBackgroundJson(newChar.background).then(data => {
+            fetchBackgroundJson(newChar.background, newChar.ruleset).then(data => {
                 setBgData(data);
             });
         }

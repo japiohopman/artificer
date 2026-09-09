@@ -2130,10 +2130,44 @@ export async function fetchClassData(index: string, ruleset?: '2014' | '2024'): 
   };
 }
 
-export async function fetchBackgroundsList(): Promise<{ name: string; index: string }[]> {
+export async function fetchBackgroundsList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), `public/assets/atlas/backgrounds/json/${versionFolder}`);
+      let files: string[] = [];
+      if (fs.existsSync(dirPath)) {
+        files = fs.readdirSync(dirPath).filter((f: string) => f.endsWith('.json'));
+      } else if (activeRuleset === '2014') {
+        const rootDir = pathModule.resolve(process.cwd(), 'public/assets/atlas/backgrounds/json');
+        if (fs.existsSync(rootDir)) {
+          files = fs.readdirSync(rootDir).filter((f: string) => f.endsWith('.json') && f !== 'index.json');
+        }
+      }
+
+      return files.map((f: string) => {
+        const filePath = activeRuleset === '2024'
+          ? pathModule.resolve(process.cwd(), `public/assets/atlas/backgrounds/json/${versionFolder}/${f}`)
+          : pathModule.resolve(process.cwd(), `public/assets/atlas/backgrounds/json/${f}`);
+        let name: string = f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+        try {
+          if (fs.existsSync(filePath)) {
+            const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            if (content.name) name = content.name;
+          }
+        } catch (e) {}
+        return { name, index: f.replace('.json', '') };
+      });
+    } catch (e) {}
+  }
+
   try {
-    // Try local index first
-    const localRes = await fetch('/assets/atlas/backgrounds/index.json');
+    const localRes = await fetch(`/assets/atlas/backgrounds/index_${versionFolder}.json`);
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
@@ -2145,7 +2179,22 @@ export async function fetchBackgroundsList(): Promise<{ name: string; index: str
     }
   } catch (e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/backgrounds/json?ref=${BRANCH}&t=${Date.now()}`;
+  if (activeRuleset === '2014') {
+    try {
+      const localRes = await fetch('/assets/atlas/backgrounds/index.json');
+      if (localRes.ok) {
+        const data = await localRes.json();
+        if (Array.isArray(data)) {
+          return data.map((b: any) => ({
+            name: b.name || b.index.replace(/_/g, ' '),
+            index: b.index
+          }));
+        }
+      }
+    } catch (e) {}
+  }
+
+  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/backgrounds/json/${versionFolder}?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
@@ -2162,40 +2211,118 @@ export async function fetchBackgroundsList(): Promise<{ name: string; index: str
   }
 }
 
-export async function fetchBackgroundData(index: string): Promise<any> {
-  if (backgroundCache[index]) return backgroundCache[index];
-  // Local first
+export async function fetchBackgroundData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  if (!index) return null;
+
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const cacheKey = `${activeRuleset}:${index.toLowerCase().trim()}`;
+  if (backgroundCache[cacheKey]) return backgroundCache[cacheKey];
+
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanIndex = index.toLowerCase().trim();
+  const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
+  const hyphenatedIndex = cleanIndex.replace(/[:_]/g, '-');
+
+  const candidatePaths: string[] = [
+    `/assets/atlas/backgrounds/json/${versionFolder}/${underscoreIndex}.json`,
+    `/assets/atlas/backgrounds/json/${versionFolder}/${hyphenatedIndex}.json`,
+  ];
+
+  if (versionFolder === '14') {
+    candidatePaths.push(`/assets/atlas/backgrounds/json/${underscoreIndex}.json`);
+    candidatePaths.push(`/assets/atlas/backgrounds/json/${hyphenatedIndex}.json`);
+  }
+
+  let data: any = null;
+  let resolvedPath: string | null = null;
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      for (const candidate of candidatePaths) {
+        const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
+        if (fs.existsSync(fullFsPath)) {
+          const fileContent = fs.readFileSync(fullFsPath, 'utf8');
+          data = JSON.parse(fileContent);
+          resolvedPath = candidate;
+          break;
+        }
+      }
+    } catch (e) {}
+  }
+
+  if (!data) {
+    for (const path of candidatePaths) {
+      try {
+        const res = await fetch(path);
+        if (res.ok) {
+          const parsed = await safeJson(res);
+          if (parsed) {
+            data = parsed;
+            resolvedPath = path;
+            break;
+          }
+        }
+      } catch (e) {}
+    }
+  }
+
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/backgrounds/json/${versionFolder}/${underscoreIndex}.json?t=${Date.now()}`;
+    try {
+      const res = await fetch(`/api/raw?url=${encodeURIComponent(githubUrl)}`);
+      data = await safeJson(res);
+      if (data) resolvedPath = githubUrl;
+    } catch (e) {
+      data = null;
+    }
+  }
+
+  if (!data) return null;
+
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  // Strict safety check: if ruleset requested was 2024 but loaded record is not 2024, reject!
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
+
+  // Try fetching official markdown lore guide (e.g., /assets/ui/official/backgrounds/acolyte.md)
+  let markdownGuide = '';
   try {
-    const res = await fetch(`/assets/atlas/backgrounds/json/${index}.json`);
-    if (res.ok) {
-      const data = await res.json();
-      const finalResult = data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'backgrounds', index) } : null;
-      if (finalResult) backgroundCache[index] = finalResult;
-      return finalResult;
+    const mdRes = await fetch(`/assets/ui/official/backgrounds/${cleanIndex}.md`);
+    if (mdRes.ok) {
+      markdownGuide = await mdRes.text();
     }
   } catch (e) {}
 
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/backgrounds/json/${index}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-  try {
-    const res = await fetch(url);
-    const data = await safeJson(res);
-    return data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'backgrounds', index) } : null;
-  } catch (e) {
-    return null;
+  if (typeof window === 'undefined' && !markdownGuide) {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const mdPath = pathModule.resolve(process.cwd(), `public/assets/ui/official/backgrounds/${cleanIndex}.md`);
+      if (fs.existsSync(mdPath)) {
+        markdownGuide = fs.readFileSync(mdPath, 'utf8');
+      }
+    } catch (e) {}
   }
+
+  const finalResult = {
+    ...data,
+    rulesetContext: actualRuleset,
+    markdownGuide,
+    imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'backgrounds', index)
+  };
+
+  backgroundCache[cacheKey] = finalResult;
+  return finalResult;
 }
 
-export async function fetchBackgroundJson(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/backgrounds/json/${index}.json?t=${Date.now()}`;
-  const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-  try {
-    const res = await fetch(url);
-    const data = await safeJson(res);
-    return data;
-  } catch (e) {
-    return null;
-  }
+export async function fetchBackgroundJson(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  return fetchBackgroundData(index, ruleset);
 }
 
 export async function fetchSubraceList(): Promise<{ name: string; index: string }[]> {

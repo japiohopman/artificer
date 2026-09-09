@@ -18,7 +18,10 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Subclasses & Subclass Features
 → implemented / verified (48/48 canonical subclasses in /subclasses/json/24/ across all 12 core classes)
 
-Next active dependency: 2024 Backgrounds & Origins / Origin Feats / 2024 Spells.
+2024 Backgrounds & Origins Foundation
+→ implemented / verified (16/16 PHB Origin Backgrounds in /backgrounds/json/24/, 10 Origin Feats in /feats/json/24/origin-feats/, ability score choice model [+2/+1 or +1/+1/+1], official markdown lore guides in /ui/official/backgrounds/*.md, and ruleset-aware Character Creator integration)
+
+Next active dependency: 2024 Feats integration / 2024 Spells migration.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.

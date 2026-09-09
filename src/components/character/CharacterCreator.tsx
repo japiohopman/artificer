@@ -500,7 +500,7 @@ export const CharacterCreator: React.FC = () => {
         fetchSpeciesList(),
         fetchSubraceList(),
         fetchClassesList(newChar.ruleset),
-        fetchBackgroundsList(),
+        fetchBackgroundsList(newChar.ruleset),
         fetchAlignmentsList(),
         fetchLanguagesList()
       ]);
@@ -1008,14 +1008,16 @@ const StepContent: React.FC<{
          desc="Definition of your life before embarking on adventures."
          items={available.backgrounds}
          selected={newChar.background}
+         ruleset={newChar.ruleset}
          onSelect={async (val) => {
-            const { fetchBackgroundJson } = await import('../../services/storageService');
-            const bgData = await fetchBackgroundJson(val);
+            const { fetchBackgroundJson, fetchFeatData } = await import('../../services/storageService');
+            const bgData = await fetchBackgroundJson(val, newChar.ruleset);
             
             setNewChar(prev => {
                 const newBackpack = [...(prev.backpack || [])];
                 const newProficiencies = prev.proficiencies ? [...prev.proficiencies] : [];
                 const newFeatures = prev.features ? [...prev.features] : [];
+                const newChoices = { ...(prev.choices || {}) };
 
                 if (bgData?.starting_equipment) {
                     bgData.starting_equipment.forEach((entry: any) => {
@@ -1034,24 +1036,40 @@ const StepContent: React.FC<{
                     });
                 }
 
-                // Handle 2024 Feat structure
-                if (bgData?.feat) {
-                    const featFeature = {
-                        name: bgData.feat.name,
-                        index: bgData.feat.index,
-                        desc: 'Granted by your ' + bgData.name + ' background.',
-                        source: 'Background'
-                    };
-                    if (!newFeatures.find(f => f.index === featFeature.index)) {
-                        newFeatures.push(featFeature);
+                // 2024 Background Ability Score Increases default choices
+                if (prev.ruleset === '2024' && bgData?.allowed_ability_scores) {
+                    const allowed = bgData.allowed_ability_scores;
+                    if (allowed.length >= 2) {
+                        newChoices.background_ability_scores = [allowed[0], allowed[0], allowed[1]];
+                    } else if (allowed.length === 1) {
+                        newChoices.background_ability_scores = [allowed[0], allowed[0], allowed[0]];
                     }
+                }
+
+                // Handle 2024 Origin Feat structure
+                if (bgData?.feat) {
+                    fetchFeatData(bgData.feat.index, '2024').then(featData => {
+                        const featFeature = {
+                            name: featData?.name || bgData.feat.name,
+                            index: bgData.feat.index,
+                            desc: Array.isArray(featData?.desc) ? featData.desc.join('\n') : (featData?.desc || ('Granted by your ' + bgData.name + ' background.')),
+                            source: 'Origin Feat'
+                        };
+                        setNewChar(p => {
+                            const updatedFeatures = p.features ? [...p.features] : [];
+                            if (!updatedFeatures.find(f => f.index === featFeature.index)) {
+                                updatedFeatures.push(featFeature);
+                            }
+                            return { ...p, features: updatedFeatures };
+                        });
+                    }).catch(() => {});
                 }
 
                 // Legacy feature support
                 if (bgData?.feature) {
                     const feature = {
                         name: bgData.feature.name,
-                        index: bgData.feature.index || bgData.index + '-feature',
+                        index: bgData.feature.index || (bgData.index + '-feature'),
                         desc: Array.isArray(bgData.feature.desc) ? bgData.feature.desc.join('\n') : bgData.feature.desc,
                         source: 'Background'
                     };
@@ -1065,7 +1083,8 @@ const StepContent: React.FC<{
                     background: val,
                     backpack: newBackpack,
                     proficiencies: newProficiencies,
-                    features: newFeatures
+                    features: newFeatures,
+                    choices: newChoices
                 };
             });
          }}

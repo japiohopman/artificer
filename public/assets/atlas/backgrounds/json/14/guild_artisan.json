@@ -1,0 +1,42 @@
+{
+  "index": "guild_artisan",
+  "name": "Guild Artisan",
+  "description": "You are a member of an artisan guild, skilled in a particular field and closely associated with fellow artisans.",
+  "feature": {
+    "name": "Guild Membership",
+    "desc": "As an established member of a guild, you rely on certain benefits that membership provides."
+  },
+  "starting_proficiencies": [
+    {
+      "index": "skill_insight",
+      "name": "Skill: Insight",
+      "url": "/assets/atlas/proficiencies/json/skill_insight.json"
+    },
+    {
+      "index": "skill_persuasion",
+      "name": "Skill: Persuasion",
+      "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "clothes_travelers",
+        "name": "Traveler's Clothes",
+        "url": "/assets/atlas/equipment/json/clothes_travelers.json"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "gold",
+        "name": "Gold",
+        "url": "/assets/atlas/equipment/json/gold.json"
+      },
+      "quantity": 15
+    }
+  ],
+  "image": "/assets/ui/official/backgrounds/artisan.webp",
+  "rulesetContext": "2014",
+  "url": "/assets/atlas/backgrounds/json/14/guild_artisan.json"
+}

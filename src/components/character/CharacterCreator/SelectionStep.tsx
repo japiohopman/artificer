@@ -39,6 +39,7 @@ export const SelectionStep: React.FC<{
   category: string;
 }> = ({ title, desc, items, selected, selectedSubrace, ruleset, onSelect, category }) => {
   const [detailData, setDetailData] = useState<any>(null);
+  const [originFeatData, setOriginFeatData] = useState<any>(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
   const [hydratedTraits, setHydratedTraits] = useState<Record<string, any>>({});
   const [hoveredTrait, setHoveredTrait] = useState<string | null>(null);
@@ -168,7 +169,14 @@ export const SelectionStep: React.FC<{
         data = await fetchClassWikiData(index, ruleset);
         statsData = await fetchClassData(index, ruleset);
       } else if (category === 'backgrounds') {
-        data = await fetchBackgroundData(index);
+        data = await fetchBackgroundData(index, ruleset);
+        if (data?.feat?.index) {
+          const { fetchFeatData } = await import('../../../services/storageService');
+          const fData = await fetchFeatData(data.feat.index, '2024');
+          setOriginFeatData(fData);
+        } else {
+          setOriginFeatData(null);
+        }
       } else if (category === 'alignments') {
         data = await fetchAlignmentData(index);
       }
@@ -598,14 +606,54 @@ export const SelectionStep: React.FC<{
                 </div>
 
                 {/* Background-Specific Details */}
-                {category === 'backgrounds' && detailData.feature && (
-                  <div className="p-3 bg-dragon-gold/10 border border-dragon-gold/20 rounded-sm space-y-1">
-                    <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider">
-                      Background Origin Privilege: {detailData.feature.name}
-                    </h4>
-                    <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
-                      {Array.isArray(detailData.feature.desc) ? detailData.feature.desc.join(' ') : detailData.feature.desc}
-                    </p>
+                {category === 'backgrounds' && (
+                  <div className="space-y-4">
+                    {/* 2024 Allowed Ability Score Choices */}
+                    {detailData.allowed_ability_scores && detailData.allowed_ability_scores.length > 0 && (
+                      <div className="p-3 bg-white/60 border border-dragon-gold/20 rounded-sm space-y-2">
+                        <span className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider block">
+                          Allowed Ability Score Increases (Choose +2/+1 or +1/+1/+1 in Attributes):
+                        </span>
+                        <div className="flex gap-2 flex-wrap">
+                          {detailData.allowed_ability_scores.map((stat: string, idx: number) => (
+                            <span key={idx} className="px-3 py-1 bg-dragon-gold/20 border border-dragon-gold/40 rounded text-xs font-black text-dragon-darkRed uppercase">
+                              {stat.toUpperCase()}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* 2024 Origin Feat Details */}
+                    {(originFeatData || detailData.feat) && (
+                      <div className="p-4 bg-dragon-gold/10 border-2 border-dragon-gold/30 rounded-sm space-y-2 relative shadow-sm">
+                        <div className="flex justify-between items-center border-b border-dragon-gold/20 pb-2">
+                          <span className="text-[9px] font-black text-dragon-gold uppercase tracking-widest block">
+                            2024 Origin Feat Privilege
+                          </span>
+                          <span className="px-2 py-0.5 bg-dragon-darkRed text-white text-[9px] font-black uppercase rounded">
+                            {originFeatData?.name || detailData.feat?.name}
+                          </span>
+                        </div>
+                        <p className="text-xs font-body text-parchment-900 leading-relaxed">
+                          {originFeatData?.desc
+                            ? (Array.isArray(originFeatData.desc) ? originFeatData.desc.join(' ') : originFeatData.desc)
+                            : "Origin feat granted by background."}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* 2014 Legacy Feature */}
+                    {detailData.feature && (
+                      <div className="p-3 bg-dragon-gold/10 border border-dragon-gold/20 rounded-sm space-y-1">
+                        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-wider">
+                          Background Origin Privilege: {detailData.feature.name}
+                        </h4>
+                        <p className="text-xs font-body text-parchment-900 leading-relaxed italic">
+                          {Array.isArray(detailData.feature.desc) ? detailData.feature.desc.join(' ') : detailData.feature.desc}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
