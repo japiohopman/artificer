@@ -435,6 +435,11 @@ class AtlasService {
     return fetchFeatData(index, ruleset);
   }
 
+  async loadFeatsList(ruleset?: '2014' | '2024', category?: string): Promise<{ name: string; index: string; category?: string; ruleset: '2014' | '2024' }[]> {
+    const { fetchFeatsList } = await import('./storageService');
+    return fetchFeatsList(ruleset, category);
+  }
+
   async loadFeature(index: string): Promise<any | null> {
     const { fetchFeatureData } = await import('./storageService');
     const data = await fetchFeatureData(index);

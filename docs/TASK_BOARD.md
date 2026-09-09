@@ -21,7 +21,10 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Backgrounds & Origins Foundation
 → implemented / verified (16/16 PHB Origin Backgrounds in /backgrounds/json/24/, 10 Origin Feats in /feats/json/24/origin-feats/, ability score choice model [+2/+1 or +1/+1/+1], official markdown lore guides in /ui/official/backgrounds/*.md, and ruleset-aware Character Creator integration)
 
-Next active dependency: 2024 Feats integration / 2024 Spells migration.
+2024 Feats Integration — Foundation
+→ implemented / verified (strict ruleset-aware resolution in fetchFeatData / loadFeat for 2014 vs 2024; versioned index_14.json and index_24.json catalogs for Origin, General, Fighting Style, and Epic Boon categories; Character Creator consumers updated; tests green)
+
+Next active dependency: 2024 Spells migration / remaining rules-sensitive domains.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -35,7 +38,7 @@ Next active dependency: 2024 Feats integration / 2024 Spells migration.
 - [x] Ingest 2024 Class Features & 1-20 Progressions for remaining 8 core classes.
 - [x] Ingest 2024 Subclasses & Subclass Features (48/48 canonical subclasses across all 12 core classes).
 - [ ] Ingest 2024 Backgrounds/Origins.
-- [ ] Integrate 2024 Feats where rules differ.
+- [x] Integrate 2024 Feats where rules differ.
 - [ ] Integrate 2024 Spells where rules differ.
 - [ ] Audit remaining rules-sensitive domains (conditions, subraces, features and other downstream consumers).
 - [ ] Add ruleset integration tests proving 2014 and 2024 resolve different datasets where intended.
