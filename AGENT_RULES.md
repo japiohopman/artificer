@@ -50,7 +50,7 @@ because it's trusted.
 
 ## 6. Verify before you build on top
 Before extending a system (inventory, combat, world state, etc.), re-read the relevant file(s)
-directly — don't rely on what a doc *says* the system does. Docs drift from code; the code is
+directly — don't rely on what a doc says the system does. Docs drift from code; the code is
 the source of truth GOALS.md itself insists on (§2, "Data Integrity").
 
 ## 7. When you hit an error, it goes in `errors.md` with a resolution — not just a stack trace
@@ -58,6 +58,14 @@ If you encounter and fix a build/runtime error, replace the raw log in `errors.m
 note: what broke, why, what fixed it. If you can't fix it, leave the log but add one line
 describing what you tried.
 
+## 8. Substantial phases require a persistent execution contract
+For multi-step, architectural, ruleset-sensitive, or canonical-data work, use the Phase Issue
+workflow described in `docs/PHASE_SAFETY_GATE.md`.
+- The Phase Issue defines goal, scope, subtasks, acceptance criteria, safety constraints,
+  out-of-scope boundaries, verification, and canonical references.
+- The PR must reference the Phase Issue and provide the review evidence requested by the PR template.
+- Do not treat a green CI run, a Jules "done" message, or a merged PR as a substitute for human review.
+- Keep the Issue, PR, and roadmap state aligned with what is actually true.
+
 ---
-*These rules are enforced by review, not by tooling — yet. Section 1 of the current Critical
-task list should include making at least part of this checkable by an actual test/build script.*
+*These rules are enforced by review and now partially enforced by the Phase Safety Gate CI workflow.*
