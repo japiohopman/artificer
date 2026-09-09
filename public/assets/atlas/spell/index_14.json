@@ -1,0 +1,2586 @@
+[
+  {
+    "index": "absorb_elements",
+    "name": "absorb elements",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/absorb_elements.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "acid_arrow",
+    "name": "acid arrow",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/acid_arrow.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "acid_splash",
+    "name": "acid splash",
+    "level": 0,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/acid_splash.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "aid",
+    "name": "aid",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/aid.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "alarm",
+    "name": "alarm",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/alarm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "alter_self",
+    "name": "alter self",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/alter_self.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "animal_friendship",
+    "name": "animal friendship",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/animal_friendship.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "animal_messenger",
+    "name": "animal messenger",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/animal_messenger.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "animal_shapes",
+    "name": "animal shapes",
+    "level": 8,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/animal_shapes.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "animate_dead",
+    "name": "animate dead",
+    "level": 3,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/animate_dead.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "animate_objects",
+    "name": "animate objects",
+    "level": 5,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/animate_objects.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "antilife_shell",
+    "name": "antilife shell",
+    "level": 5,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/antilife_shell.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "antimagic_field",
+    "name": "antimagic field",
+    "level": 8,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/antimagic_field.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "antipathy_sympathy",
+    "name": "antipathy/sympathy",
+    "level": 8,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/antipathy_sympathy.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "arcane_eye",
+    "name": "arcane eye",
+    "level": 4,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/arcane_eye.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "arcane_hand",
+    "name": "arcane hand",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/arcane_hand.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "arcane_lock",
+    "name": "arcane lock",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/arcane_lock.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "arcane_sword",
+    "name": "arcane sword",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/arcane_sword.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "arcanists_magic_aura",
+    "name": "arcanist's magic aura",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/arcanists_magic_aura.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "astral_projection",
+    "name": "astral projection",
+    "level": 9,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/astral_projection.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "augury",
+    "name": "augury",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/augury.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "awaken",
+    "name": "awaken",
+    "level": 5,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/awaken.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "bane",
+    "name": "bane",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/bane.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "banishment",
+    "name": "banishment",
+    "level": 4,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/banishment.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "barkskin",
+    "name": "barkskin",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/barkskin.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "beacon_of_hope",
+    "name": "beacon of hope",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/beacon_of_hope.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "bestow_curse",
+    "name": "bestow curse",
+    "level": 3,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/bestow_curse.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "black_tentacles",
+    "name": "black tentacles",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/black_tentacles.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "blade_barrier",
+    "name": "blade barrier",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/blade_barrier.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "bless",
+    "name": "bless",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/bless.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "blight",
+    "name": "blight",
+    "level": 4,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/blight.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "blindness_deafness",
+    "name": "blindness/deafness",
+    "level": 2,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/blindness_deafness.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "blink",
+    "name": "blink",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/blink.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "blur",
+    "name": "blur",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/blur.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "branding_smite",
+    "name": "branding smite",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/branding_smite.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "burning_hands",
+    "name": "burning hands",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/burning_hands.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "call_lightning",
+    "name": "call lightning",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/call_lightning.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "calm_emotions",
+    "name": "calm emotions",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/calm_emotions.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "catapult",
+    "name": "catapult",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/catapult.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "chain_lightning",
+    "name": "chain lightning",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/chain_lightning.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "charm_person",
+    "name": "charm person",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/charm_person.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "chill_touch",
+    "name": "chill touch",
+    "level": 0,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/chill_touch.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "circle_of_death",
+    "name": "circle of death",
+    "level": 6,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/circle_of_death.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "clairvoyance",
+    "name": "clairvoyance",
+    "level": 3,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/clairvoyance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "clone",
+    "name": "clone",
+    "level": 8,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/clone.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "cloudkill",
+    "name": "cloudkill",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/cloudkill.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "color_spray",
+    "name": "color spray",
+    "level": 1,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/color_spray.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "command",
+    "name": "command",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/command.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "commune",
+    "name": "commune",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/commune.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "commune_with_nature",
+    "name": "commune with nature",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/commune_with_nature.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "comprehend_languages",
+    "name": "comprehend languages",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/comprehend_languages.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "compulsion",
+    "name": "compulsion",
+    "level": 4,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/compulsion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "cone_of_cold",
+    "name": "cone of cold",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/cone_of_cold.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "confusion",
+    "name": "confusion",
+    "level": 4,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/confusion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_animals",
+    "name": "conjure animals",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_animals.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_celestial",
+    "name": "conjure celestial",
+    "level": 7,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_celestial.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_elemental",
+    "name": "conjure elemental",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_elemental.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_fey",
+    "name": "conjure fey",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_fey.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_minor_elementals",
+    "name": "conjure minor elementals",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_minor_elementals.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "conjure_woodland_beings",
+    "name": "conjure woodland beings",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/conjure_woodland_beings.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "contact_other_plane",
+    "name": "contact other plane",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/contact_other_plane.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "contagion",
+    "name": "contagion",
+    "level": 5,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/contagion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "contingency",
+    "name": "contingency",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/contingency.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "continual_flame",
+    "name": "continual flame",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/continual_flame.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "control_water",
+    "name": "control water",
+    "level": 4,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/control_water.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "control_weather",
+    "name": "control weather",
+    "level": 8,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/control_weather.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "counterspell",
+    "name": "counterspell",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/counterspell.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "create_food_and_water",
+    "name": "create food and water",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/create_food_and_water.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "create_or_destroy_water",
+    "name": "create or destroy water",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/create_or_destroy_water.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "create_undead",
+    "name": "create undead",
+    "level": 6,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/create_undead.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "creation",
+    "name": "creation",
+    "level": 5,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/creation.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "cure_wounds",
+    "name": "cure wounds",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/cure_wounds.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dancing_lights",
+    "name": "dancing lights",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/dancing_lights.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "darkness",
+    "name": "darkness",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/darkness.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "darkvision",
+    "name": "darkvision",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/darkvision.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "daylight",
+    "name": "daylight",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/daylight.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "death_ward",
+    "name": "death ward",
+    "level": 4,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/death_ward.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "delayed_blast_fireball",
+    "name": "delayed blast fireball",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/delayed_blast_fireball.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "demiplane",
+    "name": "demiplane",
+    "level": 8,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/demiplane.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "detect_evil_and_good",
+    "name": "detect evil and good",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/detect_evil_and_good.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "detect_magic",
+    "name": "detect magic",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/detect_magic.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "detect_poison_and_disease",
+    "name": "detect poison and disease",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/detect_poison_and_disease.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "detect_thoughts",
+    "name": "detect thoughts",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/detect_thoughts.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dimension_door",
+    "name": "dimension door",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/dimension_door.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "disguise_self",
+    "name": "disguise self",
+    "level": 1,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/disguise_self.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "disintegrate",
+    "name": "disintegrate",
+    "level": 6,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/disintegrate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dispel_evil_and_good",
+    "name": "dispel evil and good",
+    "level": 5,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/dispel_evil_and_good.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dispel_magic",
+    "name": "dispel magic",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/dispel_magic.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "divination",
+    "name": "divination",
+    "level": 4,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/divination.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "divine_favor",
+    "name": "divine favor",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/divine_favor.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "divine_word",
+    "name": "divine word",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/divine_word.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dominate_beast",
+    "name": "dominate beast",
+    "level": 4,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/dominate_beast.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dominate_monster",
+    "name": "dominate monster",
+    "level": 8,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/dominate_monster.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dominate_person",
+    "name": "dominate person",
+    "level": 5,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/dominate_person.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "dream",
+    "name": "dream",
+    "level": 5,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/dream.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "druidcraft",
+    "name": "druidcraft",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/druidcraft.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "earthquake",
+    "name": "earthquake",
+    "level": 8,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/earthquake.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "eldritch_blast",
+    "name": "eldritch blast",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/eldritch_blast.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "enhance_ability",
+    "name": "enhance ability",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/enhance_ability.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "enlarge_reduce",
+    "name": "enlarge/reduce",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/enlarge_reduce.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "entangle",
+    "name": "entangle",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/entangle.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "enthrall",
+    "name": "enthrall",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/enthrall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "etherealness",
+    "name": "etherealness",
+    "level": 7,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/etherealness.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "expeditious_retreat",
+    "name": "expeditious retreat",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/expeditious_retreat.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "eyebite",
+    "name": "eyebite",
+    "level": 6,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/eyebite.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fabricate",
+    "name": "fabricate",
+    "level": 4,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/fabricate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "faerie_fire",
+    "name": "faerie fire",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/faerie_fire.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "faithful_hound",
+    "name": "faithful hound",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/faithful_hound.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "false_life",
+    "name": "false life",
+    "level": 1,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/false_life.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fear",
+    "name": "fear",
+    "level": 3,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/fear.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "feather_fall",
+    "name": "feather fall",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/feather_fall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "feeblemind",
+    "name": "feeblemind",
+    "level": 8,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/feeblemind.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "find_familiar",
+    "name": "find familiar",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/find_familiar.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "find_steed",
+    "name": "find steed",
+    "level": 2,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/find_steed.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "find_the_path",
+    "name": "find the path",
+    "level": 6,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/find_the_path.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "find_traps",
+    "name": "find traps",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/find_traps.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "finger_of_death",
+    "name": "finger of death",
+    "level": 7,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/finger_of_death.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fireball",
+    "name": "fireball",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/fireball.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fire_bolt",
+    "name": "fire bolt",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/fire_bolt.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fire_shield",
+    "name": "fire shield",
+    "level": 4,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/fire_shield.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fire_storm",
+    "name": "fire storm",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/fire_storm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "flame_blade",
+    "name": "flame blade",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/flame_blade.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "flame_strike",
+    "name": "flame strike",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/flame_strike.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "flaming_sphere",
+    "name": "flaming sphere",
+    "level": 2,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/flaming_sphere.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "flesh_to_stone",
+    "name": "flesh to stone",
+    "level": 6,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/flesh_to_stone.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "floating_disk",
+    "name": "floating disk",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/floating_disk.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fly",
+    "name": "fly",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/fly.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "fog_cloud",
+    "name": "fog cloud",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/fog_cloud.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "forbiddance",
+    "name": "forbiddance",
+    "level": 6,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/forbiddance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "forcecage",
+    "name": "forcecage",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/forcecage.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "foresight",
+    "name": "foresight",
+    "level": 9,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/foresight.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "freedom_of_movement",
+    "name": "freedom of movement",
+    "level": 4,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/freedom_of_movement.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "freezing_sphere",
+    "name": "freezing sphere",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/freezing_sphere.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "gaseous_form",
+    "name": "gaseous form",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/gaseous_form.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "gate",
+    "name": "gate",
+    "level": 9,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/gate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "geas",
+    "name": "geas",
+    "level": 5,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/geas.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "gentle_repose",
+    "name": "gentle repose",
+    "level": 2,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/gentle_repose.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "giant_insect",
+    "name": "giant insect",
+    "level": 4,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/giant_insect.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "glibness",
+    "name": "glibness",
+    "level": 8,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/glibness.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "globe_of_invulnerability",
+    "name": "globe of invulnerability",
+    "level": 6,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/globe_of_invulnerability.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "glyph_of_warding",
+    "name": "glyph of warding",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/glyph_of_warding.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "goodberry",
+    "name": "goodberry",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/goodberry.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "grease",
+    "name": "grease",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/grease.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "greater_invisibility",
+    "name": "greater invisibility",
+    "level": 4,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/greater_invisibility.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "greater_restoration",
+    "name": "greater restoration",
+    "level": 5,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/greater_restoration.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "guardian_of_faith",
+    "name": "guardian of faith",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/guardian_of_faith.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "guards_and_wards",
+    "name": "guards and wards",
+    "level": 6,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/guards_and_wards.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "guidance",
+    "name": "guidance",
+    "level": 0,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/guidance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "guiding_bolt",
+    "name": "guiding bolt",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/guiding_bolt.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "gust_of_wind",
+    "name": "gust of wind",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/gust_of_wind.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hallow",
+    "name": "hallow",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/hallow.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hallucinatory_terrain",
+    "name": "hallucinatory terrain",
+    "level": 4,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/hallucinatory_terrain.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "harm",
+    "name": "harm",
+    "level": 6,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/harm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "haste",
+    "name": "haste",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/haste.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "heal",
+    "name": "heal",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/heal.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "healing_word",
+    "name": "healing word",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/healing_word.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "heat_metal",
+    "name": "heat metal",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/heat_metal.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hellish_rebuke",
+    "name": "hellish rebuke",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/hellish_rebuke.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "heroes_feast",
+    "name": "heroes' feast",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/heroes_feast.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "heroism",
+    "name": "heroism",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/heroism.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hideous_laughter",
+    "name": "hideous laughter",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/hideous_laughter.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hold_monster",
+    "name": "hold monster",
+    "level": 5,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/hold_monster.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hold_person",
+    "name": "hold person",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/hold_person.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "holy_aura",
+    "name": "holy aura",
+    "level": 8,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/holy_aura.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hunters_mark",
+    "name": "hunter's mark",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/hunters_mark.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "hypnotic_pattern",
+    "name": "hypnotic pattern",
+    "level": 3,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/hypnotic_pattern.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "ice_storm",
+    "name": "ice storm",
+    "level": 4,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/ice_storm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "identify",
+    "name": "identify",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/identify.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "illusory_script",
+    "name": "illusory script",
+    "level": 1,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/illusory_script.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "imprisonment",
+    "name": "imprisonment",
+    "level": 9,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/imprisonment.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "incendiary_cloud",
+    "name": "incendiary cloud",
+    "level": 8,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/incendiary_cloud.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "inflict_wounds",
+    "name": "inflict wounds",
+    "level": 1,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/inflict_wounds.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "insect_plague",
+    "name": "insect plague",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/insect_plague.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "instant_summons",
+    "name": "instant summons",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/instant_summons.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "invisibility",
+    "name": "invisibility",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/invisibility.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "irresistible_dance",
+    "name": "irresistible dance",
+    "level": 6,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/irresistible_dance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "jump",
+    "name": "jump",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/jump.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "knock",
+    "name": "knock",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/knock.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "legend_lore",
+    "name": "legend lore",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/legend_lore.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "lesser_restoration",
+    "name": "lesser restoration",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/lesser_restoration.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "levitate",
+    "name": "levitate",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/levitate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "light",
+    "name": "light",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/light.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "lightning_bolt",
+    "name": "lightning bolt",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/lightning_bolt.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "locate_animals_or_plants",
+    "name": "locate animals or plants",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/locate_animals_or_plants.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "locate_creature",
+    "name": "locate creature",
+    "level": 4,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/locate_creature.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "locate_object",
+    "name": "locate object",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/locate_object.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "longstrider",
+    "name": "longstrider",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/longstrider.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mage_armor",
+    "name": "mage armor",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/mage_armor.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mage_hand",
+    "name": "mage hand",
+    "level": 0,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/mage_hand.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magic_circle",
+    "name": "magic circle",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/magic_circle.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magic_jar",
+    "name": "magic jar",
+    "level": 6,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/magic_jar.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magic_missile",
+    "name": "magic missile",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/magic_missile.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magic_mouth",
+    "name": "magic mouth",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/magic_mouth.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magic_weapon",
+    "name": "magic weapon",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/magic_weapon.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "magnificent_mansion",
+    "name": "magnificent mansion",
+    "level": 7,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/magnificent_mansion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "major_image",
+    "name": "major image",
+    "level": 3,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/major_image.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mass_cure_wounds",
+    "name": "mass cure wounds",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/mass_cure_wounds.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mass_heal",
+    "name": "mass heal",
+    "level": 9,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/mass_heal.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mass_healing_word",
+    "name": "mass healing word",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/mass_healing_word.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mass_suggestion",
+    "name": "mass suggestion",
+    "level": 6,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/mass_suggestion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "maze",
+    "name": "maze",
+    "level": 8,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/maze.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "meld_into_stone",
+    "name": "meld into stone",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/meld_into_stone.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mending",
+    "name": "mending",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/mending.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "message",
+    "name": "message",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/message.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "meteor_swarm",
+    "name": "meteor swarm",
+    "level": 9,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/meteor_swarm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mind_blank",
+    "name": "mind blank",
+    "level": 8,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/mind_blank.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "minor_illusion",
+    "name": "minor illusion",
+    "level": 0,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/minor_illusion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mirage_arcane",
+    "name": "mirage arcane",
+    "level": 7,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/mirage_arcane.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mirror_image",
+    "name": "mirror image",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/mirror_image.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "mislead",
+    "name": "mislead",
+    "level": 5,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/mislead.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "misty_step",
+    "name": "misty step",
+    "level": 2,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/misty_step.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "modify_memory",
+    "name": "modify memory",
+    "level": 5,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/modify_memory.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "moonbeam",
+    "name": "moonbeam",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/moonbeam.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "move_earth",
+    "name": "move earth",
+    "level": 6,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/move_earth.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "nondetection",
+    "name": "nondetection",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/nondetection.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "passwall",
+    "name": "passwall",
+    "level": 5,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/passwall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "pass_without_trace",
+    "name": "pass without trace",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/pass_without_trace.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "phantasmal_killer",
+    "name": "phantasmal killer",
+    "level": 4,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/phantasmal_killer.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "phantom_steed",
+    "name": "phantom steed",
+    "level": 3,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/phantom_steed.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "planar_ally",
+    "name": "planar ally",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/planar_ally.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "planar_binding",
+    "name": "planar binding",
+    "level": 5,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/planar_binding.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "plane_shift",
+    "name": "plane shift",
+    "level": 7,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/plane_shift.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "plant_growth",
+    "name": "plant growth",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/plant_growth.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "poison_spray",
+    "name": "poison spray",
+    "level": 0,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/poison_spray.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "polymorph",
+    "name": "polymorph",
+    "level": 4,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/polymorph.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "power_word_kill",
+    "name": "power word kill",
+    "level": 9,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/power_word_kill.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "power_word_stun",
+    "name": "power word stun",
+    "level": 8,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/power_word_stun.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "prayer_of_healing",
+    "name": "prayer of healing",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/prayer_of_healing.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "prestidigitation",
+    "name": "prestidigitation",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/prestidigitation.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "prismatic_spray",
+    "name": "prismatic spray",
+    "level": 7,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/prismatic_spray.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "prismatic_wall",
+    "name": "prismatic wall",
+    "level": 9,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/prismatic_wall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "private_sanctum",
+    "name": "private sanctum",
+    "level": 4,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/private_sanctum.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "produce_flame",
+    "name": "produce flame",
+    "level": 0,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/produce_flame.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "programmed_illusion",
+    "name": "programmed illusion",
+    "level": 6,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/programmed_illusion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "project_image",
+    "name": "project image",
+    "level": 7,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/project_image.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "protection_from_energy",
+    "name": "protection from energy",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/protection_from_energy.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "protection_from_evil_and_good",
+    "name": "protection from evil and good",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/protection_from_evil_and_good.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "protection_from_poison",
+    "name": "protection from poison",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/protection_from_poison.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "purify_food_and_drink",
+    "name": "purify food and drink",
+    "level": 1,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/purify_food_and_drink.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "raise_dead",
+    "name": "raise dead",
+    "level": 5,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/raise_dead.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "ray_of_enfeeblement",
+    "name": "ray of enfeeblement",
+    "level": 2,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/ray_of_enfeeblement.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "ray_of_frost",
+    "name": "ray of frost",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/ray_of_frost.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "regenerate",
+    "name": "regenerate",
+    "level": 7,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/regenerate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "reincarnate",
+    "name": "reincarnate",
+    "level": 5,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/reincarnate.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "remove_curse",
+    "name": "remove curse",
+    "level": 3,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/remove_curse.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "resilient_sphere",
+    "name": "resilient sphere",
+    "level": 4,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/resilient_sphere.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "resistance",
+    "name": "resistance",
+    "level": 0,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/resistance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "resurrection",
+    "name": "resurrection",
+    "level": 7,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/resurrection.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "reverse_gravity",
+    "name": "reverse gravity",
+    "level": 7,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/reverse_gravity.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "revivify",
+    "name": "revivify",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/revivify.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "rope_trick",
+    "name": "rope trick",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/rope_trick.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sacred_flame",
+    "name": "sacred flame",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/sacred_flame.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sanctuary",
+    "name": "sanctuary",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/sanctuary.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "scorching_ray",
+    "name": "scorching ray",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/scorching_ray.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "scrying",
+    "name": "scrying",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/scrying.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "secret_chest",
+    "name": "secret chest",
+    "level": 4,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/secret_chest.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "seeming",
+    "name": "seeming",
+    "level": 5,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/seeming.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "see_invisibility",
+    "name": "see invisibility",
+    "level": 2,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/see_invisibility.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sending",
+    "name": "sending",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/sending.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sequester",
+    "name": "sequester",
+    "level": 7,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/sequester.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shapechange",
+    "name": "shapechange",
+    "level": 9,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/shapechange.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shatter",
+    "name": "shatter",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/shatter.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shield",
+    "name": "shield",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/shield.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shield_of_faith",
+    "name": "shield of faith",
+    "level": 1,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/shield_of_faith.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shillelagh",
+    "name": "shillelagh",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/shillelagh.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "shocking_grasp",
+    "name": "shocking grasp",
+    "level": 0,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/shocking_grasp.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "silence",
+    "name": "silence",
+    "level": 2,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/silence.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "silent_image",
+    "name": "silent image",
+    "level": 1,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/silent_image.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "simulacrum",
+    "name": "simulacrum",
+    "level": 7,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/simulacrum.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sleep",
+    "name": "sleep",
+    "level": 1,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/sleep.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sleet_storm",
+    "name": "sleet storm",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/sleet_storm.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "slow",
+    "name": "slow",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/slow.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "spare_the_dying",
+    "name": "spare the dying",
+    "level": 0,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/spare_the_dying.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "speak_with_animals",
+    "name": "speak with animals",
+    "level": 1,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/speak_with_animals.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "speak_with_dead",
+    "name": "speak with dead",
+    "level": 3,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/speak_with_dead.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "speak_with_plants",
+    "name": "speak with plants",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/speak_with_plants.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "spider_climb",
+    "name": "spider climb",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/spider_climb.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "spike_growth",
+    "name": "spike growth",
+    "level": 2,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/spike_growth.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "spiritual_weapon",
+    "name": "spiritual weapon",
+    "level": 2,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/spiritual_weapon.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "spirit_guardians",
+    "name": "spirit guardians",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/spirit_guardians.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "stinking_cloud",
+    "name": "stinking cloud",
+    "level": 3,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/stinking_cloud.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "stoneskin",
+    "name": "stoneskin",
+    "level": 4,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/stoneskin.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "stone_shape",
+    "name": "stone shape",
+    "level": 4,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/stone_shape.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "storm_of_vengeance",
+    "name": "storm of vengeance",
+    "level": 9,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/storm_of_vengeance.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "suggestion",
+    "name": "suggestion",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/suggestion.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sunbeam",
+    "name": "sunbeam",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/sunbeam.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "sunburst",
+    "name": "sunburst",
+    "level": 8,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/sunburst.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "symbol",
+    "name": "symbol",
+    "level": 7,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/symbol.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "tashas_caustic_brew",
+    "name": "tasha's caustic brew",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/tashas_caustic_brew.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "telekinesis",
+    "name": "telekinesis",
+    "level": 5,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/telekinesis.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "telepathic_bond",
+    "name": "telepathic bond",
+    "level": 5,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/telepathic_bond.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "teleport",
+    "name": "teleport",
+    "level": 7,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/teleport.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "teleportation_circle",
+    "name": "teleportation circle",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/teleportation_circle.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "thaumaturgy",
+    "name": "thaumaturgy",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/thaumaturgy.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "thorn_whip",
+    "name": "thorn whip",
+    "level": 0,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/thorn_whip.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "thunderwave",
+    "name": "thunderwave",
+    "level": 1,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/thunderwave.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "time_stop",
+    "name": "time stop",
+    "level": 9,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/time_stop.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "tiny_hut",
+    "name": "tiny hut",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/tiny_hut.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "tongues",
+    "name": "tongues",
+    "level": 3,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/tongues.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "transport_via_plants",
+    "name": "transport via plants",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/transport_via_plants.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "tree_stride",
+    "name": "tree stride",
+    "level": 5,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/tree_stride.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "true_polymorph",
+    "name": "true polymorph",
+    "level": 9,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/true_polymorph.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "true_resurrection",
+    "name": "true resurrection",
+    "level": 9,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/true_resurrection.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "true_seeing",
+    "name": "true seeing",
+    "level": 6,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/true_seeing.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "true_strike",
+    "name": "true strike",
+    "level": 0,
+    "school": "divination",
+    "url": "/assets/atlas/spell/json/14/true_strike.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "unseen_servant",
+    "name": "unseen servant",
+    "level": 1,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/unseen_servant.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "vampiric_touch",
+    "name": "vampiric touch",
+    "level": 3,
+    "school": "necromancy",
+    "url": "/assets/atlas/spell/json/14/vampiric_touch.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "vicious_mockery",
+    "name": "vicious mockery",
+    "level": 0,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/vicious_mockery.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wall_of_fire",
+    "name": "wall of fire",
+    "level": 4,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/wall_of_fire.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wall_of_force",
+    "name": "wall of force",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/wall_of_force.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wall_of_ice",
+    "name": "wall of ice",
+    "level": 6,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/wall_of_ice.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wall_of_stone",
+    "name": "wall of stone",
+    "level": 5,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/wall_of_stone.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wall_of_thorns",
+    "name": "wall of thorns",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/wall_of_thorns.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "warding_bond",
+    "name": "warding bond",
+    "level": 2,
+    "school": "abjuration",
+    "url": "/assets/atlas/spell/json/14/warding_bond.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "water_breathing",
+    "name": "water breathing",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/water_breathing.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "water_walk",
+    "name": "water walk",
+    "level": 3,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/water_walk.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "web",
+    "name": "web",
+    "level": 2,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/web.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "weird",
+    "name": "weird",
+    "level": 9,
+    "school": "illusion",
+    "url": "/assets/atlas/spell/json/14/weird.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wind_walk",
+    "name": "wind walk",
+    "level": 6,
+    "school": "transmutation",
+    "url": "/assets/atlas/spell/json/14/wind_walk.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wind_wall",
+    "name": "wind wall",
+    "level": 3,
+    "school": "evocation",
+    "url": "/assets/atlas/spell/json/14/wind_wall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "wish",
+    "name": "wish",
+    "level": 9,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/wish.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "word_of_recall",
+    "name": "word of recall",
+    "level": 6,
+    "school": "conjuration",
+    "url": "/assets/atlas/spell/json/14/word_of_recall.json",
+    "ruleset": "2014"
+  },
+  {
+    "index": "zone_of_truth",
+    "name": "zone of truth",
+    "level": 2,
+    "school": "enchantment",
+    "url": "/assets/atlas/spell/json/14/zone_of_truth.json",
+    "ruleset": "2014"
+  }
+]

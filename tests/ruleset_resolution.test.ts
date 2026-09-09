@@ -1648,4 +1648,36 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(md.toLowerCase()).not.toContain('feature from your');
     }
   });
+
+  it('verifies ruleset-aware spell loading and list fetching for 2014 and 2024 rulesets', async () => {
+    const { fetchSpellData, fetchSpellList } = await import('../src/services/storageService');
+    
+    // 2014 Spells list & Cure Wounds (1d8 base healing)
+    const spells14 = await fetchSpellList('2014');
+    expect(spells14.length).toBe(323);
+    const cureWounds14 = await fetchSpellData('cure_wounds', '2014');
+    expect(cureWounds14).not.toBeNull();
+    expect(cureWounds14?.rulesetContext).toBe('2014');
+    expect(cureWounds14?.heal_at_slot_level['1']).toBe('1d8 + MOD');
+
+    // 2024 Spells list & Cure Wounds (2d8 base healing in 2024 PHB)
+    const spells24 = await fetchSpellList('2024');
+    expect(spells24.length).toBe(323);
+    const cureWounds24 = await fetchSpellData('cure_wounds', '2024');
+    expect(cureWounds24).not.toBeNull();
+    expect(cureWounds24?.rulesetContext).toBe('2024');
+    expect(cureWounds24?.heal_at_slot_level['1']).toBe('2d8 + MOD');
+
+    // atlasService wrapper test
+    const loaded14 = await atlasService.loadSpell('acid_arrow', '2014');
+    expect(loaded14).not.toBeNull();
+    expect(loaded14?.rulesetContext).toBe('2014');
+
+    const loaded24 = await atlasService.loadSpell('cure_wounds', '2024');
+    expect(loaded24).not.toBeNull();
+    expect(loaded24?.rulesetContext).toBe('2024');
+    expect(loaded24?.heal_at_slot_level['1']).toBe('2d8 + MOD');
+  });
 });
+
+
