@@ -25,7 +25,7 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 → implemented / verified (strict ruleset-aware resolution in fetchFeatData / loadFeat for 2014 vs 2024; versioned index_14.json and index_24.json catalogs for Origin, General, Fighting Style, and Epic Boon categories; Character Creator consumers updated; tests green)
 
 2024 Spells Integration & Refinement
-→ implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323/323 2024 spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
+→ implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323 canonical SRD spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
 
 Next active dependency: remaining rules-sensitive domains.
 
