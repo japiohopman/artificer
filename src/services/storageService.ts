@@ -287,13 +287,28 @@ export async function fetchRecruitNPCList(): Promise<{ name: string; path: strin
 
 export async function fetchRecruitNPCData(index: string): Promise<any> {
   let data: any = null;
-  // Try local first
-  try {
-    const res = await fetch(`/assets/atlas/characters/recruit_npc/${index}.json`);
-    if (res.ok) {
-      data = await res.json();
-    }
-  } catch (e) {}
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const fullFsPath = pathModule.resolve(process.cwd(), `public/assets/atlas/characters/recruit_npc/${index}.json`);
+      if (fs.existsSync(fullFsPath)) {
+        data = JSON.parse(fs.readFileSync(fullFsPath, 'utf8'));
+      }
+    } catch (e) {}
+  }
+
+  // Try local first in browser
+  if (!data) {
+    try {
+      const res = await fetch(`/assets/atlas/characters/recruit_npc/${index}.json`);
+      if (res.ok) {
+        data = await res.json();
+      }
+    } catch (e) {}
+  }
 
   if (!data) {
     const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/characters/recruit_npc/${index}.json?t=${Date.now()}`;
@@ -306,7 +321,72 @@ export async function fetchRecruitNPCData(index: string): Promise<any> {
     }
   }
 
-  return data ? migrateCharacterV1ToV2(data) : null;
+  if (!data) return null;
+
+  // Extract known spell references if knownSpells is missing/empty
+  let rawKnown = data.knownSpells || data.spells || [];
+  if (!Array.isArray(rawKnown) || rawKnown.length === 0) {
+    const backpackItems = Array.isArray(data.backpack) ? data.backpack : [];
+    const itemTemplates = Object.values(data.items || {}).map((i: any) => i.template).filter(Boolean);
+    const candidateIndices = [
+      ...backpackItems.map((i: any) => i.index || i.template),
+      ...itemTemplates
+    ].filter(Boolean);
+
+    const SPELL_INDEX_MAPPING: Record<string, string> = {
+      'magic-missile': 'magic_missile',
+      'magic_missile': 'magic_missile',
+      'burning-hands': 'burning_hands',
+      'burning_hands': 'burning_hands',
+      'cure-wounds': 'cure_wounds',
+      'cure_wounds': 'cure_wounds',
+      'healing-word': 'healing_word',
+      'healing_word': 'healing_word',
+      'shield': 'shield',
+      'guiding-bolt': 'guiding_bolt',
+      'guiding_bolt': 'guiding_bolt',
+      'witch-bolt': 'witch_bolt',
+      'witch_bolt': 'witch_bolt',
+      'fire-bolt': 'fire_bolt',
+      'fire_bolt': 'fire_bolt',
+      'light': 'light',
+      'mage-armor': 'mage_armor',
+      'mage_armor': 'mage_armor',
+      'sleep': 'sleep',
+      'mage-hand': 'mage_hand',
+      'mage_hand': 'mage_hand',
+      'sacred-flame': 'sacred_flame',
+      'sacred_flame': 'sacred_flame'
+    };
+
+    const spellIndices = candidateIndices
+      .map(idx => SPELL_INDEX_MAPPING[idx?.toLowerCase()])
+      .filter(Boolean);
+
+    if (spellIndices.length > 0) {
+      const resolved = await Promise.all(
+        Array.from(new Set(spellIndices)).map(sIdx => fetchSpellData(sIdx, data.ruleset || '2014'))
+      );
+      rawKnown = resolved.filter(Boolean);
+    }
+  }
+
+  const migrated = migrateCharacterV1ToV2(data);
+  const knownSpells = Array.isArray(rawKnown) ? rawKnown : [];
+  const preparedSpells = migrated.preparedSpells && migrated.preparedSpells.length > 0
+    ? migrated.preparedSpells
+    : knownSpells.map(s => s.index || s.id).filter(Boolean);
+
+  const spellSlots = migrated.spellSlots && Object.keys(migrated.spellSlots).length > 0
+    ? migrated.spellSlots
+    : { "1": { current: 2, max: 2 } };
+
+  return {
+    ...migrated,
+    knownSpells,
+    preparedSpells,
+    spellSlots
+  };
 }
 
 export async function fetchMonsterCategories(): Promise<{ name: string; index: string; monsters: any[] }[]> {

@@ -27,6 +27,9 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Spells Integration & Refinement
 → implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323 canonical SRD spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
 
+Spell Experience End-to-End Integration & QA Repair
+→ implemented / verified (`SpellsStep` ruleset-aware `SpellSprite` integration; level-1 sprite-sheet manifest crops verified; `CombatTester` and `TokenActionHUD` recruit test NPC spellcasting data preservation; Arcana/Spells testing matrix and targeting execution; regression tests green)
+
 Next active dependency: remaining rules-sensitive domains.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
