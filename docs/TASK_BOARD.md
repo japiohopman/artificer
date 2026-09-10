@@ -24,7 +24,10 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Feats Integration — Foundation
 → implemented / verified (strict ruleset-aware resolution in fetchFeatData / loadFeat for 2014 vs 2024; versioned index_14.json and index_24.json catalogs for Origin, General, Fighting Style, and Epic Boon categories; Character Creator consumers updated; tests green)
 
-Next active dependency: 2024 Spells migration / remaining rules-sensitive domains.
+2024 Spells Integration & Refinement
+→ implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323 canonical SRD spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
+
+Next active dependency: remaining rules-sensitive domains.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -37,9 +40,9 @@ Next active dependency: 2024 Spells migration / remaining rules-sensitive domain
 - [x] Ingest 2024 Class Features & 1-20 Progressions for Fighter, Wizard, Cleric, Rogue under `/class/levels/24/` and `/features/json/`.
 - [x] Ingest 2024 Class Features & 1-20 Progressions for remaining 8 core classes.
 - [x] Ingest 2024 Subclasses & Subclass Features (48/48 canonical subclasses across all 12 core classes).
-- [ ] Ingest 2024 Backgrounds/Origins.
+- [x] Ingest 2024 Backgrounds/Origins.
 - [x] Integrate 2024 Feats where rules differ.
-- [ ] Integrate 2024 Spells where rules differ.
+- [x] Integrate 2024 Spells where rules differ.
 - [ ] Audit remaining rules-sensitive domains (conditions, subraces, features and other downstream consumers).
 - [ ] Add ruleset integration tests proving 2014 and 2024 resolve different datasets where intended.
 - [ ] Verify Character Creator end-to-end for both rulesets.

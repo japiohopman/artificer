@@ -1558,6 +1558,9 @@ export async function fetchSpellData(index: string, ruleset?: '2014' | '2024'): 
   const versionFolder = activeRuleset === '2024' ? '24' : '14';
   const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
 
+  let data: any = null;
+  let resolvedPath: string | null = null;
+
   // Node CLI local filesystem fallback for test environments
   if (typeof window === 'undefined') {
     try {
@@ -1566,55 +1569,57 @@ export async function fetchSpellData(index: string, ruleset?: '2014' | '2024'): 
       
       const primaryPath = pathModule.resolve(process.cwd(), `public/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json`);
       if (fs.existsSync(primaryPath)) {
-        const data = JSON.parse(fs.readFileSync(primaryPath, 'utf8'));
-        const finalResult = {
-          ...data,
-          rulesetContext: activeRuleset,
-          imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-        };
-        spellCache[cacheKey] = finalResult;
-        return finalResult;
+        data = JSON.parse(fs.readFileSync(primaryPath, 'utf8'));
+        resolvedPath = primaryPath;
       }
     } catch (e) {}
   }
 
   // Browser / Network resolution
-  const primaryUrl = `/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json`;
-  try {
-    const res = await fetch(primaryUrl);
-    if (res.ok) {
-      const data = await res.json();
-      const finalResult = {
-        ...data,
-        rulesetContext: activeRuleset,
-        imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-      };
-      spellCache[cacheKey] = finalResult;
-      return finalResult;
-    }
-  } catch (e) {}
-
-  // Construct GitHub raw path fallback
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json?t=${Date.now()}`;
-  const rawApiUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-  
-  try {
-    const res = await fetch(rawApiUrl);
-    const data = await safeJson(res);
-    if (data) {
-      const finalResult = {
-        ...data,
-        rulesetContext: activeRuleset,
-        imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-      };
-      spellCache[cacheKey] = finalResult;
-      return finalResult;
-    }
-  } catch (e) {
-    console.error("Error fetching spell data:", e);
+  if (!data) {
+    const primaryUrl = `/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json`;
+    try {
+      const res = await fetch(primaryUrl);
+      if (res.ok) {
+        data = await res.json();
+        resolvedPath = primaryUrl;
+      }
+    } catch (e) {}
   }
 
-  return null;
+  // Construct GitHub raw path fallback
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json?t=${Date.now()}`;
+    const rawApiUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+
+    try {
+      const res = await fetch(rawApiUrl);
+      data = await safeJson(res);
+      if (data) resolvedPath = githubUrl;
+    } catch (e) {
+      console.error("Error fetching spell data:", e);
+    }
+  }
+
+  if (!data) return null;
+
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
+  if (activeRuleset === '2014' && actualRuleset !== '2014') {
+    return null;
+  }
+
+  const finalResult = {
+    ...data,
+    rulesetContext: actualRuleset,
+    imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
+  };
+  spellCache[cacheKey] = finalResult;
+  return finalResult;
 }
 
 export async function fetchSpellList(ruleset?: '2014' | '2024'): Promise<any[]> {

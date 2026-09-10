@@ -1,39 +1,31 @@
 const fs = require('fs');
 const path = require('path');
 
-const SPELL_DIR = path.join(__dirname, '../public/assets/atlas/spell/json');
-const OUTPUT_FILE = path.join(__dirname, '../public/assets/atlas/spell/index.json');
+const SPELL_BASE_DIR = path.join(__dirname, '../public/assets/atlas/spell');
 
-function generateIndex() {
-  console.log('Generating spell index...');
-  
-  if (!fs.existsSync(SPELL_DIR)) {
-    console.error(`Directory not found: ${SPELL_DIR}`);
+function generateIndexForRuleset(rulesetFolder, outputFilename) {
+  const jsonDir = path.join(SPELL_BASE_DIR, 'json', rulesetFolder);
+  const outputFile = path.join(SPELL_BASE_DIR, outputFilename);
+
+  console.log(`Generating spell index for ${rulesetFolder} -> ${outputFilename}...`);
+
+  if (!fs.existsSync(jsonDir)) {
+    console.error(`Directory not found: ${jsonDir}`);
     return;
   }
 
-  function getAllJsonFiles(dir, fileList = []) {
-    const files = fs.readdirSync(dir);
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      if (fs.statSync(filePath).isDirectory()) {
-        getAllJsonFiles(filePath, fileList);
-      } else if (file.endsWith('.json')) {
-        fileList.push(filePath);
-      }
-    });
-    return fileList;
-  }
+  const files = fs.readdirSync(jsonDir)
+    .filter(f => f.endsWith('.json'))
+    .sort((a, b) => a.localeCompare(b));
 
-  const files = getAllJsonFiles(SPELL_DIR);
   const index = [];
 
   files.forEach(file => {
     try {
-      const content = fs.readFileSync(file, 'utf8');
+      const filePath = path.join(jsonDir, file);
+      const content = fs.readFileSync(filePath, 'utf8');
       const data = JSON.parse(content);
-      const relativePath = path.relative(SPELL_DIR, file).replace(/\\/g, '/');
-      
+
       index.push({
         index: data.index || path.basename(file, '.json'),
         name: data.name || 'Unknown Spell',
@@ -43,15 +35,20 @@ function generateIndex() {
         casting_time: data.casting_time,
         range: data.range,
         duration: data.duration,
-        json_path: `/assets/atlas/spell/json/${relativePath}`
+        json_path: `/assets/atlas/spell/json/${rulesetFolder}/${path.basename(file)}`
       });
     } catch (e) {
       console.error(`Error parsing ${file}:`, e.message);
     }
   });
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(index, null, 2));
-  console.log(`Successfully generated spell index with ${index.length} spells at ${OUTPUT_FILE}`);
+  fs.writeFileSync(outputFile, JSON.stringify(index, null, 2) + '\n');
+  console.log(`Successfully generated spell index (${index.length} spells) at ${outputFile}`);
 }
 
-generateIndex();
+function generateAllIndices() {
+  generateIndexForRuleset('14', 'index_14.json');
+  generateIndexForRuleset('24', 'index_24.json');
+}
+
+generateAllIndices();

@@ -25,10 +25,10 @@
       "url": "/assets/atlas/damage_types/json/necrotic.json"
     },
     "damage_at_character_level": {
-      "1": "1d8",
-      "5": "2d8",
-      "11": "3d8",
-      "17": "4d8"
+      "1": "1d10",
+      "5": "2d10",
+      "11": "3d10",
+      "17": "4d10"
     }
   },
   "school": {
