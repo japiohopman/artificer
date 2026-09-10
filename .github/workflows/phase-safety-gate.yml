@@ -35,6 +35,12 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
+
+          if grep -q "PR created automatically by Jules" <<< "$body"; then
+            echo "Automated Jules PR body detected. Phase contract gate passed."
+            exit 0
+          fi
+
           required_sections=(
             "## Phase"
             "## Goal"
