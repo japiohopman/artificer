@@ -132,8 +132,8 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
     });
   });
 
-  describe('C, D, E & F: Canonical Spell Execution, State Change, Single Resource Consumption & Castability Rejection', () => {
-    it('6. resolveCombatAction delegates to resolveSpellAction, producing real state change and deducting resources exactly once', async () => {
+  describe('C, D, E & F: Transaction-Order, Single Resource Consumption & Failure Case Proofs', () => {
+    it('6. Successful spell cast produces real state change and deducts exactly ONE action and ONE spell slot', async () => {
       const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
       const spellAction = createSpellCombatAction(cureWoundsData);
 
@@ -179,18 +179,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       charStore.setCharacters([testChar]);
       charStore.setActiveCharacter('hero-cleric-1');
 
-      useGameStore.setState(state => ({
-        activeCharacterId: 'hero-cleric-1',
-        combatState: {
-          ...state.combatState,
-          monsters: []
-        }
-      }));
-
-      // Initial HP is 5, level 1 spell slot is 2
-      expect(useCharacterStore.getState().characters[0].hp).toBe(5);
-      expect(useCharacterStore.getState().characters[0].spellSlots['1'].current).toBe(2);
-      expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(1);
+      useGameStore.setState({ activeCharacterId: 'hero-cleric-1' });
 
       // Execute via useGameStore.resolveCombatAction
       await useGameStore.getState().resolveCombatAction(
@@ -200,22 +189,18 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       );
 
       const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'hero-cleric-1');
-
-      // HP increased (real state change)
       expect(updatedChar?.hp).toBeGreaterThan(5);
-
-      // Resources deducted EXPLICITLY ONCE
       expect(updatedChar?.spellSlots['1'].current).toBe(1);
       expect(updatedChar?.actionEconomy?.actions.current).toBe(0);
     });
 
-    it('7. Invalid castability (insufficient spell slots or actions) is cleanly rejected without HP mutation', async () => {
+    it('7. Failure case: Insufficient spell slot → NO slot consumed and NO HP change', async () => {
       const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
       const spellAction = createSpellCombatAction(cureWoundsData);
 
-      const testCharNoSlots = {
-        id: 'hero-empty-slots',
-        name: 'Empty Slot Cleric',
+      const testChar = {
+        id: 'cleric-no-slots',
+        name: 'Cleric No Slots',
         class: 'Cleric',
         race: 'Human',
         gender: 'Male' as const,
@@ -237,7 +222,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
         backpack: [],
         knownSpells: [cureWoundsData],
         preparedSpells: ['cure_wounds'],
-        spellSlots: { '1': { current: 0, max: 2 } }, // ZERO SLOTS
+        spellSlots: { '1': { current: 0, max: 2 } }, // 0 SLOTS LEFT
         choices: {},
         hp: 5,
         maxHp: 20,
@@ -252,26 +237,91 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       };
 
       const charStore = useCharacterStore.getState();
-      charStore.setCharacters([testCharNoSlots]);
-      charStore.setActiveCharacter('hero-empty-slots');
+      charStore.setCharacters([testChar]);
+      charStore.setActiveCharacter('cleric-no-slots');
 
-      useGameStore.setState({ activeCharacterId: 'hero-empty-slots' });
+      useGameStore.setState({ activeCharacterId: 'cleric-no-slots' });
 
       const result = await resolveSpellAction(
-        { name: 'Empty Slot Cleric', id: 'hero-empty-slots' },
-        { name: 'Empty Slot Cleric', id: 'hero-empty-slots' },
+        { name: 'Cleric No Slots', id: 'cleric-no-slots' },
+        { name: 'Cleric No Slots', id: 'cleric-no-slots' },
         spellAction,
         1
       );
 
       expect(result.success).toBe(false);
       expect(result.logMessage).toContain('no Level 1 spell slots remaining');
-      expect(useCharacterStore.getState().characters[0].hp).toBe(5); // Unchanged HP
+      const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'cleric-no-slots');
+      expect(updatedChar?.hp).toBe(5); // HP untouched
+      expect(updatedChar?.spellSlots['1'].current).toBe(0); // Slot untouched
+      expect(updatedChar?.actionEconomy?.actions.current).toBe(1); // Action untouched
+    });
+
+    it('8. Failure case: Unknown spell → NO slot consumed and NO HP change', async () => {
+      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
+      const spellAction = createSpellCombatAction(cureWoundsData);
+
+      const testChar = {
+        id: 'cleric-unknown-spell',
+        name: 'Cleric Unknown Spell',
+        class: 'Cleric',
+        race: 'Human',
+        gender: 'Male' as const,
+        level: 1,
+        xp: 0,
+        alignment: 'Good',
+        background: 'Acolyte',
+        stats: { str: 10, dex: 10, con: 12, int: 10, wis: 16, cha: 10 },
+        proficiencies: [],
+        traits: [],
+        features: [],
+        flaws: [],
+        ideals: [],
+        bonds: [],
+        backstory: '',
+        languages: [],
+        appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
+        inventory: {},
+        backpack: [],
+        knownSpells: [], // DOES NOT KNOW CURE WOUNDS
+        preparedSpells: [],
+        spellSlots: { '1': { current: 2, max: 2 } },
+        choices: {},
+        hp: 5,
+        maxHp: 20,
+        money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
+        actionEconomy: {
+          actions: { current: 1, max: 1 },
+          bonusActions: { current: 1, max: 1 },
+          reactions: { current: 1, max: 1 },
+          movement: { current: 30, max: 30 },
+          objectInteractions: { current: 1, max: 1 }
+        }
+      };
+
+      const charStore = useCharacterStore.getState();
+      charStore.setCharacters([testChar]);
+      charStore.setActiveCharacter('cleric-unknown-spell');
+
+      useGameStore.setState({ activeCharacterId: 'cleric-unknown-spell' });
+
+      const result = await resolveSpellAction(
+        { name: 'Cleric Unknown Spell', id: 'cleric-unknown-spell' },
+        { name: 'Cleric Unknown Spell', id: 'cleric-unknown-spell' },
+        spellAction,
+        1
+      );
+
+      expect(result.success).toBe(false);
+      expect(result.logMessage).toContain('does not know the spell');
+      const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'cleric-unknown-spell');
+      expect(updatedChar?.hp).toBe(5);
+      expect(updatedChar?.spellSlots['1'].current).toBe(2); // Slot untouched
     });
   });
 
   describe('G & I: Recruit NPC State Retention & Unsupported Mechanics Safety', () => {
-    it('8. Recruit test NPC spellcasting state survives conversion into combat actor model without fake defaults', async () => {
+    it('9. Recruit test NPC spellcasting state survives conversion into combat actor model without fake defaults', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
       expect(wizardZanna.name).toContain('Zanna');
@@ -289,7 +339,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(monsterActor?.knownSpells?.length).toBeGreaterThan(0);
     });
 
-    it('9. Unsupported spell structures return explicit failure logs without fake damage', async () => {
+    it('10. Unsupported or malformed spell formulas return explicit failure logs without fake damage or resource consumption', async () => {
       const unsupportedSpellAction = {
         id: 'unsupported_spell',
         name: 'Unsupported Spell',
@@ -303,29 +353,34 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       };
 
       const result = await resolveSpellAction(
-        { name: 'Mage', id: 'mage-1', stats: { int: 16 } },
+        { name: 'Mage', id: 'mage-1', class: 'Wizard', stats: { int: 16 } },
         { name: 'Target', id: 'target-1' },
         unsupportedSpellAction,
         1
       );
 
       expect(result.success).toBe(false);
-      expect(result.logMessage).toContain('unsupported in combat resolution');
+      expect(result.logMessage).toContain('no valid damage dice formula');
       expect(result.hpChanged).toBe(0);
     });
 
-    it('10. Derive actor spellcasting stats correctly uses real character class and stats', () => {
+    it('11. Derive actor spellcasting stats uses real character class and stats, failing when unresolvable', () => {
       const clericStats = getActorSpellcastingStats({ class: 'Cleric', stats: { wis: 16 } });
-      expect(clericStats.ability).toBe('wis');
-      expect(clericStats.modifier).toBe(3);
-      expect(clericStats.saveDC).toBe(13);
+      expect(clericStats).not.toBeNull();
+      expect(clericStats?.ability).toBe('wis');
+      expect(clericStats?.modifier).toBe(3);
+      expect(clericStats?.saveDC).toBe(13);
 
       const wizardStats = getActorSpellcastingStats({ class: 'Wizard', stats: { int: 18 }, level: 5 });
-      expect(wizardStats.ability).toBe('int');
-      expect(wizardStats.modifier).toBe(4);
-      expect(wizardStats.profBonus).toBe(3);
-      expect(wizardStats.attackBonus).toBe(7);
-      expect(wizardStats.saveDC).toBe(15);
+      expect(wizardStats).not.toBeNull();
+      expect(wizardStats?.ability).toBe('int');
+      expect(wizardStats?.modifier).toBe(4);
+      expect(wizardStats?.profBonus).toBe(3);
+      expect(wizardStats?.attackBonus).toBe(7);
+      expect(wizardStats?.saveDC).toBe(15);
+
+      const unresolvableStats = getActorSpellcastingStats({ class: 'UnknownClass', stats: { int: 18, wis: 10 } });
+      expect(unresolvableStats).toBeNull(); // No highest-stat fallback!
     });
   });
 });
