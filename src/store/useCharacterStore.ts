@@ -372,7 +372,7 @@ export const useCharacterStore = create<CharacterState>((set, get) => ({
     const activeChar = state.characters.find(c => c.id === state.activeCharacterId);
     if (!activeChar) return false;
 
-    const spell = (activeChar.knownSpells || []).find(s => s.index === spellIndex);
+    const spell = (activeChar.knownSpells || []).find(s => s.index === spellIndex || s.id === spellIndex || s.name?.toLowerCase() === spellIndex?.toLowerCase());
     if (!spell) return false;
 
     if (level === 0) return true;

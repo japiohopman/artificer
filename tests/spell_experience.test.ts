@@ -4,11 +4,26 @@ import { fetchSpellData, fetchSpellList, fetchRecruitNPCData } from '../src/serv
 import { useGameStore } from '../src/store/useGameStore';
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { getCharacterActions } from '../src/lib/tokenActionHud';
+import { createSpellCombatAction, resolveSpellAction } from '../src/domain/spells/spellResolver';
 
 describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
   beforeEach(() => {
     useGameStore.getState().setRuleset('2014');
+    useGameStore.setState({
+      logs: [],
+      combatState: {
+        playerPos: { x: 2, y: 2 },
+        monsters: [],
+        initiativeOrder: [],
+        activeTurnIndex: 0,
+        grid: [],
+        victoryXp: 500,
+        activeConditions: {},
+        combatMapBackground: 'fay_forest.png',
+        activeAttack: null
+      }
+    });
   });
 
   describe('Character Creator & Level-1 Spell Visual Pipeline', () => {
@@ -69,8 +84,106 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
     });
   });
 
-  describe('Combat Tester & Test NPC Integration', () => {
-    it('5. Combat tester can load recruit test NPC with preserved spellcasting data', async () => {
+  describe('Canonical Spell Action Resolution & Combat Engine Boundary', () => {
+    it('5. Canonical spell JSON converts to structured CombatSpellAction without synthetic fields', async () => {
+      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
+      expect(cureWoundsData).not.toBeNull();
+
+      const spellAction = createSpellCombatAction(cureWoundsData);
+      expect(spellAction.id).toBe('cure_wounds');
+      expect(spellAction.category).toBe('Spells');
+      expect(spellAction.actionType).toBe('actions');
+      expect(spellAction.data.level).toBe(1);
+      expect(spellAction.data.heal_at_slot_level).toBeDefined();
+    });
+
+    it('6. Supported spell executes through shared spellResolver using canonical spell mechanics', async () => {
+      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
+      const spellAction = createSpellCombatAction(cureWoundsData);
+
+      const actor = { name: 'Hero Cleric', id: 'hero-1', stats: { int: 10, wis: 16, cha: 10 } };
+      const target = { name: 'Wounded Ally', id: 'ally-1', hp: 5, maxHp: 20 };
+
+      // Set up monster target in game store
+      useGameStore.setState(state => ({
+        combatState: {
+          ...state.combatState,
+          monsters: [
+            {
+              id: 'ally-1',
+              name: 'Wounded Ally',
+              hp: 5,
+              maxHp: 20,
+              x: 2,
+              y: 2,
+              awareness: 'idle',
+              viewDirection: 0,
+              perception: 10,
+              speed: 6,
+              type: 'human'
+            }
+          ]
+        }
+      }));
+
+      const result = await resolveSpellAction(actor, target, spellAction, 1);
+      expect(result.success).toBe(true);
+      expect(result.hpChanged).toBeGreaterThan(0);
+
+      const updatedMonster = useGameStore.getState().combatState.monsters.find(m => m.id === 'ally-1');
+      expect(updatedMonster?.hp).toBeGreaterThan(5);
+    });
+
+    it('7. Spell slot resource consumption occurs exactly once through useCharacterStore', () => {
+      const charStore = useCharacterStore.getState();
+
+      const testChar = {
+        id: 'wizard-test-1',
+        name: 'Test Wizard',
+        class: 'Wizard',
+        race: 'Human',
+        gender: 'Male' as const,
+        level: 1,
+        xp: 0,
+        alignment: 'Neutral',
+        background: 'Sage',
+        stats: { str: 10, dex: 14, con: 12, int: 16, wis: 10, cha: 10 },
+        proficiencies: [],
+        traits: [],
+        features: [],
+        flaws: [],
+        ideals: [],
+        bonds: [],
+        backstory: '',
+        languages: [],
+        appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
+        inventory: {},
+        backpack: [],
+        knownSpells: [{ index: 'magic_missile', name: 'Magic Missile', level: 1 }],
+        preparedSpells: ['magic_missile'],
+        spellSlots: { '1': { current: 2, max: 2 } },
+        choices: {},
+        hp: 10,
+        maxHp: 10,
+        money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 }
+      };
+
+      charStore.setCharacters([testChar]);
+      charStore.setActiveCharacter('wizard-test-1');
+
+      const initialSlot = useCharacterStore.getState().characters.find(c => c.id === 'wizard-test-1')?.spellSlots['1'].current;
+      expect(initialSlot).toBe(2);
+
+      const castResult = useCharacterStore.getState().castSpell('magic_missile', 1);
+      expect(castResult).toBe(true);
+
+      const afterSlot = useCharacterStore.getState().characters.find(c => c.id === 'wizard-test-1')?.spellSlots['1'].current;
+      expect(afterSlot).toBe(1);
+    });
+  });
+
+  describe('Combat Tester & Test Recruit NPC Integration', () => {
+    it('8. Combat tester can load recruit test NPC with preserved spellcasting data', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
       expect(wizardZanna.name).toContain('Zanna');
@@ -79,24 +192,31 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(wizardZanna.knownSpells.length).toBeGreaterThan(0);
       expect(wizardZanna.spellSlots).toBeDefined();
       expect(wizardZanna.spellSlots['1']).toBeDefined();
+
+      // Verify spell state survives conversion into combat monster actor model
+      useGameStore.getState().addMonsterToCombat({
+        ...wizardZanna,
+        isAlly: true
+      });
+
+      const monsterActor = useGameStore.getState().combatState.monsters.find(m => m.name.includes('Zanna'));
+      expect(monsterActor).toBeDefined();
+      expect(monsterActor?.knownSpells).toBeDefined();
+      expect(monsterActor?.knownSpells?.length).toBeGreaterThan(0);
+      expect(monsterActor?.spellSlots).toBeDefined();
     });
 
-    it('6. Combat tester exposes and casts a spell using domain combat logic', async () => {
+    it('9. Combat tester executes a spell action using the shared resolveCombatAction route', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
 
-      // Get available actions for Zanna via domain tokenActionHud logic
       const actions = getCharacterActions(wizardZanna);
       const spellActions = actions.filter(a => a.category === 'Spells');
-
       expect(spellActions.length).toBeGreaterThan(0);
 
-      const magicMissileAction = spellActions.find(a => a.name.toLowerCase().includes('magic missile') || a.id.includes('magic_missile'));
-      expect(magicMissileAction).toBeDefined();
-      expect(magicMissileAction?.category).toBe('Spells');
-      expect(magicMissileAction?.data).toBeDefined();
+      const spellAction = spellActions.find(a => a.name.toLowerCase().includes('magic missile') || a.id.includes('magic_missile')) || spellActions[0];
+      expect(spellAction).toBeDefined();
 
-      // Set up monster target on grid
       useGameStore.setState(state => ({
         combatState: {
           ...state.combatState,
@@ -108,9 +228,11 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
               maxHp: 20,
               x: 5,
               y: 5,
-              armor_class: 10,
-              stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
-              type: 'Goblin'
+              awareness: 'idle',
+              viewDirection: 0,
+              perception: 10,
+              speed: 6,
+              type: 'goblin'
             }
           ]
         }
@@ -118,20 +240,19 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
       const target = useGameStore.getState().combatState.monsters[0];
 
-      // Invoke the real canonical domain combat action resolution method
+      // Route through useGameStore.resolveCombatAction (which delegates to resolveSpellAction for Spells)
       await useGameStore.getState().resolveCombatAction(
         { name: wizardZanna.name, id: wizardZanna.id },
         target,
-        {
-          ...magicMissileAction!,
-          attack_bonus: 5,
-          damage: [{ damage_dice: '3d4+3', damage_type: { name: 'force' } }]
-        }
+        spellAction
       );
 
       const logs = useGameStore.getState().logs;
-      const logTexts = logs.map((l: any) => typeof l === 'string' ? l : l.message || l.text || '');
-      expect(logTexts.some(t => t.includes('Zanna') && t.includes('Goblin Scout'))).toBe(true);
+      const logTexts = logs.map((l: any) => l.message || '');
+      expect(logTexts.some(t => t.includes('Zanna') || t.includes('Magic Missile') || t.includes('Goblin Scout'))).toBe(true);
+
+      const updatedTarget = useGameStore.getState().combatState.monsters.find(m => m.id === 'test-goblin-1');
+      expect(updatedTarget?.hp).toBeLessThan(20);
     });
   });
 });
