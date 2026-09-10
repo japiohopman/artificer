@@ -40,7 +40,7 @@ jobs:
           body="${PR_BODY:-}"
           commit_msg=""
           if command -v git &>/dev/null && git rev-parse --is-inside-work-tree &>/dev/null; then
-            commit_msg="$(git log -1 --pretty=%B 2>/dev/null || true)"
+            commit_msg="$(git log -1 HEAD^2 --pretty=%B 2>/dev/null || git log -1 --pretty=%B 2>/dev/null || true)"
           fi
 
           full_content="${body}"$'\n'"${commit_msg}"
