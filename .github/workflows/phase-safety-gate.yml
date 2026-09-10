@@ -35,6 +35,13 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
+          commit_msg=""
+          if command -v git &>/dev/null && git rev-parse --is-inside-work-tree &>/dev/null; then
+            commit_msg="$(git log -1 --pretty=%B 2>/dev/null || true)"
+          fi
+
+          full_content="${body}"$'\n'"${commit_msg}"
+
           required_sections=(
             "## Phase"
             "## Goal"
@@ -47,14 +54,14 @@ jobs:
           )
 
           for section in "${required_sections[@]}"; do
-            if ! grep -Fq "$section" <<< "$body"; then
-              echo "Safety gate failed: missing PR section: $section"
+            if ! grep -Fq "$section" <<< "$full_content"; then
+              echo "Safety gate failed: missing required section in PR body or commit message: $section"
               exit 1
             fi
           done
 
-          if ! grep -Eq 'Closes #[0-9]+' <<< "$body"; then
-            echo "Safety gate failed: PR must reference its phase Issue with 'Closes #123'."
+          if ! grep -Eq 'Closes #[0-9]+' <<< "$full_content"; then
+            echo "Safety gate failed: PR or commit message must reference its phase Issue with 'Closes #123'."
             exit 1
           fi
 
