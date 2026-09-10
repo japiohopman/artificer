@@ -1,5 +1,6 @@
 import { Character } from '../store/useCharacterStore';
 import { GameIconName } from '../game_icons';
+import { createSpellCombatAction } from '../domain/spells/spellResolver';
 
 export interface ActionHudAction {
   id: string;
@@ -63,24 +64,23 @@ export const getCharacterActions = (character: Character | null): ActionHudActio
     });
   }
 
-  // 3. Spells
+  // 3. Spells (Delegated to canonical createSpellCombatAction)
   if (character.knownSpells) {
     character.knownSpells.forEach(spell => {
+      const spellCombatAction = createSpellCombatAction(spell);
       const isAoe = spell.area_of_effect !== undefined;
-      const isBonus = spell.casting_time?.toLowerCase().includes('bonus action');
-      const isReaction = spell.casting_time?.toLowerCase().includes('reaction');
       
       actions.push({
-        id: `spell-${spell.index}`,
-        name: spell.name,
+        id: `spell-${spellCombatAction.id}`,
+        name: spellCombatAction.name,
         icon: 'magic_effect',
         color: 'bg-purple-600',
-        description: Array.isArray(spell.desc) ? spell.desc[0] : (spell.desc || 'Cast a spell.'),
+        description: spellCombatAction.description || 'Cast a spell.',
         range: spell.range === 'Self' ? 0 : 12,
         targetType: isAoe ? 'sphere' : 'single',
-        radius: isAoe ? 2 : undefined,
+        radius: isAoe ? (spell.area_of_effect?.size || 2) : undefined,
         category: 'Spells',
-        actionType: isReaction ? 'reactions' : (isBonus ? 'bonusActions' : 'actions'),
+        actionType: spellCombatAction.actionType,
         data: spell
       });
     });

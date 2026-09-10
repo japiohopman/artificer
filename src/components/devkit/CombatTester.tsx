@@ -163,7 +163,7 @@ export const CombatTester: React.FC = () => {
           imageUrl: data.avatarUrl || data.imageUrl,
           knownSpells: data.knownSpells || [],
           preparedSpells: data.preparedSpells || [],
-          spellSlots: data.spellSlots || { "1": { current: 2, max: 2 } }
+          spellSlots: data.spellSlots || {}
         });
         addLog(`Added Ally ${data.name} to board`, 'success');
         playSuccessSound();
@@ -225,7 +225,7 @@ export const CombatTester: React.FC = () => {
           maxHp: heroData.maxHp || 10,
           knownSpells: heroData.knownSpells || [],
           preparedSpells: heroData.preparedSpells || [],
-          spellSlots: heroData.spellSlots || { "1": { current: 2, max: 2 } }
+          spellSlots: heroData.spellSlots || {}
         };
 
         setCharacters(newCharacters);
@@ -257,16 +257,8 @@ export const CombatTester: React.FC = () => {
       if (targetMonster) {
         const actorObj = { name: activeChar?.name || 'Player', id: activeChar?.id || 'player' };
 
-        // Execute through the real, single canonical domain combat execution path
+        // Execute through the real, single canonical domain combat execution path (which handles both effects & resource deduction)
         await useGameStore.getState().resolveCombatAction(actorObj, targetMonster, spellAction);
-
-        // Consume resources through domain character/action store
-        if (activeChar?.id && activeChar.name !== 'Empty Slot') {
-          useCharacterStore.getState().consumeAction(activeChar.id, spellAction.actionType);
-          if (fullSpell.level !== undefined && fullSpell.level > 0) {
-            useCharacterStore.getState().castSpell(spellAction.id, fullSpell.level);
-          }
-        }
       } else {
         addLog(`Prepared ${fullSpell.name || spell.name} for targeting. Select a target on grid in combat mode.`, 'info');
       }

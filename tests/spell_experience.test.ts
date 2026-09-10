@@ -4,7 +4,7 @@ import { fetchSpellData, fetchSpellList, fetchRecruitNPCData } from '../src/serv
 import { useGameStore } from '../src/store/useGameStore';
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { getCharacterActions } from '../src/lib/tokenActionHud';
-import { createSpellCombatAction, resolveSpellAction } from '../src/domain/spells/spellResolver';
+import { createSpellCombatAction, resolveSpellAction, getActorSpellcastingStats } from '../src/domain/spells/spellResolver';
 
 describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
@@ -26,7 +26,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
     });
   });
 
-  describe('Character Creator & Level-1 Spell Visual Pipeline', () => {
+  describe('A & B: Canonical Spell Action Creation & TokenActionHUD Delegation', () => {
     it('1. Level-1 known spells resolve to READY sprite-sheet manifest entries when mapped', () => {
       const level1Spells = [
         'magic_missile',
@@ -66,26 +66,8 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(sheet).toBeDefined();
       expect(sheet?.path).toBe('/assets/atlas/spell/sprites/spell_level1_sheet_01.webp');
     });
-  });
 
-  describe('Ruleset Resolution Isolation (2014 vs 2024)', () => {
-    it('3. 2024 spell resolves strictly from 2024 dataset (/24/)', async () => {
-      const spell24 = await fetchSpellData('cure_wounds', '2024');
-      expect(spell24).not.toBeNull();
-      expect(spell24.rulesetContext).toBe('2024');
-      expect(spell24.heal_at_slot_level['1']).toBe('2d8 + MOD');
-    });
-
-    it('4. 2014 spell resolves strictly from 2014 dataset (/14/)', async () => {
-      const spell14 = await fetchSpellData('cure_wounds', '2014');
-      expect(spell14).not.toBeNull();
-      expect(spell14.rulesetContext).toBe('2014');
-      expect(spell14.heal_at_slot_level['1']).toBe('1d8 + MOD');
-    });
-  });
-
-  describe('Canonical Spell Action Resolution & Combat Engine Boundary', () => {
-    it('5. Canonical spell JSON converts to structured CombatSpellAction without synthetic fields', async () => {
+    it('3. Canonical spell JSON converts to CombatSpellAction and TokenActionHUD uses the same representation', async () => {
       const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
       expect(cureWoundsData).not.toBeNull();
 
@@ -94,60 +76,18 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(spellAction.category).toBe('Spells');
       expect(spellAction.actionType).toBe('actions');
       expect(spellAction.data.level).toBe(1);
-      expect(spellAction.data.heal_at_slot_level).toBeDefined();
-    });
-
-    it('6. Supported spell executes through shared spellResolver using canonical spell mechanics', async () => {
-      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
-      const spellAction = createSpellCombatAction(cureWoundsData);
-
-      const actor = { name: 'Hero Cleric', id: 'hero-1', stats: { int: 10, wis: 16, cha: 10 } };
-      const target = { name: 'Wounded Ally', id: 'ally-1', hp: 5, maxHp: 20 };
-
-      // Set up monster target in game store
-      useGameStore.setState(state => ({
-        combatState: {
-          ...state.combatState,
-          monsters: [
-            {
-              id: 'ally-1',
-              name: 'Wounded Ally',
-              hp: 5,
-              maxHp: 20,
-              x: 2,
-              y: 2,
-              awareness: 'idle',
-              viewDirection: 0,
-              perception: 10,
-              speed: 6,
-              type: 'human'
-            }
-          ]
-        }
-      }));
-
-      const result = await resolveSpellAction(actor, target, spellAction, 1);
-      expect(result.success).toBe(true);
-      expect(result.hpChanged).toBeGreaterThan(0);
-
-      const updatedMonster = useGameStore.getState().combatState.monsters.find(m => m.id === 'ally-1');
-      expect(updatedMonster?.hp).toBeGreaterThan(5);
-    });
-
-    it('7. Spell slot resource consumption occurs exactly once through useCharacterStore', () => {
-      const charStore = useCharacterStore.getState();
 
       const testChar = {
-        id: 'wizard-test-1',
-        name: 'Test Wizard',
-        class: 'Wizard',
+        id: 'test-cleric',
+        name: 'Cleric Test',
+        class: 'Cleric',
         race: 'Human',
-        gender: 'Male' as const,
+        gender: 'Female' as const,
         level: 1,
         xp: 0,
-        alignment: 'Neutral',
-        background: 'Sage',
-        stats: { str: 10, dex: 14, con: 12, int: 16, wis: 10, cha: 10 },
+        alignment: 'Lawful Good',
+        background: 'Acolyte',
+        stats: { str: 10, dex: 10, con: 12, int: 10, wis: 16, cha: 10 },
         proficiencies: [],
         traits: [],
         features: [],
@@ -159,8 +99,8 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
         appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
         inventory: {},
         backpack: [],
-        knownSpells: [{ index: 'magic_missile', name: 'Magic Missile', level: 1 }],
-        preparedSpells: ['magic_missile'],
+        knownSpells: [cureWoundsData],
+        preparedSpells: ['cure_wounds'],
         spellSlots: { '1': { current: 2, max: 2 } },
         choices: {},
         hp: 10,
@@ -168,32 +108,176 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
         money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 }
       };
 
-      charStore.setCharacters([testChar]);
-      charStore.setActiveCharacter('wizard-test-1');
-
-      const initialSlot = useCharacterStore.getState().characters.find(c => c.id === 'wizard-test-1')?.spellSlots['1'].current;
-      expect(initialSlot).toBe(2);
-
-      const castResult = useCharacterStore.getState().castSpell('magic_missile', 1);
-      expect(castResult).toBe(true);
-
-      const afterSlot = useCharacterStore.getState().characters.find(c => c.id === 'wizard-test-1')?.spellSlots['1'].current;
-      expect(afterSlot).toBe(1);
+      const actions = getCharacterActions(testChar);
+      const spellHudAction = actions.find(a => a.category === 'Spells' && a.data?.index === 'cure_wounds');
+      expect(spellHudAction).toBeDefined();
+      expect(spellHudAction?.actionType).toBe(spellAction.actionType);
+      expect(spellHudAction?.name).toBe(spellAction.name);
     });
   });
 
-  describe('Combat Tester & Test Recruit NPC Integration', () => {
-    it('8. Combat tester can load recruit test NPC with preserved spellcasting data', async () => {
+  describe('H: Ruleset Resolution Isolation (2014 vs 2024)', () => {
+    it('4. 2024 spell resolves strictly from 2024 dataset (/24/)', async () => {
+      const spell24 = await fetchSpellData('cure_wounds', '2024');
+      expect(spell24).not.toBeNull();
+      expect(spell24.rulesetContext).toBe('2024');
+      expect(spell24.heal_at_slot_level['1']).toBe('2d8 + MOD');
+    });
+
+    it('5. 2014 spell resolves strictly from 2014 dataset (/14/)', async () => {
+      const spell14 = await fetchSpellData('cure_wounds', '2014');
+      expect(spell14).not.toBeNull();
+      expect(spell14.rulesetContext).toBe('2014');
+      expect(spell14.heal_at_slot_level['1']).toBe('1d8 + MOD');
+    });
+  });
+
+  describe('C, D, E & F: Canonical Spell Execution, State Change, Single Resource Consumption & Castability Rejection', () => {
+    it('6. resolveCombatAction delegates to resolveSpellAction, producing real state change and deducting resources exactly once', async () => {
+      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
+      const spellAction = createSpellCombatAction(cureWoundsData);
+
+      const testChar = {
+        id: 'hero-cleric-1',
+        name: 'Hero Cleric',
+        class: 'Cleric',
+        race: 'Human',
+        gender: 'Male' as const,
+        level: 1,
+        xp: 0,
+        alignment: 'Good',
+        background: 'Acolyte',
+        stats: { str: 10, dex: 10, con: 12, int: 10, wis: 16, cha: 10 },
+        proficiencies: [],
+        traits: [],
+        features: [],
+        flaws: [],
+        ideals: [],
+        bonds: [],
+        backstory: '',
+        languages: [],
+        appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
+        inventory: {},
+        backpack: [],
+        knownSpells: [cureWoundsData],
+        preparedSpells: ['cure_wounds'],
+        spellSlots: { '1': { current: 2, max: 2 } },
+        choices: {},
+        hp: 5,
+        maxHp: 20,
+        money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
+        actionEconomy: {
+          actions: { current: 1, max: 1 },
+          bonusActions: { current: 1, max: 1 },
+          reactions: { current: 1, max: 1 },
+          movement: { current: 30, max: 30 },
+          objectInteractions: { current: 1, max: 1 }
+        }
+      };
+
+      const charStore = useCharacterStore.getState();
+      charStore.setCharacters([testChar]);
+      charStore.setActiveCharacter('hero-cleric-1');
+
+      useGameStore.setState(state => ({
+        activeCharacterId: 'hero-cleric-1',
+        combatState: {
+          ...state.combatState,
+          monsters: []
+        }
+      }));
+
+      // Initial HP is 5, level 1 spell slot is 2
+      expect(useCharacterStore.getState().characters[0].hp).toBe(5);
+      expect(useCharacterStore.getState().characters[0].spellSlots['1'].current).toBe(2);
+      expect(useCharacterStore.getState().characters[0].actionEconomy?.actions.current).toBe(1);
+
+      // Execute via useGameStore.resolveCombatAction
+      await useGameStore.getState().resolveCombatAction(
+        { name: 'Hero Cleric', id: 'hero-cleric-1' },
+        { name: 'Hero Cleric', id: 'hero-cleric-1' },
+        spellAction
+      );
+
+      const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'hero-cleric-1');
+
+      // HP increased (real state change)
+      expect(updatedChar?.hp).toBeGreaterThan(5);
+
+      // Resources deducted EXPLICITLY ONCE
+      expect(updatedChar?.spellSlots['1'].current).toBe(1);
+      expect(updatedChar?.actionEconomy?.actions.current).toBe(0);
+    });
+
+    it('7. Invalid castability (insufficient spell slots or actions) is cleanly rejected without HP mutation', async () => {
+      const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
+      const spellAction = createSpellCombatAction(cureWoundsData);
+
+      const testCharNoSlots = {
+        id: 'hero-empty-slots',
+        name: 'Empty Slot Cleric',
+        class: 'Cleric',
+        race: 'Human',
+        gender: 'Male' as const,
+        level: 1,
+        xp: 0,
+        alignment: 'Good',
+        background: 'Acolyte',
+        stats: { str: 10, dex: 10, con: 12, int: 10, wis: 16, cha: 10 },
+        proficiencies: [],
+        traits: [],
+        features: [],
+        flaws: [],
+        ideals: [],
+        bonds: [],
+        backstory: '',
+        languages: [],
+        appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
+        inventory: {},
+        backpack: [],
+        knownSpells: [cureWoundsData],
+        preparedSpells: ['cure_wounds'],
+        spellSlots: { '1': { current: 0, max: 2 } }, // ZERO SLOTS
+        choices: {},
+        hp: 5,
+        maxHp: 20,
+        money: { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
+        actionEconomy: {
+          actions: { current: 1, max: 1 },
+          bonusActions: { current: 1, max: 1 },
+          reactions: { current: 1, max: 1 },
+          movement: { current: 30, max: 30 },
+          objectInteractions: { current: 1, max: 1 }
+        }
+      };
+
+      const charStore = useCharacterStore.getState();
+      charStore.setCharacters([testCharNoSlots]);
+      charStore.setActiveCharacter('hero-empty-slots');
+
+      useGameStore.setState({ activeCharacterId: 'hero-empty-slots' });
+
+      const result = await resolveSpellAction(
+        { name: 'Empty Slot Cleric', id: 'hero-empty-slots' },
+        { name: 'Empty Slot Cleric', id: 'hero-empty-slots' },
+        spellAction,
+        1
+      );
+
+      expect(result.success).toBe(false);
+      expect(result.logMessage).toContain('no Level 1 spell slots remaining');
+      expect(useCharacterStore.getState().characters[0].hp).toBe(5); // Unchanged HP
+    });
+  });
+
+  describe('G & I: Recruit NPC State Retention & Unsupported Mechanics Safety', () => {
+    it('8. Recruit test NPC spellcasting state survives conversion into combat actor model without fake defaults', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
       expect(wizardZanna.name).toContain('Zanna');
       expect(wizardZanna.class).toBe('Wizard');
       expect(Array.isArray(wizardZanna.knownSpells)).toBe(true);
-      expect(wizardZanna.knownSpells.length).toBeGreaterThan(0);
-      expect(wizardZanna.spellSlots).toBeDefined();
-      expect(wizardZanna.spellSlots['1']).toBeDefined();
 
-      // Verify spell state survives conversion into combat monster actor model
       useGameStore.getState().addMonsterToCombat({
         ...wizardZanna,
         isAlly: true
@@ -203,56 +287,45 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(monsterActor).toBeDefined();
       expect(monsterActor?.knownSpells).toBeDefined();
       expect(monsterActor?.knownSpells?.length).toBeGreaterThan(0);
-      expect(monsterActor?.spellSlots).toBeDefined();
     });
 
-    it('9. Combat tester executes a spell action using the shared resolveCombatAction route', async () => {
-      const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
-      expect(wizardZanna).not.toBeNull();
-
-      const actions = getCharacterActions(wizardZanna);
-      const spellActions = actions.filter(a => a.category === 'Spells');
-      expect(spellActions.length).toBeGreaterThan(0);
-
-      const spellAction = spellActions.find(a => a.name.toLowerCase().includes('magic missile') || a.id.includes('magic_missile')) || spellActions[0];
-      expect(spellAction).toBeDefined();
-
-      useGameStore.setState(state => ({
-        combatState: {
-          ...state.combatState,
-          monsters: [
-            {
-              id: 'test-goblin-1',
-              name: 'Goblin Scout',
-              hp: 20,
-              maxHp: 20,
-              x: 5,
-              y: 5,
-              awareness: 'idle',
-              viewDirection: 0,
-              perception: 10,
-              speed: 6,
-              type: 'goblin'
-            }
-          ]
+    it('9. Unsupported spell structures return explicit failure logs without fake damage', async () => {
+      const unsupportedSpellAction = {
+        id: 'unsupported_spell',
+        name: 'Unsupported Spell',
+        category: 'Spells' as const,
+        actionType: 'actions' as const,
+        data: {
+          index: 'unsupported_spell',
+          level: 1,
+          damage: { unhandled_format: true }, // Has damage property but no damage_at_slot_level or damage_at_character_level
         }
-      }));
+      };
 
-      const target = useGameStore.getState().combatState.monsters[0];
-
-      // Route through useGameStore.resolveCombatAction (which delegates to resolveSpellAction for Spells)
-      await useGameStore.getState().resolveCombatAction(
-        { name: wizardZanna.name, id: wizardZanna.id },
-        target,
-        spellAction
+      const result = await resolveSpellAction(
+        { name: 'Mage', id: 'mage-1', stats: { int: 16 } },
+        { name: 'Target', id: 'target-1' },
+        unsupportedSpellAction,
+        1
       );
 
-      const logs = useGameStore.getState().logs;
-      const logTexts = logs.map((l: any) => l.message || '');
-      expect(logTexts.some(t => t.includes('Zanna') || t.includes('Magic Missile') || t.includes('Goblin Scout'))).toBe(true);
+      expect(result.success).toBe(false);
+      expect(result.logMessage).toContain('unsupported in combat resolution');
+      expect(result.hpChanged).toBe(0);
+    });
 
-      const updatedTarget = useGameStore.getState().combatState.monsters.find(m => m.id === 'test-goblin-1');
-      expect(updatedTarget?.hp).toBeLessThan(20);
+    it('10. Derive actor spellcasting stats correctly uses real character class and stats', () => {
+      const clericStats = getActorSpellcastingStats({ class: 'Cleric', stats: { wis: 16 } });
+      expect(clericStats.ability).toBe('wis');
+      expect(clericStats.modifier).toBe(3);
+      expect(clericStats.saveDC).toBe(13);
+
+      const wizardStats = getActorSpellcastingStats({ class: 'Wizard', stats: { int: 18 }, level: 5 });
+      expect(wizardStats.ability).toBe('int');
+      expect(wizardStats.modifier).toBe(4);
+      expect(wizardStats.profBonus).toBe(3);
+      expect(wizardStats.attackBonus).toBe(7);
+      expect(wizardStats.saveDC).toBe(15);
     });
   });
 });

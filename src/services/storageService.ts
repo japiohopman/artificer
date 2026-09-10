@@ -377,9 +377,7 @@ export async function fetchRecruitNPCData(index: string): Promise<any> {
     ? migrated.preparedSpells
     : knownSpells.map(s => s.index || s.id).filter(Boolean);
 
-  const spellSlots = migrated.spellSlots && Object.keys(migrated.spellSlots).length > 0
-    ? migrated.spellSlots
-    : { "1": { current: 2, max: 2 } };
+  const spellSlots = migrated.spellSlots || {};
 
   return {
     ...migrated,

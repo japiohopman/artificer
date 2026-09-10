@@ -36,7 +36,7 @@ The current architectural priority is to keep **authoring tools separate from ru
   - 2024 Backgrounds & Origins (`14/` vs `24/` — 16/16 PHB Origin Backgrounds, 10 Origin Feats in `/feats/json/24/origin-feats/`, ability score choice model [+2/+1 or +1/+1/+1], official markdown guides in `/ui/official/backgrounds/*.md`)
   - 2024 Feats Integration — Complete (`14/` vs `24/` — complete 75-feat catalogue across 10 Origin, 10 Fighting Style, 12 Epic Boon, and 43 General feats; index_24.json catalogue; strict ruleset isolation with zero silent cross-ruleset fallbacks)
   - 2024 Spells Catalogue & Runtime Integration — Complete (`14/` vs `24/` — complete 323 canonical SRD spell catalogue in `/spell/json/24/` synchronized with `index_24.json`; strict ruleset isolation with zero silent cross-ruleset fallbacks; canonical sprite manifest resolution and pure AOE geometry)
-  - Spell Experience End-to-End Integration & Repair — Complete (`SpellsStep` ruleset-aware `SpellSprite` integration; level-1 sprite-sheet manifest crops verified; `CombatTester` and `TokenActionHUD` recruit test NPC spellcasting data preservation; Arcana/Spells testing matrix and targeting execution)
+  - Spell Experience End-to-End Integration & Repair — Complete (`SpellsStep` ruleset-aware `SpellSprite` integration; level-1 sprite-sheet manifest crops verified; canonical `createSpellCombatAction` and `resolveSpellAction` domain spell boundary in `src/domain/spells/spellResolver.ts`; `TokenActionHUD`, `CombatGrid`, and `CombatTester` unified under shared domain spell resolution and single-source resource consumption)
   - Next active dependency: remaining rules-sensitive domains
   - Feats (`14/` vs `24/`)
   - Class Levels (`14/` vs `24/`)

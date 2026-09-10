@@ -23,6 +23,7 @@ export interface CombatSpellAction {
       dc_success?: string;
     };
     spell_attack?: boolean;
+    casting_time?: string;
   };
 }
 
@@ -43,7 +44,7 @@ export interface SpellExecutionResult {
 export function createSpellCombatAction(spell: any): CombatSpellAction {
   const index = spell.index || spell.id || 'unknown_spell';
   const name = spell.name || 'Spell';
-  const level = spell.level !== undefined ? Number(spell.level) : 1;
+  const level = spell.level !== undefined ? Number(spell.level) : 0;
   const castingTime = (spell.casting_time || '').toLowerCase();
 
   let actionType: 'actions' | 'bonusActions' | 'reactions' = 'actions';
@@ -53,7 +54,6 @@ export function createSpellCombatAction(spell: any): CombatSpellAction {
     actionType = 'reactions';
   }
 
-  // Determine if this spell requires an attack roll
   const descText = Array.isArray(spell.desc) ? spell.desc.join(' ') : (spell.desc || '');
   const isAttackRoll = descText.toLowerCase().includes('ranged spell attack') || descText.toLowerCase().includes('melee spell attack');
 
@@ -71,14 +71,56 @@ export function createSpellCombatAction(spell: any): CombatSpellAction {
       damage: spell.damage,
       heal_at_slot_level: spell.heal_at_slot_level,
       dc: spell.dc,
-      spell_attack: isAttackRoll
+      spell_attack: isAttackRoll,
+      casting_time: spell.casting_time
     }
   };
 }
 
 /**
- * Executes a spell action using canonical spell mechanics.
- * Shared between runtime combat and devkit CombatTester.
+ * Helper to derive real spellcasting stats (modifier, attack bonus, save DC)
+ * from the actor's actual stats and class metadata.
+ */
+export function getActorSpellcastingStats(actor: any): {
+  ability: 'int' | 'wis' | 'cha';
+  modifier: number;
+  profBonus: number;
+  attackBonus: number;
+  saveDC: number;
+} {
+  let ability: 'int' | 'wis' | 'cha' = 'int';
+
+  if (actor.spellcastingAbility && ['int', 'wis', 'cha'].includes(actor.spellcastingAbility.toLowerCase())) {
+    ability = actor.spellcastingAbility.toLowerCase() as 'int' | 'wis' | 'cha';
+  } else if (actor.class) {
+    const cls = actor.class.toLowerCase();
+    if (['cleric', 'druid', 'ranger'].includes(cls)) ability = 'wis';
+    else if (['sorcerer', 'warlock', 'bard', 'paladin'].includes(cls)) ability = 'cha';
+    else ability = 'int';
+  } else if (actor.stats) {
+    const intVal = actor.stats.int || 10;
+    const wisVal = actor.stats.wis || 10;
+    const chaVal = actor.stats.cha || 10;
+    if (wisVal >= intVal && wisVal >= chaVal) ability = 'wis';
+    else if (chaVal >= intVal && chaVal >= wisVal) ability = 'cha';
+    else ability = 'int';
+  }
+
+  const statScore = actor.stats?.[ability] || 10;
+  const modifier = Math.floor((statScore - 10) / 2);
+
+  const actorLevel = actor.level || 1;
+  const profBonus = actor.profBonus || (1 + Math.ceil(actorLevel / 4));
+
+  const attackBonus = modifier + profBonus;
+  const saveDC = 8 + profBonus + modifier;
+
+  return { ability, modifier, profBonus, attackBonus, saveDC };
+}
+
+/**
+ * Validates castability and executes spell resolution atomically.
+ * Single source of truth for spell execution and resource deduction.
  */
 export async function resolveSpellAction(
   actor: any,
@@ -90,38 +132,69 @@ export async function resolveSpellAction(
   const charStore = useCharacterStore.getState();
 
   const spellData = spellAction.data;
-  const levelToUse = castLevel || spellData.level || 1;
+  const levelToUse = castLevel !== undefined ? castLevel : (spellData.level || 0);
   const actorName = actor.name || 'Caster';
-  const targetName = target.name || 'Target';
+  const targetName = target?.name || 'Target';
 
-  // Determine spellcasting ability / modifier / attack bonus / DC
-  let spellModifier = 3;
-  let spellAttackBonus = 5;
-  let spellSaveDC = 13;
+  // 1. CASTABILITY VALIDATION & RESOURCE DEDUCTION
+  const isPC = charStore.characters.some(c => c.id === actor.id) || actor.id === 'player';
+  const realActorChar = isPC ? charStore.characters.find(c => c.id === (actor.id === 'player' ? gameStore.activeCharacterId : actor.id)) : null;
 
-  if (actor.stats) {
-    const intMod = Math.floor(((actor.stats.int || 10) - 10) / 2);
-    const wisMod = Math.floor(((actor.stats.wis || 10) - 10) / 2);
-    const chaMod = Math.floor(((actor.stats.cha || 10) - 10) / 2);
-    spellModifier = Math.max(intMod, wisMod, chaMod, 1);
-    const profBonus = 2; // Default level 1-4 prof bonus
-    spellAttackBonus = spellModifier + profBonus;
-    spellSaveDC = 8 + profBonus + spellModifier;
+  if (isPC && realActorChar) {
+    // Check Action Economy
+    if (realActorChar.actionEconomy) {
+      const currentActions = realActorChar.actionEconomy[spellAction.actionType]?.current ?? 1;
+      if (currentActions <= 0) {
+        const msg = `${actorName} has no ${spellAction.actionType} remaining this turn.`;
+        gameStore.addLog(msg, 'error');
+        return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
+      }
+    }
+
+    // Check Spell Slot (for non-cantrips)
+    if (levelToUse > 0) {
+      const slots = realActorChar.spellSlots?.[String(levelToUse)];
+      if (!slots || slots.current <= 0) {
+        const msg = `${actorName} has no Level ${levelToUse} spell slots remaining.`;
+        gameStore.addLog(msg, 'error');
+        return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
+      }
+    }
+
+    // Deduct Action & Spell Slot atomically
+    charStore.consumeAction(realActorChar.id, spellAction.actionType);
+    if (levelToUse > 0) {
+      charStore.castSpell(spellAction.id, levelToUse);
+    }
+  } else if (!isPC && actor.spellSlots && levelToUse > 0) {
+    // Monster / NPC spell slot deduction
+    const monsterSlots = actor.spellSlots[String(levelToUse)];
+    if (monsterSlots && monsterSlots.current > 0) {
+      monsterSlots.current -= 1;
+    }
   }
 
-  // 1. HEALING SPELLS (e.g. Cure Wounds)
+  // 2. DERIVE ACTOR SPELLCASTING STATS
+  const spellStats = getActorSpellcastingStats(realActorChar || actor);
+
+  // 3. HEALING SPELLS
   if (spellData.heal_at_slot_level) {
-    const healFormula = spellData.heal_at_slot_level[String(levelToUse)] || spellData.heal_at_slot_level['1'] || '1d8 + MOD';
+    const healFormula = spellData.heal_at_slot_level[String(levelToUse)] || spellData.heal_at_slot_level['1'];
+    if (!healFormula) {
+      const msg = `${spellAction.name} has no valid healing formula for Level ${levelToUse}.`;
+      gameStore.addLog(msg, 'error');
+      return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
+    }
+
     const dicePart = healFormula.replace('+ MOD', '').trim();
     const roll = diceService.rollBackground(dicePart, `Healing (${spellAction.name})`);
-    const totalHeal = roll.total + spellModifier;
+    const totalHeal = roll.total + spellStats.modifier;
 
-    // Apply healing to target
-    const isPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
-    if (isPC) {
+    const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
+    if (isTargetPC) {
       const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
       charStore.modifyHp(targetId, totalHeal);
-    } else {
+    } else if (target) {
       const newHp = Math.min((target.maxHp || target.hp + totalHeal), target.hp + totalHeal);
       gameStore.updateMonsterHp(target.id, newHp);
     }
@@ -140,40 +213,43 @@ export async function resolveSpellAction(
     };
   }
 
-  // 2. SPELL ATTACK ROLLS (e.g. Guiding Bolt, Witch Bolt, Fire Bolt)
+  // 4. SPELL ATTACK ROLLS
   if (spellData.spell_attack) {
     const d20Roll = diceService.rollBackground('1d20', `Spell Attack (${spellAction.name})`);
-    const totalToHit = d20Roll.total + spellAttackBonus;
+    const totalToHit = d20Roll.total + spellStats.attackBonus;
 
-    // Resolve Target AC
     let targetAC = 10;
-    if (target.armor_class !== undefined) {
+    if (target) {
       if (typeof target.armor_class === 'number') targetAC = target.armor_class;
       else if (Array.isArray(target.armor_class)) targetAC = target.armor_class[0]?.value || 10;
       else if (target.armor_class?.base) targetAC = target.armor_class.base;
-    } else if (target.stats?.dex) {
-      targetAC = 10 + Math.floor((target.stats.dex - 10) / 2);
+      else if (target.stats?.dex) targetAC = 10 + Math.floor((target.stats.dex - 10) / 2);
     }
 
     const isHit = totalToHit >= targetAC || d20Roll.total === 20;
 
     if (isHit) {
-      let damageDice = '1d10';
+      let damageDice: string | null = null;
       if (spellData.damage?.damage_at_slot_level) {
-        damageDice = spellData.damage.damage_at_slot_level[String(levelToUse)] || spellData.damage.damage_at_slot_level['1'] || '1d10';
+        damageDice = spellData.damage.damage_at_slot_level[String(levelToUse)] || spellData.damage.damage_at_slot_level['1'];
       } else if (spellData.damage?.damage_at_character_level) {
-        damageDice = spellData.damage.damage_at_character_level['1'] || '1d10';
+        damageDice = spellData.damage.damage_at_character_level['1'];
+      }
+
+      if (!damageDice) {
+        const msg = `${spellAction.name} has no valid damage dice formula.`;
+        gameStore.addLog(msg, 'error');
+        return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
       }
 
       const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
       const damageTotal = dmgRoll.total;
 
-      // Apply damage to target
-      const isPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
-      if (isPC) {
+      const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
+      if (isTargetPC) {
         const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
         charStore.modifyHp(targetId, -damageTotal);
-      } else {
+      } else if (target) {
         const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
         const newHp = Math.max(0, currentHp - damageTotal);
         gameStore.updateMonsterHp(target.id, newHp);
@@ -213,46 +289,49 @@ export async function resolveSpellAction(
     }
   }
 
-  // 3. SAVING THROW SPELLS (e.g. Burning Hands)
+  // 5. SAVING THROW SPELLS
   if (spellData.dc) {
     const dcType = spellData.dc.dc_type?.index || 'dex';
     let targetSaveMod = 0;
-    if (target.stats && target.stats[dcType]) {
+    if (target?.stats && target.stats[dcType]) {
       targetSaveMod = Math.floor((target.stats[dcType] - 10) / 2);
     }
 
     const saveRoll = diceService.rollBackground('1d20', `Saving Throw vs ${spellAction.name}`);
     const totalSave = saveRoll.total + targetSaveMod;
-    const passedSave = totalSave >= spellSaveDC;
+    const passedSave = totalSave >= spellStats.saveDC;
 
-    let damageDice = '3d6';
+    let damageDice: string | null = null;
     if (spellData.damage?.damage_at_slot_level) {
-      damageDice = spellData.damage.damage_at_slot_level[String(levelToUse)] || spellData.damage.damage_at_slot_level['1'] || '3d6';
+      damageDice = spellData.damage.damage_at_slot_level[String(levelToUse)] || spellData.damage.damage_at_slot_level['1'];
     }
 
-    const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
-    let finalDamage = dmgRoll.total;
-    if (passedSave) {
-      finalDamage = spellData.dc.dc_success === 'half' ? Math.floor(finalDamage / 2) : 0;
-    }
+    let finalDamage = 0;
+    if (damageDice) {
+      const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+      finalDamage = dmgRoll.total;
+      if (passedSave) {
+        finalDamage = spellData.dc.dc_success === 'half' ? Math.floor(finalDamage / 2) : 0;
+      }
 
-    if (finalDamage > 0) {
-      const isPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
-      if (isPC) {
-        const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
-        charStore.modifyHp(targetId, -finalDamage);
-      } else {
-        const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
-        const newHp = Math.max(0, currentHp - finalDamage);
-        gameStore.updateMonsterHp(target.id, newHp);
-        if (newHp <= 0) {
-          gameStore.addLog(`${targetName} has been defeated!`, 'success');
-          setTimeout(() => gameStore.removeMonsterFromCombat(target.id), 500);
+      if (finalDamage > 0 && target) {
+        const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
+        if (isTargetPC) {
+          const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
+          charStore.modifyHp(targetId, -finalDamage);
+        } else {
+          const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
+          const newHp = Math.max(0, currentHp - finalDamage);
+          gameStore.updateMonsterHp(target.id, newHp);
+          if (newHp <= 0) {
+            gameStore.addLog(`${targetName} has been defeated!`, 'success');
+            setTimeout(() => gameStore.removeMonsterFromCombat(target.id), 500);
+          }
         }
       }
     }
 
-    const logMessage = `${actorName} casts ${spellAction.name} on ${targetName}. ${targetName} ${passedSave ? 'SAVED' : 'FAILED SAVE'} (${totalSave} vs DC ${spellSaveDC}), taking ${finalDamage} damage.`;
+    const logMessage = `${actorName} casts ${spellAction.name} on ${targetName}. ${targetName} ${passedSave ? 'SAVED' : 'FAILED SAVE'} (${totalSave} vs DC ${spellStats.saveDC}), taking ${finalDamage} damage.`;
     gameStore.addLog(logMessage, passedSave ? 'info' : 'error');
 
     return {
@@ -267,32 +346,54 @@ export async function resolveSpellAction(
     };
   }
 
-  // 4. AUTO-HIT DAMAGE SPELLS (e.g. Magic Missile)
-  if (spellAction.id === 'magic_missile' || spellAction.name.toLowerCase().includes('magic missile')) {
-    // Magic Missile 1st level = 3 darts, 1d4+1 each
-    const numDarts = 3 + Math.max(0, levelToUse - 1);
-    let totalDmg = 0;
-    for (let i = 0; i < numDarts; i++) {
-      const dartRoll = diceService.rollBackground('1d4+1', `Magic Missile Dart ${i + 1}`);
-      totalDmg += dartRoll.total;
+  // 6. AUTO-HIT DAMAGE SPELLS (Data-driven: damage present without attack roll or save DC)
+  if (spellData.damage && !spellData.spell_attack && !spellData.dc) {
+    let damageDice: string | null = null;
+    if (spellData.damage.damage_at_slot_level) {
+      damageDice = spellData.damage.damage_at_slot_level[String(levelToUse)] || spellData.damage.damage_at_slot_level['1'];
+    } else if (spellData.damage.damage_at_character_level) {
+      damageDice = spellData.damage.damage_at_character_level['1'];
     }
 
-    const isPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
-    if (isPC) {
-      const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
-      charStore.modifyHp(targetId, -totalDmg);
-    } else {
-      const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
-      const newHp = Math.max(0, currentHp - totalDmg);
-      gameStore.updateMonsterHp(target.id, newHp);
-      if (newHp <= 0) {
-        gameStore.addLog(`${targetName} has been defeated!`, 'success');
-        setTimeout(() => gameStore.removeMonsterFromCombat(target.id), 500);
+    if (damageDice) {
+      const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
+      const damageTotal = dmgRoll.total;
+
+      if (target) {
+        const isTargetPC = charStore.characters.some(c => c.id === target.id) || target.id === 'player';
+        if (isTargetPC) {
+          const targetId = target.id === 'player' ? gameStore.activeCharacterId : target.id;
+          charStore.modifyHp(targetId, -damageTotal);
+        } else {
+          const currentHp = target.hp !== undefined ? target.hp : target.hit_points;
+          const newHp = Math.max(0, currentHp - damageTotal);
+          gameStore.updateMonsterHp(target.id, newHp);
+          if (newHp <= 0) {
+            gameStore.addLog(`${targetName} has been defeated!`, 'success');
+            setTimeout(() => gameStore.removeMonsterFromCombat(target.id), 500);
+          }
+        }
       }
-    }
 
-    const logMessage = `${actorName} casts Magic Missile at ${targetName}! ${numDarts} darts strike for ${totalDmg} force damage (Auto-hit).`;
-    gameStore.addLog(logMessage, 'success');
+      const logMessage = `${actorName} casts ${spellAction.name} at ${targetName}! Strikes for ${damageTotal} damage (Auto-hit).`;
+      gameStore.addLog(logMessage, 'success');
+
+      return {
+        success: true,
+        actionName: spellAction.name,
+        actorName,
+        targetName,
+        logMessage,
+        hpChanged: -damageTotal,
+        hitOrSaved: 'auto'
+      };
+    }
+  }
+
+  // 7. UTILITY / SELF SPELLS
+  if (!spellData.damage && !spellData.heal_at_slot_level) {
+    const logMessage = `${actorName} casts ${spellAction.name}!`;
+    gameStore.addLog(logMessage, 'info');
 
     return {
       success: true,
@@ -300,22 +401,20 @@ export async function resolveSpellAction(
       actorName,
       targetName,
       logMessage,
-      hpChanged: -totalDmg,
+      hpChanged: 0,
       hitOrSaved: 'auto'
     };
   }
 
-  // 5. UTILITY / SELF / REACTION SPELLS (e.g. Shield)
-  const logMessage = `${actorName} casts ${spellAction.name}!`;
-  gameStore.addLog(logMessage, 'info');
-
+  // 8. UNSUPPORTED SPELL MECHANICS (Explicit error logging)
+  const unsuppMsg = `Spell ${spellAction.name} mechanic is currently unsupported in combat resolution.`;
+  gameStore.addLog(unsuppMsg, 'error');
   return {
-    success: true,
+    success: false,
     actionName: spellAction.name,
     actorName,
     targetName,
-    logMessage,
-    hpChanged: 0,
-    hitOrSaved: 'auto'
+    logMessage: unsuppMsg,
+    hpChanged: 0
   };
 }
