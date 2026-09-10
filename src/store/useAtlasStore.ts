@@ -168,7 +168,7 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
       } else if (tab === 'spells') {
         const { fetchSpellList, fetchMagicSchools } = await import('../services/storageService');
         const [list, schools] = await Promise.all([
-          fetchSpellList(),
+          fetchSpellList(useGameStore.getState().ruleset),
           fetchMagicSchools()
         ]);
         
@@ -374,7 +374,7 @@ export const useAtlasStore = create<AtlasState>((set, get) => ({
         data = mockBooks[index];
       } else if (tab === 'spells') {
         const { fetchSpellData } = await import('../services/storageService');
-        data = await fetchSpellData(index);
+        data = await fetchSpellData(index, useGameStore.getState().ruleset);
       } else if (tab === 'transport') {
         data = await fetchTransportData(index);
       } else if (tab === 'gods') {

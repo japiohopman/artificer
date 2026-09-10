@@ -12,14 +12,6 @@ export const SPELL_SPRITE_SHEET_GRID = { rows: 4, cols: 4 };
  * Registry of declared spell sprite sheets.
  */
 export const SPELL_SPRITE_SHEETS: Record<string, SpellSpriteSheetDefinition> = {
-  cantrips_01: {
-    id: 'cantrips_01',
-    path: '/assets/atlas/spell/sprites/cantrips_01.webp',
-    grid: SPELL_SPRITE_SHEET_GRID,
-    aspectRatio: '1:1',
-    level: 0,
-    description: 'Cantrips & Evocation/Utility Orbs'
-  },
   cantrips_sheet_01: {
     id: 'cantrips_sheet_01',
     path: '/assets/atlas/spell/sprites/cantrips_sheet_01.webp',
@@ -36,13 +28,37 @@ export const SPELL_SPRITE_SHEETS: Record<string, SpellSpriteSheetDefinition> = {
     level: 0,
     description: 'Primary Cantrips Spritesheet 02'
   },
-  spells_level1_01: {
-    id: 'spells_level1_01',
-    path: '/assets/atlas/spell/sprites/spells_level1_01.webp',
+  spell_level1_sheet_01: {
+    id: 'spell_level1_sheet_01',
+    path: '/assets/atlas/spell/sprites/spell_level1_sheet_01.webp',
     grid: SPELL_SPRITE_SHEET_GRID,
     aspectRatio: '1:1',
     level: 1,
-    description: '1st-Level Standard Combat Spells'
+    description: '1st-Level Spells Sheet 01'
+  },
+  spell_level1_sheet_02: {
+    id: 'spell_level1_sheet_02',
+    path: '/assets/atlas/spell/sprites/spell_level1_sheet_02.webp',
+    grid: SPELL_SPRITE_SHEET_GRID,
+    aspectRatio: '1:1',
+    level: 1,
+    description: '1st-Level Spells Sheet 02'
+  },
+  spell_level1_sheet_03: {
+    id: 'spell_level1_sheet_03',
+    path: '/assets/atlas/spell/sprites/spell_level1_sheet_03.webp',
+    grid: SPELL_SPRITE_SHEET_GRID,
+    aspectRatio: '1:1',
+    level: 1,
+    description: '1st-Level Spells Sheet 03'
+  },
+  spell_level1_sheet_04: {
+    id: 'spell_level1_sheet_04',
+    path: '/assets/atlas/spell/sprites/spell_level1_sheet_04.webp',
+    grid: SPELL_SPRITE_SHEET_GRID,
+    aspectRatio: '1:1',
+    level: 1,
+    description: '1st-Level Spells Sheet 04'
   },
   spells_level1_sheet_01: {
     id: 'spells_level1_sheet_01',
@@ -50,7 +66,7 @@ export const SPELL_SPRITE_SHEETS: Record<string, SpellSpriteSheetDefinition> = {
     grid: SPELL_SPRITE_SHEET_GRID,
     aspectRatio: '1:1',
     level: 1,
-    description: '1st-Level Spells Sheet 01'
+    description: '1st-Level Spells Sheet 01 (Legacy)'
   },
   spells_level1_sheet_02: {
     id: 'spells_level1_sheet_02',
@@ -113,23 +129,23 @@ export const SPELL_SPRITE_MANIFEST: Record<string, SpellSpriteCellMapping> = {
   'spell.true_strike': { visualId: 'spell.true_strike', level: 0, status: 'READY', sheetId: 'cantrips_sheet_02', row: 1, col: 3, school: 'divination' },
   'spell.vicious_mockery': { visualId: 'spell.vicious_mockery', level: 0, status: 'READY', sheetId: 'cantrips_sheet_02', row: 2, col: 0, school: 'enchantment' },
 
-  // --- LEVEL 1 SPELLS SHEET 01 (PRIMARY COMBAT SHEET: spells_level1_01) ---
-  'spell.magic_missile': { visualId: 'spell.magic_missile', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 0, col: 0, school: 'evocation' },
-  'spell.burning_hands': { visualId: 'spell.burning_hands', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 0, col: 1, school: 'evocation' },
-  'spell.thunderwave': { visualId: 'spell.thunderwave', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 0, col: 2, school: 'evocation' },
-  'spell.chromatic_orb': { visualId: 'spell.chromatic_orb', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 0, col: 3, school: 'evocation' },
-  'spell.cure_wounds': { visualId: 'spell.cure_wounds', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 1, col: 0, school: 'evocation' },
-  'spell.healing_word': { visualId: 'spell.healing_word', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 1, col: 1, school: 'evocation' },
-  'spell.bless': { visualId: 'spell.bless', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 1, col: 2, school: 'enchantment' },
-  'spell.bane': { visualId: 'spell.bane', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 1, col: 3, school: 'enchantment' },
-  'spell.shield': { visualId: 'spell.shield', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 2, col: 0, school: 'abjuration' },
-  'spell.absorb_elements': { visualId: 'spell.absorb_elements', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 2, col: 1, school: 'abjuration' },
-  'spell.fog_cloud': { visualId: 'spell.fog_cloud', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 2, col: 2, school: 'conjuration' },
-  'spell.grease': { visualId: 'spell.grease', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 2, col: 3, school: 'conjuration' },
-  'spell.guiding_bolt': { visualId: 'spell.guiding_bolt', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 3, col: 0, school: 'evocation' },
-  'spell.inflict_wounds': { visualId: 'spell.inflict_wounds', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 3, col: 1, school: 'necromancy' },
-  'spell.witch_bolt': { visualId: 'spell.witch_bolt', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 3, col: 2, school: 'evocation' },
-  'spell.hellish_rebuke': { visualId: 'spell.hellish_rebuke', level: 1, status: 'READY', sheetId: 'spells_level1_01', row: 3, col: 3, school: 'evocation' },
+  // --- LEVEL 1 SPELLS SHEET 01 ---
+  'spell.magic_missile': { visualId: 'spell.magic_missile', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 0, col: 0, school: 'evocation' },
+  'spell.burning_hands': { visualId: 'spell.burning_hands', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 0, col: 1, school: 'evocation' },
+  'spell.thunderwave': { visualId: 'spell.thunderwave', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 0, col: 2, school: 'evocation' },
+  'spell.chromatic_orb': { visualId: 'spell.chromatic_orb', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 0, col: 3, school: 'evocation' },
+  'spell.cure_wounds': { visualId: 'spell.cure_wounds', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 1, col: 0, school: 'evocation' },
+  'spell.healing_word': { visualId: 'spell.healing_word', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 1, col: 1, school: 'evocation' },
+  'spell.bless': { visualId: 'spell.bless', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 1, col: 2, school: 'enchantment' },
+  'spell.bane': { visualId: 'spell.bane', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 1, col: 3, school: 'enchantment' },
+  'spell.shield': { visualId: 'spell.shield', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 2, col: 0, school: 'abjuration' },
+  'spell.absorb_elements': { visualId: 'spell.absorb_elements', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 2, col: 1, school: 'abjuration' },
+  'spell.fog_cloud': { visualId: 'spell.fog_cloud', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 2, col: 2, school: 'conjuration' },
+  'spell.grease': { visualId: 'spell.grease', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 2, col: 3, school: 'conjuration' },
+  'spell.guiding_bolt': { visualId: 'spell.guiding_bolt', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 3, col: 0, school: 'evocation' },
+  'spell.inflict_wounds': { visualId: 'spell.inflict_wounds', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 3, col: 1, school: 'necromancy' },
+  'spell.witch_bolt': { visualId: 'spell.witch_bolt', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 3, col: 2, school: 'evocation' },
+  'spell.hellish_rebuke': { visualId: 'spell.hellish_rebuke', level: 1, status: 'READY', sheetId: 'spell_level1_sheet_01', row: 3, col: 3, school: 'evocation' },
 
   // --- LEVEL 1 SPELLS ADDITIONAL SHEETS ---
   'spell.alarm': { visualId: 'spell.alarm', level: 1, status: 'READY', sheetId: 'spells_level1_sheet_01', row: 0, col: 1, school: 'abjuration' },

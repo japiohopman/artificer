@@ -55,5 +55,17 @@
   "image": "/assets/atlas/spell/wiki_image/wiki_image/images/true_strike.webp",
   "sprite_index": 0,
   "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    },
+    "damage_at_character_level": {
+      "5": "1d6",
+      "11": "2d6",
+      "17": "3d6"
+    }
+  }
 }

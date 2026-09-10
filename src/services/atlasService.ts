@@ -365,12 +365,7 @@ class AtlasService {
 
   async loadSpell(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
     const { fetchSpellData } = await import('./storageService');
-    const data = await fetchSpellData(index, ruleset);
-    if (data) return data;
-
-    return this.fetchAtlasData(
-      `/assets/atlas/spells/json/${index.toLowerCase().replace(/[\s-]/g, '_')}.json`
-    );
+    return fetchSpellData(index, ruleset);
   }
 
   async loadEnemy(index: string, ruleset?: '2014' | '2024'): Promise<any | null> {
