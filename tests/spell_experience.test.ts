@@ -96,7 +96,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(magicMissileAction?.category).toBe('Spells');
       expect(magicMissileAction?.data).toBeDefined();
 
-      // Verify domain spell state manipulation
+      // Set up monster target on grid
       useGameStore.setState(state => ({
         combatState: {
           ...state.combatState,
@@ -104,9 +104,11 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
             {
               id: 'test-goblin-1',
               name: 'Goblin Scout',
-              hp: 12,
-              maxHp: 12,
-              armor_class: 12,
+              hp: 20,
+              maxHp: 20,
+              x: 5,
+              y: 5,
+              armor_class: 10,
               stats: { str: 8, dex: 14, con: 10, int: 10, wis: 8, cha: 8 },
               type: 'Goblin'
             }
@@ -114,26 +116,22 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
         }
       }));
 
-      // Simulate casting magic missile on Goblin Scout
       const target = useGameStore.getState().combatState.monsters[0];
-      const damage = 10;
 
-      useGameStore.setState(state => ({
-        combatState: {
-          ...state.combatState,
-          monsters: state.combatState.monsters.map(m =>
-            m.id === target.id ? { ...m, hp: Math.max(0, m.hp - damage) } : m
-          )
+      // Invoke the real canonical domain combat action resolution method
+      await useGameStore.getState().resolveCombatAction(
+        { name: wizardZanna.name, id: wizardZanna.id },
+        target,
+        {
+          ...magicMissileAction!,
+          attack_bonus: 5,
+          damage: [{ damage_dice: '3d4+3', damage_type: { name: 'force' } }]
         }
-      }));
-
-      useGameStore.getState().addLog(`Zanna cast Magic Missile on Goblin Scout for ${damage} damage!`, 'success');
-
-      const updatedTarget = useGameStore.getState().combatState.monsters[0];
-      expect(updatedTarget.hp).toBe(2);
+      );
 
       const logs = useGameStore.getState().logs;
-      expect(logs.some((l: any) => (typeof l === 'string' ? l : l.message || l.text || '').includes('Zanna cast Magic Missile'))).toBe(true);
+      const logTexts = logs.map((l: any) => typeof l === 'string' ? l : l.message || l.text || '');
+      expect(logTexts.some(t => t.includes('Zanna') && t.includes('Goblin Scout'))).toBe(true);
     });
   });
 });

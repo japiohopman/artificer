@@ -247,50 +247,52 @@ export const CombatTester: React.FC = () => {
       const targetMonster = combatState.monsters.find(m => m.id === selectedSpellTarget || (m as any).index === selectedSpellTarget) || combatState.monsters[0];
       const activeChar = characters.find(c => c.name !== 'Empty Slot') || characters[0];
 
-      // Prepare targeting action in domain UI store so both real game and tester use exact domain action path
+      const isAoe = fullSpell.area_of_effect !== undefined;
+      const isBonus = fullSpell.casting_time?.toLowerCase().includes('bonus action');
+      const isReaction = fullSpell.casting_time?.toLowerCase().includes('reaction');
+
+      let damageDice = '1d8';
+      let damageType = 'force';
+      if (fullSpell.damage) {
+        if (fullSpell.damage.damage_at_slot_level) {
+          damageDice = fullSpell.damage.damage_at_slot_level['1'] || fullSpell.damage.damage_at_slot_level['0'] || '1d8';
+        } else if (fullSpell.damage.damage_at_character_level) {
+          damageDice = fullSpell.damage.damage_at_character_level['1'] || fullSpell.damage.damage_at_character_level['5'] || '1d8';
+        }
+        if (fullSpell.damage.damage_type?.name) {
+          damageType = fullSpell.damage.damage_type.name;
+        }
+      }
+
       const spellAction = {
         id: `spell-${fullSpell.index || fullSpell.name}`,
         name: fullSpell.name || spell.name,
         icon: 'magic_effect' as const,
         category: 'Spells',
         range: fullSpell.range === 'Self' ? 0 : 12,
-        actionType: 'actions' as const,
+        actionType: isReaction ? ('reactions' as const) : (isBonus ? ('bonusActions' as const) : ('actions' as const)),
+        attack_bonus: 5,
+        damage: [{ damage_dice: damageDice, damage_type: { name: damageType } }],
         data: fullSpell
       };
 
+      // Set targeting action in domain UI store so both real game and tester use exact domain action path
       useUIStore.getState().setTargetingAction(spellAction);
       useUIStore.getState().setIsTargeting(true);
 
       if (targetMonster) {
-        let rolledDmg = 10;
-        let resultMsg = "";
-        const spellName = fullSpell.name || spell.name;
+        const actorObj = { name: activeChar?.name || 'Player', id: activeChar?.id || 'player' };
 
-        if (spell.index?.includes('cure') || spell.index?.includes('heal')) {
-          const healAmt = 8;
-          useGameStore.setState(state => ({
-            combatState: {
-              ...state.combatState,
-              monsters: state.combatState.monsters.map(m =>
-                m.id === targetMonster.id ? { ...m, hp: Math.min(m.maxHp, m.hp + healAmt) } : m
-              )
-            }
-          }));
-          resultMsg = `${activeChar?.name || 'Caster'} cast ${spellName} on ${targetMonster.name}, restoring ${healAmt} HP!`;
-        } else {
-          useGameStore.setState(state => ({
-            combatState: {
-              ...state.combatState,
-              monsters: state.combatState.monsters.map(m =>
-                m.id === targetMonster.id ? { ...m, hp: Math.max(0, m.hp - rolledDmg) } : m
-              )
-            }
-          }));
-          resultMsg = `${activeChar?.name || 'Caster'} cast ${spellName} on ${targetMonster.name} for ${rolledDmg} damage!`;
+        // Execute through the real, single canonical domain combat execution path
+        await useGameStore.getState().resolveCombatAction(actorObj, targetMonster, spellAction);
+
+        // Consume resources through domain character/action store
+        if (activeChar?.id && activeChar.name !== 'Empty Slot') {
+          useCharacterStore.getState().consumeAction(activeChar.id, spellAction.actionType);
+          if (fullSpell.level !== undefined && fullSpell.level > 0) {
+            useCharacterStore.getState().castSpell(spellAction.id, fullSpell.level);
+          }
         }
-
-        addLog(resultMsg, 'success');
-        playSuccessSound();
       } else {
         addLog(`Prepared ${fullSpell.name || spell.name} for targeting. Select a target on grid in combat mode.`, 'info');
       }
