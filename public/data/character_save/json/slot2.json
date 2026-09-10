@@ -1,511 +1,80 @@
 {
-  "ruleset": "2014",
+  "ruleset": "2024",
   "level": 0,
   "xp": 0,
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 15,
-    "dex": 18,
-    "con": 7,
-    "int": 7,
-    "wis": 9,
-    "cha": 17
+    "str": 10,
+    "dex": 10,
+    "con": 11,
+    "int": 11,
+    "wis": 15,
+    "cha": 14
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Persuasion",
-    "Navigator'S Tools",
-    "light armor",
-    "simple weapons",
-    "longswords",
-    "rapiers",
-    "shortswords",
-    "hand crossbows",
-    "thieves' tools",
-    "saving throw: dex",
+    "Skill: Insight",
+    "Skill: Stealth",
+    "Thieves' Tools",
+    "daggers",
+    "darts",
+    "slings",
+    "quarterstaffs",
+    "crossbows, light",
     "saving throw: int",
-    "Saving Throw: dex",
-    "Saving Throw: int"
+    "saving throw: wis",
+    "Saving Throw: int",
+    "Saving Throw: wis"
   ],
-  "traits": [
-    {
-      "name": "darkvision",
-      "index": "darkvision",
-      "desc": "You have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You cannot discern color in darkness, only shades of gray.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "darkvision": 60
-        }
-      }
-    },
-    {
-      "name": "hellish resistance",
-      "index": "hellish_resistance",
-      "desc": "You have resistance to fire damage.",
-      "trait_specific": {
-        "passive_modifiers": {
-          "resistance": [
-            {
-              "index": "fire",
-              "name": "fire",
-              "url": "/assets/atlas/damage_types/json/fire.json"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "infernal legacy",
-      "index": "infernal_legacy",
-      "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-      "trait_specific": {
-        "spellcasting_ability": {
-          "index": "charisma",
-          "name": "charisma",
-          "url": "/assets/atlas/ability_scores/json/cha.json"
-        },
-        "spells": [
-          {
-            "spell": {
-              "index": "thaumaturgy",
-              "name": "thaumaturgy",
-              "url": "/assets/atlas/spell/json/thaumaturgy.json"
-            },
-            "usage": {
-              "type": "at will"
-            }
-          },
-          {
-            "spell": {
-              "index": "hellish_rebuke",
-              "name": "hellish rebuke",
-              "url": "/assets/atlas/spell/json/hellish_rebuke.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 3,
-            "spell_level": 2
-          },
-          {
-            "spell": {
-              "index": "darkness",
-              "name": "darkness",
-              "url": "/assets/atlas/spell/json/darkness.json"
-            },
-            "usage": {
-              "times": 1,
-              "type": "long_rest"
-            },
-            "level_required": 5
-          }
-        ]
-      }
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "rogue_expertise_1",
+      "index": "spellcasting_wizard_2024",
+      "name": "Spellcasting: Wizard",
       "class": {
-        "index": "rogue",
-        "name": "rogue",
-        "url": "/assets/atlas/class/json/rogue.json"
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/assets/atlas/class/json/24/wizard.json"
       },
-      "name": "expertise",
       "level": 1,
-      "prerequisites": [],
       "desc": [
-        "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
-        "At 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit"
+        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. Intelligence is your spellcasting ability for your Wizard spells."
       ],
-      "feature_specific": {
-        "expertise_options": {
-          "choose": 1,
-          "type": "proficiency",
-          "from": {
-            "option_set_type": "options_array",
-            "options": [
-              {
-                "option_type": "choice",
-                "choice": {
-                  "choose": 2,
-                  "type": "proficiency",
-                  "from": {
-                    "option_set_type": "options_array",
-                    "options": [
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_acrobatics",
-                          "name": "skill: acrobatics",
-                          "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_animal_handling",
-                          "name": "skill: animal handling",
-                          "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_arcana",
-                          "name": "skill: arcana",
-                          "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_athletics",
-                          "name": "skill: athletics",
-                          "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_deception",
-                          "name": "skill: deception",
-                          "url": "/assets/atlas/proficiencies/json/skill_deception.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_history",
-                          "name": "skill: history",
-                          "url": "/assets/atlas/proficiencies/json/skill_history.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_insight",
-                          "name": "skill: insight",
-                          "url": "/assets/atlas/proficiencies/json/skill_insight.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_intimidation",
-                          "name": "skill: intimidation",
-                          "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_investigation",
-                          "name": "skill: investigation",
-                          "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_medicine",
-                          "name": "skill: medicine",
-                          "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_nature",
-                          "name": "skill: nature",
-                          "url": "/assets/atlas/proficiencies/json/skill_nature.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_perception",
-                          "name": "skill: perception",
-                          "url": "/assets/atlas/proficiencies/json/skill_perception.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_performance",
-                          "name": "skill: performance",
-                          "url": "/assets/atlas/proficiencies/json/skill_performance.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_persuasion",
-                          "name": "skill: persuasion",
-                          "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_religion",
-                          "name": "skill: religion",
-                          "url": "/assets/atlas/proficiencies/json/skill_religion.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_sleight_of_hand",
-                          "name": "skill: sleight of hand",
-                          "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_stealth",
-                          "name": "skill: stealth",
-                          "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
-                        }
-                      },
-                      {
-                        "option_type": "reference",
-                        "item": {
-                          "index": "skill_survival",
-                          "name": "skill: survival",
-                          "url": "/assets/atlas/proficiencies/json/skill_survival.json"
-                        }
-                      }
-                    ]
-                  }
-                }
-              },
-              {
-                "option_type": "multiple",
-                "items": [
-                  {
-                    "option_type": "choice",
-                    "choice": {
-                      "choose": 1,
-                      "type": "proficiency",
-                      "from": {
-                        "option_set_type": "options_array",
-                        "options": [
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_acrobatics",
-                              "name": "skill: acrobatics",
-                              "url": "/assets/atlas/proficiencies/json/skill_acrobatics.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_animal_handling",
-                              "name": "skill: animal handling",
-                              "url": "/assets/atlas/proficiencies/json/skill_animal_handling.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_arcana",
-                              "name": "skill: arcana",
-                              "url": "/assets/atlas/proficiencies/json/skill_arcana.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_athletics",
-                              "name": "skill: athletics",
-                              "url": "/assets/atlas/proficiencies/json/skill_athletics.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_deception",
-                              "name": "skill: deception",
-                              "url": "/assets/atlas/proficiencies/json/skill_deception.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_history",
-                              "name": "skill: history",
-                              "url": "/assets/atlas/proficiencies/json/skill_history.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_insight",
-                              "name": "skill: insight",
-                              "url": "/assets/atlas/proficiencies/json/skill_insight.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_intimidation",
-                              "name": "skill: intimidation",
-                              "url": "/assets/atlas/proficiencies/json/skill_intimidation.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_investigation",
-                              "name": "skill: investigation",
-                              "url": "/assets/atlas/proficiencies/json/skill_investigation.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_medicine",
-                              "name": "skill: medicine",
-                              "url": "/assets/atlas/proficiencies/json/skill_medicine.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_nature",
-                              "name": "skill: nature",
-                              "url": "/assets/atlas/proficiencies/json/skill_nature.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_perception",
-                              "name": "skill: perception",
-                              "url": "/assets/atlas/proficiencies/json/skill_perception.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_performance",
-                              "name": "skill: performance",
-                              "url": "/assets/atlas/proficiencies/json/skill_performance.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_persuasion",
-                              "name": "skill: persuasion",
-                              "url": "/assets/atlas/proficiencies/json/skill_persuasion.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_religion",
-                              "name": "skill: religion",
-                              "url": "/assets/atlas/proficiencies/json/skill_religion.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_sleight_of_hand",
-                              "name": "skill: sleight of hand",
-                              "url": "/assets/atlas/proficiencies/json/skill_sleight_of_hand.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_stealth",
-                              "name": "skill: stealth",
-                              "url": "/assets/atlas/proficiencies/json/skill_stealth.json"
-                            }
-                          },
-                          {
-                            "option_type": "reference",
-                            "item": {
-                              "index": "skill_survival",
-                              "name": "skill: survival",
-                              "url": "/assets/atlas/proficiencies/json/skill_survival.json"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  {
-                    "option_type": "reference",
-                    "item": {
-                      "index": "thieves_tools",
-                      "name": "thieves' tools",
-                      "url": "/assets/atlas/proficiencies/json/thieves_tools.json"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "invocations": []
-      },
-      "url": "/assets/atlas/features/json/rogue_expertise_1.0json",
-      "updated_at": "2025-10-24T20:42:13.151Z",
-      "image": "/assets/atlas/features/images/rogue_expertise_1.0webp",
+      "url": "/assets/atlas/features/json/spellcasting_wizard_2024.json",
       "source": "Class"
     },
     {
-      "index": "sneak_attack",
+      "index": "arcane_recovery_2024",
+      "name": "Arcane Recovery",
       "class": {
-        "index": "rogue",
-        "name": "rogue",
-        "url": "/assets/atlas/class/json/rogue.json"
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/assets/atlas/class/json/24/wizard.json"
       },
-      "name": "sneak attack",
+      "level": 1,
+      "desc": [
+        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Wizard level (rounded up), and none of the slots can be 6th level or higher."
+      ],
+      "url": "/assets/atlas/features/json/arcane_recovery_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "ritual_adept_wizard",
+      "class": {
+        "index": "wizard",
+        "name": "wizard",
+        "url": "/assets/atlas/class/json/24/wizard.json"
+      },
+      "name": "Ritual Adept",
       "level": 1,
       "prerequisites": [],
       "desc": [
-        "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.",
-        "You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll."
+        "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your Spellbook. You needn't have the spell prepared, but you must read from the book to cast the spell in this way."
       ],
-      "url": "/assets/atlas/features/json/sneak_attack.json",
-      "updated_at": "2026-07-13T06:30:11.907Z",
-      "image": "/assets/atlas/features/images/sneak_attack.webp",
+      "url": "/assets/atlas/features/json/ritual_adept_wizard.json",
+      "updated_at": "2026-08-31T00:00:00.000Z",
+      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
       "feature_specific": {},
-      "source": "Class"
-    },
-    {
-      "index": "thieves_cant",
-      "class": {
-        "index": "rogue",
-        "name": "rogue",
-        "url": "/assets/atlas/class/json/rogue.json"
-      },
-      "name": "thieves' cant",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.",
-        "In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run."
-      ],
-      "url": "/assets/atlas/features/json/thieves_cant.json",
-      "updated_at": "2026-07-13T06:30:11.908Z",
-      "image": "/assets/atlas/features/images/thieves_cant.webp",
-      "feature_specific": {
-        "passive_modifiers": {
-          "languages": [
-            "thieves_cant"
-          ]
-        }
-      },
       "source": "Class"
     }
   ],
@@ -528,59 +97,64 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": [],
-    "heightScale": 1.11,
-    "weightScale": 0.92
+    "specialFeatures": []
   },
   "items": {
-    "leather_armor_2e8quhry2": {
-      "id": "leather_armor_2e8quhry2",
-      "template": "leather_armor",
+    "spellbook_elxrmt1iv": {
+      "id": "spellbook_elxrmt1iv",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1788364210663,
-      "kind": "armor"
+      "addedAt": 1789035526380,
+      "kind": "focus"
     },
-    "dagger_s5k30fpy3": {
-      "id": "dagger_s5k30fpy3",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1788364210663,
-      "kind": "weapon"
-    },
-    "abacus_sxvd0979u": {
-      "id": "abacus_sxvd0979u",
-      "template": "abacus",
+    "bedroll_5xz7hra7e": {
+      "id": "bedroll_5xz7hra7e",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1788364210663,
+      "addedAt": 1789035526400,
       "kind": "tradegood"
     },
-    "gold_q2yb4ghri": {
-      "id": "gold_q2yb4ghri",
-      "template": "gold",
-      "quantity": 22,
-      "addedAt": 1788364210663,
-      "kind": "currency"
-    },
-    "shortbow_aqcusphzl": {
-      "id": "shortbow_aqcusphzl",
-      "template": "shortbow",
+    "crowbar_j9udgh6ub": {
+      "id": "crowbar_j9udgh6ub",
+      "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1788364249032,
+      "addedAt": 1789035526400,
+      "kind": "tradegood"
+    },
+    "dagger_sr2whtzsy": {
+      "id": "dagger_sr2whtzsy",
+      "template": "dagger",
+      "quantity": 2,
+      "addedAt": 1789035526401,
       "kind": "weapon"
     },
-    "arrow_1r0wer03s": {
-      "id": "arrow_1r0wer03s",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1788364249032,
-      "kind": "consumable"
+    "gold_2k77cjv3z": {
+      "id": "gold_2k77cjv3z",
+      "template": "gold",
+      "quantity": 11,
+      "addedAt": 1789035526401,
+      "kind": "currency"
     },
-    "burglars_pack_jnvwds014": {
-      "id": "burglars_pack_jnvwds014",
-      "template": "burglars_pack",
+    "orb_plyha65u1": {
+      "id": "orb_plyha65u1",
+      "template": "orb",
       "quantity": 1,
-      "addedAt": 1788364278951,
+      "addedAt": 1789035538187,
+      "kind": "equipment"
+    },
+    "scholars_pack_ecpowd0eh": {
+      "id": "scholars_pack_ecpowd0eh",
+      "template": "scholars_pack",
+      "quantity": 1,
+      "addedAt": 1789035540733,
       "kind": "container"
+    },
+    "quarterstaff_u0ukgllms": {
+      "id": "quarterstaff_u0ukgllms",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1789035546738,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -591,43 +165,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "abacus_sxvd0979u"
+          "itemId": "spellbook_elxrmt1iv"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_q2yb4ghri"
+          "itemId": "bedroll_5xz7hra7e"
         },
         {
           "id": "bag_2",
-          "itemId": "shortbow_aqcusphzl"
+          "itemId": "crowbar_j9udgh6ub"
         },
         {
           "id": "bag_3",
-          "itemId": "arrow_1r0wer03s"
+          "itemId": "gold_2k77cjv3z"
         },
         {
           "id": "bag_4",
-          "itemId": "shortbow_i70wh8h9h"
+          "itemId": "orb_plyha65u1"
         },
         {
           "id": "bag_5",
-          "itemId": "arrow_1ak7ds81s"
+          "itemId": "orb_9gnz6adk0"
         },
         {
           "id": "bag_6",
-          "itemId": "burglars_pack_jnvwds014"
+          "itemId": "scholars_pack_ecpowd0eh"
         },
         {
           "id": "bag_7",
-          "itemId": "burglars_pack_27u4z2hwk"
+          "itemId": "scholars_pack_8tlji5rx6"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "quarterstaff_u0ukgllms"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "quarterstaff_moad1gbcj"
         },
         {
           "id": "bag_10",
@@ -693,7 +267,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_s5k30fpy3"
+        "itemId": "dagger_sr2whtzsy"
       },
       {
         "id": "off_hand",
@@ -709,7 +283,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_2e8quhry2"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -811,28 +385,62 @@
   },
   "backpack": [
     {
-      "id": "navigators_tools_j5ikwpzni",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
+      "id": "thieves_tools_8xei02iye",
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
       "quantity": 1,
       "weight": 0,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "image_url": "public/assets/atlas/equipment/images/thieves_tools.webp",
+      "imageUrl": "/assets/atlas/equipment/images/thieves_tools.webp"
     },
     {
-      "id": "abacus_1e2e2s44i",
-      "index": "abacus",
-      "name": "Abacus",
+      "id": "bedroll_magbofodi",
+      "index": "bedroll",
+      "name": "Bedroll",
       "quantity": 1,
-      "weight": 2,
+      "weight": 7,
       "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "image_url": "public/assets/atlas/equipment/images/bedroll.webp",
+      "imageUrl": "/assets/atlas/equipment/images/bedroll.webp",
       "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
+        "Roll of cloth used by traveller to sleep in."
+      ],
+      "special": [],
+      "kind": "tradegood",
+      "cost": {
+        "quantity": 1,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/bedroll.webp",
+      "updated_at": "2026-07-12T19:00:14.010Z",
+      "contents": [],
+      "properties": [],
+      "equipSlots": [
+        "ring_1",
+        "ring_2"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "generic",
+      "sprite_index": 2,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
+      "category": "Adventuring Gear",
+      "rulesetContext": "2014"
+    },
+    {
+      "id": "crowbar_e4xek66ig",
+      "index": "crowbar",
+      "name": "Crowbar",
+      "quantity": 1,
+      "weight": 5,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "image_url": "public/assets/atlas/equipment/images/crowbar.webp",
+      "imageUrl": "/assets/atlas/equipment/images/crowbar.webp",
+      "desc": [
+        "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
       ],
       "special": [],
       "kind": "tradegood",
@@ -840,8 +448,8 @@
         "quantity": 2,
         "unit": "gp"
       },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
+      "image": "/assets/atlas/equipment/images/crowbar.webp",
+      "updated_at": "2026-07-12T19:00:13.571Z",
       "contents": [],
       "properties": [],
       "equipSlots": [
@@ -850,12 +458,12 @@
       ],
       "last_updated": "12-7-2026",
       "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
+      "sprite_index": 21,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
       "rulesetContext": "2014"
     },
     {
-      "id": "pouch_rq2ieo48k",
+      "id": "pouch_spy6hvjs3",
       "index": "pouch",
       "name": "Pouch",
       "quantity": 2,
@@ -866,7 +474,7 @@
       "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
     },
     {
-      "id": "clothes_travelers_zbukjliw6",
+      "id": "clothes_travelers_efswtikid",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "quantity": 1,
@@ -877,10 +485,10 @@
       "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
     },
     {
-      "id": "gold_ozgba5bgl",
+      "id": "gold_q5anj5r7j",
       "index": "gold",
       "name": "Gold",
-      "quantity": 22,
+      "quantity": 11,
       "weight": 1,
       "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
@@ -909,34 +517,281 @@
       "rulesetContext": "2014"
     }
   ],
-  "inventory": {},
-  "knownSpells": [],
-  "languages": [
-    "common",
-    "infernal"
+  "inventory": {
+    "main-hand": {
+      "id": "dagger_6spz2xrnt",
+      "index": "dagger",
+      "name": "Dagger",
+      "quantity": 2,
+      "weight": 1,
+      "_type": "equipment",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "image_url": "public/assets/atlas/equipment/images/dagger.webp",
+      "imageUrl": "/assets/atlas/equipment/images/dagger.webp",
+      "desc": [
+        "A short metal blade mounted to a small hilt and crossguard. The dagger makes an effective side armament for hardened warriors or a hidden blade for assassins and thieves."
+      ],
+      "special": [],
+      "kind": "weapon",
+      "cost": {
+        "quantity": 2,
+        "unit": "gp"
+      },
+      "image": "/assets/atlas/equipment/images/dagger.webp",
+      "updated_at": "2026-07-12T19:00:18.366Z",
+      "contents": [],
+      "properties": [
+        {
+          "index": "finesse",
+          "name": "finesse",
+          "url": "/assets/atlas/weapon_properties/json/finesse.json"
+        },
+        {
+          "index": "light",
+          "name": "light",
+          "url": "/assets/atlas/weapon_properties/json/light.json"
+        },
+        {
+          "index": "thrown",
+          "name": "thrown",
+          "url": "/assets/atlas/weapon_properties/json/thrown.json"
+        }
+      ],
+      "equipSlots": [
+        "main_hand",
+        "off_hand"
+      ],
+      "last_updated": "12-7-2026",
+      "background_type": "land_forest",
+      "sprite_index": 23,
+      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet3.webp",
+      "category": "Simple Melee Weapons",
+      "slot": "main-hand",
+      "equipment_category": {
+        "index": "weapon",
+        "name": "weapon",
+        "url": "/assets/atlas/equipment_categories/json/weapon.json"
+      },
+      "weapon_category": "Simple",
+      "weapon_range": "Melee",
+      "category_range": "Simple Melee",
+      "damage": {
+        "damage_dice": "1d4",
+        "damage_type": {
+          "index": "piercing",
+          "name": "piercing",
+          "url": "/assets/atlas/damage_types/json/piercing.json"
+        }
+      },
+      "range": {
+        "normal": 20,
+        "long": 60
+      },
+      "rulesetContext": "2014",
+      "main_hand_slot": "Dagger"
+    }
+  },
+  "knownSpells": [
+    {
+      "index": "fire_bolt",
+      "name": "fire bolt",
+      "level": 0,
+      "school": "evocation",
+      "classes": [
+        "artificer",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/fire_bolt.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/fire-bolt.webp"
+    },
+    {
+      "index": "prestidigitation",
+      "name": "prestidigitation",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "bard",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "10 feet",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/24/prestidigitation.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/prestidigitation.webp"
+    },
+    {
+      "index": "minor_illusion",
+      "name": "minor illusion",
+      "level": 0,
+      "school": "illusion",
+      "classes": [
+        "bard",
+        "sorcerer",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/24/minor_illusion.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/minor-illusion.webp"
+    },
+    {
+      "index": "protection_from_evil_and_good",
+      "name": "protection from evil and good",
+      "level": 1,
+      "school": "abjuration",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warlock",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/protection_from_evil_and_good.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/protection-from-evil-and-good.webp"
+    },
+    {
+      "index": "magic_missile",
+      "name": "magic missile",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/magic_missile.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/magic-missile.webp"
+    },
+    {
+      "index": "mage_armor",
+      "name": "mage armor",
+      "level": 1,
+      "school": "abjuration",
+      "classes": [
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "8 hours",
+      "json_path": "/assets/atlas/spell/json/24/mage_armor.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/mage-armor.webp"
+    },
+    {
+      "index": "longstrider",
+      "name": "longstrider",
+      "level": 1,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "bard",
+        "druid",
+        "ranger",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/24/longstrider.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/longstrider.webp"
+    },
+    {
+      "index": "hideous_laughter",
+      "name": "hideous laughter",
+      "level": 1,
+      "school": "enchantment",
+      "classes": [
+        "bard",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "30 feet",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/24/hideous_laughter.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/hideous-laughter.webp"
+    },
+    {
+      "index": "fog_cloud",
+      "name": "fog cloud",
+      "level": 1,
+      "school": "conjuration",
+      "classes": [
+        "druid",
+        "ranger",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Up to 1 hour",
+      "json_path": "/assets/atlas/spell/json/24/fog_cloud.json",
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/fog-cloud.webp"
+    }
   ],
-  "preparedSpells": [],
-  "spellSlots": {},
+  "languages": [
+    "common"
+  ],
+  "preparedSpells": [
+    "fire_bolt",
+    "prestidigitation",
+    "minor_illusion",
+    "protection_from_evil_and_good",
+    "magic_missile",
+    "mage_armor",
+    "longstrider",
+    "hideous_laughter",
+    "fog_cloud"
+  ],
+  "spellSlots": {
+    "1": {
+      "current": 0,
+      "max": 0
+    }
+  },
   "choices": {
-    "rogue_expertise_1": [
-      "skill_investigation"
+    "background_ability_scores": [
+      "dex",
+      "dex",
+      "wis"
     ]
   },
   "race": "tiefling",
-  "class": "rogue",
-  "spellcastingAbility": "cha",
-  "background": "merchant",
+  "class": "wizard",
+  "background": "wayfarer",
+  "spellcastingAbility": "int",
   "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RogueHuman.webp",
-  "name": "Damaia",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
+  "name": "Ea",
   "id": "slot2",
-  "hp": 2,
-  "maxHp": 2,
+  "hp": 3,
+  "maxHp": 3,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-02T15:53:46.760Z"
+  "lastSaved": "2026-09-10T10:19:34.811Z"
 }
