@@ -38,10 +38,14 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Found
 2024 Backgrounds & Origins Foundation
 ✓ 16/16 PHB Origin Backgrounds in /backgrounds/json/24/, 10 Origin Feats in /feats/json/24/origin-feats/, ability score choice model (+2/+1 or +1/+1/+1), official markdown lore guides (/ui/official/backgrounds/*.md), and ruleset-aware resolution in Character Creator
 
-Next active dependency: 2024 Feats integration / 2024 Spells migration
+2024 Feats Catalogue Complete
+✓ 75/75 PHB Feats in /feats/json/24/ across 4 subcategories (10 Origin, 10 Fighting Style, 12 Epic Boon, 43 General) with ruleset-aware resolution, index_24.json synchronization, and zero silent cross-ruleset fallbacks
+
+2024 Spells Integration & Refinement Complete
+✓ 323/323 canonical SRD Spells in /spell/json/24/ audited and synchronized with index_24.json. Note: The 323 spells represent Artificer's canonical SRD spell catalogue across 2014 and 2024 rulesets, rather than the entire printed 2024 PHB expansion list. Ruleset-aware loaders in storageService.ts, atlasService.ts, and useAtlasStore.ts enforce strict 2014 vs 2024 resolution without cross-ruleset fallbacks. Visual sprite resolution in spriteManifest.ts and canonical AOE geometry in geometry.ts verified.
 ```
 
-Spells currently resolve unversioned classic 2014 data, while Backgrounds, Subclasses, Species, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
+Spells, Backgrounds, Subclasses, Species, Feats, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
 
 Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Subclasses (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
@@ -60,9 +64,9 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
 | **Subclasses & Subclass Features** | Supported | **Implemented (48/48)** | Versioned directories exist (`/subclasses/json/14/` vs `/24/`). All 48 canonical 2024 subclasses audited and implemented across all 12 core classes (4 per class) with ruleset-aware resolution. |
 | **Backgrounds / Origins** | Supported | **Implemented (16/16)** | Versioned directories exist (`/backgrounds/json/14/` vs `/24/`). All 16 2024 PHB Origin Backgrounds implemented with allowed ability scores, canonical Origin Feats, proficiencies, equipment, and official markdown guides in `/ui/official/backgrounds/*.md`. Loader returns `rulesetContext`. |
-| **Feats** | Supported | **Foundation Implemented** | Versioned directories exist (`/feats/json/14/` vs `/24/`). Foundation for ruleset-aware resolution in place for available Origin, General, Fighting Style, and Epic Boon subcategories with index_14.json / index_24.json catalogs and zero silent cross-ruleset fallbacks. Ingesting full remaining 2024 PHB feat catalogue is pending. |
+| **Feats** | Supported | **Implemented (75/75)** | Versioned directories exist (`/feats/json/14/` vs `/24/`). Complete 2024 PHB feat catalogue (75 total: 10 Origin, 10 Fighting Style, 12 Epic Boon, 43 General) implemented in `/assets/atlas/feats/json/24/` with synchronized `index_24.json` catalogue and ruleset-aware resolution. |
 | **Equipment** | Supported | **Partial** | Versioned directories exist (`/equipment/json/14/` vs `/24/`). |
-| **Spells** | Supported | **Not Supported** | Resolves unversioned `/assets/atlas/spell/json/`. 2024 spell text/scaling updates missing. |
+| **Spells** | Supported | **Implemented (323 SRD Spells)** | Versioned directories exist (`/spell/json/14/` vs `/24/`). 323 canonical SRD spells versioned with 2024 spell text/scaling updates (e.g. cure_wounds 2d8 base, chill_touch 1d10 scaling, true_strike radiant weapon scaling) with ruleset-aware loaders (`index_14.json` vs `index_24.json`) and zero silent cross-ruleset fallbacks. |
 | **Spellcasting Rules** | Supported | **Supported** | Embedded in versioned 2024 class and level JSON records. |
 | **Starting Equipment** | Supported | **Not Supported** | Hardcoded in `CLASS_DATA` (`characterUtils.ts`) and 2014 background JSON records. |
 | **Proficiencies** | Supported | **Not Supported** | Derived from 2014 `CLASS_DATA` and 2014 background templates. |

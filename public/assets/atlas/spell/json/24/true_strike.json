@@ -1,0 +1,71 @@
+{
+  "higher_level": [
+    "Whether the attack hits or misses, the spell deals extra radiant damage at 5th level (1d6), 11th level (2d6), and 17th level (3d6)."
+  ],
+  "index": "true_strike",
+  "name": "true strike",
+  "desc": [
+    "You target one creature within range. You make one attack with a weapon against the target. The attack uses your spellcasting ability instead of Strength or Dexterity for the attack and damage rolls. On a hit, the attack deals radiant damage equal to the weapon's normal damage type."
+  ],
+  "range": "Self",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Up to 1 round",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "divination",
+    "name": "divination",
+    "url": "/assets/atlas/magic_schools/json/divination.json"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "bard",
+      "url": "/assets/atlas/class/json/bard.json"
+    },
+    {
+      "index": "sorcerer",
+      "name": "sorcerer",
+      "url": "/assets/atlas/class/json/sorcerer.json"
+    },
+    {
+      "index": "warlock",
+      "name": "warlock",
+      "url": "/assets/atlas/class/json/warlock.json"
+    },
+    {
+      "index": "wizard",
+      "name": "wizard",
+      "url": "/assets/atlas/class/json/wizard.json"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "lore",
+      "url": "/assets/atlas/subclasses/json/lore.json"
+    }
+  ],
+  "url": "/assets/atlas/spell/json/true_strike.json",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/true_strike.webp",
+  "sprite_index": 0,
+  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp",
+  "ruleset": "2024",
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "radiant",
+      "url": "/assets/atlas/damage_types/json/radiant.json"
+    },
+    "damage_at_character_level": {
+      "5": "1d6",
+      "11": "2d6",
+      "17": "3d6"
+    }
+  }
+}

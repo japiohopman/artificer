@@ -1,0 +1,18 @@
+{
+  "index": "resilient",
+  "name": "resilient",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Choice of an ability score in which you lack saving throw proficiency"
+  ],
+  "desc": [
+    "Choose one ability score in which you lack saving throw proficiency. You gain the following benefits.",
+    "Ability Score Increase. Increase the chosen ability score by 1, to a maximum of 20.",
+    "Saving Throw Proficiency. You gain proficiency in saving throws using the chosen ability.",
+    "Repeatable. You can take this feat more than once, choosing a different ability score in which you lack saving throw proficiency each time."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/resilient.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "index": "inspiring_leader",
+  "name": "inspiring leader",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Wisdom or Charisma 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Wisdom or Charisma score by 1, to a maximum of 20.",
+    "Bolstering Performance. When you finish a Short or Long Rest, you can give an inspiring performance. Choose up to six allies (which can include yourself) within 30 feet who can see or hear you. Each target gains Temporary Hit Points equal to your Proficiency Bonus + the modifier of the ability increased by this feat."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/inspiring_leader.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

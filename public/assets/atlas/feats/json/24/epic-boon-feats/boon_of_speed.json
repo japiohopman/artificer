@@ -1,0 +1,22 @@
+{
+  "index": "boon_of_speed",
+  "name": "boon of speed",
+  "category": "epic-boon",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 19+"
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "speed_bonus": 30
+    }
+  },
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.",
+    "Speed Increase. Your Speed increases by 30 feet.",
+    "Escape Artist. You can take the Disengage action as a Bonus Action."
+  ],
+  "url": "/assets/atlas/feats/json/24/epic-boon-feats/boon_of_speed.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

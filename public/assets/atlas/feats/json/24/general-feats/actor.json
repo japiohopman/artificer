@@ -1,0 +1,18 @@
+{
+  "index": "actor",
+  "name": "actor",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Charisma 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Charisma score by 1, to a maximum of 20.",
+    "Impersonation. You have Advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person.",
+    "Mimicry. You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking or heard the creature make the sound for at least 1 minute."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/actor.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

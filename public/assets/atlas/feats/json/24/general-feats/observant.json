@@ -1,0 +1,18 @@
+{
+  "index": "observant",
+  "name": "observant",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Intelligence or Wisdom 13+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Intelligence or Wisdom score by 1, to a maximum of 20.",
+    "Keen Observer. You can take the Search action as a Bonus Action.",
+    "Quick Study. Choose Insight, Investigation, or Perception. If you lack proficiency in the chosen skill, you gain proficiency in it. If you already have proficiency, you gain Expertise in it instead."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/observant.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

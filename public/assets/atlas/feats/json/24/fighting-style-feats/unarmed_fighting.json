@@ -1,0 +1,15 @@
+{
+  "index": "unarmed_fighting",
+  "name": "unarmed fighting",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "Your Unarmed Strikes can deal Bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't holding any weapons or a Shield when you make the attack roll, the d6 becomes a d8.",
+    "At the start of each of your turns, you can deal 1d4 Bludgeoning damage to one creature Grappled by you."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/unarmed_fighting.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

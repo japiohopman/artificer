@@ -1,0 +1,17 @@
+{
+  "index": "poisoner",
+  "name": "poisoner",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Dexterity or Intelligence score by 1, to a maximum of 20.",
+    "Ignore Resistance. Spells and attacks you make ignore Poison Resistance.",
+    "Potent Poison. You gain proficiency with Poisoner's Kit. With 1 hour of work and 50 GP of materials, you can create a number of doses of potent poison equal to your Proficiency Bonus. As a Bonus Action, you can apply poison to a weapon or piece of ammunition. A creature hit takes 2d8 Poison damage and must succeed on a DC 14 Constitution saving throw or be Poisoned until the end of your next turn."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/poisoner.json",
+  "image": "/assets/icons/svg/feats/poisoner.svg"
+}

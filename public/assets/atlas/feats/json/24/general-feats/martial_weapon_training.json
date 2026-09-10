@@ -1,0 +1,16 @@
+{
+  "index": "martial_weapon_training",
+  "name": "martial weapon training",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Martial Weapon Proficiency. You gain proficiency with Martial weapons."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/martial_weapon_training.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

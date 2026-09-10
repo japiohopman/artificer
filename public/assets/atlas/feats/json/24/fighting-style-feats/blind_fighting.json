@@ -1,0 +1,14 @@
+{
+  "index": "blind_fighting",
+  "name": "blind fighting",
+  "category": "fighting-style",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Fighting Style Feature"
+  ],
+  "desc": [
+    "You have Blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're Blinded or in darkness. Moreover, you can see an Invisible creature within that range, unless the creature successfully hides from you."
+  ],
+  "url": "/assets/atlas/feats/json/24/fighting-style-feats/blind_fighting.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

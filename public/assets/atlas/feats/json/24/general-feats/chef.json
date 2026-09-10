@@ -1,0 +1,18 @@
+{
+  "index": "chef",
+  "name": "chef",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
+  ],
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Constitution or Wisdom score by 1, to a maximum of 20.",
+    "Tool Proficiency. You gain proficiency with Cook's Utensils.",
+    "Special Treats. As part of a Short Rest, you can prepare special food using Cook's Utensils. You can prepare enough treats for a number of creatures equal to 4 + your Proficiency Bonus. A creature that eats a treat regains an extra 1d8 Hit Points when it expends Hit Point Dice.",
+    "Bolstering Treats. With 1 hour of work or when you finish a Long Rest, you can cook treats equal to your Proficiency Bonus that last for 8 hours. A creature can eat a treat as a Bonus Action to gain Temporary Hit Points equal to your Proficiency Bonus."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/chef.json",
+  "image": "/assets/icons/svg/feats/chef.svg"
+}

@@ -1,29 +1,21 @@
 {
   "index": "tavern_brawler",
   "name": "tavern brawler",
+  "category": "origin",
+  "ruleset": "2024",
   "prerequisites": [],
-  "desc": [
-    "Accustomed to rough-and-tumble fighting using whatever weapons happen to be at hand, you gain the following benefits:",
-    "- Increase your Strength or Constitution score by 1, to a maximum of 20.",
-    "- You are proficient with improvised weapons.",
-    "- Your unarmed strike uses a d4 for damage.",
-    "- When you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target."
-  ],
   "feature_specific": {
-    "passive_modifiers": {
-      "choice": [
-        {
-          "name": "Strength or Constitution bonus",
-          "options": [
-            "strength_bonus",
-            "constitution_bonus"
-          ],
-          "amount": 1
-        }
-      ]
-    },
-    "special_action": "bonus_action"
+    "unarmed_strike_dice": "1d4",
+    "push_distance_feet": 5
   },
-  "rulesetContext": "2024",
-  "url": "/assets/atlas/feats/json/24/origin-feats/tavern_brawler.json"
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Strength or Constitution score by 1, to a maximum of 20.",
+    "Enhanced Unarmed Strike. When you hit with your Unarmed Strike, you deal Bludgeoning damage equal to 1d4 + your Strength modifier, instead of the normal damage for an Unarmed Strike.",
+    "Damage Reroll. Whenever you roll a 1 on a damage die for an Unarmed Strike, you can reroll the die, and you must use the new roll.",
+    "Push. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage and push the target 5 feet away from you. You can use this benefit only once per turn.",
+    "Improvised Weaponry. You have proficiency with Improvised Weapons."
+  ],
+  "url": "/assets/atlas/feats/json/24/origin-feats/tavern_brawler.json",
+  "image": "/assets/icons/svg/items/feature.svg"
 }

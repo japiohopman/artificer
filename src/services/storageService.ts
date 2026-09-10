@@ -1555,207 +1555,127 @@ export async function fetchSpellData(index: string, ruleset?: '2014' | '2024'): 
   const cacheKey = `${activeRuleset}:${index}`;
   if (spellCache[cacheKey]) return spellCache[cacheKey];
 
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const cleanIndex = index.toLowerCase().replace(/[\s-]/g, '_');
+
+  let data: any = null;
   let resolvedPath: string | null = null;
-  const versionFolder = getRulesetVersionFolder(ruleset);
 
   // Node CLI local filesystem fallback for test environments
   if (typeof window === 'undefined') {
     try {
       const fs = await import('fs');
       const pathModule = await import('path');
-      const indexPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/spell/index.json');
+      
+      const primaryPath = pathModule.resolve(process.cwd(), `public/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json`);
+      if (fs.existsSync(primaryPath)) {
+        data = JSON.parse(fs.readFileSync(primaryPath, 'utf8'));
+        resolvedPath = primaryPath;
+      }
+    } catch (e) {}
+  }
+
+  // Browser / Network resolution
+  if (!data) {
+    const primaryUrl = `/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json`;
+    try {
+      const res = await fetch(primaryUrl);
+      if (res.ok) {
+        data = await res.json();
+        resolvedPath = primaryUrl;
+      }
+    } catch (e) {}
+  }
+
+  // Construct GitHub raw path fallback
+  if (!data) {
+    const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${versionFolder}/${cleanIndex}.json?t=${Date.now()}`;
+    const rawApiUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
+
+    try {
+      const res = await fetch(rawApiUrl);
+      data = await safeJson(res);
+      if (data) resolvedPath = githubUrl;
+    } catch (e) {
+      console.error("Error fetching spell data:", e);
+    }
+  }
+
+  if (!data) return null;
+
+  const actualPath = resolvedPath || data.url || '';
+  const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
+
+  if (activeRuleset === '2024' && actualRuleset !== '2024') {
+    return null;
+  }
+  if (activeRuleset === '2014' && actualRuleset !== '2014') {
+    return null;
+  }
+
+  const finalResult = {
+    ...data,
+    rulesetContext: actualRuleset,
+    imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
+  };
+  spellCache[cacheKey] = finalResult;
+  return finalResult;
+}
+
+export async function fetchSpellList(ruleset?: '2014' | '2024'): Promise<any[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  const versionFolder = activeRuleset === '2024' ? '24' : '14';
+  const indexFileName = activeRuleset === '2024' ? 'index_24.json' : 'index_14.json';
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const indexPath = pathModule.resolve(process.cwd(), `public/assets/atlas/spell/${indexFileName}`);
       if (fs.existsSync(indexPath)) {
-        const spellIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-        const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-        const matchingEntries = spellIndex.filter((s: any) =>
-          s.index.toLowerCase() === index.toLowerCase() ||
-          (s.name && s.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
-        );
-        const versionedEntry = matchingEntries.find((s: any) => s.json_path && s.json_path.includes(`/${versionFolder}/`));
-        const entry = versionedEntry || matchingEntries[0];
-        if (entry && entry.json_path) {
-          resolvedPath = entry.json_path;
-        }
-      }
-
-      if (!resolvedPath) {
-        const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
-        const subfolders = [versionFolder, ''];
-        for (const sub of subfolders) {
-          const folderPrefix = sub ? `${sub}/` : '';
-          for (const lvl of levels) {
-            const candidate = `/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`;
-            const fullFsPath = pathModule.resolve(process.cwd(), `public${candidate}`);
-            if (fs.existsSync(fullFsPath)) {
-              resolvedPath = candidate;
-              break;
-            }
-          }
-          if (resolvedPath) break;
-        }
-      }
-
-      if (resolvedPath) {
-        const fullFsPath = pathModule.resolve(process.cwd(), `public${resolvedPath.replace(/^\/?public\//, '/')}`);
-        if (fs.existsSync(fullFsPath)) {
-          const data = JSON.parse(fs.readFileSync(fullFsPath, 'utf8'));
-          const actualRuleset: '2014' | '2024' = (resolvedPath.includes('/24/') || resolvedPath.includes('/2024/')) ? '2024' : '2014';
-          const finalResult = {
-            ...data,
-            rulesetContext: actualRuleset,
-            imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-          };
-          spellCache[cacheKey] = finalResult;
-          return finalResult;
+        const data = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        if (Array.isArray(data)) {
+          return data.map((s: any) => ({
+            ...s,
+            rulesetContext: activeRuleset,
+            imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
+          }));
         }
       }
     } catch (e) {}
   }
 
-  // Try resolving path from local index first (supporting index or name-based fallback matching)
-  try {
-    const indexRes = await fetch('/assets/atlas/spell/index.json');
-    if (indexRes.ok) {
-      const spellIndex = await indexRes.json();
-      const cleanSearch = index.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim();
-      const matchingEntries = spellIndex.filter((s: any) =>
-        s.index.toLowerCase() === index.toLowerCase() ||
-        (s.name && s.name.toLowerCase().replace(/_/g, ' ').replace(/-/g, ' ').trim() === cleanSearch)
-      );
-      const versionedEntry = matchingEntries.find((s: any) => s.json_path && s.json_path.includes(`/${versionFolder}/`));
-      const entry = versionedEntry || matchingEntries[0];
-      if (entry && entry.json_path) {
-        resolvedPath = entry.json_path;
-      }
-    }
-  } catch (e) {}
-
-  // If not found in index, attempt direct subdirectories via iterative fallback
-  if (!resolvedPath) {
-    const levels = ['cantrip', '1st-level', '2nd-level', '3rd-level', '4th-level', '5th-level', '6th-level', '7th-level', '8th-level', '9th-level'];
-    const subfolders = [versionFolder, ''];
-    for (const sub of subfolders) {
-      const folderPrefix = sub ? `${sub}/` : '';
-      for (const lvl of levels) {
-        try {
-          const checkRes = await fetch(`/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`, { method: 'HEAD' });
-          if (checkRes.ok) {
-            resolvedPath = `/assets/atlas/spell/json/${folderPrefix}${lvl}/${index}.json`;
-            break;
-          }
-        } catch (e) {}
-      }
-      if (resolvedPath) break;
-    }
-  }
-
-  // Fallback to legacy path if still unresolved
-  if (!resolvedPath) {
-    resolvedPath = `/assets/atlas/spell/json/${index}.json`;
-  }
-
-  // Fetch local spell data
-  try {
-    const res = await fetch(resolvedPath);
-    if (res.ok) {
-      const data = await res.json();
-      const actualPath = resolvedPath || data.url || '';
-      const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
-      const finalResult = {
-        ...data,
-        rulesetContext: actualRuleset,
-        imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-      };
-      spellCache[cacheKey] = finalResult;
-      return finalResult;
-    }
-  } catch (e) {}
-
-  // Construct GitHub raw path
-  const cleanSubpath = resolvedPath ? resolvedPath.replace(/^\/?assets\/atlas\/spell\/json\//, '').replace(/^\/?public\/assets\/atlas\/spell\/json\//, '') : '';
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/json/${cleanSubpath}?t=${Date.now()}`;
-  const rawApiUrl = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
-  
-  try {
-    const res = await fetch(rawApiUrl);
-    const data = await safeJson(res);
-    if (!data) return null;
-    const actualPath = cleanSubpath || data.url || '';
-    const actualRuleset: '2014' | '2024' = (actualPath.includes('/24/') || actualPath.includes('/2024/')) ? '2024' : '2014';
-    const finalResult = {
-      ...data,
-      rulesetContext: actualRuleset,
-      imageUrl: normalizeImageUrl(data.imageUrl || data.image, 'spell', index)
-    };
-    spellCache[cacheKey] = finalResult;
-    return finalResult;
-  } catch (e) {
-    console.error("Error fetching spell data:", e);
-    return null;
-  }
-}
-
-export async function fetchSpellList(): Promise<any[]> {
-  if (spellListCache) return spellListCache;
   try {
     // Try local index first
-    const localRes = await fetch('/assets/atlas/spell/index.json');
+    const localRes = await fetch(`/assets/atlas/spell/${indexFileName}`);
     if (localRes.ok) {
       const data = await localRes.json();
       if (Array.isArray(data)) {
-        const list = data.map((s: any) => ({
+        return data.map((s: any) => ({
           ...s,
+          rulesetContext: activeRuleset,
           imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
         }));
-        spellListCache = list;
-        return list;
       }
     }
   } catch (e) {}
 
-  // Try to load index from GitHub raw first before calling GitHub Contents API
-  const githubIndexUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/index.json?t=${Date.now()}`;
+  // Try loading index from GitHub raw
+  const githubIndexUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/spell/${indexFileName}?t=${Date.now()}`;
   try {
     const res = await fetch(`/api/raw?url=${encodeURIComponent(githubIndexUrl)}`);
     const data = await safeJson(res);
     if (data && Array.isArray(data)) {
       return data.map((s: any) => ({
         ...s,
+        rulesetContext: activeRuleset,
         imageUrl: normalizeImageUrl(s.image || s.imageUrl, 'spell', s.index)
       }));
     }
   } catch (e) {}
 
-  const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/spell/json?ref=${BRANCH}&t=${Date.now()}`;
-  const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
-  
-  try {
-    const res = await fetch(url);
-    const files = await safeJson(res);
-    if (!files || !Array.isArray(files)) return [];
-    
-    const spells = await Promise.all(
-      files
-        .filter((f: any) => f.name.endsWith('.json'))
-        .map(async (f: any) => {
-          const rawUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f.path}`;
-          const rawRes = await fetch(`/api/raw?url=${encodeURIComponent(rawUrl)}`);
-          const data = await safeJson(rawRes);
-          if (data) {
-            return {
-              ...data,
-              imageUrl: normalizeImageUrl(data.image || data.imageUrl, 'spell', data.index)
-            };
-          }
-          return null;
-        })
-    );
-    
-    return spells.filter(s => s !== null);
-  } catch (e) {
-    console.error("Error fetching spell list:", e);
-    return [];
-  }
+  return [];
 }
 
 export async function fetchCharacterList(): Promise<{ name: string; index: string }[]> {

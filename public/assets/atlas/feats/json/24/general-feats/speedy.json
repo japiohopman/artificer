@@ -1,0 +1,24 @@
+{
+  "index": "speedy",
+  "name": "speedy",
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+",
+    "Dexterity or Constitution 13+"
+  ],
+  "feature_specific": {
+    "passive_modifiers": {
+      "speed_bonus": 10
+    }
+  },
+  "desc": [
+    "You gain the following benefits.",
+    "Ability Score Increase. Increase your Dexterity or Constitution score by 1, to a maximum of 20.",
+    "Speed Increase. Your Speed increases by 10 feet.",
+    "Dash Mobility. When you take the Dash action, difficult terrain doesn't cost you extra movement for the rest of that turn.",
+    "Opportunity Protection. Opportunity attacks have Disadvantage against you."
+  ],
+  "url": "/assets/atlas/feats/json/24/general-feats/speedy.json",
+  "image": "/assets/icons/svg/items/feature.svg"
+}

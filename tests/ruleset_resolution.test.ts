@@ -701,8 +701,62 @@ describe('Ruleset Resolution Audit Tests', () => {
   });
 
   describe('2024 Feats Integration & Isolation Tests', () => {
+    it('enforces complete 2024 catalogue representation (75 feats) and exact canonical identities per category', async () => {
+      const EXPECTED_ORIGIN_FEATS = [
+        'alert', 'crafter', 'healer', 'lucky', 'magic_initiate',
+        'musician', 'savage_attacker', 'skilled', 'tavern_brawler', 'tough'
+      ].sort();
+
+      const EXPECTED_FIGHTING_STYLE_FEATS = [
+        'archery', 'blind_fighting', 'defense', 'dueling',
+        'great_weapon_fighting', 'interception', 'protection',
+        'thrown_weapon_fighting', 'two_weapon_fighting', 'unarmed_fighting'
+      ].sort();
+
+      const EXPECTED_EPIC_BOON_FEATS = [
+        'boon_of_combat_prowess', 'boon_of_dimensional_travel', 'boon_of_energy_resistance',
+        'boon_of_fate', 'boon_of_fortitude', 'boon_of_irresistible_offense',
+        'boon_of_recovery', 'boon_of_skill', 'boon_of_speed',
+        'boon_of_spell_recall', 'boon_of_the_night_spirit', 'boon_of_truesight'
+      ].sort();
+
+      const EXPECTED_GENERAL_FEATS = [
+        'ability_score_improvement', 'actor', 'athlete', 'charger', 'chef',
+        'crossbow_expert', 'crusher', 'defensive_duelist', 'dual_wielder',
+        'durable', 'elemental_adept', 'fey_touched', 'grappler',
+        'great_weapon_master', 'heavily_armored', 'heavy_armor_master',
+        'inspiring_leader', 'keen_mind', 'lightly_armored', 'mage_slayer',
+        'martial_weapon_training', 'medium_armor_master', 'moderately_armored',
+        'mounted_combatant', 'observant', 'piercer', 'poisoner',
+        'polearm_master', 'resilient', 'ritual_caster', 'sentinel',
+        'shadow_touched', 'sharpshooter', 'shield_master', 'skill_expert',
+        'skulker', 'slasher', 'speedy', 'spell_sniper', 'telekinetic',
+        'telepathic', 'war_caster', 'weapon_master'
+      ].sort();
+
+      const all24 = await atlasService.loadFeatsList('2024');
+      expect(all24.length).toBe(75);
+
+      const originFeats = (await atlasService.loadFeatsList('2024', 'origin')).map(f => f.index).sort();
+      expect(originFeats).toEqual(EXPECTED_ORIGIN_FEATS);
+
+      const fightingStyleFeats = (await atlasService.loadFeatsList('2024', 'fighting-style')).map(f => f.index).sort();
+      expect(fightingStyleFeats).toEqual(EXPECTED_FIGHTING_STYLE_FEATS);
+
+      const epicBoonFeats = (await atlasService.loadFeatsList('2024', 'epic-boon')).map(f => f.index).sort();
+      expect(epicBoonFeats).toEqual(EXPECTED_EPIC_BOON_FEATS);
+
+      const generalFeats = (await atlasService.loadFeatsList('2024', 'general')).map(f => f.index).sort();
+      expect(generalFeats).toEqual(EXPECTED_GENERAL_FEATS);
+
+      // Verify boon_of_skill explicitly
+      const boonSkill = await fetchFeatData('boon_of_skill', '2024');
+      expect(boonSkill).not.toBeNull();
+      expect(boonSkill?.name).toBe('boon of skill');
+    });
+
     it('enforces strict ruleset isolation for 2024 vs 2014 feat loading with no silent cross-ruleset fallback', async () => {
-      // 1. Alert exists in both rulesets
+      // 1. Alert exists in both rulesets with distinct 2024 vs 2014 mechanics
       const alert14 = await fetchFeatData('alert', '2014');
       const alert24 = await fetchFeatData('alert', '2024');
       expect(alert14).not.toBeNull();
@@ -711,14 +765,35 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(alert24?.rulesetContext).toBe('2024');
       expect(alert24?.url).toContain('/24/');
 
-      // 2. Requesting a 2014-only feat under 2024 ruleset MUST return null (no silent fallback to 2014)
-      const actor24 = await fetchFeatData('actor', '2024');
-      expect(actor24).toBeNull();
+      // 2014 Alert: +5 to initiative, can't be surprised
+      expect(alert14?.desc.join(' ')).toContain('+5 bonus to initiative');
+      // 2024 Alert: Proficiency Bonus to initiative, Initiative Swap
+      expect(alert24?.desc.join(' ')).toContain('Proficiency Bonus to the roll');
+      expect(alert24?.desc.join(' ')).toContain('Initiative Swap');
 
-      // 3. Requesting a 2014-only feat under 2014 ruleset resolves correctly
-      const actor14 = await fetchFeatData('actor', '2014');
-      expect(actor14).not.toBeNull();
-      expect(actor14?.rulesetContext).toBe('2014');
+      // 2. Requesting a non-existent 2024 feat returns null (no silent fallback to 2014 or fake data)
+      const nonExistent = await fetchFeatData('non_existent_feat_xyz', '2024');
+      expect(nonExistent).toBeNull();
+    });
+
+    it('verifies material edition differences for 2014 vs 2024 feats', async () => {
+      // Grappler
+      const grappler14 = await fetchFeatData('grappler', '2014');
+      const grappler24 = await fetchFeatData('grappler', '2024');
+      expect(grappler14?.desc.join(' ')).toContain('pin a creature');
+      expect(grappler24?.desc.join(' ')).toContain('Punch and Grab');
+
+      // Heavy Armor Master
+      const ham14 = await fetchFeatData('heavy_armor_master', '2014');
+      const ham24 = await fetchFeatData('heavy_armor_master', '2024');
+      expect(ham14?.desc.join(' ')).toContain('reduced by 3');
+      expect(ham24?.desc.join(' ')).toContain('reduced by an amount equal to your Proficiency Bonus');
+
+      // Great Weapon Master (2014 vs 2024)
+      const gwm14 = await fetchFeatData('great_weapon_master', '2014');
+      const gwm24 = await fetchFeatData('great_weapon_master', '2024');
+      expect(gwm14?.desc.join(' ')).toContain('-5 penalty to the attack roll');
+      expect(gwm24?.desc.join(' ')).toContain('extra damage equal to your Proficiency Bonus');
     });
 
     it('resolves feats across distinct 2024 subcategories (Origin, General, Fighting Style, Epic Boon)', async () => {
@@ -758,24 +833,6 @@ describe('Ruleset Resolution Audit Tests', () => {
       const boonFate = await fetchFeatData('boon_of_fate', '2024');
       expect(boonFate).not.toBeNull();
       expect(boonFate?.url).toContain('/epic-boon-feats/');
-    });
-
-    it('verifies fetchFeatsList and category filtering for 2024 feats', async () => {
-      const all24 = await atlasService.loadFeatsList('2024');
-      expect(all24.length).toBeGreaterThanOrEqual(23);
-
-      const originFeats = await atlasService.loadFeatsList('2024', 'origin');
-      expect(originFeats.length).toBe(10);
-      expect(originFeats.map(f => f.index)).toContain('magic_initiate');
-      expect(originFeats.map(f => f.index)).toContain('alert');
-
-      const fightingStyleFeats = await atlasService.loadFeatsList('2024', 'fighting-style');
-      expect(fightingStyleFeats.length).toBe(4);
-      expect(fightingStyleFeats.map(f => f.index)).toContain('archery');
-
-      const epicBoonFeats = await atlasService.loadFeatsList('2024', 'epic-boon');
-      expect(epicBoonFeats.length).toBe(7);
-      expect(epicBoonFeats.map(f => f.index)).toContain('boon_of_fate');
     });
 
     it('verifies canonical background-to-origin feat resolution respects the selected ruleset (2014 vs 2024)', async () => {
@@ -1648,4 +1705,36 @@ describe('Ruleset Resolution Audit Tests', () => {
       expect(md.toLowerCase()).not.toContain('feature from your');
     }
   });
+
+  it('verifies ruleset-aware spell loading and list fetching for 2014 and 2024 rulesets', async () => {
+    const { fetchSpellData, fetchSpellList } = await import('../src/services/storageService');
+    
+    // 2014 Spells list & Cure Wounds (1d8 base healing)
+    const spells14 = await fetchSpellList('2014');
+    expect(spells14.length).toBe(323);
+    const cureWounds14 = await fetchSpellData('cure_wounds', '2014');
+    expect(cureWounds14).not.toBeNull();
+    expect(cureWounds14?.rulesetContext).toBe('2014');
+    expect(cureWounds14?.heal_at_slot_level['1']).toBe('1d8 + MOD');
+
+    // 2024 Spells list & Cure Wounds (2d8 base healing in 2024 PHB)
+    const spells24 = await fetchSpellList('2024');
+    expect(spells24.length).toBe(323);
+    const cureWounds24 = await fetchSpellData('cure_wounds', '2024');
+    expect(cureWounds24).not.toBeNull();
+    expect(cureWounds24?.rulesetContext).toBe('2024');
+    expect(cureWounds24?.heal_at_slot_level['1']).toBe('2d8 + MOD');
+
+    // atlasService wrapper test
+    const loaded14 = await atlasService.loadSpell('acid_arrow', '2014');
+    expect(loaded14).not.toBeNull();
+    expect(loaded14?.rulesetContext).toBe('2014');
+
+    const loaded24 = await atlasService.loadSpell('cure_wounds', '2024');
+    expect(loaded24).not.toBeNull();
+    expect(loaded24?.rulesetContext).toBe('2024');
+    expect(loaded24?.heal_at_slot_level['1']).toBe('2d8 + MOD');
+  });
 });
+
+

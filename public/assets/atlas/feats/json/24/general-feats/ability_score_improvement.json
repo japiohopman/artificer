@@ -1,12 +1,15 @@
 {
   "index": "ability_score_improvement",
   "name": "ability score improvement",
-  "prerequisites": [],
-  "desc": [
-    "General Feat (Prerequisite: Level 4+)Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.Repeatable. You can take this feat more than once."
+  "category": "general",
+  "ruleset": "2024",
+  "prerequisites": [
+    "Level 4+"
   ],
-  "feature_specific": {},
+  "desc": [
+    "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.",
+    "Repeatable. You can take this feat more than once."
+  ],
   "url": "/assets/atlas/feats/json/24/general-feats/ability_score_improvement.json",
-  "image": "icons/magic/life/cross-worn-green.webp",
-  "updated_at": "2026-07-13T20:16:15.534Z"
+  "image": "/assets/icons/svg/items/feature.svg"
 }
