@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { useGameStore } from './useGameStore';
 import { 
   fetchMonsterList, fetchMonsterData, fetchMonsterCategories, fetchMonsterCategoryMapping,
   fetchMaterialsList, fetchMaterialData, fetchMaterialCategoryMapping, fetchMaterialCategories,
