@@ -401,7 +401,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
   });
 
   describe('F & H: Recruit NPC State Retention & Shared resolveCombatAction Route', () => {
-    it('10. F & H: Recruit test NPC spellcasting state survives conversion and executes via shared resolveCombatAction', async () => {
+    it('10. F & H: Recruit test NPC spellcasting state survives conversion into combat actor model and executes via shared resolveCombatAction', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
       expect(wizardZanna.name).toContain('Zanna');
@@ -420,7 +420,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
       const spellAction = createSpellCombatAction(monsterActor?.knownSpells[0]);
 
-      // Execute through the shared resolveCombatAction path!
+      // Execute through the shared resolveCombatAction entry point!
       await useGameStore.getState().resolveCombatAction(
         monsterActor,
         { name: 'Target Dummy', id: 'dummy-1', hp: 20, maxHp: 20, armor_class: 10 },
