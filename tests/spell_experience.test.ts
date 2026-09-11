@@ -133,7 +133,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
   });
 
   describe('A, B, C, D & E: End-to-End Spell Execution, Healing, Rejection & Single Resource Consumption', () => {
-    it('6. A: Offensive spell (Magic Missile) resolves through canonical resolver and changes target HP', async () => {
+    it('6. A: Offensive spell (Magic Missile) resolves through shared resolveCombatAction and changes target HP', async () => {
       const mmData = await fetchSpellData('magic_missile', '2014');
       const spellAction = createSpellCombatAction(mmData);
 
@@ -274,7 +274,7 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(updatedChar?.actionEconomy?.actions.current).toBe(0); // Deducted exactly 1 action
     });
 
-    it('8. C: Failure case (Insufficient spell slots) → NO slot consumed and NO HP change', async () => {
+    it('8. C: Failure case (Insufficient spell slot) → NO slot consumed and NO HP change', async () => {
       const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
       const spellAction = createSpellCombatAction(cureWoundsData);
 
@@ -337,13 +337,13 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
       expect(updatedChar?.actionEconomy?.actions.current).toBe(1); // Action untouched
     });
 
-    it('9. C: Failure case (Unknown spell) → NO slot consumed and NO HP change', async () => {
+    it('9. C & D: Failure case (Unprepared / Unknown spell) → NO slot consumed and NO HP change', async () => {
       const cureWoundsData = await fetchSpellData('cure_wounds', '2014');
       const spellAction = createSpellCombatAction(cureWoundsData);
 
       const testChar = {
-        id: 'cleric-unknown-spell',
-        name: 'Cleric Unknown Spell',
+        id: 'cleric-unprepared',
+        name: 'Cleric Unprepared',
         class: 'Cleric',
         race: 'Human',
         gender: 'Male' as const,
@@ -363,8 +363,8 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
         appearance: { hairColor: '', hairStyle: '', bodyType: '', eyeColor: '', skinColor: '', height: '', weight: '' },
         inventory: {},
         backpack: [],
-        knownSpells: [], // DOES NOT KNOW CURE WOUNDS
-        preparedSpells: [],
+        knownSpells: [cureWoundsData],
+        preparedSpells: ['bless'], // CURE WOUNDS IS NOT PREPARED
         spellSlots: { '1': { current: 2, max: 2 } },
         choices: {},
         hp: 5,
@@ -381,26 +381,26 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
       const charStore = useCharacterStore.getState();
       charStore.setCharacters([testChar]);
-      charStore.setActiveCharacter('cleric-unknown-spell');
+      charStore.setActiveCharacter('cleric-unprepared');
 
-      useGameStore.setState({ activeCharacterId: 'cleric-unknown-spell' });
+      useGameStore.setState({ activeCharacterId: 'cleric-unprepared' });
 
       const result = await resolveSpellAction(
-        { name: 'Cleric Unknown Spell', id: 'cleric-unknown-spell' },
-        { name: 'Cleric Unknown Spell', id: 'cleric-unknown-spell' },
+        { name: 'Cleric Unprepared', id: 'cleric-unprepared' },
+        { name: 'Cleric Unprepared', id: 'cleric-unprepared' },
         spellAction,
         1
       );
 
       expect(result.success).toBe(false);
-      expect(result.logMessage).toContain('does not know the spell');
-      const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'cleric-unknown-spell');
+      expect(result.logMessage).toContain('does not have the spell Cure Wounds prepared');
+      const updatedChar = useCharacterStore.getState().characters.find(c => c.id === 'cleric-unprepared');
       expect(updatedChar?.hp).toBe(5);
       expect(updatedChar?.spellSlots['1'].current).toBe(2); // Slot untouched
     });
   });
 
-  describe('F & H: Recruit NPC State Retention & CombatTester Shared Execution Path', () => {
+  describe('F & H: Recruit NPC State Retention & Shared resolveCombatAction Route', () => {
     it('10. F & H: Recruit test NPC spellcasting state survives conversion and executes via shared resolveCombatAction', async () => {
       const wizardZanna = await fetchRecruitNPCData('4Jsv5vYaJ1atUEDV');
       expect(wizardZanna).not.toBeNull();
@@ -420,15 +420,16 @@ describe('Spell Experience End-to-End & Integration Regression Tests', () => {
 
       const spellAction = createSpellCombatAction(monsterActor?.knownSpells[0]);
 
-      // Execute through the shared resolveCombatAction path
-      const result = await resolveSpellAction(
+      // Execute through the shared resolveCombatAction path!
+      await useGameStore.getState().resolveCombatAction(
         monsterActor,
         { name: 'Target Dummy', id: 'dummy-1', hp: 20, maxHp: 20, armor_class: 10 },
-        spellAction,
-        1
+        spellAction
       );
 
-      expect(result.success).toBe(true);
+      const logs = useGameStore.getState().logs;
+      const logTexts = logs.map((l: any) => l.message || '');
+      expect(logTexts.some(t => t.includes('Zanna'))).toBe(true);
     });
 
     it('11. Derive actor spellcasting stats uses real character class and stats, failing when unresolvable', () => {

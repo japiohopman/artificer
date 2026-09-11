@@ -119,12 +119,11 @@ export function getActorSpellcastingStats(actor: any): {
 /**
  * Validates castability and executes spell resolution atomically.
  * Transaction order:
- * 1. Validate actor & spell availability (known/prepared)
+ * 1. Validate actor & spell availability (known & prepared)
  * 2. Validate action economy
  * 3. Validate spell slot availability
- * 4. Resolve spell mechanic
- * 5. Apply HP/effects/state changes
- * 6. ONLY AFTER successful resolution, commit resource consumption (action + slot)
+ * 4. Resolve spell mechanic & apply HP/effects to target
+ * 5. ONLY AFTER successful resolution & HP/effect mutation, commit resource consumption (action + slot)
  */
 export async function resolveSpellAction(
   actor: any,
@@ -146,7 +145,7 @@ export async function resolveSpellAction(
     return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
   }
 
-  // 1. RESOLVE REAL ACTOR & SPELL AVAILABILITY
+  // 1. RESOLVE REAL ACTOR & SPELL AVAILABILITY (KNOWN & PREPARED)
   const isPC = charStore.characters.some(c => c.id === actor.id) || actor.id === 'player';
   const realActorChar = isPC ? charStore.characters.find(c => c.id === (actor.id === 'player' ? gameStore.activeCharacterId : actor.id)) : null;
 
@@ -157,6 +156,21 @@ export async function resolveSpellAction(
       const msg = `${actorName} does not know the spell ${spellAction.name}.`;
       gameStore.addLog(msg, 'error');
       return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
+    }
+
+    // Check prepared spells for level 1+ spells when preparedSpells array is populated
+    const isCantrip = levelToUse === 0;
+    if (!isCantrip && Array.isArray(realActorChar.preparedSpells) && realActorChar.preparedSpells.length > 0) {
+      const isPrepared = realActorChar.preparedSpells.some(idx =>
+        idx === spellIndex ||
+        idx?.toLowerCase() === spellIndex.toLowerCase() ||
+        idx?.toLowerCase() === spellAction.name.toLowerCase()
+      );
+      if (!isPrepared) {
+        const msg = `${actorName} does not have the spell ${spellAction.name} prepared.`;
+        gameStore.addLog(msg, 'error');
+        return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
+      }
     }
   }
 
@@ -197,7 +211,7 @@ export async function resolveSpellAction(
     return { success: false, actionName: spellAction.name, actorName, targetName, logMessage: msg, hpChanged: 0 };
   }
 
-  // Helper to commit resource consumption ONLY upon successful resolution
+  // Helper to commit resource consumption strictly AFTER successful resolution and state change
   const commitResources = () => {
     if (isPC && realActorChar) {
       charStore.consumeAction(realActorChar.id, spellAction.actionType);
@@ -212,7 +226,7 @@ export async function resolveSpellAction(
     }
   };
 
-  // 5. RESOLVE SPELL MECHANIC
+  // 5. RESOLVE SPELL MECHANICS & APPLY EFFECTS
 
   // HEALING SPELLS
   if (spellData.heal_at_slot_level) {
@@ -238,6 +252,7 @@ export async function resolveSpellAction(
       }
     }
 
+    // Commit resource deduction AFTER successful HP mutation
     commitResources();
 
     const logMessage = `${actorName} casts ${spellAction.name} on ${targetName}, restoring ${totalHeal} HP!`;
@@ -282,8 +297,6 @@ export async function resolveSpellAction(
 
     const isHit = totalToHit >= targetAC || d20Roll.total === 20;
 
-    commitResources();
-
     if (isHit) {
       const dmgRoll = diceService.rollBackground(damageDice, `Spell Damage (${spellAction.name})`);
       const damageTotal = dmgRoll.total;
@@ -304,6 +317,9 @@ export async function resolveSpellAction(
         }
       }
 
+      // Commit resource deduction AFTER successful HP mutation
+      commitResources();
+
       const logMessage = `${actorName} casts ${spellAction.name} at ${targetName}: HIT! (${totalToHit} vs AC ${targetAC}) dealing ${damageTotal} damage.`;
       gameStore.addLog(logMessage, 'success');
 
@@ -318,6 +334,9 @@ export async function resolveSpellAction(
         rollTotal: totalToHit
       };
     } else {
+      // Commit resource deduction for the cast attempt (even on miss)
+      commitResources();
+
       const logMessage = `${actorName} casts ${spellAction.name} at ${targetName}: MISS! (${totalToHit} vs AC ${targetAC}).`;
       gameStore.addLog(logMessage, 'warning');
 
@@ -376,6 +395,7 @@ export async function resolveSpellAction(
       }
     }
 
+    // Commit resource deduction AFTER save and HP mutation
     commitResources();
 
     const logMessage = `${actorName} casts ${spellAction.name} on ${targetName}. ${targetName} ${passedSave ? 'SAVED' : 'FAILED SAVE'} (${totalSave} vs DC ${spellStats.saveDC}), taking ${finalDamage} damage.`;
@@ -427,6 +447,7 @@ export async function resolveSpellAction(
       }
     }
 
+    // Commit resource deduction AFTER HP mutation
     commitResources();
 
     const logMessage = `${actorName} casts ${spellAction.name} at ${targetName}! Strikes for ${damageTotal} damage (Auto-hit).`;
@@ -461,7 +482,7 @@ export async function resolveSpellAction(
     };
   }
 
-  // UNSUPPORTED SPELL MECHANICS (Explicit error logging, no resource consumption)
+  // UNSUPPORTED SPELL MECHANICS (Explicit error logging, NO resource consumption)
   const unsuppMsg = `Spell ${spellAction.name} mechanic is currently unsupported in combat resolution.`;
   gameStore.addLog(unsuppMsg, 'error');
   return {
