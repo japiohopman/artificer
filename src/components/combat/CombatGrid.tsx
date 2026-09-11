@@ -410,8 +410,12 @@ export const CombatGrid: React.FC = () => {
           });
         } else {
           addLog("AOE spell cast, but no targets were caught in the area.", "info");
-          // If no targets caught, still trigger action resolution for the caster position so resources are consumed
-          resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, null, targetingAction);
+        }
+
+        const { consumeAction, castSpell } = useCharacterStore.getState();
+        consumeAction(activeCharacterId, targetingAction.actionType || 'actions');
+        if (targetingAction.category === 'Spells' && targetingAction.data?.level !== undefined) {
+          castSpell(targetingAction.id, targetingAction.data.level);
         }
 
         setIsTargeting(false);
@@ -822,6 +826,11 @@ const activeTokenCoordinates = draggedMonsterId
 
                         if (dist <= (targetingAction?.range || 1)) {
                           resolveCombatAction({ name: activeChar?.name || 'Player', id: activeCharacterId }, monster, targetingAction);
+                          const { consumeAction, castSpell } = useCharacterStore.getState();
+                          consumeAction(activeCharacterId, targetingAction?.actionType || 'actions');
+                          if (targetingAction?.category === 'Spells' && targetingAction.data?.level !== undefined) {
+                            castSpell(targetingAction.id, targetingAction.data.level);
+                          }
                           setIsTargeting(false);
                           setTargetingAction(null);
                         } else {
