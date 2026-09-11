@@ -8,10 +8,13 @@ import {
   fetchMonsterData,
   fetchRecruitNPCList,
   fetchRecruitNPCData,
+  fetchSpellList,
+  fetchSpellData,
   playSuccessSound,
   playClickSound,
   normalizeImageUrl
 } from '../../services/storageService';
+import { SpellSprite } from '../atlas/SpellSprite';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -33,8 +36,10 @@ export const CombatTester: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCR, setSelectedCR] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
-  const [rightPanelTab, setRightPanelTab] = useState<'monsters' | 'heroes'>('heroes');
+  const [rightPanelTab, setRightPanelTab] = useState<'monsters' | 'heroes' | 'spells'>('heroes');
   const [recruitsList, setRecruitsList] = useState<{ name: string; index: string }[]>([]);
+  const [spellsList, setSpellsList] = useState<any[]>([]);
+  const [selectedSpellTarget, setSelectedSpellTarget] = useState<string>('');
   const [customMaps, setCustomMaps] = useState<Array<{ id: string; name: string }>>([]);
   const [selectedCustomMapId, setSelectedCustomMapId] = useState<string>('');
 
@@ -53,7 +58,18 @@ export const CombatTester: React.FC = () => {
     }
     loadRecruits();
     loadCustomMaps();
+    loadSpells();
   }, []);
+
+  const loadSpells = async () => {
+    try {
+      const activeRuleset = useGameStore.getState().ruleset || '2014';
+      const spells = await fetchSpellList(activeRuleset);
+      setSpellsList(spells || []);
+    } catch (e) {
+      console.error("Failed to load spells list:", e);
+    }
+  };
 
   const loadCustomMaps = async () => {
     try {
@@ -151,6 +167,69 @@ export const CombatTester: React.FC = () => {
       }
     } catch (error) {
       console.error("Failed to add recruit hero as ally:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleTestCastSpell = async (spell: any) => {
+    setIsLoading(true);
+    try {
+      const activeRuleset = useGameStore.getState().ruleset || '2014';
+      const fullSpell = await fetchSpellData(spell.index || spell.name, activeRuleset) || spell;
+      const targetMonster = combatState.monsters.find(m => m.id === selectedSpellTarget || (m as any).index === selectedSpellTarget) || combatState.monsters[0];
+      const activeChar = characters.find(c => c.name !== 'Empty Slot') || characters[0];
+
+      const { createSpellCombatAction } = await import('../../domain/spells/spellResolver');
+      const spellAction = createSpellCombatAction(fullSpell);
+
+      useUIStore.getState().setTargetingAction(spellAction);
+      useUIStore.getState().setIsTargeting(true);
+
+      if (targetMonster) {
+        const actorObj = { name: activeChar?.name || 'Player', id: activeChar?.id || 'player' };
+
+        // Execute through canonical resolveCombatAction -> resolveSpellAction
+        await useGameStore.getState().resolveCombatAction(actorObj, targetMonster, spellAction);
+      } else {
+        addLog(`Prepared ${fullSpell.name || spell.name} for targeting. Select a target on grid in combat mode.`, 'info');
+      }
+    } catch (err) {
+      console.error("Error testing spell:", err);
+      addLog(`Error executing spell: ${err instanceof Error ? err.message : String(err)}`, 'error');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleGrantSpellToParty = async (spell: any) => {
+    setIsLoading(true);
+    try {
+      const activeRuleset = useGameStore.getState().ruleset || '2014';
+      const fullSpell = await fetchSpellData(spell.index || spell.name, activeRuleset) || spell;
+      const firstActiveIdx = characters.findIndex(c => c.name !== 'Empty Slot');
+      if (firstActiveIdx !== -1) {
+        const char = characters[firstActiveIdx];
+        const alreadyKnown = (char.knownSpells || []).some((s: any) => s.index === fullSpell.index);
+        if (!alreadyKnown) {
+          const updatedChar = {
+            ...char,
+            knownSpells: [...(char.knownSpells || []), fullSpell],
+            preparedSpells: [...(char.preparedSpells || []), fullSpell.index]
+          };
+          const newChars = [...characters];
+          newChars[firstActiveIdx] = updatedChar;
+          setCharacters(newChars);
+          addLog(`Granted ${fullSpell.name} to ${char.name}`, 'success');
+          playSuccessSound();
+        } else {
+          addLog(`${char.name} already knows ${fullSpell.name}`, 'warning');
+        }
+      } else {
+        addLog("No active hero slot found to grant spell to.", 'error');
+      }
+    } catch (e) {
+      console.error("Error granting spell:", e);
     } finally {
       setIsLoading(false);
     }
@@ -547,6 +626,15 @@ export const CombatTester: React.FC = () => {
                 >
                   Monsters Atlas
                 </button>
+                <button
+                  onClick={() => { setRightPanelTab('spells'); playClickSound(); }}
+                  className={cn(
+                    "px-4 py-1 rounded-md text-[9px] font-black uppercase tracking-wider transition-all",
+                    rightPanelTab === 'spells' ? "bg-blue-600 text-white" : "text-white/40 hover:text-white"
+                  )}
+                >
+                  Arcana / Spells
+                </button>
              </div>
 
              <div className="flex items-center gap-3">
@@ -579,7 +667,70 @@ export const CombatTester: React.FC = () => {
           </div>
 
           <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
-             {rightPanelTab === 'heroes' ? (
+             {rightPanelTab === 'spells' ? (
+                <div className="space-y-6">
+                  <div className="p-4 bg-white/5 border border-white/10 rounded-xl flex items-center justify-between flex-wrap gap-4">
+                    <div className="flex items-center gap-3">
+                      <GameIcon name="magic_effect" size={20} className="text-blue-400" />
+                      <div>
+                        <div className="text-[12px] font-black uppercase text-white tracking-wider">Spell Execution Matrix</div>
+                        <div className="text-[9px] text-white/40 uppercase">Test casting spells directly against board combatants or grant spells to party members</div>
+                      </div>
+                    </div>
+                    {combatState.monsters.length > 0 && (
+                      <div className="flex items-center gap-2">
+                        <span className="text-[9px] font-black text-white/40 uppercase">Target Token:</span>
+                        <select
+                          value={selectedSpellTarget}
+                          onChange={(e) => setSelectedSpellTarget(e.target.value)}
+                          className="bg-black/60 border border-white/10 text-white text-[10px] font-bold p-1 rounded focus:outline-none uppercase"
+                        >
+                          <option value="">Auto (First Target)</option>
+                          {combatState.monsters.map(m => (
+                            <option key={m.id} value={m.id}>{m.name.toUpperCase()} (HP {m.hp}/{m.maxHp})</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {spellsList.filter((s: any) => (s.name || s.index || '').toLowerCase().includes(searchQuery.toLowerCase())).slice(0, 40).map(spell => (
+                      <div
+                        key={spell.index || spell.name}
+                        className="bg-white/[0.03] border border-white/5 rounded-xl p-4 hover:bg-white/[0.06] transition-all flex flex-col justify-between gap-3"
+                      >
+                        <div className="flex items-start gap-3">
+                          <SpellSprite spell={spell} size={40} className="rounded border border-white/10 bg-black/40 p-0.5 shrink-0" />
+                          <div className="flex-1 min-w-0">
+                            <div className="text-[12px] font-black text-white uppercase truncate">{spell.name}</div>
+                            <div className="text-[8px] font-bold text-white/40 uppercase tracking-widest mt-0.5">
+                              {spell.level === 0 ? 'Cantrip' : `Level ${spell.level}`} • {spell.school || 'Arcane'}
+                            </div>
+                            <div className="text-[8px] text-white/30 truncate mt-1">Range: {spell.range} • {spell.casting_time}</div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 pt-2 border-t border-white/5">
+                          <button
+                            onClick={() => handleTestCastSpell(spell)}
+                            className="flex-1 py-1.5 bg-blue-600/20 border border-blue-500/30 text-blue-300 rounded text-[9px] font-black uppercase hover:bg-blue-600 hover:text-white transition-all text-center"
+                          >
+                            Cast Spell
+                          </button>
+                          <button
+                            onClick={() => handleGrantSpellToParty(spell)}
+                            className="py-1.5 px-3 bg-amber-600/20 border border-amber-500/30 text-amber-300 rounded text-[9px] font-black uppercase hover:bg-amber-600 hover:text-white transition-all text-center"
+                            title="Add to Active Hero Known Spells"
+                          >
+                            Grant
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+             ) : rightPanelTab === 'heroes' ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                   {filteredHeroes.map(hero => (
                      <div
