@@ -836,6 +836,13 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   resolveCombatAction: async (actor, target, action) => {
+    // Dispatch boundary: Route spell category actions directly to canonical domain spell resolver
+    if (action.category === 'Spells') {
+      const { resolveSpellAction } = await import('../domain/spells/spellResolver');
+      await resolveSpellAction(actor, target, action, action.data?.level);
+      return;
+    }
+
     const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const { modifyHp } = useCharacterStore.getState();
 
