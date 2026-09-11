@@ -287,7 +287,7 @@ export const SpellsStep: React.FC<{
                                         (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
                                     );
                                     return (
-                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
+                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} ruleset={newChar.ruleset} onClick={() => toggleSpell(spell)} />
                                     );
                                 })}
                             </div>
@@ -397,7 +397,7 @@ export const SpellsStep: React.FC<{
     );
 };
 
-const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void }> = ({ spell, active, onClick }) => (
+const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void, ruleset?: '2014' | '2024' }> = ({ spell, active, onClick, ruleset }) => (
     <button
         onClick={onClick}
         className={cn(
@@ -408,7 +408,7 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void }> 
         )}
     >
         <div className="flex items-start gap-3 relative z-10 w-full">
-            <SpellSprite spell={spell} size={44} className="rounded border border-dragon-gold/30 bg-stone-900/20 p-0.5 shadow-sm shrink-0" />
+            <SpellSprite spell={spell} ruleset={ruleset} size={44} className="rounded border border-dragon-gold/30 bg-stone-900/20 p-0.5 shadow-sm shrink-0" />
             
             <div className="flex flex-col min-w-0 flex-1">
                 <span className={cn(

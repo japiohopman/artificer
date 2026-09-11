@@ -61,6 +61,10 @@ export interface CombatMonster {
   xp?: number;
   actions?: any[];
   special_abilities?: any[];
+  knownSpells?: any[];
+  preparedSpells?: string[];
+  spellSlots?: Record<string, { current: number; max: number }>;
+  spellcastingAbility?: string;
 }
 
 export interface CombatState {
@@ -437,8 +441,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       id,
       name: monster.name,
       type: monster.type || 'monster',
-      hp: monster.hit_points || 10,
-      maxHp: monster.hit_points || 10,
+      hp: monster.hit_points || monster.hp || 10,
+      maxHp: monster.hit_points || monster.maxHp || monster.hp || 10,
       x,
       y,
       imageUrl: (monster.image && (monster.image.includes('/tokens/') || monster.image.includes('/enemies/tokens/'))) ? monster.image : (monster.imageUrl || monster.image),
@@ -447,18 +451,22 @@ export const useGameStore = create<GameState>((set, get) => ({
       perception: monster.senses?.passive_perception || 10,
       speed: monster.speed?.walk ? parseInt(monster.speed.walk) / 5 : 6,
       stats: {
-        str: monster.strength || 10,
-        dex: monster.dexterity || 10,
-        con: monster.constitution || 10,
-        int: monster.intelligence || 10,
-        wis: monster.wisdom || 10,
-        cha: monster.charisma || 10
+        str: monster.strength || monster.stats?.str || 10,
+        dex: monster.dexterity || monster.stats?.dex || 10,
+        con: monster.constitution || monster.stats?.con || 10,
+        int: monster.intelligence || monster.stats?.int || 10,
+        wis: monster.wisdom || monster.stats?.wis || 10,
+        cha: monster.charisma || monster.stats?.cha || 10
       },
       armor_class: monster.armor_class,
       isAlly: monster.isAlly || false,
       xp: monster.xp || 0,
       actions: monster.actions || [],
-      special_abilities: monster.special_abilities || []
+      special_abilities: monster.special_abilities || [],
+      knownSpells: monster.knownSpells || [],
+      preparedSpells: monster.preparedSpells || [],
+      spellSlots: monster.spellSlots || {},
+      spellcastingAbility: monster.spellcastingAbility
     };
 
     return {
@@ -836,6 +844,13 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   resolveCombatAction: async (actor, target, action) => {
+    // Dispatch boundary: Route spell category actions directly to canonical domain spell resolver
+    if (action.category === 'Spells') {
+      const { resolveSpellAction } = await import('../domain/spells/spellResolver');
+      await resolveSpellAction(actor, target, action, action.data?.level);
+      return;
+    }
+
     const { addLog, rollDice3D, updateMonsterHp, removeMonsterFromCombat, activeCharacterId } = get();
     const { modifyHp } = useCharacterStore.getState();
 
