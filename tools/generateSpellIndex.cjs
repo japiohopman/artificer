@@ -35,7 +35,8 @@ function generateIndexForRuleset(rulesetFolder, outputFilename) {
         casting_time: data.casting_time,
         range: data.range,
         duration: data.duration,
-        json_path: `/assets/atlas/spell/json/${rulesetFolder}/${path.basename(file)}`
+        json_path: `/assets/atlas/spell/json/${rulesetFolder}/${path.basename(file)}`,
+        ...(data.sprite ? { sprite: data.sprite } : {})
       });
     } catch (e) {
       console.error(`Error parsing ${file}:`, e.message);

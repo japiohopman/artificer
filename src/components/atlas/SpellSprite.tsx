@@ -18,6 +18,54 @@ export const SpellSprite: React.FC<SpellSpriteProps> = ({
   size = 48,
   alt
 }) => {
+  // Case 0: Direct canonical `sprite` object provided on spell item
+  if (typeof spell === 'object' && spell !== null && 'sprite' in spell && spell.sprite?.sheet) {
+    const { atlas = 'spell', sheet, cell = 0 } = spell.sprite;
+    const sheetFilename = sheet.split('/').pop() || sheet;
+
+    if (sheetFilename.includes('sheet')) {
+      const sheetPath = `/assets/atlas/${atlas}/sprites/${sheetFilename}`;
+      const cols = 4;
+      const rows = 4;
+      const row = Math.floor(cell / cols);
+      const col = cell % cols;
+      const bgSizeX = cols * 100;
+      const bgSizeY = rows * 100;
+      const posX = (col / (cols - 1)) * 100;
+      const posY = (row / (rows - 1)) * 100;
+
+      return (
+        <div
+          className={cn('relative overflow-hidden shrink-0 bg-no-repeat', className)}
+          style={{
+            width: typeof size === 'number' ? `${size}px` : size,
+            height: typeof size === 'number' ? `${size}px` : size,
+            backgroundImage: `url('${sheetPath}')`,
+            backgroundSize: `${bgSizeX}% ${bgSizeY}%`,
+            backgroundPosition: `${posX}% ${posY}%`
+          }}
+          aria-label={alt || spell.name || 'Spell sprite'}
+          role="img"
+        />
+      );
+    } else {
+      const imagePath = `/assets/atlas/${atlas}/images/${sheetFilename}`;
+      return (
+        <div
+          className={cn('relative overflow-hidden shrink-0 flex items-center justify-center', className)}
+          style={{ width: typeof size === 'number' ? `${size}px` : size, height: typeof size === 'number' ? `${size}px` : size }}
+        >
+          <img
+            src={imagePath}
+            alt={alt || spell.name || 'Spell asset'}
+            className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+            loading="lazy"
+          />
+        </div>
+      );
+    }
+  }
+
   const visualId = resolveSpellVisualIdentity(spell, ruleset);
   let mapping = getSpellSpriteCellForVisual(visualId);
 

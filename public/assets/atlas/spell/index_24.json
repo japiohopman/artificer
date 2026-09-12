@@ -14,7 +14,12 @@
     "casting_time": "1 reaction",
     "range": "Self",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/absorb_elements.json"
+    "json_path": "/assets/atlas/spell/json/24/absorb_elements.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "acid_arrow",
@@ -27,7 +32,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/acid_arrow.json"
+    "json_path": "/assets/atlas/spell/json/24/acid_arrow.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "acid_splash",
@@ -42,7 +52,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/acid_splash.json"
+    "json_path": "/assets/atlas/spell/json/24/acid_splash.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "aid",
@@ -57,7 +72,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/aid.json"
+    "json_path": "/assets/atlas/spell/json/24/aid.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "alarm",
@@ -72,7 +92,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/alarm.json"
+    "json_path": "/assets/atlas/spell/json/24/alarm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "alter_self",
@@ -87,7 +112,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/alter_self.json"
+    "json_path": "/assets/atlas/spell/json/24/alter_self.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "animal_friendship",
@@ -102,7 +132,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/animal_friendship.json"
+    "json_path": "/assets/atlas/spell/json/24/animal_friendship.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "animal_messenger",
@@ -117,7 +152,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/animal_messenger.json"
+    "json_path": "/assets/atlas/spell/json/24/animal_messenger.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "animal_shapes",
@@ -130,7 +170,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 24 hours",
-    "json_path": "/assets/atlas/spell/json/24/animal_shapes.json"
+    "json_path": "/assets/atlas/spell/json/24/animal_shapes.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "animal_shapes.webp",
+      "cell": 0
+    }
   },
   {
     "index": "animate_dead",
@@ -144,7 +189,12 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/animate_dead.json"
+    "json_path": "/assets/atlas/spell/json/24/animate_dead.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "animate_dead.webp",
+      "cell": 0
+    }
   },
   {
     "index": "animate_objects",
@@ -160,7 +210,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/animate_objects.json"
+    "json_path": "/assets/atlas/spell/json/24/animate_objects.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "animate_objects.webp",
+      "cell": 0
+    }
   },
   {
     "index": "antilife_shell",
@@ -173,7 +228,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/antilife_shell.json"
+    "json_path": "/assets/atlas/spell/json/24/antilife_shell.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "antilife_shell.webp",
+      "cell": 0
+    }
   },
   {
     "index": "antimagic_field",
@@ -187,7 +247,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/antimagic_field.json"
+    "json_path": "/assets/atlas/spell/json/24/antimagic_field.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "antimagic_field.webp",
+      "cell": 0
+    }
   },
   {
     "index": "antipathy_sympathy",
@@ -201,7 +266,12 @@
     "casting_time": "1 hour",
     "range": "60 feet",
     "duration": "10 days",
-    "json_path": "/assets/atlas/spell/json/24/antipathy_sympathy.json"
+    "json_path": "/assets/atlas/spell/json/24/antipathy_sympathy.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "antipathy_sympathy.webp",
+      "cell": 0
+    }
   },
   {
     "index": "arcane_eye",
@@ -216,7 +286,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/arcane_eye.json"
+    "json_path": "/assets/atlas/spell/json/24/arcane_eye.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "arcane_eye.webp",
+      "cell": 0
+    }
   },
   {
     "index": "arcane_hand",
@@ -230,7 +305,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/arcane_hand.json"
+    "json_path": "/assets/atlas/spell/json/24/arcane_hand.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "arcane_hand.webp",
+      "cell": 0
+    }
   },
   {
     "index": "arcane_lock",
@@ -244,7 +324,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/arcane_lock.json"
+    "json_path": "/assets/atlas/spell/json/24/arcane_lock.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "arcane_sword",
@@ -258,7 +343,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/arcane_sword.json"
+    "json_path": "/assets/atlas/spell/json/24/arcane_sword.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "arcane_sword.webp",
+      "cell": 0
+    }
   },
   {
     "index": "arcanists_magic_aura",
@@ -271,7 +361,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/arcanists_magic_aura.json"
+    "json_path": "/assets/atlas/spell/json/24/arcanists_magic_aura.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "astral_projection",
@@ -286,7 +381,12 @@
     "casting_time": "1 hour",
     "range": "10 feet",
     "duration": "Special",
-    "json_path": "/assets/atlas/spell/json/24/astral_projection.json"
+    "json_path": "/assets/atlas/spell/json/24/astral_projection.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "astral_projection.webp",
+      "cell": 0
+    }
   },
   {
     "index": "augury",
@@ -299,7 +399,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/augury.json"
+    "json_path": "/assets/atlas/spell/json/24/augury.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "awaken",
@@ -313,7 +418,12 @@
     "casting_time": "8 hours",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/awaken.json"
+    "json_path": "/assets/atlas/spell/json/24/awaken.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "awaken.webp",
+      "cell": 0
+    }
   },
   {
     "index": "bane",
@@ -327,7 +437,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/bane.json"
+    "json_path": "/assets/atlas/spell/json/24/bane.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "banishment",
@@ -344,7 +459,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/banishment.json"
+    "json_path": "/assets/atlas/spell/json/24/banishment.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "banishment.webp",
+      "cell": 0
+    }
   },
   {
     "index": "barkskin",
@@ -358,7 +478,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/barkskin.json"
+    "json_path": "/assets/atlas/spell/json/24/barkskin.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "beacon_of_hope",
@@ -371,7 +496,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/beacon_of_hope.json"
+    "json_path": "/assets/atlas/spell/json/24/beacon_of_hope.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "beacon_of_hope.webp",
+      "cell": 0
+    }
   },
   {
     "index": "bestow_curse",
@@ -386,7 +516,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/bestow_curse.json"
+    "json_path": "/assets/atlas/spell/json/24/bestow_curse.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "bestow_curse.webp",
+      "cell": 0
+    }
   },
   {
     "index": "black_tentacles",
@@ -399,7 +534,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/black_tentacles.json"
+    "json_path": "/assets/atlas/spell/json/24/black_tentacles.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "black_tentacles.webp",
+      "cell": 0
+    }
   },
   {
     "index": "blade_barrier",
@@ -412,7 +552,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/blade_barrier.json"
+    "json_path": "/assets/atlas/spell/json/24/blade_barrier.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "blade_barrier.webp",
+      "cell": 0
+    }
   },
   {
     "index": "bless",
@@ -426,7 +571,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/bless.json"
+    "json_path": "/assets/atlas/spell/json/24/bless.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "blight",
@@ -442,7 +592,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/blight.json"
+    "json_path": "/assets/atlas/spell/json/24/blight.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "blight.webp",
+      "cell": 0
+    }
   },
   {
     "index": "blindness_deafness",
@@ -458,7 +613,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/blindness_deafness.json"
+    "json_path": "/assets/atlas/spell/json/24/blindness_deafness.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "blink",
@@ -473,7 +633,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/blink.json"
+    "json_path": "/assets/atlas/spell/json/24/blink.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "blink.webp",
+      "cell": 0
+    }
   },
   {
     "index": "blur",
@@ -488,7 +653,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/blur.json"
+    "json_path": "/assets/atlas/spell/json/24/blur.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "branding_smite",
@@ -501,7 +671,12 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/branding_smite.json"
+    "json_path": "/assets/atlas/spell/json/24/branding_smite.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "burning_hands",
@@ -515,7 +690,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/burning_hands.json"
+    "json_path": "/assets/atlas/spell/json/24/burning_hands.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "call_lightning",
@@ -528,7 +708,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/call_lightning.json"
+    "json_path": "/assets/atlas/spell/json/24/call_lightning.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "call_lightning.webp",
+      "cell": 0
+    }
   },
   {
     "index": "calm_emotions",
@@ -542,7 +727,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/calm_emotions.json"
+    "json_path": "/assets/atlas/spell/json/24/calm_emotions.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "catapult",
@@ -557,7 +747,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/catapult.json"
+    "json_path": "/assets/atlas/spell/json/24/catapult.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "chain_lightning",
@@ -571,7 +766,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/chain_lightning.json"
+    "json_path": "/assets/atlas/spell/json/24/chain_lightning.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "chain_lightning.webp",
+      "cell": 0
+    }
   },
   {
     "index": "charm_person",
@@ -588,7 +788,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/charm_person.json"
+    "json_path": "/assets/atlas/spell/json/24/charm_person.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "chill_touch",
@@ -603,7 +808,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/chill_touch.json"
+    "json_path": "/assets/atlas/spell/json/24/chill_touch.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "circle_of_death",
@@ -618,7 +828,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/circle_of_death.json"
+    "json_path": "/assets/atlas/spell/json/24/circle_of_death.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "circle_of_death.webp",
+      "cell": 0
+    }
   },
   {
     "index": "clairvoyance",
@@ -634,7 +849,12 @@
     "casting_time": "10 minutes",
     "range": "1 mile",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/clairvoyance.json"
+    "json_path": "/assets/atlas/spell/json/24/clairvoyance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "clairvoyance.webp",
+      "cell": 0
+    }
   },
   {
     "index": "clone",
@@ -647,7 +867,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/clone.json"
+    "json_path": "/assets/atlas/spell/json/24/clone.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "clone.webp",
+      "cell": 0
+    }
   },
   {
     "index": "cloudkill",
@@ -661,7 +886,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/cloudkill.json"
+    "json_path": "/assets/atlas/spell/json/24/cloudkill.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cloudkill.webp",
+      "cell": 0
+    }
   },
   {
     "index": "color_spray",
@@ -675,7 +905,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/color_spray.json"
+    "json_path": "/assets/atlas/spell/json/24/color_spray.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "command",
@@ -689,7 +924,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/command.json"
+    "json_path": "/assets/atlas/spell/json/24/command.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "commune_with_nature",
@@ -703,7 +943,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/commune_with_nature.json"
+    "json_path": "/assets/atlas/spell/json/24/commune_with_nature.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "commune_with_nature.webp",
+      "cell": 0
+    }
   },
   {
     "index": "commune",
@@ -716,7 +961,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/commune.json"
+    "json_path": "/assets/atlas/spell/json/24/commune.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "commune.webp",
+      "cell": 0
+    }
   },
   {
     "index": "comprehend_languages",
@@ -732,7 +982,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/comprehend_languages.json"
+    "json_path": "/assets/atlas/spell/json/24/comprehend_languages.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "compulsion",
@@ -745,7 +1000,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/compulsion.json"
+    "json_path": "/assets/atlas/spell/json/24/compulsion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "compulsion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "cone_of_cold",
@@ -759,7 +1019,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/cone_of_cold.json"
+    "json_path": "/assets/atlas/spell/json/24/cone_of_cold.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cone_of_cold.webp",
+      "cell": 0
+    }
   },
   {
     "index": "confusion",
@@ -775,7 +1040,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/confusion.json"
+    "json_path": "/assets/atlas/spell/json/24/confusion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "confusion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "conjure_animals",
@@ -789,7 +1059,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_animals.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_animals.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "conjure_celestial",
@@ -802,7 +1077,12 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_celestial.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_celestial.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "conjure_celestial.webp",
+      "cell": 0
+    }
   },
   {
     "index": "conjure_elemental",
@@ -816,7 +1096,12 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_elemental.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_elemental.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "conjure_fey",
@@ -830,7 +1115,12 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_fey.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_fey.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "conjure_fey.webp",
+      "cell": 0
+    }
   },
   {
     "index": "conjure_minor_elementals",
@@ -844,7 +1134,12 @@
     "casting_time": "1 minute",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_minor_elementals.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_minor_elementals.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "conjure_woodland_beings",
@@ -858,7 +1153,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/conjure_woodland_beings.json"
+    "json_path": "/assets/atlas/spell/json/24/conjure_woodland_beings.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "contact_other_plane",
@@ -872,7 +1172,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/contact_other_plane.json"
+    "json_path": "/assets/atlas/spell/json/24/contact_other_plane.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "contagion",
@@ -886,7 +1191,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "7 days",
-    "json_path": "/assets/atlas/spell/json/24/contagion.json"
+    "json_path": "/assets/atlas/spell/json/24/contagion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "contingency",
@@ -899,7 +1209,12 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "10 days",
-    "json_path": "/assets/atlas/spell/json/24/contingency.json"
+    "json_path": "/assets/atlas/spell/json/24/contingency.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "contingency.webp",
+      "cell": 0
+    }
   },
   {
     "index": "continual_flame",
@@ -914,7 +1229,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/continual_flame.json"
+    "json_path": "/assets/atlas/spell/json/24/continual_flame.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "control_water",
@@ -929,7 +1249,12 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/control_water.json"
+    "json_path": "/assets/atlas/spell/json/24/control_water.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "control_weather",
@@ -944,7 +1269,12 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Up to 8 hours",
-    "json_path": "/assets/atlas/spell/json/24/control_weather.json"
+    "json_path": "/assets/atlas/spell/json/24/control_weather.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "control_weather.webp",
+      "cell": 0
+    }
   },
   {
     "index": "counterspell",
@@ -959,7 +1289,12 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/counterspell.json"
+    "json_path": "/assets/atlas/spell/json/24/counterspell.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "counterspell.webp",
+      "cell": 0
+    }
   },
   {
     "index": "create_food_and_water",
@@ -974,7 +1309,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/create_food_and_water.json"
+    "json_path": "/assets/atlas/spell/json/24/create_food_and_water.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "create_food_and_water.webp",
+      "cell": 0
+    }
   },
   {
     "index": "create_or_destroy_water",
@@ -988,7 +1328,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/create_or_destroy_water.json"
+    "json_path": "/assets/atlas/spell/json/24/create_or_destroy_water.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "create_undead",
@@ -1003,7 +1348,12 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/create_undead.json"
+    "json_path": "/assets/atlas/spell/json/24/create_undead.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "create_undead.webp",
+      "cell": 0
+    }
   },
   {
     "index": "creation",
@@ -1018,7 +1368,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Special",
-    "json_path": "/assets/atlas/spell/json/24/creation.json"
+    "json_path": "/assets/atlas/spell/json/24/creation.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "creation.webp",
+      "cell": 0
+    }
   },
   {
     "index": "cure_wounds",
@@ -1036,7 +1391,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/cure_wounds.json"
+    "json_path": "/assets/atlas/spell/json/24/cure_wounds.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "dancing_lights",
@@ -1052,7 +1412,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/dancing_lights.json"
+    "json_path": "/assets/atlas/spell/json/24/dancing_lights.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "darkness",
@@ -1067,7 +1432,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/darkness.json"
+    "json_path": "/assets/atlas/spell/json/24/darkness.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "darkvision",
@@ -1084,7 +1454,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/darkvision.json"
+    "json_path": "/assets/atlas/spell/json/24/darkvision.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "daylight",
@@ -1101,7 +1476,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/daylight.json"
+    "json_path": "/assets/atlas/spell/json/24/daylight.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "daylight.webp",
+      "cell": 0
+    }
   },
   {
     "index": "death_ward",
@@ -1115,7 +1495,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/death_ward.json"
+    "json_path": "/assets/atlas/spell/json/24/death_ward.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "delayed_blast_fireball",
@@ -1129,7 +1514,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/delayed_blast_fireball.json"
+    "json_path": "/assets/atlas/spell/json/24/delayed_blast_fireball.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "delayed_blast_fireball.webp",
+      "cell": 0
+    }
   },
   {
     "index": "demiplane",
@@ -1143,7 +1533,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/demiplane.json"
+    "json_path": "/assets/atlas/spell/json/24/demiplane.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "demiplane.webp",
+      "cell": 0
+    }
   },
   {
     "index": "detect_evil_and_good",
@@ -1157,7 +1552,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "detect_magic",
@@ -1177,7 +1577,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/detect_magic.json"
+    "json_path": "/assets/atlas/spell/json/24/detect_magic.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "detect_poison_and_disease",
@@ -1193,7 +1598,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json"
+    "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "detect_thoughts",
@@ -1208,7 +1618,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/detect_thoughts.json"
+    "json_path": "/assets/atlas/spell/json/24/detect_thoughts.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "dimension_door",
@@ -1224,7 +1639,12 @@
     "casting_time": "1 action",
     "range": "500 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/dimension_door.json"
+    "json_path": "/assets/atlas/spell/json/24/dimension_door.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "disguise_self",
@@ -1240,7 +1660,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/disguise_self.json"
+    "json_path": "/assets/atlas/spell/json/24/disguise_self.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 0
+    }
   },
   {
     "index": "disintegrate",
@@ -1254,7 +1679,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/disintegrate.json"
+    "json_path": "/assets/atlas/spell/json/24/disintegrate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "disintegrate.webp",
+      "cell": 0
+    }
   },
   {
     "index": "dispel_evil_and_good",
@@ -1268,7 +1698,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/dispel_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/24/dispel_evil_and_good.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "dispel_evil_and_good.webp",
+      "cell": 0
+    }
   },
   {
     "index": "dispel_magic",
@@ -1288,7 +1723,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/dispel_magic.json"
+    "json_path": "/assets/atlas/spell/json/24/dispel_magic.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "divination",
@@ -1301,7 +1741,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/divination.json"
+    "json_path": "/assets/atlas/spell/json/24/divination.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "divine_favor",
@@ -1314,7 +1759,12 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/divine_favor.json"
+    "json_path": "/assets/atlas/spell/json/24/divine_favor.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 1
+    }
   },
   {
     "index": "divine_word",
@@ -1327,7 +1777,12 @@
     "casting_time": "1 bonus action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/divine_word.json"
+    "json_path": "/assets/atlas/spell/json/24/divine_word.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "divine_word.webp",
+      "cell": 0
+    }
   },
   {
     "index": "dominate_beast",
@@ -1341,7 +1796,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/dominate_beast.json"
+    "json_path": "/assets/atlas/spell/json/24/dominate_beast.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "dominate_monster",
@@ -1357,7 +1817,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/dominate_monster.json"
+    "json_path": "/assets/atlas/spell/json/24/dominate_monster.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "dominate_monster.webp",
+      "cell": 0
+    }
   },
   {
     "index": "dominate_person",
@@ -1372,7 +1837,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/dominate_person.json"
+    "json_path": "/assets/atlas/spell/json/24/dominate_person.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "dream",
@@ -1387,7 +1857,12 @@
     "casting_time": "1 minute",
     "range": "Special",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/dream.json"
+    "json_path": "/assets/atlas/spell/json/24/dream.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "druidcraft",
@@ -1400,7 +1875,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/druidcraft.json"
+    "json_path": "/assets/atlas/spell/json/24/druidcraft.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "earthquake",
@@ -1415,7 +1895,12 @@
     "casting_time": "1 action",
     "range": "500 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/earthquake.json"
+    "json_path": "/assets/atlas/spell/json/24/earthquake.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "earthquake.webp",
+      "cell": 0
+    }
   },
   {
     "index": "eldritch_blast",
@@ -1428,7 +1913,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/eldritch_blast.json"
+    "json_path": "/assets/atlas/spell/json/24/eldritch_blast.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "enhance_ability",
@@ -1445,7 +1935,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/enhance_ability.json"
+    "json_path": "/assets/atlas/spell/json/24/enhance_ability.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "enhance_ability.webp",
+      "cell": 0
+    }
   },
   {
     "index": "enlarge_reduce",
@@ -1460,7 +1955,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/enlarge_reduce.json"
+    "json_path": "/assets/atlas/spell/json/24/enlarge_reduce.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "enlarge_reduce.webp",
+      "cell": 0
+    }
   },
   {
     "index": "entangle",
@@ -1473,7 +1973,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/entangle.json"
+    "json_path": "/assets/atlas/spell/json/24/entangle.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 2
+    }
   },
   {
     "index": "enthrall",
@@ -1487,7 +1992,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/enthrall.json"
+    "json_path": "/assets/atlas/spell/json/24/enthrall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "etherealness",
@@ -1504,7 +2014,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/etherealness.json"
+    "json_path": "/assets/atlas/spell/json/24/etherealness.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "etherealness.webp",
+      "cell": 0
+    }
   },
   {
     "index": "expeditious_retreat",
@@ -1520,7 +2035,12 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/expeditious_retreat.json"
+    "json_path": "/assets/atlas/spell/json/24/expeditious_retreat.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 3
+    }
   },
   {
     "index": "eyebite",
@@ -1536,7 +2056,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/eyebite.json"
+    "json_path": "/assets/atlas/spell/json/24/eyebite.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "eyebite.webp",
+      "cell": 0
+    }
   },
   {
     "index": "fabricate",
@@ -1550,7 +2075,12 @@
     "casting_time": "10 minutes",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/fabricate.json"
+    "json_path": "/assets/atlas/spell/json/24/fabricate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "faerie_fire",
@@ -1564,7 +2094,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/faerie_fire.json"
+    "json_path": "/assets/atlas/spell/json/24/faerie_fire.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 4
+    }
   },
   {
     "index": "faithful_hound",
@@ -1578,7 +2113,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/faithful_hound.json"
+    "json_path": "/assets/atlas/spell/json/24/faithful_hound.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "false_life",
@@ -1593,7 +2133,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/false_life.json"
+    "json_path": "/assets/atlas/spell/json/24/false_life.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 5
+    }
   },
   {
     "index": "fear",
@@ -1609,7 +2154,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/fear.json"
+    "json_path": "/assets/atlas/spell/json/24/fear.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "feather_fall",
@@ -1625,7 +2175,12 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/feather_fall.json"
+    "json_path": "/assets/atlas/spell/json/24/feather_fall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 6
+    }
   },
   {
     "index": "feeblemind",
@@ -1641,7 +2196,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/feeblemind.json"
+    "json_path": "/assets/atlas/spell/json/24/feeblemind.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "feeblemind.webp",
+      "cell": 0
+    }
   },
   {
     "index": "find_familiar",
@@ -1654,7 +2214,12 @@
     "casting_time": "1 hour",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/find_familiar.json"
+    "json_path": "/assets/atlas/spell/json/24/find_familiar.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 7
+    }
   },
   {
     "index": "find_steed",
@@ -1667,7 +2232,12 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/find_steed.json"
+    "json_path": "/assets/atlas/spell/json/24/find_steed.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "find_steed.webp",
+      "cell": 0
+    }
   },
   {
     "index": "find_the_path",
@@ -1682,7 +2252,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Up to 24 hours",
-    "json_path": "/assets/atlas/spell/json/24/find_the_path.json"
+    "json_path": "/assets/atlas/spell/json/24/find_the_path.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "find_the_path.webp",
+      "cell": 0
+    }
   },
   {
     "index": "find_traps",
@@ -1697,7 +2272,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/find_traps.json"
+    "json_path": "/assets/atlas/spell/json/24/find_traps.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "find_traps.webp",
+      "cell": 0
+    }
   },
   {
     "index": "finger_of_death",
@@ -1712,7 +2292,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/finger_of_death.json"
+    "json_path": "/assets/atlas/spell/json/24/finger_of_death.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "finger_of_death.webp",
+      "cell": 0
+    }
   },
   {
     "index": "fire_bolt",
@@ -1727,7 +2312,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/fire_bolt.json"
+    "json_path": "/assets/atlas/spell/json/24/fire_bolt.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "fire_shield",
@@ -1740,7 +2330,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/fire_shield.json"
+    "json_path": "/assets/atlas/spell/json/24/fire_shield.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "fire_storm",
@@ -1755,7 +2350,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/fire_storm.json"
+    "json_path": "/assets/atlas/spell/json/24/fire_storm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "fire_storm.webp",
+      "cell": 0
+    }
   },
   {
     "index": "fireball",
@@ -1769,7 +2369,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/fireball.json"
+    "json_path": "/assets/atlas/spell/json/24/fireball.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "fireball.webp",
+      "cell": 0
+    }
   },
   {
     "index": "flame_blade",
@@ -1782,7 +2387,12 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/flame_blade.json"
+    "json_path": "/assets/atlas/spell/json/24/flame_blade.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "flame_blade.webp",
+      "cell": 0
+    }
   },
   {
     "index": "flame_strike",
@@ -1795,7 +2405,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/flame_strike.json"
+    "json_path": "/assets/atlas/spell/json/24/flame_strike.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "flaming_sphere",
@@ -1809,7 +2424,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/flaming_sphere.json"
+    "json_path": "/assets/atlas/spell/json/24/flaming_sphere.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "flaming_sphere.webp",
+      "cell": 0
+    }
   },
   {
     "index": "flesh_to_stone",
@@ -1823,7 +2443,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/flesh_to_stone.json"
+    "json_path": "/assets/atlas/spell/json/24/flesh_to_stone.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "flesh_to_stone.webp",
+      "cell": 0
+    }
   },
   {
     "index": "floating_disk",
@@ -1836,7 +2461,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/floating_disk.json"
+    "json_path": "/assets/atlas/spell/json/24/floating_disk.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 8
+    }
   },
   {
     "index": "fly",
@@ -1852,7 +2482,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/fly.json"
+    "json_path": "/assets/atlas/spell/json/24/fly.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "fog_cloud",
@@ -1868,7 +2503,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/fog_cloud.json"
+    "json_path": "/assets/atlas/spell/json/24/fog_cloud.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 9
+    }
   },
   {
     "index": "forbiddance",
@@ -1881,7 +2521,12 @@
     "casting_time": "10 minutes",
     "range": "Touch",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/forbiddance.json"
+    "json_path": "/assets/atlas/spell/json/24/forbiddance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "forbiddance.webp",
+      "cell": 0
+    }
   },
   {
     "index": "forcecage",
@@ -1896,7 +2541,12 @@
     "casting_time": "1 action",
     "range": "100 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/forcecage.json"
+    "json_path": "/assets/atlas/spell/json/24/forcecage.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "forcecage.webp",
+      "cell": 0
+    }
   },
   {
     "index": "foresight",
@@ -1912,7 +2562,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/foresight.json"
+    "json_path": "/assets/atlas/spell/json/24/foresight.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "foresight.webp",
+      "cell": 0
+    }
   },
   {
     "index": "freedom_of_movement",
@@ -1929,7 +2584,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/freedom_of_movement.json"
+    "json_path": "/assets/atlas/spell/json/24/freedom_of_movement.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "freezing_sphere",
@@ -1942,7 +2602,12 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/freezing_sphere.json"
+    "json_path": "/assets/atlas/spell/json/24/freezing_sphere.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "gaseous_form",
@@ -1958,7 +2623,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/gaseous_form.json"
+    "json_path": "/assets/atlas/spell/json/24/gaseous_form.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "gate",
@@ -1973,7 +2643,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/gate.json"
+    "json_path": "/assets/atlas/spell/json/24/gate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "gate.webp",
+      "cell": 0
+    }
   },
   {
     "index": "geas",
@@ -1990,7 +2665,12 @@
     "casting_time": "1 minute",
     "range": "60 feet",
     "duration": "30 days",
-    "json_path": "/assets/atlas/spell/json/24/geas.json"
+    "json_path": "/assets/atlas/spell/json/24/geas.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "geas.webp",
+      "cell": 0
+    }
   },
   {
     "index": "gentle_repose",
@@ -2004,7 +2684,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "10 days",
-    "json_path": "/assets/atlas/spell/json/24/gentle_repose.json"
+    "json_path": "/assets/atlas/spell/json/24/gentle_repose.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "giant_insect",
@@ -2017,7 +2702,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/giant_insect.json"
+    "json_path": "/assets/atlas/spell/json/24/giant_insect.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "glibness",
@@ -2031,7 +2721,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/glibness.json"
+    "json_path": "/assets/atlas/spell/json/24/glibness.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "glibness.webp",
+      "cell": 0
+    }
   },
   {
     "index": "globe_of_invulnerability",
@@ -2045,7 +2740,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/globe_of_invulnerability.json"
+    "json_path": "/assets/atlas/spell/json/24/globe_of_invulnerability.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "glyph_of_warding",
@@ -2060,7 +2760,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/glyph_of_warding.json"
+    "json_path": "/assets/atlas/spell/json/24/glyph_of_warding.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "goodberry",
@@ -2074,7 +2779,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/goodberry.json"
+    "json_path": "/assets/atlas/spell/json/24/goodberry.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 10
+    }
   },
   {
     "index": "grease",
@@ -2088,7 +2798,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/grease.json"
+    "json_path": "/assets/atlas/spell/json/24/grease.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 11
+    }
   },
   {
     "index": "greater_invisibility",
@@ -2103,7 +2818,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/greater_invisibility.json"
+    "json_path": "/assets/atlas/spell/json/24/greater_invisibility.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "greater_restoration",
@@ -2119,7 +2839,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/greater_restoration.json"
+    "json_path": "/assets/atlas/spell/json/24/greater_restoration.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "guardian_of_faith",
@@ -2132,7 +2857,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/guardian_of_faith.json"
+    "json_path": "/assets/atlas/spell/json/24/guardian_of_faith.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "guards_and_wards",
@@ -2146,7 +2876,12 @@
     "casting_time": "10 minutes",
     "range": "Touch",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/guards_and_wards.json"
+    "json_path": "/assets/atlas/spell/json/24/guards_and_wards.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "guards_and_wards.webp",
+      "cell": 0
+    }
   },
   {
     "index": "guidance",
@@ -2161,7 +2896,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/guidance.json"
+    "json_path": "/assets/atlas/spell/json/24/guidance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "guiding_bolt",
@@ -2174,7 +2914,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json"
+    "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 12
+    }
   },
   {
     "index": "gust_of_wind",
@@ -2189,7 +2934,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/gust_of_wind.json"
+    "json_path": "/assets/atlas/spell/json/24/gust_of_wind.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "hallow",
@@ -2202,7 +2952,12 @@
     "casting_time": "24 hours",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/hallow.json"
+    "json_path": "/assets/atlas/spell/json/24/hallow.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "hallucinatory_terrain",
@@ -2218,7 +2973,12 @@
     "casting_time": "10 minutes",
     "range": "300 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/hallucinatory_terrain.json"
+    "json_path": "/assets/atlas/spell/json/24/hallucinatory_terrain.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "hallucinatory_terrain.webp",
+      "cell": 0
+    }
   },
   {
     "index": "harm",
@@ -2231,7 +2991,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/harm.json"
+    "json_path": "/assets/atlas/spell/json/24/harm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "haste",
@@ -2246,7 +3011,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/haste.json"
+    "json_path": "/assets/atlas/spell/json/24/haste.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "haste.webp",
+      "cell": 0
+    }
   },
   {
     "index": "heal",
@@ -2260,7 +3030,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/heal.json"
+    "json_path": "/assets/atlas/spell/json/24/heal.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "heal.webp",
+      "cell": 0
+    }
   },
   {
     "index": "healing_word",
@@ -2275,7 +3050,12 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/healing_word.json"
+    "json_path": "/assets/atlas/spell/json/24/healing_word.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 13
+    }
   },
   {
     "index": "heat_metal",
@@ -2290,7 +3070,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/heat_metal.json"
+    "json_path": "/assets/atlas/spell/json/24/heat_metal.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "hellish_rebuke",
@@ -2303,7 +3088,12 @@
     "casting_time": "1 reaction",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/hellish_rebuke.json"
+    "json_path": "/assets/atlas/spell/json/24/hellish_rebuke.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 14
+    }
   },
   {
     "index": "heroes_feast",
@@ -2317,7 +3107,12 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/heroes_feast.json"
+    "json_path": "/assets/atlas/spell/json/24/heroes_feast.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "heroism",
@@ -2331,7 +3126,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/heroism.json"
+    "json_path": "/assets/atlas/spell/json/24/heroism.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_02.webp",
+      "cell": 15
+    }
   },
   {
     "index": "hideous_laughter",
@@ -2345,7 +3145,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/hideous_laughter.json"
+    "json_path": "/assets/atlas/spell/json/24/hideous_laughter.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 0
+    }
   },
   {
     "index": "hold_monster",
@@ -2361,7 +3166,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/hold_monster.json"
+    "json_path": "/assets/atlas/spell/json/24/hold_monster.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "hold_person",
@@ -2379,7 +3189,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/hold_person.json"
+    "json_path": "/assets/atlas/spell/json/24/hold_person.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "holy_aura",
@@ -2392,7 +3207,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/holy_aura.json"
+    "json_path": "/assets/atlas/spell/json/24/holy_aura.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "holy_aura.webp",
+      "cell": 0
+    }
   },
   {
     "index": "hunters_mark",
@@ -2405,7 +3225,12 @@
     "casting_time": "1 bonus action",
     "range": "90 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/hunters_mark.json"
+    "json_path": "/assets/atlas/spell/json/24/hunters_mark.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 1
+    }
   },
   {
     "index": "hypnotic_pattern",
@@ -2421,7 +3246,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/hypnotic_pattern.json"
+    "json_path": "/assets/atlas/spell/json/24/hypnotic_pattern.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "ice_storm",
@@ -2436,7 +3266,12 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/ice_storm.json"
+    "json_path": "/assets/atlas/spell/json/24/ice_storm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "ice_storm.webp",
+      "cell": 0
+    }
   },
   {
     "index": "identify",
@@ -2451,7 +3286,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/identify.json"
+    "json_path": "/assets/atlas/spell/json/24/identify.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 2
+    }
   },
   {
     "index": "illusory_script",
@@ -2466,7 +3306,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "10 days",
-    "json_path": "/assets/atlas/spell/json/24/illusory_script.json"
+    "json_path": "/assets/atlas/spell/json/24/illusory_script.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 3
+    }
   },
   {
     "index": "imprisonment",
@@ -2480,7 +3325,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/imprisonment.json"
+    "json_path": "/assets/atlas/spell/json/24/imprisonment.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "imprisonment.webp",
+      "cell": 0
+    }
   },
   {
     "index": "incendiary_cloud",
@@ -2494,7 +3344,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/incendiary_cloud.json"
+    "json_path": "/assets/atlas/spell/json/24/incendiary_cloud.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "incendiary_cloud.webp",
+      "cell": 0
+    }
   },
   {
     "index": "inflict_wounds",
@@ -2507,7 +3362,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/inflict_wounds.json"
+    "json_path": "/assets/atlas/spell/json/24/inflict_wounds.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 4
+    }
   },
   {
     "index": "insect_plague",
@@ -2522,7 +3382,12 @@
     "casting_time": "1 action",
     "range": "300 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/insect_plague.json"
+    "json_path": "/assets/atlas/spell/json/24/insect_plague.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "instant_summons",
@@ -2535,7 +3400,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/instant_summons.json"
+    "json_path": "/assets/atlas/spell/json/24/instant_summons.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "invisibility",
@@ -2552,7 +3422,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/invisibility.json"
+    "json_path": "/assets/atlas/spell/json/24/invisibility.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "irresistible_dance",
@@ -2566,7 +3441,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/irresistible_dance.json"
+    "json_path": "/assets/atlas/spell/json/24/irresistible_dance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "jump",
@@ -2583,7 +3463,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/jump.json"
+    "json_path": "/assets/atlas/spell/json/24/jump.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 5
+    }
   },
   {
     "index": "knock",
@@ -2598,7 +3483,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/knock.json"
+    "json_path": "/assets/atlas/spell/json/24/knock.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "knock.webp",
+      "cell": 0
+    }
   },
   {
     "index": "legend_lore",
@@ -2613,7 +3503,12 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/legend_lore.json"
+    "json_path": "/assets/atlas/spell/json/24/legend_lore.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "legend_lore.webp",
+      "cell": 0
+    }
   },
   {
     "index": "lesser_restoration",
@@ -2631,7 +3526,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/lesser_restoration.json"
+    "json_path": "/assets/atlas/spell/json/24/lesser_restoration.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "levitate",
@@ -2646,7 +3546,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/levitate.json"
+    "json_path": "/assets/atlas/spell/json/24/levitate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "light",
@@ -2663,7 +3568,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/light.json"
+    "json_path": "/assets/atlas/spell/json/24/light.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "lightning_bolt",
@@ -2677,7 +3587,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/lightning_bolt.json"
+    "json_path": "/assets/atlas/spell/json/24/lightning_bolt.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "locate_animals_or_plants",
@@ -2692,7 +3607,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/locate_animals_or_plants.json"
+    "json_path": "/assets/atlas/spell/json/24/locate_animals_or_plants.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "locate_creature",
@@ -2710,7 +3630,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/locate_creature.json"
+    "json_path": "/assets/atlas/spell/json/24/locate_creature.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "locate_object",
@@ -2728,7 +3653,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/locate_object.json"
+    "json_path": "/assets/atlas/spell/json/24/locate_object.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "longstrider",
@@ -2745,7 +3675,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/longstrider.json"
+    "json_path": "/assets/atlas/spell/json/24/longstrider.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 6
+    }
   },
   {
     "index": "mage_armor",
@@ -2759,7 +3694,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/mage_armor.json"
+    "json_path": "/assets/atlas/spell/json/24/mage_armor.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 7
+    }
   },
   {
     "index": "mage_hand",
@@ -2776,7 +3716,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/mage_hand.json"
+    "json_path": "/assets/atlas/spell/json/24/mage_hand.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "magic_circle",
@@ -2792,7 +3737,12 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/magic_circle.json"
+    "json_path": "/assets/atlas/spell/json/24/magic_circle.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "magic_jar",
@@ -2805,7 +3755,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/magic_jar.json"
+    "json_path": "/assets/atlas/spell/json/24/magic_jar.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "magic_jar.webp",
+      "cell": 0
+    }
   },
   {
     "index": "magic_missile",
@@ -2819,7 +3774,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/magic_missile.json"
+    "json_path": "/assets/atlas/spell/json/24/magic_missile.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 8
+    }
   },
   {
     "index": "magic_mouth",
@@ -2834,7 +3794,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/magic_mouth.json"
+    "json_path": "/assets/atlas/spell/json/24/magic_mouth.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "magic_weapon",
@@ -2849,7 +3814,12 @@
     "casting_time": "1 bonus action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/magic_weapon.json"
+    "json_path": "/assets/atlas/spell/json/24/magic_weapon.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "magnificent_mansion",
@@ -2863,7 +3833,12 @@
     "casting_time": "1 minute",
     "range": "300 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/magnificent_mansion.json"
+    "json_path": "/assets/atlas/spell/json/24/magnificent_mansion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "magnificent_mansion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "major_image",
@@ -2879,7 +3854,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/major_image.json"
+    "json_path": "/assets/atlas/spell/json/24/major_image.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "mass_cure_wounds",
@@ -2894,7 +3874,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/mass_cure_wounds.json"
+    "json_path": "/assets/atlas/spell/json/24/mass_cure_wounds.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mass_cure_wounds.webp",
+      "cell": 0
+    }
   },
   {
     "index": "mass_heal",
@@ -2907,7 +3892,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/mass_heal.json"
+    "json_path": "/assets/atlas/spell/json/24/mass_heal.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mass_heal.webp",
+      "cell": 0
+    }
   },
   {
     "index": "mass_healing_word",
@@ -2920,7 +3910,12 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/mass_healing_word.json"
+    "json_path": "/assets/atlas/spell/json/24/mass_healing_word.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "mass_suggestion",
@@ -2936,7 +3931,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/mass_suggestion.json"
+    "json_path": "/assets/atlas/spell/json/24/mass_suggestion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mass_suggestion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "maze",
@@ -2949,7 +3949,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/maze.json"
+    "json_path": "/assets/atlas/spell/json/24/maze.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "maze.webp",
+      "cell": 0
+    }
   },
   {
     "index": "meld_into_stone",
@@ -2962,7 +3967,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/meld_into_stone.json"
+    "json_path": "/assets/atlas/spell/json/24/meld_into_stone.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "mending",
@@ -2980,7 +3990,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/mending.json"
+    "json_path": "/assets/atlas/spell/json/24/mending.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "message",
@@ -2996,7 +4011,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/message.json"
+    "json_path": "/assets/atlas/spell/json/24/message.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "meteor_swarm",
@@ -3010,7 +4030,12 @@
     "casting_time": "1 action",
     "range": "1 mile",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/meteor_swarm.json"
+    "json_path": "/assets/atlas/spell/json/24/meteor_swarm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "meteor_swarm.webp",
+      "cell": 0
+    }
   },
   {
     "index": "mind_blank",
@@ -3024,7 +4049,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/mind_blank.json"
+    "json_path": "/assets/atlas/spell/json/24/mind_blank.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mind_blank.webp",
+      "cell": 0
+    }
   },
   {
     "index": "minor_illusion",
@@ -3040,7 +4070,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/minor_illusion.json"
+    "json_path": "/assets/atlas/spell/json/24/minor_illusion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "mirage_arcane",
@@ -3055,7 +4090,12 @@
     "casting_time": "10 minutes",
     "range": "Sight",
     "duration": "10 days",
-    "json_path": "/assets/atlas/spell/json/24/mirage_arcane.json"
+    "json_path": "/assets/atlas/spell/json/24/mirage_arcane.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mirage_arcane.webp",
+      "cell": 0
+    }
   },
   {
     "index": "mirror_image",
@@ -3070,7 +4110,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/mirror_image.json"
+    "json_path": "/assets/atlas/spell/json/24/mirror_image.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mirror_image.webp",
+      "cell": 0
+    }
   },
   {
     "index": "mislead",
@@ -3084,7 +4129,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/mislead.json"
+    "json_path": "/assets/atlas/spell/json/24/mislead.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "mislead.webp",
+      "cell": 0
+    }
   },
   {
     "index": "misty_step",
@@ -3099,7 +4149,12 @@
     "casting_time": "1 bonus action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/misty_step.json"
+    "json_path": "/assets/atlas/spell/json/24/misty_step.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "misty_step.webp",
+      "cell": 0
+    }
   },
   {
     "index": "modify_memory",
@@ -3113,7 +4168,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/modify_memory.json"
+    "json_path": "/assets/atlas/spell/json/24/modify_memory.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "moonbeam",
@@ -3126,7 +4186,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/moonbeam.json"
+    "json_path": "/assets/atlas/spell/json/24/moonbeam.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "move_earth",
@@ -3141,7 +4206,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 2 hours",
-    "json_path": "/assets/atlas/spell/json/24/move_earth.json"
+    "json_path": "/assets/atlas/spell/json/24/move_earth.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "move_earth.webp",
+      "cell": 0
+    }
   },
   {
     "index": "nondetection",
@@ -3156,7 +4226,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/nondetection.json"
+    "json_path": "/assets/atlas/spell/json/24/nondetection.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "pass_without_trace",
@@ -3170,7 +4245,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/pass_without_trace.json"
+    "json_path": "/assets/atlas/spell/json/24/pass_without_trace.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "pass_without_trace.webp",
+      "cell": 0
+    }
   },
   {
     "index": "passwall",
@@ -3183,7 +4263,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/passwall.json"
+    "json_path": "/assets/atlas/spell/json/24/passwall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "passwall.webp",
+      "cell": 0
+    }
   },
   {
     "index": "phantasmal_killer",
@@ -3196,7 +4281,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/phantasmal_killer.json"
+    "json_path": "/assets/atlas/spell/json/24/phantasmal_killer.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "phantom_steed",
@@ -3209,7 +4299,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/phantom_steed.json"
+    "json_path": "/assets/atlas/spell/json/24/phantom_steed.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "planar_ally",
@@ -3222,7 +4317,12 @@
     "casting_time": "10 minutes",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/planar_ally.json"
+    "json_path": "/assets/atlas/spell/json/24/planar_ally.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "planar_ally.webp",
+      "cell": 0
+    }
   },
   {
     "index": "planar_binding",
@@ -3238,7 +4338,12 @@
     "casting_time": "1 hour",
     "range": "60 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/planar_binding.json"
+    "json_path": "/assets/atlas/spell/json/24/planar_binding.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "plane_shift",
@@ -3255,7 +4360,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/plane_shift.json"
+    "json_path": "/assets/atlas/spell/json/24/plane_shift.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "plane_shift.webp",
+      "cell": 0
+    }
   },
   {
     "index": "plant_growth",
@@ -3270,7 +4380,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/plant_growth.json"
+    "json_path": "/assets/atlas/spell/json/24/plant_growth.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "poison_spray",
@@ -3287,7 +4402,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/poison_spray.json"
+    "json_path": "/assets/atlas/spell/json/24/poison_spray.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "polymorph",
@@ -3303,7 +4423,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/polymorph.json"
+    "json_path": "/assets/atlas/spell/json/24/polymorph.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "power_word_kill",
@@ -3319,7 +4444,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/power_word_kill.json"
+    "json_path": "/assets/atlas/spell/json/24/power_word_kill.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "power_word_kill.webp",
+      "cell": 0
+    }
   },
   {
     "index": "power_word_stun",
@@ -3335,7 +4465,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/power_word_stun.json"
+    "json_path": "/assets/atlas/spell/json/24/power_word_stun.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "power_word_stun.webp",
+      "cell": 0
+    }
   },
   {
     "index": "prayer_of_healing",
@@ -3348,7 +4483,12 @@
     "casting_time": "10 minutes",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/prayer_of_healing.json"
+    "json_path": "/assets/atlas/spell/json/24/prayer_of_healing.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "prestidigitation",
@@ -3365,7 +4505,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/prestidigitation.json"
+    "json_path": "/assets/atlas/spell/json/24/prestidigitation.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "prismatic_spray",
@@ -3379,7 +4524,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/prismatic_spray.json"
+    "json_path": "/assets/atlas/spell/json/24/prismatic_spray.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "prismatic_spray.webp",
+      "cell": 0
+    }
   },
   {
     "index": "prismatic_wall",
@@ -3392,7 +4542,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/prismatic_wall.json"
+    "json_path": "/assets/atlas/spell/json/24/prismatic_wall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "prismatic_wall.webp",
+      "cell": 0
+    }
   },
   {
     "index": "private_sanctum",
@@ -3406,7 +4561,12 @@
     "casting_time": "10 minutes",
     "range": "120 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/private_sanctum.json"
+    "json_path": "/assets/atlas/spell/json/24/private_sanctum.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "produce_flame",
@@ -3419,7 +4579,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/produce_flame.json"
+    "json_path": "/assets/atlas/spell/json/24/produce_flame.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "programmed_illusion",
@@ -3433,7 +4598,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/programmed_illusion.json"
+    "json_path": "/assets/atlas/spell/json/24/programmed_illusion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "programmed_illusion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "project_image",
@@ -3447,7 +4617,12 @@
     "casting_time": "1 action",
     "range": "500 miles",
     "duration": "Up to 24 hours",
-    "json_path": "/assets/atlas/spell/json/24/project_image.json"
+    "json_path": "/assets/atlas/spell/json/24/project_image.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "project_image.webp",
+      "cell": 0
+    }
   },
   {
     "index": "protection_from_energy",
@@ -3465,7 +4640,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/protection_from_energy.json"
+    "json_path": "/assets/atlas/spell/json/24/protection_from_energy.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "protection_from_evil_and_good",
@@ -3481,7 +4661,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/protection_from_evil_and_good.json"
+    "json_path": "/assets/atlas/spell/json/24/protection_from_evil_and_good.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 9
+    }
   },
   {
     "index": "protection_from_poison",
@@ -3498,7 +4683,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/protection_from_poison.json"
+    "json_path": "/assets/atlas/spell/json/24/protection_from_poison.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 8
+    }
   },
   {
     "index": "purify_food_and_drink",
@@ -3514,7 +4704,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/purify_food_and_drink.json"
+    "json_path": "/assets/atlas/spell/json/24/purify_food_and_drink.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 10
+    }
   },
   {
     "index": "raise_dead",
@@ -3529,7 +4724,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/raise_dead.json"
+    "json_path": "/assets/atlas/spell/json/24/raise_dead.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "ray_of_enfeeblement",
@@ -3543,7 +4743,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/ray_of_enfeeblement.json"
+    "json_path": "/assets/atlas/spell/json/24/ray_of_enfeeblement.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "ray_of_frost",
@@ -3558,7 +4763,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/ray_of_frost.json"
+    "json_path": "/assets/atlas/spell/json/24/ray_of_frost.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_01.webp",
+      "cell": 15
+    }
   },
   {
     "index": "regenerate",
@@ -3573,7 +4783,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/regenerate.json"
+    "json_path": "/assets/atlas/spell/json/24/regenerate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "regenerate.webp",
+      "cell": 0
+    }
   },
   {
     "index": "reincarnate",
@@ -3586,7 +4801,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/reincarnate.json"
+    "json_path": "/assets/atlas/spell/json/24/reincarnate.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 12
+    }
   },
   {
     "index": "remove_curse",
@@ -3602,7 +4822,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/remove_curse.json"
+    "json_path": "/assets/atlas/spell/json/24/remove_curse.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "resilient_sphere",
@@ -3616,7 +4841,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/resilient_sphere.json"
+    "json_path": "/assets/atlas/spell/json/24/resilient_sphere.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "resilient_sphere.webp",
+      "cell": 0
+    }
   },
   {
     "index": "resistance",
@@ -3631,7 +4861,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/resistance.json"
+    "json_path": "/assets/atlas/spell/json/24/resistance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 0
+    }
   },
   {
     "index": "resurrection",
@@ -3645,7 +4880,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/resurrection.json"
+    "json_path": "/assets/atlas/spell/json/24/resurrection.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "resurrection.webp",
+      "cell": 0
+    }
   },
   {
     "index": "reverse_gravity",
@@ -3660,7 +4900,12 @@
     "casting_time": "1 action",
     "range": "100 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/reverse_gravity.json"
+    "json_path": "/assets/atlas/spell/json/24/reverse_gravity.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "reverse_gravity.webp",
+      "cell": 0
+    }
   },
   {
     "index": "revivify",
@@ -3675,7 +4920,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/revivify.json"
+    "json_path": "/assets/atlas/spell/json/24/revivify.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "revivify.webp",
+      "cell": 0
+    }
   },
   {
     "index": "rope_trick",
@@ -3689,7 +4939,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/rope_trick.json"
+    "json_path": "/assets/atlas/spell/json/24/rope_trick.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 10
+    }
   },
   {
     "index": "sacred_flame",
@@ -3702,7 +4957,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/sacred_flame.json"
+    "json_path": "/assets/atlas/spell/json/24/sacred_flame.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 1
+    }
   },
   {
     "index": "sanctuary",
@@ -3716,7 +4976,12 @@
     "casting_time": "1 bonus action",
     "range": "30 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/sanctuary.json"
+    "json_path": "/assets/atlas/spell/json/24/sanctuary.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 11
+    }
   },
   {
     "index": "scorching_ray",
@@ -3730,7 +4995,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/scorching_ray.json"
+    "json_path": "/assets/atlas/spell/json/24/scorching_ray.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 11
+    }
   },
   {
     "index": "scrying",
@@ -3747,7 +5017,12 @@
     "casting_time": "10 minutes",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/scrying.json"
+    "json_path": "/assets/atlas/spell/json/24/scrying.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "secret_chest",
@@ -3760,7 +5035,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/secret_chest.json"
+    "json_path": "/assets/atlas/spell/json/24/secret_chest.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "secret_chest.webp",
+      "cell": 0
+    }
   },
   {
     "index": "see_invisibility",
@@ -3776,7 +5056,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/see_invisibility.json"
+    "json_path": "/assets/atlas/spell/json/24/see_invisibility.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "see_invisibility.webp",
+      "cell": 0
+    }
   },
   {
     "index": "seeming",
@@ -3791,7 +5076,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/seeming.json"
+    "json_path": "/assets/atlas/spell/json/24/seeming.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "sending",
@@ -3806,7 +5096,12 @@
     "casting_time": "1 action",
     "range": "Unlimited",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/sending.json"
+    "json_path": "/assets/atlas/spell/json/24/sending.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "sequester",
@@ -3819,7 +5114,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/sequester.json"
+    "json_path": "/assets/atlas/spell/json/24/sequester.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "sequester.webp",
+      "cell": 0
+    }
   },
   {
     "index": "shapechange",
@@ -3833,7 +5133,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/shapechange.json"
+    "json_path": "/assets/atlas/spell/json/24/shapechange.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "shapechange.webp",
+      "cell": 0
+    }
   },
   {
     "index": "shatter",
@@ -3849,7 +5154,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/shatter.json"
+    "json_path": "/assets/atlas/spell/json/24/shatter.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 13
+    }
   },
   {
     "index": "shield_of_faith",
@@ -3863,7 +5173,12 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json"
+    "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 13
+    }
   },
   {
     "index": "shield",
@@ -3877,7 +5192,12 @@
     "casting_time": "1 reaction",
     "range": "Self",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/shield.json"
+    "json_path": "/assets/atlas/spell/json/24/shield.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 12
+    }
   },
   {
     "index": "shillelagh",
@@ -3890,7 +5210,12 @@
     "casting_time": "1 bonus action",
     "range": "Touch",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/shillelagh.json"
+    "json_path": "/assets/atlas/spell/json/24/shillelagh.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 2
+    }
   },
   {
     "index": "shocking_grasp",
@@ -3905,7 +5230,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/shocking_grasp.json"
+    "json_path": "/assets/atlas/spell/json/24/shocking_grasp.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 3
+    }
   },
   {
     "index": "silence",
@@ -3920,7 +5250,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/silence.json"
+    "json_path": "/assets/atlas/spell/json/24/silence.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "silence.webp",
+      "cell": 0
+    }
   },
   {
     "index": "silent_image",
@@ -3935,7 +5270,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/silent_image.json"
+    "json_path": "/assets/atlas/spell/json/24/silent_image.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 14
+    }
   },
   {
     "index": "simulacrum",
@@ -3948,7 +5288,12 @@
     "casting_time": "12 hours",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/simulacrum.json"
+    "json_path": "/assets/atlas/spell/json/24/simulacrum.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "simulacrum.webp",
+      "cell": 0
+    }
   },
   {
     "index": "sleep",
@@ -3963,7 +5308,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/sleep.json"
+    "json_path": "/assets/atlas/spell/json/24/sleep.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_03.webp",
+      "cell": 15
+    }
   },
   {
     "index": "sleet_storm",
@@ -3978,7 +5328,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/sleet_storm.json"
+    "json_path": "/assets/atlas/spell/json/24/sleet_storm.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 14
+    }
   },
   {
     "index": "slow",
@@ -3992,7 +5347,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/slow.json"
+    "json_path": "/assets/atlas/spell/json/24/slow.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "slow.webp",
+      "cell": 0
+    }
   },
   {
     "index": "spare_the_dying",
@@ -4006,7 +5366,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/spare_the_dying.json"
+    "json_path": "/assets/atlas/spell/json/24/spare_the_dying.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 4
+    }
   },
   {
     "index": "speak_with_animals",
@@ -4021,7 +5386,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/speak_with_animals.json"
+    "json_path": "/assets/atlas/spell/json/24/speak_with_animals.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_04.webp",
+      "cell": 0
+    }
   },
   {
     "index": "speak_with_dead",
@@ -4035,7 +5405,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/speak_with_dead.json"
+    "json_path": "/assets/atlas/spell/json/24/speak_with_dead.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "speak_with_plants",
@@ -4050,7 +5425,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/speak_with_plants.json"
+    "json_path": "/assets/atlas/spell/json/24/speak_with_plants.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "speak_with_plants.webp",
+      "cell": 0
+    }
   },
   {
     "index": "spider_climb",
@@ -4066,7 +5446,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/spider_climb.json"
+    "json_path": "/assets/atlas/spell/json/24/spider_climb.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spider_climb.webp",
+      "cell": 0
+    }
   },
   {
     "index": "spike_growth",
@@ -4080,7 +5465,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/spike_growth.json"
+    "json_path": "/assets/atlas/spell/json/24/spike_growth.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level2_sheet_01.webp",
+      "cell": 0
+    }
   },
   {
     "index": "spirit_guardians",
@@ -4093,7 +5483,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/spirit_guardians.json"
+    "json_path": "/assets/atlas/spell/json/24/spirit_guardians.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 2
+    }
   },
   {
     "index": "spiritual_weapon",
@@ -4106,7 +5501,12 @@
     "casting_time": "1 bonus action",
     "range": "60 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/spiritual_weapon.json"
+    "json_path": "/assets/atlas/spell/json/24/spiritual_weapon.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spiritual_weapon.webp",
+      "cell": 0
+    }
   },
   {
     "index": "stinking_cloud",
@@ -4121,7 +5521,12 @@
     "casting_time": "1 action",
     "range": "90 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/stinking_cloud.json"
+    "json_path": "/assets/atlas/spell/json/24/stinking_cloud.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "stone_shape",
@@ -4137,7 +5542,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/stone_shape.json"
+    "json_path": "/assets/atlas/spell/json/24/stone_shape.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "stone_shape.webp",
+      "cell": 0
+    }
   },
   {
     "index": "stoneskin",
@@ -4154,7 +5564,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/stoneskin.json"
+    "json_path": "/assets/atlas/spell/json/24/stoneskin.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "stoneskin.webp",
+      "cell": 0
+    }
   },
   {
     "index": "storm_of_vengeance",
@@ -4167,7 +5582,12 @@
     "casting_time": "1 action",
     "range": "Sight",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/storm_of_vengeance.json"
+    "json_path": "/assets/atlas/spell/json/24/storm_of_vengeance.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "storm_of_vengeance.webp",
+      "cell": 0
+    }
   },
   {
     "index": "suggestion",
@@ -4183,7 +5603,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 8 hours",
-    "json_path": "/assets/atlas/spell/json/24/suggestion.json"
+    "json_path": "/assets/atlas/spell/json/24/suggestion.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "suggestion.webp",
+      "cell": 0
+    }
   },
   {
     "index": "sunbeam",
@@ -4198,7 +5623,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/sunbeam.json"
+    "json_path": "/assets/atlas/spell/json/24/sunbeam.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "sunbeam.webp",
+      "cell": 0
+    }
   },
   {
     "index": "sunburst",
@@ -4213,7 +5643,12 @@
     "casting_time": "1 action",
     "range": "150 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/sunburst.json"
+    "json_path": "/assets/atlas/spell/json/24/sunburst.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "sunburst.webp",
+      "cell": 0
+    }
   },
   {
     "index": "symbol",
@@ -4228,7 +5663,12 @@
     "casting_time": "1 minute",
     "range": "Touch",
     "duration": "Until dispelled",
-    "json_path": "/assets/atlas/spell/json/24/symbol.json"
+    "json_path": "/assets/atlas/spell/json/24/symbol.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "symbol.webp",
+      "cell": 0
+    }
   },
   {
     "index": "tashas_caustic_brew",
@@ -4243,7 +5683,12 @@
     "casting_time": "1 action",
     "range": "Self (30-foot line)",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/tashas_caustic_brew.json"
+    "json_path": "/assets/atlas/spell/json/24/tashas_caustic_brew.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_04.webp",
+      "cell": 1
+    }
   },
   {
     "index": "telekinesis",
@@ -4257,7 +5702,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/telekinesis.json"
+    "json_path": "/assets/atlas/spell/json/24/telekinesis.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "telekinesis.webp",
+      "cell": 0
+    }
   },
   {
     "index": "telepathic_bond",
@@ -4270,7 +5720,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/telepathic_bond.json"
+    "json_path": "/assets/atlas/spell/json/24/telepathic_bond.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "telepathic_bond.webp",
+      "cell": 0
+    }
   },
   {
     "index": "teleport",
@@ -4285,7 +5740,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/teleport.json"
+    "json_path": "/assets/atlas/spell/json/24/teleport.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "teleport.webp",
+      "cell": 0
+    }
   },
   {
     "index": "teleportation_circle",
@@ -4300,7 +5760,12 @@
     "casting_time": "1 minute",
     "range": "10 feet",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/teleportation_circle.json"
+    "json_path": "/assets/atlas/spell/json/24/teleportation_circle.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 1
+    }
   },
   {
     "index": "thaumaturgy",
@@ -4313,7 +5778,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 minute",
-    "json_path": "/assets/atlas/spell/json/24/thaumaturgy.json"
+    "json_path": "/assets/atlas/spell/json/24/thaumaturgy.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 5
+    }
   },
   {
     "index": "thorn_whip",
@@ -4327,7 +5797,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/thorn_whip.json"
+    "json_path": "/assets/atlas/spell/json/24/thorn_whip.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 6
+    }
   },
   {
     "index": "thunderwave",
@@ -4343,7 +5818,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/thunderwave.json"
+    "json_path": "/assets/atlas/spell/json/24/thunderwave.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_04.webp",
+      "cell": 2
+    }
   },
   {
     "index": "time_stop",
@@ -4357,7 +5837,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/time_stop.json"
+    "json_path": "/assets/atlas/spell/json/24/time_stop.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "time_stop.webp",
+      "cell": 0
+    }
   },
   {
     "index": "tiny_hut",
@@ -4371,7 +5856,12 @@
     "casting_time": "1 minute",
     "range": "Self",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/tiny_hut.json"
+    "json_path": "/assets/atlas/spell/json/24/tiny_hut.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "tongues",
@@ -4388,7 +5878,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/tongues.json"
+    "json_path": "/assets/atlas/spell/json/24/tongues.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 5
+    }
   },
   {
     "index": "transport_via_plants",
@@ -4401,7 +5896,12 @@
     "casting_time": "1 action",
     "range": "10 feet",
     "duration": "1 round",
-    "json_path": "/assets/atlas/spell/json/24/transport_via_plants.json"
+    "json_path": "/assets/atlas/spell/json/24/transport_via_plants.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "transport_via_plants.webp",
+      "cell": 0
+    }
   },
   {
     "index": "tree_stride",
@@ -4415,7 +5915,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/tree_stride.json"
+    "json_path": "/assets/atlas/spell/json/24/tree_stride.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "tree_stride.webp",
+      "cell": 0
+    }
   },
   {
     "index": "true_polymorph",
@@ -4430,7 +5935,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/true_polymorph.json"
+    "json_path": "/assets/atlas/spell/json/24/true_polymorph.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "true_polymorph.webp",
+      "cell": 0
+    }
   },
   {
     "index": "true_resurrection",
@@ -4444,7 +5954,12 @@
     "casting_time": "1 hour",
     "range": "Touch",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/true_resurrection.json"
+    "json_path": "/assets/atlas/spell/json/24/true_resurrection.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "true_resurrection.webp",
+      "cell": 0
+    }
   },
   {
     "index": "true_seeing",
@@ -4461,7 +5976,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/true_seeing.json"
+    "json_path": "/assets/atlas/spell/json/24/true_seeing.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "true_seeing.webp",
+      "cell": 0
+    }
   },
   {
     "index": "true_strike",
@@ -4477,7 +5997,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 round",
-    "json_path": "/assets/atlas/spell/json/24/true_strike.json"
+    "json_path": "/assets/atlas/spell/json/24/true_strike.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 7
+    }
   },
   {
     "index": "unseen_servant",
@@ -4492,7 +6017,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/unseen_servant.json"
+    "json_path": "/assets/atlas/spell/json/24/unseen_servant.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spells_level1_sheet_04.webp",
+      "cell": 3
+    }
   },
   {
     "index": "vampiric_touch",
@@ -4506,7 +6036,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/vampiric_touch.json"
+    "json_path": "/assets/atlas/spell/json/24/vampiric_touch.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 6
+    }
   },
   {
     "index": "vicious_mockery",
@@ -4519,7 +6054,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/vicious_mockery.json"
+    "json_path": "/assets/atlas/spell/json/24/vicious_mockery.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "cantrips_sheet_02.webp",
+      "cell": 8
+    }
   },
   {
     "index": "wall_of_fire",
@@ -4534,7 +6074,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/wall_of_fire.json"
+    "json_path": "/assets/atlas/spell/json/24/wall_of_fire.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "wall_of_fire.webp",
+      "cell": 0
+    }
   },
   {
     "index": "wall_of_force",
@@ -4547,7 +6092,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/wall_of_force.json"
+    "json_path": "/assets/atlas/spell/json/24/wall_of_force.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 3
+    }
   },
   {
     "index": "wall_of_ice",
@@ -4560,7 +6110,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/wall_of_ice.json"
+    "json_path": "/assets/atlas/spell/json/24/wall_of_ice.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "wall_of_ice.webp",
+      "cell": 0
+    }
   },
   {
     "index": "wall_of_stone",
@@ -4576,7 +6131,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/wall_of_stone.json"
+    "json_path": "/assets/atlas/spell/json/24/wall_of_stone.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 4
+    }
   },
   {
     "index": "wall_of_thorns",
@@ -4589,7 +6149,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/wall_of_thorns.json"
+    "json_path": "/assets/atlas/spell/json/24/wall_of_thorns.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "wall_of_thorns.webp",
+      "cell": 0
+    }
   },
   {
     "index": "warding_bond",
@@ -4602,7 +6167,12 @@
     "casting_time": "1 action",
     "range": "Touch",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/warding_bond.json"
+    "json_path": "/assets/atlas/spell/json/24/warding_bond.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "warding_bond.webp",
+      "cell": 0
+    }
   },
   {
     "index": "water_breathing",
@@ -4619,7 +6189,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "24 hours",
-    "json_path": "/assets/atlas/spell/json/24/water_breathing.json"
+    "json_path": "/assets/atlas/spell/json/24/water_breathing.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 7
+    }
   },
   {
     "index": "water_walk",
@@ -4636,7 +6211,12 @@
     "casting_time": "1 action",
     "range": "30 feet",
     "duration": "1 hour",
-    "json_path": "/assets/atlas/spell/json/24/water_walk.json"
+    "json_path": "/assets/atlas/spell/json/24/water_walk.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "water_walk.webp",
+      "cell": 0
+    }
   },
   {
     "index": "web",
@@ -4651,7 +6231,12 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "Up to 1 hour",
-    "json_path": "/assets/atlas/spell/json/24/web.json"
+    "json_path": "/assets/atlas/spell/json/24/web.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "web.webp",
+      "cell": 0
+    }
   },
   {
     "index": "weird",
@@ -4664,7 +6249,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/weird.json"
+    "json_path": "/assets/atlas/spell/json/24/weird.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "weird.webp",
+      "cell": 0
+    }
   },
   {
     "index": "wind_walk",
@@ -4677,7 +6267,12 @@
     "casting_time": "1 minute",
     "range": "30 feet",
     "duration": "8 hours",
-    "json_path": "/assets/atlas/spell/json/24/wind_walk.json"
+    "json_path": "/assets/atlas/spell/json/24/wind_walk.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "wind_walk.webp",
+      "cell": 0
+    }
   },
   {
     "index": "wind_wall",
@@ -4691,7 +6286,12 @@
     "casting_time": "1 action",
     "range": "120 feet",
     "duration": "Up to 1 minute",
-    "json_path": "/assets/atlas/spell/json/24/wind_wall.json"
+    "json_path": "/assets/atlas/spell/json/24/wind_wall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "spell_level1_sheet_01.webp",
+      "cell": 9
+    }
   },
   {
     "index": "wish",
@@ -4705,7 +6305,12 @@
     "casting_time": "1 action",
     "range": "Self",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/wish.json"
+    "json_path": "/assets/atlas/spell/json/24/wish.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "wish.webp",
+      "cell": 0
+    }
   },
   {
     "index": "word_of_recall",
@@ -4718,7 +6323,12 @@
     "casting_time": "1 action",
     "range": "5 feet",
     "duration": "Instantaneous",
-    "json_path": "/assets/atlas/spell/json/24/word_of_recall.json"
+    "json_path": "/assets/atlas/spell/json/24/word_of_recall.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "word_of_recall.webp",
+      "cell": 0
+    }
   },
   {
     "index": "zone_of_truth",
@@ -4733,6 +6343,11 @@
     "casting_time": "1 action",
     "range": "60 feet",
     "duration": "10 minutes",
-    "json_path": "/assets/atlas/spell/json/24/zone_of_truth.json"
+    "json_path": "/assets/atlas/spell/json/24/zone_of_truth.json",
+    "sprite": {
+      "atlas": "spell",
+      "sheet": "zone_of_truth.webp",
+      "cell": 0
+    }
   }
 ]
