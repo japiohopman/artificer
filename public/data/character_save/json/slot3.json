@@ -13,73 +13,48 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Nature",
-    "Carpenter'S Tools",
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
     "light armor",
     "medium armor",
     "shields",
-    "clubs",
-    "daggers",
-    "javelins",
-    "maces",
-    "quarterstaffs",
-    "sickles",
-    "spears",
-    "darts",
-    "slings",
-    "scimitars",
-    "herbalism kit",
-    "saving throw: int",
+    "simple weapons",
     "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
   "traits": [],
   "features": [
     {
-      "index": "spellcasting_druid_2024",
-      "name": "Spellcasting: Druid",
+      "index": "spellcasting_cleric_2024",
+      "name": "Spellcasting: Cleric",
       "class": {
-        "index": "druid",
-        "name": "Druid",
-        "url": "/assets/atlas/class/json/24/druid.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "You can cast Druid spells using Wisdom as your spellcasting ability. You prepare Druid spells from the Druid spell list."
+        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_druid_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
       "source": "Class"
     },
     {
-      "index": "primal_order_2024",
-      "name": "Primal Order",
+      "index": "divine_order_cleric",
+      "name": "Divine Order",
       "class": {
-        "index": "druid",
-        "name": "Druid",
-        "url": "/assets/atlas/class/json/24/druid.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "Dedicated to a sacred role: Magician (extra cantrip & Arcana/Nature check bonus equal to WIS mod) or Warden (Martial weapon & Medium Armor proficiency)."
+        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
       ],
-      "url": "/assets/atlas/features/json/primal_order_2024.json",
-      "source": "Class"
-    },
-    {
-      "index": "druidic_2024",
-      "name": "Druidic",
-      "class": {
-        "index": "druid",
-        "name": "Druid",
-        "url": "/assets/atlas/class/json/24/druid.json"
-      },
-      "level": 1,
-      "desc": [
-        "You know Druidic, the secret language of Druids. You also learn one additional language of your choice."
-      ],
-      "url": "/assets/atlas/features/json/druidic_2024.json",
+      "url": "/assets/atlas/features/json/divine_order_cleric.json",
       "source": "Class"
     }
   ],
@@ -101,57 +76,64 @@
     "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
-    "size": "Medium",
+    "size": "Tiny",
     "specialFeatures": []
   },
   "items": {
-    "leather_armor_jl8wt0tpz": {
-      "id": "leather_armor_jl8wt0tpz",
-      "template": "leather_armor",
+    "spellbook_kfrs1m0eq": {
+      "id": "spellbook_kfrs1m0eq",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1788954560289,
-      "kind": "armor"
+      "addedAt": 1789212682139,
+      "kind": "focus"
     },
-    "explorers_pack_mt8i7iv50": {
-      "id": "explorers_pack_mt8i7iv50",
-      "template": "explorers_pack",
+    "abacus_by1tl60kk": {
+      "id": "abacus_by1tl60kk",
+      "template": "abacus",
       "quantity": 1,
-      "addedAt": 1788954560289,
-      "kind": "container"
+      "addedAt": 1789212682139,
+      "kind": "tradegood"
     },
-    "sickle_pxg0hlm9c": {
-      "id": "sickle_pxg0hlm9c",
-      "template": "sickle",
+    "book_hzq0y7l97": {
+      "id": "book_hzq0y7l97",
+      "template": "book",
       "quantity": 1,
-      "addedAt": 1788954560289,
-      "kind": "weapon"
+      "addedAt": 1789212682140,
+      "kind": "book"
     },
-    "gold_z6e4r8nag": {
-      "id": "gold_z6e4r8nag",
+    "ink_pen_avuq1j75r": {
+      "id": "ink_pen_avuq1j75r",
+      "template": "ink_pen",
+      "quantity": 1,
+      "addedAt": 1789212682140,
+      "kind": "tradegood"
+    },
+    "gold_wkkewt6yn": {
+      "id": "gold_wkkewt6yn",
       "template": "gold",
-      "quantity": 23,
-      "addedAt": 1788954560289,
+      "quantity": 8,
+      "addedAt": 1789212682140,
       "kind": "currency"
     },
-    "mace_yi1qx08vb": {
-      "id": "mace_yi1qx08vb",
+    "quarterstaff_zddovks73": {
+      "id": "quarterstaff_zddovks73",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1789212691769,
+      "kind": "weapon"
+    },
+    "shield_4vi6afgjp": {
+      "id": "shield_4vi6afgjp",
+      "template": "shield",
+      "quantity": 1,
+      "addedAt": 1789213213453,
+      "kind": "shield"
+    },
+    "mace_qv86apwfj": {
+      "id": "mace_qv86apwfj",
       "template": "mace",
       "quantity": 1,
-      "addedAt": 1788954632031,
-      "kind": "weapon"
-    },
-    "dagger_jzzo0z8ab": {
-      "id": "dagger_jzzo0z8ab",
-      "template": "dagger",
-      "quantity": 1,
-      "addedAt": 1788954642691,
-      "kind": "weapon"
-    },
-    "wooden-staff_bsmvzvcr4": {
-      "id": "wooden-staff_bsmvzvcr4",
-      "template": "wooden-staff",
-      "quantity": 1,
-      "addedAt": 1788954657055,
+      "addedAt": 1789213254908,
       "kind": "weapon"
     }
   },
@@ -163,39 +145,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "explorers_pack_mt8i7iv50"
+          "itemId": "spellbook_kfrs1m0eq"
         },
         {
           "id": "bag_1",
-          "itemId": "gold_z6e4r8nag"
+          "itemId": "abacus_by1tl60kk"
         },
         {
           "id": "bag_2",
-          "itemId": "mace_yi1qx08vb"
+          "itemId": "book_hzq0y7l97"
         },
         {
           "id": "bag_3",
-          "itemId": "mace_nltisdg7m"
+          "itemId": "ink_pen_avuq1j75r"
         },
         {
           "id": "bag_4",
-          "itemId": "dagger_jzzo0z8ab"
+          "itemId": "gold_wkkewt6yn"
         },
         {
           "id": "bag_5",
-          "itemId": "dagger_v1mx453cz"
+          "itemId": "quarterstaff_e51nnadeh"
         },
         {
           "id": "bag_6",
-          "itemId": "wooden-staff_bsmvzvcr4"
+          "itemId": "shield_4vi6afgjp"
         },
         {
           "id": "bag_7",
-          "itemId": "wooden-staff_mo02gsbpr"
+          "itemId": "mace_qv86apwfj"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "mace_cpz8d7asb"
         },
         {
           "id": "bag_9",
@@ -265,11 +247,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "sickle_pxg0hlm9c"
+        "itemId": "quarterstaff_zddovks73"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_m0zudyp0n"
       },
       {
         "id": "ranged",
@@ -281,7 +263,7 @@
       },
       {
         "id": "chest",
-        "itemId": "leather_armor_jl8wt0tpz"
+        "itemId": null
       },
       {
         "id": "clothes",
@@ -383,135 +365,55 @@
   },
   "backpack": [
     {
-      "id": "carpenters_tools_tlj4n8r1c",
-      "index": "carpenters_tools",
-      "name": "Carpenter'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/carpenters_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/carpenters_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/carpenters_tools.webp"
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "quantity": 1
     },
     {
-      "id": "pot_iron_jxgsl4ft4",
-      "index": "pot_iron",
-      "name": "Pot Iron",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/pot_iron.json",
-      "image_url": "public/assets/atlas/equipment/images/pot_iron.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pot_iron.webp"
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
     },
     {
-      "id": "clothes_travelers_11rnbb3n9",
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "quantity": 1
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "quantity": 10
+    },
+    {
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_d6g8y1yvj",
       "index": "gold",
       "name": "Gold",
-      "quantity": 23,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 8
     }
   ],
-  "inventory": {
-    "main-hand": {
-      "id": "sickle_dts837c5m",
-      "index": "sickle",
-      "name": "Sickle",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/sickle.json",
-      "image_url": "public/assets/atlas/equipment/images/sickle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/sickle.webp",
-      "desc": [
-        "A crescent hooked blade mounted atop a short haft, light enough to be wielded in one hand for treshing crops or foes."
-      ],
-      "special": [],
-      "kind": "weapon",
-      "cost": {
-        "quantity": 1,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/sickle.webp",
-      "updated_at": "2026-07-12T19:00:20.427Z",
-      "contents": [],
-      "properties": [
-        {
-          "index": "light",
-          "name": "light",
-          "url": "/assets/atlas/weapon_properties/json/light.json"
-        }
-      ],
-      "equipSlots": [
-        "main_hand",
-        "off_hand"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "sprite_index": 20,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet8.webp",
-      "category": "Melee Weapons",
-      "equipment_category": {
-        "index": "weapon",
-        "name": "weapon",
-        "url": "/assets/atlas/equipment_categories/json/weapon.json"
-      },
-      "weapon_category": "Simple",
-      "weapon_range": "Melee",
-      "category_range": "Simple Melee",
-      "damage": {
-        "damage_dice": "1d4",
-        "damage_type": {
-          "index": "slashing",
-          "name": "slashing",
-          "url": "/assets/atlas/damage_types/json/slashing.json"
-        }
-      },
-      "range": {
-        "normal": 5,
-        "long": null
-      },
-      "rulesetContext": "2014",
-      "slot": "main-hand",
-      "main_hand_slot": "Sickle"
-    }
-  },
+  "inventory": {},
   "knownSpells": [
     {
       "index": "mending",
@@ -529,88 +431,99 @@
       "casting_time": "1 minute",
       "range": "Touch",
       "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/mending.json",
+      "json_path": "/assets/atlas/spell/json/24/mending.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 9
+      },
+      "rulesetContext": "2024",
       "imageUrl": "/assets/atlas/spell/images/mending.webp"
     },
     {
-      "index": "shillelagh",
-      "name": "shillelagh",
-      "level": 0,
-      "school": "transmutation",
-      "classes": [
-        "druid"
-      ],
-      "casting_time": "1 bonus action",
-      "range": "Touch",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/shillelagh.json",
-      "imageUrl": "/assets/atlas/spell/images/shillelagh.webp"
-    },
-    {
-      "index": "animal_friendship",
-      "name": "animal friendship",
+      "index": "detect_poison_and_disease",
+      "name": "detect poison and disease",
       "level": 1,
-      "school": "enchantment",
+      "school": "divination",
       "classes": [
-        "bard",
+        "cleric",
         "druid",
+        "paladin",
         "ranger"
       ],
       "casting_time": "1 action",
-      "range": "30 feet",
-      "duration": "24 hours",
-      "json_path": "/assets/atlas/spell/json/animal_friendship.json",
-      "imageUrl": "/assets/atlas/spell/images/animal-friendship.webp"
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_01.webp",
+        "cell": 15
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/detect-poison-and-disease.webp"
     },
     {
-      "index": "healing_word",
-      "name": "healing word",
+      "index": "detect_evil_and_good",
+      "name": "detect evil and good",
       "level": 1,
-      "school": "evocation",
+      "school": "divination",
       "classes": [
-        "bard",
         "cleric",
-        "druid"
-      ],
-      "casting_time": "1 bonus action",
-      "range": "60 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/healing_word.json",
-      "imageUrl": "/assets/atlas/spell/images/healing-word.webp"
-    },
-    {
-      "index": "fog_cloud",
-      "name": "fog cloud",
-      "level": 1,
-      "school": "conjuration",
-      "classes": [
-        "druid",
-        "ranger",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Up to 1 hour",
-      "json_path": "/assets/atlas/spell/json/fog_cloud.json",
-      "imageUrl": "/assets/atlas/spell/images/fog-cloud.webp"
-    },
-    {
-      "index": "thunderwave",
-      "name": "thunderwave",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "bard",
-        "druid",
-        "sorcerer",
-        "wizard"
+        "paladin"
       ],
       "casting_time": "1 action",
       "range": "Self",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/thunderwave.json",
-      "imageUrl": "/assets/atlas/spell/images/thunderwave.webp"
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_01.webp",
+        "cell": 13
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/detect-evil-and-good.webp"
+    },
+    {
+      "index": "guiding_bolt",
+      "name": "guiding bolt",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "1 round",
+      "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_02.webp",
+        "cell": 12
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+    },
+    {
+      "index": "shield_of_faith",
+      "name": "shield of faith",
+      "level": 1,
+      "school": "abjuration",
+      "classes": [
+        "cleric",
+        "paladin"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 13
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/shield-of-faith.webp"
     }
   ],
   "languages": [
@@ -618,11 +531,10 @@
   ],
   "preparedSpells": [
     "mending",
-    "shillelagh",
-    "animal_friendship",
-    "healing_word",
-    "fog_cloud",
-    "thunderwave"
+    "detect_poison_and_disease",
+    "detect_evil_and_good",
+    "guiding_bolt",
+    "shield_of_faith"
   ],
   "spellSlots": {
     "1": {
@@ -630,20 +542,14 @@
       "max": 0
     }
   },
-  "choices": {
-    "background_ability_scores": [
-      "str",
-      "str",
-      "con"
-    ]
-  },
+  "choices": {},
   "race": "tiefling",
-  "class": "druid",
-  "background": "farmer",
+  "class": "cleric",
+  "background": "scribe",
   "spellcastingAbility": "wis",
-  "alignment": "lawful_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/DruidStaff.webp",
-  "name": "Lerissa",
+  "alignment": "true_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Akta",
   "id": "slot3",
   "hp": 4,
   "maxHp": 4,
@@ -653,5 +559,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-09T11:51:38.984Z"
+  "lastSaved": "2026-09-12T11:41:22.069Z"
 }
