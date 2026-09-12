@@ -6,6 +6,7 @@ import { soundService } from '../../../services/soundService';
 import { GameIcon } from '../../../game_icons';
 import { DnDMarkdown } from '../../ui/DnDMarkdown';
 import { SpellSprite } from '../../atlas/SpellSprite';
+import { SpellCard } from '../../atlas/SpellCard';
 
 export interface ClassSpellLimits {
   cantrips: number;
@@ -33,6 +34,9 @@ export const SpellsStep: React.FC<{
     const [loading, setLoading] = useState(false);
     const [noticeMsg, setNoticeMsg] = useState<string | null>(null);
 
+    // Spell Sheet Inspect Modal State
+    const [inspectedSpell, setInspectedSpell] = useState<any | null>(null);
+
     // Help modal state
     const [isHelpOpen, setIsHelpOpen] = useState(false);
     const [activeHelpTab, setActiveHelpTab] = useState<'choice' | 'help'>('choice');
@@ -52,6 +56,34 @@ export const SpellsStep: React.FC<{
     const currentKnown = newChar.knownSpells || [];
     const selectedCantrips = currentKnown.filter((s: any) => getSpellLevel(s) === 0);
     const selectedLevel1 = currentKnown.filter((s: any) => getSpellLevel(s) === 1);
+
+    const isSpellSelected = (spell: any): boolean => {
+        if (!spell) return false;
+        return currentKnown.some((s: any) =>
+            s.index === spell.index ||
+            (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
+        );
+    };
+
+    const getSelectionDisabledReason = (spell: any): string | undefined => {
+        if (!spell) return undefined;
+        const isSelected = isSpellSelected(spell);
+        if (isSelected) return undefined;
+
+        const spellLevel = getSpellLevel(spell);
+        const isCantrip = spellLevel === 0;
+
+        if (isCantrip) {
+            if (cantripLimit > 0 && selectedCantrips.length >= cantripLimit) {
+                return `Max ${cantripLimit} Cantrip${cantripLimit > 1 ? 's' : ''} Limit Reached`;
+            }
+        } else {
+            if (spellLimit > 0 && selectedLevel1.length >= spellLimit) {
+                return `Max ${spellLimit} Spell${spellLimit > 1 ? 's' : ''} Limit Reached`;
+            }
+        }
+        return undefined;
+    };
 
     // Load markdown guide files
     useEffect(() => {
@@ -129,10 +161,7 @@ export const SpellsStep: React.FC<{
     }, [newChar.class, classIndex]);
 
     const toggleSpell = (spell: any) => {
-        const isSelected = currentKnown.some((s: any) => 
-            s.index === spell.index || 
-            (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
-        );
+        const isSelected = isSpellSelected(spell);
 
         if (isSelected) {
             setNoticeMsg(null);
@@ -194,7 +223,7 @@ export const SpellsStep: React.FC<{
     const level1Spells = availableSpells.filter(s => getSpellLevel(s) === 1);
 
     return (
-        <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 relative">
+        <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20 relative">
             {/* Step Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-dragon-gold/20 pb-4 gap-4">
                 <div>
@@ -220,29 +249,39 @@ export const SpellsStep: React.FC<{
                 </button>
             </div>
 
-            {/* Selection Limits Banner & Notice */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 bg-white/60 border border-dragon-gold/30 rounded-sm shadow-sm">
-                <div className="flex flex-wrap items-center gap-4">
+            {/* FIXED / STICKY Selection Limits Banner */}
+            <div className="sticky top-0 z-30 bg-parchment-100/95 backdrop-blur-md border-b-2 border-dragon-gold/40 p-3 sm:p-4 rounded-b-md shadow-md transition-all -mx-2 px-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                     {/* Cantrip counter */}
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-dragon-darkRed text-white rounded-sm">
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-dragon-darkRed text-white rounded-sm shadow-sm">
                         <span className="text-[10px] font-black uppercase tracking-wider">Cantrips:</span>
                         <span className={cn(
-                            "text-xs font-black px-1.5 py-0.5 rounded",
-                            selectedCantrips.length === cantripLimit ? "bg-dragon-gold text-black" : "bg-black/30 text-dragon-gold"
+                            "text-xs font-black px-2 py-0.5 rounded transition-all",
+                            selectedCantrips.length === cantripLimit && cantripLimit > 0
+                                ? "bg-dragon-gold text-stone-950 font-bold"
+                                : "bg-black/30 text-dragon-gold"
                         )}>
                             {selectedCantrips.length} / {cantripLimit}
                         </span>
+                        {cantripLimit > 0 && selectedCantrips.length === cantripLimit && (
+                            <GameIcon name="check" size={12} color="#D4AF37" />
+                        )}
                     </div>
 
                     {/* Level 1 Spells counter */}
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-dragon-darkRed text-white rounded-sm">
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-dragon-darkRed text-white rounded-sm shadow-sm">
                         <span className="text-[10px] font-black uppercase tracking-wider">1st-Level Spells:</span>
                         <span className={cn(
-                            "text-xs font-black px-1.5 py-0.5 rounded",
-                            selectedLevel1.length === spellLimit ? "bg-dragon-gold text-black" : "bg-black/30 text-dragon-gold"
+                            "text-xs font-black px-2 py-0.5 rounded transition-all",
+                            selectedLevel1.length === spellLimit && spellLimit > 0
+                                ? "bg-dragon-gold text-stone-950 font-bold"
+                                : "bg-black/30 text-dragon-gold"
                         )}>
                             {selectedLevel1.length} / {spellLimit}
                         </span>
+                        {spellLimit > 0 && selectedLevel1.length === spellLimit && (
+                            <GameIcon name="check" size={12} color="#D4AF37" />
+                        )}
                     </div>
                 </div>
 
@@ -253,7 +292,7 @@ export const SpellsStep: React.FC<{
 
             {/* Warning / Limit Toast Notice */}
             {noticeMsg && (
-                <div className="p-3 bg-dragon-red/10 border border-dragon-red/40 rounded-sm text-dragon-darkRed text-xs font-bold flex items-center gap-2 animate-in fade-in">
+                <div className="p-3 bg-dragon-red/10 border border-dragon-red/40 rounded-sm text-dragon-darkRed text-xs font-bold flex items-center gap-2 animate-in fade-in shadow-sm">
                     <GameIcon name="alert" size={16} color="#8B0000" />
                     <span>{noticeMsg}</span>
                 </div>
@@ -280,14 +319,21 @@ export const SpellsStep: React.FC<{
                                     Selected {selectedCantrips.length} of {cantripLimit}
                                 </span>
                             </div>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 {cantrips.map(spell => {
-                                    const active = currentKnown.some((s: any) => 
-                                        s.index === spell.index || 
-                                        (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
-                                    );
+                                    const active = isSpellSelected(spell);
                                     return (
-                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} ruleset={newChar.ruleset} onClick={() => toggleSpell(spell)} />
+                                        <SpellGridTile
+                                            key={spell.index || spell.name}
+                                            spell={spell}
+                                            active={active}
+                                            ruleset={newChar.ruleset}
+                                            onClick={() => toggleSpell(spell)}
+                                            onInspect={() => {
+                                                setInspectedSpell(spell);
+                                                soundService.playEffect('UI_CLICK_LIGHT');
+                                            }}
+                                        />
                                     );
                                 })}
                             </div>
@@ -308,19 +354,58 @@ export const SpellsStep: React.FC<{
                                     Selected {selectedLevel1.length} of {spellLimit}
                                 </span>
                             </div>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 {level1Spells.map(spell => {
-                                    const active = currentKnown.some((s: any) => 
-                                        s.index === spell.index || 
-                                        (s.name && spell.name && s.name.toLowerCase() === spell.name.toLowerCase())
-                                    );
+                                    const active = isSpellSelected(spell);
                                     return (
-                                        <SpellCard key={spell.index || spell.name} spell={spell} active={active} onClick={() => toggleSpell(spell)} />
+                                        <SpellGridTile
+                                            key={spell.index || spell.name}
+                                            spell={spell}
+                                            active={active}
+                                            ruleset={newChar.ruleset}
+                                            onClick={() => toggleSpell(spell)}
+                                            onInspect={() => {
+                                                setInspectedSpell(spell);
+                                                soundService.playEffect('UI_CLICK_LIGHT');
+                                            }}
+                                        />
                                     );
                                 })}
                             </div>
                         </div>
                     )}
+                </div>
+            )}
+
+            {/* FULL SPELL CARD SHEET INSPECTION MODAL */}
+            {inspectedSpell && (
+                <div
+                    className="fixed inset-0 z-[160] bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in"
+                    onClick={() => setInspectedSpell(null)}
+                >
+                    <div
+                        className="relative flex flex-col items-center max-w-full max-h-full overflow-y-auto custom-scrollbar p-2"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close Modal Button floating top right */}
+                        <button
+                            onClick={() => setInspectedSpell(null)}
+                            className="self-end mb-2 px-3 py-1 bg-stone-900/90 text-dragon-gold hover:text-white border border-dragon-gold/40 rounded-md text-xs font-black uppercase tracking-wider shadow-lg flex items-center gap-1.5 transition-colors z-20"
+                        >
+                            <GameIcon name="close" size={14} color="currentColor" />
+                            <span>Close Sheet</span>
+                        </button>
+
+                        <SpellCard
+                            spell={inspectedSpell}
+                            ruleset={newChar.ruleset}
+                            isSelected={isSpellSelected(inspectedSpell)}
+                            onToggleSelect={() => toggleSpell(inspectedSpell)}
+                            isSelectionDisabled={Boolean(getSelectionDisabledReason(inspectedSpell))}
+                            disabledReason={getSelectionDisabledReason(inspectedSpell)}
+                            hideLearnButton={true}
+                        />
+                    </div>
                 </div>
             )}
 
@@ -397,14 +482,20 @@ export const SpellsStep: React.FC<{
     );
 };
 
-const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void, ruleset?: '2014' | '2024' }> = ({ spell, active, onClick, ruleset }) => (
-    <button
+const SpellGridTile: React.FC<{
+    spell: any,
+    active: boolean,
+    onClick: () => void,
+    onInspect: () => void,
+    ruleset?: '2014' | '2024'
+}> = ({ spell, active, onClick, onInspect, ruleset }) => (
+    <div
         onClick={onClick}
         className={cn(
-            "p-3 rounded-sm border text-left transition-all relative flex flex-col justify-between gap-3 group overflow-hidden h-full min-h-[120px]",
+            "p-3 rounded-sm border text-left transition-all relative flex flex-col justify-between gap-3 group overflow-hidden h-full min-h-[120px] cursor-pointer shadow-sm hover:shadow-md",
             active 
-                ? "bg-dragon-darkRed text-white border-dragon-gold shadow-lg" 
-                : "bg-white/40 border-dragon-gold/10 hover:border-dragon-red/30 hover:bg-white"
+                ? "bg-dragon-darkRed text-white border-dragon-gold ring-1 ring-dragon-gold/50"
+                : "bg-white/60 border-dragon-gold/20 hover:border-dragon-red/40 hover:bg-white"
         )}
     >
         <div className="flex items-start gap-3 relative z-10 w-full">
@@ -428,21 +519,43 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void, ru
             </div>
         </div>
 
-        <div className="flex justify-between items-center relative z-10 pt-1 border-t border-dragon-gold/10">
-            <span className="text-[7px] font-bold uppercase tracking-wider opacity-60">
+        <div className="flex justify-between items-center relative z-10 pt-1.5 border-t border-dragon-gold/15">
+            <span className="text-[7.5px] font-bold uppercase tracking-wider opacity-70">
                 {spell.casting_time}
             </span>
-            <span className={cn(
-                "text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded",
-                active ? "bg-dragon-gold text-black" : "bg-dragon-red/10 text-dragon-red"
-            )}>
-                {(spell.level === 0 || spell.level === "0") ? 'Cantrip' : `Lvl ${spell.level}`}
-            </span>
+
+            <div className="flex items-center gap-1.5">
+                {/* Inspect / Sheet Button */}
+                <button
+                    type="button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onInspect();
+                    }}
+                    className={cn(
+                        "px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider flex items-center gap-1 border transition-all",
+                        active
+                            ? "bg-stone-900/40 text-dragon-gold border-dragon-gold/40 hover:bg-stone-900/70"
+                            : "bg-dragon-gold/10 text-dragon-darkRed border-dragon-gold/30 hover:bg-dragon-gold/20"
+                    )}
+                    title="Inspect Spell Sheet"
+                >
+                    <GameIcon name="info" size={10} color="currentColor" />
+                    <span>Sheet</span>
+                </button>
+
+                <span className={cn(
+                    "text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded",
+                    active ? "bg-dragon-gold text-stone-950 font-bold" : "bg-dragon-red/10 text-dragon-red"
+                )}>
+                    {(spell.level === 0 || spell.level === "0") ? 'Cantrip' : `Lvl ${spell.level}`}
+                </span>
+            </div>
         </div>
         
         {active && (
-            <div className="absolute top-1 right-1 z-20 bg-dragon-gold/20 p-0.5 rounded">
-                <GameIcon name="check" size={10} color="#B8860B" />
+            <div className="absolute top-1 right-1 z-20 bg-dragon-gold/30 text-dragon-gold p-0.5 rounded">
+                <GameIcon name="check" size={10} color="currentColor" />
             </div>
         )}
         
@@ -453,5 +566,5 @@ const SpellCard: React.FC<{ spell: any, active: boolean, onClick: () => void, ru
         )}>
             <GameIcon name="energy" size={60} color="currentColor" />
         </div>
-    </button>
+    </div>
 );
