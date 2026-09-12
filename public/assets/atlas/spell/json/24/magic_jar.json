@@ -47,8 +47,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/magic_jar.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/magic_jar.webp",
-  "sprite_index": 13,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet8.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "magic_jar.webp",
+    "cell": 0
+  }
 }

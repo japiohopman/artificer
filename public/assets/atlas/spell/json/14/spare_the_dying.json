@@ -35,7 +35,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/spare_the_dying.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/spare_the_dying.webp",
-  "sprite_index": 20,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet11.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cantrips_sheet_02.webp",
+    "cell": 4
+  }
 }

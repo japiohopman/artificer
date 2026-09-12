@@ -40,7 +40,9 @@
   ],
   "url": "/assets/atlas/spell/json/warding_bond.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/warding_bond.webp",
-  "sprite_index": 9,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "warding_bond.webp",
+    "cell": 0
+  }
 }

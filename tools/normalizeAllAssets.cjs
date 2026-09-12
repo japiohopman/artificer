@@ -123,7 +123,7 @@ function normalizePath(val) {
     .replace(/\/assets\/atlas\/proficiencies\/(?!json\/)/g, '/assets/atlas/proficiencies/json/')
     .replace(/\/assets\/atlas\/ability_scores\/(?!json\/)/g, '/assets/atlas/ability_scores/json/')
     .replace(/\/assets\/atlas\/damage_types\/(?!json\/)/g, '/assets/atlas/damage_types/json/')
-    .replace(/\/assets\/atlas\/spell\/(?!json\/)/g, '/assets/atlas/spell/json/')
+    .replace(/\/assets\/atlas\/spell\/(?!(json|sprites|images)\/)/g, '/assets/atlas/spell/json/')
     .replace(/\/assets\/atlas\/skills\/(?!json\/)/g, '/assets/atlas/skills/json/')
     .replace(/\/assets\/atlas\/equipment_categories\/(?!json\/)/g, '/assets/atlas/equipment_categories/json/')
     .replace(/\/assets\/atlas\/backgrounds\/(?!json\/)/g, '/assets/atlas/backgrounds/json/')
@@ -152,8 +152,6 @@ function normalizePath(val) {
     newVal = newVal.replace('/assets/atlas/backgrounds/', '/assets/atlas/backgrounds/wiki_image/');
   }
 
-  // Final cleanup: don't double inject /json/ if it was accidentally added to a webp path
-  newVal = newVal.replace(/\/json\/(.*)\.webp$/, '/wiki_image/$1.webp');
   if (newVal.includes('/equipment/') && newVal.endsWith('.webp')) {
       newVal = newVal.replace('/json/', '/images/');
   }
@@ -172,7 +170,7 @@ function normalizePath(val) {
 
   // Ensure spell images are located in spell/images and hyphens are converted to underscores
   if (newVal.includes('/spell/') && newVal.endsWith('.webp')) {
-    newVal = newVal.replace('/json/', '/images/');
+    newVal = newVal.replace('/json/', '/images/').replace('/wiki_image/', '/images/');
     if (newVal.includes('/spell/images/')) {
       const parts = newVal.split('/spell/images/');
       const filename = parts[1].replace(/-/g, '_');
@@ -189,6 +187,74 @@ function sanitizeJsonString(str) {
   return str.replace(/,\s*([\]}])/g, '$1');
 }
 
+const SPELL_SPRITES_DIR = path.join(__dirname, '../public/assets/atlas/spell/sprites');
+const SPELL_IMAGES_DIR = path.join(__dirname, '../public/assets/atlas/spell/images');
+
+let mdSpellMap = null;
+function getMdSpellMap() {
+  if (mdSpellMap) return mdSpellMap;
+  mdSpellMap = {};
+  if (fs.existsSync(SPELL_SPRITES_DIR)) {
+    const mdFiles = fs.readdirSync(SPELL_SPRITES_DIR).filter(f => f.endsWith('.md') && f !== 'INDEX.md');
+    for (const file of mdFiles) {
+      const sheetName = file.replace('.md', '.webp');
+      const content = fs.readFileSync(path.join(SPELL_SPRITES_DIR, file), 'utf8');
+      for (const line of content.split('\n')) {
+        if (line.startsWith('|') && !line.includes('Cell') && !line.includes('---')) {
+          const parts = line.split('|').map(s => s.trim());
+          if (parts.length >= 5) {
+            const cell = parseInt(parts[1], 10);
+            const spellIndex = parts[4].replace(/`/g, '').trim().toLowerCase();
+            if (!isNaN(cell) && spellIndex && !spellIndex.startsWith('reserved_slot')) {
+              mdSpellMap[spellIndex] = { sheet: sheetName, cell };
+              const underscoreIndex = spellIndex.replace(/-/g, '_');
+              mdSpellMap[underscoreIndex] = { sheet: sheetName, cell };
+            }
+          }
+        }
+      }
+    }
+  }
+  return mdSpellMap;
+}
+
+function deriveSpellSprite(spellData) {
+  const level = typeof spellData.level === 'number' ? spellData.level : 0;
+  const rawIndex = spellData.index ? spellData.index.toLowerCase() : '';
+  const index = rawIndex.replace(/-/g, '_');
+
+  const mdMap = getMdSpellMap();
+  const mdMatch = mdMap[rawIndex] || mdMap[index];
+
+  // 1. Check MD layout manifest mapping first if sheet exists on disk
+  if (mdMatch && (fs.existsSync(path.join(SPELL_SPRITES_DIR, mdMatch.sheet)) || fs.existsSync(path.join(SPELL_IMAGES_DIR, mdMatch.sheet)))) {
+    return { atlas: 'spell', sheet: mdMatch.sheet, cell: mdMatch.cell };
+  }
+
+  // 2. Check if standalone image webp exists on disk (e.g. acid_arrow.webp)
+  if (index && fs.existsSync(path.join(SPELL_IMAGES_DIR, `${index}.webp`))) {
+    return { atlas: 'spell', sheet: `${index}.webp`, cell: 0 };
+  }
+
+  // 3. Fallbacks based on available sheet image files on disk
+  const cell = mdMatch ? mdMatch.cell : 0;
+  if (level === 0 && fs.existsSync(path.join(SPELL_SPRITES_DIR, 'cantrips_sheet_01.webp'))) {
+    return { atlas: 'spell', sheet: 'cantrips_sheet_01.webp', cell };
+  }
+
+  const levelSheet = `spells_level${level}_sheet_01.webp`;
+  if (fs.existsSync(path.join(SPELL_SPRITES_DIR, levelSheet))) {
+    return { atlas: 'spell', sheet: levelSheet, cell };
+  }
+
+  const altLevelSheet = `spell_level${level}_sheet_01.webp`;
+  if (fs.existsSync(path.join(SPELL_SPRITES_DIR, altLevelSheet))) {
+    return { atlas: 'spell', sheet: altLevelSheet, cell };
+  }
+
+  return { atlas: 'spell', sheet: 'spell_level1_sheet_01.webp', cell };
+}
+
 function processJson(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -199,9 +265,7 @@ function processJson(filePath) {
       data = JSON.parse(content);
     } catch (e) {
       console.warn(`[REPAIR] Attempting to fix JSON in ${filePath}`);
-      // If simple regex didn't work, maybe it's just very broken
       if (content.includes(']')) {
-         // Final desperate attempt for things like toril.json
          content = content.replace(/,\s*\]/g, ']');
          data = JSON.parse(content);
       } else {
@@ -217,6 +281,19 @@ function processJson(filePath) {
        const fixedStr = contentStr.replace(/strengthing_10_feet/g, 'string_10_feet');
        data = JSON.parse(fixedStr);
        changed = true;
+    }
+
+    // Spell specific logic: remove obsolete legacy fields and enforce canonical sprite contract
+    if (filePath.includes(path.join('spell', 'json'))) {
+      if ('image' in data) { delete data.image; changed = true; }
+      if ('sprite_index' in data) { delete data.sprite_index; changed = true; }
+      if ('sprite_sheet' in data) { delete data.sprite_sheet; changed = true; }
+
+      const newSprite = deriveSpellSprite(data);
+      if (!data.sprite || data.sprite.atlas !== newSprite.atlas || data.sprite.sheet !== newSprite.sheet || data.sprite.cell !== newSprite.cell) {
+        data.sprite = newSprite;
+        changed = true;
+      }
     }
 
     // Recursive path normalization

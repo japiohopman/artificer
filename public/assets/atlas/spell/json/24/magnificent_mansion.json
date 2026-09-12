@@ -43,8 +43,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/magnificent_mansion.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/magnificent_mansion.webp",
-  "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet8.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "magnificent_mansion.webp",
+    "cell": 0
+  }
 }

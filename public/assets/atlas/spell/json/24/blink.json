@@ -47,8 +47,10 @@
   ],
   "url": "/assets/atlas/spell/json/blink.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/blink.webp",
-  "sprite_index": 6,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet2.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "blink.webp",
+    "cell": 0
+  }
 }

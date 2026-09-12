@@ -51,6 +51,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/thorn_whip.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/thorn_whip.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cantrips_sheet_02.webp",
+    "cell": 6
+  }
 }

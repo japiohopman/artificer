@@ -48,7 +48,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/foresight.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/foresight.webp",
-  "sprite_index": 3,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet6.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "foresight.webp",
+    "cell": 0
+  }
 }

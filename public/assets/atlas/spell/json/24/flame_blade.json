@@ -55,8 +55,10 @@
   ],
   "url": "/assets/atlas/spell/json/flame_blade.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/flame_blade.webp",
-  "sprite_index": 19,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet5.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "flame_blade.webp",
+    "cell": 0
+  }
 }

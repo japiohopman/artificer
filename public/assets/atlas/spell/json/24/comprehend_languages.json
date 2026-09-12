@@ -54,8 +54,10 @@
   ],
   "url": "/assets/atlas/spell/json/comprehend_languages.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/comprehend_languages.webp",
-  "sprite_index": 23,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet2.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_01.webp",
+    "cell": 10
+  }
 }

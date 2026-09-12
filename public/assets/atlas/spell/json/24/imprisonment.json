@@ -60,8 +60,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/imprisonment.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/imprisonment.webp",
-  "sprite_index": 17,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet7.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "imprisonment.webp",
+    "cell": 0
+  }
 }

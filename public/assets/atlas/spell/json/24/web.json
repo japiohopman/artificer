@@ -61,8 +61,10 @@
   ],
   "url": "/assets/atlas/spell/json/web.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/web.webp",
-  "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "web.webp",
+    "cell": 0
+  }
 }

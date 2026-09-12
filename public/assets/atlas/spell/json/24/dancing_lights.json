@@ -54,8 +54,10 @@
   ],
   "url": "/assets/atlas/spell/json/dancing_lights.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/dancing_lights.webp",
-  "sprite_index": 20,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet3.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cantrips_sheet_01.webp",
+    "cell": 2
+  }
 }

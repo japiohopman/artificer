@@ -45,7 +45,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/power_word_stun.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/power_word_stun.webp",
-  "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet9.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "power_word_stun.webp",
+    "cell": 0
+  }
 }

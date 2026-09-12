@@ -53,7 +53,9 @@
   ],
   "url": "/assets/atlas/spell/json/spike_growth.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/spike_growth.webp",
-  "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet12.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level2_sheet_01.webp",
+    "cell": 0
+  }
 }

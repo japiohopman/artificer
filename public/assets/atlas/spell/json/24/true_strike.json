@@ -52,9 +52,6 @@
   ],
   "url": "/assets/atlas/spell/json/true_strike.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/true_strike.webp",
-  "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp",
   "ruleset": "2024",
   "damage": {
     "damage_type": {
@@ -67,5 +64,10 @@
       "11": "2d6",
       "17": "3d6"
     }
+  },
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cantrips_sheet_02.webp",
+    "cell": 7
   }
 }

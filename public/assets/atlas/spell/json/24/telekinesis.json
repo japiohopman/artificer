@@ -44,8 +44,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/telekinesis.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/telekinesis.webp",
-  "sprite_index": 11,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet12.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "telekinesis.webp",
+    "cell": 0
+  }
 }

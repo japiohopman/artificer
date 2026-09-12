@@ -18,7 +18,7 @@
     "school",
     "classes",
     "url",
-    "image",
+    "sprite",
     "updated_at"
   ],
   "properties": {
@@ -161,19 +161,18 @@
       "type": "string",
       "pattern": "^\\/?(public/)?assets/atlas/spell/json/.+\\.json$"
     },
-    "image": {
-      "type": "string",
-      "pattern": "^\\/?(public/)?assets/atlas/spell/images/.+\\.webp$"
+    "sprite": {
+      "type": "object",
+      "properties": {
+        "atlas": { "type": "string", "enum": ["spell"] },
+        "sheet": { "type": "string" },
+        "cell": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["atlas", "sheet", "cell"]
     },
     "updated_at": {
       "type": "string",
       "format": "date-time"
-    },
-    "sprite_index": {
-      "type": "integer"
-    },
-    "sprite_sheet": {
-      "type": "string"
     }
   }
 }

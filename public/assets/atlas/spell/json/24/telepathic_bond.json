@@ -33,8 +33,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/telepathic_bond.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/telepathic_bond.webp",
-  "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet12.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "telepathic_bond.webp",
+    "cell": 0
+  }
 }

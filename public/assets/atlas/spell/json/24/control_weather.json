@@ -75,8 +75,10 @@
   ],
   "url": "/assets/atlas/spell/json/control_weather.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/control_weather.webp",
-  "sprite_index": 13,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet3.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "control_weather.webp",
+    "cell": 0
+  }
 }

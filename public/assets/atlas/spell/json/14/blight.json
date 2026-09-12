@@ -78,7 +78,9 @@
   ],
   "url": "/assets/atlas/spell/json/blight.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/blight.webp",
-  "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet2.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "blight.webp",
+    "cell": 0
+  }
 }

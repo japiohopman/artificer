@@ -58,8 +58,10 @@
   ],
   "url": "/assets/atlas/spell/json/spider_climb.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/spider_climb.webp",
-  "sprite_index": 24,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet11.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spider_climb.webp",
+    "cell": 0
+  }
 }

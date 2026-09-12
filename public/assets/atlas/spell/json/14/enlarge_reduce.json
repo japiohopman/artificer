@@ -59,7 +59,9 @@
   ],
   "url": "/assets/atlas/spell/json/enlarge_reduce.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/enlarge_reduce.webp",
-  "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet4.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "enlarge_reduce.webp",
+    "cell": 0
+  }
 }

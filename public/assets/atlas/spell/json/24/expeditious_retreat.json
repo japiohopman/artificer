@@ -51,8 +51,10 @@
   ],
   "url": "/assets/atlas/spell/json/expeditious_retreat.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/expeditious_retreat.webp",
-  "sprite_index": 1,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet5.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_02.webp",
+    "cell": 3
+  }
 }

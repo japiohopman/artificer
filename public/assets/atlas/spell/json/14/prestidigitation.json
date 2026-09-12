@@ -63,7 +63,9 @@
   ],
   "url": "/assets/atlas/spell/json/prestidigitation.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/prestidigitation.webp",
-  "sprite_index": 1,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet10.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cantrips_sheet_01.webp",
+    "cell": 13
+  }
 }

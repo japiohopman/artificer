@@ -49,8 +49,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/modify_memory.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/modify_memory.webp",
-  "sprite_index": 9,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet9.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 8
+  }
 }

@@ -284,9 +284,21 @@ function validateJson(filePath) {
     };
     checkNested(data);
 
-    // 4. Specific typo checks
+    // 4. Specific typo and legacy checks
     if (content.includes('strengthing_10_feet')) {
       logError(relativePath, `Contains typo "strengthing_10_feet" (should be "string_10_feet")`);
+    }
+
+    if (filePath.includes('spell/json') || filePath.includes('spell\\json')) {
+      if (content.includes('wiki_image')) {
+        logError(relativePath, `Contains forbidden wiki_image path in spell JSON`);
+      }
+      if (content.includes('"sprite_index"') || content.includes('"sprite_sheet"')) {
+        logError(relativePath, `Contains forbidden legacy sprite fields (sprite_index / sprite_sheet) in spell JSON`);
+      }
+      if (!data.sprite || !data.sprite.sheet) {
+        logError(relativePath, `Missing required canonical sprite property in spell JSON`);
+      }
     }
 
     // 5. Schema validation

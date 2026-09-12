@@ -51,5 +51,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/absorb_elements.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/absorb_elements.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_01.webp",
+    "cell": 0
+  }
 }

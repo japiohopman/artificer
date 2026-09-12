@@ -44,7 +44,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/programmed_illusion.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/programmed_illusion.webp",
-  "sprite_index": 6,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet10.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "programmed_illusion.webp",
+    "cell": 0
+  }
 }

@@ -51,7 +51,9 @@
   ],
   "url": "/assets/atlas/spell/json/create_food_and_water.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/create_food_and_water.webp",
-  "sprite_index": 15,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet3.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "create_food_and_water.webp",
+    "cell": 0
+  }
 }

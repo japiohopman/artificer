@@ -64,8 +64,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/banishment.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/banishment.webp",
-  "sprite_index": 22,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet1.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "banishment.webp",
+    "cell": 0
+  }
 }

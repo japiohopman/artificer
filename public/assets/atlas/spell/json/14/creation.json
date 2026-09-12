@@ -57,7 +57,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/creation.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/creation.webp",
-  "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet3.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "creation.webp",
+    "cell": 0
+  }
 }

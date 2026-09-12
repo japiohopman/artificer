@@ -63,7 +63,9 @@
   ],
   "url": "/assets/atlas/spell/json/acid_arrow.json",
   "updated_at": "2025-10-24T20:42:14.618Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/acid_arrow.webp",
-  "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet1.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level2_sheet_01.webp",
+    "cell": 0
+  }
 }

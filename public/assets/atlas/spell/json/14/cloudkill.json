@@ -72,7 +72,9 @@
   ],
   "url": "/assets/atlas/spell/json/cloudkill.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/cloudkill.webp",
-  "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet2.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "cloudkill.webp",
+    "cell": 0
+  }
 }

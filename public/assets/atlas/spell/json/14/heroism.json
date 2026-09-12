@@ -41,7 +41,9 @@
   ],
   "url": "/assets/atlas/spell/json/heroism.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/heroism.webp",
-  "sprite_index": 7,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet7.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_02.webp",
+    "cell": 15
+  }
 }

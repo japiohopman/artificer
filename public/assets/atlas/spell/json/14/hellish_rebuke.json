@@ -58,7 +58,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/hellish_rebuke.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/hellish_rebuke.webp",
-  "sprite_index": 5,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet7.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_02.webp",
+    "cell": 14
+  }
 }

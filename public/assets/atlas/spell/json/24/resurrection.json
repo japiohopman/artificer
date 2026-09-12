@@ -41,8 +41,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/resurrection.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/resurrection.webp",
-  "sprite_index": 20,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet10.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "resurrection.webp",
+    "cell": 0
+  }
 }

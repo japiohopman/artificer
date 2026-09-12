@@ -46,8 +46,10 @@
   ],
   "url": "/assets/atlas/spell/json/speak_with_animals.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/speak_with_animals.webp",
-  "sprite_index": 21,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet11.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_04.webp",
+    "cell": 0
+  }
 }

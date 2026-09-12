@@ -49,7 +49,9 @@
   ],
   "url": "/assets/atlas/spell/json/tiny_hut.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/tiny_hut.webp",
-  "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet12.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 4
+  }
 }

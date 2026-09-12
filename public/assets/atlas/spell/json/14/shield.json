@@ -41,7 +41,9 @@
   ],
   "url": "/assets/atlas/spell/json/shield.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/shield.webp",
-  "sprite_index": 11,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet11.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_03.webp",
+    "cell": 12
+  }
 }

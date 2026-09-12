@@ -51,7 +51,9 @@
   ],
   "url": "/assets/atlas/spell/json/raise_dead.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/raise_dead.webp",
-  "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet10.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 11
+  }
 }

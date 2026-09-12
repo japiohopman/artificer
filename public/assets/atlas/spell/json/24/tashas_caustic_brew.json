@@ -62,6 +62,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/tashas_caustic_brew.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/tashas_caustic_brew.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_04.webp",
+    "cell": 1
+  }
 }

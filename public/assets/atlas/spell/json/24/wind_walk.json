@@ -33,8 +33,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/wind_walk.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/wind_walk.webp",
-  "sprite_index": 14,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet13.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "wind_walk.webp",
+    "cell": 0
+  }
 }

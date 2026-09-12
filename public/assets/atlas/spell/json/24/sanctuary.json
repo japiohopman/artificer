@@ -49,8 +49,10 @@
   ],
   "url": "/assets/atlas/spell/json/sanctuary.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/sanctuary.webp",
-  "sprite_index": 0,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet11.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level1_sheet_03.webp",
+    "cell": 11
+  }
 }

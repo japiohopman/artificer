@@ -51,8 +51,10 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/private_sanctum.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/private_sanctum.webp",
-  "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet10.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 9
+  }
 }

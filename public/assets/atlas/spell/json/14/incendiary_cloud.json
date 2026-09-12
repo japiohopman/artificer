@@ -59,7 +59,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/incendiary_cloud.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/incendiary_cloud.webp",
-  "sprite_index": 18,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet7.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "incendiary_cloud.webp",
+    "cell": 0
+  }
 }

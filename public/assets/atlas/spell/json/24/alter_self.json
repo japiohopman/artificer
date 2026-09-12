@@ -49,8 +49,10 @@
   ],
   "url": "/assets/atlas/spell/json/alter_self.json",
   "updated_at": "2026-06-01T06:56:15.190Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/alter_self.webp",
-  "sprite_index": 4,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet1.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spells_level2_sheet_01.webp",
+    "cell": 2
+  }
 }

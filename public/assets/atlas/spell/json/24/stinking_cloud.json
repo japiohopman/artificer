@@ -73,8 +73,10 @@
   ],
   "url": "/assets/atlas/spell/json/stinking_cloud.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/stinking_cloud.webp",
-  "sprite_index": 3,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet12.webp",
-  "ruleset": "2024"
+  "ruleset": "2024",
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 3
+  }
 }

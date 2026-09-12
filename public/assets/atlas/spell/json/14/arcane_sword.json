@@ -49,7 +49,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/arcane_sword.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/arcane_sword.webp",
-  "sprite_index": 16,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet1.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "arcane_sword.webp",
+    "cell": 0
+  }
 }

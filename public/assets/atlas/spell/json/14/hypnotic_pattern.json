@@ -62,7 +62,9 @@
   ],
   "url": "/assets/atlas/spell/json/hypnotic_pattern.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/hypnotic_pattern.webp",
-  "sprite_index": 13,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet7.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "spell_level1_sheet_01.webp",
+    "cell": 1
+  }
 }

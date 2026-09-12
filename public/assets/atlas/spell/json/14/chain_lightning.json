@@ -58,7 +58,9 @@
   "subclasses": [],
   "url": "/assets/atlas/spell/json/chain_lightning.json",
   "updated_at": "2025-10-24T20:42:14.619Z",
-  "image": "/assets/atlas/spell/wiki_image/wiki_image/images/chain_lightning.webp",
-  "sprite_index": 12,
-  "sprite_sheet": "/assets/atlas/spell/wiki_image/wiki_image/sprites/spell_sheet2.webp"
+  "sprite": {
+    "atlas": "spell",
+    "sheet": "chain_lightning.webp",
+    "cell": 0
+  }
 }
