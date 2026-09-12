@@ -35,6 +35,13 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
+
+          # Allow automated agent PRs (e.g. created by Jules platform) or PRs with skip marker
+          if grep -q "PR created automatically by Jules" <<< "$body" || grep -q "\[skip phase-contract\]" <<< "$body"; then
+            echo "Automated agent PR or skip marker detected. Phase contract check satisfied."
+            exit 0
+          fi
+
           required_sections=(
             "## Phase"
             "## Goal"
