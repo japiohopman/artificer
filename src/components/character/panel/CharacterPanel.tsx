@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Character } from '../../../store/useCharacterStore';
-import { CharacterPanelStats } from './CharacterPanelStats';
+import { calculateDerivedStats } from '../../../lib/statCalculations';
+import { CharacterPanelBody } from './CharacterPanelBody';
+import { CharacterPanelAbilities } from './CharacterPanelAbilities';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
 import { CharacterPanelBio } from './CharacterPanelBio';
 import { CharacterPanelSpells } from './CharacterPanelSpells';
@@ -49,6 +51,14 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
   if (!character) return null;
 
+  const derived = calculateDerivedStats(character as Character);
+  const hpVal = character.hp ?? character.maxHp;
+  const maxHpVal = character.maxHp ?? hpVal ?? 0;
+  const hpPercent = maxHpVal > 0 && hpVal ? Math.min(100, Math.max(0, (hpVal / maxHpVal) * 100)) : 100;
+
+  const speedText = character.race ? `${derived.speed} FT` : '—';
+  const initiativeText = derived.initiative >= 0 ? `+${derived.initiative}` : `${derived.initiative}`;
+
   const tabs: { id: CharacterPanelTab; label: string; icon: string }[] = [
     { id: 'stats', label: 'Stats', icon: 'chart' },
     { id: 'traits', label: 'Traits', icon: 'trait' },
@@ -59,43 +69,153 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
   return (
     <div className={cn("flex flex-col h-full w-full bg-white/40 border border-dragon-gold/30 rounded shadow-inner overflow-hidden", className)}>
-      {/* Header Tabs */}
-      {!hideTabs && (
-        <div className="flex items-center gap-1 p-1 bg-white/70 border-b border-dragon-gold/30 shrink-0">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => handleTabClick(tab.id)}
-                className={cn(
-                  "flex-1 flex items-center justify-center gap-1 py-1 px-1.5 rounded text-[9px] font-header font-black uppercase transition-all cursor-pointer",
-                  isActive
-                    ? "bg-dragon-red text-white shadow border border-dragon-gold/40"
-                    : "bg-white/50 text-dragon-darkRed hover:bg-white/80 border border-dragon-gold/20"
-                )}
-              >
-                <GameIcon name={tab.icon as any} size={11} color={isActive ? '#FFFFFF' : '#8B0000'} />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
+      {/* Consolidated Identity & Vitals Header */}
+      <div className="p-2 sm:p-2.5 bg-white/70 backdrop-blur-sm border-b border-dragon-gold/30 shrink-0 space-y-1.5">
+        <div className="flex items-center justify-between gap-2">
+          <div className="min-w-0 flex-1">
+            <h2 className="text-sm sm:text-base font-header font-black text-dragon-darkRed uppercase tracking-tight truncate leading-tight">
+              {character.name && character.name.trim() ? character.name : 'Unmanifested Hero'}
+            </h2>
+            <p className="text-[8px] sm:text-[9px] font-bold text-parchment-600 uppercase tracking-widest truncate">
+              {character.class || 'Adventurer'} {character.race ? `• ${character.race.replace(/-/g, ' ')}` : ''} • Lvl {character.level || 1}
+            </p>
+          </div>
+
+          {/* Prominent Health Treatment (#ec597a accent) */}
+          <div className="flex items-center gap-2 bg-[#ec597a]/10 border border-[#ec597a]/30 px-2.5 py-1 rounded shadow-xs shrink-0">
+            <GameIcon name="heart" size={16} color="#ec597a" className="shrink-0 animate-pulse" />
+            <div className="flex flex-col items-end leading-none">
+              <span className="text-[11px] font-header font-black text-[#ec597a]">
+                {hpVal ?? '—'} / {maxHpVal || '—'}
+              </span>
+              <span className="text-[6px] font-black uppercase text-parchment-500 tracking-wider mt-0.5">
+                Hit Points
+              </span>
+            </div>
+          </div>
         </div>
-      )}
 
-      {/* Active Tab Content Stage */}
-      <div className="flex-1 p-2 overflow-y-auto custom-scrollbar relative">
+        {/* Compact HP Progress Bar */}
+        <div className="h-1 w-full bg-stone-900/10 rounded-full overflow-hidden shadow-inner">
+          <div
+            className="h-full bg-[#ec597a] transition-all duration-500 rounded-full"
+            style={{ width: `${hpPercent}%` }}
+          />
+        </div>
+
+        {/* Tab Navigation */}
+        {!hideTabs && (
+          <div className="flex items-center gap-1 pt-1 border-t border-dragon-gold/20">
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => handleTabClick(tab.id)}
+                  className={cn(
+                    "flex-1 flex items-center justify-center gap-1 py-1 px-1.5 rounded text-[9px] font-header font-black uppercase transition-all cursor-pointer",
+                    isActive
+                      ? "bg-dragon-red text-white shadow border border-dragon-gold/40"
+                      : "bg-white/50 text-dragon-darkRed hover:bg-white/80 border border-dragon-gold/20"
+                  )}
+                >
+                  <GameIcon name={tab.icon as any} size={11} color={isActive ? '#FFFFFF' : '#8B0000'} />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* PERSISTENT CHARACTER MIRROR STAGE */}
+      <div className="relative flex-1 w-full min-h-[260px] overflow-hidden">
+        {/* Layer 1: Permanent Background Atmosphere & SVG Silhouette */}
+        <div className="absolute inset-0 z-0 flex flex-col justify-between p-1">
+          <div className="relative flex-1 w-full flex items-center justify-center">
+            <CharacterPanelBody character={character} currentStep={currentStep} />
+          </div>
+
+          {/* Ability Scores Strip permanently anchored at bottom of mirror */}
+          <div className="relative z-10 shrink-0">
+            <CharacterPanelAbilities character={character} />
+          </div>
+        </div>
+
+        {/* Layer 2: Translucent Active Tab Overlays above the Mirror Stage */}
+
+        {/* STATS OVERLAY BADGES */}
         {activeTab === 'stats' && (
-          <CharacterPanelStats character={character} currentStep={currentStep} />
+          <>
+            {/* Left Identity Badges Overlay */}
+            <div className="absolute left-2 top-2 z-20 flex flex-col gap-1 max-w-[120px] pointer-events-none">
+              {character.race && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
+                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Species</span>
+                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {character.race.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+              {character.class && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
+                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Class</span>
+                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {character.class}{character.subclass ? ` (${character.subclass})` : ''}
+                  </span>
+                </div>
+              )}
+              {character.background && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
+                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Background</span>
+                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {character.background.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+              {character.alignment && (
+                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
+                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Alignment</span>
+                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
+                    {character.alignment.replace(/-/g, ' ')}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Right Combat Badges Overlay */}
+            <div className="absolute right-2 top-2 z-20 flex flex-col gap-1 pointer-events-none items-end min-w-[70px]">
+              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
+                <GameIcon name="shield" size={11} color="#D4AF37" className="shrink-0" />
+                <span className="text-[9px] font-header font-black text-dragon-darkRed">{derived.ac} AC</span>
+              </div>
+              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
+                <GameIcon name="wind" size={11} color="#8B0000" className="shrink-0" />
+                <span className="text-[9px] font-header font-black text-dragon-darkRed">{speedText}</span>
+              </div>
+              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
+                <GameIcon name="lightning" size={11} color="#8B0000" className="shrink-0" />
+                <span className="text-[9px] font-header font-black text-dragon-darkRed">{initiativeText}</span>
+              </div>
+              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
+                <GameIcon name="magic_effect" size={11} color="#D4AF37" className="shrink-0" />
+                <span className="text-[9px] font-header font-black text-dragon-darkRed">+{derived.proficiencyBonus} PROF</span>
+              </div>
+            </div>
+          </>
         )}
 
+        {/* TRAITS TAB OVERLAY */}
         {activeTab === 'traits' && (
-          <CharacterPanelTraits character={character} />
+          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+            <CharacterPanelTraits character={character} />
+          </div>
         )}
 
+        {/* EQUIPMENT TAB OVERLAY */}
         {activeTab === 'equipment' && (
-          <div className="h-full flex items-center justify-center p-2 bg-white/20 backdrop-blur-xs">
+          <div className="absolute inset-x-1 top-1 bottom-14 z-30 flex items-center justify-center p-1 bg-white/40 backdrop-blur-xs rounded">
             <EquipmentDoll
               equippedItems={character.inventory || {}}
               equipment={character.equipment}
@@ -111,16 +231,22 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
           </div>
         )}
 
+        {/* SPELLS TAB OVERLAY */}
         {activeTab === 'spells' && (
-          <CharacterPanelSpells character={character} isEditable={isEditable} />
+          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+            <CharacterPanelSpells character={character} isEditable={isEditable} />
+          </div>
         )}
 
+        {/* BIO TAB OVERLAY */}
         {activeTab === 'bio' && (
-          <CharacterPanelBio
-            character={character}
-            onUpdate={onUpdate}
-            isEditable={isEditable}
-          />
+          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+            <CharacterPanelBio
+              character={character}
+              onUpdate={onUpdate}
+              isEditable={isEditable}
+            />
+          </div>
         )}
       </div>
     </div>
