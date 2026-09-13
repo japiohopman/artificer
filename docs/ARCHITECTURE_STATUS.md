@@ -17,11 +17,64 @@ The current architectural priority is to keep **authoring tools separate from ru
 - `useInventoryStore` — domain command & controller layer for party inventory, equip/unequip, and transfers operating directly against canonical character state (`useCharacterStore`).
 - Feature-local state — temporary editor/UI state that does not belong in global runtime stores.
 
-### Character Panel Presentation Architecture
-- **Shared Presentation Primitives**: `src/components/character/panel/` (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`) forms the shared presentation foundation consumed by both `CreatorRightPanel` and runtime HUD `src/components/hud/CharacterPanel.tsx`.
-- **CharacterStore Authority**: `useCharacterStore` owns active character state, stats, items, and proficiencies. No duplicate character state store exists.
-- **Tab Availability**: Overview, Skills, and Traits tabs become available after Class selection.
-- **Equipment Doll Domain**: `EquipmentDoll.tsx` remains strictly inside `src/components/character/equipment/`.
+### Canonical Character Panel Presentation Architecture
+
+The reusable Character Panel is being consolidated under `src/components/character/panel/`. The authoritative design is `docs/modules/characterPanel.md`.
+
+The target ownership model is:
+
+```text
+Character Creator ──┐
+Main Game HUD ───────┼──> canonical CharacterPanel
+Character Profile ──┘             │
+                                  ├── CharacterPanelStats
+                                  ├── CharacterPanelSkills
+                                  ├── CharacterPanelTraits
+                                  ├── CharacterPanelSpells
+                                  ├── CharacterPanelEquipment
+                                  └── CharacterPanelBio
+```
+
+- `src/components/character/panel/` owns reusable Character Panel presentation.
+- `CharacterPanelBody` + `CharacterPanelAbilities` are being consolidated into `CharacterPanelStats`.
+- `src/components/character/CharacterPanel.tsx` may remain a public facade/re-export; it must not contain a competing implementation.
+- `src/components/hud/CharacterPanel.tsx` is a runtime host/container, not a second reusable panel implementation.
+- `CreatorRightPanel.tsx` is a creator host/context layer, not a second panel composition.
+- `CharacterProfile.tsx` is a screen/profile shell that should consume reusable panel/profile primitives rather than rebuild the character sheet.
+- `CharacterStats.tsx` is under audit as a legacy/parallel presentation and should not remain a competing stats surface after migration.
+- `useCharacterStore` remains the canonical character-state authority. No new character state store is required for this UI phase.
+
+### Character Mirror visual contract
+
+The Character Panel is a persistent Character Mirror:
+
+- background/environment covers the full panel surface;
+- body SVG remains visible underneath the tab content;
+- Stats is the default/open and most polished surface;
+- other tabs appear as overlays over the persistent body/background;
+- the reusable panel follows the runtime HUD size contract and has deliberate mobile behavior;
+- HP is a primary resource and its prominent heart treatment uses `#ec597a`;
+- header identity should communicate name plus compact class/species/race/level context without duplicating identity labels elsewhere.
+
+The Creator and runtime HUD must use the same panel system.
+
+### Spell presentation boundary
+
+Spell presentation distinguishes:
+
+1. spell slots — expendable resource state;
+2. spellbook/known/prepared spells — available spell set;
+3. Spell Sheet — detailed inspection of one spell.
+
+The intended interaction boundary is:
+
+```text
+SpellGridTile → SpellSheet
+```
+
+`src/components/atlas/SpellCard.tsx` is a legacy/misleading name for the large detail surface. The migration direction is `SpellSheet.tsx`, with a compatibility export only when needed during migration.
+
+Spell detail must consume canonical Atlas data, including description and other supplied detail fields. Missing fields in the Creator/HUD must be traced to the data contract rather than hidden with renderer-only fallback copy. 2014/2024 spell resolution remains strictly ruleset-aware.
 
 ### Ruleset Context Ownership Contract & Audit Rule
 
@@ -103,3 +156,4 @@ Walls are represented as geometry between cells, not as ordinary blocked cells. 
 6. Update the relevant module documentation when a design decision changes.
 7. Keep `docs/TASK_BOARD.md` focused on actual outstanding work.
 8. Use `docs/PROGRESS.md` for project-level status, not speculative task lists.
+9. Do not create duplicate Character Panel implementations when the canonical panel already owns the capability.
