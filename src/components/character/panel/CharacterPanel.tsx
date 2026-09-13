@@ -3,6 +3,7 @@ import { Character } from '../../../store/useCharacterStore';
 import { calculateDerivedStats } from '../../../lib/statCalculations';
 import { CharacterPanelBody } from './CharacterPanelBody';
 import { CharacterPanelAbilities } from './CharacterPanelAbilities';
+import { CharacterPanelStats } from './CharacterPanelStats';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
 import { CharacterPanelBio } from './CharacterPanelBio';
 import { CharacterPanelSpells } from './CharacterPanelSpells';
@@ -56,9 +57,6 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
   const maxHpVal = character.maxHp ?? hpVal ?? 0;
   const hpPercent = maxHpVal > 0 && hpVal ? Math.min(100, Math.max(0, (hpVal / maxHpVal) * 100)) : 100;
 
-  const speedText = character.race ? `${derived.speed} FT` : '—';
-  const initiativeText = derived.initiative >= 0 ? `+${derived.initiative}` : `${derived.initiative}`;
-
   const tabs: { id: CharacterPanelTab; label: string; icon: string }[] = [
     { id: 'stats', label: 'Stats', icon: 'chart' },
     { id: 'traits', label: 'Traits', icon: 'trait' },
@@ -77,7 +75,7 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
               {character.name && character.name.trim() ? character.name : 'Unmanifested Hero'}
             </h2>
             <p className="text-[8px] sm:text-[9px] font-bold text-parchment-600 uppercase tracking-widest truncate">
-              {character.class || 'Adventurer'} {character.race ? `• ${character.race.replace(/-/g, ' ')}` : ''} • Lvl {character.level || 1}
+              {character.class || 'Adventurer'}{character.subclass ? ` (${character.subclass})` : ''} {character.race ? `• ${character.race.replace(/-/g, ' ')}` : ''} • Lvl {character.level || 1}
             </p>
           </div>
 
@@ -147,63 +145,7 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
         {/* STATS OVERLAY BADGES */}
         {activeTab === 'stats' && (
-          <>
-            {/* Left Identity Badges Overlay */}
-            <div className="absolute left-2 top-2 z-20 flex flex-col gap-1 max-w-[120px] pointer-events-none">
-              {character.race && (
-                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
-                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Species</span>
-                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                    {character.race.replace(/-/g, ' ')}
-                  </span>
-                </div>
-              )}
-              {character.class && (
-                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
-                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Class</span>
-                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                    {character.class}{character.subclass ? ` (${character.subclass})` : ''}
-                  </span>
-                </div>
-              )}
-              {character.background && (
-                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
-                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Background</span>
-                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                    {character.background.replace(/-/g, ' ')}
-                  </span>
-                </div>
-              )}
-              {character.alignment && (
-                <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs">
-                  <span className="text-[6px] font-black uppercase text-parchment-600 block leading-tight">Alignment</span>
-                  <span className="text-[9px] font-header font-black text-dragon-darkRed uppercase block truncate leading-tight">
-                    {character.alignment.replace(/-/g, ' ')}
-                  </span>
-                </div>
-              )}
-            </div>
-
-            {/* Right Combat Badges Overlay */}
-            <div className="absolute right-2 top-2 z-20 flex flex-col gap-1 pointer-events-none items-end min-w-[70px]">
-              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
-                <GameIcon name="shield" size={11} color="#D4AF37" className="shrink-0" />
-                <span className="text-[9px] font-header font-black text-dragon-darkRed">{derived.ac} AC</span>
-              </div>
-              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
-                <GameIcon name="wind" size={11} color="#8B0000" className="shrink-0" />
-                <span className="text-[9px] font-header font-black text-dragon-darkRed">{speedText}</span>
-              </div>
-              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
-                <GameIcon name="lightning" size={11} color="#8B0000" className="shrink-0" />
-                <span className="text-[9px] font-header font-black text-dragon-darkRed">{initiativeText}</span>
-              </div>
-              <div className="bg-white/85 backdrop-blur-md border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-xs flex items-center gap-1 w-full justify-between">
-                <GameIcon name="magic_effect" size={11} color="#D4AF37" className="shrink-0" />
-                <span className="text-[9px] font-header font-black text-dragon-darkRed">+{derived.proficiencyBonus} PROF</span>
-              </div>
-            </div>
-          </>
+          <CharacterPanelStats character={character} currentStep={currentStep} />
         )}
 
         {/* TRAITS TAB OVERLAY */}
