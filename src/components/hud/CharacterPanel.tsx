@@ -10,7 +10,7 @@ import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCalculations';
 import { normalizeImageUrl } from '../../services/storageService';
-import { CharacterPanel, CharacterPanelTab } from '../character/panel/CharacterPanel';
+import { CharacterPanel as CanonicalCharacterPanel, CharacterPanelTab } from '../character/panel/CharacterPanel';
 
 type HUDTab = 'party' | 'equipment' | 'inventory' | 'stats' | 'spells' | 'logistics';
 
@@ -236,10 +236,10 @@ export const CharacterPanel: React.FC = () => {
                 className="h-full"
               >
                 {['stats', 'traits', 'equipment', 'spells', 'bio'].includes(activeTab) && (
-                  <CharacterPanel
+                  <CanonicalCharacterPanel
                     character={activeCharacter}
                     activeTab={activeTab as CharacterPanelTab}
-                    onTabChange={(tab) => setActiveCharacterTab(tab as any)}
+                    onTabChange={(tab: CharacterPanelTab) => setActiveCharacterTab(tab as any)}
                     hideTabs={true}
                   />
                 )}
