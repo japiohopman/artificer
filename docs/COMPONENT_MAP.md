@@ -14,7 +14,7 @@ Essential application-level components and providers.
 ## 📁 `atlas/`
 Presentation components for Atlas-backed entities and data.
 - **`MonsterCard.tsx`**: Monster details, actions and loot.
-- **`SpellCard.tsx`**: Spell details.
+- **`SpellCard.tsx` / `SpellSheet.tsx`**: Spell detail presentation; `SpellSheet` is the target canonical name for the large inspection surface during the current migration.
 - **`EquipmentCard.tsx`**: Equipment details.
 - **`MaterialCard.tsx`**: Crafting material details.
 - **`DraggableCard.tsx`**: Draggable Atlas card wrapper.
@@ -33,12 +33,12 @@ Shared reusable UI and inspection components.
 ## 📁 `character/`
 Character creation, character presentation and inventory/equipment UI.
 - **`CharacterCreator/`**: Coherent guided character creation workflow (`WelcomeStep`, `SlotStep`, `IdentityStep`, `SelectionStep`, `ChoicesStep`, `StatsStep`, `SpellsStep`, `EquipmentStep`, `AppearanceStep`, `BackstoryStep`, `ValidationOverlay`, `ReviewStep`, `ChoiceCard`).
-- **`CreatorRightPanel.tsx`**: Creator persistent right panel consuming shared character panel primitives.
-- **`panel/`**: Shared character panel presentation primitives (`CharacterPanelBody`, `CharacterPanelAbilities`, `CharacterPanelSkills`, `CharacterPanelTraits`).
-- **`CharacterProfile.tsx`**: Character sheet/profile presentation.
+- **`CreatorRightPanel.tsx`**: Creator host/context for the canonical Character Panel; should not reconstruct a second panel from individual primitives.
+- **`panel/`**: Canonical reusable Character Panel presentation layer. Target sections include `CharacterPanelStats`, `CharacterPanelSkills`, `CharacterPanelTraits`, `CharacterPanelSpells`, `CharacterPanelEquipment` and `CharacterPanelBio`. The persistent Character Mirror background/body belongs to this shared presentation model.
+- **`CharacterProfile.tsx`**: Character profile/screen shell consuming reusable character presentation primitives; not a second Character Panel implementation.
 - **`inventory/`**: Reusable inventory workspace components (`Inventory.tsx`, `FullInventoryMenu.tsx`, `PartyInventory.tsx`, `DraggableInventoryItem.tsx`, `SpellInventory.tsx`).
 - **`equipment/`**: Equipment presentation components (`EquipmentDoll.tsx`, `StarterWeaponSprite.tsx`, `starterWeaponSpriteMap.ts`).
-- **`CharacterPanel.tsx`**: Re-export wrapper for HUD runtime CharacterPanel.
+- **`CharacterPanel.tsx`**: Stable public facade/re-export for the canonical Character Panel; not an independent implementation.
 - **`LevelUpOverlay.tsx`**: Level-up workflow.
 
 ## 📁 `hud/`
@@ -51,7 +51,7 @@ Runtime game HUD and player-facing gameplay views.
 - **`game/MapLegend.tsx`**: Dynamic map legend.
 - **`view/`**: First-person and NPC presentation.
 - **`WorldMap.tsx`**: Interactive world map.
-- **`CharacterPanel.tsx`**: Runtime HUD character panel surface consuming shared character panel primitives.
+- **`CharacterPanel.tsx`**: Runtime host/container for the canonical character panel; it must not become a second panel implementation.
 - **`journal/`**: Campaign journal, quests and bestiary.
 
 ## 📁 `minigames/`
@@ -67,7 +67,7 @@ In-game document/lore reading system.
 
 ## 📁 `audio/`
 Audio management UI.
-- **`Mixer.tsx`**: Multi-layer audio mixer.
+- **`Mixer.tsx`**: Multi-layered audio mixer.
 
 ## 📁 `devkit/`
 Developer/DM authoring and testing tools. DevKit modules are not automatically runtime systems; they may author data that is later consumed by runtime modules.
@@ -98,3 +98,20 @@ HUD components such as CombatGrid
 ```
 
 The DevKit may have editor-only state, metadata, hidden content and authoring controls that should never be copied wholesale into runtime state.
+
+## Character Panel ownership summary
+
+```text
+CreatorRightPanel ──┐
+HUD CharacterPanel ──┼──> canonical Character Panel (`character/panel/`)
+CharacterProfile ───┘
+                         │
+                         ├── Stats
+                         ├── Skills
+                         ├── Traits
+                         ├── Spells
+                         ├── Equipment
+                         └── Bio
+```
+
+The canonical Character Panel keeps the persistent Character Mirror surface: full-panel background/environment, body SVG beneath the active tab, and tab content as overlays. See `docs/modules/characterPanel.md` for the authoritative design and migration plan.
