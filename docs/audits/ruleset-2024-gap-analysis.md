@@ -45,7 +45,7 @@ The 2024 Species Foundation (Human, Dwarf, Elf, Halfling, Orc), 2024 Class Found
 ✓ 323/323 canonical SRD Spells in /spell/json/24/ audited and synchronized with index_24.json. Note: The 323 spells represent Artificer's canonical SRD spell catalogue across 2014 and 2024 rulesets, rather than the entire printed 2024 PHB expansion list. Ruleset-aware loaders in storageService.ts, atlasService.ts, and useAtlasStore.ts enforce strict 2014 vs 2024 resolution without cross-ruleset fallbacks. Visual sprite resolution in spriteManifest.ts and canonical AOE geometry in geometry.ts verified.
 ```
 
-Spells, Backgrounds, Subclasses, Species, Feats, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
+Spells, Backgrounds, Subclasses, Species, Subraces, Feats, and Base Classes resolve versioned `/24/` data with full ruleset-aware loaders.
 
 Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Class Levels (`14/` vs `24/`), Subclasses (`14/` vs `24/`), Rules (`14/` vs `24/`), and Tables (`14/` vs `24/`) have physical versioned directory structures in `public/assets/atlas/`. Canonical 2024 features reside in `public/assets/atlas/features/json/` with distinct `_2024` IDs for mechanically modified features.
 
@@ -59,6 +59,7 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 | Domain | 2014 Status | 2024 Status | Resolution Path / Current State |
 | :--- | :--- | :--- | :--- |
 | **Species** | Supported | **Foundation Implemented** | Versioned directories exist (`/species/json/14/` vs `/24/`). 2024 species foundation dataset implemented for Human, Dwarf, Elf, Halfling, Orc. Loader returns `rulesetContext`. |
+| **Subraces** | Supported | **Audited / N/A in 2024** | 2014 subraces resolve `/subraces/json/`. Requesting subraces in 2024 mode returns empty array / null without cross-ruleset fallback. |
 | **Classes (Base)** | Supported | **Implemented (12/12)** | Versioned directories exist (`/class/json/14/` vs `/24/`). All 12 core 2024 base class definitions implemented in `/assets/atlas/class/json/24/`. |
 | **Class Progressions (1-20)** | Supported | **Implemented (12/12)** | Versioned folder `/class/levels/24/` populated with complete 1-20 base level files for all 12 core classes. |
 | **Class Features** | Supported | **Implemented (12/12)** | Canonical 2024 feature definitions in `/assets/atlas/features/json/` for all 12 core classes with distinct `_2024` IDs. |
@@ -89,5 +90,6 @@ Equipment (`14/` vs `24/`), Feats (`14/` vs `24/`), Classes (`14/` vs `24/`), Cl
 - `fetchFeatData(index, ruleset)`: Checks `/assets/atlas/feats/json/14/` vs `/24/`.
 - `fetchMonsterData(index, ruleset)`: Checks `/assets/atlas/enemies/json/14/` vs `/24/`.
 - `fetchSubclassData(index, ruleset)`: Checks `/assets/atlas/subclasses/json/14/` vs `/24/`.
+- `fetchSubraceData(index, ruleset)`: Resolves 2014 subraces and returns `null` for 2024 ruleset without cross-ruleset fallback.
 - `fetchBackgroundData(index, ruleset)`: Checks `/assets/atlas/backgrounds/json/14/` vs `/24/`.
 - `fetchFeatureData(index)`: Loads canonical feature JSON by ID (e.g. `bend_luck_wild_magic_2024`, `elemental_epitome_elements_2024`, `quivering_palm_open_hand_2024`).
