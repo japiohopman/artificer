@@ -5,10 +5,10 @@
 ## Now
 
 ### Active
+- [ ] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
 
 ### Ready
 
-- [ ] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
   - **Status:**
     2024 Species Foundation
     ✓ 5/10 species (Human, Dwarf, Elf, Halfling, Orc)
