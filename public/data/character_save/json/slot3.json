@@ -13,9 +13,9 @@
     "cha": 10
   },
   "proficiencies": [
-    "Skill: Animal Handling",
-    "Skill: Persuasion",
-    "Navigator'S Tools",
+    "Skill: Insight",
+    "Skill: Stealth",
+    "Thieves' Tools",
     "daggers",
     "darts",
     "slings",
@@ -26,7 +26,23 @@
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "resourceful",
+      "index": "resourceful",
+      "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+    },
+    {
+      "name": "skillful",
+      "index": "skillful",
+      "desc": "You gain proficiency in one skill of your choice."
+    },
+    {
+      "name": "versatile",
+      "index": "versatile",
+      "desc": "You gain an Origin feat of your choice. Skilled is recommended."
+    }
+  ],
   "features": [
     {
       "index": "spellcasting_wizard_2024",
@@ -100,25 +116,39 @@
     "specialFeatures": []
   },
   "items": {
-    "spellbook_g8gag90h3": {
-      "id": "spellbook_g8gag90h3",
+    "spellbook_271ai9vxq": {
+      "id": "spellbook_271ai9vxq",
       "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1789342977986,
+      "addedAt": 1789343688801,
       "kind": "focus"
     },
-    "abacus_cncltyiso": {
-      "id": "abacus_cncltyiso",
-      "template": "abacus",
+    "bedroll_p8edoau1u": {
+      "id": "bedroll_p8edoau1u",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1789342977986,
+      "addedAt": 1789343688801,
       "kind": "tradegood"
     },
-    "gold_9k5reo3lq": {
-      "id": "gold_9k5reo3lq",
+    "crowbar_l5l4nxs04": {
+      "id": "crowbar_l5l4nxs04",
+      "template": "crowbar",
+      "quantity": 1,
+      "addedAt": 1789343688802,
+      "kind": "tradegood"
+    },
+    "dagger_lw8sc1u5u": {
+      "id": "dagger_lw8sc1u5u",
+      "template": "dagger",
+      "quantity": 2,
+      "addedAt": 1789343688802,
+      "kind": "weapon"
+    },
+    "gold_vd3dni9vm": {
+      "id": "gold_vd3dni9vm",
       "template": "gold",
-      "quantity": 22,
-      "addedAt": 1789342977986,
+      "quantity": 11,
+      "addedAt": 1789343688802,
       "kind": "currency"
     }
   },
@@ -130,19 +160,19 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_g8gag90h3"
+          "itemId": "spellbook_271ai9vxq"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_cncltyiso"
+          "itemId": "bedroll_p8edoau1u"
         },
         {
           "id": "bag_2",
-          "itemId": "gold_9k5reo3lq"
+          "itemId": "crowbar_l5l4nxs04"
         },
         {
           "id": "bag_3",
-          "itemId": null
+          "itemId": "gold_vd3dni9vm"
         },
         {
           "id": "bag_4",
@@ -232,7 +262,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "dagger_lw8sc1u5u"
       },
       {
         "id": "off_hand",
@@ -350,311 +380,54 @@
   },
   "backpack": [
     {
-      "id": "navigators_tools_iih7tbm14",
-      "index": "navigators_tools",
-      "name": "Navigator'S Tools",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/navigators_tools.json",
-      "image_url": "public/assets/atlas/equipment/images/navigators_tools.webp",
-      "imageUrl": "/assets/atlas/equipment/images/navigators_tools.webp"
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
+      "quantity": 1
     },
     {
-      "id": "abacus_n9617yoma",
-      "index": "abacus",
-      "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
-      "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
-      "rulesetContext": "2014"
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
+      "quantity": 1
     },
     {
-      "id": "pouch_5ujjuf3fr",
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
+      "quantity": 1
+    },
+    {
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
+    },
+    {
       "index": "pouch",
       "name": "Pouch",
-      "quantity": 2,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/pouch.json",
-      "image_url": "public/assets/atlas/equipment/images/pouch.webp",
-      "imageUrl": "/assets/atlas/equipment/images/pouch.webp"
+      "quantity": 2
     },
     {
-      "id": "clothes_travelers_jrqa8w42d",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_c0gm3hgnx",
       "index": "gold",
       "name": "Gold",
-      "quantity": 22,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 11
     }
   ],
   "inventory": {},
-  "knownSpells": [
-    {
-      "index": "feather_fall",
-      "name": "feather fall",
-      "level": 1,
-      "school": {
-        "index": "transmutation",
-        "name": "transmutation",
-        "url": "/assets/atlas/magic_schools/json/transmutation.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 reaction",
-      "range": "60 feet",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/24/feather_fall.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_02.webp",
-        "cell": 6
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/feather-fall.webp",
-      "higher_level": [],
-      "desc": [
-        "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature."
-      ],
-      "components": [
-        "V",
-        "M"
-      ],
-      "material": "A small feather or a piece of down.",
-      "ritual": false,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/feather_fall.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "jump",
-      "name": "jump",
-      "level": 1,
-      "school": {
-        "index": "transmutation",
-        "name": "transmutation",
-        "url": "/assets/atlas/magic_schools/json/transmutation.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "druid",
-          "name": "druid",
-          "url": "/assets/atlas/class/json/druid.json"
-        },
-        {
-          "index": "ranger",
-          "name": "ranger",
-          "url": "/assets/atlas/class/json/ranger.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "Touch",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/24/jump.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 5
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/jump.webp",
-      "higher_level": [],
-      "desc": [
-        "You touch a creature. The creature's jump distance is tripled until the spell ends."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A grasshopper's hind leg.",
-      "ritual": false,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/jump.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "illusory_script",
-      "name": "illusory script",
-      "level": 1,
-      "school": {
-        "index": "illusion",
-        "name": "illusion",
-        "url": "/assets/atlas/magic_schools/json/illusion.json"
-      },
-      "classes": [
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "warlock",
-          "name": "warlock",
-          "url": "/assets/atlas/class/json/warlock.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 minute",
-      "range": "Touch",
-      "duration": "10 days",
-      "json_path": "/assets/atlas/spell/json/24/illusory_script.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 3
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/illusory-script.webp",
-      "higher_level": [],
-      "desc": [
-        "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
-        "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
-        "Should the spell be dispelled, the original script and the illusion both disappear.",
-        "A creature with truesight can read the hidden message."
-      ],
-      "components": [
-        "S",
-        "M"
-      ],
-      "material": "A lead-based ink worth at least 10gp, which this spell consumes.",
-      "ritual": true,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/illusory_script.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    }
-  ],
+  "knownSpells": [],
   "languages": [
     "common"
   ],
-  "preparedSpells": [
-    "feather_fall",
-    "jump",
-    "illusory_script"
-  ],
+  "preparedSpells": [],
   "spellSlots": {
     "1": {
       "current": 0,
@@ -663,18 +436,18 @@
   },
   "choices": {
     "background_ability_scores": [
-      "con",
-      "con",
-      "int"
+      "dex",
+      "dex",
+      "wis"
     ]
   },
-  "race": "tiefling",
+  "race": "human",
   "class": "wizard",
-  "background": "merchant",
+  "background": "wayfarer",
   "spellcastingAbility": "int",
-  "alignment": "neutral_good",
+  "alignment": "true_neutral",
   "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Criella",
+  "name": "Sylvia Cross",
   "id": "slot3",
   "hp": 3,
   "maxHp": 3,
@@ -684,5 +457,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-13T23:46:55.327Z"
+  "lastSaved": "2026-09-13T23:55:06.253Z"
 }
