@@ -20,9 +20,8 @@ Panel Container
 ├── Outer Shell Header (Name, Class · Species · Level, Prominent #ec597a HP Treatment, Tab Navigation)
 └── Persistent Mirror Stage Container
     ├── Permanent Background Atmosphere & SVG Silhouette (CharacterPanelBody)
-    ├── Permanent Ability Score Strip (CharacterPanelAbilities)
     └── Active Translucent Tab Content Overlay:
-        ├── Stats Overlay (CharacterPanelStats: AC, Speed, Initiative, Proficiency, Attack Bonus, Passive Perception)
+        ├── Stats Surface Overlay (CharacterPanelStats: Ability Score Strip + AC, Speed, Initiative, Proficiency, Attack Bonus, Passive Perception)
         ├── Traits Overlay (CharacterPanelTraits)
         ├── Equipment Overlay (EquipmentDoll)
         ├── Spells Overlay (CharacterPanelSpells)
@@ -30,8 +29,8 @@ Panel Container
 ```
 
 ### Key Visual Rules
-- **Persistent Body Mirror**: Changing tabs does NOT unmount or swap out the body silhouette or environment backdrop.
-- **Translucent Overlays**: Tabs (`Traits`, `Bio`, `Equipment`, `Spells`) render as backdrop-filtered overlays on top of the character mirror stage.
+- **Persistent Body Mirror**: Changing tabs does NOT unmount or swap out the body silhouette or environment backdrop (`CharacterPanelBody`).
+- **Translucent Overlays**: Tabs (`Stats`, `Traits`, `Bio`, `Equipment`, `Spells`) render as backdrop-filtered overlays on top of the character mirror stage.
 - **Single Visual Contract**: The HUD panel, Character Creator, and Profile screens share identical visual proportions, font styling, and parchment design language.
 
 ---
@@ -54,7 +53,7 @@ Canonical CharacterPanel (src/components/character/panel/CharacterPanel.tsx)
 - **Responsibilities**:
   - Manages outer panel shell & tab routing (`stats`, `traits`, `equipment`, `spells`, `bio`).
   - Renders consolidated identity & vitals header (Name, Class, Species, Level) with prominent `#ec597a` HP treatment.
-  - Mounts persistent mirror stage (`CharacterPanelBody` silhouette backdrop) and persistent ability strip (`CharacterPanelAbilities`).
+  - Mounts persistent mirror stage (`CharacterPanelBody` silhouette backdrop).
 - **Props**:
   - `character`: `Partial<Character>`
   - `activeTab`: `'stats' | 'traits' | 'equipment' | 'spells' | 'bio'`
@@ -66,7 +65,9 @@ Canonical CharacterPanel (src/components/character/panel/CharacterPanel.tsx)
 
 ### B. Canonical Stats Surface: `CharacterPanelStats.tsx`
 - Represents the complete Stats presentation overlay sitting on the mirror stage when the `stats` tab is active.
-- Displays combat readiness metrics: Armor Class, Speed, Initiative, Proficiency Bonus, Attack Bonus, and Passive Perception using canonical calculation utilities (`calculateDerivedStats`, `getEffectiveStats`).
+- Composes:
+  - Ability score presentation (STR, DEX, CON, INT, WIS, CHA via `CharacterPanelAbilities`).
+  - Combat readiness metrics: Armor Class, Speed, Initiative, Proficiency Bonus, Attack Bonus, Passive Perception, and Spellcasting DC / Attack Bonus using canonical calculation utilities (`calculateDerivedStats`).
 
 ### C. Traits Surface: `CharacterPanelTraits.tsx`
 - Displays derived saving throw proficiencies, weapon/armor proficiencies, skill proficiencies, languages, condition immunities, and damage resistances.

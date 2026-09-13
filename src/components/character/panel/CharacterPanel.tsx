@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Character } from '../../../store/useCharacterStore';
 import { calculateDerivedStats } from '../../../lib/statCalculations';
 import { CharacterPanelBody } from './CharacterPanelBody';
-import { CharacterPanelAbilities } from './CharacterPanelAbilities';
 import { CharacterPanelStats } from './CharacterPanelStats';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
 import { CharacterPanelBio } from './CharacterPanelBio';
@@ -129,35 +128,26 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
       {/* PERSISTENT CHARACTER MIRROR STAGE */}
       <div className="relative flex-1 w-full min-h-[260px] overflow-hidden">
-        {/* Layer 1: Permanent Background Atmosphere & SVG Silhouette */}
-        <div className="absolute inset-0 z-0 flex flex-col justify-between p-1">
-          <div className="relative flex-1 w-full flex items-center justify-center">
-            <CharacterPanelBody character={character} currentStep={currentStep} />
-          </div>
-
-          {/* Ability Scores Strip permanently anchored at bottom of mirror */}
-          <div className="relative z-10 shrink-0">
-            <CharacterPanelAbilities character={character} />
-          </div>
+        {/* Permanent Mirror Body Silhouette Backdrop */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center p-1">
+          <CharacterPanelBody character={character} currentStep={currentStep} />
         </div>
 
-        {/* Layer 2: Translucent Active Tab Overlays above the Mirror Stage */}
-
-        {/* STATS OVERLAY BADGES */}
+        {/* STATS TAB OVERLAY */}
         {activeTab === 'stats' && (
           <CharacterPanelStats character={character} currentStep={currentStep} />
         )}
 
         {/* TRAITS TAB OVERLAY */}
         {activeTab === 'traits' && (
-          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
             <CharacterPanelTraits character={character} />
           </div>
         )}
 
         {/* EQUIPMENT TAB OVERLAY */}
         {activeTab === 'equipment' && (
-          <div className="absolute inset-x-1 top-1 bottom-14 z-30 flex items-center justify-center p-1 bg-white/40 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/40 backdrop-blur-xs rounded">
             <EquipmentDoll
               equippedItems={character.inventory || {}}
               equipment={character.equipment}
@@ -175,14 +165,14 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
         {/* SPELLS TAB OVERLAY */}
         {activeTab === 'spells' && (
-          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
             <CharacterPanelSpells character={character} isEditable={isEditable} />
           </div>
         )}
 
         {/* BIO TAB OVERLAY */}
         {activeTab === 'bio' && (
-          <div className="absolute inset-x-1 top-1 bottom-14 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
             <CharacterPanelBio
               character={character}
               onUpdate={onUpdate}
