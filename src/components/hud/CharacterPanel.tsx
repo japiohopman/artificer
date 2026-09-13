@@ -4,27 +4,17 @@ import { useCharacterStore } from '../../store/useCharacterStore';
 import { useActiveCharacter } from '../../lib/character';
 import { useUIStore } from '../../store/useUIStore';
 import { useInventoryStore } from '../../store/useInventoryStore';
-import { EquipmentDoll } from '../character/equipment/EquipmentDoll';
 import { Inventory } from '../character/inventory/Inventory';
-import { CharacterStats } from '../character/CharacterStats';
 import { LogisticsManifest } from '../ui/PartyLogistics';
 import { GameIcon } from '../../game_icons';
-import { EquipmentSlotId } from '../../lib/equipmentConstants';
 import { cn } from '../../lib/utils';
 import { calculateDerivedStats, getXpProgress, XP_TABLE } from '../../lib/statCalculations';
 import { normalizeImageUrl } from '../../services/storageService';
-import { CharacterPanelBody } from '../character/panel/CharacterPanelBody';
-import { CharacterPanelAbilities } from '../character/panel/CharacterPanelAbilities';
-import { CharacterPanelTraits } from '../character/panel/CharacterPanelTraits';
+import { CharacterPanel, CharacterPanelTab } from '../character/panel/CharacterPanel';
 
-type CharacterTab = 'equipment' | 'inventory' | 'stats' | 'logistics' | 'party';
+type HUDTab = 'party' | 'equipment' | 'inventory' | 'stats' | 'spells' | 'logistics';
 
 export const CharacterPanel: React.FC = () => {
-  const {
-    focusedItem,
-    setFocusedItem
-  } = useUIStore();
-
   const {
     characters,
     activeCharacterId,
@@ -34,8 +24,6 @@ export const CharacterPanel: React.FC = () => {
 
   const {
     isInventoryOpen,
-    equipItem,
-    unequipItem,
     setIsInventoryMenuOpen
   } = useInventoryStore();
 
@@ -44,10 +32,6 @@ export const CharacterPanel: React.FC = () => {
     setActiveCharacterTab,
     setIsTransportProfileOpen
   } = useUIStore();
-
-  // Use the store's tab as the source of truth
-  const activeTab = activeCharacterTab;
-  const setActiveTab = setActiveCharacterTab;
 
   const activeCharacter = useActiveCharacter();
 
@@ -59,21 +43,11 @@ export const CharacterPanel: React.FC = () => {
     );
   }
 
-  const inventory = activeCharacter.inventory;
   const derived = calculateDerivedStats(activeCharacter);
   const xpPercent = getXpProgress(activeCharacter.level || 1, activeCharacter.xp || 0);
   const nextLevelXp = XP_TABLE[activeCharacter.level] || ((XP_TABLE[activeCharacter.level - 1] || 0) + 50000);
   const hpPercent = (activeCharacter.hp / activeCharacter.maxHp) * 100;
   const hpBarColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
-
-  const handleEquip = (slot: EquipmentSlotId) => {
-    if (focusedItem?._type === 'equipment') {
-      const allowedSlots = Array.isArray(focusedItem.slot) ? focusedItem.slot : [focusedItem.slot];
-      if (allowedSlots.includes(slot)) {
-        equipItem(focusedItem, slot);
-      }
-    }
-  };
 
   const nextCharacter = () => {
     const currentIndex = characters.findIndex(c => c.id === activeCharacterId);
@@ -87,14 +61,16 @@ export const CharacterPanel: React.FC = () => {
     setActiveCharacter(characters[prevIndex].id);
   };
 
-  const tabs = [
+  const tabs: { id: HUDTab; iconName: string; label: string }[] = [
     { id: 'party', iconName: 'users', label: 'Party' },
-    { id: 'equipment', iconName: 'equipment', label: 'Equipment' },
-    { id: 'inventory', iconName: 'package', label: 'Inventory' },
     { id: 'stats', iconName: 'chart', label: 'Stats' },
+    { id: 'equipment', iconName: 'equipment', label: 'Equipment' },
+    { id: 'spells', iconName: 'magic_effect', label: 'Spells' },
+    { id: 'inventory', iconName: 'package', label: 'Inventory' },
     { id: 'logistics', iconName: 'archive', label: 'Logistics' }
   ];
 
+  const activeTab = (activeCharacterTab as HUDTab) || 'stats';
   const activeTabLabel = tabs.find(t => t.id === activeTab)?.label;
 
   return (
@@ -105,29 +81,31 @@ export const CharacterPanel: React.FC = () => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 400, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="w-80 bg-parchment-50/50 border-l border-parchment-300 flex flex-col z-10"
+          className="w-80 sm:w-96 bg-parchment-50/50 border-l border-parchment-300 flex flex-col z-10 h-full"
         >
-          {/* Tabs */}
+          {/* Tabs Header */}
           <div className="flex border-b border-parchment-300 bg-parchment-100/50">
             {tabs.map(tab => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as CharacterTab)}
+                type="button"
+                onClick={() => setActiveCharacterTab(tab.id as any)}
                 title={tab.label}
                 aria-label={tab.label}
                 className={cn(
-                  "flex-1 flex flex-col items-center py-3 px-1 transition-all relative border-r border-parchment-300 last:border-r-0",
+                  "flex-1 flex flex-col items-center py-2.5 px-1 transition-all relative border-r border-parchment-300 last:border-r-0",
                   activeTab === tab.id ? "bg-dragon-red text-white" : "text-parchment-600 hover:bg-parchment-200"
                 )}
               >
-                <GameIcon name={tab.iconName} className="w-4.5 h-4.5" />
+                <GameIcon name={tab.iconName} className="w-4 h-4" />
               </button>
             ))}
           </div>
 
-          {/* Common Name Box with Character Switcher */}
+          {/* Character Switcher Bar */}
           <div className="bg-white/40 border-b border-parchment-300 py-2 px-2 flex items-center justify-between">
             <button
+              type="button"
               onClick={prevCharacter}
               title="Previous Character"
               aria-label="Previous Character"
@@ -140,12 +118,13 @@ export const CharacterPanel: React.FC = () => {
               <p className="text-[8px] font-bold text-parchment-400 uppercase tracking-widest mb-0.5">
                 {activeTabLabel}
               </p>
-              <h2 className="text-[10px] font-bold text-dragon-red uppercase tracking-wider font-header truncate px-2">
+              <h2 className="text-[11px] font-bold text-dragon-red uppercase tracking-wider font-header truncate px-2">
                 {activeCharacter.name}
               </h2>
             </div>
 
             <button
+              type="button"
               onClick={nextCharacter}
               title="Next Character"
               aria-label="Next Character"
@@ -156,7 +135,7 @@ export const CharacterPanel: React.FC = () => {
           </div>
 
           {/* Active Character Vital Header */}
-          <div className="bg-parchment-100/70 border-b border-parchment-300 p-3 flex flex-col gap-2.5">
+          <div className="bg-parchment-100/70 border-b border-parchment-300 p-3 flex flex-col gap-2.5 shrink-0">
             <div className="flex gap-3">
               {/* Profile Portrait */}
               <div className="w-16 h-20 bg-stone-900/10 rounded-lg border-2 border-dragon-gold overflow-hidden shrink-0 shadow-md relative group">
@@ -174,12 +153,10 @@ export const CharacterPanel: React.FC = () => {
                     <GameIcon name="users" className="w-6 h-6 text-dragon-red/30" />
                   </div>
                 )}
-                {/* Level Tag Overlay */}
                 <div className="absolute -bottom-1 -right-1 bg-dragon-gold text-dragon-darkRed text-[8px] font-black px-1.5 py-0.5 rounded border border-dragon-darkRed/20 shadow-sm z-20">
                   Lvl {activeCharacter.level || 1}
                 </div>
 
-                {/* Animated XP Floating Alert */}
                 <AnimatePresence>
                   {xpGain && xpGain.characterId === activeCharacter.id && (
                     <motion.div
@@ -198,7 +175,7 @@ export const CharacterPanel: React.FC = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Identity & HP / AC metrics */}
+              {/* Identity & Vitals */}
               <div className="flex-1 flex flex-col justify-between min-w-0 py-0.5">
                 <div>
                   <h3 className="text-xs font-black text-dragon-darkRed uppercase tracking-tight truncate">
@@ -210,19 +187,16 @@ export const CharacterPanel: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  {/* AC Shield Badge */}
                   <div className="flex items-center gap-1 bg-white/60 px-2 py-0.5 rounded border border-parchment-300 shadow-sm" title="Armor Class">
                     <GameIcon name="shield" className="w-2.5 h-2.5 text-dragon-red" />
                     <span className="text-[10px] font-bold text-parchment-800">{derived.ac}</span>
                   </div>
 
-                  {/* HP Text */}
                   <span className="text-[9px] font-black text-dragon-red/80 uppercase">
                     HP {activeCharacter.hp}/{activeCharacter.maxHp}
                   </span>
                 </div>
 
-                {/* HP Progress Bar */}
                 <div className="h-1.5 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
                   <motion.div
                     initial={{ width: 0 }}
@@ -233,7 +207,7 @@ export const CharacterPanel: React.FC = () => {
               </div>
             </div>
 
-            {/* Purple XP Progress Bar */}
+            {/* XP Progress Bar */}
             <div className="space-y-1">
               <div className="h-1.5 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
                 <motion.div
@@ -250,119 +224,51 @@ export const CharacterPanel: React.FC = () => {
             </div>
           </div>
 
-        <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="h-full"
-            >
-              {activeTab === 'equipment' && (
-                <div className="space-y-4">
-                  {/* Shared Body Surface with Overlaid Equipment Slots */}
-                  <div className="relative min-h-[260px] flex items-center justify-center overflow-hidden rounded-sm bg-white/20 border border-dragon-gold/20 p-1">
-                    <CharacterPanelBody character={activeCharacter} />
-                    <div className="absolute inset-0 z-30 flex items-center justify-center p-2">
-                      <EquipmentDoll
-                        equippedItems={inventory}
-                        gender={activeCharacter.gender as any}
-                        race={activeCharacter.race}
-                        equipment={activeCharacter.equipment}
-                        items={activeCharacter.items}
-                        onSlotClick={(slot) => {
-                          if (inventory[slot]) {
-                            unequipItem(slot);
-                          } else {
-                            handleEquip(slot);
-                          }
-                        }}
-                        activeSlots={
-                          focusedItem?._type === 'equipment'
-                            ? (Array.isArray(focusedItem.slot) ? focusedItem.slot : (focusedItem.slot ? [focusedItem.slot as EquipmentSlotId] : []))
-                            : []
-                        }
-                      />
-                    </div>
-                  </div>
+          {/* Main Stage: Canonical Character Panel or Special HUD Views */}
+          <div className="flex-1 overflow-y-auto p-2 custom-scrollbar">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="h-full"
+              >
+                {['stats', 'traits', 'equipment', 'spells', 'bio'].includes(activeTab) && (
+                  <CharacterPanel
+                    character={activeCharacter}
+                    activeTab={activeTab as CharacterPanelTab}
+                    onTabChange={(tab) => setActiveCharacterTab(tab as any)}
+                    hideTabs={true}
+                  />
+                )}
 
-                  <div className="bg-dragon-red/5 p-2 rounded-lg border border-dragon-red/10 text-center space-y-1">
-                    <div className="flex items-center justify-center gap-2 text-dragon-red">
-                      <GameIcon name="info" className="w-3 h-3 text-dragon-red" />
-                      <p className="text-[9px] font-bold uppercase tracking-wider">
-                        {focusedItem?._type === 'equipment'
-                          ? `Equip ${focusedItem.name}`
-                          : 'Select equipment to manage'}
-                      </p>
-                    </div>
-                    <p className="text-[8px] text-parchment-500 italic leading-relaxed">
-                      Click an active slot on the doll to equip the focused item.
-                    </p>
-                  </div>
-                </div>
-              )}
+                {activeTab === 'inventory' && (
+                  <Inventory />
+                )}
 
-              {activeTab === 'inventory' && (
-                <Inventory
-                  onEquipRequest={(item) => {
-                    const slots = Array.isArray(item.slot) ? item.slot : (item.slot ? [item.slot as EquipmentSlotId] : []);
-                    const targetSlot = slots.find((s: any) => !inventory[s]) || slots[0];
+                {activeTab === 'party' && (
+                  <div className="space-y-3">
+                    {characters.map(char => {
+                      const cHpPercent = (char.hp / char.maxHp) * 100;
+                      const cBarColor = cHpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
+                      const charIndex = characters.indexOf(char);
+                      const slotPortrait = `/assets/atlas/characters/portraits/slot${charIndex + 1}_portrait.webp`;
 
-                    if (targetSlot) {
-                      equipItem(item, targetSlot);
-                      setFocusedItem(item);
-                      setActiveTab('equipment');
-                    } else if (item.slot) {
-                      equipItem(item, item.slot);
-                      setFocusedItem(item);
-                      setActiveTab('equipment');
-                    }
-                  }}
-                />
-              )}
-
-              {activeTab === 'stats' && (
-                <div className="space-y-3">
-                  <CharacterPanelAbilities character={activeCharacter} />
-                  <CharacterPanelTraits character={activeCharacter} />
-                  <CharacterStats />
-                </div>
-              )}
-
-              {activeTab === 'party' && (
-                <div className="space-y-4">
-                  {characters.map(char => {
-                    const hpPercent = (char.hp / char.maxHp) * 100;
-                    const barColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
-                    const charIndex = characters.indexOf(char);
-                    const slotPortrait = `/assets/atlas/characters/portraits/slot${charIndex + 1}_portrait.webp`;
-                    const charXpPercent = getXpProgress(char.level || 1, char.xp || 0);
-                    const charNextLevelXp = XP_TABLE[char.level] || ((XP_TABLE[char.level - 1] || 0) + 50000);
-
-                    return (
-                      <button
-                        key={char.id}
-                        onClick={() => setActiveCharacter(char.id)}
-                        className={cn(
-                          "w-full flex flex-col gap-3 p-3 rounded-lg border transition-all text-left relative pl-5 overflow-hidden",
-                          activeCharacterId === char.id
-                            ? "bg-dragon-red/10 border-dragon-red shadow-sm"
-                            : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
-                        )}
-                      >
-                        {/* Vertical HP Bar on the left */}
-                        <div className="absolute left-1.5 top-3 bottom-3 w-1.5 bg-stone-950/20 rounded-full overflow-hidden flex flex-col justify-end">
-                          <div
-                            className={cn("w-full transition-all duration-500 rounded-full", barColor)}
-                            style={{ height: `${hpPercent}%` }}
-                          />
-                        </div>
-
-                        {/* Avatar and Basic Header */}
-                        <div className="flex items-center gap-3 w-full">
-                          <div className="w-12 h-18 rounded border-2 border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0 relative shadow-sm">
+                      return (
+                        <button
+                          key={char.id}
+                          type="button"
+                          onClick={() => setActiveCharacter(char.id)}
+                          className={cn(
+                            "w-full flex items-center gap-3 p-2.5 rounded-lg border transition-all text-left relative overflow-hidden",
+                            activeCharacterId === char.id
+                              ? "bg-dragon-red/10 border-dragon-red shadow-sm"
+                              : "bg-white/40 border-parchment-300 hover:border-dragon-red/30"
+                          )}
+                        >
+                          <div className="w-10 h-14 rounded border border-dragon-gold overflow-hidden bg-dragon-darkRed/10 shrink-0 relative shadow-sm">
                             <img
                               src={normalizeImageUrl(char.imageUrl || char.avatarUrl, 'character', char.id)}
                               alt={char.name}
@@ -371,24 +277,6 @@ export const CharacterPanel: React.FC = () => {
                                 (e.target as HTMLImageElement).src = slotPortrait;
                               }}
                             />
-
-                            {/* Animated XP Floating Alert */}
-                            <AnimatePresence>
-                              {xpGain && xpGain.characterId === char.id && (
-                                <motion.div
-                                  key={`xp-party-${xpGain.key}`}
-                                  initial={{ opacity: 0, y: 15, scale: 0.8 }}
-                                  animate={{ opacity: 1, y: -15, scale: 1.1 }}
-                                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
-                                  transition={{ duration: 1.5, ease: "easeOut" }}
-                                  className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
-                                >
-                                  <span className="bg-purple-900/90 text-dragon-gold text-[8px] font-black px-1.5 py-0.5 rounded-full border border-dragon-gold/30 shadow-[0_0_10px_rgba(147,51,234,0.6)] uppercase tracking-tighter">
-                                    +{xpGain.amount} XP
-                                  </span>
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex justify-between items-baseline">
@@ -398,122 +286,33 @@ export const CharacterPanel: React.FC = () => {
                               </span>
                             </div>
                             <div className="flex justify-between mt-1 items-center">
-                              <span className="text-[7px] font-black text-dragon-red/60 uppercase">HP: {char.hp}/{char.maxHp}</span>
+                              <span className="text-[8px] font-black text-dragon-red/80 uppercase">HP: {char.hp}/{char.maxHp}</span>
                               {activeCharacterId === char.id && (
                                 <span className="text-[7px] font-black text-dragon-gold uppercase animate-pulse">Active</span>
                               )}
                             </div>
-
-                            {/* Party Card Purple Progress Bar */}
-                            <div className="space-y-1 mt-2">
-                              <div className="h-1 w-full bg-stone-950/15 rounded-full overflow-hidden relative shadow-inner">
-                                <motion.div
-                                  initial={false}
-                                  animate={{ width: `${charXpPercent}%` }}
-                                  transition={{ duration: 0.8, ease: "easeOut" }}
-                                  className="h-full bg-purple-600 shadow-[0_0_6px_rgba(147,51,234,0.4)] rounded-full"
-                                />
-                              </div>
-                              <div className="flex justify-between items-center text-[6px] font-black text-parchment-400 uppercase tracking-widest">
-                                <span>XP: {char.xp.toLocaleString()} / {charNextLevelXp.toLocaleString()}</span>
-                                <span className="text-purple-600">{Math.floor(charXpPercent)}%</span>
-                              </div>
-                            </div>
                           </div>
-                        </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
 
-                        {/* Action Economy Grid */}
-                        {char.actionEconomy && (
-                          <div className="w-full bg-stone-950/5 rounded border border-parchment-300/40 p-2 grid grid-cols-4 gap-1 text-center">
-                            <div className="flex flex-col items-center">
-                              <span className="text-[6px] font-black text-stone-500 uppercase">Action</span>
-                              <span className={cn(
-                                "text-[9px] font-bold mt-0.5",
-                                char.actionEconomy.actions.current > 0 ? "text-green-600" : "text-red-500"
-                              )}>
-                                {char.actionEconomy.actions.current}/{char.actionEconomy.actions.max}
-                              </span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                              <span className="text-[6px] font-black text-stone-500 uppercase">Bonus</span>
-                              <span className={cn(
-                                "text-[9px] font-bold mt-0.5",
-                                char.actionEconomy.bonusActions.current > 0 ? "text-blue-600" : "text-red-500"
-                              )}>
-                                {char.actionEconomy.bonusActions.current}/{char.actionEconomy.bonusActions.max}
-                              </span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                              <span className="text-[6px] font-black text-stone-500 uppercase">Reaction</span>
-                              <span className={cn(
-                                "text-[9px] font-bold mt-0.5",
-                                char.actionEconomy.reactions.current > 0 ? "text-purple-600" : "text-red-500"
-                              )}>
-                                {char.actionEconomy.reactions.current}/{char.actionEconomy.reactions.max}
-                              </span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                              <span className="text-[6px] font-black text-stone-500 uppercase">Speed</span>
-                              <span className={cn(
-                                "text-[9px] font-bold mt-0.5",
-                                char.actionEconomy.movement.current > 0 ? "text-teal-600" : "text-red-500"
-                              )}>
-                                {char.actionEconomy.movement.current} ft
-                              </span>
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Cantrips & Spell Slots */}
-                        <div className="w-full flex flex-col gap-1 border-t border-parchment-200/50 pt-1.5">
-                          <div className="flex justify-between items-center text-[7px] font-black text-parchment-400 uppercase tracking-widest">
-                            <span>Magic Matrix</span>
-                            <span>Cantrips: {char.knownSpells?.filter(s => s.level === 0).length || 0}</span>
-                          </div>
-
-                          {char.spellSlots && Object.keys(char.spellSlots).length > 0 ? (
-                            <div className="flex flex-wrap gap-2 mt-1">
-                              {Object.entries(char.spellSlots).map(([lvl, slot]: [string, any]) => (
-                                <div key={lvl} className="flex items-center gap-1 bg-parchment-200/50 rounded px-1.5 py-0.5 border border-parchment-300/30">
-                                  <span className="text-[8px] font-black text-purple-700">L{lvl}:</span>
-                                  <div className="flex gap-0.5">
-                                    {Array.from({ length: slot.max }).map((_, i) => (
-                                      <div
-                                        key={i}
-                                        className={cn(
-                                          "w-1.5 h-1.5 rounded-full border border-purple-500/20",
-                                          i < slot.current ? "bg-purple-600 shadow-[0_0_4px_rgba(147,51,234,0.5)]" : "bg-transparent"
-                                        )}
-                                      />
-                                    ))}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <span className="text-[7px] text-parchment-500 italic mt-0.5">No Spell Slots (Non-Spellcaster)</span>
-                          )}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-
-              {activeTab === 'logistics' && (
-                <LogisticsManifest
-                  onTransportRequest={() => {
-                    setIsTransportProfileOpen(true);
-                  }}
-                />
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+                {activeTab === 'logistics' && (
+                  <LogisticsManifest
+                    onTransportRequest={() => {
+                      setIsTransportProfileOpen(true);
+                    }}
+                  />
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           {/* Footer & Full Inventory Entry Point */}
-          <div className="bg-parchment-200 p-2 border-t border-parchment-300 flex items-center justify-between">
+          <div className="bg-parchment-200 p-2 border-t border-parchment-300 flex items-center justify-between shrink-0">
             <button
+              type="button"
               onClick={() => setIsInventoryMenuOpen(true)}
               className="flex items-center gap-1.5 px-2.5 py-1 bg-dragon-red text-white hover:bg-dragon-darkRed rounded text-[9px] font-bold uppercase tracking-wider transition-colors shadow-sm"
               title="Open Grand Party Manifest / Full Inventory Workspace"

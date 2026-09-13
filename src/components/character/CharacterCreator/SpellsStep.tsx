@@ -121,12 +121,12 @@ export const SpellsStep: React.FC<{
                 
                 const detailedSpells = await Promise.all(
                     levelFiltered.map(async (s: any) => {
-                        if (Array.isArray(s.classes) && s.classes.length > 0) {
+                        if (s.desc && (Array.isArray(s.desc) ? s.desc.length > 0 : Boolean(s.desc))) {
                             return s;
                         }
                         const { fetchSpellData } = await import('../../../services/storageService');
-                        const fullData = await fetchSpellData(s.index, newChar.ruleset);
-                        return fullData || s;
+                        const fullData = await fetchSpellData(s.index || s.id, newChar.ruleset);
+                        return fullData ? { ...s, ...fullData } : s;
                     })
                 );
 
