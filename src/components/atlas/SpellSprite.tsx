@@ -3,20 +3,8 @@ import { cn } from '../../lib/utils';
 import { resolveSpellVisualIdentity, getSpellSpriteCellForVisual, getSpellSpriteSheetDefinition } from '../../lib/spellVisuals';
 import { GameIcon } from '../../game_icons';
 
-export interface SpellSpriteObject {
-  index?: string;
-  id?: string;
-  name?: string;
-  imageUrl?: string;
-  sprite?: {
-    atlas?: string;
-    sheet?: string;
-    cell?: number;
-  };
-}
-
 interface SpellSpriteProps {
-  spell: string | SpellSpriteObject;
+  spell: string | { index?: string; id?: string; name?: string; imageUrl?: string };
   ruleset?: '2014' | '2024';
   className?: string;
   size?: number | string;

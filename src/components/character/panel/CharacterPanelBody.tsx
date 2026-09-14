@@ -19,20 +19,28 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
     bgImage = ALIGNMENT_ATMOSPHERE_MAP[key] || ALIGNMENT_ATMOSPHERE_MAP[key.replace(/\s+/g, '_')] || null;
   }
 
+  // Formatted labels for race and class
+  const formattedRace = character.race
+    ? `${character.race.replace(/-/g, ' ')}${
+        character.subrace ? ` (${character.subrace.replace(/-/g, ' ')})` : ''
+      }`.toUpperCase()
+    : null;
+  const formattedClass = character.class ? character.class.toUpperCase() : null;
+
   return (
-    <div className={`absolute inset-0 w-full h-full overflow-hidden ${className || ''}`}>
-      {/* Background Image Layer (Fills 100% of the stage container at 60% opacity) */}
+    <div className={`relative w-full h-full flex flex-col items-center justify-between overflow-hidden rounded-sm min-h-[220px] ${className || ''}`}>
+      {/* Background Image Layer (Renders BEHIND the species body SVG) */}
       {bgImage ? (
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-multiply transition-all duration-700 ease-in-out pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay transition-all duration-700 ease-in-out pointer-events-none filter blur-[0.5px]"
           style={{ backgroundImage: `url('${bgImage}')` }}
         />
       ) : (
-        <div className="absolute inset-0 bg-parchment-200/40 mix-blend-multiply pointer-events-none" />
+        <div className="absolute inset-0 bg-parchment-200/20 mix-blend-multiply pointer-events-none" />
       )}
 
-      {/* SVG Silhouette Body Layer - Centered & Responsive to Available Mirror Space */}
-      <div className="absolute inset-x-2 top-2 bottom-12 z-10 flex items-center justify-center pointer-events-none overflow-hidden">
+      {/* SVG Silhouette Backdrop / Body Layer */}
+      <div className="relative z-10 my-auto flex items-center justify-center p-2 max-h-[240px] w-full">
         <GenderBodySvg
           gender={gender}
           race={character.race}
@@ -40,9 +48,7 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
           skinColor={character.appearance?.skinColor}
           heightScale={(character.appearance as any)?.heightScale}
           weightScale={(character.appearance as any)?.weightScale}
-          hideLabel={true}
-          hideContainerStyles={true}
-          className="h-full w-auto max-h-full max-w-full object-contain pointer-events-none"
+          className="border-none bg-transparent hover:bg-transparent shadow-none p-0 scale-90"
         />
       </div>
     </div>
