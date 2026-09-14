@@ -5,56 +5,96 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 15,
-    "dex": 14,
-    "con": 13,
+    "str": 10,
+    "dex": 10,
+    "con": 10,
     "int": 10,
-    "wis": 12,
-    "cha": 8
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "Skill: Investigation",
-    "Skill: Perception",
-    "Calligrapher'S Supplies",
+    "Skill: Insight",
+    "Skill: Stealth",
+    "Thieves' Tools",
     "light armor",
-    "medium armor",
-    "shields",
     "simple weapons",
-    "saving throw: wis",
-    "saving throw: cha",
-    "Saving Throw: wis",
-    "Saving Throw: cha"
+    "longswords",
+    "rapiers",
+    "shortswords",
+    "hand crossbows",
+    "thieves' tools",
+    "saving throw: dex",
+    "saving throw: int",
+    "Saving Throw: dex",
+    "Saving Throw: int"
   ],
   "traits": [],
   "features": [
     {
-      "index": "spellcasting_cleric_2024",
-      "name": "Spellcasting: Cleric",
+      "index": "rogue_expertise_2024",
+      "name": "Expertise",
       "class": {
-        "index": "cleric",
-        "name": "Cleric",
-        "url": "/assets/atlas/class/json/24/cleric.json"
+        "index": "rogue",
+        "name": "Rogue",
+        "url": "/assets/atlas/class/json/24/rogue.json"
       },
       "level": 1,
       "desc": [
-        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
+        "You gain Expertise in two of your skill proficiencies of your choice. At level 6, you gain Expertise in two more skill proficiencies of your choice."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
+      "url": "/assets/atlas/features/json/rogue_expertise_2024.json",
       "source": "Class"
     },
     {
-      "index": "divine_order_cleric",
-      "name": "Divine Order",
+      "index": "sneak_attack_2024",
+      "name": "Sneak Attack",
       "class": {
-        "index": "cleric",
-        "name": "Cleric",
-        "url": "/assets/atlas/class/json/24/cleric.json"
+        "index": "rogue",
+        "name": "Rogue",
+        "url": "/assets/atlas/class/json/24/rogue.json"
       },
       "level": 1,
       "desc": [
-        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
+        "You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal extra damage to one creature you hit with an attack roll if you have Advantage on the roll. The attack must use a Finesse or Ranged weapon. You don't need Advantage if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have Disadvantage. The extra damage is 1d6 at level 1 and increases as you gain Rogue levels."
       ],
-      "url": "/assets/atlas/features/json/divine_order_cleric.json",
+      "feature_specific": {
+        "dice_count": 1,
+        "dice_value": 6
+      },
+      "url": "/assets/atlas/features/json/sneak_attack_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "thieves_cant_2024",
+      "name": "Thieves' Cant",
+      "class": {
+        "index": "rogue",
+        "name": "Rogue",
+        "url": "/assets/atlas/class/json/24/rogue.json"
+      },
+      "level": 1,
+      "desc": [
+        "You learn Thieves' Cant and one other language of your choice."
+      ],
+      "url": "/assets/atlas/features/json/thieves_cant_2024.json",
+      "source": "Class"
+    },
+    {
+      "index": "weapon_mastery_rogue",
+      "name": "Weapon Mastery",
+      "class": {
+        "index": "rogue",
+        "name": "Rogue",
+        "url": "/assets/atlas/class/json/24/rogue.json"
+      },
+      "level": 1,
+      "desc": [
+        "Your training with weapons allows you to use the mastery properties of two weapons of your choice from your class weapon proficiencies."
+      ],
+      "feature_specific": {
+        "mastery_count": 2
+      },
+      "url": "/assets/atlas/features/json/weapon_mastery_rogue.json",
       "source": "Class"
     }
   ],
@@ -76,65 +116,44 @@
     "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
-    "size": "Tiny",
+    "size": "Medium",
     "specialFeatures": []
   },
   "items": {
-    "spellbook_kfrs1m0eq": {
-      "id": "spellbook_kfrs1m0eq",
-      "template": "spellbook",
+    "leather_armor_i2p2wavtc": {
+      "id": "leather_armor_i2p2wavtc",
+      "template": "leather_armor",
       "quantity": 1,
-      "addedAt": 1789212682139,
-      "kind": "focus"
+      "addedAt": 1789392506532,
+      "kind": "armor"
     },
-    "abacus_by1tl60kk": {
-      "id": "abacus_by1tl60kk",
-      "template": "abacus",
+    "dagger_1ofttv082": {
+      "id": "dagger_1ofttv082",
+      "template": "dagger",
+      "quantity": 2,
+      "addedAt": 1789392506532,
+      "kind": "weapon"
+    },
+    "bedroll_b2rdt2ema": {
+      "id": "bedroll_b2rdt2ema",
+      "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1789212682139,
+      "addedAt": 1789392506532,
       "kind": "tradegood"
     },
-    "book_hzq0y7l97": {
-      "id": "book_hzq0y7l97",
-      "template": "book",
+    "crowbar_q7qy4sgex": {
+      "id": "crowbar_q7qy4sgex",
+      "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1789212682140,
-      "kind": "book"
-    },
-    "ink_pen_avuq1j75r": {
-      "id": "ink_pen_avuq1j75r",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1789212682140,
+      "addedAt": 1789392506532,
       "kind": "tradegood"
     },
-    "gold_wkkewt6yn": {
-      "id": "gold_wkkewt6yn",
+    "gold_20igyv4gv": {
+      "id": "gold_20igyv4gv",
       "template": "gold",
-      "quantity": 8,
-      "addedAt": 1789212682140,
+      "quantity": 11,
+      "addedAt": 1789392506532,
       "kind": "currency"
-    },
-    "quarterstaff_zddovks73": {
-      "id": "quarterstaff_zddovks73",
-      "template": "quarterstaff",
-      "quantity": 1,
-      "addedAt": 1789212691769,
-      "kind": "weapon"
-    },
-    "shield_4vi6afgjp": {
-      "id": "shield_4vi6afgjp",
-      "template": "shield",
-      "quantity": 1,
-      "addedAt": 1789213213453,
-      "kind": "shield"
-    },
-    "mace_qv86apwfj": {
-      "id": "mace_qv86apwfj",
-      "template": "mace",
-      "quantity": 1,
-      "addedAt": 1789213254908,
-      "kind": "weapon"
     }
   },
   "containers": {
@@ -145,39 +164,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_kfrs1m0eq"
+          "itemId": "bedroll_b2rdt2ema"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_by1tl60kk"
+          "itemId": "crowbar_q7qy4sgex"
         },
         {
           "id": "bag_2",
-          "itemId": "book_hzq0y7l97"
+          "itemId": "gold_20igyv4gv"
         },
         {
           "id": "bag_3",
-          "itemId": "ink_pen_avuq1j75r"
+          "itemId": null
         },
         {
           "id": "bag_4",
-          "itemId": "gold_wkkewt6yn"
+          "itemId": null
         },
         {
           "id": "bag_5",
-          "itemId": "quarterstaff_e51nnadeh"
+          "itemId": null
         },
         {
           "id": "bag_6",
-          "itemId": "shield_4vi6afgjp"
+          "itemId": null
         },
         {
           "id": "bag_7",
-          "itemId": "mace_qv86apwfj"
+          "itemId": null
         },
         {
           "id": "bag_8",
-          "itemId": "mace_cpz8d7asb"
+          "itemId": null
         },
         {
           "id": "bag_9",
@@ -247,11 +266,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "quarterstaff_zddovks73"
+        "itemId": "dagger_1ofttv082"
       },
       {
         "id": "off_hand",
-        "itemId": "shield_m0zudyp0n"
+        "itemId": null
       },
       {
         "id": "ranged",
@@ -263,7 +282,7 @@
       },
       {
         "id": "chest",
-        "itemId": null
+        "itemId": "leather_armor_i2p2wavtc"
       },
       {
         "id": "clothes",
@@ -365,191 +384,69 @@
   },
   "backpack": [
     {
-      "index": "calligraphers_supplies",
-      "name": "Calligrapher'S Supplies",
-      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "index": "thieves_tools",
+      "name": "Thieves' Tools",
+      "url": "/assets/atlas/equipment/json/thieves_tools.json",
       "quantity": 1
     },
     {
-      "index": "abacus",
-      "name": "Abacus",
-      "url": "/assets/atlas/equipment/json/abacus.json",
+      "index": "bedroll",
+      "name": "Bedroll",
+      "url": "/assets/atlas/equipment/json/bedroll.json",
       "quantity": 1
     },
     {
-      "index": "book",
-      "name": "Book",
-      "url": "/assets/atlas/equipment/json/book.json",
+      "index": "crowbar",
+      "name": "Crowbar",
+      "url": "/assets/atlas/equipment/json/crowbar.json",
       "quantity": 1
     },
     {
-      "index": "ink_1_ounce_bottle",
-      "name": "Ink 1 Ounce Bottle",
-      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "quantity": 1
+      "index": "dagger",
+      "name": "Dagger",
+      "url": "/assets/atlas/equipment/json/dagger.json",
+      "quantity": 2
     },
     {
-      "index": "ink_pen",
-      "name": "Ink Pen",
-      "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "quantity": 1
+      "index": "pouch",
+      "name": "Pouch",
+      "url": "/assets/atlas/equipment/json/pouch.json",
+      "quantity": 2
     },
     {
-      "index": "parchment_one_sheet",
-      "name": "Parchment (One Sheet)",
-      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "quantity": 10
-    },
-    {
-      "index": "robes",
-      "name": "Robes",
-      "url": "/assets/atlas/equipment/json/robes.json",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
       "quantity": 1
     },
     {
       "index": "gold",
       "name": "Gold",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "quantity": 8
+      "quantity": 11
     }
   ],
   "inventory": {},
-  "knownSpells": [
-    {
-      "index": "mending",
-      "name": "mending",
-      "level": 0,
-      "school": "transmutation",
-      "classes": [
-        "artificer",
-        "cleric",
-        "bard",
-        "druid",
-        "sorcerer",
-        "wizard"
-      ],
-      "casting_time": "1 minute",
-      "range": "Touch",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/24/mending.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "cantrips_sheet_01.webp",
-        "cell": 9
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/mending.webp"
-    },
-    {
-      "index": "detect_poison_and_disease",
-      "name": "detect poison and disease",
-      "level": 1,
-      "school": "divination",
-      "classes": [
-        "cleric",
-        "druid",
-        "paladin",
-        "ranger"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_01.webp",
-        "cell": 15
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/detect-poison-and-disease.webp"
-    },
-    {
-      "index": "detect_evil_and_good",
-      "name": "detect evil and good",
-      "level": 1,
-      "school": "divination",
-      "classes": [
-        "cleric",
-        "paladin"
-      ],
-      "casting_time": "1 action",
-      "range": "Self",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_01.webp",
-        "cell": 13
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/detect-evil-and-good.webp"
-    },
-    {
-      "index": "guiding_bolt",
-      "name": "guiding bolt",
-      "level": 1,
-      "school": "evocation",
-      "classes": [
-        "cleric"
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_02.webp",
-        "cell": 12
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
-    },
-    {
-      "index": "shield_of_faith",
-      "name": "shield of faith",
-      "level": 1,
-      "school": "abjuration",
-      "classes": [
-        "cleric",
-        "paladin"
-      ],
-      "casting_time": "1 bonus action",
-      "range": "60 feet",
-      "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 13
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/shield-of-faith.webp"
-    }
-  ],
+  "knownSpells": [],
   "languages": [
     "common"
   ],
-  "preparedSpells": [
-    "mending",
-    "detect_poison_and_disease",
-    "detect_evil_and_good",
-    "guiding_bolt",
-    "shield_of_faith"
-  ],
-  "spellSlots": {
-    "1": {
-      "current": 0,
-      "max": 0
-    }
+  "preparedSpells": [],
+  "spellSlots": {},
+  "choices": {
+    "background_ability_scores": [
+      "dex",
+      "dex",
+      "wis"
+    ]
   },
-  "choices": {},
   "race": "tiefling",
-  "class": "cleric",
-  "background": "scribe",
-  "spellcastingAbility": "wis",
+  "class": "rogue",
+  "background": "wayfarer",
+  "spellcastingAbility": "cha",
   "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
-  "name": "Akta",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RogueHuman.webp",
+  "name": "Lerissa",
   "id": "slot3",
   "hp": 4,
   "maxHp": 4,
@@ -559,5 +456,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-12T11:41:22.069Z"
+  "lastSaved": "2026-09-14T13:29:00.839Z"
 }
