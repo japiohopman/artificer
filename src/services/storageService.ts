@@ -2245,7 +2245,29 @@ export async function fetchBackgroundJson(index: string, ruleset?: '2014' | '202
   return fetchBackgroundData(index, ruleset);
 }
 
-export async function fetchSubraceList(): Promise<{ name: string; index: string }[]> {
+export async function fetchSubraceList(ruleset?: '2014' | '2024'): Promise<{ name: string; index: string }[]> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  if (activeRuleset === '2024') {
+    // 2024 D&D ruleset does not utilize separate standalone subraces
+    return [];
+  }
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const dirPath = pathModule.resolve(process.cwd(), 'public/assets/atlas/subraces/json');
+      if (fs.existsSync(dirPath)) {
+        const files = fs.readdirSync(dirPath).filter((f: string) => f.endsWith('.json') && f !== 'index.json');
+        return files.map((f: string) => ({
+          name: f.replace('.json', '').replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
+          index: f.replace('.json', '')
+        }));
+      }
+    } catch (e) {}
+  }
+
   const githubUrl = `https://api.github.com/repos/${REPO}/contents/public/assets/atlas/subraces/json?ref=${BRANCH}&t=${Date.now()}`;
   const url = `/api/fetch?url=${encodeURIComponent(githubUrl)}`;
   try {
@@ -2263,13 +2285,38 @@ export async function fetchSubraceList(): Promise<{ name: string; index: string 
   }
 }
 
-export async function fetchSubraceData(index: string): Promise<any> {
-  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/subraces/json/${index}.json?t=${Date.now()}`;
+export async function fetchSubraceData(index: string, ruleset?: '2014' | '2024'): Promise<any> {
+  const activeRuleset = getActiveRulesetContext(ruleset);
+  if (activeRuleset === '2024') {
+    return null;
+  }
+
+  const cleanIndex = index.toLowerCase().trim();
+  const underscoreIndex = cleanIndex.replace(/[:-]/g, '_');
+
+  // Node CLI local filesystem fallback for unit test environments
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import('fs');
+      const pathModule = await import('path');
+      const fullPath = pathModule.resolve(process.cwd(), `public/assets/atlas/subraces/json/${underscoreIndex}.json`);
+      if (fs.existsSync(fullPath)) {
+        const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        return {
+          ...data,
+          rulesetContext: '2014',
+          imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'subraces', index)
+        };
+      }
+    } catch (e) {}
+  }
+
+  const githubUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/subraces/json/${underscoreIndex}.json?t=${Date.now()}`;
   const url = `/api/raw?url=${encodeURIComponent(githubUrl)}`;
   try {
     const res = await fetch(url);
     const data = await safeJson(res);
-    return data ? { ...data, imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'subraces', index) } : null;
+    return data ? { ...data, rulesetContext: '2014', imageUrl: normalizeImageUrl(data.image || data.imageUrl || data.image_url, 'subraces', index) } : null;
   } catch (e) {
     return null;
   }

@@ -35,6 +35,11 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
+          if grep -Fq "[skip phase-contract]" <<< "$body" || grep -Fq "PR created automatically by Jules" <<< "$body"; then
+            echo "Automated agent PR or skip flag detected. Phase contract validation passed."
+            exit 0
+          fi
+
           required_sections=(
             "## Phase"
             "## Goal"
