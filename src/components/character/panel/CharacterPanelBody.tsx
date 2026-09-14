@@ -20,8 +20,8 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
   }
 
   return (
-    <div className={`relative w-full h-full flex flex-col items-center justify-center overflow-hidden rounded-sm min-h-[220px] ${className || ''}`}>
-      {/* Background Image Layer (Fills the ENTIRE container at 60% opacity) */}
+    <div className={`absolute inset-0 w-full h-full overflow-hidden ${className || ''}`}>
+      {/* Background Image Layer (Fills 100% of the stage container at 60% opacity) */}
       {bgImage ? (
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-multiply transition-all duration-700 ease-in-out pointer-events-none"
@@ -31,8 +31,8 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
         <div className="absolute inset-0 bg-parchment-200/40 mix-blend-multiply pointer-events-none" />
       )}
 
-      {/* SVG Silhouette Body Layer */}
-      <div className="relative z-10 flex items-center justify-center p-1 w-full h-full max-h-[280px]">
+      {/* SVG Silhouette Body Layer - Centered & Responsive to Available Mirror Space */}
+      <div className="absolute inset-x-2 top-2 bottom-12 z-10 flex items-center justify-center pointer-events-none overflow-hidden">
         <GenderBodySvg
           gender={gender}
           race={character.race}
@@ -40,7 +40,9 @@ export const CharacterPanelBody: React.FC<CharacterPanelBodyProps> = ({ characte
           skinColor={character.appearance?.skinColor}
           heightScale={(character.appearance as any)?.heightScale}
           weightScale={(character.appearance as any)?.weightScale}
-          className="border-none bg-transparent hover:bg-transparent shadow-none p-0 h-full w-auto max-h-[260px] object-contain"
+          hideLabel={true}
+          hideContainerStyles={true}
+          className="h-full w-auto max-h-full max-w-full object-contain pointer-events-none"
         />
       </div>
     </div>

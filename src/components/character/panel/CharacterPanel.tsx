@@ -128,26 +128,24 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
       {/* PERSISTENT CHARACTER MIRROR STAGE */}
       <div className="relative flex-1 w-full min-h-[260px] overflow-hidden">
-        {/* Permanent Mirror Body Silhouette Backdrop */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center p-1">
-          <CharacterPanelBody character={character} currentStep={currentStep} />
-        </div>
+        {/* Persistent Mirror Body Silhouette & Background Environment (Z-0) */}
+        <CharacterPanelBody character={character} currentStep={currentStep} />
 
-        {/* STATS TAB OVERLAY */}
+        {/* STATS TAB OVERLAY (Z-20) */}
         {activeTab === 'stats' && (
           <CharacterPanelStats character={character} currentStep={currentStep} />
         )}
 
-        {/* TRAITS TAB OVERLAY */}
+        {/* TRAITS TAB OVERLAY (Z-30) */}
         {activeTab === 'traits' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30">
             <CharacterPanelTraits character={character} />
           </div>
         )}
 
-        {/* EQUIPMENT TAB OVERLAY */}
+        {/* EQUIPMENT TAB OVERLAY (Z-30) */}
         {activeTab === 'equipment' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/40 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/60 backdrop-blur-xs rounded border border-dragon-gold/30">
             <EquipmentDoll
               equippedItems={character.inventory || {}}
               equipment={character.equipment}
@@ -163,16 +161,16 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
           </div>
         )}
 
-        {/* SPELLS TAB OVERLAY */}
+        {/* SPELLS TAB OVERLAY (Z-30) */}
         {activeTab === 'spells' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30">
             <CharacterPanelSpells character={character} isEditable={isEditable} />
           </div>
         )}
 
-        {/* BIO TAB OVERLAY */}
+        {/* BIO TAB OVERLAY (Z-30) */}
         {activeTab === 'bio' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/70 backdrop-blur-xs rounded">
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30">
             <CharacterPanelBio
               character={character}
               onUpdate={onUpdate}
