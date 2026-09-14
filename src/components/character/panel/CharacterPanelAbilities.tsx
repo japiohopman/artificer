@@ -23,8 +23,8 @@ export const CharacterPanelAbilities: React.FC<CharacterPanelAbilitiesProps> = (
 
   return (
     <div className={`w-full bg-white/60 backdrop-blur-md border border-dragon-gold/25 rounded-sm p-1 shadow-xs shrink-0 ${className || ''}`}>
-      {/* 6 Compact Ability Score Cards */}
-      <div className="grid grid-cols-6 gap-0.5 sm:gap-1 w-full">
+      {/* 6 Ultra-Compact Ability Score Cards Designed for Guaranteed 320px Panel Fit */}
+      <div className="grid grid-cols-6 gap-0.5 w-full min-w-0">
         {ABILITIES.map(({ key, label, icon }) => {
           const score = (effectiveStats as any)[key] ?? 10;
           const mod = getModifier(score);
@@ -39,20 +39,20 @@ export const CharacterPanelAbilities: React.FC<CharacterPanelAbilitiesProps> = (
               }}
             >
               {/* Header Label */}
-              <div className="relative z-10 flex items-center justify-center gap-0.5 mt-0.5">
-                <GameIcon name={icon as any} size={8} color="#8B0000" className="shrink-0 opacity-80" />
-                <span className="text-[7.5px] font-black uppercase text-parchment-800 leading-none">
+              <div className="relative z-10 flex items-center justify-center gap-0.2 mt-0.5 max-w-full px-0.5">
+                <GameIcon name={icon as any} size={7} color="#8B0000" className="shrink-0 opacity-80" />
+                <span className="text-[6.5px] font-black uppercase text-parchment-800 leading-none truncate">
                   {label}
                 </span>
               </div>
 
               {/* Total Score Value */}
-              <span className="relative z-10 text-[11px] font-header font-black text-dragon-darkRed leading-none my-0.5">
+              <span className="relative z-10 text-[10px] font-header font-black text-dragon-darkRed leading-none my-0.5">
                 {score}
               </span>
 
               {/* Modifier Value */}
-              <span className="relative z-10 text-[7.5px] font-black text-parchment-700 leading-none mb-0.5">
+              <span className="relative z-10 text-[6.5px] font-black text-parchment-700 leading-none mb-0.5">
                 {modText}
               </span>
             </div>

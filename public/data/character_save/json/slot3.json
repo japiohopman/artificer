@@ -13,20 +13,6 @@
     "cha": 10
   },
   "proficiencies": [
-<<<<<<< HEAD
-    "Skill: Insight",
-    "Skill: Stealth",
-    "Thieves' Tools",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
-    "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
-=======
     "Skill: Investigation",
     "Skill: Perception",
     "Calligrapher'S Supplies",
@@ -38,7 +24,6 @@
     "saving throw: cha",
     "Saving Throw: wis",
     "Saving Throw: cha"
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
   ],
   "traits": [],
   "features": [
@@ -95,41 +80,6 @@
     "specialFeatures": []
   },
   "items": {
-<<<<<<< HEAD
-    "spellbook_vme512khp": {
-      "id": "spellbook_vme512khp",
-      "template": "spellbook",
-      "quantity": 1,
-      "addedAt": 1789347711413,
-      "kind": "focus"
-    },
-    "bedroll_8h5nrxas5": {
-      "id": "bedroll_8h5nrxas5",
-      "template": "bedroll",
-      "quantity": 1,
-      "addedAt": 1789347711413,
-      "kind": "tradegood"
-    },
-    "crowbar_bvtbt3rpq": {
-      "id": "crowbar_bvtbt3rpq",
-      "template": "crowbar",
-      "quantity": 1,
-      "addedAt": 1789347711413,
-      "kind": "tradegood"
-    },
-    "dagger_oi8j4dxln": {
-      "id": "dagger_oi8j4dxln",
-      "template": "dagger",
-      "quantity": 2,
-      "addedAt": 1789347711413,
-      "kind": "weapon"
-    },
-    "gold_wvwhqydsn": {
-      "id": "gold_wvwhqydsn",
-      "template": "gold",
-      "quantity": 11,
-      "addedAt": 1789347711413,
-=======
     "spellbook_kfrs1m0eq": {
       "id": "spellbook_kfrs1m0eq",
       "template": "spellbook",
@@ -163,7 +113,6 @@
       "template": "gold",
       "quantity": 8,
       "addedAt": 1789212682140,
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
       "kind": "currency"
     },
     "quarterstaff_zddovks73": {
@@ -196,25 +145,6 @@
       "slots": [
         {
           "id": "bag_0",
-<<<<<<< HEAD
-          "itemId": "spellbook_vme512khp"
-        },
-        {
-          "id": "bag_1",
-          "itemId": "bedroll_8h5nrxas5"
-        },
-        {
-          "id": "bag_2",
-          "itemId": "crowbar_bvtbt3rpq"
-        },
-        {
-          "id": "bag_3",
-          "itemId": "gold_wvwhqydsn"
-        },
-        {
-          "id": "bag_4",
-          "itemId": null
-=======
           "itemId": "spellbook_kfrs1m0eq"
         },
         {
@@ -232,7 +162,6 @@
         {
           "id": "bag_4",
           "itemId": "gold_wkkewt6yn"
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
         },
         {
           "id": "bag_5",
@@ -318,11 +247,7 @@
     "slots": [
       {
         "id": "main_hand",
-<<<<<<< HEAD
-        "itemId": "dagger_oi8j4dxln"
-=======
         "itemId": "quarterstaff_zddovks73"
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
       },
       {
         "id": "off_hand",
@@ -440,38 +365,6 @@
   },
   "backpack": [
     {
-<<<<<<< HEAD
-      "index": "thieves_tools",
-      "name": "Thieves' Tools",
-      "url": "/assets/atlas/equipment/json/thieves_tools.json",
-      "quantity": 1
-    },
-    {
-      "index": "bedroll",
-      "name": "Bedroll",
-      "url": "/assets/atlas/equipment/json/bedroll.json",
-      "quantity": 1
-    },
-    {
-      "index": "crowbar",
-      "name": "Crowbar",
-      "url": "/assets/atlas/equipment/json/crowbar.json",
-      "quantity": 1
-    },
-    {
-      "index": "dagger",
-      "name": "Dagger",
-      "url": "/assets/atlas/equipment/json/dagger.json",
-      "quantity": 2
-    },
-    {
-      "index": "pouch",
-      "name": "Pouch",
-      "url": "/assets/atlas/equipment/json/pouch.json",
-      "quantity": 2
-    },
-    {
-=======
       "index": "calligraphers_supplies",
       "name": "Calligrapher'S Supplies",
       "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
@@ -508,7 +401,6 @@
       "quantity": 10
     },
     {
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
@@ -518,17 +410,6 @@
       "index": "gold",
       "name": "Gold",
       "url": "/assets/atlas/equipment/json/gold.json",
-<<<<<<< HEAD
-      "quantity": 11
-    }
-  ],
-  "inventory": {},
-  "knownSpells": [],
-  "languages": [
-    "common"
-  ],
-  "preparedSpells": [],
-=======
       "quantity": 8
     }
   ],
@@ -655,29 +536,12 @@
     "guiding_bolt",
     "shield_of_faith"
   ],
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
   "spellSlots": {
     "1": {
       "current": 0,
       "max": 0
     }
   },
-<<<<<<< HEAD
-  "choices": {
-    "background_ability_scores": [
-      "dex",
-      "dex",
-      "wis"
-    ]
-  },
-  "race": "tiefling",
-  "class": "wizard",
-  "background": "wayfarer",
-  "spellcastingAbility": "int",
-  "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Makaria",
-=======
   "choices": {},
   "race": "tiefling",
   "class": "cleric",
@@ -686,7 +550,6 @@
   "alignment": "true_neutral",
   "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
   "name": "Akta",
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
   "id": "slot3",
   "hp": 4,
   "maxHp": 4,
@@ -696,9 +559,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-<<<<<<< HEAD
-  "lastSaved": "2026-09-14T01:02:05.609Z"
-=======
   "lastSaved": "2026-09-12T11:41:22.069Z"
->>>>>>> 9d87d0e41c3f38a838add84a9277932d8e700b9f
 }
