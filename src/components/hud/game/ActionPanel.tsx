@@ -88,7 +88,7 @@ export const ActionPanel: React.FC = () => {
       // Dynamically calculate attack bonus and damage from equipped weapon / active character
       let equippedWeapon: any = null;
       if (activeChar?.equipment && activeChar?.items) {
-        const weaponSlot = activeChar.equipment.slots.find((s: any) => s.id === 'main_hand' || s.id === 'off_hand');
+        const weaponSlot = activeChar.equipment.slots.find(s => s.id === 'main_hand' || s.id === 'off_hand');
         if (weaponSlot?.itemId) {
           equippedWeapon = activeChar.items[weaponSlot.itemId];
         }
