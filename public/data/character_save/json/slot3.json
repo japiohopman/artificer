@@ -13,6 +13,7 @@
     "cha": 10
   },
   "proficiencies": [
+<<<<<<< HEAD
     "Skill: Insight",
     "Skill: Stealth",
     "Thieves' Tools",
@@ -25,6 +26,19 @@
     "saving throw: wis",
     "Saving Throw: int",
     "Saving Throw: wis"
+=======
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
   ],
   "traits": [
     {
@@ -118,6 +132,7 @@
     ]
   },
   "items": {
+<<<<<<< HEAD
     "spellbook_lml5u84q8": {
       "id": "spellbook_lml5u84q8",
       "template": "spellbook",
@@ -151,6 +166,41 @@
       "template": "gold",
       "quantity": 11,
       "addedAt": 1789350675657,
+=======
+    "spellbook_kfrs1m0eq": {
+      "id": "spellbook_kfrs1m0eq",
+      "template": "spellbook",
+      "quantity": 1,
+      "addedAt": 1789212682139,
+      "kind": "focus"
+    },
+    "abacus_by1tl60kk": {
+      "id": "abacus_by1tl60kk",
+      "template": "abacus",
+      "quantity": 1,
+      "addedAt": 1789212682139,
+      "kind": "tradegood"
+    },
+    "book_hzq0y7l97": {
+      "id": "book_hzq0y7l97",
+      "template": "book",
+      "quantity": 1,
+      "addedAt": 1789212682140,
+      "kind": "book"
+    },
+    "ink_pen_avuq1j75r": {
+      "id": "ink_pen_avuq1j75r",
+      "template": "ink_pen",
+      "quantity": 1,
+      "addedAt": 1789212682140,
+      "kind": "tradegood"
+    },
+    "gold_wkkewt6yn": {
+      "id": "gold_wkkewt6yn",
+      "template": "gold",
+      "quantity": 8,
+      "addedAt": 1789212682140,
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
       "kind": "currency"
     },
     "quarterstaff_twi2jeeam": {
@@ -183,6 +233,7 @@
       "slots": [
         {
           "id": "bag_0",
+<<<<<<< HEAD
           "itemId": "spellbook_lml5u84q8"
         },
         {
@@ -200,6 +251,25 @@
         {
           "id": "bag_4",
           "itemId": "quarterstaff_twi2jeeam"
+=======
+          "itemId": "spellbook_kfrs1m0eq"
+        },
+        {
+          "id": "bag_1",
+          "itemId": "abacus_by1tl60kk"
+        },
+        {
+          "id": "bag_2",
+          "itemId": "book_hzq0y7l97"
+        },
+        {
+          "id": "bag_3",
+          "itemId": "ink_pen_avuq1j75r"
+        },
+        {
+          "id": "bag_4",
+          "itemId": "gold_wkkewt6yn"
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
         },
         {
           "id": "bag_5",
@@ -285,7 +355,11 @@
     "slots": [
       {
         "id": "main_hand",
+<<<<<<< HEAD
         "itemId": "dagger_ed6eufa08"
+=======
+        "itemId": "quarterstaff_zddovks73"
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
       },
       {
         "id": "off_hand",
@@ -403,6 +477,7 @@
   },
   "backpack": [
     {
+<<<<<<< HEAD
       "index": "thieves_tools",
       "name": "Thieves' Tools",
       "url": "/assets/atlas/equipment/json/thieves_tools.json",
@@ -431,6 +506,42 @@
       "name": "Pouch",
       "url": "/assets/atlas/equipment/json/pouch.json",
       "quantity": 2
+=======
+      "index": "calligraphers_supplies",
+      "name": "Calligrapher'S Supplies",
+      "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
+      "quantity": 1
+    },
+    {
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
+    },
+    {
+      "index": "book",
+      "name": "Book",
+      "url": "/assets/atlas/equipment/json/book.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_1_ounce_bottle",
+      "name": "Ink 1 Ounce Bottle",
+      "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
+      "quantity": 1
+    },
+    {
+      "index": "ink_pen",
+      "name": "Ink Pen",
+      "url": "/assets/atlas/equipment/json/ink_pen.json",
+      "quantity": 1
+    },
+    {
+      "index": "parchment_one_sheet",
+      "name": "Parchment (One Sheet)",
+      "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
+      "quantity": 10
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
     },
     {
       "index": "clothes_travelers",
@@ -442,7 +553,11 @@
       "index": "gold",
       "name": "Gold",
       "url": "/assets/atlas/equipment/json/gold.json",
+<<<<<<< HEAD
       "quantity": 11
+=======
+      "quantity": 8
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
     }
   ],
   "inventory": {},
@@ -1086,6 +1201,7 @@
       "max": 0
     }
   },
+<<<<<<< HEAD
   "choices": {
     "background_ability_scores": [
       "dex",
@@ -1100,6 +1216,16 @@
   "alignment": "true_neutral",
   "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
   "name": "Marian Cross",
+=======
+  "choices": {},
+  "race": "tiefling",
+  "class": "cleric",
+  "background": "scribe",
+  "spellcastingAbility": "wis",
+  "alignment": "true_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Akta",
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
   "id": "slot3",
   "hp": 3,
   "maxHp": 3,
@@ -1109,5 +1235,9 @@
     "neverwinter"
   ],
   "exploredAreas": [],
+<<<<<<< HEAD
   "lastSaved": "2026-09-14T01:52:17.403Z"
+=======
+  "lastSaved": "2026-09-12T11:41:22.069Z"
+>>>>>>> f4b354bf6a25e31e84e3aee0eea32185b7372ffe
 }

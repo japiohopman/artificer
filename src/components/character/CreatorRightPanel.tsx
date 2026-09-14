@@ -33,7 +33,7 @@ export const CreatorRightPanel: React.FC<CreatorRightPanelProps> = ({ newChar, c
   }, [currentStep]);
 
   return (
-    <div className="w-80 lg:w-96 border-l border-dragon-gold/20 bg-white/30 flex flex-col relative overflow-hidden shrink-0 shadow-inner h-full">
+    <div className="w-80 sm:w-96 border-l border-dragon-gold/20 bg-white/30 flex flex-col relative overflow-hidden shrink-0 shadow-inner h-full">
       {/* Background Paper Texture */}
       <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none" />
 

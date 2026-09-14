@@ -8,6 +8,7 @@ import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getCharacterActions, ActionHudAction } from '../../../lib/tokenActionHud';
 import { DeathSavesPanel } from './DeathSavesPanel';
+import { calculateWeaponAttackBonus } from '../../../lib/statCalculations';
 
 export const ActionPanel: React.FC = () => {
   const {
@@ -83,10 +84,24 @@ export const ActionPanel: React.FC = () => {
 
     if (action.id === 'attack') {
       setIsTargeting(true);
+
+      // Dynamically calculate attack bonus and damage from equipped weapon / active character
+      let equippedWeapon: any = null;
+      if (activeChar?.equipment && activeChar?.items) {
+        const weaponSlot = activeChar.equipment.slots.find(s => s.slotKey === 'main_hand' || s.slotKey === 'off_hand');
+        if (weaponSlot?.itemId) {
+          equippedWeapon = activeChar.items[weaponSlot.itemId];
+        }
+      }
+
+      const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
+      const damageDice = equippedWeapon?.damage || '1d4';
+      const damageType = equippedWeapon?.damageType || 'slashing';
+
       setTargetingAction({
         ...action,
-        attack_bonus: 5,
-        damage: [{ damage_dice: '1d8+3', damage_type: { name: 'slashing' } }]
+        attack_bonus: calculatedBonus,
+        damage: [{ damage_dice: damageDice, damage_type: { name: damageType } }]
       });
       addLog("Select a target on the grid.", 'info');
     } else if (action.id === 'move') {
