@@ -26,7 +26,23 @@
     "Saving Throw: int",
     "Saving Throw: wis"
   ],
-  "traits": [],
+  "traits": [
+    {
+      "name": "resourceful",
+      "index": "resourceful",
+      "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
+    },
+    {
+      "name": "skillful",
+      "index": "skillful",
+      "desc": "You gain proficiency in one skill of your choice."
+    },
+    {
+      "name": "versatile",
+      "index": "versatile",
+      "desc": "You gain an Origin feat of your choice. Skilled is recommended."
+    }
+  ],
   "features": [
     {
       "index": "spellcasting_wizard_2024",
@@ -89,7 +105,7 @@
     "pp": 0
   },
   "appearance": {
-    "hairColor": "Raven Black",
+    "hairColor": "Ash Gray",
     "hairStyle": "Short",
     "bodyType": "Medium",
     "eyeColor": "Brown",
@@ -97,43 +113,66 @@
     "height": "5'10\"",
     "weight": "160 lbs",
     "size": "Medium",
-    "specialFeatures": []
+    "specialFeatures": [
+      "Tattoo"
+    ]
   },
   "items": {
-    "spellbook_vme512khp": {
-      "id": "spellbook_vme512khp",
+    "spellbook_lml5u84q8": {
+      "id": "spellbook_lml5u84q8",
       "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1789347711413,
+      "addedAt": 1789350675655,
       "kind": "focus"
     },
-    "bedroll_8h5nrxas5": {
-      "id": "bedroll_8h5nrxas5",
+    "bedroll_dquz2u3ah": {
+      "id": "bedroll_dquz2u3ah",
       "template": "bedroll",
       "quantity": 1,
-      "addedAt": 1789347711413,
+      "addedAt": 1789350675655,
       "kind": "tradegood"
     },
-    "crowbar_bvtbt3rpq": {
-      "id": "crowbar_bvtbt3rpq",
+    "crowbar_eyxy0ofu0": {
+      "id": "crowbar_eyxy0ofu0",
       "template": "crowbar",
       "quantity": 1,
-      "addedAt": 1789347711413,
+      "addedAt": 1789350675655,
       "kind": "tradegood"
     },
-    "dagger_oi8j4dxln": {
-      "id": "dagger_oi8j4dxln",
+    "dagger_ed6eufa08": {
+      "id": "dagger_ed6eufa08",
       "template": "dagger",
       "quantity": 2,
-      "addedAt": 1789347711413,
+      "addedAt": 1789350675655,
       "kind": "weapon"
     },
-    "gold_wvwhqydsn": {
-      "id": "gold_wvwhqydsn",
+    "gold_vptda1orn": {
+      "id": "gold_vptda1orn",
       "template": "gold",
       "quantity": 11,
-      "addedAt": 1789347711413,
+      "addedAt": 1789350675657,
       "kind": "currency"
+    },
+    "quarterstaff_twi2jeeam": {
+      "id": "quarterstaff_twi2jeeam",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1789350686029,
+      "kind": "weapon"
+    },
+    "orb_qhgxvxmvr": {
+      "id": "orb_qhgxvxmvr",
+      "template": "orb",
+      "quantity": 1,
+      "addedAt": 1789350692238,
+      "kind": "equipment"
+    },
+    "scholars_pack_2kgwjbpiu": {
+      "id": "scholars_pack_2kgwjbpiu",
+      "template": "scholars_pack",
+      "quantity": 1,
+      "addedAt": 1789350697485,
+      "kind": "container"
     }
   },
   "containers": {
@@ -144,43 +183,43 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_vme512khp"
+          "itemId": "spellbook_lml5u84q8"
         },
         {
           "id": "bag_1",
-          "itemId": "bedroll_8h5nrxas5"
+          "itemId": "bedroll_dquz2u3ah"
         },
         {
           "id": "bag_2",
-          "itemId": "crowbar_bvtbt3rpq"
+          "itemId": "crowbar_eyxy0ofu0"
         },
         {
           "id": "bag_3",
-          "itemId": "gold_wvwhqydsn"
+          "itemId": "gold_vptda1orn"
         },
         {
           "id": "bag_4",
-          "itemId": null
+          "itemId": "quarterstaff_twi2jeeam"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "quarterstaff_hmeslhggj"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "orb_qhgxvxmvr"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "orb_ey6k88o39"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "scholars_pack_2kgwjbpiu"
         },
         {
           "id": "bag_9",
-          "itemId": null
+          "itemId": "scholars_pack_w1x7vc0b1"
         },
         {
           "id": "bag_10",
@@ -246,7 +285,7 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "dagger_oi8j4dxln"
+        "itemId": "dagger_ed6eufa08"
       },
       {
         "id": "off_hand",
@@ -407,11 +446,640 @@
     }
   ],
   "inventory": {},
-  "knownSpells": [],
+  "knownSpells": [
+    {
+      "index": "dancing_lights",
+      "name": "dancing lights",
+      "level": 0,
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "/assets/atlas/magic_schools/json/evocation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Up to 1 minute",
+      "json_path": "/assets/atlas/spell/json/24/dancing_lights.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 2
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/dancing-lights.webp",
+      "higher_level": [],
+      "desc": [
+        "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.",
+        "As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
+      ],
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A bit of phosphorus or wychwood, or a glowworm.",
+      "ritual": false,
+      "concentration": true,
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/dancing_lights.json",
+      "updated_at": "2026-06-01T06:56:15.190Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "fire_bolt",
+      "name": "fire bolt",
+      "level": 0,
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "/assets/atlas/magic_schools/json/evocation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/fire_bolt.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 5
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/fire-bolt.webp",
+      "higher_level": [],
+      "desc": [
+        "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",
+        "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
+      ],
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "concentration": false,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "fire",
+          "name": "fire",
+          "url": "/assets/atlas/damage_types/json/fire.json"
+        },
+        "damage_at_character_level": {
+          "1": "1d10",
+          "5": "2d10",
+          "11": "3d10",
+          "17": "4d10"
+        }
+      },
+      "subclasses": [],
+      "url": "/assets/atlas/spell/json/fire_bolt.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "ray_of_frost",
+      "name": "ray of frost",
+      "level": 0,
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "/assets/atlas/magic_schools/json/evocation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "60 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/ray_of_frost.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 15
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/ray-of-frost.webp",
+      "higher_level": [],
+      "desc": [
+        "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
+        "The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+      ],
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "concentration": false,
+      "attack_type": "ranged",
+      "damage": {
+        "damage_type": {
+          "index": "cold",
+          "name": "cold",
+          "url": "/assets/atlas/damage_types/json/cold.json"
+        },
+        "damage_at_character_level": {
+          "1": "1d8",
+          "5": "2d8",
+          "11": "3d8",
+          "17": "4d8"
+        }
+      },
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/ray_of_frost.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "grease",
+      "name": "grease",
+      "level": 1,
+      "school": {
+        "index": "conjuration",
+        "name": "conjuration",
+        "url": "/assets/atlas/magic_schools/json/conjuration.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "60 feet",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/24/grease.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_02.webp",
+        "cell": 11
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/grease.webp",
+      "higher_level": [],
+      "desc": [
+        "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.",
+        "When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone."
+      ],
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A bit of pork rind or butter.",
+      "ritual": false,
+      "concentration": false,
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "dex",
+          "url": "/assets/atlas/ability_scores/json/dex.json"
+        },
+        "dc_success": "none"
+      },
+      "area_of_effect": {
+        "type": "cube",
+        "size": 10
+      },
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/grease.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "false_life",
+      "name": "false life",
+      "level": 1,
+      "school": {
+        "index": "necromancy",
+        "name": "necromancy",
+        "url": "/assets/atlas/magic_schools/json/necromancy.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/24/false_life.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_02.webp",
+        "cell": 5
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/false-life.webp",
+      "desc": [
+        "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st."
+      ],
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A small amount of alcohol or distilled spirits.",
+      "ritual": false,
+      "concentration": false,
+      "heal_at_slot_level": {
+        "1": "1d4 + 4",
+        "2": "1d4 + 9",
+        "3": "1d4 + 14",
+        "4": "1d4 + 19",
+        "5": "1d4 + 24",
+        "6": "1d4 + 29",
+        "7": "1d4 + 34",
+        "8": "1d4 + 39",
+        "9": "1d4 + 44"
+      },
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/false_life.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "magic_missile",
+      "name": "magic missile",
+      "level": 1,
+      "school": {
+        "index": "evocation",
+        "name": "evocation",
+        "url": "/assets/atlas/magic_schools/json/evocation.json"
+      },
+      "classes": [
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/magic_missile.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 8
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/magic-missile.webp",
+      "desc": [
+        "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
+      ],
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "concentration": false,
+      "damage": {
+        "damage_type": {
+          "index": "force",
+          "name": "force",
+          "url": "/assets/atlas/damage_types/json/force.json"
+        },
+        "damage_at_slot_level": {
+          "1": "1d4 + 1",
+          "2": "1d4 + 1",
+          "3": "1d4 + 1",
+          "4": "1d4 + 1",
+          "5": "1d4 + 1",
+          "6": "1d4 + 1",
+          "7": "1d4 + 1",
+          "8": "1d4 + 1",
+          "9": "1d4 + 1"
+        }
+      },
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/magic_missile.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "sleep",
+      "name": "sleep",
+      "level": 1,
+      "school": {
+        "index": "enchantment",
+        "name": "enchantment",
+        "url": "/assets/atlas/magic_schools/json/enchantment.json"
+      },
+      "classes": [
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "90 feet",
+      "duration": "1 minute",
+      "json_path": "/assets/atlas/spell/json/24/sleep.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 15
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/sleep.webp",
+      "desc": [
+        "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).",
+        "Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
+        "Undead and creatures immune to being charmed aren't affected by this spell."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
+      ],
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A pinch of fine sand, rose petals, or a cricket.",
+      "ritual": false,
+      "concentration": false,
+      "damage": {
+        "damage_at_slot_level": {
+          "1": "5d8"
+        }
+      },
+      "area_of_effect": {
+        "type": "sphere",
+        "size": 20
+      },
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/sleep.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "longstrider",
+      "name": "longstrider",
+      "level": 1,
+      "school": {
+        "index": "transmutation",
+        "name": "transmutation",
+        "url": "/assets/atlas/magic_schools/json/transmutation.json"
+      },
+      "classes": [
+        {
+          "index": "artificer",
+          "name": "artificer",
+          "url": "/assets/atlas/class/json/artificer.json"
+        },
+        {
+          "index": "bard",
+          "name": "bard",
+          "url": "/assets/atlas/class/json/bard.json"
+        },
+        {
+          "index": "druid",
+          "name": "druid",
+          "url": "/assets/atlas/class/json/druid.json"
+        },
+        {
+          "index": "ranger",
+          "name": "ranger",
+          "url": "/assets/atlas/class/json/ranger.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 action",
+      "range": "Touch",
+      "duration": "1 hour",
+      "json_path": "/assets/atlas/spell/json/24/longstrider.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 6
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/longstrider.webp",
+      "desc": [
+        "You touch a creature. The target's speed increases by 10 feet until the spell ends."
+      ],
+      "higher_level": [
+        "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st."
+      ],
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "material": "A pinch of dirt.",
+      "ritual": false,
+      "concentration": false,
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/longstrider.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    },
+    {
+      "index": "shield",
+      "name": "shield",
+      "level": 1,
+      "school": {
+        "index": "abjuration",
+        "name": "abjuration",
+        "url": "/assets/atlas/magic_schools/json/abjuration.json"
+      },
+      "classes": [
+        {
+          "index": "sorcerer",
+          "name": "sorcerer",
+          "url": "/assets/atlas/class/json/sorcerer.json"
+        },
+        {
+          "index": "wizard",
+          "name": "wizard",
+          "url": "/assets/atlas/class/json/wizard.json"
+        }
+      ],
+      "casting_time": "1 reaction",
+      "range": "Self",
+      "duration": "1 round",
+      "json_path": "/assets/atlas/spell/json/24/shield.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 12
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/shield.webp",
+      "higher_level": [],
+      "desc": [
+        "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile."
+      ],
+      "components": [
+        "V",
+        "S"
+      ],
+      "ritual": false,
+      "concentration": false,
+      "subclasses": [
+        {
+          "index": "lore",
+          "name": "lore",
+          "url": "/assets/atlas/subclasses/json/lore.json"
+        }
+      ],
+      "url": "/assets/atlas/spell/json/shield.json",
+      "updated_at": "2025-10-24T20:42:14.619Z",
+      "ruleset": "2024"
+    }
+  ],
   "languages": [
     "common"
   ],
-  "preparedSpells": [],
+  "preparedSpells": [
+    "dancing_lights",
+    "fire_bolt",
+    "ray_of_frost",
+    "grease",
+    "false_life",
+    "magic_missile",
+    "sleep",
+    "longstrider",
+    "shield"
+  ],
   "spellSlots": {
     "1": {
       "current": 0,
@@ -425,13 +1093,13 @@
       "wis"
     ]
   },
-  "race": "tiefling",
+  "race": "human",
   "class": "wizard",
   "background": "wayfarer",
   "spellcastingAbility": "int",
   "alignment": "true_neutral",
   "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Makaria",
+  "name": "Marian Cross",
   "id": "slot3",
   "hp": 3,
   "maxHp": 3,
@@ -441,5 +1109,5 @@
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-14T01:02:05.609Z"
+  "lastSaved": "2026-09-14T01:52:17.403Z"
 }
