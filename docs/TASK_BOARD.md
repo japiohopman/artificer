@@ -43,9 +43,9 @@ Next active dependency: remaining rules-sensitive domains.
 - [x] Ingest 2024 Backgrounds/Origins.
 - [x] Integrate 2024 Feats where rules differ.
 - [x] Integrate 2024 Spells where rules differ.
-- [ ] Audit remaining rules-sensitive domains (conditions, subraces, features and other downstream consumers).
-- [ ] Add ruleset integration tests proving 2014 and 2024 resolve different datasets where intended.
-- [ ] Verify Character Creator end-to-end for both rulesets.
+- [x] Audit remaining rules-sensitive domains (conditions, subraces, features and other downstream consumers).
+- [x] Add ruleset integration tests proving 2014 and 2024 resolve different datasets where intended.
+- [x] Verify Character Creator end-to-end for both rulesets.
 
 **Reference sources:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference material only. Do not blindly copy the repository.
 

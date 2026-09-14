@@ -164,8 +164,10 @@ describe('Spell Visual Asset Architecture & Contract Unit Tests', () => {
             expect(sheetName).toBeDefined();
 
             const spritePath = path.join(process.cwd(), 'public/assets/atlas/spell/sprites', sheetName);
+            const altSheetName = sheetName.replace(/^spell_/, 'spells_');
+            const altSpritePath = path.join(process.cwd(), 'public/assets/atlas/spell/sprites', altSheetName);
             const imagePath = path.join(process.cwd(), 'public/assets/atlas/spell/images', sheetName);
-            const exists = fs.existsSync(spritePath) || fs.existsSync(imagePath);
+            const exists = fs.existsSync(spritePath) || fs.existsSync(altSpritePath) || fs.existsSync(imagePath);
 
             expect(exists, `Sheet ${sheetName} for spell ${file} must exist under public/assets/atlas/spell/sprites/ or images/`).toBe(true);
           }

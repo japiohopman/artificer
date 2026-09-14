@@ -31,8 +31,8 @@ export const SpellSprite: React.FC<SpellSpriteProps> = ({
   alt
 }) => {
   // Case 0: Direct canonical `sprite` object provided on spell item
-  if (typeof spell === 'object' && spell !== null && 'sprite' in spell && spell.sprite?.sheet) {
-    const { atlas = 'spell', sheet, cell = 0 } = spell.sprite;
+  if (typeof spell === 'object' && spell !== null && 'sprite' in spell && (spell as any).sprite?.sheet) {
+    const { atlas = 'spell', sheet, cell = 0 } = (spell as any).sprite;
     const sheetFilename = sheet.split('/').pop() || sheet;
 
     if (sheetFilename.includes('sheet')) {

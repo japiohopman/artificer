@@ -5,12 +5,12 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 10,
-    "dex": 10,
-    "con": 10,
+    "str": 15,
+    "dex": 14,
+    "con": 13,
     "int": 10,
-    "wis": 10,
-    "cha": 10
+    "wis": 12,
+    "cha": 8
   },
   "proficiencies": [
     "Skill: Investigation",
@@ -401,9 +401,9 @@
       "quantity": 10
     },
     {
-      "index": "clothes_travelers",
-      "name": "Clothes Traveler'S",
-      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
+      "index": "robes",
+      "name": "Robes",
+      "url": "/assets/atlas/equipment/json/robes.json",
       "quantity": 1
     },
     {

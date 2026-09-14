@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData } from '../src/services/storageService';
+import { fetchEquipmentData, fetchFeatData, fetchSpeciesData, fetchClassData, fetchClassesList, fetchClassLevels, fetchSubclassData, fetchSubclassesList, fetchBackgroundsList, fetchBackgroundData, fetchSubraceList, fetchSubraceData } from '../src/services/storageService';
 import { atlasService } from '../src/services/atlasService';
 import { validate2024BackgroundAbilityScores, calculate2024BackgroundBonuses } from '../src/lib/backgroundUtils';
 import fs from 'fs';
@@ -1553,6 +1553,21 @@ describe('Ruleset Resolution Audit Tests', () => {
 
     const nonexistent24 = await fetchSubclassData('nonexistent_subclass_2024', '2024');
     expect(nonexistent24).toBeNull();
+  });
+
+  it('verifies 2014 vs 2024 subrace resolution and isolation', async () => {
+    const subraces14 = await fetchSubraceList('2014');
+    expect(subraces14.length).toBeGreaterThan(0);
+
+    const subraces24 = await fetchSubraceList('2024');
+    expect(subraces24).toEqual([]);
+
+    const highElf14 = await fetchSubraceData('high_elf', '2014');
+    expect(highElf14).not.toBeNull();
+    expect(highElf14?.rulesetContext).toBe('2014');
+
+    const highElf24 = await fetchSubraceData('high_elf', '2024');
+    expect(highElf24).toBeNull();
   });
 
   it('verifies ruleset-aware fetchSubclassesList and class filtering for all 12 classes', async () => {
