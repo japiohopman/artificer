@@ -79,57 +79,57 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
   }
 
   return (
-    <div className={cn("absolute inset-0 z-20 flex flex-col justify-between p-1 pointer-events-none", className)}>
-      {/* Right Column: Combat Readiness Metrics Overlay */}
+    <div className={cn("absolute inset-0 z-20 flex flex-col justify-between p-1.5 pointer-events-none", className)}>
+      {/* Right Column: Floating Combat Readiness Metrics Overlay */}
       <div className="flex justify-end w-full">
-        <div className="flex flex-col gap-1 pointer-events-auto items-end min-w-[85px] bg-white/60 backdrop-blur-xs p-1.5 rounded border border-dragon-gold/20 shadow-xs">
+        <div className="flex flex-col gap-1 pointer-events-auto items-end min-w-[80px] sm:min-w-[90px] bg-white/70 backdrop-blur-xs p-1 rounded border border-dragon-gold/25 shadow-xs">
           {/* Armor Class */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="shield" size={11} color="#D4AF37" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">{acText} AC</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="shield" size={10} color="#D4AF37" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">{acText} AC</span>
           </div>
 
           {/* Speed */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="wind" size={11} color="#ec597a" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">{speedText}</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="wind" size={10} color="#ec597a" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">{speedText}</span>
           </div>
 
           {/* Initiative */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="lightning" size={11} color="#ec597a" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">{initiativeText} INIT</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="lightning" size={10} color="#ec597a" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">{initiativeText} INIT</span>
           </div>
 
           {/* Proficiency Bonus */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="magic_effect" size={11} color="#D4AF37" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">+{derivedStats.proficiencyBonus} PROF</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="magic_effect" size={10} color="#D4AF37" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">+{derivedStats.proficiencyBonus} PROF</span>
           </div>
 
           {/* Attack Bonus */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="weapon" size={11} color="#ec597a" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">{attackBonusText} ATK</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="weapon" size={10} color="#ec597a" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">{attackBonusText} ATK</span>
           </div>
 
           {/* Passive Perception */}
-          <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-            <GameIcon name="eye" size={11} color="#D4AF37" className="shrink-0" />
-            <span className="text-[9px] font-header font-black text-dragon-darkRed">{derivedStats.passivePerception} PERC</span>
+          <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+            <GameIcon name="eye" size={10} color="#D4AF37" className="shrink-0" />
+            <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">{derivedStats.passivePerception} PERC</span>
           </div>
 
           {/* Spellcasting DC / Atk if spellcaster */}
           {derivedStats.spellSaveDC > 8 && (
-            <div className="bg-white/90 border border-dragon-gold/30 rounded px-2 py-0.5 shadow-xs flex items-center gap-1.5 w-full justify-between">
-              <GameIcon name="magic_effect" size={11} color="#8B0000" className="shrink-0" />
-              <span className="text-[9px] font-header font-black text-dragon-darkRed">DC {derivedStats.spellSaveDC} ({spellAtkText})</span>
+            <div className="bg-white/90 border border-dragon-gold/30 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between">
+              <GameIcon name="magic_effect" size={10} color="#8B0000" className="shrink-0" />
+              <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">DC {derivedStats.spellSaveDC} ({spellAtkText})</span>
             </div>
           )}
         </div>
       </div>
 
-      {/* Ability Scores Strip owned as part of Stats presentation */}
+      {/* Ability Scores Strip anchored at bottom of mirror stage */}
       <div className="pointer-events-auto shrink-0 w-full mt-auto">
         <CharacterPanelAbilities character={character} />
       </div>
