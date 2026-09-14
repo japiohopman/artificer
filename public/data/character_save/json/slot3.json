@@ -5,82 +5,56 @@
   "saveVersion": 2,
   "gender": "Female",
   "stats": {
-    "str": 15,
-    "dex": 14,
-    "con": 13,
+    "str": 10,
+    "dex": 10,
+    "con": 10,
     "int": 10,
-    "wis": 12,
-    "cha": 8
+    "wis": 10,
+    "cha": 10
   },
   "proficiencies": [
-    "Skill: Arcana",
-    "Skill: History",
+    "Skill: Investigation",
+    "Skill: Perception",
+    "Calligrapher'S Supplies",
     "light armor",
     "medium armor",
     "shields",
     "simple weapons",
-    "martial weapons",
-    "saving throw: dex",
-    "saving throw: str",
-    "Saving Throw: str",
-    "Saving Throw: dex"
+    "saving throw: wis",
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
   "traits": [],
   "features": [
     {
-      "name": "Researcher",
-      "desc": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it.",
-      "source": "Background"
-    },
-    {
-      "index": "spellcasting_ranger_2024",
-      "name": "Spellcasting: Ranger",
+      "index": "spellcasting_cleric_2024",
+      "name": "Spellcasting: Cleric",
       "class": {
-        "index": "ranger",
-        "name": "Ranger",
-        "url": "/assets/atlas/class/json/24/ranger.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "Cast Ranger spells using Wisdom as spellcasting ability."
+        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_ranger_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
       "source": "Class"
     },
     {
-      "index": "favored_enemy_2024",
-      "name": "Favored Enemy",
+      "index": "divine_order_cleric",
+      "name": "Divine Order",
       "class": {
-        "index": "ranger",
-        "name": "Ranger",
-        "url": "/assets/atlas/class/json/24/ranger.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "Always have Hunter's Mark prepared. Cast it without a spell slot 2 times at L1, scaling up to 6 times at L17. Regain uses on Long Rest."
+        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
       ],
-      "feature_specific": {
-        "uses_at_level_1": 2
-      },
-      "url": "/assets/atlas/features/json/favored_enemy_2024.json",
-      "source": "Class"
-    },
-    {
-      "index": "weapon_mastery_ranger_2024",
-      "name": "Weapon Mastery",
-      "class": {
-        "index": "ranger",
-        "name": "Ranger",
-        "url": "/assets/atlas/class/json/24/ranger.json"
-      },
-      "level": 1,
-      "desc": [
-        "Mastery properties of two simple or martial weapons of your choice."
-      ],
-      "feature_specific": {
-        "mastery_count": 2
-      },
-      "url": "/assets/atlas/features/json/weapon_mastery_ranger_2024.json",
+      "url": "/assets/atlas/features/json/divine_order_cleric.json",
       "source": "Class"
     }
   ],
@@ -102,51 +76,65 @@
     "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
-    "size": "Medium",
+    "size": "Tiny",
     "specialFeatures": []
   },
   "items": {
-    "longbow_rfwfiyit1": {
-      "id": "longbow_rfwfiyit1",
-      "template": "longbow",
+    "spellbook_kfrs1m0eq": {
+      "id": "spellbook_kfrs1m0eq",
+      "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1789377091395,
-      "kind": "weapon"
+      "addedAt": 1789212682139,
+      "kind": "focus"
     },
-    "arrow_lakwqvroi": {
-      "id": "arrow_lakwqvroi",
-      "template": "arrow",
-      "quantity": 20,
-      "addedAt": 1789377091395,
-      "kind": "consumable"
-    },
-    "book_gx62wzsma": {
-      "id": "book_gx62wzsma",
-      "template": "book",
+    "abacus_by1tl60kk": {
+      "id": "abacus_by1tl60kk",
+      "template": "abacus",
       "quantity": 1,
-      "addedAt": 1789377091396,
-      "kind": "book"
-    },
-    "ink_pen_x25viv64p": {
-      "id": "ink_pen_x25viv64p",
-      "template": "ink_pen",
-      "quantity": 1,
-      "addedAt": 1789377091396,
+      "addedAt": 1789212682139,
       "kind": "tradegood"
     },
-    "robes_uacqp7e43": {
-      "id": "robes_uacqp7e43",
-      "template": "robes",
+    "book_hzq0y7l97": {
+      "id": "book_hzq0y7l97",
+      "template": "book",
       "quantity": 1,
-      "addedAt": 1789377091396,
-      "kind": "equipment"
+      "addedAt": 1789212682140,
+      "kind": "book"
     },
-    "gold_13kjmog4m": {
-      "id": "gold_13kjmog4m",
+    "ink_pen_avuq1j75r": {
+      "id": "ink_pen_avuq1j75r",
+      "template": "ink_pen",
+      "quantity": 1,
+      "addedAt": 1789212682140,
+      "kind": "tradegood"
+    },
+    "gold_wkkewt6yn": {
+      "id": "gold_wkkewt6yn",
       "template": "gold",
       "quantity": 8,
-      "addedAt": 1789377091396,
+      "addedAt": 1789212682140,
       "kind": "currency"
+    },
+    "quarterstaff_zddovks73": {
+      "id": "quarterstaff_zddovks73",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1789212691769,
+      "kind": "weapon"
+    },
+    "shield_4vi6afgjp": {
+      "id": "shield_4vi6afgjp",
+      "template": "shield",
+      "quantity": 1,
+      "addedAt": 1789213213453,
+      "kind": "shield"
+    },
+    "mace_qv86apwfj": {
+      "id": "mace_qv86apwfj",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1789213254908,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -157,39 +145,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "arrow_lakwqvroi"
+          "itemId": "spellbook_kfrs1m0eq"
         },
         {
           "id": "bag_1",
-          "itemId": "book_gx62wzsma"
+          "itemId": "abacus_by1tl60kk"
         },
         {
           "id": "bag_2",
-          "itemId": "ink_pen_x25viv64p"
+          "itemId": "book_hzq0y7l97"
         },
         {
           "id": "bag_3",
-          "itemId": "robes_uacqp7e43"
+          "itemId": "ink_pen_avuq1j75r"
         },
         {
           "id": "bag_4",
-          "itemId": "gold_13kjmog4m"
+          "itemId": "gold_wkkewt6yn"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "quarterstaff_e51nnadeh"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "shield_4vi6afgjp"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "mace_qv86apwfj"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "mace_cpz8d7asb"
         },
         {
           "id": "bag_9",
@@ -259,11 +247,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": "longbow_rfwfiyit1"
+        "itemId": "quarterstaff_zddovks73"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_m0zudyp0n"
       },
       {
         "id": "ranged",
@@ -383,6 +371,12 @@
       "quantity": 1
     },
     {
+      "index": "abacus",
+      "name": "Abacus",
+      "url": "/assets/atlas/equipment/json/abacus.json",
+      "quantity": 1
+    },
+    {
       "index": "book",
       "name": "Book",
       "url": "/assets/atlas/equipment/json/book.json",
@@ -407,9 +401,9 @@
       "quantity": 10
     },
     {
-      "index": "robes",
-      "name": "Robes",
-      "url": "/assets/atlas/equipment/json/robes.json",
+      "index": "clothes_travelers",
+      "name": "Clothes Traveler'S",
+      "url": "/assets/atlas/equipment/json/clothes_travelers.json",
       "quantity": 1
     },
     {
@@ -420,39 +414,150 @@
     }
   ],
   "inventory": {},
-  "knownSpells": [],
+  "knownSpells": [
+    {
+      "index": "mending",
+      "name": "mending",
+      "level": 0,
+      "school": "transmutation",
+      "classes": [
+        "artificer",
+        "cleric",
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
+      ],
+      "casting_time": "1 minute",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "json_path": "/assets/atlas/spell/json/24/mending.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 9
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/mending.webp"
+    },
+    {
+      "index": "detect_poison_and_disease",
+      "name": "detect poison and disease",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_01.webp",
+        "cell": 15
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/detect-poison-and-disease.webp"
+    },
+    {
+      "index": "detect_evil_and_good",
+      "name": "detect evil and good",
+      "level": 1,
+      "school": "divination",
+      "classes": [
+        "cleric",
+        "paladin"
+      ],
+      "casting_time": "1 action",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_01.webp",
+        "cell": 13
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/detect-evil-and-good.webp"
+    },
+    {
+      "index": "guiding_bolt",
+      "name": "guiding bolt",
+      "level": 1,
+      "school": "evocation",
+      "classes": [
+        "cleric"
+      ],
+      "casting_time": "1 action",
+      "range": "120 feet",
+      "duration": "1 round",
+      "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_02.webp",
+        "cell": 12
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+    },
+    {
+      "index": "shield_of_faith",
+      "name": "shield of faith",
+      "level": 1,
+      "school": "abjuration",
+      "classes": [
+        "cleric",
+        "paladin"
+      ],
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 13
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/shield-of-faith.webp"
+    }
+  ],
   "languages": [
     "common"
   ],
-  "preparedSpells": [],
+  "preparedSpells": [
+    "mending",
+    "detect_poison_and_disease",
+    "detect_evil_and_good",
+    "guiding_bolt",
+    "shield_of_faith"
+  ],
   "spellSlots": {
     "1": {
       "current": 0,
       "max": 0
     }
   },
-  "choices": {
-    "background_ability_scores": [
-      "con",
-      "con",
-      "int"
-    ]
-  },
+  "choices": {},
   "race": "tiefling",
-  "class": "ranger",
-  "background": "sage",
+  "class": "cleric",
+  "background": "scribe",
   "spellcastingAbility": "wis",
-  "alignment": "lawful_good",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/RangerBow.webp",
-  "name": "Lerissa",
+  "alignment": "true_neutral",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Akta",
   "id": "slot3",
-  "hp": 6,
-  "maxHp": 6,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-14T09:12:04.537Z"
+  "lastSaved": "2026-09-12T11:41:22.069Z"
 }
