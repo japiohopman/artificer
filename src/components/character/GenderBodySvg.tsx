@@ -10,6 +10,8 @@ interface GenderBodySvgProps {
   weightScale?: number; // scaleX e.g. 0.85 - 1.15
   onClick?: () => void;
   className?: string;
+  hideLabel?: boolean;
+  hideContainerStyles?: boolean;
 }
 
 export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
@@ -20,7 +22,9 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
   heightScale = 1,
   weightScale = 1,
   onClick,
-  className
+  className,
+  hideLabel = false,
+  hideContainerStyles = false
 }) => {
   const isMale = gender === 'Male';
   const raceLower = race?.toLowerCase() || '';
@@ -39,10 +43,12 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
     <div
       onClick={onClick}
       className={cn(
-        'relative cursor-pointer transition-all duration-300 rounded-lg p-4 flex flex-col items-center border-2',
-        selected
-          ? 'bg-dragon-red/15 border-dragon-gold shadow-[0_0_25px_rgba(184,134,11,0.3)] scale-105'
-          : 'bg-white/10 border-dragon-gold/20 hover:border-dragon-gold/50 hover:bg-white/20',
+        'relative flex flex-col items-center justify-center',
+        !hideContainerStyles && (
+          selected
+            ? 'cursor-pointer transition-all duration-300 rounded-lg p-4 border-2 bg-dragon-red/15 border-dragon-gold shadow-[0_0_25px_rgba(184,134,11,0.3)] scale-105'
+            : 'cursor-pointer transition-all duration-300 rounded-lg p-4 border-2 bg-white/10 border-dragon-gold/20 hover:border-dragon-gold/50 hover:bg-white/20'
+        ),
         className
       )}
     >
@@ -52,7 +58,7 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
         viewBox="0 0 512 923"
         style={svgStyle}
         className={cn(
-          'w-48 h-auto max-h-[380px] drop-shadow-md transition-all duration-300',
+          'w-full h-full max-h-full max-w-full drop-shadow-md transition-all duration-300 pointer-events-none',
           effectiveSkinColor
             ? ''
             : selected
@@ -223,9 +229,11 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
           />
         </g>
       </svg>
-      <span className={cn('mt-3 font-header font-black text-sm uppercase tracking-widest', selected ? 'text-dragon-gold' : 'text-parchment-400')}>
-        {gender}
-      </span>
+      {!hideLabel && (
+        <span className={cn('mt-3 font-header font-black text-sm uppercase tracking-widest', selected ? 'text-dragon-gold' : 'text-parchment-400')}>
+          {gender}
+        </span>
+      )}
     </div>
   );
 };

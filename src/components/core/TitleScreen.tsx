@@ -11,7 +11,7 @@ import { useAudioStore } from '../../store/useAudioStore';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
-import { CharacterStats } from '../character/CharacterStats';
+import { CharacterPanelStats } from '../character/panel/CharacterPanelStats';
 
 export const TitleScreen: React.FC = () => {
   const { 
@@ -422,7 +422,7 @@ export const TitleScreen: React.FC = () => {
                       Vitals & Combat Readiness
                     </span>
                     
-                    <CharacterStats character={selectedChar} variant="compact" />
+                    <CharacterPanelStats character={selectedChar} variant="compact" />
 
                     {/* Wealth */}
                     <div className="bg-stone-950/40 border border-stone-900/50 rounded p-2.5 flex items-center gap-3">

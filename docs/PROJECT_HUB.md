@@ -17,7 +17,6 @@ Central navigation for Artificer documentation. This page points agents and deve
 - [Sound Engine](./modules/soundService.md) - Multi-layered audio mixer.
 - [Save System](./modules/saveService.md) - Persistence architecture.
 - [Inventory V2](./modules/inventory_v2.md) - Registry/slot inventory architecture.
-- [Character Panel](./modules/characterPanel.md) - 🪞 **Canonical reusable Character Panel, Character Mirror visual contract and Spell UX architecture.**
 - [Dice & Chat](./modules/dice_system.md) - Dice and AI chat systems.
 - [Journal](./modules/journal.md) - Campaign Journal & Codex.
 - [Minigames](./modules/minigames.md) - Interactive social mechanics.
@@ -63,7 +62,7 @@ Central navigation for Artificer documentation. This page points agents and deve
 - Planned work belongs in `TASK_BOARD.md` or a module specification; do not present it as implemented.
 - Module specifications explain intended architecture and boundaries.
 - `PROGRESS.md` contains project-level status and must have a current update date.
-- Architecture changes should update the relevant docs in the same change.
+- Architecture changes should update the relevant docs in the same PR.
 - When uncertain, inspect the source code before changing documentation.
 
 ---

@@ -2,22 +2,22 @@
 
 This document tracks high-level implementation status. It should reflect the repository as it exists now; detailed feature plans belong in `docs/TASK_BOARD.md` or module specifications.
 
-## 📊 Current Status: Character Panel consolidation / presentation architecture
+## 📊 Current Status: Phase 2 → Phase 3 transition
 
-The core ruleset-aware Character Creator foundations are now substantially established, including 2014/2024 ruleset context, species/class/progression/subclass/background/feat/spell integration. The current priority is no longer adding another isolated character UI feature: it is consolidating the Character Panel into one reusable presentation system before more character-facing systems are layered on top.
+The core Phase 2 world/tactical foundations are in place and are now being extended rather than treated as finished forever. Current engineering work is focused on making the DevKit a serious authoring environment and connecting authored content cleanly to runtime systems.
 
 ---
 
 ## 🗺️ Roadmap Progress
 
-### Core infrastructure
+### Phase 1 — Core infrastructure
 - [x] Inventory V2 / registry-slot architecture.
 - [x] Store slicing into domain-oriented stores.
 - [x] Asset validation and canonical asset paths.
 - [x] Sound/icon organization work.
 - [x] Documentation/orchestration foundation.
 
-### World State & Tactical Foundations
+### Phase 2 — World State & Tactical Foundations
 - [x] World map/tile infrastructure.
 - [x] Temporal progression.
 - [x] Environmental/weather systems.
@@ -25,26 +25,6 @@ The core ruleset-aware Character Creator foundations are now substantially estab
 - [x] Tactical combat foundation: grid, movement/pathfinding, initiative and runtime combat UI.
 - [x] Journal foundations.
 - [🚧] Tactical engine refinement and deeper Atlas-driven integration.
-
-### Ruleset-aware Character Creator
-- [x] Canonical 2014/2024 ruleset context and resolution boundary.
-- [x] 2024 Species Foundation.
-- [x] 2024 Base Class Foundation.
-- [x] 2024 Class Progressions & Features.
-- [x] 2024 Subclasses & Subclass Features.
-- [x] 2024 Backgrounds & Origins.
-- [x] 2024 Feats integration.
-- [x] 2024 Spells catalogue/runtime integration.
-- [ ] Remaining rules-sensitive downstream audit and final end-to-end ruleset verification.
-
-### Character Mirror / Panel
-- [x] Character Mirror foundation with persistent body/background presentation.
-- [x] Shared character panel primitives under `src/components/character/panel/`.
-- [🚧] Canonical Character Panel consolidation — Creator, HUD and Profile still have overlapping composition/responsibilities.
-- [🚧] Stats/Body/Abilities consolidation into `CharacterPanelStats`.
-- [🚧] Character Panel visual refinement: full-panel background, persistent body layer, polished Stats default surface, HUD-sized contract and mobile behavior.
-- [🚧] Spell UX consolidation: Spell Slots vs spellbook/known/prepared spells vs Spell Sheet.
-- [🚧] Spell detail data-contract repair so descriptions and canonical detail fields reach Creator/HUD inspection.
 
 ### Current — DM DevKit & Battle Map Authoring
 - [🚧] **Battle Map Editor architecture** — module has been split into `src/components/devkit/BattleMapEditor/`.
@@ -70,28 +50,25 @@ The core ruleset-aware Character Creator foundations are now substantially estab
 
 ## 🏆 Recent milestones
 
-### 2026-09-13
-- Established the canonical Character Panel consolidation phase in `ROADMAP.md`.
-- Added `docs/modules/characterPanel.md` as the authoritative Character Panel and Spell UX design specification.
-- Updated architecture/component documentation to distinguish reusable Character Panel presentation from Creator/HUD/Profile host responsibilities.
-- Recorded the ready-for-review Spell Sheet PR as human-review work that must be evaluated against the new architecture before merge.
+### 2026-08-11
+- Battle Map Editor moved from a monolithic prototype into `src/components/devkit/BattleMapEditor/`.
+- Battle Map Editor architecture and authoring/runtime boundary documented.
+- Documentation audit started to bring project navigation, component architecture and status reporting back in sync with the repository.
 
 ### Earlier milestones
-- Character Creator Species Character Mirror & Choice State v1 merged and verified.
-- 2024 Species, Classes, Progressions, Subclasses, Backgrounds/Origins, Feats and Spells foundations implemented/verified.
-- Inventory/equipment architecture foundation merged.
-- Tactical combat foundation established.
+- Tactical combat foundation moved to Canvas/React hybrid rendering.
+- World map migrated to high-resolution tiled/pyramid map infrastructure.
+- World state was split into specialized stores and gained temporal/environmental persistence.
+- Journal and campaign tracking foundations were implemented.
 
 ---
 
 ## 🎯 Current engineering focus
 
-1. Consolidate the Character Panel into one reusable presentation system under `src/components/character/panel/`.
-2. Make `CharacterPanelStats` the polished default/open surface, with persistent full-panel background and body SVG.
-3. Make Creator and runtime HUD consume the same panel system; avoid a second HUD implementation.
-4. Refine the panel's identity/resource hierarchy, including prominent HP presentation and spell-slot resources.
-5. Integrate the Spell Sheet/detail experience without losing canonical spell descriptions or ruleset isolation.
-6. Refactor CharacterProfile and CharacterStats responsibilities only where they overlap with canonical panel presentation; avoid creating a God Component.
-7. Keep documentation synchronized with implementation so Jules works from one architectural source of truth.
+1. Finish the Battle Map Editor as a real authoring tool without turning it into a second combat engine.
+2. Keep authored BattleMap data separate from runtime `CombatGrid` state.
+3. Reuse canonical Atlas/asset infrastructure.
+4. Keep documentation synchronized with actual implementation so coding agents operate from the same architectural source of truth.
+5. Continue Phase 3 AI-DM integration after the current authoring/runtime foundations are stable.
 
-*Last Updated: 2026-09-13*
+*Last Updated: 2026-08-11*

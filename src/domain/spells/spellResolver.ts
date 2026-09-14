@@ -149,6 +149,31 @@ export async function resolveSpellAction(
   const isPC = charStore.characters.some(c => c.id === actor.id) || actor.id === 'player';
   const realActorChar = isPC ? charStore.characters.find(c => c.id === (actor.id === 'player' ? gameStore.activeCharacterId : actor.id)) : null;
 
+  // Hydrate full canonical spell record if essential spell mechanics (damage, heal, dc) are unhydrated
+  const characterRuleset = (realActorChar?.ruleset || gameStore.ruleset || '2014') as '2014' | '2024';
+  const spellIndex = spellAction.data?.index || spellAction.id;
+
+  if (!spellData.damage && !spellData.heal_at_slot_level && !spellData.dc && spellIndex) {
+    try {
+      const { fetchSpellData } = await import('../../services/storageService');
+      const fullSpell = await fetchSpellData(spellIndex, characterRuleset);
+      if (fullSpell) {
+        const hydratedAction = createSpellCombatAction(fullSpell);
+        spellAction = {
+          ...spellAction,
+          ...hydratedAction,
+          data: {
+            ...hydratedAction.data,
+            ...spellAction.data,
+            ...hydratedAction.data
+          }
+        };
+      }
+    } catch (e) {
+      console.warn(`[spellResolver] Failed to hydrate spell record for ${spellIndex}:`, e);
+    }
+  }
+
   if (isPC && realActorChar) {
     const spellIndex = spellAction.data?.index || spellAction.id;
     const isKnown = (realActorChar.knownSpells || []).some(s => s.index === spellIndex || s.id === spellIndex || s.name?.toLowerCase() === spellAction.name.toLowerCase());
