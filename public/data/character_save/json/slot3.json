@@ -16,81 +16,45 @@
     "Skill: Investigation",
     "Skill: Perception",
     "Calligrapher'S Supplies",
-    "daggers",
-    "darts",
-    "slings",
-    "quarterstaffs",
-    "crossbows, light",
-    "saving throw: int",
+    "light armor",
+    "medium armor",
+    "shields",
+    "simple weapons",
     "saving throw: wis",
-    "Saving Throw: int",
-    "Saving Throw: wis"
+    "saving throw: cha",
+    "Saving Throw: wis",
+    "Saving Throw: cha"
   ],
-  "traits": [
-    {
-      "name": "resourceful",
-      "index": "resourceful",
-      "desc": "You gain Heroic Inspiration whenever you finish a Long Rest."
-    },
-    {
-      "name": "skillful",
-      "index": "skillful",
-      "desc": "You gain proficiency in one skill of your choice."
-    },
-    {
-      "name": "versatile",
-      "index": "versatile",
-      "desc": "You gain an Origin feat of your choice. Skilled is recommended."
-    }
-  ],
+  "traits": [],
   "features": [
     {
-      "index": "spellcasting_wizard_2024",
-      "name": "Spellcasting: Wizard",
+      "index": "spellcasting_cleric_2024",
+      "name": "Spellcasting: Cleric",
       "class": {
-        "index": "wizard",
-        "name": "Wizard",
-        "url": "/assets/atlas/class/json/24/wizard.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. Intelligence is your spellcasting ability for your Wizard spells."
+        "As a conduit for divine power, you can cast Cleric spells. Wisdom is your spellcasting ability for your Cleric spells."
       ],
-      "url": "/assets/atlas/features/json/spellcasting_wizard_2024.json",
+      "url": "/assets/atlas/features/json/spellcasting_cleric_2024.json",
       "source": "Class"
     },
     {
-      "index": "arcane_recovery_2024",
-      "name": "Arcane Recovery",
+      "index": "divine_order_cleric",
+      "name": "Divine Order",
       "class": {
-        "index": "wizard",
-        "name": "Wizard",
-        "url": "/assets/atlas/class/json/24/wizard.json"
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/assets/atlas/class/json/24/cleric.json"
       },
       "level": 1,
       "desc": [
-        "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your Wizard level (rounded up), and none of the slots can be 6th level or higher."
+        "You have dedicated yourself to one of the following sacred roles of your choice: Protector (trained for battle with Martial weapon proficiency and Heavy Armor proficiency) or Thaumaturge (delving deeper into sacred lore, gaining an extra cantrip and a bonus to Arcana and Religion checks)."
       ],
-      "url": "/assets/atlas/features/json/arcane_recovery_2024.json",
-      "source": "Class"
-    },
-    {
-      "index": "ritual_adept_wizard",
-      "class": {
-        "index": "wizard",
-        "name": "wizard",
-        "url": "/assets/atlas/class/json/24/wizard.json"
-      },
-      "name": "Ritual Adept",
-      "level": 1,
-      "prerequisites": [],
-      "desc": [
-        "You can cast any spell as a Ritual if that spell has the Ritual tag and the spell is in your Spellbook. You needn't have the spell prepared, but you must read from the book to cast the spell in this way."
-      ],
-      "url": "/assets/atlas/features/json/ritual_adept_wizard.json",
-      "updated_at": "2026-08-31T00:00:00.000Z",
-      "image": "/assets/atlas/features/images/spellcasting_wizard.webp",
-      "feature_specific": {},
+      "url": "/assets/atlas/features/json/divine_order_cleric.json",
       "source": "Class"
     }
   ],
@@ -112,44 +76,65 @@
     "skinColor": "#ffdbac",
     "height": "5'10\"",
     "weight": "160 lbs",
-    "size": "Medium",
+    "size": "Tiny",
     "specialFeatures": []
   },
   "items": {
-    "spellbook_2gr5do1ms": {
-      "id": "spellbook_2gr5do1ms",
+    "spellbook_kfrs1m0eq": {
+      "id": "spellbook_kfrs1m0eq",
       "template": "spellbook",
       "quantity": 1,
-      "addedAt": 1789346075482,
+      "addedAt": 1789212682139,
       "kind": "focus"
     },
-    "abacus_cpd0of08v": {
-      "id": "abacus_cpd0of08v",
+    "abacus_by1tl60kk": {
+      "id": "abacus_by1tl60kk",
       "template": "abacus",
       "quantity": 1,
-      "addedAt": 1789346075482,
+      "addedAt": 1789212682139,
       "kind": "tradegood"
     },
-    "book_i2yefns7j": {
-      "id": "book_i2yefns7j",
+    "book_hzq0y7l97": {
+      "id": "book_hzq0y7l97",
       "template": "book",
       "quantity": 1,
-      "addedAt": 1789346075482,
+      "addedAt": 1789212682140,
       "kind": "book"
     },
-    "ink_pen_gqhw1qv15": {
-      "id": "ink_pen_gqhw1qv15",
+    "ink_pen_avuq1j75r": {
+      "id": "ink_pen_avuq1j75r",
       "template": "ink_pen",
       "quantity": 1,
-      "addedAt": 1789346075482,
+      "addedAt": 1789212682140,
       "kind": "tradegood"
     },
-    "gold_ei3q8xpaa": {
-      "id": "gold_ei3q8xpaa",
+    "gold_wkkewt6yn": {
+      "id": "gold_wkkewt6yn",
       "template": "gold",
       "quantity": 8,
-      "addedAt": 1789346075482,
+      "addedAt": 1789212682140,
       "kind": "currency"
+    },
+    "quarterstaff_zddovks73": {
+      "id": "quarterstaff_zddovks73",
+      "template": "quarterstaff",
+      "quantity": 1,
+      "addedAt": 1789212691769,
+      "kind": "weapon"
+    },
+    "shield_4vi6afgjp": {
+      "id": "shield_4vi6afgjp",
+      "template": "shield",
+      "quantity": 1,
+      "addedAt": 1789213213453,
+      "kind": "shield"
+    },
+    "mace_qv86apwfj": {
+      "id": "mace_qv86apwfj",
+      "template": "mace",
+      "quantity": 1,
+      "addedAt": 1789213254908,
+      "kind": "weapon"
     }
   },
   "containers": {
@@ -160,39 +145,39 @@
       "slots": [
         {
           "id": "bag_0",
-          "itemId": "spellbook_2gr5do1ms"
+          "itemId": "spellbook_kfrs1m0eq"
         },
         {
           "id": "bag_1",
-          "itemId": "abacus_cpd0of08v"
+          "itemId": "abacus_by1tl60kk"
         },
         {
           "id": "bag_2",
-          "itemId": "book_i2yefns7j"
+          "itemId": "book_hzq0y7l97"
         },
         {
           "id": "bag_3",
-          "itemId": "ink_pen_gqhw1qv15"
+          "itemId": "ink_pen_avuq1j75r"
         },
         {
           "id": "bag_4",
-          "itemId": "gold_ei3q8xpaa"
+          "itemId": "gold_wkkewt6yn"
         },
         {
           "id": "bag_5",
-          "itemId": null
+          "itemId": "quarterstaff_e51nnadeh"
         },
         {
           "id": "bag_6",
-          "itemId": null
+          "itemId": "shield_4vi6afgjp"
         },
         {
           "id": "bag_7",
-          "itemId": null
+          "itemId": "mace_qv86apwfj"
         },
         {
           "id": "bag_8",
-          "itemId": null
+          "itemId": "mace_cpz8d7asb"
         },
         {
           "id": "bag_9",
@@ -262,11 +247,11 @@
     "slots": [
       {
         "id": "main_hand",
-        "itemId": null
+        "itemId": "quarterstaff_zddovks73"
       },
       {
         "id": "off_hand",
-        "itemId": null
+        "itemId": "shield_m0zudyp0n"
       },
       {
         "id": "ranged",
@@ -380,787 +365,176 @@
   },
   "backpack": [
     {
-      "id": "calligraphers_supplies_pe86id2g9",
       "index": "calligraphers_supplies",
       "name": "Calligrapher'S Supplies",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/calligraphers_supplies.json",
-      "image_url": "public/assets/atlas/equipment/images/calligraphers_supplies.webp",
-      "imageUrl": "/assets/atlas/equipment/images/calligraphers_supplies.webp"
+      "quantity": 1
     },
     {
-      "id": "abacus_h5lc78fwz",
       "index": "abacus",
       "name": "Abacus",
-      "quantity": 1,
-      "weight": 2,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/abacus.json",
-      "image_url": "public/assets/atlas/equipment/images/abacus.webp",
-      "imageUrl": "/assets/atlas/equipment/images/abacus.webp",
-      "desc": [
-        "The abacus, also called a counting frame, is a calculating tool."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/abacus.webp",
-      "updated_at": "2026-07-12T19:00:14.466Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 0,
-      "sprite_sheet": "/assets/atlas/equipment/images/paper_one_sheet.webp",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "book_5je19p5w6",
       "index": "book",
       "name": "Book",
-      "quantity": 1,
-      "weight": 5,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/book.json",
-      "image_url": "public/assets/atlas/equipment/images/book.webp",
-      "imageUrl": "/assets/atlas/equipment/images/book.webp",
-      "desc": [
-        "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook."
-      ],
-      "special": [],
-      "kind": "book",
-      "cost": {
-        "quantity": 25,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/book.webp",
-      "updated_at": "2026-07-12T19:00:14.600Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "ring_1",
-        "ring_2"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "sprite_index": 10,
-      "sprite_sheet": "/assets/atlas/equipment/images/sprites/equipment_sheet2.webp",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "ink_1_ounce_bottle_tt53cbzle",
       "index": "ink_1_ounce_bottle",
       "name": "Ink 1 Ounce Bottle",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/ink_1_ounce_bottle.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_1_ounce_bottle.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_1_ounce_bottle.webp"
+      "quantity": 1
     },
     {
-      "id": "ink_pen_yl0edwd4v",
       "index": "ink_pen",
       "name": "Ink Pen",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/ink_pen.json",
-      "image_url": "public/assets/atlas/equipment/images/ink_pen.webp",
-      "imageUrl": "/assets/atlas/equipment/images/ink_pen.webp",
-      "desc": [
-        "A deviced used in combination with ink to write or draw on a sheet of paper."
-      ],
-      "special": [],
-      "kind": "tradegood",
-      "cost": {
-        "quantity": 2,
-        "unit": "cp"
-      },
-      "image": "/assets/atlas/equipment/images/ink-pen.webp",
-      "updated_at": "2026-07-12T19:00:13.712Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "generic",
-      "rulesetContext": "2014"
+      "quantity": 1
     },
     {
-      "id": "parchment_one_sheet_tr2tar7rx",
       "index": "parchment_one_sheet",
       "name": "Parchment (One Sheet)",
-      "quantity": 10,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/parchment_one_sheet.json",
-      "image_url": "public/assets/atlas/equipment/images/parchment_one_sheet.webp",
-      "imageUrl": "/assets/atlas/equipment/images/parchment_one_sheet.webp"
+      "quantity": 10
     },
     {
-      "id": "clothes_travelers_fjvj42ifw",
       "index": "clothes_travelers",
       "name": "Clothes Traveler'S",
-      "quantity": 1,
-      "weight": 0,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/clothes_travelers.json",
-      "image_url": "public/assets/atlas/equipment/images/clothes_travelers.webp",
-      "imageUrl": "/assets/atlas/equipment/images/clothes_travelers.webp"
+      "quantity": 1
     },
     {
-      "id": "gold_dehqi9o5m",
       "index": "gold",
       "name": "Gold",
-      "quantity": 8,
-      "weight": 1,
-      "_type": "equipment",
       "url": "/assets/atlas/equipment/json/gold.json",
-      "image_url": "public/assets/atlas/equipment/images/gold.webp",
-      "imageUrl": "/assets/atlas/equipment/images/gold.webp",
-      "desc": [
-        "Gold is the king of currency for many civilizations. Usually more common than the likes of platinum, but nowhere near as common as other metals like iron, it occupies a sweet spot in rarity and unreactiveness.",
-        "Unlike silver, gold can be found more easily on the surface. Both surface and underground mining can be extremely profitable. Gold rushes can and have been a source a great happiness and huge tragedy."
-      ],
-      "special": [],
-      "kind": "currency",
-      "cost": {
-        "quantity": 50,
-        "unit": "gp"
-      },
-      "image": "/assets/atlas/equipment/images/gold.webp",
-      "updated_at": "2026-07-12T19:00:29.152Z",
-      "contents": [],
-      "properties": [],
-      "equipSlots": [
-        "none"
-      ],
-      "last_updated": "12-7-2026",
-      "background_type": "land_forest",
-      "category": "Standard Gear",
-      "rulesetContext": "2014"
+      "quantity": 8
     }
   ],
   "inventory": {},
   "knownSpells": [
     {
-      "index": "dancing_lights",
-      "name": "dancing lights",
+      "index": "mending",
+      "name": "mending",
       "level": 0,
-      "school": {
-        "index": "evocation",
-        "name": "evocation",
-        "url": "/assets/atlas/magic_schools/json/evocation.json"
-      },
+      "school": "transmutation",
       "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Up to 1 minute",
-      "json_path": "/assets/atlas/spell/json/24/dancing_lights.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "cantrips_sheet_01.webp",
-        "cell": 2
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/dancing-lights.webp",
-      "higher_level": [],
-      "desc": [
-        "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.",
-        "As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A bit of phosphorus or wychwood, or a glowworm.",
-      "ritual": false,
-      "concentration": true,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/dancing_lights.json",
-      "updated_at": "2026-06-01T06:56:15.190Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "fire_bolt",
-      "name": "fire bolt",
-      "level": 0,
-      "school": {
-        "index": "evocation",
-        "name": "evocation",
-        "url": "/assets/atlas/magic_schools/json/evocation.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/24/fire_bolt.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "cantrips_sheet_01.webp",
-        "cell": 5
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/fire-bolt.webp",
-      "higher_level": [],
-      "desc": [
-        "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.",
-        "This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10)."
-      ],
-      "components": [
-        "V",
-        "S"
-      ],
-      "ritual": false,
-      "concentration": false,
-      "attack_type": "ranged",
-      "damage": {
-        "damage_type": {
-          "index": "fire",
-          "name": "fire",
-          "url": "/assets/atlas/damage_types/json/fire.json"
-        },
-        "damage_at_character_level": {
-          "1": "1d10",
-          "5": "2d10",
-          "11": "3d10",
-          "17": "4d10"
-        }
-      },
-      "subclasses": [],
-      "url": "/assets/atlas/spell/json/fire_bolt.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "message",
-      "name": "message",
-      "level": 0,
-      "school": {
-        "index": "transmutation",
-        "name": "transmutation",
-        "url": "/assets/atlas/magic_schools/json/transmutation.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/24/message.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "cantrips_sheet_01.webp",
-        "cell": 10
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/message.webp",
-      "higher_level": [],
-      "desc": [
-        "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
-        "You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A short piece of copper wire.",
-      "ritual": false,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/message.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "grease",
-      "name": "grease",
-      "level": 1,
-      "school": {
-        "index": "conjuration",
-        "name": "conjuration",
-        "url": "/assets/atlas/magic_schools/json/conjuration.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "60 feet",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/24/grease.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_02.webp",
-        "cell": 11
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/grease.webp",
-      "higher_level": [],
-      "desc": [
-        "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.",
-        "When the grease appears, each creature standing in its area must succeed on a dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a dexterity saving throw or fall prone."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A bit of pork rind or butter.",
-      "ritual": false,
-      "concentration": false,
-      "dc": {
-        "dc_type": {
-          "index": "dex",
-          "name": "dex",
-          "url": "/assets/atlas/ability_scores/json/dex.json"
-        },
-        "dc_success": "none"
-      },
-      "area_of_effect": {
-        "type": "cube",
-        "size": 10
-      },
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/grease.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "identify",
-      "name": "identify",
-      "level": 1,
-      "school": {
-        "index": "divination",
-        "name": "divination",
-        "url": "/assets/atlas/magic_schools/json/divination.json"
-      },
-      "classes": [
-        {
-          "index": "artificer",
-          "name": "artificer",
-          "url": "/assets/atlas/class/json/artificer.json"
-        },
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
+        "artificer",
+        "cleric",
+        "bard",
+        "druid",
+        "sorcerer",
+        "wizard"
       ],
       "casting_time": "1 minute",
       "range": "Touch",
       "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/24/identify.json",
+      "json_path": "/assets/atlas/spell/json/24/mending.json",
       "sprite": {
         "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 2
+        "sheet": "cantrips_sheet_01.webp",
+        "cell": 9
       },
       "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/identify.webp",
-      "higher_level": [],
-      "desc": [
-        "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.",
-        "If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A pearl worth at least 100gp and an owl feather.",
-      "ritual": true,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/identify.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
+      "imageUrl": "/assets/atlas/spell/images/mending.webp"
     },
     {
-      "index": "magic_missile",
-      "name": "magic missile",
+      "index": "detect_poison_and_disease",
+      "name": "detect poison and disease",
       "level": 1,
-      "school": {
-        "index": "evocation",
-        "name": "evocation",
-        "url": "/assets/atlas/magic_schools/json/evocation.json"
-      },
+      "school": "divination",
       "classes": [
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger"
       ],
       "casting_time": "1 action",
-      "range": "120 feet",
-      "duration": "Instantaneous",
-      "json_path": "/assets/atlas/spell/json/24/magic_missile.json",
+      "range": "Self",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/detect_poison_and_disease.json",
       "sprite": {
         "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 8
-      },
-      "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/magic-missile.webp",
-      "desc": [
-        "You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
-      ],
-      "higher_level": [
-        "When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
-      ],
-      "components": [
-        "V",
-        "S"
-      ],
-      "ritual": false,
-      "concentration": false,
-      "damage": {
-        "damage_type": {
-          "index": "force",
-          "name": "force",
-          "url": "/assets/atlas/damage_types/json/force.json"
-        },
-        "damage_at_slot_level": {
-          "1": "1d4 + 1",
-          "2": "1d4 + 1",
-          "3": "1d4 + 1",
-          "4": "1d4 + 1",
-          "5": "1d4 + 1",
-          "6": "1d4 + 1",
-          "7": "1d4 + 1",
-          "8": "1d4 + 1",
-          "9": "1d4 + 1"
-        }
-      },
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/magic_missile.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
-    },
-    {
-      "index": "sleep",
-      "name": "sleep",
-      "level": 1,
-      "school": {
-        "index": "enchantment",
-        "name": "enchantment",
-        "url": "/assets/atlas/magic_schools/json/enchantment.json"
-      },
-      "classes": [
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
-      ],
-      "casting_time": "1 action",
-      "range": "90 feet",
-      "duration": "1 minute",
-      "json_path": "/assets/atlas/spell/json/24/sleep.json",
-      "sprite": {
-        "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
+        "sheet": "spells_level1_sheet_01.webp",
         "cell": 15
       },
       "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/sleep.webp",
-      "desc": [
-        "This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).",
-        "Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.",
-        "Undead and creatures immune to being charmed aren't affected by this spell."
-      ],
-      "higher_level": [
-        "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A pinch of fine sand, rose petals, or a cricket.",
-      "ritual": false,
-      "concentration": false,
-      "damage": {
-        "damage_at_slot_level": {
-          "1": "5d8"
-        }
-      },
-      "area_of_effect": {
-        "type": "sphere",
-        "size": 20
-      },
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/sleep.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
+      "imageUrl": "/assets/atlas/spell/images/detect-poison-and-disease.webp"
     },
     {
-      "index": "silent_image",
-      "name": "silent image",
+      "index": "detect_evil_and_good",
+      "name": "detect evil and good",
       "level": 1,
-      "school": {
-        "index": "illusion",
-        "name": "illusion",
-        "url": "/assets/atlas/magic_schools/json/illusion.json"
-      },
+      "school": "divination",
       "classes": [
-        {
-          "index": "bard",
-          "name": "bard",
-          "url": "/assets/atlas/class/json/bard.json"
-        },
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
+        "cleric",
+        "paladin"
       ],
       "casting_time": "1 action",
-      "range": "60 feet",
+      "range": "Self",
       "duration": "Up to 10 minutes",
-      "json_path": "/assets/atlas/spell/json/24/silent_image.json",
+      "json_path": "/assets/atlas/spell/json/24/detect_evil_and_good.json",
       "sprite": {
         "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
-        "cell": 14
+        "sheet": "spells_level1_sheet_01.webp",
+        "cell": 13
       },
       "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/silent-image.webp",
-      "higher_level": [],
-      "desc": [
-        "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.",
-        "You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.",
-        "Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
-      ],
-      "components": [
-        "V",
-        "S",
-        "M"
-      ],
-      "material": "A bit of fleece.",
-      "ritual": false,
-      "concentration": true,
-      "area_of_effect": {
-        "type": "cube",
-        "size": 15
-      },
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/silent_image.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
+      "imageUrl": "/assets/atlas/spell/images/detect-evil-and-good.webp"
     },
     {
-      "index": "shield",
-      "name": "shield",
+      "index": "guiding_bolt",
+      "name": "guiding bolt",
       "level": 1,
-      "school": {
-        "index": "abjuration",
-        "name": "abjuration",
-        "url": "/assets/atlas/magic_schools/json/abjuration.json"
-      },
+      "school": "evocation",
       "classes": [
-        {
-          "index": "sorcerer",
-          "name": "sorcerer",
-          "url": "/assets/atlas/class/json/sorcerer.json"
-        },
-        {
-          "index": "wizard",
-          "name": "wizard",
-          "url": "/assets/atlas/class/json/wizard.json"
-        }
+        "cleric"
       ],
-      "casting_time": "1 reaction",
-      "range": "Self",
+      "casting_time": "1 action",
+      "range": "120 feet",
       "duration": "1 round",
-      "json_path": "/assets/atlas/spell/json/24/shield.json",
+      "json_path": "/assets/atlas/spell/json/24/guiding_bolt.json",
       "sprite": {
         "atlas": "spell",
-        "sheet": "spells_level1_sheet_03.webp",
+        "sheet": "spells_level1_sheet_02.webp",
         "cell": 12
       },
       "rulesetContext": "2024",
-      "imageUrl": "/assets/atlas/spell/images/shield.webp",
-      "higher_level": [],
-      "desc": [
-        "An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile."
+      "imageUrl": "/assets/atlas/spell/images/guiding-bolt.webp"
+    },
+    {
+      "index": "shield_of_faith",
+      "name": "shield of faith",
+      "level": 1,
+      "school": "abjuration",
+      "classes": [
+        "cleric",
+        "paladin"
       ],
-      "components": [
-        "V",
-        "S"
-      ],
-      "ritual": false,
-      "concentration": false,
-      "subclasses": [
-        {
-          "index": "lore",
-          "name": "lore",
-          "url": "/assets/atlas/subclasses/json/lore.json"
-        }
-      ],
-      "url": "/assets/atlas/spell/json/shield.json",
-      "updated_at": "2025-10-24T20:42:14.619Z",
-      "ruleset": "2024"
+      "casting_time": "1 bonus action",
+      "range": "60 feet",
+      "duration": "Up to 10 minutes",
+      "json_path": "/assets/atlas/spell/json/24/shield_of_faith.json",
+      "sprite": {
+        "atlas": "spell",
+        "sheet": "spells_level1_sheet_03.webp",
+        "cell": 13
+      },
+      "rulesetContext": "2024",
+      "imageUrl": "/assets/atlas/spell/images/shield-of-faith.webp"
     }
   ],
   "languages": [
     "common"
   ],
   "preparedSpells": [
-    "dancing_lights",
-    "fire_bolt",
-    "message",
-    "grease",
-    "identify",
-    "magic_missile",
-    "sleep",
-    "silent_image",
-    "shield"
+    "mending",
+    "detect_poison_and_disease",
+    "detect_evil_and_good",
+    "guiding_bolt",
+    "shield_of_faith"
   ],
   "spellSlots": {
     "1": {
@@ -1168,31 +542,22 @@
       "max": 0
     }
   },
-  "choices": {
-    "background_ability_scores": [
-      "dex",
-      "dex",
-      "int",
-      "int",
-      "wis",
-      "wis"
-    ]
-  },
-  "race": "human",
-  "class": "wizard",
+  "choices": {},
+  "race": "tiefling",
+  "class": "cleric",
   "background": "scribe",
-  "spellcastingAbility": "int",
+  "spellcastingAbility": "wis",
   "alignment": "true_neutral",
-  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/WizardTome.webp",
-  "name": "Iris Vance",
+  "tokenUrl": "/assets/atlas/enemies/tokens/heroes/ClericHuman.webp",
+  "name": "Akta",
   "id": "slot3",
-  "hp": 3,
-  "maxHp": 3,
+  "hp": 4,
+  "maxHp": 4,
   "discoveredLocationIds": [
     "waterdeep",
     "baldurs_gate",
     "neverwinter"
   ],
   "exploredAreas": [],
-  "lastSaved": "2026-09-14T00:35:17.252Z"
+  "lastSaved": "2026-09-12T11:41:22.069Z"
 }
