@@ -4,34 +4,6 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 
 ## 🔴 Critical — Current engineering
 
-### Canonical Character Panel & Spell UX Consolidation — Phase 1
-**Status:** active architecture/UX consolidation phase. Do not add unrelated character-panel systems until this phase is stable.
-
-- [ ] Audit all current Character Panel consumers and responsibilities.
-- [ ] Establish `src/components/character/panel/` as the canonical reusable Character Panel presentation layer.
-- [ ] Consolidate Body + Abilities into `src/components/character/panel/CharacterPanelStats.tsx` as one coherent primary surface.
-- [ ] Audit/remove duplicate `src/components/character/CharacterStats.tsx` presentation after consumers migrate.
-- [ ] Make `CreatorRightPanel.tsx` a host/composer around the canonical panel.
-- [ ] Make `src/components/hud/CharacterPanel.tsx` a runtime host around the canonical panel without a competing panel implementation.
-- [ ] Reduce `CharacterProfile.tsx` toward screen/shell responsibilities instead of another character-panel implementation.
-- [ ] Keep character background/environment persistent across the complete panel surface.
-- [ ] Keep body SVG persistent underneath tab overlays.
-- [ ] Make Stats the default/open surface and give it the highest visual polish.
-- [ ] Fit the reusable panel to the HUD-sized contract and provide deliberate mobile behavior.
-- [ ] Make HP visually prominent and use `#ec597a` for the health accent/heart treatment.
-- [ ] Keep character name/class/species/race/level in a coherent header hierarchy without duplicating identity labels across the body.
-- [ ] Treat spell slots as resource state rather than identity information.
-- [ ] Establish `SpellGridTile → SpellSheet` as the canonical spell inspection relationship.
-- [ ] Trace and repair missing spell detail fields (`desc`, `components`, etc.) in the canonical Creator/HUD data flow rather than masking missing data in the renderer.
-- [ ] Keep strict 2014/2024 spell ruleset isolation.
-- [ ] Establish/reuse `CharacterPanelSpells` for spell slots + spellbook/known/prepared spells + SpellSheet inspection.
-- [ ] Verify Creator and HUD use the same canonical panel system.
-- [ ] Remove dead duplicate panel implementations after migration.
-- [ ] Run `npm run lint`, `npm run build`, `npm run validate:assets` and relevant targeted/runtime tests before completion.
-
-**Canonical design spec:** `docs/modules/characterPanel.md`.
-**Canonical current-priority roadmap:** `ROADMAP.md`.
-
 ### 2024 Atlas Data Ingestion & Ruleset-Aware Character Creation
 **Status:**
 2024 Species Foundation
@@ -218,4 +190,4 @@ Next active dependency: remaining rules-sensitive domains.
 9. Keep authoring tools separate from runtime representations.
 10. `ROADMAP.md` is the **only canonical current-priority/dispatch roadmap**. Do not create or maintain roadmap snapshots elsewhere.
 
-*Last Updated: 2026-09-13*
+*Last Updated: 2026-08-31*

@@ -85,31 +85,18 @@ export const ActionPanel: React.FC = () => {
     if (action.id === 'attack') {
       setIsTargeting(true);
 
+      // Dynamically calculate attack bonus and damage from equipped weapon / active character
       let equippedWeapon: any = null;
-      if (activeChar?.equipment && activeChar?.items && Array.isArray(activeChar.equipment.slots)) {
-        const weaponSlot = activeChar.equipment.slots.find(s => s.id === 'main_hand' || s.id === 'off_hand');
+      if (activeChar?.equipment && activeChar?.items) {
+        const weaponSlot = activeChar.equipment.slots.find((s: any) => s.id === 'main_hand' || s.id === 'off_hand');
         if (weaponSlot?.itemId) {
           equippedWeapon = activeChar.items[weaponSlot.itemId];
         }
       }
 
       const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
-
-      let damageDice = '1d4';
-      if (typeof equippedWeapon?.damage === 'string') {
-        damageDice = equippedWeapon.damage;
-      } else if (equippedWeapon?.damage?.damage_dice) {
-        damageDice = equippedWeapon.damage.damage_dice;
-      }
-
-      let damageType = 'slashing';
-      if (typeof equippedWeapon?.damageType === 'string') {
-        damageType = equippedWeapon.damageType;
-      } else if (equippedWeapon?.damage?.damage_type?.name) {
-        damageType = equippedWeapon.damage.damage_type.name;
-      } else if (equippedWeapon?.damageType?.name) {
-        damageType = equippedWeapon.damageType.name;
-      }
+      const damageDice = equippedWeapon?.damage || '1d4';
+      const damageType = equippedWeapon?.damageType || 'slashing';
 
       setTargetingAction({
         ...action,

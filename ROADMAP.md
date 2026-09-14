@@ -6,21 +6,6 @@
 
 ### Active
 
-- [ ] **Canonical Character Panel & Spell UX Consolidation — Phase 1**
-  - **Status:** New active architecture/UX phase. Character Mirror foundation exists, but Creator and runtime HUD still contain overlapping panel implementations. Spell inspection has also grown into a Sheet-like experience that now needs to be integrated into the same canonical panel model.
-  - **Goal:** Establish one reusable Character Panel system under `src/components/character/panel/` that serves the Character Creator, main game HUD and character/profile surfaces without duplicate panel implementations or character-state stores.
-  - **Primary visual direction:** persistent character background/environment covers the full panel; body SVG remains underneath the tabs; Stats is the default/open surface and receives the highest visual polish; other tabs open as overlays over the persistent body/background. The reusable panel should fit the HUD-sized contract and have a deliberate mobile layout.
-  - **Stats consolidation:** merge the conceptual Body + Abilities surface into `src/components/character/panel/CharacterPanelStats.tsx`; audit `src/components/character/CharacterStats.tsx` as a parallel implementation and remove it after consumers migrate if its responsibilities are fully covered.
-  - **Panel ownership:** `CreatorRightPanel.tsx`, `src/components/hud/CharacterPanel.tsx` and `CharacterProfile.tsx` become hosts/composers around the canonical panel rather than competing implementations. `src/components/character/CharacterPanel.tsx` may remain a stable facade/re-export.
-  - **Identity/resource hierarchy:** the header should communicate character name plus compact class/species/race/level context and key resources. Do not duplicate identity labels across body and header. Spell slots belong to the resource hierarchy, not the identity header.
-  - **Health UX:** make HP a prominent visual resource; use `#ec597a` as the health accent for the large heart/HP treatment.
-  - **Spell UX:** distinguish Spell Slots (resources), Spellbook/known/prepared spells (available set), and Spell Sheet (detailed inspection). Conceptually migrate the large `SpellCard` inspection surface toward `SpellSheet`, with `SpellGridTile → SpellSheet` as the intended relationship.
-  - **Spell data:** trace the canonical spell data flow and fix the creator/HUD detail contract when fields such as `desc` or `components` are missing. Do not mask missing canonical data with renderer-only fallback copy. Preserve strict 2014/2024 ruleset isolation.
-  - **Canonical design spec:** `docs/modules/characterPanel.md`.
-  - **Implementation order:** audit consumers/responsibilities → establish canonical panel → consolidate Body + Abilities into CharacterPanelStats → migrate Creator → migrate HUD → reduce CharacterProfile duplication → establish SpellGridTile/SpellSheet boundary → repair spell detail data contract → integrate CharacterPanelSpells and spell-slot resource UI → cleanup/dead code → verification.
-  - **Acceptance:** Creator and HUD use the same canonical panel system; background/body remain persistent; tabs overlay the mirror; Stats is the polished default surface; panel sizing/mobile behavior are coherent; HP uses `#ec597a`; spell slots are meaningful resource state; spell descriptions/detail fields render from canonical data; no duplicate character state/rules calculations; lint/build/asset validation and relevant runtime/creator tests pass.
-  - **Out of scope:** redesigning the entire Character schema, inventing new spell mechanics, introducing another global store, or adding unrelated creator/game systems before this panel architecture is stable.
-
 ### Ready
 
 - [ ] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
@@ -63,7 +48,6 @@
 ### Blocked
 
 ### Human Review
-- [ ] **Spell Sheet Inspection & Sticky Counter** — branch `feat/spell-sheet-inspection-and-sticky-counter-134665035340762543` is ready for human review. Review against the new Character Panel/Spell UX architecture before merge; reuse good work but do not preserve conflicting duplicate panel architecture.
 - [ ] Character creation: point-buy stat system — exact product/rules decision still required.
 - [ ] Character creation: advanced spellbook filters — small design decision still required.
 
