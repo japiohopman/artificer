@@ -6,6 +6,7 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
+import { isItemCompatibleWithSlot } from '../../../lib/equipmentCompatibility';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,
@@ -36,6 +37,7 @@ interface EquipmentDollSlotProps {
   slot: EquipmentSlotId;
   activeSlots: EquipmentSlotId[];
   equippedItem: any;
+  activeDragItem?: any;
   onSlotClick?: (slot: EquipmentSlotId) => void;
 }
 
@@ -43,6 +45,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
   slot,
   activeSlots,
   equippedItem,
+  activeDragItem,
   onSlotClick
 }) => {
   const { setNodeRef, isOver } = useDroppable({
@@ -69,6 +72,26 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
   const itemKey = equippedItem ? (equippedItem.template || equippedItem.index || equippedItem.id || equippedItem.name) : undefined;
   const fallbackUrl = equippedItem ? normalizeImageUrl(equippedItem.imageUrl || equippedItem.image, equippedItem._type || 'equipment', equippedItem.index || equippedItem.id, equippedItem.name) : undefined;
 
+  const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot) : false;
+
+  let highlightStyle = "bg-black/20 border-parchment-300/30 hover:border-dragon-gold/50 hover:bg-black/35 opacity-75 backdrop-blur-[1px]";
+
+  if (equippedItem) {
+    highlightStyle = "bg-black/50 border-dragon-red/60 shadow-sm opacity-100 z-10";
+  }
+
+  if (activeDragItem && isCompatible && !isOver) {
+    highlightStyle = "bg-dragon-gold/15 border-dragon-gold/70 shadow-[0_0_8px_rgba(212,175,55,0.4)] animate-pulse z-15";
+  }
+
+  if (isActive || isOver) {
+    if (activeDragItem && !isCompatible) {
+      highlightStyle = "bg-red-950/60 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.7)] scale-105 z-20";
+    } else {
+      highlightStyle = "bg-emerald-950/60 border-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)] scale-105 z-20";
+    }
+  }
+
   return (
     <button
       ref={setNodeRef}
@@ -77,12 +100,8 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       onClick={() => onSlotClick?.(slot)}
       onContextMenu={handleContextMenu}
       className={cn(
-        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-300 relative overflow-hidden group w-full cursor-pointer pointer-events-auto",
-        isActive || isOver
-          ? "bg-dragon-red/35 border-dragon-gold shadow-[0_0_12px_rgba(212,175,55,0.5)] scale-105 z-20"
-          : equippedItem
-          ? "bg-black/50 border-dragon-red/60 shadow-sm opacity-100 z-10"
-          : "bg-black/20 border-parchment-300/30 hover:border-dragon-gold/50 hover:bg-black/35 opacity-75 backdrop-blur-[1px]"
+        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-200 relative overflow-hidden group w-full cursor-pointer pointer-events-auto",
+        highlightStyle
       )}
     >
       {/* Background Image Slug */}
@@ -103,11 +122,11 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
         <div className="flex flex-col items-center gap-0.5 z-10">
           <GameIcon name={slotDef.gameIcon} size={11} className={cn(
             "transition-colors",
-            isActive || isOver ? "text-dragon-gold" : "text-parchment-300"
+            isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300"
           )} />
           <span className={cn(
             "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
-            isActive || isOver ? "text-dragon-gold" : "text-parchment-300/80"
+            isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300/80"
           )}>
             {slotDef.label}
           </span>
@@ -162,6 +181,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       slot={slot}
       activeSlots={activeSlots}
       equippedItem={getSlotItem(slot)}
+      activeDragItem={activeDragItem}
       onSlotClick={onSlotClick}
     />
   );
