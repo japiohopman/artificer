@@ -86,7 +86,7 @@ The right-side Equipment Doll must include the character's existing SVG body as 
 
 The Equipment Doll width must align with the existing Character Panel right-aside baseline: **320px (`w-80`)**. The same width baseline should be used for the right equipment surface unless responsive constraints require a smaller breakpoint-specific value.
 
-Do not use a separate character-body renderer if the canonical `GenderBodySvg` / Character Panel body rendering can be reused.
+The canonical body implementation is the existing `GenderBodySvg` used by `CharacterPanelBody`. Reuse it rather than introducing a second character-body renderer.
 
 ## Visual pipeline
 
