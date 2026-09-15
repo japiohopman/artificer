@@ -99,7 +99,7 @@ The existing normal quiver Atlas record describes a quiver capable of holding up
 | `spear` | `equipment.spear` | `starter_weapons_01` | `(1, 3)` | `weapon` | background:guard, background:soldier |
 | `spellbook` | `equipment.spellbook` | `starter_spellcasting_01` | `(2, 1)` | `spellcasting` | class:wizard |
 | `tinderbox` | `equipment.tinderbox` | `starter_adventuring_01` | `(3, 1)` | `adventuring_gear` | pack_content:burglars-pack, pack_content:dungeoneers-pack |
-| `torch` | `equipment.tinderbox` | `starter_adventuring_01` | `(3, 0)` | `adventuring_gear` | pack_content:dungeoneers-pack, pack_content:explorers-pack |
+| `torch` | `equipment.torch` | `starter_adventuring_01` | `(3, 0)` | `adventuring_gear` | pack_content:dungeoneers-pack, pack_content:explorers-pack |
 | `warhammer` | `equipment.warhammer` | `starter_weapons_02` | `(2, 0)` | `weapon` | class:cleric |
 | `waterskin` | `equipment.waterskin` | `starter_adventuring_01` | `(3, 2)` | `adventuring_gear` | pack_content:burglars-pack, pack_content:dungeoneers-pack |
 
