@@ -6,8 +6,10 @@
 
 ### Active
 
+### Ready
+
 - [ ] **Inventory & Equipment Workspace — interaction, ingestion and asset UX overhaul (Issue #300)**
-  - **Status:** Active phase. The existing Inventory & Equipment foundation is merged, but runtime review exposed structural UX and data-flow problems that must be corrected before this area can be considered complete.
+  - **Status:** Ready for dispatch. The existing Inventory & Equipment foundation is merged, but runtime review exposed structural UX and data-flow problems that must be corrected before this area can be considered complete.
   - **Goal:** Rebuild the runtime gear-management surface as one canonical Equipment Workspace: compact inventory grid on the left, one authoritative Equipment Doll on the right, and one continuous drag/drop interaction model between them.
   - **Primary scope:** inventory/equipment composition, global overlay layering, slot-aware dnd-kit interactions and DragOverlay feedback, equipment compatibility feedback, canonical equipment-pack ingestion into ItemInstances, sprite-sheet-first equipment rendering, optimized `.webp` fallbacks, and regression/manual verification.
   - **Architecture:** preserve Inventory V2 ownership/placement state and existing inventory/equipment stores; do not introduce another inventory model, duplicate compatibility rules, duplicate Equipment Doll or parallel drag system.
@@ -15,8 +17,6 @@
   - **Canonical issue:** `https://github.com/japiohopman/artificer/issues/300`
   - **Canonical module:** `docs/modules/inventory_v2.md`
   - **Out of scope:** replacing Inventory V2 persistence, broad party-storage redesign, speculative backend migration, or a new sprite-generation pipeline.
-
-### Ready
 
 ### Blocked
 
@@ -34,7 +34,7 @@
 - [x] **Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation** — canonical `useGameStore.ruleset` context and resolver established.
 - [x] **Ruleset Downstream Integration v1** — Feats, Class Levels and Spells migrated to canonical ruleset resolution.
 - [x] **Ruleset Data Audit & 2024 Gap Analysis** — confirmed that several current Character Creator domains still resolve unversioned classic data; documented in `docs/audits/ruleset-2024-gap-analysis.md`.
-- [x] **Inventory & Equipment Architecture / UX Overhaul foundation** — merged and documented; follow-up implementation is tracked as active Issue #300 rather than being treated as complete.
+- [x] **Inventory & Equipment Architecture / UX Overhaul foundation** — merged and documented; follow-up implementation is tracked as Issue #300.
 - [x] **Combat Integration v1** — BattleMap → CombatTester → CombatGrid.
 - [x] XP animation, shared party XP, location discovery, fog-of-war foundation and right-hand character panel foundations.
 
