@@ -15,6 +15,7 @@ import { useInventoryStore } from '../../../store/useInventoryStore';
 import { Inventory } from '../inventory/Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { InventoryDragPreview } from '../inventory/InventoryDragPreview';
+import { CharacterSelectorBar } from '../inventory/CharacterSelectorBar';
 import { soundService } from '../../../services/soundService';
 import { evaluateSlotCompatibility } from '../../../lib/equipmentCompatibility';
 import { cn } from '../../../lib/utils';
@@ -145,59 +146,53 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
   };
 
   const workspaceContent = (
-    <div className={cn("w-full h-full flex flex-col md:flex-row gap-2 p-1.5 bg-black/20 rounded-lg border border-dragon-gold/20 relative overflow-hidden min-w-0", className)}>
-      {/* LEFT: Compact Inventory Grid (Source) */}
-      <div className="flex-[1.2] min-w-[240px] flex flex-col bg-white/50 rounded-md p-1.5 border border-dragon-red/15 shadow-inner overflow-hidden">
-        <div className="flex items-center justify-between border-b border-dragon-red/15 pb-1 mb-1.5 shrink-0">
-          <div className="flex items-center gap-1.5">
-            <GameIcon name="package" size={13} className="text-dragon-red" />
-            <span className="font-header text-[10px] text-dragon-darkRed uppercase tracking-wider font-bold truncate">
-              Available Gear
+    <div className={cn("w-full h-full flex flex-col bg-stone-900/40 relative overflow-hidden min-w-0 font-body", className)}>
+      {/* Top 6-Position Character Selector Bar */}
+      <CharacterSelectorBar />
+
+      {/* Main Split Body Workspace Surface */}
+      <div className="flex-1 flex flex-col md:flex-row gap-3 p-3 overflow-hidden relative z-0 min-h-0">
+        {/* LEFT: RPG Inventory Grid & Subcategory Workspace */}
+        <div className="flex-[1.2] min-w-[300px] flex flex-col bg-white/40 rounded-xl p-2.5 border border-dragon-gold/30 shadow-2xl overflow-hidden backdrop-blur-sm">
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
+            <Inventory
+              forceCharacterId={activeChar.id}
+              compactEquipped={true}
+              showCategoryTabs={!compactMode}
+              activeDragItem={activeDragItem}
+            />
+          </div>
+        </div>
+
+        {/* RIGHT: Equipment Doll Surface anchored over SVG Character Body */}
+        <div className="flex-1 min-w-[320px] flex flex-col bg-stone-950/70 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+          <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1.5 mb-2 shrink-0">
+            <div className="flex items-center gap-2">
+              <GameIcon name="shield" size={15} className="text-dragon-gold" />
+              <span className="font-header text-xs text-dragon-gold uppercase tracking-wider font-bold truncate">
+                Equipment Doll
+              </span>
+            </div>
+            <span className="text-[9px] font-mono text-parchment-400 uppercase tracking-widest shrink-0">
+              Paper Doll Surface
             </span>
           </div>
-          <span className="text-[7px] font-mono font-bold text-parchment-500 uppercase shrink-0">
-            Drag to Equip
-          </span>
-        </div>
 
-        <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
-          <Inventory
-            forceCharacterId={activeChar.id}
-            compactEquipped={true}
-            showCategoryTabs={!compactMode}
-            activeDragItem={activeDragItem}
-          />
-        </div>
-      </div>
-
-      {/* RIGHT: Equipment Doll (Target) */}
-      <div className="flex-1 min-w-[240px] flex flex-col items-center justify-center bg-black/30 rounded-md p-1.5 border border-dragon-gold/30 shadow-inner relative overflow-hidden">
-        <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1 mb-1.5 shrink-0">
-          <div className="flex items-center gap-1.5">
-            <GameIcon name="shield" size={13} className="text-dragon-gold" />
-            <span className="font-header text-[10px] text-dragon-gold uppercase tracking-wider font-bold truncate">
-              Equipment Doll
-            </span>
+          <div className="flex-1 w-full flex items-center justify-center p-1 overflow-y-auto custom-scrollbar relative">
+            <EquipmentDoll
+              activeSlots={[]}
+              activeDragItem={activeDragItem}
+              equippedItems={activeChar.inventory || {}}
+              equipment={activeChar.equipment}
+              items={activeChar.items}
+              onSlotClick={(slot) => {
+                if (activeChar.inventory?.[slot] || activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId) {
+                  unequipItem(slot);
+                  soundService.playEffect('ITEM_SLOT');
+                }
+              }}
+            />
           </div>
-          <span className="text-[7px] font-mono text-dragon-gold/70 uppercase shrink-0">
-            Paper Doll
-          </span>
-        </div>
-
-        <div className="flex-1 w-full flex items-center justify-center p-0.5 overflow-y-auto custom-scrollbar">
-          <EquipmentDoll
-            activeSlots={[]}
-            activeDragItem={activeDragItem}
-            equippedItems={activeChar.inventory || {}}
-            equipment={activeChar.equipment}
-            items={activeChar.items}
-            onSlotClick={(slot) => {
-              if (activeChar.inventory?.[slot] || activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId) {
-                unequipItem(slot);
-                soundService.playEffect('ITEM_SLOT');
-              }
-            }}
-          />
         </div>
       </div>
     </div>

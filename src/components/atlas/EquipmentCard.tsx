@@ -12,6 +12,7 @@ import { useInventoryStore } from '../../store/useInventoryStore';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { DiceText } from '../dice/DiceText';
 import { BookReader } from '../bookreader/BookReader';
+import { EquipmentSprite } from '../character/equipment/EquipmentSprite';
 
 import { normalizeImageUrl, playSuccessSound } from '../../services/storageService';
 
@@ -23,10 +24,11 @@ interface EquipmentCardProps {
   equipment: any;
   className?: string;
   isModal?: boolean;
+  variant?: 'card' | 'tile';
   onClose?: () => void;
 }
 
-export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, onClose }) => {
+export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, variant = 'card', onClose }) => {
   const { setFocusedItem, explorerTab } = useUIStore();
   const { activeCharacterId } = useCharacterStore();
   const { equipItem, unequipItem, transferItem } = useInventoryStore();
@@ -39,6 +41,45 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
   const [isBookOpen, setIsBookOpen] = useState(false);
 
   if (!equipment) return null;
+
+  const currentItem = (equipment.versions && equipment.versions[activeTier]) || equipment;
+
+  // Render 9:16 Portrait Tile Variant
+  if (variant === 'tile') {
+    const isMagic = currentItem.rarity && currentItem.rarity !== 'Common';
+    const fallbackUrl = normalizeImageUrl(currentItem.imageUrl || currentItem.image, currentItem._type || 'equipment', currentItem.index || currentItem.id, currentItem.name);
+
+    return (
+      <div
+        className={cn(
+          "aspect-[9/16] w-full bg-parchment-200/60 hover:bg-parchment-200/90 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-1 cursor-pointer transition-all select-none shadow-sm group overflow-hidden pointer-events-auto",
+          isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
+          className
+        )}
+      >
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden rounded pointer-events-none p-0.5">
+          <EquipmentSprite
+            itemKey={currentItem}
+            alt={currentItem.name}
+            className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+            fallbackUrl={fallbackUrl}
+          />
+        </div>
+
+        {currentItem.quantity > 1 && (
+          <span className="absolute bottom-1 right-1 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
+            x{currentItem.quantity}
+          </span>
+        )}
+
+        <div className="absolute inset-x-0 bottom-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity p-0.5 pointer-events-none z-20 text-center">
+          <p className="text-[6px] font-black text-parchment-100 uppercase tracking-tight truncate leading-tight">
+            {currentItem.name}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const isBook = isBookLike(equipment);
 
@@ -62,20 +103,12 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
     }
   }, [equipment.index]);
 
-  const currentItem = (equipment.versions && equipment.versions[activeTier]) || equipment;
-
   const handleEquip = () => {
     if (currentItem.slot) {
       const slots = Array.isArray(currentItem.slot) ? currentItem.slot : [currentItem.slot];
       equipItem(currentItem, slots[0]);
       onClose?.();
     }
-  };
-
-  const handleTransfer = () => {
-    // Basic transfer logic: toggle between active character and party
-    // This is a placeholder since we need the sourceId
-    onClose?.();
   };
 
   const rarityColors: { [key: string]: string } = {
