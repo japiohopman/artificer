@@ -4,9 +4,8 @@ import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { DndContext, DragEndEvent, DragStartEvent, DragOverEvent, DragOverlay, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
-import { Inventory } from './Inventory';
+import { EquipmentWorkspace } from '../equipment/EquipmentWorkspace';
 import { PartyInventory } from './PartyInventory';
-import { EquipmentDoll } from '../equipment/EquipmentDoll';
 import { cn } from '../../../lib/utils';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
@@ -194,20 +193,8 @@ export const FullInventoryMenu: React.FC = () => {
                     </div>
                     <div className="text-[10px] font-mono opacity-50 uppercase">Character_Focus_Active</div>
                  </div>
-                 <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
-                    <div className="flex justify-center bg-parchment-100/50 p-4 rounded-xl border border-dragon-red/10 shadow-inner">
-                      <EquipmentDoll
-                        equipment={activeChar?.equipment}
-                        items={activeChar?.items}
-                        equippedItems={activeChar?.inventory}
-                        onSlotClick={(slot) => {
-                          if (activeChar?.inventory?.[slot]) {
-                            useInventoryStore.getState().unequipItem(slot);
-                          }
-                        }}
-                      />
-                    </div>
-                    <Inventory />
+                 <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
+                    <EquipmentWorkspace forceCharacterId={activeChar?.id} standalone={false} />
                  </div>
               </div>
 

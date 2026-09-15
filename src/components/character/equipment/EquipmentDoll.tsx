@@ -27,6 +27,7 @@ interface ItemDollProps {
   characterImageUrl?: string;
   gender?: 'Male' | 'Female';
   race?: string;
+  activeDragItem?: any;
 }
 
 const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
@@ -132,7 +133,8 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   className,
   equipment,
   items,
-  equipmentDetails
+  equipmentDetails,
+  activeDragItem
 }) => {
   // Resolve item for slot from equippedItems object or V2 equipment/items dictionaries
   const getSlotItem = (slot: EquipmentSlotId) => {

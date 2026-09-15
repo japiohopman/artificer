@@ -6,7 +6,7 @@ import { CharacterPanelStats } from './CharacterPanelStats';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
 import { CharacterPanelBio } from './CharacterPanelBio';
 import { CharacterPanelSpells } from './CharacterPanelSpells';
-import { EquipmentDoll } from '../equipment/EquipmentDoll';
+import { EquipmentWorkspace } from '../equipment/EquipmentWorkspace';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon } from '../../../game_icons';
@@ -145,18 +145,10 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
 
         {/* EQUIPMENT TAB OVERLAY (Z-30) */}
         {activeTab === 'equipment' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/60 backdrop-blur-xs rounded border border-dragon-gold/30">
-            <EquipmentDoll
-              equippedItems={character.inventory || {}}
-              equipment={character.equipment}
-              items={character.items}
-              onSlotClick={(slot) => {
-                if (character.inventory?.[slot]) {
-                  unequipItem(slot);
-                } else if (focusedItem?._type === 'equipment') {
-                  equipItem(focusedItem, slot);
-                }
-              }}
+          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30 overflow-hidden">
+            <EquipmentWorkspace
+              forceCharacterId={character.id}
+              compactMode={true}
             />
           </div>
         )}
