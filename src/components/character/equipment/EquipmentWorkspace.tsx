@@ -117,22 +117,45 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
   };
 
   const workspaceContent = (
-    <div className={cn("w-full h-full flex flex-col xl:flex-row gap-3 p-2 bg-stone-950/20 rounded-xl border border-dragon-gold/20 relative overflow-hidden min-w-0", className)}>
-      {/* LEFT / TOP: Equipment Doll Workspace (Item Target) */}
-      <div className="flex-1 min-w-[280px] flex flex-col items-center justify-center bg-black/20 rounded-lg p-2 border border-dragon-gold/30 shadow-inner relative overflow-hidden">
-        <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1 mb-2 shrink-0">
+    <div className={cn("w-full h-full flex flex-col md:flex-row gap-2 p-1.5 bg-black/20 rounded-lg border border-dragon-gold/20 relative overflow-hidden min-w-0", className)}>
+      {/* LEFT: Compact Inventory Grid (Source) */}
+      <div className="flex-[1.2] min-w-[240px] flex flex-col bg-white/50 rounded-md p-1.5 border border-dragon-red/15 shadow-inner overflow-hidden">
+        <div className="flex items-center justify-between border-b border-dragon-red/15 pb-1 mb-1.5 shrink-0">
           <div className="flex items-center gap-1.5">
-            <GameIcon name="shield" size={14} className="text-dragon-gold" />
-            <span className="font-header text-[11px] text-dragon-gold uppercase tracking-wider font-bold truncate">
+            <GameIcon name="package" size={13} className="text-dragon-red" />
+            <span className="font-header text-[10px] text-dragon-darkRed uppercase tracking-wider font-bold truncate">
+              Available Items
+            </span>
+          </div>
+          <span className="text-[7px] font-mono font-bold text-parchment-500 uppercase shrink-0">
+            Drag to Equip
+          </span>
+        </div>
+
+        <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
+          <Inventory
+            forceCharacterId={activeChar.id}
+            compactEquipped={true}
+            showCategoryTabs={!compactMode}
+          />
+        </div>
+      </div>
+
+      {/* RIGHT: Equipment Doll (Target) */}
+      <div className="flex-1 min-w-[240px] flex flex-col items-center justify-center bg-black/30 rounded-md p-1.5 border border-dragon-gold/30 shadow-inner relative overflow-hidden">
+        <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1 mb-1.5 shrink-0">
+          <div className="flex items-center gap-1.5">
+            <GameIcon name="shield" size={13} className="text-dragon-gold" />
+            <span className="font-header text-[10px] text-dragon-gold uppercase tracking-wider font-bold truncate">
               Equipment Doll
             </span>
           </div>
-          <span className="text-[8px] font-mono text-dragon-gold/70 uppercase shrink-0">
+          <span className="text-[7px] font-mono text-dragon-gold/70 uppercase shrink-0">
             Paper Doll
           </span>
         </div>
 
-        <div className="flex-1 w-full flex items-center justify-center p-1 overflow-y-auto custom-scrollbar min-h-[260px]">
+        <div className="flex-1 w-full flex items-center justify-center p-0.5 overflow-y-auto custom-scrollbar">
           <EquipmentDoll
             activeSlots={[]}
             activeDragItem={activeDragItem}
@@ -145,29 +168,6 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
                 soundService.playEffect('ITEM_SLOT');
               }
             }}
-          />
-        </div>
-      </div>
-
-      {/* RIGHT / BOTTOM: Real Inventory Panel (Item Source) */}
-      <div className="flex-1 min-w-[280px] flex flex-col bg-white/40 rounded-lg p-2 border border-dragon-red/10 shadow-inner overflow-hidden">
-        <div className="flex items-center justify-between border-b border-dragon-red/15 pb-1 mb-2 shrink-0">
-          <div className="flex items-center gap-1.5">
-            <GameIcon name="package" size={14} className="text-dragon-red" />
-            <span className="font-header text-[11px] text-dragon-darkRed uppercase tracking-wider font-bold truncate">
-              Available Items
-            </span>
-          </div>
-          <span className="text-[8px] font-mono font-bold text-parchment-500 uppercase shrink-0">
-            Drag to Equip
-          </span>
-        </div>
-
-        <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5 min-h-[180px]">
-          <Inventory
-            forceCharacterId={activeChar.id}
-            compactEquipped={true}
-            showCategoryTabs={!compactMode}
           />
         </div>
       </div>
