@@ -4,30 +4,64 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 
 ## 🔴 Critical — Current engineering
 
+### Inventory & Equipment Workspace — interaction, ingestion and asset UX overhaul — Issue #300
+**Status:** active. The previous Inventory V2 / Inventory & Equipment foundation is merged, but runtime review identified structural UX, drag/drop, overlay, equipment-pack ingestion and asset-rendering problems. These are now the active completion phase.
+
+#### Workspace architecture
+- [ ] Replace the current dashboard-like gear composition with one focused Equipment Workspace.
+- [ ] Keep one authoritative Equipment Doll visible beside the inventory; remove/migrate duplicate runtime doll surfaces.
+- [ ] Keep the inventory and Equipment Doll visible simultaneously in the Equipment tab.
+- [ ] Separate individual gear management from party/shared-storage concerns so shared storage does not dominate the workspace.
+
+#### Inventory UI
+- [ ] Replace broad/loose backpack presentation with a dense slot-based inventory grid.
+- [ ] Render empty and occupied slots consistently from canonical container capacity.
+- [ ] Reduce unnecessary margins, padding, oversized headers and decorative empty regions.
+- [ ] Keep search/filter/inspection controls compact and subordinate to the item grid.
+- [ ] Make item icon, quantity and slot state the dominant visual information.
+
+#### Drag & drop
+- [ ] Use one coherent dnd-kit context for inventory and equipment.
+- [ ] Introduce slot-level droppable targets rather than treating the whole backpack as one drop zone.
+- [ ] Use a dedicated DragOverlay so the dragged item remains visibly represented.
+- [ ] Provide explicit source, dragging, valid-target, invalid-target and drop-result feedback.
+- [ ] Verify supported Inventory → Equipment, Equipment → Inventory, Equipment → Equipment and Inventory → Inventory operations.
+- [ ] Keep compatibility rules in the canonical equipment/domain layer rather than duplicating them in UI components.
+- [ ] Verify no disappearing items, duplicate ownership, stale state or desynchronized inventory/equipment state.
+
+#### Overlay / layering
+- [ ] Diagnose why the inventory can render behind navigation/HUD.
+- [ ] Establish a reliable global overlay surface/portal for full-screen inventory UI.
+- [ ] Do not solve stacking-context problems by accumulating arbitrary z-index values.
+- [ ] Verify pointer events, clipping and keyboard/mouse interaction after the overlay refactor.
+
+#### Equipment-pack ingestion
+- [ ] Trace selected class/background equipment-pack references from Character Creator to persisted character state.
+- [ ] Resolve packs through the existing canonical `itemPacks.ts` definitions.
+- [ ] Expand pack contents at the character creation/normalization boundary into real V2 ItemInstances.
+- [ ] Preserve quantities, template IDs, stable item IDs and container placement.
+- [ ] Verify a newly created character actually owns the contents of its selected equipment pack.
+- [ ] Add regression coverage so pack definitions cannot silently disappear from the character inventory.
+
+#### Equipment visual assets
+- [ ] Audit EquipmentSprite and existing visual-identity → sprite-manifest resolution.
+- [ ] Prefer canonical sprite-sheet rendering when a visual identity is READY.
+- [ ] Keep individual `.webp` assets only where they remain a valid fallback path.
+- [ ] Optimize fallback `.webp` dimensions/file sizes for their actual inventory display role.
+- [ ] Avoid loading large source images or duplicating sprite-sheet loads for individual inventory slots.
+- [ ] Run asset validation after image/manifest changes.
+
+#### Verification
+- [ ] Add/extend regression tests for slot movement, compatibility, pack ingestion and persistence.
+- [ ] Run focused inventory/equipment tests.
+- [ ] Run `npm run lint`.
+- [ ] Run `npm run validate:assets` when asset changes are included.
+- [ ] Run `npm run build`.
+- [ ] Manually verify the complete grab → drag → valid/invalid target feedback → drop → state update workflow.
+- [ ] Manually verify Inventory ↔ Equipment on a newly created character containing an equipment pack.
+
 ### 2024 Atlas Data Ingestion & Ruleset-Aware Character Creation
-**Status:**
-2024 Species Foundation
-→ implemented / verified (Human, Dwarf, Elf, Halfling, Orc)
-
-2024 Base Class Foundation
-→ implemented / verified (12/12 core classes in /class/json/24/)
-
-2024 Base Class Progression & Feature Definitions
-→ implemented / verified (12/12 core classes in /class/levels/24/ and /features/json/)
-
-2024 Subclasses & Subclass Features
-→ implemented / verified (48/48 canonical subclasses in /subclasses/json/24/ across all 12 core classes)
-
-2024 Backgrounds & Origins Foundation
-→ implemented / verified (16/16 PHB Origin Backgrounds in /backgrounds/json/24/, 10 Origin Feats in /feats/json/24/origin-feats/, ability score choice model [+2/+1 or +1/+1/+1], official markdown lore guides in /ui/official/backgrounds/*.md, and ruleset-aware Character Creator integration)
-
-2024 Feats Integration — Foundation
-→ implemented / verified (strict ruleset-aware resolution in fetchFeatData / loadFeat for 2014 vs 2024; versioned index_14.json and index_24.json catalogs for Origin, General, Fighting Style, and Epic Boon categories; Character Creator consumers updated; tests green)
-
-2024 Spells Integration & Refinement
-→ implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323 canonical SRD spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
-
-Next active dependency: remaining rules-sensitive domains.
+**Status:** complete and verified.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -48,6 +82,18 @@ Next active dependency: remaining rules-sensitive domains.
 - [x] Verify Character Creator end-to-end for both rulesets.
 
 **Reference sources:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference material only. Do not blindly copy the repository.
+
+## 🟠 High — Architecture & data foundations
+
+### Inventory & Equipment Architecture / UX Overhaul — foundation (merged)
+- [x] Audit and consolidate existing inventory/equipment implementations.
+- [x] Establish `character/inventory/` and `character/equipment/` responsibility boundaries.
+- [x] Keep reusable inventory/equipment domain components out of `hud/` merely because they are displayed there.
+- [x] Preserve the Inventory V2 registry/slot architecture and save compatibility.
+- [x] Keep EquipmentDoll reusable as a presentation primitive.
+- [x] Establish the current V2 item/container model and document its compatibility constraints.
+
+The foundation is **not** considered the completion of the runtime UX. Issue #300 is the active follow-up for the observed workspace, drag/drop, ingestion and asset problems.
 
 ### Character Creator — Species Character Mirror & Choice State v1
 **Status:** merged and verified as the foundation for the current Character Creator presentation model.
@@ -70,20 +116,6 @@ Next active dependency: remaining rules-sensitive domains.
 - [x] `GameIcon` is the application icon boundary.
 - [x] `lucide-react` and Font Awesome icon dependencies removed from the migrated system.
 - [x] Missing icons are treated as asset backlog rather than silently replacing canonical game icons with third-party icons.
-
-## 🟠 High — Architecture & data foundations
-
-### Inventory & Equipment Architecture / UX Overhaul
-- [x] Audit and consolidate existing inventory/equipment implementations.
-- [x] Establish `character/inventory/` and `character/equipment/` responsibility boundaries.
-- [x] Keep reusable inventory/equipment domain components out of `hud/` merely because they are displayed there.
-- [x] Keep `CharacterPanel` compact at runtime; keep `FullInventoryMenu` as the full workspace.
-- [x] Implement scrolling, filtering, inspection and equip/unequip flows.
-- [x] Implement supported drag/drop interactions.
-- [x] Preserve Inventory V2 registry/slot architecture and save compatibility.
-- [x] Keep EquipmentDoll as reusable presentation.
-- [x] Verify party/shared inventory behavior.
-- [x] Add regression coverage for core inventory/equipment interactions.
 
 ### Character Creator — Selection Experience v1
 - [x] Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes/Stats → Skills/Choices → Arcana/Spells → Equipment → Appearance → Description → Review flow.
@@ -190,4 +222,4 @@ Next active dependency: remaining rules-sensitive domains.
 9. Keep authoring tools separate from runtime representations.
 10. `ROADMAP.md` is the **only canonical current-priority/dispatch roadmap**. Do not create or maintain roadmap snapshots elsewhere.
 
-*Last Updated: 2026-08-31*
+*Last Updated: 2026-09-15*
