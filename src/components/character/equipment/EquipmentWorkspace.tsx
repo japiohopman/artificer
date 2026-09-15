@@ -100,8 +100,8 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
       return;
     }
 
-    // 2. Dragged from Equipment Slot back to Backpack
-    if (overData.type === 'backpack' || overData.type === 'inventory') {
+    // 2. Dragged from Equipment Slot back to Backpack or Inventory Slot
+    if (overData.type === 'backpack' || overData.type === 'inventory' || overData.type === 'inventory_slot') {
       if (sourceSlot) {
         unequipItem(sourceSlot);
         soundService.playEffect('ITEM_SLOT');
@@ -124,7 +124,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
           <div className="flex items-center gap-1.5">
             <GameIcon name="package" size={13} className="text-dragon-red" />
             <span className="font-header text-[10px] text-dragon-darkRed uppercase tracking-wider font-bold truncate">
-              Available Items
+              Available Gear
             </span>
           </div>
           <span className="text-[7px] font-mono font-bold text-parchment-500 uppercase shrink-0">
@@ -137,6 +137,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
             forceCharacterId={activeChar.id}
             compactEquipped={true}
             showCategoryTabs={!compactMode}
+            activeDragItem={activeDragItem}
           />
         </div>
       </div>

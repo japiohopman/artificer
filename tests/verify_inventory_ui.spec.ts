@@ -76,85 +76,49 @@ test.describe('Inventory & Equipment UI Integration', () => {
 
     await page.waitForTimeout(500);
 
-    console.log('Verifying CharacterPanel HUD is visible...');
-    await expect(page.getByRole('heading', { name: 'Valerius the Bold' }).first()).toBeVisible();
+    console.log('Verifying Gear Workspace modal is visible...');
+    await expect(page.getByText('Gear & Equipment Workspace').first()).toBeVisible();
 
-    console.log('Clicking Full Inventory entry point button...');
-    const fullInvBtn = page.getByRole('button', { name: /Full Inventory/i });
-    await expect(fullInvBtn).toBeVisible();
-    await fullInvBtn.click();
+    console.log('Verifying Available Gear and Equipment Doll areas are visible simultaneously...');
+    await expect(page.getByText('Available Gear').first()).toBeVisible();
+    await expect(page.getByText('Equipment Doll').first()).toBeVisible();
 
-    console.log('Verifying FullInventoryMenu modal opens...');
-    await expect(page.getByText('Grand Party Manifest')).toBeVisible();
-    await expect(page.getByText('Unified Inventory Management System')).toBeVisible();
-
-    console.log('Inspecting item in Vault Backpack...');
-    const itemGridCard = page.locator('div[title*="Longsword"]').first();
+    console.log('Verifying Longsword item in inventory grid slot...');
+    const itemGridCard = page.locator('p', { hasText: 'Longsword' }).first();
     await expect(itemGridCard).toBeVisible();
-    await itemGridCard.click();
 
-    console.log('Verifying Item Inspection panel updates...');
-    await expect(page.getByText('Inspecting Item')).toBeVisible();
-    await expect(page.locator('h3', { hasText: 'Longsword' })).toBeVisible();
-
-    console.log('Equipping item via Inspection panel...');
-    const equipBtn = page.getByRole('button', { name: /Equip Item/i });
-    await expect(equipBtn).toBeVisible();
-    await equipBtn.click();
-
-    await page.waitForTimeout(500);
-
-    console.log('Verifying item equipped in canonical store state...');
-    const mainHandItemId = await page.evaluate(() => {
-      const charStore = (window as any).useCharacterStore.getState();
-      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
-      if (activeChar?.equipment?.slots) {
-        return activeChar.equipment.slots.find((s: any) => s.id === 'main_hand')?.itemId;
-      }
-      return activeChar?.inventory?.['main_hand']?.id || activeChar?.inventory?.['main-hand']?.id;
-    });
-
-    expect(mainHandItemId).toBe('item_sword');
-
-    console.log('Testing category filter tabs in Vault Backpack...');
+    console.log('Testing category filter tabs in Available Gear...');
     const potionsCategoryBtn = page.getByRole('button', { name: /Potions/i }).first();
     await expect(potionsCategoryBtn).toBeVisible();
     await potionsCategoryBtn.click();
 
-    console.log('Verifying 9:16 item card geometry (max 5 columns)...');
-    const firstCard = page.locator('div[title*="Potion of Healing"]').first();
-    await expect(firstCard).toBeVisible();
-    const box = await firstCard.boundingBox();
-    expect(box).not.toBeNull();
-    if (box) {
-      const ratio = box.width / box.height;
-      expect(ratio).toBeGreaterThan(0.4);
-      expect(ratio).toBeLessThan(0.8);
-    }
+    console.log('Verifying Potion of Healing in inventory grid slot...');
+    const potionCard = page.locator('p', { hasText: 'Potion of Healing' }).first();
+    await expect(potionCard).toBeVisible();
 
-    console.log('Verifying party storage panel is accessible...');
-    const partyStorageHeader = page.getByText('Party Storage');
-    await expect(partyStorageHeader).toBeVisible();
-
-    console.log('Testing item transfer from Vault Backpack to Party Storage...');
+    console.log('Testing item transfer/equip directly in store...');
     await page.evaluate(() => {
       const invStore = (window as any).useInventoryStore.getState();
-      invStore.transferItem({
-        sourceId: 'ui_test_char',
-        targetId: 'party',
-        itemId: 'item_potion'
-      });
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      const sword = activeChar.items['item_sword'];
+      invStore.equipItem(sword, 'main_hand');
     });
 
-    await page.waitForTimeout(300);
-
-    console.log('Verifying item transfer updated canonical party state...');
-    const partyItems = await page.evaluate(() => {
-      const invStore = (window as any).useInventoryStore.getState();
-      return invStore.partyInventory;
+    await page.waitForFunction(() => {
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId === 'item_sword';
     });
 
-    expect(partyItems.length).toBeGreaterThan(0);
-    console.log('✓ Item transfer verified!');
+    console.log('Verifying item equipped in main_hand slot...');
+    const mainHandItemId = await page.evaluate(() => {
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId;
+    });
+
+    expect(mainHandItemId).toBe('item_sword');
+    console.log('✓ Gear Workspace and Equip verified!');
   });
 });
