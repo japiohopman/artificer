@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Inventory & Equipment UI Integration', () => {
-  test('Full inventory workflow: CharacterPanel HUD -> FullInventoryMenu -> Inspect, Drag & Ammunition', async ({ page }) => {
+  test('Full inventory workflow: CharacterPanel HUD -> FullInventoryMenu -> Inspect, Real Drag & Ammunition', async ({ page }) => {
     test.setTimeout(60000);
 
     await page.goto('http://localhost:3000');
@@ -90,38 +90,30 @@ test.describe('Inventory & Equipment UI Integration', () => {
     await expect(page.getByText('Available Gear').first()).toBeVisible();
     await expect(page.getByText('Equipment Doll').first()).toBeVisible();
 
-    console.log('Verifying items in inventory grid slots...');
-    await expect(page.locator('p', { hasText: 'Longsword' }).first()).toBeVisible();
-    await expect(page.locator('p', { hasText: 'Shortbow' }).first()).toBeVisible();
-
     console.log('Testing category filter tabs in Available Gear...');
     const weaponsCategoryBtn = page.getByRole('button', { name: /Weapons/i }).first();
     await expect(weaponsCategoryBtn).toBeVisible();
     await weaponsCategoryBtn.click();
 
-    console.log('Performing browser drag gesture for Shortbow onto main_hand slot...');
-    const bowCard = page.locator('p', { hasText: 'Shortbow' }).first();
+    console.log('Performing REAL mouse drag gesture for Shortbow onto main_hand slot...');
+    const bowCard = page.locator('[title*="Shortbow"]').first();
     await expect(bowCard).toBeVisible();
 
-    // Use Playwright mouse drag gesture
-    const bowBox = await bowCard.boundingBox();
-    expect(bowBox).not.toBeNull();
+    const mainHandSlot = page.locator('button').filter({ hasText: /^Main$/i }).first();
+    await expect(mainHandSlot).toBeVisible();
 
-    if (bowBox) {
+    const bowBox = await bowCard.boundingBox();
+    const targetBox = await mainHandSlot.boundingBox();
+    expect(bowBox).not.toBeNull();
+    expect(targetBox).not.toBeNull();
+
+    if (bowBox && targetBox) {
       await page.mouse.move(bowBox.x + bowBox.width / 2, bowBox.y + bowBox.height / 2);
       await page.mouse.down();
-      await page.mouse.move(bowBox.x + 300, bowBox.y, { steps: 5 });
+      await page.mouse.move(targetBox.x + targetBox.width / 2, targetBox.y + targetBox.height / 2, { steps: 10 });
       await page.waitForTimeout(100);
       await page.mouse.up();
     }
-
-    // Fallback equip invocation if mouse drop was outside
-    await page.evaluate(() => {
-      const invStore = (window as any).useInventoryStore.getState();
-      const charStore = (window as any).useCharacterStore.getState();
-      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
-      invStore.equipItem(activeChar.items['item_bow'], 'main_hand');
-    });
 
     await page.waitForFunction(() => {
       const charStore = (window as any).useCharacterStore.getState();
@@ -129,7 +121,7 @@ test.describe('Inventory & Equipment UI Integration', () => {
       return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId === 'item_bow';
     });
 
-    console.log('Verifying Shortbow equipped in main_hand slot...');
+    console.log('Verifying Shortbow equipped in main_hand slot via real drag...');
     const mainHandItemId = await page.evaluate(() => {
       const charStore = (window as any).useCharacterStore.getState();
       const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
@@ -141,13 +133,25 @@ test.describe('Inventory & Equipment UI Integration', () => {
     console.log('Verifying contextual Ammunition slot appears when Shortbow is equipped...');
     await page.waitForTimeout(300);
 
-    console.log('Equipping Arrows into contextual Ammunition slot...');
-    await page.evaluate(() => {
-      const invStore = (window as any).useInventoryStore.getState();
-      const charStore = (window as any).useCharacterStore.getState();
-      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
-      invStore.equipItem(activeChar.items['item_arrows'], 'ammo');
-    });
+    const ammoSlot = page.locator('button').filter({ hasText: /^Ammo$/i }).first();
+    await expect(ammoSlot).toBeVisible();
+
+    console.log('Performing REAL mouse drag gesture for Arrows into contextual Ammunition slot...');
+    const arrowsCard = page.locator('[title*="Arrows"]').first();
+    await expect(arrowsCard).toBeVisible();
+
+    const arrowsBox = await arrowsCard.boundingBox();
+    const ammoBox = await ammoSlot.boundingBox();
+    expect(arrowsBox).not.toBeNull();
+    expect(ammoBox).not.toBeNull();
+
+    if (arrowsBox && ammoBox) {
+      await page.mouse.move(arrowsBox.x + arrowsBox.width / 2, arrowsBox.y + arrowsBox.height / 2);
+      await page.mouse.down();
+      await page.mouse.move(ammoBox.x + ammoBox.width / 2, ammoBox.y + ammoBox.height / 2, { steps: 10 });
+      await page.waitForTimeout(100);
+      await page.mouse.up();
+    }
 
     await page.waitForFunction(() => {
       const charStore = (window as any).useCharacterStore.getState();
@@ -162,6 +166,6 @@ test.describe('Inventory & Equipment UI Integration', () => {
     });
 
     expect(ammoItemId).toBe('item_arrows');
-    console.log('✓ Gear Workspace, Pointer Drag & Contextual Ammunition verified!');
+    console.log('✓ Pure UI Mouse Drag & Drop verified without store fallbacks!');
   });
 });

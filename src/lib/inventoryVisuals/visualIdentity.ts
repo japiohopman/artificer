@@ -15,6 +15,11 @@ const TEMPLATE_ALIASES: Record<string, string> = {
   'light-hammer': 'light_hammer',
   'crossbow_bolt': 'crossbow_bolt',
   'crossbow-bolt': 'crossbow_bolt',
+  'bolts': 'crossbow_bolt',
+  'bolt': 'crossbow_bolt',
+  'arrows': 'arrow',
+  'arrow': 'arrow',
+  'quivers': 'quiver',
 
   // Armor aliases
   'padded-armor': 'padded_armor',

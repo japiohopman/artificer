@@ -69,34 +69,35 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         {...listeners}
         onClick={handleInspect}
         onContextMenu={handleContextMenu}
-        title={`${item.name} (${item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
+        title={`${item.name} (${item.kind || item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
-          "aspect-[9/16] w-full bg-parchment-200/50 hover:bg-dragon-red/15 border-2 border-dragon-red/15 hover:border-dragon-red/40 rounded-lg relative flex flex-col items-center justify-between p-1.5 cursor-pointer transition-all select-none shadow-sm group overflow-hidden text-left pointer-events-auto",
-          isMagic && "ring-1 ring-dragon-gold/50 border-dragon-gold/60 bg-dragon-gold/[0.05]",
-          isDragging && "opacity-40 border-dashed border-dragon-red/50 shadow-inner scale-95"
+          "aspect-[9/16] w-full bg-parchment-200/60 hover:bg-parchment-200/90 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-1 cursor-grab active:cursor-grabbing transition-all select-none shadow-sm group overflow-hidden pointer-events-auto",
+          isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
+          isDragging && "opacity-40 border-dashed border-dragon-gold/50 shadow-inner scale-95"
         )}
       >
-        <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
+        {/* Image-First Frame: Full Available Space for Equipment Artwork */}
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden rounded pointer-events-none p-0.5">
           <EquipmentSprite
             itemKey={item}
             alt={item.name}
             className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-            fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
+            fallbackUrl={fallbackUrl}
           />
         </div>
 
-        <div className="w-full text-center pointer-events-none">
-          <p className="text-[7px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-tight w-full px-0.5">
+        {/* Overlay Quantity Badge */}
+        {item.quantity > 1 && (
+          <span className="absolute bottom-1 right-1 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
+            x{item.quantity}
+          </span>
+        )}
+
+        {/* Subtle Hover Name Indicator Overlay */}
+        <div className="absolute inset-x-0 bottom-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity p-0.5 pointer-events-none z-20 text-center">
+          <p className="text-[6px] font-black text-parchment-100 uppercase tracking-tight truncate leading-tight">
             {item.name}
           </p>
-          <div className="flex items-center justify-between w-full mt-0.5 text-[6px] font-bold text-parchment-500 uppercase px-0.5">
-            <span className="truncate">{item.kind || item._type || 'item'}</span>
-            {item.quantity > 1 && (
-              <span className="bg-dragon-red/90 text-white px-1 rounded-sm font-mono font-bold">
-                x{item.quantity}
-              </span>
-            )}
-          </div>
         </div>
       </div>
     );
@@ -137,4 +138,3 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     </div>
   );
 };
-
