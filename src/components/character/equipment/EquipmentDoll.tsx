@@ -6,7 +6,7 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { isItemCompatibleWithSlot } from '../../../lib/equipmentCompatibility';
+import { isItemCompatibleWithSlot, resolveItemMetadata } from '../../../lib/equipmentCompatibility';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,
@@ -38,6 +38,7 @@ interface EquipmentDollSlotProps {
   activeSlots: EquipmentSlotId[];
   equippedItem: any;
   activeDragItem?: any;
+  equippedItems?: Record<string, any>;
   onSlotClick?: (slot: EquipmentSlotId) => void;
 }
 
@@ -46,6 +47,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
   activeSlots,
   equippedItem,
   activeDragItem,
+  equippedItems = {},
   onSlotClick
 }) => {
   const { setNodeRef, isOver } = useDroppable({
@@ -72,7 +74,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
   const itemKey = equippedItem ? (equippedItem.template || equippedItem.index || equippedItem.id || equippedItem.name) : undefined;
   const fallbackUrl = equippedItem ? normalizeImageUrl(equippedItem.imageUrl || equippedItem.image, equippedItem._type || 'equipment', equippedItem.index || equippedItem.id, equippedItem.name) : undefined;
 
-  const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot) : false;
+  const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot, equippedItems) : false;
 
   let highlightStyle = "bg-black/20 border-parchment-300/30 hover:border-dragon-gold/50 hover:bg-black/35 opacity-75 backdrop-blur-[1px]";
 
@@ -117,10 +119,15 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
             className="w-full h-full object-contain drop-shadow-sm"
             fallbackUrl={fallbackUrl}
           />
+          {equippedItem.quantity > 1 && (
+            <span className="absolute bottom-0 right-0 bg-dragon-darkRed text-white text-[6px] font-mono font-bold px-1 rounded-tl shadow">
+              x{equippedItem.quantity}
+            </span>
+          )}
         </div>
       ) : (
         <div className="flex flex-col items-center gap-0.5 z-10">
-          <GameIcon name={slotDef.gameIcon} size={11} className={cn(
+          <GameIcon name={slotDef?.gameIcon || 'pouch'} size={11} className={cn(
             "transition-colors",
             isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300"
           )} />
@@ -128,7 +135,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
             "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
             isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300/80"
           )}>
-            {slotDef.label}
+            {slotDef?.label || slot}
           </span>
         </div>
       )}
@@ -137,7 +144,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       {equippedItem && (
         <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
           <span className="text-[5px] text-white font-bold uppercase text-center leading-tight break-words">
-            {equippedItem.name}
+            {equippedItem.name} {equippedItem.quantity > 1 ? `(x${equippedItem.quantity})` : ''}
           </span>
         </div>
       )}
@@ -166,6 +173,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
         return {
           id: itemInstance.id,
           name: itemInstance.customName || details.name || itemInstance.template,
+          quantity: itemInstance.quantity || 1,
           imageUrl: details.imageUrl || `/assets/atlas/equipment/images/${itemInstance.template}.webp`,
           _type: itemInstance.kind || details._type || 'equipment',
           index: itemInstance.template
@@ -175,6 +183,26 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     return null;
   };
 
+  const allEquipped = {
+    head: getSlotItem('head'),
+    neck: getSlotItem('neck'),
+    chest: getSlotItem('chest'),
+    back: getSlotItem('back'),
+    main_hand: getSlotItem('main_hand'),
+    off_hand: getSlotItem('off_hand'),
+    hands: getSlotItem('hands'),
+    feet: getSlotItem('feet'),
+    ring_1: getSlotItem('ring_1'),
+    ring_2: getSlotItem('ring_2'),
+    focus: getSlotItem('focus'),
+    ammo: getSlotItem('ammo')
+  };
+
+  const mainHandItem = allEquipped.main_hand;
+  const mainMeta = mainHandItem ? resolveItemMetadata(mainHandItem) : null;
+  const mainIndex = (mainMeta?.index || mainMeta?.template || '').toLowerCase();
+  const requiresAmmo = mainIndex.includes('bow') || mainIndex.includes('crossbow') || mainIndex.includes('blowgun');
+
   const renderSlot = (slot: EquipmentSlotId) => (
     <EquipmentDollSlot
       key={slot}
@@ -182,6 +210,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       activeSlots={activeSlots}
       equippedItem={getSlotItem(slot)}
       activeDragItem={activeDragItem}
+      equippedItems={allEquipped}
       onSlotClick={onSlotClick}
     />
   );
@@ -194,6 +223,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
         <div className="flex flex-col gap-1 w-10 shrink-0">
           {renderSlot('focus')}
           {renderSlot('main_hand')}
+          {requiresAmmo && renderSlot('ammo')}
           {renderSlot('ring_1')}
           {renderSlot(SIDE_SLOTS[0])}
           {renderSlot(SIDE_SLOTS[1])}

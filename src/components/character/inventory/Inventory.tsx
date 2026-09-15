@@ -2,7 +2,6 @@ import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useActiveCharacter, selectCharacterById } from '../../../lib/character';
-import { useInventoryStore } from '../../../store/useInventoryStore';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
 import { InventorySlot } from './InventorySlot';
 import { Package, Shield, Sparkles, Book, Key, Filter } from 'lucide-react';
@@ -34,7 +33,6 @@ type BackpackCategory =
 export const Inventory: React.FC<InventoryProps> = ({
   forceCharacterId,
   showCategoryTabs = true,
-  compactEquipped = false,
   activeDragItem
 }) => {
   const storeActiveChar = useActiveCharacter();
@@ -46,13 +44,17 @@ export const Inventory: React.FC<InventoryProps> = ({
     return <div className="text-[10px] text-parchment-400 italic">No active character loaded</div>;
   }
 
+  // Derive capacity dynamically from V2 container state or default to 24
+  const backpackContainer = activeCharacter.saveVersion === 2 && activeCharacter.containers
+    ? Object.values(activeCharacter.containers).find(c => c.type === 'backpack')
+    : null;
+
+  const totalCapacity = backpackContainer?.slots?.length || 24;
+
   // Normalize items list for V1 and V2 characters
   const backpack = React.useMemo(() => {
-    if (activeCharacter.saveVersion === 2 && activeCharacter.items && activeCharacter.containers) {
+    if (activeCharacter.saveVersion === 2 && activeCharacter.items && backpackContainer) {
       const items = activeCharacter.items;
-      const backpackContainer = Object.values(activeCharacter.containers).find(c => c.type === 'backpack');
-      if (!backpackContainer) return [];
-
       return backpackContainer.slots
         .filter(s => s.itemId && items[s.itemId])
         .map(s => {
@@ -82,9 +84,8 @@ export const Inventory: React.FC<InventoryProps> = ({
         });
     }
     return activeCharacter.backpack || [];
-  }, [activeCharacter]);
+  }, [activeCharacter, backpackContainer]);
 
-  const totalCapacity = 24;
   const filteredBackpack = backpack.filter((item: any) => {
     const kind = item.kind || item._type || '';
     if (activeCategory === 'all') return true;
@@ -128,7 +129,7 @@ export const Inventory: React.FC<InventoryProps> = ({
 
   return (
     <div className="space-y-2">
-      {/* Backpack Header & Capacity Bar */}
+      {/* Backpack Header & Dynamic Capacity Bar */}
       <div className="flex items-center justify-between border-b border-dragon-red/15 pb-1">
         <h3 className="text-[10px] font-bold text-dragon-red uppercase tracking-widest flex items-center gap-1.5">
           <Package size={12} /> Backpack Grid

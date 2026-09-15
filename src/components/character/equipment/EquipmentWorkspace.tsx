@@ -16,6 +16,7 @@ import { Inventory } from '../inventory/Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { InventoryDragPreview } from '../inventory/InventoryDragPreview';
 import { soundService } from '../../../services/soundService';
+import { evaluateSlotCompatibility } from '../../../lib/equipmentCompatibility';
 import { cn } from '../../../lib/utils';
 import { GameIcon } from '../../../game_icons';
 
@@ -36,7 +37,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
   const forcedChar = useCharacterStore(state => forceCharacterId ? selectCharacterById(state, forceCharacterId) : undefined);
   const activeChar = forcedChar || storeActiveChar;
 
-  const { equipItem, unequipItem } = useInventoryStore();
+  const { moveItem, unequipItem } = useInventoryStore();
   const [activeDragItem, setActiveDragItem] = useState<any>(null);
   const lastHoverTargetRef = useRef<string | null>(null);
 
@@ -89,19 +90,46 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
 
     const draggedItem = activeData.item || item;
     const sourceSlot = activeData.slotId;
+    const sourceIndex = activeData.index;
+
+    const sourceLocation = sourceSlot
+      ? { type: 'equip_slot' as const, slotId: sourceSlot }
+      : { type: 'inventory_slot' as const, slotIndex: typeof sourceIndex === 'number' ? sourceIndex : undefined };
 
     // 1. Dragged to an Equipment Slot
     if (overData.type === 'equip_slot' && overData.slotId) {
       const targetSlot = overData.slotId;
-      if (draggedItem) {
-        equipItem(draggedItem, targetSlot);
-        soundService.playEffect('ITEM_EQUIP');
+      const compResult = evaluateSlotCompatibility(draggedItem, targetSlot, activeChar.inventory || {}, activeChar.ruleset);
+
+      if (compResult === 'INVALID') {
+        soundService.playEffect('UI_BACK_EXIT');
+        return;
       }
+
+      moveItem({
+        source: sourceLocation,
+        target: { type: 'equip_slot', slotId: targetSlot },
+        item: draggedItem,
+        characterId: activeChar.id
+      });
+      soundService.playEffect('ITEM_EQUIP');
       return;
     }
 
-    // 2. Dragged from Equipment Slot back to Backpack or Inventory Slot
-    if (overData.type === 'backpack' || overData.type === 'inventory' || overData.type === 'inventory_slot') {
+    // 2. Dragged to Specific Inventory Slot
+    if (overData.type === 'inventory_slot' && overData.slotIndex !== undefined) {
+      moveItem({
+        source: sourceLocation,
+        target: { type: 'inventory_slot', slotIndex: overData.slotIndex },
+        item: draggedItem,
+        characterId: activeChar.id
+      });
+      soundService.playEffect('ITEM_SLOT');
+      return;
+    }
+
+    // 3. Fallback unequip to Backpack
+    if (overData.type === 'backpack' || overData.type === 'inventory') {
       if (sourceSlot) {
         unequipItem(sourceSlot);
         soundService.playEffect('ITEM_SLOT');

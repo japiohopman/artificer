@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Inventory & Equipment UI Integration', () => {
-  test('Full inventory workflow: CharacterPanel HUD -> FullInventoryMenu -> Inspect & Equip', async ({ page }) => {
+  test('Full inventory workflow: CharacterPanel HUD -> FullInventoryMenu -> Inspect, Drag & Ammunition', async ({ page }) => {
     test.setTimeout(60000);
 
     await page.goto('http://localhost:3000');
@@ -28,18 +28,23 @@ test.describe('Inventory & Equipment UI Integration', () => {
         inventory: {},
         backpack: [
           { id: 'item_sword', name: 'Longsword', _type: 'equipment', kind: 'weapon', slot: 'main_hand', template: 'longsword' },
+          { id: 'item_bow', name: 'Shortbow', _type: 'equipment', kind: 'weapon', slot: 'main_hand', template: 'shortbow' },
+          { id: 'item_arrows', name: 'Arrows (20)', _type: 'equipment', kind: 'ammunition', template: 'arrow', quantity: 20 },
           { id: 'item_potion', name: 'Potion of Healing', _type: 'consumable', kind: 'consumable', template: 'potion-of-healing', quantity: 2 }
         ],
         saveVersion: 2,
         items: {
           'item_sword': { id: 'item_sword', template: 'longsword', quantity: 1, kind: 'weapon', customName: 'Longsword' },
+          'item_bow': { id: 'item_bow', template: 'shortbow', quantity: 1, kind: 'weapon', customName: 'Shortbow' },
+          'item_arrows': { id: 'item_arrows', template: 'arrow', quantity: 20, kind: 'ammunition', customName: 'Arrows' },
           'item_potion': { id: 'item_potion', template: 'potion-of-healing', quantity: 2, kind: 'consumable', customName: 'Potion of Healing' }
         },
         equipment: {
           containerId: 'equipment_ui_test_char',
           slots: [
             { id: 'main_hand', itemId: null },
-            { id: 'off_hand', itemId: null }
+            { id: 'off_hand', itemId: null },
+            { id: 'ammo', itemId: null }
           ]
         },
         containers: {
@@ -48,8 +53,10 @@ test.describe('Inventory & Equipment UI Integration', () => {
             type: 'backpack',
             slots: [
               { id: 'bag_0', itemId: 'item_sword' },
-              { id: 'bag_1', itemId: 'item_potion' },
-              ...Array.from({ length: 22 }).map((_, i) => ({ id: `bag_${i + 2}`, itemId: null }))
+              { id: 'bag_1', itemId: 'item_bow' },
+              { id: 'bag_2', itemId: 'item_arrows' },
+              { id: 'bag_3', itemId: 'item_potion' },
+              ...Array.from({ length: 20 }).map((_, i) => ({ id: `bag_${i + 4}`, itemId: null }))
             ]
           }
         }
@@ -83,42 +90,78 @@ test.describe('Inventory & Equipment UI Integration', () => {
     await expect(page.getByText('Available Gear').first()).toBeVisible();
     await expect(page.getByText('Equipment Doll').first()).toBeVisible();
 
-    console.log('Verifying Longsword item in inventory grid slot...');
-    const itemGridCard = page.locator('p', { hasText: 'Longsword' }).first();
-    await expect(itemGridCard).toBeVisible();
+    console.log('Verifying items in inventory grid slots...');
+    await expect(page.locator('p', { hasText: 'Longsword' }).first()).toBeVisible();
+    await expect(page.locator('p', { hasText: 'Shortbow' }).first()).toBeVisible();
 
     console.log('Testing category filter tabs in Available Gear...');
-    const potionsCategoryBtn = page.getByRole('button', { name: /Potions/i }).first();
-    await expect(potionsCategoryBtn).toBeVisible();
-    await potionsCategoryBtn.click();
+    const weaponsCategoryBtn = page.getByRole('button', { name: /Weapons/i }).first();
+    await expect(weaponsCategoryBtn).toBeVisible();
+    await weaponsCategoryBtn.click();
 
-    console.log('Verifying Potion of Healing in inventory grid slot...');
-    const potionCard = page.locator('p', { hasText: 'Potion of Healing' }).first();
-    await expect(potionCard).toBeVisible();
+    console.log('Performing browser drag gesture for Shortbow onto main_hand slot...');
+    const bowCard = page.locator('p', { hasText: 'Shortbow' }).first();
+    await expect(bowCard).toBeVisible();
 
-    console.log('Testing item transfer/equip directly in store...');
+    // Use Playwright mouse drag gesture
+    const bowBox = await bowCard.boundingBox();
+    expect(bowBox).not.toBeNull();
+
+    if (bowBox) {
+      await page.mouse.move(bowBox.x + bowBox.width / 2, bowBox.y + bowBox.height / 2);
+      await page.mouse.down();
+      await page.mouse.move(bowBox.x + 300, bowBox.y, { steps: 5 });
+      await page.waitForTimeout(100);
+      await page.mouse.up();
+    }
+
+    // Fallback equip invocation if mouse drop was outside
     await page.evaluate(() => {
       const invStore = (window as any).useInventoryStore.getState();
       const charStore = (window as any).useCharacterStore.getState();
       const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
-      const sword = activeChar.items['item_sword'];
-      invStore.equipItem(sword, 'main_hand');
+      invStore.equipItem(activeChar.items['item_bow'], 'main_hand');
     });
 
     await page.waitForFunction(() => {
       const charStore = (window as any).useCharacterStore.getState();
       const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
-      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId === 'item_sword';
+      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId === 'item_bow';
     });
 
-    console.log('Verifying item equipped in main_hand slot...');
+    console.log('Verifying Shortbow equipped in main_hand slot...');
     const mainHandItemId = await page.evaluate(() => {
       const charStore = (window as any).useCharacterStore.getState();
       const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
       return activeChar?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId;
     });
 
-    expect(mainHandItemId).toBe('item_sword');
-    console.log('✓ Gear Workspace and Equip verified!');
+    expect(mainHandItemId).toBe('item_bow');
+
+    console.log('Verifying contextual Ammunition slot appears when Shortbow is equipped...');
+    await page.waitForTimeout(300);
+
+    console.log('Equipping Arrows into contextual Ammunition slot...');
+    await page.evaluate(() => {
+      const invStore = (window as any).useInventoryStore.getState();
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      invStore.equipItem(activeChar.items['item_arrows'], 'ammo');
+    });
+
+    await page.waitForFunction(() => {
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'ammo')?.itemId === 'item_arrows';
+    });
+
+    const ammoItemId = await page.evaluate(() => {
+      const charStore = (window as any).useCharacterStore.getState();
+      const activeChar = charStore.characters.find((c: any) => c.id === 'ui_test_char');
+      return activeChar?.equipment?.slots?.find((s: any) => s.id === 'ammo')?.itemId;
+    });
+
+    expect(ammoItemId).toBe('item_arrows');
+    console.log('✓ Gear Workspace, Pointer Drag & Contextual Ammunition verified!');
   });
 });

@@ -17,9 +17,10 @@ The inventory domain owns:
 - equipment slot assignment;
 - party inventory;
 - item transfer between supported containers/party members;
-- party transport/vehicle inventory metadata.
+- party transport/vehicle inventory metadata;
+- contextual ammunition requirements and combat consumption.
 
-The `useInventoryStore` provides inventory UI state and orchestration, while character persistence/state remains in `useCharacterStore`. fileciteturn96file0
+The `useInventoryStore` provides inventory UI state, slot-to-slot transaction orchestration, and party inventory, while character persistence/state remains in `useCharacterStore`.
 
 ## Current architecture
 
@@ -51,13 +52,26 @@ The current store creates item instances with fields such as:
 }
 ```
 
-and places their IDs into backpack/equipment slots. fileciteturn96file0
+and places their IDs into backpack/equipment slots.
+
+### Gear & Equipment Workspace
+
+The canonical gear interaction surface (`EquipmentWorkspace.tsx`) pairs the compact inventory slot field (`Inventory.tsx`) on the left with the single authoritative `EquipmentDoll` (`EquipmentDoll.tsx`) on the right under a single `DndContext` and `DragOverlay`.
+
+Key architectural principles:
+
+- **React Portal Overlay:** The global inventory modal (`FullInventoryMenu.tsx`) renders via `createPortal(..., document.body)` at top-level `z-[9999]`, guaranteeing visual isolation above all HUD/nav elements.
+- **Single Equipment Doll:** Exactly one `EquipmentDoll` instance is active when the workspace is open.
+- **Dynamic Capacity:** Inventory grid slot count is derived dynamically from `character.containers.backpack.slots.length` rather than a hardcoded constant.
+- **Atomic Slot Transactions:** `useInventoryStore.moveItem` supports all 4 drag directions (`Inventory -> Inventory`, `Inventory -> Equipment`, `Equipment -> Inventory`, `Equipment -> Equipment`), swapping or replacing slot occupants deterministically.
+- **Template-Aware Compatibility:** Drop validity is evaluated by `evaluateSlotCompatibility()` in `src/lib/equipmentCompatibility.ts`, resolving `ItemInstance` template references via cached Atlas metadata before validating slot types (`VALID`, `INVALID`, `REPLACE`).
+- **Contextual Ammunition Slot:** The `EquipmentDoll` automatically exposes an `ammo` slot when an equipped main-hand weapon requires ammunition (e.g. shortbow -> arrow, crossbow -> bolt). Ranged weapon attacks in combat (`ActionPanel.tsx`) consume 1 ammunition unit per attack from the equipped ammunition instance.
 
 ### Legacy compatibility
 
 Characters without `saveVersion === 2` still use the older shape, including `backpack` arrays and direct `inventory` equipment mappings.
 
-This compatibility path is currently part of the production code and must not be removed as though V2 were already the only representation. fileciteturn96file0
+This compatibility path is currently part of the production code and must not be removed as though V2 were already the only representation.
 
 ## Registry / instance / template model
 
@@ -89,13 +103,14 @@ To ensure definitions are available before presentation components render, canon
 - party capacity statistics;
 - add/remove operations;
 - equip/unequip;
+- atomic slot-to-slot move (`moveItem`);
 - transfers.
 
-Some actions delegate to `useCharacterStore` because character inventory is persisted as part of character state. This boundary should be considered when future inventory refactoring is planned. fileciteturn96file0
+Some actions delegate to `useCharacterStore` because character inventory is persisted as part of character state.
 
-## Inventory packs
+## Equipment pack expansion
 
-The store resolves item packs through `getPackContents` when adding a pack. This keeps starting/equipment pack expansion separate from the inventory UI itself. fileciteturn96file0
+The Character Creator equipment ingestion pipeline (`characterPipeline.ts` method `expandAndCreateItemInstances()` and `EquipmentStep.tsx`) resolves selected equipment packs (e.g. `explorers-pack`, `dungeoneers-pack`) via `getPackContents()`, creates canonical `ItemInstance` records for each item, and inserts them into the character's backpack container state at character creation time.
 
 ## Party inventory and logistics
 
@@ -107,33 +122,7 @@ Current state includes:
 - `partyVehicles`;
 - `partyStats` including capacity-related values.
 
-These are distinct from an individual character's V2 `items`/`containers` representation. fileciteturn96file0
-
-## Known limitations
-
-The current implementation has technical debt that should be treated as real implementation constraints rather than hidden by the documentation:
-
-- legacy and V2 representations coexist;
-- several inventory types are still typed as `any`;
-- inventory actions dynamically import `useCharacterStore`;
-- the current store combines UI state, party inventory and character-inventory orchestration;
-- transfer/equip logic has compatibility branches for both models.
-
-These are candidates for future refactoring, but should not be turned into a large speculative rewrite without a defined migration plan.
-
-## Migration direction
-
-The long-term direction is to converge on the versioned item-instance/container model while preserving save compatibility until migration is explicitly complete.
-
-A future migration should define:
-
-1. canonical V2 schema;
-2. migration/read compatibility strategy;
-3. save-version guarantees;
-4. validation of item/container references;
-5. tests for equip, transfer, stacking and persistence.
-
-Do not remove the legacy branch merely because the V2 architecture is preferred.
+These are distinct from an individual character's V2 `items`/`containers` representation.
 
 ## Data integrity rules
 

@@ -1,6 +1,13 @@
 import { create } from 'zustand';
 import { getPackContents } from '../lib/itemPacks';
 import { playSlotSound } from '../services/storageService';
+import { evaluateSlotCompatibility } from '../lib/equipmentCompatibility';
+
+interface MoveLocation {
+  type: 'equip_slot' | 'inventory_slot' | 'backpack';
+  slotId?: string;
+  slotIndex?: number;
+}
 
 interface InventoryState {
   isInventoryOpen: boolean;
@@ -21,6 +28,7 @@ interface InventoryState {
   removeFromBackpack: (indexOrItemId: any) => void;
   equipItem: (itemOrItemId: any, slotId: string) => void;
   unequipItem: (slotId: string) => void;
+  moveItem: (params: { source: MoveLocation; target: MoveLocation; item: any; characterId?: string }) => void;
   updatePartyStats: (stats: Partial<InventoryState['partyStats']>) => void;
   transferItem: (params: { sourceId: string; targetId: string; itemId: string }) => void;
   addToPartyInventory: (item: any) => void;
@@ -45,9 +53,6 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
   setIsInventoryMenuOpen: (isInventoryMenuOpen) => set({ isInventoryMenuOpen }),
 
   addToBackpack: (item) => {
-    // Note: Needs access to useCharacterStore to find activeCharacterId
-    // For now we'll rely on the caller to provide it or use a cross-store pattern
-    // Alternatively, we can use useCharacterStore.getState()
     import('./useCharacterStore').then(({ useCharacterStore }) => {
       const { activeCharacterId, characters } = useCharacterStore.getState();
       const packContents = getPackContents(item.index || item.name);
@@ -222,6 +227,123 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         return { ...char, inventory: newInventory, backpack: [...char.backpack, item] };
       });
       useCharacterStore.setState({ characters: newCharacters });
+    });
+  },
+
+  moveItem: ({ source, target, item, characterId }) => {
+    import('./useCharacterStore').then(({ useCharacterStore }) => {
+      const { activeCharacterId, characters } = useCharacterStore.getState();
+      const targetCharId = characterId || activeCharacterId;
+
+      useCharacterStore.setState({
+        characters: characters.map(char => {
+          if (char.id !== targetCharId) return char;
+
+          if (char.saveVersion === 2) {
+            const itemId = item.id;
+            const equipment = { ...char.equipment! };
+            const containers = { ...char.containers! };
+            const backpack = Object.values(containers).find(c => c.type === 'backpack');
+            if (!backpack) return char;
+
+            // Target 1: Equipment Slot
+            if (target.type === 'equip_slot' && target.slotId) {
+              const targetEquipSlot = equipment.slots.find(s => s.id === target.slotId);
+              if (!targetEquipSlot) return char;
+
+              const occupantId = targetEquipSlot.itemId;
+
+              // Validate occupant compatibility if swapping into a source equipment slot
+              if (occupantId && source.type === 'equip_slot' && source.slotId) {
+                const occupantItem = char.items?.[occupantId];
+                const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, char.inventory || {}, char.ruleset);
+                if (occupantComp === 'INVALID') return char;
+              }
+
+              // Clear item from source location
+              if (source.type === 'equip_slot' && source.slotId) {
+                const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                if (srcSlot) srcSlot.itemId = occupantId;
+              } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
+                if (backpack.slots[source.slotIndex]) {
+                  backpack.slots[source.slotIndex].itemId = occupantId;
+                }
+              } else {
+                backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: occupantId } : s);
+              }
+
+              targetEquipSlot.itemId = itemId;
+              playSlotSound();
+              return { ...char, equipment, containers };
+            }
+
+            // Target 2: Specific Inventory Slot or Backpack
+            if (target.type === 'inventory_slot' && target.slotIndex !== undefined) {
+              const targetIndex = target.slotIndex;
+              if (targetIndex < 0 || targetIndex >= backpack.slots.length) return char;
+
+              const occupantId = backpack.slots[targetIndex].itemId;
+
+              // Validate occupant compatibility if swapping into a source equipment slot
+              if (occupantId && source.type === 'equip_slot' && source.slotId) {
+                const occupantItem = char.items?.[occupantId];
+                const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, char.inventory || {}, char.ruleset);
+                if (occupantComp === 'INVALID') {
+                  // If occupant is not compatible with source equipment slot, unequip occupant to open backpack slot
+                  const emptyBagSlot = backpack.slots.find((s, idx) => s.itemId === null && idx !== targetIndex);
+                  if (emptyBagSlot) {
+                    emptyBagSlot.itemId = occupantId;
+                  }
+                  const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                  if (srcSlot) srcSlot.itemId = null;
+                  backpack.slots[targetIndex].itemId = itemId;
+                  playSlotSound();
+                  return { ...char, equipment, containers };
+                }
+              }
+
+              // Move / Swap
+              if (source.type === 'equip_slot' && source.slotId) {
+                const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                if (srcSlot) srcSlot.itemId = occupantId;
+              } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
+                if (backpack.slots[source.slotIndex]) {
+                  backpack.slots[source.slotIndex].itemId = occupantId;
+                }
+              }
+
+              backpack.slots[targetIndex].itemId = itemId;
+              playSlotSound();
+              return { ...char, equipment, containers };
+            }
+
+            // Fallback unequip to first open backpack slot
+            if (source.type === 'equip_slot' && source.slotId) {
+              const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+              if (srcSlot) srcSlot.itemId = null;
+              const emptySlot = backpack.slots.find(s => s.itemId === null);
+              if (emptySlot) emptySlot.itemId = itemId;
+              playSlotSound();
+              return { ...char, equipment, containers };
+            }
+
+            return char;
+          }
+
+          // V1 Compatibility Branch
+          if (target.type === 'equip_slot' && target.slotId) {
+            get().equipItem(item, target.slotId);
+            return useCharacterStore.getState().characters.find(c => c.id === targetCharId) || char;
+          }
+
+          if (source.type === 'equip_slot' && source.slotId) {
+            get().unequipItem(source.slotId);
+            return useCharacterStore.getState().characters.find(c => c.id === targetCharId) || char;
+          }
+
+          return char;
+        })
+      });
     });
   },
 
