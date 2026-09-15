@@ -72,7 +72,7 @@ The existing normal quiver Atlas record describes a quiver capable of holding up
 | `dagger` | `equipment.dagger` | `starter_weapons_01` | `(0, 0)` | `weapon` | class:bard, class:rogue |
 | `dart` | `equipment.dart` | `starter_weapons_02` | `(1, 1)` | `weapon` | class:monk |
 | `diplomats_pack` | `equipment.diplomats_pack` | `starter_adventuring_01` | `(0, 3)` | `container` | class:bard, equipment_pack:diplomats-pack |
-| `dungeoneers_pack` | `equipment.dungeoneers_pack` | `starter_adventuring_01` | `(0, 1)` | `container` | class:fighter, class:monk |
+| `dungeoneers_pack` | `equipment.dungeoneers_pack` | `starter_adventuring_01` | `(0, 1)` | `container` | class:fighter, equipment_pack:dungeoneers-pack |
 | `entertainers_pack` | `equipment.entertainers_pack` | `starter_adventuring_01` | `(1, 0)` | `container` | class:bard, equipment_pack:entertainers-pack |
 | `explorers_pack` | `equipment.explorers_pack` | `starter_adventuring_01` | `(0, 0)` | `container` | class:barbarian, class:cleric |
 | `greataxe` | `equipment.greataxe` | `starter_weapons_01` | `(3, 1)` | `weapon` | class:barbarian |
@@ -85,7 +85,7 @@ The existing normal quiver Atlas record describes a quiver capable of holding up
 | `longsword` | `equipment.longsword` | `starter_weapons_01` | `(2, 2)` | `weapon` | class:bard |
 | `mace` | `equipment.mace` | `starter_weapons_01` | `(0, 3)` | `weapon` | class:cleric |
 | `mess_kit` | `equipment.mess_kit` | `starter_adventuring_01` | `(3, 3)` | `adventuring_gear` | pack_content:explorers-pack |
-| `priests_pack` | `equipment.priests_pack` | `starter_adventuring_01` | `(1, 1)` | `container` | class:cleric, class:paladin |
+| `priests_pack` | `equipment.priests_pack` | `starter_adventuring_01` | `(1, 1)` | `container` | class:cleric, equipment_pack:priests-pack |
 | `quarterstaff` | `equipment.quarterstaff` | `starter_weapons_01` | `(1, 0)` | `weapon` | class:wizard, background:hermit |
 | `rapier` | `equipment.rapier` | `starter_weapons_01` | `(2, 1)` | `weapon` | class:bard, class:rogue |
 | `rations` | `equipment.rations` | `starter_adventuring_01` | `(2, 3)` | `consumable` | pack_content:burglars-pack, pack_content:dungeoneers-pack |
