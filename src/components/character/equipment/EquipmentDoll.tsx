@@ -46,11 +46,8 @@ const SLOT_SVG_MAP: Record<string, string> = {
   ring_1: '/assets/icons/svg/equipment_doll/ring.svg',
   ring_2: '/assets/icons/svg/equipment_doll/ring.svg',
   focus: '/assets/icons/svg/equipment_doll/focus.svg',
-  ammo: '/assets/icons/svg/equipment_doll/weapon.svg',
   belt: '/assets/icons/svg/equipment_doll/belt.svg',
   cloak: '/assets/icons/svg/equipment_doll/cloak.svg',
-  potion: '/assets/icons/svg/equipment_doll/tools.svg',
-  scroll: '/assets/icons/svg/equipment_doll/focus.svg',
   trinket: '/assets/icons/svg/equipment_doll/gem.svg',
 };
 

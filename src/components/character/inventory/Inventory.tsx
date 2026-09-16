@@ -95,6 +95,30 @@ export const Inventory: React.FC<InventoryProps> = ({
 
   const occupiedCount = canonicalSlots.filter(Boolean).length;
 
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = React.useState<number>(0);
+
+  React.useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Compute column count dynamically based strictly on container width
+  const dynamicCols = React.useMemo(() => {
+    if (containerWidth <= 0) return 'grid-cols-4 sm:grid-cols-6 lg:grid-cols-8';
+    if (containerWidth >= 520) return 'grid-cols-8';
+    if (containerWidth >= 440) return 'grid-cols-7';
+    if (containerWidth >= 360) return 'grid-cols-6';
+    if (containerWidth >= 260) return 'grid-cols-5';
+    return 'grid-cols-4';
+  }, [containerWidth]);
+
   return (
     <div className="space-y-2 select-none font-body h-full flex flex-col min-h-0">
       {/* Backpack Header & Dynamic Capacity Bar */}
@@ -185,8 +209,8 @@ export const Inventory: React.FC<InventoryProps> = ({
       )}
 
       {/* Dense 9:16 Slot Grid Surface preserving canonical slot identity `slotIdx` */}
-      <div className="flex-1 p-2 rounded-lg border border-dragon-gold/20 relative overflow-y-auto custom-scrollbar bg-stone-950/40 shadow-inner min-h-0">
-        <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-1.5 relative z-10">
+      <div ref={containerRef} className="flex-1 p-2 rounded-lg border border-dragon-gold/20 relative overflow-y-auto custom-scrollbar bg-stone-950/40 shadow-inner min-h-0">
+        <div className={cn("grid gap-1.5 relative z-10", dynamicCols)}>
           {canonicalSlots.map((rawItem, slotIdx) => {
             // Apply filtering visually while keeping slotIdx strictly tied to canonical slot index
             let itemToShow = rawItem;

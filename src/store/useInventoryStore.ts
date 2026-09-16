@@ -4,9 +4,10 @@ import { playSlotSound } from '../services/storageService';
 import { evaluateSlotCompatibility } from '../lib/equipmentCompatibility';
 
 interface MoveLocation {
-  type: 'equip_slot' | 'inventory_slot' | 'backpack';
+  type: 'equip_slot' | 'inventory_slot' | 'backpack' | 'container_slot';
   slotId?: string;
   slotIndex?: number;
+  containerId?: string;
 }
 
 interface InventoryState {
@@ -264,6 +265,11 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
               if (source.type === 'equip_slot' && source.slotId) {
                 const srcSlot = equipment.slots.find(s => s.id === source.slotId);
                 if (srcSlot) srcSlot.itemId = occupantId;
+              } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
+                const srcContainer = containers[source.containerId];
+                if (srcContainer?.slots[source.slotIndex]) {
+                  srcContainer.slots[source.slotIndex].itemId = occupantId;
+                }
               } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
                 if (backpack.slots[source.slotIndex]) {
                   backpack.slots[source.slotIndex].itemId = occupantId;
@@ -273,6 +279,33 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
               }
 
               targetEquipSlot.itemId = itemId;
+              playSlotSound();
+              return { ...char, equipment, containers };
+            }
+
+            // Target 1.5: Nested Container Slot
+            if (target.type === 'container_slot' && target.containerId && target.slotIndex !== undefined) {
+              const targetContainer = containers[target.containerId];
+              if (!targetContainer || target.slotIndex < 0 || target.slotIndex >= targetContainer.slots.length) return char;
+
+              const occupantId = targetContainer.slots[target.slotIndex].itemId;
+
+              // Clear item from source location and place occupant
+              if (source.type === 'equip_slot' && source.slotId) {
+                const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                if (srcSlot) srcSlot.itemId = occupantId;
+              } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
+                const srcContainer = containers[source.containerId];
+                if (srcContainer?.slots[source.slotIndex]) {
+                  srcContainer.slots[source.slotIndex].itemId = occupantId;
+                }
+              } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
+                if (backpack.slots[source.slotIndex]) {
+                  backpack.slots[source.slotIndex].itemId = occupantId;
+                }
+              }
+
+              targetContainer.slots[target.slotIndex].itemId = itemId;
               playSlotSound();
               return { ...char, equipment, containers };
             }

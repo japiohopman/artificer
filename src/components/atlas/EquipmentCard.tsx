@@ -13,6 +13,7 @@ import { GameIcon, GameIconName } from '../../game_icons';
 import { DiceText } from '../dice/DiceText';
 import { BookReader } from '../bookreader/BookReader';
 import { EquipmentSprite } from '../character/equipment/EquipmentSprite';
+import { InventorySlot } from '../character/inventory/InventorySlot';
 
 import { normalizeImageUrl, playSuccessSound } from '../../services/storageService';
 
@@ -24,7 +25,7 @@ interface EquipmentCardProps {
   equipment: any;
   className?: string;
   isModal?: boolean;
-  variant?: 'card' | 'tile';
+  variant?: 'card' | 'tile' | 'inspector';
   onClose?: () => void;
 }
 
@@ -43,6 +44,112 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
   if (!equipment) return null;
 
   const currentItem = (equipment.versions && equipment.versions[activeTier]) || equipment;
+
+  // Render Inspector Panel Variant (Fits inside fixed 320px panel)
+  if (variant === 'inspector') {
+    const isMagic = currentItem.rarity && currentItem.rarity !== 'Common';
+    const fallbackUrl = normalizeImageUrl(currentItem.imageUrl || currentItem.image, currentItem._type || 'equipment', currentItem.index || currentItem.id, currentItem.name);
+    const descriptionMarkdown = Array.isArray(currentItem.desc)
+      ? currentItem.desc.join('\n\n')
+      : (typeof currentItem.desc === 'string' ? currentItem.desc : "No description available.");
+
+    return (
+      <div
+        className={cn(
+          "w-full bg-parchment-100 border-2 border-dragon-gold/50 rounded-xl p-3 flex flex-col gap-3 relative shadow-md overflow-hidden text-stone-900 font-body select-none",
+          isMagic && "ring-1 ring-dragon-gold border-dragon-gold",
+          className
+        )}
+      >
+        {/* Header: Item Name, Category, Cost/Weight */}
+        <div className="border-b border-dragon-gold/30 pb-2 flex flex-col gap-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-header text-sm font-bold text-dragon-darkRed uppercase tracking-tight leading-tight">
+              {currentItem.name || currentItem.title || 'Unknown Item'}
+            </h3>
+            {currentItem.rarity && (
+              <span className="text-[8px] font-mono font-bold uppercase px-1.5 py-0.5 rounded bg-dragon-gold/20 text-dragon-darkRed border border-dragon-gold/40 shrink-0">
+                {currentItem.rarity}
+              </span>
+            )}
+          </div>
+          <div className="flex items-center justify-between text-[8px] font-mono text-stone-600">
+            <span className="uppercase tracking-wider font-semibold text-dragon-gold">
+              {currentItem.equipment_category?.name || currentItem.equipment_category || currentItem._type || 'Gear'}
+            </span>
+            <div className="flex items-center gap-2">
+              {currentItem.cost && (
+                <span>{currentItem.cost.quantity || currentItem.cost} {currentItem.cost.unit || 'gp'}</span>
+              )}
+              {currentItem.weight && <span>{currentItem.weight} lbs</span>}
+            </div>
+          </div>
+        </div>
+
+        {/* Artwork Display */}
+        <div className="w-full aspect-[16/9] bg-stone-950/80 rounded-lg border border-dragon-gold/30 flex items-center justify-center relative overflow-hidden p-1 shrink-0">
+          <EquipmentSprite
+            itemKey={currentItem}
+            alt={currentItem.name}
+            className="w-full h-full object-contain drop-shadow-md"
+            fallbackUrl={fallbackUrl}
+          />
+        </div>
+
+        {/* Description Body */}
+        <div className="text-[9px] text-stone-800 leading-relaxed max-h-36 overflow-y-auto custom-scrollbar pr-1 italic">
+          <Markdown remarkPlugins={[remarkGfm]}>
+            {descriptionMarkdown}
+          </Markdown>
+        </div>
+
+        {/* Container Slots Grid (If item is a container) */}
+        {(() => {
+          const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
+          if (!activeChar || !activeChar.containers) return null;
+
+          const containerId = currentItem.id || currentItem.containerId;
+          const containerObj = containerId ? activeChar.containers[containerId] : Object.values(activeChar.containers).find(c => c.id === currentItem.id || c.name === currentItem.name);
+
+          if (!containerObj || !containerObj.slots) return null;
+
+          return (
+            <div className="pt-2 border-t border-dragon-gold/30 flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-[9px] font-header font-bold text-dragon-darkRed uppercase tracking-wider flex items-center gap-1">
+                  <GameIcon name="box" size={10} /> Container Contents
+                </span>
+                <span className="text-[8px] font-mono text-stone-600">
+                  {containerObj.slots.filter(s => s.itemId).length} / {containerObj.slots.length} Slots
+                </span>
+              </div>
+              <div className="grid grid-cols-5 gap-1 bg-black/10 p-1.5 rounded-lg border border-dragon-gold/20">
+                {containerObj.slots.map((slot, idx) => {
+                  const itemInst = slot.itemId && activeChar.items ? activeChar.items[slot.itemId] : null;
+                  const mappedItem = itemInst ? {
+                    id: itemInst.id,
+                    name: itemInst.customName || itemInst.template,
+                    template: itemInst.template,
+                    quantity: itemInst.quantity || 1,
+                    imageUrl: `/assets/atlas/equipment/images/${itemInst.template}.webp`
+                  } : null;
+
+                  return (
+                    <InventorySlot
+                      key={idx}
+                      slotIndex={idx}
+                      item={mappedItem}
+                      characterId={activeChar.id}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+    );
+  }
 
   // Render 9:16 Portrait Tile Variant
   if (variant === 'tile') {

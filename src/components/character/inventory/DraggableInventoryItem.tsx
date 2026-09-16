@@ -69,12 +69,12 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         onContextMenu={handleContextMenu}
         title={`${item.name} (${item.kind || item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
-          "aspect-[9/16] w-full bg-parchment-200/80 hover:bg-parchment-200 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none shadow-xs overflow-hidden pointer-events-auto",
+          "w-full h-full bg-parchment-200/80 hover:bg-parchment-200 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none shadow-xs overflow-hidden pointer-events-auto",
           isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
           isDragging && "opacity-40 border-dashed border-dragon-gold/50 shadow-inner"
         )}
       >
-        {/* Direct Artwork Frame: Fills 100% of the 9:16 Slot without inner padding */}
+        {/* Direct Artwork Frame: Fills 100% of the parent 9:16 Slot without inner padding */}
         <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0">
           <EquipmentSprite
             itemKey={item}
