@@ -77,10 +77,10 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
   const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot, equippedItems) : false;
 
-  let highlightStyle = "bg-stone-900/80 border-dragon-gold/30 hover:border-dragon-gold/70 hover:bg-stone-900/95 shadow-sm backdrop-blur-xs";
+  let highlightStyle = "bg-stone-900/80 border-dragon-gold/30 hover:border-dragon-gold/70 hover:bg-stone-900/95 shadow-xs backdrop-blur-xs";
 
   if (equippedItem) {
-    highlightStyle = "bg-parchment-200/95 border-dragon-gold shadow-md opacity-100 z-10";
+    highlightStyle = "bg-parchment-200/95 border-dragon-gold shadow-xs opacity-100 z-10";
   }
 
   if (activeDragItem && isCompatible && !isOver) {
@@ -89,9 +89,9 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
   if (isActive || isOver) {
     if (activeDragItem && !isCompatible) {
-      highlightStyle = "bg-red-950/80 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.7)] scale-105 z-20";
+      highlightStyle = "bg-red-950/80 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.7)] z-20";
     } else {
-      highlightStyle = "bg-emerald-950/80 border-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)] scale-105 z-20";
+      highlightStyle = "bg-emerald-950/80 border-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)] z-20";
     }
   }
 
@@ -103,7 +103,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       onClick={() => onSlotClick?.(slot)}
       onContextMenu={handleContextMenu}
       className={cn(
-        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0.5 transition-all duration-200 relative overflow-hidden group w-full cursor-pointer pointer-events-auto",
+        "aspect-[9/16] border rounded flex flex-col items-center justify-center p-0 transition-all duration-150 relative overflow-hidden group w-full cursor-pointer pointer-events-auto",
         highlightStyle
       )}
     >
@@ -113,15 +113,15 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       </div>
 
       {equippedItem ? (
-        <div className="absolute inset-0 flex items-center justify-center p-0.5 z-10">
+        <div className="absolute inset-0 flex items-center justify-center p-0 z-10">
           <EquipmentSprite
             itemKey={itemKey}
             alt={equippedItem.name}
-            className="w-full h-full object-contain drop-shadow-sm"
+            className="w-full h-full object-contain drop-shadow-xs"
             fallbackUrl={fallbackUrl}
           />
           {equippedItem.quantity > 1 && (
-            <span className="absolute bottom-0 right-0 bg-dragon-darkRed text-white text-[6px] font-mono font-bold px-1 rounded-tl shadow">
+            <span className="absolute bottom-0 right-0 bg-dragon-darkRed text-white text-[6px] font-mono font-bold px-1 rounded-tl shadow-xs">
               x{equippedItem.quantity}
             </span>
           )}
@@ -137,15 +137,6 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
             isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300/80"
           )}>
             {slotDef?.label || slot}
-          </span>
-        </div>
-      )}
-
-      {/* Hover Tooltip */}
-      {equippedItem && (
-        <div className="absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
-          <span className="text-[5px] text-white font-bold uppercase text-center leading-tight break-words">
-            {equippedItem.name} {equippedItem.quantity > 1 ? `(x${equippedItem.quantity})` : ''}
           </span>
         </div>
       )}
@@ -220,7 +211,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   return (
     <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 select-none overflow-hidden", className)}>
       {/* Central SVG Character Silhouette Body Anchor */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 scale-90 sm:scale-95 transition-opacity z-0">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 transition-opacity z-0">
         <GenderBodySvg gender={gender} className="h-full max-h-[340px] w-auto drop-shadow-md" />
       </div>
 

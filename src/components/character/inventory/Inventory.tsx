@@ -186,7 +186,7 @@ export const Inventory: React.FC<InventoryProps> = ({
 
       {/* Dense 9:16 Slot Grid Surface preserving canonical slot identity `slotIdx` */}
       <div className="flex-1 p-2 rounded-lg border border-dragon-gold/20 relative overflow-y-auto custom-scrollbar bg-stone-950/40 shadow-inner min-h-0">
-        <div className="grid grid-cols-4 sm:grid-cols-6 gap-1.5 relative z-10">
+        <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-1.5 relative z-10">
           {canonicalSlots.map((rawItem, slotIdx) => {
             // Apply filtering visually while keeping slotIdx strictly tied to canonical slot index
             let itemToShow = rawItem;

@@ -3,7 +3,6 @@ import { useDroppable } from '@dnd-kit/core';
 import { DraggableInventoryItem } from './DraggableInventoryItem';
 import { cn } from '../../../lib/utils';
 import { useUIStore } from '../../../store/useUIStore';
-import { useCharacterStore } from '../../../store/useCharacterStore';
 
 interface InventorySlotProps {
   slotIndex: number;
@@ -46,7 +45,7 @@ export const InventorySlot: React.FC<InventorySlotProps> = ({
       className={cn(
         "aspect-[9/16] w-full rounded-lg border flex flex-col items-center justify-center relative transition-all duration-150 select-none overflow-hidden cursor-pointer",
         item
-          ? "bg-parchment-200/60 border-dragon-gold/40 shadow-xs hover:border-dragon-gold hover:bg-parchment-200/90"
+          ? "border-transparent bg-transparent"
           : "bg-black/20 border-dashed border-parchment-300/30 hover:border-dragon-gold/30 hover:bg-black/25",
         isOver && "border-dragon-gold bg-dragon-gold/20 shadow-[0_0_10px_rgba(212,175,55,0.5)] z-10",
         activeDragItem && !item && !isOver && "border-dragon-gold/30 bg-dragon-gold/5"

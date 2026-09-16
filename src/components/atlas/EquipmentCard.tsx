@@ -52,31 +52,25 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
     return (
       <div
         className={cn(
-          "aspect-[9/16] w-full bg-parchment-200/60 hover:bg-parchment-200/90 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-1 cursor-pointer transition-all select-none shadow-sm group overflow-hidden pointer-events-auto",
+          "aspect-[9/16] w-full bg-parchment-200/80 hover:bg-parchment-200 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-0 cursor-pointer transition-colors select-none shadow-xs group overflow-hidden pointer-events-auto",
           isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
           className
         )}
       >
-        <div className="w-full h-full flex items-center justify-center relative overflow-hidden rounded pointer-events-none p-0.5">
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0">
           <EquipmentSprite
             itemKey={currentItem}
             alt={currentItem.name}
-            className="w-full h-full object-contain pointer-events-none drop-shadow-sm"
+            className="w-full h-full object-contain pointer-events-none drop-shadow-xs"
             fallbackUrl={fallbackUrl}
           />
         </div>
 
         {currentItem.quantity > 1 && (
-          <span className="absolute bottom-1 right-1 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
+          <span className="absolute bottom-0.5 right-0.5 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
             x{currentItem.quantity}
           </span>
         )}
-
-        <div className="absolute inset-x-0 bottom-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity p-0.5 pointer-events-none z-20 text-center">
-          <p className="text-[6px] font-black text-parchment-100 uppercase tracking-tight truncate leading-tight">
-            {currentItem.name}
-          </p>
-        </div>
       </div>
     );
   }

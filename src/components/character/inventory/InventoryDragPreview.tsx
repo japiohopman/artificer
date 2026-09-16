@@ -17,11 +17,11 @@ export const InventoryDragPreview: React.FC<InventoryDragPreviewProps> = ({ item
   return (
     <div
       className={cn(
-        "w-20 aspect-[9/16] bg-parchment-100 border-2 border-dragon-gold shadow-2xl rounded-lg flex flex-col items-center justify-between p-1.5 pointer-events-none scale-105 rotate-1 opacity-95 z-[9999]",
+        "w-16 aspect-[9/16] bg-parchment-100/95 border-2 border-dragon-gold shadow-2xl rounded-lg flex items-center justify-center p-0 pointer-events-none opacity-95 z-[9999] overflow-hidden",
         isMagic && "ring-2 ring-dragon-gold bg-dragon-gold/10"
       )}
     >
-      <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded">
+      <div className="w-full h-full flex items-center justify-center relative overflow-hidden p-0">
         <EquipmentSprite
           itemKey={itemKey}
           alt={item.name}
@@ -30,16 +30,11 @@ export const InventoryDragPreview: React.FC<InventoryDragPreviewProps> = ({ item
         />
       </div>
 
-      <div className="w-full text-center">
-        <p className="text-[7px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-tight w-full px-0.5">
-          {item.name}
-        </p>
-        {item.quantity > 1 && (
-          <span className="bg-dragon-red text-white px-1 rounded-sm font-mono font-bold text-[6px]">
-            x{item.quantity}
-          </span>
-        )}
-      </div>
+      {item.quantity > 1 && (
+        <span className="absolute bottom-1 right-1 bg-dragon-darkRed text-white px-1 py-0.2 rounded font-mono font-bold text-[6px]">
+          x{item.quantity}
+        </span>
+      )}
     </div>
   );
 };
