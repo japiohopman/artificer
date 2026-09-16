@@ -26,18 +26,19 @@ export interface TaxonomyCategoryDef {
   id: ItemSubcategory;
   label: string;
   root: RootTaxonomy;
+  svgIcon?: string;
 }
 
 export const EQUIPMENT_SUBCATEGORIES: TaxonomyCategoryDef[] = [
-  { id: 'weapons', label: 'Weapons', root: 'EQUIPMENT' },
-  { id: 'armor', label: 'Armor', root: 'EQUIPMENT' },
-  { id: 'shields', label: 'Shields', root: 'EQUIPMENT' },
+  { id: 'weapons', label: 'Weapons', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/weapon.svg' },
+  { id: 'armor', label: 'Armor', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/chest.svg' },
+  { id: 'shields', label: 'Shields', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/shield.svg' },
   { id: 'ammunition', label: 'Ammunition', root: 'EQUIPMENT' },
-  { id: 'tools', label: 'Tools', root: 'EQUIPMENT' },
-  { id: 'accessories', label: 'Accessories', root: 'EQUIPMENT' },
-  { id: 'containers', label: 'Containers', root: 'EQUIPMENT' },
+  { id: 'tools', label: 'Tools', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/tools.svg' },
+  { id: 'accessories', label: 'Accessories', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/ring.svg' },
+  { id: 'containers', label: 'Containers', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/back.svg' },
   { id: 'adventuring_gear', label: 'Adventuring Gear', root: 'EQUIPMENT' },
-  { id: 'spellcasting_gear', label: 'Spellcasting Gear', root: 'EQUIPMENT' },
+  { id: 'spellcasting_gear', label: 'Spellcasting Gear', root: 'EQUIPMENT', svgIcon: '/assets/icons/svg/equipment_doll/focus.svg' },
   { id: 'consumables', label: 'Consumables', root: 'EQUIPMENT' },
 ];
 
@@ -47,7 +48,7 @@ export const MATERIALS_SUBCATEGORIES: TaxonomyCategoryDef[] = [
   { id: 'keys', label: 'Keys', root: 'MATERIALS' },
   { id: 'quest_items', label: 'Quest Items', root: 'MATERIALS' },
   { id: 'books', label: 'Books', root: 'MATERIALS' },
-  { id: 'valuables', label: 'Valuables', root: 'MATERIALS' },
+  { id: 'valuables', label: 'Valuables', root: 'MATERIALS', svgIcon: '/assets/icons/svg/equipment_doll/gem.svg' },
 ];
 
 export function resolveItemTaxonomy(item: any): {

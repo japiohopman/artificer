@@ -195,12 +195,15 @@ export const Inventory: React.FC<InventoryProps> = ({
                   setActiveSubcategory(sub.id);
                   soundService.playEffect('UI_CLICK_LIGHT');
                 }}
-                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer ${
+                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer flex items-center gap-1 ${
                   activeSubcategory === sub.id
                     ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
                     : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
                 }`}
               >
+                {sub.svgIcon && (
+                  <img src={sub.svgIcon} alt="" className="w-2.5 h-2.5 object-contain invert opacity-70" />
+                )}
                 {sub.label}
               </button>
             ))}

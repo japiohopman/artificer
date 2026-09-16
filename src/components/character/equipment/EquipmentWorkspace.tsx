@@ -155,63 +155,60 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
       <CharacterSelectorBar />
 
       {/* Main Fullscreen Workspace Surface */}
-      <div className="flex-1 flex flex-col md:flex-row gap-3 p-3 overflow-hidden relative z-0 min-h-0">
-        {/* LEFT WORKSPACE SURFACE: Inventory Grid + Reserved Inspector Surface */}
-        <div className="flex-1 min-w-[300px] flex flex-col lg:flex-row gap-3 overflow-hidden">
-          {/* Main Item Grid */}
-          <div className="flex-1 flex flex-col bg-white/40 rounded-xl p-2.5 border border-dragon-gold/30 shadow-2xl overflow-hidden backdrop-blur-sm">
-            <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
-              <Inventory
-                forceCharacterId={activeChar.id}
-                compactEquipped={true}
-                showCategoryTabs={!compactMode}
-                activeDragItem={activeDragItem}
-              />
-            </div>
-          </div>
-
-          {/* Reserved Fixed-Width Left Inspection Panel (w-80 shrink-0) */}
-          <div className="w-full lg:w-80 shrink-0 bg-stone-950/80 rounded-xl p-3 border border-dragon-gold/40 shadow-2xl flex flex-col overflow-y-auto custom-scrollbar backdrop-blur-md relative z-10 min-h-[320px]">
-            <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-2 mb-3">
-              <div className="flex items-center gap-2">
-                <GameIcon name="info" size={14} color="#D4AF37" />
-                <span className="font-header text-xs text-dragon-gold uppercase tracking-wider font-bold">
-                  Item Inspection
-                </span>
-              </div>
-              {inspectingItem && (
-                <button
-                  onClick={() => setInspectingItem(null)}
-                  className="text-parchment-400 hover:text-white transition-colors"
-                  title="Close Inspection"
-                >
-                  <GameIcon name="close" size={14} color="currentColor" />
-                </button>
-              )}
-            </div>
-
-            {inspectingItem && inspectingItem.item ? (
-              <div className="flex-1 flex flex-col items-center justify-start gap-3 animate-fade-in w-full">
-                <EquipmentCard equipment={inspectingItem.item} variant="inspector" />
-              </div>
-            ) : (
-              <div className="flex-1 flex flex-col items-center justify-center text-center p-4 gap-2 opacity-50 select-none">
-                <div className="w-12 h-12 rounded-full border border-dragon-gold/30 flex items-center justify-center bg-black/40">
-                  <GameIcon name="search" size={20} color="#D4AF37" />
-                </div>
-                <p className="text-[10px] font-header font-bold text-dragon-gold uppercase tracking-wider">
-                  No Item Selected
-                </p>
-                <p className="text-[8px] font-mono text-parchment-400 max-w-[180px]">
-                  Click or right-click any item in your inventory or paper doll to inspect its stats, details, and actions.
-                </p>
-              </div>
-            )}
+      <div className="flex-1 flex flex-col lg:flex-row gap-3 p-3 overflow-hidden relative z-0 min-h-0">
+        {/* LEFT ANCHOR: Fixed 320px (`w-80 shrink-0`) Inventory Grid Surface */}
+        <div className="w-full lg:w-80 shrink-0 flex flex-col bg-stone-950/80 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl overflow-hidden backdrop-blur-md relative z-10">
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
+            <Inventory
+              forceCharacterId={activeChar.id}
+              compactEquipped={true}
+              showCategoryTabs={!compactMode}
+              activeDragItem={activeDragItem}
+            />
           </div>
         </div>
 
-        {/* RIGHT WORKSPACE SURFACE: Fixed 320px (`w-80 shrink-0`) Equipment Doll */}
-        <div className="w-full md:w-80 shrink-0 flex flex-col bg-stone-950/70 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+        {/* MIDDLE SURFACE: Flexible (`flex-1`) Item Inspection Surface */}
+        <div className="flex-1 min-w-[300px] bg-stone-950/70 rounded-xl p-3 border border-dragon-gold/40 shadow-2xl flex flex-col overflow-y-auto custom-scrollbar backdrop-blur-sm relative z-0">
+          <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-2 mb-3 shrink-0">
+            <div className="flex items-center gap-2">
+              <GameIcon name="info" size={14} color="#D4AF37" />
+              <span className="font-header text-xs text-dragon-gold uppercase tracking-wider font-bold">
+                Item Inspection & Details
+              </span>
+            </div>
+            {inspectingItem && (
+              <button
+                onClick={() => setInspectingItem(null)}
+                className="text-parchment-400 hover:text-white transition-colors cursor-pointer"
+                title="Close Inspection"
+              >
+                <GameIcon name="close" size={14} color="currentColor" />
+              </button>
+            )}
+          </div>
+
+          {inspectingItem && inspectingItem.item ? (
+            <div className="flex-1 flex flex-col items-center justify-start gap-3 animate-fade-in w-full max-w-2xl mx-auto">
+              <EquipmentCard equipment={inspectingItem.item} variant="inspector" />
+            </div>
+          ) : (
+            <div className="flex-1 flex flex-col items-center justify-center text-center p-6 gap-2 opacity-50 select-none">
+              <div className="w-14 h-14 rounded-full border border-dragon-gold/30 flex items-center justify-center bg-black/40">
+                <GameIcon name="search" size={24} color="#D4AF37" />
+              </div>
+              <p className="text-xs font-header font-bold text-dragon-gold uppercase tracking-wider">
+                No Item Selected
+              </p>
+              <p className="text-[9px] font-mono text-parchment-400 max-w-[240px]">
+                Click or right-click any item in your inventory or paper doll to inspect its full stats, mechanics, and nested container contents.
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* RIGHT ANCHOR: Fixed 320px (`w-80 shrink-0`) Equipment Doll Surface */}
+        <div className="w-full lg:w-80 shrink-0 flex flex-col bg-stone-950/80 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-md">
           <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1.5 mb-2 shrink-0">
             <div className="flex items-center gap-2">
               <GameIcon name="shield" size={15} className="text-dragon-gold" />
