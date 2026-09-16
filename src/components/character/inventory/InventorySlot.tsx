@@ -8,6 +8,7 @@ interface InventorySlotProps {
   slotIndex: number;
   item?: any;
   characterId: string;
+  containerId?: string;
   activeDragItem?: any;
   onClick?: () => void;
 }
@@ -16,12 +17,17 @@ export const InventorySlot: React.FC<InventorySlotProps> = ({
   slotIndex,
   item,
   characterId,
+  containerId,
   activeDragItem,
   onClick
 }) => {
+  const isNestedContainer = Boolean(containerId);
+
   const { setNodeRef, isOver } = useDroppable({
-    id: `inventory-slot-${slotIndex}`,
-    data: { type: 'inventory_slot', slotIndex, characterId }
+    id: isNestedContainer ? `container-slot-${containerId}-${slotIndex}` : `inventory-slot-${slotIndex}`,
+    data: isNestedContainer
+      ? { type: 'container_slot', containerId, slotIndex, characterId }
+      : { type: 'inventory_slot', slotIndex, characterId }
   });
 
   const handleContextMenu = (e: React.MouseEvent) => {
