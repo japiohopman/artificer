@@ -7,6 +7,7 @@ import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { isItemCompatibleWithSlot, resolveItemMetadata } from '../../../lib/equipmentCompatibility';
+import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
   EquipmentSlotId,
@@ -26,7 +27,7 @@ interface ItemDollProps {
   showSupplements?: boolean;
   maxWidth?: string;
   characterImageUrl?: string;
-  gender?: 'Male' | 'Female';
+  gender?: 'Male' | 'Female' | string;
   race?: string;
   activeDragItem?: any;
 }
@@ -76,10 +77,10 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
   const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot, equippedItems) : false;
 
-  let highlightStyle = "bg-black/20 border-parchment-300/30 hover:border-dragon-gold/50 hover:bg-black/35 opacity-75 backdrop-blur-[1px]";
+  let highlightStyle = "bg-stone-900/80 border-dragon-gold/30 hover:border-dragon-gold/70 hover:bg-stone-900/95 shadow-sm backdrop-blur-xs";
 
   if (equippedItem) {
-    highlightStyle = "bg-black/50 border-dragon-red/60 shadow-sm opacity-100 z-10";
+    highlightStyle = "bg-parchment-200/95 border-dragon-gold shadow-md opacity-100 z-10";
   }
 
   if (activeDragItem && isCompatible && !isOver) {
@@ -88,9 +89,9 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
   if (isActive || isOver) {
     if (activeDragItem && !isCompatible) {
-      highlightStyle = "bg-red-950/60 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.7)] scale-105 z-20";
+      highlightStyle = "bg-red-950/80 border-red-500 shadow-[0_0_14px_rgba(239,68,68,0.7)] scale-105 z-20";
     } else {
-      highlightStyle = "bg-emerald-950/60 border-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)] scale-105 z-20";
+      highlightStyle = "bg-emerald-950/80 border-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)] scale-105 z-20";
     }
   }
 
@@ -107,7 +108,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
       )}
     >
       {/* Background Image Slug */}
-      <div className="absolute inset-0 opacity-25 mix-blend-multiply pointer-events-none">
+      <div className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none">
         <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
       </div>
 
@@ -142,7 +143,7 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
 
       {/* Hover Tooltip */}
       {equippedItem && (
-        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
+        <div className="absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-30 p-0.5">
           <span className="text-[5px] text-white font-bold uppercase text-center leading-tight break-words">
             {equippedItem.name} {equippedItem.quantity > 1 ? `(x${equippedItem.quantity})` : ''}
           </span>
@@ -160,6 +161,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   equipment,
   items,
   equipmentDetails,
+  gender = 'male',
   activeDragItem
 }) => {
   // Resolve item for slot from equippedItems object or V2 equipment/items dictionaries
@@ -216,7 +218,12 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   );
 
   return (
-    <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 pointer-events-none", className)}>
+    <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 select-none overflow-hidden", className)}>
+      {/* Central SVG Character Silhouette Body Anchor */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 scale-90 sm:scale-95 transition-opacity z-0">
+        <GenderBodySvg gender={gender} className="h-full max-h-[340px] w-auto drop-shadow-md" />
+      </div>
+
       {/* Overlay Frame Layout over Character Body Surface */}
       <div className="relative z-10 flex gap-2 items-start justify-between">
         {/* Left Column Slots */}

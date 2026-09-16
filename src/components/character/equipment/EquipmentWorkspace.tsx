@@ -12,10 +12,13 @@ import {
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useActiveCharacter, selectCharacterById } from '../../../lib/character';
 import { useInventoryStore } from '../../../store/useInventoryStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { Inventory } from '../inventory/Inventory';
 import { EquipmentDoll } from './EquipmentDoll';
 import { InventoryDragPreview } from '../inventory/InventoryDragPreview';
 import { CharacterSelectorBar } from '../inventory/CharacterSelectorBar';
+import { ItemActionCard } from '../ItemActionCard';
+import { EquipmentCard } from '../../atlas/EquipmentCard';
 import { soundService } from '../../../services/soundService';
 import { evaluateSlotCompatibility } from '../../../lib/equipmentCompatibility';
 import { cn } from '../../../lib/utils';
@@ -39,6 +42,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
   const activeChar = forcedChar || storeActiveChar;
 
   const { moveItem, unequipItem } = useInventoryStore();
+  const { inspectingItem, setInspectingItem } = useUIStore();
   const [activeDragItem, setActiveDragItem] = useState<any>(null);
   const lastHoverTargetRef = useRef<string | null>(null);
 
@@ -147,25 +151,56 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
 
   const workspaceContent = (
     <div className={cn("w-full h-full flex flex-col bg-stone-900/40 relative overflow-hidden min-w-0 font-body", className)}>
-      {/* Top 6-Position Character Selector Bar */}
+      {/* Top 6-Position Avatar-First Character Selector Bar */}
       <CharacterSelectorBar />
 
-      {/* Main Split Body Workspace Surface */}
+      {/* Main Fullscreen Workspace Surface */}
       <div className="flex-1 flex flex-col md:flex-row gap-3 p-3 overflow-hidden relative z-0 min-h-0">
-        {/* LEFT: RPG Inventory Grid & Subcategory Workspace */}
-        <div className="flex-[1.2] min-w-[300px] flex flex-col bg-white/40 rounded-xl p-2.5 border border-dragon-gold/30 shadow-2xl overflow-hidden backdrop-blur-sm">
-          <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
-            <Inventory
-              forceCharacterId={activeChar.id}
-              compactEquipped={true}
-              showCategoryTabs={!compactMode}
-              activeDragItem={activeDragItem}
-            />
+        {/* LEFT WORKSPACE SURFACE: Inventory Grid + Left Inspection Panel */}
+        <div className="flex-1 min-w-[300px] flex flex-col lg:flex-row gap-3 overflow-hidden">
+          {/* Main Item Grid */}
+          <div className="flex-1 flex flex-col bg-white/40 rounded-xl p-2.5 border border-dragon-gold/30 shadow-2xl overflow-hidden backdrop-blur-sm">
+            <div className="flex-1 overflow-y-auto custom-scrollbar pr-0.5">
+              <Inventory
+                forceCharacterId={activeChar.id}
+                compactEquipped={true}
+                showCategoryTabs={!compactMode}
+                activeDragItem={activeDragItem}
+              />
+            </div>
           </div>
+
+          {/* Integrated Left Inspection Panel (if item selected) */}
+          {inspectingItem && (
+            <div className="w-full lg:w-80 shrink-0 bg-stone-950/80 rounded-xl p-3 border border-dragon-gold/40 shadow-2xl flex flex-col overflow-y-auto custom-scrollbar backdrop-blur-md relative z-10 animate-fade-in">
+              <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-2 mb-3">
+                <div className="flex items-center gap-2">
+                  <GameIcon name="info" size={14} color="#D4AF37" />
+                  <span className="font-header text-xs text-dragon-gold uppercase tracking-wider font-bold">
+                    Item Inspection
+                  </span>
+                </div>
+                <button
+                  onClick={() => setInspectingItem(null)}
+                  className="text-parchment-400 hover:text-white transition-colors"
+                  title="Close Inspection"
+                >
+                  <GameIcon name="close" size={14} color="currentColor" />
+                </button>
+              </div>
+
+              {inspectingItem.item && (
+                <div className="flex-1 flex flex-col items-center justify-start gap-3">
+                  <EquipmentCard equipment={inspectingItem.item} />
+                  <ItemActionCard />
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
-        {/* RIGHT: Equipment Doll Surface anchored over SVG Character Body */}
-        <div className="flex-1 min-w-[320px] flex flex-col bg-stone-950/70 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+        {/* RIGHT WORKSPACE SURFACE: Fixed 320px (`w-80 shrink-0`) Equipment Doll */}
+        <div className="w-full md:w-80 shrink-0 flex flex-col bg-stone-950/70 rounded-xl p-2.5 border border-dragon-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-sm">
           <div className="w-full flex items-center justify-between border-b border-dragon-gold/20 pb-1.5 mb-2 shrink-0">
             <div className="flex items-center gap-2">
               <GameIcon name="shield" size={15} className="text-dragon-gold" />
@@ -174,7 +209,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
               </span>
             </div>
             <span className="text-[9px] font-mono text-parchment-400 uppercase tracking-widest shrink-0">
-              Paper Doll Surface
+              320px Anchor Surface
             </span>
           </div>
 
@@ -185,6 +220,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
               equippedItems={activeChar.inventory || {}}
               equipment={activeChar.equipment}
               items={activeChar.items}
+              gender={activeChar.gender}
               onSlotClick={(slot) => {
                 if (activeChar.inventory?.[slot] || activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId) {
                   unequipItem(slot);

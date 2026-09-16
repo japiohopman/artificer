@@ -6,7 +6,6 @@ import { CharacterPanelStats } from './CharacterPanelStats';
 import { CharacterPanelTraits } from './CharacterPanelTraits';
 import { CharacterPanelBio } from './CharacterPanelBio';
 import { CharacterPanelSpells } from './CharacterPanelSpells';
-import { EquipmentWorkspace } from '../equipment/EquipmentWorkspace';
 import { useInventoryStore } from '../../../store/useInventoryStore';
 import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon } from '../../../game_icons';
@@ -39,15 +38,17 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
   const activeTab = propActiveTab !== undefined ? propActiveTab : localActiveTab;
 
   const handleTabClick = (tab: CharacterPanelTab) => {
+    if (tab === 'equipment') {
+      useInventoryStore.getState().setIsInventoryMenuOpen(true);
+      return;
+    }
+
     if (onTabChange) {
       onTabChange(tab);
     } else {
       setLocalActiveTab(tab);
     }
   };
-
-  const { unequipItem, equipItem } = useInventoryStore();
-  const { focusedItem } = useUIStore();
 
   if (!character) return null;
 
@@ -59,7 +60,7 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
   const tabs: { id: CharacterPanelTab; label: string; icon: string }[] = [
     { id: 'stats', label: 'Stats', icon: 'chart' },
     { id: 'traits', label: 'Traits', icon: 'trait' },
-    { id: 'equipment', label: 'Equipment', icon: 'equipment' },
+    { id: 'equipment', label: 'Gear', icon: 'equipment' },
     { id: 'spells', label: 'Spells', icon: 'magic_effect' },
     { id: 'bio', label: 'Bio', icon: 'pen_line' }
   ];
@@ -140,16 +141,6 @@ export const CharacterPanel: React.FC<CharacterPanelProps> = ({
         {activeTab === 'traits' && (
           <div className="absolute inset-x-1 top-1 bottom-1 z-30 p-1 overflow-y-auto custom-scrollbar bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30">
             <CharacterPanelTraits character={character} />
-          </div>
-        )}
-
-        {/* EQUIPMENT TAB OVERLAY (Z-30) */}
-        {activeTab === 'equipment' && (
-          <div className="absolute inset-x-1 top-1 bottom-1 z-30 flex items-center justify-center p-1 bg-white/85 backdrop-blur-xs rounded border border-dragon-gold/30 overflow-hidden">
-            <EquipmentWorkspace
-              forceCharacterId={character.id}
-              compactMode={true}
-            />
           </div>
         )}
 

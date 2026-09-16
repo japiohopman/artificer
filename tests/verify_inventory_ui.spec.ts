@@ -86,11 +86,11 @@ test.describe('Inventory & Equipment UI Integration', () => {
     console.log('Verifying Gear Workspace modal is visible...');
     await expect(page.getByText('Gear & Equipment Workspace').first()).toBeVisible();
 
-    console.log('Verifying Available Gear and Equipment Doll areas are visible simultaneously...');
-    await expect(page.getByText('Available Gear').first()).toBeVisible();
+    console.log('Verifying Equipment Root Category & Equipment Doll areas are visible simultaneously...');
+    await expect(page.getByRole('button', { name: /Equipment/i }).first()).toBeVisible();
     await expect(page.getByText('Equipment Doll').first()).toBeVisible();
 
-    console.log('Testing category filter tabs in Available Gear...');
+    console.log('Testing category filter tabs in Equipment Workspace...');
     const weaponsCategoryBtn = page.getByRole('button', { name: /Weapons/i }).first();
     await expect(weaponsCategoryBtn).toBeVisible();
     await weaponsCategoryBtn.click();
@@ -135,6 +135,11 @@ test.describe('Inventory & Equipment UI Integration', () => {
 
     const ammoSlot = page.locator('button').filter({ hasText: /^Ammo$/i }).first();
     await expect(ammoSlot).toBeVisible();
+
+    console.log('Switching subcategory tab back to All Gear...');
+    const allGearBtn = page.getByRole('button', { name: /All Gear/i }).first();
+    await expect(allGearBtn).toBeVisible();
+    await allGearBtn.click();
 
     console.log('Performing REAL mouse drag gesture for Arrows into contextual Ammunition slot...');
     const arrowsCard = page.locator('[title*="Arrows"]').first();
