@@ -96,12 +96,30 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
     const draggedItem = activeData.item || item;
     const sourceSlot = activeData.slotId;
     const sourceIndex = activeData.index;
+    const sourceContainerId = activeData.containerId;
 
-    const sourceLocation = sourceSlot
-      ? { type: 'equip_slot' as const, slotId: sourceSlot }
-      : { type: 'inventory_slot' as const, slotIndex: typeof sourceIndex === 'number' ? sourceIndex : undefined };
+    let sourceLocation: any;
+    if (activeData.type === 'container_slot' && sourceContainerId && typeof sourceIndex === 'number') {
+      sourceLocation = { type: 'container_slot' as const, containerId: sourceContainerId, slotIndex: sourceIndex };
+    } else if (sourceSlot) {
+      sourceLocation = { type: 'equip_slot' as const, slotId: sourceSlot };
+    } else {
+      sourceLocation = { type: 'inventory_slot' as const, slotIndex: typeof sourceIndex === 'number' ? sourceIndex : undefined };
+    }
 
-    // 1. Dragged to an Equipment Slot
+    // 1. Dragged to a Container Slot
+    if (overData.type === 'container_slot' && overData.containerId && overData.slotIndex !== undefined) {
+      moveItem({
+        source: sourceLocation,
+        target: { type: 'container_slot', containerId: overData.containerId, slotIndex: overData.slotIndex },
+        item: draggedItem,
+        characterId: activeChar.id
+      });
+      soundService.playEffect('ITEM_SLOT');
+      return;
+    }
+
+    // 2. Dragged to an Equipment Slot
     if (overData.type === 'equip_slot' && overData.slotId) {
       const targetSlot = overData.slotId;
       const compResult = evaluateSlotCompatibility(draggedItem, targetSlot, activeChar.inventory || {}, activeChar.ruleset);

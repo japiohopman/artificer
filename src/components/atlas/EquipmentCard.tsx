@@ -86,8 +86,8 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           </div>
         </div>
 
-        {/* Artwork Display */}
-        <div className="w-full aspect-[16/9] bg-stone-950/80 rounded-lg border border-dragon-gold/30 flex items-center justify-center relative overflow-hidden p-1 shrink-0">
+        {/* Artwork Display: 9:16 Portrait Frame */}
+        <div className="w-28 aspect-[9/16] mx-auto bg-stone-950/80 rounded-lg border border-dragon-gold/30 flex items-center justify-center relative overflow-hidden p-1 shrink-0">
           <EquipmentSprite
             itemKey={currentItem}
             alt={currentItem.name}
@@ -108,8 +108,9 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
           if (!activeChar || !activeChar.containers) return null;
 
-          const containerId = currentItem.id || currentItem.containerId;
-          const containerObj = containerId ? activeChar.containers[containerId] : Object.values(activeChar.containers).find(c => c.id === currentItem.id || c.name === currentItem.name);
+          const containerObj = Object.values(activeChar.containers).find(
+            c => c.id === currentItem.containerId || c.id === currentItem.id || c.name === currentItem.name
+          );
 
           if (!containerObj || !containerObj.slots) return null;
 
@@ -140,6 +141,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                       slotIndex={idx}
                       item={mappedItem}
                       characterId={activeChar.id}
+                      containerId={containerObj.id}
                     />
                   );
                 })}

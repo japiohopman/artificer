@@ -9,7 +9,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { getCharacterActions, ActionHudAction } from '../../../lib/tokenActionHud';
 import { DeathSavesPanel } from './DeathSavesPanel';
 import { calculateWeaponAttackBonus } from '../../../lib/statCalculations';
-import { resolveItemMetadata } from '../../../lib/equipmentCompatibility';
 
 export const ActionPanel: React.FC = () => {
   const {
@@ -84,56 +83,16 @@ export const ActionPanel: React.FC = () => {
     addLog(`Action selected: ${action.name}`, 'info');
 
     if (action.id === 'attack') {
-      let equippedWeapon: any = null;
-      let equippedAmmoItem: any = null;
-      let ammoSlotRecord: any = null;
+      setIsTargeting(true);
 
+      // Dynamically calculate attack bonus and damage from equipped weapon / active character
+      let equippedWeapon: any = null;
       if (activeChar?.equipment && activeChar?.items) {
-        const weaponSlot = activeChar.equipment.slots.find((s: any) => s.id === 'main_hand' || s.id === 'off_hand');
+        const weaponSlot = activeChar.equipment.slots.find(s => s.id === 'main_hand' || s.id === 'off_hand');
         if (weaponSlot?.itemId) {
           equippedWeapon = activeChar.items[weaponSlot.itemId];
         }
-
-        ammoSlotRecord = activeChar.equipment.slots.find((s: any) => s.id === 'ammo');
-        if (ammoSlotRecord?.itemId) {
-          equippedAmmoItem = activeChar.items[ammoSlotRecord.itemId];
-        }
       }
-
-      // Check if weapon requires ammunition
-      const weaponMeta = resolveItemMetadata(equippedWeapon, activeChar?.ruleset);
-      const weaponIndex = (weaponMeta?.index || weaponMeta?.template || '').toLowerCase();
-      const requiresAmmo = weaponIndex.includes('bow') || weaponIndex.includes('crossbow') || weaponIndex.includes('blowgun');
-
-      if (requiresAmmo) {
-        if (!equippedAmmoItem || (equippedAmmoItem.quantity || 0) <= 0) {
-          addLog(`Cannot perform ranged attack: No ammunition equipped in Ammunition slot!`, 'error');
-          return;
-        }
-
-        // Consume 1 ammunition unit
-        useCharacterStore.setState(state => ({
-          characters: state.characters.map(c => {
-            if (c.id !== activeChar?.id) return c;
-            const items = { ...c.items };
-            if (items[equippedAmmoItem.id]) {
-              const currentQty = items[equippedAmmoItem.id].quantity || 1;
-              if (currentQty <= 1) {
-                delete items[equippedAmmoItem.id];
-                const equipment = { ...c.equipment! };
-                equipment.slots = equipment.slots.map(s => s.id === 'ammo' ? { ...s, itemId: null } : s);
-                return { ...c, items, equipment };
-              } else {
-                items[equippedAmmoItem.id] = { ...items[equippedAmmoItem.id], quantity: currentQty - 1 };
-              }
-            }
-            return { ...c, items };
-          })
-        }));
-        addLog(`Consumed 1 ${equippedAmmoItem.customName || equippedAmmoItem.template}.`, 'info');
-      }
-
-      setIsTargeting(true);
 
       const calculatedBonus = calculateWeaponAttackBonus(activeChar, equippedWeapon);
       const damageDice = equippedWeapon?.damage || '1d4';
