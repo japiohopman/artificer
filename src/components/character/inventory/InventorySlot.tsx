@@ -49,23 +49,29 @@ export const InventorySlot: React.FC<InventorySlotProps> = ({
       onClick={onClick}
       onContextMenu={handleContextMenu}
       className={cn(
-        "aspect-[9/16] w-full rounded-lg border flex flex-col items-center justify-center relative transition-all duration-150 select-none overflow-hidden cursor-pointer",
+        "aspect-[9/16] w-full rounded-[3px] border p-0 flex items-center justify-center relative transition-all duration-150 select-none overflow-hidden cursor-pointer",
         item
-          ? "border-transparent bg-transparent"
+          ? "border-dragon-gold/40 bg-stone-900/90 shadow-xs"
           : "bg-black/20 border-dashed border-parchment-300/30 hover:border-dragon-gold/30 hover:bg-black/25",
         isOver && "border-dragon-gold bg-dragon-gold/20 shadow-[0_0_10px_rgba(212,175,55,0.5)] z-10",
         activeDragItem && !item && !isOver && "border-dragon-gold/30 bg-dragon-gold/5"
       )}
     >
+      {/* Background Image Slug */}
+      <div className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none">
+        <img src="/assets/ui/back_item_slug.webp" alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+      </div>
+
       {item ? (
         <DraggableInventoryItem
           item={item}
           index={slotIndex}
           sourceId={characterId}
           gridMode={true}
+          containerId={containerId}
         />
       ) : (
-        <span className="text-[7px] font-mono font-bold text-parchment-400/40 pointer-events-none select-none">
+        <span className="text-[7px] font-mono font-bold text-parchment-400/40 pointer-events-none select-none z-10">
           {slotIndex + 1}
         </span>
       )}

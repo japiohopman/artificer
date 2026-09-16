@@ -12,29 +12,15 @@ export const InventoryDragPreview: React.FC<InventoryDragPreviewProps> = ({ item
 
   const itemKey = item.template || item.index || item.id || item.name;
   const fallbackUrl = normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name);
-  const isMagic = item.rarity && item.rarity !== 'Common';
 
   return (
-    <div
-      className={cn(
-        "w-16 aspect-[9/16] bg-parchment-100/95 border-2 border-dragon-gold shadow-2xl rounded-lg flex items-center justify-center p-0 pointer-events-none opacity-95 z-[9999] overflow-hidden",
-        isMagic && "ring-2 ring-dragon-gold bg-dragon-gold/10"
-      )}
-    >
-      <div className="w-full h-full flex items-center justify-center relative overflow-hidden p-0">
-        <EquipmentSprite
-          itemKey={itemKey}
-          alt={item.name}
-          className="w-full h-full object-contain drop-shadow-md"
-          fallbackUrl={fallbackUrl}
-        />
-      </div>
-
-      {item.quantity > 1 && (
-        <span className="absolute bottom-1 right-1 bg-dragon-darkRed text-white px-1 py-0.2 rounded font-mono font-bold text-[6px]">
-          x{item.quantity}
-        </span>
-      )}
+    <div className="w-12 aspect-[9/16] p-0 pointer-events-none z-[10100] overflow-visible flex items-center justify-center">
+      <EquipmentSprite
+        itemKey={itemKey}
+        alt={item.name || 'Item'}
+        className="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] pointer-events-none"
+        fallbackUrl={fallbackUrl}
+      />
     </div>
   );
 };

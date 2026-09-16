@@ -276,7 +276,7 @@ export const InventoryItemActionMenu: React.FC = () => {
         position: 'fixed',
         left: `${menuPos.x}px`,
         top: `${menuPos.y}px`,
-        zIndex: 9999
+        zIndex: 10050
       }}
       role="menu"
       aria-label="Item Context Menu"
@@ -336,7 +336,7 @@ export const InventoryItemActionMenu: React.FC = () => {
               {/* Submenu Chooser for Send To */}
               {action.hasSubmenu && activeSubmenu && action.submenuItems && (
                 <div
-                  className="absolute left-full top-0 ml-1 w-44 bg-stone-900/95 border-2 border-dragon-gold/60 rounded-xl shadow-2xl backdrop-blur-md p-1.5 space-y-0.5 z-[10000]"
+                  className="absolute left-full top-0 ml-1 w-44 bg-stone-900/95 border-2 border-dragon-gold/60 rounded-xl shadow-2xl backdrop-blur-md p-1.5 space-y-0.5 z-[10060]"
                   role="menu"
                 >
                   <div className="px-2 py-1 text-[8px] font-black uppercase text-dragon-gold/80 border-b border-dragon-gold/20 mb-1">

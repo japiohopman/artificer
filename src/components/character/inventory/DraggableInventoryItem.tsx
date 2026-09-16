@@ -12,6 +12,7 @@ interface DraggableInventoryItemProps {
   index: any;
   sourceId: string;
   slot?: string;
+  containerId?: string;
   compact?: boolean;
   gridMode?: boolean;
   onRemove?: (index: any) => void;
@@ -20,8 +21,10 @@ interface DraggableInventoryItemProps {
 }
 
 export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({ 
-  item, index, sourceId, slot, gridMode = false, id
+  item, index, sourceId, slot, containerId, gridMode = false, id
 }) => {
+  const isContainerSlot = Boolean(containerId);
+
   const {
     attributes,
     listeners,
@@ -30,7 +33,9 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     isDragging
   } = useDraggable({
     id: id || `item-${item.id || index}-${sourceId}`,
-    data: { item, index, sourceId, slotId: slot }
+    data: isContainerSlot
+      ? { type: 'container_slot', item, index, sourceId, containerId }
+      : { item, index, sourceId, slotId: slot }
   });
 
   const style = transform ? { transform: CSS.Translate.toString(transform) } : undefined;
@@ -69,13 +74,12 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         onContextMenu={handleContextMenu}
         title={`${item.name} (${item.kind || item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
-          "w-full h-full bg-parchment-200/80 hover:bg-parchment-200 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none shadow-xs overflow-hidden pointer-events-auto",
-          isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
-          isDragging && "opacity-40 border-dashed border-dragon-gold/50 shadow-inner"
+          "w-full h-full relative flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none overflow-hidden pointer-events-auto",
+          isDragging && "opacity-30"
         )}
       >
-        {/* Direct Artwork Frame: Fills 100% of the parent 9:16 Slot without inner padding */}
-        <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0">
+        {/* Direct Artwork Frame: Fills 100% of the parent 9:16 Slot with zero padding */}
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0 z-10">
           <EquipmentSprite
             itemKey={item}
             alt={item.name}
@@ -86,7 +90,7 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
 
         {/* Overlay Quantity Badge */}
         {item.quantity > 1 && (
-          <span className="absolute bottom-0.5 right-0.5 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
+          <span className="absolute bottom-0.5 right-0.5 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-20">
             x{item.quantity}
           </span>
         )}
