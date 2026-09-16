@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useInventoryStore } from '../../../store/useInventoryStore';
+import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon } from '../../../game_icons';
 import { soundService } from '../../../services/soundService';
 import { ChromaKeyImage } from '../../ui/ChromaKeyImage';
@@ -44,7 +45,7 @@ export const CharacterSelectorBar: React.FC = () => {
           const isActive = char && char.id === activeCharacterId;
 
           if (char) {
-            const avatarUrl = char.avatar || char.portrait || char.imageUrl || normalizeImageUrl(undefined, 'classes', (char.class || 'fighter').toLowerCase());
+            const avatarUrl = (char as any).avatar || (char as any).portrait || char.imageUrl || normalizeImageUrl(undefined, 'classes', (char.class || 'fighter').toLowerCase());
 
             return (
               <button

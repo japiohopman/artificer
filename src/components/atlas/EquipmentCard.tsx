@@ -419,6 +419,52 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                  </div>
               </div>
             )}
+
+            {/* Container Slots Grid (V2 interactive containers) */}
+            {(() => {
+              const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
+              if (!activeChar || !activeChar.containers) return null;
+
+              const containerId = currentItem.id || currentItem.containerId;
+              const containerObj = containerId ? activeChar.containers[containerId] : Object.values(activeChar.containers).find(c => c.id === currentItem.id || c.name === currentItem.name);
+
+              if (!containerObj || !containerObj.slots) return null;
+
+              return (
+                <div className="mt-4 pt-3 border-t border-dragon-gold/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <GameIcon name="box" size={12} color="#8B0000" />
+                      <span className="text-[9px] font-black uppercase text-dragon-darkRed tracking-wider">
+                        Container Slots ({containerObj.slots.filter(s => s.itemId).length} / {containerObj.slots.length})
+                      </span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-5 gap-1.5 bg-black/20 p-2 rounded-lg border border-dragon-gold/20">
+                    {containerObj.slots.map((slot, idx) => {
+                      const itemInst = slot.itemId && activeChar.items ? activeChar.items[slot.itemId] : null;
+                      return (
+                        <div
+                          key={idx}
+                          className="aspect-[9/16] bg-stone-900/80 border border-dragon-gold/30 rounded flex items-center justify-center relative overflow-hidden group/contslot p-0.5"
+                          title={itemInst ? (itemInst.customName || itemInst.template) : `Empty Slot ${idx + 1}`}
+                        >
+                          {itemInst ? (
+                            <EquipmentSprite
+                              itemKey={itemInst.template}
+                              alt={itemInst.customName || itemInst.template}
+                              className="w-full h-full object-contain drop-shadow-xs"
+                            />
+                          ) : (
+                            <span className="text-[7px] text-parchment-400 font-mono opacity-40">{idx + 1}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
           {currentItem.properties && currentItem.properties.length > 0 && (

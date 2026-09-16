@@ -191,9 +191,8 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
             </div>
 
             {inspectingItem && inspectingItem.item ? (
-              <div className="flex-1 flex flex-col items-center justify-start gap-3 animate-fade-in">
+              <div className="flex-1 flex flex-col items-center justify-start gap-3 animate-fade-in w-full">
                 <EquipmentCard equipment={inspectingItem.item} />
-                <ItemActionCard />
               </div>
             ) : (
               <div className="flex-1 flex flex-col items-center justify-center text-center p-4 gap-2 opacity-50 select-none">

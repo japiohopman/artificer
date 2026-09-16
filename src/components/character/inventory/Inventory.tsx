@@ -65,7 +65,7 @@ export const Inventory: React.FC<InventoryProps> = ({
           else if (kind === 'ring') defaultSlot = 'ring_1';
           else if (kind === 'neck') defaultSlot = 'neck';
           else if (kind === 'back') defaultSlot = 'back';
-          else if (kind === 'ammunition') defaultSlot = 'ammo';
+          else if ((kind as string) === 'ammunition') defaultSlot = 'ammo';
 
           result[idx] = {
             id: itemInstance.id,

@@ -34,6 +34,26 @@ interface ItemDollProps {
 
 const ITEM_BACKGROUND = "/assets/ui/back_item_slug.webp";
 
+const SLOT_SVG_MAP: Record<string, string> = {
+  head: '/assets/icons/svg/equipment_doll/head.svg',
+  neck: '/assets/icons/svg/equipment_doll/necklace.svg',
+  chest: '/assets/icons/svg/equipment_doll/chest.svg',
+  back: '/assets/icons/svg/equipment_doll/back.svg',
+  main_hand: '/assets/icons/svg/equipment_doll/weapon.svg',
+  off_hand: '/assets/icons/svg/equipment_doll/shield.svg',
+  hands: '/assets/icons/svg/equipment_doll/hand.svg',
+  feet: '/assets/icons/svg/equipment_doll/boots.svg',
+  ring_1: '/assets/icons/svg/equipment_doll/ring.svg',
+  ring_2: '/assets/icons/svg/equipment_doll/ring.svg',
+  focus: '/assets/icons/svg/equipment_doll/focus.svg',
+  ammo: '/assets/icons/svg/equipment_doll/weapon.svg',
+  belt: '/assets/icons/svg/equipment_doll/belt.svg',
+  cloak: '/assets/icons/svg/equipment_doll/cloak.svg',
+  potion: '/assets/icons/svg/equipment_doll/tools.svg',
+  scroll: '/assets/icons/svg/equipment_doll/focus.svg',
+  trinket: '/assets/icons/svg/equipment_doll/gem.svg',
+};
+
 interface EquipmentDollSlotProps {
   slot: EquipmentSlotId;
   activeSlots: EquipmentSlotId[];
@@ -128,10 +148,14 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
         </div>
       ) : (
         <div className="flex flex-col items-center gap-0.5 z-10">
-          <GameIcon name={slotDef?.gameIcon || 'pouch'} size={11} className={cn(
-            "transition-colors",
-            isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300"
-          )} />
+          <img
+            src={SLOT_SVG_MAP[slot] || '/assets/icons/svg/equipment_doll/hand.svg'}
+            alt=""
+            className={cn(
+              "w-4 h-4 object-contain transition-opacity",
+              isOver ? (isCompatible ? "opacity-100 invert" : "opacity-80 sepia hue-rotate-320") : isActive ? "opacity-100" : "opacity-50 hover:opacity-80"
+            )}
+          />
           <span className={cn(
             "text-[5px] uppercase font-bold tracking-tighter text-center leading-none",
             isOver ? (isCompatible ? "text-emerald-300" : "text-red-300") : isActive ? "text-dragon-gold" : "text-parchment-300/80"
@@ -212,7 +236,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 select-none overflow-hidden", className)}>
       {/* Central SVG Character Silhouette Body Anchor */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 transition-opacity z-0">
-        <GenderBodySvg gender={gender} className="h-full max-h-[340px] w-auto drop-shadow-md" />
+        <GenderBodySvg gender={gender as any} className="h-full max-h-[340px] w-auto drop-shadow-md" />
       </div>
 
       {/* Overlay Frame Layout over Character Body Surface */}
