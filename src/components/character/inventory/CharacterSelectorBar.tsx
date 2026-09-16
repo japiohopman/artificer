@@ -50,6 +50,7 @@ export const CharacterSelectorBar: React.FC = () => {
               <button
                 key={char.id}
                 onClick={() => {
+                  useUIStore.getState().setInspectingItem(null);
                   setActiveCharacter(char.id);
                   soundService.playEffect('UI_CLICK');
                 }}

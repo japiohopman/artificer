@@ -61,7 +61,7 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
           <EquipmentSprite
             itemKey={currentItem}
             alt={currentItem.name}
-            className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
+            className="w-full h-full object-contain pointer-events-none drop-shadow-sm"
             fallbackUrl={fallbackUrl}
           />
         </div>
