@@ -243,12 +243,13 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
             <EquipmentDoll
               activeSlots={[]}
               activeDragItem={activeDragItem}
-              equippedItems={activeChar.inventory || {}}
               equipment={activeChar.equipment}
               items={activeChar.items}
               gender={activeChar.gender}
               onSlotClick={(slot) => {
-                if (activeChar.inventory?.[slot] || activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId) {
+                const isEquippedInV2 = activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId;
+                const isEquippedInV1 = activeChar.inventory?.[slot];
+                if (isEquippedInV2 || isEquippedInV1) {
                   unequipItem(slot);
                   soundService.playEffect('ITEM_SLOT');
                 }

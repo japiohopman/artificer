@@ -242,9 +242,30 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
           if (char.saveVersion === 2) {
             const itemId = item.id;
-            const equipment = { ...char.equipment! };
-            const containers = { ...char.containers! };
-            const backpack = Object.values(containers).find(c => c.type === 'backpack');
+            const itemInstance = char.items?.[itemId] || item;
+
+            // Enforce domain equipment slot compatibility when target is an equip slot
+            if (target.type === 'equip_slot' && target.slotId) {
+              const comp = evaluateSlotCompatibility(itemInstance, target.slotId as any, {}, char.ruleset);
+              if (comp === 'INVALID') {
+                return char;
+              }
+            }
+
+            // Deep immutable copy of equipment and containers
+            const equipment = {
+              ...char.equipment!,
+              slots: char.equipment!.slots.map(s => ({ ...s }))
+            };
+            const containers: Record<string, any> = {};
+            Object.entries(char.containers || {}).forEach(([cId, container]: [string, any]) => {
+              containers[cId] = {
+                ...container,
+                slots: container.slots.map((s: any) => ({ ...s }))
+              };
+            });
+
+            const backpack = Object.values(containers).find((c: any) => c.type === 'backpack');
             if (!backpack) return char;
 
             // Target 1: Equipment Slot
@@ -257,13 +278,13 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
               // Validate occupant compatibility if swapping into a source equipment slot
               if (occupantId && source.type === 'equip_slot' && source.slotId) {
                 const occupantItem = char.items?.[occupantId];
-                const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, char.inventory || {}, char.ruleset);
+                const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
                 if (occupantComp === 'INVALID') return char;
               }
 
               // Clear item from source location
               if (source.type === 'equip_slot' && source.slotId) {
-                const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                const srcSlot = equipment.slots.find((s: any) => s.id === source.slotId);
                 if (srcSlot) srcSlot.itemId = occupantId;
               } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
                 const srcContainer = containers[source.containerId];
@@ -275,7 +296,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
                   backpack.slots[source.slotIndex].itemId = occupantId;
                 }
               } else {
-                backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: occupantId } : s);
+                backpack.slots = backpack.slots.map((s: any) => s.itemId === itemId ? { ...s, itemId: occupantId } : s);
               }
 
               targetEquipSlot.itemId = itemId;
@@ -323,11 +344,11 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
                 const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, char.inventory || {}, char.ruleset);
                 if (occupantComp === 'INVALID') {
                   // If occupant is not compatible with source equipment slot, unequip occupant to open backpack slot
-                  const emptyBagSlot = backpack.slots.find((s, idx) => s.itemId === null && idx !== targetIndex);
+                  const emptyBagSlot = backpack.slots.find((s: any, idx: number) => s.itemId === null && idx !== targetIndex);
                   if (emptyBagSlot) {
                     emptyBagSlot.itemId = occupantId;
                   }
-                  const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                  const srcSlot = equipment.slots.find((s: any) => s.id === source.slotId);
                   if (srcSlot) srcSlot.itemId = null;
                   backpack.slots[targetIndex].itemId = itemId;
                   playSlotSound();
@@ -337,7 +358,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               // Move / Swap
               if (source.type === 'equip_slot' && source.slotId) {
-                const srcSlot = equipment.slots.find(s => s.id === source.slotId);
+                const srcSlot = equipment.slots.find((s: any) => s.id === source.slotId);
                 if (srcSlot) srcSlot.itemId = occupantId;
               } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
                 if (backpack.slots[source.slotIndex]) {
@@ -354,7 +375,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             if (source.type === 'equip_slot' && source.slotId) {
               const srcSlot = equipment.slots.find(s => s.id === source.slotId);
               if (srcSlot) srcSlot.itemId = null;
-              const emptySlot = backpack.slots.find(s => s.itemId === null);
+              const emptySlot = backpack.slots.find((s: any) => s.itemId === null);
               if (emptySlot) emptySlot.itemId = itemId;
               playSlotSound();
               return { ...char, equipment, containers };

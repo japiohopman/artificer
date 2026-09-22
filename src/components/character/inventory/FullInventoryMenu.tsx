@@ -18,6 +18,19 @@ export const FullInventoryMenu: React.FC = () => {
     activeCharacterId,
   } = useCharacterStore();
 
+  React.useEffect(() => {
+    if (!isInventoryMenuOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsInventoryMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isInventoryMenuOpen, setIsInventoryMenuOpen]);
+
   if (!isInventoryMenuOpen) return null;
 
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];

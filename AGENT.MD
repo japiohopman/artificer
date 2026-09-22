@@ -9,6 +9,14 @@ Welcome to Artificer. If you are an AI agent, please follow these directions to 
 4. 👉 **[AI Orchestration](./docs/systems/AI_ORCHESTRATION.md)** — the boundary between AI narration and game mechanics.
 5. 👉 **[DOCS_INDEX.md](./DOCS_INDEX.md)** — for navigating the rest of the documentation.
 
+## 🏷️ Identified Agents
+If you have been assigned one of the following roles, read your specific instructions in
+addition to the above:
+
+- **Jimmy (Sandbox/Core Agent)**: Read [jimmy_instructions.md](./jimmy_instructions.md)
+- **Jane (World Builder)**: Read [jane_instructions.md](./jane_instructions.md)
+- **Sonny (The Atmospheric Orchestrator)**: Read [sonny_instructions.md](./sonny_instructions.md)
+
 ## 🛠️ General Guidelines
 - **Groundedness**: Always verify your actions against the existing codebase — docs drift, code doesn't lie.
 - **Verification**: Don't mark a TASK_BOARD item `[x]` until you've actually run the app and watched it work. See AGENT_RULES.md §1.

@@ -214,8 +214,13 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
 
   const mainHandItem = allEquipped.main_hand;
   const mainMeta = mainHandItem ? resolveItemMetadata(mainHandItem) : null;
-  const mainIndex = (mainMeta?.index || mainMeta?.template || '').toLowerCase();
-  const requiresAmmo = mainIndex.includes('bow') || mainIndex.includes('crossbow') || mainIndex.includes('blowgun');
+  const requiresAmmo = Boolean(
+    mainMeta && (
+      (mainMeta.weapon_range === 'Ranged' && mainMeta.properties?.some((p: any) => (p.index || p.name || p).toString().toLowerCase() === 'ammunition')) ||
+      (mainMeta.equipment_category?.index === 'ammunition' || mainMeta.equipment_category === 'Ammunition') ||
+      ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].includes((mainMeta.index || mainMeta.template || '').toLowerCase())
+    )
+  );
 
   const renderSlot = (slot: EquipmentSlotId) => (
     <EquipmentDollSlot

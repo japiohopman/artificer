@@ -3,7 +3,7 @@
 ## Status
 **Authoritative Specification / Implemented Foundation**
 
-This document defines the canonical architecture, visual identity pipeline, sprite-sheet specifications, asset tiering strategy, and UI presentation rules for equipment items across the application.
+This document defines the canonical architecture, visual identity pipeline, sprite-sheet specifications, asset tiering strategy, and UI presentation rules for equipment items across the application. Implemented features are marked **[READY]** while planned expansion tiers are marked **[PLANNED]**.
 
 ---
 
