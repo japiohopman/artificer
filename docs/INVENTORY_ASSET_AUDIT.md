@@ -17,6 +17,44 @@ _Note on "0 MISSING": This indicates 100% manifest and identity coverage (every 
 - **PLANNED (Canonical Visual ID Registered, Sprite Asset Planned)**: 54
 - **MISSING (No Manifest Entry / Cell Assignment)**: 0 (100% Manifest Identity Coverage)
 
+The visual audit is a coverage report, not a statement that the runtime Inventory/Equipment experience is complete. Runtime use of these assets is governed by Issue #300.
+
+---
+
+## Runtime asset direction — Issue #300
+
+The runtime inventory/equipment workspace should treat the canonical visual identity → sprite manifest → sprite sheet path as the preferred rendering route whenever a READY mapping exists.
+
+Individual equipment `.webp` files remain valid as fallback assets for PLANNED/unmapped items, but they should be optimized for their actual small display role. Large source images should not be loaded repeatedly into tiny inventory slots when a shared sprite sheet cell is available.
+
+The runtime asset system should also avoid loading the same sprite sheet independently for every item slot. `EquipmentSprite` should remain the presentation boundary so UI components do not need to know whether an item is rendered from a sheet cell or a fallback image.
+
+Issue #300 also tracks auditing the ammunition visuals and container visuals, including quivers, under the same sprite-first policy.
+
+---
+
+## Ammunition asset coverage
+
+Ammunition already has a dedicated Atlas equipment domain under `public/assets/atlas/equipment/json/14/ammunition/`, including canonical entries such as `arrow`, `crossbow-bolt`, `blowgun-needle`, and `sling-bullet`. The repository also contains additional magical/ammunition variants. fileciteturn161file2L43-L50 fileciteturn161file9L146-L153 fileciteturn161file10L162-L169
+
+The canonical runtime ammunition model is documented in `docs/modules/inventory_v2.md`:
+
+```text
+Weapon requires ammo
+        ↓
+resolve ammunition type
+        ↓
+show contextual Ammo Slot
+        ↓
+load compatible ammo
+        ↓
+consume ammo on successful attack
+```
+
+Ammunition is a runtime-owned ItemInstance/stack. A quiver is a container with capacity semantics, not an ammunition quantity itself.
+
+The existing normal quiver Atlas record describes a quiver capable of holding up to 20 arrows, equips to the `back` slot, and intentionally has empty static `contents`. Runtime arrow ownership belongs to ItemInstances rather than being baked into the quiver template. fileciteturn160file0L2-L2
+
 ---
 
 ## Canonical Starter Items Audit (Class, Background & Pack Choices)
@@ -34,7 +72,7 @@ _Note on "0 MISSING": This indicates 100% manifest and identity coverage (every 
 | `dagger` | `equipment.dagger` | `starter_weapons_01` | `(0, 0)` | `weapon` | class:bard, class:rogue |
 | `dart` | `equipment.dart` | `starter_weapons_02` | `(1, 1)` | `weapon` | class:monk |
 | `diplomats_pack` | `equipment.diplomats_pack` | `starter_adventuring_01` | `(0, 3)` | `container` | class:bard, equipment_pack:diplomats-pack |
-| `dungeoneers_pack` | `equipment.dungeoneers_pack` | `starter_adventuring_01` | `(0, 1)` | `container` | class:fighter, class:monk |
+| `dungeoneers_pack` | `equipment.dungeoneers_pack` | `starter_adventuring_01` | `(0, 1)` | `container` | class:fighter, equipment_pack:dungeoneers-pack |
 | `entertainers_pack` | `equipment.entertainers_pack` | `starter_adventuring_01` | `(1, 0)` | `container` | class:bard, equipment_pack:entertainers-pack |
 | `explorers_pack` | `equipment.explorers_pack` | `starter_adventuring_01` | `(0, 0)` | `container` | class:barbarian, class:cleric |
 | `greataxe` | `equipment.greataxe` | `starter_weapons_01` | `(3, 1)` | `weapon` | class:barbarian |
@@ -47,7 +85,7 @@ _Note on "0 MISSING": This indicates 100% manifest and identity coverage (every 
 | `longsword` | `equipment.longsword` | `starter_weapons_01` | `(2, 2)` | `weapon` | class:bard |
 | `mace` | `equipment.mace` | `starter_weapons_01` | `(0, 3)` | `weapon` | class:cleric |
 | `mess_kit` | `equipment.mess_kit` | `starter_adventuring_01` | `(3, 3)` | `adventuring_gear` | pack_content:explorers-pack |
-| `priests_pack` | `equipment.priests_pack` | `starter_adventuring_01` | `(1, 1)` | `container` | class:cleric, class:paladin |
+| `priests_pack` | `equipment.priests_pack` | `starter_adventuring_01` | `(1, 1)` | `container` | class:cleric, equipment_pack:priests-pack |
 | `quarterstaff` | `equipment.quarterstaff` | `starter_weapons_01` | `(1, 0)` | `weapon` | class:wizard, background:hermit |
 | `rapier` | `equipment.rapier` | `starter_weapons_01` | `(2, 1)` | `weapon` | class:bard, class:rogue |
 | `rations` | `equipment.rations` | `starter_adventuring_01` | `(2, 3)` | `consumable` | pack_content:burglars-pack, pack_content:dungeoneers-pack |

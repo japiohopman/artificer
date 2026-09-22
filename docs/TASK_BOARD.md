@@ -4,8 +4,37 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 
 ## 🔴 Critical — Current engineering
 
+### Inventory & Equipment Workspace — interaction, ingestion, ammunition & asset UX overhaul (Issue #300)
+**Status:** ready for dispatch; the previous Inventory & Equipment foundation is merged, but runtime review identified follow-up work required for production completion.
+
+- [ ] Reframe the runtime Equipment tab as one canonical gear-management workspace.
+- [ ] Remove duplicate Equipment Doll presentations and identify the single authoritative consumer.
+- [ ] Move the focused inventory experience above/away from navigation stacking contexts; prefer a dedicated global overlay/portal where required.
+- [ ] Replace broad backpack droppable behavior with a canonical slot-aware inventory grid.
+- [ ] Use one dnd-kit context for Inventory + Equipment and one DragOverlay.
+- [ ] Preserve visible drag representation and add explicit valid/invalid/replacement target feedback.
+- [ ] Verify Inventory → Equipment, Equipment → Inventory, compatible Equipment → Equipment and supported Inventory → Inventory flows.
+- [ ] Keep Inventory V2 `items` + `containers` + `equipment` as the canonical ownership/placement model; no second persistence model.
+- [ ] Fix Character Creator equipment-pack ingestion so selected packs become real ItemInstances in the canonical backpack with quantities preserved.
+- [ ] Audit 2014/2024 equipment-pack and weapon/ammunition references without silently crossing ruleset boundaries.
+- [ ] Introduce a canonical ammunition requirement/compatibility resolver using Atlas weapon/ammunition metadata.
+- [ ] Show a contextual ammunition slot only when the equipped weapon requires ammunition.
+- [ ] Enforce compatible ammunition types (for example arrows for bows, bolts for crossbows, sling bullets for slings, needles for blowguns) through domain rules rather than UI string matching.
+- [ ] Consume canonical ammunition on successful attacks and immediately synchronize remaining quantity with inventory/equipment state.
+- [ ] Model quivers as ammunition containers with explicit capacity semantics; normal quiver = 20 arrows, special/magic variants may define a higher capacity. Do not encode quiver capacity as arrow quantity.
+- [ ] Keep ammunition as separate owned ItemInstances/stacks; container/equipment placement determines where ammunition is carried/assigned.
+- [ ] Audit whether existing weapon JSON already contains sufficient structured ammunition information before adding new fields. Add structured fields only where current Atlas data cannot be resolved reliably.
+- [ ] Make canonical sprite-manifest/sprite-sheet rendering the preferred equipment visual path.
+- [ ] Optimize individual equipment `.webp` assets as small fallback thumbnails; do not delete still-needed fallbacks blindly.
+- [ ] Avoid repeated sprite-sheet image loading per slot.
+- [ ] Reduce inventory chrome, margins and padding so the slot field is the dominant surface.
+- [ ] Add regression tests for drag/drop, compatibility, pack ingestion, ammunition consumption, quiver capacity and persistence.
+- [ ] Run focused tests, `npm run lint`, `npm run validate:assets` when asset changes are included, and `npm run build`.
+- [ ] Manually verify the full grab → drag → target feedback → drop → equip/use → ammunition consumption workflow.
+
 ### 2024 Atlas Data Ingestion & Ruleset-Aware Character Creation
-**Status:**
+**Status:** completed and verified.
+
 2024 Species Foundation
 → implemented / verified (Human, Dwarf, Elf, Halfling, Orc)
 
@@ -27,7 +56,7 @@ This is the **active execution checklist** behind the canonical `ROADMAP.md`. `R
 2024 Spells Integration & Refinement
 → implemented / verified (strict ruleset-aware resolution in fetchSpellData / fetchSpellList / loadSpell for 2014 vs 2024; versioned index_14.json and index_24.json catalogs; 323 canonical SRD spells audited; sprite manifest and pure AOE geometry verified; zero silent cross-ruleset fallbacks; tests green)
 
-Next active dependency: remaining rules-sensitive domains.
+Next active dependency: none; remaining rules-sensitive data work from this phase is complete.
 
 - [x] Establish one canonical ruleset selection/context (`useGameStore.ruleset`).
 - [x] Establish canonical ruleset resolver/context boundary.
@@ -47,7 +76,7 @@ Next active dependency: remaining rules-sensitive domains.
 - [x] Add ruleset integration tests proving 2014 and 2024 resolve different datasets where intended.
 - [x] Verify Character Creator end-to-end for both rulesets.
 
-**Reference sources:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference material only. Do not blindly copy the repository.
+## 🟠 High — Architecture & data foundations
 
 ### Character Creator — Species Character Mirror & Choice State v1
 **Status:** merged and verified as the foundation for the current Character Creator presentation model.
@@ -70,37 +99,6 @@ Next active dependency: remaining rules-sensitive domains.
 - [x] `GameIcon` is the application icon boundary.
 - [x] `lucide-react` and Font Awesome icon dependencies removed from the migrated system.
 - [x] Missing icons are treated as asset backlog rather than silently replacing canonical game icons with third-party icons.
-
-## 🟠 High — Architecture & data foundations
-
-### Inventory & Equipment Architecture / UX Overhaul
-- [x] Audit and consolidate existing inventory/equipment implementations.
-- [x] Establish `character/inventory/` and `character/equipment/` responsibility boundaries.
-- [x] Keep reusable inventory/equipment domain components out of `hud/` merely because they are displayed there.
-- [x] Keep `CharacterPanel` compact at runtime; keep `FullInventoryMenu` as the full workspace.
-- [x] Implement scrolling, filtering, inspection and equip/unequip flows.
-- [x] Implement supported drag/drop interactions.
-- [x] Preserve Inventory V2 registry/slot architecture and save compatibility.
-- [x] Keep EquipmentDoll as reusable presentation.
-- [x] Verify party/shared inventory behavior.
-- [x] Add regression coverage for core inventory/equipment interactions.
-
-### Character Creator — Selection Experience v1
-- [x] Welcome/Ruleset → Save Slot → Identity → Species → Class → Background → Alignment → Attributes/Stats → Skills/Choices → Arcana/Spells → Equipment → Appearance → Description → Review flow.
-- [x] Background before Equipment.
-- [x] Official selection content and visual assets integrated.
-- [x] Ruleset selection persistence preserved.
-- [x] Required-step validation overlay implemented.
-- [x] Review consumes canonical Character state.
-
-### Ruleset Selection & Ruleset Context — Foundation
-- [x] One canonical `useGameStore.ruleset` owner.
-- [x] `getActiveRulesetContext` / `getRulesetVersionFolder` boundary.
-- [x] No component-level hardcoded ruleset paths in migrated consumers.
-- [x] Equipment and Monster resolution migrated.
-- [x] Feats, Class Levels and Spells migrated.
-- [x] 2024 gap audit documented.
-- [ ] Complete remaining downstream rules-sensitive migration after 2024 datasets exist.
 
 ### Canonical Character Profile & CharacterScreen Refactor
 - [ ] Establish canonical character-profile presentation primitives.
@@ -190,4 +188,4 @@ Next active dependency: remaining rules-sensitive domains.
 9. Keep authoring tools separate from runtime representations.
 10. `ROADMAP.md` is the **only canonical current-priority/dispatch roadmap**. Do not create or maintain roadmap snapshots elsewhere.
 
-*Last Updated: 2026-08-31*
+*Last Updated: 2026-09-15*
