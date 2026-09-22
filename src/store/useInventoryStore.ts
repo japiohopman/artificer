@@ -143,19 +143,52 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         
         if (char.saveVersion === 2) {
           const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
-          const equipment = { ...char.equipment! };
-          const containers = { ...char.containers! };
-          const backpack = Object.values(containers).find(c => c.type === 'backpack')!;
+          const itemInstance = char.items?.[itemId] || (typeof itemOrItemId === 'object' ? itemOrItemId : null);
+          if (!itemInstance) return char;
+
+          // Resolve currently equipped items for compatibility check
+          const currentEquipped: Record<string, any> = {};
+          char.equipment?.slots?.forEach((s: any) => {
+            if (s.itemId && char.items?.[s.itemId]) {
+              currentEquipped[s.id] = char.items[s.itemId];
+            }
+          });
+
+          // Enforce domain equipment slot compatibility
+          const comp = evaluateSlotCompatibility(itemInstance, slotId as any, currentEquipped, char.ruleset);
+          if (comp === 'INVALID') {
+            return char;
+          }
+
+          const equipment = {
+            ...char.equipment!,
+            slots: char.equipment!.slots.map(s => ({ ...s }))
+          };
+          const containers: Record<string, any> = {};
+          Object.entries(char.containers || {}).forEach(([cId, container]: [string, any]) => {
+            containers[cId] = {
+              ...container,
+              slots: container.slots.map((s: any) => ({ ...s }))
+            };
+          });
+
+          const backpack = Object.values(containers).find((c: any) => c.type === 'backpack');
+          if (!backpack) return char;
           
           const targetSlot = equipment.slots.find(s => s.id === slotId);
           if (!targetSlot) return char;
 
+          const sourceSlotIdx = backpack.slots.findIndex((s: any) => s.itemId === itemId);
+          if (sourceSlotIdx === -1 && !equipment.slots.some(s => s.itemId === itemId)) {
+            return char; // Item is not present in character inventory or equipment
+          }
+
           if (targetSlot.itemId) {
-            const emptyBagSlot = backpack.slots.find(s => s.itemId === null);
+            const emptyBagSlot = backpack.slots.find((s: any) => s.itemId === null);
             if (emptyBagSlot) emptyBagSlot.itemId = targetSlot.itemId;
           }
 
-          backpack.slots = backpack.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+          backpack.slots = backpack.slots.map((s: any) => s.itemId === itemId ? { ...s, itemId: null } : s);
           targetSlot.itemId = itemId;
           playSlotSound();
           return { ...char, equipment, containers };
@@ -264,11 +297,25 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
               if (!backpack || !backpack.slots[source.slotIndex] || backpack.slots[source.slotIndex].itemId !== itemId) {
                 return char; // Forged or mismatched inventory_slot source
               }
+            } else if (source.type === 'backpack') {
+              const backpack = Object.values(char.containers || {}).find((c: any) => c.type === 'backpack');
+              const containsItem = backpack?.slots.some((s: any) => s.itemId === itemId);
+              if (!containsItem) {
+                return char; // Forged or mismatched backpack source
+              }
             }
+
+            // Resolve currently equipped items for domain compatibility evaluation
+            const currentEquipped: Record<string, any> = {};
+            char.equipment?.slots?.forEach((s: any) => {
+              if (s.itemId && char.items?.[s.itemId]) {
+                currentEquipped[s.id] = char.items[s.itemId];
+              }
+            });
 
             // 2. Enforce domain equipment slot compatibility when target is an equip slot
             if (target.type === 'equip_slot' && target.slotId) {
-              const comp = evaluateSlotCompatibility(itemInstance, target.slotId as any, {}, char.ruleset);
+              const comp = evaluateSlotCompatibility(itemInstance, target.slotId as any, currentEquipped, char.ruleset);
               if (comp === 'INVALID') {
                 return char;
               }

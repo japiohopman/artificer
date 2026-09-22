@@ -261,6 +261,69 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(backpack?.slots[5].itemId).toBeNull();
   });
 
+  it('rejects forged backpack source in moveItem domain command when item is not in backpack', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    moveItem({
+      source: { type: 'backpack' },
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'nonexistent_item_999' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull();
+  });
+
+  it('rejects incompatible ammunition placement when main_hand weapon requires different ammo', async () => {
+    const { equipItem, moveItem } = useInventoryStore.getState();
+
+    // Add shortbow_1 (bow) and crossbow_bolt_1 to character items/backpack
+    useCharacterStore.setState({
+      characters: useCharacterStore.getState().characters.map(c => {
+        if (c.id !== 'char_test_1') return c;
+        return {
+          ...c,
+          items: {
+            ...c.items,
+            'shortbow_1': { id: 'shortbow_1', template: 'shortbow', quantity: 1, kind: 'weapon' },
+            'crossbow_bolt_1': { id: 'crossbow_bolt_1', template: 'crossbow-bolt', quantity: 20, kind: 'ammunition' }
+          },
+          containers: {
+            ...c.containers,
+            'backpack_char_test_1': {
+              ...c.containers['backpack_char_test_1'],
+              slots: c.containers['backpack_char_test_1'].slots.map((s, idx) => {
+                if (idx === 2) return { ...s, itemId: 'shortbow_1' };
+                if (idx === 3) return { ...s, itemId: 'crossbow_bolt_1' };
+                return s;
+              })
+            }
+          }
+        };
+      })
+    });
+
+    // Equip shortbow in main_hand
+    equipItem('shortbow_1', 'main_hand');
+    await new Promise((res) => setTimeout(res, 50));
+
+    // Try moving crossbow bolts into ammo slot for shortbow (bow requires arrows, not bolts)
+    moveItem({
+      source: { type: 'inventory_slot', slotIndex: 3 },
+      target: { type: 'equip_slot', slotId: 'ammo' },
+      item: { id: 'crossbow_bolt_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const ammoSlot = activeChar?.equipment?.slots.find(s => s.id === 'ammo');
+    expect(ammoSlot?.itemId).toBeNull(); // Rejected due to bow/bolt mismatch
+  });
+
   it('successfully swaps two valid items without duplicating or losing instances', async () => {
     const { equipItem, moveItem } = useInventoryStore.getState();
 

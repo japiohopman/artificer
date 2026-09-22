@@ -107,6 +107,14 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
       sourceLocation = { type: 'inventory_slot' as const, slotIndex: typeof sourceIndex === 'number' ? sourceIndex : undefined };
     }
 
+    // Construct V2 equipped items map directly from activeChar.equipment + activeChar.items
+    const currentEquippedV2: Record<string, any> = {};
+    activeChar.equipment?.slots?.forEach((s: any) => {
+      if (s.itemId && activeChar.items?.[s.itemId]) {
+        currentEquippedV2[s.id] = activeChar.items[s.itemId];
+      }
+    });
+
     // 1. Dragged to a Container Slot
     if (overData.type === 'container_slot' && overData.containerId && overData.slotIndex !== undefined) {
       moveItem({
@@ -122,7 +130,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
     // 2. Dragged to an Equipment Slot
     if (overData.type === 'equip_slot' && overData.slotId) {
       const targetSlot = overData.slotId;
-      const compResult = evaluateSlotCompatibility(draggedItem, targetSlot, activeChar.inventory || {}, activeChar.ruleset);
+      const compResult = evaluateSlotCompatibility(draggedItem, targetSlot, currentEquippedV2, activeChar.ruleset);
 
       if (compResult === 'INVALID') {
         soundService.playEffect('UI_BACK_EXIT');
