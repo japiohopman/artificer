@@ -30,7 +30,8 @@ export type ItemKind =
   | 'material'
   | 'monster_part'
   | 'bundled_material'
-  | 'quest';
+  | 'quest'
+  | 'ammunition';
 
 export interface ItemInstance {
   id: string;         // Unique instance ID

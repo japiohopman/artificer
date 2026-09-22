@@ -224,6 +224,92 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     });
   });
 
+  it('rejects invalid equipment placement directly in moveItem domain command', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    // Try moving consumable potion into main_hand equip slot
+    moveItem({
+      source: { type: 'inventory_slot', slotIndex: 1 },
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'potion_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull(); // Transaction rejected
+  });
+
+  it('rejects forged/mismatched source location in moveItem domain command without mutating state', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    // Claim potion_1 is in slot 0 when longsword_1 is actually in slot 0
+    moveItem({
+      source: { type: 'inventory_slot', slotIndex: 0 },
+      target: { type: 'inventory_slot', slotIndex: 5 },
+      item: { id: 'potion_1' }, // Forged item ID for slotIndex 0
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const backpack = activeChar?.containers?.['backpack_char_test_1'];
+
+    // Confirm slot 0 still contains longsword_1 and slot 5 remains empty
+    expect(backpack?.slots[0].itemId).toBe('longsword_1');
+    expect(backpack?.slots[5].itemId).toBeNull();
+  });
+
+  it('successfully swaps two valid items without duplicating or losing instances', async () => {
+    const { equipItem, moveItem } = useInventoryStore.getState();
+
+    // First equip longsword_1 into main_hand
+    equipItem('longsword_1', 'main_hand');
+    await new Promise((res) => setTimeout(res, 50));
+
+    // Add a second weapon (greatsword_1) to slot 2
+    useCharacterStore.setState({
+      characters: useCharacterStore.getState().characters.map(c => {
+        if (c.id !== 'char_test_1') return c;
+        return {
+          ...c,
+          items: {
+            ...c.items,
+            'greatsword_1': { id: 'greatsword_1', template: 'greatsword', quantity: 1, kind: 'weapon' }
+          },
+          containers: {
+            ...c.containers,
+            'backpack_char_test_1': {
+              ...c.containers['backpack_char_test_1'],
+              slots: c.containers['backpack_char_test_1'].slots.map((s, idx) => idx === 2 ? { ...s, itemId: 'greatsword_1' } : s)
+            }
+          }
+        };
+      })
+    });
+
+    // Move greatsword_1 from slot 2 to main_hand (which holds longsword_1)
+    moveItem({
+      source: { type: 'inventory_slot', slotIndex: 2 },
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'greatsword_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    const backpack = activeChar?.containers?.['backpack_char_test_1'];
+
+    // Main hand now holds greatsword_1, longsword_1 returned to slot 2
+    expect(mainHandSlot?.itemId).toBe('greatsword_1');
+    expect(backpack?.slots[2].itemId).toBe('longsword_1');
+
+    // Confirm total item instances count remains exactly 3
+    expect(Object.keys(activeChar?.items || {}).length).toBe(3);
+  });
+
   it('preserves distinct ItemInstances sharing the same template without merging or deduplicating', () => {
     const characterWithDuplicates: any = {
       id: 'char_dups',

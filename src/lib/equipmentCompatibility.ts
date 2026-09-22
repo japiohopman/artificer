@@ -40,6 +40,19 @@ export function evaluateSlotCompatibility(
     const isAmmo = kind === 'ammunition' || category.includes('ammunition') || index.includes('arrow') || index.includes('bolt') || index.includes('needle');
     if (!isAmmo) return 'INVALID';
 
+    // Verify compatibility with equipped main_hand weapon if present
+    const mainHandItem = equippedItems.main_hand;
+    if (mainHandItem) {
+      const mainMeta = resolveItemMetadata(mainHandItem, ruleset);
+      const mainIndex = (mainMeta?.index || mainMeta?.template || '').toLowerCase();
+
+      const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');
+      const isCrossbow = mainIndex.includes('crossbow');
+
+      if (isBow && !index.includes('arrow')) return 'INVALID';
+      if (isCrossbow && !index.includes('bolt')) return 'INVALID';
+    }
+
     return isOccupied ? 'REPLACE' : 'VALID';
   }
 

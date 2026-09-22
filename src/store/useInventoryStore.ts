@@ -242,9 +242,31 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
           if (char.saveVersion === 2) {
             const itemId = item.id;
-            const itemInstance = char.items?.[itemId] || item;
+            const itemInstance = char.items?.[itemId];
 
-            // Enforce domain equipment slot compatibility when target is an equip slot
+            // 1. Source Location Verification: Verify source actually contains itemId
+            if (!itemInstance) {
+              return char; // Item does not exist in character.items
+            }
+
+            if (source.type === 'equip_slot' && source.slotId) {
+              const srcEquipSlot = char.equipment?.slots?.find((s: any) => s.id === source.slotId);
+              if (!srcEquipSlot || srcEquipSlot.itemId !== itemId) {
+                return char; // Forged or mismatched equip_slot source
+              }
+            } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
+              const srcContainer = char.containers?.[source.containerId];
+              if (!srcContainer || !srcContainer.slots[source.slotIndex] || srcContainer.slots[source.slotIndex].itemId !== itemId) {
+                return char; // Forged or mismatched container_slot source
+              }
+            } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
+              const backpack = Object.values(char.containers || {}).find((c: any) => c.type === 'backpack');
+              if (!backpack || !backpack.slots[source.slotIndex] || backpack.slots[source.slotIndex].itemId !== itemId) {
+                return char; // Forged or mismatched inventory_slot source
+              }
+            }
+
+            // 2. Enforce domain equipment slot compatibility when target is an equip slot
             if (target.type === 'equip_slot' && target.slotId) {
               const comp = evaluateSlotCompatibility(itemInstance, target.slotId as any, {}, char.ruleset);
               if (comp === 'INVALID') {

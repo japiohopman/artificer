@@ -109,11 +109,12 @@ export const generateInstanceId = (templateId: string): string => {
 export const deriveItemKind = (item: any): ItemKind => {
   if (item.kind) return item.kind;
   
-  const idx = item.index?.toLowerCase() || '';
-  const category = item.equipment_category?.index || '';
-  const armorCat = item.armor_category || '';
-  const weaponCat = item.weapon_category || '';
+  const idx = (item.index || item.template || item.id || '').toLowerCase();
+  const category = (item.equipment_category?.index || item.equipment_category?.name || item.category || '').toLowerCase();
+  const armorCat = (item.armor_category || '').toLowerCase();
+  const weaponCat = (item.weapon_category || '').toLowerCase();
 
+  if (category.includes('ammunition') || idx.includes('arrow') || idx.includes('bolt') || idx.includes('needle') || idx.includes('bullet')) return 'ammunition';
   if (weaponCat || idx.includes('weapon') || category === 'weapon') return 'weapon';
   if (armorCat === 'Shield' || idx === 'shield') return 'shield';
   if (armorCat) return 'armor';

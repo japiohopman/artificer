@@ -109,12 +109,9 @@ export const Inventory: React.FC<InventoryProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  // Compute column count dynamically based strictly on container width
+  // Compute column count dynamically based strictly on container width, capped at max 5 columns
   const dynamicCols = React.useMemo(() => {
-    if (containerWidth <= 0) return 'grid-cols-4 sm:grid-cols-6 lg:grid-cols-8';
-    if (containerWidth >= 520) return 'grid-cols-8';
-    if (containerWidth >= 440) return 'grid-cols-7';
-    if (containerWidth >= 360) return 'grid-cols-6';
+    if (containerWidth <= 0) return 'grid-cols-4 sm:grid-cols-5';
     if (containerWidth >= 260) return 'grid-cols-5';
     return 'grid-cols-4';
   }, [containerWidth]);
