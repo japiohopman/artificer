@@ -142,8 +142,11 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         if (char.id !== activeCharacterId) return char;
         
         if (char.saveVersion === 2) {
-          const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId.id;
-          const itemInstance = char.items?.[itemId] || (typeof itemOrItemId === 'object' ? itemOrItemId : null);
+          const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId?.id;
+          if (!itemId) return char;
+
+          // Require canonical ItemInstance from char.items[itemId]
+          const itemInstance = char.items?.[itemId];
           if (!itemInstance) return char;
 
           // Resolve currently equipped items for compatibility check
@@ -178,17 +181,49 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
           const targetSlot = equipment.slots.find(s => s.id === slotId);
           if (!targetSlot) return char;
 
-          const sourceSlotIdx = backpack.slots.findIndex((s: any) => s.itemId === itemId);
-          if (sourceSlotIdx === -1 && !equipment.slots.some(s => s.itemId === itemId)) {
-            return char; // Item is not present in character inventory or equipment
+          // Check if item is already equipped in another slot
+          const existingEquipSlot = equipment.slots.find(s => s.itemId === itemId);
+
+          // Check if item is in backpack
+          const bagSlotIdx = backpack.slots.findIndex((s: any) => s.itemId === itemId);
+
+          if (!existingEquipSlot && bagSlotIdx === -1) {
+            return char; // Item instance is not in equipment or backpack
           }
 
-          if (targetSlot.itemId) {
-            const emptyBagSlot = backpack.slots.find((s: any) => s.itemId === null);
-            if (emptyBagSlot) emptyBagSlot.itemId = targetSlot.itemId;
+          const targetOccupantId = targetSlot.itemId;
+
+          // Atomic check: If target is occupied and we need an empty backpack slot to displace targetOccupantId
+          if (targetOccupantId && targetOccupantId !== itemId) {
+            // If item was in backpack, bagSlotIdx will become free; otherwise we need an empty slot
+            const hasSlotForDisplaced = bagSlotIdx !== -1 || backpack.slots.some((s: any) => s.itemId === null);
+            if (!hasSlotForDisplaced) {
+              return char; // Full backpack: cannot displace occupant without losing item
+            }
           }
 
-          backpack.slots = backpack.slots.map((s: any) => s.itemId === itemId ? { ...s, itemId: null } : s);
+          // Clear original source placement (if previously in an equipment slot)
+          if (existingEquipSlot) {
+            existingEquipSlot.itemId = null;
+          }
+
+          // Clear original source placement in backpack
+          if (bagSlotIdx !== -1) {
+            backpack.slots[bagSlotIdx].itemId = null;
+          }
+
+          // If target was occupied, place displaced occupant in backpack (preferring bagSlotIdx if freed)
+          if (targetOccupantId && targetOccupantId !== itemId) {
+            if (bagSlotIdx !== -1) {
+              backpack.slots[bagSlotIdx].itemId = targetOccupantId;
+            } else {
+              const emptyBagSlot = backpack.slots.find((s: any) => s.itemId === null);
+              if (emptyBagSlot) {
+                emptyBagSlot.itemId = targetOccupantId;
+              }
+            }
+          }
+
           targetSlot.itemId = itemId;
           playSlotSound();
           return { ...char, equipment, containers };
