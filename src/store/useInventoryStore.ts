@@ -74,7 +74,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
             itemsToAdd.forEach(toAdd => {
               const template = toAdd.index || toAdd.name;
-              const existingId = backpack.slots.find(s => s.itemId && items[s.itemId].template === template)?.itemId;
+              const existingId = backpack.slots.find(s => s.itemId && items[s.itemId]?.template === template)?.itemId;
               
               if (existingId) {
                 items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (toAdd.quantity || 1) };
@@ -142,11 +142,14 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
         if (char.id !== activeCharacterId) return char;
         
         if (char.saveVersion === 2) {
+          const items = char.items;
+          if (!items) return char;
+
           const itemId = typeof itemOrItemId === 'string' ? itemOrItemId : itemOrItemId?.id;
           if (!itemId) return char;
 
-          // Require canonical ItemInstance from char.items[itemId]
-          const itemInstance = char.items?.[itemId];
+          // Require canonical ItemInstance from items[itemId]
+          const itemInstance = items[itemId];
           if (!itemInstance) return char;
 
           // Verify exact single placement across character state
@@ -162,8 +165,8 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
           // Resolve currently equipped items for compatibility check
           const currentEquipped: Record<string, any> = {};
           char.equipment?.slots?.forEach((s: any) => {
-            if (s.itemId && char.items?.[s.itemId]) {
-              currentEquipped[s.id] = char.items[s.itemId];
+            if (s.itemId && items[s.itemId]) {
+              currentEquipped[s.id] = items[s.itemId];
             }
           });
 
@@ -203,14 +206,15 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
           // Validate occupant canonical existence if target is occupied
           if (targetOccupantId && targetOccupantId !== itemId) {
-            if (!char.items?.[targetOccupantId]) {
+            if (!items[targetOccupantId]) {
               return char; // Reject non-canonical occupant
             }
           }
 
           // Direct equipment -> equipment swap
           if (existingEquipSlot && targetOccupantId && targetOccupantId !== itemId) {
-            const occupantItem = char.items[targetOccupantId];
+            const occupantItem = items[targetOccupantId];
+            if (!occupantItem) return char;
             const occupantComp = evaluateSlotCompatibility(occupantItem, existingEquipSlot.id as any, {}, char.ruleset);
             if (occupantComp === 'INVALID') {
               return char;
@@ -359,10 +363,13 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
           if (char.id !== targetCharId) return char;
 
           if (char.saveVersion === 2) {
+            const items = char.items;
+            if (!items) return char;
+
             const itemId = item?.id;
             if (!itemId) return char;
 
-            const itemInstance = char.items?.[itemId];
+            const itemInstance = items[itemId];
             if (!itemInstance) {
               return char; // Non-canonical item rejected
             }
@@ -405,8 +412,8 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             // Resolve currently equipped items for domain compatibility evaluation
             const currentEquipped: Record<string, any> = {};
             char.equipment?.slots?.forEach((s: any) => {
-              if (s.itemId && char.items?.[s.itemId]) {
-                currentEquipped[s.id] = char.items[s.itemId];
+              if (s.itemId && items[s.itemId]) {
+                currentEquipped[s.id] = items[s.itemId];
               }
             });
 
@@ -443,7 +450,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               // Validate occupant canonical existence
               if (occupantId && occupantId !== itemId) {
-                const occupantItem = char.items?.[occupantId];
+                const occupantItem = items[occupantId];
                 if (!occupantItem) {
                   return char; // Reject non-canonical occupant
                 }
@@ -485,11 +492,11 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               // Validate occupant canonical existence if target container slot is occupied
               if (occupantId && occupantId !== itemId) {
-                if (!char.items?.[occupantId]) {
+                const occupantItem = items[occupantId];
+                if (!occupantItem) {
                   return char; // Reject non-canonical occupant
                 }
                 if (source.type === 'equip_slot' && source.slotId) {
-                  const occupantItem = char.items[occupantId];
                   const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
                   if (occupantComp === 'INVALID') return char;
                 }
@@ -524,11 +531,11 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               // Validate occupant canonical existence if target inventory slot is occupied
               if (occupantId && occupantId !== itemId) {
-                if (!char.items?.[occupantId]) {
+                const occupantItem = items[occupantId];
+                if (!occupantItem) {
                   return char; // Reject non-canonical occupant
                 }
                 if (source.type === 'equip_slot' && source.slotId) {
-                  const occupantItem = char.items[occupantId];
                   const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
                   if (occupantComp === 'INVALID') {
                     return char; // Occupant incompatible with source equip slot: reject swap
@@ -641,9 +648,9 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             const containers = { ...(char.containers || {}) };
             const backpack = Object.values(containers).find(c => c.type === 'backpack');
             if (backpack) {
-              const existingId = backpack.slots.find((s: any) => s.itemId && items[s.itemId].template === (itemToMove.template || itemToMove.index))?.itemId;
+              const existingId = backpack.slots.find((s: any) => s.itemId && items[s.itemId]?.template === (itemToMove.template || itemToMove.index))?.itemId;
               if (existingId) {
-                items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (itemToMove.quantity || 1) };
+                items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (itemToMove.quantity || 1);
               } else {
                 const newId = itemId.includes('_') ? itemId : `${itemToMove.template || itemToMove.index}_${crypto.randomUUID()}`;
                 items[newId] = { ...itemToMove, id: newId, template: itemToMove.template || itemToMove.index, quantity: itemToMove.quantity || 1, addedAt: Date.now() };
