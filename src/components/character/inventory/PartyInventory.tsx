@@ -13,7 +13,7 @@ export const PartyInventory: React.FC = () => {
 
   const { setNodeRef, isOver } = useDroppable({
     id: 'party',
-    data: { characterId: 'party', type: 'party' }
+    data: { characterId: 'party', type: 'party', targetId: 'party' }
   });
 
   const categories = [
@@ -38,7 +38,7 @@ export const PartyInventory: React.FC = () => {
   });
 
   return (
-    <div className="flex flex-col h-full bg-white/40 backdrop-blur-sm rounded-2xl border-2 border-dragon-red/20 overflow-hidden shadow-2xl">
+    <div ref={setNodeRef} className={cn("flex flex-col h-full bg-white/40 backdrop-blur-sm rounded-2xl border-2 border-dragon-red/20 overflow-hidden shadow-2xl relative transition-colors", isOver ? "bg-dragon-red/10 border-dragon-red/50 ring-2 ring-dragon-gold/40" : "")}>
       {/* Header Area */}
       <div className="bg-dragon-darkRed p-4 text-white">
         <div className="flex items-center justify-between mb-4">
@@ -91,9 +91,8 @@ export const PartyInventory: React.FC = () => {
 
       {/* Grid Content */}
       <div 
-        ref={setNodeRef}
         className={cn(
-          "flex-1 p-4 overflow-y-auto custom-scrollbar transition-colors relative",
+          "flex-1 p-4 overflow-y-auto custom-scrollbar relative",
           isOver ? "bg-dragon-red/5" : "bg-transparent"
         )}
       >

@@ -8,16 +8,23 @@
 
 ### Ready
 
-- [ ] **Inventory & Equipment Workspace — interaction, ingestion, ammunition & asset UX overhaul (Issue #300)**
-  - **Status:** Ready for dispatch. The existing Inventory & Equipment foundation is merged, but runtime review exposed structural UX, drag/drop, ammunition, data-ingestion and asset-path problems that must be corrected before this area can be considered complete.
-  - **Goal:** Rebuild the runtime gear-management surface as one canonical Equipment Workspace: compact inventory grid on the left, one authoritative Equipment Doll on the right, one continuous drag/drop interaction model, and contextual ammunition handling for weapons that require it.
-  - **Primary scope:** inventory/equipment composition, global overlay layering, slot-aware dnd-kit interactions and DragOverlay feedback, equipment compatibility feedback, canonical equipment-pack ingestion into ItemInstances, weapon/ammunition compatibility and consumption, contextual ammunition slot/container presentation, quiver capacity semantics, sprite-sheet-first equipment rendering, optimized `.webp` fallbacks, and regression/manual verification.
-  - **Architecture:** preserve Inventory V2 ownership/placement state and existing inventory/equipment stores; do not introduce another inventory model, duplicate compatibility rules, duplicate Equipment Doll or parallel drag system. Static item facts belong in Atlas JSON; dynamic ownership, quantity, placement and loaded ammunition remain runtime ItemInstance/container state.
-  - **Ammunition model:** weapons that require ammunition must expose canonical machine-readable ammunition requirements; the Equipment UI shows an ammunition slot only when the currently equipped weapon requires it. Compatible ammunition is resolved by type/compatibility rules, consumed on successful attacks, and incompatible ammunition cannot be loaded. Quivers are containers with explicit capacity semantics (normal quiver = 20 arrows; special/magic variants may define higher capacity) rather than being treated as arrow stacks themselves.
-  - **Acceptance:** no inventory hidden behind navigation; one doll; dense slot-based inventory; visible drag preview and valid/invalid targets; supported Inventory ↔ Equipment movement remains synchronized; selected equipment packs become real owned ItemInstances; ammunition compatibility and consumption are deterministic; contextual ammo slot appears only when applicable; quiver/container capacity is represented correctly; sprite-backed equipment prefers canonical sprite sheets; fallback images are optimized; relevant tests/build/lint/asset validation pass.
-  - **Canonical issue:** `https://github.com/japiohopman/artificer/issues/300`
-  - **Canonical module:** `docs/modules/inventory_v2.md`
-  - **Out of scope:** replacing Inventory V2 persistence, broad party-storage redesign, speculative backend migration, or a new sprite-generation pipeline.
+- [x] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
+  - **Status:** Complete. All core 2024 domains (Species Foundation, Base Classes, 1–20 Progressions & Features, 48 Subclasses, 16 Origin Backgrounds, 75 Feats, 323 Spells, Equipment, Subraces) fully ingested and audited with strict 2014 vs 2024 ruleset resolution isolation and comprehensive test coverage.
+  - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
+  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (12/12 core classes complete) → 2024 Subclasses & Subclass Features (48/48 subclasses complete across 12 core classes) → 2024 Backgrounds/Origins (complete) → Feats integration (complete) → Spells (complete) → remaining rules-sensitive domains (complete) → ruleset integration tests (complete).
+  - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
+  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths; no fake/generic placeholder feature definitions exist.
+  - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.
+  - **Docs:** `docs/audits/ruleset-2024-gap-analysis.md` is the current audit; update it as implementation closes gaps.
+
+- [ ] **Inventory & Equipment Architecture / UX Overhaul**
+  - **Goal:** consolidate existing inventory/equipment implementations without creating another inventory data model.
+  - **Architecture:** `character/inventory/` owns character inventory domain UI; `character/equipment/` owns equipment presentation; `FullInventoryMenu` remains the full workspace; `CharacterPanel` remains compact HUD presentation.
+  - **Acceptance:** usable scrolling/filtering/inspection, equip/unequip, intended drag/drop, party/shared inventory, reusable EquipmentDoll, canonical Inventory V2 state, no duplicate inventory system.
+
+- [ ] **Canonical Character Profile & CharacterScreen Refactor**
+  - **Goal:** one reusable character profile/presentation layer for TitleScreen, HUD and character-facing screens.
+  - **Requirements:** narrative fields such as Traits/Ideals/Bonds/Flaws become first-class character data; keep `CharacterPanel` as a HUD surface and avoid another God Component.
 
 ### Blocked
 
@@ -27,7 +34,6 @@
 
 ## Completed / Confirmed Foundations
 
-- [x] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2** — completed and verified.
 - [x] **Character Creator — Species Character Mirror & Choice State v1** — merged. Shared Character Panel primitives established; persistent body/background presentation, Stats/Traits/Bio/Equipment structure and explicit choice-state work completed. The mirror is now the preferred naming/presentation model for the character panel.
 - [x] **Character Creator — Selection Experience v1** — merged.
 - [x] **Character Creator — Species Visual Integration v1** — merged.
@@ -35,7 +41,7 @@
 - [x] **Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation** — canonical `useGameStore.ruleset` context and resolver established.
 - [x] **Ruleset Downstream Integration v1** — Feats, Class Levels and Spells migrated to canonical ruleset resolution.
 - [x] **Ruleset Data Audit & 2024 Gap Analysis** — confirmed that several current Character Creator domains still resolve unversioned classic data; documented in `docs/audits/ruleset-2024-gap-analysis.md`.
-- [x] **Inventory & Equipment Architecture / UX Overhaul foundation** — merged and documented; follow-up implementation is tracked as Issue #300.
+- [x] **Inventory & Equipment Architecture / UX Overhaul foundation** — merged and documented.
 - [x] **Combat Integration v1** — BattleMap → CombatTester → CombatGrid.
 - [x] XP animation, shared party XP, location discovery, fog-of-war foundation and right-hand character panel foundations.
 

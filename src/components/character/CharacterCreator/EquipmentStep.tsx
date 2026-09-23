@@ -5,6 +5,7 @@ import { cn } from '../../../lib/utils';
 import { soundService } from '../../../services/soundService';
 import { ItemInstance, InventoryContainer, InventorySlot, EQUIPMENT_SLOT_CATALOG } from '../../../types/inventory';
 import { createItemInstance, createDefaultBackpack, createDefaultEquipment } from '../../../lib/inventoryUtils';
+import { CharacterPipeline } from '../../../lib/characterPipeline';
 import { 
   fetchClassData, fetchBackgroundJson, fetchEquipmentData, normalizeImageUrl 
 } from '../../../services/storageService';
@@ -123,7 +124,6 @@ const EquipmentOptionChoice: React.FC<{
         if (choice.option_type === 'choice') {
             return choice.choice?.desc || "Special Selection";
         } else if (choice.option_type === 'multiple') {
-            // Check if items have quantities and include them
             return choice.items?.map((i: any) => {
                 const name = i.of?.name || i.item?.name || i.equipment?.name || "Item";
                 const q = i.quantity || i.count || i.choice?.count || 1;
@@ -221,7 +221,6 @@ const EquipmentOptionChoice: React.FC<{
                     const isSelected = choiceSelections[optKey]?.includes(`${cIdx}`);
                         
                     if (options.length <= 4) {
-                        // Choice Row Layout (A vs B)
                         return (
                             <div 
                                 key={cIdx} 
@@ -241,7 +240,6 @@ const EquipmentOptionChoice: React.FC<{
                                     <img src={ITEM_BACKGROUND} alt="" className="w-full h-full object-cover" />
                                 </div>
 
-                                {/* Label Circle */}
                                 <div className={cn(
                                     "w-10 h-10 rounded-full flex items-center justify-center text-lg font-black shrink-0 relative z-10 border-2 transition-all",
                                     isPending || isSelected 
@@ -263,7 +261,6 @@ const EquipmentOptionChoice: React.FC<{
                                         </div>
                                     </div>
 
-                                    {/* Item Icons List */}
                                     <div className="flex flex-wrap gap-8 pt-2">
                                         {indices.map((idx, iIdx) => {
                                             const details = optionDetails[idx];
@@ -290,7 +287,6 @@ const EquipmentOptionChoice: React.FC<{
                                                             </div>
                                                         )}
 
-                                                        {/* Clickable Overlay/Inspect Icon specifically for equipment packs & container sub-items */}
                                                         {details && (
                                                             <button
                                                                 onClick={(e) => {
@@ -356,7 +352,6 @@ const EquipmentOptionChoice: React.FC<{
                         );
                     }
 
-                    // Original Grid Layout for Categories/Large Sets
                     let mainIdx = indices[0] || "";
                     let quantity = choice.quantity || choice.count || 1;
                     const details = mainIdx ? optionDetails[mainIdx] : null;
@@ -382,7 +377,7 @@ const EquipmentOptionChoice: React.FC<{
                             </div>
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-t from-dragon-red to-transparent pointer-events-none" />
                             
-                            <div className="w-full h-full bg-black/5 rounded-sm flex items-center justify-center overflow-hidden relative z-10 border border-[#c5a059]/10">
+                            <div className="w-full h-full bg-black/5 rounded-sm overflow-hidden p-0.5 flex items-center justify-center relative z-10 border border-[#c5a059]/10">
                                 {details?.imageUrl || details?.index ? (
                                     <EquipmentSprite 
                                         itemKey={details.index || details.name} 
@@ -448,9 +443,8 @@ export const EquipmentStep: React.FC<{
     const [equipmentDetails, setEquipmentDetails] = useState<Record<string, any>>({});
     const [loading, setLoading] = useState(false);
     const [completedOptions, setCompletedOptions] = useState<Record<string, boolean>>({});
-    const [choiceSelections, setChoiceSelections] = useState<Record<string, string[]>>({}); // optKey -> list of selected choice indices
+    const [choiceSelections, setChoiceSelections] = useState<Record<string, string[]>>({});
 
-    // Equipment markdown compendium & help state
     const [choiceMarkdown, setChoiceMarkdown] = useState<string>('');
     const [helpMarkdown, setHelpMarkdown] = useState<string>('');
     const [weaponsMarkdown, setWeaponsMarkdown] = useState<string>('');
@@ -460,7 +454,6 @@ export const EquipmentStep: React.FC<{
     const [activeHelpTab, setActiveHelpTab] = useState<'help' | 'choice' | 'weapons' | 'armor'>('help');
     const [showInlineIntro, setShowInlineIntro] = useState<boolean>(false);
 
-    // Fetch official equipment markdown guide files on mount
     useEffect(() => {
         const loadMarkdownFiles = async () => {
             try {
@@ -539,46 +532,25 @@ export const EquipmentStep: React.FC<{
                         const idx = eq.equipment?.index;
                         if (!idx || !details[idx]) continue;
                         
-                        // Prevent duplicates for starting gear
-                        const alreadyHas = Object.values(itemsRegistry).some(inst => inst.template === idx);
-                        if (alreadyHas) continue;
+                        const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(idx, eq.quantity || 1);
+                        for (const instance of expandedInstances) {
+                            itemsRegistry[instance.id] = instance;
+                            const slotId = idx.includes('shield') ? 'off_hand' :
+                                           (details[idx]?.armor_category ? 'chest' :
+                                           (details[idx]?.weapon_category ? 'main_hand' : 'backpack'));
 
-                        const itemMetadata = details[idx];
-                        const instance = createItemInstance(idx, eq.quantity || 1, itemMetadata);
-                        itemsRegistry[instance.id] = instance;
-
-                        // UNPACK PACKS (Fixed Starting Equipment)
-                        if (itemMetadata.contents && Array.isArray(itemMetadata.contents)) {
-                            for (const contentItem of itemMetadata.contents) {
-                                const cIdx = contentItem.item?.index || contentItem.index;
-                                if (cIdx) {
-                                    const cData = await fetchEquipmentData(cIdx);
-                                    if (cData) {
-                                        const subInstance = createItemInstance(cIdx, contentItem.quantity || 1, cData);
-                                        itemsRegistry[subInstance.id] = subInstance;
-                                        const bagSlot = backpack!.slots.find(s => s.itemId === null);
-                                        if (bagSlot) bagSlot.itemId = subInstance.id;
-                                    }
+                            if (slotId !== 'backpack') {
+                                const targetSlot = equipment?.slots.find(s => s.id === slotId && s.itemId === null);
+                                if (targetSlot) {
+                                    targetSlot.itemId = instance.id;
+                                } else {
+                                    const bagSlot = backpack?.slots.find(s => s.itemId === null);
+                                    if (bagSlot) bagSlot.itemId = instance.id;
                                 }
-                            }
-                        }
-
-                        // Resolve slot
-                        const slotId = idx.includes('shield') ? 'off_hand' : 
-                                       (itemMetadata.armor_category ? 'chest' : 
-                                       (itemMetadata.weapon_category ? 'main_hand' : 'backpack'));
-                        
-                        if (slotId !== 'backpack') {
-                            const targetSlot = equipment?.slots.find(s => s.id === slotId && s.itemId === null);
-                            if (targetSlot) {
-                                targetSlot.itemId = instance.id;
                             } else {
                                 const bagSlot = backpack?.slots.find(s => s.itemId === null);
                                 if (bagSlot) bagSlot.itemId = instance.id;
                             }
-                        } else {
-                            const bagSlot = backpack?.slots.find(s => s.itemId === null);
-                            if (bagSlot) bagSlot.itemId = instance.id;
                         }
                     }
                 };
@@ -652,7 +624,6 @@ export const EquipmentStep: React.FC<{
 
     const handleChoice = async (opt: any, choiceIdx: number, optKey: string, actualChoice?: any) => {
         const selections = choiceSelections[optKey] || [];
-        // Prevent picking more than allowed
         if (selections.length >= (opt.choose || 1)) return;
 
         const options = opt.from?.options || opt.from?.equipment?.options || [];
@@ -661,71 +632,35 @@ export const EquipmentStep: React.FC<{
         
         const itemsToProcess = await resolveItemsFromChoice(choice);
         
-        setNewChar(prev => {
-            const itemsRegistry = { ...(prev.items || {}) };
-            const containers = { ...(prev.containers || {}) };
-            let equipment = prev.equipment;
+        for (const itemRef of itemsToProcess) {
+            const index = itemRef.index;
+            if (!index) continue;
             
-            const charId = prev.id || 'new_character';
-            if (!equipment || equipment.slots.length === 0) equipment = createDefaultEquipment(charId);
+            const expandedInstances = await CharacterPipeline.expandAndCreateItemInstances(index, itemRef.quantity || 1);
             
-            let backpack = Object.values(containers).find(c => c.type === 'backpack');
-            if (!backpack) {
-                backpack = createDefaultBackpack(charId);
-                containers[backpack.id] = backpack;
-            }
-
-            // Sync backpack back to containers if modified
-            const updateBackpackInContainers = (b: InventoryContainer) => {
-                containers[b.id] = b;
-            };
-
-            const processItemRef = async (itemRef: any) => {
-                const index = itemRef.index;
-                if (!index) return;
+            setNewChar(prev => {
+                const itemsRegistry = { ...(prev.items || {}) };
+                const containers = { ...(prev.containers || {}) };
+                let equipment = prev.equipment;
                 
-                const itemData = await fetchEquipmentData(index);
-                if (itemData) {
-                    setEquipmentDetails(prevDetails => ({ ...prevDetails, [index]: itemData }));
-                    
-                    const instance = createItemInstance(index, itemRef.quantity || 1, itemData);
-                    itemsRegistry[instance.id] = instance;
-                    
-                    // Add pack contents if it's a pack
-                    if (itemData.contents && Array.isArray(itemData.contents)) {
-                        for (const contentItem of itemData.contents) {
-                            const cIdx = contentItem.item?.index || contentItem.index;
-                            if (cIdx) {
-                                const cData = await fetchEquipmentData(cIdx);
-                                if (cData) {
-                                    const subInstance = createItemInstance(cIdx, contentItem.quantity || 1, cData);
-                                    itemsRegistry[subInstance.id] = subInstance;
-                                    const bagSlot = backpack!.slots.find(s => s.itemId === null);
-                                    if (bagSlot) bagSlot.itemId = subInstance.id;
-                                }
-                            }
-                        }
-                    }
+                const charId = prev.id || 'new_character';
+                if (!equipment || equipment.slots.length === 0) equipment = createDefaultEquipment(charId);
 
-                    const slotId = await resolveSlotId(itemData);
-                    if (slotId !== 'backpack') {
-                        const targetSlot = equipment!.slots.find(s => s.id === slotId && s.itemId === null);
-                        if (targetSlot) targetSlot.itemId = instance.id;
-                        else {
-                            const bagSlot = backpack!.slots.find(s => s.itemId === null);
-                            if (bagSlot) bagSlot.itemId = instance.id;
-                        }
-                    } else {
-                        const bagSlot = backpack!.slots.find(s => s.itemId === null);
-                        if (bagSlot) bagSlot.itemId = instance.id;
-                    }
+                let backpack = Object.values(containers).find(c => c.type === 'backpack');
+                if (!backpack) {
+                    backpack = createDefaultBackpack(charId);
+                    containers[backpack.id] = backpack;
                 }
-            };
 
-            itemsToProcess.forEach(item => processItemRef(item));
+                for (const instance of expandedInstances) {
+                    itemsRegistry[instance.id] = instance;
+                    const bagSlot = backpack.slots.find(s => s.itemId === null);
+                    if (bagSlot) bagSlot.itemId = instance.id;
+                }
 
-            return { ...prev, items: itemsRegistry, containers, equipment };
-        });
+                return { ...prev, items: itemsRegistry, containers, equipment };
+            });
+        }
 
         const newSelections = [...selections, `${choiceIdx}`];
         setChoiceSelections(prev => ({ ...prev, [optKey]: newSelections }));
@@ -743,18 +678,14 @@ export const EquipmentStep: React.FC<{
             const containers = { ...prev.containers! };
             const backpack = Object.values(containers).find(c => c.type === 'backpack')!;
             
-            // Find current location
             const currentEquippedSlot = equipment.slots.find(s => s.itemId === itemId);
-            const currentBagSlot = backpack.slots.find(s => s.itemId === itemId);
 
             if (currentEquippedSlot) {
-                // Unequip: move to backpack
                 currentEquippedSlot.itemId = null;
                 const emptyBagSlot = backpack.slots.find(s => s.itemId === null);
                 if (emptyBagSlot) emptyBagSlot.itemId = itemId;
                 soundService.playEffect('UI_BACK_EXIT');
             } else {
-                // Equip
                 resolveSlotId(itemData).then(targetSlotId => {
                     setNewChar(p => {
                         const eq = { ...p.equipment! };
@@ -763,14 +694,12 @@ export const EquipmentStep: React.FC<{
                         
                         const targetSlot = eq.slots.find(s => s.id === targetSlotId);
                         if (targetSlot) {
-                            // If slot occupied, move current item to bag
                             if (targetSlot.itemId) {
                                 const bagSlot = bag.slots.find(s => s.itemId === null);
                                 if (bagSlot) bagSlot.itemId = targetSlot.itemId;
                             }
                             targetSlot.itemId = itemId;
                             
-                            // Remove from bag
                             const bagSrcSlot = bag.slots.find(s => s.itemId === itemId);
                             if (bagSrcSlot) bagSrcSlot.itemId = null;
                         }
@@ -786,7 +715,6 @@ export const EquipmentStep: React.FC<{
 
     return (
         <div className="h-full flex gap-6 p-2 relative">
-            {/* Help Compendium Modal Overlay */}
             <AnimatePresence>
                 {isHelpOpen && (
                     <motion.div
@@ -818,7 +746,6 @@ export const EquipmentStep: React.FC<{
                                 </button>
                             </div>
 
-                            {/* Navigation Tabs */}
                             <div className="flex border-b border-dragon-gold/20 mb-4 gap-1 overflow-x-auto shrink-0 pb-1">
                                 <button
                                     onClick={() => setActiveHelpTab('help')}
@@ -866,7 +793,6 @@ export const EquipmentStep: React.FC<{
                                 </button>
                             </div>
 
-                            {/* Content Scroll Area */}
                             <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
                                 <DnDMarkdown
                                     content={

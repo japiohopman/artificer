@@ -1351,7 +1351,3 @@ Then provide a concise summary of:
 4. How sounds are triggered.
 5. What was done specifically for performance.
 6. How the interaction was tested.
-
-
-
-

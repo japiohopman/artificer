@@ -1,11 +1,16 @@
 import React from 'react';
-import { useDroppable } from '@dnd-kit/core';
 import { useCharacterStore } from '../../../store/useCharacterStore';
 import { useActiveCharacter, selectCharacterById } from '../../../lib/character';
-import { useInventoryStore } from '../../../store/useInventoryStore';
-import { DraggableInventoryItem } from './DraggableInventoryItem';
-import { Package, Trash2, Weight, Shield, ArrowRight, Sparkles, Book, Key, Filter } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { InventorySlot } from './InventorySlot';
+import { GameIcon } from '../../../game_icons';
+import { soundService } from '../../../services/soundService';
+import {
+  resolveItemTaxonomy,
+  EQUIPMENT_SUBCATEGORIES,
+  MATERIALS_SUBCATEGORIES,
+  RootTaxonomy,
+  ItemSubcategory
+} from '../../../lib/inventoryTaxonomy';
 import { cn } from '../../../lib/utils';
 
 interface InventoryProps {
@@ -14,50 +19,42 @@ interface InventoryProps {
   showCategoryTabs?: boolean;
   compactEquipped?: boolean;
   gridCols?: number;
+  activeDragItem?: any;
 }
 
-type BackpackCategory =
-  | 'all'
-  | 'weapons'
-  | 'armor'
-  | 'shields'
-  | 'head'
-  | 'boots'
-  | 'rings'
-  | 'neck'
-  | 'consumables'
-  | 'materials'
-  | 'key'
-  | 'books';
-
 export const Inventory: React.FC<InventoryProps> = ({
-  onEquipRequest,
   forceCharacterId,
   showCategoryTabs = true,
-  compactEquipped = false,
-  gridCols = 5
+  activeDragItem
 }) => {
   const storeActiveChar = useActiveCharacter();
   const forcedChar = useCharacterStore(state => forceCharacterId ? selectCharacterById(state, forceCharacterId) : undefined);
-  const { unequipItem, removeFromBackpack } = useInventoryStore();
-  const [activeCategory, setActiveCategory] = React.useState<BackpackCategory>('all');
-  
   const activeCharacter = forcedChar || storeActiveChar;
+
+  const [rootCategory, setRootCategory] = React.useState<RootTaxonomy>('EQUIPMENT');
+  const [activeSubcategory, setActiveSubcategory] = React.useState<ItemSubcategory | 'ALL'>('ALL');
+
   if (!activeCharacter) {
-    return <div className="text-[10px] text-parchment-400 italic">No active character</div>;
+    return <div className="text-[10px] text-parchment-400 italic p-2">No active character loaded</div>;
   }
 
-  // Normalize items list for V1 and V2 characters
-  const backpack = React.useMemo(() => {
-    if (activeCharacter.saveVersion === 2 && activeCharacter.items && activeCharacter.containers) {
-      const items = activeCharacter.items;
-      const backpackContainer = Object.values(activeCharacter.containers).find(c => c.type === 'backpack');
-      if (!backpackContainer) return [];
+  // Derive capacity dynamically from V2 container state or default to 24
+  const backpackContainer = activeCharacter.saveVersion === 2 && activeCharacter.containers
+    ? Object.values(activeCharacter.containers).find(c => c.type === 'backpack')
+    : null;
 
-      return backpackContainer.slots
-        .filter(s => s.itemId && items[s.itemId])
-        .map(s => {
-          const itemInstance = items[s.itemId!];
+  const totalCapacity = backpackContainer?.slots?.length || 24;
+
+  // Map canonical backpack slots strictly preserve slot index `idx` -> canonical item mapping
+  const canonicalSlots = React.useMemo(() => {
+    const slotsCount = Math.max(totalCapacity, 24);
+    const result: (any | null)[] = Array.from({ length: slotsCount }).map(() => null);
+
+    if (activeCharacter.saveVersion === 2 && activeCharacter.items && backpackContainer) {
+      const items = activeCharacter.items;
+      backpackContainer.slots.forEach((s, idx) => {
+        if (s.itemId && items[s.itemId]) {
+          const itemInstance = items[s.itemId];
           const kind = itemInstance.kind || 'adventuring_gear';
           let defaultSlot = undefined;
           if (kind === 'weapon') defaultSlot = 'main_hand';
@@ -68,169 +65,174 @@ export const Inventory: React.FC<InventoryProps> = ({
           else if (kind === 'ring') defaultSlot = 'ring_1';
           else if (kind === 'neck') defaultSlot = 'neck';
           else if (kind === 'back') defaultSlot = 'back';
+          else if ((kind as string) === 'ammunition') defaultSlot = 'ammo';
 
-          return {
+          result[idx] = {
             id: itemInstance.id,
             name: itemInstance.customName || itemInstance.template,
             template: itemInstance.template,
             quantity: itemInstance.quantity || 1,
             kind,
             slot: defaultSlot,
-            _type: kind === 'weapon' || kind === 'armor' || kind === 'shield' || kind === 'head' || kind === 'feet' || kind === 'ring' || kind === 'neck' ? 'equipment' : kind,
+            _type: kind,
             imageUrl: `/assets/atlas/equipment/images/${itemInstance.template}.webp`,
             index: itemInstance.template
           };
-        });
+        }
+      });
+    } else if (activeCharacter.backpack) {
+      activeCharacter.backpack.forEach((item: any, idx: number) => {
+        if (idx < slotsCount) {
+          result[idx] = item;
+        }
+      });
     }
-    return activeCharacter.backpack || [];
-  }, [activeCharacter]);
 
-  const inventory = activeCharacter.inventory || {};
-  const equippedItems = Object.entries(inventory).filter(([_, item]) => item !== null);
+    return result;
+  }, [activeCharacter, backpackContainer]);
 
-  const filteredBackpack = backpack.filter((item: any) => {
-    const kind = item.kind || item._type || '';
-    if (activeCategory === 'all') return true;
-    if (activeCategory === 'weapons') return kind === 'weapon';
-    if (activeCategory === 'armor') return kind === 'armor';
-    if (activeCategory === 'shields') return kind === 'shield';
-    if (activeCategory === 'head') return kind === 'head';
-    if (activeCategory === 'boots') return kind === 'feet';
-    if (activeCategory === 'rings') return kind === 'ring';
-    if (activeCategory === 'neck') return kind === 'neck';
-    if (activeCategory === 'consumables') return kind === 'consumable';
-    if (activeCategory === 'materials') return kind === 'material' || kind === 'materials';
-    if (activeCategory === 'key') return item.isKeyItem || kind === 'quest' || kind === 'key';
-    if (activeCategory === 'books') return item.isBook || kind === 'book' || kind === 'books';
-    return true;
-  });
+  const subcategories = rootCategory === 'EQUIPMENT' ? EQUIPMENT_SUBCATEGORIES : MATERIALS_SUBCATEGORIES;
 
-  const categories: { id: BackpackCategory; icon: any; label: string }[] = [
-    { id: 'all', icon: Filter, label: 'All' },
-    { id: 'weapons', icon: Shield, label: 'Weapons' },
-    { id: 'armor', icon: Shield, label: 'Armor' },
-    { id: 'shields', icon: Shield, label: 'Shields' },
-    { id: 'head', icon: Shield, label: 'Head' },
-    { id: 'boots', icon: Shield, label: 'Boots' },
-    { id: 'rings', icon: Sparkles, label: 'Rings' },
-    { id: 'neck', icon: Sparkles, label: 'Neck' },
-    { id: 'consumables', icon: Package, label: 'Potions' },
-    { id: 'materials', icon: Sparkles, label: 'Mats' },
-    { id: 'key', icon: Key, label: 'Key' },
-    { id: 'books', icon: Book, label: 'Books' }
-  ];
+  const occupiedCount = canonicalSlots.filter(Boolean).length;
 
-  // Set up dnd-kit droppable context for the entire backpack grid
-  const { setNodeRef, isOver } = useDroppable({
-    id: `backpack-${activeCharacter.id}`,
-    data: { characterId: activeCharacter.id, type: 'backpack' }
-  });
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = React.useState<number>(0);
 
-  const totalSlots = 120;
-  const gridSlots = Array.from({ length: totalSlots });
+  React.useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Compute column count dynamically based strictly on container width, capped at max 5 columns
+  const dynamicCols = React.useMemo(() => {
+    if (containerWidth <= 0) return 'grid-cols-4 sm:grid-cols-5';
+    if (containerWidth >= 260) return 'grid-cols-5';
+    return 'grid-cols-4';
+  }, [containerWidth]);
 
   return (
-    <div className="space-y-6">
-      {/* Equipped Section (Conditional Compact / Simple representation) */}
-      {!compactEquipped && equippedItems.length > 0 && (
-        <div className="space-y-3">
-          <div className="flex items-center justify-between border-b border-dragon-red/10 pb-1.5">
-            <h3 className="text-[10px] font-bold text-dragon-red uppercase tracking-widest flex items-center gap-2">
-              <Shield size={12} /> Currently Equipped
-            </h3>
-            <span className="text-[8px] text-parchment-500 font-mono">{equippedItems.length} Slots</span>
+    <div className="space-y-2 select-none font-body h-full flex flex-col min-h-0">
+      {/* Backpack Header & Dynamic Capacity Bar */}
+      <div className="flex items-center justify-between border-b border-dragon-gold/20 pb-1.5 shrink-0">
+        <div className="flex items-center gap-1.5">
+          <GameIcon name="package" size={14} color="#D4AF37" />
+          <h3 className="text-[10px] font-header font-bold text-dragon-gold uppercase tracking-wider">
+            Available Gear
+          </h3>
+        </div>
+        <span className="text-[8px] text-parchment-400 font-mono font-bold">
+          {occupiedCount} / {totalCapacity} Slots
+        </span>
+      </div>
+
+      {/* Root Category and Subcategory Tabs */}
+      {showCategoryTabs && (
+        <div className="flex flex-col gap-1.5 bg-black/40 p-1.5 rounded-lg border border-dragon-gold/30 shrink-0">
+          {/* Top Row: Root Category Switcher */}
+          <div className="flex items-center gap-1 bg-black/50 p-0.5 rounded border border-dragon-gold/30 shrink-0">
+            <button
+              type="button"
+              onClick={() => {
+                setRootCategory('EQUIPMENT');
+                setActiveSubcategory('ALL');
+                soundService.playEffect('UI_CLICK_LIGHT');
+              }}
+              className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
+                rootCategory === 'EQUIPMENT'
+                  ? 'bg-dragon-darkRed text-white border-dragon-gold shadow-xs font-black'
+                  : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/5'
+              }`}
+            >
+              Equipment
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setRootCategory('MATERIALS');
+                setActiveSubcategory('ALL');
+                soundService.playEffect('UI_CLICK_LIGHT');
+              }}
+              className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
+                rootCategory === 'MATERIALS'
+                  ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
+                  : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/5'
+              }`}
+            >
+              Materials
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 gap-1.5">
-            {equippedItems.map(([slot, item]) => (
-              <div
-                key={slot}
-                className="animate-in fade-in slide-in-from-left-4 duration-300 bg-dragon-red/5 border border-dragon-red/10 rounded p-1.5 flex items-center gap-2 group"
+          {/* Bottom Row: Subcategory Tabs */}
+          <div className="flex items-center gap-1 overflow-x-auto custom-scrollbar pb-0.5 pt-0.5">
+            <button
+              type="button"
+              onClick={() => {
+                setActiveSubcategory('ALL');
+                soundService.playEffect('UI_CLICK_LIGHT');
+              }}
+              className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer ${
+                activeSubcategory === 'ALL'
+                  ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
+                  : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
+              }`}
+            >
+              All {rootCategory === 'EQUIPMENT' ? 'Gear' : 'Materials'}
+            </button>
+            {subcategories.map((sub) => (
+              <button
+                key={sub.id}
+                type="button"
+                onClick={() => {
+                  setActiveSubcategory(sub.id);
+                  soundService.playEffect('UI_CLICK_LIGHT');
+                }}
+                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer flex items-center gap-1 ${
+                  activeSubcategory === sub.id
+                    ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
+                    : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
+                }`}
               >
-                <div className="w-6 aspect-[9/16] bg-black/10 rounded border border-dragon-red/5 overflow-hidden flex-none">
-                  <img 
-                    src={item.imageUrl} 
-                    alt={item.name} 
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[8px] font-bold text-dragon-red uppercase tracking-tighter truncate">{item.name}</div>
-                  <div className="text-[6px] text-parchment-500 uppercase font-bold">{slot.replace('-', ' ')}</div>
-                </div>
-                <button 
-                  onClick={() => unequipItem(slot)}
-                  className="p-1.5 text-parchment-400 hover:text-dragon-red transition-colors"
-                  title="Unequip to Backpack"
-                >
-                  <Trash2 size={12} />
-                </button>
-              </div>
+                {sub.svgIcon && (
+                  <img src={sub.svgIcon} alt="" className="w-2.5 h-2.5 object-contain invert opacity-70" />
+                )}
+                {sub.label}
+              </button>
             ))}
           </div>
         </div>
       )}
 
-      {/* Backpack Section with Categories and Fixed 120-Slot Grid */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between border-b border-dragon-red/10 pb-1.5">
-          <h3 className="text-[10px] font-bold text-dragon-red uppercase tracking-widest flex items-center gap-2">
-            <Package size={12} /> Vault Backpack
-          </h3>
-          <span className="text-[8px] text-parchment-500 font-mono font-bold">{backpack.length} / {totalSlots}</span>
-        </div>
+      {/* Dense 9:16 Slot Grid Surface preserving canonical slot identity `slotIdx` */}
+      <div ref={containerRef} className="flex-1 p-2 rounded-lg border border-dragon-gold/20 relative overflow-y-auto custom-scrollbar bg-stone-950/40 shadow-inner min-h-0">
+        <div className={cn("grid gap-1.5 relative z-10", dynamicCols)}>
+          {canonicalSlots.map((rawItem, slotIdx) => {
+            // Apply filtering visually while keeping slotIdx strictly tied to canonical slot index
+            let itemToShow = rawItem;
+            if (rawItem) {
+              const taxonomy = resolveItemTaxonomy(rawItem);
+              if (taxonomy.rootCategory !== rootCategory) {
+                itemToShow = null;
+              } else if (activeSubcategory !== 'ALL' && taxonomy.subcategory !== activeSubcategory) {
+                itemToShow = null;
+              }
+            }
 
-        {/* Backpack Categories */}
-        {showCategoryTabs && (
-          <div className="flex gap-1 overflow-x-auto pb-1.5 custom-scrollbar no-scrollbar">
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={cn(
-                  "flex items-center gap-1 px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider transition-all whitespace-nowrap border",
-                  activeCategory === cat.id
-                    ? "bg-dragon-red text-white border-dragon-red shadow-sm"
-                    : "bg-white/40 text-parchment-600 border-parchment-300 hover:bg-parchment-200"
-                )}
-              >
-                <cat.icon size={8} />
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* 120-Slot Max 5 Column Grid Layout */}
-        <div
-          ref={setNodeRef}
-          className={cn(
-            "p-2 rounded-lg border-2 border-dragon-red/15 transition-all relative overflow-y-auto max-h-[55vh] custom-scrollbar bg-stone-950/5",
-            isOver ? "bg-dragon-red/[0.04] border-dragon-red/30" : "border-dragon-red/10"
-          )}
-        >
-          {isOver && (
-            <div className="absolute inset-0 border-2 border-dashed border-dragon-red/20 z-10 pointer-events-none rounded m-0.5 animate-pulse" />
-          )}
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 relative z-20">
-            {filteredBackpack.map((item, idx) => (
-              <div key={item.id || `item-slot-${idx}`} className="w-full">
-                <DraggableInventoryItem
-                  item={item}
-                  index={backpack.indexOf(item)}
-                  sourceId={activeCharacter.id}
-                  gridMode={true}
-                />
-              </div>
-            ))}
-            {filteredBackpack.length === 0 && (
-              <div className="col-span-full py-8 text-center text-[10px] text-parchment-400 italic">
-                No items matching selected category.
-              </div>
-            )}
-          </div>
+            return (
+              <InventorySlot
+                key={`inv-slot-${slotIdx}`}
+                slotIndex={slotIdx}
+                item={itemToShow}
+                characterId={activeCharacter.id}
+                activeDragItem={activeDragItem}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

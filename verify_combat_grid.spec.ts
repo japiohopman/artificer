@@ -11,7 +11,7 @@ test('verify combat grid and action panel', async ({ page }) => {
   await page.evaluate(() => {
     const uiStore = (window as any).useUIStore.getState();
     const gameStore = (window as any).useGameStore.getState();
-    
+
     gameStore.setIsGameStarted(true);
     uiStore.setGameMode('combat');
     gameStore.startCombat();
@@ -26,10 +26,10 @@ test('verify combat grid and action panel', async ({ page }) => {
 
   // Check for End Turn button in ActionPanel
   await page.waitForSelector('text=End Turn', { timeout: 10000 });
-  
-  await page.screenshot({ 
+
+  await page.screenshot({
     path: 'docs/screenshots/action_panel_zoom.png',
-    clip: { x: 300, y: 500, width: 680, height: 220 } 
+    clip: { x: 300, y: 500, width: 680, height: 220 }
   });
 
   console.log('Screenshots captured successfully');

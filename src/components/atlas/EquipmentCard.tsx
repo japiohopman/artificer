@@ -12,6 +12,8 @@ import { useInventoryStore } from '../../store/useInventoryStore';
 import { GameIcon, GameIconName } from '../../game_icons';
 import { DiceText } from '../dice/DiceText';
 import { BookReader } from '../bookreader/BookReader';
+import { EquipmentSprite } from '../character/equipment/EquipmentSprite';
+import { InventorySlot } from '../character/inventory/InventorySlot';
 
 import { normalizeImageUrl, playSuccessSound } from '../../services/storageService';
 
@@ -23,10 +25,11 @@ interface EquipmentCardProps {
   equipment: any;
   className?: string;
   isModal?: boolean;
+  variant?: 'card' | 'tile' | 'inspector';
   onClose?: () => void;
 }
 
-export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, onClose }) => {
+export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, className, isModal, variant = 'card', onClose }) => {
   const { setFocusedItem, explorerTab } = useUIStore();
   const { activeCharacterId } = useCharacterStore();
   const { equipItem, unequipItem, transferItem } = useInventoryStore();
@@ -39,6 +42,147 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
   const [isBookOpen, setIsBookOpen] = useState(false);
 
   if (!equipment) return null;
+
+  const currentItem = (equipment.versions && equipment.versions[activeTier]) || equipment;
+
+  // Render Inspector Panel Variant (Fits inside fixed 320px panel)
+  if (variant === 'inspector') {
+    const isMagic = currentItem.rarity && currentItem.rarity !== 'Common';
+    const fallbackUrl = normalizeImageUrl(currentItem.imageUrl || currentItem.image, currentItem._type || 'equipment', currentItem.index || currentItem.id, currentItem.name);
+    const descriptionMarkdown = Array.isArray(currentItem.desc)
+      ? currentItem.desc.join('\n\n')
+      : (typeof currentItem.desc === 'string' ? currentItem.desc : "No description available.");
+
+    return (
+      <div
+        className={cn(
+          "w-full bg-parchment-100 border-2 border-dragon-gold/50 rounded-xl p-3 flex flex-col gap-3 relative shadow-md overflow-hidden text-stone-900 font-body select-none",
+          isMagic && "ring-1 ring-dragon-gold border-dragon-gold",
+          className
+        )}
+      >
+        {/* Header: Item Name, Category, Cost/Weight */}
+        <div className="border-b border-dragon-gold/30 pb-2 flex flex-col gap-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-header text-sm font-bold text-dragon-darkRed uppercase tracking-tight leading-tight">
+              {currentItem.name || currentItem.title || 'Unknown Item'}
+            </h3>
+            {currentItem.rarity && (
+              <span className="text-[8px] font-mono font-bold uppercase px-1.5 py-0.5 rounded bg-dragon-gold/20 text-dragon-darkRed border border-dragon-gold/40 shrink-0">
+                {currentItem.rarity}
+              </span>
+            )}
+          </div>
+          <div className="flex items-center justify-between text-[8px] font-mono text-stone-600">
+            <span className="uppercase tracking-wider font-semibold text-dragon-gold">
+              {currentItem.equipment_category?.name || currentItem.equipment_category || currentItem._type || 'Gear'}
+            </span>
+            <div className="flex items-center gap-2">
+              {currentItem.cost && (
+                <span>{currentItem.cost.quantity || currentItem.cost} {currentItem.cost.unit || 'gp'}</span>
+              )}
+              {currentItem.weight && <span>{currentItem.weight} lbs</span>}
+            </div>
+          </div>
+        </div>
+
+        {/* Artwork Display: 9:16 Portrait Frame */}
+        <div className="w-28 aspect-[9/16] mx-auto bg-stone-950/80 rounded-lg border border-dragon-gold/30 flex items-center justify-center relative overflow-hidden p-1 shrink-0">
+          <EquipmentSprite
+            itemKey={currentItem}
+            alt={currentItem.name}
+            className="w-full h-full object-contain drop-shadow-md"
+            fallbackUrl={fallbackUrl}
+          />
+        </div>
+
+        {/* Description Body */}
+        <div className="text-[9px] text-stone-800 leading-relaxed max-h-36 overflow-y-auto custom-scrollbar pr-1 italic">
+          <Markdown remarkPlugins={[remarkGfm]}>
+            {descriptionMarkdown}
+          </Markdown>
+        </div>
+
+        {/* Container Slots Grid (If item is a container) */}
+        {(() => {
+          const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
+          if (!activeChar || !activeChar.containers) return null;
+
+          const containerObj = Object.values(activeChar.containers).find(
+            c => c.id === currentItem.containerId || c.id === currentItem.id || c.name === currentItem.name
+          );
+
+          if (!containerObj || !containerObj.slots) return null;
+
+          return (
+            <div className="pt-2 border-t border-dragon-gold/30 flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-[9px] font-header font-bold text-dragon-darkRed uppercase tracking-wider flex items-center gap-1">
+                  <GameIcon name="box" size={10} /> Container Contents
+                </span>
+                <span className="text-[8px] font-mono text-stone-600">
+                  {containerObj.slots.filter(s => s.itemId).length} / {containerObj.slots.length} Slots
+                </span>
+              </div>
+              <div className="grid grid-cols-5 gap-1 bg-black/10 p-1.5 rounded-lg border border-dragon-gold/20">
+                {containerObj.slots.map((slot, idx) => {
+                  const itemInst = slot.itemId && activeChar.items ? activeChar.items[slot.itemId] : null;
+                  const mappedItem = itemInst ? {
+                    id: itemInst.id,
+                    name: itemInst.customName || itemInst.template,
+                    template: itemInst.template,
+                    quantity: itemInst.quantity || 1,
+                    imageUrl: `/assets/atlas/equipment/images/${itemInst.template}.webp`
+                  } : null;
+
+                  return (
+                    <InventorySlot
+                      key={idx}
+                      slotIndex={idx}
+                      item={mappedItem}
+                      characterId={activeChar.id}
+                      containerId={containerObj.id}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+      </div>
+    );
+  }
+
+  // Render 9:16 Portrait Tile Variant
+  if (variant === 'tile') {
+    const isMagic = currentItem.rarity && currentItem.rarity !== 'Common';
+    const fallbackUrl = normalizeImageUrl(currentItem.imageUrl || currentItem.image, currentItem._type || 'equipment', currentItem.index || currentItem.id, currentItem.name);
+
+    return (
+      <div
+        className={cn(
+          "aspect-[9/16] w-full bg-parchment-200/80 hover:bg-parchment-200 border-2 border-dragon-gold/30 hover:border-dragon-gold rounded-lg relative flex items-center justify-center p-0 cursor-pointer transition-colors select-none shadow-xs group overflow-hidden pointer-events-auto",
+          isMagic && "ring-1 ring-dragon-gold/60 border-dragon-gold bg-dragon-gold/[0.08]",
+          className
+        )}
+      >
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0">
+          <EquipmentSprite
+            itemKey={currentItem}
+            alt={currentItem.name}
+            className="w-full h-full object-contain pointer-events-none drop-shadow-xs"
+            fallbackUrl={fallbackUrl}
+          />
+        </div>
+
+        {currentItem.quantity > 1 && (
+          <span className="absolute bottom-0.5 right-0.5 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-10">
+            x{currentItem.quantity}
+          </span>
+        )}
+      </div>
+    );
+  }
 
   const isBook = isBookLike(equipment);
 
@@ -62,20 +206,12 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
     }
   }, [equipment.index]);
 
-  const currentItem = (equipment.versions && equipment.versions[activeTier]) || equipment;
-
   const handleEquip = () => {
     if (currentItem.slot) {
       const slots = Array.isArray(currentItem.slot) ? currentItem.slot : [currentItem.slot];
       equipItem(currentItem, slots[0]);
       onClose?.();
     }
-  };
-
-  const handleTransfer = () => {
-    // Basic transfer logic: toggle between active character and party
-    // This is a placeholder since we need the sourceId
-    onClose?.();
   };
 
   const rarityColors: { [key: string]: string } = {
@@ -392,6 +528,52 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
                  </div>
               </div>
             )}
+
+            {/* Container Slots Grid (V2 interactive containers) */}
+            {(() => {
+              const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
+              if (!activeChar || !activeChar.containers) return null;
+
+              const containerId = currentItem.id || currentItem.containerId;
+              const containerObj = containerId ? activeChar.containers[containerId] : Object.values(activeChar.containers).find(c => c.id === currentItem.id || c.name === currentItem.name);
+
+              if (!containerObj || !containerObj.slots) return null;
+
+              return (
+                <div className="mt-4 pt-3 border-t border-dragon-gold/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-1.5">
+                      <GameIcon name="box" size={12} color="#8B0000" />
+                      <span className="text-[9px] font-black uppercase text-dragon-darkRed tracking-wider">
+                        Container Slots ({containerObj.slots.filter(s => s.itemId).length} / {containerObj.slots.length})
+                      </span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-5 gap-1.5 bg-black/20 p-2 rounded-lg border border-dragon-gold/20">
+                    {containerObj.slots.map((slot, idx) => {
+                      const itemInst = slot.itemId && activeChar.items ? activeChar.items[slot.itemId] : null;
+                      return (
+                        <div
+                          key={idx}
+                          className="aspect-[9/16] bg-stone-900/80 border border-dragon-gold/30 rounded flex items-center justify-center relative overflow-hidden group/contslot p-0.5"
+                          title={itemInst ? (itemInst.customName || itemInst.template) : `Empty Slot ${idx + 1}`}
+                        >
+                          {itemInst ? (
+                            <EquipmentSprite
+                              itemKey={itemInst.template}
+                              alt={itemInst.customName || itemInst.template}
+                              className="w-full h-full object-contain drop-shadow-xs"
+                            />
+                          ) : (
+                            <span className="text-[7px] text-parchment-400 font-mono opacity-40">{idx + 1}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
           {currentItem.properties && currentItem.properties.length > 0 && (

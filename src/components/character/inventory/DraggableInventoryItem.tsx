@@ -1,7 +1,6 @@
 import React from 'react';
 import { useUIStore } from '../../../store/useUIStore';
-import { useCharacterStore } from '../../../store/useCharacterStore';
-import { GameIcon, GameIconName } from '../../../game_icons';
+import { GameIcon } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { EquipmentSprite } from '../equipment/EquipmentSprite';
@@ -13,6 +12,7 @@ interface DraggableInventoryItemProps {
   index: any;
   sourceId: string;
   slot?: string;
+  containerId?: string;
   compact?: boolean;
   gridMode?: boolean;
   onRemove?: (index: any) => void;
@@ -21,9 +21,10 @@ interface DraggableInventoryItemProps {
 }
 
 export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({ 
-  item, index, sourceId, slot, compact = false, gridMode = false, onRemove, onEquip, id
+  item, index, sourceId, slot, containerId, gridMode = false, id
 }) => {
-  const { setInspectingItem } = useUIStore();
+  const isContainerSlot = Boolean(containerId);
+
   const {
     attributes,
     listeners,
@@ -32,7 +33,9 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
     isDragging
   } = useDraggable({
     id: id || `item-${item.id || index}-${sourceId}`,
-    data: { item, index, sourceId, slotId: slot }
+    data: isContainerSlot
+      ? { type: 'container_slot', item, index, sourceId, containerId }
+      : { item, index, sourceId, slotId: slot }
   });
 
   const style = transform ? { transform: CSS.Translate.toString(transform) } : undefined;
@@ -69,35 +72,28 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
         {...listeners}
         onClick={handleInspect}
         onContextMenu={handleContextMenu}
-        title={`${item.name} (${item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
+        title={`${item.name} (${item.kind || item._type || 'Item'})${item.quantity > 1 ? ` x${item.quantity}` : ''}`}
         className={cn(
-          "aspect-[9/16] w-full bg-parchment-200/50 hover:bg-dragon-red/15 border-2 border-dragon-red/15 hover:border-dragon-red/40 rounded-lg relative flex flex-col items-center justify-between p-1.5 cursor-pointer transition-all select-none shadow-sm group overflow-hidden text-left pointer-events-auto",
-          isMagic && "ring-1 ring-dragon-gold/50 border-dragon-gold/60 bg-dragon-gold/[0.05]",
-          isDragging && "opacity-40 border-dashed border-dragon-red/50 shadow-inner scale-95"
+          "w-full h-full relative flex items-center justify-center p-0 cursor-grab active:cursor-grabbing select-none overflow-hidden pointer-events-auto",
+          isDragging && "opacity-30"
         )}
       >
-        <div className="w-full h-2/3 flex items-center justify-center relative overflow-hidden rounded pointer-events-none">
+        {/* Direct Artwork Frame: Fills 100% of the parent 9:16 Slot with zero padding */}
+        <div className="w-full h-full flex items-center justify-center relative overflow-hidden pointer-events-none p-0 z-10">
           <EquipmentSprite
             itemKey={item}
             alt={item.name}
-            className="w-full h-full object-contain pointer-events-none drop-shadow-sm group-hover:scale-105 transition-transform"
-            fallbackUrl={normalizeImageUrl(item.imageUrl || item.image, item._type || 'equipment', item.index || item.id, item.name)}
+            className="w-full h-full object-contain pointer-events-none drop-shadow-xs"
+            fallbackUrl={fallbackUrl}
           />
         </div>
 
-        <div className="w-full text-center pointer-events-none">
-          <p className="text-[7px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-tight w-full px-0.5">
-            {item.name}
-          </p>
-          <div className="flex items-center justify-between w-full mt-0.5 text-[6px] font-bold text-parchment-500 uppercase px-0.5">
-            <span className="truncate">{item.kind || item._type || 'item'}</span>
-            {item.quantity > 1 && (
-              <span className="bg-dragon-red/90 text-white px-1 rounded-sm font-mono font-bold">
-                x{item.quantity}
-              </span>
-            )}
-          </div>
-        </div>
+        {/* Overlay Quantity Badge */}
+        {item.quantity > 1 && (
+          <span className="absolute bottom-0.5 right-0.5 bg-dragon-darkRed/95 text-white px-1 py-0.2 rounded text-[7px] font-mono font-bold shadow-xs pointer-events-none z-20">
+            x{item.quantity}
+          </span>
+        )}
       </div>
     );
   }
@@ -111,30 +107,29 @@ export const DraggableInventoryItem: React.FC<DraggableInventoryItemProps> = ({
       onClick={handleInspect}
       onContextMenu={handleContextMenu}
       className={cn(
-        "group relative flex items-center gap-3 p-3 bg-white/40 hover:bg-white/60 border border-dragon-red/10 hover:border-dragon-red/30 rounded-xl transition-all cursor-grab active:cursor-grabbing shadow-sm",
+        "group relative flex items-center gap-2.5 p-2 bg-white/40 hover:bg-white/60 border border-dragon-red/10 hover:border-dragon-red/30 rounded-lg cursor-grab active:cursor-grabbing shadow-xs",
         isMagic && "ring-1 ring-dragon-gold/30 border-dragon-gold/40 bg-dragon-gold/[0.03]",
-        isDragging && "opacity-40 border-dashed border-dragon-red/50 scale-95"
+        isDragging && "opacity-40 border-dashed border-dragon-red/50"
       )}
     >
-      <div className="w-12 aspect-[9/16] bg-black/5 rounded-lg overflow-hidden shrink-0 border border-dragon-red/5 flex items-center justify-center">
+      <div className="w-10 aspect-[9/16] bg-black/5 rounded overflow-hidden shrink-0 border border-dragon-red/5 flex items-center justify-center p-0">
         <EquipmentSprite 
           itemKey={itemKey}
           alt={item.name}
-          className="w-full h-full object-contain p-1"
+          className="w-full h-full object-contain p-0"
           fallbackUrl={fallbackUrl}
         />
       </div>
       <div className="flex-1 min-w-0">
-        <h4 className="text-[11px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-none mb-1">{item.name}</h4>
-        <div className="flex items-center gap-2">
-           <span className="text-[8px] font-bold text-parchment-500 uppercase tracking-tighter">{item._type || 'item'}</span>
-           {item.quantity > 1 && <span className="text-[9px] font-black text-dragon-red">x{item.quantity}</span>}
+        <h4 className="text-[10px] font-black text-dragon-darkRed uppercase tracking-tight truncate leading-none mb-0.5">{item.name}</h4>
+        <div className="flex items-center gap-1.5">
+           <span className="text-[7px] font-bold text-parchment-500 uppercase tracking-tighter">{item._type || 'item'}</span>
+           {item.quantity > 1 && <span className="text-[8px] font-black text-dragon-red">x{item.quantity}</span>}
         </div>
       </div>
-      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-         <GameIcon name="grab" size={14} color="#8B0000" />
+      <div className="opacity-0 group-hover:opacity-100">
+         <GameIcon name="grab" size={12} color="#8B0000" />
       </div>
     </div>
   );
 };
-

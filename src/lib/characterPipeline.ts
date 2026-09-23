@@ -1,5 +1,8 @@
 import { atlasService, AtlasClass, AtlasSpecies, AtlasBackground } from "../services/atlasService";
 import { getXPForLevel, getModifier } from "./npcGeneratorUtils";
+import { getPackContents } from "./itemPacks";
+import { createItemInstance } from "./inventoryUtils";
+import { fetchEquipmentData } from "../services/storageService";
 
 export interface PipelineChoice {
   species?: string;
@@ -108,6 +111,28 @@ export class CharacterPipeline {
     if (itemIndex.includes('amulet') || itemIndex.includes('necklace')) return 'neck';
     
     return 'backpack';
+  }
+
+  /**
+   * Expands an item template or pack ID into canonical item instances.
+   * If the item represents an equipment pack (e.g. "explorers-pack"),
+   * resolves pack contents via getPackContents() and generates instances for each content item.
+   */
+  static async expandAndCreateItemInstances(itemIndex: string, quantity: number = 1): Promise<any[]> {
+    const packContents = getPackContents(itemIndex);
+    if (packContents && packContents.length > 0) {
+      const instances: any[] = [];
+      for (const content of packContents) {
+        const metadata = await fetchEquipmentData(content.template);
+        const inst = createItemInstance(content.template, content.quantity * quantity, metadata);
+        instances.push(inst);
+      }
+      return instances;
+    }
+
+    const metadata = await fetchEquipmentData(itemIndex);
+    const inst = createItemInstance(itemIndex, quantity, metadata);
+    return [inst];
   }
 
   static createItemObject(itemData: any) {

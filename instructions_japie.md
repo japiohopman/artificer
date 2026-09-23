@@ -17,7 +17,7 @@ Volg deze eenvoudige stappen op je computer om alles fris te herstarten:
 Zorg dat je de nieuwste code van de Git-branch binnenhaalt zodat onze fixes actief zijn.
 
 #### Stap 2: Schoon de Vite-cache op en start de server
-We gaan de ontwikkelserver starten en dwingen om alle gecachte bestanden weg te gooien en opnieuw op te bouwen. 
+We gaan de ontwikkelserver starten en dwingen om alle gecachte bestanden weg te gooien en opnieuw op te bouwen.
 Open je terminal in de root-map van het project en voer het volgende uit:
 ```bash
 npm run dev -- --force

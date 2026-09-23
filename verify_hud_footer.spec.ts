@@ -63,7 +63,7 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
   });
 
   await page.goto('http://localhost:3000');
-  
+
   // Wait for React / stores to be available on window
   await page.waitForFunction(() => (window as any).useGameStore !== undefined && (window as any).useCharacterStore !== undefined);
 
@@ -81,7 +81,7 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
 
   // Wait for the game panel / HUD to be fully loaded and visible
   await page.waitForSelector('.world-panel', { timeout: 30000 });
-  
+
   // Wait for the HUDFooter to render with Active Character text
   const footerText = page.locator('text=Active Character: Adran the Bold');
   await expect(footerText).toBeVisible({ timeout: 15000 });
@@ -89,14 +89,14 @@ test('verify hud currency and weight footer with character', async ({ page }) =>
   // Assert presence of currency elements (GP, PP, CP, SP) using specific titles
   const gpText = page.locator('div[title="Gold: 150"] span');
   await expect(gpText).toBeVisible();
-  
+
   const ppText = page.locator('div[title="Platinum: 3"] span');
   await expect(ppText).toBeVisible();
 
   // Assert presence of weight loading information
   const loadInfo = page.locator('text=Load:');
   await expect(loadInfo).toBeVisible();
-  
+
   const weightText = page.locator('text=22.5 / 150 lbs');
   await expect(weightText).toBeVisible();
 

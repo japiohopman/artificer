@@ -133,7 +133,7 @@ export const ChromaKeyImage: React.FC<ChromaKeyImageProps> = ({
       ref={canvasRef} 
       aria-label={alt}
       className={className}
-      style={{ maxWidth: '100%', height: 'auto', ...style }}
+      style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', ...style }}
     />
   );
 };
