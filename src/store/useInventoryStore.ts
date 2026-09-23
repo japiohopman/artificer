@@ -593,6 +593,45 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
       const { characters } = useCharacterStore.getState();
       if (sourceId === targetId) return;
 
+      // 1. Preflight target acceptance BEFORE mutating source character or party
+      if (targetId !== 'party') {
+        const targetChar = characters.find(c => c.id === targetId);
+        if (!targetChar) return; // Invalid target character ID: abort transaction cleanly
+
+        if (targetChar.saveVersion === 2) {
+          const targetBackpack = Object.values(targetChar.containers || {}).find(c => c.type === 'backpack');
+          if (!targetBackpack) return; // Target character missing backpack: abort transaction
+
+          // Resolve source item template to check stackability
+          let sourceTemplate: string | null = null;
+          if (sourceId === 'party') {
+            const partyItem = state.partyInventory.find(i => i.id === itemId);
+            if (!partyItem) return;
+            sourceTemplate = partyItem.template || partyItem.index || partyItem.name;
+          } else {
+            const sourceChar = characters.find(c => c.id === sourceId);
+            if (!sourceChar) return;
+            if (sourceChar.saveVersion === 2) {
+              const srcItem = sourceChar.items?.[itemId];
+              if (!srcItem) return; // Missing V2 ItemInstance in source: abort cleanly
+              sourceTemplate = srcItem.template || srcItem.index || srcItem.name;
+            } else {
+              const srcItem = sourceChar.backpack?.find((i: any) => i.id === itemId);
+              if (!srcItem) return;
+              sourceTemplate = srcItem.template || srcItem.index || srcItem.name;
+            }
+          }
+
+          const targetItems = targetChar.items || {};
+          const existingStackId = targetBackpack.slots.find(s => s.itemId && targetItems[s.itemId]?.template === sourceTemplate)?.itemId;
+          const hasEmptySlot = targetBackpack.slots.some(s => s.itemId === null);
+
+          if (!existingStackId && !hasEmptySlot) {
+            return; // Full target backpack and unstackable item: abort transaction without mutating source
+          }
+        }
+      }
+
       let itemToMove: any = null;
       let newCharacters = [...characters];
       let newPartyInventory = [...state.partyInventory];
@@ -600,26 +639,6 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
       if (sourceId === 'party') {
         itemToMove = newPartyInventory.find(i => i.id === itemId);
         if (!itemToMove) return;
-
-        // Preflight check target character V2 backpack space before removing from party
-        if (targetId !== 'party') {
-          const charIndex = newCharacters.findIndex(c => c.id === targetId);
-          if (charIndex !== -1) {
-            const char = newCharacters[charIndex];
-            if (char.saveVersion === 2) {
-              const containers = { ...(char.containers || {}) };
-              const backpack = Object.values(containers).find(c => c.type === 'backpack');
-              const items = char.items || {};
-              const existingId = backpack?.slots.find(s => s.itemId && items[s.itemId]?.template === (itemToMove.template || itemToMove.index))?.itemId;
-              const emptySlot = backpack?.slots.find(s => s.itemId === null);
-
-              if (!existingId && !emptySlot) {
-                return; // Full character backpack: abort transaction without removing from party
-              }
-            }
-          }
-        }
-
         newPartyInventory = newPartyInventory.filter(i => i.id !== itemId);
       } else {
         const charIndex = newCharacters.findIndex(c => c.id === sourceId);

@@ -39,9 +39,38 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     }
   };
 
+  const mockChar2: any = {
+    id: 'char_test_2',
+    name: 'Hero Test Two',
+    race: 'elf',
+    class: 'wizard',
+    level: 1,
+    hp: 8,
+    maxHp: 8,
+    ac: 12,
+    speed: 30,
+    stats: { str: 10, dex: 14, con: 12, int: 16, wis: 12, cha: 10 },
+    inventory: {},
+    backpack: [],
+    saveVersion: 2,
+    items: {
+      'wand_1': { id: 'wand_1', template: 'wand', quantity: 1, kind: 'weapon' }
+    },
+    equipment: createDefaultEquipment('char_test_2'),
+    containers: {
+      'backpack_char_test_2': {
+        ...createDefaultBackpack('char_test_2'),
+        slots: [
+          { id: 'bag_2_0', itemId: 'wand_1' },
+          ...Array.from({ length: 23 }).map((_, i) => ({ id: `bag_2_${i + 1}`, itemId: null }))
+        ]
+      }
+    }
+  };
+
   beforeEach(() => {
     useCharacterStore.setState({
-      characters: [mockChar],
+      characters: [mockChar, mockChar2],
       activeCharacterId: 'char_test_1'
     });
     useInventoryStore.setState({
@@ -171,12 +200,73 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(activeChar?.items?.['party_axe_1']).toBeUndefined();
   });
 
+  it('atomically rejects character to character transfer when target backpack is full and unstackable without losing source item', async () => {
+    const { transferItem } = useInventoryStore.getState();
+
+    // Fill character 2 backpack completely with 24 non-matching items
+    useCharacterStore.setState({
+      characters: useCharacterStore.getState().characters.map(c => {
+        if (c.id !== 'char_test_2') return c;
+        const items = { ...c.items };
+        for (let i = 0; i < 24; i++) {
+          items[`fill_item_2_${i}`] = { id: `fill_item_2_${i}`, template: 'potion-of-healing', kind: 'consumable' };
+        }
+        return {
+          ...c,
+          items,
+          containers: {
+            ...c.containers,
+            'backpack_char_test_2': {
+              ...c.containers['backpack_char_test_2'],
+              slots: Array.from({ length: 24 }).map((_, i) => ({ id: `bag_2_${i}`, itemId: `fill_item_2_${i}` }))
+            }
+          }
+        };
+      })
+    });
+
+    // Try transferring longsword_1 from char_test_1 to char_test_2
+    transferItem({
+      sourceId: 'char_test_1',
+      targetId: 'char_test_2',
+      itemId: 'longsword_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    // Source character must retain longsword_1 in item registry and backpack slot
+    const srcChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    expect(srcChar?.items?.['longsword_1']).toBeDefined();
+    const srcBackpack = srcChar?.containers?.['backpack_char_test_1'];
+    expect(srcBackpack?.slots.some(s => s.itemId === 'longsword_1')).toBe(true);
+
+    // Target character must NOT possess longsword_1
+    const targetChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_2');
+    expect(targetChar?.items?.['longsword_1']).toBeUndefined();
+  });
+
+  it('rejects character transfer to non-existent target character ID without losing source item', async () => {
+    const { transferItem } = useInventoryStore.getState();
+
+    transferItem({
+      sourceId: 'char_test_1',
+      targetId: 'invalid_target_char_999',
+      itemId: 'longsword_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    // Source character must retain longsword_1
+    const srcChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    expect(srcChar?.items?.['longsword_1']).toBeDefined();
+    const srcBackpack = srcChar?.containers?.['backpack_char_test_1'];
+    expect(srcBackpack?.slots.some(s => s.itemId === 'longsword_1')).toBe(true);
+  });
+
   it('preserves save slot persistence state across loadCharacters and setMainCharacter triggers', async () => {
     const { setMainCharacter, loadCharacters } = useCharacterStore.getState();
 
     setMainCharacter(mockChar);
     const activeParty = useCharacterStore.getState().characters;
-    expect(activeParty.length).toBe(1);
+    expect(activeParty.length).toBe(2);
     expect(activeParty[0].id).toBe('char_test_1');
 
     // Reload characters boundary
