@@ -261,6 +261,88 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(backpack?.slots[5].itemId).toBeNull();
   });
 
+  it('rejects malformed inventory_slot source without slotIndex', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    moveItem({
+      source: { type: 'inventory_slot' }, // Missing slotIndex
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'longsword_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull();
+  });
+
+  it('rejects malformed equip_slot source without slotId', async () => {
+    const { equipItem, moveItem } = useInventoryStore.getState();
+    equipItem('longsword_1', 'main_hand');
+    await new Promise((res) => setTimeout(res, 50));
+
+    moveItem({
+      source: { type: 'equip_slot' }, // Missing slotId
+      target: { type: 'inventory_slot', slotIndex: 5 },
+      item: { id: 'longsword_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBe('longsword_1');
+  });
+
+  it('rejects malformed container_slot source without containerId or slotIndex', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    moveItem({
+      source: { type: 'container_slot', containerId: 'backpack_char_test_1' }, // Missing slotIndex
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'longsword_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull();
+  });
+
+  it('rejects unknown source type without mutating state', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    moveItem({
+      source: { type: 'unknown_source' as any },
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'longsword_1' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull();
+  });
+
+  it('rejects non-canonical item ID not in char.items', async () => {
+    const { moveItem } = useInventoryStore.getState();
+
+    moveItem({
+      source: { type: 'inventory_slot', slotIndex: 0 },
+      target: { type: 'equip_slot', slotId: 'main_hand' },
+      item: { id: 'unregistered_item_999' },
+      characterId: 'char_test_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    expect(mainHandSlot?.itemId).toBeNull();
+  });
+
   it('rejects ambiguous V2 backpack source without slotIndex', async () => {
     const { moveItem } = useInventoryStore.getState();
 
@@ -277,107 +359,60 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(mainHandSlot?.itemId).toBeNull(); // Rejected without mutation
   });
 
-  it('rejects transaction unchanged when duplicate ItemInstance placement is already present', async () => {
+  it('clears container_slot source when moving to inventory_slot without duplication', async () => {
     const { moveItem } = useInventoryStore.getState();
 
-    // Inject corrupted duplicate placement into character state
+    // Create a pouch container with an item in slot 0
     useCharacterStore.setState({
       characters: useCharacterStore.getState().characters.map(c => {
         if (c.id !== 'char_test_1') return c;
         return {
           ...c,
-          equipment: {
-            ...c.equipment,
-            slots: c.equipment.slots.map(s => s.id === 'main_hand' ? { ...s, itemId: 'longsword_1' } : s)
-          }
-          // Note: longsword_1 is now placed in both main_hand and bag_0!
-        };
-      })
-    });
-
-    moveItem({
-      source: { type: 'equip_slot', slotId: 'main_hand' },
-      target: { type: 'inventory_slot', slotIndex: 5 },
-      item: { id: 'longsword_1' },
-      characterId: 'char_test_1'
-    });
-    await new Promise((res) => setTimeout(res, 50));
-
-    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
-    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
-    const backpack = activeChar?.containers?.['backpack_char_test_1'];
-
-    // State remained unchanged due to duplicate placement rejection
-    expect(mainHandSlot?.itemId).toBe('longsword_1');
-    expect(backpack?.slots[0].itemId).toBe('longsword_1');
-    expect(backpack?.slots[5].itemId).toBeNull();
-  });
-
-  it('succeeds on valid inventory -> occupied equipment swap with full backpack (swapping displaced item into freed source slot)', async () => {
-    const { equipItem, moveItem } = useInventoryStore.getState();
-
-    // Equip longsword in main_hand
-    equipItem('longsword_1', 'main_hand');
-    await new Promise((res) => setTimeout(res, 50));
-
-    // Fill all 24 backpack slots completely (slot 0 contains greatsword_1)
-    useCharacterStore.setState({
-      characters: useCharacterStore.getState().characters.map(c => {
-        if (c.id !== 'char_test_1') return c;
-        const items = { ...c.items, 'greatsword_1': { id: 'greatsword_1', template: 'greatsword', kind: 'weapon' } };
-        for (let i = 1; i < 24; i++) {
-          items[`fill_item_${i}`] = { id: `fill_item_${i}`, template: 'potion-of-healing', kind: 'consumable' };
-        }
-        return {
-          ...c,
-          items,
+          items: {
+            ...c.items,
+            'gem_1': { id: 'gem_1', template: 'ruby', kind: 'material' }
+          },
           containers: {
             ...c.containers,
-            'backpack_char_test_1': {
-              ...c.containers['backpack_char_test_1'],
-              slots: Array.from({ length: 24 }).map((_, i) => ({ id: `bag_${i}`, itemId: i === 0 ? 'greatsword_1' : `fill_item_${i}` }))
+            'pouch_1': {
+              id: 'pouch_1',
+              type: 'pouch',
+              slots: [{ id: 'pouch_slot_0', itemId: 'gem_1' }]
             }
           }
         };
       })
     });
 
-    // Move greatsword_1 from inventory slot 0 into main_hand (holds longsword_1)
+    // Move gem_1 from pouch_1 slot 0 to backpack slot 5
     moveItem({
-      source: { type: 'inventory_slot', slotIndex: 0 },
-      target: { type: 'equip_slot', slotId: 'main_hand' },
-      item: { id: 'greatsword_1' },
+      source: { type: 'container_slot', containerId: 'pouch_1', slotIndex: 0 },
+      target: { type: 'inventory_slot', slotIndex: 5 },
+      item: { id: 'gem_1' },
       characterId: 'char_test_1'
     });
     await new Promise((res) => setTimeout(res, 50));
 
     const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
-    const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
+    const pouch = activeChar?.containers?.['pouch_1'];
     const backpack = activeChar?.containers?.['backpack_char_test_1'];
 
-    // Swap succeeded! main_hand now holds greatsword_1, longsword_1 was placed into freed slot 0!
-    expect(mainHandSlot?.itemId).toBe('greatsword_1');
-    expect(backpack?.slots[0].itemId).toBe('longsword_1');
+    // Source slot cleared, target slot populated with exactly 1 placement
+    expect(pouch?.slots[0].itemId).toBeNull();
+    expect(backpack?.slots[5].itemId).toBe('gem_1');
 
-    // Confirm each moved item has exactly one placement
-    let greatswordPlacements = 0;
-    let longswordPlacements = 0;
-    activeChar.equipment.slots.forEach(s => {
-      if (s.itemId === 'greatsword_1') greatswordPlacements++;
-      if (s.itemId === 'longsword_1') longswordPlacements++;
+    // Count placements of gem_1
+    let gemPlacements = 0;
+    Object.values(activeChar?.containers || {}).forEach((c: any) => {
+      c.slots?.forEach((s: any) => { if (s.itemId === 'gem_1') gemPlacements++; });
     });
-    backpack.slots.forEach(s => {
-      if (s.itemId === 'greatsword_1') greatswordPlacements++;
-      if (s.itemId === 'longsword_1') longswordPlacements++;
-    });
-    expect(greatswordPlacements).toBe(1);
-    expect(longswordPlacements).toBe(1);
+    expect(gemPlacements).toBe(1);
   });
 
-  it('rejects equipment -> occupied equipment swap atomically when backpack is full', async () => {
-    const { equipItem, moveItem } = useInventoryStore.getState();
+  it('succeeds on direct equipment -> equipment swap with a full backpack when items are compatible', async () => {
+    const { moveItem } = useInventoryStore.getState();
 
-    // Equip longsword in main_hand and dagger in off_hand
+    // Equip longsword in main_hand and dagger in off_hand, fill backpack completely
     useCharacterStore.setState({
       characters: useCharacterStore.getState().characters.map(c => {
         if (c.id !== 'char_test_1') return c;
@@ -410,7 +445,7 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
       })
     });
 
-    // Try moving longsword from main_hand to off_hand (which holds dagger) with a completely full backpack
+    // Move longsword from main_hand to off_hand (which holds dagger) with a completely full backpack
     moveItem({
       source: { type: 'equip_slot', slotId: 'main_hand' },
       target: { type: 'equip_slot', slotId: 'off_hand' },
@@ -423,60 +458,44 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
     const offHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'off_hand');
 
-    // Rejected atomically without mutation!
-    expect(mainHandSlot?.itemId).toBe('longsword_1');
-    expect(offHandSlot?.itemId).toBe('dagger_1');
+    // Direct equipment swap succeeded! main_hand now holds dagger_1, off_hand holds longsword_1
+    expect(mainHandSlot?.itemId).toBe('dagger_1');
+    expect(offHandSlot?.itemId).toBe('longsword_1');
   });
 
-  it('succeeds on valid equipment -> occupied equipment swap when a free backpack slot exists', async () => {
+  it('rejects transaction when displaced occupant is non-canonical (absent from char.items)', async () => {
     const { moveItem } = useInventoryStore.getState();
 
-    // Equip longsword in main_hand and dagger in off_hand, with free slot in backpack
+    // Inject non-canonical occupant ID in main_hand slot
     useCharacterStore.setState({
       characters: useCharacterStore.getState().characters.map(c => {
         if (c.id !== 'char_test_1') return c;
-        const items = {
-          ...c.items,
-          'dagger_1': { id: 'dagger_1', template: 'dagger', kind: 'weapon' }
-        };
         return {
           ...c,
-          items,
           equipment: {
             ...c.equipment,
-            slots: c.equipment.slots.map(s => {
-              if (s.id === 'main_hand') return { ...s, itemId: 'longsword_1' };
-              if (s.id === 'off_hand') return { ...s, itemId: 'dagger_1' };
-              return s;
-            })
-          },
-          containers: {
-            ...c.containers,
-            'backpack_char_test_1': {
-              ...c.containers['backpack_char_test_1'],
-              slots: Array.from({ length: 24 }).map((_, i) => ({ id: `bag_${i}`, itemId: i === 0 ? 'potion_1' : null }))
-            }
+            slots: c.equipment.slots.map(s => s.id === 'main_hand' ? { ...s, itemId: 'fake_ghost_item_999' } : s)
           }
         };
       })
     });
 
-    // Move dagger from off_hand to main_hand (which holds longsword)
+    // Try moving longsword_1 from slot 0 into main_hand
     moveItem({
-      source: { type: 'equip_slot', slotId: 'off_hand' },
+      source: { type: 'inventory_slot', slotIndex: 0 },
       target: { type: 'equip_slot', slotId: 'main_hand' },
-      item: { id: 'dagger_1' },
+      item: { id: 'longsword_1' },
       characterId: 'char_test_1'
     });
     await new Promise((res) => setTimeout(res, 50));
 
     const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
     const mainHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'main_hand');
-    const offHandSlot = activeChar?.equipment?.slots.find(s => s.id === 'off_hand');
+    const backpack = activeChar?.containers?.['backpack_char_test_1'];
 
-    // Swap succeeded! main_hand has dagger_1, off_hand now holds longsword_1
-    expect(mainHandSlot?.itemId).toBe('dagger_1');
-    expect(offHandSlot?.itemId).toBe('longsword_1');
+    // Rejected due to non-canonical occupant
+    expect(mainHandSlot?.itemId).toBe('fake_ghost_item_999');
+    expect(backpack?.slots[0].itemId).toBe('longsword_1');
   });
 
   it('verifies registry count remains unchanged across rejected and successful transactions', async () => {

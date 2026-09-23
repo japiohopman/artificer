@@ -201,6 +201,26 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
           const targetOccupantId = targetSlot.itemId;
 
+          // Validate occupant canonical existence if target is occupied
+          if (targetOccupantId && targetOccupantId !== itemId) {
+            if (!char.items?.[targetOccupantId]) {
+              return char; // Reject non-canonical occupant
+            }
+          }
+
+          // Direct equipment -> equipment swap
+          if (existingEquipSlot && targetOccupantId && targetOccupantId !== itemId) {
+            const occupantItem = char.items[targetOccupantId];
+            const occupantComp = evaluateSlotCompatibility(occupantItem, existingEquipSlot.id as any, {}, char.ruleset);
+            if (occupantComp === 'INVALID') {
+              return char;
+            }
+            existingEquipSlot.itemId = targetOccupantId;
+            targetSlot.itemId = itemId;
+            playSlotSound();
+            return { ...char, equipment, containers };
+          }
+
           // Atomic check: If target is occupied and we need an empty backpack slot to displace targetOccupantId
           if (targetOccupantId && targetOccupantId !== itemId) {
             const hasSlotForDisplaced = bagSlotIdx !== -1 || backpack.slots.some((s: any) => s.itemId === null);
@@ -421,36 +441,33 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               const occupantId = targetEquipSlot.itemId;
 
-              // Atomic check: If target is occupied by another item
+              // Validate occupant canonical existence
               if (occupantId && occupantId !== itemId) {
+                const occupantItem = char.items?.[occupantId];
+                if (!occupantItem) {
+                  return char; // Reject non-canonical occupant
+                }
+
                 if (source.type === 'equip_slot' && source.slotId) {
-                  // Equipment -> Equipment swap: validate occupant compatibility with source equip slot
-                  const occupantItem = char.items?.[occupantId];
+                  // Direct equipment -> equipment swap: validate occupant compatibility with source equip slot
                   const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
                   if (occupantComp === 'INVALID') return char;
-
-                  // Check if backpack has a free slot for displaced occupant if equipment swap isn't direct
-                  const emptyBagSlot = backpack.slots.some((s: any) => s.itemId === null);
-                  if (!emptyBagSlot) return char; // Full backpack: reject equip-to-equip displacement
-                } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
-                  // Inventory -> Equipment swap: occupant moves into freed source inventory slot
-                } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
-                  // Container -> Equipment swap: occupant moves into freed source container slot
+                  // Direct swap between equipment slots does NOT require backpack capacity!
                 }
               }
 
               // Clear item from source location and place occupant into source slot if target was occupied
               if (source.type === 'equip_slot' && source.slotId) {
                 const srcSlot = equipment.slots.find((s: any) => s.id === source.slotId);
-                if (srcSlot) srcSlot.itemId = occupantId;
+                if (srcSlot) srcSlot.itemId = occupantId || null;
               } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
                 const srcContainer = containers[source.containerId];
                 if (srcContainer?.slots[source.slotIndex]) {
-                  srcContainer.slots[source.slotIndex].itemId = occupantId;
+                  srcContainer.slots[source.slotIndex].itemId = occupantId || null;
                 }
               } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
                 if (backpack.slots[source.slotIndex]) {
-                  backpack.slots[source.slotIndex].itemId = occupantId;
+                  backpack.slots[source.slotIndex].itemId = occupantId || null;
                 }
               }
 
@@ -466,18 +483,30 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               const occupantId = targetContainer.slots[target.slotIndex].itemId;
 
+              // Validate occupant canonical existence if target container slot is occupied
+              if (occupantId && occupantId !== itemId) {
+                if (!char.items?.[occupantId]) {
+                  return char; // Reject non-canonical occupant
+                }
+                if (source.type === 'equip_slot' && source.slotId) {
+                  const occupantItem = char.items[occupantId];
+                  const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
+                  if (occupantComp === 'INVALID') return char;
+                }
+              }
+
               // Clear item from source location and place occupant in source slot
               if (source.type === 'equip_slot' && source.slotId) {
                 const srcSlot = equipment.slots.find(s => s.id === source.slotId);
-                if (srcSlot) srcSlot.itemId = occupantId;
+                if (srcSlot) srcSlot.itemId = occupantId || null;
               } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
                 const srcContainer = containers[source.containerId];
                 if (srcContainer?.slots[source.slotIndex]) {
-                  srcContainer.slots[source.slotIndex].itemId = occupantId;
+                  srcContainer.slots[source.slotIndex].itemId = occupantId || null;
                 }
               } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
                 if (backpack.slots[source.slotIndex]) {
-                  backpack.slots[source.slotIndex].itemId = occupantId;
+                  backpack.slots[source.slotIndex].itemId = occupantId || null;
                 }
               }
 
@@ -493,22 +522,32 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
               const occupantId = backpack.slots[targetIndex].itemId;
 
-              // Validate occupant compatibility if swapping into a source equipment slot
-              if (occupantId && source.type === 'equip_slot' && source.slotId) {
-                const occupantItem = char.items?.[occupantId];
-                const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
-                if (occupantComp === 'INVALID') {
-                  return char; // Occupant incompatible with source equip slot: reject swap
+              // Validate occupant canonical existence if target inventory slot is occupied
+              if (occupantId && occupantId !== itemId) {
+                if (!char.items?.[occupantId]) {
+                  return char; // Reject non-canonical occupant
+                }
+                if (source.type === 'equip_slot' && source.slotId) {
+                  const occupantItem = char.items[occupantId];
+                  const occupantComp = evaluateSlotCompatibility(occupantItem, source.slotId as any, {}, char.ruleset);
+                  if (occupantComp === 'INVALID') {
+                    return char; // Occupant incompatible with source equip slot: reject swap
+                  }
                 }
               }
 
               // Move / Swap
               if (source.type === 'equip_slot' && source.slotId) {
                 const srcSlot = equipment.slots.find((s: any) => s.id === source.slotId);
-                if (srcSlot) srcSlot.itemId = occupantId;
+                if (srcSlot) srcSlot.itemId = occupantId || null;
               } else if (source.type === 'inventory_slot' && source.slotIndex !== undefined) {
                 if (backpack.slots[source.slotIndex]) {
-                  backpack.slots[source.slotIndex].itemId = occupantId;
+                  backpack.slots[source.slotIndex].itemId = occupantId || null;
+                }
+              } else if (source.type === 'container_slot' && source.containerId && source.slotIndex !== undefined) {
+                const srcContainer = containers[source.containerId];
+                if (srcContainer?.slots[source.slotIndex]) {
+                  srcContainer.slots[source.slotIndex].itemId = occupantId || null;
                 }
               }
 
