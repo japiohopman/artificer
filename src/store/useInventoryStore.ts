@@ -650,7 +650,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             if (backpack) {
               const existingId = backpack.slots.find((s: any) => s.itemId && items[s.itemId]?.template === (itemToMove.template || itemToMove.index))?.itemId;
               if (existingId) {
-                items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (itemToMove.quantity || 1);
+                items[existingId] = { ...items[existingId], quantity: (items[existingId].quantity || 1) + (itemToMove.quantity || 1) };
               } else {
                 const newId = itemId.includes('_') ? itemId : `${itemToMove.template || itemToMove.index}_${crypto.randomUUID()}`;
                 items[newId] = { ...itemToMove, id: newId, template: itemToMove.template || itemToMove.index, quantity: itemToMove.quantity || 1, addedAt: Date.now() };
