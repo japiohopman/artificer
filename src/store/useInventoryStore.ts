@@ -614,7 +614,7 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
             if (sourceChar.saveVersion === 2) {
               const srcItem = sourceChar.items?.[itemId];
               if (!srcItem) return; // Missing V2 ItemInstance in source: abort cleanly
-              sourceTemplate = srcItem.template || srcItem.index || srcItem.name;
+              sourceTemplate = srcItem.template;
             } else {
               const srcItem = sourceChar.backpack?.find((i: any) => i.id === itemId);
               if (!srcItem) return;
