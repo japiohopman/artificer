@@ -599,27 +599,52 @@ export const useInventoryStore = create<InventoryState>((set, get) => ({
 
       if (sourceId === 'party') {
         itemToMove = newPartyInventory.find(i => i.id === itemId);
+        if (!itemToMove) return;
+
+        // Preflight check target character V2 backpack space before removing from party
+        if (targetId !== 'party') {
+          const charIndex = newCharacters.findIndex(c => c.id === targetId);
+          if (charIndex !== -1) {
+            const char = newCharacters[charIndex];
+            if (char.saveVersion === 2) {
+              const containers = { ...(char.containers || {}) };
+              const backpack = Object.values(containers).find(c => c.type === 'backpack');
+              const items = char.items || {};
+              const existingId = backpack?.slots.find(s => s.itemId && items[s.itemId]?.template === (itemToMove.template || itemToMove.index))?.itemId;
+              const emptySlot = backpack?.slots.find(s => s.itemId === null);
+
+              if (!existingId && !emptySlot) {
+                return; // Full character backpack: abort transaction without removing from party
+              }
+            }
+          }
+        }
+
         newPartyInventory = newPartyInventory.filter(i => i.id !== itemId);
       } else {
         const charIndex = newCharacters.findIndex(c => c.id === sourceId);
         if (charIndex !== -1) {
           const char = newCharacters[charIndex];
           if (char.saveVersion === 2) {
-            const itemInstance = { ...char.items?.[itemId] };
-            if (itemInstance) {
-              const equipment = { ...char.equipment! };
-              const containers = { ...char.containers! };
-              equipment.slots = equipment.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
-              Object.values(containers).forEach(c => {
-                c.slots = c.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
-              });
-              const newItems = { ...char.items };
-              delete newItems[itemId];
-              newCharacters[charIndex] = { ...char, equipment, containers, items: newItems };
-              itemToMove = itemInstance;
+            const items = char.items;
+            if (!items || !items[itemId]) {
+              return; // Non-existent V2 ItemInstance: abort transaction without mutation
             }
+
+            const itemInstance = { ...items[itemId] };
+            const equipment = { ...char.equipment! };
+            const containers = { ...char.containers! };
+            equipment.slots = equipment.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+            Object.values(containers).forEach(c => {
+              c.slots = c.slots.map(s => s.itemId === itemId ? { ...s, itemId: null } : s);
+            });
+            const newItems = { ...items };
+            delete newItems[itemId];
+            newCharacters[charIndex] = { ...char, equipment, containers, items: newItems };
+            itemToMove = itemInstance;
           } else {
             itemToMove = char.backpack.find(i => i.id === itemId);
+            if (!itemToMove) return;
             newCharacters[charIndex] = {
               ...char,
               backpack: char.backpack.filter(i => i.id !== itemId)

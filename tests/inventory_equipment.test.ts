@@ -108,6 +108,69 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(activeChar?.items?.['potion_1']).toBeUndefined();
   });
 
+  it('rejects transfer of missing non-canonical item in transferItem without mutating state', async () => {
+    const { transferItem } = useInventoryStore.getState();
+
+    transferItem({
+      sourceId: 'char_test_1',
+      targetId: 'party',
+      itemId: 'non_existent_item_999'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    const { partyInventory } = useInventoryStore.getState();
+    expect(partyInventory.length).toBe(0);
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    expect(Object.keys(activeChar?.items || {}).length).toBe(2);
+  });
+
+  it('rejects transfer from party to character when target backpack is full and unstackable without losing item', async () => {
+    const { transferItem } = useInventoryStore.getState();
+
+    // Set party inventory item
+    useInventoryStore.setState({
+      partyInventory: [{ id: 'party_axe_1', template: 'greataxe', name: 'Greataxe', quantity: 1 }]
+    });
+
+    // Fill character backpack completely with 24 non-matching items
+    useCharacterStore.setState({
+      characters: useCharacterStore.getState().characters.map(c => {
+        if (c.id !== 'char_test_1') return c;
+        const items = { ...c.items };
+        for (let i = 0; i < 24; i++) {
+          items[`fill_item_${i}`] = { id: `fill_item_${i}`, template: 'potion-of-healing', kind: 'consumable' };
+        }
+        return {
+          ...c,
+          items,
+          containers: {
+            ...c.containers,
+            'backpack_char_test_1': {
+              ...c.containers['backpack_char_test_1'],
+              slots: Array.from({ length: 24 }).map((_, i) => ({ id: `bag_${i}`, itemId: `fill_item_${i}` }))
+            }
+          }
+        };
+      })
+    });
+
+    transferItem({
+      sourceId: 'party',
+      targetId: 'char_test_1',
+      itemId: 'party_axe_1'
+    });
+    await new Promise((res) => setTimeout(res, 50));
+
+    // Item must remain safely in party inventory without being lost
+    const { partyInventory } = useInventoryStore.getState();
+    expect(partyInventory.length).toBe(1);
+    expect(partyInventory[0].id).toBe('party_axe_1');
+
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === 'char_test_1');
+    expect(activeChar?.items?.['party_axe_1']).toBeUndefined();
+  });
+
   it('preserves save slot persistence state across loadCharacters and setMainCharacter triggers', async () => {
     const { setMainCharacter, loadCharacters } = useCharacterStore.getState();
 
