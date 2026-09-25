@@ -110,11 +110,42 @@ test('dry-run prompt contains required context', () => {
   assert.match(prompt, /AGENT AND RULES/);
   assert.match(prompt, /ARCHITECTURE SPECIALIST/);
   assert.match(prompt, /CANONICAL/);
-  assert.match(prompt, /execution contract/);
+  assert.match(prompt, /GitHub Issue/);
 });
 
-test('selector source never references legacy queue paths', () => {
+test('prompt makes Issue precedence explicit', () => {
+  const prompt = buildJulesPrompt(
+    issue(42),
+    'LEGACY shared instructions mention ROADMAP.md and TASK_BOARD.md',
+    'SPECIALIST CONTRACT',
+    []
+  );
+  assert.match(prompt, /GitHub Issue > selected specialist contract > shared agent instructions/);
+  assert.match(prompt, /ROADMAP\.md or docs\/TASK_BOARD\.md/);
+});
+
+test('all specialist contracts are repository-local and present', () => {
+  const specialistNames = [
+    'architecture',
+    'ruleset-data',
+    'ui',
+    'assets',
+    'gameplay',
+    'verification'
+  ];
+  for (const name of specialistNames) {
+    const path = specialistPath(name);
+    assert.equal(path, '.github/agents/' + name + '-specialist.agent.md');
+    const source = readFileSync(new URL('../' + path, import.meta.url), 'utf8');
+    assert.match(source, /The GitHub Issue is the execution contract/);
+    assert.match(source, /ROADMAP\.md[\s\S]*docs\/TASK_BOARD\.md/);
+  }
+});
+
+test('selector source never reads legacy queue files', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
-  assert.equal(source.includes('ROADMAP.md'), false);
-  assert.equal(source.includes('docs/TASK_BOARD.md'), false);
+  assert.equal(source.includes("file('ROADMAP.md')"), false);
+  assert.equal(source.includes("file('docs/TASK_BOARD.md')"), false);
+  assert.equal(source.includes("contents/ROADMAP.md"), false);
+  assert.equal(source.includes("contents/docs/TASK_BOARD.md"), false);
 });
