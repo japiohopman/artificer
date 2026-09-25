@@ -61,7 +61,7 @@ The PR template is intentionally repetitive: this is a checklist, not bureaucrac
 
 ## Automated gates
 
-`phase-safety-gate.yml` checks two independent concerns:
+`phase-safety-gate.yml` checks two independent concerns. It does not trust whether a PR was created manually, by Jules, or by another automation:
 
 ### Phase contract
 
@@ -69,7 +69,7 @@ The PR must:
 
 - target a branch other than `main`
 - contain the required review sections
-- reference the Phase Issue using `Closes #<number>`
+- reference the governing Issue using an explicit GitHub reference such as `Closes #<number>`, `Refs #<number>`, or `Part of #<number>`
 
 ### Repository health
 
