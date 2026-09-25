@@ -1,0 +1,64 @@
+name: Jules Issue-First Dispatcher
+
+# Safe Issue-first foundation.
+# This workflow reconciles Jules state and builds an inspectable dry-run payload.
+# It does NOT create a new Jules implementation session.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: read
+
+concurrency:
+  group: jules-issue-dispatcher
+  cancel-in-progress: false
+
+jobs:
+  issue-first-dispatch:
+    name: Issue-first dispatch evaluation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Reconcile Jules preflight
+        id: preflight
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          JULES_SOURCE: sources/github/japiohopman/artificer
+        run: node scripts/jules-orchestrator-preflight.mjs
+
+      - name: Stop when preflight blocks dispatch
+        if: steps.preflight.outputs.dispatch != 'true'
+        run: |
+          echo "::notice::Issue-first dispatch is blocked by preflight."
+          echo "Decision: ${{ steps.preflight.outputs.decision }}"
+
+      - name: Build Issue-first dry-run payload
+        if: steps.preflight.outputs.dispatch == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/jules-issue-selector.mjs
+
+      - name: Confirm no live Jules dispatch occurs
+        if: always()
+        run: |
+          echo "::notice::This foundation workflow never creates a Jules session."
+          echo "::notice::The selector is dry-run only; live POST /sessions remains out of scope for Issue #322."
