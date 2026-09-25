@@ -187,6 +187,17 @@ async function file(path) {
   return Buffer.from(item.content, 'base64').toString('utf8');
 }
 
+async function fileOrNull(path) {
+  try {
+    return await file(path);
+  } catch (error) {
+    if (String(error.message || error).includes('GitHub API contents/' + path + ' failed: 404')) {
+      return null;
+    }
+    throw error;
+  }
+}
+
 async function dependencies(numbers) {
   const result = new Map();
   for (const number of numbers) {
@@ -236,7 +247,22 @@ async function main() {
   const selected = decision.selected;
   const specialist = specialistPath(selected.metadata.specialist);
   const shared = await Promise.all([file('AGENT.MD'), file('AGENT_RULES.md')]);
-  const specialistText = await file(specialist);
+  const specialistText = await fileOrNull(specialist);
+
+  if (specialistText === null) {
+    setOutput('dispatch', false);
+    console.log(JSON.stringify({
+      dispatch: false,
+      dryRun: true,
+      issueNumber: selected.issue.number,
+      reason: 'Specialist contract is missing: ' + specialist,
+      rejected: decision.rejected.concat([{
+        issueNumber: selected.issue.number,
+        reason: 'Missing specialist contract: ' + specialist
+      }])
+    }, null, 2));
+    return;
+  }
   const references = parseCanonicalReferences(selected.issue.body || '');
   const canonical = await Promise.all(references.map(async path => ({
     path,
