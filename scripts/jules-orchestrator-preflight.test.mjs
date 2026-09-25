@@ -40,6 +40,20 @@ test('missing recorded Jules session does not block dispatch when no PR is open'
   assert.equal(result.action, 'CLEAR_MISSING_SESSION_AND_DISPATCH');
 });
 
+test('missing recorded session still waits when another repository session is active', () => {
+  const result = evaluatePreflight({
+    recordedSession: { name: 'sessions/missing' },
+    actualRecordedSession: null,
+    repositoryActiveSessions: [
+      { name: 'sessions/other', state: 'IN_PROGRESS' },
+    ],
+  });
+
+  assert.equal(result.dispatch, false);
+  assert.equal(result.clearState, false);
+  assert.equal(result.action, 'WAIT_REPOSITORY_SESSION');
+});
+
 test('terminal session with no open PR clears stale state and allows dispatch', () => {
   const result = evaluatePreflight({
     recordedSession: {
