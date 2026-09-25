@@ -6,6 +6,7 @@ import {
   reconcileRepositoryActiveSessions,
   isSessionActive,
   isTerminalPr,
+  describeSessionBlocker,
 } from './jules-orchestrator-preflight.mjs';
 
 test('active repository session with a merged PR does not block dispatch', async () => {
@@ -143,17 +144,46 @@ test('terminal session with no open PR clears stale state and allows dispatch', 
   assert.equal(result.action, 'CLEAR_TERMINAL_STATE_AND_DISPATCH');
 });
 
-test('other active repository session blocks duplicate dispatch', () => {
+test('other active repository session blocks duplicate dispatch with actionable details', () => {
   const result = evaluatePreflight({
     recordedSession: null,
     actualRecordedSession: null,
     repositoryActiveSessions: [
-      { name: 'sessions/other', state: 'IN_PROGRESS' },
+      {
+        name: 'sessions/other',
+        state: 'IN_PROGRESS',
+        outputs: [{
+          pullRequest: {
+            url: 'https://github.com/japiohopman/artificer/pull/321',
+          },
+        }],
+      },
     ],
   });
 
   assert.equal(result.dispatch, false);
   assert.equal(result.action, 'WAIT_REPOSITORY_SESSION');
+  assert.match(result.reason, /sessions\/other/);
+  assert.match(result.reason, /PR #321/);
+  assert.equal(result.blockers.length, 1);
+  assert.deepEqual(result.blockers[0], {
+    name: 'sessions/other',
+    state: 'IN_PROGRESS',
+    pullRequest: '#321',
+    reason: 'Active Jules session sessions/other is IN_PROGRESS and has unresolved PR #321.',
+  });
+});
+
+test('session blocker without PR identifies the missing PR output', () => {
+  const blocker = describeSessionBlocker({
+    name: 'sessions/no-pr',
+    state: 'PAUSED',
+  });
+
+  assert.equal(blocker.name, 'sessions/no-pr');
+  assert.equal(blocker.state, 'PAUSED');
+  assert.equal(blocker.pullRequest, null);
+  assert.match(blocker.reason, /no associated PR output/);
 });
 
 test('repository with no active sessions is safe to dispatch', () => {
