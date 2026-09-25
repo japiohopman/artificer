@@ -163,6 +163,28 @@ test('Issue-first dispatcher workflow is manual, preflight-gated, and dry-run on
   assert.doesNotMatch(workflow, /docs\/TASK_BOARD\.md/);
 });
 
+test('live Issue-first workflow is explicitly confirmed and delegates POST to dispatch script', () => {
+  const workflow = readFileSync(
+    new URL('../.github/workflows/jules-issue-dispatcher.yml', import.meta.url),
+    'utf8'
+  );
+
+  assert.match(workflow, /workflow_dispatch:/);
+  assert.match(workflow, /confirmation:/);
+  assert.match(workflow, /DISPATCH/);
+  assert.match(workflow, /jules-source-discovery\.mjs/);
+  assert.match(workflow, /jules-orchestrator-preflight\.mjs/);
+  assert.match(workflow, /jules-issue-selector\.mjs/);
+  assert.match(workflow, /jules-issue-dispatch\.mjs/);
+  assert.ok(workflow.indexOf('jules-source-discovery.mjs') < workflow.indexOf('jules-orchestrator-preflight.mjs'));
+  assert.ok(workflow.indexOf('jules-orchestrator-preflight.mjs') < workflow.indexOf('jules-issue-selector.mjs'));
+  assert.ok(workflow.indexOf('jules-issue-selector.mjs') < workflow.indexOf('jules-issue-dispatch.mjs'));
+  assert.doesNotMatch(workflow, /jules\.googleapis\.com\/v1alpha\/sessions/);
+  assert.doesNotMatch(workflow, /scripts\/jules-orchestrator\.mjs/);
+  assert.doesNotMatch(workflow, /ROADMAP\.md/);
+  assert.doesNotMatch(workflow, /docs\/TASK_BOARD\.md/);
+});
+
 test('selector source never reads legacy queue files', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
   assert.equal(source.includes("file('ROADMAP.md')"), false);
