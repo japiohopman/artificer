@@ -52,6 +52,20 @@ export function isTerminalPr(pr) {
   return Boolean(pr && (pr.state === 'closed' || pr.merged));
 }
 
+export function describeSessionBlocker(session) {
+  const pr = findSessionPr(session);
+  const prNumber = extractPrNumber(pr?.url);
+  const state = normalizeState(session?.state);
+  return {
+    name: session?.name || 'unknown',
+    state,
+    pullRequest: prNumber ? `#${prNumber}` : null,
+    reason: prNumber
+      ? `Active Jules session ${session?.name || 'unknown'} is ${state} and has unresolved PR #${prNumber}.`
+      : `Active Jules session ${session?.name || 'unknown'} is ${state} and has no associated PR output.`,
+  };
+}
+
 export async function reconcileRepositoryActiveSessions(
   sessions,
   recordedSessionName,
@@ -96,11 +110,16 @@ export function evaluatePreflight({
   const actualSession = actualRecordedSession ?? null;
 
   if (repositoryActiveSessions.length > 0) {
+    const blockers = repositoryActiveSessions.map(describeSessionBlocker);
     return {
       dispatch: false,
       clearState: false,
       action: 'WAIT_REPOSITORY_SESSION',
-      reason: `Found ${repositoryActiveSessions.length} other active Jules session(s) for this repository.`,
+      reason: [
+        `Found ${repositoryActiveSessions.length} other active Jules session(s) for this repository.`,
+        ...blockers.map(item => `- ${item.reason}`),
+      ].join('\\n'),
+      blockers,
     };
   }
 
@@ -314,9 +333,17 @@ async function main() {
   console.log(`Preflight: ${decision.action}`);
   console.log(decision.reason);
 
+  if (decision.blockers?.length) {
+    console.log('Preflight blockers:');
+    for (const blocker of decision.blockers) {
+      console.log(JSON.stringify(blocker));
+    }
+  }
+
   setOutput('dispatch', decision.dispatch);
   setOutput('clear_state', decision.clearState);
   setOutput('decision', decision.action);
+  setOutput('blocking_sessions', JSON.stringify(decision.blockers || []));
 
   if (decision.clearState) {
     persistClearedState();
