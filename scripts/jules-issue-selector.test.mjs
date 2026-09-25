@@ -142,6 +142,27 @@ test('all specialist contracts are repository-local and present', () => {
   }
 });
 
+test('Issue-first dispatcher workflow is manual, preflight-gated, and dry-run only', () => {
+  const workflow = readFileSync(
+    new URL('../.github/workflows/jules-issue-dispatcher.yml', import.meta.url),
+    'utf8'
+  );
+
+  assert.match(workflow, /workflow_dispatch:/);
+  assert.doesNotMatch(workflow, /^\s+(schedule|push|pull_request):/m);
+
+  const preflightIndex = workflow.indexOf('scripts/jules-orchestrator-preflight.mjs');
+  const selectorIndex = workflow.indexOf('scripts/jules-issue-selector.mjs');
+  assert.ok(preflightIndex >= 0);
+  assert.ok(selectorIndex > preflightIndex);
+
+  assert.doesNotMatch(workflow, /scripts\/jules-orchestrator\.mjs/);
+  assert.doesNotMatch(workflow, /POST \/sessions/);
+  assert.doesNotMatch(workflow, /### Ready/);
+  assert.doesNotMatch(workflow, /ROADMAP\.md/);
+  assert.doesNotMatch(workflow, /docs\/TASK_BOARD\.md/);
+});
+
 test('selector source never reads legacy queue files', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
   assert.equal(source.includes("file('ROADMAP.md')"), false);
