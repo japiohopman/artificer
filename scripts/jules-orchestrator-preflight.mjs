@@ -23,6 +23,7 @@ export const ACTIVE_JULES_STATES = new Set([
   'AWAITING_PLAN_APPROVAL',
   'AWAITING_USER_FEEDBACK',
   'IN_PROGRESS',
+  'PAUSED',
 ]);
 
 function normalizeState(value) {
