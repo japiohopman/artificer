@@ -3,9 +3,71 @@ import assert from 'node:assert/strict';
 import {
   evaluatePreflight,
   isOpenPr,
+  reconcileRepositoryActiveSessions,
   isSessionActive,
   isTerminalPr,
 } from './jules-orchestrator-preflight.mjs';
+
+test('active repository session with a merged PR does not block dispatch', async () => {
+  const blockingSessions = await reconcileRepositoryActiveSessions(
+    [{
+      name: 'sessions/merged',
+      state: 'IN_PROGRESS',
+      outputs: [{
+        pullRequest: {
+          url: 'https://github.com/japiohopman/artificer/pull/259',
+        },
+      }],
+    }],
+    null,
+    async number => ({
+      number,
+      state: 'closed',
+      merged: true,
+    }),
+  );
+
+  assert.equal(blockingSessions.length, 0);
+});
+
+test('active repository session with an open PR still blocks dispatch', async () => {
+  const blockingSessions = await reconcileRepositoryActiveSessions(
+    [{
+      name: 'sessions/open-pr',
+      state: 'IN_PROGRESS',
+      outputs: [{
+        pullRequest: {
+          url: 'https://github.com/japiohopman/artificer/pull/313',
+        },
+      }],
+    }],
+    null,
+    async number => ({
+      number,
+      state: 'open',
+      merged: false,
+    }),
+  );
+
+  assert.equal(blockingSessions.length, 1);
+  assert.equal(blockingSessions[0].name, 'sessions/open-pr');
+});
+
+test('active repository session without a PR still blocks dispatch', async () => {
+  const blockingSessions = await reconcileRepositoryActiveSessions(
+    [{
+      name: 'sessions/no-pr',
+      state: 'PAUSED',
+    }],
+    null,
+    async () => {
+      throw new Error('A session without a PR should not query GitHub pulls.');
+    },
+  );
+
+  assert.equal(blockingSessions.length, 1);
+  assert.equal(blockingSessions[0].name, 'sessions/no-pr');
+});
 
 test('active recorded Jules session blocks dispatch', () => {
   const result = evaluatePreflight({
