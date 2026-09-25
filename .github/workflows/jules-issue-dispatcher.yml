@@ -1,11 +1,15 @@
 name: Jules Issue-First Dispatcher
 
-# Safe Issue-first foundation.
-# This workflow reconciles Jules state and builds an inspectable dry-run payload.
-# It does NOT create a new Jules implementation session.
+# Issue #324: the first workflow that may create a real Jules session.
+# Live creation requires explicit manual confirmation with the exact value DISPATCH.
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type DISPATCH to allow creation of one Jules session."
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -18,7 +22,7 @@ concurrency:
 
 jobs:
   issue-first-dispatch:
-    name: Issue-first dispatch evaluation
+    name: Issue-first Jules dispatch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -35,13 +39,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Discover Jules source
+        id: source
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/jules-source-discovery.mjs
+
       - name: Reconcile Jules preflight
         id: preflight
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
-          JULES_SOURCE: sources/github/japiohopman/artificer
+          JULES_SOURCE: ${{ steps.source.outputs.source }}
         run: node scripts/jules-orchestrator-preflight.mjs
 
       - name: Stop when preflight blocks dispatch
@@ -50,15 +61,43 @@ jobs:
           echo "::notice::Issue-first dispatch is blocked by preflight."
           echo "Decision: ${{ steps.preflight.outputs.decision }}"
 
-      - name: Build Issue-first dry-run payload
+      - name: Build Issue-first selector payload
+        id: selector
         if: steps.preflight.outputs.dispatch == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: node scripts/jules-issue-selector.mjs
-
-      - name: Confirm no live Jules dispatch occurs
-        if: always()
         run: |
-          echo "::notice::This foundation workflow never creates a Jules session."
-          echo "::notice::The selector is dry-run only; live Jules session creation remains out of scope for Issue #322."
+          node scripts/jules-issue-selector.mjs > "$RUNNER_TEMP/jules-selector.json"
+          cat "$RUNNER_TEMP/jules-selector.json"
+
+      - name: Check selector dispatchability
+        id: selector_gate
+        if: steps.preflight.outputs.dispatch == 'true'
+        env:
+          SELECTOR: ${{ runner.temp }}/jules-selector.json
+        run: |
+          dispatchable="$(node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync(process.env.SELECTOR,'utf8')); process.stdout.write(String(p.dispatchable === true))")"
+          echo "dispatchable=$dispatchable" >> "$GITHUB_OUTPUT"
+          if [ "$dispatchable" != "true" ]; then
+            echo "::notice::No dispatchable Issue is available."
+          fi
+
+      - name: Live Jules session dispatch
+        if: steps.preflight.outputs.dispatch == 'true' && steps.selector_gate.outputs.dispatchable == 'true' && inputs.confirmation == 'DISPATCH'
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          JULES_SOURCE: ${{ steps.source.outputs.source }}
+          JULES_SELECTOR_PAYLOAD: ${{ runner.temp }}/jules-selector.json
+          JULES_DISPATCH_CONFIRMATION: ${{ inputs.confirmation }}
+        run: node scripts/jules-issue-dispatch.mjs
+
+      - name: Report dry-run only
+        if: inputs.confirmation != 'DISPATCH'
+        run: |
+          echo "::notice::No live Jules session was created because confirmation was not exactly DISPATCH."
+
+      - name: Report blocked or unavailable dispatch
+        if: steps.preflight.outputs.dispatch == 'true' && steps.selector_gate.outputs.dispatchable != 'true'
+        run: |
+          echo "::notice::The Issue-first path completed without creating a Jules session."
