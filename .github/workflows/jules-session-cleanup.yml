@@ -1,0 +1,47 @@
+name: Jules Stale Session Cleanup
+
+# Manual-only safety valve for explicitly reviewed stale PAUSED Jules sessions.
+# This workflow never enumerates or deletes repository sessions automatically.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sessions:
+        description: "Explicit Jules session names, separated by spaces or commas."
+        required: true
+        type: string
+      confirmation:
+        description: "Type DELETE_STALE_SESSIONS to authorize deletion."
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  cleanup:
+    name: Validate and delete stale Jules sessions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Discover Jules source
+        id: source
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/jules-source-discovery.mjs
+
+      - name: Inspect and delete explicitly named sessions
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          JULES_SOURCE: ${{ steps.source.outputs.source }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          JULES_SESSION_NAMES: ${{ inputs.sessions }}
+          JULES_CLEANUP_CONFIRMATION: ${{ inputs.confirmation }}
+        run: node scripts/jules-session-cleanup.mjs
