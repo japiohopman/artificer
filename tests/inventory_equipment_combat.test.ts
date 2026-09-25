@@ -205,4 +205,22 @@ describe('V2 Equipment Combat Synchronization & Proficiency Tests', () => {
     const isProficient = isProficientWithEquipment(wizardCharacter, itemGreatsword);
     expect(isProficient).toBe(false);
   });
+
+  it('7. Canonical Proficiency Source: Adding Martial Weapons to character.proficiencies grants Greatsword proficiency dynamically', () => {
+    const mainSlot = wizardCharacter.equipment!.slots.find(s => s.id === 'main_hand');
+    mainSlot!.itemId = 'item_greatsword_1';
+    const gsMeta = getEquippedItemWithMetadata(wizardCharacter, 'main_hand');
+
+    // Initially not proficient
+    expect(isProficientWithEquipment(wizardCharacter, gsMeta)).toBe(false);
+
+    // Dynamically grant 'Martial Weapons' proficiency to character
+    wizardCharacter.proficiencies.push('Martial Weapons');
+
+    // Now proficient via canonical character.proficiencies
+    expect(isProficientWithEquipment(wizardCharacter, gsMeta)).toBe(true);
+
+    // Proficiency (+2) + Str (+0) = +2 attack bonus
+    expect(calculateWeaponAttackBonus(wizardCharacter, gsMeta)).toBe(2);
+  });
 });

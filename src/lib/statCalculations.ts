@@ -54,11 +54,8 @@ export function getEquippedWeapons(character: Character | undefined): Array<{ sl
     const kind = (item.kind || item._type || item.type || '').toLowerCase();
     const cat = (item.equipment_category?.index || item.equipment_category?.name || item.category || '').toLowerCase();
     const weaponCat = (item.weapon_category || '').toLowerCase();
-    const idx = (item.index || item.template || item.id || item.name || '').toLowerCase();
 
-    const isWeapon = kind === 'weapon' || weaponCat || cat.includes('weapon') ||
-      idx.includes('sword') || idx.includes('dagger') || idx.includes('bow') ||
-      idx.includes('axe') || idx.includes('mace') || idx.includes('spear') || idx.includes('staff');
+    const isWeapon = kind === 'weapon' || Boolean(weaponCat) || cat.includes('weapon');
 
     if (isWeapon) {
       weapons.push({ slotId, item });
@@ -73,7 +70,7 @@ export function getEquippedWeapons(character: Character | undefined): Array<{ sl
           const kind = (meta.kind || meta._type || meta.type || '').toLowerCase();
           const cat = (meta.equipment_category?.index || meta.equipment_category?.name || meta.category || '').toLowerCase();
           const weaponCat = (meta.weapon_category || '').toLowerCase();
-          if (kind === 'weapon' || weaponCat || cat.includes('weapon')) {
+          if (kind === 'weapon' || Boolean(weaponCat) || cat.includes('weapon')) {
             weapons.push({ slotId: slot, item: meta });
           }
         }
