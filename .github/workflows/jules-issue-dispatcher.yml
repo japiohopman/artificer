@@ -57,17 +57,19 @@ jobs:
 
       - name: Stop when preflight blocks dispatch
         if: steps.preflight.outputs.dispatch != 'true'
-        run: |
-          echo "::notice::Issue-first dispatch is blocked by preflight."
         env:
           BLOCKING_SESSIONS: ${{ steps.preflight.outputs.blocking_sessions }}
-          echo "Decision: ${{ steps.preflight.outputs.decision }}"
+          DECISION: ${{ steps.preflight.outputs.decision }}
+          CONFIRMATION: ${{ inputs.confirmation }}
+        run: |
+          echo "::notice::Issue-first dispatch is blocked by preflight."
+          echo "Decision: $DECISION"
           echo "Blocking sessions:"
           printf "%s\n" "$BLOCKING_SESSIONS"
+          if [ "$CONFIRMATION" = "DISPATCH" ]; then
             echo "::error::DISPATCH was explicitly requested, but preflight did not authorize session creation."
             exit 1
           fi
-
       - name: Build Issue-first selector payload
         id: selector
         if: steps.preflight.outputs.dispatch == 'true'
