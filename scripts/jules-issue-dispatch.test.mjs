@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import {
   buildActiveSessionState,
   buildJulesSessionRequest,
@@ -54,4 +55,12 @@ test('state persistence writes the created session state', () => {
   });
   assert.match(written, /sessions\/456/);
   assert.match(written, /"issueNumber": 313/);
+});
+
+test('live Jules API creation is isolated to the dispatch script', () => {
+  const source = readFileSync(
+    new URL('./jules-issue-dispatch.mjs', import.meta.url),
+    'utf8'
+  );
+  assert.match(source, /jules\.googleapis\.com\/v1alpha\/sessions/);
 });
