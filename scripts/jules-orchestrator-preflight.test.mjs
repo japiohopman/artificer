@@ -18,6 +18,17 @@ test('active recorded Jules session blocks dispatch', () => {
   assert.equal(result.action, 'WAIT_ACTIVE_SESSION');
 });
 
+test('paused recorded Jules session blocks dispatch', () => {
+  const result = evaluatePreflight({
+    recordedSession: { name: 'sessions/1' },
+    actualRecordedSession: { name: 'sessions/1', state: 'PAUSED' },
+  });
+
+  assert.equal(result.dispatch, false);
+  assert.equal(result.clearState, false);
+  assert.equal(result.action, 'WAIT_ACTIVE_SESSION');
+});
+
 test('recorded session missing but open PR blocks dispatch', () => {
   const result = evaluatePreflight({
     recordedSession: { name: 'sessions/missing' },
@@ -96,6 +107,7 @@ test('repository with no active sessions is safe to dispatch', () => {
 
 test('session and PR predicates remain explicit', () => {
   assert.equal(isSessionActive({ state: 'QUEUED' }), true);
+  assert.equal(isSessionActive({ state: 'PAUSED' }), true);
   assert.equal(isSessionActive({ state: 'COMPLETED' }), false);
   assert.equal(isOpenPr({ state: 'open', merged: false }), true);
   assert.equal(isOpenPr({ state: 'closed', merged: false }), false);
