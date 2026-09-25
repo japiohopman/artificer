@@ -284,10 +284,15 @@ async function main() {
   }
 }
 
-main().catch(error => {
-  console.error(error);
-  setOutput('dispatch', false);
-  setOutput('clear_state', false);
-  setOutput('decision', 'PREFLIGHT_ERROR');
-  process.exit(1);
-});
+const isDirectExecution = process.argv[1]
+  && new URL(import.meta.url).pathname === new URL(`file://${process.argv[1]}`).pathname;
+
+if (isDirectExecution) {
+  main().catch(error => {
+    console.error(error);
+    setOutput('dispatch', false);
+    setOutput('clear_state', false);
+    setOutput('decision', 'PREFLIGHT_ERROR');
+    process.exit(1);
+  });
+}
