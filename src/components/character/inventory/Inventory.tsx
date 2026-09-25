@@ -20,19 +20,51 @@ interface InventoryProps {
   compactEquipped?: boolean;
   gridCols?: number;
   activeDragItem?: any;
+  rootCategory?: RootTaxonomy;
+  onRootCategoryChange?: (root: RootTaxonomy) => void;
+  activeSubcategory?: ItemSubcategory | 'ALL';
+  onSubcategoryChange?: (sub: ItemSubcategory | 'ALL') => void;
 }
 
 export const Inventory: React.FC<InventoryProps> = ({
   forceCharacterId,
   showCategoryTabs = true,
-  activeDragItem
+  activeDragItem,
+  rootCategory: controlledRoot,
+  onRootCategoryChange,
+  activeSubcategory: controlledSub,
+  onSubcategoryChange
 }) => {
   const storeActiveChar = useActiveCharacter();
   const forcedChar = useCharacterStore(state => forceCharacterId ? selectCharacterById(state, forceCharacterId) : undefined);
   const activeCharacter = forcedChar || storeActiveChar;
 
-  const [rootCategory, setRootCategory] = React.useState<RootTaxonomy>('EQUIPMENT');
-  const [activeSubcategory, setActiveSubcategory] = React.useState<ItemSubcategory | 'ALL'>('ALL');
+  const [internalRootCategory, setInternalRootCategory] = React.useState<RootTaxonomy>('EQUIPMENT');
+  const [internalSubcategory, setInternalSubcategory] = React.useState<ItemSubcategory | 'ALL'>('ALL');
+
+  const rootCategory = controlledRoot ?? internalRootCategory;
+  const activeSubcategory = controlledSub ?? internalSubcategory;
+
+  const handleRootChange = (root: RootTaxonomy) => {
+    if (onRootCategoryChange) {
+      onRootCategoryChange(root);
+    } else {
+      setInternalRootCategory(root);
+    }
+    if (onSubcategoryChange) {
+      onSubcategoryChange('ALL');
+    } else {
+      setInternalSubcategory('ALL');
+    }
+  };
+
+  const handleSubChange = (sub: ItemSubcategory | 'ALL') => {
+    if (onSubcategoryChange) {
+      onSubcategoryChange(sub);
+    } else {
+      setInternalSubcategory(sub);
+    }
+  };
 
   if (!activeCharacter) {
     return <div className="text-[10px] text-parchment-400 italic p-2">No active character loaded</div>;
@@ -139,8 +171,7 @@ export const Inventory: React.FC<InventoryProps> = ({
             <button
               type="button"
               onClick={() => {
-                setRootCategory('EQUIPMENT');
-                setActiveSubcategory('ALL');
+                handleRootChange('EQUIPMENT');
                 soundService.playEffect('UI_CLICK_LIGHT');
               }}
               className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
@@ -154,8 +185,7 @@ export const Inventory: React.FC<InventoryProps> = ({
             <button
               type="button"
               onClick={() => {
-                setRootCategory('MATERIALS');
-                setActiveSubcategory('ALL');
+                handleRootChange('MATERIALS');
                 soundService.playEffect('UI_CLICK_LIGHT');
               }}
               className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
@@ -173,7 +203,7 @@ export const Inventory: React.FC<InventoryProps> = ({
             <button
               type="button"
               onClick={() => {
-                setActiveSubcategory('ALL');
+                handleSubChange('ALL');
                 soundService.playEffect('UI_CLICK_LIGHT');
               }}
               className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer ${
@@ -189,7 +219,7 @@ export const Inventory: React.FC<InventoryProps> = ({
                 key={sub.id}
                 type="button"
                 onClick={() => {
-                  setActiveSubcategory(sub.id);
+                  handleSubChange(sub.id);
                   soundService.playEffect('UI_CLICK_LIGHT');
                 }}
                 className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer flex items-center gap-1 ${
