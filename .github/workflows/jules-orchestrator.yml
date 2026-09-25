@@ -1,38 +1,28 @@
 name: Jules Queue Orchestrator
 
-# The "heartbeat" — but see the commented-out schedule below. It starts OFF on purpose:
-# run this manually (workflow_dispatch) and verify one full Ready -> Jules -> PR -> your
-# review -> merge -> checkbox -> next-task cycle before enabling the cron. Uncomment the
-# `schedule:` block only after that first cycle has gone exactly as expected.
+# LEGACY PATH DISABLED during Issue #306 migration.
+# This workflow is intentionally retained as a visible kill-switch so an accidental
+# manual invocation cannot dispatch the old ROADMAP/TASK_BOARD-driven Jules queue.
 
 on:
-  # schedule:
-  #   - cron: '*/15 * * * *'
   workflow_dispatch: {}
 
 permissions:
-  contents: write
-  pull-requests: read
+  contents: none
+  pull-requests: none
 
 concurrency:
   group: jules-orchestrator
   cancel-in-progress: false
 
 jobs:
-  orchestrate:
+  legacy-dispatch-disabled:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Run orchestrator
-        env:
-          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          JULES_SOURCE: sources/github/japiohopman/artificer
-        run: node scripts/jules-orchestrator.mjs
+      - name: Legacy ROADMAP dispatcher is disabled
+        run: |
+          echo "::notice::Legacy ROADMAP → Jules dispatch is disabled during Issue #306."
+          echo "No ROADMAP changes will be made."
+          echo "No queue-state changes will be made."
+          echo "No Jules API call will be made."
+          echo "Use the new Issue-first workflow after the migration foundation is complete."
