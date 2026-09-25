@@ -52,6 +52,40 @@ export function isTerminalPr(pr) {
   return Boolean(pr && (pr.state === 'closed' || pr.merged));
 }
 
+export async function reconcileRepositoryActiveSessions(
+  sessions,
+  recordedSessionName,
+  fetchPullRequest,
+) {
+  const blockingSessions = [];
+
+  for (const session of sessions || []) {
+    if (!isSessionActive(session) || session?.name === recordedSessionName) {
+      continue;
+    }
+
+    const sessionPr = findSessionPr(session);
+    const prNumber = extractPrNumber(sessionPr?.url);
+
+    if (prNumber) {
+      const pullRequest = await fetchPullRequest(prNumber);
+
+      // A Jules session can remain active in the Jules API after its PR has
+      // already been merged. The merged PR is the durable completion signal,
+      // so that historical session must not block the next Issue dispatch.
+      if (pullRequest?.merged) {
+        continue;
+      }
+    }
+
+    // Open PRs, closed-but-unmerged PRs, and sessions without a PR remain
+    // blocking because their work may still be in progress or unresolved.
+    blockingSessions.push(session);
+  }
+
+  return blockingSessions;
+}
+
 export function evaluatePreflight({
   recordedSession,
   actualRecordedSession,
@@ -259,10 +293,14 @@ async function main() {
   }
 
   const sessionsResponse = await julesFetch('sessions?pageSize=100');
-  const repositoryActiveSessions = (sessionsResponse?.sessions || []).filter(session =>
+  const repositorySessions = (sessionsResponse?.sessions || []).filter(session =>
     isSameRepository(session)
-    && isSessionActive(session)
     && session?.name !== recorded?.name,
+  );
+  const repositoryActiveSessions = await reconcileRepositoryActiveSessions(
+    repositorySessions,
+    recorded?.name,
+    prNumber => githubFetch(`pulls/${prNumber}`),
   );
 
   const decision = evaluatePreflight({
