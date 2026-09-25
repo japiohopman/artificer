@@ -113,6 +113,34 @@ test('dry-run prompt contains required context', () => {
   assert.match(prompt, /execution contract/);
 });
 
+test('prompt makes Issue precedence explicit', () => {
+  const prompt = buildJulesPrompt(
+    issue(42),
+    'LEGACY shared instructions mention ROADMAP.md and TASK_BOARD.md',
+    'SPECIALIST CONTRACT',
+    []
+  );
+  assert.match(prompt, /GitHub Issue > selected specialist contract > shared agent instructions/);
+  assert.match(prompt, /ROADMAP\.md or docs\\/TASK_BOARD\.md/);
+});
+
+test('all specialist contracts are repository-local and present', () => {
+  const specialistNames = [
+    'architecture',
+    'ruleset-data',
+    'ui',
+    'assets',
+    'gameplay',
+    'verification'
+  ];
+  for (const name of specialistNames) {
+    assert.equal(
+      specialistPath(name),
+      '.github/agents/' + name + '-specialist.agent.md'
+    );
+  }
+});
+
 test('selector source never references legacy queue paths', () => {
   const source = readFileSync(new URL('./jules-issue-selector.mjs', import.meta.url), 'utf8');
   assert.equal(source.includes('ROADMAP.md'), false);
