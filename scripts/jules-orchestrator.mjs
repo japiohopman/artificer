@@ -142,10 +142,6 @@ function removeTaskFromActive(roadmapText, taskText) {
 }
 
 async function main() {
-  console.log("Legacy ROADMAP → Jules dispatch is disabled during Issue #306 migration.");
-  console.log("No ROADMAP mutation, queue-state mutation, or Jules API call will be performed.");
-  return;
-
   const state = loadState();
   let roadmapText = readFileSync(ROADMAP_PATH, 'utf8');
   let roadmapChanged = false;
@@ -242,4 +238,11 @@ function commitAndPush() {
   }
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+const LEGACY_DISPATCH_DISABLED = true;
+
+if (LEGACY_DISPATCH_DISABLED) {
+  console.log("Legacy ROADMAP → Jules dispatch is disabled during Issue #306 migration.");
+  console.log("No ROADMAP mutation, queue-state mutation, or Jules API call will be performed.");
+} else {
+  main().catch(err => { console.error(err); process.exit(1); });
+}
