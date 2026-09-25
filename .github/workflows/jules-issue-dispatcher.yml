@@ -12,7 +12,7 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
   issues: read
   pull-requests: read
 
@@ -65,11 +65,12 @@ jobs:
           echo "::notice::Issue-first dispatch is blocked by preflight."
           echo "Decision: $DECISION"
           echo "Blocking sessions:"
-          printf "%s\n" "$BLOCKING_SESSIONS"
+          printf "%s\\n" "$BLOCKING_SESSIONS"
           if [ "$CONFIRMATION" = "DISPATCH" ]; then
             echo "::error::DISPATCH was explicitly requested, but preflight did not authorize session creation."
             exit 1
           fi
+
       - name: Build Issue-first selector payload
         id: selector
         if: steps.preflight.outputs.dispatch == 'true'
