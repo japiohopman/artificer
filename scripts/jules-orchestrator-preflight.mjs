@@ -70,20 +70,13 @@ export function evaluatePreflight({
       };
     }
 
-    if (isTerminalPr(recordedPr)) {
-      return {
-        dispatch: false,
-        clearState: true,
-        action: 'CLEAR_STALE_STATE',
-        reason: `Recorded session is missing and PR #${recordedPr.number} is terminal.`,
-      };
-    }
-
     return {
-      dispatch: false,
-      clearState: false,
-      action: 'WAIT_RECONCILIATION',
-      reason: 'Recorded session cannot be verified and no terminal PR state is available.',
+      dispatch: true,
+      clearState: true,
+      action: 'CLEAR_MISSING_SESSION_AND_DISPATCH',
+      reason: recordedPr
+        ? `Recorded session is missing and PR #${recordedPr.number} is terminal or unavailable.`
+        : 'Recorded Jules session is missing; treating the persisted session record as stale.',
     };
   }
 
