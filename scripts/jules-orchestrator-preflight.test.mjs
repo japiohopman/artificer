@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   evaluatePreflight,
+  fetchAllJulesSessions,
   isOpenPr,
   reconcileRepositoryActiveSessions,
   isSessionActive,
@@ -68,6 +69,70 @@ test('active repository session without a PR still blocks dispatch', async () =>
 
   assert.equal(blockingSessions.length, 1);
   assert.equal(blockingSessions[0].name, 'sessions/no-pr');
+});
+
+test('Jules session discovery follows nextPageToken until all pages are read', async () => {
+  const requestedPaths = [];
+  const sessions = await fetchAllJulesSessions(async path => {
+    requestedPaths.push(path);
+
+    if (path === 'sessions?pageSize=100') {
+      return {
+        sessions: [{ name: 'sessions/page-1' }],
+        nextPageToken: 'page-2-token',
+      };
+    }
+
+    assert.equal(
+      path,
+      'sessions?pageSize=100&pageToken=page-2-token',
+    );
+
+    return {
+      sessions: [
+        { name: 'sessions/page-2' },
+        { name: 'sessions/page-2-second' },
+      ],
+    };
+  });
+
+  assert.deepEqual(requestedPaths, [
+    'sessions?pageSize=100',
+    'sessions?pageSize=100&pageToken=page-2-token',
+  ]);
+  assert.deepEqual(
+    sessions.map(session => session.name),
+    [
+      'sessions/page-1',
+      'sessions/page-2',
+      'sessions/page-2-second',
+    ],
+  );
+});
+
+test('Jules session discovery rejects a repeated nextPageToken', async () => {
+  await assert.rejects(
+    () => fetchAllJulesSessions(async () => ({
+      sessions: [],
+      nextPageToken: 'same-token',
+    })),
+    /repeated page token: same-token/,
+  );
+});
+
+test('Jules session discovery returns a single page without another request', async () => {
+  let calls = 0;
+
+  const sessions = await fetchAllJulesSessions(async path => {
+    calls += 1;
+    assert.equal(path, 'sessions?pageSize=100');
+    return {
+      sessions: [{ name: 'sessions/only-page' }],
+    };
+  });
+
+  assert.equal(calls, 1);
+  assert.deepEqual(sessions, [{ name: 'sessions/only-page' }]);
 });
 
 test('active recorded Jules session blocks dispatch', () => {
