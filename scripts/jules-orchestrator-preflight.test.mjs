@@ -29,6 +29,17 @@ test('recorded session missing but open PR blocks dispatch', () => {
   assert.equal(result.action, 'WAIT_OPEN_PR');
 });
 
+test('missing recorded Jules session does not block dispatch when no PR is open', () => {
+  const result = evaluatePreflight({
+    recordedSession: { name: 'sessions/missing' },
+    actualRecordedSession: null,
+  });
+
+  assert.equal(result.dispatch, true);
+  assert.equal(result.clearState, true);
+  assert.equal(result.action, 'CLEAR_MISSING_SESSION_AND_DISPATCH');
+});
+
 test('terminal session with no open PR clears stale state and allows dispatch', () => {
   const result = evaluatePreflight({
     recordedSession: {
