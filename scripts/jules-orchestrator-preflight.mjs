@@ -60,6 +60,15 @@ export function evaluatePreflight({
 }) {
   const actualSession = actualRecordedSession ?? recordedSession ?? null;
 
+  if (repositoryActiveSessions.length > 0) {
+    return {
+      dispatch: false,
+      clearState: false,
+      action: 'WAIT_REPOSITORY_SESSION',
+      reason: `Found ${repositoryActiveSessions.length} other active Jules session(s) for this repository.`,
+    };
+  }
+
   if (recordedSession?.name && !actualSession) {
     if (isOpenPr(recordedPr)) {
       return {
@@ -98,15 +107,6 @@ export function evaluatePreflight({
     };
   }
 
-  if (repositoryActiveSessions.length > 0) {
-    return {
-      dispatch: false,
-      clearState: false,
-      action: 'WAIT_REPOSITORY_SESSION',
-      reason: `Found ${repositoryActiveSessions.length} other active Jules session(s) for this repository.`,
-    };
-  }
-
   if (recordedSession?.name && (!actualSession || !isSessionActive(actualSession))) {
     return {
       dispatch: true,
@@ -137,15 +137,6 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO = process.env.GITHUB_REPOSITORY;
 const JULES_SOURCE = process.env.JULES_SOURCE;
 const STATE_PATH = '.github/jules-queue-state.json';
-
-for (const [name, value] of Object.entries({
-  JULES_API_KEY,
-  GITHUB_TOKEN,
-  REPO,
-  JULES_SOURCE,
-})) {
-  if (!value) throw new Error(`${name} is not set`);
-}
 
 async function julesFetch(path) {
   const response = await fetch(`https://jules.googleapis.com/v1alpha/${path}`, {
@@ -223,6 +214,15 @@ function isSameRepository(session) {
 }
 
 async function main() {
+  for (const [name, value] of Object.entries({
+    JULES_API_KEY,
+    GITHUB_TOKEN,
+    REPO,
+    JULES_SOURCE,
+  })) {
+    if (!value) throw new Error(`${name} is not set`);
+  }
+
   const state = loadState();
   const recorded = state.activeSession;
 
