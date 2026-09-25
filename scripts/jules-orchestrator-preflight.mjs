@@ -118,7 +118,7 @@ export function evaluatePreflight({
       reason: [
         `Found ${repositoryActiveSessions.length} other active Jules session(s) for this repository.`,
         ...blockers.map(item => `- ${item.reason}`),
-      ].join('\\n'),
+      ].join('\n'),
       blockers,
     };
   }
