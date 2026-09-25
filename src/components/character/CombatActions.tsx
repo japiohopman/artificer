@@ -1,5 +1,6 @@
 import React from 'react';
-import { useActiveCharacter, calculateDerivedStats, calculateWeaponAttackBonus, getEffectiveStats } from '../../lib/character';
+import { useActiveCharacter, calculateDerivedStats, calculateWeaponAttackBonus, getEffectiveStats, getEquippedWeapons } from '../../lib/character';
+import { isProficientWithEquipment } from '../../lib/equipmentCompatibility';
 import { useUIStore } from '../../store/useUIStore';
 import { useGameStore } from '../../store/useGameStore';
 import { GameIcon, GameIconName } from '../../game_icons';
@@ -16,12 +17,13 @@ interface CombatActionProps {
   damageIcon: GameIconName;
   cost?: number;
   special?: string;
+  isProficient?: boolean;
   onHitClick?: () => void;
   onDamageClick?: () => void;
 }
 
 const CombatActionCard: React.FC<CombatActionProps> = ({ 
-  icon, name, type, range, hit, damage, damageIcon, cost = 1, special,
+  icon, name, type, range, hit, damage, damageIcon, cost = 1, special, isProficient = true,
   onHitClick, onDamageClick
 }) => {
   return (
@@ -36,7 +38,14 @@ const CombatActionCard: React.FC<CombatActionProps> = ({
            <GameIcon name={icon} size={24} color="#4A4A4A" className="group-hover:scale-110 transition-transform" />
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="text-[11px] font-black uppercase tracking-tight text-dragon-darkRed truncate leading-none mb-1">{name}</h4>
+          <div className="flex items-center gap-1.5">
+            <h4 className="text-[11px] font-black uppercase tracking-tight text-dragon-darkRed truncate leading-none mb-1">{name}</h4>
+            {!isProficient && (
+              <span className="text-[7px] font-extrabold uppercase text-red-700 bg-red-100 border border-red-300 px-1 py-0.2 rounded shadow-xs shrink-0">
+                Not Proficient
+              </span>
+            )}
+          </div>
           <div className="flex items-center gap-1.5 opacity-60">
              <span className="text-[8px] font-bold uppercase tracking-widest">{type}</span>
              <span className="w-1 h-1 bg-parchment-400 rounded-full" />
@@ -114,31 +123,28 @@ export const CombatActions: React.FC = () => {
   };
 
   const renderActions = () => {
-    const weapons = Object.entries(activeCharacter.inventory || {}).filter(([slot, item]: [string, any]) => 
-      item && (item.equipment_category?.index === 'weapon' || item._type === 'equipment' && (item.index?.includes('sword') || item.index?.includes('dagger') || item.index?.includes('bow')))
-    );
+    const equippedWeapons = getEquippedWeapons(activeCharacter);
 
-    const actions = weapons.map(([slot, w]: [string, any]) => {
+    const actions = equippedWeapons.map(({ slotId, item: w }) => {
       const styles = (activeCharacter.choices?.['fighting-style'] || []).map((s: string) => s.toLowerCase());
       const hasDueling = styles.some(s => s === 'dueling' || s.includes('dueling'));
       
-      const isRanged = w.weapon_range === 'Ranged' || w.index?.includes('bow') || w.index?.includes('crossbow');
-      const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse');
+      const isRanged = w.weapon_range === 'Ranged' || w.category === 'Ranged' || w.index?.includes('bow') || w.index?.includes('crossbow');
+      const isFinesse = w.properties?.some((p: any) => p.index === 'finesse' || p.name === 'Finesse' || p === 'finesse');
       const abilityMod = (isRanged || (isFinesse && dexMod > strMod)) ? dexMod : strMod;
       
       const bonus = calculateWeaponAttackBonus(activeCharacter, w);
+      const isProficient = isProficientWithEquipment(activeCharacter, w);
       
       let dmgDice = w.damage?.damage_dice || "1d4";
-      let dmgType = w.damage?.damage_type?.name || "Piercing";
-      if (w.index?.includes('sword')) { dmgDice = "1d8"; dmgType = "Slashing"; }
-      if (w.index?.includes('dagger')) { dmgDice = "1d4"; dmgType = "Piercing"; }
-      if (w.index?.includes('bow')) { dmgDice = "1d8"; dmgType = "Piercing"; }
-      
+      let dmgType = w.damage?.damage_type?.name || w.damage?.damage_type || "Piercing";
+      if (typeof dmgType === 'object') dmgType = dmgType.name || "Piercing";
+
       let dmgBonus = abilityMod + (w.damage_bonus || 0) + (w.feature_specific?.passive_modifiers?.damage_bonus || 0);
       
       // Dueling: +2 to damage if wielding a melee weapon in one hand and no other weapon
-      const hasShield = !!activeCharacter.inventory?.['off-hand'];
-      const hasOffHandWeapon = activeCharacter.inventory?.['off-hand']?._type === 'equipment' && activeCharacter.inventory?.['off-hand']?.index?.includes('weapon');
+      const offHand = equippedWeapons.find(e => e.slotId === 'off_hand')?.item;
+      const hasOffHandWeapon = offHand && (offHand.kind === 'weapon' || offHand.weapon_category || offHand.equipment_category?.index === 'weapon');
       if (!isRanged && hasDueling && !hasOffHandWeapon) {
         dmgBonus += 2;
       }
@@ -147,17 +153,18 @@ export const CombatActions: React.FC = () => {
 
       return (
         <CombatActionCard 
-          key={slot}
-          name={w.name}
+          key={slotId}
+          name={w.name || w.template || 'Equipped Weapon'}
           icon={getWeaponCategoryIcon(w)}
           type={isRanged ? "Ranged Weapon" : "Melee Weapon"}
           range={isRanged ? (w.range?.long ? `${w.range.normal}/${w.range.long} ft` : `${w.range?.normal || 80} ft`) : "5 ft"}
           hit={bonus >= 0 ? `+${bonus}` : bonus.toString()}
           damage={fullDamage}
-          damageIcon={getDamageIcon(dmgType)}
+          damageIcon={getDamageIcon(String(dmgType))}
           cost={1}
-          onHitClick={() => rollDice3D(`1d20${bonus >= 0 ? '+' : ''}${bonus !== 0 ? bonus : ''}`, `${w.name} Attack`)}
-          onDamageClick={() => rollDice3D(fullDamage, `${w.name} Damage`)}
+          isProficient={isProficient}
+          onHitClick={() => rollDice3D(`1d20${bonus >= 0 ? '+' : ''}${bonus !== 0 ? bonus : ''}`, `${w.name || 'Weapon'} Attack`)}
+          onDamageClick={() => rollDice3D(fullDamage, `${w.name || 'Weapon'} Damage`)}
         />
       );
     });

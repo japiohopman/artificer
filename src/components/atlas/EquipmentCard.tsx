@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { cn } from '../../lib/utils';
 import { isBookLike } from '../../lib/bookUtils';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
+import { isProficientWithEquipment } from '../../lib/equipmentCompatibility';
 import { useUIStore } from '../../store/useUIStore';
 import { useBookStore } from '../../store/useBookStore';
 import { useCharacterStore } from '../../store/useCharacterStore';
@@ -47,6 +48,9 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
 
   // Render Inspector Panel Variant (Fits inside fixed 320px panel)
   if (variant === 'inspector') {
+    const activeChar = useCharacterStore.getState().characters.find(c => c.id === activeCharacterId) || useCharacterStore.getState().characters[0];
+    const isProficient = activeChar && currentItem ? isProficientWithEquipment(activeChar, currentItem) : true;
+
     const isMagic = currentItem.rarity && currentItem.rarity !== 'Common';
     const fallbackUrl = normalizeImageUrl(currentItem.imageUrl || currentItem.image, currentItem._type || 'equipment', currentItem.index || currentItem.id, currentItem.name);
     const descriptionMarkdown = Array.isArray(currentItem.desc)
@@ -84,6 +88,12 @@ export const EquipmentCard: React.FC<EquipmentCardProps> = ({ equipment, classNa
               {currentItem.weight && <span>{currentItem.weight} lbs</span>}
             </div>
           </div>
+          {!isProficient && (
+            <div className="bg-red-900/15 border border-red-500/30 text-red-800 rounded px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wider flex items-center justify-between mt-1">
+              <span>Not Proficient</span>
+              <span className="text-[7px] text-red-600 font-normal">Lack character proficiency</span>
+            </div>
+          )}
         </div>
 
         {/* Artwork Display: 9:16 Portrait Frame */}
