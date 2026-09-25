@@ -61,4 +61,4 @@ jobs:
         if: always()
         run: |
           echo "::notice::This foundation workflow never creates a Jules session."
-          echo "::notice::The selector is dry-run only; live POST /sessions remains out of scope for Issue #322."
+          echo "::notice::The selector is dry-run only; live Jules session creation remains out of scope for Issue #322."
