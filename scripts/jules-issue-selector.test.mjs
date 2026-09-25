@@ -170,7 +170,7 @@ test('live Issue-first workflow is explicitly confirmed and delegates POST to di
   );
 
   assert.match(workflow, /workflow_dispatch:/);
-  assert.match(workflow, /confirm:/);
+  assert.match(workflow, /confirmation:/);
   assert.match(workflow, /DISPATCH/);
   assert.match(workflow, /jules-source-discovery\.mjs/);
   assert.match(workflow, /jules-orchestrator-preflight\.mjs/);
