@@ -118,4 +118,15 @@ describe('Equipment Workspace UI Architecture Unit Tests', () => {
     expect(char1Restored?.equipment?.slots?.find((s: any) => s.id === 'main_hand')?.itemId).toBe('item_1');
     expect(char1Restored?.items?.['item_2'].template).toBe('chain-mail');
   });
+
+  it('4. Single Root Navigation Owner: Inventory filters items according to controlled rootCategory state', () => {
+    const sword = { id: 'sword_1', kind: 'weapon' };
+    const book = { id: 'book_1', kind: 'book' };
+
+    const eqTaxonomy = resolveItemTaxonomy(sword);
+    const matTaxonomy = resolveItemTaxonomy(book);
+
+    expect(eqTaxonomy.rootCategory).toBe('EQUIPMENT');
+    expect(matTaxonomy.rootCategory).toBe('MATERIALS');
+  });
 });

@@ -163,78 +163,43 @@ export const Inventory: React.FC<InventoryProps> = ({
         </span>
       </div>
 
-      {/* Root Category and Subcategory Tabs */}
+      {/* Subcategory Filter Tabs */}
       {showCategoryTabs && (
-        <div className="flex flex-col gap-1.5 bg-black/40 p-1.5 rounded-lg border border-dragon-gold/30 shrink-0">
-          {/* Top Row: Root Category Switcher */}
-          <div className="flex items-center gap-1 bg-black/50 p-0.5 rounded border border-dragon-gold/30 shrink-0">
+        <div className="flex items-center gap-1 overflow-x-auto custom-scrollbar bg-black/40 p-1.5 rounded-lg border border-dragon-gold/30 shrink-0">
+          <button
+            type="button"
+            onClick={() => {
+              handleSubChange('ALL');
+              soundService.playEffect('UI_CLICK_LIGHT');
+            }}
+            className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer ${
+              activeSubcategory === 'ALL'
+                ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
+                : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
+            }`}
+          >
+            All {rootCategory === 'EQUIPMENT' ? 'Gear' : 'Materials'}
+          </button>
+          {subcategories.map((sub) => (
             <button
+              key={sub.id}
               type="button"
               onClick={() => {
-                handleRootChange('EQUIPMENT');
+                handleSubChange(sub.id);
                 soundService.playEffect('UI_CLICK_LIGHT');
               }}
-              className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
-                rootCategory === 'EQUIPMENT'
-                  ? 'bg-dragon-darkRed text-white border-dragon-gold shadow-xs font-black'
-                  : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/5'
-              }`}
-            >
-              Equipment
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                handleRootChange('MATERIALS');
-                soundService.playEffect('UI_CLICK_LIGHT');
-              }}
-              className={`flex-1 py-1 px-2 rounded text-[8px] font-bold uppercase tracking-wider transition-all border ${
-                rootCategory === 'MATERIALS'
-                  ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
-                  : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/5'
-              }`}
-            >
-              Materials
-            </button>
-          </div>
-
-          {/* Bottom Row: Subcategory Tabs */}
-          <div className="flex items-center gap-1 overflow-x-auto custom-scrollbar pb-0.5 pt-0.5">
-            <button
-              type="button"
-              onClick={() => {
-                handleSubChange('ALL');
-                soundService.playEffect('UI_CLICK_LIGHT');
-              }}
-              className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer ${
-                activeSubcategory === 'ALL'
+              className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer flex items-center gap-1 ${
+                activeSubcategory === sub.id
                   ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
                   : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
               }`}
             >
-              All {rootCategory === 'EQUIPMENT' ? 'Gear' : 'Materials'}
+              {sub.svgIcon && (
+                <img src={sub.svgIcon} alt="" className="w-2.5 h-2.5 object-contain invert opacity-70" />
+              )}
+              {sub.label}
             </button>
-            {subcategories.map((sub) => (
-              <button
-                key={sub.id}
-                type="button"
-                onClick={() => {
-                  handleSubChange(sub.id);
-                  soundService.playEffect('UI_CLICK_LIGHT');
-                }}
-                className={`px-2 py-0.5 rounded text-[8px] font-bold uppercase transition-all whitespace-nowrap border cursor-pointer flex items-center gap-1 ${
-                  activeSubcategory === sub.id
-                    ? 'bg-dragon-gold text-stone-950 border-white shadow-xs font-black'
-                    : 'bg-black/30 text-parchment-300 border-white/10 hover:border-dragon-gold/40 hover:text-white'
-                }`}
-              >
-                {sub.svgIcon && (
-                  <img src={sub.svgIcon} alt="" className="w-2.5 h-2.5 object-contain invert opacity-70" />
-                )}
-                {sub.label}
-              </button>
-            ))}
-          </div>
+          ))}
         </div>
       )}
 
