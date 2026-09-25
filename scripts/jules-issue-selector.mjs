@@ -238,6 +238,7 @@ async function main() {
     setOutput('dispatch', false);
     console.log(JSON.stringify({
       dispatch: false,
+      dispatchable: false,
       reason: 'No dispatchable Issue satisfies the Issue-first contract.',
       rejected: decision.rejected
     }, null, 2));
@@ -253,6 +254,7 @@ async function main() {
     setOutput('dispatch', false);
     console.log(JSON.stringify({
       dispatch: false,
+      dispatchable: false,
       dryRun: true,
       issueNumber: selected.issue.number,
       reason: 'Specialist contract is missing: ' + specialist,
@@ -279,12 +281,14 @@ async function main() {
   setOutput('dispatch', false);
   console.log(JSON.stringify({
     dispatch: false,
+    dispatchable: true,
     dryRun: true,
     issueNumber: selected.issue.number,
     priority: selected.metadata.priority,
     specialist: selected.metadata.specialist,
     specialistPath: specialist,
-    prompt
+    prompt,
+    sessionTitle: selected.issue.title.slice(0, 80)
   }, null, 2));
 }
 
