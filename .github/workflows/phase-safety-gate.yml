@@ -26,7 +26,6 @@ jobs:
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
           HEAD_REF: ${{ github.head_ref }}
-          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
           set -euo pipefail
 
@@ -36,13 +35,6 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
-          title="${PR_TITLE:-}"
-
-          # Require explicit issue reference in body, title, or branch name
-          if ! grep -Eq '(Closes|Fixes|Resolves|Refs|Part of) #[0-9]+|#[0-9]+' <<< "$body $title $HEAD_REF"; then
-            echo "Safety gate failed: PR must reference its governing GitHub Issue (for example: Closes #123, Refs #123, or Part of #123)."
-            exit 1
-          fi
 
           required_sections=(
             "## Phase"
@@ -55,16 +47,16 @@ jobs:
             "## Definition of Done"
           )
 
-          missing=0
           for section in "${required_sections[@]}"; do
             if ! grep -Fq "$section" <<< "$body"; then
-              echo "Safety gate notice: missing PR template section in body: $section"
-              missing=$((missing + 1))
+              echo "Safety gate failed: missing PR section: $section"
+              exit 1
             fi
           done
 
-          if [ "$missing" -gt 0 ]; then
-            echo "PR body missing template headers ($missing missing), but governing issue reference present in metadata."
+          if ! grep -Eq '(Closes|Fixes|Resolves|Refs|Part of) #[0-9]+' <<< "$body"; then
+            echo "Safety gate failed: PR must reference its governing GitHub Issue (for example: Closes #123, Refs #123, or Part of #123)."
+            exit 1
           fi
 
           echo "Phase contract present and reviewable."

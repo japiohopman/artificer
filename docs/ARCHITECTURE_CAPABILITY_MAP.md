@@ -434,15 +434,15 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Dependencies:** `storageService.ts`
 
 #### E4. Monsters Catalog
-- **Current Canonical Module:** `/public/assets/atlas/monsters/`, `src/services/storageService.ts`
+- **Current Canonical Module:** `/public/assets/atlas/rules/24/json/monsters/monsters.json` (and ruleset-scoped paths under `/public/assets/atlas/rules/` and `/public/assets/atlas/enemies/`), `src/services/storageService.ts`
 - **Primary Functions / Hooks / Selectors:** `fetchMonsterData()`, `loadEnemy()`.
-- **Source-of-Truth Data:** Individual monster JSON files (`goblin.json`, `skeleton.json`, `orc.json`, `young_red_dragon.json`, etc.).
+- **Source-of-Truth Data:** Ruleset-scoped monster catalog JSON files (`public/assets/atlas/rules/24/json/monsters/monsters.json`, `public/assets/atlas/enemies/index.json`).
 - **Derived / Presentation Consumers:** `useGameStore.spawnMonster()`, `CombatTester.tsx`, `enemy-image_generator.tsx`.
 - **Current Status:** `Implemented`
-- **Known Architectural Debt:** Monster JSON records are partially converted to 2024 PHB/MM rules format.
+- **Known Architectural Debt:** Monster JSON records are loaded via `fetchMonsterData()` using index lookup (`/assets/atlas/enemies/index.json`) and ruleset resolution.
 - **Related GitHub Issues:** #298, #313
 - **Intended Specialist Agent:** Ruleset & Data Specialist
-- **Dependencies:** `storageService.ts`
+- **Dependencies:** `storageService.ts`, `atlasService.ts`
 
 #### E5. Gods & Lore Catalog
 - **Current Canonical Module:** `/public/assets/atlas/gods/all_gods.json`, `/public/assets/ui/official/`
