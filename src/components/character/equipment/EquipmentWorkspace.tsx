@@ -44,6 +44,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
   const { moveItem, unequipItem } = useInventoryStore();
   const { inspectingItem, setInspectingItem } = useUIStore();
   const [activeDragItem, setActiveDragItem] = useState<any>(null);
+  const [workspaceTab, setWorkspaceTab] = useState<'EQUIPMENT' | 'MATERIALS'>('EQUIPMENT');
   const lastHoverTargetRef = useRef<string | null>(null);
 
   const sensors = useSensors(
@@ -180,6 +181,48 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
       {/* Top 6-Position Avatar-First Character Selector Bar */}
       <CharacterSelectorBar />
 
+      {/* Main Category Navigation Bar */}
+      <div className="shrink-0 bg-stone-950/90 border-b border-dragon-gold/30 px-4 py-1.5 flex items-center justify-between gap-4 z-10 font-body">
+        <div className="flex items-center gap-2">
+          <GameIcon name="package" size={15} color="#D4AF37" />
+          <span className="font-header text-xs text-dragon-gold uppercase tracking-wider font-bold">
+            Workspace Mode: {workspaceTab}
+          </span>
+        </div>
+
+        {/* MainTabs: Root Category Switcher (Equipment vs Materials) */}
+        <div className="flex items-center gap-1 bg-black/60 p-1 rounded-lg border border-dragon-gold/40">
+          <button
+            type="button"
+            onClick={() => {
+              setWorkspaceTab('EQUIPMENT');
+              soundService.playEffect('UI_CLICK_LIGHT');
+            }}
+            className={`px-3 py-1 rounded text-xs font-header font-bold uppercase tracking-wider transition-all border cursor-pointer ${
+              workspaceTab === 'EQUIPMENT'
+                ? 'bg-dragon-darkRed text-white border-dragon-gold shadow-md font-black'
+                : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/10'
+            }`}
+          >
+            Equipment
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setWorkspaceTab('MATERIALS');
+              soundService.playEffect('UI_CLICK_LIGHT');
+            }}
+            className={`px-3 py-1 rounded text-xs font-header font-bold uppercase tracking-wider transition-all border cursor-pointer ${
+              workspaceTab === 'MATERIALS'
+                ? 'bg-dragon-gold text-stone-950 border-white shadow-md font-black'
+                : 'text-parchment-400 border-transparent hover:text-white hover:bg-white/10'
+            }`}
+          >
+            Materials
+          </button>
+        </div>
+      </div>
+
       {/* Main Fullscreen Workspace Surface */}
       <div className="flex-1 flex flex-col lg:flex-row gap-3 p-3 overflow-hidden relative z-0 min-h-0">
         {/* LEFT ANCHOR: Fixed 320px (`w-80 shrink-0`) Inventory Grid Surface */}
@@ -190,6 +233,8 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
               compactEquipped={true}
               showCategoryTabs={!compactMode}
               activeDragItem={activeDragItem}
+              rootCategory={workspaceTab}
+              onRootCategoryChange={setWorkspaceTab}
             />
           </div>
         </div>
