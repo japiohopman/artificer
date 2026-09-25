@@ -9,6 +9,7 @@ Welcome to the central documentation index for the Artificer project. This file 
 - **[House Style Guide](./docs/STYLE_GUIDE.md)** - Visual language and UI/UX guidelines.
 - **[Task Board](./docs/TASK_BOARD.md)** - Current tasks and project status.
 - **[Phase Safety Gate](./docs/PHASE_SAFETY_GATE.md)** - 🛡️ Persistent issue/PR contract and automated safety checks for substantial phases.
+- **[Architecture & Capability Map](./docs/ARCHITECTURE_CAPABILITY_MAP.md)** - 🏛️ **Authoritative domain, capability, gameplay gap, and specialist agent map.**
 - **[Architecture](./docs/modules/atlasService.md)** - Technical overview of the Atlas Service.
 - **[Sound System](./docs/modules/soundService.md)** - Documentation for the audio engine.
 - **[Audio Registry](./docs/systems/AUDIO_REGISTRY.md)** - Index of all sound assets.
