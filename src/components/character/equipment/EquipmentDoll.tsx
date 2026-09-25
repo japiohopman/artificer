@@ -6,7 +6,7 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { isItemCompatibleWithSlot, resolveItemMetadata } from '../../../lib/equipmentCompatibility';
+import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipment } from '../../../lib/equipmentCompatibility';
 import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
@@ -92,6 +92,8 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
   const itemKey = equippedItem ? (equippedItem.template || equippedItem.index || equippedItem.id || equippedItem.name) : undefined;
   const fallbackUrl = equippedItem ? normalizeImageUrl(equippedItem.imageUrl || equippedItem.image, equippedItem._type || 'equipment', equippedItem.index || equippedItem.id, equippedItem.name) : undefined;
 
+  const activeChar = useCharacterStore((state) => state.characters.find(c => c.id === state.activeCharacterId) || state.characters[0]);
+  const isProficient = equippedItem ? isProficientWithEquipment(activeChar, equippedItem) : true;
   const isCompatible = activeDragItem ? isItemCompatibleWithSlot(activeDragItem, slot, equippedItems) : false;
 
   let highlightStyle = "bg-stone-900/80 border-dragon-gold/30 hover:border-dragon-gold/70 hover:bg-stone-900/95 shadow-xs backdrop-blur-xs";
@@ -140,6 +142,11 @@ const EquipmentDollSlot: React.FC<EquipmentDollSlotProps> = ({
           {equippedItem.quantity > 1 && (
             <span className="absolute bottom-0 right-0 bg-dragon-darkRed text-white text-[6px] font-mono font-bold px-1 rounded-tl shadow-xs">
               x{equippedItem.quantity}
+            </span>
+          )}
+          {!isProficient && (
+            <span className="absolute top-0 left-0 bg-red-700 text-white text-[6px] font-black px-1 rounded-br shadow-xs z-20" title="Not Proficient">
+              !
             </span>
           )}
         </div>

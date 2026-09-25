@@ -1,5 +1,12 @@
 import { Character } from "../store/useCharacterStore";
 import { getModifier } from "./npcGeneratorUtils";
+import { resolveItemMetadata, isProficientWithEquipment } from "./equipmentCompatibility";
+
+export interface NonProficientWarning {
+  slotId: string;
+  itemName: string;
+  category: string;
+}
 
 export interface DerivedStats {
   ac: number;
@@ -12,6 +19,69 @@ export interface DerivedStats {
   passivePerception: number;
   weightCapacity: number;
   spellSlots: Record<string, number>;
+  nonProficientEquippedItems: NonProficientWarning[];
+}
+
+export function getEquippedItemWithMetadata(character: Character | undefined, slotId: string): any {
+  if (!character) return null;
+  const isV2 = character.saveVersion === 2;
+  let rawItem: any = null;
+
+  if (isV2) {
+    const itemId = character.equipment?.slots.find(s => s.id === slotId)?.itemId;
+    rawItem = itemId ? character.items?.[itemId] : null;
+  } else {
+    const legacyMap: Record<string, string> = {
+      'chest': 'chest',
+      'off_hand': 'off-hand',
+      'main_hand': 'main-hand'
+    };
+    rawItem = character.inventory?.[legacyMap[slotId] || slotId];
+  }
+
+  if (!rawItem) return null;
+  return resolveItemMetadata(rawItem, character.ruleset);
+}
+
+export function getEquippedWeapons(character: Character | undefined): Array<{ slotId: string; item: any }> {
+  if (!character) return [];
+  const weapons: Array<{ slotId: string; item: any }> = [];
+
+  const weaponSlots = ['main_hand', 'off_hand', 'ranged'];
+  for (const slotId of weaponSlots) {
+    const item = getEquippedItemWithMetadata(character, slotId);
+    if (!item) continue;
+    const kind = (item.kind || item._type || item.type || '').toLowerCase();
+    const cat = (item.equipment_category?.index || item.equipment_category?.name || item.category || '').toLowerCase();
+    const weaponCat = (item.weapon_category || '').toLowerCase();
+    const idx = (item.index || item.template || item.id || item.name || '').toLowerCase();
+
+    const isWeapon = kind === 'weapon' || weaponCat || cat.includes('weapon') ||
+      idx.includes('sword') || idx.includes('dagger') || idx.includes('bow') ||
+      idx.includes('axe') || idx.includes('mace') || idx.includes('spear') || idx.includes('staff');
+
+    if (isWeapon) {
+      weapons.push({ slotId, item });
+    }
+  }
+
+  if (weapons.length === 0 && character.saveVersion !== 2 && character.inventory) {
+    Object.entries(character.inventory).forEach(([slot, item]) => {
+      if (item) {
+        const meta = resolveItemMetadata(item, character.ruleset);
+        if (meta) {
+          const kind = (meta.kind || meta._type || meta.type || '').toLowerCase();
+          const cat = (meta.equipment_category?.index || meta.equipment_category?.name || meta.category || '').toLowerCase();
+          const weaponCat = (meta.weapon_category || '').toLowerCase();
+          if (kind === 'weapon' || weaponCat || cat.includes('weapon')) {
+            weapons.push({ slotId: slot, item: meta });
+          }
+        }
+      }
+    });
+  }
+
+  return weapons;
 }
 
 const safeNum = (val: any) => typeof val === 'number' ? val : (parseInt(String(val)) || 0);
@@ -120,7 +190,10 @@ export function calculateWeaponAttackBonus(character: Character | undefined, wea
     }
   }
 
-  return proficiencyBonus + attackAbilityMod + weaponBonus;
+  const isProficient = weapon ? isProficientWithEquipment(character, weapon) : true;
+  const effectiveProficiency = isProficient ? proficiencyBonus : 0;
+
+  return effectiveProficiency + attackAbilityMod + weaponBonus;
 }
 
 export function getEffectiveStats(character: Character | undefined): Character['stats'] {
@@ -247,7 +320,8 @@ export function calculateDerivedStats(character: Character | undefined): Derived
       spellAttackBonus: 2,
       passivePerception: 10,
       weightCapacity: 150,
-      spellSlots: {}
+      spellSlots: {},
+      nonProficientEquippedItems: []
     };
   }
 
@@ -265,22 +339,8 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   let baseAC = 10 + dexMod;
   let acBonus = 0;
 
-  const isV2 = character.saveVersion === 2;
-  const getEquippedItem = (slotId: string) => {
-    if (isV2) {
-      const itemId = character.equipment?.slots.find(s => s.id === slotId)?.itemId;
-      return itemId ? character.items?.[itemId] : null;
-    }
-    const legacyMap: Record<string, string> = {
-      'chest': 'chest',
-      'off_hand': 'off-hand',
-      'main_hand': 'main-hand'
-    };
-    return character.inventory?.[legacyMap[slotId] || slotId];
-  };
-
-  const armor = getEquippedItem('chest');
-  const shield = getEquippedItem('off_hand');
+  const armor = getEquippedItemWithMetadata(character, 'chest');
+  const shield = getEquippedItemWithMetadata(character, 'off_hand');
 
   const armorData = armor ? (armor.armor_class || armor) : null;
   const isWearingArmor = armorData && typeof armorData.base === 'number' && armorData.base > 0;
@@ -318,6 +378,7 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   }
 
   // Magic Item Bonuses (Search all equipped items for AC bonuses)
+  const isV2 = character.saveVersion === 2;
   let equippedList: any[];
   if (isV2) {
     equippedList = (character.equipment?.slots || []).map(s => s.itemId ? character.items?.[s.itemId] : null).filter(Boolean);
@@ -403,7 +464,7 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   });
 
   // 4. Attack Bonuses
-  const weapon = getEquippedItem('main_hand');
+  const weapon = getEquippedItemWithMetadata(character, 'main_hand');
   const attackBonus = calculateWeaponAttackBonus(character, weapon);
 
   // 5. Spellcasting
@@ -451,6 +512,22 @@ export function calculateDerivedStats(character: Character | undefined): Derived
   const weightCapacity = effectiveStats.str * 15;
   const spellSlots = calculateMaxSpellSlots(character);
 
+  const nonProficientEquippedItems: NonProficientWarning[] = [];
+  const checkSlots = [
+    'main_hand', 'off_hand', 'ranged', 'chest', 'head', 'hands', 'feet', 'back', 'neck', 'ring_1', 'ring_2'
+  ];
+
+  for (const slotId of checkSlots) {
+    const item = getEquippedItemWithMetadata(character, slotId);
+    if (item && !isProficientWithEquipment(character, item)) {
+      nonProficientEquippedItems.push({
+        slotId,
+        itemName: item.name || item.template || item.index || 'Equipped Item',
+        category: item.armor_category || item.weapon_category || item.equipment_category?.name || 'Equipment'
+      });
+    }
+  }
+
   return {
     ac: finalAC,
     initiative,
@@ -461,7 +538,8 @@ export function calculateDerivedStats(character: Character | undefined): Derived
     spellAttackBonus,
     passivePerception,
     weightCapacity,
-    spellSlots
+    spellSlots,
+    nonProficientEquippedItems
   };
 }
 

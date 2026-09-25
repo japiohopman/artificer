@@ -126,6 +126,19 @@ export const CharacterPanelStats: React.FC<CharacterPanelStatsProps> = ({
               <span className="text-[8.5px] font-header font-black text-dragon-darkRed leading-none">DC {derivedStats.spellSaveDC} ({spellAtkText})</span>
             </div>
           )}
+
+          {/* Non-proficient warning badge if any equipped item lacks proficiency */}
+          {derivedStats.nonProficientEquippedItems && derivedStats.nonProficientEquippedItems.length > 0 && (
+            <div
+              className="bg-red-950/80 border border-red-500/80 text-red-200 rounded px-1.5 py-0.5 shadow-2xs flex items-center gap-1 w-full justify-between"
+              title={`Not proficient with equipped: ${derivedStats.nonProficientEquippedItems.map(i => i.itemName).join(', ')}`}
+            >
+              <GameIcon name="warning" size={10} color="#EF4444" className="shrink-0" />
+              <span className="text-[7.5px] font-header font-black leading-none uppercase text-red-300">
+                Not Proficient ({derivedStats.nonProficientEquippedItems.length})
+              </span>
+            </div>
+          )}
         </div>
       </div>
 

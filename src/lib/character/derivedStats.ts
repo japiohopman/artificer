@@ -6,7 +6,9 @@ export {
   getXpProgress,
   getLevelFromXP,
   getXPForLevel,
+  getEquippedItemWithMetadata,
+  getEquippedWeapons,
   XP_TABLE
 } from '../statCalculations';
 
-export type { DerivedStats } from '../statCalculations';
+export type { DerivedStats, NonProficientWarning } from '../statCalculations';
