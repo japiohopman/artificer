@@ -1,71 +1,92 @@
 # 🛑 Agent Ground Rules
 
-> Read this alongside [AGENT.MD](./AGENT.MD) and [GOALS.md](./GOALS.md). GOALS.md is the destination.
-> This document is about *how* we're allowed to drive there.
+> Read this alongside [AGENT.MD](./AGENT.MD). The assigned GitHub Issue is the persistent execution contract.
 
-These rules exist because they were violated in practice: an unresolved parse error sat in
-`errors.md` while TASK_BOARD.md still listed "fix errors" as an unchecked Critical item, and a
-vendored third-party codebase (`dnd5e-6.0.x`, plus a duplicated `tactical-grid-main` folder) was
-committed straight into git instead of being kept as reference material outside version control.
-Both are symptoms of the same root cause: no verification step between "I made a change" and
-"this is marked done." These rules close that gap.
+These rules define how work is performed in Artificer. They are deliberately separate from task selection so that repository-wide rules cannot recreate an alternate execution queue.
 
-## 1. Don't mark it `[x]` until you've watched it work
-A checkbox on TASK_BOARD.md is a claim that you personally ran the app and observed the
-behavior — not that you wrote code you believe should produce it.
-- Run `npm run dev` and load the affected screen before checking a box.
-- If you can't run it (no browser access, etc.), leave it unchecked and say so explicitly in
-  your summary. An honest unchecked box is more useful than a false checked one.
-- If you inherit a `[x]` item and find it doesn't actually work, uncheck it and note why.
+## 1. Work from the Issue contract
 
-## 2. No new system before Critical/High is clear
-Don't start work from GOALS.md sections that aren't part of the *current* milestone (ask if
-unsure — the current milestone is tracked in `docs/PROGRESS.md` under "Current Focus") while
-TASK_BOARD.md still has open items marked **Critical** or **High**. GOALS.md describes the final
-destination, not this week's task list. If you think a GOALS.md item should jump the queue, say
-so in your summary instead of just building it.
+The assigned GitHub Issue defines:
 
-## 3. Stay in your lane, log when you leave it
-Each named agent owns a domain (see AGENT.MD / PROJECT_HUB.md). If a fix requires touching a
-file outside your domain:
-- Say so explicitly in your summary ("this required editing `Token.tsx`, which is Jimmy's area").
-- Don't silently refactor or restructure another agent's module in passing.
-- Two agents editing the same file in the same session is the #1 cause of the kind of
-  duplicate-branch/syntax bugs we've already hit — avoid it, or flag it loudly if unavoidable.
+- the goal and scope;
+- acceptance criteria;
+- safety and architecture constraints;
+- verification requirements;
+- canonical references;
+- handoff expectations.
 
-## 4. Every change updates the docs it affects — accurately
-`docs/CHANGELOG.md` and `docs/TASK_BOARD.md` should describe what's actually true after your
-change, not what was intended. Aspirational documentation is worse than no documentation,
-because it's trusted.
+Do not invent missing scope from `ROADMAP.md`, `GOALS.md`, `docs/TASK_BOARD.md`, old named-agent instructions, or unrelated documentation.
 
-## 5. Repo hygiene — binaries and vendored code
-- Never commit reference material (forked/vendored third-party repos, downloaded systems,
-  example codebases) into the main tree. If you need to study another project's code, keep it
-  outside the repo or in a clearly-named `/reference` folder that's in `.gitignore`.
-- No new binary asset over 1MB goes into git without flagging it in your summary first
-  (images, audio, PDFs, map tiles). These belong in `public/assets` only if the project's asset
-  pipeline expects them there — check `docs/ASSET_REGISTRY.md` first.
-- If you find existing bloat while working nearby, flag it — don't silently leave it, but also
-  don't do a large unrelated cleanup in the middle of an unrelated task.
+## 2. Protect canonical ownership
 
-## 6. Verify before you build on top
-Before extending a system (inventory, combat, world state, etc.), re-read the relevant file(s)
-directly — don't rely on what a doc says the system does. Docs drift from code; the code is
-the source of truth GOALS.md itself insists on (§2, "Data Integrity").
+Before extending a domain:
 
-## 7. When you hit an error, it goes in `errors.md` with a resolution — not just a stack trace
-If you encounter and fix a build/runtime error, replace the raw log in `errors.md` with a short
-note: what broke, why, what fixed it. If you can't fix it, leave the log but add one line
-describing what you tried.
+- identify its canonical state owner;
+- identify the mutation/transaction boundary;
+- identify derived calculation or selector boundaries;
+- identify persistence and compatibility constraints;
+- identify presentation consumers.
 
-## 8. Substantial phases require a persistent execution contract
-For multi-step, architectural, ruleset-sensitive, or canonical-data work, use the Phase Issue
-workflow described in `docs/PHASE_SAFETY_GATE.md`.
-- The Phase Issue defines goal, scope, subtasks, acceptance criteria, safety constraints,
-  out-of-scope boundaries, verification, and canonical references.
-- The PR must reference the Phase Issue and provide the review evidence requested by the PR template.
-- Do not treat a green CI run, a Jules "done" message, or a merged PR as a substitute for human review.
-- Keep the Issue, PR, and roadmap state aligned with what is actually true.
+Do not create a parallel store, duplicate domain model, or hidden compatibility layer merely because an existing module is inconvenient.
+
+## 3. Respect specialist boundaries
+
+The repository specialist contracts under `.github/agents/` define domain boundaries.
+
+If work crosses a specialist boundary:
+
+- state that explicitly in the implementation summary;
+- keep the change within the assigned Issue;
+- hand off adjacent concerns rather than silently absorbing them into the current task.
+
+Specialists are constraints and routing contracts, not parallel project managers.
+
+## 4. Verify before claiming completion
+
+A green build, a passing unit test, or a Jules completion message is not by itself proof that the requested behavior is complete.
+
+Use the verification specified by the Issue and the applicable repository gates. When runtime verification is required but unavailable, report that limitation explicitly.
+
+## 5. Keep documentation factual
+
+Documentation must describe the current repository, not an imagined future state.
+
+When a change establishes or changes an architectural/workflow contract:
+
+- update the affected canonical documentation;
+- distinguish implemented, partial, placeholder, and missing behavior;
+- avoid presenting a design proposal as an existing capability.
+
+## 6. Repository hygiene
+
+- Never commit vendored/reference repositories or downloaded third-party code as implementation.
+- Do not add binary assets over 1MB without explicitly flagging the change and checking the asset registry/pipeline.
+- Keep generated files synchronized with the repository's documented generation process.
+- Do not perform unrelated cleanup during an Issue unless it is required to preserve the architectural contract.
+
+## 7. Handle errors with evidence
+
+When a build or runtime error is encountered:
+
+- record the failure and its cause in the appropriate error record when required by the project;
+- verify the fix;
+- include the relevant command/result in the PR or handoff evidence.
+
+Do not replace evidence with an unchecked claim that the problem is resolved.
+
+## 8. Use the Phase Safety Gate for substantial work
+
+Architectural, ruleset-sensitive, canonical-data, and other substantial phases must use the persistent Phase Issue/PR contract described in `docs/PHASE_SAFETY_GATE.md`.
+
+The PR must:
+
+- reference the governing Issue;
+- include the required phase sections;
+- provide verification evidence;
+- preserve human review before phase completion.
+
+A merged PR or successful Jules run does not replace human review.
 
 ---
-*These rules are enforced by review and now partially enforced by the Phase Safety Gate CI workflow.*
+
+*These rules are enforced by review and by the repository's automated workflow gates.*
