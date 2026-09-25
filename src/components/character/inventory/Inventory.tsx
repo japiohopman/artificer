@@ -45,6 +45,14 @@ export const Inventory: React.FC<InventoryProps> = ({
   const rootCategory = controlledRoot ?? internalRootCategory;
   const activeSubcategory = controlledSub ?? internalSubcategory;
 
+  // Reset selected subcategory to 'ALL' whenever rootCategory transitions
+  React.useEffect(() => {
+    setInternalSubcategory('ALL');
+    if (onSubcategoryChange) {
+      onSubcategoryChange('ALL');
+    }
+  }, [rootCategory]);
+
   const handleRootChange = (root: RootTaxonomy) => {
     if (onRootCategoryChange) {
       onRootCategoryChange(root);

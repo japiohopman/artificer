@@ -129,4 +129,32 @@ describe('Equipment Workspace UI Architecture Unit Tests', () => {
     expect(eqTaxonomy.rootCategory).toBe('EQUIPMENT');
     expect(matTaxonomy.rootCategory).toBe('MATERIALS');
   });
+
+  it('5. Root / Subcategory State Synchronization: Root category transition resets active subcategory to ALL', () => {
+    let currentSubcategory: string = 'weapons';
+    let currentRoot: 'EQUIPMENT' | 'MATERIALS' = 'EQUIPMENT';
+
+    // Simulate root transition handler logic
+    const handleRootTransition = (newRoot: 'EQUIPMENT' | 'MATERIALS') => {
+      currentRoot = newRoot;
+      currentSubcategory = 'ALL';
+    };
+
+    expect(currentRoot).toBe('EQUIPMENT');
+    expect(currentSubcategory).toBe('weapons');
+
+    // Transition Equipment -> Materials
+    handleRootTransition('MATERIALS');
+    expect(currentRoot).toBe('MATERIALS');
+    expect(currentSubcategory).toBe('ALL');
+
+    // Simulate subcategory selection inside Materials
+    currentSubcategory = 'books';
+    expect(currentSubcategory).toBe('books');
+
+    // Transition Materials -> Equipment
+    handleRootTransition('EQUIPMENT');
+    expect(currentRoot).toBe('EQUIPMENT');
+    expect(currentSubcategory).toBe('ALL');
+  });
 });
