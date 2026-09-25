@@ -115,7 +115,7 @@ export const CharacterSelectorBar: React.FC = () => {
                   {index + 1}
                 </span>
               </div>
-              <span className="text-[8px] font-mono uppercase tracking-widest text-parchment-500/40 hidden sm:inline">
+              <span className="text-[8px] font-mono uppercase tracking-widest text-parchment-500/40 hidden sm:inline" data-testid="reserved-party-slot">
                 Reserved
               </span>
             </div>
