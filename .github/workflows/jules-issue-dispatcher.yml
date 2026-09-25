@@ -59,9 +59,11 @@ jobs:
         if: steps.preflight.outputs.dispatch != 'true'
         run: |
           echo "::notice::Issue-first dispatch is blocked by preflight."
+        env:
+          BLOCKING_SESSIONS: ${{ steps.preflight.outputs.blocking_sessions }}
           echo "Decision: ${{ steps.preflight.outputs.decision }}"
-          echo "Blocking sessions: ${{ steps.preflight.outputs.blocking_sessions }}"
-          if [ "${{ inputs.confirmation }}" = "DISPATCH" ]; then
+          echo "Blocking sessions:"
+          printf "%s\n" "$BLOCKING_SESSIONS"
             echo "::error::DISPATCH was explicitly requested, but preflight did not authorize session creation."
             exit 1
           fi
