@@ -18,7 +18,8 @@
     "generate:enemy-index": "node tools/generateEnemyIndex.cjs",
     "normalize:assets": "node tools/normalizeAllAssets.cjs",
     "check:assets": "npm run generate:icon-registry && npm run normalize:assets && npm run validate:assets",
-    "test": "npm run lint && npm run check:assets && npx playwright test tests/"
+    "test": "npm run lint && npm run check:assets && npx playwright test tests/",
+    "test:workflow": "node --test scripts/jules-orchestrator-preflight.test.mjs"
   },
   "dependencies": {
     "@3d-dice/dice-box": "^1.1.4",
