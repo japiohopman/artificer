@@ -141,7 +141,7 @@ export function buildJulesPrompt(issue, sharedContext, specialistContext, canoni
   return [
     '# GitHub Issue #' + issue.number + ': ' + issue.title,
     '',
-    'The GitHub Issue is the execution contract.',
+    'Contract precedence: GitHub Issue > selected specialist contract > shared agent instructions > canonical reference context.',
     '',
     '## Issue contract',
     issue.body || '',
@@ -158,7 +158,7 @@ export function buildJulesPrompt(issue, sharedContext, specialistContext, canoni
     '## Execution constraints',
     '- Work only on the branch created for this Issue.',
     '- Do not create a parallel task database.',
-    '- Do not reconstruct execution scope from other task lists.',
+    '- Do not reconstruct execution scope from ROADMAP.md or docs/TASK_BOARD.md, even if shared context still contains legacy queue wording.',
     '- Run the verification required by the Issue before claiming completion.',
     '- Create a PR that references this Issue and includes verification evidence.'
   ].join('\n');
