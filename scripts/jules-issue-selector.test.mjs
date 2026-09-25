@@ -138,7 +138,7 @@ test('all specialist contracts are repository-local and present', () => {
     assert.equal(path, '.github/agents/' + name + '-specialist.agent.md');
     const source = readFileSync(new URL('../' + path, import.meta.url), 'utf8');
     assert.match(source, /The GitHub Issue is the execution contract/);
-    assert.match(source, /ROADMAP\.md and docs\/TASK_BOARD\.md/);
+    assert.match(source, /ROADMAP\.md[\\s\\S]*docs\/TASK_BOARD\.md/);
   }
 });
 
