@@ -142,6 +142,10 @@ function removeTaskFromActive(roadmapText, taskText) {
 }
 
 async function main() {
+  console.log("Legacy ROADMAP → Jules dispatch is disabled during Issue #306 migration.");
+  console.log("No ROADMAP mutation, queue-state mutation, or Jules API call will be performed.");
+  return;
+
   const state = loadState();
   let roadmapText = readFileSync(ROADMAP_PATH, 'utf8');
   let roadmapChanged = false;
