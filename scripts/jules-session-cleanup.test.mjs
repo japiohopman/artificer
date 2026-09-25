@@ -67,7 +67,7 @@ test('cleanup target accepts a paused session without a PR', () => {
       state: 'PAUSED',
       sourceContext: { source: 'sources/github-japiohopman-artificer' },
     },
-    source: 'sources/github-japiohopman/artificer',
+    source: 'sources/github-japiohopman-artificer',
     pullRequest: null,
   });
 
