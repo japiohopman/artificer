@@ -100,6 +100,33 @@ export async function reconcileRepositoryActiveSessions(
   return blockingSessions;
 }
 
+export async function fetchAllJulesSessions(fetchPage) {
+  const sessions = [];
+  const seenPageTokens = new Set();
+  let pageToken = null;
+
+  while (true) {
+    const path = pageToken
+      ? `sessions?pageSize=100&pageToken=${encodeURIComponent(pageToken)}`
+      : 'sessions?pageSize=100';
+
+    const response = await fetchPage(path);
+    sessions.push(...(response?.sessions || []));
+
+    const nextPageToken = response?.nextPageToken;
+    if (!nextPageToken) {
+      return sessions;
+    }
+
+    if (seenPageTokens.has(nextPageToken)) {
+      throw new Error(`Jules session pagination returned a repeated page token: ${nextPageToken}`);
+    }
+
+    seenPageTokens.add(nextPageToken);
+    pageToken = nextPageToken;
+  }
+}
+
 export function evaluatePreflight({
   recordedSession,
   actualRecordedSession,
@@ -311,8 +338,8 @@ async function main() {
     );
   }
 
-  const sessionsResponse = await julesFetch('sessions?pageSize=100');
-  const repositorySessions = (sessionsResponse?.sessions || []).filter(session =>
+  const sessions = await fetchAllJulesSessions(julesFetch);
+  const repositorySessions = sessions.filter(session =>
     isSameRepository(session)
     && session?.name !== recorded?.name,
   );
