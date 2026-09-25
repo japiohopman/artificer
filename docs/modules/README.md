@@ -34,7 +34,7 @@ Use `docs/systems/` when the subject describes a cross-cutting architectural sys
 
 Use `docs/FUTURE_MODULES.md` for future modules and broader design direction.
 
-Use `docs/TASK_BOARD.md` for actionable work, not module documentation checklists.
+Use GitHub Issues for actionable work, not module documentation checklists.
 
 ## Current modules
 
@@ -73,5 +73,5 @@ Candidates must be confirmed against the current source tree before adding a doc
 - `docs/systems/` — cross-cutting systems
 - `docs/COMPONENT_MAP.md` — source/component map
 - `docs/FUTURE_MODULES.md` — future architecture
-- `docs/TASK_BOARD.md` — active work
+- GitHub Issues — active execution contracts
 - `docs/PROGRESS.md` — project status

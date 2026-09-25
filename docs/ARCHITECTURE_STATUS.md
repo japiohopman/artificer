@@ -101,5 +101,5 @@ Walls are represented as geometry between cells, not as ordinary blocked cells. 
 4. Do not duplicate CombatGrid rules inside the editor.
 5. Treat placeholder UI as incomplete functionality.
 6. Update the relevant module documentation when a design decision changes.
-7. Keep `docs/TASK_BOARD.md` focused on actual outstanding work.
+7. Focus implementation work strictly on assigned GitHub Issues.
 8. Use `docs/PROGRESS.md` for project-level status, not speculative task lists.

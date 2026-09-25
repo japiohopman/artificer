@@ -1,81 +1,43 @@
-# 🗺️ Roadmap
+# 🗺️ Strategic Roadmap
 
-[GOALS.md](./GOALS.md) is the destination — it doesn't change often. [TASK_BOARD.md](./docs/TASK_BOARD.md) is the granular checklist. This file is the **single canonical dispatch roadmap** for Jules: it says what we are actually finishing now.
+[`GOALS.md`](./GOALS.md) defines long-term product direction. This document outlines current strategic priorities and feature ordering context.
 
-## Now
-
-### Active
-
-### Ready
-
-- [x] **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation — Phase 2**
-  - **Status:** Complete. All core 2024 domains (Species Foundation, Base Classes, 1–20 Progressions & Features, 48 Subclasses, 16 Origin Backgrounds, 75 Feats, 323 Spells, Equipment, Subraces) fully ingested and audited with strict 2014 vs 2024 ruleset resolution isolation and comprehensive test coverage.
-  - **Goal:** Establish real 2014/2024 Atlas data boundaries and make Character Creator resolution genuinely ruleset-aware.
-  - **Implementation order:** 2024 Species Foundation (complete) → 2024 Base Class Foundation (12/12 core classes complete) → 2024 Class Progressions & Features (12/12 core classes complete) → 2024 Subclasses & Subclass Features (48/48 subclasses complete across 12 core classes) → 2024 Backgrounds/Origins (complete) → Feats integration (complete) → Spells (complete) → remaining rules-sensitive domains (complete) → ruleset integration tests (complete).
-  - **Canonical references:** Foundry dnd5e `6.0.x` `packs/_source/classes24/` and `packs/_source/origins24/species/` are reference sources only; do not blindly copy the repository.
-  - **Acceptance:** selecting 2014 and 2024 resolves distinct versioned data where rules differ; shared data remains shared; Character Creator and downstream consumers use the canonical ruleset context; no component hardcodes `/14/` or `/24/` paths; no fake/generic placeholder feature definitions exist.
-  - **Out of scope:** blind bulk ingestion, redesigning all D&D rules, or introducing a second ruleset state/store.
-  - **Docs:** `docs/audits/ruleset-2024-gap-analysis.md` is the current audit; update it as implementation closes gaps.
-
-- [ ] **Inventory & Equipment Architecture / UX Overhaul**
-  - **Goal:** consolidate existing inventory/equipment implementations without creating another inventory data model.
-  - **Architecture:** `character/inventory/` owns character inventory domain UI; `character/equipment/` owns equipment presentation; `FullInventoryMenu` remains the full workspace; `CharacterPanel` remains compact HUD presentation.
-  - **Acceptance:** usable scrolling/filtering/inspection, equip/unequip, intended drag/drop, party/shared inventory, reusable EquipmentDoll, canonical Inventory V2 state, no duplicate inventory system.
-
-- [ ] **Canonical Character Profile & CharacterScreen Refactor**
-  - **Goal:** one reusable character profile/presentation layer for TitleScreen, HUD and character-facing screens.
-  - **Requirements:** narrative fields such as Traits/Ideals/Bonds/Flaws become first-class character data; keep `CharacterPanel` as a HUD surface and avoid another God Component.
-
-### Blocked
-
-### Human Review
-- [ ] Character creation: point-buy stat system — exact product/rules decision still required.
-- [ ] Character creation: advanced spellbook filters — small design decision still required.
-
-## Completed / Confirmed Foundations
-
-- [x] **Character Creator — Species Character Mirror & Choice State v1** — merged. Shared Character Panel primitives established; persistent body/background presentation, Stats/Traits/Bio/Equipment structure and explicit choice-state work completed. The mirror is now the preferred naming/presentation model for the character panel.
-- [x] **Character Creator — Selection Experience v1** — merged.
-- [x] **Character Creator — Species Visual Integration v1** — merged.
-- [x] **Canonical SVG Icon System Migration** — `public/assets/icons/svg/` + `GameIcon`; legacy `src/assets/icons/` and third-party icon libraries removed.
-- [x] **Ruleset Selection & Ruleset Context — D&D 2014 / 2024 Foundation** — canonical `useGameStore.ruleset` context and resolver established.
-- [x] **Ruleset Downstream Integration v1** — Feats, Class Levels and Spells migrated to canonical ruleset resolution.
-- [x] **Ruleset Data Audit & 2024 Gap Analysis** — confirmed that several current Character Creator domains still resolve unversioned classic data; documented in `docs/audits/ruleset-2024-gap-analysis.md`.
-- [x] **Inventory & Equipment Architecture / UX Overhaul foundation** — merged and documented.
-- [x] **Combat Integration v1** — BattleMap → CombatTester → CombatGrid.
-- [x] XP animation, shared party XP, location discovery, fog-of-war foundation and right-hand character panel foundations.
-
-## Next — deliberately small follow-ups
-
-- [ ] Character Creator profile requirements: canonical profile fields and validation model, including Traits/Ideals/Bonds/Flaws, before appearance/image-generation work.
-- [ ] Point Buy Calculator.
-- [ ] Advanced Spellbook Manager.
-- [ ] ASI & Feat Selection.
-- [ ] Automated HP Level Up.
-- [ ] Per-attribute 3D Dice.
-- [ ] Equipment Pack inspection in `FocusView`.
-- [ ] AI DM tool-call integration — start with 2–3 tools only.
-- [ ] NPC Memory / relationship history module.
-
-## Later — parked until Now is clear
-
-- [ ] Atlas sprite-sheet packing and loading optimizations.
-- [ ] IndexedDB/LocalStorage Atlas caching.
-- [ ] Economic simulation & regional pricing.
-- [ ] Faction & reputation.
-- [ ] Soundscape orchestration.
-- [ ] Physical lighting sync.
-- [ ] Vector-based session memory.
-- [ ] Fully autonomous adventure generation.
-
-## Roadmap Rules
-
-1. Jules only receives work from `### Ready`.
-2. `### Active` contains at most one dispatched task in v1.
-3. `### Blocked` and `### Human Review` are never auto-dispatched.
-4. A task becomes `[x]` only after human review, testing and architecture/documentation checks.
-5. Large architectural work must define scope, acceptance criteria and out-of-scope boundaries.
-6. `ROADMAP.md` is the single canonical **dispatch/current-priority** roadmap. `docs/TASK_BOARD.md` is the detailed execution checklist. Do not create another roadmap snapshot.
+Active execution contracts live strictly in **GitHub Issues**. Refer to [`docs/WORKFLOW.md`](./docs/WORKFLOW.md) for the authoritative operating model.
 
 ---
-*Canonical current-priority roadmap for Artificer and the Jules orchestrator.*
+
+## Strategic Priorities
+
+### Current Focus Areas
+
+1. **Inventory & Equipment UX & Interaction Polish**
+   - High-fidelity drag-and-drop interactions, slot feedback, and sound integration.
+   - Grounded in canonical `character/inventory/` and `character/equipment/` boundaries.
+
+2. **Canonical Character Profile & CharacterScreen Refactor**
+   - Single reusable character profile and presentation layer across TitleScreen, HUD, and character-facing views.
+   - Elevating Traits, Ideals, Bonds, and Flaws to first-class character data.
+
+3. **Gameplay & AI DM Systems**
+   - AI DM tool-call integrations and structured narrative character context.
+   - Recruitable NPC passport reuse and combat loop verification.
+
+---
+
+## Completed Strategic Foundations
+
+- **2024 Atlas Data Ingestion & Ruleset Isolation:** Full ingestion and audit of 2024 PHB species, classes, 1–20 progressions, subclasses, origin backgrounds, feats, spells, and subraces.
+- **Character Creator Choice & Mirror System:** Explicit selection states, required-selection gates, persistent body/background presentation, and Character Mirror primitives.
+- **Canonical SVG Icon Architecture:** Standardized `GameIcon` component backed by build-time asset generation in `public/assets/icons/svg/`.
+- **Combat Integration v1:** Unified battle map loading, tactical combat grid, and combat tester pipeline.
+
+---
+
+## Strategic Roadmap Rules
+
+1. `ROADMAP.md` provides sequence, context, and priority orientation; it is **not** an execution queue or dispatch source.
+2. Every actionable work item must be represented by a **GitHub Issue**.
+3. Implementation details, acceptance criteria, and specialist routing belong in assigned GitHub Issues and `.github/agents/`.
+
+---
+*Strategic priority map for Artificer.*

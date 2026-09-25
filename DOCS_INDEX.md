@@ -24,13 +24,14 @@ The active workflow is:
 **PR + CI + Phase Safety Gate**
 → evidence and human review
 
-`docs/*`
-→ architecture/status/reference documentation
+`docs/WORKFLOW.md`
+→ authoritative operating model
 
-`docs/TASK_BOARD.md` is retained as a migration/reference document and is **not** an active execution queue.
+`docs/TASK_BOARD.md` is retained as a historical migration/reference document and is **not** an active execution queue.
 
 ## 🗺️ Navigation
 
+- **[Operating Model & Workflow](./docs/WORKFLOW.md)** - 🛠️ **Authoritative workflow, role contracts, and repository autonomy guide.**
 - **[Master Project Goals](./GOALS.md)** - 🎯 Long-term project direction.
 - **[Project Hub](./docs/PROJECT_HUB.md)** - Main documentation navigation and system index.
 - **[Phase Safety Gate](./docs/PHASE_SAFETY_GATE.md)** - 🛡️ Persistent issue/PR contract and automated safety checks.

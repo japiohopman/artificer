@@ -1,6 +1,6 @@
 # 📈 Artificer Project Progress
 
-This document tracks high-level implementation status. It should reflect the repository as it exists now; detailed feature plans belong in `docs/TASK_BOARD.md` or module specifications.
+This document tracks high-level implementation status. It should reflect the repository as it exists now; detailed task contracts belong in assigned GitHub Issues or module specifications.
 
 ## 📊 Current Status: Phase 2 → Phase 3 transition
 

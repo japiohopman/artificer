@@ -7,7 +7,7 @@ It is intentionally different from `docs/COMPONENT_MAP.md` and the system docume
 - `COMPONENT_MAP.md` describes what exists in the codebase.
 - `docs/systems/*` describes current system architecture and contracts.
 - This document describes future work and design direction.
-- `docs/TASK_BOARD.md` contains actionable work that is currently scheduled/open.
+- GitHub Issues contain actionable work that is currently scheduled/open.
 
 > **Status rule:** A design in this file is not an implementation claim.
 
@@ -223,7 +223,7 @@ When a new subsystem is proposed:
 7. Do not call a placeholder an implementation.
 8. Move large modules into their own directories before they become God Components.
 9. Update the relevant architecture documentation when the design changes.
-10. Only put actionable work into `TASK_BOARD.md`.
+10. Create GitHub Issues for actionable work rather than appending task lists to documents.
 
 ---
 
