@@ -121,7 +121,7 @@ test('prompt makes Issue precedence explicit', () => {
     []
   );
   assert.match(prompt, /GitHub Issue > selected specialist contract > shared agent instructions/);
-  assert.match(prompt, /ROADMAP\.md or docs\\/TASK_BOARD\.md/);
+  assert.match(prompt, /ROADMAP\.md or docs\/TASK_BOARD\.md/);
 });
 
 test('all specialist contracts are repository-local and present', () => {
