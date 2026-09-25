@@ -37,6 +37,9 @@ jobs:
         # index/filename consistency, and asset path existence.
         run: npm run validate:assets
 
+      - name: Verify workflow preflight
+        run: npm run test:workflow
+
       - name: Build
         # The real end-to-end check: if this fails, the app doesn't ship.
         run: npm run build
