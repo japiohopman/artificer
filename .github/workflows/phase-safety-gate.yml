@@ -35,10 +35,6 @@ jobs:
           fi
 
           body="${PR_BODY:-}"
-          if grep -Fq "[skip phase-contract]" <<< "$body" || grep -Fq "PR created automatically by Jules" <<< "$body"; then
-            echo "Automated agent PR or skip flag detected. Phase contract validation passed."
-            exit 0
-          fi
 
           required_sections=(
             "## Phase"
@@ -58,8 +54,8 @@ jobs:
             fi
           done
 
-          if ! grep -Eq 'Closes #[0-9]+' <<< "$body"; then
-            echo "Safety gate failed: PR must reference its phase Issue with 'Closes #123'."
+          if ! grep -Eq '(Closes|Fixes|Resolves|Refs|Part of) #[0-9]+' <<< "$body"; then
+            echo "Safety gate failed: PR must reference its governing GitHub Issue (for example: Closes #123, Refs #123, or Part of #123)."
             exit 1
           fi
 
