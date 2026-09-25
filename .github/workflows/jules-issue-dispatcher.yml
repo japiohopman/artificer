@@ -60,6 +60,11 @@ jobs:
         run: |
           echo "::notice::Issue-first dispatch is blocked by preflight."
           echo "Decision: ${{ steps.preflight.outputs.decision }}"
+          echo "Blocking sessions: ${{ steps.preflight.outputs.blocking_sessions }}"
+          if [ "${{ inputs.confirmation }}" = "DISPATCH" ]; then
+            echo "::error::DISPATCH was explicitly requested, but preflight did not authorize session creation."
+            exit 1
+          fi
 
       - name: Build Issue-first selector payload
         id: selector
@@ -81,6 +86,11 @@ jobs:
           echo "dispatchable=$dispatchable" >> "$GITHUB_OUTPUT"
           if [ "$dispatchable" != "true" ]; then
             echo "::notice::No dispatchable Issue is available."
+            cat "$SELECTOR"
+            if [ "${{ inputs.confirmation }}" = "DISPATCH" ]; then
+              echo "::error::DISPATCH was explicitly requested, but the Issue selector found no dispatchable Issue."
+              exit 1
+            fi
           fi
 
       - name: Live Jules session dispatch
