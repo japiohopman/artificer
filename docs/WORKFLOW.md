@@ -59,10 +59,28 @@ GOALS.md (Long-term vision)
    - Substantial architectural or domain changes submit a Pull Request governed by `docs/PHASE_SAFETY_GATE.md`.
    - The PR includes implementation summaries, testing/verification evidence, and references the governing GitHub Issue.
 
-4. **Human Review & Merge**
+4. **Human Review & Revision Loop**
    - CI runs automated test suites (`npm test`, `npm run test:workflow`).
-   - The Human Project Owner reviews the PR and verification evidence.
-   - Upon approval, the PR is merged into `main`, closing the GitHub Issue and clearing the dispatch lock.
+   - The Human Project Owner (supported by the Architecture & Review AI Assistant) reviews the PR and verification evidence.
+   - If findings or required fixes are identified during review, findings are recorded in the PR review/conversation.
+   - Jules continues work on the existing task using the same implementation branch and PR where possible.
+   - New commits pushed to the branch automatically rerun CI and Phase Safety Gate checks.
+   - The PR is re-reviewed until implementation and verification evidence satisfy requirements.
+   - Upon final approval, only the Human Project Owner merges the PR into `main`, closing the GitHub Issue and clearing the dispatch lock.
+
+### 3.1. Dispatch Boundary & Review Context
+
+To preserve execution safety and prevent duplicate session dispatches:
+
+- **Single Execution Context**: Do not start a new Jules dispatch merely because a review identifies required fixes for an open PR. The active Jules task, implementation branch, and open PR remain the active execution context while the PR is open.
+- **New Dispatch Trigger**: A new Issue dispatch is appropriate only after the current task/PR is complete (merged or closed), or when newly requested work materially expands beyond the original Issue contract.
+
+### 3.2. Scope Protection & Creep Prevention
+
+Review feedback must remain grounded in the original execution contract:
+
+- **Scope Boundary**: If review feedback or architectural discussion identifies changes that materially expand beyond the assigned Issue contract, stop expanding the active task.
+- **Decomposition**: Record adjacent or material expansion items as separate, dedicated GitHub Issues rather than allowing PR review iterations to become unbounded scope creep.
 
 ---
 
