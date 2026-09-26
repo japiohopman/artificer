@@ -163,7 +163,7 @@ export const Inventory: React.FC<InventoryProps> = ({
         <div className="flex items-center gap-1.5">
           <GameIcon name="package" size={14} color="#D4AF37" />
           <h3 className="text-[10px] font-header font-bold text-dragon-gold uppercase tracking-wider">
-            Available Gear
+            Backpack Storage
           </h3>
         </div>
         <span className="text-[8px] text-parchment-400 font-mono font-bold">

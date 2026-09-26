@@ -109,6 +109,12 @@ Canonical sheet identifiers:
 - **Equipped Contextual Slot:** When a ranged weapon requiring ammo (shortbow, longbow, crossbow, blowgun) is equipped in `main_hand`, `EquipmentDoll` dynamically exposes the `ammo` slot.
 - **Rendering:** Uses the unified 9:16 item visual frame in both inventory and the `ammo` slot.
 
+### 4.5 Player-Facing Inventory Taxonomy Resolver
+- **Source Filesystem Decoupling:** Physical Atlas directory structure under `public/assets/atlas/equipment/14` and `/24` remains source organization.
+- **UI Taxonomy Hierarchy:** The `resolveItemTaxonomy()` utility maps items into two root categories (`EQUIPMENT` vs `MATERIALS`) and player-facing subcategories:
+  - **EQUIPMENT:** `weapons`, `armor`, `shields`, `ammunition`, `tools`, `accessories` (Rings, Belts, Neck, Head, Boots, Bracers, Cloaks), `containers`, `adventuring_gear`, `spellcasting_gear`, `consumables`.
+  - **MATERIALS:** `crafting_materials`, `components`, `keys`, `quest_items`, `books`, `valuables`.
+
 ---
 
 ## 5. Asset Tiering & Sheet Family Strategy
@@ -124,7 +130,19 @@ All tiers share the single unified renderer pipeline (`EquipmentSprite` + 9:16 v
 
 ---
 
-## 6. Manifest Index & Master List
+## 6. Full-Screen Workspace & SVG Paper Doll Surface
+
+### 6.1 DevKit Application Surface
+- **Full-Screen Workspace Surface:** The Gear & Equipment Workspace operates as a full-viewport application surface (`fixed inset-0 z-[9999]`), avoiding backdrop/modal framing.
+- **Top 6-Position Character Selector Bar:** Hosts 1 main active character slot and 5 reserved party slots (`data-testid="reserved-party-slot"`). Clicking a character slot switches the active character in canonical `useCharacterStore` state without duplicate local inventory state.
+
+### 6.2 SVG Character Paper Doll Visual Anchor
+- **SVG Body Anchor:** `EquipmentDoll` uses `GenderBodySvg` as a central visual silhouette anchor (`Male` / `Female` body, species ears/tail, height/weight scaling) behind equipment slots.
+- **Equipped Placement:** Equipment slot frames sit around and over the SVG body silhouette while strictly driving canonical V2 `character.equipment` and `character.items` state.
+
+---
+
+## 7. Manifest Index & Master List
 Detailed cell layout specifications for all equipment sheets are documented under:
 - `public/assets/atlas/equipment/sprites/INDEX.md`
 - Sheet manifest markdown files (`starter_weapons_01.md`, `starter_weapons_02.md`, etc.)

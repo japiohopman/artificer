@@ -299,6 +299,7 @@ export const EquipmentWorkspace: React.FC<EquipmentWorkspaceProps> = ({
               equipment={activeChar.equipment}
               items={activeChar.items}
               gender={activeChar.gender}
+              race={activeChar.race}
               onSlotClick={(slot) => {
                 const isEquippedInV2 = activeChar.equipment?.slots?.find((s: any) => s.id === slot)?.itemId;
                 const isEquippedInV1 = activeChar.inventory?.[slot];

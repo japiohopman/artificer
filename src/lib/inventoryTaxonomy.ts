@@ -98,6 +98,8 @@ export function resolveItemTaxonomy(item: any): {
 
   // 4. Wearable Accessories
   if (
+    rawKind === 'accessory' ||
+    rawKind.includes('accessory') ||
     rawKind === 'ring' ||
     rawKind === 'neck' ||
     rawKind === 'belt' ||
