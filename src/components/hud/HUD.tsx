@@ -12,6 +12,7 @@ import { motion } from 'motion/react';
 import { Nav } from './nav/Nav';
 import { EnvironmentalEngine } from './EnvironmentalEngine';
 import { HUDFooter } from './HUDFooter';
+import { UI_STACK_CLASSES } from '../../constants/uiStack';
 
 export const HUD: React.FC = () => {
   const { 
@@ -68,7 +69,7 @@ export const HUD: React.FC = () => {
       <Journal />
 
       {/* 1. Fixed Top Header / Navigation (Above sidebars) */}
-      <div className="w-full z-[5000] pointer-events-none">
+      <div className={`w-full ${UI_STACK_CLASSES.HUD_NAV} pointer-events-none`}>
         <Nav />
       </div>
 
@@ -78,7 +79,7 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: isWorldPanelOpen ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full z-[1000] relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-l-0"
+          className={`h-full ${UI_STACK_CLASSES.HUD_SIDEBAR} relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-l-0`}
         >
           <div className="w-80 h-full flex flex-col">
             <WorldPanel />
@@ -95,7 +96,7 @@ export const HUD: React.FC = () => {
           initial={false}
           animate={{ width: (isCharacterPanelOpen || isInventoryOpen) ? 320 : 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="h-full z-[1000] relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-r-0"
+          className={`h-full ${UI_STACK_CLASSES.HUD_SIDEBAR} relative flex flex-col shrink-0 overflow-hidden seamless-hud-unit border-r-0`}
         >
           <div className="w-80 h-full flex flex-col overflow-hidden">
              <CharacterPanel />

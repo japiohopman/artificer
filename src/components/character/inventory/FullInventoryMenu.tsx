@@ -6,6 +6,7 @@ import { useInventoryStore } from '../../../store/useInventoryStore';
 import { EquipmentWorkspace } from '../equipment/EquipmentWorkspace';
 import { GameIcon } from '../../../game_icons';
 import { InventoryItemActionMenu } from './InventoryItemActionMenu';
+import { UI_STACK_CLASSES } from '../../../constants/uiStack';
 
 export const FullInventoryMenu: React.FC = () => {
   const {
@@ -36,7 +37,7 @@ export const FullInventoryMenu: React.FC = () => {
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
 
   const fullScreenContent = (
-    <div className="fixed inset-0 w-full h-full bg-parchment-100 flex flex-col font-body overflow-hidden">
+    <div className={`fixed inset-0 ${UI_STACK_CLASSES.FULLSCREEN_WORKSPACE} w-full h-full bg-parchment-100 flex flex-col font-body overflow-hidden pointer-events-auto`}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
