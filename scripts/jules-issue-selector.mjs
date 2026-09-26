@@ -251,21 +251,17 @@ async function main() {
     dependencyStates
   });
 
-  // If discovery is triggered, persist the discovery report issue if requested or in live mode
+  // If discovery is triggered, persist the discovery report issue.
+  // Fail closed: if persistence fails, allow error to throw.
   let persistedDiscoveryIssue = null;
   if (decision.discovery?.triggered && decision.discovery?.audit?.discoveryIssue) {
-    if (process.env.PERSIST_DISCOVERY === 'true') {
-      try {
-        persistedDiscoveryIssue = await persistDiscoveryReportIssue(
-          decision.discovery.audit.discoveryIssue,
-          TOKEN,
-          REPO
-        );
-        console.log(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
-      } catch (err) {
-        console.error('Failed to persist Discovery Report Issue:', err.message);
-      }
-    }
+    console.log('Low ready work detected (readyIssues <= 2). Persisting Discovery Report Issue ...');
+    persistedDiscoveryIssue = await persistDiscoveryReportIssue(
+      decision.discovery.audit.discoveryIssue,
+      TOKEN,
+      REPO
+    );
+    console.log(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
   }
 
   if (!decision.selected) {

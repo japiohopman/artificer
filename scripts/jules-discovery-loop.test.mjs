@@ -159,3 +159,23 @@ test('persistDiscoveryReportIssue calls GitHub REST API to create Discovery Repo
   assert.equal(createdPayload.title, '[Discovery] Repository Evidence Audit Report');
   assert.deepEqual(createdPayload.labels, ['discovery']);
 });
+
+test('persistDiscoveryReportIssue fails closed when GitHub API fails or inputs are missing', async () => {
+  await assert.rejects(
+    () => persistDiscoveryReportIssue(null, 'token', 'repo'),
+    /discoveryIssue, token, and repo are required/
+  );
+
+  const mockFailingFetch = async () => ({
+    ok: false,
+    status: 403,
+    text: async () => 'Forbidden'
+  });
+
+  const discoveryIssue = { title: '[Discovery] Test', body: 'Body', labels: ['discovery'] };
+
+  await assert.rejects(
+    () => persistDiscoveryReportIssue(discoveryIssue, 'token', 'repo', mockFailingFetch),
+    /Failed to create Discovery Report GitHub Issue: 403 Forbidden/
+  );
+});
