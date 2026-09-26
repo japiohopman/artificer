@@ -161,4 +161,48 @@ describe('WorldEnvironmentSnapshot & Environment Resolver Domain Tests', () => {
 
     expect(w1).toBe(w2);
   });
+
+  it('guarantees inspecting a landmark updates inspected location while preserving physical location context', () => {
+    const store = useWorldStore.getState();
+    store.setPartyLocation({
+      id: 'party_camp',
+      name: 'High Road Encampment',
+      category: 'landmark',
+      region: 'Sword Coast',
+    });
+    store.setInspectedLocation(null);
+
+    const initialSnapshot = store.getEnvironmentSnapshot();
+    expect(initialSnapshot.locations.physical?.name).toBe('High Road Encampment');
+    expect(initialSnapshot.locations.inspected).toBeNull();
+
+    // Inspect another landmark
+    store.setInspectedLocation({
+      id: 'candlekeep',
+      name: 'Candlekeep',
+      category: 'castle',
+      region: 'Sword Coast',
+    });
+
+    const updatedSnapshot = store.getEnvironmentSnapshot();
+    expect(updatedSnapshot.locations.physical?.name).toBe('High Road Encampment');
+    expect(updatedSnapshot.locations.inspected?.name).toBe('Candlekeep');
+
+    // Clear inspection
+    store.setInspectedLocation(null);
+    const clearedSnapshot = store.getEnvironmentSnapshot();
+    expect(clearedSnapshot.locations.physical?.name).toBe('High Road Encampment');
+    expect(clearedSnapshot.locations.inspected).toBeNull();
+  });
+
+  it('provides complete environmental metrics in snapshot for WorldEnvironmentHeader consumption', () => {
+    const store = useWorldStore.getState();
+    const snapshot = store.getEnvironmentSnapshot();
+
+    expect(snapshot.time.formattedTime).toMatch(/^\d{2}:\d{2}$/);
+    expect(snapshot.time.calendarDate).toContain('1492 DR');
+    expect(typeof snapshot.temperature.celsius).toBe('number');
+    expect(snapshot.weather.current).toBeDefined();
+    expect(['dawn', 'day', 'dusk', 'night']).toContain(snapshot.time.timeOfDay);
+  });
 });

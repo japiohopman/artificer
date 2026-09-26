@@ -11,6 +11,7 @@ import ReactMarkdown from 'react-markdown';
 import { Travel } from './game/Travel';
 import { AdvancedRoller } from '../dice/DiceRollerPanel';
 import { MapLegend } from './game/MapLegend';
+import { WorldEnvironmentHeader } from './WorldEnvironmentHeader';
 
 class MarkdownErrorBoundary extends React.Component<{children: React.ReactNode, fallback: React.ReactNode}, {hasError: boolean}> {
   constructor(props: any) { super(props); this.state = { hasError: false }; }
@@ -135,6 +136,9 @@ export const WorldPanel: React.FC = () => {
 
       {/* CONTENT: Scrollable */}
       <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+        {/* Environment Header */}
+        <WorldEnvironmentHeader />
+
         {/* Active Combat Monsters */}
         {gameMode === 'combat' && combatState.monsters.length > 0 && (
           <div className="space-y-4 animate-in fade-in slide-in-from-left-4">
