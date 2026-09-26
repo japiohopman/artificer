@@ -5,6 +5,7 @@ import { calculateCharacterWeight } from '../../lib/inventoryUtils';
 import { calculateDerivedStats } from '../../lib/character';
 import { GameIcon } from '../../game_icons';
 import { cn } from '../../lib/utils';
+import { UI_STACK_CLASSES } from '../../constants/uiStack';
 
 export const HUDFooter: React.FC = () => {
   const activeCharacter = useActiveCharacter();
@@ -41,7 +42,7 @@ export const HUDFooter: React.FC = () => {
   ] as const;
 
   return (
-    <div className="w-full bg-[#FAF6EE] border-t-2 border-parchment-300 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] h-9 flex items-center justify-between px-4 select-none z-[4500] text-xs font-sans relative">
+    <div className={cn("w-full bg-[#FAF6EE] border-t-2 border-parchment-300 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] h-9 flex items-center justify-between px-4 select-none text-xs font-sans relative", UI_STACK_CLASSES.HUD_FOOTER)}>
       {/* Old Paper Texture overlay to match HUD style */}
       <div 
         className="absolute inset-0 opacity-[0.06] pointer-events-none" 

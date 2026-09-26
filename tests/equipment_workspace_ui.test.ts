@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { resolveItemTaxonomy } from '../src/lib/inventoryTaxonomy';
 import { useCharacterStore } from '../src/store/useCharacterStore';
 import { useUIStore } from '../src/store/useUIStore';
+import { UI_STACK, UI_STACK_CLASSES } from '../src/constants/uiStack';
 
 describe('Equipment Workspace UI Architecture Unit Tests', () => {
   beforeEach(() => {
@@ -156,5 +157,25 @@ describe('Equipment Workspace UI Architecture Unit Tests', () => {
     handleRootTransition('EQUIPMENT');
     expect(currentRoot).toBe('EQUIPMENT');
     expect(currentSubcategory).toBe('ALL');
+  });
+
+  it('6. Overlay Stacking Contract: Fullscreen workspace layer is above HUD navigation and below critical overlays', () => {
+    // FULLSCREEN_WORKSPACE must be strictly above all HUD surfaces
+    expect(UI_STACK.FULLSCREEN_WORKSPACE).toBeGreaterThan(UI_STACK.HUD_NAV);
+    expect(UI_STACK.FULLSCREEN_WORKSPACE).toBeGreaterThan(UI_STACK.HUD_FOOTER);
+    expect(UI_STACK.FULLSCREEN_WORKSPACE).toBeGreaterThan(UI_STACK.HUD_SIDEBAR);
+
+    // FULLSCREEN_WORKSPACE must be strictly below critical system overlays
+    expect(UI_STACK.FULLSCREEN_WORKSPACE).toBeLessThan(UI_STACK.SYSTEM_CRITICAL);
+
+    // Context menu and drag preview must be stacked above Fullscreen Workspace
+    expect(UI_STACK.WORKSPACE_CONTEXT_MENU).toBeGreaterThan(UI_STACK.FULLSCREEN_WORKSPACE);
+    expect(UI_STACK.WORKSPACE_DRAG_PREVIEW).toBeGreaterThan(UI_STACK.WORKSPACE_CONTEXT_MENU);
+
+    // Verify Tailwind class string mappings correspond to numeric stack contract
+    expect(UI_STACK_CLASSES.FULLSCREEN_WORKSPACE).toBe(`z-[${UI_STACK.FULLSCREEN_WORKSPACE}]`);
+    expect(UI_STACK_CLASSES.HUD_NAV).toBe(`z-[${UI_STACK.HUD_NAV}]`);
+    expect(UI_STACK_CLASSES.HUD_SIDEBAR).toBe(`z-[${UI_STACK.HUD_SIDEBAR}]`);
+    expect(UI_STACK_CLASSES.HUD_FOOTER).toBe(`z-[${UI_STACK.HUD_FOOTER}]`);
   });
 });
