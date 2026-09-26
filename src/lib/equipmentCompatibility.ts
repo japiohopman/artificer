@@ -36,29 +36,43 @@ export function evaluateSlotCompatibility(
 
   const isOccupied = Boolean(equippedItems[slotId]);
 
+  const isWeapon = kind === 'weapon' || Boolean(weaponCat) || category.includes('weapon');
+  const isShield = kind === 'shield' || armorCat === 'shield' || category.includes('shield');
+  const isArmor = (kind === 'armor' || Boolean(armorCat) || category.includes('armor')) && !isShield;
+
   if (slotId === 'ammunition' || slotId === 'ammo') {
     const isAmmo = kind === 'ammunition' || category.includes('ammunition') || index.includes('arrow') || index.includes('bolt') || index.includes('needle');
     if (!isAmmo) return 'INVALID';
 
-    // Verify compatibility with equipped main_hand weapon if present
+    // Ammunition is contextual: invalid if no main-hand weapon requiring ammunition is equipped
     const mainHandItem = equippedItems.main_hand;
-    if (mainHandItem) {
-      const mainMeta = resolveItemMetadata(mainHandItem, ruleset);
-      const mainIndex = (mainMeta?.index || mainMeta?.template || '').toLowerCase();
+    if (!mainHandItem) return 'INVALID';
 
-      const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');
-      const isCrossbow = mainIndex.includes('crossbow');
+    const mainMeta = resolveItemMetadata(mainHandItem, ruleset);
+    if (!mainMeta) return 'INVALID';
 
-      if (isBow && !index.includes('arrow')) return 'INVALID';
-      if (isCrossbow && !index.includes('bolt')) return 'INVALID';
-    }
+    const mainKind = (mainMeta.kind || mainMeta._type || mainMeta.type || '').toLowerCase();
+    const mainWeaponCat = (mainMeta.weapon_category || '').toLowerCase();
+    const mainCategory = (mainMeta.equipment_category?.index || mainMeta.category || '').toLowerCase();
+    const mainIsWeapon = mainKind === 'weapon' || Boolean(mainWeaponCat) || mainCategory.includes('weapon');
+
+    if (!mainIsWeapon) return 'INVALID';
+
+    const mainRange = (mainMeta.weapon_range || '').toLowerCase();
+    const mainProps = (mainMeta.properties || []).map((p: any) => (p.index || p.name || p).toString().toLowerCase());
+    const mainIndex = (mainMeta.index || mainMeta.template || mainMeta.id || '').toLowerCase();
+
+    const mainRequiresAmmo = mainRange === 'ranged' || mainProps.includes('ammunition') || ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].some(w => mainIndex.includes(w));
+    if (!mainRequiresAmmo) return 'INVALID';
+
+    const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');
+    const isCrossbow = mainIndex.includes('crossbow');
+
+    if (isBow && !index.includes('arrow')) return 'INVALID';
+    if (isCrossbow && !index.includes('bolt')) return 'INVALID';
 
     return isOccupied ? 'REPLACE' : 'VALID';
   }
-
-  const isWeapon = kind === 'weapon' || Boolean(weaponCat) || category.includes('weapon');
-  const isShield = kind === 'shield' || armorCat === 'shield' || category.includes('shield');
-  const isArmor = (kind === 'armor' || Boolean(armorCat) || category.includes('armor')) && !isShield;
 
   switch (slotId) {
     case 'head': {
@@ -70,7 +84,7 @@ export function evaluateSlotCompatibility(
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
     case 'chest': {
-      const isValid = isArmor || Boolean(armorCat) || (category.includes('armor') && !category.includes('adventuring')) || index.includes('cuirass');
+      const isValid = (isArmor || (category.includes('armor') && !category.includes('adventuring')) || index.includes('cuirass')) && !isShield;
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
     case 'back': {
@@ -124,16 +138,17 @@ export function evaluateSlotCompatibility(
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
     case 'extra':
-    case 'quick_1' as any:
-    case 'quick_2' as any:
-    case 'quick_3' as any:
-    case 'quick_4' as any: {
+    case 'quick_1':
+    case 'quick_2':
+    case 'quick_3':
+    case 'quick_4': {
       // Weapons and Armor MUST NOT be accepted into quick / extra slots
       if (isWeapon || isArmor || isShield) return 'INVALID';
 
       const isConsumable = kind === 'consumable' || category.includes('potion') || category.includes('scroll') || category.includes('vial') || category.includes('poison') || category.includes('consumable') || index.includes('potion') || index.includes('scroll') || index.includes('flask') || index.includes('vial') || index.includes('poison') || index.includes('elixir') || index.includes('salve');
       const isTrapOrThrowable = kind === 'trap' || kind === 'throwable' || kind === 'utility' || index.includes('caltrops') || index.includes('ball_bearings') || index.includes('ball-bearings') || index.includes('hunting_trap') || index.includes('hunting-trap') || index.includes('oil') || index.includes('acid') || index.includes('alchemist') || index.includes('holy_water') || index.includes('holy-water') || index.includes('tinderbox') || index.includes('dynamite') || index.includes('bomb') || index.includes('smokebomb');
-      const isQuickUtility = kind === 'adventuring_gear' || category.includes('adventuring_gear') || category.includes('adventuring-gear') || isConsumable || isTrapOrThrowable;
+
+      const isQuickUtility = isConsumable || isTrapOrThrowable;
 
       return isQuickUtility ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }

@@ -652,26 +652,28 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(backpack?.slots[0].itemId).toBe('longsword_1');
   });
 
-  it('rejects adventuring gear in paper-doll body equipment slots', () => {
+  it('rejects ordinary adventure gear in quick and extra slots', () => {
     const rope = { id: 'rope_1', template: 'hempen-rope-50-ft', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
     const torch = { id: 'torch_1', template: 'torch', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
     const rations = { id: 'rations_1', template: 'rations-1-day', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
+    const pack = { id: 'pack_1', template: 'backpack', kind: 'container', equipment_category: { index: 'adventuring-gear' } };
 
-    const bodySlots = ['head', 'neck', 'chest', 'back', 'hands', 'feet', 'ring_1', 'ring_2', 'main_hand', 'off_hand', 'focus'];
+    const quickSlots: any[] = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
 
-    bodySlots.forEach(slot => {
+    quickSlots.forEach(slot => {
       expect(evaluateSlotCompatibility(rope, slot)).toBe('INVALID');
       expect(evaluateSlotCompatibility(torch, slot)).toBe('INVALID');
       expect(evaluateSlotCompatibility(rations, slot)).toBe('INVALID');
+      expect(evaluateSlotCompatibility(pack, slot)).toBe('INVALID');
     });
   });
 
-  it('rejects weapons and armor in quick / extra slots', () => {
+  it('rejects weapons, armor, and shields in quick and extra slots', () => {
     const sword = { id: 'sword_1', template: 'longsword', kind: 'weapon', weapon_category: 'Martial' };
     const armor = { id: 'plate_1', template: 'plate-armor', kind: 'armor', armor_category: 'Heavy' };
     const shield = { id: 'shield_1', template: 'shield', kind: 'shield', armor_category: 'Shield' };
 
-    const quickSlots = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
+    const quickSlots: any[] = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
 
     quickSlots.forEach(slot => {
       expect(evaluateSlotCompatibility(sword, slot)).toBe('INVALID');
@@ -680,29 +682,64 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     });
   });
 
-  it('accepts consumables, traps, and throwables in quick / extra slots', () => {
+  it('accepts consumables, intended traps, throwables, and utility items in quick and extra slots', () => {
     const potion = { id: 'pot_1', template: 'potion-of-healing', kind: 'consumable' };
     const scroll = { id: 'scroll_1', template: 'scroll-of-fireball', kind: 'consumable' };
     const caltrops = { id: 'trap_1', template: 'caltrops', kind: 'adventuring_gear' };
+    const huntingTrap = { id: 'trap_2', template: 'hunting-trap', kind: 'adventuring_gear' };
     const oil = { id: 'oil_1', template: 'oil-flask', kind: 'adventuring_gear' };
+    const holyWater = { id: 'water_1', template: 'holy-water', kind: 'adventuring_gear' };
+    const tinderbox = { id: 'tinder_1', template: 'tinderbox', kind: 'adventuring_gear' };
 
-    const quickSlots = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
+    const quickSlots = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'] as const;
 
     quickSlots.forEach(slot => {
       expect(evaluateSlotCompatibility(potion, slot)).toBe('VALID');
       expect(evaluateSlotCompatibility(scroll, slot)).toBe('VALID');
       expect(evaluateSlotCompatibility(caltrops, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(huntingTrap, slot)).toBe('VALID');
       expect(evaluateSlotCompatibility(oil, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(holyWater, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(tinderbox, slot)).toBe('VALID');
     });
+  });
+
+  it('rejects shields from chest armor slot', () => {
+    const shield = { id: 'shield_1', template: 'shield', kind: 'shield', armor_category: 'Shield' };
+    expect(evaluateSlotCompatibility(shield, 'chest')).toBe('INVALID');
+  });
+
+  it('evaluates contextual ammunition compatibility based on equipped main-hand weapon', () => {
+    const arrow = { id: 'arrow_1', template: 'arrow', kind: 'ammunition', equipment_category: { index: 'ammunition' } };
+    const bolt = { id: 'bolt_1', template: 'crossbow-bolt', kind: 'ammunition', equipment_category: { index: 'ammunition' } };
+
+    const bowWeapon = { id: 'bow_1', template: 'shortbow', kind: 'weapon', weapon_range: 'Ranged' };
+    const crossbowWeapon = { id: 'xbow_1', template: 'light-crossbow', kind: 'weapon', weapon_range: 'Ranged' };
+    const swordWeapon = { id: 'sword_1', template: 'longsword', kind: 'weapon', weapon_range: 'Melee' };
+
+    // 1. No main-hand weapon equipped -> ammunition INVALID
+    expect(evaluateSlotCompatibility(arrow, 'ammo', {})).toBe('INVALID');
+    expect(evaluateSlotCompatibility(bolt, 'ammo', {})).toBe('INVALID');
+
+    // 2. Non-ammunition weapon equipped (longsword) -> ammunition INVALID
+    expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: swordWeapon })).toBe('INVALID');
+
+    // 3. Shortbow equipped -> arrow VALID, bolt INVALID
+    expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: bowWeapon })).toBe('VALID');
+    expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: bowWeapon })).toBe('INVALID');
+
+    // 4. Light Crossbow equipped -> bolt VALID, arrow INVALID
+    expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: crossbowWeapon })).toBe('VALID');
+    expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: crossbowWeapon })).toBe('INVALID');
   });
 
   it('fails closed for unknown or unsupported slot IDs', () => {
     const sword = { id: 'sword_1', template: 'longsword', kind: 'weapon' };
     const potion = { id: 'pot_1', template: 'potion-of-healing', kind: 'consumable' };
 
-    expect(evaluateSlotCompatibility(sword, 'unknown_slot_xyz')).toBe('INVALID');
-    expect(evaluateSlotCompatibility(potion, 'fake_slot_123')).toBe('INVALID');
-    expect(evaluateSlotCompatibility(sword, '')).toBe('INVALID');
+    expect(evaluateSlotCompatibility(sword, 'unknown_slot_xyz' as any)).toBe('INVALID');
+    expect(evaluateSlotCompatibility(potion, 'fake_slot_123' as any)).toBe('INVALID');
+    expect(evaluateSlotCompatibility(sword, '' as any)).toBe('INVALID');
   });
 
   it('verifies registry count remains unchanged across rejected and successful transactions', async () => {
