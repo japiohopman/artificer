@@ -36,13 +36,13 @@ export const FullInventoryMenu: React.FC = () => {
   const activeChar = characters.find(c => c.id === activeCharacterId) || characters[0];
 
   const fullScreenContent = (
-    <div className="fixed inset-0 z-[9999] w-full h-full bg-parchment-100 flex flex-col font-body overflow-hidden">
+    <div className="fixed inset-0 w-full h-full bg-parchment-100 flex flex-col font-body overflow-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.15, ease: 'easeOut' }}
-        className="w-full h-full flex flex-col relative z-[10000] overflow-hidden"
+        className="w-full h-full flex flex-col relative overflow-hidden"
       >
         {/* Background Atmosphere */}
         <div className="absolute inset-0 bg-paper-texture opacity-30 pointer-events-none" />

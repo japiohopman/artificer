@@ -133,7 +133,7 @@ All tiers share the single unified renderer pipeline (`EquipmentSprite` + 9:16 v
 ## 6. Full-Screen Workspace & SVG Paper Doll Surface
 
 ### 6.1 DevKit Application Surface
-- **Full-Screen Workspace Surface:** The Gear & Equipment Workspace operates as a full-viewport application surface (`fixed inset-0 z-[9999]`), avoiding backdrop/modal framing.
+- **Full-Screen Workspace Surface:** The Gear & Equipment Workspace operates as a full-viewport application surface (`fixed inset-0 w-full h-full`), avoiding backdrop/modal framing.
 - **Top 6-Position Character Selector Bar:** Hosts 1 main active character slot and 5 reserved party slots (`data-testid="reserved-party-slot"`). Clicking a character slot switches the active character in canonical `useCharacterStore` state without duplicate local inventory state.
 
 ### 6.2 SVG Character Paper Doll Visual Anchor
