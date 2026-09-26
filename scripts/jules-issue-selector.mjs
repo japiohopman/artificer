@@ -11,6 +11,11 @@ import {
   hasForbiddenLegacyQueueReferences,
   validateIssueQualityGate
 } from './jules-issue-validator.mjs';
+import {
+  shouldTriggerDiscovery,
+  isDiscoveryIssue,
+  executeDiscoveryAudit
+} from './jules-discovery-loop.mjs';
 
 export {
   parseDispatchMetadata,
@@ -80,6 +85,14 @@ export function selectDispatchableIssue(issues, options = {}) {
     candidates.push({ issue: entry.issue, metadata: entry.validation.metadata });
   }
 
+  // Calculate telemetry for discovery loop
+  const openNonPrIssues = issues.filter(i => i && i.state === 'open' && !i.pull_request);
+  const activeDiscoveryCount = openNonPrIssues.filter(isDiscoveryIssue).length;
+  const readyIssuesCount = candidates.length;
+  const triggerDiscovery = shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount });
+
+  let selectedCandidate = null;
+
   for (const candidate of sortDispatchCandidates(candidates)) {
     const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
     if (existingPr) {
@@ -102,10 +115,21 @@ export function selectDispatchableIssue(issues, options = {}) {
         break;
       }
     }
-    if (!blocked) return { selected: candidate, rejected };
+    if (!blocked) {
+      selectedCandidate = candidate;
+      break;
+    }
   }
 
-  return { selected: null, rejected };
+  return {
+    selected: selectedCandidate,
+    rejected,
+    discovery: {
+      triggered: triggerDiscovery,
+      readyIssuesCount,
+      activeDiscoveryCount
+    }
+  };
 }
 
 export function buildJulesPrompt(issue, sharedContext, specialistContext, canonicalContexts) {
@@ -218,11 +242,22 @@ async function main() {
 
   if (!decision.selected) {
     setOutput('dispatch', false);
+
+    // If discovery loop is triggered, execute discovery audit report
+    let discoveryOutput = null;
+    if (decision.discovery?.triggered) {
+      discoveryOutput = executeDiscoveryAudit(issues, {
+        readyIssuesCount: decision.discovery.readyIssuesCount
+      });
+    }
+
     console.log(JSON.stringify({
       dispatch: false,
       dispatchable: false,
       reason: 'No dispatchable Issue satisfies the Issue-first contract.',
-      rejected: decision.rejected
+      rejected: decision.rejected,
+      discovery: decision.discovery,
+      discoveryAudit: discoveryOutput
     }, null, 2));
     return;
   }
@@ -270,7 +305,8 @@ async function main() {
     specialist: selected.metadata.specialist,
     specialistPath: specialist,
     prompt,
-    sessionTitle: selected.issue.title.slice(0, 80)
+    sessionTitle: selected.issue.title.slice(0, 80),
+    discovery: decision.discovery
   }, null, 2));
 }
 

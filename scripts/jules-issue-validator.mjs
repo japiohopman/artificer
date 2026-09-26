@@ -175,9 +175,10 @@ export function validateIssueQualityGate(body, options = {}) {
     };
   }
 
-  // 1. Required sections validation
+  // 1. Required sections validation - matching Issue Contract v2 exactly
   const requiredSections = [
-    { name: 'Goal / Problem', headings: ['## Goal', '## Problem / Desired Outcome', '## Problem/Desired Outcome'] },
+    { name: 'Problem / Desired Outcome', headings: ['## Problem / Desired Outcome', '## Problem/Desired Outcome'] },
+    { name: 'Goal', headings: ['## Goal'] },
     { name: 'Current Repository Facts', headings: ['## Current Repository Facts'] },
     { name: 'Investigation Required', headings: ['## Investigation Required'] },
     { name: 'Canonical Ownership', headings: ['## Canonical Ownership'] },
@@ -216,7 +217,6 @@ export function validateIssueQualityGate(body, options = {}) {
   // 4. Canonical references resolution
   const references = parseCanonicalReferences(body);
   if (references.length === 0 && extractSection(body, '## Canonical References')) {
-    // If the section exists, ensure references are listed
     errors.push('Section ## Canonical References must contain at least one backticked file path (e.g. - `docs/WORKFLOW.md`).');
   } else {
     for (const refPath of references) {

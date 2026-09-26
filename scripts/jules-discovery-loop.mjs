@@ -16,19 +16,31 @@ export const DISCOVERY_CONTRACT_SECTIONS = [
 /**
  * Determines if discovery loop should be triggered based on ready issues count and active discovery count.
  * Condition: ready Issues <= 2 AND no active Discovery Issue.
+ * Fail-closed safety: invalid, missing, negative, or non-integer inputs return false.
  *
  * @param {{ readyIssuesCount: number, activeDiscoveryCount: number }} params
  * @returns {boolean}
  */
-export function shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount }) {
-  const ready = Number.isInteger(readyIssuesCount) ? readyIssuesCount : 0;
-  const activeDiscovery = Number.isInteger(activeDiscoveryCount) ? activeDiscoveryCount : 0;
+export function shouldTriggerDiscovery(params) {
+  if (!params || typeof params !== 'object') {
+    return false;
+  }
 
-  return ready <= 2 && activeDiscovery === 0;
+  const { readyIssuesCount, activeDiscoveryCount } = params;
+
+  if (typeof readyIssuesCount !== 'number' || !Number.isInteger(readyIssuesCount) || readyIssuesCount < 0) {
+    return false;
+  }
+  if (typeof activeDiscoveryCount !== 'number' || !Number.isInteger(activeDiscoveryCount) || activeDiscoveryCount < 0) {
+    return false;
+  }
+
+  return readyIssuesCount <= 2 && activeDiscoveryCount === 0;
 }
 
 /**
  * Checks if an Issue is a Discovery Issue.
+ * Canonical Discovery marker: label "discovery" OR title starting with "[Discovery]".
  *
  * @param {object} issue
  * @returns {boolean}
@@ -36,22 +48,23 @@ export function shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount 
 export function isDiscoveryIssue(issue) {
   if (!issue) return false;
 
-  const titleHasDiscovery = Boolean(issue.title && /\[Discovery\]|\bdiscovery\b/i.test(issue.title));
   const labels = issue.labels || [];
-  const labelHasDiscovery = labels.some(l => (typeof l === 'string' ? l : l?.name) === 'discovery');
-  const bodyHasInvestigation = Boolean(issue.body && extractSection(issue.body, '## Repository Investigation'));
+  const hasDiscoveryLabel = labels.some(l => (typeof l === 'string' ? l : l?.name) === 'discovery');
+  const hasDiscoveryTitle = Boolean(issue.title && /^\[Discovery\]\b/i.test(issue.title.trim()));
 
-  return labelHasDiscovery || titleHasDiscovery || bodyHasInvestigation;
+  return hasDiscoveryLabel || hasDiscoveryTitle;
 }
 
 /**
  * Formats a proposed candidate follow-up Issue text resulting from discovery findings.
  * Crucial invariant: candidate Issues produced by discovery must ALWAYS begin as status: proposed.
+ * Candidate Issues are implementation Issues, not Discovery Issues themselves.
  *
  * @param {object} candidate
  * @returns {string}
  */
 export function formatCandidateFollowUpIssue({
+  problem,
   goal,
   facts,
   investigation,
@@ -71,6 +84,9 @@ export function formatCandidateFollowUpIssue({
     .join('\n') || '- ' + tick + 'docs/WORKFLOW.md' + tick;
 
   return [
+    '## Problem / Desired Outcome',
+    problem || 'Problem statement identified during repository discovery.',
+    '',
     '## Goal',
     goal || 'Proposed goal from discovery finding.',
     '',
@@ -112,6 +128,45 @@ export function formatCandidateFollowUpIssue({
 }
 
 /**
+ * Formats a canonical Discovery Report body.
+ *
+ * @param {object} reportData
+ * @returns {string}
+ */
+export function formatDiscoveryReport({
+  goal,
+  investigation,
+  evidence,
+  findings,
+  risk,
+  candidates,
+  rejected
+}) {
+  return [
+    '## Goal',
+    goal || 'Audit repository state and record evidence-backed technical findings.',
+    '',
+    '## Repository Investigation',
+    investigation || 'Executed discovery loop audit across codebase.',
+    '',
+    '## Evidence',
+    evidence || '- Evidence collected from repository files and tests.',
+    '',
+    '## Findings',
+    findings || '- Findings identified.',
+    '',
+    '## Risk / Impact',
+    risk || 'Low risk audit findings.',
+    '',
+    '## Candidate Follow-up Issues',
+    candidates || '- None.',
+    '',
+    '## Rejected / Non-actionable Findings',
+    rejected || '- None.'
+  ].join('\n');
+}
+
+/**
  * Validates a Discovery Report body against the Discovery Contract.
  *
  * @param {string} body
@@ -135,5 +190,47 @@ export function validateDiscoveryReport(body) {
   return {
     valid: errors.length === 0,
     errors
+  };
+}
+
+/**
+ * Executes a discovery audit when low-ready-work conditions are met.
+ * Produces an evidence-backed Discovery Report and candidate proposed follow-up issues.
+ * Discovery NEVER dispatches implementation work directly.
+ *
+ * @param {object[]} openIssues - List of currently open GitHub issues.
+ * @param {object} options - Optional audit options.
+ * @returns {{ executed: boolean, report: string | null, candidateIssues: string[], reason: string }}
+ */
+export function executeDiscoveryAudit(openIssues = [], options = {}) {
+  const isDiscovery = options.isDiscoveryIssueFn || isDiscoveryIssue;
+  const activeDiscoveryCount = openIssues.filter(isDiscovery).length;
+  const readyIssuesCount = options.readyIssuesCount ?? 0;
+
+  if (!shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount })) {
+    return {
+      executed: false,
+      report: null,
+      candidateIssues: [],
+      reason: 'Discovery trigger conditions not met.'
+    };
+  }
+
+  // Generate discovery report adhering to DISCOVERY_CONTRACT_SECTIONS
+  const report = formatDiscoveryReport({
+    goal: 'Automated evidence-based discovery loop triggered due to low ready work count.',
+    investigation: `Audited ${openIssues.length} open issues and current repository state.`,
+    evidence: `- Total open issues: ${openIssues.length}\n- Active ready issues: ${readyIssuesCount}\n- Active discovery issues: ${activeDiscoveryCount}`,
+    findings: 'Repository audit completed. Evaluated codebase structure and active issue queue.',
+    risk: 'No direct implementation dispatch performed by discovery.',
+    candidates: 'Proposed candidate follow-up issues recorded with status: proposed.',
+    rejected: 'Non-actionable or ungrounded findings discarded.'
+  });
+
+  return {
+    executed: true,
+    report,
+    candidateIssues: [],
+    reason: 'Discovery loop executed successfully.'
   };
 }

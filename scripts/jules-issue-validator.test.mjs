@@ -14,6 +14,9 @@ import {
 const tick = '`';
 
 const validBody = [
+  '## Problem / Desired Outcome',
+  'Validation mechanism for issue contracts is missing.',
+  '',
   '## Goal',
   'Implement Issue Quality Validator.',
   '',
@@ -110,11 +113,16 @@ test('validateIssueQualityGate passes for valid v2 contract', () => {
   assert.deepEqual(result.canonicalReferences, ['docs/WORKFLOW.md', 'AGENT.MD']);
 });
 
+test('validateIssueQualityGate fails when Goal-only issue lacks Problem / Desired Outcome', () => {
+  const goalOnlyBody = validBody.replace('## Problem / Desired Outcome\nValidation mechanism for issue contracts is missing.\n\n', '');
+  const result = validateIssueQualityGate(goalOnlyBody, { fileExistFn: () => true });
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some(err => err.includes('Problem / Desired Outcome')));
+});
+
 test('validateIssueQualityGate fails when required sections are missing', () => {
   const incompleteBody = validBody.replace('## Out of Scope\nRewriting the dispatcher architecture.', '');
-  const result = validateIssueQualityGate(incompleteBody, {
-    fileExistFn: () => true
-  });
+  const result = validateIssueQualityGate(incompleteBody, { fileExistFn: () => true });
   assert.equal(result.valid, false);
   assert.ok(result.errors.some(err => err.includes('Out of Scope')));
 });

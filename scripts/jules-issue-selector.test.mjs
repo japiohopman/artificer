@@ -15,6 +15,9 @@ import {
 
 const tick = String.fromCharCode(96);
 const meta = [
+  '## Problem / Desired Outcome',
+  'Sample problem description.',
+  '',
   '## Goal',
   'Sample goal for testing.',
   '',
