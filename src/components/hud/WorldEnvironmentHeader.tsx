@@ -1,12 +1,24 @@
 import React from 'react';
-import { useWorldStore, WeatherType } from '../../store/useWorldStore';
+import { useWorldStore, WeatherType, SavedLocation } from '../../store/useWorldStore';
 import { TimeOfDay } from '../../domain/environment/environmentTypes';
 import { GameIcon } from '../../game_icons';
+import { cn } from '../../lib/utils';
 import { useShallow } from 'zustand/react/shallow';
 
-export const WorldEnvironmentHeader: React.FC = () => {
-  // Subscribe to primitive state fields using useShallow to maintain referential stability
-  // and prevent infinite render loops while avoiding double store calls or duplicate logic.
+interface WorldEnvironmentHeaderProps {
+  displayLocation: SavedLocation | null;
+  isTravelExpanded: boolean;
+  onToggleTravel: () => void;
+  onClose: () => void;
+}
+
+export const WorldEnvironmentHeader: React.FC<WorldEnvironmentHeaderProps> = ({
+  displayLocation,
+  isTravelExpanded,
+  onToggleTravel,
+  onClose,
+}) => {
+  // Subscribe to primitive store fields with referential stability via useShallow
   const state = useWorldStore(
     useShallow((s) => ({
       gameYear: s.gameYear,
@@ -28,9 +40,9 @@ export const WorldEnvironmentHeader: React.FC = () => {
   );
 
   const snapshot = state.getEnvironmentSnapshot();
+  const { time, weather, temperature } = snapshot;
 
-  const { time, weather, temperature, locations } = snapshot;
-  const physicalLoc = locations.physical;
+  const isNight = time.isNight;
 
   const getWeatherIconUrl = (type: WeatherType): string => {
     let slug = 'clear-day';
@@ -68,83 +80,112 @@ export const WorldEnvironmentHeader: React.FC = () => {
   };
 
   return (
-    <div className="bg-parchment-200/80 border-2 border-dragon-gold/40 rounded-lg p-3 shadow-inner space-y-2">
-      {/* Physical Environment Context Header */}
-      <div className="flex items-center justify-between border-b border-dragon-gold/30 pb-1.5">
-        <div className="flex items-center gap-1.5 min-w-0">
-          <GameIcon name="compass" size={14} className="text-dragon-red shrink-0" />
-          <div className="flex flex-col min-w-0">
-            <span className="text-[8px] font-black uppercase text-dragon-red/60 tracking-widest leading-none">
-              Physical Location
-            </span>
-            <span className="text-xs font-bold text-dragon-darkRed truncate leading-tight">
-              {physicalLoc?.name || 'Wilderness'}
-            </span>
-          </div>
-        </div>
-        {physicalLoc?.region && (
-          <span className="text-[9px] font-bold text-dragon-red/70 uppercase tracking-tight bg-dragon-gold/10 px-1.5 py-0.5 rounded border border-dragon-gold/20 shrink-0">
-            {physicalLoc.region}
-          </span>
-        )}
+    <div className="relative p-4 border-b-2 border-dragon-red flex flex-col justify-between shadow-md overflow-hidden shrink-0 text-white min-h-[160px]">
+      {/* Background Banner Image Layer */}
+      {(displayLocation?.image || displayLocation?.banner) ? (
+        <div
+          className="absolute inset-0 z-0 bg-no-repeat bg-cover bg-center transition-all duration-1000"
+          style={{
+            backgroundImage: `url(${displayLocation?.image || displayLocation?.banner})`,
+            backgroundPosition: isNight ? 'bottom center' : 'top center'
+          }}
+        />
+      ) : (
+        <div className="absolute inset-0 z-0 bg-parchment-900/90" />
+      )}
+
+      {/* Dark Gradient Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/40 z-10 pointer-events-none" />
+
+      {/* Top Right Control Buttons */}
+      <div className="absolute top-3 right-3 flex gap-1.5 z-30">
+        <button
+          onClick={onToggleTravel}
+          className={cn(
+            "p-1.5 rounded-full transition-all active:scale-95 group",
+            isTravelExpanded ? "bg-dragon-red/30 text-white" : "hover:bg-white/20 text-white/70"
+          )}
+          title={isTravelExpanded ? "Minimize Travel" : "Expand Travel"}
+          aria-label={isTravelExpanded ? "Minimize Travel" : "Expand Travel"}
+        >
+          <GameIcon name="compass" size={18} color="currentColor" className="group-hover:rotate-12 transition-transform" />
+        </button>
+
+        <button
+          onClick={onClose}
+          className="p-1.5 hover:bg-white/20 rounded-full transition-all active:scale-95 group"
+          title="Close World Panel"
+          aria-label="Close World Panel"
+        >
+          <GameIcon name="chevron_left" size={20} color="#FFFFFF" className="group-hover:-translate-x-1 transition-transform drop-shadow-md" />
+        </button>
       </div>
 
-      {/* Grid of Temporal & Environmental Metrics */}
-      <div className="grid grid-cols-2 gap-2 text-stone-800">
-        {/* Time */}
-        <div className="flex items-center gap-2 bg-white/40 p-1.5 rounded border border-dragon-gold/20">
-          <img
-            src={getTimeIconUrl(time.timeOfDay, time.hours)}
-            alt="Time of Day"
-            className="w-5 h-5 opacity-90 shrink-0"
-          />
-          <div className="flex flex-col min-w-0">
-            <span className="text-[7px] font-black uppercase text-dragon-darkRed/50 tracking-wider">Time</span>
-            <span className="text-sm font-mono text-dragon-darkRed font-black tabular-nums leading-none">
+      {/* Content Stack */}
+      <div className="relative z-20 flex flex-col h-full justify-between pt-1">
+        {/* 1. TOP: Time / Temp / Weather in 3 equal columns */}
+        <div className="grid grid-cols-3 gap-2 items-center text-center border-b border-white/15 pb-2.5 mb-2">
+          {/* Column 1: Time */}
+          <div className="flex flex-col items-center">
+            <img
+              src={getTimeIconUrl(time.timeOfDay, time.hours)}
+              alt="Time Icon"
+              className="w-8 h-8 opacity-95 drop-shadow-md mb-0.5"
+            />
+            <span className="text-[8px] font-black uppercase text-dragon-gold tracking-widest leading-none mb-0.5">
+              Time
+            </span>
+            <span className="text-xs font-mono font-black text-white tracking-wider tabular-nums leading-none">
               {time.formattedTime}
             </span>
           </div>
-        </div>
 
-        {/* Date */}
-        <div className="flex items-center gap-2 bg-white/40 p-1.5 rounded border border-dragon-gold/20">
-          <GameIcon name="scroll" size={16} className="text-dragon-red/70 shrink-0" />
-          <div className="flex flex-col min-w-0">
-            <span className="text-[7px] font-black uppercase text-dragon-darkRed/50 tracking-wider">Calendar</span>
-            <span className="text-[10px] font-header font-bold text-dragon-red truncate leading-tight">
-              {time.calendarDate}
+          {/* Column 2: Temperature */}
+          <div className="flex flex-col items-center border-x border-white/15 px-1">
+            <img
+              src={getTempIconUrl(temperature.celsius)}
+              alt="Temp Icon"
+              className="w-8 h-8 opacity-90 drop-shadow-md mb-0.5"
+            />
+            <span className="text-[8px] font-black uppercase text-dragon-gold tracking-widest leading-none mb-0.5">
+              Temp
             </span>
-          </div>
-        </div>
-
-        {/* Temperature */}
-        <div className="flex items-center gap-2 bg-white/40 p-1.5 rounded border border-dragon-gold/20">
-          <img
-            src={getTempIconUrl(temperature.celsius)}
-            alt="Temperature"
-            className="w-5 h-5 opacity-80 shrink-0"
-          />
-          <div className="flex flex-col min-w-0">
-            <span className="text-[7px] font-black uppercase text-dragon-darkRed/50 tracking-wider">Temp</span>
-            <span className="text-xs font-black text-dragon-darkRed/90 tabular-nums leading-none">
+            <span className="text-xs font-mono font-black text-white tracking-wider tabular-nums leading-none">
               {temperature.celsius}°C
             </span>
           </div>
-        </div>
 
-        {/* Weather */}
-        <div className="flex items-center gap-2 bg-white/40 p-1.5 rounded border border-dragon-gold/20">
-          <img
-            src={getWeatherIconUrl(weather.current)}
-            alt={weather.current}
-            className="w-5 h-5 opacity-80 shrink-0"
-          />
-          <div className="flex flex-col min-w-0">
-            <span className="text-[7px] font-black uppercase text-dragon-darkRed/50 tracking-wider">Weather</span>
-            <span className="text-[10px] font-bold text-dragon-darkRed/90 uppercase truncate leading-none">
+          {/* Column 3: Weather */}
+          <div className="flex flex-col items-center">
+            <img
+              src={getWeatherIconUrl(weather.current)}
+              alt={weather.current}
+              className="w-8 h-8 opacity-90 drop-shadow-md mb-0.5"
+            />
+            <span className="text-[8px] font-black uppercase text-dragon-gold tracking-widest leading-none mb-0.5">
+              Weather
+            </span>
+            <span className="text-[10px] font-bold text-white uppercase tracking-tight truncate max-w-[80px] leading-none">
               {weather.current}
             </span>
           </div>
+        </div>
+
+        {/* 2. MIDDLE: Calendar / Date Row */}
+        <div className="text-center mb-2.5">
+          <span className="text-[10px] font-header font-bold text-amber-300 uppercase tracking-widest drop-shadow-sm">
+            {time.calendarDate}
+          </span>
+        </div>
+
+        {/* 3. BOTTOM: Presentation Location Context (displayLocation) */}
+        <div className="flex flex-col">
+          <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-none mb-1 drop-shadow-md">
+            {displayLocation ? displayLocation.category || 'Location' : 'Cartographic'}
+          </span>
+          <h2 className="text-xl md:text-2xl font-header text-white uppercase tracking-widest leading-none drop-shadow-lg truncate">
+            {displayLocation ? displayLocation.name : 'World Atlas'}
+          </h2>
         </div>
       </div>
     </div>

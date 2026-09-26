@@ -33,11 +33,9 @@ export const WorldPanel: React.FC = () => {
   const {
     currentLocation,
     inspectedLocation,
-    gameTime,
   } = useWorldStore();
 
   const displayLocation = inspectedLocation || currentLocation;
-  const isNight = gameTime < 360 || gameTime >= 1080;
 
   const { combatState } = useGameStore();
   const { unlockLore } = useJournalStore();
@@ -85,60 +83,16 @@ export const WorldPanel: React.FC = () => {
 
   return (
     <div className="world-panel h-full bg-parchment-50 overflow-hidden relative flex flex-col bg-paper-texture w-80 shrink-0 border-r border-dragon-gold/20 shadow-2xl">
-      {/* HEADER: Sticky */}
-      <div className="relative p-6 border-b-2 border-dragon-red flex items-center justify-between shadow-sm min-h-[140px] overflow-hidden shrink-0">
-        {(displayLocation?.image || displayLocation?.banner) ? (
-          <div 
-            className="absolute inset-0 z-0 bg-no-repeat transition-all duration-1000"
-            style={{
-              backgroundImage: `url(${displayLocation?.image || displayLocation?.banner})`,
-              backgroundSize: '100% 200%',
-              backgroundPosition: isNight ? 'bottom center' : 'top center'
-            }}
-          />
-        ) : (
-          <div className="absolute inset-0 z-0 bg-parchment-100/80" />
-        )}
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
-
-        <div className="relative z-20 flex flex-col">
-          <span className="text-[8px] font-black text-dragon-gold uppercase tracking-[0.3em] leading-none mb-1 drop-shadow-md">
-            {displayLocation ? displayLocation.category || 'Location' : 'Cartographic'}
-          </span>
-          <h2 className="text-2xl font-header text-white uppercase tracking-widest leading-none drop-shadow-lg">
-            {displayLocation ? displayLocation.name : 'World Atlas'}
-          </h2>
-        </div>
-
-        <div className="flex gap-2 relative z-20">
-          <button
-            onClick={() => setIsTravelExpanded(!isTravelExpanded)}
-            className={cn(
-              "p-2 rounded-full transition-all active:scale-95 group",
-              isTravelExpanded ? "bg-dragon-red/20 text-white" : "hover:bg-white/10 text-white/60"
-            )}
-            title={isTravelExpanded ? "Minimize Travel" : "Expand Travel"}
-          >
-            <GameIcon name="compass" size={20} color="currentColor" className="group-hover:rotate-12 transition-transform" />
-          </button>
-
-          <button
-            onClick={() => setIsWorldPanelOpen(false)}
-            className="p-2 hover:bg-white/10 rounded-full transition-all active:scale-95 group"
-            title="Close World Panel"
-            aria-label="Close World Panel"
-          >
-            <GameIcon name="chevron_left" size={24} color="#FFFFFF" className="group-hover:-translate-x-1 transition-transform drop-shadow-md" />
-          </button>
-        </div>
-      </div>
+      {/* HEADER: Integrated World Environment Header Banner */}
+      <WorldEnvironmentHeader
+        displayLocation={displayLocation}
+        isTravelExpanded={isTravelExpanded}
+        onToggleTravel={() => setIsTravelExpanded(!isTravelExpanded)}
+        onClose={() => setIsWorldPanelOpen(false)}
+      />
 
       {/* CONTENT: Scrollable */}
       <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
-        {/* Environment Header */}
-        <WorldEnvironmentHeader />
-
         {/* Active Combat Monsters */}
         {gameMode === 'combat' && combatState.monsters.length > 0 && (
           <div className="space-y-4 animate-in fade-in slide-in-from-left-4">
