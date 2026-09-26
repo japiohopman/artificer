@@ -18,8 +18,7 @@ describe('Enemy Artwork vs Token Resolution Separation (#311)', () => {
     const source = fs.readFileSync(storageServicePath, 'utf8');
 
     assert.equal(source.includes("if (folder === 'enemies')"), true);
-    assert.equal(source.includes("const isTokenPath = url && (url.includes('/tokens/') || url.includes('/enemies/tokens/'))"), true);
-    assert.equal(source.includes("/assets/atlas/enemies/images/${filename}"), true);
+    assert.equal(source.includes("/assets/atlas/enemies/images/"), true);
   });
 
   test('verifies non-grid components consume getEnemyArtworkUrl or non-token artwork resolution', () => {

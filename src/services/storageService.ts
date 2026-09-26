@@ -1061,14 +1061,17 @@ export function normalizeImageUrl(url: string | undefined, category: string, ind
 
   // FORCE ENEMIES image resolution logic to separate portraits (images/) from grid tokens (tokens/)
   if (folder === 'enemies') {
-    const isTokenPath = url && (url.includes('/tokens/') || url.includes('/enemies/tokens/'));
-    if (!isTokenPath) {
-      const filename = ddbIndex + '.webp';
-      if (isLocalhost) {
-        finalUrl = `/assets/atlas/enemies/images/${filename}`;
-      } else {
-        finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
+    let filename = (ddbIndex || 'goblin') + '.webp';
+    if (url && url.includes('/enemies/images/')) {
+      const parts = url.split('/enemies/images/');
+      if (parts[1]) {
+        filename = parts[1].split('?')[0];
       }
+    }
+    if (isLocalhost) {
+      finalUrl = `/assets/atlas/enemies/images/${filename}`;
+    } else {
+      finalUrl = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/public/assets/atlas/enemies/images/${filename}`;
     }
   }
 
