@@ -197,3 +197,70 @@ test('selector source never reads legacy queue files', () => {
   assert.equal(source.includes("contents/ROADMAP.md"), false);
   assert.equal(source.includes("contents/docs/TASK_BOARD.md"), false);
 });
+
+test('executable selector stdout is strictly valid JSON even when Discovery persistence triggers diagnostics', async () => {
+  const { spawnSync } = await import('node:child_process');
+  const runnerScript = `
+    globalThis.fetch = async (url, options = {}) => {
+      const u = new URL(url);
+      if (u.pathname.endsWith('/issues')) {
+        if (options.method === 'POST') {
+          return new Response(JSON.stringify({ number: 345, title: '[Discovery] Report' }), { status: 201 });
+        }
+        const tick = String.fromCharCode(96);
+        const meta = [
+          '## Problem / Desired Outcome', 'Problem',
+          '## Goal', 'Goal',
+          '## Current Repository Facts', '- Fact',
+          '## Investigation Required', 'Investigation',
+          '## Canonical Ownership', 'Ownership',
+          '## Known Risks / Invariants', 'Risks',
+          '## Scope', '- Scope',
+          '## Acceptance Criteria', '1. Criterion',
+          '## Verification Plan', '- Verification',
+          '## Canonical References', '- ' + tick + 'AGENT.MD' + tick,
+          '## Out of Scope', 'Out of scope',
+          '## Jules Dispatch Metadata',
+          '- **status:** ready',
+          '- **priority:** 100',
+          '- **specialist:** architecture',
+          '- **depends-on:** none',
+          '- **dispatch-policy:** one issue at a time',
+          '- **implementation-branch:** required'
+        ].join('\\n');
+        return new Response(JSON.stringify([
+          { number: 1, title: 'Issue 1', body: meta, state: 'open' }
+        ]), { status: 200 });
+      }
+      if (u.pathname.endsWith('/pulls')) {
+        return new Response(JSON.stringify([]), { status: 200 });
+      }
+      if (u.pathname.includes('/contents/')) {
+        return new Response(JSON.stringify({ content: Buffer.from('mock content').toString('base64') }), { status: 200 });
+      }
+      return new Response(JSON.stringify({}), { status: 200 });
+    };
+
+    const scriptUrl = new URL('./scripts/jules-issue-selector.mjs', 'file://' + process.cwd() + '/');
+    process.argv[1] = scriptUrl.pathname;
+    await import(scriptUrl.href);
+  `;
+
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', runnerScript], {
+    env: {
+      ...process.env,
+      GITHUB_REPOSITORY: 'japiohopman/artificer',
+      GITHUB_TOKEN: 'mock-token'
+    },
+    encoding: 'utf8'
+  });
+
+  assert.equal(child.status, 0, 'Child process failed: ' + child.stderr);
+  assert.ok(child.stderr.includes('Low ready work detected'), 'Diagnostics must be sent to stderr');
+
+  let parsed;
+  assert.doesNotThrow(() => {
+    parsed = JSON.parse(child.stdout);
+  }, 'Selector stdout must be valid JSON');
+  assert.equal(parsed.persistedDiscoveryIssue?.number, 345);
+});

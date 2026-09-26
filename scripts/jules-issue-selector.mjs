@@ -255,13 +255,13 @@ async function main() {
   // Fail closed: if persistence fails, allow error to throw.
   let persistedDiscoveryIssue = null;
   if (decision.discovery?.triggered && decision.discovery?.audit?.discoveryIssue) {
-    console.log('Low ready work detected (readyIssues <= 2). Persisting Discovery Report Issue ...');
+    console.error('Low ready work detected (readyIssues <= 2). Persisting Discovery Report Issue ...');
     persistedDiscoveryIssue = await persistDiscoveryReportIssue(
       decision.discovery.audit.discoveryIssue,
       TOKEN,
       REPO
     );
-    console.log(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
+    console.error(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
   }
 
   if (!decision.selected) {
