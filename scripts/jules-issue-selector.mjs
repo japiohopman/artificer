@@ -91,6 +91,14 @@ export function selectDispatchableIssue(issues, options = {}) {
   const readyIssuesCount = candidates.length;
   const triggerDiscovery = shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount });
 
+  let discoveryAuditResult = null;
+  if (triggerDiscovery) {
+    discoveryAuditResult = executeDiscoveryAudit(issues, {
+      readyIssuesCount,
+      fileExistFn
+    });
+  }
+
   let selectedCandidate = null;
 
   for (const candidate of sortDispatchCandidates(candidates)) {
@@ -127,7 +135,8 @@ export function selectDispatchableIssue(issues, options = {}) {
     discovery: {
       triggered: triggerDiscovery,
       readyIssuesCount,
-      activeDiscoveryCount
+      activeDiscoveryCount,
+      audit: discoveryAuditResult
     }
   };
 }
@@ -243,21 +252,12 @@ async function main() {
   if (!decision.selected) {
     setOutput('dispatch', false);
 
-    // If discovery loop is triggered, execute discovery audit report
-    let discoveryOutput = null;
-    if (decision.discovery?.triggered) {
-      discoveryOutput = executeDiscoveryAudit(issues, {
-        readyIssuesCount: decision.discovery.readyIssuesCount
-      });
-    }
-
     console.log(JSON.stringify({
       dispatch: false,
       dispatchable: false,
       reason: 'No dispatchable Issue satisfies the Issue-first contract.',
       rejected: decision.rejected,
-      discovery: decision.discovery,
-      discoveryAudit: discoveryOutput
+      discovery: decision.discovery
     }, null, 2));
     return;
   }
