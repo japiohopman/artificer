@@ -6,7 +6,8 @@ import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/invent
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
 import { resolveVisualIdentity } from '../src/lib/inventoryVisuals/visualIdentity';
 import { getSpriteCellForVisual } from '../src/lib/inventoryVisuals/spriteManifest';
-import { evaluateSlotCompatibility } from '../src/lib/equipmentCompatibility';
+import { evaluateSlotCompatibility, doesWeaponRequireAmmo } from '../src/lib/equipmentCompatibility';
+import { EQUIPMENT_SLOT_CATALOG } from '../src/types/inventory';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -652,6 +653,33 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     expect(backpack?.slots[0].itemId).toBe('longsword_1');
   });
 
+  it('verifies canonical EQUIPMENT_SLOT_CATALOG quick slots accept only consumables and do not advertise weapons or tools', () => {
+    const quickSlotCatalogEntries = EQUIPMENT_SLOT_CATALOG.filter(entry => entry.id.startsWith('quick_'));
+    expect(quickSlotCatalogEntries.length).toBe(4);
+    quickSlotCatalogEntries.forEach(entry => {
+      expect(entry.accepts.kinds).toEqual(['consumable']);
+      expect(entry.accepts.kinds).not.toContain('weapon');
+      expect(entry.accepts.kinds).not.toContain('tool');
+    });
+  });
+
+  it('verifies doesWeaponRequireAmmo pure domain helper', () => {
+    const bow = { template: 'shortbow', kind: 'weapon', properties: [{ index: 'ammunition' }] };
+    const crossbow = { template: 'light-crossbow', kind: 'weapon', properties: [{ index: 'ammunition' }] };
+    const sword = { template: 'longsword', kind: 'weapon', properties: [{ index: 'versatile' }] };
+    const dart = { template: 'dart', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'thrown' }] };
+    const net = { template: 'net', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'thrown' }] };
+    const potion = { template: 'potion-of-healing', kind: 'consumable' };
+
+    expect(doesWeaponRequireAmmo(bow)).toBe(true);
+    expect(doesWeaponRequireAmmo(crossbow)).toBe(true);
+    expect(doesWeaponRequireAmmo(sword)).toBe(false);
+    expect(doesWeaponRequireAmmo(dart)).toBe(false);
+    expect(doesWeaponRequireAmmo(net)).toBe(false);
+    expect(doesWeaponRequireAmmo(potion)).toBe(false);
+    expect(doesWeaponRequireAmmo(null)).toBe(false);
+  });
+
   it('rejects ordinary adventure gear in quick and extra slots', () => {
     const rope = { id: 'rope_1', template: 'hempen-rope-50-ft', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
     const torch = { id: 'torch_1', template: 'torch', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
@@ -717,7 +745,7 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const crossbowWeapon = { id: 'xbow_1', template: 'light-crossbow', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'ammunition' }] };
     const swordWeapon = { id: 'sword_1', template: 'longsword', kind: 'weapon', weapon_range: 'Melee' };
     const dartWeapon = { id: 'dart_1', template: 'dart', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'finesse' }, { index: 'thrown' }] };
-    const netWeapon = { id: 'net_1', template: 'net', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'special' }, { index: 'thrown' }] };
+    const netWeapon = { id: 'net_1', template: 'net', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'thrown' }] };
 
     // 1. No main-hand weapon equipped -> ammunition INVALID
     expect(evaluateSlotCompatibility(arrow, 'ammo', {})).toBe('INVALID');

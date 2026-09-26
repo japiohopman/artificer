@@ -6,7 +6,7 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipment } from '../../../lib/equipmentCompatibility';
+import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipment, doesWeaponRequireAmmo } from '../../../lib/equipmentCompatibility';
 import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
@@ -218,15 +218,9 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     ammo: getSlotItem('ammo')
   };
 
+  const activeChar = useCharacterStore((state) => state.characters.find(c => c.id === state.activeCharacterId) || state.characters[0]);
   const mainHandItem = allEquipped.main_hand;
-  const mainMeta = mainHandItem ? resolveItemMetadata(mainHandItem) : null;
-  const requiresAmmo = Boolean(
-    mainMeta && (
-      (mainMeta.weapon_range === 'Ranged' && mainMeta.properties?.some((p: any) => (p.index || p.name || p).toString().toLowerCase() === 'ammunition')) ||
-      (mainMeta.equipment_category?.index === 'ammunition' || mainMeta.equipment_category === 'Ammunition') ||
-      ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].includes((mainMeta.index || mainMeta.template || '').toLowerCase())
-    )
-  );
+  const requiresAmmo = doesWeaponRequireAmmo(mainHandItem, activeChar?.ruleset);
 
   const renderSlot = (slot: EquipmentSlotId) => (
     <EquipmentDollSlot

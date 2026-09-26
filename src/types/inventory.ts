@@ -100,10 +100,11 @@ export const EQUIPMENT_SLOT_CATALOG = [
   { id: 'acc_2', label: 'Accessory 2', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
   { id: 'acc_3', label: 'Accessory 3', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
   { id: 'acc_4', label: 'Accessory 4', accepts: { kinds: ['trinket', 'adventuring_gear'] } as SlotAcceptanceRules },
-  { id: 'quick_1', label: 'Quick 1', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
-  { id: 'quick_2', label: 'Quick 2', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
-  { id: 'quick_3', label: 'Quick 3', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
-  { id: 'quick_4', label: 'Quick 4', accepts: { kinds: ['consumable', 'weapon', 'tool'] } as SlotAcceptanceRules },
+  { id: 'extra', label: 'Extra', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules },
+  { id: 'quick_1', label: 'Quick 1', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules },
+  { id: 'quick_2', label: 'Quick 2', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules },
+  { id: 'quick_3', label: 'Quick 3', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules },
+  { id: 'quick_4', label: 'Quick 4', accepts: { kinds: ['consumable'] } as SlotAcceptanceRules },
 ] as const;
 
 export type EquipmentSlotId = (typeof EQUIPMENT_SLOT_CATALOG)[number]['id'];

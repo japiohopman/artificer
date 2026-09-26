@@ -17,6 +17,27 @@ export function resolveItemMetadata(item: any, ruleset?: '2014' | '2024'): any {
 }
 
 /**
+ * Pure domain helper that checks if a weapon item explicitly requires ammunition.
+ */
+export function doesWeaponRequireAmmo(item: any, ruleset?: '2014' | '2024'): boolean {
+  if (!item) return false;
+  const meta = resolveItemMetadata(item, ruleset);
+  if (!meta) return false;
+
+  const kind = (meta.kind || meta._type || meta.type || '').toLowerCase();
+  const weaponCat = (meta.weapon_category || '').toLowerCase();
+  const category = (meta.equipment_category?.index || meta.category || '').toLowerCase();
+  const isWeapon = kind === 'weapon' || Boolean(weaponCat) || category.includes('weapon');
+
+  if (!isWeapon) return false;
+
+  const props = (meta.properties || []).map((p: any) => (p.index || p.name || p).toString().toLowerCase());
+  const index = (meta.index || meta.template || meta.id || '').toLowerCase();
+
+  return props.includes('ammunition') || ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].some(w => index.includes(w));
+}
+
+/**
  * Evaluates compatibility between an item instance and a target equipment slot or ammunition slot.
  */
 export function evaluateSlotCompatibility(
@@ -46,23 +67,10 @@ export function evaluateSlotCompatibility(
 
     // Ammunition is contextual: invalid if no main-hand weapon requiring ammunition is equipped
     const mainHandItem = equippedItems.main_hand;
-    if (!mainHandItem) return 'INVALID';
+    if (!mainHandItem || !doesWeaponRequireAmmo(mainHandItem, ruleset)) return 'INVALID';
 
     const mainMeta = resolveItemMetadata(mainHandItem, ruleset);
-    if (!mainMeta) return 'INVALID';
-
-    const mainKind = (mainMeta.kind || mainMeta._type || mainMeta.type || '').toLowerCase();
-    const mainWeaponCat = (mainMeta.weapon_category || '').toLowerCase();
-    const mainCategory = (mainMeta.equipment_category?.index || mainMeta.category || '').toLowerCase();
-    const mainIsWeapon = mainKind === 'weapon' || Boolean(mainWeaponCat) || mainCategory.includes('weapon');
-
-    if (!mainIsWeapon) return 'INVALID';
-
-    const mainProps = (mainMeta.properties || []).map((p: any) => (p.index || p.name || p).toString().toLowerCase());
-    const mainIndex = (mainMeta.index || mainMeta.template || mainMeta.id || '').toLowerCase();
-
-    const mainRequiresAmmo = mainProps.includes('ammunition') || ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].some(w => mainIndex.includes(w));
-    if (!mainRequiresAmmo) return 'INVALID';
+    const mainIndex = (mainMeta?.index || mainMeta?.template || mainMeta?.id || '').toLowerCase();
 
     const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');
     const isCrossbow = mainIndex.includes('crossbow');

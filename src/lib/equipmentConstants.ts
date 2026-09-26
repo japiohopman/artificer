@@ -1,13 +1,7 @@
 import { GameIconName } from '../game_icons';
+import { EquipmentSlotId as InventoryEquipmentSlotId } from '../types/inventory';
 
-export type EquipmentSlotId = 
-  | 'head' | 'neck' | 'chest' | 'back' 
-  | 'main_hand' | 'off_hand' | 'hands' | 'feet' 
-  | 'ring_1' | 'ring_2' | 'focus'
-  | 'clothes' | 'acc_1' | 'acc_2' | 'acc_3' | 'acc_4'
-  | 'tool_1' | 'tool_2' | 'tool_3' | 'tool_4' | 'tool_5'
-  | 'extra' | 'ammo'
-  | 'quick_1' | 'quick_2' | 'quick_3' | 'quick_4';
+export type EquipmentSlotId = InventoryEquipmentSlotId;
 
 export interface SlotDefinition {
   id: EquipmentSlotId;
@@ -27,6 +21,9 @@ export const EQUIPMENT_SLOTS: Record<EquipmentSlotId, SlotDefinition> = {
   'ring_1': { id: 'ring_1', label: 'R1', gameIcon: 'ring' },
   'ring_2': { id: 'ring_2', label: 'R2', gameIcon: 'ring' },
   'focus': { id: 'focus', label: 'Focus', gameIcon: 'focus' },
+  'belt': { id: 'belt', label: 'Belt', gameIcon: 'belt' },
+  'pouch': { id: 'pouch', label: 'Pouch', gameIcon: 'pouch' },
+  'ranged': { id: 'ranged', label: 'Ranged', gameIcon: 'weapon' },
   'clothes': { id: 'clothes', label: 'Cloth', gameIcon: 'shirt' },
   'acc_1': { id: 'acc_1', label: 'Acc 1', gameIcon: 'gem' },
   'acc_2': { id: 'acc_2', label: 'Acc 2', gameIcon: 'gem' },
