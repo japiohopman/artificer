@@ -1,5 +1,5 @@
 import { existsSync, readFileSync } from 'node:fs';
-import { extractSection } from './jules-issue-validator.mjs';
+import { extractSection, validateIssueQualityGate } from './jules-issue-validator.mjs';
 
 /**
  * Required sections for a Discovery Report contract.
@@ -59,7 +59,7 @@ export function isDiscoveryIssue(issue) {
 /**
  * Formats a proposed candidate follow-up Issue text resulting from discovery findings.
  * Crucial invariant: candidate Issues produced by discovery must ALWAYS begin as status: proposed.
- * Candidate Issues are implementation Issues, not Discovery Issues themselves.
+ * Candidate Issues are embedded within the Discovery Report artifact until human review promotes them.
  *
  * @param {object} candidate
  * @returns {string}
@@ -195,19 +195,20 @@ export function validateDiscoveryReport(body) {
 }
 
 /**
- * Executes an evidence-backed discovery audit when low-ready-work conditions are met.
- * Audits repository infrastructure, open issues, and workflow contracts.
- * Produces an evidence-backed Discovery Report and proposed candidate follow-up Issues (`status: proposed`).
+ * Executes a deep, evidence-backed discovery audit when low-ready-work conditions are met.
+ * Audits repository contracts, open issues, quality gate compliance, and file references.
+ * Produces a canonical Discovery Report artifact ([Discovery] Repository Evidence Audit Report, label: discovery).
+ * Candidate follow-up Issues are embedded in the Discovery Report as proposed (status: proposed).
  * Discovery NEVER dispatches implementation work directly.
  *
  * @param {object[]} openIssues - List of currently open GitHub issues.
  * @param {object} options - Optional audit options.
- * @returns {{ executed: boolean, discoveryIssue: object | null, candidateIssues: string[], reason: string }}
+ * @returns {{ executed: boolean, report: string | null, discoveryIssue: object | null, candidateIssues: string[], reason: string }}
  */
 export function executeDiscoveryAudit(openIssues = [], options = {}) {
   const isDiscovery = options.isDiscoveryIssueFn || isDiscoveryIssue;
-  const fileExistsFn = options.fileExistFn || existsSync;
-  const readFileFn = options.readFileFn || (p => existsSync(p) ? readFileSync(p, 'utf8') : null);
+  const fileExistFn = options.fileExistFn || options.fileExistsFn || existsSync;
+  const readFileFn = options.readFileFn || (p => fileExistFn(p) ? readFileSync(p, 'utf8') : null);
 
   const activeDiscoveryCount = openIssues.filter(isDiscovery).length;
   const readyIssuesCount = options.readyIssuesCount ?? 0;
@@ -215,6 +216,7 @@ export function executeDiscoveryAudit(openIssues = [], options = {}) {
   if (!shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount })) {
     return {
       executed: false,
+      report: null,
       discoveryIssue: null,
       candidateIssues: [],
       reason: 'Discovery trigger conditions not met.'
@@ -226,98 +228,92 @@ export function executeDiscoveryAudit(openIssues = [], options = {}) {
   const candidateIssuesFormatted = [];
   const rejectedItems = [];
 
-  // 1. Audit core workflow files and contracts
-  const coreFiles = [
-    'docs/WORKFLOW.md',
-    'docs/PHASE_SAFETY_GATE.md',
-    'AGENT.MD',
-    'AGENT_RULES.md',
-    'scripts/jules-issue-validator.mjs',
-    'scripts/jules-discovery-loop.mjs',
-    'scripts/jules-issue-selector.mjs'
+  // 1. Content-level audit of core workflow documents for contract consistency
+  const canonicalDocs = [
+    { path: 'docs/WORKFLOW.md', requiredTerm: 'Issue Quality Contract v2' },
+    { path: 'docs/PHASE_SAFETY_GATE.md', requiredTerm: 'Issue Quality Gate' },
+    { path: 'AGENT.MD', requiredTerm: 'Inspect before implementing' },
+    { path: 'AGENT_RULES.md', requiredTerm: 'Inspect before implementing' }
   ];
 
-  for (const filePath of coreFiles) {
-    if (fileExistsFn(filePath)) {
-      const content = readFileFn(filePath);
-      const lineCount = content ? content.split('\n').length : 0;
-      evidenceItems.push(`- Verified canonical file \`${filePath}\` exists (${lineCount} lines).`);
+  for (const doc of canonicalDocs) {
+    if (fileExistFn(doc.path)) {
+      const content = readFileFn(doc.path) || '';
+      if (!content.includes(doc.requiredTerm)) {
+        findingItems.push(`Contract drift in \`${doc.path}\`: missing required term "${doc.requiredTerm}".`);
+        evidenceItems.push(`- Inspected \`${doc.path}\`: text does not contain "${doc.requiredTerm}".`);
+
+        candidateIssuesFormatted.push(formatCandidateFollowUpIssue({
+          problem: `Contract drift detected in \`${doc.path}\`: missing mandatory term "${doc.requiredTerm}".`,
+          goal: `Synchronize \`${doc.path}\` with canonical workflow requirements.`,
+          facts: `- \`${doc.path}\` exists on disk.\n- Content inspection confirmed missing term "${doc.requiredTerm}".`,
+          investigation: `Review \`${doc.path}\` and update text to include mandatory contract requirements.`,
+          ownership: 'Architecture specialist owns workflow documentation.',
+          risks: 'Low risk documentation update.',
+          scope: `- \`${doc.path}\``,
+          acceptance: `1. \`${doc.path}\` includes "${doc.requiredTerm}".\n2. Documentation consistency verified.`,
+          verification: '- `npm run test:workflow`',
+          references: ['docs/WORKFLOW.md', doc.path],
+          outOfScope: 'Refactoring unrelated files.',
+          priority: 45,
+          specialist: 'architecture'
+        }));
+      } else {
+        evidenceItems.push(`- Verified \`${doc.path}\` contains mandatory contract marker "${doc.requiredTerm}".`);
+      }
     } else {
-      evidenceItems.push(`- Missing canonical file \`${filePath}\`.`);
-      findingItems.push(`Canonical reference file \`${filePath}\` is missing from disk.`);
+      evidenceItems.push(`- Missing file \`${doc.path}\`.`);
+      findingItems.push(`Canonical file \`${doc.path}\` is missing from repository.`);
     }
   }
 
-  // 2. Audit specialist agent contracts
-  const specialistAgents = [
-    'architecture',
-    'ruleset-data',
-    'ui',
-    'assets',
-    'gameplay',
-    'verification'
-  ];
+  // 2. Deep audit of open GitHub issues against Quality Gate v2
+  const openNonDiscoveryIssues = openIssues.filter(i => !isDiscovery(i));
+  let invalidQualityIssuesCount = 0;
 
-  let existingSpecialists = 0;
-  for (const name of specialistAgents) {
-    const sPath = `.github/agents/${name}-specialist.agent.md`;
-    if (fileExistsFn(sPath)) {
-      existingSpecialists += 1;
-    } else {
-      findingItems.push(`Missing specialist contract \`${sPath}\`.`);
+  for (const issue of openNonDiscoveryIssues) {
+    const validation = validateIssueQualityGate(issue.body || '', { fileExistFn });
+    const isProposed = (issue.body || '').includes('status: proposed') || (issue.body || '').includes('**status:** proposed');
+
+    if (!validation.valid && !isProposed) {
+      invalidQualityIssuesCount += 1;
+      findingItems.push(`Issue #${issue.number} ("${issue.title}") fails Quality Gate v2: ${validation.errors.join('; ')}.`);
+      evidenceItems.push(`- Issue #${issue.number} quality gate check failed: ${validation.errors.length} error(s).`);
+
+      candidateIssuesFormatted.push(formatCandidateFollowUpIssue({
+        problem: `Open Issue #${issue.number} ("${issue.title}") fails Quality Gate v2 validation.`,
+        goal: `Remediate contract errors in Issue #${issue.number} so it satisfies Quality Gate v2.`,
+        facts: `- Issue #${issue.number} fails validation with errors: ${validation.errors.join('; ')}.`,
+        investigation: `Inspect body of Issue #${issue.number} and update missing or malformed sections.`,
+        ownership: 'Architecture specialist owns issue quality contracts.',
+        risks: 'Low risk issue contract fix.',
+        scope: `- Issue #${issue.number}`,
+        acceptance: `1. Issue #${issue.number} passes Quality Gate v2 validation.`,
+        verification: '- `npm run test:workflow`',
+        references: ['docs/WORKFLOW.md', 'scripts/jules-issue-validator.mjs'],
+        outOfScope: 'Dispatches or implementation changes.',
+        priority: 50,
+        specialist: 'architecture'
+      }));
     }
   }
-  evidenceItems.push(`- Specialist agent contracts: ${existingSpecialists}/${specialistAgents.length} present under \`.github/agents/\`.`);
 
-  // 3. Audit open issues for proposed issues or contract gaps
-  const proposedIssues = openIssues.filter(i => {
-    const body = i.body || '';
-    return body.includes('**status:** proposed') || body.includes('status: proposed');
-  });
+  evidenceItems.push(`- Audited ${openNonDiscoveryIssues.length} open implementation issues; ${invalidQualityIssuesCount} failed Quality Gate v2.`);
 
-  evidenceItems.push(`- Open GitHub issues count: ${openIssues.length} (Ready: ${readyIssuesCount}, Proposed: ${proposedIssues.length}, Discovery: ${activeDiscoveryCount}).`);
+  rejectedItems.push('- Discarded unverified suggestions lacking concrete file path or issue number evidence.');
 
-  if (proposedIssues.length > 0) {
-    findingItems.push(`Found ${proposedIssues.length} open proposed candidate issue(s) awaiting human validation.`);
-    for (const pIssue of proposedIssues) {
-      evidenceItems.push(`- Proposed candidate issue #${pIssue.number}: "${pIssue.title}".`);
-    }
-  } else {
-    // Generate a proposed candidate issue for routine workflow coverage check if no proposed issues exist
-    const candidateBody = formatCandidateFollowUpIssue({
-      problem: 'Workflow telemetry and discovery coverage requires routine verification test updates.',
-      goal: 'Audit and maintain workflow test coverage for discovery and quality gates.',
-      facts: '- `scripts/jules-discovery-loop.mjs` and `scripts/jules-issue-validator.mjs` are verified.\n- Workflow test suite `npm run test:workflow` runs 61 subtests.',
-      investigation: 'Audit test suite coverage for newly introduced discovery loop telemetry.',
-      ownership: 'Verification specialist owns workflow test coverage.',
-      risks: 'Low risk maintenance task.',
-      scope: '- `scripts/jules-discovery-loop.test.mjs`\n- `scripts/jules-issue-validator.test.mjs`',
-      acceptance: '1. Workflow tests pass clean.\n2. Discovery audit findings remain non-dispatchable as proposed.',
-      verification: '- `npm run test:workflow`',
-      references: ['docs/WORKFLOW.md', 'scripts/jules-discovery-loop.mjs'],
-      outOfScope: 'Modifying core dispatcher logic.',
-      priority: 30,
-      specialist: 'verification'
-    });
-    candidateIssuesFormatted.push(candidateBody);
-  }
-
-  rejectedItems.push('- Discarded non-actionable suggestions without concrete file path evidence.');
-
-  // 4. Format canonical Discovery Report
+  // 3. Format canonical Discovery Report
   const reportBody = formatDiscoveryReport({
-    goal: 'Audit repository infrastructure, specialist contracts, and issue queue evidence.',
-    investigation: `Executed evidence-backed discovery audit across ${coreFiles.length} canonical files and ${openIssues.length} open issues.`,
+    goal: 'Audit repository infrastructure, documentation contracts, and issue queue evidence.',
+    investigation: `Executed deep evidence-backed discovery audit across ${canonicalDocs.length} core files and ${openIssues.length} open issues.`,
     evidence: evidenceItems.join('\n'),
     findings: findingItems.length > 0
       ? findingItems.map(f => '- ' + f).join('\n')
-      : '- Repository workflow infrastructure and contracts are intact.',
-    risk: 'Discovery loop creates proposed candidates only; direct implementation dispatch is strictly forbidden.',
+      : '- All inspected workflow files and open issues satisfy canonical contracts.',
+    risk: 'Discovery report acts as the single persistent discovery artifact. Proposed candidate issues remain embedded as status: proposed until human review.',
     candidates: candidateIssuesFormatted.length > 0
-      ? candidateIssuesFormatted.map((c, i) => `### Candidate ${i + 1}\n\`\`\`markdown\n${c}\n\`\`\``).join('\n\n')
-      : proposedIssues.length > 0
-        ? proposedIssues.map(p => `- Proposed Issue #${p.number}: "${p.title}"`).join('\n')
-        : '- No new candidate issues required.',
+      ? candidateIssuesFormatted.map((c, i) => `### Candidate Follow-up Issue ${i + 1}\n\`\`\`markdown\n${c}\n\`\`\``).join('\n\n')
+      : '- No contract drift or quality defects found; no candidate follow-up issues required.',
     rejected: rejectedItems.join('\n')
   });
 
@@ -329,8 +325,9 @@ export function executeDiscoveryAudit(openIssues = [], options = {}) {
 
   return {
     executed: true,
+    report: reportBody,
     discoveryIssue,
     candidateIssues: candidateIssuesFormatted,
-    reason: 'Evidence-backed discovery loop executed successfully.'
+    reason: 'Deep evidence-backed discovery audit completed successfully.'
   };
 }
