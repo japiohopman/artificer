@@ -46,9 +46,11 @@ describe('World Context Window Architecture & Boundaries (#355)', () => {
     expect(source).not.toContain('<MapLegend');
   });
 
-  it('verifies 4 Root Structure sections are documented and implemented in WorldPanel.tsx', () => {
+  it('verifies 4 Root Structure sections are documented and implemented in WorldPanel.tsx and subcomponents', () => {
     const worldPanelPath = path.join(__dirname, '../src/components/hud/WorldPanel.tsx');
+    const activeContextPath = path.join(__dirname, '../src/components/hud/world/ActiveContextPanel.tsx');
     const source = fs.readFileSync(worldPanelPath, 'utf8');
+    const activeSource = fs.readFileSync(activeContextPath, 'utf8');
 
     // 1. World Context
     expect(source).toContain('WORLD CONTEXT');
@@ -60,7 +62,8 @@ describe('World Context Window Architecture & Boundaries (#355)', () => {
 
     // 3. Active Context
     expect(source).toContain('ACTIVE CONTEXT');
-    expect(source).toContain('Active_Threats');
+    expect(source).toContain('ActiveContextPanel');
+    expect(activeSource).toContain('Active_Threats');
 
     // 4. Interaction / Resolution Context
     expect(source).toContain('INTERACTION / RESOLUTION CONTEXT');
@@ -124,8 +127,8 @@ describe('World Context Window Architecture & Boundaries (#355)', () => {
   });
 
   it('verifies missing canonical data fallback message is explicit and contains no fabricated lore/stats', () => {
-    const worldPanelPath = path.join(__dirname, '../src/components/hud/WorldPanel.tsx');
-    const source = fs.readFileSync(worldPanelPath, 'utf8');
+    const activeContextPath = path.join(__dirname, '../src/components/hud/world/ActiveContextPanel.tsx');
+    const source = fs.readFileSync(activeContextPath, 'utf8');
 
     // Checks that fallback description for missing canonical records is explicit
     expect(source).toContain('Unknown location - missing canonical Atlas record.');

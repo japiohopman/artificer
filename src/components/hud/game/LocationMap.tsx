@@ -234,7 +234,75 @@ export const LocationMap: React.FC = () => {
         })}
       </MapContainer>
 
-      {/* Local HUD Controls removed from map overlay to avoid obscuring map views */}
+      {/* Collapsible Local Topography & Layer Controls Overlay */}
+      {(allCategories.length > 0 || currentLocation?.sub_location_files?.some((f: string) => f.includes('sewers'))) && (
+        <div className="absolute top-4 left-4 z-[1000] bg-stone-950/90 border border-dragon-gold/40 rounded-md p-2.5 shadow-2xl backdrop-blur-sm max-w-xs text-white">
+          <div className="flex items-center justify-between border-b border-white/10 pb-1.5 mb-2">
+            <div className="flex items-center gap-1.5">
+              <GameIcon name="city" size={14} color="#D4AF37" />
+              <span className="text-[10px] font-black uppercase text-dragon-gold tracking-widest">Local Topography</span>
+            </div>
+          </div>
+
+          {/* Map Layer Toggles */}
+          {currentLocation?.sub_location_files?.some((f: string) => f.includes('sewers')) && (
+            <div className="mb-2 space-y-1">
+              <span className="text-[8px] font-black text-dragon-gold/70 uppercase tracking-wider block">Layer</span>
+              <div className="flex gap-1.5">
+                <button
+                  onClick={() => setActiveLayer(null)}
+                  className={cn(
+                    "flex-1 py-1 text-[9px] font-bold uppercase rounded border transition-all",
+                    !activeLayer ? "bg-dragon-gold text-stone-950 border-dragon-gold font-black" : "bg-black/40 text-white/60 border-white/10 hover:text-white"
+                  )}
+                >
+                  Surface
+                </button>
+                <button
+                  onClick={() => {
+                    const sewerMap = (currentLocation?.map || '').replace('.webp', '_sewers.webp');
+                    setActiveLayer(sewerMap);
+                  }}
+                  className={cn(
+                    "flex-1 py-1 text-[9px] font-bold uppercase rounded border transition-all",
+                    activeLayer ? "bg-dragon-gold text-stone-950 border-dragon-gold font-black" : "bg-black/40 text-white/60 border-white/10 hover:text-white"
+                  )}
+                >
+                  Sewers
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Category Filters */}
+          {allCategories.length > 0 && (
+            <div className="space-y-1">
+              <span className="text-[8px] font-black text-dragon-gold/70 uppercase tracking-wider block">Categories</span>
+              <div className="space-y-1 max-h-36 overflow-y-auto custom-scrollbar pr-1">
+                {allCategories.map((cat) => {
+                  const isActive = activeCategories.includes(cat);
+                  const label = cat.replace(/_/g, ' ').replace('.json', '');
+                  return (
+                    <button
+                      key={cat}
+                      onClick={() => {
+                        setActiveCategories(isActive ? activeCategories.filter(c => c !== cat) : [...activeCategories, cat]);
+                      }}
+                      className={cn(
+                        "w-full flex items-center justify-between px-2 py-1 rounded text-[9px] font-black uppercase transition-all",
+                        isActive ? "bg-dragon-red text-white" : "bg-black/30 text-white/50 hover:bg-black/50 hover:text-white"
+                      )}
+                    >
+                      <span className="truncate">{label}</span>
+                      <div className={cn("w-1.5 h-1.5 rounded-full", isActive ? "bg-dragon-gold" : "bg-white/20")} />
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
