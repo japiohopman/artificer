@@ -11,7 +11,7 @@
 
 ## Migration & Audit Matrix
 
-Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been audited and classified below into explicit completed historical PRs, active GitHub Issues (#300, #301, #302, etc.), or superseded architecture to prevent any silent scope loss:
+Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been audited and classified below into explicit completed historical PRs, active GitHub Issues (#300, #301, #302), or unscheduled strategic concepts to prevent any silent scope loss:
 
 ### 1. Legacy `priority1.md` Detailed Scope Breakdown
 
@@ -19,10 +19,10 @@ Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md`
 
 - **Part 1 — Inventory & Equipment Visual Asset Foundation:**
   - *Scope:* Migrated runtime inventory sprite rendering from legacy `equipmentSpriteMap.ts` to `src/lib/inventoryVisuals/`, added cell crop derivation for 4x7 sheets, and established sprite manifest mapping.
-  - *Disposition:* **Completed Historical Scope** — Merged in **PR #265** and **PR #280**.
+  - *Disposition:* **Completed Historical Scope** — Merged in **PR #265** (`Establish Inventory Sprite Asset Foundation v1`).
 - **Part 2 — Premium RPG Drag & Drop Interaction Pass & Workspace UX:**
   - *Scope:* Upgraded `@dnd-kit` drag previews (`InventoryDragPreview.tsx`), hover slot highlights, slot compatibility feedback, and full equipment workspace interactions.
-  - *Disposition:* **Active Follow-up Scope** — Governed by open active GitHub Issues **Issue #300** (FullInventoryMenu workspace interactions), **Issue #301** (Equipment Workspace UI polish & slot feedback), and **Issue #302** (Equipment Doll paper-doll interactions).
+  - *Disposition:* **Active Follow-up Scope** — Foundation merged in `src/components/character/inventory/` and `src/components/character/equipment/`; active follow-up workspace and interaction items are governed by open GitHub Issues **Issue #300** (Inventory & Equipment Workspace interaction overhaul), **Issue #301** (Equipment workspace UI/visual architecture), and **Issue #302** (Equipment Sprite Sheet & Visual System Contract).
 
 ---
 
@@ -30,19 +30,19 @@ Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md`
 
 | Legacy Task Item | Original Domain | Historical Audit & Disposition |
 | :--- | :--- | :--- |
-| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Active Scope / Backlog Issue** — Tracked under **Issue #300** / Character Creation starting equipment flow; prioritized in `ROADMAP.md`. |
-| **Point Buy Calculator** | Character Creation | **Active Scope / Backlog Issue** — Tracked under Character Creator **Issue #301** (Standard 27-point-buy calculator in `StatsStep.tsx`). |
-| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Active Scope / Backlog Issue** — Tracked under **Issue #302** / Spells step filters and spell slot tracking. |
-| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Active Scope / Backlog Issue** — Tracked under Level Up & Character Creation Feat progression issues. |
-| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Active Scope / Backlog Issue** — Tracked under Level Up progression issues. |
-| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Active Scope / Backlog Issue** — Tracked under 3D Dice / Stat generation issues. |
-| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Active Scope / Backlog Issue** — Tracked under Equipment Pack inspection issues in `FocusView`. |
-| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Active Scope / Backlog Issue** — Tracked under Narrative & Recruitable NPC passport issues. |
-| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Active Scope / Backlog Issue** — Tracked under Narrative AI / Memory issues. |
-| **Economic & Trade Module** | Runtime / World Systems | **Strategic Backlog Focus** — Parked in `ROADMAP.md` under long-term world simulation goals. |
-| **Soundscape Orchestrator** | Audio Systems | **Strategic Backlog Focus** — Parked in `ROADMAP.md` under long-term audio system goals. |
-| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Active Scope / Backlog Issue** — Tracked under Tactical Combat Engine & Condition tracking issues. |
-| **Journal / DM / LM Integration** | Narrative AI / Systems | **Active Scope / Backlog Issue** — Tracked under AI DM tool-call & Journal context issues. |
+| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for class/background gear eligibility; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Point Buy Calculator** | Character Creation | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for standard 27-point-buy calculator in `StatsStep.tsx`; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for spell filtering and slot management; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for level 4/8/12/16/19 ASI vs Feat selection flow; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for hit die rolling/averaging on level up; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for 3D dice rolls during stat generation; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Retired / Unscheduled Strategic Concept** — Unscheduled UI feature concept for equipment pack inspection modal; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Retired / Unscheduled Strategic Concept** — Unscheduled gameplay concept for sharing canonical `CharacterProfile` primitives with recruits; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Retired / Unscheduled Strategic Concept** — Unscheduled AI DM concept for tracking NPC sentiment/history; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Economic & Trade Module** | Runtime / World Systems | **Retired / Unscheduled Strategic Concept** — Long-term world simulation concept for regional pricing; listed in `ROADMAP.md` under *Later — parked until Now is clear*; no active execution Issue. |
+| **Soundscape Orchestrator** | Audio Systems | **Retired / Unscheduled Strategic Concept** — Long-term audio system concept for adaptive ambient soundscapes; listed in `ROADMAP.md` under *Later — parked until Now is clear*; no active execution Issue. |
+| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Retired / Unscheduled Strategic Concept** — Unscheduled combat engine concept for D&D condition tracking (Poisoned, Prone, Stunned); kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Journal / DM / LM Integration** | Narrative AI / Systems | **Retired / Unscheduled Strategic Concept** — Unscheduled AI DM concept for passing structured narrative character state to LLM prompts; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
 | **Spawn / Entry Point Placement** | World & Location Flow | **Completed / Superseded** — Implemented in `BattleMapEditor` (`src/components/devkit/BattleMapEditor/`) and map loading adapters. |
 | **HUD Responsibility Cleanup** | UI Architecture | **Completed / Superseded** — Refactored during `CharacterPanel` mirror migration (`src/components/character/panel/`). |
 | **WorldMap / LocationMap Specialization** | World Systems | **Completed / Superseded** — Decoupled macro world view (`WorldPanel.tsx`) from micro tactical combat grid (`CombatGrid.tsx`). |
