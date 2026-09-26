@@ -47,7 +47,9 @@ export const ActiveContextPanel: React.FC<ActiveContextPanelProps> = ({ displayL
             {combatState.monsters.map((monster) => {
               const hpPercent = (monster.hp / monster.maxHp) * 100;
               const barColor = hpPercent < 30 ? "bg-red-600" : "bg-green-600 animate-pulse";
-              const speedText = monster.speed ? (typeof monster.speed === 'object' ? ((monster.speed as any).walk || '30 ft') : `${(monster.speed as any) * 5} ft`) : '30 ft';
+              const speedText = monster.speed
+                ? (typeof monster.speed === 'object' ? ((monster.speed as any).walk || '—') : `${(monster.speed as any) * 5} ft`)
+                : '—';
 
               return (
                 <button
@@ -82,14 +84,14 @@ export const ActiveContextPanel: React.FC<ActiveContextPanelProps> = ({ displayL
                         {monster.name}
                       </p>
                       <span className="text-[8px] font-bold text-stone-500 whitespace-nowrap uppercase">
-                        CR {(monster as any).challenge_rating ?? '0'}
+                        CR {(monster as any).challenge_rating ?? '—'}
                       </span>
                     </div>
                     <div className="text-[8px] font-black uppercase text-stone-500/80 tracking-wide flex flex-wrap gap-x-2 gap-y-0.5">
                       <span>HP: {monster.hp}/{monster.maxHp}</span>
-                      <span>AC: {monster.armor_class ?? '10'}</span>
+                      <span>AC: {monster.armor_class ?? '—'}</span>
                       <span>Speed: {speedText}</span>
-                      <span className="text-dragon-red/70">{monster.type ?? 'Monster'}</span>
+                      <span className="text-dragon-red/70">{monster.type ?? '—'}</span>
                     </div>
                   </div>
                 </button>

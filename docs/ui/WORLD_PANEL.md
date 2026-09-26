@@ -59,7 +59,7 @@ The root World Context and Party Presence remain visible while the Active Contex
 - **Canonical Owners:** `useWorldStore` (location/submap context), `useGameStore` (combat threats), Atlas services.
 - **Responsibilities:** Summarizes the currently relevant focal entity or situation.
   - **Combat Context:** Summarizes active threat tokens (`combatState.monsters`) with HP bars, AC, speed, and CR without duplicating tactical combat actions or grid targeting.
-  - **Topography Context:** Displays submap categories, surface vs. sewer layer toggles, and location legend filters.
+  - **Topography Summary:** Summarizes local spatial context. Map layer toggles (e.g., surface vs. sewer) and category legend filters are owned directly by map presentation (`LocationMap.tsx`).
   - **Domain Context:** Renders canonical Atlas location lore and structured metadata schema fields (history, government, ruler, economy, religion, districts, etc.).
   - **Extension Points:** Prepared extension hooks for NPC, shop, object, non-combat monster, and encounter contexts.
 
