@@ -2,87 +2,96 @@
 
 ## Overview
 
-The **World Context Window** (`src/components/hud/WorldPanel.tsx`) is the party/player's persistent contextual surface. It answers three questions in order:
+The **World Context Window** (`src/components/hud/WorldPanel.tsx`) is the party/player's persistent contextual surface. It answers four core questions in order:
 
-1. **Where/when are we?** — world context.
-2. **Where is the party?** — authoritative party presence.
-3. **What is relevant right now?** — active context and, when applicable, contextual interaction/resolution.
+1. **Where/when are we in the world?** — World Context.
+2. **Where is the party physically?** — Party Presence.
+3. **What is relevant right now?** — Active Context.
+4. **What interactions or resolutions are available?** — Interaction / Resolution Context.
 
-The World Context Window is a presentation/composition boundary, not a second domain engine. It consumes canonical state and delegates commands to the owning gameplay systems/stores.
+The World Context Window is a presentation and composition surface, not a second domain engine. It consumes canonical state (`useWorldStore`, `useGameStore`, `useJournalStore`) and delegates execution to owning gameplay systems and services.
 
 ## Architectural Structure
 
 ```text
 WORLD CONTEXT WINDOW
 │
-├─ World Context
+├─ 1. World Context (WorldEnvironmentHeader)
 │  ├─ time
 │  ├─ date
 │  ├─ temperature
 │  ├─ weather
-│  ├─ spatial/presentation location
-│  └─ region
+│  ├─ region
+│  └─ spatial/presentation location (displayLocation)
 │
-├─ Party Presence
-│  ├─ authoritative party location / token position
-│  ├─ relevant sub-location
-│  └─ travel state when applicable
+├─ 2. Party Presence
+│  ├─ authoritative party physical location (partyLocation)
+│  ├─ sector / sub-location context (partySubLocation)
+│  └─ travel transit state & progress bar
 │
-└─ Active Context
-   ├─ Location
-   ├─ NPC
-   ├─ Shop
-   ├─ Monster / world entity
-   ├─ Object
-   ├─ Encounter / event
-   └─ Contextual Interaction / Resolution
-      ├─ interaction options
-      ├─ DC/check context
-      ├─ roll setup/result presentation
-      └─ consequences
+├─ 3. Active Context
+│  ├─ Active Combat Threats (combatState.monsters summary)
+│  ├─ Local Topography & Submap Filters
+│  ├─ Active Landmark / Domain Info & Lore
+│  └─ Extension Points (NPC, Shop, Item/Object, Non-combat Monster, Encounter/Event)
+│
+└─ 4. Interaction / Resolution Context
+   ├─ Travel & Navigation Actions
+   ├─ Submap Exit / Return Controls
+   ├─ Lore Codex Entry Unlocks
+   └─ DC / Skill Check Resolution Boundaries (DC, check purpose, modifiers, roll/consequence presentation)
 ```
 
-The root world context remains visible while the active context changes.
+The root World Context and Party Presence remain visible while the Active Context changes dynamically based on player focus or game state.
 
-## Ownership Boundaries
+## 4 Root Structures & Ownership Boundaries
 
-- `useWorldStore` owns persistent world/environment state.
-- `WorldEnvironmentSnapshot` provides canonical derived environmental facts consumed by presentation.
-- `useGameStore` owns runtime combat state; the World Context Window may summarize the combat situation but must not duplicate tactical combat rules or actions.
-- `ActionPanel` / `TokenActionHUD` own combat actions and targeting.
-- `CombatGrid` owns tactical spatial presentation.
-- Dice mechanics remain in the dice system. The World Context Window may present a contextual resolution surface (why a check occurs, DC, character, modifier, advantage/disadvantage, roll/result and consequence) but must not become a generic dice utility.
-- `MapLegend` and other map-specific controls belong to map presentation, not the permanent World Context Window.
-- Travel remains owned by the Travel system; travel controls may appear contextually when relevant.
-- Atlas/static entity presentation should use canonical Atlas/data services. Runtime entities must resolve from their canonical runtime state. The UI must never invent production monsters, items, locations, NPCs, shops, inventories, lore or stats as substitutes for missing data.
+### 1. World Context
+- **Canonical Owner:** `useWorldStore` and `resolveWorldEnvironmentSnapshot()`.
+- **Component:** `WorldEnvironmentHeader`.
+- **Responsibilities:** Displays calendar date, time of day, temperature, weather condition, and the active presentation location (`displayLocation`).
 
-## Active Context
+### 2. Party Presence
+- **Canonical Owner:** `useWorldStore.partyLocation`, `useWorldStore.partySubLocation`, `useWorldStore.isTraveling`, `useWorldStore.travelProgress`.
+- **Responsibilities:** Renders the authoritative physical party location, active sub-location/sector, and transit progress bar during overland movement. `partyLocation` remains the physical anchor even when `inspectedLocation` is actively focused.
 
-The Active Context is intentionally extensible. It can represent a location, NPC, shop, monster, object, encounter, event or another canonical world/gameplay situation without changing the World Context root.
+### 3. Active Context
+- **Canonical Owners:** `useWorldStore` (location/submap context), `useGameStore` (combat threats), Atlas services.
+- **Responsibilities:** Summarizes the currently relevant focal entity or situation.
+  - **Combat Context:** Summarizes active threat tokens (`combatState.monsters`) with HP bars, AC, speed, and CR without duplicating tactical combat actions or grid targeting.
+  - **Topography Context:** Displays submap categories, surface vs. sewer layer toggles, and location legend filters.
+  - **Domain Context:** Renders canonical Atlas location lore and structured metadata schema fields (history, government, ruler, economy, religion, districts, etc.).
+  - **Extension Points:** Prepared extension hooks for NPC, shop, object, non-combat monster, and encounter contexts.
 
-A non-combat monster is world context/entity information; it does not automatically become combat UI. A random encounter is an active situation before combat is necessarily entered. Combat is represented as a situation/context here while tactical actions and spatial combat remain in their existing owners.
+### 4. Interaction / Resolution Context
+- **Canonical Owners:** Travel system, `useJournalStore`, Dice system (for resolution checks).
+- **Responsibilities:** Exposes contextual interaction buttons (Set Travel Target, Exit Location, Open Lore Codex). When a skill check or DC challenge occurs, presents the check context (purpose, DC, advantage/disadvantage, modifiers, and consequence) while delegating dice mechanics to the dice roller.
 
-## Data Integrity Rule
+## Data Integrity Rule — ZERO INVENTED ENTITIES
 
-Production UI must not fabricate, hardcode, synthesize or silently substitute canonical gameplay entities. If required canonical data is unavailable, show an explicit missing-data state or stop at the appropriate boundary. Synthetic entities are permitted only in isolated test fixtures and must never leak into production data paths.
+Production UI must **never** fabricate, hardcode, placeholder-generate, or synthesize production monsters, items, locations, NPCs, shops, inventories, lore, stats, or attributes.
 
-## Out of Scope for the Context Window
+When World Context presents an entity:
+1. Resolve it strictly through existing canonical Atlas/data/storage services (`storageService.ts`, `atlasService.ts`).
+2. Reuse canonical IDs and fields.
+3. If canonical data is missing, render an explicit missing-data state (`Unknown location - missing canonical Atlas record.`).
+4. Synthetic entities are allowed only as isolated test fixtures and must never leak into production runtime behavior.
 
-The World Context Window must not become the owner of:
+## Integration Boundaries
 
-- tactical combat rules or action resolution;
-- generic dice mechanics;
-- map legend/layer controls;
-- a second world/context/combat/entity store;
-- Atlas data registries;
-- full implementations of shops, NPC interaction, encounters or skill checks merely because the surface can display them.
+### Tactical Combat Boundary
+- The World Context Window summarizes active threats (`combatState.monsters`).
+- Tactical actions, movement, spell targeting, and action economy remain strictly owned by `ActionPanel`, `TokenActionHUD`, and `CombatGrid`.
 
-## Current Implementation Direction
+### #311 Shared Atlas Sheet Integration Boundary
+- Detailed entity inspect views (full monster stat sheets, item detail cards, class sheets) open via #311 shared Atlas Sheet / inspection modals (`setFocusedItem()`, `setIsMonsterProfileOpen()`).
+- The World Context Window provides entry points for inspecting entities but does not embed or couple the internal Atlas Sheet UI into its own tree.
 
-The current environment header is integrated into the existing World Panel header/banner. It presents time, temperature, weather, date and presentation location using the canonical environment snapshot.
-
-The previous persistent footer-style dice utility and map-specific responsibilities are not part of the target architecture. Future work should decompose the existing location-heavy panel toward the three-layer Context Window model above rather than adding more unrelated widgets to `WorldPanel.tsx`.
+### Map & Dice Utilities Boundary
+- Permanent Map Legend (`MapLegend`) and generic dice roller panel (`AdvancedRoller`) are removed from permanent World Panel ownership.
+- `MapLegend` is owned by map presentation overlays (`WorldMap.tsx` / `ChatInput.tsx`).
+- `AdvancedRoller` is owned by the global dice surface and contextual resolution triggers.
 
 ## Visual Language
 
-The surface follows the existing Artificer parchment/Dragonstone visual language and centralized `GameIcon` system. Presentation should remain compact and contextual rather than accumulating permanent utility controls.
+The surface follows the existing Artificer parchment/Dragonstone visual language (`bg-parchment-50`, `bg-paper-texture`, `border-dragon-gold/20`, `text-dragon-red`) and centralized `GameIcon` system. Width contract is fixed at `w-80` (320px shrink-0).
