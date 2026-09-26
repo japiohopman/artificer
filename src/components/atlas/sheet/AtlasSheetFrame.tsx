@@ -70,6 +70,7 @@ export interface AtlasSheetHeaderProps {
   actionControls?: React.ReactNode;
   titleClassName?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const AtlasSheetHeader: React.FC<AtlasSheetHeaderProps> = ({
@@ -78,10 +79,11 @@ export const AtlasSheetHeader: React.FC<AtlasSheetHeaderProps> = ({
   topRight,
   actionControls,
   titleClassName,
-  className
+  className,
+  style
 }) => {
   return (
-    <div className={cn("relative z-10 border-b-2 border-dragon-gold/30 pb-2 flex flex-col gap-1", className)}>
+    <div className={cn("relative z-10 border-b-2 border-dragon-gold/30 pb-2 flex flex-col gap-1", className)} style={style}>
       <div className="flex justify-between items-start gap-3">
         <div className="flex flex-col min-w-0 flex-1">
           <h3 className={cn("font-header text-xl sm:text-2xl font-black uppercase tracking-tight text-dragon-darkRed leading-snug drop-shadow-sm truncate", titleClassName)}>
@@ -103,12 +105,14 @@ export const AtlasSheetHeader: React.FC<AtlasSheetHeaderProps> = ({
 export interface AtlasSheetMediaProps {
   children?: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
 export const AtlasSheetMedia: React.FC<AtlasSheetMediaProps> = ({
   children,
   className,
+  style,
   onClick
 }) => {
   return (
@@ -119,6 +123,7 @@ export const AtlasSheetMedia: React.FC<AtlasSheetMediaProps> = ({
         onClick && "cursor-pointer",
         className
       )}
+      style={style}
     >
       {children}
       <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none" />
@@ -130,16 +135,18 @@ export interface AtlasSheetInfoGridProps {
   children: React.ReactNode;
   cols?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const AtlasSheetInfoGrid: React.FC<AtlasSheetInfoGridProps> = ({
   children,
   cols = 2,
-  className
+  className,
+  style
 }) => {
   const gridColClass = cols === 3 ? "grid-cols-3" : cols === 4 ? "grid-cols-4" : "grid-cols-2";
   return (
-    <div className={cn("relative z-10 grid gap-2 sm:gap-3", gridColClass, className)}>
+    <div className={cn("relative z-10 grid gap-2 sm:gap-3", gridColClass, className)} style={style}>
       {children}
     </div>
   );
@@ -152,6 +159,7 @@ export interface AtlasSheetInfoBlockProps {
   value: React.ReactNode;
   tooltip?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const AtlasSheetInfoBlock: React.FC<AtlasSheetInfoBlockProps> = ({
@@ -160,10 +168,11 @@ export const AtlasSheetInfoBlock: React.FC<AtlasSheetInfoBlockProps> = ({
   label,
   value,
   tooltip,
-  className
+  className,
+  style
 }) => {
   return (
-    <div className={cn("flex flex-col min-w-0", className)} title={tooltip}>
+    <div className={cn("flex flex-col min-w-0", className)} title={tooltip} style={style}>
       <div className="flex items-center gap-1 opacity-60">
         <GameIcon name={iconName} path={iconPath} size={10} color="#8B0000" />
         <span className="text-[9px] font-bold uppercase tracking-wider text-parchment-500">{label}</span>
@@ -178,14 +187,16 @@ export const AtlasSheetInfoBlock: React.FC<AtlasSheetInfoBlockProps> = ({
 export interface AtlasSheetBodyProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const AtlasSheetBody: React.FC<AtlasSheetBodyProps> = ({
   children,
-  className
+  className,
+  style
 }) => {
   return (
-    <div className={cn("flex-1 overflow-y-auto custom-scrollbar pr-2 relative z-10 space-y-3", className)}>
+    <div className={cn("flex-1 overflow-y-auto custom-scrollbar pr-2 relative z-10 space-y-3", className)} style={style}>
       {children}
     </div>
   );
@@ -194,14 +205,16 @@ export const AtlasSheetBody: React.FC<AtlasSheetBodyProps> = ({
 export interface AtlasSheetFooterProps {
   children?: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const AtlasSheetFooter: React.FC<AtlasSheetFooterProps> = ({
   children,
-  className
+  className,
+  style
 }) => {
   return (
-    <div className={cn("relative z-10 pt-2 border-t border-dragon-gold/20 mt-auto flex justify-between items-center", className)}>
+    <div className={cn("relative z-10 pt-2 border-t border-dragon-gold/20 mt-auto flex justify-between items-center", className)} style={style}>
       {children}
     </div>
   );
