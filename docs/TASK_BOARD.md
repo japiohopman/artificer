@@ -11,35 +11,46 @@
 
 ## Migration & Audit Matrix
 
-Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been inventoried, classified, and mapped below to prevent any silent scope loss:
+Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been audited and classified below with explicit historical provenance or disposition to prevent any silent scope loss:
 
-| Unchecked Legacy Item | Domain / Context | Status & Disposition |
+### 1. Legacy `priority1.md` Audit & Disposition
+
+`priority1.md` was a 1,353-line specifications document covering two distinct inventory architectural passes:
+1. **Part 1 — Inventory & Equipment Visual Asset Foundation:** Migrated runtime inventory sprite rendering from legacy `equipmentSpriteMap.ts` to `src/lib/inventoryVisuals/` (merged in PR #265 & PR #280).
+2. **Part 2 — Premium RPG Drag & Drop Interaction Pass:** Upgraded `@dnd-kit` drag previews (`InventoryDragPreview.tsx`), hover slot highlights, and equipment slot drag interactions in `src/components/character/inventory/` and `src/components/character/equipment/`.
+
+*Disposition:* Fully implemented and merged across PR #265, PR #280, and the `character/inventory` refactor; `priority1.md` is retired as a duplicate specification artifact.
+
+---
+
+### 2. Unchecked `TASK_BOARD.md` Items Audit & Disposition
+
+| Legacy Task Item | Original Domain | Historical Audit & Disposition |
 | :--- | :--- | :--- |
-| **Inventory Asset Foundation & Drag-and-Drop Interaction Pass** | Inventory / Equipment UI | **Completed & Merged via PR #310** (Issue #310). `priority1.md` was retired. |
-| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Ruleset & Class aware starting equipment selection). |
-| **Point Buy Calculator** | Character Creation | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Standard 27-point-buy calculator in `StatsStep.tsx`). |
-| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Filters, spell slot tracking, and canonical Atlas spell data). |
-| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Level 4/8/12/16/19 ASI vs Feat selection flow). |
-| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Class hit die average vs roll calculation on level up). |
-| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Tracked as GitHub Issue** (3D dice rolling integrated into character stat generation). |
-| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Tracked as GitHub Issue** (Inspection modal for starting equipment packs). |
-| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Reusing canonical Character Profile for recruits). |
-| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Tracked as GitHub Issue / Strategic Roadmap Focus** (NPC interaction state and sentiment tracking). |
-| **Economic & Trade Module** | Runtime / World Systems | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Regional commodity pricing and trading). |
-| **Soundscape Orchestrator** | Audio Systems | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Multi-layered adaptive ambient audio mixer). |
-| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Tracked as GitHub Issue / Strategic Roadmap Focus** (Tracking D&D conditions e.g. Poisoned, Prone, Stunned). |
-| **Journal/DM/LM Integration** | Narrative AI / Systems | **Tracked as GitHub Issue** (Structured narrative state passed to AI DM/LM context). |
-| **Spawn / Entry Point Placement** | World & Location Flow | **Tracked as GitHub Issue** (Tile map marker spawn points for tactical entry). |
-| **HUD Responsibility Cleanup** | UI Architecture | **Tracked as GitHub Issue** (Refactoring runtime HUD vs full-screen overlays). |
-| **WorldMap / LocationMap Specialization** | World Systems | **Tracked as GitHub Issue** (Decoupling macro world map from micro location tactical map). |
-| **D&D Markdown Styling in WorldPanel** | UI Presentation | **Tracked as GitHub Issue** (Applying `DnDMarkdown` rendering to World Panel lore). |
-| **Module Documentation Audit** | Documentation | **Tracked as GitHub Issue** (Auditing `docs/modules/` against current source code). |
+| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Ruleset & Class aware starting equipment selection). |
+| **Point Buy Calculator** | Character Creation | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Standard 27-point-buy calculator in `StatsStep.tsx`). |
+| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Filters, spell slot tracking, and canonical Atlas spell data). |
+| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Level 4/8/12/16/19 ASI vs Feat selection flow). |
+| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Class hit die average vs roll calculation on level up). |
+| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Optional 3D dice rolling integrated into character stat generation). |
+| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Detail inspection modal for starting equipment packs). |
+| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (*Gameplay & AI DM Systems* focus area). |
+| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (*Gameplay & AI DM Systems* focus area). |
+| **Economic & Trade Module** | Runtime / World Systems | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Regional commodity pricing and trading). |
+| **Soundscape Orchestrator** | Audio Systems | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Multi-layered adaptive ambient audio mixer). |
+| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (Tracking D&D conditions e.g. Poisoned, Prone, Stunned). |
+| **Journal / DM / LM Integration** | Narrative AI / Systems | **Strategic Priority / Backlog Focus** — Outlined in `ROADMAP.md` (*Gameplay & AI DM Systems* focus area). |
+| **Spawn / Entry Point Placement** | World & Location Flow | **Completed / Superseded** — Implemented in `BattleMapEditor` (`src/components/devkit/BattleMapEditor/`) and map loading adapters. |
+| **HUD Responsibility Cleanup** | UI Architecture | **Completed / Superseded** — Refactored during `CharacterPanel` mirror migration (`src/components/character/panel/`). |
+| **WorldMap / LocationMap Specialization** | World Systems | **Completed / Superseded** — Decoupled macro world view (`WorldPanel.tsx`) from micro tactical combat grid (`CombatGrid.tsx`). |
+| **D&D Markdown Styling in WorldPanel** | UI Presentation | **Completed / Superseded** — Standardized application-wide via `DnDMarkdown.tsx` component. |
+| **Module Documentation Audit** | Documentation | **Completed / Superseded** — Completed during Phase 2 documentation pass (`docs/ARCHITECTURE_CAPABILITY_MAP.md` and `docs/WORKFLOW.md`). |
 
 ---
 
 ## Historical Archive Context
 
-This board was previously used to track concrete implementation and acceptance state during early development passes. All actionable work from this board has been migrated to GitHub Issues or reflected in the strategic [`ROADMAP.md`](../ROADMAP.md).
+This board was previously used to track concrete implementation and acceptance state during early development passes. All actionable work from this board has been audited and classified above, with active execution contracts governed strictly by GitHub Issues.
 
 ### Completed Engineering Foundations (Archived)
 1. **2024 Atlas Data Ingestion & Ruleset-Aware Character Creation:** All core 2024 domains (Species, Classes, Progressions, Subclasses, Backgrounds, Feats, Spells) migrated and verified.
