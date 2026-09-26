@@ -74,6 +74,7 @@ To preserve execution safety and prevent duplicate session dispatches:
 
 - **Single Execution Context**: Do not start a new Jules dispatch merely because a review identifies required fixes for an open PR. The active Jules task, implementation branch, and open PR remain the active execution context while the PR is open.
 - **New Dispatch Trigger**: A new Issue dispatch is appropriate only after the current task/PR is complete (merged or closed), or when newly requested work materially expands beyond the original Issue contract.
+- **One-at-a-Time Preflight Model**: The orchestrator preflight safety gate enforces a strict one-Issue-at-a-time dispatch model. An active or open PR blocks duplicate dispatches until the active execution context reaches a terminal state.
 
 ### 3.2. Scope Protection & Creep Prevention
 
@@ -81,6 +82,7 @@ Review feedback must remain grounded in the original execution contract:
 
 - **Scope Boundary**: If review feedback or architectural discussion identifies changes that materially expand beyond the assigned Issue contract, stop expanding the active task.
 - **Decomposition**: Record adjacent or material expansion items as separate, dedicated GitHub Issues rather than allowing PR review iterations to become unbounded scope creep.
+- **Sequential Dispatch Constraint**: Review feedback that materially exceeds the current Issue contract requires a separate GitHub Issue. That new Issue must **NOT** be dispatched while the current Jules task or PR is still active or open. The next Issue becomes dispatchable only after the current execution context is terminal (merged or closed).
 
 ---
 

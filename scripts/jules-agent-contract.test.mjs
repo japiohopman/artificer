@@ -56,6 +56,8 @@ test('WORKFLOW.md defines review loop, dispatch boundaries, and scope protection
   assert.match(workflowDoc, /Human Review & Revision Loop/);
   assert.match(workflowDoc, /Dispatch Boundary & Review Context/);
   assert.match(workflowDoc, /Scope Protection & Creep Prevention/);
+  assert.match(workflowDoc, /One-at-a-Time Preflight Model/);
+  assert.match(workflowDoc, /Sequential Dispatch Constraint/);
 });
 
 test('ROADMAP.md is strictly strategic context without legacy dispatch queues', () => {
