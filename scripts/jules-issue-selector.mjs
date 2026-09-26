@@ -14,14 +14,16 @@ import {
 import {
   shouldTriggerDiscovery,
   isDiscoveryIssue,
-  executeDiscoveryAudit
+  executeDiscoveryAudit,
+  persistDiscoveryReportIssue
 } from './jules-discovery-loop.mjs';
 
 export {
   parseDispatchMetadata,
   parseCanonicalReferences,
   specialistPath,
-  validateIssueQualityGate
+  validateIssueQualityGate,
+  persistDiscoveryReportIssue
 };
 
 export function isCandidateIssue(issue, options = {}) {
@@ -249,6 +251,23 @@ async function main() {
     dependencyStates
   });
 
+  // If discovery is triggered, persist the discovery report issue if requested or in live mode
+  let persistedDiscoveryIssue = null;
+  if (decision.discovery?.triggered && decision.discovery?.audit?.discoveryIssue) {
+    if (process.env.PERSIST_DISCOVERY === 'true') {
+      try {
+        persistedDiscoveryIssue = await persistDiscoveryReportIssue(
+          decision.discovery.audit.discoveryIssue,
+          TOKEN,
+          REPO
+        );
+        console.log(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
+      } catch (err) {
+        console.error('Failed to persist Discovery Report Issue:', err.message);
+      }
+    }
+  }
+
   if (!decision.selected) {
     setOutput('dispatch', false);
 
@@ -257,7 +276,8 @@ async function main() {
       dispatchable: false,
       reason: 'No dispatchable Issue satisfies the Issue-first contract.',
       rejected: decision.rejected,
-      discovery: decision.discovery
+      discovery: decision.discovery,
+      persistedDiscoveryIssue
     }, null, 2));
     return;
   }
@@ -306,7 +326,8 @@ async function main() {
     specialistPath: specialist,
     prompt,
     sessionTitle: selected.issue.title.slice(0, 80),
-    discovery: decision.discovery
+    discovery: decision.discovery,
+    persistedDiscoveryIssue
   }, null, 2));
 }
 

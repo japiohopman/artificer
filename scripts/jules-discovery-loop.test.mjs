@@ -6,7 +6,8 @@ import {
   formatCandidateFollowUpIssue,
   formatDiscoveryReport,
   validateDiscoveryReport,
-  executeDiscoveryAudit
+  executeDiscoveryAudit,
+  persistDiscoveryReportIssue
 } from './jules-discovery-loop.mjs';
 import { selectDispatchableIssue } from './jules-issue-selector.mjs';
 import { validateIssueQualityGate } from './jules-issue-validator.mjs';
@@ -132,4 +133,29 @@ test('executeDiscoveryAudit creates report and candidate issues with deep eviden
   assert.deepEqual(auditResult.discoveryIssue.labels, ['discovery']);
   assert.equal(auditResult.report, auditResult.discoveryIssue.body);
   assert.equal(validateDiscoveryReport(auditResult.discoveryIssue.body).valid, true);
+});
+
+test('persistDiscoveryReportIssue calls GitHub REST API to create Discovery Report issue', async () => {
+  let createdPayload = null;
+  const mockFetch = async (url, options) => {
+    assert.equal(url, 'https://api.github.com/repos/japiohopman/artificer/issues');
+    assert.equal(options.method, 'POST');
+    assert.equal(options.headers.Authorization, 'Bearer mock-token');
+    createdPayload = JSON.parse(options.body);
+    return {
+      ok: true,
+      json: async () => ({ number: 500, ...createdPayload })
+    };
+  };
+
+  const discoveryIssue = {
+    title: '[Discovery] Repository Evidence Audit Report',
+    body: '## Goal\nAudit',
+    labels: ['discovery']
+  };
+
+  const created = await persistDiscoveryReportIssue(discoveryIssue, 'mock-token', 'japiohopman/artificer', mockFetch);
+  assert.equal(created.number, 500);
+  assert.equal(createdPayload.title, '[Discovery] Repository Evidence Audit Report');
+  assert.deepEqual(createdPayload.labels, ['discovery']);
 });

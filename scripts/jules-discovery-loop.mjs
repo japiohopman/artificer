@@ -195,10 +195,49 @@ export function validateDiscoveryReport(body) {
 }
 
 /**
+ * Persists a Discovery Report issue to GitHub Issues via REST API.
+ *
+ * @param {object} discoveryIssue - Object with title, body, labels.
+ * @param {string} token - GitHub Authorization bearer token.
+ * @param {string} repo - Repository name (e.g. 'japiohopman/artificer').
+ * @param {function} [customFetch] - Optional fetch implementation for testing.
+ * @returns {Promise<object>} - Created GitHub Issue object.
+ */
+export async function persistDiscoveryReportIssue(discoveryIssue, token, repo, customFetch) {
+  if (!discoveryIssue || !token || !repo) {
+    throw new Error('discoveryIssue, token, and repo are required to persist Discovery Report.');
+  }
+
+  const fetchFn = customFetch || globalThis.fetch;
+  const url = 'https://api.github.com/repos/' + repo + '/issues';
+
+  const response = await fetchFn(url, {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + token,
+      Accept: 'application/vnd.github+json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      title: discoveryIssue.title,
+      body: discoveryIssue.body,
+      labels: discoveryIssue.labels || ['discovery']
+    })
+  });
+
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`Failed to create Discovery Report GitHub Issue: ${response.status} ${errText}`);
+  }
+
+  return response.json();
+}
+
+/**
  * Executes a deep, evidence-backed discovery audit when low-ready-work conditions are met.
  * Audits repository contracts, open issues, quality gate compliance, and file references.
- * Produces a canonical Discovery Report artifact ([Discovery] Repository Evidence Audit Report, label: discovery).
- * Candidate follow-up Issues are embedded in the Discovery Report as proposed (status: proposed).
+ * Candidate follow-up Issues are generated strictly when concrete findings exist.
+ * Discovery NEVER invents generic tasks without concrete evidence.
  * Discovery NEVER dispatches implementation work directly.
  *
  * @param {object[]} openIssues - List of currently open GitHub issues.
