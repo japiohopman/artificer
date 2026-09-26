@@ -58,11 +58,10 @@ export function evaluateSlotCompatibility(
 
     if (!mainIsWeapon) return 'INVALID';
 
-    const mainRange = (mainMeta.weapon_range || '').toLowerCase();
     const mainProps = (mainMeta.properties || []).map((p: any) => (p.index || p.name || p).toString().toLowerCase());
     const mainIndex = (mainMeta.index || mainMeta.template || mainMeta.id || '').toLowerCase();
 
-    const mainRequiresAmmo = mainRange === 'ranged' || mainProps.includes('ammunition') || ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].some(w => mainIndex.includes(w));
+    const mainRequiresAmmo = mainProps.includes('ammunition') || ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].some(w => mainIndex.includes(w));
     if (!mainRequiresAmmo) return 'INVALID';
 
     const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');

@@ -713,9 +713,11 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     const arrow = { id: 'arrow_1', template: 'arrow', kind: 'ammunition', equipment_category: { index: 'ammunition' } };
     const bolt = { id: 'bolt_1', template: 'crossbow-bolt', kind: 'ammunition', equipment_category: { index: 'ammunition' } };
 
-    const bowWeapon = { id: 'bow_1', template: 'shortbow', kind: 'weapon', weapon_range: 'Ranged' };
-    const crossbowWeapon = { id: 'xbow_1', template: 'light-crossbow', kind: 'weapon', weapon_range: 'Ranged' };
+    const bowWeapon = { id: 'bow_1', template: 'shortbow', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'ammunition' }] };
+    const crossbowWeapon = { id: 'xbow_1', template: 'light-crossbow', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'ammunition' }] };
     const swordWeapon = { id: 'sword_1', template: 'longsword', kind: 'weapon', weapon_range: 'Melee' };
+    const dartWeapon = { id: 'dart_1', template: 'dart', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'finesse' }, { index: 'thrown' }] };
+    const netWeapon = { id: 'net_1', template: 'net', kind: 'weapon', weapon_range: 'Ranged', properties: [{ index: 'special' }, { index: 'thrown' }] };
 
     // 1. No main-hand weapon equipped -> ammunition INVALID
     expect(evaluateSlotCompatibility(arrow, 'ammo', {})).toBe('INVALID');
@@ -724,11 +726,17 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     // 2. Non-ammunition weapon equipped (longsword) -> ammunition INVALID
     expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: swordWeapon })).toBe('INVALID');
 
-    // 3. Shortbow equipped -> arrow VALID, bolt INVALID
+    // 3. Ranged thrown non-ammunition weapons equipped (dart, net) -> ammunition INVALID
+    expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: dartWeapon })).toBe('INVALID');
+    expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: dartWeapon })).toBe('INVALID');
+    expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: netWeapon })).toBe('INVALID');
+    expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: netWeapon })).toBe('INVALID');
+
+    // 4. Shortbow equipped -> arrow VALID, bolt INVALID
     expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: bowWeapon })).toBe('VALID');
     expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: bowWeapon })).toBe('INVALID');
 
-    // 4. Light Crossbow equipped -> bolt VALID, arrow INVALID
+    // 5. Light Crossbow equipped -> bolt VALID, arrow INVALID
     expect(evaluateSlotCompatibility(bolt, 'ammo', { main_hand: crossbowWeapon })).toBe('VALID');
     expect(evaluateSlotCompatibility(arrow, 'ammo', { main_hand: crossbowWeapon })).toBe('INVALID');
   });
