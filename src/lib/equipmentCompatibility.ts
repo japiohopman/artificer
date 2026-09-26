@@ -74,9 +74,11 @@ export function evaluateSlotCompatibility(
 
     const isBow = mainIndex.includes('bow') && !mainIndex.includes('crossbow');
     const isCrossbow = mainIndex.includes('crossbow');
+    const isBlowgun = mainIndex.includes('blowgun');
 
     if (isBow && !index.includes('arrow')) return 'INVALID';
     if (isCrossbow && !index.includes('bolt')) return 'INVALID';
+    if (isBlowgun && !index.includes('needle')) return 'INVALID';
 
     return isOccupied ? 'REPLACE' : 'VALID';
   }
@@ -106,7 +108,8 @@ export function evaluateSlotCompatibility(
       const isValid = kind === 'feet' || (category.includes('feet') && !category.includes('adventuring')) || index.includes('boots');
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
-    case 'main_hand': {
+    case 'main_hand':
+    case 'ranged': {
       const isValid = isWeapon;
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
@@ -114,6 +117,14 @@ export function evaluateSlotCompatibility(
       const isTwoHanded = meta.properties?.some((p: any) => (p.index || p.name || p) === 'two-handed');
       if (isTwoHanded) return 'INVALID';
       const isValid = isShield || isWeapon;
+      return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
+    }
+    case 'belt': {
+      const isValid = kind === 'belt' || kind === 'container' || category.includes('belt') || index.includes('belt');
+      return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
+    }
+    case 'pouch': {
+      const isValid = kind === 'container' || index.includes('pouch') || index.includes('bag') || index.includes('sack');
       return isValid ? (isOccupied ? 'REPLACE' : 'VALID') : 'INVALID';
     }
     case 'ring_1':

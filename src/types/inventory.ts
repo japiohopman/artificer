@@ -78,7 +78,7 @@ export const EQUIPMENT_SLOT_CATALOG = [
   { id: 'main_hand', label: 'Main Hand', accepts: { kinds: ['weapon', 'tool', 'focus'] } as SlotAcceptanceRules },
   { id: 'off_hand', label: 'Off Hand', accepts: { kinds: ['shield', 'weapon', 'tool', 'focus'] } as SlotAcceptanceRules },
   { id: 'ranged', label: 'Ranged', accepts: { kinds: ['weapon'] } as SlotAcceptanceRules },
-  { id: 'ammo', label: 'Ammo', accepts: { kinds: ['ammunition', 'consumable'] } as SlotAcceptanceRules },
+  { id: 'ammo', label: 'Ammo', accepts: { kinds: ['ammunition'] } as SlotAcceptanceRules },
   { id: 'chest', label: 'Body', accepts: { kinds: ['armor'] } as SlotAcceptanceRules },
   { id: 'clothes', label: 'Clothes', accepts: { kinds: ['adventuring_gear', 'trinket'] } as SlotAcceptanceRules },
   { id: 'head', label: 'Head', accepts: { kinds: ['head', 'trinket', 'armor'] } as SlotAcceptanceRules },
