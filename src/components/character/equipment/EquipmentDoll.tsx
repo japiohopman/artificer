@@ -6,13 +6,11 @@ import { GameIcon } from '../../../game_icons';
 import { normalizeImageUrl } from '../../../services/storageService';
 import { useUIStore } from '../../../store/useUIStore';
 import { useCharacterStore } from '../../../store/useCharacterStore';
-import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipment } from '../../../lib/equipmentCompatibility';
+import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipment, doesWeaponRequireAmmo } from '../../../lib/equipmentCompatibility';
 import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
-  EquipmentSlotId,
-  SIDE_SLOTS,
-  BOTTOM_SLOTS
+  EquipmentSlotId
 } from '../../../lib/equipmentConstants';
 
 interface ItemDollProps {
@@ -220,15 +218,9 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     ammo: getSlotItem('ammo')
   };
 
+  const activeChar = useCharacterStore((state) => state.characters.find(c => c.id === state.activeCharacterId) || state.characters[0]);
   const mainHandItem = allEquipped.main_hand;
-  const mainMeta = mainHandItem ? resolveItemMetadata(mainHandItem) : null;
-  const requiresAmmo = Boolean(
-    mainMeta && (
-      (mainMeta.weapon_range === 'Ranged' && mainMeta.properties?.some((p: any) => (p.index || p.name || p).toString().toLowerCase() === 'ammunition')) ||
-      (mainMeta.equipment_category?.index === 'ammunition' || mainMeta.equipment_category === 'Ammunition') ||
-      ['shortbow', 'longbow', 'light_crossbow', 'heavy_crossbow', 'hand_crossbow', 'blowgun'].includes((mainMeta.index || mainMeta.template || '').toLowerCase())
-    )
-  );
+  const requiresAmmo = doesWeaponRequireAmmo(mainHandItem, activeChar?.ruleset);
 
   const renderSlot = (slot: EquipmentSlotId) => (
     <EquipmentDollSlot
@@ -250,45 +242,36 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       </div>
 
       {/* Overlay Frame Layout over Character Body Surface */}
-      <div className="relative z-10 flex gap-2 items-start justify-between">
+      <div className="relative z-10 flex gap-2 items-center justify-between my-auto py-2">
         {/* Left Column Slots */}
-        <div className="flex flex-col gap-1 w-10 shrink-0">
+        <div className="flex flex-col gap-1.5 w-10 shrink-0">
           {renderSlot('focus')}
           {renderSlot('main_hand')}
           {requiresAmmo && renderSlot('ammo')}
           {renderSlot('ring_1')}
-          {renderSlot(SIDE_SLOTS[0])}
-          {renderSlot(SIDE_SLOTS[1])}
         </div>
 
         {/* Center Top / Chest Slots */}
-        <div className="flex flex-col items-center gap-1 flex-1 px-1">
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px]">
+        <div className="flex flex-col items-center gap-2 flex-1 px-1">
+          <div className="grid grid-cols-2 gap-1.5 w-full max-w-[90px]">
             {renderSlot('head')}
             {renderSlot('neck')}
           </div>
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px] my-auto">
+          <div className="grid grid-cols-2 gap-1.5 w-full max-w-[90px]">
             {renderSlot('chest')}
             {renderSlot('back')}
           </div>
-          <div className="w-full max-w-[42px]">
+          <div className="w-full max-w-[44px]">
             {renderSlot('feet')}
           </div>
         </div>
 
         {/* Right Column Slots */}
-        <div className="flex flex-col gap-1 w-10 shrink-0">
+        <div className="flex flex-col gap-1.5 w-10 shrink-0">
           {renderSlot('hands')}
           {renderSlot('off_hand')}
           {renderSlot('ring_2')}
-          {renderSlot(SIDE_SLOTS[2])}
-          {renderSlot(SIDE_SLOTS[3])}
         </div>
-      </div>
-
-      {/* Bottom Bar Slots */}
-      <div className="relative z-10 grid grid-cols-5 gap-1 w-full pt-1 border-t border-dragon-gold/30">
-        {BOTTOM_SLOTS.map(slot => renderSlot(slot))}
       </div>
     </div>
   );
