@@ -5,7 +5,6 @@ import { useUIStore } from '../../../store/useUIStore';
 import { GameIcon, GameIconName } from '../../../game_icons';
 import { cn } from '../../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
-import { TemporalWidget } from '../TemporalWidget';
 
 export interface NavAction {
   id: string;
@@ -148,10 +147,8 @@ export const Nav: React.FC = () => {
         </div>
       </div>
 
-      {/* Middle Section: Temporal Widget & Dynamic Actions */}
+      {/* Middle Section: Dynamic Actions */}
       <div className="absolute left-1/2 -translate-x-1/2 h-full flex items-center z-10 gap-4">
-        <TemporalWidget />
-        
         {dynamicNavButtons.length > 0 && (
           <div className="flex items-center gap-4 bg-parchment-200/50 px-4 py-1.5 rounded-full border-2 border-dragon-gold/30 shadow-inner">
             <AnimatePresence mode="popLayout">
