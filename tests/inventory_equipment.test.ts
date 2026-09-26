@@ -6,6 +6,7 @@ import { createDefaultBackpack, createDefaultEquipment } from '../src/lib/invent
 import { migrateCharacterV1ToV2 } from '../src/lib/migrationUtils';
 import { resolveVisualIdentity } from '../src/lib/inventoryVisuals/visualIdentity';
 import { getSpriteCellForVisual } from '../src/lib/inventoryVisuals/spriteManifest';
+import { evaluateSlotCompatibility } from '../src/lib/equipmentCompatibility';
 
 describe('Inventory & Equipment Architecture Unit Tests', () => {
   const mockChar: any = {
@@ -649,6 +650,59 @@ describe('Inventory & Equipment Architecture Unit Tests', () => {
     // Rejected due to non-canonical occupant
     expect(mainHandSlot?.itemId).toBe('fake_ghost_item_999');
     expect(backpack?.slots[0].itemId).toBe('longsword_1');
+  });
+
+  it('rejects adventuring gear in paper-doll body equipment slots', () => {
+    const rope = { id: 'rope_1', template: 'hempen-rope-50-ft', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
+    const torch = { id: 'torch_1', template: 'torch', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
+    const rations = { id: 'rations_1', template: 'rations-1-day', kind: 'adventuring_gear', equipment_category: { index: 'adventuring-gear' } };
+
+    const bodySlots = ['head', 'neck', 'chest', 'back', 'hands', 'feet', 'ring_1', 'ring_2', 'main_hand', 'off_hand', 'focus'];
+
+    bodySlots.forEach(slot => {
+      expect(evaluateSlotCompatibility(rope, slot)).toBe('INVALID');
+      expect(evaluateSlotCompatibility(torch, slot)).toBe('INVALID');
+      expect(evaluateSlotCompatibility(rations, slot)).toBe('INVALID');
+    });
+  });
+
+  it('rejects weapons and armor in quick / extra slots', () => {
+    const sword = { id: 'sword_1', template: 'longsword', kind: 'weapon', weapon_category: 'Martial' };
+    const armor = { id: 'plate_1', template: 'plate-armor', kind: 'armor', armor_category: 'Heavy' };
+    const shield = { id: 'shield_1', template: 'shield', kind: 'shield', armor_category: 'Shield' };
+
+    const quickSlots = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
+
+    quickSlots.forEach(slot => {
+      expect(evaluateSlotCompatibility(sword, slot)).toBe('INVALID');
+      expect(evaluateSlotCompatibility(armor, slot)).toBe('INVALID');
+      expect(evaluateSlotCompatibility(shield, slot)).toBe('INVALID');
+    });
+  });
+
+  it('accepts consumables, traps, and throwables in quick / extra slots', () => {
+    const potion = { id: 'pot_1', template: 'potion-of-healing', kind: 'consumable' };
+    const scroll = { id: 'scroll_1', template: 'scroll-of-fireball', kind: 'consumable' };
+    const caltrops = { id: 'trap_1', template: 'caltrops', kind: 'adventuring_gear' };
+    const oil = { id: 'oil_1', template: 'oil-flask', kind: 'adventuring_gear' };
+
+    const quickSlots = ['extra', 'quick_1', 'quick_2', 'quick_3', 'quick_4'];
+
+    quickSlots.forEach(slot => {
+      expect(evaluateSlotCompatibility(potion, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(scroll, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(caltrops, slot)).toBe('VALID');
+      expect(evaluateSlotCompatibility(oil, slot)).toBe('VALID');
+    });
+  });
+
+  it('fails closed for unknown or unsupported slot IDs', () => {
+    const sword = { id: 'sword_1', template: 'longsword', kind: 'weapon' };
+    const potion = { id: 'pot_1', template: 'potion-of-healing', kind: 'consumable' };
+
+    expect(evaluateSlotCompatibility(sword, 'unknown_slot_xyz')).toBe('INVALID');
+    expect(evaluateSlotCompatibility(potion, 'fake_slot_123')).toBe('INVALID');
+    expect(evaluateSlotCompatibility(sword, '')).toBe('INVALID');
   });
 
   it('verifies registry count remains unchanged across rejected and successful transactions', async () => {

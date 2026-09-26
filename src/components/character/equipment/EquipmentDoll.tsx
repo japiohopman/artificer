@@ -10,9 +10,7 @@ import { isItemCompatibleWithSlot, resolveItemMetadata, isProficientWithEquipmen
 import { GenderBodySvg } from '../GenderBodySvg';
 import {
   EQUIPMENT_SLOTS,
-  EquipmentSlotId,
-  SIDE_SLOTS,
-  BOTTOM_SLOTS
+  EquipmentSlotId
 } from '../../../lib/equipmentConstants';
 
 interface ItemDollProps {
@@ -250,45 +248,36 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
       </div>
 
       {/* Overlay Frame Layout over Character Body Surface */}
-      <div className="relative z-10 flex gap-2 items-start justify-between">
+      <div className="relative z-10 flex gap-2 items-center justify-between my-auto py-2">
         {/* Left Column Slots */}
-        <div className="flex flex-col gap-1 w-10 shrink-0">
+        <div className="flex flex-col gap-1.5 w-10 shrink-0">
           {renderSlot('focus')}
           {renderSlot('main_hand')}
           {requiresAmmo && renderSlot('ammo')}
           {renderSlot('ring_1')}
-          {renderSlot(SIDE_SLOTS[0])}
-          {renderSlot(SIDE_SLOTS[1])}
         </div>
 
         {/* Center Top / Chest Slots */}
-        <div className="flex flex-col items-center gap-1 flex-1 px-1">
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px]">
+        <div className="flex flex-col items-center gap-2 flex-1 px-1">
+          <div className="grid grid-cols-2 gap-1.5 w-full max-w-[90px]">
             {renderSlot('head')}
             {renderSlot('neck')}
           </div>
-          <div className="grid grid-cols-2 gap-1 w-full max-w-[85px] my-auto">
+          <div className="grid grid-cols-2 gap-1.5 w-full max-w-[90px]">
             {renderSlot('chest')}
             {renderSlot('back')}
           </div>
-          <div className="w-full max-w-[42px]">
+          <div className="w-full max-w-[44px]">
             {renderSlot('feet')}
           </div>
         </div>
 
         {/* Right Column Slots */}
-        <div className="flex flex-col gap-1 w-10 shrink-0">
+        <div className="flex flex-col gap-1.5 w-10 shrink-0">
           {renderSlot('hands')}
           {renderSlot('off_hand')}
           {renderSlot('ring_2')}
-          {renderSlot(SIDE_SLOTS[2])}
-          {renderSlot(SIDE_SLOTS[3])}
         </div>
-      </div>
-
-      {/* Bottom Bar Slots */}
-      <div className="relative z-10 grid grid-cols-5 gap-1 w-full pt-1 border-t border-dragon-gold/30">
-        {BOTTOM_SLOTS.map(slot => renderSlot(slot))}
       </div>
     </div>
   );
