@@ -181,6 +181,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
   items,
   equipmentDetails,
   gender = 'male',
+  race,
   activeDragItem
 }) => {
   // Resolve item for slot from equippedItems object or V2 equipment/items dictionaries
@@ -245,7 +246,7 @@ export const EquipmentDoll: React.FC<ItemDollProps> = ({
     <div className={cn("relative flex flex-col gap-2 w-full max-w-[280px] mx-auto p-1 select-none overflow-hidden", className)}>
       {/* Central SVG Character Silhouette Body Anchor */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 transition-opacity z-0">
-        <GenderBodySvg gender={gender as any} className="h-full max-h-[340px] w-auto drop-shadow-md" />
+        <GenderBodySvg gender={gender as any} race={race} className="h-full max-h-[340px] w-auto drop-shadow-md" />
       </div>
 
       {/* Overlay Frame Layout over Character Body Surface */}

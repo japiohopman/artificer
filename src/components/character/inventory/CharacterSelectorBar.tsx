@@ -106,6 +106,7 @@ export const CharacterSelectorBar: React.FC = () => {
           return (
             <div
               key={`reserved_${index}`}
+              data-testid="reserved-party-slot"
               className="p-1 rounded-lg border border-dashed border-dragon-gold/20 bg-black/20 text-parchment-500/50 flex items-center gap-2 shrink-0 select-none cursor-not-allowed"
               title={`Position ${index + 1}: Reserved Party Slot`}
             >
@@ -115,7 +116,7 @@ export const CharacterSelectorBar: React.FC = () => {
                   {index + 1}
                 </span>
               </div>
-              <span className="text-[8px] font-mono uppercase tracking-widest text-parchment-500/40 hidden sm:inline" data-testid="reserved-party-slot">
+              <span className="text-[8px] font-mono uppercase tracking-widest text-parchment-500/40 hidden sm:inline">
                 Reserved
               </span>
             </div>

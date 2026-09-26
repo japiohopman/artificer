@@ -26,7 +26,7 @@ export const GenderBodySvg: React.FC<GenderBodySvgProps> = ({
   hideLabel = false,
   hideContainerStyles = false
 }) => {
-  const isMale = gender === 'Male';
+  const isMale = String(gender).toLowerCase() === 'male';
   const raceLower = race?.toLowerCase() || '';
   const isElven = raceLower.includes('elf') || raceLower.includes('tiefling');
   const isTiefling = raceLower.includes('tiefling');
