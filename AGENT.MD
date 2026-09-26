@@ -47,6 +47,8 @@ They are **not** active Jules routing targets.
 
 ## 🛠️ General Guidelines
 
+- **Inspect before implementing:** For existing-system work, Jules must inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
+- **Adjacent findings must be recorded, not silently absorbed:** Materially adjacent work belongs in a follow-up Issue rather than being silently added to the active task.
 - **Groundedness:** Verify claims and changes against the existing codebase. Documentation can drift; implementation must be inspected directly.
 - **Scope discipline:** Implement only the assigned Issue scope. Record adjacent gaps as follow-up Issues instead of expanding the task opportunistically.
 - **Canonical ownership:** Before creating a store, service, resolver, or presentation model, identify the existing canonical owner and data flow.

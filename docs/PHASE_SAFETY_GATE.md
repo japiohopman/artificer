@@ -8,11 +8,11 @@ GitHub is the persistent execution record; conversation context is used for arch
 
 ## Source of truth hierarchy
 
-1. `ROADMAP.md` — current dispatch priority. Jules only receives work from `### Ready`.
-2. Phase Issue — execution contract for one substantial phase.
+1. Assigned GitHub Issue (`status: ready`) — authoritative execution contract. Validated by Issue Quality Gate & selected by dispatcher.
+2. Specialist contract (`.github/agents/*`) — domain routing and architectural constraints.
 3. Jules branch / commits — implementation history.
 4. Pull request — implementation evidence and review surface.
-5. CI / Safety Gate — automated evidence.
+5. CI / Phase Safety Gate — automated evidence.
 6. Human review — final architectural and functional approval.
 7. `main` — confirmed integrated state.
 
@@ -20,9 +20,9 @@ Do not create a second roadmap or competing task-state system.
 
 ## Phase lifecycle
 
-`PLANNED → IN PROGRESS → IMPLEMENTED → PR OPEN → REVIEW REQUIRED → APPROVED → MERGED`
+`proposal → investigation → evidence-backed Issue → human validation → quality gate → ready → dispatch → PR → human review → merge`
 
-A Jules session reaching `IMPLEMENTED` is not approval. A green CI run is not approval. A merged PR is not automatically a completed roadmap task: the existing Jules orchestrator intentionally keeps a human confirmation gate before advancing the queue.
+A Jules session reaching `IMPLEMENTED` is not approval. A green CI run is not approval. A merged PR is not automatically completed work: human review and confirmation remain required before merging.
 
 ## When to create a Phase Issue
 
@@ -106,7 +106,7 @@ The minimum human review sequence is:
 4. Verify automated checks are green.
 5. Run targeted tests/manual checks when the phase requires them.
 6. Decide `MERGE` or `CHANGES REQUIRED`.
-7. Only after confirmation should the roadmap/orchestrator advance the phase.
+8. Only after confirmation should the Human Project Owner approve and merge the PR into `main`.
 
 ## Why this exists
 

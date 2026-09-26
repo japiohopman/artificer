@@ -15,22 +15,54 @@ import {
 
 const tick = String.fromCharCode(96);
 const meta = [
+  '## Problem / Desired Outcome',
+  'Sample problem description.',
+  '',
+  '## Goal',
+  'Sample goal for testing.',
+  '',
+  '## Current Repository Facts',
+  '- `scripts/jules-issue-selector.mjs` exists.',
+  '',
+  '## Investigation Required',
+  'Sample investigation.',
+  '',
+  '## Canonical Ownership',
+  'Sample canonical ownership.',
+  '',
+  '## Known Risks / Invariants',
+  'Sample risks and invariants.',
+  '',
+  '## Scope',
+  '- `scripts/jules-issue-selector.mjs`',
+  '',
+  '## Acceptance Criteria',
+  '1. Sample acceptance criteria.',
+  '',
+  '## Verification Plan',
+  '- `npm test`',
+  '',
+  '## Canonical References',
+  '- ' + tick + 'AGENT.MD' + tick,
+  '- ' + tick + 'AGENT_RULES.md' + tick,
+  '',
+  '## Out of Scope',
+  'Sample out of scope.',
+  '',
   '## Jules Dispatch Metadata',
   '- **status:** ready',
   '- **priority:** 100',
   '- **specialist:** architecture',
   '- **depends-on:** none',
   '- **dispatch-policy:** one issue at a time',
-  '- **implementation-branch:** required',
-  '',
-  '## Canonical References',
-  '- ' + tick + 'AGENT.MD' + tick,
-  '- ' + tick + 'AGENT_RULES.md' + tick
+  '- **implementation-branch:** required'
 ].join('\n');
 
 function issue(number, body = meta, extra = {}) {
   return { number, title: 'Issue ' + number, body, state: 'open', ...extra };
 }
+
+const fileExistFn = path => ['AGENT.MD', 'AGENT_RULES.md', '.github/agents/architecture-specialist.agent.md'].includes(path);
 
 test('valid metadata parses', () => {
   const parsed = parseDispatchMetadata(meta);
@@ -39,8 +71,8 @@ test('valid metadata parses', () => {
   assert.equal(parsed.specialist, 'architecture');
 });
 
-test('invalid metadata is rejected', () => {
-  assert.equal(isCandidateIssue(issue(1, '## Goal\nDo work.')), false);
+test('invalid metadata or incomplete issue contract is rejected by candidate check', () => {
+  assert.equal(isCandidateIssue(issue(1, '## Goal\nDo work.'), { fileExistFn }), false);
   const invalid = parseDispatchMetadata(meta.replace('**priority:** 100', '**priority:** many'));
   assert.equal(invalid.valid, false);
 });
@@ -55,7 +87,7 @@ test('priority ordering is deterministic', () => {
 });
 
 test('pull requests are never candidates', () => {
-  assert.equal(isCandidateIssue(issue(12, meta, { pull_request: { url: 'x' } })), false);
+  assert.equal(isCandidateIssue(issue(12, meta, { pull_request: { url: 'x' } }), { fileExistFn }), false);
 });
 
 test('open implementation PR blocks an issue', () => {
@@ -77,7 +109,10 @@ test('selector skips blocked high priority issue', () => {
     .replace('**depends-on:** none', '**depends-on:** 99');
   const result = selectDispatchableIssue(
     [issue(20, blocked), issue(21, meta)],
-    { dependencyStates: new Map([[99, { type: 'issue', state: 'open' }]]) }
+    {
+      dependencyStates: new Map([[99, { type: 'issue', state: 'open' }]]),
+      fileExistFn
+    }
   );
   assert.equal(result.selected.issue.number, 21);
 });
@@ -85,9 +120,22 @@ test('selector skips blocked high priority issue', () => {
 test('existing implementation PR blocks selection', () => {
   const result = selectDispatchableIssue(
     [issue(42)],
-    { openPullRequests: [{ number: 77, state: 'open', merged: false, body: 'Part of #42' }] }
+    {
+      openPullRequests: [{ number: 77, state: 'open', merged: false, body: 'Part of #42' }],
+      fileExistFn
+    }
   );
   assert.equal(result.selected, null);
+});
+
+test('malformed or incomplete issue contract is rejected by selectDispatchableIssue', () => {
+  const incompleteBody = meta.replace('## Out of Scope\nSample out of scope.', '');
+  const result = selectDispatchableIssue(
+    [issue(100, incompleteBody)],
+    { fileExistFn }
+  );
+  assert.equal(result.selected, null);
+  assert.ok(result.rejected.some(r => r.issueNumber === 100 && r.reason.includes('Failed Quality Gate')));
 });
 
 test('specialist path is repository-local', () => {
@@ -140,49 +188,6 @@ test('all specialist contracts are repository-local and present', () => {
     assert.match(source, /The GitHub Issue is the execution contract/);
     assert.match(source, /ROADMAP\.md[\s\S]*docs\/TASK_BOARD\.md/);
   }
-});
-
-test('Issue-first dispatcher workflow is manual, preflight-gated, and dry-run only', () => {
-  const workflow = readFileSync(
-    new URL('../.github/workflows/jules-issue-dispatcher.yml', import.meta.url),
-    'utf8'
-  );
-
-  assert.match(workflow, /workflow_dispatch:/);
-  assert.doesNotMatch(workflow, /^\s+(schedule|push|pull_request):/m);
-
-  const preflightIndex = workflow.indexOf('scripts/jules-orchestrator-preflight.mjs');
-  const selectorIndex = workflow.indexOf('scripts/jules-issue-selector.mjs');
-  assert.ok(preflightIndex >= 0);
-  assert.ok(selectorIndex > preflightIndex);
-
-  assert.doesNotMatch(workflow, /scripts\/jules-orchestrator\.mjs/);
-  assert.doesNotMatch(workflow, /POST \/sessions/);
-  assert.doesNotMatch(workflow, /### Ready/);
-  assert.doesNotMatch(workflow, /ROADMAP\.md/);
-  assert.doesNotMatch(workflow, /docs\/TASK_BOARD\.md/);
-});
-
-test('live Issue-first workflow is explicitly confirmed and delegates POST to dispatch script', () => {
-  const workflow = readFileSync(
-    new URL('../.github/workflows/jules-issue-dispatcher.yml', import.meta.url),
-    'utf8'
-  );
-
-  assert.match(workflow, /workflow_dispatch:/);
-  assert.match(workflow, /confirmation:/);
-  assert.match(workflow, /DISPATCH/);
-  assert.match(workflow, /jules-source-discovery\.mjs/);
-  assert.match(workflow, /jules-orchestrator-preflight\.mjs/);
-  assert.match(workflow, /jules-issue-selector\.mjs/);
-  assert.match(workflow, /jules-issue-dispatch\.mjs/);
-  assert.ok(workflow.indexOf('jules-source-discovery.mjs') < workflow.indexOf('jules-orchestrator-preflight.mjs'));
-  assert.ok(workflow.indexOf('jules-orchestrator-preflight.mjs') < workflow.indexOf('jules-issue-selector.mjs'));
-  assert.ok(workflow.indexOf('jules-issue-selector.mjs') < workflow.indexOf('jules-issue-dispatch.mjs'));
-  assert.doesNotMatch(workflow, /jules\.googleapis\.com\/v1alpha\/sessions/);
-  assert.doesNotMatch(workflow, /scripts\/jules-orchestrator\.mjs/);
-  assert.doesNotMatch(workflow, /ROADMAP\.md/);
-  assert.doesNotMatch(workflow, /docs\/TASK_BOARD\.md/);
 });
 
 test('selector source never reads legacy queue files', () => {

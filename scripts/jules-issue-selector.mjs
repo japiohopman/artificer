@@ -1,73 +1,37 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
+import {
+  extractSection,
+  extractValueFromText,
+  parseDispatchMetadata,
+  parseCanonicalReferences,
+  specialistPath,
+  hasRepositoryEvidence,
+  hasForbiddenLegacyQueueReferences,
+  validateIssueQualityGate
+} from './jules-issue-validator.mjs';
+import {
+  shouldTriggerDiscovery,
+  isDiscoveryIssue,
+  executeDiscoveryAudit,
+  persistDiscoveryReportIssue
+} from './jules-discovery-loop.mjs';
 
-const REPO = process.env.GITHUB_REPOSITORY;
-const TOKEN = process.env.GITHUB_TOKEN;
+export {
+  parseDispatchMetadata,
+  parseCanonicalReferences,
+  specialistPath,
+  validateIssueQualityGate,
+  persistDiscoveryReportIssue
+};
 
-function section(body, heading) {
-  const start = body.indexOf(heading);
-  if (start < 0) return null;
-  const rest = body.slice(start + heading.length);
-  const next = rest.search(/^##\s+/m);
-  return next < 0 ? rest : rest.slice(0, next);
-}
-
-function valueFrom(text, key) {
-  const prefix = '- **' + key + ':**';
-  const line = text.split('\n').find(item => item.trim().startsWith(prefix));
-  return line ? line.trim().slice(prefix.length).trim() : null;
-}
-
-export function parseDispatchMetadata(body) {
-  const text = section(body || '', '## Jules Dispatch Metadata');
-  if (!text) return { valid: false, errors: ['Missing dispatch metadata section.'] };
-
-  const status = valueFrom(text, 'status');
-  const priorityText = valueFrom(text, 'priority');
-  const specialist = valueFrom(text, 'specialist');
-  const dependsOnText = valueFrom(text, 'depends-on') || 'none';
-  const dispatchPolicy = valueFrom(text, 'dispatch-policy');
-  const branchPolicy = valueFrom(text, 'implementation-branch');
-  const priority = Number(priorityText);
-  const errors = [];
-
-  if (status !== 'ready') errors.push('status must be ready.');
-  if (!Number.isInteger(priority)) errors.push('priority must be an integer.');
-  if (!specialist || !/^[a-z0-9-]+$/.test(specialist)) errors.push('specialist is invalid.');
-  if (dispatchPolicy !== 'one issue at a time') errors.push('dispatch-policy is invalid.');
-  if (branchPolicy !== 'required') errors.push('implementation-branch is invalid.');
-
-  const dependsOn = dependsOnText === 'none'
-    ? []
-    : dependsOnText.split(/[\s,]+/).map(item => Number(item.replace(/^#/, ''))).filter(Number.isInteger);
-
-  return {
-    valid: errors.length === 0,
-    errors,
-    priority: Number.isInteger(priority) ? priority : null,
-    specialist,
-    dependsOn
-  };
-}
-
-export function parseCanonicalReferences(body) {
-  const text = section(body || '', '## Canonical References');
-  if (!text) return [];
-  return text.split('\n')
-    .map(line => line.match(/^\s*-\s+\`([^\`]+)\`\s*$/))
-    .filter(Boolean)
-    .map(match => match[1]);
-}
-
-export function specialistPath(name) {
-  return name && /^[a-z0-9-]+$/.test(name)
-    ? '.github/agents/' + name + '-specialist.agent.md'
-    : null;
-}
-
-export function isCandidateIssue(issue) {
-  return Boolean(issue && issue.state === 'open' && !issue.pull_request && parseDispatchMetadata(issue.body || '').valid);
+export function isCandidateIssue(issue, options = {}) {
+  if (!issue || issue.state !== 'open' || issue.pull_request) {
+    return false;
+  }
+  const quality = validateIssueQualityGate(issue.body || '', options);
+  return quality.valid;
 }
 
 export function sortDispatchCandidates(candidates) {
@@ -100,11 +64,45 @@ export function dependencyBlocks(number, state) {
 export function selectDispatchableIssue(issues, options = {}) {
   const prs = options.openPullRequests || [];
   const dependencyStates = options.dependencyStates || new Map();
-  const candidates = issues
-    .filter(isCandidateIssue)
-    .map(issue => ({ issue, metadata: parseDispatchMetadata(issue.body || '') }));
+  const fileExistFn = options.fileExistFn;
 
+  const candidateEntries = issues
+    .filter(issue => issue && issue.state === 'open' && !issue.pull_request)
+    .map(issue => ({
+      issue,
+      validation: validateIssueQualityGate(issue.body || '', { fileExistFn })
+    }));
+
+  const candidates = [];
   const rejected = [];
+
+  for (const entry of candidateEntries) {
+    if (!entry.validation.valid) {
+      rejected.push({
+        issueNumber: entry.issue.number,
+        reason: 'Failed Quality Gate: ' + entry.validation.errors.join('; ')
+      });
+      continue;
+    }
+    candidates.push({ issue: entry.issue, metadata: entry.validation.metadata });
+  }
+
+  // Calculate telemetry for discovery loop
+  const openNonPrIssues = issues.filter(i => i && i.state === 'open' && !i.pull_request);
+  const activeDiscoveryCount = openNonPrIssues.filter(isDiscoveryIssue).length;
+  const readyIssuesCount = candidates.length;
+  const triggerDiscovery = shouldTriggerDiscovery({ readyIssuesCount, activeDiscoveryCount });
+
+  let discoveryAuditResult = null;
+  if (triggerDiscovery) {
+    discoveryAuditResult = executeDiscoveryAudit(issues, {
+      readyIssuesCount,
+      fileExistFn
+    });
+  }
+
+  let selectedCandidate = null;
+
   for (const candidate of sortDispatchCandidates(candidates)) {
     const existingPr = findOpenImplementationPr(candidate.issue.number, prs);
     if (existingPr) {
@@ -127,10 +125,22 @@ export function selectDispatchableIssue(issues, options = {}) {
         break;
       }
     }
-    if (!blocked) return { selected: candidate, rejected };
+    if (!blocked) {
+      selectedCandidate = candidate;
+      break;
+    }
   }
 
-  return { selected: null, rejected };
+  return {
+    selected: selectedCandidate,
+    rejected,
+    discovery: {
+      triggered: triggerDiscovery,
+      readyIssuesCount,
+      activeDiscoveryCount,
+      audit: discoveryAuditResult
+    }
+  };
 }
 
 export function buildJulesPrompt(issue, sharedContext, specialistContext, canonicalContexts) {
@@ -170,6 +180,8 @@ function setOutput(name, value) {
 }
 
 async function github(path) {
+  const REPO = process.env.GITHUB_REPOSITORY;
+  const TOKEN = process.env.GITHUB_TOKEN;
   const response = await fetch('https://api.github.com/repos/' + REPO + '/' + path, {
     headers: {
       Authorization: 'Bearer ' + TOKEN,
@@ -213,6 +225,8 @@ async function dependencies(numbers) {
 }
 
 async function main() {
+  const REPO = process.env.GITHUB_REPOSITORY;
+  const TOKEN = process.env.GITHUB_TOKEN;
   if (!REPO || !TOKEN) throw new Error('GITHUB_REPOSITORY and GITHUB_TOKEN are required.');
 
   const results = await Promise.all([
@@ -222,25 +236,44 @@ async function main() {
   const issues = results[0];
   const prs = results[1];
 
-  const candidates = issues.filter(issue => !issue.pull_request);
-  const metadata = candidates
-    .map(issue => parseDispatchMetadata(issue.body || ''))
-    .filter(meta => meta.valid);
+  const candidateEntries = issues
+    .filter(issue => !issue.pull_request)
+    .map(issue => ({
+      issue,
+      validation: validateIssueQualityGate(issue.body || '')
+    }))
+    .filter(entry => entry.validation.valid);
 
-  const dependencyNumbers = [...new Set(metadata.flatMap(meta => meta.dependsOn))];
+  const dependencyNumbers = [...new Set(candidateEntries.flatMap(entry => entry.validation.metadata.dependsOn))];
   const dependencyStates = await dependencies(dependencyNumbers);
   const decision = selectDispatchableIssue(issues, {
     openPullRequests: prs,
     dependencyStates
   });
 
+  // If discovery is triggered, persist the discovery report issue.
+  // Fail closed: if persistence fails, allow error to throw.
+  let persistedDiscoveryIssue = null;
+  if (decision.discovery?.triggered && decision.discovery?.audit?.discoveryIssue) {
+    console.log('Low ready work detected (readyIssues <= 2). Persisting Discovery Report Issue ...');
+    persistedDiscoveryIssue = await persistDiscoveryReportIssue(
+      decision.discovery.audit.discoveryIssue,
+      TOKEN,
+      REPO
+    );
+    console.log(`Persisted Discovery Report Issue #${persistedDiscoveryIssue.number}`);
+  }
+
   if (!decision.selected) {
     setOutput('dispatch', false);
+
     console.log(JSON.stringify({
       dispatch: false,
       dispatchable: false,
       reason: 'No dispatchable Issue satisfies the Issue-first contract.',
-      rejected: decision.rejected
+      rejected: decision.rejected,
+      discovery: decision.discovery,
+      persistedDiscoveryIssue
     }, null, 2));
     return;
   }
@@ -288,7 +321,9 @@ async function main() {
     specialist: selected.metadata.specialist,
     specialistPath: specialist,
     prompt,
-    sessionTitle: selected.issue.title.slice(0, 80)
+    sessionTitle: selected.issue.title.slice(0, 80),
+    discovery: decision.discovery,
+    persistedDiscoveryIssue
   }, null, 2));
 }
 

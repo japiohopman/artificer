@@ -17,6 +17,9 @@ The assigned GitHub Issue defines:
 
 Do not invent missing scope from `ROADMAP.md`, `GOALS.md`, `docs/TASK_BOARD.md`, old named-agent instructions, or unrelated documentation.
 
+- **Inspect before implementing:** For existing-system work, inspect current implementation, consumers, tests, canonical ownership, and relevant adjacent architecture before modifying code.
+- **Adjacent findings must be recorded, not silently absorbed:** Materially adjacent work belongs in a follow-up Issue rather than being silently added to the active task.
+
 ## 2. Protect canonical ownership
 
 Before extending a domain:

@@ -47,8 +47,13 @@ GOALS.md (Long-term vision)
 
 ## 3. Work Cycle & Execution Flow
 
-1. **Issue Creation & Assignment**
-   - Work begins when a GitHub Issue is created and formatted with standard metadata (`status`, `priority`, `specialist`, `implementation-branch`).
+Development follows an evidence-backed lifecycle:
+`proposal → investigation → evidence-backed Issue → human validation → quality gate → ready → dispatch`
+
+1. **Issue Creation & Quality Gate Validation**
+   - Work begins as an investigation resulting in an evidence-backed GitHub Issue.
+   - The Issue must satisfy **Issue Quality Contract v2** (required sections, valid metadata, existing specialist, canonical references resolving on `main`, concrete repository evidence, acceptance criteria, verification plan, and out-of-scope boundary).
+   - Only Issues passing the Quality Gate become eligible as `status: ready`.
 
 2. **Jules Dispatch & Execution**
    - The automated dispatcher (`scripts/jules-issue-dispatch.mjs`) selects the highest-priority ready Issue.
@@ -75,6 +80,14 @@ To preserve execution safety and prevent duplicate session dispatches:
 - **Single Execution Context**: Do not start a new Jules dispatch merely because a review identifies required fixes for an open PR. The active Jules task, implementation branch, and open PR remain the active execution context while the PR is open.
 - **New Dispatch Trigger**: A new Issue dispatch is appropriate only after the current task/PR is complete (merged or closed), or when newly requested work materially expands beyond the original Issue contract.
 - **One-at-a-Time Preflight Model**: The orchestrator preflight safety gate enforces a strict one-Issue-at-a-time dispatch model. An active or open PR blocks duplicate dispatches until the active execution context reaches a terminal state.
+
+### 3.3. Evidence-Based Discovery Loop
+
+When ready work is low (`ready Issues <= 2 AND no active Discovery Issue`), a controlled Discovery Loop triggers:
+
+- **Audits & Findings**: Discovery audits the repository, cites concrete evidence, explains risk/impact, records rejected findings, and proposes candidate follow-up Issues.
+- **Strict Non-Dispatch Boundary**: Candidate Issues created by discovery begin as `status: proposed`. They require human review before becoming `status: ready`.
+- **No Direct Dispatch**: Discovery findings never dispatch implementation work automatically.
 
 ### 3.2. Scope Protection & Creep Prevention
 
