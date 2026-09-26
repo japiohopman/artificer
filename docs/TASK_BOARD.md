@@ -11,7 +11,7 @@
 
 ## Migration & Audit Matrix
 
-Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been audited and classified below into explicit completed historical PRs, active GitHub Issues (#300, #301, #302), or unscheduled strategic concepts to prevent any silent scope loss:
+Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md` task document has been audited and classified below into explicit completed historical PRs, active GitHub Issues (#300, #301, #302), or retired historical concepts to prevent any silent scope loss:
 
 ### 1. Legacy `priority1.md` Detailed Scope Breakdown
 
@@ -30,19 +30,19 @@ Every actionable item from the retired `TASK_BOARD.md` and legacy `priority1.md`
 
 | Legacy Task Item | Original Domain | Historical Audit & Disposition |
 | :--- | :--- | :--- |
-| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for class/background gear eligibility; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Point Buy Calculator** | Character Creation | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for standard 27-point-buy calculator in `StatsStep.tsx`; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for spell filtering and slot management; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for level 4/8/12/16/19 ASI vs Feat selection flow; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for hit die rolling/averaging on level up; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Retired / Unscheduled Strategic Concept** — Unscheduled feature concept for 3D dice rolls during stat generation; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Retired / Unscheduled Strategic Concept** — Unscheduled UI feature concept for equipment pack inspection modal; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Retired / Unscheduled Strategic Concept** — Unscheduled gameplay concept for sharing canonical `CharacterProfile` primitives with recruits; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Retired / Unscheduled Strategic Concept** — Unscheduled AI DM concept for tracking NPC sentiment/history; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Economic & Trade Module** | Runtime / World Systems | **Retired / Unscheduled Strategic Concept** — Long-term world simulation concept for regional pricing; listed in `ROADMAP.md` under *Later — parked until Now is clear*; no active execution Issue. |
-| **Soundscape Orchestrator** | Audio Systems | **Retired / Unscheduled Strategic Concept** — Long-term audio system concept for adaptive ambient soundscapes; listed in `ROADMAP.md` under *Later — parked until Now is clear*; no active execution Issue. |
-| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Retired / Unscheduled Strategic Concept** — Unscheduled combat engine concept for D&D condition tracking (Poisoned, Prone, Stunned); kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
-| **Journal / DM / LM Integration** | Narrative AI / Systems | **Retired / Unscheduled Strategic Concept** — Unscheduled AI DM concept for passing structured narrative character state to LLM prompts; kept in `ROADMAP.md` as strategic follow-up context; no active execution Issue. |
+| **Starting Equipment Eligibility Resolver** | Character Creation / Level Up | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for class/background gear eligibility; not active execution scope. |
+| **Point Buy Calculator** | Character Creation | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for standard 27-point-buy calculator in `StatsStep.tsx`; not active execution scope. |
+| **Advanced Spellbook Manager** | Character Creation / Gameplay | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for spell filtering and slot management; not active execution scope. |
+| **Feat selection during ASI / Level Up** | Character Creation / Level Up | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for level 4/8/12/16/19 ASI vs Feat selection flow; not active execution scope. |
+| **Automatic HP Level-Up Flow** | Character Creation / Level Up | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for hit die rolling/averaging on level up; not active execution scope. |
+| **Per-attribute 3D ability-score rolls** | Character Creation / DevKit | **Retired / Unscheduled Historical Concept** — Unscheduled feature concept for 3D dice rolls during stat generation; not active execution scope. |
+| **Equipment Pack inspection in FocusView** | Character Creation / Inventory | **Retired / Unscheduled Historical Concept** — Unscheduled UI feature concept for equipment pack inspection modal; not active execution scope. |
+| **Recruitable NPC Passport reuse** | Character Profile / Gameplay | **Strategic Roadmap Focus** — Outlined in `ROADMAP.md` under *Gameplay & AI DM Systems* focus area. |
+| **NPC Memory & Relationship History** | Runtime / Narrative AI | **Strategic Roadmap Focus** — Outlined in `ROADMAP.md` under *Gameplay & AI DM Systems* focus area. |
+| **Economic & Trade Module** | Runtime / World Systems | **Retired / Unscheduled Historical Concept** — Long-term world simulation concept for regional pricing; not active execution scope. |
+| **Soundscape Orchestrator** | Audio Systems | **Retired / Unscheduled Historical Concept** — Long-term audio system concept for adaptive ambient soundscapes; not active execution scope. |
+| **Rule Engine / Condition Tracker** | Gameplay / Combat Engine | **Retired / Unscheduled Historical Concept** — Unscheduled combat engine concept for D&D condition tracking (Poisoned, Prone, Stunned); not active execution scope. |
+| **Journal / DM / LM Integration** | Narrative AI / Systems | **Strategic Roadmap Focus** — Outlined in `ROADMAP.md` under *Gameplay & AI DM Systems* focus area. |
 | **Spawn / Entry Point Placement** | World & Location Flow | **Completed / Superseded** — Implemented in `BattleMapEditor` (`src/components/devkit/BattleMapEditor/`) and map loading adapters. |
 | **HUD Responsibility Cleanup** | UI Architecture | **Completed / Superseded** — Refactored during `CharacterPanel` mirror migration (`src/components/character/panel/`). |
 | **WorldMap / LocationMap Specialization** | World Systems | **Completed / Superseded** — Decoupled macro world view (`WorldPanel.tsx`) from micro tactical combat grid (`CombatGrid.tsx`). |
