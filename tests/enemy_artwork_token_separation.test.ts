@@ -22,20 +22,22 @@ describe('Enemy Artwork vs Token Resolution Separation (#311)', () => {
     assert.equal(source.includes("resolveEnemyArtworkUrl("), true);
   });
 
-  test('executes resolveEnemyArtworkUrl behavioral logic directly', () => {
-    // 1. Token path input -> non-token enemies/images/ output
-    const tokenInput = '/assets/atlas/enemies/tokens/humanoid/goblin_scout.webp';
-    const resolvedFromToken = resolveEnemyArtworkUrl(tokenInput, 'goblin');
-    assert.equal(resolvedFromToken, '/assets/atlas/enemies/images/goblin.webp');
+  test('executes resolveEnemyArtworkUrl on real canonical examples (Gargoyle)', () => {
+    // Gargoyle record has token 'image' and canonical 'imageUrl'
+    const gargoyleRecord = {
+      name: 'gargoyle',
+      image: '/assets/atlas/enemies/tokens/elemental/Gargoyle.webp',
+      imageUrl: '/assets/atlas/enemies/images/gargoyle.webp'
+    };
 
-    // 2. Canonical enemies/images/ input -> preserves canonical enemies/images/ artwork
-    const canonicalInput = '/assets/atlas/enemies/images/goblin.webp';
-    const resolvedCanonical = resolveEnemyArtworkUrl(canonicalInput, 'goblin');
-    assert.equal(resolvedCanonical, '/assets/atlas/enemies/images/goblin.webp');
+    // 1. Non-grid presentation resolves canonical imageUrl
+    const resolvedArtwork = resolveEnemyArtworkUrl(gargoyleRecord.imageUrl, '0m8qydn52qw9zzom', gargoyleRecord.name);
+    assert.equal(resolvedArtwork, '/assets/atlas/enemies/images/gargoyle.webp');
 
-    // 3. Handling Foundry 16-char ID with name
-    const foundryResolved = resolveEnemyArtworkUrl('/assets/atlas/enemies/tokens/orc_sentry.webp', '125qFnXvT9z0iOic', 'Orc');
-    assert.equal(foundryResolved, '/assets/atlas/enemies/images/orc.webp');
+    // 2. Passing token image URL to non-grid artwork resolver yields no token path leak
+    const tokenResolved = resolveEnemyArtworkUrl(gargoyleRecord.image, '0m8qydn52qw9zzom', gargoyleRecord.name);
+    assert.equal(tokenResolved.includes('/tokens/'), false);
+    assert.equal(tokenResolved, ''); // Unmapped token URL returns empty string without inventing artwork filenames
   });
 
   test('verifies non-grid components consume getEnemyArtworkUrl or non-token artwork resolution', () => {
