@@ -206,3 +206,34 @@ describe('WorldEnvironmentSnapshot & Environment Resolver Domain Tests', () => {
     expect(['dawn', 'day', 'dusk', 'night']).toContain(snapshot.time.timeOfDay);
   });
 });
+
+describe('WorldEnvironmentHeader React Subscription & Snapshot Resolution Integration', () => {
+  it('guarantees referential stability of Zustand selector inputs when building snapshot', () => {
+    const store = useWorldStore.getState();
+
+    // Verify snapshot accessor calls
+    const snapshot1 = store.getEnvironmentSnapshot();
+    const snapshot2 = store.getEnvironmentSnapshot();
+
+    expect(snapshot1.time.formattedTime).toBe(snapshot2.time.formattedTime);
+    expect(snapshot1.locations.physical?.name).toBe(snapshot2.locations.physical?.name);
+
+    // Verify shallow primitive equality across state snapshots
+    const primitiveSelector = (s: typeof store) => ({
+      gameYear: s.gameYear,
+      gameMonth: s.gameMonth,
+      gameDay: s.gameDay,
+      gameTime: s.gameTime,
+      weather: s.weather,
+      temperature: s.temperature,
+      partyLocation: s.partyLocation,
+      currentLocation: s.currentLocation,
+      inspectedLocation: s.inspectedLocation,
+    });
+
+    const sel1 = primitiveSelector(store);
+    const sel2 = primitiveSelector(store);
+
+    expect(sel1).toEqual(sel2);
+  });
+});

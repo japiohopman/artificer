@@ -2,9 +2,32 @@ import React from 'react';
 import { useWorldStore, WeatherType } from '../../store/useWorldStore';
 import { TimeOfDay } from '../../domain/environment/environmentTypes';
 import { GameIcon } from '../../game_icons';
+import { useShallow } from 'zustand/react/shallow';
 
 export const WorldEnvironmentHeader: React.FC = () => {
-  const snapshot = useWorldStore((state) => state.getEnvironmentSnapshot());
+  // Subscribe to primitive state fields using useShallow to maintain referential stability
+  // and prevent infinite render loops while avoiding double store calls or duplicate logic.
+  const state = useWorldStore(
+    useShallow((s) => ({
+      gameYear: s.gameYear,
+      gameMonth: s.gameMonth,
+      gameDay: s.gameDay,
+      gameTime: s.gameTime,
+      weather: s.weather,
+      temperature: s.temperature,
+      partyLocation: s.partyLocation,
+      currentLocation: s.currentLocation,
+      inspectedLocation: s.inspectedLocation,
+      currentRegion: s.currentRegion,
+      isTraveling: s.isTraveling,
+      travelProgress: s.travelProgress,
+      mapZoom: s.mapZoom,
+      isFastForwarding: s.isFastForwarding,
+      getEnvironmentSnapshot: s.getEnvironmentSnapshot,
+    }))
+  );
+
+  const snapshot = state.getEnvironmentSnapshot();
 
   const { time, weather, temperature, locations } = snapshot;
   const physicalLoc = locations.physical;
