@@ -495,26 +495,36 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     // Terrain classification
     const terrain = (state.partyLocation?.category || state.partyLocation?.type || 'land').toLowerCase();
 
-    // Persistent, deterministic time-block weather continuity
-    const newWeather = getWeatherForTimeBlock(
-      state.gameYear,
-      state.gameMonth,
-      state.gameDay,
-      state.gameTime,
-      state.currentRegion,
-      terrain
-    );
+    // Perform weather transition only when crossing a 6-hour (360 minute) time-block boundary
+    const currentTotalMinutes = (state.gameYear * 525600) + (state.gameMonth * 43200) + (state.gameDay * 1440) + state.gameTime;
+    const prevTotalMinutes = currentTotalMinutes - minutesPassed;
+    const prevBlock = Math.floor(prevTotalMinutes / 360);
+    const currentBlock = Math.floor(currentTotalMinutes / 360);
 
-    if (newWeather !== state.weather) {
-      set({ weather: newWeather });
+    let activeWeather = state.weather;
+
+    if (prevBlock !== currentBlock) {
+      const candidateWeather = getWeatherForTimeBlock(
+        state.gameYear,
+        state.gameMonth,
+        state.gameDay,
+        state.gameTime,
+        state.currentRegion,
+        terrain
+      );
+
+      if (candidateWeather !== state.weather) {
+        set({ weather: candidateWeather });
+        activeWeather = candidateWeather;
+      }
     }
 
-    // Deterministic temperature calculation
+    // Deterministic temperature calculation using current authoritative weather
     const tempContext = resolveTemperatureContext(
       terrain,
       state.gameMonth,
       state.gameTime,
-      newWeather
+      activeWeather
     );
 
     set({ temperature: tempContext.celsius });

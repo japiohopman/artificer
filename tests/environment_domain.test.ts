@@ -8,7 +8,7 @@ import {
   getWeatherForTimeBlock,
   resolveWorldEnvironmentSnapshot,
 } from '../src/domain/environment/environmentResolver';
-import type { WorldState } from '../src/store/useWorldStore';
+import { useWorldStore, type WorldState } from '../src/store/useWorldStore';
 
 describe('WorldEnvironmentSnapshot & Environment Resolver Domain Tests', () => {
   it('resolves location summary cleanly with fallback defaults', () => {
@@ -118,7 +118,7 @@ describe('WorldEnvironmentSnapshot & Environment Resolver Domain Tests', () => {
     expect(snapshot.locations.inspected?.id).toBe('neverwinter');
   });
 
-  it('guarantees identical authoritative inputs resolve to identical snapshot outputs', () => {
+  it('guarantees identical authoritative inputs resolve to identical complete snapshot outputs', () => {
     const mockState: Partial<WorldState> = {
       gameYear: 1492,
       gameMonth: 5,
@@ -139,12 +139,19 @@ describe('WorldEnvironmentSnapshot & Environment Resolver Domain Tests', () => {
     const snap1 = resolveWorldEnvironmentSnapshot(mockState as WorldState);
     const snap2 = resolveWorldEnvironmentSnapshot(mockState as WorldState);
 
-    // Timestamps can differ slightly if created sequentially, compare domain contents
-    expect(snap1.time).toEqual(snap2.time);
-    expect(snap1.locations).toEqual(snap2.locations);
-    expect(snap1.weather).toEqual(snap2.weather);
-    expect(snap1.temperature).toEqual(snap2.temperature);
-    expect(snap1.forecast).toEqual(snap2.forecast);
+    // Full strict deep equality on entire snapshot object
+    expect(snap1).toEqual(snap2);
+  });
+
+  it('proves authoritative weather remains stable across ticks until explicit deterministic block boundary', () => {
+    const store = useWorldStore.getState();
+    store.setWeather('Mystic');
+    store.setTemperature(20);
+
+    // Advance by 5 minutes within the same 6-hour block (e.g. at 8:00 AM / 480 minutes)
+    store.updateEnvironment(5);
+
+    expect(useWorldStore.getState().weather).toBe('Mystic');
   });
 
   it('provides persistent weather continuity via time-block resolution', () => {

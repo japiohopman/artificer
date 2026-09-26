@@ -263,7 +263,7 @@ export function getWeatherForTimeBlock(
   gameMonth: number,
   gameDay: number,
   gameTime: number,
-  region = 'Sword Coast',
+  _region = 'Sword Coast',
   terrain = 'landmark'
 ): WeatherType {
   const blockIndex = Math.floor(gameTime / 360); // 4 blocks per day (6h each)
@@ -322,7 +322,6 @@ export function resolveWorldEnvironmentSnapshot(
   const forecast = resolveForecast(state.gameTime, state.gameMonth, state.weather);
 
   return {
-    timestamp: new Date().toISOString(),
     time,
     locations: {
       physical: physicalLoc,

@@ -59,7 +59,6 @@ export interface LocationEnvironmentContext {
 }
 
 export interface WorldEnvironmentSnapshot {
-  timestamp: string;
   time: TimeContext;
   locations: LocationEnvironmentContext;
   weather: WeatherContext;
