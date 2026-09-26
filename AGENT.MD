@@ -12,7 +12,7 @@ The execution contract is determined in this order:
 4. **AGENT_RULES.md** — shared working rules and safety constraints.
 5. **Canonical references named by the Issue or specialist contract** — source code and documentation to inspect for context.
 
-`ROADMAP.md`, `GOALS.md`, and `docs/TASK_BOARD.md` provide strategic or historical context. They are **not execution queues** and must never be used to reconstruct missing Issue scope.
+`ROADMAP.md`, `GOALS.md`, and `docs/TASK_BOARD.md` provide strategic or historical context. `docs/WORKFLOW.md` defines the authoritative operating model. Shared context files are **not execution queues** and must never be used to reconstruct missing Issue scope.
 
 ## 📍 Read in this order
 

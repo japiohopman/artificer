@@ -4,6 +4,7 @@ Central navigation for Artificer documentation. This page points agents and deve
 
 ## 📌 Start here
 
+- [Operating Model & Workflow](./WORKFLOW.md) - 🛠️ Authoritative workflow, role contracts, and repository autonomy guide.
 - [Architecture & Capability Map](./ARCHITECTURE_CAPABILITY_MAP.md) - 🏛️ Authoritative domain, capability, gameplay-gap, and specialist-agent map.
 - [Architecture Status](./ARCHITECTURE_STATUS.md) - 🧭 Current architectural boundaries and runtime ownership.
 - [Project Progress](./PROGRESS.md) - 📈 High-level implementation status.
@@ -74,7 +75,7 @@ Legacy named-agent documents are retained as migration/history material only.
 - Documentation describes the current repository, not an imagined future state.
 - The assigned GitHub Issue is the execution contract for implementation work.
 - `ROADMAP.md` expresses current priority/order, not detailed task instructions.
-- `docs/TASK_BOARD.md` is a migration/reference document, not an execution queue.
+- `docs/TASK_BOARD.md` is a historical migration/reference document, not an execution queue.
 - Specialist contracts define domain boundaries and routing constraints.
 - Planned work must not be presented as implemented capability.
 - `PROGRESS.md` contains project-level status and should have a current update date.

@@ -30,9 +30,7 @@ Closes #
 - [ ] Ruleset-specific requests do not silently fall back to another ruleset
 
 ## Documentation
-- [ ] `ROADMAP.md` updated if phase status/dispatch changed
-- [ ] `docs/TASK_BOARD.md` updated if applicable
-- [ ] Relevant architecture/audit documentation updated
+- [ ] Relevant architecture/audit/workflow documentation updated
 
 ## Review notes
 <!-- Explain important design decisions, known limitations, and anything a reviewer should inspect carefully. -->
