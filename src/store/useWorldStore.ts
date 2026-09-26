@@ -2,6 +2,12 @@ import { create } from 'zustand';
 import { useInventoryStore } from './useInventoryStore';
 import { useCharacterStore } from './useCharacterStore';
 import { useUIStore } from './useUIStore';
+import {
+  getWeatherForTimeBlock,
+  resolveTemperatureContext,
+  resolveWorldEnvironmentSnapshot,
+} from '../domain/environment/environmentResolver';
+import type { WorldEnvironmentSnapshot } from '../domain/environment/environmentTypes';
 
 export type WeatherType = 'Sunny' | 'Rainy' | 'Cloudy' | 'Stormy' | 'Snowy' | 'Foggy' | 'Blizzard' | 'Heatwave' | 'Hail' | 'Eerie' | 'Mystic';
 
@@ -147,6 +153,7 @@ export interface WorldState {
   setSubMapAllCategories: (cats: string[]) => void;
   setSubMapActiveLayer: (layer: string | null) => void;
   getPartySpeedMph: () => number;
+  getEnvironmentSnapshot: () => WorldEnvironmentSnapshot;
 }
 
 export const useWorldStore = create<WorldState>((set, get) => ({
@@ -480,73 +487,37 @@ export const useWorldStore = create<WorldState>((set, get) => ({
     };
   }),
 
+  getEnvironmentSnapshot: () => resolveWorldEnvironmentSnapshot(get()),
+
   updateEnvironment: (minutesPassed = 1) => {
     const state = get();
-    
-    // 1% chance per game hour to change weather (approx 0.016% per minute)
-    if (Math.random() < (0.01 * (minutesPassed / 60))) {
-      const weathers: WeatherType[] = ['Sunny', 'Rainy', 'Cloudy', 'Stormy', 'Snowy', 'Foggy', 'Blizzard', 'Heatwave', 'Hail', 'Eerie', 'Mystic'];
-      const newWeather = weathers[Math.floor(Math.random() * weathers.length)];
+
+    // Terrain classification
+    const terrain = (state.partyLocation?.category || state.partyLocation?.type || 'land').toLowerCase();
+
+    // Persistent, deterministic time-block weather continuity
+    const newWeather = getWeatherForTimeBlock(
+      state.gameYear,
+      state.gameMonth,
+      state.gameDay,
+      state.gameTime,
+      state.currentRegion,
+      terrain
+    );
+
+    if (newWeather !== state.weather) {
       set({ weather: newWeather });
     }
 
-    // Dynamic Temperature Calculation based on Region/Terrain, Season, Time of Day, and Weather
-    const terrain = (state.partyLocation?.category || state.partyLocation?.type || 'land').toLowerCase();
-    
-    let baseTemp = 15; // default temperate land base temp
-    let isUnderground = false;
+    // Deterministic temperature calculation
+    const tempContext = resolveTemperatureContext(
+      terrain,
+      state.gameMonth,
+      state.gameTime,
+      newWeather
+    );
 
-    if (terrain === 'arctic' || terrain === 'glaciers_tundras') {
-      baseTemp = -8;
-    } else if (terrain === 'desert' || terrain === 'deserts' || terrain === 'deserts_wastelands') {
-      baseTemp = 35;
-    } else if (terrain === 'underdark' || terrain === 'dungeon') {
-      baseTemp = 12;
-      isUnderground = true;
-    }
-
-    let newTemp = baseTemp;
-
-    if (!isUnderground) {
-      // 1. Season impact
-      // Hammer (1), Alturiak (2), Nightal (12) are Winter
-      // Ches (3), Tarsakh (4), Mirtul (5) are Spring
-      // Kythorn (6), Flamerule (7), Eleasis (8) are Summer
-      // Eleint (9), Marpenoth (10), Uktar (11) are Autumn
-      const month = state.gameMonth;
-      let seasonOffset = 0;
-      if (month === 12 || month === 1 || month === 2) {
-        seasonOffset = -10;
-      } else if (month === 6 || month === 7 || month === 8) {
-        seasonOffset = 8;
-      } else if (month === 9 || month === 10 || month === 11) {
-        seasonOffset = -2;
-      } // Spring is 0
-
-      // 2. Time of day cycle (coolest at 4 AM, warmest at 4 PM)
-      const hours = state.gameTime / 60;
-      const timeFactor = Math.sin((hours - 10) * Math.PI / 12); // -1 to 1
-      const dailySwing = terrain.includes('desert') ? 12 : 6; // Deserts have larger day/night temperature swings
-      const timeOffset = timeFactor * dailySwing;
-
-      // 3. Weather impact
-      let weatherOffset = 0;
-      if (state.weather === 'Rainy') weatherOffset = -3;
-      else if (state.weather === 'Stormy') weatherOffset = -5;
-      else if (state.weather === 'Snowy') weatherOffset = -8;
-      else if (state.weather === 'Cloudy') weatherOffset = -2;
-      else if (state.weather === 'Foggy') weatherOffset = -4;
-      else if (state.weather === 'Blizzard') weatherOffset = -15;
-      else if (state.weather === 'Heatwave') weatherOffset = 10;
-      else if (state.weather === 'Hail') weatherOffset = -6;
-
-      newTemp = baseTemp + seasonOffset + timeOffset + weatherOffset;
-    }
-
-    // Small random fluctuation
-    newTemp += (Math.random() - 0.5) * 0.5;
-
-    set({ temperature: Math.round(newTemp * 10) / 10 });
+    set({ temperature: tempContext.celsius });
 
     // Handle Movement
     if (state.isTraveling && state.destination && state.travelOrigin) {

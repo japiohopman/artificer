@@ -169,15 +169,15 @@ Artificer's codebase has reached a scale where feature addition and maintenance 
 - **Dependencies:** `useWorldStore`
 
 #### B3. Environment & Weather
-- **Current Canonical Module:** `src/store/useWorldStore.ts`
-- **Primary Functions / Hooks / Selectors:** `updateEnvironment()`, `setWeather()`, `setTemperature()`, `weather`, `temperature`.
-- **Source-of-Truth Data:** Dynamic environmental state in `useWorldStore` updated via time progression and stochastic terrain/season calculations.
-- **Derived / Presentation Consumers:** Overland map environmental overlays, Narrator context, HUD weather bar, Hue ambient lighting.
+- **Current Canonical Module:** `src/store/useWorldStore.ts` (State Owner), `src/domain/environment/environmentResolver.ts` (Derived Snapshot & Weather Resolver)
+- **Primary Functions / Hooks / Selectors:** `updateEnvironment()`, `getEnvironmentSnapshot()`, `resolveWorldEnvironmentSnapshot()`, `getWeatherForTimeBlock()`.
+- **Source-of-Truth Data:** Dynamic environmental state in `useWorldStore` updated via deterministic time-block weather continuity and season/diurnal calculations.
+- **Derived / Presentation Consumers:** `WorldEnvironmentSnapshot` consumers (Overland map overlays, Narrator context, HUD weather bar, Hue ambient lighting).
 - **Current Status:** `Implemented`
 - **Known Architectural Debt:** Weather effects are currently visual/narrative; they do not yet modify combat movement speeds or ranged weapon attack rolls.
-- **Related GitHub Issues:** #313
-- **Intended Specialist Agent:** Gameplay Specialist
-- **Dependencies:** `useWorldStore`
+- **Related GitHub Issues:** #313, #348
+- **Intended Specialist Agent:** Gameplay Specialist / Architecture Specialist
+- **Dependencies:** `useWorldStore`, `src/domain/environment/`
 
 #### B4. Overland Travel & Movement
 - **Current Canonical Module:** `src/store/useWorldStore.ts`, `src/lib/mapUtils.ts`
