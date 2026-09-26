@@ -5,6 +5,13 @@ import { cn } from '../../lib/utils';
 import { GameIcon } from '../../game_icons';
 import { ChromaKeyImage } from '../ui/ChromaKeyImage';
 import { normalizeImageUrl } from '../../services/storageService';
+import {
+  AtlasSheetFrame,
+  AtlasSheetHeader,
+  AtlasSheetMedia,
+  AtlasSheetBody,
+  AtlasSheetFooter
+} from './sheet/AtlasSheetFrame';
 
 interface GodCardProps {
   god: any;
@@ -53,65 +60,43 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
   };
 
   return (
-    <div
-      className={cn(
-        "w-[380px] h-[600px] border-[14px] rounded-[24px] p-5 flex flex-col gap-3 relative overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4)] group text-black",
-        "border-amber-900/60",
-        className
-      )}
+    <AtlasSheetFrame
+      borderColor="#78350f"
+      badgeText="Deity Registry"
+      badgeColor="text-amber-950"
+      className={cn("w-[380px] sm:w-[380px] max-w-[380px] h-[600px] sm:h-[600px] min-h-[600px] max-h-[600px] hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-all duration-500", className)}
       style={{
-        backgroundImage: `url('/assets/ui/parchment.jpg')`,
-        backgroundColor: '#f5ebd0',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
         color: '#3d2516'
       }}
     >
-      {/* Texture Overlay */}
-      <div className="absolute inset-0 bg-[#e6d5b0]/20 mix-blend-multiply pointer-events-none rounded-[12px]" />
-      <div className="absolute inset-0 bg-paper-texture opacity-20 mix-blend-multiply pointer-events-none" />
-
-      {/* Decorative Corners */}
-      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-amber-950/20 rounded-tl-lg" />
-      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-950/20 rounded-tr-lg" />
-      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-950/20 rounded-bl-lg" />
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-amber-950/20 rounded-br-lg" />
-
-      {/* Registry Info at the bottom center */}
-      <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-        <div className="w-8 h-[1px] bg-amber-950/30" />
-        <span className="text-[8px] font-bold text-red-900 uppercase tracking-[0.2em]">Deity Registry</span>
-        <div className="w-8 h-[1px] bg-amber-950/30" />
-      </div>
-
       {/* Header */}
-      <div className="flex flex-col relative z-10 pb-1">
-        <h3
-          className="font-serif text-3xl font-black uppercase tracking-tight leading-none text-center text-white"
-          style={{
-            textShadow: `-1px -1px 0 #78350f, 1px -1px 0 #78350f, -1px 1px 0 #78350f, 1px 1px 0 #78350f, 0 2px 4px rgba(0,0,0,0.3)`
-          }}
-        >
-          {god.name}
-        </h3>
-
-        {/* stretching HR */}
-        <div className="h-[2px] w-[calc(100%+40px)] -ml-5 my-2 border-y border-amber-950/20" style={{ backgroundColor: '#78350f' }} />
-
-        <div className="w-full flex justify-between items-center px-1">
-          <span className="text-[12px] font-black text-red-900 uppercase tracking-widest">
-            {renderAlignment(god.alignment)}
+      <AtlasSheetHeader
+        title={
+          <span
+            className="font-serif text-3xl font-black uppercase tracking-tight leading-none text-center text-white block"
+            style={{
+              textShadow: `-1px -1px 0 #78350f, 1px -1px 0 #78350f, -1px 1px 0 #78350f, 1px 1px 0 #78350f, 0 2px 4px rgba(0,0,0,0.3)`
+            }}
+          >
+            {god.name}
           </span>
-          <span className="text-[12px] font-black text-amber-900 uppercase tracking-widest opacity-80">
-            Gods_of_Faerûn
-          </span>
-        </div>
-      </div>
+        }
+        subtitle={
+          <div className="w-full flex justify-between items-center px-1">
+            <span className="text-[12px] font-black text-red-900 uppercase tracking-widest">
+              {renderAlignment(god.alignment)}
+            </span>
+            <span className="text-[12px] font-black text-amber-900 uppercase tracking-widest opacity-80">
+              Gods_of_Faerûn
+            </span>
+          </div>
+        }
+      />
 
       {/* Deity Image / Portrait Area */}
       <div className="relative shrink-0 z-20 flex justify-center items-center">
         {/* Borderless and transparent ChromaKey deity portrait */}
-        <div className="aspect-[3/2] w-[260px] relative flex items-center justify-center overflow-hidden">
+        <AtlasSheetMedia className="aspect-[3/2] w-[260px] border-none shadow-none bg-transparent h-auto p-0">
           {god.imageUrl ? (
             <ChromaKeyImage
               src={normalizeImageUrl(god.imageUrl, 'gods', god.index)}
@@ -124,7 +109,7 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
               <span className="text-[10px] uppercase tracking-widest block">No portrait</span>
             </div>
           )}
-        </div>
+        </AtlasSheetMedia>
 
         {/* Sacred Symbol floating at top right */}
         {(god.symbolUrl || god.index) && (
@@ -162,8 +147,8 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
       </div>
 
       {/* Lore Content Scrollable */}
-      <div className="flex-1 overflow-hidden relative z-10 bg-parchment-50/10 rounded p-2 border border-amber-950/10">
-        <div className="h-full overflow-y-auto custom-scrollbar pr-1 select-text">
+      <AtlasSheetBody className="bg-parchment-50/10 rounded p-2 border border-amber-950/10">
+        <div className="h-full select-text">
           {isLoadingLore ? (
             <div className="h-full flex justify-center items-center opacity-30">
               <GameIcon name="refresh" className="animate-spin" size={24} />
@@ -178,12 +163,12 @@ export const GodCard: React.FC<GodCardProps> = ({ god, className }) => {
             </div>
           )}
         </div>
-      </div>
+      </AtlasSheetBody>
 
       {/* Footer Decoration */}
-      <div className="mt-auto flex justify-center relative z-10">
+      <AtlasSheetFooter className="mt-auto justify-center">
         <div className="w-16 h-1 bg-amber-950/20 rounded-full" />
-      </div>
-    </div>
+      </AtlasSheetFooter>
+    </AtlasSheetFrame>
   );
 };
