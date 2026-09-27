@@ -11,6 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 const { execSync } = require('child_process');
 
 const REPO_ROOT = path.join(__dirname, '..');
@@ -20,16 +21,18 @@ const ATLAS_FEATURES = path.join(REPO_ROOT, 'public/assets/atlas/enemies/monster
 const ATLAS_IMAGES = path.join(REPO_ROOT, 'public/assets/atlas/enemies/images');
 const ATLAS_TOKENS = path.join(REPO_ROOT, 'public/assets/atlas/enemies/tokens');
 
-const FOUNDRY_TMP_DIR = '/tmp/f5e_audit/packs/_source';
+// Pinned immutable release tag: Foundry v6.0.4
+const PINNED_RELEASE_TAG = 'release-6.0.4';
+const FOUNDRY_TMP_DIR = '/tmp/f5e_audit_pinned/packs/_source';
 
 function ensureFoundrySource() {
   if (fs.existsSync(FOUNDRY_TMP_DIR)) {
     return FOUNDRY_TMP_DIR;
   }
-  console.log('Downloading Foundry v6.0.x source pack tree to /tmp/f5e_audit...');
-  fs.mkdirSync('/tmp/f5e_audit', { recursive: true });
+  console.log(`Downloading pinned Foundry release (${PINNED_RELEASE_TAG}) source tree to /tmp/f5e_audit_pinned...`);
+  fs.mkdirSync('/tmp/f5e_audit_pinned', { recursive: true });
   try {
-    execSync('curl -sL https://github.com/foundryvtt/dnd5e/archive/refs/heads/6.0.x.tar.gz | tar -xz --strip-components=1 -C /tmp/f5e_audit "dnd5e-6.0.x/packs/_source"', { stdio: 'inherit' });
+    execSync(`curl -sL https://github.com/foundryvtt/dnd5e/archive/refs/tags/${PINNED_RELEASE_TAG}.tar.gz | tar -xz --strip-components=1 -C /tmp/f5e_audit_pinned "dnd5e-${PINNED_RELEASE_TAG}/packs/_source"`, { stdio: 'inherit' });
   } catch (e) {
     console.error('Failed to download Foundry source archive:', e.message);
   }
@@ -66,10 +69,11 @@ function parseFoundryActors(baseDir) {
         const idMatch = content.match(/^_id:\s*['"]?([a-zA-Z0-9]+)['"]?/m);
         const nameMatch = content.match(/^name:\s*['"]?([^'"\r\n]+)['"]?/m);
         if (idMatch && nameMatch) {
-          const id = idMatch[1];
+          const id = idMatch[1].toLowerCase();
+          const rawId = idMatch[1];
           const name = nameMatch[1].trim();
           const normName = name.toLowerCase().trim();
-          map[id] = { id, name, normName, category: c, file: f };
+          map[id] = { id, rawId, name, normName, category: c, file: f };
         }
       }
     }
@@ -98,7 +102,7 @@ function findTokenRecursive(dir, nameNoExt) {
 
 function runAudit() {
   console.log('====================================================');
-  console.log('  ARTIFICER FOUNDRY 2014/2024 SOURCE PARITY AUDIT   ');
+  console.log(`  ARTIFICER FOUNDRY PARITY AUDIT (${PINNED_RELEASE_TAG})  `);
   console.log('====================================================\n');
 
   const foundryRoot = ensureFoundrySource();
@@ -112,7 +116,8 @@ function runAudit() {
   const total14Monsters = Object.values(f14Monsters).reduce((a, b) => a + b, 0);
   const total24Actors = Object.values(f24Actors).reduce((a, b) => a + b, 0);
 
-  console.log('1. FOUNDRY v6.0.x SOURCE RECORD COUNTS');
+  console.log('1. FOUNDRY SOURCE RECORD COUNTS');
+  console.log(`   - Pinned Source Release Tag: ${PINNED_RELEASE_TAG}`);
   console.log(`   - 2014 monsters/ total files: ${total14Monsters} across ${Object.keys(f14Monsters).length} categories`);
   console.log('     Breakdown:', f14Monsters);
   console.log(`   - 2024 actors24/ total files: ${total24Actors} across ${Object.keys(f24Actors).length} categories`);
@@ -120,7 +125,7 @@ function runAudit() {
   console.log(`   - 2014 monsterfeatures/ total files: ${f14Features._root || 0}`);
   console.log('   - 2024 monsterfeatures24/ total files:', f24Features);
 
-  // 2. Shared Display Names & ID Disconnect
+  // 2. Shared Display Names & ID Disconnect Verification
   const m14 = parseFoundryActors(path.join(foundryRoot, 'monsters'));
   const m24 = parseFoundryActors(path.join(foundryRoot, 'actors24'));
 
@@ -137,30 +142,53 @@ function runAudit() {
   });
 
   const sharedNames = Object.keys(name14Map).filter(n => name24Map[n]);
-  console.log(`\n2. CREATURE NAME & ID DISCONNECT`);
+  console.log(`\n2. CREATURE NAME & ID DISCONNECT VERIFICATION`);
   console.log(`   - Shared Creature Display Names between 2014 and 2024: ${sharedNames.length}`);
-  console.log('   - Sample 3 Shared Creatures (showing distinct IDs):');
-  sharedNames.slice(0, 3).forEach(n => {
-    console.log(`     * "${n}":`);
-    console.log('       2014:', name14Map[n].map(x => ({ id: x.id, cat: x.category })));
-    console.log('       2024:', name24Map[n].map(x => ({ id: x.id, cat: x.category })));
+
+  // Assertion: Verify that ALL 306 shared creature names have DISTINCT 2014 vs 2024 IDs
+  let idCollisions = 0;
+  sharedNames.forEach(name => {
+    const ids14 = new Set(name14Map[name].map(x => x.id));
+    const ids24 = new Set(name24Map[name].map(x => x.id));
+    for (const id of ids14) {
+      if (ids24.has(id)) {
+        idCollisions++;
+      }
+    }
   });
 
-  // 3. Current Repository Dataset Classification
+  console.log(`   - Asserting distinct IDs across 2014 vs 2024 shared creature names (Collisions: ${idCollisions})...`);
+  assert.strictEqual(idCollisions, 0, 'Foundry 2014 and 2024 shared creature names must have distinct IDs');
+  console.log('     PASSED: All shared creature names have 100% distinct IDs between rulesets.');
+
+  // 3. Current Repository Dataset Classification & 2014 Source Verification
   const repoEnemyFiles = fs.existsSync(ATLAS_ENEMIES) ? fs.readdirSync(ATLAS_ENEMIES).filter(f => f.endsWith('.json')) : [];
   let foundryIdCount = 0;
   let legacyNameCount = 0;
+  let verifiedFoundry14Matches = 0;
 
   repoEnemyFiles.forEach(f => {
-    const isFoundryId = /^[a-z0-9]{16}\.json$/i.test(f);
-    if (isFoundryId) foundryIdCount++;
-    else legacyNameCount++;
+    const fileIndex = f.replace('.json', '');
+    const isFoundryId = /^[a-z0-9]{16}$/i.test(fileIndex);
+    if (isFoundryId) {
+      foundryIdCount++;
+      if (m14[fileIndex.toLowerCase()]) {
+        verifiedFoundry14Matches++;
+      }
+    } else {
+      legacyNameCount++;
+    }
   });
 
-  console.log(`\n3. CURRENT ARTIFICER REPOSITORY ENEMY CLASSIFICATION`);
+  console.log(`\n3. CURRENT REPOSITORY ENEMY CLASSIFICATION & SOURCE VERIFICATION`);
   console.log(`   - Total Enemy JSON Files in public/assets/atlas/enemies/json/: ${repoEnemyFiles.length}`);
   console.log(`   - Foundry-2014-ID Indexed Files: ${foundryIdCount}`);
   console.log(`   - Legacy Human-Readable Slug Indexed Files: ${legacyNameCount}`);
+  console.log(`   - Verified 2014 Source Matches for Foundry-ID Files: ${verifiedFoundry14Matches} / ${foundryIdCount}`);
+
+  // Assertion: Assert that ALL 346 Foundry-ID indexed records originate from the 2014 source
+  assert.strictEqual(verifiedFoundry14Matches, foundryIdCount, 'All Foundry-ID indexed records must originate from the 2014 Foundry source');
+  console.log('     PASSED: 100% of Foundry-ID indexed repo records are verified 2014 Foundry source entries.');
 
   // Category index references audit
   if (fs.existsSync(ATLAS_CATEGORIES)) {
@@ -217,7 +245,7 @@ function runAudit() {
   console.log(`   - Current Enemies matching a verified tactical token asset under enemies/tokens/: ${matchedTokenCount}`);
 
   console.log('\n====================================================');
-  console.log('  AUDIT COMPLETE: All figures verified reproducibly.  ');
+  console.log('  AUDIT COMPLETE: All assertions and figures verified. ');
   console.log('====================================================\n');
 }
 
